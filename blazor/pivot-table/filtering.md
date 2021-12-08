@@ -25,13 +25,13 @@ The following are the three different types of filtering:
 
 Allows to view the pivot table with selective records based on included and excluded members in each field. By default, member filter option is enabled by the [AllowMemberFilter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html#Syncfusion_Blazor_PivotView_DataSourceSettingsModel_1_AllowMemberFilter) boolean property in [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class. This UI option helps end user to filter members by clicking the filter icon besides any field in the row, column and filter axes available in the field list or grouping bar UI at runtime.
 
-![output](images/fieldlist_filtericon.png "Member filter icon in field list")
+![Number Filtering in Blazor PivotTable](images/blazor-pivottable-field-list-with-filter-icon.png)
 <br/>
-![output](images/filter_icon_gb.png "Member filter icon in grouping bar")
+![Filter Icon in Blazor PivotTable GroupingBar](images/blazor-pivottable-filter-icon-in-groupbar.png)
 <br/>
-![output](images/filter_dialog_gb.png "Member filter dialog with checked and unchecked members")
+![Filter Dialog with Checked and Unchecked Members in Blazor PivotTable](images/blazor-pivottable-filter-dialog.png)
 <br/>
-![output](images/filter_grid_gb.png "Resultant pivot table on member filter")
+![Blazor PivotGrid with Filter](images/blazor-pivotgrid-filter.png)
 
 Meanwhile filtering can also be configured at code behind using the [PivotViewFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSetting.html) class while initial rendering of the component. The basic settings required to add filter criteria are:
 
@@ -80,29 +80,29 @@ Meanwhile filtering can also be configured at code behind using the [PivotViewFi
 
 ```
 
-![output](images/member-filtering.png)
+![Member Filtering in Blazor PivotTable](images/blazor-pivottable-member-filtering.png)
 
 ### Option to select and unselect all members
 
 The member filter dialog comes with an option "All", which on checked selects all members and on unchecked deselects all members. The option "All" would appear in intermediate state mentioning that both selected and unselected child members are available.
 
-![output](images/editor_inter.png)
+![Displaying Select and UnSelect All Members in Blazor PivotTable](images/blazor-pivottable-select-unselect-member.png)
 
 When all members are deselected, the "Ok" button in member filter dialog would be disabled, meaning, at least one member should be selected and bound to the pivot table component.
 
-![output](images/editor_alluncheck.png)
+![Displaying Unselected Members in Blazor PivotTable](images/blazor-pivottable-uncheck-members.png)
 
 ### Provision to search specific member(s)
 
 By default, search option is available to quickly navigate to the desired members. It can be done by entering the starting character(s) of the actual members.
 
-![output](images/search.png)
+![Searching in Blazor PivotTable](images/blazor-pivottable-search.png)
 
 ### Option to sort members
 
 User can sort members within the member editor either to ascending (or) descending using the built-in sort icons. When both ascending and descending options are not chosen, then members will be shown in the default order (retrieved as such from data source).
 
-![output](images/member-sort.png)
+![Sorting in Blazor PivotTable](images/blazor-pivottable-sorting.png)
 
 ### Performance Tips
 
@@ -154,11 +154,11 @@ The data limit can be set using the [MaxNodeLimitInMemberEditor](https://help.sy
 
 ```
 
-![output](images/maxnodelimit.png)
+![Blazor PivotTable with Maximum Node Limit](images/blazor-pivottable-maximum-node-limit.png)
 
 Meanwhile, end user can utilize the search option to refine the members from the exceeded limit. For example, consider that there are 5000 members in the name "Node 1", "Node 2", "Node 3", and so on... and user has set the property [MaxNodeLimitInMemberEditor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_MaxNodeLimitInMemberEditor) to **500**. In this case, only the initial 500 members will be displayed by default leaving a message "4500 more items. Search to refine further.". To get the member(s) between 501 to 5000, enter the starting character(s) in search option to bring the desired member(s) from the exceeded limit to the UI. Now, end user can either check or uncheck to continue with the filtering process.
 
-![output](images/maxnodelimit_search.png)
+![Searching inside Maximum Node Limit in Blazor PivotTable](images/blazor-pivottable-search-in-max-node-limit.png)
 
 ### Loading members on-demand
 
@@ -199,7 +199,7 @@ This will help to avoid performance lags when opening a member editor whose hier
 
 ```
 
-![output](images/ondemand_member.png)
+![On-Demand Loading in Blazor PivotTable](images/blazor-pivottable-on-demand-load.png)
 
 In the example above, "Customer Geography" dimension is loaded with first level (Country) during initial loading. The search will therefore be applied on the members of the "Country" level alone. After that, you can load members to the next level (State-Province) on-demand by expanding the "Australia" node (or) by selecting the "State-Province" level from the drop down list.
 
@@ -210,7 +210,7 @@ Once members are loaded, they are maintained internally and will not be removed 
 
 If the property is set to **false**, all members of all levels will be queried and added during initial loading itself. Only one query is executed here to retrieve all members from all levels. Since it fetches large number of members, you can feel the performance difference while opening the member editor. But still, expand and search operation is quick here because the members have already been retrieved and populated.
 
-![output](images/initial_member.png)
+![Blazor PivotTable with Initial Member](images/blazor-pivottable-initial-member.png)
 
 ### Loading members based on level number
 
@@ -249,7 +249,7 @@ Allows user to load the members on the basis of the level number set in the [Lev
 
 ```
 
-![output](images/level-count.png)
+![Loading Member based on Level Count in Blazor PivotTable](images/blazor-pivottable-load-member-based-on-level.png)
 
 In the example above, we set [LevelCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSetting.html#Syncfusion_Blazor_PivotView_PivotViewFilterSetting_LevelCount) as **2** for the "Customer Geography" dimension in [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSettings.html). So, the "Customer Geography" dimension is loaded with the "Country" and "State-Province" levels during initial loading itself. The search will therefore be applied only to the members of the "Country" and "State-Province" levels. After that, you can load members to the next level on-demand by expanding the respective "State-Province" node (or) by selecting the "City" level from the drop-down list.
 
@@ -297,15 +297,15 @@ The label filtering dialog can be enabled by setting the [AllowLabelFilter](http
 
 ```
 
-![output](images/labelfiltering_fl_icon.png "Filter icon in field list")
+![Label Filter with Icon in Blazor PivotTable](images/blazor-pivottable-label-filtering-with-icon.png)
 <br/>
-![output](images/labelfiltering_gb_icon.png "Filter icon in grouping bar")
-<br/>
-<br/>
-![output](images/labelfiltering_dialog.png "Label filter tab in member editor dialog")
+![Filter Icon in Blazor PivotTable Grouping Bar](images/blazor-pivottable-filtering-with-icon.png)
 <br/>
 <br/>
-![output](images/labelfiltering_grid.png "Resultant pivot table on label filter")
+![Blazor PivotTable with Label Filter Tab in Editor Dialog](images/blazor-pivottable-label-filtering-tab-in-dialog.png)
+<br/>
+<br/>
+![Label Filtering in Blazor PivotGrid](images/blazor-pivotgrid-label-filtering.png)
 
 > In label filtering UI, based on the field chosen, it’s member data type is automatically recognized and filtering operation will be carried out. Where as in code behind, user need to define the data type through a property and it has been explained in the immediate section below.
 
@@ -378,7 +378,7 @@ For example, in a "Country" field, to show countries names that contains "United
 
 ```
 
-![output](images/labelfiltering_code.png)
+![Label Filtering via Code in Blazor PivotTable](images/blazor-pivottable-label-filtering-code.png)
 
 ### Filtering number data type through code
 
@@ -427,7 +427,7 @@ For example, in a "Sold" field, to show the values between "90" to "100", set [V
 
 ```
 
-![output](images/numberfiltering.png)
+![Number Filtering in Blazor PivotTable](images/blazor-pivottable-number-filter.png)
 
 ### Filtering date data type through code
 
@@ -487,13 +487,13 @@ For example, in a "Delivery Date" field, to show the delivery records of the fir
 
 ```
 
-![output](images/datefiltering.png)
+![Date Filtering in Blazor PivotTable](images/blazor-pivottable-date-filtering.png)
 
 ### Clearing the existing date filter
 
 End user can clear the applied date filter by simply click the "Clear" option at the bottom of the filter dialog under "date" tab.
 
-![output](images/clearfilter.png)
+![Clearing Date Filter in Blazor PivotTable](images/blazor-pivottable-clear-filter.png)
 
 ## Value filtering
 
@@ -535,15 +535,15 @@ The value filtering dialog can be enabled by setting the [AllowValueFilter](http
 
 ```
 
-![output](images/labelfiltering_fl_icon.png "Filter icon in field list")
+![Label Filter with Icon in Blazor PivotTable](images/blazor-pivottable-label-filtering-with-icon.png)
 <br/>
-![output](images/labelfiltering_gb_icon.png "Filter icon in grouping bar")
-<br/>
-<br/>
-![output](images/valuefiltering_dialog.png "Value filter tab in member editor dialog")
+![Filter Icon in Blazor PivotTable Grouping Bar](images/blazor-pivottable-filtering-with-icon.png)
 <br/>
 <br/>
-![output](images/valuefiltering_grid.png "Resultant pivot table on value filter")
+![Value Filter Tab in Blazor PivotTable](images/blazor-pivottable-value-filtering-dialog.png)
+<br/>
+<br/>
+![Value Filtering in Blazor PivotGrid](images/blazor-pivotgrid-value-filtering.png)
 
 The value filtering can also be configured using the [PivotViewFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSetting.html) class through code-behind. The properties required for value filter are:
 
@@ -609,13 +609,13 @@ For example, to show the data where total sum of units sold for each country exc
 
 ```
 
-![output](images/valuefiltering_grid.png)
+![Value Filtering in Blazor PivotGrid](images/blazor-pivotgrid-value-filtering.png)
 
 ### Clearing the existing value filter
 
 End user can clear the applied value filter by simply click the "Clear" option at the bottom of the filter dialog under "Value" tab.
 
-![output](images/clearvaluefilter.png)
+![Clearing Value Filter in Blazor PivotTable](images/blazor-pivottable-clear-value-filter.png)
 
 ## Event
 

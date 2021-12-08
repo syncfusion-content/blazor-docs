@@ -43,10 +43,10 @@ Allows to view the underlying raw data of a summarized cell in the pivot table. 
 }
 ```
 
-![output](images/blazor-drillthrough-before.png)
+![Before Drill Through in Blazor PivotTable](images/blazor-pivottable-before-drillthrough.png)
 <br/>
 <br/>
-![output](images/blazor-drillthrough-after.png)
+![After Drill Through in Blazor PivotTable](images/blazor-pivottable-after-drillthrough.png)
 
 Users can also view the underlying raw data though the pivot chart. By clicking on any data point, user can view the detailed raw data in a data grid inside a new window.
 
@@ -88,10 +88,10 @@ Users can also view the underlying raw data though the pivot chart. By clicking 
 
 ```
 
-![output](images/blazor-drillthrough-chart-before.png)
+![Before Drill Through in Blazor PivotChart](images/blazor-pivotchart-before-drillthrough.png)
 <br/>
 <br/>
-![output](images/blazor-drillthrough-chart-after.png)
+![After Drill Through in Blazor PivotChart](images/blazor-pivotchart-after-drillthrough.png)
 
 ## Maximum rows to retrieve
 
@@ -127,6 +127,6 @@ The [MaxRowsInDrillThrough](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ```
 
-![output](images/maxrows.png)
+![Blazor PivotTable with Maximum Rows](images/blazor-pivottable-maximum-rows.png)
 
 > You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.
