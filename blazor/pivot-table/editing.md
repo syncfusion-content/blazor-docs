@@ -70,7 +70,7 @@ In normal edit mode, when user starts editing, the state of the currently select
 
 ```
 
-![output](images/edit-normal.png)
+![Normal Editing in Blazor PivotTable](images/blazor-pivottable-normal-editing.png)
 
 ## Dialog
 
@@ -110,7 +110,7 @@ In dialog edit mode, when user starts editing, the currently selected row data w
 
 ```
 
-![output](images/edit-dialog.png)
+![Dialog Editing in Blaozr PivotTable](images/blazor-pivottable-dialog-editing.png)
 
 ## Batch
 
@@ -150,7 +150,7 @@ In batch edit mode, when user double-clicks any data grid cell, the state of tar
 
 ```
 
-![output](images/edit-batch.png)
+![Batch Editing in Blazor PivotTable](images/blazor-pivottable-batch-editing.png)
 
 ## Command column
 
@@ -190,7 +190,7 @@ An additional column appended in the data grid layout holds the command buttons 
 
 ```
 
-![output](images/edit-command.png)
+![Command Editing in Blazor PivotTable](images/blazor-pivottable-command-editing.png)
 
 ## Inline Editing
 
@@ -230,7 +230,7 @@ Allows editing of a value cell directly without the use of an external edit dial
 
 ```
 
-![output](images/inline-editing.png)
+![Inline Editing in Blazor PivotTable](images/blazor-pivottable-inline-editing.png)
 
 ## Editing using the pivot chart
 
@@ -275,9 +275,9 @@ Users can also add, delete, or update the underlying raw items of any data point
 
 ```
 
-![output](images/blazor-drillthrough-chart-before.png)
+![Before Editing in Blazor PivotChart](images/blazor-pivotchart-before-drillthrough.png)
 <br/>
 <br/>
-![output](images/blazor-chart-editing-dialog.png)
+![Dialog Editing in Blazor PivotChart](images/blazor-pivotchart-editing-dialog.png)
 
 > You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.

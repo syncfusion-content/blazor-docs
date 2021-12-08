@@ -103,9 +103,9 @@ The visibility of row, column, value and filter axis in Field List and Grouping 
 
 ```
 
-![output](images/hide-columns-gb.png "Columns hidden from Grouping Bar")
+![Hiding Columns in Blazor PivotTable GroupingBar](images/blazor-pivottable-hide-columns-in-groupbar.png)
 
-![output](images/hide-columns-fl.png "Columns hidden from Field List")
+![Hiding Columns in Blazor PivotTable Field List](images/blazor-pivottable-hide-columns-in-fieldlist.png)
 
 ## Text Alignment
 
@@ -169,7 +169,7 @@ The alignment of text inside row headers, column headers, value cells and summar
 
 ```
 
-![output](images/text-alignment.png)
+![Text Alignment in Blazor PivotGrid](images/blazor-pivotgrid-text-alignment.png)
 
 ## Customize header, value and summary cell style
 
@@ -228,6 +228,6 @@ The elements in pivot table like header cell, value cell and summary cell style 
 
 ```
 
-![output](images/pivottable-css.png)
+![Blazor PivotGrid with Custom Styles](images/blazor-pivotgrid-custom-styles.png)
 
 > You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.

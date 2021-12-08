@@ -71,7 +71,7 @@ The pivot table has an option to show hyperlink option for all cells that are cu
 }
 ```
 
-![output](images/hyperlink.png)
+![Hyperlink with All Cells in Blazor PivotTable](images/blazor-pivottable-hyperlink-with-cells.png)
 
 ## Hyperlink for row headers
 
@@ -120,7 +120,7 @@ The pivot table has an option to show hyperlink option for row header cells alon
 }
 ```
 
-![output](images/hyperlink-rowheader.png)
+![Hyperlink in Blazor PivotTable Row Headers](images/blazor-pivottable-hyperlink-in-row-headers.png)
 
 ## Hyperlink for column headers
 
@@ -169,7 +169,7 @@ The pivot table has an option to show hyperlink option for column header cells a
 }
 ```
 
-![output](images/hyperlink-columnheader.png)
+![Hyperlink in Blazor Column Headers](images/blazor-pivottable-hyperlink-in-column-headers.png)
 
 ## Hyperlink for value cells
 
@@ -218,7 +218,7 @@ The pivot table has an option to show hyperlink option for value cells alone tha
 }
 ```
 
-![output](images/hyperlink-value.png)
+![Hyperlink with Value Cells in Blazor PivotTable](images/blazor-pivottable-hyperlink-in-value-cells.png)
 
 ## Hyperlink for summary cells
 
@@ -267,7 +267,7 @@ The pivot table has an option to show hyperlink option for summary cells alone t
 }
 ```
 
-![output](images/hyperlink-summary.png)
+![Hyperlink in Blazor PivotTable Summary Cells](images/blazor-pivottable-hyperlink-in-summary-cells.png)
 
 ## Condition based hyperlink
 
@@ -325,7 +325,7 @@ The pivot table has an option to show hyperlink in the cells based on specific c
 }
 ```
 
-![output](images/hyperlink-condition.png)
+![Hyperlink in Blazor PivotTable Cells based on Condition](images/blazor-pivottable-hyperlink-cell-based-on-condition.png)
 
 ## Header based hyperlink
 
@@ -374,7 +374,7 @@ The pivot table has an option to show hyperlink in the cells based on specific r
 }
 ```
 
-![output](images/hyperlink-header.png)
+![Hyperlink in Blazor PivotTable Cells based on Header](images/blazor-pivottable-hyperlink-cell-based-on-header.png)
 
 ## Event
 
