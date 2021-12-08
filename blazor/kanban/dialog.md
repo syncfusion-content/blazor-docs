@@ -14,6 +14,11 @@ The Kanban provides built-in support to add, edit and delete a card using dialog
 * Built-in dialog module
 * Dialog template
 
+To get start quickly with Blazor Kanban Edit Dialog using Templates, you can check on this video
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=SgiECU-SZBk" %}
+
 ## Default Dialog
 
 When double-click on the cards, the dialog is opened with below fields to edit a card. This dialog contains `Delete`, `Save` and `Cancel` buttons.
