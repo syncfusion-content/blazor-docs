@@ -46,7 +46,7 @@ Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it 
 
    ![wasm template](../images/blazor-client-template.png)
 
-**Note**: ASP.NET Core 3.1 available in Visual Studio 2019 version.
+**Note**: ASP.NET Core 3.1 is available in Visual Studio 2019 version.
 
 ## Importing Syncfusion Blazor component in the application
 

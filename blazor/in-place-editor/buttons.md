@@ -18,7 +18,7 @@ Buttons can be shown or hidden by setting a Boolean value to the `ShowButtons` p
 * **ActionOnBlur**: By clicking outside, the editor component gets focus out and do an action based on this property value.
 * **SubmitOnEnter**: Pressing the `Enter` key performs the submit action if this property is set to `true`.
 
-In the following sample, the `Content` and `CssClass` properties of the `Button` value are assigned to the `SaveButton` and `CancelButton` properties to customize its appearance. Also, check or uncheck the checkbox buttons rendered or removed from the editor.
+In the following sample, the `Content` and `CssClass` properties of the `Button` value are assigned to the `InPlaceEditorSaveButton` and `InPlaceEditorCancelButton` properties to customize its appearance. Also, check or uncheck the checkbox buttons rendered or removed from the editor.
 
 > For more details about buttons, refer this documentation [section](../button/).
 

@@ -11,16 +11,14 @@ documentation: ug
 
 This article provides a step-by-step instructions to configure Syncfusion [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 
-**Note**: Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this help topic for more information.
+> Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
 
 ## Prerequisites
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 * [.NET Core SDK 3.1.3](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-**Note**: .NET Core SDK 3.1.3 requires Visual Studio 2019 16.6 or later.
-
-Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it requires Visual Studio 16.7 Preview 1 or later.
+> .NET Core SDK 3.1.3 requires Visual Studio 2019 16.6 or later. Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it requires Visual Studio 16.7 Preview 1 or later.
 
 ## Create a Blazor WebAssembly project in Visual Studio 2019
 
@@ -46,58 +44,76 @@ Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it 
 
     ![Blazor Wasm Template](../images/blazor-client-template.png)
 
-**Note**: ASP.NET Core 3.1 available in Visual Studio 2019 version.
+> ASP.NET Core 3.1 available in Visual Studio 2019 version.
 
 ## Importing Syncfusion Blazor component in the application
 
-1. Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.
-2. You can add the client-side style resources through CDN or from NuGet packages in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+1. Install **Syncfusion.Blazor** NuGet package to the newly created application by using the `NuGet Package Manager`. Right-click the project and select Manage NuGet Packages.
 
-```html
-<head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-</head>
-```
+    ![Selecting NuGet Package Manager in Blazor](../images/blazor-nuget-package-manager.png)
 
-> For Internet Explorer 11 kindly refer the poly fills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+2. Search Syncfusion.Blazor keyword in the Browser tab and install Syncfusion.Blazor NuGet package in the application.
 
-```html
-<head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-</head>
-```
+    ![Selecting Blazor NuGet Package](../images/blazor-nuget-selection.png)
 
-## Adding component package to the application
+3. The Syncfusion Blazor package will be installed in the project, once the installation process is completed.
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.Gantt` packages.
+4. Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.Gantt` packages.
 
-```cshtml
-@using Syncfusion.Blazor.Gantt
-```
+    ```cshtml
+    @using Syncfusion.Blazor.Gantt
+    ```
 
-## Add SyncfusionBlazor service in Startup.cs
+5. Open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
-Open the **Startup.cs** file and add services required by Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in **ConfigureServices** function as follows.
+    ```c#
+    using Syncfusion.Blazor;
 
-```csharp
-using Syncfusion.Blazor;
-
-namespace BlazorApplication
-{
-    public class Startup
+    namespace WebApplication1
     {
-        ....
-        ....
-        public void ConfigureServices(IServiceCollection services)
+        public class Program
         {
-            ....
-            ....
-            services.AddSyncfusionBlazor();
+            public static async Task Main(string[] args)
+            {
+                ....
+                ....
+                builder.Services.AddSyncfusionBlazor();
+                await builder.Build().RunAsync();
+            }
         }
     }
-}
-```
+    ```
+
+6. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/wwwroot/index.html** page.
+
+    ```html
+    <head>
+        ....
+        ....
+        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+    </head>
+    ```
+
+    > The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.2.44/styles/bootstrap4.css).
+    > To use manual scripts other than the scripts from NuGet package, register the Blazor service in **~/Program.cs** file by using true parameter as mentioned below.
+
+     ```csharp
+    using Syncfusion.Blazor;
+
+     namespace WebApplication1
+     {
+         public class Program
+       {
+             public static async Task Main(string[] args)
+             {
+                ....
+                ....
+                builder.Services.AddSyncfusionBlazor(true);
+                await builder.Build.RunAsync();
+             }
+         }
+     }
+     ```
 
 ## Adding Gantt Chart component to the application
 
