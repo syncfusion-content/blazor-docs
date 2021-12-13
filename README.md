@@ -206,6 +206,10 @@ File name - https://syncfusion.sharepoint.com/sites/DOCINFRA/SitePages/File%20Pa
 * Refer the below share point page for MD file syntax and more details.
 * https://syncfusion.sharepoint.com/sites/Install/SitePages/UG-Documentation---Support-for-Customized-Code-Tab-Names.aspx
 
+### Support to highlight the specific lines in the code block
+* Refer the below share point page for MD file syntax and more details.
+* https://syncfusion.sharepoint.com/sites/Install/SitePages/UG-Documentation---Support-to-Highlight-the-Specific-Lines-in-the-Code-Block.aspx
+
 ### YouTube
 
 * For embedding the Youtube video link use the following pattern.
