@@ -9,7 +9,7 @@ documentation: ug
 
 # Timescale Customization in Blazor Scheduler Component
 
-The time slots are usually the time cells that are displayed on the Day, Week and Work Week views of both the calendar (to the left most position) and timeline views (at the top position). The `ScheduleTimeScale` allows you to control and set the required time slot duration for the work cells displayed on Scheduler. It includes the following sub-options such as,
+The time slots are usually the time cells that are displayed on the Day, Week and Work Week views of both the calendar (to the left most position) and timeline views (at the top position). The `ScheduleTimeScale` allows to control and set the required time slot duration for the work cells displayed on Scheduler. It includes the following sub-options such as,
 
 * `Enable` - When set to `true`, allows the Scheduler to display the appointments accurately against the exact time duration. If set to `false`, all the appointments of a day will be displayed one below the other with no grid lines displayed. Its default value is `true`.
 * `Interval` – Defines the time duration on which the time axis to be displayed either in 1 hour or 30 minutes interval and so on. It accepts the values in minutes and defaults to 60.

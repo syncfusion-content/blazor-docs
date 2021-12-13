@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-# Organizational chart in Blazor Diagram Component
+# Organizational Chart in Blazor Diagram Component
 
 An organizational chart is a diagram that displays the structure of an organization and relationships. To create an organizational chart, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html#Syncfusion_Blazor_Diagrams_DiagramLayout_Type) of layout should be set as an `OrganizationalChart`.
 
@@ -347,7 +347,7 @@ The following code example illustrates how to set the vertical right arrangement
 
 ### Layout spacing
 
-Layout provides support to add space horizontally and vertically between the nodes. The [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html#Syncfusion_Blazor_Diagrams_DiagramLayout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html#Syncfusion_Blazor_Diagrams_DiagramLayout_VerticalSpacing) properties of the layout allows you to set the space between the nodes in horizontally and vertically.
+Layout provides support to add space horizontally and vertically between the nodes. The [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html#Syncfusion_Blazor_Diagrams_DiagramLayout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html#Syncfusion_Blazor_Diagrams_DiagramLayout_VerticalSpacing) properties of the layout allows you to set the space between the nodes horizontally and vertically.
 
 ### Layout margin
 

@@ -168,7 +168,7 @@ The different types of subprocess are as follows:
 * Event subprocess
 * Transaction
 
-### Event sub Process
+### Event sub process
 
 A [SubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html) is defined as an event SubProcess when it is triggered by an event. An event SubProcess is placed within another subprocess that part of the normal flow of its parent process is not. You can set event to a subprocess with the `Event` and `Trigger` properties of the subprocess. The `Type` property of subprocess allows you to define the type of subprocess whether it should be event subprocess or transaction subprocess.
 

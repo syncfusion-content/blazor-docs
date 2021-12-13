@@ -339,7 +339,7 @@ You can submit editor value to the server by configuring the `SaveUrl`, `Adaptor
 
 | Property   | Usage                                           |
 |------------|---------------------------------------------------------|
-| **`Url`**        | Gets the URl for server submit action.        |
+| **`SaveUrl`**        | Gets the URL for server submit action.        |
 | **`Adaptor`**    | Specifies the adaptor type that is used by DataManager to communicate with DataSource.                |
 | **`PrimaryKey`** | Defines the unique primary key of editable field which can be used for saving data in the data-base.|
 
