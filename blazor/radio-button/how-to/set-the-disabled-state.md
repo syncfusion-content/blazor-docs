@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Set the disabled state in Blazor RadioButton Component | Syncfusion
-description: Checkout and learn here all about Set the disabled state in Syncfusion Blazor RadioButton component and more.
+description: Checkout and learn here all about how to set the disabled state in Syncfusion Blazor RadioButton component and more.
 platform: Blazor
 control: Radio Button
 documentation: ug
@@ -23,7 +23,5 @@ Radio Button component can be enabled/disabled by giving [Disabled](https://help
 }
 
 ```
-
-Output be like
 
 ![Blazor RadioButton in Disable State](./../images/blazor-radiobutton-disable-state.png)

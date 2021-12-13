@@ -27,8 +27,6 @@ Radio Button caption can be defined by using the [Label](https://help.syncfusion
 
 ```
 
-Output be like
-
 ![Blazor RadioButton with Label](./images/blazor-radiobutton-label.png)
 
 ## Size
@@ -46,8 +44,6 @@ The different Radio Button sizes available are default and small. To reduce the 
 }
 
 ```
-
-Output be like
 
 ![Blazor RadioButton with Different Size](./images/blazor-radiobutton-different-size.png)
 
