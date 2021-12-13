@@ -47,6 +47,7 @@ The Syncfusion Blazor components supports to refer scripts externally at the app
     {% endtabs %}
 
 * If you're using `.NET 5 or 3.X project` Blazor Server App, set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` using `AddSyncfusionBlazor` service method in `~/Startup.cs` file.
+    
     {% tabs %}
     {% highlight c# tabtitle=~/Startup.cs % }
 
@@ -73,7 +74,8 @@ The Syncfusion Blazor components supports to refer scripts externally at the app
 If you're using Blazor WebAssembly App, set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
 
 * .NET 6 Blazor WebAssembly App
-    {% tabs %}
+   
+   {% tabs %}
     {% highlight c# tabtitle=~/Program.cs % }
 
     using Microsoft.AspNetCore.Components;
