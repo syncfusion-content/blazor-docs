@@ -199,12 +199,16 @@ File name - https://syncfusion.sharepoint.com/sites/DOCINFRA/SitePages/File%20Pa
 
 
 ### Support to load the H3 tags items in Right Side Navigations
-* Refer the below share point page for MD file syntax and more details.
+* Refer the below SharePoint page for MD file syntax and more details.
 * https://syncfusion.sharepoint.com/sites/Install/SitePages/Support-for-showing-the-H3-tags.aspx
 
 ### Support for customized code tab names
-* Refer the below share point page for MD file syntax and more details.
+* Refer the below SharePoint page for MD file syntax and more details.
 * https://syncfusion.sharepoint.com/sites/Install/SitePages/UG-Documentation---Support-for-Customized-Code-Tab-Names.aspx
+
+### Support to highlight the specific lines in the code block
+* Refer the below SharePoint page for MD file syntax and more details.
+* https://syncfusion.sharepoint.com/sites/Install/SitePages/UG-Documentation---Support-to-Highlight-the-Specific-Lines-in-the-Code-Block.aspx
 
 ### YouTube
 
