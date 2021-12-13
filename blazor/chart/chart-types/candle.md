@@ -72,7 +72,7 @@ The color of the candle will be defined by comparing with previous values. [Bull
 
 ``` 
 
-![Candle](../images/financial-types/candles.png)
+![Blazor Candle Chart](../images/financial-types/blazor-candle-chart.png)
 
 ## Solid Candles
 
@@ -116,7 +116,7 @@ The color of the candle will be defined by comparing with previous values. [Bull
 
 ``` 
 
-![Solid Candles](../images/financial-types/solid-candles.png)
+![Blazor Solid Candle Chart](../images/financial-types/blazor-solid-candle-chart.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

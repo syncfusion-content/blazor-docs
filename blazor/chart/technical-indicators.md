@@ -119,7 +119,7 @@ Accumulation Distribution combines price and volume to show how money may be flo
 
 ```
 
-![Accumulation Distribution](images/technical-indicator/ad-razor.png)
+![Accumulation Distribution in Blazor Candle Chart](images/technical-indicator/blazor-candle-chart-accumulation-distribution.png)
 
 ## Average True Range (ATR)
 
@@ -329,7 +329,7 @@ A chart overlay that shows the upper and lower limits of normal price movements 
 
 ```
 
-![Bollinger Bands](images/technical-indicator/bollinger.png)
+![Bollinger Bands in Blazor Candle Chart](images/technical-indicator/blazor-candle-chart-bollinger-bands.png)
 
 **Customization of Bollinger Bands**
 
@@ -434,7 +434,7 @@ The upper line's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-![Customized Bollinger Bands](images/technical-indicator/customBollinger.png)
+![Blazor Candle Chart with Custom Bollinger Bands](images/technical-indicator/blazor-candle-chart-custom-bollinger-bands.png)
 
 ## Exponential Moving Average (EMA)
 
@@ -547,7 +547,7 @@ Moving Average Indicators are used to define the direction of the trend. To rend
 
 ```
 
-![Exponential Moving Average](images/technical-indicator/ema.png)
+![Exponential Moving Average in Blazor Candle Chart](images/technical-indicator/blazor-candle-chart-exponential-moving-average.png)
 
 ## Momentum
 
@@ -673,7 +673,7 @@ Momentum shows the speed at which the price of the stock is changing. To render 
 
 ```
 
-![Momentum](images/technical-indicator/momentum.png)
+![Momentum in Blazor Candle Chart](images/technical-indicator/blazor-candle-chart-momentum.png)
 
 **Customization of Momentum Indicator**
 
@@ -801,7 +801,7 @@ The upper line's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-![Customized Momentum Indicator](images/technical-indicator/custom-momentum.png)
+![Blazor Candle Chart with Custom Momentum Indicator](images/technical-indicator/blazor-candle-chart-custom-momentum-indicator.png)
 
 ## Moving Average Convergence Divergence (MACD)
 
@@ -926,7 +926,7 @@ Moving Average Convergence Divergence (MACD) is based on the difference between 
 
 ```
 
-![Moving Average Convergence Divergence](images/technical-indicator/macd.png)
+![Moving Average Convergence Divergence in Blazor Candle Chart](images/technical-indicator/blazor-candle-chart-macd.png)
 
 **Customization of MACD**
 
@@ -1054,7 +1054,7 @@ The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
 
 ```
 
-![Moving Average Convergence Divergence](images/technical-indicator/custom-macd.png)
+![Blazor Candle Chart with Custom Moving Average Convergence Divergence](images/technical-indicator/blazor-candle-chart-custom-macd.png)
 
 ## Relative Strength Index (RSI)
 
@@ -1185,7 +1185,7 @@ Relative Strength Index (RSI) shows how strongly a stock is moving in its curren
 
 ```
 
-![Relative Strength Index](images/technical-indicator/rsi.png)
+![Relative Strength Index in Blazor Candle Chart](images/technical-indicator/blazor-candle-chart-rsi.png)
 
 ## Simple Moving Average (SMA)
 
@@ -1428,7 +1428,7 @@ The **Width** and **Color** of upper line, lower line and period line can be cus
 
 ```
 
-![Stochastic](images/technical-indicator/stochastic.png)
+![Stochastic in Blazor Candle Chart](images/technical-indicator/blazor-candle-chart-stochastic.png)
 
 ## Triangular Moving Average (TMA)
 
@@ -1536,7 +1536,7 @@ Triangular Moving Average (TMA) Indicator is used to define the direction of the
 
 ```
 
-![Triangular Moving Average](images/technical-indicator/tma.png)
+![Triangular Moving Average in Blazor Candle Chart](images/technical-indicator/blazor-candle-chart-tma.png)
 
 **Data Source**
 
