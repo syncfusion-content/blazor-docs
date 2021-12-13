@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-## Column Template in Blazor DataGrid
+# Column Template in Blazor DataGrid
 
 > Before adding column template to the DataGrid, we strongly recommend you to go through the [template](./templates/#templates) section topic to configure the template.
 
@@ -79,7 +79,7 @@ The Column template has options to display custom element value or content in th
 The following screenshot represents the column Template.
 ![Blazor DataGrid with Column template](./images/blazor-datagrid-column-template.png)
 
-### Using conditions inside template
+## Using conditions inside template
 
 Template elements can be rendered based on required conditions inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component.
 
@@ -147,7 +147,7 @@ In the following code, checkbox is rendered based on Discontinued field value in
 The following screenshot represents the Conditional Template.
 ![Blazor DataGrid with Conditional Template](./images/blazor-datagrid-conditional-template.png)
 
-### Using image inside template
+## Using image inside template
 
 This can be achieved using the Column template property as it has options to display custom elements like, image content in the column. You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component to specify the custom image content. Inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) , you can access the data using the implicit named parameter **context**.
 
@@ -210,7 +210,7 @@ This can be achieved using the Column template property as it has options to dis
 The following screenshot represents the Image Template.
 ![Blazor DataGrid with Image Template](./images/blazor-datagrid-image-template.png)
 
-### Using hyperlink column and performing routing on click
+## Using hyperlink column and performing routing on click
 
 The Column template property can be used to provide routing links inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html). For routing, [UriHelper](https://docs.microsoft.com/en-us/aspnet/core/blazor/routing?view=aspnetcore-3.0#uri-and-navigation-state-helpers) can be utilized.
 

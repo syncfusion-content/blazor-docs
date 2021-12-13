@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-## Column Menu in Blazor DataGrid
+# Column Menu in Blazor DataGrid
 
 The column menu has options to integrate features like sorting, grouping, filtering, column chooser, and autofit in it. When the user clicks on multiple icon of the column this menu gets displayed. To enable column menu, you need to define the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property as true.
 

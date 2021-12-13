@@ -141,7 +141,7 @@ Resizing of stacked header is shown below
 
 ## Touch interaction
 
-When the right edge of the header cell is tapped, a floating handler will be visible over the right border of the column. To resize the column, tap and drag the floating handler as needed. You can autoFit a column by using the Column menu of the DataGrid.
+When the right edge of the header cell is tapped, a floating handler will be visible over the right border of the column. To resize the column, tap and drag the floating handler as needed. You can AutoFit a column by using the Column menu of the DataGrid.
 
 The following screenshot represents the column resizing in touch device.
 
