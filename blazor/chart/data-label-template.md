@@ -74,6 +74,6 @@ Text and interior information for a point can be bound from a datasource other t
 
 ```
 
-![Data Label Template](images/data-label/template.png)
+![Blazor Chart Label with Template](images/data-label/blazor-chart-label-template.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.

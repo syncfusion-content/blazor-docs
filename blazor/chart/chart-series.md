@@ -54,7 +54,7 @@ The [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ```
 
-![Multiple Chart Series](images/multiple-series/multiple-series-razor.png)
+![Blazor Column Chart with Multiple Series](images/multiple-series/blazor-column-chart-multiple-series.png)
 
 ## Combination Chart Series
 
@@ -113,7 +113,7 @@ A chart can be created by combining several chart types such as line, column, an
 
 ```
 
-![Combination Chart](images/multiple-series/combination-razor.png)
+![Displaying Combination of Blazor Chart](images/multiple-series/blazor-chart-combination.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
