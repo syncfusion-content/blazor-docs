@@ -207,7 +207,7 @@ File name - https://syncfusion.sharepoint.com/sites/DOCINFRA/SitePages/File%20Pa
 * https://syncfusion.sharepoint.com/sites/Install/SitePages/UG-Documentation---Support-for-Customized-Code-Tab-Names.aspx
 
 ### Support to highlight the specific lines in the code block
-* Refer the below share point page for MD file syntax and more details.
+* Refer the below sharepoint page for MD file syntax and more details.
 * https://syncfusion.sharepoint.com/sites/Install/SitePages/UG-Documentation---Support-to-Highlight-the-Specific-Lines-in-the-Code-Block.aspx
 
 ### YouTube
