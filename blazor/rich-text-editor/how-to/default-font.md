@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Change default font-family in Blazor RichTextEditor | Syncfusion
-description: Learn here all about Change default font-family in Syncfusion Blazor RichTextEditor component and more.
+description: Learn here all about how to change default font-family in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Change default font-family in Blazor RichTextEditor Component
 
-By using `Default` property, you can change the default font-family of the Rich Text Editor. To change the font-family of the Rich Text Editor content while loading, we need to give the `RichTextEditorFontFamily` in the style section with the help of `CssClass` property.
+By using `Default` property, you can change the default font-family of the Rich Text Editor. To change the font-family of the Rich Text Editor content while loading, the `RichTextEditorFontFamily` has to be given in the style section with the help of `CssClass` property.
 
 ```cshtml
 
@@ -73,7 +73,5 @@ By using `Default` property, you can change the default font-family of the Rich 
 }
 
 ```
-
-The output will be as follows.
 
 ![Changing Default Font in Blazor RichTextEditor](../images/blazor-richtexteditor-change-default-font.png)

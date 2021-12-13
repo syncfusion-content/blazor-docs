@@ -180,8 +180,6 @@ The following sample code block demonstrates that the Rich Text Editor control r
 
 ```
 
-The output will be as follows.
-
 ![Localization in Blazor RichTextEditor](./images/blazor-richtexteditor-localization.png)
 
 ## RTL
@@ -198,8 +196,6 @@ Specifies the direction of the Rich Text Editor component using the `EnableRtl` 
 
 ```
 
-The output will be as follows.
-
 ![Right to Left in Blazor RichTextEditor](./images/blazor-richtexteditor-right-to-left.png)
 
-> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
+> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
