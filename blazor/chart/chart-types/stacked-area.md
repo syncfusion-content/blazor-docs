@@ -53,7 +53,7 @@ documentation: ug
 
 ``` 
 
-![Stacked Area](../images/chart-types-images/stackedarea.png)
+![Blazor Stacked Area Chart](../images/chart-types-images/blazor-stacked-area-chart.png)
 
 > Refer to our [Blazor Stacked Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Stacked Area Chart Example](https://blazor.syncfusion.com/demos/chart/stacked-area?theme=bootstrap4) to know how to render and configure the Stacked Area type chart.
 
@@ -112,7 +112,7 @@ The following properties can be used to customize the [Stacked Area](https://hel
 
 ``` 
 
-![Stacked Area with series customization](../images/chart-types-images/custom-stacked-area.png)
+![Blazor Stacked Area with Custom Series](../images/chart-types-images/blazor-stacked-area-chart-custom-series.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

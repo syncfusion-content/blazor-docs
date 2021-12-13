@@ -69,7 +69,7 @@ Data editing allows the rendered points to be dragged and dropped at run-time. E
 
 ```
 
-![Data editing in chart](images/data-editing/data-editing-razor.png)
+![Data Editing in Blazor Chart](images/data-editing/blazor-chart-data-editing.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

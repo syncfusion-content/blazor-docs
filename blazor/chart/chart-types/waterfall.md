@@ -53,7 +53,7 @@ documentation: ug
 
 ``` 
 
-![Waterfall Chart](../images/othertypes/waterfall.png)
+![Blazor Waterfall Chart](../images/othertypes/blazor-waterfall-chart.png)
 
 > Explore our [Blazor Waterfall Chart Example](https://blazor.syncfusion.com/demos/chart/waterfall?theme=bootstrap4) to know how to render and configure the Waterfall type chart.
 
@@ -101,7 +101,7 @@ The negative changes of waterfall charts is represented by using [NegativeFillCo
 
 ``` 
 
-![Waterfall with series customization](../images/othertypes/waterfall-custom.png)
+![Blazor Waterfall Chart with Custom Series](../images/othertypes/blazor-waterfall-chart-custom-series.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

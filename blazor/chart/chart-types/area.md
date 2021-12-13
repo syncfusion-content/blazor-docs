@@ -44,7 +44,7 @@ documentation: ug
 
 ``` 
 
-![Area Charts](../images/chart-types-images/area.png)
+![Blazor Area Chart](../images/chart-types-images/blazor-area-chart.png)
 
 > Refer to our [Blazor Area Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Area Chart Example](https://blazor.syncfusion.com/demos/chart/area?theme=bootstrap4) to know how to represent time-dependent data, showing trends at equal intervals.
 
@@ -89,7 +89,7 @@ To render a multicolored area series, specify the [Type](https://help.syncfusion
 
 ``` 
 
-![Area Charts with multicolored area](../images/chart-types-images/multicolorarea.png)
+![Blazor Multicolored Area Chart](../images/chart-types-images/blazor-multicolor-area-chart.png)
 
 ## Series Customization
 
@@ -132,7 +132,7 @@ The following properties can be used to customize the [Area](https://help.syncfu
 
 ```
 
-![Area Charts with series customization](../images/chart-types-images/area-custom.png)
+![Blazor Area Chart with Custom Series](../images/chart-types-images/blazor-area-chart-custom-series.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

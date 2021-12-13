@@ -71,7 +71,7 @@ When the [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-![Point Selection](images/selection/point-selection-razor.png)
+![Blazor Column Chart with Point Selection](images/selection/blazor-chart-point-selection.png)
 
 ## Series
 
@@ -119,7 +119,7 @@ When the [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-![Series Selection](images/selection/series-selection-razor.png)
+![Blazor Column Chart with Series Selection](images/selection/blazor-chart-series-selection.png)
 
 ## Cluster
 
@@ -167,7 +167,7 @@ By setting the [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ```
 
-![Cluster Selection](images/selection/cluster-selection-razor.png)
+![Blazor Column Chart with Cluster Selection](images/selection/blazor-chart-cluster-selection.png)
 
 ## Rectangular Selection
 
@@ -254,7 +254,7 @@ In the drag complete event, the selected data will be returned as an array colle
 
 ```
 
-![Rectangular Selection](images/selection/drag-razor.png)
+![Blazor Scatter Chart with Rectangular Selection](images/selection/blazor-scatter-chart-rectangular-selection.png)
 
 ## Multiple Selection
 
@@ -302,7 +302,7 @@ Multiple points or series can be selected by setting the [IsMultiSelect](https:/
 
 ```
 
-![Multiple Selection](images/selection/multiselect.png)
+![Blazor Column Chart with Multiple Selection](images/selection/blazor-chart-multiple-selection.png)
 
 ## Selection via code-behind
 
@@ -357,7 +357,7 @@ A point or series can be selected programmatically on a chart using the [Selecte
 
 ```
 
-![Selection via code-behind](images/selection/codebehind.png)
+![Programmatically Selection in Blazor Column Chart](images/selection/blazor-column-chart-programmatic-selection.png)
 
 ## Legend Selection
 
@@ -408,7 +408,7 @@ A point or series can be selected through legend using the [ToggleVisibility](ht
 
 ```
 
-![Selection via legend](images/selection/legend-selection.png)
+![Blazor Column Chart with Legend Selection](images/selection/blazor-chart-legend-selection.png)
 
 ## Selection Customization 
 
@@ -476,7 +476,7 @@ The custom style can be applied to selected points or series using the [Selectio
 
 ```
 
-![Selection - Style Customization](images/selection/custom.png)
+![Blazor Column Chart with Custom Style Selection](images/selection/blazor-chart-custom-style-selection.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
