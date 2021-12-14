@@ -46,15 +46,11 @@ When the feature `EnableAutoRowHeight` is enabled, the row height gets auto-adju
 }
 ```
 
-The following images depict how the row height gets auto-adjusted for Month and timeline month view of the above code example.
-
 ![Row Auto Height in Blazor Scheduler](images/blazor-scheduler-row-auto-height.png)
 
 ![Blazor Scheduler in Timeleine Month View](images/blazor-scheduler-timeline-month.png)
 
 ## Timeline views with multiple resources
-
-The following example shows how the auto row adjustment feature works on timeline views with multiple resources.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -100,13 +96,11 @@ The following example shows how the auto row adjustment feature works on timelin
 }
 ```
 
-The following screenshot shows the auto-adjustment of row in timeline week view with resources.
-
 ![Timeline Views with Multiple Resources in Blazor Scheduler](images/blazor-scheduler-timeline-resource.png)
 
 ## Appointments occupying entire cell
 
-By default, with the feature `EnableAutoRowHeight`, there will be a space in the bottom of the cell when appointment is rendered. To avoid this space, we can set true to the property `IgnoreWhitespace` with `ScheduleEventSettings` tag helper whereas its default property value is false. In the following code example, the whitespace below the appointments has been ignored.
+By default, with the feature `EnableAutoRowHeight`, there will be a space in the bottom of the cell when appointment is rendered. To avoid this space, set true to the property `IgnoreWhitespace` with `ScheduleEventSettings` tag helper whereas its default property value is false.
 
 ```cshtml
 
@@ -163,8 +157,6 @@ By default, with the feature `EnableAutoRowHeight`, there will be a space in the
     }
 }
 ```
-
-In following image the whitespace below the appointment has been ignored.
 
 ![Ignoring Whitespace in Blazor Scheduler](images/blazor-scheduler-ignore-whitespace.png)
 

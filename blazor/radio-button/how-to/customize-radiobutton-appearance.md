@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize Blazor RadioButton Appearance | Syncfusion
-description: Learn here all about Customize Radio Button Appearance in Syncfusion Blazor RadioButton component and more.
+description: Learn here all about how to customize Radio Button Appearance in Syncfusion Blazor RadioButton component and more.
 platform: Blazor
 control: Radio Button
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize Blazor RadioButton Appearance
 
-You can customize the appearance of the Radio Button component by using the CSS rules. Define own CSS rules according to your requirement and assign the class name to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html) property.
+The appearance of the Radio Button component can be customized by using the CSS rules. Define own CSS rules according to your requirement and assign the class name to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html) property.
 
 The background and border color of the Radio Button is customized through the custom classes to create the primary, success, info, warning, and danger type of Radio Button.
 
@@ -125,7 +125,5 @@ The background and border color of the Radio Button is customized through the cu
 </style>
 
 ```
-
-Output be like
 
 ![Customizing Blazor RadioButton Appearance](./../images/blazor-radiobutton-customization.png)

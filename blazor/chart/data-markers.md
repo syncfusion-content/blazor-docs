@@ -52,7 +52,7 @@ Markers can be added to the points by enabling the [Visible](https://help.syncf
 
 ```
 
-![Data Markers](images/marker/marker-razor.png)
+![Data Markers in Blazor Line Chart](images/marker/blazor-line-chart-data-marker.png)
 
 ## Shape
 
@@ -91,7 +91,7 @@ Markers can be assigned with different shapes such as [Rectangle](https://help.s
 
 ```
 
-![Data Markers - Shape](images/marker/shape-razor.png)
+![Blazor Line Chart with Diamond Marker](images/marker/blazor-line-chart-diamond-marker.png)
 
 ## Images
 
@@ -173,7 +173,7 @@ Markers color can be customized using [Fill](https://help.syncfusion.com/cr/blaz
 
 ```
 
-![Data Markers - Customization](images/marker/custom-razor.png)
+![Blazor Line Chart with Custom Markers](images/marker/blazor-line-chart-custom-marker.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

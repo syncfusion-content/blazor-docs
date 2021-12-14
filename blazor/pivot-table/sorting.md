@@ -19,11 +19,11 @@ Member sorting can be enabled by setting the [EnableSorting](https://help.syncfu
 
 > By default the [EnableSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html#Syncfusion_Blazor_PivotView_DataSourceSettingsModel_1_EnableSorting) property in [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class set as **true**. If we set it as **false**, then the field members arrange in pivot table as its data source order. And, the sort icons in grouping bar and field list buttons will be removed.
 
-![output](images/sorting_fl.png "Member sorting icon in field list")
+![Sorting in Blazor PivotTable Field List](images/blazor-pivottable-sorting-in-field-list.png)
 <br/>
-![output](images/sorting_gb.png "Member sorting icon in grouping bar")
+![Sorting in Blazor PivotTable Grouping Bar](images/blazor-pivottable-sorting-in-groupbar.png)
 <br/>
-![output](images/sorting_grid.png "Resultant pivot table on member sort")
+![Sorting in Blazor PivotGrid](images/blazor-pivotgrid-sorting.png)
 
 Member sorting can also be configured using the [PivotViewSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewSortSetting.html) class through code behind, during initial rendering. The settings required to sort are:
 
@@ -69,7 +69,7 @@ Member sorting can also be configured using the [PivotViewSortSettings](https://
 
 ```
 
-![output](images/sorting_grid.png)
+![Sorting in Blazor PivotGrid](images/blazor-pivotgrid-sorting.png)
 
 ### Alphanumeric Sorting
 
@@ -107,7 +107,7 @@ Usually string sorting is applied to field members even if it starts with number
 
 ```
 
-![output](images/alphanumbericsorting.png)
+![Alpha Numeric Sorting in Blazor PivotTable](images/blazor-pivottable-alpha-numberic-sorting.png)
 
 ## Value sorting
 
@@ -158,6 +158,6 @@ The value sorting can also be configured using the [PivotViewValueSortSettings](
 
 ```
 
-![output](images/valuesorting.png)
+![Value Sorting in Blazor PivotTable](images/blazor-pivottable-value-sorting.png)
 
 > You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.

@@ -57,7 +57,7 @@ Annotations are texts, shapes, or images that are used to highlight a specific r
 
 ```
 
-![Annotation in chart](images/annotation/annotation-razor.png)
+![Annotation in Blazor Column chart](images/annotation/blazor-column-chart-annotation.png)
 
 ## Region
 
@@ -109,7 +109,7 @@ The [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Char
 
 ```
 
-![Insert annotations using region](images/annotation/region-razor.png)
+![Inserting Annotations using Region in Blazor Column Chart](images/annotation/blazor-column-chart-annotation-using-region.png)
 
 ## Co-ordinate Units
 
@@ -159,7 +159,7 @@ The [CoordinateUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ```
 
-![Insert annotations using coordinate](images/annotation/co-ordinate-razor.png)
+![Inserting Annotation using Coordinate in Blazor Column Chart](images/annotation/blazor-column-chart-coordinate-annotation.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
