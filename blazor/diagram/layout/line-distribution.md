@@ -94,7 +94,7 @@ The following code example illustrates how to create a complex hierarchical tree
 
 The below constraints prevents the connector segments overlapping nodes with a complex hierarchical layout.
 
-The following code illustrates how to prevents the connector segments overlapping in diagram layout.
+The following code illustrates how to prevent the connector segments overlapping in diagram layout.
 
 ```csharp
   

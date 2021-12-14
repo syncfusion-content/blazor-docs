@@ -423,22 +423,28 @@ The following sample code demonstrates implementing CRUD operations for the cust
         // Performs Remove operation
         public override object Remove(DataManager dm, object value, string keyField, string key)
         {
-            GanttData.Remove(GanttData.Where(or => or.TaskID == int.Parse(value.ToString())).FirstOrDefault());
+            foreach (var record in value as List<TaskData>)
+            {
+                GanttData.Remove(GanttData.Where(or => or.TaskID == record.TaskID).FirstOrDefault());
+            }
             return value;
         }
 
         // Performs Update operation
         public override object Update(DataManager dm, object value, string keyField, string key)
         {
-            var data = GanttData.Where(or => or.TaskID == (value as TaskData).TaskID).FirstOrDefault();
-            if (data != null)
+            foreach(var record in value as List<TaskData>)
             {
-                data.TaskID = (value as TaskData).TaskID;
-                data.TaskName = (value as TaskData).TaskName;
-                data.StartDate = (value as TaskData).StartDate;
-                data.EndDate = (value as TaskData).EndDate;
-                data.Duration = (value as TaskData).Duration;
-                data.Progress = (value as TaskData).Progress;
+                var data = GanttData.Where(or => or.TaskID == record.TaskID).FirstOrDefault();
+                if (data != null)
+                {
+                    data.TaskID = record.TaskID;
+                    data.TaskName = record.TaskName;
+                    data.StartDate = record.StartDate;
+                    data.EndDate = record.EndDate;
+                    data.Duration = record.Duration;
+                    data.Progress = record.Progress;
+                }
             }
             return value;
         }

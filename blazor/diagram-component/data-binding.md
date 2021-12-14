@@ -220,13 +220,13 @@ The ODataV4 is an improved version of OData protocols, and the SfDataManager can
 
 <div style="width:100%">
     <div style="width:70%">
-        <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px"
-                            NodeCreating="NodeDefaults"  SetNodeTemplate="SetTemplate">
-            <DataSourceSettings ID="EmployeeID" ParentID="ReportsTo">
-                <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Employees" 
-                               Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor"/>
+        <SfDiagramComponent Height="400px" InteractionController="@InteractionController.ZoomPan" 
+                            NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating" SetNodeTemplate="SetTemplate">
+            <DataSourceSettings Id="EmployeeID" ParentId="ReportsTo">
+                <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Employees" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor"></SfDataManager>
             </DataSourceSettings>
-            <Layout HorizontalSpacing="40" VerticalSpacing="40" Type="LayoutType.HierarchicalTree"/>
+            <SnapSettings Constraints ="SnapConstraints.None"></SnapSettings>
+            <Layout HorizontalSpacing="40" VerticalSpacing="40" Type="LayoutType.HierarchicalTree"></Layout>
         </SfDiagramComponent>
     </div>
 </div>
@@ -234,36 +234,77 @@ The ODataV4 is an improved version of OData protocols, and the SfDataManager can
 @code
 {
     SfDiagramComponent Diagram;
-    float x = 100;
-    float y = 100;
-
-    // Create the employee details with needed properties.
+    private float x = 100;
+    private float y = 100;
     public class Employee
     {
         public int? EmployeeID { get; set; }
         public string FirstName { get; set; }
         public int? ReportsTo { get; set; }
     }
-    
-    Query Query = new Query().Select(new List<string>() { "EmployeeID", "ReportsTo", "FirstName" }).Take(9);
-    
-    // Defines the node's default values.
-    private void NodeDefaults(IDiagramObject obj)
+    private Query Query = new Query().Select(new List<string>() { "EmployeeID", "ReportsTo", "FirstName" }).Take(9);
+    private void OnNodeCreating(IDiagramObject obj)
     {
         Node node = obj as Node;
         node.OffsetX = x;
         node.OffsetY = y;
+        node.Width = 80;
+        node.Height = 40;        
+        node.Shape = new BasicShape() { Type = Syncfusion.Blazor.Diagram.Shapes.Basic, Shape = BasicShapeType.Rectangle, CornerRadius = 8 };
+        node.Style = new ShapeStyle() { StrokeWidth = 0, Fill = "" };
         x += 100;
-        Employee data = System.Text.Json.JsonSerializer.Deserialize<Employee>(node.Data.ToString());
+
+        Dictionary<string, object> data = node.Data as Dictionary<string, object>;
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
         {
             new ShapeAnnotation()
             {
-                Content = data.FirstName
+                Content = data["FirstName"].ToString(),
+                Style = new TextStyle(){ Color = "white"}
             }
         };
+        if (data["FirstName"].ToString() == "Andrew")
+        {
+            node.Style.Fill = "#3A4857";
+        }
+        else if (data["FirstName"].ToString() == "Nancy")
+        {
+            node.Style.Fill = "#2B8C68";
+        }
+        else if (data["FirstName"].ToString() == "Janet")
+        {
+            node.Style.Fill = "#488CC1";
+        }
+        else if (data["FirstName"].ToString() == "Janet")
+        {
+            node.Style.Fill = "#488CC1";
+        }
+        else if (data["FirstName"].ToString() == "Margaret")
+        {
+            node.Style.Fill = "#4C888F";
+        }
+        else if (data["FirstName"].ToString() == "Steven")
+        {
+            node.Style.Fill = "#8E4DB4";
+        }
+        else if (data["FirstName"].ToString() == "Laura")
+        {
+            node.Style.Fill = "#CD6A32";
+        }
+        else
+        {
+            node.Style.Fill = "#8E4DB4";
+        }
     }
-  
+    private void OnConnectorCreating(IDiagramObject obj)
+    {
+        Connector connector = obj as Connector;
+        connector.Style.StrokeColor = "#048785";
+        connector.Type = ConnectorSegmentType.Orthogonal;
+        connector.TargetDecorator.Shape = DecoratorShape.None;
+        connector.SourceDecorator.Shape = DecoratorShape.None;
+        connector.Style = new ShapeStyle() { StrokeColor = "#3A4857", Fill = "#3A4857", StrokeWidth = 1, StrokeDashArray = "3,3" };
+    }
     private ICommonElement SetTemplate(IDiagramObject node)
     {
         return null;

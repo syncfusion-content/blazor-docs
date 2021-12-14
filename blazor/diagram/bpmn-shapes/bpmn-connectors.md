@@ -9,9 +9,9 @@ documentation: ug
 
 # BPMN Connectors in Blazor Diagram Component
 
-The `BPMN Connectors` are lines that used to connection between BPMN flow objects.
+The `BPMN Connectors` are lines that connect BPMN flow objects.
 
-They are represent in the following types.
+They are classified as follows.
 * Association
 * Sequence
 * Message

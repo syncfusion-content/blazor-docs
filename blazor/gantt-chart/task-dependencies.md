@@ -319,54 +319,51 @@ The following sample explains enabling the `RespectLink` validation mode while e
 
 #### On drawing connector lines
 
-When the connector lines are drawn between tasks, the task date gets validated based on predecessor values. We can restrict this validation on predecessor drawing using the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionBegin) event which gets triggered with the [`Action`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttActionEventArgs-1.html#Syncfusion_Blazor_Gantt_GanttActionEventArgs_1_Action) argument as `DrawConnectorLine`. You can enable/disable the validation using `EnableAutoLinkValidation` event argument. By default `EnableAutoLinkValidation` is true.
+When the connector lines are drawn between tasks, the task date gets validated based on predecessor values. You can restrict this validation on predecessor drawing using the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionBegin) event which gets triggered with the [Action](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttActionEventArgs-1.html#Syncfusion_Blazor_Gantt_GanttActionEventArgs_1_Action) argument as `DrawConnectorLine`. You can enable/disable the validation using [EnableAutoLinkValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttActionEventArgs-1.html#Syncfusion_Blazor_Gantt_GanttActionEventArgs_1_EnableAutoLinkValidation) event argument. By default [EnableAutoLinkValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttActionEventArgs-1.html#Syncfusion_Blazor_Gantt_GanttActionEventArgs_1_EnableAutoLinkValidation) is true.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
 
-<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="1000px" ProjectStartDate="@ProjectStart" 
-    ProjectEndDate="@ProjectEnd"  Toolbar="@(new List<string>() { "Add",  "Edit", "Update", "Cancel", "Delete"})">
-
-	<GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate"
-		Duration="Duration" Dependency="Predecessor" ParentID="ParentId">
-	</GanttTaskFields>
-	<GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" AllowAdding="true"
-		AllowDeleting="true" ShowDeleteConfirmDialog="true">
-	</GanttEditSettings>
+<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="1000px" Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel"})">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate"
+                     Duration="Duration" Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
+    <GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" AllowAdding="true"></GanttEditSettings>
     <GanttEvents OnActionBegin="ActionBegin" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code {
-	public SfGantt<TaskData> Gantt;
-	public DateTime ProjectStart = new DateTime(2019, 3, 24);
+    public SfGantt<TaskData> Gantt;
+    public DateTime ProjectStart = new DateTime(2019, 3, 24);
     public DateTime ProjectEnd = new DateTime(2019, 7, 6);
-	public List<TaskData> TaskCollection { get; set; }
-	protected override void OnInitialized()
-	{
-		this.TaskCollection = GetTaskCollection();
-	}
-	
+    public List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
     public void ActionBegin(GanttActionEventArgs<TaskData> args)
     {
-        if(args.Action != null && args.Action.Equals("DrawConnectorLine", StringComparison.Ordinal)){
-			args.EnableAutoLinkValidation = false;
-		}
+        if (args.Action != null && args.Action.Equals("DrawConnectorLine", StringComparison.Ordinal))
+        {
+            args.EnableAutoLinkValidation = false;
+        }
     }
-	
-	public class TaskData
-	{
-		public int TaskId { get; set; }
-		public string TaskName { get; set; }
-		public DateTime StartDate { get; set; }
-		public string Duration { get; set; }
-		public string Predecessor { get; set; }
-		public int Progress { get; set; }
-		public int? ParentId { get; set; }
-	}
 
-	public static List<TaskData> GetTaskCollection()
-	{
-		List<TaskData> Tasks = new List<TaskData>() {
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public string Duration { get; set; }
+        public string Predecessor { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>() {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2019, 04, 02)},
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2019, 04, 02), Progress = 30, ParentId = 1},
             new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2019, 04, 02), Duration = "3", Progress = 40, Predecessor = "2fs", ParentId = 1 },
@@ -376,11 +373,11 @@ When the connector lines are drawn between tasks, the task date gets validated b
             new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 40, ParentId = 5 },
             new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2019, 04, 04), Duration = "2", Progress = 30, ParentId = 5 }
         };
-	    return Tasks;
-	}
+        return Tasks;
+    }
 }
 ```
 
-`Note:` `EnablePredecessorValidation` is used to enable/disable validation based on predecessor values both on load time and on edit actions like cell editing, dialog editing, and on predecessor drawing. Whereas, `EnableAutoLinkValidation` event argument is used to enable/disable validation only on predecessor drawing. 
+> EnablePredecessorValidation is used to enable/disable validation based on predecessor values both on load time and on edit actions like cell editing, dialog editing, and on predecessor drawing. Whereas, [EnableAutoLinkValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttActionEventArgs-1.html#Syncfusion_Blazor_Gantt_GanttActionEventArgs_1_EnableAutoLinkValidation) event argument is used to enable/disable validation only on predecessor drawing. 
 
 > You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.
