@@ -114,7 +114,7 @@ Now map `Date` and `Close` fields from the datasource to [XName](https://help.sy
 </SfRangeNavigator>
 ```
 
-On successful compilation of the application, the Syncfusion Blazor Range Navigator component will render in the web browser as shown below.
+On successful compilation of the application, the Syncfusion Blazor Range Navigator component will render in the web browser.
 
 ![Blazor RangeNavigator Component](images/blazor-range-navigator.png)
 

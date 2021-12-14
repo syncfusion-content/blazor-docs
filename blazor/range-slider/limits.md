@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Limits in Blazor Range Slider Component | Syncfusion
-description: Checkout and learn here all about Limits in Syncfusion Blazor Range Slider component and much more details.
+description: Checkout and learn here all about limits in Syncfusion Blazor Range Slider component and much more details.
 platform: Blazor
 control: Range Slider
 documentation: ug
@@ -58,8 +58,6 @@ In the range slider, both handles can be restricted and locked from the limit's 
 ## Handle lock
 
 The movement of slider handles can be locked by enabling the ``StartHandleFixed`` and ``EndHandleFixed`` properties in the limit's object.
-
-In this sample, the movement of both slider handles has been locked.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

@@ -14,7 +14,7 @@ Rich Text Editor allows inserting images from online sources and local computer 
 | Options | Description |
 |----------------|---------|
 | AllowedTypes | Specifies the extensions of the image types allowed to insert on bowering and passing the extensions with comma separators. For example, pass AllowedTypes as .jpg and .png.|
-| Display | Sets the default display for an image when it is inserted in to the Rich Text Editor. Possible options are: `Inline` and `Break`.|
+| Display | Sets the default display for an image when it is inserted into the Rich Text Editor. Possible options are: `Inline` and `Break`.|
 | Width | Sets the default width of the image when it is inserted in the Rich Text Editor.|
 | Height | Sets the default height of the image when it is inserted in the Rich Text Editor.|
 | SaveUrl | Provides URL to map the action result method to save the image.|
@@ -135,8 +135,6 @@ namespace ImageUpload.Controllers
 
 ```
 
-The output will be as follows.
-
 ![Blazor RichTextEditor with Image](./images/blazor-richtexteditor-with-image.png)
 
 ## Image delete
@@ -149,7 +147,7 @@ After selecting the image from the local machine, the URL for the image will be 
 
 ## Insert from web
 
-To insert an image from online source like Google, Ping, and more, enable images tool on the editor’s toolbar. By default, the images tool opens an image dialog that allows you to insert an image from online source.
+To insert an image from online source like Google, Ping, and more, enable images tool on the editor’s toolbar. By default, the images tool opens an image dialog that allows to insert an image from online source.
 
 ![Inserting Image in Blazor RichTextEditor Content](./images/blazor-richtexteditor-insert-image.png)
 
@@ -201,7 +199,7 @@ Rich Text Editor has a built-in image inserting support. The resize points will 
 
 ![Image Resizing in Blazor RichTextEditor](./images/blazor-richtexteditor-image-resize.png)
 
-> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
+> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
 
 ## See Also
 
