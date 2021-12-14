@@ -60,6 +60,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 * Now, Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
 
+    * For **.NET 6** app,
     {% tabs %}
     {% highlight c# tabtitle=NET6 %}
     using Microsoft.AspNetCore.Components.Web;
@@ -76,6 +77,10 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
     await builder.Build().RunAsync();
     ....
     {% endhighlight %}
+    {% endtabs %}
+
+    * For **.NET 5 and .NET 3.X** app
+    {% tabs %}
     {% highlight c# tabtitle=NET3 and NET5 %}
     using Syncfusion.Blazor;
 
