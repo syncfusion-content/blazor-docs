@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Server Side App in Visual Studio
 
-This article provides a step-by-step instructions for building Syncfusion Blazor Server App with `Blazor Calendar` component using [Visual Studio](https://visualstudio.microsoft.com/vs/). 
+This article provides a step-by-step instructions for building Blazor Server App with `Blazor Calendar` component using [Visual Studio](https://visualstudio.microsoft.com/vs/). 
 
 ## Prerequisites
 
