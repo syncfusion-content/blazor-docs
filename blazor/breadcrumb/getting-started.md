@@ -9,21 +9,27 @@ documentation: ug
 
 # Getting Started with Blazor Breadcrumb Component
 
-This section briefly explains about how to include [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) component in your Blazor Server App and Blazor WebAssembly App. 
+This section briefly explains about how to include [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio. 
 
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a new Blazor Server App in Visual Studio
+## Create a new Blazor App in Visual Studio
 
-Refer to the [Tooling for Blazor](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows) to create a new **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio.
+You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
+
+* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
+
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/vs2019-extensions/create-project)
 
 ## Install Syncfusion Blazor Navigations NuGet in the App
 
 Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). In order to use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details. 
 
 To add Blazor Breadcrumb component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and then install it.
+
+> [Code Generator of Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/vs2019-extensions/code-generator) can be used to add NuGet references with example code.
 
 ## Add Style Sheet
 
