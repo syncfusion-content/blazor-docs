@@ -9,7 +9,7 @@ documentation: ug
 
 # Toolbar in Blazor RichTextEditor Component
 
-The Rich Text Editor toolbar contains a collection of tools such as bold, Italic, and text alignment buttons that are used to format the content. However, in most integrations, you can customize the toolbar configurations easily to suit your needs. The Rich Text Editor allows you to configure different types of toolbar using `RichTextEditorToolbarSettings` - `Type` property. The types of toolbar are:
+The Rich Text Editor toolbar contains a collection of tools such as bold, Italic, and text alignment buttons that are used to format the content. However, in most integrations, you can customize the toolbar configurations easily to suit your needs. The Rich Text Editor allows to configure different types of toolbar using `RichTextEditorToolbarSettings` - `Type` property. The types of toolbar are:
 
 1. Expand
 2. MultiRow
@@ -82,8 +82,6 @@ The default mode of `RichTextEditorToolbarSettings` - `Type` as `Expand` to hide
 
 ```
 
-The output will be as follows.
-
 ![Blazor RichTextEditor with Expand Toolbar](./images/blazor-richtexteditor-expand-toolbar.png)
 
 ## Multi-row Toolbar
@@ -153,8 +151,6 @@ Set the `RichTextEditorToolbarSettings` - `Type` as `MultiRow` to display the to
 }
 
 ```
-
-The output will be as follows.
 
 ![Blazor RichTextEditor with MultiRow Toolbar](./images/blazor-richtexteditor-multirow-toolbar.png)
 
@@ -268,7 +264,7 @@ The tools order can be customized as your application requirement. If you are no
 
 ## Custom Tool
 
-The Rich Text Editor allows you to configure your own tools to its toolbar using `RichTextEditorCustomToolbarItems` tag directive with in a `RichTextEditorToolbarSettings`. The tools can be plain text, icon, HTML template. You can also define the order and group where the tool should be included.
+The Rich Text Editor allows to configure your own tools to its toolbar using `RichTextEditorCustomToolbarItems` tag directive with in a `RichTextEditorToolbarSettings`. The tools can be plain text, icon, HTML template. You can also define the order and group where the tool should be included.
 
 This sample shows how to add your own tools to toolbar of the Rich Text Editor. The `Ω` command is added to insert special characters in the editor.
 
@@ -370,8 +366,6 @@ The following sample demonstrates the option to insert the image to the Rich Tex
 }
 
 ```
-
-The output will be as follows.
 
 ![Blazor RichTextEditor with Image Toolbar](./images/blazor-richtexteditor-image-toolbar.png)
 

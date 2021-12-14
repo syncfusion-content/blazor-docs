@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stared with Blazor RichTextEditor in WebAssembly | Syncfusion
+title: Getting Started with Blazor RichTextEditor in WebAssembly | Syncfusion
 description: Learn here all about Getting Started with Syncfusion Blazor RichTextEditor Component in Blazor WebAssembly (WASM) App using Visual Studio and more.
 platform: Blazor
 control: RichTextEditor
@@ -125,6 +125,5 @@ The following code explains how to initialize a simple Rich Text Editor in Razor
 
 After successful compilation of your application, run the application.
 
-The output will be as follows.
 
 ![Blazor RichTextEditor](../images/blazor-richtexteditor-component.png)

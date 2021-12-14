@@ -37,7 +37,7 @@ The `ExecuteCommand` will perform the following commands.
 | InsertUnorderedList | Create a new list item(bulleted). |`await this.RteObj.ExecuteCommandAsync(CommandName.InsertUnorderedList);`|
 | Outdent | Allows to decrease the indent level of the content. | `await this.RteObj.ExecuteCommandAsync(CommandName.Outdent);`|
 | Redo | Allows to redo the actions | `await this.RteObj.ExecuteCommandAsync(CommandName.Redo);`|
-| RemoveFormat | remove all formatting styles (such as bold, italic, underline, color, superscript, subscript, and more) from currently selected text. |`await this.RteObj.ExecuteCommandAsync(CommandName.RemoveFormat);`|
+| RemoveFormat | Remove all formatting styles (such as bold, italic, underline, color, superscript, subscript, and more) from currently selected text. |`await this.RteObj.ExecuteCommandAsync(CommandName.RemoveFormat);`|
 | InsertText | Insert text to the current cursor position. | `await this.RteObj.ExecuteCommandAsync(CommandName.InsertText, "Inserted text");`|
 | InsertImage | Insert an image to the current cursor position. | `await this.RteObj.ExecuteCommandAsync(CommandName.InsertImage, new ImageCommandsArgs() { Url = "https://ej2.syncfusion.com/javascript/demos/src/rich-text-editor/images/RTEImage-Feather.png", CssClass = "rte-img" });`|
 
@@ -80,8 +80,6 @@ The following code block demonstrates the usage of the ExecuteCommand in Rich Te
 }
 
 ```
-
-The output will be as follows.
 
 ![Execute Command in Blazor RichTextEditor](./images/blazor-richtexteditor-execute-command.png)
 
