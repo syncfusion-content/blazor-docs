@@ -57,7 +57,7 @@ The default color of series or points can be changed by providing a custom color
 
 ```
 
-![Custom Color Palette](images/appearance/custom-razor.png)
+![Blazor Column Chart with Custom Color Palette](images/appearance/blazor-column-chart-custom-color-palette.png)
 
 <!-- markdownlint-disable MD036 -->
 
@@ -108,7 +108,7 @@ The chart's background color can be customized using the [Background](https://he
 
 ```
 
-![Chart Background and Border - Customization](images/appearance/background.png)
+![Blazor Column Chart with Custom Background and Border](images/appearance/blazor-column-chart-custom-background-and-border.png)
 
 ### Chart Margin
 
@@ -154,7 +154,7 @@ The chart's margin from its container can be customized using the [ChartMargin](
 
 ```
 
-![Chart with margin customization](images/appearance/margin.png)
+![Blazor Column Chart with Custom Margin](images/appearance/blazor-column-chart-custom-margin.png)
 
 ### Chart Area Background and Border
 
@@ -198,7 +198,7 @@ The chart area's background color can be customized using the [Background](https
 
 ```
 
-![Chart Area Background and Border - Customization](images/appearance/area-razor.png)
+![Blazor Area Chart with Custom Background and Border](images/appearance/blazor-area-chart-custom-background-and-border.png)
 
 ## Animation
 
@@ -285,7 +285,7 @@ The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfCha
 
 ```
 
-![Chart Title](images/appearance/title-razor.png)
+![Blazor Column Chart with Title](images/appearance/blazor-column-chart-title.png)
 
 ## Chart Subtitle
 
@@ -331,7 +331,7 @@ The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sf
 
 ```
 
-![Chart Subtitle](images/appearance/subtitle-razor.png)
+![Blazor Column Chart with Subtitle](images/appearance/blazor-column-chart-with-subtitle.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

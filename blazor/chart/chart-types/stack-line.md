@@ -74,7 +74,7 @@ documentation: ug
 
 ``` 
 
-![The 100 percent Stacked Line](../images/chart-types-images/stacked-line-100.png)
+![Blazor Stacked Line100 Chart](../images/chart-types-images/blazor-stacked-line-100-chart.png)
 
 > Refer to our [Blazor 100% Stacked Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-line-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor 100% Stacked Line Chart Example](https://blazor.syncfusion.com/demos/chart/percent-stacked-line?theme=bootstrap4) to know how to render and configure the 100% Stacked Line type chart.
 
@@ -148,7 +148,7 @@ The following properties can be used to customize the [100% Stacked Line](https:
 
 ``` 
 
-![The 100 percent Stacked Line with series customization](../images/chart-types-images/custom-stacked-line-100.png)
+![Blazor Stacked Line100 Chart with Custom Series](../images/chart-types-images/blazor-stacked-line-100-chart-custom-series.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

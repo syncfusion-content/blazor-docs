@@ -103,7 +103,7 @@ There are scenarios where each view may need to have different configurations. F
 
 | Property | Type | Description | Applicable views |
 |----------|------|-------------|------------------|
-| `Option` | `View` | It accepts the Scheduler view name, based on which we can define its related properties. The view names can be `Day`, `Week` and so on. | All views.|
+| `Option` | `View` | It accepts the Scheduler view name, based on which its related properties is defined. The view names can be `Day`, `Week` and so on. | All views.|
 | `IsSelected` | bool | It acts similar to the `CurrentView` property and defines the active view of the Scheduler.| All views. |
 | `DateFormat` | string | By default, Scheduler follows the date format as per the default culture assigned to it. When it is defined under specific view, only those assigned views follows this date format. | All views. |
 | `Readonly` | bool | When set to `true`, prevents the CRUD actions on the respective view under where it is defined. | All views. |
@@ -220,13 +220,13 @@ The following code example depicts how to change the start and end hours only on
 }
 ```
 
-> The Week, Work week and Day views can display the all-day row appointments in a separate all-day row with an expand/collapse option to view it.
+> The Week, Work week and Day views can display the all-day row appointments in a separate all-day row with an expand or collapse option to view it.
 
 ### Month view
 
 A Month view displays the entire days of a particular month and all its related appointments. You can navigate to a particular date in the day view by clicking on the appropriate date text on the month cells.
 
-By default, when you try to create an appointment through Month view, it is considered as created for an entire day. You can explicitly change this behavior by unchecking the `All-day` option from editor window, so that it defaults to the start time duration as 9.00 AM and end time as 9.30 AM.
+By default, when you try to create an appointment through Month view, it is considered to be created for an entire day. You can explicitly change this behavior by unchecking the `All-day` option from editor window, so that it defaults to the start time duration as 9.00 AM and end time as 9.30 AM.
 
 By default, in month view, you can view single appointment on each day cell. If you have more than one appointment in a day, the `+ more` text indicator will be available on that cell, clicking on which will allows you to view the hidden appointments of a day. You can decide how many appointments can render on a day based on your Scheduler and Month cell height using `MaxEventsPerRow` property within `ScheduleView` whereas its default value is 1. The following code example depicts how to change the working days only on the `Month` view of the Scheduler.
 
@@ -322,7 +322,7 @@ The following code example shows how to hide the weekend days on `MonthAgenda` v
 
 ### Timeline views – Day, Week, Work Week
 
-Similar to the vertical day, week and work week views, the respective view shows all its appointments where the time slots are displayed horizontally. By default, the cell height adjusts as per the height set to Scheduler and you can view single appointment on each cell. If you have more than one appointment, the `+ more` text indicator will be available on the bottom of that cell, clicking on which will allows you to view the hidden appointments of a day. You can decide how many appointments can render on a cell based on your Scheduler and work cell height using `MaxEventsPerRow` property within `ScheduleView` whereas its default value is `1`.
+Similar to the vertical day, week and work week views, the respective view shows all its appointments where the time slots are displayed horizontally. By default, the cell height adjusts as per the height set to Scheduler and you can view single appointment on each cell. If you have more than one appointment, the `+ more` text indicator will be available on the bottom of that cell, clicking on which allows you to view the hidden appointments of a day. You can decide how many appointments can render on a cell based on your Scheduler and work cell height using `MaxEventsPerRow` property within `ScheduleView` whereas its default value is `1`.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -353,7 +353,7 @@ Similar to the vertical day, week and work week views, the respective view shows
 }
 ```
 
-> Clicking on the dates in the date header bar of Timeline day, Timeline week and Timeline work week will allow you to navigate to the Agenda view.
+> Clicking on the dates in the date header bar of Timeline day, Timeline week and Timeline work week will allow to navigate to the Agenda view.
 
 ### Timeline Month view
 
@@ -385,13 +385,13 @@ A Timeline Month view displays the current month days along with its appointment
 }
 ```
 
-> Clicking on the dates in the date header bar of Timeline month will allow you to navigate to the Timeline day view.
+> Clicking on the dates in the date header bar of Timeline month allows to navigate to the Timeline day view.
 
 ### Timeline Year view
 
 A Timeline Year view displays the complete year along with its appointments.
 
-By default the timeline year view orientation is set to Horizontal view. In this following code example, the timeline year view is set with vertical orientation.
+By default, the timeline year view orientation is set to Horizontal view. In this following code example, the timeline year view is set with vertical orientation.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -501,8 +501,6 @@ The Year view shows a year calendar, where clicking on a particular day will dis
     }
 }
 ```
-
-The output of the code example is shown below.
 
 ![Displaying Year View in Blazor Scheduler](images/blazor-scheduler-year-view.png)
 
