@@ -9,7 +9,7 @@ documentation: ug
 
 # Paste from Microsoft Word in Blazor RichTextEditor Component
 
-The Rich Text Editor allows you to reduce the effort while converting the Microsoft Word content to HTML format with format and styles.
+The Rich Text Editor allows to reduce the effort while converting the Microsoft Word content to HTML format with format and styles.
 
 ## Microsoft Word to HTML
 
@@ -79,7 +79,7 @@ By default, the following basic styles are allowed on pasting the content to the
 
 ['background', 'background-color', 'border', 'border-bottom', 'border-left', 'border-radius', 'border-right', 'border-style', 'border-top', 'border-width', 'clear', 'color', 'cursor', 'direction', 'display', 'float', 'font', 'font-family', 'font-size', 'font-weight', 'font-style', 'height', 'left', 'line-height', 'margin', 'margin-top', 'margin-left', 'margin-right', 'margin-bottom', 'max-height', 'max-width', 'min-height', 'min-width', 'overflow', 'overflow-x', 'overflow-y', 'padding', 'padding-bottom', 'padding-left', 'padding-right', 'padding-top', 'position', 'right', 'table-layout', 'text-align', 'text-decoration', 'text-indent', 'top', 'vertical-align', 'visibility', 'white-space', 'width']
 
-When you configure `AllowedStyleProperties`, the styles, which matches the 'allowed style properties' list are allowed, all other style properties will be removed on pasting the content in the editor.
+When you configure `AllowedStyleProperties`, the styles which matches the 'allowed style properties' list are allowed, all other style properties will be removed on pasting the content in the editor.
 
 For Example,
 
@@ -113,8 +113,6 @@ In the following example, the paste cleanup related settings are explained with 
 
 ```
 
-The output will be as follows.
-
 ![Blazor RichTextEditor with Paste CleanUp](./images/blazor-richtexteditor-paste-cleanup.png)
 
-> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
+> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.

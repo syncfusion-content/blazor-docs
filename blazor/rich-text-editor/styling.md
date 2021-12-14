@@ -83,8 +83,6 @@ The following sample demonstrates the option to add the font name and font size 
 
 ```
 
-The output will be as follows.
-
 ![Changing Font Size in Blazor RichTextEditor](./images/blazor-richtexteditor-change-font-size.png)
 
 ## Custom font and size
@@ -155,8 +153,6 @@ If you want to add additional font names and font sizes to font drop-down, pass 
 }
 
 ```
-
-The output will be as follows.
 
 ![Blazor RichTextEditor with Custom Fonts](./images/blazor-richtexteditor-custom-font.png)
 
@@ -239,8 +235,6 @@ If you want to add additional formats to format drop-down, pass the format infor
 
 ```
 
-The output will be as follows.
-
 ![Blazor RichTextEditor with Custom Format](./images/blazor-richtexteditor-custom-format.png)
 
 ## Font and Background color
@@ -296,8 +290,6 @@ The RichTextEditorFontColor and RichTextEditorBackgroundColor tag has two `Mode`
 }
 
 ```
-
-The output will be as follows.
 
 ![Displaying Font Color in Blazor RichTextEditor](./images/blazor-richtexteditor-font-color.png)
 
@@ -529,7 +521,7 @@ By default, The content styles of Rich Text Editor are not returned while retrie
 
 ```
 
-> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
+> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
 
 ## See Also
 

@@ -9,13 +9,11 @@ documentation: ug
 
 # Localization in Blazor Range Slider Component
 
-The `Localization` library allows you to localize default text content of the Slider. The slider control has static text on some features (like increase and decrease button) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the `Locale` value.
+The `Localization` library allows to localize default text content of the Slider. The slider control has static text on some features (like increase and decrease button) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the `Locale` value.
 
 ## Blazor server side
 
 Add `UseRequestLocalization` middle-ware in Configure method in **Startup.cs** file to get browser Culture Info.
-
-Refer the following code to add configuration in Startup.cs file
 
 ```csharp
 using Microsoft.AspNetCore.Builder;
@@ -38,11 +36,11 @@ namespace BlazorApplication
 }
 ```
 
-The following sample, demonstrate how to enable **Localization** for Slider in server side Blazor samples. Here, we have used Resource file to translate the static text.
+The following sample, demonstrates how to enable **Localization** for Slider in server side Blazor samples. Here, Resource file is used to translate the static text.
 
-The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the Blazor framework.
+The Resource file is an XML file which contains the strings(key and value pairs) that has to be translated into different languages. Refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the Blazor framework.
 
-Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
+Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function.
 
 ```csharp
 using Syncfusion.Blazor;
@@ -201,7 +199,5 @@ namespace WebAssemblyLocale
 
 <SfSlider Value="30" ShowButtons="true" Step="10" Locale="de"></SfSlider>
 ```
-
-The output will be as follows.
 
 ![Localization in Blazor RangeSlider](./images/blazor-rangeslider-localization.gif)

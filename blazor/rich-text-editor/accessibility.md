@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor RichTextEditor component and more.
+description: Checkout and learn here all about accessibility in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -50,8 +50,6 @@ The Rich Text Editor element is assigned the role of application.
 </SfRichTextEditor>
 
 ```
-
-The output will be as follows.
 
 ![Accessibility in Blazor RichTextEditor](./images/blazor-richtexteditor-accessibility.png)
 

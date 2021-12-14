@@ -9,14 +9,14 @@ documentation: ug
 
 # Table in Blazor RichTextEditor Component
 
-Rich Text Editor allows you to insert table of content in edit panel and provide options to add, edit, and remove the table as well as perform other table related action. For inserting the table to the Rich Text Editor, the following list of options have been provided in the `RichTextEditorTableSettings`
+Rich Text Editor allows to insert table of content in edit panel and provide options to add, edit, and remove the table as well as perform other table related action. For inserting the table to the Rich Text Editor, the following list of options have been provided in the `RichTextEditorTableSettings`
 
 | Options | Description | Default Value |
 |----------------|---------|-----------------------------|
 | MinWidth | Sets the default minWidth of the table. | 0 |
 | MaxWidth | Sets the default maxWidth of the table. | null |
 | EnableResize | Enables resize feature in table.| true |
-| Styles | This is an array of key value pair, on each pair, key should be name of styling and value is class name. this list will be shown on quick toolbar options to change the styles of table on designing like dashed, double bordered. | `List<DropDownItemModel>` |
+| Styles | This is an array of key value pair, on each pair, key should be name of styling and value is class name. This list will be shown on quick toolbar options to change the styles of table on designing like dashed, double bordered. | `List<DropDownItemModel>` |
 | Width | Sets the default width of the table. | 100% |
 
 ## Insert table
@@ -51,8 +51,6 @@ In the following sample, the table has been inserted using `CreateTable` toolbar
 }
 
 ```
-
-The output will be as follows.
 
 ![Inserting Table in Blazor RichTextEditor](./images/blazor-richtexteditor-insert-table.png)
 
@@ -138,8 +136,6 @@ Rich Text Editor provides support to custom styles for tables. If you want to ad
 
 ```
 
-The output will be as follows.
-
 ![Blazor RichTextEditor with Custom Table Styles](./images/blazor-richtexteditor-custom-table-styles.png)
 
 ## Table Properties
@@ -150,26 +146,22 @@ Using the quick toolbar, users can change the width, cell padding, and cell spac
 
 ![Displaying Table Properties for Blazor RichTextEditor](./images/blazor-richtexteditor-table-properties.png)
 
-> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
+> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
 
 ## Table cell merge and split
 
 The Rich Text Editor allows users to change the appearance of the tables by splitting or merging the table cells.
 
-`TableCell` item should be configured in the Table [quickToolbarSettings](../api/rich-text-editor/quickToolbarSettings/#table) Property to show the merge/split icons while selecting the table cells
+`TableCell` item should be configured in the Table [quickToolbarSettings](../api/rich-text-editor/quickToolbarSettings/#table) property to show the merge/split icons while selecting the table cells.
 
 ### Table cell merge
 
-The table cell merge feature allows you to merge two or more row and column cells into a single cell with its contents.
-
-The following image explains the table merge action.
+The table cell merge feature allows to merge two or more row and column cells into a single cell with its contents.
 
 ![Table Cell Merging in Blazor RichTextEditor](./images/blazor-richtexteditor-table-cell-merge.png)
 
 ### Table cell split
 
-The table cell split feature allows you to a selected cell can be split both horizontally and vertically.
-
-The following image explains the table split action.
+The table cell split feature allows to a selected cell can be split both horizontally and vertically.
 
 ![Table Cell Spliting in Blazor RichTextEditor](./images/blazor-richtexteditor-table-cell-split.png)
