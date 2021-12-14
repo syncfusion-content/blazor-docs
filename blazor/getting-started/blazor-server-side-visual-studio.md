@@ -120,7 +120,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
     {% endtabs %}
 
 ## Add Syncfusion Blazor component
-* Open **~/_Imports.razor** file or the razor page where the component is to be added and import the `Syncfusion.Blazor.Calendars` namespace. 
+* Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Calendars` namespace. 
 
     {% tabs %}
     {% highlight razor %}
@@ -131,7 +131,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
     {% endhighlight %}
     {% endtabs %}
 
-* Now, add the Syncfusion Calendar component in a file under the `~/Pages` folder. For example, the Calendar component is added in the **~/Pages/Index.razor** page.
+* Now, add the Syncfusion Calendar component in razor file. Here, the Calendar component is added in the **~/Pages/Index.razor** page under the `~/Pages` folder.
 
     {% tabs %}
     {% highlight razor %}
@@ -141,7 +141,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
     {% endhighlight %}
     {% endtabs %}
 
-* Run the application. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
 
     ![Blazor Calendar Component](images/browser-output.png)
 
