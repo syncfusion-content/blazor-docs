@@ -18,7 +18,7 @@ Syncfusion provides Blazor Mac installer for both evaluation and paid customers.
 
 1. You can evaluate our 30-day free trial by visiting the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the Blazor platform.
 
-2. After completing the required form or logging in with your registered Syncfusion account, you can download the Blazor trial installer from the confirmation page. (See the screenshot below.)
+2. After completing the required form or logging in with your registered Syncfusion account, you can download the Blazor trial installer from the confirmation page. (as shown in below screenshot.)
 
    ![Trial Confirmation](images/blazor_mac_trial.PNG)
 
@@ -26,7 +26,7 @@ Syncfusion provides Blazor Mac installer for both evaluation and paid customers.
 
 4. Unlock key is not required to install the Syncfusion Blazor Mac trial installer.
 
-5. Before the trial expires, you can download the trial installer at any time from your registered account’s [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (See the screenshot below.)
+5. Before the trial expires, you can download the trial installer at any time from your registered account’s [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (as shown in below screenshot.)
 
    ![Start Trial download](images/start-trial-download-installer.png)
 
@@ -48,7 +48,7 @@ You should initiate an evaluation if you have already obtained our components th
 
    > **Note** <br /> If you’ve already used the trial products and they haven’t expired, you won’t be able to start the trial for the same product again.
 
-4. After you’ve started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer. You can generate the [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://sfblazor.azurewebsites.net/staging/documentation/getting-started/license-key/how-to-generate) here at any time before the trial period expires. (See the screenshot below.)
+4. After you’ve started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer. You can generate the [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate) here at any time before the trial period expires. (as shown in below screenshot.)
 
    ![Start Trial download](images/start-trial-download-installer.png)
 
