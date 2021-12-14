@@ -17,7 +17,7 @@ This article provides a step-by-step instructions for building Syncfusion Blazor
 
 ## Create a new Blazor Server App in Visual Studio
 
-Refer to the [Tooling for Blazor](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows) to create a new Blazor Server App using Visual Studio.
+Refer to the [Tooling for Blazor](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows) to create a new **Blazor Server App** using Visual Studio.
 
 ## Install Syncfusion Blazor Packages in the App
 
@@ -25,7 +25,8 @@ Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/
 
 To add Blazor Calendar component in your app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and then install it.
 
-## Theme Assets
+## Add Style Sheet
+
 Checkout [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways to refer themes in Blazor application to have the expected appearance for Syncfusion Blazor components. Here, theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
 
 To add theme to your app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, you can refer theme as follows,
@@ -52,7 +53,7 @@ To add theme to your app, open the NuGet package manager in Visual Studio (*Tool
     {% endhighlight %}
     {% endtabs %}
 
-## Client Assets
+## Add Script Reference
 
 Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, needed scripts are referenced via javascript script isolation approach. 
 
@@ -63,7 +64,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
     {% tabs %}
-    {% highlight c# tabtitle=~/Imports.razor %}
+    {% highlight razor tabtitle=~/Imports.razor %}
 
         @using Syncfusion.Blazor
         @using Syncfusion.Blazor.Calendars
@@ -120,7 +121,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * Open **~/_Imports.razor** file or the razor page you are going to add component and import the `Syncfusion.Blazor.Calendars` namespace. 
 
     {% tabs %}
-    {% highlight c# tabtitle=~/Imports.razor %}
+    {% highlight razor tabtitle=~/Imports.razor %}
 
         @using Syncfusion.Blazor
         @using Syncfusion.Blazor.Calendars
@@ -131,7 +132,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * Now, add the Syncfusion Calendar component in a file under the `~/Pages` folder. For example, the Calendar component is added in the **~/Pages/Index.razor** page.
 
     {% tabs %}
-    {% highlight html tabtitle=~/Index.razor %}
+    {% highlight razor tabtitle=~/Index.razor %}
 
         <SfCalendar TValue="DateTime"/>
 
