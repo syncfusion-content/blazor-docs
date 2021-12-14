@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Syncfusion Blazor Server App in Visual Studio
-description: Check out the documentation for getting started with Syncfusion Blazor Components and more.
+description:  Check out the documentation for getting started with Syncfusion Blazor Components in Visual Studio and much more.
 platform: Blazor
 component: Common
 documentation: ug
