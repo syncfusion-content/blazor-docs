@@ -85,10 +85,11 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
         var builder = WebApplication.CreateBuilder(args);
 
+        // Add services to the container.
         builder.Services.AddRazorPages();
         builder.Services.AddServerSideBlazor();
-        ....
         builder.Services.AddSyncfusionBlazor();
+
         var app = builder.Build();
         ....
     {% endhighlight %}
@@ -105,12 +106,14 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
     {
         public class Startup
         {
+            ...
             public void ConfigureServices(IServiceCollection services)
             {
-                ....
-                ....
+                services.AddRazorPages();
+                services.AddServerSideBlazor();
                 services.AddSyncfusionBlazor();
             }
+            ...
         }
     }
     
