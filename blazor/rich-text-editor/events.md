@@ -9,11 +9,11 @@ documentation: ug
 
 # Events in Blazor RichTextEditor Component
 
-This section explains the list of events of the RichTextEditor component which will be triggered for appropriate RichTextEditor actions.
+This section explains the list of events of the RichTextEditor component which will be triggered for an appropriate RichTextEditor actions.
 
 ## OnActionBegin
 
-`OnActionBegin` event triggers before command execution using toolbar items.
+`OnActionBegin` event triggers before command execution using the toolbar items.
 
 ```cshtml
 
@@ -34,7 +34,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 ## OnActionComplete
 
-`OnActionComplete` event triggers after command execution using toolbar items.
+`OnActionComplete` event triggers after command execution using the toolbar items.
 
 ```cshtml
 
@@ -421,7 +421,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 ## Focus
 
-`Focus` event triggers when Rich Text Editor is focused in
+`Focus` event triggers when Rich Text Editor is focused in.
 
 ```cshtml
 
@@ -463,7 +463,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 ## OnResizeStart
 
-`OnResizeStart` event triggers only when start resizing the image.
+`OnResizeStart` event triggers only when resizing the image is started.
 
 ```cshtml
 
@@ -484,7 +484,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 ## OnResizeStop
 
-`OnResizeStop` event triggers only when stop resizing the image.
+`OnResizeStop` event triggers only when resizing the image is stopped.
 
 ```cshtml
 
@@ -505,7 +505,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 ## AfterPasteCleanup
 
-`AfterPasteCleanup` event triggers after cleanup the copied content.
+`AfterPasteCleanup` event triggers after cleaning up the copied content.
 
 ```cshtml
 

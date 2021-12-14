@@ -109,8 +109,6 @@ The following code explains how to initialize a simple Rich Text Editor in Razor
 
 After successful compilation of your application, run the application.
 
-The output will be as follows.
-
 ![Blazor RichTextEditor](./images/blazor-richtexteditor.png)
 
 ## Configure the Toolbar
@@ -178,8 +176,6 @@ Configure the toolbar with the tools using `Items` field of the `RichTextEditorT
 
 ```
 
-The output will be as follows.
-
 ![Blazor RichTextEditor with Toolbar](./images/blazor-richtexteditor-toolbar.png)
 
 ## Insert images and links
@@ -244,8 +240,6 @@ Specifies the items to be rendered in quick toolbar based on the target elements
 }
 
 ```
-
-The output will be as follows.
 
 ![Blazor RichTextEditor with Image](./images/blazor-richtexteditor-image.png)
 

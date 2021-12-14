@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Range Slider Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Range Slider component and more.
+description: Checkout and learn here all about accessibility in Syncfusion Blazor Range Slider component and more.
 platform: Blazor
 control: Range Slider
 documentation: ug
@@ -15,11 +15,11 @@ The Slider control uses the Slider role and the following ARIA properties for it
 
 | **Properties** | **Functionalities** |
 | --- | --- |
-| `aria-valuenow` | It Indicates the current value of the slider. |
-| `aria-valuetext`| Returns the current text of the slider. |
-| `aria-valuemin` | It Indicates the Minimum value of the slider. |
-| `aria-valuemax` | It Indicates the Maximum value of the slider. |
-| `aria-orientation` | It Indicates the Slider Orientation. |
+| `aria-valuenow` | It indicates the current value of the slider. |
+| `aria-valuetext`| It returns the current text of the slider. |
+| `aria-valuemin` | It indicates the minimum value of the slider. |
+| `aria-valuemax` | It indicates the maximum value of the slider. |
+| `aria-orientation` | It indicates the Slider Orientation. |
 | `aria-label` | Slider left and right button label text (increment and decrement). |
 | `aria-labelledby` | It indicates the name of the Slider. |
 

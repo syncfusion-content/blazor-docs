@@ -31,13 +31,11 @@ When the `RichTextEditorIframeSettings` option is enabled, the Rich Text Editor 
 
 ```
 
-The output will be as follows.
-
 ![Blazor RichTextEditor with IFrame](./images/blazor-richtexteditor-iframe.png)
 
 ## IFrame attributes
 
-The editor allows you to pass an additional attribute to body tag of a `<iframe>` element using `Attributes` fields of `RichTextEditorIframeSettings` property. This property contains name/value pairs in string format. It is used to override the default appearance of the content area.
+The editor allows to pass an additional attribute to body tag of a `<iframe>` element using `Attributes` fields of `RichTextEditorIframeSettings` property. This property contains name or value pairs in string format. It is used to override the default appearance of the content area.
 
 ```cshtml
 
@@ -67,7 +65,7 @@ The editor allows you to pass an additional attribute to body tag of a `<iframe>
 
 ## Adding external CSS/Script File
 
-The editor offers you to add external CSS file to style the `<iframe>` element. Easily change the appearance of editor’s content using an external CSS file using `Resources - Styles` field in the `RichTextEditorIframeSettings` property.
+The editor offers to add external CSS file to style the `<iframe>` element. Easily change the appearance of editor’s content using an external CSS file using `Resources - Styles` field in the `RichTextEditorIframeSettings` property.
 
 Likewise, add the external script file to the `<iframe>` element using `Resources - Scripts` field of `RichTextEditorIframeSettings` to provide the additional functionalities to the Rich Text Editor.
 

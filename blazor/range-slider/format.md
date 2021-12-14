@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Formatting in Blazor Range Slider Component | Syncfusion
-description: Checkout and learn here all about Formatting in Syncfusion Blazor Range Slider component and much more.
+description: Checkout and learn here all about formatting in Syncfusion Blazor Range Slider component and much more.
 platform: Blazor
 control: Range Slider
 documentation: ug
@@ -30,7 +30,7 @@ The `Format` feature used to customize the units of Slider values to desired for
 
 ## Using format API
 
-Slider provides different predefined formatting styles like Numeric (N), Percentage (P), Currency (C) and # specifiers. In this below example we have formatted the ticks and tooltip values into percentage.
+Slider provides different predefined formatting styles like Numeric (N), Percentage (P), Currency (C) and # specifiers.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

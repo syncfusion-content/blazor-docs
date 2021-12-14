@@ -39,13 +39,11 @@ The following sample demonstrates the placeholder option in Rich Text Editor.
 
 ```
 
-The output will be as follows.
-
 ![Blazor RichTextEditor with Placeholder](./images/blazor-richtexteditor-placeholder.png)
 
 ## Character count
 
-The Rich Text Editor automatically counts the number of characters in the content are while typing using the `ShowCharCount` property. The characters count displayed at the bottom of the editor. You can limit the number of characters in your content using the `MaxLength` property. By default, the editor sets the characters limit value is infinity.
+The Rich Text Editor automatically counts the number of characters in the content while typing, using the `ShowCharCount` property. The characters count displayed at the bottom of the editor. You can limit the number of characters in your content using the `MaxLength` property. By default, the editor sets the characters limit value to infinity.
 
 The character count color will be modified based on the characters in the Rich Text Editor.
 
@@ -70,8 +68,6 @@ The character count color will be modified based on the characters in the Rich T
 
 ```
 
-The output will be as follows.
-
 ![Displaying Character Count in Blazor RichTextEditor](./images/blazor-richtexteditor-char-count.png)
 
 ## Code view
@@ -93,20 +89,18 @@ Rich Text Editor includes the ability for users to directly edit HTML code via `
 
 ```
 
-The output will be as follows.
-
 ![Blazor RichTextEditor with Code View](./images/blazor-richtexteditor-code-view.png)
 
 ## Undo/Redo Manager
 
-Undo and redo tools allows you to edit the text by disregard/cancel the recently made changes and restore it to previous state. It is a useful tool to restore the performed action which got changed by mistake. By default, upto 30 actions can be undo/redo in the editor.
+Undo and redo tools allows to edit the text by disregard or cancel the recently made changes and restore it to previous state. It is a useful tool to restore the performed action which got changed by mistake. By default, upto 30 actions can be undo/redo in the editor.
 
 To undo and redo operations, do one of the following:
 
 * Press the undo/redo button on the toolbar
 * Press the Ctrl + Z/Ctrl + Y combination on the keyboard
 
-Customize the undo/redo step count using `UndoRedoSteps` property. By default, undo/redo actions take `300ms` time interval for store the action to the undo redo manager. The time interval can be customized by using the `UndoRedoTimer`.
+Customize the undo/redo step count using `UndoRedoSteps` property. By default, undo/redo actions take `300ms` time interval for storing the action to the undo redo manager. The time interval can be customized by using the `UndoRedoTimer`.
 
 ```cshtml
 
@@ -122,8 +116,6 @@ Customize the undo/redo step count using `UndoRedoSteps` property. By default, u
 </SfRichTextEditor>
 
 ```
-
-The output will be as follows.
 
 ![Undo Redo Operation in Blazor RichTextEditor](./images/blazor-richtexteditor-undo-redo-operation.png)
 
@@ -145,8 +137,6 @@ To render the Rich Text Editor in the resizable mode, set the `EnableResize` pro
 
 ```
 
-The output will be as follows.
-
 ![Resizing in Blazor RichTextEditor](./images/blazor-richtexteditor-resizing.png)
 
 ### Specifying the Minimum and Maximum width and height for Resize
@@ -166,7 +156,7 @@ To have a restricted resizable area for the Rich Text Editor, you need to specif
 
 ```
 
-> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
+> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
 
 ## Number and Bullet Format Lists
 
