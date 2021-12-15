@@ -21,7 +21,7 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
 ## Create a Blazor Server side project using .NET Core CLI
 
-Run the following command line to create a new Blazor Server application.
+Run the following command line to create a new Blazor Server application and navigate to new application directory.
 
 ```
 dotnet new blazorserver -o WebApplication1
@@ -33,8 +33,6 @@ cd WebApplication1
 Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). In order to use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
 To add Blazor Calendar component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and then install it.
-
-> [Code Generator of Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/vs2019-extensions/code-generator) can be used to add NuGet references with example code.
 
 ## Add Style Sheet
 
