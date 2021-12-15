@@ -217,6 +217,60 @@ By default, the whole event collection bound to the Scheduler gets exported as a
 }
 ```
 
+### Customizing the column header texts with custom fields exporting
+
+Using fields property, we can only export the defined fields into excel without customizing the header. Now we can provide the alternate support to customize the header of custom fields exporting using the `FieldsInfo` option through the `ExportFieldInfo` interface and pass it as an argument to the `ExportToExcelAsync` method as shown in the following example.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Buttons
+
+<SfButton Content="Excel Export" OnClick="OnExportToExcel"></SfButton>
+<SfSchedule @ref="ScheduleRef" TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Week"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 1, 10);
+    SfSchedule<AppointmentData> ScheduleRef;
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Explosion of Betelgeuse Star", Location = "Dallas",  StartTime = new DateTime(2020, 1, 8, 9, 30, 0), EndTime = new DateTime(2020, 1, 8, 11, 0, 0)  },
+        new AppointmentData { Id = 2, Subject = "Thule Air Crash Report", Location = "Texas", StartTime = new DateTime(2020, 1, 9, 12, 0, 0), EndTime = new DateTime(2020, 1, 9, 14, 0, 0)  },
+        new AppointmentData { Id = 3, Subject = "Blue Moon Eclipse", Location = "Australia", StartTime = new DateTime(2020, 1, 10, 10, 30, 0), EndTime = new DateTime(2020, 1, 10, 11, 0, 0)  },
+        new AppointmentData { Id = 4, Subject = "Meteor Showers in 2020", Location = "Canada", StartTime = new DateTime(2020, 1, 11, 13, 0, 0), EndTime = new DateTime(2020, 1, 11, 14, 30, 0)  },
+        new AppointmentData { Id = 5, Subject = "Milky Way as Melting pot", Location = "Mexico", StartTime = new DateTime(2020, 1, 12, 12, 0, 0), EndTime = new DateTime(2020, 1, 12, 14, 0, 0)  }
+    };
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+    public async Task OnExportToExcel()
+    {
+        List<ExportFieldInfo> exportFields = new List<ExportFieldInfo>();
+        exportFields.Add(new ExportFieldInfo { Name = "Id", Text = "Id" });
+        exportFields.Add(new ExportFieldInfo { Name = "Subject", Text = "Summary" });
+        exportFields.Add(new ExportFieldInfo { Name = "StartTime", Text = "Start Date" });
+        exportFields.Add(new ExportFieldInfo { Name = "EndTime", Text = "End Date" });
+        exportFields.Add(new ExportFieldInfo { Name = "Location", Text = "Location" });
+        ExportOptions options = new ExportOptions() { ExportType = ExcelFormat.Xlsx, FieldsInfo = exportFields };
+        await ScheduleRef.ExportToExcelAsync(options);
+    }
+}
+```
+
 ### Export with custom file name
 
 By default, the Scheduler allows you to download the exported Excel file with a name `Schedule.xlsx`. It also provides an option to export the excel file with a custom file name, define the desired `FileName` and passing it as an argument to the `ExportToExcelAsync` method.
