@@ -67,7 +67,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 * Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
-    ```razor
+    ```cshtml
     @using Syncfusion.Blazor
     ```
 
@@ -118,14 +118,14 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 ## Add Syncfusion Blazor component
 * Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Calendars` namespace. 
-    ```razor
+    ```cshtml
     @using Syncfusion.Blazor
     @using Syncfusion.Blazor.Calendars
     ```
 
 * Now, add the Syncfusion Calendar component in razor file. Here, the Calendar component is added in the **~/Pages/Index.razor** page under the `~/Pages` folder.
 
-    ```razor
+    ```cshtml
     <SfCalendar TValue="DateTime"/>
     ```
 

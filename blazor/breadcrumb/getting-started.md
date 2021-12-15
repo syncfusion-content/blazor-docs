@@ -82,7 +82,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
-```razor
+```cshtml
 @using Syncfusion.Blazor
 ```
 
@@ -184,13 +184,13 @@ Open **~/Program.cs** file and register the Syncfusion Blazor Service in the cli
 
 * Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Navigations` namespace. 
 
-    ```razor
+    ```cshtml
     @using Syncfusion.Blazor
     @using Syncfusion.Blazor.Navigations
     ```
 * Now, add the Syncfusion Breadcrumb component in razor file. Here, the Breadcrumb component is added in the **~/Pages/Index.razor** page under the `~/Pages` folder.
 
-    ```razor
+    ```cshtml
     <SfBreadcrumb></SfBreadcrumb>
     ```
 
@@ -202,7 +202,7 @@ Open **~/Program.cs** file and register the Syncfusion Blazor Service in the cli
 
 To render Breadcrumb component with items use [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) tag directive as like below code example.
 
-```razor
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfBreadcrumb>
