@@ -38,24 +38,22 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 ### Blazor Server App
 
 * For **.NET 6** app, add the Syncfusion bootstrap5 theme in the `<head>` element of the **~/Pages/_Layout.cshtml** page.
-
     {% tabs %}
     {% highlight cshtml %}
-        <head>
-            ....
-            <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-        </head>
+    <head>
+        ....
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    </head>
     {% endhighlight %}
     {% endtabs %}
 
 * For **.NET 5 and .NET 3.X** app, add the Syncfusion bootstrap5 theme in the `<head>` element of the **~/Pages/_Host.cshtml** page.
-
     {% tabs %}
     {% highlight cshtml %}
-        <head>
-            ....
-            <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-        </head>
+    <head>
+        ....
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    </head>
     {% endhighlight %}
     {% endtabs %}
 
@@ -82,43 +80,41 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Blazor Server App
 
 Now, register the Syncfusion Blazor Service in the Blazor Server App.
 
 * For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
-
     {% tabs %}
     {% highlight c# %}
+    using Microsoft.AspNetCore.Components;
+    using Microsoft.AspNetCore.Components.Web;
+    using Syncfusion.Blazor;
 
-        using Microsoft.AspNetCore.Components;
-        using Microsoft.AspNetCore.Components.Web;
-        using Syncfusion.Blazor;
+    var builder = WebApplication.CreateBuilder(args);
 
-        var builder = WebApplication.CreateBuilder(args);
+    // Add services to the container.
+    builder.Services.AddRazorPages();
+    builder.Services.AddServerSideBlazor();
+    builder.Services.AddSyncfusionBlazor();
 
-        // Add services to the container.
-        builder.Services.AddRazorPages();
-        builder.Services.AddServerSideBlazor();
-        builder.Services.AddSyncfusionBlazor();
-
-        var app = builder.Build();
-        ....
+    var app = builder.Build();
+    ....
     {% endhighlight %}
     {% endtabs %}
 
 * For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
-
     {% tabs %}
     {% highlight c# %}
-
     using Syncfusion.Blazor;
 
-    namespace WebApplication1
+    namespace BlazorApplication
     {
         public class Startup
         {
@@ -132,7 +128,6 @@ Now, register the Syncfusion Blazor Service in the Blazor Server App.
             ...
         }
     }
-    
     {% endhighlight %}
     {% endtabs %}
 
@@ -183,16 +178,19 @@ Open **~/Program.cs** file and register the Syncfusion Blazor Service in the cli
 ## Add Syncfusion Blazor Breadcrumb component
 
 * Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Navigations` namespace. 
-
-    ```cshtml
+    {% tabs %}
+    {% highlight razor %}
     @using Syncfusion.Blazor
     @using Syncfusion.Blazor.Navigations
-    ```
-* Now, add the Syncfusion Breadcrumb component in razor file. Here, the Breadcrumb component is added in the **~/Pages/Index.razor** page under the `~/Pages` folder.
+    {% endhighlight %}
+    {% endtabs %}
 
-    ```cshtml
+* Now, add the Syncfusion Breadcrumb component in razor file. Here, the Breadcrumb component is added in the **~/Pages/Index.razor** page under the `~/Pages` folder.
+    {% tabs %}
+    {% highlight razor %}
     <SfBreadcrumb></SfBreadcrumb>
-    ```
+    {% endhighlight %}
+    {% endtabs %}
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-component.png)
 
@@ -202,18 +200,22 @@ Open **~/Program.cs** file and register the Syncfusion Blazor Service in the cli
 
 To render Breadcrumb component with items use [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) tag directive as like below code example.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.Navigations
 
 <SfBreadcrumb>
     <BreadcrumbItems>
-        <BreadcrumbItem IconCss="e-icons e-home" Url="https://blazor.syncfusion.com/demos/"></BreadcrumbItem>
-        <BreadcrumbItem Text="Components" Url="https://blazor.syncfusion.com/demos/datagrid/overview"></BreadcrumbItem>
-        <BreadcrumbItem Text="Navigations" Url="https://blazor.syncfusion.com/demos/menu-bar/default-functionalities"></BreadcrumbItem>
-        <BreadcrumbItem Text="Breadcrumb" Url="./breadcrumb/default-functionalities"></BreadcrumbItem>
+        <BreadcrumbItem IconCss="e-icons e-home" Url="https://blazor.syncfusion.com/demos/"/>
+        <BreadcrumbItem Text="Components" Url="https://blazor.syncfusion.com/demos/datagrid/overview"/>
+        <BreadcrumbItem Text="Navigations" Url="https://blazor.syncfusion.com/demos/menu-bar/default-functionalities"/>
+        <BreadcrumbItem Text="Breadcrumb" Url="./breadcrumb/default-functionalities"/>
     </BreadcrumbItems>
 </SfBreadcrumb>
-```
+{% endhighlight %}
+{% endtabs %}
+
 > Place list of [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) within [BreadcrumbItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItems.html) tag directive.
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-items.png)

@@ -53,10 +53,11 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 ## Register Syncfusion Blazor Service
 
 * Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
-
-    ```cshtml
+    {% tabs %}
+    {% highlight razor %}
     @using Syncfusion.Blazor
-    ```
+    {% endhighlight %}
+    {% endtabs %}
 
 * Now, Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
 
@@ -84,7 +85,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
     {% highlight c# %}
     using Syncfusion.Blazor;
 
-    namespace WebApplication1
+    namespace BlazorApplication
     {
         public class Program
         {
@@ -102,12 +103,23 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 ## Add Syncfusion Blazor component
 
 * Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Calendars` namespace. 
+    {% tabs %}
+    {% highlight razor %}
+
+    @using Syncfusion.Blazor
+    @using Syncfusion.Blazor.Calendars
+    
+    {% endhighlight %}
+    {% endtabs %}
 
 * Now, add the Syncfusion Calendar component in razor file. Here, the Calendar component is added in the **~/Pages/Index.razor** page under the `~/Pages` folder.
+    {% tabs %}
+    {% highlight razor %}
 
-    ```cshtml
-    <SfCalendar TValue="DateTime"/>
-    ```    
+        <SfCalendar TValue="DateTime"/>
+
+    {% endhighlight %}
+    {% endtabs %}
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
 
