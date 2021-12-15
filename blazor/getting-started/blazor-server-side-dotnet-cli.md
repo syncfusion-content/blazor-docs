@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started - Syncfusion Blazor Server Side App in .NET Core CLI
-description: Check out the documentation for getting started with Blazor Server Side App and Syncfusion Blazor components in Visual Studio and much more.
+description: Check out the documentation for getting started with Syncfusion Blazor in Server Side App using .NET Core CLI.
 platform: Blazor
 component: Common
 documentation: ug
