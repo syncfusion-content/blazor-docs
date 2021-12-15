@@ -82,19 +82,15 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
-{% tabs %}
-{% highlight razor %}
-
-    @using Syncfusion.Blazor
-
-{% endhighlight %}
-{% endtabs %}
+```razor
+@using Syncfusion.Blazor
+```
 
 ### Blazor Server App
 
 Now, register the Syncfusion Blazor Service in the Blazor Server App.
 
-a) For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+* For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
     {% tabs %}
     {% highlight c# %}
@@ -115,7 +111,7 @@ a) For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusio
     {% endhighlight %}
     {% endtabs %}
 
-b) For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
+* For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 
     {% tabs %}
     {% highlight c# %}
@@ -146,7 +142,7 @@ Open **~/Program.cs** file and register the Syncfusion Blazor Service in the cli
 
 * For **.NET 6** app,
     {% tabs %}
-    {% highlight c# tabtitle=NET6 %}
+    {% highlight c# %}
     using Microsoft.AspNetCore.Components.Web;
     using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
     using Syncfusion.Blazor;
@@ -165,7 +161,7 @@ Open **~/Program.cs** file and register the Syncfusion Blazor Service in the cli
 
 * For **.NET 5 and .NET 3.X** app
     {% tabs %}
-    {% highlight c# tabtitle=NET3 and NET5 %}
+    {% highlight c# %}
     using Syncfusion.Blazor;
 
     namespace WebApplication1
@@ -188,24 +184,15 @@ Open **~/Program.cs** file and register the Syncfusion Blazor Service in the cli
 
 * Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Navigations` namespace. 
 
-    {% tabs %}
-    {% highlight razor %}
-
-        @using Syncfusion.Blazor
-        @using Syncfusion.Blazor.Navigations
-
-    {% endhighlight %}
-    {% endtabs %}
-
+    ```razor
+    @using Syncfusion.Blazor
+    @using Syncfusion.Blazor.Navigations
+    ```
 * Now, add the Syncfusion Breadcrumb component in razor file. Here, the Breadcrumb component is added in the **~/Pages/Index.razor** page under the `~/Pages` folder.
 
-    {% tabs %}
-    {% highlight razor %}
-
+    ```razor
     <SfBreadcrumb></SfBreadcrumb>
-
-    {% endhighlight %}
-    {% endtabs %}
+    ```
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-component.png)
 
