@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Change Display Mode in Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn here all about Change Display Mode in Syncfusion Blazor QueryBuilder component and more.
+description: Checkout and learn here all about how to change display mode in Syncfusion Blazor QueryBuilder component and more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
@@ -9,9 +9,7 @@ documentation: ug
 
 # Change Display Mode in Blazor QueryBuilder Component
 
-The QueryBuilder allows you to view Vertically or Horizontally. To enable this feature, you can set the [DisplayMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DisplayMode) property.
-
-In the following sample the display option is set as vertical.
+The QueryBuilder allows to view Vertically or Horizontally. To enable this feature, you can set the [DisplayMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DisplayMode) property.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -54,8 +52,6 @@ In the following sample the display option is set as vertical.
 }
 
 ```
-
-Output will be shown as
 
 ![Changing Display Mode in Blazor QueryBuilder](./../images/blazor-querybuilder-display-mode.png)
 
