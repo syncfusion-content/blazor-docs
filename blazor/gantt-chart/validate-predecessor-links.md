@@ -20,10 +20,11 @@ When editing the tasks with predecessor links, then the [OnActionBegin](https://
 Argument |Default value |Description
 -----|-----|-----
 args.ValidateMode.RespectLink | false | In this validation mode, the predecessor links get high priority. With this mode enabled, when the successor task is moved before the predecessor task’s end date, the editing will be reverted, and dates will be validated based on the dependency links.
-args.ValidateMode.RemoveLink | false | In this validation mode, the taskbar editing gets high priority. For inappropriate task dates, the dependency links will be removed and tasks will be moved to the edited date.
 args.ValidateMode.PreserveLinkWithEditing | true | In this validation mode, the taskbar editing will be considered along with the dependency links. This relationship will be maintained by updating the offset value of predecessors.
 
 By default, the `PreserveLinkWithEditing` validation mode will be enabled, so the predecessors are updated with offset values.
+
+![Updating offset on Gantt edit actions](images/preserve-link-with-editing.gif)
 
 The following sample explains enabling the `RespectLink` validation mode while editing the linked tasks in the `OnActionBegin` event.
 
@@ -74,6 +75,7 @@ The following sample explains enabling the `RespectLink` validation mode while e
     }
 }
 ```
+![Respect link on Gantt edit actions](images/respect-link.gif)
 
 ### PredecessorOffsetValidation
 
