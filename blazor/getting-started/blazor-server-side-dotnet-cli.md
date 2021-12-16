@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started - Syncfusion Blazor Server Side App in .NET Core CLI
-description: Check out the documentation for getting started with Syncfusion Blazor in Server Side App using .NET Core CLI.
+title: Getting started - Syncfusion Blazor Server Side App in .NET CLI
+description: Check out the documentation for getting started with Syncfusion Blazor Components in Visual Studio using .NET CLI and much more.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,15 +9,15 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Blazor Server Side App in .NET Core CLI
+# Getting Started with Blazor Server Side App in .NET CLI
 
-This article provides a step-by-step instructions for building Blazor Server App with Blazor Calendar using the [.NET Core CLI](https://dotnet.microsoft.com/download/dotnet/).
+This article provides a step-by-step instructions for building Blazor Server App with Blazor Calendar using the [.NET CLI](https://dotnet.microsoft.com/download/dotnet/).
 
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a Blazor Server side project using .NET Core CLI
+## Create a Blazor Server side project using .NET CLI
 
 Run the following command to create a new Blazor Server application in the command prompt (Windows) or terminal (Linux and macOS). 
 
@@ -66,7 +66,7 @@ To add theme to the app, open the NuGet package manager in Visual Studio (Tools 
 
 Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referenced automatically via javascript script isolation approach.
 
->Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
+> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
 ## Register Syncfusion Blazor Service
 
@@ -83,7 +83,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
     * For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
     {% tabs %}
-    {% highlight c# %}
+    {% highlight c# tabtitle-Program h1_lines="10" %}
 
     using Microsoft.AspNetCore.Components;
     using Microsoft.AspNetCore.Components.Web;
@@ -104,7 +104,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
     * For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 
     {% tabs %}
-    {% highlight c# %}
+    {% highlight c# tabtitle-Program h1_lines="12" %}
 
     using Syncfusion.Blazor;
 
@@ -151,4 +151,8 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
     ![Blazor Calendar Component](images/browser-output.png)
 
->You need to include a valid license key (either paid or trial key) within your applications. Please refer to this help topic for more information.
+> You need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for more information.
+
+## See Also
+
+* [Getting Started with Blazor WebAssembly using .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
