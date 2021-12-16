@@ -9,7 +9,7 @@ documentation: ug
 
 # Validate predecessor links on editing
 
-In Gantt, it is possible to validate the taskbar editing based on the predecessor connections. Below are the following ways to validate the taskbar editing.
+In Gantt, task relationship link can be broken by editing the start date, end date and duration value of task. When the task relationship broken on any edit action it can be handled in Gantt by following ways.
 
 ## Using actionBegin event
 
@@ -134,6 +134,7 @@ i.e. The taskbar can be dragged greater than the given predecessor offset value 
     }
 }
 ```
+![Predecessor validation on taskbar dragging](images/predecessor-offset-validation.gif)
 
 `Note:` When `PredecessorOffsetValidation` is enabled, the predecessor offset will not updated on dragging taskbar. We can update the predecessor offset either by cell edit or dialog edit.
 
