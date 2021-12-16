@@ -19,12 +19,14 @@ This article provides a step-by-step instructions for building Blazor Server App
 
 ## Create a Blazor Server side project using .NET Core CLI
 
-Run the following command line to create a new Blazor Server application and navigate to new application directory.
+Run the following command to create a new Blazor Server application in the command prompt (Windows) or terminal (Linux and macOS). 
 
 ```
-dotnet new blazorserver -o WebApplication1
-cd WebApplication1
+dotnet new blazorserver -o BlazorApplication
+cd BlazorApplication
 ```
+
+This command creates your new Blazor app project and places it in a new directory called BlazorApp inside your current location. Checkout [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) for more details.
 
 ## Install Syncfusion Blazor packages in the App
 
@@ -79,7 +81,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 * Now, register the Syncfusion Blazor Service in the Blazor Server App.
 
-    a) For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+    * For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
     {% tabs %}
     {% highlight c# %}
 
@@ -99,7 +101,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
     {% endhighlight %}
     {% endtabs %}
 
-    b) For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
+    * For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 
     {% tabs %}
     {% highlight c# %}
