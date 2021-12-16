@@ -53,62 +53,66 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 ## Register Syncfusion Blazor Service
 
 * Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
-
     {% tabs %}
     {% highlight razor %}
-
-        @using Syncfusion.Blazor
-
+    @using Syncfusion.Blazor
     {% endhighlight %}
     {% endtabs %}
 
 * Now, Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
 
     * For **.NET 6** app,
-    {% tabs %}
-    {% highlight c# tabtitle=NET6 %}
-    using Microsoft.AspNetCore.Components.Web;
-    using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-    using Syncfusion.Blazor;
+        {% tabs %}
+        {% highlight c# tabtitle=NET6 %}
+        using Microsoft.AspNetCore.Components.Web;
+        using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+        using Syncfusion.Blazor;
 
-    var builder = WebAssemblyHostBuilder.CreateDefault(args);
-    builder.RootComponents.Add<App>("#app");
-    builder.RootComponents.Add<HeadOutlet>("head::after");
+        var builder = WebAssemblyHostBuilder.CreateDefault(args);
+        builder.RootComponents.Add<App>("#app");
+        builder.RootComponents.Add<HeadOutlet>("head::after");
 
-    builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+        builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-    builder.Services.AddSyncfusionBlazor();
-    await builder.Build().RunAsync();
-    ....
-    {% endhighlight %}
-    {% endtabs %}
+        builder.Services.AddSyncfusionBlazor();
+        await builder.Build().RunAsync();
+        ....
+        {% endhighlight %}
+        {% endtabs %}
 
     * For **.NET 5 and .NET 3.X** app
-    {% tabs %}
-    {% highlight c# tabtitle=NET3 and NET5 %}
-    using Syncfusion.Blazor;
+        {% tabs %}
+        {% highlight c# %}
+        using Syncfusion.Blazor;
 
-    namespace WebApplication1
-    {
-        public class Program
+        namespace BlazorApplication
         {
-            public static async Task Main(string[] args)
+            public class Program
             {
-                ....
-                builder.Services.AddSyncfusionBlazor();
-                await builder.Build().RunAsync();
+                public static async Task Main(string[] args)
+                {
+                    ....
+                    builder.Services.AddSyncfusionBlazor();
+                    await builder.Build().RunAsync();
+                }
             }
         }
-    }
-    {% endhighlight %}
-    {% endtabs %}
+        {% endhighlight %}
+        {% endtabs %}
 
 ## Add Syncfusion Blazor component
 
 * Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Calendars` namespace. 
+    {% tabs %}
+    {% highlight razor %}
+
+    @using Syncfusion.Blazor
+    @using Syncfusion.Blazor.Calendars
+    
+    {% endhighlight %}
+    {% endtabs %}
 
 * Now, add the Syncfusion Calendar component in razor file. Here, the Calendar component is added in the **~/Pages/Index.razor** page under the `~/Pages` folder.
-
     {% tabs %}
     {% highlight razor %}
 

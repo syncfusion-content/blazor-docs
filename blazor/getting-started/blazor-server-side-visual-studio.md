@@ -66,22 +66,17 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 ## Register Syncfusion Blazor Service
 
 * Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
-
     {% tabs %}
     {% highlight razor %}
-
-        @using Syncfusion.Blazor
-
+    @using Syncfusion.Blazor
     {% endhighlight %}
     {% endtabs %}
 
 * Now, register the Syncfusion Blazor Service in the Blazor Server App.
 
-    a) For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
-
-    {% tabs %}
-    {% highlight c# %}
-
+    * For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+        {% tabs %}
+        {% highlight c# %}
         using Microsoft.AspNetCore.Components;
         using Microsoft.AspNetCore.Components.Web;
         using Syncfusion.Blazor;
@@ -95,43 +90,40 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
         var app = builder.Build();
         ....
-    {% endhighlight %}
-    {% endtabs %}
+        {% endhighlight %}
+        {% endtabs %}
 
-    b) For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
+    * For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
+        {% tabs %}
+        {% highlight c# %}
 
-    {% tabs %}
-    {% highlight c# %}
+        using Syncfusion.Blazor;
 
-    using Syncfusion.Blazor;
-
-    namespace WebApplication1
-    {
-        public class Startup
+        namespace BlazorApplication
         {
-            ...
-            public void ConfigureServices(IServiceCollection services)
+            public class Startup
             {
-                services.AddRazorPages();
-                services.AddServerSideBlazor();
-                services.AddSyncfusionBlazor();
+                ...
+                public void ConfigureServices(IServiceCollection services)
+                {
+                    services.AddRazorPages();
+                    services.AddServerSideBlazor();
+                    services.AddSyncfusionBlazor();
+                }
+                ...
             }
-            ...
         }
-    }
-    
-    {% endhighlight %}
-    {% endtabs %}
+        {% endhighlight %}
+        {% endtabs %}
 
 ## Add Syncfusion Blazor component
 * Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Calendars` namespace. 
-
     {% tabs %}
     {% highlight razor %}
 
-        @using Syncfusion.Blazor
-        @using Syncfusion.Blazor.Calendars
-
+    @using Syncfusion.Blazor
+    @using Syncfusion.Blazor.Calendars
+    
     {% endhighlight %}
     {% endtabs %}
 
@@ -140,7 +132,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
     {% tabs %}
     {% highlight razor %}
 
-        <SfCalendar TValue="DateTime"/>
+    <SfCalendar TValue="DateTime"/>
 
     {% endhighlight %}
     {% endtabs %}
