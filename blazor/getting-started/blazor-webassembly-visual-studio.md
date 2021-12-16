@@ -62,43 +62,43 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * Now, Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
 
     * For **.NET 6** app,
-    {% tabs %}
-    {% highlight c# tabtitle=NET6 %}
-    using Microsoft.AspNetCore.Components.Web;
-    using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-    using Syncfusion.Blazor;
+        {% tabs %}
+        {% highlight c# tabtitle=NET6 %}
+        using Microsoft.AspNetCore.Components.Web;
+        using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+        using Syncfusion.Blazor;
 
-    var builder = WebAssemblyHostBuilder.CreateDefault(args);
-    builder.RootComponents.Add<App>("#app");
-    builder.RootComponents.Add<HeadOutlet>("head::after");
+        var builder = WebAssemblyHostBuilder.CreateDefault(args);
+        builder.RootComponents.Add<App>("#app");
+        builder.RootComponents.Add<HeadOutlet>("head::after");
 
-    builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+        builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-    builder.Services.AddSyncfusionBlazor();
-    await builder.Build().RunAsync();
-    ....
-    {% endhighlight %}
-    {% endtabs %}
+        builder.Services.AddSyncfusionBlazor();
+        await builder.Build().RunAsync();
+        ....
+        {% endhighlight %}
+        {% endtabs %}
 
     * For **.NET 5 and .NET 3.X** app
-    {% tabs %}
-    {% highlight c# %}
-    using Syncfusion.Blazor;
+        {% tabs %}
+        {% highlight c# %}
+        using Syncfusion.Blazor;
 
-    namespace BlazorApplication
-    {
-        public class Program
+        namespace BlazorApplication
         {
-            public static async Task Main(string[] args)
+            public class Program
             {
-                ....
-                builder.Services.AddSyncfusionBlazor();
-                await builder.Build().RunAsync();
+                public static async Task Main(string[] args)
+                {
+                    ....
+                    builder.Services.AddSyncfusionBlazor();
+                    await builder.Build().RunAsync();
+                }
             }
         }
-    }
-    {% endhighlight %}
-    {% endtabs %}
+        {% endhighlight %}
+        {% endtabs %}
 
 ## Add Syncfusion Blazor component
 
