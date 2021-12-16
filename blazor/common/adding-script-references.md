@@ -26,9 +26,8 @@ The Syncfusion Blazor components supports to refer scripts externally at the app
 ### Blazor Server App
 
 * If you're using `.NET 6` Blazor Server App, set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
-    {% tabs %}
-    {% highlight c# tabtitle=Program hl_lines="11" %}
 
+    ```c#
     using Microsoft.AspNetCore.Components;
     using Microsoft.AspNetCore.Components.Web;
     using Syncfusion.Blazor;
@@ -42,14 +41,11 @@ The Syncfusion Blazor components supports to refer scripts externally at the app
     builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
     var app = builder.Build();
     ....
+    ```
 
-    {% endhighlight %}
-    {% endtabs %}
+* If you're using `.NET 5 or .NET Core SDK 3.1 project` Blazor Server App, set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` using `AddSyncfusionBlazor` service method in `~/Startup.cs` file.
 
-* If you're using `.NET 5 or 3.X project` Blazor Server App, set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` using `AddSyncfusionBlazor` service method in `~/Startup.cs` file.
-    {% tabs %}
-    {% highlight c# tabtitle=Startup %}
-
+     ```c#
     using Syncfusion.Blazor;
 
     namespace WebApplication1
@@ -64,18 +60,15 @@ The Syncfusion Blazor components supports to refer scripts externally at the app
             }
         }
     }
-
-    {% endhighlight %}
-    {% endtabs %}
+    ```
 
 ### Blazor WASM App
 
 If you're using Blazor WebAssembly App, set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
 
 * .NET 6 Blazor WebAssembly App
-    {% tabs %}
-    {% highlight c# tabtitle=Program %}
 
+    ```c#
     using Microsoft.AspNetCore.Components;
     using Microsoft.AspNetCore.Components.Web;
     using Syncfusion.Blazor;
@@ -89,14 +82,9 @@ If you're using Blazor WebAssembly App, set [IgnoreScriptIsolation](https://help
     builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
     var app = builder.Build();
     ....
-
-    {% endhighlight %}
-    {% endtabs %}
-
-* .NET 5 or .NET Core 3.X Blazor WebAssembly App
-    {% tabs %}
-    {% highlight c# tabtitle=Program %}
-
+    ```
+* .NET 5 or .NET Core 3.1 Blazor WebAssembly App
+    ```c#
     using Syncfusion.Blazor;
     ....
     public static async Task Main(string[] args)
@@ -107,8 +95,7 @@ If you're using Blazor WebAssembly App, set [IgnoreScriptIsolation](https://help
         builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
         await builder.Build().RunAsync();
     }
-    {% endhighlight %}
-    {% endtabs %}
+    ```
 
 > If you set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true`, You need to reference scripts externally via [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) or [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) or and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator). 
 
@@ -116,8 +103,8 @@ If you're using Blazor WebAssembly App, set [IgnoreScriptIsolation](https://help
 
 You can refer the Syncfusion Blazor scripts through the CDN resources by configuring the [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) as `true`. The external script reference can be added as follows,
 
-* For **Blazor WASM App**, reference scripts in `~/wwwroot/index.html` file. 
-* For **Blazor Server App**, reference scripts in `~/Pages/_Layout.cshtml` file for `.NET 6` project and in `~/Pages/_Host.cshtml` file for `.NET 5 and .NET Core 3.X` project.
+* For Blazor Server App, reference scripts in `~/Pages/_Layout.cshtml` file for `.NET 6` project and in `~/Pages/_Host.cshtml` file for `.NET 5 and .NET Core 3.1` project.
+* For Blazor WASM App, reference scripts in `~/wwwroot/index.html` file. 
 
 Syncfusion Blazor components are available in CDN for each version. Make sure that the version in the URLs matches the version of the Syncfusion Blazor Package you are using.
 
