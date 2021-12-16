@@ -11,9 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor Server Side App in .NET Core CLI
 
-This article provides a step-by-step introduction to configure Syncfusion Blazor setup, and also to build and run a simple Blazor Server Side application using the [.NET Core CLI](https://dotnet.microsoft.com/download/dotnet/).
-
-> Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
+This article provides a step-by-step instructions for building Blazor Server App with Blazor Calendar using the [.NET Core CLI](https://dotnet.microsoft.com/download/dotnet/).
 
 ## Prerequisites
 
@@ -32,7 +30,7 @@ cd WebApplication1
 
 Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). In order to use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
-To add Blazor Calendar component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and then install it.
+To add Blazor Calendar component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and then install it.
 
 ## Add Style Sheet
 
@@ -71,12 +69,10 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 ## Register Syncfusion Blazor Service
 
 * Open ~/_Imports.razor file and import the `Syncfusion.Blazor` namespace.
-
-
     {% tabs %}
     {% highlight razor %}
 
-        @using Syncfusion.Blazor
+    @using Syncfusion.Blazor
 
     {% endhighlight %}
     {% endtabs %}
@@ -84,23 +80,22 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * Now, register the Syncfusion Blazor Service in the Blazor Server App.
 
     a) For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
-
     {% tabs %}
     {% highlight c# %}
 
-        using Microsoft.AspNetCore.Components;
-        using Microsoft.AspNetCore.Components.Web;
-        using Syncfusion.Blazor;
+    using Microsoft.AspNetCore.Components;
+    using Microsoft.AspNetCore.Components.Web;
+    using Syncfusion.Blazor;
 
-        var builder = WebApplication.CreateBuilder(args);
+    var builder = WebApplication.CreateBuilder(args);
 
-        // Add services to the container.
-        builder.Services.AddRazorPages();
-        builder.Services.AddServerSideBlazor();
-        builder.Services.AddSyncfusionBlazor();
+    // Add services to the container.
+    builder.Services.AddRazorPages();
+    builder.Services.AddServerSideBlazor();
+    builder.Services.AddSyncfusionBlazor();
 
-        var app = builder.Build();
-        ....
+    var app = builder.Build();
+    ....
     {% endhighlight %}
     {% endtabs %}
 
@@ -111,7 +106,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
     using Syncfusion.Blazor;
 
-    namespace WebApplication1
+    namespace BlazorApplication
     {
         public class Startup
         {
@@ -124,15 +119,13 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
             }
             ...
         }
-    }
-    
+    }    
     {% endhighlight %}
     {% endtabs %}
 
 ## Add Syncfusion Blazor component
 
 * Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Calendars` namespace.
-
     {% tabs %}
     {% highlight razor %}
 
