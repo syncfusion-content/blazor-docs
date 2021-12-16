@@ -7,8 +7,6 @@ component: Common
 documentation: ug
 ---
 
-<!-- markdownlint-disable MD024 -->
-
 # Getting Started with Blazor Server Side App in .NET CLI
 
 This article provides a step-by-step instructions for building Blazor Server App with Blazor Calendar using the [.NET CLI](https://dotnet.microsoft.com/download/dotnet/).
@@ -19,20 +17,20 @@ This article provides a step-by-step instructions for building Blazor Server App
 
 ## Create a Blazor Server side project using .NET CLI
 
-Run the following command to create a new Blazor Server application in the command prompt (Windows) or terminal (Linux and macOS). 
+Run the `dotnet new blazorserver` command to create a new Blazor Server application in the command prompt (Windows) or terminal (Linux and macOS).
 
 ```
-dotnet new blazorserver -o BlazorApplication
-cd BlazorApplication
+dotnet new blazorserver -o BlazorApp
+cd BlazorApp
 ```
 
-This command creates new Blazor app project and places it in a new directory called `BlazorApplication` inside your current location. Checkout [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) for more details.
+This command creates new Blazor app project and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI commenad](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
 
 ## Install Syncfusion Blazor packages in the App
 
 Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). In order to use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
-Add `Syncfusion.Blazor.Calendars` NuGet package to the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a NuGet package. Refer [Install and manage packages using the dotnet CLI](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details. 
+Add `Syncfusion.Blazor.Calendars` NuGet package to the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a NuGet package. See [Install and manage packages using the dotnet CLI](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details. 
 
 ```
 dotnet add package Syncfusion.Blazor.Calendars --version {{ site.releaseversion }}
@@ -48,7 +46,7 @@ To add theme to the app, Add `Syncfusion.Blazor.Themes` NuGet package to the app
 dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 ```
 
-* For **.NET 6** app, add the Syncfusion bootstrap5 theme in the `<head>` element of the **~/Pages/_Layout.cshtml** page.
+* For **.NET 6** app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** page.
 
     {% tabs %}
     {% highlight cshtml %}
@@ -59,7 +57,7 @@ dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
     {% endhighlight %}
     {% endtabs %}
 
-* For **.NET 5 and .NET 3.X** app, add the Syncfusion bootstrap5 theme in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+* For **.NET 5 and .NET 3.X** app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** page.
 
     {% tabs %}
     {% highlight cshtml %}
@@ -116,7 +114,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
     using Syncfusion.Blazor;
 
-    namespace BlazorApplication
+    namespace BlazorApp
     {
         public class Startup
         {
