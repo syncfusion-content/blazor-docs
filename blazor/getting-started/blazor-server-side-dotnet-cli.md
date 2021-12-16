@@ -76,7 +76,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 ## Register Syncfusion Blazor Service
 
-* Open ~/_Imports.razor file and import the `Syncfusion.Blazor` namespace.
+* Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
     {% tabs %}
     {% highlight razor %}
 
@@ -153,7 +153,15 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
     {% endhighlight %}
     {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
+* you can use any of the following ways to run the Blazor application.
+
+    * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
+
+    * You can also run the app using the following command in the command prompt (Windows) or terminal (Linux or macOS) to run the app and stop the application at any time by using <kbd>Ctrl</kbd>+<kbd>C</kbd>
+
+    ```
+    dotnet watch
+    ```
 
     ![Blazor Calendar Component](images/browser-output.png)
 
