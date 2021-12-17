@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor QueryBuilder component and more.
+description: Checkout and learn here all about data binding in Syncfusion Blazor QueryBuilder component and more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
@@ -14,11 +14,11 @@ The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-q
 * List Binding
 * Remote data
 
-> When using DataSource as `IEnumerable<T>` component type(TValue) will be inferred from its value. When using SfDataManager for data binding then the TValue must be provided explicitly in the query builder component.
+> When using DataSource as `IEnumerable<T>` component type, (TValue) will be inferred from its value. While using SfDataManager for data binding then the TValue must be provided explicitly in the query builder component.
 
 ## List Binding
 
-To bind list data's to the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder), you can assign the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DataSource) property with a list of data's.
+To bind list data to the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder), you can assign the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DataSource) property with a list of data.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -65,7 +65,7 @@ To bind list data's to the [Blazor Query Builder](https://www.syncfusion.com/bla
 
 ## Remote Data
 
-To bind remote data to [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) component, assign service data as an instance of `SfDataManager` to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DataSource) property or by using [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html?_ga=2.215796254.88815479.1615183078-1853720367.1601889760) component. To interact with remote data source, provide the endpoint `Url`.
+To bind remote data to the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) component, assign service data as an instance of `SfDataManager` to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DataSource) property or by using [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html?_ga=2.215796254.88815479.1615183078-1853720367.1601889760) component. To interact with remote data source, provide the endpoint `Url`.
 
 Refer to the following code example for remote Data binding using `OData` service.
 
@@ -135,7 +135,7 @@ The ODataV4 is an improved version of OData protocols, and the `SfDataManager` c
 
 ### Web API
 
-You can use WebApiAdaptor to bind query builder with Web API created using OData endpoint.
+The WebApiAdaptor can be used to bind query builder with Web API created using OData endpoint.
 
 ```cshtml
 
@@ -165,8 +165,6 @@ You can use WebApiAdaptor to bind query builder with Web API created using OData
 
 ```
 
-Output will be shown as
-
 ![Data Binding in Blazor QueryBuilder](./images/blazor-querybuilder-data-binding.png)
 
-> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to knows how to render and configure the query builder.
+> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.

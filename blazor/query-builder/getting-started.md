@@ -9,20 +9,18 @@ documentation: ug
 
 # Getting Started with Blazor QueryBuilder Component
 
-This section briefly explains about how to include Query Builder Component in your Blazor server-side  application. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) page for the introduction and configuring the common specifications.
-
-To get start quickly with Query Builder Component using Blazor, you can check on this video:
+This section briefly explains how to include Query Builder Component in the Blazor server-side application. Refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) page for the introduction and configuring the common specifications.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=jyWU7XSg3WI"%}
 
-> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to knows how to render and configure the query builder.
+> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.
 
 ## Importing Syncfusion Blazor component in the application
 
 1. Install the **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.
 
-2. You can add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the `~/Pages/_Host.cshtml` page.
+2. Add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the `~/Pages/_Host.cshtml` page.
 
     > Please ensure to check the **Include prerelease** option.
 
@@ -57,7 +55,7 @@ Open `/_Imports.razor file` and import the **Syncfusion.Blazor.QueryBuilder** pa
 
 ## Add SyncfusionBlazor service in Startup.cs
 
-Open the **Startup.cs** file and add services required by Syncfusion components. Add **services.AddSyncfusionBlazor()** method in the ConfigureServices function as follows.
+Open the **Startup.cs** file and add services required by Syncfusion components. Add **services.AddSyncfusionBlazor()** method in the ConfigureServices function.
 
 ```csharp
 namespace BlazorApplication
@@ -122,7 +120,7 @@ Now, add the [Blazor Query Builder](https://www.syncfusion.com/blazor-components
 
 ## Run the application
 
-After successful compilation of your application, simply press F5 to run the application. The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) component will render in the web browser as shown below
+After successful compilation of the application, simply press F5 to run the application. The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) component will render in the web browser.
 
 ![Blazor QueryBuilder Component](./images/blazor-querybuilder-component.png)
 
