@@ -192,7 +192,7 @@ Open **~/Program.cs** file and register the Syncfusion Blazor Service in the cli
     {% endhighlight %}
     {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor Signature component will be rendered in the default web browser.
 
 ![Blazor Signature Component](./images/blazor-Signature-component.png)
 
