@@ -25,7 +25,7 @@ Run the `dotnet new blazorwasm` command to create a new Blazor WebAssembly appli
 dotnet new blazorwasm -o BlazorApp
 cd BlazorApp
 ```
-This command creates new Blazor app project and places it in a new directory called BlazorApp inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI commenad](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
+This command creates new Blazor app project and places it in a new directory called BlazorApp inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
 
 > If you have installed multiple SDK versions and need any specific framework version (net5.0/netcoreapp3.1) project, then add `-f` flag along with `dotnet new blazorwasm` comment. Refer [here](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for the available options.
 
@@ -104,7 +104,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
     {% highlight c# tabtitle=NET3 and NET5 %}
     using Syncfusion.Blazor;
 
-    namespace BlazorApplication
+    namespace BlazorApp
     {
         public class Program
         {
