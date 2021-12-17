@@ -144,8 +144,6 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
     {% endhighlight %}
     {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
-
 * In the command prompt (Windows) or terminal (Linux and macOS) to run the following command to build and start the app. The app listening on `http://localhost:<port number>` and view it in the browser.
 
     ```
