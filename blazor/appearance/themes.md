@@ -26,18 +26,16 @@ The following list of themes are included in the Syncfusion Blazor components li
 |Microsoft Office Fabric Dark | fabric-dark.css |
 |High Contrast | highcontrast.css |
 
+
 The Syncfusion Blazor Bootstrap Theme is designed based on Bootstrap v3, whereas the Bootsrap4 theme is designed based on Bootstrap v4.
 
 ## Reference themes in Blazor application
 
 Syncfusion Blazor themes can be used in your Blazor application by referencing the style sheet. 
 
-* For **Blazor WebAssembly application**, refer style sheet inside the `<head>` element of 
-`wwwroot/index.html` file.
-* For **Blazor Server application**, refer style sheet inside the `<head>` element of 
-    * `~/Pages/_Host.cshtml` file for .NET 3.X and .NET 5.
-    * `~/Pages/_Layout.cshtml` for .NET 6.
-    
+* For Blazor Server application, refer style sheet inside the `<head>` element of `~/Pages/_Host.cshtml` file.
+* For Blazor WebAssembly application, refer style sheet inside the `<head>` element of `wwwroot/index.html` file.
+
 Using the below approaches the themes can be referenced in the Blazor application,
 
 1. [Static Web assets](#static-web-assets) - Used to reference complete css via static web assests. 
@@ -53,12 +51,9 @@ Instead of using [Static Web assets](#static-web-assets) or a [CDN reference](#c
 
 Syncfusion Blazor themes are available as Static web Assets in the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet Packages.
 
-* For **Blazor WebAssembly application**, refer style sheet inside the `<head>` element of 
-`wwwroot/index.html` file.
-* For **Blazor Server application**, refer style sheet inside the `<head>` element of 
-    * `~/Pages/_Host.cshtml` file for .NET 3 and .NET 5.
-    * `~/Pages/_Layout.cshtml` for .NET 6.
-    
+* For Blazor Server application, refer style sheet inside the `<head>` element of `~/Pages/_Host.cshtml` file.
+* For Blazor WebAssembly application, refer style sheet inside the `<head>` element of `wwwroot/index.html` file.
+
 When using individual NuGet packages in your application, add [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet Package and reference style sheet as below,
 
  ```html

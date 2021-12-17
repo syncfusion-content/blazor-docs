@@ -26,7 +26,7 @@ The following code example demonstrates how to implement data markers in the Gan
 @using Syncfusion.Blazor.Gantt
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"
-                     Progress="Progress" ParentID="ParentId" Indicators="Indicators">
+        Progress="Progress" ParentID="ParentId" Indicators="Indicators">
     </GanttTaskFields>
 </SfGantt>
 
@@ -48,27 +48,106 @@ The following code example demonstrates how to implement data markers in the Gan
         public int? ParentId { get; set; }
         public List<GanttIndicator> Indicators { get; set; }
     }
-   
+    public class GanttIndicator
+    {
+        public string Name { get; set; }
+        public string IconClass { get; set; }
+        public DateTime Date { get; set; }
+        public string Tooltip { get; set; }
+    }
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2019, 03, 27), EndDate = new DateTime(2019, 04, 06), Indicators=(new List<GanttIndicator>()
+            new TaskData() {
+                TaskId = 1,
+                TaskName = "Project initiation",
+                StartDate = new DateTime(2019, 03, 27),
+                EndDate = new DateTime(2019, 04, 06),
+                Indicators=(new List<GanttIndicator>()
                 {
-                    new GanttIndicator() { Name="product", IconClass="e-btn-icon e-notes-info e-icons e-icon-left e-gantt e-notes-info::before", Date=new DateTime(2019, 04, 11), Tooltip="sales"}
+                    new GanttIndicator()
+                    {
+                        Name="product",
+                        IconClass="e-btn-icon e-notes-info e-icons e-icon-left e-gantt e-notes-info::before",
+                        Date=new DateTime(2019, 04, 11),
+                        Tooltip="sales"
+                    }
                 })
             },
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2019, 04, 02), Duration = "2", Progress = 30, ParentId = 1, Indicators=(new List<GanttIndicator>()
+            new TaskData() {
+                TaskId = 2,
+                TaskName = "Identify Site location",
+                StartDate = new DateTime(2019, 04, 02),
+                Duration = "2",
+                Progress = 30,
+                ParentId = 1,
+                Indicators=(new List<GanttIndicator>()
                 {
-                    new GanttIndicator(){ Name="customer", IconClass="e-btn-icon e-notes-info e-icons e-icon-left e-gantt e-notes-info::before", Date=new DateTime(2019, 04, 14), Tooltip="people" },
-                    new GanttIndicator(){ Name="product", IconClass="e-btn-icon e-notes-info e-icons e-icon-left e-gantt e-notes-info::before", Date=new DateTime(2019, 04, 17), Tooltip="sales" }
+                    new GanttIndicator()
+                    {
+                        Name="customer",
+                        IconClass="e-btn-icon e-notes-info e-icons e-icon-left e-gantt e-notes-info::before",
+                        Date=new DateTime(2019, 04, 14),
+                        Tooltip="people"
+                    },
+                    new GanttIndicator()
+                    {
+                        Name="product",
+                        IconClass="e-btn-icon e-notes-info e-icons e-icon-left e-gantt e-notes-info::before",
+                        Date=new DateTime(2019, 04, 17),
+                        Tooltip="sales"
+                    }
                 })
             },
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 06), Duration = "5", Progress = 40, ParentId = 1 },
-            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2019, 04, 02), Duration = "5", EndDate = new DateTime(2019, 04, 06), Progress = 30, ParentId = 1 },
-            new TaskData() { TaskId = 5, TaskName = "Project initiation", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 08) },
-            new TaskData() { TaskId = 6, TaskName = "Identify Site location", StartDate = new DateTime(2019, 04, 02), Duration = "2", Progress = 30, ParentId = 5 },
-            new TaskData() { TaskId = 7, TaskName = "Perform soil test", StartDate = new DateTime(2019, 04, 02), Duration = "4", Progress = 40, ParentId = 5 },
-            new TaskData() { TaskId = 8, TaskName = "Soil test approval", StartDate = new DateTime(2019, 04, 02), Duration = "5", Progress = 30, ParentId = 5 },
+            new TaskData() {
+                TaskId = 3,
+                TaskName = "Perform soil test",
+                StartDate = new DateTime(2019, 04, 02),
+                EndDate = new DateTime(2019, 04, 06),
+                Duration = "5",
+                Progress = 40,
+                ParentId = 1,
+            },
+            new TaskData() {
+                TaskId = 4,
+                TaskName = "Soil test approval",
+                StartDate = new DateTime(2019, 04, 02),
+                Duration = "5",
+                EndDate = new DateTime(2019, 04, 06),
+                Progress = 30,
+                ParentId = 1
+            },
+            new TaskData() {
+                TaskId = 5,
+                TaskName = "Project initiation",
+                StartDate = new DateTime(2019, 04, 02),
+                EndDate = new DateTime(2019, 04, 08),
+            },
+            new TaskData() {
+                TaskId = 6,
+                TaskName = "Identify Site location",
+                StartDate = new DateTime(2019, 04, 02),
+                Duration = "2",
+                Progress = 30,
+                ParentId = 5,
+
+            },
+            new TaskData() {
+                TaskId = 7,
+                TaskName = "Perform soil test",
+                StartDate = new DateTime(2019, 04, 02),
+                Duration = "4",
+                Progress = 40,
+                ParentId = 5,
+            },
+            new TaskData() {
+                TaskId = 8,
+                TaskName = "Soil test approval",
+                StartDate = new DateTime(2019, 04, 02),
+                Duration = "5",
+                Progress = 30,
+                ParentId = 5
+            },
         };
         return Tasks;
     }
