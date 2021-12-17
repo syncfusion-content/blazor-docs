@@ -290,7 +290,7 @@ You can change any node's properties at runtime. The following code sample shows
         NodeCollection.Add(node1);
     }
 
-    // update node properties at run time
+    // Update node properties at run time
     public void UpdateNode()
     {
         Diagram.BeginUpdate();

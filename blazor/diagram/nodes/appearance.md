@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appearance in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Appearance in Syncfusion Blazor Diagram component and much more details.
+description: Checkout and learn here all about Appearance in the Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -54,7 +54,7 @@ The following code shows how to customize the appearance of the shape.
 
 The [Gradient](https://help.syncfusion.com/cr/blazor) property of the node allows you to define and apply the gradient effect to the node. The gradient stop property defines the color and a position, where the previous color transition ends and a new color transition starts. The gradient stop’s opacity property defines the transparency level of the region.
 
-There are two types of gradients as follows:
+There are two types of gradients. They are:
 
 * Linear Gradient
 
@@ -122,7 +122,7 @@ There are two types of gradients as follows:
 
 ### Radial gradient
 
-[RadialGradient](https://help.syncfusion.com/cr/blazor) defines a smooth transition between stops on a circle. A radial gradient properties are used to define the position (relative to the node) of the outermost or the innermost circle of the radial gradient.
+[RadialGradient](https://help.syncfusion.com/cr/blazor) defines a smooth transition between stops on a circle. The radial gradient property is used to define the position (relative to the node) of the outermost or the innermost circle of the radial gradient.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -440,7 +440,7 @@ The following code shows how to set the `AddInfo` value.
 }
 ```
 
-**Note:** We can set any type of value for the AddInfo property.
+**Note:** You can set any type of value for the AddInfo property.
 
 ## Stack order
 
@@ -616,7 +616,7 @@ You can find the flow in the diagram by using the [GetEdges](https://help.syncfu
     public async Task UpdateEdges()
     {
         string NodeId = Diagram.SelectedItems.Nodes[0].Id;
-        // GetEdges method is used to get the connectors that connected to nodes.
+        // GetEdges method is used to get the connectors that are connected to nodes.
         string[] edges = await Diagram.GetEdges(NodeId, true);
         for (int i = 0; i < edges.Length; i++)
         {
