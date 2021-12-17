@@ -24,3 +24,9 @@ Please note that this license key is different from the installer unlock key tha
 * **License Key** - Syncfusion License Key is just a string that needs to be registered in your project to avoid licensing warning.
 
 > Refer to [this](https://www.syncfusion.com/kb/8950/difference-between-the-unlock-key-and-licensing-key) KB article to know more about difference between the Syncfusion Unlock Key and the Syncfusion License Key.
+
+## See Also
+
+* [How to Generate Syncfusion Blazor License Key?](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate)
+* [How to Register Syncfusion License Key in Blazor Application?](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application)
+* [How to Register Syncfusion License Key in Razor Class Library Application?](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-a-razor-class-library)

@@ -13,8 +13,6 @@ This following sample demonstrate how to get the Rich Text Editor validation err
 
 ## Render the editor in a form
 
-Render the Rich Text Editor in form as below.
-
 ```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
@@ -68,8 +66,6 @@ Render the Rich Text Editor in form as below.
 
 ```
 
-The output will be as follows.
-
 ![Form Validation in Blazor RichTextEditor](./images/blazor-richtexteditor-form-validation.png)
 
 ## Validation Rules
@@ -82,7 +78,7 @@ The Rich Text Editor is a textarea control. The Rich Text Editor also provides t
 | MinLength | Requires the value to be of given minimum characters count.|
 | MaxLength | Requires the value to be of given maximum characters count.|
 
-This sample is demonstrate form validation using the `DataAnnotationsValidator`.
+This sample is demonstrated form validation using the `DataAnnotationsValidator`.
 
 ```cshtml
 
@@ -131,8 +127,6 @@ This sample is demonstrate form validation using the `DataAnnotationsValidator`.
 }
 
 ```
-
-The output will be as follows.
 
 ![Char Count Validation in Blazor RichTextEditor](./images/blazor-richtexteditor-char-count-validation.png)
 
@@ -244,8 +238,6 @@ The Form Validation error message can be placed from default position to desired
 
 ```
 
-The output will be as follows.
-
 ![Blazor RichTextEditor Validation in Custom placement](./images/blazor-richtexteditor-validation-placement.png)
 
-> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
+> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
