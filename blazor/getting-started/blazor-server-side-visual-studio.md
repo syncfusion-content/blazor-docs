@@ -74,7 +74,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 * Now, register the Syncfusion Blazor Service in the Blazor Server App.
 
-    * For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+* For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
         {% tabs %}
         {% highlight c# %}
         using Microsoft.AspNetCore.Components;
@@ -93,7 +93,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
         {% endhighlight %}
         {% endtabs %}
 
-    * For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
+* For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
         {% tabs %}
         {% highlight c# %}
 

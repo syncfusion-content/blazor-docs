@@ -63,7 +63,7 @@ Add the Syncfusion bootstrap5 theme in the <head> element of the **wwwroot/index
 
 ## Add Script Reference
 
-Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referenced automatically via javascript script isolation approach.
+Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referenced automatically via javascript isolation approach.
 
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
@@ -81,9 +81,10 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 * Now, Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
 
-    * For .NET 6 app,
+* For **.NET 6** app,
+
     {% tabs %}
-    {% highlight c# tabtitle=NET6 %}
+    {% highlight c# tabtitle-Program h1_lines="11" %}
     using Microsoft.AspNetCore.Components.Web;
     using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
     using Syncfusion.Blazor;
@@ -100,9 +101,10 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
     {% endhighlight %}
     {% endtabs %}
 
-    * For **.NET 5 and .NET 3.X** app
+* For **.NET 5 and .NET 3.X** app,
+
     {% tabs %}
-    {% highlight c# tabtitle=NET3 and NET5 %}
+    {% highlight c# tabtitle-Program h1_lines="10" %}
     using Syncfusion.Blazor;
 
     namespace BlazorApp
