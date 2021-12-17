@@ -75,4 +75,4 @@ You should initiate an evaluation if you have already obtained our components th
 
    ![License Download Installer](images/start-trial-download-offline-installer.png)
 
-You can also refer to the [Offline installer](https://sfblazor.azurewebsites.net/staging/documentation/installation/offline-installer/how-to-install) link for step-by-step installation guidelines.
+You can also refer to the [Offline installer](https://blazor.syncfusion.com/documentation/installation/offline-installer/how-to-install) link for step-by-step installation guidelines.
