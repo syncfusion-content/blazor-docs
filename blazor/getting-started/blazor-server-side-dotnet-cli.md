@@ -77,6 +77,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 ## Register Syncfusion Blazor Service
 
 * Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
+
     {% tabs %}
     {% highlight razor %}
 
@@ -87,7 +88,8 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 * Now, register the Syncfusion Blazor Service in the Blazor Server App.
 
-    * For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+* For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+
     {% tabs %}
     {% highlight c# tabtitle-Program h1_lines="10" %}
 
@@ -107,7 +109,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
     {% endhighlight %}
     {% endtabs %}
 
-    * For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
+* For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 
     {% tabs %}
     {% highlight c# tabtitle-Program h1_lines="12" %}
@@ -134,6 +136,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 ## Add Syncfusion Blazor component
 
 * Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Calendars` namespace.
+
     {% tabs %}
     {% highlight razor %}
 
