@@ -67,10 +67,10 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * Now, Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
 
     {% tabs %}
-    {% highlight c# tabtitle-Program h1_lines="10" %}
+    {% highlight c# hl_lines="10" %}
     using Syncfusion.Blazor;
 
-    namespace BlazorApplication
+    namespace BlazorApp
     {
         public class Program
         {

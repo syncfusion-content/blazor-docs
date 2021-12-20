@@ -69,7 +69,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * Now, register the Syncfusion Blazor Service in the Blazor Server App. Open the `~/Startup.cs` file and register the Syncfusion Blazor Service.
 
     {% tabs %}
-    {% highlight c# %}
+    {% highlight c# hl_lines="12" %}
 
     using Syncfusion.Blazor;
 
