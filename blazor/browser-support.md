@@ -31,7 +31,7 @@ Syncfusion Blazor UI components are supported by all modern web browsers on Wind
 |    Microsoft Edge    |    Latest Version  |
 |    Apple Safari, including iOS    |    Latest Version  |
 |    Opera    |    Latest Version  |
-|    Microsoft Internet Explorer    |    11  |
+|    Microsoft Internet Explorer    |    Not Supported  |
 
 > Microsoft Internet Explorer requires additional polyfills for [.NET Core 3.1 / lower versions](https://docs.microsoft.com/en-us/aspnet/core/blazor/supported-platforms?view=aspnetcore-3.1). Refer this [documentation](common/how-to/render-blazor-server-app-in-ie) to add the polyfills in Blazor server application.
 
