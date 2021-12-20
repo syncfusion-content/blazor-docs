@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor QueryBuilder in WebAssembly using Visual Studio | Syncfusion
-description: Learn here all about Getting Started with Syncfusion Blazor QueryBuilder Component in Blazor WebAssembly (WASM) App using Visual Studio and more.
+description: Learn here all about getting started with Syncfusion Blazor QueryBuilder Component in Blazor WebAssembly (WASM) App using Visual Studio and more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor QueryBuilder Component in WebAssembly App using Visual Studio
 
-This article provides a step-by-step instructions to configure Syncfusion [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
+This article provides step-by-step instructions to configure Syncfusion [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 
 > Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
 
@@ -153,6 +153,6 @@ Now, add the [Blazor Query Builder](https://www.syncfusion.com/blazor-components
 
 ## Run the application
 
-After successful compilation of your application, simply press F5 to run the application. The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) component will render in the web browser as shown below
+After successful compilation of the application, simply press F5 to run the application. The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) component will render in the web browser.
 
 ![Blazor QueryBuilder](../images/blazor-querybuilder.gif)
