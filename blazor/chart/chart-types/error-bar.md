@@ -50,7 +50,7 @@ Error bars are graphical representations of the variability of data that are use
 
 ``` 
 
-![Error Bar](../images/othertypes/errorbar.png)
+![Blazor Line Chart with Error Bar](../images/othertypes/blazor-error-bar-chart.png)
 
 ## Error Bar Type
 
@@ -135,7 +135,7 @@ To customize the error bar type, specify the [Type](https://help.syncfusion.com/
 
 ``` 
 
-![Customizing Error Bar](../images/chart-types-images/custom-error-bar.png)
+![Blazor Line Chart with Custom Error Bar](../images/chart-types-images/blazor-line-chart-custom-error-bar.png)
 
 ## Error Bar Mode
 
@@ -261,7 +261,7 @@ To customize the error bar cap [Length](https://help.syncfusion.com/cr/blazor/Sy
 
 ``` 
 
-![Customizing Error Bar Cap](../images/othertypes/errorbarcap-custom.png)
+![Blazor Line Chart with Custom Error Bar Cap](../images/othertypes/blazor-line-chart-custom-error-bar-cap.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

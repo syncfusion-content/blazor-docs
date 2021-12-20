@@ -48,7 +48,7 @@ documentation: ug
 
 ``` 
 
-![Step Area](../images/chart-types-images/steparea.png)
+![Blazor Step Area Chart](../images/chart-types-images/blazor-step-area-chart.png)
 
 > Refer to our [Blazor Step Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/step-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Step Area Chart Example](https://blazor.syncfusion.com/demos/chart/step-area?theme=bootstrap4) to know how to render and configure the Step Area type chart.
 
@@ -96,7 +96,7 @@ The following properties can be used to customize the [Step Area](https://help.s
 
 ```
 
-![Step Area with series customization](../images/chart-types-images/custom-step-area.png)
+![Blazor Step Area Chart with Custom Series](../images/chart-types-images/blazor-step-area-chart-custom-series.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

@@ -156,7 +156,7 @@ The following table shows built-in toolbar options and its actions.
 
 ```
 
-![output](images/toolbar.png)
+![Blazor PivotTable with Toolbar](images/blazor-pivottable-with-toolbar.png)
 
 ## Show desired chart types in the dropdown menu
 
@@ -208,20 +208,20 @@ By default, all chart types are displayed in the dropdown menu included in the t
 
 ```
 
-![output](images/charttype-property.png)
+![Displaying Blazor PivotChart in DropDown Menu](images/blazor-pivotchart-in-dropdown-menu.png)
 
 ## Switch the chart to multiple axes
 
 In the chart, the user can switch from single axis to multiple axes with the help of the built-in checkbox available inside the chart type dropdown menu in the toolbar. For more information [refer here](https://blazor.syncfusion.com/documentation/pivot-table/pivot-chart/#multi-axis).
 
-![output](images/chart-option.png)
+![Displaying Multiple Axes in Blazor PivotTable DropDown Menu](images/blazor-pivotchart-show-multiple-axes.png)
 
 ## Show or hide legend
 
 In the chart, legend can be shown or hidden dynamically with the help of the built-in option available in the chart type drop-down menu.
 > By default, the legend is not be visible for the accumulation chart types like pie, doughnut, pyramid, and funnel. Users can enable or disable using the built-in checkbox option.
 
-![output](images/chart-legend.png)
+![Blazor PivotChart with Legend](images/blazor-pivotchart-legend.png)
 
 ## Events
 

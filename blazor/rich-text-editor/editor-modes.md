@@ -37,8 +37,6 @@ Rich Text Editor is a [WYSIWYG Editor](https://www.syncfusion.com/blazor-compone
 
 ```
 
-The output will be as follows.
-
 ![Blazor RichTextEditor with HTML Editor](./images/blazor-richtexteditor-with-html-editor.png)
 
 ## Markdown editor
@@ -68,13 +66,11 @@ Set the `EditorMode` property to `Markdown` to create or edit the content and ap
 
 ```
 
-The output will be as follows.
-
 ![Blazor RichTextEditor with Markdown Editor](./images/blazor-richtexteditor-markdown-editor.png)
 
 For further details on Markdown editing, refer to the [Markdown](./markdown/) section.
 
-> You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
+> You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
 
 ## See Also
 

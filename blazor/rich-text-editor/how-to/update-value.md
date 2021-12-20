@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Update Value in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn about Update Value in Blazor RichTextEditor component of Syncfusion, and more details.
+description: Checkout and learn about how to update value in Blazor RichTextEditor component of Syncfusion, and more details.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Capture ctrl+s to update the value
 
-To achieve this, we need to bind the `keydown` event to the Rich Text Editor content and capture the `ctrl + s` key press using its `keyCode`. In the `keydown` event handler, the `updateValue` method is called to update the `value` property and then we can save the content in the required database using the same.
+To achieve this, the `keydown` event has to be bound to the Rich Text Editor content and the `ctrl + s` key press is captured using its `keyCode`. In the `keydown` event handler, the `updateValue` method is called to update the `value` property and then the content is saved in the required database using the same.
 
 ```cshtml
 

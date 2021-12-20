@@ -57,7 +57,7 @@ To render a [line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 ``` 
 
-![Polar Chart with line series](../images/polar-radar/polar-line-razor.png)
+![Blazor Polar Chart with Line Series](../images/polar-radar/blazor-polar-chart-line-series.png)
 
 ### Spline
 
@@ -97,7 +97,7 @@ To render a [spline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cha
 
 ``` 
 
-![Polar Chart with spline series](../images/polar-radar/polar-spline-razor.png)
+![Blazor Polar Chart with Spline Series](../images/polar-radar/blazor-polar-chart-spline-series.png)
 
 ### Area
 
@@ -137,7 +137,7 @@ To render a [area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 ``` 
   
-![Polar Chart with area series](../images/polar-radar/polar-area-razor.png)
+![Blazor Polar Chart with Area Series](../images/polar-radar/blazor-polar-chart-area-series.png)
 
 ### Stacked Area
 
@@ -192,7 +192,7 @@ To render a [stacking area](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ``` 
 
-![Polar Chart with stacked area series](../images/polar-radar/polar-stackedarea-razor.png)
+![Blazor Polar Chart with Stacked Area Series](../images/polar-radar/blazor-polar-chart-stacked-area-series.png)
 
 ### Column
 
@@ -232,7 +232,7 @@ To render a [column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cha
 
 ``` 
 
-![Polar Chart with column series](../images/polar-radar/polar-column-razor.png)
+![Blazor Polar Chart with Column Series](../images/polar-radar/blazor-polar-chart-column-series.png)
 
 ### Stacked Column
 
@@ -284,7 +284,7 @@ To render a [stacking column](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 ``` 
 
-![Polar Chart with stacked column series](../images/polar-radar/polar-stackedcolumn-razor.png)
+![Blazor Polar Chart with Stacked Column Series](../images/polar-radar/blazor-polar-chart-stacked-column-series.png)
 
 ### Range Column
 
@@ -332,7 +332,7 @@ To render a [range column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ``` 
 
-![Polar Chart with range column series](../images/polar-radar/polar-rangecolumn-razor.png)
+![Blazor Polar Chart with Range Column Series](../images/polar-radar/blazor-polar-chart-range-column-series.png)
 
 ### Scatter
   
@@ -374,7 +374,7 @@ To render a [scatter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ``` 
 
-![Polar Chart with scatter series](../images/polar-radar/polar-scatter-razor.png)
+![Blazor Polar Chart with Scatter Series](../images/polar-radar/blazor-polar-chart-scatter-series.png)
 
 ## Series Customization
 
@@ -418,7 +418,7 @@ To customize the start angle of the [Polar Chart](https://help.syncfusion.com/cr
 
 ``` 
 
-![Polar Chart with start angle](../images/polar-radar/polar-start-angle.png)
+![Blazor Polar Chart with Start Angle](../images/polar-radar/blazor-polar-chart-start-angle.png)
 
 ### Radius
 
@@ -460,7 +460,7 @@ To customize the radius of the [Polar Chart](https://help.syncfusion.com/cr/blaz
 
 ``` 
 
-![Polar Chart with radius](../images/polar-radar/polar-co-efficient.png)
+![Blazor Polar Chart with Radius](../images/polar-radar/blazor-polar-chart-radius.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

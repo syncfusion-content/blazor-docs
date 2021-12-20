@@ -13,8 +13,6 @@ State persistence allowed Scheduler to retain the [CurrentView](https://help.syn
 
 > Scheduler ID is essential to set state persistence.
 
-The following sample demonstrates how to set state persistence of the Scheduler component.
-
 ```cshtml
 
 @using Syncfusion.Blazor.Schedule

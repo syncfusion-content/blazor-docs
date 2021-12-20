@@ -13,7 +13,7 @@ The Scheduler supports exporting all its appointments both to an Excel or ICS ex
 
 ## Excel Exporting
 
-The Scheduler allows you to export all its events into an Excel format file by using the `ExportToExcelAsync` method. By default, it exports all the default fields of Scheduler mapped through `<ScheduleEventSettings>` property.
+The Scheduler allows to export all its events into an Excel format file by using the `ExportToExcelAsync` method. By default, it exports all the default fields of Scheduler mapped through `<ScheduleEventSettings>` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -57,8 +57,6 @@ The Scheduler allows you to export all its events into an Excel format file by u
     }
 }
 ```
-
-Exported Excel file be like below
 
 ![Excel Exporting in Blazor Scheduler](images/blazor-scheduler-excel-export.png)
 
@@ -104,8 +102,6 @@ By default, Scheduler exports all the default event fields that are mapped to it
     }
 }
 ```
-
-Exported Excel file with custom fields be like below
 
 ![Excel Exporting with custom Fields in Blazor Scheduler](images/blazor-scheduler-excel-export-custom-fields.png)
 
@@ -364,9 +360,6 @@ You can export the Scheduler data with specific date format, by defining the `Da
     }
 }
 ```
-
-Exported Excel file with 24 hour date format be like below
-
 ![Excel Exporting with Date Format in Blazor Scheduler](images/blazor-scheduler-excel-date-format.png)
 
 ## Exporting calendar events as ICS file
@@ -542,7 +535,7 @@ The events from external calendars (ICS files) can be imported into Scheduler by
 
 ## How to print the Scheduler element
 
-The Scheduler allows you to print the Scheduler element by using the `PrintAsync` method. The Print method works in two ways. You can find it below.
+The Scheduler allows to print the Scheduler element by using the `PrintAsync` method. The Print method works in two ways.
 
 * Using Print method without options.
 * Using a Print method with options.

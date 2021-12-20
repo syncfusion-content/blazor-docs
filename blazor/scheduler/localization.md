@@ -155,7 +155,7 @@ Scheduler can be used with all valid date formats and by default it follows the 
 
 ## Time mode
 
-The time mode of the Scheduler can be either 12 or 24 hours format which is completely based on the system's local culture. And also the Scheduler supported to customize the time mode using the `TimeFormat` property.
+The time mode of the Scheduler can be either 12 or 24 hours format which is completely based on the system's local culture and also the Scheduler supported to customize the time mode using the `TimeFormat` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule

@@ -11,7 +11,7 @@ documentation: ug
 
 By using the Rich text editor's `OnImageUploading` event, you can get the image size before uploading and restrict the image to upload, when the given image size is greater than the allowed size.
 
-In the following, we have validated the image size before uploading and determined whether the image has been uploaded or not.
+In the following, the image size has been validated before uploading and determined whether the image has been uploaded or not.
 
 ```cshtml
 

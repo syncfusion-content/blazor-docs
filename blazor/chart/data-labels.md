@@ -45,7 +45,7 @@ documentation: ug
 
 ```
 
-![Data Labels](images/data-label/datalabel-razor.png)
+![Blazor Chart with Data Label](images/data-label/blazor-chart-data-label.png)
 
 ## Position
 
@@ -85,7 +85,7 @@ Using [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
 ```
 
-![Data Labels - Position](images/data-label/position-razor.png)
+![Changing Label Position in Blazor Chart](images/data-label/blazor-chart-label-position.png)
 
 > The position `Outer` is applicable only for column and bar series.
 
@@ -132,7 +132,7 @@ The [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartD
 
 ```
 
-![Data Labels - Text Mapping](images/data-label/mapping-razor.png)
+![Blazor Chart Label with Text Mapping](images/data-label/blazor-chart-label-with-text-mapping.png)
 
 ## Margin
 
@@ -176,7 +176,7 @@ The [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Char
 
 ```
 
-![Data Labels - Margin](images/data-label/margin-razor.png)
+![Blazor Chart Label with Margin](images/data-label/blazor-chart-label-with-margin.png)
 
 ## Customization
 
@@ -219,7 +219,7 @@ Data label can be customized using [Fill](https://help.syncfusion.com/cr/blazor/
 
 ```
 
-![Data Label - Customization](images/data-label/custom-razor.png)
+![Blazor Chart with Custom Label](images/data-label/blazor-chart-custom-label.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

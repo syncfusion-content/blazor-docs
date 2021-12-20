@@ -143,8 +143,6 @@ Now, add the Syncfusion Blazor Slider component in any web page `razor` in the `
 
 After successful compilation of your application, simply press `F5` to run the application.
 
-Output be like the below.
-
 ![Blazor RangeSlider](images/blazor-rangeslider.gif)
 
 ## See Also

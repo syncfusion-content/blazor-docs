@@ -60,7 +60,7 @@ The `PrintAsync` method can be used to print a rendered chart directly from the 
 
 ```
 
-![Printing the chart](images/getting-started/print.png)
+![Printing in Blazor Chart](images/getting-started/blazor-chart-printing.png)
 
 ## Export
 

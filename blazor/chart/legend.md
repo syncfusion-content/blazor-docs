@@ -56,7 +56,7 @@ To display the legend for the chart, set the [Visible](https://help.syncfusion.c
 
 ```
 
-![Enable Legend](images/legend/legend-razor.png)
+![Blazor Column Chart with Legend](images/legend/blazor-column-chart-legend.png)
 
 ## Position and Alignment
 
@@ -109,7 +109,7 @@ The legend can be placed at [Left](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ```
 
-![Legend positioned at the top](images/legend/top.png)
+![Changing Legend Position in Blazor Column Chart](images/legend/blazor-column-chart-legend-position.png)
 
 The [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Custom) position helps to position the legend anywhere in the chart using x and y coordinates.
 
@@ -159,7 +159,7 @@ The [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Lege
 
 ```
 
-![Legend - Custom Position](images/legend/custom.png)
+![Blazor Column Chart Legend in Custom Position](images/legend/blazor-column-chart-legend-in-custom-position.png)
 
 <!-- markdownlint-disable MD036 -->
 
@@ -215,7 +215,7 @@ Using the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ```
 
-![Legend Alignment - Far](images/legend/alignment-razor.png)
+![Changing Blazor Column Chart Legend Alignment Position](images/legend/blazor-column-chart-legend-alignment-position.png)
 
 ## Legend Customization
 
@@ -264,7 +264,7 @@ The [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ```
 
-![Legend Shape](images/legend/shape.png)
+![Changing Legend Shape in Blazor Column Chart](images/legend/blazor-column-chart-legend-shape.png)
 
 **Legend Size**
 
@@ -316,7 +316,7 @@ When the legend is placed on the top or bottom of the chart, it takes up 20% - 2
 
 ```
 
-![Legend Size - Customization](images/legend/size.png)
+![Blazor Column Chart Legend with Custom Size](images/legend/blazor-column-chart-legend-custom-size.png)
 
 **Legend Shape Size**
 
@@ -367,7 +367,7 @@ The [ShapeHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ```
 
-![Legend Shape Size - Customization](images/legend/item-size-razor.png)
+![Blazor Column Chart Legend Shape with Custom Size](images/legend/blazor-column-chart-custom-legend-shape-size.png)
 
 **Legend Paging**
 
@@ -420,7 +420,7 @@ When the legend items exceed legend bounds, paging will be enabled by default. E
 
 ```
 
-![Legend with paging](images/legend/paging.png)
+![Blazor Column Chart Legend with Paging](images/legend/blazor-column-chart-legend-paging.png)
 
 ## Series selection based on legend
 
@@ -469,7 +469,7 @@ By default, when click on the legend item, the appropriate series visibility is 
 
 ```
 
-![Series selection using legend items](images/legend/selection.png)
+![Blazor Column Chart Legend with Series Selection](images/legend/blazor-column-chart-legend-series-selection.png)
 
 ## Hiding legend item
 
@@ -520,7 +520,7 @@ The series [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ```
 
-![Hiding legend item](images/legend/collapse-razor.png)
+![Hiding Legend Item in Blazor Column Chart](images/legend/blazor-column-chart-hide-legend-item.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

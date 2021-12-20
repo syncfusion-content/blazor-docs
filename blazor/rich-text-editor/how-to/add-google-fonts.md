@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add Google fonts in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn here all about Add Google fonts in Syncfusion Blazor RichTextEditor component and more.
+description: Checkout and learn here all about adding Google fonts in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Add Google fonts in Blazor RichTextEditor Component
 
-To use web fonts in Rich Text Editor, the web fonts need not to be present in the local machine. To add the web fonts to Rich Text Editor, refer to the web font links and add the font names in the `RichTextEditorFontFamily` tag.
+To use web fonts in Rich Text Editor, the web fonts need not be present in the local machine. To add the web fonts to Rich Text Editor, refer to the web font links and add the font names in the `RichTextEditorFontFamily` tag.
 
 ```cshtml
 
@@ -66,8 +66,6 @@ To use web fonts in Rich Text Editor, the web fonts need not to be present in th
 }
 
 ```
-
-The output will be as follows.
 
 ![Blazor RichTextEditor with Custom Font](../images/blazor-richtexteditor-with-custom-font.png)
 
