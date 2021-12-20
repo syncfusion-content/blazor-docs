@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Columns in Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn here all about Columns in Syncfusion Blazor QueryBuilder component and much more.
+description: Checkout and learn here all about columns in Syncfusion Blazor QueryBuilder component and much more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
@@ -15,7 +15,7 @@ The column definitions are used as the [DataSource](https://help.syncfusion.com/
 
 ## Auto generation
 
-The [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) are automatically generated from datasource when the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) declaration is empty or undefined while initializing the query builder. All the columns in the `DataSource` are bound as the query builder columns.
+The [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) are automatically generated from the datasource when the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) declaration is empty or undefined while initializing the query builder. All the columns in the `DataSource` are bound as the query builder columns.
 
 > When columns are auto-generated, the column type will be determined from the first record of the data source.
 
@@ -66,8 +66,8 @@ The operator for a column can be defined in the [Columns](https://help.syncfusio
 | notequal | Checks for values not equal to the specified value. | String, Number, Date, Boolean |
 | greaterthan | Checks whether the value is greater than the specified value. | Date, Number |
 | greaterthanorequal | Checks whether a value is greater than or equal to the specified value. | Date, Number |
-| lessthan | Checks whether the value is less than the specified value.| Date, Number |
-| lessthanorequal | Checks whether the value is less than or equal to the specified value. | Date, Number |
+| lessthan | Checks whether the value is lesser than the specified value.| Date, Number |
+| lessthanorequal | Checks whether the value is lesser than or equal to the specified value. | Date, Number |
 | between | Checks whether the value is between the two-specific value. | Date, Number |
 | notbetween | Checks whether the value is not between the two-specific value. | Date, Number |
 | in | Checks whether the value is one of the specific values. | String, Number |
@@ -79,7 +79,7 @@ The operator for a column can be defined in the [Columns](https://help.syncfusio
 
 ## Step
 
-The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) allows you to set the step values to the number fields. It allows you to increase or decrease the numeric value with the predefined Step value using the [Step](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Step) property.
+The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) allows to set the step values to the number fields. It allows to increase or decrease the numeric value with the predefined Step value using the [Step](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Step) property.
 
 > By default the Step value is 1.
 
@@ -109,7 +109,7 @@ The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-q
 
 ```
 
-> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to knows how to render and configure the query builder.
+> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.
 
 ## Format
 
@@ -117,7 +117,7 @@ The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-q
 
 > From the standard numeric format, you can use the numeric related format specifiers such as n,p, and c in the format property. By using these format specifiers, you can achieve the percentage and currency textbox behavior.
 
-In the following sample, the date field is formatted as MM/yyyy/dd and number field is formatted as currency type.
+In the following sample, the date field is formatted as MM/yyyy/dd and the number field is formatted as currency type.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -152,15 +152,13 @@ In the following sample, the date field is formatted as MM/yyyy/dd and number fi
 
 ```
 
-Output will be shown as
-
 ![Formatting in Blazor QueryBuilder](./images/blazor-querybuilder-format.png)
 
-> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to knows how to render and configure the query builder.
+> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.
 
 ## Validations
 
-Validation allows you to validate the conditions and it display errors for invalid fields. To enable validation in the Query Builder, set [AllowValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AllowValidation) to true. Column fields are validated after setting [AllowValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AllowValidation) property to true.
+Validation allows to validate the conditions and it display errors for invalid fields. To enable validation in the Query Builder, set [AllowValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AllowValidation) to true. Column fields are validated after setting the [AllowValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AllowValidation) property to true.
 
 > You can set `Min` and `Max` values for number values.
 
@@ -195,7 +193,5 @@ Validation allows you to validate the conditions and it display errors for inval
 }
 
 ```
-
-Output will be shown as
 
 ![Validation in Blazor QueryBuilder](./images/blazor-querybuilder-validation.png)
