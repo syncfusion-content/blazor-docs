@@ -9,11 +9,11 @@ documentation: ug
 
 # Localization in Blazor QueryBuilder Component
 
-The `Localization` library allows you to localize default text content of the Query Builder. The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.). In the following sample the text is changed to `German` culture.
+The `Localization` library allows to localize default text content of the Query Builder. The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.). In the following sample the text is changed to `German` culture.
 
-We have used Resource file (.resx) to translate the static text of the query builder.
+Resource file (.resx) is used to translate the static text of the query builder.
 
-> Use `Resource` file to translate the static text of the QueryBuilder. The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [Localization](https://blazor.syncfusion.com/documentation/common/localization/#how-to-enable-localization-in-blazor-application) link to know more about how to configure and use localization in the Blazor Server and Web Assembly project for Syncfusion Blazor components.
+> Use `Resource` file to translate the static text of the QueryBuilder. The Resource file is an XML file which contains the strings (key and value pairs) that has to be translated into different language. Refer [Localization](https://blazor.syncfusion.com/documentation/common/localization/#how-to-enable-localization-in-blazor-application) link to know more about how to configure and use localization in the Blazor Server and Web Assembly project for Syncfusion Blazor components.
 
 The following list of properties and its values are used in the Query Builder.
 
@@ -88,8 +88,6 @@ The following list of properties and its values are used in the Query Builder.
 
 ```
 
-Output will be shown as
-
 ![Localization in Blazor QueryBuilder](./images/blazor-querybuilder-localization.png)
 
-> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to knows how to render and configure the query builder.
+> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.

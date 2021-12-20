@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Importing and Exporting in Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn here all about Importing and Exporting in Syncfusion Blazor QueryBuilder component and more.
+description: Checkout and learn here all about importing and exporting in Syncfusion Blazor QueryBuilder component and more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Importing and Exporting in Blazor QueryBuilder Component
 
-Importing allows you to view or edit the predefined conditions which is available in List rules or SQL rules. You can import the conditions either initial rendering or post rendering.
+Importing allows to view or edit the predefined conditions which is available in List rules or SQL rules. You can import the conditions as either initial rendering or post rendering.
 
 ## Initial rendering
 
-To apply conditions initially, you can define the condition and rules in **QueryBuilderRule** . Here, you can import list of rules by defining the **QueryBuilderRule**.
+To apply the conditions initially, you can define the condition and rules in **QueryBuilderRule** . Here, the list of rules can be imported by defining the **QueryBuilderRule**.
 
 ```cshtml
 
@@ -60,8 +60,6 @@ To apply conditions initially, you can define the condition and rules in **Query
 }
 ```
 
-Output will be shown as
-
 ![Blazor QueryBuilder with Data Binding](./images/blazor-querybuilder-binding-data.png)
 
 ## Post rendering
@@ -69,8 +67,6 @@ Output will be shown as
 ### Importing from SQL
 
 You can set the conditions from SQL query through the [SetRulesFromSql](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_SetRulesFromSql_System_String_) method.
-
-In the following sample sql rules binding on query builder on button click.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -117,17 +113,15 @@ In the following sample sql rules binding on query builder on button click.
 }
 ```
 
-Output will be shown as
-
 ![Importing from SQL in Blazor QueryBuilder](./images/blazor-querybuilder-import-from-sql.png)
 
 ## Exporting
 
-Exporting allows you to save or maintain the created conditions through the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder). You can export the defined conditions by the following ways.
+Exporting allows to save or maintain the created conditions through the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder). You can export the defined conditions by the following ways.
 
 ## Exporting to SQL
 
-You can export the defined conditions to SQL query through the [GetSqlFromRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_GetSqlFromRules) method.
+The defined conditions can be exported to the SQL query through the [GetSqlFromRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_GetSqlFromRules) method.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -179,4 +173,4 @@ You can export the defined conditions to SQL query through the [GetSqlFromRules]
 
 ```
 
-> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to knows how to render and configure the query builder.
+> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.
