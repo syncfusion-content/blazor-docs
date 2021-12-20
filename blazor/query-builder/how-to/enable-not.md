@@ -46,6 +46,4 @@ The QueryBuilder provides `Not` operator along with AND, OR operators to filter 
 
 ```
 
-Output will be shown as
-
 ![Displaying Not Operator in Blazor QueryBuilder](./../images/blazor-querybuilder-not-operator.png)
