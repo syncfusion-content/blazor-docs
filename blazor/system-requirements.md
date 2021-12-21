@@ -27,7 +27,7 @@ One of the the following .NET SDK is required to develop and run the Blazor appl
 * [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0) 
 * [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-> If you are planning to use Visual Studio to develop Blazor Applications. <br /> 
-.NET Core SDK 3.1.8 requires Visual Studio 2019 16.7 or later. <br /> 
-.NET 5.0 requires Visual Studio 2019 16.8 or later. <br /> 
-.NET 6.0 requires Visual Studio 2022 17.0 Preview 4.1 or later.
+If you are planning to use Visual Studio to develop Blazor Applications. 
+* .NET Core SDK 3.1.8 requires Visual Studio 2019 16.7 or later.  
+* .NET 5.0 requires Visual Studio 2019 16.8 or later.
+* .NET 6.0 requires Visual Studio 2022 17.0 Preview 4.1 or later.
