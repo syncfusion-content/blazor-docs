@@ -78,7 +78,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
         
         {% tabs %}
-        {% highlight c# %}
+        {% highlight c# tabtitle="Program.cs" hl_lines="10" %}
         using Microsoft.AspNetCore.Components;
         using Microsoft.AspNetCore.Components.Web;
         using Syncfusion.Blazor;
@@ -98,7 +98,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 
         {% tabs %}
-        {% highlight c# %}
+        {% highlight c# tabtitle="Startup.cs" hl_lines="12" %}
 
         using Syncfusion.Blazor;
 
