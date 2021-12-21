@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Actions of port in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Actions of port in Syncfusion Blazor Diagram component and much more.
+description: Checkout and learn here all about actions of port in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Actions of port in Blazor Diagram Component
+# Actions of Port in Blazor Diagram Component
 
-Port is a special connection point in a Node that you can glue the connectors. When you glue a connector to a node or port, they stay connected, even if one of the node is moved.
+Port is a special connection point in a Node where you can glue connectors. When you glue a connector to a node or port, they stay connected, even if one of the node is moved.
 
 ![Port](../images/Port1.png)
 
@@ -17,7 +17,7 @@ Port is a special connection point in a Node that you can glue the connectors. W
 
 There are two main types of connections, dynamic and port. The difference between these two connections is whether or not a connector remains glued to a specific connection point when you move the attached node or connector.
 
-A dynamic connection is one where the connector will move around the node as you move the node. Diagram will always ensure the connector is the shortest, most direct line possible. You can create a dynamic  connection by selecting the entire node (rather than the port) and connect it to another shape (rather than to a port).
+A dynamic connection is one where the connector will move around the node as you move the node. Diagram will always ensure the connector is the shortest, most direct line possible. You can create a dynamic connection by selecting the entire node (rather than the port) and connect it to another shape (rather than to a port).
 
 ![node to node](../images/Node_Connection.gif)
 
@@ -27,7 +27,7 @@ Ports act as the connection points of the node and allows creating connections w
 
 ## Create ports
 
-To add a connection port, define the port object and add it to node’s ports collection. The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_Offset) property of the port accepts an object of fractions and used to determine the position of ports. The following code explains how to add ports when initializing the node.
+To add a connection port, define the port object and add it to node’s ports collection. The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_Offset) property of the port accepts an object of fractions and is used to determine the position of ports. The following code explains how to add ports when initializing the node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -74,7 +74,7 @@ To add a connection port, define the port object and add it to node’s ports co
 
 Add ports at runtime by using the server-side method [Add`] in the port collection. The following code explains how to add ports to node at runtime.
 
-The port’s [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_Id) property is used to define the unique ID for the port and it is further used to find the port at runtime. If **Id** is not set, then default **Id** is automatically set.
+The port’s [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_Id) property is used to define the unique ID for the port and it is further used to find the port at runtime. If **Id** is not set, then the default **Id** will be set automatically.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams

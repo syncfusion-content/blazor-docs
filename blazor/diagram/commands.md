@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Commands in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Commands in Syncfusion Blazor Diagram component and much more details.
+description: Checkout and learn here all about Commands in the Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -31,12 +31,12 @@ Alignment commands enable you to align the selected or defined objects such as n
 
 | Parameters | Description |
 |:------------| :------ |
-|[Alignment Options](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AlignmentOptions.html) | Defines the specific direction, with respect to which the objects to be aligned. The accepted values of the argument "alignment options" are as follows. <br> Left - Aligns all the selected objects at the left of the selection boundary. <br> Right - Aligns all the selected objects at the right of the selection boundary. <br> Center - Aligns all the selected objects at the center of the selection boundary. <br> Top - Aligns all the selected objects at the top of the selection boundary. <br> Bottom - Aligns all the selected objects at the bottom of the selection boundary. <br> Middle - Aligns all the selected objects at the middle of the selection boundary.|
-| Objects | Defines the objects to be aligned. This is an optional parameter. By default, all the nodes and connectors in the selected region of the diagram gets aligned. |
-[Alignment Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AlignmentMode.html)  | Defines the specific mode, with respect to which the objects to be aligned. This is an optional parameter. The default alignment mode is `Object`. <br> The accepted values of the argument "alignment mode" are as follows. <br> Object - Aligns the objects based on the first object in the selected list. <br> Selector - Aligns the objects based on the selection boundary. | 
+|[Alignment Options](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AlignmentOptions.html) | Defines the specific direction, in which the objects are to be aligned. The accepted values of the argument "alignment options" are as follows. <br> Left - Aligns all the selected objects to the left of the selection boundary. <br> Right - Aligns all the selected objects to the right of the selection boundary. <br> Center - Aligns all the selected objects at the center of the selection boundary. <br> Top - Aligns all the selected objects at the top of the selection boundary. <br> Bottom - Aligns all the selected objects at the bottom of the selection boundary. <br> Middle - Aligns all the selected objects in the middle of the selection boundary.|
+| Objects | Defines the objects to be aligned. This is an optional parameter. By default, all the nodes and connectors in the selected region of the diagram are aligned. |
+[Alignment Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AlignmentMode.html)  | Defines the specific mode, in which the objects are to be aligned. This is an optional parameter. The default alignment mode is `Object`. <br> The accepted values of the argument "alignment mode" are as follows. <br> Object - Aligns the objects based on the first object in the selected list. <br> Selector - Aligns the objects based on the selection boundary. | 
 
 
-The following code example illustrates how to align all the selected objects at the left side of the selection boundary.
+The following code example illustrates how to align all the selected objects to the left side of the selection boundary.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -244,7 +244,7 @@ The [SendToBack](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 
     private void SendToBack()
     {
-        //Sends to front the selected node.
+        //Sends the selected node to the front.
         this.diagram.SendToBack();
     }
 }
@@ -331,10 +331,10 @@ The [Nudge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfD
 
 The accepted values of the argument "direction" are as follows:
 
-* Up: Moves the selected elements towards up by the specified delta value.
-* Down: Moves the selected elements towards down by the specified delta value.
-* Left: Moves the selected elements towards left by the specified delta value.
-* Right: Moves the selected elements towards right by the specified delta value.
+* Up: Moves the selected elements up by the specified delta value.
+* Down: Moves the selected elements down by the specified delta value.
+* Left: Moves the selected elements to the left by the specified delta value.
+* Right: Moves the selected elements to the right by the specified delta value.
 
 The following code illustrates how to execute nudge command.
 
@@ -429,7 +429,7 @@ The [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IF
 
 The [CanZoomIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IFitOptions.html#Syncfusion_Blazor_Diagrams_IFitOptions_CanZoomIn) parameter enables/disables zooming to fit the smaller content into a larger viewport.
 
-The [CustomBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IFitOptions.html#Syncfusion_Blazor_Diagrams_IFitOptions_CustomBounds) parameter the custom region that must be fit into the viewport.
+The [CustomBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IFitOptions.html#Syncfusion_Blazor_Diagrams_IFitOptions_CustomBounds) parameter specifies the custom region that must be fit into the viewport.
 
 The following code illustrates how to execute `FitToPage` command.
 
@@ -488,7 +488,7 @@ The [CommandManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
 
 ### Command Execution Event
 
-You can use the [OnCommandExecuted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnCommandExecuted) event to trigger when execute the custom command in diagram.
+You can use the [OnCommandExecuted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnCommandExecuted) event to trigger when you execute the custom command in the diagram.
 
 ### Custom command
 
