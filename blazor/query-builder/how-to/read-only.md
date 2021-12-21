@@ -43,6 +43,4 @@ The readonly property in the query builder disables the user interactions on the
 
 ```
 
-Output will be shown as
-
 ![Readonly in Blazor QueryBuilder](./../images/blazor-querybuilder-readonly.png)

@@ -65,7 +65,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * For **.NET 6** app,
 
     {% tabs %}
-    {% highlight c# tabtitle="Program.cs" hl_lines="10" %}
+    {% highlight c# tabtitle="Program.cs" hl_lines="11" %}
     using Microsoft.AspNetCore.Components.Web;
     using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
     using Syncfusion.Blazor;
