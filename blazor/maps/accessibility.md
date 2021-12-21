@@ -46,8 +46,8 @@ Keyboard shortcuts can be used to control the Maps UI actions. For the appropria
 
 Interaction Keys |Description
 -----|-----
-<kbd>Alt</kbd> + <kbd>J</kbd> |Moves to the container of the Maps.
 <kbd>Tab</kbd> |Moves to the next focusable element on the map, such as the legend or shape.
+<kbd>Shift</kbd> + <kbd>Tab</kbd> |Moves to the previous focusable element on the map, such as the legend or shape.
 <kbd> + </kbd> |When zooming is enabled, zoom in operation can be performed.
 <kbd> - </kbd> |When zooming is enabled, zoom out operation can be performed.
 <kbd>Left arrow</kbd> |When zoomed in, the map can be scrolled to the left.
