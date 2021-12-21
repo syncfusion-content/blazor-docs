@@ -77,47 +77,47 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 * For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
         
-        {% tabs %}
-        {% highlight c# %}
-        using Microsoft.AspNetCore.Components;
-        using Microsoft.AspNetCore.Components.Web;
-        using Syncfusion.Blazor;
+    {% tabs %}
+    {% highlight c# tabtitle="Program.cs" hl_lines="10" %}
+    using Microsoft.AspNetCore.Components;
+    using Microsoft.AspNetCore.Components.Web;
+    using Syncfusion.Blazor;
 
-        var builder = WebApplication.CreateBuilder(args);
+    var builder = WebApplication.CreateBuilder(args);
 
-        // Add services to the container.
-        builder.Services.AddRazorPages();
-        builder.Services.AddServerSideBlazor();
-        builder.Services.AddSyncfusionBlazor();
+    // Add services to the container.
+    builder.Services.AddRazorPages();
+    builder.Services.AddServerSideBlazor();
+    builder.Services.AddSyncfusionBlazor();
 
-        var app = builder.Build();
-        ....
-        {% endhighlight %}
-        {% endtabs %}
+    var app = builder.Build();
+    ....
+    {% endhighlight %}
+    {% endtabs %}
 
 * For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 
-        {% tabs %}
-        {% highlight c# %}
+    {% tabs %}
+    {% highlight c# tabtitle="Startup.cs" hl_lines="12" %}
 
-        using Syncfusion.Blazor;
+    using Syncfusion.Blazor;
 
-        namespace BlazorApplication
+    namespace BlazorApplication
+    {
+        public class Startup
         {
-            public class Startup
+            ...
+            public void ConfigureServices(IServiceCollection services)
             {
-                ...
-                public void ConfigureServices(IServiceCollection services)
-                {
-                    services.AddRazorPages();
-                    services.AddServerSideBlazor();
-                    services.AddSyncfusionBlazor();
-                }
-                ...
+                services.AddRazorPages();
+                services.AddServerSideBlazor();
+                services.AddSyncfusionBlazor();
             }
+            ...
         }
-        {% endhighlight %}
-        {% endtabs %}
+    }
+    {% endhighlight %}
+    {% endtabs %}
 
 ## Add Syncfusion Blazor component
 
