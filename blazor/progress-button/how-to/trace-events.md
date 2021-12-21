@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Trace Events in Blazor ProgressButton Component | Syncfusion
-description: Learn here all about Trace Events of Progress Button in Syncfusion Blazor ProgressButton component and more.
+description: Learn here all about trace events of Progress Button in Syncfusion Blazor ProgressButton component and more.
 platform: Blazor
 control: Progress Button
 documentation: ug
@@ -46,7 +46,5 @@ The events available in Progress Button are [OnFailure](https://help.syncfusion.
 </style>
 
 ```
-
-Output be like
 
 ![Tracing Events in Blazor ProgressButton](./../images/blazor-progressbutton-trace-event.png)

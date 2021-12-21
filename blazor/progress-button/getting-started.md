@@ -11,13 +11,13 @@ documentation: ug
 
 # Getting Started with Blazor ProgressButton Component
 
-This section briefly explains about how to include Progress Button Component in your Blazor server-side  application. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include Progress Button Component in the Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) page for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
 1. Install the **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.
 
-2. You can add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the `~/Pages/_Host.cshtml` page.
+2. The client-side style resources can be added through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the `~/Pages/_Host.cshtml` page.
 
     > Please ensure to check the **Include prerelease** option.
 
@@ -91,7 +91,7 @@ Now, add the Syncfusion Blazor Progress Button component in `razor` page in the 
 
 ## Run the application
 
-After successful compilation of your application, simply press F5 to run the application. The Blazor Progress Button component will render in the web browser as shown below
+After successful compilation of the application, simply press F5 to run the application. The Blazor Progress Button component will render in the web browser.
 
 ![Blazor ProgressButton Component](./images/blazor-progressbutton-component.png)
 
