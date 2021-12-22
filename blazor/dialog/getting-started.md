@@ -119,6 +119,60 @@ html, body {
 
 ```
 
+## Prerender the dialog
+
+The dialog component is maintained at the DOM elements when showing or hiding the dialogs when enabled `AllowPrerender` property.
+
+> By default, `AllowPrerender` property is a disabled state, the dialog DOM elements get destroyed when hiding the dialog. Each time dialog will be re-rendered when showing the dialog. Dialog `@bind-Visible` property also work based on `AllowPrerender` property.
+
+```cshtml
+
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+
+<div id="target">
+    <div>
+        @if (this.ShowButton)
+        {
+            <button class="e-btn" @onclick="@OnBtnClick">Open</button>
+        }
+    </div>
+    <SfDialog Target="#target" Width="300px" ShowCloseIcon="true" @bind-Visible="Visibility" AllowPrerender="true">
+        <DialogTemplates>
+            <Header> Dialog </Header>
+            <Content> This is a dialog with header </Content>
+        </DialogTemplates>
+        <DialogEvents OnOpen="@DialogOpen" Closed="@DialogClose"></DialogEvents>
+    </SfDialog>
+</div>
+<style>
+    #target {
+        height: 500px;
+    }
+</style>
+@code {
+    private bool Visibility { get; set; } = true;
+    private bool ShowButton { get; set; } = false;
+    private void OnBtnClick()
+    {
+        this.Visibility = true;
+    }
+    private void DialogOpen(Object args)
+    {
+        this.ShowButton = false;
+    }
+    private void DialogClose(Object args)
+    {
+        this.ShowButton = true;
+    }
+}
+
+```
+
+The output will be as follows.
+
+![Prerender Dialog](./images/blazor-prerender-dialog.png)
+
 ## Modal dialog
 
 A `modal` shows an overlay behind the Dialog. So, the users should interact the Dialog compulsory before interacting with the remaining content in an application.
