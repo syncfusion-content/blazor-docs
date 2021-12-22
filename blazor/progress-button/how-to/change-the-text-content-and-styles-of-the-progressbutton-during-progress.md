@@ -39,6 +39,4 @@ You can change the text content and styles of the Progress Button during progres
 
 ```
 
-Output be like
-
 ![Changing Text Content and Style of Blazor ProgressButton](./../images/blazor-progressbutton-change-text.png)

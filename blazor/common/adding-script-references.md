@@ -97,7 +97,7 @@ If you're using Blazor WebAssembly App, set [IgnoreScriptIsolation](https://help
 * .NET 5 or .NET Core 3.X Blazor WebAssembly App
 
     {% tabs %}
-    {% highlight c# tabtitle=Program hl_lines="7 8" %}
+    {% highlight c# tabtitle="~/Program.cs" hl_lines="7 8" %}
 
     using Syncfusion.Blazor;
     ....
