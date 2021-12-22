@@ -56,34 +56,34 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 * Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
-    {% tabs %}
-    {% highlight razor tabtitle="~/_Imports.razor" %}
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
-    @using Syncfusion.Blazor
+@using Syncfusion.Blazor
 
-    {% endhighlight %}
-    {% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 * Now, Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
 
-    {% tabs %}
-    {% highlight c# tabtitle="~/Program.cs" hl_lines="10" %}
-    using Syncfusion.Blazor;
+{% tabs %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="10" %}
+using Syncfusion.Blazor;
 
-    namespace BlazorApp
+namespace BlazorApp
+{
+    public class Program
     {
-        public class Program
+        public static async Task Main(string[] args)
         {
-            public static async Task Main(string[] args)
-            {
-                ....
-                builder.Services.AddSyncfusionBlazor();
-                await builder.Build().RunAsync();
-            }
+            ....
+            builder.Services.AddSyncfusionBlazor();
+            await builder.Build().RunAsync();
         }
     }
-    {% endhighlight %}
-    {% endtabs %}
+}
+{% endhighlight %}
+{% endtabs %}
 
 > You can disable the dynamic script loading and refer to the scripts from the application end by using the `IgnoreScriptIsolation` parameter in `AddSyncfusionBlazor()` at the `program.cs`. For more details, please refer here for [how to refer custom/CDN resources](../common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
 
@@ -91,28 +91,28 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 * Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Calendars` namespace.
 
-    {% tabs %}
-    {% highlight razor tabtitle="~/_Imports.razor" %}
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
-    @using Syncfusion.Blazor
-    @using Syncfusion.Blazor.Calendars
-    
-    {% endhighlight %}
-    {% endtabs %}
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Calendars
+
+{% endhighlight %}
+{% endtabs %}
 
 * Now, add the Syncfusion Blazor components in .razor file.Here, the Calendar component is added in the **~/Pages/Index.razor** page under the `~/Pages` folder.
 
-    {% tabs %}
-    {% highlight razor tabtile="~/Pages/Index.razor" %}
+{% tabs %}
+{% highlight razor %}
 
-    <SfCalendar TValue="DateTime"></SfCalendar>
-    
-    {% endhighlight %}
-    {% endtabs %}
+<SfCalendar TValue="DateTime"></SfCalendar>
+
+{% endhighlight %}
+{% endtabs %}
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
 
-    ![Blazor Calendar Component](images/browser-output.png)
+![Blazor Calendar Component](images/browser-output.png)
 
 > You need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for more information.
 

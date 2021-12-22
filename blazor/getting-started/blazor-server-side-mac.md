@@ -39,14 +39,16 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 
 * Add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** page.
 
-    {% tabs %}
-    {% highlight cshtml tabtitle="~/Pages/_Host.cshtml" %}
-        <head>
-            ....
-            <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-        </head>
-    {% endhighlight %}
-    {% endtabs %}
+{% tabs %}
+{% highlight cshtml tabtitle="~/Pages/_Host.cshtml" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add Script Reference
 
@@ -58,37 +60,37 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 * Open `~/_Imports.razor` file and import the `Syncfusion.Blazor` namespace.
 
-    {% tabs %}
-    {% highlight razor tabtitle="~/_Imports.razor" %}
-    
-    @using Syncfusion.Blazor
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
-    {% endhighlight %}
-    {% endtabs %}
+@using Syncfusion.Blazor
+
+{% endhighlight %}
+{% endtabs %}
 
 * Now, register the Syncfusion Blazor Service in the Blazor Server App. Open the `~/Startup.cs` file and register the Syncfusion Blazor Service.
 
-    {% tabs %}
-    {% highlight c# tabtitle="~/Startup.cs" hl_lines="12" %}
+{% tabs %}
+{% highlight c# tabtitle="~/Startup.cs" hl_lines="12" %}
 
-    using Syncfusion.Blazor;
+using Syncfusion.Blazor;
 
-    namespace BlazorApp
+namespace BlazorApp
+{
+    public class Startup
     {
-        public class Startup
+        ...
+        public void ConfigureServices(IServiceCollection services)
         {
-            ...
-            public void ConfigureServices(IServiceCollection services)
-            {
-                services.AddRazorPages();
-                services.AddServerSideBlazor();
-                services.AddSyncfusionBlazor();
-            }
-            ...
+            services.AddRazorPages();
+            services.AddServerSideBlazor();
+            services.AddSyncfusionBlazor();
         }
+        ...
     }
-    {% endhighlight %}
-    {% endtabs %}
+}
+{% endhighlight %}
+{% endtabs %}
 
 > You can disable the dynamic script loading and refer to the scripts from the application end by using the IgnoreScriptIsolation parameter in AddSyncfusionBlazor() at the program.cs. For more details, please refer here for [how to refer custom/CDN](https://blazor.syncfusion.com/documentation/common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application) resources.
 
@@ -96,28 +98,28 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 * Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Calendars` namespace.
 
-    {% tabs %}
-    {% highlight razor tabtitle="~/_Imports.razor" %}
-    
-    @using Syncfusion.Blazor
-    @using Syncfusion.Blazor.Calendars
-    
-    {% endhighlight %}
-    {% endtabs %}
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Calendars
+
+{% endhighlight %}
+{% endtabs %}
 
 * Now, add the Syncfusion Calendar component in .razor file. Here, the Calendar component is added in the **~/Pages/Index.razor** page under the `~/Pages` folder.
 
-    {% tabs %}
-    {% highlight razor tabtitle="~/Pages/Index.razor" %}
-    
-    <SfCalendar TValue="DateTime"></SfCalendar>
-    
-    {% endhighlight %}
-    {% endtabs %}
+{% tabs %}
+{% highlight razor %}
+
+<SfCalendar TValue="DateTime"></SfCalendar>
+
+{% endhighlight %}
+{% endtabs %}
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
 
-    ![Blazor Calendar Component](images/mac-output.png)
+![Blazor Calendar Component](images/mac-output.png)
 
 > You need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for more information.
 

@@ -143,7 +143,7 @@ namespace BlazorApplication
 * Now, add the Syncfusion Calendar component in razor file. Here, the Calendar component is added in the **~/Pages/Index.razor** page under the `~/Pages` folder.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Pages/Index.razor" %}
+{% highlight razor %}
 
 <SfCalendar TValue="DateTime"/>
 

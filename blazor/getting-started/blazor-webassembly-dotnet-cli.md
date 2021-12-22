@@ -73,88 +73,89 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 * Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
-    {% tabs %}
-    {% highlight razor tabtitle="~/Imports.razor" %}
+{% tabs %}
+{% highlight razor tabtitle="~/Imports.razor" %}
 
-    @using Syncfusion.Blazor
+@using Syncfusion.Blazor
 
-    {% endhighlight %}
-    {% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 * Now, Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
 
 * For **.NET 6** app,
 
-    {% tabs %}
-    {% highlight c# tabtitle="~/Program.cs" hl_lines="11" %}
-    using Microsoft.AspNetCore.Components.Web;
-    using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-    using Syncfusion.Blazor;
+{% tabs %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="11" %}
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Syncfusion.Blazor;
 
-    var builder = WebAssemblyHostBuilder.CreateDefault(args);
-    builder.RootComponents.Add<App>("#app");
-    builder.RootComponents.Add<HeadOutlet>("head::after");
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
 
-    builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-    builder.Services.AddSyncfusionBlazor();
-    await builder.Build().RunAsync();
-    ....
-    {% endhighlight %}
-    {% endtabs %}
+builder.Services.AddSyncfusionBlazor();
+await builder.Build().RunAsync();
+....
+{% endhighlight %}
+{% endtabs %}
 
 * For **.NET 5 and .NET 3.X** app,
 
-    {% tabs %}
-    {% highlight c# tabtitle="~/Program.cs" hl_lines="10" %}
-    using Syncfusion.Blazor;
+{% tabs %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="10" %}
+using Syncfusion.Blazor;
 
-    namespace BlazorApp
+namespace BlazorApp
+{
+    public class Program
     {
-        public class Program
+        public static async Task Main(string[] args)
         {
-            public static async Task Main(string[] args)
-            {
-                ....
-                builder.Services.AddSyncfusionBlazor();
-                await builder.Build().RunAsync();
-            }
+            ....
+            builder.Services.AddSyncfusionBlazor();
+            await builder.Build().RunAsync();
         }
     }
-    {% endhighlight %}
-    {% endtabs %}
+}
+{% endhighlight %}
+{% endtabs %}
 
 > You can disable the dynamic script loading and refer to the scripts from the application end by using the `IgnoreScriptIsolation` parameter in `AddSyncfusionBlazor()` at the `Program.cs`. For more details, please refer here for [how to refer custom/CDN resources](../common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
 
 ## Add Syncfusion Blazor component
 
 * Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Calendars` namespace.
-    {% tabs %}
-    {% highlight razor tabtitle="~/Imports.razor" %}
 
-    @using Syncfusion.Blazor
-    @using Syncfusion.Blazor.Calendars
-    
-    {% endhighlight %}
-    {% endtabs %}
-    
+{% tabs %}
+{% highlight razor tabtitle="~/Imports.razor" %}
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Calendars
+
+{% endhighlight %}
+{% endtabs %}
+
 * Now, add the Syncfusion Calendar component in .razor file. Here, the Calendar component is added in the `~/Pages/Index.razor` page under the `~/Pages` folder.
 
-    {% tabs %}
-    {% highlight razor tabtitle="~/Pages" %}
+{% tabs %}
+{% highlight razor %}
 
-    <SfCalendar TValue="DateTime"></SfCalendar>
+<SfCalendar TValue="DateTime"></SfCalendar>
 
-    {% endhighlight %}
-    {% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 * In the command prompt (Windows) or terminal (Linux and macOS) to run the following command to build and start the app. The app listening on `http://localhost:<port number>` and view it in the browser.
 
-    ```
-    dotnet run
-    ```
+```
+dotnet run
+```
 
-    ![Blazor Calendar Component](images/browser-output.png)
+![Blazor Calendar Component](images/browser-output.png)
 
 > You need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for more information.
 
