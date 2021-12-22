@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor ASP.NET Core Hosted WebAssembly App in Visual Studio - Syncfusion Blazor
+title: Blazor ASP.NET Core Hosted App in Visual Studio - Syncfusion Blazor
 description: Check out the documentation for getting started with Blazor ASP.NET Core Hosted WebAssembly App and Syncfusion Blazor Components in Visual Studio.
 platform: Blazor
 component: Common
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting started with Blazor ASP.NET Core Hosted WebAssembly App in Visual Studio
+# Getting started with Blazor ASP.NET Core Hosted App in Visual Studio
 
 This article provides a step-by-step instructions for building Blazor ASP.NET Core Hosted WebAssembly application with `Blazor Calendar` components using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 

@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Blazor ASP.NET Core Hosted WebAssembly App in .NET Core CLI - Syncfusion Blazor
-description: Check out the documentation for getting started with Blazor ASP.NET Core Hosted WebAssembly App and Syncfusion Blazor Components in .NET Core CLI and much more.
+title: Blazor ASP.NET Core Hosted App in .NET CLI - Syncfusion Blazor
+description: Check out the documentation for getting started with Blazor ASP.NET Core Hosted WebAssembly App and Syncfusion Blazor Components in .NET CLI and much more.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 <!-- markdownlint-disable MD024 -->
 
-# Getting started with Blazor ASP.NET Core Hosted WebAssembly App in .NET Core CLI
+# Getting started with Blazor ASP.NET Core Hosted App in .NET CLI
 
-This articles provides a step-by-step instructions for building Blazor ASP.NET Core Hosted WebAssembly application with `Blazor Calendar` components using [.NET Core CLI](https://dotnet.microsoft.com/download/dotnet/).
+This articles provides a step-by-step instructions for building Blazor ASP.NET Core Hosted WebAssembly application with `Blazor Calendar` components using [.NET CLI](https://dotnet.microsoft.com/download/dotnet/).
 
 ## Prerequisites
 
 * [System requirements for Blazor Application](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a Blazor ASP.NET Core Hosted WebAssembly project using .NET Core CLI
+## Create a Blazor ASP.NET Core Hosted WebAssembly project using .NET CLI
 
 Run the `dotnet new blazorwasm` command with option `--hosted` to create a new Blazor ASP.NET Core Hosted WebAssembly application in the command prompt (Windows) or terminal (Linux or macOS).
 
