@@ -40,9 +40,7 @@ To change this default description, use the [`Description`](https://help.syncfus
 
 ## KeyBoard Navigation
 
-Keyboard shortcuts can be used to control the Maps UI actions. For the appropriate UI features such as zooming, panning, selection, highlight, and legend, as well as primary navigations, the applicable key combinations and their relative functionalities are listed below.
-
-### Various actions on the Maps
+All the Maps actions can be controlled via keyboard keys. The applicable key combinations and their relative functionalities are listed below for the appropriate UI features available in the component.
 
 Interaction Keys |Description
 -----|-----
