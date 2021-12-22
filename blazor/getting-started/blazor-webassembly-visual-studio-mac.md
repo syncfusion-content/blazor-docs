@@ -35,10 +35,10 @@ To add Blazor Calendar component in the app, open the NuGet package manager in V
 
 Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
 
-To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred inside the <head> element of **wwwroot/index.html** file of client web app.
+To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred inside the `<head>` of **wwwroot/index.html** file of client web app.
 
 {% tabs %}
-{% highlight html %}
+{% highlight html tabtitle="wwwroot/index.html" %}
 <head>
     ...
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
@@ -57,7 +57,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
     {% tabs %}
-    {% highlight razor %}
+    {% highlight razor tabtitle="~/_Imports.razor" %}
 
     @using Syncfusion.Blazor
 
@@ -67,7 +67,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * Now, Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
 
     {% tabs %}
-    {% highlight c# tabtitle="Program.cs" hl_lines="10" %}
+    {% highlight c# tabtitle="~/Program.cs" hl_lines="10" %}
     using Syncfusion.Blazor;
 
     namespace BlazorApp
@@ -92,7 +92,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Calendars` namespace.
 
     {% tabs %}
-    {% highlight razor %}
+    {% highlight razor tabtitle="~/_Imports.razor" %}
 
     @using Syncfusion.Blazor
     @using Syncfusion.Blazor.Calendars
@@ -103,7 +103,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * Now, add the Syncfusion Blazor components in .razor file.Here, the Calendar component is added in the **~/Pages/Index.razor** page under the `~/Pages` folder.
 
     {% tabs %}
-    {% highlight razor %}
+    {% highlight razor tabtile="~/Pages/Index.razor" %}
 
     <SfCalendar TValue="DateTime"></SfCalendar>
     
