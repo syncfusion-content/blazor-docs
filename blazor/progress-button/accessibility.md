@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor ProgressButton Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor ProgressButton component and more.
+description: Checkout and learn here all about accessibility in Syncfusion Blazor ProgressButton component and more.
 platform: Blazor
 control: Progress Button
 documentation: ug
@@ -42,5 +42,4 @@ Starts the progress</td></tr>
 <SfProgressButton Content="Spin Left"></SfProgressButton>
 ```
 
-Output be like
 ![Accessibility in Blazor ProgressButton](./images/blazor-progressbutton-component.png)

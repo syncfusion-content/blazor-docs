@@ -1,7 +1,7 @@
 ---
 layout: post
 title: States in Blazor ProgressBar Component | Syncfusion
-description: Checkout and learn here all about States in Syncfusion Blazor ProgressBar component and much more details.
+description: Checkout and learn here all about states in Syncfusion Blazor ProgressBar component and much more details.
 platform: Blazor
 control: Progress Bar 
 documentation: ug
