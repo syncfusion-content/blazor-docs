@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Stared with Blazor ProgressBar in Server Side | Syncfusion
-description: Learn here all about Getting Started with Syncfusion Blazor ProgressBar in Blazor Server Side App using Visual Studio and more.
+description: Learn here all about getting started with Syncfusion Blazor ProgressBar in Blazor Server Side App using Visual Studio and more.
 platform: Blazor
 control: Progress Bar 
 documentation: ug
@@ -44,7 +44,7 @@ Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.ProgressB
 
 ## Adding SyncfusionBlazor service in the Startup.cs
 
-Open the **Startup.cs** file and add services required by Syncfusion components using the **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
+Open the **Startup.cs** file and add services required by Syncfusion components using the **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function.
 
 ```csharp
 using Syncfusion.Blazor;
@@ -78,7 +78,7 @@ To initialize the Progress Bar component, add the following code to the **Index
 </SfProgressBar>
 ```
 
-On successful compilation of the application, the Syncfusion Blazor Progress Bar component will render in the web browser as following.
+On successful compilation of the application, the Syncfusion Blazor Progress Bar component will render in the web browser.
 
 ![Blazor Linear ProgressBar](images/blazor-linear-progressbar.png)
 

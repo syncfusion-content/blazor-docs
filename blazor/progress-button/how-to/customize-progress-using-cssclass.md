@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize progress using cssClass in Syncfusion Blazor ProgressButton
-description: Learn here all about Customize progress using cssClass in Syncfusion Blazor ProgressButton component and more.
+description: Learn here all about customizing the progress using cssClass in Syncfusion Blazor ProgressButton component and more.
 platform: Blazor
 control: Progress Button
 documentation: ug
@@ -31,7 +31,5 @@ You can also show reverse progress by adding custom class to the [CssClass](http
 </style>
 
 ```
-
-Output be like
 
 ![Customizing Progress in Blazor ProgressButton](./../images/blazor-progressbutton-customization.png)
