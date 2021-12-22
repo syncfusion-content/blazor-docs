@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Types and Icons in Blazor ProgressButton Component | Syncfusion
-description: Checkout and learn here all about Types and Icons in Syncfusion Blazor ProgressButton component and more.
+description: Checkout and learn here all about types and icons in Syncfusion Blazor ProgressButton component and more.
 platform: Blazor
 control: Progress Button
 documentation: ug
@@ -59,8 +59,6 @@ The primary progress button is styled with background color and it is used to re
 <SfProgressButton Content="Primary" IsPrimary="true"></SfProgressButton>
 ```
 
-Output be like
-
 ![Blazor Primary ProgressButton](./images/blazor-primary-progress-button.png)
 
 ## Icons
@@ -83,7 +81,5 @@ The Progress Button can have an icon to provide the visual representation of the
 </style>
 
 ```
-
-Output be like
 
 ![Blazor ProgressButton with Icon](./images/blazor-progress-button-icon.png)
