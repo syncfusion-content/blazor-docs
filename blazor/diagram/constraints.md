@@ -206,7 +206,7 @@ Connector constraints allow you to enable or disable certain behaviors of connec
 * Tooltip
 * Bridging
 
-The following list of connector constraints are used to Enable or Disable certain features of connectors.
+The following list of connector constraints are used to enable or disable certain features of connectors.
 
 | Constraints | Description |
 | -------- | -------- |
@@ -290,7 +290,7 @@ You can enable or disable certain behaviors of port. They are as follows:
 * Connect
 * ConnectOnDrag
 
-The following list of port constraints are used to Enable or Disable certain features of ports.
+The following list of port constraints are used to enable or disable certain features of ports.
 
 | Constraints | Description |
 | -------- | -------- |
@@ -514,7 +514,7 @@ Snap constraints control the visibility of gridlines and enable or disable snapp
 * Snap to either horizontal or vertical gridlines.
 * Snap to both horizontal and vertical gridlines.
 
-The following list of snapping constraints are used to Enable or Disable certain features of snapping.
+The following list of snapping constraints are used to enable or disable certain features of snapping.
 
 | Constraints | Description |
 | -------- | -------- |
