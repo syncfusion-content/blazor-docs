@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Diagram Component | Syncfusion 
-description: Learn about Events in Blazor Diagram component of Syncfusion, and more details.
+description: Checkout and learn here all about the Events in the Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -113,7 +113,7 @@ Triggers before opening the context menu.
 
 ## DataLoaded
 
-Triggers after the diagram is are populated from the external data source
+Triggers after the diagram is populated from the external data source.
 
 | Argument Name | Description |
 | -------- | -------- |
@@ -190,7 +190,7 @@ Triggers when a symbol is dragged into a diagram from the symbol palette.
 
 ## DragLeave
 
-Triggers when a symbol is dragged outside of the diagram.
+Triggers when a symbol is dragged outside the diagram.
 
 | Argument Name | Description |
 | -------- | -------- |
@@ -493,7 +493,7 @@ Triggers when editor got focus at the time of node’s label or text node editin
 
 ## Native events
 
-The Diagram control provides event support, which triggers while interacting with the diagram. Also, Syncfusion provides native event support in blazor for the following events
+The Diagram control provides event support, which triggers while interacting with the diagram. Also, Syncfusion provides native event support in Blazor for the following events
 
 | Event Name | Event Type |
 | -------- | -------- |
@@ -520,7 +520,7 @@ The native events can be defined as mentioned below. For example, the onmousedow
 {
     public void OnMouseDown(MouseEventArgs args)
     {
-        //Action to be performed
+        //Action to be performed.
     }
 }
 ```

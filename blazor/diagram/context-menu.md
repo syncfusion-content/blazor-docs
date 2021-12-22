@@ -16,7 +16,7 @@ Diagram provides some in-built context menu items and allows to define custom me
 
 ## Default context menu
 
-The [Show](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramContextMenuSettings.html#Syncfusion_Blazor_Diagrams_DiagramContextMenuSettings_Show) property helps you to enable or disable the context menu. Diagram provides some default context menu items such as copy, cut, select all, order,cut undo, redo, and group options. The following code shows how to enable the default context menu items.
+The [Show](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramContextMenuSettings.html#Syncfusion_Blazor_Diagrams_DiagramContextMenuSettings_Show) property helps you to enable or disable the context menu. Diagram provides some default context menu items such as copy, cut, select all, order, cut undo, redo, and group options. The following code shows how to enable the default context menu items.
 
 ```cshtml
 <SfDiagram id="diagram" Height="600px">
@@ -32,7 +32,7 @@ The following code shows how to disable the default context menu items.
 
 ```cshtml
 <SfDiagram id="diagram" Height="600px">
-// Define context menu
+// Define context menu.
     <DiagramContextMenuSettings Show="false">
     </DiagramContextMenuSettings>
 </SfDiagram>
@@ -50,13 +50,13 @@ Custom context menu provides an option to add the new custom items to the contex
 
 * The `IconCss` property defines the class or multiple classes separated by a space for the menu item that is used to include an icon. Menu item can include the font icon and sprite image.
 
-* The `Target` property used to set the target to show the menu item.
+* The `Target` property is used to set the target to show the menu item.
 
 * The `Separator` property defines the horizontal lines that are used to separate the menu items. You cannot select the separators. You can enable separators to group the menu items using the separator property.
 
 ### Custom context menu along with default context menu
 
-The following code example shows how to add custom context menu items along with the default context menu. set  the [ShowCustomMenuOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramContextMenuSettings.html#Syncfusion_Blazor_Diagrams_DiagramContextMenuSettings_ShowCustomMenuOnly) property to false to render both custom context menu and default context menu.
+The following code example shows how to add custom context menu items along with the default context menu. Set the [ShowCustomMenuOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramContextMenuSettings.html#Syncfusion_Blazor_Diagrams_DiagramContextMenuSettings_ShowCustomMenuOnly) property to false to render both custom context menu and default context menu.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -65,24 +65,24 @@ The following code example shows how to add custom context menu items along with
            Nodes="@NodeCollection"
            Connectors="@ConnectorCollection"
            Constraints="@diagramConstraints">
-    // Defines context menu and set the ShowCustomMenuOnly to false to render the custom context menu along with the default context menu
+    // Defines context menu and set the ShowCustomMenuOnly to false to render the custom context menu along with the default context menu.
     <DiagramContextMenuSettings Show="true" Items="@contextMenuItemModels" ShowCustomMenuOnly="false">
     </DiagramContextMenuSettings>
 </SfDiagram>
 
 @code
 {
-    //Defines diagram's nodes collection
+    //Defines diagram's nodes collection.
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();
 
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     public ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>();
 
     public DiagramConstraints diagramConstraints = DiagramConstraints.Default;
 
     protected override void OnInitialized()
     {
-        //Create a node
+        //Create a node.
         DiagramNode node1 = new DiagramNode()
         {
             OffsetX = 100,
@@ -101,9 +101,9 @@ The following code example shows how to add custom context menu items along with
                 StrokeColor = "#6BA5D7",
             },
         };
-        //Add node into node's collection
+        //Add node into node's collection.
         NodeCollection.Add(node1);
-        //Create a node
+        //Create a node.
         DiagramNode node2 = new DiagramNode()
         {
             OffsetX = 300,
@@ -122,7 +122,7 @@ The following code example shows how to add custom context menu items along with
                 StrokeColor = "#6BA5D7",
             },
         };
-        //Add node into node's collection
+        //Add node into node's collection.
         NodeCollection.Add(node2);
 
         DiagramConnector diagramConnector1 = new DiagramConnector()
@@ -144,7 +144,7 @@ The following code example shows how to add custom context menu items along with
         };
         ConnectorCollection.Add(diagramConnector1);
     }
-    // Add the custom context menu items
+    // Add the custom context menu items.
     List<ContextMenuItemModel> contextMenuItemModels = new List<ContextMenuItemModel>()
     {
         new ContextMenuItemModel()
@@ -152,7 +152,7 @@ The following code example shows how to add custom context menu items along with
             Text ="color",
             Id="Save",
             Target =".e-elementcontent",
-            // Add the nested custom context menu items
+            // Add the nested custom context menu items.
             Items = new List<ContextMenuItemModel>()
             {
                 new ContextMenuItemModel(){  Text ="Red", Id="Red", },
@@ -168,14 +168,14 @@ The following code example shows how to add custom context menu items along with
 
 ### Custom context menu alone
 
-To display the custom context menu items alone, set  the [ShowCustomMenuOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramContextMenuSettings.html#Syncfusion_Blazor_Diagrams_DiagramContextMenuSettings_ShowCustomMenuOnly) property to true.
+To display the custom context menu items alone, set the [ShowCustomMenuOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramContextMenuSettings.html#Syncfusion_Blazor_Diagrams_DiagramContextMenuSettings_ShowCustomMenuOnly) property to true.
 The following code example shows how to add custom context menu items alone.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 <SfDiagram Height="600px">
-    // Defines context menu and set the ShowCustomMenuOnly to true to render the custom context menu alone
+    // Defines context menu and set the ShowCustomMenuOnly to true to render the custom context menu alone.
     <DiagramContextMenuSettings Show="true" ShowCustomMenuOnly="true">
     </DiagramContextMenuSettings>
 </SfDiagram>
@@ -195,9 +195,9 @@ The Diagram control triggers the event [OnContextMenuOpen](https://help.syncfusi
 @using Syncfusion.Blazor.Diagrams
 
 <SfDiagram Height="600px">
-    // Defines OnContextMenuOpen event
+    // Defines OnContextMenuOpen event.
     <DiagramEvents OnContextMenuOpen="@OnContextMenuOpen"></DiagramEvents>
-    // Defines context menu
+    // Defines context menu.
     <DiagramContextMenuSettings Show="true" ShowCustomMenuOnly="false">
     </DiagramContextMenuSettings>
 </SfDiagram>
@@ -206,7 +206,7 @@ The Diagram control triggers the event [OnContextMenuOpen](https://help.syncfusi
 {
     public void OnContextMenuOpen(DiagramBeforeMenuOpenEventArgs arg)
     {
-        //Action to be performed
+        //Action to be performed.
     }
 }
 ```
@@ -219,9 +219,9 @@ The Diagram control triggers the event [ContextMenuItemClicked](https://help.syn
 @using Syncfusion.Blazor.Diagrams
 
 <SfDiagram Height="600px">
-    // Defines the ContextMenuItemClicked event
+    // Defines the ContextMenuItemClicked event.
     <DiagramEvents ContextMenuItemClicked="@ContextMenuItemClicked"></DiagramEvents>
-    // Defines the context menu
+    // Defines the context menu.
     <DiagramContextMenuSettings Show="true" ShowCustomMenuOnly="false">
     </DiagramContextMenuSettings>
 </SfDiagram>
@@ -230,7 +230,7 @@ The Diagram control triggers the event [ContextMenuItemClicked](https://help.syn
 {
     public void ContextMenuItemClicked(DiagramMenuEventArgs arg)
     {
-        //Action to be performed
+        //Action to be performed.
     }
 }
 ```
@@ -242,29 +242,29 @@ The following code example shows how to add separate custom context menu items f
            Nodes="@NodeCollection"
            Connectors="@ConnectorCollection"
            Constraints="@diagramConstraints">
-    // Defines the ContextMenuItemClicked event
+    // Defines the ContextMenuItemClicked event.
     <DiagramEvents OnContextMenuOpen="@OnContextMenuOpen"></DiagramEvents>
-    // Defines the context menu
+    // Defines the context menu.
     <DiagramContextMenuSettings Show="true" Items="@contextMenuItemModels" ShowCustomMenuOnly="true">
     </DiagramContextMenuSettings>
 </SfDiagram>
 
 @code
 {
-    //Reference to diagram
+    //Reference to diagram.
     SfDiagram diagram;
 
-    //Defines diagram's nodes collection
+    //Defines diagram's nodes collection.
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();
 
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     public ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>();
 
     public DiagramConstraints diagramConstraints = DiagramConstraints.Default;
 
     protected override void OnInitialized()
     {
-        //Create a node
+        //Create a node.
         DiagramNode node1 = new DiagramNode()
         {
             OffsetX = 100,
@@ -283,10 +283,10 @@ The following code example shows how to add separate custom context menu items f
                 StrokeColor = "#6BA5D7",
             },
         };
-        //Add node into node's collection
+        //Add node into node's collection.
         NodeCollection.Add(node1);
 
-        //Create a node
+        //Create a node.
         DiagramNode node2 = new DiagramNode()
         {
             OffsetX = 200,
@@ -305,7 +305,7 @@ The following code example shows how to add separate custom context menu items f
                 StrokeColor = "#6BA5D7",
             },
         };
-        //Add node into node's collection
+        //Add node into node's collection.
         NodeCollection.Add(node2);
 
         DiagramConnector diagramConnector1 = new DiagramConnector()

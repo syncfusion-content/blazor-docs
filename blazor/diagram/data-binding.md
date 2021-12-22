@@ -11,13 +11,13 @@ documentation: ug
 
 * Diagram can be populated with the `Nodes` and `Connectors` based on the information provided from an external data source.
 
-* Diagram exposes its specific data-related properties allowing you to specify the data source fields from where the node information has to be retrieved from.
+* Diagram exposes its specific data-related properties allowing you to specify the data source fields from where the node information has to be retrieved.
 
 * The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramDataSource.html#Syncfusion_Blazor_Diagrams_DiagramDataSource_DataSource) property is used to define the data source either as a collection of objects or as an instance of [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramDataSource.html#Syncfusion_Blazor_Diagrams_DiagramDataSource_DataSource) that needs to be populated in the diagram.
 
 * The `ID` property is used to define the unique field of each JSON data.
 
-* The `ParentId` property is used to defines the parent field which builds the relationship between ID and parent field.
+* The `ParentId` property is used to define the parent field which builds the relationship between ID and parent field.
 
 * The `Root` property is used to define the root node for the diagram populated from the data source.
 
@@ -48,9 +48,9 @@ To map the user defined JSON data with diagram, configure the fields of [DataSou
 
 @code
 {
-    //Defines diagram's nodes collection
+    //Defines diagram's nodes collection.
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     public ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>();
 
     //Defines the node default values.
@@ -83,12 +83,12 @@ To map the user defined JSON data with diagram, configure the fields of [DataSou
             Shape = DecoratorShapes.None,
         }
     };
-    //Create the layout info
+    //Create the layout info.
     TreeInfo LayoutInfo = new TreeInfo()
     {
         //Enable the sub-tree.
         CanEnableSubTree = true,
-        //Specify the sub-tree orientation
+        //Specify the sub-tree orientation.
         Orientation = SubTreeOrientation.Horizontal,
     };
     //Create the data map settings.

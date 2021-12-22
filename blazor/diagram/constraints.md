@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Constraints in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Constraints in Syncfusion Blazor Diagram component and much more details.
+description: Checkout and learn here all about Constraints in the Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -23,25 +23,25 @@ Diagram constraints allow you to enable or disable the following behaviors:
 * Undo or redo
 * Tooltip
 
-The following list of diagram constraints are used to Enables or Disables certain features of the diagram.
+The following list of diagram constraints are used to enable or disable certain features of the diagram.
 
 | Constraints | Description |
 | -------- | -------- |
-|None|Disable all diagram functionalities|
-|Bridging|Enables or Disable Bridging support for connector in diagram|
-|Undo/redo|Enables or Disable the Undo/Redo support for the diagram|
-|Tooltip|Enables or Disable Tooltip support support for the diagram|
-|UserInteraction|Enables or Disable user interaction support for the diagram|
-|ApiUpdate|Enables or Disable update API support for the diagram|
-|PageEditable|Enables or Disable Page Editable support for the diagram|
-|Zoom|Enables or Disable Zoom support for the diagram|
-|PanX|Enables or Disable Paning X coordinate support for the diagram|
-|PanY|Enables or Disable Paning Y coordinate support for the diagram|
-|Pan|Enables or Disable panning both X and Y coordinates support for the diagram|
+|None|Disables all diagram functionalities|
+|Bridging|Enables or Disables Bridging support for the connector in the diagram|
+|Undo/redo|Enables or Disables the Undo/Redo support for the diagram|
+|Tooltip|Enables or Disables Tooltip support for the diagram|
+|UserInteraction|Enables or Disables user interaction support for the diagram|
+|ApiUpdate|Enables or Disables update API support for the diagram|
+|PageEditable|Enables or Disables Page Editable support for the diagram|
+|Zoom|Enables or Disables Zoom support for the diagram|
+|PanX|Enables or Disables Panning X coordinate support for the diagram|
+|PanY|Enables or Disables Panning Y coordinate support for the diagram|
+|Pan|Enables or Disables panning both X and Y coordinates support for the diagram|
 |ZoomTextEdit|Enables or Disables zooming the text box while editing the text|
-|LineRouting|Enables or Disable the line routing for the diagram|
-|Virtualization|Enables or Disable Virtualization support the diagram|
-|Default|Enables or Disable all constraints in diagram|
+|LineRouting|Enables or Disables the line routing for the diagram|
+|Virtualization|Enables or Disables Virtualization support for the diagram|
+|Default|Enables or Disables all constraints in the diagram|
 
 The following example shows how to disable page editing using the diagram constraints.
 
@@ -54,7 +54,7 @@ The following example shows how to disable page editing using the diagram constr
 </SfDiagram>
 
 @code{
-    //sets the Diagram constraints...
+    //Sets the Diagram constraints.
     DiagramConstraints DiagramConstraints = DiagramConstraints.Default & ~DiagramConstraints.PageEditable;
 
     //Initialize the Nodes Collection.
@@ -76,10 +76,10 @@ The following example shows how to disable page editing using the diagram constr
 }
 ```
 
-The following another code example shows how the virtualization can be enabled for the diagram.
+The following code example shows how the virtualization can be enabled for the diagram.
 
 ```csharp
-//enabled the Virtualization functionality for the diagram
+//Enabled the Virtualization functionality for the diagram.
 Diagram.Constraints = DiagramConstraints.Default | DiagramConstraints.Virtualization;
 ```
 
@@ -108,17 +108,17 @@ Node constraints allows you to enable or disable the following behaviors of node
 * Shadow
 * Tooltip
 
-The following list of node constraints are used to Enables or Disables certain features of node.
+The following list of node constraints are used to enable or disable certain features of node.
 
 | Constraints | Description |
 | -------- | -------- |
-|None|Disable all node Constraints|
+|None|Disables all node Constraints|
 |Select|Enables or Disables node to be selected|
 |Drag|Enables or Disables node to be Dragged|
 |Rotate|Enables or Disables node to be rotating|
 |Shadow|Enables or disables node to display shadow|
 |PointerEvents|Enables or disables node to provide pointer option|
-|Delete|Enables or Disables node to be deleting|
+|Delete|Enables or Disables node to be deleted|
 |InConnect|Enables or disables node to provide in connect option|
 |OutConnect|Enables or disables node to provide out connect option|
 |Individual|Enables node to provide individual resize option|
@@ -135,9 +135,9 @@ The following list of node constraints are used to Enables or Disables certain f
 |ResizeNorth|Enable or disable to Resizing North side of the node|
 |Resize|Enables or Disables to Resizing of the node|
 |AspectRatio|Enables the Aspect ratio of the node|
-|Tooltip|Enables or disables tool tip for the Nodes|
-|InheritTooltip|Enables or disables inherit tool tip option from the parent object|
-|ReadOnly|Enables the  ReadOnly support for annotation in node|
+|Tooltip|Enables or disables tooltip for the Nodes|
+|InheritTooltip|Enables or disables inherit tooltip option from the parent object|
+|ReadOnly|Enables the ReadOnly support for annotation in node|
 |HideThumbs|Enable to hide all resize thumbs for the node|
 |AllowMovingOutsideLane|Enables or disables child in parent for the swimLane node|
 |Default|Enables all default constraints for the node|
@@ -165,7 +165,7 @@ The following example shows how to disable rotation using the node constraints.
             Width = 100,
             OffsetX = 100,
             OffsetY = 100,
-            //sets the NodeConstraints constraints...
+            //Sets the NodeConstraints constraints.
             Constraints = NodeConstraints.Default & ~NodeConstraints.Rotate
         };
         NodeCollection.Add(node);
@@ -173,10 +173,10 @@ The following example shows how to disable rotation using the node constraints.
 }
 ```
 
-The following another code example shows how the tooltip can be enabled for the node.
+The following code example shows how the tooltip can be enabled for the node.
 
 ```csharp
-//enabled the tooltip constraints for the node
+//Enabled the tooltip constraints for the node.
 node.Constraints = NodeConstraints.Default | NodeConstraints.Tooltip;
 ```
 
@@ -206,13 +206,13 @@ Connector constraints allow you to enable or disable certain behaviors of connec
 * Tooltip
 * Bridging
 
-The following list of connector constraints are used to Enables or Disables certain features of connectors.
+The following list of connector constraints are used to Enable or Disable certain features of connectors.
 
 | Constraints | Description |
 | -------- | -------- |
-|None|Disable all connector Constraints|
+|None|Disables all connector Constraints|
 |Select|Enables or Disables node to be selected|
-|Delete|Enables or Disables node to be deleting|
+|Delete|Enables or Disables node to be deleted|
 |Drag|Enables or Disables node to be Dragged|
 |DragSourceEnd|Enables connectors source end to be selected|
 |DragTargetEnd|Enables connectors target end to be selected|
@@ -222,12 +222,12 @@ The following list of connector constraints are used to Enables or Disables cert
 |BridgeObstacle|Enables or Disables Bridge Obstacles with overlapping of connectors|
 |InheritBridging|Enables to inherit bridging option from the parent object|
 |PointerEvents|Enables to set the pointer events|
-|Tooltip|Enables or disables tool tip for the connectors|
-|InheritTooltip|Enables or disables to inheriting tool tip option from the parent object|
+|Tooltip|Enables or disables tooltip for the connectors|
+|InheritTooltip|Enables or disables to inherit tooltip option from the parent object|
 |Interaction|Enables or disables Interaction for the connector|
 |ReadOnly|Enables or disables readonly for the connector|
 |LineRouting|Enables or disables routing to the connector|
-|InheritLineRouting|Enables or disables to inheriting routing option from the parent|
+|InheritLineRouting|Enables or disables to inherit routing option from the parent|
 |Default|Enables all constraints for the connector|
 
 The following code shows how to disable selection by using the connector constraints.
@@ -252,7 +252,7 @@ The following code shows how to disable selection by using the connector constra
             Type = Segments.Straight,
             SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
             TargetPoint = new ConnectorTargetPoint() { X = 200, Y = 200 },
-            //sets the ConnectorConstraints...
+            //Sets the ConnectorConstraints.
             Constraints = ConnectorConstraints.Default & ~ConnectorConstraints.Select
         };
         ConnectorCollection.Add(connector);
@@ -260,10 +260,10 @@ The following code shows how to disable selection by using the connector constra
 }
 ```
 
-The following another code example shows how the tooltip can be enabled for the connector.
+The following code example shows how the tooltip can be enabled for the connector.
 
 ```csharp
-//enabled the tooltip constraints for the connector
+//Enabled the tooltip constraints for the connector.
 connector.Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip;
 ```
 
@@ -290,11 +290,11 @@ You can enable or disable certain behaviors of port. They are as follows:
 * Connect
 * ConnectOnDrag
 
-The following list of port constraints are used to Enables or Disables certain features of ports.
+The following list of port constraints are used to Enable or Disable certain features of ports.
 
 | Constraints | Description |
 | -------- | -------- |
-|None|Disable all port Constraints|
+|None|Disables all port Constraints|
 |Drag|Enables or disables to drag the port|
 |Draw|Enables to create the connection when mouse hover on the port|
 |InConnect|Enables or disables to only connect the target end of connector|
@@ -334,7 +334,7 @@ The following code shows how to disable creating connections with a port.
                 Offset=new NodePortOffset(){X=0,Y=0.5},
                 Shape=PortShapes.Circle,
                 Visibility=PortVisibility.Visible,
-                //sets the PortConstraints...
+                //Sets the PortConstraints.
                 Constraints=PortConstraints.None
             }
         };
@@ -343,7 +343,7 @@ The following code shows how to disable creating connections with a port.
 }
 ```
 
-The following another code example shows to modify the port constraints to accept target connection alone.
+The following code example shows how to modify the port constraints to accept target connection alone.
 
 ```csharp
 //Enable to create target connection alone.
@@ -362,17 +362,17 @@ For more information about port constraints, refer to the [PortConstraints](http
 
 You can enable or disable read-only mode for the annotations by using the annotation constraints.
 
-The following list of annotation constraints are used to Enables or Disables certain features of annotations.
+The following list of annotation constraints are used to enable or disable certain features of annotations.
 
 | Constraints | Description |
 | -------- | -------- |
 |ReadOnly|Enables or Disables the ReadOnly Constraints|
 |InheritReadOnly|Enables or Disables to inherit the ReadOnly option from the parent object|
 |Select|Enables or Disable select support for the annotation|
-|Drag|Enables or Disable drag support for the annotation|
-|Resize|Enables or Disable resize support for the annotation|
-|Rotate|Enables or Disable rotate support for the annotation|
-|Interaction|Enables or Disable annotation to inherit the interaction option|
+|Drag|Enables or Disables drag support for the annotation|
+|Resize|Enables or Disables resize support for the annotation|
+|Rotate|Enables or Disables rotate support for the annotation|
+|Interaction|Enables or Disables annotation to inherit the interaction option|
 |None|Disables all constraints for the annotation|
 
 The following code shows how to enable read-only mode for the annotations.
@@ -406,7 +406,7 @@ The following code shows how to enable read-only mode for the annotations.
             {
                 Id="annotation1",
                 Content="Annotation Text Wrapping",
-                //sets the Constraints for Annotation...
+                //Sets the Constraints for Annotation.
                 Constraints=AnnotationConstraints.ReadOnly,
                 Style=new AnnotationStyle(){Color="#000000", Fill="transparent",
                 FontFamily="TimesNewRoman", FontSize=12, Bold=true, Italic=true},
@@ -417,7 +417,7 @@ The following code shows how to enable read-only mode for the annotations.
 }
 ```
 
-The following another code example shows how to enable the selection and dragging functionality for the annotation.
+The following code example shows how to enable the selection and dragging functionality for the annotation.
 
 ```csharp
 //Enable select and drag constraints for the annotation.
@@ -436,7 +436,7 @@ Selector visually represents the selected elements with certain editable thumbs.
 * Rotator
 * User handles
 
-The following list of selector constraints are used to Enables or Disables certain features of selected items.
+The following list of selector constraints are used to Enable or Disable certain features of selected items.
 
 | Constraints | Description |
 | -------- | -------- |
@@ -514,7 +514,7 @@ Snap constraints control the visibility of gridlines and enable or disable snapp
 * Snap to either horizontal or vertical gridlines.
 * Snap to both horizontal and vertical gridlines.
 
-The following list of snapping constraints are used to Enables or Disables certain features of snapping.
+The following list of snapping constraints are used to Enable or Disable certain features of snapping.
 
 | Constraints | Description |
 | -------- | -------- |
@@ -568,13 +568,13 @@ For more information about snap constraints, refer to the [SnapConstraints](http
 
 ## Boundary constraints
 
-Boundary constraints defines a boundary for the diagram inside that the interaction should be done. Boundary constraints allow to set the following behaviors.
+Boundary constraints define a boundary for the diagram within which the interaction should be done. Boundary constraints allow to set the following behaviors.
 
 * Infinite boundary
 * Diagram sized boundary
 * Page sized boundary
 
-The following list of constraints are used to Enables or Disables certain features of boundary interactions of the diagram.
+The following list of constraints are used to enable or disable certain features of boundary interactions of the diagram.
 
 | Constraints | Description |
 | -------- | -------- |
@@ -635,7 +635,7 @@ The following code example shows how to inherit the line bridging behavior from 
 </SfDiagram>
 
 @code{
-    //Sets the diagram constraints
+    //Sets the diagram constraints.
     public DiagramConstraints DiagramConstraints = DiagramConstraints.Default | DiagramConstraints.Bridging;
 
     ObservableCollection<DiagramConnector> ConnectorCollection;
@@ -649,7 +649,7 @@ The following code example shows how to inherit the line bridging behavior from 
             Id = "connector1",
             SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
             TargetPoint = new ConnectorTargetPoint() { X = 200, Y = 200 },
-            //sets the ConnectorConstraints...
+            //Sets the ConnectorConstraints.
             Constraints = ConnectorConstraints.Default | ConnectorConstraints.InheritBridging
         };
         DiagramConnector connector1 = new DiagramConnector()
@@ -672,7 +672,7 @@ Bitwise operations are used to manipulate the flagged enumerations `enum`. In th
 
 You can add or enable multiple values at a time by using the Bitwise `|` (OR) operator.
 
-The following code shows to add line routing constraints into the default diagram constraints to enable line routing functionality into the diagram.
+The following code shows how to add line routing constraints into the default diagram constraints to enable line routing functionality in the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -682,12 +682,12 @@ The following code shows to add line routing constraints into the default diagra
 </SfDiagram>
 
 @code{
-//To adding line routing constraint with default contraints.
+//To adding line routing constraint with default constraints.
 DiagramConstraints DiagramConstraint = DiagramConstraints.Default | DiagramConstraints.LineRouting;
 }
 ```
 
-## Remove Operation
+## Remove operation
 
 You can remove or disable values by using the Bitwise ‘&~’ (XOR) operator.
 
@@ -701,8 +701,8 @@ The following code shows to remove zoom and pan constraints from the default con
 </SfDiagram>
 
 @code{
-//To removing zoom and panning constraints from the default contraints
-//It has disabled zoom and panning funcationality for the diagram.
+//To remove zoom and panning constraints from the default constraints
+//It has disabled zoom and panning functionality for the diagram.
 DiagramConstraints DiagramConstraint = DiagramConstraints.Default &~ (DiagramConstraints.Zoom | DiagramConstraints.Pan);
 }
 ```
