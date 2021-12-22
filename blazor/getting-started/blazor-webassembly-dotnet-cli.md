@@ -38,6 +38,7 @@ Add Syncfusion.Blazor.Calendars NuGet package to the application using the follo
 
 ```
 dotnet add package Syncfusion.Blazor.Calendars --version {{ site.releaseversion }}
+dotnet restore
 ```
 
 ## Add Style Sheet
@@ -48,12 +49,13 @@ To add theme to the app, Add `Syncfusion.Blazor.Themes` NuGet package to the app
 
 ```
 dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
+dotnet restore
 ```
 
-Add the Syncfusion bootstrap5 theme in the <head> element of the **wwwroot/index.html** file of client web app.
+Add the Syncfusion bootstrap5 theme in the `<head>` of the **wwwroot/index.html** file of client web app.
 
 {% tabs %}
-{% highlight html %}
+{% highlight html tabtitle="wwwroot/index.html" %}
 <head>
     ...
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
@@ -72,7 +74,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
     {% tabs %}
-    {% highlight razor %}
+    {% highlight razor tabtitle="~/_Imports.razor" %}
 
     @using Syncfusion.Blazor
 
@@ -84,7 +86,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * For **.NET 6** app,
 
     {% tabs %}
-    {% highlight c# tabtitle="Program.cs" hl_lines="11" %}
+    {% highlight c# tabtitle="~/Program.cs" hl_lines="11" %}
     using Microsoft.AspNetCore.Components.Web;
     using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
     using Syncfusion.Blazor;
@@ -104,7 +106,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * For **.NET 5 and .NET 3.X** app,
 
     {% tabs %}
-    {% highlight c# tabtitle="Program.cs" hl_lines="10" %}
+    {% highlight c# tabtitle="~/Program.cs" hl_lines="10" %}
     using Syncfusion.Blazor;
 
     namespace BlazorApp
@@ -128,7 +130,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 * Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Calendars` namespace.
     {% tabs %}
-    {% highlight razor %}
+    {% highlight razor tabtitle="~/_Imports.razor" %}
 
     @using Syncfusion.Blazor
     @using Syncfusion.Blazor.Calendars
@@ -136,10 +138,10 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
     {% endhighlight %}
     {% endtabs %}
     
-* Now, add the Syncfusion Calendar component in .razor file. Here, the Calendar component is added in the `~/Pages/Index.razor` page under the `~/Pages` folder.
+* Now, add the Syncfusion Calendar component in .razor file. Here, the Calendar component is added in the **~/Pages/Index.razor** page under the `~/Pages` folder.
 
     {% tabs %}
-    {% highlight razor %}
+    {% highlight razor tabtitle="~/Pages/Index.razor" %}
 
     <SfCalendar TValue="DateTime"></SfCalendar>
 
