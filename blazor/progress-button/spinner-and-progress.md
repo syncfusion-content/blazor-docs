@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spinner and Progress in Blazor ProgressButton Component | Syncfusion
-description: Checkout and learn here all about Spinner and Progress in Syncfusion Blazor ProgressButton component and more.
+description: Checkout and learn here all about spinner and progress in Syncfusion Blazor ProgressButton component and more.
 platform: Blazor
 control: Progress Button
 documentation: ug
@@ -25,8 +25,6 @@ Spinner size can be changed by modifying the [Width](https://help.syncfusion.com
 ### Spinner template
 
 You can use custom spinner by specifying the [SpinTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonSpinSettings.html#Syncfusion_Blazor_SplitButtons_ProgressButtonSpinSettings_SpinTemplate) property of [SpinSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonSpinSettings.html#properties) with custom styles.
-
-The following sample demonstrates the above functionalities of the spinner.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -70,8 +68,6 @@ The following sample demonstrates the above functionalities of the spinner.
 
 ```
 
-Output be like
-
 ![Blazor ProgressButton with Spinner](./images/blazor-progressbutton-spinner.png)
 
 ## Progress
@@ -89,8 +85,6 @@ The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButto
 </SfProgressButton>
 
 ```
-
-Output be like
 ![Blazor ProgressButton with Animation](./images/blazor-progressbutton-animation.png)
 
 ### Change step of the Progress Button
@@ -113,8 +107,6 @@ The progress can be visualized at the specified interval by changing the [Step](
 }
 
 ```
-
-Output be like
 ![Changing Step of Blazor ProgressButton](./images/blazor-progressbutton-step.png)
 
 > The class `e-hide-spinner` hides the spinner in the Progress Button, For more information, see [hide spinner](./how-to/hide-spinner) section.
@@ -152,8 +144,6 @@ The progress state can be changed dynamically by modifying the [Percent](https:/
 }
 
 ```
-
-Output be like
 ![Changing Blazor ProgressButton State](./images/blazor-progressbutton-state.png)
 
 ### Start and Stop Methods
@@ -217,13 +207,11 @@ You can pause and resume the progress using the [Stop](https://help.syncfusion.c
 </style>
 
 ```
-
-Output be like
 ![Blazor ProgressButton displays Start and Stop Process](./images/blazor-progressbutton-start-stop-process.png)
 
 ### EndProgressAsync Method
 
-You can complete the progress by using [EndProgressAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_EndProgressAsync) method and it will also hides the spinner. In this example, I have added another button to complete the current progress of the progress button.
+You can complete the progress by using the [EndProgressAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_EndProgressAsync) method and it will also hide the spinner. In this example, another button has been added to complete the current progress of the progress button.
 
 ```cshtml
 

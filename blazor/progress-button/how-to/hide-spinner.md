@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hide spinner in Blazor ProgressButton Component | Syncfusion
-description: Checkout and learn here all about Hide spinner in Syncfusion Blazor ProgressButton component and more.
+description: Checkout and learn here all about how to hide spinner in Syncfusion Blazor ProgressButton component and more.
 platform: Blazor
 control: Progress Button
 documentation: ug
@@ -17,7 +17,5 @@ You can hide spinner in the Progress Button by setting the `e-hide-spinner` prop
 <SfProgressButton EnableProgress="true" CssClass="e-hide-spinner" Content="Progress"></SfProgressButton>
 
 ```
-
-Output be like
 
 ![Hide Spinner in Blazor ProgressButton](./../images/blazor-progressbutton-hide-spinner.png)

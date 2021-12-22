@@ -27,7 +27,7 @@ The Syncfusion Blazor components supports to refer scripts externally at the app
 
 * If you're using `.NET 6` Blazor Server App, set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
     {% tabs %}
-    {% highlight c# tabtitle=Program hl_lines="10,11" %}
+    {% highlight c# tabtitle="Program" hl_lines="10 11" %}
 
     using Microsoft.AspNetCore.Components;
     using Microsoft.AspNetCore.Components.Web;
@@ -48,7 +48,7 @@ The Syncfusion Blazor components supports to refer scripts externally at the app
 
 * If you're using `.NET 5 or 3.X project` Blazor Server App, set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` using `AddSyncfusionBlazor` service method in `~/Startup.cs` file.
     {% tabs %}
-    {% highlight c# tabtitle=Startup hl_lines="10,11" %}
+    {% highlight c# tabtitle="Startup" hl_lines="10 11" %}
 
     using Syncfusion.Blazor;
 
@@ -74,7 +74,7 @@ If you're using Blazor WebAssembly App, set [IgnoreScriptIsolation](https://help
 
 * .NET 6 Blazor WebAssembly App
     {% tabs %}
-    {% highlight c# tabtitle=Program hl_lines="10,11" %}
+    {% highlight c# tabtitle="Program" hl_lines="10 11" %}
 
     using Microsoft.AspNetCore.Components;
     using Microsoft.AspNetCore.Components.Web;
@@ -95,7 +95,7 @@ If you're using Blazor WebAssembly App, set [IgnoreScriptIsolation](https://help
 
 * .NET 5 or .NET Core 3.X Blazor WebAssembly App
     {% tabs %}
-    {% highlight c# tabtitle=Program hl_lines="7,8" %}
+    {% highlight c# tabtitle="Program" hl_lines="7 8" %}
 
     using Syncfusion.Blazor;
     ....
