@@ -61,7 +61,6 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 
 <head>
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
 </head>
 
 {% endhighlight %}
@@ -69,7 +68,7 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 
 ### Blazor WebAssembly App
 
-The theme style sheet from NuGet can be referred inside the `<head>` element of **wwwroot/index.html** file of client web app.
+The theme style sheet from NuGet can be referred inside the `<head>` of **wwwroot/index.html** file of client web app.
 
 {% tabs %}
 {% highlight html %}
@@ -150,18 +149,6 @@ namespace BlazorApplication
 {% endhighlight %}
 {% endtabs %}
 
-> To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
-
-{% tabs %}
-{% highlight html %}
-
-<head>
-    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js"></script>
-</head>
-
-{% endhighlight %}
-{% endtabs %}
-
 ### Blazor WebAssembly App
 
 Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
@@ -211,7 +198,7 @@ namespace WebApplication1
 {% endhighlight %}
 {% endtabs %}
 
-## Adding component package to the application
+## Add Syncfusion Blazor Autocomplete component
 
 * Open `~/_Imports.razor` file or any other page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.DropDowns` package.
 
@@ -230,7 +217,7 @@ namespace WebApplication1
 {% highlight razor %}
 
 <SfAutoComplete TValue="string" TItem="Countries" Placeholder="e.g. Australia" DataSource="@LocalData">
-    <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
+    <AutoCompleteFieldSettings Value="Name" />
 </SfAutoComplete>
 
 @code {
@@ -259,15 +246,13 @@ namespace WebApplication1
 
 ## Binding data source
 
-After initialization, populate the AutoComplete with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. Here, an array of string values is passed to the [AutoComplete](https://blazor.syncfusion.com/documentation/nuget-packages/#syncfusionblazordropdowns) component.
-
-The following example illustrates the output in your browser.
+After initialization, populate the AutoComplete with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property.
 
 {% tabs %}
 {% highlight razor %}
 
 <SfAutoComplete TValue="string" TItem="Countries" Placeholder="Select a country" DataSource="@LocalData">
-    <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
+    <AutoCompleteFieldSettings Value="Name" />
 </SfAutoComplete>
 
 @code {
@@ -304,51 +289,18 @@ The following example illustrates the output in your browser.
 {% endhighlight %}
 {% endtabs %}
 
-The output will be as follows.
-
 ![Blazor AutoComplete with Data Binding](./images/blazor-autocomplete-data-binding.png)
 
 ## Custom values
 
-The AutoComplete allows the users to give input as custom value, which is not required to present in predefined set of values. By default, this support is enabled by the [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_AllowCustom) property. The custom value will be sent to post back handler when a form is about to be submitted.
+The AutoComplete allows the users to give input as custom value, which is not required to present in predefined set of values. By default, this support is enabled by the [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_AllowCustom) property. The custom value will be sent to post back handler when a form is about to be submitted.
 
 {% tabs %}
 {% highlight razor %}
 
 <SfAutoComplete TValue="string" TItem="Countries" Placeholder="Select a country" AllowCustom=true DataSource="@LocalData">
-    <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
+    <AutoCompleteFieldSettings Value="Name" />
 </SfAutoComplete>
-
-@code {
-
-    public class Countries
-    {
-        public string Name { get; set; }
-        public string Code { get; set; }
-    }
-
-    List<Countries> LocalData = new List<Countries> {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-        new Countries() { Name = "Denmark", Code = "DK" },
-        new Countries() { Name = "France", Code = "FR" },
-        new Countries() { Name = "Finland", Code = "FI" },
-        new Countries() { Name = "Germany", Code = "DE" },
-        new Countries() { Name = "Greenland", Code = "GL" },
-        new Countries() { Name = "Hong Kong", Code = "HK" },
-        new Countries() { Name = "India", Code = "IN" },
-        new Countries() { Name = "Italy", Code = "IT" },
-        new Countries() { Name = "Japan", Code = "JP" },
-        new Countries() { Name = "Mexico", Code = "MX" },
-        new Countries() { Name = "Norway", Code = "NO" },
-        new Countries() { Name = "Poland", Code = "PL" },
-        new Countries() { Name = "Switzerland", Code = "CH" },
-        new Countries() { Name = "United Kingdom", Code = "GB" },
-        new Countries() { Name = "United States", Code = "US" },
-    };
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -357,50 +309,15 @@ The AutoComplete allows the users to give input as custom value, which is not re
 
 By default, suggestion list width automatically adjusts according to the AutoComplete input element's width, and the height of the suggestion list has `300px`. The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) property respectively.
 
-In the following sample, suggestion list's width and height are configured.
-
 {% tabs %}
 {% highlight razor %}
 
 <SfAutoComplete TValue="string" TItem="Countries" Placeholder="Select a country" DataSource="@LocalData" PopupHeight="300px" PopupWidth="300px">
-    <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
+    <AutoCompleteFieldSettings Value="Name" />
 </SfAutoComplete>
-
-@code {
-
-    public class Countries
-    {
-        public string Name { get; set; }
-        public string Code { get; set; }
-    }
-
-    List<Countries> LocalData = new List<Countries> {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-        new Countries() { Name = "Denmark", Code = "DK" },
-        new Countries() { Name = "France", Code = "FR" },
-        new Countries() { Name = "Finland", Code = "FI" },
-        new Countries() { Name = "Germany", Code = "DE" },
-        new Countries() { Name = "Greenland", Code = "GL" },
-        new Countries() { Name = "Hong Kong", Code = "HK" },
-        new Countries() { Name = "India", Code = "IN" },
-        new Countries() { Name = "Italy", Code = "IT" },
-        new Countries() { Name = "Japan", Code = "JP" },
-        new Countries() { Name = "Mexico", Code = "MX" },
-        new Countries() { Name = "Norway", Code = "NO" },
-        new Countries() { Name = "Poland", Code = "PL" },
-        new Countries() { Name = "Switzerland", Code = "CH" },
-        new Countries() { Name = "United Kingdom", Code = "GB" },
-        new Countries() { Name = "United States", Code = "US" },
-    };
-}
 
 {% endhighlight %}
 {% endtabs %}
-
-The output will be as follows.
 
 ![Customizing Popup Height and Width in Blazor AutoComplete](./images/blazor-autocomplete-popup-customization.png)
 
