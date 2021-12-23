@@ -80,7 +80,7 @@ The following sample explains enabling the `RespectLink` validation mode while e
 ### PredecessorOffsetValidation
 
 On taskbar editing, the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionBegin) event will be triggered with [PredecessorOffsetValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttActionEventArgs-1.html#Syncfusion_Blazor_Gantt_GanttActionEventArgs_1_PredecessorOffSetValidation) argument. When `PredecessorOffsetValidation` is enabled, the taskbar can be dragged such that it does not violate the predecessor value.
-i.e. The taskbar can be dragged greater than the given predecessor offset value and it gets reverted to the minimum predecessor value if dragged lesser than the predecessor offset value.
+The taskbar can be dragged above the given predecessor offset value and it gets reverted to the minimum predecessor value if dragged below the predecessor offset value.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -138,5 +138,4 @@ i.e. The taskbar can be dragged greater than the given predecessor offset value 
 ```
 ![Predecessor validation on taskbar dragging](images/predecessor-offset-validation.gif)
 
-`Note:` When `PredecessorOffsetValidation` is enabled, the predecessor offset will not updated on dragging taskbar. We can update the predecessor offset either by cell edit or dialog edit.
-
+`Note:` When `PredecessorOffsetValidation` is enabled, the predecessor offset will not be updated on dragging the taskbar. You can update the predecessor offset either by cell edit or dialog edit.
