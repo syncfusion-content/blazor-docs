@@ -53,7 +53,7 @@ dotnet restore
 * For **.NET 6** app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** page.
 
 {% tabs %}
-{% highlight cshtml tabtitle="~Pages/_Layout.cshtml" %}
+{% highlight cshtml tabtitle="~/Pages/_Layout.cshtml" %}
 
 <head>
     ....
@@ -66,7 +66,7 @@ dotnet restore
 * For **.NET 5 and .NET 3.X** app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** page.
 
 {% tabs %}
-{% highlight cshtml tabtitle="~Pages/_Host.cshtml" %}
+{% highlight cshtml tabtitle="~/Pages/_Host.cshtml" %}
 
 <head>
     ....
@@ -87,7 +87,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 
