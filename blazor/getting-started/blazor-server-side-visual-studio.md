@@ -145,7 +145,7 @@ namespace BlazorApplication
 {% tabs %}
 {% highlight razor %}
 
-<SfCalendar TValue="DateTime"/>
+<SfCalendar TValue="DateTime" />
 
 {% endhighlight %}
 {% endtabs %}
