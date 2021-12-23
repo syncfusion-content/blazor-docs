@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Prevent reorder active tab while selecting inside popup in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about prevent the reordering the tab items when browser resize and popup item click in Syncfusion Blazor Tabs component and much more.
+title: Reorder Active Tab in Blazor Tabs Component | Syncfusion
+description: Checkout and learn here all about Reorder Active Tab in Syncfusion Blazor Tabs component and much more.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Prevent reorder active tab while selecting inside popup in Blazor Tabs Component
+# Prevent reorder active tab in Blazor Tabs Component
 
 We can able to prevent the changing of the active tab item on resizing the browser when overflow mode is popup by using the [ReorderActiveTab](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_ReorderActiveTab) property. By default, the active Tab should be reordered when we click the tab items from the popup. If we set `false` to [ReorderActiveTab](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_ReorderActiveTab) property the active tab item from the popup will not be reordered and an active item is highlighted inside the popup. The following code example depicts to prevent the reorder active tab item inside the popup.
 

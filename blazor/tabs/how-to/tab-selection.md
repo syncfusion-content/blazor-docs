@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Find whether the tab is selected programmatically or user interaction in Blazor Tabs Component | Syncfusion
+title: IsInteracted property of Tab in Blazor Tabs Component | Syncfusion
 description: Checkout and learn here all about find whether the tab is selected programmatically or not in Syncfusion Blazor Tabs component and much more.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Find whether the tab is selected programmatically or user interaction in Blazor Tabs Component
+# Find interaction in Blazor Tabs Component
 
 We can able to find the tab selection whether it is selected by user interaction or programmatically way in the [Selecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabEvents.html#Syncfusion_Blazor_Navigations_TabEvents_Selecting) and [Selected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabEvents.html#Syncfusion_Blazor_Navigations_TabEvents_Selected) event argument with the field of `IsInteracted`. When the user changes the tab through click actions it will return true otherwise, it will return false. The following code example depicts to find the tab selecting the state in selecting and selected events.
 
