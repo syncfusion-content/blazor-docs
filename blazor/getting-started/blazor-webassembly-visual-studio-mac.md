@@ -99,7 +99,7 @@ namespace BlazorApp
 {% tabs %}
 {% highlight razor %}
 
-<SfCalendar TValue="DateTime"></SfCalendar>
+<SfCalendar TValue="DateTime" />
 
 {% endhighlight %}
 {% endtabs %}
