@@ -124,8 +124,6 @@ namespace BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-> You can disable the dynamic script loading and refer to the scripts from the application end by using the `IgnoreScriptIsolation` parameter in `AddSyncfusionBlazor()` at the `Program.cs`. For more details, please refer here for [how to refer custom/CDN resources](../common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
-
 ## Add Syncfusion Blazor component
 
 * Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Calendars` namespace.
@@ -144,7 +142,7 @@ namespace BlazorApp
 {% tabs %}
 {% highlight razor %}
 
-<SfCalendar TValue="DateTime"></SfCalendar>
+<SfCalendar TValue="DateTime" />
 
 {% endhighlight %}
 {% endtabs %}

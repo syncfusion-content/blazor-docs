@@ -19,11 +19,7 @@ This article provides a step-by-step instructions for building Blazor Server App
 
 ## Create a Blazor Server Side App in Visual Studio for Mac
 
-You can create **Blazor Server App** using Visual Studio in one of the following ways.
-
-* [Create a project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=macos)
-
-* [Create a project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/vs2019-extensions/create-project)
+You can create **Blazor Server App** in Visual Studio. Refer [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=macos).
 
 ## Install Syncfusion Blazor Packages in the App
 
@@ -52,7 +48,7 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 
 ## Add Script Reference
 
-Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referenced automatically via javascript script isolation approach.
+Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referenced automatically via javascript isolation approach.
 
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
@@ -92,8 +88,6 @@ namespace BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-> You can disable the dynamic script loading and refer to the scripts from the application end by using the IgnoreScriptIsolation parameter in AddSyncfusionBlazor() at the program.cs. For more details, please refer here for [how to refer custom/CDN](https://blazor.syncfusion.com/documentation/common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application) resources.
-
 ## Add Syncfusion Blazor component
 
 * Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Calendars` namespace.
@@ -112,12 +106,12 @@ namespace BlazorApp
 {% tabs %}
 {% highlight razor %}
 
-<SfCalendar TValue="DateTime"></SfCalendar>
+<SfCalendar TValue="DateTime" />
 
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
+* <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
 
 ![Blazor Calendar Component](images/mac-output.png)
 

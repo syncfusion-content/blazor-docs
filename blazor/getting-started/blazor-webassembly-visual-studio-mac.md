@@ -19,11 +19,7 @@ This articles provides a step-by-step instructions for building Blazor WebAssemb
 
 ## Create a Blazor WebAssembly App in Visual Studio for Mac
 
-You can create **Blazor WebAssembly App** using Visual Studio in one of the following ways.
-
-* [Create a project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=macos)
-
-* [Create a project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/vs2019-extensions/create-project)
+You can create **Blazor WebAssembly App** in Visual Studio. Refer [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=macos).
 
 ## Install Syncfusion Blazor Packages in the App
 
@@ -85,8 +81,6 @@ namespace BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-> You can disable the dynamic script loading and refer to the scripts from the application end by using the `IgnoreScriptIsolation` parameter in `AddSyncfusionBlazor()` at the `program.cs`. For more details, please refer here for [how to refer custom/CDN resources](../common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
-
 ## Add Syncfusion Blazor component
 
 * Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Calendars` namespace.
@@ -105,12 +99,12 @@ namespace BlazorApp
 {% tabs %}
 {% highlight razor %}
 
-<SfCalendar TValue="DateTime"></SfCalendar>
+<SfCalendar TValue="DateTime" />
 
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
+* <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
 
 ![Blazor Calendar Component](images/browser-output.png)
 
