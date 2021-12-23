@@ -46,7 +46,7 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 
 ## Add Script Reference
 
-Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referenced automatically via javascript script isolation approach. 
+Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referenced automatically via javascript isolation approach. 
 
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application. 
 
@@ -54,82 +54,82 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 * Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
-    {% tabs %}
-    {% highlight razor tabtitle="~/_Imports.razor" %}
-    @using Syncfusion.Blazor
-    {% endhighlight %}
-    {% endtabs %}
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
+
+@using Syncfusion.Blazor
+
+{% endhighlight %}
+{% endtabs %}
 
 * Now, Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
 
 * For **.NET 6** app,
 
-    {% tabs %}
-    {% highlight c# tabtitle="~/Program.cs" hl_lines="12" %}
-    
-    using Microsoft.AspNetCore.Components.Web;
-    using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-    using Syncfusion.Blazor;
+{% tabs %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="11" %}
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Syncfusion.Blazor;
 
-    var builder = WebAssemblyHostBuilder.CreateDefault(args);
-    builder.RootComponents.Add<App>("#app");
-    builder.RootComponents.Add<HeadOutlet>("head::after");
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
 
-    builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-    builder.Services.AddSyncfusionBlazor();
-    await builder.Build().RunAsync();
-    ....
-
-    {% endhighlight %}
-    {% endtabs %}
+builder.Services.AddSyncfusionBlazor();
+await builder.Build().RunAsync();
+....
+{% endhighlight %}
+{% endtabs %}
 
 * For **.NET 5 and .NET 3.X** app,
 
-    {% tabs %}
-    {% highlight c# tabtitle="~/Program.cs" hl_lines="10" %}
-    using Syncfusion.Blazor;
+{% tabs %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="10" %}
+using Syncfusion.Blazor;
 
-    namespace BlazorApplication
+namespace BlazorApplication
+{
+    public class Program
     {
-        public class Program
+        public static async Task Main(string[] args)
         {
-            public static async Task Main(string[] args)
-            {
-                ....
-                builder.Services.AddSyncfusionBlazor();
-                await builder.Build().RunAsync();
-            }
+            ....
+            builder.Services.AddSyncfusionBlazor();
+            await builder.Build().RunAsync();
         }
     }
-    {% endhighlight %}
-    {% endtabs %}
+}
+{% endhighlight %}
+{% endtabs %}
 
 ## Add Syncfusion Blazor component
 
 * Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Calendars` namespace.
 
-    {% tabs %}
-    {% highlight razor tabtitle="~/_Imports.razor" %}
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
-    @using Syncfusion.Blazor
-    @using Syncfusion.Blazor.Calendars
-    
-    {% endhighlight %}
-    {% endtabs %}
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Calendars
+
+{% endhighlight %}
+{% endtabs %}
 
 * Now, add the Syncfusion Calendar component in razor file. Here, the Calendar component is added in the **~/Pages/Index.razor** page under the `~/Pages` folder.
 
-    {% tabs %}
-    {% highlight razor tabtitle="~/Pages/Index.razor" %}
+{% tabs %}
+{% highlight razor %}
 
-        <SfCalendar TValue="DateTime"/>
+    <SfCalendar TValue="DateTime"/>
 
-    {% endhighlight %}
-    {% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
 
-    ![Blazor Calendar Component](images/browser-output.png)
+![Blazor Calendar Component](images/browser-output.png)
 
 > You need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for more information.
