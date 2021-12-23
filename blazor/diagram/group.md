@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Group in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Group in Syncfusion Blazor Diagram component and much more details.
-platform: Blazor
+description: Checkout and learn here all about the Group in the Syncfusion Blazor Diagram component and much more.
 control: Diagram
 documentation: ug
 ---
@@ -44,7 +43,7 @@ A group can be added to the diagram model through `Nodes` collection. To define 
         DiagramNode node2 = createNode("node2", 300, 100, "Node2");
         DiagramNode node3 = createNode("node3", 200, 250, "Node3");
         DiagramNode groupnode = new DiagramNode();
-        // Grouping node 1 and node 2 into a single group
+        // Grouping node 1 and node 2 into a single group.
         groupnode.Children = new string[] { "node1", "node2" };
         NodeCollection.Add(node1);
         NodeCollection.Add(node2);
@@ -82,14 +81,14 @@ A group can be added to the diagram model through `Nodes` collection. To define 
         {
             await Task.Delay(500);
             diagram.SelectAll();
-            // Adding the third node into the existing group
+            // Adding the third node into the existing group.
             diagram.Group();
         }
     }
 }
 ```
 
-The following code illustrates how a ungroup  at runtime.
+The following code illustrates how to ungroup at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -109,7 +108,7 @@ The following code illustrates how a ungroup  at runtime.
         DiagramNode node1 = createNode("node1", 100, 100, "Node1");
         DiagramNode node2 = createNode("node2", 300, 100, "Node2");
         DiagramNode groupnode = new DiagramNode();
-        // Grouping node 1 and node 2 into a single group
+        // Grouping node 1 and node 2 into a single group.
         groupnode.Children = new string[] { "node1", "node2" };
         NodeCollection.Add(node1);
         NodeCollection.Add(node2);
@@ -146,7 +145,7 @@ The following code illustrates how a ungroup  at runtime.
         {
             await Task.Delay(500);
             diagram.SelectAll();
-            // Ungroup the selected group into nodes
+            // Ungroup the selected group into nodes.
             diagram.UnGroup();
         }
     }
@@ -175,7 +174,7 @@ A group node can be added at runtime by using Nodes collection of diagram. The f
         NodeCollection = new ObservableCollection<DiagramNode>();
         DiagramNode node1 = createNode("node1", 100, 100, "Node1");
         DiagramNode node2 = createNode("node2", 300, 100, "Node2");
-        // Grouping node 1 and node 2 into a single group
+        // Grouping node 1 and node 2 into a single group.
         groupnode.Children = new string[] { "node1", "node2" };
         NodeCollection.Add(node1);
         NodeCollection.Add(node2);
@@ -260,13 +259,13 @@ Group Nodes can be predefined and added to SymbolPalette. You can drop those Gro
 </div>
 
 @code{
-    // Defines palette's basic-shape collection
+    // Defines palette's basic-shape collection.
     public ObservableCollection<DiagramNode> BasicShapes { get; set; }
     public SymbolInfo symbolInfo;
 
     protected override void OnInitialized()
     {
-        //Sets the size, appearance and description of a symbol
+        //Sets the size, appearance, and description of a symbol.
         symbolInfo = new SymbolInfo()
         {
             Description = new SymbolDescription()
@@ -350,7 +349,7 @@ You can change the position of the group similar to node. For more information a
         NodeCollection = new ObservableCollection<DiagramNode>();
         DiagramNode node1 = createNode("node1", 100, 100, "Node1");
         DiagramNode node2 = createNode("node2", 300, 100, "Node2");
-        // Grouping node 1 and node 2 into a single group
+        // Grouping node 1 and node 2 into a single group.
         groupnode.Children = new string[] { "node1", "node2" };
         NodeCollection.Add(node1);
         NodeCollection.Add(node2);

@@ -25,10 +25,10 @@ Diagram provides support to export its content as image/svg files. The server-si
 
      private void OnExport()
      {
-          //Sets the export option for diagram
+          //Sets the export option for diagram.
           IExportOptions options = new IExportOptions()
           {
-               //Sets the Mode for diagram export
+               //Sets the Mode for diagram export.
                Mode = ExportModes.Data,
           };
           diagram.ExportDiagram(options);
@@ -65,11 +65,11 @@ Diagram provides support to export the desired region of the diagram to desired 
 
      private void OnExport()
      {
-          //Sets the export option for diagram
+          //Sets the export option for diagram.
           IExportOptions options = new IExportOptions()
           {
                Mode = ExportModes.Data,
-               //Sets the format for diagram export
+               //Sets the format for diagram export.
                Format = FileFormats.SVG
           };
           diagram.ExportDiagram(options);
@@ -95,13 +95,13 @@ Diagram provides support to export the desired region of the diagram to desired 
 
      private void OnExport()
      {
-          //Sets the export option for diagram
+          //Sets the export option for diagram.
           IExportOptions options = new IExportOptions()
           {
                Mode = ExportModes.Data,
                FileName = "diagram",
                Stretch = Stretch.None,
-               //Sets the margin for diagram export
+               //Sets the margin for diagram export.
                Margin = new DiagramMargin { Left = 10, Right = 10, Bottom = 10, Top = 10 },
                Format = FileFormats.SVG
           };
@@ -134,10 +134,10 @@ The following code example illustrates how to export the diagram as raw data.
 
      private void OnExport()
      {
-          //Sets the export option for diagram
+          //Sets the export option for diagram.
           IExportOptions options = new IExportOptions()
           {
-               //Sets the mode for diagram export
+               //Sets the mode for diagram export.
                Mode = ExportModes.Data,
                FileName = "diagram",
                Stretch = Stretch.None,
@@ -173,13 +173,13 @@ The following code example illustrates how to export the region occupied by the 
 
      private void OnExport()
      {
-          //Sets the export option for diagram
+          //Sets the export option for diagram.
           IExportOptions options = new IExportOptions()
           {
                Mode = ExportModes.Data,
                FileName = "format",
                Stretch = Stretch.None,
-               //Sets the region for diagram export
+               //Sets the region for diagram export.
                Region = DiagramRegions.Content,
                Margin = new Syncfusion.Blazor.Diagrams.MarginModel() { Left = 10, Right = 10, Bottom = 10, Top = 10 },
                Format = FileFormats.SVG
@@ -205,7 +205,7 @@ The following code example illustrates how to export the region occupied by the 
 @code{
      SfDiagram diagram;
 
-     //Define bounds class for export the diagram
+     //Define bounds class to export the diagram.
      public class exportBounds
      {
           public double x { get; set; }
@@ -216,7 +216,7 @@ The following code example illustrates how to export the region occupied by the 
 
      private void OnExport()
      {
-          //Sets the export option for diagram
+          //Sets the export option for diagram.
           IExportOptions options = new IExportOptions()
           {
                Mode = ExportModes.Download,
@@ -225,7 +225,7 @@ The following code example illustrates how to export the region occupied by the 
                PageWidth = 400,
                Stretch = Stretch.None,
                Region = DiagramRegions.CustomBounds,
-               //Sets the custom bound for diagram export
+               //Sets the custom bound for diagram export.
                Bounds = new exportBounds() { x = 10, y = 10, width = 100, height = 100 },
                Margin = new Syncfusion.Blazor.Diagrams.MarginModel() { Left = 10, Right = 10, Bottom = 10, Top = 10 },
                Format = FileFormats.SVG
@@ -253,7 +253,7 @@ The following code example illustrates how to export the region occupied by the 
 
      private void OnExport()
      {
-          //Sets the export option for diagram
+          //Sets the export option for diagram.
           IExportOptions options = new IExportOptions()
           {
                Mode = ExportModes.Data,
@@ -276,7 +276,7 @@ The server-side method [Print](https://help.syncfusion.com/cr/blazor/Syncfusion.
 |-------- | -------- | -------- |
 | region | enum | Sets the region of the diagram to be printed. |
 | bounds | object | Prints any custom region of diagram. |
-| stretch| enum | Resizes the diagram content to fill its allocated space and printed.|
+| stretch| enum | Resizes the diagram content to fill its allocated space and prints it.|
 | multiplePage | boolean | Prints the diagram into multiple pages. |
 | pageWidth | number | Sets the page width of the diagram while printing the diagram into multiple pages. |
 | pageHeight| number | Sets the page height of the diagram while printing the diagram into multiple pages.|
@@ -296,7 +296,7 @@ The following code example illustrates how to export the region occupied by the 
      
      private void OnPrint()
      {
-          //Sets the print option for diagram
+          //Sets the print option for diagram.
           IPrintOptions options = new IPrintOptions()
           {
                MultiplePage = true,

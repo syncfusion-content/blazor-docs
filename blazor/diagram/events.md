@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-# Events
+# Events in Blazor Diagram Component
 
 ## Created
 

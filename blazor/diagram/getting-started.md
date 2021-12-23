@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Diagram Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Diagram component of Syncfusion, and more details.
+description: Checkout and learn about getting started with the Blazor Diagram component of Syncfusion and much more.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -24,7 +24,7 @@ This section briefly explains about how to include a Diagram in your Blazor Serv
 </head>
 ```
 
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+> For Internet Explorer 11, kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
 ```cshtml
 <head>
@@ -67,7 +67,7 @@ namespace BlazorApplication
 }
 ```
 
-**Note**: To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+**Note**: To enable custom client side resource loading from CRG or CDN, you need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```cshtml
 <head>
@@ -91,7 +91,7 @@ The following example shows a basic Diagram component.
 
 ## Adding Nodes and Connectors
 
-Let us create and add a `nodes` with specific position, size, label and shape. Connect two or more nodes by using a
+Let us create and add `nodes` with specific position, size, label and shape. Connect two or more nodes by using the 
 `connectors`.
 
 ```cshtml
@@ -106,15 +106,15 @@ Let us create and add a `nodes` with specific position, size, label and shape. C
 @code
 {
     int connectorCount = 0;
-    // Reference to diagram
+    // Reference to diagram.
     SfDiagram diagram;
-    // Defines diagram's nodes collection
+    // Defines diagram's nodes collection.
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
-    // Defines diagram's connector collection
+    // Defines diagram's connector collection.
     public ObservableCollection<DiagramConnector> ConnectorCollection { get; set; }
-    // Defines default values for DiagramNode object
+    // Defines default values for DiagramNode object.
     public DiagramNode NodeDefaults { get; set; }
-    // Defines default values for DiagramConnector object
+    // Defines default values for DiagramConnector object.
     public DiagramConnector ConnectorDefaults { get; set; }
 
     protected override void OnInitialized()

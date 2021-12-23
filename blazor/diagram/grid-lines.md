@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Gridlines in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Gridlines in Syncfusion Blazor Diagram component and much more details.
+description: Checkout and learn here all about Gridlines in the Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -43,9 +43,9 @@ The appearance of the gridlines can be customized by using a set of predefined p
 
 * The [HorizontalGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramSnapSettings.html#Syncfusion_Blazor_Diagrams_DiagramSnapSettings_HorizontalGridlines) and the [VerticalGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramSnapSettings.html#Syncfusion_Blazor_Diagrams_DiagramSnapSettings_VerticalGridlines) properties allow to customize the appearance of the horizontal and vertical gridlines respectively.
 
-* The horizontal gridlines [LineColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsGridLines.html#Syncfusion_Blazor_Diagrams_DiagramsGridLines_LineColor) and [LineDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsGridLines.html#Syncfusion_Blazor_Diagrams_DiagramsGridLines_LineDashArray) properties are used to customizes the line color and line style of the horizontal gridlines.
+* The horizontal gridlines [LineColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsGridLines.html#Syncfusion_Blazor_Diagrams_DiagramsGridLines_LineColor) and [LineDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsGridLines.html#Syncfusion_Blazor_Diagrams_DiagramsGridLines_LineDashArray) properties are used to customize the line color and line style of the horizontal gridlines.
 
-* The vertical gridlines [LineColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsGridLines.html#Syncfusion_Blazor_Diagrams_DiagramsGridLines_LineColor) and [LineDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsGridLines.html#Syncfusion_Blazor_Diagrams_DiagramsGridLines_LineDashArray) properties are used to customizes the line color and line style of the vertical gridlines.
+* The vertical gridlines [LineColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsGridLines.html#Syncfusion_Blazor_Diagrams_DiagramsGridLines_LineColor) and [LineDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsGridLines.html#Syncfusion_Blazor_Diagrams_DiagramsGridLines_LineDashArray) properties are used to customize the line color and line style of the vertical gridlines.
 
 The following code example illustrates how to customize the appearance of gridlines.
 
@@ -84,7 +84,7 @@ The following code example illustrates how to customize the thickness of lines a
 </SfDiagram>
 
 @code{
-    //Sets the line intervals for the gridlines
+    //Sets the line intervals for the gridlines.
     public double[] LineIntervals { get; set; } = new double[]
     {
     1.25, 14, 0.25, 15, 0.25, 15, 0.25, 15, 0.25, 15
@@ -132,7 +132,7 @@ Snapping to gridlines can be enabled/disabled with the [SnapConstraints](https:/
 
 ### Customization of snap intervals
 
-By default, the objects are snapped towards the nearest gridline. The gridline or position towards where the diagram object snaps can be customized with the horizontal gridline’s [SnapInterval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsGridLines.html) and the vertical gridline’s [SnapInterval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsGridLines.html) properties.
+By default, the objects are snapped towards the nearest gridline. The gridline or position where the diagram object snaps can be customized with the horizontal gridline’s [SnapInterval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsGridLines.html) and the vertical gridline’s [SnapInterval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsGridLines.html) properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -143,7 +143,7 @@ By default, the objects are snapped towards the nearest gridline. The gridline o
 </SfDiagram>
 
 @code{
-    //Sets the snap constraints
+    //Sets the snap constraints.
     public SnapConstraints snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToLines;
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
 
@@ -182,7 +182,7 @@ The [SnapConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 </SfDiagram>
 
 @code{
-    //Sets the Snap to objects constraints...
+    //Sets the Snap to objects constraints.
     public SnapConstraints snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToObject;
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
 

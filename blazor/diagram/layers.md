@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Layers in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Layers in Syncfusion Blazor Diagram component and much more details.
+description: Checkout and learn here all about the Layers in the Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram
 documentation: ug

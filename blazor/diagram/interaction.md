@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Interaction in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Interaction in Syncfusion Blazor Diagram component and much more details.
+description: Checkout and learn here all about Interaction in the Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -50,12 +50,12 @@ Get the current selected items from the [Nodes](https://help.syncfusion.com/cr/b
 
 ## Select entire elements in diagram programmatically
 
-The server-side method [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_SelectAll) used to select all the elements such as nodes/connectors in the diagram. Refer to the following link which shows how to use [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_SelectAll) method on the diagram.
+The server-side method [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_SelectAll) is used to select all the elements such as nodes/connectors in the diagram. Refer to the following link which shows how to use [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_SelectAll) method on the diagram.
 
 ## Drag
 
 * An object can be dragged by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements move every selected element.
-* When you drag the elements in the diagram, the [OnPositionChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnPositionChange) event gets triggered and to do customization in this event.
+* When you drag the elements in the diagram, the [OnPositionChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnPositionChange) event gets triggered to do customization in this event.
 
 ![Drag](images/drag.gif)
 
@@ -110,12 +110,12 @@ Source and target points of the selected connectors are represented with two han
 
 ## Drag and drop nodes over other elements
 
-Diagram provides support to drop a node/connector over another node/connector. The [OnDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnDrop) event is raised to notify that an element is dropped over another one and it is disabled, by default. It can enabled with the constraints property.
+Diagram provides support to drop a node/connector over another node/connector. The [OnDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnDrop) event is raised to notify that an element is dropped over another one and it is disabled, by default. It can be enabled with the constraints property.
 
 ## User handles
 
 * User handles are used to add some frequently used commands around the selector. To create user handles, define and add them to the [UserHandles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html) collection of the [SelectedItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_SelectedItems) property.
-* The name property of user handle is used to define the name of the user handle and its further used to find the user handle at runtime and do any customization.
+* The name property of user handle is used to define the name of the user handle and it is further used to find the user handle at runtime and do any customization.
 
 ## Alignment
 
@@ -183,7 +183,7 @@ The diagram component notifies the mouse button clicked. For example, whenever t
     
     private async void Click()
     {
-        //Sets the export option for diagram
+        //Sets the export option for diagram.
         IBlazorClickEventArgs options = new IBlazorClickEventArgs()
         {
             Console.WriteLine("Button", options.MouseButtons);
