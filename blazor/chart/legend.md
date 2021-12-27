@@ -474,6 +474,57 @@ When the legend items exceed legend bounds, paging will be enabled by default. E
 
 ![Blazor Column Chart Legend with Paging](images/legend/blazor-column-chart-legend-paging.png)
 
+**Legend Text Wrap**
+
+When the legend text exceeds the container, the text can be wrapped by using [TextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_TextWrap) Property. End user can also wrap the legend text based on the [MaximumLabelWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_MaximumLabelWidth) property.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Olympic Medals">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@MedalDetails" Name="Gold Medals" XName="Country" Width="2" LegendShape="LegendShape.Circle" Opacity="1" YName="Gold" Type="ChartSeriesType.Column">
+        </ChartSeries>
+        <ChartSeries DataSource="@MedalDetails" Name="Silver Medals" XName="Country" Width="2" LegendShape="LegendShape.SeriesType" Opacity="1" YName="Silver" Type="ChartSeriesType.Column">
+        </ChartSeries>
+        <ChartSeries DataSource="@MedalDetails" Name="Bronze Medals" XName="Country" Width="2" LegendShape="LegendShape.Diamond" Opacity="1" YName="Bronze" Type="ChartSeriesType.Column">
+        </ChartSeries>
+    </ChartSeriesCollection>
+    <ChartLegendSettings Visible="true" Position="@LegendPosition.Right" TextWrap="@TextWrap.Wrap" MaximumLabelWidth="50">
+        <ChartLegendBorder Color="red" Width="1"/>
+    </ChartLegendSettings>
+</SfChart>
+
+@code{
+
+    public class ChartData
+    {
+        public string Country { get; set; }
+        public double Gold { get; set; }
+        public double Silver { get; set; }
+        public double Bronze { get; set; }
+    }
+
+    public List<ChartData> MedalDetails = new List<ChartData>
+	{
+		new ChartData{ Country= "USA", Gold=50, Silver=70, Bronze=45 },
+		new ChartData{ Country="China", Gold=40, Silver= 60, Bronze=55 },
+		new ChartData{ Country= "Japan", Gold=70, Silver= 60, Bronze=50 },
+		new ChartData{ Country= "Australia", Gold=60, Silver= 56, Bronze=40 },
+		new ChartData{ Country= "France", Gold=50, Silver= 45, Bronze=35 },
+		new ChartData{ Country= "Germany", Gold=40, Silver=30, Bronze=22 },
+		new ChartData{ Country= "Italy", Gold=40, Silver=35, Bronze=37 },
+		new ChartData{ Country= "Sweden", Gold=30, Silver=25, Bronze=27 }
+   };
+}
+
+```
+
+![Blazor Chart Legend with Wrap](images/legend/blazor-chart-legend-wrap.png)
+
 ## Series selection based on legend
 
 By default, when click on the legend item, the appropriate series visibility is collapsed. On the other hand, [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ToggleVisibility) property is used to disable such functionality.
