@@ -17,7 +17,7 @@ documentation: ug
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart Title="Olympic Medals">    
+<SfChart Title="Olympic Medals">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
 
@@ -33,7 +33,7 @@ documentation: ug
         public string Country { get; set; }
         public double Gold { get; set; }
     }
-	
+
     public List<ChartData> MedalDetails = new List<ChartData>
 	{
 		new ChartData{ Country= "USA", Gold=50  },
@@ -47,7 +47,7 @@ documentation: ug
     };
 }
 
-``` 
+```
 
 > Refer to our [Blazor Bar Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/bar-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Bar Chart Example](https://blazor.syncfusion.com/demos/chart/bar?theme=bootstrap4) to compare values across categories by using horizontal bars.
 
@@ -95,7 +95,7 @@ The [ColumnSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 ## Grouped Bar
 
-You can use the [`GroupName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_GroupName) property to group the data points in the bar type charts. Data points with same group name are grouped together.
+You can use the [GroupName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_GroupName) property to group the data points in the bar type charts. Data points with same group name are grouped together.
 
 ```cshtml
 
@@ -135,7 +135,7 @@ You can use the [`GroupName`](https://help.syncfusion.com/cr/blazor/Syncfusion.B
     };
 }
 
-``` 
+```
 
 ![Grouping in Blazor Grouped Bar Chart](../images/chart-types-images/blazor-column-chart-grouped-bar.png)
 

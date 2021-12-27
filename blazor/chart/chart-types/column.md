@@ -50,7 +50,7 @@ documentation: ug
     };
 }
 
-``` 
+```
 
 > Refer to our [Blazor Column Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Column Charts Example](https://blazor.syncfusion.com/demos/chart/column?theme=bootstrap4) to compare **Frequency**, **Count**, **Total**, or **Average** of data in different categories.
 
@@ -101,7 +101,7 @@ The [ColumnSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 ## Grouped Column
 
-You can use the [`GroupName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_GroupName) property to group the data points in the column type charts. Data points with same group name are grouped together.
+You can use the [GroupName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_GroupName) property to group the data points in the column type charts. Data points with same group name are grouped together.
 
 ```cshtml
 
@@ -141,7 +141,7 @@ You can use the [`GroupName`](https://help.syncfusion.com/cr/blazor/Syncfusion.B
     };
 }
 
-``` 
+```
 
 ![Grouping in Blazor Grouped Column Chart](../images/chart-types-images/blazor-column-chart-grouped-column.png)
 
