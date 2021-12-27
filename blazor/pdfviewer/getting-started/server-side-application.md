@@ -115,7 +115,16 @@ private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
 > If the DocumentPath property value is not provided, the PDF Viewer component will be rendered without loading the PDF document. The users can then use the open option from the toolbar to browse and open the PDF as required.
 
-**Step 10:** Run the application, the PDF Viewer component will be rendered in the web browser as shown in the following screenshot.
+**Step:10**: The Blazor application uses SignalR connection to manage communication between the server and client. By default, SignalR limits the [buffer size](https://docs.microsoft.com/en-us/aspnet/core/signalr/security?view=aspnetcore-2.1#buffer-management) to 32 KB. So,increase the buffer size of the blazor application to upload large documents from client to server.  To increase the connection buffer size, set  `MaximumReceiveMessageSize` property shown below in the **startup.cs**  file with in  **(ConfigureServices)** method.
+
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddServerSideBlazor().AddHubOptions(o => { o.MaximumReceiveMessageSize = 102400000;  });
+}
+```
+
+**Step 11:** Run the application, the PDF Viewer component will be rendered in the web browser as shown in the following screenshot.
 
 ![Blazor PDFViewer](../images/blazor-pdfviewer.png)
 
