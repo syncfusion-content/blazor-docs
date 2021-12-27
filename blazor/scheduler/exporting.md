@@ -219,7 +219,7 @@ By default, the whole event collection bound to the Scheduler gets exported as a
 
 ### Customizing the column header texts with custom fields exporting
 
-Using fields property, we can only export the defined fields into excel without customizing the header. Now we can provide the alternate support to customize the header of custom fields exporting using the `FieldsInfo` option through the `ExportFieldInfo` interface and pass it as an argument to the `ExportToExcelAsync` method as shown in the following example.
+Using fields property, we can only export the defined custom fields into excel without customizing the column header text. Now we can provide the alternate support to customize the header text of custom fields exporting using the `FieldsInfo` option through the `ExportFieldInfo` interface and pass it as an argument to the `exportToExcel` public method as shown in the following example.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
