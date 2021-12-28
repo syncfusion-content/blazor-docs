@@ -13,9 +13,9 @@ The Ruler provides a horizontal and vertical guide for measuring in the Diagram 
 
 ## Adding Rulers to the Diagram
 
-* The [DiagramRulerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramRulerSettings.html)property is used to control the visibility and appearance of the ruler in the diagram.
+* The [DiagramRulerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramRulerSettings.html) property is used to control the visibility and appearance of the ruler in the diagram.
 
-* The RulerSettings [ShowRulers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramRulerSettings.html#Syncfusion_Blazor_Diagrams_DiagramRulerSettings_ShowRulers)property is used to show or hide the rulers in the diagram.
+* The RulerSettings [ShowRulers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramRulerSettings.html#Syncfusion_Blazor_Diagrams_DiagramRulerSettings_ShowRulers) property is used to show or hide the rulers in the diagram.
 
 * The RulerSettings [HorizontalRuler](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.HorizontalRuler.html) and [VerticalRuler](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.VerticalRuler.html) properties are used to customize the rulers appearance in the diagram.
 
