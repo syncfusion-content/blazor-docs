@@ -399,7 +399,7 @@ To create the fixed user handles, define and add them to the collection of nodes
 
 ### Size
 
- Diagram allows you to set size for the fixed user handles by using the `width` and `height` properties. The default value of the width and height property is 10.
+ Diagram allows you to set size for the fixed user handles by using the `width` and `height` properties. The default value of the width and height properties is 10.
 
 ### Style
 
