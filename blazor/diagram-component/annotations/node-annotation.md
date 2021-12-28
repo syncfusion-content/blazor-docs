@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotation for Node in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Annotation for Node in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about annotation for node in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -29,7 +29,7 @@ The following code shows the relationship between the shape annotation position 
 
 @code
 {
-    // Defines diagram's node collection
+    // Defines diagram's node collection.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -45,7 +45,7 @@ The following code shows the relationship between the shape annotation position 
                 new ShapeAnnotation 
                 { 
                     Content = "Offset(0,0)", 
-                    // Sets the offset for an annotation's content
+                    // Sets the offset for an annotation's content.
                     Offset = new DiagramPoint() { X = 0, Y = 0 } 
                 }
             },
@@ -100,7 +100,7 @@ The following code explains how to align annotations.
 
 @code
 {
-    // Defines diagram's node collection
+    // Defines diagram's node collection.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -118,7 +118,7 @@ The following code explains how to align annotations.
                 new ShapeAnnotation 
                 { 
                     Content = "Annotation",
-                    // Sets the HorizontalAlignment and VerticalAlignment for the content
+                    // Sets the HorizontalAlignment and VerticalAlignment for the content.
                     HorizontalAlignment = HorizontalAlignment.Center,
                     VerticalAlignment = VerticalAlignment.Center
                 }
@@ -145,7 +145,7 @@ The following code explains how to align annotations.
 
 @code
 {
-    // Defines diagram's node collection
+    // Defines diagram's node collection.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -163,7 +163,7 @@ The following code explains how to align annotations.
                 new ShapeAnnotation 
                 { 
                     Content = "Task1",
-                    // Sets the margin for the content
+                    // Sets the margin for the content.
                     Margin = new Margin() { Top = 10},
                     HorizontalAlignment = HorizontalAlignment.Center,
                     VerticalAlignment = VerticalAlignment.Top,
@@ -188,7 +188,7 @@ The [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
 
 @code
 {
-    // Defines diagram's node collection
+    // Defines diagram's node collection.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -208,7 +208,7 @@ The [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
                     Content = "Text align is set as Left",
                     Style = new TextStyle()
                     { 
-                        // Sets the textAlign as left for the content
+                        // Sets the textAlign as left for the content.
                         TextAlign = TextAlign.Left
                     } 
                 }
