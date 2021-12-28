@@ -698,9 +698,9 @@ SfToast ToastObj;
 
 ## Complex data binding
 
-Kanban `DataSource` property also supports the complex model data binding. Complex data fields are specified using dot(.) operator.
+Kanban `DataSource` property also supports the complex model data binding. Complex data fields are specified using the dot(.) operator.
 
-In the below sample, Kanban `KeyField`, Card Settings of `HeaderField`, `ContentField`, Swimlane Settings of `KeyField`, SortSettings of `Field` properties are used as complex data binding.
+In the below sample, Kanban fields are mapped with complex data binding.
 
 ```cshtml
 @using Syncfusion.Blazor.Kanban
@@ -895,7 +895,7 @@ You can achieve ExpandoObject complex data binding in the Kanban mapping fields 
 
 ## Dynamic Complex data binding
 
-You can achieve DynamicObject complex data binding in the Kanban mapping fields properties by using the dot(.) operator. In the following sample, `ColumnName.Status` Expando complex data fields mapped to Kanban `KeyField` property.
+You can achieve DynamicObject complex data binding in the Kanban mapping fields properties by using the dot(.) operator. In the following sample, `ColumnName.Status` Dynamic complex data fields mapped to Kanban `KeyField` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Kanban
