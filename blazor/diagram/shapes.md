@@ -181,7 +181,7 @@ Html elements can be embedded in the diagram through `Html` type node. The shape
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
-@* Add a Namespace for a syncfusion control used in Diagram HTML node *@
+@* Add a Namespace for a Syncfusion control used in Diagram HTML node *@
 @using Syncfusion.Blazor.Inputs
 
 @* Initialize Diagram with node template *@
