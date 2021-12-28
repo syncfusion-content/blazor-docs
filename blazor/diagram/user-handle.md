@@ -23,38 +23,38 @@ The user handle can enables for the selected nodes/connectors by setting a [Sele
 </SfDiagram>
 
 @code{
-    // Defines diagram's nodes collection
+    // Defines diagram's nodes collection.
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
-    // Defines diagram's SelectedItems
+    // Defines diagram's SelectedItems.
     public Syncfusion.Blazor.Diagrams.DiagramSelectedItems SelectedModel { get; set; }
     ObservableCollection<DiagramUserHandle> UserHandles { get; set; }
 
     protected override void OnInitialized()
     {
-        //Creating the userhandle for cloning the objects
+        //Creating the userhandle for cloning the objects.
         DiagramUserHandle cloneHandle = new DiagramUserHandle()
         {
-            //Name of the user handle
+            //Name of the user handle.
             Name = "clone",
-            //Set pathdata for userhandle
+            //Set pathdata for userhandle.
             PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z",
-            //Set visibility for the user handle
+            //Set visibility for the user handle.
             Visible = true,
-            //Set the position for the user handle
+            //Set the position for the user handle.
             Offset = 0,
-            //Set side based on the given offset
+            //Set side based on the given offset.
             Side = Side.Bottom,
-            //set margin for the user handle
+            //Set margin for the user handle.
             Margin = new DiagramUserHandleMargin() { Top = 0, Bottom = 0, Left = 0, Right = 0 }
         };
-        //Add user handle to the collection...
+        //Add user handle to the collection.
         UserHandles = new ObservableCollection<DiagramUserHandle>()
         {
             cloneHandle
         };
         SelectedModel = new Syncfusion.Blazor.Diagrams.DiagramSelectedItems()
         {
-            //Enable userhandle for selected items...
+            //Enable userhandle for selected items.
             Constraints = SelectorConstraints.UserHandle,
             UserHandles = this.UserHandles
         };
@@ -84,7 +84,7 @@ The user handle can enables for the selected nodes/connectors by setting a [Sele
 
 ## Customization
 
-If set `false` to the [DisableConnectors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_DisableConnectors) property in userhandle, the userhandle prevents to rendering for the connectors. The following code example is used to show userhandle for the nodes alone.
+If set `false` to the [DisableConnectors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_DisableConnectors) property in userhandle, the userhandle prevents rendering for the connectors. The following code example is used to show userhandle for the nodes alone.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -97,44 +97,44 @@ If set `false` to the [DisableConnectors](https://help.syncfusion.com/cr/blazor/
 </SfDiagram>
 
 @code {
-    // Reference to diagram
+    // Reference to diagram.
     SfDiagram Diagram;
-    // Defines diagram's nodes collection
+    // Defines diagram's nodes collection.
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
-    // Defines diagram's connector collection
+    // Defines diagram's connector collection.
     public ObservableCollection<DiagramConnector> ConnectorCollection { get; set; }
-    // Defines diagram's SelectedItems
+    // Defines diagram's SelectedItems.
     public Syncfusion.Blazor.Diagrams.DiagramSelectedItems SelectedModel { get; set; }
     ObservableCollection<DiagramUserHandle> UserHandles { get; set; }
 
     protected override void OnInitialized()
     {
-        //Creating the userhandle for cloning the objects
+        //Creating the userhandle for cloning the objects.
         DiagramUserHandle cloneHandle = new DiagramUserHandle()
         {
-            //Name of the user handle
+            //Name of the user handle.
             Name = "clone",
-            //Set pathdata for userhandle
+            //Set pathdata for userhandle.
             PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z",
-            //Set visibility for the user handle
+            //Set visibility for the user handle.
             Visible = true,
-            //Set the position for the user handle
+            //Set the position for the user handle.
             Offset = 0,
-            //Set side based on the given offset
+            //Set side based on the given offset.
             Side = Side.Bottom,
-            //Disable to render this userhandle for connectors
+            //Disable to render this userhandle for connectors.
             DisableConnectors = true,
-            //set margin for the user handle
+            //Set margin for the user handle.
             Margin = new DiagramUserHandleMargin() { Top = 0, Bottom = 0, Left = 0, Right = 0 }
         };
-        //Add user handle to the collection...
+        //Add user handle to the collection.
         UserHandles = new ObservableCollection<DiagramUserHandle>()
         {
             cloneHandle
         };
         SelectedModel = new Syncfusion.Blazor.Diagrams.DiagramSelectedItems()
         {
-            //Enable userhandle for selected items...
+            //Enable userhandle for selected items.
             Constraints = SelectorConstraints.UserHandle,
             UserHandles = this.UserHandles
         };
@@ -167,7 +167,7 @@ If set `false` to the [DisableConnectors](https://help.syncfusion.com/cr/blazor/
 }
 ```
 
-> Also you can disable the [DisableNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_DisableNodes) property in userhandle, the userhandle prevent to rendering for the nodes.
+> You can disable the [DisableNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_DisableNodes) property in userhandle. The userhandle prevents rendering for the nodes.
 
 ### Position
 
@@ -192,43 +192,43 @@ Diagram allows you set size for userhandles by using the [Size](https://help.syn
 
 ### Style
 
-You can change the style of the userhandles with the specific properties of PathColor, BorderColor, BackgroundColor and BorderWidth. The following code explains how to customize the appearance of the userhandles.
+You can change the style of the userhandles with the specific properties of PathColor, BorderColor, BackgroundColor, and BorderWidth. The following code explains how to customize the appearance of the userhandles.
 
-* The userhandle's [PathColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_PathColor) property used to change the color of the given [PathData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_PathData) of the userhandle.
+* The userhandle's [PathColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_PathColor) property is used to change the color of the given [PathData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_PathData) of the userhandle.
 
-* The userhandle [BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_BorderColor), [BackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_BackgroundColor) properties are used to define the background color and border color of the userhandle and the [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_BorderWidth) property is used to define the border width of the userhandles.
+* The userhandle [BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_BorderColor) and [BackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_BackgroundColor) properties are used to define the background color and border color of the userhandle and the [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_BorderWidth) property is used to define the border width of the userhandles.
 
 * The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_Visible) property of the userhandle enables or disables the visibility of userhandle.
 
 The following code explains how to customize the appearance of the userhandle.
 
 ```csharp
-//Creating the userhandle for cloning the objects
+//Creating the userhandle for cloning the objects.
 DiagramUserHandle cloneHandle = new DiagramUserHandle()
 {
-    //Name of the user handle
+    //Name of the user handle.
     Name = "clone",
-    //Set pathdata for userhandle
+    //Set pathdata for userhandle.
     PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z",
-    //Set visibility for the user handle
+    //Set visibility for the user handle.
     Visible = true,
-    //Set the position for the user handle
+    //Set the position for the user handle.
     Offset = 1,
-    //Set side based on the given offset
+    //Set side based on the given offset.
     Side = Side.Bottom,
-    //Disable to render this userhandle for connectors
+    //Disable to render this userhandle for connectors.
     DisableConnectors = true,
-    //set margin for the user handle
+    //Set margin for the user handle.
     Margin = new DiagramUserHandleMargin() { Top = 0, Bottom = 0, Left = 0, Right = 0 },
-    //Set size of the user handle
+    //Set size of the user handle.
     Size = 50,
-    //Set pathcolor for given pathdata
+    //Set pathcolor for given pathdata.
     PathColor = "yellow",
-    //Set Border color of the user handle
+    //Set Border color of the user handle.
     BorderColor = "red",
-    //Set Background Color of the user handle
+    //Set Background Color of the user handle.
     BackgroundColor = "green",
-    //Set Border Width Color of the user handle
+    //Set Border Width Color of the user handle.
     BorderWidth = 3,
 };
 ```
@@ -260,44 +260,44 @@ The following code explains how to use the `OnUserHandleMouseUp` event for an us
 </SfDiagram>
 
 @code {
-    // Reference to diagram
+    // Reference to diagram.
     SfDiagram Diagram;
-    // Defines diagram's nodes collection
+    // Defines diagram's nodes collection.
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
-    // Defines diagram's connector collection
+    // Defines diagram's connector collection.
     public ObservableCollection<DiagramConnector> ConnectorCollection { get; set; }
-    // Defines diagram's SelectedItems
+    // Defines diagram's SelectedItems.
     public Syncfusion.Blazor.Diagrams.DiagramSelectedItems SelectedModel { get; set; }
     ObservableCollection<DiagramUserHandle> UserHandles { get; set; }
 
     protected override void OnInitialized()
     {
-        //Creating the userhandle for cloning the objects
+        //Creating the userhandle for cloning the objects.
         DiagramUserHandle cloneHandle = new DiagramUserHandle()
         {
-            //Name of the user handle
+            //Name of the user handle.
             Name = "clone",
-            //Set pathdata for userhandle
+            //Set pathdata for userhandle.
             PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z",
-            //Set visibility for the user handle
+            //Set visibility for the user handle.
             Visible = true,
-            //Set the position for the user handle
+            //Set the position for the user handle.
             Offset = 0,
-            //Set side based on the given offset
+            //Set side based on the given offset.
             Side = Side.Bottom,
-            //Disable to render this userhandle for connectors
+            //Disable to render this userhandle for connectors.
             DisableConnectors = true,
-            //set margin for the user handle
+            //Set margin for the user handle.
             Margin = new DiagramUserHandleMargin() { Top = 0, Bottom = 0, Left = 0, Right = 0 }
         };
-        //Add user handle to the collection...
+        //Add user handle to the collection.
         UserHandles = new ObservableCollection<DiagramUserHandle>()
         {
             cloneHandle
         };
         SelectedModel = new Syncfusion.Blazor.Diagrams.DiagramSelectedItems()
         {
-            //Enable userhandle for selected items...
+            //Enable userhandle for selected items.
             Constraints = SelectorConstraints.UserHandle,
             UserHandles = this.UserHandles
         };
@@ -323,7 +323,7 @@ The following code explains how to use the `OnUserHandleMouseUp` event for an us
     }
 
     /// <summary>
-    /// mouse up event for the userhandles...
+    /// Mouse up event for the userhandles.
     /// </summary>
     public async Task OnUserHandleMouseUp(UserHandleEventsArgs args)
     {
@@ -399,7 +399,7 @@ To create the fixed user handles, define and add them to the collection of nodes
 
 ### Size
 
- Diagram allows you set size for the fixed user handles by using the `width` and `height` property. The default value of the width and height property is 10.
+ Diagram allows you to set size for the fixed user handles by using the `width` and `height` properties. The default value of the width and height property is 10.
 
 ### Style
 

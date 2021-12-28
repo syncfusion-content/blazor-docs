@@ -17,7 +17,7 @@ Scroll settings allow you to read the scroll status, [ViewPortWidth](https://hel
 
 ## Define scroll status
 
-Diagram allows you to pan the diagram before loading, so that any desired region of a large diagram is made to view. You can programmatically pan the diagram with the [HorizontalOffset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramScrollSettings.html#Syncfusion_Blazor_Diagrams_DiagramScrollSettings_HorizontalOffset) and [VerticalOffset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramScrollSettings.html#Syncfusion_Blazor_Diagrams_DiagramScrollSettings_VerticalOffset) properties of scroll settings. The following code illustrates how to set pan the diagram programmatically.
+Diagram allows you to pan the diagram before loading, so that any desired region of a large diagram can be viewed. You can programmatically pan the diagram with the [HorizontalOffset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramScrollSettings.html#Syncfusion_Blazor_Diagrams_DiagramScrollSettings_HorizontalOffset) and [VerticalOffset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramScrollSettings.html#Syncfusion_Blazor_Diagrams_DiagramScrollSettings_VerticalOffset) properties of scroll settings. The following code illustrates how to set pan the diagram programmatically.
 
 In the following example, the vertical scroll bar is scrolled down by 50px and horizontal scroll bar is scrolled to right by 100px.
 
@@ -50,7 +50,7 @@ You can programmatically change the scroll offsets at runtime by using the serve
 
     public void updateScrollValues()
     {
-        //Update scroll settings
+        //Update scroll settings.
         verticalOffset = 400;
         horizontalOffset = 200;
     }
@@ -94,7 +94,7 @@ The scroll limit allows you to define the scrollable region of the diagram. It i
 * Allows to scroll within the specified scrollable area.
 * The [ScrollLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramScrollSettings.html#Syncfusion_Blazor_Diagrams_DiagramScrollSettings_ScrollLimit) property of scroll settings helps to limit the scrolling.
 
-The ScrollSettings [ScrollableArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramScrollSettings.html#Syncfusion_Blazor_Diagrams_DiagramScrollSettings_ScrollableArea) allow to extend the scrollable region that is based on the scroll limit.
+The ScrollSettings [ScrollableArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramScrollSettings.html#Syncfusion_Blazor_Diagrams_DiagramScrollSettings_ScrollableArea) allows to extend the scrollable region that is based on the scroll limit.
 The following code example illustrates how to specify the scroll limit.
 
 ```cshtml
@@ -107,7 +107,7 @@ The following code example illustrates how to specify the scroll limit.
 </SfDiagram>
 ```
 
-## Scroll Padding
+## Scroll padding
 
 The scroll padding allows you to extend the scrollable region that is based on the scroll limit. The following code example illustrates how to set scroll padding to diagram region.
 
@@ -123,7 +123,7 @@ The scroll padding allows you to extend the scrollable region that is based on t
 </SfDiagram>
 ```
 
-## Scrollable Area
+## Scrollable area
 
 Scrolling beyond any particular rectangular area can be restricted by using the [ScrollableArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramScrollSettings.html#Syncfusion_Blazor_Diagrams_DiagramScrollSettings_ScrollableArea) property of scroll settings. To restrict scrolling beyond any custom region, set the [ScrollLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramScrollSettings.html#Syncfusion_Blazor_Diagrams_DiagramScrollSettings_ScrollLimit) as “limited”. The following code example illustrates how to customize scrollable area.
 
@@ -144,7 +144,7 @@ Scrolling beyond any particular rectangular area can be restricted by using the 
         public int Width { get; set; }
         public int Height { get; set; }
     }
-    // Sets the values of scroll area
+    // Sets the values of scroll area.
     object scrollArea = new Area() { X = 0, Y = 0, Width = 500, Height = 500 };
 }
 ```

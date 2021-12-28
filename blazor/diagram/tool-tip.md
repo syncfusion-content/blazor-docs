@@ -32,9 +32,9 @@ The diagram provides support to show tooltip when the mouse hovers over any node
 </SfDiagram>
 
 @code{
-    //Defines diagram's node collection
+    //Defines diagram's node collection.
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
-    // Defines position of the tooltip
+    // Defines position of the tooltip.
 
     public DiagramTooltip tooltip = new DiagramTooltip()
     {
@@ -45,7 +45,7 @@ The diagram provides support to show tooltip when the mouse hovers over any node
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
-        //Defines nodes
+        //Defines nodes.
         DiagramNode node = new DiagramNode()
         {
             Id = "node1",
@@ -86,7 +86,7 @@ The tooltip on mouse over can be disabled by assigning the [Tooltip](https://hel
 </SfDiagram>
 
 @code{
-    //Disables mouse over tooltip
+    //Disables mouse over tooltip.
     public DiagramTooltip tooltip = null;
 }
 
@@ -105,13 +105,13 @@ The tooltip can be customized for each node and connector. Remove the `InheritTo
 </SfDiagram>
 
 @code{
-    // Defines diagram's nodes collection
+    // Defines diagram's nodes collection.
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
 
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
-        //Defines nodes
+        //Defines nodes.
         DiagramNode node = new DiagramNode()
         {
             Id = "node1",
@@ -134,14 +134,14 @@ The tooltip can be customized for each node and connector. Remove the `InheritTo
                     Style = new AnnotationStyle(){ Color = "white" }
                 }
             },
-            //Defines mouse over tooltip for a node
+            //Defines mouse over tooltip for a node.
             Tooltip = new NodeTooltip()
             {
-                //Sets the content of the tooltip
+                //Sets the content of the tooltip.
                 Content = "Node1",
-                //Sets the position of the tooltip
+                //Sets the position of the tooltip.
                 Position = Syncfusion.Blazor.Popups.Position.BottomRight,
-                //Sets the tooltip position relative to the node
+                //Sets the tooltip position relative to the node.
                 RelativeMode = TooltipRelativeMode.Object
             }
         };
@@ -168,13 +168,13 @@ The following code example illustrates how to position the tooltip around object
 </SfDiagram>
 
 @code{
-    // Defines diagram's nodes collection
+    // Defines diagram's nodes collection.
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
 
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
-        //Defines nodes
+        //Defines nodes.
         DiagramNode node = new DiagramNode()
         {
             Id = "node1",
@@ -215,7 +215,7 @@ The following code example illustrates how to position the tooltip around object
 
 ### Tooltip relative to mouse position
 
-To display the tooltip at mouse position, need to set mouse option to the [RelativeMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeTooltip.html#Syncfusion_Blazor_Diagrams_NodeTooltip_RelativeMode) property of the tooltip. The following code example illustrates how to show tooltip at mouse position.
+To display the tooltip at mouse position, you need to set mouse option to the [RelativeMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeTooltip.html#Syncfusion_Blazor_Diagrams_NodeTooltip_RelativeMode) property of the tooltip. The following code example illustrates how to show tooltip at mouse position.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -226,13 +226,13 @@ To display the tooltip at mouse position, need to set mouse option to the [Relat
 </SfDiagram>
 
 @code{
-    // Defines diagram's nodes collection
+    // Defines diagram's nodes collection.
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
 
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
-        //Defines nodes
+        //Defines nodes.
         DiagramNode node = new DiagramNode()
         {
             Id = "node1",
@@ -256,11 +256,11 @@ To display the tooltip at mouse position, need to set mouse option to the [Relat
                     Style = new AnnotationStyle(){ Color = "white" }
                 }
             },
-            //Defines mouse over tooltip for a node
+            //Defines mouse over tooltip for a node.
             Tooltip = new NodeTooltip()
             {
                 Content = "Node1",
-                //Sets to show tooltip at mouse position
+                //Sets to show tooltip at mouse position.
                 RelativeMode = TooltipRelativeMode.Mouse
             }
         };
@@ -283,7 +283,7 @@ To animate the tooltip, a set of specific animation effects are available, and i
 </SfDiagram>
 
 @code{
-    // Defines diagram's nodes collection
+    // Defines diagram's nodes collection.
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
 
     protected override void OnInitialized()
@@ -311,7 +311,7 @@ To animate the tooltip, a set of specific animation effects are available, and i
                     Style = new AnnotationStyle(){ Color = "white" }
                 }
             },
-            //Defines mouse over tooltip for a node
+            //Defines mouse over tooltip for a node.
             Tooltip = new NodeTooltip()
             {
                 Content = "Node1",
