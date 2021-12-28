@@ -731,7 +731,7 @@ In the below sample, Kanban fields are mapped with complex data binding.
                         <tr>
                             <td class="e-label">Status</td>
                             <td>
-                                <SfDropDownList @ref="StatusRef" TValue="string" TItem="DropDownModel" CssClass="e-field" DataSource="@StatusData" @bind-Value="@data.Status.KeyField">
+                                <SfDropDownList TValue="string" TItem="DropDownModel" CssClass="e-field" DataSource="@StatusData" @bind-Value="@data.Status.KeyField">
                                     <DropDownListFieldSettings Text="Value" Value="Value"></DropDownListFieldSettings>
                                 </SfDropDownList>
                             </td>
@@ -739,7 +739,7 @@ In the below sample, Kanban fields are mapped with complex data binding.
                         <tr>
                             <td class="e-label">Assignee</td>
                             <td>
-                                <SfDropDownList @ref="AssigneeRef" TValue="string" TItem="DropDownModel" CssClass="e-field" DataSource="@AssigneeData" @bind-Value="@data.AssigneeName.Name">
+                                <SfDropDownList TValue="string" TItem="DropDownModel" CssClass="e-field" DataSource="@AssigneeData" @bind-Value="@data.AssigneeName.Name">
                                     <DropDownListFieldSettings Text="Value" Value="Value"></DropDownListFieldSettings>
                                 </SfDropDownList>
                             </td>
@@ -753,7 +753,7 @@ In the below sample, Kanban fields are mapped with complex data binding.
                         <tr>
                             <td class="e-label">Summary</td>
                             <td>
-                                <SfTextBox @ref="SummaryRef" CssClass="e-field" Multiline="true" @bind-Value="@data.Summary.Content"></SfTextBox>
+                                <SfTextBox CssClass="e-field" Multiline="true" @bind-Value="@data.Summary.Content"></SfTextBox>
                             </td>
                         </tr>
                     </tbody>
@@ -764,9 +764,6 @@ In the below sample, Kanban fields are mapped with complex data binding.
 </SfKanban>
 
 @code {
-    SfDropDownList<string, DropDownModel> StatusRef;
-    SfDropDownList<string, DropDownModel> AssigneeRef;
-    SfTextBox SummaryRef;
     private Boolean Check = false;
     public class SwimlaneTasksModel
     {
