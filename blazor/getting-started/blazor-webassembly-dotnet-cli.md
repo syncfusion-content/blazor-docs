@@ -101,7 +101,7 @@ dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 dotnet restore
 ```
 
-Then the theme style from  can be referred inside the `<head>` of the **wwwroot/index.html** file of client web app.
+Then the theme style from can be referred inside the `<head>` of the **wwwroot/index.html** file in client web app.
 
 {% tabs %}
 {% highlight html tabtitle="wwwroot/index.html" %}
@@ -130,7 +130,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 ## Add Syncfusion Blazor component
 
-Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Calendars` namespace.
+* Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Calendars` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Imports.razor" %}
@@ -141,7 +141,7 @@ Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder wher
 {% endhighlight %}
 {% endtabs %}
 
-Now, add the Syncfusion Calendar component in .razor file. Here, the Calendar component is added in the `~/Pages/Index.razor` page under the `~/Pages` folder.
+* Now, add the Syncfusion Calendar component in .razor file. Here, the Calendar component is added in the `~/Pages/Index.razor` page under the `~/Pages` folder.
 
 {% tabs %}
 {% highlight razor %}
@@ -151,7 +151,7 @@ Now, add the Syncfusion Calendar component in .razor file. Here, the Calendar co
 {% endhighlight %}
 {% endtabs %}
 
-In the command prompt (Windows) or terminal (Linux and macOS) to run the following command to build and start the app. The app listening on `http://localhost:<port number>` and view it in the browser.
+* In the command prompt (Windows) or terminal (Linux and macOS) to run the following command to build and start the app. The app listening on `http://localhost:<port number>` and view it in the browser.
 
 ```
 dotnet run
