@@ -69,13 +69,13 @@ A connector can be selected at runtime by using the [Select](https://help.syncfu
 
     public void OnSelect()
     {
-        // Select the Connector
+        // Select the Connector.
         Diagram.Select(new ObservableCollection<IDiagramObject> { Diagram.GetObject(Diagram.Connectors[0].ID) as IDiagramObject });
     }
 
     public void UnSelect()
     {
-        // clear selection in the diagram
+        // Clear selection in the diagram.
         Diagram.ClearSelection();
     }
 }
@@ -84,7 +84,7 @@ A connector can be selected at runtime by using the [Select](https://help.syncfu
 And also the selection can be enabled during the interaction.
 
 * An element can be selected by clicking that element.
-* When you select the elements in the diagram, the [SelectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanging) and  [SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanged) event gets triggered and do customization in this event.
+* When you select the elements in the diagram, the [SelectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanging) and  [SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanged) events get triggered and do customization in this event.
 
 ![Selection in Blazor Diagram Connector](../images/blazor-diagram-connector-selection.gif)
 
@@ -144,7 +144,7 @@ A connector can be dragged at runtime by using the [Drag](https://help.syncfusio
 
     public void OnDrag()
     {
-        // Drag the connector
+        // Drag the connector.
         Diagram.Drag(Diagram.Connectors[0], 10, 10);
     }
 }
@@ -153,11 +153,11 @@ A connector can be dragged at runtime by using the [Drag](https://help.syncfusio
 And also drag the connector during the interaction.
 
 * An object can be dragged by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements move all the selected elements.
-* When you drag the elements in the diagram, the [PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging) and [PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged) event gets triggered and to do customization in this event.
+* When you drag the elements in the diagram, the [PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging) and [PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged) events get triggered and do customization in this event.
 
 ![Dragging Connector in Blazor Diagram](../images/blazor-diagram-drag-connector.gif)
 
-## End Point Dragging
+## End point dragging
 
 The connector can be selected by clicking it. When the connector is selected, circles will be added on the starting and ending of the connector that is represented by Thumbs. Clicking and dragging those handles helps you to adjust the source and target points.
 

@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Mind map Layout in Blazor Diagram Component
+# Mind Map Layout in Blazor Diagram Component
 
 A mind map is a diagram that displays the nodes as a spider diagram organizes information around a central concept. To create mind map, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) of layout should be set as [MindMap](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_MindMap). The following code example illustrates how to create a mind map layout.
 
@@ -23,7 +23,7 @@ A mind map is a diagram that displays the nodes as a spider diagram organizes in
 
 @code 
 {    
-    //Creates nodes with some default values
+    //Creates nodes with some default values.
     private void OnNodeCreating(IDiagramObject obj)
     {
         Node node = obj as Node;
@@ -34,7 +34,7 @@ A mind map is a diagram that displays the nodes as a spider diagram organizes in
         node.Shape = new BasicShape() { Type = Shapes.Basic }; ;
     }
     
-    //Creates connectors with some default values
+    //Creates connectors with some default values.
     private void OnConnectorCreating(IDiagramObject connector)
     {
         Connector connectors = connector as Connector;
@@ -88,7 +88,7 @@ You can also decide the branch for mind map using [GetBranch](https://help.syncf
 
 @code 
 {
-    //Set all branches on the right side for mind map layout
+    //Set all branches on the right side for mind map layout.
     private BranchType GetBranch(IDiagramObject obj)
     {
         if ((obj as Node).ID == "1")
@@ -98,7 +98,7 @@ You can also decide the branch for mind map using [GetBranch](https://help.syncf
         return BranchType.Right;
     }
     
-    //Creates connectors with some default values
+    //Creates connectors with some default values.
     private void OnNodeCreating(IDiagramObject obj)
     {
         Node node = obj as Node;
@@ -116,7 +116,7 @@ You can also decide the branch for mind map using [GetBranch](https://help.syncf
         };
     }
     
-    //Creates node with some default values
+    //Creates node with some default values.
     private void OnConnectorCreating(IDiagramObject connector)
     {
         Connector connectors = connector as Connector;
