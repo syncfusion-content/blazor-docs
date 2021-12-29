@@ -37,7 +37,7 @@ We will merge development branch to Master during release time as like other ES 
 | Topic 	| Detail |
 |----------|:-------------:|
 | Branch to commit 	| development  |
-|  Publishing URL	| https://sfblazor.azurewebsites.net/staging/documentation/introduction |
+|  Publishing URL	| https://blazor.syncfusion.com/documentation/introduction |
 | Automation Starting time | 6 PM daily	 |
 | Publishing time | 7 PM  |
 
@@ -209,6 +209,10 @@ File name - https://syncfusion.sharepoint.com/sites/DOCINFRA/SitePages/File%20Pa
 ### Support to highlight the specific lines in the code block
 * Refer the below SharePoint page for MD file syntax and more details.
 * https://syncfusion.sharepoint.com/sites/Install/SitePages/UG-Documentation---Support-to-Highlight-the-Specific-Lines-in-the-Code-Block.aspx
+
+### Support to add the Code Blocks under the List Item
+* Refer the below SharePoint page for MD file syntax and more details.
+* https://syncfusion.sharepoint.com/sites/Install/SitePages/UG-Documentation---Support-to-add-the-Code-Blocks-under-the-List.aspx
 
 ### YouTube
 

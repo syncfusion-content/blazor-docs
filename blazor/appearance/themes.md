@@ -26,15 +26,16 @@ The following list of themes are included in the Syncfusion Blazor components li
 |Microsoft Office Fabric Dark | fabric-dark.css |
 |High Contrast | highcontrast.css |
 
-
 The Syncfusion Blazor Bootstrap Theme is designed based on Bootstrap v3, whereas the Bootsrap4 theme is designed based on Bootstrap v4.
 
 ## Reference themes in Blazor application
 
 Syncfusion Blazor themes can be used in your Blazor application by referencing the style sheet. 
 
-* For Blazor Server application, refer style sheet inside the `<head>` element of `~/Pages/_Host.cshtml` file.
-* For Blazor WebAssembly application, refer style sheet inside the `<head>` element of `wwwroot/index.html` file.
+* For **Blazor WebAssembly application**, refer style sheet inside the `<head>` of **wwwroot/index.html** file.
+* For **Blazor Server application**, refer style sheet inside the `<head>` of 
+    * **~/Pages/_Host.cshtml** file for .NET 3 and .NET 5.
+    * **~/Pages/_Layout.cshtml** for .NET 6.
 
 Using the below approaches the themes can be referenced in the Blazor application,
 
@@ -51,9 +52,11 @@ Instead of using [Static Web assets](#static-web-assets) or a [CDN reference](#c
 
 Syncfusion Blazor themes are available as Static web Assets in the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet Packages.
 
-* For Blazor Server application, refer style sheet inside the `<head>` element of `~/Pages/_Host.cshtml` file.
-* For Blazor WebAssembly application, refer style sheet inside the `<head>` element of `wwwroot/index.html` file.
-
+* For **Blazor WebAssembly application**, refer style sheet inside the `<head>` element of **wwwroot/index.html** file.
+* For **Blazor Server application**, refer style sheet inside the `<head>` element of 
+    * **~/Pages/_Host.cshtml** file for .NET 3 and .NET 5.
+    * **~/Pages/_Layout.cshtml** for .NET 6.
+    
 When using individual NuGet packages in your application, add [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet Package and reference style sheet as below,
 
  ```html
@@ -140,9 +143,9 @@ You can add the theme for the Blazor applications through **npm packages** using
         }
       }
     ]
-```
+    ```
 
-* The `SCSS` file has been compiled to the CSS file. Then, add this CSS file to the `<head>` element of the `~/Pages/_Host.cshtml` page.
+* The SCSS file has been compiled to the CSS file. Then, add this CSS file to the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
 * Run the application and see the fabric themes from installed npm packages was applied.
 
@@ -156,7 +159,7 @@ LibMan offers the following advantages,
 2. Additional tooling, such as Node.js, npm, and WebPack, isn't necessary to acquire a subset of files in a library.
 3. Files can be placed in a specific location without resorting to build tasks or manual file copying.
 
-In the server application root, add the `lib man.json` file with the following content:
+In the server application root, add the **lib man.json** file with the following content:
 
 ```json
 {
@@ -188,7 +191,7 @@ In the server application root, add the `lib man.json` file with the following c
 }
 ```
 
-In the client Blazor application, go to the `wwwroot/index.html` file and replace the CDN link with the following one. For a server-side Blazor project, do that in the `~/Pages/_Host.cshtml` file.
+In the client Blazor application, go to the **wwwroot/index.html** file and replace the CDN link with the following one. For a server-side Blazor project, do that in the **~/Pages/_Host.cshtml** file.
 
 ```html
 <!DOCTYPE html>
@@ -207,7 +210,7 @@ In the Blazor application, the application theme can be changed dynamically by c
 
 The following example demonstrates how to change a theme dynamically in Blazor Server application using Syncfusion Blazor themes using Syncfusion Dropdown component.
 
-1. In  `_Host.cshtml`, refer syncfusion style sheet where the style sheet name is defined based on query string. 
+1. In  **_Host.cshtml**, refer syncfusion style sheet where the style sheet name is defined based on query string. 
     
     ```cshtml
     @page "/"
@@ -239,7 +242,7 @@ The following example demonstrates how to change a theme dynamically in Blazor S
     </html>
     ```
 
-2. In `MainLayout.razor` page add dropdown list with themes and in `ValueChange` event handler, the page is refreshed by changing query string to change the theme in application.
+2. In **MainLayout.razor** page add dropdown list with themes and in `ValueChange` event handler, the page is refreshed by changing query string to change the theme in application.
     
     ```cshtml
     @inherits LayoutComponentBase
@@ -328,7 +331,7 @@ The following example demonstrates how to change a theme dynamically in Blazor S
 
 The following example demonstrates how to change a theme dynamically in Blazor WebAssembly using the application with the Syncfusion Blazor themes using Syncfusion Dropdown component.
 
-1. Add the below function code in the  `index.html` file to set the theme as selected in dropdown by using its **id** value.
+1. Add the below function code in the  **index.html** file to set the theme as selected in dropdown by using its `id` value.
     
     ```html
     <head>
@@ -347,7 +350,7 @@ The following example demonstrates how to change a theme dynamically in Blazor W
     ……………
     ```
 
-2. Modify the `MainLayout.razor` page with the below code to implement a theme change dynamically using the dropdown by its id value in javascript function in the application.
+2. Modify the **MainLayout.razor** page with the below code to implement a theme change dynamically using the dropdown by its id value in javascript function in the application.
     
     ```cshtml
     @inherits LayoutComponentBase

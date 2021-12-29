@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering in Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn here all about Filtering in Syncfusion Blazor QueryBuilder component and much more.
+description: Checkout and learn here all about filtering in Syncfusion Blazor QueryBuilder component and much more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Filtering in Blazor QueryBuilder Component
 
-The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) allows you to create or delete conditions and groups. You can use [ShowButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_ShowButtons) to enable/disable these buttons.
+The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) allows to create or delete conditions and groups. You can use [ShowButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_ShowButtons) to enable/disable these buttons.
 
 You can `create` or `delete` conditions by interacting through the user interface and methods.
 
@@ -100,8 +100,6 @@ You can `create` or `delete` conditions by interacting through the user interfac
 
 ```
 
-Output will be shown as
-
 ![Filtering in Blazor QueryBuilder](./images/blazor-querybuilder-filtering.png)
 
-> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to knows how to render and configure the query builder.
+> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.
