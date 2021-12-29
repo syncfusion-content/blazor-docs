@@ -6,7 +6,6 @@ platform: Blazor
 component: Common
 documentation: ug
 ---
-<!-- markdownlint-disable MD024 -->
 
 # Getting started with Blazor ASP.NET Core Hosted App in .NET CLI
 
@@ -14,18 +13,22 @@ This articles provides a step-by-step instructions for building Blazor ASP.NET C
 
 ## Prerequisites
 
-* [System requirements for Blazor Application](https://blazor.syncfusion.com/documentation/system-requirements)
+Latest version of the [.NET Core SDK](https://dotnet.microsoft.com/download). If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+
+```
+dotnet --version
+```
 
 ## Create a Blazor ASP.NET Core Hosted WebAssembly project using .NET CLI
 
-Run the `dotnet new blazorwasm` command with option `--hosted` to create a new Blazor ASP.NET Core Hosted WebAssembly application in the command prompt (Windows) or terminal (Linux or macOS).
+Run the `dotnet new blazorwasm` command with option `-ho` or `--hosted` to create a new Blazor ASP.NET Core Hosted WebAssembly application in the command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
 ```
 dotnet new blazorwasm -o BlazorApp --hosted
 cd BlazorApp
 ```
 
-This command creates new Blazor App project and places it in a new directory called BlazorApp inside your current location. See [Create Blazor App topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
+This command creates new Blazor WebAssembly App project and places it in a new directory called BlazorApp inside your current location. See [Create Blazor App topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new CLI command](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
 
 > If you have installed multiple SDK versions and need any specific framework version (net5.0/netcoreapp3.1) project, then add `-f` flag along with `dotnet new blazorwasm` comment. Refer [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-5.0&pivots=windows) for the available options.
 

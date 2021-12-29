@@ -13,11 +13,15 @@ This article provides a step-by-step instructions for building Blazor Server App
 
 ## Prerequisites
 
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+Latest version of the [.NET Core SDK](https://dotnet.microsoft.com/download). If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+
+```
+dotnet --version
+```
 
 ## Create a Blazor Server side project using .NET CLI
 
-Run the `dotnet new blazorserver` command to create a new Blazor Server application in the command prompt (Windows) or terminal (Linux and macOS).
+Run the `dotnet new blazorserver` command to create a new Blazor Server application in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
 ```
 dotnet new blazorserver -o BlazorApp
