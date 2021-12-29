@@ -18,7 +18,7 @@ Color mapping is used to customize the color for each group or item based on the
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="Count" TValue="Fruit" DataSource="Fruits" RangeColorValuePath="Count">
-    <TreeMapLeafItemSettings LabelPath="FruitName">
+    <TreeMapLeafItemSettings LabelPath="Name">
         <TreeMapLeafColorMappings>
             <TreeMapLeafColorMapping StartRange="500" EndRange="3000" Color='new string[] { "Orange" }'></TreeMapLeafColorMapping>
             <TreeMapLeafColorMapping StartRange="3000" EndRange="5000" Color='new string[] { "Green" }'></TreeMapLeafColorMapping>
@@ -92,7 +92,7 @@ Desaturation color mapping is used to apply colors to the items based on the [Mi
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="Count" TValue="Fruit" DataSource="Fruits" RangeColorValuePath="Count">
-    <TreeMapLeafItemSettings LabelPath="FruitName">
+    <TreeMapLeafItemSettings LabelPath="Name">
         <TreeMapLeafColorMappings>
             <TreeMapLeafColorMapping StartRange="500" EndRange="3000" MinOpacity="0.2" MaxOpacity="0.5" Color='new string[] { "Orange"}'></TreeMapLeafColorMapping>
             <TreeMapLeafColorMapping StartRange="3000" EndRange="5000" MinOpacity="0.5" MaxOpacity="0.8" Color='new string[] { "Green"}'></TreeMapLeafColorMapping>
@@ -150,7 +150,7 @@ Get the excluded ranges from data source using the color mapping and apply the s
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="Count" TValue="Fruit" DataSource="Fruits" RangeColorValuePath="Count">
-    <TreeMapLeafItemSettings LabelPath="FruitName">
+    <TreeMapLeafItemSettings LabelPath="Name">
         <TreeMapLeafColorMappings>
             <TreeMapLeafColorMapping StartRange="500" EndRange="3000" Color='new string[] { "Orange" }'></TreeMapLeafColorMapping>
             <TreeMapLeafColorMapping StartRange="3000" EndRange="4000" Color='new string[]{ "Green"}'></TreeMapLeafColorMapping>
