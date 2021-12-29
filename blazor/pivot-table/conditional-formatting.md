@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Conditional Formatting in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about Conditional Formatting in Syncfusion Blazor Pivot Table component and more.
+description: Checkout and learn here all about conditional formatting in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Conditional Formatting in Blazor Pivot Table Component
 
-Allows end user to change the appearance of the pivot table value cells with its background color, font color, font family, and font size based on specific conditions.
+It allows the end user to change the appearance of the pivot table value cells with its background color, font color, font family, and font size based on the specific conditions.
 
-The conditional formatting can be applied at runtime through the built-in dialog, invoked from the toolbar. To do so, set [AllowConditionalFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowConditionalFormatting) and [ShowToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowToolbar) properties in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. Also, include the item [ToolbarItems.ConditionalFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ToolbarItems.html) within the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_Toolbar) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class. End user can now see the "Conditional Formatting" icon in toolbar UI automatically, which on clicking will invoke the formatting dialog to perform necessary operations.
+The conditional formatting can be applied at runtime through the built-in dialog, invoked from the toolbar. To do so, set the [AllowConditionalFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowConditionalFormatting) and [ShowToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowToolbar) properties in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. Also, include the item [ToolbarItems.ConditionalFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ToolbarItems.html) within the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_Toolbar) property in the [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class. End user can now see the "Conditional Formatting" icon in toolbar UI automatically, which on clicking will invoke the formatting dialog to perform necessary operations.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -62,7 +62,7 @@ The conditional formatting can be applied at runtime through the built-in dialog
 <br/>
 ![Displaying Conditional Format in Blazor PivotGrid](images/blazor-pivotgrid-with-conditional-format.png)
 
-Conditional formatting can also be included in the pivot table through code-behind using the [PivotViewConditionalFormatSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalFormatSetting.html) class. The required properties to apply a new conditional formatting are,
+Conditional formatting can also be included in the pivot table through the code-behind using the [PivotViewConditionalFormatSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalFormatSetting.html) class. The required properties to apply a new conditional formatting are,
 
 * [Measure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewConditionalFormatSetting_Measure): Specifies the value field name for which style will be applied.
 * [Conditions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewConditionalFormatSetting_Conditions): Specifies the operator type such as equals, greater than, less than, etc.
@@ -77,7 +77,7 @@ The available style properties in [PivotViewStyle](https://help.syncfusion.com/c
 * [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewStyle.html#Syncfusion_Blazor_PivotView_PivotViewStyle_FontFamily): Specifies the font family.
 * [FontSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewStyle.html#Syncfusion_Blazor_PivotView_PivotViewStyle_FontSize): Specifies the font size.
 
-Meanwhile, user can also view conditional formatting dialog in UI by invoking [ShowConditionalFormattingDialogAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowConditionalFormattingDialog) method on an external button click which is shown in the below code sample.
+Meanwhile, user can also view conditional formatting dialog in UI by invoking [ShowConditionalFormattingDialogAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowConditionalFormattingDialog) method on an external button click.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -139,7 +139,7 @@ Meanwhile, user can also view conditional formatting dialog in UI by invoking [S
 
 ## Conditional formatting for all fields
 
-Allows end user to apply conditional formatting commonly for all value fields just by ignoring the [Measure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewConditionalFormatSetting_Measure) property and setting rest of the properties in [PivotViewConditionalFormatSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalFormatSetting.html) class.
+It allows end user to apply conditional formatting commonly for all value fields just by ignoring the [Measure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewConditionalFormatSetting_Measure) property and setting rest of the properties in [PivotViewConditionalFormatSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalFormatSetting.html) class.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -184,11 +184,11 @@ Allows end user to apply conditional formatting commonly for all value fields ju
 
 ```
 
-![Appkying Conditonal Format to Value Field in Blazor PivotTable](images/blazor-pivottable-conditional-format.png)
+![Applying Conditonal Format to Value Field in Blazor PivotTable](images/blazor-pivottable-conditional-format.png)
 
 ## Conditional formatting for specific value field
 
-Allows end user to apply conditional formatting to a specific value field by setting the [Measure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewConditionalFormatSetting_Measure) property with specific value field name in [PivotViewConditionalFormatSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalFormatSetting.html) class.
+It allows the end user to apply conditional formatting to a specific value field by setting the [Measure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewConditionalFormatSetting_Measure) property with specific value field name in [PivotViewConditionalFormatSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalFormatSetting.html) class.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -237,8 +237,8 @@ Allows end user to apply conditional formatting to a specific value field by set
 
 ## Editing and removing existing conditional format
 
-Editing and removing existing conditional format can be done through the UI at runtime. To do so, open the conditional formatting dialog and edit the "Value", "Condition" and "Format" options based on user requirement and click "OK". To remove a conditional format, click the "Delete" icon besides the respective condition.  
+Editing and removing existing conditional format can be done through the UI at runtime. To do so, open the conditional formatting dialog and edit the "Value", "Condition" and "Format" options based on the user requirement and click "OK". To remove a conditional format, click the "Delete" icon besides the respective condition.  
 
 ![Editing Existed Conditional Format in Blazor PivotTable](images/blazor-pivottable-edit-conditional-format.png)
 
-> You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.
+> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.

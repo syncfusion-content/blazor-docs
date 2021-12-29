@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about Filtering in Syncfusion Blazor Pivot Table component and much more.
+description: Checkout and learn here all about filtering in Syncfusion Blazor Pivot Table component and much more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 # Filtering in Blazor Pivot Table Component
 
-Filtering allows to view the pivot table with selective records based on members that can be either included or excluded through UI and code-behind.
+Filtering allows to view the pivot table with selective records based on the members that can be either included or excluded through UI and code-behind.
 
 The following are the three different types of filtering:
 
@@ -23,7 +23,7 @@ The following are the three different types of filtering:
 
 ## Member filtering
 
-Allows to view the pivot table with selective records based on included and excluded members in each field. By default, member filter option is enabled by the [AllowMemberFilter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html#Syncfusion_Blazor_PivotView_DataSourceSettingsModel_1_AllowMemberFilter) boolean property in [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class. This UI option helps end user to filter members by clicking the filter icon besides any field in the row, column and filter axes available in the field list or grouping bar UI at runtime.
+It allows to view the pivot table with selective records based on the included and excluded members in each field. By default, member filter option is enabled by the [AllowMemberFilter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html#Syncfusion_Blazor_PivotView_DataSourceSettingsModel_1_AllowMemberFilter) boolean property in [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class. This UI option helps end user to filter members by clicking the filter icon besides any field in the row, column and filter axes available in the field list or grouping bar UI at runtime.
 
 ![Number Filtering in Blazor PivotTable](images/blazor-pivottable-field-list-with-filter-icon.png)
 <br/>
@@ -38,7 +38,7 @@ Meanwhile filtering can also be configured at code behind using the [PivotViewFi
 * [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSetting.html#Syncfusion_Blazor_PivotView_PivotViewFilterSetting_Name): It allows to set the appropriate field name.
 * [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSetting.html#Syncfusion_Blazor_PivotView_PivotViewFilterSetting_Type): It allows to set the filter type as [FilterType.Include](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FilterType.html) or [FilterType.Exclude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FilterType.html) to include or exclude field members respectively.
 * [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSetting.html#Syncfusion_Blazor_PivotView_PivotViewFilterSetting_Items): It allows to set the members which needs to be either included or excluded from display.
-* [LevelCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSetting.html#Syncfusion_Blazor_PivotView_PivotViewFilterSetting_LevelCount): It allows to set level count of the field to fetch data from the cube. **NOTE: This property applicable only for OLAP data source.**
+* [LevelCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSetting.html#Syncfusion_Blazor_PivotView_PivotViewFilterSetting_LevelCount): It allows to set level count of the field to fetch data from the cube. **NOTE: This property is applicable only for OLAP data source.**
 
 > When specifying unavailable or inappropriate members to include or exclude filter items collection, they will be ignored.
 
@@ -106,7 +106,7 @@ User can sort members within the member editor either to ascending (or) descendi
 
 ### Performance Tips
 
-In member filter dialog, end user can set the limit to display members while loading large data. Based on this limit, initial loading will get completed quickly without any performance constraint. Also, a message with remaining member count, which are not part of the UI, will be displayed in the member editor.
+In member filter dialog, end user can set the limit to display members while loading large data. Based on this limit, initial loading will get completed quickly without any performance constraint. Also, a message with remaining member count, which are not a part of the UI, will be displayed in the member editor.
 
 The data limit can be set using the [MaxNodeLimitInMemberEditor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_MaxNodeLimitInMemberEditor) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class. By default, the property holds the numeric value **1000**.
 

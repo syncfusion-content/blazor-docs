@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Pivot Table component and more.
+description: Checkout and learn here all about accessibility in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -63,11 +63,11 @@ Interaction Keys |Description
 Interaction Keys |Description
 -----|-----
 <kbd>Shift + Ctrl + F</kbd> |If the popup field list is enabled in either the pivot table or the pivot chart, the field list dialog will be opened.
-<kbd>Tab</kbd> |Moves to the next active element in the field list. If no active elements present, it moves to the next active element in the browser page.
-<kbd>Shift + Tab</kbd> |Moves to the previous active element in the field list. If no active elements present, it moves to the previous active element in the browser page.
+<kbd>Tab</kbd> |Moves to the next active element in the field list. If no active elements are present, it moves to the next active element in the browser page.
+<kbd>Shift + Tab</kbd> |Moves to the previous active element in the field list. If no active elements are present, it moves to the previous active element in the browser page.
 <kbd>Shift + F</kbd> |If the current active element is a field's button and if it has a filter icon, the filter dialog will open to perform filtering.
 <kbd>Shift + S</kbd> |If the current active element is a field's button and if it has a sort icon, the sorting will be performed to the selected field.
-<kbd>Shift + E</kbd> |If the current active element is a calculated field's button and if it has an edit icon, the calculated field dialog will be opened to perform editing the selected calculated field.
+<kbd>Shift + E</kbd> |If the current active element is a calculated field's button and if it has an edit icon, the calculated field dialog will be opened to edit the selected calculated field.
 <kbd>Enter</kbd> |Performs the selection operation of the current active element. If the current active element is a field's button and it has a dropdown icon, the aggregation menu will open to perform calculations using aggregation options to the selected value field.
 <kbd>Delete</kbd> |If the current active element is a field's button, the selected field will be removed from the current report.
 <kbd>DownArrow</kbd> |If the current active element is a tree node, it moves to the next node.
@@ -83,8 +83,8 @@ Interaction Keys |Description
 
 Interaction Keys |Description
 -----|-----
-<kbd>Tab</kbd> |Moves to the next active element (field's button) in the grouping bar. If no active elements present, it moves to the next active element in the browser page.
-<kbd>Shift + Tab</kbd> |Moves to the previous active element (field's button) in the grouping bar. If no active elements present, it moves to the previous active element in the browser page.
+<kbd>Tab</kbd> |Moves to the next active element (field's button) in the grouping bar. If no active elements are present, it moves to the next active element in the browser page.
+<kbd>Shift + Tab</kbd> |Moves to the previous active element (field's button) in the grouping bar. If no active elements are present, it moves to the previous active element in the browser page.
 <kbd>Shift + F</kbd> |If the current active element is a field's button and if it has a filter icon, the filter dialog will be opened to perform filtering.
 <kbd>Shift + S</kbd> |If the current active element is a field's button and if it has a sort icon, the sorting will be performed to the selected field.
 <kbd>Shift + E</kbd> |If the current active element is a calculated field's button and if it has an edit icon, the calculated field dialog will be opened to perform editing the selected calculated field.
@@ -161,7 +161,7 @@ Interaction Keys |Description
 Interaction Keys |Description
 -----|-----
 <kbd>Tab</kbd> |Moves to the next active element in the drill-through dialog. If the current active element is a Grid cell, it moves the cell focus to right side. If no active elements present, then it moves to the next active element in the browser page.
-<kbd>Shift + Tab</kbd> |Moves to the previous active element in the drill-through dialog. If the current active element is a Grid cell, it moves the cell focus to left side, If no active elements present, then it moves to the previous active element in the browser page.
+<kbd>Shift + Tab</kbd> |Moves to the previous active element in the drill-through dialog. If the current active element is a Grid cell, it moves the cell focus to left side. If no active elements present, then it moves to the previous active element in the browser page.
 <kbd>DownArrow</kbd> |Moves the row/cell focus downwards.
 <kbd>UpArrow</kbd> |Moves the row/cell focus upwards.
 <kbd>LeftArrow</kbd> |Moves the cell focus left side.
@@ -171,7 +171,7 @@ Interaction Keys |Description
 <kbd>Ctrl + Home</kbd> |Goes to the first cell in the table.
 <kbd>Ctrl + End</kbd> |Goes to the last cell in the table.
 <kbd>Enter</kbd> |Performs the selection operation of the current active element.
-<kbd>Esc or Escape</kbd> |If the cell is in selected state, the it deselects all rows/cells. If the row/cell is in edit state, it cancels the current entries in the row/cell. If the current active element is not a row/cell, it closes the drill-through dialog.
+<kbd>Esc or Escape</kbd> |If the cell is in selected state, then it deselects all rows/cells. If the row/cell is in edit state, it cancels the current entries in the row/cell. If the current active element is not a row/cell, it closes the drill-through dialog.
 <kbd>F2</kbd> |Initiate editing a row/cell in the data grid.
 <kbd>Insert</kbd> |Adds a new row/cell in the data grid.
 <kbd>Delete</kbd> |Removes the selected row in the data grid.
@@ -186,4 +186,4 @@ Interaction Keys |Description
 <kbd>Enter</kbd> |When the Dialog button or any input (except text area) is in focus state, when pressing the <kbd>Enter</kbd> key, the click event associated with the primary button or button will be triggered. The <kbd>Enter</kbd> key will not be worked, when the dialog content contains any text area with initial focus.
 <kbd>Esc or Escape</kbd> |Closes the dialog.
 
-> You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.
+> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.

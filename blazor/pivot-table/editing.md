@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Editing in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about Editing in Syncfusion Blazor Pivot Table component and much more details.
+description: Checkout and learn here all about editing in Syncfusion Blazor Pivot Table component and much more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -194,7 +194,7 @@ An additional column appended in the data grid layout holds the command buttons 
 
 ## Inline Editing
 
-Allows editing of a value cell directly without the use of an external edit dialog. It is applicable if and only if a single raw data is used for the value of the cell. It is applicable to all editing modes, such as normal, batch, dialog and column commands. It can be enabled by setting the [AllowInlineEditing`] property in [PivotViewCellEditSettings`] to `true`.
+It allows editing of a value cell directly without the use of an external edit dialog. It is applicable if and only if a single raw data is used for the value of the cell. It is applicable to all editing modes, such as normal, batch, dialog and column commands. It can be enabled by setting the `AllowInlineEditing` property in `PivotViewCellEditSettings` to `true`.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -280,4 +280,4 @@ Users can also add, delete, or update the underlying raw items of any data point
 <br/>
 ![Dialog Editing in Blazor PivotChart](images/blazor-pivotchart-editing-dialog.png)
 
-> You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.
+> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
