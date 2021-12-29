@@ -180,7 +180,7 @@ documentation: ug
 
     Open the browser dev tool by pressing the `F12` key and navigate to the `Console` tab.
 
-    Check the console error with the following topics to resolve the issue or report us the console error through our [support ticket](https://support.syncfusion.com/).
+    Check the console error with the following topics to resolve the issue or report us the console error through our [support ticket](https://www.syncfusion.com/support/directtrac/incidents/newincident).
 
 * **Unhandled exception rendering component: Could not find 'loadScripts' in 'window.sfBlazor'.**
 
