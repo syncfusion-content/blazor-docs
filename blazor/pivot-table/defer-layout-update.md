@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Defer Layout Update in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about Defer Layout Update in Syncfusion Blazor Pivot Table component and more.
+description: Checkout and learn here all about defer layout update in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Defer Layout Update in Blazor Pivot Table Component
 
-Defer layout update support allows to update the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component only on demand. On enabling this feature, end user can drag-and-drop fields between row, column, value and filter axes, apply sorting and filtering inside the Field List, resulting in change of pivot report alone but not the pivot table values. Once all operations are performed and on clicking the "Apply" button in the Field List, pivot table will start to update with the last modified report. This also helps in bringing better performance in pivot table component rendering.
+Defer layout update support allows to update the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component only on demand. On enabling this feature, end user can drag-and-drop fields between row, column, value and filter axes, apply sorting and filtering inside the Field List, resulting in change of pivot report alone but not the pivot table values. Once all the operations are performed and on clicking the "Apply" button in the Field List, pivot table will start to update with the last modified report. This also helps in bringing better performance in pivot table component rendering.
 
 The field list can be displayed in two different formats to interact with pivot table. They are:
 
@@ -58,7 +58,7 @@ To enable deferred updates in the pivot table, set the property [AllowDeferLayou
 
 ## Stand-alone Field List (Fixed)
 
-The field list can be rendered in a static position, anywhere in web page layout, like a separate component. To do so, you need to set [RenderMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html#Syncfusion_Blazor_PivotView_SfPivotFieldList_1_RenderMode) property to [Mode.Fixed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Mode.html) in [SfPivotFieldList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html).
+The field list can be rendered in a static position, anywhere in a web page layout, like a separate component. To do so, you need to set [RenderMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html#Syncfusion_Blazor_PivotView_SfPivotFieldList_1_RenderMode) property to [Mode.Fixed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.Mode.html) in [SfPivotFieldList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html).
 
 To enable deferred updates in the static fieldlist, set the property [AllowDeferLayoutUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html#Syncfusion_Blazor_PivotView_SfPivotFieldList_1_AllowDeferLayoutUpdate) in [SfPivotFieldlist](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotFieldList-1.html) as **true**. To make a note, the defer update option can be controlled only via Field List during runtime.
 
@@ -121,4 +121,4 @@ To enable deferred updates in the static fieldlist, set the property [AllowDefer
 
 ![Blazor PivotTable with Defer Static Update](images/blazor-pivottable-defer-static-update.png)
 
-> You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.
+> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
