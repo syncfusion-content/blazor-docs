@@ -30,7 +30,7 @@ To change the pointer value dynamically, use the [SetPointerValue](https://help.
     <LinearGaugeAxes>
         <LinearGaugeAxis>
             <LinearGaugePointers>
-                <LinearGaugePointer Value="10"></LinearGaugePointer>
+                <LinearGaugePointer PointerValue="10"></LinearGaugePointer>
             </LinearGaugePointers>
         </LinearGaugeAxis>
     </LinearGaugeAxes>
@@ -95,7 +95,7 @@ The [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Linea
     <LinearGaugeAxes>
         <LinearGaugeAxis>
             <LinearGaugePointers>
-                <LinearGaugePointer Value="10"></LinearGaugePointer>
+                <LinearGaugePointer PointerValue="10"></LinearGaugePointer>
             </LinearGaugePointers>
         </LinearGaugeAxis>
     </LinearGaugeAxes>

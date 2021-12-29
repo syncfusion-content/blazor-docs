@@ -18,6 +18,9 @@ You can add a title to the Circular Gauge using the [Title](https://help.syncfus
 
 <SfCircularGauge Title="Speedometer">
     <CircularGaugeTitleStyle Color="blue" FontWeight="bold" Size="25"></CircularGaugeTitleStyle>
+    <CircularGaugeAxes>
+        <CircularGaugeAxis></CircularGaugeAxis>
+    </CircularGaugeAxes>
 </SfCircularGauge>
 ```
 

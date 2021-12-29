@@ -149,10 +149,11 @@ The appearance of the needle pointer can be customized by using [NeedleStartWidt
     }
 </style>
 ```
+![Blazor Circular Gauge with Needle Width Customization](./images/blazor-circulargauge-range-bar-pointer.png)
 
 ## Range bar pointer
 
-The range bar pointer is like a range in an axis that can be placed on gauge to mark the pointer value. The range bar starts from the beginning of the gauge and ends at the pointer value. You can set the pointer type using `Type` property in `CircularGaugePointer`.
+The range bar pointer is like a range in an axis that can be placed on gauge to mark the pointer value. The range bar starts from the beginning of the gauge and ends at the pointer value. You can set the pointer type using [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Type) property in [`CircularGaugePointer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html).
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -208,7 +209,7 @@ You can customize the range bar using the following properties.
 
 ### Rounded corners
 
-The start and end pointers of a range bar in the Circular Gauge are rounded to form arc using the `RoundedCornerRadius` property.
+The start and end pointers of a range bar in the Circular Gauge are rounded to form arc using the [`RoundedCornerRadius`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_RoundedCornerRadius) property.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -378,9 +379,9 @@ In addition to the default pointer, you can add n number of pointers to an axis 
                     </CircularGaugeNeedleTail>
                 </CircularGaugePointer>
             </CircularGaugePointers>
-            <CircularGaugeAxisLabelStyle UseRangeColor="true">
+            <CircularGaugeAxisLabelStyle>
             </CircularGaugeAxisLabelStyle>
-            <CircularGaugeAxisMinorTicks UseRangeColor="true"></CircularGaugeAxisMinorTicks>
+            <CircularGaugeAxisMinorTicks></CircularGaugeAxisMinorTicks>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
@@ -395,7 +396,7 @@ The pointers are animated on loading the gauge using the [CircularGaugePointerAn
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
-<SfCircularGauge Height="250" Width="250">
+<SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis>
             <CircularGaugePointers>
