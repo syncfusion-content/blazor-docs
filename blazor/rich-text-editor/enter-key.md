@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Enter and Shift-Enter Key's Customization in Blazor RichTextEditor Component | Syncfusion
+title: Enter Key Customization in Blazor RichTextEditor | Syncfusion
 description: Checkout and learn here all about the enter key and shift + enter key customization feature in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Enter and Shift-Enter Key's Customization in Blazor RichTextEditor Component
+# Enter and Shift-Enter Key's Customization in Blazor RichTextEditor
 
 The Rich Text Editor allows to customize the tag that is inserted when pressing the enter key and shift + enter key in the Rich Text Editor.
 
