@@ -41,14 +41,13 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the Blazor Server App.
+Now, register the Syncfusion Blazor Service in the Blazor Server App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` to load the scripts externally in the [next steps](#add-script-reference).
+
 * For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 * For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 
-Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` to load the scripts externally in the [next steps](#add-script-reference).
-
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="10" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="9" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -64,7 +63,7 @@ var app = builder.Build();
 ....
 
 {% endhighlight %}
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="11" %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="12" %}
 
 using Syncfusion.Blazor;
 
