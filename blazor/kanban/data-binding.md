@@ -66,6 +66,11 @@ Kanban is a generic component that is strongly bound to a model type.  In some c
 
 ExpandoObject can be bound to Kanban by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) property. Kanban can also perform all kinds of supported data operations and editing in ExpandoObject.
 
+To get start quickly with Blazor Kanban component using ExpandoObject and DynamicObject binding, you can check on this video
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=qkm_zPW3MSk" %}
+
 ```cshtml
 @using Syncfusion.Blazor.Kanban
 @using System.Dynamic

@@ -59,6 +59,7 @@ builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation 
 await builder.Build().RunAsync();
 ....
 {% endhighlight %}
+
 {% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="10" %}
 using Syncfusion.Blazor;
 
@@ -126,7 +127,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 {% tabs %}
 {% highlight razor %}
 
-    <SfCalendar TValue="DateTime" />
+<SfCalendar TValue="DateTime" />
 
 {% endhighlight %}
 {% endtabs %}
