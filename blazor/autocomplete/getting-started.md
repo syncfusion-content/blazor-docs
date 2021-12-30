@@ -100,7 +100,7 @@ namespace BlazorApplication
 Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="11" %}
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -118,7 +118,7 @@ await builder.Build().RunAsync();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="10" %}
 
 using Syncfusion.Blazor;
 
@@ -148,7 +148,7 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 
 * For **.NET 6** app, add the Syncfusion bootstrap5 theme in the `<head>` element of the **~/Pages/_Layout.cshtml** file.
 
-* For **.NET 5 and .NET 3.X** app, add the Syncfusion bootstrap5 theme in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+* For **.NET 5 and .NET 3.X** app, add the Syncfusion bootstrap5 theme in the `<head>` element of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
 {% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
@@ -170,7 +170,7 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 
 ### Blazor WebAssembly App
 
-The theme style sheet from NuGet can be referred inside the `<head>` of **wwwroot/index.html** file of client web app.
+The theme style sheet from NuGet can be referred inside the `<head>` of **wwwroot/index.html** file in the client web app.
 
 {% tabs %}
 {% highlight html tabtitle="wwwroot/index.html" %}
