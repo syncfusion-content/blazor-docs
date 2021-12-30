@@ -11,7 +11,7 @@ documentation: ug
 
 ## Events
 
-Diagram provides some events support for node that triggers when interacting the node.
+Diagram provides some events support for node that triggers when interacting with the node.
 
 ## Selection change
 
@@ -35,7 +35,7 @@ The following code example explains how to get the selection change event in the
 
 @code
 {
-    // To define node collection
+    // To define node collection.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -44,10 +44,10 @@ The following code example explains how to get the selection change event in the
         // A node is created and stored in nodes collection.
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             // Apperence of the node
@@ -57,21 +57,21 @@ The following code example explains how to get the selection change event in the
                 StrokeColor = "white" 
             }
         };
-        // Add node
+        // Add node.
         nodes.Add(node);
     }
 
-    // Event to notify the selection changing event before select/unselect the diagram elements
+    // Event to notify the selection changing event before selecting/unselecting the diagram elements.
     public void OnSelectionChanging(SelectionChangingEventArgs args)
     {
-        // sets true to cancel the selection.
+        // Sets true to cancel the selection.
         args.Cancel = true;
     }
 
-    // Event to notify the selection changed event after select/unselect the diagram elements.
+    // Event to notify the selection changed event after selecting/unselecting the diagram elements.
     public void OnSelectionChange(SelectionChangedEventArgs args)
     {
-        // Action to be performed
+        // Action to be performed.
     }
 }
 ```
@@ -96,7 +96,7 @@ The following code example explains how to get the selection change event in the
 
 @code
 {
-    // To define node collection
+    // To define node collection.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -105,10 +105,10 @@ The following code example explains how to get the selection change event in the
         // A node is created and stored in nodes collection.
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() 
@@ -118,7 +118,7 @@ The following code example explains how to get the selection change event in the
             },
             Shape = new Shape() { Type = Shapes.Basic}
         };
-        // Add node
+        // Add node.
         nodes.Add(node);
     }
 
@@ -156,7 +156,7 @@ The following code example explains how to get the selection change event in the
 
 @code
 {
-    // To define node collection
+    // To define node collection.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -165,10 +165,10 @@ The following code example explains how to get the selection change event in the
         // A node is created and stored in nodes collection.
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() 
@@ -177,11 +177,11 @@ The following code example explains how to get the selection change event in the
                 StrokeColor = "white" 
             }
         };
-        // Add node
+        // Add node.
         nodes.Add(node);
     }
 
-    // Event to notify the Size changing event before the digram elements size is changing.
+    // Event to notify the Size changing event before the diagram elements size is changed.
     public void OnSizeChanging(SizeChangingEventArgs args)
     {
         // Sets true to cancel the resize action
@@ -203,7 +203,7 @@ The following code example explains how to get the selection change event in the
 
 |Event Name|Arguments|Description|
 |------------|----------|-------------------------|
-|[RotationChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanging)|[RotationChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RotationChangingEventArgs.html)|Triggers before the diagram elements are rotate.|
+|[RotationChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanging)|[RotationChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RotationChangingEventArgs.html)|Triggers before the diagram elements are rotated.|
 |[RotationChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanged)|[RotationChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RotationChangedEventArgs.html)|Triggers when the diagram elements are rotated.|
 
 ```cshtml
@@ -216,7 +216,7 @@ The following code example explains how to get the selection change event in the
 
 @code
 {
-    // To define node collection
+    // To define node collection.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -225,10 +225,10 @@ The following code example explains how to get the selection change event in the
         // A node is created and stored in nodes collection.
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() 
@@ -237,11 +237,11 @@ The following code example explains how to get the selection change event in the
                 StrokeColor = "white" 
             }
         };
-        // Add node
+        // Add node.
         nodes.Add(node);
     }
 
-    // Event to notify the rotation changing event before the node is rotate.
+    // Event to notify the rotation changing event before the node is rotated.
     public void OnRotateChanging(RotationChangingEventArgs args)
     {
         // Sets true to cancel the rotation
@@ -262,8 +262,8 @@ The Constraints property of node allows you to enable or disable certain feature
 
 ## See also
 
-* [How to interact the node in diagram](./interaction)
+* [How to interact with the node in diagram](./interaction)
 
-* [How to get events when they interact the connector](../connectors/events)
+* [How to get events when they interact with the connector](../connectors/events)
 
-* [How to get events when they interact the annotation](../annotations/events)
+* [How to get events when they interact with the annotation](../annotations/events)
