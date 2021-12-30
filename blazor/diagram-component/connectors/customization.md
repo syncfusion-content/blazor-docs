@@ -11,7 +11,7 @@ documentation: ug
 
 ## Decorator
 
-Diagram allows you to customize the connector appearances . The following topics shows how to customize several properties of the connectors.
+Diagram allows you to customize the connector appearances. The following topics shows how to customize several properties of the connectors.
 
 * Starting and ending points of a connector can be decorated with some customizable shapes like arrows, circles, diamond, or path. The connection end points can be decorated with the [SourceDecorator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourceDecorator) and [TargetDecorator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetDecorator) properties of the connector.
 
@@ -29,7 +29,7 @@ Diagram allows you to customize the connector appearances . The following topics
 
 @code
 {
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
@@ -69,11 +69,11 @@ Diagram allows you to customize the connector appearances . The following topics
 
 ### Decorator appearance
 
-* The source decorator’s [StrokeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeColor), [StrokeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeWidth) and [StrokeDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeDashArray) properties are used to customize the color, width, and appearance of the decorator.
+* The source decorator’s [StrokeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeColor), [StrokeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeWidth), and [StrokeDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeDashArray) properties are used to customize the color, width, and appearance of the decorator.
 
 * To set the border stroke color, stroke width, and stroke dash array for the target decorator, use StrokeColor, StrokeWidth, and StrokeDashArray.
 
-* To set the size for source and target decorator, use [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Height) property.
+* To set the size for source and target decorator, use [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Height) properties.
 
 The following code example illustrates how to customize the appearance of the decorator.
 
@@ -155,9 +155,9 @@ Padding is used to leave the space between the Connector's end point and the obj
 
 @code
 {
-    //Defines diagram's nodes collection
+    //Defines diagram's nodes collection.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
@@ -214,7 +214,7 @@ Padding is used to leave the space between the Connector's end point and the obj
 
 ## Bridging
 
-Line bridging creates a bridge for lines to smartly cross over the other lines, at points of intersection. By default,[BridgeDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BridgeDirection) is set to [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Top). Depending upon the direction given bridging direction appears. Bridging can be enabled/disabled either with the [Connector.Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html) or [Diagram.Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html). The following code example illustrates how to enable line bridging.
+Line bridging creates a bridge for lines to smartly cross over the other lines, at points of intersection. By default, [BridgeDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BridgeDirection) is set to [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Top). Depending upon the direction given bridging direction appears. Bridging can be enabled/disabled either with the [Connector.Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html) or [Diagram.Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html). The following code example illustrates how to enable line bridging.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -232,7 +232,7 @@ Line bridging creates a bridge for lines to smartly cross over the other lines, 
         Connector Connector1 = new Connector()
         {
             ID = "connector1",
-            // Bridge space value has been defined
+            // Bridge space value has been defined.
             BridgeSpace = 20,
             Style = new ShapeStyle()
             {
@@ -339,7 +339,7 @@ Corner radius allows to create connectors with rounded corners. The radius of th
                 X = 200,
                 Y = 200
             },
-            //specify the corner radius value.
+            //Specify the corner radius value.
             CornerRadius = 10,
             Type = ConnectorSegmentType.Orthogonal,
             TargetDecorator = new DecoratorSettings()
@@ -364,9 +364,9 @@ Corner radius allows to create connectors with rounded corners. The radius of th
 
 * The connector’s [StrokeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeWidth), [StrokeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeColor), [StrokeDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeDashArray), and [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_Opacity) properties are used to customize the appearance of the connector segments.
 
-* The [IsVisible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_IsVisible) property of the connector indicating whether the connector is visible in the user interface
+* The [IsVisible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_IsVisible) property of the connector indicates whether the connector is visible in the user interface or not.
 
-* Default values for all the [Connectors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html) can be set by using the [ConnectorCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectorCreating) event callback method. For example, if all connectors have the same type or having the same property then such properties can be moved into ConnectorCreating.
+* Default values for all the [Connectors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html) can be set by using the [ConnectorCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectorCreating) event callback method. For example, if all connectors have the same type or property then such properties can be moved into ConnectorCreating.
 
 ### Segment appearance
 
@@ -426,7 +426,7 @@ The following code example illustrates how to customize the segment appearance.
 
 * To set the border stroke color, stroke width, and stroke dash array for the target decorator, use StrokeColor, StrokeWidth, and StrokeDashArray.
 
-* To set the size for source and target decorator, use [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Height) property.
+* To set the size for source and target decorator, use [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Height) properties.
 
 The following code example illustrates how to customize the appearance of the decorator.
 
@@ -539,7 +539,7 @@ The following code illustrates how to disable selection.
                 StrokeColor = "black",
                 StrokeWidth = 1
             },
-            //Disable the select constraint
+            //Disable the select constraint.
             Constraints = ConnectorConstraints.Default & ~ConnectorConstraints.Select,
         };
         connectors.Add(Connector);
@@ -549,7 +549,7 @@ The following code illustrates how to disable selection.
 
 ## Custom properties
 
-* The [AdditionalInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_AdditionalInfo) property of connector allow you to maintain additional information to the connectors.
+* The [AdditionalInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_AdditionalInfo) property of connector allows you to maintain additional information to the connectors.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -604,7 +604,7 @@ The following code illustrates how to disable selection.
 
 ## See also
 
-* [How to interact the connector](./interactions)
+* [How to interact with the connector](./interactions)
 
 * [How to change the segments](./segments)
 

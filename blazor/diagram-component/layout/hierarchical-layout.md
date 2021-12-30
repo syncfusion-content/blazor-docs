@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Hierarchical layout in Blazor Diagram Component
+# Hierarchical Layout in Blazor Diagram Component
 
 The hierarchical tree layout arranges nodes in a tree-like structure, where the nodes in the hierarchical layout may have multiple parents. There is no need to specify the layout root. To arrange the nodes in a hierarchical structure, specify the layout [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) as [HierarchicalTree](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_HierarchicalTree). The following example shows how to arrange the nodes in a hierarchical structure.
 
@@ -39,7 +39,7 @@ The hierarchical tree layout arranges nodes in a tree-like structure, where the 
         Node node = obj as Node;
         node.Height = 40;
         node.Width = 100;
-        //Initializing the default node's shape style
+        //Initializing the default node's shape style.
         node.Style = new ShapeStyle() { Fill = "darkcyan", StrokeWidth = 3, StrokeColor = "Black" };
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
         {
@@ -58,7 +58,7 @@ The hierarchical tree layout arranges nodes in a tree-like structure, where the 
 
     protected override void OnInitialized()
     {
-        //Initializing node and connectors
+        //Initializing node and connectors.
         nodes = new DiagramObjectCollection<Node>()
         {
             new Node() { ID="node1", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Steve-Ceo"} } },
@@ -89,37 +89,37 @@ The hierarchical tree layout arranges nodes in a tree-like structure, where the 
 
 ### Orientation
 
-You can use [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) property of the Layout to change the orientation at runtime. The following code is used to how to change the layout.
+You can use [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) property of the Layout to change the orientation at runtime. The following code shows how to change the layout.
 
 ```csharp
 <SfDiagramComponent Height="600px" Width="500px" >
     <Layout Type="LayoutType.HierarchicalTree" @bind-Orientation="@orientation"></Layout>
 </SfDiagramComponent>
 
-// Initializing the orientation value
+// Initializing the orientation value.
 LayoutOrientation orientation = LayoutOrientation.TopToBottom;
 
 public void UpdateOrientation()
 {
-    // Update LayoutOrientation in runtime
+    // Update LayoutOrientation in runtime.
     orientation = LayoutOrientation.BottomToTop;
 }
 ```
 
 ### Spacing
 
-You can change the horizontal and vertical spacing for the diagram layout by using [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing) properties of the layout.
+You can change the horizontal and vertical spacing for the diagram layout by using the [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing) properties of the layout.
 
 ```csharp
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
     <Layout Type="LayoutType.HierarchicalTree" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing"/>
 </SfDiagramComponent>
 
-// Initializing the Horizontal and Vertical value
+// Initializing the Horizontal and Vertical value.
 int HorizontalSpacing = 40;
 int VerticalSpacing = 50;
 
-// Update the spacing
+// Update the spacing.
 public void UpdateSpacing()
 {
     Diagram.BeginUpdate();
@@ -131,7 +131,7 @@ public void UpdateSpacing()
 
 ### Margin
 
-You can also change the margin values for the diagram layout by using [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Margin) property.
+You can also change the margin values for the diagram layout by using the [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Margin) property.
 
 ```csharp
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px" >
@@ -140,11 +140,11 @@ You can also change the margin values for the diagram layout by using [Margin](h
   </Layout>
 </SfDiagramComponent>
 
-// Initializing the Mergin Top and Left value
+// Initializing the Margin Top and Left value.
 int left = 40;
 int top = 50;
 
-// Update the margin values
+// Update the margin values.
 public void UpdateMargin()
 {
     Diagram.BeginUpdate();
