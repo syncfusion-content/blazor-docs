@@ -79,7 +79,7 @@ var app = builder.Build();
 ....
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs") hl_lines="12" %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="12" %}
 
 using Syncfusion.Blazor;
 
