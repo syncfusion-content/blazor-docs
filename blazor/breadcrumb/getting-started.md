@@ -34,7 +34,7 @@ To add Blazor Breadcrumb component in the app, open the NuGet package manager in
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="~/Imports.razor" %}
 
 @using Syncfusion.Blazor
 
@@ -168,7 +168,7 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 The theme style sheet from NuGet can be referred inside the `<head>` element of **wwwroot/index.html** file in the client web app.
 
 {% tabs %}
-{% highlight html tabtitle="wwwroot/index.html" %}
+{% highlight html tabtitle="~/index.html" %}
 
 <head>
     ...
@@ -211,7 +211,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 ### Blazor WebAssembly App
 
 {% tabs %}
-{% highlight html tabtitle="wwwroot/index.html" %}
+{% highlight html tabtitle="~/index.html" %}
 
 <head>
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
@@ -228,7 +228,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Navigations` namespace.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="~/Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Navigations

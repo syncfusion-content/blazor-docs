@@ -19,7 +19,9 @@ This article provides a step-by-step instructions for building Blazor Server App
 
 ## Create a Blazor Server Side App in Visual Studio for Mac
 
-You can create **Blazor Server App** in Visual Studio. Refer [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=macos).
+You can create **Blazor Server App** using in Visual Studio for mac by the following way.
+
+* [Create a project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=macos)
 
 ## Install Syncfusion Blazor Packages in the App
 
@@ -70,7 +72,7 @@ Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/a
 To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred inside the `<head>` of the **~/Pages/_Host.cshtml** page.
 
 {% tabs %}
-{% highlight cshtml tabtitle="~/Pages/_Host.cshtml" %}
+{% highlight cshtml tabtitle="~/_Host.cshtml" %}
 
 <head>
     ....
@@ -85,7 +87,7 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referenced externally inside the `<head>` as follows,
 
 {% tabs %}
-{% highlight cshtml tabtitle="~/Pages/_Host.cshtml" %}
+{% highlight cshtml tabtitle="~/_Host.cshtml" %}
 
 <head>
     ....
@@ -121,7 +123,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 {% endhighlight %}
 {% endtabs %}
 
-* <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
+* <kbd>⌘</kbd>+<kbd>F5</kbd> to run the app. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
 
 ![Blazor Calendar Component](images/mac-output.png)
 
