@@ -300,11 +300,11 @@ The following shows selection and deselection of row
 
 ## Drag selection
 
-The Drag selection allows to perform the selection of the particular row or cell by performing mouse or touch dragging. To enable drag selection, set the [AllowDragSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#properties) property of the [GridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html) as true.
+The DataGrid allows to perform the drag selection of the particular row or cell by performing mouse or touch dragging. To enable drag selection, set the [AllowDragSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#properties) property of the [GridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html) as true.
 
-```csharp
-
+```cshtml
 @using Syncfusion.Blazor.Grids
+
 <SfGrid DataSource="@Orders" EnableHover="false" AllowSelection="true" AllowPaging="true">
     <GridSelectionSettings AllowDragSelection="true" Type="SelectionType.Multiple"></GridSelectionSettings>
     <GridColumns>
@@ -314,6 +314,7 @@ The Drag selection allows to perform the selection of the particular row or cell
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
+
 @code{
     public List<Order> Orders { get; set; }
     protected override void OnInitialized()
@@ -337,7 +338,7 @@ The Drag selection allows to perform the selection of the particular row or cell
 
 ![Drag Selection](images/drag-selection.gif)
 
-> * Drag selection supports both **Flow** and **Box** cell selection modes.
+> * Drag selection supports both ``Flow`` and ``Box`` cell selection modes.
 > * The selection [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property should be set as Multiple, to select multiple rows or cells in grid by mouse/touch dragging.
 > * Also, drag selection supports checkbox selection.
 
