@@ -9,11 +9,11 @@ documentation: ug
 
 # Overview Control in Blazor Diagram Component
 
-Overview control allows you to see a preview or an overall view of the entire content of a diagram. This helps you to look at the overall picture of a large diagram and to navigate, pan, or zoom, on a particular position of the page.
+Overview control allows you to see a preview or an overall view of the entire content of a diagram. This helps you to look at the overall picture of a large diagram and navigate, pan, or zoom on a particular position of the page.
 
-When you work on a very large diagram, you may not know the part you are working on, or navigation from one part to another might be difficult. One solution for navigation is to zoom out the entire diagram and find where you are. Then, you can zoom in an area you want to. This solution is not suitable when you need some frequent navigation.
+When you work on a very large diagram, you may not know the part you are working on, or navigation from one part to another might be difficult. One solution for navigation is to zoom out the entire diagram and find where you are. Then, you can zoom in on a specific area. This solution is not suitable when you need some frequent navigation.
 
-Overview control solves these problems by showing a preview, that is, an overall view of the entire diagram. A rectangle indicates viewport of the diagram. Navigation becomes easy by dragging this rectangle.
+Overview control solves these problems by showing a preview of the entire diagram. A rectangle indicates the viewport of the diagram. Navigation becomes easy by dragging this rectangle.
 
 ## Create overview
 
@@ -39,9 +39,9 @@ The following code illustrates how to create overview.
 @code
 {
 
-    //Defines diagram's nodes collection
+    //Defines diagram's nodes collection.
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     public ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>();
     //Defines the node default values.
     DiagramNode NodeDefaults = new DiagramNode()
@@ -73,10 +73,10 @@ The following code illustrates how to create overview.
             Shape = DecoratorShapes.None,
         }
     };
-    //Create the layout info
+    //Create the layout info.
     TreeInfo LayoutInfo = new TreeInfo()
     {
-        //Create the layout info
+        //Create the layout info.
         CanEnableSubTree = true,
         //Specify the sub-tree orientation
         Orientation = SubTreeOrientation.Horizontal
@@ -150,7 +150,7 @@ The following image shows how the diagram is zoomed/panned with overview.
 
 @code
 {
-    //Defines diagram's nodes collection
+    //Defines diagram's nodes collection.
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();
     
     protected override void OnInitialized()

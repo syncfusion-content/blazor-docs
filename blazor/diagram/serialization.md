@@ -17,7 +17,7 @@ The diagram is serialized as string while saving. The server-side method, [SaveD
 
 ```csharp
 SfDiagram Diagram;
-//returns serialized string of the Diagram
+//Returns serialized string of the Diagram.
 string Data = await  this.Diagram.SaveDiagram();
 ```
 
@@ -38,18 +38,17 @@ Diagram is loaded from the serialized string data by server-side method, [LoadDi
 ```csharp
 SfDiagram Diagram;
 
-//returns serialized string of the Diagram
+//Returns serialized string of the Diagram.
 string Data = await this.Diagram.SaveDiagram();
 
-//Loads the Diagram from saved json data
+//Loads the Diagram from saved json data.
 this.Diagram.LoadDiagram(this.Data);
 ```
 
 > Before loading a new diagram, existing diagram is cleared.
 
-## Prevent Default Values
-
-The diagram provides supports to simplifying the saved JSON object without adding the default properties that are presented in the diagram. The following code illustrates how to simplify the JSON object.
+## Prevent default values
+The diagram provides supports to simplify the saved JSON object without adding the default properties that are presented in the diagram. The following code illustrates how to simplify the JSON object.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
