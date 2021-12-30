@@ -588,7 +588,7 @@ To enable legend for marker by setting the [Visible](https://help.syncfusion.com
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             <MapsMarkerSettings>
-                <MapsMarker Visible="true" DataSource="Cities" Height="25" Width="15" LegendText="Name" TValue="City">
+                <MapsMarker Visible="true" ColorValuePath="Color" DataSource="Cities" Height="25" Width="15" LegendText="Name" TValue="City">
                 </MapsMarker>
             </MapsMarkerSettings>
             <MapsShapeSettings Fill="lightgray"></MapsShapeSettings>
@@ -602,11 +602,12 @@ To enable legend for marker by setting the [Visible](https://help.syncfusion.com
         public double Latitude { get; set; }
         public double Longitude { get; set; }
         public string Name { get; set; }
+        public string Color { get; set; }
     };
     private List<City> Cities = new List<City> {
-        new City { Latitude=35.145083, Longitude=-117.960260, Name= "Californiya" },
-        new City { Latitude=40.724546, Longitude=-73.850344, Name="New York" },
-        new City { Latitude= 41.657782, Longitude=-91.533857, Name="Iowa" }
+        new City { Latitude=35.145083, Longitude=-117.960260, Name= "Californiya", Color="Red" },
+        new City { Latitude=40.724546, Longitude=-73.850344, Name="New York", Color="Red" },
+        new City { Latitude= 41.657782, Longitude=-91.533857, Name="Iowa", Color="Red" }
     };
 }
 ```

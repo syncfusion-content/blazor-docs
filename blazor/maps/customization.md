@@ -75,7 +75,7 @@ By default, the Maps are rendered by the **Material** theme. The theme of the Ma
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
-<SfMaps Theme="Syncfusion.Blazor.Theme.HighContrastLight">
+<SfMaps Theme="Syncfusion.Blazor.Theme.HighContrast">
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             @* To customize map shape *@

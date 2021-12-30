@@ -47,12 +47,12 @@ The stack order of an annotation element can be changed using the [ZIndex](http
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
-<SfMaps>
+<SfMaps Width="500px" Height="600px">
     <MapsAnnotations>
-        <MapsAnnotation X="0%" Y="50%" ZIndex= "-1">
+        <MapsAnnotation X="0%" Y="40%" ZIndex= "-1">
             <ContentTemplate>
                 <div>
-                    <div id="first"><h1>Maps</h1></div>
+                    <div class="custom-annotation">West</div>
                 </div>
             </ContentTemplate>
         </MapsAnnotation>
@@ -63,6 +63,19 @@ The stack order of an annotation element can be changed using the [ZIndex](http
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
+
+<style type="text/css">
+    .custom-annotation {
+        color: white;
+        background-color: blue;
+        height: 45px;
+        width: 45px;
+        border-radius: 30px;
+        padding: 15px 0 0 6px;
+        font-weight: bold;
+    }
+</style>
+
 ```
 
 ![Changing ZIndex in Blazor Maps Annotation](./images/Annotation/blazor-maps-annotation-zindex.PNG)
@@ -74,12 +87,12 @@ Annotations can be placed anywhere in the Maps by specifying percentage values t
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
-<SfMaps>
+<SfMaps Width="500px" Height="600px">
     <MapsAnnotations>
-        <MapsAnnotation X="20%" Y="50%" ZIndex= "-1">
+        <MapsAnnotation X="45%" Y="40%" ZIndex= "-1">
             <ContentTemplate>
                 <div>
-                    <div id="first"><h1>Maps</h1></div>
+                    <div class="custom-annotation">Center</div>
                 </div>
             </ContentTemplate>
         </MapsAnnotation>
@@ -90,6 +103,19 @@ Annotations can be placed anywhere in the Maps by specifying percentage values t
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
+
+<style type="text/css">
+    .custom-annotation {
+        color: white;
+        background-color: blue;
+        height: 45px;
+        width: 45px;
+        border-radius: 30px;
+        padding: 15px 0 0 6px;
+        font-weight: bold;
+    }
+</style>
+
 ```
 
 ![Changing Annotation Position in Blazor Maps](./images/Annotation/blazor-maps-annotation-position.PNG)
@@ -101,12 +127,12 @@ Annotations can be aligned using the [HorizontalAlignment](https://help.syncfusi
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
-<SfMaps>
+<SfMaps Width="500px" Height="600px">
     <MapsAnnotations>
-        <MapsAnnotation X="20%" Y="10%" ZIndex= "-1" VerticalAlignment="AnnotationAlignment.Center" HorizontalAlignment="AnnotationAlignment.Center">
+        <MapsAnnotation X="30%" Y="2%" ZIndex= "-1" VerticalAlignment="AnnotationAlignment.Center" HorizontalAlignment="AnnotationAlignment.Center">
             <ContentTemplate>
                 <div>
-                    <div id="first"><h1>Maps</h1></div>
+                    <div class="custom-annotation">East</div>
                 </div>
             </ContentTemplate>
         </MapsAnnotation>
@@ -117,6 +143,19 @@ Annotations can be aligned using the [HorizontalAlignment](https://help.syncfusi
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
+
+<style type="text/css">
+    .custom-annotation {
+        color: white;
+        background-color: blue;
+        height: 45px;
+        width: 45px;
+        border-radius: 30px;
+        padding: 15px 0 0 6px;
+        font-weight: bold;
+    }
+</style>
+
 ```
 
 ![Changing Alignment of Blazor Maps Annotation](./images/Annotation/blazor-maps-annotation-alignment.PNG)
@@ -128,19 +167,19 @@ Multiple annotations can be added to the Maps by adding multiple [MapsAnnotation
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
-<SfMaps>
+<SfMaps Width="500px" Height="600px">
     <MapsAnnotations>
         <MapsAnnotation X="0%" Y="50%">
             <ContentTemplate>
                 <div>
-                    <img style="height: 30px; width: 40px" src='src/maps/images/wheel.png'>
+                    <div class="custom-annotation">West</div>
                 </div>
             </ContentTemplate>
         </MapsAnnotation>
-        <MapsAnnotation X="20%" Y="10%" ZIndex= "-1" VerticalAlignment="AnnotationAlignment.Center" HorizontalAlignment="AnnotationAlignment.Center">
+        <MapsAnnotation X="45%" Y="30%" ZIndex= "-1" >
             <ContentTemplate>
                 <div>
-                    <div id="first"><h1>Maps</h1></div>
+                    <div class="custom-annotation">North</div>
                 </div>
             </ContentTemplate>
         </MapsAnnotation>
@@ -151,6 +190,19 @@ Multiple annotations can be added to the Maps by adding multiple [MapsAnnotation
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
+
+<style type="text/css">
+    .custom-annotation {
+        color: white;
+        background-color: blue;
+        height: 45px;
+        width: 45px;
+        border-radius: 30px;
+        padding: 15px 0 0 6px;
+        font-weight: bold;
+    }
+</style>
+
 ```
 
 ![Blazor Maps with Multiple Annotation](./images/Annotation/blazor-maps-multiple-annotation.PNG)
