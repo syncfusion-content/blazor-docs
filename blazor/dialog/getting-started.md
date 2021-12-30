@@ -121,9 +121,9 @@ html, body {
 
 ## Prerender the dialog
 
-The dialog component is maintained at the DOM elements when showing or hiding the dialogs when enabled `AllowPrerender` property.
+The dialog component is maintained at the DOM elements when showing or hiding the dialogs while enabling the `AllowPrerender` property.
 
-> By default, `AllowPrerender` property is a disabled state, the dialog DOM elements get destroyed when hiding the dialog. Each time dialog will be re-rendered when showing the dialog. Dialog `@bind-Visible` property also work based on `AllowPrerender` property.
+> By default, the `AllowPrerender` property is in disabled state. The dialog DOM elements will be destroyed while hiding the dialog. Each time the dialog will be re-rendered when showing the dialog. Dialog `@bind-Visible` property also works based on the `AllowPrerender` property.
 
 ```cshtml
 
