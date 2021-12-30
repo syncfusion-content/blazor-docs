@@ -19,7 +19,9 @@ This articles provides a step-by-step instructions for building Blazor WebAssemb
 
 ## Create a Blazor WebAssembly App in Visual Studio for Mac
 
-You can create **Blazor WebAssembly App** in Visual Studio. Refer [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=macos).
+You can create **Blazor WebAssembly App** in Visual Studio for mac by the following way.
+
+* [Create a project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=macos)
 
 ## Install Syncfusion Blazor Packages in the App
 
@@ -67,7 +69,7 @@ Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/a
 To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred inside the `<head>` of **wwwroot/index.html** file of client web app.
 
 {% tabs %}
-{% highlight html tabtitle="wwwroot/index.html" %}
+{% highlight html tabtitle="~/index.html" %}
 <head>
     ...
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
@@ -107,14 +109,14 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * Now, add the Syncfusion Blazor components in .razor file.Here, the Calendar component is added in the **~/Pages/Index.razor** page under the `~/Pages` folder.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="~/Index.razor" %}
 
 <SfCalendar TValue="DateTime" />
 
 {% endhighlight %}
 {% endtabs %}
 
-* <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
+* <kbd>⌘</kbd>+<kbd>F5</kbd> to run the app. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
 
 ![Blazor Calendar Component](images/browser-output.png)
 
