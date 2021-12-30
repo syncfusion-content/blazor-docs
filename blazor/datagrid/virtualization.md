@@ -357,7 +357,7 @@ The following GIF represent a datagrid with Frozen columns/row virtualization.
 
 This section shows you how to invoke a [ScrollIntoViewAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ScrollIntoViewAsync_System_Int32_System_Int32_System_Int32_) method to scroll the grid content into view externally by passing column index or row index as parameter.
 To scroll the grid content in horizontal direction set the [`EnableVirtualization`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) and [`EnableColumnVirtualization`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization)  properties as **true**. 
-To scroll the grid content in vertical direction set [`EnableVirtualization`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) property as **true**.
+To scroll the grid content in vertical direction set `EnableVirtualization` property as **true**.
 
  ```csharp
 @using Syncfusion.Blazor.Grids
@@ -441,7 +441,7 @@ RowIndex : <input @bind-value = "@RowIndex" />
 }
 ```
 
-![Blazor DataGrid scroll Virtualizationcontent](images/blazor-datagrid-scroll-virtualizationcontent.gif)
+![Blazor DataGrid Scroll Virtualizationcontent](images/blazor-datagrid-scroll-virtualizationcontent.gif)
 
 ## Limitations for Virtualization
 
