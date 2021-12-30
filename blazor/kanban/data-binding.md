@@ -695,3 +695,264 @@ SfToast ToastObj;
 ```
 
 ![Observable object binding in Blazor Kanban](./images/blazor-kanban-observable-object.png)
+
+## Complex data binding
+
+Kanban `DataSource` property also supports the complex model data binding. Complex data fields are specified using the dot(.) operator.
+
+In the following sample, Kanban fields are mapped with complex data binding.
+
+```cshtml
+@using Syncfusion.Blazor.Kanban
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Inputs
+<SfKanban TValue="SwimlaneTasksModel" KeyField="Status.KeyField" DataSource="KanbanSwimlaneTasks">
+    <KanbanColumns>
+        <KanbanColumn HeaderText="Backlog" KeyField="@(new List<string>() {"Open"})" AllowAdding="true"></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField="@(new List<string>() {"InProgress"})"></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField="@(new List<string>() {"Close"})"></KanbanColumn>
+    </KanbanColumns>
+    <KanbanCardSettings HeaderField="Id.HeaderId" ContentField="Summary.Content"></KanbanCardSettings>
+    <KanbanSwimlaneSettings KeyField="AssigneeName.Name" AllowDragAndDrop="true"></KanbanSwimlaneSettings>
+    <KanbanSortSettings SortBy="SortOrderBy.Index" Field="SortingFields.Index" Direction="SortDirection.Descending"></KanbanSortSettings>
+    <KanbanEvents TValue="SwimlaneTasksModel" DialogOpen="onDialogOpen"></KanbanEvents>
+    <KanbanDialogSettings>
+        <Template>
+            @{
+                SwimlaneTasksModel data = (SwimlaneTasksModel)context;
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="e-label">ID</td>
+                            <td>
+                                <SfNumericTextBox CssClass="e-field" @bind-Value="@(data.Id.HeaderId)" Enabled="@Check" Placeholder="ID"></SfNumericTextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="e-label">Status</td>
+                            <td>
+                                <SfDropDownList TValue="string" TItem="DropDownModel" CssClass="e-field" DataSource="@StatusData" @bind-Value="@data.Status.KeyField">
+                                    <DropDownListFieldSettings Text="Value" Value="Value"></DropDownListFieldSettings>
+                                </SfDropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="e-label">Assignee</td>
+                            <td>
+                                <SfDropDownList TValue="string" TItem="DropDownModel" CssClass="e-field" DataSource="@AssigneeData" @bind-Value="@data.AssigneeName.Name">
+                                    <DropDownListFieldSettings Text="Value" Value="Value"></DropDownListFieldSettings>
+                                </SfDropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="e-label">Index</td>
+                            <td>
+                                <SfTextBox CssClass="e-field" Value="@data.SortingFields.Index.ToString()"></SfTextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="e-label">Summary</td>
+                            <td>
+                                <SfTextBox CssClass="e-field" Multiline="true" @bind-Value="@data.Summary.Content"></SfTextBox>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            }
+        </Template>
+    </KanbanDialogSettings>
+</SfKanban>
+
+@code {
+    private Boolean Check = false;
+    public class SwimlaneTasksModel
+    {
+        public HeaderModel Id { get; set; }
+        public string Title { get; set; }
+        public StatusModel Status { get; set; }
+        public ContentModel Summary { get; set; }
+        public SwimlaneAssignee AssigneeName { get; set; }
+        public SortingModel SortingFields { get; set; }
+    }
+    public class SwimlaneAssignee
+    {
+        public string Name { get; set; }
+        public string Text { get; set; }
+    }
+    public class StatusModel
+    {
+        public string KeyField { get; set; }
+    }
+    public class HeaderModel
+    {
+        public int HeaderId { get; set; }
+    }
+    public class ContentModel
+    {
+        public string Content { get; set; }
+    }
+    public class SortingModel
+    {
+        public int Index { get; set; }
+    }
+    public List<SwimlaneTasksModel> KanbanSwimlaneTasks = new List<SwimlaneTasksModel>()
+    {
+        new SwimlaneTasksModel { Id = new HeaderModel() { HeaderId = 1 }, Title = "BLAZ-29001", Status = new StatusModel() { KeyField = "Open" }, Summary = new ContentModel() { Content = "Analyze the new requirements gathered from the customer." }, AssigneeName = new SwimlaneAssignee() { Name = "Nancy Davloio", Text = "Nancy" }, SortingFields = new SortingModel() { Index = 2 } },
+        new SwimlaneTasksModel { Id = new HeaderModel() { HeaderId = 2 }, Title = "BLAZ-29002", Status = new StatusModel() { KeyField = "InProgress" }, Summary = new ContentModel() { Content = "Improve application performance" }, AssigneeName = new SwimlaneAssignee() { Name = "Andrew Fuller", Text = "Andrew" }, SortingFields = new SortingModel() { Index = 1 } },
+        new SwimlaneTasksModel { Id = new HeaderModel() { HeaderId = 3 }, Title = "BLAZ-29003", Status = new StatusModel() { KeyField = "Open" }, Summary = new ContentModel() { Content = "Arrange a web meeting with the customer to get new requirements." }, AssigneeName = new SwimlaneAssignee() { Name = "Janet Leverling", Text = "Janet" }, SortingFields = new SortingModel() { Index = 1 } },
+        new SwimlaneTasksModel { Id = new HeaderModel() { HeaderId = 4 }, Title = "BLAZ-29004", Status = new StatusModel() { KeyField = "Open" }, Summary = new ContentModel() { Content = "Fix the issues reported in the IE browser." }, AssigneeName = new SwimlaneAssignee() { Name = "Janet Leverling", Text = "Janet" }, SortingFields = new SortingModel() { Index = 3 } },
+        new SwimlaneTasksModel { Id = new HeaderModel() { HeaderId = 5 }, Title = "BLAZ-29005", Status = new StatusModel() { KeyField = "Testing" }, Summary = new ContentModel() { Content = "Fix the issues reported by the customer." }, AssigneeName = new SwimlaneAssignee() { Name = "Andrew Fuller", Text = "Andrew" }, SortingFields = new SortingModel() { Index = 1 } },
+        new SwimlaneTasksModel { Id = new HeaderModel() { HeaderId = 6 }, Title = "BLAZ-29006", Status = new StatusModel() { KeyField = "InProgress" }, Summary = new ContentModel() { Content = "Fix the issues reported in Safari browser." }, AssigneeName = new SwimlaneAssignee() { Name = "Nancy Davloio", Text = "Nancy" }, SortingFields = new SortingModel() { Index = 2 }  },
+        new SwimlaneTasksModel { Id = new HeaderModel() { HeaderId = 7 }, Title = "BLAZ-29007", Status = new StatusModel() { KeyField = "Close" }, Summary = new ContentModel() { Content = "Test the application in the IE browser." }, AssigneeName = new SwimlaneAssignee() { Name = "Andrew Fuller", Text = "Andrew" }, SortingFields = new SortingModel() { Index = 1 } }
+    };
+    private class DropDownModel
+    {
+        public int Id { get; set; }
+        public string Value { get; set; }
+    }
+    private List<DropDownModel> StatusData = new List<DropDownModel>() {
+        new DropDownModel { Id = 0, Value = "Open" },
+        new DropDownModel { Id = 1, Value = "InProgress" },
+        new DropDownModel { Id = 2, Value = "Testing" },
+        new DropDownModel { Id = 3, Value = "Close" }
+    };
+    private List<DropDownModel> AssigneeData = new List<DropDownModel>() {
+        new DropDownModel { Id = 0, Value = "Nancy Davloio" },
+        new DropDownModel { Id = 1, Value = "Andrew Fuller" },
+        new DropDownModel { Id = 2, Value = "Janet Leverling" },
+        new DropDownModel { Id = 3, Value = "Steven walker" },
+        new DropDownModel { Id = 4, Value = "Robert King" },
+        new DropDownModel { Id = 5, Value = "Margaret hamilt" },
+        new DropDownModel { Id = 6, Value = "Michael Suyama" }
+    };
+    public void onDialogOpen(DialogOpenEventArgs<SwimlaneTasksModel> args)
+    {
+        if (args.RequestType.ToString() == "Add")
+        {
+            Check = true;
+        }
+        else
+        {
+            Check = false;
+        }
+    }
+}
+
+```
+
+![Complex Data Binding in Blazor Kanban](./images/blazor-kanban-complex-data-binding.png)
+
+### Expando complex data binding
+
+You can achieve ExpandoObject complex data binding in the Kanban mapping fields properties by using the dot(.) operator. In the following sample, `ColumnName.Status` Expando complex data fields are mapped to the Kanban `KeyField` property.
+
+```cshtml
+@using Syncfusion.Blazor.Kanban
+@using System.Dynamic
+
+<SfKanban KeyField="ColumnName.Status" DataSource="@Tasks">
+    <KanbanColumns>
+        @foreach (ColumnModel item in columnData)
+        {
+            <KanbanColumn HeaderText="@item.HeaderText" KeyField="@item.KeyField" />
+        }
+    </KanbanColumns>
+    <KanbanCardSettings HeaderField="Id" ContentField="Summary" />
+</SfKanban>
+
+@code{
+    public List<ExpandoObject> Tasks { get; set; } = new List<ExpandoObject>();
+
+    private List<ColumnModel> columnData = new List<ColumnModel>() {
+        new ColumnModel(){ HeaderText= "To Do", KeyField= new List<string>() { "Open" } },
+        new ColumnModel(){ HeaderText= "In Progress", KeyField= new List<string>() { "In Progress" } },
+        new ColumnModel(){ HeaderText= "Testing", KeyField= new List<string>() { "Testing" } },
+        new ColumnModel(){ HeaderText= "Done", KeyField=new List<string>() { "Close" } }
+    };
+
+    protected override void OnInitialized()
+    {
+        Tasks = Enumerable.Range(1, 20).Select((x) =>
+        {
+            dynamic d = new ExpandoObject();
+            dynamic StatusName = new ExpandoObject();
+            d.Id = "Task 1000" + x;
+            StatusName.Status = (new string[] { "Open", "In Progress", "Testing", "Close" })[new Random().Next(4)];
+            d.ColumnName = StatusName;
+            d.Summary = (new string[] { "Analyze the new requirements gathered from the customer.", "Improve application performance", "Fix the issues reported in the IE browser.", "Validate new requirements", "Test the application in the IE browser." })[new Random().Next(5)];
+            d.Assignee = (new string[] { "Nancy Davloio", "Andrew Fuller", "Janet Leverling", "Steven walker", "Margaret hamilt", "Michael Suyama", "Robert King" })[new Random().Next(7)];
+            return d;
+        }).Cast<ExpandoObject>().ToList<ExpandoObject>();
+    }
+}
+
+```
+
+![Expando Complex Data Binding in Blazor Kanban](./images/blazor-kanban-expando-complex-data-binding.png)
+
+## Dynamic complex data binding
+
+You can achieve DynamicObject complex data binding in the Kanban mapping fields properties by using the dot(.) operator. In the following sample, `ColumnName.Status` Dynamic complex data fields are mapped to the Kanban `KeyField` property.
+
+```cshtml
+@using Syncfusion.Blazor.Kanban
+@using System.Dynamic
+
+<SfKanban KeyField="ColumnName.Status" DataSource="@Tasks">
+    <KanbanColumns>
+        @foreach (ColumnModel item in columnData)
+        {
+            <KanbanColumn HeaderText="@item.HeaderText" KeyField="@item.KeyField" />
+        }
+    </KanbanColumns>
+    <KanbanCardSettings HeaderField="Id" ContentField="Summary" />
+</SfKanban>
+
+@code{
+    private List<ColumnModel> columnData = new List<ColumnModel>()
+{
+        new ColumnModel(){ HeaderText= "To Do", KeyField= new List<string>() { "Open" } },
+        new ColumnModel(){ HeaderText= "In Progress", KeyField= new List<string>() { "In Progress" } },
+        new ColumnModel(){ HeaderText= "Testing", KeyField= new List<string>() { "Testing" } },
+        new ColumnModel(){ HeaderText= "Done", KeyField=new List<string>() { "Close" } }
+    };
+
+    public List<DynamicDictionary> Tasks = new List<DynamicDictionary>() { };
+    protected override void OnInitialized()
+    {
+        Tasks = Enumerable.Range(1, 20).Select((x) =>
+        {
+            dynamic d = new DynamicDictionary();
+            dynamic StatusName = new DynamicDictionary();
+            d.Id = "Task 1000" + x;
+            StatusName.Status = (new string[] { "Open", "In Progress", "Testing", "Close" })[new Random().Next(4)];
+            d.ColumnName = StatusName;
+            d.Summary = (new string[] { "Analyze the new requirements gathered from the customer.", "Improve application performance", "Fix the issues reported in the IE browser.", "Validate new requirements", "Test the application in the IE browser." })[new Random().Next(5)];
+            d.Assignee = (new string[] { "Nancy Davloio", "Andrew Fuller", "Janet Leverling", "Steven walker", "Margaret hamilt", "Michael Suyama", "Robert King" })[new Random().Next(7)];
+            return d;
+        }).Cast<DynamicDictionary>().ToList<DynamicDictionary>();
+    }
+
+    public class DynamicDictionary : System.Dynamic.DynamicObject
+    {
+        Dictionary<string, object> dictionary = new Dictionary<string, object>();
+        public override bool TryGetMember(GetMemberBinder binder, out object result)
+        {
+            string name = binder.Name;
+            return dictionary.TryGetValue(name, out result);
+        }
+        public override bool TrySetMember(SetMemberBinder binder, object value)
+        {
+            dictionary[binder.Name] = value;
+            return true;
+        }
+        public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
+        {
+            return this.dictionary?.Keys;
+        }
+    }
+}
+
+```
+
+![Dynamic Complex Data Binding in Blazor Kanban](./images/blazor-kanban-dynamic-complex-data-binding.png)
