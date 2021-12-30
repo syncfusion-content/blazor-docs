@@ -11,7 +11,7 @@ documentation: ug
 
 ## UML Class Diagram Shapes
 
-Class diagram is used to represent the static view of an application. The class diagrams are widely used in the modelling of object-oriented systems because they are the only UML diagrams which can be mapped directly with object-oriented languages. Diagram supports to generate the class diagram shapes from business logic.
+Class diagram is used to represent the static view of an application. The class diagrams are widely used in the modeling of object-oriented systems because they are the only UML diagrams that can be mapped directly with object-oriented languages. Diagram supports to generate the class diagram shapes from business logic.
 
 The UML class diagram shapes are explained as follows.
 
@@ -38,7 +38,7 @@ The UML class diagram shapes are explained as follows.
 </SfDiagram>
 
 @code{
-    //Defines diagram's Node collection
+    //Defines diagram's Node collection.
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
 
     protected override void OnInitialized()
@@ -53,16 +53,16 @@ The UML class diagram shapes are explained as follows.
             {
                 Type = Syncfusion.Blazor.Diagrams.Shapes.UmlClassifier,
                 Classifier = ClassifierShape.Class,
-                //Define class object
+                //Define class object.
                 ClassShape = new DiagramUmlClass()
                 {
                     Name = "Patient",
-                    //Define class attributes
+                    //Define class attributes.
                     Attributes = new ObservableCollection<DiagramUmlClassAttribute>()
                     {
                         new DiagramUmlClassAttribute() { Name = "accepted", Type = "Date" }
                     },
-                    //Define class methods
+                    //Define class methods.
                     Methods = new ObservableCollection<DiagramUmlClassMethod>()
                     {
                         new DiagramUmlClassMethod()
@@ -73,7 +73,7 @@ The UML class diagram shapes are explained as follows.
                 }
             }
         };
-        //Add node
+        //Add node.
         NodeCollection.Add(node);
     }
 }
@@ -102,7 +102,7 @@ The UML class diagram shapes are explained as follows.
 </SfDiagram>
 
 @code{
-    //Defines diagram's Node collection
+    //Defines diagram's Node collection.
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
 
     protected override void OnInitialized()
@@ -117,16 +117,16 @@ The UML class diagram shapes are explained as follows.
             {
                 Type = Syncfusion.Blazor.Diagrams.Shapes.UmlClassifier,
                 Classifier = ClassifierShape.Interface,
-                //Define interface object
+                //Define interface object.
                 InterfaceShape = new DiagramUmlInterface()
                 {
                     Name = "Patient",
-                    //Define interface attributes
+                    //Define interface attributes.
                     Attributes = new ObservableCollection<DiagramUmlClassAttribute>()
                     {
                         new DiagramUmlClassAttribute() { Name = "owner", Type = "String[*]" }
                     },
-                    //Define interface methods
+                    //Define interface methods.
                     Methods = new ObservableCollection<DiagramUmlClassMethod>()
                     {
                         new DiagramUmlClassMethod()
@@ -141,7 +141,7 @@ The UML class diagram shapes are explained as follows.
                 }
             }
         };
-        //Add node
+        //Add node.
         NodeCollection.Add(node);
     }
 }
@@ -164,7 +164,7 @@ The UML class diagram shapes are explained as follows.
 </SfDiagram>
 
 @code{
-    //Defines diagram's Node collection
+    //Defines diagram's Node collection.
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
 
     protected override void OnInitialized()
@@ -179,11 +179,11 @@ The UML class diagram shapes are explained as follows.
             {
                 Type = Syncfusion.Blazor.Diagrams.Shapes.UmlClassifier,
                 Classifier = ClassifierShape.Enumeration,
-                //Define enumeration object
+                //Define enumeration object.
                 EnumerationShape = new DiagramUmlEnumeration()
                 {
                     Name = "AccountType",
-                    //set the members of enumeration
+                    //Set the members of enumeration.
                     Members = new ObservableCollection<DiagramUmlEnumerationMember>()
                     {
                         new DiagramUmlEnumerationMember()
@@ -246,7 +246,7 @@ The association property allows you to define the type of association. The defau
 </SfDiagram>
 
 @code{
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     public ObservableCollection<DiagramConnector> ConnectorCollection { get; set; }
 
     protected override void OnInitialized()
@@ -257,18 +257,18 @@ The association property allows you to define the type of association. The defau
         {
             Id = "Connector1",
             Type = Segments.Straight,
-            //Define connector start and end points
+            //Define connector start and end points.
             SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
             TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300 },
             Shape = new DiagramConnectorShape()
             {
                 Type = ConnectionShapes.UmlClassifier,
                 Relationship = ClassifierShape.Association,
-                //Define type of association
+                //Define type of association.
                 Association = BpmnAssociationFlows.BiDirectional
             }
         };
-        //Add connector
+        //Add connector.
         ConnectorCollection.Add(connector);
     }
 }
@@ -289,7 +289,7 @@ The following code example illustrates how to create an aggregation.
 </SfDiagram>
 
 @code{
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     public ObservableCollection<DiagramConnector> ConnectorCollection { get; set; }
 
     protected override void OnInitialized()
@@ -303,10 +303,10 @@ The following code example illustrates how to create an aggregation.
             Shape = new DiagramConnectorShape()
             {
                 Type = ConnectionShapes.UmlClassifier,
-                //Set an relationship for connector
+                //Set an relationship for connector.
                 Relationship = ClassifierShape.Aggregation
             },
-            //Define connector start and end points
+            //Define connector start and end points.
             SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
             TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300 }
         };
@@ -330,7 +330,7 @@ The following code example illustrates how to create a composition.
 </SfDiagram>
 
 @code{
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     public ObservableCollection<DiagramConnector> ConnectorCollection { get; set; }
 
     protected override void OnInitialized()
@@ -346,11 +346,11 @@ The following code example illustrates how to create a composition.
                 //Set an relationship for connector
                 Relationship = ClassifierShape.Composition
             },
-            //Define connector start and end points
+            //Define connector start and end points.
             SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
             TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300 }
         };
-        //Add connector
+        //Add connector.
         ConnectorCollection.Add(connector);
     }
 }
@@ -371,7 +371,7 @@ The following code example illustrates how to create an dependency.
 </SfDiagram>
 
 @code{
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     public ObservableCollection<DiagramConnector> ConnectorCollection { get; set; }
 
     protected override void OnInitialized()
@@ -384,7 +384,7 @@ The following code example illustrates how to create an dependency.
             Shape = new DiagramConnectorShape()
             {
                 Type = ConnectionShapes.UmlClassifier,
-                //Set an relationship for connector
+                //Set an relationship for connector.
                 Relationship = ClassifierShape.Dependency
             },
             SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
@@ -412,7 +412,7 @@ The following code example illustrates how to create an inheritance.
 </SfDiagram>
 
 @code{
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     public ObservableCollection<DiagramConnector> ConnectorCollection { get; set; }
 
     protected override void OnInitialized()
@@ -425,10 +425,10 @@ The following code example illustrates how to create an inheritance.
             Shape = new DiagramConnectorShape()
             {
                 Type = ConnectionShapes.UmlClassifier,
-                //Set an relationship for connector
+                //Set an relationship for connector.
                 Relationship = ClassifierShape.Inheritance
             },
-            //Define connector start and end points
+            //Define connector start and end points.
             SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
             TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300 }
         };
@@ -466,7 +466,7 @@ Multiplicity is a definition of an inclusive interval of non-negative integers t
 </SfDiagram>
 
 @code{
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     public ObservableCollection<DiagramConnector> ConnectorCollection { get; set; }
 
     protected override void OnInitialized()
@@ -479,20 +479,20 @@ Multiplicity is a definition of an inclusive interval of non-negative integers t
             Shape = new DiagramConnectorShape()
             {
                 Type = ConnectionShapes.UmlClassifier,
-                //Set an relationship for connector
+                //Set an relationship for connector.
                 Relationship = ClassifierShape.Dependency,
                 Multiplicity = new DiagramClassifierMultiplicity()
                 {
                     //Set multiplicity type
                     Type = Multiplicity.OneToMany,
-                    //Set source label to connector
+                    //Set source label to connector.
                     Source = new SourceMultiplicityLabel()
                     {
                         Optional = true,
                         LowerBounds = "89",
                         UpperBounds = "67"
                     },
-                    //Set target label to connector
+                    //Set target label to connector.
                     Target = new TargetMultiplicityLabel()
                     {
                         Optional = true,
@@ -501,7 +501,7 @@ Multiplicity is a definition of an inclusive interval of non-negative integers t
                     }
                 }
             },
-            //Define connector start and end points
+            //Define connector start and end points.
             SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
             TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300 }
         };
@@ -548,7 +548,7 @@ The following code illustrates how to create a UMLActivity shapes.
 </SfDiagram>
 
 @code{
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
     public DiagramConstraints diagramConstraints = DiagramConstraints.Default;
 
@@ -558,16 +558,16 @@ The following code illustrates how to create a UMLActivity shapes.
         DiagramNode node = new DiagramNode()
         {
             Id = "UmlDiagram",
-            //Set node size
+            //Set node size.
             Width = 100,
             Height = 100,
-            //position the node
+            //Position the node.
             OffsetX = 200,
             OffsetY = 200,
             Shape = new DiagramShape()
             {
                 Type = Syncfusion.Blazor.Diagrams.Shapes.UmlActivity,
-                //Define UmlActivity shape
+                //Define UmlActivity shape.
                 UmlActivityShape = UmlActivityShapes.Action
             }
         };
@@ -591,7 +591,7 @@ The following code illustrates how to create a UMLActivity connector.
 </SfDiagram>
 
 @code{
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     public ObservableCollection<DiagramConnector> ConnectorCollection { get; set; }
 
     protected override void OnInitialized()
@@ -606,7 +606,7 @@ The following code illustrates how to create a UMLActivity connector.
                 Type = ConnectionShapes.UmlActivity,
                 UmlActivityFlow = UmlActivityFlows.Exception
             },
-            //Define connector start and end points
+            //Define connector start and end points.
             SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
             TargetPoint = new ConnectorTargetPoint() { X = 200, Y = 200 }
         };
@@ -617,7 +617,7 @@ The following code illustrates how to create a UMLActivity connector.
 
 ### Editing
 
-You can edit the name, attributes, and methods of the class diagram shapes just double clicking, similar to editing a node annotation.
+You can edit the name, attributes, and methods of the class diagram shapes just by double clicking, similar to editing a node annotation.
 
 The following image illustrates how the text editor looks in an edit mode.
 

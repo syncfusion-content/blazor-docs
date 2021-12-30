@@ -28,9 +28,9 @@ To draw a shape, set the JSON of that shape to the drawType property of the diag
 
 @code
 {
-    //Reference to diagram
+    //Reference to diagram.
     SfDiagram diagram;
-    //Defines diagram's nodes collection
+    //Defines diagram's nodes collection.
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
 
     protected override void OnInitialized()
@@ -60,9 +60,9 @@ To draw a shape, set the JSON of that shape to the drawType property of the diag
 
     private void AddNode()
     {
-        //To draw an object once, activate draw once
+        //To draw an object once, activate draw once.
         diagram.Tool = DiagramTools.DrawOnce;
-        //Initialize the drawing object to draw the shape
+        //Initialize the drawing object to draw the shape.
         diagram.DrawingObject = new DiagramNode()
         {
             Shape = new DiagramShape()
@@ -89,9 +89,9 @@ To draw connectors, set the JSON of the connector to the drawType property. The 
 
 @code
 {
-    //Reference to diagram
+    //Reference to diagram.
     SfDiagram diagram;
-    //Defines diagram's nodes collection
+    //Defines diagram's nodes collection.
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();
 
     protected override void OnInitialized()
@@ -121,9 +121,9 @@ To draw connectors, set the JSON of the connector to the drawType property. The 
 
     private void AddConnector()
     {
-        //To draw an object once, activate draw once
+        //To draw an object once, activate draw once.
         diagram.Tool = DiagramTools.DrawOnce;
-        //Initialize the drawing object to draw the connectors
+        //Initialize the drawing object to draw the connectors.
         diagram.DrawingObject = new DiagramConnector()
         {
             Id = "connector1",
@@ -154,9 +154,9 @@ Diagram allows you to create a textNode, when you click on the diagram page. The
 
 @code
 {
-    //Reference to diagram
+    //Reference to diagram.
     SfDiagram diagram;
-    //Defines diagram's nodes collection
+    //Defines diagram's nodes collection.
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();
 
     protected override void OnInitialized()
@@ -186,10 +186,10 @@ Diagram allows you to create a textNode, when you click on the diagram page. The
 
     private void TextNode()
     {
-        //To draw an object once, activate draw once
+        //To draw an object once, activate draw once.
         diagram.Tool = DiagramTools.DrawOnce;
 
-        //Initialize the drawing object to draw the text node
+        //Initialize the drawing object to draw the text node.
         diagram.DrawingObject = new DiagramNode()
         {
             Shape = new DiagramShape()
@@ -220,9 +220,9 @@ The following code illustrates how to draw a polygon shape.
 
 @code
 {
-    //Reference to diagram
+    //Reference to diagram.
     SfDiagram diagram;
-    //Defines diagram's nodes collection
+    //Defines diagram's nodes collection.
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();
 
     protected override void OnInitialized()
@@ -252,9 +252,9 @@ The following code illustrates how to draw a polygon shape.
 
     private void Polygon()
     {
-        //To draw an object once, activate draw once
+        //To draw an object once, activate draw once.
         diagram.Tool = DiagramTools.DrawOnce;
-        //Initialize the drawing object to draw the polygon shape
+        //Initialize the drawing object to draw the polygon shape.
         diagram.DrawingObject = new DiagramNode()
         {
             Id = "polygon",
@@ -301,9 +301,9 @@ The following code illustrates how to enable single tools,
 
 @code
 {
-    //Enable the single tool
+    //Enable the single tool.
     public DiagramTools tool = DiagramTools.DrawOnce;
-    //Defines diagram's connectors collection
+    //Defines diagram's connectors collection.
     public ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>();
 }
 ```
@@ -319,11 +319,11 @@ The following code illustrates how to enable multiple tools,
 
 @code
 {
-    //Reference to diagram
+    //Reference to diagram.
     SfDiagram diagram;
-    //Enable the multiple tools
+    //Enable the multiple tools.
     public DiagramTools tool = DiagramTools.DrawOnce | DiagramTools.ZoomPan;
-    //Defines diagram's connectors collection
+    //Defines diagram's connectors collection.
     public ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>();
 }
 ```

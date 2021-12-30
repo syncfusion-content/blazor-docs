@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CSS Customization in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about CSS Customization in Syncfusion Blazor Pivot Table component and more.
+description: Checkout and learn here all about CSS customization in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Hiding Axis
 
-The visibility of row, column, value and filter axis in Field List and Grouping Bar can be changed using custom CSS setting. To do so, please refer the code sample below:
+The visibility of row, column, value and filter axis in Field List and Grouping Bar can be changed using custom CSS setting.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -109,7 +109,7 @@ The visibility of row, column, value and filter axis in Field List and Grouping 
 
 ## Text Alignment
 
-The alignment of text inside row headers, column headers, value cells and summary cells can be changed using custom CSS setting. To do so, please refer the code sample below:
+The alignment of text inside row headers, column headers, value cells and summary cells can be changed using custom CSS setting.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -173,7 +173,7 @@ The alignment of text inside row headers, column headers, value cells and summar
 
 ## Customize header, value and summary cell style
 
-The elements in pivot table like header cell, value cell and summary cell style can be customized using built-in CSS names. To do so, please refer the code sample below:
+The elements in pivot table like header cell, value cell and summary cell style can be customized using built-in CSS names.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -230,4 +230,4 @@ The elements in pivot table like header cell, value cell and summary cell style 
 
 ![Blazor PivotGrid with Custom Styles](images/blazor-pivotgrid-custom-styles.png)
 
-> You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.
+> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
