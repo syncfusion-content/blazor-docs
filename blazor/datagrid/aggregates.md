@@ -26,7 +26,6 @@ The built-in aggregates are,
 * TrueCount
 * FalseCount
 
-> * Multiple aggregates can be used for an aggregate column by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) property with an array of aggregate types.
 > * Multiple types for a column is supported only when one of the aggregate templates is used.
 
 ## Footer aggregate
