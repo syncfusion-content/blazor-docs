@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Theme Studio in Blazor | Custom Themes |Syncfusion
-description: Learn here all about creating custom themes using Theme Studio for Syncfusion Blazor Components.
+description: Check out and learn here all about creating custom themes using Theme Studio for Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug
