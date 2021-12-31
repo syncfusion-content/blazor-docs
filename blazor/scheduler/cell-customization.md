@@ -194,6 +194,54 @@ The `CellTemplate` is used to customize the cell background with specific images
     }
 }
 ```
+## Customizing cell header in month view
+
+The month header of each date cell in the month view can be customized using the cellHeaderTemplate option which accepts the string or HTMLElement. The corresponding date can be accessed with the template.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+@using System.Globalization
+<div class="control-section">
+    <div class="content-wrapper">
+        <SfSchedule TValue="AppointmentData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">
+            <ScheduleEvents TValue="AppointmentData"></ScheduleEvents>
+            <ScheduleTemplates>
+                <CellHeaderTemplate>
+                    <div>@(getDateHeaderText((context as TemplateContext).Date))</div>
+                </CellHeaderTemplate>
+            </ScheduleTemplates>
+            <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+            <ScheduleViews>
+                <ScheduleView Option="View.Month"></ScheduleView>
+            </ScheduleViews>
+        </SfSchedule>
+    </div>
+</div>
+
+@code {
+    private DateTime CurrentDate = new DateTime(2020, 1, 6);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 6, 9, 30, 0) , EndTime = new DateTime(2020, 1, 6, 11, 0, 0),
+        RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5" }
+    };
+    public static string getDateHeaderText(DateTime date)
+    {
+        return date.ToString("dd ddd", CultureInfo.InvariantCulture);
+    }
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public string RecurrenceException { get; set; }
+    }
+}
+```
 
 ## Customizing cells using OnRenderCell event
 
@@ -278,5 +326,9 @@ Providing the `MinDate` and `MaxDate` property with some date values, allows the
     }
 }
 ```
+
+## How to disable multiple cell and row selection in Schedule
+
+By default, the allowMultiCellSelection and allowMultiRowSelection properties of the Schedule are set to true. So, the Schedule allows user to select multiple cells and rows. If the user want to disable this multiple cell and row selection.The user can disable this feature by setting up false to these properties.
 
 > By default, the `MinDate` property value is set to new DateTime(1900, 1, 1) and `MaxDate` property value is set to new DateTime(2099, 12, 31). The user can also set the customized `MinDate` and `MaxDate` property values.
