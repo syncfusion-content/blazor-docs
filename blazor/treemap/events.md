@@ -11,156 +11,68 @@ documentation: ug
 
 ## ItemHighlighted
 
-Triggers, after highlighting the TreeMap items.
-
-|   Argument name      |   Description                                 |
-|----------------------| ----------------------------------------------|
-|   Cancel             |   Specifies the event cancel status.          |
+The [ItemHighlighted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapEvents.html#Syncfusion_Blazor_TreeMap_TreeMapEvents_ItemHighlighted) event occurs when the cursor moves over the shapes. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ItemHighlightEventArgs.html)
 
 ## ItemRendering
 
-Triggers, before rendering the item of the TreeMap.
-
-|   Argument name      |   Description                         |
-|----------------------| --------------------------------------|
-|   CurrentItem        |   Specifies the current rendering item.   |
-|   Text               |   Specifies the text of the current item. |
-|   Cancel             |   Specifies the event cancel status.      |
+The [ItemRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapEvents.html#Syncfusion_Blazor_TreeMap_TreeMapEvents_ItemRendering) event is triggered before rendering each items. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ItemRenderingEventArgs.html).
 
 ## ItemSelected
 
-Triggers, after selecting the TreeMap item.
-
-|   Argument name      |   Description                         |
-|----------------------| --------------------------------------|
-|   Text               |   Specifies the text of the selected item.                |
-|   Cancel             |   Specifies the event cancel status.               |
+The [ItemSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapEvents.html#Syncfusion_Blazor_TreeMap_TreeMapEvents_ItemSelected) event is triggered when select an item in Treemap. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ItemSelectedEventArgs.html).
 
 ## LegendRendering
 
-Triggers, before rendering the TreeMap legend.
-
-|   Argument name      |   Description                                 |
-|----------------------| ----------------------------------------------|
-|   Cancel             |   Specifies the event cancel status.          |
+The [LegendRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapEvents.html#Syncfusion_Blazor_TreeMap_TreeMapEvents_LegendRendering) event is triggered before rendering the legend in the component. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LegendRenderingEventArgs.html).
 
 ## LegendItemRendering
 
-Triggers, before rendering each of the legend item.
-
-|   Argument name      |   Description                                                    |
-|----------------------| -----------------------------------------------------------------|
-|   Fill               |   Specifies the legend shape color.                               |
-|   ImageUrl           |   Specifies the image URL.                                        |
-|   Shape              |   Specifies the legend shape.                     |
-|   ShapeBorder              |   Specifies the legend border color and width.                     |
-|   Cancel             |   Specifies the event cancel status        .                      |
+The [LegendItemRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapEvents.html#Syncfusion_Blazor_TreeMap_TreeMapEvents_LegendItemRendering) event is triggered before rendering each of the legend item in the component. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LegendItemRenderingEventArgs.html).
 
 ## Loaded
 
-Triggers, after the TreeMap component has been loaded.
-
-|   Argument name      |   Description                                                    |
-|----------------------| -----------------------------------------------------------------|
-|   IsResized               |   Specifies whether the component is resized or not.                               |
+The [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapEvents.html#Syncfusion_Blazor_TreeMap_TreeMapEvents_Loaded) event is triggered after the Treemap component has been loaded. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LoadedEventArgs.html).
 
 ## Load
 
-Triggers, before rendering the TreeMap. TreeMap will trigger this event first.
+The [Load](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapEvents.html#Syncfusion_Blazor_TreeMap_TreeMapEvents_Load) event will be triggered before rendering the Treemap. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LoadEventArgs.html).
 
 ## OnPrint
 
-Triggers, before the print operation gets started.
-
-|   Argument name      |   Description                                 |
-|----------------------| ----------------------------------------------|
-|   Cancel             |   Specifies the event cancel status.              |
+The [OnPrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapEvents.html#Syncfusion_Blazor_TreeMap_TreeMapEvents_OnPrint) event will be triggered before the print operation is started. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.PrintEventArgs.html).
 
 ## OnClick
 
-Triggers, when clicking on the treemap.
-
-|   Argument name      |   Description                                 |
-|----------------------| ----------------------------------------------|
-|   MouseEvent         |   Specifies the pointer mouse event.             |
-|   TreeMap            |   Specifies the current treemap instances.        |
-|   Name               |   Specifies the name of the event.                 |
-|   Cancel             |   Specifies the event cancel status.               |
+The [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapEvents.html#Syncfusion_Blazor_TreeMap_TreeMapEvents_OnClick) event will be triggered after the Treemap is clicked. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ClickEventArgs.html).
 
 ## OnDoubleClick
 
-Triggers, when double clicking on the treemap.
-
-|   Argument name      |   Description                         |
-|----------------------| --------------------------------------|
-|   Cancel             |   Specifies the event cancel status.       |
+When performing the double click operation on an element in Treemap, the [OnDoubleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapEvents.html#Syncfusion_Blazor_TreeMap_TreeMapEvents_OnDoubleClick) will be triggered. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.DoubleClickEventArgs.html).
 
 ## DrillCompleted
 
-Triggers, when drilling down functionality gets completed on the TreeMap item.
-
-|   Argument name      |   Description                         |
-|----------------------| --------------------------------------|
-|   Cancel             |   Specifies the event cancel status.      |
+[DrillCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapEvents.html#Syncfusion_Blazor_TreeMap_TreeMapEvents_DrillCompleted) event will be triggered when drilling down functionality gets completed on the TreeMap item. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.DrillEndEventArgs.html).
 
 ## OnDrillStart
 
-Triggers, when drilling down functionality gets started on the TreeMap item.
-
-|   Argument name  | Description         |
-|----------------------| ----------------------------------------------------------|
-|   GroupIndex         |   Specifies the index of the TreeMap item.                 |
-|   GroupName          |   Specifies the parent name of the TreeMap item.            |
-|   Item               |   Specifies the current drill item.                           |
-|   RightClick         |   Return the boolean value whether it is right or not.     |
-|   Cancel             |   Specifies the event cancel status.                              |
+[OnDrillStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapEvents.html#Syncfusion_Blazor_TreeMap_TreeMapEvents_OnDrillStart) event will be triggered when drilling down functionality gets started on the TreeMap item. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.DrillStartEventArgs.html).
 
 ## OnItemClick
 
-Triggers, when clicking on the TreeMap item.
-
-|   Argument name      |   Description                                 |
-|----------------------| ----------------------------------------------|
-|   GroupIndex         |   Specifies the index of the TreeMap item       |
-|   GroupName          |   Specifies the parent name of the TreeMap item. |
-|   Item               |   Specifies the current item on click.             |
-|   Text               |   Specifies the text of the current TreeMap item.         |
-|   Cancel             |   Specifies the event cancel status.             |
+[OnItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapEvents.html#Syncfusion_Blazor_TreeMap_TreeMapEvents_OnItemClick) event will be triggered by clicking the items in the Treemap. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ItemClickEventArgs.html).
 
 ## OnItemMove
 
-Triggers, when mouse moves on the TreeMap item.
-
-|   Argument name      |   Description                         |
-|----------------------| --------------------------------------|
-|   Cancel             |   Specifies the event cancel status.      |
+[OnItemMove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapEvents.html#Syncfusion_Blazor_TreeMap_TreeMapEvents_OnItemMove) event will be triggered when mouse moves on the item in the Treemap. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ItemMoveEventArgs.html).
 
 ## OnRightClick
 
-Triggers, when right-clicked on the TreeMap.
-
-|   Argument name      |   Description                         |
-|----------------------| --------------------------------------|
-|   Cancel             |   Specifies the event cancel status.      |
+[OnRightClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapEvents.html#Syncfusion_Blazor_TreeMap_TreeMapEvents_OnRightClick) event will be triggered when right-clicked on the Treemap. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.RightClickEventArgs.html).
 
 ## Resizing
 
-Triggers, when resizing the TreeMap component.
-
-|   Argument name      |   Description                          |
-|----------------------| ---------------------------------------|
-|   CurrentSize        |   Specifies the size of the TreeMap.           |
-|   PreviousSize       |   Specifies the previous size of the TreeMap.  |
-|   Cancel             |   Specifies the event cancel status.        |
+The [Resizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapEvents.html#Syncfusion_Blazor_TreeMap_TreeMapEvents_Resizing) event will be triggered when resizing the Treemap. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ResizeEventArgs.html).
 
 ## TooltipRendering
 
-Triggers, before rendering the TreeMap tooltip.
-
-|   Argument name      |   Description                         |
-|----------------------| --------------------------------------|
-|   Location           |   Specifies the location of the tooltip.     |
-|   Text               |   Specifies the text of the tooltip.         |
-|   TextStyle          |   Specifies the text style of the tooltip.   |
-|   Data               |   Specifies the TreeMap item data, where the tooltip is to be rendered.       |
-|   Cancel             |   Specifies the event cancel status.   |
+The [TooltipRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapEvents.html#Syncfusion_Blazor_TreeMap_TreeMapEvents_TooltipRendering) event is triggered before the tooltip gets rendered. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTooltipArgs.html).
