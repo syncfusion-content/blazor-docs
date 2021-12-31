@@ -306,7 +306,6 @@ The DataGrid allows to select range of cells or rows by mouse or touch dragging.
 * DataGrid supports drag selection in both `Flow` and `Box`, [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) options when cell selection enabled.
 * Set [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property as `Multiple`, to select multiple rows or cells in grid by mouse/touch dragging.
 * Drag selection supports [checkbox selection](#checkbox-selection).
-* Drag selection is not compatible with [AutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAutoFill) feature.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -343,6 +342,8 @@ The DataGrid allows to select range of cells or rows by mouse or touch dragging.
 ```
 
 ![Drag Selection](images/drag-selection.gif)
+
+> * Drag selection is not compatible with [AutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAutoFill) feature.
 
 ## Perform Toggle selection programmatically
 
