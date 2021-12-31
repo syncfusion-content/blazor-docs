@@ -19,42 +19,19 @@ This article provides a step-by-step instructions for building Blazor Server App
 
 ## Create a Blazor Server Side App in Visual Studio for Mac
 
-You can create **Blazor Server App** in Visual Studio. Refer [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=macos).
+You can create **Blazor Server App** using in Visual Studio for mac by the following way.
+
+* [Create a project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=macos)
 
 ## Install Syncfusion Blazor Packages in the App
 
-Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). In order to use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
+Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
 To add Blazor Calendar component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and then install it.
 
-## Add Style Sheet
-
-Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
-
-To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
-
-* Add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** page.
-
-{% tabs %}
-{% highlight cshtml tabtitle="~/Pages/_Host.cshtml" %}
-
-<head>
-    ....
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-</head>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Add Script Reference
-
-Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referenced automatically via javascript isolation approach.
-
-> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
-
 ## Register Syncfusion Blazor Service
 
-* Open `~/_Imports.razor` file and import the `Syncfusion.Blazor` namespace.
+Open `~/_Imports.razor` file and import the `Syncfusion.Blazor` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -64,7 +41,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 {% endhighlight %}
 {% endtabs %}
 
-* Now, register the Syncfusion Blazor Service in the Blazor Server App. Open the `~/Startup.cs` file and register the Syncfusion Blazor Service.
+Now, register the Syncfusion Blazor Service in the Blazor Server App. Open the `~/Startup.cs` file and register the Syncfusion Blazor Service. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
 {% tabs %}
 {% highlight c# tabtitle="~/Startup.cs" hl_lines="12" %}
@@ -80,13 +57,48 @@ namespace BlazorApp
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSyncfusionBlazor();
+            services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; );
         }
         ...
     }
 }
 {% endhighlight %}
 {% endtabs %}
+
+## Add Style Sheet
+
+Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
+
+To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred inside the `<head>` of the **~/Pages/_Host.cshtml** page.
+
+{% tabs %}
+{% highlight cshtml tabtitle="~/_Host.cshtml" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add Script Reference
+
+Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referenced externally inside the `<head>` as follows,
+
+{% tabs %}
+{% highlight cshtml tabtitle="~/_Host.cshtml" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
 ## Add Syncfusion Blazor component
 
@@ -111,7 +123,7 @@ namespace BlazorApp
 {% endhighlight %}
 {% endtabs %}
 
-* <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
+* <kbd>⌘</kbd>+<kbd>F5</kbd> to run the app. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
 
 ![Blazor Calendar Component](images/mac-output.png)
 
