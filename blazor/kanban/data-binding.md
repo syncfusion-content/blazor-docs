@@ -890,7 +890,7 @@ You can achieve ExpandoObject complex data binding in the Kanban mapping fields 
 
 ![Expando Complex Data Binding in Blazor Kanban](./images/blazor-kanban-expando-complex-data-binding.png)
 
-## Dynamic complex data binding
+### Dynamic complex data binding
 
 You can achieve DynamicObject complex data binding in the Kanban mapping fields properties by using the dot(.) operator. In the following sample, `ColumnName.Status` Dynamic complex data fields are mapped to the Kanban `KeyField` property.
 
