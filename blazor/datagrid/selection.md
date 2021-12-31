@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in Blazor DataGrid Component
 
-Selection provides an option to highlight a row or a cell. It can be done through simple mouse down or arrow keys. To disable selection in the DataGrid, set the [AllowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSelection) property to false.
+Selection provides an option to highlight a row or a cell. It can be done through simple mouse down or arrow keys. To disable selection in the DataGrid, set the [AllowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSelection) property to `false`.
 
 The datagrid supports two types of selection that can be set by using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property of **GridSelectionSettings** component. They are:
 
@@ -300,7 +300,11 @@ The following shows selection and deselection of row
 
 ## Drag selection
 
-The DataGrid allows to perform the drag selection of the particular row or cell by performing mouse or touch dragging. To enable drag selection, set the [AllowDragSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#properties) property of the [GridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html) as true.
+The DataGrid allows to perform the drag selection of the particular row or cell by performing mouse or touch dragging. To enable drag selection, set the [AllowDragSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#properties) property of the [GridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html) as `true`.
+
+* Drag selection supports both `Flow` and `Box`, [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) options when cell selection enabled.
+* Set [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property as `Multiple`, to select multiple rows or cells in grid by mouse/touch dragging.
+* Drag selection supports checkbox selection.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -337,10 +341,6 @@ The DataGrid allows to perform the drag selection of the particular row or cell 
 ```
 
 ![Drag Selection](images/drag-selection.gif)
-
-> * Drag selection supports both ``Flow`` and ``Box`` cell selection modes.
-> * The selection [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property should be set as Multiple, to select multiple rows or cells in grid by mouse/touch dragging.
-> * Also, drag selection supports checkbox selection.
 
 ## Perform Toggle selection programmatically
 
