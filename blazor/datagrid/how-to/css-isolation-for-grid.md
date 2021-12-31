@@ -1,3 +1,12 @@
+---
+layout: post
+title: CSS isolation for Blazor DataGrid Component | Syncfusion
+description: Checkout and learn here all about applying styles by using CSS isolation in Syncfusion Blazor DataGrid component and more.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+
 # CSS isolation for datagrid component
 
 By using the CSS isolation, you can define component-specific styles by creating a .razor.css file matching the name of the .razor file in the same folder. For example, to apply CSS for `Index` Component, create a file named `Index.razor.css`.
