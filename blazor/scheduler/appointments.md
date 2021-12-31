@@ -1729,6 +1729,57 @@ There are scenarios where you need to restrict the CRUD action on specific appoi
 
 > By default, the event editor is prevented to open on the read-only events when `IsReadonly` field is set to **true**.
 
+## Restricting event creation on specific time slots
+
+You can restrict the users to create and update more than one appointment on specific time slots. Also, you can disable the CRUD action on those time slots if it is already occupied, which can be achieved using Scheduler’s public method isSlotAvailable.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+<SfSchedule @ref="ScheduleObj" TValue="AppointmentData" Height="600px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEvents TValue="AppointmentData" OnActionBegin="OnActionBegin"></ScheduleEvents>
+    <ScheduleViews>
+        <ScheduleView Option="View.Week"></ScheduleView>
+    </ScheduleViews>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+</SfSchedule>
+@code{
+    private DateTime CurrentDate = new DateTime(2020, 1, 9);
+    SfSchedule<AppointmentData> ScheduleObj;
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 9, 9, 30, 0) , EndTime = new DateTime(2020, 1, 9, 11, 0, 0),
+        RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5" }
+    };
+    public async Task OnActionBegin(ActionEventArgs<AppointmentData> args)
+    {
+        bool Availability = true;
+        if (args.ActionType == ActionType.EventCreate || args.ActionType == ActionType.EventChange)  
+        {
+            var records = args.AddedRecords ?? args.ChangedRecords;
+            if(records == null)
+            {
+                return;
+            }
+            Availability = await ScheduleObj.IsSlotAvailable(records.First());
+        }
+        args.Cancel = !Availability;
+    }
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+```
+
 ## Differentiate the past time events
 
 To differentiate the appearance of the appointments based on specific criteria such as displaying the past hour appointments with different colors on Scheduler, `EventRendered` event can be used which triggers before the appointment renders on the Scheduler.
