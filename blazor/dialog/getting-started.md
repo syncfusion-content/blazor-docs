@@ -121,9 +121,7 @@ html, body {
 
 ## Prerender the dialog
 
-The dialog component is maintained at the DOM elements when showing or hiding the dialogs while enabling the `AllowPrerender` property.
-
-> By default, the `AllowPrerender` property is in disabled state. The dialog DOM elements will be destroyed while hiding the dialog. Each time the dialog will be re-rendered when showing the dialog. Dialog `@bind-Visible` property also works based on the `AllowPrerender` property.
+The dialog component is maintained in DOM after hiding the dialog also when [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowPrerender) is `true`. By default, the [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowPrerender) is `false` where the dialog DOM elements are destroyed while hiding the dialog and each time the dialog will be re-rendered when showing the dialog. The [@bind-Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Visible) property of dialog also works based on the [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowPrerender) property.
 
 ```cshtml
 
