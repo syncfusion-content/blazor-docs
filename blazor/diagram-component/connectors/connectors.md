@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Actions of connectors in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Actions of connectors in Syncfusion Blazor Diagram component and more.
+title: Actions of Connectors in Blazor Diagram Component | Syncfusion
+description: Checkout and learn here all about actions of connectors in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -17,7 +17,7 @@ Connector can be created by defining the source and target point of the connecto
 
 ## Add connectors through connectors collection
 
-The [SourcePoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourcePoint) and [TargetPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetPoint) properties of connector allow you to define the end points of a connector.
+The [SourcePoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourcePoint) and [TargetPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetPoint) properties of connector allow you to define the endpoints of a connector.
 
 The following code example illustrates how to add a connector through connector collection,
 
@@ -31,7 +31,7 @@ The following code example illustrates how to add a connector through connector 
 @code
 {
     SnapConstraints snapConstraints = SnapConstraints.None;
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
@@ -39,10 +39,10 @@ The following code example illustrates how to add a connector through connector 
         Connector Connector = new Connector()
         {
             ID = "connector1",
-            // Set the source and target point of the connector
+            // Set the source and target point of the connector.
             SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
             TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
-            // Type of the connector segemnts
+            // Type of the connector segments.
             Type = ConnectorSegmentType.Straight
         };
         connectors.Add(Connector);
@@ -56,7 +56,7 @@ The following code example illustrates how to add a connector through connector 
 
 ## Add connectors at runtime
 
-You can add a connector at runtime by adding connector to the connectors collection in the Diagram component.  The following code explains how to add connectors at runtime.
+You can add a connector at runtime by adding connector to the connectors collection in the Diagram component. The following code explains how to add connectors at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -67,7 +67,7 @@ You can add a connector at runtime by adding connector to the connectors collect
 @code
 {
 
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
@@ -116,7 +116,7 @@ Connectors can be predefined and added to the symbol palette. You can drop those
 {
     SfSymbolPaletteComponent PaletteInstance;
     SfDiagramComponent DiagramInstance;
-    //Defines Symbol palette's PaletteConnector collection
+    //Defines Symbol palette's PaletteConnector collection.
     DiagramObjectCollection<NodeBase> PaletteConnector = new DiagramObjectCollection<NodeBase>();
     DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
 
@@ -133,10 +133,10 @@ Connectors can be predefined and added to the symbol palette. You can drop those
         Connector Connector = new Connector()
         {
             ID = "connector1",
-            // Set the source and target point of the connector
+            // Set the source and target point of the connector.
             SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
             TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
-            // Type of the connector segemnts
+            // Type of the connector segments.
             Type = ConnectorSegmentType.Straight
         };
         connectors.Add(Connector);
@@ -201,7 +201,7 @@ The following code shows how to remove a connector at runtime.
 @code 
 {
     SnapConstraints snapConstraints = SnapConstraints.None;
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
@@ -209,17 +209,17 @@ The following code shows how to remove a connector at runtime.
         Connector Connector = new Connector()
         {
             ID = "connector1",
-            // Set the source and target point of the connector
+            // Set the source and target point of the connector.
             SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
             TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
             TargetDecorator = new DecoratorSettings()
             {
                 Shape = DecoratorShape.Arrow,
-                // Style of the connector segment
+                // Style of the connector segment.
                 Style = new ShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
             },
             Style = new ShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
-            // Type of the connector
+            // Type of the connector.
             Type = ConnectorSegmentType.Straight,
         };
         connectors.Add(Connector);
@@ -227,7 +227,7 @@ The following code shows how to remove a connector at runtime.
 
     public void RemoveConnector()
     {
-        // Remove Node at runtime
+        // Remove Node at runtime.
         connectors.Remove(connectors[0]);
     }
 }
@@ -260,7 +260,7 @@ The following code example explains how to change the connector properties.
 {
     SfDiagramComponent Diagram;
     SnapConstraints snapConstraints = SnapConstraints.None;
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
@@ -272,7 +272,7 @@ The following code example explains how to change the connector properties.
             TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
             TargetDecorator = new DecoratorSettings() { Shape = DecoratorShape.Arrow, Style = new ShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 } },
             Style = new ShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
-            // Type of the connector
+            // Type of the connector.
             Type = ConnectorSegmentType.Straight,
         };
         connectors.Add(Connector);
@@ -288,7 +288,7 @@ The following code example explains how to change the connector properties.
 }
 ```
 
-> BeginUpdate and EndUpdate method which allows you to stop the continuous update of control and resume it finally.
+> BeginUpdate and EndUpdate methods allow you to stop the continuous update of control and resume it finally.
 
 ## Connections
 
@@ -357,7 +357,7 @@ The following code example illustrates how to connect two nodes.
                 Fill = "#6495ED",
                 StrokeColor = "#6495ED",
             },
-            // Type of the connector
+            // Type of the connector.
             Type = ConnectorSegmentType.Straight,
         };
         connectors.Add(Connector);
@@ -460,7 +460,7 @@ The following code example illustrates how to create port to port connections.
                 Fill = "#6495ED",
                 StrokeColor = "#6495ED",
             },
-            // Type of the connector
+            // Type of the connector.
             Type = ConnectorSegmentType.Straight,
         };
         connectors.Add(Connector);
@@ -477,7 +477,7 @@ The following code example illustrates how to create port to port connections.
 
 * [How to customize the connector properties](./customization)
 
-* [How to interact the connector](./interactions)
+* [How to interact with the connector](./interactions)
 
 * [How to change the segments](./segments)
 

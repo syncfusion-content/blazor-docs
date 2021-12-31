@@ -769,6 +769,7 @@ Syncfusion.Blazor.Inputs.dll
 <li>SfSlider</li>
 <li>SfTextBox</li>
 <li>SfUploader</li>
+<li>SfSignature</li>
 </ul>
 </td>
 <td>
@@ -1013,6 +1014,7 @@ Syncfusion.Blazor.Navigations.dll
 <td>
 <ul>
 <li>SfAccordion</li>
+<li>SfBreadcrumb</li>
 <li>SfContextMenu</li>
 <li>SfMenu</li>
 <li>SfSidebar</li>

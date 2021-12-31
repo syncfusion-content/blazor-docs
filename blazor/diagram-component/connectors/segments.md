@@ -23,7 +23,7 @@ To create a straight line, specify the [Type](https://help.syncfusion.com/cr/bla
 
 @code
 {
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
@@ -38,7 +38,7 @@ To create a straight line, specify the [Type](https://help.syncfusion.com/cr/bla
             },
             Style = new ShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
             TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
-             //Specify the segments typs as straight.
+             //Specify the segment type as straight.
             Type = ConnectorSegmentType.Straight,
             TargetDecorator = new DecoratorSettings()
             {
@@ -70,7 +70,7 @@ Orthogonal segments are used to create segments that are perpendicular to each o
 
 @code
 {
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
@@ -113,7 +113,7 @@ The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Ort
 
 @code
 {
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
@@ -129,7 +129,7 @@ The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Ort
             Style = new ShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
             TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
             Type = ConnectorSegmentType.Orthogonal,
-            //Create a new segment with length and direction
+            //Create a new segment with length and direction.
             Segments = new DiagramObjectCollection<ConnectorSegment>()
             {
                 new OrthogonalSegment 
@@ -177,7 +177,7 @@ Bezier segments are used to create curve segments and the curves are configurabl
 
 @code
 {
-     //Defines diagram's connector collection
+     //Defines diagram's connector collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
@@ -212,7 +212,7 @@ Bezier segments are used to create curve segments and the curves are configurabl
 
 ![Connector with Bezier Segment in Blazor Diagram](../images/blazor-diagram-connector-with-bezier.png)
 
-We have properties called [Point1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Point1) and [Point2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Point2) which is used to control the points of the bezier connector . And also we have properties called [vector1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Vector1) and [Vector2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Vector2) which is used to defines the length and angle between the source point and target point respectively .The following code example illustrates how to use these properties in our control  .
+ [Point1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Point1) and [Point2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Point2) properties are used to control the points of the bezier connector, and [vector1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Vector1) and [Vector2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Vector2) properties are used to define the length and angle between the source point and target point, respectively. The following code example illustrates how to use these properties in our control.
 
 ```cshtml
 Connector Connector1 = new Connector()
@@ -226,7 +226,7 @@ Connector Connector1 = new Connector()
                 new BezierSegment() 
                 {
                     Type = ConnectorSegmentType.Bezier,
-                    //Defines the point1 and point2 for the bezier connector
+                    //Defines the point1 and point2 for the bezier connector.
                     Point1 = new DiagramPoint { X = 500, Y = 100 },
                     Point2 = new DiagramPoint { X = 600, Y = 200 }
                 }
@@ -243,7 +243,7 @@ Connector Connector1 = new Connector()
                 new BezierSegment()
                 {
                     Type = ConnectorSegmentType.Bezier,
-                    //Defines the Vector1 and Vector2 for the bezier connector
+                    //Defines the Vector1 and Vector2 for the bezier connector.
                     Vector1 = new Vector(){Distance = 100 ,Angle = 90 },
                     Vector2 = new Vector(){Distance = 45 ,Angle = 45 }
                 }
@@ -264,7 +264,7 @@ Multiple segments can be defined one after another. To create a connector with m
 
 @code
 {
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
@@ -332,7 +332,7 @@ Multiple segments can be defined one after another. To create a connector with m
             Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb,
             SourcePoint = new DiagramPoint { X = 200, Y = 100 },
             TargetPoint = new DiagramPoint { X = 340, Y = 150 },
-            // Enable the segment editing
+            // Enable the segment editing.
             Segments = new DiagramObjectCollection<ConnectorSegment>
             {
                 new StraightSegment()
@@ -349,7 +349,7 @@ Multiple segments can be defined one after another. To create a connector with m
 
 ![Editing Straight Segment in Blazor Diagram](../images/blazor-diagram-edit-straight-segment.gif)
 
-### Orthogonal Segment Editing
+### Orthogonal segment editing
 
 * Orthogonal thumbs allow you to adjust the length of adjacent segments by clicking and dragging it.
 * When necessary, some segments are added or removed automatically, when dragging the segment. This is to maintain proper routing of orthogonality between segments.
@@ -368,7 +368,7 @@ Multiple segments can be defined one after another. To create a connector with m
     protected override void OnInitialized()
     {
         Connector Connector = new Connector()
-        // Enable the segment editing
+        // Enable the segment editing.
         {
             ID = "Connector2",
             Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb,
@@ -385,7 +385,7 @@ Multiple segments can be defined one after another. To create a connector with m
 
 ### Bezier Segment Editing
 
-* A segment control point of the Bezier connector is used to change the bezier vectors, points of the connector.
+* A segment control point of the Bezier connector is used to change the bezier vectors and points of the connector.
 
 ![Editing Bezier Segment in Blazor Diagram](../images/blazor-diagram-edit-bezier-segment.gif)
 
@@ -393,6 +393,6 @@ Multiple segments can be defined one after another. To create a connector with m
 
 * [How to customize the connector properties](./customization)
 
-* [How to interact the connector](./interactions)
+* [How to interact with the connector](./interactions)
 
 * [How to get the connector events](./events)

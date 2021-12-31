@@ -39,7 +39,7 @@ The default color of series or points can be changed by providing a custom color
         public double Silver { get; set; }
         public double Bronze { get; set; }
     }
-	
+
     public List<ChartData> MedalDetails = new List<ChartData>
 	{
          new ChartData{ Country= "USA", Gold=50, Silver=70, Bronze=45 },
@@ -51,7 +51,7 @@ The default color of series or points can be changed by providing a custom color
          new ChartData{ Country= "Italy", Gold=40, Silver=35, Bronze=37 },
          new ChartData{ Country= "Sweden", Gold=30, Silver=25, Bronze=27 }
     };
-	
+
     public String[] palettes = new String[] { "#E94649", "#F6B53F", "#6FAAB0" };
 }
 
@@ -92,7 +92,7 @@ The chart's background color can be customized using the [Background](https://he
         public string Country { get; set; }
         public double Gold { get; set; }
     }
-	
+
     public List<ChartData> MedalDetails = new List<ChartData>
 	{
 		new ChartData{ Country= "USA", Gold=50  },
@@ -138,7 +138,7 @@ The chart's margin from its container can be customized using the [ChartMargin](
         public string Country { get; set; }
         public double Gold { get; set; }
     }
-	
+
     public List<ChartData> MedalDetails = new List<ChartData>
 	{
 		new ChartData{ Country= "USA", Gold=50  },
@@ -156,16 +156,16 @@ The chart's margin from its container can be customized using the [ChartMargin](
 
 ![Blazor Column Chart with Custom Margin](images/appearance/blazor-column-chart-custom-margin.png)
 
-### Chart Area Background and Border
+### Chart Area Customization
 
-The chart area's background color can be customized using the [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Background) property and the border color and width can be customized to specified in [ChartAreaBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAreaBorder.html) of [ChartArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html).
+Using [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Background) and [ChartAreaBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAreaBorder.html) properties, you can change the background color and border of the chart area. Width for the chart area can be customized using [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Width) property.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals" >
-    <ChartArea Background="skyblue">
+    <ChartArea Background="skyblue" Width="80%">
         <ChartAreaBorder Color="#FF0000"  Width="2" />
     </ChartArea>
 
@@ -182,7 +182,7 @@ The chart area's background color can be customized using the [Background](https
         public string Country { get; set; }
         public double Gold { get; set; }
     }
-	
+
     public List<ChartData> MedalDetails = new List<ChartData>
 	{
 		new ChartData{ Country= "USA", Gold=50  },
@@ -209,7 +209,7 @@ The [Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>    
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" Name="Gold" XName="Country" Width="2" Opacity="1" YName="Gold" Type="ChartSeriesType.Column">
@@ -227,7 +227,7 @@ The [Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
         public double Silver { get; set; }
         public double Bronze { get; set; }
     }
-	
+
     public List<ChartData> MedalDetails = new List<ChartData>
 	{
         new ChartData{ Country= "USA", Gold=50, Silver=70, Bronze=45 },
@@ -269,7 +269,7 @@ The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfCha
         public string Country { get; set; }
         public double Gold {get; set; }
     }
-	
+
     public List<ChartData> MedalDetails = new List<ChartData>
 	{
 		new ChartData{ Country= "USA", Gold=50  },
@@ -315,7 +315,7 @@ The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sf
         public string Country { get; set; }
         public double Gold { get; set; }
     }
-	
+
     public List<ChartData> MedalDetails = new List<ChartData>
 	{
 		new ChartData{ Country= "USA", Gold=50  },
