@@ -450,7 +450,7 @@ The [UpdatePageSizeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
  To refresh virtualized grid externally, set the
 [`EnableVirtualization`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) as true.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 <SfButton Content="Refresh" OnClick="UpdatePageSize"></SfButton>
