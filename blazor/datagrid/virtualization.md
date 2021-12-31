@@ -445,7 +445,7 @@ RowIndex : <input @bind-value = "@RowIndex" />
 
 ## Refresh virtualized grid externally
 
-The [UpdatePageSizeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UpdatePageSizeAsync_System_Int32_System_Int32_) method refresh the virtualized grid [`PageSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) externally by using the given grid height and row height. This method calculates the grid `PageSize` programmatically and refreshes the virtualized grid with the new calculated `PageSize`.
+The [UpdatePageSizeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UpdatePageSizeAsync_System_Int32_System_Int32_) method refresh the virtualized grid [`PageSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) externally by using the given grid height/grid container height and row height. This method calculates the grid `PageSize` programmatically and refreshes the virtualized grid with the new calculated `PageSize`.
 
  To refresh virtualized grid externally, set the
 [`EnableVirtualization`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) as true.
@@ -518,7 +518,7 @@ The [UpdatePageSizeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 }
 ```
 
-> If <b>rowHeight</b> is given, then the page size is calculated by using both grid height and row height.
+> If <b>rowHeight</b> is given, then the page size is calculated by given row height.Otherwise, rowHeight will be considered from the offset height of the grid row element.
 
 ## Limitations for Virtualization
 
