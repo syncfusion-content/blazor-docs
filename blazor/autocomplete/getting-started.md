@@ -269,7 +269,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 {% endhighlight %}
 {% endtabs %}
 
-* Press `F5` to run the application. Then, the Syncfusion `Blazor AutoComplete` component will be rendered in the default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor AutoComplete` component will be rendered in the default web browser.
 
 ![Blazor AutoComplete Component](./images/blazor-autocomplete-component.png)
 
