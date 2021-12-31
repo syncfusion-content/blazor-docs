@@ -34,15 +34,10 @@ By default, the editor window will open on double clicking the cell or appointme
         args.Cancel = true;
         await ScheduleRef.OpenEditorAsync(args, CurrentAction.Add); //to open the editor on cell click
     }
-    public async Task OnEventClick(EventClickArgs<ScheduleData.AppointmentData> args)
+    public async Task OnEventClick(EventClickArgs<AppointmentData> args)
     {
         args.Cancel = true;
-        CurrentAction action = CurrentAction.Save;
-        if(args.Event.RecurrenceRule != null)
-        {
-            action = CurrentAction.EditOccurrence;
-        }
-        await ScheduleRef.OpenEditorAsync(args.Event, action); //to open the editor on event click
+        await ScheduleRef.OpenEditorAsync(args.Event, CurrentAction.Save); //to open the editor on event click
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
