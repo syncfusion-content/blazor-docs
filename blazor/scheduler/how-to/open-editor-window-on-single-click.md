@@ -42,7 +42,7 @@ By default, the editor window will open on double clicking the cell or appointme
         {
             action = CurrentAction.EditOccurrence;
         }
-        await ScheduleRef.OpenEditorAsync(args.Event, action); //to open the editor on event click
+        await ScheduleRef.OpenEditorAsync(args.Event, action); //to open the editor window on event click
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
