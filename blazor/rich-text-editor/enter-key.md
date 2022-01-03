@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Enter and Shift-Enter key tag customization in Blazor RichTextEditor | Syncfusion
+title: Enter and Shift-Enter keys tag customization in Blazor RichTextEditor | Syncfusion
 description: Checkout and learn here all about the Enter key and Shift + Enter key customization feature in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
@@ -13,7 +13,7 @@ The Rich Text Editor allows to customize the tag that is inserted when pressing 
 
 ## Enter key customization
 
-By default, the `<p>` tag is created while pressing the <kbd>Enter</kbd> key. The tag created while pressing <kbd>Enter</kbd> key can be customized by using the [EnterKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnterKey) property. The possible tags that can be used to customize the <kbd>Enter</kbd> key are `<p>`, `<div>`, and `<br>`.
+By default, the `<p>` tag is created while pressing the <kbd>Enter</kbd> key. The tag created while pressing the <kbd>Enter</kbd> key can be customized by using the [EnterKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnterKey) property. The possible tags that can be used to customize the <kbd>Enter</kbd> key are `<p>`, `<div>`, and `<br>`.
 
 When the <kbd>Enter</kbd> key is customized with any of the above possible values, pressing the <kbd>Enter</kbd> key in the editor will create a new tag that is configured.
 
@@ -28,7 +28,7 @@ When the <kbd>Enter</kbd> key is customized with any of the above possible value
 
 ## Shift-Enter key customization
 
-By default, the `<br>` tag is created while pressing the <kbd>Shift</kbd> + <kbd>Enter</kbd> key. The tag created while pressing <kbd>Shift</kbd> + <kbd>Enter</kbd> key can be customized by using the [ShiftEnterKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_ShiftEnterKey) property. The possible tags that can be used to customize the <kbd>Shift</kbd> + <kbd>Enter</kbd> key are `<br>`, `<p>`, and `<div>`.
+By default, the `<br>` tag is created while pressing the <kbd>Shift</kbd> + <kbd>Enter</kbd> key. The tag created while pressing the <kbd>Shift</kbd> + <kbd>Enter</kbd> key can be customized by using the [ShiftEnterKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_ShiftEnterKey) property. The possible tags that can be used to customize the <kbd>Shift</kbd> + <kbd>Enter</kbd> key are `<br>`, `<p>`, and `<div>`.
 
 When the <kbd>Shift</kbd> + <kbd>Enter</kbd> key is customized with any of the possible values, pressing the <kbd>Shift</kbd> + <kbd>Enter</kbd> key in the editor will create a new tag that is configured.
 
