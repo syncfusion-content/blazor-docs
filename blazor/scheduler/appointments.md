@@ -1730,7 +1730,7 @@ There are scenarios where you need to restrict the CRUD action on specific appoi
 > By default, the event editor is prevented to open on the read-only events when `IsReadonly` field is set to **true**.
 
 ## Restricting event creation on specific time slots
-You can restrict the users to create and update more than one appointment on specific time slots. Also, you can disable the CRUD action on those time slots if it is already occupied, which can be achieved using Scheduler’s public method isSlotAvailable.
+You can restrict the users to create and update more than one appointment on specific time slots. Also, you can disable the CRUD action on those time slots if it is already occupied, which can be achieved using Scheduler’s public method `IsSlotAvailable`.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1744,16 +1744,16 @@ You can restrict the users to create and update more than one appointment on spe
 </SfSchedule>
 
 @code{
-    private DateTime CurrentDate = new DateTime(2020, 1, 9);
+    private DateTime CurrentDate = new DateTime(2022, 1, 9);
     SfSchedule<AppointmentData> ScheduleObj;
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 9, 9, 30, 0) , EndTime = new DateTime(2020, 1, 9, 11, 0, 0),
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 1, 9, 9, 30, 0) , EndTime = new DateTime(2022, 1, 9, 11, 0, 0),
         RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5" }
     };
     public async Task OnActionBegin(ActionEventArgs<AppointmentData> args)
     {
-        bool Availability = true;
+        bool availability = true;
         if (args.ActionType == ActionType.EventCreate || args.ActionType == ActionType.EventChange)  
         {
             var records = args.AddedRecords ?? args.ChangedRecords;
@@ -1761,9 +1761,9 @@ You can restrict the users to create and update more than one appointment on spe
             {
                 return;
             }
-            Availability = await ScheduleObj.IsSlotAvailable(records.First());
+            availability = await ScheduleObj.IsSlotAvailable(records.First());
         }
-        args.Cancel = !Availability;
+        args.Cancel = !availability;
     }
     public class AppointmentData
     {
