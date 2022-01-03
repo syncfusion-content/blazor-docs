@@ -229,7 +229,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
-## Add Syncfusion Blazor DataGrid component
+## Add Blazor DataGrid component
 
 * Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Grid** package.
 
@@ -278,10 +278,10 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 ## Defining Row Data
 
-To bind data for the DataGrid component, you can assign a IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The list data source can also be provided as an instance of the **DataManager**. You can assign the data source through the **OnInitialized** life cycle of the page.
+To bind data for the DataGrid component, you can assign a IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The list data source can also be provided as an instance of the **DataManager**. You can assign the data source through the `OnInitialized` life cycle of the page.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Index.razor" %}
+{% highlight razor %}
 
 <SfGrid DataSource="@Orders" />
 
@@ -323,7 +323,7 @@ Let’s check the properties used here:
 * Also, we have used another useful property, [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format). Using this, we can format number and date values to standard or custom formats.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Index.razor" %}
+{% highlight razor %}
 
 <SfGrid DataSource="@Orders">
     <GridColumns>
@@ -342,7 +342,7 @@ Let’s check the properties used here:
 The paging feature enables users to view the datagrid record in a paged view. It can be enabled by setting the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to true. Pager can be customized using the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Index.razor" %}
+{% highlight razor %}
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
  <GridPageSettings PageSize="5"></GridPageSettings>
@@ -362,7 +362,7 @@ The paging feature enables users to view the datagrid record in a paged view. It
 The sorting feature enables you to order the records. It can be enabled by setting the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property as true. Sorting feature can be customized using the [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortSettings) component.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Index.razor" %}
+{% highlight razor %}
 
 <SfGrid DataSource="@Orders" AllowPaging="true" AllowSorting="true">
  <GridPageSettings PageSize="5"></GridPageSettings>
@@ -382,7 +382,7 @@ The sorting feature enables you to order the records. It can be enabled by setti
 The filtering feature enables you to view reduced amount of records based on filter criteria. It can be enabled by setting the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property as true. Filtering feature can be customized using the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) component.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Index.razor" %}
+{% highlight razor %}
 
 <SfGrid DataSource="@Orders" AllowPaging="true" AllowSorting="true" AllowFiltering="true">
  <GridPageSettings PageSize="5"></GridPageSettings>
@@ -402,7 +402,7 @@ The filtering feature enables you to view reduced amount of records based on fil
 The grouping feature enables you to view the datagrid record in a grouped view. It can be enabled by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property as true. Grouping feature can be customized using the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings) component.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Index.razor" %}
+{% highlight razor %}
 
 <SfGrid DataSource="@Orders" AllowPaging="true" AllowSorting="true" AllowFiltering="true" AllowGrouping="true">
  <GridPageSettings PageSize="5"></GridPageSettings>
@@ -425,12 +425,12 @@ Exceptions occurred during grid actions can be handled without stopping applicat
 
 The argument passed to the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event contains the error details returned from the server.
 
-> We recommend you to bind **OnActionFailure** event during your application development phase, this helps you to find any exceptions. You can pass these exception details to our support team to get solution as early as possible.
+> We recommend you to bind `OnActionFailure` event during your application development phase, this helps you to find any exceptions. You can pass these exception details to our support team to get solution as early as possible.
 
 The following sample code demonstrates notifying user when server-side exception has occurred during data operation,
 
 {% tabs %}
-{% highlight razor tabtitle="~/Index.razor" %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.Data
 
