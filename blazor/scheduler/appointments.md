@@ -1730,7 +1730,7 @@ There are scenarios where you need to restrict the CRUD action on specific appoi
 > By default, the event editor is prevented to open on the read-only events when `IsReadonly` field is set to **true**.
 
 ## Restricting event creation on specific time slots
-You can restrict the users to create and update more than one appointment on specific time slots. Also, you can disable the CRUD action on those time slots if it is already occupied, which can be achieved using Scheduler’s public method [IsSlotAvailable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html).
+You can restrict the users to create and update more than one appointment on specific time slots. Also, you can disable the CRUD action on those time slots if it is already occupied, which can be achieved using Scheduler’s public method [IsSlotAvailableAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_IsSlotAvailableAsync__0_).
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1761,7 +1761,7 @@ You can restrict the users to create and update more than one appointment on spe
             {
                 return;
             }
-            availability = await ScheduleObj.IsSlotAvailable(records.First());
+            availability = await ScheduleObj.IsSlotAvailableAsync(records.First());
         }
         args.Cancel = !availability;
     }
