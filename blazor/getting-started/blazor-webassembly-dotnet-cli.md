@@ -16,7 +16,7 @@ This article provides a step-by-step instructions for building Blazor WebAssembl
 Latest version of the [.NET Core SDK](https://dotnet.microsoft.com/download). If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
 {% tabs %}
-{% highlight cmd tabtitle=".NET CLI" %}
+{% highlight tabtitle=".NET CLI" %}
 
 dotnet --version
 
@@ -28,7 +28,7 @@ dotnet --version
 Run the `dotnet new blazorwasm` command to create a new Blazor WebAssembly application in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
 {% tabs %}
-{% highlight cmd tabtitle=".NET CLI" %}
+{% highlight tabtitle=".NET CLI" %}
 
 dotnet new blazorwasm -o BlazorApp
 cd BlazorApp
@@ -39,7 +39,7 @@ cd BlazorApp
 For a hosted Blazor WebAssembly experience, add the hosted option (-ho or --hosted) option to the command.
 
 {% tabs %}
-{% highlight cmd tabtitle=".NET CLI" %}
+{% highlight tabtitle=".NET CLI" %}
 
 dotnet new blazorwasm -o BlazorApp -ho
 
@@ -57,7 +57,7 @@ Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/
 Add Syncfusion.Blazor.Calendars NuGet package to the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a NuGet package. See [Install and manage packages using the dotnet CLI](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details.
 
 {% tabs %}
-{% highlight cmd tabtitle=".NET CLI" %}
+{% highlight tabtitle=".NET CLI" %}
 
 dotnet add package Syncfusion.Blazor.Calendars --version {{ site.releaseversion }}
 dotnet restore
@@ -125,7 +125,7 @@ Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/a
 To add theme to the app, Add `Syncfusion.Blazor.Themes` NuGet package to the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install the NuGet package.
 
 {% tabs %}
-{% highlight cmd tabtitle=".NET CLI" %}
+{% highlight tabtitle=".NET CLI" %}
 
 dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 dotnet restore
@@ -186,7 +186,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * In the command prompt (Windows) or terminal (Linux and macOS) to run the following command to build and start the app. The app listening on `http://localhost:<port number>` and view it in the browser.
 
 {% tabs %}
-{% highlight cmd tabtitle=".NET CLI" %}
+{% highlight tabtitle=".NET CLI" %}
 
 dotnet run
 
