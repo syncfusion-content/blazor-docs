@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started in Blazor Diagram Component | Syncfusion
-description: Learn here all about how to deploy and get start with the Syncfusion Blazor Diagram component and more.
+description: Learn here all about how to deploy and get started with the Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -14,7 +14,7 @@ This section briefly explains about how to include a Diagram in your Blazor WebA
 ## Importing Syncfusion Blazor component in the application
 
  1. Install **Syncfusion.Blazor.Diagram** NuGet package to the application by using the **NuGet Package Manager**.
- 2. You can add the  style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/wwwroot/index.cshtml** page.
+ 2. Add the style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/wwwroot/index.cshtml** page.
 
 ```cshtml
 <head>
@@ -24,7 +24,7 @@ This section briefly explains about how to include a Diagram in your Blazor WebA
 </head>
 ```
 
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/#blazor-webassembly-app/) for more information.
+> For Internet Explorer 11, kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/#blazor-webassembly-app/) for more information.
 
 ```cshtml
 <head>
@@ -78,7 +78,7 @@ The following example shows a basic Diagram component.
 
 ## Adding Nodes and Connectors
 
-Let us create and add a [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) with specific position, size, label and shape. Connect two or more nodes by using a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html).
+Let us create and add a [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) with specific position, size, label, and shape. Connect two or more nodes by using a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -89,9 +89,9 @@ Let us create and add a [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.
 {
     SfDiagramComponent diagram;
     int connectorCount = 0;
-    //Defines Diagram's nodes collection
+    //Defines Diagram's nodes collection.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    //Defines Diagram's connectors collection
+    //Defines Diagram's connectors collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
@@ -140,7 +140,7 @@ Let us create and add a [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.
         CreateConnector("Increment", "Condition", null, segment3, segment4);
     }
     
-    // Method to create connector
+    // Method to create connector.
     private void CreateConnector(string sourceId, string targetId, string label = default(string), OrthogonalSegment segment1 = null, OrthogonalSegment segment2 = null)
     {
         Connector diagramConnector = new Connector()
@@ -169,7 +169,7 @@ Let us create and add a [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.
         connectors.Add(diagramConnector);
     }
 
-    // Method to create node
+    // Method to create node.
     private void CreateNode(string id, double x, double y, FlowShapeType shape, string label)
     {
         Node diagramNode = new Node()

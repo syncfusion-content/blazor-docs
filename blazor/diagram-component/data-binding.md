@@ -11,7 +11,7 @@ documentation: ug
 
 * [Diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) can be populated with the [Nodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nodes) and [Connectors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Connectors) based on the information provided from an external data source.
 
-* Diagram exposes its specific data-related properties allowing you to specify the data source fields from where the node information has to be retrieved from.
+* Diagram exposes its specific data-related properties allowing you to specify the data source fields from where the node information has to be retrieved.
 
 * The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_DataSource) property is used to define the data source either as a collection of objects or as an instance of `DataSource` that needs to be populated in the diagram.
 
@@ -76,7 +76,7 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
         (connector as Connector).CornerRadius = 5;
     }
 
-    // Create the layout info
+    // Create the layout info.
     private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
     {
         // Enable the sub-tree.
@@ -204,7 +204,7 @@ The following sample code demonstrates binding local data through the SfDataMana
 }
 ```
 
-## Remote Data
+## Remote data
 
 To bind remote data to [Diagram component](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html), assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_DataSource) property or by using SfDataManager component. To interact with remote data source, provide the endpoint Url.
 

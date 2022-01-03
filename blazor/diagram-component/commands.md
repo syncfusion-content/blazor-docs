@@ -820,18 +820,18 @@ The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDia
 
 @code
 {
-    //Reference to diagram
+    //Reference to diagram.
     SfDiagramComponent diagram;
 
     private void Undo()
     {
-        //Revert the changes
+        //Revert the changes.
         diagram.Undo();
     }
 
     private void Redo()
     {
-        //Restore the changes
+        //Restore the changes.
         diagram.Redo();
     }
 }
@@ -844,7 +844,7 @@ The [CommandManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
 
 ### Command Execution
 
-The [Execute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html#Syncfusion_Blazor_Diagram_CommandManager_Execute) event call back method will invoke when execute the custom command in the diagram.
+The [Execute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html#Syncfusion_Blazor_Diagram_CommandManager_Execute) event call back method will invoke when executing the custom command in the diagram.
 
 The [CanExecute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html#Syncfusion_Blazor_Diagram_CommandManager_CanExecute) event determines whether this command can execute in its current state.
 
@@ -871,7 +871,7 @@ The following code example shows how to define a custom command.
 
 @code
 {
-    // Reference to diagram
+    // Reference to diagram.
     SfDiagramComponent diagram;
     DiagramObjectCollection<KeyboardCommand> command = new DiagramObjectCollection<KeyboardCommand>()
     {
@@ -886,7 +886,7 @@ The following code example shows how to define a custom command.
             Gesture = new KeyGesture() { Key = Keys.U, Modifiers = ModifierKeys.Control }
         },
      };
-    // Defines diagram's nodes collection
+    // Defines diagram's nodes collection.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
@@ -927,19 +927,19 @@ The following code example shows how to define a custom command.
     }
 
     /// <summary>
-    /// Custom command execution
+    /// Custom command execution.
     /// </summary>
     public void CommandExecute(CommandKeyArgs args)
     {
         if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == Keys.G)
         {
-            //Custom command to group the selected nodes
+            //Custom command to group the selected nodes.
             diagram.Group();
         }
         if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == Keys.U)
         {
             DiagramSelectionSettings selector = diagram.SelectionSettings;
-            //Custom command to ungroup the selected items
+            //Custom command to ungroup the selected items.
             if (selector.Nodes.Count > 0 && selector.Nodes[0] is NodeGroup)
             {
                 if ((selector.Nodes[0] as NodeGroup).Children.Length > 0)
@@ -954,7 +954,7 @@ The following code example shows how to define a custom command.
 
 ### Modify the existing command
 
-When any one of the default commands is not desired, they can be disabled. To change the functionality of a specific command, the command can be completely modified.
+When any one of the default commands is not desired, it can be disabled. To change the functionality of a specific command, the command can be completely modified.
 
 The following code example shows how to disable a command and how to modify the built-in commands.
 
@@ -971,9 +971,9 @@ The following code example shows how to disable a command and how to modify the 
 
 @code
 {
-    // Reference to diagram
+    // Reference to diagram.
     SfDiagramComponent diagram;
-    // Defines diagram's nodes collection
+    // Defines diagram's nodes collection.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     DiagramObjectCollection<KeyboardCommand> commands = new DiagramObjectCollection<KeyboardCommand>()
     {
@@ -1027,7 +1027,7 @@ The following code example shows how to disable a command and how to modify the 
     }
 
     /// <summary>
-    /// Custom command execution event
+    /// Custom command execution event.
     /// </summary>
     public void CommandExecute(CommandKeyArgs args)
     {
@@ -1037,7 +1037,7 @@ The following code example shows how to disable a command and how to modify the 
         }
         if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == Keys.C)
         {
-            //Modify the existing copy command to cut command
+            //Modify the existing copy command to cut command.
             diagram.Cut();
         }
     }
