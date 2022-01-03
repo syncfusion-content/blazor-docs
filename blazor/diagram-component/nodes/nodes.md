@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Action of Nodes in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Action of Nodes in Syncfusion Blazor Diagram component and much more.
+description: Checkout and learn here all about action of nodes in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -37,10 +37,10 @@ To create a node, define the [Node](https://help.syncfusion.com/cr/blazor/Syncfu
         Node node = new Node()
         {
             ID = "node1",
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() 
@@ -49,7 +49,7 @@ To create a node, define the [Node](https://help.syncfusion.com/cr/blazor/Syncfu
                 StrokeColor = "white" 
             }
         };
-        // Add node
+        // Add node.
         nodes.Add(node);
     }
 }
@@ -77,10 +77,10 @@ You can add a Node at runtime by adding it to the nodes collection of the Diagra
         Node node = new Node()
         {
             ID = "node1",
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED" }
@@ -93,10 +93,10 @@ You can add a Node at runtime by adding it to the nodes collection of the Diagra
         Node NewNode = new Node()
         {
             ID = "node2",
-            // Position of the node
+            // Position of the node.
             OffsetX = 450,
             OffsetY = 450,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED" }
@@ -145,7 +145,7 @@ The following code shows how to remove a node at runtime.
 
 @code
 {
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -154,10 +154,10 @@ The following code shows how to remove a node at runtime.
         Node node = new Node()
         {
             ID = "node1",
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() 
@@ -172,7 +172,7 @@ The following code shows how to remove a node at runtime.
 
     public void RemoveNodes()
     {
-        // Remove Node at runtime
+        // Remove Node at runtime.
         nodes.Remove(nodes[0]);
     }
 }
@@ -202,7 +202,7 @@ The following code example explains how to change the node properties.
 @code
 {
     SfDiagramComponent Diagram;
-    //Defines diagram's node collection
+    //Defines diagram's node collection.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -211,10 +211,10 @@ The following code example explains how to change the node properties.
         Node node = new Node()
         {
             ID = "node1",
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() 
@@ -236,7 +236,7 @@ The following code example explains how to change the node properties.
 }
 ```
 
-> [BeginUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BeginUpdate) and [EndUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EndUpdate) method which allows you to stop the continuous update of control and resume it finally.
+> [BeginUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BeginUpdate) and [EndUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EndUpdate) methods allow you to stop the continuous update of control and resume it finally.
 
 ## See Also
 

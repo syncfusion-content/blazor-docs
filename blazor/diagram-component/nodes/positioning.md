@@ -45,10 +45,10 @@ The following code shows how to change the Pivot value.
         Node node = new Node()
         {
             ID = "node",
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() 
@@ -56,7 +56,7 @@ The following code shows how to change the Pivot value.
                 Fill = "#6495ED", 
                 StrokeColor = "white" 
             },
-            // Pivot of the node
+            // Pivot of the node.
             Pivot = new DiagramPoint() { X = 0, Y = 0 }
         };
         nodes.Add(node);
@@ -95,10 +95,10 @@ Rotation of a node is controlled by using the [RotationAngle](https://help.syncf
         Node node = new Node()
         {
             ID = "node",
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() 
@@ -106,7 +106,7 @@ Rotation of a node is controlled by using the [RotationAngle](https://help.syncf
                 Fill = "#6495ED", 
                 StrokeColor = "white"
             },
-            // RotationAngle of the node
+            // RotationAngle of the node.
             RotationAngle = 90
         };
         nodes.Add(node);
@@ -137,16 +137,16 @@ The [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.N
         Node node = new Node()
         {
             ID = "node",
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            //Minimum Size of the node
+            //Minimum Size of the node.
             MinHeight = 50,
             MinWidth = 50,
-            //Maximum Size of the node
+            //Maximum Size of the node.
             MaxHeight = 200,
             MaxWidth = 200,
             Style = new ShapeStyle() 
@@ -166,4 +166,4 @@ The [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.N
 
 * [How to customize the node](./appearance)
 
-* [How to get events when they interact the node](./events)
+* [How to get events when they interact with the node](./events)
