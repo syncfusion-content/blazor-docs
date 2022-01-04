@@ -590,7 +590,7 @@ You can find the fully working sample [here](https://github.com/SyncfusionExampl
 
 ## Complex data binding
 
-Kanban support to map the complex properties to fields of `KanbanCardSettings`, `KanbanSwimlaneSettings` and `KanbanSortSettings`. Kanban support to map complex properties when using `ExpandoObject` and `DynamicObject` also.
+Kanban support to map the complex properties to fields of [KanbanCardSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanCardSettings.html), [KanbanSwimlaneSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanSwimlaneSettings.html) and [KanbanSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanSortSettings.html). Kanban support to map complex properties when using `ExpandoObject` and `DynamicObject` also.
 
 In the following sample, Kanban fields are mapped with complex data binding.
 
