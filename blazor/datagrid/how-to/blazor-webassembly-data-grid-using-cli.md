@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Stared with Blazor DataGrid in WebAssembly | Syncfusion
-description: Checkout the documentation for getting started with Blazor WebAssembly App and Syncfusion Blazor DataGrid Component in Visual Studio using .NET CLI and much more.
+description: Checkout the documentation for getting started with Blazor WebAssembly App and Syncfusion Blazor DataGrid Component in Visual Studio using .NET CLI and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
