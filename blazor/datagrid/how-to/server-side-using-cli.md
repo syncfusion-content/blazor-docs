@@ -18,7 +18,7 @@ This article provides a step-by-step instructions for building Blazor Server App
 Latest version of the [.NET Core SDK](https://dotnet.microsoft.com/download). If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
 {% tabs %}
-{% highlight tabtitle=".NET CLI" %}
+{% highlight c# tabtitle=".NET CLI" %}
 
 dotnet --version
 
@@ -30,7 +30,7 @@ dotnet --version
 Run the `dotnet new blazorserver` command to create a new Blazor Server application in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
 {% tabs %}
-{% highlight tabtitle=".NET CLI" %}
+{% highlight c# tabtitle=".NET CLI" %}
 
 dotnet new blazorserver -o BlazorApp
 cd BlazorApp
@@ -49,7 +49,7 @@ Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/
 Add `Syncfusion.Blazor.Grid` NuGet package to the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a NuGet package. See [Install and manage packages using the dotnet CLI](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details.
 
 {% tabs %}
-{% highlight tabtitle=".NET CLI" %}
+{% highlight c# tabtitle=".NET CLI" %}
 
 dotnet add package Syncfusion.Blazor.Grid --version {{ site.releaseversion }}
 dotnet restore
@@ -123,7 +123,7 @@ Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/a
 To add theme to the app, Add `Syncfusion.Blazor.Themes` NuGet package to the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a NuGet package.
 
 {% tabs %}
-{% highlight tabtitle=".NET CLI" %}
+{% highlight c# tabtitle=".NET CLI" %}
 
 dotnet add package Syncfusion.Blazor.Themes --version {{ site.releaseversion }}
 dotnet restore
@@ -233,7 +233,7 @@ Checkout Adding Script Reference topic to learn different ways to add script ref
 * In the command prompt (Windows) or terminal (Linux and macOS) to run the following command to build and start the app. The app listening on `http://localhost:<port number>` and view it in the browser.
 
 {% tabs %}
-{% highlight tabtitle=".NET CLI" %}
+{% highlight c# tabtitle=".NET CLI" %}
 
 dotnet run
 
