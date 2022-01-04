@@ -20,12 +20,12 @@ An element can be selected by clicking that element. During single click, all pr
 ![Single Selection in Blazor Diagram](images/blazor-diagram-single-selection.gif)
 
 * While selecting the diagram elements, the following events can be used to do your customization.
-* When selecting/unselecting the diagram elements, the following events are gets triggered and to do customization on those events.
+* When selecting/unselecting the diagram elements, the following events get triggered and do customization on those events.
 
 | Events | EventArgs | Description |
 |----------------|--------------|--------------|
-| [SelectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanging) | [SelectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangingEventArgs.html) | Notify when click to selecting the elements in the diagram |
-| [SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanged) | [SelectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangedEventArgs.html) | Notify after click to selected the elements in the diagram |
+| [SelectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanging) | [SelectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangingEventArgs.html) | Notify when clicking to select the elements in the diagram. |
+| [SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanged) | [SelectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangedEventArgs.html) | Notify after clicking to select the elements in the diagram. |
 
 ```csharp
 <SfDiagramComponent Height="600px" Nodes="@NodeCollection" 
@@ -47,13 +47,13 @@ An element can be selected by clicking that element. During single click, all pr
         };
         NodeCollection.Add(node);
     }    
-    //To notify selection changing event, before select the nodes/conenctors in diagram.
+    //To notify selection changing event, before selecting the nodes/connectors in the diagram.
     private void OnSelectionChanging(SelectionChangingEventArgs args)
     {
-        //sets true to cancel the element's selection
+        //Sets true to cancel the element's selection.
         args.Cancel = true;
     }
-    //To notify selection changed event, after selected the nodes/conenctors in diagram.
+    //To notify selection changed event, after selecting the nodes/connectors in the diagram.
     private void OnSelectionChanged(SelectionChangedEventArgs args)
     {
         //Action to be performed.
@@ -71,7 +71,7 @@ Multiple elements can be selected with the following ways:
 
 * Ctrl+Click
 
-During single click, any existing item in the selection list be cleared, and only the item clicked recently is there in the selection list. To avoid clearing the old selected item, Ctrl key must be on hold when clicking.
+During single click, any existing item in the selection list is cleared, and only the recently clicked item remains in the selection list. To avoid clearing the previously selected item, Ctrl key must be on hold when clicking.
 
 * Selection rectangle/rubber band selection
 
@@ -83,21 +83,21 @@ Clicking and dragging the diagram area allows to create a rectangular region. Th
 
 The [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Select_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagram_IDiagramObject__System_Nullable_System_Boolean__) and [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection) methods help to select or clear the selection of the elements at runtime.
 
-Get the current selected items from the [Nodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nodes) and [Connectors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Connectors) collection of the [SelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionSettings) property of the diagram model.
+Get the currently selected items from the [Nodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nodes) and [Connectors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Connectors) collection of the [SelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionSettings) property of the diagram model.
 
 ## Select entire elements in diagram programmatically
 
-The [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectAll) method used to select all the elements such as nodes/connectors in the diagram. Refer to the following link which shows how to use SelectAll method on the diagram.
+The [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectAll) method is used to select all the elements such as nodes/connectors in the diagram. Refer to the following link which shows how to use SelectAll method on the diagram.
 
 ## Drag
 
-* An object can be dragged by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements move every selected element.
-* When you drag the elements in the diagram, the following events are triggered and to do customization on those events.
+* An object can be dragged by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements moves every selected element.
+* When you drag the elements in the diagram, the following events are triggered and do customization on those events.
 
 | Events | EventArgs | Description |
 |----------------|--------------|--------------|
-| [PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging) | [PositionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangingEventArgs.html) | Notify while dragging the elements in the diagram |
-| [PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged) | [PositionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangedEventArgs.html) | Notify when the elements's position has changed in the diagram |
+| [PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging) | [PositionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangingEventArgs.html) | Notify while dragging the elements in the diagram. |
+| [PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged) | [PositionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangedEventArgs.html) | Notify when the element's position has changed in the diagram. |
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -135,18 +135,18 @@ The [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
 }
 ```
 
-For more information about dragging , refer [Node Drag](https://blazor.syncfusion.com/documentation/diagram-component/nodes/interaction/#drag)
+For more information about dragging, refer [Node Drag](https://blazor.syncfusion.com/documentation/diagram-component/nodes/interaction/#drag)
 
 ## Resize
 
 * Selector is surrounded by eight thumbs. When dragging these thumbs, selected items can be resized.
 * When one corner of the selector is dragged, opposite corner is in a static position.
-* When a node is resized, the following events are gets triggered.
+* When a node is resized, the following events get triggered.
 
 | Events | EventArgs | Description |
 |----------------|--------------|--------------|
-| [SizeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanging) | [SizeChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizeChangingEventArgs.html) | Notify while resizing the elements in the diagram |
-| [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanged) | [SizeChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizeChangedEventArgs.html) | Notify when the element's size has changed in the diagram |
+| [SizeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanging) | [SizeChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizeChangingEventArgs.html) | Notify while resizing the elements in the diagram. |
+| [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanged) | [SizeChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizeChangedEventArgs.html) | Notify when the element's size has changed in the diagram. |
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -185,7 +185,7 @@ For more information about dragging , refer [Node Drag](https://blazor.syncfusio
 }
 ```
 
-For more information about resizing , refer [Node Resize](https://blazor.syncfusion.com/documentation/diagram-component/nodes/interaction/#resize)
+For more information about resizing, refer [Node Resize](https://blazor.syncfusion.com/documentation/diagram-component/nodes/interaction/#resize)
 
 >Note:  While dragging and resizing, the objects are snapped towards the nearest objects to make better alignments. For better alignments, refer to [Snapping](https://blazor.syncfusion.com/documentation/diagram-component/grid-lines#snapping).
 
@@ -194,12 +194,12 @@ For more information about resizing , refer [Node Resize](https://blazor.syncfus
 * A rotate handler is placed above the selector. Clicking and dragging the handler in a circular direction lead to rotate the node.
 * The node is rotated with reference to the static pivot point.
 * Pivot thumb (thumb at the middle of the node) appears while rotating the node to represent the static point.
-* When a node is rotated, the following events are gets triggered.
+* When a node is rotated, the following events get triggered.
 
 | Events | EventArgs | Description |
 |----------------|--------------|--------------|
-| [RotationChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanging) | [RotationChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RotationChangingEventArgs.html) | Notify while rotating the elements in the diagram |
-| [RotationChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanged) | [RotationChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RotationChangedEventArgs.html) | Notify when the element's rotate angle has changed in the diagram |
+| [RotationChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanging) | [RotationChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RotationChangingEventArgs.html) | Notify while rotating the elements in the diagram. |
+| [RotationChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanged) | [RotationChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RotationChangedEventArgs.html) | Notify when the element's rotate angle has changed in the diagram. |
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -238,7 +238,7 @@ For more information about resizing , refer [Node Resize](https://blazor.syncfus
 }
 ```
 
-For more information about resizing , refer [Node Rotate](https://blazor.syncfusion.com/documentation/diagram-component/nodes/interaction/#rotate)
+For more information about resizing, refer [Node Rotate](https://blazor.syncfusion.com/documentation/diagram-component/nodes/interaction/#rotate)
 
 ## Connection editing
 
@@ -248,15 +248,15 @@ For more information about resizing , refer [Node Rotate](https://blazor.syncfus
 
 Source and target points of the selected connectors are represented with two handles. Clicking and dragging those handles help you to adjust the source and target points.
 
-For more information , refer [End Point Dragging](https://blazor.syncfusion.com/documentation/diagram-component/connectors/interactions/#end-point-dragging)
+For more information, refer [End Point Dragging](https://blazor.syncfusion.com/documentation/diagram-component/connectors/interactions/#end-point-dragging)
 
 * If you drag the connector end points, then the following events can be used to do your customization.
-* When you connect connector with ports/node or disconnect from it, the following events are gets triggered.
+* When you connect connector with ports/node or disconnect from it, the following events are triggered.
 
 | Events | EventArgs | Description |
 |----------------|--------------|--------------|
-| [ConnectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectionChanging) | [ConnectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectionChangingEventArgs.html) | Notify while creating the connection between the nodes in the diagram |
-| [ConnectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectionChanged) | [ConnectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectionChangedEventArgs.html) | Notify once the connection has created between the nodes in the diagram |
+| [ConnectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectionChanging) | [ConnectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectionChangingEventArgs.html) | Notify while creating the connection between the nodes in the diagram. |
+| [ConnectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectionChanged) | [ConnectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectionChangedEventArgs.html) | Notify once the connection has been created between the nodes in the diagram. |
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -312,7 +312,7 @@ For more information , refer [End Point Dragging](https://blazor.syncfusion.com/
                 Fill = "#6495ED",
                 StrokeColor = "#6495ED",
             },
-            // Type of the connector
+            // Type of the connector.
             Type = ConnectorSegmentType.Straight,
         };
         Connectors.Add(Connector);
@@ -320,7 +320,7 @@ For more information , refer [End Point Dragging](https://blazor.syncfusion.com/
     //Event to notify while creating the connection between the nodes in the diagram.
     private void OnConnectionChanging(ConnectionChangingEventArgs args)
     {
-        //sets true to cancel the element's resizing
+        //Sets true to cancel the element's resizing.
         args.Cancel = true;
     }
     //Event to notify once created the connection between the nodes in the diagram.
@@ -337,13 +337,13 @@ For more information , refer [End Point Dragging](https://blazor.syncfusion.com/
 * Any number of new segments can be inserted into a straight line by clicking, when Shift and Ctrl keys are pressed (Ctrl+Shift+Click).
 * Straight segments can be removed by clicking the segment end point, when Ctrl and Shift keys are pressed (Ctrl+Shift+Click).
 
-For more information about straight segment editing , refer [Straight Segment Editing](https://blazor.syncfusion.com/documentation/diagram-component/connectors/interactions/#straight-segment-editing)
+For more information about straight segment editing, refer [Straight Segment Editing](https://blazor.syncfusion.com/documentation/diagram-component/connectors/interactions/#straight-segment-editing)
 
 ## Orthogonal segment editing
 
 * Orthogonal thumbs allow you to adjust the length of adjacent segments by clicking and dragging it.
 * When necessary, some segments are added or removed automatically, when dragging the segment. This is to maintain proper routing of orthogonality between segments.
-* When you editing the segment collection of connector, the following event gets triggered.
+* When editing the segment collection of connector, the following event gets triggered.
 
 | Events | EventArgs | Description |
 |----------------|--------------|--------------|
@@ -355,7 +355,7 @@ For more information about straight segment editing , refer [Straight Segment Ed
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@Connectors" SegmentCollectionChange="OnSegmentChange">
 </SfDiagramComponent>
 @code{
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
     protected override void OnInitialized()
     {
@@ -368,13 +368,13 @@ For more information about straight segment editing , refer [Straight Segment Ed
                 X = 100,
                 Y = 100
             },
-            // Enable DragSegmentThumb constraints to segment editing
+            // Enable DragSegmentThumb constraints to segment editing.
             Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb,
             Style = new ShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
             TargetPoint = new DiagramPoint() { X = 300, Y = 300 },
              //Specify the segments type as Orthogonal.
             Type = ConnectorSegmentType.Orthogonal,
-             //Create a new segment with length and direction
+             //Create a new segment with length and direction.
             Segments = new DiagramObjectCollection<ConnectorSegment>()
             {
                 new OrthogonalSegment 
@@ -407,21 +407,21 @@ For more information about straight segment editing , refer [Straight Segment Ed
     //Event to notify while modifying the segment collection for the connector.
     private void OnSegmentChange(SegmentCollectionChangeEventArgs args)
     {
-        //Action to be perform...
+        //Action to be performed.
     }
 }
 ```
 
-For more information about orthogonal segment editing , refer [Orthogonal Segment Editing](https://blazor.syncfusion.com/documentation/diagram-component/connectors/interactions/#orthogonal-segment-editing)
+For more information about orthogonal segment editing, refer [Orthogonal Segment Editing](https://blazor.syncfusion.com/documentation/diagram-component/connectors/interactions/#orthogonal-segment-editing).
 
 ## User handles
 
 * User handles are used to add some frequently used commands around the selector. To create user handles, define and add them to the [UserHandles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramSelectionSettings.html#Syncfusion_Blazor_Diagram_DiagramSelectionSettings_UserHandles) collection of the [SelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionSettings) property.
-* The [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Name) property of user handle is used to define the name of the user handle and its further used to find the user handle at runtime and do any customization.
+* The [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Name) property of user handle is used to define the name of the user handle and it is further used to find the user handle at runtime and do any customization.
 
 ## Alignment
 
-User handles can be aligned relative to the node boundaries. It has [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Margin), [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Offset), [Side](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Side), [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_HorizontalAlignment), and [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_VerticalAlignment) settings. It is quite tricky when all four alignments are used together but gives more control over alignment.
+User handles can be aligned relative to the node boundaries. It has [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Margin), [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Offset), [Side](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Side), [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_HorizontalAlignment), and [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_VerticalAlignment) settings. It is quite tricky when all four alignments are used together, but gives more control over alignment.
 
 ## Offset
 
@@ -464,13 +464,13 @@ The diagram component notifies the mouse button clicked. For example, whenever t
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            // Add node
+            // Add node.
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeDashArray = "5,5", StrokeColor = "red", StrokeWidth = 2 },
         };
         nodes.Add(node);
