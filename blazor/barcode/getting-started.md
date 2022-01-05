@@ -263,7 +263,7 @@ You can add the QR code in our barcode generator component.
 <SfQRCodeGenerator Width="200px" Height="150px"  Value="Syncfusion"></SfQRCodeGenerator>
 
 {% endhighlight %}
-{R endtabs %}
+{% endtabs %}
 
 ![QR Code Generator in Blazor Barcode Component](images/blazor-barcode-with-qr-code.png)
 
