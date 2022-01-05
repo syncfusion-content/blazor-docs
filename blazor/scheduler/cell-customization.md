@@ -194,6 +194,44 @@ The `CellTemplate` is used to customize the cell background with specific images
     }
 }
 ```
+## Customizing cell header in month view
+
+The month header of each date cell in the month view can be customized using the [CellHeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTemplates.html#Syncfusion_Blazor_Schedule_ScheduleTemplates_CellHeaderTemplate)
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+@using System.Globalization
+<SfSchedule TValue="AppointmentData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleTemplates>
+        <CellHeaderTemplate>
+            <div>@context.Date.ToString("dd ddd", CultureInfo.InvariantCulture)</div>
+        </CellHeaderTemplate>
+    </ScheduleTemplates>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Month"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+@code {
+    private DateTime CurrentDate = new DateTime(2022, 1, 6);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 1, 6, 9, 30, 0) , EndTime = new DateTime(2022, 1, 6, 11, 0, 0),
+        RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5" }
+    };   
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public string RecurrenceException { get; set; }
+    }
+}
+```
 
 ## Customizing cells using OnRenderCell event
 
@@ -278,5 +316,8 @@ Providing the `MinDate` and `MaxDate` property with some date values, allows the
     }
 }
 ```
+## How to disable multiple cell and row selection in Schedule
+
+By default, the [AllowMultiCellSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowMultiCellSelection) and [AllowMultiRowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowMultiRowSelection) properties of the Schedule are set to true that allows user to select multiple cells and rows. If you want disable the multiple cell/row selection, you can disable the `AllowMultiCellSelection` and `AllowMultiRowSelection` properties.
 
 > By default, the `MinDate` property value is set to new DateTime(1900, 1, 1) and `MaxDate` property value is set to new DateTime(2099, 12, 31). The user can also set the customized `MinDate` and `MaxDate` property values.
