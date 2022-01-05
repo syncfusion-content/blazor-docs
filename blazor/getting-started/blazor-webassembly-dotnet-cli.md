@@ -149,12 +149,14 @@ Then the theme style from can be referred inside the `<head>` of the **wwwroot/i
 Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referenced externally inside the `<head>` of **wwwroot/index.html** file in client web app.
 
 {% tabs %}
-{% highlight html tabtitle="~/index.html" %}
+{% highlight html tabtitle="~/index.html" hl_lines="4" %}
+
 <head>
     ...
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
+
 {% endhighlight %}
 {% endtabs %}
 

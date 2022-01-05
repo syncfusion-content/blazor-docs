@@ -120,7 +120,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * **~/Pages/_Layout.cshtml** for **.NET 6**.
 
 {% tabs %}
-{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4" %}
 
 <head>
     ....
@@ -129,7 +129,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 </head>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" %}
+{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="4" %}
 
 <head>
     ....
