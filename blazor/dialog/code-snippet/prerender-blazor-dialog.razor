@@ -1,10 +1,24 @@
 @using Syncfusion.Blazor.Popups
-
 <div id="target">
-    <SfDialog Target="#target" Width="300px" ShowCloseIcon="true" AllowPrerender="true" IsModal="true">
+    <div>
+        <button class="e-btn" @onclick="@OnBtnClick">Open</button>
+    </div>
+    <SfDialog Target="#target" Width="300px" ShowCloseIcon="true" @bind-Visible="Visibility" AllowPrerender="true" IsModal="true">
         <DialogTemplates>
             <Header> Dialog </Header>
             <Content> This is a dialog with header </Content>
         </DialogTemplates>
     </SfDialog>
 </div>
+<style>
+    #target {
+        height: 500px;
+    }
+</style>
+@code {
+    private bool Visibility { get; set; } = true;
+    private void OnBtnClick()
+    {
+        this.Visibility = true;
+    }
+}
