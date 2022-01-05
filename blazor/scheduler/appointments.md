@@ -359,7 +359,7 @@ The built-in fields available on Scheduler event object are as follows.
 | IsAllDay | The `IsAllDay` field is mapped from the dataSource and is used to denote whether an event is created for an entire day or for specific time alone. Usually, an event with `IsAllDay` field set to true will be considered as an all-day event. |
 | RecurrenceID | It maps the `RecurrenceID` field from dataSource and usually holds the ID value of the parent recurrence event. This field is applicable only for the edited occurrence events.|
 | RecurrenceRule | It maps the `RecurrenceRule` field from dataSource and holds the recurrence rule value in a string format. Also, it uniquely identifies whether the event belongs to a recurring type or normal ones. |
-| RecurrenceException | It maps the `RecurrenceException` field from dataSource and is used to hold the collection of exception dates, on which the recurring occurrences needs to be excluded. The `RecurrenceException` should be specified in UTC format. |
+| RecurrenceException | It maps the `RecurrenceException` field from dataSource and is used to hold the collection of exception dates in UTC format, on which the recurring occurrences needs to be excluded. |
 | IsReadonly | It maps the `IsReadonly` field from dataSource. It is mainly used to make specific appointments as readonly when set to `true`. |
 | IsBlock | It maps the `IsBlock` field from dataSource. It is used to block the particular time ranges in the Scheduler and prevents the event creation on those time slots. |
 | CssClass | It maps the `CssClass` field from the dataSource. It is used to customize the particular events. |
