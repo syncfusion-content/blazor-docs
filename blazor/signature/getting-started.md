@@ -188,18 +188,20 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * **~/Pages/_Host.cshtml** file for **.NET 5 and .NET 3.X** app.
 
 {% tabs %}
-{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4" %}
 
 <head>
+    ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <script src="https://cdn.syncfusion.com/blazor/19.4.38/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" %}
+{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="4" %}
 
 <head>
+    ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <script src="https://cdn.syncfusion.com/blazor/19.4.38/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
@@ -210,9 +212,10 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 ### Blazor WebAssembly App
 
 {% tabs %}
-{% highlight cshtml tabtitle="~/index.html" %}
+{% highlight cshtml tabtitle="~/index.html" hl_lines="4" %}
 
 <head>
+    ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <script src="https://cdn.syncfusion.com/blazor/19.4.38/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
