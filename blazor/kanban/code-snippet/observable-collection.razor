@@ -16,12 +16,12 @@
                 <KanbanColumns>
                     @foreach (ColumnModel item in columnData)
                     {
-                        <KanbanColumn HeaderText="@item.HeaderText" KeyField="@item.KeyField" AllowAdding="true"></KanbanColumn>}
+                        <KanbanColumn HeaderText="@item.HeaderText" KeyField="@item.KeyField" AllowAdding="true" />}
                 </KanbanColumns>
-                <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
+                <KanbanCardSettings HeaderField="Id" ContentField="Summary" />
             </SfKanban>
             <SfToast @ref="ToastObj" ID="toast_type" Content="@ToastContent" Timeout=2000 Target="@ToastTarget">
-                <ToastPosition X="Right" Y="Top"></ToastPosition>
+                <ToastPosition X="Right" Y="Top" />
             </SfToast>
         </div>
     </div>

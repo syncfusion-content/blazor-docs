@@ -3,14 +3,14 @@
 @using Syncfusion.Blazor.Inputs
 <SfKanban TValue="SwimlaneTasksModel" KeyField="Status.KeyField" DataSource="KanbanSwimlaneTasks">
     <KanbanColumns>
-        <KanbanColumn HeaderText="Backlog" KeyField="@(new List<string>() {"Open"})" AllowAdding="true"></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField="@(new List<string>() {"InProgress"})"></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField="@(new List<string>() {"Close"})"></KanbanColumn>
+        <KanbanColumn HeaderText="Backlog" KeyField="@(new List<string>() {"Open"})" AllowAdding="true" />
+        <KanbanColumn HeaderText="In Progress" KeyField="@(new List<string>() {"InProgress"})" />
+        <KanbanColumn HeaderText="Done" KeyField="@(new List<string>() {"Close"})" />
     </KanbanColumns>
-    <KanbanCardSettings HeaderField="Id.HeaderId" ContentField="Summary.Content"></KanbanCardSettings>
-    <KanbanSwimlaneSettings KeyField="AssigneeName.Name" AllowDragAndDrop="true"></KanbanSwimlaneSettings>
-    <KanbanSortSettings SortBy="SortOrderBy.Index" Field="SortingFields.Index" Direction="SortDirection.Descending"></KanbanSortSettings>
-    <KanbanEvents TValue="SwimlaneTasksModel" DialogOpen="onDialogOpen"></KanbanEvents>
+    <KanbanCardSettings HeaderField="Id.HeaderId" ContentField="Summary.Content" />
+    <KanbanSwimlaneSettings KeyField="AssigneeName.Name" AllowDragAndDrop="true" />
+    <KanbanSortSettings SortBy="SortOrderBy.Index" Field="SortingFields.Index" Direction="SortDirection.Descending" />
+    <KanbanEvents TValue="SwimlaneTasksModel" DialogOpen="onDialogOpen" />
     <KanbanDialogSettings>
         <Template>
             @{
@@ -20,14 +20,14 @@
                         <tr>
                             <td class="e-label">ID</td>
                             <td>
-                                <SfNumericTextBox CssClass="e-field" @bind-Value="@(data.Id.HeaderId)" Enabled="@Check" Placeholder="ID"></SfNumericTextBox>
+                                <SfNumericTextBox CssClass="e-field" @bind-Value="@(data.Id.HeaderId)" Enabled="@Check" Placeholder="ID" />
                             </td>
                         </tr>
                         <tr>
                             <td class="e-label">Status</td>
                             <td>
                                 <SfDropDownList TValue="string" TItem="DropDownModel" CssClass="e-field" DataSource="@StatusData" @bind-Value="@data.Status.KeyField">
-                                    <DropDownListFieldSettings Text="Value" Value="Value"></DropDownListFieldSettings>
+                                    <DropDownListFieldSettings Text="Value" Value="Value" />
                                 </SfDropDownList>
                             </td>
                         </tr>
@@ -35,20 +35,20 @@
                             <td class="e-label">Assignee</td>
                             <td>
                                 <SfDropDownList TValue="string" TItem="DropDownModel" CssClass="e-field" DataSource="@AssigneeData" @bind-Value="@data.AssigneeName.Name">
-                                    <DropDownListFieldSettings Text="Value" Value="Value"></DropDownListFieldSettings>
+                                    <DropDownListFieldSettings Text="Value" Value="Value" />
                                 </SfDropDownList>
                             </td>
                         </tr>
                         <tr>
                             <td class="e-label">Index</td>
                             <td>
-                                <SfTextBox CssClass="e-field" Value="@data.SortingFields.Index.ToString()"></SfTextBox>
+                                <SfTextBox CssClass="e-field" Value="@data.SortingFields.Index.ToString()" />
                             </td>
                         </tr>
                         <tr>
                             <td class="e-label">Summary</td>
                             <td>
-                                <SfTextBox CssClass="e-field" Multiline="true" @bind-Value="@data.Summary.Content"></SfTextBox>
+                                <SfTextBox CssClass="e-field" Multiline="true" @bind-Value="@data.Summary.Content" />
                             </td>
                         </tr>
                     </tbody>
