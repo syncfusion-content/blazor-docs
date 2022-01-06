@@ -47,7 +47,7 @@ A node group can be added to the diagram model through [Nodes](https://help.sync
         Node node2 = createNode("node2", 300, 100, "Node2");
         Node node3 = createNode("node3", 200, 250, "Node3");
         NodeGroup groupnode = new NodeGroup();
-        // Grouping node 1 and node 2 into a single nodegroup
+        // Grouping node 1 and node 2 into a single nodegroup.
         groupnode.Children = new string[] { "node1", "node2" };
         nodes.Add(node1);
         nodes.Add(node2);
@@ -90,7 +90,7 @@ A node group can be added to the diagram model through [Nodes](https://help.sync
         {
             await Task.Delay(500);
             diagram.SelectAll();
-            // Adding the third node into the existing nodegroup
+            // Adding the third node into the existing nodegroup.
             diagram.Group();
         }
     }
@@ -99,7 +99,7 @@ A node group can be added to the diagram model through [Nodes](https://help.sync
 
 ![Grouping in Blazor Diagram](images/blazor-diagram-grouping.png)
 
-The following code illustrates how a ungroup  at runtime.
+The following code illustrates how to ungroup at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -116,7 +116,7 @@ The following code illustrates how a ungroup  at runtime.
         Node node1 = createNode("node1", 100, 100, "Node1");
         Node node2 = createNode("node2", 300, 100, "Node2");
         NodeGroup groupnode = new NodeGroup();
-        // Grouping node 1 and node 2 into a single nodegroup
+        // Grouping node 1 and node 2 into a single nodegroup.
         groupnode.Children = new string[] { "node1", "node2" };
         nodes.Add(node1);
         nodes.Add(node2);
@@ -158,7 +158,7 @@ The following code illustrates how a ungroup  at runtime.
         {
             await Task.Delay(500);
             diagram.SelectAll();
-            // Ungroup the selected group into nodes
+            // Ungroup the selected group into nodes.
             diagram.UnGroup();
         }
     }
@@ -169,7 +169,7 @@ The following code illustrates how a ungroup  at runtime.
 
 A node group can be added at runtime by using Nodes collection of diagram.
 
-The following code illustrates how a node group is added at runtime
+The following code illustrates how a node group is added at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -187,7 +187,7 @@ The following code illustrates how a node group is added at runtime
     {
         Node node1 = createNode("node1", 100, 100, "Node1");
         Node node2 = createNode("node2", 300, 100, "Node2");
-        // Grouping node 1 and node 2 into a single nodegroup
+        // Grouping node 1 and node 2 into a single nodegroup.
         groupnode.Children = new string[] { "node1", "node2" };
         nodes.Add(node1);
         nodes.Add(node2);
@@ -248,7 +248,7 @@ The following code illustrates how a node group is added at runtime
     {
         Node node1 = createNode("node1", 100, 100, "Node1");
         Node node2 = createNode("node2", 300, 100, "Node2");
-        // Grouping node 1 and node 2 into a single nodegroup
+        // Grouping node 1 and node 2 into a single nodegroup.
         groupnode.Children = new string[] { "node1", "node2" };
         nodes.Add(node1);
         nodes.Add(node2);
@@ -335,7 +335,7 @@ You can change the position of the node group similar to node. For more informat
         nodes = new DiagramObjectCollection<Node>();
         Node node1 = createNode("node1", 100, 100, "Node1");
         Node node2 = createNode("node2", 300, 100, "Node2");
-        // Grouping node 1 and node 2 into a single nodegroup
+        // Grouping node 1 and node 2 into a single nodegroup.
         groupnode.Children = new string[] { "node1", "node2" };
         nodes.Add(node1);
         nodes.Add(node2);
@@ -385,7 +385,7 @@ You can change the appearance of the node group similar to node. For more inform
 
 ## Interaction
 
-You can edit the node group and its children at runtime. We able to interact the nodegroup as like the node interaction like resize, rotate and drag. For more information about node interaction, refer to [Interaction](https://blazor.syncfusion.com/documentation/diagram-component/nodes/interaction).
+You can edit the node group and its children at runtime. You can interact with the nodegroup as like the node interaction like resize, rotate and drag. For more information about node interaction, refer to [Interaction](https://blazor.syncfusion.com/documentation/diagram-component/nodes/interaction).
 
 ### Selecting a NodeGroup
 
