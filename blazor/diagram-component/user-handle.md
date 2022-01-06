@@ -7,13 +7,13 @@ control: Diagram Component
 documentation: ug
 ---
 
-# User Handles for node, connector in Blazor Diagram Component
+# User Handles for Node and Connector in Blazor Diagram Component
 
 The user handles are customizable handles that can be used to perform custom actions and default clipboard actions.
 
-## Initialization an user handle
+## Initializing the user handle
 
-The user handle can enables for the selected nodes/connectors by setting a [SelectorConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectorConstraints.html) as [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectorConstraints.html#Syncfusion_Blazor_Diagram_SelectorConstraints_UserHandle) and then use the [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html) class to define the userhandle object and add that to [UserHandles](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramSelectionSettings.html#Syncfusion_Blazor_Diagram_DiagramSelectionSettings_UserHandles) collection of the DiagramSelectionSettings. The following code example used to enable and create an user handles for the diagram nodes/connectors.
+The user handle can be enabled for the selected nodes/connectors by setting a [SelectorConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectorConstraints.html) as [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectorConstraints.html#Syncfusion_Blazor_Diagram_SelectorConstraints_UserHandle) and then use the [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html) class to define the userhandle object and add that to [UserHandles](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramSelectionSettings.html#Syncfusion_Blazor_Diagram_DiagramSelectionSettings_UserHandles) collection of the DiagramSelectionSettings. The following code example is used to enable and create user handles for the diagram nodes/connectors.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -29,37 +29,37 @@ The user handle can enables for the selected nodes/connectors by setting a [Sele
 
 @code
 {
-    // Defines diagram's nodes collection
+    // Defines diagram's nodes collection.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    // Defines diagram's SelectionSettings
+    // Defines diagram's SelectionSettings.
     DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
     DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
     protected override void OnInitialized()
     {
-        //Creating the userhandle for cloning the objects
+        //Creating the userhandle for cloning the objects.
         UserHandle cloneHandle = new UserHandle()
         {
-            //Name of the user handle
+            //Name of the user handle.
             Name = "clone",
-            //Set pathdata for userhandle
+            //Set pathdata for userhandle.
             PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z",
-            //Set visibility for the user handle
+            //Set visibility for the user handle.
             Visible = true,
-            //Set the position for the user handle
+            //Set the position for the user handle.
             Offset = 0,
-            //Set side based on the given offset
+            //Set side based on the given offset.
             Side = Direction.Bottom,
-            //set margin for the user handle
+            //Set margin for the user handle.
             Margin = new Margin() { Top = 0, Bottom = 0, Left = 0, Right = 0 }
         };
-        //Add user handle to the collection...
+        //Add user handle to the collection.
         UserHandles = new DiagramObjectCollection<UserHandle>()
         {
             cloneHandle
         };
         SelectedModel = new DiagramSelectionSettings()
         {
-            //Enable userhandle for selected model...
+            //Enable userhandle for selected model.
             Constraints = SelectorConstraints.UserHandle,
             UserHandles = this.UserHandles
         };
@@ -102,17 +102,17 @@ The following table shows all the possible alignments visually shows the user ha
 
 ### Size
 
-Diagram allows you set size for user handles by using the [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Size) property. The default value of the `Size` property is 25.
+Diagram allows to set size for user handles by using the [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Size) property. The default value of the `Size` property is 25.
 
 ### Style
 
 You can change the style of the user handles with the specific properties of PathColor, BorderColor, BackgroundColor and BorderWidth. The following code explains how to customize the appearance of the user handles.
 
-* The user handle's [PathColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_PathColor) property used to change the color of the given [PathData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_PathData) of the user handle.
+* The user handle's [PathColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_PathColor) property is used to change the color of the given [PathData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_PathData) of the user handle.
 
-* The user handle [BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_BorderColor), [BackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_BackgroundColor) properties are used to define the background color and border color of the user handle and the [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_BorderWidth) property is used to define the border width of the user handles.
+* The user handle [BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_BorderColor) and [BackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_BackgroundColor) properties are used to define the background color and border color of the user handle and the [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_BorderWidth) property is used to define the border width of the user handles.
 
-* The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Visible) property indicating whether the user handle is visible in the user interface.
+* The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Visible) property indicates whether the user handle is visible in the user interface.
 
 The following code explains how to customize the appearance of the user handle.
 
@@ -128,48 +128,48 @@ The following code explains how to customize the appearance of the user handle.
 
 @code
 {
-    // Defines diagram's nodes collection
+    // Defines diagram's nodes collection.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    // Defines diagram's SelectionSettings
+    // Defines diagram's SelectionSettings.
     DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
     DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
 
     protected override void OnInitialized()
     {
-        //Creating the userhandle for cloning the objects
+        //Creating the userhandle for cloning the objects.
         UserHandle cloneHandle = new UserHandle()
         {
-            //Name of the user handle
+            //Name of the user handle.
             Name = "clone",
-            //Set pathdata for userhandle
+            //Set pathdata for userhandle.
             PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z",
-            //Set visibility for the user handle
+            //Set visibility for the user handle.
             Visible = true,
-            //Set the position for the user handle
+            //Set the position for the user handle.
             Offset = 1,
-            //Set side based on the given offset
+            //Set side based on the given offset.
             Side = Direction.Bottom,
-            //set margin for the user handle
+            //Set margin for the user handle.
             Margin = new Margin() { Top = 0, Bottom = 0, Left = 0, Right = 0 },
-            //Set size of the user handle
+            //Set size of the user handle.
             Size = 50,
-            //Set pathcolor for given pathdata
+            //Set pathcolor for given pathdata.
             PathColor = "yellow",
-            //Set Border color of the user handle
+            //Set Border color of the user handle.
             BorderColor = "red",
-            //Set Background Color of the user handle
+            //Set Background Color of the user handle.
             BackgroundColor = "green",
-            //Set Border Width Color of the user handle
+            //Set Border Width Color of the user handle.
             BorderWidth = 3,
         };
-        //Add user handle to the collection...
+        //Add user handle to the collection.
         UserHandles = new DiagramObjectCollection<UserHandle>()
         {
             cloneHandle
         };
         SelectedModel = new DiagramSelectionSettings()
         {
-            //Enable userhandle for selected model...
+            //Enable userhandle for selected model.
             Constraints = SelectorConstraints.UserHandle,
             UserHandles = this.UserHandles
         };
@@ -195,9 +195,9 @@ The following code explains how to customize the appearance of the user handle.
 
 The [FixedUserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html) is used to add some frequently used commands around the node and connector even without selecting it.
 
-## Initialization an fixed user handles
+## Initializing the fixed user handles
 
-To create the fixed user handles, define and add them to the collection of nodes and connectors property. The following code example used to create an fixed user handles for the  nodes and connectors.
+To create the fixed user handles, define and add them to the collection of nodes and connectors property. The following code example is used to create an fixed user handles for the nodes and connectors.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -206,7 +206,7 @@ To create the fixed user handles, define and add them to the collection of nodes
 
 @code
 {
-    // Defines diagram's nodes collection
+    // Defines diagram's nodes collection.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
@@ -239,7 +239,7 @@ To create the fixed user handles, define and add them to the collection of nodes
 }
 ```
 
-## Customization the fixed user handle
+## Customizing the fixed user handle
 
 * The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_ID) property of fixed user handle is used to define the unique identification of the fixed user handle and it is further used to add custom events to the fixed user handle.
 
@@ -253,17 +253,17 @@ To create the fixed user handles, define and add them to the collection of nodes
 
 ### Size
 
-Diagram allows you set size for the fixed user handles by using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_Height) property. The default value of the `Width` and `Height` property is 10.
+Diagram allows to set size for the fixed user handles by using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_Height) properties. The default value of the `Width` and `Height` properties is 10.
 
 ### Style
 
 * You can change the style of the fixed user handles with the specific properties of borderColor, borderWidth, and backgroundColor by using the [Stroke](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_Stroke), [StrokeThickness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_StrokeThickness), and [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_Fill) properties, and the icon BorderColor, and BorderWidth by using the `IconStroke` and `IconStrokeThickness` properties.
 
-* The fixed user handle's [IconStroke](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_IconStroke) and [IconStrokeThickness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_IconStrokeThickness) property used to change the stroke color and stroke width of the given `PathData`.
+* The fixed user handle's [IconStroke](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_IconStroke) and [IconStrokeThickness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_IconStrokeThickness) properties are used to change the stroke color and stroke width of the given `PathData`.
 
 * The fixed user handle `Stroke` and `Fill` properties are used to define the background color and border color of the user handle and the `StrokeThickness` property is used to define the border width of the fixed user handle.
 
-* The [Visibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_Visibility) property indicating whether the fixed user handle is visible in the user interface.
+* The [Visibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_Visibility) property indicates whether the fixed user handle is visible in the user interface.
 
 The following code explains how to customize the appearance of the fixed user handles.
 
@@ -352,12 +352,12 @@ The following code explains how to customize the node fixed user handle.
 
 @code
 {
-    // Defines diagram's nodes collection
+    // Defines diagram's nodes collection.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
-        //Creating the userhandle for cloning the objects
+        //Creating the userhandle for cloning the objects.
         nodes = new DiagramObjectCollection<Node>();
         Node diagramNode = new Node()
         {
@@ -420,7 +420,7 @@ The following table shows all the possible alignments visually shows the fixed u
 | y = 10 | Before |![Displaying Fixed User Handle Before Blazor Diagram Node](images/blazor-diagram-user-handle-in-before-node.png)|
 | y = 10 | After |![Displaying Fixed User Handle Before Blazor Diagram Node](images/blazor-diagram-user-handle-in-after-node.png)|
 
-> Displacement will not be done if the alignment is set to be center.
+> Displacement will not be done if the alignment is set to center.
 
 The following code explains how to customize the connector fixed user handle.
 
@@ -468,9 +468,9 @@ The following code explains how to customize the connector fixed user handle.
 }
 ```
 
-## FixedUserHandle Event
+## FixedUserHandle event
 
-The Diagram control provides following event for the fixed user handle.
+The Diagram control provides the following event for the fixed user handle.
 
 | Event Name | Event Type | Description |
 | -------- | -------- | -------- |
