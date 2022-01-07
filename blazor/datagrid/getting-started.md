@@ -41,7 +41,7 @@ To add Blazor DataGrid component in the app, open the NuGet package manager in V
 Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
 {% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor"}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 
