@@ -260,7 +260,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 ![Blazor CircularGauge Component](./images/blazor-circulargauge-component.png)
 
-## Set Pointer Value
+## Set pointer value
 
 Pointers are used to indicate values on an axis. You can change the pointer value using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Value) property in [CircularGaugePointer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html).
 
@@ -285,7 +285,7 @@ Pointers are used to indicate values on an axis. You can change the pointer valu
 
 ![Blazor CircularGauge with Pointer Value](./images/blazor-circulargauge-pointer-value.png)
 
-## Add Title for CircularGauge
+## Adding title for CircularGauge
 
 Title can be added to the CircularGauge to provide a quick information to the users about the context of the rendered CircularGauge. You can add a title using [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_Title) property in [SfCircularGauge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html).
 
@@ -309,7 +309,7 @@ Title can be added to the CircularGauge to provide a quick information to the us
 
 ![Blazor CircularGauge with Title](./images/blazor-circulargauge-title.png)
 
-## Add Ranges in CircularGauge
+## Adding ranges in the CircularGauge
 
 Range is used to specify a group of scale values in the gauge. We can set the range start and end using [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRange.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRange_Start) and [End](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRange.html#Syncfusion_Blazor_CircularGauge_CircularGaugeRange_End) properties in the [CircularGaugeRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRange.html).
 
