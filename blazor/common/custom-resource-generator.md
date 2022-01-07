@@ -19,7 +19,7 @@ Search and select the required Syncfusion Blazor UI components from the CRG to g
 
 Refer to the following steps to search and select the components in CRG:
 
-1. Navigate to the Custom Resource Generator (CRG) application at [CRG](https://blazor.syncfusion.com/crg).
+1. Open [Syncfusion Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) application.
 
 2. Type the required component name in the search bar, and then select the checkbox. The dependency of the selected component is resolved in the application itself, so you do not need to choose each dependent component manually.
 
@@ -53,90 +53,102 @@ Refer to the following steps to download the custom resources in CRG:
 
 ## How to use custom resources in the Blazor application
 
-1. Copy or paste the downloaded custom resources in the Blazor application `~/wwwroot` folder.
+1. Copy and paste the downloaded custom resources in the Blazor application `~/wwwroot` folder.
 
-2. Set `IgnoreScriptIsolation` as true in `AddSyncfusionBlazor` service in `~/Startup.cs` file for Blazor Server app or `~/Program.cs` file for Blazor WebAssembly app.
+2. Set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) as `true` while adding Syncfusion blazor service using `AddSyncfusionBlazor()` as follows,
 
-    **Blazor Server App (~/Startup.cs)**
-    ```c#
-    public void ConfigureServices(IServiceCollection services)
+### Blazor Server App
+
+* For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service by setting `IgnoreScriptIsolation`.
+
+* For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service by setting `IgnoreScriptIsolation`.
+
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="10" %}
+
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
+using Syncfusion.Blazor;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; );
+
+var app = builder.Build();
+....
+
+{% endhighlight %}
+
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="12" %}
+
+using Syncfusion.Blazor;
+
+namespace BlazorApplication
+{
+    public class Startup
     {
-        services.AddRazorPages();
-        services.AddServerSideBlazor();
-
-        // Set IgnoreScriptIsolation as true to load custom  scripts
-        services.AddSyncfusionBlazor(options => {
-            options.IgnoreScriptIsolation = true;
-            });
-
-        services.AddSingleton<WeatherForecastService>();
+        ...
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddRazorPages();
+            services.AddServerSideBlazor();
+            services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; );
+        }
+        ...
     }
-    ```
+}
 
-    > If you are using Blazor Server App with net6.0 SDK, the **Startup.cs** file is not available in the Application. Set `IgnoreScriptIsolation` as true in `AddSyncfusionBlazor` service in `~/Program.cs` file for Blazor Server app.
+{% endhighlight %}
+{% endtabs %}
 
-    ```c#
-    // For .NET 6 project, add the Syncfusion Blazor Service in Program.cs file.
-    using Microsoft.AspNetCore.Components;
-    using Microsoft.AspNetCore.Components.Web;
-    using Syncfusion.Blazor;
+### Blazor WASM App
 
-    var builder = WebApplication.CreateBuilder(args);
+For Blazor WebAssembly App, set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
 
-    builder.Services.AddRazorPages();
-    builder.Services.AddServerSideBlazor();
-    ....
-    builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
-    var app = builder.Build();
-    ....
-    ....
-    ```
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
 
-    **Blazor WebAssembly App (~/Program.cs)**
-    ```c#
-    // For .NET 6 project.
-    using Microsoft.AspNetCore.Components;
-    using Microsoft.AspNetCore.Components.Web;
-    using Syncfusion.Blazor;
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Syncfusion.Blazor;
 
-    var builder = WebApplication.CreateBuilder(args);
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
 
-    builder.Services.AddRazorPages();
-    builder.Services.AddServerSideBlazor(options => { options.IgnoreScriptIsolation = true; });
-    ....
-    builder.Services.AddSyncfusionBlazor();
-    var app = builder.Build();
-    ....
-    ....
-    ```
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-    ```c#
-    // For .NET 5 or .NET Core SDK 3.1 project.
-    using Syncfusion.Blazor;
-    ....
-    ....
-    public static async Task Main(string[] args)
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; );
+await builder.Build().RunAsync();
+....
+
+{% endhighlight %}
+
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" %}
+using Syncfusion.Blazor;
+
+namespace WebApplication1
+{
+    public class Program
     {
-        var builder = WebAssemblyHostBuilder.CreateDefault(args)    ;
-        ....
-        ....
-
-        // Set IgnoreScriptIsolation as true to load custom  scripts
-        builder.Services.AddSyncfusionBlazor(options => {
-            options.IgnoreScriptIsolation = true;
-            });
-
-        await builder.Build().RunAsync();
+        public static async Task Main(string[] args)
+        {
+            ....
+            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; );
+            await builder.Build().RunAsync();
+        }
     }
-    ```
+}
+{% endhighlight %}
+{% endtabs %}
 
 3. Now, manually add the custom interop script and styles in the Blazor App.
 
-    a) For `.NET 6` Blazor Server app, add the custom interop script and styles in the `~/Pages/_Layout.cshtml` page.
-
-    b) For `.NET 5 / .NET Core SDK 3.1` Blazor Server app, add the custom interop script and styles in the `~/Pages/_Host.cshtml` page.
-
-    c) For Blazor WebAssembly app, add the custom interop script and styles in the `~/wwwroot/index.html` page.
+    * For **Blazor WASM App**, reference custom interop script in `~/wwwroot/index.html` file. 
+    * For **Blazor Server App**, reference custom interop script in `~/Pages/_Layout.cshtml` file for `.NET 6` project and in `~/Pages/_Host.cshtml` file for `.NET 5 and .NET Core 3.X` project.
 
     ```html
     <head>
@@ -146,26 +158,6 @@ Refer to the following steps to download the custom resources in CRG:
         <script src="syncfusion-blazor.min.js" type="text/javascript"></script>
     </head>
     ```
-
-    ***How to use CDN resources in the Blazor application***
-
-    The same theme and script files can be referred through the CDN version by setting the `IgnoreScriptIsolation` to true in `AddSyncfusionBlazor` service in `~/Startup.cs` file for Blazor Server app or `~/Program.cs` file for Blazor WebAssembly app which is in step 2.
-
-    a) For `.NET 6` Blazor Server app, add the CDN interop script and styles in the `~/Pages/_Layout.cshtml` page.
-
-    b) For `.NET 5 / .NET Core SDK 3.1` Blazor Server app, add the CDN interop script and styles in the `~/Pages/_Host.cshtml` page.
-
-    c) For Blazor WebAssembly app, add the CDN interop script and styles in the `~/wwwroot/index.html` page.
-
-    ```html
-    <head>
-        ....
-        ....
-        <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />
-        <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js" type="text/javascript"></script>
-    </head>
-    ```
-
 4. Run the application and it will load the resources with application required components.
 
 ## Import previously generated settings into CRG
