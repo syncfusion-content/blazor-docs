@@ -46,7 +46,7 @@ Open ~/_Imports.razor file and import the Syncfusion.Blazor namespace.
 Now, Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` to load the scripts externally in the [next steps](#add-script-reference).
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="11" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 11" %}
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -64,7 +64,7 @@ await builder.Build().RunAsync();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="10" %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
 
 using Syncfusion.Blazor;
 
@@ -86,7 +86,7 @@ namespace BlazorApplication
 
 ## Add Style Sheet
 
-Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
+Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://sfblazor.azurewebsites.net/staging/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
 
 To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred inside the `<head>` of **wwwroot/index.html** file in client web app.
 
@@ -103,10 +103,10 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 
 ## Add Script Reference
 
-Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referenced externally inside the `<head>` of **wwwroot/index.html** file in client web app.
+Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://sfblazor.azurewebsites.net/staging/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` of **wwwroot/index.html** file in client web app.
 
 {% tabs %}
-{% highlight cshtml tabtitle="~/index.html" %}
+{% highlight cshtml tabtitle="~/index.html" hl_lines="4" %}
 
 <head>
     ...
@@ -164,7 +164,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor DataGrid component will be rendered in the default web browser.
 
-![Blazor DataGrid Component](images/blazor-datagrid-component.png)
+![Blazor DataGrid Component](../images/blazor-datagrid-component.png)
 
 > You need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for more information.
 
@@ -310,7 +310,7 @@ The grouping feature enables you to view the datagrid record in a grouped view. 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataGrid Component](images/blazor-datagrid.gif)
+![Blazor DataGrid Component](../images/blazor-datagrid.gif)
 
 ## See Also
 
