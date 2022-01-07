@@ -44,7 +44,7 @@ Open `~/_Imports.razor` file and import the `Syncfusion.Blazor` namespace.
 Now, register the Syncfusion Blazor Service in the Blazor Server App. Open the `~/Startup.cs` file and register the Syncfusion Blazor Service. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
 {% tabs %}
-{% highlight c# tabtitle="~/Startup.cs" hl_lines="12" %}
+{% highlight c# tabtitle="~/Startup.cs" hl_lines="1 12" %}
 
 using Syncfusion.Blazor;
 
@@ -57,7 +57,7 @@ namespace BlazorApp
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; );
+            services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
         }
         ...
     }
