@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Theme Studio in Blazor - Syncfusion
-description: Check out and learn here all about Theme Studio for Syncfusion Blazor Components and how touse theme studio.
+title: Theme Studio in Blazor | Custom Themes |Syncfusion
+description: Check out and learn here all about creating custom themes using Theme Studio for Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug
@@ -70,9 +70,9 @@ You can directly use the customized CSS file in the web application.
 **Step 2:** Refer the customized CSS file reference in the `~/wwwroot/index.html` or `~/Pages/_Host.cshtml` main page head section.
 
 ```html
-    <head>
-        <link href="styles/{file-name}.css" rel="stylesheet"/>
-    </head>
+<head>
+    <link href="styles/{file-name}.css" rel="stylesheet"/>
+</head>
 ```
 
 ## Import previously changed settings into theme studio
@@ -101,7 +101,7 @@ If you need to change your application theme and UI design in the future, do not
 
 The following list of common variables is used in the Syncfusion Blazor library themes for all UI components. You can change these variables to customize the corresponding theme.
 
-### Syncfusion Blazor Bootstrap 5 Theme
+### Bootstrap 5 Theme
 
 <table>
     <style>
@@ -319,7 +319,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
     </tbody>
 </table>
 
-### Syncfusion Blazor Bootstrap 4 Theme
+### Bootstrap 4 Theme
 
 <table>
     <style>
@@ -473,7 +473,9 @@ The following list of common variables is used in the Syncfusion Blazor library 
     </tbody>
 </table>
 
-### Syncfusion Blazor Bootstrap Theme
+### Bootstrap Theme
+
+Design based on bootstrap 3 theme.
 
 <table>
     <style>
@@ -942,7 +944,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
     </tbody>
 </table>
 
-### Syncfusion Blazor Material Theme
+### Material Theme
 
 <table>
     <style>
@@ -1287,601 +1289,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
         </tr>
     </tbody>
 </table>
-
-### Syncfusion Blazor Microsoft Office Fabric Theme
-
-<table>
-    <style>
-        .circle-color-indicator {
-            width: 1.5em;
-            height: 1.5em;
-            border-radius: 50%;
-            display: inline-block;
-            border: 1px solid rgba(0, 0, 0, .08);
-            vertical-align: middle;
-        }
-        th, td {
-        text-align: left;
-        padding: 5px 15px;
-        vertical-align: top;
-        }
-    </style>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Value (Default Theme) </th>
-            <th>Value (Dark Theme) </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>$theme-primary</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #0078d6"></span> #0078d6
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #0074cc"></span> #0074cc
-            </td>
-        </tr>
-        <tr>
-            <td>$theme-dark-alt</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #006fc7"></span> darken($theme-primary, 3%)
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #006bbd"></span> darken($theme-primary, 3%)
-            </td>
-        </tr>
-        <tr>
-            <td>$theme-dark</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #005ba3"></span> darken($theme-primary, 10%)
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #0063ad"></span> darken($theme-primary, 6%)
-            </td>
-        </tr>
-        <tr>
-            <td>$theme-darker</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #00457a"></span> darken($theme-primary, 18%)
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #005799"></span> darken($theme-primary, 10%)
-            </td>
-        </tr>
-        <tr>
-            <td>$theme-secondary</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #0081e5"></span> lighten($theme-primary, 3%)
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #007ddb"></span> lighten($theme-primary, 3%)
-            </td>
-        </tr>
-        <tr>
-            <td>$theme-tertiary</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #42acff"></span> lighten($theme-primary, 21%)
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #38a9ff"></span> lighten($theme-primary, 21%)
-            </td>
-        </tr>
-        <tr>
-            <td>$theme-light</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #b7e0ff"></span> lighten($theme-primary, 44%)
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #addcff"></span> lighten($theme-primary, 44%)
-            </td>
-        </tr>
-        <tr>
-            <td>$theme-lighter</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #d1ebff"></span> lighten($theme-primary, 49%)
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #c7e7ff"></span> lighten($theme-primary, 49%)
-            </td>
-        </tr>
-        <tr>
-            <td>$theme-lighter-alt</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #eff8ff"></span> lighten($theme-primary, 55%)
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #e5f4ff"></span> lighten($theme-primary, 55%)
-            </td>
-        </tr>
-        <tr>
-            <td>$neutral-white</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #fff"></span> #fff
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #201f1f"></span> #201f1f
-            </td>
-        </tr>
-        <tr>
-            <td>$neutral-lighter-alt</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #f8f8f8"></span> #f8f8f8
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #282727"></span> #282727
-            </td>
-        </tr>
-        <tr>
-            <td>$neutral-lighter</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #f4f4f4"></span> #f4f4f4
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #333232"></span> #333232
-            </td>
-        </tr>
-        <tr>
-            <td>$neutral-light</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #eaeaea"></span> #eaeaea
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #414040"></span> #414040
-            </td>
-        </tr>
-        <tr>
-            <td>$neutral-quintenaryalt</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #dadada"></span> #dadada
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #4a4848"></span> #4a4848
-            </td>
-        </tr>
-        <tr>
-            <td>$neutral-quintenary</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #d0d0d0"></span> #d0d0d0
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #514f4f"></span> #514f4f
-            </td>
-        </tr>
-        <tr>
-            <td>$neutral-tertiary-alt</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #c8c8c8"></span> #c8c8c8
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #6f6c6c"></span> #6f6c6c
-            </td>
-        </tr>
-        <tr>
-            <td>$neutral-tertiary</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #a6a6a6"></span> #a6a6a6
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #9a9a9a"></span> #9a9a9a
-            </td>
-        </tr>
-        <tr>
-            <td>$neutral-secondary-alt</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #767676"></span> #767676
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #c8c8c8"></span> #c8c8c8
-            </td>
-        </tr>
-        <tr>
-            <td>$neutral-secondary</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #666"></span> #666
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #dadada"></span> #dadada
-            </td>
-        </tr>
-        <tr>
-            <td>$neutral-primary</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #333"></span> #333
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #fff"></span> #fff
-            </td>
-        </tr>
-        <tr>
-            <td>$neutral-dark</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #212121"></span> #212121
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #f4f4f4"></span> #f4f4f4
-            </td>
-        </tr>
-        <tr>
-            <td>$neutral-black</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #000"></span> #000
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #f8f8f8"></span> #f8f8f8
-            </td>
-        </tr>
-        <tr>
-            <td>$alert-bg</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #deecf9"></span> #deecf9
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #bf7500"></span> #bf7500
-            </td>
-        </tr>
-        <tr>
-            <td>$error-bg</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #fde7e9"></span> #fde7e9
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #cd2a19"></span> #cd2a19
-            </td>
-        </tr>
-        <tr>
-            <td>$success-bg</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #dff6dd"></span> #dff6dd
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #37844d"></span> #37844d
-            </td>
-        </tr>
-        <tr>
-            <td>$theme-dark-font</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #fff"></span> #fff
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #fff"></span> #fff
-            </td>
-        </tr>
-        <tr>
-            <td>$theme-primary-font</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #fff"></span> #fff
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #fff"></span> #fff
-            </td>
-        </tr>
-        <tr>
-            <td>$theme-light-font</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #333"></span> #333
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #000"></span> #000
-            </td>
-        </tr>
-        <tr>
-            <td>$neutral-light-font</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #333"></span> #333
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #dadada"></span> #dadada
-            </td>
-        </tr>
-        <tr>
-            <td>$neutral-light-fontalt</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #000"></span> #000
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #fff"></span> #fff
-            </td>
-        </tr>
-        <tr>
-            <td>$grey-dark-font</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #fff"></span> #fff
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #000"></span> #000
-            </td>
-        </tr>
-        <tr>
-            <td>$base-font</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #333"></span> #333
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #dadada"></span> #dadada
-            </td>
-        </tr>
-        <tr>
-            <td>$message-font</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #333"></span> #333
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #fff"></span> #fff
-            </td>
-        </tr>
-        <tr>
-            <td>$alert-font</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #d83b01"></span> #d83b01
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #ff9d48"></span> #ff9d48
-            </td>
-        </tr>
-        <tr>
-            <td>$error-font</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #a80000"></span> #a80000
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #ff5f5f"></span> #ff5f5f
-            </td>
-        </tr>
-        <tr>
-            <td>$success-font</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #107c10"></span> #107c10
-            </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #8eff8d"></span> #8eff8d
-            </td>
-        </tr>
-        <tr>
-            <td>$info-bg</td>
-            <td> </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #1e79cb"></span> #1e79cb
-            </td>
-        </tr>
-        <tr>
-            <td>$info-font</td>
-            <td> </td>
-            <td>
-                <span class="circle-color-indicator" style="background: #62cfff"></span> #62cfff
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-### Syncfusion Blazor High Contrast Theme
-
-<table>
-    <style>
-        .circle-color-indicator {
-            width: 1.5em;
-            height: 1.5em;
-            border-radius: 50%;
-            display: inline-block;
-            border: 1px solid rgba(0, 0, 0, .08);
-            vertical-align: middle;
-        }
-        th, td {
-        text-align: left;
-        padding: 5px 15px;
-        vertical-align: top;
-        }
-    </style>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Value</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>$selection-bg</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #ffd939"></span> #ffd939
-            </td>
-        </tr>
-        <tr>
-            <td>$selection-font</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #000"></span> #000
-            </td>
-        </tr>
-        <tr>
-            <td>$selection-border</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #ffd939"></span> #ffd939
-            </td>
-        </tr>
-        <tr>
-            <td>$hover-bg</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #685708"></span> #685708
-            </td>
-        </tr>
-        <tr>
-            <td>$hover-font</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #fff"></span> #fff
-            </td>
-        </tr>
-        <tr>
-            <td>$hover-border</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #fff"></span> #fff
-            </td>
-        </tr>
-        <tr>
-            <td>$border-default</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #969696"></span> #969696
-            </td>
-        </tr>
-        <tr>
-            <td>$border-alt</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #757575"></span> #757575
-            </td>
-        </tr>
-        <tr>
-            <td>$border-fg</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #fff"></span> #fff
-            </td>
-        </tr>
-        <tr>
-            <td>$border-fg-alt</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #ffd939"></span> #ffd939
-            </td>
-        </tr>
-        <tr>
-            <td>$bg-base-0</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #000"></span> #000
-            </td>
-        </tr>
-        <tr>
-            <td>$bg-base-5</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #0d0d0d"></span> #0d0d0d
-            </td>
-        </tr>
-        <tr>
-            <td>$bg-base-10</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #1a1a1a"></span> #1a1a1a
-            </td>
-        </tr>
-        <tr>
-            <td>$bg-base-15</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #262626"></span> #262626
-            </td>
-        </tr>
-        <tr>
-            <td>$bg-base-20</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #333"></span> #333
-            </td>
-        </tr>
-        <tr>
-            <td>$bg-base-75</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #bfbfbf"></span> #bfbfbf
-            </td>
-        </tr>
-        <tr>
-            <td>$bg-base-100</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #fff"></span> #fff
-            </td>
-        </tr>
-        <tr>
-            <td>$header-font</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #ffd939"></span> #ffd939
-            </td>
-        </tr>
-        <tr>
-            <td>$header-font-alt</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #fff"></span> #fff
-            </td>
-        </tr>
-        <tr>
-            <td>$content-font</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #fff"></span> #fff
-            </td>
-        </tr>
-        <tr>
-            <td>$content-font-alt</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #969696"></span> #969696
-            </td>
-        </tr>
-        <tr>
-            <td>$link</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #8a8aff"></span> #8a8aff
-            </td>
-        </tr>
-        <tr>
-            <td>$invert-font</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #000"></span> #000
-            </td>
-        </tr>
-        <tr>
-            <td>$success-bg</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #166600"></span> #166600
-            </td>
-        </tr>
-        <tr>
-            <td>$error-bg</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #b30900"></span> #b30900
-            </td>
-        </tr>
-        <tr>
-            <td>$message-font</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #fff"></span> #fff
-            </td>
-        </tr>
-        <tr>
-            <td>$alert-bg</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #944000"></span> #944000
-            </td>
-        </tr>
-        <tr>
-            <td>$info-bg</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #0056b3"></span> #0056b3
-            </td>
-        </tr>
-        <tr>
-            <td>$success-alt</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #2bc700"></span> #2bc700
-            </td>
-        </tr>
-        <tr>
-            <td>$error-alt</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #ff6161"></span> #ff6161
-            </td>
-        </tr>
-        <tr>
-            <td>$alert-alt</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #ff7d1a"></span> #ff7d1a
-            </td>
-        </tr>
-        <tr>
-            <td>$info-alt</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #66b0ff"></span> #66b0ff
-            </td>
-        </tr>
-        <tr>
-            <td>$disable</td>
-            <td>
-                <span class="circle-color-indicator" style="background: #757575"></span> #757575
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-### Syncfusion Blazor Tailwind CSS Theme
+### Tailwind CSS Theme
 
 <table>
     <style>
@@ -2323,3 +1731,597 @@ The following list of common variables is used in the Syncfusion Blazor library 
         </tr>
     </tbody>
 </table>
+
+### Microsoft Office Fabric Theme
+
+<table>
+    <style>
+        .circle-color-indicator {
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 50%;
+            display: inline-block;
+            border: 1px solid rgba(0, 0, 0, .08);
+            vertical-align: middle;
+        }
+        th, td {
+        text-align: left;
+        padding: 5px 15px;
+        vertical-align: top;
+        }
+    </style>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Value (Default Theme) </th>
+            <th>Value (Dark Theme) </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>$theme-primary</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #0078d6"></span> #0078d6
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #0074cc"></span> #0074cc
+            </td>
+        </tr>
+        <tr>
+            <td>$theme-dark-alt</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #006fc7"></span> darken($theme-primary, 3%)
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #006bbd"></span> darken($theme-primary, 3%)
+            </td>
+        </tr>
+        <tr>
+            <td>$theme-dark</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #005ba3"></span> darken($theme-primary, 10%)
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #0063ad"></span> darken($theme-primary, 6%)
+            </td>
+        </tr>
+        <tr>
+            <td>$theme-darker</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #00457a"></span> darken($theme-primary, 18%)
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #005799"></span> darken($theme-primary, 10%)
+            </td>
+        </tr>
+        <tr>
+            <td>$theme-secondary</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #0081e5"></span> lighten($theme-primary, 3%)
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #007ddb"></span> lighten($theme-primary, 3%)
+            </td>
+        </tr>
+        <tr>
+            <td>$theme-tertiary</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #42acff"></span> lighten($theme-primary, 21%)
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #38a9ff"></span> lighten($theme-primary, 21%)
+            </td>
+        </tr>
+        <tr>
+            <td>$theme-light</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #b7e0ff"></span> lighten($theme-primary, 44%)
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #addcff"></span> lighten($theme-primary, 44%)
+            </td>
+        </tr>
+        <tr>
+            <td>$theme-lighter</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #d1ebff"></span> lighten($theme-primary, 49%)
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #c7e7ff"></span> lighten($theme-primary, 49%)
+            </td>
+        </tr>
+        <tr>
+            <td>$theme-lighter-alt</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #eff8ff"></span> lighten($theme-primary, 55%)
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #e5f4ff"></span> lighten($theme-primary, 55%)
+            </td>
+        </tr>
+        <tr>
+            <td>$neutral-white</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fff"></span> #fff
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #201f1f"></span> #201f1f
+            </td>
+        </tr>
+        <tr>
+            <td>$neutral-lighter-alt</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #f8f8f8"></span> #f8f8f8
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #282727"></span> #282727
+            </td>
+        </tr>
+        <tr>
+            <td>$neutral-lighter</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #f4f4f4"></span> #f4f4f4
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #333232"></span> #333232
+            </td>
+        </tr>
+        <tr>
+            <td>$neutral-light</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #eaeaea"></span> #eaeaea
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #414040"></span> #414040
+            </td>
+        </tr>
+        <tr>
+            <td>$neutral-quintenaryalt</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #dadada"></span> #dadada
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #4a4848"></span> #4a4848
+            </td>
+        </tr>
+        <tr>
+            <td>$neutral-quintenary</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #d0d0d0"></span> #d0d0d0
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #514f4f"></span> #514f4f
+            </td>
+        </tr>
+        <tr>
+            <td>$neutral-tertiary-alt</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #c8c8c8"></span> #c8c8c8
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #6f6c6c"></span> #6f6c6c
+            </td>
+        </tr>
+        <tr>
+            <td>$neutral-tertiary</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #a6a6a6"></span> #a6a6a6
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #9a9a9a"></span> #9a9a9a
+            </td>
+        </tr>
+        <tr>
+            <td>$neutral-secondary-alt</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #767676"></span> #767676
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #c8c8c8"></span> #c8c8c8
+            </td>
+        </tr>
+        <tr>
+            <td>$neutral-secondary</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #666"></span> #666
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #dadada"></span> #dadada
+            </td>
+        </tr>
+        <tr>
+            <td>$neutral-primary</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #333"></span> #333
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fff"></span> #fff
+            </td>
+        </tr>
+        <tr>
+            <td>$neutral-dark</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #212121"></span> #212121
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #f4f4f4"></span> #f4f4f4
+            </td>
+        </tr>
+        <tr>
+            <td>$neutral-black</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #000"></span> #000
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #f8f8f8"></span> #f8f8f8
+            </td>
+        </tr>
+        <tr>
+            <td>$alert-bg</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #deecf9"></span> #deecf9
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #bf7500"></span> #bf7500
+            </td>
+        </tr>
+        <tr>
+            <td>$error-bg</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fde7e9"></span> #fde7e9
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #cd2a19"></span> #cd2a19
+            </td>
+        </tr>
+        <tr>
+            <td>$success-bg</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #dff6dd"></span> #dff6dd
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #37844d"></span> #37844d
+            </td>
+        </tr>
+        <tr>
+            <td>$theme-dark-font</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fff"></span> #fff
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fff"></span> #fff
+            </td>
+        </tr>
+        <tr>
+            <td>$theme-primary-font</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fff"></span> #fff
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fff"></span> #fff
+            </td>
+        </tr>
+        <tr>
+            <td>$theme-light-font</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #333"></span> #333
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #000"></span> #000
+            </td>
+        </tr>
+        <tr>
+            <td>$neutral-light-font</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #333"></span> #333
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #dadada"></span> #dadada
+            </td>
+        </tr>
+        <tr>
+            <td>$neutral-light-fontalt</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #000"></span> #000
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fff"></span> #fff
+            </td>
+        </tr>
+        <tr>
+            <td>$grey-dark-font</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fff"></span> #fff
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #000"></span> #000
+            </td>
+        </tr>
+        <tr>
+            <td>$base-font</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #333"></span> #333
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #dadada"></span> #dadada
+            </td>
+        </tr>
+        <tr>
+            <td>$message-font</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #333"></span> #333
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fff"></span> #fff
+            </td>
+        </tr>
+        <tr>
+            <td>$alert-font</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #d83b01"></span> #d83b01
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #ff9d48"></span> #ff9d48
+            </td>
+        </tr>
+        <tr>
+            <td>$error-font</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #a80000"></span> #a80000
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #ff5f5f"></span> #ff5f5f
+            </td>
+        </tr>
+        <tr>
+            <td>$success-font</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #107c10"></span> #107c10
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #8eff8d"></span> #8eff8d
+            </td>
+        </tr>
+        <tr>
+            <td>$info-bg</td>
+            <td> </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #1e79cb"></span> #1e79cb
+            </td>
+        </tr>
+        <tr>
+            <td>$info-font</td>
+            <td> </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #62cfff"></span> #62cfff
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+### High Contrast Theme
+
+<table>
+    <style>
+        .circle-color-indicator {
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 50%;
+            display: inline-block;
+            border: 1px solid rgba(0, 0, 0, .08);
+            vertical-align: middle;
+        }
+        th, td {
+        text-align: left;
+        padding: 5px 15px;
+        vertical-align: top;
+        }
+    </style>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>$selection-bg</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #ffd939"></span> #ffd939
+            </td>
+        </tr>
+        <tr>
+            <td>$selection-font</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #000"></span> #000
+            </td>
+        </tr>
+        <tr>
+            <td>$selection-border</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #ffd939"></span> #ffd939
+            </td>
+        </tr>
+        <tr>
+            <td>$hover-bg</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #685708"></span> #685708
+            </td>
+        </tr>
+        <tr>
+            <td>$hover-font</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fff"></span> #fff
+            </td>
+        </tr>
+        <tr>
+            <td>$hover-border</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fff"></span> #fff
+            </td>
+        </tr>
+        <tr>
+            <td>$border-default</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #969696"></span> #969696
+            </td>
+        </tr>
+        <tr>
+            <td>$border-alt</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #757575"></span> #757575
+            </td>
+        </tr>
+        <tr>
+            <td>$border-fg</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fff"></span> #fff
+            </td>
+        </tr>
+        <tr>
+            <td>$border-fg-alt</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #ffd939"></span> #ffd939
+            </td>
+        </tr>
+        <tr>
+            <td>$bg-base-0</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #000"></span> #000
+            </td>
+        </tr>
+        <tr>
+            <td>$bg-base-5</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #0d0d0d"></span> #0d0d0d
+            </td>
+        </tr>
+        <tr>
+            <td>$bg-base-10</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #1a1a1a"></span> #1a1a1a
+            </td>
+        </tr>
+        <tr>
+            <td>$bg-base-15</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #262626"></span> #262626
+            </td>
+        </tr>
+        <tr>
+            <td>$bg-base-20</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #333"></span> #333
+            </td>
+        </tr>
+        <tr>
+            <td>$bg-base-75</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #bfbfbf"></span> #bfbfbf
+            </td>
+        </tr>
+        <tr>
+            <td>$bg-base-100</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fff"></span> #fff
+            </td>
+        </tr>
+        <tr>
+            <td>$header-font</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #ffd939"></span> #ffd939
+            </td>
+        </tr>
+        <tr>
+            <td>$header-font-alt</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fff"></span> #fff
+            </td>
+        </tr>
+        <tr>
+            <td>$content-font</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fff"></span> #fff
+            </td>
+        </tr>
+        <tr>
+            <td>$content-font-alt</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #969696"></span> #969696
+            </td>
+        </tr>
+        <tr>
+            <td>$link</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #8a8aff"></span> #8a8aff
+            </td>
+        </tr>
+        <tr>
+            <td>$invert-font</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #000"></span> #000
+            </td>
+        </tr>
+        <tr>
+            <td>$success-bg</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #166600"></span> #166600
+            </td>
+        </tr>
+        <tr>
+            <td>$error-bg</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #b30900"></span> #b30900
+            </td>
+        </tr>
+        <tr>
+            <td>$message-font</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fff"></span> #fff
+            </td>
+        </tr>
+        <tr>
+            <td>$alert-bg</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #944000"></span> #944000
+            </td>
+        </tr>
+        <tr>
+            <td>$info-bg</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #0056b3"></span> #0056b3
+            </td>
+        </tr>
+        <tr>
+            <td>$success-alt</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #2bc700"></span> #2bc700
+            </td>
+        </tr>
+        <tr>
+            <td>$error-alt</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #ff6161"></span> #ff6161
+            </td>
+        </tr>
+        <tr>
+            <td>$alert-alt</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #ff7d1a"></span> #ff7d1a
+            </td>
+        </tr>
+        <tr>
+            <td>$info-alt</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #66b0ff"></span> #66b0ff
+            </td>
+        </tr>
+        <tr>
+            <td>$disable</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #757575"></span> #757575
+            </td>
+        </tr>
+    </tbody>
+</table>
+
