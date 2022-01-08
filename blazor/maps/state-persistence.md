@@ -11,7 +11,7 @@ documentation: ug
 
 ## State Persistence
 
-State persistence allows the Maps to retain the current model value in the browser cookies for state maintenance. This action is handled through the `enablePersistence` property which is set to **false** by default. When it is set to **true**, some of the Maps component model values will be retained even after refreshing the page.
+State persistence allows the Maps to retain the current model value in the browser cookies for state maintenance. This action is handled through the `EnablePersistence` property which is set to **false** by default. When it is set to **true**, some of the Maps component model values will be retained even after refreshing the page.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
