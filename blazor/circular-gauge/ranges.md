@@ -194,6 +194,7 @@ The ranges can be dragged over the axis line by clicking and dragging the same. 
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
+![Blazor Circular Gauge with Dragging Range](./images/range-drag.gif)
 
 ## Multiple ranges
 
@@ -337,6 +338,7 @@ To apply linear gradient to the range, follow the below code sample.
     }
 </style>
 ```
+![Blazor Circular Gauge with Linear Gradient](./images/blazor-circulargauge-pointer-linear-gradient.png)
 
 ### Radial Gradient
 
@@ -447,6 +449,7 @@ To apply radial gradient to the range, follow the below code sample.
     }
 </style>
 ```
+![Blazor Circular Gauge with Radial Gradient](./images/blazor-circulargauge-pointer-radial-gradient.png)
 
 ## See also
 

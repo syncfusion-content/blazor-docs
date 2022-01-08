@@ -67,7 +67,7 @@ The needle, tail and cap of the pointer can be customized with the following pro
     * [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeCap.html#Syncfusion_Blazor_CircularGauge_CircularGaugeCap_Color) - sets pointer's cap color.
     * [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeCap.html#Syncfusion_Blazor_CircularGauge_CircularGaugeCap_Radius) - sets pointer's cap radius.
     * [CircularGaugeCapBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeCap.html#Syncfusion_Blazor_CircularGauge_CircularGaugeCap_Border) - sets pointer's cap border.
-    * [Position`] - specifies the position of the Pointer. Its possible values are 'PointerRangePosition.Inside', 'PointerRangePosition.Outside' and 'PointerRangePosition.Cross'.
+    * [Position] - specifies the position of the Pointer. Its possible values are 'PointerRangePosition.Inside', 'PointerRangePosition.Outside' and 'PointerRangePosition.Cross'.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -483,6 +483,7 @@ The linear gradient can be applied to all pointer types like marker, range bar, 
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
+![Blazor Circular Gauge with Linear Gradient](./images/blazor-circulargauge-needle-pointer-linear-gradient.png)
 
 ### Radial Gradient
 
@@ -556,5 +557,6 @@ The radial gradient can be applied to all pointer types like marker, range bar, 
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
+![Blazor Circular Gauge with Radial Gradient](./images/blazor-circulargauge-needle-pointer-radial-gradient.png)
 
 <!-- markdownlint-disable MD010 -->

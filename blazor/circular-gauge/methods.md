@@ -47,6 +47,7 @@ To change the annotation content dynamically, use the [SetAnnotationValueAsync](
     } 
 }
 ```
+![Blazor Circular Gauge Annotation](./images/blazor-circulargauge-annontation-method.gif)
 
 ## SetPointerValueAsync
 
@@ -81,7 +82,7 @@ To change the pointer value dynamically, use the [SetPointerValueAsync](https://
 }
 ```
 
-![Blazor Circular Gauge](./images/blazor-circulargauge.png)
+![Blazor Circular Gauge Pointer](./images/blazor-circulargauge-pointer-method.gif)
 
 ## SetRangeValue
 

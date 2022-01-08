@@ -18,6 +18,13 @@ To use the print functionality, you should set the [AllowPrint](https://help.syn
 
 <button @onclick="PrintGauge">Print</button>
 <SfCircularGauge @ref="Gauge" AllowPrint="true">
+<CircularGaugeAxes>
+        <CircularGaugeAxis>
+            <CircularGaugePointers>
+                <CircularGaugePointer></CircularGaugePointer>
+            </CircularGaugePointers>
+        </CircularGaugeAxis>
+    </CircularGaugeAxes>
 </SfCircularGauge>
 
 @code {
@@ -46,6 +53,13 @@ To use the image export functionality, you should set the [AllowImageExport](htt
 
 <button @onclick="ExportGauge">Export</button>
 <SfCircularGauge @ref="Gauge" AllowImageExport="true">
+<CircularGaugeAxes>
+        <CircularGaugeAxis>
+            <CircularGaugePointers>
+                <CircularGaugePointer></CircularGaugePointer>
+            </CircularGaugePointers>
+        </CircularGaugeAxis>
+    </CircularGaugeAxes>
 </SfCircularGauge>
 
 @code {
@@ -68,6 +82,13 @@ To use the PDF export functionality, you should set the [AllowPdfExport](https:/
 
 <button @onclick="ExportGauge">Export</button>
 <SfCircularGauge @ref="Gauge" AllowPdfExport="true">
+<CircularGaugeAxes>
+        <CircularGaugeAxis>
+            <CircularGaugePointers>
+                <CircularGaugePointer></CircularGaugePointer>
+            </CircularGaugePointers>
+        </CircularGaugeAxis>
+    </CircularGaugeAxes>
 </SfCircularGauge>
 
 @code {
