@@ -119,6 +119,7 @@ To change the start and end of a range in axis, use the [SetRangeValue](https://
     }
 }
  ```
+![Blazor Circular Gauge Pointer](./images/blazor-circulargauge-range-method.gif)
 
 ## RefreshAsync
 
