@@ -103,4 +103,4 @@ Initialize the Maps control with annotation option, text content or ID of an HTM
 
 ```
 
-![Blazor Maps with Annotation](./images/blazor-maps-annotations.PNG)
+![Blazor Maps with Annotation](../images/blazor-maps-annotations.PNG)
