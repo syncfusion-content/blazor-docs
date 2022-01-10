@@ -1,15 +1,15 @@
 ---
 layout: post
-title: How to Model Dialog With Rte in Blazor Dialog Component | Syncfusion
-description: Checkout and learn about Model Dialog With Rte in Blazor Dialog component of Syncfusion, and more details.
+title: Render Model Dialog with Rte in Blazor Dialog Component | Syncfusion
+description: Checkout and learn here all about Model Dialog with Rte in Syncfusion Blazor Dialog component and more.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Render model dialog with Rich Text Editor
+# Render Model Dialog with Rich Text Editor
 
-This section explains how to render model dialog with the Rich Text Editor component. when you render model dialog with the Rich Text Editor component, the first row of the content will be hidden because the dialog container and its wrapper elements are styled with display as none. so, the editor’s toolbar does not get proper offset width and rendered above the edit area container. In this scenario, we could use the `refreshUI` method on the Dialog `open` event.
+This section explains how to render model dialog with the Rich Text Editor component. When you render model dialog with the Rich Text Editor component, the first row of the content will be hidden because the dialog container and its wrapper elements are styled with display as none. So, the editor’s toolbar does not get proper offset width and rendered above the edit area container. In this scenario, you can use the `refreshUI` method on the Dialog `open` event.
 
 ```cshtml
 

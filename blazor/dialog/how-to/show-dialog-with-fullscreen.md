@@ -9,7 +9,7 @@ documentation: ug
 
 # Show Dialog with fullscreen in Blazor Dialog Component
 
-You can show the dialog in fullscreen by passing `true` as argument to the dialog `Show` method. By using `Visible` property you can prevent the dialog from showing initially.
+You can show the dialog in fullscreen by passing `true` as argument to the dialog `Show` method. By using the `Visible` property, you can prevent the dialog from showing initially.
 
 ```cshtml
 
