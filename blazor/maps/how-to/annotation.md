@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Add annotations in Blazor Maps Component | Syncfusion
+title: Annotations in Blazor Maps Component | Syncfusion
 description: Checkout and learn here all about to Add annotations in Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Annotations
+# Annotations in Blazor Maps Component
 
 Annotations are used to mark the specific area of interest in the Maps with texts, shapes, or images. Any number of annotations can be added to the Maps component.
 
