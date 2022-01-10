@@ -237,7 +237,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 {% tabs %}
 {% highlight razor tabtitle="~/Imports.razor" %}
 
-@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Calendars
 
 {% endhighlight %}
