@@ -275,56 +275,22 @@ html, body {
 
 ## Prerender the dialog
 
-The dialog component is maintained at the DOM elements when showing or hiding the dialogs while enabling the `AllowPrerender` property.
+The dialog component is maintained in the DOM after hiding the dialog when the [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowPrerender) property is set to `true`.
 
-> By default, the `AllowPrerender` property is in disabled state. The dialog DOM elements will be destroyed while hiding the dialog. Each time the dialog will be re-rendered when showing the dialog. Dialog `@bind-Visible` property also works based on the `AllowPrerender` property.
+* By default, the [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowPrerender) is set to `false` where the dialog DOM elements are destroyed while hiding the dialog and each time the dialog will be re-rendered when showing the dialog. The [@bind-Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Visible) property of dialog also works based on the [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowPrerender) property.
+* If the [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowPrerender) property is set to `true`, the dialog elements are maintained in the DOM when hiding the dialog.
 
 {% tabs %}
 {% highlight razor %}
 
 @using Syncfusion.Blazor.Buttons
 
-<div id="target">
-    <div>
-        @if (this.ShowButton)
-        {
-            <button class="e-btn" @onclick="@OnBtnClick">Open</button>
-        }
-    </div>
-    <SfDialog Target="#target" Width="300px" ShowCloseIcon="true" @bind-Visible="Visibility" AllowPrerender="true">
-        <DialogTemplates>
-            <Header> Dialog </Header>
-            <Content> This is a dialog with header </Content>
-        </DialogTemplates>
-        <DialogEvents OnOpen="@DialogOpen" Closed="@DialogClose"></DialogEvents>
-    </SfDialog>
-</div>
-<style>
-    #target {
-        height: 500px;
-    }
-</style>
-@code {
-    private bool Visibility { get; set; } = true;
-    private bool ShowButton { get; set; } = false;
-    private void OnBtnClick()
-    {
-        this.Visibility = true;
-    }
-    private void DialogOpen(Object args)
-    {
-        this.ShowButton = false;
-    }
-    private void DialogClose(Object args)
-    {
-        this.ShowButton = true;
-    }
-}
+{% include_relative code-snippet/prerender-blazor-dialog.razor %}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Prerender Dialog](./images/blazor-prerender-dialog.png)
+![Prerender Blazor Dialog](./images/blazor-prerender-dialog.png)
 
 ## Modal dialog
 
