@@ -194,6 +194,7 @@ The ranges can be dragged over the axis line by clicking and dragging the same. 
     </CircularGaugeAxes>
 </SfCircularGauge>
 ```
+
 ![Blazor Circular Gauge with Dragging Range](./images/range-drag.gif)
 
 ## Multiple ranges
