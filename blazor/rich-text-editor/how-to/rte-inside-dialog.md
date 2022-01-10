@@ -1,7 +1,7 @@
 ---
 layout: post
-title: RichTextEditor inside the Dialog Component | Syncfusion
-description: Checkout and learn here all about rendering RichTextEditor component inside the Dialog component and more.
+title: RichTextEditor inside the Dialog Component | Blazor | Syncfusion
+description: This section explains about rendering Blazor RichTextEditor component inside the Dialog component.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
