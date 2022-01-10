@@ -9,7 +9,7 @@ documentation: ug
 
 # RichTextEditor inside the Dialog Component
 
-While rendering the Rich Text Editor inside the Dialog component, the dialog container and its wrapper elements are styled with display as none, so the editor’s toolbar does not get proper offset width and will render above the edit area container. To resolve that issue we can call the RefreshUI method of RichTextEditor in the Dialog Opened event.
+While rendering the Rich Text Editor inside the Dialog component, the dialog container and its wrapper elements are styled with display as none, so the editor’s toolbar does not get proper offset width and will render above the edit area container. To resolve this issue, you can call the RefreshUI method of RichTextEditor in the Dialog Opened event.
 
 {% highlight razor %}
 
