@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grouping in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about Grouping in Syncfusion Blazor Pivot Table component and much more.
+description: Checkout and learn here all about grouping in Syncfusion Blazor Pivot Table component and much more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -13,7 +13,7 @@ Grouping is the most-useful feature in pivot table and the component automatical
 
 > This feature is applicable only for relational data source.
 
-The grouping can be enabled by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewModel-1.html#Syncfusion_Blazor_PivotView_PivotViewModel_1_AllowGrouping) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. To perform the grouping action via UI, right click on the pivot table's row or column header, select "**Group**", a dialog will appear in which fill the appropriate options to group the data. To ungroup,right click on the pivot table's row or column header, select "**Ungroup**".
+The grouping can be enabled by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewModel-1.html#Syncfusion_Blazor_PivotView_PivotViewModel_1_AllowGrouping) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. To perform the grouping action via UI, right click on the pivot table's row or column header, select "**Group**", a dialog will appear, fill the appropriate options to group the data. To ungroup, right click on the pivot table's row or column header, select "**Ungroup**".
 
 The following are the three different types of grouping:
 
@@ -119,7 +119,7 @@ Number grouping can also be configured using the [PivotViewGroupSettings](https:
 * [EndingAt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupSetting.html#Syncfusion_Blazor_PivotView_PivotViewGroupSetting_EndingAt): Allows user to set the ending number.
 * [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupSetting.html#Syncfusion_Blazor_PivotView_PivotViewGroupSetting_Type): Allows user to set the group type. For number grouping, [GroupType.Number](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.GroupType.html) is set.
 
-> If starting and ending numbers specified in [StartingAt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupSetting.html#Syncfusion_Blazor_PivotView_PivotViewGroupSetting_StartingAt) and [EndingAt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupSetting.html#Syncfusion_Blazor_PivotView_PivotViewGroupSetting_EndingAt) properties are in-between the number range, then rest of the numbers will be grouped and placed in “Out of Range” section introduced specific to this feature.
+> If starting and ending numbers specified in [StartingAt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupSetting.html#Syncfusion_Blazor_PivotView_PivotViewGroupSetting_StartingAt) and [EndingAt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupSetting.html#Syncfusion_Blazor_PivotView_PivotViewGroupSetting_EndingAt) properties are in-between the number range, then the rest of the numbers will be grouped and placed in “Out of Range” section introduced specifically to this feature.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -234,7 +234,7 @@ Date grouping can also be configured using the [PivotViewGroupSettings](https://
 * [EndingAt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupSetting.html#Syncfusion_Blazor_PivotView_PivotViewGroupSetting_EndingAt): Allows user to set ending date.
 * [GroupInterval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupSetting.html#Syncfusion_Blazor_PivotView_PivotViewGroupSetting_GroupInterval): Allows user to set interval in year, quarter, month, day, hour, minute, or second pattern.
 
-> From the date format "YYYY-DD-MM HH:MM:SS", if user wants to display only year and month, then the [GroupInterval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupSetting.html#Syncfusion_Blazor_PivotView_PivotViewGroupSetting_GroupInterval) property should be set with [DateGroup.Years](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DateGroup.html) and [DateGroup.Months](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DateGroup.html) alone. Also, user can shuffle the order of year, quarter, month, day, hour, minute, or second based on their requirement and display the same in the pivot table.
+> From the date format "YYYY-DD-MM HH:MM:SS", if the user wants to display only year and month, then the [GroupInterval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupSetting.html#Syncfusion_Blazor_PivotView_PivotViewGroupSetting_GroupInterval) property should be set with [DateGroup.Years](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DateGroup.html) and [DateGroup.Months](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DateGroup.html) alone. Also, the user can shuffle the order of year, quarter, month, day, hour, minute, or second based on their requirement and display the same in the pivot table.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -286,7 +286,7 @@ By right-clicking the appropriate header and selecting "**Ungroup**" from the co
 
 ## Custom Grouping
 
-Custom grouping can group any data type, such as date, time, number and string, into a custom field based on the user's needs. It can be configured via the UI by right-clicking on any header in the pivot table.
+Custom grouping can group any data type such as date, time, number and string into a custom field based on the user's needs. It can be configured via the UI by right-clicking on any header in the pivot table.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -325,7 +325,7 @@ In order to create custom grouping in the pivot table, a minimum of two headers 
 
 ![Custom Grouping in Blazor PivotTable](images/blazor-pivottable-custom-grouping.png)
 
-In the dialog, the "**Field caption**" is the alias name of the new custom field that will be used to shown up in the pivot table component.
+In the dialog, the "**Field caption**" is the alias name of the new custom field that will be used to show up in the pivot table component.
 
 ![Caption with Custom Grouping in Blazor PivotTable](images/blazor-pivottable-custom-group-with-caption.png)
 
@@ -335,7 +335,7 @@ The "**Group Name**" option helps to set the name of the header to hold the othe
 <br/>
 ![Displaying Updated Custom Grouping in Blazor PivotTable](images/blazor-pivottable-update-custom-group.png)
 
-User can also apply new custom grouping options to an existing custom field by right-clicking on the custom group header in the pivot table. For example, if the user wants to create a new custom group for the current custom group headers such as "**Bottles and Cages**", "**Cleaners**" and "**Fenders**" by setting the top level name as "**Accessories**" to "**Group Name**" on their own. The selected headers will then be grouped in the pivot table under the name "**Accessories**" with a new custom field called "**Product category 1**".
+Users can also apply new custom grouping options to an existing custom field by right-clicking on the custom group header in the pivot table. For example, if the user wants to create a new custom group for the current custom group headers such as "**Bottles and Cages**", "**Cleaners**" and "**Fenders**" by setting the top level name as "**Accessories**" to "**Group Name**" on their own. The selected headers will then be grouped in the pivot table under the name "**Accessories**" with a new custom field called "**Product category 1**".
 
 ![Nested Custom Grouping in Blazor PivotTable](images/blazor-pivottable-nested-custom-group.png)
 <br/>
@@ -353,7 +353,7 @@ Custom grouping can also be configured using the [PivotViewGroupSettings](https:
 The available custom group properties in [PivotViewCustomGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCustomGroup.html) in [PivotViewCustomGroups](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCustomGroups.html) class are:
 
 * [GroupName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCustomGroup.html#Syncfusion_Blazor_PivotView_PivotViewCustomGroup_GroupName): Allows user to set the group name (or title) for selected headers.
-* [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCustomGroup.html#Syncfusion_Blazor_PivotView_PivotViewCustomGroup_Items): It allows to set the headers which needs to be grouped from display.
+* [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCustomGroup.html#Syncfusion_Blazor_PivotView_PivotViewCustomGroup_Items): Allows to set the headers which needs to be grouped from display.
 
 > When the [GroupName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCustomGroup.html#Syncfusion_Blazor_PivotView_PivotViewCustomGroup_GroupName) with the headers listed in [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCustomGroup.html#Syncfusion_Blazor_PivotView_PivotViewCustomGroup_Items) in the [PivotViewCustomGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGroupSetting.html#Syncfusion_Blazor_PivotView_PivotViewGroupSetting_RangeInterval) class is grouped by the defined [GroupName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCustomGroup.html#Syncfusion_Blazor_PivotView_PivotViewCustomGroup_GroupName) and the rest is grouped by its own name in the pivot table.
 
@@ -407,4 +407,4 @@ By right-clicking the appropriate header and selecting "**Ungroup**" from the co
 
 ![Custom UnGrouping in Blazor PivotTable](images/blazor-pivottable-custom-ungroup.png)
 
-> You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.
+> Refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: State Persistence in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about State Persistence in Syncfusion Blazor Pivot Table component and more.
+description: Checkout and learn here all about state persistence in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -101,4 +101,4 @@ You can save the current layout of the pivot table by using [GetPersistDataAsync
 
 ```
 
-> You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.
+> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.

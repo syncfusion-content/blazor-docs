@@ -9,7 +9,7 @@ documentation: ug
 
 # Hyperlink in Blazor Pivot Table Component
 
-The pivot table supports to show hyperlink option to link data for individual cells that are displayed in the component. Also, the hyperlink can be enabled separately for row headers, column headers, value cells, and summary cells using the [PivotViewHyperlinkSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html) class. It can be configured through code behind, during initial rendering and the settings available to show hyperlink are:
+The pivot table supports to show hyperlink option to link data for individual cells that are displayed in the component. Also, the hyperlink can be enabled separately for row headers, column headers, value cells, and summary cells using the [PivotViewHyperlinkSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html) class. It can be configured through the code behind, during initial rendering and the settings available to show the hyperlink are:
 
 * [ShowHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowHyperlink): It allows to set the visibility of hyperlink in all cells.
 * [ShowRowHeaderHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowRowHeaderHyperlink): It allows to set the visibility of hyperlink in row headers.
@@ -124,7 +124,7 @@ The pivot table has an option to show hyperlink option for row header cells alon
 
 ## Hyperlink for column headers
 
-The pivot table has an option to show hyperlink option for column header cells alone that are currently in display. To do so, user need to set [ShowColumnHeaderHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowColumnHeaderHyperlink) to **true**.
+The pivot table has an option to show hyperlink option for column header cells alone that are currently in display. To do so, the user need to set [ShowColumnHeaderHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowColumnHeaderHyperlink) to **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -173,7 +173,7 @@ The pivot table has an option to show hyperlink option for column header cells a
 
 ## Hyperlink for value cells
 
-The pivot table has an option to show hyperlink option for value cells alone that are currently in display. To do so, user need to set [ShowValueCellHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowValueCellHyperlink) to **true**.
+The pivot table has an option to show hyperlink option for value cells alone that are currently in display. To do so, the user need to set [ShowValueCellHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowValueCellHyperlink) to **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -222,7 +222,7 @@ The pivot table has an option to show hyperlink option for value cells alone tha
 
 ## Hyperlink for summary cells
 
-The pivot table has an option to show hyperlink option for summary cells alone that are currently in display. To do so, user need to set [ShowSummaryCellHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowSummaryCellHyperlink) to **true**.
+The pivot table has an option to show hyperlink option for summary cells alone that are currently in display. To do so, the user need to set [ShowSummaryCellHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html#Syncfusion_Blazor_PivotView_PivotViewHyperlinkSettings_ShowSummaryCellHyperlink) to **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -427,4 +427,4 @@ It has following parameters - [Cancel](https://help.syncfusion.com/cr/blazor/Syn
 }
 ```
 
-> You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.
+> Refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
