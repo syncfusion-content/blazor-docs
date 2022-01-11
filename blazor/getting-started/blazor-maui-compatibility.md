@@ -78,7 +78,7 @@ To add Blazor Calendar component in the app, open the NuGet package manager in V
 
    ![Windows machine mode](images\maui\windows-machine-mode.png)
 
-**Note:** If you want to run the application in android or IOS, then change the mode in the mode dropdown. Android or iOS modes required emulator installation during initial project setup. Refer the [MSDN guidelines](https://docs.microsoft.com/en-us/dotnet/maui/get-started/first-app) for the setup. 
+**Note:** If you want to run the application in android or iOS, then change the mode in the mode dropdown. Android or iOS modes required emulator installation during initial project setup. Refer the [MSDN guidelines](https://docs.microsoft.com/en-us/dotnet/maui/get-started/first-app) for the setup. 
 
 6. Run the sample, it will display MAUI Blazor app with Syncfusion Blazor Calendar component.
 
