@@ -149,7 +149,7 @@ The appearance of the needle pointer can be customized by using [NeedleStartWidt
     }
 </style>
 ```
-![Blazor Circular Gauge with Needle Width Customization](./images/blazor-circulargauge-range-bar-pointer.png)
+![Blazor Circular Gauge with Needle Width Customization](./images/blazor-circulargauge-needle-pointer-customization.png)
 
 ## Range bar pointer
 
