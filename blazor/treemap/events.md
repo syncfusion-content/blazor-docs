@@ -54,6 +54,8 @@ In the following example, the event [ItemRendering](https://help.syncfusion.com/
 }
 ```
 
+## Available events
+
 ## ItemHighlighted
 
 Triggers, after highlighting the TreeMap items.
