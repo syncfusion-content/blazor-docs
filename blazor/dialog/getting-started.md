@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Dialog Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Dialog component of Syncfusion, and more details.
+description: Checkout and learn here all about getting started with Syncfusion Blazor Dialog component and much more.
 platform: Blazor
 control: Dialog
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Dialog Component
 
-This section briefly explains how to include a Dialog component in your Blazor Server-side application. You can refer to our Getting Started with [Syncfusion Blazor Server-Side Popups in Visual Studio page](../getting-started/blazor-server-side-visual-studio/) for the introduction and configuring the common specifications.
+This section briefly explains how to include a Dialog component in your Blazor Server-side application. You can refer to our Getting Started with [Syncfusion Blazor Server-Side Popups in Visual Studio page](../getting-started/blazor-server-side-visual-studio/) for the introduction and configuration of the common specifications.
 
 To get start quickly with Blazor Dialog component, you can check on this video:
 {% youtube
@@ -35,7 +35,7 @@ To get start quickly with Blazor Dialog component, you can check on this video:
 
 ```
 
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](../common/how-to/render-blazor-server-app-in-ie/) for more information.
+> For Internet Explorer 11, kindly refer the polyfills. Refer the [documentation](../common/how-to/render-blazor-server-app-in-ie/) for more information.
 
 ```cshtml
 
@@ -84,7 +84,7 @@ namespace BlazorApplication
 
 ## Add Dialog component
 
-To initialize the Dialog component, add the below code to your **Index.razor** view page which is present under **~/Pages** folder.
+To initialize the Dialog component, add the following code to your **Index.razor** view page which is present under **~/Pages** folder.
 
 The following code explains how to initialize a simple Dialog in Razor page.
 
@@ -109,7 +109,7 @@ The output will be as follows.
 ![Blazor Dialog](./images/blazor-dialog.png)
 
 > * In the dialog control, max-height is calculated based on the dialog target element height. If the **Target** property is not configured, the **document.body** is considered as a target. Therefore, to show a dialog in proper height, you need to add min-height to the target element.
-> * If the dialog is rendered based on the body, then the dialog will get the height based on its body element height. If the height of the dialog is larger than the body height, then the dialog's height will not be set. For this scenario, we can set the CSS style for the html and body to get the dialog height.
+> * If the dialog is rendered based on the body, then the dialog will get the height based on its body element height. If the height of the dialog is larger than the body height, then the dialog's height will not be set. For this scenario, you can set the CSS style for the html and body to get the dialog height.
 
 ```css
 
@@ -175,7 +175,7 @@ The output will be as follows.
 
 ## Modal dialog
 
-A `modal` shows an overlay behind the Dialog. So, the users should interact the Dialog compulsory before interacting with the remaining content in an application.
+A `modal` shows an overlay behind the Dialog. So, the users must interact with the Dialog before interacting with the remaining content in an application.
 
 While the user clicks the overlay, the action can be handled through the `OnOverlayClick` event. In the following code, it explains the Dialog close action performed while clicking the overlay.
 
@@ -249,7 +249,7 @@ The output will be as follows.
 
 ## Render Dialog with buttons
 
-By adding the `DialogButtons` can render a Dialog with buttons in Razor page.
+By adding the `DialogButtons` you can render a Dialog with buttons in Razor page.
 
 ```cshtml
 
