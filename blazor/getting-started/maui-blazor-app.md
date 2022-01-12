@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with MAUI Blazor App in Visual Studio 
+title: Getting Started with MAUI Blazor App in Visual Studio | Syncfusion
 description: Check out the documentation for getting started with MAUI Blazor App and Syncfusion Blazor Components in Visual Studio and much more.
 platform: Blazor
 component: Common
@@ -167,11 +167,11 @@ Before run the sample, make sure the mode is `Windows Machine`.
 
 * How to solve "The project doesn't know how to run the profile Windows Machine" while running MAUI Blazor App?
 
-    * This issue has been fixed in most recent release of visual studio. For more details refer [here](https://developercommunity.visualstudio.com/t/the-project-doesnt-know-how-to-run-the-profile-win/1530395)
+    * This issue has been fixed in most recent release of Visual Studio. For more details refer [here](https://developercommunity.visualstudio.com/t/the-project-doesnt-know-how-to-run-the-profile-win/1530395)
     
     * You can also fix this error by installing [Single-project MSIX Packaging Tools](https://marketplace.visualstudio.com/items?itemName=ProjectReunion.MicrosoftSingleProjectMSIXPackagingToolsDev17).
 
-* How to solve deployement errors?
+* How to solve deployment errors?
 
     If you get error dialog like "There were deployment errors", Enable developer mode. For more details refer [Enable your device for development](https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development).
 
