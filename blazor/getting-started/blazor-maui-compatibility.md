@@ -7,37 +7,56 @@ component: Common
 documentation: ug
 ---
 
-# Getting Started with MAUI Blazor Application
+# Getting Started with .NET MAUI Blazor Application
 
-This section explains how to create and run the first .NET Multi platform App UI Blazor (.NET MAUI Blazor) app.
+This section explains how to create and run the first .NET Multi-platform Blazor App UI (.NET MAUI Blazor) app with Syncfusion Blazor components.
 
 ## Prerequisites
 
-*  .NET SDK 6.0 (Latest [SDK 6.0.101 or above])
+* .NET SDK 6.0 (Latest [SDK 6.0.101 or above])
+* The latest preview of Visual Studio 2022 17.1 or above, with required workloads:
+   * [Mobile development with .NET](https://docs.microsoft.com/en-us/dotnet/maui/get-started/installation)
+   * ASP.NET and web development 
 
-*  The latest preview of Visual Studio 2022 17.1 or above, with [required workload](https://docs.microsoft.com/en-us/dotnet/maui/get-started/installation).
+## Create a new .NET MAUI Blazor App in Visual Studio
 
-## Get started with Visual Studio 2022 Preview (Latest 17.1 or above) with 'Windows-Machine' mode for Syncfusion Blazor Controls
+1.  Launch Visual Studio 2022 (Preview), and in the start window **click Create a new project** to create a new project:
+![Create a new project in VS2022](images\maui\create-new-project.png)
+2. For .NET MAUI Blazor app, choose the **.NET MAUI Blazor app** template. Select Next. 
+![Create .NET MAUI Blazor App](images\maui\create-maui-blazor-server-project.png)
+3. In the **Configure your new project** window, name your project, choose a location for the project and click the `Create` button.
+![Configure MAUI Blazor App](images\maui\create-new-maui-blazor-app.png)
+4. NOT NEEDED... The project structure looks like below
+![MAUI Blazor Project Structure](images\maui\maui-project-structure.png)
+5. Wait for the project to be created, and its dependencies to be restored. The project structure looks like below,
+![Restore dependencies](images\maui\maui-restore-dependencies.png)
 
-1. Launch Visual Studio 2022 17.1 (Preview), Choose `Create a new project` from Visual Studio 2022 dashboard.
+Fore more details refer [here](https://docs.microsoft.com/en-us/dotnet/maui/user-interface/controls/blazorwebview#create-a-net-maui-blazor-app)
 
-   ![Create a new project in VS2022](images\maui\create-new-project.png)
+## BlazorWebView
 
-2. In the Create a new project window, select MAUI in the project type drop-down, select the `MAUI Blazor App(Preview)` template and click on the `Next` button.
+The above steps creates a multi-targeted .NET MAUI Blazor app that can be deployed to Android, iOS, macOS, and Windows. The `BlazorWebView` is added in `MainPage.xaml` and points to the root of the Blazor app.
 
-   ![Create MAUI Blazor App](images\maui\create-maui-blazor-server-project.png)
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-3. In the Configure your new project window, name your project, choose a location for the project and click the `Create` button.
+<ContentPage xmlns=http://schemas.microsoft.com/dotnet/2021/maui
+             xmlns:x=http://schemas.microsoft.com/winfx/2009/xaml
+             xmlns:b="clr-namespace:Microsoft.AspNetCore.Components.WebView.Maui;assembly=Microsoft.AspNetCore.Components.WebView.Maui"
+             xmlns:local="clr-namespace:BlazorWebViewDemo"
+             x:Class="BlazorWebViewDemo.MainPage"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
 
-   ![Create new MAUI Blazor App](images\maui\create-new-maui-blazor-app.png)
+    <b:BlazorWebView HostPage="wwwroot/index.html">
+        <b:BlazorWebView.RootComponents>
+            <b:RootComponent Selector="app" ComponentType="{x:Type local:Main}" />
+        </b:BlazorWebView.RootComponents>
+    </b:BlazorWebView>
 
-4. The project structure looks like below
+</ContentPage>
 
-   ![Project Structure](images\maui\maui-project-structure.png)
-
-5. Wait for the project to be created, and its dependencies to be restored.
-
-   ![Restore dependencies](images\maui\maui-restore-dependencies.png)
+{% endhighlight %}
+{% endtabs %}
 
 ## Install Syncfusion Blazor Packages in the App
 
@@ -47,13 +66,19 @@ To add Blazor Calendar component in the app, open the NuGet package manager in V
 
 1. Open `~/Imports.razor` file and add Syncfusion.Blazor namespace.
 
-```cshtml
-    @using Syncfusion.Blazor
-```
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
+
+@using Syncfusion.Blazor
+
+{% endhighlight %}
+{% endtabs %}
 
 2. Now, open `MauiProgram.cs` file and register syncfusion blazor services as below.
 
-```cs
+{% tabs %}
+{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="8" %}
+
     using Syncfusion.Blazor;
 
     public static class MauiProgram
@@ -64,7 +89,8 @@ To add Blazor Calendar component in the app, open the NuGet package manager in V
             builder.Services.AddSyncfusionBlazor();
         }
     }
-```
+{% endhighlight %}
+{% endtabs %}
 
 3. Now, add the theme stylesheet from NuGet can be referred inside the <head> of `wwwroot/index.html` file in the application.
 
