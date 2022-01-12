@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Dialog Component | Syncfusion
-description: Checkout and learn here all about getting started with Syncfusion Blazor Dialog component and much more.
+description: Checkout and learn about getting started with Blazor Dialog component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Dialog
 documentation: ug
@@ -9,88 +9,245 @@ documentation: ug
 
 # Getting Started with Blazor Dialog Component
 
-This section briefly explains how to include a Dialog component in your Blazor Server-side application. You can refer to our Getting Started with [Syncfusion Blazor Server-Side Popups in Visual Studio page](../getting-started/blazor-server-side-visual-studio/) for the introduction and configuration of the common specifications.
+This section briefly explains about how to include [Blazor Dialog](https://www.syncfusion.com/blazor-components/blazor-modal-dialog) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 To get start quickly with Blazor Dialog component, you can check on this video:
 {% youtube
 "youtube:https://www.youtube.com/watch?v=uSyGKuB8ghg"%}
 
-## Importing Syncfusion Blazor component in the application
+## Prerequisites
 
-* Install **Syncfusion.Blazor.Popups** NuGet package to the application by using the **NuGet Package Manager**.
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-* You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+## Create a new Blazor App in Visual Studio
 
-```cshtml
+You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-<head>
-  <environment include="Development">
-  ....
-  ....
-    <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
-    <!---CDN--->
-    @*<link href="https://cdn.syncfusion.com/blazor/18.4.42/styles/fabric.css" rel="stylesheet" />*@
-  </environment>
-</head>
+* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-```
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/vs2019-extensions/create-project)
 
-> For Internet Explorer 11, kindly refer the polyfills. Refer the [documentation](../common/how-to/render-blazor-server-app-in-ie/) for more information.
+## Install Syncfusion Blazor Popups NuGet in the App
 
-```cshtml
+Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
-<head>
-   <environment include="Development">
-      <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
-      <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-  </environment>
-</head>
+To add Blazor Dialog component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Popups](https://www.nuget.org/packages/Syncfusion.Blazor.Popups) and then install it.
 
-```
+## Register Syncfusion Blazor Service
 
-## Adding component package to the application
+Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
-Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.Popups** package.
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
-```cshtml
+@using Syncfusion.Blazor
 
-@using Syncfusion.Blazor.Popups
+{% endhighlight %}
+{% endtabs %}
 
-```
+Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
-## Add SyncfusionBlazor service in Startup.cs
+### Blazor Server App
 
-Open the **Startup.cs** file and add services required by Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
+* For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
-```csharp
+* For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
+
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 10" %}
+
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
+using Syncfusion.Blazor;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+
+var app = builder.Build();
+....
+
+{% endhighlight %}
+
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="1 12" %}
 
 using Syncfusion.Blazor;
+
 namespace BlazorApplication
 {
     public class Startup
     {
-        ....
-        ....
+        ...
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddRazorPages();
+            services.AddServerSideBlazor();
+            services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+        }
+        ...
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Blazor WebAssembly App
+
+Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
+
+{% tabs %}
+{% highlight C# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 11" %}
+
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Syncfusion.Blazor;
+
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
+
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+await builder.Build().RunAsync();
+....
+
+{% endhighlight %}
+
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
+
+using Syncfusion.Blazor;
+
+namespace WebApplication1
+{
+    public class Program
+    {
+        public static async Task Main(string[] args)
+        {
             ....
-            ....
-            services.AddSyncfusionBlazor();
+            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+            await builder.Build().RunAsync();
         }
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
-## Add Dialog component
+## Add Style Sheet
 
-To initialize the Dialog component, add the following code to your **Index.razor** view page which is present under **~/Pages** folder.
+Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://sfblazor.azurewebsites.net/staging/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
 
-The following code explains how to initialize a simple Dialog in Razor page.
+To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
 
-```cshtml
+### Blazor Server App
 
+* For .NET 6 app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+
+* For .NET 5 and .NET 3.X app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
+
+{% tabs %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
+
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+
+{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" %}
+
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Blazor WebAssembly App
+
+For Blazor WebAssembly App, Refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
+
+{% tabs %}
+{% highlight cshtml tabtitle="~/index.html" %}
+
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add Script Reference
+
+Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://sfblazor.azurewebsites.net/staging/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows,
+
+### Blazor Server App
+
+* For **.NET 6** app, Refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+
+* For **.NET 5 and .NET 3.X** app, Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
+
+{% tabs %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+
+{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="4" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Blazor WebAssembly App
+
+For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html** file.
+
+{% tabs %}
+{% highlight html tabtitle="~/index.html" hl_lines="4" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
+
+## Add Blazor Dialog component
+
+* Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Popups** namespace.
+
+{% tabs %}
+{% highlight razor tabtitle="~/Imports.razor" %}
+
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Popups
+
+{% endhighlight %}
+{% endtabs %}
+
+* Now, add the Syncfusion Dialog component in razor file. Here, the Dialog component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+
+{% tabs %}
+{% highlight razor %}
 
 <SfDialog Width="250px">
     <DialogTemplates>
@@ -98,80 +255,44 @@ The following code explains how to initialize a simple Dialog in Razor page.
     </DialogTemplates>
 </SfDialog>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
-## Run the application
-
-After successful compilation of your application, simply run the application.
-
-The output will be as follows.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Dialog` component will be rendered in the default web browser.
 
 ![Blazor Dialog](./images/blazor-dialog.png)
 
 > * In the dialog control, max-height is calculated based on the dialog target element height. If the **Target** property is not configured, the **document.body** is considered as a target. Therefore, to show a dialog in proper height, you need to add min-height to the target element.
 > * If the dialog is rendered based on the body, then the dialog will get the height based on its body element height. If the height of the dialog is larger than the body height, then the dialog's height will not be set. For this scenario, you can set the CSS style for the html and body to get the dialog height.
 
-```css
+{% tabs %}
+{% highlight cs %}
 
 html, body {
    height: 100%;
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Prerender the dialog
 
-The dialog component is maintained at the DOM elements when showing or hiding the dialogs while enabling the `AllowPrerender` property.
+The dialog component is maintained in the DOM after hiding the dialog when the [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowPrerender) property is set to `true`.
 
-> By default, the `AllowPrerender` property is in disabled state. The dialog DOM elements will be destroyed while hiding the dialog. Each time the dialog will be re-rendered when showing the dialog. Dialog `@bind-Visible` property also works based on the `AllowPrerender` property.
+* By default, the [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowPrerender) is set to `false` where the dialog DOM elements are destroyed while hiding the dialog and each time the dialog will be re-rendered when showing the dialog. The [@bind-Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_Visible) property of dialog also works based on the [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowPrerender) property.
+* If the [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowPrerender) property is set to `true`, the dialog elements are maintained in the DOM when hiding the dialog.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
-@using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
-<div id="target">
-    <div>
-        @if (this.ShowButton)
-        {
-            <button class="e-btn" @onclick="@OnBtnClick">Open</button>
-        }
-    </div>
-    <SfDialog Target="#target" Width="300px" ShowCloseIcon="true" @bind-Visible="Visibility" AllowPrerender="true">
-        <DialogTemplates>
-            <Header> Dialog </Header>
-            <Content> This is a dialog with header </Content>
-        </DialogTemplates>
-        <DialogEvents OnOpen="@DialogOpen" Closed="@DialogClose"></DialogEvents>
-    </SfDialog>
-</div>
-<style>
-    #target {
-        height: 500px;
-    }
-</style>
-@code {
-    private bool Visibility { get; set; } = true;
-    private bool ShowButton { get; set; } = false;
-    private void OnBtnClick()
-    {
-        this.Visibility = true;
-    }
-    private void DialogOpen(Object args)
-    {
-        this.ShowButton = false;
-    }
-    private void DialogClose(Object args)
-    {
-        this.ShowButton = true;
-    }
-}
+{% include_relative code-snippet/prerender-blazor-dialog.razor %}
 
-```
+{% endhighlight %}
+{% endtabs %}
 
-The output will be as follows.
-
-![Prerender Dialog](./images/blazor-prerender-dialog.png)
+![Prerender Blazor Dialog](./images/blazor-prerender-dialog.png)
 
 ## Modal dialog
 
@@ -179,9 +300,9 @@ A `modal` shows an overlay behind the Dialog. So, the users must interact with t
 
 While the user clicks the overlay, the action can be handled through the `OnOverlayClick` event. In the following code, it explains the Dialog close action performed while clicking the overlay.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
-@using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
 <SfButton @onclick="@OpenDialog">Open Modal Dialog</SfButton>
@@ -208,9 +329,8 @@ While the user clicks the overlay, the action can be handled through the `OnOver
     }
 }
 
-```
-
-The output will be as follows.
+{% endhighlight %}
+{% endtabs %}
 
 ![Blazor Modal Dialog](./images/blazor-modal-dialog.png)
 
@@ -218,9 +338,9 @@ The output will be as follows.
 
 The Dialog header can be enabled by adding the header content as text or HTML content using the `Header` template of the dialog.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
-@using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
 <SfButton @onclick="@OpenDialog">Open Dialog</SfButton>
@@ -241,9 +361,8 @@ The Dialog header can be enabled by adding the header content as text or HTML co
     }
 }
 
-```
-
-The output will be as follows.
+{% endhighlight %}
+{% endtabs %}
 
 ![Blazor Dialog with Header](./images/blazor-dialog-header.png)
 
@@ -251,9 +370,9 @@ The output will be as follows.
 
 By adding the `DialogButtons` you can render a Dialog with buttons in Razor page.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
-@using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
 <SfButton @onclick="@OpenDialog">Open Dialog</SfButton>
@@ -283,9 +402,8 @@ By adding the `DialogButtons` you can render a Dialog with buttons in Razor page
     }
 }
 
-```
-
-The output will be as follows.
+{% endhighlight %}
+{% endtabs %}
 
 ![Blazor Dialog with Buttons](./images/blazor-dialog-buttons.png)
 
