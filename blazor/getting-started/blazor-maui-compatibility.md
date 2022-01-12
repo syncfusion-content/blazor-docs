@@ -1,13 +1,11 @@
 ---
 layout: post
-title: Getting started with Syncfusion Blazor MAUI App in VS 
+title: Getting Started with Syncfusion Blazor MAUI App in Visual Studio 
 description: Check out the documentation for getting started with Blazor MAUI App and Syncfusion Blazor Components in Visual Studio and much more.
 platform: Blazor
 component: Common
 documentation: ug
 ---
-
-<!-- markdownlint-disable MD024 -->
 
 # Getting Started with MAUI Blazor Application
 
