@@ -1,24 +1,19 @@
 ---
 layout: post
-title: Observable Collection in Blazor - Syncfusion
+title: Observable Collection and INotifyPropertyChanged in Blazor - Syncfusion
 description: Check out the documentation for the Observable Collection support in the Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Observable Collection Data
+# Observable Collection in Blazor
 
-Observable Collection is a dynamic datasource collection, provides notification when the component datasource items are added, removed and cleared. The [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0) notifies the collection changes using the [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-6.0) interface so the data-bound components can update without any additional refresh call.
+The data-bound components (like DataGrid, Kanban, Scheduler) provides support to update its data without any additional refresh call when using `ObservableCollection` as data source and perform add, remove, clear actions in collection. ObservableCollection notifies the collection changes using [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged) interface.  
 
-The Observable collections trigger the [CollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged.collectionchanged?view=net-6.0) event when dynamic changes of add, remove and clear the collection.
-
-## Observable Collection data-binding in Syncfusion Blazor Datagrid Component
-
-The following code snippet demonstrates how to use an ObservableCollection object as a datasource for the Syncfusion Blazor Datagrid component.
+In the following code example, DataGrid automatically updates its data when add, remove items in the `ObservableCollection`.
 
 ```cshtml
-
 @using System.Collections.ObjectModel;
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
