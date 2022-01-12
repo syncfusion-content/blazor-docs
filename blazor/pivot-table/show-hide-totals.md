@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hide Totals in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about Hide Totals in Syncfusion Blazor Pivot Table component and much more.
+description: Checkout and learn here all about hide totals in Syncfusion Blazor Pivot Table component and much more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -185,4 +185,4 @@ It can also be achieved using built-in toolbar options by setting the [ShowToolb
 <br/>
 ![Displaying Specific Total using Toolbar in Blazor PivotTable](images/blazor-pivottable-show-sub-total-using-toolbar.png)
 
-> You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.
+> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.

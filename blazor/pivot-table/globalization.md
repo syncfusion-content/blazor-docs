@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about Globalization in Syncfusion Blazor Pivot Table component and more.
+description: Checkout and learn here all about globalization in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -9,9 +9,8 @@ documentation: ug
 
 # Globalization in Blazor Pivot Table Component
 
-Add **UseRequestLocalization** middle-ware in Configure method in **Startup.cs** file to get browser Culture Info.
+Add **UseRequestLocalization** middle-ware in Configure method in **Startup.cs** file to get the browser Culture Info.
 
-Refer the following code to add configuration in Startup.cs file
 
 ```csharp
 using Microsoft.AspNetCore.Builder;
@@ -36,9 +35,9 @@ namespace BlazorApplication
 
 ## Localization
 
-Localization library allows you to localize default text content of the pivot table. The pivot table component has static text of some features (like drop and drop region, pivot field list, etc...) that can be changed to other cultures (Arabic, Deutsch, French, etc...).The static local texts in the pivot table component can be changed to other culture by referring the Resource file. You can refer more details about localization [here](https://blazor.syncfusion.com/documentation/common/localization/).
+Localization library allows to localize default text content of the pivot table. The pivot table component has static text of some features (like drop and drop region, pivot field list, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.).The static local texts in the pivot table component can be changed to other culture by referring the Resource file. Refer more details about localization [here](https://blazor.syncfusion.com/documentation/common/localization/).
 
-The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [Localization](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0) link to know more about how to configure and use localization in the ASP.NET Core application framework.
+The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. Refer [Localization](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0) link to know more about how to configure and use localization in the ASP.NET Core application framework.
 
 * Add **.resx** file to [Resource](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#resource-files) folder and enter the key value (Locale Keywords) in the **Name** column and the translated string in the **Value** column as follows.
 
@@ -317,7 +316,7 @@ All locale files for different cultures are available in this [GitHub](https://g
 
 ### Blazor Server Side
 
-In the following example, we have demonstrate how to enable **Localization** for pivot table in server side Blazor sample.
+The following example demonstrates how to enable **Localization** for pivot table in server side Blazor sample.
 
 * Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
 
@@ -350,7 +349,7 @@ In the following example, we have demonstrate how to enable **Localization** for
                     options.SupportedCultures = supportedCultures;
                     options.SupportedUICultures = supportedCultures;
                     options.RequestCultureProviders = new List<IRequestCultureProvider>() {
-                    new QueryStringRequestCultureProvider() // Here, You can also use other localization provider
+                    new QueryStringRequestCultureProvider() // Here, you can also use other localization provider
                     };
                 });
                 services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SampleLocalizer));
@@ -425,7 +424,7 @@ In the following example, we have demonstrate how to enable **Localization** for
 
 ### Blazor WebAssembly
 
-In the following examples, demonstrate how to enable **Localization** for pivot table in client side Blazor samples.
+The following example demonstrates how to enable **Localization** for pivot table in client side Blazor samples.
 
 * Open the **Program.cs** file and add the below configuration in the **Main** function as follows.
 
@@ -524,7 +523,7 @@ In the following examples, demonstrate how to enable **Localization** for pivot 
 
 ## Internationalization
 
-Internationalization library is used to globalize number, date, and time values in pivot table component using format strings in the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format). In the below sample we set the culture and currency using the `SetCulture` and `SetCurrencyCode` methods.
+Internationalization library is used to globalize number, date, and time values in pivot table component using format strings in the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format). In the following sample, the culture and currency are set using the `SetCulture` and `SetCurrencyCode` methods.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView;
@@ -580,7 +579,7 @@ Internationalization library is used to globalize number, date, and time values 
 
 ## Right-to-left (RTL)
 
-Right-to-left (RTL) provides an option to switch the text direction and layout of the pivot table component from right to left. It improves user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc...). In the below code sample `EnableRtl` property is used to enable RTL in the pivot table.
+Right-to-left (RTL) provides an option to switch the text direction and layout of the pivot table component from right to left. It improves user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). In the following code sample, the `EnableRtl` property is used to enable RTL in the pivot table.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -618,4 +617,4 @@ Right-to-left (RTL) provides an option to switch the text direction and layout o
 
 ![Right to Left in Blazor PivotChart](images/blazor-pivottable-right-to-left.png)
 
-> You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.
+> Refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Row and Column in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about Row and Column in Syncfusion Blazor Pivot Table component and more.
+description: Checkout and learn here all about row and column in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -63,7 +63,7 @@ Allows end user to set the height of each pivot table rows commonly using the [R
 > By default, the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_RowHeight) property is set as **30** pixels for desktop layout and **36** pixels for mobile layout.
 > The height of the column headers alone may vary when grouping bar feature is enabled.
 
-In the below code sample, the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_RowHeight) property is set as **60** pixels.
+In the following code sample, the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_RowHeight) property is set as **60** pixels.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -107,7 +107,7 @@ Allows end user to set the width of each pivot table columns commonly using the 
 
 > By default, the [ColumnWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_ColumnWidth) property is set as **110** pixels to each columns except the first column. For first column, **250** pixels and **200** pixels are set respectively with and without grouping bar.
 
-In the below example, the [ColumnWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_ColumnWidth) property is set as **200** pixels.
+In the following example, the [ColumnWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_ColumnWidth) property is set as **200** pixels.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -621,11 +621,11 @@ The event `CellSelected` is triggered when cell selection gets completed. It pro
 
 ## Clip Mode
 
-The clip mode provides options to display its overflow cell content in the pivot table. It can be configured using the [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_ClipMode) property in [PivotViewGridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) class. The pivot table supports three types of clip modes which are:
+The clip mode provides options to display its overflow cell content in the pivot table. It can be configured using the [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_ClipMode) property in [PivotViewGridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) class. The pivot table supports three types of clip modes,
 
 * [PivotClipMode.Clip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotTableSelectionType.html): Truncates the cell content when it overflows its area.
 * [PivotClipMode.Ellipsis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotTableSelectionType.html): Displays ellipsis when the cell content overflows its area.
-* [PivotClipMode.EllipsisWithTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotTableSelectionType.html): Displays ellipsis when the cell content overflows its area, also it will display the tooltip while hover on ellipsis is applied.
+* [PivotClipMode.EllipsisWithTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotTableSelectionType.html): Displays ellipsis when the cell content overflows its area, also it will display the tooltip while hovering over the ellipsis.
 
 >By default, [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_ClipMode) value is set to [PivotClipMode.Ellipsis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotTableSelectionType.html).
 
@@ -671,7 +671,7 @@ You can customize the pivot table cell element by using the `CellTemplate` prope
 
 In this demo, the revenue cost for each year is represented with trend icons.
 
->We need to specify the model type for datasource from which the context will be generated and accessed in the CellTemplate. Using the context we can define the conditions based on that templates will be appended to the cell element
+>The model type for datasource needs to be specified from which the context will be generated and accessed in the CellTemplate. Using the context, define the conditions based on the templates that will be appended to the cell element.
 
 
 ```cshtml
@@ -731,4 +731,4 @@ In this demo, the revenue cost for each year is represented with trend icons.
 
 ![Blazor PivotTable with Cell Template](images/blazor-pivottable-cell-template.png)
 
-> You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.
+> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
