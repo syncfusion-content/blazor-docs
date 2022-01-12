@@ -231,7 +231,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 
 ## Add Blazor Dropdown Menu component
 
-* Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Splitbuttons** namespace.
+* Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.SplitButtons** namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Imports.razor" %}
