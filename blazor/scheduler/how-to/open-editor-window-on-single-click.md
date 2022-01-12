@@ -27,21 +27,26 @@ By default, the editor window will open on double clicking the cell or appointme
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 3, 11);
+    DateTime CurrentDate = new DateTime(2022, 3, 11);
     SfSchedule<AppointmentData> ScheduleRef;
     public async Task OnCellClick(CellClickEventArgs args)
     {
         args.Cancel = true;
-        await ScheduleRef.OpenEditorAsync(args, CurrentAction.Add); //to open the editor on cell click
+        await ScheduleRef.OpenEditorAsync(args, CurrentAction.Add); //to open the editor window on cell click
     }
     public async Task OnEventClick(EventClickArgs<AppointmentData> args)
     {
         args.Cancel = true;
-        await ScheduleRef.OpenEditorAsync(args.Event, CurrentAction.Save); //to open the editor on event click
+        CurrentAction action = CurrentAction.Save;
+        if(args.Event.RecurrenceRule != null)
+        {
+            action = CurrentAction.EditOccurrence;
+        }
+        await ScheduleRef.OpenEditorAsync(args.Event, action); //to open the editor window on event click
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData{ Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 11, 9, 30, 0) , EndTime = new DateTime(2020, 3, 11, 11, 0, 0)}
+        new AppointmentData{ Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 3, 11, 9, 30, 0) , EndTime = new DateTime(2022, 3, 11, 11, 0, 0)}
     };
     public class AppointmentData
     {
