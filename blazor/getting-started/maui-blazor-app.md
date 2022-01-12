@@ -82,45 +82,7 @@ Open `~/Imports.razor` file and add Syncfusion.Blazor namespace.
 {% endhighlight %}
 {% endtabs %}
 
-Now, open `MauiProgram.cs` file and register syncfusion blazor services as below.
-
-{% tabs %}
-{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="8" %}
-
-    using Syncfusion.Blazor;
-
-    public static class MauiProgram
-    {
-        public static Maui CreateMauiApp()
-        {
-            ...
-            builder.Services.AddSyncfusionBlazor();
-        }
-    }
-
-{% endhighlight %}
-{% endtabs %}
-
-## Add Style Sheet
-
-Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways to refer themes in the application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
-
-To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, theme stylesheet from NuGet can be referred inside the <head> of `wwwroot/index.html` file in the application as follows,
-
-{% tabs %}
-{% highlight cshtml tabtitle="~/wwwroot/index.html" %}
-
-   <head>
-       ....
-       <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-   </head>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Add Script Reference
-
-Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Application. In this getting started walk-through, the required scripts are referenced automatically via javascript script isolation approach. To add script references in MAUI Blazor application, set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` using `AddSyncfusionBlazor` service method in `~/MauiProgram.cs` file as follows,
+Now, register the Syncfusion Blazor service in the MAUI Blazor App. Here, Syncfusion Blazor Service is registered by setting the [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` using `AddSyncfusionBlazor` service method in `~/MauiProgram.cs` file as follows,
 
 {% tabs %}
 {% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="8 9" %}
@@ -140,10 +102,29 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 {% endhighlight %}
 {% endtabs %}
 
-Now, add the scripts references inside the <head> of `wwwroot/index.html` file in the application as follows,
+## Add Style Sheet
+
+Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways to refer themes in the application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
+
+To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, theme stylesheet from NuGet can be referred inside the <head> of `wwwroot/index.html` file in the application as follows,
 
 {% tabs %}
-{% highlight cshtml tabtitle="~/wwwroot/index.html" hl_lines="4" %}
+{% highlight cshtml tabtitle="index.html" %}
+
+   <head>
+       ....
+       <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+   </head>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add Script Reference
+
+Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Application. In this getting started walk-through, the required scripts are referenced automatically via javascript script isolation approach. The required scripts are referred using [Static Web Assets](https://sfblazor.azurewebsites.net/staging/documentation/common/adding-script-references#static-web-assets) externally inside the <head> of `wwwroot/index.html` file in the application as follows,
+
+{% tabs %}
+{% highlight cshtml tabtitle="index.html" hl_lines="4" %}
 
    <head>
        ....
