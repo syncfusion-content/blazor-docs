@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Lists in Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about Working with Lists in Syncfusion Blazor DocumentEditor component and more.
+description: Checkout and learn here all about working with lists in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Working with Lists in Blazor DocumentEditor Component
 
-[Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) supports both the single-level and multilevel lists. Lists are used to organize data as step-by-step instructions in documents for easy understanding of key points. You can apply list to the paragraph either using supported APIs.
+[Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) supports both the single-level and multilevel lists. Lists are used to organize data as step-by-step instructions in documents for easy understanding of key points. You can apply list to the paragraph using supported APIs.
 
 ## Create bullet list
 
@@ -32,7 +32,7 @@ Numbered lists are usually used for ordered lists. To apply numbered list for se
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-|numberFormat|string|“%n” representations in ‘numberFormat’ parameter will be replaced by respective list level’s value.“%1” will be displayed as “1”|
+|numberFormat|string|“%n” representations in ‘numberFormat’ parameter will be replaced by respective list level’s value. “%1” will be displayed as “1”|
 |listLevelPattern(optional)|string|Default value is 'Arabic'.|
 
 Refer to the following example.

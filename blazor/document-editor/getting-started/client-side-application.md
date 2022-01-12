@@ -13,7 +13,7 @@ This article provides the step-by-step instructions to integrate the [Blazor Wor
 
 Steps to get started with Word processor component for Blazor:
 
-1. Install the essential project templates in the Visual Studio 2019 by running the below command line in the command prompt.
+1. Install the essential project templates in the Visual Studio 2019 by running the following command line in the command prompt.
 
     ```
     dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-preview2.20160.5
