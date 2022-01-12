@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Observable Collection in Blazor - Syncfusion
-description: Check out the documentation for Observable Collection support in the Syncfusion Blazor Components.
+description: Check out the documentation for the Observable Collection support in the Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug
