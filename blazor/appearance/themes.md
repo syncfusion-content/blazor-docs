@@ -159,7 +159,23 @@ LibMan offers the following advantages,
 2. Additional tooling, such as Node.js, npm, and WebPack, isn't necessary to acquire a subset of files in a library.
 3. Files can be placed in a specific location without resorting to build tasks or manual file copying.
 
-In the server application root, add the **lib man.json** file with the following content:
+### Use the Add Client-Side Library dialog
+
+* Right-click the project folder where the files should be added. Click **Add** and select the **Client-Side Library**. Then Add Client-Side Library dialog appears like below
+
+    ![Themes-libman](images/client-side-library.png)
+
+* We have provided support only for unpkg and jsdelivr provider options in the Blazor application. You can able to choose the option by clicking the dropdown button like below
+
+    ![Themes-libman](images/client-side-provider.png)
+
+* Select the **unpkg** provider and type `<library>@<version>` in the library textbox. you can able to choose specific files or include all library files like below.
+
+    For example, bootstrap5 theme is selected in the dialog. 
+
+    ![Themes-libman](images/library-files.png)
+
+* Click the install button then **lib man.json** file is added to the root application with the following content.
 
 ```json
 {
@@ -167,37 +183,27 @@ In the server application root, add the **lib man.json** file with the following
   "defaultProvider": "cdnjs",
   "libraries": [
     {
-      "library": "@progress/Syncfusion-Blazor-bootstrap@latest",
-      "destination": "wwwroot/css/Syncfusion-Blazor/bootstrap",
+      "provider": "unpkg",
+      "library": "@syncfusion/ej2@19.4.41",
+      "destination": "wwwroot/lib/syncfusion/ej2/",
       "files": [
-        "dist/all.css"
-      ]
-    },
-    {
-      "library": "@progress/Syncfusion-Blazor-fabric@latest",
-      "destination": "wwwroot/css/Syncfusion-Blazor/fabric",
-      "files": [
-        "dist/all.css"
-      ]
-    },
-    {
-      "library": "@progress/Syncfusion-Blazor-material@latest",
-      "destination": "wwwroot/css/Syncfusion-Blazor/material",
-      "files": [
-        "dist/all.css"
+        "bootstrap5.css",
+        "bootstrap5-dark.css"
       ]
     }
   ]
 }
 ```
 
-In the client Blazor application, go to the **wwwroot/index.html** file and replace the CDN link with the following one. For a server-side Blazor project, do that in the **~/Pages/_Host.cshtml** file.
+>Note: Also, you can manually add the **lib man.json** file to the root application with the above content.
+
+* In the client Blazor application, go to the **wwwroot/index.html** file and replace the CDN link with the following one. For a server-side Blazor project, do that in the **~/Pages/_Host.cshtml** file.
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="/css/Syncfusion-Blazor/fabric/dist/all.css" rel="stylesheet" />
+    <link href="~/lib/syncfusion/ej2/bootstrap5.css" rel="stylesheet" />
 </head>
 </html>
 ```
