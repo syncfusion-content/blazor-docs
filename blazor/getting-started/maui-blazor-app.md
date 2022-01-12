@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor MAUI App in Visual Studio 
-description: Check out the documentation for getting started with Blazor MAUI App and Syncfusion Blazor Components in Visual Studio and much more.
+title: Getting Started with MAUI Blazor App in Visual Studio 
+description: Check out the documentation for getting started with MAUI Blazor App and Syncfusion Blazor Components in Visual Studio and much more.
 platform: Blazor
 component: Common
 documentation: ug
@@ -10,6 +10,12 @@ documentation: ug
 # Getting Started with .NET MAUI Blazor Application
 
 This section explains how to create and run the first .NET Multi-platform Blazor App UI (.NET MAUI Blazor) app with Syncfusion Blazor components.
+
+## What is .NET MAUI Blazor App?
+
+.NET MAUI Blazor App is a .NET MAUI App where `Blazor web app` is hosted in .NET MAUI app using `BlazorWebView` control. This enable a Blazor web app to be integrated with platform features and UI controls and also it can be added to any page of .NET MAUI app, and pointed to the root of the Blazor app. The Blazor components run natively in the .NET process and render web UI to an embedded web view control. .NET MAUI Blazor apps can run on all the platforms supported by .NET MAUI. 
+
+Visual Studio provides **.NET MAUI Blazor app** template to create .NET MAUI Blazor Apps.
 
 ## Prerequisites
 
@@ -22,24 +28,19 @@ This section explains how to create and run the first .NET Multi-platform Blazor
 ## Create a new .NET MAUI Blazor App in Visual Studio
 
 1.  Launch Visual Studio 2022 (Preview), and in the start window **click Create a new project** to create a new project:
-
-    ![Create a new project in VS2022](images\maui\create-new-project.png)
-
+![Create a new project in VS2022](images\maui\create-new-project.png)
 2. For .NET MAUI Blazor app, choose the **.NET MAUI Blazor app** template. Select Next. 
-
-    ![Create .NET MAUI Blazor App](images\maui\create-maui-blazor-server-project.png)
-
+![Create .NET MAUI Blazor App](images\maui\create-maui-blazor-app.png)
 3. In the **Configure your new project** window, name your project, choose a location for the project and click the `Create` button.
-
-    ![Configure MAUI Blazor App](images\maui\create-new-maui-blazor-app.png)
-
+![Configure MAUI Blazor App](images\maui\configure-maui-blazor-app.png)
 4. Wait for the project to be created, and its dependencies to be restored, then the project structure looks like below.
+![MAUI Blazor Project Structure](images\maui\maui-blazor-project-structure.png)
 
-    ![Restore dependencies](images\maui\maui-project-structure.png)
+## BlazorWebView in .NET MAUI Blazor App
 
-## BlazorWebView
+The above steps creates a multi-targeted .NET MAUI Blazor app that can be deployed to Android, iOS, macOS, and Windows. 
 
-The above steps creates a multi-targeted .NET MAUI Blazor app that can be deployed to Android, iOS, macOS, and Windows. The `BlazorWebView` is added in `MainPage.xaml` and points to the root of the Blazor app.
+In `MainPage.xaml`, The `BlazorWebView` is added and points to the root of the Blazor app. The root Blazor component for the app is in `Main.razor`, which Razor compiles into a type named `Main` in the application's root namespace. 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -62,7 +63,7 @@ The above steps creates a multi-targeted .NET MAUI Blazor app that can be deploy
 {% endhighlight %}
 {% endtabs %}
 
-Fore more details refer [here](https://docs.microsoft.com/en-us/dotnet/maui/user-interface/controls/blazorwebview#create-a-net-maui-blazor-app)
+Fore more details refer [Create a .NET MAUI Blazor app](https://docs.microsoft.com/en-us/dotnet/maui/user-interface/controls/blazorwebview#create-a-net-maui-blazor-app) topic. If you already have .NET MAUI app and want to convert use `BlazorWebView`, refer [Add a BlazorWebView to an existing app](https://docs.microsoft.com/en-us/dotnet/maui/user-interface/controls/blazorwebview#add-a-blazorwebview-to-an-existing-app) topic.
 
 ## Install Syncfusion Blazor Packages in the App
 
@@ -106,10 +107,10 @@ Now, register the Syncfusion Blazor service in the MAUI Blazor App. Here, Syncfu
 
 Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways to refer themes in the application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
 
-To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, theme stylesheet from NuGet can be referred inside the <head> of `wwwroot/index.html` file in the application as follows,
+To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, theme stylesheet from NuGet can be referred inside the `<head>` of **wwwroot/index.html** file in the application as follows,
 
 {% tabs %}
-{% highlight cshtml tabtitle="index.html" %}
+{% highlight cshtml tabtitle="~/index.html" %}
 
    <head>
        ....
@@ -121,10 +122,10 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 
 ## Add Script Reference
 
-Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Application. In this getting started walk-through, the required scripts are referenced automatically via javascript script isolation approach. The required scripts are referred using [Static Web Assets](https://sfblazor.azurewebsites.net/staging/documentation/common/adding-script-references#static-web-assets) externally inside the <head> of `wwwroot/index.html` file in the application as follows,
+Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://sfblazor.azurewebsites.net/staging/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` of **wwwroot/index.html** file.
 
 {% tabs %}
-{% highlight cshtml tabtitle="index.html" hl_lines="4" %}
+{% highlight cshtml tabtitle="~/index.html" hl_lines="4" %}
 
    <head>
        ....
@@ -139,38 +140,39 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 ## Add Syncfusion Blazor component
 
-Now add Syncfusion Blazor component in any razor file. Here, the calendar component is added in `~/Pages/index.razor` page under the `~/Pages` folder.
+Now add Syncfusion Blazor component in any razor file. Here, the Calendar component is added in `~/Pages/index.razor` page under the `~/Pages` folder.
 
 {% tabs %}
 {% highlight razor %}
 
-    @using Syncfusion.Blazor.Calendars
+@using Syncfusion.Blazor.Calendars
 
-    <SfCalendar TValue="DateTime"></SfCalendar>
+<SfCalendar TValue="DateTime"></SfCalendar>
 
 {% endhighlight %}
 {% endtabs %}
 
-* Before run the sample, make sure the mode is `Windows Machine`.
+In the Visual Studio toolbar, select the **Windows Machine** button to build and run the app.
+Before run the sample, make sure the mode is `Windows Machine`.
 
-   ![Windows machine mode](images\maui\windows-machine-mode.png)
+![Build and run MAUI Blazor App](images\maui\windows-machine-mode.png)
 
-**Note:** If you want to run the application in android or iOS, then change the mode in the mode dropdown. Android or iOS modes required emulator installation during initial project setup. Refer the [MSDN guidelines](https://docs.microsoft.com/en-us/dotnet/maui/get-started/first-app) for the setup. 
+> If you want to run the application in Android or iOS refer [MAUI Getting Started](https://docs.microsoft.com/en-us/dotnet/maui/get-started/first-app) for the setup. 
 
-* Run the sample, it will display MAUI Blazor app with Syncfusion Blazor Calendar component.
+![MAUI Blazor App with Syncfusion Blazor Components](images\maui\maui-blazor-calendar.png)
 
-    ![Syncfusion Blazor Calendar component rendering on MAUI Blazor App](images\maui\syncfusion-calendar-output.png)
+> Download demo from [GitHub](https://github.com/SyncfusionExamples/MAUI-Blazor-App-using-Syncfusion-Blazor-Components)
 
-## Troubleshoot
+## Troubleshooting
 
-If you face the below error while running the application, install [this](https://marketplace.visualstudio.com/items?itemName=ProjectReunion.MicrosoftSingleProjectMSIXPackagingToolsDev17).
+* How to solve "The project doesn't know how to run the profile Windows Machine" while running MAUI Blazor App?
 
-   ![Maui runtime error](images\maui\runtime-error-maui.png)
+    * This issue has been fixed in most recent release of visual studio. For more details refer [here](https://developercommunity.visualstudio.com/t/the-project-doesnt-know-how-to-run-the-profile-win/1530395)
+    
+    * You can also fix this error by installing [Single-project MSIX Packaging Tools](https://marketplace.visualstudio.com/items?itemName=ProjectReunion.MicrosoftSingleProjectMSIXPackagingToolsDev17).
 
-Once installed, you may face the below issue.
+* How to solve deployement errors?
 
-   ![Maui Deployment error](images\maui\maui-deployment-error.png)
-
-To resolve the above issue, please go to settings, search for developer mode and enable it. [Settings --> Update and Security --> For developers --> enable developer mode].
+    If you get error dialog like "There were deployment errors", Enable developer mode. For more details refer [Enable your device for development](https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development).
 
    ![Enable developer mode in system settings](images\maui\enable-developer-mode.png)
