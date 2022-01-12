@@ -7,35 +7,11 @@ component: Common
 documentation: ug
 ---
 
-# Two-Way Data Binding
+# Blazor Two-Way Data Binding
 
-Two-way Binding is a bi-directional data flow. In two-way binding, data passes from the component to the UI and from the UI to the component class. Two-Way Binding support can be enabled for Syncfusion Blazor components by using `bind-Value` attribute. By default, the `bind-value` attribute binds the data value in the `OnChange` event. The `OnChange` event triggers when the element loses its focus.
+Syncfusion Blazor components provide data binding features with the `@bind-value` Razor directive attribute with a field, property, or Razor expression value. By default, the `bind-value` attribute binds the data value in the `OnChange` event. The `OnChange` event triggers when the element loses its focus.
 
-## Syncfusion Blazor components that support Two-Way Binding
-
-The following components support Two-Way Binding in Syncfusion Blazor components:
-
-* [AutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/data-binding)
-* [Calendar](https://blazor.syncfusion.com/documentation/calendar/data-binding)
-* [ComboBox](https://blazor.syncfusion.com/documentation/combobox/data-binding)
-* [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/data-binding)
-* [DateRange Picker](https://blazor.syncfusion.com/documentation/daterangepicker/data-binding)
-* [DateTime Picker](https://blazor.syncfusion.com/documentation/datetime-picker/data-binding)
-* [DropDown List](https://blazor.syncfusion.com/documentation/dropdown-list/data-binding)
-* [InPlace Editor](https://blazor.syncfusion.com/documentation/in-place-editor/data-binding)
-* [Input Mask](https://blazor.syncfusion.com/documentation/input-mask/data-binding)
-* [MultiSelect Dropdown](https://blazor.syncfusion.com/documentation/multiselect-dropdown/data-binding)
-* [Numeric TextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/data-binding)
-* [RichTextEditor](https://blazor.syncfusion.com/documentation/rich-text-editor/data-binding)
-* [Splitter](https://blazor.syncfusion.com/documentation/splitter/two-way-binding)
-* [TextBox](https://blazor.syncfusion.com/documentation/textbox/data-binding)
-* [TimePicker](https://blazor.syncfusion.com/documentation/timepicker/data-binding)
-
-## Enable Two-Way Binding to individual component
-
-To perform a Two-Way Binding operation, add the `bind-Value` attribute to the Syncfusion Blazor components. For illustration, the `bind-Value` attribute is added to the Syncfusion Blazor TextBox component and binds a property to the `bind-Value` attribute.
-
-If the component value has been changed, it will affect all the places where you bind the property for the `bind-value` attribute.
+To perform a two way binding Syncfusion Blazor components, use the `bind-Value` attribute. In the below example, `SfTextBox` component value to the C# `textValue` property. When an `SfTextBox` component loses focus, its bound field or property is updated.
 
 ```cshtml
 
@@ -56,6 +32,24 @@ If the component value has been changed, it will affect all the places where you
 
 ```
 
-The following image represents the Two-Way Binding in Syncfusion Blazor TextBox component.
+![Two-Way Binding in Blazor](images/two-way-binding.gif)
 
-![Two-Way Binding in Syncfusion Blazor](images/two-way-binding.gif)
+The following Syncfusion Blazor components support two way binding:
+
+* [AutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/data-binding)
+* [Calendar](https://blazor.syncfusion.com/documentation/calendar/data-binding)
+* [ComboBox](https://blazor.syncfusion.com/documentation/combobox/data-binding)
+* [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/data-binding)
+* [DateRange Picker](https://blazor.syncfusion.com/documentation/daterangepicker/data-binding)
+* [DateTime Picker](https://blazor.syncfusion.com/documentation/datetime-picker/data-binding)
+* [DropDown List](https://blazor.syncfusion.com/documentation/dropdown-list/data-binding)
+* [InPlace Editor](https://blazor.syncfusion.com/documentation/in-place-editor/data-binding)
+* [Input Mask](https://blazor.syncfusion.com/documentation/input-mask/data-binding)
+* [MultiSelect Dropdown](https://blazor.syncfusion.com/documentation/multiselect-dropdown/data-binding)
+* [Numeric TextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/data-binding)
+* [RichTextEditor](https://blazor.syncfusion.com/documentation/rich-text-editor/data-binding)
+* [Splitter](https://blazor.syncfusion.com/documentation/splitter/two-way-binding)
+* [TextBox](https://blazor.syncfusion.com/documentation/textbox/data-binding)
+* [TimePicker](https://blazor.syncfusion.com/documentation/timepicker/data-binding)
+
+
