@@ -1,14 +1,17 @@
 ---
 layout: post
-title: Observable Collection and INotifyPropertyChanged in Blazor - Syncfusion
+title: Data Updates using Observable Collection and INotifyPropertyChanged in Blazor - Syncfusion
 description: Check out the documentation for the Observable Collection support in the Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Observable Collection in Blazor
+# Observable Collection and INotifyPropertyChanged in Blazor
 
+Syncfusion blazor components supports to automatically update data based on `INotifyCollectionChanged` (`ObservableCollection) and `INotifyPropertyChanged` interfaces. 
+
+## Observable Collection
 The data-bound components (like DataGrid, Kanban, Scheduler) provides support to update its data without any additional refresh call when using `ObservableCollection` as data source and perform add, remove, clear actions in collection. ObservableCollection notifies the collection changes using [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged) interface.  
 
 In the following code example, DataGrid automatically updates its data when add, remove items in the `ObservableCollection`.
