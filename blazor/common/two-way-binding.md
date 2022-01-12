@@ -32,7 +32,7 @@ To perform a two way binding Syncfusion Blazor components, use the `bind-Value` 
 
 ```
 
-![Two-Way Binding in Blazor](images/two-way-binding.gif)
+![Two-Way Binding in Blazor](images/blazor-two-way-binding.gif)
 
 The following Syncfusion Blazor components support two way binding:
 
