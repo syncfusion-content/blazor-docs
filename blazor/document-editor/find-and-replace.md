@@ -11,7 +11,7 @@ documentation: ug
 
 Documents can be long, and you might need to search through the text to find and select specific words, text sequences, sentences, or paragraphs and then replace them with the desired content. This Word processor (DocumentEditor) provides a built-in navigation pane like Microsoft Word on the left of the editor.
 
-You can use the search box at the top of this navigation pane to find all the instances of a specific word or phrase in the document. When you enter a word in the search box and perform search, it highlights all the occurrences of those words in the document and displays them below the search options in the pane. When you click to a search result, the cursor or selection move directly to that location in the document.
+You can use the search box at the top of this navigation pane to find all the instances of a specific word or phrase in the document. When you enter a word in the search box and perform search, it highlights all the occurrences of those words in the document and displays them below the search options in the pane. When you click on a search result, the cursor or selection move directly to that location in the document.
 
 You can open the navigation pane using the `Ctrl+F` shortcut key and close using the `ESC` key.
 
