@@ -51,5 +51,3 @@ The following Syncfusion Blazor components support two way binding:
 * [Splitter](https://blazor.syncfusion.com/documentation/splitter/two-way-binding)
 * [TextBox](https://blazor.syncfusion.com/documentation/textbox/data-binding)
 * [TimePicker](https://blazor.syncfusion.com/documentation/timepicker/data-binding)
-
-
