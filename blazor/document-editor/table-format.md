@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Table Formatting in Blazor DocumentEditor Component | Syncfusion
-description: Learn here all about Working with Table Formatting in Syncfusion Blazor DocumentEditor component and more.
+description: Learn here all about working with table formatting in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
@@ -16,26 +16,26 @@ documentation: ug
 You can customize the cell margins by using the following sample code.
 
 ```csharp
-//To change the left margin
+//To change the left margin.
 documentEditor.Selection.CellFormat.SetLeftMargin(5);
-//To change the right margin
+//To change the right margin.
 documentEditor.Selection.CellFormat.SetRightMargin(5);
-//To change the top margin
+//To change the top margin.
 documentEditor.Selection.CellFormat.SetTopMargin(5);
-//To change the bottom margin
+//To change the bottom margin.
 documentEditor.Selection.CellFormat.SetBottomMargin(5);
 ```
 
 You can also define the default cell margins for a table. If the specific cell margin value is not defined explicitly in the cell formatting, the corresponding value will be retrieved from default cells margin of the table. Refer to the following sample code.
 
 ```csharp
-//To change the left margin
+//To change the left margin.
 documentEditor.Selection.TableFormat.SetLeftMargin(5);
-//To change the right margin
+//To change the right margin.
 documentEditor.Selection.TableFormat.SetRightMargin(5);
-//To change the top margin
+//To change the top margin.
 documentEditor.Selection.TableFormat.SetTopMargin(5);
-//To change the bottom margin
+//To change the bottom margin.
 documentEditor.Selection.TableFormat.SetBottomMargin(5);
 ```
 
@@ -146,7 +146,7 @@ You can customize the height of a table row as `Auto`, `AtLeast`, or `Exactly`. 
 
 ## Header row
 
-The header row describes the content of a table. A table can optionally have a header row. Only the first row of a table can be the header row. If the cursor position is at first row of the table, then you can define whether it as header row or not, using the following sample code.
+The header row describes the content of a table. A table can optionally have a header row. Only the first row of a table can be the header row. If the cursor position is at first row of the table, then you can define whether it is a header row or not using the following sample code.
 
 ```csharp
 documentEditor.Selection.RowFormat.SetIsHeader(true);

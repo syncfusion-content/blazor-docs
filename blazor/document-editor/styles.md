@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Styles in Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about Working with Styles in Syncfusion Blazor DocumentEditor component and more.
+description: Checkout and learn here all about working with styles in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
@@ -141,7 +141,7 @@ For example, the following line will apply the "New Linked" to the current parag
 
 ```csharp
 documentEditor.Editor.ApplyStyle("New Linked");
-//Clear direct formatting and apply the specified style
+//Clear direct formatting and apply the specified style.
 documentEditor.Editor.ApplyStyle("New Linked", true);
 ```
 
