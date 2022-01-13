@@ -359,7 +359,7 @@ The built-in fields available on Scheduler event object are as follows.
 | IsAllDay | The `IsAllDay` field is mapped from the dataSource and is used to denote whether an event is created for an entire day or for specific time alone. Usually, an event with `IsAllDay` field set to true will be considered as an all-day event. |
 | RecurrenceID | It maps the `RecurrenceID` field from dataSource and usually holds the ID value of the parent recurrence event. This field is applicable only for the edited occurrence events.|
 | RecurrenceRule | It maps the `RecurrenceRule` field from dataSource and holds the recurrence rule value in a string format. Also, it uniquely identifies whether the event belongs to a recurring type or normal ones. |
-| RecurrenceException | It maps the `RecurrenceException` field from dataSource and is used to hold the collection of exception dates, on which the recurring occurrences needs to be excluded. |
+| RecurrenceException | It maps the `RecurrenceException` field from dataSource and is used to hold the collection of exception dates in UTC format, on which the recurring occurrences needs to be excluded. |
 | IsReadonly | It maps the `IsReadonly` field from dataSource. It is mainly used to make specific appointments as readonly when set to `true`. |
 | IsBlock | It maps the `IsBlock` field from dataSource. It is used to block the particular time ranges in the Scheduler and prevents the event creation on those time slots. |
 | CssClass | It maps the `CssClass` field from the dataSource. It is used to customize the particular events. |
@@ -1728,6 +1728,56 @@ There are scenarios where you need to restrict the CRUD action on specific appoi
 ```
 
 > By default, the event editor is prevented to open on the read-only events when `IsReadonly` field is set to **true**.
+
+## Restricting event creation on specific time slots
+You can restrict the users to create and update more than one appointment on specific time slots. Also, you can disable the CRUD action on those time slots if it is already occupied, which can be achieved using Scheduler’s public method [IsSlotAvailableAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_IsSlotAvailableAsync__0_).
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+<SfSchedule @ref="ScheduleObj" TValue="AppointmentData" Height="600px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEvents TValue="AppointmentData" OnActionBegin="OnActionBegin"></ScheduleEvents>
+    <ScheduleViews>
+        <ScheduleView Option="View.Week"></ScheduleView>
+    </ScheduleViews>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+</SfSchedule>
+@code{
+    private DateTime CurrentDate = new DateTime(2022, 1, 9);
+    SfSchedule<AppointmentData> ScheduleObj;
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 1, 9, 9, 30, 0) , EndTime = new DateTime(2022, 1, 9, 11, 0, 0),
+        RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5" }
+    };
+    public async Task OnActionBegin(ActionEventArgs<AppointmentData> args)
+    {
+        bool availability = true;
+        if (args.ActionType == ActionType.EventCreate || args.ActionType == ActionType.EventChange)  
+        {
+            var records = args.AddedRecords ?? args.ChangedRecords;
+            if(records == null)
+            {
+                return;
+            }
+            availability = await ScheduleObj.IsSlotAvailableAsync(records.First());
+        }
+        args.Cancel = !availability;
+    }
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+```
 
 ## Differentiate the past time events
 
