@@ -159,54 +159,136 @@ LibMan offers the following advantages,
 2. Additional tooling, such as Node.js, npm, and WebPack, isn't necessary to acquire a subset of files in a library.
 3. Files can be placed in a specific location without resorting to build tasks or manual file copying.
 
-### Use the Add Client-Side Library dialog
+### Client-Side Library dialog
 
-* Right-click the project folder where the files should be added. Click **Add** and select the **Client-Side Library**. Then Add Client-Side Library dialog appears like below
+1. Right-click the project folder where the files should be added. Click **Add** and select the **Client-Side Library**. Then Add Client-Side Library dialog appears like below
 
     ![Themes-libman](images/client-side-library.png)
 
-* We have provided support only for unpkg and jsdelivr provider options in the Blazor application. You can able to choose the option by clicking the dropdown button like below
+2. You can either use  unpkg or jsdelivr provider to get themes.
+    * For **unpkg** provider, type `<library>@<version>` in the library textbox
 
-    ![Themes-libman](images/client-side-provider.png)
+    * For **jsdelivr** provider, type `<library>\<component-name>` in the library textbox. The calendar component is selected in the dialog. 
 
-* Select the **unpkg** provider and type `<library>@<version>` in the library textbox. you can able to choose specific files or include all library files like below.
+{% tabs %}
+{% highlight cshtml tabtitle="unpkg" %}
+
+![Themes-libman](images/library-unpkg.png)
+
+{% endhighlight %}
+
+{% highlight cshtml tabtitle="jsdelivr" %}
+
+![Themes-libman](images/library-jsdelivr.png)
+
+{% endhighlight %}
+{% endtabs %}
+
+3. you can able to choose specific files or include all library files like below.
 
     For example, bootstrap5 theme is selected in the dialog. 
 
-    ![Themes-libman](images/library-files.png)
+    ![Themes-libman](images/target-location.png)
 
-* Click the install button then **lib man.json** file is added to the root application with the following content.
+4. By using the target location textbox, you can specify the location of where files will be stored. For example, modify the **lib** name as **themes** name like below.
+
+    ![Themes-libman](images/target-location-unpkg.png)
+
+5. Click the install button then **lib man.json** file is added to the root application with the following content.
+
+{% tabs %}
+{% highlight cshtml tabtitle="unpkg" %}
 
 ```json
 {
   "version": "1.0",
-  "defaultProvider": "cdnjs",
+  "defaultProvider": "unpkg",
   "libraries": [
     {
-      "provider": "unpkg",
-      "library": "@syncfusion/ej2@19.4.41",
-      "destination": "wwwroot/lib/syncfusion/ej2/",
+      "library": "@syncfusion/ej2@19.4.42",
+      "destination": "wwwroot/themes/syncfusion/ej2/",
       "files": [
-        "bootstrap5.css",
-        "bootstrap5-dark.css"
+        "bootstrap5.css"
       ]
     }
   ]
 }
 ```
 
+{% endhighlight %}
+
+{% highlight cshtml tabtitle="jsdelivr" %}
+
+```json
+{
+  "version": "1.0",
+  "defaultProvider": "jsdelivr",
+  "libraries": [
+    {
+      "library": "@syncfusion/ej2-calendars@19.4.38",
+      "destination": "wwwroot/themes/syncfusion/ej2-calendars/",
+      "files": [
+        "styles/bootstrap.css"
+      ]
+    }
+  ]
+}
+```
+
+{% endhighlight %}
+{% endtabs %}
+
 >Note: Also, you can manually add the **lib man.json** file to the root application with the above content.
 
-* In the client Blazor application, go to the **wwwroot/index.html** file and replace the CDN link with the following one. For a server-side Blazor project, do that in the **~/Pages/_Host.cshtml** file.
+6. you can refer the theme sheet location which was downloaded from the client side library.
 
-```html
-<!DOCTYPE html>
-<html lang="en">
+#### Blazor Server App
+  * For **.NET 6** app, add the Syncfusion bootstrap5 theme in the `<head>` element of the **~/Pages/_Layout.cshtml** file.
+
+  * For **.NET 5 and .NET 3.X** app, add the Syncfusion bootstrap5 theme in the `<head>` element of the **~/Pages/_Host.cshtml** file.
+
+{% tabs %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
+
 <head>
-    <link href="~/lib/syncfusion/ej2/bootstrap5.css" rel="stylesheet" />
+    ....
+    <link href="~/themes/syncfusion/ej2/bootstrap5.css" rel="stylesheet" />
 </head>
-</html>
-```
+
+{% endhighlight %}
+
+{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" %}
+
+<head>
+    ....
+    <link href="~/themes/syncfusion/ej2/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Blazor WebAssembly App
+
+The theme style sheet from libman can be referred inside the `<head>` element of **wwwroot/index.html** file in the client web app.
+
+{% tabs %}
+{% highlight html tabtitle="~/index.html" %}
+
+<head>
+    ...
+    <link href="~/themes/syncfusion/ej2/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+>Note: For **jsdelivr** provider, you can refer the below theme sheet for both blazor server and client web app.
+
+<head>
+    ...
+    <link href="~/themes/syncfusion/ej2-calendars/styles/bootstrap.css" rel="stylesheet" />
+</head>
+
 
 ## Change theme dynamically
 
