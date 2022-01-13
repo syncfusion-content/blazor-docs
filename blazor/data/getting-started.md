@@ -7,8 +7,6 @@ control: DataManager
 documentation: ug
 ---
 
-<!-- markdownlint-disable MD024 -->
-
 # Getting Started with Blazor DataManager Component
 
 This section briefly explains about how to include [Blazor DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
@@ -231,35 +229,9 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 
 ## Add Blazor DataManager component
 
-* Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Navigations** namespace.
+[SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component should be used in conjunction with Syncfusion Blazor components that supports data binding.
 
-{% tabs %}
-{% highlight razor tabtitle="~/Imports.razor" %}
-
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Data
-
-{% endhighlight %}
-{% endtabs %}
-
-* Now, add the Syncfusion DataManager component in razor file. Here, the DataManager component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
-
-{% tabs %}
-{% highlight razor %}
-
-<SfDataManager>
-</SfDataManager>
-
-{% endhighlight %}
-{% endtabs %}
-
-> Since the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component is mainly used in conjunction with Syncfusion Blazor components that supports data binding, we are going to use Blazor DataGrid component to depict the usage of [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) throughout this documentation.
-
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor DataManager` component will be rendered in the default web browser.
-
-## Connection to a data source
-
-The DataManager acts as a gateway for both local and remote data to interact with the data source based on the provided query.
+In the following example, `SfDataManager` used with Blazor DataGrid component to depict the usage of DataManager. The DataManager acts as a gateway for both local and remote data to interact with the data source based on the provided query.
 
 ### Binding to JSON data
 
@@ -340,9 +312,9 @@ The following sample code demonstrates binding OData through the [SfDataManager]
 
 ## Component binding
 
-As mentioned, the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) can be used with Syncfusion components which supports data binding.
-
-Here, the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) is bound with DropDownList component to demonstrate data binding for the components.
+The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) can be used with Syncfusion components which supports data binding. 
+    
+In the below example, the `SfDataManager` is bound with DropDownList component to demonstrate data binding for the components. In the same way, you can use `DataManager` with any other data-bound components of Syncfusion Blazor components.
 
 ### Local data binding
 
