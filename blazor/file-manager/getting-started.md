@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor FileManager Component | Syncfusion
-description: Checkout and learn about getting started with Blazor FileManager component of Syncfusion, and more details.
+description: Checkout and learn about getting started with Blazor FileManager component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -11,130 +11,249 @@ documentation: ug
 
 # Getting Started with Blazor FileManager Component
 
-This section briefly explains how to include a `File Manager` in your Blazor Server-Side application. Refer to the [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) for the introduction and configuring the common specifications.
+This section briefly explains about how to include [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
-## Importing Syncfusion Blazor component in the application
+## Prerequisites
 
-### Using Syncfusion.Blazor NuGet Package [New standard]
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-1. Install **Syncfusion.Blazor.FileManager** NuGet package to the application by using the `NuGet Package Manager`.. Refer to the Individual NuGet Packages section for the available NuGet packages.
-![Blazor NuGet Explorer](images/blazor-nuget-explorer.png)
-2. Search Syncfusion.Blazor.FileManager keyword in the Browse tab and install Syncfusion.Blazor.FileManager NuGet package in the application.
-![Searching Blazor FileManager NuGet Package](images/blazor-filemanager-nuget-package.png)
-3. Once the installation process is completed, the Syncfusion Blazor FileManager package will be installed in the project.
+## Create a new Blazor App in Visual Studio
 
-    W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the below `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
+You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-    You can add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
+* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-    ```html
-    <head>
-        ....
-        ....
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-    </head>
-    ```
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/vs2019-extensions/create-project)
 
-    W> If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
+## Install Syncfusion Blazor FileManager NuGet in the App
 
-### Using Syncfusion.Blazor NuGet Package [Old standard]
+Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
-1. Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.Right-click the project and then select Manage NuGet Packages.
-![Blazor NuGet Explorer](images/blazor-nuget-explorer.png)
-2. Search Syncfusion.Blazor keyword in the Browse tab and install Syncfusion.Blazor NuGet package in the application.
-![Select Blazor NuGet Package](images/blazor-nuget-selection.png)
-3. Once the installation process is completed, the Syncfusion Blazor package will be installed in the project. You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
+To add Blazor FileManager component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager) and then install it.
 
-    ```html
-    <head>
-        ....
-        ....
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-    </head>
-    ```
+## Register Syncfusion Blazor Service
 
-    ```html
-    <head>
-        <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />
-    </head>
-    ```
+Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
-    For `Internet Explorer 11` kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
-    ```html
-    <head>
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-    </head>
-    ```
+@using Syncfusion.Blazor
 
-## Add Syncfusion Blazor service in Startup.cs (Server-side application)
+{% endhighlight %}
+{% endtabs %}
 
-Open the **Startup.cs** file and add services required by Syncfusion components using `services.AddSyncfusionBlazor()` method. Add this method in the `ConfigureServices` function as follows.
+Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
-```csharp
+### Blazor Server App
+
+* For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+
+* For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
+
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 10" %}
+
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
+using Syncfusion.Blazor;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+
+var app = builder.Build();
+....
+
+{% endhighlight %}
+
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="1 12" %}
+
 using Syncfusion.Blazor;
 
 namespace BlazorApplication
 {
     public class Startup
     {
-        ....
-        ....
+        ...
         public void ConfigureServices(IServiceCollection services)
         {
-            ....
-            ....
-            services.AddSyncfusionBlazor();
+            services.AddRazorPages();
+            services.AddServerSideBlazor();
+            services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
         }
+        ...
     }
 }
-```
 
-## Add Syncfusion Blazor service in Program.cs (Client-side application)
+{% endhighlight %}
+{% endtabs %}
 
-Open the **Program.cs** file and add services required by Syncfusion components using `builder.services.AddSyncfusionBlazor()` method. Add this method in the `Main` function as follows.
+### Blazor WebAssembly App
 
-```csharp
+Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
+
+{% tabs %}
+{% highlight C# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 11" %}
+
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Syncfusion.Blazor;
 
-namespace BlazorApplication
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
+
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+await builder.Build().RunAsync();
+....
+
+{% endhighlight %}
+
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
+
+using Syncfusion.Blazor;
+
+namespace WebApplication1
 {
     public class Program
     {
         public static async Task Main(string[] args)
         {
             ....
-            ....
-            builder.Services.AddSyncfusionBlazor();
+            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+            await builder.Build().RunAsync();
         }
     }
 }
-```
 
-## Adding File Manager component namespace to the application
+{% endhighlight %}
+{% endtabs %}
 
-Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.FileManager` Package.
+## Add Style Sheet
 
-```cshtml
+Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://sfblazor.azurewebsites.net/staging/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
+
+To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
+
+### Blazor Server App
+
+* For .NET 6 app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+
+* For .NET 5 and .NET 3.X app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
+
+{% tabs %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
+
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+
+{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" %}
+
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Blazor WebAssembly App
+
+For Blazor WebAssembly App, Refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
+
+{% tabs %}
+{% highlight cshtml tabtitle="~/index.html" %}
+
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add Script Reference
+
+Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://sfblazor.azurewebsites.net/staging/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows,
+
+### Blazor Server App
+
+* For **.NET 6** app, Refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+
+* For **.NET 5 and .NET 3.X** app, Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
+
+{% tabs %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+
+{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="4" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Blazor WebAssembly App
+
+For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html** file.
+
+{% tabs %}
+{% highlight html tabtitle="~/index.html" hl_lines="4" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
+
+## Add Blazor FileManager component
+
+* Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.FileManager** namespace.
+
+{% tabs %}
+{% highlight razor tabtitle="~/Imports.razor" %}
+
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.FileManager
-```
 
-## Initialize the File Manager component
+{% endhighlight %}
+{% endtabs %}
 
-The File Manager can be rendered with local service, which sends ajax request. The Ajax request will be sent to the server, which then processes the request and sends back the response.
+* Now, add the Syncfusion FileManager component in razor file. Here, the FileManager component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
-To render the File Manager with local service, refer to the following code snippet.
-
-```cshtml
-@using Syncfusion.Blazor.FileManager
+{% tabs %}
+{% highlight razor %}
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="/api/SampleData/FileOperations">
     </FileManagerAjaxSettings>
 </SfFileManager>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Initialize the service in controller
 
@@ -142,9 +261,9 @@ File Manager supports the basic file actions like Read, Delete, Copy, Move, Get 
 
 To initialize a local service, create a new folder name with `Controllers` inside the server part of the project. Then, create a new file `SampleDataController` with extension `.cs` inside the `Controllers` folder and add the following code in that file.
 
-[Controllers/SampleDataController.cs]
+{% tabs %}
+{% highlight cs tabtitle="Controllers/SampleDataController.cs" %}
 
-```csharp
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -211,7 +330,9 @@ namespace filemanager.Server.Controllers
         }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 To access the above File Operations, you need some model class files that have file operations methods. So, create `Models` folder in `server` part of the application and download the `PhysicalFileProvider.cs` and `Base` folder from the [this](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/tree/master/Models) link in the Models folder.
 
@@ -219,20 +340,20 @@ Add your required files and folders under the `wwwroot\Files` directory.
 
 > For Server-side application, Add the following code in your **Startup.cs** file.
 
-```csharp
+{% tabs %}
+{% highlight cs tabtitle="Startup.cs" %}
+
 app.UseEndpoints(endpoints =>
         {
             ....
             ....
             endpoints.MapControllers();
         });
-```
 
-### Run the application
+{% endhighlight %}
+{% endtabs %}
 
-After successful compilation of your application, simply press `F5` to run the application.
-
-The FileManager will be in the default web browser with local service as shown in the following image.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor FileManager` component will be rendered in the default web browser.
 
 ![Blazor FileManager Component](images/blazor-filemanager-component.png)
 
@@ -240,9 +361,8 @@ The FileManager will be in the default web browser with local service as shown i
 
 To perform the download operation, initialize the `DownloadUrl` property in a FileManagerAjaxSettings.
 
-```csharp
-
-@using Syncfusion.Blazor.FileManager
+{% tabs %}
+{% highlight razor %}
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
@@ -250,13 +370,13 @@ To perform the download operation, initialize the `DownloadUrl` property in a Fi
     </FileManagerAjaxSettings>
 </SfFileManager>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 Initialize the `Download` FileOperation in Controller part with the following code snippet.
 
-[Controllers/SampleDataController.cs]
-
-```csharp
+{% tabs %}
+{% highlight cs tabtitle="Controllers/SampleDataController.cs" %}
 
 namespace filemanager.Server.Controllers
 {
@@ -275,15 +395,15 @@ namespace filemanager.Server.Controllers
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## File upload support
 
 To perform the upload operation, initialize the `UploadUrl` property in a FileManagerAjaxSettings.
 
-```csharp
-
-@using Syncfusion.Blazor.FileManager
+{% tabs %}
+{% highlight razor %}
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
@@ -291,13 +411,13 @@ To perform the upload operation, initialize the `UploadUrl` property in a FileMa
     </FileManagerAjaxSettings>
 </SfFileManager>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 Initialize the `Upload` File Operation in Controller part with the following code snippet.
 
-[Controllers/SampleDataController.cs]
-
-```csharp
+{% tabs %}
+{% highlight cs tabtitle="Controllers/SampleDataController.cs" %}
 
 namespace filemanager.Server.Controllers
 {
@@ -324,15 +444,15 @@ namespace filemanager.Server.Controllers
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Image preview support
 
 To perform image preview support in the File Manager component,  initialize the `GetImageUrl` property in a FileManagerAjaxSettings.
 
-```csharp
-
-@using Syncfusion.Blazor.FileManager
+{% tabs %}
+{% highlight razor %}
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
@@ -340,13 +460,13 @@ To perform image preview support in the File Manager component,  initialize the 
     </FileManagerAjaxSettings>
 </SfFileManager>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 Initialize the `GetImage` File Operation in Controller part with the following code snippet.
 
-[Controllers/SampleDataController.cs]
-
-```csharp
+{% tabs %}
+{% highlight cs tabtitle="Controllers/SampleDataController.cs" %}
 
 namespace filemanager.Server.Controllers
 {
@@ -364,17 +484,12 @@ namespace filemanager.Server.Controllers
     }
 }
 
-```
-
-The following output will demonstrate the image preview of File Manager.
+{% endhighlight %}
+{% endtabs %}
 
 ![Blazor FileManager with Image Preview](images/blazor-filemanager-image-preview.png)
 
-## Sample application
-
-Refer to the following sample link, which is preconfigured with above steps.
-
-[File Manager with local service](https://www.syncfusion.com/downloads/support/directtrac/general/ze/FileManager1055616812)
+Refer the sample [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/FileManager1055616812).
 
 ## See Also
 
