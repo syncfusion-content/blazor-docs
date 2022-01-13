@@ -399,7 +399,7 @@ You can render the Blazor `DatePicker` by changing the `Type` property as `Da
 {% endhighlight %}
 {% endtabs %}
 
-In the following code, it is configured to render the `DatePicker`, `Dropdownlist` and `Textbox` components.
+In the following code, it is configured to render the `DatePicker`, `DropDownList` and `Textbox` components.
 
 {% tabs %}
 {% highlight razor %}
