@@ -240,7 +240,7 @@ LibMan offers the following advantages,
 
 >Note: Also, you can manually add the **lib man.json** file to the root application with the above content.
 
-6. you can refer the theme sheet location which was downloaded from the client side library.
+6. you can refer the theme sheet which was downloaded from the client side library.
 
 #### Blazor Server App
   * For **.NET 6** app, add the Syncfusion bootstrap5 theme in the `<head>` element of the **~/Pages/_Layout.cshtml** file.
@@ -269,7 +269,7 @@ LibMan offers the following advantages,
 
 #### Blazor WebAssembly App
 
-The theme style sheet from libman can be referred inside the `<head>` element of **wwwroot/index.html** file in the client web app.
+Add the Syncfusion bootstrap5 theme in the `<head>` element of **wwwroot/index.html** file in the client web app.
 
 {% tabs %}
 {% highlight html tabtitle="~/index.html" %}
