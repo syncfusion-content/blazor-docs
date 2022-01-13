@@ -51,4 +51,4 @@ The toolbar `ScrollStep` property supports to customize the scrolling distance, 
 ```
 
 
-![Custominzing Scroll Step in Blazor Toolbar](../images/blazor-toolbar-custom-scroll-step.png)
+![Custominzing Scroll Step in Blazor Toolbar](../images/blazor-toolbar-scrollstep.gif)
