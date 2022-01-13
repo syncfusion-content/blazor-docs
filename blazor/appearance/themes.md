@@ -161,12 +161,12 @@ LibMan offers the following advantages,
 
 ### Client-Side Library dialog
 
-1. Right-click the project folder where the files should be added. Click **Add** and select the **Client-Side Library**. Then Add Client-Side Library dialog appears like below
+1. Right-click the project folder where the files should be added. Click **Add** and select the **Client-Side Library**. Then Add Client-Side Library dialog appears like below.
 
     ![Themes-libman](images/client-side-library.png)
 
-2. You can either use  unpkg or jsdelivr provider to get themes.
-    * For **unpkg** provider, type `<library>@<version>` in the library textbox
+2. You can either use  **unpkg** or **jsdelivr** provider to get themes.
+    * For **unpkg** provider, type `<library>@<version>` in the library textbox.
 
     * For **jsdelivr** provider, type `<library>\<component-name>` in the library textbox. The calendar component is selected in the dialog. 
 
@@ -228,7 +228,7 @@ LibMan offers the following advantages,
       "library": "@syncfusion/ej2-calendars@19.4.38",
       "destination": "wwwroot/themes/syncfusion/ej2-calendars/",
       "files": [
-        "styles/bootstrap.css"
+        "styles/bootstrap5.css"
       ]
     }
   ]
@@ -286,7 +286,7 @@ The theme style sheet from libman can be referred inside the `<head>` element of
 
 <head>
     ...
-    <link href="~/themes/syncfusion/ej2-calendars/styles/bootstrap.css" rel="stylesheet" />
+    <link href="~/themes/syncfusion/ej2-calendars/styles/bootstrap5.css" rel="stylesheet" />
 </head>
 
 
