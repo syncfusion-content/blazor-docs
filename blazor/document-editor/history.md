@@ -7,7 +7,7 @@ control: DocumentEditor
 documentation: ug
 ---
 
-# Undo and redo in Blazor DocumentEditor Component
+# Undo and Redo in Blazor DocumentEditor Component
 
 [Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) tracks the history of all editing actions done in the document, which allows undo and redo functionality.
 
@@ -39,7 +39,7 @@ documentEditor.EnableEditorHistory = true;
 
 ## Undo and redo
 
-You can perform undo and redo by `CTRL+Z` and `CTRL+Y` keyboard shortcuts. Document editor exposes API to do it programmatically.
+You can perform undo and redo by using `CTRL+Z` and `CTRL+Y` keyboard shortcuts. Document editor exposes API to do it programmatically.
 To undo the last editing operation in document editor, refer to the following sample code.
 
 ```csharp
