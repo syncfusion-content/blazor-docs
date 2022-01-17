@@ -19,7 +19,7 @@ This section briefly explains how to include a PDF Viewer in your Blazor WebAsse
 
 ![Creating New Project in Blazor](../images/blazor-create-new-project.png)
 
-**Step 2:** Select **Blazor WebAssembly App** from the template, and then click **Next** button..
+**Step 2:** Select **Blazor WebAssembly App** from the template, and then click **Next** button.
 
 ![Blazor Application Template](../images/blazor-template.png)
 
@@ -27,21 +27,21 @@ This section briefly explains how to include a PDF Viewer in your Blazor WebAsse
 
  ![Blazor Project Configuration](../images/blazor-project-configuration.png)
 
- **Step 4:** Select the target Framework **.NET 5.0** at the top of the Application based on your required target and then click **Create** button to create a new Blazor WebAssembly application.
+ **Step 4:** Select the target Framework **.NET 5.0** at the top of the application based on your required target and then click **Create** button to create a new Blazor WebAssembly application.
 
   ![Blazor Server Application with Additional Information](../images/blazor-webassembly-app-with-addition-information.png)
 
-**Step 5:** Installing Syncfusion Blazor packages in the application
+**Step 5:** Installing Syncfusion Blazor packages in the application.
 
 You can use any one of the below standard to install the Syncfusion Blazor library in your application.
 
 * **Using Syncfusion Blazor individual NuGet Packages [New standard]**
 
-> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for our Syncfusion Blazor components. We highly recommend this new standard for your Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) to know the benefits of the individual NuGet packages.
+> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for our Syncfusion Blazor components. This new standard is highly recommended for your Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) to know the benefits of the individual NuGet packages.
 
 1. Install **Syncfusion.Blazor.PdfViewer** NuGet package to the new application using the `NuGet Package Manager`. For more details about available NuGet packages, refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) documentation.
 
-2. Right-click the project,and then select `Manage NuGet Packages`.
+2. Right-click the project, and then select `Manage NuGet Packages`.
 
     ![Blazor NuGet Explorer](../images/blazor-nuget-explorer.png)
 
@@ -130,7 +130,7 @@ namespace BlazorWebAssembly
 }
 ```
 
-We can disable the dynamic script loading and refer to the scripts from the application end by using the `IgnoreScriptIsolation` parameter in `AddSyncfusionBlazor()` at the `program.cs`. For more details, please refer here for [how to refer custom/CDN resources](../common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
+The dynamic script loading can be disabled and refer to the scripts from the application end by using the `IgnoreScriptIsolation` parameter in `AddSyncfusionBlazor()` at the `program.cs`. For more details, please refer here for [how to refer custom/CDN resources](../common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
 
 **Step 9:** Now, add the PDF Viewer (WebAssembly) component to the **~/Pages/Index.razor** page.
 
@@ -146,6 +146,6 @@ We can disable the dynamic script loading and refer to the scripts from the appl
 
 ![Blazor PDFViewer](../images/blazor-pdfviewer.png)
 
-Download the WebAssembly application from [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorWebAssembly-2083554717.zip)
+Download the WebAssembly application from [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorWebAssembly-2083554717.zip).
 
-> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.
+> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.
