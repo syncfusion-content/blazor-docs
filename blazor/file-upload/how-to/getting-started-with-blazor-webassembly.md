@@ -24,7 +24,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
 ## Create a Blazor WebAssembly project in Visual Studio 2019
 
-1. Install the essential project templates in the Visual Studio 2019 by running the below command line in the command prompt.
+1. Install the essential project templates in the Visual Studio 2019 by running the following command line in the command prompt.
 
     ```
     dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
@@ -42,11 +42,11 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
     ![Blazor ASP.NET Core Project Configuration](../images/blazor-project-configuration.png)
 
-5. Choose **Blazor WebAssembly App** from the dashboard and click **Create** button to create a new Blazor WebAssembly application. Make sure **.NET Core** and **ASP.NET Core 3.1** is selected at the top.
+5. Choose **Blazor WebAssembly App** from the dashboard and click **Create** button to create a new Blazor WebAssembly application. Make sure **.NET Core** and **ASP.NET Core 3.1** are selected at the top.
 
     ![Selecting Blazor WebAssembly Framework](../images/blazor-client-template.png)
 
-    > ASP.NET Core 3.1 available in Visual Studio 2019 version.
+    > ASP.NET Core 3.1 is available in Visual Studio 2019 version.
 
 ## Importing Syncfusion Blazor component in the application
 
@@ -120,7 +120,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
 ## Adding uploader component to the application
 
-To initialize the uploader component add the below code to your `Index.razor` view page which is present under `~/Pages` folder.
+To initialize the uploader component, add the following code to your `Index.razor` view page which is present under `~/Pages` folder.
 
 ```cshtml
 <SfUploader></SfUploader>
@@ -140,7 +140,7 @@ You can upload the files and files of folders in the Blazor application without 
 
 ### Save and Remove actions
 
-You can get the uploaded files as file stream in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange)  event argument. Now, you can write the save handler inside ValueChange event to save the files to desired location. Please find the save action code on below.
+You can get the uploaded files as file stream in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange)  event argument. Now, you can write the save handler inside ValueChange event to save the files to desired location. Please find the save action code below.
 
 ```cshtml
 <SfUploader AutoUpload="false">
@@ -167,7 +167,7 @@ The output will be as follows.
 
 ![Blazor FileUpload displays Updated Files](../images/blazor-fileupload-with-updated-files.png)
 
-While clicking on the remove icon in the file list, you will get the [OnRemove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnRemove) event with removing file name as argument. So, you can write the remove handler inside OnRemove event to remove the particular file from desired location. Please find the remove action code on below.
+While clicking on the remove icon in the file list, you will get the [OnRemove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnRemove) event with removing file name as argument. So, you can write the remove handler inside OnRemove event to remove the particular file from desired location. Please find the remove action code below.
 
 ```csharp
 Private void onRemove(RemovingEventArgs args)
