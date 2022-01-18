@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Navigation in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn here all about Navigation in Syncfusion Blazor PDF Viewer component and much more.
+description: Checkout and learn here all about navigation in Syncfusion Blazor PDF Viewer component and much more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
@@ -176,4 +176,4 @@ You can set the target attribute for a hyperlink in PDF Viewer using the `Hyperl
 }
 ```
 
-> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.
+> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.

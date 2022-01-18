@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Download in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn here all about Download in Syncfusion Blazor PDF Viewer component and much more details.
+description: Checkout and learn here all about download in Syncfusion Blazor PDF Viewer component and much more details.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
@@ -23,7 +23,6 @@ The PDF Viewer supports downloading the loaded PDF file from the toolbar by defa
 
 ![Blazor PDFViewer with Download Option](../pdfviewer/images/blazor-pdfviewer-download-option.png)
 
-And, you can programmatically invoke download action as follows.
 
 ```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
@@ -42,4 +41,4 @@ And, you can programmatically invoke download action as follows.
 }
 ```
 
-> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.
+> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.

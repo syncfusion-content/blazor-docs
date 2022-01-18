@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Comments in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn here all about Comments in Syncfusion Blazor PDF Viewer component and much more details.
+description: Checkout and learn here all about comments in Syncfusion Blazor PDF Viewer component and much more details.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
@@ -31,11 +31,11 @@ Annotation comments can be added to the PDF using the comment panel. Comment pan
 1. Using the annotation menu.
 
     * Click the Edit Annotation button in the PDF Viewer toolbar. A toolbar appears below it.
-    * Click the Comment Panel button. A comment panel will appear
+    * Click the Comment Panel button. A comment panel will appear.
 
 2. Using Context menu.
 
-    * Select annotation in the PDF document and right-click it..
+    * Select annotation in the PDF document and right-click it.
     * Select comment option in the context menu that appears.
 
 3. Using Mouse click.
@@ -107,4 +107,4 @@ The annotation comment and comment replies can be edited by the following ways:
 
 > The annotation will be deleted on deleting the comment using comment panel.
 
-> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.
+> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of the PDF Viewer.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Shape annotations in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn here all about Shape annotations in Syncfusion Blazor PDF Viewer component and more.
+description: Checkout and learn here all about shape annotations in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
@@ -23,7 +23,7 @@ The PDF Viewer control provides the options to add, edit and delete the shape an
 
 Shape annotations can be added to the PDF document using the annotation toolbar.
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar.  A toolbar appears below it.
+* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
 * Click the **Shape Annotation** dropdown button. A dropdown pop-up will appear and shows the shape annotations to be added.
 * Select the shape types to be added to the page in the dropdown pop-up. It enables the selected shape annotation mode.
 * You can add the shapes over the pages of the PDF document.
@@ -32,7 +32,6 @@ In the pan mode, if the shape annotation mode is entered, the PDF Viewer control
 
 ![Adding Shapes in Blazor PDFViewer Toolbar](../../pdfviewer/images/blazor-pdfviewer-add-shape-in-toolbar.png)
 
-Refer to the following code snippet to switch to circle annotation mode.
 
 ```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
@@ -86,7 +85,6 @@ The opacity of the annotation can be edited using the range slider provided in t
 
 The properties of the line shapes such as line and arrow annotations can be edited using the Line Properties window. It can be opened by selecting the Properties option in the context menu that appears on right clicking the line and arrow annotations.
 
-Refer to the following code snippet to set the default annotation settings.
 
 ![Editing Line Property in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-edit-line-property.png)
 
@@ -112,4 +110,4 @@ The properties of the shape annotations can be set before creating the control u
 }
 ```
 
-> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.
+> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.
