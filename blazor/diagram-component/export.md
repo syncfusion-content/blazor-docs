@@ -9,7 +9,13 @@ documentation: ug
 
 # Printing and Exporting in Blazor Diagram Component
 
-Diagram provides support to export its content as image/svg files. The [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ExportAsync_Syncfusion_Blazor_Diagram_DiagramExportFormat_Syncfusion_Blazor_Diagram_DiagramExportSettings_) method helps to export the diagram. The following code illustrates how to export the diagram as png.
+Diagram provides support to export its content as image/svg files. The [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ExportAsync_Syncfusion_Blazor_Diagram_DiagramExportFormat_Syncfusion_Blazor_Diagram_DiagramExportSettings_) method helps to export the diagram. Exporting can be done in two ways as follows.
+
+* `ExportAsync(DiagramExportFormat, DiagramExportSettings)` : Returns the exported diagram as base64 string of the specified file type.To explore the parameters, refer [ExportAsync(DiagramExportFormat, DiagramExportSettings)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ExportAsync_Syncfusion_Blazor_Diagram_DiagramExportFormat_Syncfusion_Blazor_Diagram_DiagramExportSettings_).
+
+* `ExportAsync(String, DiagramExportFormat, DiagramExportSettings)` : Exports the rendered diagram to various file types. It supports jpeg, png, svg ,bmp and pdf file types. Exported file will get download at client machine. To explore the parameters, refer [ExportAsync(String, DiagramExportFormat, DiagramExportSettings)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ExportAsync_System_String_Syncfusion_Blazor_Diagram_DiagramExportFormat_Syncfusion_Blazor_Diagram_DiagramExportSettings_).  
+
+The following code illustrates the example to export the diagram.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -17,6 +23,7 @@ Diagram provides support to export its content as image/svg files. The [ExportAs
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Export" @onclick="@OnExport" />
+<input type="button" value="Export" @onclick="@OnExportEntry" />
 <SfDiagramComponent Height="600px" @ref="@diagram">
 </SfDiagramComponent>
 
@@ -26,8 +33,15 @@ Diagram provides support to export its content as image/svg files. The [ExportAs
      private void OnExport()
      {
           DiagramExportSettings export = new DiagramExportSettings();
-          //To export the diagram
-          await diagram.ExportAsync(DiagramExportFormat.PNG, export);
+          //To export the diagram as base64 string.
+          string[] base64 = await diagram.ExportAsync(DiagramExportFormat.PNG, export);          
+     }
+
+     private void OnExportEntry()
+     {
+          DiagramExportSettings export = new DiagramExportSettings();          
+          //To export the diagram as png.
+          await diagram.ExportAsync("diagram",DiagramExportFormat.PNG, export);
      }
 }
 ```
@@ -36,7 +50,7 @@ Diagram provides support to export its content as image/svg files. The [ExportAs
 
 Diagram provides support to export the desired region of the diagram to desired formats.
 
-## File Formats
+### File Formats
 
 [DiagramExportFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportFormat.html) is to specify the type/format of the exported file. By default, the diagram is exported as .jpeg format. You can export diagram to the following formats:
 
@@ -65,7 +79,7 @@ Diagram provides support to export the desired region of the diagram to desired 
 }
 ```
 
-## Add margin around exported image
+### Add margin around exported image
 
 [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_Margin) specifies the amount of space that has to be left around the diagram.
 
@@ -92,13 +106,13 @@ Diagram provides support to export the desired region of the diagram to desired 
 }
 ```
 
-## Export diagram based on region
+### Export diagram based on region
 
 [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_Region) specifies whether the diagram is to be exported based on page settings, content or clip bounds. The exporting options are as follows:
 
 * PageSettings: Specifies the region within the x,y, width and height values of page settings is printed or exported.
 * Content: Specifies the content of the diagram without empty space around the content is printed or exported.
-* ClipBounds: Exports the region specified using ClipBounds property.
+* ClipBounds: Exports the region specified using ClipBounds property. This is applicable for exporting only.
 
 For more information, refer to [DiagramPrintExportRegion](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPrintExportRegion.html).
 
@@ -127,7 +141,7 @@ The following code example illustrates how to export the diagram based on page s
 }
 ```
 
-## Custom bounds
+### Custom bounds
 
 Diagram provides support to export any specific region of the diagram by using [ClipBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_ClipBounds).
 
@@ -157,7 +171,7 @@ The following code example illustrates how to export the region specified in the
 }
 ```
 
-## Export diagram as single or multiple page
+### Export diagram as single or multiple page
 
 Diagram provides support to export the entire diagram to single page or multiple pages using [FitToPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_FitToPage) property. The default value is false.
 
@@ -192,7 +206,7 @@ The following code example illustrates how to export the diagram to single page.
 }
 ```
 
-## Orientation
+### Change Orientation at runtime
 
 Diagram provides support to switch between Portrait and Landscape orientation while exporting. Orientation can be changed by setting the DiagramExportSettings.Orientation Property. The default value is Landscape.
 
@@ -223,7 +237,7 @@ Diagram provides support to switch between Portrait and Landscape orientation wh
 }
 ```
 
-## Export to PDF
+### Export to PDF
 
 SfDiagramComponent does not have the built-in support to convert the diagram to PDF file, but you can achieve this by exporting the diagram as base-64 and then convert the exported file to PDF using Syncfusion.PdfExport.PdfDocument.
 
@@ -294,58 +308,4 @@ The following code illustrates how to export the diagram as PDF file.
         }
         return base64String;
     }
-```
-
-## Print
-
-The [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PrintAsync_Syncfusion_Blazor_Diagram_DiagramPrintSettings_) method helps to print the diagram as image.
-
-The diagram can be customized while printing using the following properties of the [DiagramPrintSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPrintSettings.html) class. These properties behaves as same as the properties in the `DiagramExportSettings` class.
-
-| Name | Description|
-|-------- | -------- |
-| Region | Sets the region of the diagram to be printed. |
-| Margin | Sets the margin of the page to be printed/exported.|
-| FitToPage | Prints the diagram into single or multiple pages. |
-| PageWidth | Sets the page width of the diagram while printing the diagram into multiple pages. |
-| PageHeight| Sets the page height of the diagram while printing the diagram into multiple pages.|
-| Orientation | Sets the orientation of the page. |
-
-The following code example illustrates how to print the region occupied by the diagram elements.
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-
-<input type="button" value="Print" @onclick="@OnPrint" />
-<SfDiagramComponent Height="600px" @ref="@diagram">
-  <PageSettings MultiplePage="true" Width="@width" Height="@height" Orientation="@orientation" ShowPageBreaks="@showPageBreak">
-     <PageMargin Left="@left" Right="@right" Top="@top" Bottom="@bottom"></PageMargin>
-  </PageSettings>
-</SfDiagramComponent>
-
-@code{
-     SfDiagramComponent diagram;
-     double left = 10;
-     double top = 10;
-     double right = 10;
-     double bottom = 10;
-     double width = 410;
-     double height = 550;
-     bool multiplePage = true;
-     bool showPageBreak = true;
-     DiagramPrintExportRegion region = DiagramPrintExportRegion.PageSettings;
-     PageOrientation orientation = PageOrientation.Portrait;
-     
-     private void OnPrint()
-     {
-        DiagramPrintSettings print = new DiagramPrintSettings();
-        print.PageWidth = width;
-        print.PageHeight = height;
-        print.Region = region;
-        print.FitToPage = multiplePage;
-        print.Orientation = orientation;
-        print.Margin = new Margin() { Left = left, Top = top, Right = right, Bottom = bottom };
-        await diagram.PrintAsync(print);
-     }
-}
 ```
