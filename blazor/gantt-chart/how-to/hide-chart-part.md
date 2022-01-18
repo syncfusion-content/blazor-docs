@@ -7,7 +7,7 @@ control: Gantt Chart
 documentation: ug
 ---
 
-# Hide chart part in Blazor Gantt Chart Component
+# Hide Chart Part in Blazor Gantt Chart Component
 
 In the Gantt Chart component, you can hide chart part and display Tree Grid part alone by setting the value of `GanttSplitterSettings.View` property as `Grid`.
 
