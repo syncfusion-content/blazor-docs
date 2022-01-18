@@ -161,38 +161,53 @@ LibMan offers the following advantages,
 
 ### Client-Side Library dialog
 
-1. Right-click the project folder where the files should be added. Click **Add** and select the **Client-Side Library**. Then Add Client-Side Library dialog appears like below.
+1. Right-click the project folder where the files should be added. Select **Add** -> **Client-Side Library**. Then Add Client-Side Library dialog appears like below.
 
-    ![Themes-libman](images/client-side-library.png)
+    ![Themes-libman](images/theme-client-side.png)
 
-2. You can either use  **unpkg** or **jsdelivr** provider to get themes.
-    * For **unpkg** provider, type `<library>@<version>` in the library textbox.
+2. You can either use  **unpkg** or **jsdelivr** provider to get the syncfusion component themes.
 
-    * For **jsdelivr** provider, type `<library>\<component-name>` in the library textbox. The calendar component is selected in the dialog. 
+    If you want to refer to the combined component styles, use `@syncfusion/ej2@19.4.42` in the library textbox. For specific component styles, use `@syncfusion/ej2-calendars@19.4.42` in the library textbox.
+
+    To differentiate, Combined component styles are used in the **unpkg** provider and specific component styles in the **jsdelivr** provider.
 
 {% tabs %}
 {% highlight cshtml tabtitle="unpkg" %}
 
-![Themes-libman](images/library-unpkg.png)
+![Themes-libman](images/client-library-unpkg.png)
 
 {% endhighlight %}
 
 {% highlight cshtml tabtitle="jsdelivr" %}
 
-![Themes-libman](images/library-jsdelivr.png)
+![Themes-libman](images/client-library-jsdelivr.png)
 
 {% endhighlight %}
 {% endtabs %}
 
 3. you can able to choose specific files or include all library files like below.
 
-    For example, bootstrap5 theme is selected in the dialog. 
+    For example, The bootstrap5 theme is selected in the dialog. 
 
-    ![Themes-libman](images/target-location.png)
+{% tabs %}
+{% highlight cshtml tabtitle="unpkg" %}
 
-4. By using the target location textbox, you can specify the location of where files will be stored. For example, modify the **lib** name as **themes** name like below.
+![Themes-libman](images/library-unpkg-theme.png)
 
-    ![Themes-libman](images/target-location-unpkg.png)
+{% endhighlight %}
+
+{% highlight cshtml tabtitle="jsdelivr" %}
+
+![Themes-libman](images/library-jsdelivr-theme.png)
+
+{% endhighlight %}
+{% endtabs %}
+
+4. By using the target location textbox, you can specify the location of where files will be stored.
+
+    For example, Modified the default location `wwwroot/lib/syncfusion/ej2/` to  `wwwroot/themes/syncfusion/ej2/`.
+
+    ![Themes-libman](images/client-target-unpkg.png)
 
 5. Click the install button then **lib man.json** file is added to the root application with the following content.
 
@@ -225,8 +240,22 @@ LibMan offers the following advantages,
   "defaultProvider": "jsdelivr",
   "libraries": [
     {
-      "library": "@syncfusion/ej2-calendars@19.4.38",
+      "library": "@syncfusion/ej2-calendars@19.4.42",
       "destination": "wwwroot/themes/syncfusion/ej2-calendars/",
+      "files": [
+        "styles/bootstrap5.css"
+      ]
+    },
+    {
+      "library": "@syncfusion/ej2-buttons@19.4.42",
+      "destination": "wwwroot/themes/syncfusion/ej2-buttons/",
+      "files": [
+        "styles/bootstrap5.css"
+      ]
+    },
+    {
+      "library": "@syncfusion/ej2-base@19.4.42",
+      "destination": "wwwroot/themes/syncfusion/ej2-base/",
       "files": [
         "styles/bootstrap5.css"
       ]
@@ -238,9 +267,9 @@ LibMan offers the following advantages,
 {% endhighlight %}
 {% endtabs %}
 
->Note: Also, you can manually add the **lib man.json** file to the root application with the above content.
+>Note: To use specific component styles, you must install their dependent components styles. Also, you can directly add the **lib man.json** file to the root application with the above content.
 
-6. you can refer the theme sheet which was downloaded from the client side library.
+6. you can refer to the theme sheet which was downloaded from the client-side library like below.
 
 #### Blazor Server App
   * For **.NET 6** app, add the Syncfusion bootstrap5 theme in the `<head>` element of the **~/Pages/_Layout.cshtml** file.
@@ -282,13 +311,14 @@ Add the Syncfusion bootstrap5 theme in the `<head>` element of **wwwroot/index.h
 {% endhighlight %}
 {% endtabs %}
 
->Note: For **jsdelivr** provider, you can refer the below theme sheet for both blazor server and client web app.
+>Note: You can refer to the below theme sheet for both the blazor server and client web apps for the **jsdelivr** provider.
 
 <head>
     ...
+    <link href="~/themes/syncfusion/ej2-base/styles/bootstrap5.css" rel="stylesheet" />
+    <link href="~/themes/syncfusion/ej2-buttons/styles/bootstrap5.css" rel="stylesheet" />
     <link href="~/themes/syncfusion/ej2-calendars/styles/bootstrap5.css" rel="stylesheet" />
 </head>
-
 
 ## Change theme dynamically
 
