@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Print in Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about Print in Syncfusion Blazor DocumentEditor component and more.
+description: Checkout and learn here all about the Print in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# Print
+# Print in Blazor DocumentEditor Component
 
 To print the document, use the [`PrintAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_PrintAsync) method from document editor instance.
 

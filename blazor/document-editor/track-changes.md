@@ -7,7 +7,7 @@ control: DocumentEditor
 documentation: ug
 ---
 
-# Track Changes
+# Track Changes in Blazor DocumentEditor Component
 
 Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If track changes option is enabled, all editing operations are preserved as revisions in Document Editor.
 

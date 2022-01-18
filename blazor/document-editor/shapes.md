@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Shapes in Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about Shapes in Syncfusion Blazor DocumentEditor component and more.
+description: Checkout and learn here all about the Shapes in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug

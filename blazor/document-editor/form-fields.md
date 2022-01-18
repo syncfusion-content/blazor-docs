@@ -7,7 +7,7 @@ control: DocumentEditor
 documentation: ug
 ---
 
-# Form Fields
+# Form Fields in Blazor DocumentEditor Component
 
 [`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) component (a.k.a Document Editor) component provide support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
 
@@ -44,7 +44,7 @@ Task<List<FormFieldData>> formFieldDatas=container.DocumentEditor.ExportFormData
 
 ## Import form field data
 
-Form fields can be prefilled with data using [`ImportFormDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_ImportFormDataAsync_System_Collections_Generic_List_Syncfusion_Blazor_DocumentEditor_FormFieldData__).
+Form fields can be pre-filled with data using [`ImportFormDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_ImportFormDataAsync_System_Collections_Generic_List_Syncfusion_Blazor_DocumentEditor_FormFieldData__).
 
 ```typescript
 FormFieldData textformField = new FormFieldData();

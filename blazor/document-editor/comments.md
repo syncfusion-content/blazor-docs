@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Comments in Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about Comments in Syncfusion Blazor DocumentEditor component and more.
+description: Checkout and learn here all about the Comments in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# Comments
+# Comments in Blazor DocumentEditor Component
 
 [`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) component (a.k.a Document Editor) component allows you to add comments to documents. You can add, navigate and remove comments using code and from the UI.
 

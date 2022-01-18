@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Bookmarks in Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about Bookmarks in Syncfusion Blazor DocumentEditor component and more.
+description: Checkout and learn here all about the Bookmarks in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# Bookmarks
+# Bookmarks in Blazor DocumentEditor Component
 
 Bookmark is a powerful tool that helps you to mark a place in the document to find again easily. You can enter many bookmarks in the document and give each one a unique name to identify easily.
 
