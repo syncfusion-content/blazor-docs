@@ -94,7 +94,7 @@ Diagram provides support to export the desired region of the diagram to desired 
 
 ## Export diagram based on region
 
-[Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_Region) specifies whether the diagram is to be exported based on pagesettings, content or clipbounds. The exporting options are as follows:
+[Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_Region) specifies whether the diagram is to be exported based on page settings, content or clip bounds. The exporting options are as follows:
 
 * PageSettings: Specifies the region within the x,y, width and height values of page settings is printed or exported.
 * Content: Specifies the content of the diagram without empty space around the content is printed or exported.
@@ -102,7 +102,7 @@ Diagram provides support to export the desired region of the diagram to desired 
 
 For more information, refer to [DiagramPrintExportRegion](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPrintExportRegion.html).
 
-The following code example illustrates how to export the diagram based on pagesettings.
+The following code example illustrates how to export the diagram based on page settings.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
