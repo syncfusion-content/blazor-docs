@@ -9,9 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Numeric TextBox Component
 
-This section briefly explains about how to include a [Blazor NumericTextBox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox) Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side NumericTextBox](../getting-started/blazor-server-side-visual-studio/) and [Blazor WebAssembly NumericTextBox](../getting-started/blazor-webassembly-visual-studio/) documentation pages for configuration specifications.
-
-To get start quickly with Blazor NumericTextBox component, you can check on this video.
+This section briefly explains about how to include a [Blazor NumericTextBox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox) component in your Blazor Server-Side and Client-Side application. You can refer to Getting Started with [Blazor Server-Side NumericTextBox](../getting-started/blazor-server-side-visual-studio/) and [Blazor WebAssembly NumericTextBox](../getting-started/blazor-webassembly-visual-studio/) documentation pages for configuration specifications.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=QJGjKRXurv8"%}
@@ -90,7 +88,6 @@ To initialize the NumericTextBox component add the below code to your `Index.raz
 
 After successful compilation of your application, press `F5` to run the application.
 
-The output will be as follows.
 
 ![Blazor NumericTextBox Component](./images/blazor-numerictextbox-component.png)
 
@@ -98,13 +95,9 @@ The output will be as follows.
 
 You can set the minimum and maximum range of values in the NumericTextBox using the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_Min) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_Max) properties, so the numeric value should be in the min and max range.
 
-The following example demonstrates range validation.
-
 ```cshtml
 <SfNumericTextBox TValue="int?" Value=5 Max=100 Min=1 Step=5></SfNumericTextBox>
 ```
-
-The output will be as follows.
 
 ![Inputnumber Blazor with Range Value](./images/blazor-numerictextbox-range-value.png)
 
@@ -112,13 +105,9 @@ The output will be as follows.
 
 Users can set the format of the NumericTextBox component using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_Format) property. The value will be displayed in the specified format, when the component is in focused out state.
 
-The following example demonstrates format the value by using currency format value `c2`.
-
 ```cshtml
 <SfNumericTextBox TValue="int?" Value=10 Format="c2"></SfNumericTextBox>
 ```
-
-The output will be as follows.
 
 ![Blazor NumericTextBox with Formatting Value](./images/blazor-numerictextbox-format-value.png)
 
@@ -134,11 +123,9 @@ If `ValidateDecimalOnType` is false, number of decimals will not be restricted. 
 <SfNumericTextBox TValue="double?" Value=10 Decimals=3 Format="n3" Placeholder="ValidateDecimalOnType disabled" FloatLabelType="@FloatLabelType.Auto"></SfNumericTextBox>
 ```
 
-The output will be as follows.
-
 ![Blazor NumericTextBox with Precision Value](./images/blazor-numerictextbox-precision-value.png)
 
-> You can also explore our [Blazor NumericTextBox example](https://blazor.syncfusion.com/demos/numeric-textbox/default-functionalities?theme=bootstrap5) that shows how to configure the numeric textbox in Blazor.
+> You can also explore the [Blazor NumericTextBox example](https://blazor.syncfusion.com/demos/numeric-textbox/default-functionalities?theme=bootstrap5) that shows how to configure the numeric textbox in Blazor.
 
 ## See Also
 
