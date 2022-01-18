@@ -9,11 +9,11 @@ documentation: ug
 
 # Open PDF files in PDF Viewer for Blazor from various storage location
 
-You might need to open and view the PDF files from various location. In this section, you can find information about how to open PDF files from URL, Cloud, database, local file system, and as base64 string.
+You might need to open and view the PDF files from various location. In this section, you can find the information about how to open PDF files from URL, Cloud, database, local file system, and as base64 string.
 
 ## Opening a PDF from URL
 
-If you have your PDF files in the web, you can open it in the viewer using URL. The following code example explains how to open PDF file from URL.
+If you have your PDF files in the web, you can open it in the viewer using URL.
 
 ```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
@@ -67,8 +67,6 @@ The following code example shows how to open and load the PDF file stored in Azu
 ```
 
 >Note: The **Azure.Storage.Blobs** NuGet package must be installed in your application to use the previous code example.
-
-You can open the PDF file from Azure File Storage using the following code example.
 
 ```cshtml
 @using Azure.Storage.Files.Shares
@@ -134,7 +132,7 @@ The following code example shows how to open the PDF file in viewer from SQL Ser
 
 ## Opening a PDF from file system
 
-There is an UI option in built-in toolbar to open the PDF file from local file system. If you want to achieve the same functionality when design your own toolbar, you can use the following code example to load and open the PDF file. In this sample, the Syncfusion’s Uploader control is used for Blazor.
+There is an UI option in built-in toolbar to open the PDF file from local file system. If you want to achieve the same functionality while designing your own toolbar, you can use the following code example to load and open the PDF file. In this sample, the Syncfusion’s Uploader control is used for Blazor.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -196,4 +194,4 @@ You can load a PDF file from stream in PDF Viewer by converting the stream into 
 }
 ```
 
->Note: You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.
+>Note: You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.

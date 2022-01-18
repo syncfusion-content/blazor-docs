@@ -1,7 +1,7 @@
 ---
 title: "Ink Annotation in Blazor PDF Viewer Component | Syncfusion"
 component: "PDF Viewer"
-description: "This page helps you to learn about the Ink Annotation support with a code example in the Syncfusion's Blazor PDF Viewer."
+description: "This page helps to learn about the Ink Annotation support with a code example in the Syncfusion's Blazor PDF Viewer."
 ---
 
 # Ink Annotation in the Blazor PDF Viewer component
@@ -19,8 +19,6 @@ The ink annotations can be added to the PDF document using the annotation toolba
 * You can draw anything over the pages of the PDF document.
 
 ![InkTool](../../pdfviewer/images/ink_tool.png)
-
-Refer to the following code sample to switch to the ink annotation mode.
 
 ```csharp
 @using Syncfusion.Blazor.PdfViewer
@@ -69,7 +67,6 @@ The opacity of the annotation can be edited using the range slider provided in t
 The properties of the ink annotation can be set before creating the control using the InkAnnotationSettings.
 
 After editing the default values, they will be changed to the selected values.
-Refer to the following code sample to set the default ink annotation settings.
 
 ```csharp
 @using Syncfusion.Blazor.PdfViewer

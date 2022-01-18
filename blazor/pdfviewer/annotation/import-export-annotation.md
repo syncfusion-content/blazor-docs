@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Import and Export annotations in Blazor PDF Viewer | Syncfusion
-description: Learn here all about Import and Export annotations in Syncfusion Blazor PDF Viewer component and more.
+description: Learn here all about import and export annotations in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
@@ -20,7 +20,7 @@ The PDF Viewer control provides the support to import and export annotations usi
 
 ![Blazor PDFViewer with Comment Panel](../../pdfviewer/images/blazor-pdfviewer-edit-sticknotes-comment.png)
 
-* The comments panel will displayed.
+* The comments panel will be displayed.
 * Click the **More Option** button in the comment panel container.
 
 ![Displaying More Option in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-show-more-option.png)
@@ -36,13 +36,13 @@ The PDF Viewer control provides the support to import and export annotations usi
 
 ![Importing Annotation in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-import-annotation.png)
 
-* Then the file explorer dialog will opened. Choose the JSON file to be imported in to the loaded PDF document.
+* Then the file explorer dialog will be opened. Choose the JSON file to be imported into the loaded PDF document.
 
 ![Blazor PDFViewer with Imported Annotation](../../pdfviewer/images/blazor-pdfviewer-imported-annotation.png)
 
 ## Importing annotation using PDF Viewer API
 
-You can import annotations using JSON file or JSON object in code behind like the below code snippet
+You can import annotations using JSON file or JSON object in code behind like the following code snippet.
 
 ```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
@@ -69,7 +69,7 @@ The PDF Viewer control provides the support to export the annotations as JSON fi
 * Click the Add or Edit annotation button in the PDF Viewer toolbar.
 * The annotation toolbar will appear.
 * Click the Comment Panel button in the annotation toolbar.
-* The comments panel will displayed.
+* The comments panel will be displayed.
 * Click the **More Option** button in the comment panel container.
 * Select the Export Annotations Option.
 
@@ -79,7 +79,7 @@ The PDF Viewer control provides the support to export the annotations as JSON fi
 
 ## Exporting annotation using PDF Viewer API
 
-You can export annotations as JSON file in code behind like the following code snippet
+You can export annotations as JSON file in code behind like the following code snippet.
 
 ```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
@@ -97,4 +97,4 @@ You can export annotations as JSON file in code behind like the following code s
 }
 ```
 
-> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.
+> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.

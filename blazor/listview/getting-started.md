@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor ListView Component | Syncfusion
-description: Checkout and learn about getting started with Blazor ListView component of Syncfusion, and more details.
+description: Checkout and learn about getting started with Blazor ListView component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Listview
 documentation: ug
@@ -11,70 +11,66 @@ documentation: ug
 
 # Getting Started with Blazor ListView Component
 
-This section briefly explains about how to include a `ListView` in your Blazor server-side application. You can refer
-[Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include [Blazor ListView](https://www.syncfusion.com/blazor-components/blazor-listview) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
-## Importing Syncfusion Blazor component in the application
+## Prerequisites
 
-### Using Syncfusion.Blazor NuGet Package [New standard]
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-1. Install **Syncfusion.Blazor.Lists** NuGet package to the application by using the `NuGet Package Manager`. Refer to the Individual NuGet Packages section for the available NuGet packages.
-![Displaying Blazor NuGet Explorer](images/blazor-nuget-explorer.png)
-2. Search Syncfusion.Blazor.Lists keyword in the Browse tab and install Syncfusion.Blazor.Lists NuGet package in the application.
-![Searching Blazor ListBox NuGet](images/blazor-listview-nuget-package.png)
-3. Once the installation process is completed, the Syncfusion Blazor Lists package will be installed in the project. You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
+## Create a new Blazor App in Visual Studio
 
-    ```html
-    <head>
-        ....
-        ....
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-    </head>
-    ```
+You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-    ```html
-    <head>
-        <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />
-    </head>
+* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-    ```
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/vs2019-extensions/create-project)
 
-    For `Internet Explorer 11` kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+## Install Syncfusion Blazor Lists NuGet in the App
 
-    ```html
-    <head>
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-    </head>
-    ```
+Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
-### Using Syncfusion.Blazor NuGet Package [Old standard]
+To add Blazor ListView component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Lists](https://www.nuget.org/packages/Syncfusion.Blazor.Lists) and then install it.
 
-1. Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`. Right-click the project and then select Manage NuGet Packages.
-    ![Displaying Blazor NuGet Explorer](images/blazor-nuget-explorer.png)
-2. Search Syncfusion.Blazor keyword in the Browse tab and install Syncfusion.Blazor NuGet package in the application.
-    ![Selecting Blazor NuGet Package](images/blazor-nuget-selection.png)
-3. Once the installation process is completed, the Syncfusion Blazor package will be installed in the project.
-    
-    W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the below `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
+## Register Syncfusion Blazor Service
 
-    You can add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
+Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
-    ```html
-    <head>
-        ....
-        ....
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-    </head>
-    ```
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
-    W> If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
+@using Syncfusion.Blazor
 
-## Add Syncfusion Blazor service in Startup.cs (Server-side application)
+{% endhighlight %}
+{% endtabs %}
 
-Open the **Startup.cs** file and add services required by Syncfusion components using `services.AddSyncfusionBlazor()` method. Add this method in the **ConfigureServices** function as follows.
+Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
-```csharp
+### Blazor Server App
+
+* For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+
+* For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
+
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 10" %}
+
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
+using Syncfusion.Blazor;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+
+var app = builder.Build();
+....
+
+{% endhighlight %}
+
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="1 12" %}
 
 using Syncfusion.Blazor;
 
@@ -82,66 +78,174 @@ namespace BlazorApplication
 {
     public class Startup
     {
-        ....
-        ....
+        ...
         public void ConfigureServices(IServiceCollection services)
         {
-            ....
-            ....
-            services.AddSyncfusionBlazor();
+            services.AddRazorPages();
+            services.AddServerSideBlazor();
+            services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
         }
+        ...
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
-## Add Syncfusion Blazor service in Program.cs (Client-side application)
+### Blazor WebAssembly App
 
-Open the **Program.cs** file and add services required by Syncfusion components using `builder.services.AddSyncfusionBlazor()` method. Add this method in the **Main** function as follows.
+Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
 
-```csharp
+{% tabs %}
+{% highlight C# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 11" %}
+
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Syncfusion.Blazor;
+
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
+
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+await builder.Build().RunAsync();
+....
+
+{% endhighlight %}
+
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
 
 using Syncfusion.Blazor;
 
-namespace BlazorApplication
+namespace WebApplication1
 {
     public class Program
     {
-        ....
-        ....
         public static async Task Main(string[] args)
         {
             ....
-            ....
-            builder.Services.AddSyncfusionBlazor();
+            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+            await builder.Build().RunAsync();
         }
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
-> To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts to the `<head>` element of the **~/wwwroot/index.html** page in Blazor WebAssembly app or **~/Pages/_Host.cshtml** page in Blazor Server app. You can generate scripts for required components alone using CRG. Refer [here](https://blazor.syncfusion.com/documentation/common/custom-resource-generator/) for more details on CRG.
+## Add Style Sheet
 
-```html
+Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://sfblazor.azurewebsites.net/staging/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
+
+To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
+
+### Blazor Server App
+
+* For .NET 6 app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+
+* For .NET 5 and .NET 3.X app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
+
+{% tabs %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
+
 <head>
-    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js"></script>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
-```
 
-## Adding ListView component namespace to the application
+{% endhighlight %}
 
-Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Lists` package.
+{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" %}
 
-```cshtml
-    @using Syncfusion.Blazor.Lists
-```
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
 
-## Adding ListView component to the application
+{% endhighlight %}
+{% endtabs %}
 
-Add the Syncfusion Blazor ListView component in any web page (razor) in the `Pages` folder. For example, the ListView component is added in the **~/Pages/Index.razor** page.
+### Blazor WebAssembly App
 
-```cshtml
+For Blazor WebAssembly App, Refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
+
+{% tabs %}
+{% highlight cshtml tabtitle="~/index.html" %}
+
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add Script Reference
+
+Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://sfblazor.azurewebsites.net/staging/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows,
+
+### Blazor Server App
+
+* For **.NET 6** app, Refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+
+* For **.NET 5 and .NET 3.X** app, Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
+
+{% tabs %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+
+{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="4" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Blazor WebAssembly App
+
+For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html** file.
+
+{% tabs %}
+{% highlight html tabtitle="~/index.html" hl_lines="4" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
+
+## Add Blazor ListView component
+
+* Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.DropDowns** namespace.
+
+{% tabs %}
+{% highlight razor tabtitle="~/Imports.razor" %}
+
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Lists
+
+{% endhighlight %}
+{% endtabs %}
+
+* Now, add the Syncfusion ListView component in razor file. Here, the ListView component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+
+{% tabs %}
+{% highlight razor %}
 
 <SfListView DataSource="@Data">
     <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text"></ListViewFieldSettings>
@@ -165,15 +269,12 @@ Add the Syncfusion Blazor ListView component in any web page (razor) in the `Pag
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
-## Run the application
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor ListView` component will be rendered in the default web browser.
 
-After successful compilation of your application, simply press `F5` to run the application.
-
-Output be like the below.
-
-![Blazor ListView](./images/blazor-listview.png)
+![Blazor ListView Component](./images/blazor-listview.png)
 
 ## See Also
 
