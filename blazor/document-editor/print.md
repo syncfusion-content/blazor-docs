@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print in Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about the Print in Syncfusion Blazor DocumentEditor component and more.
+description: Checkout and learn here all about the Print functionality in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
