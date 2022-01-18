@@ -252,9 +252,9 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 {% endhighlight %}
 {% endtabs %}
 
-On successful compilation of the application, the Syncfusion Blazor Smith Chart component will render in the web browser as following.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Smith Chart` component will be rendered in the default web browser.
 
-![Blazor Smith Chart](./images/blazor-smith-chart.png)
+![Blazor Smith Chart Component](./images/blazor-smith-chart.png)
 
 ## Adding series to Smith Chart
 
