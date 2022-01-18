@@ -57,7 +57,17 @@ Steps to get started with Word processor component for Blazor:
     }
     ```
 
-10. Add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+10. To import or export content, Document editor requires some memory. Please refer code snippet required for increasing the message size within `ConfigureServices` method in **Startup.cs** file.
+
+    ``` csharp
+    // To increase the size of the buffer   
+    services.AddServerSideBlazor().AddHubOptions(o => 
+    { 
+        o.MaximumReceiveMessageSize = 102400000; 
+    }); 
+    ```
+
+11. Add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>
@@ -67,11 +77,11 @@ Steps to get started with Word processor component for Blazor:
     </head>
     ```
 
-11. Run the application. The Word processor component will be rendered in the web browser.
+12. Run the application. The Word processor component will be rendered in the web browser.
 
     ![Blazor DocumentEditor](../images/blazor-document-editor.png)
 
-12. To load an existing document during control initialization, use the following code example, which opens a Word document. Convert it to SFDT and load in the editor.
+13. To load an existing document during control initialization, use the following code example, which opens a Word document. Convert it to SFDT and load in the editor.
 
     ```cshtml
     @using System.IO;
