@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Printing in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Printing in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about the Printing feature in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
