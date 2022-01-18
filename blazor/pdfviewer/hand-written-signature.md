@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Handwritten Signature in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn here all about Handwritten Signature in Syncfusion Blazor PDF Viewer component and more.
+description: Checkout and learn here all about handwritten signature in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
@@ -34,4 +34,4 @@ The stroke color, border thickness, and opacity of the handwritten signature can
 
 ![Editing Signature Properties in Blazor PDFViewer](../pdfviewer/images/blazor-pdfviewer-signature-properties.png)
 
-> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.
+> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.
