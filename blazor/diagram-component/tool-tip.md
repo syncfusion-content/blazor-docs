@@ -13,7 +13,7 @@ In Graphical User Interface (GUI), the tooltip is a message that is displayed wh
 
 ## Default tooltip
 
-By default, diagram displays a tooltip to provide the size, position, and angle related information while dragging, resizing, and rotating. The following images illustrate how the diagram displays the node information during an interaction.
+By default, diagram displays a tooltip that provides information about the size, position, and angle when dragging, resizing, and rotating diagram elements. The following images illustrate how the diagram displays the node information during an interaction.
 
 | Drag | Resize | Rotate |
 |------|--------|--------|
