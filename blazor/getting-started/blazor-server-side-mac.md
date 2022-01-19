@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started - Syncfusion Blazor Server Side App in VS for Mac
-description: Check out the documentation for Getting started with Syncfusion Blazor, its elements, features, and more.
+title: Getting started with Syncfusion Blazor Server Side App in VS for Mac
+description: Check out the documentation for getting started with Syncfusion Blazor Components in Visual Studio for Mac and much more.
 platform: Blazor
 component: Common
 documentation: ug
@@ -11,125 +11,124 @@ documentation: ug
 
 # Getting started with Blazor Server Side App in VS for Mac
 
-This article provides a step-by-step introduction to configure Syncfusion Blazor setup, and also to build and run a simple Blazor Server Side application using [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/).
-
-> Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
+This article provides a step-by-step instructions for building Blazor Server App with `Blazor Calendar` component using [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/).
 
 ## Prerequisites
 
-* [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)
-* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-> **.NET Core SDK 3.1.8** requires Visual Studio for Mac 8.7.6 or later. <br /> **.NET 5.0** requires Visual Studio 2019 for Mac 8.8 or later.
+## Create a Blazor Server Side App in Visual Studio for Mac
 
-## Create a Blazor Server side project in Visual Studio for Mac
+You can create **Blazor Server App** using in Visual Studio for mac by the following way.
 
-1. Choose **New** from the Visual Studio for Mac dashboard.
+* [Create a project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=macos)
 
-    ![new project in blazor](images/mac-new-project.png)
+## Install Syncfusion Blazor Packages in the App
 
-2. Select **Blazor Server App** from the template, and then click the **Next** button.
+Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
-    ![blazor template](images/mac-server-template.png)
+To add Blazor Calendar component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and then install it.
 
-3. Continue with the **No Authentication** selection in Authentication, and then click the **Next** button.
+## Register Syncfusion Blazor Service
 
-    ![blazor authentication](images/mac-server-authentication.png)
+Open `~/_Imports.razor` file and import the `Syncfusion.Blazor` namespace.
 
-4. Now, the Blazor Server App project configuration window will popup. Click the **Create** button to create a new project after filling in the Project name.
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
-    ![blazor project configuration](images/mac-server-project-config.png)
+@using Syncfusion.Blazor
 
-## Installing Syncfusion Blazor packages in the application
+{% endhighlight %}
+{% endtabs %}
 
-You can use any one of the below standards to install the Syncfusion Blazor library in your application.
+Now, register the Syncfusion Blazor Service in the Blazor Server App. Open the `~/Startup.cs` file and register the Syncfusion Blazor Service. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
-### Using Syncfusion Blazor individual NuGet Packages [New standard]
+{% tabs %}
+{% highlight c# tabtitle="~/Startup.cs" hl_lines="1 12" %}
 
-> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for our Syncfusion Blazor components. We highly recommend this new standard for your Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) to know the benefits of the individual NuGet packages.
+using Syncfusion.Blazor;
 
-1. Now, install **Syncfusion.Blazor.Calendars** NuGet package to the new application using the `NuGet Package Manager`. Refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) section for the available NuGet packages.
-
-    ![nuget explorer](images/mac-server-nuget-explorer.png)
-
-2. Search **Syncfusion.Blazor.Calendars** keyword in the Browse tab and install **Syncfusion.Blazor.Calendars** NuGet package in the application.
-
-3. Once the installation process is completed, the Syncfusion Blazor Calendars package will be installed in the project.
-
-4. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.cshtml** page.
-
-    ```html
-    <head>
-        ....
-        ....
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-    </head>
-    ```
-
-    W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the above `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
-
-### Using Syncfusion.Blazor NuGet Package [Old standard]
-
-W> If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
-
-1. Now, install **Syncfusion.Blazor** NuGet package to the newly created application by using the `NuGet Package Manager`. Right-click the project, and then select Manage NuGet Packages.
-
-    ![nuget explorer](images/mac-server-nuget-explorer.png)
-
-2. Search **Syncfusion.Blazor** keyword in the Browse tab and install **Syncfusion.Blazor** NuGet package in the application.
-
-    ![select nuget](images/mac-server-sync-pack.png)
-
-3. The Syncfusion Blazor package will be installed in the project once the installation process is completed.
-
-4. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.html** page.
-
-    ```html
-    <head>
-        ....
-        ....
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-    </head>
-    ```
-
-    > The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/19.4.38/styles/bootstrap4.css).
-
-## Adding Syncfusion Blazor component and running the application
-
-1. Open **~/_Imports.razor** file and import the `Syncfusion.Blazor`.
-
-    ```cshtml
-    @using Syncfusion.Blazor
-    @using Syncfusion.Blazor.Calendars
-    ```
-
-2. Open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
-
-    ```c#
-    using Syncfusion.Blazor;
-
-    namespace WebApplication1
+namespace BlazorApp
+{
+    public class Startup
     {
-        public class Startup
+        ...
+        public void ConfigureServices(IServiceCollection services)
         {
-            public void ConfigureServices(IServiceCollection services)
-            {
-                ....
-                ....
-                services.AddSyncfusionBlazor();
-            }
+            services.AddRazorPages();
+            services.AddServerSideBlazor();
+            services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
         }
+        ...
     }
-    ```
+}
+{% endhighlight %}
+{% endtabs %}
 
-    > We can disable the dynamic script loading and refer to the scripts from the application end by using the `IgnoreScriptIsolation` parameter in `AddSyncfusionBlazor()` at the `program.cs`. For more details, please refer here for [how to refer custom/CDN resources](../common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
+## Add Style Sheet
 
-3. Now, add the Syncfusion Blazor components in any .razor file in the `~/Pages` folder. For example, the Calendar component is added in the **~/Pages/Index.razor** page.
+Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://sfblazor.azurewebsites.net/staging/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
 
-    ```cshtml
-    <SfCalendar TValue="DateTime"></SfCalendar>
-    ```
+To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred inside the `<head>` of the **~/Pages/_Host.cshtml** page.
 
-4. Run the application, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
+{% tabs %}
+{% highlight cshtml tabtitle="~/_Host.cshtml" %}
 
-    ![output](images/mac-output.png)
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add Script Reference
+
+Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://sfblazor.azurewebsites.net/staging/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows,
+
+{% tabs %}
+{% highlight cshtml tabtitle="~/_Host.cshtml" hl_lines="4" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
+
+## Add Syncfusion Blazor component
+
+* Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Calendars` namespace.
+
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Calendars
+
+{% endhighlight %}
+{% endtabs %}
+
+* Now, add the Syncfusion Calendar component in .razor file. Here, the Calendar component is added in the **~/Pages/Index.razor** page under the `~/Pages` folder.
+
+{% tabs %}
+{% highlight razor %}
+
+<SfCalendar TValue="DateTime" />
+
+{% endhighlight %}
+{% endtabs %}
+
+* <kbd>⌘</kbd>+<kbd>F5</kbd> to run the app. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
+
+![Blazor Calendar Component](images/mac-output.png)
+
+> You need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for more information.
+
+## See also
+
+* [Getting Started with Blazor WebAssembly for Mac](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-mac)

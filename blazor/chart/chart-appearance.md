@@ -156,16 +156,18 @@ The chart's margin from its container can be customized using the [ChartMargin](
 
 ![Blazor Column Chart with Custom Margin](images/appearance/blazor-column-chart-custom-margin.png)
 
-### Chart Area Background and Border
+### Chart Area Customization
 
 The chart area's background color can be customized using the [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Background) property and the border color and width can be customized to specified in [ChartAreaBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAreaBorder.html) of [ChartArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html).
+
+Using [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Background) and [ChartAreaBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAreaBorder.html) properties, you can change the background color and border of the chart area. Width for the chart area can be customized using [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Width) property.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals" >
-    <ChartArea Background="skyblue">
+    <ChartArea Background="skyblue" Width="80%">
         <ChartAreaBorder Color="#FF0000"  Width="2" />
     </ChartArea>
 
@@ -182,7 +184,7 @@ The chart area's background color can be customized using the [Background](https
         public string Country { get; set; }
         public double Gold { get; set; }
     }
-	
+
     public List<ChartData> MedalDetails = new List<ChartData>
 	{
 		new ChartData{ Country= "USA", Gold=50  },

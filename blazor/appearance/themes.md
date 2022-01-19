@@ -32,9 +32,8 @@ The Syncfusion Blazor Bootstrap Theme is designed based on Bootstrap v3, whereas
 
 Syncfusion Blazor themes can be used in your Blazor application by referencing the style sheet. 
 
-* For **Blazor WebAssembly application**, refer style sheet inside the `<head>` element of 
-**wwwroot/index.html** file.
-* For **Blazor Server application**, refer style sheet inside the `<head>` element of 
+* For **Blazor WebAssembly application**, refer style sheet inside the `<head>` of **wwwroot/index.html** file.
+* For **Blazor Server application**, refer style sheet inside the `<head>` of 
     * **~/Pages/_Host.cshtml** file for .NET 3 and .NET 5.
     * **~/Pages/_Layout.cshtml** for .NET 6.
 
@@ -53,8 +52,7 @@ Instead of using [Static Web assets](#static-web-assets) or a [CDN reference](#c
 
 Syncfusion Blazor themes are available as Static web Assets in the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet Packages.
 
-* For **Blazor WebAssembly application**, refer style sheet inside the `<head>` element of 
-**wwwroot/index.html** file.
+* For **Blazor WebAssembly application**, refer style sheet inside the `<head>` element of **wwwroot/index.html** file.
 * For **Blazor Server application**, refer style sheet inside the `<head>` element of 
     * **~/Pages/_Host.cshtml** file for .NET 3 and .NET 5.
     * **~/Pages/_Layout.cshtml** for .NET 6.
