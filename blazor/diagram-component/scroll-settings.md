@@ -39,11 +39,12 @@ In the following example, the vertical scroll bar is scrolled down by 50px and h
 
 ## Update scroll status
 
-You can programmatically change the scroll offsets at runtime by using the server-side method update. The following code illustrates how to change the scroll offsets and zoom factor at runtime.
+You can programmatically change the scroll offsets at runtime by using the external button click. The following code illustrates how to change the scroll offsets at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
+<input type="button" @onclick="updateScrollValues"/>
 <SfDiagramComponent Height="600px">
     @* Sets the ScrollSettings for the diagram *@
     <ScrollSettings HorizontalOffset="@horizontalOffset" VerticalOffset="@verticalOffset">
@@ -90,3 +91,8 @@ The following code example illustrates how to specify the scroll limit.
 
 ```
 To explore about the options , refer [ScrollLimitMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollLimitMode.html).
+
+| ScrollLimit | Output |
+|-------------|--------|
+|   Diagram   | ![ScrollLimitMode as Diagram](./images/ScrollLimitDiagram.gif)       |   
+|   Infinity  | ![ScrollLimitMode as Infinity](./images/ScrollLimitInfinity.gif)       |   
