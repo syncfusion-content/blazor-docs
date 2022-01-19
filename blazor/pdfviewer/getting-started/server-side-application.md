@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Server-side application in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn here all about Server-side application in Syncfusion Blazor PDF Viewer component and more.
+description: Checkout and learn here all about server-side application in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
@@ -27,19 +27,19 @@ This section briefly explains how to include a PDF Viewer in your Blazor server-
 
  ![Blazor Project Configuration](../images/blazor-project-configurations.png)
 
- **Step 4:** Select the target Framework **.NET 5.0** at the top of the Application based on your required target and then click **Create** button to create a new Blazor Server application.
+ **Step 4:** Select the target Framework **.NET 5.0** at the top of the application based on your required target and then click **Create** button to create a new Blazor Server application.
 
   ![Blazor Server Application with Additional Information](../images/blazor-server-app-with-addition-information.png)
 
-**Step 5:** Installing Syncfusion Blazor packages in the application
+**Step 5:** Installing Syncfusion Blazor packages in the application.
 
 You can install the Syncfusion Blazor individual NuGet Packages in your application.
 
-> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for our Syncfusion Blazor components. We highly recommend this new standard for your Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) to know the benefits of the individual NuGet packages.
+> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for our Syncfusion Blazor components. This new standard is highly recommended for your Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) to know the benefits of the individual NuGet packages.
 
 1. Install **Syncfusion.Blazor.PdfViewerServer.Windows** NuGet package to the new application using the `NuGet Package Manager`. For more details about available NuGet packages, refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) documentation.
 
-2. Right-click the project,and then select `Manage NuGet Packages`.
+2. Right-click the project, and then select `Manage NuGet Packages`.
 
     ![Blazor NuGet Explorer](../images/blazor-nuget-explorer.png)
 
@@ -103,7 +103,7 @@ namespace BlazorServer
 
 > To enable custom WebAssembly resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the `~/Pages/_Host.cshtml` page.
 
-**Step 9:**  Add the Syncfusion PDF Viewer component to the **~/Pages/Index.razor** page by using the `SfPdfViewerServer` tag. Also,you can load the PDF Viewer with a document from `wwwroot/Data` location. while initial rendering itself by specifying it in the **DocumentPath** property of the PDF Viewer component.
+**Step 9:**  Add the Syncfusion PDF Viewer component to the **~/Pages/Index.razor** page by using the `SfPdfViewerServer` tag. Also, you can load the PDF Viewer with a document from `wwwroot/Data` location, while initial rendering itself by specifying it in the **DocumentPath** property of the PDF Viewer component.
 
 ```csharp
 <SfPdfViewerServer DocumentPath="@DocumentPath" Height="500px" Width="1060px" ></SfPdfViewerServer>
@@ -119,6 +119,6 @@ private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
 ![Blazor PDFViewer](../images/blazor-pdfviewer.png)
 
-Download the Server side application from [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorServer1089926850.zip)
+Download the Server side application from [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorServer1089926850.zip).
 
-> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.
+> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.

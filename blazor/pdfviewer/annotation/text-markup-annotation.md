@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text markup annotations in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn here all about Text markup annotations in Syncfusion Blazor PDF Viewer component and more.
+description: Checkout and learn here all about text markup annotations in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
@@ -23,22 +23,20 @@ There are two ways to highlight a text in the PDF document.
 
 **Using the context menu.**
 
-* Select a text in the PDF document and right-click it
+* Select a text in the PDF document and right-click it.
 * Select **Highlight** option in the context menu that appears
 ![Highlighting Context in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-highlight-context.png)
 
 **Using the annotation toolbar.**
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar.  A toolbar appears below it.
+* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
 * Select the **Highlight** button in the annotation toolbar. It enables the highlight mode.
 * Select the text and the highlight annotation will be added.
-* You can also select the text and apply the highlight annotation using the **Highlight** button
+* You can also select the text and apply the highlight annotation using the **Highlight** button.
 
 ![Highlighting Text in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-highlight-text.png)
 
 In the pan mode, if the highlight mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for highlighting the text.
-
-Refer to the following code snippet to switch to highlight mode
 
 ```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
@@ -62,27 +60,25 @@ Refer to the following code snippet to switch to highlight mode
 
 ## Underline a text
 
-There are two ways to underline a text in the PDF document:
+There are two ways to underline a text in the PDF document.
 
 **Using the context menu.**
 
-* Select a text in the PDF document and right-click it
+* Select a text in the PDF document and right-click it.
 * Select **Underline** option in the context menu that appears.
 
 ![Displaying Underline in Blazor PDFViewer ContextMenu](../../pdfviewer/images/blazor-pdfviewer-underline-context-menu.png)
 
 **Using the annotation toolbar.**
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar.  A toolbar appears below it.
+* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
 * Select the **Underline** button in the annotation toolbar. It enables the underline mode.
 * Select the text and the underline annotation will be added.
-* You can also select the text and apply the underline annotation using the **Underline** button
+* You can also select the text and apply the underline annotation using the **Underline** button.
 
 ![Blazor PDFViewer with Underline Text](../../pdfviewer/images/blazor-pdfviewer-underline-text.png)
 
 In the pan mode, if the underline mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for underlining the text.
-
-Refer to the following code snippet to switch to underline mode
 
 ```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
@@ -110,23 +106,21 @@ There are two ways to strikethrough a text in the PDF document:
 
 Using the context menu.
 
-* Select a text in the PDF document and right-click it
+* Select a text in the PDF document and right-click it.
 * Select **strikethrough** option in the context menu that appears.
 
 ![Displaying Strike Through in Blazor PDFViewer ContextMenu](../../pdfviewer/images/blazor-pdfviewer-strike-through-in-contextmenu.png)
 
 **Using the annotation toolbar.**
 
-* Click the **Edit Annotation** button in the PDF Viewer toolbar.  A toolbar appears below it.
+* Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
 * Select the **Strikethrough** button in the annotation toolbar. It enables the strikethrough mode.
 * Select the text and the strikethrough annotation will be added.
-* You can also select the text and apply the strikethrough annotation using the **Strikethrough** button
+* You can also select the text and apply the strikethrough annotation using the **Strikethrough** button.
 
 ![Blazor PDFViewer with StrikeThrough Text](../../pdfviewer/images/blazor-pdfviewer-strike-through-text.png)
 
 In the pan mode, if the strikethrough mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection to strike through the text.
-
-Refer to the following code snippet to switch to strikethrough mode
 
 ```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
@@ -170,8 +164,6 @@ The properties of the text markup annotation can be set before creating the cont
 
 > After editing the default color and opacity using the Edit color tool and Edit opacity tool, they will be changed to the selected values.
 
-Refer to the following code snippet to set the default annotation settings.
-
 ```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.PdfViewerServer
@@ -188,4 +180,4 @@ Refer to the following code snippet to set the default annotation settings.
 }
 ```
 
-> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.
+> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.

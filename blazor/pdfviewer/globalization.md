@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization and RTL in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn here all about Globalization and RTL in Syncfusion Blazor PDF Viewer component and more.
+description: Checkout and learn here all about globalization and RTL in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Globalization and RTL in Blazor PDF Viewer Component
 
-The PDF Viewer component allows you to localize the static text on formatting pane, toolbar, dialog and more. It can be achieved by setting the `Locale` property and providing the localized text through the `LoadLocaleData()` method.
+The PDF Viewer component allows to localize the static text on formatting pane, toolbar, dialog and more. It can be achieved by setting the `Locale` property and providing the localized text through the `LoadLocaleData()` method.
 
 Also, this component provides support to render the user interface suitable for users who use **right-to-left (RTL)** languages (Arabic, Hebrew, Azerbaijani, Persian, Urdu). You can specify the control to render in RTL by setting the `EnableRtl` property to true.
 
@@ -70,7 +70,7 @@ The following table shows the default text values used in PDF Viewer in 'en-US' 
 |Match case|Match case|
 |Apply|Apply|
 |GoToPage|Go to page|
-|No matches|Viewer has finished searching the document. No more matches were found|
+|No matches|Viewer has finished searching the document. No more matches were found.|
 |No Text Found|No Text Found|
 |Undo|Undo|
 |Redo|Redo|
@@ -151,4 +151,4 @@ The following table shows the default text values used in PDF Viewer in 'en-US' 
 |Add a comment|Add a comment|
 |Add a reply|Add a reply|
 
-> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.
+> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.

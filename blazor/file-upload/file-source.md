@@ -147,7 +147,7 @@ The uploader component allows you to drag and drop the files to upload. You can 
 
 The uploader component allows you to set external target element as drop area using the [DropArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_DropArea) property. The element can be represented as HTML element or element’s ID.
 
-`SaveUrl` and `RemoveUrl` action explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
+`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -187,7 +187,6 @@ body .e-upload-drag-hover {
 </style>
 ```
 
-The output will be as follows.
 
 ![Customizing Drop Area in Blazor FileUpload](./images/blazor-fileupload-drop-area-customization.png)
 
