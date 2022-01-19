@@ -140,9 +140,9 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 
 ### Blazor Server App
 
-* For **.NET 6** app, add the Syncfusion bootstrap5 theme in the `<head>` element of the **~/Pages/_Layout.cshtml** file.
+* For **.NET 6** app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
-* For **.NET 5 and .NET 3.X** app, add the Syncfusion bootstrap5 theme in the `<head>` element of the **~/Pages/_Host.cshtml** file.
+* For **.NET 5 and .NET 3.X** app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
 {% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
@@ -166,7 +166,7 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 
 ### Blazor WebAssembly App
 
-The theme style sheet from NuGet can be referred inside the `<head>` element of **wwwroot/index.html** file in the client web app.
+For Blazor WebAssembly App, Refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
 
 {% tabs %}
 {% highlight html tabtitle="~/index.html" %}
@@ -185,9 +185,9 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 ### Blazor Server App
 
-* **~/Pages/_Layout.cshtml** file for **.NET 6** app.
+* For **.NET 6** app, Refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
-* **~/Pages/_Host.cshtml** file for **.NET 5 and .NET 3.X** app.
+* For **.NET 5 and .NET 3.X** app, Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
 {% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4" %}
@@ -212,6 +212,8 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 {% endtabs %}
 
 ### Blazor WebAssembly App
+
+For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/index.html" hl_lines="4" %}

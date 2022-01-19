@@ -13,7 +13,7 @@ This section explains the list of events of the File Upload component which will
 
 ## BeforeRemove
 
-`BeforeRemove` event triggers on remove the uploaded file. The event used to get confirm before remove the file from server.
+`BeforeRemove` event triggers when the uploaded file is removed. The event is used to get confirmation before removing the file from the server.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -25,7 +25,7 @@ This section explains the list of events of the File Upload component which will
 @code {
     private void BeforeRemovehandler(BeforeRemoveEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -44,7 +44,7 @@ This section explains the list of events of the File Upload component which will
 @code {
     private void BeforeUploadHandler(BeforeUploadEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -63,7 +63,7 @@ This section explains the list of events of the File Upload component which will
 @code {
     private void CreatedHandler(Object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -82,14 +82,14 @@ This section explains the list of events of the File Upload component which will
 @code {
     private void FileSelectedHandler(SelectedEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
 
 ## OnActionComplete
 
-`OnActionComplete` event triggers after all the selected files has processed to upload successfully or failed to server.
+`OnActionComplete` event triggers after all the selected files have been processed to upload successfully or failed to server.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -101,14 +101,14 @@ This section explains the list of events of the File Upload component which will
 @code {
     private void OnActionCompleteHandler(ActionCompleteEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
 
 ## OnCancel
 
-`OnCancel` event fires if cancel the chunk file uploading.
+`OnCancel` event fires if the chunk file upload is canceled.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -120,7 +120,7 @@ This section explains the list of events of the File Upload component which will
 @code {
     private void OnCancelHandler(CancelEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -139,7 +139,7 @@ This section explains the list of events of the File Upload component which will
 @code {
     private void OnChunkFailureHandler(FailureEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -158,14 +158,14 @@ This section explains the list of events of the File Upload component which will
 @code {
     private void OnChunkFailuredHandler(FailureEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
 
 ## OnChunkSuccess
 
-`OnChunkSuccess` event fires when the chunk file uploaded successfully.
+`OnChunkSuccess` event fires when the chunk file is uploaded successfully.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -177,7 +177,7 @@ This section explains the list of events of the File Upload component which will
 @code {
     private void OnChunkSuccessHandler(SuccessEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -196,7 +196,7 @@ This section explains the list of events of the File Upload component which will
 @code {
     private void OnChunkUploadStartHandler(UploadingEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -215,7 +215,7 @@ This section explains the list of events of the File Upload component which will
 @code {
     private void OnClearHandler(ClearingEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -234,7 +234,7 @@ This section explains the list of events of the File Upload component which will
 @code {
     private void OnFailureHandler(FailureEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -253,7 +253,7 @@ This section explains the list of events of the File Upload component which will
 @code {
     private void OnFailuredHandler(FailureEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -272,14 +272,14 @@ This section explains the list of events of the File Upload component which will
 @code {
     private void OnFileListRenderHandler(FileListRenderingEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
 
 ## OnRemove
 
-`OnRemove` event triggers on removing the uploaded file. The event used to get confirm before removing the file from server.
+`OnRemove` event triggers on removing the uploaded file. The event is used to get confirmation before removing the file from the server.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -291,14 +291,14 @@ This section explains the list of events of the File Upload component which will
 @code {
     private void OnRemoveHandler(RemovingEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
 
 ## OnResume
 
-`OnResume` event fires if resume the paused chunk file upload.
+`OnResume` event fires if the paused chunk file upload is resumed.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -310,7 +310,7 @@ This section explains the list of events of the File Upload component which will
 @code {
     private void OnResumeHandler(PauseResumeEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -329,14 +329,14 @@ This section explains the list of events of the File Upload component which will
 @code {
     private void OnUploadStartHandler(UploadingEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
 
 ## Paused
 
-`Paused` event fires if pause the chunk file uploading.
+`Paused` event fires if the chunk file upload is paused.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -348,7 +348,7 @@ This section explains the list of events of the File Upload component which will
 @code {
     private void PausedHandler(PauseResumeEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -367,7 +367,7 @@ This section explains the list of events of the File Upload component which will
 @code {
     private void ProgressingHandler(Syncfusion.Blazor.Inputs.ProgressEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -386,7 +386,7 @@ This section explains the list of events of the File Upload component which will
 @code {
     private void SuccessHandler(SuccessEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -405,7 +405,7 @@ This section explains the list of events of the File Upload component which will
 @code {
     private void ValueChangeHandler(UploadChangeEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```

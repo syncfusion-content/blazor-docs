@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Toolbar Customization in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn here all about Toolbar Customization in Syncfusion Blazor PDF Viewer component and more.
+description: Checkout and learn here all about toolbar customization in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Toolbar Customization in Blazor PDF Viewer Component
 
-The PDF Viewer comes with a powerful built-in toolbar with the following important options:,
+The PDF Viewer comes with a powerful built-in toolbar with the following important options,
 * Open PDF file
 * Page navigation
 * Magnification
@@ -24,8 +24,6 @@ The PDF Viewer comes with a powerful built-in toolbar with the following importa
 * Thumbnail panel
 
 ![Blazor PDFViewer with Custom Toolbar](./images/blazor-pdfviewer-custom-toolbar.png)
-
-The following section explains, how to show or hide the toolbar and toolbar item.
 
 ## Show or hide toolbar
 
@@ -131,4 +129,4 @@ You can show or hide the toolbar items using the “PdfViewerToolbarSettings” 
 }
 ```
 
-> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.
+> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.

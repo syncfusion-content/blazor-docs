@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form filling in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn here all about Form filling in Syncfusion Blazor PDF Viewer component and much more.
+description: Checkout and learn here all about form filling in Syncfusion Blazor PDF Viewer component and much more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Form filling in Blazor PDF Viewer Component
 
-PDF Viewer component allows you to display the form fields available in the PDF document. By using this you can edit and download the form fields.
+PDF Viewer component allows to display the form fields available in the PDF document. By using this, you can edit and download the form fields.
 
 The form fields displayed in the PDF Viewer are:
 
@@ -25,7 +25,7 @@ The form fields displayed in the PDF Viewer are:
 
 ## Disabling form fields
 
-The PDF Viewer control provides an option to disable the form fields feature . The code snippet for disabling the feature is as follows.
+The PDF Viewer control provides an option to disable the form fields feature. The code snippet for disabling the feature is as follows.
 
 ```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
@@ -64,8 +64,6 @@ The PDF Viewer control provides the support to import and export form fields usi
 
 ## Importing FormFields using PDF Viewer API
 
-You can import the form fields using JSON file or JSON object in code behind like the below code snippet
-
 ```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
@@ -86,8 +84,6 @@ public string DocumentPath { get; set; } = "wwwroot/data/FormFillingDocument.pdf
 
 ## Exporting FormFields from the PDF document using PDF Viewer API
 
-You can export the form fields as JSON file in code behind as the following code snippet
-
 ```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
@@ -104,4 +100,4 @@ You can export the form fields as JSON file in code behind as the following code
 }
 ```
 
-> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.
+> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.

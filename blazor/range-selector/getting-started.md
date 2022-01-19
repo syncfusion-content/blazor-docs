@@ -1,89 +1,264 @@
 ---
 layout: post
-title: Getting Stared with Blazor Range Selector in Server Side | Syncfusion
-description: Learn here all about Getting Started with Syncfusion Blazor Range Selector in Blazor Server Side App using Visual Studio and more.
+title: Getting Stared with Blazor RangeSelector in Server Side | Syncfusion
+description: Learn here all about Getting Started with Syncfusion Blazor RangeSelector component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
-control: Range Selector
+control: RangeSelector
 documentation: ug
 ---
 
-# Blazor Range Selector Component in Server Side App using Visual Studio
+# Getting Started with Blazor RangeSelector (RangeNavigator) Component
 
-This section briefly explains how to include a Range Navigator component in the Blazor server-side application. Refer to the [Getting Started with Syncfusion Blazor for server-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) page for introduction and configuring common specifications.
+This section briefly explains about how to include [Blazor RangeSelector](https://www.syncfusion.com/blazor-components/blazor-range-selector) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
-## Importing Syncfusion Blazor Range Navigator component in the application
+## Prerequisites
 
-1. Install **Syncfusion.Blazor** NuGet package to the application by using the **NuGet Package Manager**.
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-2. Add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+## Create a new Blazor App in Visual Studio
 
-    ```html
-    <head>
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-        <!---CDN--->
-        @*<link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />*@
-    </head>
-    ```
+You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-    > For Internet Explorer 11, kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-    ```html
-    <head>
-        <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />
-        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-    </head>
-    ```
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/vs2019-extensions/create-project)
 
-## Adding component package to the application
+## Install Syncfusion Blazor RangeNavigator NuGet in the App
 
-Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.Charts** namespace.
+Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
-```cshtml
-@using Syncfusion.Blazor.Charts
-```
+To add Blazor RangeSelector component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.RangeNavigator](https://www.nuget.org/packages/Syncfusion.Blazor.RangeNavigator) and then install it.
 
-## Adding SyncfusionBlazor service in Startup.cs
+## Register Syncfusion Blazor Service
 
-Open the **Startup.cs** file and add services required by the Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
+Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
-```csharp
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
+
+@using Syncfusion.Blazor
+
+{% endhighlight %}
+{% endtabs %}
+
+Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
+
+### Blazor Server App
+
+* For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+
+* For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
+
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 10" %}
+
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
+using Syncfusion.Blazor;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+
+var app = builder.Build();
+....
+
+{% endhighlight %}
+
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="1 12" %}
+
 using Syncfusion.Blazor;
 
 namespace BlazorApplication
 {
     public class Startup
     {
-        ....
-        ....
+        ...
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddRazorPages();
+            services.AddServerSideBlazor();
+            services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+        }
+        ...
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Blazor WebAssembly App
+
+Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
+
+{% tabs %}
+{% highlight C# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 11" %}
+
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Syncfusion.Blazor;
+
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
+
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+await builder.Build().RunAsync();
+....
+
+{% endhighlight %}
+
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
+
+using Syncfusion.Blazor;
+
+namespace WebApplication1
+{
+    public class Program
+    {
+        public static async Task Main(string[] args)
+        {
             ....
-            ....
-            services.AddSyncfusionBlazor();
+            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+            await builder.Build().RunAsync();
         }
     }
 }
-```
 
-> To enable custom client-side source loading from CRG or CDN, please refer to the section about [custom resources in Blazor application](https://blazor.syncfusion.com/documentation/common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
+{% endhighlight %}
+{% endtabs %}
 
-## Adding Range Navigator component
+## Add Style Sheet
 
-To initialize the Range Navigator component, add the below code to the **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
+Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://sfblazor.azurewebsites.net/staging/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
 
-```cshtml
-@page "/"
+To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
+
+### Blazor Server App
+
+* For .NET 6 app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+
+* For .NET 5 and .NET 3.X app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
+
+{% tabs %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
+
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+
+{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" %}
+
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Blazor WebAssembly App
+
+For Blazor WebAssembly App, Refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
+
+{% tabs %}
+{% highlight cshtml tabtitle="~/index.html" %}
+
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add Script Reference
+
+Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://sfblazor.azurewebsites.net/staging/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows,
+
+### Blazor Server App
+
+* For **.NET 6** app, Refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+
+* For **.NET 5 and .NET 3.X** app, Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
+
+{% tabs %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+
+{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="4" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Blazor WebAssembly App
+
+For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html** file.
+
+{% tabs %}
+{% highlight html tabtitle="~/index.html" hl_lines="4" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
+
+## Add Blazor RangeSelector component
+
+* Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Charts** namespace.
+
+{% tabs %}
+{% highlight razor tabtitle="~/Imports.razor" %}
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Charts
+
+{% endhighlight %}
+{% endtabs %}
+
+* Now, add the Syncfusion RangeSelector component in razor file. Here, the RangeSelector component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+
+{% tabs %}
+{% highlight razor %}
 
 <SfRangeNavigator>
 
 </SfRangeNavigator>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Populate Range Navigator with Data
 
 To bind the data for the Range Navigator component, assign a `IEnumerable` object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property. It can also be provided as an instance of the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
+
 @code {
     public class StockPrice
     {
@@ -102,19 +277,25 @@ To bind the data for the Range Navigator component, assign a `IEnumerable` objec
         new StockPrice { Date = new DateTime(2011, 01, 01), Close = 62 }
     };
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Now map `Date` and `Close` fields from the datasource to [XName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_XName) and [YName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_YName) properties of the [RangeNavigatorSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html) and then set the `StockDetails` to [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
+
 <SfRangeNavigator ValueType="RangeValueType.DateTime" IntervalType="RangeIntervalType.Years" LabelFormat="yyyy">
     <RangeNavigatorSeriesCollection>
         <RangeNavigatorSeries DataSource="@StockDetails" XName="Date" Type="RangeNavigatorType.Area" YName="Close"></RangeNavigatorSeries>
     </RangeNavigatorSeriesCollection>
 </SfRangeNavigator>
-```
 
-On successful compilation of the application, the Syncfusion Blazor Range Navigator component will render in the web browser.
+{% endhighlight %}
+{% endtabs %}
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor RangeSelector (RangeNavigator)` component will be rendered in the default web browser.
 
 ![Blazor RangeNavigator Component](images/blazor-range-navigator.png)
 
