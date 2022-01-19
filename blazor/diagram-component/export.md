@@ -70,6 +70,29 @@ Diagram provides support to export the desired region of the diagram to desired 
 
      private void OnExport()
      {
+          DiagramExportSettings export = new DiagramExportSettings();                  
+          //To export the diagram
+          await diagram.ExportAsync(DiagramExportFormat.SVG, export);
+     }
+}
+```
+
+### Page Size
+
+Diagram provides support to change the page size. Page size can be changed by setting the [DiagramExportSettings.PageWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_PageWidth) and [DiagramExportSettings.PageHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_PageHeight) properties.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<input type="button" value="Export" @onclick="@OnExport" />
+<SfDiagramComponent Height="600px" @ref="@diagram">
+</SfDiagramComponent>
+
+@code{
+     SfDiagramComponent diagram;
+
+     private void OnExport()
+     {
           DiagramExportSettings export = new DiagramExportSettings();          
           export.PageWidth = 816;
           export.PageHeight = 1054;         
