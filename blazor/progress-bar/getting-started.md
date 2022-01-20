@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stared with Blazor ProgressBar in Server Side | Syncfusion
+title: Getting Stared with Blazor ProgressBar Component | Syncfusion
 description: Learn here all about getting started with Syncfusion Blazor ProgressBar in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: ProgressBar 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stared with Blazor RangeSelector in Server Side | Syncfusion
+title: Getting Stared with Blazor RangeSelector Component | Syncfusion
 description: Checkout and learn about getting started with Blazor RangeSelector component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: RangeSelector

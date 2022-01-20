@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stared with Blazor TreeMap in Server Side | Syncfusion
+title: Getting Stared with Blazor TreeMap Component | Syncfusion
 description: Checkout and learn about getting started with Blazor TreeMap component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: TreeMap
