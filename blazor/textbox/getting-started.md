@@ -292,7 +292,7 @@ A TextBox can be created with icon as a group by creating the parent `div` eleme
 
 ## Floating label
 
-The floating label TextBox floats the label above the TextBox after focusing, or filled with value in the TextBox. The floating label TextBox can be created by using the `FloatLabelType` API.
+The floating label TextBox floats the label above the TextBox after focusing, or filled with value in the TextBox. The floating label TextBox can be created by using the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_FloatLabelType) API.
 
 {% tabs %}
 {% highlight razor %}

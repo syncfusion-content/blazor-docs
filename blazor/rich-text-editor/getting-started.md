@@ -268,7 +268,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 
 ## Configure the Toolbar
 
-Configure the toolbar with the tools using `Items` field of the `RichTextEditorToolbarSettings` property as your application requires.
+Configure the toolbar with the tools using `Items` field of the [RichTextEditorToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html) property as your application requires.
 
 {% tabs %}
 {% highlight razor %}

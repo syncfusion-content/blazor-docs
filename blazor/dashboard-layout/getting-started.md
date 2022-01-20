@@ -265,7 +265,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 
 A dashboard layout can be rendered with multiple panels to design a template with its basic properties.
 
-A dashboard layout panel consists of two sections, which are Header and Content section. `HeaderTemplate` is used to render the Header section and `ContentTemplate` is used to render the content section.
+A dashboard layout panel consists of two sections, which are Header and Content section. [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_HeaderTemplate) is used to render the Header section and [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_ContentTemplate) is used to render the content section.
 
 Also, it is easy to interact with the panels by dragging, floating, and resizing functionality of panels.
 
