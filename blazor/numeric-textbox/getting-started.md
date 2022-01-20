@@ -11,8 +11,6 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor NumericTextBox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
-To get start quickly with Blazor NumericTextBox component, you can check on this video.
-
 {% youtube
 "youtube:https://www.youtube.com/watch?v=QJGjKRXurv8"%}
 
@@ -305,7 +303,7 @@ If `ValidateDecimalOnType` is false, number of decimals will not be restricted. 
 
 ![Blazor NumericTextBox with Precision Value](./images/blazor-numerictextbox-precision-value.png)
 
-> You can also explore our [Blazor NumericTextBox example](https://blazor.syncfusion.com/demos/numeric-textbox/default-functionalities?theme=bootstrap5) that shows how to configure the numeric textbox in Blazor.
+> You can also explore the [Blazor NumericTextBox example](https://blazor.syncfusion.com/demos/numeric-textbox/default-functionalities?theme=bootstrap5) that shows how to configure the numeric textbox in Blazor.
 
 ## See Also
 
