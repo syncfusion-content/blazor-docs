@@ -359,7 +359,7 @@ app.UseEndpoints(endpoints =>
 
 ## File download support
 
-To perform the download operation, initialize the `DownloadUrl` property in a FileManagerAjaxSettings.
+To perform the download operation, initialize the [DownloadUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_DownloadUrl) property in a FileManagerAjaxSettings.
 
 {% tabs %}
 {% highlight razor %}
@@ -400,7 +400,7 @@ namespace filemanager.Server.Controllers
 
 ## File upload support
 
-To perform the upload operation, initialize the `UploadUrl` property in a FileManagerAjaxSettings.
+To perform the upload operation, initialize the [UploadUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_UploadUrl) property in a FileManagerAjaxSettings.
 
 {% tabs %}
 {% highlight razor %}
@@ -449,7 +449,7 @@ namespace filemanager.Server.Controllers
 
 ## Image preview support
 
-To perform image preview support in the File Manager component,  initialize the `GetImageUrl` property in a FileManagerAjaxSettings.
+To perform image preview support in the File Manager component,  initialize the [GetImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_GetImageUrl) property in a FileManagerAjaxSettings.
 
 {% tabs %}
 {% highlight razor %}
