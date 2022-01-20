@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Getting Started with Blazor RangeSlider Component | Syncfusion
-description: Checkout and learn about getting started with Blazor RangeSlider component of Syncfusion, and more details.
+title: Getting Started with Blazor Range Slider Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Range Slider component of Syncfusion, and more details.
 platform: Blazor
-control: RangeSlider
+control: Range Slider
 documentation: ug
 ---
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Blazor RangeSlider Component
+# Getting Started with Blazor Range Slider Component
 
-This section briefly explains about how to include [Blazor RangeSlider](https://www.syncfusion.com/blazor-components/blazor-range-slider) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor Range Slider](https://www.syncfusion.com/blazor-components/blazor-range-slider) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
-To add Blazor RangeSlider component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) and then install it.
+To add Blazor Range Slider component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs) and then install it.
 
 ## Register Syncfusion Blazor Service
 
@@ -229,7 +229,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
-## Add Blazor RangeSlider component
+## Add Blazor Range Slider component
 
 * Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Inputs** namespace.
 
@@ -242,7 +242,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 {% endhighlight %}
 {% endtabs %}
 
-* Now, add the Syncfusion RangeSlider component in razor file. Here, the RangeSlider component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+* Now, add the Syncfusion Range Slider component in razor file. Here, the Range Slider component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
 {% tabs %}
 {% highlight razor %}
@@ -252,9 +252,9 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor RangeSlider` component will be rendered in the default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Range Slider` component will be rendered in the default web browser.
 
-![Blazor RangeSlider Component](images/blazor-rangeslider.gif)
+![Blazor Range Slider Component](images/blazor-rangeslider.gif)
 
 ## See Also
 

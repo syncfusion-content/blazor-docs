@@ -267,9 +267,9 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 
 ![Blazor Toggle Switch Button Component](./images/blazor-toggle-switch-button.png)
 
-## Set text on Switch
+## Setting On and Off Text
 
-This section explains how to set `OnLabel` and `OffLabel` texts on Switch. In the following example, `onLabel` is set as `ON` and `offLabel` is set as `OFF`.
+On and Off text can be set using [OnLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_OnLabel) and [OffLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_OffLabel) properties of Toggle Switch Button component. In the following example, `onLabel` is set as `ON` and `offLabel` is set as `OFF`.
 
 {% tabs %}
 {% highlight razor %}

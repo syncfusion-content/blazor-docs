@@ -284,7 +284,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 
 ## Enable backdrop
 
-Enabling the `ShowBackdrop` in the Sidebar component will prevent the main content from user interactions.
+Enabling the [ShowBackdrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_ShowBackdrop) in the Sidebar component will prevent the main content from user interactions.
 Here, the DOM elements will not get changed. It only closes the main content by covering with a black backdrop overlay and focuses the Sidebar in the screen.
 
 {% tabs %}
@@ -343,7 +343,7 @@ Here, the DOM elements will not get changed. It only closes the main content by 
 
 ![Enabling Backdrop in Blazor Sidebar](./images/blazor-sidebar-enable-backdrop.png)
 
-## Animate
+## Enable Animation
 
 Animation transitions can be set while expanding or collapsing the Sidebar using the `Animate` property. By default, `Animate` property is set to true. `EnableRTL` will display the sidebar in the right-to-left direction.
 
@@ -573,7 +573,7 @@ In the following example, the Sidebar is rendered with Accordion component in it
 
 ![Navigation with Blazor Sidebar](./images/blazor-sidebar-navigation.png)
 
-## Blazor Sidebar vs native sidebar
+## Advantages of Syncfusion Blazor Sidebar
 
 1. Simply customizable and responsive design.
 2. Different sliding types provides the user to adjust the main content by pushing, overlaying or sliding the content.

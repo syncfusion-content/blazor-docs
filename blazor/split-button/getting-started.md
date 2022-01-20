@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Getting Started with Blazor SplitButton Component | Syncfusion
-description: Checkout and learn about getting started with Blazor SplitButton component in Blazor Server App and Blazor WebAssembly App.
+title: Getting Started with Blazor Split Button Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Split Button component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
-control: SplitButton
+control: Split Button
 documentation: ug
 ---
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Blazor SplitButton Component
+# Getting Started with Blazor Split Button Component
 
-This section briefly explains about how to include [Blazor SplitButton](https://www.syncfusion.com/blazor-components/blazor-split-button) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor Split Button](https://www.syncfusion.com/blazor-components/blazor-split-button) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
-To add Blazor SplitButton component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.SplitButtons](https://www.nuget.org/packages/Syncfusion.Blazor.SplitButtons) and then install it.
+To add Blazor Split Button component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.SplitButtons](https://www.nuget.org/packages/Syncfusion.Blazor.SplitButtons) and then install it.
 
 ## Register Syncfusion Blazor Service
 
@@ -229,7 +229,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
-## Add Blazor SplitButton component
+## Add Blazor Split Button component
 
 * Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Buttons** namespace.
 
@@ -242,7 +242,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 {% endhighlight %}
 {% endtabs %}
 
-* Now, add the Syncfusion SplitButton component in razor file. Here, the SplitButton component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+* Now, add the Syncfusion Split Button component in razor file. Here, the Split Button component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
 {% tabs %}
 {% highlight razor %}
@@ -258,9 +258,9 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor SplitButton` component will be rendered in the default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Split Button` component will be rendered in the default web browser.
 
-![Blazor SplitButton Component](./images/blazor-splitbutton.png)
+![Blazor Split Button Component](./images/blazor-splitbutton.png)
 
 ## See Also
 

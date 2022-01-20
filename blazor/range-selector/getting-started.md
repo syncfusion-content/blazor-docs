@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Stared with Blazor RangeSelector Component | Syncfusion
-description: Checkout and learn about getting started with Blazor RangeSelector component in Blazor Server App and Blazor WebAssembly App.
+title: Getting Stared with Blazor Range Selector Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Range Selector component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
-control: RangeSelector
+control: Range Selector
 documentation: ug
 ---
 
-# Getting Started with Blazor RangeSelector (RangeNavigator) Component
+# Getting Started with Blazor Range Selector (RangeNavigator) Component
 
-This section briefly explains about how to include [Blazor RangeSelector](https://www.syncfusion.com/blazor-components/blazor-range-selector) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor Range Selector](https://www.syncfusion.com/blazor-components/blazor-range-selector) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
-To add Blazor RangeSelector component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.RangeNavigator](https://www.nuget.org/packages/Syncfusion.Blazor.RangeNavigator) and then install it.
+To add Blazor Range Selector component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.RangeNavigator](https://www.nuget.org/packages/Syncfusion.Blazor.RangeNavigator) and then install it.
 
 ## Register Syncfusion Blazor Service
 
@@ -227,7 +227,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
-## Add Blazor RangeSelector component
+## Add Blazor Range Selector component
 
 * Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Charts** namespace.
 
@@ -240,7 +240,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 {% endhighlight %}
 {% endtabs %}
 
-* Now, add the Syncfusion RangeSelector component in razor file. Here, the RangeSelector component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+* Now, add the Syncfusion Range Selector component in razor file. Here, the Range Selector component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
 {% tabs %}
 {% highlight razor %}
@@ -295,7 +295,7 @@ Now map `Date` and `Close` fields from the datasource to [XName](https://help.sy
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor RangeSelector (RangeNavigator)` component will be rendered in the default web browser.
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Range Selector (RangeNavigator)` component will be rendered in the default web browser.
 
 ![Blazor RangeNavigator Component](images/blazor-range-navigator.png)
 

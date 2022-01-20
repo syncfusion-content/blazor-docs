@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started in Blazor Diagram Component | Syncfusion
+title: Getting Started with Blazor Diagram Component | Syncfusion
 description: Checkout and learn about getting started with Blazor Diagram component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Diagram Component
