@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor Numeric TextBox Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor Numeric TextBox component and more.
+description: Checkout and learn here all about data binding in Syncfusion Blazor Numeric TextBox component and more.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
@@ -39,7 +39,7 @@ You can bind the value to the NumericTextBox component directly for `Value` prop
 
 ## Two-way data binding
 
-Two-way binding can be achieved by using `bind-Value` attribute and it supports string, int, Enum, DateTime, and bool types. If component value has been changed, it will affect the all places where we bind the variable for the **bind-value** attribute.
+Two-way binding can be achieved by using `bind-Value` attribute and it supports string, int, Enum, DateTime, and bool types. If component value has been changed, it will affect all the places where the variable is bound for the **bind-value** attribute.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -57,7 +57,7 @@ Two-way binding can be achieved by using `bind-Value` attribute and it supports 
 
 You can change the property value dynamically by manually calling the `StateHasChanged()` method inside public event of **Blazor NumericTextBox component** only. This method notifies the component that its state has changed and queues a re-render.
 
-There is no need to call this method for native events since it’s called after any lifecycle method has been called and can also be invoked manually to trigger a re-render. Please refer the below mentioned code example.
+There is no need to call this method for native events since it’s called after any lifecycle method has been called and can also be invoked manually to trigger a re-render.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
