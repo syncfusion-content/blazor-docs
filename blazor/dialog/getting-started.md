@@ -298,7 +298,7 @@ The dialog component is maintained in the DOM after hiding the dialog when the [
 
 A `modal` shows an overlay behind the Dialog. So, the users should interact the Dialog compulsory before interacting with the remaining content in an application.
 
-While the user clicks the overlay, the action can be handled through the `OnOverlayClick` event. In the following code, it explains the Dialog close action performed while clicking the overlay.
+While the user clicks the overlay, the action can be handled through the [OnOverlayClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnOverlayClick) event. In the following code, it explains the Dialog close action performed while clicking the overlay.
 
 {% tabs %}
 {% highlight razor %}
@@ -336,7 +336,7 @@ While the user clicks the overlay, the action can be handled through the `OnOver
 
 ## Enable header
 
-The Dialog header can be enabled by adding the header content as text or HTML content using the `Header` template of the dialog.
+The Dialog header can be enabled by adding the header content as text or HTML content using the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogTemplates.html#Syncfusion_Blazor_Popups_DialogTemplates_Header) template of the dialog.
 
 {% tabs %}
 {% highlight razor %}
@@ -368,7 +368,7 @@ The Dialog header can be enabled by adding the header content as text or HTML co
 
 ## Render Dialog with buttons
 
-By adding the `DialogButtons` can render a Dialog with buttons in Razor page.
+By adding the [DialogButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtons.html) can render a Dialog with buttons in Razor page.
 
 {% tabs %}
 {% highlight razor %}
