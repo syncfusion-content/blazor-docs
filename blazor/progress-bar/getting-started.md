@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stared with Blazor ProgressBar in Server Side | Syncfusion
+title: Getting Stared with Blazor ProgressBar Component | Syncfusion
 description: Learn here all about getting started with Syncfusion Blazor ProgressBar in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: ProgressBar 
@@ -255,7 +255,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 
 ![Blazor Linear ProgressBar](images/blazor-linear-progressbar.png)
 
-## Progress Type
+## Circular Progress Bar Type
 
 Change the type of the ProgressBar by using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html) property. By default, the [Linear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html#Syncfusion_Blazor_ProgressBar_ProgressType_Linear) type of ProgressBar will be rendered. In the following example, view the [Circular](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html#Syncfusion_Blazor_ProgressBar_ProgressType_Circular) type.
 

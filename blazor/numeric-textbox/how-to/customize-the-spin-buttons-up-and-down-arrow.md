@@ -29,7 +29,4 @@ You can override the default icons of `e-spin-up` and `e-spin-down` classes usin
     }
 </style>
 ```
-
-The output will be as follows.
-
 ![Customizing Up and Down Arrow in Blazor NumericTextBox](../images/blazor-numerictextbox-custom-icon.png)
