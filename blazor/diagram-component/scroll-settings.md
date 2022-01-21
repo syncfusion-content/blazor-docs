@@ -62,7 +62,6 @@ You can programmatically change the scroll offsets at runtime by using the exter
         horizontalOffset = 200;
     }
 }
-
 ```
 
 ## Scroll limit
@@ -94,5 +93,27 @@ To explore about the options , refer [ScrollLimitMode](https://help.syncfusion.c
 
 | ScrollLimit | Output |
 |-------------|--------|
-|   Diagram   | ![ScrollLimitMode as Diagram](./images/ScrollLimitDiagram.gif)       |   
-|   Infinity  | ![ScrollLimitMode as Infinity](./images/ScrollLimitInfinity.gif)       |   
+|   Diagram   | ![ScrollLimitMode as Diagram](./images/ScrollLimitDiagram.gif)|   
+|   Infinity  | ![ScrollLimitMode as Infinity](./images/ScrollLimitInfinity.gif)|
+
+## CallBack Methods
+
+* CurrentZoomChanged : Specifies the callback to trigger when the current zoom value changes.
+* HorizontalOffsetChanged : Specifies the callback to trigger when the horizontal offset changes.
+* VerticalOffsetChanged : Specifies the callback to trigger when the vetical offset changes.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px">
+    @* Sets the ScrollLimit of scroll settings *@
+     <ScrollSettings CurrentZoomChanged="OnCurrentZoomChanged"></ScrollSettings>
+</SfDiagramComponent>
+
+@code
+{
+    private void OnCurrentZoomChanged()
+    {
+        // Enter your code
+    }
+}
