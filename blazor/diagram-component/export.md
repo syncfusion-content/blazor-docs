@@ -20,8 +20,8 @@ Diagram provides support to export the diagram as image/svg files. The following
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<input type="button" value="Export" @onclick="@OnExport" />
-<input type="button" value="Export" @onclick="@OnExportEntry" />
+<input type="button" @onclick="@Exportbase64" />
+<input type="button" @onclick="@Exportpng" />
 <SfDiagramComponent Height="600px" @ref="@diagram">
 </SfDiagramComponent>
 
@@ -29,14 +29,14 @@ Diagram provides support to export the diagram as image/svg files. The following
      SfDiagramComponent diagram;
 
      //To export the diagram as base64 string.
-     private void OnExport()
+     private void Exportbase64()
      {
           DiagramExportSettings export = new DiagramExportSettings();         
           string[] base64 = await diagram.ExportAsync(DiagramExportFormat.PNG, export);          
      }
 
      //To export the diagram as png.
-     private void OnExportEntry()
+     private void Exportpng()
      {
           DiagramExportSettings export = new DiagramExportSettings();                   
           await diagram.ExportAsync("diagram",DiagramExportFormat.PNG, export);
@@ -59,14 +59,14 @@ Diagram provides support to export the desired region of the diagram to desired 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<input type="button" value="Export" @onclick="@OnExport" />
+<input type="button" @onclick="@Export" />
 <SfDiagramComponent Height="600px" @ref="@diagram">
 </SfDiagramComponent>
 
 @code{
      SfDiagramComponent diagram;
 
-     private void OnExport()
+     private void Export()
      {
           DiagramExportSettings export = new DiagramExportSettings();                  
           //To export the diagram
@@ -82,14 +82,14 @@ Diagram provides support to change the page size. Page size can be changed by se
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<input type="button" value="Export" @onclick="@OnExport" />
+<input type="button" @onclick="@Export" />
 <SfDiagramComponent Height="600px" @ref="@diagram">
 </SfDiagramComponent>
 
 @code{
      SfDiagramComponent diagram;
 
-     private void OnExport()
+     private void Export()
      {
           DiagramExportSettings export = new DiagramExportSettings();          
           export.PageWidth = 816;
@@ -108,14 +108,14 @@ Diagram provides support to change the page size. Page size can be changed by se
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<input type="button" value="Export" @onclick="@OnExport" />
+<input type="button" @onclick="@Export" />
 <SfDiagramComponent Height="600px" @ref="@diagram">
 </SfDiagramComponent>
 
 @code{
      SfDiagramComponent diagram;
 
-     private void OnExport()
+     private void Export()
      {
           DiagramExportSettings export = new DiagramExportSettings();
           export.Region = DiagramPrintExportRegion.PageSettings;
@@ -141,14 +141,14 @@ The following code example illustrates how to export the diagram based on page s
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<input type="button" value="Export" @onclick="@OnExport" />
+<input type="button" @onclick="@Export" />
 <SfDiagramComponent Height="600px" @ref="@diagram">
 </SfDiagramComponent>
 
 @code{
      SfDiagramComponent diagram;
 
-     private void OnExport()
+     private void Export()
      {
           DiagramExportSettings export = new DiagramExportSettings();
           export.Region = DiagramPrintExportRegion.PageSettings;
@@ -170,14 +170,14 @@ The following code example illustrates how to export the region specified in the
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<input type="button" value="Export" @onclick="@OnExport" />
+<input type="button" @onclick="@Export" />
 <SfDiagramComponent Height="600px" @ref="@diagram">
 </SfDiagramComponent>
 
 @code{
      SfDiagramComponent diagram;
 
-     private void OnExport()
+     private void Export()
      {
           DiagramExportSettings export = new DiagramExportSettings();
           export.Region = DiagramPrintExportRegion.PageSettings;
@@ -203,14 +203,14 @@ The following code example illustrates how to export the diagram to single page.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<input type="button" value="Export" @onclick="@OnExport" />
+<input type="button" @onclick="@Export" />
 <SfDiagramComponent Height="600px" @ref="@diagram">
 </SfDiagramComponent>
 
 @code{
      SfDiagramComponent diagram;
 
-     private void OnExport()
+     private void Export()
      {
           DiagramExportSettings export = new DiagramExportSettings();
           export.Region = DiagramPrintExportRegion.PageSettings;
@@ -233,14 +233,14 @@ Diagram provides support to switch between [Portrait](https://help.syncfusion.co
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<input type="button" value="Export" @onclick="@OnExport" />
+<input type="button" @onclick="@Export" />
 <SfDiagramComponent Height="600px" @ref="@diagram">
 </SfDiagramComponent>
 
 @code{
      SfDiagramComponent diagram;
 
-     private void OnExport()
+     private void Export()
      {
           DiagramExportSettings export = new DiagramExportSettings();
           export.Region = DiagramPrintExportRegion.PageSettings;
@@ -266,14 +266,14 @@ The following code illustrates how to export the diagram as PDF file.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<input type="button" value="Export" @onclick="@OnExportEntry" />
+<input type="button" @onclick="@ExportPDF" />
 <SfDiagramComponent Height="600px" @ref="@diagram">
 </SfDiagramComponent>
 
 @code{
     SfDiagramComponent diagram;
 
-    private async void OnExportEntry()
+    private async void ExportPDF()
     {
         DiagramExportSettings print = new DiagramExportSettings();
         print.Region = region;
