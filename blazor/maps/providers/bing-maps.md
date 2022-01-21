@@ -184,6 +184,4 @@ Any GeoJSON shape can be rendered as a sublayer on top of the Bing Maps layer fo
 
 > In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
-The above code renders Africa continent as sublayer in the Bing Maps.
-
 ![Blazor Bing Maps with Sublayer](../images/blazor-bing-map-sublayer.PNG)
