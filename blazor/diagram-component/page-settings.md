@@ -9,11 +9,7 @@ documentation: ug
 
 # Page Settings in Blazor Diagram Component
 
-Page settings enable to customize the appearance, width, and height of the diagram page.
-
-## Page size and appearance
-
-* The size and appearance of the diagram pages can be customized with the page settings property.
+By default, Diagram’s page size is decided based on the position of diagramming elements. The size and appearance of the diagram pages can be customized using the [PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html) property of the diagram.
 
 * The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_Height) properties of `PageSettings` define the size of the page. The default value of width is 1123 pixel and height is 794 pixel.
 
@@ -21,7 +17,7 @@ Page settings enable to customize the appearance, width, and height of the diagr
 
 * Page breaks are used as a visual guide to see how the pages split into multiple pages. The [ShowPageBreaks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_ShowPageBreaks) property decides the Visibility of Page breaks. By default, it is false. If it is true, then the page break lines will be visible.
 
-* To explore those properties, refer to [Page Settings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html).
+* To explore those properties, refer to [PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
