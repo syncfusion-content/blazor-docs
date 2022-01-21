@@ -7,9 +7,9 @@ control: DocumentEditor
 documentation: ug
 ---
 
-# Getting Started with Blazor DocumentEditor Component in Blazor Server App
+# Getting Started with Blazor DocumentEditor Component in Blazor Server
 
-This section briefly explains about how to include [Blazor DocumentEditor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html) component in your Blazor Server App using Visual Studio.
+This section briefly explains about how to include [Blazor DocumentEditor](https://www.syncfusion.com/blazor-components/blazor-word-processor) component in your Blazor Server App using Visual Studio.
 
 ## Prerequisites
 

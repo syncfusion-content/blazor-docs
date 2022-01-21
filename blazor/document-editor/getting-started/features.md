@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn about overview of Syncfusion Blazor DocumentEditor component and much more.
+description: Checkout and learn about overview of the Syncfusion Blazor DocumentEditor component and much more details.
 platform: Blazor
 control: DocumentEditor
 documentation: ug

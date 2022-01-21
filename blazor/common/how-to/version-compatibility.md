@@ -34,4 +34,4 @@ For example, if the release a package version is `19.3.0.43`, the version number
 ## See also
 
 * [Syncfusion Product release lifecycle](https://www.syncfusion.com/support/product-lifecycle/)
-* [.NET and .NET Core release lifecycle](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)
+* [.NET and .NET Core release lifecycle](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core)

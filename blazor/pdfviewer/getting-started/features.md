@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn about overview of Blazor PDF Viewer component and much more details.
+description: Checkout and learn about overview of the Syncfusion Blazor PDF Viewer component and much more details.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
