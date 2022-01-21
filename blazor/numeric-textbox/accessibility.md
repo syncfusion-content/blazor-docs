@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Numeric TextBox Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Numeric TextBox component and more.
+description: Checkout and learn here all about accessibility in Syncfusion Blazor Numeric TextBox component and more.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Numeric TextBox Component
 
-The NumericTextBox characterized with complete ARIA Accessibility support that helps to accessible by on-screen readers and other assistive technology devices. This component designed with the reference of the guidelines document given in [WAI ARAI Accessibility practices](http://www.w3.org/TR/wai-aria-practices-1.1/#spinbutton).
+The NumericTextBox is characterized with complete ARIA Accessibility support that helps to be accessible by on-screen readers and other assistive technology devices. This component designed with the reference of the guidelines document given in [WAI ARAI Accessibility practices](http://www.w3.org/TR/wai-aria-practices-1.1/#spinbutton).
 
 The NumericTextBox uses the `spin button` role and following ARIA properties to its element based on its state.
 
@@ -40,7 +40,5 @@ The following table shows shortcut keys and its corresponding usage.
 
 <SfNumericTextBox TValue="int?" Value=10></SfNumericTextBox>
 ```
-
-The output will be as follows.
 
 ![Accessibility in Blazor NumericTextBox](./images/blazor-numerictextbox-component.png)
