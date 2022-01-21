@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grouping in Blazor MultiSelect Dropdown Component | Syncfusion
-description: Checkout and learn here all about Grouping in Syncfusion Blazor MultiSelect Dropdown component and more.
+description: Checkout and learn here all about grouping in Syncfusion Blazor MultiSelect Dropdown component and more.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
@@ -48,7 +48,5 @@ In the following sample, vegetables are grouped according on its category using 
     }
 }
 ```
-
-The output will be as follows.
 
 ![Grouping in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-grouping.png)
