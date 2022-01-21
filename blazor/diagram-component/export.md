@@ -102,8 +102,7 @@ Diagram provides support to change the page size. Page size can be changed by se
 
 ### Add margin around exported image
 
-[Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_Margin) specifies the amount of space that has to be left around the diagram.
-
+[Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_Margin) specifies the space around the content to be printed/exported.The default value for margin is 25 for all sides.
 <!-- markdownlint-disable MD033 -->
 
 ```cshtml
@@ -131,9 +130,9 @@ Diagram provides support to change the page size. Page size can be changed by se
 
 [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_Region) specifies whether the diagram is to be exported based on page settings, content or clip bounds. The exporting options are as follows:
 
-* PageSettings: Specifies the region within the x,y, width and height values of page settings is printed or exported.
-* Content: Specifies the content of the diagram without empty space around the content is printed or exported.
-* ClipBounds: Exports the region specified using ClipBounds property. This is applicable for exporting only.
+* [PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPrintExportRegion.html#Syncfusion_Blazor_Diagram_DiagramPrintExportRegion_PageSettings): Specifies the region within the x,y, width and height values of page settings is printed or exported.
+* [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPrintExportRegion.html#Syncfusion_Blazor_Diagram_DiagramPrintExportRegion_Content): Specifies the content of the diagram without empty space around the content is printed or exported.
+* [ClipBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPrintExportRegion.html#Syncfusion_Blazor_Diagram_DiagramPrintExportRegion_ClipBounds): Exports the region specified using [ClipBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.IDiagramPrintExportSettings.html#Syncfusion_Blazor_Diagram_IDiagramPrintExportSettings_ClipBounds) property of `DiagramExportSettings`. This is applicable for exporting only.
 
 For more information, refer to [DiagramPrintExportRegion](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPrintExportRegion.html).
 
@@ -164,7 +163,7 @@ The following code example illustrates how to export the diagram based on page s
 
 ### Custom bounds
 
-Diagram provides support to export any specific region of the diagram by using [ClipBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_ClipBounds).
+Diagram provides support to export any specific region of the diagram by using the [ClipBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_ClipBounds) property.
 
 The following code example illustrates how to export the region specified in the bounds.
 
@@ -229,7 +228,7 @@ The following code example illustrates how to export the diagram to single page.
 
 ### Change Orientation at runtime
 
-Diagram provides support to switch between Portrait and Landscape orientation while exporting. Orientation can be changed by setting the DiagramExportSettings.Orientation Property. The default value is Landscape.
+Diagram provides support to switch between [Portrait](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageOrientation.html#Syncfusion_Blazor_Diagram_PageOrientation_Portrait) and [Landscape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageOrientation.html#Syncfusion_Blazor_Diagram_PageOrientation_Landscape) orientation while exporting. Orientation can be changed by setting the [DiagramExportSettings.Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_Orientation) Property. The default value is Landscape.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -260,7 +259,7 @@ Diagram provides support to switch between Portrait and Landscape orientation wh
 
 ### Export to PDF
 
-SfDiagramComponent does not have the built-in support to convert the diagram to PDF file, but you can achieve this by exporting the diagram as base-64 and then convert the exported file to PDF using Syncfusion.PdfExport.PdfDocument.
+Diagram does not have the built-in support to convert the diagram to PDF file, but you can achieve this by exporting the diagram as base-64 and then convert the exported file to PDF using Syncfusion.PdfExport.PdfDocument. Invoked javascript functions downloadpdf() and triggerdownload() methods to automatically download the pdf file. 
 
 The following code illustrates how to export the diagram as PDF file.
 
@@ -329,4 +328,36 @@ The following code illustrates how to export the diagram as PDF file.
         }
         return base64String;
     }
+
+    // Javascript methods to download file
+    function downloadPdf(base64String, fileName) {
+    var sliceSize = 512;
+    var byteCharacters = atob(base64String);
+    var byteArrays = [];
+    for (var offset = 0; offset < byteCharacters.length; offset += sliceSize)
+    {
+        var slice = byteCharacters.slice(offset, offset + sliceSize);
+        var byteNumbers = new Array(slice.length);
+        for (var i = 0; i < slice.length; i++)
+        {
+            byteNumbers[i] = slice.charCodeAt(i);
+        }
+        var byteArray = new Uint8Array(byteNumbers);
+        byteArrays.push(byteArray);
+    }
+    var blob = new Blob(byteArrays,
+        {
+          type: 'application/pdf'
+        }
+    );
+    var blobUrl = window.URL.createObjectURL(blob);
+    this.triggerDownload("PDF", fileName, blobUrl);
+}
+triggerDownload: function triggerDownload(type, fileName, url)
+{
+    var anchorElement = document.createElement('a');
+    anchorElement.download = fileName + '.' + type.toLocaleLowerCase();
+    anchorElement.href = url;
+    anchorElement.click();
+}
 ```
