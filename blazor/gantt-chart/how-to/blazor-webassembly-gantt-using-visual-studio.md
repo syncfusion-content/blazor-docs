@@ -22,7 +22,7 @@ This article provides a step-by-step instructions to configure Syncfusion [Blazo
 
 ## Create a Blazor WebAssembly project in Visual Studio 2019
 
-1. Install the essential project templates in the Visual Studio 2019 by running the below command line in the command prompt.
+1. Install the essential project templates in the Visual Studio 2019 by running the following command line in the command prompt.
 
     ```bash
     dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4

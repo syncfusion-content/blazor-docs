@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Free text annotations in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn here all about Free text annotations in Syncfusion Blazor PDF Viewer component and more.
+description: Checkout and learn here all about free text annotations in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
@@ -13,17 +13,15 @@ The PDF Viewer control provides the options to add, edit and delete the free tex
 
 ## Adding a free text annotation to the PDF document
 
-The Free text annotations can be added to the PDF document using the annotation toolbar.
+The free text annotations can be added to the PDF document using the annotation toolbar.
 
 * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-* Select the **Free Text Annotation** button in the annotation toolbar. It enables the Free Text annotation mode.
+* Select the **Free Text Annotation** button in the annotation toolbar. It enables the Free Text Annotation mode.
 * You can add the text over the pages of the PDF document.
 
 In the pan mode, if the free text annotation mode is entered, the PDF Viewer control will switch to text select mode.
 
 ![Free Text Annotation in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-free-text-annotation.png)
-
-Refer to the following code snippet to switch to Free Text annotation mode.
 
 ```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
@@ -75,7 +73,7 @@ The text in the annotation can be aligned by selecting the desired styles in the
 
 ### Editing text styles
 
-The style of the text in the annotation can be by edited by selecting the desired styles in the dropdown pop-up in the Font Style tool.
+The style of the text in the annotation can be edited by selecting the desired styles in the dropdown pop-up in the Font Style tool.
 
 ![Editing Font Style in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-edit-font-style.png)
 
@@ -108,7 +106,6 @@ The opacity of the annotation can be edited using the range slider provided in t
 The properties of the free text annotation can be set before creating the control using FreeTextSettings.
 
 After editing the default values, they will be changed to the selected values.
-Refer to the following code snippet to set the default free text annotation settings
 
 ```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
@@ -124,4 +121,4 @@ Refer to the following code snippet to set the default free text annotation sett
 }
 ```
 
-> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.
+> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.

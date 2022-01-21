@@ -334,7 +334,7 @@ The following code explains how to initialize a simple In-place Editor with popu
 
 ## Configuring DropDownList
 
-You can render the Blazor DropDownList by changing the `Type` property as `DropDownList` and configure `DropDownList` component inside the Editor component.
+You can render the Blazor DropDownList by changing the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_Type) property as `DropDownList` and configure `DropDownList` component inside the Editor component.
 
 {% tabs %}
 {% highlight razor %}
@@ -492,7 +492,7 @@ In the following code, it is configured to render the `DatePicker`, `DropDownLis
 
 ## Submitting data to the server (save)
 
-You can submit editor value to the server by configuring the `SaveUrl`, `Adaptor` and `PrimaryKey` property.
+You can submit editor value to the server by configuring the [SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_SaveUrl), [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_Adaptor) and [PrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_PrimaryKey) property.
 
 | Property   | Usage                                           |
 |------------|---------------------------------------------------------|

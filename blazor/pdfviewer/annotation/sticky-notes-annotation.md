@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sticky notes annotations in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn here all about Sticky notes annotations in Syncfusion Blazor PDF Viewer component and more.
+description: Checkout and learn here all about sticky notes annotations in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
@@ -28,7 +28,6 @@ Annotation comments can be added to the PDF document using the comment panel.
 * Select a Sticky note annotation in the PDF document and right-click it.
 * Select Comment option in the context menu that appears.
 * Now, you can add Comments, Reply, and Status using Comment Panel.
-* Now, you can add Comments, Reply, and Status using Comment Panel
 
 ![Blazor PDFViewer with StickyNotes Comment](../../pdfviewer/images/blazor-pdfviewer-stickynotes-comment.png)
 
@@ -44,7 +43,7 @@ The opacity of the annotation can be edited using the range slider provided in t
 
 The comment, comment reply, and comment status of the annotation can be edited using the Comment Panel.
 
-* Open the comment panel using the Comment Panel button showing in the annotation toolbar.
+* Open the comment panel using the Comment Panel button displayed in the annotation toolbar.
 
 ![Editing StickyNotes Comment in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-edit-sticknotes-comment.png)
 
@@ -56,7 +55,7 @@ You can modify or delete the comments or comments replay and it’s status using
 
 The properties of the sticky note annotation can be set before creating the control using StickyNoteSettings.
 
-After editing the default opacity using the Edit Opacity tool, they will be changed to the selected values. Refer to the following code snippet to set the default sticky note annotation settings.
+After editing the default opacity using the Edit Opacity tool, they will be changed to the selected values.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -75,7 +74,7 @@ After editing the default opacity using the Edit Opacity tool, they will be chan
 
 ## Disabling sticky note annotations
 
-The PDF Viewer control provides an option to disable the sticky note annotations feature. The code snippet for disabling the feature is as follows.
+The PDF Viewer control provides an option to disable the sticky note annotations feature.
 
 ```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
@@ -90,4 +89,4 @@ The PDF Viewer control provides an option to disable the sticky note annotations
 
 ```
 
-> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.
+> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.

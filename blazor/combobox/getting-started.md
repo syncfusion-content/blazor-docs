@@ -297,8 +297,7 @@ After initializing, populate the ComboBox with data using the [DataSource](https
 
 ## Custom values
 
-The ComboBox allows the users to give input as custom value, which is not required to present in predefined
-set of values. By default, this support is enabled by [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_AllowCustom) property. In this case, both text field and value field are considered as same. The custom value will be sent to post back handler when a form is about to be submitted.
+The ComboBox allows the users to give input as custom value, which is not required to present in predefined set of values. By default, this support is enabled by [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_AllowCustom) property. In this case, both text field and value field are considered as same. The custom value will be sent to post back handler when a form is about to be submitted.
 
 {% tabs %}
 {% highlight razor %}

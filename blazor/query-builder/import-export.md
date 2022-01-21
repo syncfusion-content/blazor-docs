@@ -161,13 +161,13 @@ The defined conditions can be exported to the SQL query through the [GetSqlFromR
 
     public List<RuleModel> Rules = new List<RuleModel>
     {
-        new RuleModel { Field = "EmployeeID", Type="Number",  Value = 1001, Operator = "notequal" },
-        new RuleModel { Field = "Country", Type="String", Value = "England", Operator = "equal" }
+        new RuleModel { Label="Employee ID", Field = "EmployeeID", Type="Number", Operator = "notequal", Value = 1001},
+        new RuleModel { Label="Country", Field = "Country", Type="String", Operator = "equal", Value = "England"}
     };
 
     private void getSql()
     {
-        QueryBuilderObj.GetSqlFromRules();
+        QueryBuilderObj.GetSqlFromRules(QueryBuilderObj.GetRules());
     }
  }
 
