@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Features in Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about Features in Syncfusion Blazor DocumentEditor component and much more.
+title: Overview of Blazor DocumentEditor Component | Syncfusion
+description: Checkout and learn about overview of Syncfusion Blazor DocumentEditor component and much more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# Features in Blazor DocumentEditor Component
+# Overview of Blazor DocumentEditor Component
 
 The [Blazor Word Processor component](https://www.syncfusion.com/blazor-components/blazor-word-processor) for Blazor is used to compose, edit, view, and print Word (DOC, DOCX, and RTF) documents in Blazor applications.
 
