@@ -7,15 +7,13 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Printing and Exporting in Blazor Diagram Component
+# Exporting in Blazor Diagram Component
 
-Diagram provides support to export its content as image/svg files. The [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ExportAsync_Syncfusion_Blazor_Diagram_DiagramExportFormat_Syncfusion_Blazor_Diagram_DiagramExportSettings_) method helps to export the diagram. Exporting can be done in two ways as follows.
+Diagram provides support to export the diagram as image/svg files. The following methods helps to export the diagram in desired formats.
 
 * `ExportAsync(DiagramExportFormat, DiagramExportSettings)` : Returns the exported diagram as base64 string of the specified file type.To explore the parameters, refer [ExportAsync(DiagramExportFormat, DiagramExportSettings)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ExportAsync_Syncfusion_Blazor_Diagram_DiagramExportFormat_Syncfusion_Blazor_Diagram_DiagramExportSettings_).
 
 * `ExportAsync(String, DiagramExportFormat, DiagramExportSettings)` : Exports the rendered diagram to various file types. It supports jpeg, png, svg ,bmp and pdf file types. Exported file will get download at client machine. To explore the parameters, refer [ExportAsync(String, DiagramExportFormat, DiagramExportSettings)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ExportAsync_System_String_Syncfusion_Blazor_Diagram_DiagramExportFormat_Syncfusion_Blazor_Diagram_DiagramExportSettings_).  
-
-The following code illustrates the example to export the diagram.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -30,17 +28,17 @@ The following code illustrates the example to export the diagram.
 @code{
      SfDiagramComponent diagram;
 
+     //To export the diagram as base64 string.
      private void OnExport()
      {
-          DiagramExportSettings export = new DiagramExportSettings();
-          //To export the diagram as base64 string.
+          DiagramExportSettings export = new DiagramExportSettings();         
           string[] base64 = await diagram.ExportAsync(DiagramExportFormat.PNG, export);          
      }
 
+     //To export the diagram as png.
      private void OnExportEntry()
      {
-          DiagramExportSettings export = new DiagramExportSettings();          
-          //To export the diagram as png.
+          DiagramExportSettings export = new DiagramExportSettings();                   
           await diagram.ExportAsync("diagram",DiagramExportFormat.PNG, export);
      }
 }
@@ -79,7 +77,7 @@ Diagram provides support to export the desired region of the diagram to desired 
 
 ### Page Size
 
-Diagram provides support to change the page size. Page size can be changed by setting the [DiagramExportSettings.PageWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_PageWidth) and [DiagramExportSettings.PageHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_PageHeight) properties.
+Diagram provides support to change the page size. Page size can be changed by setting the [DiagramExportSettings.PageWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_PageWidth) and [DiagramExportSettings.PageHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExportSettings.html#Syncfusion_Blazor_Diagram_DiagramExportSettings_PageHeight) properties. The default value of width is 1123 pixel and height is 794 pixel.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
