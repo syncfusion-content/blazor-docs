@@ -13,7 +13,7 @@ By default, Diagram’s page size is decided based on the position of diagrammin
 
 * The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_Height) properties of `PageSettings` define the size of the page. The default value of width is 1123 pixel and height is 794 pixel.
 
-* The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_Orientation)property of `PageSettings` used to change the page orientation to portrait or landscape. The default orientation is landscape.
+* The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_Orientation) property of `PageSettings` used to change the page orientation to portrait or landscape. The default orientation is landscape.
 
 * Page breaks are used as a visual guide to see how the pages split into multiple pages. The [ShowPageBreaks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_ShowPageBreaks) property decides the Visibility of Page breaks. By default, it is false. If it is true, then the page break lines will be visible.
 
