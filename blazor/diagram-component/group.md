@@ -379,11 +379,11 @@ You can change the position of the node group similar to node. For more informat
 }
 ```
 
-## Appearance
+## Change the appearance of the node group
 
 You can change the appearance of the node group similar to node. For more information about node appearance, refer to [Appearance](https://blazor.syncfusion.com/documentation/diagram-component/nodes/customization).
 
-## Interaction
+## Interact with the node group
 
 You can edit the node group and its children at runtime. You can interact with the nodegroup as like the node interaction like resize, rotate and drag. For more information about node interaction, refer to [Interaction](https://blazor.syncfusion.com/documentation/diagram-component/nodes/interaction).
 

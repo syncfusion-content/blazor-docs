@@ -114,11 +114,11 @@ Orientation, spacings, and position of the layout can be customized with a set o
 
 To explore layout properties, refer to `Layout Properties`.
 
-### Layout bounds
+### How to update Layout bounds
 
 Diagram provides support to align the layout within any custom rectangular area. For more information about bounds, refer to [Bounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Bounds).
 
-### Layout alignment
+### How to align Layout 
 
 The layout can be aligned anywhere over the layout bounds/viewport using the [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalAlignment) and [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalAlignment) properties of the layout.
 
@@ -219,11 +219,11 @@ The following code example illustrates how to set the vertical right arrangement
 
 ![Blazor Organization Diagram ChildNode in Vertical Right](../images/blazor-diagram-childnode-at-vertical-right.png)
 
-### Layout spacing
+### How to update Layout spacing
 
 Layout provides support to add space horizontally and vertically between the nodes. The [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing) properties of the layout allow you to set the space between the nodes horizontally and vertically.
 
-### Layout margin
+### How to update Layout margin
 
 Layout provides support to add some blank space between the layout bounds/viewport and the layout. The [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Margin) property of the layout allows you to set the blank space.
 
@@ -242,7 +242,7 @@ Layout provides support to add some blank space between the layout bounds/viewpo
 }
 ```
 
-### Layout orientation
+### How to change orientation
 
 Diagram provides support to customize the `Orientation` of layout. You can set the desired orientation using `LayoutOrientation`.
 
@@ -280,7 +280,7 @@ Layout provides support to arrange the nodes with reference to the position of a
 
 ```
 
-## Refresh layout
+## How to refresh layout
 
 Diagram allows to refresh the layout at runtime by using the [DoLayout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DoLayout) method. Use the following code example to refresh the layout.
 

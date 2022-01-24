@@ -23,7 +23,8 @@ There are several commands available in the diagram as follows.
 
 Alignment commands enable you to align the selected or defined objects such as nodes and connectors with respect to the selection boundary. Following are the [AlignmentOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AlignmentOptions.html) in [SetAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetAlign_Syncfusion_Blazor_Diagram_AlignmentOptions_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__Syncfusion_Blazor_Diagram_AlignmentMode_) commands which shows how to use align methods in the diagram.
 
-### Align left
+### How to align the selcted objects to left
+
 The following code example illustrates how to align all the selected objects to the left side of the selection boundary.
 
 ```cshtml
@@ -81,7 +82,7 @@ The following code example illustrates how to align all the selected objects to 
 }
 ```
 
-### Align Right
+### How to align the selcted objects to right
 
 The following code example illustrates how to align all the selected objects at the right side of the selection boundary.
 
@@ -140,7 +141,8 @@ The following code example illustrates how to align all the selected objects at 
 }
 ```
 
-### Align Top
+### How to align the selcted objects to top
+
 The following code example illustrates how to align all the selected objects at the top of the selection boundary.
 
 ```cshtml
@@ -198,7 +200,8 @@ The following code example illustrates how to align all the selected objects at 
 }
 ```
 
-### Align bottom
+### How to align the selcted objects to bottom
+
 The following code example illustrates how to align all the selected objects at the bottom of the selection boundary.
 
 ```cshtml
@@ -256,7 +259,8 @@ The following code example illustrates how to align all the selected objects at 
 }
 ```
 
-### Align middle
+### How to align the selcted objects to middle
+
 The following code example illustrates how to align all the selected objects at the middle of the selection boundary.
 
 ```cshtml
@@ -314,7 +318,7 @@ The following code example illustrates how to align all the selected objects at 
 }
 ```
 
-### Align center
+### How to align the selcted objects to center
 
 The following code example illustrates how to align all the selected objects at the center of the selection boundary.
 
@@ -577,7 +581,7 @@ The following code example illustrates how to execute the size commands.
     }
 ```
 
-## Clipboard
+## Clipboard commands
 
 Clipboard commands are used to cut, copy, or paste the selected elements.
 
@@ -651,7 +655,7 @@ The following code illustrates how to execute the clipboard commands.
 }
 ```
 
-## Grouping
+## Grouping commands
 
 **Grouping commands** are used to group/ungroup the selected elements on the diagram. To group the elements, select the elements using select all command and group the selected elements using group command.
 
@@ -723,7 +727,7 @@ The following code illustrates how to execute the grouping commands.
 }
 ```
 
-## Zoom
+## Zoom command
 
 The [Zoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Zoom_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) command is used to zoom-in and zoom-out the diagram view.
 
@@ -848,7 +852,7 @@ The [Execute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Co
 
 The [CanExecute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html#Syncfusion_Blazor_Diagram_CommandManager_CanExecute) event determines whether this command can execute in its current state.
 
-### Custom command
+### How to create custom command
 
 To define a custom command, specify the following properties:
 * [Gesture](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyboardCommand.html#Syncfusion_Blazor_Diagram_KeyboardCommand_Gesture): A combination of [Keys](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyGesture.html#Syncfusion_Blazor_Diagram_KeyGesture_Key) and [Modifiers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyGesture.html#Syncfusion_Blazor_Diagram_KeyGesture_Modifiers).

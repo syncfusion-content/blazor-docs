@@ -13,7 +13,7 @@ documentation: ug
 
 Diagram provides some events support for node that triggers when interacting with the node.
 
-## Selection change
+## Selection change event
 
 * While selecting the diagram elements, the following events can be used to do the customization.
 * When selecting or unselecting the diagram elements, the following events are getting triggered. 
@@ -76,7 +76,7 @@ The following code example explains how to get the selection change event in the
 }
 ```
 
-## Position change
+## Position change event
 
 * While dragging the node or connector through interaction, the following events can be used to do the customization.
 * When dragging the node, the following events are getting triggered. 
@@ -137,7 +137,8 @@ The following code example explains how to get the selection change event in the
 }
 ```
 
-## Size change
+## Size change event
+
 * While resizing the node during the interaction, the following events can be used to do the customization.
 * When resizing the node, the following events are getting triggered. 
 
@@ -196,7 +197,7 @@ The following code example explains how to get the selection change event in the
 }
 ```
 
-## Rotate change
+## Rotate change event
 
 * While rotating the node during the interaction, the following events can be used to do the customization.
 * When rotating the node, the following events are getting triggered. 
@@ -256,7 +257,7 @@ The following code example explains how to get the selection change event in the
 }
 ```
 
-## Constraints
+## How to enable or disable certain behaviors of node
 
 The Constraints property of node allows you to enable or disable certain features. For more information about node constraints, refer to the [Node Constraints](../constraints).
 

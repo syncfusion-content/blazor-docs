@@ -87,7 +87,7 @@ The hierarchical tree layout arranges nodes in a tree-like structure, where the 
 
 ## Customizing the properties
 
-### Orientation
+### How to change orientation 
 
 You can use [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) property of the Layout to change the orientation at runtime. The following code shows how to change the layout.
 
@@ -106,7 +106,7 @@ public void UpdateOrientation()
 }
 ```
 
-### Spacing
+### How to update spacing between nodes
 
 You can change the horizontal and vertical spacing for the diagram layout by using the [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing) properties of the layout.
 
@@ -129,7 +129,7 @@ public void UpdateSpacing()
 }
 ```
 
-### Margin
+### How to update margin
 
 You can also change the margin values for the diagram layout by using the [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Margin) property.
 
