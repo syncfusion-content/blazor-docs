@@ -1,126 +1,140 @@
 ---
 layout: post
-title: WebAssembly Gantt Chart in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about WebAssembly Gantt Chart in Syncfusion Blazor Gantt Chart component and more.
+title: Getting Started with Blazor Gantt Chart in WebAssembly | Syncfusion
+description: Checkout and learn about getting started with Blazor WebAssembly and Blazor Gantt Chart Component in Visual Studio and much more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# WebAssembly Gantt Chart in Blazor Gantt Chart Component
+# Blazor Gantt Chart Component in WebAssembly App using Visual Studio
 
-This article provides a step-by-step instructions to configure Syncfusion [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
-
-> Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
+This article provides a step-by-step instructions for building Blazor WebAssembly App with Blazor Gantt Chart component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
-* [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
-* [.NET Core SDK 3.1.3](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-> .NET Core SDK 3.1.3 requires Visual Studio 2019 16.6 or later. Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it requires Visual Studio 16.7 Preview 1 or later.
+## Create a Blazor WebAssembly App in Visual Studio
 
-## Create a Blazor WebAssembly project in Visual Studio 2019
+You can create **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-1. Install the essential project templates in the Visual Studio 2019 by running the following command line in the command prompt.
+* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-    ```bash
-    dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
-    ```
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/vs2019-extensions/create-project)
 
-2. Choose **Create a new project** from the Visual Studio dashboard.
+## Install Syncfusion Blazor Gantt NuGet in the App
 
-    ![Creating New Project in Blazor ASPNETCore](../images/blazor-gantt-chart-create-new-project.png)
+Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
-3. Select **Blazor App** from the template, and then click **Next** button.
+To add Blazor Gantt Chart component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Gantt](https://www.nuget.org/packages/Syncfusion.Blazor.Gantt) and then install it.
 
-    ![Blazor Application Template](../images/blazor-template.png)
+## Register Syncfusion Blazor Service
 
-4. Now, the project configuration window will popup. Click **Create** button to create a new project with the default project configuration.
+Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
-    ![Blazor ASP.NET Core Project Configuration](../images/blazor-aspnet-core-project-configuration.png)
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
-5. Choose **Blazor WebAssembly App** from the dashboard, and then click **Create** button to create a new Blazor WebAssembly application.
+@using Syncfusion.Blazor
 
-    ![Blazor Wasm Template](../images/blazor-client-template.png)
+{% endhighlight %}
+{% endtabs %}
 
-> ASP.NET Core 3.1 available in Visual Studio 2019 version.
+Now, Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` to load the scripts externally in the [next steps](#add-script-reference).
 
-## Importing Syncfusion Blazor component in the application
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 11" %}
 
-1. Install **Syncfusion.Blazor** NuGet package to the newly created application by using the `NuGet Package Manager`. Right-click the project and select Manage NuGet Packages.
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Syncfusion.Blazor;
 
-    ![Selecting NuGet Package Manager in Blazor](../images/blazor-nuget-package-manager.png)
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
 
-2. Search Syncfusion.Blazor keyword in the Browser tab and install Syncfusion.Blazor NuGet package in the application.
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-    ![Selecting Blazor NuGet Package](../images/blazor-nuget-selection.png)
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+await builder.Build().RunAsync();
+....
 
-3. The Syncfusion Blazor package will be installed in the project, once the installation process is completed.
+{% endhighlight %}
 
-4. Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.Gantt` packages.
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
 
-    ```cshtml
-    @using Syncfusion.Blazor.Gantt
-    ```
+using Syncfusion.Blazor;
 
-5. Open the **~/Program.cs** file and register the Syncfusion Blazor Service.
-
-    ```c#
-    using Syncfusion.Blazor;
-
-    namespace WebApplication1
+namespace BlazorApplication
+{
+    public class Program
     {
-        public class Program
+        public static async Task Main(string[] args)
         {
-            public static async Task Main(string[] args)
-            {
-                ....
-                ....
-                builder.Services.AddSyncfusionBlazor();
-                await builder.Build().RunAsync();
-            }
+            ....
+            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+            await builder.Build().RunAsync();
         }
     }
-    ```
+}
 
-6. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/wwwroot/index.html** page.
+{% endhighlight %}
+{% endtabs %}
 
-    ```html
-    <head>
-        ....
-        ....
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-    </head>
-    ```
+## Add Style Sheet
 
-    > The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.2.44/styles/bootstrap4.css).
-    > To use manual scripts other than the scripts from NuGet package, register the Blazor service in **~/Program.cs** file by using true parameter as mentioned below.
+Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://sfblazor.azurewebsites.net/staging/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
 
-     ```csharp
-    using Syncfusion.Blazor;
+To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred inside the `<head>` of **wwwroot/index.html** file in client web app.
 
-     namespace WebApplication1
-     {
-         public class Program
-       {
-             public static async Task Main(string[] args)
-             {
-                ....
-                ....
-                builder.Services.AddSyncfusionBlazor(true);
-                await builder.Build.RunAsync();
-             }
-         }
-     }
-     ```
+{% tabs %}
+{% highlight cshtml tabtitle="~/index.html" %}
 
-## Adding Gantt Chart component to the application
+<head>
+    ...
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
 
-Now, add the Syncfusion [Blazor Gantt Chart component](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) in any web page (razor) in the `Pages` folder. For example, the Gantt Chart component is added in the **~/Pages/Index.razor** page.
+{% endhighlight %}
+{% endtabs %}
 
-```cshtml
+## Add Script Reference
+
+Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://sfblazor.azurewebsites.net/staging/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` of **wwwroot/index.html** file in client web app.
+
+{% tabs %}
+{% highlight cshtml tabtitle="~/index.html" hl_lines="4" %}
+
+<head>
+    ...
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="https://cdn.syncfusion.com/blazor/19.4.38/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application. Generate scripts and theme assets using [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by selecting the components you were using in the application.
+
+## Add Blazor Gantt Chart component
+
+* Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Gantt** namespace.
+
+{% tabs %}
+{% highlight razor tabtitle="~/Imports.razor" %}
+
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Gantt
+
+{% endhighlight %}
+{% endtabs %}
+
+* Now, add the Syncfusion Gantt Chart component in razor file. Here, the Gantt Chart component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+
+{% tabs %}
+{% highlight razor %}
+
 <SfGantt TValue="TaskData">
 </SfGantt>
 
@@ -136,14 +150,17 @@ Now, add the Syncfusion [Blazor Gantt Chart component](https://www.syncfusion.co
         public List<TaskData> SubTasks { get; set; }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Binding Gantt Chart with Data
 
 Bind data with the Gantt Chart component by using the `DataSource` property. It accepts an list objects or the DataManager instance.
 
-```cshtml
-@using Syncfusion.Blazor.Gantt
+{% tabs %}
+{% highlight razor %}
+
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
 </SfGantt>
 
@@ -193,14 +210,17 @@ public static List <TaskData> GetTaskCollection() {
     return Tasks;
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Mapping Task Fields
 
-The data source fields that are required to render the tasks are mapped to the Gantt Chart component using the `GanttTaskFields` property.
+The data source fields that are required to render the tasks are mapped to the Gantt Chart component using the [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html?_ga=2.236537025.1141213009.1642998031-1223836246.1561029397) property.
 
-```cshtml
-@using Syncfusion.Blazor.Gantt
+{% tabs %}
+{% highlight razor %}
+
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
     </GanttTaskFields>
@@ -253,20 +273,25 @@ public static List <TaskData> GetTaskCollection() {
     return Tasks;
 }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Defining Columns
 
 Gantt Chart has an option to define columns as an array. You can customize the Gantt Chart columns using the following properties:
 
-* `Field`: Maps the data source fields to the columns.
-* `HeaderText`: Changes the title of columns.
-* `TextAlign`: Changes the alignment of columns. By default, columns will be left aligned. To change the columns to right align, set `TextAlign` to right.
-* `Format`: Formats the number and date values to standard or custom formats. Here, it is defined for the conversion of numeric values to currency.
+* [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Field) : Maps the data source fields to the columns.
+* [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_HeaderText) : Changes the title of columns.
+* [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_TextAlign) : Changes the alignment of columns. By default, columns will be left aligned. To change the columns to right align, set `TextAlign` to right.
+* [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Format) : Formats the number and date values to standard or custom formats. Here, it is defined for the conversion of numeric values to currency.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
+
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
     </GanttTaskFields>
@@ -327,16 +352,19 @@ Gantt Chart has an option to define columns as an array. You can customize the G
     return Tasks;
 }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 For further details regarding Columns, Please refer [here](https://blazor.syncfusion.com/documentation/gantt-chart/columns/)
 
 ## Enable Editing
 
-The editing feature enables you to edit the tasks in the Gantt Chart component. It can be enabled by using the `EditSettings.AllowEditing` and `EditSettings.AllowTaskbarEditing` properties.
+The editing feature enables you to edit the tasks in the Gantt Chart component. It can be enabled by using the [EditSettings.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowEditing) and [EditSettings.AllowTaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowTaskbarEditing) properties.
 
-```cshtml
-@using Syncfusion.Blazor.Gantt
+{% tabs %}
+{% highlight razor %}
+
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
     </GanttTaskFields>
@@ -390,7 +418,9 @@ The editing feature enables you to edit the tasks in the Gantt Chart component. 
     return Tasks;
 }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 > When the edit mode is set to `Auto`, you can change the cells to editable mode by double-clicking anywhere at the Tree Grid and edit the task details in the edit dialog by double-clicking anywhere at the chart.
 
@@ -398,10 +428,11 @@ You can find the full information regarding Editing from [here](https://blazor.s
 
 ## Enable Filtering
 
-The filtering feature enables you to view the reduced amount of records based on filter criteria. Gantt Chart provides the menu filtering support for each column. It can be enabled by setting the `AllowFiltering` property to `true`. Filtering feature can also be customized using the `FilterSettings` property.
+The filtering feature enables you to view the reduced amount of records based on filter criteria. Gantt Chart provides the menu filtering support for each column. It can be enabled by setting the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFiltering) property to `true`. Filtering feature can also be customized using the [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_FilterSettings) property.
 
-```cshtml
-@using Syncfusion.Blazor.Gantt
+{% tabs %}
+{% highlight razor %}
+
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowFiltering="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
     </GanttTaskFields>
@@ -455,15 +486,19 @@ The filtering feature enables you to view the reduced amount of records based on
         return Tasks;
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 You can find the full information regarding Filtering from [here](https://blazor.syncfusion.com/documentation/gantt-chart/filtering/)
+
 ## Enable Sorting
 
-The sorting feature enables you to order the records. It can be enabled by setting the `AllowSorting` property to `true`. The sorting feature can be customized using the `SortSettings` property.
+The sorting feature enables you to order the records. It can be enabled by setting the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowSorting) property to `true`. The sorting feature can be customized using the [SortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SortSettings) property.
 
-```cshtml
-@using Syncfusion.Blazor.Gantt
+{% tabs %}
+{% highlight razor %}
+
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowSorting="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
     </GanttTaskFields>
@@ -516,7 +551,9 @@ The sorting feature enables you to order the records. It can be enabled by setti
     return Tasks;
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 You can find the full information regarding Sorting from [here](https://blazor.syncfusion.com/documentation/gantt-chart/sorting/)
 
@@ -531,8 +568,9 @@ Predecessor or task dependency in the Gantt Chart component is used to depict th
 * Finish to Finish (FF): You cannot finish a task until the dependent task completes.
 You can show the relationship in tasks by using the `Dependency` property as shown in the following code example.
 
-```cshtml
-@using Syncfusion.Blazor.Gantt
+{% tabs %}
+{% highlight razor %}
+
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks" Dependency="Predecessor">
     </GanttTaskFields>
@@ -584,14 +622,13 @@ You can show the relationship in tasks by using the `Dependency` property as sho
             })
         }
     };
-
         return Tasks;
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 You can find the full information regarding Predecessors from [here](https://blazor.syncfusion.com/documentation/gantt-chart/task-dependencies)
 
-The following image represents Gantt with Editing, Sorting, Filtering and Predecessors.
 ![Blazor Gantt Chart](../images/blazor-gantt-chart.gif)
