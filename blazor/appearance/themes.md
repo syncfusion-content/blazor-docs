@@ -44,9 +44,8 @@ Using the below approaches the themes can be referenced in the Blazor applicatio
 3. [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) - Used to generate resources only for the selected (used) components. 
 4. [Theme Studio](https://blazor.syncfusion.com/documentation/appearance/theme-studio) - Used to customize and generate themes only for the selected (used) components. 
 5. [NPM packages](#npm-packages) - Used to customize the existing themes and bundle stylesheet's in an application.
-6. [LibMan](#libman) - Used to customize the existing themes and bundle stylesheet's in an application.
 
-Instead of using [Static Web assets](#static-web-assets) or a [CDN reference](#cdn-reference), you can reference the style sheet into your projects to customize the theme or bundle it with the other style sheets using [NPM packages](#npm-packages) or [LibMan](#libman). 
+Instead of using [Static Web assets](#static-web-assets) or a [CDN reference](#cdn-reference), you can reference the style sheet into your projects to customize the theme or bundle it with the other style sheets using [NPM packages](#npm-packages). 
 
 ## Static Web Assets
 
@@ -148,59 +147,6 @@ You can add the theme for the Blazor applications through **npm packages** using
 * The SCSS file has been compiled to the CSS file. Then, add this CSS file to the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
 * Run the application and see the fabric themes from installed npm packages was applied.
-
-## LibMan
-
-Library Manager (LibMan) is a client-side library acquisition tool that is simple to use. LibMan is a program that downloads popular libraries and frameworks from a file system or a content delivery network (CDN).
-
-LibMan offers the following advantages,
-
-1. Only the library files you need are downloaded.
-2. Additional tooling, such as Node.js, npm, and WebPack, isn't necessary to acquire a subset of files in a library.
-3. Files can be placed in a specific location without resorting to build tasks or manual file copying.
-
-In the server application root, add the **lib man.json** file with the following content:
-
-```json
-{
-  "version": "1.0",
-  "defaultProvider": "cdnjs",
-  "libraries": [
-    {
-      "library": "@progress/Syncfusion-Blazor-bootstrap@latest",
-      "destination": "wwwroot/css/Syncfusion-Blazor/bootstrap",
-      "files": [
-        "dist/all.css"
-      ]
-    },
-    {
-      "library": "@progress/Syncfusion-Blazor-fabric@latest",
-      "destination": "wwwroot/css/Syncfusion-Blazor/fabric",
-      "files": [
-        "dist/all.css"
-      ]
-    },
-    {
-      "library": "@progress/Syncfusion-Blazor-material@latest",
-      "destination": "wwwroot/css/Syncfusion-Blazor/material",
-      "files": [
-        "dist/all.css"
-      ]
-    }
-  ]
-}
-```
-
-In the client Blazor application, go to the **wwwroot/index.html** file and replace the CDN link with the following one. For a server-side Blazor project, do that in the **~/Pages/_Host.cshtml** file.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link href="/css/Syncfusion-Blazor/fabric/dist/all.css" rel="stylesheet" />
-</head>
-</html>
-```
 
 ## Change theme dynamically
 
