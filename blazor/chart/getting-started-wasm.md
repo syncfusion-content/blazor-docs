@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Stared with Blazor Charts in WebAssembly | Syncfusion
-description: Learn here all about Getting Started with Syncfusion Blazor Charts in Blazor WebAssembly (WASM) App using Visual Studio and more.
+title: Getting Stared with Blazor Chart Component | Syncfusion
+description: Checkout and learn about getting started with Syncfusion Blazor Charts in Blazor WebAssembly (WASM) App using Visual Studio and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,77 +9,65 @@ documentation: ug
 
 <!-- markdownlint-disable MD040 -->
 
-# Blazor Charts Component in WebAssembly App using Visual Studio
+# Getting Started with Blazor Chart Component in Blazor WASM App
 
-This article provides a step-by-step instructions to configure Syncfusion Blazor Chart in a simple Blazor WebAssembly application using Visual Studio 2019.
+This section briefly explains about how to include [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component in your Blazor WebAssembly (WASM) App using Visual Studio.
 
-## Create a Blazor WebAssembly project in Visual Studio 2019
+## Prerequisites
 
-1. Choose **Create a new project** from the Visual Studio dashboard.
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-    ![Creating New Project in Blazor](images/getting-started/blazor-create-project.png)
+## Create a new Blazor App in Visual Studio
 
-2. Select **Blazor App** from the template and click **Next** button.
+You can create **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-    ![blazor Application Template](images/getting-started/blazor-application-template.png)
+* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-3. Now, the project configuration window will popup. Click **Create** button to create a new project with the default project configuration.
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/vs2019-extensions/create-project)
 
-    ![Blazor Project Configuration](images/getting-started/blazor-project-configuration.png)
+## Install Syncfusion Blazor Charts NuGet in the App
 
-4. Depending on the requirement, select **.NET Core 3.1 or higher** as the target framework.
+Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
-    ![Selecting Target Framework in Blazor Template](images/getting-started/blazor-select-template.png)
+To add Blazor Chart component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Charts](https://www.nuget.org/packages/Syncfusion.Blazor.Charts) and then install it.
 
-5. Choose **Blazor WebAssembly App** from the dashboard and click **Create** button to create a new Blazor WebAssembly application.
+## Register Syncfusion Blazor Service
 
-    ![Selecting Blazor WebAssembly App](images/getting-started/blazor-webassembly-app.png)
+Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
-## Importing Syncfusion Blazor component in the application
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
-1. Now, install **Syncfusion.Blazor** NuGet package to the newly created application by using the **NuGet Package Manager**. Right-click the project and select **Manage NuGet Packages**.
-
-    ![Blazor NuGet Explorer](images/getting-started/blazor-nuget-explorer.png)
-
-2. Search **Syncfusion.Blazor** keyword in the **Browser** tab and install Syncfusion.Blazor NuGet package in the application.
-
-    ![Select Blazor NuGet Package](images/getting-started/blazor-nuget-package-selection.png)
-
-3. You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/wwwroot/index.html** page. For Internet Explorer 11, kindly refer the polyfills.
-
-    ```html
-    <head>
-        ....
-        ....
-        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-    </head>
-    ```
-
-4. Now add the lodash script to the **HEAD** element of the **~/wwwroot/index.html** page, since we have used it in our [chart interactive]([https://www.syncfusion.com/blazor-components/blazor-charts/interactive-chart]) features. The absence of the script will result in console errors.
-
-    ```html
-    <head>
-        ....
-        ....
-        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
-    </head>
-    ```
-
-## Adding component package to the application
-
-Open `**~/_Imports.razor` file and include the `Syncfusion.Blazor.**` namespaces.
-
-```cshtml
 @using Syncfusion.Blazor
-@using Syncfusion.Blazor.Charts
-```
 
-## Add SyncfusionBlazor service in Startup.cs
+{% endhighlight %}
+{% endtabs %}
 
-Open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+Now, register the Syncfusion Blazor Service in the Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
-```csharp
+* Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
+
+{% tabs %}
+{% highlight C# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 11" %}
+
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Syncfusion.Blazor;
+
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
+
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+await builder.Build().RunAsync();
+....
+
+{% endhighlight %}
+
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
+
 using Syncfusion.Blazor;
 
 namespace WebApplication1
@@ -89,27 +77,79 @@ namespace WebApplication1
         public static async Task Main(string[] args)
         {
             ....
-            ....
-            builder.Services.AddSyncfusionBlazor();
+            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
             await builder.Build().RunAsync();
         }
     }
 }
-```
 
-## Add Chart Component
+{% endhighlight %}
+{% endtabs %}
 
-To initialize the chart component add the below code to your **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
+## Add Style Sheet
 
-```cshtml
-@page "/"
+Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://sfblazor.azurewebsites.net/staging/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
+
+To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
+
+Refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
+
+{% tabs %}
+{% highlight cshtml tabtitle="~/index.html" %}
+
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add Script Reference
+
+Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://sfblazor.azurewebsites.net/staging/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows,
+
+Refer script in the `<head>` of the **~/index.html** file.
+
+{% tabs %}
+{% highlight html tabtitle="~/index.html" hl_lines="4" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
+
+## Add Blazor Chart Component
+
+* Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Charts** namespace.
+
+{% tabs %}
+{% highlight razor tabtitle="~/Imports.razor" %}
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Charts
+
+{% endhighlight %}
+{% endtabs %}
+
+* Now, add the Syncfusion Chart component in razor file. Here, the Chart component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+
+{% tabs %}
+{% highlight razor %}
 
 <SfChart>
 
 </SfChart>
-```
 
-On successful compilation of your application, the Syncfusion Blazor Chart component will render in the web browser.
+{% endhighlight %}
+{% endtabs %}
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Chart` component will be rendered in the default web browser.
 
 ![Blazor Chart](images/getting-started/blazor-chart.png)
 
@@ -117,7 +157,9 @@ On successful compilation of your application, the Syncfusion Blazor Chart compo
 
 To bind data for the chart component, you can assign a IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property. It can also be provided as an instance of the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
-```csharp
+{% tabs %}
+{% highlight razor %}
+
 public class SalesInfo
 {
     public string Month { get; set; }
@@ -134,21 +176,22 @@ public List<SalesInfo> Sales = new List<SalesInfo>
     new SalesInfo { Month = "Jun", SalesValue = 32 },
     new SalesInfo { Month = "Jul", SalesValue = 35 }
 };
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Now, map the data fields  `Month` and `Sales` to the series [XName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [YName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) properties, then set the data to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property, and the [chart type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to **Column** because we will be viewing the data in a column chart.
 
-```cshtml
-@page "/"
-@using Syncfusion.Blazor.Charts
+{% tabs %}
+{% highlight razor %}
 
-    <SfChart>
-        <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-        <ChartSeriesCollection>
-            <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-            </ChartSeries>
-        </ChartSeriesCollection>
-    </SfChart>
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
 
 @code {
     public class SalesInfo
@@ -168,7 +211,9 @@ Now, map the data fields  `Month` and `Sales` to the series [XName](https://help
         new SalesInfo { Month = "Jul", SalesValue = 35 }
     };
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Blazor Column Chart](images/getting-started/blazor-chart-column.png)
 
@@ -176,38 +221,20 @@ Now, map the data fields  `Month` and `Sales` to the series [XName](https://help
 
 Using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Title) property, you can add a title to the chart and the axes to provide the user with quick information about the data plotted in the chart.
 
-```cshtml
-@page "/"
-@using Syncfusion.Blazor.Charts
+{% tabs %}
+{% highlight razor %}
 
-    <SfChart Title="Sales Analysis">
-        <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-        <ChartPrimaryYAxis Title="Sales in Dollar"></ChartPrimaryYAxis>
-        <ChartSeriesCollection>
-            <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-            </ChartSeries>
-        </ChartSeriesCollection>
-    </SfChart>
+<SfChart Title="Sales Analysis">
+    <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryYAxis Title="Sales in Dollar"></ChartPrimaryYAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
 
-@code {
-    public class SalesInfo
-    {
-        public string Month { get; set;}
-        public double SalesValue { get; set;}
-    }
-
-    public List<SalesInfo> Sales = new List<SalesInfo>
-    {
-        new SalesInfo { Month = "Jan", SalesValue = 35 },
-        new SalesInfo { Month = "Feb", SalesValue = 28 },
-        new SalesInfo { Month = "Mar", SalesValue = 34 },
-        new SalesInfo { Month = "Apr", SalesValue = 32 },
-        new SalesInfo { Month = "May", SalesValue = 40 },
-        new SalesInfo { Month = "Jun", SalesValue = 32 },
-        new SalesInfo { Month = "Jul", SalesValue = 35 }
-    };
-}
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Blazor Column Chart with Title](images/getting-started/blazor-chart-title.png)
 
@@ -215,9 +242,8 @@ Using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 You can add data labels to improve the readability of the chart. This can be achieved by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Visible) property to **true** in the [ChartDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html).
 
-```cshtml
-@page "/"
-@using Syncfusion.Blazor.Charts
+{% tabs %}
+{% highlight razor %}
 
 <SfChart Title="Sales Analysis">
     <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
@@ -231,25 +257,8 @@ You can add data labels to improve the readability of the chart. This can be ach
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
-    public class SalesInfo
-    {
-        public string Month { get; set; }
-        public double SalesValue { get; set; }
-    }
-
-    public List<SalesInfo> Sales = new List<SalesInfo>
-    {
-        new SalesInfo { Month = "Jan", SalesValue = 35 },
-        new SalesInfo { Month = "Feb", SalesValue = 28 },
-        new SalesInfo { Month = "Mar", SalesValue = 34 },
-        new SalesInfo { Month = "Apr", SalesValue = 32 },
-        new SalesInfo { Month = "May", SalesValue = 40 },
-        new SalesInfo { Month = "Jun", SalesValue = 32 },
-        new SalesInfo { Month = "Jul", SalesValue = 35 }
-    };
-}
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Blazor Column Chart with Data Label](images/getting-started/blazor-chart-data-label.png)
 
@@ -257,9 +266,8 @@ You can add data labels to improve the readability of the chart. This can be ach
 
 When space constraints prevent you from displaying information using data labels, the tooltip comes in handy. The tooltip can be enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Enable) property in [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) to **true**.
 
-```cshtml
-@page "/"
-@using Syncfusion.Blazor.Charts
+{% tabs %}
+{% highlight razor %}
 
 <SfChart Title="Sales Analysis">
     <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
@@ -271,25 +279,8 @@ When space constraints prevent you from displaying information using data labels
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
-    public class SalesInfo
-    {
-        public string Month { get; set; }
-        public double SalesValue { get; set; }
-    }
-
-    public List<SalesInfo> Sales = new List<SalesInfo>
-    {
-        new SalesInfo { Month = "Jan", SalesValue = 35 },
-        new SalesInfo { Month = "Feb", SalesValue = 28 },
-        new SalesInfo { Month = "Mar", SalesValue = 34 },
-        new SalesInfo { Month = "Apr", SalesValue = 32 },
-        new SalesInfo { Month = "May", SalesValue = 40 },
-        new SalesInfo { Month = "Jun", SalesValue = 32 },
-        new SalesInfo { Month = "Jul", SalesValue = 35 }
-    };
-}
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Blazor Column Chart with Tooltip](images/getting-started/blazor-chart-tooltip.png)
 
@@ -297,39 +288,21 @@ When space constraints prevent you from displaying information using data labels
 
 You can use legend for the chart by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Visible) property to **true** in [ChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html). The legend name can be changed by using the [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Name) property in the series.
 
-```cshtml
-@page "/"
-@using Syncfusion.Blazor.Charts
+{% tabs %}
+{% highlight razor %}
 
-    <SfChart Title="Sales Analysis">
-        <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-        <ChartPrimaryYAxis Title="Sales in Dollar"></ChartPrimaryYAxis>
-        <ChartLegendSettings Visible="true"></ChartLegendSettings>
-        <ChartSeriesCollection>
-            <ChartSeries DataSource="@Sales" Name="Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-            </ChartSeries>
-        </ChartSeriesCollection>
-    </SfChart>
+<SfChart Title="Sales Analysis">
+    <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryYAxis Title="Sales in Dollar"></ChartPrimaryYAxis>
+    <ChartLegendSettings Visible="true"></ChartLegendSettings>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@Sales" Name="Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
 
-@code {
-    public class SalesInfo
-    {
-        public string Month { get; set;}
-        public double SalesValue { get; set;}
-    }
-
-    public List<SalesInfo> Sales = new List<SalesInfo>
-    {
-        new SalesInfo { Month = "Jan", SalesValue = 35 },
-        new SalesInfo { Month = "Feb", SalesValue = 28 },
-        new SalesInfo { Month = "Mar", SalesValue = 34 },
-        new SalesInfo { Month = "Apr", SalesValue = 32 },
-        new SalesInfo { Month = "May", SalesValue = 40 },
-        new SalesInfo { Month = "Jun", SalesValue = 32 },
-        new SalesInfo { Month = "Jul", SalesValue = 35 }
-    };
-}
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Blazor Column Chart with Legend](images/getting-started/blazor-chart-legend.png)
 
