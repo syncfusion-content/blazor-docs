@@ -400,7 +400,7 @@ Specifies the items to be rendered in quick toolbar based on the target elements
 
 ## Retrieve the formatted content
 
-To retrieve the editor contents, use the `Value` property of Rich Text Editor. To fetch the Rich Text Editor's text content, use `GetText` method of Rich Text Editor.
+To retrieve the editor contents, use the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) property of Rich Text Editor. To fetch the Rich Text Editor's text content, use `GetText` method of Rich Text Editor.
 
 {% tabs %}
 {% highlight razor %}

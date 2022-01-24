@@ -7,7 +7,7 @@ control: MultiSelect DropDown
 documentation: ug
 ---
 
-# Getting Started with Blazor MultiSelect Dropdown Component
+# Getting Started with Blazor MultiSelect DropDown Component
 
 This section briefly explains about how to include [Blazor MultiSelect DropDown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
