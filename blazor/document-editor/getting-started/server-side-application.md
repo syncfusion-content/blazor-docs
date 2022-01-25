@@ -1,107 +1,217 @@
 ---
 layout: post
-title: Getting Stared with Blazor DocumentEditor in Server Side | Syncfusion
-description: Learn here all about Getting Started with Syncfusion Blazor DocumentEditor in Blazor Server Side App using Visual Studio and more.
+title: Getting Stared with Blazor DocumentEditor Component | Syncfusion
+description: Checkout and learn about getting started with Blazor DocumentEditor component in Blazor Server App using Visual Studio and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# Blazor DocumentEditor Component in Server Side App
+# Getting Started with Blazor DocumentEditor Component in Blazor Server
 
-This article provides the step-by-step instructions to integrate the Word processor in Blazor server app using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
+This section briefly explains about how to include [Blazor DocumentEditor](https://www.syncfusion.com/blazor-components/blazor-word-processor) component in your Blazor Server App using Visual Studio.
 
-Steps to get started with Word processor component for Blazor:
+## Prerequisites
 
-1. Select **Create a new project** from the Visual Studio dashboard.
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-    ![Creating New Project in Blazor](../images/blazor-create-new-project.png)
+## Create a new Blazor App in Visual Studio
 
-2. Select **Blazor App** from the template and click the **Next** button.
+You can create **Blazor Server App** using Visual Studio in one of the following ways,
 
-    ![Creating Blazor Application](../images/blazor-template.png)
+* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-3. In the project configuration window, click the **Create** button to create a new project with the default project configuration.
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/vs2019-extensions/create-project)
 
-    ![Blazor Project Configuration](../images/blazor-project-configuration.png)
+## Install Syncfusion Blazor WordProcessor NuGet in the App
 
-4. Select **Blazor Server App** from the dashboard and click the **Create** button to create a new Blazor Server application. Make sure that **.NET Core** and **ASP.NET Core 3.1** are selected at the top.
+Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
-    ![Select Blazor Server Application Framework](../images/blazor-server-template.png)
+To add Blazor DocumentEditor component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor) and then install it.
 
-5. Install the [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor/) NuGet package to the newly created application by using the **NuGet Package Manager**. Right-click the project and select Manage NuGet Packages.
+## Register Syncfusion Blazor Service
 
-6. Search **Syncfusion.Blazor.WordProcessor** keyword in the Browse tab and install [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor/) NuGet package in the application.
+Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
-    ![Searching Blazor DocumentEditor NuGet Package](../images/blazor-document-editor-nuget.png)
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
-7. Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor.DocumentEditor`.
+@using Syncfusion.Blazor
 
-    ```cshtml
-    @using Syncfusion.Blazor.DocumentEditor
-    ```
+{% endhighlight %}
+{% endtabs %}
 
-8. Add the Syncfusion Word processor component (a.k.a DocumentEditor) to any webpages (razor) in the `Pages` folder. For example, the DocumentEditorContainer component is added to the **~/Pages/Index.razor** page.
+Now, register the Syncfusion Blazor Service in the Blazor Server App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
-    ```cshtml
-    <SfDocumentEditorContainer EnableToolbar=true></SfDocumentEditorContainer>
-    ```
+* For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
-9. Add the SyncfusionBlazor service in `ConfigureServices` method of **Startup.cs** file.
+* For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 
-    ```csharp
-    public void ConfigureServices(IServiceCollection services) {
-        .......
-        .......
-        services.AddSyncfusionBlazor();
-    }
-    ```
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 10" %}
 
-10. Add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
+using Syncfusion.Blazor;
 
-    ```html
-    <head>
-        ....
-        ....
-        <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material.css" rel="stylesheet" />
-    </head>
-    ```
+var builder = WebApplication.CreateBuilder(args);
 
-11. Run the application. The Word processor component will be rendered in the web browser.
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
 
-    ![Blazor DocumentEditor](../images/blazor-document-editor.png)
+var app = builder.Build();
+....
 
-12. To load an existing document during control initialization, use the following code example, which opens a Word document. Convert it to SFDT and load in the editor.
+{% endhighlight %}
 
-    ```cshtml
-    @using System.IO;
-    @using Syncfusion.Blazor.DocumentEditor;
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="1 12" %}
 
-    <SfDocumentEditorContainer @ref="container" EnableToolbar=true>
-        <DocumentEditorContainerEvents Created="OnCreated"></DocumentEditorContainerEvents>
-    </SfDocumentEditorContainer>
+using Syncfusion.Blazor;
 
-    @code {
-        SfDocumentEditorContainer container;
-
-        public void OnCreated(object args)
+namespace BlazorApplication
+{
+    public class Startup
+    {
+        ...
+        public void ConfigureServices(IServiceCollection services)
         {
-            string filePath = "wwwroot/data/GettingStarted.docx";
-            using (FileStream fileStream = new FileStream(filePath, System.IO.FileMode.Open, System.IO.FileAccess.Read))
-            {
-                WordDocument document = WordDocument.Load(fileStream, ImportFormatType.Docx);
-                string json = Newtonsoft.Json.JsonConvert.SerializeObject(document);
-                document.Dispose();
-                //To observe the memory go down, null out the reference of document variable.
-                document = null;
-                SfDocumentEditor editor = container.DocumentEditor;
-                editor.Open(json);
-                //To observe the memory go down, null out the reference of json variable.
-                json = null;
-            }
+            services.AddRazorPages();
+            services.AddServerSideBlazor();
+            services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+        }
+        ...
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add Style Sheet
+
+Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://sfblazor.azurewebsites.net/staging/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
+
+To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
+
+* For .NET 6 app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+
+* For .NET 5 and .NET 3.X app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
+
+{% tabs %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
+
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+
+{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" %}
+
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add Script Reference
+
+Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://sfblazor.azurewebsites.net/staging/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows,
+
+* For **.NET 6** app, Refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+
+* For **.NET 5 and .NET 3.X** app, Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
+
+{% tabs %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+
+{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="4" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
+
+## Add Blazor DocumentEditor Component
+
+* Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.DocumentEditor** namespace.
+
+{% tabs %}
+{% highlight razor tabtitle="~/Imports.razor" %}
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.DocumentEditor
+
+{% endhighlight %}
+{% endtabs %}
+
+* Now, add the Syncfusion DocumentEditor component in razor file. Here, the DocumentEditor component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+
+{% tabs %}
+{% highlight razor %}
+
+<SfDocumentEditorContainer EnableToolbar=true></SfDocumentEditorContainer>
+
+{% endhighlight %}
+{% endtabs %}
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor DocumentEditor` component will be rendered in the default web browser.
+
+![Blazor DocumentEditor](../images/blazor-document-editor.png)
+
+## Load existing document
+
+To load an existing document during control initialization, use the following code example, which opens a Word document. Convert it to SFDT and load in the editor.
+
+{% tabs %}
+{% highlight razor %}
+
+@using System.IO;
+@using Syncfusion.Blazor.DocumentEditor;
+
+<SfDocumentEditorContainer @ref="container" EnableToolbar=true>
+    <DocumentEditorContainerEvents Created="OnCreated"></DocumentEditorContainerEvents>
+</SfDocumentEditorContainer>
+
+@code {
+    SfDocumentEditorContainer container;
+
+    public void OnCreated(object args)
+    {
+        string filePath = "wwwroot/data/GettingStarted.docx";
+        using (FileStream fileStream = new FileStream(filePath, System.IO.FileMode.Open, System.IO.FileAccess.Read))
+        {
+            WordDocument document = WordDocument.Load(fileStream, ImportFormatType.Docx);
+            string json = Newtonsoft.Json.JsonConvert.SerializeObject(document);
+            document.Dispose();
+            //To observe the memory go down, null out the reference of document variable.
+            document = null;
+            SfDocumentEditor editor = container.DocumentEditor;
+            editor.Open(json);
+            //To observe the memory go down, null out the reference of json variable.
+            json = null;
         }
     }
-    ```
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 > As per the discussion thread [#30064](https://github.com/dotnet/aspnetcore/issues/30064), please null out the reference of streams and other instances when they are no longer required. Using this approach you'll observe the memory go down and become stable.
 

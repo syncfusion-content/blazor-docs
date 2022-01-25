@@ -20,7 +20,7 @@ The following table represents the supported .NET and .NET Core versions by diff
 | [.NET Core 3.1.1](https://devblogs.microsoft.com/dotnet/net-core-january-2020/) | 17.4.0.46  and above |
 | [.NET Core 3.1](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-net-core-3-1/) | 17.4.0.39 and above |
 
-## Version Information
+## Syncfusion Version Information
 
 In a year, Syncfusion releases new volumes once every three months. Syncfusion Blazor components follows sequence-based identifiers to process software releases based on the **Major.Minor.Build.Revision** format to track all the release changes. It helps developers to keep track of the changes in every release. 
 
@@ -34,4 +34,4 @@ For example, if the release a package version is `19.3.0.43`, the version number
 ## See also
 
 * [Syncfusion Product release lifecycle](https://www.syncfusion.com/support/product-lifecycle/)
-* [.NET and .NET Core release lifecycle](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)
+* [.NET and .NET Core release lifecycle](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core)
