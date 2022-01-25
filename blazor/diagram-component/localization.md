@@ -120,12 +120,11 @@ The following example demonstrates how to enable **Localization** for Diagram in
     ```cshtml
    @using Syncfusion.Blazor.Diagram
 
-    <SfDiagramComponent @ref="diagram" Width="100%" Height="700px" Nodes="Nodes" Connectors="ConnectorCollection"/>
+    <SfDiagramComponent @ref="diagram" Width="100%" Height="700px" Nodes="Nodes"/>
 
    @code
        { 
             public SfDiagramComponent diagram;
-            DiagramObjectCollection<Connector> ConnectorCollection = new DiagramObjectCollection<Connector>();
             DiagramObjectCollection<Node> Nodes = new DiagramObjectCollection<Node>();
             protected override void OnInitialized()
             {
@@ -145,17 +144,6 @@ The following example demonstrates how to enable **Localization** for Diagram in
             }
                 };
                 Nodes.Add(node);
-
-                Connector Connecto4 = new Connector()
-                {
-                    ID = "Connector4",
-                    Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb,
-                    Type = ConnectorSegmentType.Orthogonal,
-                    SourcePoint = new DiagramPoint { X = 400, Y = 100 },
-                    TargetPoint = new DiagramPoint { X = 500, Y = 200 }
-                };
-                ConnectorCollection.Add(Connecto4);
-            }
      }
 
     ```
@@ -206,12 +194,11 @@ The following steps explain how to render the Diagram in French culture (fr) in 
 ```cshtml
  @using Syncfusion.Blazor.Diagram
 
-    <SfDiagramComponent @ref="diagram" Width="100%" Height="700px" Nodes="Nodes" Connectors="ConnectorCollection"/>
+    <SfDiagramComponent @ref="diagram" Width="100%" Height="700px" Nodes="Nodes"/>
 
    @code
        { 
             public SfDiagramComponent diagram;
-            DiagramObjectCollection<Connector> ConnectorCollection = new DiagramObjectCollection<Connector>();
             DiagramObjectCollection<Node> Nodes = new DiagramObjectCollection<Node>();
             protected override void OnInitialized()
             {
@@ -231,16 +218,6 @@ The following steps explain how to render the Diagram in French culture (fr) in 
             }
                 };
                 Nodes.Add(node);
-
-                Connector Connecto4 = new Connector()
-                {
-                    ID = "Connector4",
-                    Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb,
-                    Type = ConnectorSegmentType.Orthogonal,
-                    SourcePoint = new DiagramPoint { X = 400, Y = 100 },
-                    TargetPoint = new DiagramPoint { X = 500, Y = 200 }
-                };
-                ConnectorCollection.Add(Connecto4);
             }
      }
 ```
