@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in Blazor Diagram Component
 
-In Graphical User Interface (GUI), the tooltip is a message that is displayed when mouse hovers over an element. The diagram provides tooltip support while dragging, resizing, rotating a node, and when the mouse hovers any diagram element.
+In Graphical User Interface (GUI), the tooltip is a message that is displayed when the mouse is hovering over an element. The diagram provides tooltip support while dragging, resizing, rotating a node, and when the mouse hovers any diagram element.
 
 ## Default tooltip
 
