@@ -32,7 +32,7 @@ The [Blazor PDF Viewer control](https://www.syncfusion.com/blazor-components/bla
 * Handwritten Signature
 
 > There is a separate PDF Viewer component for Blazor server-side and Blazor WebAssembly applications.
->* The `SfPdfViewer` control is for Blazor server-side application. This control resides with Syncfusion.Blazor.PdfViewer NuGet package. This server-side control is highly recommended.
+>* The `SfPdfViewerServer` control is for Blazor server-side application. This control resides with Syncfusion.Blazor.PdfViewerServer.Windows NuGet package. This server-side control is highly recommended.
 >* The `SfPdfViewer` control is for Blazor WebAssembly application. This control requires server-side processing to render the PDF files through web service. It resides with Syncfusion.Blazor.PdfViewer NuGet package.
 
 ## Prerequisites

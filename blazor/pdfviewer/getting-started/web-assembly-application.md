@@ -9,10 +9,6 @@ documentation: ug
 
 # Getting Started with Blazor PDF Viewer Component in Blazor WASM App
 
-> Note: There is a separate PDF Viewer component for Blazor server-side and Blazor WebAssembly applications.
->* The `SfPdfViewer` control is for Blazor server-side application. This control resides with Syncfusion.Blazor.PdfViewer NuGet package. This server-side control is highly recommended.
->* The `SfPdfViewer` control is for Blazor WebAssembly application. This control requires server-side processing to render the PDF files through web service. It resides with Syncfusion.Blazor.PdfViewer NuGet package.
-
 This section briefly explains about how to include [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component in your Blazor WebAssembly (WASM) App using Visual Studio.
 
 ## Prerequisites
