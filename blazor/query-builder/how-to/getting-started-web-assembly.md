@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Blazor QueryBuilder in WebAssembly using Visual Studio | Syncfusion
-description: Learn here all about getting started with Syncfusion Blazor QueryBuilder Component in Blazor WebAssembly (WASM) App using Visual Studio and more.
+title: Getting Started with Blazor QueryBuilder in WebAssembly | Syncfusion
+description: Checkout and learn about getting started with Blazor WebAssembly and Blazor QueryBuilder Component in Visual Studio and much more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
@@ -9,119 +9,131 @@ documentation: ug
 
 # Blazor QueryBuilder Component in WebAssembly App using Visual Studio
 
-This article provides step-by-step instructions to configure Syncfusion [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
-
-> Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
+This article provides a step-by-step instructions for building Blazor WebAssembly App with Blazor QueryBuilder component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
-* [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
-* [.NET Core SDK 3.1.3](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-> .NET Core SDK 3.1.3 requires Visual Studio 2019 16.6 or later. Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it requires Visual Studio 16.7 Preview 1 or later.
+## Create a Blazor WebAssembly App in Visual Studio
 
-## Create a Blazor WebAssembly project in Visual Studio 2019
+You can create **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-1. Install the essential project templates in the Visual Studio 2019 by running the below command line in the command prompt.
+* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-    ```
-    dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
-    ```
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/vs2019-extensions/create-project)
 
-2. Choose **Create a new project** from the Visual Studio dashboard.
+## Install Syncfusion Blazor QueryBuilder NuGet in the App
 
-    ![Creating New Project in Blazor ASPNETCore](../images/blazor-aspnetcore-create-new-project.png)
+Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
-3. Select **Blazor App** from the template and click **Next** button.
+To add Blazor QueryBuilder component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.QueryBuilder](https://www.nuget.org/packages/Syncfusion.Blazor.QueryBuilder) and then install it.
 
-    ![Blazor Application Template](../images/blazor-template.png)
+## Register Syncfusion Blazor Service
 
-4. Now, the project configuration window will popup. Click **Create** button to create a new project with the default project configuration.
+Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
-    ![Configuring Blazor Project](../images/blazor-project-configuration.png)
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
-5. Choose **Blazor WebAssembly App** from the dashboard and click **Create** button to create a new Blazor WebAssembly application. Make sure **.NET Core** and **ASP.NET Core 3.1** is selected at the top.
+@using Syncfusion.Blazor
 
-    ![Select Blazor Project Template](../images/blazor-client-template.png)
+{% endhighlight %}
+{% endtabs %}
 
-    > ASP.NET Core 3.1 available in Visual Studio 2019 version.
-  
-## Importing Syncfusion Blazor component in the application
+Now, Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` to load the scripts externally in the [next steps](#add-script-reference).
 
-1. Now, install **Syncfusion.Blazor** NuGet package to the newly created application by using the **NuGet Package Manager**. Right-click the project and select Manage NuGet Packages.
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 11" %}
 
-    ![Blazor NuGet Explorer](../images/blazor-nuget-explorer.png)
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Syncfusion.Blazor;
 
-2. Search **Syncfusion.Blazor** keyword in the Browser tab and install **Syncfusion.Blazor** NuGet package in the application.
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
 
-    ![Selecting Blazor NuGet Package](../images/blazor-nuget-package-selection.png)
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-3. The Syncfusion Blazor package will be installed in the project, once the installation process is completed.
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+await builder.Build().RunAsync();
+....
 
-4. Open **~/_Imports.razor** file and import the `Syncfusion.Blazor`.
+{% endhighlight %}
 
-    ```cshtml
-    @using Syncfusion.Blazor
-    @using Syncfusion.Blazor.QueryBuilder.
-    ```
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
 
-5. Open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+using Syncfusion.Blazor;
 
-    ```c#
-    using Syncfusion.Blazor;
-
-    namespace WebApplication1
+namespace BlazorApplication
+{
+    public class Program
     {
-        public class Program
+        public static async Task Main(string[] args)
         {
-            public static async Task Main(string[] args)
-            {
-                ....
-                ....
-                builder.Services.AddSyncfusionBlazor();
-                await builder.Build().RunAsync();
-            }
+            ....
+            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+            await builder.Build().RunAsync();
         }
     }
-    ```
+}
 
-6. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/wwwroot/index.html** page.
+{% endhighlight %}
+{% endtabs %}
 
-    ```html
-    <head>
-        ....
-        ....
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-    </head>
-    ```
+## Add Style Sheet
 
-    > The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.2.44/styles/bootstrap4.css).
-    > To use manual scripts other than the scripts from NuGet package, register the Blazor service in **~/Program.cs** file by using true parameter as mentioned below.
+Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://sfblazor.azurewebsites.net/staging/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
 
-     ```c#
-    using Syncfusion.Blazor;
+To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred inside the `<head>` of **wwwroot/index.html** file in client web app.
 
-     namespace WebApplication1
-     {
-         public class Program
-       {
-             public static async Task Main(string[] args)
-             {
-                ....
-                ....
-                builder.Services.AddSyncfusionBlazor(true);
-                await builder.Build.RunAsync();
-             }
-         }
-     }
-     ```
+{% tabs %}
+{% highlight cshtml tabtitle="~/index.html" %}
 
-## Adding Query Builder component to the application
+<head>
+    ...
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
 
-Now, add the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) component in `razor` page in the `Pages` folder. For example, the Query Builder component is added in the `~/Pages/Index.razor` page.
+{% endhighlight %}
+{% endtabs %}
 
-```cshtml
+## Add Script Reference
+
+Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://sfblazor.azurewebsites.net/staging/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` of **wwwroot/index.html** file in client web app.
+
+{% tabs %}
+{% highlight cshtml tabtitle="~/index.html" hl_lines="4" %}
+
+<head>
+    ...
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="https://cdn.syncfusion.com/blazor/19.4.38/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application. Generate scripts and theme assets using [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by selecting the components you were using in the application.
+
+## Add Blazor QueryBuilder component
+
+* Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.QueryBuilder** namespace.
+
+{% tabs %}
+{% highlight razor tabtitle="~/Imports.razor" %}
+
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.QueryBuilder
+
+{% endhighlight %}
+{% endtabs %}
+
+* Now, add the Syncfusion QueryBuilder component in razor file. Here, the QueryBuilder component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+
+{% tabs %}
+{% highlight razor %}
 
 <SfQueryBuilder TValue="EmployeeDetails">
 <QueryBuilderColumns>
@@ -149,10 +161,10 @@ Now, add the [Blazor Query Builder](https://www.syncfusion.com/blazor-components
         public string City { get; set; }
     }
 }
-```
 
-## Run the application
+{% endhighlight %}
+{% endtabs %}
 
-After successful compilation of the application, simply press F5 to run the application. The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) component will render in the web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor QueryBuilder component will be rendered in the default web browser.
 
 ![Blazor QueryBuilder](../images/blazor-querybuilder.gif)
