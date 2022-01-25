@@ -1,150 +1,155 @@
 ---
 layout: post
-title: WebAssembly application in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn here all about WebAssembly application in Syncfusion Blazor PDF Viewer component and more.
+title: Getting Started with Blazor PDF Viewer Component | Syncfusion
+description: Checkout and learn about getting started with Blazor PDF Viewer component in Blazor WebAssembly (WASM) App using Visual Studio and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# WebAssembly application in Blazor PDF Viewer Component
+# Getting Started with Blazor PDF Viewer Component in Blazor WASM App
 
->Note: There is a separate PDF Viewer component for Blazor server-side and Blazor WebAssembly applications.
->* The `SfPdfViewerServer` control is for Blazor server-side application. This control resides with Syncfusion.Blazor.PdfViewerServer.Windows NuGet package. This server-side control is highly recommended.
->* The `SfPdfViewer` control is for Blazor WebAssembly application. This control requires server-side processing to render the PDF files through web service. It resides with Syncfusion.Blazor.PdfViewer NuGet package.
+This section briefly explains about how to include [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component in your Blazor WebAssembly (WASM) App using Visual Studio.
 
-This section briefly explains how to include a PDF Viewer in your Blazor WebAssembly application.
+## Prerequisites
 
-**Step 1:** Choose **Create a new project** from the Visual Studio dashboard. Click Next.
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-![Creating New Project in Blazor](../images/blazor-create-new-project.png)
+## Create a new Blazor App in Visual Studio
 
-**Step 2:** Select **Blazor WebAssembly App** from the template, and then click **Next** button.
+You can create **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-![Blazor Application Template](../images/blazor-template.png)
+* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-**Step 3:** Now, the project configuration window will popup. Click **Next** button to modify the additional information.
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/vs2019-extensions/create-project)
 
- ![Blazor Project Configuration](../images/blazor-project-configuration.png)
+## Install Syncfusion Blazor PDFViewer NuGet in the App
 
- **Step 4:** Select the target Framework **.NET 5.0** at the top of the application based on your required target and then click **Create** button to create a new Blazor WebAssembly application.
+Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
-  ![Blazor Server Application with Additional Information](../images/blazor-webassembly-app-with-addition-information.png)
+To add Blazor PDF Viewer component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.PDFViewer](https://www.nuget.org/packages/Syncfusion.Blazor.PDFViewer) and then install it.
 
-**Step 5:** Installing Syncfusion Blazor packages in the application.
+## Register Syncfusion Blazor Service
 
-You can use any one of the below standard to install the Syncfusion Blazor library in your application.
+Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
-* **Using Syncfusion Blazor individual NuGet Packages [New standard]**
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
-> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for our Syncfusion Blazor components. This new standard is highly recommended for your Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) to know the benefits of the individual NuGet packages.
-
-1. Install **Syncfusion.Blazor.PdfViewer** NuGet package to the new application using the `NuGet Package Manager`. For more details about available NuGet packages, refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) documentation.
-
-2. Right-click the project, and then select `Manage NuGet Packages`.
-
-    ![Blazor NuGet Explorer](../images/blazor-nuget-explorer.png)
-
-3. Search **Syncfusion.Blazor.PdfViewer** keyword in the Browse tab and install **Syncfusion.Blazor.PdfViewer** NuGet package in the application.
-
-    ![Searching Blazor PDFViewer NuGet Package](../images/blazor-pdfviewer-search-nuget-package.png)
-
-4. The Syncfusion Blazor PdfViewer package will be included in the newly created project once the installation process is completed.
-
-* **Using Syncfusion.Blazor NuGet Package [Old standard]**
-
-W> If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
-
-1. Now, install **Syncfusion.Blazor** NuGet package to the newly created application by using the `NuGet Package Manager`. Right-click the project and then select Manage NuGet Packages.
-
-    ![Blazor NuGet Explorer](../images/blazor-nuget-explorer.png)
-
-2. Search **Syncfusion.Blazor** keyword in the Browse tab and install **Syncfusion.Blazor** NuGet package in the application.
-
-    ![Searching Blazor NuGet Package](../images/blazor-nuget-package.png)
-
-3. The Syncfusion Blazor package will be installed in the project once the installation process is completed.
-
-**Step 6:** Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.PdfViewer` when new standard is followed or import the `Syncfusion.Blazor` namespace when old standard is followed.
-
-```csharp
-@using Syncfusion.Blazor.PdfViewer
-```
-
-(or)
-
-```csharp
 @using Syncfusion.Blazor
-```
 
-**Step 7:** Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/wwwroot/index.html** page.
+{% endhighlight %}
+{% endtabs %}
 
-When `Syncfusion.Blazor.PdfViewer` is used, use the following code.
+Now, register the Syncfusion Blazor Service in the Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
-```html
-<head>
-    ....
-    ....
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-</head>
-```
+* Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
 
-When `Syncfusion.Blazor` is used, use the following code.
+{% tabs %}
+{% highlight C# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 11" %}
 
-```html
-<head>
-    ....
-    ....
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-</head>
-```
-
-> **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css).
-
-For **Internet Explorer 11** kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
-
-```html
-<head>
-    <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />
-    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-</head>
-```
-
-**Step 8:** Open the **~/Program.cs** file and register the Syncfusion Blazor Service.
-
-```csharp
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Syncfusion.Blazor;
 
-namespace BlazorWebAssembly
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
+
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+await builder.Build().RunAsync();
+....
+
+{% endhighlight %}
+
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
+
+using Syncfusion.Blazor;
+
+namespace WebApplication1
 {
     public class Program
     {
         public static async Task Main(string[] args)
         {
             ....
-            ....
-            builder.Services.AddSyncfusionBlazor();
+            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
             await builder.Build().RunAsync();
         }
     }
 }
-```
 
-The dynamic script loading can be disabled and refer to the scripts from the application end by using the `IgnoreScriptIsolation` parameter in `AddSyncfusionBlazor()` at the `program.cs`. For more details, please refer here for [how to refer custom/CDN resources](../common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
+{% endhighlight %}
+{% endtabs %}
 
-**Step 9:** Now, add the PDF Viewer (WebAssembly) component to the **~/Pages/Index.razor** page.
+## Add Style Sheet
 
-```csharp
+Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://sfblazor.azurewebsites.net/staging/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
+
+To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
+
+Refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
+
+{% tabs %}
+{% highlight cshtml tabtitle="~/index.html" %}
+
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add Script Reference
+
+Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://sfblazor.azurewebsites.net/staging/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows,
+
+Refer script in the `<head>` of the **~/index.html** file.
+
+{% tabs %}
+{% highlight html tabtitle="~/index.html" hl_lines="4" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
+
+## Add Blazor PDF Viewer Component
+
+* Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.PdfViewer** namespace.
+
+{% tabs %}
+{% highlight razor tabtitle="~/Imports.razor" %}
+
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.PdfViewer
 
+{% endhighlight %}
+{% endtabs %}
+
+* Now, add the Syncfusion PDF Viewer component in razor file. Here, the PDF Viewer component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+
+{% tabs %}
+{% highlight razor %}
+
 <SfPdfViewer DocumentPath="PDF_Succinctly.pdf" ServiceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer" Height="500px" Width="1060px"></SfPdfViewer>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 > Since Syncfusion PDF Viewer (Blazor WebAssembly) control depends on server-side processing to render the PDF files, it is mandatory to create a web service as mentioned [here](https://www.syncfusion.com/kb/10346/how-to-create-pdf-viewer-web-service-application-in-asp-net-core)
 
-**Step 10:** Run the application, the PDF Viewer component will be rendered in the web browser as shown in the following screenshot.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor PDF Viewer` component will be rendered in the default web browser.
 
-![Blazor PDFViewer](../images/blazor-pdfviewer.png)
+![Blazor PDF Viewer Component](../images/blazor-pdfviewer.png)
 
 Download the WebAssembly application from [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorWebAssembly-2083554717.zip).
 
