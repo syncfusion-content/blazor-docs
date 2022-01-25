@@ -9,6 +9,12 @@ documentation: ug
 
 # Localization in Blazor Diagram Component
 
+The static text of the Diagram was translated using a Resource file (**.resx**).
+
+The Resource file is an XML file that contains the strings (key and value pairs) that you want to translate. For further information on how to configure and use localization in the ASP.NET Core application framework, see the [Localization](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0) link.
+
+* Add the **.resx** file to the [Resources](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#resource-files) folder and fill in the **Name** column with the key value (Locale Keywords) and the translated string in the **Value** column.
+
 ## Blazor server side
 
 Add `UseRequestLocalization` middle-ware in Configure method in **Startup.cs** file to get browser Culture Info.
@@ -35,8 +41,6 @@ namespace BlazorApplication
 
 The following example demonstrates how to enable **Localization** for Diagram in server side Blazor samples. Here, we have used Resource file to translate the static text.
 
-The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.NET Core application framework.
-
 * Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
 
     ```csharp
@@ -62,11 +66,10 @@ The Resource file is an XML file which contains the strings(key and value pairs)
             services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof    (SyncfusionLocalizer));
             services.Configure<RequestLocalizationOptions>(options =>
             {
-                // Define the list of cultures your app will support
+                // Set the french culture
                 var supportedCultures = new List<CultureInfo>()
                 {
-                    new CultureInfo("en-US"),
-                    new CultureInfo("de")
+                    new CultureInfo("fr")
                 };
                 // Set the default culture
                 options.DefaultRequestCulture = new RequestCulture("en-US");
@@ -187,17 +190,10 @@ The following steps explain how to render the Diagram in French culture (fr) in 
             CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
             CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("en-US");
 
-            // Get the modified culture from culture switcher
-            var host = builder.Build();
-            var jsInterop = host.Services.GetRequiredService<IJSRuntime>();
-            var result = await jsInterop.InvokeAsync<string>("cultureInfo.get");
-            if (result != null)
-            {
-                // Set the culture from culture switcher
-                var culture = new CultureInfo(result);
-                CultureInfo.DefaultThreadCurrentCulture = culture;
-                CultureInfo.DefaultThreadCurrentUICulture = culture;
-            }
+            // Set the french culture
+            CultureInfo.DefaultThreadCurrentCulture =   new CultureInfo("fr");
+            CultureInfo.DefaultThreadCurrentUICulture =   new CultureInfo("fr");
+            
             #endregion
 
             await builder.Build().RunAsync();
