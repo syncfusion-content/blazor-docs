@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize Menu Bar Items in Blazor Menu Bar Component | Syncfusion
-description: Checkout and learn here all about Customize Menu Bar Items in Syncfusion Blazor Menu Bar component and more.
+description: Checkout and learn here all about customize menu bar items in Syncfusion Blazor Menu Bar component and more.
 platform: Blazor
 control: Menu Bar 
 documentation: ug
@@ -70,8 +70,6 @@ In the following example, the `Corporate` menu items are added and the `Company`
 
 ```
 
-Output be like
-
 ![Add or Remove Items in Blazor MenuBar](./../images/blazor-menubar-add-remove-items.png)
 
 ## Enable or Disable Menu Items
@@ -132,8 +130,6 @@ In the following example, the Directory header item, Conferences, and Music sub 
 }
 
 ```
-
-Output be like
 
 ![Disabling Menu Items in Blazor MenuBar](./../images/blazor-menubar-disable-item.png)
 
@@ -196,7 +192,5 @@ In the following example, the Movies header item, Workshops, and Music sub menu 
 }
 
 ```
-
-Output be like
 
 ![Disaplying Menu Items in Blazor MenuBar](./../images/blazor-menubar-show-menu-item.png)

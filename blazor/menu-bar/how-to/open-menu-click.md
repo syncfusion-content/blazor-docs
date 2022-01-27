@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open Sub Menu on Menu Item Click in Blazor Menu Bar | Syncfusion
-description: Learn here all about Open Sub Menu on Menu Item Click in Syncfusion Blazor Menu Bar component and more.
+description: Learn here all about open sub menu on Menu item click in Syncfusion Blazor Menu Bar component and more.
 platform: Blazor
 control: Menu Bar 
 documentation: ug
@@ -49,7 +49,5 @@ In the following sample, Sub Menu will open while clicking `File` menu.
     </MenuItems>
 </SfMenu>
 ```
-
-Output be like
 
 ![Opening Menu Item in Blazor MenuBar](./../images/blazor-menubar-with-menu-item.png)
