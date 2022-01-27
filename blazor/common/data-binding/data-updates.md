@@ -73,6 +73,35 @@ In the following code example, DataGrid automatically updates its data when add,
 }
 ```
 
+### List of Syncfusion Components supports ObservableCollection
+
+* AutoComplete
+* Breadcrumb
+* Bullet Chart
+* Charts
+* ComboBox
+* Context Menu
+* DataGrid
+* Diagram
+* Diagram Native
+* Dropdown List
+* HeatMap Chart
+* Kanban
+* ListBox
+* ListView
+* Map
+* Menu Bar
+* MultiSelect Dropdown
+* Pivot Table
+* Query Builder
+* Scheduler
+* Smith Chart
+* Sparkline Charts
+* Stock Chart
+* TreeGrid
+* TreeMap
+* TreeView
+
 ## INotifyPropertyChanged
 
 The data-bound components (like DataGrid, Kanban, Scheduler) provides support to update its data without any additional refresh call when changing property value of item if an item implements [INotifyPropertyChanged ](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view) interface. `INotifyPropertyChanged` interface is used to notify, that a property value has changed.
@@ -147,3 +176,14 @@ In the below example, `DataOrder` implements `INotifyPropertyChanged` interface 
     }
 }
 ```
+
+### List of Syncfusion Components supports INotifyPropertyChanged
+
+* AutoComplete
+* HeatMap Chart
+* Kanban
+* ListView
+* Map
+* Scheduler
+* TreeGrid
+* TreeView
