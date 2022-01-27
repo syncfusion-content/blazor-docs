@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Virtualization in Blazor MultiSelect Dropdown Component | Syncfusion
-description: Checkout and learn here all about Virtualization in Syncfusion Blazor MultiSelect Dropdown component and much more.
+description: Checkout and learn here all about virtualization in Syncfusion Blazor MultiSelect Dropdown component and much more.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
@@ -40,7 +40,5 @@ In the following code 150 items bound to the component, but only 6 items will lo
     } 
 }
 ```
-
-The output will shown as follows,
 
 ![Blazor MultiSelect with virtualization](./images/blazor-multiselect-dropdown-virtualization.gif)
