@@ -143,7 +143,7 @@ We need to register the created application in Google Platform API Console for I
 
     ![Name and supported Account type](../images/NameSupportedAccountType.PNG)
 
-4. Dropdown the page, select platform as web and give your application Redirect URI and click Register.
+4. Dropdown the page, select platform as web and give your application Redirect URI like {Redirect URI}/signin-oidc and click Register.
 
     ![Platform and Redirect URI](../images/AADRedirectedURI.png)
 
@@ -273,7 +273,7 @@ We need to register the created application in Google Platform API Console for I
 
     ![Clinet tenat id](../images/ClinetTenantId.PNG)
 
-10. Configure those client tenant id, application id, and domain in your application appsettings.json file.
+10. Configure those client tenant id, application id, added scope api id, and domain in your application appsettings.json file.
 
     ![Project configuration](../images/Configuration1.png)
 
