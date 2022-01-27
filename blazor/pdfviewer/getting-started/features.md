@@ -31,12 +31,10 @@ The [Blazor PDF Viewer component](https://www.syncfusion.com/blazor-components/b
 * FormFilling
 * Handwritten Signature
 
-Syncfusion provides separate PDF Viewer component for Blazor Server and Blazor WebAssembly applications.
-
-> For Blazor WebAssembly App, use [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.SfPdfViewer.html) component in Syncfusion.Blazor.PdfViewer NuGet package. This component requires server-side processing to render the PDF files through web service.
-
-> For Blazor Server App, use the [SfPdfViewerServer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewerServer.SfPdfViewerServer.html) component in corresponding NuGet based on the operating system of the server you intend to host, as shown below.,
-> *	For Windows, use Syncfusion.Blazor.PdfViewerServer.Windows
+> Syncfusion provides separate PDF Viewer component for Blazor Server and Blazor WebAssembly applications.
+> For **Blazor WebAssembly App**, use [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.SfPdfViewer.html) component in Syncfusion.Blazor.PdfViewer NuGet package. This component requires server-side processing to render the PDF files through web service.
+> For **Blazor Server App**, use the [SfPdfViewerServer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewerServer.SfPdfViewerServer.html) component in corresponding NuGet based on the operating system of the server you intend to host, as shown below.,
+> * For Windows, use Syncfusion.Blazor.PdfViewerServer.Windows
 > * For Linux, use [Syncfusion.Blazor.PdfViewerServer.Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux)
 > * For Mac (OSX), use [Syncfusion.Blazor.PdfViewerServer.OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX)
 
