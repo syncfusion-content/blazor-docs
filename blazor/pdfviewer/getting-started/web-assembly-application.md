@@ -109,7 +109,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 Refer script in the `<head>` of the **~/index.html** file.
 
 {% tabs %}
-{% highlight html tabtitle="~/index.html" hl_lines="4" %}
+{% highlight html tabtitle="~/index.html" hl_lines="4 5" %}
 
 <head>
     ....
