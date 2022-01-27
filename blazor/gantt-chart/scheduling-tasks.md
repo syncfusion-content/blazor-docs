@@ -19,7 +19,7 @@ The Gantt Chart component supports three types of modes. They are:
 
 > The default value of `TaskMode` is `Auto`.
 
-## Automatically Scheduled Tasks
+## Automatically scheduled tasks
 
 When the `TaskMode` property is set as `Auto`, the start date and end date of all the tasks in the project will be automatically validated. That is, dates will be validated based on various factors such as working time, holidays, weekends, and predecessors.
 
@@ -116,9 +116,9 @@ When the `TaskMode` property is set as `Auto`, the start date and end date of al
 }
 ```
 
-## Manually Scheduled Tasks
+## Manually scheduled tasks
 
-When the `TaskMode` property is set as `Manual`, the start date and end date of all the tasks in the project will be the same as given in the data source. That is, dates will not be validated based on factors such as dependencies between tasks, holidays, weekends, working time. We can restrict this mode in predecessor validation alone. That is, we can automatically validate the dates based on predecessor values by enabling the `ValidateManualTasksOnLinking` property.
+When the `TaskMode` property is set as `Manual`, the start date and end date of all the tasks in the project will be the same as given in the data source. That is, dates will not be validated based on factors such as dependencies between tasks, holidays, weekends, working time. You can restrict this mode in predecessor validation alone. That is, you can automatically validate the dates based on predecessor values by enabling the `ValidateManualTasksOnLinking` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -218,7 +218,7 @@ When the `TaskMode` property is set as `Manual`, the start date and end date of 
 
 ## Custom
 
-If we want to use some specific task mode for specific tasks, then we can set the `TaskMode` property  as `Custom`. So, the scheduling mode for each task will be mapped from the data source field. The `Boolean` property `GanttTaskFields.Manual` is used to map the manual scheduling mode field from the data source.
+If you want to use some specific task mode for specific tasks, then you can set the `TaskMode` property  as `Custom`. So, the scheduling mode for each task will be mapped from the data source field. The `Boolean` property `GanttTaskFields.Manual` is used to map the manual scheduling mode field from the data source.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -321,19 +321,19 @@ If we want to use some specific task mode for specific tasks, then we can set th
 
 ![Blazor Gantt Chart with Custom Scheduled Task](images/blazor-gantt-chart-custom-schedule-task.png)
 
-## Unscheduled Tasks
+## Unscheduled tasks
 
 Unscheduled tasks are planned for a project without any definite schedule dates. The Gantt Chart component supports rendering the unscheduled tasks. You can create or update the tasks with anyone of start date, end date, and duration values or none. You can enable or disable the unscheduled tasks by using the `AllowUnscheduledTasks` property. The following images represent the various types of unscheduled tasks in Gantt Chart.
 
-### Start Date Only
+### Start date only
 
 ![Blazor Gantt Chart with Start Date Task](images/blazor-gantt-chart-start-date-task.png)
 
-### End Date Only
+### End date only
 
 ![Blazor Gantt Chart with End Date Task](images/blazor-gantt-chart-end-date-task.png)
 
-### Duration Only
+### Duration only
 
 ![Blazot Gantt Chart with Duration Task](images/blazor-gantt-chart-duration-task.png)
 
@@ -343,7 +343,7 @@ A milestone is a task that has no start and end dates, but it has a duration val
 
 ![Blazor Gantt Chart with Milestone Task](images/blazor-gantt-chart-milestone-task.png)
 
-## Define Unscheduled Tasks in Data Source
+## Define unscheduled tasks in data source
 
 You can define the various types of unscheduled tasks in the data source as follows
 
@@ -412,7 +412,7 @@ You can define the various types of unscheduled tasks in the data source as foll
 
 > If the `AllowUnscheduledTasks` property is set to false, then the Gantt Chart component automatically calculates the scheduled date values with a default value of duration 1 and the project start date is considered as the start date for the task.
 
-## Working Time Range
+## Working time range
 
 In the Gantt Chart component, working hours in a day for a project can be defined by using the `GanttDayWorkingTime` property. Based on the working hours, automatic date scheduling and duration validations for a task are performed.
 
@@ -511,14 +511,14 @@ The following code snippet explains how to define the working time range for the
 }
 ```
 
-The following screen shot shows working time range in Gantt Chart component.
+The following screenshot shows working time range in Gantt Chart component.
 
 ![Blazor Gantt Chart displays Working Time Range](images/blazor-gantt-chart-working-time-range.png)
 
 >* Individual tasks can lie between any time within the defined working time range of the project.
 >* The `GanttDayWorkingTime` property is used to define the working time for the whole project.
 
-## Weekend or Non-working Days
+## Weekend or non-working days
 
 Non-working days/weekends are used to represent the non-productive days in a project. You can exclude the non-working days in a work week using the `WorkWeek` property in Gantt Chart.
 
@@ -622,4 +622,4 @@ Non-working days/weekends are used to represent the non-productive days in a pro
 > In the Gantt Chart component, you can make weekend as working day by setting the `IncludeWeekend` property to `true`.
 
 
-> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.
+> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.

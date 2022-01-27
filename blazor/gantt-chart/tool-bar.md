@@ -11,7 +11,7 @@ documentation: ug
 
 The Gantt Chart component provides the toolbar support to handle Gantt Chart actions. The `Toolbar` property accepts the collection of built-in toolbar items and `ItemModel` objects for custom toolbar items.
 
-## Built-in Toolbar Items
+## Built-in toolbar items
 
 Built-in toolbar items execute standard actions of the Gantt Chart component, and these items can be added to toolbar by defining the `Toolbar` as a collection of built-in items. It renders the button with icon and text.
 
@@ -133,7 +133,7 @@ The following table shows built-in toolbar items and its actions.
 
 > The `Toolbar` has options to define both built-in and custom toolbar items.
 
-## Custom Toolbar Items
+## Custom toolbar items
 
 Custom toolbar items can be added to the toolbar by defining the `Toolbar` property as a collection of `ItemModels`. Actions for this customized toolbar items are defined in the `OnToolbarClick` event.
 
@@ -250,7 +250,7 @@ By default, the custom toolbar items are at left position. You can change the po
 
 ![Alt text](images/customToolbar.png)
 
-## Built-in and Custom Items in Toolbar
+## Built-in and custom items in toolbar
 
 The Gantt Chart component has an option to use both built-in and custom toolbar items at the same time.
 
@@ -362,7 +362,7 @@ In the following example, the `ExpandAll` and `CollapseAll` are built-in toolbar
 
 ![Customizing Toolbar Items in Blazor Gantt Chart](images/blazor-gantt-chart-with-custom-toolbar.png)
 
-## Enable or Disable Toolbar Items
+## Enable or disable toolbar items
 
 You can enable or disable the toolbar items by using the `EnableItems` method.
 
@@ -488,4 +488,4 @@ You can enable or disable the toolbar items by using the `EnableItems` method.
 
 ![Enabling Toolbar Items in Blazor Gantt Chart](images/blazor-gantt-chart-enable-toolbar.png)
 
-> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.
+> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.
