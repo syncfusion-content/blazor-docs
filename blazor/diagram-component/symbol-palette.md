@@ -913,7 +913,6 @@ The diagram provides support to add symbol description below each symbol of a pa
 
 @code
 {
-
     SymbolMargin SymbolMargin = new SymbolMargin 
     { 
         Left = 15, 
@@ -964,6 +963,33 @@ The diagram provides support to add symbol description below each symbol of a pa
 ```
 
 ![Symbol with Description in Blazor Diagram](images/blazor-diagram-symbol-description.png)
+
+## How to refresh the symbols at runtime
+
+The [RefreshSymbols](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_RefreshSymbols) method allows the user to redraw the symbols dynamically in SymbolPalette instead of re-rendering the complete Diagram component.
+
+```csharp
+
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Diagram.SymbolPalette
+
+<input type="button" @onclick="RefreshSymbols" />
+<SfSymbolPaletteComponent @ref="@palette" 
+                          Width="100%"
+                          Height="700px">
+</SfSymbolPaletteComponent>
+
+@code
+{
+    SfSymbolPaletteComponent palette;
+
+    private void RefreshSymbols()
+    {
+        palette.RefreshSymbols();
+    }   
+}
+```  
+##
 
 ## Palette interaction
 
