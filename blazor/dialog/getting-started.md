@@ -374,6 +374,7 @@ By adding the [DialogButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 {% highlight razor %}
 
 @using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Popups
 
 <SfButton @onclick="@OpenDialog">Open Dialog</SfButton>
 
@@ -383,24 +384,39 @@ By adding the [DialogButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.B
         <Content> This is a Dialog with button and primary button </Content>
     </DialogTemplates>
     <DialogButtons>
-        <DialogButton Content="OK" IsPrimary="true" OnClick="@CloseDialog" />
-        <DialogButton Content="Cancel" OnClick="@CloseDialog" />
+        <DialogButton Content="OK" IsPrimary="true" OnClick="@OkClick" />
+        <DialogButton Content="Cancel" OnClick="@CancelClick" />
     </DialogButtons>
+    <span id="message">@ClickStatus</span>
 </SfDialog>
 
 @code {
     private bool IsVisible { get; set; } = true;
 
+    private string ClickStatus { get; set; }
+
     private void OpenDialog()
     {
         this.IsVisible = true;
+        this.ClickStatus = "";
     }
 
-    private void CloseDialog()
+    private void CancelClick()
     {
+        this.ClickStatus = "you have clicked Cancel";
         this.IsVisible = false;
     }
+    private void OkClick()
+    {
+        this.ClickStatus = "you have clicked Ok";
+        this.IsVisible = true;
+    }
 }
+<style>
+    #message {
+        color: blue;
+    }
+</style>
 
 {% endhighlight %}
 {% endtabs %}
