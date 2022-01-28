@@ -143,7 +143,7 @@ Refer to the [Blazor Tooling documentation](https://docs.microsoft.com/en-us/asp
 
     > Razor Class Library project is added to the existing Blazor Server Application.
 
-3. Right-click the Blazor App project, and then select Add/Project reference. Now click the checkbox and configure the **Razor Class Library** and **Blazor Server Application**.
+3. Right-click the Blazor App project, and then select Add/Project reference. Now, click the checkbox and configure the **Razor Class Library** and **Blazor Server Application**.
 
     ![reference manager in blazor app](images/reference-manager.png)
 
@@ -234,7 +234,7 @@ Refer to the [Blazor Tooling documentation](https://docs.microsoft.com/en-us/asp
 
     W> `Syncfusion.Blazor` package should not to be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). If you are using individual NuGet packages, you have to add the above `Syncfusion.Blazor.Themes` static web assets (styles) reference in the application. Or else, you have to add the above `Syncfusion.Blazor` styles reference for overall NuGet package.
 
-    > Also, you can referred the themes through the CDN version by using below link instead of package theme reference.
+    > Also, you can refer to the themes through the CDN version by using the following link instead of package theme reference.
     [https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css).
 
 4. Now, add the created custom component that is imported with Syncfusion Blazor component from Razor Class Library in any web page (razor) in the `~/Pages` folder. For example, the custom component with imported Syncfusion Blazor Calendar component from Razor Class Library is added to the **~/Pages/Index.razor** page as like below.
@@ -263,7 +263,7 @@ Refer to the [Blazor Tooling documentation](https://docs.microsoft.com/en-us/asp
 
     > Razor Class Library project is added to the existing Blazor WebAssembly Application.
 
-3. Right-click the Blazor App project, and then select Add/Project reference. Now click the checkbox and configure the **Razor Class Library** and **Blazor WebAssembly Application**.
+3. Right-click the Blazor App project, and then select Add/Project reference. Now, click the checkbox and configure the **Razor Class Library** and **Blazor WebAssembly Application**.
 
     ![reference manager in blazor app](images/reference-manager.png)
 
@@ -333,7 +333,7 @@ Refer to the [Blazor Tooling documentation](https://docs.microsoft.com/en-us/asp
 
     W> `Syncfusion.Blazor` package should not to be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). If you are using individual NuGet packages, you have to add the above `Syncfusion.Blazor.Themes` static web assets (styles) reference in the application. Or else, you have to add the above `Syncfusion.Blazor` styles reference for overall NuGet package.
 
-    > Also, you can referred the themes through the CDN version by using below link instead of package theme reference.
+    > Also, you can refer to the themes through the CDN version by using the following link instead of package theme reference.
     [https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css).
 
 4. Now, add the created custom component that is imported with Syncfusion Blazor component from Razor Class Library in any web page (razor) in the `~/Pages` folder. For example, the custom component with imported Syncfusion Blazor Calendar component from Razor Class Library is added to the **~/Pages/Index.razor** page as like below.
