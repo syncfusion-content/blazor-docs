@@ -109,13 +109,12 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 Refer script in the `<head>` of the **~/index.html** file.
 
 {% tabs %}
-{% highlight html tabtitle="~/index.html" hl_lines="4 5" %}
+{% highlight html tabtitle="~/index.html" hl_lines="4" %}
 
 <head>
     ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-    <script  src="_content/Syncfusion.Blazor.PdfViewer/scripts/syncfusion-blazor-pdfviewer.min.js"  type="text/javascript"></script>
+    <script src="_content/Syncfusion.Blazor.PdfViewer/scripts/syncfusion-blazor-pdfviewer.min.js" type="text/javascript"></script>
 </head>
 
 {% endhighlight %}
