@@ -33,9 +33,9 @@ string data = Diagram.SaveDiagram();
 await Diagram.LoadDiagram(data);
 ```
 
-## How to save and load the diagram using filestream
+## How to save and load the diagram using file stream
 
-Diagram provide supports to save and load the diagram using filestream. The below code illustrates how to download the saved diagram as file.
+Diagram provide supports to save and load the diagram using file stream. The below code illustrates how to download the saved diagram as file.
 
 ```cshtml
     SfDiagramComponent diagram;
