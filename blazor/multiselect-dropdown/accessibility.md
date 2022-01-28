@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor MultiSelect Dropdown Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor MultiSelect Dropdown component and more.
+description: Checkout and learn here all about accessibility in Syncfusion Blazor MultiSelect Dropdown component and more.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
@@ -32,7 +32,7 @@ You can use the following key shortcuts to access the MultiSelect without interr
 
 | **Keyboard shortcuts** | **Actions** |
 | --- | --- |
-| <kbd>Arrow Down</kbd> | Sets focus at the first item in the MultiSelect when no item selected. Otherwise, moves focus next to the currently selected item. |
+| <kbd>Arrow Down</kbd> | Sets focus at the first item in the MultiSelect when no item is selected. Otherwise, moves focus next to the currently selected item. |
 | <kbd>Arrow Up</kbd> | Moves focus previous to the currently selected one. |
 | <kbd>Page Down</kbd> | Scrolls down to the next page and set focus to the first item when popup list opens. |
 | <kbd>Page Up</kbd> | Scrolls up to the previous page and set focus to the first item when popup list opens. |
