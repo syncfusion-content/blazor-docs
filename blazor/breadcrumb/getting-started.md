@@ -61,7 +61,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; );
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; } );
 
 var app = builder.Build();
 ....
@@ -81,7 +81,7 @@ namespace BlazorApplication
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; );
+            services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; } );
         }
         ...
     }
@@ -107,7 +107,7 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddScoped(serviceProvider => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; );
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; } );
 await builder.Build().RunAsync();
 ....
 
@@ -124,7 +124,7 @@ namespace WebApplication1
         public static async Task Main(string[] args)
         {
             ....
-            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; );
+            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; } );
             await builder.Build().RunAsync();
         }
     }
