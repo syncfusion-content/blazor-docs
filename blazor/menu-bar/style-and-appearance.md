@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Styles and Appearances in Blazor Menu Bar Component | Syncfusion
-description: Checkout and learn here all about Styles and Appearances in Syncfusion Blazor Menu Bar component and more.
+description: Checkout and learn here all about styles and appearances in Syncfusion Blazor Menu Bar component and more.
 platform: Blazor
 control: Menu Bar 
 documentation: ug

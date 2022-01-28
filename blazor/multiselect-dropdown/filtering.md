@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering in Blazor MultiSelect Dropdown Component | Syncfusion
-description: Checkout and learn here all about Filtering in Syncfusion Blazor MultiSelect Dropdown component and more.
+description: Checkout and learn here all about filtering in Syncfusion Blazor MultiSelect Dropdown component and more.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
@@ -50,8 +50,6 @@ The MultiSelect has built-in support to filter data items when [AllowFiltering](
 }
 
 ```
-
-The output will be as follows.
 
 ![Filtering in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-filtering.png)
 
