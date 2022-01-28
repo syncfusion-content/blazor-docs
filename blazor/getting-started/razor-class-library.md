@@ -14,7 +14,7 @@ This section provides information about creating Razor Class Library with the Sy
 ## Prerequisites
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) / [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview)
-* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0) / [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
+* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/en-us/download/dotnet/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/5.0) / [.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 
 > **.NET Core SDK 3.1.8** requires Visual Studio 2019 16.7 or later. <br /> **.NET 5** requires Visual Studio 2019 16.8 or later. <br /> **.NET 6** requires Visual Studio 2022 Preview 4.1 or later.
 
