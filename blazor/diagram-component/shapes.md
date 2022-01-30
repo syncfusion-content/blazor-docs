@@ -62,7 +62,7 @@ The following code illustrates how an image node is created.
 
 ### Base64 encoded image into the image node
 
-The following code illustrates how add Base64 image into image node.
+The following code illustrates how to add Base64 image into the image node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -72,7 +72,7 @@ The following code illustrates how add Base64 image into image node.
 
 @code
 {
-    //Initialize node collection with node
+    //Initialize node collection with node.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
@@ -80,13 +80,13 @@ The following code illustrates how add Base64 image into image node.
         Node node = new Node()
         {
             ID = "node1",
-            //Size of the node
+            //Size of the node.
             Height = 100,
             Width = 100,
-            //Position of the node
+            //Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            //Sets type of the shape as image
+            //Sets type of the shape as image.
             Shape = new ImageShape()
             {
                 Type = Shapes.Image,
@@ -124,19 +124,19 @@ Stretch and align the image content anywhere but within the node boundary. The [
         Node node = new Node()
         {
             ID = "node1",
-            //Size of the node
+            //Size of the node.
             Height = 100,
             Width = 100,
-            //Position of the node
+            //Position of the node.
             OffsetX = 100,
             OffsetY = 100,
             Shape = new ImageShape()
             {
                 Type = Shapes.Image,
                 Source = "/diagram/images/productmanager.png",
-                //To stretch the image
+                //To stretch the image.
                 Scale = Scale.Meet,
-                //To align the image
+                //To align the image.
                 ImageAlign = ImageAlignment.XMinYMax
             }
         };
@@ -224,7 +224,7 @@ Html elements can be embedded in the diagram through [HTML](https://help.syncfus
 
 @code
 {
-    //Initialize node collection with node
+    //Initialize node collection with node.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
@@ -232,13 +232,13 @@ Html elements can be embedded in the diagram through [HTML](https://help.syncfus
         Node node = new Node()
         {
             ID = "node1",
-            //Size of the node
+            //Size of the node.
             Width = 300,
             Height = 300,
-            //Position of the node
+            //Position of the node.
             OffsetX = 400,
             OffsetY = 300,
-            //sets the type of the shape as HTML
+            //Sets the type of the shape as HTML.
             Shape = new Shape()
             {
                 Type = Shapes.HTML,
@@ -267,7 +267,7 @@ The following code example illustrates how to create a basic shape.
 
 @code
 {
-    //Initialize node collection with node
+    //Initialize node collection with node.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
@@ -275,18 +275,18 @@ The following code example illustrates how to create a basic shape.
         Node node = new Node()
         {
             ID = "node1",
-            //Size of the node
+            //Size of the node.
             Height = 100,
             Width = 100,
-            //Position of the node
+            //Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            //sets the type of the shape as basic
+            //Sets the type of the shape as basic.
             Shape = new BasicShape()
             {
                 Type = Shapes.Basic,
                 Shape = BasicShapeType.Rectangle,
-                //Sets the corner radius to the node shape
+                //Sets the corner radius to the node shape.
                 CornerRadius = 10
             },
             Style = new ShapeStyle() { Fill = "#6495ED" }
@@ -317,20 +317,20 @@ To create a path node, specify the shape as **Path**. The [Data](https://help.sy
 <SfDiagramComponent Height="600px" Nodes="@nodes" />
 @code
 {
-       //Initialize node collection with node
+       //Initialize node collection with node.
        DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>()
        {
          // Creates a path node
          new Node()
          {
              ID = "node1",
-             //Size of the node
+             //Size of the node.
              Height = 100,
              Width = 100,
-             //Position of the node
+             //Position of the node.
              OffsetX = 100,
              OffsetY = 100,
-             //Sets the type of the shape as path
+             //Sets the type of the shape as path.
              Shape = new PathShape()
              {
                  Type=Shapes.Path,
@@ -347,7 +347,7 @@ To create a path node, specify the shape as **Path**. The [Data](https://help.sy
 
 ![Path Shape Node in Blazor Diagram](images/blazor-diagram-path-shape-node.png)
 
-## Flow Shapes
+## Flow shapes
 
 The [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowShape.html) shapes are used to represent the process flow. It is used for analyzing, designing and managing the documentation process. To create a flow shape, specify the shape type as **Flow**. By default, it is considered as a **Process**. The following code example illustrates how to create a flow shape.
 
@@ -359,7 +359,7 @@ The [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowS
 
 @code
 {
-    //Initialize node collection with node
+    //Initialize node collection with node.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
@@ -367,13 +367,13 @@ The [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowS
         Node node = new Node()
         {
             ID = "node1",
-            //Size of the node
+            //Size of the node.
             Height = 100,
             Width = 100,
-            //Position of the node
+            //Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            //Sets the type of the shape as flow
+            //Sets the type of the shape as flow.
             Shape = new FlowShape()
             {
                 Type = Shapes.Flow,
@@ -391,7 +391,7 @@ The list of flow shapes are as follows.
 
 ## SVG template shape
 
-Diagram provides support to embed SVG element into a node. The Shape property of node allows you to set the type of node. To create a SVG node, it should be set as [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shapes.html#Syncfusion_Blazor_Diagram_Shapes_SVG). The following code illustrates how a SVG node is created.
+Diagram provides support to embed SVG element into a node. The Shape property of the node allows to set the type of node. To create a SVG node, it should be set as [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shapes.html#Syncfusion_Blazor_Diagram_Shapes_SVG). The following code illustrates how a SVG node is created.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -419,7 +419,7 @@ Diagram provides support to embed SVG element into a node. The Shape property of
 
 @code
 {
-    //Initialize node collection with node
+    //Initialize node collection with node.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
@@ -427,13 +427,13 @@ Diagram provides support to embed SVG element into a node. The Shape property of
         Node node = new Node()
         {
             ID = "node1",
-            // Size of the node
+            // Size of the node.
             Height = 100,
             Width = 100,
-            // Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            //Sets type of the shape as SVG
+            //Sets type of the shape as SVG.
             Shape = new Shape() { Type = Shapes.SVG },
         };
         nodes.Add(node);

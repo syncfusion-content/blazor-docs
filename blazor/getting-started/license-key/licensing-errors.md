@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Syncfusion licensing errors - Syncfusion
-description: Learn here about syncfusion common licensing errors which appears on license validation in syncfusion blazor applications.
+description: Learn here about Syncfusion common licensing errors which appears on license validation in Syncfusion Blazor applications.
 platform: Blazor
 component: Common
 documentation: ug
@@ -21,7 +21,7 @@ The following error message will be shown if a Syncfusion license key has not be
 
 **Solution:**
 
-If you use blazor components through trial installer or obtained our components via [NuGet.org](https://www.nuget.org/packages?q=syncfusion), you can choose from the options listed below
+If you use Blazor components through trial installer or obtained our components via [NuGet.org](https://www.nuget.org/packages?q=syncfusion), you can choose from the options listed below
 
 1. If you **have a valid Syncfusion license**, you can **generate a license key for a specific version and product** from [this page](https://www.syncfusion.com/account/downloads).
 
@@ -43,7 +43,7 @@ If the application is registered with an invalid key, another version of license
 
 **Solution:**
 
-If you use blazor components through trial installer or obtained our components via [NuGet.org](https://www.nuget.org/packages?q=syncfusion), you can choose from the options listed below
+If you use Blazor components through trial installer or obtained our components via [NuGet.org](https://www.nuget.org/packages?q=syncfusion), you can choose from the options listed below
 
 1. If you have a valid Syncfusion license, you can **generate a license key for a specific version and product** from [this page](https://www.syncfusion.com/account/downloads).
 
@@ -55,7 +55,7 @@ If you use blazor components through trial installer or obtained our components 
 
 4. If you **do not already have a Syncfusion account**, you can create one here and [purchase a license](https://www.syncfusion.com/sales/products) or [start your 30-day free trial](https://www.syncfusion.com/account/manage-trials/start-trials). Then you can **generate the trial license key for a specific version and product** from [this page](https://www.syncfusion.com/account/manage-trials/downloads).
 
-## Trial Expired
+## Trial expired
 
 The following error message will be shown if the trial key has expired after 30 days.
 
@@ -75,7 +75,7 @@ If the application is registered with another platform’s license key, the foll
 
 **Solution:**
 
-License keys are version and product specific. So, if you use blazor components through trial installer or obtained our components via [NuGet.org](https://www.nuget.org/packages?q=syncfusion), you can choose from the options listed below
+License keys are version and product specific. So, if you use Blazor components through trial installer or obtained our components via [NuGet.org](https://www.nuget.org/packages?q=syncfusion), you can choose from the options listed below
 
 1. If you have a valid Syncfusion license, you can **generate a license key for a specific version and product** from [this page](https://www.syncfusion.com/account/downloads).
 
@@ -95,7 +95,7 @@ If the application is registered with another version’s license key, the follo
 
 **Solution:**
 
-License keys are version and product specific. So, if you use blazor components through trial installer or obtained our components via [NuGet.org](https://www.nuget.org/packages?q=syncfusion), you can choose from the options listed below
+License keys are version and product specific. So, if you use Blazor components through trial installer or obtained our components via [NuGet.org](https://www.nuget.org/packages?q=syncfusion), you can choose from the options listed below
 
 1. If you have a valid Syncfusion license, you can **generate a license key for a specific version and product** from [this page](https://www.syncfusion.com/account/downloads).
 
@@ -109,7 +109,7 @@ License keys are version and product specific. So, if you use blazor components 
 
 1. Ensure that respective version [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing/) nuget package or assembly is referred properly in the application.
 
-2. Ensure that all the Syncfusion assemblies referenced are of the same version and that the corresponding version and product's license key is registered in the application.
+2. Ensure that all the Syncfusion assemblies referenced are of the same version and that the corresponding version and product's license key are registered in the application.
 
 3. The license key should be registered before initializing any Syncfusion controls in the application. Refer [this](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application)  page for more information on registering license keys.
 

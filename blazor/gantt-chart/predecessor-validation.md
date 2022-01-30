@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Predecessor validation in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Predecessor validation in Syncfusion Blazor Gantt Chart componente.
+description: Checkout and learn here all about predecessor validation in Syncfusion Blazor Gantt Chart component.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -63,7 +63,7 @@ By default, Gantt tasks date values are validated based on predecessor values. Y
 
 ## Custom validation using OnActionBegin event
 
-In Gantt, task relationship link can be broken by editing the start date, end date and duration value of task. When the task relationship broken on any edit action it can be handled in Gantt by following ways.
+In Gantt, the task relationship link can be broken by editing the start date, end date, and duration value of task. When the task relationship is broken on any edit action, it can be handled in Gantt in the following ways.
 
 ### Validation mode
 

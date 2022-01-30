@@ -112,7 +112,7 @@ The following screenshot shows the output of multicolumn sorting in Gantt Chart 
 > * Gantt Chart columns are sorted in the ascending order. If you click the already sorted column, the sort direction toggles.
 > * To disable sorting for a particular column, set the `GanttColumn.AllowSorting` property to false.
 
-## Sorting Column on Gantt Chart Initialization
+## Sorting column on Gantt Chart initialization
 
 The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component can be rendered with sorted columns initially, and this can be achieved by using the `GanttSortSettings` property. You can add columns that are sorted initially in the `GanttSortSettings.GanttSortDescriptors` collection defined with `Field` and `Direction` properties. The following code example shows how to add the sorted column to Gantt Chart initialization.
 
@@ -214,7 +214,7 @@ The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gan
 }
 ```
 
-## Sorting Column dynamically
+## Sorting column dynamically
 
 Columns in the Gantt Chart component can be sorted dynamically using the `SortByColumnAsync` method. The following code example demonstrates how to invoke the `SortByColumnAsync` method by clicking the custom button.
 
@@ -318,7 +318,7 @@ Columns in the Gantt Chart component can be sorted dynamically using the `SortBy
 
 ![Sorting in Blazor Gantt Chart](images/blazor-gantt-chart-sorting.png)
 
-## Clear all the Sorted Columns dynamically
+## Clear all the sorted Columns dynamically
 
 In the Gantt Chart component, you can clear all the sorted columns and return to previous position using the `ClearSortingAsync` public method. The following code snippet shows how to clear all the sorted columns by clicking the custom button.
 
@@ -428,7 +428,7 @@ In the Gantt Chart component, you can clear all the sorted columns and return to
 
 ![Clear Sorting in Blazor Gantt Chart](images/blazor-gantt-chart-clear-sorting.png)
 
-## Sorting Events
+## Sorting events
 
 During the sort action, the Gantt Chart component triggers two events. The `OnActionBegin` event triggers before the sort action starts, and the `OnActionComplete` event triggers after the sort action is completed.
 
@@ -535,7 +535,7 @@ During the sort action, the Gantt Chart component triggers two events. The `OnAc
 
 > The `args.RequestType` is the current action name. For example, for sorting the `args.RequestType`, value is **Sorting**.
 
-## Sorting Custom Columns
+## Sorting custom columns
 
 In Gantt, you can sort custom columns of different types like string, numeric, etc., By adding the custom column in the column collection, you can perform initial sort using the `GanttSortSettings` or you can also sort the column dynamically by a button click.
 

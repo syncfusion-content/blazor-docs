@@ -12,7 +12,7 @@ documentation: ug
 ## Selection change
 
 * While selecting the diagram elements, the following events can be used to do the customization.
-* When selecting/unselecting the diagram elements, the following events are getting triggered and to do customization on those events
+* When selecting/unselecting the diagram elements, the following events will be triggered to do customization on those events.
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
@@ -67,17 +67,17 @@ The following code example explains how to get the selection change event in the
         connectors.Add(Connector);
     }
 
-    // To notify the selection changing event before select/unselect the diagram elements
+    // To notify the selection changing event before selecting/unselecting the diagram elements.
     public void OnSelectionChanging(SelectionChangingEventArgs args)
     {
-    //sets true to cancel the selection.
+    //Sets true to cancel the selection.
     args.Cancel = true;
     }
 
     // To notify the selection is changed in the diagram.
     private void OnSelectionChanged(SelectionChangedEventArgs arg)
     {
-        //Action to be performed
+        //Action to be performed.
     }
 }
 ```
@@ -137,17 +137,17 @@ The following code example explains how to get the selection change event in the
         connectors.Add(Connector);
     }
 
-    // To notify the position changing event before dragging the diagram elements
+    // To notify the position changing event before dragging the diagram elements.
     public void OnPositionChanging(PositionChangingEventArgs args)
     {
-    //sets true to cancel the dragging.
+    //Sets true to cancel the dragging.
     args.Cancel = true;
     }
 
-    // To notify the position changed event after dragged the diagram elements.
+    // To notify the position changed event after dragging the diagram elements.
     private void OnPositionChanged(PositionChangedEventArgs arg)
     {
-        //Action to be performed
+        //Action to be performed.
     }
 }
 ```
@@ -158,7 +158,7 @@ The following code example explains how to get the selection change event in the
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
-|[ConnectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectionChanging)|[ConnectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectionChangingEventArgs.html)|Triggers before the connector’s source or target point is connect or disconnect from the source or target.|
+|[ConnectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectionChanging)|[ConnectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectionChangingEventArgs.html)|Triggers before the connector’s source or target point is connected or disconnected from the source or target.|
 |[ConnectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectionChanged)|[ConnectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectionChangedEventArgs.html)|Triggers when the connector’s source or target point is connected or disconnected from the source or target.|
 
 ```cshtml
@@ -215,17 +215,17 @@ The following code example explains how to get the selection change event in the
         connectors.Add(Connector);
     }
 
-    // To notify the  connection changing event before the connection change
+    // To notify the connection changing event before the connection change.
     private void OnConnectionChanging(ConnectionChangingEventArgs args)
     {
-        //sets true to cancel the connection change.
+        //Sets true to cancel the connection change.
         args.Cancel = true;
     }
 
-    // To notify the  connection changed event after connection has changed
+    // To notify the connection changed event after the connection has changed.
     private void OnConnectionChange(ConnectionChangedEventArgs args)
     {
-        //Action to be performed
+        //Action to be performed.
     }
 }
 ```
@@ -234,6 +234,6 @@ The following code example explains how to get the selection change event in the
 
 * [How to customize the connector properties](./customization)
 
-* [How to interact the connector](./interactions)
+* [How to interact with the connector](./interactions)
 
 * [How to change the segments](./segments)

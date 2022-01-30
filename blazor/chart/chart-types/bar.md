@@ -17,7 +17,7 @@ documentation: ug
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart Title="Olympic Medals">    
+<SfChart Title="Olympic Medals">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
 
@@ -33,7 +33,7 @@ documentation: ug
         public string Country { get; set; }
         public double Gold { get; set; }
     }
-	
+
     public List<ChartData> MedalDetails = new List<ChartData>
 	{
 		new ChartData{ Country= "USA", Gold=50  },
@@ -47,7 +47,7 @@ documentation: ug
     };
 }
 
-``` 
+```
 
 > Refer to our [Blazor Bar Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/bar-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Bar Chart Example](https://blazor.syncfusion.com/demos/chart/bar?theme=bootstrap4) to compare values across categories by using horizontal bars.
 

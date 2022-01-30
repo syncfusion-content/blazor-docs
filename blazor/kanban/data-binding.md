@@ -13,12 +13,12 @@ The Kanban uses [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 It supports the following types of data binding:
 
-* List binding
+* Local data
 * Remote data
 
 > When using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) as `IEnumerable<T>`, component type(TValue) will be inferred from its value. When using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding, the TValue must be provided explicitly in the Kanban component.
 
-## List binding
+## Local data
 
 In list binding, you can assign an IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) property. The list data source can also be provided as an instance of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
 
@@ -65,6 +65,11 @@ In list binding, you can assign an IEnumerable object to the [DataSource](https:
 Kanban is a generic component that is strongly bound to a model type.  In some cases, the model type may be unknown during compile time. In such cases, you can bind data to the Kanban as a list of ExpandoObject.
 
 ExpandoObject can be bound to Kanban by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) property. Kanban can also perform all kinds of supported data operations and editing in ExpandoObject.
+
+To get start quickly with Blazor Kanban component using ExpandoObject and DynamicObject binding, you can check on this video
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=qkm_zPW3MSk" %}
 
 ```cshtml
 @using Syncfusion.Blazor.Kanban
@@ -173,6 +178,19 @@ DynamicObject can be bound to Kanban by assigning DynamicObject to the [DataSour
 
 ![Dynamic object in Blazor Kanban](./images/blazor-kanban-dynamic-object.png)
 
+### Observable collection
+
+This [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8)(dynamic data collection) shows notifications when the items are added, removed, and moved. Implementing the [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) will notify when there is any dynamic change (add, remove, move, and clear) in the collection. Implementing  the [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) will notify when the property value has been changed on the client side.
+
+Here, the Order class implements the interface of **INotifyPropertyChanged** and it raises the event when the Status property value was changed.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/observable-collection.razor %}
+
+{% endhighlight %}
+
+![Observable object binding in Blazor Kanban](./images/blazor-kanban-observable-object.png)
 ## Remote data
 
 Bind the remote data services to Kanban component by assigning service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) property or by using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
@@ -570,123 +588,16 @@ The following example demonstrates the custom adaptor usage and how to bind the 
 
 You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-kanban-crud-custom-adaptor).
 
-## Observable collection
+## Complex data binding
 
-This [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8)(dynamic data collection) shows notifications when the items are added, removed, and moved. Implementing the [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) will notify when there is any dynamic change (add, remove, move, and clear) in the collection. Implementing  the [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) will notify when the property value has been changed on the client side.
+Kanban support to map the complex properties to fields of [KanbanCardSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanCardSettings.html), [KanbanSwimlaneSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanSwimlaneSettings.html) and [KanbanSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanSortSettings.html). Kanban support to map complex properties when using `ExpandoObject` and `DynamicObject` also.
 
-Here, the Order class implements the interface of **INotifyPropertyChanged** and it raises the event when the Status property value was changed.
+In the following sample, Kanban fields are mapped with complex data binding.
 
-```cshtml
-@using Syncfusion.Blazor.Kanban
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.Notifications
-@using System.Collections.ObjectModel;
-@using System.ComponentModel;
+{% highlight cshtml %}
 
-<div class="col-lg-12 control-section">
-    <div class="content-wrapper" id="toast-kanban-observable">
-        <div class="row">
-            <div class="btn" style="margin: 0 0 7px 7px;">
-                <SfButton @onclick="AddRecord">Add Card</SfButton>
-                <SfButton @onclick="DeleteRecord">Delete Card</SfButton>
-                <SfButton @onclick="UpdateRecord">Update Card</SfButton>
-            </div>
-            <SfKanban KeyField="Status" DataSource="@ObservableData">
-                <KanbanColumns>
-                    @foreach (ColumnModel item in columnData)
-                    {
-                        <KanbanColumn HeaderText="@item.HeaderText" KeyField="@item.KeyField" AllowAdding="true"></KanbanColumn>}
-                </KanbanColumns>
-                <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
-            </SfKanban>
-            <SfToast @ref="ToastObj" ID="toast_type" Content="@ToastContent" Timeout=2000 Target="@ToastTarget">
-                <ToastPosition X="Right" Y="Top"></ToastPosition>
-            </SfToast>
-        </div>
-    </div>
-</div>
+{% include_relative code-snippet/complex-data.razor %}
 
-@code{ 
-SfToast ToastObj;
-    private List<ColumnModel> columnData = new List<ColumnModel>() {
-        new ColumnModel(){ HeaderText= "To Do", KeyField= new List<string>() { "Open" } },
-        new ColumnModel(){ HeaderText= "In Progress", KeyField= new List<string>() { "In Progress" } },
-        new ColumnModel(){ HeaderText= "Testing", KeyField= new List<string>() { "Testing" } },
-        new ColumnModel(){ HeaderText= "Done", KeyField=new List<string>() { "Close" } }
-    };
-    public ObservableCollection<ObservableDatas> ObservableData { get; set; }
-    private string ToastContent { get; set; }
-    List<ObservableDatas> Tasks = new List<ObservableDatas>();
-    private int AddUniqueId { get; set; }
-    private int UpdateUniqueId { get; set; }
-    private string ToastTarget { get; set; } = "#toast-kanban-observable";
-    protected override void OnInitialized()
-    {
-        Tasks = Enumerable.Range(1, 20).Select(x => new ObservableDatas()
-        {
-            Id = "Task 1000" + x,
-            Status = (new string[] { "Open", "In Progress", "Testing", "Close" })[new Random().Next(4)],
-            Summary = (new string[] { "Analyze the new requirements gathered from the customer.", "Improve application performance", "Fix the issues reported in the IE browser.", "Validate new requirements", "Test the application in the IE browser." })[new Random().Next(5)],
-            Assignee = (new string[] { "Nancy Davloio", "Andrew Fuller", "Janet Leverling", "Steven walker", "Margaret hamilt", "Michael Suyama", "Robert King" })[new Random().Next(7)],
-        }).ToList();
-        ObservableData = new ObservableCollection<ObservableDatas>(Tasks);
-    }
-    public async Task AddRecord()
-    {
-        var TaskId = "Task 10000" + ++AddUniqueId;
-        this.ToastContent = "<b>Open</b> Column, <b>" + TaskId + "</b> Card has been added";
-        await Task.Delay(100);
-        ObservableData.Add(new ObservableDatas() { Id = TaskId, Status = "Open", Summary = "Improve application performance", Assignee = "Janet Leverling" });
-        await this.ToastObj.ShowAsync();
-    }
-    public async Task DeleteRecord()
-    {
-        if (ObservableData.Count() != 0)
-        {
-            this.ToastContent = "<b>" + ObservableData.First().Status + "</b> Column, <b>" + ObservableData.First().Id + "</b> Card has been deleted";
-            await Task.Delay(100);
-            ObservableData.Remove(ObservableData.First());
-            await this.ToastObj.ShowAsync();
-        }
-    }
-    public async Task UpdateRecord()
-    {
-        if (ObservableData.Count() != 0)
-        {
-            var updateId = ++UpdateUniqueId;
-            var data = ObservableData[updateId];
-            this.ToastContent = "<b>" + data.Status + "</b> Column, <b>" + data.Id + "</b> Card has been updated";
-            await Task.Delay(100);
-            data.Summary = "Card Updated";
-            await this.ToastObj.ShowAsync();
-        }
-    }
-    public class ObservableDatas : INotifyPropertyChanged
-    {
-        public string Id { get; set; }
-        private string status { get; set; }
-        public string Status
-        {
-            get { return status; }
-            set
-            {
-                this.status = value;
-                NotifyPropertyChanged("Status");
-            }
-        }
-        public string Summary { get; set; }
-        public string Assignee { get; set; }
-        public event PropertyChangedEventHandler PropertyChanged;
-        private void NotifyPropertyChanged(string propertyName)
-        {
-            var handler = PropertyChanged;
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
-    } }
+{% endhighlight %}
 
-```
-
-![Observable object binding in Blazor Kanban](./images/blazor-kanban-observable-object.png)
+![Complex Data Binding in Blazor Kanban](./images/blazor-kanban-complex-data-binding.png)
