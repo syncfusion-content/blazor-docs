@@ -212,35 +212,55 @@ The following example demonstrates how to change a theme dynamically in Blazor S
 
 1. In  **_Host.cshtml**, refer syncfusion style sheet where the style sheet name is defined based on query string. 
     
-    ```cshtml
-    @page "/"
-    @namespace BlazorThemeSwitcher.Pages
-    @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Pages/_Host.cshtml)" %}
+
+@page "/"
+@namespace BlazorThemeSwitcher.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using Microsoft.AspNetCore.WebUtilities;
+@{
+    Layout = "_Layout";
+    QueryHelpers.ParseQuery(Request.QueryString.Value).TryGetValue("theme", out var themeName);
+    themeName = themeName.Count > 0 ? themeName.First() : "bootstrap";
+}
+
+<link href=@("_content/Syncfusion.Blazor.Themes/" + themeName + ".css") rel="stylesheet" />
+<component type="typeof(App)" render-mode="ServerPrerendered" />
+
+{% endhighlight %}
+{% highlight c# tabtitle=".NET 5 (~/Pages/_Host.cshtml)" %}
+
+@page "/"
+@namespace BlazorThemeSwitcher.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
     
-    @{
-        Layout = null;
-        QueryHelpers.ParseQuery(Request.QueryString.Value).TryGetValue("theme", out var themeName);
-        themeName = themeName.Count > 0 ? themeName.First() : "bootstrap";
-    }
-    
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>BlazorThemeSwitcher</title>
-        <base href="~/" />
-        <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-        <link href="css/site.css" rel="stylesheet" />
-        <link href="BlazorThemeSwitcher.styles.css" rel="stylesheet" />
-        <link href=@("_content/Syncfusion.Blazor.Themes/" + themeName + ".css")rel="stylesheet" />
-    </head>
-    
-    <body>
-        <script src="_framework/blazor.server.js"></script>
-    </ </body>
-    </html>
-    ```
+@{
+    Layout = null;
+    QueryHelpers.ParseQuery(Request.QueryString.Value).TryGetValue("theme", out var themeName);
+    themeName = themeName.Count > 0 ? themeName.First() : "bootstrap";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlazorThemeSwitcher</title>
+    <base href="~/" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="BlazorThemeSwitcher.styles.css" rel="stylesheet" />
+    <link href=@("_content/Syncfusion.Blazor.Themes/" + themeName + ".css")rel="stylesheet" />
+</head>
+
+<body>
+    <script src="_framework/blazor.server.js"></script>
+</ </body>
+</html>
+
+{% endhighlight %}
+{% endtabs %}
 
 2. In **MainLayout.razor** page add dropdown list with themes and in `ValueChange` event handler, the page is refreshed by changing query string to change the theme in application.
     
