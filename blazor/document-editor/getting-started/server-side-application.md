@@ -203,7 +203,7 @@ To load an existing document during control initialization, use the following co
             //To observe the memory go down, null out the reference of document variable.
             document = null;
             SfDocumentEditor editor = container.DocumentEditor;
-            editor.Open(json);
+            editor.OpenAsync(json);
             //To observe the memory go down, null out the reference of json variable.
             json = null;
         }
