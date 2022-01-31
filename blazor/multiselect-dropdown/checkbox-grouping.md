@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Checkbox grouping in Blazor MultiSelect Component | Syncfusion
-description: Checkout and learn here all about Checkbox grouping in Syncfusion Blazor MultiSelect component and much more.
+description: Checkout and learn here all about checkbox grouping in Syncfusion Blazor MultiSelect component and much more.
 platform: Blazor
 control: MultiSelect
 documentation: ug
@@ -47,7 +47,5 @@ You can arrange the datasource items by grouping them with checkbox mode in Mult
 }
 
 ```
-
-The output will be as follows.
 
 ![Blazor MultiSelect DropDown with Checkbox Grouping](./images/blazor-multiselect-dropdown-checkbox-grouping.png)

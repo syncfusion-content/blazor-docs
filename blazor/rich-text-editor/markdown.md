@@ -97,3 +97,4 @@ The Markdown table constants can be changed for the table heading and the column
 ## See Also
 
 * [How to change the editor mode](./editor-modes/#markdown-editor)
+* [How to convert Markdown string to HTML](https://www.syncfusion.com/kb/12478)

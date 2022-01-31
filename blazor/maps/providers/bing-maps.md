@@ -159,4 +159,29 @@ Markers can be added to the layers of Bing Maps by setting the corresponding loc
 
 Any GeoJSON shape can be rendered as a sublayer on top of the Bing Maps layer for highlighting a particular continent or country in Bing Maps by adding another layer and specifying the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to **SubLayer**.
 
->[Refer to section](../how-to/display-geometry-shapes-in-bing-maps) to learn how to add a sublayer in Bing Maps
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsLayers>
+        <MapsLayer UrlTemplate="@UrlTemplate" TValue="string"></MapsLayer>
+        @* To add geometry shape as sublayer *@
+        <MapsLayer ShapeData='new {dataOptions = "https://cdn.syncfusion.com/maps/map-data/africa.json"}'
+                   Type="Syncfusion.Blazor.Maps.Type.SubLayer" TValue="string">
+            <MapsShapeSettings Fill="blue"></MapsShapeSettings>
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+
+@code {
+    public string UrlTemplate;
+    protected override async Task OnInitializedAsync()
+    {
+        UrlTemplate = await SfMaps.GetBingUrlTemplate("https://dev.virtualearth.net/REST/V1/Imagery/Metadata/CanvasGray?output=json&uriScheme=https&key=");
+    }
+}
+```
+
+> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
+
+![Blazor Bing Maps with Sublayer](../images/blazor-bing-map-sublayer.PNG)

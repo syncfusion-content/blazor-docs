@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Use Case Scenarios in Blazor Menu Bar Component | Syncfusion
-description: Checkout and learn here all about Use Case Scenarios in Syncfusion Blazor Menu Bar component and more.
+description: Checkout and learn here all about use case scenarios in Syncfusion Blazor Menu Bar component and more.
 platform: Blazor
 control: Menu Bar 
 documentation: ug
@@ -73,8 +73,6 @@ The Menu Bar component supports horizontal and vertical scrolling to render larg
 
 ```
 
-Output be like
-
 ![Blazor MenuBar with Scroller](./images/blazor-menubar-scroller.png)
 
 ## Hamburger Menu
@@ -141,8 +139,6 @@ The following example demonstrates the use case of [HamburgerMenu](https://help.
 </style>
 
 ```
-
-Output be like
 
 ![Blazor MenuBar with Hamburger Menu](./images/blazor-menubar-with-hamburger-menu.png)
 
@@ -287,7 +283,5 @@ The following example demonstrates the use case of Menu Bar in Mobile mode with 
 </style>
 
 ```
-
-Output be like
 
 ![Blazor MenuBar with Mobile View](./images/blazor-menubar-mobile-view.png)

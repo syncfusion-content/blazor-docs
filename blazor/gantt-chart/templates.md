@@ -15,7 +15,7 @@ The available template options in Gantt Chart are as follows,
 * [Column template](./columns/#column-template) - Used to customize cell content.
 * [Header template](./columns/#header-template) - Used to customize header cell content.
 
-## Template Context
+## Template context
 
 Most of the templates used by the Gantt Chart are of type `RenderFragment<T>` and they will be passed with parameters. The parameters passed can be accessed to the templates using implicit parameter named `context`. This implicit parameter name can also be changed using the `Context` attribute.
 
@@ -28,7 +28,7 @@ If a component contains any `RenderFragment` type property then it does not allo
 
 This prevents from directly specifying templates such as `TaskbarTemplate` and `MilestoneTemplate` as descendant of the Gantt Chart component. Hence the templates such as `TaskbarTemplate` and `MilestoneTemplate` should be wrapped around a component named `GanttTemplates` as follows.
 
-### Taskbar Template
+### Taskbar template
 
 You can design your taskbars to view the tasks in Gantt Chart Chart by using `GanttTemplates.TaskbarTemplate` property. It is also possible to customize the parent taskbars and milestones with custom templates by using `GanttTemplates.ParentTaskbarTemplate` and `GanttTemplates.MilestoneTemplate` properties.
 

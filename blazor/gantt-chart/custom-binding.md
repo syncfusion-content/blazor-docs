@@ -41,7 +41,7 @@ public abstract class DataAdaptor
     public virtual object Remove(DataManager dataManager, object data, string keyField, string key)
 
     /// <summary>
-    /// Performs Remove operation asynchronously..
+    /// Performs Remove operation asynchronously.
     /// </summary>
     public virtual Task<object> RemoveAsync(DataManager dataManager, object data, string keyField, string key)
 
@@ -133,10 +133,10 @@ The following sample code demonstrates implementing custom data binding using cu
         return gantt;
     }
 
-    // Implementing custom adaptor by extending the DataAdaptor class
+    // Implementing custom adaptor by extending the DataAdaptor class.
     public class CustomAdaptor : DataAdaptor
     {
-        // Performs data Read operation
+        // Performs data Read operation.
         public override object Read(DataManagerRequest dm, string key = null)
         {
             IEnumerable<TaskData> DataSource = GanttData;
@@ -256,10 +256,10 @@ The following sample code demonstrates injecting service into Custom Adaptor,
         return gantt;
     }
 
-    // Implementing custom adaptor by extending the DataAdaptor class
+    // Implementing custom adaptor by extending the DataAdaptor class.
     public class CustomAdaptor : DataAdaptor
     {
-        //here you can inject your service
+        //Here, you can inject your service.
         [Inject]
         public TaskDataAccessLayer context { get; set; } = new TaskDataAccessLayer();
         // Performs data Read operation
@@ -310,7 +310,7 @@ The CRUD operations for the custom bounded data in the Gantt component can be im
 * **Update/UpdateAsync**
 * **BatchUpdate/BatchUpdateAsync**
 
-> While using batch editing in Gantt, use BatchUpdate/BatchUpdateAsync method to handle the corresponding CRUD operation
+> While using batch editing in Gantt, use BatchUpdate/BatchUpdateAsync method to handle the corresponding CRUD operation.
 
 The following sample code demonstrates implementing CRUD operations for the custom bounded data,
 
@@ -380,10 +380,10 @@ The following sample code demonstrates implementing CRUD operations for the cust
         return gantt;
     }
 
-    // Implementing custom adaptor by extending the DataAdaptor class
+    // Implementing custom adaptor by extending the DataAdaptor class.
     public class CustomAdaptor : DataAdaptor
     {
-        // Performs data Read operation
+        // Performs data Read operation.
         public override object Read(DataManagerRequest dm, string key = null)
         {
             IEnumerable<TaskData> DataSource = GanttData;
@@ -420,7 +420,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
             return value;
         }
 
-        // Performs Remove operation
+        // Performs Remove operation.
         public override object Remove(DataManager dm, object value, string keyField, string key)
         {
             foreach (var record in value as List<TaskData>)
@@ -430,7 +430,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
             return value;
         }
 
-        // Performs Update operation
+        // Performs Update operation.
         public override object Update(DataManager dm, object value, string keyField, string key)
         {
             foreach(var record in value as List<TaskData>)
@@ -452,4 +452,4 @@ The following sample code demonstrates implementing CRUD operations for the cust
 }
 ```
 
-> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.
+> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.
