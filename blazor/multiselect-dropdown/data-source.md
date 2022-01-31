@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Source in Blazor MultiSelect Dropdown Component | Syncfusion
-description: Checkout and learn here all about Data Source in Syncfusion Blazor MultiSelect Dropdown component and more.
+description: Checkout and learn here all about data source in Syncfusion Blazor MultiSelect Dropdown component and more.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
@@ -73,8 +73,6 @@ In the following example, `Name` column from complex data have been mapped to th
 }
 ```
 
-The output will be as follows.
-
 ![Binding Blazor MultiSelect DropDown Items](./images/blazor-multiselect-dropdown-binding-items.png)
 
 ### 2. Array of complex object
@@ -122,8 +120,6 @@ public List<Complex> LocalData { get; set; } = new Complex().GetData();
 }
 ```
 
-The output will be as follows.
-
 ![Binding Complext Items with Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-complex-item.png)
 
 ## Binding remote data
@@ -161,8 +157,6 @@ The following sample displays the first 6 contacts from **Customers** table of t
 }
 ```
 
-The output will be as follows.
-
 ![Blazor MultiSelect DropDown with Data Binding](./images/blazor-multiselect-dropdown-with-data-binding.png)
 
 ### Web API Adaptor
@@ -191,17 +185,15 @@ Use the `WebApiAdaptor` to bind MultiSelect with Web API created using OData.
 }
 ```
 
-The output will be as follows.
-
 ![Blazor MultiSelect DropDown with Web API Data](./images/blazor-multiselect-dropdown-web-api-data.png)
 
 ### Custom Adaptor
 
-The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the MultiSelect component.
+The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the MultiSelect component.
 
 For implementing custom data binding in MultiSelect, the `DataAdaptor` class is used. This abstract class acts as a base class for the custom adaptor.
 
-The `DataAdaptor` abstract class has both synchronous and asynchronous method signatures which can be overridden in the custom adaptor. Following are the method signatures present in this class,
+The `DataAdaptor` abstract class has both synchronous and asynchronous method signatures which can be overridden in the custom adaptor.
 
 ```csharp
 public abstract class DataAdaptor
@@ -219,8 +211,6 @@ public abstract class DataAdaptor
 ```
 
 The custom data binding can be performed in the MultiSelect component by providing the custom adaptor class and overriding the Read or ReadAsync method of the DataAdaptor abstract class.
-
-The following sample code demonstrates implementing custom data binding using custom adaptor,
 
 ```cshtml
 <SfMultiSelect TValue="string[]" TItem="Orders">
@@ -278,8 +268,6 @@ The following sample code demonstrates implementing custom data binding using cu
 
 To avoid post back for every action, set the MultiSelect to load all data on initialization and make the actions process in client-side. To enable this behaviour, use the `Offline` property of `DataManager`.
 
-The following example for remote data binding and enabled offline mode.
-
 ```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
@@ -302,13 +290,11 @@ The following example for remote data binding and enabled offline mode.
 }
 ```
 
-The output will be as follows.
-
 ![Blazor MultiSelect DropDown in Offline Mode](./images/blazor-multiselect-dropdown-web-api-data.png)
 
 ### ValueTuple data binding
 
-You can bind [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0) data to the MultiSelect component. The following code helps you to get a string value from the enumeration data by using [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0).
+You can bind [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0) data to the MultiSelect component. The following code helps to get a string value from the enumeration data by using [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0).
 
 ```csharp
 
@@ -320,8 +306,6 @@ You can bind [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.val
 </SfMultiSelect>
 
 ```
-
-The output will shown as follows,
 
 ![Blazor MultiSelect DropDown ValueTuple Data](./images/blazor-multiselect-dropdown-valuetuple.png)
 
@@ -353,8 +337,6 @@ You can bind [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.
 }
 
 ```
-
-The output will shown as follows,
 
 ![Blazor MultiSelect with expando object data binding](./images/blazor_multiselect_expando-object.png)
 
@@ -406,8 +388,6 @@ You can bind [DynamicObject](https://docs.microsoft.com/en-us/dotnet/api/system.
 
 ```
 
-The output will shown as follows,
-
 ![Blazor MultiSelect with dynamic object data binding](./images/blazor_multiselect_dynamic-object.png)
 
 ## Binding ObservableCollection
@@ -451,8 +431,6 @@ You can bind [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/
 
 ```
 
-The output will shown as follows,
-
 ![Blazor MultiSelect with observable collection data binding](./images/blazor_multiselect_observable-collection.png)
 
 ## Entity Framework
@@ -490,7 +468,7 @@ namespace EFDropDown.Shared.DataAccess
 
 ### Create data access layer to perform data operation
 
-Now you need to create a class named **OrderDataAccessLayer**, which act as data access layer for retrieving the records from the database table.
+Now, create a class named **OrderDataAccessLayer**, which acts as data access layer for retrieving the records from the database table.
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
@@ -571,7 +549,7 @@ namespace EFDropDown.Controllers
 
 ### Configure MultiSelect component using Web API adaptor
 
-Now you can configure the MultiSelect using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with web api, you need to use WebApiAdaptor.
+Now, the MultiSelect can be configured using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with web api, you need to use WebApiAdaptor.
 
 ```cshtml
 @using Syncfusion.Blazor.Data

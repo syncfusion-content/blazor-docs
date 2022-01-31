@@ -9,11 +9,11 @@ documentation: ug
 
 # Resources in Blazor Gantt Chart Component
 
-In [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart), the resources are represented by staff, equipment and materials etc. In Gantt Chart component you can show or allocate the resources (human resources) for each task.
+In [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart), the resources are represented by staff, equipment, materials, etc. In the Gantt Chart component, you can show or allocate the resources (human resources) for each task.
 
-## Resource Collection
+## Resource collection
 
-The resource collection contains details about resources that are used in the project. Resources are List of TResources object that contains id, name and unit of the resources and this collection is mapped to the Gantt Chart component using the `GanttResourceFields.Resources` property. Id, name and unit field of the resources are mapped by using the `GanttResourceFields.Id` , `GanttResourceFields.Name` and `GanttResourceFields.Unit` properties. The following code snippets shows resource collection and how it assigned to Gantt Chart component.
+The resource collection contains details about resources that are used in the project. Resources are a list of TResources objects that contain id, name, and unit of the resources, and this collection is mapped to the Gantt Chart component using the `GanttResourceFields.Resources` property. Id, name, and unit field of the resources are mapped by using the `GanttResourceFields.Id`, `GanttResourceFields.Name`, and `GanttResourceFields.Unit` properties. The following code snippets show resource collection and how it is assigned to the Gantt Chart component.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -154,17 +154,17 @@ The resource collection contains details about resources that are used in the pr
 }
 ```
 
-## Assign Resource
+## Assign resource
 
-We can assign resources for a task at initial load by using the resource id value of the resources as a collection. This collection is mapped from the dataSource to the Gantt Chart component using the `GanttTaskFields.ResourceInfo` property.
+You can assign resources for a task at initial load by using the resource id value of the resources as a collection. This collection is mapped from the dataSource to the Gantt Chart component using the `GanttTaskFields.ResourceInfo` property.
 
 * Gantt TValue for Resource mapping collection name should be the same as `GanttTaskFields.ResourceInfo`.
 * Gantt Resource mapping collection should have the value for Id. Both Name and Unit values are optional.
 * If the unit is not specified for a specific resource, the amount of work done will be considered as 100% by default. In such cases, the resource unit will not be displayed in Gantt UI.
 
-### Assign Resource with Unit
+### Assign resource with unit
 
-We can assign the quantity of work done by the resources for the specific task as like below code snippet.
+You can assign the quantity of work done by the resources for the specific task as shown in the following code snippet.
 
 ```csharp
 new TaskData() {
@@ -178,9 +178,9 @@ new TaskData() {
 },
 ```
 
-When resource unit is defined in resource collection, the amount of work done by that particular resource will be same for all the tasks.
+When the resource unit is defined in resource collection, the amount of work done by that particular resource will be the same for all the tasks.
 
-The following code snippet shows how to assign the resource for each task and map to Gantt Chart component.
+The following code snippet shows how to assign the resource for each task and map it to the Gantt Chart component.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -342,9 +342,9 @@ The following code snippet shows how to assign the resource for each task and ma
 
 ![Assigning Resource in Blazor Gantt Chart](images/blazor-gantt-chart-assign-resource.png)
 
-## Add / Edit Resource Collection
+## Add/Edit resource collection
 
-By using cell editing or dialog editing, we can add/remove the resource for particular task.
+By using cell editing or dialog editing, you can add/remove the resource for particular task.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -503,7 +503,7 @@ By using cell editing or dialog editing, we can add/remove the resource for part
 }
 ```
 
-`Note:` When the edit mode is set as `Auto`, on performing double click action on Tree Grid side the cells will be changed to editable mode and on performing double click action on chart side the edit dialog will appear for editing the task details. By using this support we can add/remove the resource for particular task using both cell and edit dialog
+`Note:` When the edit mode is set as `Auto`, on performing double-click action on Tree Grid side, the cells will be changed to editable mode, and on performing double-click action on chart side, the edit dialog will appear for editing the task details. By using this support, you can add/remove the resource for particular task using both cell and edit dialog.
 
 Editing resource with cell edit
 

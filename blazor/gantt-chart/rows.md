@@ -9,9 +9,9 @@ documentation: ug
 
 # Rows in Blazor Gantt Chart Component
 
-Row represents a task information from the data source, and it is possible to perform the following actions in Gantt Chart rows.
+Row represents task information from the data source, and it is possible to perform the following actions in Gantt Chart rows.
 
-## Row Height
+## Row height
 
 It is possible to change the height of the row in Gantt Chart by setting row height in pixels to the `RowHeight` property. The following code example explains how to change the row height in Gantt Chart at load time.
 
@@ -110,13 +110,13 @@ It is possible to change the height of the row in Gantt Chart by setting row hei
 
 ![Changing Row Height in Blazor Gantt Chart](images/blazor-gantt-chart-row-height.png)
 
-## Expand or Collapse Row
+## Expand or collapse row
 
-In Gantt Chart parent tasks are expanded/collapsed by using expand/collapse icons, expand all/collapse all toolbar items and by using public methods. By default all tasks in Gantt Chart was rendered in expanded state but we can change this status through properties below.
+In Gantt Chart, parent tasks are expanded/collapsed by using expand/collapse icons, expand all/collapse all toolbar items, and public methods. By default, all tasks in Gantt Chart are rendered in expanded state, but you can change this status using the properties below.
 
-### Collapse All Tasks at Gantt Chart Load
+### Collapse all tasks at Gantt Chart load
 
-All tasks available in Gantt Chart was rendered in collapsed state by setting `CollapseAllParentTasks` property as `true`. The following code example shows how to use this property.
+All tasks available in Gantt Chart are rendered in collapsed state by setting the `CollapseAllParentTasks` property as `true`. The following code example shows how to use this property.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -215,9 +215,9 @@ All tasks available in Gantt Chart was rendered in collapsed state by setting `C
 
 ![Blazor Gantt Chart with Collapsed Row](images/blazor-gantt-chart-with-collapse-row.png)
 
-<!-- Define Expand / Collapse Status of Tasks
+<!-- Define Expand/Collapse Status of Tasks
 
-In Gantt Chart, we can render some tasks in collapsed state and some tasks in expanded state, this can done by defining expand status of the task in data source. This value was mapped to Gantt Chart component by using `GanttTaskFields.ExpandState` property. The following code example shows how to use this property.
+In Gantt Chart, you can render some tasks in collapsed state and some tasks in expanded state by defining expand status of the task in the data source. This value was mapped to Gantt Chart component by using `GanttTaskFields.ExpandState` property. The following code example shows how to use this property.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -317,9 +317,9 @@ In Gantt Chart, we can render some tasks in collapsed state and some tasks in ex
 
 ![Alt text](images/expandState.png) -->
 
-### Customize Expand and Collapse action
+### Customize expand and collapse action
 
-On expand action `Expanding` and `Expanded` event will be triggered with current expanding row’s information. Similarly on collapse action `Collapsing` and `Collapsed` event will be triggered. Using this events and it’s arguments we can customize the expand/collapse action. The following code example shows how to prevent the particular row from expand/collapse action using `Expanding` and `Collapsing` event.
+On expand action, `Expanding` and `Expanded` events will be triggered with current expanding row’s information. Similarly, on collapse action, `Collapsing` and `Collapsed` events will be triggered. Using these events and their arguments, you can customize the expand/collapse action. The following code example shows how to prevent the particular row from expand/collapse action using the `Expanding` and `Collapsing` events.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -428,9 +428,9 @@ On expand action `Expanding` and `Expanded` event will be triggered with current
 }
 ```
 
-## Drag and Drop
+## Drag and drop
 
-You can dynamically rearrange the rows in the Gantt Chart component by using the `AllowRowDragAndDrop` property. Using this property, row drag and drop can be enabled or disabled in Gantt. Using this feature, rows can be dropped at above and below as a sibling or child to the existing rows
+You can dynamically rearrange the rows in the Gantt Chart component by using the `AllowRowDragAndDrop` property. Using this property, row drag and drop can be enabled or disabled in Gantt. Using this feature, rows can be dropped above and below as a sibling or child to the existing rows.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -524,9 +524,9 @@ You can dynamically rearrange the rows in the Gantt Chart component by using the
 }
 ```
 
-### Multiple Row Drag and Drop
+### Multiple row drag and drop
 
-Gantt also supports dragging multiple rows at a time and drop them on any rows above, below, or at child positions. In Gantt, you can enable the multiple drag and drop by setting the `GanttSelectionSettings.Type` to `Multiple` and you should enable the `AllowRowDragAndDrop` property.
+Gantt also supports dragging multiple rows at a time and dropping them on any rows above, below, or at child positions. In Gantt, you can enable the multiple drag and drop by setting the `GanttSelectionSettings.Type` to `Multiple` and you should enable the `AllowRowDragAndDrop` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -621,20 +621,20 @@ Gantt also supports dragging multiple rows at a time and drop them on any rows a
 }
 ```
 
-### Drag and Drop Events
+### Drag and drop events
 
-We provide various events to customize the row drag and drop action, the following table explains about the available events and its details.
+Several events are available to customize the row drag and drop action. The following table explains about the available events and their details.
 
 Event Name |Description
 -----|-----
 `OnRowDragStart`  |Triggers when drag action starts in Gantt.
 `RowDropped`  |Triggers when a drag row was dropped on the target row.
 
-<!-- Customize Row Drag and Drop action
+<!-- Customize row drag and drop action
 
 In Gantt, the `OnRowDragStart` and `RowDropped` events are triggered on row drag and drop action. Using this event, you can prevent dragging of particular record, validate the drop position, and cancel the drop action based on the target record and dragged record. The following topics explains about this.
 
- Prevent Dragging of Particular Record
+ Prevent dragging of particular record
 
 You can prevent drag action of the particular record by setting the `Cancel` property to `true`, which is available in the `OnRowDragStart` event argument based on our requirement. In the following sample, drag action was restricted for first parent record and its child records.
 
@@ -736,9 +736,9 @@ You can prevent drag action of the particular record by setting the `Cancel` pro
 }
 ``` -->
 
-### Perform Row Drag and Drop action Programmatically
+### Perform row drag and drop action programmatically
 
-Gantt provides option to perform row drag and drop action programmatically by using the `ReorderRowsAsync` method, this method can be used for any external actions like button click.
+Gantt provides option to perform row drag and drop action programmatically by using the `ReorderRowsAsync` method. This method can be used for any external actions like button click.
 The following arguments are used to specify the positions to drag and drop a row:
 
 * `FromIndexes`: Index value of source(dragging) row.
@@ -844,9 +844,9 @@ The following code example shows how to drag and drop a row on button click acti
 }
 ```
 
-## Customize Rows
+## Customize rows
 
-You can customize the appearance of a row in grid side, by using the `RowDataBound` event and in chart side by using `QueryChartRowInfo` event
+You can customize the appearance of a row on the grid side by using the `RowDataBound` event and on the chart side by using the `QueryChartRowInfo` event.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -957,9 +957,9 @@ You can customize the appearance of a row in grid side, by using the `RowDataBou
 
 ![Customizing Rows in Blazor Gantt Chart](images/blazor-gantt-chart-row-customization.png)
 
-## Styling Alternate Rows
+## Styling alternate rows
 
- You can change the background colour of alternative rows in Gantt chart, by overriding the class as shown below.
+ You can change the background colour of alternative rows in Gantt chart by overriding the class as shown below.
 
 ```css
 .e-altrow, tr.e-chart-row:nth-child(odd)  {
@@ -1065,4 +1065,4 @@ You can customize the appearance of a row in grid side, by using the `RowDataBou
 
 ![Changing Row Style in Blazor Gantt Chart](images/blazor-gantt-chart-row-style.png)
 
-> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.
+> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.
