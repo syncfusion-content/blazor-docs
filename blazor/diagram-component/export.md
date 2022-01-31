@@ -259,7 +259,7 @@ Diagram provides support to switch between [Portrait](https://help.syncfusion.co
 
 ### Export to PDF
 
-Diagram does not have the built-in support to convert the diagram to a PDF file, but you can achieve this by exporting the diagram as base-64 and then converting the exported file to PDF using Syncfusion.PdfExport.PdfDocument. Invoked javascript functions `downloadpdf` and `triggerdownload` methods to automatically download the pdf file. 
+Diagram does not have the built-in support to convert the diagram to a PDF file, but you can achieve this by exporting the diagram as base-64 and then converting the exported file to PDF using Syncfusion.PdfExport.PdfDocument. Invoked javascript functions `downloadPdf` and `triggerDownload` methods to automatically download the pdf file. 
 
 The following code illustrates how to export the diagram as PDF file.
 
