@@ -176,22 +176,3 @@ In the below example, `DataOrder` implements `INotifyPropertyChanged` interface 
     }
 }
 ```
-
-### List of Syncfusion Components supports INotifyPropertyChanged
-
-* AutoComplete
-* ContextMenu
-* DataGrid
-* HeatMap Chart
-* Kanban
-* ListBox
-* ListView
-* Maps
-* Menu Bar
-* Pivot Table
-* QueryBuilder
-* Scheduler
-* TreeGrid
-* TreeMap
-* TreeView
-* Breadcrumb
