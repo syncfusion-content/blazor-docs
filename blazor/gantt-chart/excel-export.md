@@ -118,11 +118,11 @@ The excel export allows exporting GanttChart data to Excel and CSV formats. You 
 }
 ```
 
-## Customize the Excel Export
+## Customize the excel export
 
 The excel export provides an option to customize mapping of the gantt chart to excel document.
 
-### Export Hidden Columns
+### Export hidden columns
 
 The excel export provides an option to export hidden columns of gantt chart by defining **IncludeHiddenColumn** as **true**.
 
@@ -363,7 +363,7 @@ The Excel export also provides an option to include custom theme for exported Ex
 
 > By default, material theme is applied to the exported Excel document.
 
-### File Name for Exported Document
+### File name for exported document
 
 You can assign the file name for the exported document by defining **FileName** property in excel export properties.
 
@@ -478,4 +478,4 @@ You can assign the file name for the exported document by defining **FileName** 
 }
 ```
 
-> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.
+> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.
