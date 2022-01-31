@@ -11,7 +11,7 @@ documentation: ug
 
 ## Localization
 
-Localization library allows you to localize the default text content of the In-place Editor to different cultures using the `Locale` property. In-place Editor following keys will be localize based on culture.
+Localization library allows you to localize the default text content of the In-place Editor to different cultures using the `Locale` property. The following keys in the In-place Editor will be localized based on culture.
 
 > Use `Resource` file to translate the static text of the In-place Editor. The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [Localization](../../common/localization/) link to know more about how to configure and use localization in the Blazor Server and WebAssembly project for Syncfusion Blazor components.
 
@@ -24,7 +24,7 @@ Localization library allows you to localize the default text content of the In-p
 | InPlaceEditor_EditAreaClick | Click to edit |
 | InPlaceEditor_EditAreaDoubleClick | Double click to edit |
 
-In the following sample, `French` culture is set to In-place Editor and change the tooltip text.
+In the following sample, `French` culture is set to In-place Editor and changed the tooltip text.
 
 ```cshtml
 
@@ -113,7 +113,6 @@ In the following sample, `French` culture is set to In-place Editor and change t
 
 ```
 
-The output will be as follows.
 
 ![Localization in Blazor In-place Editor](./images/blazor-inplace-editor-localization.png)
 
@@ -147,7 +146,6 @@ Specifies the direction of the In-place Editor component using the `EnableRtl` p
 
 ```
 
-The output will be as follows.
 
 ![Right to Left in Blazor In-place Editor](./images/blazor-inplace-editor-right-to-left.png)
 
@@ -186,6 +184,5 @@ Formatting is a way of representing the value in different formats. You can form
 
 ```
 
-The output will be as follows.
 
 ![Formatting in Blazor In-place Editor](./images/blazor-inplace-editor-formatting.png)

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Native Event in Blazor In Place Editor  Component | Syncfusion 
-description: Learn about Native Event in Blazor In Place Editor  component of Syncfusion, and more details.
+title: Native Event in Blazor In Place Editor Component | Syncfusion 
+description: Checkout and learn here all about Native Event in Syncfusion Blazor In Place Editor component and much more.
 platform: Blazor
 control: In Place Editor 
 documentation: ug
