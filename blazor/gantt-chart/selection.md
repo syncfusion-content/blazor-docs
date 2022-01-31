@@ -16,7 +16,7 @@ The Gantt Chart component supports two types of selection that can be set by usi
 * `Single`: Sets a single value by default and allows only selection of a single row or a cell.
 * `Multiple`: Allows you to select multiple rows or cells. To perform the multi-selection, press and hold the CTRL key and click the desired rows or cells.
 
-## Selection Mode
+## Selection mode
 
 The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component supports three types of selection modes that can be set by using the `SelectionSettings.Mode`. They are:
 
@@ -217,7 +217,7 @@ The row selection in the Gantt Chart component can be enabled or disabled using 
 
 > `Row` selection is the default type of Gantt Chart selection mode.
 
-### Selecting a Row on Initial Load
+### Selecting a row on initial load
 
 You can select a row at the time of loading by setting the index of the row to the `SelectedRowIndex` property. Find the following code example for details.
 
@@ -315,7 +315,7 @@ You can select a row at the time of loading by setting the index of the row to t
 
 ![Initial Selection in Blazor Gantt Chart](images/blazor-gantt-chart-initial-selection.png)
 
-### Selecting a Row dynamically
+### Selecting a row dynamically
 
 You can also select a row dynamically using the `SelectRowAsync` method. The following code demonstrates how to select a row dynamically by clicking the custom button.
 
@@ -419,7 +419,7 @@ You can also select a row dynamically using the `SelectRowAsync` method. The fol
 
 ![Row Selection in Blazor Gantt Chart](images/blazor-gantt-chart-row-selection.png)
 
-### Multiple Row Selection
+### Multiple row selection
 
 You can select multiple rows by setting the `SelectionSettings.Type` property to `Multiple`. You can select more than one row by holding down the CTRL key while selecting multiple rows. The following code example explains how to enable multiple selection in Gantt Chart.
 
@@ -519,7 +519,7 @@ You can select multiple rows by setting the `SelectionSettings.Type` property to
 
 ![Multiple Row Selection in Blazor Gantt Chart](images/blazor-gantt-chart-multi-row-selection.png)
 
-### Selecting Multiple Rows dynamically
+### Selecting multiple rows dynamically
 
 You can also select rows dynamically using the `SelectRowsAsync` method. The following code demonstrates how to select rows dynamically by clicking the custom button.
 
@@ -727,7 +727,7 @@ Find the code example below to enable the cell selection in Gantt Chart.
 
 ![Cell Selection in Blazor Gantt Chart](images/blazor-gantt-chart-cell-selection.png)
 
-### Selecting Multiple Cells
+### Selecting multiple cells
 
 You can select multiple cells by setting the `SelectionSettings.Type` property to multiple and the `SelectionSettings.Mode` property to `Cell`. Multiple cells can be selected by holding the CTRL key and selecting the cells. The following code example demonstrates how to select multiple cells.
 
@@ -827,7 +827,7 @@ You can select multiple cells by setting the `SelectionSettings.Type` property t
 
 ![Multiple Cell Selection in Blazor Gantt Chart](images/blazor-gantt-chart-multi-cell-selection.png)
 
-### Selecting a Cell dynamically
+### Selecting a cell dynamically
 
 You can select a cell dynamically using the `SelectCellAsync` method. Refer to the following code example for details.
 
@@ -933,9 +933,9 @@ You can select a cell dynamically using the `SelectCellAsync` method. Refer to t
 
 ![Selecting Cells Dynamically in Blazor Gantt Chart](images/blazor-gantt-chart-single-cell-selection.png)
 
-### Customize Cell Selection action
+### Customize cell selection action
 
-While selecting a cell in Gantt Chart, the `CellSelecting` and `CellSelected` event will be triggered. The `CellSelecting` event will be triggered on initialization of cell selection action, and you can get the current selecting cell information to prevent the selection of a particular cell in a particular row. The `CellSelected` event will be triggered on completion of cell selection action, and you can get the current selected cell’s information. The following code example demonstrates how to prevent the selection of the cell using the `CellSelecting` event.
+While selecting a cell in Gantt Chart, the `CellSelecting` and `CellSelected` events will be triggered. The `CellSelecting` event will be triggered on initialization of cell selection action, and you can get the current selecting cell information to prevent the selection of a particular cell in a particular row. The `CellSelected` event will be triggered on completion of cell selection action, and you can get the current selected cell’s information. The following code example demonstrates how to prevent the selection of the cell using the `CellSelecting` event.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -1038,7 +1038,7 @@ While selecting a cell in Gantt Chart, the `CellSelecting` and `CellSelected` ev
 }
 ```
 
-## Toggle Selection
+## Toggle selection
 
 The toggle selection allows you to select and deselect a specific row or cell. To enable toggle selection, set the `EnableToggle` property of the `SelectionSettings` to `true`. If you click the selected row or cell, then it will be deselected and vice versa.
 By default, the `EnableToggle` property is set to `false`.
@@ -1144,7 +1144,7 @@ By default, the `EnableToggle` property is set to `false`.
 }
 ```
 
-## Clear Selection
+## Clear selection
 
 You can clear the selected cells and selected rows by using a method called `ClearSelectionAsync`. The following code example demonstrates how to clear the selected rows in Gantt Chart.
 
@@ -1251,7 +1251,7 @@ You can clear the selected cells and selected rows by using a method called `Cle
 }
 ```
 
-## Get Selected Row Indexes and Records
+## Get selected row indexes and records
 
 You can get the selected row indexes by using the `GetSelectedRowIndexesAsync` method. And by using `GetSelectedRecordsAsync` method, you can get the selected record details.
 

@@ -11,7 +11,7 @@ documentation: ug
 
 Filtering allows you to view specific or related records based on filter criteria. This can be done in the Gantt Chart component by using the filter menu and toolbar search. To enable filtering in the Gantt Chart component, set the `AllowFiltering` to `true`. Menu filtering support can be configured using the `GanttFilterSettings` property and toolbar searching can be configured using the `GanttSearchSettings` property.
 
-## Menu Filtering
+## Menu filtering
 
 The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component provides menu-filtering support for each column. You can enable the filter menu by setting the `AllowFiltering` to `true`. The filter menu UI will be rendered based on its column type, which allows you to filter data. You can filter the records with different operators.
 
@@ -322,7 +322,7 @@ To apply the filter at initial rendering, set the filter `Predicate` collections
 
 ![Blazor Gantt Chart with Initial Filter](images/blazor-gantt-chart-initial-filter.png)
 
-### Filter Operators
+### Filter operators
 
 The filter operator for a column can be defined in the `GanttFilterSettings.Columns.Operator` property.
 
@@ -443,7 +443,7 @@ In the following sample, type **Perform** in the **TaskName** column to filter d
 
 ![Filtering Diacritic Characters in Blazor Gantt Chart](images/blazor-gantt-chart-filter-diacritic-charater.png)
 
-### Filtering a Specific Column by Method
+### Filtering a specific column by Method
 
 You can filter the columns dynamically by using the `FilterByColumnAsync` method.
 
@@ -547,11 +547,11 @@ You can filter the columns dynamically by using the `FilterByColumnAsync` method
 
 ![Filtering Specific Column in Blazor Gantt Chart](images/blazor-gantt-chart-filter-column.png)
 
-### Clear Filtered Columns
+### Clear filtered columns
 
 You can clear all the filtering condition done in the Gantt Chart component by using the `ClearFilteringAsync` method.
 
-The following code snippet explains the above behaviour.
+The following code snippet explains the above behavior.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -761,7 +761,7 @@ The following screenshot shows the output of searching for string in Gantt Chart
 
 ![Searching in Blazor Gantt Chart](images/blazor-gantt-chart-searching.png)
 
-### Initial Search
+### Initial search
 
 In the Gantt Chart component, you can load a task with some search criteria by using the `GanttSearchSettings` property. To apply a search at initial rendering, set the value for `Fields`, `Operator`, `Key`, and `IgnoreCase` in the `GanttSearchSettings` property.
 
@@ -861,7 +861,7 @@ In the Gantt Chart component, you can load a task with some search criteria by u
 
 ![Blazor Gantt Chart with Initial Search](images/blazor-gantt-chart-initial-search.png)
 
-### Search Operators
+### Search operators
 
 The search operator can be defined in the `GanttSearchSettings.Operator` property to configure specific searching.
 
@@ -983,7 +983,7 @@ To search the Gantt Chart records from an external button, invoke the `SearchAsy
 
 > You should set the `AllowFiltering` property to `true` for searching the content externally.
 
-### Search Specific Columns
+### Search specific columns
 
 By default, the Gantt Chart component searches all the columns. You can search specific columns by defining the specific columns' field names in the `GanttSearchSettings.Fields` property.
 
@@ -1083,9 +1083,9 @@ By default, the Gantt Chart component searches all the columns. You can search s
 
 > In above sample, you can search only `TaskName` and `Duration` column values.
 
-### Clear Search by External Button
+### Clear search by external button
 
-You can pass the `empty` string to `SearchAsync` method, to clear the searched Gantt records from external button.
+You can pass the `empty` string to the `SearchAsync` method to clear the searched Gantt records from the external button.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt

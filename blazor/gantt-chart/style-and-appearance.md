@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Style And Appearance in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Style And Appearance in Syncfusion Blazor Gantt Chart component and more.
+description: Checkout and learn here all about style and appearance in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Style And Appearance in Blazor Gantt Chart Component
+# Style and Appearance in Blazor Gantt Chart Component
 
-To modify the Gantt Chart appearance, you need to override the default CSS of gantt chart. Please find the list of CSS classes and its corresponding section in Gantt Chart. Also, you have an option to create your own custom theme for all the JavaScript controls using our [Theme Studio](https://blazor.syncfusion.com/documentation/appearance/theme-studio/).
+To modify the Gantt Chart appearance, you need to override the default CSS of Gantt Chart. Please find the list of CSS classes and their corresponding section in Gantt Chart. Also, you have an option to create your own custom theme for all the JavaScript controls using our [Theme Studio](https://blazor.syncfusion.com/documentation/appearance/theme-studio/).
 
 |Section | CSS Class | Purpose of Class |
 |-----|-----|-----|
@@ -138,4 +138,4 @@ To modify the Gantt Chart appearance, you need to override the default CSS of ga
 }
 ```
 ![Styles and appearance](images/stylesAndAppearance.png)
-> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.
+> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.

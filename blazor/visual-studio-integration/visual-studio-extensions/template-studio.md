@@ -85,45 +85,11 @@ The steps below will assist you to create your **Syncfusion Blazor Application**
 
      ![Readme](../images/readme.png)
 
-9. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://blog.syncfusion.com/post/Whats-New-in-2018-Volume-2-Licensing-Changes-in-the-1620x-Version-of-Essential-Studio.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post for understanding the licensing changes introduced in Essential Studio.
+9. The Syncfusion Blazor application configures with most recent Syncfusion Blazor NuGet packages version, selected style, namespaces, selected authentication, and component render code for Syncfusion components.
 
-## Syncfusion integration
+10. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://blog.syncfusion.com/post/Whats-New-in-2018-Volume-2-Licensing-Changes-in-the-1620x-Version-of-Essential-Studio.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post for understanding the licensing changes introduced in Essential Studio.
 
-The Syncfusion Blazor application configures with most recent Syncfusion Blazor NuGet packages version, styles, namespaces, and component render code for Syncfusion components.
-
-### NuGet Packages
-
-Based on the selected Syncfusion Blazor controls, the individual NuGet packages can be added as NuGet references. Refer [this topic](https://blazor.syncfusion.com/staging/documentation/nuget-packages/) to know about the individual Blazor NuGet packages.
-
-> The latest Syncfusion Essential Studio version of a NuGet package will be added as reference entry from nuget.org if there is no internet connection. You should restore the NuGet packages when internet becomes available.
-
-![NuGetPackage](../images/NuGetPackage.png)
-
-### Style
-
-The selected Syncfusion Blazor theme is added from Syncfusion NuGet and this theme reference will be added at these applications locations in Blazor.
-
-| Application type  | File location  |
-|---|---|
-| Syncfusion Blazor Server App | For .NET 6.0: {Project location}\Pages\_Layout.cshtml For .NET 5.0 and .NET Core 3.1: {Project location}\Pages\_Host.cshtml|
-| Syncfusion Blazor WebAssembly App (ASPNET Core hosted) <br/> Syncfusion Blazor WebAssembly App (ASPNET Core hosted and Progressive Web Application) | {Client Project location}\wwwroot\index.html  |
-| Syncfusion Blazor WebAssembly App <br/> Syncfusion Blazor WebAssembly App (Progressive Web Application) | {Project location}\wwwroot\index.html|
-
-![CDNLink](../images/CDNLink.png)
-
-### Namespaces
-
-The Syncfusion.Blazor namespaces are added in the **`_imports.razor`** file.
-
-![NameSpace](../images/NameSpace.png)
-
-### Component render code
-
-The selected Syncfusion Blazor components and features render code added as .razor files in the pages folder.
-
-![Selected control pagess added in project with selected features](../images/ControlPages.png)
-
-### Authentication Configuration
+## Authentication Configuration
 
 We need to register the created application in Google Platform API Console for Individual Accounts and Azure Active Directory for Microsoft Identity Platform. From Google Platform API Console registration we can get the client id for Individual Accounts. From Azure Active Directory registration we can get the tenant id and application client id for Microsoft Identity Platform. We need to configure these id values in created applications then only application will be run correctly with authentication support.
 
@@ -177,7 +143,7 @@ We need to register the created application in Google Platform API Console for I
 
     ![Name and supported Account type](../images/NameSupportedAccountType.PNG)
 
-4. Dropdown the page, select platform as web and give your application Redirect URI and click Register.
+4. Dropdown the page, select platform as web and give your application Redirect URI like {Redirect URI}/signin-oidc and click Register.
 
     ![Platform and Redirect URI](../images/AADRedirectedURI.png)
 
@@ -307,7 +273,7 @@ We need to register the created application in Google Platform API Console for I
 
     ![Clinet tenat id](../images/ClinetTenantId.PNG)
 
-10. Configure those client tenant id, application id, and domain in your application appsettings.json file.
+10. Configure those client tenant id, application id, added scope api id, and domain in your application appsettings.json file.
 
     ![Project configuration](../images/Configuration1.png)
 
@@ -327,7 +293,7 @@ You can select a culture language in combo box at top right on the output page t
 
 > **Note:** Above culture combo box will be enabled in sample output if localization option is selected in configuration window from Syncfusion Blazor Template Studio wizard.
 
-### Register and Login Application
+## Register and Login Application
 
 ### Individual Authentication
 

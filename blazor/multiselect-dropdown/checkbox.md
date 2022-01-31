@@ -54,13 +54,11 @@ To use checkbox, inject the `CheckBoxSelection` module in the MultiSelect.
 }
 ```
 
-The output will be as follows.
-
 ![Blazor MultiSelect DropDown with CheckBox](./images/blazor-multiselect-dropdown-with-checkbox.png)
 
 ## Select All
 
-The MultiSelect component has in-built support to select the all list items using `Select All` options in the header. When the [ShowSelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_ShowSelectAll) property is set to true, by default Select All text will show. You can customize the name attribute of the Select All option by using [SelectAllText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_SelectAllText).
+The MultiSelect component has in-built support to select all the list items using `Select All` options in the header. When the [ShowSelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_ShowSelectAll) property is set to true, by default Select All text will show. You can customize the name attribute of the Select All option by using [SelectAllText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_SelectAllText).
 
 For the unSelect All option, by default unSelect All text will show. You can customize the name attribute of the unSelect All option by using [UnSelectAllText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_UnSelectAllText).
 
@@ -104,8 +102,6 @@ For the unSelect All option, by default unSelect All text will show. You can cus
     };
 }
 ```
-
-The output will be as follows.
 
 ![Blazor MultiSelect DropDown with CheckBox Selection](./images/blazor-multiselect-dropdown-checkbox-selection.png)
 
@@ -152,8 +148,6 @@ Defines the limit of the selected items using [MaximumSelectionLength](https://h
 }
 ```
 
-The output will be as follows.
-
 ![Blazor MultiSelect DropDown with Limit Selection in CheckBox](./images/blazor-multiselect-dropdown-limit-selection.png)
 
 ## Selection Reordering
@@ -198,7 +192,5 @@ Using [EnableSelectionOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
     };
 }
 ```
-
-The output will be as follows.
 
 ![Changing Selection Order in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-change-selection-order.png)

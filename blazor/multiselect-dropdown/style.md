@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and appearance in Blazor MultiSelect Dropdown | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion Blazor MultiSelect Dropdown component and more.
+description: Learn here all about style and appearance in Syncfusion Blazor MultiSelect Dropdown component and more.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
@@ -127,9 +127,9 @@ Use the following CSS to customize the focusing color of outline theme.
 }
 ```
 
-## Customizing the background color of focus, hover, and active item's
+## Customizing the background color of focus, hover, and active items
 
-Use the following CSS to customize the background color of focus, hover and active item's.
+Use the following CSS to customize the background color of focus, hover and active items.
 
 ```css
 .e-dropdownbase .e-list-item.e-item-focus, .e-dropdownbase .e-list-item.e-active, .e-dropdownbase .e-list-item.e-active.e-hover, .e-dropdownbase .e-list-item.e-hover {
