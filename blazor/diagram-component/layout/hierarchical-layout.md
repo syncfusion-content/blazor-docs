@@ -106,7 +106,7 @@ public void UpdateOrientation()
 }
 ```
 
-### How to update spacing between nodes
+### How to update the spacing between nodes
 
 You can change the horizontal and vertical spacing for the diagram layout by using the [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing) properties of the layout.
 
@@ -129,7 +129,7 @@ public void UpdateSpacing()
 }
 ```
 
-### How to update margin
+### How to update the margin
 
 You can also change the margin values for the diagram layout by using the [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Margin) property.
 

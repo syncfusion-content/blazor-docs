@@ -13,7 +13,7 @@ The following methods are used to perform the diagram functionalities.
 
 ## Add nodes through AddDiagramElements
 
-The Add method is a synchronous method, so the call moves on to processing the connections before processing the nodes internally. So, it is better to use [AddDiagramElements](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElements_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method instead of using the Add method to add nodes and connections at runtime.
+The Add method is synchronous, so the call moves on to process the connections before processing the nodes internally. So, it is better to use [AddDiagramElements](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElements_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method instead of the Add method to add nodes and connections at runtime.
 
 
 ```cshtml

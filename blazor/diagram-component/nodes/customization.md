@@ -111,7 +111,7 @@ The following code shows how to customize the appearance of the shape.
 }
 ```
 
-## How to update template for nodes
+## How to update template for the nodes
 
 You can define node style using template in [NodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTemplates.html#Syncfusion_Blazor_Diagram_DiagramTemplates_NodeTemplate) at tag level. If you want to define separate template for each node, differentiate the nodes by the ID property. The following code explains how to define template for a node.
 

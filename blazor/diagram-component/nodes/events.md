@@ -257,7 +257,7 @@ The following code example explains how to get the selection change event in the
 }
 ```
 
-## How to enable or disable certain behaviors of node
+## How to enable or disable certain behaviors of the node
 
 The Constraints property of node allows you to enable or disable certain features. For more information about node constraints, refer to the [Node Constraints](../constraints).
 

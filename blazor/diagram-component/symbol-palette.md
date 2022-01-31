@@ -887,7 +887,7 @@ The following code example illustrates how to change the preview size of a palet
 
 ![SymbolPreview in Blazor Diagram](images/blazor-diagram-symbol-preview.gif)
 
-## How to restrict symbol dragging in palette
+## How to restrict symbol dragging in a palette
 
 The [AllowDrag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_AllowDrag) property of `SfSymbolPaletteComponent` helps to decide whether the symbols can be dragged from the palette or not.
 
@@ -897,10 +897,10 @@ The [Expanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
 
 ## How to expand single or multiple palette
 
-The [PaletteExpandMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_PaletteExpandMode) property of `SfSymbolPaletteComponent` specifies the option to expand single or multiple palette at a time.
+The [PaletteExpandMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_PaletteExpandMode) property of `SfSymbolPaletteComponent` specifies the option to expand single or multiple palettes at a time.
  
-* If the ExpandMode is Multiple when clicking on the collapsed icon, the clicked palette will get expanded and at the same time, other palettes are maintained in their previous state.
-* If the ExpandMode is Single when clicking on the collapsed icon, the clicked palette will get expanded and the rest of all the palettes gets collapsed.
+* If the ExpandMode is Multiple when clicking on the collapsed icon, the clicked palette will get expanded and at the same time, the other palettes will be maintained in their previous state.
+* If the ExpandMode is Single when clicking on the collapsed icon, the clicked palette will get expanded and the rest of all the palettes will get collapsed.
 
 ```cshtml
 <SfSymbolPaletteComponent @ref="@palette"

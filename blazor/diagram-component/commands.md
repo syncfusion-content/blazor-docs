@@ -23,7 +23,7 @@ There are several commands available in the diagram as follows.
 
 Alignment commands enable you to align the selected or defined objects such as nodes and connectors with respect to the selection boundary. Following are the [AlignmentOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AlignmentOptions.html) in [SetAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetAlign_Syncfusion_Blazor_Diagram_AlignmentOptions_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__Syncfusion_Blazor_Diagram_AlignmentMode_) commands which shows how to use align methods in the diagram.
 
-### How to align the selected objects to left
+### How to align the selected objects to the left
 
 The following code example illustrates how to align all the selected objects to the left side of the selection boundary.
 
@@ -82,7 +82,7 @@ The following code example illustrates how to align all the selected objects to 
 }
 ```
 
-### How to align the selected objects to right
+### How to align the selected objects to the right
 
 The following code example illustrates how to align all the selected objects at the right side of the selection boundary.
 
@@ -141,7 +141,7 @@ The following code example illustrates how to align all the selected objects at 
 }
 ```
 
-### How to align the selected objects to top
+### How to align the selected objects to the top
 
 The following code example illustrates how to align all the selected objects at the top of the selection boundary.
 
@@ -200,7 +200,7 @@ The following code example illustrates how to align all the selected objects at 
 }
 ```
 
-### How to align the selected objects to bottom
+### How to align the selected objects to the bottom
 
 The following code example illustrates how to align all the selected objects at the bottom of the selection boundary.
 
@@ -259,7 +259,7 @@ The following code example illustrates how to align all the selected objects at 
 }
 ```
 
-### How to align the selected objects to middle
+### How to align the selected objects to the middle
 
 The following code example illustrates how to align all the selected objects at the middle of the selection boundary.
 
@@ -318,7 +318,7 @@ The following code example illustrates how to align all the selected objects at 
 }
 ```
 
-### How to align the selected objects to center
+### How to align the selected objects to the center
 
 The following code example illustrates how to align all the selected objects at the center of the selection boundary.
 
