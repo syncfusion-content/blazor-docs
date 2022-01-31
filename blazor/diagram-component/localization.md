@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Localization in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Localization in Syncfusion Blazor Diagram component and much more.
+title: Localization in the Blazor Diagram Component | Syncfusion
+description: Checkout and learn  all about Localization in the Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -17,9 +17,9 @@ The Resource file is an XML file that contains the strings (key and value pairs)
 
 ## Blazor server side
 
-Add `UseRequestLocalization` middle-ware in Configure method in **Startup.cs** file to get browser Culture Info.
+Add `UseRequestLocalization` middle-ware in Configure method in **Startup.cs** file to obtain browser Culture Info.
 
-Refer the following code to add configuration in Startup.cs file
+Refer to the following code to add the configuration in the Startup.cs file
 
 ```csharp
 using Microsoft.AspNetCore.Builder;
@@ -39,9 +39,9 @@ namespace BlazorApplication
 }
 ```
 
-The following example demonstrates how to enable **Localization** for Diagram in server side Blazor samples. Here, we have used Resource file to translate the static text.
+The following example demonstrates how to enable **Localization** for the Diagram in server side Blazor samples. Here, we have used Resource file to translate the static text.
 
-* Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
+* Open the **Startup.cs** file and add the following configuration in the **ConfigureServices** function. 
 
     ```csharp
     using Syncfusion.Blazor;
@@ -62,7 +62,7 @@ The following example demonstrates how to enable **Localization** for Diagram in
             // Set the resx file folder path to access
             services.AddLocalization(options => options.ResourcesPath = "Resources")    ;
             services.AddSyncfusionBlazor();
-            // Register the Syncfusion locale service to customize the  SyncfusionBlazor component locale culture
+            // Register the Syncfusion locale service to customize the SyncfusionBlazor component’s locale culture
             services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof    (SyncfusionLocalizer));
             services.Configure<RequestLocalizationOptions>(options =>
             {
@@ -95,7 +95,7 @@ The following example demonstrates how to enable **Localization** for Diagram in
             return this.ResourceManager.GetString(key);
         }
 
-        // To access the resource file and get the exact value for locale key
+        // To access the resource file and get the exact value for the locale key
 
         public System.Resources.ResourceManager ResourceManager {
             get
@@ -107,7 +107,7 @@ The following example demonstrates how to enable **Localization** for Diagram in
     }
     ```
 
-* Diagram has support to localize the Tooltip of Nodes/Connector.The following code illustrates how to provide localization support for Tooltip..
+* Diagram has support to localize the Tooltip of Nodes/Connector. The following code illustrates how to provide localization support for Tooltip.
 
     | **Name** | **Value (in French culture)** |
     | --- | --- |
@@ -150,9 +150,9 @@ The following example demonstrates how to enable **Localization** for Diagram in
 
 ## Blazor WebAssembly
 
-The following steps explain how to render the Diagram in French culture (fr) in Blazor Web Assembly application.
+The following steps explain how to render the Diagram in French culture (fr) in the Blazor Web Assembly application.
 
-* Open the **program.cs** file and add the below configuration in the **Builder ConfigureServices** function as follows.
+* Open the **program.cs** file and add the following configuration to the **Builder ConfigureServices** function.
 
     ```csharp
     using Syncfusion.Blazor;
@@ -171,7 +171,7 @@ The following steps explain how to render the Diagram in French culture (fr) in 
             builder.Services.AddSyncfusionBlazor();
 
             #region Localization
-            // Register the Syncfusion locale service to customize the  SyncfusionBlazor component locale culture
+            // Register the Syncfusion locale service to customize the  SyncfusionBlazor component’s locale culture
             builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
 
             // Set the default culture of the application
