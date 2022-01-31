@@ -52,7 +52,7 @@ If you have your Word document file in the web, you can open it in [Blazor Word 
     public void OnLoad(object args)
     {
         SfDocumentEditor editor = container.DocumentEditor;
-        editor.Open(sfdtString);
+        editor.OpenAsync(sfdtString);
         //To observe the memory go down, null out the reference of sfdtString variable.
         sfdtString = null;
     }
@@ -109,7 +109,7 @@ The following code example shows how to open and load the Word document file sto
     public void OnLoad(object args)
     {
         SfDocumentEditor editor = container.DocumentEditor;
-        editor.Open(sfdtString);
+        editor.OpenAsync(sfdtString);
         //To observe the memory go down, null out the reference of sfdtString variable.
         sfdtString = null;
     }
@@ -177,7 +177,7 @@ You can open the Word documents from Azure File Storage using the following code
         if (!String.IsNullOrEmpty(sfdtString))
         {
             SfDocumentEditor editor = container.DocumentEditor;
-            editor.Open(sfdtString);
+            editor.OpenAsync(sfdtString);
             //To observe the memory go down, null out the reference of sfdtString variable.
             sfdtString = null;
         }
@@ -230,7 +230,7 @@ The following code example shows how to open the Word document file in viewer fr
         //To observe the memory go down, null out the reference of document variable.
         document = null;
         SfDocumentEditor editor = container.DocumentEditor;
-        editor.Open(json);
+        editor.OpenAsync(json);
         //To observe the memory go down, null out the reference of json variable.
         json = null;
     }
@@ -274,7 +274,7 @@ There is an UI option in built-in toolbar to open the Word documents from local 
             //To observe the memory go down, null out the reference of document variable.
             document = null;
             SfDocumentEditor editor = container.DocumentEditor;
-            editor.Open(sfdtString);
+            editor.OpenAsync(sfdtString);
             //To observe the memory go down, null out the reference of sfdtString variable.
             sfdtString = null;
         }
@@ -312,7 +312,7 @@ The Word document can be opened on control initialization, in this sample, the d
             //To observe the memory go down, null out the reference of document variable.
             document = null;
             SfDocumentEditor editor = container.DocumentEditor;
-            editor.Open(json);
+            editor.OpenAsync(json);
             //To observe the memory go down, null out the reference of json variable.
             json = null;
         }

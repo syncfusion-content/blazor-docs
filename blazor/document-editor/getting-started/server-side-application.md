@@ -105,7 +105,7 @@ Steps to get started with Word processor component for Blazor:
                 //To observe the memory go down, null out the reference of document variable.
                 document = null;
                 SfDocumentEditor editor = container.DocumentEditor;
-                editor.Open(json);
+                editor.OpenAsync(json);
                 //To observe the memory go down, null out the reference of json variable.
                 json = null;
             }
