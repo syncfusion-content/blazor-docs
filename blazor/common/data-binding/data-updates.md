@@ -80,7 +80,7 @@ In the following code example, DataGrid automatically updates its data when add,
 * Bullet Chart
 * Charts
 * ComboBox
-* Context Menu
+* ContextMenu
 * DataGrid
 * Diagram
 * Diagram Native
@@ -89,14 +89,14 @@ In the following code example, DataGrid automatically updates its data when add,
 * Kanban
 * ListBox
 * ListView
-* Map
+* Maps
 * Menu Bar
 * MultiSelect Dropdown
 * Pivot Table
-* Query Builder
+* QueryBuilder
 * Scheduler
 * Smith Chart
-* Sparkline Charts
+* Sparkline
 * Stock Chart
 * TreeGrid
 * TreeMap
@@ -180,10 +180,18 @@ In the below example, `DataOrder` implements `INotifyPropertyChanged` interface 
 ### List of Syncfusion Components supports INotifyPropertyChanged
 
 * AutoComplete
+* ContextMenu
+* DataGrid
 * HeatMap Chart
 * Kanban
+* ListBox
 * ListView
-* Map
+* Maps
+* Menu Bar
+* Pivot Table
+* QueryBuilder
 * Scheduler
 * TreeGrid
+* TreeMap
 * TreeView
+* Breadcrumb
