@@ -25,7 +25,7 @@ You can create **Blazor WebAssembly App** using Visual Studio in one of the foll
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/vs2019-extensions/create-project)
 
-## Install Syncfusion Blazor Packages in the App
+## Install Syncfusion Blazor Grid NuGet in the App
 
 Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
@@ -33,7 +33,7 @@ To add Blazor DataGrid component in the app, open the NuGet package manager in V
 
 ## Register Syncfusion Blazor Service
 
-Open ~/_Imports.razor file and import the Syncfusion.Blazor namespace.
+Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
