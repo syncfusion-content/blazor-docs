@@ -13,7 +13,7 @@ Diagram provides support to print the content displayed in the diagram page usin
 
 ## Page setup
 
-Some of the print options cannot be configured through JavaScript code. So the layout, paper size, and margin options have to customized using the browser page setup dialog. Please refer to the following links to know more about the browser page setup:
+Some of the print options cannot be configured through JavaScript code. So the layout, paper size, and margin options have to be customized using the browser page setup dialog. Please refer to the following links to know more about the browser page setup:
 
 * [Chrome](https://support.google.com/chrome/answer/1069693?hl=en&visit_id=1-636335333734668335-3165046395&rd=1)
 * [Firefox](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox)
@@ -28,12 +28,12 @@ The diagram can be customized while printing using the following properties of t
 |-------- | -------- |
 | Region | Sets the region of the diagram to be printed. |
 | Margin | Sets the margin of the page to be printed/exported.|
-| FitToPage | Prints the diagram into single or multiple pages. |
-| PageWidth | Sets the page width of the diagram while printing the diagram into multiple pages. |
-| PageHeight| Sets the page height of the diagram while printing the diagram into multiple pages.|
+| FitToPage | Prints the diagram into a single or multiple pages. |
+| PageWidth | Sets the page width of the diagram while printing the diagram in multiple pages. |
+| PageHeight| Sets the page height of the diagram while printing the diagram in multiple pages.|
 | Orientation | Sets the orientation of the page. |
 
-These properties behaves as same as the properties in the `DiagramExportSettings` class. For more details, [refer](../export/Exporting options) 
+These properties behave the same as the properties in the `DiagramExportSettings` class. For more details, [refer](../export/Exporting options) 
 
 The following code example illustrates how to print the region occupied by the diagram elements.
 
