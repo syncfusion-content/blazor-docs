@@ -11,7 +11,7 @@ documentation: ug
 
 Diagram provides the support to select, drag, resize, or rotate the node interactively.
 
-## Select
+## How to select the node
 
 A node can be selected at runtime by using the [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Select_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagram_IDiagramObject__System_Nullable_System_Boolean__) method and clear the selection in the diagram by using the [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection). The following code explains how to select and clear selection in the diagram.
 
@@ -73,7 +73,7 @@ And also the selection enable during the interaction.
 
 ![Node Selection in Blazor Diagram](../images/blazor-diagram-node-selection.png)
 
-## Drag
+## How to drag the node
 
 A node can be dragged at runtime by using the [Drag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Drag_Syncfusion_Blazor_Diagram_IDiagramObject_System_Double_System_Double_) method. The following code explains how to drag the node by using the drag method.
 
@@ -127,7 +127,7 @@ Also, drag the node during the interaction.
 
 ![Dragging Node at Runtime in Blazor Diagram](../images/blazor-diagram-drag-node.gif)
 
-## Resize
+## How to resize the node
 
 A node can be resized at runtime by using the [Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Scale_Syncfusion_Blazor_Diagram_IDiagramObject_System_Double_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) method. The following code explains how to resize the node by using the scale method.
 
@@ -182,7 +182,7 @@ Also, you can resize the node during interaction.
 
 ![Node Resizing in Blazor Diagram](../images/blazor-diagram-node-resizing.gif)
 
-## Rotate
+## How to rotate the node
 
 A node can be rotated at runtime by using the [Rotate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Rotate_Syncfusion_Blazor_Diagram_IDiagramObject_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) method. The following code explains how to rotate the node by using the rotate method.
 

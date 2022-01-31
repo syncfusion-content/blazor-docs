@@ -887,6 +887,30 @@ The following code example illustrates how to change the preview size of a palet
 
 ![SymbolPreview in Blazor Diagram](images/blazor-diagram-symbol-preview.gif)
 
+## How to restrict symbol dragging in a palette
+
+The [AllowDrag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_AllowDrag) property of `SfSymbolPaletteComponent` helps to decide whether the symbols can be dragged from the palette or not.
+
+## Expanding event
+
+The [Expanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Expanding) event of the `SfSymbolPaletteComponent` will be triggered before the item gets collapsed/expanded.
+
+## How to expand single or multiple palette
+
+The [PaletteExpandMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_PaletteExpandMode) property of `SfSymbolPaletteComponent` specifies the option to expand single or multiple palettes at a time.
+ 
+* If the ExpandMode is Multiple when clicking on the collapsed icon, the clicked palette will get expanded and at the same time, the other palettes will be maintained in their previous state.
+* If the ExpandMode is Single when clicking on the collapsed icon, the clicked palette will get expanded and the rest of all the palettes will get collapsed.
+
+```cshtml
+<SfSymbolPaletteComponent @ref="@palette"
+                           Width="80%"
+                           Height="445px"
+                           PaletteExpandMode="@expandMode"
+                           Palettes="@palettes">
+</SfSymbolPaletteComponent>
+```
+
 ## Default settings
 
 While adding more symbols such as nodes and connectors to the palette, define the default settings for those objects through the [NodeCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_NodeCreating) and the [ConnectorCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_ConnectorCreating) properties of diagram that allow to define the default settings for nodes and connectors.
@@ -913,7 +937,6 @@ The diagram provides support to add symbol description below each symbol of a pa
 
 @code
 {
-
     SymbolMargin SymbolMargin = new SymbolMargin 
     { 
         Left = 15, 
@@ -964,6 +987,33 @@ The diagram provides support to add symbol description below each symbol of a pa
 ```
 
 ![Symbol with Description in Blazor Diagram](images/blazor-diagram-symbol-description.png)
+
+## How to refresh the symbols at runtime
+
+The [RefreshSymbols](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_RefreshSymbols) method allows the user to redraw the symbols dynamically in SymbolPalette instead of re-rendering the complete Diagram component.
+
+```csharp
+
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Diagram.SymbolPalette
+
+<input type="button" @onclick="RefreshSymbols" />
+<SfSymbolPaletteComponent @ref="@palette" 
+                          Width="100%"
+                          Height="700px">
+</SfSymbolPaletteComponent>
+
+@code
+{
+    SfSymbolPaletteComponent palette;
+
+    private void RefreshSymbols()
+    {
+        palette.RefreshSymbols();
+    }   
+}
+```  
+##
 
 ## Palette interaction
 
