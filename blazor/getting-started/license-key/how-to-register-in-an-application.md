@@ -53,7 +53,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 }
 ```
 
-## For Server side application using .NET 6.0
+## For server side application using .NET 6.0
 
 Register the license key in the Program.cs file if you created the Blazor server side application with Visual Studio 2022 and .NET 6.0. 
 
@@ -71,7 +71,7 @@ if (!app.Environment.IsDevelopment())
 }
 ```
 
-## For Client side application
+## For client side application
 
 Register the license key in main method of Program.cs
 

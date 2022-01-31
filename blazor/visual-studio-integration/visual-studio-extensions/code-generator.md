@@ -49,41 +49,6 @@ The steps below will assist you to add the Syncfusion components code in your Bl
 
     ![OutputWindow](../images/Code-Generator-OutputWindow.PNG)
 
-5. If you have installed the trial setup or NuGet packages from nuget.org, you must register the Syncfusion license key to your application as Syncfusion has introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://blog.syncfusion.com/post/Whats-New-in-2018-Volume-2-Licensing-Changes-in-the-1620x-Version-of-Essential-Studio.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post to know more about the licensing changes introduced in Essential Studio.
+5. The selected Syncfusion Blazor component code is inserted in selected active razor file and application configured with most recent selected Syncfusion Blazor component NuGet package, styles, namespaces for selected components.
 
-## Syncfusion integration
-
-The created Syncfusion Blazor application have the most recent Syncfusion Blazor NuGet packages, styles, namespaces, and component render code for Syncfusion components.
-
-### NuGet Packages
-
-Based on the selected Syncfusion Blazor controls, the individual NuGet packages can be added as NuGet references. Refer [this topic](https://blazor.syncfusion.com/staging/documentation/nuget-packages/) to know about the individual Blazor NuGet packages.
-
-> The latest Syncfusion Essential Studio version of a NuGet package will be added as reference entry from nuget.org if there is no internet connection. You should restore the NuGet packages when internet becomes available.
-
-![NuGetPackage](../images/Code-Generator-NuGetPackage.PNG)
-
-### Style
-
-The selected Syncfusion Blazor theme is added from Syncfusion NuGet and this theme reference will be added at these applications locations in Blazor.
-
-| Application type  | File location  |
-|---|---|
-| Syncfusion Blazor Server App | For .NET 6.0: {Project location}\Pages\_Layout.cshtml For .NET 5.0 or lower: {Project location}\Pages\_Host.cshtml 
- |
-| Syncfusion Blazor WebAssembly App (ASPNET Core hosted) <br/> Syncfusion Blazor WebAssembly App (ASPNET Core hosted and Progressive Web Application) | {Client Project location}\wwwroot\index.html  |
-| Syncfusion Blazor WebAssembly App <br/> Syncfusion Blazor WebAssembly App (Progressive Web Application) | {Project location}\wwwroot\index.html|
-
-![StyleReference](../images/Code-Generator-CDNLink.PNG)
-
-### Namespaces
-
-The required namespaces are added to the **`_imports.razor`** file based on the selected component, if it is not already available.
-
-![NameSpace](../images/Code-Generator-NameSpace.PNG)
-
-### Services
-
-The required service code added to the **`Startup.cs/Program.cs`** file to render the component based on the selected component if it is not already added.
-
-![Services code](../images/Code-Generator-ServicesCode.PNG)
+6. If you have installed the trial setup or NuGet packages from nuget.org, you must register the Syncfusion license key to your application as Syncfusion has introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://blog.syncfusion.com/post/Whats-New-in-2018-Volume-2-Licensing-Changes-in-the-1620x-Version-of-Essential-Studio.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post to know more about the licensing changes introduced in Essential Studio.

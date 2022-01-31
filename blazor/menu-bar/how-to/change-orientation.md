@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Change Orientation in Blazor Menu Bar Component | Syncfusion
-description: Checkout and learn here all about Change Orientation in Syncfusion Blazor Menu Bar component and more.
+description: Checkout and learn here all about change orientation in Syncfusion Blazor Menu Bar component and more.
 platform: Blazor
 control: Menu Bar 
 documentation: ug
@@ -46,7 +46,5 @@ Orientation in menu items can be changed horizontally or vertically using the [O
 </SfMenu>
 
 ```
-
-Output be like
 
 ![Blazor MenuBar with Vertical Orientation](./../images/blazor-menubar-vertical-orientation.png)

@@ -27,7 +27,7 @@ The following screenshot shows Gantt touch sorting,
 
 ![Multiple Sorting in Blazor Gantt Chart](images/blazor-gantt-chart-multiple-sorting.png)
 
-## Column Resize
+## Column resize
 
 When the right edge of the column header cell is `tapped`, a floating handler will be visible over the right border of the column. To [Resize](columns/#column-resizing) the column, drag the floating handler as needed.
 
@@ -37,7 +37,7 @@ The following screenshot represents the Gantt column resizing in touch device.
 
 ## Editing
 
-The Gantt Chart component editing actions can be achieved using the double tap and tap and drag actions on a element.
+The Gantt Chart component editing actions can be achieved using the double tap and tap and drag actions on an element.
 
 The following table describes different types of editing modes available in Gantt.
 
@@ -74,4 +74,4 @@ When you `tap` gantt row, tapped row will be selected.
 
 ![Multiple selection in Blazor Gantt Chart](images/blazor-gantt-chart-multiple-selection.PNG)
 
-> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.
+> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.
