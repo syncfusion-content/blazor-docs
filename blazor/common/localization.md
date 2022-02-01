@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Localization (Multi-Language) in Blazor components | Syncfusion"
-description: "The Syncfusion Blazor UI components support localization and globalization (RTL, number, and date formats) in Blazor Server and WebAssembly (WASM) apps."
-platform: "Blazor"
-component: "Common"
+title: Localization (Multi-Language) in Blazor components | Syncfusion
+description: The Syncfusion Blazor UI components support localization and globalization (RTL, number, and date formats) in Blazor Server and WebAssembly (WASM) apps.
+platform: Blazor
+component: Common
 documentation: ug
 ---
 
