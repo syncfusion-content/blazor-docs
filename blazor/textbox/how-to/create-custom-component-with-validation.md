@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Create a custom component with tooltip validation using Blazor TextBox component | Syncfusion
+title: Create a custom component with tooltip validation using Blazor TextBox | Syncfusion
 description: Learn here all about using Blazor TextBox component to create a custom component with tooltip validation.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Create a Custom Component with Tooltip Validation Using Blazor TextBox Component
+# Create a Custom Component with Tooltip Validation Using Blazor TextBox
 
 Custom component allows to reuse the defined components in a razor page anywhere in the application by using the file name of the razor page as HTML tag. For more information please refer [here](https://www.syncfusion.com/faq/blazor/components/how-do-i-create-a-custom-component)
 
