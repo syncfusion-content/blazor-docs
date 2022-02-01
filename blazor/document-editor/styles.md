@@ -61,7 +61,7 @@ When a linked style is based on another linked style, the hierarchy of the prope
 * Paragraph properties are inherited from the paragraph style part in its base linked style.
 * Span properties are inherited from the span style part in its base linked style.
 
-# Defining new styles
+## Defining new styles
 
 New Styles are defined and added to the style collection of the document. In this way, they will be discovered by the default UI and applied to the parts of a document.
 

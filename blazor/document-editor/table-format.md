@@ -119,7 +119,7 @@ You can set the desired width of a table in `Point` or `Percent` type. Refer to 
 }
 ```
 
-# Working with row formatting
+## Working with row formatting
 
 Document editor allows various row formatting such as height and repeat header.
 
