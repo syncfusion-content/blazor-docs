@@ -107,7 +107,7 @@ The culture can be set using one of the following approaches:
 
     > Here, the `ApplicationNamespace` is your application name.
 
-2. Create `~/Shared/SyncfusionLocalizer.cs` file and implement `ISyncfusionStringLocalizer` to the class. This acts as a middleware to connect the Syncfusion Blazor UI components and resource files.
+2. Create `~/Shared/SyncfusionLocalizer.cs` file and implement `ISyncfusionStringLocalizer` to the class. This acts as a middle ware to connect the Syncfusion Blazor UI components and resource files.
 
     > Map the `SfResources.ResourceManager` to this interface `Manager`.
 
@@ -243,7 +243,7 @@ The culture can be set using one of the following approaches:
 
 8. Add Syncfusion Blazor UI components in `~/Pages/*.razor` and run the application. The following screenshot illustrates the output of the German `de-DE` culture.
 
-    ![Syncfusion Blazor UI Component's Localization in German culture](./images/de-culture.png)
+    ![Syncfusion Blazor UI Component Localization in German culture](./images/de-culture.png)
 
     > Download Blazor Server app App from [Github](https://github.com/SyncfusionExamples/blazor-localization/tree/master/blazor-server-app).
 
@@ -295,7 +295,7 @@ The culture can be set using one of the following approaches:
 
     > Here, the `ApplicationNamespace` is your application name.
 
-2. Create `~/Shared/SyncfusionLocalizer.cs` file and implement `ISyncfusionStringLocalizer` to the class. This acts as a middleware to connect the Syncfusion Blazor UI components and resource files.
+2. Create `~/Shared/SyncfusionLocalizer.cs` file and implement `ISyncfusionStringLocalizer` to the class. This acts as a middle ware to connect the Syncfusion Blazor UI components and resource files.
 
     > Map the `SfResources.ResourceManager` to this interface `Manager`.
 
@@ -354,7 +354,7 @@ The culture can be set using one of the following approaches:
     </ItemGroup>
     ```
 
-4. Add the custom JavaScript interop function to get or set the culture in `~/wwwrooot/index.html`.
+4. Add the custom JavaScript interop function to get or set the culture in `~/wwwroot/index.html`.
 
     ```html
     <body>
@@ -426,7 +426,7 @@ The culture can be set using one of the following approaches:
 
 7. Add Syncfusion Blazor UI components in `~/Pages/*.razor` and run the application. The following screenshot illustrates the output of the German `de-DE` culture.
 
-    ![Syncfusion Blazor UI Component's Localization in German culture](./images/de-culture.png)
+    ![Syncfusion Blazor UI Component Localization in German culture](./images/de-culture.png)
 
     > Download Blazor WebAssembly App from [Github](https://github.com/SyncfusionExamples/blazor-localization/tree/master/blazor-webassembly-app).
 
