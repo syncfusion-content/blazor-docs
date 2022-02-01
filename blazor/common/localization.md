@@ -107,7 +107,7 @@ The culture can be set using one of the following approaches:
 
     > Here, the `ApplicationNamespace` is your application name.
 
-2. Create `~/Shared/SyncfusionLocalizer.cs` file and implement `ISyncfusionStringLocalizer` to the class. This acts as a middle ware to connect the Syncfusion Blazor UI components and resource files.
+2. Create `~/Shared/SyncfusionLocalizer.cs` file and implement `ISyncfusionStringLocalizer` to the class. This acts as a middleware to connect the Syncfusion Blazor UI components and resource files.
 
     > Map the `SfResources.ResourceManager` to this interface `Manager`.
 
@@ -295,7 +295,7 @@ The culture can be set using one of the following approaches:
 
     > Here, the `ApplicationNamespace` is your application name.
 
-2. Create `~/Shared/SyncfusionLocalizer.cs` file and implement `ISyncfusionStringLocalizer` to the class. This acts as a middle ware to connect the Syncfusion Blazor UI components and resource files.
+2. Create `~/Shared/SyncfusionLocalizer.cs` file and implement `ISyncfusionStringLocalizer` to the class. This acts as a middleware to connect the Syncfusion Blazor UI components and resource files.
 
     > Map the `SfResources.ResourceManager` to this interface `Manager`.
 
