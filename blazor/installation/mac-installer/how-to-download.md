@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Downloading Syncfusion Blazor Mac installer - Syncfusion
-description: Learn here about how to download Syncfusion Blazor mac installer packages from Syncfusion website.
+description: Learn here about how to download Syncfusion Blazor mac installer packages from the Syncfusion website.
 platform: Blazor
 component: Common
 documentation: ug
