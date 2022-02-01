@@ -429,3 +429,7 @@ The culture can be set using one of the following approaches:
     ![Syncfusion Blazor UI Component's Localization in German culture](./images/de-culture.png)
 
     > Download Blazor WebAssembly App from [Github](https://github.com/SyncfusionExamples/blazor-localization/tree/master/blazor-webassembly-app).
+
+## See Also
+
+* [How to Perform Localization using Database instead of Resource Files in Blazor?](https://www.syncfusion.com/kb/13012/how-to-perform-localization-using-database-instead-of-resource-files-in-blazor)
