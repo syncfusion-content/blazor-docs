@@ -599,7 +599,12 @@ The following table represents the request parameters of *download* operations.
 
 *Example:*
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="Download action" %}
+
+
+
+
 {
     action:"download",
     path:"/",
@@ -649,7 +654,8 @@ The following table represents the request parameters of *download* operations.
         }
     ]
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 Downloads the requested items from the file server in response.
 
