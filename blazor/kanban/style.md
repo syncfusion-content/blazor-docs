@@ -68,9 +68,9 @@ To modify the Kanban appearance, you need to override the default CSS of Kanban.
 
 ## To set fixed position to the Kanban header
 
-You can provide a fixed header to the Kanban control by customizing CSS in two ways,
+The Fixed header in Kanban control can be customized in following ways,
 
-By setting a fixed height to the Kanban content, you can get the fixed header while scrolling into the Kanban rows.
+By setting a fixed height to the Kanban content,
 
 ```CSS
 
@@ -80,7 +80,7 @@ By setting a fixed height to the Kanban content, you can get the fixed header wh
 
 ```
 
-You can also set a fixed header to the Kanban control by customizing the CSS for the Kanban header. It will not affect the Kanban content's height.
+By customizing the CSS for the Kanban header.
 
 ```CSS
 
@@ -92,3 +92,5 @@ You can also set a fixed header to the Kanban control by customizing the CSS for
 }
 
 ```
+
+> **Note:** It will not affect the Kanban content's height.
