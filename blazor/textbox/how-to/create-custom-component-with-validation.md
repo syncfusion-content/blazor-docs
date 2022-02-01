@@ -7,13 +7,13 @@ control: TextBox
 documentation: ug
 ---
 
-# Create a custom component with tooltip validation using Blazor TextBox component
+# Create a Custom Component with Tooltip Validation Using Blazor TextBox Component
 
 Custom component allows to reuse the defined components in a razor page anywhere in the application by using the file name of the razor page as HTML tag. For more information please refer [here](https://www.syncfusion.com/faq/blazor/components/how-do-i-create-a-custom-component)
 
-## Defining Blazor TextBox Component
+## Defining Blazor TextBox component
 
-The TextBox component is defined in the razor page along with the required properties and event binding. Refer to the below code.
+The TextBox component is defined in the razor page along with the required properties and event binding. Refer to the following code.
 
 ```cshtml
 
@@ -28,7 +28,7 @@ The TextBox component is defined in the razor page along with the required prope
 
 ```
 
-T> In the above code we have added the properties and events in the razor page and the definition for the respective properties can be done in the same page using `@code` block or in a partial class page. Refer to the below code.
+T> In the above code, the properties and events are added to the razor page, and the definition for the respective properties can be done on the same page using the `@code` block or on a partial class page. Refer to the following code.
 
 ```cs
 
@@ -98,13 +98,13 @@ T> In the above code we have added the properties and events in the razor page a
     }
 
 ```
-> It is necessary to bind `Value`, `ValueExpression` and native `ValueChanged` event for accessing the value changes and triggering validation. To retrieve the validation message from custom component, it is required to add `ValidationMessage` tag in the textbox component.
+> It is necessary to bind `Value`, `ValueExpression`, and native `ValueChanged` event for accessing the value changes and triggering validation. To retrieve the validation message from the custom component, it is required to add the `ValidationMessage` tag in the textbox component.
 
 I> The above code snippets are added in a razor file with name as CustomTextBox
 
 ## Adding the custom TextBox component in the EditForm
 
-The EditForm with the bound model is declared in the main razor page. Inside the EditForm, the `DataAnnotationsValidator` and `CustomTextBox` with wrapped `SfTooltip` component are added. The DataAnnotationsValidator is added to enable form validation based on validation attributes declared in the model. The CustomTextBox component is then bound with the "Text" property from the model and the "Text" property contains DataAnnotations attributes used for validation. 
+The EditForm with the bound model is declared on the main razor page. Inside the EditForm, the `DataAnnotationsValidator` and `CustomTextBox` with wrapped `SfTooltip` component are added. The DataAnnotationsValidator is added to enable form validation based on validation attributes declared in the model. The CustomTextBox component is then bound with the "Text" property from the model and the "Text" property contains DataAnnotations attributes used for validation. 
 
 ```cshtml
 
@@ -154,6 +154,6 @@ The EditForm with the bound model is declared in the main razor page. Inside the
 
 ```
 
-The SfTooltip component is wrapped around the CustomTextBox with the `Target` property is set to the ID attribute of the CustomTextBox to display tooltip for that particular component. The `ValidationMessage` tag is placed inside the `TooltipTemplates` to display the validation error messages inside the tooltip. 
+The SfTooltip component is wrapped around the CustomTextBox and the `Target` property is set to the ID attribute of the CustomTextBox to display tooltip for that particular component. The `ValidationMessage` tag is placed inside the `TooltipTemplates` to display the validation error messages inside the tooltip. 
 
-T> To avoid empty tooltips, tooltips can be restricted based on the presence text content in the `OnOpen` event callback.
+T> To avoid empty tooltips, tooltips can be restricted based on the presence of text content in the `OnOpen` event callback.
