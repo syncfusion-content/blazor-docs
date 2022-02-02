@@ -116,7 +116,7 @@ When height and width of the Scheduler are given as percentage, it will make the
 
 ## How to set the full height of the view port
 
-When height is set as "calc(100vh - 4.6rem)", it will make the Scheduler render as the full height within the view port
+When height of the scheduler is set as "calc(100vh - 4.6rem)", it will make the scheduler to occupy the full height within the view port.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
