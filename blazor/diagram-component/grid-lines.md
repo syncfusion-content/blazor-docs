@@ -56,7 +56,7 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 
 To show only horizontal/vertical gridlines or to hide gridlines, refer to [SnapConstraints](constraints#snap-constraints).
 
-## Appearance
+## How to customize the appearance of the gridlines
 
 The appearance of the gridlines can be customized by using a set of predefined properties.
 
@@ -110,7 +110,7 @@ The appearance of the grid lines can be changed into dots by using the [GridType
 
 ![Dot Grid in Blazor Diagram](images/blazor-diagram-dot-grid.png)
 
-## Line intervals
+## How to customize the Line intervals
 
 Thickness and the space between gridlines can be customized by using [LinesIntervals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.GridLines.html#Syncfusion_Blazor_Diagram_GridLines_LineIntervals) property of the HorizontalGridLines and VerticalGridLines. In the line intervals collections, values at the odd places are referred as the thickness of lines and values at the even places are referred as the space between gridlines.
 

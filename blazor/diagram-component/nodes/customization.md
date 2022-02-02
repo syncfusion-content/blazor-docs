@@ -52,7 +52,7 @@ The following code shows how to customize the appearance of the shape.
 
 > [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each node should be unique and so it is further used to find the node at runtime and do any customization.
 
-## NodeCreating
+## How to update values in common to all nodes
 
 Default values for all the Nodes can be set using the [NodeCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_NodeCreating) method. For example, if all nodes have the same type or property then such properties can be moved into NodeCreating method.
 
@@ -111,7 +111,7 @@ The following code shows how to customize the appearance of the shape.
 }
 ```
 
-## NodeTemplate
+## How to update template for the nodes
 
 You can define node style using template in [NodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTemplates.html#Syncfusion_Blazor_Diagram_DiagramTemplates_NodeTemplate) at tag level. If you want to define separate template for each node, differentiate the nodes by the ID property. The following code explains how to define template for a node.
 
@@ -195,7 +195,7 @@ You can define node style using template in [NodeTemplate](https://help.syncfusi
 
 ![Blazor Diagram with Node Template](../images/blazor-diagram-node-template.gif)
 
-## SetNodeTemplate
+## How to update style for nodes in common
 
 The [SetNodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetNodeTemplate) method of diagram allows you to define the style for the Node. The following code demonstrates how to set different styles for different nodes through the SetNodeTemplate method.
 
@@ -309,7 +309,7 @@ The [SetNodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 
 ![Blazor Diagram with SetNodeTemplate](../images/blazor-diagram-set-node-template.png)
 
-## Shadow
+## How to update shadow to a node
 
 Diagram provides support to add [Shadow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shadow.html) effect to a node that is disabled, by default. It can be enabled with the constraints property of the node. The following code shows how to draw shadow.
 
@@ -348,7 +348,7 @@ Diagram provides support to add [Shadow](https://help.syncfusion.com/cr/blazor/S
 
 ![Blazor Diagram Node with shadow](../images/blazor-diagram-node-shadow.png)
 
-### Customizing shadow
+### How to customize shadow to a node
 
 The [Angle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shadow.html#Syncfusion_Blazor_Diagram_Shadow_Angle), [Distance](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shadow.html#Syncfusion_Blazor_Diagram_Shadow_Distance), and [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shadow.html#Syncfusion_Blazor_Diagram_Shadow_Opacity) of the shadow can be customized with the shadow property of the node. The following code example illustrates how to customize shadow.
 
@@ -395,7 +395,7 @@ The [Angle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shad
 
 ![Blazor Diagram Node with Custom Shadow](../images/blazor-diagram-node-custom-shadow.png)
 
-## Gradient
+## How to apply gradient style
 
 The [Gradient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_Gradient) property of the node allows you to define and apply the gradient effect to the node. The gradient stops property defines the color and a position, where the previous color transition ends and a new color transition starts. The gradient stop’s opacity property defines the transparency level of the region.
 
@@ -405,7 +405,7 @@ There are two types of gradients as follows:
 
 * RadialGradientBrush
 
-### Linear gradient brush
+### How to apply linear gradient brush
 
 [LinearGradientBrush](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LinearGradientBrush.html) defines a smooth transition between a set of colors (so-called stops) in a line. A linear gradient’s X1, Y1, X2, Y2 properties are used to define the position (relative to the node) of the rectangular region that needs to be painted.
 
@@ -456,7 +456,7 @@ There are two types of gradients as follows:
 
 ![Blazor Diagram Node with LinearGradient](../images/blazor-diagram-node-linear-gradient.png)
 
-### Radial gradient brush
+### How to apply radial gradient brush
 
 [RadialGradientBrush](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RadialGradientBrush.html) defines a smooth transition between stops on a circle. The radial gradient brush properties are used to define the position (relative to the node) of the outermost or the innermost circle of the radial gradient.
 

@@ -19,7 +19,7 @@ Annotations of a connector can be positioned using the following properties of A
 * VerticalAlignment
 * Margin
 
-## Offset
+## How to update offset for annotations
 
 The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_Offset) property of annotation is used to align the annotations based on fractions. 0 represents Top-Left corner, 1 represents Bottom-Right corner, and 0.5 represents half of Width/Height.
 
@@ -75,7 +75,7 @@ The following image shows the relationship between the annotation position and o
 
 > By default, offset value of the connector annotation is 0.5.
 
-## Alignment
+## How to change the alignment of an annotation
 
 The connector’s annotation can be aligned over its segment path using the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_Alignment) property of annotation.
 
@@ -125,7 +125,7 @@ The following screenshot shows how the annotation of the connector aligned over 
 
 > By default, Alignment value of the connector annotation is `Center`.
 
-## Displacement
+## How to change the displacement of an annotation
 
 The [Displacement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_Displacement) property is used to dislocate the annotation by the value given. By default, annotation will be in center of the connector path. When you assign value to the Displacement property, annotation will be displaced from its position by displacement value.
 
@@ -168,7 +168,7 @@ The [Displacement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
 }
 ```
 
-## Segment angle
+## How to update the segment angle of an annotation
 
 The [SegmentAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_SegmentAngle) property is used to rotate the annotation based on the connectors segment direction. By default, annotation will be rotated in the connector path. When you assign value to the SegmentPath property, annotation will be rotated from its position based on the connector segment direction.
 
