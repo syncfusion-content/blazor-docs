@@ -50,4 +50,4 @@ Interaction Keys |Description
 <kbd>Space</kbd> or <kbd>Enter</kbd> |It activates any of the focused items.
 <kbd>Page Up</kbd> & <kbd>Page Down</kbd> |To scroll through the work cells area.
 <kbd>Home</kbd> |To move the selection to the first cell of Scheduler.
-<kbd>F12</kbd> |To have the inline option for cells.
+<kbd>F12</kbd> |To have the inline option for both cells and events.
