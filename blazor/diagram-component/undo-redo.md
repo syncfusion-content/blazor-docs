@@ -126,7 +126,7 @@ The [HistoryChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 }
 ```
 
-### HistoryAdding
+### HistoryAdding Event
 
 [HistoryAdding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html#Syncfusion_Blazor_Diagram_DiagramHistoryManager_HistoryAdding) in the [DiagramHistoryManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html), which takes a history entry as argument and returns whether the specific entry can be added or not.
 
