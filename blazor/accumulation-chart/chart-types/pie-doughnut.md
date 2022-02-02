@@ -130,7 +130,7 @@ The center x and center y can be used to change the pie's center position. The p
 
 ![Changing Blazor Pie Chart Center Position](../images/pie-dough-nut/blazor-pie-chart-center-position.png)
 
-## Various adius Pie Chart
+## Various Radius Pie Chart
 
 The [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Radius) mapping can be used to render the slice with different radius.
 
