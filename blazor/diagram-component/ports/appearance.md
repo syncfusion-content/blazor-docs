@@ -9,7 +9,7 @@ documentation: ug
 
 # Port appearance and positioning
 
-## Appearance
+## Change the appearance of the port
 
 * The shape of a port can be changed by using the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Shape) property. To explore the different types of port shapes, refer to Port Shapes. If you need to render a custom shape, then you can set shape to path and define path using the path data property.
 
@@ -72,7 +72,7 @@ The following code explains how to change the appearance of the port.
 
 ![Changing Port Appearance in Blazor Diagram](../images/blazor-diagram-port-appearance.png)
 
-## Visibility
+## Change the visibility of the port
 
 The [Visibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Visibility) of the ports depends upon the properties of Connect, Hidden, Hover, and Visible. By default, [PortVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html) is set to Hidden.
 
@@ -144,7 +144,7 @@ We have provided some basic built-in [PortShapes](https://help.syncfusion.com/cr
 
 ![Blazor Diagram Port with Custom Shape](../images/blazor-diagram-port-custom-shape.png)
 
-## Constraints
+## How to enable or disable certain behavior of the port
 
 The constraints property allows you to enable or disable certain behaviors of ports. For more information about port constraints, refer to [Port Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html). You can verify the [Constraints](https://blazor.syncfusion.com/documentation/diagram-component/constraints) to learn how to enable or disable the port constraints.
 

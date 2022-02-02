@@ -11,7 +11,7 @@ documentation: ug
 
 The port can be used to create connector by enabling the `Draw` in the [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html).
 
-## Draw
+## Draw connector from the port
 
 Diagram provides the support to draw the connector in the port.
 
