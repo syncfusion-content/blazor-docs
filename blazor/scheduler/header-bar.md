@@ -143,7 +143,7 @@ The Scheduler UI that displays the date text on all views are considered as the 
     DateTime CurrentDate = new DateTime(2020, 1, 10);
     public static string getDateHeaderText(DateTime date)
     {
-        return date.ToString("dd ddd", CultureInfo.InvariantCulture);
+        return date.ToString("dd ddd", CultureInfo.CurrentCulture);
     }
     public class AppointmentData
     {
