@@ -112,7 +112,7 @@ The Add method is synchronous, so the call moves on to process the connections b
 
 ## Limitations over Add method
 
-* Using Add() method in the OnInitalized method will measure and render every diagram element at a time before rendering the diagram. So calling Add() method at runtime will render the complete diagram for each call as per the Blazor platform behavior. To improve the performance use AddDiagramElements() method, which will first measure the passed elements and then re-render the complete diagram component at a single time.
+* Using Add() method in the OnInitialized method will measure and render every diagram element at a time before rendering the diagram. So calling Add() method at runtime will render the complete diagram for each call as per the Blazor platform behavior. To improve the performance use AddDiagramElements() method, which will first measure the passed elements and then re-render the complete diagram component at a single time.
 
 * While adding multiple nodes and connectors simultaneously using Add() method, connectors will get rendered before the nodes get rendered. So connectors may be misplaced due to the synchronous behavior of the Add method. To overcome this, use the asynchronous AddDiagramElements() method.
 
