@@ -13,7 +13,7 @@ The Syncfusion Blazor Mac installer allows you to create the Blazor application 
 
 ## How to resolve the warning message in Catalina OS? 
 
-   While running Syncfusion Mac Installers on Catalina MacOS or later, the below alert will be displayed.
+   While running Syncfusion Blazor Mac Installer on Catalina MacOS or later, the below alert will be displayed.
 
    ![Alert Image](images/Mac_Catalina_MacOS_Alert.png)  
      
