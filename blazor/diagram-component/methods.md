@@ -13,7 +13,7 @@ The following methods are used to perform the diagram functionalities.
 
 ## Add nodes through Add method
 
-To create a node, define the Node object and add that to the nodes collection of the diagram through `Add()` method.  Using Add() method in the OnInitialized method will measure and render every diagram element at a time before rendering the diagram. So calling Add() method outside of Onitialised() method is not approachable. The following code example shows how to add a node to the diagram.
+To create a node, define the Node object and add that to the nodes collection of the diagram through `Add()` method.  Using Add() method in the OnInitialized method will measure and render every diagram element at a time before rendering the diagram. So calling Add() method outside of OnInitialized() method is not approachable. The following code example shows how to add a node to the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
