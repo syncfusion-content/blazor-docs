@@ -11,10 +11,49 @@ documentation: ug
 
 The following methods are used to perform the diagram functionalities.
 
+## Add nodes through Add method
+
+To create a node, define the Node object and add that to the nodes collection of the diagram through `Add()` method.  Using Add() method in the OnInitialized method will measure and render every diagram element at a time before rendering the diagram. So calling Add() method outside of Onitialised() method is not approachable. The following code example shows how to add a node to the diagram.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
+
+@code
+{
+    DiagramObjectCollection<Node> nodes;
+
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        // A node is created and stored in the nodes collection.
+        Node node = new Node()
+        {
+            ID = "node1",
+            // Position of the node.
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            }
+        };
+        // Add node.
+        nodes.Add(node);
+    }
+}
+```
+
 ## Add nodes through AddDiagramElements
 
-The Add method is synchronous, so the call moves on to process the connections before processing the nodes internally. So, it is better to use [AddDiagramElements](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElements_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method instead of the Add method to add nodes and connections at runtime.
+ Unlike Add() method, [AddDiagramElements](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElements_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method will first measure the passed elements and then re-render the complete diagram component at a single time. While adding multiple nodes and connectors simultaneously using Add() method, connectors will get rendered before the nodes get rendered. So connectors may be misplaced due to the synchronous behavior of the Add method. To overcome this, use the asynchronous AddDiagramElements() method.
 
+* AddDiagramElements() method is a suggested way to add a collection of items to the diagram to get better performance compared to Add() method.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -109,12 +148,3 @@ The Add method is synchronous, so the call moves on to process the connections b
     }
 }
 ```
-
-## Limitations over Add method
-
-* Using Add() method in the OnInitialized method will measure and render every diagram element at a time before rendering the diagram. So calling Add() method at runtime will render the complete diagram for each call as per the Blazor platform behavior. To improve the performance use AddDiagramElements() method, which will first measure the passed elements and then re-render the complete diagram component at a single time.
-
-* While adding multiple nodes and connectors simultaneously using Add() method, connectors will get rendered before the nodes get rendered. So connectors may be misplaced due to the synchronous behavior of the Add method. To overcome this, use the asynchronous AddDiagramElements() method.
-
-* AddDiagramElements() method is a suggested way to add a collection of items to the diagram to get better performance compared to Add() method.
-
