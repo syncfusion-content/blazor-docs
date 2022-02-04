@@ -26,7 +26,7 @@ The Essential Studio Blazor Mac installer allows you to create the Blazor applic
 
 The steps below show how to install the Essential Studio Blazor Mac installer.
 
-1. Open Syncfusion Blazor Mac Installer(.pkg) file. The Installer Wizard opens. Click Continue.
+1. Open Syncfusion Essential Studio Blazor Mac Installer(.pkg) file. The Installer Wizard opens. Click Continue.
 
    ![Installer Wizard](images/Mac_installer_1.PNG)
 
@@ -38,13 +38,13 @@ The steps below show how to install the Essential Studio Blazor Mac installer.
 
    ![License Agreements Confirmation](images/Mac_installer_3.PNG)
 
-   > **Note** <br /> The Unlock key is not required to install the Mac installer.
+   > **Note** <br /> The Unlock key is not required to install the Essential Studio Blazor Mac installer.
 
 4. The Destination select wizard will appear. You can choose which disc to install the Syncfusion Essential Studio for Blazor installer on here.
 
    ![Destination select wizard](images/Mac_installer_4.PNG)
 
-5. The Installation Type wizard will appear. Click Install to begin the standard installation of the Syncfusion Blazor Mac installer.
+5. The Installation Type wizard will appear. Click Install to begin the standard installation of the Syncfusion Essential Studio Blazor Mac installer.
 
    ![Installation Type wizard](images/Mac_installer_5.PNG)
 
