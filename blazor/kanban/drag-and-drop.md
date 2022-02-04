@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Drag and Drop in Blazor Kanban Component | Syncfusion
-description: Checkout and learn here all details about drag and drop the cards in Syncfusion Blazor Kanban component.
+description: Checkout and learn here all about drag and drop the cards in the Syncfusion Blazor Kanban component.
 platform: Blazor
 control: Kanban
 documentation: ug
 ---
 
-# Drag and drop in Blazor Kanban Component
+# Drag and Drop in Blazor Kanban Component
 
-All cards can be dragged and dropped across the columns or within the columns or swimlane row or Kanban to an external source and vice versa.
+All cards can be dragged and dropped across columns, within columns, swimlane rows, or Kanban to an external source, and vice versa.
 
 The following drag and drop types are available in the Kanban board.
 
@@ -25,11 +25,11 @@ Allows the user to drag and drop the cards within the Kanban board. Based on thi
 
 ### Column drag and drop
 
-Transit or change the card position using the drag-and-drop functionality. By default, the `AllowDragAndDrop` property is enabled on the Kanban board, which is used to change the card position by column-to-column or within the column.
+Transit or change the card position using the drag-and-drop functionality. By default, the `AllowDragAndDrop` property is enabled on the Kanban board, which is used to change the card position from column to column or within the column.
 
-Added dotted border on Kanban cells except the dragged clone cells when dragging, which indicates the possible ways for dropping the cards into the cells.
+A dotted border is added on Kanban cells except the dragged clone cells when dragging, which indicates the possible ways for dropping the cards into the cells.
 
-In the following example, disabled the drag and drop behavior on the Kanban board.
+In the following example, the drag and drop behavior is disabled on the Kanban board.
 
 ```cshtml
 
@@ -91,7 +91,7 @@ In the following example, disabled the drag and drop behavior on the Kanban boar
 
 ### Swimlane drag and drop
 
-By default, The Kanban does not allow dragging the cards across the swimlane rows. Enabling the `AllowDragAndDrop` property allows you to drag the cards across the swimlane rows, which is specified inside `KanbanSwimlaneSettings` property.
+By default, the Kanban does not allow dragging the cards across the swimlane rows. Enabling the `AllowDragAndDrop` property allows you to drag the cards across the swimlane rows, which is specified inside `KanbanSwimlaneSettings` property.
 
 ```cshtml
 
@@ -160,7 +160,7 @@ Allows the user to drag and drop the cards from one Kanban to another Kanban or 
 
 Drag and drop the card from one Kanban to another Kanban and vice versa. This can be achieved by specifying the `ExternalDropId` property which is used to specify the id of the dropped Kanban element and the `DragStop` event which is used to delete the card on dragged Kanban and add the card on dropped Kanban using the `DeleteCard` and `AddCard` public methods.
 
-In the following example, Drag the card from one Kanban and drop it into another Kanban using the `DragStop` event. 
+In the following example, a card can be dragged from one Kanban and dropped into another Kanban using the `DragStop` event.
 
 {% highlight razor %}
 
@@ -309,7 +309,7 @@ In the following example, Drag the card from one Kanban and drop it into another
 
 Drag the card from the Kanban board and drop it to the Schedule component.
 
-In the following sample, we remove the data from the Kanban board using the `DeleteCard` public method at the `ActionBegin` event of Schedule component and add it to the Schedule component at Kanban `dragStop` event when dragging the card and dropping it to the Schedule.
+In the following sample, the data is removed from the Kanban board using the `DeleteCard` public method at the `ActionBegin` event of Schedule component and added to the Schedule component at Kanban `dragStop` event when dragging and dropping the card to the Schedule.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Index.razor" hl_lines="4" %}
@@ -728,18 +728,18 @@ namespace Blazor.Data
                 new KanbanDataModel { Id = "Task 8", Title = "Task  - 29015", Status = "Open", Summary = "Fix the filtering issues reported in safari.", Priority = "Critical", CardTags = new List<string>() { "Bug", "Breaking Issue" }, RankId = 4, Assignee = "Margaret hamilt" },
                 new KanbanDataModel { Id = "Task 9", Title = "Task  - 29016", Status = "Review", Summary = "Fix the issues reported in IE browser.", Priority = "High", CardTags = new List<string>() { "Bug", "Customer" }, RankId = 3, Assignee = "Andrew Fuller" },
                 new KanbanDataModel { Id = "Task 10", Title = "Task  - 29017", Status = "Review", Summary = "Enhance editing functionality.", Priority = "Normal", CardTags = new List<string>() { "Story", "Kanban" }, RankId = 4, Assignee = "Janet Leverling" },
-                new KanbanDataModel { Id = "Task 11", Title = "Task  - 29018", Status = "Close", Summary = "Arrange web meeting with customer to get login page requirement.", Priority = "High", CardTags = new List<string>() { "Feature" }, RankId = 1, Assignee = "Andrew Fuller" },
+                new KanbanDataModel { Id = "Task 11", Title = "Task  - 29018", Status = "Close", Summary = "Arrange web meeting with customer to get login page requirements.", Priority = "High", CardTags = new List<string>() { "Feature" }, RankId = 1, Assignee = "Andrew Fuller" },
                 new KanbanDataModel { Id = "Task 12", Title = "Task  - 29020", Status = "Close", Summary = "Login page validation.", Priority = "Low", CardTags = new List<string>() { "Bug" }, RankId = 2, Assignee = "Margaret hamilt" },
                 new KanbanDataModel { Id = "Task 13", Title = "Task  - 29021", Status = "Close", Summary = "Test the application in IE browser.", Priority = "Normal", CardTags = new List<string>() { "Bug" }, RankId = 3, Assignee = "Steven walker" },
                 new KanbanDataModel { Id = "Task 14", Title = "Task  - 29022", Status = "Close", Summary = "Analyze stored procedure.", Priority = "Critical", CardTags = new List<string>() { "CustomSample", "Customer" }, RankId = 4, Assignee = "Janet Leverling" },
                 new KanbanDataModel { Id = "Task 15", Title = "Task  - 29024", Status = "Review", Summary = "Check login page validation.", Priority = "Low", CardTags = new List<string>() { "Story" }, RankId = 5, Assignee = "Nancy Davloio" },
                 new KanbanDataModel { Id = "Task 16", Title = "Task  - 29025", Status = "Close", Summary = "Add input validation for editing.", Priority = "Critical", CardTags = new List<string>() { "Bug", "Breaking Issue" }, RankId = 5, Assignee = "Andrew Fuller" },
                 new KanbanDataModel { Id = "Task 17", Title = "Task  - 29026", Status = "In Progress", Summary = "Improve performance of editing functionality.", Priority = "Critical", CardTags = new List<string>() { "Bug", "Customer" }, RankId = 2, Assignee = "Nancy Davloio" },
-                new KanbanDataModel { Id = "Task 18", Title = "Task  - 29027", Status = "Open", Summary = "Arrange web meeting for cutomer requirement.", Priority = "High", CardTags = new List<string>() { "Story" }, RankId = 5, Assignee = "Steven walker" },
+                new KanbanDataModel { Id = "Task 18", Title = "Task  - 29027", Status = "Open", Summary = "Arrange web meeting for cutomer requirements.", Priority = "High", CardTags = new List<string>() { "Story" }, RankId = 5, Assignee = "Steven walker" },
                 new KanbanDataModel { Id = "Task 19", Title = "Task  - 29029", Status = "Review", Summary = "Fix the issues reported by the customer.", Priority = "High", CardTags = new List<string>() { "Bug" }, RankId = 6, Assignee = "Janet Leverling" },
                 new KanbanDataModel { Id = "Task 20", Title = "Task  - 29030", Status = "In Progress", Summary = "Test editing functionality", Priority = "Low", CardTags = new List<string>() { "Story" }, RankId = 3, Assignee = "Janet Leverling" },
                 new KanbanDataModel { Id = "Task 21", Title = "Task  - 29031", Status = "In Progress", Summary = "Check filtering validation", Priority = "Normal", CardTags = new List<string>() { "Feature", "Release" }, RankId = 4, Assignee = "Janet Leverling" },
-                new KanbanDataModel { Id = "Task 22", Title = "Task  - 29032", Status = "In Progress", Summary = "Arrange web meeting with customer to get login page requirement", Priority = "Critical", CardTags = new List<string>() { "Feature" }, RankId = 5, Assignee = "Margaret hamilt" },
+                new KanbanDataModel { Id = "Task 22", Title = "Task  - 29032", Status = "In Progress", Summary = "Arrange web meeting with customer to get login page requirements", Priority = "Critical", CardTags = new List<string>() { "Feature" }, RankId = 5, Assignee = "Margaret hamilt" },
                 new KanbanDataModel { Id = "Task 23", Title = "Task  - 29033", Status = "Open", Summary = "Arrange web meeting with customer to get editing requirements", Priority = "Critical", CardTags = new List<string>() { "Story", "Improvement" }, RankId = 6, Assignee = "Andrew Fuller" },
                 new KanbanDataModel { Id = "Task 24", Title = "Task  - 29034", Status = "In Progress", Summary = "Fix the issues reported by the customer.", Priority = "Critical", CardTags = new List<string>() { "Bug", "Customer" }, RankId = 6, Assignee = "Steven walker" },
                 new KanbanDataModel { Id = "Task 25", Title = "Task  - 29035", Status = "Close", Summary = "Fix the issues reported in Safari browser.", Priority = "High", CardTags = new List<string>() { "Bug" }, RankId = 6, Assignee = "Nancy Davloio" },
