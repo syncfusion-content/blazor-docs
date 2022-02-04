@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Localization (Multi-Language) in Blazor components | Syncfusion"
-description: "The Syncfusion Blazor UI components support localization and globalization (RTL, number, and date formats) in Blazor Server and WebAssembly (WASM) apps."
-platform: "Blazor"
-component: "Common"
+title: Localization (Multi-Language) in Blazor components | Syncfusion
+description: The Syncfusion Blazor UI components support localization and globalization (RTL, number, and date formats) in Blazor Server and WebAssembly (WASM) apps.
+platform: Blazor
+component: Common
 documentation: ug
 ---
 
@@ -243,7 +243,7 @@ The culture can be set using one of the following approaches:
 
 8. Add Syncfusion Blazor UI components in `~/Pages/*.razor` and run the application. The following screenshot illustrates the output of the German `de-DE` culture.
 
-    ![Syncfusion Blazor UI Component's Localization in German culture](./images/de-culture.png)
+    ![Syncfusion Blazor UI Component Localization in German culture](./images/de-culture.png)
 
     > Download Blazor Server app App from [Github](https://github.com/SyncfusionExamples/blazor-localization/tree/master/blazor-server-app).
 
@@ -354,7 +354,7 @@ The culture can be set using one of the following approaches:
     </ItemGroup>
     ```
 
-4. Add the custom JavaScript interop function to get or set the culture in `~/wwwrooot/index.html`.
+4. Add the custom JavaScript interop function to get or set the culture in `~/wwwroot/index.html`.
 
     ```html
     <body>
@@ -426,6 +426,10 @@ The culture can be set using one of the following approaches:
 
 7. Add Syncfusion Blazor UI components in `~/Pages/*.razor` and run the application. The following screenshot illustrates the output of the German `de-DE` culture.
 
-    ![Syncfusion Blazor UI Component's Localization in German culture](./images/de-culture.png)
+    ![Syncfusion Blazor UI Component Localization in German culture](./images/de-culture.png)
 
     > Download Blazor WebAssembly App from [Github](https://github.com/SyncfusionExamples/blazor-localization/tree/master/blazor-webassembly-app).
+
+## See also
+
+* [How to Perform Localization using Database instead of Resource Files in Blazor?](https://www.syncfusion.com/kb/13012/how-to-perform-localization-using-database-instead-of-resource-files-in-blazor)
