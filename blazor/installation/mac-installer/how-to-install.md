@@ -9,11 +9,11 @@ documentation: ug
 
 # Installing Syncfusion Blazor Mac installer
 
-The Syncfusion Blazor Mac installer allows you to create the Blazor application in Visual Studio for Mac with the Syncfusion Blazor components.
+The Essential Studio Blazor Mac installer allows you to create the Blazor application in Visual Studio for Mac with the Syncfusion Blazor components.
 
 ## How to resolve the warning message in Catalina OS? 
 
-   While running Syncfusion Blazor Mac Installer on Catalina MacOS or later, the below alert will be displayed.
+   While running Essential Studio Blazor Mac Installer on Catalina MacOS or later, the below alert will be displayed.
 
    ![Alert Image](images/Mac_Catalina_MacOS_Alert.png)  
      
@@ -24,7 +24,7 @@ The Syncfusion Blazor Mac installer allows you to create the Blazor application 
 
 ## Step-by-Step Installation
 
-The steps below show how to install the Blazor Mac installer.
+The steps below show how to install the Essential Studio Blazor Mac installer.
 
 1. Open Syncfusion Blazor Mac Installer(.pkg) file. The Installer Wizard opens. Click Continue.
 
