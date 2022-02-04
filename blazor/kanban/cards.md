@@ -11,12 +11,6 @@ documentation: ug
 
 The cards are main elements in Kanban board, which represent the task information with header and content. The header and content of a card is fetched from the corresponding mapping fields. The card layout can be customized with template also.
 
-## Drag-and-drop
-
-Transit or change the card position using the drag-and-drop functionality. By default, the `AllowDragAndDrop` property is enabled on the Kanban board, which is used to change the card position by column-to-column or within the column.
-
-Added dotted border on Kanban cells except the dragged clone cells when dragging, which indicates the possible ways for dropping the cards into the cells.
-
 ## Header
 
 The card header is achieved by mapping the `HeaderField` property, which is placed inside the `KanbanCardSettings` property. By default, the `ShowHeader` property enabled by Kanban board that is used to show the header at the top of the card.
