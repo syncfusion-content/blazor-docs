@@ -11,7 +11,18 @@ documentation: ug
 
 The Syncfusion Blazor Mac installer allows you to create the Blazor application in Visual Studio for Mac with the Syncfusion Blazor components.
 
-## Installation
+## How to resolve the warning message in Catalina OS? 
+
+   While running Syncfusion Mac Installers on Catalina MacOS or later, the below alert will be displayed.
+
+   ![Alert Image](images/Mac_Catalina_MacOS_Alert.png)  
+     
+   If you receive this alert, follow the below steps for the easiest solution.   
+
+   1.	Right-click the downloaded pkg file.
+   2.	Select the "Open With" option and choose "Installer (Default)".
+
+## Step-by-Step Installation
 
 The steps below show how to install the Blazor Mac installer.
 
