@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Grouping in Blazor ListView Component | Syncfusion
-description: Checkout and learn here all about g
-rouping in Syncfusion Blazor ListView component and much more details.
+description: Checkout and learn here all about grouping in Syncfusion Blazor ListView component and much more details.
 platform: Blazor
 control: Listview
 documentation: ug
