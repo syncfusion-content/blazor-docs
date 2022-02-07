@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grouping in Blazor ListView Component | Syncfusion
-description: Checkout and learn here all about Grouping in Syncfusion Blazor ListView component and much more details.
+description: Checkout and learn here all about grouping in Syncfusion Blazor ListView component and much more details.
 platform: Blazor
 control: Listview
 documentation: ug
@@ -10,8 +10,6 @@ documentation: ug
 # Grouping in Blazor ListView Component
 
 The ListView supports to wrap the nested element into a group based on the category. The category of each list item can be mapped with GroupBy field in the data table, that also supports single-level navigation.
-
-In the following sample, The cars are grouped based on its category by using the GroupBy field in ListViewFieldSettings.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
