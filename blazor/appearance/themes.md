@@ -49,13 +49,24 @@ Instead of using [Static Web assets](#static-web-assets) or a [CDN reference](#c
 
 ## Static Web Assets
 
-Syncfusion Blazor themes are available as Static web Assets in the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet Packages.
+### Enable static web assets usage
+
+To use static web assets, ensure [UseStaticFiles](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles) method is called as follows,
+
+* For **.NET 6** app, open the **~/Program.cs** file and call `UseStaticFiles` method.
+* For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and call `UseStaticFiles` method.
+
+> For **Blazor WASM App**, call `UseStaticFiles` method in **Server project** in the above mentioned file. 
+
+## Refer theme style sheet from static web assets
+
+Syncfusion Blazor themes are available as static web assets in the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet Packages.
 
 * For **Blazor WebAssembly application**, refer style sheet inside the `<head>` element of **wwwroot/index.html** file.
 * For **Blazor Server application**, refer style sheet inside the `<head>` element of 
     * **~/Pages/_Host.cshtml** file for .NET 3 and .NET 5.
     * **~/Pages/_Layout.cshtml** for .NET 6.
-    
+
 When using individual NuGet packages in your application, add [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet Package and reference style sheet as below,
 
  ```html
