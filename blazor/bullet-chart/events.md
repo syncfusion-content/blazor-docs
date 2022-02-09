@@ -34,7 +34,7 @@ The `Loaded` event triggers after the Bullet Chart component has been loaded.
     };
     public void LoadedHandler(System.EventArgs args)
     {
-        // Here you can customize the code.
+        // Here, you can customize the code.
     }
 }
 ```
@@ -76,7 +76,7 @@ The [OnPrintComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
     public void PrintCompleteHandler(PrintEventArgs args)
     {
-        // Here you can customize the code.
+        // Here, you can customize the code.
     }
 }
 ```
@@ -114,7 +114,7 @@ The [TooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
     public void TooltipRenderHandler(BulletChartTooltipEventArgs args)
     {
-        // Here you can customize the code.
+        // Here, you can customize the code.
     }
 }
 ```
@@ -157,7 +157,7 @@ The [LegendRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
     };
     public void LegendRenderHandler(BulletChartLegendRenderEventArgs args)
     {
-        // Here you can customize the code.
+        // Here, you can customize the code.
     }
 }
 ```
