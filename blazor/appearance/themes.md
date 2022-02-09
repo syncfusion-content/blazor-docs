@@ -58,7 +58,7 @@ To use static web assets, ensure [UseStaticFiles](https://docs.microsoft.com/en-
 
 > For **Blazor WASM App**, call `UseStaticFiles` method in **Server project** in the above mentioned file. 
 
-## Refer theme style sheet from static web assets
+### Refer theme style sheet from static web assets
 
 Syncfusion Blazor themes are available as static web assets in the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet Packages.
 
