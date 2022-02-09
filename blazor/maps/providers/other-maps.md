@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Other Maps in Blazor Maps Component | Syncfusion
-description: Checkout and learn here all about Other Maps in Syncfusion Blazor Maps component and much more details.
+description: Checkout and learn here all about other maps in Syncfusion Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug
@@ -17,7 +17,7 @@ Sample Template: https://< domain_name >/maps/basic/{z}/{x}/{y}.png
 * "${x}" - It indicates tile image x-position (tileX).
 * "${y}" - It indicates tile image y-position (tileY).
 
-In this case, the key generated for those online map service providers can also be appended to the URL. This allows you to create personalized Maps with your own content and imagery. In this example, Google Maps is rendered.
+In this case, the key generated for those online map service providers can also be appended to the URL. This allows to create personalized Maps with your own content and imagery. In this example, Google Maps is rendered.
 
 > Refer to [Google Maps Licensing](https://developers.google.com/maps/terms#10-license-restrictions).
 
@@ -36,7 +36,7 @@ In this case, the key generated for those online map service providers can also 
 
 **Enable zooming and panning**
 
-Tile Maps layer can be zoomed and panned. Zooming helps to get a closer look at a particular area on a Maps for in-depth analysis. Panning helps to move a Maps around to focus the targeted area.
+Tile Maps layer can be zoomed and panned. Zooming helps to get a closer look at a particular area on a Maps for in-depth analysis. Panning helps to move Maps around to focus the targeted area.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
