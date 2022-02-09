@@ -22,7 +22,7 @@ By default, the MaxHeight for the Dialog is calculated based on the target. If t
     <DialogEvents OnOpen="onOpen"></DialogEvents>
     <DialogTemplates>
         <Header> Dialog </Header>
-        <Content> This is a Dialog with MaxHeight property </Content>
+        <Content> This is a Dialog with the MaxHeight property </Content>
     </DialogTemplates>
     <DialogButtons>
         <DialogButton Content="OK" IsPrimary="true" OnClick="@CloseDialog" />
