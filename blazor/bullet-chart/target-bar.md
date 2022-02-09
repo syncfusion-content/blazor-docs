@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Target Bar in Blazor Bullet Chart Component | Syncfusion
-description: Checkout and learn here all about Target Bar in Syncfusion Blazor Bullet Chart component and muchmore.
+description: Checkout and learn here all about Target Bar in Syncfusion Blazor Bullet Chart component and much more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
@@ -36,7 +36,7 @@ The line marker that runs perpendicular to the orientation of the graph is known
 
 ![Target Bar in Blazor Bullet Chart](images/blazor-bullet-chart-target-bar.png)
 
-## Types of Target Bar
+## Types of target bar
 
 The shape of the target bar can be customized using the [TargetTypes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TargetTypes) property and it supports [Circle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TargetType.html#Syncfusion_Blazor_Charts_TargetType_Circle), [Cross](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TargetType.html#Syncfusion_Blazor_Charts_TargetType_Cross), and [Rect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TargetType.html#Syncfusion_Blazor_Charts_TargetType_Rect) shapes. The default type of the target bar is [Rect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TargetType.html#Syncfusion_Blazor_Charts_TargetType_Rect).
 
@@ -56,7 +56,7 @@ The shape of the target bar can be customized using the [TargetTypes](https://he
 
 ![Rectangle Target Bar with Blazor Bullet Chart](images/blazor-bullet-chart-rectangle-target-bar.png)
 
-## Target Bar Customization
+## Target bar customization
 
 The following properties can be used to customize the Target Bar.
 

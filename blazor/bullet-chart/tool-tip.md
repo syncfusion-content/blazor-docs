@@ -11,7 +11,7 @@ documentation: ug
 
 When the mouse is hovered over a bar in the Bullet Chart, the tooltip displays important summary about the actual and the target bar values.
 
-## Default Tooltip
+## Default tooltip
 
 The tooltip is not visible by default. To make it visible, set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Enable) property in the [BulletChartTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html) to **true**.
 
@@ -48,7 +48,7 @@ The tooltip is not visible by default. To make it visible, set the [Enable](http
 
 ![Blazor Bullet Chart displays ToolTip](images/blazor-bulletchart-tooltip.png)
 
-## Tooltip Customization
+## Tooltip customization
 
 The following properties can be used to customize the Bullet Chart tooltip.
 
@@ -76,7 +76,7 @@ The following properties can be used to customize the Bullet Chart tooltip.
 
 ![Customizing Blazor Bullet Chart ToolTip](images/blazor-bullet-chart-tooltip-customization.png)
 
-## Tooltip Template
+## Tooltip template
 
 The tooltip can be rendered as a custom component using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Template) property in the [BulletChartTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html) which accepts one or more UI elements as an input, that can be rendered as a part of the tooltip rendering.
 
