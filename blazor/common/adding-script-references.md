@@ -166,7 +166,7 @@ To use static web assets, ensure [UseStaticFiles](https://docs.microsoft.com/en-
 
 > For **Blazor WASM App**, call `UseStaticFiles` method in **Server project** of the above mentioned file. 
 
-## Refer script from static web assets
+### Refer script from static web assets
 
 * If you are using Syncfusion [Blazor individual NuGet package](https://blazor.syncfusion.com/documentation/nuget-packages), the combined scripts available in [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor.Core/) package. To refer script from static web assets, use the code below.
 
