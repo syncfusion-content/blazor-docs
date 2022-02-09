@@ -11,7 +11,7 @@ documentation: ug
 
 The Essential Studio Blazor Mac installer allows you to create the Blazor application in Visual Studio for Mac with the Syncfusion Blazor components.
 
-## How to resolve the warning message in Catalina OS or later? 
+## Steps to resolve the warning message in Catalina OS or later
 
    While running Essential Studio Blazor Mac Installer on Catalina MacOS or later, the below alert will be displayed.
 
