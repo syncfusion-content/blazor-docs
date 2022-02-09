@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bind Change Events in Blazor ListBox Component | Syncfusion
-description: Checkout and learn here all about Bind Change Events in Syncfusion Blazor ListBox component and more.
+description: Checkout and learn here all about bind change events in Syncfusion Blazor ListBox component and more.
 platform: Blazor
 control: List Box
 documentation: ug
@@ -45,7 +45,5 @@ To bind the change event in the listbox [ValueChange](https://help.syncfusion.co
 }
 
 ```
-
-Output will be shown as
 
 ![Binding Events in Blazor ListBox](./../images/blazor-listbox.png)

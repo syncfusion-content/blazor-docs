@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Enable Scroller in Blazor ListBox Component | Syncfusion
-description: Checkout and learn here all about Enable Scroller in Syncfusion Blazor ListBox component and much more.
+description: Checkout and learn here all about enable scroller in Syncfusion Blazor ListBox component and much more.
 platform: Blazor
 control: List Box
 documentation: ug
@@ -39,7 +39,5 @@ In the following sample, `Height` of the listbox is restricted to `290px`.
 }
 
 ```
-
-Output will be shown as
 
 ![Enabling Scroller in Blazor ListBox](./../images/blazor-listbox-enable-scroller.png)
