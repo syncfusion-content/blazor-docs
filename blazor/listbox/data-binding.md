@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor ListBox Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor ListBox component and much more.
+description: Checkout and learn here all about data binding in Syncfusion Blazor ListBox component and much more.
 platform: Blazor
 control: List Box
 documentation: ug
@@ -23,7 +23,7 @@ The ListBox loads the data from local data sources using the [DataSource](https:
 
 ## Local Data
 
-Local data can be represented by the following ways as described below.
+Local data can be represented by the following ways.
 
 ### Array of string
 
@@ -36,8 +36,6 @@ The ListBox has support to load array of primitive data such as strings or numbe
 public string[] Games = new string[] { "Badminton", "Cricket", "Football", "Golf", "Tennis", "Basket Ball", "Base Ball", "Hockey", "Volley Ball" };
 }
 ```
-
-Output will be shown as
 
 ![Data Binding in Blazor ListBox](images/blazor-listbox-data-binding.png)
 
@@ -72,8 +70,6 @@ In the following example, `id` and `sports` column from complex data have been m
     }
 }
 ```
-
-Output will be shown as
 
 ![Binding Blazor ListBox Items](images/blazor-listbox-binding-items.png)
 
@@ -113,8 +109,6 @@ In the following example, `sports.Name` column from complex data have been mappe
 }
 ```
 
-Output will be shown as
-
 ![Binding Complex Items with Blazor ListBox](images/blazor-listbox-bind-complex-items.png)
 
 ## Remote Data
@@ -152,7 +146,5 @@ The following sample displays the employee names from `Employee` table.
 }
 
 ```
-
-Output will be shown as
 
 ![Blazor ListBox with Data Binding](images/blazor-listbox-with-data-binding.png)

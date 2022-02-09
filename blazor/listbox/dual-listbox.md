@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dual ListBox in Blazor ListBox Component | Syncfusion
-description: Checkout and learn here all about Dual ListBox in Syncfusion Blazor ListBox component and much more.
+description: Checkout and learn here all about dual ListBox in Syncfusion Blazor ListBox component and much more.
 platform: Blazor
 control: List Box
 documentation: ug
@@ -93,7 +93,5 @@ The following example illustrates how to move items from `Group A` to `Group B` 
 </style>
 
 ```
-
-Output will be shown as
 
 ![Blazor Dual ListBox](./images/blazor-dual-listbox.png)

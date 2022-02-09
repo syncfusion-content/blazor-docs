@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting Started with Blazor ListBox Component
 
-This section briefly explains about how to include [Blazor ListBox](https://www.syncfusion.com/blazor-components/blazor-listbox) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor ListBox](https://www.syncfusion.com/blazor-components/blazor-listbox) component in Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
-To get start quickly with ListBox Component using Blazor, you can check on this video:
+To get start quickly with ListBox Component using Blazor, check on this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=-nZ1n8zFIPI"%}
@@ -170,7 +170,7 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 
 ### Blazor WebAssembly App
 
-For Blazor WebAssembly App, Refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
+For Blazor WebAssembly App, refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/index.html" %}
@@ -188,9 +188,9 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 ### Blazor Server App
 
-* For **.NET 6** app, Refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+* For **.NET 6** app, refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
-* For **.NET 5 and .NET 3.X** app, Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For **.NET 5 and .NET 3.X** app, refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
 {% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4" %}
@@ -216,7 +216,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 ### Blazor WebAssembly App
 
-For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html** file.
+For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/index.html" hl_lines="4" %}
@@ -286,7 +286,7 @@ After initializing, populate the ListBox with data using the `DataSource` proper
 {% endhighlight %}
 {% endtabs %}
 
-> `TValue` is type of value in the datasource to resolve type inference. It is generic type and can be given as string[], int[].
+> `TValue` is the type of value in the datasource to resolve type inference. It is generic type and can be given as string[], int[].
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor ListBox` component will be rendered in the default web browser.
 
