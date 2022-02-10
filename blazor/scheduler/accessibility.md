@@ -35,9 +35,8 @@ Interaction Keys |Description
 -----|-----
 <kbd>Alt</kbd> + <kbd>j</kbd> |Focuses the Scheduler [Provided from application end].
 <kbd>Tab</kbd> |Focuses the first or active item on the scheduler header bar and then moves the focus to the next available event elements. If no events present, then focus moves out of the component.
-<kbd>Shift</kbd> + <kbd>Tab</kbd> |Reverse focusing of the Tab functionality. Inverse focusing of event elements from the last one and then move onto the first or active item on Scheduler header bar and then moves out of the component.
-<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow</kbd> (keys) |Focuses the event element and then move the focus to the next available event elements between the resources.
-<kbd>Enter</kbd> |Opens the quick popup on the selected cells or events.
+<kbd>Shift</kbd> + <kbd>Tab</kbd> |Reverse focusing of the Tab functionality. Inverse focusing of event elements from the last one and then moves onto the first or active item on Scheduler header bar and then moves out of the component.
+<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow</kbd> (keys) |Focuses the event element and then moves the focus to the next available event elements between the resources.
 <kbd>Escape</kbd> |Closes any of the popup that are in open state.
 <kbd>Arrow</kbd> |To move onto the next available cells in either of the needed directions (left, right, top and right)
 <kbd>Shift</kbd> + <kbd>Arrow</kbd> |For multiple cell selection on either direction.
