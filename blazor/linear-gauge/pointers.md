@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pointers in Blazor Linear Gauge Component | Syncfusion
-description: Checkout and learn here all about Pointers in Syncfusion Blazor Linear Gauge component and much more.
+description: Checkout and learn here all about pointers in Syncfusion Blazor Linear Gauge component and much more.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
