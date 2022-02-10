@@ -13,7 +13,7 @@ The web accessibility makes web content and web applications more accessible for
 
 Calendar provides built-in compliance with [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices) specifications. WAI-ARIA support is achieved through attributes like `aria-label`, `aria-selected`, `aria-disabled`, and `aria-activedescendant` applied for navigation buttons, and disable and active day cells.
 
-It helps disabled persons by providing information about the widget for assistive technology  in the screen readers. Calendar component contains grid role and grid cell for each day cell.
+It helps disabled persons by providing information about the widget for assistive technology in the screen readers. Calendar component contains grid role and grid cell for each day cell.
 
 * **aria-label**: Provides text labels for an object for the previous and next month's elements. It helps the screen reader object to read.
 
@@ -25,7 +25,7 @@ It helps disabled persons by providing information about the widget for assistiv
 
 * **role**: Gives information to assistive technologies about how to handle each element in a widget.
 
-* **grid-cell**: Defines the individual cell that can be focussed and selected.
+* **grid-cell**: Defines the individual cell that can be focused and selected.
 
 ## Keyboard interaction
 
@@ -37,7 +37,7 @@ It supports the following list of shortcut keys:
 | --- | --- |
 | <kbd>Upper Arrow</kbd>  | Focuses the same day of the previous week. |
 | <kbd>Down Arrow</kbd>  | Focuses the same day of the next week. |
-| <kbd>Left Arrow</kbd>  | Focuses the day before. |
+| <kbd>Left Arrow</kbd>  | Focuses the previous day. |
 | <kbd>Right Arrow</kbd>  | Focuses the next day. |
 | <kbd>Home</kbd>  | Focuses the first day of the month. |
 | <kbd>End</kbd>  | Focuses the last day of the month. |
