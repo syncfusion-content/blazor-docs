@@ -384,9 +384,9 @@ The following example demonstrates how to change a theme dynamically in Blazor S
 {% endhighlight %}
 {% endtabs %}
 
-    ![Change theme dynamically in blazor server app](images/blazor-dynamic-theme-switching.gif) 
+   ![Change theme dynamically in blazor server app](images/blazor-dynamic-theme-switching.gif) 
     
-    > [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-server-app) 
+   > [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-server-app) 
 
 ### Change theme dynamically in blazor WebAssembly (WASM) app
 
