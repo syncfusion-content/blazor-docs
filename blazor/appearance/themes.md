@@ -210,18 +210,19 @@ In the Blazor application, the application theme can be changed dynamically by c
 
 The following example demonstrates how to change a theme dynamically in Blazor Server application using Syncfusion Blazor themes using Syncfusion Dropdown component.
 
-1. For **.NET5 Blazor Server Application**, in  **_Host.cshtml**, refer syncfusion style sheet where the style sheet name is defined based on query string.
+1. Below step shows how to reference style sheet in the way to change at dynamically.
 
-* For **.NET6 Blazor Server Application**, add the below function code in the  **_Layout.cshtml** file to set the theme as selected in dropdown by using its `id` value.
+* For **.NET6 Blazor Server Application**, In the **_Layout.cshtml** the theme is changed dynamically using `id` in `setTheme` method.
+* For **.NET5 & 3.1 Blazor Server Application**, In **_Host.cshtml**, the theme is changed based on query string. 
     
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Pages/_Layout.cshtml)" %}
+{% highlight c# tabtitle=".NET 6 (~/_Layout.cshtml)" %}
 
 <head>
-…………… 
+... 
 <link id="theme" href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
 </head>
-…………… 
+... 
 <script>
     function setTheme(theme) {
         document.getElementsByTagName('body')[0].style.display = 'none';
@@ -230,10 +231,10 @@ The following example demonstrates how to change a theme dynamically in Blazor S
         setTimeout(function () { document.getElementsByTagName('body')[0].style.display = 'block'; }, 200);
     }
 </script>
-……………
+...
 
 {% endhighlight %}
-{% highlight c# tabtitle=".NET 5 (~/Pages/_Host.cshtml)" %}
+{% highlight c# tabtitle=".NET 5 & 3.1 (~/_Host.cshtml)" %}
 
 @page "/"
 @namespace BlazorThemeSwitcher.Pages
@@ -266,12 +267,14 @@ The following example demonstrates how to change a theme dynamically in Blazor S
 {% endhighlight %}
 {% endtabs %}
 
-2. For **.NET5 Blazor Server Application**, in **MainLayout.razor** page add dropdown list with themes and in `ValueChange` event handler, the page is refreshed by changing query string to change the theme in application.
+2. Below step shows changing style sheet dynamically.
 
-* For **.NET6 Blazor Server Application**, modify the **MainLayout.razor** page with the below code to implement a theme change dynamically using the dropdown by its id value in javascript function in the application.
+* For **.NET5 Blazor Server Application**, in **MainLayout.razor** page add dropdown list with themes. In `ValueChange` event handler, the page is refreshed by changing query string to change the theme in application.
+
+* For **.NET6 Blazor Server Application**, modify the **MainLayout.razor** page add dropdown list with themes. In `ValueChange` event handler, the theme is changed by calling `setTheme` method defined in step `. 
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Shared/MainLayout.razor)" %}
+{% highlight c# tabtitle=".NET 6 (~/MainLayout.razor)" %}
 
 @inherits LayoutComponentBase
 @inject NavigationManager UrlHelper;
@@ -343,7 +346,7 @@ The following example demonstrates how to change a theme dynamically in Blazor S
 }
 
 {% endhighlight %}
-{% highlight c# tabtitle=".NET 5 (~/Shared/MainLayout.razor)" %}
+{% highlight c# tabtitle=".NET 5 & 3.1 (~/MainLayout.razor)" %}
 
 @inherits LayoutComponentBase
 @inject NavigationManager UrlHelper;
@@ -436,10 +439,10 @@ The following example demonstrates how to change a theme dynamically in Blazor W
     
     ```html
     <head>
-    …………… 
+    ... 
     <link id="theme" href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
     </head>
-    …………… 
+    ... 
     <script>
         function setTheme(theme) {
             document.getElementsByTagName('body')[0].style.display = 'none';
@@ -448,7 +451,7 @@ The following example demonstrates how to change a theme dynamically in Blazor W
             setTimeout(function () { document.getElementsByTagName('body')[0].style.display = 'block'; }, 200);
         }
     </script>
-    ……………
+    ...
     ```
 
 2. Modify the **MainLayout.razor** page with the below code to implement a theme change dynamically using the dropdown by its id value in javascript function in the application.
