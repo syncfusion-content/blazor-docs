@@ -169,8 +169,8 @@ The following example demonstrates how to change a theme dynamically in Blazor S
 
 1. Below step shows how to reference style sheet in the way to change at dynamically.
 
-* For **.NET6 Blazor Server Application**, In the **_Layout.cshtml** the theme is changed dynamically using `id` in `setTheme` method.
-* For **.NET5 & 3.1 Blazor Server Application**, In **_Host.cshtml**, the theme is changed based on query string. 
+    * For **.NET6 Blazor Server Application**, In the **_Layout.cshtml** the theme is changed dynamically using `id` in `setTheme` method.
+    * For **.NET5 & 3.1 Blazor Server Application**, In **_Host.cshtml**, the theme is changed based on query string. 
     
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 (~/_Layout.cshtml)" %}
@@ -226,9 +226,9 @@ The following example demonstrates how to change a theme dynamically in Blazor S
 
 2. Below step shows changing style sheet dynamically.
 
-* For **.NET5 Blazor Server Application**, in **MainLayout.razor** page add dropdown list with themes. In `ValueChange` event handler, the page is refreshed by changing query string to change the theme in application.
+    * For **.NET5 Blazor Server Application**, in **MainLayout.razor** page add dropdown list with themes. In `ValueChange` event handler, the page is refreshed by changing query string to change the theme in application.
 
-* For **.NET6 Blazor Server Application**, modify the **MainLayout.razor** page add dropdown list with themes. In `ValueChange` event handler, the theme is changed by calling `setTheme` method defined in step `. 
+    * For **.NET6 Blazor Server Application**, modify the **MainLayout.razor** page add dropdown list with themes. In `ValueChange` event handler, the theme is changed by calling `setTheme` method defined in step `. 
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 (~/MainLayout.razor)" %}
