@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Navigation with Blazor Breadcrumb component | Syncfusion
-description: Checkout and learn about Navigation with Blazor Breadcrumb component of Syncfusion, and more details.
+description: Checkout and learn here all about Navigation with Blazor Breadcrumb component of Syncfusion and more.
 platform: Blazor
 control: Breadcrumb
 documentation: ug
 ---
 
-# Navigation in Blazor Breadcrumb component
+# Navigation in Blazor Breadcrumb Component
 
-By default, Breadcrumb items supports navigation for relative or absolute URL. You can handle the custom navigation by setting [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableNavigation) property as `false`.
+By default, Breadcrumb items support navigation for relative or absolute URL. You can handle the custom navigation by setting [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableNavigation) property as `false`.
 
 ## Relative URL
 
@@ -54,7 +54,7 @@ You can specify absolute URL in the [Url](https://help.syncfusion.com/cr/blazor/
 
 ## Enable navigation for last Breadcrumb item
 
-Breadcrumb enables the navigation for the last item by setting the [EnableActiveItemNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableActiveItemNavigation) property as `true`. In the following example, the navigation enabled for last Breadcrumb item.
+Breadcrumb enables the navigation for the last item by setting the [EnableActiveItemNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableActiveItemNavigation) property as `true`. In the following example, the navigation is enabled for last Breadcrumb item.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

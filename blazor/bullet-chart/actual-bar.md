@@ -36,7 +36,7 @@ To display the primary data or the current value of the data being measured know
 
 ![Actual Bar in Blazor Bullet Chart](images/blazor-bullet-chart-actual-bar.png)
 
-## Types of Actual Bar
+## Types of actual bar
 
 The shape of the actual bar can be customized using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Type) property of the Bullet Chart. The actual bar contains [Rect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.FeatureType.html#Syncfusion_Blazor_Charts_FeatureType_Rect) and [Dot](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.FeatureType.html#Syncfusion_Blazor_Charts_FeatureType_Dot) shapes. By default, the actual bar shape is [Rect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.FeatureType.html#Syncfusion_Blazor_Charts_FeatureType_Rect).
 
@@ -56,7 +56,7 @@ The shape of the actual bar can be customized using the [Type](https://help.sync
 
 ![Blazor Bullet Chart with Dot Actual Bar](images/blazor-bullet-chart-dot-actual-bar.png)
 
-## Actual Bar Customization
+## Actual bar customization
 
 The following properties will be used to customize the actual bar.
 
@@ -77,6 +77,6 @@ The following properties will be used to customize the actual bar.
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#actual-bar-in-blazor-bullet-chart-component) to know more about  the property value of the **BulletChartData**.
+> Refer to the [code block](#actual-bar-in-blazor-bullet-chart-component) to know more about the property value of the **BulletChartData**.
 
 ![Customizing Actual Bar in Blazor Bullet Chart](images/blazor-bullet-chart-actual-bar-customization.png)
