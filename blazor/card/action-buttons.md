@@ -9,9 +9,9 @@ documentation: ug
 
 # Action Buttons in Blazor Card Component
 
-You can include Action buttons within the Card and customize them. Action button is a `div` element with `CardFooter` component followed by button tag or anchor tag within the card root element.
+You can include action buttons within the Card and customize them. Action button is a `div` element with `CardFooter` component followed by button tag or anchor tag within the card root element.
 
-For adding action buttons you can create a  `CardFooterContent` component within the card action element.
+For adding action buttons, you can create a  `CardFooterContent` component within the card action element.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards
@@ -26,7 +26,7 @@ For adding action buttons you can create a  `CardFooterContent` component within
 
 ## Vertical
 
-By default, action buttons positioned in horizontal alignment , and also it can be aligned to show in vertical alignment by adding `Orientation` property.
+By default, action buttons are aligned horizontally. They can also be aligned vertically by adding the `Orientation` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards
