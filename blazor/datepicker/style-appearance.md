@@ -39,4 +39,4 @@ Use the following CSS to customize the DatePicker icon element
 
 Please check the below section, to customize the style and appearance of the Calendar component
 
-[Customizing Calendar's style and appearance](https://blazor.syncfusion.com/documentation/calendar/style-appearance)
+[Customizing Calendar's style and appearance](../calendar/style-appearance/)
