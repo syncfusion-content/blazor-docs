@@ -35,9 +35,9 @@ Use the following CSS to customize the Datetime Picker icons element
     }
 ```
 
-## Customizing the timepicker popup in the Datetime Picker 
+## Customizing the time picker popup in the Datetime Picker 
 
-Use the following CSS to customize the timepicker popup in the Datetime Picker 
+Use the following CSS to customize the time picker popup in the Datetime Picker 
 
 ```css
 /* To specify height */
