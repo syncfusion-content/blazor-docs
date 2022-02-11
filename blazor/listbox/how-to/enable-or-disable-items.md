@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Enable/Disable ListBox in Blazor ListBox Component | Syncfusion
-description: Checkout and learn here all about Enable/Disable ListBox in Syncfusion Blazor ListBox component and more.
+description: Checkout and learn here all about enable or disable ListBox in Syncfusion Blazor ListBox component and more.
 platform: Blazor
 control: List Box
 documentation: ug
@@ -51,7 +51,5 @@ To enable or disable items in the listbox, [EnableItems](https://help.syncfusion
 }
 
 ```
-
-Output will be shown as
 
 ![Disabling Items in Blazor ListBox](./../images/blazor-listbox-disable-items.png)

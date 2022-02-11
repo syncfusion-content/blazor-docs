@@ -135,7 +135,7 @@ namespace WebApplication1
 
 ## Add Style Sheet
 
-Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://sfblazor.azurewebsites.net/staging/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
+Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
 
 To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
 
@@ -165,7 +165,7 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 
 ### Blazor WebAssembly App
 
-For Blazor WebAssembly App, Refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
+For Blazor WebAssembly App, refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/index.html" %}
@@ -177,15 +177,15 @@ For Blazor WebAssembly App, Refer the theme style sheet from NuGet in the `<head
 {% endhighlight %}
 {% endtabs %}
 
-## Add Script Reference
+## Add script reference
 
-Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://sfblazor.azurewebsites.net/staging/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows,
+Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows,
 
 ### Blazor Server App
 
-* For **.NET 6** app, Refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+* For **.NET 6** app, refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
-* For **.NET 5 and .NET 3.X** app, Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For **.NET 5 and .NET 3.X** app, refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
 {% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4" %}
@@ -211,7 +211,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 ### Blazor WebAssembly App
 
-For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html** file.
+For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/index.html" hl_lines="4" %}
@@ -266,7 +266,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 
 ## Binding Gantt Chart with Data
 
-Bind data with the Gantt Chart component by using the `DataSource` property. It accepts an list objects or the DataManager instance.
+Bind data with the Gantt Chart component by using the `DataSource` property. It accepts the list objects or the DataManager instance.
 
 {% tabs %}
 {% highlight razor %}
@@ -324,9 +324,9 @@ public static List <TaskData> GetTaskCollection() {
 {% endhighlight %}
 {% endtabs %}
 
-## Mapping Task Fields
+## Mapping task fields
 
-The data source fields that are required to render the tasks are mapped to the Gantt Chart component using the `GanttTaskFields` property.
+The data source fields that are required to render the tasks are mapped to the Gantt Chart component using the [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html) property.
 
 {% tabs %}
 {% highlight razor %}
@@ -387,14 +387,14 @@ public static List <TaskData> GetTaskCollection() {
 {% endhighlight %}
 {% endtabs %}
 
-## Defining Columns
+## Defining columns
 
 Gantt Chart has an option to define columns as an array. You can customize the Gantt Chart columns using the following properties:
 
-* `Field`: Maps the data source fields to the columns.
-* `HeaderText`: Changes the title of columns.
-* `TextAlign`: Changes the alignment of columns. By default, columns will be left aligned. To change the columns to right align, set `TextAlign` to right.
-* `Format`: Formats the number and date values to standard or custom formats. Here, it is defined for the conversion of numeric values to currency.
+* [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Field): Maps the data source fields to the columns.
+* [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_HeaderText): Changes the title of columns.
+* [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_TextAlign): Changes the alignment of columns. By default, columns will be left aligned. To change the columns to right align, set `TextAlign` to right.
+* [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Format): Formats the number and date values to standard or custom formats. Here, it is defined for the conversion of numeric values to currency.
 
 {% tabs %}
 {% highlight razor %}
@@ -467,9 +467,9 @@ Gantt Chart has an option to define columns as an array. You can customize the G
 
 For further details regarding Columns, Please refer [here](https://blazor.syncfusion.com/documentation/gantt-chart/columns/)
 
-## Enable Editing
+## Enable editing
 
-The editing feature enables you to edit the tasks in the Gantt Chart component. It can be enabled by using the `EditSettings.AllowEditing` and `EditSettings.AllowTaskbarEditing` properties.
+The editing feature enables you to edit the tasks in the Gantt Chart component. It can be enabled by using the [EditSettings.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowEditing) and [EditSettings.AllowTaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowTaskbarEditing) properties.
 
 {% tabs %}
 {% highlight razor %}
@@ -535,9 +535,9 @@ The editing feature enables you to edit the tasks in the Gantt Chart component. 
 
 You can find the full information regarding Editing from [here](https://blazor.syncfusion.com/documentation/gantt-chart/managing-tasks/)
 
-## Enable Filtering
+## Enable filtering
 
-The filtering feature enables you to view the reduced amount of records based on filter criteria. Gantt Chart provides the menu filtering support for each column. It can be enabled by setting the `AllowFiltering` property to `true`. Filtering feature can also be customized using the `FilterSettings` property.
+The filtering feature enables you to view the reduced amount of records based on filter criteria. Gantt Chart provides the menu filtering support for each column. It can be enabled by setting the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFiltering) property to `true`. Filtering feature can also be customized using the [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_FilterSettings) property.
 
 {% tabs %}
 {% highlight razor %}
@@ -601,9 +601,9 @@ The filtering feature enables you to view the reduced amount of records based on
 
 You can find the full information regarding Filtering from [here](https://blazor.syncfusion.com/documentation/gantt-chart/filtering/)
 
-## Enable Sorting
+## Enable sorting
 
-The sorting feature enables you to order the records. It can be enabled by setting the `AllowSorting` property to `true`. The sorting feature can be customized using the `SortSettings` property.
+The sorting feature enables you to order the records. It can be enabled by setting the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowSorting) property to `true`. The sorting feature can be customized using the [SortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SortSettings) property.
 
 {% tabs %}
 {% highlight razor %}
@@ -747,5 +747,5 @@ You can find the full information regarding Predecessors from [here](https://bla
 ## See Also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)
-* [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
+* [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)

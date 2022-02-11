@@ -29,7 +29,7 @@ A palette allows to display a group of related symbols and it textually annotate
 
 The collection of predefined symbols can be added in palettes using the [Symbols](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html#Syncfusion_Blazor_Diagrams_SymbolPalettePalette_Symbols) property. To initialize a palette, define a JSON object with the property [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html#Syncfusion_Blazor_Diagrams_SymbolPalettePalette_Id) that is unique ID is set to the palettes.
 
-The following code example illustrates how to define a palette and how its added to symbol palette.
+The following code example illustrates how to define a palette and how it is added to the symbol palette.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -45,11 +45,11 @@ The following code example illustrates how to define a palette and how its added
 @code{
     SfSymbolPalette SymbolPalette;
     public ObservableCollection<SymbolPalettePalette> Palettes;
-    // Defines palette's basic-shape collection
+    // Defines palette's basic-shape collection.
     public ObservableCollection<Object> BasicShapes { get; set; }
-    // Defines palette's flow-shape collection
+    // Defines palette's flow-shape collection.
     public ObservableCollection<Object> FlowShapes { get; set; }
-    // Defines palette's connector collection
+    // Defines palette's connector collection.
     public ObservableCollection<Object> Connectors { get; set; }
 
     protected override void OnInitialized()
@@ -131,7 +131,7 @@ The following code example illustrates how to define a palette and how its added
             Symbols = FlowShapes,
             Title = "Flowshapes"
         });
-        //Initializes connector symbols for the symbol palette
+        //Initializes connector symbols for the symbol palette.
         Connectors = new ObservableCollection<Object>()
         {
             new DiagramConnector()
@@ -199,14 +199,14 @@ The [Fit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Symbo
 
 @code{
     public ObservableCollection<SymbolPalettePalette> Palettes;
-    // Defines palette's basic-shape collection
+    // Defines palette's basic-shape collection.
     public ObservableCollection<Object> BasicShapes { get; set; }
     public SymbolInfo symbolInfo;
 
     protected override void OnInitialized()
     {
         Palettes = new ObservableCollection<SymbolPalettePalette>();
-        // Enables to fit the content into the specified palette item size. When it is set as false, the element is rendered with actual node size
+        // Enables to fit the content into the specified palette item size. When it is set as false, the element is rendered with actual node size.
         symbolInfo = new SymbolInfo() { Fit = true };
         //Initialize the basicshapes for the symbol palette
         BasicShapes = new ObservableCollection<Object>()
@@ -254,7 +254,7 @@ The size of the individual symbol can be customized. The [SymbolWidth](https://h
 
 @code{
     public ObservableCollection<SymbolPalettePalette> Palettes;
-    // Defines palette's basic-shape collection
+    // Defines palette's basic-shape collection.
     public ObservableCollection<Object> BasicShapes { get; set; }
 
     protected override void OnInitialized()
@@ -325,7 +325,7 @@ The following code example illustrates how to change the preview size of a palet
 
 @code{
     public ObservableCollection<SymbolPalettePalette> Palettes;
-    // Defines palette's basic-shape collection
+    // Defines palette's basic-shape collection.
     public ObservableCollection<Object> BasicShapes { get; set; }
 
     protected override void OnInitialized()
@@ -391,9 +391,9 @@ While adding more number of symbols such as nodes and connectors to the palette,
 
 @code{
     public ObservableCollection<SymbolPalettePalette> Palettes;
-    // Defines palette's basic shape collection
+    // Defines palette's basic shape collection.
     public ObservableCollection<Object> BasicShapes { get; set; }
-    // Defines the default values for Nodes
+    // Defines the default values for Nodes.
     public DiagramNode PaletteNodeDefaults;
 
     protected override void OnInitialized()
@@ -429,7 +429,7 @@ While adding more number of symbols such as nodes and connectors to the palette,
                 }
             }
         };
-        // Sets the default values for Nodes
+        // Sets the default values for Nodes.
         PaletteNodeDefaults = new DiagramNode()
         {
             Width = 100,
@@ -467,15 +467,15 @@ The diagram provides support to add symbol description below each symbol of a pa
 @code{
     SfSymbolPalette SymbolPalette;
     public ObservableCollection<SymbolPalettePalette> Palettes;
-    // Defines palette's basic-shape collection
+    // Defines palette's basic-shape collection.
     public ObservableCollection<Object> BasicShapes { get; set; }
-    // Defines palette's flow-shape collection
+    // Defines palette's flow-shape collection.
     public ObservableCollection<Object> FlowShapes { get; set; }
     
     protected override void OnInitialized()
     {
         Palettes = new ObservableCollection<SymbolPalettePalette>();
-        //Initialize the basicshapes for the symbol palette
+        //Initialize the basicshapes for the symbol palette.
         BasicShapes = new ObservableCollection<Object>()
         {
             new DiagramNode()
@@ -525,7 +525,7 @@ The diagram provides support to add symbol description below each symbol of a pa
             Symbols = BasicShapes,
             Title = "Basicshapes"
         });
-        //Initialize the flowshapes for the symbol palette
+        //Initialize the flowshapes for the symbol palette.
         FlowShapes = new ObservableCollection<Object>()
         {
             new DiagramNode()

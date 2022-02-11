@@ -13,7 +13,7 @@ Gridlines are the pattern of lines drawn behind the diagram elements. It provide
 
 ## Customize the Gridlines visibility
 
-The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_Constraints) property of SnapSettings class allows you to control the visibility of the gridlines.
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_Constraints) property of SnapSettings class allows to control the visibility of the gridlines.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -30,7 +30,7 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 
 @code
 {
-    //Sets the snapinterval...
+    //Sets the snapinterval.
     public double[] SnapInterval { get; set; } = new double[]
     {
         10
@@ -56,7 +56,7 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 
 To show only horizontal/vertical gridlines or to hide gridlines, refer to [SnapConstraints](constraints#snap-constraints).
 
-## Appearance
+## How to customize the appearance of the gridlines
 
 The appearance of the gridlines can be customized by using a set of predefined properties.
 
@@ -110,7 +110,7 @@ The appearance of the grid lines can be changed into dots by using the [GridType
 
 ![Dot Grid in Blazor Diagram](images/blazor-diagram-dot-grid.png)
 
-## Line intervals
+## How to customize the Line intervals
 
 Thickness and the space between gridlines can be customized by using [LinesIntervals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.GridLines.html#Syncfusion_Blazor_Diagram_GridLines_LineIntervals) property of the HorizontalGridLines and VerticalGridLines. In the line intervals collections, values at the odd places are referred as the thickness of lines and values at the even places are referred as the space between gridlines.
 
@@ -131,7 +131,7 @@ The following code example illustrates how to customize the thickness of lines a
 
 @code
 {
-    //Sets the line intervals for the gridlines
+    //Sets the line intervals for the gridlines.
     public double[] LineInterval { get; set; } = new double[] 
     {
         1.25, 14, 0.25, 15, 0.25, 15, 0.25, 15, 0.25, 15
@@ -158,7 +158,7 @@ Snapping to gridlines can be enabled/disabled with the [SnapConstraints](https:/
 
 @code
 {
-    //Sets the snap constraints
+    //Sets the snap constraints.
     public SnapConstraints snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToLines;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
@@ -200,7 +200,7 @@ By default, the objects are snapped towards the nearest gridline. The gridline o
 
 @code
 {
-    //Sets the snapinterval...
+    //Sets the snapinterval.
     public double[] SnapInterval { get; set; } = new double[]
     {
         10
@@ -242,7 +242,7 @@ The snap to object provides visual cues to assist with aligning and spacing diag
 
 @code
 {
-    //Sets the Snap to objects constraints...
+    //Sets the Snap to objects constraints.
     public SnapConstraints snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToObject;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 

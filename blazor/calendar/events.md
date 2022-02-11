@@ -33,7 +33,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void onRenderDayCellHandler(RenderDayCellEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -53,7 +53,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void ValuechangeHandler(ChangedEventArgs<DateTime?> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -73,7 +73,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void createdHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -93,7 +93,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void DestroyHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -113,7 +113,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void NavigatedHandler(NavigatedEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```

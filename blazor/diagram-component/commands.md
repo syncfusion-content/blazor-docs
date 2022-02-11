@@ -23,8 +23,9 @@ There are several commands available in the diagram as follows.
 
 Alignment commands enable you to align the selected or defined objects such as nodes and connectors with respect to the selection boundary. Following are the [AlignmentOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AlignmentOptions.html) in [SetAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetAlign_Syncfusion_Blazor_Diagram_AlignmentOptions_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__Syncfusion_Blazor_Diagram_AlignmentMode_) commands which shows how to use align methods in the diagram.
 
-### Align Left
-The following code example illustrates how to align all the selected objects at the left side of the selection boundary.
+### How to align the selected objects to the left
+
+The following code example illustrates how to align all the selected objects to the left side of the selection boundary.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -75,13 +76,13 @@ The following code example illustrates how to align all the selected objects at 
 
     private void OnAlignLeft()
     {
-        //Aligns the selected objects at the left side of the selection boundary
+        //Aligns the selected objects to the left side of the selection boundary.
         diagram.SetAlign(AlignmentOptions.Left);
     }      
 }
 ```
 
-### Align Right
+### How to align the selected objects to the right
 
 The following code example illustrates how to align all the selected objects at the right side of the selection boundary.
 
@@ -134,13 +135,14 @@ The following code example illustrates how to align all the selected objects at 
 
     private void OnAlignRight()
     {
-        //Aligns the selected objects at the right side of the selection boundary
+        //Aligns the selected objects to the right side of the selection boundary.
         diagram.SetAlign(AlignmentOptions.Right);
     }     
 }
 ```
 
-### Align Top
+### How to align the selected objects to the top
+
 The following code example illustrates how to align all the selected objects at the top of the selection boundary.
 
 ```cshtml
@@ -192,13 +194,14 @@ The following code example illustrates how to align all the selected objects at 
 
     private void OnAlignTop()
     {
-        //Aligns the selected objects at the top of the selection boundary
+        //Aligns the selected objects at the top of the selection boundary.
         diagram.SetAlign(AlignmentOptions.Top);
     }       
 }
 ```
 
-### Align Bottom
+### How to align the selected objects to the bottom
+
 The following code example illustrates how to align all the selected objects at the bottom of the selection boundary.
 
 ```cshtml
@@ -250,13 +253,14 @@ The following code example illustrates how to align all the selected objects at 
 
     private void OnAlignBottom()
     {
-        //Aligns the selected objects at the bottom of the selection boundary
+        //Aligns the selected objects at the bottom of the selection boundary.
         diagram.SetAlign(AlignmentOptions.Bottom);
     }     
 }
 ```
 
-### Align Middle
+### How to align the selected objects to the middle
+
 The following code example illustrates how to align all the selected objects at the middle of the selection boundary.
 
 ```cshtml
@@ -314,7 +318,7 @@ The following code example illustrates how to align all the selected objects at 
 }
 ```
 
-### Align Center
+### How to align the selected objects to the center
 
 The following code example illustrates how to align all the selected objects at the center of the selection boundary.
 
@@ -367,7 +371,7 @@ The following code example illustrates how to align all the selected objects at 
 
     private void OnAlignCenter()
     {
-        //Aligns the selected objects at the center of the selection boundary
+        //Aligns the selected objects at the center of the selection boundary.
         diagram.SetAlign(AlignmentOptions.Center);
     }        
 }
@@ -445,49 +449,49 @@ The following code example illustrates how to execute the space commands.
 
     private void OnDistributeLeft()
     {
-        //distributes the objects based on the distance between the left sides of the adjacent objects.
+        //Distributes the objects based on the distance between the left sides of the adjacent objects.
         diagram.SetDistribute(DistributeOptions.Left);
     }
 
     private void OnDistributeRight()
     {
-        //distributes the objects based on the distance between the right sides of the adjacent objects.
+        //Distributes the objects based on the distance between the right sides of the adjacent objects.
         diagram.SetDistribute(DistributeOptions.Right);
     }
 
     private void OnDistributeTop()
     {
-        //distributes the objects based on the distance between the top sides of the adjacent objects.
+        //Distributes the objects based on the distance between the top sides of the adjacent objects.
         diagram.SetDistribute(DistributeOptions.Top);
     }
 
     private void OnDistributeBottom()
     {
-        //distributes the objects based on the distance between the bottom sides of the adjacent objects.
+        //Distributes the objects based on the distance between the bottom sides of the adjacent objects.
         diagram.SetDistribute(DistributeOptions.Bottom);
     }
 
     private void OnDistributeMiddle()
     {
-        //distributes the objects based on the distance between vertical centers of the adjacent objects.
+        //Distributes the objects based on the distance between vertical centers of the adjacent objects.
         diagram.SetDistribute(DistributeOptions.Middle);
     }
 
     private void OnDistributeCenter()
     {
-        //distributes the objects based on the distance between the centers of the adjacent objects.
+        //Distributes the objects based on the distance between the centers of the adjacent objects.
         diagram.SetDistribute(DistributeOptions.Center);
     }
 
     private void OnDistributeBottomToTop()
     {
-        //distributes the objects based on the distance between bottom and top sides of adjacent objects.
+        //Distributes the objects based on the distance between bottom and top sides of adjacent objects.
         diagram.SetDistribute(DistributeOptions.BottomToTop);
     }
 
     private void OnDistributeRightToLeft()
     {
-        //distributes the objects based on the distance between right and left sides of adjacent objects.
+        //Distributes the objects based on the distance between right and left sides of adjacent objects.
         diagram.SetDistribute(DistributeOptions.RightToLeft);
     }
 }
@@ -516,7 +520,7 @@ The following code example illustrates how to execute the size commands.
 
 @code
 {
-    //Reference to diagram
+    //Reference to diagram.
     SfDiagramComponent diagram;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
@@ -577,7 +581,7 @@ The following code example illustrates how to execute the size commands.
     }
 ```
 
-## Clipboard
+## Clipboard commands
 
 Clipboard commands are used to cut, copy, or paste the selected elements.
 
@@ -600,7 +604,7 @@ The following code illustrates how to execute the clipboard commands.
 
 @code
 {
-    //Reference to diagram
+    //Reference to diagram.
     SfDiagramComponent diagram;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
@@ -633,27 +637,27 @@ The following code illustrates how to execute the clipboard commands.
 
     private void OnCut()
     {
-        //Removes the selected objecte
+        //Removes the selected object.
         diagram.Cut();
     }
 
     private void OnCopy()
     {
-        //copies the selected object
+        //Copies the selected object.
         diagram.Copy();
     }
 
     private void OnPaste()
     {
-        //pastes the copied object
+        //Pastes the copied object.
         diagram.Paste();
     }
 }
 ```
 
-## Grouping
+## Grouping commands
 
-**Grouping commands** are used to group/ungroup the selected elements on the diagram. To group the elements , select the elements using select all command and group the selected elements using group command.
+**Grouping commands** are used to group/ungroup the selected elements on the diagram. To group the elements, select the elements using select all command and group the selected elements using group command.
 
 [Group](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Group) command is used to group the selected nodes and connectors in the diagram.
 
@@ -672,7 +676,7 @@ The following code illustrates how to execute the grouping commands.
 
 @code
 {
-    //Reference to diagram
+    //Reference to diagram.
     SfDiagramComponent diagram;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
@@ -705,25 +709,25 @@ The following code illustrates how to execute the grouping commands.
 
     private void OnGroup()
     {
-        //group the selected items in the diagram
+        //Group the selected items in the diagram.
         diagram.Group();
     }
 
     private void OnUnGroup()
     {
-        //ungroup the selected items in the diagram
+        //Ungroup the selected items in the diagram.
         diagram.UnGroup();
     }
 
     private void OnSelectAll()
     {
-        //select all the items in the diagram
+        //Select all the items in the diagram.
         diagram.SelectAll();
     }
 }
 ```
 
-## Zoom
+## Zoom command
 
 The [Zoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Zoom_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) command is used to zoom-in and zoom-out the diagram view.
 
@@ -738,7 +742,7 @@ The following code illustrates how to zoom-in/zoom out the diagram.
 
 @code
 {
-    //Reference to diagram
+    //Reference to diagram.
     SfDiagramComponent diagram;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
@@ -760,13 +764,14 @@ The following code illustrates how to zoom-in/zoom out the diagram.
 
     private void OnZoom()
     {
-        // Sets the ZoomFactor
-        // Defines the FocusPoint to zoom the Diagram with respect to any point
+        // Sets the ZoomFactor.
+        // Defines the FocusPoint to zoom the Diagram with respect to any point.
         // When you do not set focus point, zooming is performed with reference to the center of current Diagram view.
         diagram.Zoom(1.2, new DiagramPoint() { X = 100, Y = 100 });
     }
 }
 ```
+![Zoom Command](./images/Zoom.gif)
 
 ## Nudge command
 
@@ -820,18 +825,18 @@ The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDia
 
 @code
 {
-    //Reference to diagram
+    //Reference to diagram.
     SfDiagramComponent diagram;
 
     private void Undo()
     {
-        //Revert the changes
+        //Revert the changes.
         diagram.Undo();
     }
 
     private void Redo()
     {
-        //Restore the changes
+        //Restore the changes.
         diagram.Redo();
     }
 }
@@ -844,11 +849,11 @@ The [CommandManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
 
 ### Command Execution
 
-The [Execute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html#Syncfusion_Blazor_Diagram_CommandManager_Execute) event call back method will invoke when execute the custom command in the diagram.
+The [Execute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html#Syncfusion_Blazor_Diagram_CommandManager_Execute) event call back method will invoke when executing the custom command in the diagram.
 
 The [CanExecute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html#Syncfusion_Blazor_Diagram_CommandManager_CanExecute) event determines whether this command can execute in its current state.
 
-### Custom command
+### How to create custom command
 
 To define a custom command, specify the following properties:
 * [Gesture](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyboardCommand.html#Syncfusion_Blazor_Diagram_KeyboardCommand_Gesture): A combination of [Keys](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyGesture.html#Syncfusion_Blazor_Diagram_KeyGesture_Key) and [Modifiers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyGesture.html#Syncfusion_Blazor_Diagram_KeyGesture_Modifiers).
@@ -871,7 +876,7 @@ The following code example shows how to define a custom command.
 
 @code
 {
-    // Reference to diagram
+    // Reference to diagram.
     SfDiagramComponent diagram;
     DiagramObjectCollection<KeyboardCommand> command = new DiagramObjectCollection<KeyboardCommand>()
     {
@@ -886,7 +891,7 @@ The following code example shows how to define a custom command.
             Gesture = new KeyGesture() { Key = Keys.U, Modifiers = ModifierKeys.Control }
         },
      };
-    // Defines diagram's nodes collection
+    // Defines diagram's nodes collection.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
@@ -927,19 +932,19 @@ The following code example shows how to define a custom command.
     }
 
     /// <summary>
-    /// Custom command execution
+    /// Custom command execution.
     /// </summary>
     public void CommandExecute(CommandKeyArgs args)
     {
         if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == Keys.G)
         {
-            //Custom command to group the selected nodes
+            //Custom command to group the selected nodes.
             diagram.Group();
         }
         if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == Keys.U)
         {
             DiagramSelectionSettings selector = diagram.SelectionSettings;
-            //Custom command to ungroup the selected items
+            //Custom command to ungroup the selected items.
             if (selector.Nodes.Count > 0 && selector.Nodes[0] is NodeGroup)
             {
                 if ((selector.Nodes[0] as NodeGroup).Children.Length > 0)
@@ -954,7 +959,7 @@ The following code example shows how to define a custom command.
 
 ### Modify the existing command
 
-When any one of the default commands is not desired, they can be disabled. To change the functionality of a specific command, the command can be completely modified.
+When any one of the default commands is not desired, it can be disabled. To change the functionality of a specific command, the command can be completely modified.
 
 The following code example shows how to disable a command and how to modify the built-in commands.
 
@@ -971,9 +976,9 @@ The following code example shows how to disable a command and how to modify the 
 
 @code
 {
-    // Reference to diagram
+    // Reference to diagram.
     SfDiagramComponent diagram;
-    // Defines diagram's nodes collection
+    // Defines diagram's nodes collection.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     DiagramObjectCollection<KeyboardCommand> commands = new DiagramObjectCollection<KeyboardCommand>()
     {
@@ -1027,7 +1032,7 @@ The following code example shows how to disable a command and how to modify the 
     }
 
     /// <summary>
-    /// Custom command execution event
+    /// Custom command execution event.
     /// </summary>
     public void CommandExecute(CommandKeyArgs args)
     {
@@ -1037,7 +1042,7 @@ The following code example shows how to disable a command and how to modify the 
         }
         if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == Keys.C)
         {
-            //Modify the existing copy command to cut command
+            //Modify the existing copy command to cut command.
             diagram.Cut();
         }
     }

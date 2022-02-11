@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Undo Redo in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Undo Redo in Syncfusion Blazor Diagram component and much more details.
+description: Checkout and learn here all about Undo Redo in the Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -26,10 +26,10 @@ The server-side methods [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.
 ```csharp
 SfDiagram Diagram;
 
-// Reverts the last action performed
+// Reverts the last action performed.
 this.Diagram.Undo();
 
-// Restores the last undone action
+// Restores the last undone action.
 this.Diagram.Redo();
 ```
 
@@ -39,15 +39,15 @@ When a change in the diagram is reverted or restored (undo/redo), the [HistoryCh
 
 History list allows to revert or restore multiple changes through a single undo/redo command. For example, revert/restore the fill color change of multiple elements at a time.
 
-The server-side method [StartGroupAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.History.html#Syncfusion_Blazor_Diagrams_History_StartGroupAction) is used  to notify the diagram to start grouping the changes. The server-side method [EndGroupAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.History.html#Syncfusion_Blazor_Diagrams_History_EndGroupAction) is used to notify to stop grouping the changes. The following code illustrates how to undo/redo to change of multiple elements at a time.
+The server-side method [StartGroupAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.History.html#Syncfusion_Blazor_Diagrams_History_StartGroupAction) is used to notify the diagram to start grouping the changes. The server-side method [EndGroupAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.History.html#Syncfusion_Blazor_Diagrams_History_EndGroupAction) is used to notify to stop grouping the changes. The following code illustrates how to undo/redo to change of multiple elements at a time.
 
 ```csharp
 SfDiagram Diagram;
 
-//Starts grouping the changes
+//Starts grouping the changes.
 this.Diagram.StartGroupAction();
 
-//Ends grouping the changes
+//Ends grouping the changes.
 this.Diagram.EndGroupAction();
 ```
 
@@ -69,33 +69,33 @@ The following code example illustrates how to save the existing property values.
 </SfDiagram>
 
 @code{
-    //Reference of diagram
+    //Reference of diagram.
     SfDiagram diagram;
     public string Height { get; set; } = "500px";
-    //Initialize node collection with node
+    //Initialize node collection with node.
     ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>()
     {
         new DiagramNode()
         {
-            //Unique id of the node
+            //Unique id of the node.
             Id="NewIdea",
-            //Size of the node
+            //Size of the node.
             Height=100,
             Width=100,
-            //Position of the node
+            //Position of the node.
             OffsetX=100,
             OffsetY=100,
-            //Customize the appearance of the node
+            //Customize the appearance of the node.
             Style= new NodeShapeStyle(){Fill="#6BA5D7",StrokeColor="White"},
-            //Enable shadow constraint of the node
+            //Enable shadow constraint of the node.
             Constraints=NodeConstraints.Default|NodeConstraints.Shadow,
-            //Initialize annotation collection with annotation
+            //Initialize annotation collection with annotation.
             Annotations=new ObservableCollection<DiagramNodeAnnotation>()
             {
                 new DiagramNodeAnnotation()
                 {
                     Content="node1",
-                    //Customize the appearance of the annotations
+                    //Customize the appearance of the annotations.
                     Style=new AnnotationStyle()
                     {
                         Color="White",
@@ -103,7 +103,7 @@ The following code example illustrates how to save the existing property values.
                     },
                 }
             },
-            //Customizes the appearance of the node shadow style
+            //Customizes the appearance of the node shadow style.
             Shadow=new DiagramShadow()
             {
                 Angle=50,
@@ -115,9 +115,9 @@ The following code example illustrates how to save the existing property values.
 
     public void TrackCustomActions()
     {
-        //Creates a custom entry
+        //Creates a custom entry.
         HistoryEntry historyEntry = new HistoryEntry() { UndoObject = diagram.Nodes[0] };
-        // adds that to history list
+        // Adds that to history list.
         diagram.AddHistoryEntry(historyEntry);
         diagram.DataBind();
     }
@@ -147,7 +147,7 @@ The [GetHistoryStack](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 
 ## History change event
 
-The [HistoryChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramModel.html#Syncfusion_Blazor_Diagrams_DiagramModel_HistoryChange) event triggers, whenever the interaction of the node and connector is take place.
+The [HistoryChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramModel.html#Syncfusion_Blazor_Diagrams_DiagramModel_HistoryChange) event triggers, whenever the interaction of the node and connector takes place.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -161,7 +161,7 @@ The [HistoryChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 {
     public void Onhistorychange(IBlazorHistoryChangeArgs args)
     {
-        //causes of history change
+        //Causes of history change.
         var cause = args.Cause;
     }
 }

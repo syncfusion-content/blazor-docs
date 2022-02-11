@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in Blazor MultiSelect Dropdown Component | Syncfusion
-description: Checkout and learn here all about Localization in Syncfusion Blazor MultiSelect Dropdown component and more.
+description: Checkout and learn here all about localization in Syncfusion Blazor MultiSelect Dropdown component and more.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
@@ -13,7 +13,6 @@ documentation: ug
 
 Add `UseRequestLocalization` middle-ware in Configure method in **Startup.cs** file to get browser Culture Info.
 
-Refer the following code to add configuration in Startup.cs file
 
 ```csharp
 using Microsoft.AspNetCore.Builder;
@@ -36,9 +35,9 @@ namespace BlazorApplication
 }
 ```
 
-The **Localization** library allows you to localize default text content. The MultiSelect Dropdown component has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.).
+The **Localization** library allows to localize default text content. The MultiSelect Dropdown component has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.).
 
-In the following examples, demonstrate how to enable **Localization** for MultiSelect Dropdown in server side Blazor samples. Here, we have used Resource file to translate the static text.
+In the following examples, demonstrate how to enable **Localization** for MultiSelect Dropdown in server side Blazor samples. Here, Resource file is used to translate the static text.
 
 The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.NET Core application framework.
 
@@ -119,7 +118,7 @@ namespace blazorDropdowns
 | MultiSelect_TotalCountTemplate | ${count} ausgewählt |
 | MultiSelect_UnSelectAllText | Alles wiederufen |
 
-* Finally, Specify the culture for MultiSelect Dropdown using `locale` property.
+* Finally, specify the culture for MultiSelect Dropdown using `locale` property.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -147,7 +146,7 @@ namespace blazorDropdowns
 
 ## Blazor WebAssembly
 
-The Localization library allows you to localize static text content of the [NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_NoRecordsTemplate) and [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ActionFailureTemplate) properties according to the culture currently assigned to the MultiSelect.
+The Localization library allows to localize static text content of the [NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_NoRecordsTemplate) and [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ActionFailureTemplate) properties according to the culture currently assigned to the MultiSelect.
 
 | Locale key | en-US (default)
 |------|------
@@ -158,7 +157,7 @@ The Localization library allows you to localize static text content of the [NoRe
 | UnSelectAllText | Unselect All
 | TotalCountTemplate | ${count} selected
 
-The following steps explain how to render the MultiSelect in French culture (fr) in Blazor Web Assembly application.
+The following steps explains how to render the MultiSelect in French culture (fr) in Blazor Web Assembly application.
 
 * Open the **program.cs** file and add the below configuration in the **Builder ConfigureServices** function as follows.
 
@@ -201,7 +200,7 @@ namespace WebAssemblyLocale
 
 * To download the locale definition of Blazor components, use this [link](https://github.com/syncfusion/ej2-locale).
 
-* After downloading the `blazor-locale` package, copy the `blazor-locale` folder with required local definition file into `wwwroot` folder.
+* After downloading the `blazor-locale` package, copy the `blazor-locale` folder with the required local definition file into `wwwroot` folder.
 
 * By default, the `blazor-locale` package contains the localized text for static text present in components like button text, placeholder, tooltip, and more.
 
@@ -236,7 +235,5 @@ In the following sample, French culture is set to the MultiSelect and no data is
     }
 }
 ```
-
-The output will be as follows.
 
 ![Localization in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-localization.png)

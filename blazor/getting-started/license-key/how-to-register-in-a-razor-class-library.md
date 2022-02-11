@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Overview of Syncfusion license registration - Syncfusion
-description: Learn here about how to register Syncfusion blazor license key for syncfusion blazor application with license validation. 
+description: Learn here about how to register Syncfusion blazor license key for syncfusion Blazor application with license validation. 
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Register Syncfusion license key in a Razor Class Library application
+# Register Syncfusion License Key in a Razor Class Library Application
 
 The generated license key is just a string that might be registered before any Syncfusion control is initiated. The following code is used to register the license.
 
@@ -22,7 +22,7 @@ If your Razor Class Library (RCL) project uses Syncfusion Blazor packages from [
 
 Refer to this [link](https://blazor.syncfusion.com/documentation/getting-started/razor-class-library/) for more information on getting started with the Syncfusion Blazor components in the RCL project.
 
-## For Server side application
+## For server side application
 
 After configuring the RCL project with your Blazor Server application, register the license key in Configure method of Startup.cs
 
@@ -61,7 +61,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 }
 ```
 
-## For Client side application
+## For client side application
 
 After configuring the RCL project with your Blazor Client WebAssembly application, register the license key in main method of Program.cs
 

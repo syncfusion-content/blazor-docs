@@ -28,13 +28,13 @@ The following code shows how to customize the appearance of the shape.
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            // Add node
+            // Add node.
             Style = new ShapeStyle() 
             { 
                 Fill = "Green", 
@@ -52,9 +52,9 @@ The following code shows how to customize the appearance of the shape.
 
 > [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each node should be unique and so it is further used to find the node at runtime and do any customization.
 
-## NodeCreating
+## How to update values in common to all nodes
 
-Default values for all the Nodes can be set using the [NodeCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_NodeCreating) method. For example, if all nodes have the same type or having the same property then such properties can be moved into NodeCreating method.
+Default values for all the Nodes can be set using the [NodeCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_NodeCreating) method. For example, if all nodes have the same type or property then such properties can be moved into NodeCreating method.
 
 The following code shows how to customize the appearance of the shape.
 
@@ -74,10 +74,10 @@ The following code shows how to customize the appearance of the shape.
         // A node is created and stored in nodes array.
         Node node1 = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Shape of the Node
+            // Shape of the Node.
             Shape = new BasicShape() 
             { 
                 Type = Shapes.Basic, 
@@ -86,10 +86,10 @@ The following code shows how to customize the appearance of the shape.
         };
         Node node2 = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            // Shape of the Node
+            // Shape of the Node.
             Shape = new BasicShape() 
             { 
                 Type = Shapes.Basic, 
@@ -104,16 +104,16 @@ The following code shows how to customize the appearance of the shape.
     {
         Node node = obj as Node;
         node.Style = new ShapeStyle() { Fill = "#6495ED" };
-        // Size of the node
+        // Size of the node.
         node.Width = 100;
         node.Height = 100;
     }
 }
 ```
 
-## NodeTemplate
+## How to update template for the nodes
 
-We can define node style using template in [NodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTemplates.html#Syncfusion_Blazor_Diagram_DiagramTemplates_NodeTemplate) at tag level. If we want to define separate template for each node, differentiate the nodes by the ID property. The following code explains how to define template for a node.
+You can define node style using template in [NodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTemplates.html#Syncfusion_Blazor_Diagram_DiagramTemplates_NodeTemplate) at tag level. If you want to define separate template for each node, differentiate the nodes by the ID property. The following code explains how to define template for a node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -195,9 +195,9 @@ We can define node style using template in [NodeTemplate](https://help.syncfusio
 
 ![Blazor Diagram with Node Template](../images/blazor-diagram-node-template.gif)
 
-## SetNodeTemplate
+## How to update style for nodes in common
 
-The [SetNodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetNodeTemplate) method of diagram allows you to define the style for the Node. The following code demonstrates how to set different style for different node through SetNodeTemplate method.
+The [SetNodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetNodeTemplate) method of diagram allows you to define the style for the Node. The following code demonstrates how to set different styles for different nodes through the SetNodeTemplate method.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -208,7 +208,7 @@ The [SetNodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 
 @code
 {
-    // Initialize node collection with node
+    // Initialize node collection with node.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -217,20 +217,20 @@ The [SetNodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
         Node node1 = new Node()
         {
             ID = "node1",
-            // Size of the node
+            // Size of the node.
             Height = 100,
             Width = 100,
-            // Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
         };
         Node node2 = new Node()
         {
             ID = "node6",
-            // Size of the node
+            // Size of the node.
             Height = 510,
             Width = 202,
-            // Position of the node
+            // Position of the node.
             OffsetX = 300,
             OffsetY = 100,
         };
@@ -309,7 +309,7 @@ The [SetNodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 
 ![Blazor Diagram with SetNodeTemplate](../images/blazor-diagram-set-node-template.png)
 
-## Shadow
+## How to update shadow to a node
 
 Diagram provides support to add [Shadow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shadow.html) effect to a node that is disabled, by default. It can be enabled with the constraints property of the node. The following code shows how to draw shadow.
 
@@ -328,10 +328,10 @@ Diagram provides support to add [Shadow](https://help.syncfusion.com/cr/blazor/S
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() 
@@ -348,7 +348,7 @@ Diagram provides support to add [Shadow](https://help.syncfusion.com/cr/blazor/S
 
 ![Blazor Diagram Node with shadow](../images/blazor-diagram-node-shadow.png)
 
-### Customizing shadow
+### How to customize shadow to a node
 
 The [Angle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shadow.html#Syncfusion_Blazor_Diagram_Shadow_Angle), [Distance](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shadow.html#Syncfusion_Blazor_Diagram_Shadow_Distance), and [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shadow.html#Syncfusion_Blazor_Diagram_Shadow_Opacity) of the shadow can be customized with the shadow property of the node. The following code example illustrates how to customize shadow.
 
@@ -367,10 +367,10 @@ The [Angle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shad
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() 
@@ -379,7 +379,7 @@ The [Angle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shad
                 StrokeColor = "white" 
             },
             Constraints = NodeConstraints.Default | NodeConstraints.Shadow,
-            // Custom Shadow of the node
+            // Custom Shadow of the node.
             Shadow = new Shadow()
             {
                 Angle = 50,
@@ -395,7 +395,7 @@ The [Angle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shad
 
 ![Blazor Diagram Node with Custom Shadow](../images/blazor-diagram-node-custom-shadow.png)
 
-## Gradient
+## How to apply gradient style
 
 The [Gradient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_Gradient) property of the node allows you to define and apply the gradient effect to the node. The gradient stops property defines the color and a position, where the previous color transition ends and a new color transition starts. The gradient stop’s opacity property defines the transparency level of the region.
 
@@ -405,7 +405,7 @@ There are two types of gradients as follows:
 
 * RadialGradientBrush
 
-### Linear gradient brush
+### How to apply linear gradient brush
 
 [LinearGradientBrush](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LinearGradientBrush.html) defines a smooth transition between a set of colors (so-called stops) in a line. A linear gradient’s X1, Y1, X2, Y2 properties are used to define the position (relative to the node) of the rectangular region that needs to be painted.
 
@@ -424,20 +424,20 @@ There are two types of gradients as follows:
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle()
             {
                 Gradient = new LinearGradientBrush()
                 {
-                    // Start point of linear gradient
+                    // Start point of linear gradient.
                     X1 = 0,
                     Y1 = 0,
-                    // End point of linear gradient
+                    // End point of linear gradient.
                     X2 = 50,
                     Y2 = 50,
                     //Sets an array of stop objects
@@ -456,7 +456,7 @@ There are two types of gradients as follows:
 
 ![Blazor Diagram Node with LinearGradient](../images/blazor-diagram-node-linear-gradient.png)
 
-### Radial gradient brush
+### How to apply radial gradient brush
 
 [RadialGradientBrush](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RadialGradientBrush.html) defines a smooth transition between stops on a circle. The radial gradient brush properties are used to define the position (relative to the node) of the outermost or the innermost circle of the radial gradient.
 
@@ -474,10 +474,10 @@ There are two types of gradients as follows:
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             Shape = new BasicShape() 
@@ -491,10 +491,10 @@ There are two types of gradients as follows:
                 StrokeColor = "#024249",
                 Gradient = new RadialGradientBrush()
                 {
-                    // Center point of outer circle
+                    // Center point of outer circle.
                     CX = 50,
                     CY = 50,
-                    // Center point of inner circle
+                    // Center point of inner circle.
                     FX = 50,
                     FY = 50,
                     GradientStops = new DiagramObjectCollection<GradientStop>()
@@ -505,7 +505,7 @@ There are two types of gradients as follows:
                 }
             },
         };
-        // Add node
+        // Add node.
         nodes.Add(node);
     }
 }
@@ -536,10 +536,10 @@ The following code shows how to set the AdditionalInfo value.
         // A node is created and stored in nodes collection.
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() 
@@ -549,14 +549,14 @@ The following code shows how to set the AdditionalInfo value.
             },
             AdditionalInfo = NodeInfo
         };
-        // Add node
+        // Add node.
         nodes.Add(node);
     }
 }
 ```
 
-**Note:** We can set any type of value for the AdditionalInfo property.
+**Note:** You can set any type of value for the AdditionalInfo property.
 
 ## See also
 
-* [How to get events when they interact the node](./events)
+* [How to get events when they interact with the node](./events)

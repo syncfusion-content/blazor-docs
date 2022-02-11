@@ -9,7 +9,7 @@ documentation: ug
 
 # Port appearance and positioning
 
-## Appearance
+## Change the appearance of the port
 
 * The shape of a port can be changed by using the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Shape) property. To explore the different types of port shapes, refer to Port Shapes. If you need to render a custom shape, then you can set shape to path and define path using the path data property.
 
@@ -36,10 +36,10 @@ The following code explains how to change the appearance of the port.
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
@@ -51,7 +51,7 @@ The following code explains how to change the appearance of the port.
                     ID = "port1",
                     Offset = new DiagramPoint() { X = 0, Y = 0.5 },
                     Visibility = PortVisibility.Visible,
-                    //Set the style for the port
+                    //Set the style for the port.
                     Style = new ShapeStyle()
                     { 
                         Fill = "red", 
@@ -60,7 +60,7 @@ The following code explains how to change the appearance of the port.
                     },
                     Width = 12,
                     Height = 12,
-                    // Sets the shape of the port as Circle 
+                    // Sets the shape of the port as Circle .
                     Shape = PortShapes.Circle
                 }
             },
@@ -72,7 +72,7 @@ The following code explains how to change the appearance of the port.
 
 ![Changing Port Appearance in Blazor Diagram](../images/blazor-diagram-port-appearance.png)
 
-## Visibility
+## Change the visibility of the port
 
 The [Visibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Visibility) of the ports depends upon the properties of Connect, Hidden, Hover, and Visible. By default, [PortVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html) is set to Hidden.
 
@@ -114,11 +114,11 @@ We have provided some basic built-in [PortShapes](https://help.syncfusion.com/cr
             // Position of the node
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-            // Initialize port collection
+            // Initialize port collection.
             Ports = new DiagramObjectCollection<PointPort>()
             {
                 new PointPort()
@@ -126,13 +126,13 @@ We have provided some basic built-in [PortShapes](https://help.syncfusion.com/cr
                     ID = "port1",
                     Offset = new DiagramPoint() { X = 0.5, Y = 0.5 },
                     Visibility = PortVisibility.Visible,
-                    //Set the style for the port
+                    //Set the style for the port.
                     Style = new ShapeStyle() { Fill = "gray", StrokeColor = "black" },
                     Width = 12, 
                     Height = 12,
-                    // Sets the shape of the port as Custom 
+                    // Sets the shape of the port as Custom .
                     Shape = PortShapes.Custom,
-                    // Sets the PathData for port
+                    // Sets the PathData for port.
                     PathData = "M540.3643,137.9336L546.7973,159.7016L570.3633,159.7296L550.7723,171.9366L558.9053,194.9966L540.3643,179.4996L521.8223,194.9966L529.9553,171.9366L510.3633,159.7296L533.9313,159.7016L540.3643,137.9336z"
                 }
             },
@@ -144,7 +144,7 @@ We have provided some basic built-in [PortShapes](https://help.syncfusion.com/cr
 
 ![Blazor Diagram Port with Custom Shape](../images/blazor-diagram-port-custom-shape.png)
 
-## Constraints
+## How to enable or disable certain behavior of the port
 
 The constraints property allows you to enable or disable certain behaviors of ports. For more information about port constraints, refer to [Port Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html). You can verify the [Constraints](https://blazor.syncfusion.com/documentation/diagram-component/constraints) to learn how to enable or disable the port constraints.
 
@@ -169,4 +169,4 @@ The [AdditionalInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
 
 * [How to set the position of the port](./positioning)
 
-* [How to interact the ports](./interaction)
+* [How to interact with the ports](./interaction)

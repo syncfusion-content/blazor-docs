@@ -9,7 +9,7 @@ documentation: ug
 
 # Organizational Chart in Blazor Diagram Component
 
-An organizational chart is a diagram that displays the structure of an organization and relationships. To create an organizational chart, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) of layout should be set as an [OrganizationalChart](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_OrganizationalChart). The following code example illustrates how to create an organizational chart.
+An organizational chart is a diagram that displays the structure of an organization and relationships. To create an organizational chart, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) of layout should be set as an [OrganizationalChart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_OrganizationalChart). The following code example illustrates how to create an organizational chart.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -21,9 +21,9 @@ An organizational chart is a diagram that displays the structure of an organizat
 
 @code 
 {
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    //Defines diagram's node collection
+    //Defines diagram's node collection.
     DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
 
     int HorizontalSpacing = 40;
@@ -34,7 +34,7 @@ An organizational chart is a diagram that displays the structure of an organizat
         Node node = obj as Node;
         node.Height = 40;
         node.Width = 100;
-        //Initializing the default node's shape style
+        //Initializing the default node's shape style.
         node.Style = new ShapeStyle() { Fill = "darkcyan", StrokeWidth = 3, StrokeColor = "Black" };
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
         {
@@ -100,13 +100,13 @@ An organizational chart is a diagram that displays the structure of an organizat
 
 ![Blazor Organization Chart Diagram](../images/blazor-organization-chart.png)
 
-Organizational chart layout starts parsing from root and iterate through all its child elements. The [GetLayoutInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetLayoutInfo) event callback method provides necessary information of a node’s children and the way to arrange (direction, orientation, offsets, etc.)them. The arrangements can be customized by overriding this function as explained.
+Organizational chart layout starts parsing from root and iterate through all its child elements. The [GetLayoutInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetLayoutInfo) event callback method provides necessary information about a node’s children and the way to arrange them(direction, orientation, offsets, etc.). The arrangements can be customized by overriding this function as explained.
 
 **GetLayoutInfo** set chart orientations, chart types, and offset to be left between parent and child nodes. The GetLayoutInfo event callback method is called to configure every subtree of the organizational chart. It takes the following arguments.
 
 1. **IDiagramObject**: Parent node to that options are to be customized.
 2. **TreeInfo**: Object to set the customizable properties.
-3. **TreeInfo**: Returns an object value to be the customized.
+3. **TreeInfo**: Returns an object value to be customized.
 
 ## Customize layout
 
@@ -114,11 +114,11 @@ Orientation, spacings, and position of the layout can be customized with a set o
 
 To explore layout properties, refer to `Layout Properties`.
 
-### Layout bounds
+### How to update the Layout bounds
 
 Diagram provides support to align the layout within any custom rectangular area. For more information about bounds, refer to [Bounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Bounds).
 
-### Layout alignment
+### How to align Layout 
 
 The layout can be aligned anywhere over the layout bounds/viewport using the [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalAlignment) and [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalAlignment) properties of the layout.
 
@@ -166,11 +166,11 @@ The following code example illustrates how to set the vertical right arrangement
 
 @code
 {
-    //Initializing layout
+    //Initializing layout.
     int HorizontalSpacing = 40;
     int VerticalSpacing = 50;
 
-    //To configure every subtree of the organizational chart
+    //To configure every subtree of the organizational chart.
     private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
     {
         options.AlignmentType = SubTreeAlignmentType.Right;
@@ -178,7 +178,7 @@ The following code example illustrates how to set the vertical right arrangement
         return options;
     }
 
-    //Creates node with some default values
+    //Creates node with some default values.
     private void OnNodeCreating(IDiagramObject obj)
     {
         Node node = obj as Node;
@@ -187,7 +187,7 @@ The following code example illustrates how to set the vertical right arrangement
         node.Style = new ShapeStyle() { Fill = "#6495ED", StrokeWidth = 1, StrokeColor = "Black" };
     }
 
-    //Creates connectors with some default values
+    //Creates connectors with some default values.
     private void OnConnectorCreating(IDiagramObject connector)
     {
         Connector connectors = connector as Connector;
@@ -219,16 +219,16 @@ The following code example illustrates how to set the vertical right arrangement
 
 ![Blazor Organization Diagram ChildNode in Vertical Right](../images/blazor-diagram-childnode-at-vertical-right.png)
 
-### Layout spacing
+### How to update the Layout spacing
 
-Layout provides support to add space horizontally and vertically between the nodes. The [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing) properties of the layout allows you to set the space between the nodes in horizontally and vertically.
+Layout provides support to add space horizontally and vertically between the nodes. The [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing) properties of the layout allow you to set the space between the nodes horizontally and vertically.
 
-### Layout margin
+### How to update the Layout margin
 
 Layout provides support to add some blank space between the layout bounds/viewport and the layout. The [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Margin) property of the layout allows you to set the blank space.
 
 ```csharp
-//Initialize the organizational chart layout with Margin
+//Initialize the organizational chart layout with Margin.
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px" >
   <Layout Type="LayoutType.HierarchicalTree">
      <LayoutMargin Top="@top" Left="@left"></LayoutMargin>
@@ -236,26 +236,26 @@ Layout provides support to add some blank space between the layout bounds/viewpo
 </SfDiagramComponent>
 @code
 {
-    //Initializing the Mergin Top and Left value
+    //Initializing the Margin Top and Left value.
     int left = 40;
     int top = 50;
 }
 ```
 
-### Layout orientation
+### How to change orientation
 
 Diagram provides support to customize the `Orientation` of layout. You can set the desired orientation using `LayoutOrientation`.
 
 The following code illustrates how to arrange the nodes in a BottomToTop orientation.
 
 ```csharp
-//Initialize the layout with layout orientation as BottomToTop in page
+//Initialize the layout with layout orientation as BottomToTop in page.
 <SfDiagramComponent Height="600px" Width="500px" >
     <Layout Type="LayoutType.HierarchicalTree" @bind-Orientation="@orientation"></Layout>
 </SfDiagramComponent>
 @code
 {
-    //Initializing the orientation value
+    //Initializing the orientation value.
     LayoutOrientation orientation = LayoutOrientation.TopToBottom;
 }
 ```
@@ -265,27 +265,27 @@ The following code illustrates how to arrange the nodes in a BottomToTop orienta
 Layout provides support to arrange the nodes with reference to the position of a fixed node and set it to the [FixedNode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_FixedNode) of the layout property. This is helpful when you try to expand/collapse a node. It might be expected that the position of the double-clicked node should not be changed.
 
 ```csharp
-//Initialize the organizational chart layout with FixedNode
+//Initialize the organizational chart layout with FixedNode.
 <SfDiagramComponent Height="600px" Width="500px" >
     <Layout Type="LayoutType.OrganizationalChart" FixedNode="Node1" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing" @bind-Orientation="@orientation"></Layout>
 </SfDiagramComponent>
 @code
 {
-    //Initializing the orientation value
+    //Initializing the orientation value.
     LayoutOrientation orientation = LayoutOrientation.TopToBottom;
-    //Initializing the Horizontal and Vertical value
+    //Initializing the Horizontal and Vertical value.
     int HorizontalSpacing = 40;
     int VerticalSpacing = 50;
 }
 
 ```
 
-## Refresh layout
+## How to refresh the layout
 
-Diagram allows to refresh the layout at runtime by using [DoLayout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DoLayout) method. Use the below code example to refresh the layout.
+Diagram allows to refresh the layout at runtime by using the [DoLayout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DoLayout) method. Use the following code example to refresh the layout.
 
 ```csharp
-//update the layout at runtime.
+//Update the layout at runtime.
 diagram.DoLayout();
 
 //Here, diagram is instance of SfDiagramComponent.

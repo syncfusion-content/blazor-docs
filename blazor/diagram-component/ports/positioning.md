@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Positioning in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Positioning in Syncfusion Blazor Diagram component and much more details.
+description: Checkout and learn here all about positioning in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -16,9 +16,9 @@ Diagram allows you to customize the position and appearance of the port efficien
 * VerticalAlignment
 * Margin
 
-## Offset
+## How to change offset at runtime
 
-The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PointPort.html#Syncfusion_Blazor_Diagram_PointPort_Offset) property is used to align the Ports based on fractions. 0 represents top/left corner, 1 represents bottom/right corner, and 0.5 represents half of width/height.
+The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PointPort.html#Syncfusion_Blazor_Diagram_PointPort_Offset) property is used to align the ports based on fractions. 0 represents top/left corner, 1 represents bottom/right corner, and 0.5 represents half of width/height.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -35,27 +35,27 @@ The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Poi
         // A node is created and stored in nodes collection.
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-            // Initialize port collection
+            // Initialize port collection.
             Ports = new DiagramObjectCollection<PointPort>()
             {
                 new PointPort() 
                 {
                     ID = "port1",
-                    // Sets the offset for the port
+                    // Sets the offset for the port.
                     Offset = new DiagramPoint() { X = 0, Y = 0.5 },
                     Visibility = PortVisibility.Visible,
-                    //Set the style for the port
+                    //Set the style for the port.
                     Style= new ShapeStyle() { Fill = "gray", StrokeColor = "black" },
                     Width = 12,
                     Height = 12,
-                    // Sets the shape of the port as Square 
+                    // Sets the shape of the port as Square .
                     Shape = PortShapes.Square
                 }
             }
@@ -83,7 +83,7 @@ The following table shows the relationship between the shape port position and p
 
 
 
-## Horizontal and Vertical alignment
+## How to change Horizontal and Vertical alignment
 
 The [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_HorizontalAlignment) property of the port is used to set how the port is horizontally aligned at the port position determined from the fraction values. The [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_VerticalAlignment) property is used to set how the port is vertically aligned at the port position.
 
@@ -118,14 +118,14 @@ The following code explains how to align ports.
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-            // Initialize port collection
+            // Initialize port collection.
             Ports = new DiagramObjectCollection<PointPort>() 
             {
                 new PointPort() 
@@ -133,11 +133,11 @@ The following code explains how to align ports.
                     ID = "port1",
                     Offset = new DiagramPoint() { X = 0, Y = 0 },
                     Visibility = PortVisibility.Visible,
-                    //Set the style for the port
+                    //Set the style for the port.
                     Style = new ShapeStyle(){ Fill="gray", StrokeColor="black"},
                     Width = 12, 
                     Height = 12, 
-                    // Sets the shape of the port as Square                    
+                    // Sets the shape of the port as Square.                    
                     Shape = PortShapes.Square,
                     HorizontalAlignment = HorizontalAlignment.Center,
                     VerticalAlignment = VerticalAlignment.Center
@@ -149,12 +149,12 @@ The following code explains how to align ports.
 }
 ```
 
-![Changin Port Position in Blazor Diagram](../images/blazor-diagram-port-position.png)
+![Changing Port Position in Blazor Diagram](../images/blazor-diagram-port-position.png)
 
 
-> The value of the `HorizontalAlignment` is `Center` by default. The value of the `VerticalAlignment` is `Center` by default. Alignment positioned based on the offset value.
+> By default, the value of the `HorizontalAlignment` and `VerticalAlignment` is `Center`. Alignment is positioned based on the offset value.
 
-## Margin
+## How to update margin for port
 
 [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Margin) is an absolute value used to add some blank space to any one of its four sides. The ports can be displaced with the margin property. The following code example explains how to align a port based on its Offset, HorizontalAlignment, VerticalAlignment, and Margin values.
 
@@ -173,14 +173,14 @@ The following code explains how to align ports.
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-            // Initialize port collection
+            // Initialize port collection.
             Ports = new DiagramObjectCollection<PointPort>() 
             {
                 new PointPort() 
@@ -188,11 +188,11 @@ The following code explains how to align ports.
                     ID = "port1",
                     Offset = new DiagramPoint() { X = 0.5, Y = 1 },
                     Visibility = PortVisibility.Visible,
-                    //Set the style for the port
+                    //Set the style for the port.
                     Style= new ShapeStyle() { Fill = "gray", StrokeColor = "black" },
                     Width = 12,
                     Height = 12, 
-                    // Sets the shape of the port as Square
+                    // Sets the shape of the port as Square.
                     Shape = PortShapes.Square,
                     HorizontalAlignment = HorizontalAlignment.Left,
                     VerticalAlignment = VerticalAlignment.Top,
@@ -213,4 +213,4 @@ The following code explains how to align ports.
 
 * [How to customize the ports](./appearance)
 
-* [How to interact the ports](./interaction)
+* [How to interact with the ports](./interaction)

@@ -15,7 +15,7 @@ The column displays information from a bound data source, and you can edit the v
 
 The `TreeColumnIndex` property is used to define the expander column in the Gantt Chart component to expand and collapse the child rows.
 
-## Defining Columns
+## Defining columns
 
 Using the `GanttColumns` property, you can define the columns in Gantt Chart. If the columns are not defined, then the default columns will be rendered based on the mapped data source fields in the `GanttTaskFields` property. Refer to the following code example for defining the columns in Gantt Chart along with their widths.
 
@@ -570,7 +570,7 @@ The column reordering can be done by dragging a column header from one index to 
 
 > You can disable the reordering of a particular column by setting the `GanttColumn.AllowReordering` property to `false`.
 
-### Reorder Multiple Columns
+### Reorder multiple columns
 
 Multiple columns can be reordered at a time by using the `ReorderColumnsAsync` method.
 
@@ -786,11 +786,11 @@ The column width can be resized by clicking and dragging the right edge of the c
 
 > You can disable resizing for a particular column by setting the `GanttColumn.AllowResizing` to `false`.
 
-### Defining Minimum and Maximum Column Width
+### Defining minimum and maximum column width
 
 The column resizing can be restricted between minimum and maximum widths by defining the `GanttColumn.MinWidth` and `GanttColumn.MaxWidth` properties.
 
-In the following example, the minimum and maximum widths are defined for the `Duration`, and `Task Name` columns.
+In the following example, the minimum and maximum widths are defined for the `Duration` and `Task Name` columns.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -892,7 +892,7 @@ In the following example, the minimum and maximum widths are defined for the `Du
 }
 ```
 
-## Column Template
+## Column template
 
 A column template is used to customize the column’s look. The following code example explains how to define the custom template in Gantt Chart using the `Template` property.
 
@@ -1012,7 +1012,7 @@ A column template is used to customize the column’s look. The following code e
 
 ![Blazor Gantt Chart with Column Template](images/blazor-gantt-chart-column-template.png)
 
-## Column Menu
+## Column menu
 
 The column menu has options to integrate features like sorting, filtering, and autofit. It will show a menu with the integrated feature when users click the Multiple icon of the column. To enable the column menu, you should set the `ShowColumnMenu` property to true.
 
@@ -1124,7 +1124,7 @@ The default items are displayed in the following table:
 
 > You can disable the column menu for a particular column by setting the `GanttColumn.ShowColumnMenu` to `false`.
 
-## Responsive Columns
+## Responsive columns
 
 You can toggle the column visibility based on media queries, which are defined in the `HideAtMedia`. The `HideAtMedia` accepts valid [Media Queries]( http://cssmediaqueries.com/what-are-css-media-queries.html ).
 
@@ -1226,9 +1226,9 @@ You can toggle the column visibility based on media queries, which are defined i
 }
 ```
 
-## Change Tree / Expander column
+## Change Tree/Expander column
 
-The tree/expander column is a column in the Gantt Chart component, that has icons to expand or collapse the parent records. You can define the tree column index in the Gantt Chart component by using the `TreeColumnIndex` property and the default value of this property is `0`. The following code example shows how to use this property.
+The tree/expander column is a column in the Gantt Chart component that has icons to expand or collapse the parent records. You can define the tree column index in the Gantt Chart component by using the `TreeColumnIndex` property and the default value of this property is `0`. The following code example shows how to use this property.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -1324,7 +1324,7 @@ The tree/expander column is a column in the Gantt Chart component, that has icon
 
 ![Changing Expander Column in Blazor Gantt Chart](images/blazor-gantt-chart-expander-column.png)
 
-## Show or Hide Columns dynamically
+## Show or hide columns dynamically
 
 You can show or hide gantt component columns dynamically using external buttons by invoking the `ShowColumnsAsync` or `HideColumnsAsync` method.
 
@@ -1560,9 +1560,9 @@ Gantt column supports the following types:
 * Date
 * DateTime
 
-> If the `GanttColumn.Type` is not defined, it will be determined from the first record of the `DataSource`. In case if the first record of the `DataSource` is null/blank value for a column then it is necessary to define the `GanttColumn.Type` for that column.
+> If the `GanttColumn.Type` is not defined, it will be determined from the first record of the `DataSource`. If the first record of the `DataSource` is null/blank value for a column then it is necessary to define the `GanttColumn.Type` for that column.
 
-## Custom Columns
+## Custom columns
 
 Using the `GanttColumns` property, you can define the Custom Columns in Gantt Chart. If custom columns are required, then you can generate columns that was not defined in the `GanttTaskFields` property. Refer to the following code example for defining the custom columns in Gantt Chart.
 
@@ -1690,7 +1690,7 @@ Using the `GanttColumns` property, you can define the Custom Columns in Gantt Ch
 
 ![Blazor Gantt Chart with Custom Column](images/blazor-gantt-chart-custom-column.png)
 
-## Column Chooser
+## Column chooser
 
 The column chooser has options to show or hide columns dynamically. It can be enabled by defining the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowColumnChooser) as true.
 
@@ -1757,7 +1757,7 @@ The column chooser has options to show or hide columns dynamically. It can be en
 
 ## Custom component in column chooser template
 
-In below example, we have rendered ListView as custom component inside the Template of [`GanttColumnChooserSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowColumnChooser) in gantt. Inside the custom component, we have grouped the items.
+In the following example, ListView has been rendered as custom component inside the Template of [`GanttColumnChooserSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowColumnChooser) in gantt. Inside the custom component, the items are grouped.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt;
@@ -1943,14 +1943,14 @@ In below example, we have rendered ListView as custom component inside the Templ
             new TaskData() { TaskId = 14, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 04, 22), Duration = "25", Progress = 30, ParentId = 13, IsExpanded = true, Done = "Yes" },
             new TaskData() { TaskId = 15, TaskName = "List materials", StartDate = new DateTime(2019, 04, 20), Duration = "12", Progress = 40, ParentId = 14, IsExpanded = true, Done = "Yes" },
             new TaskData() { TaskId = 16, TaskName = "Estimation approval", StartDate = new DateTime(2019, 04, 19), Duration = "6", Progress = 30, ParentId = 15, IsExpanded = true, Done = "Yes" },
-            new TaskData() { TaskId = 17, TaskName = "Identifying raw mayerials", StartDate = new DateTime(2019, 04, 17), Duration = "6", ParentId=16, IsExpanded = true, Done = "Yes" },
+            new TaskData() { TaskId = 17, TaskName = "Identifying raw materials", StartDate = new DateTime(2019, 04, 17), Duration = "6", ParentId=16, IsExpanded = true, Done = "Yes" },
             new TaskData() { TaskId = 18, TaskName = "Define cost plan", StartDate = new DateTime(2019, 04, 15), Progress = 30, ParentId=17, IsExpanded = true, Done = "Yes" },
             new TaskData() { TaskId = 19, TaskName = "Manufacturing cost", StartDate = new DateTime(2019, 04, 13), Duration = "7", Progress = 40, ParentId = 18, IsExpanded = true, Done = "Yes" },
             new TaskData() { TaskId = 20, TaskName = "Selling cost", StartDate = new DateTime(2019, 04, 12), Duration = "6", Progress = 30, ParentId = 19, IsExpanded = true, Done = "Yes" },
-            new TaskData() { TaskId = 21, TaskName = "Developement of final design", StartDate = new DateTime(2019, 04, 09), Duration = "5", ParentId=20, IsExpanded = true, Done = "Yes" },
+            new TaskData() { TaskId = 21, TaskName = "Development of final design", StartDate = new DateTime(2019, 04, 09), Duration = "5", ParentId=20, IsExpanded = true, Done = "Yes" },
             new TaskData() { TaskId = 22, TaskName = "Develope dimensions and design", StartDate = new DateTime(2019, 04, 08), Duration = "15", Progress = 30, ParentId=21, IsExpanded = true, Done = "Yes" },
             new TaskData() { TaskId = 23, TaskName = "Develope designs to meet industry", StartDate = new DateTime(2019, 04, 05), Duration = "15", Progress = 40, ParentId = 22, IsExpanded = true, Done = "Yes" },
-            new TaskData() { TaskId = 24,TaskName = "Include all the deatails", StartDate = new DateTime(2019, 04, 02), Duration = "25", Progress = 30, ParentId = 23, IsExpanded = true, Done = "No" },
+            new TaskData() { TaskId = 24,TaskName = "Include all the details", StartDate = new DateTime(2019, 04, 02), Duration = "25", Progress = 30, ParentId = 23, IsExpanded = true, Done = "No" },
         };
         return Tasks;
     }

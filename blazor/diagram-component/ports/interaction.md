@@ -9,9 +9,9 @@ documentation: ug
 
 # Interaction in Blazor Diagram Component
 
-The port can be used to create connector by enable the `Draw` in the [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html).
+The port can be used to create connector by enabling the `Draw` in the [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html).
 
-## Draw
+## Draw connector from the port
 
 Diagram provides the support to draw the connector in the port.
 
@@ -32,14 +32,14 @@ The following code explains how to draw the connector by using the port constrai
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-            // Initialize port collection
+            // Initialize port collection.
             Ports = new DiagramObjectCollection<PointPort>()
             {
                 new PointPort()
@@ -47,7 +47,7 @@ The following code explains how to draw the connector by using the port constrai
                     ID = "port1",
                     Offset = new DiagramPoint() { X = 0.5, Y = 0.5 },
                     Visibility = PortVisibility.Visible,
-                    //Set the style for the port
+                    //Set the style for the port.
                     Style = new ShapeStyle()
                     { 
                         Fill = "gray", 
@@ -55,7 +55,7 @@ The following code explains how to draw the connector by using the port constrai
                      }, 
                     Width = 12, 
                     Height = 12, 
-                    // Sets the shape of the port as Square
+                    // Sets the shape of the port as Square.
                     Shape = PortShapes.Square,
                     // Enable draw operation for Port
                     Constraints = PortConstraints.Default | PortConstraints.Draw

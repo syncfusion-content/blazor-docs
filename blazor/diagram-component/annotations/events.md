@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Diagram Component
 
-## Text Change
+## Text Change event
 
 * While editing the node's or connector's annotation, [TextChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_TextChanged) event can be used to do the customization.
 * When the node's or connector's annotation is changed in the diagram, this event is getting triggered. 

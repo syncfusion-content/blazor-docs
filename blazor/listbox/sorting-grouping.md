@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting and Grouping in Blazor ListBox Component | Syncfusion
-description: Checkout and learn here all about Sorting and Grouping in Syncfusion Blazor ListBox component and more.
+description: Checkout and learn here all about sorting and grouping in Syncfusion Blazor ListBox component and more.
 platform: Blazor
 control: List Box
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Sorting
 
-The ListBox supports sorting of available items in the alphabetical order that can be either ascending or descending. This can achieved using [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property. Sort order can be `None`, `Ascending` or `Descending`.
+The ListBox supports sorting of available items in the alphabetical order that can be either ascending or descending. This can be achieved using [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property. Sort order can be `None`, `Ascending` or `Descending`.
 
 In the following example, the `SortOrder` is set as `Descending`.
 
@@ -42,15 +42,11 @@ In the following example, the `SortOrder` is set as `Descending`.
 
 ```
 
-Output will be shown as,
-
 ![Sorting in Blazor ListBox](images/blazor-listbox-sorting.png)
 
 ## Grouping
 
 The ListBox supports to wrap the nested element into a group based on its category. The category of each list item can be mapped with [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ListBoxFieldSettings_GroupBy) field in the data table.
-
-In the following example, vegetables are grouped based on its category.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -81,7 +77,5 @@ In the following example, vegetables are grouped based on its category.
     }
 }
 ```
-
-Output will be shown as,
 
 ![Grouping in Blazor ListBox](images/blazor-listbox-grouping.png)
