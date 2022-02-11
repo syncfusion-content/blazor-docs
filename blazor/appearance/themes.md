@@ -44,19 +44,29 @@ Using the below approaches the themes can be referenced in the Blazor applicatio
 3. [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) - Used to generate resources only for the selected (used) components. 
 4. [Theme Studio](https://blazor.syncfusion.com/documentation/appearance/theme-studio) - Used to customize and generate themes only for the selected (used) components. 
 5. [NPM packages](#npm-packages) - Used to customize the existing themes and bundle stylesheet's in an application.
-6. [LibMan](#libman) - Used to customize the existing themes and bundle stylesheet's in an application.
 
-Instead of using [Static Web assets](#static-web-assets) or a [CDN reference](#cdn-reference), you can reference the style sheet into your projects to customize the theme or bundle it with the other style sheets using [NPM packages](#npm-packages) or [LibMan](#libman). 
+Instead of using [Static Web assets](#static-web-assets) or a [CDN reference](#cdn-reference), you can reference the style sheet into your projects to customize the theme or bundle it with the other style sheets using [NPM packages](#npm-packages). 
 
 ## Static Web Assets
 
-Syncfusion Blazor themes are available as Static web Assets in the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet Packages.
+### Enable static web assets usage
+
+To use static web assets, ensure [UseStaticFiles](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles) method is called as follows,
+
+* For **.NET 6** app, open the **~/Program.cs** file and call `UseStaticFiles` method.
+* For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and call `UseStaticFiles` method.
+
+> For **Blazor WASM App**, call `UseStaticFiles` method in **Server project** in the above mentioned file. 
+
+### Refer theme style sheet from static web assets
+
+Syncfusion Blazor themes are available as static web assets in the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet Packages.
 
 * For **Blazor WebAssembly application**, refer style sheet inside the `<head>` element of **wwwroot/index.html** file.
 * For **Blazor Server application**, refer style sheet inside the `<head>` element of 
     * **~/Pages/_Host.cshtml** file for .NET 3 and .NET 5.
     * **~/Pages/_Layout.cshtml** for .NET 6.
-    
+
 When using individual NuGet packages in your application, add [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet Package and reference style sheet as below,
 
  ```html
@@ -148,59 +158,6 @@ You can add the theme for the Blazor applications through **npm packages** using
 * The SCSS file has been compiled to the CSS file. Then, add this CSS file to the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
 * Run the application and see the fabric themes from installed npm packages was applied.
-
-## LibMan
-
-Library Manager (LibMan) is a client-side library acquisition tool that is simple to use. LibMan is a program that downloads popular libraries and frameworks from a file system or a content delivery network (CDN).
-
-LibMan offers the following advantages,
-
-1. Only the library files you need are downloaded.
-2. Additional tooling, such as Node.js, npm, and WebPack, isn't necessary to acquire a subset of files in a library.
-3. Files can be placed in a specific location without resorting to build tasks or manual file copying.
-
-In the server application root, add the **lib man.json** file with the following content:
-
-```json
-{
-  "version": "1.0",
-  "defaultProvider": "cdnjs",
-  "libraries": [
-    {
-      "library": "@progress/Syncfusion-Blazor-bootstrap@latest",
-      "destination": "wwwroot/css/Syncfusion-Blazor/bootstrap",
-      "files": [
-        "dist/all.css"
-      ]
-    },
-    {
-      "library": "@progress/Syncfusion-Blazor-fabric@latest",
-      "destination": "wwwroot/css/Syncfusion-Blazor/fabric",
-      "files": [
-        "dist/all.css"
-      ]
-    },
-    {
-      "library": "@progress/Syncfusion-Blazor-material@latest",
-      "destination": "wwwroot/css/Syncfusion-Blazor/material",
-      "files": [
-        "dist/all.css"
-      ]
-    }
-  ]
-}
-```
-
-In the client Blazor application, go to the **wwwroot/index.html** file and replace the CDN link with the following one. For a server-side Blazor project, do that in the **~/Pages/_Host.cshtml** file.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link href="/css/Syncfusion-Blazor/fabric/dist/all.css" rel="stylesheet" />
-</head>
-</html>
-```
 
 ## Change theme dynamically
 
@@ -530,3 +487,7 @@ The following example demonstrates how to change a theme dynamically in Blazor W
     ![Change theme dynamically in blazor WASM app](images/blazor-dynamic-theme-switching-wasm.gif) 
     
     > [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-WASM-app)
+   
+## See also
+
+[How to change background of browser based on Syncfusion Theme in Blazor?](https://www.syncfusion.com/forums/171882/problems-with-implementing-dark-themes)
