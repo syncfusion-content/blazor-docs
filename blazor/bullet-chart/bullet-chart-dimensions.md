@@ -11,9 +11,9 @@ documentation: ug
 
 # Bullet Chart Dimensions in Blazor Bullet Chart Component
 
-## Size for Container
+## Size for container
 
-The size of the [Bullet Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html) is determined by the container size, and it can be changed inline or via CSS as following.
+The size of the [Bullet Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html) is determined by the container size, and it can be changed inline or via CSS as follows.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
