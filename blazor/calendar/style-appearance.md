@@ -11,9 +11,9 @@ documentation: ug
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
-## Customizing the Calendar
+## Customizing the background color for the Calendar
 
-Use the following CSS to customize the Calendar.
+Use the following CSS to customize the background color and border for the Calendar.
 
 ```css
 /* To specify background color and border */
