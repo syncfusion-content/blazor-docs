@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor DataGrid Component | Syncfusion
-description: Checkout and learn about getting started with Blazor DataGrid component in Blazor Server App and Blazor WebAssembly App.
+description: Checkout and learn about getting started with Blazor Data Grid component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -426,7 +426,7 @@ The grouping feature enables you to view the datagrid record in a grouped view. 
 
 ## Handling exceptions
 
-Exceptions occurred during grid actions can be handled without stopping application. These error messages or exception details can be acquired using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event.
+Exceptions occurred during sfgrid actions can be handled without stopping application. These error messages or exception details can be acquired using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event.
 
 The argument passed to the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event contains the error details returned from the server.
 
