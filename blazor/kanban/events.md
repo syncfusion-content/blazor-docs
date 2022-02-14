@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Kanban Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor Kanban component and much more details.
+description: Checkout and learn here all about events in Syncfusion Blazor Kanban component and much more details.
 platform: Blazor
 control: Kanban
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Columns in Blazor Kanban Component | Syncfusion
-description: Checkout and learn here all about Columns in Syncfusion Blazor Kanban component and much more details.
+description: Checkout and learn here all about columns in Syncfusion Blazor Kanban component and much more details.
 platform: Blazor
 control: Kanban
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Columns in Blazor Kanban Component
 
-The **Kanban** columns represent the each stage of the process. The column definitions are used as the **DataSource** schema in the Kanban. The Kanban operations such as drag-and-drop, swimlane, and toggle columns are performed based on column definitions.
+The **Kanban** columns represents each stage of the process. The column definitions are used as the **DataSource** schema in the Kanban. The Kanban operations such as drag-and-drop, swimlane, and toggle columns are performed based on column definitions.
 
 ## Single-key mapping
 
@@ -75,13 +75,11 @@ Kanban columns are categorized by mapping the **key** from the datasource using 
 
 ```
 
-Output be like the below.
-
 ![Blazor Kanban Columns with Single Key](./images/blazor-kanban-columns-with-single-key.png)
 
 ## Multi-key mapping
 
-Kanban board allows to render a single column by mapping multiple keys using `KeyField` property. In below sample, specified the multiple keys(Open, Validate) to a single column.
+Kanban board allows to render a single column by mapping multiple keys using `KeyField` property.
 
 ```cshtml
 
@@ -141,8 +139,6 @@ Kanban board allows to render a single column by mapping multiple keys using `Ke
 
 ```
 
-Output be like the below.
-
 ![Blazor Kanban Column with Multi Key](./images/blazor-kanban-column-with-multi-key.png)
 
 ## Header text
@@ -153,7 +149,7 @@ You can provide the column header text of Kanban columns using the `HeaderText` 
 
 You can customize the column header with `Template` property as shown in the following code.
 
-To get start quickly with Blazor Kanban component using Templates, you can check on this video
+To get start quickly with Blazor Kanban component using Templates, you can check on this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=PjTgXuibei8" %}
@@ -323,13 +319,11 @@ To get start quickly with Blazor Kanban component using Templates, you can check
 
 ```
 
-Output be like the below.
-
 ![Customizing Column Header in Blazor Kanban](./images/blazor-kanban-header-customization.png)
 
 ## Toggle columns
 
-Kanban allows to expand or collapse its columns using `AllowToggle` in `KanbanColumn`. When enable the property, it will render the expand or collapse icon to the column header.
+Kanban allows to expand or collapse its columns using `AllowToggle` in `KanbanColumn`. When the property is enabled, it will render the expand or collapse icon to the column header.
 
 > By default, collapsed column width is set to `50px`.
 
@@ -390,8 +384,6 @@ Kanban allows to expand or collapse its columns using `AllowToggle` in `KanbanCo
 }
 
 ```
-
-Output be like the below.
 
 ![Blazor Kanban with Toggle Columns](./images/blazor-kanban-toggle-columns.png)
 
@@ -460,8 +452,6 @@ In the following example, the Backlog column is collapsed on initialization of K
 }
 
 ```
-
-Output be like the below.
 
 ![Blazor Kanban with Collapsed Column](./images/blazor-kanban-collapsed-column.png)
 
@@ -533,7 +523,5 @@ In the following code, the kanban columns 'InProgress, Review' are grouped under
 }
 
 ```
-
-Output be like the below.
 
 ![Blazor Kanban with Stacked Header](./images/blazor-kanban-stacked-header.png)

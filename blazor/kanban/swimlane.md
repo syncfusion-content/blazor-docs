@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Swimlane in Blazor Kanban Component | Syncfusion
-description: Checkout and learn here all about Swimlane in Syncfusion Blazor Kanban component and much more details.
+description: Checkout and learn here all about swimlane in Syncfusion Blazor Kanban component and much more details.
 platform: Blazor
 control: Kanban
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Swimlane in Blazor Kanban Component
 
-Swimlanes are horizontal categorizations of cards on the Kanban board.  It is used for grouping of cards, which brings transparency to the workflow process.
+Swimlanes are horizontal categorizations of cards on the Kanban board. It is used for grouping of cards, which brings transparency to the workflow process.
 
 ## Render swimlane row
 
@@ -74,7 +74,6 @@ Cards can be grouped based on `KeyField` and displayed in rows, which are separa
 
 ```
 
-Output be like the below.
 
 ![Blazor Kanban with Swimlane Row](./images/blazor-kanban-with-swimlane-row.png)
 
@@ -82,7 +81,7 @@ Output be like the below.
 
 Customize the swimlane row header text by using the `TextField` property mapped from datasource.
 
-> It is not mandatory to define the `TextField` to `KanbanSwimlaneSettings`.  It will automatically consider the `KeyField` to swimlane row header text. If the mapping `TextField` key is not present in the datasource, it will consider the swimlane `KeyField` as swimlane row header text.
+> It is not mandatory to define the `TextField` to `KanbanSwimlaneSettings`. It will automatically consider the `KeyField` to swimlane row header text. If the mapping `TextField` key is not present in the datasource, it will consider the swimlane `KeyField` as swimlane row header text.
 
 ```cshtml
 
@@ -148,7 +147,7 @@ Customize the swimlane row header text by using the `TextField` property mapped 
 
 You can customize the Kanban swimlane row by using `Template`, which is specified within the `KanbanSwimlaneSettings` property. In this demo, the swimlane header is customized with HTML element.
 
-To get start quickly with Blazor Kanban component using Templates, you can check on this video
+To get start quickly with Blazor Kanban component using Templates, you can check on this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=PjTgXuibei8" %}
@@ -245,8 +244,6 @@ To get start quickly with Blazor Kanban component using Templates, you can check
 }
 
 ```
-
-Output be like the below.
 
 ![Customizing Swimlane Row Text in Blazor Kanban](./images/blazor-kanban-custom-swimlane-row.png)
 
@@ -421,8 +418,6 @@ In below demo, disabled on `ShowItemCount` property on rendering swimlane row wi
 
 ```
 
-Output be like the below.
-
 ![Displaying Blazor Kanban Cards Count](./images/blazor-kanban-cards-count.png)
 
 ## Enable frozen rows
@@ -491,7 +486,5 @@ By default, the `EnableFrozenRows` property is set as `false`. If you wish to sh
 }
 
 ```
-
-Output be like the below.
 
 ![Blazor Kanban with Frozen Rows](./images/blazor-kanban-frozen-rows.png)
