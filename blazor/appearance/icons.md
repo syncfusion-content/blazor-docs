@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion Blazor library provides the set of `base64` formatted font icons which are being used in the Syncfusion Blazor components. These icons can be utilized in the web applications using `SfIcon` component or `e-icons` class.
 
-To get start quickly with Blazor Icon component, you can check on this video:
+Check out the video to quickly get started with the Blazor Icon component:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=H1nQCAHzKZ0"%}
