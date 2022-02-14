@@ -18,7 +18,7 @@ The following drag and drop types are available in the Kanban board.
 
 ## Internal drag and drop
 
-Allows the user to drag and drop the cards within the Kanban board. Based on this, we can categorize into two ways.
+Allows the user to drag and drop the cards within the Kanban board. Based on this, it can be categorized into two ways.
 
 * Column drag and drop
 * Swimlane drag and drop
@@ -41,7 +41,7 @@ In the following example, the drag and drop behavior is disabled on the Kanban b
 
 ### Swimlane drag and drop
 
-By default, the Kanban does not allow dragging the cards across the swimlane rows. Enabling the [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_AllowDragAndDrop) property allows you to drag the cards across the swimlane rows, which is specified inside [KanbanSwimlaneSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_SwimlaneSettings) property.
+By default, the Kanban does not allow dragging the cards across the swimlane rows. Enabling the [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_AllowDragAndDrop) property allows to drag the cards across the swimlane rows, which is specified inside [KanbanSwimlaneSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_SwimlaneSettings) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

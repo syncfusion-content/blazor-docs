@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in Blazor Kanban Component | Syncfusion
-description: Checkout and learn here all about Localization in Syncfusion Blazor Kanban component and much more details.
+description: Checkout and learn here all about localization in Syncfusion Blazor Kanban component and much more details.
 platform: Blazor
 control: Kanban
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Localization in Blazor Kanban Component
 
-The localization library allows you to localize the default text content of the Kanban to different cultures using the `Locale` property.
+The localization library allows to localize the default text content of the Kanban to different cultures using the `Locale` property.
 
 > Use `Resource` file to translate the static text of the kanban. The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [Localization](../../common/localization/) link to know more about how to configure and use localization in the Blazor Server and WebAssembly project for Syncfusion Blazor components.
 
@@ -94,8 +94,6 @@ The following example demonstrates the Kanban in `Deutsch` culture.
 
 ```
 
-Output be like the below.
-
 ![Localization in Blazor Kanban](./images/blazor-kanban-localization.png)
 
 ## Right to left (RTL)
@@ -159,7 +157,5 @@ The Kanban provides an option to switch its text direction and layout from right
 }
 
 ```
-
-Output be like the below.
 
 ![Right to Left in Blazor Kanban](./images/blazor-kanban-right-to-left.png)
