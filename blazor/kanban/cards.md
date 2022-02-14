@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cards in Blazor Kanban Component | Syncfusion
-description: Checkout and learn here all about Cards in Syncfusion Blazor Kanban component and much more details.
+description: Checkout and learn here all about cards in Syncfusion Blazor Kanban component and much more details.
 platform: Blazor
 control: Kanban
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Cards in Blazor Kanban Component
 
-The cards are main elements in Kanban board, which represent the task information with header and content. The header and content of a card is fetched from the corresponding mapping fields. The card layout can be customized with template also.
+The cards are main elements in Kanban board, which represents the task information with header and content. The header and content of a card is fetched from the corresponding mapping fields. The card layout can be customized with template also.
 
 ## Header
 
-The card header is achieved by mapping the `HeaderField` property, which is placed inside the `KanbanCardSettings` property. By default, the `ShowHeader` property enabled by Kanban board that is used to show the header at the top of the card.
+The card header is achieved by mapping the `HeaderField` property, which is placed inside the `KanbanCardSettings` property. By default, the `ShowHeader` property is enabled by Kanban board that is used to show the header at the top of the card.
 
 > The `HeaderField` property must be a unique datasource value to avoid the duplication of card data.
 
@@ -76,8 +76,6 @@ In the following demo, the `ShowHeader` property is disabled on Kanban board.
 }
 
 ```
-
-Output be like the below.
 
 ![Blazor Kanban Card with Header](./images/blazor-kanban-card-header.png)
 
@@ -148,8 +146,6 @@ The card tags are used to display the tag text with the background color. Each t
 
 ```
 
-The output will be as follows.
-
 ![Blazor Kanban Card with Tags](./images/blazor-kanban-card-tags.png)
 
 ## Left border color
@@ -214,8 +210,6 @@ Kanban card supports to custom the left border color for all the cards. This can
 }
 
 ```
-
-The output will be as follows.
 
 ![Customizing Left Border Color in Blazor Kanban Card](./images/blazor-kanban-card-with-custom-border-color.png)
 
@@ -366,15 +360,11 @@ In the following demo, images and icons are rendered using the `FooterCssField` 
 
 ```
 
-The output will be as follows.
-
 ![Blazor Kanban Card with Custom Elements](./images/blazor-kanban-card-with-custom-element.png)
 
 ## Template
 
 You can customize the default card layout using template as per your application needs. This can be achieved by template of the `KanbanCardSettings` property.
-
-To get start quickly with Blazor Kanban component using Templates, you can check on this video
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=PjTgXuibei8" %}
@@ -476,8 +466,6 @@ To get start quickly with Blazor Kanban component using Templates, you can check
 
 ```
 
-Output be like the below.
-
 ![Customizing Default Card in Blazor Kanban](./images/blazor-kanban-card-customization.png)
 
 ## Selection
@@ -549,7 +537,5 @@ Select the multiple cards randomly using Ctrl + mouse click and select the multi
 }
 
 ```
-
-Output be like the below.
 
 ![Displaying Multiple Selection in Blazor Kanban Card](./images/blazor-kanban-card-multiple-selection.png)
