@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create a Block Button in Blazor Button Component | Syncfusion
-description: Checkout and learn here all about Create a Block Button in Syncfusion Blazor Button component and more.
+description: Checkout and learn here all about Creating a Block Button in Syncfusion Blazor Button component and more.
 platform: Blazor
 control: Button
 documentation: ug
@@ -20,6 +20,5 @@ You can customize a Button into a Block Button that will span the entire width o
 
 ```
 
-Output be like
 
 ![Blazor Block Button](./../images/blazor-block-button.png)

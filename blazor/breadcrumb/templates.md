@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Breadcrumb Templates with Blazor Breadcrumb component | Syncfusion
-description: Breadcrumb section explain how to customize the item template and separator template to the Breadcrumb items.
+description: Breadcrumb section explains how to customize the item template and separator template to the Breadcrumb items.
 platform: Blazor
 control: Breadcrumb
 documentation: ug
 ---
 
-# Templates in Blazor Breadcrumb component
+# Templates in Blazor Breadcrumb Component
 
 Blazor has templated components which accepts one or more UI segments as input that can be rendered as part of the component during component rendering. Breadcrumb is a templated blazor component, that allow you to customize various part of the UI using template parameters. It allows you to render custom components or content based on your own logic.
 
@@ -52,7 +52,7 @@ In the following example, shopping cart details are used as Breadcrumb items and
 
 ## Separator template
 
-In the  following example, the separators are customized with icons using [SeparatorTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_SeparatorTemplate) tag directive. You can get the previous and next item in `context` property.
+In the following example, the separators are customized with icons using [SeparatorTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_SeparatorTemplate) tag directive. You can get the previous and next item in `context` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

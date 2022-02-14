@@ -13,9 +13,9 @@ A calendar provides an option to select a date value within a specified range by
 
 * If the value of `Min` or `Max` properties are changed through code behind, then update the `Value` property to be set within the  specified range.
 
-* If the value is out of specified date range and less than Min date, the `Value` property will be updated with Min date or the value is higher than Max date, the `Value` property will be updated with Max date.
+* If the value is out of specified date range and less than the Min date, the `Value` property will be updated with the Min date. If the value is higher than the Max date, the `Value` property will be updated with the Max date.
 
-The following code allows you to select a date within the range of 7th to 27th days in a month.
+The following code allows you to select a date within the range of 7th to 27th day in a month.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -28,7 +28,5 @@ The following code allows you to select a date within the range of 7th to 27th d
     public DateTime? DateValue {get;set;} = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 14);
 }
 ```
-
-The output will be as follows.
 
 ![DataRange in Blazor Calendar Component](./images/blazor-calendar-date-range.png)

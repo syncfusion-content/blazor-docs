@@ -37,7 +37,7 @@ Ranges represent the quality of a specific range such as **Good**, **Bad** and *
 
 ![Ranges in Blazor Bullet Chart](images/blazor-bullet-chart-range.png)
 
-## Color Customization
+## Color customization
 
 Enhance the readability of ranges with color and opacity. It can be applied using the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRange.html#Syncfusion_Blazor_Charts_BulletChartRange_Color) and [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRange.html#Syncfusion_Blazor_Charts_BulletChartRange_Opacity) properties respectively.
 
