@@ -48,7 +48,7 @@ documentation: ug
 
 > Refer to our [Blazor Area Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Area Chart Example](https://blazor.syncfusion.com/demos/chart/area?theme=bootstrap4) to know how to represent time-dependent data, showing trends at equal intervals.
 
-## Multicolored Area
+## Multicolored area
 
 To render a multicolored area series, specify the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) property as [MultiColoredArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_MultiColoredArea) in [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html). Here, the individual color of the segment can be mapped by using the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSegment.html#Syncfusion_Blazor_Charts_ChartSegment_Color) property in [ChartSegment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSegment.html).
 
@@ -91,7 +91,7 @@ To render a multicolored area series, specify the [Type](https://help.syncfusion
 
 ![Blazor Multicolored Area Chart](../images/chart-types-images/blazor-multicolor-area-chart.png)
 
-## Series Customization
+## Series customization
 
 The following properties can be used to customize the [Area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Area) series.
 
