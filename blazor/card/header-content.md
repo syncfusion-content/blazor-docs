@@ -22,7 +22,7 @@ Image | It supports to include header images with the specified dimensions.
 
 Class   | Description
 ------------ | -------------
-`Title` |  Main title text with in the header.
+`Title` |  Main title text within the header.
 `SubTitle` | A sub-title within the header.
 `CardImage` | To include heading image within the header.
 
@@ -51,7 +51,7 @@ Card header has an option for adding images in the header. It is aligned with ei
 
 ## Content
 
-Content in Card holds texts, images, links and all possible HTML elements. Its adaptable within the Card root element.
+Content in Card holds texts, images, links, and all possible HTML elements. It is adaptable within the Card root element.
 
 * Create a `Content` component.
 * Place content `div` element in the Card root element or within any Card inner elements.
