@@ -284,6 +284,8 @@ You can add the Data Matrix code in our barcode generator component.
 
 ![Data Matrix Generator in Blazor Barcode Component](images/blazor-barcode-with-data-matrix.png)
 
+> You can also explore our [Blazor Barcode Generator example](https://blazor.syncfusion.com/demos/barcodes/default-functionalities?theme=bootstrap5) that shows you how to render and configure the barcode.
+
 ## See Also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)
