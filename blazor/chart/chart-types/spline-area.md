@@ -9,7 +9,7 @@ documentation: ug
 
 # Spline Area in Blazor Charts Component
 
-## Spline Area
+## Spline area
 
 [Spline Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-area-chart) represents time dependent data and visualizes trends at equal intervals, but with data points connected with a smooth line. To render a [Spline Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-area-chart), set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [Spline Area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_SplineArea).
 
@@ -56,7 +56,7 @@ documentation: ug
 
 > Refer to our [Blazor Spline Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Spline Area Chart Example](https://blazor.syncfusion.com/demos/chart/spline-area?theme=bootstrap4) to know how to connect the data points with smooth curves.
 
-## Series Customization
+## Series customization
 
 The following properties can be used to customize the [Spline Area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_SplineArea) series.
 
