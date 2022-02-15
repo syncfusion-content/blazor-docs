@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize the existing toolbar in Blazor DocumentEditor Component | Syncfusion
+title: Customize the toolbar in Blazor DocumentEditor Component | Syncfusion
 description: Learn how to Customize the existing toolbar in Syncfusion Blazor DocumentEditor component and much more.
 platform: Blazor
 control: DocumentEditor

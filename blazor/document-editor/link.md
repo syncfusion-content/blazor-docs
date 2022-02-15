@@ -68,7 +68,7 @@ To create a basic hyperlink in the document, press `ENTER` / `SPACEBAR` / `SHIFT
 > `<https://>`<br>
 > `file:///`<br>
 > `www.`<br>
-> `mailto:`<br>
+> `mail to:`<br>
 
 Also Document Editor expose API [`InsertHyperlinkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertHyperlinkAsync_System_String_System_String_)to insert hyperlink.
 

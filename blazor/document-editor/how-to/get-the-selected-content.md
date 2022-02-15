@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get the selected content in Blazor DocumentEditor Component | Syncfusion
+title: Get selected content in Blazor DocumentEditor Component | Syncfusion
 description: Learn how to get the selected content from the Syncfusion Blazor Document Editor component as plain text or SFDT (rich text) and much more.
 platform: Blazor
 control: DocumentEditor

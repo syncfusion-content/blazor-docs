@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Optimized text measuring in Blazor DocumentEditor Component | Syncfusion
+title: Text measuring in Blazor DocumentEditor Component | Syncfusion
 description: Learn how to disable optimized text measuring in Syncfusion Blazor DocumentEditor component and much more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# How to disable optimized text measuring in Blazor DocumentEditor component
+# Disable optimized text measuring in Blazor DocumentEditor component
 
 Starting from v19.3.0.x, the accuracy of text size measurements in Document editor is improved such as to match Microsoft Word pagination for most Word documents. This improvement is included as default behavior along with an optional API `enableOptimizedTextMeasuring` in Document editor settings.  
 

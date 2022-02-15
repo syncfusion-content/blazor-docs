@@ -7,7 +7,7 @@ control: DocumentEditor
 documentation: ug
 ---
 
-# How to show and hide spinner while opening document in Blazor Document Editor component
+# How to show and hide spinner in Blazor Document Editor component
 
 Using [`Spinner`](https://blazor.syncfusion.com/documentation/spinner/getting-started) component, you can show/hide spinner while opening document in [`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) component (a.k.a Document Editor) component.
 

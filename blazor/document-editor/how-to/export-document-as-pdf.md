@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Export the document as pdf in Blazor DocumentEditor Component | Syncfusion
-description: Learn how to export the document as pdf in Syncfusion Blazor DocumentEditor component and much more.
+title: PDF Export in Blazor DocumentEditor Component | Syncfusion
+description: Learn how to export the document as PDF in Syncfusion Blazor DocumentEditor component and much more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# How to export the document as pdf in Blazor Document Editor
+# How to export the document as PDF in Blazor Document Editor
 
-In this article, we are going to see how to export the document as Pdf format.
+In this article, we are going to see how to export the document as PDF format.
 
-With the help of [`Synfusion DocIO`](https://help.syncfusion.com/file-formats/docio/word-to-pdf), you can export the document as Pdf.
+With the help of [`Syncfusion DocIO`](https://help.syncfusion.com/file-formats/docio/word-to-pdf), you can export the document as PDF.
 
-The following way illustrates how to convert the document as Pdf:
+The following way illustrates how to convert the document as PDF:
 
 * Using [`SaveAsBlob`] API, convert the document as Base64String, then stream and send it to Syncfusion DocIO.
-* Finally, convert the stream to Pdf using `Syncfusion.DocIORenderer.Net.Core` library.
+* Finally, convert the stream to PDF using `Syncfusion.DocIORenderer.Net.Core` library.
 
 The following example code illustrates how to process the sfdt in server-side.
 
