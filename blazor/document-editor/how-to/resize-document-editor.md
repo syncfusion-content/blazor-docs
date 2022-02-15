@@ -42,37 +42,3 @@ Similarly, you can use [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusio
 ## Resize Document Editor
 
 Using [`ResizeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_ResizeAsync_System_Nullable_System_Double__System_Nullable_System_Double__) method, you change height and width of Document editor.
-
-The following example code illustrates how to resize based on client size. You can also specify size to resize.
-
-```csharp
-import {
-  DocumentEditorContainer,
-  Toolbar,
-} from '@syncfusion/ej2-documenteditor';
-
-let container: DocumentEditorContainer = new DocumentEditorContainer({enableToolbar: true,height: '590px'});
-DocumentEditorContainer.Inject(Toolbar);
-container.serviceUrl =
-  'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
-
-container.created = (): void => {
-  setInterval(() => {
-    updateDocumentEditorSize();
-  }, 100);
-  //Adds event listener for browser window resize event.
-  window.addEventListener('resize', onWindowResize);
-};
-container.appendTo('#container');
-
-function onWindowResize() {
-  //Resizes the document editor component to fit full browser window automatically whenever the browser resized.
-  updateDocumentEditorSize();
-}
-function updateDocumentEditorSize() {
-  //Resizes the document editor component to fit full browser window.
-  var windowWidth = window.innerWidth;
-  var windowHeight = window.innerHeight;
-  container.resize(windowWidth, windowHeight);
-}
-```

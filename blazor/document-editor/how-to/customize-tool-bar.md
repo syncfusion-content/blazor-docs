@@ -20,36 +20,14 @@ documentation: ug
 
 ```csharp
 <SfDocumentEditorContainer @ref="container" EnableToolbar=true ToolbarItems="@Items">
-    <DocumentEditorContainerEvents OnToolbarClick="ToolbarClick"></DocumentEditorContainerEvents>
 </SfDocumentEditorContainer>
 
-@code {
 
+@code {
     SfDocumentEditorContainer container;
 
-    CustomToolbarItemModel toolItem = new CustomToolbarItemModel()
-    {
-        PrefixIcon = "e-de-ctnr-lock",
-        TooltipText = "Disable Image",
-        Text = "Disable Image",
-        Id = "Custom"
-    };
-    object[] Items = new object[5] { new CustomToolbarItemModel() {    PrefixIcon= "e-de-ctnr-lock",
-        TooltipText= "Disable Image",
-        Text="Disable Image",
-        Id= "Custom"
-    }, "New", "Undo", "Redo", "Comments"};
-    //To handle custom toolbar click event.
-    private void ToolbarClick(ClickEventArgs args)
-    {
-        switch (args.Item.Id)
-        {
-            case "Custom":
-                //Disable image toolbar item.
-                container.Toolbar.EnableItemAsync(4, false);
-                break;
-        }
-    }
+    string[] Items = new string[4] { "New", "Undo", "Redo", "Comments"};
+}
 ```
 
 >Note: Default value of `ToolbarItems` are `['New', 'Open', 'Separator', 'Undo', 'Redo', 'Separator', 'Image', 'Table', 'Hyperlink', 'Bookmark', 'TableOfContents', 'Separator', 'Header', 'Footer', 'PageSetup', 'PageNumber', 'Break', 'InsertFootnote', 'InsertEndnote', 'Separator', 'Find', 'Separator', 'Comments', 'TrackChanges', 'Separator', 'LocalClipboard', 'RestrictEditing', 'Separator', 'FormFields', 'UpdateFields']`.
