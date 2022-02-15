@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Publish AOT enabled Blazor Web Assembly application | Syncfusion
-description: Check out the documentation for publishing AOT enabled Blazor Web Assembly application.
+title: Publish an AOT enabled Blazor Web Assembly application | Syncfusion
+description: Check out the documentation for publishing an AOT [Ahead-Of-Time] enabled Blazor Web Assembly application.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Publish Blazor WebAssembly AOT enabled application
+# Publish Blazor WebAssembly AOT enabled application 
 
-This document explains how to publish a Blazor WebAssembly AOT enabled application.
+This document explains how to publish an AOT enabled Blazor Web Assembly application.
 
 ## Steps for publishing an AOT enabled Blazor WebAssembly application
 
