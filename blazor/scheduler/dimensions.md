@@ -116,9 +116,9 @@ When height and width of the Scheduler are given as percentage, it will make the
 
 ## How to set the full height of the view port
 
-When the height of the Scheduler is set in the CSS unit of Viewport Height(vh), it will make the Scheduler occupy the full height within the viewport.
+When the height of the Scheduler is set in the CSS unit of Viewport Height(vh), it will make the Scheduler to occupy the full height within the viewport.
 
-In the below example, we reduced the application header height(4.6rem) from the total viewport.
+In the following example, the application header height (4.6rem) is reduced from the total viewport.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
