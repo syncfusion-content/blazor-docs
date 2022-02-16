@@ -194,3 +194,8 @@ Using [EnableSelectionOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 ```
 
 ![Changing Selection Order in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-change-selection-order.png)
+
+## See Also
+
+* [Blazor MultiSelect DropDown with selection stacked vertically in CheckBox](https://www.syncfusion.com/forums/172062/how-to-stack-selected-items-vertically-in-a-multiselct-dropdown)
+* [Disable CheckBox for certain values in Blazor MultiSelect DropDown](https://www.syncfusion.com/forums/157795/is-it-possible-to-disable-checkbox-for-certain-values-in-multiselect-dropdown)

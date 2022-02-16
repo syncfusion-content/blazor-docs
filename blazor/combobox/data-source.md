@@ -612,3 +612,9 @@ Now, you can configure the ComboBox using the **'SfDataManager'** to interact wi
     }
 }
 ```
+
+### Configure cascading in the Blazor ComboBox component
+
+To get started quickly with cascading in the Blazor ComboBox component, you can check the video below.
+
+{% youtube "https://www.youtube.com/watch?v=zGGntfBPQNI" %}
