@@ -623,3 +623,9 @@ Now you can configure the DropDownList using the **'SfDataManager'** to interact
     }
 }
 ```
+
+### Configure cascading in the Blazor DropDownList component
+
+To get started quickly with cascading in the Blazor DropDownList component, you can check the video below.
+
+{% youtube "https://www.youtube.com/watch?v=N_xI_aE76C0" %}
