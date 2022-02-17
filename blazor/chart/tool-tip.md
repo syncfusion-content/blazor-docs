@@ -13,7 +13,7 @@ documentation: ug
 
 When the mouse is moved over a point on the chart, the tooltip will provide information about that point.
 
-## Enable Tooltip
+## Enable tooltip
 
 When space constraints prevent displaying information using data labels, the tooltip comes in useful. The [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Enable) property in [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) can be set to **true** to enable the tooltip.
 
@@ -57,7 +57,7 @@ When space constraints prevent displaying information using data labels, the too
 
 ![Blazor Column Chart with Tooltip](images/tooltip/blazor-column-chart-tooltip.png)
 
-## Tooltip Format
+## Tooltip format
 
 <!-- markdownlint-disable MD013 -->
 
@@ -103,7 +103,7 @@ By default, the tooltip displays information in points for the x and y values. I
 
 <!-- markdownlint-disable MD013 -->
 
-## Tooltip Customization
+## Tooltip customization
 
 The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Fill) and [Border](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Border) properties are used to customize the background color and the border of the tooltip respectively. The [ChartTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipTextStyle.html) is used to customize the tooltip text. The `highlightColor` property is used to customize the point color while hovering for tooltip.
 

@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Visualize grid data in chart in Blazor Charts Component
+# Visualize Grid Data in Chart in Blazor Charts Component
 
 Use the chart's [OnSelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSelectionChanged) event to get the list of selected data from the chart.
 

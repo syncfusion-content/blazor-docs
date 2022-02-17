@@ -40,7 +40,7 @@ Create buttons to call add and remove methods, which will add and remove a serie
 
 **Step 3:**
 
-To add a new series to the chart dynamically use the code below in the **AddChartSeries** method. This code adds a new series data to the series list named **SeriesCollection** mapped to the [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html). 
+To add a new series to the chart dynamically, use the code below in the **AddChartSeries** method. This code adds a new series data to the series list named **SeriesCollection** mapped to the [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html). 
 
 ```c#
 public void AddChartSeries()
@@ -56,7 +56,7 @@ public void AddChartSeries()
 
 **Step 4:**
 
-To remove a series from the chart dynamically use the code below in the **RemoveChartSeries** method. This code removes a series data from the series list named **SeriesCollection** mapped to the [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html).
+To remove a series from the chart dynamically, use the code below in the **RemoveChartSeries** method. This code removes a series data from the series list named **SeriesCollection** mapped to the [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html).
 
 ```c#
 public void RemoveChartSeries()
