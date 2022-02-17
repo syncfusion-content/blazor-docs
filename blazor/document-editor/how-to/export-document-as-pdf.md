@@ -90,3 +90,5 @@ The following example code illustrates how to process the sfdt in server-side.
     }
 }
 ```
+
+Get the complete working sample in this [`link`](https://github.com/SyncfusionExamples/Export-document-as-PDF-in-Document-Editor/tree/main/Blazor).
