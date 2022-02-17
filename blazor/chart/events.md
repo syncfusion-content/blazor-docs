@@ -626,7 +626,7 @@ The following properties are available in the [AxisMultiLabelRenderEventArgs](ht
 
 ### Arguments
 
-The following properties are available in the [ResizeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ResizeEventArgs.html).
+The following fields are available in the [ResizeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ResizeEventArgs.html).
 
 * [CurrentSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ResizeEventArgs.html#Syncfusion_Blazor_Charts_ResizeEventArgs_CurrentSize) – Specifies the current size of the chart.
 * [PreviousSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ResizeEventArgs.html#Syncfusion_Blazor_Charts_ResizeEventArgs_PreviousSize) – Specifies the previous size of the chart.
