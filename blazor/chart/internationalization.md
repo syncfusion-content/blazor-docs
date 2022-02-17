@@ -9,7 +9,7 @@ documentation: ug
 
 # Internationalization in Blazor Charts Component
 
-Internationalization is the process of designing and developing an component that can be easily adapted for, users from any culture, region, or language. Below elements in the [Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html) display content based on the internationalization configuration.
+Internationalization is the process of designing and developing a component that can be easily adapted for users from any culture, region, or language. Below elements in the [Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html) display content based on the internationalization configuration.
 
 * Data label.
 * Axis label.
@@ -73,7 +73,7 @@ In the below example, axis, point and tooltip labels are globalized to EUR.
 
 ![Globalization in Blazor Column Chart](images/blazor-column-chart-globalization.png)
 
-## Label Format
+## Label format
 
 Learn more about axis label format in-relation to axis types from the pages below.
 
