@@ -38,11 +38,10 @@ The Chip control has the following predefined styles that can be defined using t
 
 ```
 
-Output will be like the below.
 
 ![Customizing Blazor Chip Styles](./images/blazor-chip-style.png)
 
-## Leading Icon
+## Leading icon
 
 You can add and customize the leading icon of chip using the `LeadingIconCss` property.
 
@@ -77,7 +76,6 @@ You can add and customize the leading icon of chip using the `LeadingIconCss` pr
 
 ```
 
-Output will be like the below.
 
 ![Customizing LeadingIcon of Blazor Chip](./images/blazor-chip-leading-icon.gif)
 
@@ -116,11 +114,10 @@ You can add and customize the avatar of chip using the `LeadingIconCss` property
 
 ```
 
-Output will be like the below.
 
 ![Blazor Chip with Avatar Icon](./images/blazor-chip-avatar-icon.gif)
 
-## Leading Content
+## Leading content
 
 You can add and customize the avatar content of chip using the `LeadingText` property.
 
@@ -137,11 +134,10 @@ You can add and customize the avatar content of chip using the `LeadingText` pro
 
 ```
 
-Output will be like the below.
 
 ![Customizing Avatar Text of Blazor Chip](./images/blazor-chip-avatar-content.gif)
 
-## Trailing Icon
+## Trailing icon
 
 You can add and customize the trailing icon of chip using the `TrailingIconCss` property.
 
@@ -158,11 +154,11 @@ You can add and customize the trailing icon of chip using the `TrailingIconCss` 
 
 ```
 
-Output will be like the below.
+
 
 ![Customizing Blazor Chip TrailingIcon](./images/blazor-chip-trailing-icon.png)
 
-## Outline Chip
+## Outline chip
 
 Outline chip has the border with the background transparent. It can be set using the `CssClass` property.
 
@@ -179,6 +175,6 @@ Outline chip has the border with the background transparent. It can be set using
 
 ```
 
-Output will be like the below.
+
 
 ![Blazor Outline Chip with Transparent Background](./images/blazor-outline-chip-transparent-background.gif)
