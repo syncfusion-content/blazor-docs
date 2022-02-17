@@ -91,7 +91,7 @@ The axis range will be calculated automatically based on the provided data; howe
 
 ![Changing Blazor Line Chart Logarithmic Axis based on Range](images/logarithmic-axis/blazor-line-chart-axis-based-on-range.png)
 
-## Logarithmic Base
+## Logarithmic base
 
 Logarithmic base can be customized using the [LogBase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LogBase) property of the axis. When the LogBase is 5, the axis values are 5<sup>-2</sup>, 5<sup>-1</sup>, 5<sup>0</sup>, 5<sup>1</sup>, 5<sup>2</sup> and so on.
 
@@ -132,7 +132,7 @@ Logarithmic base can be customized using the [LogBase](https://help.syncfusion.
 
 ![Blazor Line Chart Logarithmic Axis with Base](images/logarithmic-axis/blazor-line-chart-logarithmic-axis-with-base.png)
 
-## Logarithmic Interval
+## Logarithmic interval
 
 The interval can be customized using the [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Interval) property of the logarithmic axis. When the logarithmic base is **10** and logarithmic interval is **2**, then the axis labels are placed at an interval of **10<sup>2</sup>**. The default value of the interval is **1**.
 
@@ -173,7 +173,7 @@ The interval can be customized using the [Interval](https://help.syncfusion.com/
 
 ![Changing Blazor Line Chart Logarithmic Axis based on Interval](images/logarithmic-axis/blazor-line-chart-axis-based-on-range.png)
 
-## Label Format
+## Label format
 
 Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelFormat) property on an axis, it is possible to format the logarithmic labels to all globalize formats.
 
@@ -276,7 +276,7 @@ The table below shows the results of applying some commonly used label formats t
 </tr>
 </table>
 
-## Custom Label Format
+## Custom label format
 
 Axis also supports custom label format using placeholders such as {value}K, where the value represents the axis label, for example, 200K.
 
