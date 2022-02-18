@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Dialog Editing
+# Dialog Editing in Blazor DataGrid Component
 
 In dialog edit mode, when you start editing the currently selected row data will be shown on a dialog. You can change the cell values and save edited data to the data source. To enable Dialog edit, set the [EditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as **Dialog**.
 

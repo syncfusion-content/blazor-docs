@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Template Editing
+# Template Editing in Blazor DataGrid Component
 
 ## Inline template
 

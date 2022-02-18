@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Column Validation
+# Column Validation in Blazor DataGrid Component
 
 Column validation allows you to validate the edited or added row data and it display errors for invalid fields before saving data. DataGrid uses **Form Validator** library for column validation. You can set validation rules by defining the [ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ValidationRules).
 

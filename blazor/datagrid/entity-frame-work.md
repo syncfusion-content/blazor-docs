@@ -9,7 +9,7 @@ documentation: ug
 
 # Entity Framework in Blazor DataGrid Component
 
-This section uses and follows the code explained in the [Entity Framework data binding](./data-binding/#entity-framework) section hence we recommend you to refer Entity framework data binding section before continuing  this section.
+This section uses and follows the code explained in the [Entity Framework data binding](./data-binding/#entity-framework) section hence we recommend you to refer Entity Framework data binding section before continuing  this section.
 
 ## Handle CRUD in data access layer class
 
