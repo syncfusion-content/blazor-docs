@@ -48,6 +48,10 @@ In the following example, the `SortOrder` is set as `Descending`.
 
 The ListBox supports to wrap the nested element into a group based on its category. The category of each list item can be mapped with [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ListBoxFieldSettings_GroupBy) field in the data table.
 
+To get started quickly with grouping in the Blazor ListBox component, you can check the video below.
+
+{% youtube "https://www.youtube.com/watch?v=Ja_UJva-cHA" %}
+
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 

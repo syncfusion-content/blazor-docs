@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Styles in Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about Working with Styles in Syncfusion Blazor DocumentEditor component and more.
+description: Checkout and learn here all about working with styles in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
@@ -61,7 +61,7 @@ When a linked style is based on another linked style, the hierarchy of the prope
 * Paragraph properties are inherited from the paragraph style part in its base linked style.
 * Span properties are inherited from the span style part in its base linked style.
 
-# Defining new styles
+## Defining new styles
 
 New Styles are defined and added to the style collection of the document. In this way, they will be discovered by the default UI and applied to the parts of a document.
 
@@ -141,7 +141,7 @@ For example, the following line will apply the "New Linked" to the current parag
 
 ```csharp
 documentEditor.Editor.ApplyStyle("New Linked");
-//Clear direct formatting and apply the specified style
+//Clear direct formatting and apply the specified style.
 documentEditor.Editor.ApplyStyle("New Linked", true);
 ```
 

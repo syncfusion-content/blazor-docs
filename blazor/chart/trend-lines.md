@@ -371,7 +371,7 @@ A moving average trendline smoothen out fluctuations in data to show a pattern o
 
 Trendlines forecasting is the prediction of future/past situations. There are two types of forecasting available: forward forecasting and backward forecasting.
 
-### Forward Forecasting
+### Forward forecasting
 
 The value set to [ForwardForecast](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_ForwardForecast) property is used to calculate the distance between the current trend and the future trend.
 
@@ -430,7 +430,7 @@ The value set to [ForwardForecast](https://help.syncfusion.com/cr/blazor/Syncfus
 
 ![Forward Forecasting Trendlines in Blazor Spline Chart](images/trend-lines/blazor-spline-chart-forward-forecasting-trendlines.png)
 
-### Backward Forecasting
+### Backward forecasting
 
 The value set to [BackwardForecast](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_BackwardForecast) property is used to determine historical trends.
 
@@ -489,7 +489,7 @@ The value set to [BackwardForecast](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ![Backward Forecasting Trendlines in Blazor Spline Chart](images/trend-lines/blazor-spline-chart-backward-forecasting-trendlines.png)
 
-## Trendlines Customization
+## Trendlines customization
 
 The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Fill) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Width) properties are used to customize the appearance of the trendline.
 

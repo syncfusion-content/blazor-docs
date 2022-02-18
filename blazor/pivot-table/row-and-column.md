@@ -669,6 +669,11 @@ The clip mode provides options to display its overflow cell content in the pivot
 
 You can customize the pivot table cell element by using the `CellTemplate` property in `PivotViewTemplates` class. The `CellTemplate` property accepts either an HTML string or the element's ID, which can be used to append additional HTML elements to showcase each cell with custom format.
 
+To know about **Cell Template** in Blazor Pivot Table Component, you can check this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=C2w2KWKc0f8"%}
+
 In this demo, the revenue cost for each year is represented with trend icons.
 
 >The model type for datasource needs to be specified from which the context will be generated and accessed in the CellTemplate. Using the context, define the conditions based on the templates that will be appended to the cell element.

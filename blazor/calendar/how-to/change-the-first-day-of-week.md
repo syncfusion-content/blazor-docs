@@ -21,6 +21,5 @@ The following code shows the Calendar with `Tuesday` as the first day of the wee
 <SfCalendar TValue="DateTime?" FirstDayOfWeek=2></SfCalendar>
 ```
 
-The output will be as follows.
 
 ![Changing First Day of Week in Blazor Calendar](../images/blazor-calendar-first-day-of-week.png)

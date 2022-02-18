@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Card Editing in Blazor Kanban Component | Syncfusion
-description: Checkout and learn here all about Card Editing in Syncfusion Blazor Kanban component and much more details.
+description: Checkout and learn here all about card editing in Syncfusion Blazor Kanban component and much more details.
 platform: Blazor
 control: Kanban
 documentation: ug
@@ -14,7 +14,7 @@ The Kanban provides built-in support to add, edit and delete a card using dialog
 * Built-in dialog module
 * Dialog template
 
-To get start quickly with Blazor Kanban Edit Dialog using Templates, you can check on this video
+To get start quickly with Blazor Kanban Edit Dialog using Templates, you can check on this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=SgiECU-SZBk" %}
@@ -93,8 +93,6 @@ KanbanSwimlaneSettings.KeyField (If applicable) | DropDown | -
 }
 
 ```
-
-Output be like the below.
 
 ![Card Editing in Blazor Kanban](./images/blazor-kanban-card-editing.png)
 
@@ -302,8 +300,6 @@ Using the dialog template, you can render your own form fields with dialog by us
 
 ```
 
-Output be like the below.
-
 ![Blazor Kanban with Dialog Template](./images/blazor-kanban-dialog-template.png)
 
 ## Prevent Dialog
@@ -477,8 +473,6 @@ namespace Blazor_Kanban_Crud_UrlAdaptor.Controllers
 
 Using the `InsertUrl` property, you can specify the controller action mapping URL to perform insert operation on the server-side.
 
-The following code example describes the above behavior.
-
 ```cshtml
         [HttpPost]
         [Route("api/Default/Add")]
@@ -494,7 +488,6 @@ The newly added card details are bound to the `value` parameter.
 
 Using the `UpdateUrl` property, the controller action mapping URL can be specified to perform save/update operation on the server-side.
 
-The following code example describes the above behavior.
 
 ```cshtml
         [HttpPost]
@@ -510,8 +503,6 @@ The updated card details are bound to the `value` parameter.
 ### Delete card
 
 Using the `RemoveUrl` property, the controller action mapping URL can be specified to perform a delete operation on the server-side.
-
-The following code example describes the above behavior.
 
 ```cshtml
         [HttpPost]
@@ -529,8 +520,6 @@ The primary key value of the card to be deleted will be bound to the `Key` param
 Using the [CrudUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_CrudUrl) property, the controller action mapping URL can be specified to perform all the CRUD operations at the server-side using a single method instead of specifying a separate controller action method for CRUD (insert, update, and delete) operations.
 
 The action parameter of `CrudUrl` is used to get the corresponding CRUD action.
-
-The following code example describes the above behavior.
 
 > The `CrudUrl` is used to update the bulk data sent to the server-side. Multiple selections and [SortBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanSortSettings.html#Syncfusion_Blazor_Kanban_KanbanSortSettings_SortBy) as [Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SortOrderBy.html#Syncfusion_Blazor_Kanban_SortOrderBy_Index) properties are used for `CrudUrl` properties to update the modified bulk data to the server-side.
 

@@ -58,7 +58,7 @@ documentation: ug
 
 ## Type of spline
 
-To specify the type of [Spline Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Spline) use [SplineType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_SplineType) property. The spline types are **Clamped**, **Cardinal**, **Monotonic** and **Natural**.
+To specify the type of [Spline Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Spline), use [SplineType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_SplineType) property. The spline types are **Clamped**, **Cardinal**, **Monotonic** and **Natural**.
 
 ```cshtml
 
@@ -101,7 +101,7 @@ To specify the type of [Spline Chart](https://help.syncfusion.com/cr/blazor/Sync
 
 ![Blazor Cardinal Spline Chart](../images/chart-types-images/blazor-cardinal-spline-chart.png)
 
-## Series Customization
+## Series customization
 
 The following properties can be used to customize the [Spline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Spline) series.
 

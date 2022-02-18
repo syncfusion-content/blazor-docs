@@ -15,7 +15,7 @@ documentation: ug
 
 Using [`InsertCommentAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertCommentAsync_System_String_) method, comments can be inserted to the selected text.
 
-```typescript
+```csharp
 container.DocumentEditor.Editor.InsertCommentAsync("Test comment");
 ```
 
@@ -23,7 +23,7 @@ container.DocumentEditor.Editor.InsertCommentAsync("Test comment");
 
 Next and previous comments can be navigated using the below code snippet.
 
-```typescript
+```csharp
 //Navigate to next comment
 container.DocumentEditor.Selection.NavigateNextCommentAsync();
 
@@ -35,7 +35,7 @@ container.DocumentEditor.Selection.NavigatePreviousCommentAsync();
 
 You can delete current comment in the document using [`DeleteCommentsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_DeleteCommentAsync) method as shown in the following code snippet.
 
-```typescript
+```csharp
 container.DocumentEditor.Editor.DeleteCommentAsync();
 ```
 
@@ -43,6 +43,6 @@ container.DocumentEditor.Editor.DeleteCommentAsync();
 
 You can delete all the comments in the document using [`DeleteAllCommentsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_DeleteAllCommentsAsync) method as shown in the following code snippet.
 
-```typescript
+```csharp
 container.DocumentEditor.Editor.DeleteAllCommentsAsync();
 ```
