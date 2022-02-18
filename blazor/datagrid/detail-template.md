@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Detail Template
+# Detail Template in Blazor DataGrid Component
 
 > Before adding detail template to the datagrid, we strongly recommend you to go through the [template](./templates/#templates) section topic to configure the template.
 

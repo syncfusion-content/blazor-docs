@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Checkbox Filter
+# Checkbox Filter in Blazor DataGrid Component
 
 You can enable the CheckBox filter to show a list of possible distinct filter values for a column. Checkbox list sorted by ascending order to display the data source as readable.
 

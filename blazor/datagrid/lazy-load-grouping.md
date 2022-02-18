@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Lazy Load Grouping
+# Lazy Load Grouping in Blazor DataGrid Component
 
 The lazy load grouping allows you to load grouped records to the Grid through the on-demand concept. So, you can use this feature to load a huge amount of grouped data to the Grid without any performance degradation.
 

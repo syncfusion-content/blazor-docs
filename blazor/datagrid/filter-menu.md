@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Filter Menu
+# Filter Menu in Blazor DataGrid Component
 
 You can enable filter menu by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) of **GridFilterSettings** as **Menu**. The filter menu UI will be rendered based on its column type, which allows you to filter data.
 

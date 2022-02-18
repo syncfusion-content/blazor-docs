@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Row Template
+# Row Template in Blazor DataGrid Component
 
 > Before adding row template to the datagrid, we strongly recommend you to go through the [template](./templates/#templates) section topic to configure the template.
 

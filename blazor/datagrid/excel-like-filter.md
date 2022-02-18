@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Excel like Filter in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Excel like Filter in Syncfusion Blazor DataGrid component and much more details.
+title: Excel Like Filter in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn here all about Excel Like Filter in Syncfusion Blazor DataGrid component and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Excel like Filter
+# Excel Like Filter in Blazor DataGrid Component
 
 You can enable Excel like filter by defining [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) as **Excel**.The excel menu contains an option such as Sorting, Clear filter, Sub menu for advanced filtering.
 

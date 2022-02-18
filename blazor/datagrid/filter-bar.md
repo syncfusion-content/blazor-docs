@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Filter Bar
+# Filter Bar in Blazor DataGrid Component
 
 By setting the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) to true, the filter bar row will render next to the header, which allows you to filter data. You can filter the records with different expressions depending upon the column type.
 

@@ -92,7 +92,7 @@ The output will be as follows.
 
 ![Customizing Blazor DataGrid Rows](./images/blazor-datagrid-rows-customization.png)
 
-## Using CSS customize alternate rows
+### Using CSS customize alternate rows
 
 You can change the datagrid's alternative rows background color by overriding the **.e-altrow** class.
 
