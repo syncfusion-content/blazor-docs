@@ -128,4 +128,3 @@ Deletable Chip allows you to delete a chip from Chip/ChipItems. It can be enable
 ```
 
 
-<!-- ![Delete Item in Blazor Chip](./images/blazor-chip-delete-item.gif) -->

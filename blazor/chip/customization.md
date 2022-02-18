@@ -115,7 +115,7 @@ You can add and customize the avatar of chip using the `LeadingIconCss` property
 ```
 
 
-<!-- ![Blazor Chip with Avatar Icon](./images/blazor-chip-avatar-icon.gif) -->
+
 
 ## Leading content
 
