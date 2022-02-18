@@ -99,7 +99,7 @@ In the following example, the keyPressed method is called every time any key is 
 
 Using Lambda expression also, you can pass the event data to the event handler.
 
-## List of Native events supported
+## List of native events supported
 
 | List of Native events |  |  | |
 | --- | --- | --- | --- |
