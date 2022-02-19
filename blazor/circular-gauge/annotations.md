@@ -89,7 +89,7 @@ The radius of an annotation takes values either in pixel or in percentage. By se
 </style>
 ```
 
-![Changing Annoation Position in Blazor Circular Gauge](./images/blazor-circulargauge-annotation-position.png)
+![Changing Annotation Position in Blazor Circular Gauge](./images/blazor-circulargauge-annotation-position.png)
 
 ## Multiple annotations
 
