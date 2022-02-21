@@ -11,20 +11,25 @@ documentation: ug
 
 The [Blazor Word Processor component](https://www.syncfusion.com/blazor-components/blazor-word-processor) for Blazor is used to compose, edit, view, and print Word (DOC, DOCX, and RTF) documents in Blazor applications.
 
+## Key Features
+
 * Composes a document from scratch.
-* Opens and edits the Word (DOC, DOCX), RTF, and SFDT (Syncfusion Document Text) format files.
-* Saves and exports the documents as DOCX and SDFT at the client-side.
-* Saves and exports the documents as PDF files with Syncfusion’s DocIO library.
+* [`Opens`](../../document-editor/opening-a-document) and edits the Word (DOC, DOCX), RTF, and SFDT (Syncfusion Document Text) format files.
+* [`Saves`](../../document-editor/saving-document) and exports the documents as DOCX and SDFT at the client-side.
+* Saves and [`exports the documents as PDF`](../../document-editor/how-to/export-document-as-pdf) files with Syncfusion DocIO library.
 * Prints the document.
-* Finds and replaces the text.
+* [`Finds and replaces`](../../document-editor/find-and-replace) the text.
 * Allows spell checking.
 * Contains a rich set of document elements like text, table, lists, inline image, fields, bookmark, hyperlink, page number, header, and footer.
-* Contains a rich set of text, paragraph, and table formatting options.
-* Creates or updates the table of contents.
-* Contains tables.
-* Allows Undo and Redo.
-* Creates, edits, and applies paragraph and character styles.
-* Contains clipboard operations such as Cut, Copy, and Paste (with formatting).
+* Contains a rich set of [text](../../document-editor/text-format), [paragraph](../../document-editor/paragraph-format), and [table formatting](../../document-editor/table-format) options.
+* Creates or updates the [table of contents](../../document-editor/table-of-contents).
+* Provides support to insert, and edit [form fields](../../document-editor/form-fields).
+* Provides support to insert, and edit [comments](../../document-editor/comments).
+* Provides support to track the [inserted and deleted content](../../document-editor/track-changes).
+* Contains [tables](../../document-editor/table).
+* Allows [Undo and Redo](../../document-editor/history).
+* Creates, edits, and applies [paragraph and character styles](../../document-editor/styles).
+* Contains clipboard operations such as [Cut](../../document-editor/clipboard#cut), [Copy](../../document-editor/clipboard#copy), and [Paste](../../document-editor/clipboard#paste) (with formatting).
 * Preserves the chart present in the opened Word document.
 * Restricts editing for certain regions.
 * Views the documents in read only mode.

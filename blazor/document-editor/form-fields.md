@@ -67,7 +67,7 @@ container.DocumentEditor.ImportFormDataAsync(formData);
 
 ## Reset form fields
 
-Reset all the form fields in current document to default value using [`resetFormFields`](../api/document-editor/#resetformfields).
+Reset all the form fields in current document to default value using [`ResetFormFieldsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_ResetFormFieldsAsync_System_String_).
 
 ```csharp
 container.DocumentEditor.ResetFormFieldsAsync();
