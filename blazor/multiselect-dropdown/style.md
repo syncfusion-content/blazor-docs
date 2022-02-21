@@ -11,9 +11,9 @@ documentation: ug
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
-## Customizing the background color of wrapper element
+## Customizing the background color of container element
 
-Use the following CSS to customize the background color of wrapper element.
+Use the following CSS to customize the background color of container element.
 
 ```css
 .e-multiselect.e-input-group .e-multi-select-wrapper {
@@ -21,9 +21,9 @@ Use the following CSS to customize the background color of wrapper element.
 }
 ```
 
-## Customizing the appearance of the delimiter wrapper element
+## Customizing the appearance of the delimiter container element
 
-Use the following CSS to customize the appearance of delimiter wrapper element.
+Use the following CSS to customize the appearance of delimiter container element.
 
 ```css
 .e-multiselect .e-delim-values {
