@@ -11,9 +11,9 @@ documentation: ug
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
-## Customizing the appearance of File Upload input element
+## Customizing the appearance of File Upload container element
 
-Use the following CSS to customize the appearance of File Upload input element.
+Use the following CSS to customize the appearance of File Upload container element.
 
 ```css
 /* To specify height */

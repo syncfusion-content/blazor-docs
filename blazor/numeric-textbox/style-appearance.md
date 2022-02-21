@@ -11,9 +11,9 @@ documentation: ug
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
-## Customizing the appearance of Numeric TextBox input element
+## Customizing the appearance of Numeric TextBox container element
 
-Use the following CSS to customize the appearance of Numeric TextBox input element.
+Use the following CSS to customize the appearance of Numeric TextBox container element.
 
 ```css
 /* To specify height and font size */
