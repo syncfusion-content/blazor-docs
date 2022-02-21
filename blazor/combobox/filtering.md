@@ -33,7 +33,6 @@ The ComboBox has built-in support to filter data items when [AllowFiltering](htt
 }
 ```
 
-The output will be as follows.
 
 ![Filtering in Blazor ComboBox](./images/blazor-combobox-filtering.png)
 

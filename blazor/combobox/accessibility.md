@@ -89,6 +89,5 @@ You can use the following key shortcuts to access the ComboBox without interrupt
 }
 ```
 
-The output will be as follows.
 
 ![Accessibility in Blazor ComboBox](./images/blazor-combobox-accessibility.png)

@@ -48,7 +48,6 @@ The Context Menu item has an icon/image in it to provide a visual representation
 
 ```
 
-Output will be as follows
 
 ![Blazor ContextMenu with Icon](./images/blazor-contextmenu-icon.png)
 
@@ -85,6 +84,5 @@ Navigation in Context Menu is used to navigate to the other web page when menu i
 
 ```
 
-Output will be as follows
 
 ![Navigation in Blazor ContextMenu](./images/blazor-contextmenu-navigation.png)

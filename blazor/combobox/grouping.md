@@ -16,7 +16,7 @@ To get started quickly with grouping in the Blazor ComboBox component, you can c
 
 {% youtube "https://www.youtube.com/watch?v=2UuJzgfbi48" %}
 
-In the following sample, vegetables are grouped according on its category using `GroupBy` field.
+In the following sample, vegetables are grouped by category using the `GroupBy` field.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -54,6 +54,5 @@ In the following sample, vegetables are grouped according on its category using 
 }
 ```
 
-The output will be as follows.
 
 ![Grouping in Blazor ComboBox](./images/blazor-combobox-grouping.png)

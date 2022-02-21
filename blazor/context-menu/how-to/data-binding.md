@@ -51,6 +51,5 @@ To bind local data source to the Context Menu, menu items are populated from dat
 
 ```
 
-Output will be as follows
 
 ![Data Binding in Blazor ContextMenu](./../images/blazor-contextmenu-databinding.png)
