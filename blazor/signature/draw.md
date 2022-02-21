@@ -7,7 +7,7 @@ control: Signature
 documentation: ug
 ---
 
-# Draw a Signature
+# Draw a Signature in Blazor Signature component
 
 ## Draw
 

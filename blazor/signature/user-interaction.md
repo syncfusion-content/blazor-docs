@@ -7,7 +7,7 @@ control: Signature
 documentation: ug
 ---
 
-# User Interactions
+# User Interactions in Blazor Signature component
 
 The Signature control supports various interaction like Undo, Redo, Clear, Disabled, and ReadOnly.
 
