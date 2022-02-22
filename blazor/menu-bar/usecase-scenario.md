@@ -11,7 +11,7 @@ documentation: ug
 
 ## Scrollable Menu Bar
 
-The Menu Bar component supports horizontal and vertical scrolling to render large Menu Bars and sub menus in an adaptive way. This can be achieved by enabling the [EnableScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfMenu~EnableScrolling.html) property and by restricting the corresponding Menu Bar/Sub Menu Bar size.
+The [Blazor Menu Bar](https://www.syncfusion.com/blazor-components/blazor-menu-bar) component supports horizontal and vertical scrolling to render large Menu Bars and sub menus in an adaptive way. This can be achieved by enabling the [EnableScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfMenu~EnableScrolling.html) property and by restricting the corresponding Menu Bar/Sub Menu Bar size.
 
 ```cshtml
 
