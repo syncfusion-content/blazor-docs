@@ -13,6 +13,10 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor DropDown Menu](https://www.syncfusion.com/blazor-components/blazor-dropdown-menu) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
+How to Add the Blazor Dropdown Menu to a Blazor WebAssembly App:
+{% youtube
+"youtube:https://www.youtube.com/watch?v=LkszhsAVuHc"%}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
