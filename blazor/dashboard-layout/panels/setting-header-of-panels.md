@@ -12,7 +12,7 @@ documentation: ug
 Basically, Dashboard layout Component have two templates to render the data in panels.
 
 * ContentTemplate: To render data or any HTML template as the content.
-* HeaderTemplate: A word or phrase that summarize the panel’s content can be added as the header on the top of each panel.
+* HeaderTemplate: A word or phrase that summarizes the panel’s content can be added as the header on the top of each panel.
 
 ```cshtml
 
@@ -54,4 +54,4 @@ Basically, Dashboard layout Component have two templates to render the data in p
 
 The following output demonstrates the Header and content of Panels using templates.
 
-![Blazor DashboarLayout with Header](../images/blazor-dashboard-layout-with-header.png)
+![Blazor DashboardLayout with Header](../images/blazor-dashboard-layout-with-header.png)

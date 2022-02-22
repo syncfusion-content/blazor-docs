@@ -43,7 +43,7 @@ The dashboard layout is designed to automatically adapt with lower resolutions b
 
 ```
 
-The following output will demonstrate the Responsive dashboard layout component.
+
 
 ![Responsive and Adaptive Layout in Blazor DashboardLayout](images/blazor-dashboard-layout-cell-space.png)
 
