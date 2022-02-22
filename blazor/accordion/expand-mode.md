@@ -9,7 +9,7 @@ documentation: ug
 
 # Expand Mode in Blazor Accordion Component
 
- The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) supports the two listed types of expand modes while expanding or collapsing the item.
+ The Accordion supports the two listed types of expand modes while expanding or collapsing the item.
 
 * Single
 * Multiple
