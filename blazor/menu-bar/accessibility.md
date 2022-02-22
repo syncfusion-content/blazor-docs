@@ -13,7 +13,7 @@ documentation: ug
 
 The web accessibility makes web content and web applications more accessible for people with disabilities. It especially helps in dynamic content change and development of advanced user interface controls with AJAX, HTML, JavaScript, and related technologies.
 
-The Menu Bar provides a built-in compliance with `WAI-ARIA` specifications. The `WAI-ARIA` support is achieved using the attributes such as `aria-orientation`, `aria-label`, `aria-expanded`, `aria-disabled`, and `aria-haspopup` applied for Menu Bar item in Menu Bar. It helps the people with disabilities by providing information about the widget for assistive technology in the screen readers. The Menu Bar component contains the `menubar`, `menu`, and `menuItem` roles.
+The[Blazor Menu Bar](https://www.syncfusion.com/blazor-components/blazor-menu-bar) provides a built-in compliance with `WAI-ARIA` specifications. The `WAI-ARIA` support is achieved using the attributes such as `aria-orientation`, `aria-label`, `aria-expanded`, `aria-disabled`, and `aria-haspopup` applied for Menu Bar item in Menu Bar. It helps the people with disabilities by providing information about the widget for assistive technology in the screen readers. The Menu Bar component contains the `menubar`, `menu`, and `menuItem` roles.
 
 | Properties | Functionality |
 | ------------ | ----------------------- |
