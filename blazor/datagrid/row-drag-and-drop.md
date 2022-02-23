@@ -131,4 +131,4 @@ The following events are triggered while drag and drop the grid rows.
 
 * Multiple rows can be drag and drop in the row selections basis.
 * Single row is able to drag and drop in same grid without enable the row selection.
-* Row drag and drop feature is not having built in support with sorting, filtering, hierarchy grid and grouping features of grid.
+* Row drag and drop feature is not having built in support with sorting, filtering, hierarchy grid, row template and grouping features of grid.
