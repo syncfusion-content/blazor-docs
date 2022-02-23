@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Saving a new row at a particular index of Blazor DataGrid | Syncfusion
-description: Learn here all about Saving a new row at a particular index of the Syncfusion Blazor DataGrid component and more.
+description: Learn here all about saving a new row at a particular index of the Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Saving a new row at a particular index of the blazor datagrid
+# Saving a New Row at a Particular Index of the Blazor DataGrid
 
-By default, a newly added row will be saved at the top of the datagrid. You can change it by setting the `args.Index` in [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) handler.
+By default, a newly added row will be saved at the top of the DataGrid. You can change it by setting the `args.Index` in [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) handler.
 
 The following sample code demonstrates changing the save index of the new row that gets added in the DataGrid component,
 
