@@ -34,3 +34,10 @@ Use the following CSS to customize the TextBox placeholder
         font-size: 15px;
 }
 ```
+
+## See also
+
+* [Adding icons to the Textbox](https://blazor.syncfusion.com/documentation/textbox/getting-started#adding-icons-to-the-textbox)
+* [Customize the Floating Label Color of the TextBox](https://blazor.syncfusion.com/documentation/textbox/how-to/change-the-floating-label-color-of-the-textbox)
+* [Customize the Color of the Text Based on its Value](https://blazor.syncfusion.com/documentation/textbox/how-to/change-the-color-of-the-textbox-based-on-its-value)
+* [Customize the Background and Text Color in TextBox](https://blazor.syncfusion.com/documentation/textbox/how-to/customize-the-textbox-background-color-and-text-color)
