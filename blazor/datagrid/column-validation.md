@@ -272,7 +272,6 @@ In the below code example, the following things have been done.
 }
 ```
 
-The output will be as follows.
 
 ![Blazor DataGrid with Custom Validator in Editing](./images/blazor-datagrid-custom-validator-in-editing.png)
 
@@ -309,7 +308,6 @@ Now the HandleValidation method of the MyCustomValidator component would be chan
 
 ```
 
-The output will be as follows.
 
 ![Blazor DataGrid with Custom Validator in Editing](./images/blazor-datagrid-custom-validator.png)
 
