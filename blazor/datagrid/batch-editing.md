@@ -9,7 +9,7 @@ documentation: ug
 
 # Batch Editing in Blazor DataGrid Component
 
-In batch edit mode, when you double-click on the datagrid cell, then the target cell changed to edit state. You can bulk save (added, changed, and deleted data in the single request) to the data source by click on the toolbar's **Update** button or by externally calling the **EndEdit** method. To enable Batch edit, set the [EditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as **Batch**.
+In batch edit mode, when you double-click on the datagrid cell, the target cell changes to edit state. You can bulk save (added, changed, and deleted data in the single request) to the data source by clicking on the toolbar's **Update** button  or by externally calling the **EndEdit** method. To enable Batch edit, set the [EditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as **Batch**.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -107,11 +107,11 @@ The following GIF represents Editing in Batch mode.
 
 Grid uses `Activator.CreateInstance<TValue>()` to create or clone new record instance during add and edit operations, so it must have parameterless constructors defined for the model class and any referenced complex type classes.
 
-There are cases where custom logic is required for creating new object or new object instance cannot be created using  `Activator.CreateInstance<TValue>()`. In such cases you can provide model object instance manually using events.
+There are cases where custom logic is required for creating new object or new object instance cannot be created using  `Activator.CreateInstance<TValue>()`. In such cases, you can provide model object instance manually using events.
 
-You can use `OnBatchAdd` and `OnCellEdit` event to provide new object instance during add and cell edit operation respectively.
+You can use the `OnBatchAdd` and `OnCellEdit` events to provide new object instance during add and cell edit operations respectively.
 
-For add operation assign new object to the `OnBatchAdd.DefaultData` property. For cell edit, assign cloned object in the `OnCellEdit.Data` property.
+For add operation, assign new object to the `OnBatchAdd.DefaultData` property. For cell edit, assign cloned object in the `OnCellEdit.Data` property.
 
 In the following example:
 
@@ -156,7 +156,7 @@ In the following example:
 
     public void CellEdit(CellEditArgs<Order> arg)
     {
-        //Return args.Data if its not null so previously edited data will not be lost.
+        //Return args.Data if it is not null, so previously edited data will not be lost.
         arg.Data = arg.Data ?? new Order(arg.RowData.OrderID)
         {
             CustomerID = arg.RowData.CustomerID,
