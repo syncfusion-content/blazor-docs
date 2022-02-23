@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started With Blazor MultiSelect DropDown in Web Assembly | Syncfusion
+title: Getting Started With Blazor MultiSelect DropDown in WASM | Syncfusion
 description: Checkout and learn about getting started with Blazor WebAssembly and Blazor MultiSelect DropDown component in Visual Studio and much more.
 platform: Blazor
 control: MultiSelect DropDown
 documentation: ug
 ---
 
-# Blazor MultiSelect DropDown Component in WebAssembly App using Visual Studio
+# Blazor MultiSelect DropDown in WebAssembly App using Visual Studio
 
 This article provides a step-by-step instructions for building Blazor WebAssembly App with Blazor MultiSelect DropDown component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
