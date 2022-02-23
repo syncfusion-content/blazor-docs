@@ -59,13 +59,12 @@ In the following sample, each list item is split into two columns to display rel
 </style>
 ```
 
-The output will be as follows.
 
 ![Blazor ComboBox with ItemTemplate](./images/blazor-combobox-item-template.png)
 
 ## Group template
 
-The group header title under which appropriate sub-items are categorized can also be customize with the help of [GroupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_GroupTemplate) property. This template is common for both inline and floating group header template.
+The group header title under which appropriate sub-items are categorized can also be customized with the help of [GroupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_GroupTemplate) property. This template is common for both inline and floating group header template.
 
 In the following sample, employees are grouped according to their country.
 
@@ -110,7 +109,7 @@ In the following sample, employees are grouped according to their country.
 </style>
 ```
 
-The output will be as follows.
+
 
 ![Blazor ComboBox with GroupTemplate](./images/blazor-combobox-group-template.png)
 
@@ -183,7 +182,6 @@ In the following sample, the list items and its headers are designed and display
 </style>
 ```
 
-The output will be as follows.
 
 ![Blazor ComboBox with HeaderTemplate](./images/blazor-combobox-header-template.png)
 
@@ -235,7 +233,7 @@ In the following sample, footer element displays the total number of list items 
 </style>
 ```
 
-The output will be as follows.
+
 
 ![Blazor ComboBox with FooterTemplate](./images/blazor-combobox-footer-template.png)
 
@@ -267,7 +265,6 @@ In the following sample, popup list content displays the notification of no data
 }
 ```
 
-The output will be as follows.
 
 ![Blazor ComboBox without Data](./images/blazor-combobox-without-data.png)
 
@@ -303,6 +300,5 @@ In the following sample, when the data fetch request fails, the ComboBox display
 }
 ```
 
-The output will be as follows.
 
 ![Blazor ComboBox with Action Failure Template](./images/blazor-combobox-action-failure-template.png)

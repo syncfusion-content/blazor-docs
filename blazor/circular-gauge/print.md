@@ -33,7 +33,7 @@ To use the print functionality, you should set the [AllowPrint](https://help.syn
 
 ## Export
 
-### Image Export
+### Image export
 
 To use the image export functionality, you should set the [AllowImageExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_AllowImageExport) property to **true**. The rendered circular gauge can be exported as an image using the [export](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_Export_Syncfusion_Blazor_CircularGauge_ExportType_System_String_System_Object_System_Nullable_System_Boolean__) method. The method requires two parameters: image type and file name. The circular gauge can be exported as an image in the following formats.
 
@@ -59,7 +59,7 @@ To use the image export functionality, you should set the [AllowImageExport](htt
 
 ![Exporting in Blazor Circular Gauge](./images/blazor-circulargauge-exporting.png)
 
-### PDF Export
+### PDF export
 
 To use the PDF export functionality, you should set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_AllowPdfExport) property to **true**. The rendered circular gauge can be exported as PDF using the [export](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_Export_Syncfusion_Blazor_CircularGauge_ExportType_System_String_System_Object_System_Nullable_System_Boolean__) method. The [export](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_Export_Syncfusion_Blazor_CircularGauge_ExportType_System_String_System_Object_System_Nullable_System_Boolean__) method requires three parameters: file type, file name and orientation of the PDF document. The orientation setting is optional and "0" indicates portrait and "1" indicates landscape.
 

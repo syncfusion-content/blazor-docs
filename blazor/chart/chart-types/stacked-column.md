@@ -55,7 +55,7 @@ documentation: ug
 
 > Refer to our [Blazor Stacked Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-column-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Stacked Column Chart Example](https://blazor.syncfusion.com/demos/chart/stacked-column?theme=bootstrap4) to know how to render and configure the Stacked Column type chart.
 
-## Stacking Group
+## Stacking group
 
 The [StackingGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_StackingGroup) property is used to group stacked columns and 100% stacked columns. Columns with same group name are stacked on top of each other.
 
@@ -102,7 +102,7 @@ The [StackingGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 ![Grouping in Blazor Stacked Column Chart](../images/chart-types-images/blazor-stacked-colum-chart-with-grouping.png)
 
-## Series Customization
+## Series customization
 
 The following properties can be used to customize the [Stacked Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingColumn) series.
 

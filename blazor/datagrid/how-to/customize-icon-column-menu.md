@@ -17,7 +17,7 @@ You can customize the column menu icon by overriding the default icon class `.e-
 }
 ```
 
-This is demonstrated in the below sample code,
+This is demonstrated in the following sample code,
 
 ```cshtml
 @using Syncfusion.Blazor.Grids

@@ -122,7 +122,7 @@ By default, [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 </SfCircularGauge>
 ```
 
-![Customizing Majaor and Minor Ticks in Blazor Circular Gauge](./images/blazor-circulargauge-ticks-customization.png)
+![Customizing Major and Minor Ticks in Blazor Circular Gauge](./images/blazor-circulargauge-ticks-customization.png)
 
 ### Tick position
 

@@ -23,7 +23,7 @@ You can open the bookmark dialog using Bookmark options in toolbar. You can also
 
 Using [`InsertBookmarkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertBookmarkAsync_System_String_) method, Bookmark can be added to the selected text.
 
-```typescript
+```csharp
 container.DocumentEditor.Editor.InsertBookmarkAsync("Bookmark1");
 ```
 
@@ -31,7 +31,7 @@ container.DocumentEditor.Editor.InsertBookmarkAsync("Bookmark1");
 
 You can select the bookmark in the document using [`SelectBookmarkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectBookmarkAsync_System_String_) method by providing Bookmark name to select as shown in the following code snippet.
 
-```typescript
+```csharp
 container.DocumentEditor.Selection.SelectBookmarkAsync("Bookmark1");
 ```
 
@@ -39,7 +39,7 @@ container.DocumentEditor.Selection.SelectBookmarkAsync("Bookmark1");
 
 You can delete bookmark in the document using [`DeleteBookmarkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_DeleteBookmarkAsync_System_String_) method as shown in the following code snippet.
 
-```typescript
+```csharp
 container.DocumentEditor.Editor.DeleteBookmarkAsync("Bookmark1");
 ```
 
@@ -47,7 +47,7 @@ container.DocumentEditor.Editor.DeleteBookmarkAsync("Bookmark1");
 
 You can get all the bookmarks in the document using [`GetBookmarksAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetBookmarksAsync_System_Boolean_) method as shown in the following code snippet.
 
-```typescript
+```csharp
 container.DocumentEditor.Selection.GetBookmarksAsync(false);
 ```
 

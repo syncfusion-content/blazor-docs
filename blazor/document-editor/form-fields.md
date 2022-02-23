@@ -17,7 +17,7 @@ documentation: ug
 
 Form fields can be inserted using [`InsertFormFieldAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertFormFieldAsync_Syncfusion_Blazor_DocumentEditor_FormFieldType_) method in editor module.
 
-```typescript
+```csharp
 //Insert Text form field
 container.DocumentEditor.Editor.InsertFormFieldAsync(FormFieldType.Text);
 //Insert Checkbox form field
@@ -30,7 +30,7 @@ container.DocumentEditor.Editor.InsertFormFieldAsync(FormFieldType.DropDown);
 
 All the form fields names form current document can be retrieved using `GetFormFieldNamesAsync()`.
 
-```typescript
+```csharp
 Task<List<string>> formFieldsNames = container.DocumentEditor.GetFormFieldNamesAsync();
 ```
 
@@ -38,7 +38,7 @@ Task<List<string>> formFieldsNames = container.DocumentEditor.GetFormFieldNamesA
 
 Data of the all the Form fields in the document can be exported using [`ExportFormDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_ExportFormDataAsync).
 
-```typescript
+```csharp
 Task<List<FormFieldData>> formFieldDatas=container.DocumentEditor.ExportFormDataAsync();
 ```
 
@@ -46,7 +46,7 @@ Task<List<FormFieldData>> formFieldDatas=container.DocumentEditor.ExportFormData
 
 Form fields can be pre-filled with data using [`ImportFormDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_ImportFormDataAsync_System_Collections_Generic_List_Syncfusion_Blazor_DocumentEditor_FormFieldData__).
 
-```typescript
+```csharp
 FormFieldData textformField = new FormFieldData();
 textformField.FieldName = "Text1";
 textformField.Value = "Hello World";
@@ -67,9 +67,9 @@ container.DocumentEditor.ImportFormDataAsync(formData);
 
 ## Reset form fields
 
-Reset all the form fields in current document to default value using [`resetFormFields`](../api/document-editor/#resetformfields).
+Reset all the form fields in current document to default value using [`ResetFormFieldsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_ResetFormFieldsAsync_System_String_).
 
-```typescript
+```csharp
 container.DocumentEditor.ResetFormFieldsAsync();
 ```
 
@@ -79,7 +79,7 @@ Document editor provides an option to protect and unprotect document using [`Enf
 
 The following example code illustrates how to enforce and stop protection in Document editor container.
 
-```typescript
+```csharp
 @using Syncfusion.Blazor.DocumentEditor
 
 <button @onclick="protectDocument">Protection</button>

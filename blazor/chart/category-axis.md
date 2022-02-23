@@ -49,7 +49,7 @@ The category axis is used to represent string values instead of integers.
 
 ![Blazor Column Chart with Default Axis](images/category-axis/blazor-chart-default-axis.png)
 
-## Labels Placement
+## Labels placement
 
 The category labels are positioned between ticks by default, but the [LabelPlacement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelPlacement) property allows them to be placed on the ticks as well. The available options are [BetweenTicks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelPlacement.html#Syncfusion_Blazor_Charts_LabelPlacement_BetweenTicks) (default) and [OnTicks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelPlacement.html#Syncfusion_Blazor_Charts_LabelPlacement_OnTicks).
 
@@ -91,7 +91,7 @@ The category labels are positioned between ticks by default, but the [LabelPlace
 
 ![Changing Labels Position in Blazor Chart](images/category-axis/blazor-diagram-label-position.png)
 
-## Range and Interval
+## Range and interval
 
 The [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Maximum), and [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Interval) properties can be used to customize the range of the [Category](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_Category) axis.
 
@@ -133,7 +133,7 @@ The [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 
 ![Changing Blazor Column Chart Axis based on Range and Interval](images/category-axis/blazor-chart-axis-range-and-interval.png)
 
-## Indexed Category Axis
+## Indexed category axis
 
 The category axis can also be rendered using the data source index values. This can be achieved by setting the [IsIndexed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_IsIndexed) property in the axis to **true**.
 

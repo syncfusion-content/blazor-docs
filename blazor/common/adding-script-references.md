@@ -41,7 +41,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; );
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
 
 var app = builder.Build();
 ....
@@ -61,7 +61,7 @@ namespace BlazorApplication
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; );
+            services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
         }
         ...
     }
@@ -75,7 +75,7 @@ namespace BlazorApplication
 For Blazor WebAssembly App, set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="9" %}
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -87,13 +87,14 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; );
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
 await builder.Build().RunAsync();
 ....
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="10" %}
+
 using Syncfusion.Blazor;
 
 namespace WebApplication1
@@ -103,7 +104,7 @@ namespace WebApplication1
         public static async Task Main(string[] args)
         {
             ....
-            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; );
+            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
             await builder.Build().RunAsync();
         }
     }
@@ -157,7 +158,18 @@ In addition to above, Syncfusion Blazor components provides latest scripts in CD
 
 You can refer the Syncfusion Blazor scripts through the NuGet package's static web assets using [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) as `true` in our Syncfusion Blazor Service.
 
-* If you are using Syncfusion [Blazor individual NuGet package](https://blazor.syncfusion.com/documentation/nuget-packages), the combined scripts available in [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor.Core/) package. You refer to the below code to refer script from static web assets
+### Enable static web assets usage
+
+To use static web assets, ensure [UseStaticFiles](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles) method is called as follows,
+
+* For **.NET 6** app, open the **~/Program.cs** file and call `UseStaticFiles` method.
+* For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and call `UseStaticFiles` method.
+
+> For **Blazor WASM App**, call `UseStaticFiles` method in **Server project** of the above mentioned file. 
+
+### Refer script from static web assets
+
+* If you are using Syncfusion [Blazor individual NuGet package](https://blazor.syncfusion.com/documentation/nuget-packages), the combined scripts available in [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor.Core/) package. To refer script from static web assets, use the code below.
 
     ```html
     <head>
@@ -166,7 +178,7 @@ You can refer the Syncfusion Blazor scripts through the NuGet package's static w
     </head>
     ```
 
-* If you are using the PDF viewer or Document Editor component, refer to the below code to refer script from static web assets
+* If you're using the PDF viewer or Document Editor component, use the code below to refer to script from static web assets.
 
     ```html
     <head>
@@ -176,7 +188,7 @@ You can refer the Syncfusion Blazor scripts through the NuGet package's static w
     </head>
     ```
 
-* If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet package, refer to the below code to refer script from static web assets.
+* If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet package, use the code below to refer to script from static web assets.
 
     It is not recommended to use [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet for production environment. Use individual NuGet packages for production.  
 

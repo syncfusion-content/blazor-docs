@@ -193,7 +193,7 @@ The pointers can be dragged over the axis values by clicking and dragging the po
 
 ![Blazor Circular Gauge with Dragging Pointer](./images/blazor-circulargauge-dragging-pointer.gif)
 
-## Dragging Range
+## Dragging range
 
 The ranges can be dragged over the axis values by clicking and dragging the range. To enable or disable the range drag, use the `EnableRangeDrag` property.
 
