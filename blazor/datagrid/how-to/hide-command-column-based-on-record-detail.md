@@ -7,11 +7,11 @@ control: DataGrid
 documentation: ug
 ---
 
-# Hide the command column button in a specific record
+# Hide the Command Column Button in a Specific Record
 
-Command Columns can be used perform CRUD operation in Grid records. For some specific records, these editing actions can be prevented by hiding the command buttons. (i.e.) Some records can be prevented from edited, some records can be prevented from deleted. This can be achieved by hiding the command buttons in [`RowDataBound`](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event of the DataGrid component.
+Command Columns can be used to perform CRUD operation in Grid records. For some specific records, these editing actions can be prevented by hiding the command buttons. i.e., some records can be prevented from being edited, some records can be prevented from being deleted. This can be achieved by hiding the command buttons in [`RowDataBound`](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event of the DataGrid component.
 
-This is demonstrated in the below sample code where the RowDataBound event is triggered when record is created. Based on record details, we can add specific class name to that row and hide the command buttons using CSS styles.
+This is demonstrated in the following sample code where the RowDataBound event is triggered when record is created. Based on record details, you can add specific class name to that row and hide the command buttons using CSS styles.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
