@@ -67,7 +67,7 @@ The grid row drag and drop allows you to drag and drop grid rows to another grid
 }
 ```
 
-![Row Drag and Drop in Blazor Grid](./images/grid-row-drag.png)
+![Row Drag and Drop in Blazor DataGrid](./images/blazor-datagrid-row-drag-and-drop.gif)
 
 > * Selection feature must be enabled for row drag and drop.
 > * Multiple rows can be selected by clicking and dragging inside the grid. For multiple row selection, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property must be set to multiple.
@@ -118,7 +118,7 @@ The grid row drag and drop allows you to drag and drop grid rows on the same gri
 }
 ```
 
-![Drag and drop within Grid](./images/grid-drag-drop.png)
+![Drag and Drop within Blazor DataGrid](./images/drag-and-drop-within-blazor-datagrid.gif)
 
 ## Drag and drop events
 
