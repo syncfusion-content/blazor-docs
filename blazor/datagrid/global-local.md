@@ -144,7 +144,7 @@ Pager_TotalItemsInfo |({0} Artikel)
 
 ### Blazor Server Side
 
-In the following examples, demonstrate how to enable **Localization** for DataGrid in server side Blazor samples.
+The following examples demonstrate how to enable **Localization** for DataGrid in server side Blazor samples.
 
 * Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
 
@@ -258,7 +258,7 @@ namespace BlazorServer
 
 ### Blazor WebAssembly
 
-In the following examples, demonstrate how to enable **Localization** for DataGrid in Client side Blazor samples.
+The following examples demonstrate how to enable **Localization** for DataGrid in Client side Blazor samples.
 
 * Open the **Program.cs** file and add the below configuration in the **Main** function as follows.
 
@@ -320,7 +320,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 
 > ClientApplication denotes the ApplicationNameSpace of your project.
 
-* Now, Specify the culture for DataGrid using [locale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) property.
+* Now, specify the culture for DataGrid using [locale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -370,7 +370,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 
 ## Right to left (RTL)
 
-RTL provides an option to switch the text direction and layout of the DataGrid component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). In the Below sample **EnableRtl** property is used to enable RTL in the DataGrid.
+RTL provides an option to switch the text direction and layout of the DataGrid component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). In the following sample, **EnableRtl** property is used to enable RTL in the DataGrid.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
