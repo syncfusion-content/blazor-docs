@@ -11,7 +11,7 @@ documentation: ug
 
 The [legend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html) provides information on the series shown in the chart.
 
-## Enable Legend
+## Enable legend
 
 To display the legend for the chart, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Visible) property in [ChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html) to **true**.
 
@@ -58,7 +58,7 @@ To display the legend for the chart, set the [Visible](https://help.syncfusion.c
 
 ![Blazor Column Chart with Legend](images/legend/blazor-column-chart-legend.png)
 
-## Position and Alignment
+## Position and alignment
 
 <!-- markdownlint-disable MD036 -->
 
@@ -269,7 +269,7 @@ Using the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ![Changing Blazor Column Chart Legend Alignment Position](images/legend/blazor-column-chart-legend-alignment-position.png)
 
-## Legend Customization
+## Legend customization
 
 **Legend Shape**
 
@@ -527,7 +527,7 @@ When the legend text exceeds the container, the text can be wrapped by using [Te
 
 ## Series selection based on legend
 
-By default, when click on the legend item, the appropriate series visibility is collapsed. On the other hand, [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ToggleVisibility) property is used to disable such functionality.
+By default, when you click on the legend item, the appropriate series visibility is collapsed. On the other hand, [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ToggleVisibility) property is used to disable such functionality.
 
 ```cshtml
 

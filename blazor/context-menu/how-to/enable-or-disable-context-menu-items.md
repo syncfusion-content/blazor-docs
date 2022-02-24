@@ -63,7 +63,6 @@ In the following example, the **Display Settings** in parent items is disabled d
 
 ```
 
-Output will be as follows
 
 ![Enabling or Disabling Items in Blazor ContextMenu](./../images/blazor-contextmenu-enable-disable-item.png)
 

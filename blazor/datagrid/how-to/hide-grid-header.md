@@ -9,7 +9,7 @@ documentation: ug
 
 # Hide DataGrid Header in Blazor DataGrid Component
 
-You can hide the DataGrid header by applying the below styles to DataGrid component.
+You can hide the DataGrid header by applying the following styles to the DataGrid component.
 
 ```html
 <style>
@@ -19,4 +19,4 @@ You can hide the DataGrid header by applying the below styles to DataGrid compon
 </style>
 ```
 
-> if you want to hide the header for particular DataGrid, then you can apply the above styles to that DataGrid using the ID (#Grid.e-grid .e-gridheader .e-columnheader) property value.
+> If you want to hide the header for particular DataGrid, then you can apply the above styles to that DataGrid using the ID (#Grid.e-grid .e-gridheader .e-columnheader) property value.

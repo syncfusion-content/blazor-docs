@@ -47,7 +47,7 @@ Numeric axis can be used to represent numeric values in a chart. The [ValueType]
 
 ![Blazor Line Chart with Numeric Axis](images/numeric-axis/blazor-line-chart-numeric-axis.png)
 
-## Range and Interval
+## Range and interval
 
 The axis range will be calculated automatically based on the provided data; however, the axis range can also be customized using [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Maximum), and [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Interval) properties.
 
@@ -86,7 +86,7 @@ The axis range will be calculated automatically based on the provided data; howe
 
 ![Changing Blazor Line Chart Axis based on Range](images/numeric-axis/blazor-line-chart-axis-range.png)
 
-## Range Padding
+## Range padding
 
 The [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_RangePadding) property can be used to apply padding to the minimum and maximum extremes of range. The following types of padding are supported by the numeric axis:
 
@@ -292,7 +292,7 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ![Blazor Line Chart with Auto RangePadding](images/numeric-axis/blazor-line-chart-auto-rangepadding.png)
 
-## Label Format
+## Label format
 
 Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelFormat) property on an axis, it is possible to format the numeric labels to all globalize formats.
 
@@ -397,7 +397,7 @@ The table below shows the results of applying various commonly used label format
 </tr>
 </table>
 
-## Custom Label Format
+## Custom label format
 
 Axis also supports custom label format using placeholders such as {value}K, where the value represents the axis label, for example, 20K.
 

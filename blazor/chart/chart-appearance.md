@@ -9,7 +9,7 @@ documentation: ug
 
 # Appearance in Blazor Charts Component
 
-## Custom Color Palette
+## Custom color palette
 
 The default color of series or points can be changed by providing a custom color palette to the [Palettes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Palettes) property.
 
@@ -61,15 +61,15 @@ The default color of series or points can be changed by providing a custom color
 
 <!-- markdownlint-disable MD036 -->
 
-## Chart Customization
+## Chart customization
 
 <!-- markdownlint-disable MD036 -->
 
-### Chart Background and Border
+### Chart background and border
 
 <!-- markdownlint-disable MD013 -->
 
-The chart's background color can be customized using the [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Background) property and the border color and width can be customized to specified in [ChartBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartBorder.html).
+The chart's background color can be customized using the [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Background) property and the border color and width can be customized based on the specified value in [ChartBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartBorder.html).
 
 ```cshtml
 
@@ -110,7 +110,7 @@ The chart's background color can be customized using the [Background](https://he
 
 ![Blazor Column Chart with Custom Background and Border](images/appearance/blazor-column-chart-custom-background-and-border.png)
 
-### Chart Margin
+### Chart margin
 
 The chart's margin from its container can be customized using the [ChartMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMargin.html).
 
@@ -156,7 +156,7 @@ The chart's margin from its container can be customized using the [ChartMargin](
 
 ![Blazor Column Chart with Custom Margin](images/appearance/blazor-column-chart-custom-margin.png)
 
-### Chart Area Customization
+### Chart area customization
 
 Using [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Background) and [ChartAreaBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAreaBorder.html) properties, you can change the background color and border of the chart area. Width for the chart area can be customized using [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Width) property.
 
@@ -245,7 +245,7 @@ The [Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 
 ```
 
-## Chart Title
+## Chart title
 
 The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Title) property can be used to give the chart a title in-order to provide information about the data displayed.
 
@@ -289,9 +289,9 @@ The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfCha
 
 ![Blazor Column Chart with Title](images/appearance/blazor-column-chart-title.png)
 
-## Chart Subtitle
+## Chart subtitle
 
-The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SubTitle) property can be used to give the chart a subtitle in-order to provide additional information about the data displayed.
+The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SubTitle) property can be used to add a subtitle to the chart in-order to provide additional information about the data displayed.
 
 ```cshtml
 

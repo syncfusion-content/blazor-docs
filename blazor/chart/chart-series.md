@@ -9,7 +9,7 @@ documentation: ug
 
 # Mixed Chart in Blazor Charts Component
 
-## Multiple Chart Series
+## Multiple chart series
 
 The [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) property allows to add multiple series to the chart. The series are rendered in the order they were added to the series array.
 
@@ -56,7 +56,7 @@ The [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ![Blazor Column Chart with Multiple Series](images/multiple-series/blazor-column-chart-multiple-series.png)
 
-## Combination Chart Series
+## Combination chart series
 
 A chart can be created by combining several chart types such as line, column, and so on.
 

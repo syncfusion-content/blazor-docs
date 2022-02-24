@@ -112,7 +112,7 @@ To know about **ExpandoObject** data binding in Blazor DataGrid component, you c
 
 ### ExpandoObject Complex data binding
 
-You can achieve ExpandoObject complex data binding in the datagrid by using the dot(.) operator in the column.field. In the below examples `CustomerID.Name` and `ShipCountry.Country` are complex data.
+You can achieve ExpandoObject complex data binding in the datagrid by using the dot(.) operator in the column.field. In the following examples, `CustomerID.Name` and `ShipCountry.Country` are complex data.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -232,7 +232,7 @@ To know about **DynamicObject** data binding in Blazor DataGrid component, you c
 
 #### DynamicObject Complex data binding
 
-You can achieve DynamicObject complex data binding in the datagrid by using the dot(.) operator in the column.field. In the below examples `CustomerID.Name` and `ShipCountry.Country` are complex data.
+You can achieve DynamicObject complex data binding in the datagrid by using the dot(.) operator in the column.field. In the following examples, `CustomerID.Name` and `ShipCountry.Country` are complex data.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -299,7 +299,7 @@ The following image represents DynamicObject complex data binding
 
 ## Remote data
 
-To bind remote data to datagrid component, assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property or by using[SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component. To interact with remote data source,  provide the endpoint **Url**.
+To bind remote data to datagrid component, assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property or by using [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component. To interact with remote data source, provide the endpoint **Url**.
 
 > When using [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding then the **TValue** must be provided explicitly in the datagrid component.
 > By default, [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **ODataAdaptor** for remote data-binding.
@@ -497,7 +497,7 @@ The following sample code demonstrates sending additional parameters using the Q
 
 ### Configuring HttpClient
 
-**SfDataManager** uses the **HttpClient** instance to make HTTP requests to data services. **SfDataManager** checks whether a **HttpClient** is already registered in the service container if it's found then the SfDataManager will use HttpClient from the service container else it will create and add HttpClient to the service container and use that instance for making requests to the server.
+**SfDataManager** uses the **HttpClient** instance to make HTTP requests to data services. **SfDataManager** checks whether a **HttpClient** is already registered in the service container. If it's found, the SfDataManager will use HttpClient from the service container else it will create and add HttpClient to the service container and use that instance for making requests to the server.
 
 When registering your HttpClient, the registration should be done before calling `AddSyncfusionBlazor()` method in **Startup.cs/Program.cs**, so that **SfDataManager** will not create its own HttpClient and uses the pre-configured HttpClient. This helps SfDataManager to use HttpClient instance pre-configured with base address, authentication, default headers, etc.
 
@@ -670,11 +670,11 @@ The following GIF represents dynamically modifying the query property in DataGri
 
 ## SQL Server data binding(SQL Client)
 
-The following examples demonstrate,how to consume data from SQL Server using Microsoft SqlClient and bound it to Blazor DataGrid. You can achieve this requirement by using [Custom Adaptor](./custom-binding/#custom-adaptor-as-component).
+The following examples demonstrate how to consume data from SQL Server using Microsoft SqlClient and bound it to Blazor DataGrid. You can achieve this requirement by using [Custom Adaptor](./custom-binding/#custom-adaptor-as-component).
 
-Before the implementation, add required NuGet like **Microsoft.Data.SqlClient** and **Syncfusion.Blazor** in your application. In the below sample, Custom Adaptor can be created as a Component. In custom adaptor **Read** method you can get grid action details like paging, filtering, sorting information etc., using **DataManagerRequest**.
+Before the implementation, add required NuGet like **Microsoft.Data.SqlClient** and **Syncfusion.Blazor** in your application. In the following sample, Custom Adaptor can be created as a Component. In custom adaptor **Read** method, you can get grid action details like paging, filtering, sorting information etc., using **DataManagerRequest**.
 
-Based on the DataManagerRequest, you can form SQL query string (to perform paging) and execute the SQL query and retrieve the data from database using **SqlDataAdapter**. The Fill method of the **DataAdapter** is used to populate a **DataSet** with the results of the **SelectCommand** of the DataAdapter, then converted the DataSet into List and return **Result** and **Count** pair object in **Read** method to bind the data to Grid.
+Based on the DataManagerRequest, you can form SQL query string (to perform paging) and execute the SQL query and retrieve the data from database using **SqlDataAdapter**. The Fill method of the **DataAdapter** is used to populate a **DataSet** with the results of the **SelectCommand** of the DataAdapter, then convert the DataSet into List and return **Result** and **Count** pair object in **Read** method to bind the data to Grid.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
@@ -774,7 +774,7 @@ Based on the DataManagerRequest, you can form SQL query string (to perform pagin
 }
 ```
 
-> * In this [sample](https://github.com/SyncfusionExamples/blazor-grid-sqldatabinding),paging action is handled for Blazor grid based on your need you can extend the given logic for other operations.
+> * In this [sample](https://github.com/SyncfusionExamples/blazor-grid-sqldatabinding), paging action is handled for Blazor grid. Based on your needs, you can extend the given logic for other operations.
 > * For performing data manipulation, you can override available methods such as **Insert**, **Update** and **Remove** of the Custom Adaptor.
 
 ## Entity Framework
@@ -812,7 +812,7 @@ namespace EFGrid.Shared.DataAccess
 
 ### Create data access layer to perform data operation
 
-Now you need to create a class named **OrderDataAccessLayer**, which act as data access layer for retrieving the records and also insert, update and delete the records from the database table.
+Now, you need to create a class named **OrderDataAccessLayer**, which act as data access layer for retrieving the records and also insert, update and delete the records from the database table.
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
@@ -890,7 +890,7 @@ namespace WebApplication1.Server.Controllers
 
 ### Configure datagrid component using Web API adaptor
 
-Now you can configure the datagrid using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with web api, you need to use WebApiAdaptor.
+Now, you can configure the datagrid using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with web api, you need to use WebApiAdaptor.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -920,7 +920,7 @@ To perform datagrid CRUD operation using Entity Framework. You can refer [here](
 
 ## HTTP client
 
-It is possible to call web api from the blazor WebAssembly(client-side) app. This can be used for sending HTTP requests to fetch data from web api and bind them in the DataGrid's data source. The requests are sent using [HttpClient](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0) service.
+It is possible to call web api from the Blazor WebAssembly(client-side) app. This can be used for sending HTTP requests to fetch data from web api and bind them in the DataGrid's data source. The requests are sent using [HttpClient](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0) service.
 
 This can be achieved by initially injecting the `HttpClient` instance in the app.
 
@@ -929,7 +929,7 @@ This can be achieved by initially injecting the `HttpClient` instance in the app
 @inject HttpClient Http
 ```
 
-After that the data to be fetched is defined in the api controller of the blazor WebAssembly app.
+After that the data to be fetched is defined in the api controller of the Blazor WebAssembly app.
 
 ```csharp
 [Route("api/[controller]")]
@@ -997,9 +997,9 @@ Then using the `GetJsonAsync` method request is sent to the api controller for f
 }
 ```
 
-> The above steps are processed in the blazor WebAssembly app which has the preconfigured `HttpClient` service. For blazor server apps, web api calls are created using [IHttpClientFactory](https://docs.microsoft.com/dotnet/api/system.net.http.ihttpclientfactory). More information on making requests using `IHttpClientFactory` is available in this [link](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0).
+> The above steps are processed in the Blazor WebAssembly app which has the pre-configured `HttpClient` service. For Blazor server apps, web api calls are created using [IHttpClientFactory](https://docs.microsoft.com/dotnet/api/system.net.http.ihttpclientfactory). More information on making requests using `IHttpClientFactory` is available in this [link](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0).
 
-## Observable Collection
+## Observable collection
 
 This [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8)(dynamic data collection) provides notifications when items added, removed and moved. The implement [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) notifies when dynamic changes of add,remove, move and clear the collection. The implement [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) notifies when property value has changed in client side.
 

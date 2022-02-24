@@ -40,4 +40,4 @@ the height is ‘50%’, gauge is rendered to half of the container height.
 
 ![Changing Blazor Circular Gauge Size in Percentage](./images/blazor-circulargauge-size.png)
 
-> When you do not specify the size, it takes `450`  pixels as the height and takes window size as its width.
+> When you do not specify the size, it takes `450` pixels as the height and window size as its width.

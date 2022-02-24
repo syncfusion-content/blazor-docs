@@ -41,7 +41,7 @@ Data binding can be achieved by using the `bind-Value` attribute and it supports
 }
 ```
 
-## Index Value Binding
+## Index value binding
 
 Index value binding can be achieved by using `bind-Index` attribute and it supports int and int nullable types. By using this attribute you can bind the values respective to its index.
 

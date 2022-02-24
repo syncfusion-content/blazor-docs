@@ -418,7 +418,7 @@ By default, column header title is displayed from column [Field](https://help.sy
 }
 ```
 
-The Output image for header text is as follows
+
 ![Blazor DataGrid with Header Text](./images/blazor-datagrid-header-text.png)
 
 > * If both the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) and [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText)
@@ -690,7 +690,7 @@ You can auto fit a column interactively by double clicking the right border of t
 }
 ```
 
-In the  following Image, **Autofit** Property is set to true for CustomerName and OrderDate.
+In the following Image, **Autofit** Property is set to true for CustomerName and OrderDate.
 ![Blazor DataGrid with Autofit Columns](./images/blazor-datagrid-autofit-column.png)
 
 ### Autofit columns by method
