@@ -170,7 +170,7 @@ The following sample code demonstrates the customization applied to NumericTextB
 | Enabled | Specifies a value that indicates whether the component is enabled or not |
 | CssClass | Sets CSS classes to the root element of the component that allows customization of appearance.  |
 | FilterBarPlaceholder | Accepts the value to be displayed as a watermark text on the filter bar.   |
-| AllowFiltering | When allowFiltering is set to true, show the filter bar (search box) of the component. |
+| AllowFiltering | When allowFiltering is set to true, the filter bar (search box) of the component is displayed. |
 | FooterTemplate | Accepts the template design and assigns it to the footer container of the popup list. |
 | HeaderTemplate | Accepts the template design and assigns it to the header container of the popup list. |
 | PopupHeight | Specifies the height of the popup list |
@@ -235,7 +235,7 @@ The following sample code demonstrates the customization applied to DropDownList
 
 ### BooleanEdit
 
-`BooleanEditCellParams` class helps us to customize the default Checkbox component in Grid EditForm. The following table describes properties of CheckBox control than can be customized using `EditorSettings` of GridColumn editor component.
+`BooleanEditCellParams` class helps us to customize the default Checkbox component in Grid EditForm. The following table describes properties of CheckBox control that can be customized using `EditorSettings` of GridColumn editor component.
 
 | Component | Description |
 |--------|----------------|
@@ -298,7 +298,7 @@ The following sample code demonstrates the customization applied to Checkbox com
 
 ### DatePickerEdit
 
-`DateEditCellParams` class helps us to customize the default DatePicker and DateTimePicker component in Grid EditForm. The following table describes properties of DatePicker control than can be customized using `EditorSettings` of GridColumn editor component.
+`DateEditCellParams` class helps to customize the default DatePicker and DateTimePicker components in Grid EditForm. The following table describes properties of DatePicker control that can be customized using `EditorSettings` of GridColumn editor component.
 
 | Component | Example |
 |--------|----------------|
@@ -361,7 +361,7 @@ The following sample code demonstrates the customization applied to DatePicker c
 
 > Similar way customization can be applied to default DateTimePicker Component using same `DateEditCellParams`
 
-## Custom editors using template / Cell edit template
+## Custom editors using template/Cell edit template
 
 > Before adding edit template to the datagrid, we strongly recommend you to go through the [template](./templates/#templates) section topic to configure the template.
 

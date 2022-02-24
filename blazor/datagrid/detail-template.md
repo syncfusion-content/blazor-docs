@@ -122,7 +122,6 @@ The detail template provides additional information about a particular row by ex
 }
 ```
 
-The output will be as follows.
 
 ![Blazor DataGrid with Detail Template](./images/blazor-datagrid-detail-template.png)
 
@@ -130,7 +129,7 @@ The output will be as follows.
 
 To render the custom component inside the detail row, define the template in the [DetailTemplate](./templates/#detailtemplates-component) and render the custom component in any of the detail row element.
 
-In the below sample, a datagrid component is rendered as custom component using detailed row details.
+In the following sample, a datagrid component is rendered as custom component using detailed row details.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -207,7 +206,6 @@ In the below sample, a datagrid component is rendered as custom component using 
 }
 ```
 
-The output will be as follows.
 
 ![Rendering Custom Component in Blazor DataGrid Row](./images/blazor-datagrid-row-with-custom-component.png)
 
