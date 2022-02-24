@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD033 -->
 
-# Pdf Export in Blazor DataGrid Component
+# PDF Export in Blazor DataGrid Component
 
 PDF export allows exporting DataGrid data to PDF document. You need to use the
  **PdfExport** method for exporting. To enable PDF export in the datagrid, set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPdfExport) as true.
@@ -1061,7 +1061,7 @@ To apply theme in exported PDF, define the **theme** in export properties.
 
 <!-- Show or hide columns on exported pdf
 
-You can show a hidden column or hide a visible column while exporting the datagrid by customizing the vsibility settings while exporting.
+You can show a hidden column or hide a visible column while exporting the datagrid by customizing the visibility settings while exporting.
 
 This is demonstrated in the below sample code where initially the **CustomerID** is hidden. While exporting, we have changed CustomerID to visible column and Freight as hidden column. Then in the `PdfExportComplete` event, we have reversed the column's visibility state back to the previous state.
 
