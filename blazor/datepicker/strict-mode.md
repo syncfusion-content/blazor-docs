@@ -29,7 +29,6 @@ The following example demonstrates the DatePicker in `StrictMode` with Min/Max r
 }
 ```
 
-The output will be as follows.
 
 ![Strict Mode in Blazor DatePicker](./images/blazor-datepicker-strict-mode.png)
 
@@ -53,7 +52,6 @@ If you are entering out-of-range or invalid date value, then the model value wil
 }
 ```
 
-The output will be as follows.
 
 ![Blazor DatePicker without Strict Mode](./images/blazor-datepicker-without-strict-mode.png)
 

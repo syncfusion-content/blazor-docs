@@ -25,7 +25,7 @@ It provides information about the widget for assistive technology to the disable
 
 ## Keyboard interaction
 
-You can use the following keys to interact with the DatePicker. The component implements the keyboard navigation support by following the  [WAI-ARIA practices](http://www.w3.org/WAI/PF/aria-practices).
+You can use the following keys to interact with the DatePicker. The component implements the keyboard navigation support by following the [WAI-ARIA practices](http://www.w3.org/WAI/PF/aria-practices).
 
 It supports the following list of shortcut keys:
 
@@ -39,7 +39,7 @@ Before opening the pop-up, use the following list of keys to control the pop-up 
 | <kbd>Alt +  Upper Arrow</kbd> | Closes the popup.|
 | <kbd>Esc</kbd> | Closes the popup. |
 
-### Calendar Navigation
+### Calendar navigation
 
 Use the following list of keys to navigate the Calendar after the pop-up has been opened:
 

@@ -11,7 +11,7 @@ documentation: ug
 
 DataGrid allows you to load large amount of data without [performance](https://www.syncfusion.com/blazor-components/blazor-datagrid/performance) degradation.
 
-## Row Virtualization
+## Row virtualization
 
 Row virtualization allows you to load and render rows only in the content viewport. It is an alternative way of paging in which the data will be loaded while scrolling vertically. To setup the row virtualization, you need to define
 [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) as true and content height by [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) property.
@@ -88,7 +88,7 @@ the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfG
 The following GIF represent a datagrid with Row virtualization.
 ![Blazor DataGrid with Row virtualization](./images/blazor-datagrid-row-virtualization.gif)
 
-## Column Virtualization
+## Column virtualization
 
 Column virtualization allows you to virtualize columns. It will render columns which are in the viewport. You can scroll horizontally to view more columns.
 
@@ -245,7 +245,7 @@ To setup the enable cell placeholder during virtualization, you need to define [
 The following GIF represent a datagrid with Mask row virtualization.
 ![Blazor DataGrid with Mask Row virtualization](./images/blazor-datagrid-mask-row-virtualization.gif)
 
-## Frozen Columns Virtualization
+## Frozen columns virtualization
 
 This feature virtualize the row and movable column data. Column virtualization allows you to virtualize the movable columns and cell placeholder renders before new columns loading the viewport.
 
@@ -357,7 +357,7 @@ The following GIF represent a datagrid with Frozen columns/row virtualization.
 
 This section shows you how to invoke a [ScrollIntoViewAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ScrollIntoViewAsync_System_Int32_System_Int32_System_Int32_) method to scroll the grid content into view externally by passing column index or row index as parameter.
 To scroll the grid content in horizontal direction set the [`EnableVirtualization`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) and [`EnableColumnVirtualization`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization)  properties as **true**. 
-To scroll the grid content in vertical direction set `EnableVirtualization` property as **true**.
+To scroll the grid content in vertical direction, set `EnableVirtualization` property as **true**.
 
  ```cshtml
 @using Syncfusion.Blazor.Grids
