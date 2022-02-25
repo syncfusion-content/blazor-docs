@@ -282,3 +282,5 @@ You can add the header by using [CardHeader](https://help.syncfusion.com/cr/blaz
 ![Blazor Card Component](images/blazor-card-component.png)
 
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Card).
+
+N> You can also explore our [Blazor Card](https://blazor.syncfusion.com/demos/card/basic-card/) that shows you how to render and configure the splitters.
