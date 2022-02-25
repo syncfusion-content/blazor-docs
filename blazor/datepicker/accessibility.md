@@ -11,7 +11,7 @@ documentation: ug
 
 The web accessibility defines a way to make web content and web applications more accessible to disabled people. It especially helps the dynamic content change and advanced user interface components developed with Ajax, HTML, JavaScript, and related technologies.
 
-The DatePicker provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices) specifications. WAI-ARIA supports can be achieved through the attributes like `aria-expanded`, `aria-disabled`, and `aria-activedescendant` applied to the input element.
+The DatePicker provides built-in compliance with the [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/) specifications. WAI-ARIA supports can be achieved through the attributes like `aria-expanded`, `aria-disabled`, and `aria-activedescendant` applied to the input element.
 
 To learn more about the accessibility of Calendar, refer to the Calendar's [Accessibility](../calendar/accessibility/) section.
 
@@ -25,7 +25,7 @@ It provides information about the widget for assistive technology to the disable
 
 ## Keyboard interaction
 
-You can use the following keys to interact with the DatePicker. The component implements the keyboard navigation support by following the [WAI-ARIA practices](http://www.w3.org/WAI/PF/aria-practices).
+You can use the following keys to interact with the DatePicker. The component implements the keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/).
 
 It supports the following list of shortcut keys:
 
@@ -61,7 +61,7 @@ Use the following list of keys to navigate the Calendar after the pop-up has bee
 | <kbd>Control +Home</kbd>  | Focuses the starting date in the current year. |
 | <kbd>Control +End</kbd>  | Focuses the ending date in the current year. |
 
-> To focusout the DatePicker component, use the `t` keys. For additional information about native event, [click](./native-events/) here.
+> To focus out the DatePicker component, use the `t` keys. For additional information about native event, [click](./native-events/) here.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
