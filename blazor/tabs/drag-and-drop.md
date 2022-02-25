@@ -9,7 +9,7 @@ documentation: ug
 
 # Drag and Drop in Blazor Tabs Component
 
-The Tab component allows to drag and drop any item by setting `AllowDragAndDrop` &nbsp;to **true**. Items can be reordered to any place by dragging and dropping them onto the desired location.
+The [Blazor Tab](https://www.syncfusion.com/blazor-components/blazor-tabs) component allows to drag and drop any item by setting `AllowDragAndDrop` &nbsp;to **true**. Items can be reordered to any place by dragging and dropping them onto the desired location.
 
 * If you need to prevent dragging action for a particular item, the `OnDragStart` event can be used which will trigger when the item drag is started. If you need to prevent dropping action for a particular item, the `Dragged` event can be used which will trigger when the drag action is stopped.
 

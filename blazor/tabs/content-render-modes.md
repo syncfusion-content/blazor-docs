@@ -9,7 +9,7 @@ documentation: ug
 
 # Content Render Modes in Blazor Tabs Component
 
-In Blazor Tabs, the content of the Tabs can be rendered based on the scenario. The content rendering of tabs can be done by the following three different ways.
+In [Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs), the content of the Tabs can be rendered based on the scenario. The content rendering of tabs can be done by the following three different ways.
 
 * [Dynamic rendering](#dynamic-rendering)
 * [On Demand rendering or lazy loading](#on-demand-rendering-or-lazy-loading)
