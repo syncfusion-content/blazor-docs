@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deployment in Blazor | AOT | Syncfusion
-description: Learn here all about deploying Blazor application with Syncfusion Blazor Components and much more.
+description: Learn here all about deploying the Blazor application with Syncfusion Blazor Components and much more.
 platform: Blazor
 component: Common
 documentation: ug
