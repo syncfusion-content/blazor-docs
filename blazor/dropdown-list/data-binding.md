@@ -34,7 +34,8 @@ The DropDownList can generate its list items through an array of complex data. F
 
 In the following example, `Name` column from complex data has been mapped to the `Value` field.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.DropDowns
 
 <SfDropDownList TValue="string" TItem="Countries" Placeholder="e.g. Australia" DataSource="@Country">
@@ -73,7 +74,8 @@ In the following example, `Name` column from complex data has been mapped to the
         new Countries() { Name = "United States", Code = "US" },
     };
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 The output will be as follows.
 
@@ -85,7 +87,8 @@ You can bind the data to the DropDownList as a list of string, int, double and b
 
 The following code demonstrates array of string and integer values to the DropDownList component.
 
-```csharp
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.DropDowns
 
 <SfDropDownList TValue="string" TItem="string" Placeholder="Select a game" DataSource="@data" @bind-Value="MyItem" Width="300px"></SfDropDownList>
@@ -94,9 +97,11 @@ The following code demonstrates array of string and integer values to the DropDo
     List<string> data = new List<string>() {"One", "Two", "Three"};
     public string MyItem { get; set; } = "Two";
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
-```csharp
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.DropDowns
 
 <SfDropDownList TValue="int?" TItem="int?" Placeholder="Select a game" DataSource="@data" @bind-Value="MyItem" Width="300px"></SfDropDownList>
@@ -105,7 +110,8 @@ The following code demonstrates array of string and integer values to the DropDo
     List<int?> data = new List<int?>() { 1022, 1033, 1045 };
     public int? MyItem { get; set; } = 1033;
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 ## Complex data type
 
@@ -113,7 +119,8 @@ The DropDownList can generate its list items through an array of complex data. F
 
 In the following example, `Code.ID` column and `Country.CountryID` column from complex data have been mapped to the `Value` field and `Text` field, respectively.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.DropDowns
 
 <SfDropDownList TValue="string" TItem="Complex" Placeholder="e.g. Select a country" DataSource="@LocalData">
@@ -151,7 +158,8 @@ In the following example, `Code.ID` column and `Country.CountryID` column from c
         }
     }
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 The output will be as follows.
 
@@ -161,7 +169,8 @@ The output will be as follows.
 
 You can bind [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-5.0) data to the DropDownList component. The following example `ExpandoObject` is bound to the collection of vehicles data.
 
-```csharp
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.DropDowns
 @using System.Dynamic
@@ -184,7 +193,8 @@ You can bind [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.
     }
 }
 
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 The output will be as follows,
 
@@ -194,7 +204,8 @@ The output will be as follows,
 
 You can bind [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-5.0) data to the DropDownList component. In the following example, `Observable Data` is bound to a collection of colors data.
 
-```csharp
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.DropDowns
 @using System.Collections.ObjectModel;
@@ -229,7 +240,8 @@ public class Colors
     };
 }
 
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 The output will be as follows,
 
@@ -239,7 +251,8 @@ The output will be as follows,
 
 You can bind [DynamicObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-5.0) data to the DropDownList component. The following example `DynamicObject` is bound to the collection of customers data.
 
-```csharp
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.DropDowns
 @using System.Dynamic
@@ -281,7 +294,8 @@ You can bind [DynamicObject](https://docs.microsoft.com/en-us/dotnet/api/system.
     }
 }
 
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 The output will be as follows,
 
@@ -291,7 +305,8 @@ The output will be as follows,
 
 You can bind enum data to DropDownList component. The following code helps you get a description value from the enumeration data.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.DropDowns
 @using System.Linq; 
 @using System.Reflection; 
@@ -338,7 +353,8 @@ You can bind enum data to DropDownList component. The following code helps you g
     } 
  
 } 
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 The output will shown as follows,
 
@@ -348,7 +364,8 @@ The output will shown as follows,
 
 You can bind [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0) data to the DropDownList component. The following code helps you to get a string value from the enumeration data by using [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0).
 
-```csharp
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.DropDowns;
 
@@ -357,7 +374,8 @@ You can bind [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.val
     <DropDownListFieldSettings Value="Item1" Text="Item2" />
 </SfDropDownList>
 
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 The output will be as follows,
 
@@ -371,7 +389,8 @@ The DropDownList supports retrieval of data from remote data services with the h
 
 [OData v4 Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_ODataV4Adaptor) provies ability to consume and manipulate data from OData v4 services. The following sample displays the first 6 contacts from **Customers** table of the `Northwind` Data Service.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -398,7 +417,8 @@ The DropDownList supports retrieval of data from remote data services with the h
             public string ShipAddress { get; set; }
         }
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 The output will be as follows.
 
@@ -408,7 +428,8 @@ The output will be as follows.
 
 You can use the [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_WebApiAdaptor) to interact with Web APIs created with OData endpoint. The WebApiAdaptor is extended from the ODataAdaptor. Hence to use WebApiAdaptor, the endpoint should understand the OData formatted queries sent along with request. 
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -428,7 +449,8 @@ You can use the [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion
         public string Country { get; set; }
     }
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 The output will be as follows.
 
@@ -461,7 +483,8 @@ The custom data binding can be performed in the DropDownList component by provid
 
 The following sample code demonstrates implementing custom data binding using custom adaptor,
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -527,7 +550,8 @@ The following sample code demonstrates implementing custom data binding using cu
         }
     }
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 
 ### Offline mode
@@ -536,7 +560,8 @@ To avoid post back for every action, set the DropDownList to load all data on in
 
 The following example for remote data binding and enabled offline mode.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 <SfDropDownList TValue="string" TItem="EmployeeData" Placeholder="Select a Employee" Query="@Query">
     <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Offline=true Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor" CrossDomain=true></SfDataManager>
     <DropDownListFieldSettings Text="FirstName" Value="EmployeeID"></DropDownListFieldSettings>
@@ -553,7 +578,8 @@ The following example for remote data binding and enabled offline mode.
         public string Country { get; set; }
     }
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 The output will be as follows.
 
@@ -679,7 +705,8 @@ namespace EFDropDown.Controllers
 
 Now, you can configure the DropDownList using the [**'SfDataManager'**](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to interact with the created Web API and consume the data appropriately. To interact with web api, you need to use [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_WebApiAdaptor).
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -695,13 +722,15 @@ Now, you can configure the DropDownList using the [**'SfDataManager'**](https://
         public string ShipCountry { get; set; }
     }
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 ## Adding New Items
 
 You can add the new item in the popup with help of using [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_AddItemsAsync_System_Collections_Generic_IEnumerable__0__System_Nullable_System_Int32__) public method. This method will add a mentioned item in the DropDownList popup without affecting the data source items.
 
-```csharp
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Buttons
 
@@ -737,7 +766,8 @@ You can add the new item in the popup with help of using [AddItemsAsync](https:/
        await this.ddlObj.AddItemsAsync(new List<Games> { new Games() { ID = "Game11", Game = "Tennis" } });
     }
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 The output will be as follows.
 
@@ -747,7 +777,8 @@ The output will be as follows.
 
 The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnActionBegin) event will trigger before fetching data from the remote server. By using the respective event we can perform required things when the component before fetching data in it. The below code example demosntrates the usage of OnActionBegin event.
 
-```csharp
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
@@ -780,13 +811,15 @@ The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Drop
         Console.WriteLine("Action Begin event has been triggered !!");
     }
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 ## OnActionComplete Event
 
 The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnActionComplete) event will trigger after data is fetched successfully from the remote server. By using the respective event we can perform required things when the component after fetching data in it. The below code example demosntrates the usage of OnActionComplete event.
 
-```csharp
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
@@ -820,13 +853,15 @@ The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
         Console.WriteLine("Action Complete event has been triggered !!");
     }
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 ## OnActionFailure Event
 
 The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnActionFailure) event will trigger when the data fetch request from the remote server fails. The below code example demosntrates the usage of OnActionFailure event.
 
-```csharp
+{% tabs %}
+{% highlight razor %}
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
@@ -859,4 +894,5 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
         Console.WriteLine("Action Failure event has been triggered !!");
     }
 }
-```
+{% endtabs %}
+{% endhighlight razor %}

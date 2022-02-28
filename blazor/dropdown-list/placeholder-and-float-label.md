@@ -7,11 +7,13 @@ control: DropDown List
 documentation: ug
 ---
 
-## Placeholder in the Blazor DropDownList component
+# Placeholder in the Blazor DropDownList component
 
 The [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Placeholder) property is used display small description of the expected value in the input. In the below sample demonstration, We have set **Select a game** as Placeholder property value, which will set respective value to the placeholder attribute of the input element in the DOM.
 
-```csharp
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns
 
 <SfDropDownList TValue="string" TItem="string" Placeholder="Select a game" DataSource="@data" Width="300px"></SfDropDownList>
@@ -19,7 +21,8 @@ The [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDo
 @code{
     List<string> data = new List<string>() { "Cricket", "Badminton","Football" };
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 The output will be as follows.
 
@@ -29,7 +32,9 @@ The output will be as follows.
 
 We can customize the color of the placeholder text by overriding the existing styles of the component. The following sample demonstrates the font color customization of placeholder attribute.
 
-```csharp
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns
 
 <SfDropDownList TValue="string" TItem="string" Placeholder="Select a game" DataSource="@data" Width="300px"></SfDropDownList>
@@ -41,7 +46,8 @@ We can customize the color of the placeholder text by overriding the existing st
     .e-ddl.e-input-group input.e-input::placeholder {
     color: red;
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 The output will be as follows.
 
@@ -51,7 +57,9 @@ The output will be as follows.
 
 We can add required characters to the Placeholder property value by overriding the existing styles of the component. In the below demonstration, we have used content (CSS property) property to add the `*` character to the placeholder value.
 
-```csharp
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Inputs
 
@@ -66,7 +74,8 @@ We can add required characters to the Placeholder property value by overriding t
     color: red;
 }
 </style>
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 The output will be as follows.
 
@@ -85,7 +94,9 @@ Type     | Description
   Never      | By default, never float the label in the input when the placeholder is available.
 
 
-```csharp
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Inputs
 
@@ -94,7 +105,8 @@ Type     | Description
 @code{
     List<string> data = new List<string>() { "Cricket", "Badminton","Football" };
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 The output will be as follows.
 
@@ -106,7 +118,9 @@ We can customize the FloatLabel text color when focusing the component by overri
 
 The below sample demonstration explains how to customise the flotlabel text color.
 
-```csharp
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Inputs
 
@@ -124,7 +138,8 @@ The below sample demonstration explains how to customise the flotlabel text colo
     color: #2319b8;
 }
 </style>
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 The output will be as follows.
 

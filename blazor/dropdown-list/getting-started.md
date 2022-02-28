@@ -337,7 +337,8 @@ By default, the width of the popup list automatically adjusts according to the D
 
 * You can get the selected value of the DropDownList component from the **Value** property in the [ValueChange event argument](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Value). 
 
-```csharp
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.DropDowns
 
@@ -369,11 +370,13 @@ By default, the width of the popup list automatically adjusts according to the D
         Console.WriteLine("The DropDownList Value is: ", args.Value);
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 * You can get the complete object list of the selected value from the **ItemData** property in the [ValueChange event argument](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_ItemData).
 
-```csharp
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.DropDowns
 
@@ -405,7 +408,8 @@ By default, the width of the popup list automatically adjusts according to the D
         Console.WriteLine("The complete data of the selected value is: ", args.ItemData);
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## See Also
 

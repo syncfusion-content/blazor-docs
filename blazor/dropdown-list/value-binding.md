@@ -18,7 +18,9 @@ The value binding as the process of passing values between a component and its p
 
 Value binding can be achieved by using the [`@bind-Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute and it supports string, int, Enum, bool and complex types. If component value has been changed, it will affect the all places where you bind the variable for the bind-value attribute.
 
-```csharp
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns
 
 <p>DropDownList value is:<strong>@DropVal</strong></p>
@@ -46,13 +48,16 @@ Value binding can be achieved by using the [`@bind-Value`](https://help.syncfusi
         new Countries() { Name = "Cameroon", Code = "CM" },
     };
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 ## Index Value Binding
 
 Index value binding can be achieved by using [`@bind-Index`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Index) attribute and it supports int and int nullable types. By using this attribute you can bind the values respective to its index.
 
-```csharp
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns
 
 <SfDropDownList TValue="string" TItem="Games" Width="300px" Placeholder="Select a game" DataSource="@LocalData" @bind-Index="@ddlIndex">
@@ -79,7 +84,8 @@ Index value binding can be achieved by using [`@bind-Index`](https://help.syncfu
     new Games() { ID= "Game10", Game= "Tennis"},
   };
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 ## Text and Value
 
@@ -87,7 +93,9 @@ The [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.
 
 The following code demonstrates, Value and Text field of the DropDownList component For instance, the selected item is `Badminton` (Text Field i.e., Game) but the value field holds `Game2` (Value Field i.e., ID).
 
-```csharp
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns
 
 <p>DropDownList Value is: @DropDownValue</p>
@@ -116,7 +124,8 @@ The following code demonstrates, Value and Text field of the DropDownList compon
     new Games() { ID= "Game10", Game= "Tennis"},
   };
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 The output will be as follows.
 
@@ -128,20 +137,24 @@ You can bind the data to the DropDownList as a simple collection of string, int,
 
 The following code demonstrates array of string, double and integer values to the DropDownList component.
 
-```csharp
+{% tabs %}
+{% highlight razor %}
 
 <SfDropDownList TValue=string TItem=string Placeholder="Select a game" DataSource="@data" Width="300px"></SfDropDownList>
 
 @code{
     public string[] data = { "Badminton", "Basketball", "Cricket", "Football", "Golf" ,"Hockey"};
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 The output will be as follows.
 
 ![Blazor DropDownList with String values](./images/blazor_dropdown_string_array.png)
 
-```csharp
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns
 
 <SfDropDownList TValue=int? TItem=int? Placeholder="Select a game" DataSource="@data" Width="300px"></SfDropDownList>
@@ -149,7 +162,8 @@ The output will be as follows.
 @code{
     public int?[] data = { 1011, 1022, 1044, 1066 };
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 The output will be as follows.
 
@@ -161,7 +175,9 @@ The DropDownList can generate its list items through an array of complex data. F
 
 In the following example, `Game` column from complex data has been mapped to the `Value` field.
 
-```csharp
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns
 
 <SfDropDownList TValue="Games" TItem="Games" Width="300px" Placeholder="Select a game" DataSource="@LocalData">
@@ -187,7 +203,8 @@ In the following example, `Game` column from complex data has been mapped to the
     new Games() { ID= "Game10", Game= "Tennis"},
   };
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 The output will be as follows.
 
@@ -197,7 +214,8 @@ The output will be as follows.
 
 You can bind enum data to DropDownList component. The following code helps you get a string value from the enumeration data.
 
-```csharp
+{% tabs %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.DropDowns;
 
@@ -221,7 +239,8 @@ You can bind enum data to DropDownList component. The following code helps you g
     }
 }
 
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 The output will shown as follows,
 
@@ -236,7 +255,9 @@ The [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 The below sample demonstrates `int` is used as `TValue`. So, if we clear the value using clear button, it will set to 0 as it's the default value of the respective type.
 
 
-```csharp
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 
 <SfDropDownList TValue="int?" TItem="Games" ShowClearButton=true Width="300px" Placeholder="Select a game" DataSource="@LocalData">
@@ -262,7 +283,8 @@ The below sample demonstrates `int` is used as `TValue`. So, if we clear the val
     new Games() { ID= 10, Game= "Tennis"},
   };
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 The output will shown as follows,
 
@@ -276,7 +298,9 @@ You can change the `TItem` property dynamically which defines the datasource typ
 
 First, you need to create a `DropDownList.razor` file in the `/Pages` folder as a parent component. We’ll also add a **[Parameter]** property for a `List<TItem>` and `TValue`.
 
-```csharp
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.DropDowns;
 @typeparam TValue;
 @typeparam TItem;
@@ -293,7 +317,8 @@ First, you need to create a `DropDownList.razor` file in the `/Pages` folder as 
     [Parameter]
     public EventCallback<TValue> DDLValueChanged { get; set; }
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 ### Usage of Generic component with different type
 
@@ -303,7 +328,9 @@ Here, we have rendered the DropDownList component with **TValue** as **string** 
 
 **[Index.razor]**
 
-```csharp
+{% tabs %}
+{% highlight razor %}
+
 <DropDownList TValue="string" TItem="Games" @bind-DDLValue="@value" customData="@LocalData">
 </DropDownList>
 
@@ -327,11 +354,13 @@ new Games() { ID= "Game9", Text= "Snooker" },
 new Games() { ID= "Game10", Text= "Tennis"},
   };
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 **[Counter.razor]**
 
-```csharp
+{% tabs %}
+{% highlight razor %}
 <DropDownList TValue="int?" TItem="Games" @bind-DDLValue="@value" customData="@LocalData">
 </DropDownList>
 
@@ -355,6 +384,7 @@ new Games() { ID= 9, Text= "Snooker" },
 new Games() { ID= 10, Text= "Tennis"},
   };
 }
-```
+{% endtabs %}
+{% endhighlight razor %}
 
 
