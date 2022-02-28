@@ -44,7 +44,7 @@ Use the following list of keys to navigate the currently focused Calendar after 
 | --- | --- |
 | <kbd>Upper Arrow</kbd>  | Focuses the same day of the previous week. |
 | <kbd>Down Arrow</kbd>  | Focuses the same day of the next week. |
-| <kbd>Left Arrow</kbd>  | Focuses the day before. |
+| <kbd>Left Arrow</kbd>  | Focuses the previous day. |
 | <kbd>Right Arrow</kbd>  | Focuses the next day. |
 | <kbd>Home</kbd>  | Focuses the first day of the month. |
 | <kbd>End</kbd>  | Focuses the last day of the month. |
@@ -58,7 +58,7 @@ Use the following list of keys to navigate the currently focused Calendar after 
 | <kbd>Alt + Right</kbd>  | Focuses through out the pop-up container in forward direction. |
 | <kbd>Alt + Left</kbd>  | Focuses through out the pop-up container in backward direction. |
 
-> To focusout the DateRangePicker component use the `t` keys. For additional information about native event, [click](./native-events/) here.
+> To focus out the DateRangePicker component, use the `t` keys. For additional information about native event, [click](./native-events/) here.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

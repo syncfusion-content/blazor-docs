@@ -11,25 +11,25 @@ documentation: ug
 
 The web accessibility defines a way to make web content and web applications more accessible to disabled people. It especially helps the dynamic content change and advanced user interface components developed with Ajax, HTML, JavaScript, and related technologies.
 
-DateTimePicker provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices) specifications. WAI-ARIA supports is achieved through the attributes like `aria-expanded`, `aria-disabled`, `aria-activedescendant` applied to the input element.
+DateTimePicker provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices) specifications. WAI-ARIA support is achieved through the attributes like `aria-expanded`, `aria-disabled`, `aria-activedescendant` applied to the input element.
 
 To learn about the accessibility of Calendar, refer to the Calendar's [Accessibility](../calendar/accessibility/) section.
 
 It helps to provide information about the widget for assistive technology to the disabled person in screen reader.
 
-* **aria-expanded**: Attributes indicates the state of a collapsible element.
+* **aria-expanded**: Attribute indicates the state of a collapsible element.
 
 * **aria-disabled**: Attribute indicates the disabled state of this DateTimePicker component.
 
 * **aria-activedescendent**: Attribute helps in managing the current active child of the DateTimePicker component.
 
-## Keyboard Interaction
+## Keyboard interaction
 
-You can use the following keys to interact with the DateTimePicker. The component implements the keyboard navigation support by following the  [WAI-ARIA practices](http://www.w3.org/WAI/PF/aria-practices).
+You can use the following keys to interact with the DateTimePicker. The component implements the keyboard navigation support by following the [WAI-ARIA practices](http://www.w3.org/WAI/PF/aria-practices).
 
 DateTimePicker supports the below list of shortcut keys:
 
-### Input Navigation
+### Input navigation
 
 Before opening the popup, use the following keys to control the popup element.
 
@@ -38,7 +38,7 @@ Before opening the popup, use the following keys to control the popup element.
 | <kbd>Alt +  Down Arrow</kbd> | Opens the select popup |
 | <kbd>Alt +  Down Arrow + Alt +  Down Arrow </kbd> | Toggles between two popups |
 
-### Calendar Navigation
+### Calendar navigation
 
 Use the following keys to interact with the Calendar after the DatePicker popup has opened:
 
@@ -75,7 +75,7 @@ Use the following shortcut keys to interact with the TimePicker after the TimePi
 | <kbd>Alt + Down Arrow</kbd> | Opens the popup. |
 | <kbd>Esc</kbd> | Closes the popup. |
 
-> To focusout the DateTimePicker component, use the `t` keys. For additional information about native event, [click](./native-events/) here.
+> To focus out the DateTimePicker component, use the `t` keys. For additional information about native event, [click](./native-events/) here.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
