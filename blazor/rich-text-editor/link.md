@@ -64,6 +64,10 @@ To remove a hyperlink from a text or image, select the text or image with the hy
 
 When you type URL and enter key to the Rich Text Editor, the typed URL will be automatically changed into the hyperlink.
 
+## Auto-url
+
+When you enable the [EnableAutoUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableAutoUrl) property, it will accepts the given URL (relative or absolute) without validating the URL for hyperlinks, otherwise the given URL will automatically convert to absolute path URL by prefixing https:// for hyperlinks and it defaults to false.
+
 ## Manipulation
 
 Add the custom tools on the selected link inside the Rich Text Editor through the quick toolbar.
