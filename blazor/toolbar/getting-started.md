@@ -278,3 +278,5 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 1. [Getting Started with Syncfusion Blazor for client-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 2. [Getting Started with Syncfusion Blazor for client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
 3. [Getting Started with Syncfusion Blazor for server-side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+
+N> You can also explore our [Blazor Toolbar example](https://blazor.syncfusion.com/demos/toolbar/default-functionalities?theme=bootstrap5) that shows you how to render and configure the toolbar.
