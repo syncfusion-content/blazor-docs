@@ -66,7 +66,7 @@ When you type URL and enter key to the Rich Text Editor, the typed URL will be a
 
 ## Auto-url
 
-When you enable the [EnableAutoUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableAutoUrl) property, it will accepts the given URL (relative or absolute) without validating the URL for hyperlinks, otherwise the given URL will automatically convert to absolute path URL by prefixing https:// for hyperlinks and it defaults to false.
+When you enable the [EnableAutoUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableAutoUrl) property, it will accept the given URL (relative or absolute) without validating it for hyperlinks. Otherwise, the given URL will automatically convert to absolute path URL by prefixing https:// for hyperlinks, and it defaults to false.
 
 ## Manipulation
 
