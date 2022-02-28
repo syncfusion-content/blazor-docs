@@ -11,6 +11,8 @@ documentation: ug
 
 To modify the ColorPicker appearance, you need to override the default CSS of ColorPicker component. Please find the list of CSS classes and its corresponding section in ColorPicker component. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
+> You can refer to our [Blazor Color Picker](https://www.syncfusion.com/blazor-components/blazor-color-picker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Color Picker example](https://blazor.syncfusion.com/demos/color-picker/default-functionalities?theme=bootstrap5) to understand how to render and configure the Color Picker.
+
 |CSS Class | Purpose of Class|
 |-----|-----|
 |.e-colorpicker-popup .e-container .e-handler|To customize Color Picker selection handler. |
