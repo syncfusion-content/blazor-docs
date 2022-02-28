@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Placeholder and Float Label in Blazor DropDown List Component | Syncfusion
-description: Checkout and learn here all about Placeholder and Float Label in Syncfusion Blazor DropDown List component and more.
+title: Placeholder/FloatLabel in Blazor DropDown List Component | Syncfusion
+description: Checkout and learn here all about Placeholder and FloatLabel in Syncfusion Blazor DropDown List component and more.
 platform: Blazor
 control: DropDown List
 documentation: ug
 ---
 
-# Placeholder
+## Placeholder in the Blazor DropDownList component
 
 The [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Placeholder) property is used display small description of the expected value in the input. In the below sample demonstration, We have set **Select a game** as Placeholder property value, which will set respective value to the placeholder attribute of the input element in the DOM.
 
@@ -72,7 +72,7 @@ The output will be as follows.
 
 ![Blazor DropdownList with placeholder with mandatory](./images/blazor_dropdown_placeholder_mandatory.png)
 
-# Float Label
+## Float Label in the DropDownList component
 
 The [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FloatLabelType) property specifies the floating label behavior of the DropDownList that the placeholder text floats above the TextBox based on the following values.
 

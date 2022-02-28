@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in Blazor DropDown List Component | Syncfusion
-description: Checkout and learn here all about Selection in Syncfusion Blazor DropDown List component and more.
+description: Checkout and learn here all about Selection feature in Syncfusion Blazor DropDownList component and more.
 platform: Blazor
 control: DropDown List
 documentation: ug
@@ -128,7 +128,7 @@ The output will be as follows,
 
 ## Programmatically Change the Selected Value
 
-You can change the component value programtically or externally by the component instance using `@ref` property of the component. The below sample demonstrates how to change the value of the component using click event of the button component.
+You can change the component value programmatically or externally by the component instance using `@ref` property of the component. The below sample demonstrates how to change the value of the component using click event of the button component.
 
 ```csharp
 @using Syncfusion.Blazor.DropDowns
@@ -222,7 +222,7 @@ The output will be as follows,
 
 We can get all the datasource items belongs to the value selected in the component by using [GetDataByValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_GetDataByValue__0_) method. It will returns the items with the return type of TValue mapped to the component. 
 
-The below sample demonstrates usage `GetDataByvalue` method,
+The below sample demonstrates usage `GetDataByValue` method,
 
 ```csharp
 @using Syncfusion.Blazor.DropDowns
@@ -267,7 +267,7 @@ The below sample demonstrates usage `GetDataByvalue` method,
 
 ## Focus the Next Component on Selection
 
-We can focus the component programatically using [FocusAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusAsync) public method. It will set focus instantly to the DropDownList component when invoking it. 
+We can focus the component programmatically using [FocusAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusAsync) public method. It will set focus instantly to the DropDownList component when invoking it. 
 
 You can also switch focus from one component to another using action based events. In the below sample demonstration, the focus will move from dropdown A to dropdown B if the value is selected in the dropdown A. Hence we have invoked the respective focusing method of B component inside A component's Closed event.
 
@@ -390,7 +390,7 @@ You can trigger the ValueChange event manually by using the instance (taken from
 
 ## ValueChange Event
 
-The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event is triggered when the value of the DropDownList component get changed or modified. Also it will return the neccessary arguments including the current and previously selected/changed value.
+The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event is triggered when the value of the DropDownList component get changed or modified. Also it will return the necessary arguments including the current and previously selected/changed value.
 
 ```csharp
 @using Syncfusion.Blazor.DropDowns
@@ -440,9 +440,9 @@ The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDo
 
 ## OnValueSelect Event
 
-The [OnValueSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnValueSelect) event is triggered when the user selects any value in the DropDownList component. You can get the neccessary arguments including `ItemData` (datasource items related to the selected value). Also you can prevent the selection of items by setting the `Cancel` property as `true` provided by the event arguments. 
+The [OnValueSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnValueSelect) event is triggered when the user selects any value in the DropDownList component. You can get the necessary arguments including `ItemData` (datasource items related to the selected value). Also you can prevent the selection of items by setting the `Cancel` property as `true` provided by the event arguments. 
 
-The below example demosntrates the usage of OnValueSelect event.
+The below example demonstrates the usage of OnValueSelect event.
 
 ```csharp
 @using Syncfusion.Blazor.DropDowns
@@ -492,7 +492,7 @@ The below example demosntrates the usage of OnValueSelect event.
 
 ## Focus Event
 
-The [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Focus) event will trigger when the component gets focused. By using the respective event we can perform required things when the component get focused. The below code example demosntrates the usage of Focus event.
+The [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Focus) event will trigger when the component gets focused. By using the respective event we can perform required things when the component get focused. The below code example demonstrates the usage of Focus event.
 
 ```csharp
 @using Syncfusion.Blazor.DropDowns
@@ -542,7 +542,7 @@ The [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.Dr
 
 ## Blur Event
 
-The [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Blur) event will trigger when focus moves out from the component. By using the respective event we can perform required things when the component get focused out.The below code example demosntrates the usage of Blur event.
+The [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Blur) event will trigger when focus moves out from the component. By using the respective event we can perform required things when the component get focused out.The below code example demonstrates the usage of Blur event.
 
 ```csharp
 @using Syncfusion.Blazor.DropDowns

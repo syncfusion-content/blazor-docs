@@ -11,7 +11,7 @@ documentation: ug
 
 The DropDownList loads the data either from local data sources or remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports the data type of `array` or [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
-The **TValue** used to specifies the type of the type paramater TValue for the DropDownList component. The **TItem** used to specifies the type of the type paramater TItem for the DropDownList component. The 
+The **TValue** used to specifies the type of the type parameter TValue for the DropDownList component. The **TItem** used to specifies the type of the type parameter TItem for the DropDownList component. The 
 
 The DropDownList also supports different kinds of data services such as OData, OData V4, and Web API, and data formats such as XML, JSON, and JSONP with the help of [DataManager](https://help.syncfusion.com/cr/aspnetcore-js2) adaptors.
 
