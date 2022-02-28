@@ -9,21 +9,40 @@ documentation: ug
 
 # Data Binding in Blazor DropDown List Component
 
-Data binding can be achieved by using the `bind-Value` attribute and it supports string, int, Enum and bool types. If component value has been changed, it will affect all the places where you bind the variable for the **bind-value** attribute.
+The DropDownList loads the data either from local data sources or remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports the data type of `array` or [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
+
+The **TValue** used to specifies the type of the type paramater TValue for the DropDownList component. The **TItem** used to specifies the type of the type paramater TItem for the DropDownList component. The 
+
+The DropDownList also supports different kinds of data services such as OData, OData V4, and Web API, and data formats such as XML, JSON, and JSONP with the help of [DataManager](https://help.syncfusion.com/cr/aspnetcore-js2) adaptors.
+
+| Fields | Type | Description |
+|------|------|-------------|
+| Text |  `string` | Specifies the display text of each list item. |
+| Value |  `int or string` | Specifies the hidden data value mapped to each list item that should contain a unique value. |
+| GroupBy |  `string` | Specifies the category under which the list item has to be grouped. |
+| IconCss |  `string` | Specifies the icon class of each list item. |
+
+> When binding complex data to the DropDownList, fields should be mapped correctly. Otherwise, the selected item remains undefined.
+
+## Binding local data
+
+You can bind the local data to the DropDownList component as mentioned in the below way.
+
+### Array of JSON data
+
+The DropDownList can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
+
+In the following example, `Name` column from complex data has been mapped to the `Value` field.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-<p>DropDownList value is:<strong>@DropVal</strong></p>
-
-<SfDropDownList TValue="string" Placeholder="e.g. Australia" TItem="Countries" @bind-Value="@DropVal" DataSource="@Country">
-    <DropDownListFieldSettings Value="Name"></DropDownListFieldSettings>
+<SfDropDownList TValue="string" TItem="Countries" Placeholder="e.g. Australia" DataSource="@Country">
+    <DropDownListFieldSettings Text="Name" Value="Code"></DropDownListFieldSettings>
 </SfDropDownList>
 
 @code {
 
-    public string DropVal;
-
     public class Countries
     {
         public string Name { get; set; }
@@ -31,44 +50,813 @@ Data binding can be achieved by using the `bind-Value` attribute and it supports
         public string Code { get; set; }
     }
 
-    List<Countries> Country = new List<Countries>
-{
+    List<Countries>Country = new List<Countries>
+    {
         new Countries() { Name = "Australia", Code = "AU" },
         new Countries() { Name = "Bermuda", Code = "BM" },
         new Countries() { Name = "Canada", Code = "CA" },
         new Countries() { Name = "Cameroon", Code = "CM" },
+        new Countries() { Name = "Denmark", Code = "DK" },
+        new Countries() { Name = "France", Code = "FR" },
+        new Countries() { Name = "Finland", Code = "FI" },
+        new Countries() { Name = "Germany", Code = "DE" },
+        new Countries() { Name = "Greenland", Code = "GL" },
+        new Countries() { Name = "Hong Kong", Code = "HK" },
+        new Countries() { Name = "India", Code = "IN" },
+        new Countries() { Name = "Italy", Code = "IT" },
+        new Countries() { Name = "Japan", Code = "JP" },
+        new Countries() { Name = "Mexico", Code = "MX" },
+        new Countries() { Name = "Norway", Code = "NO" },
+        new Countries() { Name = "Poland", Code = "PL" },
+        new Countries() { Name = "Switzerland", Code = "CH" },
+        new Countries() { Name = "United Kingdom", Code = "GB" },
+        new Countries() { Name = "United States", Code = "US" },
     };
 }
 ```
 
-## Index Value Binding
+The output will be as follows.
 
-Index value binding can be achieved by using `bind-Index` attribute and it supports int and int nullable types. By using this attribute you can bind the values respective to its index.
+![Binding BLazor DropdownList Items](./images/blazor-dropdownlist-binding-items.png)
+
+## Primitive type
+
+You can bind the data to the DropDownList as a list of string, int, double and bool type items.
+
+The following code demonstrates array of string and integer values to the DropDownList component.
+
+```csharp
+@using Syncfusion.Blazor.DropDowns
+
+<SfDropDownList TValue="string" TItem="string" Placeholder="Select a game" DataSource="@data" @bind-Value="MyItem" Width="300px"></SfDropDownList>
+
+@code{
+    List<string> data = new List<string>() {"One", "Two", "Three"};
+    public string MyItem { get; set; } = "Two";
+}
+```
+
+```csharp
+@using Syncfusion.Blazor.DropDowns
+
+<SfDropDownList TValue="int?" TItem="int?" Placeholder="Select a game" DataSource="@data" @bind-Value="MyItem" Width="300px"></SfDropDownList>
+
+@code{
+    List<int?> data = new List<int?>() { 1022, 1033, 1045 };
+    public int? MyItem { get; set; } = 1033;
+}
+```
+
+## Complex data type
+
+The DropDownList can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
+
+In the following example, `Code.ID` column and `Country.CountryID` column from complex data have been mapped to the `Value` field and `Text` field, respectively.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-<SfAutoComplete TValue="string" Placeholder="e.g. Australia" TItem="Countries" @bind-Index="@ddlIndex" DataSource="@Country">
-    <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
-</SfAutoComplete>
+<SfDropDownList TValue="string" TItem="Complex" Placeholder="e.g. Select a country" DataSource="@LocalData">
+    <DropDownListFieldSettings Text="Country.CountryID" Value="Code.ID"></DropDownListFieldSettings>
+</SfDropDownList>
 
 @code {
 
-    private int? ddlIndex { get; set; } = 1;
+    public IEnumerable<Complex> LocalData { get; set; } = new Complex().GetData();
 
-    public class Countries
+    public class Code
     {
-        public string Name { get; set; }
-
-        public string Code { get; set; }
+        public string ID { get; set; }
     }
 
-    List<Countries> Country = new List<Countries>
-{
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
+    public class Country
+    {
+        public string CountryID { get; set; }
+    }
+
+    public class Complex
+    {
+        public Country Country { get; set; }
+        public Code Code { get; set; }
+        public List<Complex> GetData()
+        {
+            List<Complex> Data = new List<Complex>();
+            Data.Add(new Complex() { Country = new Country() { CountryID = "Australia" }, Code = new Code() { ID = "AU" } });
+            Data.Add(new Complex() { Country = new Country() { CountryID = "Bermuda" }, Code = new Code() { ID = "BM" } });
+            Data.Add(new Complex() { Country = new Country() { CountryID = "Canada" }, Code = new Code() { ID = "CA" } });
+            Data.Add(new Complex() { Country = new Country() { CountryID = "Cameroon" }, Code = new Code() { ID = "CM" } });
+            Data.Add(new Complex() { Country = new Country() { CountryID = "Denmark" }, Code = new Code() { ID = "DK" } });
+            Data.Add(new Complex() { Country = new Country() { CountryID = "France" }, Code = new Code() { ID = "FR" } });
+            return Data;
+        }
+    }
+}
+```
+
+The output will be as follows.
+
+![Binding Complex Items with Blazor DropdownList](./images/blazor-dropdownlist-complex-data.png)
+
+## Expando object binding
+
+You can bind [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-5.0) data to the DropDownList component. The following example `ExpandoObject` is bound to the collection of vehicles data.
+
+```csharp
+
+@using Syncfusion.Blazor.DropDowns
+@using System.Dynamic
+
+<SfDropDownList TItem="ExpandoObject" TValue="string" PopupHeight="230px" Placeholder="Select a vehicle" DataSource="@VehicleData" >
+    <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
+ </SfDropDownList>
+
+@code{
+    public List<ExpandoObject> VehicleData { get; set; } = new List<ExpandoObject>();
+    protected override void OnInitialized()
+    {
+        VehicleData = Enumerable.Range(1, 15).Select((x) =>
+        {
+            dynamic d = new ExpandoObject();
+            d.ID = (1000 + x).ToString();
+            d.Text = (new string[] { "Hennessey Venom", "Bugatti Chiron", "Bugatti Veyron Super Sport", "SSC Ultimate Aero", "Koenigsegg CCR", "McLaren F1", "Aston Martin One- 77", "Jaguar XJ220", "McLaren P1", "Ferrari LaFerrari", "Mahindra Jaguar", "Hyundai Toyota", "Jeep Volkswagen", "Tata Maruti Suzuki", "Audi Mercedes Benz" }[x - 1]);
+            return d;
+        }).Cast<ExpandoObject>().ToList<ExpandoObject>();
+    }
+}
+
+```
+
+The output will be as follows,
+
+![Blazor DropDownList with expando object data binding](./images/blazor_dropdown_expando-object.png)
+
+## Observable collection binding
+
+You can bind [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-5.0) data to the DropDownList component. In the following example, `Observable Data` is bound to a collection of colors data.
+
+```csharp
+
+@using Syncfusion.Blazor.DropDowns
+@using System.Collections.ObjectModel;
+
+ <SfDropDownList  TValue="string" TItem="Colors" PopupHeight="230px" Placeholder="Select a color" DataSource="@ColorsData">
+    <DropDownListFieldSettings Text="Color" Value="Code"></DropDownListFieldSettings>
+</SfDropDownList>
+
+@code {
+public class Colors
+    {
+        public string Code { get; set; }
+        public string Color { get; set; }
+    }
+    private ObservableCollection<Colors> ColorsData = new ObservableCollection<Colors>() 
+    {
+        new Colors() { Color = "Chocolate", Code = "#75523C" }, 
+        new Colors() { Color = "CadetBlue", Code = "#3B8289" },
+        new Colors() { Color = "DarkOrange", Code = "#FF843D" },
+        new Colors() { Color = "DarkRed", Code = "#CA3832"},
+        new Colors() { Color = "Fuchsia", Code = "#D44FA3" },
+        new Colors() { Color = "HotPink", Code = "#F23F82" },
+        new Colors() { Color = "Indigo", Code = "#2F5D81" },
+        new Colors() { Color = "LimeGreen", Code = "#4CD242" },
+        new Colors() { Color = "OrangeRed", Code = "#FE2A00" },
+        new Colors() { Color = "Tomato", Code = "#FF745C" },
+        new Colors() { Color = "Brown", Code = "#A52A2A" },
+        new Colors() { Color = "Maroon", Code = "#800000" },
+        new Colors() { Color = "Green", Code = "#008000" },
+        new Colors() { Color = "Pink", Code = "#FFC0CB" },
+        new Colors() { Color = "Purple", Code = "#800080" }
     };
+}
+
+```
+
+The output will be as follows,
+
+![Blazor DropDownList with observable collection data binding](./images/blazor_dropdown_observable-collection.png)
+
+## Dynamic object binding
+
+You can bind [DynamicObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-5.0) data to the DropDownList component. The following example `DynamicObject` is bound to the collection of customers data.
+
+```csharp
+
+@using Syncfusion.Blazor.DropDowns
+@using System.Dynamic
+
+<SfDropDownList TValue="string" TItem="DynamicDictionary" Placeholder="Select a name" DataSource="@Orders">
+    <DropDownListFieldSettings Text="CustomerName" Value="CustomerName"></DropDownListFieldSettings>
+</SfDropDownList>
+
+@code{
+    public List<DynamicDictionary> Orders = new List<DynamicDictionary>() { };
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 15).Select((x) =>
+        {
+            dynamic d = new DynamicDictionary();
+            d.OrderID = 1000 + x;
+            d.CustomerName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael", "Robert", "Anne", "Nige", "Fuller", "Dodsworth", "Leverling", "Callahan", "Suyama", "Davolio" }[x - 1]);
+            return d;
+        }).Cast<DynamicDictionary>().ToList<DynamicDictionary>();
+    }
+    public class DynamicDictionary : System.Dynamic.DynamicObject
+    {
+        Dictionary<string, object> dictionary = new Dictionary<string, object>();
+        public override bool TryGetMember(GetMemberBinder binder, out object result)
+        {
+            string name = binder.Name;
+            return dictionary.TryGetValue(name, out result);
+        }
+        public override bool TrySetMember(SetMemberBinder binder, object value)
+        {
+            dictionary[binder.Name] = value;
+            return true;
+        }
+        //The GetDynamicMemberNames method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
+        public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
+        {
+            return this.dictionary?.Keys;
+        }
+    }
+}
+
+```
+
+The output will be as follows,
+
+![Blazor DropDownList with dynamic object data binding](./images/blazor_dropdown_dynamic-object.png)
+
+## Enum data binding
+
+You can bind enum data to DropDownList component. The following code helps you get a description value from the enumeration data.
+
+```cshtml
+@using Syncfusion.Blazor.DropDowns
+@using System.Linq; 
+@using System.Reflection; 
+@using System.ComponentModel 
+
+<SfDropDownList TValue="countrycode?" Placeholder="Select a country" TItem="EnumWithDescription" DataSource="@enumData" Width="300px"> 
+    <DropDownListFieldSettings Text="Name" Value="Value"></DropDownListFieldSettings> 
+</SfDropDownList> 
+ 
+@code { 
+    public enum countrycode 
+    { 
+        [Description("Unknown")] 
+        unknown, 
+        [Description("USA")] 
+        us, 
+        [Description("India")] 
+        ind, 
+        [Description("Bermuda")] 
+        bm, 
+    } 
+ 
+    public class EnumWithDescription 
+    { 
+        public string Name { get; set; } 
+        public countrycode Value { get; set; } 
+    } 
+ 
+    public List<EnumWithDescription> enumData = new List<EnumWithDescription>() 
+{ 
+        new EnumWithDescription { Name = GetEnumDescription(countrycode.unknown), Value = countrycode.unknown }, 
+        new EnumWithDescription { Name = GetEnumDescription(countrycode.us), Value = countrycode.us }, 
+        new EnumWithDescription { Name = GetEnumDescription(countrycode.ind), Value = countrycode.ind }, 
+        new EnumWithDescription { Name = GetEnumDescription(countrycode.bm), Value = countrycode.bm } 
+    }; 
+ 
+    public static string GetEnumDescription(Enum value) 
+    { 
+        FieldInfo fi = value.GetType().GetField(value.ToString()); 
+ 
+        DescriptionAttribute[] attributes = fi.GetCustomAttributes(typeof(DescriptionAttribute), false) as DescriptionAttribute[]; 
+ 
+        return attributes.First().Description; 
+    } 
+ 
+} 
+```
+
+The output will shown as follows,
+
+![Blazor DropDownList with Enum Data](./images/blazor-dropdownlist-enum-data.png)
+
+## ValueTuple data binding
+
+You can bind [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0) data to the DropDownList component. The following code helps you to get a string value from the enumeration data by using [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0).
+
+```csharp
+
+@using Syncfusion.Blazor.DropDowns;
+
+<SfDropDownList TItem="(DayOfWeek, string)" Width="250px" TValue="DayOfWeek"
+                DataSource="@(Enum.GetValues<DayOfWeek>().Select(e => (e, e.ToString())))">
+    <DropDownListFieldSettings Value="Item1" Text="Item2" />
+</SfDropDownList>
+
+```
+
+The output will be as follows,
+
+![Blazor DropDownList ValueTuple Data](./images/blazor-dropdown-valuetuple.png)
+
+## Binding Remote data
+
+The DropDownList supports retrieval of data from remote data services with the help of [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html) control. The [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property is used to fetch data from the database and bind it to the DropDownList.
+
+### OData v4 services
+
+[OData v4 Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_ODataV4Adaptor) provies ability to consume and manipulate data from OData v4 services. The following sample displays the first 6 contacts from **Customers** table of the `Northwind` Data Service.
+
+```cshtml
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
+
+<SfDropDownList TValue="string" TItem="OrderDetails" Placeholder="Select a customer" Query="@Query">
+    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain=true></SfDataManager>
+    <DropDownListFieldSettings Text="CustomerID" Value="OrderID"></DropDownListFieldSettings>
+</SfDropDownList>
+
+@code {
+    public Query Query = new Query().Select(new List<string> { "CustomerID", "OrderID" }).Take(6).RequiresCount();
+
+    public class OrderDetails
+        {
+            public int? OrderID { get; set; }
+            public string CustomerID { get; set; }
+            public int? EmployeeID { get; set; }
+            public double? Freight { get; set; }
+            public string ShipCity { get; set; }
+            public bool Verified { get; set; }
+            public DateTime? OrderDate { get; set; }
+            public string ShipName { get; set; }
+            public string ShipCountry { get; set; }
+            public DateTime? ShippedDate { get; set; }
+            public string ShipAddress { get; set; }
+        }
+}
+```
+
+The output will be as follows.
+
+![Blazor DropdownList with Data Binding](./images/blazor-dropdownlist-binding-data.png)
+
+### Web API Adaptor
+
+You can use the [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_WebApiAdaptor) to interact with Web APIs created with OData endpoint. The WebApiAdaptor is extended from the ODataAdaptor. Hence to use WebApiAdaptor, the endpoint should understand the OData formatted queries sent along with request. 
+
+```cshtml
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
+
+<SfDropDownList TValue="string" TItem="EmployeeData" Placeholder="Select a Employee" Query="@Query">
+    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor" CrossDomain=true></SfDataManager>
+    <DropDownListFieldSettings Text="FirstName" Value="EmployeeID"></DropDownListFieldSettings>
+</SfDropDownList>
+
+@code {
+    public Query Query = new Query();
+
+    public class EmployeeData
+    {
+        public int EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public string Designation { get; set; }
+        public string Country { get; set; }
+    }
+}
+```
+
+The output will be as follows.
+
+![Blazor DropdownList with Web API Data](./images/blazor-dropdownlist-web-api-data.png)
+
+### Custom Adaptor
+
+The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) has [custom adaptor support](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_CustomAdaptor) which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the DropDownList component.
+
+For implementing custom data binding in DropDownList, the `DataAdaptor` class is used. This abstract class acts as a base class for the custom adaptor.
+
+The `DataAdaptor` abstract class has both synchronous and asynchronous method signatures which can be overridden in the custom adaptor. Following are the method signatures present in this class,
+
+```csharp
+public abstract class DataAdaptor
+{
+    /// <summary>
+    /// Performs data Read operation synchronously.
+    /// </summary>
+    public virtual object Read(DataManagerRequest dataManagerRequest, string key = null)
+
+    /// <summary>
+    /// Performs data Read operation asynchronously.
+    /// </summary>
+    public virtual Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string key = null)
+}
+```
+
+The custom data binding can be performed in the DropDownList component by providing the custom adaptor class and overriding the Read or ReadAsync method of the DataAdaptor abstract class.
+
+The following sample code demonstrates implementing custom data binding using custom adaptor,
+
+```cshtml
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
+
+<SfDropDownList TValue="string" TItem="Order">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <DropDownListFieldSettings Value="CustomerID"></DropDownListFieldSettings>
+</SfDropDownList>
+
+
+@code{
+    public static List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
+    }
+
+    // Implementing custom adaptor by extending the DataAdaptor class
+    public class CustomAdaptor : DataAdaptor
+    {
+        // Performs data Read operation
+        public override object Read(DataManagerRequest dm, string key = null)
+        {
+            IEnumerable<Order> DataSource = Orders;
+            if (dm.Search != null && dm.Search.Count > 0)
+            {
+                // Searching
+                DataSource = DataOperations.PerformSearching(DataSource, dm.Search);
+            }
+            if (dm.Sorted != null && dm.Sorted.Count > 0)
+            {
+                // Sorting
+                DataSource = DataOperations.PerformSorting(DataSource, dm.Sorted);
+            }
+            if (dm.Where != null && dm.Where.Count > 0)
+            {
+                // Filtering
+                DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+            }
+            int count = DataSource.Cast<Order>().Count();
+            if (dm.Skip != 0)
+            {
+                //Paging
+                DataSource = DataOperations.PerformSkip(DataSource, dm.Skip);
+            }
+            if (dm.Take != 0)
+            {
+                DataSource = DataOperations.PerformTake(DataSource, dm.Take);
+            }             
+            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
+        }
+    }
+}
+```
+
+
+### Offline mode
+
+To avoid post back for every action, set the DropDownList to load all data on initialization and make the actions process in client-side. To enable this behavior, use the `Offline` property of `DataManager`.
+
+The following example for remote data binding and enabled offline mode.
+
+```cshtml
+<SfDropDownList TValue="string" TItem="EmployeeData" Placeholder="Select a Employee" Query="@Query">
+    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Offline=true Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor" CrossDomain=true></SfDataManager>
+    <DropDownListFieldSettings Text="FirstName" Value="EmployeeID"></DropDownListFieldSettings>
+</SfDropDownList>
+
+@code {
+    public Query Query = new Query();
+
+    public class EmployeeData
+    {
+        public int EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public string Designation { get; set; }
+        public string Country { get; set; }
+    }
+}
+```
+
+The output will be as follows.
+
+![Blazor DropdownList in Offline Mode](./images/blazor-dropdownlist-web-api-data.png)
+
+## Entity Framework
+
+Entity Framework is an open-source object-relational mapper (O/RM) from Microsoft. Entity Framework works with many databases. But here, we are going to discuss the step-by-step procedure to create an Entity Framework using the MS SQL Server database and connect it to the DropDownList component to perform operations in a Blazor Server Application. Please refer [this](https://blazor.syncfusion.com/documentation/common/data-binding/bind-entity-framework) documentation to know more about Entity framework.
+
+You need to follow the below steps to consume data from the **Entity Framework** in the DropDownList component.
+
+### Create DBContext class
+
+The first step is to create a DBContext class called **OrderContext** to connect to a Microsoft SQL Server database.
+
+```csharp
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using EFDropDown.Shared.Models;
+
+namespace EFDropDown.Shared.DataAccess
+{
+    public class OrderContext : DbContext
+    {
+        public virtual DbSet<Shared.Models.Order> Orders { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Blazor\DropDownList\EFDropDown\Shared\App_Data\NORTHWND.MDF;Integrated Security=True;Connect Timeout=30");
+            }
+        }
+    }
+}
+```
+
+### Create data access layer
+
+Now, you need to create a class named **OrderDataAccessLayer**, which act as data access layer for retrieving the records from the database table.
+
+```csharp
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using EFDropDown.Shared.Models;
+
+namespace EFDropDown.Shared.DataAccess
+{
+    public class OrderDataAccessLayer
+    {
+        OrderContext db = new OrderContext();
+
+        //To Get all Orders details
+        public DbSet<Order> GetAllOrders()
+        {
+            try
+            {
+                return db.Orders;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+    }
+}
+```
+
+### Create Web API Controller
+
+ A Web API Controller has to be created which allows DropDownList directly to consume data from the Entity framework.
+
+```csharp
+using EFDropDown.Shared.DataAccess;
+using EFDropDown.Shared.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Web;
+using Microsoft.AspNetCore.Http;
+
+namespace EFDropDown.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    //DropDownList
+    public class DefaultController : ControllerBase
+    {
+        OrderDataAccessLayer db = new OrderDataAccessLayer();
+        [HttpGet]
+        public object Get()
+        {
+            IQueryable<Order> data = db.GetAllOrders().AsQueryable();
+            var count = data.Count();
+            var queryString = Request.Query;
+            if (queryString.Keys.Contains("$inlinecount"))
+            {
+                StringValues Skip;
+                StringValues Take;
+                int skip = (queryString.TryGetValue("$skip", out Skip)) ? Convert.ToInt32(Skip[0]) : 0;
+                int top = (queryString.TryGetValue("$top", out Take)) ? Convert.ToInt32(Take[0]) : data.Count();
+                return new { Items = data.Skip(skip).Take(top), Count = count };
+            }
+            else
+            {
+                return data;
+            }
+         }
+    }
+}
+```
+
+### Configure DropDownList component 
+
+Now, you can configure the DropDownList using the [**'SfDataManager'**](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to interact with the created Web API and consume the data appropriately. To interact with web api, you need to use [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html#Syncfusion_Blazor_Adaptors_WebApiAdaptor).
+
+```cshtml
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
+
+<SfDropDownList TValue="string" TItem="Order" Placeholder="Select a Country">
+    <SfDataManager Url="api/Default" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
+    <DropDownListFieldSettings Text="ShipCountry" Value="OrderID"></DropDownListFieldSettings>
+</SfDropDownList>
+
+@code{
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string ShipCountry { get; set; }
+    }
+}
+```
+
+## Adding New Items
+
+You can add the new item in the popup with help of using [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_AddItemsAsync_System_Collections_Generic_IEnumerable__0__System_Nullable_System_Int32__) public method. This method will add a mentioned item in the DropDownList popup without affecting the data source items.
+
+```csharp
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Buttons
+
+<div>
+<SfDropDownList @ref="ddlObj" TValue="string" TItem="Games" Width="300px" Placeholder="Select a game" DataSource="@LocalData">
+  <DropDownListFieldSettings Value="ID" Text="Game"></DropDownListFieldSettings>
+</SfDropDownList>
+</div>
+<div>
+<SfButton Content="Click to add a new item" OnClick="OnBtnClick"></SfButton>
+</div>
+
+@code {
+    SfDropDownList<string, Games> ddlObj;
+    public class Games
+    {  
+        public string ID { get; set; }
+        public string Game { get; set; }
+    }
+    List<Games> LocalData = new List<Games> {
+    new Games() { ID= "Game1", Game= "American Football" },
+    new Games() { ID= "Game2", Game= "Badminton" },
+    new Games() { ID= "Game3", Game= "Basketball" },
+    new Games() { ID= "Game4", Game= "Cricket" },
+    new Games() { ID= "Game5", Game= "Football" },
+    new Games() { ID= "Game6", Game= "Golf" },
+    new Games() { ID= "Game7", Game= "Hockey" },
+    new Games() { ID= "Game8", Game= "Rugby"},
+    new Games() { ID= "Game9", Game= "Snooker" },
+  };
+    public async Task OnBtnClick()
+    {
+       await this.ddlObj.AddItemsAsync(new List<Games> { new Games() { ID = "Game11", Game = "Tennis" } });
+    }
+}
+```
+
+The output will be as follows.
+
+![Blazor DropDownList with Add Item](./images/blazor_dropdown_bind_addItem.png)
+
+## OnActionBegin Event
+
+The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnActionBegin) event will trigger before fetching data from the remote server. By using the respective event we can perform required things when the component before fetching data in it. The below code example demosntrates the usage of OnActionBegin event.
+
+```csharp
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Data
+
+<SfDropDownList TValue="string" TItem="OrderDetails" Placeholder="Select a customer" Query="@Query">
+    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain=true></SfDataManager>
+    <DropDownListFieldSettings Text="CustomerID" Value="OrderID"></DropDownListFieldSettings>
+     <DropDownListEvents TValue="string" TItem="OrderDetails" OnActionBegin="OnActionBegin"></DropDownListEvents>
+</SfDropDownList>
+
+@code {
+    public Query Query = new Query().Select(new List<string> { "CustomerID", "OrderID" }).Take(6).RequiresCount();
+
+    public class OrderDetails
+        {
+            public int? OrderID { get; set; }
+            public string CustomerID { get; set; }
+            public int? EmployeeID { get; set; }
+            public double? Freight { get; set; }
+            public string ShipCity { get; set; }
+            public bool Verified { get; set; }
+            public DateTime? OrderDate { get; set; }
+            public string ShipName { get; set; }
+            public string ShipCountry { get; set; }
+            public DateTime? ShippedDate { get; set; }
+            public string ShipAddress { get; set; }
+        }
+
+    public void OnActionBegin()
+    {
+        Console.WriteLine("Action Begin event has been triggered !!");
+    }
+}
+```
+
+## OnActionComplete Event
+
+The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnActionComplete) event will trigger after data is fetched successfully from the remote server. By using the respective event we can perform required things when the component after fetching data in it. The below code example demosntrates the usage of OnActionComplete event.
+
+```csharp
+
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Data
+
+<SfDropDownList TValue="string" TItem="OrderDetails" Placeholder="Select a customer" Query="@Query">
+    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain=true></SfDataManager>
+    <DropDownListFieldSettings Text="CustomerID" Value="OrderID"></DropDownListFieldSettings>
+     <DropDownListEvents TValue="string" TItem="OrderDetails" OnActionComplete="OnActionComplete"></DropDownListEvents>
+</SfDropDownList>
+
+@code {
+    public Query Query = new Query().Select(new List<string> { "CustomerID", "OrderID" }).Take(6).RequiresCount();
+
+    public class OrderDetails
+        {
+            public int? OrderID { get; set; }
+            public string CustomerID { get; set; }
+            public int? EmployeeID { get; set; }
+            public double? Freight { get; set; }
+            public string ShipCity { get; set; }
+            public bool Verified { get; set; }
+            public DateTime? OrderDate { get; set; }
+            public string ShipName { get; set; }
+            public string ShipCountry { get; set; }
+            public DateTime? ShippedDate { get; set; }
+            public string ShipAddress { get; set; }
+        }
+
+    public void OnActionComplete()
+    {
+        Console.WriteLine("Action Complete event has been triggered !!");
+    }
+}
+```
+
+## OnActionFailure Event
+
+The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnActionFailure) event will trigger when the data fetch request from the remote server fails. The below code example demosntrates the usage of OnActionFailure event.
+
+```csharp
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Data
+
+<SfDropDownList TValue="string" TItem="OrderDetails" Placeholder="Select a customer" Query="@Query">
+    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain=true></SfDataManager>
+    <DropDownListFieldSettings Text="CustomerID" Value="OrderID"></DropDownListFieldSettings>
+     <DropDownListEvents TValue="string" TItem="OrderDetails" OnActionFailure="OnActionFailure"></DropDownListEvents>
+</SfDropDownList>
+
+@code {
+    public Query Query = new Query().Select(new List<string> { "CustomerID", "OrderID" }).Take(6).RequiresCount();
+
+    public class OrderDetails
+        {
+            public int? OrderID { get; set; }
+            public string CustomerID { get; set; }
+            public int? EmployeeID { get; set; }
+            public double? Freight { get; set; }
+            public string ShipCity { get; set; }
+            public bool Verified { get; set; }
+            public DateTime? OrderDate { get; set; }
+            public string ShipName { get; set; }
+            public string ShipCountry { get; set; }
+            public DateTime? ShippedDate { get; set; }
+            public string ShipAddress { get; set; }
+        }
+
+    public void OnActionFailure()
+    {
+        Console.WriteLine("Action Failure event has been triggered !!");
+    }
 }
 ```

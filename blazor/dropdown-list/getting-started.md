@@ -9,6 +9,8 @@ documentation: ug
 
 # Getting Started with Blazor DropDown List Component
 
+The Blazor Dropdown List is a quick replacement of the HTML select tags. It has a rich appearance and allows users to select a single value that is non-editable from a list of predefined values.
+
 This section briefly explains about how to include [Blazor DropDown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 To get start quickly with Blazor DropDownList component, you can check on this video.
@@ -330,6 +332,80 @@ By default, the width of the popup list automatically adjusts according to the D
 {% endtabs %}
 
 ![Changing Popup List Height in Blazor DropDownList](./images/blazor-dropdownlist-popup-height.png)
+
+## Get Selected Value
+
+* You can get the selected value of the DropDownList component from the **Value** property in the [ValueChange event argument](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Value). 
+
+```csharp
+
+@using Syncfusion.Blazor.DropDowns
+
+<SfDropDownList TValue="string" TItem="Games" Placeholder="Select a game" DataSource="@LocalData">
+  <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
+  <DropDownListEvents TValue="string" TItem="Games" ValueChange="OnValueChange"></DropDownListEvents>
+</SfDropDownList>
+
+@code {
+    public class Games
+    {  
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+    List<Games> LocalData = new List<Games> {
+    new Games() { ID= "Game1", Text= "American Football" },
+    new Games() { ID= "Game2", Text= "Badminton" },
+    new Games() { ID= "Game3", Text= "Basketball" },
+    new Games() { ID= "Game4", Text= "Cricket" },
+    new Games() { ID= "Game5", Text= "Football" },
+    new Games() { ID= "Game6", Text= "Golf" },
+    new Games() { ID= "Game7", Text= "Hockey" },
+    new Games() { ID= "Game8", Text= "Rugby"},
+    new Games() { ID= "Game9", Text= "Snooker" },
+    new Games() { ID= "Game10", Text= "Tennis"},
+  };
+    public void OnValueChange(ChangeEventArgs<string, Games> args)
+    {
+        Console.WriteLine("The DropDownList Value is: ", args.Value);
+    }
+}
+```
+
+* You can get the complete object list of the selected value from the **ItemData** property in the [ValueChange event argument](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_ItemData).
+
+```csharp
+
+@using Syncfusion.Blazor.DropDowns
+
+<SfDropDownList TValue="string" TItem="Games" Placeholder="Select a game" DataSource="@LocalData">
+  <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
+  <DropDownListEvents TValue="string" TItem="Games" ValueChange="OnValueChange"></DropDownListEvents>
+</SfDropDownList>
+
+@code {
+    public class Games
+    {  
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+    List<Games> LocalData = new List<Games> {
+    new Games() { ID= "Game1", Text= "American Football" },
+    new Games() { ID= "Game2", Text= "Badminton" },
+    new Games() { ID= "Game3", Text= "Basketball" },
+    new Games() { ID= "Game4", Text= "Cricket" },
+    new Games() { ID= "Game5", Text= "Football" },
+    new Games() { ID= "Game6", Text= "Golf" },
+    new Games() { ID= "Game7", Text= "Hockey" },
+    new Games() { ID= "Game8", Text= "Rugby"},
+    new Games() { ID= "Game9", Text= "Snooker" },
+    new Games() { ID= "Game10", Text= "Tennis"},
+  };
+    public void OnValueChange(ChangeEventArgs<string, Games> args)
+    {
+        Console.WriteLine("The complete data of the selected value is: ", args.ItemData);
+    }
+}
+```
 
 ## See Also
 
