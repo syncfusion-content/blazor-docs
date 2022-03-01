@@ -160,7 +160,7 @@ The following screenshot shows selection mode using cell
 
 Checkbox selection provides an option to select multiple datagrid records with help of checkbox in each row.
 
-To render the checkbox in each datagrid row, you need to assign the type as **CheckBox** using the  column [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) property of **GridColumn** component.
+To render the checkbox in each datagrid row, you need to assign the type as **CheckBox** using the column [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) property of **GridColumn** component.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -341,11 +341,11 @@ The DataGrid allows to select range of cells or rows by mouse or touch dragging.
 }
 ```
 
-![Drag Selection](images/drag-selection.gif)
+![Drag Selection in Blazor DataGrid ](images/drag-selection.gif)
 
 > * Drag selection is not compatible with [AutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAutoFill) feature.
 
-## Perform Toggle selection programmatically
+## Perform toggle selection programmatically
 
 You can perform toggle selection programmatically by using the **SelectRowAsync** method by passing **true** value as the second argument. In the below code example, we have programmatically toggle the row index 2.
 
