@@ -106,7 +106,7 @@ The following screenshot shows Initial filtering using FilterBar
 
 The filter operator for a column can be defined in the **Operator** in [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of **GridFilterSettings** component.
 
-The available operators and its supported data types are:
+The available operators and their supported data types are:
 
 Operator |Description |Supported Types
 -----|-----|-----

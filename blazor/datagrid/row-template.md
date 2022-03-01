@@ -147,7 +147,6 @@ The **RowTemplate** has an option to customize the look and behavior of the data
 
 ```
 
-The output will be as follows.
 
 ![Rows in Blazor DataGrid](./images/blazor-datagrid-rows.png)
 
@@ -294,7 +293,7 @@ Here [Custom DateTime](https://docs.microsoft.com/en-us/dotnet/standard/base-typ
 }
 ```
 
-The output will be as follows.
+
 
 ![Row Formatting in Blazor DataGrid](./images/blazor-datagrid-row-format.png)
 
