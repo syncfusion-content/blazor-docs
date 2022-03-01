@@ -9,7 +9,7 @@ documentation: ug
 
 # Editing in Blazor DataGrid Component
 
-The DataGrid component has options to dynamically insert, delete and update records.
+The DataGrid component has options to dynamically insert, delete, and update records.
 
 > [Editing](https://blazor.syncfusion.com/documentation/datagrid/editing/) feature requires a primary key column for CRUD operations.
 
@@ -18,7 +18,7 @@ To know about editing feature in Blazor DataGrid component, you can check on thi
 {% youtube
 "youtube:https://www.youtube.com/watch?v=jOiZpLexDB0"%}
 
-To define the primary key, set [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) to **true** in particular column whose value is unique.
+To define the primary key, set [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) to **true** in a particular column whose value is unique.
 
 You can start the edit action either by double-clicking the particular row or by selecting the required row and click on the **Edit** button in the toolbar. Similarly, you can add a new record to DataGrid either by clicking on **Add** button in the toolbar or on an external button which is bound to invoke the [AddRecord](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AddRecord) method of the DataGrid, **Save** and **Cancel** while in edit mode is possible using the respective toolbar icon in DataGrid.
 
@@ -66,16 +66,16 @@ The following screenshot represents Editing with Default Mode.
 
 > * Grid uses `Activator.CreateInstance<TValue>()` to generate a new record when an insert operation is invoked, so it must have a parameterless constructors defined for the model class and any referenced complex type classes. To provide custom logic for object creation during editing, you can refer [here](#provide-new-item-or-edited-item-using-events).
 > * If [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) is enabled, then it will be considered as a read-only column when editing and adding a record.
-> * You can disable editing for a particular column, by specifying
+> * You can disable editing for a particular column by specifying
 [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowEditing) to **false**.
->* You can disable adding for a particular column, by specifying
+>* You can disable adding for a particular column by specifying
 [AllowAdding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowAdding) to **false**.
->* You can disable editing of a record on double click, by specifying
+>* You can disable editing of a record on double click by specifying
 [EditSettings.AllowEditOnDblClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowEditOnDblClick) to **false**.
 
 ## Toolbar with edit option
 
-The datagrid toolbar has the  following built-in items to execute editing actions.
+The datagrid toolbar has the following built-in items to execute editing actions.
 
 * Add - Adds a new record.
 * Edit - Edits the selected record.
@@ -263,11 +263,11 @@ The following sample code demonstrates changing the position of the new row that
 The following image represents the new row added at the bottom of the DataGrid,
 ![Adding New Row at Bottom Position of Blazor DataGrid](./images/blazor-datagrid-add-new-row.png)
 
->* In Batch mode while in edit mode, you can add a new row at bottom using the TAB key when you are on the last cell of the last row.
+>* In Batch mode, while in edit mode, you can add a new row at bottom using the TAB key when you are on the last cell of the last row.
 
 ## Troubleshoot: Editing works only for first row
 
-The Editing functionalities can be performed based upon the primary key value of the selected row. If **PrimaryKey** is not defined in the datagrid, then edit or delete action take places in the first row.
+The Editing functionalities can be performed based on the primary key value of the selected row. If **PrimaryKey** is not defined in the datagrid, the edit or delete action is performed in the first row.
 
 ## Event trace while editing
 
@@ -276,7 +276,7 @@ While editing operation is getting executed the following events will be notifie
 * OnActionBegin
 * OnActionComplete
 
-In both these events the type of editing operation is returned in the **RequestType** parameter of the event arguments. In addition to this, the event arguments also return the edited row data.
+In both of these events, the type of editing operation is returned in the **RequestType** parameter of the event arguments. In addition, the event arguments return the edited row data.
 
 The **RequestType** values for the editing operations are listed in the below table,
 
@@ -288,7 +288,7 @@ The **RequestType** values for the editing operations are listed in the below ta
 | Save | Before save operation begins | After save operation is completed |
 | Cancel | Before cancel operation begins | After cancel operation is completed |
 
-The following sample code demonstrates the different **RequestType** parameters returned while performing editing operations in the OnActionBegin and OnActionComplete event,
+The following sample code demonstrates the different **RequestType** parameters returned while performing editing operations in the OnActionBegin and OnActionComplete events,
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -386,7 +386,7 @@ You can edit the complex objects using EditTemplate inside the GridColumn compon
 
 For focus and Column Validation to work properly, you have to define the **ID** property EditTemplate components with a value similar to GridColumn Field property value.
 
-> Also ensure to define **ID** property for the complex column as (`___`) replacing the (`.`) operator in the Field value.
+> Also, ensure to define **ID** property for the complex column as (`___`) replacing the (`.`) operator in the Field value.
 
 The following sample code demonstrates the CRUD operation for complex objects with EditTemplate.
 
@@ -455,11 +455,11 @@ The following sample code demonstrates the CRUD operation for complex objects wi
 
 ## Performing CRUD operations programmatically
 
-You can perform CRUD operations like **Add** , **Update** , **Delete** by using the [AddRecord](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AddRecord) , [UpdateRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UpdateRow_System_Double__0_) , [DeleteRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DeleteRow_System_Object_)  methods.
+You can perform CRUD operations like **Add**, **Update**, **Delete** by using the [AddRecord](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AddRecord), [UpdateRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UpdateRow_System_Double__0_), [DeleteRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DeleteRow_System_Object_)  methods.
 
-* **AddRecord** - Add a new record into the datagrid
-* **UpdateRow** - Update a existing record in a datagrid.
-* **DeleteRow** - Delete a selected row in the datagrid
+* **AddRecord** - Add a new record into the datagrid.
+* **UpdateRow** - Update an existing record in a datagrid.
+* **DeleteRow** - Delete a selected row from the datagrid.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -534,7 +534,7 @@ The following GIF represents the datagrid with Add, Update, Delete items,
 
 ## Perform CRUD operation using Grid events
 
-IQueryable data can be bound directly to Grid component from database without using Data Adaptors. IQueryable data bound to Grid component using DataSource property of SfGrid. While binding the Data to Grid component using **DataSource** property, CRUD actions needs to be handled using Grid Action Events (i.e.) using **OnActionBegin** and **OnActionComplete** events of Grid.
+IQueryable data can be bound directly to Grid component from database without using Data Adaptors. IQueryable data bound to Grid component using DataSource property of SfGrid. While binding the Data to Grid component using **DataSource** property, CRUD actions need to be handled using Grid Action Events (i.e., using **OnActionBegin** and **OnActionComplete** events of Grid).
 
 ### Create an interface layer to the database
 
@@ -638,10 +638,10 @@ namespace LibraryManagement.Models
 
 ### Configure the DataGrid component to perform CRUD actions using Grid events
 
-Since data is bound to Grid using DataSource property, perform CRUD actions will be reflected at Grid component level only. To reflect the changes in database, we need to handle the changes in Grid action events.
+Since data is bound to Grid using DataSource property, CRUD actions will be reflected at Grid component level only. To reflect the changes in database, you need to handle the changes in Grid action events.
 
-**OnActionBegin** – This event will be triggered when the action gets initiated. So, while inserting/updating a record, **RequestType Save** will be sent in the event arguments to save the changes in the database. Similarly, while deleting a record, RequestType as Delete will be initiated to perform actions externally.  Since for both Update and Insert action, RequestType will be Save, we can differentiate them by using the **Args.Action** property, which will indicate the current action.
-**OnActionComplete** – It will be triggered when certain actions are completed. Here, we can refresh the Grid component with an updated datasource to reflect the changes.
+**OnActionBegin** – This event will be triggered when the action gets initiated. So, while inserting/updating a record, **RequestType Save** will be sent in the event arguments to save the changes in the database. Similarly, while deleting a record, RequestType as Delete will be initiated to perform actions externally.  Since for both Update and Insert action, RequestType will be Save, you can differentiate them by using the **Args.Action** property, which will indicate the current action.
+**OnActionComplete** – It will be triggered when certain actions are completed. Here, you can refresh the Grid component with an updated datasource to reflect the changes.
 
 ```cshtml
 @using LibraryManagement.Models

@@ -9,7 +9,7 @@ documentation: ug
 
 # Excel Like Filter in Blazor DataGrid Component
 
-You can enable Excel like filter by defining [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) as **Excel**.The excel menu contains an option such as Sorting, Clear filter, Sub menu for advanced filtering.
+You can enable Excel like filter by defining [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) as **Excel**. The excel menu contains an option such as Sorting, Clear filter, Sub menu for advanced filtering.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -56,7 +56,7 @@ The following screenshot represents Custom filter in Excel filter
 
 ## Filter item template
 
-This **`FilterItemTemplate`** helps to you customize the each CheckBox list element/value for display purpose. To access the checkbox list values inside the `FilterItemTemplate`, you can use the implicit named parameter context. You can type cast the context as [FilterItemTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterItemTemplateContext.html) to get list values inside template.
+This **`FilterItemTemplate`** helps you to customize each CheckBox list element/value for display purposes. To access the checkbox list values inside the `FilterItemTemplate`, you can use the implicit named parameter context. You can type cast the context as [FilterItemTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterItemTemplateContext.html) to get list values inside template.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
