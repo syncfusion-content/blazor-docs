@@ -9,11 +9,11 @@ documentation: ug
 
 # Entity Framework in Blazor DataGrid Component
 
-This section uses and follows the code explained in the [Entity Framework data binding](./data-binding/#entity-framework) section hence we recommend you to refer Entity Framework data binding section before continuing  this section.
+This section uses and follows the code explained in the [Entity Framework data binding](./data-binding/#entity-framework) section. Hence, we recommend you to refer Entity Framework data binding section before continuing this section.
 
 ## Handle CRUD in data access layer class
 
-Now add methods **AddOrder**, **UpdateOrder**, **DeleteOrder** in the **"OrderDataAccessLayer.cs"** to handle the insert, update and remove operations respectively.**CRUD** record details are bound to the **Order** parameter. Please refer the following code.
+Now, add methods **AddOrder**, **UpdateOrder**, and **DeleteOrder** in the **"OrderDataAccessLayer.cs"** to handle the insert, update, and remove operations respectively. **CRUD** record details are bound to the **Order** parameter. Please refer the following code.
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
@@ -82,7 +82,7 @@ namespace EFGrid.Shared.DataAccess
 
 ## Enable CRUD in web API
 
-Now you have to create a new **Post**, **Put**, **Delete** method in the Web API controller which will perform the CRUD operations and returns the appropriate resultant data. The **'SfDataManager'** will make requests to this action based on route name.
+Now, you have to create a new **Post**, **Put**, **Delete** method in the Web API controller which will perform the CRUD operations and returns the appropriate resultant data. The **'SfDataManager'** will make requests to this action based on route name.
 
 ```csharp
 using System;
