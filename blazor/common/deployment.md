@@ -67,7 +67,7 @@ Also, refer to the MSDN reference [here](https://docs.microsoft.com/en-us/aspnet
 
 Now, you can host the published folder by using the IIS or Azure app service.
 
-## See Also
+## See also
 
 * [Host and Deploy blazor](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/blazor/?view=aspnetcore-3.1&tabs=visual-studio)
 * [Host and deploy blazor server](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/blazor/server)
