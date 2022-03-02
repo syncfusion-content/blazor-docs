@@ -1944,6 +1944,70 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 }
 ```
 
+## PdfGroupCaptionTemplateInfo
+
+[`PdfGroupCaptionTemplateInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when exporting the group caption template of the PDF document. It can be used to customize the DataGrid group caption content in PDF document.
+
+```csharp
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true" AllowGrouping="true">
+    <GridEvents PdfGroupCaptionTemplateInfo="PdfGroupCaptionHandler" OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
+    <GridGroupSettings Columns="@Initial">
+        <CaptionTemplate>
+            @{
+                var order = (context as CaptionTemplateContext);
+                <div>@order.Field - @order.Key</div>
+            }
+        </CaptionTemplate>
+    </GridGroupSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    private SfGrid<Order> DefaultGrid;
+    public List<Order> Orders { get; set; }
+    string[] Initial = new string[] { "CustomerID" };
+
+    public void PdfGroupCaptionHandler(PdfCaptionTemplateArgs Args)
+    {
+        // Here you can customize your code
+        Args.Cell.Value = Args.Field + " - " + Args.Key;
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname
+        {
+            await this.DefaultGrid.ExportToPdfAsync();
+        }
+    }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
 ## OnExcelExport
 
 [OnExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before DataGrid data is exported to excel file.
@@ -2182,6 +2246,71 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
     public void ExcelAggregateTemplateInfoHandler(ExcelAggregateEventArgs args)
     {
         // Here you can customize your code
+    }
+}
+```
+
+## ExcelGroupCaptionTemplateInfo
+
+[`ExcelGroupCaptionTemplateInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when exporting the group caption template of the Excel File. It can be used to customize the DataGrid group caption content in Excel File.
+
+```csharp
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "ExcelExport" })" AllowExcelExport="true" AllowPaging="true" AllowGrouping="true">
+    <GridEvents ExcelGroupCaptionTemplateInfo="ExcelGroupCaptionHandler" OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
+    <GridGroupSettings Columns="@Initial">
+        <CaptionTemplate>
+            @{
+                var order = (context as CaptionTemplateContext);
+                <div>@order.Field - @order.Key</div>
+            }
+        </CaptionTemplate>
+    </GridGroupSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    private SfGrid<Order> DefaultGrid;
+    public List<Order> Orders { get; set; }
+    string[] Initial = new string[] { "CustomerID" };
+
+    public void ExcelGroupCaptionHandler(ExcelCaptionTemplateArgs Args)
+    {
+        // Here you can customize your code
+        Args.Cell.Value = Args.Field + " - " + Args.Key;
+    }
+
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_excelexport")  //Id is combination of Grid's ID and itemname
+        {
+            await this.DefaultGrid.ExportToExcelAsync();
+        }
+    }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
     }
 }
 ```
