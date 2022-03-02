@@ -91,11 +91,11 @@ To enable AOT compilation in the application, add `RunAOTCompilation` options wi
 {% endhighlight %}
 {% endtabs %}
 
-## See Also
+## See also
 
 * [Host and Deploy Blazor](https://docs.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/)
 * [Host and deploy Blazor Server](https://docs.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/server)
 * [Host and deploy ASP.NET Core Blazor WebAssembly](https://docs.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/webassembly)
 * [Publish a Web app to Azure App Service using Visual Studio](https://docs.microsoft.com/en-us/visualstudio/deployment/quickstart-deploy-aspnet-web-app)
 * [Deploy ASP.NET Core apps to Azure App Service](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/azure-apps/)
-* [Host and deploy ASP.NET Core Blazor Web Assembly Application](https://docs.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/webassembly?view=aspnetcore-6.0)
+* [Deploy Blazor WASM App to Cloudflare](https://www.syncfusion.com/blogs/post/easily-deploy-a-blazor-webassembly-app-to-cloudflare.aspx)
