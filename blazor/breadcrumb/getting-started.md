@@ -294,4 +294,4 @@ Breadcrumb component enables or disables built-in URL navigation based on the [E
 * [Getting Started with Syncfusion Blazor for server side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Syncfusion Blazor for server side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)
 
-N> You can also explore our [Blazor Braedcrumb example](https://blazor.syncfusion.com/demos/breadcrumb/default-functionalities?theme=bootstrap5) that shows you how to render and configure the breadcrumb.
+N> You can also explore our [Blazor Breadcrumb example](https://blazor.syncfusion.com/demos/breadcrumb/default-functionalities?theme=bootstrap5) that shows you how to render and configure the breadcrumb.
