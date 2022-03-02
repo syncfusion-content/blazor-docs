@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Measurement annotations in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn here all about Measurement annotations in Syncfusion Blazor PDF Viewer component and more.
+description: Checkout and learn here all about measurement annotations in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Measurement annotations in Blazor PDF Viewer Component
 
-The PDF Viewer provides the options to add measurement annotations. You can measure the page annotations with the help of measurement annotation. The supported measurement annotations in the PDF Viewer control are:
+The PDF Viewer provides the options to add measurement annotations. The page annotations can be measured with the help of measurement annotation. The supported measurement annotations in the PDF Viewer control are:
 
 * Distance
 * Perimeter
@@ -32,7 +32,6 @@ In the pan mode, if the measurement annotation mode is entered, the PDF Viewer c
 
 ![Adding Calibrate in Blazor PDFViewer Toolbar](../../pdfviewer/images/blazor-pdfviewer-add-calibrate-in-toolbar.png)
 
-Refer to the following code snippet to switch to distance annotation mode.
 
 ```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
@@ -91,7 +90,6 @@ The properties of the line shapes such as distance and perimeter annotations can
 ## Setting default properties during control initialization
 
 The properties of the shape annotations can be set before creating the control using distanceSettings, perimeterSettings, areaSettings, radiusSettings and volumeSettings.
-Refer to the following code snippet to set the default annotation settings.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -142,4 +140,4 @@ The properties of scale ratio for measurement annotation can be set before creat
 }
 ```
 
-> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.
+> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.

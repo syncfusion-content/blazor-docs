@@ -7,7 +7,7 @@ control: DocumentEditor
 documentation: ug
 ---
 
-# Table of contents in Blazor DocumentEditor Component
+# Table of Contents in Blazor DocumentEditor Component
 
 The table of contents in a document is same as the list of chapters at the beginning of a book. It lists each heading in the document and the page number, where that heading starts with various options to customize the appearance.
 

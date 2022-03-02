@@ -9,7 +9,7 @@ documentation: ug
 
 # Pyramid in Blazor Accumulation Chart Component
 
-The [Pyramid Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/pyramid-chart) used to visualize the hierarchical data in upside triangle shape with horizontally divided section. To render the `Pyramid Chart`, set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Type) as `Pyramid`.
+The [Pyramid Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/pyramid-chart) is used to visualize the hierarchical data in upside triangle shape with horizontally divided section. To render the `Pyramid Chart`, set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Type) as `Pyramid`.
 
 ```cshtml 
 
@@ -48,7 +48,7 @@ The [Pyramid Chart](https://www.syncfusion.com/blazor-components/blazor-charts/c
 
 ![Blazor Pyramid Chart](../images/pyramid/blazor-pyramid-chart.png)
 
-## Pyramid Mode
+## Pyramid mode
 
 The Pyramid Chart can be rendered in both `Linear` or `Surface` modes by setting [PyramidMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_PyramidMode) property. The default mode is `Linear`.
 
@@ -88,7 +88,7 @@ The Pyramid Chart can be rendered in both `Linear` or `Surface` modes by setting
 
 ![Blazor Pyramid Chart with Surface Mode](../images/pyramid/blazor-pyramid-chart-with-surface-mode.png)
 
-## Pyramid Size
+## Pyramid size
 
 The size of the pyramid chart can be customized by using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Height) properties.
 
@@ -128,7 +128,7 @@ The size of the pyramid chart can be customized by using the [Width](https://hel
 
 ![Customizing Pyramid Size in Blazor Pyramid Chart](../images/pyramid/blazor-pyramid-chart-size.png)
 
-## Gap Between Pyramid Segments
+## Gap between pyramid segments
 
 The [Pyramid Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationType.html#Syncfusion_Blazor_Charts_AccumulationType_Pyramid) provides options to customize the space between the segments by using the [GapRatio](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_GapRatio) property of the series. It accepts values ranging from 0 to 1.
 
@@ -168,7 +168,7 @@ The [Pyramid Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 ![Blazor Pyramid Chart with Gap](../images/pyramid/blazor-pyramid-chart-with-gap.png)
 
-## Pyramid Explode
+## Pyramid explode
 
 By setting the [Explode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Explode) property to **true**, points can be exploded on mouse click. Using the [ExplodeIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_ExplodeIndex) property, expand the point on load. The [ExplodeOffset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_ExplodeOffset) property can be used to set the distance between explosions.
 

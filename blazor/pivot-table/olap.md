@@ -15,15 +15,15 @@ documentation: ug
 ## Getting Started
 
 
-This section briefly explains about how to create a simple [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) with OLAP data source. You can refer [Getting Started with Syncfusion Blazor for Client-Side in Visual Studio 2019 Preview](https://blazor.syncfusion.com/documentation/getting-started/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to create a simple [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) with OLAP data source. You can refer [Getting Started with Syncfusion Blazor for Client-Side in Visual Studio 2019 Preview](https://blazor.syncfusion.com/documentation/getting-started/) page for the introduction and for configuring the common specifications.
 
 ### Importing Syncfusion Blazor component package in the application
 
-Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.Please ensure to check the Include **prerelease** option.
+Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`. Please ensure to check the Include **prerelease** option.
 
 ### Initializing pivot table component in an application
 
-The Syncfusion Pivot Table component can be initialized in any razor page inside `~/Pages` folder. Here, the pivot table component is initialized inside `~/Pages/Index.razor` page. In a new application, if `Index.razor` page has any default content template, then those content can be completely removed and following code can be added.
+The Syncfusion Pivot Table component can be initialized in any razor page inside `~/Pages` folder. Here, the pivot table component is initialized inside `~/Pages/Index.razor` page. In a new application, if `Index.razor` page has any default content template, then those content can be completely removed and the following code can be added.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -49,7 +49,7 @@ Refer [here](#data-binding) to know the more details about OLAP data binding.
 
 ### Adding OLAP cube elements to row, column, value and filter axes
 
-Now that pivot table is initialized and assigned with sample OLAP data source, will further move to showcase the component by organizing appropriate [OLAP cube elements](#olap-cube-elements) in [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html), [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) and [PivotViewFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilter.html) axes.
+Now that the pivot table is initialized and assigned with sample OLAP data source, it will further move to showcase the component by organizing appropriate [OLAP cube elements](#olap-cube-elements) in [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html), [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) and [PivotViewFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilter.html) axes.
 
 
 In [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class, four major axes -  [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html), [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) and [PivotViewFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilter.html) plays a vital role in defining and organizing  [OLAP cube elements](#olap-cube-elements) from the bound data source, to render the entire pivot table component in a desired format.
@@ -112,7 +112,7 @@ In this sample, "Product Categories" is added in column, "Customer Geography" in
 
 ### Applying formatting to measures
 
-Formatting defines a way in which values should be displayed in pivot table. For example, format **"C0"** denotes the values should be displayed in currency pattern without decimal points. To do so, define the [PivotViewFormatSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html) with its [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Name) and [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format) properties. In this sample, the [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Name) property is set as "[Measures].[Internet Sales Amount]", a measure from value axis and its [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format) is set as "C0". Likewise, we can set format for other measures as well.
+Formatting defines a way in which values should be displayed in pivot table. For example, format **"C0"** denotes the values should be displayed in currency pattern without decimal points. To do so, define the [PivotViewFormatSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html) with its [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Name) and [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format) properties. In this sample, the [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Name) property is set as "[Measures].[Internet Sales Amount]", a measure from the value axis and its [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format) is set as "C0". Likewise, it can be formatted for the other measures as well.
 
 > Only measures from [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) axis, which is in the form of numeric data values are applicable for formatting.
 
@@ -160,13 +160,13 @@ Formatting defines a way in which values should be displayed in pivot table. For
 
 ```
 
-After successful compilation of the application, simply press F5 to run the same. The pivot table component will render in the default web browser like below.
+After successful compilation of the application, simply press F5 to run the same. The pivot table component will render in the default web browser.
 
 ![OLAP in Blazor PivotTable](images/blazor-pivottable-with-olap.png)
 
 ### Enable pivot field list
 
-The component provides a built-in Field List similar to Microsoft Excel. It allows you to add or remove [OLAP cube elements](#olap-cube-elements) and also rearrange the [OLAP cube elements](#olap-cube-elements) between different axes, including [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html), [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) and [PivotViewFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilter.html) along with filter and sort options dynamically at runtime. It can be enabled by setting the [ShowFieldList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowFieldList) property to **true** as follows. To know more about field list, [refer](./field-list) here.
+The component provides a built-in Field List similar to Microsoft Excel. It allows to add or remove [OLAP cube elements](#olap-cube-elements) and also rearranges the [OLAP cube elements](#olap-cube-elements) between different axes, including [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html), [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) and [PivotViewFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilter.html) along with the filter and sort options dynamically at runtime. It can be enabled by setting the [ShowFieldList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowFieldList) property to **true** as follows. To know more about the field list, [refer](./field-list) here.
 
 
 ```cshtml
@@ -218,7 +218,7 @@ The component provides a built-in Field List similar to Microsoft Excel. It allo
 
 ### Enable grouping bar
 
-The Grouping Bar feature automatically populates [OLAP cube elements](#olap-cube-elements) from the bound data source and allows end users to drag [OLAP cube elements](#olap-cube-elements) between different axes such as [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html), [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) and [PivotViewFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilter.html) along with filter and sort options dynamically at runtime. It can be enabled by setting the [ShowGroupingBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowGroupingBar) property to **true** as follows. To know more about grouping bar, [refer](./grouping-bar) here.
+The Grouping Bar feature automatically populates [OLAP cube elements](#olap-cube-elements) from the bound data source and allows end users to drag [OLAP cube elements](#olap-cube-elements) between different axes such as [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html), [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html), [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) and [PivotViewFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilter.html) along with the filter and sort options dynamically at runtime. It can be enabled by setting the [ShowGroupingBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowGroupingBar) property to **true** as follows. To know more about grouping bar, [refer](./grouping-bar) here.
 
 ```cshtml
 
@@ -267,7 +267,7 @@ The Grouping Bar feature automatically populates [OLAP cube elements](#olap-cube
 
 ### Exploring filter axis
 
-The filter axis contains collection of [OLAP cube elements](#olap-cube-elements) such as hierarchies and calculated members that would act as master filter over the data bound in [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html), [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html),  and [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) axes of the pivot table. The [OLAP cube elements](#olap-cube-elements) along with filter members could be set to filter axis either through report via code behind or by dragging and dropping [OLAP cube elements](#olap-cube-elements) from other axes to filter axis via grouping bar or field list at runtime.
+The filter axis contains collection of [OLAP cube elements](#olap-cube-elements) such as hierarchies and calculated members that would act as master filter over the data bound in [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html), [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html),  and [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) axes of the pivot table. The [OLAP cube elements](#olap-cube-elements) along with the filter members could be set to filter axis either through report via code behind or by dragging and dropping [OLAP cube elements](#olap-cube-elements) from other axes to filter axis via grouping bar or field list at runtime.
 
 
  ```cshtml
@@ -322,7 +322,7 @@ The two types of calculated fields are as follows:
 * **Calculated Measure** – Creates a new measure through user-defined expression.
 * **Calculated Dimension** – Creates a new dimension through user-defined expression.
 
-It can be customized using the [PivotViewCalculatedFieldSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCalculatedFieldSetting.html) property through code behind. The setting required for calculate field feature at code behind are:
+It can be customized using the [PivotViewCalculatedFieldSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCalculatedFieldSetting.html) property through the code behind. The setting required to calculate field feature at code behind are:
 * [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCalculatedFieldSetting.html#Syncfusion_Blazor_PivotView_PivotViewCalculatedFieldSetting_Name): It allows to set the unique name for new calculated field.
 * [Formula](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCalculatedFieldSetting.html#Syncfusion_Blazor_PivotView_PivotViewCalculatedFieldSetting_Formula): It allows to set the user-defined expression.
 * [HierarchyUniqueName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCalculatedFieldSetting.html#Syncfusion_Blazor_PivotView_PivotViewCalculatedFieldSetting_HierarchyUniqueName) : It allows to specify dimension unique name whose hierarchies alone should be used in the expression. This will be applicable only for calculated dimension.
@@ -431,7 +431,7 @@ By default, **Standard** will be selected from the drop down list.
 
 #### Renaming the existing calculated field
 
-Existing calculated field can be renamed only through the UI at runtime. To do so, open the calculated field dialog, click the target field. User can now see the existing name getting displayed in the text box at the top of the dialog. Now, change the name based on user requirement and click "OK".
+Existing calculated field can be renamed only through the UI at runtime. To do so, open the calculated field dialog, click the target field. User can now see the existing name getting displayed in the text box at the top of the dialog. Now, change the name based on the user requirement and click "OK".
 
 <!-- markdownlint-disable MD012 -->
 ![Before Renaming in Blazor PivotTable Calculated Field](images/blazor-pivottable-before-renaming-in-field.png)
@@ -441,14 +441,14 @@ Existing calculated field can be renamed only through the UI at runtime. To do s
 
 #### Editing the existing calculated field formula
 
-Existing calculated field formula can be edited only through the UI at runtime. To do so, open the calculated field dialog, click the target field. User can now see the existing expression getting displayed in a "Expression" section. Now, change the expression based on user requirement and click "OK".
+Existing calculated field formula can be edited only through the UI at runtime. To do so, open the calculated field dialog, click the target field. User can now see the existing expression getting displayed in a "Expression" section. Now, change the expression based on the user requirement and click "OK".
 
 ![Before Editing Existing Field Formula in Blazor PivotTable](images/blazor-pivottable-before-renaming-in-field.png)
 <br/>
 <br/>
 ![After Editing Existing Field Formula in Blazor PivotTable](images/blazor-pivottable-after-editing-existing-field.png)
 
-#### Reusing the existing formula in a new calculate field
+#### Reusing the existing formula in a new calculated field
 
 While creating a new calculated field, if user wants to the add the formula of an existing calculated field, it can be done easily. To do so, simply drag-and-drop the existing calculated field to the "Expression" section.
 
@@ -477,7 +477,7 @@ Previous changes can be cleared by using the "Clear" option while performing ope
 
 #### Virtual Scrolling
 
-Allows large amounts of data to be loaded without any performance degradation by rendering rows and columns in relation to the current viewport. Rest of the data will be brought into the viewport dynamically based on vertical or horizontal scroll position. This feature can be enabled by setting the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_EnableVirtualization) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**.
+Allows large amounts of data to be loaded without any performance degradation by rendering rows and columns in relation to the current viewport. Rest of the data will be brought into the viewport dynamically based on the vertical or horizontal scroll position. This feature can be enabled by setting the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_EnableVirtualization) property in the [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**.
 
 To use the virtual scrolling feature, inject the `VirtualScroll` module into the pivot table.
 
@@ -535,7 +535,7 @@ To use the virtual scrolling feature, inject the `VirtualScroll` module into the
 
 ## Data Binding
 
-To bind OLAP datasource to the pivot table, you need to specify following properties under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) option.
+To bind OLAP datasource to the pivot table, you need to specify the following properties under the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) option.
 
 | Properties|Description |
 |-----|-----|
@@ -594,7 +594,7 @@ To bind OLAP datasource to the pivot table, you need to specify following proper
 
 #### Measures in row axis
 
-By default, the measures are plotted in column axis. You can place measures in row axis either thorough code behind or UI. To plot those measures in row axis, place the **Measures** field in the row axis as follows.
+By default, the measures are plotted in column axis. You can place measures in row axis either through code behind or UI. To plot those measures in row axis, place the **Measures** field in the row axis as follows.
 
 ```cshtml
 
@@ -645,7 +645,7 @@ By default, the measures are plotted in column axis. You can place measures in r
 
 Named set is a multidimensional expression (MDX) that returns a set of dimension members, which can be created by combining the cube data, arithmetic operators, numbers, and functions.
 
-You can bind the named sets in the pivot table by setting it's unique name in the [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_Name) property either in row or column axis and [IsNamedSet](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_IsNamedSet) boolean property to **true**. In this sample, we have added "Core Product Group" named set in the column axis.
+You can bind the named sets in the pivot table by setting it's unique name in the [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_Name) property either in row or column axis and [IsNamedSet](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_IsNamedSet) boolean property to **true**. In this sample, the "Core Product Group" has been named set in the column axis.
 
 
 ```cshtml
@@ -761,7 +761,7 @@ The field list, aka cube dimension browser, is a tree view like structure that o
 
 #### Measure
 
-In a cube, a measure is a set of values that are based on a column in the cube’s fact table and are usually numeric. The measures are the central values of a cube that are analyzed. That is, measures are the numeric data of primary interest to users browsing a cube. You can select measures depend on the types of users request. Some common measures are sales, costs, expenditures, and production count.
+In a cube, a measure is a set of values that are based on a column in the cube’s fact table and are usually numeric. The measures are the central values of a cube that are analyzed. That is, measures are the numeric data of primary interest for users browsing a cube. You can select measures depending on the types of users request. Some common measures are sales, costs, expenditures, and production count.
 
 #### Dimension
 
@@ -795,7 +795,7 @@ User-defined hierarchy organizes the members of a dimension into hierarchical st
 
 #### Named set
 
-A named set is a collection of tuples and members, which can be defined and saved as a part of the cube definition. Named set records reside inside the sets folder, which is under a dimension element. These elements can be dragged to [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html) or [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html) axis via grouping bar or field list at runtime. To work with a lengthy, complex, or commonly used expression easier, Multidimensional Expressions (MDX) allows you to define a named set.
+A named set is a collection of tuples and members, which can be defined and saved as a part of the cube definition. Named set records reside inside the sets folder, which is under a dimension element. These elements can be dragged to [PivotViewRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html) or [PivotViewColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html) axis via grouping bar or field list at runtime. To work with a lengthy, complex, or commonly used expression easier, Multidimensional Expressions (MDX) allows to define a named set.
 
 #### Calculated field
 
@@ -818,4 +818,4 @@ The two types of calculated fields are as follows:
 | ![First level icon in JavaScript pivot table control](images/FirstLevel.png)<br>![Second level icon in JavaScript pivot table control](images/SecondLevel.png)<br>![Third level icon in JavaScript pivot table control](images/ThirdLevel.png)| Levels (in order)| Level Element| True|
 | ![NamedSet icon in JavaScript pivot client control](images/NamedSet.png)| Named Set| Named Set| True|
 
-> You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.
+> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.

@@ -36,7 +36,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     }
     public void actionBegin(GanttActionEventArgs<TaskData> args)
     {
-        //Here you can customize your code
+        //Here, you can customize your code.
     }
 
     public class TaskData
@@ -141,7 +141,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     }
     public void OnActionComplete(GanttActionEventArgs<TaskData> args)
     {
-        //Here you can customize your code
+        //Here, you can customize your code.
     }
 
     public class TaskData
@@ -244,7 +244,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     public SfGantt<TaskData> Gantt;
     public void ActionFailureHandler(FailureEventArgs args)
     {
-        // Here you can get the error details in the args
+        // Here, you can get the error details in the args.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -349,7 +349,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     public SfGantt<TaskData> Gantt;
     public void CreatedHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -454,7 +454,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     public SfGantt<TaskData> Gantt;
     public void LoadHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -559,7 +559,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     public SfGantt<TaskData> Gantt;
     public void DestroyHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -647,7 +647,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 ## TaskbarEdited
 
-[TaskbarEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_TaskbarEdited) event triggers when taskbar was dragged and dropped on a new position.
+[TaskbarEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_TaskbarEdited) event triggers when the taskbar is dragged and dropped to a new position.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -664,7 +664,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     public SfGantt<TaskData> Gantt;
     public void TaskbarEdited(TaskbarEditedEventArgs<TaskData> args)
     {
-        // Here you can get the error details in the args
+        // Here, you can get the error details in the args.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -770,7 +770,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     public SfGantt<TaskData> Gantt;
     public void RowDropped(RowDragEventArgs<TaskData> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -876,7 +876,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     public SfGantt<TaskData> Gantt;
     public void RowDataBoundHandler(RowDataBoundEventArgs<TaskData> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -982,7 +982,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     public SfGantt<TaskData> Gantt;
     public void OnRowDragStart(RowDragEventArgs<TaskData> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -1087,7 +1087,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     public SfGantt<TaskData> Gantt;
     public void QueryChartRowInfo(QueryChartRowInfoEventArgs<TaskData> args)
     {
-        // Here you can get the error details in the args
+        // Here, you can get the error details in the args.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -1195,7 +1195,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     public SfGantt<TaskData> Gantt;
     public void QueryCellInfoHandler(QueryCellInfoEventArgs<TaskData> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -1300,7 +1300,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     public SfGantt<TaskData> Gantt;
     public void EndEdit(TaskbarEditedEventArgs<TaskData> args)
     {
-        // Here you can get the error details in the args
+        // Here, you can get the error details in the args.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -1405,7 +1405,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     public SfGantt<TaskData> Gantt;
     public void BeforeTooltipRender(BeforeTooltipRenderEventArgs<TaskData> args)
     {
-        // Here you can get the error details in the args
+        // Here, you can get the error details in the args.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -1511,7 +1511,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     public SfGantt<TaskData> Gantt;
     public void Resizestart(Syncfusion.Blazor.Layouts.ResizeEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -1617,7 +1617,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     public SfGantt<TaskData> Gantt;
     public void Resized(Syncfusion.Blazor.Layouts.ResizingEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -1724,7 +1724,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     public SfGantt<TaskData> Gantt;
     public void CellEditHandler(CellEditArgs<TaskData> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -1830,7 +1830,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     public SfGantt<TaskData> Gantt;
     public void Resized(Syncfusion.Blazor.Layouts.ResizingEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -1937,7 +1937,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     public SfGantt<TaskData> Gantt;
     public void RowSelectingHandler(RowSelectingEventArgs<TaskData> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -2041,7 +2041,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     public SfGantt<TaskData> Gantt;
     public void rowSelect(RowSelectEventArgs<TaskData> args)
     {
-        //Here you can customize your code
+        //Here, you can customize your code.
     }
 
     public List<TaskData> TaskCollection { get; set; }
@@ -2130,7 +2130,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 ## RowDeselecting
 
-[RowDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_RowDeselecting) event triggers before a selected row is being deselected.
+[RowDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_RowDeselecting) event triggers before a selected row is deselected.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -2149,7 +2149,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     public SfGantt<TaskData> Gantt;
     public void RowDeselectingHandler(RowDeselectEventArgs<TaskData> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -2257,7 +2257,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     public SfGantt<TaskData> Gantt;
     public void RowDeselectHandler(RowDeselectEventArgs<TaskData> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -2361,7 +2361,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 public void CellSelecting(Syncfusion.Blazor.Grids.CellSelectingEventArgs<TaskData> args)
 {
-    //Here you can customize your code
+    //Here, you can customize your code.
 
 }
 public List<TaskData> TaskCollection { get; set; }
@@ -2469,7 +2469,7 @@ return Tasks;
     public SfGantt<TaskData> Gantt;
     public void CellSelectedHandler(CellSelectEventArgs<TaskData> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -2577,7 +2577,7 @@ return Tasks;
     public SfGantt<TaskData> Gantt;
     public void CellDeselectingHandler(CellDeselectEventArgs<TaskData> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -2685,7 +2685,7 @@ return Tasks;
     public SfGantt<TaskData> Gantt;
     public void CellDeselectedHandler(CellDeselectEventArgs<TaskData> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -2773,7 +2773,7 @@ return Tasks;
 
 ## OnToolbarClick
 
-[OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnToolbarClick) event triggers when toolbar item is clicked.
+[OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnToolbarClick) event triggers when the toolbar item is clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -2791,7 +2791,7 @@ return Tasks;
     public List<Object> Toolbaritems = new List<Object>() { "ExpandAll", "CollapseAll", new ItemModel() { Text = "Test", TooltipText = "Test", Id = "Test" } };
     public void ToolbarClickHandler(ClickEventArgs args)
     {
-       //Here you can customize your code
+       //Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -2897,7 +2897,7 @@ return Tasks;
     public SfGantt<TaskData> Gantt;
     public void ColumnMenuClickedHandler(ColumnMenuClickEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -3003,7 +3003,7 @@ return Tasks;
     public SfGantt<TaskData> Gantt;
     public void ContextMenuItemClickedHandler(ContextMenuClickEventArgs<TaskData> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -3109,7 +3109,7 @@ return Tasks;
     public SfGantt<TaskData> Gantt;
     public void ContextMenuOpenHandler(ContextMenuOpenEventArgs<TaskData> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -3215,7 +3215,7 @@ return Tasks;
     public SfGantt<TaskData> Gantt;
     public void Collapsed(RowCollapsedEventArgs<TaskData> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -3321,7 +3321,7 @@ return Tasks;
     public SfGantt<TaskData> Gantt;
     public void Collapsed(RowCollapsingEventArgs<TaskData> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -3409,7 +3409,7 @@ return Tasks;
 
 ## Expanding
 
-[Expanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_Expanding) event triggers when a row is expanding.
+[Expanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_Expanding) event triggers when a row expands.
 
 ```cshtml
 using Syncfusion.Blazor.Gantt
@@ -3426,7 +3426,7 @@ using Syncfusion.Blazor.Gantt
    
     public void Expanding(Syncfusion.Blazor.TreeGrid.RowExpandingEventArgs<TaskData> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
@@ -3533,7 +3533,7 @@ using Syncfusion.Blazor.Gantt
     public SfGantt<TaskData> Gantt;
     public void ExpandedHandler(RowExpandedEventArgs<TaskData> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()

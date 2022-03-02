@@ -9,7 +9,7 @@ documentation: ug
 
 # Native Events in Blazor Button Component
 
-You can define the native event using on `event` attribute in component. The value of attribute is treated as an event handler. The event specific data will be available in event arguments.
+You can define the native event using `event` attribute in component. The value of attribute is treated as an event handler. The event specific data will be available in event arguments.
 
 The different event argument types for each event are,
 
@@ -18,7 +18,7 @@ The different event argument types for each event are,
 * Keyboard Events - UIKeyboardEventArgs
 * Touch Events – UITouchEventArgs
 
-## List of Native events supported
+## List of native events supported
 
 We have provided the following native event support to the Button component:
 

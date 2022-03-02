@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Section Formatting in Blazor DocumentEditor Component | Syncfusion
-description: Learn here all about Working with Section Formatting in Syncfusion Blazor DocumentEditor component and more.
+description: Learn here all about working with section formatting in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug

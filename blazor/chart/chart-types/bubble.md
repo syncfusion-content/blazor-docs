@@ -11,11 +11,11 @@ documentation: ug
 
 ## Bubble
 
-[Bubble Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/bubble-chart) is similar to the Scatter chart but it also visualizes the third parameter by its size. To render a bubble series, set series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [Bubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Bubble). It visualizes data with three parameters such as [XName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName), [YName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) and [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Size). The bubble size depends on third parameter. 
+[Bubble Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/bubble-chart) is similar to the Scatter chart but it also visualizes the third parameter by its size. To render a bubble series, set series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [Bubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Bubble). It visualizes data with three parameters such as [XName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName), [YName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName), and [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Size). The bubble size depends on third parameter. 
 
 > Refer to our [Blazor Bubble Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/bubble-chart) feature tour page to know about its other groundbreaking feature representations and also explore our [Blazor Bubble Chart Example](https://blazor.syncfusion.com/demos/chart/bubble?theme=bootstrap4) to know how to render and configure the bubble type charts.
 
-## Size Mapping
+## Size mapping
 
 The [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Size) property can be used to map the size value specified from datasource.
 
@@ -65,7 +65,7 @@ The [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 
 ![Blazor Bubble Chart with Size Mapping](../images/chart-types-images/blazor-bubble-chart-size-mapping.png)
 
-## Series Customization
+## Series customization
 
 The following properties can be used to customize the [Bubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Bubble) series.
 

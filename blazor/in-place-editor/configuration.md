@@ -109,7 +109,7 @@ Popup mode is rendered by using the Blazor Tooltip component, so you can use the
 The event action of the editor will be enabled in the edit mode based on the `EditableOn` property. By default, `Click` is enabled.
 The following options are also supported:
 
-* **Click**: The editor will be opened on  single-click actions.
+* **Click**: The editor will be opened on single-click actions.
 * **DoubleClick**: The editor will be opened on double-click actions and it is not applicable for the edit icon.
 * **EditIconClick**: Disables the editing of event action of input and allows the users to edit only through edit icon.
 
@@ -213,7 +213,7 @@ It also has the following options.
 * **Submit**: Submits the edited content to the server.
 * **Ignore**: No action will be performed with this type.
 
-In the following code block, when switching drop-down item, the selected value assigned to the `ActionOnBlur` property.
+In the following code block, when switching drop-down items, the selected value is assigned to the `ActionOnBlur` property.
 
 ```cshtml
 @using Syncfusion.Blazor.InPlaceEditor
@@ -301,7 +301,7 @@ In the following code block, when switching drop-down item, the selected value a
 
 By default, the In-place Editor input element is highlighted with a dotted underline. To remove dotted underline from input element, add `{"data-underline", "false" }` attribute at In-place Editor root element.
 
-In the following code block, indicates the intractable and normal display modes with different examples.
+The following code block indicates the intractable and normal display modes with different examples.
 
 ```cshtml
 
@@ -365,7 +365,7 @@ In the following code block, indicates the intractable and normal display modes 
 
 ```
 
-The output will be as follows.
+
 
 ![Blazor In-place Editor Text with Underline](./images/blazor-inplace-editor-text-with-under-line.png)
 

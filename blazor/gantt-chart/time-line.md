@@ -11,7 +11,7 @@ documentation: ug
 
 In the [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component, timeline is used to represent the project duration as individual cells with defined unit and formats.
 
-## Timeline View Modes
+## Timeline view modes
 
 Gantt Chart contains the following in-built timeline view modes:
 
@@ -20,7 +20,7 @@ Gantt Chart contains the following in-built timeline view modes:
 * Month
 * Year
 
-Timescale mode in Gantt Chart can be defined by using `GanttTimelineSettings.TimelineViewMode` property and also we can define timescale mode of top tier and bottom tier by using `GanttTopTierSettings.Unit` and `GanttBottomTierSettings.Unit` properties.
+Timescale mode in Gantt Chart can be defined by using `GanttTimelineSettings.TimelineViewMode` property and also you can define timescale mode of top tier and bottom tier by using `GanttTopTierSettings.Unit` and `GanttBottomTierSettings.Unit` properties.
 
 Following table explains how top tier and bottom tier unit changes as per `GanttTimelineSettings.TimelineViewMode` property.
 
@@ -32,7 +32,7 @@ Week | Week | Day
 Day | Day | Hour
 Hour | Hour | Minute
 
-### Week Timeline Mode
+### Week timeline mode
 
 In the `Week` timeline mode, top tier of the schedule header displays the weeks, where as bottom tier of the header displays the days. Refer the following code example.
 
@@ -126,7 +126,7 @@ In the `Week` timeline mode, top tier of the schedule header displays the weeks,
 
 ![Blazor Gantt Chart with Week Mode](images/blazor-gantt-chart-week-mode.png)
 
-### Month Timeline Mode
+### Month timeline mode
 
 In the `Month` timeline mode, top tier of the schedule header displays the months, whereas bottom tier of the schedule header displays its corresponding weeks. Refer the following code example.
 
@@ -220,7 +220,7 @@ In the `Month` timeline mode, top tier of the schedule header displays the month
 
 ![Blazor Gantt Chart with Month Timeline Mode](images/blazor-gantt-chart-month-mode.png)
 
-### Year Timeline Mode
+### Year timeline mode
 
 In the `Year` timeline mode, top tier of the schedule header displays the years, where as bottom tier of the schedule header displays its corresponding months. Refer the following code example.
 
@@ -315,7 +315,7 @@ In the `Year` timeline mode, top tier of the schedule header displays the years,
 
 ![Blazor Gantt Chart with Year Timeline Mode](images/blazor-gantt-chart-year-mode.png)
 
-### Day Timeline Mode
+### Day timeline mode
 
 In the `Day` timeline mode, top tier of the schedule header displays the days, where as the bottom tier of the schedule header displays its corresponding hours. Refer the following code example.
 
@@ -410,7 +410,7 @@ In the `Day` timeline mode, top tier of the schedule header displays the days, w
 
 ![Blazor Gantt Chart with Day Timeline Mode](images/blazor-gantt-chart-day-mode.png)
 
-### Hour Timeline Mode
+### Hour timeline mode
 
 An `Hour` timeline mode tracks the tasks in minutes scale. In this mode, the top tier of the schedule header displays hour scale and the bottom tier of the header displays its corresponding minutes.
 
@@ -504,9 +504,9 @@ An `Hour` timeline mode tracks the tasks in minutes scale. In this mode, the top
 
 ![Blazor Gantt Chart with Hour Timeline Mode](images/blazor-gantt-chart-hour-mode.png)
 
-## Top Tier and Bottom Tier
+## Top tier and bottom tier
 
-Gantt Chart component contains two tier layout in timeline, we can customize the top tier and bottom tier using `GanttTopTierSettings` and `GanttBottomTierSettings` properties. Timeline tier's unit can be defined by using `Unit` property and `Format` property was used to define date format of timeline cell and `Count` property was used to define how many unit will be combined as single cell.
+Gantt Chart component contains two tier layout in timeline, you can customize the top tier and bottom tier using `GanttTopTierSettings` and `GanttBottomTierSettings` properties. Timeline tier's unit can be defined by using `Unit` property and `Format` property was used to define date format of timeline cell and `Count` property was used to define how many unit will be combined as single cell.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -607,9 +607,9 @@ Gantt Chart component contains two tier layout in timeline, we can customize the
 
 ![Blazor Gantt Chart with Top and Bottom Tier](images/blazor-gantt-chart-top-bottom-tier.png)
 
-### Combining Timeline Cells
+### Combining timeline cells
 
-In Gantt Chart, timeline cells in top tier and bottom tier can be combined with number of timeline units, this can be acheived by using `GanttTopTierSettings.Count` and `GanttBottomTierSettings.Count` properties. Please refer the below sample.
+In Gantt Chart, timeline cells in top tier and bottom tier can be combined with number of timeline units, this can be achieved by using `GanttTopTierSettings.Count` and `GanttBottomTierSettings.Count` properties. Please refer the following sample.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -703,9 +703,9 @@ In Gantt Chart, timeline cells in top tier and bottom tier can be combined with 
 
 ![Combining Timeline Cells in Blazor Gantt Chart](images/blazor-gantt-chart-combine-cells.png)
 
-### Customize Header Timeline Cells
+### Customize header timeline cells
 
-In the Gantt Chart component, you can format the value of top and bottom timeline cells using the standard date format string or the custom formatter method. This can be done using the `GanttTopTierSettings.Format`, `GanttTopTierSettings.FormatterTemplate`, `GanttBottomTierSettings.Format` and `GanttBottomTierSettings.FormatterTemplate` properties. The following example shows how to use the formatter method for timeline cells.
+In the Gantt Chart component, you can format the value of top and bottom timeline cells using the standard date format string or the custom formatter method. This can be done using the `GanttTopTierSettings.Format`, `GanttTopTierSettings.FormatterTemplate`, `GanttBottomTierSettings.Format`, and `GanttBottomTierSettings.FormatterTemplate` properties. The following example shows how to use the formatter method for timeline cells.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -827,7 +827,7 @@ In the Gantt Chart component, you can format the value of top and bottom timelin
 }
 ```
 
-## Timeline Cell Width
+## Timeline cell width
 
 In the Gantt Chart component, you can define the width value of timeline cell using the `GanttTimelineSettings.TimelineUnitSize` property. This value will be set to the bottom timeline cell, and the width value of top timeline cell will be calculated automatically based on bottom tier cell width using the `GanttTopTierSettings.Unit` and `GanttTimelineSettings.TimelineUnitSize` properties. Refer the following example.
 
@@ -927,7 +927,7 @@ In the Gantt Chart component, you can define the width value of timeline cell us
 
 ![Customizing Timeline Width in Blazor Gantt Chart](images/blazor-gantt-chart-time-line-width.png)
 
-## Week Start Day Customization
+## Week start day customization
 
 In the Gantt Chart component, you can customize the week start day using the `GanttTimelineSettings.WeekStartDay` property. By default,the `GanttTimelineSettings.WeekStartDay` is set to 0, which specifies the Sunday as a start day of the week. But, you can customize the week start day by using the following code example.
 
@@ -1027,7 +1027,7 @@ In the Gantt Chart component, you can customize the week start day using the `Ga
 
 ![Customizing Week Start Day in Blazor Gantt Chart](images/blazor-gantt-chart-week-start-day.png)
 
-## Customize Automatic Timescale Update action
+## Customize automatic timescale update action
 
 In the Gantt Chart component, the schedule timeline will be automatically updated when the tasks date values are updated beyond the project start date and end date ranges. This can be enabled or disabled using the `GanttTimelineSettings.UpdateTimescaleView` property.
 
@@ -1129,7 +1129,7 @@ In the Gantt Chart component, the schedule timeline will be automatically update
 
 ## Zooming
 
-Gantt Chart have 25 predefined zooming timespan levels from year timespan to hour timespan. This support enables you to view the tasks in a project clearly from minute to decade timespan. To enable the zooming features, define the `ZoomIn`, `ZoomOut`, and `ZoomToFit` items to toolbar items collections. The following zooming options are available to view the project:
+Gantt Chart has 25 predefined zooming timespan levels from year timespan to hour timespan. This support enables you to view the tasks in a project clearly from minute to decade timespan. To enable the zooming features, define the `ZoomIn`, `ZoomOut`, and `ZoomToFit` items to toolbar items collections. The following zooming options are available to view the project:
 
 ### Zoom in
 

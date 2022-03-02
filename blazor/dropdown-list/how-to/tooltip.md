@@ -7,7 +7,7 @@ control: DropDown List
 documentation: ug
 ---
 
-# DropDownList options with tooltip in Blazor DropDown List Component
+# DropDownList Options with Tooltip in Blazor DropDown List Component
 
 You can achieve this behavior by using tooltip component. When the mouse is hovered over the DropDownList option, a tooltip appears with information about the hovered list item.
 

@@ -19,18 +19,18 @@ The following ARIA attributes are used in Gantt:
 
 | **Attributes** | **Description** |
 | --- | --- |
-| grid (role) | This attribute is added to the `e-table` element present in the Gantt, which represents Grid part |
-| gridcell (role) | This attribute is added to the `td` elements present within the `e-table`, which represents the work cells of Gantt |
-| columnheader (role) | This attribute is added to the `th` elements within the `e-table`, which represents the header cells of Grid table |
-| separator (role) | This attribute is added to the `e-split-bar` element, which represents the splitter between the Grid table and Chart |
-| dialog (role) | This attribute is added to the `e-dialog` element, which represents the pop-up dialog |
-| toolbar (role) | This attribute is added to the `e-gantt-toolbar` element, which represents the toolbars of Gantt |
-| aria-label | It indicates the element's information`<br>` It is assigned to the Gantt UI elements such as timeline cell, taskbar, left label, right label, dependency line, and event markers. |
-| aria-selected | This attribute is assigned to the Gantt chart row, and it defaults to `false`. The value is changed to `true` when the user selects a grid cell or task |
-| aria-expanded | This attribute is assigned to the Gantt chart parent task row. The value is changed to `true` when the user clicks a parent taskbar to expand. After the user clicked a parent taskbar to collapse, the attribute value is changed to `false` |
-| aria-grabbed | This attribute is assigned to the taskbars of Gantt when the user tries to achieve taskbar editing |
+| grid (role) | This attribute is added to the `e-table` element present in the Gantt, which represents Grid part. |
+| gridcell (role) | This attribute is added to the `td` elements present within the `e-table`, which represents the work cells of Gantt .|
+| columnheader (role) | This attribute is added to the `th` elements within the `e-table`, which represents the header cells of Grid table. |
+| separator (role) | This attribute is added to the `e-split-bar` element, which represents the splitter between the Grid table and Chart. |
+| dialog (role) | This attribute is added to the `e-dialog` element, which represents the pop-up dialog. |
+| toolbar (role) | This attribute is added to the `e-gantt-toolbar` element, which represents the toolbars of Gantt. |
+| aria-label | It indicates the element's information`<br>`. It is assigned to the Gantt UI elements such as timeline cell, taskbar, left label, right label, dependency line, and event markers. |
+| aria-selected | This attribute is assigned to the Gantt chart row and is set to `false` by default. The value is changed to `true` when the user selects a grid cell or task. |
+| aria-expanded | This attribute is assigned to the Gantt chart parent task row. The value is changed to `true` when the user clicks a parent taskbar to expand. After the user clicked a parent taskbar to collapse, the attribute value is changed to `false`. |
+| aria-grabbed | This attribute is assigned to the taskbars of Gantt when the user tries to achieve taskbar editing. |
 
-## Keyboard Navigation
+## Keyboard navigation
 
 Gantt functionalities can be interactive with keyboard shortcuts.
 
@@ -61,4 +61,4 @@ Interaction Keys |Description
 <kbd>Shift + LeftArrow</kbd> |Extends the cell selection to the left side.
 <kbd>Shift + RightArrow</kbd> |Extends the cell selection to the right side.
 
-> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.
+> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.

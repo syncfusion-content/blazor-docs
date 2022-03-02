@@ -139,7 +139,7 @@ namespace WebApplication1
 
 ## Add Style Sheet
 
-Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://sfblazor.azurewebsites.net/staging/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
+Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
 
 To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
 
@@ -183,7 +183,7 @@ For Blazor WebAssembly App, Refer the theme style sheet from NuGet in the `<head
 
 ## Add Script Reference
 
-Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://sfblazor.azurewebsites.net/staging/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows,
+Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows,
 
 ### Blazor Server App
 
@@ -298,7 +298,7 @@ The dialog component is maintained in the DOM after hiding the dialog when the [
 
 A `modal` shows an overlay behind the Dialog. So, the users must interact with the Dialog before interacting with the remaining content in an application.
 
-While the user clicks the overlay, the action can be handled through the `OnOverlayClick` event. In the following code, it explains the Dialog close action performed while clicking the overlay.
+While the user clicks the overlay, the action can be handled through the [OnOverlayClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnOverlayClick) event. In the following code, it explains the Dialog close action performed while clicking the overlay.
 
 {% tabs %}
 {% highlight razor %}
@@ -336,7 +336,7 @@ While the user clicks the overlay, the action can be handled through the `OnOver
 
 ## Enable header
 
-The Dialog header can be enabled by adding the header content as text or HTML content using the `Header` template of the dialog.
+The Dialog header can be enabled by adding the header content as text or HTML content using the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogTemplates.html#Syncfusion_Blazor_Popups_DialogTemplates_Header) template of the dialog.
 
 {% tabs %}
 {% highlight razor %}
@@ -368,12 +368,13 @@ The Dialog header can be enabled by adding the header content as text or HTML co
 
 ## Render Dialog with buttons
 
-By adding the `DialogButtons` you can render a Dialog with buttons in Razor page.
+By adding the [DialogButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtons.html) can render a Dialog with buttons in Razor page.
 
 {% tabs %}
 {% highlight razor %}
 
 @using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Popups
 
 <SfButton @onclick="@OpenDialog">Open Dialog</SfButton>
 
@@ -383,24 +384,39 @@ By adding the `DialogButtons` you can render a Dialog with buttons in Razor page
         <Content> This is a Dialog with button and primary button </Content>
     </DialogTemplates>
     <DialogButtons>
-        <DialogButton Content="OK" IsPrimary="true" OnClick="@CloseDialog" />
-        <DialogButton Content="Cancel" OnClick="@CloseDialog" />
+        <DialogButton Content="OK" IsPrimary="true" OnClick="@OkClick" />
+        <DialogButton Content="Cancel" OnClick="@CancelClick" />
     </DialogButtons>
+    <span id="message">@ClickStatus</span>
 </SfDialog>
 
 @code {
     private bool IsVisible { get; set; } = true;
 
+    private string ClickStatus { get; set; }
+
     private void OpenDialog()
     {
         this.IsVisible = true;
+        this.ClickStatus = "";
     }
 
-    private void CloseDialog()
+    private void CancelClick()
     {
+        this.ClickStatus = "you have clicked Cancel";
         this.IsVisible = false;
     }
+    private void OkClick()
+    {
+        this.ClickStatus = "you have clicked Ok";
+        this.IsVisible = true;
+    }
 }
+<style>
+    #message {
+        color: blue;
+    }
+</style>
 
 {% endhighlight %}
 {% endtabs %}

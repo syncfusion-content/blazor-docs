@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Maps Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Maps component of Syncfusion, and more details.
+description: Checkout and learn about getting started with Blazor Maps component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Maps
 documentation: ug
@@ -9,75 +9,247 @@ documentation: ug
 
 # Getting Started with Blazor Maps Component
 
-This section briefly explains how to include a Maps component in your Blazor server-side application. You can refer to our [Getting Started with Syncfusion Blazor for server-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) page for introduction and configuring common specifications.
+This section briefly explains about how to include [Blazor Maps](https://www.syncfusion.com/blazor-components/blazor-map) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
-## Importing Syncfusion Blazor Maps component in the application
+## Prerequisites
 
-1. Install **Syncfusion.Blazor.Maps** NuGet package in the application using the **NuGet Package Manager**.
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-2. You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+## Create a new Blazor App in Visual Studio
 
-```html
-<head>
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-    <!---CDN--->
-    @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />*@
-</head>
-```
+You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-> For Internet Explorer 11, kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-```html
-    <head>
-        <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
-        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-    </head>
-```
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/vs2019-extensions/create-project)
 
-## Adding component package to the application
+## Install Syncfusion Blazor Maps NuGet in the App
 
-Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.Maps** namespace.
+Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
-```csharp
-@using Syncfusion.Blazor.Maps
-```
+To add Blazor Maps component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Maps](https://www.nuget.org/packages/Syncfusion.Blazor.Maps) and then install it.
 
-## Adding SyncfusionBlazor Service in Startup.cs
+## Register Syncfusion Blazor Service
 
-Open the **Startup.cs** file and add services required by Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
+Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
-```csharp
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
+
+@using Syncfusion.Blazor
+
+{% endhighlight %}
+{% endtabs %}
+
+Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
+
+### Blazor Server App
+
+* For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+
+* For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
+
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 10" %}
+
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
+using Syncfusion.Blazor;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+
+var app = builder.Build();
+....
+
+{% endhighlight %}
+
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="1 12" %}
+
 using Syncfusion.Blazor;
 
 namespace BlazorApplication
 {
     public class Startup
     {
-        ....
-        ....
-        public void ConfigureServices(IServiceColloection services)
+        ...
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddRazorPages();
+            services.AddServerSideBlazor();
+            services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+        }
+        ...
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Blazor WebAssembly App
+
+Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
+
+{% tabs %}
+{% highlight C# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 11" %}
+
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Syncfusion.Blazor;
+
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
+
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+await builder.Build().RunAsync();
+....
+
+{% endhighlight %}
+
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
+
+using Syncfusion.Blazor;
+
+namespace WebApplication1
+{
+    public class Program
+    {
+        public static async Task Main(string[] args)
         {
             ....
-            ....
-            services.AddSyncfusionBlazor();
+            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+            await builder.Build().RunAsync();
         }
     }
 }
-```
 
-> To enable custom client-side source loading from CRG or CDN, please refer to the section about [custom resources in Blazor application](https://blazor.syncfusion.com/documentation/common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
+{% endhighlight %}
+{% endtabs %}
 
-## Adding Maps component
+## Add Style Sheet
 
-The Syncfusion Maps component can be initialized in any razor page inside the **~/Pages** folder. For example, the Maps component is added to the **~/Pages/Index.razor** page. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
+Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
 
-```cshtml
-@page "/"
+To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
+
+### Blazor Server App
+
+* For .NET 6 app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+
+* For .NET 5 and .NET 3.X app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
+
+{% tabs %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
+
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+
+{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" %}
+
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Blazor WebAssembly App
+
+For Blazor WebAssembly App, refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
+
+{% tabs %}
+{% highlight cshtml tabtitle="~/index.html" %}
+
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add Script Reference
+
+Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows,
+
+### Blazor Server App
+
+* For **.NET 6** app, refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+
+* For **.NET 5 and .NET 3.X** app, refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
+
+{% tabs %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+
+{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="4" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Blazor WebAssembly App
+
+For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html** file.
+
+{% tabs %}
+{% highlight html tabtitle="~/index.html" hl_lines="4" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
+
+## Add Blazor Maps component
+
+* Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Maps** namespace.
+
+{% tabs %}
+{% highlight razor tabtitle="~/Imports.razor" %}
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Maps
+
+{% endhighlight %}
+{% endtabs %}
+
+* Now, add the Syncfusion Maps component in razor file. Here, the Maps component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+
+{% tabs %}
+{% highlight razor %}
 
 <SfMaps>
-
 </SfMaps>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 The Maps will not show any content on the web page while running the application because the properties related to the layer are not initialized in the above code.
 
@@ -87,15 +259,18 @@ Bind GeoJSON data to the Maps to render any geometric shape in SVG (Scalable Vec
 
 You can use the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) property in [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to load the GeoJSON shape data into the Maps component.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
+
 <SfMaps>
     <MapsLayers>
-        @* To load shape data *@
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Blazor Maps with GeoJSON Layer](./images/blazor-map.png)
 
@@ -105,7 +280,9 @@ You can use the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property is used to represent statistical data in the Maps component. We can define a list of objects as a data source to the Maps component. This data source will be further used to color the map, display data labels, display tooltips, and more. Assign the below list **SecurityCouncilDetails** to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property in [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html).
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
+
 @code {
     public List<UNCouncilCountry> SecurityCouncilDetails = new List<UNCouncilCountry>{
          new UNCouncilCountry { Name= "China", Membership= "Permanent"},
@@ -131,7 +308,9 @@ The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.Ma
         public string Membership { get; set; }
     };
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 > The United Nations Security Council data is referred from [source](https://en.wikipedia.org/wiki/List_of_members_of_the_United_Nations_Security_Council).
 
@@ -139,7 +318,9 @@ You should also specify the field names in the shape data and data source to the
 
 > Please [refer to the section](populate-data#data-binding) for more information on data binding.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
+
 <SfMaps>
     <MapsLayers>
         @*To map shape data name field and data source field*@
@@ -150,7 +331,9 @@ You should also specify the field names in the shape data and data source to the
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 > For example, consider field names specified in [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapePropertyPath) and [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeDataPath) have the same value: **"United States"**. So corresponding color, data label and tooltip related settings will be applied to the **United States** shape.
 
@@ -158,7 +341,9 @@ You should also specify the field names in the shape data and data source to the
 
 The color mapping supports customization of shape colors based on the underlying value of shape received from the bound data source. The values from the field name specified in the [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeDataPath) property will be compared for the shapes with the values in the field name specified in the [ColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath) property in [MapsShapeSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html). Also, specify color and value in [MapsShapeColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html). Here, in this example, **"#EDB46F"** is specified for **"Permanent"** and **"#F1931B"** is specified for **"Non-Permanent"**.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
+
 <SfMaps>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
@@ -175,7 +360,9 @@ The color mapping supports customization of shape colors based on the underlying
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Blazor Maps with Color Mapping](./images/blazor-map-color-mapping.png)
 
@@ -185,7 +372,9 @@ The color mapping supports customization of shape colors based on the underlying
 
 Label provides information to users about the shapes, and you can enable label text to the shapes in the Maps component by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_Visible) property as **true** and field name from data source in the [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelPath) property in [MapsDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html).
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
+
 <SfMaps>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
@@ -203,7 +392,9 @@ Label provides information to users about the shapes, and you can enable label t
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 > Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
@@ -213,7 +404,9 @@ Label provides information to users about the shapes, and you can enable label t
 
 Title can be added to the Maps to provide quick information to the users about the shapes rendered in the component. You can add a title using [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTitleSettings.html#Syncfusion_Blazor_Maps_MapsTitleSettings_Text) property in [MapsTitleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTitleSettings.html).
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
+
 <SfMaps>
     @* To add title *@
     <MapsTitleSettings Text="Members of the UN Security Council"></MapsTitleSettings>
@@ -232,7 +425,9 @@ Title can be added to the Maps to provide quick information to the users about t
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 > Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
@@ -242,7 +437,9 @@ Title can be added to the Maps to provide quick information to the users about t
 
 The legend items are used to denote color mapping categories, and you can show legend for the Maps by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property to **true** in [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html).
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
+
 <SfMaps>
     <MapsTitleSettings Text="Members of the UN Security Council"></MapsTitleSettings>
     @* To add legend *@
@@ -262,7 +459,9 @@ The legend items are used to denote color mapping categories, and you can show l
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 > Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
@@ -272,7 +471,9 @@ The legend items are used to denote color mapping categories, and you can show l
 
 The tooltip can be used when you cannot display information using the data labels due to space constraints. You can enable tooltip by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTooltipSettings.html#Syncfusion_Blazor_Maps_MapsTooltipSettings_Visible) property to **true** in [MapsLayerTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerTooltipSettings.html).
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
+
 <SfMaps>
     <MapsTitleSettings Text="Members of the UN Security Council"></MapsTitleSettings>
     <MapsLegendSettings Visible="true"></MapsLegendSettings>
@@ -293,7 +494,9 @@ The tooltip can be used when you cannot display information using the data label
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 > Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 

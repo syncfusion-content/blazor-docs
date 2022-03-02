@@ -16,27 +16,46 @@ The following example explains about how to achieve Repeat Button in mouse and t
 ```csharp
 
 @using Syncfusion.Blazor.Buttons
+@using System.Timers
 
-<div id="preview">@EventName Event is triggered</div>
-<SfButton Content="Button" @onclick="Click"></SfButton>
+<div id="button">
+    <SfButton Content="Button" oncontextmenu="return false;" @onmousedown='mousedown' @ontouchstart='mousedown' @onmouseup='mouseup' @ontouchend='mouseup'></SfButton>
+</div>
+<div id="preview">@EventName Event triggered - @Count times</div>
 
 @code{
-    public string EventName = "No";
-    public void Click()
+    public string EventName = "";
+    public int Count = 0;
+    private static Timer aTimer;
+    public void Click(Object source, System.Timers.ElapsedEventArgs e)
     {
-        this.EventName = "Click";
+        EventName = "Click";
+        Count++;
+        InvokeAsync(StateHasChanged);
+    }
+    public void mousedown()
+    {
+        aTimer = new System.Timers.Timer();
+        aTimer.Interval = 200;
+        aTimer.Elapsed += Click;
+        aTimer.AutoReset = true;
+        aTimer.Start();
+    }
+    public void mouseup()
+    {
+        aTimer.Stop();
+        aTimer.Dispose();
     }
 }
 
 <style>
-    #preview{
-       float: right;
-       padding: 0 350px 0 0;
+    #preview {
+        float: right;
+        padding: 0 350px 0 0;
     }
 </style>
 
 ```
 
-Output be like
 
 ![Repeat Button in Blazor Button Component](./../images/blazor-button-with-repeat-button.png)

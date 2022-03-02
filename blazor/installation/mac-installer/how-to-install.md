@@ -1,21 +1,32 @@
 ---
 layout: post
 title: Installing Syncfusion Blazor Mac installer - Syncfusion
-description: Learn here about the how to install Syncfusion Blazor mac installer after downloading from our syncfusion website. 
+description: Learn here about how to install Syncfusion Blazor mac installer after downloading from our Syncfusion website. 
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Installing Syncfusion Blazor Mac installer
+# Installing Syncfusion Blazor Mac Installer
 
-The Syncfusion Blazor Mac installer allows you to create the Blazor application in Visual Studio for Mac with the Syncfusion Blazor components.
+The Essential Studio Blazor Mac installer allows you to create the Blazor application in Visual Studio for Mac with the Syncfusion Blazor components.
 
-## Installation
+## Steps to resolve the warning message in Catalina OS or later
 
-The steps below show how to install the Blazor Mac installer.
+   While running Essential Studio Blazor Mac Installer on Catalina MacOS or later, the below alert will be displayed.
 
-1. Open Syncfusion Blazor Mac Installer(.pkg) file. The Installer Wizard opens. Click Continue.
+   ![Alert Image](images/Mac_Catalina_MacOS_Alert.png)  
+     
+   If you receive this alert, follow the below steps for the easiest solution.   
+
+   1.	Right-click the downloaded pkg file.
+   2.	Select the "Open With" option and choose "Installer (Default)".
+
+## Step-by-Step Installation
+
+The steps below show how to install the Essential Studio Blazor Mac installer.
+
+1. Open Syncfusion Essential Studio Blazor Mac Installer(.pkg) file. The Installer Wizard opens. Click Continue.
 
    ![Installer Wizard](images/Mac_installer_1.PNG)
 
@@ -27,13 +38,13 @@ The steps below show how to install the Blazor Mac installer.
 
    ![License Agreements Confirmation](images/Mac_installer_3.PNG)
 
-   > **Note** <br /> The Unlock key is not required to install the Mac installer.
+   > **Note** <br /> The Unlock key is not required to install the Essential Studio Blazor Mac installer.
 
 4. The Destination select wizard will appear. You can choose which disc to install the Syncfusion Essential Studio for Blazor installer on here.
 
    ![Destination select wizard](images/Mac_installer_4.PNG)
 
-5. The Installation Type wizard will appear. Click Install to begin the standard installation of the Syncfusion Blazor Mac installer.
+5. The Installation Type wizard will appear. Click Install to begin the standard installation of the Syncfusion Essential Studio Blazor Mac installer.
 
    ![Installation Type wizard](images/Mac_installer_5.PNG)
 
@@ -56,5 +67,5 @@ The steps below show how to install the Blazor Mac installer.
 
 You can also find the steps for getting started with Syncfusion Blazor components in Mac,
 
-* Getting started with Syncfusion Blazor Components in [Blazor Server Side App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-mac/#getting-started-with-syncfusion-blazor-components-in-blazor-server-side-app-using-visual-studio-for-mac) using Visual Studio for Mac
-* Getting started with Syncfusion Blazor Components in [Web Assembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-mac/) using Visual Studio for Mac
+* Getting started with Syncfusion Blazor Components in [Blazor Server Side App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-mac/#getting-started-with-syncfusion-blazor-components-in-blazor-server-side-app-using-visual-studio-for-mac) using Visual Studio for Mac.
+* Getting started with Syncfusion Blazor Components in [Web Assembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-mac/) using Visual Studio for Mac.

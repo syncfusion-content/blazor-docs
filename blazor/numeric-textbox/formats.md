@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Number Formats in Blazor Numeric TextBox Component | Syncfusion
-description: Checkout and learn here all about Number Formats in Syncfusion Blazor Numeric TextBox component and more.
+description: Checkout and learn here all about number formats in Syncfusion Blazor Numeric TextBox component and more.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
@@ -15,16 +15,12 @@ You can format the value of NumericTextBox using the [Format](https://help.syncf
 
 From the standard numeric format, you can use the numeric related format specifiers such as `n`,`p`, and `c` in the NumericTextBox component. By using these format specifiers, you can achieve the percentage and currency textbox behavior also.
 
-The following example demonstrates percentage and currency formats.
-
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfNumericTextBox Value=0.5 Min=0 Max=1 Step=0.01 Format="p2" Placeholder="Percentage format" FloatLabelType="@FloatLabelType.Auto"></SfNumericTextBox>
 <SfNumericTextBox TValue="int?" Value=10 Format="c2" Placeholder="Currency format" FloatLabelType="@FloatLabelType.Auto"></SfNumericTextBox>
 ```
-
-The output will be as follows.
 
 ![Blazor NumericTextBox with Standard Format](./images/blazor-numerictextbox-standard-format.png)
 
@@ -40,7 +36,5 @@ The following examples demonstrate format the value by using currency format str
 <SfNumericTextBox TValue="int?" Value=10 Format="###.##" Placeholder="Custom format string #" FloatLabelType="@FloatLabelType.Always"></SfNumericTextBox>
 <SfNumericTextBox TValue="int?" Value=10 Format="000.00" Placeholder="Custom format string 0" FloatLabelType="@FloatLabelType.Always"></SfNumericTextBox>
 ```
-
-The output will be as follows.
 
 ![Blazor NumericTextBox with Custom Format](./images/blazor-numerictextbox-custom-format.png)

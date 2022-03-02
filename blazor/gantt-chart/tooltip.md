@@ -11,7 +11,7 @@ documentation: ug
 
 The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component has a support to display a tooltip for various UI elements like taskbar, timeline cells, and grid cells
 
-## Enable Tooltip
+## Enable tooltip
 
 In the Gantt Chart component, you can enable or disable the mouse hover tooltip for the following UI elements using the `GanttTooltipSettings.ShowTooltip` property:
 
@@ -144,7 +144,7 @@ Event Marker Tooltip
 
 > The default value of the `GanttTooltipSettings.ShowTooltip` property is true.
 
-## Timeline Cells Tooltip
+## Timeline cells tooltip
 
 In the Gantt Chart component, you can enable or disable the mouse hover tooltip of timeline cells using the `GanttTimelineSettings.ShowTooltip` property. The default value of this property is true. The following code example shows how to enable the timeline cells tooltip in Gantt Chart.
 
@@ -243,7 +243,7 @@ In the Gantt Chart component, you can enable or disable the mouse hover tooltip 
 
 ![Blazor Gantt Chart displays Timeline Cell Tooltip](images/blazor-gantt-chart-timeline-cell-tooltip.png)
 
-## Cell Tooltip
+## Cell tooltip
 
 You can enable or disable the Grid cell tooltip using the `GanttColumn.ClipMode` property.
 
@@ -347,7 +347,7 @@ You can enable or disable the Grid cell tooltip using the `GanttColumn.ClipMode`
 }
 ```
 
-### Clip Mode
+### Clip mode
 
 The clip mode provides options to display its overflow cell content and it can be defined by the `GanttColumn.ClipMode` property.
 
@@ -360,9 +360,9 @@ The following are three types of `ClipMode`:
 > NOTE
 > By default, all the column's `ClipMode` property is defined as `EllipsisWithTooltip`.
 
-## Tooltip Template
+## Tooltip template
 
-### Taskbar Tooltip
+### Taskbar tooltip
 
 The default tooltip in the Gantt Chart component can be customized using the `GanttTooltipSettings.TaskbarTemplate` property. You can map the template script element’s ID value or template string directly to this property.
 
@@ -569,7 +569,7 @@ The below screenshot shows the output of above code example.
 
 ![Alt text](images/editingTemplate.png) -->
 
-### Baseline Tooltip
+### Baseline tooltip
 
 A baseline tooltip can be customized using the `GanttTooltipSettings.BaselineTemplate` property. The following code example shows how to customize the baseline tooltip in Gantt Chart.
 
@@ -676,7 +676,7 @@ The following screenshot shows the template for baseline in Gantt Chart.
 
 ![Customizing Baseline Tooltip in Blazor Gantt Chart](images/blazor-gantt-chart-baseline-tooltip-customization.png)
 
-### Manual Taskbar Tooltip
+### Manual taskbar tooltip
 
 A manual taskbar tooltip can be customized using the `GanttTooltipSettings.ManualTaskbarTemplate` property. The following code example shows how to customize the manual taskbar tooltip in Gantt Chart.
 
