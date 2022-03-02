@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Deployment | Blazor | Syncfusion
-description: Learn here about that how to getting the information about deploying in Syncfusion Blazor Components.
+title: Deployment in Blazor | AOT | Syncfusion
+description: Learn here all about deploying the Blazor application with Syncfusion Blazor Components and much more.
 platform: Blazor
 component: Common
 documentation: ug
@@ -41,36 +41,61 @@ Packing the application and its dependencies into a folder for deployment to a h
 
 For CLI deployment, run the following command from your root directory.
 
-```
+{% tabs %}
+{% highlight c# tabtitle=".NET CLI" %}
+
 dotnet publish -c Release
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 For Blazor Server CLI deployment.
 
-```
+{% tabs %}
+{% highlight c# tabtitle=".NET CLI" %}
+
 dotnet publish -c Release --self-contained true -r win-x86
-```
 
-Refer to the dotnet publish\'s [optional arguments](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish?tabs=netcore21#arguments).
+{% endhighlight %}
+{% endtabs %}
 
-Use the following command to specify the path for the output directory.
+Refer to the [dotnet publish - arguments](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish?tabs=netcore21#arguments) to learn about various optional arguments. Use the following command to specify the path for the output directory.
 
-```
+{% tabs %}
+{% highlight c# tabtitle=".NET CLI" %}
+
 dotnet publish -c Release -o <output directory>
-```
 
-> If the output directory is not specified, it defaults to **./bin/[configuration]/[framework]/publish/** for a **framework-dependent deployment** or **./bin/[configuration]/[framework]/[runtime]/publish/** for a **self-contained deployment**.
+{% endhighlight %}
+{% endtabs %}
 
-If the path is relative, the output directory generated is relative to the project file location, not to the current working directory.
+> If the output directory is not specified, it defaults to `./bin/[configuration]/[framework]/publish/` for a **framework-dependent deployment** and `./bin/[configuration]/[framework]/[runtime]/publish/` for a **self-contained deployment**.
 
-Also, refer to the MSDN reference [here](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/azure-apps/?view=aspnetcore-3.1&tabs=netcore-cli#deploy-the-app-self-contained).
+If the path is relative, the output directory generated is relative to the project file location, not to the current working directory. Now, the published folder can be hosted in IIS or Azure app service.
 
-Now, you can host the published folder by using the IIS or Azure app service.
+## Ahead-of-time (AOT) compilation in Blazor WebAssembly
+
+Blazor WebAssembly supports ahead-of-time (AOT) compilation which provides improved runtime performance at the expense of a larger app size. Refer to [Ahead-of-time (AOT) compilation](https://docs.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/webassembly?view=aspnetcore-6.0#ahead-of-time-aot-compilation) topic to learn more about how it works and how to enable. 
+
+### Enable AOT in the application
+
+To enable AOT compilation in the application, add `RunAOTCompilation` options with value to `true` in the Blazor WebAssembly app's project file.
+
+{% tabs %}
+{% highlight c# tabtitle="~.csproj" %}
+
+<PropertyGroup>
+    <RunAOTCompilation>true</RunAOTCompilation>
+</PropertyGroup>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## See Also
 
-* [Host and Deploy blazor](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/blazor/?view=aspnetcore-3.1&tabs=visual-studio)
-* [Host and deploy blazor server](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/blazor/server)
-* [Host and deploy ASP.NET Core Blazor WebAssembly](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/blazor/webassembly)
+* [Host and Deploy Blazor](https://docs.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/)
+* [Host and deploy Blazor Server](https://docs.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/server)
+* [Host and deploy ASP.NET Core Blazor WebAssembly](https://docs.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/webassembly)
 * [Publish a Web app to Azure App Service using Visual Studio](https://docs.microsoft.com/en-us/visualstudio/deployment/quickstart-deploy-aspnet-web-app)
 * [Deploy ASP.NET Core apps to Azure App Service](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/azure-apps/)
+* [Host and deploy ASP.NET Core Blazor Web Assembly Application](https://docs.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/webassembly?view=aspnetcore-6.0)
