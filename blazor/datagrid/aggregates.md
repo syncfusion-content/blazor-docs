@@ -26,7 +26,7 @@ The built-in aggregates are,
 * TrueCount
 * FalseCount
 
-> * Multiple types for a column is supported only when one of the aggregate templates is used.
+> * Multiple types for a column are supported only when one of the aggregate templates is used.
 
 ## Footer aggregate
 
@@ -304,7 +304,7 @@ To use Custom aggregate, specify the **AggregateType** as **Custom** in **GridAg
     public List<Product> Products { get; set; }
     public string GetWeightedAggregate()
     {
-        // Here, we can calculate custom aggregate operations and return the result
+        // Here, you can calculate custom aggregate operations and return the result.
         return Queryable.Sum(Products.Select(x => (x.TotalSales + x.TotalCosts) / x.TotalSales).AsQueryable()).ToString();
     }
     protected override void OnInitialized()
@@ -332,7 +332,7 @@ To use Custom aggregate, specify the **AggregateType** as **Custom** in **GridAg
 
 > You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
-## Handling Aggregates in Custom Adaptor
+## Handling aggregates in custom adaptor
 
 When using Custom Adaptor, the aggregates has to be handled in the Read/ReadAsync method of Custom adaptor.
 

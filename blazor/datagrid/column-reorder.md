@@ -105,7 +105,7 @@ The following GIF represents Reordering column **Freight** by using method,
 
 ## Reorder multiple columns
 
-User can reorder a single column at a time by Interaction. Sometimes, we need to reorder multiple columns at the same time. This can be achieved programmatically by using [ReorderColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ReorderColumns_System_Collections_Generic_List_System_String__System_String_) method.
+User can reorder a single column at a time by Interaction. Sometimes, you need to reorder multiple columns at the same time. This can be achieved programmatically by using the [ReorderColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ReorderColumns_System_Collections_Generic_List_System_String__System_String_) method.
 
 In the following sample, **Customer Name** and **Freight** columns are reordered to last column position by using this method on button click.
 
