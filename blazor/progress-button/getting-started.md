@@ -13,7 +13,8 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor ProgressButton](https://www.syncfusion.com/blazor-components/blazor-progress-button) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
-Add a Syncfusion Blazor Progress Button to a Blazor WebAssembly App:
+To get start quickly with ProgressButton Component using Blazor, you can check on this video:
+
 {% youtube
 "youtube:https://www.youtube.com/watch?v=ps2hvSBqPX0"%}
 
