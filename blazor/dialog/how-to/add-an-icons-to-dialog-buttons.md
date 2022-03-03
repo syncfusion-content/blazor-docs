@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Add an icons to Dialog buttons in Blazor Dialog Component | Syncfusion
-description: Checkout and learn here all about Add an icons to Dialog buttons in Syncfusion Blazor Dialog component and more.
+title: Add Icons to Dialog Buttons in Blazor Dialog Component | Syncfusion
+description: Checkout and learn here all about how to add icons to Dialog buttons in Syncfusion Blazor Dialog component and more.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Add an icons to Dialog buttons in Blazor Dialog Component
+# Add Icons to Dialog Buttons in Blazor Dialog Component
 
 You can add icons to the dialog buttons using the `DialogButton` property or `FooterTemplate` property.
 
-In the following code, dialog footer buttons are customized with icons using `DialogButton` property.
+In the following code, dialog footer buttons are customized with icons using the `DialogButton` property.
 
 ```cshtml
 
@@ -66,7 +66,7 @@ In the following code, dialog footer buttons are customized with icons using `Di
 
 ```
 
-In the following code, dialog footer buttons are customized with icons using `FooterTemplate` template property.
+In the following code, dialog footer buttons are customized with icons using the `FooterTemplate` template property.
 
 ```cshtml
 
