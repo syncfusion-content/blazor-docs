@@ -451,52 +451,90 @@ The following sample code demonstrates implementing the aggregates for the custo
 }
 ```
 
-<!-- Reactive aggregate update
+## Auto update aggregate value in batch editing
 
 When using batch editing, the aggregate values will be refreshed on every cell save. The footer, group footer, and group caption aggregate values will be refreshed.
 
-> Adding a new record to the grouped DataGrid will not refresh the aggregate values.
+> Adding a new record to the grouped grid will not refresh the group summary and group caption aggregate’s value.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add","Delete","Update","Cancel" })">
-    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode=EditMode.Batch></GridEditSettings>
+<SfGrid DataSource="@Orders" AllowPaging="true" AllowGrouping=true Toolbar="@ToolbarItems">
+    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Batch"></GridEditSettings>
+    <GridGroupSettings Columns=@Units></GridGroupSettings>
     <GridAggregates>
         <GridAggregate>
             <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Sum" Format="C2"></GridAggregateColumn>
+                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Sum">
+                    <GroupFooterTemplate>
+                        @{
+                            var aggregate = (context as AggregateTemplateContext);
+                            <div>
+                                <p>Sum: @aggregate.Sum</p>
+                            </div>
+                        }
+                    </GroupFooterTemplate>
+                </GridAggregateColumn>
+                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Sum" Format="C2">
+                    <FooterTemplate>
+                        @{
+                            var aggregate = (context as AggregateTemplateContext);
+                            <div>
+                                <p>Sum: @aggregate.Sum</p>
+                            </div>
+                        }
+                    </FooterTemplate>
+                </GridAggregateColumn>
+                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Average">
+                    <GroupCaptionTemplate>
+                        @{
+                            var aggregate = (context as AggregateTemplateContext);
+                            <div>
+                                <p>Average: @aggregate.Average</p>
+                            </div>
+                        }
+                    </GroupCaptionTemplate>
+                </GridAggregateColumn>
             </GridAggregateColumns>
         </GridAggregate>
     </GridAggregates>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" IsPrimaryKey="true" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey=true TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="140"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
+@code
+{
+    private List<string> ToolbarItems = new List<string>(){ "Add","Edit","Delete","Update","Cancel"};
     public List<Order> Orders { get; set; }
+    private string[] Units = (new string[] { "CustomerID" });
 
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
         {
             OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID", "AROUT", "BERGS", "BLAUS", "BONAP", "BOTTM", "CHOPS", "CENTC", "BSBEV", "CONSH" })[new Random().Next(14)],
             Freight = 2.1 * x,
             OrderDate = DateTime.Now.AddDays(-x),
+            ShipCountry = (new string[] { "Sweden", "Germany", "Argentina", "Mexico", "Denmark", "Finland", "Switzerland", "UK" })[new Random().Next(8)],
         }).ToList();
     }
 
-    public class Order
+    public class Order 
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
+        public string ShipCountry {  get;  set; }
         public double? Freight { get; set; }
     }
-} 
+}
+```
 
-```-->
+![Auto update Aggregate value in Batch Editing](./images/blazor-datagrid-auto-update-aggregate-value.png)
