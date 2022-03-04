@@ -246,9 +246,9 @@ For more information about node interaction, refer to [Node Interaction](../inte
 
 * [How to position the node](./positioning)
 
-* [How to customize the node](./appearance)
+* [How to customize the node](./customization)
 
-* [How to interact with the annotation in diagram](../annotations/interaction)
+* [How to interact with the annotation in diagram](../annotations/node-annotation)
 
 * [How to interact with the port in diagram](../ports/interaction)
 
