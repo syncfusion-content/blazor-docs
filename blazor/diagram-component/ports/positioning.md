@@ -196,7 +196,7 @@ The following code explains how to align ports.
                     Shape = PortShapes.Square,
                     HorizontalAlignment = HorizontalAlignment.Left,
                     VerticalAlignment = VerticalAlignment.Top,
-                    Margin = new Margin() { Top = 10 }
+                    Margin = new Margin() { Top = 20 }
                 }
             }
         };
