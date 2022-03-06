@@ -277,7 +277,7 @@ You can add the Data Matrix code in our barcode generator component.
 {% tabs %}
 {% highlight razor %}
 
-<SfDataMatrixGenerator Width="200" Height="150" Mode="@RenderingMode.SVG" Value="SYNCFUSION"></SfDataMatrixGenerator>
+<SfDataMatrixGenerator Width="200" Height="150" Value="SYNCFUSION"></SfDataMatrixGenerator>
 
 {% endhighlight %}
 {% endtabs %}

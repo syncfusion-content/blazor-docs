@@ -54,7 +54,7 @@ In barcode generators, you can customize the barcode text by using display [Text
 @using Syncfusion.Blazor.BarcodeGenerator
 
 <SfQRCodeGenerator Width="200px" Height="150px" Value="Syncfusion">
-    <QRCodeGeneratorDisplayText text="Text"></QRCodeGeneratorDisplayText>
+    <QRCodeGeneratorDisplayText Text="Text"></QRCodeGeneratorDisplayText>
 </SfQRCodeGenerator>
 
 ```
