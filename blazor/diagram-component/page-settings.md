@@ -50,12 +50,12 @@ Based on the diagramming element position, the size of the page dynamically incr
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px">
+<SfDiagramComponent Height="600px" Nodes="nodes">
     @*Initialize the page settings with multiple page, page orientation and break lines*@
-    <PageSettings Height="300" 
-                  Width="300" 
+    <PageSettings Height="300"
+                  Width="300"
                   MultiplePage="true"
-                  Orientation="@orientation" 
+                  Orientation="@orientation"
                   ShowPageBreaks="true">
     </PageSettings>
 </SfDiagramComponent>
@@ -64,6 +64,24 @@ Based on the diagramming element position, the size of the page dynamically incr
 {
     //Sets the page orientation as landscape.
     public PageOrientation orientation = PageOrientation.Landscape;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    protected override void OnInitialized()
+    {
+        Node node = new Node()
+        {
+            ID = "node6",
+            Width = 50,
+            Height = 50,
+            OffsetX = 150,
+            OffsetY = 100,
+            Style = new ShapeStyle()
+            {
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            }
+        };
+        nodes.Add(node);
+    }
 }
 ```
 ![Multiple Page](./images/MultiplePage.png)
@@ -81,11 +99,12 @@ The appearance of the pages can be customized by using the following properties 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px">
+<SfDiagramComponent Height="600px" Nodes="nodes">
     @*Initialize the page settings with page orientation and break lines*@
-    <PageSettings Height="300" 
-                  Width="300" 
-                  Orientation="@orientation" 
+    <PageSettings Height="300"
+                  Width="300"
+                  Orientation="@orientation"
+                  MultiplePage="true"
                   ShowPageBreaks="true">
         @*Set the page background color*@
         <BackgroundStyle Background="LightGreen" />
@@ -95,6 +114,24 @@ The appearance of the pages can be customized by using the following properties 
 
 @code
 {
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    protected override void OnInitialized()
+    {
+        Node node = new Node()
+        {
+            ID = "node6",
+            Width = 50,
+            Height = 50,
+            OffsetX = 150,
+            OffsetY = 100,
+            Style = new ShapeStyle()
+            {
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            }
+        };
+        nodes.Add(node);
+    }
     //Set the page orientation as landscape.
     public PageOrientation orientation = PageOrientation.Landscape;
 }
