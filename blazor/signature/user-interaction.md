@@ -9,7 +9,7 @@ documentation: ug
 
 # User Interactions in Blazor Signature component
 
-The Signature control supports various interaction like Undo, Redo, Clear, Disabled, and ReadOnly.
+The Signature component supports various interaction like Undo, Redo, Clear, Disabled, and ReadOnly.
 
 ## Undo
 
@@ -25,11 +25,23 @@ It clears the signature and makes the canvas empty using the [`ClearAsync`](http
 
 ## Disabled
 
-It disables the signature control using the [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_Disabled) property.
+It disables the signature component using the [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_Disabled) property.
 
 ## ReadOnly
 
 It prevents the signature from editing using the [`IsReadOnly`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_IsReadOnly) property.
+
+## CanUndo
+
+To check whether the undo collection is empty or not using the [`CanUndoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanUndoAsync) method.
+
+## CanRedo
+
+To check whether the redo collection is empty or not using the [`CanRedoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanRedoAsync) method.
+
+## IsEmpty
+
+To check whether the signature in canvas is empty or not using the [`IsEmptyAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_IsEmptyAsync) method.
 
 ## User Integration sample
 
@@ -37,31 +49,80 @@ It prevents the signature from editing using the [`IsReadOnly`](https://help.syn
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Buttons
 
-<SfButton CssClass="e-primary" @onclick="onUndo">UNDO</SfButton>
-<SfButton CssClass="e-primary" @onclick="onRedo">REDO</SfButton>
-<SfButton CssClass="e-primary" @onclick="onClear">CLEAR</SfButton>
+<SfButton CssClass="e-primary" @ref="undoBtn" @onclick="OnUndo">UNDO</SfButton>
+<SfButton CssClass="e-primary" @ref="redoBtn" @onclick="OnRedo">REDO</SfButton>
+<SfButton CssClass="e-primary" @ref="clearBtn" @onclick="OnClear">CLEAR</SfButton>
 
-<SfCheckBox Label="Disable" @onchange="onDisable"></SfCheckBox>
-<SfCheckBox Label="Readonly" @onchange="onReadOnly"></SfCheckBox>
+<SfCheckBox Label="Disable" ValueChange="OnDisable" TChecked="bool"></SfCheckBox>
+<SfCheckBox Label="Readonly" ValueChange="OnReadOnly" TChecked="bool"></SfCheckBox>
 
-<SfSignature @ref="signature" ></SfSignature>
+<SfSignature @ref="signature" Disabled="@disabled" IsReadOnly="@isReadOnly" Changed="SignChanged"></SfSignature>
 
 @code{
     private SfSignature signature;
-    private void onUndo() {
-        signature.UndoAsync();
+    private SfButton undoBtn;
+    private SfButton redoBtn;
+    private SfButton clearBtn;
+    private bool disabled = false;
+    private bool isReadOnly = false;
+    private void OnUndo()
+    {
+        if (!signature.Disabled && !signature.IsReadOnly)
+        {
+            signature.UndoAsync();
+        }
     }
-    private void onRedo() {
-        signature.RedoAsync();
+    private void OnRedo()
+    {
+        if (!signature.Disabled && !signature.IsReadOnly)
+        {
+            signature.RedoAsync();
+        }
     }
-    private void onClear() {
-        signature.ClearAsync();
+    private void OnClear()
+    {
+        if (!signature.Disabled && !signature.IsReadOnly)
+        {
+            signature.ClearAsync();
+        }
     }
-    private void onDisable(Microsoft.AspNetCore.Components.ChangeEventArgs args) {
-        signature.Disabled = args.Checked;
+    private void OnDisable(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> args)
+    {
+        disabled = args.Checked;
     }
-    private void onReadOnly(Microsoft.AspNetCore.Components.ChangeEventArgs args) {
-        signature.IsReadOnly = args.Checked;
+    private void OnReadOnly(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> args)
+    {
+        isReadOnly = args.Checked;
+    }
+    private async Task SignChanged()
+    {
+        bool canUndo = await signature.CanUndoAsync();
+        bool canRedo = await signature.CanRedoAsync();
+        bool isEmpty = await signature.IsEmptyAsync();
+        if (canUndo)
+        {
+            undoBtn.Disabled = true;
+        }
+        else
+        {
+            undoBtn.Disabled = false;
+        }
+        if (canRedo)
+        {
+            redoBtn.Disabled = true;
+        }
+        else
+        {
+            redoBtn.Disabled = false;
+        }
+        if (isEmpty)
+        {
+            clearBtn.Disabled = true;
+        }
+        else
+        {
+            clearBtn.Disabled = false;
+        }
     }
 }
 ```

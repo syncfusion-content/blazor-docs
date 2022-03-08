@@ -11,7 +11,7 @@ documentation: ug
 
 ## Draw
 
-The signature control draws the text as signature using the [`DrawAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_DrawAsync_System_String_System_String_System_Int32_) method with different font families like Arial, Serif, with different font sizes.
+The signature component draws the text as signature using the [`DrawAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_DrawAsync_System_String_System_String_System_Int32_) method with different font families like Arial, Serif, with different font sizes.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -27,7 +27,7 @@ The signature control draws the text as signature using the [`DrawAsync`](https:
 <SfDropDownList TItem="sizeFields" TValue="int" PopupHeight="200px" @bind-Value="@size" DataSource="@sizes">
     <DropDownListFieldSettings Text="Text" Value="Text" />
 </SfDropDownList>
-<SfButton @onclick="onDraw">DRAW</SfButton>
+<SfButton @onclick="OnDraw">DRAW</SfButton>
     
 @code{
     private SfSignature signature;
@@ -57,7 +57,7 @@ The signature control draws the text as signature using the [`DrawAsync`](https:
         new sizeFields(){ Text= 40 },
         new sizeFields(){ Text= 50 }
      };
-    private void onDraw()
+    private void OnDraw()
     {
         signature.DrawAsync(text.Value, Value, size);
     }

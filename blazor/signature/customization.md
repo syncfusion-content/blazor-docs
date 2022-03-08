@@ -9,11 +9,11 @@ documentation: ug
 
 # Customization of Signature component
 
-The Signature control supports various customizations like background color, background image, stroke color, stroke width, save with background.
+The Signature component supports various customizations like background color, background image, stroke color, stroke width, save with background.
 
 ## Stroke Width
 
-The signature stroke width depends on the [`MaxStrokeWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_MaxStrokeWidth), [`MinStrokeWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_MinStrokeWidth) and [`Velocity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_Velocity) values. And the variable stroke width is calculated based on the values of maxStrokeWidth and minStrokeWidth for smoother signature and velocity value is used for realistic signature.
+The signature stroke width depends on the [`MaxStrokeWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_MaxStrokeWidth), [`MinStrokeWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_MinStrokeWidth) and [`Velocity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_Velocity) values. And the variable stroke width is calculated based on the values of MaxStrokeWidth and MinStrokeWidth for smoother signature and velocity value is used for realistic signature.
 
 In the following example, minimum stroke width is set as 0.5, maximum stroke width is set as 3 and velocity is set as 0.7.
 
@@ -58,14 +58,14 @@ The Background image is applied using the [`BackgroundImage`](https://help.syncf
 @using Syncfusion.Blazor.Buttons
 
 <SfTextBox CssClass="e-outline" @ref="text" Placeholder='Enter the URL of the background Image'></SfTextBox>
-<SfButton id="open" CssClass="e-primary" @onclick="onSet">Set Background</SfButton>
+<SfButton id="open" CssClass="e-primary" @onclick="OnSet">Set Background</SfButton>
 
 <SfSignature @ref="signature"></SfSignature>
 
 @code{
     private SfSignature signature;
     private SfTextBox text;
-    private void onSet()
+    private void OnSet()
     {
         signature.BackgroundImage = text.Value;
     }

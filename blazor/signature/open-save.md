@@ -9,18 +9,18 @@ documentation: ug
 
 # Open and Save Signature
 
-The Signature control supports to open the signature by using hosted/online URL or base64. And it also supports various save options like image, base64, and blob.
+The Signature component supports to open the signature by using hosted/online URL or base64. And it also supports various save options like image, base64, and blob.
 
 ## Open Signature
 
-The signature control opens a pre-drawn signature as either base64 or hosted/ online URL using the [`LoadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_LoadAsync_System_String_System_Int32_System_Int32_) method. It supports the PNG, JPEG, and SVG image's base64.
+The signature component opens a pre-drawn signature as either base64 or hosted/ online URL using the [`LoadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_LoadAsync_System_String_System_Int32_System_Int32_) method. It supports the PNG, JPEG, and SVG image's base64.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Buttons
 
 <SfTextBox CssClass="e-outline" @ref="text" Placeholder='Enter the url or base64 of the signature'></SfTextBox>
-<SfButton id="open" CssClass="e-primary" @onclick="onOpen">OPEN</SfButton>
+<SfButton id="open" CssClass="e-primary" @onclick="OnOpen">OPEN</SfButton>
 
 <div id="signature-control">
     <SfSignature @ref="signature" id="signature"></SfSignature>
@@ -29,7 +29,7 @@ The signature control opens a pre-drawn signature as either base64 or hosted/ on
 @code{
     private SfSignature signature;
     private SfTextBox text;
-    private void onOpen()
+    private void OnOpen()
     {
         var sign = text.Value;
         signature.LoadAsync(sign, 300, 300);
@@ -54,11 +54,11 @@ The signature control opens a pre-drawn signature as either base64 or hosted/ on
 
 ## Save Signature
 
-The Signature control saves the signature as base64, blob, and image like PNG, JPEG, and SVG.
+The Signature component saves the signature as base64, blob, and image like PNG, JPEG, and SVG.
 
 ### Save as Base64
 
-The Signature control saves the signature as base64 using the [`GetSignatureAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_GetSignatureAsync_Syncfusion_Blazor_Inputs_SignatureFileType_) method. It also supports the PNG, JPEG, and SVG format as base64.
+The Signature component saves the signature as base64 using the [`GetSignatureAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_GetSignatureAsync_Syncfusion_Blazor_Inputs_SignatureFileType_) method. It also supports the PNG, JPEG, and SVG format as base64.
 
 ```cshtml
 
@@ -68,11 +68,11 @@ The Signature control saves the signature as base64 using the [`GetSignatureAsyn
 <h4>Sign Here</h4>
 <SfSignature @ref="signature"></SfSignature>
 
-<SfButton @onclick="getSign">GetSignature</SfButton>
+<SfButton @onclick="GetSign">GetSignature</SfButton>
 
 @code {
     private SfSignature signature;
-    private void getSign()
+    private void GetSign()
     {
         signature.GetSignatureAsync();
     }
@@ -83,7 +83,7 @@ The Signature control saves the signature as base64 using the [`GetSignatureAsyn
 
 ### Save as Blob
 
-The signature control saves the signature as Blob using the [`SaveAsBlobAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_SaveAsBlobAsync) method. It return the signature as blob.
+The signature component saves the signature as Blob using the [`SaveAsBlobAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_SaveAsBlobAsync) method. It return the signature as blob.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -92,11 +92,11 @@ The signature control saves the signature as Blob using the [`SaveAsBlobAsync`](
 <h4>Sign Here</h4>
 <SfSignature @ref="signature"></SfSignature>
 
-<SfButton @onclick="getBlob">GetBlob</SfButton>
+<SfButton @onclick="GetBlob">GetBlob</SfButton>
 
 @code {
     private SfSignature signature;
-    private void getBlob()
+    private void GetBlob()
     {
         signature.SaveAsBlobAsync();
     }
@@ -105,9 +105,9 @@ The signature control saves the signature as Blob using the [`SaveAsBlobAsync`](
 
 ![Blazor Signature Component](./images/blazor-signature-save-blob.png)
 
-### Save As Image
+### Save as Image
 
-The Signature control saves the signature as an image using the [`SaveAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_SaveAsync_Syncfusion_Blazor_Inputs_SignatureFileType_System_String_) method. And the file name and file type of the signature is set by using the `OnSave` event. It also supports to save the signature as an image in formats like PNG, JPEG and SVG.
+The Signature component saves the signature as an image using the [`SaveAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_SaveAsync_Syncfusion_Blazor_Inputs_SignatureFileType_System_String_) method. And the file name and file type of the signature is set by using the `OnSave` event. It also supports to save the signature as an image in formats like PNG, JPEG and SVG.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -118,7 +118,7 @@ The Signature control saves the signature as an image using the [`SaveAsync`](ht
     <span>Sign here</span>
     <span>
         <SfSplitButton Content="SAVE">
-            <SplitButtonEvents ItemSelected="onSaveType" Clicked="onSave">
+            <SplitButtonEvents ItemSelected="OnSaveType" Clicked="OnSave">
             </SplitButtonEvents>
             <DropDownMenuItems>
                 <DropDownMenuItem Text="Png"></DropDownMenuItem>
@@ -133,7 +133,7 @@ The Signature control saves the signature as an image using the [`SaveAsync`](ht
 @code {
     private SfSignature signature;
     private SignatureFileType type = SignatureFileType.Png;
-    private void onSaveType(MenuEventArgs args)
+    private void OnSaveType(MenuEventArgs args)
     {
         switch (args.Item.Text)
         {
@@ -149,7 +149,7 @@ The Signature control saves the signature as an image using the [`SaveAsync`](ht
         }
         signature.SaveAsync(type, "Signature");
     }
-    private void onSave(Syncfusion.Blazor.SplitButtons.ClickEventArgs args)
+    private void OnSave(Syncfusion.Blazor.SplitButtons.ClickEventArgs args)
     {
         signature.SaveAsync();
     }
@@ -158,9 +158,9 @@ The Signature control saves the signature as an image using the [`SaveAsync`](ht
 
 ![Blazor Signature Component](./images/blazor-signature-save-image.png)
 
-## Save With Background
+## Save with Background
 
-The Signature control saves the signature with its background by using the [`SaveWithBackground`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_SaveWithBackground) property. Its default value is true.
+The Signature component saves the signature with its background by using the [`SaveWithBackground`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_SaveWithBackground) property. Its default value is true.
 
 In the following sample, the background color is set as ‘rgb(103 58 183)’ and save with background as true.
 
@@ -173,7 +173,7 @@ In the following sample, the background color is set as ‘rgb(103 58 183)’ an
     <span>Sign here</span>
     <span>
         <SfSplitButton Content="SAVE">
-            <SplitButtonEvents ItemSelected="onSaveType" Clicked="onSave">
+            <SplitButtonEvents ItemSelected="OnSaveType" Clicked="OnSave">
             </SplitButtonEvents>
             <DropDownMenuItems>
                 <DropDownMenuItem Text="Png"></DropDownMenuItem>
@@ -188,7 +188,7 @@ In the following sample, the background color is set as ‘rgb(103 58 183)’ an
 @code {
     private SfSignature signature;
     private SignatureFileType type = SignatureFileType.Png;
-    private void onSaveType(MenuEventArgs args)
+    private void OnSaveType(MenuEventArgs args)
     {
         switch (args.Item.Text)
         {
@@ -204,7 +204,7 @@ In the following sample, the background color is set as ‘rgb(103 58 183)’ an
         }
         signature.SaveAsync(type, "Signature");
     }
-    private void onSave(Syncfusion.Blazor.SplitButtons.ClickEventArgs args)
+    private void OnSave(Syncfusion.Blazor.SplitButtons.ClickEventArgs args)
     {
         signature.SaveAsync();
     }
