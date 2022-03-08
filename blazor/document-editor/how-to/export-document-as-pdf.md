@@ -24,7 +24,7 @@ The following example code illustrates how to process the sfdt in server-side.
 @using Syncfusion.Blazor.DocumentEditor
 @using System.IO
 @using System.Net
-@using Newtonsoft.Json
+@using System.Text.Json
 @using Syncfusion.DocIORenderer 
 
 <button @onclick="ExportAsPdf">Export as Pdf</button>
@@ -50,7 +50,7 @@ The following example code illustrates how to process the sfdt in server-side.
         stream.Dispose();
         //To observe the memory go down, null out the reference of stream variable.
         stream = null;
-        sfdtString = JsonConvert.SerializeObject(document);
+        sfdtString = JsonSerializer.Serialize(document);
         document.Dispose();
         //To observe the memory go down, null out the reference of document variable.
         document = null;

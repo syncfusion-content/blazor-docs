@@ -7,7 +7,7 @@ control: AutoComplete
 documentation: ug
 ---
 
-# Style and appearance in Blazor AutoComplete Component
+# Style and Appearance in Blazor AutoComplete Component
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
@@ -112,9 +112,9 @@ Use the following CSS to customize the selection color of text and background.
 }
 ```
 
-## Customizing the background color of focus, hover, and active item's
+## Customizing the background color of focus, hover, and active items
 
-Use the following CSS to customize the background color of focus, hover and active item's.
+Use the following CSS to customize the background color of focus, hover and active items.
 
 ```css
 .e-dropdownbase .e-list-item.e-item-focus, .e-dropdownbase .e-list-item.e-active, .e-dropdownbase .e-list-item.e-active.e-hover, .e-dropdownbase .e-list-item.e-hover {
@@ -138,7 +138,7 @@ Use the following CSS to customize the appearance of popup element.
 
 ## Adding search icon in the Blazor AutoComplete component.
 
-You can add the search icon to the AutoComplete component by overriding the content of the existing icon.The following code demonstrates how to add a search icon to the AutoComplete component.
+You can add the search icon to the AutoComplete component by overriding the content of the existing icon. The following code demonstrates how to add a search icon to the AutoComplete component.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -173,6 +173,5 @@ You can add the search icon to the AutoComplete component by overriding the cont
 }
 ```
 
-The output will be as follows.
 
 ![Blazor AutoComplete Search Icon](./images/blazor_searchicon_autocomplete.png)

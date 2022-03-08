@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Column chooser in Blazor DataGrid
+# Column Chooser in Blazor DataGrid
 
 The column chooser has options to show or hide columns dynamically. It can be enabled by defining the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) as true.
 
@@ -119,13 +119,13 @@ In this following example, we have opened column chooser using external button c
 The following GIF represents opening column chooser functionality in DataGrid using external button.
 ![Opening Column Chooser in Blazor DataGrid](./images/blazor-datagrid-open-column-chooser.gif)
 
-## Column Chooser Template
+## Column chooser template
 
 Using the column chooser template, you can customize the column chooser dialog using [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html#Syncfusion_Blazor_Grids_GridColumnChooserSettings_Template) and [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html#Syncfusion_Blazor_Grids_GridColumnChooserSettings_FooterTemplate) of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) component. You can access the parameters passed to the templates using implicit parameter named context.
 
-### Customize the Content of Column Chooser
+### Customize the content of column chooser
 
- The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html#Syncfusion_Blazor_Grids_GridColumnChooserSettings_Template) tag in the  [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) component is used to customize the content in the column chooser dialog. You can type cast the context as [ColumnChooserTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnChooserTemplateContext.html) to get columns inside content template.
+ The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html#Syncfusion_Blazor_Grids_GridColumnChooserSettings_Template) tag in the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) component is used to customize the content in the column chooser dialog. You can type cast the context as [ColumnChooserTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnChooserTemplateContext.html) to get columns inside content template.
 
  ```csharp
 @using Syncfusion.Blazor.Grids;
@@ -197,7 +197,7 @@ Using the column chooser template, you can customize the column chooser dialog u
 ```
 
 > * You can build reusable custom component based on your customization need as like above code example.
-> * In the above example, Syncfusion [ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) component is used as custom component in the content template to show/hide column's.
+> * In the above example, Syncfusion [ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) component is used as custom component in the content template to show/hide columns.
 
 ```csharp
 @using Syncfusion.Blazor.Lists;
@@ -325,7 +325,7 @@ namespace Model
 
 ![Blazor DataGrid with ListView in Column Chooser](./images/blazor-datagrid-column-chooser-content-template.png)
 
-### Customize the Footer of Column Chooser
+### Customize the footer of column chooser
 
  The [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html#Syncfusion_Blazor_Grids_GridColumnChooserSettings_FooterTemplate) tag in the  [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) component is used to customize the footer in the column chooser dialog. You can type cast the context as [ColumnChooserFooterTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnChooserFooterTemplateContext.html) to get columns inside FooterTemplate.
 

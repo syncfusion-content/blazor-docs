@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Icons Library in Blazor - Syncfusion
-description: Learn here all about that how to using Icons in the Syncfusion Blazor Component and its type of icons.
+description: Checkout and learn here all about how to use Icons in the Syncfusion Blazor Component and its type of icons.
 platform: Blazor
 component: Common
 documentation: ug
@@ -72,7 +72,7 @@ The font size of the icon can be changed using the [Size](https://help.syncfusio
 
 ### Tooltip for icons
 
-`Title` property used to set title attribute for the icon to improve accessibility with screen readers and shows a tooltip on mouseover. The following example code displays tooltip text for appropriate icons.
+`Title` property is used to set title attribute for the icon to improve accessibility with screen readers and shows a tooltip on mouseover. The following example code displays tooltip text for appropriate icons.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
