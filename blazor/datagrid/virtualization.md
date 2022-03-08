@@ -86,7 +86,7 @@ the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfG
 ```
 
 The following GIF represent a datagrid with Row virtualization.
-![Blazor DataGrid with Row virtualization](./images/blazor-datagrid-row-virtualization.gif)
+
 
 ## Column virtualization
 
@@ -165,7 +165,7 @@ To setup the column virtualization, set the
 > Column's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) is required for column virtualization. If column's width is not defined then DataGrid will consider its value as **200px**.
 
 The following GIF represent a datagrid with Column virtualization.
-![Blazor DataGrid with Column virtualization](./images/blazor-datagrid-column-virtualization.gif)
+
 
 > The collapsed/expanded state will persist only for local dataSource while scrolling.
 
