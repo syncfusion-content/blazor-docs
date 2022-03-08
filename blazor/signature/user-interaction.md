@@ -1,7 +1,7 @@
 ---
 layout: post
 title: User Interaction with Blazor Signature Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Signature component in Blazor Server App and Blazor WebAssembly App.
+description: Checkout and learn about the user interactions available in Blazor Signature component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Signature
 documentation: ug
@@ -9,19 +9,19 @@ documentation: ug
 
 # User Interactions in Blazor Signature component
 
-The Signature component supports various interaction like Undo, Redo, Clear, Disabled, and ReadOnly.
+The Signature component supports various interaction like Undo, Redo, Clear, Disabled, and ReadOnly. Every changes occurred in signature can be taken as a snap and saved to collection for handling the above user interactions. 
 
 ## Undo
 
-It reverts the last action of signature using the [`UndoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_UndoAsync) method.
+It reverts the last action of signature using the [`UndoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_UndoAsync) method. It removes the latest snap from the collection and load a previous snap to signature. Here, [`CanUndoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanUndoAsync) method is used to ensure whether undo can be performed or not.
 
 ## Redo
 
-It reverts the last undo action of the signature using the [`RedoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_RedoAsync) method.
+It reverts the last undo action of the signature using the [`RedoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_RedoAsync) method. Here, [`CanRedoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanRedoAsync) method is used to ensure whether redo can be performed or not.
 
 ## Clear
 
-It clears the signature and makes the canvas empty using the [`ClearAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_ClearAsync) method.
+It clears the signature and makes the canvas empty using the [`ClearAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_ClearAsync) method. Here, [`IsEmptyAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_IsEmptyAsync) method is used to ensure whether the signature is empty or not.
 
 ## Disabled
 
@@ -31,19 +31,7 @@ It disables the signature component using the [`Disabled`](https://help.syncfusi
 
 It prevents the signature from editing using the [`IsReadOnly`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_IsReadOnly) property.
 
-## CanUndo
-
-To check whether the undo collection is empty or not using the [`CanUndoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanUndoAsync) method.
-
-## CanRedo
-
-To check whether the redo collection is empty or not using the [`CanRedoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanRedoAsync) method.
-
-## IsEmpty
-
-To check whether the signature in canvas is empty or not using the [`IsEmptyAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_IsEmptyAsync) method.
-
-## User Integration sample
+The following sample explains about user interactions available in signature.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
