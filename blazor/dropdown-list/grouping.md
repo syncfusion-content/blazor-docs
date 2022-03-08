@@ -53,3 +53,21 @@ In the following sample, vegetables are grouped according on its category using 
 The output will be as follows.
 
 ![Grouping in Blazor DropdownList](./images/blazor-dropdownlist-grouping.png)
+
+## Fixed Group Header
+
+We can classify the items based on the **GroupBy** field mapped to the control. The headers of group items will fixed at the top till its belonging items ends up on scrolling.
+
+## Group Header Template
+
+The group header title under which appropriate sub-items are categorized can also be customize with the help of [GroupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_GroupTemplate) property. This template is common for both inline and floating group header template.
+
+Please refer the [Group Template](../templates/group-template/) documentation to know more about this.
+
+## Limitations of Grouping
+
+We have certain limitations in Grouping feature. Those are listed below.
+
+* The component will support only single level of grouping, and we cannot specify it as like TreeView component.
+
+* The Virtualization is not supported in the Grouping feature. Only we can assign fixed number of datasource items at initial rendering of the component.

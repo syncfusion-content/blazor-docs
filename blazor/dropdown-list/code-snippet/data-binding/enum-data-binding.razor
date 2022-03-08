@@ -1,0 +1,46 @@
+@using Syncfusion.Blazor.DropDowns
+@using System.Linq; 
+@using System.Reflection; 
+@using System.ComponentModel 
+
+<SfDropDownList TValue="countrycode?" Placeholder="Select a country" TItem="EnumWithDescription" DataSource="@enumData" Width="300px"> 
+    <DropDownListFieldSettings Text="Name" Value="Value"></DropDownListFieldSettings> 
+</SfDropDownList> 
+ 
+@code { 
+    public enum countrycode 
+    { 
+        [Description("Unknown")] 
+        unknown, 
+        [Description("USA")] 
+        us, 
+        [Description("India")] 
+        ind, 
+        [Description("Bermuda")] 
+        bm, 
+    } 
+ 
+    public class EnumWithDescription 
+    { 
+        public string Name { get; set; } 
+        public countrycode Value { get; set; } 
+    } 
+ 
+    public List<EnumWithDescription> enumData = new List<EnumWithDescription>() 
+{ 
+        new EnumWithDescription { Name = GetEnumDescription(countrycode.unknown), Value = countrycode.unknown }, 
+        new EnumWithDescription { Name = GetEnumDescription(countrycode.us), Value = countrycode.us }, 
+        new EnumWithDescription { Name = GetEnumDescription(countrycode.ind), Value = countrycode.ind }, 
+        new EnumWithDescription { Name = GetEnumDescription(countrycode.bm), Value = countrycode.bm } 
+    }; 
+ 
+    public static string GetEnumDescription(Enum value) 
+    { 
+        FieldInfo fi = value.GetType().GetField(value.ToString()); 
+ 
+        DescriptionAttribute[] attributes = fi.GetCustomAttributes(typeof(DescriptionAttribute), false) as DescriptionAttribute[]; 
+ 
+        return attributes.First().Description; 
+    } 
+ 
+} 

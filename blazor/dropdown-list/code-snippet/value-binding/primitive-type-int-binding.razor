@@ -1,0 +1,7 @@
+@using Syncfusion.Blazor.DropDowns
+
+<SfDropDownList TValue=int? TItem=int? Placeholder="Select a game" DataSource="@data" Width="300px"></SfDropDownList>
+
+@code{
+    public int?[] data = { 1011, 1022, 1044, 1066 };
+}
