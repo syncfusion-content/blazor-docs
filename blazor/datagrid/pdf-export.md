@@ -1059,6 +1059,108 @@ To apply theme in exported PDF, define the **theme** in export properties.
 
 > By default, material theme is applied to exported PDF document.
 
+### How to customize header in exported document
+
+PDF export provided an option to rotate the header text or cell contents in the exported document. This can be achieved by using the BeginCellLayout property of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class.
+
+The [PdfHeaderQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfHeaderQueryCellInfoEvent) event can be used to customize the header content in the exported document.
+
+In the following demo, using the DrawString method from the Graphics you can rotate the header text.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Pdf.Graphics
+@using Syncfusion.PdfExport
+@using System.Drawing
+@using Syncfusion.Pdf
+
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" GridLines="GridLine.Both" Toolbar="@(new List<string>() {"PdfExport" })" AllowPdfExport="true" AllowPaging="true">
+    <GridEvents  OnToolbarClick="ToolbarClickHandler" PdfHeaderQueryCellInfoEvent="PdfHeaderQueryCellInfoHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+
+@code{
+    public SfGrid<Order> DefaultGrid;
+    public List<Order> Orders { get; set; }
+    List<string> headerValues = new List<string>();
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_pdfexport")  // Id is combination of Grid's ID and itemname.
+        {
+            PdfExportProperties ExportProperties = new PdfExportProperties();
+            ExportProperties.BeginCellLayout = new PdfGridBeginCellLayoutEventHandler(BeginCellEvent);
+            ExportProperties.FileName = "test.pdf";
+            ExportProperties.IsRepeatHeader = true;
+            await this.DefaultGrid.PdfExport(ExportProperties);
+        }
+    }
+
+
+    public void BeginCellEvent(object sender, PdfGridBeginCellLayoutEventArgs args)
+    {
+        PdfGrid grid = (PdfGrid)sender;
+        var brush = new Syncfusion.PdfExport.PdfSolidBrush(new Syncfusion.PdfExport.PdfColor(Color.DimGray));
+        args.Graphics.Save();
+        args.Graphics.TranslateTransform(args.Bounds.X + 50, args.Bounds.Height + 40);
+        args.Graphics.RotateTransform(-60);
+        // Draw the text at particular bounds.
+        args.Graphics.DrawString(headerValues[args.CellIndex], new Syncfusion.PdfExport.PdfStandardFont(Syncfusion.PdfExport.PdfFontFamily.Helvetica, 10), brush, new PointF(0, 0));
+        if (args.IsHeaderRow)
+        {
+            grid.Headers[0].Cells[args.CellIndex].Value = string.Empty;
+        }
+        args.Graphics.Restore();
+    }
+
+    public void PdfHeaderQueryCellInfoHandler(PdfHeaderQueryCellInfoEventArgs args)
+    {
+        headerValues.Add(args.Column.HeaderText);
+        var longestString = headerValues.Where(s => s.Length == headerValues.Max(m => m.Length)).
+                            First();
+        Syncfusion.PdfExport.PdfFont font = new Syncfusion.PdfExport.PdfStandardFont(Syncfusion.PdfExport.PdfFontFamily.Helvetica, 6);
+        SizeF size = font.MeasureString(longestString);
+        args.PdfGridColumn.Grid.Headers[0].Height = size.Width * 2;
+    }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+
+<style>
+    .e-grid .e-header {
+        font-weight: bold !important;
+    }
+
+    .e-grid .e-columnheader .e-headercell {
+        height: 100px;
+        transform: rotate(-60deg); // This is used to rotate the header text.
+    }
+</style> 
+```
+
 <!-- Show or hide columns on exported pdf
 
 You can show a hidden column or hide a visible column while exporting the datagrid by customizing the visibility settings while exporting.
