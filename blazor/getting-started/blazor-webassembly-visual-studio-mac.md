@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting started with Blazor WebAssembly App in VS for Mac
+# Getting Started with Blazor WebAssembly App in VS for Mac
 
 This articles provides a step-by-step instructions for building Blazor WebAssembly App with Blazor Calendar component using [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/).
 

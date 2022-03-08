@@ -296,7 +296,7 @@ The following sample code demonstrates creating Custom Adaptor as a component,
 }
 ```
 
-The following sample code demonstrates `DataAdaptor` extended from `OwningComponentBase<T>`. This provides a single service of type T. We can access this service by using the `Service` property.
+The following sample code demonstrates `DataAdaptor` extended from `OwningComponentBase<T>`. This provides a single service of type T. You can access this service by using the `Service` property.
 
 ```csharp
 [CustomAdaptorComponent.razor]

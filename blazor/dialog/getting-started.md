@@ -263,7 +263,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 ![Blazor Dialog](./images/blazor-dialog.png)
 
 > * In the dialog control, max-height is calculated based on the dialog target element height. If the **Target** property is not configured, the **document.body** is considered as a target. Therefore, to show a dialog in proper height, you need to add min-height to the target element.
-> * If the dialog is rendered based on the body, then the dialog will get the height based on its body element height. If the height of the dialog is larger than the body height, then the dialog's height will not be set. For this scenario, we can set the CSS style for the html and body to get the dialog height.
+> * If the dialog is rendered based on the body, then the dialog will get the height based on its body element height. If the height of the dialog is larger than the body height, then the dialog's height will not be set. For this scenario, you can set the CSS style for the html and body to get the dialog height.
 
 {% tabs %}
 {% highlight cs %}
@@ -296,7 +296,7 @@ The dialog component is maintained in the DOM after hiding the dialog when the [
 
 ## Modal dialog
 
-A `modal` shows an overlay behind the Dialog. So, the users should interact the Dialog compulsory before interacting with the remaining content in an application.
+A `modal` shows an overlay behind the Dialog. So, the users must interact with the Dialog before interacting with the remaining content in an application.
 
 While the user clicks the overlay, the action can be handled through the [OnOverlayClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnOverlayClick) event. In the following code, it explains the Dialog close action performed while clicking the overlay.
 
@@ -374,6 +374,7 @@ By adding the [DialogButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 {% highlight razor %}
 
 @using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Popups
 
 <SfButton @onclick="@OpenDialog">Open Dialog</SfButton>
 
@@ -383,24 +384,39 @@ By adding the [DialogButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.B
         <Content> This is a Dialog with button and primary button </Content>
     </DialogTemplates>
     <DialogButtons>
-        <DialogButton Content="OK" IsPrimary="true" OnClick="@CloseDialog" />
-        <DialogButton Content="Cancel" OnClick="@CloseDialog" />
+        <DialogButton Content="OK" IsPrimary="true" OnClick="@OkClick" />
+        <DialogButton Content="Cancel" OnClick="@CancelClick" />
     </DialogButtons>
+    <span id="message">@ClickStatus</span>
 </SfDialog>
 
 @code {
     private bool IsVisible { get; set; } = true;
 
+    private string ClickStatus { get; set; }
+
     private void OpenDialog()
     {
         this.IsVisible = true;
+        this.ClickStatus = "";
     }
 
-    private void CloseDialog()
+    private void CancelClick()
     {
+        this.ClickStatus = "you have clicked Cancel";
         this.IsVisible = false;
     }
+    private void OkClick()
+    {
+        this.ClickStatus = "you have clicked Ok";
+        this.IsVisible = true;
+    }
 }
+<style>
+    #message {
+        color: blue;
+    }
+</style>
 
 {% endhighlight %}
 {% endtabs %}

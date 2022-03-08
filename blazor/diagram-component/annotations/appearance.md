@@ -50,7 +50,7 @@ Diagram allows you set size for annotations by using the Height and Width proper
 
 ![Changing Annotation Size in Blazor Diagram](../images/blazor-diagram-annotation-size.png)
 
-## Hyperlink
+## How to add hyperlink to an annotation
 
 Diagram provides support to add a [Hyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Hyperlink) to the node's or connector's annotation. It can also be customized.
 
@@ -139,7 +139,7 @@ Diagram provides support to add a [Hyperlink](https://help.syncfusion.com/cr/bla
 
 ![HyperLink with Content in Blazor Diagram](../images/blazor-diagram-hyperlink-content.png)
 
-## Text wrapping
+## How to change text wrapping
 
 The [TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextWrapping) property of the annotation defines how the text should be wrapped. When text overflows node boundaries, you can control it by using the `TextWrapping`. So, it is wrapped into multiple lines. The following code explains how to wrap a text in a node.
 
@@ -189,7 +189,7 @@ The [TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
 | Wrap | Text-wrapping occurs, when the text overflows beyond the available node width. | ![Text Wrapping in Blazor Diagram](../images/blazor-diagram-text-wrapping.png) |
 | WrapWithOverflow (Default) | Text-wrapping occurs, when the text overflows beyond the available node width. However, the text may overflow beyond the node width in the case of a very long word. | ![Blazor Diagram Text Wrapping with Overflow](../images/blazor-diagram-text-wrap-with-overflow.png) |
 
-### Text overflow
+### How to update text overflow
 
 The [TextOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextOverflow) property specifies how the overflowed content that is not displayed should be signaled to the user. The TextOverflow can have the following values.
 
@@ -514,7 +514,7 @@ You can add any number of annotations to a node or connector. The following code
 >* All the same customization can be applicable for the annotations.
 >* Text Editing can be stated only the first annotation of the annotation collection when you double click the node or connector.
 
-## Constraints
+## How to update annotation constraints
 
 [AnnotationConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html) are used to enable or disable certain behaviors of the annotation. Constraints are provided as flagged enumerations, so that multiple behaviors can be enabled or disabled with bitwise operators.
 

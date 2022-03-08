@@ -24,7 +24,7 @@ The following example demonstrates how to enable track changes.
 
 The following example demonstrates how to navigate tracked revision programmatically.
 
-```typescript
+```csharp
 /**
  * Navigate to next tracked change from the current selection.
  */

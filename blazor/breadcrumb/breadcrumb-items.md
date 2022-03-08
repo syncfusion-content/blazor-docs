@@ -1,19 +1,19 @@
 ---
 layout: post
 title: Breadcrumb Items with Blazor Breadcrumb component | Syncfusion
-description: Checkout and learn about data binding with Blazor Breadcrumb component of Syncfusion, and more details.
+description: Checkout and learn here all about data binding with Blazor Breadcrumb component of Syncfusion and more.
 platform: Blazor
 control: Breadcrumb
 documentation: ug
 ---
 
-# Breadcrumb items in Blazor Breadcrumb component
+# Breadcrumb Items in Blazor Breadcrumb Component
 
 The Breadcrumb supports to generate items based on the current URL by default. You can set the [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) tag directive or [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_Url) property to generate the items.
 
-[BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) has following properties for navigation and its customizations.
+[BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) has the following properties for navigation and its customizations.
 
-* [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_Url) - Sets the URL of the Breadcrumb item and it will navigate when click.
+* [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_Url) - Sets the URL of the Breadcrumb item and it will navigate when clicked.
 
 * [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) - Sets CSS class string to include an icon for the Breadcrumb item.
 

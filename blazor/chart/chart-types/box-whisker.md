@@ -54,7 +54,7 @@ documentation: ug
 
 > Refer to our [Blazor Box and Whisker Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/box-and-whisker-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Box and Whisker Chart Example](https://blazor.syncfusion.com/demos/chart/box-and-whisker) to know how to render and configure the box and whisker type charts.
 
-## Box Plot
+## Box plot
 
 To change the rendering mode of the Box and Whisker series, use the [BoxPlotMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BoxPlotMode.html) property. The default [BoxPlotMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BoxPlotMode.html) is [Exclusive](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BoxPlotMode.html#Syncfusion_Blazor_Charts_BoxPlotMode_Exclusive).
 
@@ -97,7 +97,7 @@ To change the rendering mode of the Box and Whisker series, use the [BoxPlotMode
 
 ![Blazor Box and Whisker Charts with Box Plot Mode](../images/othertypes/blazor-box-whisker-chart-with-box-plot-mode.png)
 
-## Show Mean
+## Show mean
 
 In Box and Whisker series, [ShowMean](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ShowMean) property is used to show the box and whisker average value. The default value of [ShowMean](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ShowMean) is **false**.
 

@@ -50,7 +50,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void ActionBeginHandler(ActionEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 
     public class Order
@@ -65,7 +65,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 ## OnActionComplete
 
-[OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when DataGrid actions such as sorting, filtering, paging, grouping,[editing](https://blazor.syncfusion.com/documentation/datagrid/editing/#event-trace-while-editing) etc. are completed.
+[OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when DataGrid actions such as sorting, filtering, paging, grouping, [editing](https://blazor.syncfusion.com/documentation/datagrid/editing/#event-trace-while-editing), etc. are completed.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -103,7 +103,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void ActionCompletedHandler(ActionEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -131,7 +131,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 @code{
     public void ActionFailureHandler(FailureEventArgs args)
     {
-        // Here you can get the error details in the args
+        // Here, you can get the error details in the args.
     }
 
     public class Order {
@@ -189,7 +189,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
     }
     public void BeforeOpenColumnChooserHandler(ColumnChooserEventArgs Args)
     {
-        //customize your code here
+        //Customize your code here.
     }
 }
 ```
@@ -234,7 +234,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void CreatedHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -279,7 +279,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void LoadHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -324,7 +324,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void DestroyHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -369,7 +369,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void DataBoundHandler(BeforeDataBoundArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -414,7 +414,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void DataBoundHandler()
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -459,7 +459,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void RowDataBoundHandler(RowDataBoundEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -617,7 +617,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void HeaderCellInfoHandler(HeaderCellInfoEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -662,14 +662,14 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void QueryCellInfoHandler(QueryCellInfoEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
 
 ## OnBeginEdit
 
-[OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before the record is to be edit.
+[OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before the record is to be edited.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -708,7 +708,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void BeginEditHandler(BeginEditArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -754,7 +754,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void BatchAddHandler(BeforeBatchAddArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -801,7 +801,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void BatchSaveHandler(BeforeBatchSaveArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -847,7 +847,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void BatchDeleteHandler(BeforeBatchDeleteArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -894,7 +894,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void CellEditHandler(CellEditArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -941,7 +941,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void CellSaveHandler(CellSaveArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -987,7 +987,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void CellSavedHandler(CellSaveArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1032,7 +1032,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void RowSelectingHandler(RowSelectingEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1077,7 +1077,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void RowSelectHandler(RowSelectEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1123,7 +1123,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void RowDeselectingHandler(RowDeselectEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1168,7 +1168,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void RowDeselectHandler(RowDeselectEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1215,7 +1215,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void CellSelectingHandler(CellSelectingEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1261,7 +1261,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void CellSelectedHandler(CellSelectEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1309,7 +1309,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void CellDeselectingHandler(CellDeselectEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1357,7 +1357,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void CellDeselectHandler(CellDeselectEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1404,7 +1404,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void RecordClickHandler(RecordClickEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1450,7 +1450,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void RecordDoubleClickHandler(RecordDoubleClickEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1496,7 +1496,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1553,14 +1553,14 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void OnCommandClicked(CommandClickEventArgs<Order> args)
     {
-        // Perform required operations here
+        // Perform required operations here.
     }
 }
 ```
 
 ## ColumnMenuItemClicked
 
-[ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when click on column menu.
+[ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when clicking on the column menu.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1601,14 +1601,14 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void ColumnMenuItemClickedHandler(ColumnMenuClickEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
 
 ## ContextMenuItemClicked
 
-[ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when click on context menu.
+[ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when clicking on the context menu.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1697,7 +1697,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void ContextMenuOpenHandler(ContextMenuOpenEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1750,7 +1750,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void PdfExportHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1803,7 +1803,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void PdfHeaderQueryCellInfoHandler(PdfHeaderQueryCellInfoEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1856,7 +1856,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void PdfQueryCellInfoHandler(PdfQueryCellInfoEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1939,7 +1939,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void PdfAggregateTemplateInfoHandler(PdfAggregateEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1992,7 +1992,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void ExcelExportHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -2045,7 +2045,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void ExcelHeaderQueryCellInfoHandler(ExcelHeaderQueryCellInfoEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -2098,7 +2098,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void ExcelQueryCellInfoHandler(ExcelQueryCellInfoEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -2181,7 +2181,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void ExcelAggregateTemplateInfoHandler(ExcelAggregateEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -2245,7 +2245,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void ExportCompleteHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -2291,7 +2291,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void OnResizeStartHanlder(ResizeArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -2337,7 +2337,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void ResizeStoppedHanlder(ResizeArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -2383,7 +2383,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void RowDragStartHandler(RowDragEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -2431,7 +2431,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void RowDropHandler(RowDragEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```

@@ -109,7 +109,7 @@ ListBox items can be customized according to the requirement using [ItemTemplate
 }
 
 <style>
-    .e-listbox-wrapper {
+    .e-listbox-container {
         margin: auto;
         max-width: 400px;
         box-sizing: border-box;
@@ -134,7 +134,7 @@ ListBox items can be customized according to the requirement using [ItemTemplate
         font-weight: 500;
     }
 
-    .e-listbox-wrapper .list-wrapper .text {
+    .e-listbox-container .list-wrapper .text {
         font-weight: bold;
         font-size: 13px;
     }

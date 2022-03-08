@@ -62,7 +62,7 @@ To render adaptive dialog UI in the DataGrid, set the [EnableAdaptiveUI](https:/
 
 > 1. This UI is common for both horizontal and vertical mode of rendering when EnableAdaptiveUI is enabled.
 
-## Vertical Mode
+## Vertical mode
 
 The DataGrid will render the row elements vertically while setting the [RowRenderingMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowRenderingMode) property value as **Vertical**.
 

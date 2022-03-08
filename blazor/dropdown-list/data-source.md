@@ -30,7 +30,7 @@ Local data can be represented in two ways as described below.
 
 The DropDownList can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
 
-In the following example, `Name` column from complex data have been mapped to the `Value` field.
+In the following example, `Name` column from complex data has been mapped to the `Value` field.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -278,7 +278,7 @@ The following sample code demonstrates implementing custom data binding using cu
 
 ### Offline mode
 
-To avoid post back for every action, set the DropDownList to load all data on initialization and make the actions process in client-side. To enable this behaviour, use the `Offline` property of `DataManager`.
+To avoid post back for every action, set the DropDownList to load all data on initialization and make the actions process in client-side. To enable this behavior, use the `Offline` property of `DataManager`.
 
 The following example for remote data binding and enabled offline mode.
 
@@ -354,7 +354,7 @@ You can bind [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.val
 
 ```
 
-The output will shown as follows,
+The output will be as follows,
 
 ![Blazor DropDownList ValueTuple Data](./images/blazor-dropdown-valuetuple.png)
 
@@ -387,7 +387,7 @@ You can bind [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.
 
 ```
 
-The output will shown as follows,
+The output will be as follows,
 
 ![Blazor DropDownList with expando object data binding](./images/blazor_dropdown_expando-object.png)
 
@@ -439,13 +439,13 @@ You can bind [DynamicObject](https://docs.microsoft.com/en-us/dotnet/api/system.
 
 ```
 
-The output will shown as follows,
+The output will be as follows,
 
 ![Blazor DropDownList with dynamic object data binding](./images/blazor_dropdown_dynamic-object.png)
 
 ## Binding ObservableCollection
 
-You can bind [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-5.0) data to the DropDownList component. The following example `Observable Data` is bound to a collection of colors data.
+You can bind [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-5.0) data to the DropDownList component. In the following example, `Observable Data` is bound to a collection of colors data.
 
 ```csharp
 
@@ -484,7 +484,7 @@ public class Colors
 
 ```
 
-The output will shown as follows,
+The output will be as follows,
 
 ![Blazor DropDownList with observable collection data binding](./images/blazor_dropdown_observable-collection.png)
 
@@ -523,7 +523,7 @@ namespace EFDropDown.Shared.DataAccess
 
 ### Create data access layer to perform data operation
 
-Now you need to create a class named **OrderDataAccessLayer**, which act as data access layer for retrieving the records from the database table.
+Now, you need to create a class named **OrderDataAccessLayer**, which act as data access layer for retrieving the records from the database table.
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
@@ -604,7 +604,7 @@ namespace EFDropDown.Controllers
 
 ### Configure DropDownList component using Web API adaptor
 
-Now you can configure the DropDownList using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with web api, you need to use WebApiAdaptor.
+Now, you can configure the DropDownList using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with web api, you need to use WebApiAdaptor.
 
 ```cshtml
 @using Syncfusion.Blazor.Data

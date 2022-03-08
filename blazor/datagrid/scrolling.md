@@ -167,7 +167,7 @@ is set as '3'. Hence, the left two columns and top three rows are frozen.
 
 To freeze particular column in the datagrid, the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen) property of **GridColumn** component can be used.
 
-In this demo, the columns with field name **OrderID** and **EmployeeID** is frozen using
+In this demo, the columns with the field names **OrderID** and **EmployeeID** are frozen using
 the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen) property of **GridColumn**.
 
 ```cshtml
@@ -305,7 +305,7 @@ The following features are not supported in frozen rows and columns:
 * Detail Template
 * Hierarchy DataGrid
 
-### Freeze Direction
+### Freeze direction
 
 You can freeze the Grid columns on the left or right side by using the [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) property and the remaining columns will be movable. The grid will automatically move the columns to the left or right position based on the [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) value and also [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen) property should be true.
 
@@ -378,9 +378,9 @@ In this demo, the **OrderID** column is frozen at the left and the **ShipCountry
 ```
 
 The following screenshots represent a frozen direction.
-![Frezzing Blazor DataGrid Columns on Right Side](./images/blazor-datagrid-frozen-right-side.png)
+![Freezing Blazor DataGrid Columns on Right Side](./images/blazor-datagrid-frozen-right-side.png)
 
-### Limitations of Freeze Direction
+### Limitations of freeze direction
 
 This feature has the below limitations, along with the above mentioned Frozen Grid limitations.
 

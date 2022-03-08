@@ -9,14 +9,12 @@ documentation: ug
 
 # Getting Started with Blazor PDF Viewer Component in Blazor Server App
 
-Syncfusion provides separate PDF Viewer component for Blazor Server and Blazor WebAssembly applications.
-
 > Syncfusion provides separate PDF Viewer component for Blazor Server and Blazor WebAssembly applications.
 <br />For **Blazor WebAssembly App**, use [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.SfPdfViewer.html) component in Syncfusion.Blazor.PdfViewer NuGet package. This component requires server-side processing to render the PDF files through web service.
 <br />For **Blazor Server App**, use the [SfPdfViewerServer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewerServer.SfPdfViewerServer.html) component in corresponding NuGet based on the operating system of the server you intend to host, as shown below.,
-<br />* For Windows, use Syncfusion.Blazor.PdfViewerServer.Windows
-<br />* For Linux, use [Syncfusion.Blazor.PdfViewerServer.Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux)
-<br />* For Mac (OSX), use [Syncfusion.Blazor.PdfViewerServer.OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX)
+>* For Windows, use [Syncfusion.Blazor.PdfViewerServer.Windows](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Windows)
+>* For Linux, use [Syncfusion.Blazor.PdfViewerServer.Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux)
+>* For Mac (OSX), use [Syncfusion.Blazor.PdfViewerServer.OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX)
 
 This section briefly explains about how to include [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component in your Blazor Server App using Visual Studio.
 
@@ -36,7 +34,12 @@ You can create **Blazor Server App** using Visual Studio in one of the following
 
 Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
-To add Blazor PDF Viewer component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.PDFViewerServer.Windows](https://www.nuget.org/packages/Syncfusion.Blazor.PDFViewerServer.Windows) and then install it.
+To add Blazor PDF Viewer component in Blazor Server App, use `SfPdfViewerServer` component in corresponding NuGet based on the operating system of the server you intend to host, as shown below.,
+* For **Windows**, use [Syncfusion.Blazor.PdfViewerServer.Windows](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Windows)
+* For **Linux**, use [Syncfusion.Blazor.PdfViewerServer.Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux)
+* For **macOs**, use [Syncfusion.Blazor.PdfViewerServer.OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX)
+
+In this getting started walk-through to add Blazor PDF Viewer component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.PDFViewerServer.Windows](https://www.nuget.org/packages/Syncfusion.Blazor.PDFViewerServer.Windows) and then install it.
 
 ## Register Syncfusion Blazor Service
 

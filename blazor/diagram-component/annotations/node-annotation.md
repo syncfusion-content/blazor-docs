@@ -16,7 +16,7 @@ Diagram allows you to customize the position and appearance of the annotation ef
 * VerticalAlignment
 * Margin
 
-## Offset
+## How to change the offset of an annotation
 
 The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeAnnotation.html#Syncfusion_Blazor_Diagram_ShapeAnnotation_Offset) property of an annotation is used to align the annotations based on fractions. 0 represents top/left corner, 1 represents bottom/right corner, and 0.5 represents half of width/height.
 
@@ -73,7 +73,7 @@ The following code shows the relationship between the shape annotation position 
 >* Type of the offset property for node’s shape annotation is [DiagramPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPoint.html).
 >* Type of the offset property for connector’s path annotation is double.
 
-## Horizontal and vertical alignment
+## How to change the alignment of an annotation
 
 The [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_HorizontalAlignment) property of annotation is used to set how the annotation is horizontally aligned at the annotation position determined from the fraction values. The [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_VerticalAlignment) property is used to set how the annotation is vertically aligned at the annotation position.
 
@@ -134,7 +134,7 @@ The following code explains how to align annotations.
 >* The value of the `VerticalAlignment` is [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.VerticalAlignment.html#Syncfusion_Blazor_Diagram_VerticalAlignment_Center) by default.
 >* Alignment positioned based on the offset value.
 
-## Margin
+## How to change the margin of an annotation
 
 [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Margin) is an absolute value used to add some blank space to any one of its four sides. The annotations can be displaced with the margin property. The following code example explains how to align an annotation based on its Offset, HorizontalAlignment, VerticalAlignment, and Margin values.
 
@@ -177,7 +177,7 @@ The following code explains how to align annotations.
 }
 ```
 
-## Text align
+## How to align the text
 
 The [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextAlign) property of annotation allows you to set how the text should be aligned (Left, Right, Center, or Justify) inside the text block. The following code explains how to set TextAlign for an annotation.
 

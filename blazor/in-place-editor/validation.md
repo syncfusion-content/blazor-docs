@@ -16,7 +16,7 @@ Please refer to the following link for more details,[EditForm Validation](https:
 ```cshtml
 
 @using Syncfusion.Blazor.InPlaceEditor
-@using Syncfusion.Blazor.Calendars
+@using Syncfusion.Blazor.Inputs
 @using System.ComponentModel.DataAnnotations;
 
 <table class="table-section">
@@ -62,7 +62,7 @@ Please refer to the following link for more details,[EditForm Validation](https:
     {
         [Required]
         [StringLength(10, ErrorMessage = "Name is too long.")]
-        public string Name { get; set; } = "sync";
+        public string Name { get; set; } = "Andrew";
     }
 }
 ```

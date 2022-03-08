@@ -13,7 +13,7 @@ documentation: ug
 
 Drawing tool allows you to draw any kind of [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) or [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html) during runtime by clicking and dragging on the diagram page.
 
-## Shapes
+## Drawing shapes through the drawing tool
 
 To draw a [shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shape.html), you have to activate the drawing tool by using the [InteractionController](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.InteractionController.html) property and you need to set the shape by using the [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject) property. The following code example illustrates how to draw a rectangle at runtime.
 
@@ -25,10 +25,10 @@ To draw a [shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 
 @code
 {
-    //Reference to diagram
+    //Reference to diagram.
     SfDiagramComponent diagram;
 
-    //Defines diagram's nodes collection
+    //Defines diagram's nodes collection.
     public DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -59,9 +59,9 @@ To draw a [shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 
     private void AddNode()
     {
-        //To draw an object once, activate draw once
+        //To draw an object once, activate draw once.
         diagram.InteractionController = InteractionController.DrawOnce;
-        //Initialize the drawing object to draw the shape
+        //Initialize the drawing object to draw the shape.
         diagram.DrawingObject = new Node()
         {
             Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
@@ -73,7 +73,7 @@ To draw a [shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 
 ![Node Tool in Blazor Diagram](images/blazor-diagram-node-tool.gif)
 
-## Connectors
+## Drawing connectors through the drawing tool
 
 To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html), you have to activate the drawing tool by using the [InteractionController](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.InteractionController.html) property and you need to set the connector by using the [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject) property. The following code example illustrates how to draw a [StraightSegment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.StraightSegment.html).
 
@@ -85,10 +85,10 @@ To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 
 @code
 {
-    //Reference to diagram
+    //Reference to diagram.
     SfDiagramComponent diagram;
 
-    //Defines diagram's nodes collection
+    //Defines diagram's nodes collection.
     public DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -119,9 +119,9 @@ To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 
     private void AddConnector()
     {
-        //To draw an object once, activate draw once
+        //To draw an object once, activate draw once.
         diagram.InteractionController = InteractionController.DrawOnce;
-        //Initialize the drawing object to draw the connectors
+        //Initialize the drawing object to draw the connectors.
         diagram.DrawingObject = new Connector()
         {
             ID = "connector1",
@@ -133,7 +133,7 @@ To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 
 ![Connector Tool in Blazor Diagram](images/blazor-diagram-connector-tool.gif)
 
-## Polygon shape
+## Drawing polygon shape
 
 Diagram allows to create the [Polygon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BasicShapeType.html#Syncfusion_Blazor_Diagram_BasicShapeType_Polygon) shape by clicking and moving the mouse at runtime on the diagram page.
 
@@ -149,9 +149,9 @@ The following code illustrates how to draw a polygon shape.
 
 @code
 {
-    //Reference to diagram
+    //Reference to diagram.
     SfDiagramComponent diagram;
-    //Defines diagram's nodes collection
+    //Defines diagram's nodes collection.
     public DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -182,9 +182,9 @@ The following code illustrates how to draw a polygon shape.
 
     private void Polygon()
     {
-        //To draw an object once, activate draw once
+        //To draw an object once, activate draw once.
         diagram.InteractionController = InteractionController.DrawOnce;
-        //Initialize the drawing object to draw the polygon shape
+        //Initialize the drawing object to draw the polygon shape.
         diagram.DrawingObject = new Node()
         {
             ID = "polygon",
@@ -209,7 +209,7 @@ There are some functionalities that can be achieved by clicking and dragging on 
 * Draw nodes/connectors: DrawOnce/DrawOnce
 
 As all the three behaviors are completely different, you can achieve only one behavior at a time based on the interaction controller that you choose.
-When more than one of those interaction controllers are applied, a interaction controller is activated based on the precedence given in the following table.
+When more than one of those interaction controllers are applied, an interaction controller is activated based on the precedence given in the following table.
 
 |Precedence|InteractionControllers|Description|
 |----------|-----|-----------|
@@ -232,9 +232,9 @@ The following code illustrates how to enable single interaction controller,
 
 @code
 {
-    //Enable the single tool
+    //Enable the single tool.
     public InteractionController tool = InteractionController.DrawOnce;
-    //Defines diagram's connectors collection
+    //Defines diagram's connectors collection.
     public DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 }
 ```
@@ -248,11 +248,11 @@ The following code illustrates how to enable multiple interaction controllers,
 
 @code
 {
-    //Reference to diagram
+    //Reference to diagram.
     SfDiagramComponent diagram;
-    //Enable the multiple tools
+    //Enable the multiple tools.
     public InteractionController tool = InteractionController.DrawOnce | InteractionController.ZoomPan;
-    //Defines diagram's connectors collection
+    //Defines diagram's connectors collection.
     public DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 }
 ```

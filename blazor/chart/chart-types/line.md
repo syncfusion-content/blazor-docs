@@ -56,7 +56,7 @@ documentation: ug
 
 > Refer to our [Blazor Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/line-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Line Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know how to represent time-dependent data, showing trends at equal intervals.
 
-## Multicolored Line
+## Multicolored line
 
 To render a multicolored line series, specify the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) property as [MultiColoredLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_MultiColoredLine) in [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html). Here, the individual colors of the segment can be mapped by using [PointColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_PointColorMapping) property in [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html).
 
@@ -96,7 +96,7 @@ To render a multicolored line series, specify the [Type](https://help.syncfusion
 
 ![Blazor Multicolored Line Chart](../images/chart-types-images/blazor-multicolor-line-chart.png)
 
-## Series Customization
+## Series customization
 
 The following properties can be used to customize the [Line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Line) series.
 

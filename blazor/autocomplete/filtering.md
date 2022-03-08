@@ -51,7 +51,6 @@ The following examples shows data filtering is done with the `StartsWith` type
 }
 ```
 
-The output will be as follows.
 
 ![Filtering in Blazor AutoComplete](./images/blazor-autocomplete-filter.png)
 
@@ -89,7 +88,6 @@ Refer to the following example to restrict the suggestion list item counts as 3.
 }
 ```
 
-The output will be as follows.
 
 ![Filtering Blazor AutoComplete Items based on Count](./images/blazor-autocomplete-filter-item-count.png)
 
@@ -127,7 +125,7 @@ In the following example, the remote request doesn't fetch the search data until
 }
 ```
 
-The output will be as follows.
+
 
 ![Filtering Blazor AutoComplete Items based on Character Count](./images/blazor-autocomplete-filter-based-length.png)
 
@@ -168,7 +166,7 @@ The following sample depicts how to filter the data with case-sensitive.
 }
 ```
 
-## Custom Filtering
+## Custom filtering
 
 The AutoComplete component filter queries can be customized. You can also use your own filter libraries to filter data like Fuzzy search.
 

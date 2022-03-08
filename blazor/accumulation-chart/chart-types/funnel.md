@@ -89,7 +89,7 @@ The size of the funnel chart can be customized by using the [Width](https://help
 
 > The [Blazor Funnel Chart](https://blazor.syncfusion.com/demos/chart/funnel) example can be explored to learn to render and configure the funnel chart.
 
-## Funnel Neck Size
+## Funnel neck size
 
 The neck size of the funnel chart can be customized by using the [NeckWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_NeckWidth) and [NeckHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_NeckHeight) properties.
 
@@ -129,7 +129,7 @@ The neck size of the funnel chart can be customized by using the [NeckWidth](htt
 
 ![Customizing Funnel Neck Size in Blazor Funnel Chart](../images/funnel/blazor-funnel-chart-neck-size.png)
 
-## Gap Between Funnel Segments
+## Gap between funnel segments
 
 [Funnel chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationType.html#Syncfusion_Blazor_Charts_AccumulationType_Funnel) provides options to customize the space between the segments by using the [GapRatio](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_GapRatio) property of the series. It accepts the values ranging from 0 to 1.
 
@@ -169,7 +169,7 @@ The neck size of the funnel chart can be customized by using the [NeckWidth](htt
 
 ![Blazor Funnel Chart with Gap](../images/funnel/blazor-funnel-chart-with-gap.png)
 
-## Funnel Explode
+## Funnel explode
 
 Points can be exploded on mouse click by setting the [Explode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Explode) property to **true**. The point on load can be exploded using [ExplodeIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_ExplodeIndex). Explode distance can be set by using [ExplodeOffset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_ExplodeOffset) property.
 
@@ -211,7 +211,7 @@ Points can be exploded on mouse click by setting the [Explode](https://help.sync
 
 ## Smart Data Label
 
-Labels will be arranged smartly automatically on the left side of the funnel and pyramid chart, when they overlap with each other.
+Labels will be arranged automatically on the left side of the funnel and pyramid chart when they overlap with each other.
 
 ```cshtml 
 

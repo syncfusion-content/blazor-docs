@@ -54,7 +54,7 @@ documentation: ug
 
 > Refer to our [Blazor Column Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Column Charts Example](https://blazor.syncfusion.com/demos/chart/column?theme=bootstrap4) to compare **Frequency**, **Count**, **Total**, or **Average** of data in different categories.
 
-## Column Space and Width
+## Column space and width
 
 The [ColumnSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ColumnSpacing) and [ColumnWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ColumnWidth) properties are used to customize the space between columns.
 
@@ -99,7 +99,7 @@ The [ColumnSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 ![Blazor Column Chart with Space and Width](../images/chart-types-images/blazor-column-chart-space-and-width.png)
 
-## Grouped Column
+## Grouped column
 
 You can use the [GroupName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_GroupName) property to group the data points in the column type charts. Data points with same group name are grouped together.
 
@@ -145,7 +145,7 @@ You can use the [GroupName](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ![Grouping in Blazor Grouped Column Chart](../images/chart-types-images/blazor-column-chart-grouped-column.png)
 
-## Series Customization
+## Series customization
 
 The following properties can be used to customize the [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Column) series.
 

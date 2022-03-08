@@ -49,13 +49,24 @@ Instead of using [Static Web assets](#static-web-assets) or a [CDN reference](#c
 
 ## Static Web Assets
 
-Syncfusion Blazor themes are available as Static web Assets in the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet Packages.
+### Enable static web assets usage
+
+To use static web assets, ensure [UseStaticFiles](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.builder.staticfileextensions.usestaticfiles) method is called as follows,
+
+* For **.NET 6** app, open the **~/Program.cs** file and call `UseStaticFiles` method.
+* For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and call `UseStaticFiles` method.
+
+> For **Blazor WASM App**, call `UseStaticFiles` method in **Server project** in the above mentioned file. 
+
+### Refer theme style sheet from static web assets
+
+Syncfusion Blazor themes are available as static web assets in the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet Packages.
 
 * For **Blazor WebAssembly application**, refer style sheet inside the `<head>` element of **wwwroot/index.html** file.
 * For **Blazor Server application**, refer style sheet inside the `<head>` element of 
     * **~/Pages/_Host.cshtml** file for .NET 3 and .NET 5.
     * **~/Pages/_Layout.cshtml** for .NET 6.
-    
+
 When using individual NuGet packages in your application, add [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet Package and reference style sheet as below,
 
  ```html
@@ -72,7 +83,7 @@ When using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/
 </head>
 ```
 
-## CDN Reference
+## CDN reference
 
 Instead of using a local resource on your server, you can use a cloud CDN to reference the theme style sheets. CDN Stands for "Content Delivery Network". A CDN is a group of servers distributed in different locations. While CDNs are often used to host websites, they are commonly used to provide other types of downloadable data as well. Examples include software programs, images, videos, and streaming media.
 
@@ -99,7 +110,7 @@ Syncfusion Blazor Themes are available in the CDN. Make sure that the version in
 | Microsoft Office Fabric Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-dark.css |
 | High Contrast  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/highcontrast.css |
 
-## NPM Packages
+## NPM packages
 
 NPM is a node package manager. It is basically used for managing dependencies of various server-side dependencies. You can manage server-side dependencies manually. It is a command-line program for dealing with said repository that aids in package installation, version management, and dependency management. It is an online repository for the publishing of open-source `Node.js` projects.
 
@@ -146,13 +157,13 @@ You can add the theme for the Blazor applications through **npm packages** using
 
 * The SCSS file has been compiled to the CSS file. Then, add this CSS file to the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
-* Run the application and see the fabric themes from installed npm packages was applied.
+* Run the application and see the fabric themes from installed npm packages were applied.
 
 ## Change theme dynamically
 
 In the Blazor application, the application theme can be changed dynamically by changing its style sheet reference in code. 
 
-### Change theme dynamically in blazor server app
+### Change theme dynamically in Blazor server app
 
 The following example demonstrates how to change a theme dynamically in Blazor Server application using Syncfusion Blazor themes using Syncfusion Dropdown component.
 
@@ -269,11 +280,11 @@ The following example demonstrates how to change a theme dynamically in Blazor S
     }
     ```
 
-    ![Change theme dynamically in blazor server app](images/blazor-dynamic-theme-switching.gif) 
+    ![Change theme dynamically in Blazor server app](images/blazor-dynamic-theme-switching.gif) 
     
     > [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-server-app) 
 
-### Change theme dynamically in blazor WebAssembly (WASM) app
+### Change theme dynamically in Blazor WebAssembly (WASM) app
 
 The following example demonstrates how to change a theme dynamically in Blazor WebAssembly using the application with the Syncfusion Blazor themes using Syncfusion Dropdown component.
 
@@ -377,6 +388,10 @@ The following example demonstrates how to change a theme dynamically in Blazor W
     }
     
     ```
-    ![Change theme dynamically in blazor WASM app](images/blazor-dynamic-theme-switching-wasm.gif) 
+    ![Change theme dynamically in Blazor WASM app](images/blazor-dynamic-theme-switching-wasm.gif) 
     
     > [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-WASM-app)
+
+## See also
+
+[How to change background of browser based on Syncfusion Theme in Blazor?](https://www.syncfusion.com/forums/171882/problems-with-implementing-dark-themes)

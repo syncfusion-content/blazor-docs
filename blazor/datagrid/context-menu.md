@@ -213,7 +213,7 @@ The following sample code demonstrates defining built-in and custom context menu
 
 ## Sub context menu items in DataGrid
 
-The sub context menu items can be added by defining the collection of **MenuItems** for **Items** Property in [ContextMenuItems](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html). Actions for these customized items can be defined in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event.
+The sub context menu items can be added by defining the collection of **MenuItems** for **Items** Property in [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html). Actions for these customized items can be defined in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event.
 
 The following sample code demonstrates defining sub context menu item and its corresponding action in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event,
 
@@ -273,7 +273,7 @@ The following sample code demonstrates defining sub context menu item and its co
 
 ## Disable the Context menu for specific columns in DataGrid
 
-Context Menu can be prevented for specific columns using [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event of DataGrid. This event will be triggered before opening the ContextMenu. We can prevent the context menu from opening by defining the **Cancel** arguments of [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) to **false**.
+Context Menu can be prevented for specific columns using [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event of DataGrid. This event will be triggered before opening the ContextMenu. You can prevent the context menu from opening by defining the **Cancel** arguments of [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) to **false**.
 
 The following sample code demonstrates how to disable the context for specific column using event arguments of [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event,
 

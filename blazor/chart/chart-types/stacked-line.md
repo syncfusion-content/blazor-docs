@@ -85,7 +85,7 @@ documentation: ug
 
 > Refer to our [Blazor Stacked Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-line-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Stacked Line Chart Example](https://blazor.syncfusion.com/demos/chart/stacked-line?theme=bootstrap4) to know how to render and configure the Stacked Line type chart.
 
-## Series Customization
+## Series customization
 
 The following properties can be used to customize the [Stacked Line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingLine) series.
 
