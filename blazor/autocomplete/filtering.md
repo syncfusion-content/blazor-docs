@@ -141,29 +141,29 @@ The following sample depicts how to filter the data with case-sensitive.
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
-<SfAutoComplete TValue="string" TItem="Countries" Placeholder="Select a country" IgnoreCase=false DataSource="@LocalData">
+<SfAutoComplete TValue="string" TItem="Country" Placeholder="Select a country" IgnoreCase=false DataSource="@LocalData">
     <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
 </SfAutoComplete>
 
 @code {
 
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
         public string Code { get; set; }
     }
 
-    List<Countries> LocalData = new List<Countries> {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-        new Countries() { Name = "Denmark", Code = "DK" },
-        new Countries() { Name = "France", Code = "FR" },
-        new Countries() { Name = "Finland", Code = "FI" },
-        new Countries() { Name = "Germany", Code = "DE" },
-        new Countries() { Name = "Greenland", Code = "GL" },
-        new Countries() { Name = "Hong Kong", Code = "HK" },
+    List<Country> LocalData = new List<Country> {
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" },
+        new Country() { Name = "France", Code = "FR" },
+        new Country() { Name = "Finland", Code = "FI" },
+        new Country() { Name = "Germany", Code = "DE" },
+        new Country() { Name = "Greenland", Code = "GL" },
+        new Country() { Name = "Hong Kong", Code = "HK" },
     };
 }
 ```
@@ -175,29 +175,29 @@ The AutoComplete component filter queries can be customized. You can also use yo
 ```cshtml
 @using Syncfusion.Blazor.Data
 
-<SfAutoComplete TValue="string" @ref="autoObj" TItem="Countries" Placeholder="e.g. Australia" AllowFiltering="true">
+<SfAutoComplete TValue="string" @ref="autoObj" TItem="Country" Placeholder="e.g. Australia" AllowFiltering="true">
     <AutoCompleteFieldSettings Text="Name" Value="Code"></AutoCompleteFieldSettings>
-    <AutoCompleteEvents TValue="string" TItem="Countries" Filtering="OnFilter"></AutoCompleteEvents>
+    <AutoCompleteEvents TValue="string" TItem="Country" Filtering="OnFilter"></AutoCompleteEvents>
 </SfAutoComplete>
 
 @code {
 
-    SfAutoComplete<string, Countries> autoObj { get; set; }
+    SfAutoComplete<string, Country> autoObj { get; set; }
 
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
 
         public string Code { get; set; }
     }
 
-    List<Countries> Country = new List<Countries>
+    List<Country> Country = new List<Country>
     {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-        new Countries() { Name = "Denmark", Code = "DK" }
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" }
     };
 
     private async Task OnFilter(FilteringEventArgs args)
