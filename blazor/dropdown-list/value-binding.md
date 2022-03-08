@@ -18,74 +18,21 @@ The value binding as the process of passing values between a component and its p
 
 Value binding can be achieved by using the [`@bind-Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute and it supports string, int, Enum, bool and complex types. If component value has been changed, it will affect the all places where you bind the variable for the bind-value attribute.
 
-{% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
-@using Syncfusion.Blazor.DropDowns
+{% include_relative code-snippet/value-binding/bind-value-binding.razor %}
 
-<p>DropDownList value is:<strong>@DropVal</strong></p>
-
-<SfDropDownList TValue="string" Placeholder="e.g. Australia" TItem="Countries" @bind-Value="@DropVal" DataSource="@Country">
-    <DropDownListFieldSettings Value="Name"></DropDownListFieldSettings>
-</SfDropDownList>
-
-@code {
-
-    public string DropVal;
-
-    public class Countries
-    {
-        public string Name { get; set; }
-
-        public string Code { get; set; }
-    }
-
-    List<Countries> Country = new List<Countries>
-{
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-    };
-}
-{% endtabs %}
-{% endhighlight razor %}
+{% endhighlight %}
 
 ## Index Value Binding
 
 Index value binding can be achieved by using [`@bind-Index`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Index) attribute and it supports int and int nullable types. By using this attribute you can bind the values respective to its index.
 
-{% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
-@using Syncfusion.Blazor.DropDowns
+{% include_relative code-snippet/value-binding/index-value-binding.razor %}
 
-<SfDropDownList TValue="string" TItem="Games" Width="300px" Placeholder="Select a game" DataSource="@LocalData" @bind-Index="@ddlIndex">
-  <DropDownListFieldSettings Value="ID" Text="Game"></DropDownListFieldSettings>
-</SfDropDownList>
-
-@code {
-    private int? ddlIndex { get; set; } = 1;
-    public class Games
-    {  
-        public string ID { get; set; }
-        public string Game { get; set; }
-    }
-    List<Games> LocalData = new List<Games> {
-    new Games() { ID= "Game1", Game= "American Football" },
-    new Games() { ID= "Game2", Game= "Badminton" },
-    new Games() { ID= "Game3", Game= "Basketball" },
-    new Games() { ID= "Game4", Game= "Cricket" },
-    new Games() { ID= "Game5", Game= "Football" },
-    new Games() { ID= "Game6", Game= "Golf" },
-    new Games() { ID= "Game7", Game= "Hockey" },
-    new Games() { ID= "Game8", Game= "Rugby"},
-    new Games() { ID= "Game9", Game= "Snooker" },
-    new Games() { ID= "Game10", Game= "Tennis"},
-  };
-}
-{% endtabs %}
-{% endhighlight razor %}
+{% endhighlight %}
 
 ## Text and Value
 
@@ -93,39 +40,11 @@ The [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.
 
 The following code demonstrates, Value and Text field of the DropDownList component For instance, the selected item is `Badminton` (Text Field i.e., Game) but the value field holds `Game2` (Value Field i.e., ID).
 
-{% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
-@using Syncfusion.Blazor.DropDowns
+{% include_relative code-snippet/value-binding/text-and-value.razor %}
 
-<p>DropDownList Value is: @DropDownValue</p>
-
-<SfDropDownList TValue="string" TItem="Games" Width="300px" Placeholder="Select a game" DataSource="@LocalData" @bind-Value="@DropDownValue">
-  <DropDownListFieldSettings Value="ID" Text="Game"></DropDownListFieldSettings>
-</SfDropDownList>
-
-@code {
-    public string DropDownValue { get; set; } = "Game2";
-    public class Games
-    {  
-        public string ID { get; set; }
-        public string Game { get; set; }
-    }
-    List<Games> LocalData = new List<Games> {
-    new Games() { ID= "Game1", Game= "American Football" },
-    new Games() { ID= "Game2", Game= "Badminton" },
-    new Games() { ID= "Game3", Game= "Basketball" },
-    new Games() { ID= "Game4", Game= "Cricket" },
-    new Games() { ID= "Game5", Game= "Football" },
-    new Games() { ID= "Game6", Game= "Golf" },
-    new Games() { ID= "Game7", Game= "Hockey" },
-    new Games() { ID= "Game8", Game= "Rugby"},
-    new Games() { ID= "Game9", Game= "Snooker" },
-    new Games() { ID= "Game10", Game= "Tennis"},
-  };
-}
-{% endtabs %}
-{% endhighlight razor %}
+{% endhighlight %}
 
 The output will be as follows.
 
@@ -137,33 +56,21 @@ You can bind the data to the DropDownList as a simple collection of string, int,
 
 The following code demonstrates array of string, double and integer values to the DropDownList component.
 
-{% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
-<SfDropDownList TValue=string TItem=string Placeholder="Select a game" DataSource="@data" Width="300px"></SfDropDownList>
+{% include_relative code-snippet/value-binding/primitive-type-binding.razor %}
 
-@code{
-    public string[] data = { "Badminton", "Basketball", "Cricket", "Football", "Golf" ,"Hockey"};
-}
-{% endtabs %}
-{% endhighlight razor %}
+{% endhighlight %}
 
 The output will be as follows.
 
 ![Blazor DropDownList with String values](./images/blazor_dropdown_string_array.png)
 
-{% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
-@using Syncfusion.Blazor.DropDowns
+{% include_relative code-snippet/value-binding/primitive-type-int-binding.razor %}
 
-<SfDropDownList TValue=int? TItem=int? Placeholder="Select a game" DataSource="@data" Width="300px"></SfDropDownList>
-
-@code{
-    public int?[] data = { 1011, 1022, 1044, 1066 };
-}
-{% endtabs %}
-{% endhighlight razor %}
+{% endhighlight %}
 
 The output will be as follows.
 
@@ -175,36 +82,11 @@ The DropDownList can generate its list items through an array of complex data. F
 
 In the following example, `Game` column from complex data has been mapped to the `Value` field.
 
-{% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
-@using Syncfusion.Blazor.DropDowns
+{% include_relative code-snippet/value-binding/object-binding.razor %}
 
-<SfDropDownList TValue="Games" TItem="Games" Width="300px" Placeholder="Select a game" DataSource="@LocalData">
-  <DropDownListFieldSettings Value="ID" Text="Game"></DropDownListFieldSettings>
-</SfDropDownList>
-
-@code {
-    public class Games
-    {  
-        public string ID { get; set; }
-        public string Game { get; set; }
-    }
-    List<Games> LocalData = new List<Games> {
-    new Games() { ID= "Game1", Game= "American Football" },
-    new Games() { ID= "Game2", Game= "Badminton" },
-    new Games() { ID= "Game3", Game= "Basketball" },
-    new Games() { ID= "Game4", Game= "Cricket" },
-    new Games() { ID= "Game5", Game= "Football" },
-    new Games() { ID= "Game6", Game= "Golf" },
-    new Games() { ID= "Game7", Game= "Hockey" },
-    new Games() { ID= "Game8", Game= "Rugby"},
-    new Games() { ID= "Game9", Game= "Snooker" },
-    new Games() { ID= "Game10", Game= "Tennis"},
-  };
-}
-{% endtabs %}
-{% endhighlight razor %}
+{% endhighlight %}
 
 The output will be as follows.
 
@@ -214,33 +96,11 @@ The output will be as follows.
 
 You can bind enum data to DropDownList component. The following code helps you get a string value from the enumeration data.
 
-{% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
-@using Syncfusion.Blazor.DropDowns;
+{% include_relative code-snippet/value-binding/enum-binding.razor %}
 
-<SfDropDownList TValue="Values" TItem="string" Placeholder="e.g. Australia" DataSource="@EnumValues" @bind-Value="@ddlVal">
-</SfDropDownList>
-
-@code{
-
-    public string[] EnumValues = Enum.GetNames(typeof(Values));
-    public Values ddlVal { get; set; } = Values.Canada;
-
-    public enum Values
-    {
-        Australia,
-        Bermuda,
-        Canada,
-        Denmark,
-        India,
-        US
-
-    }
-}
-
-{% endtabs %}
-{% endhighlight razor %}
+{% endhighlight %}
 
 The output will shown as follows,
 
@@ -254,37 +114,11 @@ The [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 The below sample demonstrates `int` is used as `TValue`. So, if we clear the value using clear button, it will set to 0 as it's the default value of the respective type.
 
+{% highlight cshtml %}
 
-{% tabs %}
-{% highlight razor %}
+{% include_relative code-snippet/value-binding/show-hide-clear-button.razor %}
 
-@using Syncfusion.Blazor.DropDowns;
-
-<SfDropDownList TValue="int?" TItem="Games" ShowClearButton=true Width="300px" Placeholder="Select a game" DataSource="@LocalData">
-  <DropDownListFieldSettings Value="ID" Text="Game"></DropDownListFieldSettings>
-</SfDropDownList>
-
-@code {
-    public class Games
-    {  
-        public int? ID { get; set; }
-        public string Game { get; set; }
-    }
-    List<Games> LocalData = new List<Games> {
-    new Games() { ID= 1, Game= "American Football" },
-    new Games() { ID= 2, Game= "Badminton" },
-    new Games() { ID= 3, Game= "Basketball" },
-    new Games() { ID= 4, Game= "Cricket" },
-    new Games() { ID= 5, Game= "Football" },
-    new Games() { ID= 6, Game= "Golf" },
-    new Games() { ID= 7, Game= "Hockey" },
-    new Games() { ID= 8, Game= "Rugby"},
-    new Games() { ID= 9, Game= "Snooker" },
-    new Games() { ID= 10, Game= "Tennis"},
-  };
-}
-{% endtabs %}
-{% endhighlight razor %}
+{% endhighlight %}
 
 The output will shown as follows,
 

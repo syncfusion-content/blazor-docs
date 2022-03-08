@@ -265,35 +265,11 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 
 After initialization, populate the DropDownList with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property.
 
-{% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
-<SfDropDownList TValue="string" TItem="Games" Placeholder="Select a game" DataSource="@LocalData">
-  <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
-</SfDropDownList>
-
-@code {
-  public class Games
-  {  
-    public string ID { get; set; }
-    public string Text { get; set; }
-  }
-  List<Games> LocalData = new List<Games> {
-    new Games() { ID= "Game1", Text= "American Football" },
-    new Games() { ID= "Game2", Text= "Badminton" },
-    new Games() { ID= "Game3", Text= "Basketball" },
-    new Games() { ID= "Game4", Text= "Cricket" },
-    new Games() { ID= "Game5", Text= "Football" },
-    new Games() { ID= "Game6", Text= "Golf" },
-    new Games() { ID= "Game7", Text= "Hockey" },
-    new Games() { ID= "Game8", Text= "Rugby"},
-    new Games() { ID= "Game9", Text= "Snooker" },
-    new Games() { ID= "Game10", Text= "Tennis"},
-  };
-}
+{% include_relative code-snippet/getting-started/binding-data-source.razor %}
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Data Binding in Blazor DropDownList](./images/blazor-dropdownlist-data-binding.png)
 
@@ -301,35 +277,11 @@ After initialization, populate the DropDownList with data using the [DataSource]
 
 By default, the width of the popup list automatically adjusts according to the DropDownList input element's width, and the height of the popup list has `350px`. The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) properties respectively.
 
-{% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
-<SfDropDownList TValue="string" TItem="Games" PopupHeight="350px" PopupWidth="350px" Placeholder="Select a game" DataSource="@LocalData">
-  <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
-</SfDropDownList>
-
-@code{
-  public class Games
-  {  
-    public string ID { get; set; }
-    public string Text { get; set; }
-  }
-  List<Games> LocalData = new List<Games> {
-    new Games() { ID= "Game1", Text= "American Football" },
-    new Games() { ID= "Game2", Text= "Badminton" },
-    new Games() { ID= "Game3", Text= "Basketball" },
-    new Games() { ID= "Game4", Text= "Cricket" },
-    new Games() { ID= "Game5", Text= "Football" },
-    new Games() { ID= "Game6", Text= "Golf" },
-    new Games() { ID= "Game7", Text= "Hockey" },
-    new Games() { ID= "Game8", Text= "Rugby"},
-    new Games() { ID= "Game9", Text= "Snooker" },
-    new Games() { ID= "Game10", Text= "Tennis"},
-  };
-}
+{% include_relative code-snippet/getting-started/configure-the-popup-list.razor %}
 
 {% endhighlight %}
-{% endtabs %}
 
 ![Changing Popup List Height in Blazor DropDownList](./images/blazor-dropdownlist-popup-height.png)
 
@@ -337,79 +289,19 @@ By default, the width of the popup list automatically adjusts according to the D
 
 * You can get the selected value of the DropDownList component from the **Value** property in the [ValueChange event argument](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Value). 
 
-{% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
-@using Syncfusion.Blazor.DropDowns
+{% include_relative code-snippet/getting-started/get-selected-value.razor %}
 
-<SfDropDownList TValue="string" TItem="Games" Placeholder="Select a game" DataSource="@LocalData">
-  <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
-  <DropDownListEvents TValue="string" TItem="Games" ValueChange="OnValueChange"></DropDownListEvents>
-</SfDropDownList>
-
-@code {
-    public class Games
-    {  
-        public string ID { get; set; }
-        public string Text { get; set; }
-    }
-    List<Games> LocalData = new List<Games> {
-    new Games() { ID= "Game1", Text= "American Football" },
-    new Games() { ID= "Game2", Text= "Badminton" },
-    new Games() { ID= "Game3", Text= "Basketball" },
-    new Games() { ID= "Game4", Text= "Cricket" },
-    new Games() { ID= "Game5", Text= "Football" },
-    new Games() { ID= "Game6", Text= "Golf" },
-    new Games() { ID= "Game7", Text= "Hockey" },
-    new Games() { ID= "Game8", Text= "Rugby"},
-    new Games() { ID= "Game9", Text= "Snooker" },
-    new Games() { ID= "Game10", Text= "Tennis"},
-  };
-    public void OnValueChange(ChangeEventArgs<string, Games> args)
-    {
-        Console.WriteLine("The DropDownList Value is: ", args.Value);
-    }
-}
 {% endhighlight %}
-{% endtabs %}
 
 * You can get the complete object list of the selected value from the **ItemData** property in the [ValueChange event argument](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_ItemData).
 
-{% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
-@using Syncfusion.Blazor.DropDowns
+{% include_relative code-snippet/getting-started/item-data.razor %}
 
-<SfDropDownList TValue="string" TItem="Games" Placeholder="Select a game" DataSource="@LocalData">
-  <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
-  <DropDownListEvents TValue="string" TItem="Games" ValueChange="OnValueChange"></DropDownListEvents>
-</SfDropDownList>
-
-@code {
-    public class Games
-    {  
-        public string ID { get; set; }
-        public string Text { get; set; }
-    }
-    List<Games> LocalData = new List<Games> {
-    new Games() { ID= "Game1", Text= "American Football" },
-    new Games() { ID= "Game2", Text= "Badminton" },
-    new Games() { ID= "Game3", Text= "Basketball" },
-    new Games() { ID= "Game4", Text= "Cricket" },
-    new Games() { ID= "Game5", Text= "Football" },
-    new Games() { ID= "Game6", Text= "Golf" },
-    new Games() { ID= "Game7", Text= "Hockey" },
-    new Games() { ID= "Game8", Text= "Rugby"},
-    new Games() { ID= "Game9", Text= "Snooker" },
-    new Games() { ID= "Game10", Text= "Tennis"},
-  };
-    public void OnValueChange(ChangeEventArgs<string, Games> args)
-    {
-        Console.WriteLine("The complete data of the selected value is: ", args.ItemData);
-    }
-}
 {% endhighlight %}
-{% endtabs %}
 
 ## See Also
 
