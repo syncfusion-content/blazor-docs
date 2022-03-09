@@ -455,7 +455,7 @@ The following sample code demonstrates implementing the aggregates for the custo
 
 When using batch editing, the aggregate values will be refreshed on every cell save. The footer, group footer, and group caption aggregate values will be refreshed.
 
-> Adding a new record to the grouped grid will not refresh the group summary and group caption aggregate’s value.
+> Adding a new record to the grouped DataGrid will not refresh the group summary and group caption aggregate’s value.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
