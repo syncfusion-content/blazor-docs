@@ -937,7 +937,7 @@ The Switch component allows you to perform a toggle (on/off) action between chec
 
 ### SfTextBox
 
-The TextBox is a component for editing, displaying, or entering plain text on forms to capture usernames, phone numbers, email, and more. It uses the `@bind-Value` parameter to validate the form model `EditContext`.
+The TextBox is a component for editing, displaying, or entering plain text on forms to capture user names, phone numbers, email, and more. It uses the `@bind-Value` parameter to validate the form model `EditContext`.
 
 ```cshtml
 @using System.ComponentModel.DataAnnotations;
