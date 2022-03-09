@@ -23,6 +23,5 @@ The following code demonstrates the DatePicker in disabled state.
 }
 ```
 
-The output will be as follows.
 
 ![Disable State in Blazor DatePicker](../images/blazor-datepicker-disable-state.png)

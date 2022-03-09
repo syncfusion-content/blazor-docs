@@ -19,6 +19,5 @@ Using [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cale
 <SfDatePicker TValue="DateTime?" Placeholder="Select a date"></SfDatePicker>
 ```
 
-The output will be as follows.
 
 ![Blazor DatePicker displays Hint Element](../images/blazor-datepicker-hint-element.png)

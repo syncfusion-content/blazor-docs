@@ -33,7 +33,6 @@ The following example demonstrates how to create a DatePicker with `Decade` as i
 }
 ```
 
-The output will be as follows.
 
 ![Blazor DatePicker displays Start View](./images/blazor-datepicker-view.png)
 
