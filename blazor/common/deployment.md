@@ -27,7 +27,7 @@ Refer to [Host and deploy ASP.NET Core Blazor](https://docs.microsoft.com/en-us/
 
 ![Release Configuration](./images/config.png)
 
-* For `Blazor Server side application`, Set Deployment Mode as `Self-Contained`. Because some dependencies are not loaded properly when we host the published folder.
+* For `Blazor Server side application`, set Deployment Mode as `Self-Contained`. Because some dependencies are not loaded properly when the published folder is hosted.
 
 ![Deploy Mode](./images/deploy.png)
 

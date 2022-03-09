@@ -158,7 +158,7 @@ namespace GanttComponent.Data
             GanttDataSource Record11 = new GanttDataSource()
             {
                 TaskId = 11,
-                TaskName = "Product strength analsysis",
+                TaskName = "Product strength analysis",
                 StartDate = new DateTime(2019, 04, 15),
                 Duration = "4",
                 ParentID = 6,

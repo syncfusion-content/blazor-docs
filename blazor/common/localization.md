@@ -138,7 +138,7 @@ The culture can be set using one of the following approaches:
 
     ![Syncfusion Blazor resource files](./images/resource.png)
 
-    After adding the resource file in the application we need to generate the designer class for the resources. To generate the designer class, open the default `resx` file in Visual Studio, and set its `Access Modifier` to `Public`. This will create an entry in your `.csproj` file similar to the following.
+    After adding the resource file in the application you need to generate the designer class for the resources. To generate the designer class, open the default `resx` file in Visual Studio, and set its `Access Modifier` to `Public`. This will create an entry in your `.csproj` file similar to the following.
 
     ```xml
     <ItemGroup>
@@ -321,7 +321,7 @@ The culture can be set using one of the following approaches:
         }
     }
     ```
-    > For .NET 5.0 Blazor Webassembly globalization, we should configure the `BlazorWebAssemblyLoadAllGlobalizationData` in the project file when the application uses large resources and dynamic culture changes. 
+    > For .NET 5.0 Blazor Webassembly globalization,  configure the `BlazorWebAssemblyLoadAllGlobalizationData` in the project file when the application uses large resources and dynamic culture changes. 
     
     ```xml
     <PropertyGroup>

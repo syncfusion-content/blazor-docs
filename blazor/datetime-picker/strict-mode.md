@@ -31,17 +31,16 @@ The following code demonstrates the DateTimePicker with StrictMode `true`.
 }
 ```
 
-The output will be as follows.
 
 ![Strict Mode in Blazor DateTimePicker](./images/blazor-datetimepicker-strictmode.png)
 
 By default, the DateTimePicker act in `StrictMode` as `false` state, that allows you to enter the invalid or out-of-range datetime in text box.
 
-If the datetime is out-of-range or invalid, then the model value will be set to `out of range` datetime value or `null` respectively with highlighted `error` class to indicates the datetime is out of range or invalid.
+If the datetime is out-of-range or invalid, then the model value will be set to `out of range` datetime value or `null` respectively with highlighted `error` class to indicate the datetime is out of range or invalid.
 
 The following code demonstrates the `StrictMode` as `false`. Here, it allows to enter the valid or invalid value in textbox.
 
-If you are entering the out-of-range or invalid datetime value, then the model value will be set to `out of range` datetime value or `null` respectively with highlighted `error` class to indicates the datetime is out of range or invalid.
+If you are entering the out-of-range or invalid datetime value, then the model value will be set to `out of range` datetime value or `null` respectively with highlighted `error` class to indicate the datetime is out of range or invalid.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -55,7 +54,7 @@ If you are entering the out-of-range or invalid datetime value, then the model v
 }
 ```
 
-The output will be as follows.
+
 
 ![Blazor DateTimePicker without StrictMode](./images/blazor-datetimepicker-without-strictmode.png)
 
