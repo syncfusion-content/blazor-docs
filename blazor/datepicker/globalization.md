@@ -9,9 +9,9 @@ documentation: ug
 
 # Globalization in Blazor DatePicker Component
 
-Globalization is the combination of  adapting the control to various languages by means of parsing and formatting the date or number `Internationalization` and also by adding cultural specific customizations and translating the text `localization`.
+Globalization is the combination of adapting the control to various languages by parsing and formatting the date or number `Internationalization` and also by adding cultural specific customizations and translating the text `localization`.
 
-## Blazor server side
+## Blazor server-side
 
 Add `UseRequestLocalization` middle-ware in Configure method in **Startup.cs** file to get browser Culture Info.
 
@@ -40,7 +40,7 @@ namespace BlazorApplication
 
 The **Localization** library allows you to localize default text content. The DatePicker component has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.).
 
-In the following examples, demonstrate how to enable **Localization** for DatePicker in server side Blazor samples. Here, we have used Resource file to translate the static text.
+The following examples demonstrate how to enable **Localization** for DatePicker in server-side Blazor samples. Here, Resource file is used to translate the static text.
 
 The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.NET Core application framework.
 
