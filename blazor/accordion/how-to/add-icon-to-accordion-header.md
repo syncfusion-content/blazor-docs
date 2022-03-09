@@ -195,6 +195,6 @@ The icon custom css class can be added to the Accordion header using the [IconCs
 </style>
 ```
 
-Output:
+
 
 ![Blazor Accordion Component with Header Icon](../images/blazor-accordion-header-icon.png)

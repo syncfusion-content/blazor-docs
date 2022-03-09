@@ -196,7 +196,7 @@ namespace WebAssemblyLocale
 }
 ```
 
-The output will be as follows.
+
 
 ![Localization in Blazor DatePicker](./images/blazor-datepicker-localization.png)
 
@@ -219,7 +219,7 @@ The output will be as follows.
 }
 ```
 
-The output will be as follows.
+
 
 ![Customizing Localized Text in Blazor DatePicker](./images/blazor-datepicker-localize-text.png)
 
@@ -245,6 +245,6 @@ The following code example initializes the DatePicker component in `Arabic` cult
 }
 ```
 
-The output will be as follows.
+
 
 ![Right to Left in Blazor DatePicker with Arabic Culture](./images/blazor-datepicker-right-to-left.png)

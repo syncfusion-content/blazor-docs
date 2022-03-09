@@ -50,7 +50,7 @@ The DropDownList has built-in support to filter data items when [AllowFiltering]
 }
 ```
 
-The output will be as follows.
+
 
 ![Filtering in Blazor DropDownList](./images/blazor-dropdownlist-filtering.png)
 

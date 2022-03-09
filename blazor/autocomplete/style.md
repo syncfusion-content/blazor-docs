@@ -173,6 +173,6 @@ You can add the search icon to the AutoComplete component by overriding the cont
 }
 ```
 
-The output will be as follows.
+
 
 ![Blazor AutoComplete Search Icon](./images/blazor_searchicon_autocomplete.png)

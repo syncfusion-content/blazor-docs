@@ -72,7 +72,7 @@ In the following example, `Name` column from complex data have been mapped to 
 }
 ```
 
-The output will be as follows.
+
 
 ![Binding Blazor AutoComplete Component Items](./images/blazor-aurocomplete-binding-items.png)
 
@@ -122,7 +122,7 @@ In the following example, `Country.CountryID` column from complex data have be
 }
 ```
 
-The output will be as follows.
+
 
 ![Binding Complex Items with Blazor AutoComplete](./images/blazor-autocomplete-binding-complex-items.png)
 
@@ -165,7 +165,7 @@ The following sample displays the first 6 contacts from the **Customers** table 
 }
 ```
 
-The output will be as follows.
+
 
 ![Blazor AutoComplete with Data Binding](./images/blazor-autocomplete-remote-data.png)
 
@@ -201,7 +201,7 @@ Use the `WebApiAdaptor` to bind autocomplete with Web API created using OData.
 }
 ```
 
-The output will be as follows.
+
 
 ![Blazor AutoComplete with Web API Adaptor](./images/blazor-autocomplete-remote-data.png)
 
@@ -312,7 +312,7 @@ Refer to the following example for remote data binding and enabled offline mode.
 }
 ```
 
-The output will be as follows.
+
 
 ![Blazor AutoComplete Component in Offline Mode](./images/blazor-autocomplete-remote-data.png)
 
@@ -331,7 +331,7 @@ You can bind [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.val
 
 ```
 
-The output will shown as follows,
+
 
 ![Blazor AutoComplete ValueTuple Data](./images/blazor_autocomplete_valuetuple.png)
 
@@ -364,7 +364,7 @@ You can bind [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.
 
 ```
 
-The output will shown as follows,
+
 
 ![Blazor AutoComplete with expando object data binding](./images/blazor_autocomplete_expando-object.png)
 
@@ -416,7 +416,7 @@ You can bind [DynamicObject](https://docs.microsoft.com/en-us/dotnet/api/system.
 
 ```
 
-The output will shown as follows,
+
 
 ![Blazor AutoComplete with dynamic object data binding](./images/blazor_autocomplete_dynamic-object.png)
 
@@ -460,7 +460,7 @@ You can bind [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/
 
 ```
 
-The output will shown as follows,
+
 
 ![Blazor AutoComplete with observable collection data binding](./images/blazor_autocomplete_observable-collection.png)
 

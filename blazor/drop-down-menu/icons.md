@@ -43,7 +43,7 @@ In the following example, the Dropdown Menu with default iconPosition and iconPo
 
 ```
 
-Output be like
+
 
 ![Blazor DropDownMenu with Icon](./images/blazor-dropdownmenu-icon.png)
 
@@ -72,7 +72,7 @@ Vertical button in Dropdown Menu can be achieved by adding `e-vertical` class us
 
 ```
 
-Output be like
+
 
 ![Changing Blazor DropDownMenu Position in Vertical](./images/blazor-dropdownmenu-in-vertical.png)
 

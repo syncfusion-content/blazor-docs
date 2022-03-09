@@ -53,7 +53,7 @@ The Syncfusion Blazor library supports persisting a component's state across pag
 {% endhighlight %}
 {% endtabs %}
 
-## State Persistance Supported Components and Properties
+## State persistance supported components and properties
 
 The following table demonstrates the list of Syncfusion Blazor components that are supported with state persistence and describes the list of properties stored in the `localStorage`.
 
