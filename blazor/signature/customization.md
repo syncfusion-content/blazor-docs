@@ -9,7 +9,7 @@ documentation: ug
 
 # Customization of Signature component
 
-The Signature component draws stroke/path to connect one or more points while drawing in canvas. This path is drawn with moveTo() and lineTo() method. We can able to customize the stroke by modifiying its color and width. And the background of the signature also customizable by using its color and image.
+The Signature component draws stroke/path to connect one or more points while drawing in canvas. This path is drawn with moveTo() and lineTo() method. We can able to customize the stroke by modifying its color and width. And the background of the signature also customizable by using its color and image.
 
 ## Stroke Width
 
