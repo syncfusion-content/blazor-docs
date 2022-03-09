@@ -537,4 +537,4 @@ When using batch editing, the aggregate values will be refreshed on every cell s
 }
 ```
 
-![Reactive Aggregate Update in Blazor DataGrid](./images/blazor-datagrid-auto-update-aggregate-value.png)
+![Reactive Aggregate Update in Blazor DataGrid](./images/blazor-datagrid-reactive-aggregate-update.gif)

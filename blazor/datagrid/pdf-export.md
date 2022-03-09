@@ -1102,7 +1102,6 @@ In the following demo, using the DrawString method from the Graphics you can rot
         }
     }
 
-
     public void BeginCellEvent(object sender, PdfGridBeginCellLayoutEventArgs args)
     {
         PdfGrid grid = (PdfGrid)sender;
