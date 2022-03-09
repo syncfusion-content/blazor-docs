@@ -274,4 +274,4 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Spinner).
 
-N> You can also explore our [Blazor ProgressBar](https://blazor.syncfusion.com/demos/?) that shows you how to render and configure the splitters.
+N> You can also explore our [Blazor Spinner](https://blazor.syncfusion.com/demos/spinner/overview?) that shows you how to render and configure the splitters.
