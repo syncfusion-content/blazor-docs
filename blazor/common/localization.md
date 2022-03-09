@@ -321,7 +321,7 @@ The culture can be set using one of the following approaches:
         }
     }
     ```
-    > For .NET 5.0 Blazor Webassembly globalization,  configure the `BlazorWebAssemblyLoadAllGlobalizationData` in the project file when the application uses large resources and dynamic culture changes. 
+    > For .NET 5.0 Blazor Webassembly globalization, configure the `BlazorWebAssemblyLoadAllGlobalizationData` in the project file when the application uses large resources and dynamic culture changes. 
     
     ```xml
     <PropertyGroup>
