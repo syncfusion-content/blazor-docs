@@ -63,6 +63,6 @@ To get started quickly with resizing in Blazor Dialog Component, you can check t
 
 ```
 
-The output will be as follows.
+
 
 ![Resizing in Blazor Dialog](./images/blazor-dialog-resizing.gif)

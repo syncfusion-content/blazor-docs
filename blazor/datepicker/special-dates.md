@@ -88,4 +88,5 @@ You can customize specific dates in a DatePicker by using the [OnRenderDayCell](
 ```
 
 
+
 ![Blazor DatePicker with special dates](./images/blazor_datepicker_special_dates.png)

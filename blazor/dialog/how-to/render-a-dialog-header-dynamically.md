@@ -53,6 +53,6 @@ In the following code, the dialog header is rendered on a button click.
 
 ```
 
-The output will be as follows.
+
 
 ![Blazor Dialog without Header](../images/blazor-dialog-without-header.png)

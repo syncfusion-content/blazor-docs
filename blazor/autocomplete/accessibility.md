@@ -88,6 +88,6 @@ You can use the following key shortcuts to access the AutoComplete without inter
 }
 ```
 
-The output will be as follows.
+
 
 ![Accessibility in Blazor AutoComplete](./images/blazor-autocomplete-accessibility.png)

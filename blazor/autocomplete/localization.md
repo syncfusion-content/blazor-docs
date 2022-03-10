@@ -230,6 +230,6 @@ In the following sample, French culture is set to the AutoComplete and no data i
 }
 ```
 
-The output will be as follows.
+
 
 ![Localization in Blazor AutoComplete](./images/blazor-autocomplete-localization.png)

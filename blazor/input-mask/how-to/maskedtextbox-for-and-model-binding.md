@@ -41,6 +41,6 @@ In this sample, first click the submit button to post the selected value in the 
 }
 ```
 
-The output will be as follows.
+
 
 ![MaskedTextBox Sample](../images/validation.png)
