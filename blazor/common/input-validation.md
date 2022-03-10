@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Input Form Validation in Blazor - Syncfusion
-description: Check out the documentation for Input Form Validation in Blazor
+description: Check out the documentation for Input Form Validation using data annotation attributes with supported Blazor component list.
 platform: Blazor
 component: Common
 documentation: ug

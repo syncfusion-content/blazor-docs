@@ -1,7 +1,7 @@
 ---
 layout: post
 title: State Persistance in Blazor - Syncfusion
-description: Check out the documentation for State Persistance in Blazor
+description: Check out the documentation for State Persistence using browser's local storage with supported Blazor components and its properties.
 platform: Blazor
 component: Common
 documentation: ug
