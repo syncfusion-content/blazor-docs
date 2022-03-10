@@ -1,7 +1,7 @@
 ---
 layout: post
 title: BPMN Connectors in Blazor Diagram Component | Syncfusion
-description: Learn here all about BPMN Connectors such as association , sequence in Syncfusion Blazor Diagram component and more.
+description: Learn here all about BPMN Connectors such as association, sequence in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
