@@ -451,7 +451,7 @@ The following sample code demonstrates implementing the aggregates for the custo
 }
 ```
 
-## Reactive aggregate update
+## Reactive aggregate
 
 When using batch editing, the aggregate values will be refreshed on every cell save. The footer, group footer, and group caption aggregate values will be refreshed.
 
@@ -537,4 +537,4 @@ When using batch editing, the aggregate values will be refreshed on every cell s
 }
 ```
 
-![Reactive Aggregate Update in Blazor DataGrid](./images/blazor-datagrid-reactive-aggregate-update.gif)
+![Reactive Aggregate in Blazor DataGrid](./images/blazor-datagrid-reactive-aggregate.gif)

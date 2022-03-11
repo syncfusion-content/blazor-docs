@@ -1059,13 +1059,13 @@ To apply theme in exported PDF, define the **theme** in export properties.
 
 > By default, material theme is applied to exported PDF document.
 
-### How to customize header in exported document
+### PDF-exported grid cell customization
 
-PDF export provided an option to rotate the header text or cell contents in the exported document. This can be achieved by using the BeginCellLayout property of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class.
+Customize PDF-exported DataGrid header and content styles, such as changing the header and content text orientation, the font color, the width of the header and content text, and so on. This can be achieved by using the `BeginCellLayout` property of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class.
 
 The [PdfHeaderQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfHeaderQueryCellInfoEvent) event can be used to customize the header content in the exported document.
 
-In the following demo, using the DrawString method from the Graphics you can rotate the header text.
+In the following demo, using the [DrawString](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html#Syncfusion_Pdf_Graphics_PdfGraphics_DrawString_System_String_Syncfusion_Pdf_Graphics_PdfFont_Syncfusion_Pdf_Graphics_PdfBrush_System_Drawing_PointF_) method from the [Graphics](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Graphics.PdfGraphics.html) you can rotate the header text.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1159,6 +1159,8 @@ In the following demo, using the DrawString method from the Graphics you can rot
     }
 </style> 
 ```
+
+![PDF Exported Grid Cell Customization in Blazor DataGrid](./images/blazor-datagrid-pdf-exported-grid-cell-customization.png)
 
 <!-- Show or hide columns on exported pdf
 
