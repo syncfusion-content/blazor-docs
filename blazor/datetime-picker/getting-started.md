@@ -286,3 +286,6 @@ The minimum and maximum date time can be defined with the help of [Min](https://
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli/)
 * [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio/)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli/)
+
+N> You can also explore our [Blazor DateTime Picker example](https://blazor.syncfusion.com/demos/datetime-picker/default-functionalities?theme=bootstrap5) that shows you how to render and configure the datetime picker.
+
