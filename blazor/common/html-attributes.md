@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion Blazor UI components provide the most useful [public API](https://help.syncfusion.com/cr/blazor/) for component implementation and customization. Apart from this public API, the Syncfusion Blazor UI components can support the use of default [HTML attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes) and [DOM events](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/event-handling?view=aspnetcore-5.0) in the root element of its component.
 
-## Using HTML Attributes and DOM Events in the Input Element
+## Using HTML attributes and DOM events in the input element
 
 The following is a list of Syncfusion Blazor UI components that use the standard HTML `input` element. You can apply the [HTML input attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) and DOM events directly to the input element used on these Syncfusion Blazor components.
 
@@ -30,7 +30,7 @@ The following is a list of Syncfusion Blazor UI components that use the standard
 * [SfTimePicker](https://blazor.syncfusion.com/documentation/timepicker/getting-started/)
 * [SfUpload](https://blazor.syncfusion.com/documentation/file-upload/getting-started/)
 
-### Available Syncfusion Properties Equivalent to HTML Attributes
+### Available Syncfusion properties equivalent to HTML attributes
 
 The following table illustrates the HTML attributes and their equivalent Syncfusion API.
 
@@ -208,7 +208,7 @@ The textbox will be rendered with the following output.
 </span>
 ```
 
-### Input DOM Events
+### Input DOM events
 
 The Syncfusion Blazor UI component supports binding the native [DOM events](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/event-handling?view=aspnetcore-5.0) on the input element.
 
@@ -237,7 +237,7 @@ The Syncfusion Blazor UI component supports binding the native [DOM events](http
 }
 ```
 
-## Using HTML Attributes and DOM Events in the Root Element
+## Using HTML attributes and DOM events in the root element
 
 The HTML attributes and DOM events can be applied directly to the component's root element.
 

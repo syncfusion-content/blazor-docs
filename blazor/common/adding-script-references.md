@@ -1,27 +1,27 @@
 ---
 layout: post
 title: Adding script references in Blazor - Syncfusion
-description: Learn here about that how to add the script references manually in the Syncfusion Blazor Components.
+description: Checkout and learn here about how to add the script references manually in the Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Reference scripts in Blazor Application
+# Reference Scripts in Blazor Application
 
 This section provides information about the script isolation process and how to reference scripts from CDN, Static Web Assets and Custom resource generator (CRG) for Syncfusion Blazor Components.
 
-> The javascript interop files needs to be added to support the features that can't be implemented in native blazor. 
+> The javascript interop files needs to be added to support the features that can't be implemented in native Blazor. 
 
 ## JavaScript isolation
 
-Syncfusion Blazor components supports JavaScript isolation where the needed scripts are loaded by the component itself when its rendered. So, you don't have to reference scripts externally in application. 
+Syncfusion Blazor components support JavaScript isolation where the needed scripts are loaded by the component itself when it is rendered. So, you don't have to reference scripts externally in application. 
 
-> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by disabling JavaScript isolation for better loading performance of the blazor application. 
+> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by disabling JavaScript isolation for better loading performance of the Blazor application. 
 
 ## Disable JavaScript isolation
 
-The Syncfusion Blazor components supports to refer scripts externally at the application-end by disabling default JavaScript isolation approach for better initial loading performance which explained in the previous section. You can disable JS isolation by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) as `true` while adding Syncfusion blazor service using `AddSyncfusionBlazor()`. 
+The Syncfusion Blazor components support to refer scripts externally at the application-end by disabling default JavaScript isolation approach for better initial loading performance which is explained in the previous section. You can disable JS isolation by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) as `true` while adding Syncfusion Blazor service using `AddSyncfusionBlazor()`. 
 
 ### Blazor Server App
 
@@ -112,7 +112,7 @@ namespace WebApplication1
 {% endhighlight %}
 {% endtabs %}
 
-> If you set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true`, You need to reference scripts externally via [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) or [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) or and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator). 
+> If you set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true`, you need to reference scripts externally via [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference), or [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator). 
 
 ## CDN Reference
 
@@ -146,7 +146,7 @@ If you are using `PDFViewer` or `DocumentEditor`, ensure to add additional scrip
 </head>
 ```
 
-In addition to above, Syncfusion Blazor components provides latest scripts in CDN without versioning. You can use this in development environment if you want to always use the latest version of scripts. It is not recommended to use this in production environment. 
+In addition to the above, Syncfusion Blazor components provide the latest scripts in CDN without versioning. You can use this in development environment if you want to always use the latest version of scripts. It is not recommended to use this in production environment. 
 
 | Component | CDN Script Reference |
 | --- | --- |
@@ -199,7 +199,7 @@ To use static web assets, ensure [UseStaticFiles](https://docs.microsoft.com/en-
     </head>
     ```
 
-    > The PDF Viewer and Document Editor component scripts are  available in static web assets from 19.3.* version. If you are using PDF Viewer or Document Editor component with 19.2.* version, it automatically switch to the JavaScript isolation in the application end.
+    > The PDF Viewer and Document Editor component scripts are available in static web assets from 19.3.* version. If you are using PDF Viewer or Document Editor component with 19.2.* version, it automatically switches to the JavaScript isolation in the application end.
 
 ## Custom Resource Generator
 

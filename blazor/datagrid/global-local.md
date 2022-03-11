@@ -38,7 +38,7 @@ namespace BlazorApplication
 
 The **Localization** library allows you to localize default text content of the DataGrid. The DataGrid component has static text on some features (like group drop area text, pager information text, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.).
 
-We have used Resource file (**.resx**) to translate the static text of the DataGrid.
+Resource file (**.resx**) is used to translate the static text of the DataGrid.
 
 The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [Localization](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0) link to know more about how to configure and use localization in the ASP.NET Core application framework.
 

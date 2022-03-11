@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# How to upgrade Syncfusion Blazor Components to the latest version
+# How to Upgrade Syncfusion Blazor Components to the Latest Version
 
 To upgrade Syncfusion Blazor Components to the latest version, you need to ensure the following:
 

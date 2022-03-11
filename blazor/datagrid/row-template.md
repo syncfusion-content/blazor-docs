@@ -299,7 +299,7 @@ Here [Custom DateTime](https://docs.microsoft.com/en-us/dotnet/standard/base-typ
 
 ## Limitations
 
-Row template feature is not compatible with all the features which are available in datagrid and it has limited features support. Here we have listed out the features which are compatible with row template feature.
+Row template feature is not compatible with all the features which are available in datagrid and it has limited features support. The features that are compatible with the row template feature are listed below. 
 
 * Filtering
 * Paging

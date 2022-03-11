@@ -426,7 +426,7 @@ are not defined in the column, the column renders with “empty” header text.
 
 ## Header template
 
-> Before adding header template to the datagrid, we strongly recommend you to go through the [template](./templates/#templates) section topic to configure the template.
+> Before adding header template to the datagrid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
 
 To know about **Header Template** in Blazor DataGrid Component, you can check this video.
 

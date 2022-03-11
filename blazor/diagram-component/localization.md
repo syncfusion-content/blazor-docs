@@ -39,7 +39,7 @@ namespace BlazorApplication
 }
 ```
 
-The following example demonstrates how to enable **Localization** for the Diagram in server side Blazor samples. Here, we have used Resource file to translate the static text.
+The following example demonstrates how to enable **Localization** for the Diagram in server side Blazor samples. Here, Resource file is used to translate the static text.
 
 * Open the **Startup.cs** file and add the following configuration in the **ConfigureServices** function. 
 

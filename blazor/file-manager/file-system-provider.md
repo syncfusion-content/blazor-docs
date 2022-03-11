@@ -27,7 +27,7 @@ The following file providers are added in Syncfusion Blazor File Manager compone
 
 ## ASP.NET Core file system provider
 
-The ASP.NET Core file system provider allows the users to access and manage the physical file system. To get started, we need to clone the [EJ2.ASP.NET Core File Provider](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider) using the following command.
+The ASP.NET Core file system provider allows the users to access and manage the physical file system. To get started, clone the [EJ2.ASP.NET Core File Provider](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider) using the following command.
 
 ```
 
@@ -37,7 +37,7 @@ cd ej2-aspcore-file-provider
 
 ```
 
-After cloning, just open the project in Visual Studio and restore the NuGet packages. Now, we need to set the root directory of the physical file system in the FileManager controller.
+After cloning, just open the project in Visual Studio and restore the NuGet packages. Now, set the root directory of the physical file system in the FileManager controller.
 
 After setting the root directory of the file system, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the ajaxSettings property of the FileManager component to the appropriate controller methods allows to manage the files in the physical file system.
 
@@ -61,7 +61,7 @@ After setting the root directory of the file system, just build and run the proj
 
 ## ASP.NET MVC 5 file system provider
 
-The ASP.NET MVC5 file system provider allows the users to access and manage the physical file system. To get started, we need to clone the [EJ2.ASP.NET MVC File Provider](https://github.com/SyncfusionExamples/ej2-aspmvc-file-provider) using the following command.
+The ASP.NET MVC5 file system provider allows the users to access and manage the physical file system. To get started, clone the [EJ2.ASP.NET MVC File Provider](https://github.com/SyncfusionExamples/ej2-aspmvc-file-provider) using the following command.
 
 ```csharp
 
@@ -71,7 +71,7 @@ cd ej2-aspmvc-file-provider
 
 ```
 
-After cloning, just open the project in Visual Studio and restore the NuGet packages. Now, we need to set the root directory of the physical file system in the FileManager controller using the Root Folder method.
+After cloning, just open the project in Visual Studio and restore the NuGet packages. Now, set the root directory of the physical file system in the FileManager controller using the Root Folder method.
 
 After setting the root directory of the file system, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the ajaxSettings property of the FileManager component to the appropriate controller methods allows to manage the files in the physical file system.
 
@@ -96,7 +96,7 @@ After setting the root directory of the file system, just build and run the proj
 
 ## ASP.NET Core Azure cloud file system provider
 
-The Azure file system provider allows the users to access and manage the blobs in the Azure blob storage. To get started, we need to clone the [EJ2.ASP.NET Core Azure File Provider](https://github.com/SyncfusionExamples/ej2-azure-aspcore-file-provider) using the following command
+The Azure file system provider allows the users to access and manage the blobs in the Azure blob storage. To get started, clone the [EJ2.ASP.NET Core Azure File Provider](https://github.com/SyncfusionExamples/ej2-azure-aspcore-file-provider) using the following command
 
 ```
 
@@ -104,7 +104,7 @@ git clone https://github.com/SyncfusionExamples/ej2-azure-aspcore-file-provider 
 
 ```
 
-After cloning, just open the project in Visual Studio and restore the NuGet packages. Now, we need to register the Azure storage by passing details like name, password, and blob name to the Register Azure method in the FileManager controller.
+After cloning, just open the project in Visual Studio and restore the NuGet packages. Now, register the Azure storage by passing details like name, password, and blob name to the Register Azure method in the FileManager controller.
 
 ```csharp
 
@@ -154,7 +154,7 @@ Please, use the following command to install the NuGet package in an application
 
 ## ASP.NET MVC 5 Azure cloud file system provider
 
-In ASP.NET MVC, Azure file system provider allows the users to access and manage the blobs in the Azure blob storage. To get started, we need to clone the [EJ2.ASP.NET MVC Azure File Provider](https://github.com/SyncfusionExamples/ej2-azure-aspmvc-file-provider) using the following command
+In ASP.NET MVC, Azure file system provider allows the users to access and manage the blobs in the Azure blob storage. To get started, clone the [EJ2.ASP.NET MVC Azure File Provider](https://github.com/SyncfusionExamples/ej2-azure-aspmvc-file-provider) using the following command
 
 ```
 
@@ -162,7 +162,7 @@ git clone https://github.com/SyncfusionExamples/ej2-azure-aspmvc-file-provider  
 
 ```
 
-After cloning, just open the project in Visual Studio and restore the NuGet packages. Now, we need to register the Azure storage by passing details like name, password, and blob name to the Register Azure method in the FileManager controller.
+After cloning, just open the project in Visual Studio and restore the NuGet packages. Now, you need to register the Azure storage by passing details like name, password, and blob name to the Register Azure method in the FileManager controller.
 
 ```csharp
 
@@ -320,7 +320,7 @@ After registering the File Transfer Protocol details, just build and run the pro
 
 ## SQL database file system provider
 
-The SQL database file system provider allows the users to manage the file system being maintained in a SQL database table. Unlike the other file system providers, the SQL database file system provider works on ID basis. Here, each file and folder have a unique ID based on which all the file operations will be performed. To get started, we need to clone the [EJ2.ASP.NET Core SQL Server Database File Provider](https://github.com/SyncfusionExamples/ej2-sql-server-database-aspcore-file-provider) using the following command.
+The SQL database file system provider allows the users to manage the file system being maintained in a SQL database table. Unlike the other file system providers, the SQL database file system provider works on ID basis. Here, each file and folder have a unique ID based on which all the file operations will be performed. To get started, clone the [EJ2.ASP.NET Core SQL Server Database File Provider](https://github.com/SyncfusionExamples/ej2-sql-server-database-aspcore-file-provider) using the following command.
 
 ```json
 
@@ -328,7 +328,7 @@ The SQL database file system provider allows the users to manage the file system
 
 ```
 
-After cloning, just open the project in Visual Studio and restore the NuGet packages. To establish the SQL server connection with the database file (for eg: FileManager.mdf), we need to specify the connection string in the web config file as shown below.
+After cloning, just open the project in Visual Studio and restore the NuGet packages. To establish the SQL server connection with the database file (for eg: FileManager.mdf), you need to specify the connection string in the web config file as shown below.
 
 ```json
 
@@ -378,7 +378,7 @@ After configuring the connection, just build and run the project. Now, the proje
 
 ## Google Drive file system provider
 
-The Google Drive file system provider allows the users to manage the files and folders in a Google Drive account. The Google Drive file system provider works on id basis where each file and folder have a unique ID. To get started, we need to clone the [EJ2.ASP.NET Core Google Drive File Provider](https://github.com/SyncfusionExamples/ej2-google-drive-aspcore-file-provider) using the following command.
+The Google Drive file system provider allows the users to manage the files and folders in a Google Drive account. The Google Drive file system provider works on id basis where each file and folder have a unique ID. To get started, clone the [EJ2.ASP.NET Core Google Drive File Provider](https://github.com/SyncfusionExamples/ej2-google-drive-aspcore-file-provider) using the following command.
 
 ```
 

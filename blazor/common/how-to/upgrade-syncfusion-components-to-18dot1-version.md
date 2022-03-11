@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# How to upgrade Syncfusion Blazor Components to 18.1.0.36 version
+# How to Upgrade Syncfusion Blazor Components to 18.1.0.36 Version
 
 To upgrade Syncfusion Blazor Components to 18.1.0.36 version, you need to check the following:
 

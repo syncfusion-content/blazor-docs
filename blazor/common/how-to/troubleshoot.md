@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# How to troubleshoot server and client exceptions in Blazor
+# How to Troubleshoot Server and Client Exceptions in Blazor
 
 <!-- markdownlint-disable MD036 -->
 
@@ -67,7 +67,7 @@ documentation: ug
 
 * **The type name 'Shared' does not exist in the type 'SyncfusionBlazor'**
 
-   You may see the below exception while running the Syncfusion blazor
+   You may see the below exception while running the Syncfusion Blazor
    application.
 
     E> The type name 'Shared' does not exist in the type 'SyncfusionBlazor' SyncfusionBlazor `\SyncfusionBlazor\SyncfusionBlazor\obj\Debug\netcoreapp3.1\Razor\Shared\MainLayout.razor.g.cs`
@@ -198,7 +198,7 @@ documentation: ug
 
 * **net::ERR_ABORTED 404 Error While Using Syncfusion Blazor Static files in modified base path or hosted as sub path app.**
 
-   You may face the below exception when deploying the blazor application as Sub application.
+   You may face the below exception when deploying the Blazor application as Sub application.
 
     E> GET `./<SUB-PATH>/<SUB-PATH>_content/Syncfusion.Blazor/<Scripts and CSSs references>` net::ERR_ABORTED 404
 
