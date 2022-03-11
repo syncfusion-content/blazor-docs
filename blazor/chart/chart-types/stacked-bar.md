@@ -55,7 +55,7 @@ documentation: ug
 
 > Refer to our [Blazor Stacked Bar Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-bar-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Stacked Bar Chart Example](https://blazor.syncfusion.com/demos/chart/stacked-bar?theme=bootstrap4) to know how to to render and configure the Stacked Bar type chart.
 
-## Stacking Group
+## Stacking group
 
 The [StackingGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_StackingGroup) property is used to group stacked bar and 100% stacked bar. Bars with same group name are stacked on top of each other.
 
@@ -102,7 +102,7 @@ The [StackingGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 ![Grouping in Blazor Stacked Bar Chart](../images/chart-types-images/blazor-stacked-bar-chart-grouping.png)
 
-## Series Customization
+## Series customization
 
 The following properties can be used to customize the [Stacked Bar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingBar) series.
 

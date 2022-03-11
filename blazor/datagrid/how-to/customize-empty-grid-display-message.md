@@ -7,11 +7,11 @@ control: DataGrid
 documentation: ug
 ---
 
-# Customize empty grid display message in Blazor DataGrid Component
+# Customize Empty Grid Display Message in Blazor DataGrid Component
 
 You can customize the message shown when rendering an empty grid by using the `EmptyRecordTemplate` feature.
 
-This is demonstrated in the below sample code,
+This is demonstrated in the following sample code,
 
 ```cshtml
 @using Syncfusion.Blazor.Grids

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Saving PDF file in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn here all about Saving PDF file in Syncfusion Blazor PDF Viewer component and more.
+description: Checkout and learn here all about saving PDF file in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
@@ -13,7 +13,7 @@ After editing the PDF file with various annotation tools, you will need to save 
 
 ## Save PDF file to Server
 
-You might need to save the PDF file back to the server. The following code example shows how to save the updated PDF file to server.
+You might need to save the PDF file back to the server.
 
 ```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
@@ -85,8 +85,6 @@ If you have plenty of PDF files stored in database and you want to save the upda
 
 In the built-in toolbar, you have an option to download the updated PDF to the local file system, you can use it to download the PDF file.
 
-If you want to achieve the same behavior through your custom UI, use the following code example.
-
 ```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.PdfViewerServer
@@ -104,4 +102,4 @@ public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 }
 ```
 
-> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.
+> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.

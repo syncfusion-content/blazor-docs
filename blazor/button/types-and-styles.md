@@ -37,7 +37,6 @@ The Blazor Button has the following predefined styles that can be defined using 
 
 ```
 
-Output will be as follows
 
 ![Blazor Button Component with different Styles](./images/blazor-button-with-different-style.png)
 
@@ -79,7 +78,7 @@ A Round Button is circular in shape. Usually, it contains an icon representing i
 </style>
 ```
 
-Output will be as follows
+
 
 ![Blazor Button with different Types](./images/blazor-button-types.png)
 
@@ -93,7 +92,7 @@ The primary button is styled with background color and it is used to represent a
 <SfButton IsPrimary="true">Primary</SfButton>
 ```
 
-Output will be as follows
+
 
 ![Blazor Primary Button](./images/blazor-primary-button.png)
 
@@ -140,7 +139,7 @@ A toggle Button allows you to change between the two states. The Button is activ
 
 ```
 
-Output will be as follows
+
 
 ![Blazor Toggle Button](./images/blazor-toggle-button.png)
 
@@ -167,7 +166,7 @@ The Button can have an icon to provide the visual representation of the action. 
 
 ```
 
-Output will be as follows
+
 
 ![Blazor Button with Icon](./images/blazor-button-icon.png)
 
@@ -183,6 +182,6 @@ The two types of Button sizes are default and small. To change the size of the d
 
 ```
 
-Output will be as follows
+
 
 ![Blazor Button with different Size](./images/blazor-button-with-different-size.png)

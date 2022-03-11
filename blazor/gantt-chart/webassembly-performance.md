@@ -23,7 +23,7 @@ In the following example:
 
 * The [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_PreventRender_System_Boolean_) method is called in the **IncrementCount** method which is a click callback.
 
-* Now Gantt Chart component will not be a part of the rendering which happens because of the click event and **currentCount** alone will get updated.
+* Now, Gantt Chart component will not be a part of the rendering which happens because of the click event and **currentCount** alone will get updated.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt

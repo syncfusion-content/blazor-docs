@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Icons and submenu Items in Blazor Menu Bar Component | Syncfusion
-description: Checkout and learn here all about Icons and submenu Items in Syncfusion Blazor Menu Bar component and more.
+description: Checkout and learn here all about icons and submenu items in Syncfusion Blazor Menu Bar component and more.
 platform: Blazor
 control: Menu Bar 
 documentation: ug
@@ -92,8 +92,6 @@ The menu item contains an icon/image in it to provide a visual representation of
 </style>
 ```
 
-Output be like
-
 ![Blazor MenuBar with Icons](./images/blazor-menubar-icons.png)
 
 ## Navigation
@@ -133,13 +131,11 @@ Navigation in Menu Bar is used to navigate to the other web page when a Menu Bar
 </SfMenu>
 ```
 
-Output be like
-
 ![Navigation in Blazor MenuBar](./images/blazor-menubar-navigation.png)
 
 ## Multilevel nesting
 
-The Menu Bar supports multiple level nesting, and it can be achieved by mapping the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuItem~Items.html) property inside the parent `MenuItems`. In the following sample, three-level nesting of Menu Bar has been provided.
+The Menu Bar supports multiple level nesting, and it can be achieved by mapping the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuItem~Items.html) property inside the parent `MenuItems`.
 
 ```cshtml
 
@@ -207,7 +203,5 @@ The Menu Bar supports multiple level nesting, and it can be achieved by mapping 
     </MenuItems>
 </SfMenu>
 ```
-
-Output be like
 
 ![Blazor MenuBar with Multilevel Nesting](./images/blazor-menubar-multilevel-nesting.png)

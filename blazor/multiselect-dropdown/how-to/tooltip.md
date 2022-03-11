@@ -11,8 +11,6 @@ documentation: ug
 
 You can achieve this behavior by using tooltip component. When the mouse is hovered over the DropDownList option, a tooltip appears with information about the hovered list item.
 
-The following code demonstrates how to display a tooltip when hovering over the DropDownList option.
-
 ```cshtml
 @using Syncfusion.Blazor.DropDowns;
 @using Syncfusion.Blazor.Popups;
@@ -66,7 +64,5 @@ The following code demonstrates how to display a tooltip when hovering over the 
     }
 }
 ```
-
-The output will be as follows.
 
 ![Blazor MultiSelect DropDown displays Tooltip](../images/blazor-multiselect-dropdown-tooltip.png)

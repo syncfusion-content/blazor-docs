@@ -19,7 +19,7 @@ If you have your Word document file in the web, you can open it in [Blazor Word 
 @using Syncfusion.Blazor.DocumentEditor
 @using System.IO
 @using System.Net
-@using Newtonsoft.Json
+@using System.Text.Json
 
 <SfDocumentEditorContainer @ref="container" EnableToolbar=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
@@ -43,7 +43,7 @@ If you have your Word document file in the web, you can open it in [Blazor Word 
         stream.Dispose();
         //To observe the memory go down, null out the reference of stream variable.
         stream = null;
-        sfdtString = JsonConvert.SerializeObject(document);
+        sfdtString = JsonSerializer.Serialize(document);
         document.Dispose();
         //To observe the memory go down, null out the reference of document variable.
         document = null;
@@ -52,7 +52,7 @@ If you have your Word document file in the web, you can open it in [Blazor Word 
     public void OnLoad(object args)
     {
         SfDocumentEditor editor = container.DocumentEditor;
-        editor.Open(sfdtString);
+        editor.OpenAsync(sfdtString);
         //To observe the memory go down, null out the reference of sfdtString variable.
         sfdtString = null;
     }
@@ -71,7 +71,7 @@ The following code example shows how to open and load the Word document file sto
 @using System.IO
 @using Microsoft.Azure.Storage
 @using Microsoft.Azure.Storage.Blob
-@using Newtonsoft.Json
+@using System.Text.Json
 
 <SfDocumentEditorContainer @ref="container" EnableToolbar=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
@@ -101,7 +101,7 @@ The following code example shows how to open and load the Word document file sto
         memoryStream.Dispose();
         //To observe the memory go down, null out the reference of memoryStream variable.
         memoryStream = null;
-        sfdtString = JsonConvert.SerializeObject(document);
+        sfdtString = JsonSerializer.Serialize(document);
         document.Dispose();
         //To observe the memory go down, null out the reference of document variable.
         document = null;
@@ -109,7 +109,7 @@ The following code example shows how to open and load the Word document file sto
     public void OnLoad(object args)
     {
         SfDocumentEditor editor = container.DocumentEditor;
-        editor.Open(sfdtString);
+        editor.OpenAsync(sfdtString);
         //To observe the memory go down, null out the reference of sfdtString variable.
         sfdtString = null;
     }
@@ -125,7 +125,7 @@ You can open the Word documents from Azure File Storage using the following code
 @using System.IO
 @using Microsoft.Azure.Storage
 @using Microsoft.Azure.Storage.File
-@using Newtonsoft.Json
+@using System.Text.Json
 
 <SfDocumentEditorContainer @ref="container" EnableToolbar=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
@@ -165,7 +165,7 @@ You can open the Word documents from Azure File Storage using the following code
                 memoryStream.Dispose();
                 //To observe the memory go down, null out the reference of memoryStream variable.
                 memoryStream = null;
-                sfdtString = JsonConvert.SerializeObject(document);
+                sfdtString = JsonSerializer.Serialize(document);
                 document.Dispose();
                 //To observe the memory go down, null out the reference of document variable.
                 document = null;
@@ -177,7 +177,7 @@ You can open the Word documents from Azure File Storage using the following code
         if (!String.IsNullOrEmpty(sfdtString))
         {
             SfDocumentEditor editor = container.DocumentEditor;
-            editor.Open(sfdtString);
+            editor.OpenAsync(sfdtString);
             //To observe the memory go down, null out the reference of sfdtString variable.
             sfdtString = null;
         }
@@ -195,7 +195,7 @@ The following code example shows how to open the Word document file in viewer fr
 @using System.IO;
 @using Syncfusion.Blazor.DocumentEditor
 @using System.Data.SqlClient
-@using Newtonsoft.Json
+@using System.Text.Json
 
 <SfDocumentEditorContainer @ref="container" EnableToolbar=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
@@ -225,12 +225,12 @@ The following code example shows how to open the Word document file in viewer fr
         stream.Dispose();
         //To observe the memory go down, null out the reference of stream variable.
         stream = null;
-        string json = JsonConvert.SerializeObject(document);
+        string json = JsonSerializer.Serialize(document);
         document.Dispose();
         //To observe the memory go down, null out the reference of document variable.
         document = null;
         SfDocumentEditor editor = container.DocumentEditor;
-        editor.Open(json);
+        editor.OpenAsync(json);
         //To observe the memory go down, null out the reference of json variable.
         json = null;
     }
@@ -248,7 +248,7 @@ There is an UI option in built-in toolbar to open the Word documents from local 
 @using Syncfusion.Blazor.DocumentEditor
 @using Syncfusion.Blazor.Inputs
 @using System.IO
-@using Newtonsoft.Json
+@using System.Text.Json
 
 <SfUploader>
     <UploaderEvents OnUploadStart="OnSuccess"></UploaderEvents>
@@ -269,12 +269,12 @@ There is an UI option in built-in toolbar to open the Word documents from local 
         using (Stream stream = new MemoryStream(bytes))
         {
             WordDocument document = WordDocument.Load(stream, ImportFormatType.Docx);
-            string sfdtString = JsonConvert.SerializeObject(document);
+            string sfdtString = JsonSerializer.Serialize(document);
             document.Dispose();
             //To observe the memory go down, null out the reference of document variable.
             document = null;
             SfDocumentEditor editor = container.DocumentEditor;
-            editor.Open(sfdtString);
+            editor.OpenAsync(sfdtString);
             //To observe the memory go down, null out the reference of sfdtString variable.
             sfdtString = null;
         }
@@ -291,7 +291,7 @@ The Word document can be opened on control initialization, in this sample, the d
 ```cshtml
 @using System.IO
 @using Syncfusion.Blazor.DocumentEditor
-@using Newtonsoft.Json
+@using System.Text.Json
 
 <SfDocumentEditorContainer @ref="container" EnableToolbar=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
@@ -307,12 +307,12 @@ The Word document can be opened on control initialization, in this sample, the d
         using (FileStream fileStream = new FileStream(filePath, System.IO.FileMode.Open, System.IO.FileAccess.Read))
         {
             WordDocument document = WordDocument.Load(fileStream, ImportFormatType.Docx);
-            string json = JsonConvert.SerializeObject(document);
+            string json = JsonSerializer.Serialize(document);
             document.Dispose();
             //To observe the memory go down, null out the reference of document variable.
             document = null;
             SfDocumentEditor editor = container.DocumentEditor;
-            editor.Open(json);
+            editor.OpenAsync(json);
             //To observe the memory go down, null out the reference of json variable.
             json = null;
         }

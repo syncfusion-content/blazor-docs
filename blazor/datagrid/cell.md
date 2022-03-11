@@ -192,7 +192,7 @@ The following screenshot represents a DataGrid with auto wrap.
 
 ![Blazor DataGrid with AutoWrap](./images/blazor-datagrid-autowrap.png)
 
-## Custom Attributes
+## Custom attributes
 
 You can customize the DataGrid cells by adding a CSS class to the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_CustomAttributes) property of the column.
 
@@ -240,7 +240,7 @@ In the following example, the cells of the **OrderID** and **ShipCity** columns 
 </style>
 ```
 
-## DataGrid Lines
+## DataGrid lines
 
 The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) have option to display cell border and it can be defined by the [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property.
 
@@ -292,7 +292,7 @@ The available modes of DataGrid lines are:
 
 >By default, the DataGrid renders with **Default** mode.
 
-## Clip Mode
+## Clip mode
 
 The clip mode provides options to display its overflow cell content and it can be defined by the [Columns.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) property.
 

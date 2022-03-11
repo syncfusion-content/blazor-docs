@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor Numeric TextBox Component | Syncfusion
-description: Checkout and learn here all about Globalization in Syncfusion Blazor Numeric TextBox component and more.
+description: Checkout and learn here all about globalization in Syncfusion Blazor Numeric TextBox component and more.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
@@ -12,8 +12,6 @@ documentation: ug
 ## Blazor server side
 
 Add `UseRequestLocalization` middle-ware in Configure method in **Startup.cs** file to get browser Culture Info.
-
-Refer the following code to add configuration in Startup.cs file
 
 ```csharp
 using Microsoft.AspNetCore.Builder;
@@ -36,9 +34,9 @@ namespace BlazorApplication
 }
 ```
 
-The **Localization** library allows you to localize default text content. The Numeric TextBox component has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.).
+The **Localization** library allows to localize default text content. The Numeric TextBox component has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.).
 
-In the following examples, demonstrate how to enable **Localization** for Numeric TextBox in server side Blazor samples. Here, we have used Resource file to translate the static text.
+In the following examples, demonstrate how to enable **Localization** for Numeric TextBox in server side Blazor samples. Here, Resource file is used to translate the static text.
 
 The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.NET Core application framework.
 
@@ -115,7 +113,7 @@ The Resource file is an XML file which contains the strings(key and value pairs)
     | NumericTextBox_DecrementTitle | Wert verringern |
     | NumericTextBox_IncrementTitle | Inkrementieren Sie den Wert |
 
-* Finally, Specify the culture for Numeric TextBox using `locale` property.
+* Finally, specify the culture for Numeric TextBox using `locale` property.
 
     ```cshtml
     @using Syncfusion.Blazor.Inputs
@@ -194,8 +192,6 @@ The following steps explain how to render the NumericTextBox in German culture (
     }
     ```
 
-    The output will be as follows.
-
     ![Localization in Blazor NumericTextBox](./images/blazor-numerictextbox-localization.png)
 
 ## Customize the localized text
@@ -214,8 +210,6 @@ The following steps explain how to render the NumericTextBox in German culture (
     }
     }
     ```
-
-    The output will be as follows.
 
     ![Customizing Localized Text in Blazor NumericTextBox](./images/blazor-numerictextbox-localize-text.png)
 
@@ -240,7 +234,5 @@ The following code example initializes the NumericTextBox component in `Chinese`
     }
 }
 ```
-
-The output will be as follows.
 
 ![Right to Left in Blazor NumericTextBox](./images/blazor-numerictextbox-right-to-left.png)

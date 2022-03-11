@@ -106,7 +106,7 @@ In the following sample, the SFDropDownList component is used as the custom comp
                 <QueryBuilderTemplates>
                     <ColumnTemplate>
                         <div class="e-field">
-                            <SfDropDownList TItem="string" TValue="string" DataSource="qb.Columns.Select(e => e.Field)" @bind-Value="context.Label">
+                            <SfDropDownList TItem="string" TValue="string" DataSource="@Columns" @bind-Value="context.Label">
                                 <DropDownListFieldSettings Text="PaymentMode"></DropDownListFieldSettings>
                                 <DropDownListEvents TItem="string" TValue="string" Created="e => ValueCreated(context)" ValueChange="e => ChangeField(e, context)"></DropDownListEvents>
                             </SfDropDownList>
@@ -154,6 +154,10 @@ In the following sample, the SFDropDownList component is used as the custom comp
         new ItemFields(){ Id= "Debit Card" },
         new ItemFields(){ Id= "Credit Card" },
         new ItemFields(){ Id= "Net Banking" }
+    };
+
+    public string[] Columns = new string[] {
+        "PaymentMode", "Category", "Description", "Amount"
     };
 
     public void UpdateContent()

@@ -72,7 +72,7 @@ In the following example, `Name` column from complex data have been mapped to 
 }
 ```
 
-The output will be as follows.
+
 
 ![Binding Blazor AutoComplete Component Items](./images/blazor-aurocomplete-binding-items.png)
 
@@ -122,13 +122,13 @@ In the following example, `Country.CountryID` column from complex data have be
 }
 ```
 
-The output will be as follows.
+
 
 ![Binding Complex Items with Blazor AutoComplete](./images/blazor-autocomplete-binding-complex-items.png)
 
 ## Bind to remote data
 
-The AutoComplete supports retrieval of data from remote data services with the help of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property is used to fetch data from the database and bind it to the AutoComplete.
+The AutoComplete supports retrieval of data from remote data services with the help of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property, which is used to fetch data from the database and bind it to the AutoComplete.
 
 The following sample displays the first 6 contacts from the **Customers** table of the `Northwind` data service.
 
@@ -165,7 +165,6 @@ The following sample displays the first 6 contacts from the **Customers** table 
 }
 ```
 
-The output will be as follows.
 
 ![Blazor AutoComplete with Data Binding](./images/blazor-autocomplete-remote-data.png)
 
@@ -201,11 +200,10 @@ Use the `WebApiAdaptor` to bind autocomplete with Web API created using OData.
 }
 ```
 
-The output will be as follows.
 
 ![Blazor AutoComplete with Web API Adaptor](./images/blazor-autocomplete-remote-data.png)
 
-### Custom Adaptor
+### Custom adaptor
 
 The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the AutoComplete component.
 
@@ -287,7 +285,7 @@ The following sample code demonstrates implementing custom data binding using cu
 
 ### Offline mode
 
-To avoid post back for every action, set the autocomplete to load all data on initialization and make the actions process in client-side. To enable this behaviour, use the `Offline` property of `DataManager`.
+To avoid post back for every action, set the autocomplete to load all data on initialization and make the actions process in client-side. To enable this behavior, use the `Offline` property of `DataManager`.
 
 Refer to the following example for remote data binding and enabled offline mode.
 
@@ -312,7 +310,6 @@ Refer to the following example for remote data binding and enabled offline mode.
 }
 ```
 
-The output will be as follows.
 
 ![Blazor AutoComplete Component in Offline Mode](./images/blazor-autocomplete-remote-data.png)
 
@@ -331,7 +328,6 @@ You can bind [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.val
 
 ```
 
-The output will shown as follows,
 
 ![Blazor AutoComplete ValueTuple Data](./images/blazor_autocomplete_valuetuple.png)
 
@@ -364,7 +360,6 @@ You can bind [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.
 
 ```
 
-The output will shown as follows,
 
 ![Blazor AutoComplete with expando object data binding](./images/blazor_autocomplete_expando-object.png)
 
@@ -416,7 +411,7 @@ You can bind [DynamicObject](https://docs.microsoft.com/en-us/dotnet/api/system.
 
 ```
 
-The output will shown as follows,
+
 
 ![Blazor AutoComplete with dynamic object data binding](./images/blazor_autocomplete_dynamic-object.png)
 
@@ -460,7 +455,6 @@ You can bind [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/
 
 ```
 
-The output will shown as follows,
 
 ![Blazor AutoComplete with observable collection data binding](./images/blazor_autocomplete_observable-collection.png)
 

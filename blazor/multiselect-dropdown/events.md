@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor MultiSelect Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor MultiSelect component and much more details.
+description: Checkout and learn here all about events in Syncfusion Blazor MultiSelect component and much more details.
 platform: Blazor
 control: MultiSelect
 documentation: ug
@@ -424,7 +424,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ## OnValueSelect
 
-`OnValueSelect` event triggers when a user selects an item in the popup using the mouse/tap or keyboard navigation.
+`OnValueSelect` event triggers when a user selects an item in the popup using the mouse or keyboard navigation.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Methods in Blazor Maps Component | Syncfusion
-description: Checkout and learn here all about Methods in Syncfusion Blazor Maps component and much more details.
+description: Checkout and learn here all about methods in Syncfusion Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug
@@ -141,7 +141,7 @@ The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMap
 
 ## ZoomToCoordinates
 
-[ZoomToCoordinates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_ZoomToCoordinates_System_Double_System_Double_System_Double_System_Double_) zooms the map to the center point of the provied minimum and maximum coordinates.  The following are the arguments for this method.
+[ZoomToCoordinates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_ZoomToCoordinates_System_Double_System_Double_System_Double_System_Double_) zooms the map to the center point of the provided minimum and maximum coordinates. The following are the arguments for this method.
 
 |   Argument name      |   Description                            |
 |----------------------| -----------------------------------------|
