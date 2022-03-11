@@ -184,6 +184,11 @@ This [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.c
 
 Here, the Order class implements the interface of **INotifyPropertyChanged** and it raises the event when the Status property value was changed.
 
+To get start quickly with Blazor Kanban component using Observable collection, you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=jfUzKzS093w" %}
+
 {% highlight cshtml %}
 
 {% include_relative code-snippet/observable-collection.razor %}
