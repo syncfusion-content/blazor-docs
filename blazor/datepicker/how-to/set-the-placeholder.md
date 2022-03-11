@@ -20,4 +20,5 @@ Using [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cale
 ```
 
 
+
 ![Blazor DatePicker displays Hint Element](../images/blazor-datepicker-hint-element.png)

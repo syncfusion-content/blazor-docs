@@ -9,7 +9,7 @@ documentation: ug
 
 # Node in Blazor Diagram Component
 
-Nodes are graphical objects that are used to visually represent the geometrical information, process flow, internal business procedure, entity, or any other kind of data and it represents the functions of a complete system in regards to how it interacts with external entities.
+Nodes are graphical objects that are used to visually represent the geometrical information, process flow, internal business procedure, entity, or any other kind of data and it represents the functions of a complete system regarding to how it interacts with external entities.
 
 ![Node in Blazor Diagram](../images/blazor-diagram-node.png)
 

@@ -222,6 +222,6 @@ The following steps explain how to render the Diagram in French culture (fr) in 
      }
 ```
 
-The output will be as follows.
+
 
 ![Localization in Blazor Diagram](images/Localization.png)

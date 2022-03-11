@@ -26,6 +26,7 @@ The following code allows selecting a date within the range from 7th to 27th in 
 ```
 
 
+
 ![Date Selection in Blazor DatePicker](./images/blazor-datepicker-date-selection.png)
 
 When the Min and Max properties are configured and the selected date value is out-of-range or invalid, then the model value will be set to `out of range` date value or `null` respectively with highlighted `error` class to indicate the date is out of range or invalid.
@@ -41,6 +42,7 @@ When the Min and Max properties are configured and the selected date value is ou
     public DateTime? DateValue {get;set;} = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 28);
 }
 ```
+
 
 
 ![Blazor DatePicker displays Selected Date](./images/blazor-datepicker-selected-date.png)

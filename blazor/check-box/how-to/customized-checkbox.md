@@ -120,7 +120,7 @@ The following section explains about how to customize the height and width of th
 
 ```
 
-Output will be as follows
+
 ![Customizing Height and Width of Blazor CheckBox](./../images/blazor-checkbox-height-width-customization.png)
 
 ## Custom frame

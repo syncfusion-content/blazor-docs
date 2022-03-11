@@ -49,7 +49,7 @@ In the following sample, each list item is split into two columns to display rel
 </style>
 ```
 
-The output will be as follows.
+
 
 ![Blazor DropDownList with ItemTemplate](./images/blazor-dropdownlist-item-template.png)
 
@@ -93,7 +93,7 @@ In the following sample, the selected value is displayed as a combined text of b
 </style>
 ```
 
-The output will be as follows.
+
 
 ![Blazor DropDownList with ValueTemplate](./images/blazor-dropdownlist-value-template.png)
 
@@ -135,7 +135,7 @@ In the following sample, employees are grouped according to their city.
 </style>
 ```
 
-The output will be as follows.
+
 
 ![Blazor DropDownList with GroupTemplate](./images/blazor-dropdownlist-group-template.png)
 
@@ -200,7 +200,7 @@ In the following sample, the list items and its headers are designed and display
 </style>
 ```
 
-The output will be as follows.
+
 
 ![Blazor DropDownList with HeaderTemplate](./images/blazor-dropdownlist-header-template.png)
 
