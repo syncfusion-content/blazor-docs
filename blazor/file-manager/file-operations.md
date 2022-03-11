@@ -174,7 +174,7 @@ The following table represents the request parameters of *rename* operations.
 |action|String|rename|Name of the file operation.|
 |path|String|-|Relative path in which the item is located.|
 |name|String|-|Current name of the item to be renamed.|
-|newname|String|-|New name for the item.|
+|NewName|String|-|New name for the item.|
 |data|FileManagerDirectoryContent|-|Details of the item to be renamed.|
 
 *Refer [File request and response contents](#file-request-and-response-contents) for the contents of data*.
