@@ -34,7 +34,7 @@ The NuGet **Package Manager UI** allows you to search, install, uninstall, and u
 
 3. When you select a Blazor package, the right side panel will provide more information about it.
 
-4. By default, the package selected with latest version. You can choose the required version and click the **Install** button and accept the license terms. The package will be added to your Blazor application.
+4. By default, the package is selected with the latest version. You can choose the required version and click the **Install** button and accept the license terms. The package will be added to your Blazor application.
 
     ![Blazor NuGet Packages Install](images/InstallNuGet.png)
 
@@ -60,7 +60,7 @@ Follow the below instructions to use the dotnet CLI command to install the Syncf
 
     ![Blazor Package Entry ](images/packageentry.png)
 
-4. Then run  [dotnet restore](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-restore?tabs=netcore2x) command to restores all the packages listed in the application file.
+4. Then, run  [dotnet restore](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-restore?tabs=netcore2x) command to restore all the packages listed in the application file.
 
     > Restoring is done automatically with **dotnet build** and **dotnet run** in .NET Core 2.0 and later.
 
@@ -74,11 +74,11 @@ The **Package Manager Console** saves NuGet packages installation time since you
 
     ![Package Manager Console ](images/console.png)
 
-2. The **Package Manager Console** will be shown at the bottom of the screen. You can install the Syncfusion Blazor NuGet packages by enter the following NuGet installation commands.
+2. The **Package Manager Console** will be shown at the bottom of the screen. You can install the Syncfusion Blazor NuGet packages by entering the following NuGet installation commands.
 
     ***Install specified Syncfusion Blazor NuGet package.***
 
-    The below command will install the Syncfusion Blazor NuGet package in the default Blazor application.
+    The following command will install the Syncfusion Blazor NuGet package in the default Blazor application.
 
     ```Install-Package <Package Name>```
 
@@ -88,7 +88,7 @@ The **Package Manager Console** saves NuGet packages installation time since you
 
     ***Install specified Syncfusion Blazor NuGet package in specified Blazor application***
 
-    The below command will install the Syncfusion Blazor NuGet package in the given Blazor application.
+    The following command will install the Syncfusion Blazor NuGet package in the given Blazor application.
 
     ```Install-Package <Package Name> - ProjectName <Project Name>```
 

@@ -15,14 +15,14 @@ In Gantt Chart, the tasks’ duration value can be measured by the following dur
 * Hour
 * Minute
 
-In Gantt Chart, we can define duration unit for whole project by using `GanttTaskFields.DurationUnit` property, when we defines the value for this property, this unit will be applied for all task which don't has duration unit value. And each task in the project can be defined with different duration units and the duration unit of a task can be defined by the following ways,
+In Gantt Chart, you can define the duration unit for the whole project by using the `GanttTaskFields.DurationUnit` property. When you define the value for this property, this unit will be applied for all tasks that do not have a duration unit value. And each task in the project can be defined with different duration units and the duration unit of a task can be defined in the following ways,
 
 * Using `GanttTaskFields.DurationUnit` property, to map the duration unit data source field.
 * Defining the duration unit value along with the duration field in the data source.
 
-## Mapping the Duration Unit Field
+## Mapping the duration unit field
 
-The below code snippet explains the mapping of duration unit data source field to the Gantt Chart component using the `GanttTaskFields.DurationUnit` property.
+The following code snippet explains the mapping of duration unit data source field to the Gantt Chart component using the `GanttTaskFields.DurationUnit` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -120,9 +120,9 @@ The below code snippet explains the mapping of duration unit data source field t
 
 > The default value of the `DurationUnit` property is `day`.
 
-## Defining Duration Unit along With Duration Field
+## Defining duration unit along with duration field
 
-Duration units for the tasks can also be defined along with the duration values, the below code snippet explains the duration unit for a task along with duration value,
+Duration units for the tasks can also be defined along with the duration values. The following code snippet explains the duration unit for a task along with duration value,
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -214,4 +214,4 @@ Duration units for the tasks can also be defined along with the duration values,
 
 > The edit type of the duration column in Gantt Chart is string, to support editing the duration field along with duration units.
 
-> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities) to knows how to render and configure the gantt.
+> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities) to know how to render and configure the Gantt.

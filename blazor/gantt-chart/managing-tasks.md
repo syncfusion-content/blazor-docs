@@ -11,7 +11,7 @@ documentation: ug
 
 The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component has options to dynamically insert, delete, and update tasks in a project. The primary key column is necessary to manage the tasks and perform CRUD operations in Gantt Chart. To define the primary key, set the `GanttColumn.IsPrimaryKey` property to `true` in the column.
 
-## Adding New Tasks
+## Adding new tasks
 
 Tasks can be dynamically added to the Gantt Chart project by enabling the `GanttEditSettings.AllowAdding` property.
 
@@ -116,9 +116,9 @@ A row can be added to the Gantt Chart component from the toolbar while the `Gant
 
 > By default, a new row will be added to the top most row in the Gantt Chart component.
 
-### Context Menu
+### Context menu
 
-A row can also be added above, below or child of the selected row by using context menu support. For this, we need to enable the property `EnableContextMenu`.
+A row can also be added above, below or child of the selected row by using context menu support. For this, you need to enable the property `EnableContextMenu`.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -332,7 +332,7 @@ You can add rows to the Gantt Chart component dynamically using the `AddRecordAs
 
 ![Adding New Record in Blazor Gantt Chart](images/blazor-gantt-chart-add-new-record.png)
 
-## Editing Tasks
+## Editing tasks
 
 The editing feature can be enabled in the Gantt Chart component by enabling the `GanttEditSettings.AllowEditing` and `GanttEditSettings.AllowTaskbarEditing` properties.
 
@@ -341,7 +341,7 @@ The following editing options are available to update the tasks in the Gantt cha
 * Dialog
 * Taskbar
 
-### Cell Editing
+### Cell editing
 
 By setting the edit mode to auto using the `GanttEditSettings.Mode` property, the tasks can be edited by double-clicking the Tree Grid cells.
 
@@ -440,7 +440,7 @@ The following code example shows you how to enable the cell editing in Gantt Cha
 }
 ```
 
-> When the edit mode is set to `Auto`, double-clicking on the Tree Grid side changes, the cells to editable mode. Double-clicking on the chart side opens, the edit dialog for editing the task details.
+> When the edit mode is set to `Auto`, double-clicking on the Tree Grid side changes the cells to editable mode. Double-clicking on the chart side opens the edit dialog for editing the task details.
 
 double click action on Tree Grid side
 
@@ -450,7 +450,7 @@ double click action on chart side
 
 ![Blazor Gantt Chart displays Editing in Chart](images/blazor-gantt-chart-editing-in-chart.png)
 
-### Dialog Editing
+### Dialog editing
 
 Modify the task details through the edit dialog by setting the `GanttEditSettings.Mode` as `Dialog`.
 
@@ -890,7 +890,7 @@ The following screenshot show the output of above code example.
 
 ![Blazor Gantt Chart with Custom Fields](images/blazor-gantt-chart-custom-fields.png)
 
-### Taskbar Editing
+### Taskbar editing
 
 Modify the task details through user interaction, such as resizing and dragging the taskbar, by enabling the `GanttEditSettings.AllowTaskbarEditing` property.
 
@@ -988,7 +988,7 @@ Modify the task details through user interaction, such as resizing and dragging 
 }
 ```
 
-### Task Dependencies
+### Task dependencies
 
 In the Gantt Chart component, you can update the dependencies between tasks and link the tasks interactively. The task dependencies can be mapped from the data source using the `GanttTaskFields.Dependency` property.
 
@@ -1106,7 +1106,7 @@ Updating with Dialog
 
 ![Dialog Editing in Blazor Gantt Chart](images/blazor-gantt-chart-edit-dialog.png)
 
-### Update Task Values using Method
+### Update task values using method
 
 Tasks' value can be dynamically updated by using the `UpdateRecordByIDAsync` method. You can call this method on any custom action. The following code example shows how to use this method to update a task.
 
@@ -1305,7 +1305,7 @@ Component |Example
 
 > If edit type is not defined in the column, then it will be considered as the **StringEdit** type (Textbox component).
 
-### Cell Edit Template
+### Cell edit template
 
 The cell edit template is used to add a custom component for a particular column when the column is edited.
 
@@ -1436,9 +1436,9 @@ The following code example describes, how to define the Edit template for a part
 }
 ```
 
-## Disable Editing for Particular Column
+## Disable editing for particular column
 
-You can disable editing for particular columns, by using the `GanttColumn.AllowEditing` property.
+You can disable editing for particular columns by using the `GanttColumn.AllowEditing` property.
 
 In the following demo, editing is disabled for the `TaskName` column.
 
@@ -1541,7 +1541,7 @@ In the following demo, editing is disabled for the `TaskName` column.
 }
 ```
 
-## Deleting Tasks
+## Deleting tasks
 
 A task delete option in the Gantt Chart component can be enabled by enabling the `GanttEditSettings.AllowDeleting` property. Tasks can be deleted by clicking the delete toolbar item or using the `DeleteRecordAsync` method. You can call this method dynamically on any custom actions like button click. The following code example shows how to enable the delete option in the Gantt Chart component.
 
@@ -1871,7 +1871,7 @@ namespace GanttEF.Models
 
 ```
 
-The following sections will give details about the steps needed to be followed when working with server-side and client-side applications individually. You can also find samples attached at the end of each section for server-side applications and client-side applications.
+The following sections will give details about the steps that need to be followed when working with server-side and client-side applications individually. You can also find samples attached at the end of each section for server-side applications and client-side applications.
 
 ### Entity Framework in Server-Side Application
 
@@ -1879,7 +1879,7 @@ You need to follow the following steps when working with a server-side applicati
 
 #### Custom Adaptor
 
-In Gantt Chart, we can fetch data from the SQL database using `Entity Framework` Data Model and the update the changes on CRUD action to the server by using `DataManager` support. To communicate with the remote data, we are using `CustomAdaptor` of DataManager property to call the server method. You can know more about `CustomAdaptor` from [here](https://blazor.syncfusion.com/documentation/data/custom-binding/). We can populate the datasource in Gantt from the SQL table using Entity Framework using **Read** method. Please Check the below code snippet to assign the data source to Gantt.
+In Gantt Chart, you can fetch data from the SQL database using `Entity Framework` Data Model and update the changes on CRUD action to the server by using `DataManager` support. To communicate with the remote data, `CustomAdaptor` of DataManager property is used to call the server method. You can know more about `CustomAdaptor` from [here](https://blazor.syncfusion.com/documentation/data/custom-binding/). You can populate the datasource in Gantt from the SQL table using Entity Framework using **Read** method. Please Check the following code snippet to assign the data source to Gantt.
 
 ```cshtml
 @using GanttEF.Models
@@ -1908,11 +1908,11 @@ In Gantt Chart, we can fetch data from the SQL database using `Entity Framework`
 </SfGantt>
 
 @code {
-    // Implementing custom adaptor by extending the DataAdaptor class
+    // Implementing custom adaptor by extending the DataAdaptor class.
     public class CustomAdaptor : DataAdaptor
     {
         masterContext db = new masterContext();
-        // Performs data Read operation
+        // Performs data Read operation.
         public override object Read(DataManagerRequest dm, string key = null)
         {
             IEnumerable<GanttData> DataSource = db.GanttData;
@@ -1929,9 +1929,9 @@ In Gantt Chart, we can fetch data from the SQL database using `Entity Framework`
 
 All the CRUD operations in the Gantt Chart are done through DataManager. The DataManager has an option to bind all the CRUD related data in server-side.
 
-We can  do CRUD operations over Gantt data and save the changes into the database. By using **BatchUpdate** method of DataManager, we can communicate with the controller method to update the data source by CRUD operation. In Gantt Chart, the CRUD actions on a task are dependent on other tasks. For example, if you edit the child record on the chart side, the corresponding parent item also will get affected and predecessor dependency task as well get affected. So, all the CRUD operations in Gantt Chart are considered to be batch editing, where you will get all the affected records as collection.
+You can do CRUD operations over Gantt data and save the changes into the database. By using **BatchUpdate** method of DataManager, You can communicate with the controller method to update the data source by CRUD operation. In Gantt Chart, the CRUD actions on a task are dependent on other tasks. For example, if you edit the child record on the chart side, the corresponding parent item also will get affected and predecessor dependency task as well get affected. So, all the CRUD operations in Gantt Chart are considered to be batch editing, where you will get all the affected records as collection.
 
-This server method will be triggered for all the CRUD operations like adding, editing, and deleting actions. We can handle each operation separately inside this method with corresponding data received in this method argument.
+This server method will be triggered for all the CRUD operations like adding, editing, and deleting actions. You can handle each operation separately inside this method with corresponding data received in this method argument.
 
 The following sample code explains you about, how to implement CRUD operations for the custom bounded data.
 
@@ -1961,11 +1961,11 @@ Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "Exp
 </SfGantt>
 
 @code {
-    // Implementing custom adaptor by extending the DataAdaptor class
+    // Implementing custom adaptor by extending the DataAdaptor class.
     public class CustomAdaptor : DataAdaptor
     {
         masterContext db = new masterContext();
-        // Performs data Read operation
+        // Performs data Read operation.
         public override object Read(DataManagerRequest dm, string key = null)
         {
             IEnumerable<GanttData> DataSource = db.GanttData;
@@ -1973,7 +1973,7 @@ Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "Exp
             return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
         }
 
-        // Performs CRUD operation
+        // Performs CRUD operation.
         public override object BatchUpdate(DataManager dm, object changedRecords, object addedRecords, object deletedRecords, string keyField, string key, int? dropIndex)
         {
             List<GanttData> addRecord = addedRecords as List<GanttData>;
@@ -2017,14 +2017,14 @@ Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "Exp
 
 >You can find the sample for server-side application using entity framework [here](https://github.com/SyncfusionExamples/Blazor-Gantt-Chart-with-Entity-framework).
 
-### Entity Framework in Client-Side Application
+### Entity Framework in client-side application
 
 You need to follow the following steps when working with a client-side application.
 
 #### Custom Adaptor
 
-In Gantt Chart, we can fetch data from the SQL database using `Entity Framework` Data Model and the update the changes on CRUD action to the server by using `DataManager` support. To communicate with the
-remote data, we are using `CustomAdaptor` of DataManager property to call the server method. You can know more about `CustomAdaptor` from [here](https://blazor.syncfusion.com/documentation/data/custom-binding/). We can populate the datasource in Gantt from the SQL table using Entity Framework using **ReadAsync** method. Please Check the below code snippet to assign the data source to Gantt.
+In Gantt Chart, you can fetch data from the SQL database using `Entity Framework` Data Model and update the changes on CRUD action to the server by using `DataManager` support. To communicate with the
+remote data, `CustomAdaptor` of DataManager property is used to call the server method. You can know more about `CustomAdaptor` from [here](https://blazor.syncfusion.com/documentation/data/custom-binding/). You can populate the datasource in Gantt from the SQL table using Entity Framework using **ReadAsync** method. Please Check the following code snippet to assign the data source to Gantt.
 
 ```cshtml
 @using MyBlazorApp.Shared.DataAccess
@@ -2057,7 +2057,7 @@ remote data, we are using `CustomAdaptor` of DataManager property to call the se
 
 @code {
 
-    // Performs data Read operation
+    // Performs data Read operation.
     public override async Task<object> ReadAsync(DataManagerRequest dm, string key = null)
 
     {
@@ -2093,7 +2093,7 @@ The following sample code explains you about, how to implement CRUD operations f
 @code {
 
 
-    // Performs data Read operation
+    // Performs data Read operation.
     public override async Task<object> ReadAsync(DataManagerRequest dm, string key = null)
 
     {
@@ -2102,7 +2102,7 @@ The following sample code explains you about, how to implement CRUD operations f
         return dm.RequiresCounts ? new DataResult() { Result = data, Count = data.Count() } : (object)data;
     }
 
-    // Performs CRUD operation
+    // Performs CRUD operation.
     public override async Task<object> BatchUpdateAsync(DataManager dm, object changedRecords, object addedRecords, object deletedRecords, string keyField, string key, int? dropIndex)
 
     {
@@ -2155,7 +2155,7 @@ Indent and Outdent of a task are used to update the level of task in the hierarc
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Toolbar="@(new List<string>() { "Indent", "Outdent" })" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
-          Duration="Duration" Progress="Progress" Child="SubTasks"></GanttTaskFields>
+          Duration="Duration" Progress="Progress" ParentID="ParentId"></GanttTaskFields>
     <GanttEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true">
     </GanttEditSettings>
 </SfGantt>
@@ -2175,75 +2175,25 @@ Indent and Outdent of a task are used to update the level of task in the hierarc
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public List<TaskData> SubTasks { get; set; }
+        public int? ParentId { get; set; }
     }
 
     public static List <TaskData> GetTaskCollection() {
-    List <TaskData> Tasks = new List <TaskData> () {
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify Site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 40,
-                },
-                new TaskData() {
-                    TaskId = 4,
-                    TaskName = "Soil test approval",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30
-                },
-            })
-        },
-        new TaskData() {
-            TaskId = 5,
-            TaskName = "Project estimation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 6,
-                    TaskName = "Develop floor plan for estimation",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 7,
-                    TaskName = "List materials",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 40
-                },
-                new TaskData() {
-                    TaskId = 8,
-                    TaskName = "Estimation approval",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "0",
-                    Progress = 30,
-                }
-            })
-        }
-    };
-    return Tasks;
+        List <TaskData> Tasks = new List <TaskData> () {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21) },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2019, 04, 02), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2019, 04, 02), Duration = "4", Progress = 40, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2019, 04, 02), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21) },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 40, ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2019, 04, 04), Duration = "0", Progress = 30, ParentId = 5 }
+        };
+        return Tasks;
     }
 }
 ```
 
 ## Troubleshoot: Editing works only when primary key column is defined
 
-Editing feature requires a primary key column for CRUD operations. While defining columns in Gantt using the `GanttColumns` property, it is mandatory that any one of the columns, must be a primary column. By default, the `Id` column will be the primary key column.  If `Id` column is not defined, we need to enable `IsPrimaryKey` for any one of the columns defined in the `GanttColumns` property.
+Editing feature requires a primary key column for CRUD operations. While defining columns in Gantt using the `GanttColumns` property, any one of the columns must be a primary column. By default, the `Id` column will be the primary key column. If `Id` column is not defined, you need to enable `IsPrimaryKey` for any one of the columns defined in the `GanttColumns` property.

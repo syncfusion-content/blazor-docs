@@ -7,7 +7,7 @@ control: Accordion
 documentation: ug
 ---
 
-# Show/Hide Accordion item in Blazor Accordion Component
+# Show/Hide Accordion Item in Blazor Accordion Component
 
 Accordion provides support to show or hide the specified accordion item using the following ways.
 
@@ -35,7 +35,7 @@ In the following demo, the specified accordion item shows or hides dynamically w
                 <div>ASP.NET</div>
             </HeaderTemplate>
             <ContentTemplate>
-                <div>Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services. ASP.NET pages execute on the server and generate markup such as HTML, WML, or XML that is sent to a desktop or mobile browser. ASP.NET pages use a compiled,event-driven programming model that improves performance and enables the separation of application logic and user interface.</div>
+                <div>Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services. ASP.NET pages execute on the server and generate markup such as HTML, WML, or XML that is sent to a desktop or mobile browser. ASP.NET pages use a compiled, event-driven programming model that improves performance and enables the separation of application logic and user interface.</div>
             </ContentTemplate>
         </AccordionItem>
         @if (ShowItem)
@@ -62,7 +62,7 @@ In the following demo, the specified accordion item shows or hides dynamically w
                 <div>JavaScript</div>
             </HeaderTemplate>
             <ContentTemplate>
-                <div>JavaScript (JS) is an interpreted computer programming language.It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed.</div>
+                <div>JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed.</div>
             </ContentTemplate>
         </AccordionItem>
     </AccordionItems>
@@ -98,7 +98,7 @@ In the following demo, the specified accordion item shows or hides dynamically w
                 <div>ASP.NET</div>
             </HeaderTemplate>
             <ContentTemplate>
-                <div>Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services. ASP.NET pages execute on the server and generate markup such as HTML, WML, or XML that is sent to a desktop or mobile browser. ASP.NET pages use a compiled,event-driven programming model that improves performance and enables the separation of application logic and user interface.</div>
+                <div>Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services. ASP.NET pages execute on the server and generate markup such as HTML, WML, or XML that is sent to a desktop or mobile browser. ASP.NET pages use a compiled, event-driven programming model that improves performance and enables the separation of application logic and user interface.</div>
             </ContentTemplate>
         </AccordionItem>
         <AccordionItem Visible=@ShowItem>
@@ -122,7 +122,7 @@ In the following demo, the specified accordion item shows or hides dynamically w
                 <div>JavaScript</div>
             </HeaderTemplate>
             <ContentTemplate>
-                <div>JavaScript (JS) is an interpreted computer programming language.It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed.</div>
+                <div>JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed.</div>
             </ContentTemplate>
         </AccordionItem>
     </AccordionItems>
@@ -137,6 +137,6 @@ In the following demo, the specified accordion item shows or hides dynamically w
 }
 ```
 
-Output:
+
 
 ![Hiding or showing items in Blazor Accordion](../images/blazor-accordion-show-hide-item.gif)

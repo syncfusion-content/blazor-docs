@@ -43,7 +43,7 @@ Data Labels are used to identify the value of actual bar in the Bullet Chart com
 }
 ```
 
-## Data Label Customization
+## Data label customization
 
 Data Labels color, opacity, font size, font family, font weight, and font style can be customized using the [BulletChartDataLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartDataLabelStyle.html).
 

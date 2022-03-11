@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Create custom toolbar with drop-down list in Blazor DataGrid Component
+# Create Custom Toolbar with Drop-down List in Blazor DataGrid Component
 
 You can create your own ToolBar items in the DataGrid. It can be added by defining the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar). Actions for this ToolBar template items are defined in the [ToolbarClick`]
 
@@ -111,5 +111,4 @@ You can select the datagrid row index based on the selected data in the DropDown
 }
 ```
 
-Output be like the below.
 ![Blazor DataGrid with Dropdown ToolBar](../images/blazor-datagrid-dropdown-toolbar.PNG)

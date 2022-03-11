@@ -7,7 +7,7 @@ control: Input Mask
 documentation: ug
 ---
 
-# Customize the UI appearance of the Blazor Input Mask Component
+# Customize the UI Appearance of the Blazor Input Mask Component
 
 The appearance of the MaskedTextBox can be changed by adding custom [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_CssClass) to the component and enabling styles.
 
@@ -42,5 +42,4 @@ Refer to the following example to change the appearance of the MaskedTextBox.
 </style>
 ```
 
-The output will be as follows,
 ![MaskedTextBox Sample](../images/customCss.png)

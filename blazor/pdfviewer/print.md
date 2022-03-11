@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn here all about Print in Syncfusion Blazor PDF Viewer component and much more details.
+description: Checkout and learn here all about print in Syncfusion Blazor PDF Viewer component and much more details.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
@@ -23,7 +23,6 @@ The PDF Viewer supports printing the loaded PDF file by default. You can enable 
 
 ![Printing in Blazor PDFViewer](../pdfviewer/images/blazor-pdfviewer-print.png)
 
-You can programmatically invoke print action as follows.
 
 ```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
@@ -42,4 +41,4 @@ You can programmatically invoke print action as follows.
 }
 ```
 
-> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.
+> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.

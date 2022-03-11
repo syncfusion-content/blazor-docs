@@ -25,7 +25,7 @@ You can create **Blazor WebAssembly App** using Visual Studio in one of the foll
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/vs2019-extensions/create-project)
 
-## Install Syncfusion Blazor Packages in the App
+## Install Syncfusion Blazor Grid NuGet in the App
 
 Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
@@ -33,7 +33,7 @@ To add Blazor DataGrid component in the app, open the NuGet package manager in V
 
 ## Register Syncfusion Blazor Service
 
-Open ~/_Imports.razor file and import the Syncfusion.Blazor namespace.
+Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_Imports.razor" %}
@@ -84,7 +84,7 @@ namespace BlazorApplication
 {% endhighlight %}
 {% endtabs %}
 
-## Add Style Sheet
+## Add style sheet
 
 Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://sfblazor.azurewebsites.net/staging/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
 
@@ -101,7 +101,7 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 {% endhighlight %}
 {% endtabs %}
 
-## Add Script Reference
+## Add script reference
 
 Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://sfblazor.azurewebsites.net/staging/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` of **wwwroot/index.html** file in client web app.
 
@@ -168,7 +168,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 > You need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for more information.
 
-## Defining Row Data
+## Defining row data
 
 To bind data for the DataGrid component, you can assign a IEnumerable object to the [dataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The list data source can also be provided as an instance of the `DataManager`. You can assign the data source through the `OnInitialized` life cycle of the page.
 
@@ -202,7 +202,7 @@ To bind data for the DataGrid component, you can assign a IEnumerable object to 
 {% endhighlight %}
 {% endtabs %}
 
-## Defining Columns
+## Defining columns
 
 The columns are automatically generated when columns declaration is empty or undefined while initializing the datagrid.
 
@@ -230,7 +230,7 @@ Let’s check the properties used here:
 {% endhighlight %}
 {% endtabs %}
 
-## Enable Paging
+## Enable paging
 
 The paging feature enables users to view the datagrid record in a paged view. It can be enabled by setting the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to `true`. Pager can be customized using the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component.
 
@@ -250,7 +250,7 @@ The paging feature enables users to view the datagrid record in a paged view. It
 {% endhighlight %}
 {% endtabs %}
 
-## Enable Sorting
+## Enable sorting
 
 The sorting feature enables you to order the records. It can be enabled by setting the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property as `true`. Sorting feature can be customized using the [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortSettings) component.
 
@@ -270,7 +270,7 @@ The sorting feature enables you to order the records. It can be enabled by setti
 {% endhighlight %}
 {% endtabs %}
 
-## Enable Filtering
+## Enable filtering
 
 The filtering feature enables you to view reduced amount of records based on filter criteria. It can be enabled by setting the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property as `true`. Filtering feature can be customized using the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) component.
 
@@ -290,7 +290,7 @@ The filtering feature enables you to view reduced amount of records based on fil
 {% endhighlight %}
 {% endtabs %}
 
-## Enable Grouping
+## Enable grouping
 
 The grouping feature enables you to view the datagrid record in a grouped view. It can be enabled by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property as `true`. Grouping feature can be customized using the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings) component.
 

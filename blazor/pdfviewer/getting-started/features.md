@@ -1,44 +1,41 @@
 ---
 layout: post
-title: Features in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn here all about Features in Syncfusion Blazor PDF Viewer component and much more details.
+title: Overview of Blazor PDF Viewer Component | Syncfusion
+description: Checkout and learn about overview of the Syncfusion Blazor PDF Viewer component and much more details.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# Features in Blazor PDF Viewer Component
+# Overview of Blazor PDF Viewer Component
 
-The [PDF Viewer control for Blazor](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) allows you to view, print, and annotate the PDF files in your Blazor applications and its key features are
+The [Blazor PDF Viewer component](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) allows to view, print, and annotate the PDF files in your Blazor applications and its key features are,
 * Accurate and reliable rendering of PDF pages.
-* Provides easy page navigation with:
+* Provides easy page navigation with,
     * Thumbnail page view
     * Bookmark panel
     * Hyperlink navigation
     * Table of content navigation
-* Core interactions:
+* Core interactions
     * Zooming and panning
     * Text searching
     * Text selection and copy
-* Print PDF file
-* Annotate PDF with different types of annotations such as:
-      * Highlight, underline, and strikeout annotation
-      * Shape annotation: Rectangle, circle, polygon, line, and arrow.
-      * Stamp annotation: Built-in and custom stamp
-      * Measurement annotation
-      * Free text annotation
-      * Add a comment or note for all type of annotations
+* Print PDF file.
+* Annotate PDF with different types of annotations such as,
+    * Highlight, underline, and strikeout annotation
+    * Shape annotation: Rectangle, circle, polygon, line, and arrow.
+    * Stamp annotation: Built-in and custom stamp
+    * Measurement annotation
+    * Free text annotation
+    * Add a comment or note for all type of annotations
 * FormFilling
 * Handwritten Signature
 
-> There is a separate PDF Viewer component for Blazor server-side and Blazor WebAssembly applications.
->* The `SfPdfViewerServer` control is for Blazor server-side application. This control resides with Syncfusion.Blazor.PdfViewerServer.Windows NuGet package. This server-side control is highly recommended.
->* The `SfPdfViewer` control is for Blazor WebAssembly application. This control requires server-side processing to render the PDF files through web service. It resides with Syncfusion.Blazor.PdfViewer NuGet package.
+> Syncfusion provides separate PDF Viewer component for Blazor Server and Blazor WebAssembly applications.
+<br />For **Blazor WebAssembly App**, use [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.SfPdfViewer.html) component in Syncfusion.Blazor.PdfViewer NuGet package. This component requires server-side processing to render the PDF files through web service.
+<br />For **Blazor Server App**, use the [SfPdfViewerServer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewerServer.SfPdfViewerServer.html) component in corresponding NuGet based on the operating system of the server you intend to host, as shown below.,
+>* For Windows, use [Syncfusion.Blazor.PdfViewerServer.Windows](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Windows)
+>* For Linux, use [Syncfusion.Blazor.PdfViewerServer.Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux)
+>* For Mac (OSX), use [Syncfusion.Blazor.PdfViewerServer.OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX)
 
-## Prerequisites
-
-* [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
-* [.NET Core SDK 3.0.103](https://dotnet.microsoft.com/download/dotnet-core/3.0)
-* [Blazor VS Extension](https://marketplace.visualstudio.com/)
-
-> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.
+> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.

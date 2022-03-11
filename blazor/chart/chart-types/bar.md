@@ -51,7 +51,7 @@ documentation: ug
 
 > Refer to our [Blazor Bar Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/bar-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Bar Chart Example](https://blazor.syncfusion.com/demos/chart/bar?theme=bootstrap4) to compare values across categories by using horizontal bars.
 
-## Bar Space and Width
+## Bar space and width
 
 The [ColumnSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ColumnSpacing) and [ColumnWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ColumnWidth) properties are used to customize the space between bars.
 
@@ -93,7 +93,7 @@ The [ColumnSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 ![Blazor Bar Chart with Space and Width](../images/chart-types-images/blazor-bar-chart-space-and-width.png)
 
-## Grouped Bar
+## Grouped bar
 
 You can use the [GroupName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_GroupName) property to group the data points in the bar type charts. Data points with same group name are grouped together.
 
@@ -139,7 +139,7 @@ You can use the [GroupName](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ![Grouping in Blazor Grouped Bar Chart](../images/chart-types-images/blazor-column-chart-grouped-bar.png)
 
-## Series Customization
+## Series customization
 
 The following properties can be used to customize the [Bar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Bar) series.
 

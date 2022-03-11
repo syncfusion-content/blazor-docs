@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Pivot Table component of Syncfusion, and more details.
+description: Checkout and learn about getting started with Blazor Pivot Table component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -14,120 +14,258 @@ documentation: ug
 
 # Getting Started with Blazor Pivot Table Component
 
-This section briefly explains about how to include a **Pivot Table** in your Blazor Server-Side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 To get start quickly with Blazor Pivot Table component, you can check out this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=1roaubxylGc"%}
 
-## Importing Syncfusion Blazor Pivot Table component in the application
+## Prerequisites
 
-1. Install the **Syncfusion.Blazor.PivotTable** NuGet package to the application by using the **NuGet Package Manager**.
-2. You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
- ```html
-<head>
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-    <!---CDN--->
-    @*<link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />*@
+## Create a new Blazor App in Visual Studio
 
-    <!---Additionally refer the below file to use pivot chart--->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
-</head>
-```
+You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
- ```html
-<head>
-    <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />
-    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/vs2019-extensions/create-project)
 
-    <!---Additionally refer the below file to use pivot chart--->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
-</head>
-```
+## Install Syncfusion Blazor PivotTable NuGet in the App
 
-## Adding component package to the application
+Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
-Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.PivotView** package.
+To add Blazor Pivot Table component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.PivotTable](https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable) and then install it.
 
-```cshtml
-@using Syncfusion.Blazor.PivotView
-```
+## Register Syncfusion Blazor Service
 
-## Add SyncfusionBlazor service in Startup.cs
+Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
-Open the **Startup.cs** file and add services required by Syncfusion components using  **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
-```csharp
+@using Syncfusion.Blazor
+
+{% endhighlight %}
+{% endtabs %}
+
+Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
+
+### Blazor Server App
+
+* For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+
+* For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
+
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 10" %}
+
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
+using Syncfusion.Blazor;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+
+var app = builder.Build();
+....
+
+{% endhighlight %}
+
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="1 12" %}
+
 using Syncfusion.Blazor;
 
 namespace BlazorApplication
 {
     public class Startup
     {
-        ....
-        ....
+        ...
         public void ConfigureServices(IServiceCollection services)
         {
-            ....
-            ....
-            services.AddSyncfusionBlazor();
+            services.AddRazorPages();
+            services.AddServerSideBlazor();
+            services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
         }
+        ...
     }
 }
-```
 
-The server will be disconnected while performing any UI operations if the bound data source is large. To avoid this, add the following service to increase the buffer size of the message over the SignalR connection. 
+{% endhighlight %}
+{% endtabs %}
 
-```csharp
+### Blazor WebAssembly App
+
+Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
+
+{% tabs %}
+{% highlight C# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 11" %}
+
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Syncfusion.Blazor;
 
-namespace BlazorApplication
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
+
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+await builder.Build().RunAsync();
+....
+
+{% endhighlight %}
+
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
+
+using Syncfusion.Blazor;
+
+namespace WebApplication1
 {
-    public class Startup
+    public class Program
     {
-        ....
-        ....
-        public void ConfigureServices(IServiceCollection services)
+        public static async Task Main(string[] args)
         {
             ....
-            services.AddSignalR(e => {
-                  e.MaximumReceiveMessageSize = 102400000;
-            }); 
-            services.AddSyncfusionBlazor();
+            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+            await builder.Build().RunAsync();
         }
     }
 }
-```
 
-> To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the HEAD element of the `~/Pages/_Host.cshtml` page.
+{% endhighlight %}
+{% endtabs %}
 
- ```html
+## Add Style Sheet
+
+Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
+
+To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
+
+### Blazor Server App
+
+* For .NET 6 app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+
+* For .NET 5 and .NET 3.X app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
+
+{% tabs %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
+
 <head>
-    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js"></script>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
-```
 
-## Initializing pivot table component in an application
+{% endhighlight %}
 
-The Syncfusion Pivot Table component can be initialized in any razor page inside `~/Pages` folder. Here, the pivot table component is initialized inside `~/Pages/Index.razor` page. In a new application, if `Index.razor` page has any default content template, then those content can be completely removed and following code can be added.
+{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" %}
 
-```cshtml
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Blazor WebAssembly App
+
+For Blazor WebAssembly App, Refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
+
+{% tabs %}
+{% highlight cshtml tabtitle="~/index.html" %}
+
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add Script Reference
+
+Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows,
+
+### Blazor Server App
+
+* For **.NET 6** app, Refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+
+* For **.NET 5 and .NET 3.X** app, Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
+
+{% tabs %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+
+{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="4" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Blazor WebAssembly App
+
+For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html** file.
+
+{% tabs %}
+{% highlight html tabtitle="~/index.html" hl_lines="4" %}
+
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
+
+## Initializing Blazor pivot Table component
+
+* Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.PivotView** namespace.
+
+{% tabs %}
+{% highlight razor tabtitle="~/Imports.razor" %}
+
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.PivotView
+
+{% endhighlight %}
+{% endtabs %}
+
+* Now, add the Syncfusion Pivot Table component in razor file. Here, the Pivot Table component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+
+{% tabs %}
+{% highlight razor %}
 
 <SfPivotView TValue="ProductDetails"></SfPivotView>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Assigning sample data to the pivot table
 
 The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component further needs to be populated with an appropriate data source. For illustration purpose, a collection of objects mentioning the sales details of certain products over a period and region has been prepared. This sample data is assigned to the pivot table component through [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class.
 
-```cshtml
-@using Syncfusion.Blazor.PivotView
+{% tabs %}
+{% highlight razor %}
 
 <SfPivotView TValue="ProductDetails">
      <PivotViewDataSourceSettings DataSource="@dataSource">
@@ -233,7 +371,8 @@ The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-piv
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Adding fields to row, column, value and filter axes
 
@@ -255,10 +394,8 @@ In-order to define each field in the respective axis, the following basic proper
 * [Caption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_Caption): It allows to set the field caption, which is the alias name of the field that needs to be displayed in the pivot table.
 * [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_Type): It allows to set the summary type of the field. By default, [SummaryTypes.Sum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html) is applied.
 
-In this illustration, "Year" and "Quarter" are added in column, "Country" and "Products" in row, and "Sold" and "Amount" in value section respectively.
-
-```cshtml
-@using Syncfusion.Blazor.PivotView
+{% tabs %}
+{% highlight razor %}
 
 <SfPivotView TValue="ProductDetails" Height="300">
      <PivotViewDataSourceSettings DataSource="@dataSource">
@@ -286,7 +423,8 @@ In this illustration, "Year" and "Quarter" are added in column, "Country" and "P
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Applying formatting to a value field
 
@@ -294,8 +432,8 @@ Formatting defines a way in which values should be displayed. For example, forma
 
 > Only fields from value section, which is in the form of numeric data values are applicable for formatting.
 
-```cshtml
-@using Syncfusion.Blazor.PivotView
+{% tabs %}
+{% highlight razor %}
 
 <SfPivotView TValue="ProductDetails" Height="300">
      <PivotViewDataSourceSettings DataSource="@dataSource">
@@ -326,7 +464,8 @@ Formatting defines a way in which values should be displayed. For example, forma
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 After successful compilation of the application, simply press F5 to run the same. The pivot table component will render in the default web browser like below.
 
@@ -336,8 +475,8 @@ After successful compilation of the application, simply press F5 to run the same
 
 The field list allows to add or remove fields and also rearrange the fields between different axes, including column, row, value, and filter along with filter and sort options dynamically at runtime. It can be enabled by setting the [ShowFieldList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowFieldList) property to **true**. To know more about field list, [refer](./field-list) here.
 
- ```cshtml
-@using Syncfusion.Blazor.PivotView
+{% tabs %}
+{% highlight razor %}
 
 <SfPivotView TValue="ProductDetails" ShowFieldList="true" Height="300">
      <PivotViewDataSourceSettings DataSource="@dataSource">
@@ -368,7 +507,8 @@ The field list allows to add or remove fields and also rearrange the fields betw
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Blazor PivotTable with FieldList Icon](images/blazor-pivottable-fieldlist-icon.png)
 <br/>
@@ -378,8 +518,8 @@ The field list allows to add or remove fields and also rearrange the fields betw
 
 The grouping bar feature automatically populates fields from the bound data source and allows end users to drag fields between different axes such as columns, rows, values, and filters, and alter pivot table at runtime. It also provides option to sort, filter and remove fields. It can be enabled by setting the [ShowGroupingBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowGroupingBar) property to **true**. To know more about grouping bar, [refer](./grouping-bar) here.
 
- ```cshtml
-@using Syncfusion.Blazor.PivotView
+{% tabs %}
+{% highlight razor %}
 
 <SfPivotView TValue="ProductDetails" ShowGroupingBar="true" Height="300">
      <PivotViewDataSourceSettings DataSource="@dataSource">
@@ -410,7 +550,8 @@ The grouping bar feature automatically populates fields from the bound data sour
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Blazor PivotTable with Grouping Bar](images/blazor-pivottable-grouping-bar.png)
 
@@ -418,8 +559,8 @@ The grouping bar feature automatically populates fields from the bound data sour
 
 The filter axis contains collection of fields that would act as master filter over the data bound in row, column and value axes of the pivot table. The fields along with filter members could be set to filter axis either through report via code behind or by dragging and dropping fields from other axes to filter axis via grouping bar or field list at runtime.
 
- ```cshtml
-@using Syncfusion.Blazor.PivotView
+{% tabs %}
+{% highlight razor %}
 
 <SfPivotView TValue="ProductDetails" ShowGroupingBar="true" ShowFieldList="true" Height="300">
      <PivotViewDataSourceSettings DataSource="@dataSource">
@@ -452,7 +593,8 @@ The filter axis contains collection of fields that would act as master filter ov
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Blazor PivotTable with FieldList](images/blazor-pivottable-fieldlist.png)
 <br/>
@@ -464,8 +606,8 @@ The filter axis contains collection of fields that would act as master filter ov
 
 The calculated field feature allows user to insert or add a new calculated field based on the available fields from the bound data source using basic arithmetic operators. The calculated field can be included in pivot table using the [PivotViewCalculatedFieldSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCalculatedFieldSetting.html) class from code behind. Or else, calculated fields can be added at run time through the built-in dialog by just setting the [AllowCalculatedField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowCalculatedField) property to **true** in pivot table. You will see a button enabled in the Field List UI automatically to invoke the calculated field dialog and perform necessary operation. To know more about calculated field, [refer](./calculated-field) here.
 
-```cshtml
-@using Syncfusion.Blazor.PivotView
+{% tabs %}
+{% highlight razor %}
 
 <SfPivotView TValue="ProductDetails" ShowFieldList="true" AllowCalculatedField="true" Height="300">
      <PivotViewDataSourceSettings DataSource="@dataSource">
@@ -502,7 +644,8 @@ The calculated field feature allows user to insert or add a new calculated field
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Blazor PivotTable with Caluclation Button](images/blazor-pivottable-calculate-button.png)
 <br/>
@@ -515,5 +658,5 @@ The calculated field feature allows user to insert or add a new calculated field
 ## See Also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)
-* [Getting Started with Syncfusion Blazor for Client-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-2019/)
+* [Getting Started with Syncfusion Blazor for Client-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)

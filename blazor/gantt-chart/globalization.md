@@ -38,9 +38,9 @@ namespace BlazorApplication
 
 The **Localization** library allows you to localize default text content of the Gantt. The Gantt component has static text on some features (like task information text, context menu options, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.).
 
-We have used Resource file (**.resx**) to translate the static text of the Gantt.
+Resource file (**.resx**) is used to translate the static text of the Gantt.
 
-The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [Localization](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0) link to know more about how to configure and use localization in the ASP.NET Core application framework.
+The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different languages. You can also refer [Localization](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0) link to know more about how to configure and use localization in the ASP.NET Core application framework.
 
 * Add **.resx** file to [Resources](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#resource-files) folder and enter the key value (Locale Keywords) in the **Name** column and the translated string in the **Value** column as follows.
 
@@ -125,9 +125,9 @@ Gantt_ConfirmPredecessorDelete | Möchten Sie den Abhängigkeitslink wirklich en
 Gantt_Indent | Einzug
 Gantt_Outdent | Outdent
 
-### Blazor Server Side
+### Blazor server-side
 
-In the following examples, demonstrate how to enable **Localization** for Gantt in server side Blazor samples.
+The following examples demonstrate how to enable **Localization** for Gantt in server-side Blazor samples.
 
 * Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
 
@@ -199,7 +199,7 @@ namespace BlazorServer
 
 > BlazorServer denotes the ApplicationNameSpace of your project.
 
-* Finally, Specify the culture for Gantt using `Locale` property.
+* Finally, specify the culture for Gantt using `Locale` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -305,7 +305,7 @@ namespace BlazorServer
 
 ### Blazor WebAssembly
 
-In the following examples, demonstrate how to enable **Localization** for Gantt in Client side Blazor samples.
+The following examples demonstrate how to enable **Localization** for Gantt in client-side Blazor samples.
 
 * Open the **Program.cs** file and add the below configuration in the **Main** function as follows.
 
@@ -326,10 +326,10 @@ namespace ClientApplication
             builder.Services.AddSyncfusionBlazor();
 
 
-            // Register the Syncfusion locale service to customize the  SyncfusionBlazor component locale culture
+            // Register the Syncfusion locale service to customize the SyncfusionBlazor component locale culture.
             builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
 
-            // Set the default culture of the application
+            // Set the default culture of the application.
             CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de");
             CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("de");
 
@@ -346,13 +346,13 @@ using Syncfusion.Blazor;
 
 public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 {
-    // To get the locale key from mapped resources file
+    // To get the locale key from mapped resources file.
     public string GetText(string key)
     {
         return this.ResourceManager.GetString(key);
     }  
 
-    // To access the resource file and get the exact value for locale key
+    // To access the resource file and get the exact value for locale key.
 
     public System.Resources.ResourceManager ResourceManager
     {
@@ -481,7 +481,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 
 ## Right to Left (RTL)
 
-RTL provides an option to switch the text direction and layout of the Gantt component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). In the Below sample **EnableRtl** property is used to enable RTL in the Gantt.
+RTL provides an option to switch the text direction and layout of the Gantt component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). In the following sample, **EnableRtl** property is used to enable RTL in the Gantt.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -580,4 +580,4 @@ RTL provides an option to switch the text direction and layout of the Gantt comp
 
 > Gantt chart doesn't have RTL support when predecessors enabled.
 
-> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.
+> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the gantt.
