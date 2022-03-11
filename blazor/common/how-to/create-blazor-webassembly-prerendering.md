@@ -13,7 +13,7 @@ This section explains how to enable prerendering to a Blazor WebAssembly applica
 
 ## Prerequisites
 
-[.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0) or later.
+[.NET 5.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/5.0) or later.
 
 ## Create a new project for Blazor WebAssembly ASP.NET Core Hosted application
 
