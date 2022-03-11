@@ -26,7 +26,7 @@ Open Visual Studio 2019 and follow the steps in the below documentation to **cre
 
 Finally, ensure to select the **ASP.NET Core Hosted** application.
 
-![Create hosted application in Blazor Common](../images/create-hosted-application.png)
+![Create hosted application in Blazor](../images/create-hosted-application.png)
 
 ## Adding gRPC dependencies
 
@@ -84,7 +84,7 @@ message Orders {
 
 Go to the proto file `properties` and select the `Protobuf` compiler as the **Build Action**. Then, select the `Client and Server option` as the `gRPC Stub Classes`. Refer to the following screenshot.
 
-![Proto file properties in Blazor Common](../images/proto-file-properties.png)
+![Proto file properties in Blazor](../images/proto-file-properties.png)
 
 ## Adding Orders Service
 
