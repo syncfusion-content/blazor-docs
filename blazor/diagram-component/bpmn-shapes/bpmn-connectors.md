@@ -1,7 +1,7 @@
 ---
 layout: post
 title: BPMN Connectors in Blazor Diagram Component | Syncfusion
-description: Learn here all about BPMN Connectors such as association , sequence in Syncfusion Blazor Diagram component and more.
+description: Learn here all about BPMN Connectors such as association, sequence in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # BPMN Connectors in Blazor Diagram Component
 
-The `BPMN Connectors` are lines that used to connection between BPMN flow objects.
+The `BPMN Connectors` are lines that connect BPMN flow objects.
 
-They are represent in the following types.
+They are classified as follows.
 * Association
 * Sequence
 * Message
@@ -34,7 +34,7 @@ The association property allows you to define the type of association. The follo
 
 @code
 {
-    // Create connector and stored it to the connector collection
+    // Create connector and store it in the connector collection.
     DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
@@ -42,12 +42,12 @@ The association property allows you to define the type of association. The follo
         connectors = new DiagramObjectCollection<Connector>();
         Connector connector = new Connector()
         {
-            // Unique Id of the connector
+            // Unique Id of the connector.
             ID = "connector1",
             // Start and end point of the connector
             SourcePoint = new Point() { X = 100, Y = 200 },
             TargetPoint = new Point() { X = 300, Y = 200 },
-            // Sets the type to Bpmn, flow to Association and association to bidirectional
+            // Sets the type to Bpmn, flow to Association and association to bidirectional.
             Shape = new BpmnFlow()
             {
                 Type = ConnectionShapes.Bpmn,
@@ -88,7 +88,7 @@ The sequence property allows you to define the type of sequence. The following c
 
 @code
 {
-    // Create connector and stored it to the connector collection
+    // Create connector and store it in the connector collection.
     DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
@@ -96,12 +96,12 @@ The sequence property allows you to define the type of sequence. The following c
         connectors = new DiagramObjectCollection<Connector>();
         Connector connector = new Connector()
         {
-            // Unique Id of the connector
+            // Unique Id of the connector.
             ID = "connector1",
-            // Start and end point of the connector
+            // Start and end point of the connector.
             SourcePoint = new Point() { X = 100, Y = 200 },
             TargetPoint = new Point() { X = 300, Y = 200 },
-            // Sets the type to Bpmn, flow to Association and association to bidirectional
+            // Sets the type to Bpmn, flow to Association and association to bidirectional.
             Shape = new BpmnFlow()
             {
                 Type = ConnectionShapes.Bpmn,
@@ -126,7 +126,7 @@ The following table contains various representation of sequence flows.
 
 ## Message
 
-A `Message` flow shows the flow of messages between two participants and is represented by dashed line. The types of message are as follows:
+A `Message` flow shows the flow of messages between two participants and is represented by dashed line. The types of messages are as follows:
 
 * InitiatingMessage
 * NonInitiatingMessage
@@ -142,7 +142,7 @@ The message property allows you to define the type of message. The following cod
 
 @code
 {
-    // Create connector and stored it to the connector collection
+    // Create connector and store it in the connector collection.
     DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
@@ -150,12 +150,12 @@ The message property allows you to define the type of message. The following cod
         connectors = new DiagramObjectCollection<Connector>();
         Connector connector = new Connector()
         {
-            // Unique Id of the connector
+            // Unique Id of the connector.
             ID = "connector1",
-            // Start and end point of the connector
+            // Start and end point of the connector.
             SourcePoint = new Point() { X = 100, Y = 200 },
             TargetPoint = new Point() { X = 300, Y = 200 },
-            // Sets the type to Bpmn, flow to Association and association to bidirectional
+            // Sets the type to Bpmn, flow to Association and association to bidirectional.
             Shape = new BpmnFlow()
             {
                 Type = ConnectionShapes.Bpmn,
