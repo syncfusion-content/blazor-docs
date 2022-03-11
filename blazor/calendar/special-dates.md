@@ -9,7 +9,7 @@ documentation: ug
 
 # Special Dates in Blazor Calendar Component
 
-You can customize specific dates in a calendar by using the [OnRenderDayCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarEvents-1.html#Syncfusion_Blazor_Calendars_CalendarEvents_1_OnRenderDayCell) event. This event gets triggered on each day cell element creation that allows you to customize or disable the specific dates in the calendar. Here, list of dates in the current month are customized with custom styles by adding the personal-appointment and official-appointment class.
+You can customize specific dates in a [Blazor calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) by using the [OnRenderDayCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarEvents-1.html#Syncfusion_Blazor_Calendars_CalendarEvents_1_OnRenderDayCell) event. This event gets triggered on each day cell element creation that allows you to customize or disable the specific dates in the calendar. Here, list of dates in the current month are customized with custom styles by adding the personal-appointment and official-appointment class.
 
 ```cshtml
 
