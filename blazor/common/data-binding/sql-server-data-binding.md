@@ -243,7 +243,7 @@ Let’s see how to perform CRUD operation using SQL server data with Syncfusion 
 
 ### Insert operation
 
-To pPerform the insert operation, override the Insert/InsertAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
+To perform the insert operation, override the Insert/InsertAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
 
 ```c#
 
