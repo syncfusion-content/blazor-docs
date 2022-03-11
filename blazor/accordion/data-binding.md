@@ -73,6 +73,6 @@ The following sample explains how to initialize accordion items through `templat
 }
 ```
 
-Output:
+
 
 ![Blazor Accordion Data Binding](./images/blazor-accordion-data-binding.png)

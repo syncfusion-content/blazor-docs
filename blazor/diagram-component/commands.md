@@ -342,8 +342,8 @@ The following code example illustrates how to align all the selected objects at 
             ID = "node1",
             Width = 50,
             Height = 30,
-            OffsetX = 500,
-            OffsetY = 100,
+            OffsetX = 230,
+            OffsetY = 180,
             Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
         };
         nodes.Add(node1);
@@ -362,8 +362,8 @@ The following code example illustrates how to align all the selected objects at 
             ID = "node3",
             Width = 70,
             Height = 50,
-            OffsetX = 500,
-            OffsetY = 500,
+            OffsetX = 235,
+            OffsetY = 425,
             Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
         };
         nodes.Add(node3);
@@ -579,6 +579,7 @@ The following code example illustrates how to execute the size commands.
         //Scales the height of the selected objects.
         diagram.SetSameSize(SizingMode.Height);
     }
+}
 ```
 
 ## Clipboard commands

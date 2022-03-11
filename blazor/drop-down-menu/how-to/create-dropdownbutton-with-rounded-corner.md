@@ -32,6 +32,6 @@ In the following example, `e-round-corner` class is defined with `5px` `border-r
 
 ```
 
-Output be like
+
 
 ![Blazor DropDownMenu with Rounded Corner](./../images/blazor-dropdownmenu-with-rounded-corner.png)

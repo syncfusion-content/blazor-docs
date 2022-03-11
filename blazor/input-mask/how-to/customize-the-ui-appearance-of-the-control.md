@@ -42,5 +42,5 @@ Refer to the following example to change the appearance of the MaskedTextBox.
 </style>
 ```
 
-The output will be as follows,
+
 ![MaskedTextBox Sample](../images/customCss.png)
