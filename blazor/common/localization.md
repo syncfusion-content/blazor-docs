@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization (Multi-Language) in Blazor components | Syncfusion
-description: Localization of Syncfusion Blazor UI components in Blazor Server and WebAssembly (WASM) apps.
+description: Localization of Syncfusion Blazor UI components in Blazor Server and WebAssembly (WASM) apps and much more.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Localization of Syncfusion Blazor Components
 
-Localization is the process of translating the application resources into differenct language for the specific cultures. You can localize the Syncfusion Blazor components by adding a resource file for each language.
+Localization is the process of translating the application resources into different language for the specific cultures. You can localize the Syncfusion Blazor components by adding a resource file for each language.
 
 ## Adding culture based resx files
 
-Syncfusion components can be localizaed using the Resource `.resx` files. You can find the default and culture based localization files in the below GitHub repo.
+Syncfusion components can be localized using the Resource `.resx` files. You can find the default and culture based localization files in the below GitHub repository.
 
 > You can get default and culture based resource files from [GitHub](https://github.com/syncfusion/blazor-locale).
 
@@ -27,7 +27,7 @@ After adding the resource file in the application, double click default resx (`S
 
 ## Create and register localization service
 
-[ISyncfusionStringLocalizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html) which acts as a middleware to connect the Syncfusion Blazor UI components and resource files, uses [ResourceManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html#Syncfusion_Blazor_ISyncfusionStringLocalizer_ResourceManager) to provide culture specfic resources at runtime. Create a class implementing `ISyncfusionStringLocalizer`. In the newly created class, return the `ResourceManager` created in the above step for [ResourceManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html#Syncfusion_Blazor_ISyncfusionStringLocalizer_ResourceManager) property and change [GetText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html#Syncfusion_Blazor_ISyncfusionStringLocalizer_GetText_System_String_) method to return localized string using resource manager.
+[ISyncfusionStringLocalizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html) which acts as a middleware to connect the Syncfusion Blazor UI components and resource files, uses [ResourceManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html#Syncfusion_Blazor_ISyncfusionStringLocalizer_ResourceManager) to provide culture specific resources at runtime. Create a class implementing `ISyncfusionStringLocalizer`. In the newly created class, return the `ResourceManager` created in the above step for [ResourceManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html#Syncfusion_Blazor_ISyncfusionStringLocalizer_ResourceManager) property and change [GetText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html#Syncfusion_Blazor_ISyncfusionStringLocalizer_GetText_System_String_) method to return localized string using resource manager.
 
 In the below code, `SyncfusionLocalizer` class implements `ISyncfusionStringLocalizer` interface and `ResourceManager` configured to return the cached ResourceManager instance of default resource file create in **Adding culture based resx files** step above. 
 
@@ -117,7 +117,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
 #### Setting the culture Blazor's start option
 
-The app's culture can be set Javascript by setting `applicationCulture` in Blazor's start option by following below steps,
+The app's culture can be set JavaScript by setting `applicationCulture` in Blazor's start option by following below steps,
 
 * In `wwwroot/index.html`, prevent Blazor autostart by adding `autostart="false"` attribute to Blazor's `<script>` tag.
 
@@ -156,7 +156,7 @@ The app's culture can be set Javascript by setting `applicationCulture` in Blazo
 
 #### Setting the culture in C# code
 
-You can set culture in C# code alternative to setting the culture Blazor's start option. Set the `CultureInfo.DefaultThreadCurrentCulture` and `CultureInfo.DefaultThreadCurrentUICulture` in `Program.cs` to the same culture before ine that builds and runs the `WebAssemblyHostBuilder` (`await builder.Build().RunAsync();`).
+You can set culture in C# code alternative to setting the culture Blazor's start option. Set the `CultureInfo.DefaultThreadCurrentCulture` and `CultureInfo.DefaultThreadCurrentUICulture` in `Program.cs` to the same culture before line that builds and runs the `WebAssemblyHostBuilder` (`await builder.Build().RunAsync();`).
 
 {% tabs %}
 
@@ -388,7 +388,7 @@ public void ConfigureServices(IServiceCollection services)
 </PropertyGroup>
 ```
 
-1.Add the custom javascript interop function to get or set the culture in `~wwwroot/index.html` file.
+1.Add the custom JavaScript interop function to get or set the culture in `~wwwroot/index.html` file.
 
 {% tabs %}
 
