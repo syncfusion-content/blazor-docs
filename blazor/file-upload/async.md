@@ -111,3 +111,7 @@ The uploader component allows you to pre-load the list of files that are uploade
 
 
 ![Blazor FileUpload displays Preloaded Files](./images/blazor-fileupload-with-preload-files.png)
+
+## See Also
+
+* [Upload files to Database in Blazor](https://github.com/SyncfusionExamples/how-to-upload-files-to-database-in-blazor)

@@ -9,7 +9,7 @@ documentation: ug
 
 # Globalization in Blazor TreeMap Component
 
-The TreeMap component supports globalization for the following elements:
+The [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap) component supports globalization for the following elements:
 
 * Data Label
 * Tooltip

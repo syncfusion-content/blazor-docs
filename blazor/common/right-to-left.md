@@ -7,13 +7,13 @@ component: Common
 documentation: ug
 ---
 
-# Right-To-Left support in Syncfusion Blazor Components
+# Right-To-Left Support in Syncfusion Blazor Components
 
 The right-to-left (RTL) support can be enabled for Syncfusion Blazor components by setting `EnableRtl` property to `true`. This will render all the Syncfusion Blazor components in the right-to-left direction.
 
 ## Enable RTL for all components
 
-You can enable right to left (RTL) for all Syncfusion components used in the application by setting [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) global option as `true` while adding Syncfusion blazor service using `AddSyncfusionBlazor()`.
+You can enable right to left (RTL) for all Syncfusion components used in the application by setting [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) global option as `true` while adding Syncfusion Blazor service using `AddSyncfusionBlazor()`.
 
 ### Blazor Server App
 

@@ -31,7 +31,6 @@ The following code demonstrates the DateTimePicker with StrictMode `true`.
 }
 ```
 
-
 ![Strict Mode in Blazor DateTimePicker](./images/blazor-datetimepicker-strictmode.png)
 
 By default, the DateTimePicker act in `StrictMode` as `false` state, that allows you to enter the invalid or out-of-range datetime in text box.

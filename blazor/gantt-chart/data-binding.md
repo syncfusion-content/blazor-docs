@@ -512,6 +512,7 @@ The following sample code demonstrates notifying user when server-side exception
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Gantt
 
+<span class="error">@ErrorDetails</span>
 <SfGantt TValue="TaskData" Height="450px" Width="700px">
      <SfDataManager Url="https://some.com/invalidUrl" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"

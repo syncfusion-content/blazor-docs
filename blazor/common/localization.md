@@ -63,7 +63,7 @@ The culture can be set using one of the following approaches:
             // Set the resx file folder path to access
             services.AddLocalization(options => options.ResourcesPath = "Resources")    ;
             services.AddSyncfusionBlazor();
-            // Register the Syncfusion locale service to customize the  SyncfusionBlazor component locale culture
+            // Register the Syncfusion locale service to customize the SyncfusionBlazor component locale culture
             services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof    (SyncfusionLocalizer));
             services.Configure<RequestLocalizationOptions>(options =>
             {
@@ -268,7 +268,7 @@ The culture can be set using one of the following approaches:
             builder.Services.AddSyncfusionBlazor();
 
             #region Localization
-            // Register the Syncfusion locale service to customize the  SyncfusionBlazor component locale culture
+            // Register the Syncfusion locale service to customize the SyncfusionBlazor component locale culture
             builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
 
             // Set the default culture of the application
@@ -321,6 +321,7 @@ The culture can be set using one of the following approaches:
         }
     }
     ```
+
     > For .NET 5.0 Blazor Webassembly globalization, configure the `BlazorWebAssemblyLoadAllGlobalizationData` in the project file when the application uses large resources and dynamic culture changes. 
     
     ```xml
@@ -335,7 +336,7 @@ The culture can be set using one of the following approaches:
 
     ![Syncfusion Blazor resource files](./images/resource.png)
 
-    After adding the resource file in the application we need to generate the designer class for the resources. To generate the designer class, open the default `resx` file in Visual Studio, and set its `Access Modifier` to `Public`. This will create an entry in your `.csproj` file similar to the following.
+    After adding the resource file in the application you need to generate the designer class for the resources. To generate the designer class, open the default `resx` file in Visual Studio, and set its `Access Modifier` to `Public`. This will create an entry in your `.csproj` file similar to the following.
 
     ```xml
     <ItemGroup>

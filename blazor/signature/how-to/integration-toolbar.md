@@ -9,7 +9,7 @@ documentation: ug
 
 # Integration Signature with Toolbar
 
-The Signature control integrates with the toolbar and the interaction performed using the `Changed` event of the toolbar. In that, [`canUndo`](https://ej2.syncfusion.com/documentation/api/signature/#canundo), [`canRedo`](https://ej2.syncfusion.com/documentation/api/signature/#canredo) and [`isEmpty`](https://ej2.syncfusion.com/documentation/api/signature/#isempty) methods were used to enable/disable undo, redo, and clear buttons by checking the undo collection.
+The Signature component integrates with the toolbar and the interaction performed using the `Changed` event of the toolbar. In that, [`CanUndoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanUndoAsync), [`CanRedoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_CanRedoAsync) and [`IsEmptyAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_IsEmptyAsync) methods were used to enable/disable undo, redo, and clear buttons by checking the undo collection.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
