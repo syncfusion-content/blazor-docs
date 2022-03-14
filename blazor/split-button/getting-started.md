@@ -13,6 +13,11 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Split Button](https://www.syncfusion.com/blazor-components/blazor-split-button) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
+To get start quickly with Split Button Component using Blazor, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=u6wfpp_TlhI"%}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
