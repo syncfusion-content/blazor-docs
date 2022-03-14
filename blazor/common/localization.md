@@ -70,7 +70,7 @@ Register the `ISyncfusionStringLocalizer` implementation to localize the Syncfus
 
 {% tabs %}
 
-{% highlight c# tabtitle = "C#" hl_lines="4" %}
+{% highlight c# hl_lines="4" %}
 
 ...
 builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
@@ -91,7 +91,7 @@ builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(Syncfus
 
 {% tabs %}
 
-{% highlight c# tabtitle = ".NET 6 (~/Program.cs)" hl_lines="3" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3" %}
 
 ...
 var app = builder.Build();
@@ -100,7 +100,7 @@ app.UseRequestLocalization("de");
 
 {% endhighlight %}
 
-{% highlight c# tabtitle = ".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="4" %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="4" %}
 
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
@@ -123,7 +123,7 @@ The app's culture can be set JavaScript by setting `applicationCulture` in Blazo
 
 {% tabs %}
 
-{% highlight cshtml tabtitle = "wwwroot/index.html" %}
+{% highlight cshtml tabtitle="wwwroot/index.html" %}
 <body>
     ...
     <script src="_framework/blazor.webassembly.js" autostart="false"></script>
@@ -138,7 +138,7 @@ The app's culture can be set JavaScript by setting `applicationCulture` in Blazo
 
 * Add the script block below Blazor's `<script>` tag and before the closing </body> tag to start blazor with specific culture. 
 
-{% highlight cshtml tabtitle = "wwwroot/index.html" hl_lines="2,3,4,5,6,7" %}
+{% highlight cshtml tabtitle="wwwroot/index.html" hl_lines="2,3,4,5,6,7" %}
 <body>
     ...
     <script src="_framework/blazor.webassembly.js" autostart="false"></script>
