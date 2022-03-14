@@ -602,9 +602,6 @@ The following table represents the request parameters of *download* operations.
 {% tabs %}
 {% highlight c# tabtitle="Download action" %}
 
-
-
-
 {
     action:"download",
     path:"/",
