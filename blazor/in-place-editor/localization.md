@@ -113,7 +113,7 @@ In the following sample, `French` culture is set to In-place Editor and change t
 
 ```
 
-The output will be as follows.
+
 
 ![Localization in Blazor In-place Editor](./images/blazor-inplace-editor-localization.png)
 
@@ -147,7 +147,7 @@ Specifies the direction of the In-place Editor component using the `EnableRtl` p
 
 ```
 
-The output will be as follows.
+
 
 ![Right to Left in Blazor In-place Editor](./images/blazor-inplace-editor-right-to-left.png)
 
@@ -186,6 +186,6 @@ Formatting is a way of representing the value in different formats. You can form
 
 ```
 
-The output will be as follows.
+
 
 ![Formatting in Blazor In-place Editor](./images/blazor-inplace-editor-formatting.png)

@@ -120,24 +120,24 @@ namespace blazorDropdowns
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-<SfAutoComplete TValue="string" TItem="Countries" Placeholder="e.g. Australia" Locale="de" DataSource="@LocalData">
+<SfAutoComplete TValue="string" TItem="Country" Placeholder="e.g. Australia" Locale="de" DataSource="@LocalData">
     <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
 </SfAutoComplete>
 
 @code {
 
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
         public string Code { get; set; }
     }
 
-    List<Countries> LocalData = new List<Countries> {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-        new Countries() { Name = "Denmark", Code = "DK" }
+    List<Country> LocalData = new List<Country> {
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" }
     };
 }
 ```
@@ -230,6 +230,6 @@ In the following sample, French culture is set to the AutoComplete and no data i
 }
 ```
 
-The output will be as follows.
+
 
 ![Localization in Blazor AutoComplete](./images/blazor-autocomplete-localization.png)
