@@ -126,6 +126,6 @@ You can customize the dialog appearance by providing dialog template as string o
 
 ```
 
-The output will be as follows.
+
 
 ![Customizing Blazor Dialog Appearance](../images/dialog-custom-apperance.png)

@@ -196,7 +196,7 @@ The following steps explain how to render the DateTimePicker in German culture (
     }
     ```
 
-The output will be as follows.
+
 
 ![Localization in Blazor DateTimePicker](./images/blazor-datetimepicker-localization.png)
 
@@ -219,7 +219,7 @@ The output will be as follows.
     }
     ```
 
-    The output will be as follows.
+    
 
     ![Customizing Localized Text in Blazor DateTimePicker](./images/blazor-datetimepicker-localize-text.png)
 
@@ -245,6 +245,6 @@ The following code example initialize the DateTimePicker component in `Arabic` c
 }
 ```
 
-The output will be as follows.
+
 
 ![Right to Left in Blazor DateTimePicker with Arabic Culture](./images/blazor-datetimepicker-right-to-left.png)

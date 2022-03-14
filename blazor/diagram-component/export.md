@@ -29,14 +29,14 @@ Diagram provides support to export the diagram as an image/svg files. The follow
      SfDiagramComponent diagram;
 
      //To export the diagram as base64 string.
-     private void Exportbase64()
+     private async Task Exportbase64()
      {
           DiagramExportSettings export = new DiagramExportSettings();         
           string[] base64 = await diagram.ExportAsync(DiagramExportFormat.PNG, export);          
      }
 
      //To export the diagram as png.
-     private void Exportpng()
+     private async Task Exportpng()
      {
           DiagramExportSettings export = new DiagramExportSettings();                   
           await diagram.ExportAsync("diagram",DiagramExportFormat.PNG, export);
@@ -66,7 +66,7 @@ Diagram provides support to export the desired region of the diagram to the desi
 @code{
      SfDiagramComponent diagram;
 
-     private void Export()
+     private async Task Export()
      {
           DiagramExportSettings export = new DiagramExportSettings();                  
           //To export the diagram
@@ -89,7 +89,7 @@ Diagram provides support to change the page size. Page size can be changed by se
 @code{
      SfDiagramComponent diagram;
 
-     private void Export()
+     private async Task Export()
      {
           DiagramExportSettings export = new DiagramExportSettings();          
           export.PageWidth = 816;
@@ -115,7 +115,7 @@ Diagram provides support to change the page size. Page size can be changed by se
 @code{
      SfDiagramComponent diagram;
 
-     private void Export()
+     private async Task Export()
      {
           DiagramExportSettings export = new DiagramExportSettings();
           export.Region = DiagramPrintExportRegion.PageSettings;
@@ -148,7 +148,7 @@ The following code example illustrates how to export the diagram based on page s
 @code{
      SfDiagramComponent diagram;
 
-     private void Export()
+     private async Task Export()
      {
           DiagramExportSettings export = new DiagramExportSettings();
           export.Region = DiagramPrintExportRegion.PageSettings;
@@ -177,7 +177,7 @@ The following code example illustrates how to export the region specified in the
 @code{
      SfDiagramComponent diagram;
 
-     private void Export()
+     private async Task Export()
      {
           DiagramExportSettings export = new DiagramExportSettings();
           export.Region = DiagramPrintExportRegion.PageSettings;
@@ -210,14 +210,14 @@ The following code example illustrates how to export the diagram to a single pag
 @code{
      SfDiagramComponent diagram;
 
-     private void Export()
+     private async Task Export()
      {
           DiagramExportSettings export = new DiagramExportSettings();
           export.Region = DiagramPrintExportRegion.PageSettings;
           export.PageWidth = 816;
           export.PageHeight = 1054;
           //To export the diagram in single page.
-          print.FitToPage = true;         
+          export.FitToPage = true;         
           export.Margin = new Margin() { Left = 10, Top = 10, Right = 10, Bottom = 10 };
           export.ClipBounds = new DiagramRect() { X = 0, Y = 0, Width = 500, Height = 500 };
           //To export the diagram
@@ -240,14 +240,14 @@ Diagram provides support to switch between [Portrait](https://help.syncfusion.co
 @code{
      SfDiagramComponent diagram;
 
-     private void Export()
+     private async Task Export()
      {
           DiagramExportSettings export = new DiagramExportSettings();
           export.Region = DiagramPrintExportRegion.PageSettings;
           export.PageWidth = 816;
           export.PageHeight = 1054;
           //To export the diagram in single page.
-          print.FitToPage = true;
+          export.FitToPage = true;
           export.Orientation = PageOrientation.Landscape;         
           export.Margin = new Margin() { Left = 10, Top = 10, Right = 10, Bottom = 10 };
           export.ClipBounds = new DiagramRect() { X = 0, Y = 0, Width = 500, Height = 500 };

@@ -31,7 +31,7 @@ The following code demonstrates the DateTimePicker with StrictMode `true`.
 }
 ```
 
-The output will be as follows.
+
 
 ![Strict Mode in Blazor DateTimePicker](./images/blazor-datetimepicker-strictmode.png)
 
@@ -55,7 +55,7 @@ If you are entering the out-of-range or invalid datetime value, then the model v
 }
 ```
 
-The output will be as follows.
+
 
 ![Blazor DateTimePicker without StrictMode](./images/blazor-datetimepicker-without-strictmode.png)
 

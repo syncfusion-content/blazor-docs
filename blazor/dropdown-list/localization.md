@@ -229,6 +229,6 @@ In the following sample, French culture is set to the DropDownList and no data i
 }
 ```
 
-The output will be as follows.
+
 
 ![Localization in Blazor DropDownList](./images/blazor-dropdownlist-localization.png)

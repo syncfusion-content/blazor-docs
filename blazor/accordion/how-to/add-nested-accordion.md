@@ -60,6 +60,6 @@ Accordion supports to render the nested level of Accordion by using the [Content
 </SfAccordion>
 ```
 
-Output:
+
 
 ![Blazor Accordion Component with Nested Item](../images/blazor-accordion-with-nested-item.png)

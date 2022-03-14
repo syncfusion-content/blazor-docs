@@ -46,6 +46,6 @@ In the following sample, `French` culture is set to Dialog and change the close 
 
 ```
 
-The output will be as follows.
+
 
 ![Localization in Blazor Dialog](./images/blazor-dialog-localization.png)
