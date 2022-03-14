@@ -7,11 +7,15 @@ component: Common
 documentation: ug
 ---
 
-# Localization of Syncfusion Blazor Components
+# Localization of Blazor Components
 
 Localization is the process of translating the application resources into different language for the specific cultures. You can localize the Syncfusion Blazor components by adding a resource file for each language.
 
-## Adding culture based resx files
+## Localization of Syncfusion Blazor Components
+
+Syncfusion Blazor components can be localized based on culture following below two steps,
+
+### Adding culture based resx files
 
 Syncfusion components can be localized using the Resource `.resx` files. You can find the default and culture based localization files in the below GitHub repository.
 
@@ -25,7 +29,7 @@ After adding the resource file in the application, double click default resx (`S
 
 ![Changing Access Modifier](images/localization-resource-file.png)
 
-## Create and register localization service
+### Create and register localization service
 
 [ISyncfusionStringLocalizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html) which acts as a middleware to connect the Syncfusion Blazor UI components and resource files, uses [ResourceManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html#Syncfusion_Blazor_ISyncfusionStringLocalizer_ResourceManager) to provide culture specific resources at runtime. Create a class implementing `ISyncfusionStringLocalizer`. In the newly created class, return the `ResourceManager` created in the above step for [ResourceManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html#Syncfusion_Blazor_ISyncfusionStringLocalizer_ResourceManager) property and change [GetText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html#Syncfusion_Blazor_ISyncfusionStringLocalizer_GetText_System_String_) method to return localized string using resource manager.
 
@@ -84,6 +88,8 @@ builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(Syncfus
 
 ## Statically set the culture
 
+You can set culture statically following below steps if you don't want to change dynamically. 
+
 ### Blazor Server App
 
 * For **.NET 6** app, specify the static culture in **~/Program.cs** file.
@@ -114,6 +120,8 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {% endtabs %}
 
 ### Blazor WASM App
+
+In Blazor WASM app, you can set culture statically in Blazor's start option or in C# code.
 
 #### Setting the culture Blazor's start option
 
