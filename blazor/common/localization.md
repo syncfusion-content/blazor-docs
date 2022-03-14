@@ -172,15 +172,164 @@ CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("de");
 
 ![Localization of Blazor Component](images/blazor-localization.png)
 
-Learn more about in [Statically set the culture](https://docs.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=webassembly#statically-set-the-culture) topic in Microsoft docs. 
+Checkout below topics for more details,
+* [Statically set the culture in Blazor WASM App](https://docs.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=webassembly#statically-set-the-culture)
+* [Statically set the culture in Blazor Server App](https://docs.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=server&view=statically-set-the-culture)
 
 ## Dynamically set the culture
 
-The culture can be set dynamically based on user's preference.
+The culture can be set dynamically based on user's preference. The following example demonstrates how to use a localization cookie to store user's localization preference.
 
 ### Blazor Server App
 
-* To allow a user to select a culture via UI, a redirect-based approach with a localization cookie using controller. The app persists the user's selected culture via a redirect to a controller. The controller sets the user's selected culture into a cookie and redirects the user back to the original URI. 
+Set the app's supported cultures. Also, ensure the app is configured to process controller actions by calling `AddControllers` and `MapControllers`. 
+
+{% tabs %}
+
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="12,13,14,15,16,17,20" %}
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddControllers();
+
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+//Register the Syncfusion locale service to localize Syncfusion Blazor components.
+builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
+
+var supportedCultures = new[] { "en-US", "de", "fr", "ar", "zh" };
+var localizationOptions = new RequestLocalizationOptions()
+    .SetDefaultCulture(supportedCultures[0])
+    .AddSupportedCultures(supportedCultures)
+    .AddSupportedUICultures(supportedCultures);
+
+var app = builder.Build();
+app.UseRequestLocalization(localizationOptions);
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error");
+    
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+app.UseHttpsRedirection();
+
+app.UseStaticFiles();
+
+app.UseRouting();
+app.MapControllers();
+app.MapBlazorHub();
+app.MapFallbackToPage("/_Host");
+
+app.Run();
+
+{% endhighlight %}
+
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
+
+public class Startup
+{
+    ...
+    public void ConfigureServices(IServiceCollection services)
+    {
+        services.AddRazorPages();
+        services.AddControllers();
+        services.AddServerSideBlazor();
+        services.AddSingleton<WeatherForecastService>();
+        services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+        //Register the Syncfusion locale service to localize Syncfusion Blazor components.
+        services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
+        services.Configure<RequestLocalizationOptions>(options =>
+        {
+            // Define the list of cultures your app will support
+            var supportedCultures = new List<CultureInfo>()
+            {
+                new CultureInfo("en-US"),
+                new CultureInfo("de"),
+                new CultureInfo("fr"),
+                new CultureInfo("ar"),
+                new CultureInfo("zh"),
+            };
+            // Set the default culture
+            options.DefaultRequestCulture = new RequestCulture("en-US");
+            options.SupportedCultures = supportedCultures;
+            options.SupportedUICultures = supportedCultures;
+        });
+    }
+
+    // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    {
+        app.UseRequestLocalization(app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>().Value);
+        if (env.IsDevelopment())
+        {
+            app.UseDeveloperExceptionPage();
+        }
+        else
+        {
+            app.UseExceptionHandler("/Error");
+            // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+            app.UseHsts();
+        }
+
+        app.UseHttpsRedirection();
+        app.UseStaticFiles();
+
+        app.UseRouting();
+
+        app.UseEndpoints(endpoints =>
+        {
+            endpoints.MapControllers();
+            endpoints.MapBlazorHub();
+            endpoints.MapFallbackToPage("/_Host");
+        });
+    }
+}
+{% endhighlight %}
+
+{% endtabs %}
+
+Set the current culture in a cookie immediately after the opening <body> tag of `Pages/_Host.cshtml`.
+
+{% tabs %}
+
+{% highlight c# tabtitle=".NET 6 (_Host.cshtml)" %}
+@using Microsoft.AspNetCore.Localization
+@using System.Globalization
+@{
+    Layout = "_Layout";
+    this.HttpContext.Response.Cookies.Append(
+        CookieRequestCultureProvider.DefaultCookieName,
+        CookieRequestCultureProvider.MakeCookieValue(
+            new RequestCulture(
+                CultureInfo.CurrentCulture,
+                CultureInfo.CurrentUICulture)));
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (_Host.cshtml)" %}
+@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Localization
+@using System.Globalization
+@{
+    Layout = null;
+    HttpContext.Response.Cookies.Append(
+                CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(
+                    new RequestCulture(
+                        CultureInfo.CurrentCulture,
+                        CultureInfo.CurrentUICulture)));
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+To provide UI to allow a user to select a culture, use a redirect-based approach with a localization cookie. The app persists the user's selected culture via a redirect to a controller. The controller sets the user's selected culture into a cookie and redirects the user back to the original URI.
 
 {% tabs %}
 
@@ -212,44 +361,61 @@ namespace ScheduleSample.Controllers
 
 {% endtabs %}
 
-* Create a new razor component (`CultureSwitcher.razor`) inside the `~/Shared` folder which used call the `Set` method of the `CultureController` with the new culture. 
+Create `CultureSwitcher` component and place it inside shared folder to perform the initial redirection when the user selects a culture. 
 
 {% tabs %}
 
-{% highlight razor tabtitle=".NET 6 (CultureSwitcher.razor)" %}
+{% highlight razor tabtitle="Shared/CultureSwitcher.razor" %}
 
+@using  System.Globalization
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
 
-<select @onchange="OnSelected">
-    <option hidden>@culture</option>
-    <option value="en-US">English (en-US)</option>
-    <option value="de">German (de)</option>
-    <option value="fr">French (fr)</option>
-    <option value="ar">Arabic (ar)</option>
-    <option value="zh">Chinese (zh)</option>
-</select>
+<p>
+    <label>
+        Select your locale:
+        <select @bind="Culture">
+            @foreach (var culture in supportedCultures)
+            {
+                <option value="@culture">@culture.DisplayName</option>
+            }
+        </select>
+    </label>
+</p>
 
 @code {
 
-    private string culture { get; set; }
-
-    protected override async Task OnInitializedAsync()
+    private CultureInfo[] supportedCultures = new[]
     {
-        await base.OnInitializedAsync();
-        this.culture = System.Globalization.CultureInfo.CurrentCulture.Name;
+        new CultureInfo("en-US"),
+        new CultureInfo("de"),
+        new CultureInfo("fr"),
+        new CultureInfo("ar"),
+        new CultureInfo("zh")
+    };
+
+    protected override void OnInitialized()
+    {
+        Culture = CultureInfo.CurrentCulture;
     }
 
-    private void OnSelected(ChangeEventArgs e)
+    private CultureInfo Culture
     {
-        var culture = (string)e.Value;
-        var uri = new Uri(NavigationManager.Uri)
-            .GetComponents(UriComponents.PathAndQuery, UriFormat.Unescaped);
-        var cultureEscaped = Uri.EscapeDataString(culture);
-        var uriEscaped = Uri.EscapeDataString(uri);
+        get => CultureInfo.CurrentCulture;
+        set
+        {
+            if (CultureInfo.CurrentCulture != value)
+            {
+                var uri = new Uri(NavigationManager.Uri)
+                    .GetComponents(UriComponents.PathAndQuery, UriFormat.Unescaped);
+                var cultureEscaped = Uri.EscapeDataString(value.Name);
+                var uriEscaped = Uri.EscapeDataString(uri);
 
-        var query = $"?culture={cultureEscaped}&redirectUri={uriEscaped}";
-        CHECK:NavigationManager.NavigateTo("/" + query, forceLoad:  true);
+                NavigationManager.NavigateTo(
+                    $"Culture/SetCulture?culture={cultureEscaped}&redirectUri={uriEscaped}",
+                    forceLoad: true);
+            }
+        }
     }
 }
 
@@ -257,11 +423,11 @@ namespace ScheduleSample.Controllers
 
 {% endtabs %}
 
-* Add the `CultureSwitcher` component to `~/Shared/MainLayout.razor` to enable the culture switcher in all pages.
+Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the culture switcher in all pages.
 
 {% tabs %}
 
-{% highlight razor tabtitle=".NET 6 (MainLayout.razor)" %}
+{% highlight razor tabtitle="Shared/MainLayout.razor" %}
 
 <div class="page">
     <div class="sidebar">
@@ -284,118 +450,32 @@ namespace ScheduleSample.Controllers
 
 {% endtabs %}
 
-4.Create a new file inside the `~/Pages` folder and use cookies to store the user-selected culture.
-
-* For .NET 6 app, store the culture in **~Pages/_Host.cshtml** file.
-
-* For .NET 5 and .NET 3.X app, create the **~Pages/_Host.cshtml.cs** and store the culture in that file.
-
-{% tabs %}
-
-{% highlight c# tabtitle=".NET 6 (_Layout.cshtml)" %}
-
-@{
-    Layout = "_Layout";
-    this.HttpContext.Response.Cookies.Append(
-        CookieRequestCultureProvider.DefaultCookieName,
-        CookieRequestCultureProvider.MakeCookieValue(
-            new RequestCulture(
-                CultureInfo.CurrentCulture,
-                CultureInfo.CurrentUICulture)));
-}
-
-{% endhighlight %}
-
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (_Host.cshtml.cs)" %}
-
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Localization;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Globalization;
-
-namespace SyncfusionServerLocalization.Pages
-{
-    public class HostModel : PageModel
-    {
-        public void OnGet()
-        {
-            HttpContext.Response.Cookies.Append(
-                CookieRequestCultureProvider.DefaultCookieName,
-                CookieRequestCultureProvider.MakeCookieValue(
-                    new RequestCulture(
-                        CultureInfo.CurrentCulture,
-                        CultureInfo.CurrentUICulture)));
-        }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
 
 5.You can select the culture dynamically from culture switcher at run time by setting the following ways,
 
+### Blazor WASM App
+
+Set the `BlazorWebAssemblyLoadAllGlobalizationData` property to true in the project file:
+
 {% tabs %}
 
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
+{% highlight xml tabtitle=".csproj" %}
 
-builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
-var supportedCultures = new[] { "en-US", "de", "fr", "ar", "zh" };
-var localizationOptions = new RequestLocalizationOptions()
-    .SetDefaultCulture(supportedCultures[0])
-    .AddSupportedCultures(supportedCultures)
-    .AddSupportedUICultures(supportedCultures);
-var app = builder.Build();
-app.UseRequestLocalization(localizationOptions);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
-
-public void ConfigureServices(IServiceCollection services)
-{
-    // Register the Syncfusion locale service to customize the SyncfusionBlazor component locale culture
-    services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
-    services.Configure<RequestLocalizationOptions>(options =>
-    {
-        // Define the list of cultures your app will support
-        var supportedCultures = new List<CultureInfo>()
-        {
-            new CultureInfo("en-US"),
-            new CultureInfo("de"),
-            new CultureInfo("fr"),
-            new CultureInfo("ar"),
-            new CultureInfo("zh"),
-        };
-        // Set the default culture
-        options.DefaultRequestCulture = new RequestCulture("en-US");
-        options.SupportedCultures = supportedCultures;
-        options.SupportedUICultures = supportedCultures;
-    });
-}
+<PropertyGroup>
+    <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
+</PropertyGroup>
 
 {% endhighlight %}
 
 {% endtabs %}
 
-### Blazor WASM App
-
-> For .NET 5 or .NET 6 Blazor Webassembly globalization, we should configure the `BlazorWebAssemblyLoadAllGlobalizationData` in the project file when the application uses large resources and dynamic culture changes.
-
-```xml
-<PropertyGroup>
-    <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
-</PropertyGroup>
-```
-
-1.Add the custom JavaScript interop function to get or set the culture in `~wwwroot/index.html` file.
+Add JS function in `wwwroot/index.html` file (after Blazor's `<script>` tag and before the closing `</body>`), to get and set the user's selected culture in the browser local storage.
 
 {% tabs %}
 
-{% highlight cshtml tabtitle="~/index.html" %}
+{% highlight cshtml tabtitle="wwwroot/index.html" %}
 
 <script src="_framework/blazor.webassembly.js"></script>
-
 <script>
     window.cultureInfo = {
         get: () => window.localStorage['BlazorCulture'],
@@ -407,12 +487,96 @@ public void ConfigureServices(IServiceCollection services)
 
 {% endtabs %}
 
-2.Create a new razor file (`CultureSwitcher.razor`) inside the `~/Shared/` folder.
+In `Program.cs` use JS interop to call above function and retrieve the user's culture selection from local storage. If local storage doesn't contain a culture for the user, the code sets a default value of United States English (en-US).
+
+{% tabs %}
+
+{% highlight c# tabtitle=".NET 6 (Program.cs)" %}
+
+using Microsoft.JSInterop;
+using System.Globalization;
+
+...
+
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+//Register the Syncfusion locale service to localize Syncfusion Blazor components.
+builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
+
+var host = builder.Build();
+
+//Setting culture of the application
+var jsInterop = host.Services.GetRequiredService<IJSRuntime>();
+var result = await jsInterop.InvokeAsync<string>("cultureInfo.get");
+CultureInfo culture;
+if (result != null)
+{
+    culture = new CultureInfo(result);
+}
+else
+{
+    culture = new CultureInfo("en-US");
+    await jsInterop.InvokeVoidAsync("cultureInfo.set", "en-US");
+}
+CultureInfo.DefaultThreadCurrentCulture = culture;
+CultureInfo.DefaultThreadCurrentUICulture = culture;
+
+await builder.Build().RunAsync();
+
+{% endhighlight %}
+
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (Program.cs)" %}
+
+using Microsoft.JSInterop;
+using System.Globalization;
+
+namespace SyncfusionWasmLocalization
+{
+    public class Program
+    {
+        public static async Task Main(string[] args)
+        {
+            ...
+            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+            //Register the Syncfusion locale service to localize Syncfusion Blazor components.
+            builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
+
+            var host = builder.Build();
+
+            //Setting culture of the application
+            var jsInterop = host.Services.GetRequiredService<IJSRuntime>();
+            var result = await jsInterop.InvokeAsync<string>("cultureInfo.get");
+            CultureInfo culture;
+            if (result != null)
+            {
+                culture = new CultureInfo(result);
+            }
+            else
+            {
+                culture = new CultureInfo("en-US");
+                await jsInterop.InvokeVoidAsync("cultureInfo.set", "en-US");
+            }
+            CultureInfo.DefaultThreadCurrentCulture = culture;
+            CultureInfo.DefaultThreadCurrentUICulture = culture;
+
+            await builder.Build().RunAsync();
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Create `CultureSwitcher` component to set the user's culture selection into browser local storage via JS interop and to force reload the page using the updated culture.
 
 {% tabs %}
 
 {% highlight razor tabtitle="CultureSwitcher.razor" %}
 
+@using  System.Globalization
+@inject IJSRuntime JSRuntime
+@inject NavigationManager NavigationManager
 @using  System.Globalization
 @inject IJSRuntime JSRuntime
 @inject NavigationManager NavigationManager
@@ -429,8 +593,8 @@ public void ConfigureServices(IServiceCollection services)
     {
         new CultureInfo("en-US"),
         new CultureInfo("de"),
-        new CultureInfo("ar"),
         new CultureInfo("fr"),
+        new CultureInfo("ar"),
         new CultureInfo("zh")
     };
 
@@ -444,7 +608,7 @@ public void ConfigureServices(IServiceCollection services)
                 var js = (IJSInProcessRuntime)JSRuntime;
                 js.InvokeVoid("cultureInfo.set", value.Name);
 
-                NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad:  true);
+                NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
             }
         }
     }
@@ -454,7 +618,7 @@ public void ConfigureServices(IServiceCollection services)
 
 {% endtabs %}
 
-3.Add a `CultureSwitcher` component to `~/Shared/MainLayout.razor` file to enable the culture switcher in all pages.
+Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the culture switcher in all pages.
 
 {% tabs %}
 
@@ -474,30 +638,15 @@ public void ConfigureServices(IServiceCollection services)
 
 {% endtabs %}
 
-4.You can select the culture dynamically from culture switcher at run time by setting the following ways,
+![Dynamically set the culture in Blazor](images/blazor-localization-dynamic-change.png)
 
-{% tabs %}
+## Localization using database in Blazor
 
-{% highlight c# tabtitle="~/Program.cs" %}
+* [How to perform localization using database instead of resource files in Blazor?](https://www.syncfusion.com/kb/13012)
 
-CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
-CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("en-US");
-
-// Get the modified culture from culture switcher
-var host = builder.Build();
-var jsInterop = host.Services.GetRequiredService<IJSRuntime>();
-var result = await jsInterop.InvokeAsync<string>("cultureInfo.get");
-if (result != null)
-{
-    // Set the culture from culture switcher
-    var culture = new CultureInfo(result);
-    CultureInfo.DefaultThreadCurrentCulture = culture;
-    CultureInfo.DefaultThreadCurrentUICulture = culture;
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Localization Dynamic Change in Blazor](images/blazor-localization-dynamic-change.png)
+## See also
+* [Statically set the culture in Blazor WASM App](https://docs.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=webassembly&view=aspnetcore-6.0#statically-set-the-culture)
+* [Statically set the culture in Blazor Server App](https://docs.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=server&view=aspnetcore-6.0#statically-set-the-culture)
+* [Dynamically set the culture by user preference in WASM App](https://docs.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=webassembly&view=aspnetcore-6.0#dynamically-set-the-culture-by-user-preference)
+* [Dynamically set the culture by user preference in Server App](https://docs.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=server&view=aspnetcore-6.0#dynamically-set-the-culture-by-user-preference)
 
