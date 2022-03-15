@@ -245,7 +245,7 @@ The culture can be set using one of the following approaches:
 
     ![Syncfusion Blazor UI Component Localization in German culture](./images/de-culture.png)
 
-    > Download Blazor Server app App from [Github](https://github.com/SyncfusionExamples/blazor-localization/tree/master/blazor-server-app).
+    > Download Blazor Server app App from [Github](https://github.com/SyncfusionExamples/blazor-localization/tree/master/.NET6%20Blazor%20Server%20App).
 
 ## Enable Localization in Blazor WebAssembly application
 
@@ -321,7 +321,8 @@ The culture can be set using one of the following approaches:
         }
     }
     ```
-    > For .NET 5.0 Blazor Webassembly globalization, you should configure the `BlazorWebAssemblyLoadAllGlobalizationData` in the project file when the application uses large resources and dynamic culture changes. 
+
+    > For .NET 5.0 Blazor Webassembly globalization, configure the `BlazorWebAssemblyLoadAllGlobalizationData` in the project file when the application uses large resources and dynamic culture changes. 
     
     ```xml
     <PropertyGroup>
@@ -428,7 +429,7 @@ The culture can be set using one of the following approaches:
 
     ![Syncfusion Blazor UI Component Localization in German culture](./images/de-culture.png)
 
-    > Download Blazor WebAssembly App from [Github](https://github.com/SyncfusionExamples/blazor-localization/tree/master/blazor-webassembly-app).
+    > Download Blazor WebAssembly App from [Github](https://github.com/SyncfusionExamples/blazor-localization/tree/master/.NET6%20Blazor%20WASM%20App).
 
 ## See also
 
