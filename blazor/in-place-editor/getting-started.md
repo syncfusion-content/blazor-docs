@@ -599,6 +599,8 @@ The edited data is submitted to the server and you can see the new values gettin
 
 ![Refreshing Blazor In-place Editor Data](./images/blazor-inplace-editor-refresh-data.png)
 
+> You can refer to our [Blazor In-Place Edtor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor In-Place Edtor example](https://blazor.syncfusion.com/demos/in-place-editor/overview?theme=bootstrap5) to understand how to render and configure the In-Place Edtor.
+
 ## See Also
 
 * [Getting Started with Syncfusion Blazor for client-side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli/)

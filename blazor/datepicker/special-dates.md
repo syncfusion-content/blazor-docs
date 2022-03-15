@@ -90,3 +90,5 @@ You can customize specific dates in a DatePicker by using the [OnRenderDayCell](
 
 
 ![Blazor DatePicker with special dates](./images/blazor_datepicker_special_dates.png)
+
+> You can refer to our [Blazor DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DatePicker example](https://blazor.syncfusion.com/demos/datepicker/default-functionalities?theme=bootstrap5) to understand how to render and configure the Date Picker.

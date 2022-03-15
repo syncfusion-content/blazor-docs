@@ -61,3 +61,5 @@ To bind local data to the Razor components, you can assign an array of object or
 
 
 ![Data Binding in Blazor In-place Editor](./images/blazor-inplace-editor-data-binding.png)
+
+> You can refer to our [Blazor In-Place Edtor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor In-Place Edtor example](https://blazor.syncfusion.com/demos/in-place-editor/overview?theme=bootstrap5) to understand how to render and configure the In-Place Edtor.
