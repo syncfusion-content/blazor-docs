@@ -125,7 +125,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 {% highlight razor tabtitle="~/Imports.razor" %}
 
 @using Syncfusion.Blazor
-@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.DropDowns
 
 {% endhighlight %}
 {% endtabs %}

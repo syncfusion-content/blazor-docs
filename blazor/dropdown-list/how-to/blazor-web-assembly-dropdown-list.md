@@ -125,7 +125,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 {% highlight razor tabtitle="~/Imports.razor" %}
 
 @using Syncfusion.Blazor
-@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.DropDowns
 
 {% endhighlight %}
 {% endtabs %}
@@ -134,8 +134,41 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 {% tabs %}
 {% highlight razor %}
+<SfDropDownList TItem="GameFields" TValue="string" PopupHeight="230px"  Placeholder="Select a game" @bind-Value="@DropDownValue" DataSource="@Games">
+    <DropDownListEvents TItem="GameFields" TValue="string" ValueChange="OnChange"/>
+    <DropDownListFieldSettings Text="Text" Value="ID"/>
+</SfDropDownList>
 
+@code{
 
+    public class GameFields
+    {
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+
+    private List<GameFields> Games = new List<GameFields>() 
+    {
+        new GameFields(){ ID= "Game1", Text= "American Football" },
+        new GameFields(){ ID= "Game2", Text= "Badminton" },
+        new GameFields(){ ID= "Game3", Text= "Basketball" },
+        new GameFields(){ ID= "Game4", Text= "Cricket" },
+        new GameFields(){ ID= "Game5", Text= "Football" },
+        new GameFields(){ ID= "Game6", Text= "Golf" },
+        new GameFields(){ ID= "Game7", Text= "Hockey" },
+        new GameFields(){ ID= "Game8", Text= "Rugby"},
+        new GameFields(){ ID= "Game9", Text= "Snooker" },
+        new GameFields(){ ID= "Game10", Text= "Tennis"}
+     };
+
+    public string DropDownValue = "Game3";
+    public string ChangeValue { get; set; } = "Basketball";
+    
+    public void OnChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, GameFields> args)
+    {
+        this.ChangeValue = args.ItemData.Text;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
