@@ -143,8 +143,6 @@ The app's culture can be set JavaScript by setting `applicationCulture` in Blazo
 
 {% endtabs %}
 
-{% tabs %}
-
 * Add the script block below Blazor's `<script>` tag and before the closing </body> tag to start blazor with specific culture. 
 
 {% tabs %}
