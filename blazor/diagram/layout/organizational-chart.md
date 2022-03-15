@@ -121,6 +121,8 @@ Node **LayoutInfo** property to set chart orientations, chart types, and offset 
 
 Assistants are child item that have a different relationship with the parent node. They are laid out in a dedicated part of the tree. A node can be specified as an assistant of its parent by adding it to the assistants property of the argument `Assistants`.
 
+In the `Root` property, define the node that is set to be the parent of the assistant node. In the `Assistant` property, define the node that  is set to be assistant for the parent node. Both properties should be defined in the "LayoutInfo" property.
+
 The following code example illustrates how to add assistants to layout.
 
 ```cshtml
