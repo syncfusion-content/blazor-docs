@@ -13,7 +13,7 @@ Localization is the process of translating the application resources into differ
 
 ## Localization of Syncfusion Blazor Components
 
-The following two steps can be used to localize Syncfusion Blazor components based on culture. You can find the example codes in the below repo,
+The following two steps can be used to localize Syncfusion Blazor components based on culture. You can find the example codes in the below repository,
 
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-localization)
 
