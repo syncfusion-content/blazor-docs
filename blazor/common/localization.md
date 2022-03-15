@@ -13,7 +13,9 @@ Localization is the process of translating the application resources into differ
 
 ## Localization of Syncfusion Blazor Components
 
-Syncfusion Blazor components can be localized based on culture following below two steps,
+Syncfusion Blazor components can be localized based on culture following below two steps. You can find the example codes in the below repo,
+
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-localization)
 
 ### Adding culture based resx files
 
@@ -646,6 +648,8 @@ Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the c
 {% endtabs %}
 
 ![Dynamically set the culture in Blazor](images/blazor-localization-dynamic-change.png)
+
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-localization)
 
 ## Localization using database in Blazor
 
