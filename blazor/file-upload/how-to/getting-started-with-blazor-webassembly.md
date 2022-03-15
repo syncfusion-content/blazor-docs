@@ -79,27 +79,6 @@ namespace BlazorApplication
     }
 }
 
-    ...
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-</head>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Add Script Reference
-
-Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://sfblazor.azurewebsites.net/staging/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` of **wwwroot/index.html** file in client web app.
-
-{% tabs %}
-{% highlight cshtml tabtitle="~/index.html" hl_lines="4" %}
-
-<head>
-    ...
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <script src="https://cdn.syncfusion.com/blazor/19.4.38/syncfusion-blazor.min.js" type="text/javascript"></script>
-</head>
-
-
 {% endhighlight %}
 {% endtabs %}
 
