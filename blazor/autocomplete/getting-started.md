@@ -353,7 +353,7 @@ By default, suggestion list width automatically adjusts according to the AutoCom
 {% endhighlight %}
 {% endtabs %}
 
-![Customizing Popup Height and Width in Blazor AutoComplete](./images/blazor-autocomplete-popup-customization.png)
+![Customizing Popup Height and Width in Blazor AutoComplete control](./images/blazor-autocomplete-popup-customization.png)
 
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/AutoComplete).
 
