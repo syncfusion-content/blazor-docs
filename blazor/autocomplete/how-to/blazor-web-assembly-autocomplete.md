@@ -165,6 +165,6 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor AutoComplete component will be rendered in the default web browser.
 
-![Blazor bind AutoComplete component](./images/blazor-dropdownlist-data-binding.png)
+![Blazor bind AutoComplete component](./images/blazor-autocomplete-data-binding.png)
 
 > You can also explore our [Blazor AutoComplete example](https://blazor.syncfusion.com/demos/autocomplete/default-functionalities) to understand how to bind data to the AutoComplete control in Blazor.
