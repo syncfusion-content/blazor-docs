@@ -238,7 +238,7 @@ The excel export provides an option to export template columns of the DataGrid b
 
 <!-- Show or hide columns on exported excel
 
-You can show a hidden column or hide a visible column while exporting the datagrid by customizing the vsibility settings while exporting.
+You can show a hidden column or hide a visible column while exporting the datagrid by customizing the visibility settings while exporting.
 
 This is demonstrated in the below sample code where initially the **CustomerID** is hidden. While exporting, we have changed CustomerID to visible column and Freight as hidden column. Then in the `ExcelExportComplete` event, we have reversed the column's visibility state back to the previous state.
 
