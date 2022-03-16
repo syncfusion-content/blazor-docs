@@ -48,7 +48,7 @@ The following example demonstrates the usage of standard mask elements.
 <SfMaskedTextBox Mask="\\A999" Placeholder="Mask \\A999 (ex: A321)" FloatLabelType="@FloatLabelType.Always"></SfMaskedTextBox>
 ```
 
-The output will be as follows.
+
 
 ![Blazor MaskedTextBox with Standard Mask Elements](./images/blazor-maskedtextbox-with-standard-mask.png)
 
