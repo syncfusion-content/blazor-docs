@@ -66,13 +66,10 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 
 Register the `ISyncfusionStringLocalizer` implementation to localize the Syncfusion Blazor components based on resources files added in application.
 
-**Blazor Server App**
-
-* For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
-* For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
-
-**Blazor WebAssembly App**
-* Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
+* For **Blazor Server App**, register the Syncfusion Blazor Service as follows,
+    * For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+    * For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
+* For **Blazor WebAssembly App**, register the Syncfusion Blazor Service in the client web app of **~/Program.cs** file.
 
 {% tabs %}
 
