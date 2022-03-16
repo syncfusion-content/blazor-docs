@@ -37,6 +37,6 @@ The EditForm with the bound model is declared on the main razor page. Inside the
 
 The SfTooltip component is wrapped around the CustomTextBox and the [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Target) property is set to the ID attribute of the CustomTextBox to display tooltip for that particular component. The `ValidationMessage` tag is placed inside the [`TooltipTemplates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.TooltipTemplates.html) to display the validation error messages inside the tooltip. 
 
-![Custom Component with Tooltip Validation Using Blazor TextBox](./images/blazor-textBox-custom-component-with-validation.png)
+![Custom Component with Tooltip Validation Using Blazor TextBox](../images/blazor-textBox-custom-component-with-validation.png)
 
 T> To avoid empty tooltips, tooltips can be restricted based on the presence of text content in the `OnOpen` event callback.
