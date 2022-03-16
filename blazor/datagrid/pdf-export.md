@@ -1059,7 +1059,7 @@ To apply theme in exported PDF, define the **theme** in export properties.
 
 > By default, material theme is applied to exported PDF document.
 
-### PDF-exported grid cell customization
+### Grid cell customization in PDF export
 
 DataGrid has support to customize the column header and content styles, such as changing text orientation, the font color, the width of the header and content text, and so on in the exported PDF file. To achieve this requirement, define the `BeginCellLayout` event of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) with an event handler to perform the required action.
 
