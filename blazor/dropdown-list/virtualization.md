@@ -41,6 +41,6 @@ In the following code, 150 items are bound to the component, but only 6 items wi
 }
 ```
 
-The output will be as follows,
+
 
 ![Blazor DropDownList with virtualization](./images/blazor_dropdownlist_virtualization.gif)

@@ -36,6 +36,6 @@ The following example shows adding a custom item in the toolbar. The new toolbar
 
 After successful compilation of your application, simply press `F5` to run the application.
 
-Output will be like the below.
+
 
 ![Blazor FileManger displays Custom Item in Toolbar](../images/blazor-filemanager-custom-item-in-toolbar.png)
