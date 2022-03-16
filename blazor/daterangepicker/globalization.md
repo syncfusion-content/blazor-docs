@@ -9,9 +9,9 @@ documentation: ug
 
 # Globalization in Blazor DateRangePicker Component
 
-Globalization is the combination of  adapting the control to various languages by means of parsing and formatting the date or number `Internationalization` and also by adding cultural specific customizations and translating the text `localization`.
+Globalization is the combination of adapting the control to various languages by means of parsing and formatting the date or number `Internationalization` and also by adding cultural specific customizations and translating the text `localization`.
 
-## Blazor server side
+## Blazor server-side
 
 Add `UseRequestLocalization` middle-ware in Configure method in **Startup.cs** file to get browser Culture Info.
 
@@ -40,7 +40,7 @@ namespace BlazorApplication
 
 The **Localization** library allows you to localize default text content. The DateRangePicker component has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.).
 
-In the following examples, demonstrate how to enable **Localization** for DateRangePicker in server side Blazor samples. Here, we have used Resource file to translate the static text.
+The following examples demonstrate how to enable **Localization** for DateRangePicker in server-side Blazor samples. Here, Resource file is used to translate the static text.
 
 The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.NET Core application framework.
 
@@ -202,7 +202,7 @@ The following steps explain how to render the DateRangePicker in German culture 
     }
     ```
 
-    The output will be as follows.
+    
 
     ![Localization in Blazor DateRangePicker](./images/blazor-daterangepicker-localization.png)
 
@@ -229,13 +229,12 @@ You can change the localized text of particular component by editing the `wwwroo
 }
 ```
 
-The output will be as follows.
 
 ![Customizing Localized Text in Blazor DateRangePicker](./images/blazor-daterangepicker-localize-text.png)
 
 ## Right-To-Left
 
-The DateRangePicker supports RTL (right-to-left) functionality for languages like Hebrew and Hebrew to displays the text in the right-to-left direction. Use [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_EnableRtl) property to set the RTL direction.
+The DateRangePicker supports RTL (right-to-left) functionality for languages like Hebrew and Hebrew to display the text in the right-to-left direction. Use [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_EnableRtl) property to set the RTL direction.
 
 The following code example initialize the DateRangePicker component in `Hebrew` culture.
 
@@ -254,7 +253,7 @@ The following code example initialize the DateRangePicker component in `Hebrew` 
     }
 ```
 
-The output will be as follows.
+
 
 ![Right to Left in Blazor DateRangePicker with Hebrew Culture](./images/blazor-daterangepicker-right-to-left.png)
 

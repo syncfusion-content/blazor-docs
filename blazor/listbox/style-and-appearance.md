@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Styles and Appearances in Blazor ListBox Component | Syncfusion
-description: Checkout and learn here all about Styles and Appearances in Syncfusion Blazor ListBox component and more.
+description: Checkout and learn here all about styles and appearances in Syncfusion Blazor ListBox component and more.
 platform: Blazor
 control: List Box
 documentation: ug

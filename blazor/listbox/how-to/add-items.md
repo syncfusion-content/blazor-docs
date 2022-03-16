@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add/Remove Items in Blazor ListBox Component | Syncfusion
-description: Checkout and learn here all about Add/Remove Items in Syncfusion Blazor ListBox component and much more.
+description: Checkout and learn here all about add/remove items in Syncfusion Blazor ListBox component and much more.
 platform: Blazor
 control: List Box
 documentation: ug
@@ -49,8 +49,6 @@ To add an item or multiple items, `AddItem` method can be used. In the following
 }
 ```
 
-Output will be shown as
-
 ![Adding Items in Blazor ListBox](./../images/blazor-listbox-add-items.png)
 
 ## Remove items from the listbox
@@ -96,7 +94,5 @@ To remove an item or multiple items, [RemoveItem](https://help.syncfusion.com/cr
     }
 }
 ```
-
-Output will be shown as
 
 ![Removing Items in Blazor ListBox](./../images/blazor-listbox-remove-items.png)

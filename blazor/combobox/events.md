@@ -39,7 +39,7 @@ This section explains the list of events of the ComboBox component which will be
 
     private void BlurHandler(Object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -73,7 +73,7 @@ This section explains the list of events of the ComboBox component which will be
 
     private void ValueChangeHandler(ChangeEventArgs<string, GameFields> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -107,7 +107,7 @@ This section explains the list of events of the ComboBox component which will be
 
     private void CloseHandler(ClosedEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -140,7 +140,7 @@ This section explains the list of events of the ComboBox component which will be
 
     private void CreatedHandler(Object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -173,7 +173,7 @@ This section explains the list of events of the ComboBox component which will be
 
     private void DestroyedHandler(Object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -206,7 +206,7 @@ This section explains the list of events of the ComboBox component which will be
 
     private void FocusHandler(Object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -239,7 +239,7 @@ This section explains the list of events of the ComboBox component which will be
 
     private void OnOpenHandler(BeforeOpenEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -272,7 +272,7 @@ This section explains the list of events of the ComboBox component which will be
 
     private void OnCloseHandler(PopupEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -305,7 +305,7 @@ This section explains the list of events of the ComboBox component which will be
 
     private void DataBoundHandler(DataBoundEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -340,7 +340,7 @@ This section explains the list of events of the ComboBox component which will be
 
     private void Filteringhandler(FilteringEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -379,7 +379,7 @@ This section explains the list of events of the ComboBox component which will be
 
     private void OnActionBeginhandler(ActionBeginEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -417,7 +417,7 @@ This section explains the list of events of the ComboBox component which will be
 
     private void OnActionBeginhandler(ActionBeginEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -455,7 +455,7 @@ This section explains the list of events of the ComboBox component which will be
 
     private void OnActionFailurehandler(Exception args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -488,7 +488,7 @@ This section explains the list of events of the ComboBox component which will be
 
     private void OnValueSelecthandler(SelectEventArgs<GameFields> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -521,7 +521,7 @@ This section explains the list of events of the ComboBox component which will be
 
     private void Openedhandler(PopupEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 

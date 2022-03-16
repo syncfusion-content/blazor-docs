@@ -223,6 +223,6 @@ The following demo is designed for simple payment module that enable or disable 
 </style>
 ```
 
-Output:
+
 
 ![Blazor Accordion Component Wizard](../images/blazor-accordion-wizard.png)

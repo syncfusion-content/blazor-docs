@@ -11,9 +11,9 @@ documentation: ug
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
-## Customizing the appearance of wrapper element
+## Customizing the appearance of container element
 
-Use the following CSS to customize the appearance of wrapper element.
+Use the following CSS to customize the appearance of container element.
 
 ```css
 .e-ddl.e-input-group.e-control-wrapper .e-input {
@@ -112,9 +112,9 @@ Use the following CSS to customize the selection color of text and background.
 }
 ```
 
-## Customizing the background color of focus, hover, and active item's
+## Customizing the background color of focus, hover, and active items
 
-Use the following CSS to customize the background color of focus, hover and active item's.
+Use the following CSS to customize the background color of focus, hover, and active items.
 
 ```css
 .e-dropdownbase .e-list-item.e-item-focus, .e-dropdownbase .e-list-item.e-active, .e-dropdownbase .e-list-item.e-active.e-hover, .e-dropdownbase .e-list-item.e-hover {

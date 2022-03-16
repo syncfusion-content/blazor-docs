@@ -11,7 +11,7 @@ documentation: ug
 
 You can customize the ListView using the `Template` property. Refer to the following steps to customize ListView as mobile contact view with our `avatar`.
 
-* Render the ListView with `DataSource` that has avatar data. You can set avatar data as either text or class names. Refer to the following codes.
+* Render the ListView with `DataSource` that has avatar data. You can set avatar data as either text or class names.
 
 ```C#
 new ListDataModel {

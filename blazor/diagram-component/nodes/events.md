@@ -69,7 +69,7 @@ The following code example explains how to get the selection change event in the
     }
 
     // Event to notify the selection changed event after selecting/unselecting the diagram elements.
-    public void OnSelectionChange(SelectionChangedEventArgs args)
+    public void OnSelectionChanged(SelectionChangedEventArgs args)
     {
         // Action to be performed.
     }

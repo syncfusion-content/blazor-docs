@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize Color Picker in Blazor Color Picker Component
 
-## Custom Palette
+## Custom palette
 
 By default, the Palette will be rendered with default colors. To load custom colors in the palette, specify the colors in the [PresetColors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_PresetColors) property. To customize the color palette, add a custom class to palette tiles using [OnTileRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_OnTileRender) event.
 
@@ -77,7 +77,6 @@ By default, the Palette will be rendered with default colors. To load custom col
 
 ```
 
-Output will be as follows
 ![Blazor ColorPicker with Custom Palette](./../images/blazor-colorpicker-with-custom-palette.png)
 
 ## Hide input area from picker
@@ -93,10 +92,9 @@ In the following sample, the Color Picker is rendered without input area.
 <SfColorPicker ModeSwitcher="false" CssClass="e-hide-value"></SfColorPicker>
 ```
 
-Output will be as follows
 ![Hide Input Area in Blazor ColorPicker](./../images/blazor-colorpicker-hide-input.png)
 
-## Custom Handle
+## Custom handle
 
 Color Picker handle shape and UI can be customized. Here, we have customized the handle as svg icon. Similarly, you can customize the handle based on your requirement.
 
@@ -127,5 +125,4 @@ The following sample shows the customized Color Picker handle.
 
 ```
 
-Output will be as follows
 ![Customizing Blazor ColorPicker Handle Shape](./../images/blazor-colorpicker-handle-customization.png)

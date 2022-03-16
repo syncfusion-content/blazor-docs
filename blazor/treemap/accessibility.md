@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor TreeMap Component
 
-The TreeMap component provides built-in compliance with the [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/) specifications. The WAI-ARIA accessibility supports are achieved using attributes such as `aria-label`. It helps to provide information about the elements in a document for assistive technology.
+The [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap) component provides built-in compliance with the [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/) specifications. The WAI-ARIA accessibility supports are achieved using attributes such as `aria-label`. It helps to provide information about the elements in a document for assistive technology.
 
 This attribute provides text label with some default description for the following elements in the TreeMap.
 

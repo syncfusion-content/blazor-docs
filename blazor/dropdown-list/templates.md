@@ -49,7 +49,7 @@ In the following sample, each list item is split into two columns to display rel
 </style>
 ```
 
-The output will be as follows.
+
 
 ![Blazor DropDownList with ItemTemplate](./images/blazor-dropdownlist-item-template.png)
 
@@ -93,7 +93,7 @@ In the following sample, the selected value is displayed as a combined text of b
 </style>
 ```
 
-The output will be as follows.
+
 
 ![Blazor DropDownList with ValueTemplate](./images/blazor-dropdownlist-value-template.png)
 
@@ -135,7 +135,7 @@ In the following sample, employees are grouped according to their city.
 </style>
 ```
 
-The output will be as follows.
+
 
 ![Blazor DropDownList with GroupTemplate](./images/blazor-dropdownlist-group-template.png)
 
@@ -200,7 +200,7 @@ In the following sample, the list items and its headers are designed and display
 </style>
 ```
 
-The output will be as follows.
+
 
 ![Blazor DropDownList with HeaderTemplate](./images/blazor-dropdownlist-header-template.png)
 
@@ -257,8 +257,8 @@ In the following sample, popup list content displays the notification of no data
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-<SfDropDownList TValue="string" TItem="Countries" Placeholder="Select a customer" DataSource="@Country">
-    <DropDownListTemplates TItem="Countries">
+<SfDropDownList TValue="string" TItem="Country" Placeholder="Select a customer" DataSource="@Countries">
+    <DropDownListTemplates TItem="Country">
         <NoRecordsTemplate>
             <span class='norecord'> NO DATA AVAILABLE</span>
         </NoRecordsTemplate>
@@ -266,9 +266,9 @@ In the following sample, popup list content displays the notification of no data
 </SfDropDownList>
 
 @code {
-    public class Countries { }
+    public class Country { }
 
-    List<Countries> Country = new List<Countries> { };
+    List<Country> Countries = new List<Country> { };
 }
 ```
 
@@ -308,3 +308,8 @@ In the following sample, when the data fetch request fails, the DropDownList dis
 The output will be as follows,
 
 ![Blazor DropDownList with Action Failure Template](./images/blazor-dropdownlist-action-failure-template.png)
+
+## See Also
+
+* [Select a value in Blazor DropDownList during bUnit test](https://www.syncfusion.com/forums/172141/how-can-i-select-a-value-in-an-sfdropdown-during-a-bunit-test)
+* [Client side validation in Blazor DropDownList](https://www.syncfusion.com/forums/172516/client-side-validation-on-dropdown-list)

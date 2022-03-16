@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appearance in Blazor Linear Gauge Component | Syncfusion
-description: Checkout and learn here all about Appearance in Syncfusion Blazor Linear Gauge component and much more.
+description: Checkout and learn here all about appearance in Syncfusion Blazor Linear Gauge component and much more.
 platform: Blazor
 control: Linear Gauge
 documentation: ug

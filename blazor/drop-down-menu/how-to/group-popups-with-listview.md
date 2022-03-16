@@ -42,6 +42,6 @@ In the following example, ListView element is given as `PopupContent` to Dropdow
 
 ```
 
-Output be like
+
 
 ![Grouping Popup Items in Blazor DropDownMenu](./../images/blazor-dropdownmenu-grouping-popup-item.png)

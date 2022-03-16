@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Linear Gauge Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Linear Gauge component and more.
+description: Checkout and learn here all about accessibility in Syncfusion Blazor Linear Gauge component and more.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
@@ -26,4 +26,4 @@ Linear Gauge provides built-in compliance with the [WAI-ARIA](https://www.w3.org
 </tr>
 </table>
 
-To change this default description, use the [Description](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_Description) property available in [LinearGaugePointer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html#Syncfusion_Blazor_LinearGauge_LinearGaugePointer_Description) and the [SfLinearGauge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_Description). It helps the screen reader to read for an assistive purpose.
+To change this default description, use the [Description](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_Description) property available in the [LinearGaugePointer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html#Syncfusion_Blazor_LinearGauge_LinearGaugePointer_Description) and the [SfLinearGauge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_Description). It helps the screen reader to read for an assistive purpose.

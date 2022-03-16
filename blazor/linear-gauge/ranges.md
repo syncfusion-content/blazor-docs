@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ranges in Blazor Linear Gauge Component | Syncfusion
-description: Checkout and learn here all about Ranges in Syncfusion Blazor Linear Gauge component and much more details.
+description: Checkout and learn here all about ranges in Syncfusion Blazor Linear Gauge component and much more details.
 platform: Blazor
 control: Linear Gauge
 documentation: ug

@@ -9,7 +9,7 @@ documentation: ug
 
 # Filter and search list items using Blazor ListView Component
 
-The filtered data can be displayed in the ListView control depending upon on user inputs. Refer to the following steps to render the ListView with filtered data.
+The filtered data can be displayed in the ListView control depending on the user inputs. Refer to the following steps to render the ListView with the filtered data.
 
 * Render a textbox to get input for filtering data.
 

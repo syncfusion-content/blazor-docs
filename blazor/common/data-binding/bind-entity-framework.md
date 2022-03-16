@@ -7,10 +7,10 @@ component: Common
 documentation: ug
 ---
 
-# Bind data from SQL server to Syncfusion Blazor components
+# Bind Data from SQL Server to Syncfusion Blazor Components
 
-In this topic, we are going to learn how to retrieve data from SQL database using [Entity Framework](https://docs.microsoft.com/en-us/ef/core/) to bind it to the Grid component and perform CRUD operations.  
-Entity Framework is an open-source object-relational mapper (O/RM) from Microsoft.  Entity Framework works with many databases. But here, we are going to discuss the step-by-step procedure to create an Entity Framework using the [MS SQL Server](https://en.wikipedia.org/wiki/Microsoft_SQL_Server) database and connect it to the Syncfusion component to perform CRUD operations in a Blazor Server Application.
+In this section, you can learn how to retrieve data from SQL database using [Entity Framework](https://docs.microsoft.com/en-us/ef/core/) to bind it to the Grid component and perform CRUD operations.  
+Entity Framework is an open-source object-relational mapper (O/RM) from Microsoft. Entity Framework works with many databases. But here, we are going to discuss the step-by-step procedure to create an Entity Framework using the [MS SQL Server](https://en.wikipedia.org/wiki/Microsoft_SQL_Server) database and connect it to the Syncfusion component to perform CRUD operations in a Blazor Server Application.
 
 ## Prerequisite software
 
@@ -41,7 +41,7 @@ Available bit)
 
 Now, the Book table design will look like below.
 
-![Created Table](../images/create-table.png)
+![Create Table in Blazor](../images/create-table.png)
 
 ## Create Blazor Server Application
 
@@ -51,22 +51,22 @@ Open Visual Studio 2019 Preview, select Create a New Project, select Blazor Serv
 
 In the next window, provide the project name as LibraryManagement and click Next.
 
-![Give Project name as LibraryManagement](../images/project-name.png)
+![Give Project name as LibraryManagement in Blazor](../images/project-name.png)
 
 Now, select Target Framework as (.NET 5.0) in the project template and click Create button to create the Blazor Server application.
 
-![Create Project](../images/create-project.png)
+![Create Project in Blazor](../images/create-project.png)
 
 ## Creating DbContext and model class
 
-Now, we are going to scaffold DbContext and model classes from the existing Library database. To perform scaffolding and work with the SQL Server database in our application, we need to install the following NuGet packages.
+Now, scaffold DbContext and model classes from the existing Library database. To perform scaffolding and work with the SQL Server database in our application, you need to install the following NuGet packages.
 
 Run the following commands in the Package Manager Console.
 
 * **Install-Package Microsoft.EntityFrameworkCore.Tools -Version 5.0.6**: This package creates database context and model classes from the database.
 * **Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 5.0.6**: The database provider that allows Entity Framework Core to work with SQL Server.
 
-Once the above packages are installed, we can scaffold DbContext and Model classes. Run the following command in the Package Manager Console under the LibraryManagement project.
+Once the above packages are installed, you can scaffold DbContext and Model classes. Run the following command in the Package Manager Console under the LibraryManagement project.
 
 ```
 Scaffold-DbContext “Server=localhost;Database=Library;Integrated Security=True” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
@@ -80,27 +80,27 @@ The above scaffolding command contains the following details for creating DbCont
 
 After running the above command, **LibraryContext.cs** and **Book.cs** files will be created under the **LibraryManagement.Models** folder as follows.
 
-![Created Model class](../images/model-class.png)
+![Created Model class in Blazor](../images/model-class.png)
 
-We can see that **LibraryContext.cs** file contains the connection string details in the OnConfiguring method.
+You can see that **LibraryContext.cs** file contains the connection string details in the OnConfiguring method.
 
-![Created Connectionstring](../images/connection-string.png)
+![Created Connectionstring in Blazor](../images/connection-string.png)
 
-It is not recommended to have a connection string with sensitive information in the **LibraryContext.cs** file, so we are moving the connection string to the **app settings.json** file.
+It is not recommended to have a connection string with sensitive information in the **LibraryContext.cs** file, so the connection string is moved to the **app settings.json** file.
 
-![Move connection string to appsettings.json](../images/change-connection-string.png)
+![Move connection string to appsettings.json in Blazor](../images/change-connection-string.png)
 
 Now, the **DbContext** must be configured using connection string and registered as scoped service using the **AddDbContext** method in **Startup.cs**.
 
-![Modified appsettings.json](../images/configure-startup.png)
+![Modified appsettings.json in Blazor](../images/configure-startup.png)
 
 ## Creating a Data Access Layer
 
-The application is now configured to connect with the Library database using Entity Framework. Now, it’s time to consume data from the Library database. To do so, we need an interface to fetch data from DbContext to the Blazor application.
+The application is now configured to connect with the Library database using Entity Framework. Now, it’s time to consume data from the Library database. To do so, you need an interface to fetch data from DbContext to the Blazor application.
 
 To create an interface, right-click on the Models folder and create an interface called **ILibraryService.cs**  like below.
 
-![Create an Interface](../images/interface.png)
+![Create an Interface in Blazor](../images/interface.png)
 
 Create a data access layer LibraryService.cs.
 
@@ -188,23 +188,23 @@ namespace LibraryManagement.Models
 }
 ```
 
-## Register the Service in Startup.cs
+## Register the service in Startup.cs
 
-Now, we need to register the **LibraryService** and **ILibraryService** as services in the **startup.cs** file. Kindly register the Scoped Services like below.
+Now, you need to register the **LibraryService** and **ILibraryService** as services in the **startup.cs** file. Kindly register the Scoped Services like below.
 
-![Register the created interace as Service](../images/register-service.png)
+![Register the created interface as Service in Blazor](../images/register-service.png)
 
 ## Add Syncfusion Blazor DataGrid package
 
-Before adding Syncfusion Blazor components to the application, we need to move Book.cs file to the LibraryManagement.Models project. Now, we are going to add the **Syncfusion DataGrid** component into the project. Since we are going to explain this process (Data binding and CRUD operation) with the help of the DataGrid component, Right-click on Dependencies and select Manage NuGet Packages to load the required assemblies.
+Before adding Syncfusion Blazor components to the application, you need to move Book.cs file to the LibraryManagement.Models project. Now, add the **Syncfusion DataGrid** component into the project. Since we are going to explain this process (Data binding and CRUD operation) with the help of the DataGrid component, Right-click on Dependencies and select Manage NuGet Packages to load the required assemblies.
 
-![Open NuGet Package Manager](../images/nuget-package.png)
+![Open NuGet Package Manager in Blazor](../images/nuget-package.png)
 
 Now, in the Browse tab, search and install the **Syncfusion.Blazor.Grid** NuGet package.
 
 ![Install Syncfusion Blazor Grid NuGet](../images/grid-package.png)
 
-> For this demo, we have used **Syncfusion.Blazor.Grid(19.1.0.66)** NuGet package.  We have released a new Syncfusion.Blazor NuGet package with new enhancement in our every-week release and main release. So, you can check and update to the latest versions by using the following link.
+> For this demo, **Syncfusion.Blazor.Grid(19.1.0.66)** NuGet package is used. A new Syncfusion.Blazor NuGet package with new enhancement has been released in our every-week release and main release. So, you can check and update to the latest versions by using the following link.
 
 [Grid Editing](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
 
@@ -274,7 +274,7 @@ In previous steps, we have successfully configured the Syncfusion Blazor package
 
 ## Bind data to Blazor DataGrid component using Entity Framework
 
-To consume data from the database using **Entity Framework**, we need to inject the LibraryService into the razor page and assign it to the DataGrid’s datasource variable. Here, we have used the **DataSource** property of the DataGrid component to bind the SQL data using Entity Framework in the  Server-side application  
+To consume data from the database using **Entity Framework**, you need to inject the LibraryService into the razor page and assign it to the DataGrid’s datasource variable. Here, the **DataSource** property of the DataGrid component is used to bind the SQL data using Entity Framework in the Server-side application  
 
 ```cshtml
 @using LibraryManagement.Models
@@ -299,7 +299,7 @@ Grid columns can be defined using the **GridColumn** component. We are going to 
 * **IsPrimaryKey** property specifies that the given column is a primary key column. Here, Id column is a primary key column.
 * **Visible** property specifies the column visibility. Setting as false will hide the column at the user end.
 * **Width** property specifies the column width.
-* **Format** property helps to format number, currencies, and date in a particular culture. Here, we have formatted the Price column.
+* **Format** property helps to format number, currencies, and date in a particular culture. Here, the Price column has been formatted.
 * **DisplayAsCheckBox** property renders checkbox in cells and sets check state based on the property value. Here, Available column is rendered as a checkbox column.
 
 ```cshtml
@@ -329,19 +329,19 @@ Grid columns can be defined using the **GridColumn** component. We are going to 
 
 Now, the data from the SQL server is loaded into the DataGrid component. Refer to the following screenshot for the output of above.  
 
-![SQL Server Grid](../images/grid-component.png)
+![SQL Server Grid in Blazor](../images/grid-component.png)
 
 ## Handling CRUD operations with our Syncfusion Blazor DataGrid component
 
-We can enable editing in the grid component using the **GridEditSettings** component. Grid provides various modes of editing options such as Inline/Normal, Dialog, and Batch editing. Kindly refer to the following documentation for your reference
+You can enable editing in the grid component using the **GridEditSettings** component. Grid provides various modes of editing options such as Inline/Normal, Dialog, and Batch editing. Kindly refer to the following documentation for your reference.
 
-[Grid Editing](https://blazor.syncfusion.com/documentation/datagrid/editing/#editing)
+[Grid Editing in Blazor](https://blazor.syncfusion.com/documentation/datagrid/editing/#editing)
 
-Here, we are using inline edit mode and **Toolbar** property to show toolbar items for editing.
-While using the DataSource property of Grid, changes will be reflected only in the Grid datasource. To reflect them in the database, we need to handle the CRUD operations externally using the  OnActionBegin and OnActionComplete events of Grid.
+Here, inline edit mode and **Toolbar** property are used to show toolbar items for editing.
+While using the DataSource property of Grid, changes will be reflected only in the Grid datasource. To reflect them in the database, handle the CRUD operations externally using the OnActionBegin and OnActionComplete events of Grid.
 
-* **OnActionBegin** – This event will be triggered when the action gets initiated. So, while inserting/updating a record, RequestType Save will be sent in the event arguments to save the changes in the database. Similarly, while deleting a record, RequestType as Delete will be initiated to perform actions externally.  Since for both Update and Insert action, RequestType will be Save, we can differentiate them by using the Args.Action property, which will indicate the current action.
-* **OnActionComplete** – It will be triggered when certain actions are completed. Here, we can refresh the Grid component with an updated datasource to reflect the changes.  
+* **OnActionBegin** – This event will be triggered when the action gets initiated. So, while inserting/updating a record, RequestType Save will be sent in the event arguments to save the changes in the database. Similarly, while deleting a record, RequestType as Delete will be initiated to perform actions externally. Since for both Update and Insert action, RequestType will be Save, you can differentiate them by using the Args.Action property, which will indicate the current action.
+* **OnActionComplete** – It will be triggered when certain actions are completed. Here, you can refresh the Grid component with an updated datasource to reflect the changes.  
 
 We have added the DataGrid editing, toolbar, and OnActionBegin and OnActionComplete event code with the previous Grid model.
 
@@ -390,9 +390,9 @@ We have added the DataGrid editing, toolbar, and OnActionBegin and OnActionCompl
 
 To insert a new row, click the **Add** toolbar button. The new record edit form will look like below.
 
-![After Clicking a Add button](../images/add-row.png)
+![After Clicking a Add button in Blazor](../images/add-row.png)
 
-Clicking the **Update** toolbar button will initiate the insert action in Grid. Now, the **OnActionBegin** event will be triggered with a **RequestType** as **Save**. We can insert the record into our database (Book table) by calling the **InsertBook()** method of the **LibraryService**.
+Clicking the **Update** toolbar button will initiate the insert action in Grid. Now, the **OnActionBegin** event will be triggered with a **RequestType** as **Save**. You can insert the record into the database (Book table) by calling the **InsertBook()** method of the **LibraryService**.
 
 ```c#
 public void ActionBeginHandler(ActionEventArgs<Book> Args)
@@ -414,9 +414,9 @@ public void ActionBeginHandler(ActionEventArgs<Book> Args)
 
 To edit a row, select any row and click the **Edit** toolbar button. The edit form will look like below.
 
-![After Clicking a update button](../images/update.png)
+![After Clicking a update button in Blazor](../images/update.png)
 
-Now, we have changed the Price column value to 125 from 250. Clicking the **Update** toolbar button will initiate the update action and trigger the OnActionBegin event with **Save RequestType**. Here, we can update the record in the Book table by calling the **UpdateBook()** method of the LibraryService when **Args.Action** is **Edit**.  Refer to the following code example.  
+Now, the Price column value is changed to 125 from 250. Clicking the **Update** toolbar button will initiate the update action and trigger the OnActionBegin event with **Save RequestType**. Here, you can update the record in the Book table by calling the **UpdateBook()** method of the LibraryService when **Args.Action** is **Edit**.  Refer to the following code example.  
 
 ```c#
 public void ActionBeginHandler(ActionEventArgs<Book> Args)
@@ -434,11 +434,11 @@ public void ActionBeginHandler(ActionEventArgs<Book> Args)
 
 The resultant grid will look like below.
 
-![After Updating a record](../images/after-update.png)
+![After Updating a record in Blazor](../images/after-update.png)
 
 ### Delete a row
 
-To delete a row, select any row and click the **Delete** toolbar button. Deleting operation will initiate the OnActionBegin event with RequestType as Delete. Now, we can delete the record from the database by calling **DeleteBook()** method of LibraryService with the selected record`s primary key value. Refer to the following code example.
+To delete a row, select any row and click the **Delete** toolbar button. Deleting operation will initiate the OnActionBegin event with RequestType as Delete. Now, you can delete the record from the database by calling **DeleteBook()** method of LibraryService with the selected record`s primary key value. Refer to the following code example.
 
 ```c#
 public void ActionBeginHandler(ActionEventArgs<Book> Args)
@@ -451,6 +451,6 @@ public void ActionBeginHandler(ActionEventArgs<Book> Args)
 }
 ```
 
-![Final Project](../images/final-gif.gif)
+![Final Project in Blazor](../images/final-gif.gif)
 
 > Please find the sample from this [Github](https://github.com/SyncfusionExamples/blazor-server-datagrid-efcore-crud/) location.

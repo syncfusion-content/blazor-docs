@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in Blazor ListBox Component | Syncfusion
-description: Checkout and learn here all about Selection in Syncfusion Blazor ListBox component and much more details.
+description: Checkout and learn here all about selection in Syncfusion Blazor ListBox component and much more details.
 platform: Blazor
 control: List Box
 documentation: ug
@@ -46,8 +46,6 @@ To enable single selection in the ListBox, [Mode](https://help.syncfusion.com/cr
 
 ```
 
-Output will be shown as,
-
 ![Blazor ListBox with Single Selection](./images/blazor-listbox-single-selection.png)
 
 ## Multiple selection
@@ -83,8 +81,6 @@ To enable multiple selection in the ListBox, `Mode` should be set as `Multiple` 
 }
 
 ```
-
-Output will be shown as,
 
 ![Blazor ListBox with Multiple Selection](./images/blazor-listbox-multiple-selection.png)
 
@@ -124,7 +120,5 @@ To select all the items in the ListBox, enable the [ShowSelectAll](https://help.
     }
 
 ```
-
-Output will be shown as,
 
 ![Blazor ListBox with Checkbox Selection](./images/blazor-listbox-with-checkbox-selection.png)

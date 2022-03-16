@@ -20,7 +20,7 @@ The different event argument types for each event are,
 
 ## List of native events supported
 
-We have provided the following native event support to the Button component:
+The following native event support has been provided to the Button component:
 
 | List of Native events |  |  | |
 | --- | --- | --- | --- |

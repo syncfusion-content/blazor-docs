@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Icons and Templates in Blazor ListBox Component | Syncfusion
-description: Checkout and learn here all about Icons and Templates in Syncfusion Blazor ListBox component and more.
+description: Checkout and learn here all about icons and templates in Syncfusion Blazor ListBox component and more.
 platform: Blazor
 control: List Box
 documentation: ug
@@ -65,8 +65,6 @@ In the following sample, icon classes are mapped with `IconCss` field.
 
 </style>
 ```
-
-Output will be shown as,
 
 ![Blazor ListBox with Icons](./images/blazor-listbox-icons.png)
 
@@ -173,7 +171,5 @@ ListBox items can be customized according to the requirement using [ItemTemplate
 </style>
 
 ```
-
-Output will be shown as,
 
 ![Blazor ListBox with Icon](./images/blazor-listbox-icon-template.png)
