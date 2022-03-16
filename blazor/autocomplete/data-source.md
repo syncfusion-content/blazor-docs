@@ -34,40 +34,40 @@ In the following example, `Name` column from complex data have been mapped to 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-<SfAutoComplete TValue="string" TItem="Countries" Placeholder="e.g. Australia" DataSource="@Country">
+<SfAutoComplete TValue="string" TItem="Country" Placeholder="e.g. Australia" DataSource="@Countries">
     <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
 </SfAutoComplete>
 
 @code {
 
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
 
         public string Code { get; set; }
     }
 
-    List<Countries> Country = new List<Countries>
+    List<Country> Countries = new List<Country>
     {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-        new Countries() { Name = "Denmark", Code = "DK" },
-        new Countries() { Name = "France", Code = "FR" },
-        new Countries() { Name = "Finland", Code = "FI" },
-        new Countries() { Name = "Germany", Code = "DE" },
-        new Countries() { Name = "Greenland", Code = "GL" },
-        new Countries() { Name = "Hong Kong", Code = "HK" },
-        new Countries() { Name = "India", Code = "IN" },
-        new Countries() { Name = "Italy", Code = "IT" },
-        new Countries() { Name = "Japan", Code = "JP" },
-        new Countries() { Name = "Mexico", Code = "MX" },
-        new Countries() { Name = "Norway", Code = "NO" },
-        new Countries() { Name = "Poland", Code = "PL" },
-        new Countries() { Name = "Switzerland", Code = "CH" },
-        new Countries() { Name = "United Kingdom", Code = "GB" },
-        new Countries() { Name = "United States", Code = "US" },
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" },
+        new Country() { Name = "France", Code = "FR" },
+        new Country() { Name = "Finland", Code = "FI" },
+        new Country() { Name = "Germany", Code = "DE" },
+        new Country() { Name = "Greenland", Code = "GL" },
+        new Country() { Name = "Hong Kong", Code = "HK" },
+        new Country() { Name = "India", Code = "IN" },
+        new Country() { Name = "Italy", Code = "IT" },
+        new Country() { Name = "Japan", Code = "JP" },
+        new Country() { Name = "Mexico", Code = "MX" },
+        new Country() { Name = "Norway", Code = "NO" },
+        new Country() { Name = "Poland", Code = "PL" },
+        new Country() { Name = "Switzerland", Code = "CH" },
+        new Country() { Name = "United Kingdom", Code = "GB" },
+        new Country() { Name = "United States", Code = "US" },
     };
 }
 ```
@@ -166,6 +166,7 @@ The following sample displays the first 6 contacts from the **Customers** table 
 ```
 
 
+
 ![Blazor AutoComplete with Data Binding](./images/blazor-autocomplete-remote-data.png)
 
 ### Web API Adaptor
@@ -199,6 +200,7 @@ Use the `WebApiAdaptor` to bind autocomplete with Web API created using OData.
     }
 }
 ```
+
 
 
 ![Blazor AutoComplete with Web API Adaptor](./images/blazor-autocomplete-remote-data.png)
@@ -311,6 +313,7 @@ Refer to the following example for remote data binding and enabled offline mode.
 ```
 
 
+
 ![Blazor AutoComplete Component in Offline Mode](./images/blazor-autocomplete-remote-data.png)
 
 ### ValueTuple data binding
@@ -327,6 +330,7 @@ You can bind [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.val
 </SfAutoComplete>
 
 ```
+
 
 
 ![Blazor AutoComplete ValueTuple Data](./images/blazor_autocomplete_valuetuple.png)
@@ -359,6 +363,7 @@ You can bind [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.
 }
 
 ```
+
 
 
 ![Blazor AutoComplete with expando object data binding](./images/blazor_autocomplete_expando-object.png)
@@ -454,6 +459,7 @@ You can bind [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/
 }
 
 ```
+
 
 
 ![Blazor AutoComplete with observable collection data binding](./images/blazor_autocomplete_observable-collection.png)

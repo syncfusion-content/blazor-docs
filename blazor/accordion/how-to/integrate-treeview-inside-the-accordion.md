@@ -180,4 +180,5 @@ The following example shows how to render a TreeView within the Accordion.
 ```
 
 
+
 ![Treeview Integration in Blazor Accordion](../images/blazor-accordion-treeview-integration.png)

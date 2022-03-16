@@ -11,7 +11,11 @@ documentation: ug
 
 The [AutoComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) supports wrapping nested elements into a group based on different categories. The category of each list item can be mapped through the [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteFieldSettings.html#Syncfusion_Blazor_DropDowns_AutoCompleteFieldSettings_GroupBy) field in the data table. The group header is displayed as both inline and fixed headers. The fixed group header content is updated dynamically on scrolling the suggestion list with its category value.
 
-In the following sample, vegetables are grouped based on its category using `GroupBy` field.
+To get started quickly with grouping in the Blazor AutoComplete component, you can check the video below.
+
+{% youtube "https://www.youtube.com/watch?v=XtqNSV0B3h8" %}
+
+In the following sample, vegetables are grouped according on its category using `GroupBy` field.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -49,6 +53,7 @@ In the following sample, vegetables are grouped based on its category using `Gro
     }
 }
 ```
+
 
 
 ![Blazor AutoComplete Grouping](./images/blazor-autocomplete-grouping.png)
