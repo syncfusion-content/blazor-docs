@@ -38,7 +38,7 @@ namespace BlazorApplication
 
 The **Localization** library allows you to localize default text content. The AutoComplete component has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.).
 
-The following examples demonstrate how to enable **Localization** for AutoComplete in server-side Blazor samples. Here, resource file is used to translate the static text.
+The following examples demonstrate how to enable **Localization** for AutoComplete in server side Blazor samples. Here, Resource file is used to translate the static text.
 
 The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.NET Core application framework.
 
@@ -115,7 +115,7 @@ namespace blazorDropdowns
 | AutoComplete_ActionFailureTemplate | Die Anfrage ist fehlgeschlagen |
 | AutoComplete_NoRecordsTemplate | Keine Aufzeichnungen gefunden |
 
-* Finally, Specify the culture for AutoComplete using [locale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Locale) property.
+* Finally, specify the culture for AutoComplete using [locale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Locale) property.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns

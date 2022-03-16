@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in Blazor In-place Editor Component
 
-The Razor components load the data either from local data sources or remote data services using the `DataSource` property and it supports the data type of an array or `DataManager`. Also supports different kind of data services such as OData, OData V4, Web API, and data formats such as XML, JSON, JSONP with the help of `DataManager` adaptors.
+The Razor components load the data either from local data sources or remote data services using the `DataSource` property and it supports the data type of an array or `DataManager`. Also supports different kinds of data services such as OData, OData V4, Web API, and data formats such as XML, JSON, JSONP with the help of `DataManager` adaptors.
 
 ## Local
 
@@ -57,7 +57,6 @@ To bind local data to the Razor components, you can assign an array of object or
 }
 
 ```
-
 
 
 ![Data Binding in Blazor In-place Editor](./images/blazor-inplace-editor-data-binding.png)

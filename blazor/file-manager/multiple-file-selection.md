@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Multiple File Selection in Blazor FileManager Component | Syncfusion
-description: Checkout and learn here all about Multiple File Selection in Syncfusion Blazor FileManager component and more.
+description: Checkout and learn here all about multiple file selection in Syncfusion Blazor FileManager component and more.
 platform: Blazor
 control: File Manager
 documentation: ug

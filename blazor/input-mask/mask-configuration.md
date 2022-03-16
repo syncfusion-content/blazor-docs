@@ -77,7 +77,6 @@ In the following example, non-mask element `P` accepts the values `P, A, p, a`, 
 ```
 
 
-
 ![Blazor MaskedTextBox with Custom Mask Elements](./images/blazor-maskedtextbox-with-custom-mask.png)
 
 ### Regular expression
@@ -91,7 +90,6 @@ In the following example, regular expression has been set for each input places.
 
 <SfMaskedTextBox Placeholder="Enter value" Mask="[0-2][0-9][0-9].[0-2][0-9][0-9].[0-2][0-9][0-9].[0-2][0-9][0-9]" FloatLabelType="@FloatLabelType.Auto"></SfMaskedTextBox>
 ```
-
 
 
 ![Blazor MaskedTextBox with Regular Expression](./images/blazor-maskedtextbox-regular-expression.png)
