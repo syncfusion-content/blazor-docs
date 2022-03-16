@@ -921,7 +921,7 @@ PDF export provides an option to export the current page into PDF. To export cur
 
 ### Export hidden columns
 
-PDF export provides an option to export hidden columns of DataGrid by defining the **includeHiddenColumn** as **true**.
+PDF export provides an option to export hidden columns of DataGrid by defining the [`IncludeHiddenColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_IncludeHiddenColumn) as **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -955,6 +955,71 @@ PDF export provides an option to export hidden columns of DataGrid by defining t
         {
             OrderID = 1000 + x,
             CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+### Export template columns
+
+PDF export provides an option to export template columns of the DataGrid by defining the [`IncludeTemplateColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_IncludeTemplateColumn) of [`PdfExportProperties`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) as true. In the below sample, the CustomerID columns is a template column. The template values cannot be directly exported into the cells and so we need to use [`PdfQueryCellInfoEvent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfQueryCellInfoEvent) to customize the values of template columns in the PDF document.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
+    <GridEvents PdfQueryCellInfoEvent="PdfQueryCellInfoHandler" OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150">
+            <Template>
+                @{
+                    var con = (context as Order);
+                }
+                <span>Mr.@con.CustomerID</span>
+            </Template>
+        </GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    private SfGrid<Order> DefaultGrid;
+    public List<Order> Orders { get; set; }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname
+        {
+            PdfExportProperties ExportProperties = new PdfExportProperties();
+            ExportProperties.IncludeTemplateColumn = true;
+            await this.DefaultGrid.ExportToPdfAsync(ExportProperties);
+        }
+    }
+    public void PdfQueryCellInfoHandler(PdfQueryCellInfoEventArgs<Order> args)
+    {
+        if (args.Column.Field == "CustomerID")
+        {
+            args.Cell.Value = "Mr." + args.Data.CustomerID;
+        }
+    }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "Alfki", "Anantr", "Anton", "Blonp", "Bolid" })[new Random().Next(5)],
             Freight = 2.1 * x,
             OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();

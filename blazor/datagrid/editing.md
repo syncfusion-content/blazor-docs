@@ -697,6 +697,222 @@ Since data is bound to Grid using DataSource property, CRUD actions will be refl
 
 > Please find the sample from this [Github](https://github.com/SyncfusionExamples/blazor-server-datagrid-efcore-crud/) location.
 
+## Cancel CRUD operation by using Condition
+
+You can cancel the default CRUD operation by specifying Args.Cancel as true based on the corresponding Args.RequestType values.
+
+### Cancel CRUD operation for Normal/Dialog EditMode
+
+For Normal/Dialog edit mode, you have to specify Args.Cancel as true in the [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event.
+
+```csharp
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
+    <GridEvents OnActionBegin="ActionBeginHandler" TValue="Order"></GridEvents>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+    public void ActionBeginHandler(ActionEventArgs<Order> Args)
+    {
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.BeginEdit) && Args.Data.OrderID > 1050)
+        {
+            Args.Cancel = true;
+        }
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save) && Args.Action == "Edit" && Args.Data.OrderID > 1010)
+        {
+            Args.Cancel = true;
+        }
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save) && Args.Action == "Add" && Args.Data.OrderID > 1100)
+        {
+            Args.Cancel = true;
+        }
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Delete))
+        {
+            Args.Cancel = true;
+        }
+    }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+            ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
+        }).ToList();
+    }
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCountry { get; set; }
+    }
+}
+```
+
+### Cancel CRUD operation for Batch EditMode
+
+For Batch edit mode, you have specify Args.Cancel as true in the [`OnCellEdit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit)/[`OnBatchDelete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchDelete)/[`OnCellSave`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellSave) events based on the corresponding CRUD operation.
+
+```csharp
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
+    <GridEvents OnBatchDelete="BatchDeleteHandler" OnCellEdit="OnCellEdit" OnCellSave="OnCellSave" TValue="Order"></GridEvents>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Batch"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+    public void OnCellEdit(CellEditArgs<Order> Args)
+    {
+        if (Args.ColumnName == "CustomerID" && Args.Data.OrderID > 1010)
+        {
+            //Cancel the Edit Operation
+            Args.Cancel = true;
+        }
+    }
+    public void BatchDeleteHandler(BeforeBatchDeleteArgs<Order> Args)
+    {
+        if (Args.RowData.OrderID > 1010)
+        {
+            //Cancel the Delete Operation
+            Args.Cancel = true;
+        }
+    }
+    public void OnCellSave(CellSaveArgs<Order> Args)
+    {
+        if (Args.ColumnName == "ShipCountry" && Args.Data.OrderID > 1005)
+        {
+            //Cancel the Update Operation
+            Args.Cancel = true;
+        }
+    }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+            ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
+        }).ToList();
+    }
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCountry { get; set; }
+    }
+}
+```
+
+## Performing CRUD operation by using separate toolbar
+
+You can perform the CRUD operation externally by using the [`AddRecordAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AddRecordAsync), [`StartEditAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_StartEditAsync), [`DeleteRecordAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DeleteRecordAsync), [`EndEditAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EndEditAsync), [`CloseEditAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CloseEditAsync) methods.
+
+* `AddRecordAsync` - To add a new record. If no data is passed then add form will be shown.
+* `StartEditAsync` - To edit the selected row.
+* `DeleteRecordAsync` - To delete a selected row.
+* `EndEditAsync` - If the grid is in editable state, then you can save a record by invoking this method.
+* `CloseEditAsync` - To cancel the edited state.
+
+```csharp
+
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Grids
+
+<SfToolbar>
+    <ToolbarEvents Clicked="OnClicked"></ToolbarEvents>
+    <ToolbarItems>
+        <ToolbarItem Text="Add"></ToolbarItem>
+        <ToolbarItem Text="Edit"></ToolbarItem>
+        <ToolbarItem Text="Delete"></ToolbarItem>
+        <ToolbarItem Text="Update"></ToolbarItem>
+        <ToolbarItem Text="Cancel"></ToolbarItem>
+    </ToolbarItems>
+</SfToolbar>
+<SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    SfGrid<Order> Grid { get; set; }
+    public List<Order> Orders { get; set; }
+    public async Task OnClicked(ClickEventArgs Args)
+    {
+        if (Args.Item.Text == "Add")
+        {
+            await Grid.AddRecordAsync();
+        }
+        if (Args.Item.Text == "Edit")
+        {
+            await Grid.StartEditAsync();
+        }
+        if (Args.Item.Text == "Delete")
+        {
+            await Grid.DeleteRecordAsync();
+        }
+        if (Args.Item.Text == "Update")
+        {
+            await Grid.EndEditAsync();
+        }
+        if (Args.Item.Text == "Cancel")
+        {
+            await Grid.CloseEditAsync();
+        }
+    }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
 ## Custom external form editing
 
 You can perform the edit operation of Datagrid in a Custom external form. The edit operation can be done by [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) property.
