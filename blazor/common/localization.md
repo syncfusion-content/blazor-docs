@@ -146,7 +146,7 @@ The app's culture can be set in JavaScript by setting `applicationCulture` in Bl
 
 {% tabs %}
 
-{% highlight cshtml tabtitle="wwwroot/index.html" hl_lines="4,5,6,7,8" %}
+{% highlight cshtml tabtitle="wwwroot/index.html" hl_lines="4 5 6 7 8" %}
 
 <body>
     ...
@@ -192,7 +192,7 @@ Set the app's supported cultures. Also, ensure the app is configured to process 
 
 {% tabs %}
 
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="12,13,14,15,16,17,20" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="7 11 13 14 15 16 17 20 33" %}
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -217,15 +217,12 @@ app.UseRequestLocalization(localizationOptions);
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error");
-    
+    app.UseExceptionHandler("/Error");   
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 app.UseHttpsRedirection();
-
 app.UseStaticFiles();
-
 app.UseRouting();
 app.MapControllers();
 app.MapBlazorHub();
