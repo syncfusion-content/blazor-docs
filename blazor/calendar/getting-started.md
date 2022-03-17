@@ -290,4 +290,4 @@ Here, the Calendar allows you to select a date within the range from 5th to 27th
 * [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio/)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli/)
 
-N> You can also explore our [WinForms Calendar example](https://blazor.syncfusion.com/demos/calendar/default-functionalities?theme=bootstrap5) that shows you how to render and configure the Calendar.
+N> You can also explore our [Blazor Calendar example](https://blazor.syncfusion.com/demos/calendar/default-functionalities?theme=bootstrap5) that shows you how to render and configure the Calendar.
