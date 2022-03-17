@@ -1946,7 +1946,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 ## PdfGroupCaptionTemplateInfo
 
-[`PdfGroupCaptionTemplateInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when exporting the group caption template of the PDF document. It can be used to customize the DataGrid group caption content in PDF document.
+[PdfGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when exporting the group caption template of the PDF document. It can be used to customize the DataGrid group caption content in PDF document.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -2252,7 +2252,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 ## ExcelGroupCaptionTemplateInfo
 
-[`ExcelGroupCaptionTemplateInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when exporting the group caption template of the Excel File. It can be used to customize the DataGrid group caption content in Excel File.
+[ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when exporting the group caption template of the Excel File. It can be used to customize the DataGrid group caption content in Excel File.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
