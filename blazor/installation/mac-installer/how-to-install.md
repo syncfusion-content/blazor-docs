@@ -21,6 +21,7 @@ The Essential Studio Blazor Mac installer allows you to create the Blazor applic
 
    1.	Right-click the downloaded pkg file.
    2.	Select the "Open With" option and choose "Installer (Default)".
+   3.	Installer window will be opened.
 
 ## Step-by-Step Installation
 
