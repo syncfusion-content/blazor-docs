@@ -488,7 +488,7 @@ In the following image, **SfDropDownList** component is rendered with **EditTemp
 
 ### Using ComboBox in EditTemplate
 
-You can able to render [`SfComboBox`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html) component in [`EditTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate). In the below sample we have rendered  `SfComboBox`component in `EditTemplate` for ShipCountry column.
+You can able to render [SfComboBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html) component in [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate). In the below sample we have rendered  `SfComboBox`component in `EditTemplate` for ShipCountry column.
 
 ```cshtml
 
@@ -549,7 +549,7 @@ You can able to render [`SfComboBox`](https://help.syncfusion.com/cr/blazor/Sync
 
 ### Using NumericTextBox in EditTemplate
 
-You can able to render [`SfNumericTextBox`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html) component in [`EditTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate). In the below sample we have rendered `SfNumericTextBox` component in `EditTemplate` for Freight column.
+You can able to render [SfNumericTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html) component in [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate). In the below sample we have rendered `SfNumericTextBox` component in `EditTemplate` for Freight column.
 
 ```cshtml
 
