@@ -273,7 +273,7 @@ The following sample code demonstrates changing the default font value on export
 
 <!-- Add custom font for pdf exporting
 
-You can change the default font of Grid header, content and caption cells in the exported document by using the [`Theme`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Theme) property of [`PdfExportProperties`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html).
+You can change the default font of Grid header, content and caption cells in the exported document by using the [`Theme`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Theme) property of [`PdfExportProperties`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html).
 
 The following sample code demonstrates changing the default font value to custom font on exported document,
 
@@ -921,7 +921,7 @@ PDF export provides an option to export the current page into PDF. To export cur
 
 ### Export hidden columns
 
-PDF export provides an option to export hidden columns of DataGrid by defining the [`IncludeHiddenColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_IncludeHiddenColumn) as **true**.
+PDF export provides an option to export hidden columns of DataGrid by defining the [IncludeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_IncludeHiddenColumn) as **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -972,7 +972,7 @@ PDF export provides an option to export hidden columns of DataGrid by defining t
 
 ### Export template columns
 
-PDF export provides an option to export template columns of the DataGrid by defining the [`IncludeTemplateColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_IncludeTemplateColumn) of [`PdfExportProperties`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) as true. In the below sample, the CustomerID columns is a template column. The template values cannot be directly exported into the cells and so we need to use [`PdfQueryCellInfoEvent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfQueryCellInfoEvent) to customize the values of template columns in the PDF document.
+PDF export provides an option to export template columns of the DataGrid by defining the [IncludeTemplateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_IncludeTemplateColumn) of [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) as true. In the below sample, the CustomerID columns is a template column. The template values cannot be directly exported into the cells and so we need to use [PdfQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfQueryCellInfoEvent) to customize the values of template columns in the PDF document.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
