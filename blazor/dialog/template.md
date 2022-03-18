@@ -11,6 +11,10 @@ documentation: ug
 
 In Dialog, the template support is provided to the header and footer sections. So any text or HTML content can be appended in these sections.
 
+To get started quickly with templates in Blazor Dialog Component, you can check the video below.
+
+{% youtube "https://www.youtube.com/watch?v=K5o9JWbgjvQ" %}
+
 ## Header
 
 The Dialog header content can be provided through the `Header` property, and it will allow both text and any HTML content as a string. Also in header, close button is provided as built-in support, and this can be enabled through the `ShowCloseIcon` property.
@@ -221,7 +225,7 @@ The following example demonstrates the usage of header and footer template in th
 
 ```
 
-The output will be as follows.
+
 
 ![Blazor Dialog with Header and Footer Template](./images/blazor-dialog-header-footer-template.png)
 

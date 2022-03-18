@@ -19,7 +19,7 @@ The Resource file is an XML file that contains the strings (key and value pairs)
 
 In the server side Blazor samples, the following examples show how to activate **Localization** for charts.
 
-* Open the **Startup.cs** file and, in the **ConfigureServices** function, add the following configuration.
+* Open the **Startup.cs** file and add the following configuration in the **ConfigureServices** function.
 
 ```csharp
 using Syncfusion.Blazor;

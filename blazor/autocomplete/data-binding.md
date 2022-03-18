@@ -17,7 +17,7 @@ Data binding can be achieved by using the `bind-Value` attribute and it supports
 
 <p>AutoComplete value is: @AutoVal</p>
 
-<SfAutoComplete TValue="string" TItem="Countries" Placeholder="e.g. Australia" @bind-Value="@AutoVal" DataSource="@Country">
+<SfAutoComplete TValue="string" TItem="Country" Placeholder="e.g. Australia" @bind-Value="@AutoVal" DataSource="@Countries">
     <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
 </SfAutoComplete>
 
@@ -25,19 +25,19 @@ Data binding can be achieved by using the `bind-Value` attribute and it supports
 
     public string AutoVal;
 
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
 
         public string Code { get; set; }
     }
 
-    List<Countries> Country = new List<Countries>
+    List<Country> Countries = new List<Country>
 {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
     };
 }
 ```

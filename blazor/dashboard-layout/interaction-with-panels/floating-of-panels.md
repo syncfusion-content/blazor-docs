@@ -41,6 +41,6 @@ The DashboardLayout component is also provided with the panel floating functiona
 
 ```
 
-The following output demonstrates the floating behavior of Dashboard layout component.
+
 
 ![Floating Panels in Blazor DashboardLayout](../images/blazor-dashboard-layout-panel-resizing.gif)

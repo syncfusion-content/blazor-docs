@@ -113,3 +113,40 @@ When height and width of the Scheduler are given as percentage, it will make the
     }
 }
 ```
+
+## How to set the full height of the view port
+
+When the height of the Scheduler is set in the CSS unit of Viewport Height(vh), it will make the Scheduler to occupy the full height within the viewport.
+
+In the following example, the application header height (4.6rem) is reduced from the total viewport.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Height="calc(100vh - 4.6rem)" Width="550px">
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+@code{
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+```
+
+![Blazor Scheduler with View Port Height](images/blazor-scheduler-view-port-height.png)

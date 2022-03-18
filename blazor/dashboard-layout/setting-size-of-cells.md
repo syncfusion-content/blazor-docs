@@ -98,7 +98,7 @@ The following output demonstrates the neat and clear representation of data by s
 
 ## Graphical representation of grid layout
 
-These cells combinedly forms a grid-structured layout, which will be hidden initially. This grid-structured layout can be made visible by enabling the `ShowGridLines` property, which clearly shows the cells split-up within the layout. These gridlines are helpful in panels sizing and placement within the layout during initial designing of a dashboard.
+These cells combinedly form a grid-structured layout, which will be hidden initially. This grid-structured layout can be made visible by enabling the `ShowGridLines` property, which clearly shows the cells split-up within the layout. These gridlines are helpful in panels sizing and placement within the layout during initial designing of a dashboard.
 
 ```cshtml
 

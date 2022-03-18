@@ -77,6 +77,5 @@ You can add custom value to the ComboBox component. When the typed character(s) 
 
 ```
 
-The output will be as follows.
 
 ![Blazor ComboBox with custom value](./images/blazor-combobox-custom-value.png)

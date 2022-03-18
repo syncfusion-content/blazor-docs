@@ -47,7 +47,7 @@ In the following sample, the icons for edit, delete, mark as read and like messa
 
 ```
 
-Output be like
+
 
 ![Blazor DropDownMenu displays Icon in Popup Items](./images/blazor-dropdownmenu-with-popup-icon.png)
 
@@ -74,7 +74,7 @@ In the following sample, cut, copy, and paste popup items are grouped using the 
 
 ```
 
-Output be like
+
 
 ![Blazor DropDownMenu with Separator](./images/blazor-dropdownmenu-separator.png)
 
@@ -106,7 +106,7 @@ In the following sample, navigation URL for Flipkart, Amazon, and Snapdeal actio
 
 ```
 
-Output be like
+
 
 ![Blazor DropDownMenu Items with Navigation Link](./images/blazor-dropdownmenu-navigation.png)
 
@@ -138,6 +138,6 @@ Popup items can be customized using the `CssClass` property. We have customize t
 
 ```
 
-Output be like
+
 
 ![Blazor DropDownMenu with Popup Items](./images/blazor-dropdownmenu-with-popup-items.png)

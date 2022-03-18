@@ -33,7 +33,6 @@ The ComboBox has built-in support to filter data items when [AllowFiltering](htt
 }
 ```
 
-The output will be as follows.
 
 ![Filtering in Blazor ComboBox](./images/blazor-combobox-filtering.png)
 
@@ -44,37 +43,37 @@ The ComboBox component filter queries can be customized. You can also use your o
 ```cshtml
 @using Syncfusion.Blazor.Data
 
-<SfComboBox TValue="string" @ref="comboObj" TItem="Countries" Placeholder="e.g. Australia" DataSource="@Country" AllowFiltering="true">
+<SfComboBox TValue="string" @ref="comboObj" TItem="Country" Placeholder="e.g. Australia" DataSource="@Countries" AllowFiltering="true">
     <ComboBoxFieldSettings Text="Name" Value="Code"></ComboBoxFieldSettings>
-    <ComboBoxEvents TValue="string" TItem="Countries" Filtering="OnFilter"></ComboBoxEvents>
+    <ComboBoxEvents TValue="string" TItem="Country" Filtering="OnFilter"></ComboBoxEvents>
 </SfComboBox>
 
 @code {
 
-    SfComboBox<string, Countries> comboObj { get; set; }
+    SfComboBox<string, Country> comboObj { get; set; }
 
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
 
         public string Code { get; set; }
     }
 
-    List<Countries> Country = new List<Countries>
+    List<Country> Countries = new List<Country>
     {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-        new Countries() { Name = "Denmark", Code = "DK" }
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" }
     };
 
-    List<Countries> Country1 = new List<Countries>
+    List<Country> CountriesFiltered = new List<Country>
     {
-        new Countries() { Name = "France", Code = "FR" },
-        new Countries() { Name = "Finland", Code = "FI" },
-        new Countries() { Name = "Germany", Code = "DE" },
-        new Countries() { Name = "Greenland", Code = "GL" }
+        new Country() { Name = "France", Code = "FR" },
+        new Country() { Name = "Finland", Code = "FI" },
+        new Country() { Name = "Germany", Code = "DE" },
+        new Country() { Name = "Greenland", Code = "GL" }
     };
 
     private async Task OnFilter(FilteringEventArgs args)
@@ -84,7 +83,7 @@ The ComboBox component filter queries can be customized. You can also use your o
 
         query = !string.IsNullOrEmpty(args.Text) ? query : new Query();
 
-        await comboObj.FilterAsync(Country1, query);
+        await comboObj.FilterAsync(CountriesFiltered, query);
     }
 }
 ```

@@ -56,6 +56,6 @@ The following example illustrates how to add and remove items in Dropdown Menu c
 
 ```
 
-Output be like
+
 
 ![Adding Items in Blazor DropDownMenu](./../images/blazor-dropdownmenu-add-items.png)

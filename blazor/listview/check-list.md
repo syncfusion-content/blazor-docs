@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Check list in Blazor ListView Component | Syncfusion
-description: Checkout and learn here all about Check list in Syncfusion Blazor ListView component and much more details.
+description: Checkout and learn here all about check list in Syncfusion Blazor ListView component and much more details.
 platform: Blazor
 control: Listview
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 The ListView supports checkbox in default and group-lists which is used to select multiple items. The checkbox can be enabled by the `ShowCheckBox` property.
 
-The Checkbox will be useful in the scenario where we need to select multiple options. For Example, In Shipping cart we can be able to select or unselect the desired items before checkout and also it will be useful in selecting multiple items that belongs to same category using the group list.
+The Checkbox will be useful in the scenario where there is a need to select multiple options. For example, in shipping cart it is possible to select or unselect the desired items before checkout and also it will be useful in selecting multiple items that belongs to same category using the group list.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists

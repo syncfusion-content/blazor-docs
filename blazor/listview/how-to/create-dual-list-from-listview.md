@@ -9,7 +9,7 @@ documentation: ug
 
 # Create dual list using Blazor ListView Component
 
-The dual list contains two ListView. This allows you to move list items from one list to another using the client-side events. This section explains how to integrate the ListView control to achieve dual list.
+The dual list contains two ListView. This allows to move list items from one list to another using the client-side events. This section explains how to integrate the ListView control to achieve dual list.
 
 ## Use cases
 
@@ -36,7 +36,7 @@ Here, the whole data can be moved from the first ListView to the second by click
 
 ## Moving whole data from the second list to the first list(<<)**
 
-The functionality of the second button is the same as above, and data is transferred from the second list to the first list. This button is enabled only when the data source of the second ListView is not empty.
+The functionality of the second button is the same as above, and the data is transferred from the second list to the first list. This button is enabled only when the data source of the second ListView is not empty.
 
 ## Moving selected item from one list to another list (>) and (<)**
 

@@ -462,7 +462,7 @@ The following properties and classes are available to customize the marker clust
 }
 ```
 
-![Blazor Maps Marker with Custom Cluster](./images/Marker/Cluster-customization.PNG)
+![Blazor Maps Marker with Custom Cluster](./images/Marker/blazor-maps-custom-cluster.png)
 
 ## Expanding the marker cluster
 

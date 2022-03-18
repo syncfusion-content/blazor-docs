@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize Blazor ListView Component to Grid Layout
 
-In Listview, list items can be rendered in grid layout with following data manipulations.
+In Listview, list items can be rendered in grid layout with the following data manipulations.
 
 * Add Item
 * Remove Item
@@ -18,7 +18,7 @@ In Listview, list items can be rendered in grid layout with following data manip
 
 ## Grid Layout
 
-In this section, we will discuss about rendering of list items in grid layout.
+In this section, rendering of list items in grid layout has been discussed.
 
 * Initialize and render ListView with dataSource which will render list items in list layout.
 * Now, add the below CSS to list item. This will make list items to render in grid layout
@@ -101,7 +101,7 @@ In the below sample, we have rendered List items in grid layout.
 
 ## Data manipulation
 
-In this section, we will discuss about ListView data manipulations.
+In this section, ListView data manipulations have been discussed.
 
 ### Add Item
 
@@ -115,7 +115,7 @@ In the below sample, you can remove by hovering the item which will show delete 
 
 Listview can be sorted either in Ascending or Descending order. To enable sorting in your ListView, set `SortOrder` as `Ascending` or `Descending`. You can also set sorting after control initialization.
 
-In the below sample, we have sorted in `Ascending` order. To sort it in descending, click on sort order icon and vice versa.
+In the below sample, it is sorted in `Ascending` order. To sort it in descending, click on sort order icon and vice versa.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups
