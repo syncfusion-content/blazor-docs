@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Define the GridEvents programatically in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Define the GridEvents programatically in Syncfusion Blazor DataGrid component and more.
+title: Define the events programmatically in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn here all about Define the events programmatically in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Define the GridEvents programatically in DataGrid
+# Define the GridEvents programmatically in DataGrid
 
 GridEvents will be defined as child razor component to Grid component. Instead we can define the GridEvents programmatically using the Grid reference.
 
