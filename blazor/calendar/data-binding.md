@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in Blazor Calendar Component
 
-This section briefly explains how to bind the value to the [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) component in the below different ways.
+This section briefly explains how to bind the value to the Calendarcomponent in the below different ways.
 
 * One-Way Data Binding
 * Two-Way Data Binding
