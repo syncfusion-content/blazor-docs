@@ -1049,3 +1049,72 @@ The following code example shows how to disable a command and how to modify the 
     }
 }
 ```
+### BringIntoView
+
+The BringIntoView command brings the specified rectangular region into the viewport of the diagram.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+ <input type="button" value="BringIntoView" @onclick="BringIntoView"/>
+ <SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" @bind-Nodes="@nodes"><PageSettings @bind-Orientation="@pageOrientation" @bind-MultiplePage="@IsMultiplePage"></PageSettings>
+</SfDiagramComponent>
+@code
+{
+SfDiagramComponent diagram;
+DiagramObjectCollection<Node> nodes;     
+DiagramObjectCollection<Connector> connectors;
+protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>()
+        {
+        new Node { ID = "node1", Width = 150, Height = 100, OffsetX = 1100, OffsetY = 900, 
+        Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+        { 
+            new ShapeAnnotation() { Content = "Node1" } } },
+        };
+    }
+    Brings the specified bounds into the view port of the diagram
+    private void BringIntoView()
+    {
+    DiagramRect bound = new DiagramRect(950,650,500,500);
+    diagram.BringIntoView(bound);
+    }
+}
+```
+### BringIntoCenter
+
+The BringIntoView command brings the specified rectangular region into the viewport of the diagram.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+ <input type="button" value="BringIntoCenter" @onclick="BringIntoCenter"/>
+ <SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" @bind-Nodes="@nodes"><PageSettings @bind-Orientation="@pageOrientation" @bind-MultiplePage="@IsMultiplePage"></PageSettings>
+</SfDiagramComponent>
+@code
+{
+SfDiagramComponent diagram;
+DiagramObjectCollection<Node> nodes;     
+DiagramObjectCollection<Connector> connectors;
+protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>()
+        {
+        new Node { ID = "node1", Width = 150, Height = 100, OffsetX = 1100, OffsetY = 900, 
+        Annotations = new DiagramObjectCollection<ShapeAnnotation>() 
+        { 
+            new ShapeAnnotation() { Content = "Node1" } } },
+        };
+    }
+    Brings the specified bounds into the center of the view port of the diagram
+    private void BringIntoCenter()
+    {
+    DiagramRect bound = new DiagramRect(950,650,500,500);
+    diagram.BringIntoCenter(bound);
+    }
+}
+```
+
+                
+              
