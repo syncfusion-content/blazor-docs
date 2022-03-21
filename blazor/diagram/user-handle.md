@@ -11,6 +11,8 @@ documentation: ug
 
 User handles are customizable handles that can be used to perform custom actions and default clipboard actions.
 
+> A new blazor diagram component which provides better performance than the existing diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram-component/user-handle)
+
 ## Initialization an userhandle
 
 The user handle can enables for the selected nodes/connectors by setting a [SelectorConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SelectorConstraints.html) as `UserHandle` and then use the [DiagramUserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html) class to create an object for the user handles. The following code example used to enable and create an user handles for the diagram nodes/connectors.

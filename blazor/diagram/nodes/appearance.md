@@ -48,6 +48,8 @@ The following code shows how to customize the appearance of the shape.
 }
 ```
 
+> A new blazor diagram component which provides better performance than the existing diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram-component/nodes/customization)
+
 ![Node appearance](../images/node_appearance.png)
 
 ## Gradient

@@ -11,6 +11,8 @@ documentation: ug
 
 Page settings enable to customize the appearance, width, and height of the diagram page.
 
+> A new blazor diagram component which provides better performance than the existing diagram control in Blazor WebAssembly App. It is available in preview mode.
+
 ## Page size and appearance
 
 * The size and appearance of the diagram pages can be customized with the page settings property.

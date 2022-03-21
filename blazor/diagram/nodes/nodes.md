@@ -13,6 +13,9 @@ Nodes are graphical objects that are used to visually represent the geometrical 
 
 ![Node](../images/node.png)
 
+> A new blazor diagram component which provides better performance than the existing diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram-component/nodes/nodes)
+
+
 ## Create node
 
 A node can be created and added to the diagram, either programmatically or interactively. Nodes are stacked in the diagram area from bottom-to-top in the order they are added.

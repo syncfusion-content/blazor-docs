@@ -31,6 +31,8 @@ saveData = localStorage.getItem('fileName');
 
 Diagram can also be saved as raster or vector image files. For more information about saving the diagram as images, refer to [Print and Export](./export).
 
+> A new blazor diagram component which provides better performance than the existing diagram control in Blazor WebAssembly App. It is available in preview mode.  Refer the [Link](https://blazor.syncfusion.com/documentation/diagram-component/serialization)
+
 ## Load
 
 Diagram is loaded from the serialized string data by server-side method, [LoadDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_LoadDiagram_System_String_). The following code illustrates how to load the diagram from serialized string data.
