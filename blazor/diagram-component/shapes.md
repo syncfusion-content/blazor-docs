@@ -94,7 +94,7 @@ The following code illustrates how an image node is created.
                 Type = Shapes.Image,
                 //Sets the source to the image shape
                 Source = "/diagram/images/syncfusion.png"
-            },
+            }
         };
         nodes.Add(node);
     }
