@@ -133,6 +133,65 @@ To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 
 ![Connector Tool in Blazor Diagram](images/blazor-diagram-connector-tool.gif)
 
+## Text
+
+Diagram allows you to create a textNode, when you click on the diagram page. The following code illustrates how to draw a text.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<input Type="button" value="addNode" @onclick="AddNode" />
+<SfDiagramComponent @ref="diagram" Nodes="@nodes" Height="600px" />
+
+@code
+{
+    //Reference to diagram.
+    SfDiagramComponent diagram;
+
+    //Defines diagram's nodes collection.
+    public DiagramObjectCollection<Node> nodes;
+
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+        {
+            ID = "group",
+            OffsetX = 200,
+            OffsetY = 200,
+            Width = 100,
+            Height = 100,
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation()
+                {
+                    Content = "Node",
+                    Style = new TextStyle()
+                    {
+                        Color = "white",
+                    }
+                }
+            },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+        };
+        nodes.Add(node);
+    }
+
+    private void AddNode()
+    {
+        //To draw an object once, activate draw once.
+        diagram.InteractionController = InteractionController.DrawOnce;
+        //Initialize the drawing object to draw the shape.
+        diagram.DrawingObject = new Node()
+        {
+            Shape = new TextShape() { Content = "Text Content" },
+            Style = new TextStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
+        };
+    }
+}
+```
+
+![Text Tool in Blazor Diagram](images/blazor-diagram-Text-tool.gif)
 ## Drawing polygon shape
 
 Diagram allows to create the [Polygon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BasicShapeType.html#Syncfusion_Blazor_Diagram_BasicShapeType_Polygon) shape by clicking and moving the mouse at runtime on the diagram page.

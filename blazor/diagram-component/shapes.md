@@ -11,6 +11,7 @@ documentation: ug
 
 Diagram provides support to add different kind of nodes. They are as follows:
 
+* Text shape
 * Image shape
 * Path shape
 * Basic shape
@@ -18,6 +19,48 @@ Diagram provides support to add different kind of nodes. They are as follows:
 * SVG shape
 * HTML template 
 
+## Text node
+
+Texts can be added to the diagram as [Text] nodes.The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shape.html) property of the node allows you to set the type of node for text nodes, it should be set as **Text**. In addition,the [Content] property define the content object that is used to define the text to be added. [Style] of the node is used as [TextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html) to customize the appearance of that text.
+
+The following code illustrates how to create a text node.
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+@* Initialize Diagram *@
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
+
+@code
+{
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+    protected override void OnInitialized()
+    {
+        Node node = new Node()
+        {
+            ID = "node1",
+            //Size of the node
+            Height = 100,
+            Width = 100,
+            //Position of the node
+            OffsetX = 100,
+            OffsetY = 100,
+            Shape = new TextShape()
+            {
+                //Sets the Content to the text shape
+                Content = "Text Node"
+            },
+            Style = new TextStyle()
+            {
+                Fill = "Yellow",
+                TextAlign= TextAlign.Left
+            }
+        };
+        nodes.Add(node);
+    }
+}
+```
 ## Image node
 
 Diagram allows to add images as [ImageShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ImageShape.html). The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shape.html) property of node allows you to set the type of node and for image nodes, it should be set as **Image**. In addition, the [Source](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ImageShape.html#Syncfusion_Blazor_Diagram_ImageShape_Source) property of shape enables you to set the image.
@@ -51,7 +94,7 @@ The following code illustrates how an image node is created.
                 Type = Shapes.Image,
                 //Sets the source to the image shape
                 Source = "/diagram/images/syncfusion.png"
-            }
+            },
         };
         nodes.Add(node);
     }
