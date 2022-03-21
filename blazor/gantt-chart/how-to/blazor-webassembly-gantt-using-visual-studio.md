@@ -147,7 +147,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public List<TaskData> SubTasks { get; set; }
+        public int? ParentId { get; set; }
     }
 }
 
@@ -165,7 +165,7 @@ Bind data with the Gantt Chart component by using the `DataSource` property. It 
 </SfGantt>
 
 @code{
-public List<TaskData> TaskCollection { get; set; }
+private List<TaskData> TaskCollection { get; set; }
 protected override void OnInitialized()
 {
     this.TaskCollection = GetTaskCollection();
@@ -179,36 +179,38 @@ public class TaskData
     public DateTime EndDate { get; set; }
     public string Duration { get; set; }
     public int Progress { get; set; }
-    public List<TaskData> SubTasks { get; set; }
+    public int? ParentId { get; set; }
 }
 
-public static List <TaskData> GetTaskCollection() {
-    List <TaskData> Tasks = new List <TaskData> () {
+public static List<TaskData> GetTaskCollection()
+{
+    List<TaskData> Tasks = new List<TaskData>()
+    {
         new TaskData() {
             TaskId = 1,
             TaskName = "Project initiation",
             StartDate = new DateTime(2019, 04, 02),
             EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify Site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 50,
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 50,
-                }
-            })
+            },
+        new TaskData() {
+            TaskId = 2,
+            TaskName = "Identify Site location",
+            StartDate = new DateTime(2019, 04, 02),
+            Duration = "4",
+            Progress = 50,
+            ParentId=1
+        },
+        new TaskData() {
+            TaskId = 3,
+            TaskName = "Perform soil test",
+            StartDate = new DateTime(2019, 04, 02),
+            Duration = "4",
+            Progress = 50,
+            ParentId=1
         }
     };
     return Tasks;
-    }
+}
 }
 
 {% endhighlight %}
@@ -222,12 +224,12 @@ The data source fields that are required to render the tasks are mapped to the G
 {% highlight razor %}
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
 </SfGantt>
 
 @code{
-public List<TaskData> TaskCollection { get; set; }
+private List<TaskData> TaskCollection { get; set; }
 protected override void OnInitialized()
 {
     this.TaskCollection = GetTaskCollection();
@@ -241,37 +243,38 @@ public class TaskData
     public DateTime EndDate { get; set; }
     public string Duration { get; set; }
     public int Progress { get; set; }
-    public List<TaskData> SubTasks { get; set; }
+    public int? ParentId { get; set; }
 }
 
-public static List <TaskData> GetTaskCollection() {
-    List <TaskData> Tasks = new List <TaskData> () {
+private static List<TaskData> GetTaskCollection()
+{
+    List<TaskData> Tasks = new List<TaskData>()
+    {
         new TaskData() {
             TaskId = 1,
             TaskName = "Project initiation",
             StartDate = new DateTime(2019, 04, 02),
             EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify Site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 50,
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 50,
-                }
-            })
+            },
+        new TaskData() {
+            TaskId = 2,
+            TaskName = "Identify Site location",
+            StartDate = new DateTime(2019, 04, 02),
+            Duration = "4",
+            Progress = 50,
+            ParentId=1
+        },
+        new TaskData() {
+            TaskId = 3,
+            TaskName = "Perform soil test",
+            StartDate = new DateTime(2019, 04, 02),
+            Duration = "4",
+            Progress = 50,
+            ParentId=1
         }
     };
-
     return Tasks;
-}
+    }
 }
 
 {% endhighlight %}
@@ -283,7 +286,7 @@ Gantt Chart has an option to define columns as an array. You can customize the G
 
 * [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Field) : Maps the data source fields to the columns.
 * [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_HeaderText) : Changes the title of columns.
-* [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_TextAlign) : Changes the alignment of columns. By default, columns will be left aligned. To change the columns to right align, set `TextAlign` to right.
+* [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_TextAlign) : Changes the alignment of columns. By default, columns will be left aligned. To change the columns to right align, set `TextAlign` to right, TextAlign values are `right`, `left`, `center`, `justify`.
 * [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Format) : Formats the number and date values to standard or custom formats. Here, it is defined for the conversion of numeric values to currency.
 
 {% tabs %}
@@ -293,7 +296,7 @@ Gantt Chart has an option to define columns as an array. You can customize the G
 @using Syncfusion.Blazor.Grids
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"  ParentID="ParentId">
     </GanttTaskFields>
     <GanttColumns>
         <GanttColumn Field="TaskId" HeaderText="Task ID" TextAlign="TextAlign.Right" Width="100"></GanttColumn>
@@ -305,7 +308,7 @@ Gantt Chart has an option to define columns as an array. You can customize the G
 </SfGantt>
 
 @code{
-    public List<TaskData> TaskCollection { get; set; }
+    private List<TaskData> TaskCollection { get; set; }
     public string NumberFormat = "C";
     protected override void OnInitialized()
     {
@@ -320,37 +323,38 @@ Gantt Chart has an option to define columns as an array. You can customize the G
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public List<TaskData> SubTasks { get; set; }
+        public int? ParentId { get; set; }
     }
 
-    public static List <TaskData> GetTaskCollection() {
-    List <TaskData> Tasks = new List <TaskData> () {
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify Site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 50,
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() {
+                TaskId = 1,
+                TaskName = "Project initiation",
+                StartDate = new DateTime(2019, 04, 02),
+                EndDate = new DateTime(2019, 04, 21),
                 },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 50,
-                }
-            })
-        }
-    };
-
-    return Tasks;
-}
+            new TaskData() {
+                TaskId = 2,
+                TaskName = "Identify Site location",
+                StartDate = new DateTime(2019, 04, 02),
+                Duration = "4",
+                Progress = 50,
+                ParentId=1
+            },
+            new TaskData() {
+                TaskId = 3,
+                TaskName = "Perform soil test",
+                StartDate = new DateTime(2019, 04, 02),
+                Duration = "4",
+                Progress = 50,
+                ParentId=1
+            }
+        };
+        return Tasks;
+    }
 }
 
 {% endhighlight %}
@@ -366,13 +370,13 @@ The editing feature enables you to edit the tasks in the Gantt Chart component. 
 {% highlight razor %}
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEditSettings AllowEditing="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Auto" AllowTaskbarEditing="true"></GanttEditSettings>
 </SfGantt>
 
 @code{
-    public List<TaskData> TaskCollection { get; set; }
+    private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -386,37 +390,38 @@ The editing feature enables you to edit the tasks in the Gantt Chart component. 
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public List<TaskData> SubTasks { get; set; }
+        public int? ParentId { get; set; }
     }
 
-    public static List <TaskData> GetTaskCollection() {
-    List <TaskData> Tasks = new List <TaskData> () {
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify Site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 50,
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() {
+                TaskId = 1,
+                TaskName = "Project initiation",
+                StartDate = new DateTime(2019, 04, 02),
+                EndDate = new DateTime(2019, 04, 21),
                 },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 50,
-                }
-            })
-        }
-    };
-
-    return Tasks;
-}
+            new TaskData() {
+                TaskId = 2,
+                TaskName = "Identify Site location",
+                StartDate = new DateTime(2019, 04, 02),
+                Duration = "4",
+                Progress = 50,
+                ParentId=1
+            },
+            new TaskData() {
+                TaskId = 3,
+                TaskName = "Perform soil test",
+                StartDate = new DateTime(2019, 04, 02),
+                Duration = "4",
+                Progress = 50,
+                ParentId=1
+            }
+        };
+        return Tasks;
+    }
 }
 
 {% endhighlight %}
@@ -434,12 +439,12 @@ The filtering feature enables you to view the reduced amount of records based on
 {% highlight razor %}
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowFiltering="true">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
 </SfGantt>
 
 @code{
-    public List<TaskData> TaskCollection { get; set; }
+    private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -453,36 +458,36 @@ The filtering feature enables you to view the reduced amount of records based on
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public List<TaskData> SubTasks { get; set; }
+        public int? ParentId { get; set; }
     }
 
-    public static List<TaskData> GetTaskCollection()
+    private static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() {
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify Site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 50,
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() {
+                TaskId = 1,
+                TaskName = "Project initiation",
+                StartDate = new DateTime(2019, 04, 02),
+                EndDate = new DateTime(2019, 04, 21),
                 },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 50,
-                }
-            })
-        }
-    };
-
+            new TaskData() {
+                TaskId = 2,
+                TaskName = "Identify Site location",
+                StartDate = new DateTime(2019, 04, 02),
+                Duration = "4",
+                Progress = 50,
+                ParentId=1
+            },
+            new TaskData() {
+                TaskId = 3,
+                TaskName = "Perform soil test",
+                StartDate = new DateTime(2019, 04, 02),
+                Duration = "4",
+                Progress = 50,
+                ParentId=1
+            }
+        };
         return Tasks;
     }
 }
@@ -494,18 +499,19 @@ You can find the full information regarding Filtering from [here](https://blazor
 
 ## Enable Sorting
 
-The sorting feature enables you to order the records. It can be enabled by setting the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowSorting) property to `true`. The sorting feature can be customized using the [SortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SortSettings) property.
+The sorting feature enables you to order the records. It can be enabled by setting the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowSorting) property to `true`. The sorting feature can be customized using the [SortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.
+html#Syncfusion_Blazor_Gantt_SfGantt_1_SortSettings) property. To sort column values in ascending or descending order, double-click the column title. 
 
 {% tabs %}
 {% highlight razor %}
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowSorting="true">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
 </SfGantt>
 
 @code{
-    public List<TaskData> TaskCollection { get; set; }
+    private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -519,36 +525,37 @@ The sorting feature enables you to order the records. It can be enabled by setti
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public List<TaskData> SubTasks { get; set; }
+        public int? ParentId { get; set; }
     }
 
-    public static List<TaskData> GetTaskCollection()
+    private static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() {
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify Site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 50,
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() {
+                TaskId = 1,
+                TaskName = "Project initiation",
+                StartDate = new DateTime(2019, 04, 02),
+                EndDate = new DateTime(2019, 04, 21),
                 },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 50,
-                }
-            })
-        }
-    };
-    return Tasks;
+            new TaskData() {
+                TaskId = 2,
+                TaskName = "Identify Site location",
+                StartDate = new DateTime(2019, 04, 02),
+                Duration = "4",
+                Progress = 50,
+                ParentId=1
+            },
+            new TaskData() {
+                TaskId = 3,
+                TaskName = "Perform soil test",
+                StartDate = new DateTime(2019, 04, 02),
+                Duration = "4",
+                Progress = 50,
+                ParentId=1
+            }
+        };
+        return Tasks;
     }
 }
 
@@ -572,12 +579,12 @@ You can show the relationship in tasks by using the `Dependency` property as sho
 {% highlight razor %}
 
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks" Dependency="Predecessor">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"  ParentID="ParentId" Dependency="Predecessor">
     </GanttTaskFields>
 </SfGantt>
 
 @code{
-    public List<TaskData> TaskCollection { get; set; }
+    private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -592,36 +599,38 @@ You can show the relationship in tasks by using the `Dependency` property as sho
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
-        public List<TaskData> SubTasks { get; set; }
+        public int? ParentId { get; set; }
     }
 
-    public static List<TaskData> GetTaskCollection()
+    private static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() {
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify Site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 50
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() {
+                TaskId = 1,
+                TaskName = "Project initiation",
+                StartDate = new DateTime(2019, 04, 02),
+                EndDate = new DateTime(2019, 04, 21),
                 },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 50,
-                    Predecessor = "2"
-                }
-            })
-        }
-    };
+            new TaskData() {
+                TaskId = 2,
+                TaskName = "Identify Site location",
+                StartDate = new DateTime(2019, 04, 02),
+                Duration = "4",
+                Progress = 50,
+                ParentId=1,
+                Predecessor="1",
+            },
+            new TaskData() {
+                TaskId = 3,
+                TaskName = "Perform soil test",
+                StartDate = new DateTime(2019, 04, 02),
+                Duration = "4",
+                Progress = 50,
+                ParentId=1,
+                Predecessor="2",
+            }
+        };
         return Tasks;
     }
 }
@@ -630,5 +639,7 @@ You can show the relationship in tasks by using the `Dependency` property as sho
 {% endtabs %}
 
 You can find the full information regarding Predecessors from [here](https://blazor.syncfusion.com/documentation/gantt-chart/task-dependencies)
+
+## Blazor WASM Gantt Chart Demonstration Video
 
 ![Blazor Gantt Chart](../images/blazor-gantt-chart.gif)
