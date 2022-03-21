@@ -21,6 +21,8 @@ Diagram provides support to add different kind of nodes. They are as follows:
 <!-- markdownlint-disable MD033 -->
 <!-- markdownlint-disable MD010 -->
 
+> A new blazor diagram component which provides better performance than the existing diagram control in Blazor WebAssembly App. It is available in preview mode.  Refer the [Link](https://blazor.syncfusion.com/documentation/diagram-component/shapes)
+
 ## Text
 
 Texts can be added to the diagram as [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Shape) nodes. The shape property of the node allows you to set the type of node and for text nodes, it should be set as **text**. In addition, define the content object that is used to define the text to be added and style is used to customize the appearance of that text. The following code illustrates how to create a text node.

@@ -13,6 +13,9 @@ Port is a special connection point in a Node that you can glue the connectors. W
 
 ![Port](../images/Port1.png)
 
+
+> A new blazor diagram component which provides better performance than the existing diagram control in Blazor WebAssembly App. It is available in preview mode.  Refer the [Link](https://blazor.syncfusion.com/documentation/diagram-component/ports/ports)
+
 ## Connections
 
 There are two main types of connections, dynamic and port. The difference between these two connections is whether or not a connector remains glued to a specific connection point when you move the attached node or connector.

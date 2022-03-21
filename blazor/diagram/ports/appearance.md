@@ -64,6 +64,8 @@ The following code explains how to change the appearance of the port.
 }
 ```
 
+> A new blazor diagram component which provides better performance than the existing diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram-component/ports/appearance)
+
 ![Appearance](../images/port_Appearance.png)
 
 ## Visibility
