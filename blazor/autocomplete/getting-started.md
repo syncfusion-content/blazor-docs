@@ -11,7 +11,7 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor AutoComplete](https://www.syncfusion.com/blazor-components/blazor-autocomplete) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
-To get start quickly with Blazor AutoComplete component, you can check on this video.
+To get started quickly with Blazor AutoComplete component, you can check on this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=DbVs6UPjQ-U"%}
@@ -138,7 +138,7 @@ namespace WebApplication1
 {% endhighlight %}
 {% endtabs %}
 
-## Add Style Sheet
+## Add style sheet
 
 Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/appearance/themes#enable-static-web-assets-usage) topic to use static assets in your project.
 
@@ -170,7 +170,7 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 
 ### Blazor WebAssembly App
 
-For Blazor WebAssembly App, Refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
+For Blazor WebAssembly App, refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
 
 {% tabs %}
 {% highlight html tabtitle="~/index.html" %}
@@ -182,15 +182,15 @@ For Blazor WebAssembly App, Refer the theme style sheet from NuGet in the `<head
 {% endhighlight %}
 {% endtabs %}
 
-## Add Script Reference
+## Add script reference
 
 Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows. Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/common/adding-script-references#enable-static-web-assets-usage) topic to use static assets in your project.
 
 ### Blazor Server App
 
-* For **.NET 6** app, Refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+* For **.NET 6** app, refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
-* For **.NET 5 and .NET 3.X** app, Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For **.NET 5 and .NET 3.X** app, refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
 {% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4" %}
@@ -216,7 +216,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 ### Blazor WebAssembly App
 
-For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html** file.
+For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/index.html" hl_lines="4" %}
@@ -250,24 +250,24 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 {% tabs %}
 {% highlight razor %}
 
-<SfAutoComplete TValue="string" TItem="Countries" Placeholder="e.g. Australia" DataSource="@LocalData">
+<SfAutoComplete TValue="string" TItem="Country" Placeholder="e.g. Australia" DataSource="@LocalData">
     <AutoCompleteFieldSettings Value="Name" />
 </SfAutoComplete>
 
 @code {
 
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
         public string Code { get; set; }
     }
 
-    List<Countries> LocalData = new List<Countries> {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-        new Countries() { Name = "Denmark", Code = "DK" }
+    List<Country> LocalData = new List<Country> {
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" }
     };
 }
 
@@ -285,38 +285,38 @@ After initialization, populate the AutoComplete with data using the [DataSource]
 {% tabs %}
 {% highlight razor %}
 
-<SfAutoComplete TValue="string" TItem="Countries" Placeholder="Select a country" DataSource="@LocalData">
+<SfAutoComplete TValue="string" TItem="Country" Placeholder="Select a country" DataSource="@LocalData">
     <AutoCompleteFieldSettings Value="Name" />
 </SfAutoComplete>
 
 @code {
 
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
         public string Code { get; set; }
     }
 
-    List<Countries> LocalData = new List<Countries> {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-        new Countries() { Name = "Denmark", Code = "DK" },
-        new Countries() { Name = "France", Code = "FR" },
-        new Countries() { Name = "Finland", Code = "FI" },
-        new Countries() { Name = "Germany", Code = "DE" },
-        new Countries() { Name = "Greenland", Code = "GL" },
-        new Countries() { Name = "Hong Kong", Code = "HK" },
-        new Countries() { Name = "India", Code = "IN" },
-        new Countries() { Name = "Italy", Code = "IT" },
-        new Countries() { Name = "Japan", Code = "JP" },
-        new Countries() { Name = "Mexico", Code = "MX" },
-        new Countries() { Name = "Norway", Code = "NO" },
-        new Countries() { Name = "Poland", Code = "PL" },
-        new Countries() { Name = "Switzerland", Code = "CH" },
-        new Countries() { Name = "United Kingdom", Code = "GB" },
-        new Countries() { Name = "United States", Code = "US" },
+    List<Country> LocalData = new List<Country> {
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" },
+        new Country() { Name = "France", Code = "FR" },
+        new Country() { Name = "Finland", Code = "FI" },
+        new Country() { Name = "Germany", Code = "DE" },
+        new Country() { Name = "Greenland", Code = "GL" },
+        new Country() { Name = "Hong Kong", Code = "HK" },
+        new Country() { Name = "India", Code = "IN" },
+        new Country() { Name = "Italy", Code = "IT" },
+        new Country() { Name = "Japan", Code = "JP" },
+        new Country() { Name = "Mexico", Code = "MX" },
+        new Country() { Name = "Norway", Code = "NO" },
+        new Country() { Name = "Poland", Code = "PL" },
+        new Country() { Name = "Switzerland", Code = "CH" },
+        new Country() { Name = "United Kingdom", Code = "GB" },
+        new Country() { Name = "United States", Code = "US" },
     };
 }
 
@@ -332,7 +332,7 @@ The AutoComplete allows the users to give input as custom value, which is not re
 {% tabs %}
 {% highlight razor %}
 
-<SfAutoComplete TValue="string" TItem="Countries" Placeholder="Select a country" AllowCustom=true DataSource="@LocalData">
+<SfAutoComplete TValue="string" TItem="Country" Placeholder="Select a country" AllowCustom=true DataSource="@LocalData">
     <AutoCompleteFieldSettings Value="Name" />
 </SfAutoComplete>
 
@@ -341,12 +341,12 @@ The AutoComplete allows the users to give input as custom value, which is not re
 
 ## Configure the suggestion list
 
-By default, suggestion list width automatically adjusts according to the AutoComplete input element's width, and the height of the suggestion list has `300px`. The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) property respectively.
+By default, suggestion list width automatically adjusts according to the AutoComplete input element's width, and the height of the suggestion list has `300px`. The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) properties respectively.
 
 {% tabs %}
 {% highlight razor %}
 
-<SfAutoComplete TValue="string" TItem="Countries" Placeholder="Select a country" DataSource="@LocalData" PopupHeight="300px" PopupWidth="300px">
+<SfAutoComplete TValue="string" TItem="Country" Placeholder="Select a country" DataSource="@LocalData" PopupHeight="300px" PopupWidth="300px">
     <AutoCompleteFieldSettings Value="Name" />
 </SfAutoComplete>
 

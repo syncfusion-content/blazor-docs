@@ -38,7 +38,7 @@ namespace BlazorApplication
 
 The **Localization** library allows you to localize default text content. The AutoComplete component has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.).
 
-In the following examples, demonstrate how to enable **Localization** for AutoComplete in server side Blazor samples. Here, we have used Resource file to translate the static text.
+The following examples demonstrate how to enable **Localization** for AutoComplete in server side Blazor samples. Here, Resource file is used to translate the static text.
 
 The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.NET Core application framework.
 
@@ -115,29 +115,29 @@ namespace blazorDropdowns
 | AutoComplete_ActionFailureTemplate | Die Anfrage ist fehlgeschlagen |
 | AutoComplete_NoRecordsTemplate | Keine Aufzeichnungen gefunden |
 
-* Finally, Specify the culture for AutoComplete using [locale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Locale) property.
+* Finally, specify the culture for AutoComplete using [locale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Locale) property.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-<SfAutoComplete TValue="string" TItem="Countries" Placeholder="e.g. Australia" Locale="de" DataSource="@LocalData">
+<SfAutoComplete TValue="string" TItem="Country" Placeholder="e.g. Australia" Locale="de" DataSource="@LocalData">
     <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
 </SfAutoComplete>
 
 @code {
 
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
         public string Code { get; set; }
     }
 
-    List<Countries> LocalData = new List<Countries> {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-        new Countries() { Name = "Denmark", Code = "DK" }
+    List<Country> LocalData = new List<Country> {
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" }
     };
 }
 ```
@@ -230,6 +230,6 @@ In the following sample, French culture is set to the AutoComplete and no data i
 }
 ```
 
-The output will be as follows.
+
 
 ![Localization in Blazor AutoComplete](./images/blazor-autocomplete-localization.png)

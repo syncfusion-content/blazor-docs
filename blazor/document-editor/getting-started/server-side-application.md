@@ -198,7 +198,7 @@ To load an existing document during control initialization, use the following co
         using (FileStream fileStream = new FileStream(filePath, System.IO.FileMode.Open, System.IO.FileAccess.Read))
         {
             WordDocument document = WordDocument.Load(fileStream, ImportFormatType.Docx);
-            string json = Newtonsoft.Json.JsonConvert.SerializeObject(document);
+            string json = JsonSerializer.Serialize(document);
             document.Dispose();
             //To observe the memory go down, null out the reference of document variable.
             document = null;

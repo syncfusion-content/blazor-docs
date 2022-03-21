@@ -20,7 +20,7 @@ In the following example, the keyPressed method is called every time the key is 
 ```cshtml
 @using Syncfusion.Blazor.Data
 
-<SfComboBox TValue="string" TItem="Countries" @onkeypress="@KeyPressed" DataSource="@Country">
+<SfComboBox TValue="string" TItem="Country" @onkeypress="@KeyPressed" DataSource="@Countries">
     <ComboBoxFieldSettings Text="Name" Value="Code"></ComboBoxFieldSettings>
 </SfComboBox>
 
@@ -29,20 +29,20 @@ In the following example, the keyPressed method is called every time the key is 
     {
         Console.WriteLine("Key Pressed!");
     }
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
 
         public string Code { get; set; }
     }
-    List<Countries> Country = new List<Countries>
+    List<Country> Countries = new List<Country>
     {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-        new Countries() { Name = "Denmark", Code = "DK" },
-        new Countries() { Name = "France", Code = "FR" },
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" },
+        new Country() { Name = "France", Code = "FR" },
     };
 }
 ```
@@ -67,7 +67,7 @@ Blazor provides set of argument types to map to native events. The list of event
 In the following example, the keyPressed method is called every time any key is pressed inside input. But the message will print when you press "c" key.
 
 ```cshtml
-<SfComboBox TValue="string" TItem="Countries" @onkeypress="@(e => KeyPressed(e))" DataSource="@Country">
+<SfComboBox TValue="string" TItem="Country" @onkeypress="@(e => KeyPressed(e))" DataSource="@Countries">
     <ComboBoxFieldSettings Text="Name" Value="Code"></ComboBoxFieldSettings>
 </SfComboBox>
 
@@ -79,20 +79,20 @@ In the following example, the keyPressed method is called every time any key is 
             Console.WriteLine("C was pressed");
         }
     }
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
 
         public string Code { get; set; }
     }
-    List<Countries> Country = new List<Countries>
+    List<Country> Countries = new List<Country>
     {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-        new Countries() { Name = "Denmark", Code = "DK" },
-        new Countries() { Name = "France", Code = "FR" },
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" },
+        new Country() { Name = "France", Code = "FR" },
     };
 }
 ```

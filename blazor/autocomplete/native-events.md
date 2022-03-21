@@ -18,7 +18,7 @@ You can access any native event by using on `<event>` attribute with a component
 In the following example, the keyPressed method is called every time the key is pressed on input.
 
 ```cshtml
-<SfAutoComplete TValue="string" TItem="Countries" @onkeypress="@KeyPressed">
+<SfAutoComplete TValue="string" TItem="Country" @onkeypress="@KeyPressed" DataSource="@LocalData">
     <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
 </SfAutoComplete>
 
@@ -28,19 +28,19 @@ In the following example, the keyPressed method is called every time the key is 
         Console.WriteLine("Key Pressed!");
     }
 
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
         public string Code { get; set; }
     }
 
-    List<Countries> LocalData = new List<Countries> {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-        new Countries() { Name = "Denmark", Code = "DK" },
-        new Countries() { Name = "France", Code = "FR" },
+    List<Country> LocalData = new List<Country> {
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" },
+        new Country() { Name = "France", Code = "FR" },
     };
 }
 ```
@@ -48,7 +48,7 @@ In the following example, the keyPressed method is called every time the key is 
 Also, you can rewrite the above example code as follows using Lambda expressions.
 
 ```cshtml
-<SfAutoComplete TValue="string" @onkeypress="@(() => Console.WriteLine("Key Pressed!"))"></SfAutoComplete>
+<SfAutoComplete TValue="string" DataSource="@LocalData" @onkeypress="@(() => Console.WriteLine("Key Pressed!"))"></SfAutoComplete>
 ```
 
 ## Pass event data to event handler
@@ -65,7 +65,7 @@ Blazor provides set of argument types to map to native events. The list of event
 In the following example, the on keypress method is called every time any key is pressed inside input. But the message will print when you press "a" key.
 
 ```cshtml
-<SfAutoComplete TValue="string" TItem="Countries" @onkeypress="@(e => KeyPressed(e))" >
+<SfAutoComplete TValue="string" TItem="Country" @onkeypress="@(e => KeyPressed(e))" DataSource="@LocalData">
     <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
 </SfAutoComplete>
 
@@ -75,26 +75,26 @@ In the following example, the on keypress method is called every time any key is
       Console.WriteLine("A was pressed");
     }
   }
-  public class Countries
+  public class Country
     {
         public string Name { get; set; }
         public string Code { get; set; }
     }
 
-    List<Countries> LocalData = new List<Countries> {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-        new Countries() { Name = "Denmark", Code = "DK" },
-        new Countries() { Name = "France", Code = "FR" },
+    List<Country> LocalData = new List<Country> {
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" },
+        new Country() { Name = "France", Code = "FR" },
     };
 }
 ```
 
 Using Lambda expression also, you can pass the event data to the event handler.
 
-## List of Native events supported
+## List of native events supported
 
 | List of Native events |  |  | |
 | --- | --- | --- | --- |

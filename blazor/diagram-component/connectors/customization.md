@@ -494,7 +494,7 @@ The following code example illustrates how to customize the appearance of the de
 
 * The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html) property of connector allows to enable/disable certain features of connectors.
 
-* To enable or disable the constraints, refer [Connector Constraints](./constraints).
+* To enable or disable the constraints, refer [Connector Constraints](../constraints).
 
 The following code illustrates how to disable selection.
 

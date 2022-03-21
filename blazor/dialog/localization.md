@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in Blazor Dialog Component | Syncfusion
-description: Checkout and learn here all about Localization in Syncfusion Blazor Dialog component and much more details.
+description: Checkout and learn here all about Localization in the Syncfusion Blazor Dialog component and much more.
 platform: Blazor
 control: Dialog
 documentation: ug
@@ -46,6 +46,6 @@ In the following sample, `French` culture is set to Dialog and change the close 
 
 ```
 
-The output will be as follows.
+
 
 ![Localization in Blazor Dialog](./images/blazor-dialog-localization.png)

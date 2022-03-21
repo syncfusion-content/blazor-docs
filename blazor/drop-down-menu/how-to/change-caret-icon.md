@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Change caret icon in Blazor Dropdown Menu Component | Syncfusion
-description: Checkout and learn here all about Change caret icon in Syncfusion Blazor Dropdown Menu component and more.
+description: Checkout and learn here all about changing the caret icon in Syncfusion Blazor Dropdown Menu component and more.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Change caret icon in Blazor Dropdown Menu Component
 
-Dropdown arrow can be customized on popup open and close. It can be handled in [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_OnOpen) and [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_OnClose) event.
+Dropdown arrow can be customized on popup open and close. It can be handled in the [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_OnOpen) and [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_OnClose) events.
 
-In the following example, the up arrow is updated on popup close and down arrow is updated on popup open using `OnOpen` and `OnClose` event by adding and removing `e-caret-up` class.
+In the following example, the up arrow is updated on popup close and down arrow is updated on popup open using the `OnOpen` and `OnClose` events by adding and removing `e-caret-up` class.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -52,6 +52,6 @@ In the following example, the up arrow is updated on popup close and down arrow 
 
 ```
 
-Output be like
+
 
 ![Changing Caret Icon in Blazor DropDownMenu](./../images/blazor-dropdownmenu-caret-icon.png)

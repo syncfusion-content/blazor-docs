@@ -49,7 +49,7 @@ In the following sample, each list item is split into two columns to display rel
 </style>
 ```
 
-The output will be as follows.
+
 
 ![Blazor DropDownList with ItemTemplate](./images/blazor-dropdownlist-item-template.png)
 
@@ -93,13 +93,13 @@ In the following sample, the selected value is displayed as a combined text of b
 </style>
 ```
 
-The output will be as follows.
+
 
 ![Blazor DropDownList with ValueTemplate](./images/blazor-dropdownlist-value-template.png)
 
 ## Group template
 
-The group header title under which appropriate sub-items are categorized can also be customize with the help of [GroupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_GroupTemplate) property. This template is common for both inline and floating group header template.
+The group header title under which appropriate sub-items are categorized can also be customized with the help of [GroupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_GroupTemplate) property. This template is common for both inline and floating group header template.
 
 In the following sample, employees are grouped according to their city.
 
@@ -135,7 +135,7 @@ In the following sample, employees are grouped according to their city.
 </style>
 ```
 
-The output will be as follows.
+
 
 ![Blazor DropDownList with GroupTemplate](./images/blazor-dropdownlist-group-template.png)
 
@@ -200,7 +200,7 @@ In the following sample, the list items and its headers are designed and display
 </style>
 ```
 
-The output will be as follows.
+
 
 ![Blazor DropDownList with HeaderTemplate](./images/blazor-dropdownlist-header-template.png)
 
@@ -257,8 +257,8 @@ In the following sample, popup list content displays the notification of no data
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-<SfDropDownList TValue="string" TItem="Countries" Placeholder="Select a customer" DataSource="@Country">
-    <DropDownListTemplates TItem="Countries">
+<SfDropDownList TValue="string" TItem="Country" Placeholder="Select a customer" DataSource="@Countries">
+    <DropDownListTemplates TItem="Country">
         <NoRecordsTemplate>
             <span class='norecord'> NO DATA AVAILABLE</span>
         </NoRecordsTemplate>
@@ -266,9 +266,9 @@ In the following sample, popup list content displays the notification of no data
 </SfDropDownList>
 
 @code {
-    public class Countries { }
+    public class Country { }
 
-    List<Countries> Country = new List<Countries> { };
+    List<Country> Countries = new List<Country> { };
 }
 ```
 

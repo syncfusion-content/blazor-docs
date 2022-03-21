@@ -7,7 +7,7 @@ control: Dropdown Menu
 documentation: ug
 ---
 
-# Open a dialog on popup item click in Blazor Dropdown Menu Component
+# Open a Dialog on Popup Item Click in Blazor Dropdown Menu Component
 
 This section explains about how to open a dialog on Dropdown Menu popup item click. This can be achieved by handling dialog open in [ItemSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_ItemSelected) event of the Dropdown Menu.
 
@@ -66,6 +66,6 @@ In the following example, Dialog will open while selecting `Other Folder...` ite
 
 ```
 
-Output be like
+
 
 ![Displaying Dialog while Clicking in Blazor DropDownMenu Item](./../images/blazor-dropdownmenu-with-dialog.png)

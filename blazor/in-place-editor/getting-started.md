@@ -135,7 +135,7 @@ namespace WebApplication1
 {% endhighlight %}
 {% endtabs %}
 
-## Add Style Sheet
+## Add style sheet
 
 Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/appearance/themes#enable-static-web-assets-usage) topic to use static assets in your project.
 
@@ -179,15 +179,15 @@ For Blazor WebAssembly App, Refer the theme style sheet from NuGet in the `<head
 {% endhighlight %}
 {% endtabs %}
 
-## Add Script Reference
+## Add script reference
 
 Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows. Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/common/adding-script-references#enable-static-web-assets-usage) topic to use static assets in your project.
 
 ### Blazor Server App
 
-* For **.NET 6** app, Refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+* For **.NET 6** app, refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
-* For **.NET 5 and .NET 3.X** app, Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For **.NET 5 and .NET 3.X** app, refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
 {% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4" %}
@@ -213,7 +213,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 ### Blazor WebAssembly App
 
-For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html** file.
+For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/index.html" hl_lines="4" %}
@@ -272,7 +272,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 {% endhighlight %}
 {% endtabs %}
 
-> The type of component editor must be configured in the 'Type' Editor In-place property. Also, should configure the two-way binding between the In-place Editor and its EditorComponent. It's used to update the editor component value into the In-place Editor component.
+> The type of component editor must be configured in the 'Type' Editor In-place property. Also, the two-way binding between the In-place Editor and its EditorComponent should be configured. It's used to update the editor component value into the In-place Editor component.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor In-place Editor` component will be rendered in the default web browser.
 
@@ -336,7 +336,7 @@ The following code explains how to initialize a simple In-place Editor with popu
 
 ## Configuring DropDownList
 
-You can render the Blazor DropDownList by changing the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_Type) property as `DropDownList` and configure `DropDownList` component inside the Editor component.
+You can render the Blazor DropDownList by changing the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_Type) property as `DropDownList` and configuring the `DropDownList` component inside the Editor component.
 
 {% tabs %}
 {% highlight razor %}
@@ -379,7 +379,7 @@ You can render the Blazor DropDownList by changing the [Type](https://help.syncf
 
 ## Integrate DatePicker
 
-You can render the Blazor `DatePicker` by changing the `Type` property as `Date` and configure `DatePicker` component inside the Editor component. Also, configure its properties directly in the `Datepicker` component
+You can render the Blazor `DatePicker` by changing the `Type` property as `Date` and configuring the `DatePicker` component inside the Editor component. Also, configure its properties directly in the `Datepicker` component.
 
 {% tabs %}
 {% highlight razor %}
@@ -494,7 +494,7 @@ In the following code, it is configured to render the `DatePicker`, `DropDownLis
 
 ## Submitting data to the server (save)
 
-You can submit editor value to the server by configuring the [SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_SaveUrl), [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_Adaptor) and [PrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_PrimaryKey) property.
+You can submit editor value to the server by configuring the [SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_SaveUrl), [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_Adaptor) and [PrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_PrimaryKey) properties.
 
 | Property   | Usage                                           |
 |------------|---------------------------------------------------------|

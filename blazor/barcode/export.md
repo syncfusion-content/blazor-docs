@@ -11,7 +11,7 @@ documentation: ug
 
 ## Export
 
-Barcode provides support to export its content as an image in the specified image type and downloads it in the browser.
+[Blazor Barcode](https://www.syncfusion.com/blazor-components/blazor-barcode) provides support to export its content as an image in the specified image type and downloads it in the browser.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator

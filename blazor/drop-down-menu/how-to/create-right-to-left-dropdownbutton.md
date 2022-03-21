@@ -7,7 +7,7 @@ control: Dropdown Menu
 documentation: ug
 ---
 
-# Create right-to-left Blazor Dropdown Menu Component
+# Create Right-to-left Blazor Dropdown Menu Component
 
 Dropdown Menu component has RTL support. This can be achieved by setting [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_EnableRtl) as true.
 
@@ -45,6 +45,5 @@ The following example illustrates how to enable right-to-left support in Dropdow
 
 ```
 
-Output be like
 
 ![Right to Left in Blazor DropDownMenu](./../images/blazor-dropdownmenu-right-to-left.png)

@@ -13,7 +13,7 @@ documentation: ug
 
 The popup action item have an icon or image to provide visual representation of the action. To place the icon on a popup item, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_IconCss) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the popup action item.
 
-In the following sample, the icons for edit, delete, mark as read  and like message menu items are added using the `IconCss` property.
+In the following sample, the icons for edit, delete, mark as read and like message menu items are added using the `IconCss` property.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -47,7 +47,7 @@ In the following sample, the icons for edit, delete, mark as read  and like mess
 
 ```
 
-Output be like
+
 
 ![Blazor DropDownMenu displays Icon in Popup Items](./images/blazor-dropdownmenu-with-popup-icon.png)
 
@@ -74,7 +74,7 @@ In the following sample, cut, copy, and paste popup items are grouped using the 
 
 ```
 
-Output be like
+
 
 ![Blazor DropDownMenu with Separator](./images/blazor-dropdownmenu-separator.png)
 
@@ -106,7 +106,7 @@ In the following sample, navigation URL for Flipkart, Amazon, and Snapdeal actio
 
 ```
 
-Output be like
+
 
 ![Blazor DropDownMenu Items with Navigation Link](./images/blazor-dropdownmenu-navigation.png)
 
@@ -138,6 +138,6 @@ Popup items can be customized using the `CssClass` property. We have customize t
 
 ```
 
-Output be like
+
 
 ![Blazor DropDownMenu with Popup Items](./images/blazor-dropdownmenu-with-popup-items.png)
