@@ -18,6 +18,8 @@ There are several commands available in the diagram as follows.
 * Grouping commands
 * Zoom commands
 * Undo/Redo commands
+* FitToPage commands
+
 
 ## Alignment commands
 
@@ -1049,3 +1051,56 @@ The following code example shows how to disable a command and how to modify the 
     }
 }
 ```
+### FitToPage command
+
+The fitToPage command helps to fit the diagram content into the viewport with respect to either width, height or at the whole.
+
+The mode parameter defines whether the diagram has to be horizontally/vertically fit into the viewport with respect to width, height,
+ or entire bounds of the diagram.
+
+ The region parameter defines the region that has to be drawn as an image.
+
+The following code illustrates how to execute FitToPage command.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using Node = Syncfusion.Blazor.Diagram.Node
+
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="600px" Nodes="nodes" Connectors="connectors">
+</SfDiagramComponent>
+@code {
+        //Intialization of all the variables, methods and classes
+        public SfDiagramComponent diagram;
+        FitOptions options = new FitOptions() {Mode = FitMode.Both, Region = DiagramRegion.Content };
+        DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+        DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+        //Creating all the nodes
+        protected override void OnInitialized(){
+         Node node1 = new Node(){
+            ID = "node1",
+            OffsetX = 100,
+            OffsetY = 100,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+         };
+         Node node2 = new Node(){
+             ID = "node2",
+            OffsetX = 500,
+            OffsetY = 700,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+         };
+         nodes.Add(node1);
+         nodes.Add(node2);
+        };
+    //fit the diagram to the page with respect to mode and region
+        private void FitToPage()
+        {
+         diagram.FitToPage(options);
+        }
+}
+```
+![Fit to page Command](./images/FitToPage.gif)
+
