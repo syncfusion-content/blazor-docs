@@ -120,7 +120,7 @@ The excel export provides an option to export the current page into excel. To ex
 
 ### Export hidden columns
 
-The excel export provides an option to export hidden columns of datagrid by defining [IncludeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_IncludeHiddenColumn) as **true**.
+The excel export provides an option to export hidden columns of DataGrid by defining [IncludeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_IncludeHiddenColumn) as **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -173,7 +173,7 @@ The excel export provides an option to export hidden columns of datagrid by defi
 
 ### Export template columns
 
-The excel export provides an option to export template columns of the DataGrid by defining the [IncludeTemplateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_IncludeTemplateColumn) of [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) as true. In the below sample, the CustomerID columns is a template column. The template values cannot be directly exported into the cells and so we need to use [ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelQueryCellInfoEvent) to customize the values of the template columns in Excel file.
+The excel export provides an option to export template columns of the DataGrid by defining the [IncludeTemplateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_IncludeTemplateColumn) of [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) as true. In the following sample, the CustomerID column is a template column. The template values cannot be directly exported into the cells. To customize the values of the template columns in Excel file, you must use [ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelQueryCellInfoEvent).
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -201,7 +201,7 @@ The excel export provides an option to export template columns of the DataGrid b
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_excelexport")  //Id is combination of Grid's ID and itemname
+        if (args.Item.Id == "Grid_excelexport")  // Id is the combination of Grid's ID and item name.
         {
             ExcelExportProperties ExportProperties = new ExcelExportProperties();
             ExportProperties.IncludeTemplateColumn = true;
@@ -238,7 +238,7 @@ The excel export provides an option to export template columns of the DataGrid b
 
 <!-- Show or hide columns on exported excel
 
-You can show a hidden column or hide a visible column while exporting the datagrid by customizing the visibility settings while exporting.
+You can show a hidden column or hide a visible column while exporting the DataGrid by customizing the visibility settings.
 
 This is demonstrated in the below sample code where initially the **CustomerID** is hidden. While exporting, we have changed CustomerID to visible column and Freight as hidden column. Then in the `ExcelExportComplete` event, we have reversed the column's visibility state back to the previous state.
 

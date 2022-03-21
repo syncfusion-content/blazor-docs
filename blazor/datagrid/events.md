@@ -1946,7 +1946,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 ## PdfGroupCaptionTemplateInfo
 
-[PdfGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when exporting the group caption template of the PDF document. It can be used to customize the DataGrid group caption content in PDF document.
+[PdfGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when exporting the group caption template of the PDF document. It can be used to customize the DataGrid group caption content in a PDF document.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -1976,13 +1976,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void PdfGroupCaptionHandler(PdfCaptionTemplateArgs Args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
         Args.Cell.Value = Args.Field + " - " + Args.Key;
     }
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname
+        if (args.Item.Id == "Grid_pdfexport")  // Id is the combination of Grid's ID and item name.
         {
             await this.DefaultGrid.ExportToPdfAsync();
         }
@@ -2282,14 +2282,14 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void ExcelGroupCaptionHandler(ExcelCaptionTemplateArgs Args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
         Args.Cell.Value = Args.Field + " - " + Args.Key;
     }
 
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_excelexport")  //Id is combination of Grid's ID and itemname
+        if (args.Item.Id == "Grid_excelexport")  // Id is the combination of Grid's ID and item name.
         {
             await this.DefaultGrid.ExportToExcelAsync();
         }

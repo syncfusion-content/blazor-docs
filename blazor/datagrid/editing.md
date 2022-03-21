@@ -790,7 +790,7 @@ For Batch edit mode, you have to specify Args.Cancel as true in the [OnCellEdit]
     {
         if (Args.ColumnName == "CustomerID" && Args.Data.OrderID > 1010)
         {
-            //Cancel the Edit Operation
+            //Cancel the Edit Operation.
             Args.Cancel = true;
         }
     }
@@ -798,7 +798,7 @@ For Batch edit mode, you have to specify Args.Cancel as true in the [OnCellEdit]
     {
         if (Args.RowData.OrderID > 1010)
         {
-            //Cancel the Delete Operation
+            //Cancel the Delete Operation.
             Args.Cancel = true;
         }
     }
@@ -806,7 +806,7 @@ For Batch edit mode, you have to specify Args.Cancel as true in the [OnCellEdit]
     {
         if (Args.ColumnName == "ShipCountry" && Args.Data.OrderID > 1005)
         {
-            //Cancel the Update Operation
+            //Cancel the Update Operation.
             Args.Cancel = true;
         }
     }
@@ -834,7 +834,7 @@ For Batch edit mode, you have to specify Args.Cancel as true in the [OnCellEdit]
 
 ## Performing CRUD operation by using separate toolbar
 
-You can perform the CRUD operation externally by using the [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AddRecordAsync), [StartEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_StartEditAsync), [DeleteRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DeleteRecordAsync), [EndEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EndEditAsync), [CloseEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CloseEditAsync) methods.
+You can perform the CRUD operation externally by using the [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AddRecordAsync), [StartEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_StartEditAsync), [DeleteRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DeleteRecordAsync), [EndEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EndEditAsync), and [CloseEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CloseEditAsync) methods.
 
 * `AddRecordAsync` - To add a new record. If no data is passed then add form will be shown.
 * `StartEditAsync` - To edit the selected row.

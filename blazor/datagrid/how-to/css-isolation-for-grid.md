@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# CSS isolation for datagrid component
+# CSS Isolation for DataGrid Component
 
 By using the CSS isolation, you can define component-specific styles by creating a .razor.css file matching the name of the .razor file in the same folder. For example, to apply CSS for `Index` Component, create a file named `Index.razor.css`.
 
@@ -64,4 +64,4 @@ Index.razor.css
 }
 ```
 
-> You can get more information on CSS Isolation [`here`](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/css-isolation?view=aspnetcore-5.0#child-component-support).
+> You can get more information on CSS Isolation [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/css-isolation?view=aspnetcore-5.0#child-component-support).
