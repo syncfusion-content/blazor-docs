@@ -16,7 +16,7 @@ Gantt Chart add and edit dialogs can be opened dynamically by using `OpenAddDial
 <button @onclick="AddDialog">Add Dialog</button>
 <button @onclick="EditDialog">Open Edit dialog task 3</button>
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEditSettings AllowEditing="true" AllowAdding="true"></GanttEditSettings>
 </SfGantt>
@@ -31,7 +31,7 @@ Gantt Chart add and edit dialogs can be opened dynamically by using `OpenAddDial
     {
        this.Gantt.OpenEditDialogAsync(3);
     }
-    public List<TaskData> TaskCollection { get; set; }
+    private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -48,71 +48,74 @@ Gantt Chart add and edit dialogs can be opened dynamically by using `OpenAddDial
         public List<TaskData> SubTasks { get; set; }
     }
 
-    public static List <TaskData> GetTaskCollection() {
-    List <TaskData> Tasks = new List <TaskData> () {
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>() {
         new TaskData() {
             TaskId = 1,
             TaskName = "Project initiation",
             StartDate = new DateTime(2019, 04, 02),
             EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify Site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 40,
-                },
-                new TaskData() {
-                    TaskId = 4,
-                    TaskName = "Soil test approval",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30
-                },
-            })
+        },
+        new TaskData() {
+            TaskId = 2,
+            TaskName = "Identify Site location",
+            StartDate = new DateTime(2019, 04, 02),
+            Duration = "0",
+            Progress = 30,
+            ParentId = 1
+        },
+        new TaskData() {
+            TaskId = 3,
+            TaskName = "Perform soil test",
+            StartDate = new DateTime(2019, 04, 02),
+            Duration = "4",
+            Progress = 40,
+            ParentId = 1
+        },
+        new TaskData() {
+            TaskId = 4,
+            TaskName = "Soil test approval",
+            StartDate = new DateTime(2019, 04, 02),
+            Duration = "0",
+            Progress = 30,
+            ParentId = 1
         },
         new TaskData() {
             TaskId = 5,
             TaskName = "Project estimation",
             StartDate = new DateTime(2019, 04, 02),
             EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 6,
-                    TaskName = "Develop floor plan for estimation",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 7,
-                    TaskName = "List materials",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 40
-                },
-                new TaskData() {
-                    TaskId = 8,
-                    TaskName = "Estimation approval",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "0",
-                    Progress = 30,
-                }
-            })
+        },
+        new TaskData() {
+            TaskId = 6,
+            TaskName = "Develop floor plan for estimation",
+            StartDate = new DateTime(2019, 04, 04),
+            Duration = "3",
+            Progress = 30,
+            ParentId = 5
+        },
+        new TaskData() {
+            TaskId = 7,
+            TaskName = "List materials",
+            StartDate = new DateTime(2019, 04, 04),
+            Duration = "3",
+            Progress = 40,
+            ParentId = 5
+        },
+        new TaskData() {
+            TaskId = 8,
+            TaskName = "Estimation approval",
+            StartDate = new DateTime(2019, 04, 04),
+            Duration = "0",
+            Progress = 30,
+            ParentId = 5
         }
     };
-
     return Tasks;
 }
 }
 ```
+## Demonstration Image for Dialogue
 
 ![Opening Edit Dialog in Blazor Gantt Chart](../images/blazor-gantt-chart-open-edit-dialog.png)
