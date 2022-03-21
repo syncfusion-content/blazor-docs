@@ -11,6 +11,10 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Spinner](https://www.syncfusion.com/blazor-components/blazor-spinner) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
+To get start quickly with Blazor Spinner component, refer to the video below,
+{% youtube
+"youtube:https://www.youtube.com/watch?v=_s1M8gp8wHM"%}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
