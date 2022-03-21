@@ -41,6 +41,5 @@ In the following code 150 items bound to the component, but only 5 items will lo
 }
 ```
 
-The output will shown as follows,
 
 ![Blazor ComboBox with virtualization](./images/blazor_combobox_virtualization.gif)

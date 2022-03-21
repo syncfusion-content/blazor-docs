@@ -15,9 +15,9 @@ This section briefly explains how to bind the value to the DateRangePicker compo
 * Two-Way Data Binding
 * Dynamic Value Binding
 
-## One-Way Binding
+## One-way binding
 
-We can bind the value to the DateRangePicker component directly for `StartDate` and `EndDate` property as mentioned in the following code example. In one-way binding, we need to pass property or variable name along with `@` (For Ex: "@StartValue").
+You can bind the value to the DateRangePicker component directly for `StartDate` and `EndDate` properties as mentioned in the following code example. In one-way binding, You need to pass property or variable name along with `@` (For Ex: "@StartValue").
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -40,9 +40,9 @@ We can bind the value to the DateRangePicker component directly for `StartDate` 
 }
 ```
 
-## Two-Way Data Binding
+## Two-way data binding
 
-Two-way binding can be achieved by using `bind-StartDate` and `bind-EndDate` attribute and its supports string, int, Enum, DateTime, bool types. If component value has been changed, it will affect the all places where we bind the variable for the **bind-StartDate** and **bind-EndDate**attribute.
+Two-way binding can be achieved by using the `bind-StartDate` and `bind-EndDate` attributes and it supports string, int, Enum, DateTime, bool types. If the component value has been changed, it will affect all places where the variable is bound for the **bind-StartDate** and **bind-EndDate**attributes.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -59,9 +59,9 @@ public DateTime? EndValue { get; set; } = DateTime.Now;
 }
 ```
 
-## Dynamic Value Binding
+## Dynamic value binding
 
-We can change the property value dynamically by manually calling the `StateHasChanged()` method inside public event of **Blazor DateRangePicker component** only. This method notifies the component that its state has changed and queues a re-render.
+You can change the property value dynamically by manually calling the `StateHasChanged()` method inside public event of **Blazor DateRangePicker component** only. This method notifies the component that its state has changed and queues a re-render.
 
 There is no need to call this method for native events since it’s called after any lifecycle method has been called and can also be invoked manually to trigger a re-render. Please refer the below mentioned code example.
 

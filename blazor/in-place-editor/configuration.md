@@ -365,8 +365,6 @@ The following code block indicates the intractable and normal display modes with
 
 ```
 
-
-
 ![Blazor In-place Editor Text with Underline](./images/blazor-inplace-editor-text-with-under-line.png)
 
 ## See Also

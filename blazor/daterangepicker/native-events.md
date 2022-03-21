@@ -39,7 +39,7 @@ Also, you can rewrite the above example code as follows using Lambda expressions
 
 ## Pass event data to event handler
 
-Blazor provides set of argument types to map to native events. the list of event types and event arguments are:
+Blazor provides a set of argument types to map to native events. The list of event types and event arguments are:
 
 * Focus Events - FocusEventArgs
 * Mouse Events - MouseEventArgs
@@ -68,7 +68,7 @@ In the following example, the KeyPressed method is called every time any key is 
 
 Using Lambda expression also, you can pass the event data to the event handler.
 
-## List of Native events supported
+## List of native events supported
 
 | List of Native events |  |  | |
 | --- | --- | --- | --- |

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "How to bind data to the Syncfusion Blazor components using gRPC service | Syncfusion"
-description: "How to consume data from gRPC service and bind it to the Syncfusion Component."
-platform: "Blazor"
+title: "Bind data to the Blazor components using gRPC service | Syncfusion"
+description: "Checkout and learn here all about how to consume data from gRPC service and bind it to the Syncfusion Component."
+platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# How to bind data to the Syncfusion Blazor components using gRPC service
+# Bind Data to the Syncfusion Blazor Components Using gRPC Service
 
-In this topic, we are going to discuss how to consume data from [gRPC](https://grpc.io/) service and bind it to a Syncfusion Blazor Component.
+In this topic, you can learn how to consume data from [gRPC](https://grpc.io/) service and bind it to a Syncfusion Blazor Component.
 
 ## Prerequisite software
 
@@ -26,7 +26,7 @@ Open Visual Studio 2019 and follow the steps in the below documentation to **cre
 
 Finally, ensure to select the **ASP.NET Core Hosted** application.
 
-![Create hosted application](../images/create-hosted-application.png)
+![Create hosted application in Blazor](../images/create-hosted-application.png)
 
 ## Adding gRPC dependencies
 
@@ -47,7 +47,7 @@ Then, go to your **Client** project and install the following package:
 
 * [Grpc.Net.Client.Web](https://www.nuget.org/packages/Grpc.Net.Client.Web/)
 
-## Add Proto file and Service to the project
+## Add proto file and service to the project
 
 gRPC works with Proto files which are written in protocol buffer language that define your messaging. To learn more about the language, please visit this [guide](https://developers.google.com/protocol-buffers/docs/proto3#simple).
 
@@ -84,7 +84,7 @@ message Orders {
 
 Go to the proto file `properties` and select the `Protobuf` compiler as the **Build Action**. Then, select the `Client and Server option` as the `gRPC Stub Classes`. Refer to the following screenshot.
 
-![Proto file properties](../images/proto-file-properties.png)
+![Proto file properties in Blazor](../images/proto-file-properties.png)
 
 ## Adding Orders Service
 
@@ -149,7 +149,7 @@ public class OrdersService : BlazorAPPgRPC.Shared.OrdersService.OrdersServiceBas
 
 > The **OrdersService** class is inherited from **BlazorAPPgRPC.Shared.OrdersService.OrdersServiceBase**, which is generated automatically from the `.proto` file.
 
-## Configure gRPC and gRPC-Web in the Server
+## Configure gRPC and gRPC-Web in the server
 
 You need to register the **gRPC service** in your `Startup.cs` file. This enables you to use dependency injection to consume the service across the app. Add the following code to your `ConfigureServices` method in the **Server Startup.cs** file:
 
@@ -212,7 +212,7 @@ In the **Browse** tab, search and install the `Syncfusion.Blazor.Grid` NuGet pac
 
 ![Manage NuGet packages](../images/browse-nuget.png)
 
-> For this demo, we have used `Syncfusion.Blazor`(19.1.0.66) NuGet package.  We will release a new `Syncfusion.Blazor` NuGet package with new enhancement in our every-week release and main release. So, you can check and update to the [latest versions](https://www.nuget.org/packages/Syncfusion.Blazor).
+> For this demo, `Syncfusion.Blazor`(19.1.0.66) NuGet package is used. A new `Syncfusion.Blazor` NuGet package with new enhancement will be released in our every-week release and main release. So, you can check and update to the [latest versions](https://www.nuget.org/packages/Syncfusion.Blazor).
 
 ## Adding Syncfusion Blazor DataGrid component
 
@@ -261,13 +261,13 @@ In previous steps, we have successfully configured the Syncfusion Blazor package
 
 To consume data from the gRPC service, inject the **OrdersServiceClient** into the razor page and assign it to the DataGrid’s `DataSource` property.
 
-Here, we have used the `DataSource` property of the DataGrid component to bind the data to DataGrid in the WebAssembly application.
+Here,  the `DataSource` property of the DataGrid component is used to bind the data to DataGrid in the WebAssembly application.
 
 Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns/) component. Columns are created using the following code, let’s see the properties used and their usage.
 
 * `Field` property specifies the column name of the **Orders** table to display in the grid column.
 * The `Width` property specifies the column width.
-* `Format` property helps to format number, currencies, and date in a particular culture. Here, we have formatted the **OrderDate** column.
+* `Format` property helps to format number, currencies, and date in a particular culture. Here, the **OrderDate** column has been formatted.
 * `HeaderText` property specifies the column header name.
 
 ```cshtml
@@ -309,16 +309,16 @@ else
 
 Now, the DataGrid will look like this while running the application. The displayed records are fetched from the gRPC service.
 
-![Binding data from gRPC service](../images/binding-data-from-grpc-service.png)
+![Binding data from gRPC service in Blazor](../images/binding-data-from-grpc-service.png)
 
 After rendering the Grid with data, you can verify that we are using the gRPC-Web service by using the following way. Open **Network** Tab and reload the index page.
 
 The **Orders** data will be loaded, and you will see the name of the method **GetOrders**. Click on the **GetOrders** name to view the Response Headers which show the **content-type** being **application/grpc-web**.
 
-![Checking gRPC](../images/grpc-check.png)
+![Checking gRPC in Blazor](../images/grpc-check.png)
 
-In the ``Index.razor`` page, we have rendered **Grid with gRPC service**, and in the `FetchData.razor` page, we have rendered **Grid with normal REST service**.
+In the ``Index.razor`` page, **Grid with gRPC service** has been rendered, and in the `FetchData.razor` page, **Grid with normal REST service** has been rendered.
 
 You can see both page **payload size** and **traffic time** in the following screenshot. In the screenshot above, you can see that the **REST service** has sent **616 B**, but the **gRPC service** has sent only **14.4 kB** Also **traffic time** for **REST** is **244ms** and the traffic time for **gRPC** is **15ms** only.
 
-![Difference between gRPC service and REST service](../images/difference-grpc.png)
+![Difference between gRPC service and REST service in Blazor](../images/difference-grpc.png)

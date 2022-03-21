@@ -273,7 +273,7 @@ Heat map supports formatting the axis labels by using the `LabelFormat` property
 
 ```
 
-![Foramtting Axis Label in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-format.png)
+![Formatting Axis Label in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-format.png)
 
 ## Axis intervals
 

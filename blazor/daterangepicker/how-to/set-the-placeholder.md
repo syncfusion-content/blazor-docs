@@ -19,7 +19,6 @@ Using `Placeholder`, you can display a short hint in the input element.
 <SfDateRangePicker TValue="DateTime?" Placeholder="Choose a date range"></SfDateRangePicker>
 ```
 
-The output will be as follows.
 
 ![Blazor DateRangePicker with Hint Element](../images/blazor-daterangepicker-hint-element.png)
 

@@ -20,7 +20,7 @@ The different event argument types for each event are,
 
 ## List of Native events supported
 
-We have provided the following native event support to the Checkbox component:
+The following native event support has been provided to the Checkbox component:
 
 | List of Native events |  |  | | |
 | --- | --- | --- | --- | --- |

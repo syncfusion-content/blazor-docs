@@ -16,7 +16,7 @@ Data binding can be achieved by using the `bind-Value` attribute and it supports
 
 <p>DropDownList value is:<strong>@DropVal</strong></p>
 
-<SfDropDownList TValue="string" Placeholder="e.g. Australia" TItem="Countries" @bind-Value="@DropVal" DataSource="@Country">
+<SfDropDownList TValue="string" Placeholder="e.g. Australia" TItem="Country" @bind-Value="@DropVal" DataSource="@Countries">
     <DropDownListFieldSettings Value="Name"></DropDownListFieldSettings>
 </SfDropDownList>
 
@@ -24,19 +24,19 @@ Data binding can be achieved by using the `bind-Value` attribute and it supports
 
     public string DropVal;
 
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
 
         public string Code { get; set; }
     }
 
-    List<Countries> Country = new List<Countries>
+    List<Country> Countries = new List<Country>
 {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
     };
 }
 ```
@@ -48,7 +48,7 @@ Index value binding can be achieved by using `bind-Index` attribute and it suppo
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-<SfAutoComplete TValue="string" Placeholder="e.g. Australia" TItem="Countries" @bind-Index="@ddlIndex" DataSource="@Country">
+<SfAutoComplete TValue="string" Placeholder="e.g. Australia" TItem="Country" @bind-Index="@ddlIndex" DataSource="@Countries">
     <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
 </SfAutoComplete>
 
@@ -56,19 +56,19 @@ Index value binding can be achieved by using `bind-Index` attribute and it suppo
 
     private int? ddlIndex { get; set; } = 1;
 
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
 
         public string Code { get; set; }
     }
 
-    List<Countries> Country = new List<Countries>
+    List<Country> Countries = new List<Country>
 {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
     };
 }
 ```

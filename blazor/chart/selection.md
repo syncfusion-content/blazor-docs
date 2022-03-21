@@ -169,7 +169,7 @@ By setting the [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ![Blazor Column Chart with Cluster Selection](images/selection/blazor-chart-cluster-selection.png)
 
-## Rectangular Selection
+## Rectangular selection
 
 **DragXY, DragX and DragY**
 
@@ -256,7 +256,7 @@ In the drag complete event, the selected data will be returned as an array colle
 
 ![Blazor Scatter Chart with Rectangular Selection](images/selection/blazor-scatter-chart-rectangular-selection.png)
 
-## Multiple Selection
+## Multiple selection
 
 Multiple points or series can be selected by setting the [IsMultiSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_IsMultiSelect) property to **true**.
 
@@ -410,7 +410,7 @@ A point or series can be selected through legend using the [ToggleVisibility](ht
 
 ![Blazor Column Chart with Legend Selection](images/selection/blazor-chart-legend-selection.png)
 
-## Selection Customization 
+## Selection customization 
 
 The custom style can be applied to selected points or series using the [SelectionStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_SelectionStyle) property.
 

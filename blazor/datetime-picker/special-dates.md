@@ -88,6 +88,4 @@ You can customize specific dates in a DateTimePicker by using the [OnRenderDayCe
 
 ```
 
-The output will be as follows.
-
 ![Blazor DateTimePicker with special dates](./images/blazor_datetimepicker_special_dates.png)

@@ -21,7 +21,6 @@ Start day in a week will differ based on the culture, but you can also customize
 <SfDateRangePicker TValue="DateTime?" Placeholder="Select a range" FirstDayOfWeek=3></SfDateRangePicker>
 ```
 
-The output will be as follows.
 
 ![Customization in Blazor DateRangePicker](./images/blazor-daterangepicker-customization.png)
 

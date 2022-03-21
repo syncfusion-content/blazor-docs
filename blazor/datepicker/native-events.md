@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Native Events in Blazor DatePicker Component | Syncfusion
-description: Checkout and learn here all about Native Events in Syncfusion Blazor DatePicker component and much more.
+description: Checkout and learn here all about native events in Syncfusion Blazor DatePicker component and much more.
 platform: Blazor
 control: DatePicker
 documentation: ug
@@ -15,7 +15,7 @@ This section explains the steps to include native events and pass data to event 
 
 You can access any native event by using on `<event>` attribute with a component. The attribute's value is treated as an event handler.
 
-In the following example, The KeyPressed method is called every time the key is pressed on input.
+In the following example, the KeyPressed method is called every time the key is pressed on input.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -68,7 +68,7 @@ In the following example, the KeyPressed method is called every time any key is 
 
 Using Lambda expression, you can pass the event data to the event handler.
 
-## List of Native events supported
+## List of native events supported
 
 | List of Native events |  |  | |
 | --- | --- | --- | --- |

@@ -17,8 +17,8 @@ Context Menu provides built-in compliance with `WAI-ARIA` specifications. `WAI-A
 
 | Properties | Functionality |
 | ------------ | ----------------------- |
-| menu | This role will be specified for an item which have sub menu. |
-| menuItem | This role will be specified for an item that do not have sub menus. |
+| menu | This role will be specified for an item that has a sub-menu. |
+| menuItem | This role will be specified for an item that does not have sub-menus. |
 | aria-haspopup | Indicates the availability and type of interactive popup element. |
 | aria-expanded | Indicates whether the subtree can be expanded or collapsed, as well as indicates whether its current state is expanded or collapsed. |
 

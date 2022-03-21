@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customizing Templates in Blazor ListView Component | Syncfusion
-description: Checkout and learn here all about Customizing Templates in Syncfusion Blazor ListView component and more.
+description: Checkout and learn here all about customizing templates in Syncfusion Blazor ListView component and more.
 platform: Blazor
 control: Listview
 documentation: ug
@@ -14,8 +14,6 @@ The ListView component is designed to customize each list items and group title.
 ## Header Template
 
 Listview header can be customized with the help of the `HeaderTemplate` property. To customize header template in your application, set your customized template string to `HeaderTemplate` property along with `ShowHeader` property as `true` to display the Listview header.
-
-In the following example, we have rendered Listview with customized header which contains search, add and sort buttons.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
@@ -62,21 +60,20 @@ In the following example, we have rendered Listview with customized header which
 
 ## Template
 
-ListView items can be customized with the help of the `Template` property. To customize list items in your application, set your customized template string to `Template` property.
+ListView items can be customized with the help of the `Template` property. To customize list items in the application, set the customized template string to `Template` property.
 
 The following built-in CSS classes can be used to customize the list-items. 
 
 | CSS class        | Description           |
 | ------------- |-------------|
 | e-list-template, e-list-wrapper | These classes are used to differentiate normal and template rendering, which are mandatory for template rendering. The `e-list-template` class should be added to the root of the ListView element and `e-list-wrapper` class should be added to the template element wrapper.
-| e-list-content | This class is used to align list content and it should be added to the content element <br/><br/> `<div class="e-list-wrapper">`<br/><b>`<span class="e-list-content">ListItem</span>`</b> <br/>`</div>`|
+| e-list-content | This class is used to align list content and it should be added to the content element. <br/><br/> `<div class="e-list-wrapper">`<br/><b>`<span class="e-list-content">ListItem</span>`</b> <br/>`</div>`|
 | e-list-avatar | This class is used for avatar customization. It should be added to the template element wrapper. After adding it, we can customize our element with **Avatar** classes <br/><br/> `<div class="e-list-wrapper`<b>`e-list-avatar`</b>`">` <br/> <b>`<span class="e-avatar e-avatar-circle">MR</span>`</b><br/>`<span class="e-list-content">ListItem</span>`<br/>`</div>`|
-| e-list-avatar-right | This class is used to align avatar to right side of the list item. It should be added to the template element wrapper. After adding it, we can customize our element with **Avatar** classes <br/><br/> `<div class="e-list-wrapper`<b>`e-list-avatar-right`</b>`">` <br/> `<span class="e-list-content">ListItem</span>`<br/><b>`<span class="e-avatar e-avatar-circle">MR</span>`</b><br/> `</div>`|
-| e-list-badge | This class is used for badge customization .It should be added to the template element wrapper. After adding it, we can customize our element with **Badge** classes <br/><br/> `<div class="e-list-wrapper`<b>`e-list-badge`</b>`">` <br/> `<span class="e-list-content">ListItem</span>`<br/><b>`<span class="e-badge e-badge-primary">MR</span>`</b><br/> `</div>`|
-| e-list-multi-line | This class is used for multi-line customization. It should be added to the template element wrapper. After adding it, we can customize List item's header and description <br/><br/>`<div class="e-list-wrapper`<b>`e-list-multi-line`</b>`">` <br/> `<span class="e-list-content">ListItem</span>`<br/>`</div>`|
-| e-list-item-header |This class is used to align a list header and it should be added to the header element along with the multi-line class <br/><br/> `<div class="e-list-wrapper`<b>`e-list-multi-line`</b>`">`<br/> <b>`<span class="e-list-item-header">ListItem Header</span>`</b><br/> `<span class="e-list-content">ListItem</span>`<br/>`</div>`|
+| e-list-avatar-right | This class is used to align avatar to right side of the list item. It should be added to the template element wrapper. After adding it, customize the element with **Avatar** classes. <br/><br/> `<div class="e-list-wrapper`<b>`e-list-avatar-right`</b>`">` <br/> `<span class="e-list-content">ListItem</span>`<br/><b>`<span class="e-avatar e-avatar-circle">MR</span>`</b><br/> `</div>`|
+| e-list-badge | This class is used for badge customization. It should be added to the template element wrapper. After adding it, customize the element with **Badge** classes. <br/><br/> `<div class="e-list-wrapper`<b>`e-list-badge`</b>`">` <br/> `<span class="e-list-content">ListItem</span>`<br/><b>`<span class="e-badge e-badge-primary">MR</span>`</b><br/> `</div>`|
+| e-list-multi-line | This class is used for multi-line customization. It should be added to the template element wrapper. After adding it, customize List item's header and description. <br/><br/>`<div class="e-list-wrapper`<b>`e-list-multi-line`</b>`">` <br/> `<span class="e-list-content">ListItem</span>`<br/>`</div>`|
+| e-list-item-header | This class is used to align a list header and it should be added to the header element along with the multi-line class. <br/><br/> `<div class="e-list-wrapper`<b>`e-list-multi-line`</b>`">`<br/> <b>`<span class="e-list-item-header">ListItem Header</span>`</b><br/> `<span class="e-list-content">ListItem</span>`<br/>`</div>`|
 
-In the following example, we have customized list items with built-in CSS classes.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
@@ -234,9 +231,9 @@ In the following example, we have customized list items with built-in CSS classe
 
 ## Group template
 
-ListView group header can be customized with the help of the `GroupTemplate` property. To customize the group template in your application, set your customized template string to `GroupTemplate` property.
+ListView group header can be customized with the help of the `GroupTemplate` property. To customize the group template in the application, set the customized template string to `GroupTemplate` property.
 
-In the following example, we have grouped Listview based on the category. The category of each list item should be mapped with `GroupBy` field of the data. We have also displayed grouped list items count in the group list header.
+In the following example, Listview is grouped based on the category. The category of each list item should be mapped with `GroupBy` field of the data. The grouped list items have also displayed count in the group list header.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists

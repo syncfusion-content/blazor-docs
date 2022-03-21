@@ -40,7 +40,7 @@ Create buttons to call add and remove methods, which will add and remove a serie
 
 **Step 3:**
 
-To add a new series to the chart dynamically use the code below in the **AddChartSeries** method. This code adds a new series data to the series list named **SeriesCollection** mapped to the [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html). 
+To add a new series to the chart dynamically, use the code below in the **AddChartSeries** method. This code adds a new series data to the series list named **SeriesCollection** mapped to the [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html). 
 
 ```c#
 public void AddChartSeries()
@@ -56,7 +56,7 @@ public void AddChartSeries()
 
 **Step 4:**
 
-To remove a series from the chart dynamically use the code below in the **RemoveChartSeries** method. This code removes a series data from the series list named **SeriesCollection** mapped to the [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html).
+To remove a series from the chart dynamically, use the code below in the **RemoveChartSeries** method. This code removes a series data from the series list named **SeriesCollection** mapped to the [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html).
 
 ```c#
 public void RemoveChartSeries()
@@ -96,7 +96,7 @@ By clicking the **Add Chart Series** button a new series will be added to the ch
 
     List<SeriesData> SeriesCollection;
 
-    // Here we have added the chart series by adding series data to the "SeriesCollection" list.
+    // Here, the chart series has been added by adding series data to the "SeriesCollection" list.
     public void AddChartSeries()
     {
         SeriesCollection.Add(new SeriesData
@@ -107,7 +107,7 @@ By clicking the **Add Chart Series** button a new series will be added to the ch
         });
     }
 
-    // Here we have removed the chart series by removing the series data in the "SeriesCollection" list.
+    // Here, the chart series has been removed by removing the series data in the "SeriesCollection" list.
     public void RemoveChartSeries()
     {
         if (SeriesCollection.Count > 0)

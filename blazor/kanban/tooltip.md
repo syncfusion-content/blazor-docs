@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Blazor Kanban Component | Syncfusion
-description: Checkout and learn here all about Tooltip in Syncfusion Blazor Kanban component and much more details.
+description: Checkout and learn here all about tooltip in Syncfusion Blazor Kanban component and much more details.
 platform: Blazor
 control: Kanban
 documentation: ug
@@ -70,7 +70,5 @@ The tooltip is used to show the card information when the cursor hover over the 
 }
 
 ```
-
-Output be like the below.
 
 ![Blazor Kanban displays Tooltip](./images/blazor-kanban-tooltip.png)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: WIP Validation in Blazor Kanban Component | Syncfusion
-description: Checkout and learn here all about WIP Validation in Syncfusion Blazor Kanban component and much more.
+description: Checkout and learn here all about WIP validation in Syncfusion Blazor Kanban component and much more.
 platform: Blazor
 control: Kanban
 documentation: ug
@@ -82,7 +82,5 @@ The `MaxCount` property is used to specify the maximum cards hold on particular 
 }
 
 ```
-
-Output be like the below.
 
 ![Validation in Blazor Kanban](./images/blazor-kanban-validation.png)

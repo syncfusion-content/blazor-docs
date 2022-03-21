@@ -9,7 +9,7 @@ documentation: ug
 
 # Zooming in Blazor Charts Component
 
-## Enable Zooming
+## Enable zooming
 
 The chart can be zoomed in three different ways.
 
@@ -154,7 +154,7 @@ By default, zoom in, zoom out, pan, and reset buttons are available in the toolb
 
 ![Zooming Option in Blazor Column Chart Toolbar](images/zoom/blazor-column-chart-zoom-in-toolbar.png)
 
-## Enable Pan
+## Enable pan
 
 By using the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnablePan) property, one can pan the zoomed chart without the help of toolbar items.
 
@@ -196,7 +196,7 @@ By using the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ![Zooming with Pan in Blazor Column Chart Toolbar](images/zoom/blazor-column-chart-zoom-pan.png)
 
-## Enable Scrollbar
+## Enable scrollbar
 
 The [EnableScrollbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnableScrollbar) property can be used to add a scrollbar to a zoomed chart. The chart can be panned or zoomed using this scrollbar.
 

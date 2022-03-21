@@ -11,6 +11,10 @@ documentation: ug
 
 The Dialog supports to `drag` within its target container by grabbing the Dialog header, which allows the user to reposition the Dialog dynamically.
 
+To get started quickly with draggable in Blazor Dialog Component, you can check the video below.
+
+{% youtube "https://www.youtube.com/watch?v=qNW5d7C2L7g" %}
+
 ```cshtml
 
 @using Syncfusion.Blazor.Popups

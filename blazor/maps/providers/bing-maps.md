@@ -9,11 +9,11 @@ documentation: ug
 
 # Bing Maps in Blazor Maps Component
 
-Bing Maps is a online Maps provider, owned by Microsoft, for accessing the external geospatial imagery services for deep-zoom satellite view which is supported in the Blazor Maps component. This provides the ability to visualize satellite, aerial, and street Maps without using any external shape files. As like OSM, it provide Maps tile images based on our requests and combines those images into a single one to display Maps area.
+Bing Maps is an online Maps provider, owned by Microsoft, for accessing the external geospatial imagery services for deep-zoom satellite view which is supported in the Blazor Maps component. This provides the ability to visualize satellite, aerial, and street Maps without using any external shape files. As like OSM, it provides Maps tile images based on the requests and combines those images into a single one to display Maps area.
 
 ## Adding Bing Maps
 
-The Bing Maps can be rendered by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property with the URL generated from the `GetBingUrlTemplate` method in the Maps component. The format of the required URL of Bing Maps varies from other map providers. As a result, we have included a built-in `GetBingUrlTemplate` method that returns the URL in a generic format. In the meantime, a subscription key is required for Bing Maps. Follow the steps in this [link](https://www.microsoft.com/en-us/maps/create-a-bing-maps-key) to generate an API key, then append it to the Bing Maps URL before passing it to the `GetBingUrlTemplate` method. The URL returned by this method must be passed to the `UrlTemplate` property.
+The Bing Maps can be rendered by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property with the URL generated from the `GetBingUrlTemplate` method in the Maps component. The format of the required URL of Bing Maps varies from other map providers. As a result, a built-in `GetBingUrlTemplate` method has been included that returns the URL in a generic format. In the meantime, a subscription key is required for Bing Maps. Follow the steps in this [link](https://www.microsoft.com/en-us/maps/create-a-bing-maps-key) to generate an API key, then append it to the Bing Maps URL before passing it to the `GetBingUrlTemplate` method. The URL returned by this method must be passed to the `UrlTemplate` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -33,7 +33,7 @@ The Bing Maps can be rendered by setting the [UrlTemplate](https://help.syncfusi
 }
 ```
 
-> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
+> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
 ![Blazor Bing Maps](../images/MapProviders/blazor-bing-maps.png)
 
@@ -68,7 +68,7 @@ The above types can also be rendered in the Maps component by specifying their U
 }
 ```
 
-> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
+> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
 ![Blazor Bing Maps with CanvasLight](../images/MapProviders/blazor-bing-maps-with-canvas.png)
 
@@ -101,7 +101,7 @@ Bing Maps layer can be zoomed and panned. Zooming helps to get a closer look at 
 }
 ```
 
-> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
+> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
 ![Blazor Bing Maps with Zooming](../images/MapProviders/blazor-bing-maps-zooming.png)
 
@@ -151,7 +151,7 @@ Markers can be added to the layers of Bing Maps by setting the corresponding loc
 }
 ```
 
-> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
+> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
 ![Blazor Bing Maps with Markers and Navigation Line](../images/MapProviders/blazor-bing-maps-marker-and-line.png)
 
@@ -182,6 +182,6 @@ Any GeoJSON shape can be rendered as a sublayer on top of the Bing Maps layer fo
 }
 ```
 
-> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
+> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
 ![Blazor Bing Maps with Sublayer](../images/blazor-bing-map-sublayer.PNG)

@@ -38,7 +38,7 @@ namespace BlazorApplication
 
 The **Localization** library allows you to localize default text content. The ComboBox component has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.).
 
-The following example demonstrates how to enable **Localization** for ComboBox in server side Blazor samples. Here, we have used Resource file to translate the static text.
+The following example demonstrates how to enable **Localization** for ComboBox in server side Blazor samples. Here, Resource file is used to translate the static text.
 
 The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.NET Core application framework.
 
@@ -228,6 +228,5 @@ In the following sample, French culture is set to the ComboBox and no data is lo
 }
 ```
 
-The output will be as follows.
 
 ![Localization in Blazor ComboBox](./images/blazor-combobox-localization.png)
