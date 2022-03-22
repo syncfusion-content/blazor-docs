@@ -1084,7 +1084,7 @@ protected override void OnInitialized()
 ```
 ### BringIntoCenter
 
-The BringIntoView command brings the specified rectangular region into the viewport of the diagram.
+The BringIntoCenter command brings the specified rectangular region into the center of the viewport of the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
