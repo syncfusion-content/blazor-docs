@@ -43,13 +43,13 @@ In the Gantt Chart component, you can hide chart part and display Tree Grid part
             new TaskData() {
                 TaskId = 1,
                 TaskName = "Project initiation",
-                StartDate = new DateTime(2019, 04, 02),
-                EndDate = new DateTime(2019, 04, 21)
+                StartDate = new DateTime(2022, 01, 04),
+                EndDate = new DateTime(2022, 01, 23),
             },
             new TaskData() {
                 TaskId = 2,
                 TaskName = "Identify Site location",
-                StartDate = new DateTime(2019, 04, 02),
+                StartDate = new DateTime(2022, 01, 04),
                 Duration = "4",
                 Progress = 50,
                 ParentId = 1,
@@ -57,7 +57,7 @@ In the Gantt Chart component, you can hide chart part and display Tree Grid part
             new TaskData() {
                 TaskId = 3,
                 TaskName = "Perform soil test",
-                StartDate = new DateTime(2019, 04, 02),
+                StartDate = new DateTime(2022, 01, 04),
                 Duration = "4",
                 Progress = 50,
                 ParentId = 1,
