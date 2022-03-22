@@ -133,7 +133,7 @@ To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 
 ![Connector Tool in Blazor Diagram](images/blazor-diagram-connector-tool.gif)
 
-## Text
+## Drawing Text Node through the drawing tool
 
 Diagram allows you to create a textNode, when you click on the diagram page. The following code illustrates how to draw a text.
 
