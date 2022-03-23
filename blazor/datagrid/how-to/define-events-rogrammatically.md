@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Defining events programmatically in Blazor DataGrid Component | Syncfusion
+title: Define events in Blazor DataGrid Component | Syncfusion
 description: Checkout and learn here all about defining events programmatically in the Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
