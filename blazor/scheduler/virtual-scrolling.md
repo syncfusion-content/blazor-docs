@@ -22,6 +22,7 @@ To achieve better performance in the Scheduler when loading a large number of re
     <ScheduleEventSettings DataSource="@AppointmentData"></ScheduleEventSettings>
     <ScheduleViews>
         <ScheduleView Option="View.TimelineMonth" AllowVirtualScrolling="true"></ScheduleView>
+        <ScheduleView Option="View.TimelineYear" Orientation="Syncfusion.Blazor.Schedule.Orientation.Vertical" AllowVirtualScrolling="true" IsSelected="true"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
 
@@ -70,9 +71,15 @@ To achieve better performance in the Scheduler when loading a large number of re
                     number = random.Next(max);
                 } while (listNumbers.Contains(number));
                 listNumbers.Add(number);
-                var startDate = date.AddDays(number);
-                startDate = startDate.AddMilliseconds((((number % 10) * 10) * (1000 * 60)));
-                var endDate = startDate.AddMilliseconds(((1440 + 30) * (1000 * 60)));
+                int Month = random.Next(1, 12);
+                int Date = random.Next(1, 28);
+                int Hour = random.Next(1, 24);
+                int Minutes = random.Next(1, 60);
+                DateTime YearStart = new DateTime(DateTime.Now.Year, 1, 1);
+                DateTime start = new DateTime(YearStart.Year, Month, Date, Hour, Minutes, 0);
+                DateTime end = new DateTime(start.Ticks).AddHours(2);
+                DateTime startDate = new DateTime(start.Ticks);
+                DateTime endDate = new DateTime(end.Ticks);
                 data.Add(new EventData
                 {
                     Id = id,
@@ -137,6 +144,7 @@ In Blazor Scheduler, templates can be applied when `AllowVirtualScrolling` prope
     </ScheduleEventSettings>
     <ScheduleViews>
         <ScheduleView Option="View.TimelineMonth" AllowVirtualScrolling="true"></ScheduleView>
+        <ScheduleView Option="View.TimelineYear" Orientation="Syncfusion.Blazor.Schedule.Orientation.Vertical" AllowVirtualScrolling="true" IsSelected="true"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
 
@@ -188,9 +196,15 @@ In Blazor Scheduler, templates can be applied when `AllowVirtualScrolling` prope
                     number = random.Next(max);
                 } while (listNumbers.Contains(number));
                 listNumbers.Add(number);
-                var startDate = date.AddDays(number);
-                startDate = startDate.AddMilliseconds((((number % 10) * 10) * (1000 * 60)));
-                var endDate = startDate.AddMilliseconds(((1440 + 30) * (1000 * 60)));
+                int Month = random.Next(1, 12);
+                int Date = random.Next(1, 28);
+                int Hour = random.Next(1, 24);
+                int Minutes = random.Next(1, 60);
+                DateTime YearStart = new DateTime(DateTime.Now.Year, 1, 1);
+                DateTime start = new DateTime(YearStart.Year, Month, Date, Hour, Minutes, 0);
+                DateTime end = new DateTime(start.Ticks).AddHours(2);
+                DateTime startDate = new DateTime(start.Ticks);
+                DateTime endDate = new DateTime(end.Ticks);
                 data.Add(new EventData
                 {
                     Id = id,
