@@ -697,11 +697,11 @@ Since data is bound to Grid using DataSource property, CRUD actions will be refl
 
 > Please find the sample from this [Github](https://github.com/SyncfusionExamples/blazor-server-datagrid-efcore-crud/) location.
 
-## Cancel CRUD operation by using Condition
+## Cancel CRUD operation by using condition
 
 You can cancel the default CRUD operation by specifying Args.Cancel as true based on the corresponding Args.RequestType values.
 
-### Cancel CRUD operation for Normal/Dialog EditMode
+### Cancel CRUD operation for Normal/Dialog edit mode
 
 For Normal/Dialog edit mode, you have to specify Args.Cancel as true in the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event.
 
@@ -764,7 +764,7 @@ For Normal/Dialog edit mode, you have to specify Args.Cancel as true in the [OnA
 }
 ```
 
-### Cancel CRUD operation for Batch EditMode
+### Cancel CRUD operation for Batch edit mode
 
 For Batch edit mode, you have to specify Args.Cancel as true in the [OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit)/[OnBatchDelete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchDelete)/[OnCellSave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellSave) events based on the corresponding CRUD operation.
 
