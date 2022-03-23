@@ -808,7 +808,7 @@ The following GIF represent the datagrid with Custom External form editing,
 
 ## Use edit template in foreign key column
 
-By default, the foreign key column renders the DropDownList component as a editor component while editing. Other editable component can be rendered using the EditTemplate feature of Grid. The following example demonstrates the way of using edit template with ComboBox component in the foreign column.
+By default, the foreign key column renders the DropDownList component as an editor component while editing. Other editable components can be rendered using the EditTemplate feature of Grid. The following example demonstrates the way of using edit template with ComboBox component in the foreign column.
 
 In the following code example, the Employee Name is a foreign key column. When editing, the ComboBox component is rendered instead of DropDownList.
 

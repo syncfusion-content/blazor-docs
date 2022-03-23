@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Define the events programmatically in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Define the events programmatically in Syncfusion Blazor DataGrid component and more.
+title: Defining events programmatically in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn here all about defining events programmatically in the Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Define the GridEvents programmatically in DataGrid
+# Define the GridEvents Programmatically in DataGrid
 
-GridEvents will be defined as child razor component to Grid component. Instead we can define the GridEvents programmatically using the Grid reference.
+GridEvents will be defined as child razor component to Grid component. Instead, you can define the GridEvents programmatically using the Grid reference.
 
-In the below demo, We have programmatically defined the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event to prevent the edit action for certain records.
+In the following demo, the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event is defined programmatically to prevent the edit action for certain records.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
