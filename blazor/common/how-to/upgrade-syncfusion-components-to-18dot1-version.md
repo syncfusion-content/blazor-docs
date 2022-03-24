@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Configure Syncfusion Blazor Client Resources in Production Environment in Blazor - Syncfusion
+title: Configure Syncfusion Blazor Client Resources in Production Environment
 description: Check out the documentation for Configure Syncfusion Blazor Client Resources in Production Environment in Blazor
 platform: Blazor
 component: Common

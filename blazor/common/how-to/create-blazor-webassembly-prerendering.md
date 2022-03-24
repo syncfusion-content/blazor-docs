@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Create a Blazor WebAssembly Application with Prerendering | Syncfusion
+title: Create a Blazor WebAssembly Application with Prerendering | Syncfusion
 description: Checkout and learn here all about creating a Blazor WebAssembly Application with Prerendering and much more.
 platform: Blazor
 component: Common

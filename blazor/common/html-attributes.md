@@ -1,7 +1,7 @@
 ---
 layout: post
 title: HTML Attributes in Blazor - Syncfusion
-description: Check out the documentation for HTML Attributes in Blazor
+description: Check out the documentation for HTML Attributes and supported Blazor components with equivalent properties
 platform: Blazor
 component: Common
 documentation: ug

@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# How to Customize the Font Size and Color in Blazor components
+# How to customize the font size and color in Blazor components
 
 ## Install Web Compiler
 
@@ -17,11 +17,11 @@ Install the Web Compiler to compile the `SCSS` files in the Blazor Applications.
 
 1. Open the Visual Studio 2019 and click the **Extensions** in the Visual Studio toolbar.
 
-    ![Extension in Blazor](../images/extensions.png)
+    ![Extension](../images/extensions.png)
 
 2. Download and install the **Web Compiler** in the Visual Studio 2019.
 
-    ![WebCompiler in Blazor](../images/webcompiler.png)
+    ![WebCompiler](../images/webcompiler.png)
 
 ## Create a Blazor Server Application in Visual Studio 2019
 
@@ -51,7 +51,7 @@ Install the Web Compiler to compile the `SCSS` files in the Blazor Applications.
 
 4. Right-click the `SCSS` file and click the Web Compiler to compile the file.
 
-    ![compile in Blazor](../images/compile.png)
+    ![compile](../images/compile.png)
 
 5. The **compilerconfig.json** file is created. Then provide the location of the compiled CSS file and include path like the following code snippet.
 

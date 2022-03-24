@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Upgrade Syncfusion Components to Latest Version in Blazor - Syncfusion
-description: Check out the documentation for Upgrade Syncfusion Components to Latest Version in Blazor
+description: Checkout and learn here all about how to upgrade Syncfusion components to the latest version in Blazor
 platform: Blazor
 component: Common
 documentation: ug
@@ -45,7 +45,7 @@ Before restoring the NuGet packages, clean the older versions of Syncfusion Blaz
 
 The following steps explain how to clean the cache:
 
-1. Delete the Syncfusion Blazor NuGet packages from the installed location `{System-driver}\Users\{user-name}\.nuget\packages\`. In Windows, the installed location of Syncfusion Blazor NuGet packages can be found using `%userprofile%\.nuget\packages\`.
+1. Delete the Syncfusion Blazor NuGet packages from the installed location `{System-driver}\Users\{user-name}\.nuget\packages\`. In Windows, the installed location of Syncfusion Blazor NuGet packages can be found using `%user profile%\.nuget\packages\`.
 
 2. Update the latest version of Syncfusion Blazor NuGet packages.
 
