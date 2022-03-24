@@ -192,7 +192,7 @@ Set the app's supported cultures. Also, ensure the app is configured to process 
 
 {% tabs %}
 
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="7 11 13 14 15 16 17 20 33" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="7 11 13 14 15 16 17 20 31" %}
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -232,7 +232,7 @@ app.Run();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="7 12 13" %}
 
 public class Startup
 {
@@ -300,7 +300,7 @@ Set the current culture in a cookie immediately after opening <body> tag of `Pag
 
 {% tabs %}
 
-{% highlight c# tabtitle=".NET 6 (_Host.cshtml)" %}
+{% highlight c# tabtitle=".NET 6 (_Host.cshtml)" hl_lines="5 6 7 8 9 10" %}
 @using Microsoft.AspNetCore.Localization
 @using System.Globalization
 @{
@@ -314,7 +314,7 @@ Set the current culture in a cookie immediately after opening <body> tag of `Pag
 }
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (_Host.cshtml)" %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (_Host.cshtml)" hl_lines="6 7 8 9 10 11" %}
 @using Microsoft.AspNetCore.Http
 @using Microsoft.AspNetCore.Localization
 @using System.Globalization
@@ -341,22 +341,19 @@ To provide UI to allow a user to select a culture, use a redirect-based approach
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 
-CHECK:[Route("[controller]/[action]")]
-namespace ScheduleSample.Controllers
+[Route("[controller]/[action]")]
+public class CultureController : Controller
 {
-    public class CultureController : Controller
+    public IActionResult SetCulture(string culture, string redirectUri)
     {
-        public IActionResult SetCulture(string culture, string redirectUri)
+        if (culture != null)
         {
-            if (culture != null)
-            {
-                HttpContext.Response.Cookies.Append(
-                    CookieRequestCultureProvider.DefaultCookieName,
-                    CookieRequestCultureProvider.MakeCookieValue(
-                        new RequestCulture(culture)));
-            }
-            return LocalRedirect(redirectUri);
+            HttpContext.Response.Cookies.Append(
+                CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(
+                    new RequestCulture(culture)));
         }
+        return LocalRedirect(redirectUri);
     }
 }
 
@@ -476,7 +473,7 @@ Add JS function in `wwwroot/index.html` file (after Blazor's `<script>` tag and 
 
 {% tabs %}
 
-{% highlight cshtml tabtitle="wwwroot/index.html" %}
+{% highlight cshtml tabtitle="wwwroot/index.html" hl_lines="3 4 5 6" %}
 
 <script src="_framework/blazor.webassembly.js"></script>
 <script>
@@ -494,7 +491,7 @@ In `Program.cs` use JS interop to call above function and retrieve the user's cu
 
 {% tabs %}
 
-{% highlight c# tabtitle=".NET 6 (Program.cs)" %}
+{% highlight c# tabtitle=".NET 6 (Program.cs)" hl_lines="9 13 14 15 16 17 1819 20 21 22 23 24 25 26 27" %}
 
 using Microsoft.JSInterop;
 using System.Globalization;
@@ -528,7 +525,7 @@ await builder.Build().RunAsync();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (Program.cs)" %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (Program.cs)" hl_lines="13 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31" %}
 
 using Microsoft.JSInterop;
 using System.Globalization;
