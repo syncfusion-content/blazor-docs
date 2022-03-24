@@ -40,4 +40,4 @@ container.DocumentEditor.Selection.NavigatePreviousRevisionAsync();
 
 In DocumentEditor, we have built-in review panel in which we have provided support for filtering changes based on the user.
 
-![Track changes](images/track-changes.png)
+![Track changes in Blazor DocumentEditor](images/track-changes.png)

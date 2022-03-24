@@ -60,7 +60,7 @@ Refer to the following example.
         stream.Dispose();
         //To observe the memory go down, null out the reference of stream variable.
         stream = null;
-        sfdtString = JsonConvert.SerializeObject(document);
+        sfdtString = System.Text.Json.JsonSerializer.Serialize(document);
         document.Dispose();
         //To observe the memory go down, null out the reference of document variable.
         document = null;

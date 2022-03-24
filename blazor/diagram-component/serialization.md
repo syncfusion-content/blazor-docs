@@ -11,6 +11,14 @@ documentation: ug
 
 Serialization is the process of saving and loading the state persistence of the diagram.
 
+## Two-way binding
+
+While saving and loading the diagram, we have to use two-way binding such as @bind for nodes and connectors.
+
+```cshtml
+<SfDiagramComponent @ref="@diagram" @bind-Connectors="@connectors" @bind-Nodes="@nodes"></SfDiagramComponent>
+```
+
 ## Save the diagram as string
 
 While saving the [diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) is serialized as a string. The [SaveDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SaveDiagram) method of the diagram helps to serialize the diagram as a string. The following code illustrates how to save the diagram.

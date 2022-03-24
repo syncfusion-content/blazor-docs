@@ -523,7 +523,7 @@ namespace EFDropDown.Shared.DataAccess
 
 ### Create data access layer to perform data operation
 
-Now you need to create a class named **OrderDataAccessLayer**, which act as data access layer for retrieving the records from the database table.
+Now, you need to create a class named **OrderDataAccessLayer**, which act as data access layer for retrieving the records from the database table.
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
@@ -604,7 +604,7 @@ namespace EFDropDown.Controllers
 
 ### Configure DropDownList component using Web API adaptor
 
-Now you can configure the DropDownList using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with web api, you need to use WebApiAdaptor.
+Now, you can configure the DropDownList using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with web api, you need to use WebApiAdaptor.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
