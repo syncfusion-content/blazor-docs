@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Drag and Drop in Blazor FileManager Component | Syncfusion
-description: Checkout and learn here all about Drag and Drop in Syncfusion Blazor FileManager component and more.
+description: Checkout and learn here all about drag and drop in Syncfusion Blazor FileManager component and more.
 platform: Blazor
 control: File Manager
 documentation: ug

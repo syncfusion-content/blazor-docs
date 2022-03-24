@@ -168,7 +168,7 @@ The following sample depicts how to filter the data with case-sensitive.
 }
 ```
 
-## Custom Filtering
+## Custom filtering
 
 The AutoComplete component filter queries can be customized. You can also use your own filter libraries to filter data like Fuzzy search.
 

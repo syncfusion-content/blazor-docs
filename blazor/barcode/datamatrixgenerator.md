@@ -29,7 +29,7 @@ A page or printed media with barcode often appears colorful in the background an
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
 
-<SfDataMatrixGenerator Width="200" ForeColor='red' Height="150" Value="SYNCFUSION"></SfDataMatrixGenerator>
+<SfDataMatrixGenerator Width="200" ForeColor="red" Height="150" Value="SYNCFUSION"></SfDataMatrixGenerator>
 
 ```
 

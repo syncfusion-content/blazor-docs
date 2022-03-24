@@ -24,7 +24,7 @@ The following example code illustrates how to process the sfdt in server-side.
 @using Syncfusion.Blazor.DocumentEditor
 @using System.IO
 @using System.Net
-@using Newtonsoft.Json
+@using System.Text.Json
 @using Syncfusion.DocIORenderer 
 
 <button @onclick="ExportAsPdf">Export as Pdf</button>
@@ -50,7 +50,7 @@ The following example code illustrates how to process the sfdt in server-side.
         stream.Dispose();
         //To observe the memory go down, null out the reference of stream variable.
         stream = null;
-        sfdtString = JsonConvert.SerializeObject(document);
+        sfdtString = JsonSerializer.Serialize(document);
         document.Dispose();
         //To observe the memory go down, null out the reference of document variable.
         document = null;
@@ -66,7 +66,7 @@ The following example code illustrates how to process the sfdt in server-side.
     public async void ExportAsPdf()
     {
         SfDocumentEditor editor = container.DocumentEditor;
-        string base64Data = await editor.SaveAsBlobAsync(FormatType.Docx);
+        string base64Data = await editor.SaveAsBlob(FormatType.Docx);
         byte[] data = Convert.FromBase64String(base64Data);
         //To observe the memory go down, null out the reference of base64Data variable.
         base64Data = null;
@@ -90,3 +90,5 @@ The following example code illustrates how to process the sfdt in server-side.
     }
 }
 ```
+
+Get the complete working sample in this [`link`](https://github.com/SyncfusionExamples/Export-document-as-PDF-in-Document-Editor/tree/main/Blazor).

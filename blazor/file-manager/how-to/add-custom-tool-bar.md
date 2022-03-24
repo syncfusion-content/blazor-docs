@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Adding Custom Item To Toolbar in Blazor FileManager | Syncfusion
-description: Learn here all about Adding Custom Item To Toolbar in Syncfusion Blazor FileManager component and more.
+title: Adding Custom Item to Toolbar in Blazor FileManager | Syncfusion
+description: Learn here all about adding custom item to toolbar in Syncfusion Blazor FileManager component and more.
 platform: Blazor
 control: File Manager
 documentation: ug
 ---
 
-# Adding Custom Item To Toolbar in Blazor FileManager Component
+# Adding Custom Item to Toolbar in Blazor FileManager Component
 
 The toolbar items can be customized using the `ToolbarSettings` API and `ToolbarItemClicked` events.
 
-The following example shows adding a custom item in the toolbar. The new toolbar button is added using `ToolbarSettings`. The  event is used to add an `ToolbarItemClicked` event handler to the new toolbar button.
+The following example shows adding a custom item in the toolbar. The new toolbar button is added using `ToolbarSettings`. The event is used to add an `ToolbarItemClicked` event handler to the new toolbar button.
 
 ```cshtml
 

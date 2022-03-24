@@ -42,8 +42,8 @@ You can use the following key shortcuts to access the AutoComplete without inter
 | <kbd>Alt + Down</kbd> | Opens the popup list. |
 | <kbd>Alt + Up</kbd> | In popup hidden state, opens the popup list. In popup open state, closes the popup list. |
 | <kbd>Esc(Escape)</kbd> | Closes the popup list when it is in open state then removes the selection. |
-| <kbd>Home</kbd> | Cursor moves to before of the first character in input. |
-| <kbd>End</kbd> | Cursor moves to next of the last character in input. |
+| <kbd>Home</kbd> | Moves the cursor before the first character in input. |
+| <kbd>End</kbd> | Moves the cursor next to the last character in input. |
 
 > In the following sample, disable the AutoComplete component using <kbd>t</kbd> keys.
 
