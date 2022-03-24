@@ -71,4 +71,4 @@ In the Gantt Chart component, you can hide chart part and display Tree Grid part
 
 The following screenshot shows the output of the above code snippet.
 
-![Hiding Blazor Gant Chart Part](../images/blazor-hide-gantt-chart-part.png)
+![Hiding Blazor Gantt Chart Part](../images/blazor-hide-gantt-chart-part.png)

@@ -16,7 +16,7 @@ It supports the following types of data binding:
 * Local data
 * Remote data
 
-> When using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) as `IEnumerable<T>`, component type(TValue) will be inferred from its value. When using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding, the TValue must be provided explicitly in the Kanban component.
+> When using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) as `IEnumerable<T>`, component type(TValue) will be inferred from its value. When using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding, the TValue must be provided explicitly in the [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component.
 
 ## Local data
 
@@ -183,6 +183,11 @@ DynamicObject can be bound to Kanban by assigning DynamicObject to the [DataSour
 This [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8)(dynamic data collection) shows notifications when the items are added, removed, and moved. Implementing the [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) will notify when there is any dynamic change (add, remove, move, and clear) in the collection. Implementing  the [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) will notify when the property value has been changed on the client side.
 
 Here, the Order class implements the interface of **INotifyPropertyChanged** and it raises the event when the Status property value was changed.
+
+To get start quickly with Blazor Kanban component using Observable collection, you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=jfUzKzS093w" %}
 
 {% highlight cshtml %}
 

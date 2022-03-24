@@ -15,9 +15,9 @@ This section briefly explains how to bind the value to the DatePicker component 
 * Two-Way Data Binding
 * Dynamic Value Binding
 
-## One-Way Binding
+## One-way binding
 
-We can bind the value to the DatePicker component directly for `Value` property as mentioned in the following code example. In one-way binding, we need to pass property or variable name along with `@` (For Ex: "@DateValue").
+You can bind the value to the DatePicker component directly for `Value` property as mentioned in the following code example. In one-way binding, you need to pass property or variable name along with `@` (For Ex: "@DateValue").
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -36,9 +36,9 @@ We can bind the value to the DatePicker component directly for `Value` property 
 }
 ```
 
-## Two-Way Data Binding
+## Two-way data binding
 
-Two-way binding can be achieved by using `bind-Value` attribute and its supports string, int, Enum, DateTime, bool types. If component value has been changed, it will affect the all places where we bind the variable for the **bind-value** attribute.
+Two-way binding can be achieved by using `bind-Value` attribute, which supports string, int, Enum, DateTime, bool types. If the component value has been changed, it will affect all places where the variable is bound for the **bind-value** attribute.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -52,7 +52,7 @@ public DateTime? DateValue { get; set; } = DateTime.Now;
 }
 ```
 
-## Dynamic Value Binding
+## Dynamic value binding
 
 The property value can be changed dynamically only by manually calling the `StateHasChanged()` method inside public event of **Blazor DatePicker component**. This method notifies the component that its state has changed and queues a re-render.
 

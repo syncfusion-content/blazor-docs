@@ -9,7 +9,7 @@ documentation: ug
 
 # Validation in Blazor In-place Editor Component
 
-Now, validation can be done by using the EditForm validation on the server-side. We need to handle the validation from the application level and the custom validation can also be achieved by using this.
+Now, validation can be done by using the EditForm validation on the server-side. You need to handle the validation from the application level and the custom validation can also be achieved by using this.
 
 Please refer to the following link for more details,[EditForm Validation](https://docs.microsoft.com/en-us/aspnet/core/blazor/forms-validation?view=aspnetcore-5.0). Validation for the `TextBox` is achieved in the following sample using the EditForm validation with a custom error message and validation rules.
 
@@ -67,6 +67,5 @@ Please refer to the following link for more details,[EditForm Validation](https:
 }
 ```
 
-The output will be as follows.
 
 ![Validation in Blazor In-place Editor](./images/blazor-inplace-editor-validation.png)

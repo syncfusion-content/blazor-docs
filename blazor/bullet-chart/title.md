@@ -11,7 +11,7 @@ documentation: ug
 
 ## Title
 
-The title of the Bullet Chart displays the information about the data plotted by specifying it in the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Title) property.
+The title of the [Blazor Bullet Chart](https://www.syncfusion.com/blazor-components/blazor-bullet-chart) displays the information about the data plotted by specifying it in the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Title) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts

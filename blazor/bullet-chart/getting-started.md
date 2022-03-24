@@ -9,7 +9,10 @@ documentation: ug
 
 # Getting Started with Blazor Bullet Chart Component
 
-This section briefly explains about how to include [Blazor Bullet Chart](https://www.syncfusion.com/blazor-components/blazor-bullet-chart) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor Bullet Chart](https://www.syncfusion.com/blazor-components/blazor-bullet-chart) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio. To get start quickly with Bullet Chart Component using Blazor, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=rWXSysqy5YE"%}
 
 ## Prerequisites
 
@@ -322,5 +325,7 @@ Use the tooltip to show the measured values by setting the [Enable](https://help
 {% endtabs %}
 
 ![Blazor Bullet Chart displays ToolTip](images/blazor-bullet-chart-tooltip.png)
+
+> You can also explore our [Blazor Bullet Chart example](https://blazor.syncfusion.com/demos/bullet-chart/default-functionalities?theme=bootstrap5) that shows you how to render and configure the bullet chart.
 
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/BulletChart).

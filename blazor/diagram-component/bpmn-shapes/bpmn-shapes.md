@@ -21,7 +21,7 @@ The following code example explains how to create a simple business process.
 
 @code
 {
-    // Initialize node collection with Node
+    // Initialize node collection with Node.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -29,15 +29,15 @@ The following code example explains how to create a simple business process.
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            // Unique Id of the node
+            // Unique Id of the node.
             ID = "node1",
-            // Sets type as Bpmn and shape as Event
+            // Sets type as Bpmn and shape as Event.
             Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,

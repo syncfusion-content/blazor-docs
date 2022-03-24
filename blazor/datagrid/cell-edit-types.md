@@ -42,7 +42,7 @@ You can customize the behavior of the editor component through the [EditorSettin
 |--------|----------------|
 | CssClass | Specifies the CSS class value that is appended to wrapper of Textbox. |
 | EnableRtl | Enable or disable rendering component in right to left direction.  |
-| ReadOnly | Specifies the boolean value whether the TextBox allows user to change the text.   |
+| ReadOnly | Specifies the boolean value that indicates whether the TextBox allows user to change the text.   |
 | ShowClearButton | Specifies a Boolean value that indicates whether the clear button is displayed in Textbox.   |
 | Multiline | Specifies a boolean value that enable or disable the multiline on the TextBox. The TextBox changes from single line to multiline when enable this multiline mode.   |
 

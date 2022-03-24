@@ -277,12 +277,14 @@ You can add the Data Matrix code in our barcode generator component.
 {% tabs %}
 {% highlight razor %}
 
-<SfDataMatrixGenerator Width="200" Height="150" Mode="@RenderingMode.SVG" Value="SYNCFUSION"></SfDataMatrixGenerator>
+<SfDataMatrixGenerator Width="200" Height="150" Value="SYNCFUSION"></SfDataMatrixGenerator>
 
 {% endhighlight %}
 {% endtabs %}
 
 ![Data Matrix Generator in Blazor Barcode Component](images/blazor-barcode-with-data-matrix.png)
+
+> You can also explore our [Blazor Barcode Generator example](https://blazor.syncfusion.com/demos/barcodes/default-functionalities?theme=bootstrap5) that shows you how to render and configure the barcode.
 
 ## See Also
 
