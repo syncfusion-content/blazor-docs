@@ -257,8 +257,6 @@ The following code illustrates how to draw a polygon shape.
 }
 ```
 
-![Polygon Tool in Blazor Diagram](images/blazor-diagram-polygon-tool.gif)
-
 ## Tool selection
 
 There are some functionalities that can be achieved by clicking and dragging on the diagram surface. They are as follows,
