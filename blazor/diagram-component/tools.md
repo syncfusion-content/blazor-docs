@@ -192,6 +192,7 @@ Diagram allows you to create a textNode, when you click on the diagram page. The
 ```
 
 ![Text Tool in Blazor Diagram](./images/blazor-diagram-Text-drawingtool.gif)
+
 ## Drawing polygon shape
 
 Diagram allows to create the [Polygon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BasicShapeType.html#Syncfusion_Blazor_Diagram_BasicShapeType_Polygon) shape by clicking and moving the mouse at runtime on the diagram page.
