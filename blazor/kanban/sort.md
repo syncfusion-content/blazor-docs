@@ -9,7 +9,7 @@ documentation: ug
 
 # Sorting in Blazor Kanban Component
 
-The Kanban provides built-in support to arrange the cards in their columns based on the JSON data order and drop the cards in the columns based on the dropped clone.
+The [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) provides built-in support to arrange the cards in their columns based on the JSON data order and drop the cards in the columns based on the dropped clone.
 
 ## SortBy
 
