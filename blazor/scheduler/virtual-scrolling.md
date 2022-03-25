@@ -21,8 +21,8 @@ To achieve better performance in the Scheduler when loading a large number of re
     </ScheduleResources>
     <ScheduleEventSettings DataSource="@AppointmentData"></ScheduleEventSettings>
     <ScheduleViews>
-        <ScheduleView Option="View.TimelineMonth" AllowVirtualScrolling="true"></ScheduleView>
-        <ScheduleView Option="View.TimelineYear" Orientation="Syncfusion.Blazor.Schedule.Orientation.Vertical" AllowVirtualScrolling="true" IsSelected="true"></ScheduleView>
+        <ScheduleView Option="View.TimelineMonth" AllowVirtualScrolling="true" IsSelected="true"></ScheduleView>
+        <ScheduleView Option="View.TimelineYear" Orientation="Syncfusion.Blazor.Schedule.Orientation.Vertical" AllowVirtualScrolling="true"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
 
@@ -71,15 +71,9 @@ To achieve better performance in the Scheduler when loading a large number of re
                     number = random.Next(max);
                 } while (listNumbers.Contains(number));
                 listNumbers.Add(number);
-                int Month = random.Next(1, 12);
-                int Date = random.Next(1, 28);
-                int Hour = random.Next(1, 24);
-                int Minutes = random.Next(1, 60);
-                DateTime YearStart = new DateTime(DateTime.Now.Year, 1, 1);
-                DateTime start = new DateTime(YearStart.Year, Month, Date, Hour, Minutes, 0);
-                DateTime end = new DateTime(start.Ticks).AddHours(2);
-                DateTime startDate = new DateTime(start.Ticks);
-                DateTime endDate = new DateTime(end.Ticks);
+                var startDate = date.AddDays(number);
+                startDate = startDate.AddMilliseconds((((number % 10) * 10) * (1000 * 60)));
+                var endDate = startDate.AddMilliseconds(((1440 + 30) * (1000 * 60)));
                 data.Add(new EventData
                 {
                     Id = id,
@@ -143,8 +137,8 @@ In Blazor Scheduler, templates can be applied when `AllowVirtualScrolling` prope
         </Template>
     </ScheduleEventSettings>
     <ScheduleViews>
-        <ScheduleView Option="View.TimelineMonth" AllowVirtualScrolling="true"></ScheduleView>
-        <ScheduleView Option="View.TimelineYear" Orientation="Syncfusion.Blazor.Schedule.Orientation.Vertical" AllowVirtualScrolling="true" IsSelected="true"></ScheduleView>
+        <ScheduleView Option="View.TimelineMonth" AllowVirtualScrolling="true" IsSelected="true"></ScheduleView>
+        <ScheduleView Option="View.TimelineYear" Orientation="Syncfusion.Blazor.Schedule.Orientation.Vertical" AllowVirtualScrolling="true"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
 
@@ -196,15 +190,9 @@ In Blazor Scheduler, templates can be applied when `AllowVirtualScrolling` prope
                     number = random.Next(max);
                 } while (listNumbers.Contains(number));
                 listNumbers.Add(number);
-                int Month = random.Next(1, 12);
-                int Date = random.Next(1, 28);
-                int Hour = random.Next(1, 24);
-                int Minutes = random.Next(1, 60);
-                DateTime YearStart = new DateTime(DateTime.Now.Year, 1, 1);
-                DateTime start = new DateTime(YearStart.Year, Month, Date, Hour, Minutes, 0);
-                DateTime end = new DateTime(start.Ticks).AddHours(2);
-                DateTime startDate = new DateTime(start.Ticks);
-                DateTime endDate = new DateTime(end.Ticks);
+                var startDate = date.AddDays(number);
+                startDate = startDate.AddMilliseconds((((number % 10) * 10) * (1000 * 60)));
+                var endDate = startDate.AddMilliseconds(((1440 + 30) * (1000 * 60)));
                 data.Add(new EventData
                 {
                     Id = id,
@@ -240,4 +228,4 @@ In Blazor Scheduler, templates can be applied when `AllowVirtualScrolling` prope
 }
 ```
 
-> For now, the virtual loading of resources and events is available only for timeline views. In the future, we plan to port the same virtual loading on all other applicable Scheduler views.
+> For now, the virtual loading of resources and events is available only for `TimelineDay`, `TimelineWeek`, `TimelineWorkWeek`, `TimelineMonth` and `TimelineYear` (Vertical Orientation alone) views. In the future, we plan to port the same virtual loading on all other applicable Scheduler views.
