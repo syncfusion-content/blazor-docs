@@ -1,4 +1,13 @@
-# Accessibility
+---
+layout: post
+title: Accessibility in Blazor Charts Component | Syncfusion
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor Charts component and more.
+platform: Blazor
+control: Chart
+documentation: ug
+---
+
+# Accessibility in Blazor Chart Component
 
 Accessibility is achieved in the Chart component through keyboard navigations. The Chart features can be effectively accessed through assistive technologies such as screen readers.
 
