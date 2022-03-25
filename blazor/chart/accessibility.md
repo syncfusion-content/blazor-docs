@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Charts component and more.
+description: Learn here all about Accessibility in Syncfusion Blazor Charts component.
 platform: Blazor
 control: Chart
 documentation: ug
