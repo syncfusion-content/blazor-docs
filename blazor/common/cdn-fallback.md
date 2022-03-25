@@ -1,25 +1,21 @@
 ---
 layout: post
 title: CDN fallback in Blazor - Syncfusion
-description: Learn here about Content Delivery Network (CDN) fallback in Blazor Server and WebAssembly (WASM) apps.
+description: Learn here about content delivery network (CDN) fallback handling in Blazor Server and WebAssembly (WASM) apps.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# CDN fallback in Blazor application.
+# CDN fallback in Blazor application
 
-This section provides information about the CDN fallback and how to refer fallback scripts and style sheet from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) for Blazor application.
+This section provides information about how to refer fallback [scripts](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) and [style sheet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) from **Static Web Assets** when CDN is not available in Blazor application.
 
 ## Blazor Server App
 
-* CDN links can be down by connection issues or some other problems. This will cause the site looks broken. Follow the below steps to resolve these issues in the Blazor application.
+CDN links can be down by connection issues or some other problems. This will cause the site looks broken. Follow the below steps to resolve these issues in the Blazor application. 
 
-* If you are using CDN for style sheet references then you have to add style sheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) by using the [link tag helper](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/link-tag-helper?view=aspnetcore-6.0).
-
-* Syncfusion theme provides the `e-control` class. You can check the style from provided class by using link tag helper property. 
-
-For example, Here Style sheet CDN link is broken by adding the string `test` to the theme name.
+If you are using CDN for style sheet references then you have to add style sheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) by using the [link tag helper](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/link-tag-helper). Syncfusion theme provides the `e-control` class. You can check the style from provided class by using link tag helper property. 
 
 * **~/Pages/_Host.cshtml** file for **.NET 5 and .NET 3.X**.
 * **~/Pages/_Layout.cshtml** for **.NET 6**.
@@ -29,7 +25,7 @@ For example, Here Style sheet CDN link is broken by adding the string `test` to 
 
 <head>
     ...
-    <link rel="stylesheet" href="https://cdn.syncfusion.com/blazor/{{ site.blazor }}/styles/bootstrap5-test.css"
+    <link rel="stylesheet" href="https://cdn.syncfusion.com/blazor/{{ site.blazor }}/styles/bootstrap5.css"
     asp-fallback-href="_content/Syncfusion.Blazor/styles/bootstrap5.css"
     asp-fallback-test-class="e-control"
     asp-fallback-test-property="font-size"
@@ -41,7 +37,7 @@ For example, Here Style sheet CDN link is broken by adding the string `test` to 
 
 <head>
     ...
-    <link rel="stylesheet" href="https://cdn.syncfusion.com/blazor/{{ site.blazor }}/styles/bootstrap5-test.css"
+    <link rel="stylesheet" href="https://cdn.syncfusion.com/blazor/{{ site.blazor }}/styles/bootstrap5.css"
     asp-fallback-href="_content/Syncfusion.Blazor/styles/bootstrap5.css"
     asp-fallback-test-class="e-control"
     asp-fallback-test-property="font-size"
@@ -59,14 +55,14 @@ For Blazor WebAssembly app, refer the script and style sheet fallback from [Stat
 
 ### Script fallback
 
-You can check the Syncfusion Blazor object for script fallback whether scripts are loaded or not. If it's not loaded create a script tag and refer scripts externally inside the `<head>` of **wwwroot/index.html** file in client web app, use the code below. Here CDN script link is broken by adding the string `test` to it.
+You can check the Syncfusion Blazor object for script fallback whether scripts are loaded or not. If it's not loaded, create a script tag and refer scripts externally inside the `<head>` of **wwwroot/index.html** file in client web app as in the below code. 
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/index.html" %}
 
 <head>
     ...
-    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazor }}/syncfusion-blazor.min-test.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazor }}/syncfusion-blazor.min.js" type="text/javascript"></script>
     <script>
     if (!window.sfBlazor) { // the Syncfusion Blazor object is not present
         var fallbackScript = document.createElement("script");
@@ -81,14 +77,14 @@ You can check the Syncfusion Blazor object for script fallback whether scripts a
 
 ## Style sheet fallback
 
-You can refer the theme style sheet inside the `<head>` of **wwwroot/index.html** file in client web app like below. Here CDN style sheet is broken by add string `test` to it.
+You can refer the theme style sheet inside the `<head>` of **wwwroot/index.html** file in client web app like below. 
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/index.html" %}
 
 <head>
     ...
-    <link href="https://cdn.syncfusion.com/blazor/19.4.56/styles/material-test.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/blazor/19.4.56/styles/material.css" rel="stylesheet" />
 </head>
 
 <body>
