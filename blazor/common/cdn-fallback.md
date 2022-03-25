@@ -25,7 +25,7 @@ If you are using CDN for style sheet references then you have to add style sheet
 
 <head>
     ...
-    <link rel="stylesheet" href="https://cdn.syncfusion.com/blazor/{{ site.blazor }}/styles/bootstrap5.css"
+    <link rel="stylesheet" href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.css"
     asp-fallback-href="_content/Syncfusion.Blazor/styles/bootstrap5.css"
     asp-fallback-test-class="e-control"
     asp-fallback-test-property="font-size"
@@ -37,7 +37,7 @@ If you are using CDN for style sheet references then you have to add style sheet
 
 <head>
     ...
-    <link rel="stylesheet" href="https://cdn.syncfusion.com/blazor/{{ site.blazor }}/styles/bootstrap5.css"
+    <link rel="stylesheet" href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.css"
     asp-fallback-href="_content/Syncfusion.Blazor/styles/bootstrap5.css"
     asp-fallback-test-class="e-control"
     asp-fallback-test-property="font-size"
@@ -62,7 +62,7 @@ You can check the Syncfusion Blazor object for script fallback whether scripts a
 
 <head>
     ...
-    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazor }}/syncfusion-blazor.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js" type="text/javascript"></script>
     <script>
     if (!window.sfBlazor) { // the Syncfusion Blazor object is not present
         var fallbackScript = document.createElement("script");
@@ -75,7 +75,7 @@ You can check the Syncfusion Blazor object for script fallback whether scripts a
 {% endhighlight %}
 {% endtabs %}
 
-## Style sheet fallback
+### Style sheet fallback
 
 You can refer the theme style sheet inside the `<head>` of **wwwroot/index.html** file in client web app like below. 
 
@@ -84,7 +84,7 @@ You can refer the theme style sheet inside the `<head>` of **wwwroot/index.html*
 
 <head>
     ...
-    <link href="https://cdn.syncfusion.com/blazor/19.4.56/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.css" rel="stylesheet" />
 </head>
 
 <body>
