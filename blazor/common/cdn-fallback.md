@@ -53,9 +53,9 @@ For example, Here Style sheet CDN link is broken by adding the string `test` to 
 
 > You can also use below [script](#script-fallback) and [style sheet](#style-sheet-fallback) fallback for blazor server app.
 
-## Blazor WASM App
+## Blazor WebAssembly App
 
-For Blazor wasm app, refer the script and style sheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) inside the Script tag like below.
+For Blazor WebAssembly app, refer the script and style sheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) inside the Script tag like below.
 
 ### Script fallback
 
