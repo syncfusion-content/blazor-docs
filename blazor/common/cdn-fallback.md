@@ -1,13 +1,13 @@
 ---
 layout: post
 title: CDN fallback in Blazor - Syncfusion
-description: Learn here about CDN fallback in Blazor application.
+description: Learn here about Content Delivery Network (CDN) fallback in Blazor Server and WebAssembly (WASM) apps.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# CDN fallback
+# CDN fallback in Blazor application.
 
 This section provides information about the CDN fallback and how to refer fallback scripts and style sheet from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) for Blazor application.
 
