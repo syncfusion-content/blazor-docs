@@ -47,7 +47,7 @@ If you are using CDN for style sheet references then you have to add style sheet
 {% endhighlight %}
 {% endtabs %}
 
-> You can also use below [script](#script-fallback) and [style sheet](#style-sheet-fallback) fallback for blazor server app.
+> Alternately, fallback links can be provided using [script fallback](#script-fallback) and [style sheet fallback](#style-sheet-fallback) in blazor server app.
 
 ## Blazor WebAssembly App
 
