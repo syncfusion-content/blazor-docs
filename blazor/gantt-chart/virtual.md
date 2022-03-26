@@ -56,7 +56,8 @@ namespace GanttComponent.Data
                         StartDate = TempData()[j].StartDate,
                         Duration = TempData()[j].Duration,
                         Progress = TempData()[j].Progress,
-                        ParentID = TempData()[j].ParentID + x
+                        ParentID = TempData()[j].ParentID + x,
+                        Predecessor = TempData()[j].Predecessor
                     });
                 }
             }
@@ -70,15 +71,15 @@ namespace GanttComponent.Data
             {
                 TaskId = 1,
                 TaskName = "Product concept",
-                StartDate = new DateTime(2019, 04, 02),
-                EndDate = new DateTime(2019, 04, 29),
+                StartDate = new DateTime(2022, 04, 02),
+                EndDate = new DateTime(2022, 04, 29),
                 ParentID = 0
             };
             GanttDataSource Record2 = new GanttDataSource()
             {
                 TaskId = 2,
                 TaskName = "Defining the product and its usage",
-                StartDate = new DateTime(2019, 04, 02),
+                StartDate = new DateTime(2022, 04, 02),
                 Duration = "3",
                 Progress = 30,
                 ParentID = 1,
@@ -87,7 +88,7 @@ namespace GanttComponent.Data
             {
                 TaskId = 3,
                 TaskName = "Defining target audience",
-                StartDate = new DateTime(2019, 04, 02),
+                StartDate = new DateTime(2022, 04, 02),
                 ParentID = 1,
                 Duration = "3"
             };
@@ -95,7 +96,7 @@ namespace GanttComponent.Data
             {
                 TaskId = 4,
                 TaskName = "Prepare product sketch and notes",
-                StartDate = new DateTime(2019, 04, 05),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "2",
                 ParentID = 1,
                 Predecessor = "2",
@@ -105,7 +106,7 @@ namespace GanttComponent.Data
             {
                 TaskId = 5,
                 TaskName = "Concept approval",
-                StartDate = new DateTime(2019, 04, 08),
+                StartDate = new DateTime(2022, 04, 08),
                 ParentID = 0,
                 Duration = "0",
                 Predecessor = "3,4"
@@ -114,23 +115,23 @@ namespace GanttComponent.Data
             {
                 TaskId = 6,
                 TaskName = "Market research",
-                StartDate = new DateTime(2019, 04, 02),
+                StartDate = new DateTime(2022, 04, 02),
                 ParentID = 0,
-                EndDate = new DateTime(2019, 04, 21),
+                EndDate = new DateTime(2022, 04, 21),
             };
             GanttDataSource Record7 = new GanttDataSource()
             {
                 TaskId = 7,
                 TaskName = "Demand analysis",
-                StartDate = new DateTime(2019, 04, 04),
-                EndDate = new DateTime(2019, 04, 21),
+                StartDate = new DateTime(2022, 04, 04),
+                EndDate = new DateTime(2022, 04, 21),
                 ParentID = 6,
             };
             GanttDataSource Record8 = new GanttDataSource()
             {
                 TaskId = 8,
                 TaskName = "Customer strength",
-                StartDate = new DateTime(2019, 04, 09),
+                StartDate = new DateTime(2022, 04, 09),
                 Duration = "4",
                 Predecessor = "5",
                 ParentID = 7,
@@ -140,7 +141,7 @@ namespace GanttComponent.Data
             {
                 TaskId = 9,
                 TaskName = "Market opportunity analysis",
-                StartDate = new DateTime(2019, 04, 9),
+                StartDate = new DateTime(2022, 04, 9),
                 Duration = "4",
                 ParentID = 7,
                 Predecessor = "5"
@@ -149,7 +150,7 @@ namespace GanttComponent.Data
             {
                 TaskId = 10,
                 TaskName = "Competitor analysis",
-                StartDate = new DateTime(2019, 04, 15),
+                StartDate = new DateTime(2022, 04, 15),
                 Duration = "4",
                 Predecessor = "7, 8",
                 ParentID = 6,
@@ -159,7 +160,7 @@ namespace GanttComponent.Data
             {
                 TaskId = 11,
                 TaskName = "Product strength analysis",
-                StartDate = new DateTime(2019, 04, 15),
+                StartDate = new DateTime(2022, 04, 15),
                 Duration = "4",
                 ParentID = 6,
                 Predecessor = "9"
@@ -168,7 +169,7 @@ namespace GanttComponent.Data
             {
                 TaskId = 12,
                 TaskName = "Research complete",
-                StartDate = new DateTime(2019, 04, 18),
+                StartDate = new DateTime(2022, 04, 18),
                 Duration = "0",
                 ParentID = 6,
                 Predecessor = "10"
@@ -177,15 +178,15 @@ namespace GanttComponent.Data
             {
                 TaskId = 13,
                 TaskName = "Product design and development",
-                StartDate = new DateTime(2019, 04, 04),
+                StartDate = new DateTime(2022, 04, 04),
                 ParentID = 0,
-                EndDate = new DateTime(2019, 04, 21),
+                EndDate = new DateTime(2022, 04, 21),
             };
             GanttDataSource Record14 = new GanttDataSource()
             {
                 TaskId = 14,
                 TaskName = "Functionality design",
-                StartDate = new DateTime(2019, 04, 19),
+                StartDate = new DateTime(2022, 04, 19),
                 Duration = "3",
                 ParentID = 13,
                 Progress = 30,
@@ -195,7 +196,7 @@ namespace GanttComponent.Data
             {
                 TaskId = 15,
                 TaskName = "Quality design",
-                StartDate = new DateTime(2019, 04, 19),
+                StartDate = new DateTime(2022, 04, 19),
                 Duration = "3",
                 ParentID = 13,
                 Predecessor = "12"
@@ -204,7 +205,7 @@ namespace GanttComponent.Data
             {
                 TaskId = 16,
                 TaskName = "Define reliability",
-                StartDate = new DateTime(2019, 04, 24),
+                StartDate = new DateTime(2022, 04, 24),
                 Duration = "2",
                 Progress = 30,
                 ParentID = 13,
@@ -214,7 +215,7 @@ namespace GanttComponent.Data
             {
                 TaskId = 17,
                 TaskName = "Identifying raw materials",
-                StartDate = new DateTime(2019, 04, 24),
+                StartDate = new DateTime(2022, 04, 24),
                 Duration = "2",
                 ParentID = 13,
                 Predecessor = "15"
@@ -223,15 +224,15 @@ namespace GanttComponent.Data
             {
                 TaskId = 18,
                 TaskName = "Define cost plan",
-                StartDate = new DateTime(2019, 04, 04),
+                StartDate = new DateTime(2022, 04, 04),
                 ParentID = 13,
-                EndDate = new DateTime(2019, 04, 21),
+                EndDate = new DateTime(2022, 04, 21),
             };
             GanttDataSource Record19 = new GanttDataSource()
             {
                 TaskId = 19,
                 TaskName = "Manufacturing cost",
-                StartDate = new DateTime(2019, 04, 26),
+                StartDate = new DateTime(2022, 04, 26),
                 Duration = "2",
                 Progress = 30,
                 ParentID = 18,
@@ -241,7 +242,7 @@ namespace GanttComponent.Data
             {
                 TaskId = 20,
                 TaskName = "Selling cost",
-                StartDate = new DateTime(2019, 04, 26),
+                StartDate = new DateTime(2022, 04, 26),
                 Duration = "2",
                 ParentID = 18,
                 Predecessor = "17"
@@ -250,15 +251,15 @@ namespace GanttComponent.Data
             {
                 TaskId = 21,
                 TaskName = "Development of the final design",
-                StartDate = new DateTime(2019, 04, 30),
+                StartDate = new DateTime(2022, 04, 30),
                 ParentID = 13,
-                EndDate = new DateTime(2019, 04, 21),
+                EndDate = new DateTime(2022, 04, 21),
             };
             GanttDataSource Record22 = new GanttDataSource()
             {
                 TaskId = 22,
                 TaskName = "Defining dimensions and package volume",
-                StartDate = new DateTime(2019, 04, 30),
+                StartDate = new DateTime(2022, 04, 30),
                 Duration = "2",
                 ParentID = 21,
                 Progress = 30,
@@ -268,7 +269,7 @@ namespace GanttComponent.Data
             {
                 TaskId = 23,
                 TaskName = "Develop design to meet industry standards",
-                StartDate = new DateTime(2019, 05, 02),
+                StartDate = new DateTime(2022, 05, 02),
                 Duration = "2",
                 ParentID = 21,
                 Predecessor = "22"
@@ -277,7 +278,7 @@ namespace GanttComponent.Data
             {
                 TaskId = 24,
                 TaskName = "Include all the details",
-                StartDate = new DateTime(2019, 05, 06),
+                StartDate = new DateTime(2022, 05, 06),
                 Duration = "3",
                 ParentID = 21,
                 Predecessor = "23"
@@ -286,7 +287,7 @@ namespace GanttComponent.Data
             {
                 TaskId = 25,
                 TaskName = "CAD computer-aided design",
-                StartDate = new DateTime(2019, 05, 09),
+                StartDate = new DateTime(2022, 05, 09),
                 Duration = "3",
                 ParentID = 13,
                 Progress = 30,
@@ -296,7 +297,7 @@ namespace GanttComponent.Data
             {
                 TaskId = 26,
                 TaskName = "CAM computer-aided manufacturing",
-                StartDate = new DateTime(2019, 05, 14),
+                StartDate = new DateTime(2022, 05, 14),
                 Duration = "3",
                 ParentID = 13,
                 Predecessor = "25"
@@ -305,7 +306,7 @@ namespace GanttComponent.Data
             {
                 TaskId = 27,
                 TaskName = "Design complete",
-                StartDate = new DateTime(2019, 05, 16),
+                StartDate = new DateTime(2022, 05, 16),
                 Duration = "0",
                 ParentID = 13,
                 Predecessor = "26"
@@ -314,7 +315,7 @@ namespace GanttComponent.Data
             {
                 TaskId = 28,
                 TaskName = "Prototype testing",
-                StartDate = new DateTime(2019, 05, 17),
+                StartDate = new DateTime(2022, 05, 17),
                 Duration = "4",
                 Progress = 30,
                 ParentID = 0,
@@ -324,7 +325,7 @@ namespace GanttComponent.Data
             {
                 TaskId = 29,
                 TaskName = "Include feedback",
-                StartDate = new DateTime(2019, 05, 17),
+                StartDate = new DateTime(2022, 05, 17),
                 Duration = "4",
                 ParentID = 0,
                 Predecessor = "28ss"
@@ -333,7 +334,7 @@ namespace GanttComponent.Data
             {
                 TaskId = 30,
                 TaskName = "Manufacturing",
-                StartDate = new DateTime(2019, 05, 23),
+                StartDate = new DateTime(2022, 05, 23),
                 Duration = "5",
                 Progress = 30,
                 ParentID = 0,
@@ -343,7 +344,7 @@ namespace GanttComponent.Data
             {
                 TaskId = 31,
                 TaskName = "Assembling materials to finished goods",
-                StartDate = new DateTime(2019, 05, 30),
+                StartDate = new DateTime(2022, 05, 30),
                 Duration = "5",
                 ParentID = 0,
                 Predecessor = "30"
@@ -352,15 +353,15 @@ namespace GanttComponent.Data
             {
                 TaskId = 32,
                 TaskName = "Feedback and testing",
-                StartDate = new DateTime(2019, 05, 04),
+                StartDate = new DateTime(2022, 05, 04),
                 ParentID = 0,
-                EndDate = new DateTime(2019, 05, 21),
+                EndDate = new DateTime(2022, 05, 21),
             };
             GanttDataSource Record33 = new GanttDataSource()
             {
                 TaskId = 33,
                 TaskName = "Internal testing and feedback",
-                StartDate = new DateTime(2019, 06, 06),
+                StartDate = new DateTime(2022, 06, 06),
                 Duration = "3",
                 ParentID = 32,
                 Progress = 45,
@@ -370,7 +371,7 @@ namespace GanttComponent.Data
             {
                 TaskId = 34,
                 TaskName = "Customer testing and feedback",
-                StartDate = new DateTime(2019, 06, 11),
+                StartDate = new DateTime(2022, 06, 11),
                 Duration = "3",
                 ParentID = 32,
                 Progress = 50,
@@ -380,15 +381,15 @@ namespace GanttComponent.Data
             {
                 TaskId = 35,
                 TaskName = "Final product development",
-                StartDate = new DateTime(2019, 06, 06),
+                StartDate = new DateTime(2022, 06, 06),
                 ParentID = 0,
-                EndDate = new DateTime(2019, 06, 06),
+                EndDate = new DateTime(2022, 06, 06),
             };
             GanttDataSource Record36 = new GanttDataSource()
             {
                 TaskId = 36,
                 TaskName = "Important improvements",
-                StartDate = new DateTime(2019, 06, 14),
+                StartDate = new DateTime(2022, 06, 14),
                 Duration = "4",
                 Progress = 30,
                 ParentID = 35,
@@ -398,7 +399,7 @@ namespace GanttComponent.Data
             {
                 TaskId = 37,
                 TaskName = "Address any unforeseen issues",
-                StartDate = new DateTime(2019, 06, 14),
+                StartDate = new DateTime(2022, 06, 14),
                 Duration = "4",
                 Progress = 30,
                 ParentID = 35,
@@ -408,15 +409,15 @@ namespace GanttComponent.Data
             {
                 TaskId = 38,
                 TaskName = "Final product",
-                StartDate = new DateTime(2019, 06, 06),
+                StartDate = new DateTime(2022, 06, 06),
                 ParentID = 0,
-                EndDate = new DateTime(2019, 06, 06),
+                EndDate = new DateTime(2022, 06, 06),
             };
             GanttDataSource Record39 = new GanttDataSource()
             {
                 TaskId = 39,
                 TaskName = "Branding product",
-                StartDate = new DateTime(2019, 06, 20),
+                StartDate = new DateTime(2022, 06, 20),
                 Duration = "4",
                 ParentID = 38,
                 Predecessor = "37"
@@ -425,7 +426,7 @@ namespace GanttComponent.Data
             {
                 TaskId = 40,
                 TaskName = "Marketing and presales",
-                StartDate = new DateTime(2019, 06, 26),
+                StartDate = new DateTime(2022, 06, 26),
                 Duration = "4",
                 Progress = 30,
                 ParentID = 38,
