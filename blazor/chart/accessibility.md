@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Charts Component | Syncfusion
-description: Accessibility in Blazor Charts component.
+description: Checkout and learn here all about Accessibility using Keyboard navigation in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
