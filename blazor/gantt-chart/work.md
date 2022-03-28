@@ -25,9 +25,9 @@ The work is the total hours required to complete a task. Work can be mapped from
 
 @code{
     public SfGantt<TaskData> Gantt;
-    public DateTime ProjectStart = new DateTime(2019, 03, 25);
-    public DateTime ProjectEnd = new DateTime(2019, 05, 10);
-    public List<TaskData> TaskCollection { get; set; }
+    private DateTime ProjectStart = new DateTime(2022, 03, 25);
+    private DateTime ProjectEnd = new DateTime(2022, 05, 10);
+    private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -73,14 +73,14 @@ The work is the total hours required to complete a task. Work can be mapped from
         new TaskData() {
             TaskId = 1,
             TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 03, 29),
-            EndDate = new DateTime(2019, 04, 21),
+            StartDate = new DateTime(2022, 03, 29),
+            EndDate = new DateTime(2022, 04, 21),
             TaskType ="FixedDuration"
         },
         new TaskData() {
             TaskId = 2,
             TaskName = "Identify Site location",
-            StartDate = new DateTime(2019, 03, 29),
+            StartDate = new DateTime(2022, 03, 29),
             Progress = 30,
             ParentId = 1,
             Work=16,
@@ -89,7 +89,7 @@ The work is the total hours required to complete a task. Work can be mapped from
         new TaskData() {
             TaskId = 3,
             TaskName = "Perform soil test",
-            StartDate = new DateTime(2019, 03, 29),
+            StartDate = new DateTime(2022, 03, 29),
             Resources = new List<ResourceData>(){ new ResourceData() { ResourceId=2} ,new ResourceData() { ResourceId=3} ,new ResourceData() { ResourceId=5} },
             ParentId = 1,
             Work=96
@@ -97,7 +97,7 @@ The work is the total hours required to complete a task. Work can be mapped from
         new TaskData() {
             TaskId = 4,
             TaskName = "Soil test approval",
-            StartDate = new DateTime(2019, 03, 29),
+            StartDate = new DateTime(2022, 03, 29),
             Duration = "1",
             Progress = 30,
             ParentId = 1,
@@ -107,13 +107,13 @@ The work is the total hours required to complete a task. Work can be mapped from
         new TaskData() {
             TaskId = 5,
             TaskName = "Project estimation",
-            StartDate = new DateTime(2019, 03, 29),
-            EndDate = new DateTime(2019, 04, 21)
+            StartDate = new DateTime(2022, 03, 29),
+            EndDate = new DateTime(2022, 04, 21)
         },
         new TaskData() {
             TaskId = 6,
             TaskName = "Develop floor plan for estimation",
-            StartDate = new DateTime(2019, 03, 29),
+            StartDate = new DateTime(2022, 03, 29),
             Duration = "3",
             Progress = 30,
             ParentId = 5,
@@ -123,7 +123,7 @@ The work is the total hours required to complete a task. Work can be mapped from
         new TaskData() {
             TaskId = 7,
             TaskName = "List materials",
-            StartDate = new DateTime(2019, 04, 01),
+            StartDate = new DateTime(2022, 04, 01),
             Duration = "3",
             Progress = 30,
             ParentId = 5,
@@ -134,7 +134,7 @@ The work is the total hours required to complete a task. Work can be mapped from
         new TaskData() {
             TaskId = 8,
             TaskName = "Estimation approval",
-            StartDate = new DateTime(2019, 04, 01),
+            StartDate = new DateTime(2022, 04, 01),
             Duration = "2",
             ParentId = 5,
             Work=60,
@@ -165,11 +165,11 @@ The work, duration and resource unit fields of a task depends upon each other an
 </SfGantt>
 
 @code{
-    public DateTime ProjectStart = new DateTime(2019, 03, 25);
-    public DateTime ProjectEnd = new DateTime(2019, 05, 10);
+    private DateTime ProjectStart = new DateTime(2022, 03, 25);
+    private DateTime ProjectEnd = new DateTime(2022, 05, 10);
     public SfGantt<TaskData> Gantt;
-    public List<TaskData> TaskCollection { get; set; }
-    public List<ResourceAlloacteData> ResourceCollection { get; set; }
+    private List<TaskData> TaskCollection { get; set; }
+    private List<ResourceAlloacteData> ResourceCollection { get; set; }
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -217,8 +217,8 @@ The work, duration and resource unit fields of a task depends upon each other an
             new TaskData() {
                 TaskId = 1,
                 TaskName = "Project initiation",
-                StartDate = new DateTime(2019, 03, 28),
-                EndDate = new DateTime(2019, 07, 28),
+                StartDate = new DateTime(2022, 03, 28),
+                EndDate = new DateTime(2022, 07, 28),
                 TaskType ="FixedDuration",
                 Work=128,
                 Duration="4"
@@ -226,7 +226,7 @@ The work, duration and resource unit fields of a task depends upon each other an
             new TaskData() {
                 TaskId = 2,
                 TaskName = "Identify Site location",
-                StartDate = new DateTime(2019, 03, 29),
+                StartDate = new DateTime(2022, 03, 29),
                 Progress = 30,
                 ParentId = 1,
                 Duration="2",
@@ -237,7 +237,7 @@ The work, duration and resource unit fields of a task depends upon each other an
             new TaskData() {
                 TaskId = 3,
                 TaskName = "Perform soil test",
-                StartDate = new DateTime(2019, 03, 29),
+                StartDate = new DateTime(2022, 03, 29),
                 Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=2} ,new ResourceAlloacteData() { ResourceId=3} },
                 ParentId = 1,
                 Work=96,
@@ -247,7 +247,7 @@ The work, duration and resource unit fields of a task depends upon each other an
             new TaskData() {
                 TaskId = 4,
                 TaskName = "Soil test approval",
-                StartDate = new DateTime(2019, 03, 29),
+                StartDate = new DateTime(2022, 03, 29),
                 Duration = "1",
                 Progress = 30,
                 ParentId = 1,
@@ -258,15 +258,15 @@ The work, duration and resource unit fields of a task depends upon each other an
             new TaskData() {
                 TaskId = 5,
                 TaskName = "Project estimation",
-                StartDate = new DateTime(2019, 04, 02),
-                EndDate = new DateTime(2019, 04, 06),
+                StartDate = new DateTime(2022, 04, 02),
+                EndDate = new DateTime(2022, 04, 06),
                 TaskType="Fixed Duration",
                 Duration="4"
             },
             new TaskData() {
                 TaskId = 6,
                 TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2019, 04, 02),
+                StartDate = new DateTime(2022, 04, 02),
                 Duration = "3",
                 Progress = 30,
                 ParentId = 5,
@@ -277,7 +277,7 @@ The work, duration and resource unit fields of a task depends upon each other an
             new TaskData() {
                 TaskId = 7,
                 TaskName = "List materials",
-                StartDate = new DateTime(2019, 04, 03),
+                StartDate = new DateTime(2022, 04, 03),
                 Duration = "3",
                 Progress = 30,
                 ParentId = 5,
@@ -288,7 +288,7 @@ The work, duration and resource unit fields of a task depends upon each other an
             new TaskData() {
                 TaskId = 8,
                 TaskName = "Estimation approval",
-                StartDate = new DateTime(2019, 04, 03),
+                StartDate = new DateTime(2022, 04, 03),
                 Duration = "2",
                 ParentId = 5,
                 Work=60,
