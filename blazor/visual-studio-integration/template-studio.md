@@ -157,7 +157,7 @@ We need to register the created application in Google Platform API Console for I
 
 7. Configure those client tenant id, application id, and domain in your application appsettings.json file.
 
-    ![Project configuration](images/Configuration1.png)
+    ![Project configuration](images/Configuration2.png)
 
 #### Web Application and Progressive Web Application
 
@@ -257,9 +257,9 @@ We need to register the created application in Google Platform API Console for I
 
 6. Migrate the API by clicking the highlighted arrow like in below image.
 
-    ![API Migration](images/Migration1.PNG)
+    ![API Migration](images/Migration1HostedServer.PNG)
 
-    ![Migration configuration](images/Migration2.PNG)
+    ![Migration configuration](images/Migration2HostedServer.PNG)
 
 7. Add a scope API in Expose an API page.
 
