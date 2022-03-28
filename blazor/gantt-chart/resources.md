@@ -34,10 +34,10 @@ The resource collection contains details about resources that are used in the pr
 </SfGantt>
 
 @code{
-    public DateTime ProjectStart = new DateTime(2019, 03, 25);
-    public DateTime ProjectEnd = new DateTime(2019, 05, 10);
-    public List<TaskData> TaskCollection { get; set; }
-    public List<ResourceAlloacteData> ResourceCollection { get; set; }
+    private DateTime ProjectStart = new DateTime(2022, 03, 25);
+    private DateTime ProjectEnd = new DateTime(2022, 05, 10);
+    private List<TaskData> TaskCollection { get; set; }
+    private List<ResourceAlloacteData> ResourceCollection { get; set; }
 
     protected override void OnInitialized()
     {
@@ -84,14 +84,14 @@ The resource collection contains details about resources that are used in the pr
             new TaskData() {
                 TaskId = 1,
                 TaskName = "Project initiation",
-                StartDate = new DateTime(2019, 03, 28),
-                EndDate = new DateTime(2019, 07, 28),
+                StartDate = new DateTime(2022, 03, 28),
+                EndDate = new DateTime(2022, 07, 28),
                 Duration="4"
             },
             new TaskData() {
                 TaskId = 2,
                 TaskName = "Identify Site location",
-                StartDate = new DateTime(2019, 03, 29),
+                StartDate = new DateTime(2022, 03, 29),
                 Progress = 30,
                 ParentId = 1,
                 Duration="2",
@@ -100,7 +100,7 @@ The resource collection contains details about resources that are used in the pr
             new TaskData() {
                 TaskId = 3,
                 TaskName = "Perform soil test",
-                StartDate = new DateTime(2019, 03, 29),
+                StartDate = new DateTime(2022, 03, 29),
                 Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=2} ,new ResourceAlloacteData() { ResourceId=3} },
                 ParentId = 1,
                 Duration="4"
@@ -108,7 +108,7 @@ The resource collection contains details about resources that are used in the pr
             new TaskData() {
                 TaskId = 4,
                 TaskName = "Soil test approval",
-                StartDate = new DateTime(2019, 03, 29),
+                StartDate = new DateTime(2022, 03, 29),
                 Duration = "1",
                 Progress = 30,
                 ParentId = 1,
@@ -117,14 +117,14 @@ The resource collection contains details about resources that are used in the pr
             new TaskData() {
                 TaskId = 5,
                 TaskName = "Project estimation",
-                StartDate = new DateTime(2019, 03, 29),
-                EndDate = new DateTime(2019, 04, 2),
+                StartDate = new DateTime(2022, 03, 29),
+                EndDate = new DateTime(2022, 04, 2),
                 Duration="4"
             },
             new TaskData() {
                 TaskId = 6,
                 TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2019, 03, 29),
+                StartDate = new DateTime(2022, 03, 29),
                 Duration = "3",
                 Progress = 30,
                 ParentId = 5,
@@ -133,7 +133,7 @@ The resource collection contains details about resources that are used in the pr
             new TaskData() {
                 TaskId = 7,
                 TaskName = "List materials",
-                StartDate = new DateTime(2019, 04, 01),
+                StartDate = new DateTime(2022, 04, 01),
                 Duration = "3",
                 Progress = 30,
                 ParentId = 5,
@@ -143,7 +143,7 @@ The resource collection contains details about resources that are used in the pr
             new TaskData() {
                 TaskId = 8,
                 TaskName = "Estimation approval",
-                StartDate = new DateTime(2019, 04, 01),
+                StartDate = new DateTime(2022, 04, 01),
                 Duration = "2",
                 ParentId = 5,
                 Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId= 12},new ResourceAlloacteData() { ResourceId= 5} },
@@ -170,7 +170,7 @@ You can assign the quantity of work done by the resources for the specific task 
 new TaskData() {
     TaskId = 2,
     TaskName = "Identify Site location",
-    StartDate = new DateTime(2019, 03, 29),
+    StartDate = new DateTime(2022, 03, 29),
     Progress = 30,
     ParentId = 1,
     Duration="2",
@@ -203,10 +203,10 @@ The following code snippet shows how to assign the resource for each task and ma
 </SfGantt>
 
 @code{
-    public DateTime ProjectStart = new DateTime(2019, 03, 25);
-    public DateTime ProjectEnd = new DateTime(2019, 05, 10);
-    public List<TaskData> TaskCollection { get; set; }
-    public List<ResourceAlloacteData> ResourceCollection { get; set; }
+    private DateTime ProjectStart = new DateTime(2022, 03, 25);
+    private DateTime ProjectEnd = new DateTime(2022, 05, 10);
+    private List<TaskData> TaskCollection { get; set; }
+    private List<ResourceAlloacteData> ResourceCollection { get; set; }
 
     protected override void OnInitialized()
     {
@@ -255,8 +255,8 @@ The following code snippet shows how to assign the resource for each task and ma
             new TaskData() {
                 TaskId = 1,
                 TaskName = "Project initiation",
-                StartDate = new DateTime(2019, 03, 28),
-                EndDate = new DateTime(2019, 07, 28),
+                StartDate = new DateTime(2022, 03, 28),
+                EndDate = new DateTime(2022, 07, 28),
                 TaskType ="FixedDuration",
                 Work=128,
                 Duration="4"
@@ -264,7 +264,7 @@ The following code snippet shows how to assign the resource for each task and ma
             new TaskData() {
                 TaskId = 2,
                 TaskName = "Identify Site location",
-                StartDate = new DateTime(2019, 03, 29),
+                StartDate = new DateTime(2022, 03, 29),
                 Progress = 30,
                 ParentId = 1,
                 Duration="2",
@@ -274,7 +274,7 @@ The following code snippet shows how to assign the resource for each task and ma
             new TaskData() {
                 TaskId = 3,
                 TaskName = "Perform soil test",
-                StartDate = new DateTime(2019, 03, 29),
+                StartDate = new DateTime(2022, 03, 29),
                 Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=2} ,new ResourceAlloacteData() { ResourceId=3} },
                 ParentId = 1,
                 Work=96,
@@ -284,7 +284,7 @@ The following code snippet shows how to assign the resource for each task and ma
             new TaskData() {
                 TaskId = 4,
                 TaskName = "Soil test approval",
-                StartDate = new DateTime(2019, 03, 29),
+                StartDate = new DateTime(2022, 03, 29),
                 Duration = "1",
                 Progress = 30,
                 ParentId = 1,
@@ -295,8 +295,8 @@ The following code snippet shows how to assign the resource for each task and ma
             new TaskData() {
                 TaskId = 5,
                 TaskName = "Project estimation",
-                StartDate = new DateTime(2019, 03, 29),
-                EndDate = new DateTime(2019, 04, 2),
+                StartDate = new DateTime(2022, 03, 29),
+                EndDate = new DateTime(2022, 04, 2),
 
                 TaskType="Fixed Duration",
                 Duration="4"
@@ -304,7 +304,7 @@ The following code snippet shows how to assign the resource for each task and ma
             new TaskData() {
                 TaskId = 6,
                 TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2019, 03, 29),
+                StartDate = new DateTime(2022, 03, 29),
                 Duration = "3",
                 Progress = 30,
                 ParentId = 5,
@@ -315,7 +315,7 @@ The following code snippet shows how to assign the resource for each task and ma
             new TaskData() {
                 TaskId = 7,
                 TaskName = "List materials",
-                StartDate = new DateTime(2019, 04, 01),
+                StartDate = new DateTime(2022, 04, 01),
                 Duration = "3",
                 Progress = 30,
                 ParentId = 5,
@@ -327,7 +327,7 @@ The following code snippet shows how to assign the resource for each task and ma
             new TaskData() {
                 TaskId = 8,
                 TaskName = "Estimation approval",
-                StartDate = new DateTime(2019, 04, 01),
+                StartDate = new DateTime(2022, 04, 01),
                 Duration = "2",
                 ParentId = 5,
                 Work=60,
@@ -366,10 +366,10 @@ By using cell editing or dialog editing, you can add/remove the resource for par
 </SfGantt>
 
 @code{
-    public DateTime ProjectStart = new DateTime(2019, 03, 25);
-    public DateTime ProjectEnd = new DateTime(2019, 05, 10);
-    public List<TaskData> TaskCollection { get; set; }
-    public List<ResourceAlloacteData> ResourceCollection { get; set; }
+    private DateTime ProjectStart = new DateTime(2022, 03, 25);
+    private DateTime ProjectEnd = new DateTime(2022, 05, 10);
+    private List<TaskData> TaskCollection { get; set; }
+    private List<ResourceAlloacteData> ResourceCollection { get; set; }
 
     protected override void OnInitialized()
     {
@@ -418,8 +418,8 @@ By using cell editing or dialog editing, you can add/remove the resource for par
             new TaskData() {
                 TaskId = 1,
                 TaskName = "Project initiation",
-                StartDate = new DateTime(2019, 03, 28),
-                EndDate = new DateTime(2019, 07, 28),
+                StartDate = new DateTime(2022, 03, 28),
+                EndDate = new DateTime(2022, 07, 28),
                 TaskType ="FixedDuration",
                 Work=128,
                 Duration="4"
@@ -427,7 +427,7 @@ By using cell editing or dialog editing, you can add/remove the resource for par
             new TaskData() {
                 TaskId = 2,
                 TaskName = "Identify Site location",
-                StartDate = new DateTime(2019, 03, 29),
+                StartDate = new DateTime(2022, 03, 29),
                 Progress = 30,
                 ParentId = 1,
                 Duration="2",
@@ -437,7 +437,7 @@ By using cell editing or dialog editing, you can add/remove the resource for par
             new TaskData() {
                 TaskId = 3,
                 TaskName = "Perform soil test",
-                StartDate = new DateTime(2019, 03, 29),
+                StartDate = new DateTime(2022, 03, 29),
                 Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=2} ,new ResourceAlloacteData() { ResourceId=3} },
                 ParentId = 1,
                 Work=96,
@@ -447,7 +447,7 @@ By using cell editing or dialog editing, you can add/remove the resource for par
             new TaskData() {
                 TaskId = 4,
                 TaskName = "Soil test approval",
-                StartDate = new DateTime(2019, 03, 29),
+                StartDate = new DateTime(2022, 03, 29),
                 Duration = "1",
                 Progress = 30,
                 ParentId = 1,
@@ -458,8 +458,8 @@ By using cell editing or dialog editing, you can add/remove the resource for par
             new TaskData() {
                 TaskId = 5,
                 TaskName = "Project estimation",
-                StartDate = new DateTime(2019, 03, 29),
-                EndDate = new DateTime(2019, 04, 2),
+                StartDate = new DateTime(2022, 03, 29),
+                EndDate = new DateTime(2022, 04, 2),
 
                 TaskType="Fixed Duration",
                 Duration="4"
@@ -467,7 +467,7 @@ By using cell editing or dialog editing, you can add/remove the resource for par
             new TaskData() {
                 TaskId = 6,
                 TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2019, 03, 29),
+                StartDate = new DateTime(2022, 03, 29),
                 Duration = "3",
                 Progress = 30,
                 ParentId = 5,
@@ -478,7 +478,7 @@ By using cell editing or dialog editing, you can add/remove the resource for par
             new TaskData() {
                 TaskId = 7,
                 TaskName = "List materials",
-                StartDate = new DateTime(2019, 04, 01),
+                StartDate = new DateTime(2022, 04, 01),
                 Duration = "3",
                 Progress = 30,
                 ParentId = 5,
@@ -490,7 +490,7 @@ By using cell editing or dialog editing, you can add/remove the resource for par
             new TaskData() {
                 TaskId = 8,
                 TaskName = "Estimation approval",
-                StartDate = new DateTime(2019, 04, 01),
+                StartDate = new DateTime(2022, 04, 01),
                 Duration = "2",
                 ParentId = 5,
                 Work=60,
