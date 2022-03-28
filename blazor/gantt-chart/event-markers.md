@@ -15,7 +15,7 @@ The event markers in the Gantt Chart component is used to highlight the importan
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
-            Duration="Duration" Progress="Progress" Child="SubTasks">
+            Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEventMarkers>
         <GanttEventMarker Day="@Event" Label="Project approval and kick-off"
@@ -24,8 +24,8 @@ The event markers in the Gantt Chart component is used to highlight the importan
 </SfGantt>
 
 @code{
-    public DateTime Event = new DateTime(2019, 04, 11);
-    public List<TaskData> TaskCollection { get; set; }
+    private DateTime Event = new DateTime(2022, 04, 11);
+    private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -39,7 +39,7 @@ The event markers in the Gantt Chart component is used to highlight the importan
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public List<TaskData> SubTasks { get; set; }
+        public int? ParentId { get; set; }
     }
 
     public static List <TaskData> GetTaskCollection() {
