@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hide Checkbox in Column Header in Blazor DataGrid Component | Syncfusion
+title: Hide Select All Checkbox in Blazor DataGrid Component | Syncfusion
 description: Learn here all about hiding the select all checkbox in the checkbox column in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
