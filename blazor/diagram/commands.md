@@ -24,7 +24,7 @@ There are several commands available in the diagram as follows.
 * FitToPage commands
 * Undo/Redo commands 
 
-> A new blazor diagram component which provides better performance than the existing diagram control in Blazor WebAssembly App. It is available in preview mode.  Refer the [Link](https://blazor.syncfusion.com/documentation/diagram-component/commands)
+> A new blazor diagram component which provides better performance than this diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram/getting-started)
 
 ## Alignment commands
 

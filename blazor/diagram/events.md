@@ -13,6 +13,8 @@ documentation: ug
 
 Triggered when the diagram is rendered completely.
 
+> A new blazor diagram component which provides better performance than this diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram/getting-started)
+
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 

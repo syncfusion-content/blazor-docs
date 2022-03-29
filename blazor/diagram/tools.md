@@ -13,7 +13,7 @@ documentation: ug
 
 Drawing tool allows you to draw any kind of node/connector during runtime by clicking and dragging on the diagram page.
 
-> A new blazor diagram component which provides better performance than the existing diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram-component/tools)
+> A new blazor diagram component which provides better performance than this diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram/getting-started)
 
 
 ## Shapes

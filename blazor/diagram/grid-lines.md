@@ -13,6 +13,8 @@ Gridlines are the pattern of lines drawn behind the diagram elements. It provide
 
 The model’s [SnapSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_SnapSettings) property is used to customize the gridlines and control the snapping behavior in the diagram.
 
+> A new blazor diagram component which provides better performance than this diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram/getting-started)
+
 ## Customize the gridlines visibility
 
 The [SnapConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SnapConstraints.html) enables you to show/hide the gridlines. The following code example illustrates how to show or hide gridlines.

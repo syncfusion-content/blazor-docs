@@ -13,7 +13,7 @@ Constraints are used to enable or disable certain behaviors of the diagram, node
 
 To know more about Bitwise operators, refer to the [Bitwise Operations](#bitwise-operations).
 
-> A new blazor diagram component which provides better performance than the existing diagram control in Blazor WebAssembly App. It is available in preview mode.  Refer the [Link](https://blazor.syncfusion.com/documentation/diagram-component/constraints)
+> A new blazor diagram component which provides better performance than this diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram/getting-started)
 
 ## Diagram constraints
 

@@ -15,6 +15,9 @@ documentation: ug
 
 The diagram is serialized as string while saving. The server-side method, [SaveDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_SaveDiagram) helps to serialize the diagram as a string. The following code illustrates how to save the diagram.
 
+> A new blazor diagram component which provides better performance than this diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram/getting-started)
+
+
 ```csharp
 SfDiagram Diagram;
 //Returns serialized string of the Diagram.

@@ -19,6 +19,8 @@ documentation: ug
 
 * Rotation of a node is controlled by using the [RotateAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_RotateAngle) property.
 
+> A new blazor diagram component which provides better performance than this diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram/getting-started)
+
 The following table shows how pivot relates offset values with node boundaries.
 
 | Pivot | Offset |
@@ -68,9 +70,6 @@ The following code shows how to change the `Pivot` value.
     }
 }
 ```
-
-> A new blazor diagram component which provides better performance than the existing diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram-component/nodes/positioning)
-
 
 ![Node Pivot](../images/node_pivot.png)
 
