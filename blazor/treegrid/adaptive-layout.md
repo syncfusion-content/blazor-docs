@@ -57,16 +57,3 @@ To render adaptive dialog UI in the Tree Grid, set the [EnableAdaptiveUI](https:
 ```
 
 ![Blazor Tree Grid with Adaptive UI](./images/blazor-treegrid-adaptive.gif)
-
-### Supported features in horizontal mode
-
-The following features are only supported in horizontal row rendering:
-
-* Paging
-* Sorting
-* Filtering
-* Selection
-* Dialog Editing
-* Aggregate
-* Virtual scroll
-* Toolbar
