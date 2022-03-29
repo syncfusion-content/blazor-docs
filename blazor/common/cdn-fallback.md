@@ -53,7 +53,7 @@ If you are using CDN for style sheet references then you have to add style sheet
 
 For Blazor WebAssembly app, refer the script and style sheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) inside the Script tag like below.
 
-### Script fallback
+### Script Fallback
 
 You can check the Syncfusion Blazor object for script fallback whether scripts are loaded or not. If it's not loaded, create a script tag and refer scripts externally inside the `<head>` of **wwwroot/index.html** file in client web app as in the below code. 
 
@@ -75,7 +75,7 @@ You can check the Syncfusion Blazor object for script fallback whether scripts a
 {% endhighlight %}
 {% endtabs %}
 
-### Style sheet fallback
+### Style Sheet Fallback
 
 You can refer the theme style sheet inside the `<head>` of **wwwroot/index.html** file in client web app like below. 
 
