@@ -2920,7 +2920,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 @code{
     public SfGantt<TaskData> Gantt;
-    public List<Object> Toolbaritems = new List<Object>() { "ExpandAll", "CollapseAll", new ItemModel() { Text = "Test", TooltipText = "Test", Id = "Test" } };
+    public List<Object> Toolbaritems = new List<Object>() { "ExpandAll", "CollapseAll"};
     private List<TaskData> TaskCollection { get; set; }
 
     protected override void OnInitialized()
@@ -3708,6 +3708,450 @@ using Syncfusion.Blazor.Gantt
         // Here, you can customize your code.
     }
    
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() {
+                TaskId = 1,
+                TaskName = "Project initiation",
+                StartDate = new DateTime(2022, 01, 04),
+                EndDate = new DateTime(2022, 01, 23),
+                },
+            new TaskData() {
+                TaskId = 2,
+                TaskName = "Identify Site location",
+                StartDate = new DateTime(2022, 01, 04),
+                Duration = "0",
+                Progress = 30,
+                ParentId = 1,
+            },
+            new TaskData() {
+                TaskId = 3,
+                TaskName = "Perform soil test",
+                StartDate = new DateTime(2022, 01, 04),
+                Duration = "4",
+                Progress = 40,
+                ParentId = 1,
+            },
+            new TaskData() {
+                TaskId = 4,
+                TaskName = "Soil test approval",
+                StartDate = new DateTime(2022, 01, 04),
+                Duration = "0",
+                Progress = 30,
+                ParentId = 1,
+            },
+            new TaskData() {
+                TaskId = 5,
+                TaskName = "Project estimation",
+                StartDate = new DateTime(2022, 01, 04),
+                EndDate = new DateTime(2022, 01, 23),
+            },
+            new TaskData() {
+                TaskId = 6,
+                TaskName = "Develop floor plan for estimation",
+                StartDate = new DateTime(2022, 01, 06),
+                Duration = "3",
+                Progress = 30,
+                ParentId = 5,
+            },
+            new TaskData() {
+                TaskId = 7,
+                TaskName = "List materials",
+                StartDate = new DateTime(2022, 01, 06),
+                Duration = "3",
+                Progress = 40,
+                ParentId = 5,
+            },
+            new TaskData() {
+                TaskId = 8,
+                TaskName = "Estimation approval",
+                StartDate = new DateTime(2022, 01, 06),
+                Duration = "0",
+                Progress = 30,
+                ParentId = 5,
+            }
+        };
+        return Tasks;
+    }
+}
+```
+## OnCellSave
+
+[OnCellSave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnCellSave) event triggers before a cell is saved.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true"></GanttEditSettings>
+    <GanttEvents TValue="TaskData" OnCellSave="@SaveHandler"></GanttEvents>
+</SfGantt>
+
+    @code{
+        public SfGantt<TaskData> Gantt;
+        private List<TaskData> TaskCollection { get; set; }
+
+        protected override void OnInitialized()
+        {
+            this.TaskCollection = GetTaskCollection();
+        }
+
+        public void SaveHandler(CellSaveArgs<TaskData> args)
+        {
+            // Here, you can customize your code.
+        }
+
+        public class TaskData
+        {
+            public int TaskId { get; set; }
+            public string TaskName { get; set; }
+            public DateTime StartDate { get; set; }
+            public DateTime EndDate { get; set; }
+            public string Duration { get; set; }
+            public int Progress { get; set; }
+            public int? ParentId { get; set; }
+        }
+
+        private static List<TaskData> GetTaskCollection()
+        {
+            List<TaskData> Tasks = new List<TaskData>()
+            {
+                new TaskData() {
+                    TaskId = 1,
+                    TaskName = "Project initiation",
+                    StartDate = new DateTime(2022, 01, 04),
+                    EndDate = new DateTime(2022, 01, 23),
+                    },
+                new TaskData() {
+                    TaskId = 2,
+                    TaskName = "Identify Site location",
+                    StartDate = new DateTime(2022, 01, 04),
+                    Duration = "0",
+                    Progress = 30,
+                    ParentId = 1,
+                },
+                new TaskData() {
+                    TaskId = 3,
+                    TaskName = "Perform soil test",
+                    StartDate = new DateTime(2022, 01, 04),
+                    Duration = "4",
+                    Progress = 40,
+                    ParentId = 1,
+                },
+                new TaskData() {
+                    TaskId = 4,
+                    TaskName = "Soil test approval",
+                    StartDate = new DateTime(2022, 01, 04),
+                    Duration = "0",
+                    Progress = 30,
+                    ParentId = 1,
+                },
+                new TaskData() {
+                    TaskId = 5,
+                    TaskName = "Project estimation",
+                    StartDate = new DateTime(2022, 01, 04),
+                    EndDate = new DateTime(2022, 01, 23),
+                },
+                new TaskData() {
+                    TaskId = 6,
+                    TaskName = "Develop floor plan for estimation",
+                    StartDate = new DateTime(2022, 01, 06),
+                    Duration = "3",
+                    Progress = 30,
+                    ParentId = 5,
+                },
+                new TaskData() {
+                    TaskId = 7,
+                    TaskName = "List materials",
+                    StartDate = new DateTime(2022, 01, 06),
+                    Duration = "3",
+                    Progress = 40,
+                    ParentId = 5,
+                },
+                new TaskData() {
+                    TaskId = 8,
+                    TaskName = "Estimation approval",
+                    StartDate = new DateTime(2022, 01, 06),
+                    Duration = "0",
+                    Progress = 30,
+                    ParentId = 5,
+                }
+            };
+            return Tasks;
+        }
+    }
+```
+
+## ColumnResized
+
+[ColumnResized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_ColumnResized) event triggers while column resized.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" AllowResizing="true">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEvents TValue="TaskData" ColumnResized="ColumnResizedHandler"></GanttEvents>
+</SfGantt>
+
+@code{
+    public SfGantt<TaskData> Gantt;
+    private List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public void ColumnResizedHandler(ResizeArgs args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() {
+                TaskId = 1,
+                TaskName = "Project initiation",
+                StartDate = new DateTime(2022, 01, 04),
+                EndDate = new DateTime(2022, 01, 23),
+                },
+            new TaskData() {
+                TaskId = 2,
+                TaskName = "Identify Site location",
+                StartDate = new DateTime(2022, 01, 04),
+                Duration = "0",
+                Progress = 30,
+                ParentId = 1,
+            },
+            new TaskData() {
+                TaskId = 3,
+                TaskName = "Perform soil test",
+                StartDate = new DateTime(2022, 01, 04),
+                Duration = "4",
+                Progress = 40,
+                ParentId = 1,
+            },
+            new TaskData() {
+                TaskId = 4,
+                TaskName = "Soil test approval",
+                StartDate = new DateTime(2022, 01, 04),
+                Duration = "0",
+                Progress = 30,
+                ParentId = 1,
+            },
+            new TaskData() {
+                TaskId = 5,
+                TaskName = "Project estimation",
+                StartDate = new DateTime(2022, 01, 04),
+                EndDate = new DateTime(2022, 01, 23),
+            },
+            new TaskData() {
+                TaskId = 6,
+                TaskName = "Develop floor plan for estimation",
+                StartDate = new DateTime(2022, 01, 06),
+                Duration = "3",
+                Progress = 30,
+                ParentId = 5,
+            },
+            new TaskData() {
+                TaskId = 7,
+                TaskName = "List materials",
+                StartDate = new DateTime(2022, 01, 06),
+                Duration = "3",
+                Progress = 40,
+                ParentId = 5,
+            },
+            new TaskData() {
+                TaskId = 8,
+                TaskName = "Estimation approval",
+                StartDate = new DateTime(2022, 01, 06),
+                Duration = "0",
+                Progress = 30,
+                ParentId = 5,
+            }
+        };
+        return Tasks;
+    }
+}
+
+```
+
+## ColumnResizeStart
+
+[ColumnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_ColumnResizeStart) event triggers while column start resize.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" AllowResizing="true">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEvents TValue="TaskData" ColumnResized="ColumnResizeStartHandler"></GanttEvents>
+</SfGantt>
+
+@code{
+    public SfGantt<TaskData> Gantt;
+    private List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public void ColumnResizeStartHandler(ResizeArgs args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() {
+                TaskId = 1,
+                TaskName = "Project initiation",
+                StartDate = new DateTime(2022, 01, 04),
+                EndDate = new DateTime(2022, 01, 23),
+                },
+            new TaskData() {
+                TaskId = 2,
+                TaskName = "Identify Site location",
+                StartDate = new DateTime(2022, 01, 04),
+                Duration = "0",
+                Progress = 30,
+                ParentId = 1,
+            },
+            new TaskData() {
+                TaskId = 3,
+                TaskName = "Perform soil test",
+                StartDate = new DateTime(2022, 01, 04),
+                Duration = "4",
+                Progress = 40,
+                ParentId = 1,
+            },
+            new TaskData() {
+                TaskId = 4,
+                TaskName = "Soil test approval",
+                StartDate = new DateTime(2022, 01, 04),
+                Duration = "0",
+                Progress = 30,
+                ParentId = 1,
+            },
+            new TaskData() {
+                TaskId = 5,
+                TaskName = "Project estimation",
+                StartDate = new DateTime(2022, 01, 04),
+                EndDate = new DateTime(2022, 01, 23),
+            },
+            new TaskData() {
+                TaskId = 6,
+                TaskName = "Develop floor plan for estimation",
+                StartDate = new DateTime(2022, 01, 06),
+                Duration = "3",
+                Progress = 30,
+                ParentId = 5,
+            },
+            new TaskData() {
+                TaskId = 7,
+                TaskName = "List materials",
+                StartDate = new DateTime(2022, 01, 06),
+                Duration = "3",
+                Progress = 40,
+                ParentId = 5,
+            },
+            new TaskData() {
+                TaskId = 8,
+                TaskName = "Estimation approval",
+                StartDate = new DateTime(2022, 01, 06),
+                Duration = "0",
+                Progress = 30,
+                ParentId = 5,
+            }
+        };
+        return Tasks;
+    }
+}
+
+```
+## SplitterCreated
+
+[SplitterCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_SplitterCreated) event triggers when splitter bar was created.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEditSettings AllowTaskbarEditing="true"></GanttEditSettings>
+    <GanttEvents TValue="TaskData" SplitterCreated="SplitterCreatedHandler"></GanttEvents>
+</SfGantt>
+
+@code{
+    public SfGantt<TaskData> Gantt;
+    private List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public void SplitterCreatedHandler(object args)
+    {
+        // Here, you can customize your code.
+    }
+
     public class TaskData
     {
         public int TaskId { get; set; }

@@ -19,7 +19,7 @@ To modify the Gantt Chart appearance, you need to override the default CSS of Ga
 | |e-columnheader|This class is added at 'tr' of the gantt chart header. |
 |**Grid Content**|e-gridcontent|This class is added at root of body content. This is to override background color of the body.
 | |e-table|This class is added to table of content. This CSS class makes table width as 100 %.
-| |e=row|This class is added to rows of gantt chart.
+| |e-row|This class is added to rows of gantt chart.
 | |e-altrow|This class is added to alternate rows of gantt chart. This is to override alternate row color of the gantt chart.
 | |e-rowcell|This class is added to all cells in the gantt chart. This is to override cells appearance and styling.
 |**Chart Content**|e-gantt-chart|This class is added to the chart side of the gantt chart.
@@ -37,7 +37,7 @@ To modify the Gantt Chart appearance, you need to override the default CSS of Ga
 |**Splitter**|e-split-bar|This class is added to the gantt chart splitter.
 | |e-resize-handler|This class is added to the resize handler of the gantt chart splitter.
 | |e-arrow-left|This class is added to the left arrow of the resize handler.
-| |e-arrow=right|This class is added to the right arrow of the resize handler.
+| |e-arrow-right|This class is added to the right arrow of the resize handler.
 |**Connector Lines**|e-line|This class is added to the connector lines.
 | |e-connector-line-right-arrow|This class is added to the right arrow of the connector line.
 | |e-connector-line-left-arrow|This class is added to the left arrow of the connector line.
@@ -52,7 +52,7 @@ To modify the Gantt Chart appearance, you need to override the default CSS of Ga
 ```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="1000px" RenderBaseline="true">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" Child="SubTasks" BaselineStartDate="BaselineStartDate"
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" ParentID="ParentId" BaselineStartDate="BaselineStartDate"
                      BaselineEndDate="BaselineEndDate">
     </GanttTaskFields>
     <GanttLabelSettings RightLabel="TaskName" TValue="TaskData"></GanttLabelSettings>
@@ -62,7 +62,7 @@ To modify the Gantt Chart appearance, you need to override the default CSS of Ga
 </SfGantt>
 <style>
     .e-split-bar, .e-headercell {
-        background: #add8e6 !important;
+        background: #add8e6 !important
     }
     .e-timeline-header-container, .e-weekend-header-cell {
         background: #add8e6 !important;
@@ -105,7 +105,7 @@ To modify the Gantt Chart appearance, you need to override the default CSS of Ga
     }
 </style>
 @code{
-    public List<TaskData> TaskCollection { get; set; }
+    private List<TaskData> TaskCollection { get; set; }
     public DateTime Event = new DateTime(2021, 04, 27);
 
     protected override void OnInitialized()
@@ -124,14 +124,78 @@ To modify the Gantt Chart appearance, you need to override the default CSS of Ga
         public DateTime BaselineStartDate { get; set; }
         public DateTime BaselineEndDate { get; set; }
         public string Predecessor { get; set; }
-        public List<TaskData> SubTasks { get; set; }
+        public int? ParentId { get; set; }
     }
 
-    public static List<TaskData> GetTaskCollection()
+    private static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2021, 04, 02), EndDate = new DateTime(2021, 04, 21), SubTasks = (new List <TaskData> () { new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2021, 04, 02), Duration = "2", Progress = 30, }, new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2021, 04, 02), Duration = "4", BaselineStartDate = new DateTime(2021, 04, 02), BaselineEndDate = new DateTime(2021, 04, 05), Predecessor = "2" }, new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2021, 04, 02), Duration = "0", Progress = 30, Predecessor = "3" }})},
-            new TaskData() { TaskId = 5, TaskName = "Project estimation",  StartDate = new DateTime(2021, 04, 02), EndDate = new DateTime(2021, 04, 21), SubTasks = (new List <TaskData> () { new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2021, 04, 04), Duration = "3", Progress = 30, Predecessor = "4" },  new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2021, 04, 04), Duration = "3", Progress = 40, BaselineStartDate = new DateTime(2021, 04, 08),  BaselineEndDate = new DateTime(2021, 04, 12), Predecessor = "6"}, new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2021, 04, 04), Duration = "5",Progress = 30,Predecessor = "7"}})}
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() {
+                TaskId = 1,
+                TaskName = "Project initiation",
+                StartDate = new DateTime(2022, 01, 04),
+                EndDate = new DateTime(2022, 01, 21),
+                },
+            new TaskData() {
+                TaskId = 2,
+                TaskName = "Identify Site location",
+                StartDate = new DateTime(2022, 01, 04),
+                Duration = "0",
+                Progress = 30,
+                ParentId = 1,
+            },
+            new TaskData() {
+                TaskId = 3,
+                TaskName = "Perform soil test",
+                StartDate = new DateTime(2022, 01, 04),
+                Duration = "4",
+                Progress = 40,
+                ParentId = 1,
+                Predecessor="2",
+            },
+            new TaskData() {
+                TaskId = 4,
+                TaskName = "Soil test approval",
+                StartDate = new DateTime(2022, 01, 04),
+                Duration = "0",
+                Progress = 30,
+                ParentId = 1,
+                Predecessor="3",
+            },
+            new TaskData() {
+                TaskId = 5,
+                TaskName = "Project estimation",
+                StartDate = new DateTime(2022, 01, 04),
+                EndDate = new DateTime(2022, 01, 21),
+            },
+            new TaskData() {
+                TaskId = 6,
+                TaskName = "Develop floor plan for estimation",
+                StartDate = new DateTime(2022, 01, 06),
+                Duration = "3",
+                Progress = 30,
+                ParentId = 5,
+                Predecessor="4",
+            },
+            new TaskData() {
+                TaskId = 7,
+                TaskName = "List materials",
+                StartDate = new DateTime(2022, 01, 06),
+                Duration = "3",
+                Progress = 40,
+                ParentId = 5,
+                Predecessor="6",
+            },
+            new TaskData() {
+                TaskId = 8,
+                TaskName = "Estimation approval",
+                StartDate = new DateTime(2022, 01, 06),
+                Duration = "0",
+                Progress = 30,
+                ParentId = 5,
+                Predecessor="7",
+            }
         };
         return Tasks;
     }
