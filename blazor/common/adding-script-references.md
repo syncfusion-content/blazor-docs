@@ -302,3 +302,7 @@ namespace WebApplication1
 ## Custom Resource Generator
 
 The Syncfusion Blazor provides an option to generate a component's interop scripts using the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) tool for the Blazor components. Refer [here to generate the component-wise scripts externally using CRG](./custom-resource-generator).
+
+## See also
+
+* [CDN Fallback](./cdn-fallback)
