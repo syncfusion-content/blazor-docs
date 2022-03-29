@@ -19,6 +19,8 @@ documentation: ug
 
 * The ports [Visibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_Visibility) property allows you to define when the port should be visible.
 
+> A new blazor diagram component which provides better performance than this diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram/getting-started)
+
 The following code explains how to change the appearance of the port.
 
 ```cshtml
@@ -63,8 +65,6 @@ The following code explains how to change the appearance of the port.
     }
 }
 ```
-
-> A new blazor diagram component which provides better performance than the existing diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram-component/ports/appearance)
 
 ![Appearance](../images/port_Appearance.png)
 

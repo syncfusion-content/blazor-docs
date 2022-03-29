@@ -31,7 +31,7 @@ saveData = localStorage.getItem('fileName');
 
 Diagram can also be saved as raster or vector image files. For more information about saving the diagram as images, refer to [Print and Export](./export).
 
-> A new blazor diagram component which provides better performance than the existing diagram control in Blazor WebAssembly App. It is available in preview mode.  Refer the [Link](https://blazor.syncfusion.com/documentation/diagram-component/serialization)
+> A new blazor diagram component which provides better performance than this diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram/getting-started)
 
 ## Load
 

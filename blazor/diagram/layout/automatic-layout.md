@@ -20,7 +20,7 @@ Diagram provides support to auto-arrange the nodes in the diagram area that is r
 * Symmetric layout
 * Complex hierarchical tree layout
 
-> A new blazor diagram component which provides better performance than the existing diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram-component/layout/automatic-layout)
+> A new blazor diagram component which provides better performance than this diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram/getting-started)
 
 ## See also
 
