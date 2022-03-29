@@ -28,12 +28,12 @@ The following code snippet explains the mapping of duration unit data source fie
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
-              Duration="Duration" DurationUnit="DurationUnit" Progress="Progress" Child="SubTasks">
+                     Duration="Duration" DurationUnit="DurationUnit" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
 </SfGantt>
 
 @code{
-    public List<TaskData> TaskCollection { get; set; }
+    private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -48,71 +48,82 @@ The following code snippet explains the mapping of duration unit data source fie
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string DurationUnit { get; set; }
-        public List<TaskData> SubTasks { get; set; }
+        public int? ParentId { get; set; }
     }
 
-    public static List <TaskData> GetTaskCollection() {
-    List <TaskData> Tasks = new List <TaskData> () {
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 70,
-                    DurationUnit = "day"
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "16",
-                    Progress = 50,
-                    DurationUnit = "hour"
-                },
-                new TaskData() {
-                    TaskId = 4,
-                    TaskName = "Soil test approval",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "480",
-                    Progress = 50,
-                    DurationUnit = "minute"
-                },
-            })
-        },
-        new TaskData() {
-            TaskId = 5,
-            TaskName = "Project estimation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 6,
-                    TaskName = "Develop floor plan for estimation",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "24",
-                    Progress = 70,
-                    DurationUnit = "hour"
-                },
-                new TaskData() {
-                    TaskId = 7,
-                    TaskName = "List materials",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 50,
-                    DurationUnit = "day"
-                },
-            })
-        }
-    };
 
-    return Tasks;
-}
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() {
+                TaskId = 1,
+                TaskName = "Project initiation",
+                StartDate = new DateTime(2022, 01, 04),
+                EndDate = new DateTime(2022, 01, 17),
+                },
+            new TaskData() {
+                TaskId = 2,
+                TaskName = "Identify Site location",
+                StartDate = new DateTime(2022, 01, 04),
+                Duration = "4",
+                Progress = 70,
+                ParentId = 1,
+                DurationUnit = "day"
+            },
+            new TaskData() {
+                TaskId = 3,
+                TaskName = "Perform soil test",
+                StartDate = new DateTime(2022, 01, 04),
+                Duration = "4",
+                Progress = 50,
+                ParentId = 1,
+                DurationUnit = "hour"
+            },
+            new TaskData() {
+                TaskId = 4,
+                TaskName = "Soil test approval",
+                StartDate = new DateTime(2022, 01, 04),
+                Duration = "480",
+                Progress = 30,
+                ParentId = 1,
+                DurationUnit = "minute"
+            },
+            new TaskData() {
+                TaskId = 5,
+                TaskName = "Project estimation",
+                StartDate = new DateTime(2022, 01, 04),
+                EndDate = new DateTime(2022, 01, 17),
+            },
+            new TaskData() {
+                TaskId = 6,
+                TaskName = "Develop floor plan for estimation",
+                StartDate = new DateTime(2022, 01, 06),
+                Duration = "3",
+                Progress = 30,
+                ParentId = 5,
+                DurationUnit = "hour"
+            },
+            new TaskData() {
+                TaskId = 7,
+                TaskName = "List materials",
+                StartDate = new DateTime(2022, 01, 06),
+                Duration = "3",
+                Progress = 40,
+                ParentId = 5,
+                DurationUnit = "day"
+            },
+            new TaskData() {
+                TaskId = 8,
+                TaskName = "Estimation approval",
+                StartDate = new DateTime(2022, 01, 06),
+                Duration = "0",
+                Progress = 30,
+                ParentId = 5,
+            }
+        };
+        return Tasks;
+    }
 }
 ```
 
@@ -128,12 +139,12 @@ Duration units for the tasks can also be defined along with the duration values.
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
-            Duration="Duration" Progress="Progress" Child="SubTasks">
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
 </SfGantt>
 
 @code{
-    public List<TaskData> TaskCollection { get; set; }
+    private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -147,66 +158,77 @@ Duration units for the tasks can also be defined along with the duration values.
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public List<TaskData> SubTasks { get; set; }
+        public int? ParentId { get; set; }
     }
 
-    public static List <TaskData> GetTaskCollection() {
-    List <TaskData> Tasks = new List <TaskData> () {
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "3days",
-                    Progress = 70,
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "12hours",
-                    Progress = 50
-                },
-                new TaskData() {
-                    TaskId = 4,
-                    TaskName = "Soil test approval",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "1800minutes",
-                    Progress = 50
-                },
-            })
-        },
-        new TaskData() {
-            TaskId = 5,
-            TaskName = "Project estimation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 6,
-                    TaskName = "Develop floor plan for estimation",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "480minutes",
-                    Progress = 70
-                },
-                new TaskData() {
-                    TaskId = 7,
-                    TaskName = "List materials",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3days",
-                    Progress = 50
-                },
-            })
-        }
-    };
 
-    return Tasks;
-}
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() {
+                TaskId = 1,
+                TaskName = "Project initiation",
+                StartDate = new DateTime(2022, 01, 04),
+                EndDate = new DateTime(2022, 01, 17),
+                },
+            new TaskData() {
+                TaskId = 2,
+                TaskName = "Identify Site location",
+                StartDate = new DateTime(2022, 01, 04),
+                Duration = "3days",
+                Progress = 70,
+                ParentId = 1,
+            },
+            new TaskData() {
+                TaskId = 3,
+                TaskName = "Perform soil test",
+                StartDate = new DateTime(2022, 01, 04),
+                Duration = "12hours",
+                Progress = 50,
+                ParentId = 1,
+            },
+            new TaskData() {
+                TaskId = 4,
+                TaskName = "Soil test approval",
+                StartDate = new DateTime(2022, 01, 04),
+                Duration = "1800minutes",
+                Progress = 30,
+                ParentId = 1,
+            },
+            new TaskData() {
+                TaskId = 5,
+                TaskName = "Project estimation",
+                StartDate = new DateTime(2022, 01, 04),
+                EndDate = new DateTime(2022, 01, 17),
+            },
+            new TaskData() {
+                TaskId = 6,
+                TaskName = "Develop floor plan for estimation",
+                StartDate = new DateTime(2022, 01, 06),
+                Duration = "480minutes",
+                Progress = 30,
+                ParentId = 5,
+            },
+            new TaskData() {
+                TaskId = 7,
+                TaskName = "List materials",
+                StartDate = new DateTime(2022, 01, 06),
+                Duration = "3days",
+                Progress = 40,
+                ParentId = 5,
+            },
+            new TaskData() {
+                TaskId = 8,
+                TaskName = "Estimation approval",
+                StartDate = new DateTime(2022, 01, 06),
+                Duration = "0",
+                Progress = 30,
+                ParentId = 5,
+            }
+        };
+        return Tasks;
+    }
 }
 ```
 
