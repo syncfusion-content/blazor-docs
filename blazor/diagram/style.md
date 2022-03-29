@@ -13,8 +13,6 @@ documentation: ug
 
 Use the following CSS to customize the connector end point handle.
 
-> A new blazor diagram component which provides better performance than this diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram/getting-started)
-
 ```scss
 
 .e-diagram-endpoint-handle {
