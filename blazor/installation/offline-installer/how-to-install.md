@@ -9,6 +9,9 @@ documentation: ug
 
 # Installing Syncfusion Blazor Offline Installer
 
+I> Starting with 2022 Volume 1 v20.1.0.47, all Syncfusion customers (evaluators and paid customers) who use Syncfusion installers or nuget packages from [nuget.org](https://www.nuget.org/packages?q=Syncfusion) must generate and register the corresponding platform and version license key in your projects.<br>
+For more information, please see [this](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) help topic.
+
 ## Installing with UI
 
 The steps below show how to install the Essential Studio Blazor installer.
