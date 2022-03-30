@@ -51,11 +51,11 @@ In addition to above, Syncfusion Blazor components provides latest scripts in CD
 
 W> The unversioned CDN links are deprecated from 2022 Vol1 - 20.1 version. These links are  available with `19.4` version scripts to avoid breakings in app which uses this link. | 
 
-| Component | CDN Script Reference | Comments |
-| --- | --- |--- |
+| Component | CDN Script Reference |
+| --- | --- |
 |  All components except PDF Viewer & Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor.min.js |
-| PDF Viewer | https://cdn.syncfusion.com/blazor/syncfusion-blazor-pdfviewer.min.js | 
-| Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor-documenteditor.min.js | 
+| PDF Viewer | https://cdn.syncfusion.com/blazor/syncfusion-blazor-pdfviewer.min.js |
+| Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor-documenteditor.min.js |
 
 ## Static web assets
 
