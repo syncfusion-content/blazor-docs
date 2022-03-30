@@ -1071,7 +1071,7 @@ The following code illustrates how to execute FitToPage command.
         DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
         string selectedMode;
         string selectedRegion;
-        //Creating all the nodes
+     
       protected override void OnInitialized()
         {
             Node node1 = new Node()
