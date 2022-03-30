@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started With Blazor AutoComplete in Web Assembly | Syncfusion
-description: Checkout and learn about getting started with Blazor WebAssembly and Blazor AutoComplete component in Visual Studio and much more.
+title: Getting Started With Blazor ListBox in Web Assembly | Syncfusion
+description: Checkout and learn about getting started with Blazor WebAssembly and Blazor ListBox component in Visual Studio and much more.
 platform: Blazor
-control: AutoComplete
+control: ListBox
 documentation: ug
 ---
 
-# Blazor AutoComplete Component in WebAssembly App using Visual Studio
+# Blazor ListBox Component in WebAssembly App using Visual Studio
 
-This article provides a step-by-step instructions for building Blazor WebAssembly App with Blazor AutoComplete component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This article provides a step-by-step instructions for building Blazor WebAssembly App with Blazor ListBox component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ You can create **Blazor WebAssembly App** using Visual Studio in one of the foll
 
 Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
 
-To add Blazor AutoComplete component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns) and then install it.
+To add Blazor ListBox component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns) and then install it.
 
 ## Register Syncfusion Blazor Service
 
@@ -117,7 +117,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application. Generate scripts and theme assets using [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by selecting the components you were using in the application.
 
-## Add Blazor AutoComplete component
+## Add Blazor ListBox component
 
 * Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.DropDowns** namespace.
 
@@ -130,41 +130,38 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 {% endhighlight %}
 {% endtabs %}
 
-* Now, add the Syncfusion AutoComplete component in razor file. Here, the AutoComplete component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+* Now, add the Syncfusion ListBox component in razor file. Here, the ListBox component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
 {% tabs %}
 {% highlight razor %}
 
-<SfAutoComplete TValue="string" TItem="GameFields" Placeholder="e.g. Basketball" DataSource="@Games">
-<AutoCompleteFieldSettings Value="Text"/>
-</SfAutoComplete>
+<SfListBox TValue="string[]" DataSource="@Vehicles" TItem="VehicleData">
+    <ListBoxFieldSettings Text="Text" Value="Id" />
+</SfListBox>
 
-@code{public class GameFields
-    {
-        public string ID { get; set; }
-        public string Text { get; set; }
-    }
-
-    public List<GameFields> Games = new List<GameFields>()
-    {
-        new GameFields(){ ID= "Game1", Text= "American Football" },
-        new GameFields(){ ID= "Game2", Text= "Badminton" },
-        new GameFields(){ ID= "Game3", Text= "Basketball" },
-        new GameFields(){ ID= "Game4", Text= "Cricket" },
-        new GameFields(){ ID= "Game5", Text= "Football" },
-        new GameFields(){ ID= "Game6", Text= "Golf" },
-        new GameFields(){ ID= "Game7", Text= "Hockey" },
-        new GameFields(){ ID= "Game8", Text= "Rugby"},
-        new GameFields(){ ID= "Game9", Text= "Snooker" },
-        new GameFields(){ ID= "Game10",Text= "Tennis"}
+@code {
+    public List<VehicleData> Vehicles = new List<VehicleData> {
+        new VehicleData { Text = "Hennessey Venom", Id = "Vehicle-01" },
+        new VehicleData { Text = "Bugatti Chiron", Id = "Vehicle-02" },
+        new VehicleData { Text = "Bugatti Veyron Super Sport", Id = "Vehicle-03" },
+        new VehicleData { Text = "SSC Ultimate Aero", Id = "Vehicle-04" },
+        new VehicleData { Text = "Koenigsegg CCR", Id = "Vehicle-05" },
+        new VehicleData { Text = "McLaren F1", Id = "Vehicle-06" },
+        new VehicleData { Text = "Aston Martin One- 77", Id = "Vehicle-07" },
+        new VehicleData { Text = "Jaguar XJ220", Id = "Vehicle-08" }
     };
+
+    public class VehicleData {
+      public string Text  { get; set; }
+      public string Id  { get; set; }
+    }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor AutoComplete component will be rendered in the default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the app. Then, the Syncfusion Blazor ListBox component will be rendered in the default web browser.
 
-![Blazor bind AutoComplete component](./images/blazor-autocomplete-data-binding.png)
+![Blazor bind ListBox component](./images/blazor-listbox-data-binding.png)
 
-> You can also explore our [Blazor AutoComplete example](https://blazor.syncfusion.com/demos/autocomplete/default-functionalities) that shows how to bind data to the AutoComplete control in Blazor.
+> You can also explore our [Blazor ListBox example](https://blazor.syncfusion.com/demos/listbox/default-functionalities) that shows how to bind data to the ListBox control in Blazor.

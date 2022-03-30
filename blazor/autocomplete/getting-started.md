@@ -363,4 +363,4 @@ By default, suggestion list width automatically adjusts according to the AutoCom
 * [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio/)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli/)
 
-> You can also explore our [Blazor AutoComplete example](https://blazor.syncfusion.com/demos/autocomplete/default-functionalities) to shows how to bind lists of data to the AutoComplete in Blazor.
+> You can also explore our [Blazor AutoComplete example](https://blazor.syncfusion.com/demos/autocomplete/default-functionalities) that shows how to bind lists of data to the AutoComplete control in Blazor.

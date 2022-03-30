@@ -300,4 +300,4 @@ After initializing, populate the ListBox with data using the `DataSource` proper
 * [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)
 
-> You can also explore our [Blazor ListBox example](https://blazor.syncfusion.com/demos/listbox/default-functionalities) to shows how to bind lists of data to the ListBox component in Blazor.
+> You can also explore our [Blazor ListBox example](https://blazor.syncfusion.com/demos/listbox/default-functionalities) that shows how to bind lists of data to the ListBox component in Blazor.
