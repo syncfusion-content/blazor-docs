@@ -151,12 +151,12 @@ To create a node, define the Node object and add it to the nodes collection of t
 
 ### Clear
 
-Clear method is used to remove all the elements from the diagram.
+Clear method is used to remove all the elements such as nodes, connectors and groups from the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<input type="button" value="Clear" @onclick="Clear"/>
+<input type="button" value="Clear" @onclick="Clear" />
 <SfDiagramComponent @ref="diagram" Width="500px" Height="500px" @bind-Nodes="@Nodes" @bind-Connectors="@Connectors"></SfDiagramComponent>
 
 @code
@@ -174,7 +174,7 @@ Clear method is used to remove all the elements from the diagram.
             OffsetY = 100,
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED" }
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
         });
         Nodes.Add(new Node()
         {
@@ -196,14 +196,14 @@ Clear method is used to remove all the elements from the diagram.
         {
             ID = "group",
             Children = new string[] { "node2", "node3" },
-            Style = new ShapeStyle() { Fill = "#6495ED" }
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
         });
         Connectors.Add(new Connector()
         {
             SourceID = "node1",
             TargetID = "group",
             Style = new ShapeStyle() { StrokeColor = "#6495ED" },
-            TargetDecorator = new DecoratorSettings() { Style = new ShapeStyle() { Fill = "#6495ED" } }
+            TargetDecorator = new DecoratorSettings() { Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" } }
         });
     }
     private void Clear()
