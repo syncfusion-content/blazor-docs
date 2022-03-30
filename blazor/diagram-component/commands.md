@@ -1197,7 +1197,7 @@ The [FitToPage] is used to enable or disable the fit to page behavior with respe
 |---------|----------------|
 |FitToHeight | It is used enable the fit to page behavior only with respect to height.       |
 |FitToWidth | It is used enable the fit to page behavior only with respect to width.         |
-|FitToPage  | It is used to enable the fit to page behavior with respect to both height and width of the diagram. |
+|Both  | It is used to enable the fit to page behavior with respect to both height and width of the diagram. |
 
 ![Fit to page Command](./images/FitPage.gif)
 
