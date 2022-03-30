@@ -49,6 +49,8 @@ If you are using `PDFViewer` or `DocumentEditor`, ensure to add additional scrip
 
 In addition to above, Syncfusion Blazor components provides latest scripts in CDN without versioning. You can use this in development environment if you want to always use the latest version of scripts. It is not recommended to use this in production environment. 
 
+W> The un-versioned CDN links which always maintains latest version scripts are deprecated from 2022 Vol1 - 20.1 version. These links are available with `19.4` version scripts to avoid breaking in sites and apps that uses un-versioned links. 
+
 | Component | CDN Script Reference |
 | --- | --- |
 |  All components except PDF Viewer & Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor.min.js |
