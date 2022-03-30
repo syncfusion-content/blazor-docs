@@ -1052,7 +1052,7 @@ The following code example shows how to disable a command and how to modify the 
 ```
 ### FitToPage command in Blazor Diagram
 
-The FitToPage diagram is used to bring the entire diagram into the view. The [FitOptions] parameter is used to customize the FitToPage command behaviour.
+The FitToPage diagram is used to bring the entire diagram into the view. The [FitOptions] parameter is used to customize the FitToPage command behavior.
 If the parameter is null, the entire diagram is fit into the view. 
 
 The following code illustrates how to execute FitToPage command.
@@ -1195,8 +1195,8 @@ The [FitToPage] is used to enable or disable the fit to page behavior with respe
 
 |Values  | Description     |
 |---------|----------------|
-|FitToHeight | It is used enable the fit to page behavior only with respect to height.       |
 |FitToWidth | It is used enable the fit to page behavior only with respect to width.         |
+|FitToHeight | It is used enable the fit to page behavior only with respect to height.       |
 |Both  | It is used to enable the fit to page behavior with respect to both height and width of the diagram. |
 
 ![Fit to page Command](./images/FitPage.gif)
@@ -1206,7 +1206,8 @@ The [FitToPage] is used to enable or disable the fit to page behavior with respe
 The [Region] is used to set the region where to perform fittopage in the diagram.
 
 |Values    | Description      |
-|Content   | It is used to perform the fit to page for the content area only    |
+|------------|------------------|
 |PageSettings   | It is used to perform the fit to page based on the page width and page height   |
+|Content   | It is used to perform the fit to page for the content area only    |
 
 ![Region](./images/Region.gif)
