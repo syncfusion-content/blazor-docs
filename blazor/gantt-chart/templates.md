@@ -35,8 +35,8 @@ You can design your taskbars to view the tasks in Gantt Chart Chart by using `Ga
 ```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt RowHeight="75" TaskbarHeight="50"
-            ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd" DurationUnit="DurationUnit.Minute"
-            DateFormat="hh:mm tt" DataSource="@TaskCollection" Height="450px" Width="100%">
+         ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd" DurationUnit="DurationUnit.Minute"
+         DateFormat="hh:mm tt" DataSource="@TaskCollection" Height="450px" Width="800px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
     <GanttColumns>
         <GanttColumn Field="TaskId" HeaderText="Event Id"></GanttColumn>
@@ -118,8 +118,8 @@ You can design your taskbars to view the tasks in Gantt Chart Chart by using `Ga
 </SfGantt>
 
 @code{
-    public DateTime ProjectStart = new DateTime(2018, 3, 5, 18, 0, 0);
-    public DateTime ProjectEnd = new DateTime(2018, 3, 6, 18, 0, 0);
+    public DateTime ProjectStart = new DateTime(2022, 3, 7, 18, 0, 0);
+    public DateTime ProjectEnd = new DateTime(2022, 3, 11, 18, 0, 0);
     public List<TaskbarTemplateData.TaskbarData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
@@ -148,20 +148,47 @@ You can design your taskbars to view the tasks in Gantt Chart Chart by using `Ga
             public string Performance { get; set; }
             public string Winner { get; set; }
             public string Movie { get; set; }
-            public TaskProperties GanttProperties { get; set; }
         }
         public static List<TaskbarData> TaskTemplateData()
         {
-            List<TaskbarData> TaskDataCollection = new List<TaskbarData> {
-             new TaskbarData() { TaskId = 1, TaskName = "Product concept", StartDate = new DateTime(2018, 03, 05, 18, 0, 0), EndDate = new DateTime(2018, 03, 05, 18, 15, 0) },
-             new TaskbarData() { TaskId = 2, TaskName = "Oscar moments", StartDate = new DateTime(2018, 03, 05, 18, 30, 0), EndDate = new DateTime(2018, 03, 05, 18, 45, 0), Winner = "", Performance = "90th Academy awards kicks-off and Jimmy kimmel hosts the show", ParentId=1 },
-            new TaskbarData() { TaskId = 3, TaskName = "Actor in a supporting role", StartDate = new DateTime(2018, 03, 05, 18, 36, 0), EndDate = new DateTime(2018, 03, 05, 18, 42, 0), Predecessor = "1",Winner = "Sam Rockwell", Movie = "Three Billboards Outside Ebbing, Missouri.", ParentId=1 },
-             new TaskbarData() { TaskId = 4, TaskName = "Hair and makeup", StartDate = new DateTime(2018, 03, 05, 18, 33, 0), EndDate = new DateTime(2018, 03, 05, 18, 40, 0), Predecessor = "2", Movie = "Darkest Hour", ParentId=1 },
-            new TaskbarData() { TaskId = 5, TaskName = "Product release", StartDate = new DateTime(2018, 03, 05, 18, 41, 0), EndDate = new DateTime(2018, 03, 05, 18, 52, 0) },
-            new TaskbarData() { TaskId = 6, TaskName = "Costume design", StartDate = new DateTime(2018, 03, 05, 18, 59, 0), EndDate = new DateTime(2018, 03, 05, 19, 10, 0), Predecessor = "3", Winner = "Mark Bridges", Movie = "Phantom Thread", ParentId = 5 },
-            new TaskbarData() { TaskId = 7, TaskName = "Documentary feature", StartDate = new DateTime(2018, 03, 05, 19, 11, 0), EndDate = new DateTime(2018, 03, 05, 19, 15, 0), Predecessor = "4", Winner = "Bryan Fogel", Movie = "Icarus", ParentId = 5 },
-             new TaskbarData() { TaskId = 8, TaskName = "Best sound editing and sound mixing", StartDate = new DateTime(2018, 03, 05, 19, 16, 0), EndDate = new DateTime(2018, 03, 05, 19, 23, 0), Predecessor = "5", Winner = "Richard King and Alex Gibson", Movie = "Dunkirk", ParentId = 5 }
-             };
+            List<TaskbarData> TaskDataCollection = new List<TaskbarData>()
+        {
+                new TaskbarData(){
+                TaskId = 1,
+                TaskName = "Oscar Moments",
+                StartDate = new DateTime(2022, 03, 07, 18, 0, 0),
+                EndDate = new DateTime(2022, 03, 08, 18, 15, 0),
+                Winner = "",
+                Performance = "90th Academy awards kicks-off and Jimmy Kimmel hosts the show"
+                },
+                new TaskbarData(){
+                TaskId = 2,
+                TaskName = "Actor in Supporting Role",
+                StartDate = new DateTime(2022, 03, 07, 18, 30, 0),
+                EndDate = new DateTime(2022, 03, 07, 19, 20, 0),
+                Winner = "Sam Rockwell",
+                Movie = "Three Billboards Outside Ebbing, Missouri",
+                ParentId = 1,
+                },
+                new TaskbarData(){
+                TaskId = 3,
+                TaskName = "Hair and Makeup",
+                StartDate = new DateTime(2022, 03, 07, 18, 36, 0),
+                EndDate = new DateTime(2022, 03, 07, 19, 42, 0),
+                Movie = "Darkest Hour",
+                ParentId = 1,
+            },
+                new TaskbarData()
+                {
+                TaskId = 4,
+                TaskName = "Costume Design",
+                StartDate = new DateTime(2022, 03, 07, 18, 36, 0),
+                EndDate = new DateTime(2022, 03, 07, 19, 50, 0),
+                Winner = "Mark Bridges",
+                Movie = "Phantom Thread",
+                ParentId = 1,
+            }
+            };
             return TaskDataCollection;
         }
     }
@@ -175,24 +202,40 @@ You can design your taskbars to view the tasks in Gantt Chart Chart by using `Ga
         background-color: #ad7a66;
         border: 1px solid #3f51b5;
     }
+
     .e-custom-moments {
         background-color: #7ab748;
         border: 1px solid #3f51b5;
     }
+
     .moments, .face-mask, .oscar {
         position: relative;
-        top: 2px;
+        top: 9px;
         bottom: 2px;
         left: 5px;
         padding-right: 4px;
     }
+
     .e-milestone-top {
         border-bottom-color: #7ab748 !important;
         border-bottom: 1px solid #3f51b5;
     }
+
     .e-milestone-bottom {
         border-top-color: #7ab748 !important;
         border-top: 1px solid #3f51b5;
+    }
+
+    .oscar {
+        content: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAzMiAzMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzIgMzI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRkZGRkZGO3N0cm9rZTojMDAwMDAwO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDF7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fQoJLnN0MntmaWxsOiNGRkZGRkY7fQoJLnN0M3tmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fQoJLnN0NHtmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDV7ZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9Cgkuc3Q2e2ZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MjtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9Cgkuc3Q3e3N0cm9rZTojRkZGRkZGO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDh7ZmlsbDojRkZGRkZGO3N0cm9rZTojMDAwMDAwO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9Cgkuc3Q5e3N0cm9rZTojMDAwMDAwO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9Cgkuc3QxMHtmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjI7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDExe2ZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MjtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9Cgkuc3QxMntmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjM7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDEze2ZpbGw6bm9uZTtzdHJva2U6I0RERERERDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9CgljaXJjbGUscGF0aHtmaWxsOiNGRkY7fQo8L3N0eWxlPgo8Zz4KCTxjaXJjbGUgY3g9IjE1LjciIGN5PSIyMS45IiByPSI4LjEiLz4KCTxwYXRoIGQ9Ik0yMywxNS40TDI5LDRoLTcuNGwtNC43LDguMkMxOS4zLDEyLjUsMjEuNCwxMy42LDIzLDE1LjR6Ii8+Cgk8cGF0aCBkPSJNMTQuOSwxMi4yTDEwLjIsNEgzbDUuNywxMS4xQzEwLjMsMTMuNSwxMi41LDEyLjQsMTQuOSwxMi4yeiIvPgo8L2c+Cjwvc3ZnPgo=');
+    }
+
+    .face-mask {
+        content: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAzMiAzMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzIgMzI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlPgoJcGF0aHtmaWxsOiNGRkY7fQo8L3N0eWxlPgo8Zz4KCTxwYXRoIGQ9Ik0yNy40LDE0LjlsLTYuNS0yLjhjLTAuNy0wLjMtMS40LTAuMy0yLjEsMGMtMC41LDAuMy0wLjksMC42LTEuMiwxLjFjLTAuMS0xLTAuMy0xLjktMC44LTIuOGwtMi40LTQuOQoJCWMtMC42LTEuMy0yLjItMS44LTMuNS0xLjJsLTYuNCwzQzMuOSw3LjYsMy40LDguMiwzLjEsOC45Yy0wLjIsMC43LTAuMiwxLjMsMC4xLDJsMi40LDQuOWMxLjMsMi43LDQuMSw0LjQsNy4xLDQuNAoJCWMwLjYsMCwxLjEtMC4xLDEuNy0wLjJoMC4xbDAuMS0wLjFjMC4xLTAuMSwwLjItMC4yLDAuMy0wLjNjLTAuOCwzLDAuNCw2LjMsMyw4LjNMMTgsMjhoMC4xYzAuNCwwLDAuOSwwLDEuMywwCgkJYzMuMSwwLDYtMS44LDcuMi00LjdsMi4xLTVDMjkuNCwxNywyOC43LDE1LjUsMjcuNCwxNC45eiBNMTEuNSw4LjFjMC43LTAuMywxLjMtMC4zLDEuNSwwYzAuMiwwLjMtMC4zLDAuOS0xLDEuMnMtMS4zLDAuMy0xLjUsMAoJCVMxMC44LDguNSwxMS41LDguMXogTTYuMywxMS4zYy0wLjItMC4zLDAuMy0wLjgsMC45LTEuMmMwLjctMC4zLDEuMy0wLjMsMS41LDBjMC4yLDAuMy0wLjIsMC45LTAuOSwxLjIKCQlDNy4xLDExLjcsNi41LDExLjYsNi4zLDExLjN6IE04LjIsMTQuOWMwLDAsNC4xLDAuOCw2LjQtM0MxNC42LDExLjksMTQuNiwxOS41LDguMiwxNC45eiBNMjcuOSwxNy45bC0yLjEsNQoJCWMtMS4yLDIuOC00LjMsNC41LTcuNCw0Yy0yLjUtMi0zLjQtNS4zLTIuMi04LjFsMi4xLTVjMC4yLTAuNCwwLjUtMC43LDAuOS0wLjhjMC40LTAuMiwwLjktMC4yLDEuMywwbDYuNSwyLjgKCQlDMjcuOCwxNi4yLDI4LjIsMTcuMSwyNy45LDE3Ljl6Ii8+Cgk8cGF0aCBkPSJNMjQuOCwxNy44Yy0wLjctMC4zLTEuNC0wLjMtMS41LDAuMWMtMC4xLDAuMywwLjMsMC44LDEsMS4xczEuNCwwLjMsMS41LTAuMUMyNS45LDE4LjUsMjUuNSwxOC4xLDI0LjgsMTcuOHoiLz4KCTxwYXRoIGQ9Ik0xOS45LDE3LjJjMC43LDAuMywxLjQsMC4zLDEuNS0wLjFjMC4xLTAuMy0wLjMtMC44LTEtMS4xYy0wLjctMC4zLTEuNC0wLjMtMS41LDAuMUMxOC44LDE2LjQsMTkuMywxNi45LDE5LjksMTcuMnoiLz4KCTxwYXRoIGQ9Ik0xNy41LDE5LjhjMC43LDcuOCw2LjUsMi44LDYuNSwyLjhDMTkuNiwyMy41LDE3LjUsMTkuOCwxNy41LDE5Ljh6Ii8+CjwvZz4KPC9zdmc+Cg==');
+    }
+
+    .moments {
+        content: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAzMiAzMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzIgMzI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRkZGRkZGO3N0cm9rZTojMDAwMDAwO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDF7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fQoJLnN0MntmaWxsOiNGRkZGRkY7fQoJLnN0M3tmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fQoJLnN0NHtmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDV7ZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9Cgkuc3Q2e2ZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MjtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9Cgkuc3Q3e3N0cm9rZTojRkZGRkZGO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDh7ZmlsbDojRkZGRkZGO3N0cm9rZTojMDAwMDAwO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9Cgkuc3Q5e3N0cm9rZTojMDAwMDAwO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9Cgkuc3QxMHtmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjI7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDExe2ZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MjtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9Cgkuc3QxMntmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjM7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDEze2ZpbGw6bm9uZTtzdHJva2U6I0RERERERDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9CglwYXRoLGVsbGlwc2V7ZmlsbDojRkZGO30KPC9zdHlsZT4KPGc+Cgk8cGF0aCBkPSJNMzAuMSw2LjNjMC44LTAuNSwxLjEtMS41LDAuNy0yLjRzLTEuNS0xLjItMi4zLTAuN3MtMS4xLDEuNS0wLjcsMi40QzI4LjIsNi40LDI5LjMsNi43LDMwLjEsNi4zeiIvPgoJPHBhdGggZD0iTTMwLjMsNi45Yy0wLjcsMC40LTEuNiwwLjMtMi4zLTAuMkwyOC4yLDljLTAuMiwwLTAuNSwwLjEtMC43LDAuM2wtNS41LDQuM2wtNC4zLTIuOGMtMC4yLTAuMy0wLjUtMC42LTAuOS0wLjhMMTQsOWwtMyw2CgkJTDgsOWwtMi45LDEuMWMtMC4yLDAuMS0wLjQsMC4yLTAuNSwwLjNjLTAuMiwwLjEtMC40LDAuMy0wLjUsMC41bC0zLjYsNi40Yy0wLjIsMC4zLTAuMiwwLjctMC4yLDFsMS43LDguNEMyLjIsMjcuNSwyLjksMjgsMy42LDI4CgkJYzAuMSwwLDAuMiwwLDAuMywwYzAuMiwwLDAuMy0wLjEsMC41LTAuMkw0LDMwaDE0bC0xLjgtMTAuOWwxLjItNC45bDQsMi42YzAuMiwwLjIsMC41LDAuMiwwLjgsMC4yYzAuMywwLDAuNy0wLjEsMC45LTAuM2w1LjUtNC40CgkJYzAsMC4zLTAuMSwwLjYtMC4yLDAuOGMtMC4zLDAuNy0wLjYsMC42LTEuMiwwLjVjLTAuMSwwLTAuMSwwLTAuMiwwbDAsMC4zYzAuMSwwLDAuMiwwLDAuMiwwYzAuMywwLjEsMC43LDAuMSwxLDAKCQljMC4yLTAuMSwwLjQtMC4zLDAuNS0wLjdjMC4xLTAuMywwLjItMC43LDAuMi0xLjFjMC4xLDAsMC4zLTAuMSwwLjMtMC4zbDAsMGwwLjItMC4yYzAuNi0wLjUsMC43LTEuNCwwLjMtMmwwLjctMi44CgkJQzMwLjQsNi45LDMwLjMsNi45LDMwLjMsNi45eiBNNC44LDI1bC0xLjQtNi43bDEuNS0yLjdMNS44LDE5TDQuOCwyNXoiLz4KCTxlbGxpcHNlIGN4PSIxMSIgY3k9IjUiIHJ4PSIzLjUiIHJ5PSI0Ii8+CjwvZz4KPC9zdmc+Cg==');
     }
 </style>
 ```
