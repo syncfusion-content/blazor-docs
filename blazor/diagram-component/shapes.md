@@ -21,7 +21,7 @@ Diagram provides support to add different kind of nodes. They are as follows:
 
 ## Text node
 
-Texts can be added to the diagram as [Text] nodes.The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shape.html) property of the node allows you to set the type of node for text nodes, it should be set as **Text**. In addition,the [Content] property define the content object that is used to define the text to be added. [Style] of the node is used as [TextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html) to customize the appearance of that text.
+Diagram allows to add texts as **TextShape**. The **Content** property defines the text to be added. [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html) of the node is used as [TextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html) to customize the appearance of the text.
 
 The following code illustrates how to create a text node.
 ```cshtml
