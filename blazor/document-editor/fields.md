@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Fields in Blazor DocumentEditor Component | Syncfusion
-description: Learn how to use fields in Syncfusion Blazor DocumentEditor component.
+description: Checkout and learn here all about the fields in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# Fields
+# Fields in Blazor DocumentEditor Component
 
 Document Editor has preservation support for all types of fields in an existing word document without any data loss.
 
