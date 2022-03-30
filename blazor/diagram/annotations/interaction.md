@@ -269,7 +269,7 @@ The following code explains how to set a dragLimit for connector annotations.
 }
 ```
 
-![Annotation DragLimit](../images/Annotation_DragLimit.gif)
+
 
 >* By default, the drag limit will be disabled for the connector. It can be enabled by setting connector constraints to drag.
 >* The drag limit is applicable only for the connector.
