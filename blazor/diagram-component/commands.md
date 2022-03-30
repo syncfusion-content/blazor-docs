@@ -1050,14 +1050,10 @@ The following code example shows how to disable a command and how to modify the 
     }
 }
 ```
-### FitToPage command
+### FitToPage command in Blazor Diagram
 
-The fitToPage command helps to fit the diagram content into the viewport with respect to either width, height or at the whole.
-
-The mode parameter defines whether the diagram has to be horizontally/vertically fit into the viewport with respect to width, height,
- or entire bounds of the diagram.
-
- The region parameter defines the region that has to be drawn as an image.
+The FitToPage diagram is used to bring the entire diagram into the view. The [FitOptions] parameter is used to customize the FitToPage command behaviour.
+If the parameter is null, the entire diagram is fit into the view. 
 
 The following code illustrates how to execute FitToPage command.
 
@@ -1073,27 +1069,115 @@ The following code illustrates how to execute FitToPage command.
         FitOptions options = new FitOptions() {Mode = FitMode.Both, Region = DiagramRegion.Content };
         DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
         DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+        string selectedMode;
+        string selectedRegion;
         //Creating all the nodes
-        protected override void OnInitialized(){
-         Node node1 = new Node(){
-            ID = "node1",
-            OffsetX = 100,
-            OffsetY = 100,
-            Width = 100,
-            Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
-         };
-         Node node2 = new Node(){
-             ID = "node2",
-            OffsetX = 500,
-            OffsetY = 700,
-            Width = 100,
-            Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
-         };
-         nodes.Add(node1);
-         nodes.Add(node2);
+      protected override void OnInitialized()
+        {
+            Node node1 = new Node()
+            {
+                ID = "node1",
+                OffsetX = 100,
+                OffsetY = 100,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+            };
+            Node node2 = new Node()
+            {
+                ID = "node2",
+                OffsetX = 500,
+                OffsetY = 700,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+            };
+            Node node3 = new Node()
+            {
+                ID = "node3",
+                OffsetX = 500,
+                OffsetY = 500,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+            };
+            Node node4 = new Node()
+            {
+                ID = "node4",
+                OffsetX = 1000,
+                OffsetY = 700,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+            };
+            Node node5 = new Node()
+            {
+                ID = "node5",
+                OffsetX = 1150,
+                OffsetY = 400,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
         };
+        Node node6 = new Node()
+        {
+            ID = "node6",
+            OffsetX = 500,
+            OffsetY = 1000,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+        };
+        nodes.Add(node1);
+        nodes.Add(node2);
+        nodes.Add(node3);
+        nodes.Add(node4);
+        nodes.Add(node5);
+        nodes.Add(node6);
+    }
+      private void Mode(ChangeEventArgs e)
+    {
+        if (e.Value != null)
+        {
+            selectedMode = (string)e.Value;
+            switch (selectedMode)
+            {
+                case "Both":
+                    options = new FitOptions();
+                    options.Mode = FitMode.Both;
+                    break;
+                case "Width":
+                    options = new FitOptions();
+                    options.Mode = FitMode.Width;
+                    break;
+                case "Height":
+                    options = new FitOptions();
+                    options.Mode = FitMode.Height;
+                    break;
+            }
+        }
+    }
+
+
+    private void RegionChange(ChangeEventArgs e)
+    {
+        if (e.Value != null)
+        {
+            selectedRegion = (string)e.Value;
+            switch (selectedRegion)
+            {
+                case "PageSettings":
+                    options = new FitOptions();
+                    options.Region = DiagramRegion.PageSettings;
+                    break;
+                case "Content":
+                    options = new FitOptions();
+                    options.Region = DiagramRegion.Content;
+                    break;
+            }
+        }
+    }
+
     //fit the diagram to the page with respect to mode and region
         private void FitToPage()
         {
@@ -1101,5 +1185,28 @@ The following code illustrates how to execute FitToPage command.
         }
 }
 ```
-![Fit to page Command](./images/FitToPage.gif)
+### FitToPage Parameter
 
+The [FitOptions] parameter is used to customize the FitToPage command behavior.
+
+### FitToPage
+
+The [FitToPage] is used to enable or disable the fit to page behavior with respect to height or width
+
+|Values  | Description     |
+|---------|----------------|
+|FitToHeight | It is used enable the fit to page behavior only with respect to height.       |
+|FitToWidth | It is used enable the fit to page behavior only with respect to width.         |
+|FitToPage  | It is used to enable the fit to page behavior with respect to both height and width of the diagram. |
+
+![Fit to page Command](./images/FitPage.gif)
+
+### Region
+
+The [Region] is used to set the region where to perform fittopage in the diagram.
+
+|Values    | Description      |
+|Content   | It is used to perform the fit to page for the content area only    |
+|PageSettings   | It is used to perform the fit to page based on the page width and page height   |
+
+![Region](./images/Region.gif)
