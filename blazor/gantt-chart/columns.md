@@ -56,13 +56,13 @@ Using the `GanttColumns` property, you can define the columns in Gantt Chart. If
             new TaskData() {
                 TaskId = 1,
                 TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 EndDate = new DateTime(2022, 04, 21),
             },
             new TaskData() {
                 TaskId = 2,
                 TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 1
@@ -70,7 +70,7 @@ Using the `GanttColumns` property, you can define the columns in Gantt Chart. If
             new TaskData() {
                 TaskId = 3,
                 TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "4",
                 Progress = 40,
                 ParentId = 1
@@ -78,7 +78,7 @@ Using the `GanttColumns` property, you can define the columns in Gantt Chart. If
             new TaskData() {
                 TaskId = 4,
                 TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 1
@@ -86,13 +86,13 @@ Using the `GanttColumns` property, you can define the columns in Gantt Chart. If
             new TaskData() {
                 TaskId = 5,
                 TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 06),
                 EndDate = new DateTime(2022, 04, 21),
             },
             new TaskData() {
                 TaskId = 6,
                 TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "3",
                 Progress = 30,
                 ParentId = 5
@@ -100,7 +100,7 @@ Using the `GanttColumns` property, you can define the columns in Gantt Chart. If
             new TaskData() {
                 TaskId = 7,
                 TaskName = "List materials",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "3",
                 Progress = 40,
                 ParentId = 5
@@ -108,7 +108,7 @@ Using the `GanttColumns` property, you can define the columns in Gantt Chart. If
             new TaskData() {
                 TaskId = 8,
                 TaskName = "Estimation approval",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 5
@@ -221,14 +221,14 @@ The Header Template has options to display custom element values or content in t
     {
         List<TaskData> Tasks = new List<TaskData>()
                 {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 02), EndDate = new DateTime(2022, 04, 21)},
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 02), Duration = "0", Progress = 30, Parent_Id = 1},
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 02), Duration = "4", Progress = 40, Parent_Id = 1},
-            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 02), Duration = "0", Progress = 30, Parent_Id =1},
-            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 02), EndDate = new DateTime(2022, 04, 21)},
-            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 04), Duration = "3", Progress = 30, Parent_Id =5},
-            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 04), Duration = "3", Progress = 40, Parent_Id =5},
-            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 04), Duration = "0", Progress = 30, Parent_Id =5}
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21)},
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, Parent_Id = 1},
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, Parent_Id = 1},
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, Parent_Id =1},
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21)},
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, Parent_Id =5},
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, Parent_Id =5},
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, Parent_Id =5}
 
         };
         return Tasks;
@@ -279,13 +279,13 @@ To format the cell values based on a specific culture, use the `GanttColumn.Form
             new TaskData() {
                 TaskId = 1,
                 TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 EndDate = new DateTime(2022, 04, 21),
             },
             new TaskData() {
                 TaskId = 2,
                 TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 1
@@ -293,7 +293,7 @@ To format the cell values based on a specific culture, use the `GanttColumn.Form
             new TaskData() {
                 TaskId = 3,
                 TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "4",
                 Progress = 40,
                 ParentId = 1
@@ -301,7 +301,7 @@ To format the cell values based on a specific culture, use the `GanttColumn.Form
             new TaskData() {
                 TaskId = 4,
                 TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 1
@@ -309,13 +309,13 @@ To format the cell values based on a specific culture, use the `GanttColumn.Form
             new TaskData() {
                 TaskId = 5,
                 TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 06),
                 EndDate = new DateTime(2022, 04, 21),
             },
             new TaskData() {
                 TaskId = 6,
                 TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "3",
                 Progress = 30,
                 ParentId = 5
@@ -323,7 +323,7 @@ To format the cell values based on a specific culture, use the `GanttColumn.Form
             new TaskData() {
                 TaskId = 7,
                 TaskName = "List materials",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "3",
                 Progress = 40,
                 ParentId = 5
@@ -331,7 +331,7 @@ To format the cell values based on a specific culture, use the `GanttColumn.Form
             new TaskData() {
                 TaskId = 8,
                 TaskName = "Estimation approval",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 5
@@ -364,11 +364,11 @@ You can also use the custom format string to format the date values. Some of the
 
 Format | Formatted value
 -----|-----
-{ type:'date', format:'dd/MM/yyyy' } | 04/07/2019
-{ type:'date', format:'dd.MM.yyyy' } | 04.07.2019
-{ type:'date', skeleton:'short' } | 7/4/19
-{ type: 'dateTime', format: 'dd/MM/yyyy hh:mm tt' } | 04/07/2019 12:00 AM
-{ type: 'dateTime', format: 'MM/dd/yyyy hh:mm:ss tt' } | 07/04/2019 12:00:00 AM
+{ type:'date', format:'dd/MM/yyyy' } | 04/07/2022
+{ type:'date', format:'dd.MM.yyyy' } | 04.07.2022
+{ type:'date', skeleton:'short' } | 7/4/22
+{ type: 'dateTime', format: 'dd/MM/yyyy hh:mm tt' } | 04/07/2022 12:00 AM
+{ type: 'dateTime', format: 'MM/dd/yyyy hh:mm:ss tt' } | 07/04/2022 12:00:00 AM
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -410,13 +410,13 @@ Format | Formatted value
             new TaskData() {
                 TaskId = 1,
                 TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 EndDate = new DateTime(2022, 04, 21),
             },
             new TaskData() {
                 TaskId = 2,
                 TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 1
@@ -424,7 +424,7 @@ Format | Formatted value
             new TaskData() {
                 TaskId = 3,
                 TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "4",
                 Progress = 40,
                 ParentId = 1
@@ -432,7 +432,7 @@ Format | Formatted value
             new TaskData() {
                 TaskId = 4,
                 TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 1
@@ -440,13 +440,13 @@ Format | Formatted value
             new TaskData() {
                 TaskId = 5,
                 TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 06),
                 EndDate = new DateTime(2022, 04, 21),
             },
             new TaskData() {
                 TaskId = 6,
                 TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "3",
                 Progress = 30,
                 ParentId = 5
@@ -454,7 +454,7 @@ Format | Formatted value
             new TaskData() {
                 TaskId = 7,
                 TaskName = "List materials",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "3",
                 Progress = 40,
                 ParentId = 5
@@ -462,7 +462,7 @@ Format | Formatted value
             new TaskData() {
                 TaskId = 8,
                 TaskName = "Estimation approval",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 5
@@ -488,7 +488,7 @@ The column reordering can be done by dragging a column header from one index to 
 </SfGantt>
 
 @code{
-    public List<TaskData> TaskCollection { get; set; }
+    private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -512,13 +512,13 @@ The column reordering can be done by dragging a column header from one index to 
             new TaskData() {
                 TaskId = 1,
                 TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 EndDate = new DateTime(2022, 04, 21),
             },
             new TaskData() {
                 TaskId = 2,
                 TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 1
@@ -526,7 +526,7 @@ The column reordering can be done by dragging a column header from one index to 
             new TaskData() {
                 TaskId = 3,
                 TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "4",
                 Progress = 40,
                 ParentId = 1
@@ -534,7 +534,7 @@ The column reordering can be done by dragging a column header from one index to 
             new TaskData() {
                 TaskId = 4,
                 TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 1
@@ -542,13 +542,13 @@ The column reordering can be done by dragging a column header from one index to 
             new TaskData() {
                 TaskId = 5,
                 TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 06),
                 EndDate = new DateTime(2022, 04, 21),
             },
             new TaskData() {
                 TaskId = 6,
                 TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "3",
                 Progress = 30,
                 ParentId = 5
@@ -556,7 +556,7 @@ The column reordering can be done by dragging a column header from one index to 
             new TaskData() {
                 TaskId = 7,
                 TaskName = "List materials",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "3",
                 Progress = 40,
                 ParentId = 5
@@ -564,7 +564,7 @@ The column reordering can be done by dragging a column header from one index to 
             new TaskData() {
                 TaskId = 8,
                 TaskName = "Estimation approval",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 5
@@ -630,13 +630,13 @@ Multiple columns can be reordered at a time by using the `ReorderColumnsAsync` m
             new TaskData() {
                 TaskId = 1,
                 TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 EndDate = new DateTime(2022, 04, 21),
             },
             new TaskData() {
                 TaskId = 2,
                 TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 1
@@ -644,7 +644,7 @@ Multiple columns can be reordered at a time by using the `ReorderColumnsAsync` m
             new TaskData() {
                 TaskId = 3,
                 TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "4",
                 Progress = 40,
                 ParentId = 1
@@ -652,7 +652,7 @@ Multiple columns can be reordered at a time by using the `ReorderColumnsAsync` m
             new TaskData() {
                 TaskId = 4,
                 TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 1
@@ -660,13 +660,13 @@ Multiple columns can be reordered at a time by using the `ReorderColumnsAsync` m
             new TaskData() {
                 TaskId = 5,
                 TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 06),
                 EndDate = new DateTime(2022, 04, 21),
             },
             new TaskData() {
                 TaskId = 6,
                 TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "3",
                 Progress = 30,
                 ParentId = 5
@@ -674,7 +674,7 @@ Multiple columns can be reordered at a time by using the `ReorderColumnsAsync` m
             new TaskData() {
                 TaskId = 7,
                 TaskName = "List materials",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "3",
                 Progress = 40,
                 ParentId = 5
@@ -682,7 +682,7 @@ Multiple columns can be reordered at a time by using the `ReorderColumnsAsync` m
             new TaskData() {
                 TaskId = 8,
                 TaskName = "Estimation approval",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 5
@@ -732,13 +732,13 @@ The column width can be resized by clicking and dragging the right edge of the c
             new TaskData() {
                 TaskId = 1,
                 TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 EndDate = new DateTime(2022, 04, 21),
             },
             new TaskData() {
                 TaskId = 2,
                 TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 1
@@ -746,7 +746,7 @@ The column width can be resized by clicking and dragging the right edge of the c
             new TaskData() {
                 TaskId = 3,
                 TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "4",
                 Progress = 40,
                 ParentId = 1
@@ -754,7 +754,7 @@ The column width can be resized by clicking and dragging the right edge of the c
             new TaskData() {
                 TaskId = 4,
                 TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 1
@@ -762,13 +762,13 @@ The column width can be resized by clicking and dragging the right edge of the c
             new TaskData() {
                 TaskId = 5,
                 TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 06),
                 EndDate = new DateTime(2022, 04, 21),
             },
             new TaskData() {
                 TaskId = 6,
                 TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "3",
                 Progress = 30,
                 ParentId = 5
@@ -776,7 +776,7 @@ The column width can be resized by clicking and dragging the right edge of the c
             new TaskData() {
                 TaskId = 7,
                 TaskName = "List materials",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "3",
                 Progress = 40,
                 ParentId = 5
@@ -784,7 +784,7 @@ The column width can be resized by clicking and dragging the right edge of the c
             new TaskData() {
                 TaskId = 8,
                 TaskName = "Estimation approval",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 5
@@ -844,13 +844,13 @@ In the following example, the minimum and maximum widths are defined for the `Du
             new TaskData() {
                 TaskId = 1,
                 TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 EndDate = new DateTime(2022, 04, 21),
             },
             new TaskData() {
                 TaskId = 2,
                 TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 1
@@ -858,7 +858,7 @@ In the following example, the minimum and maximum widths are defined for the `Du
             new TaskData() {
                 TaskId = 3,
                 TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "4",
                 Progress = 40,
                 ParentId = 1
@@ -866,7 +866,7 @@ In the following example, the minimum and maximum widths are defined for the `Du
             new TaskData() {
                 TaskId = 4,
                 TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 1
@@ -874,13 +874,13 @@ In the following example, the minimum and maximum widths are defined for the `Du
             new TaskData() {
                 TaskId = 5,
                 TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 06),
                 EndDate = new DateTime(2022, 04, 21),
             },
             new TaskData() {
                 TaskId = 6,
                 TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "3",
                 Progress = 30,
                 ParentId = 5
@@ -888,7 +888,7 @@ In the following example, the minimum and maximum widths are defined for the `Du
             new TaskData() {
                 TaskId = 7,
                 TaskName = "List materials",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "3",
                 Progress = 40,
                 ParentId = 5
@@ -896,7 +896,7 @@ In the following example, the minimum and maximum widths are defined for the `Du
             new TaskData() {
                 TaskId = 8,
                 TaskName = "Estimation approval",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 5
@@ -962,13 +962,13 @@ A column template is used to customize the column’s look. The following code e
         new TaskData() {
             TaskId = 1,
             TaskName = "Project initiation",
-            StartDate = new DateTime(2022, 04, 02),
+            StartDate = new DateTime(2022, 04, 05),
             EndDate = new DateTime(2022, 04, 21)
         },
         new TaskData() {
             TaskId = 2,
             TaskName = "Identify Site location",
-            StartDate = new DateTime(2022, 04, 02),
+            StartDate = new DateTime(2022, 04, 05),
             Duration = "0",
             Progress = 30,
             ParentId = 1
@@ -976,7 +976,7 @@ A column template is used to customize the column’s look. The following code e
         new TaskData() {
             TaskId = 3,
             TaskName = "Perform soil test",
-            StartDate = new DateTime(2022, 04, 02),
+            StartDate = new DateTime(2022, 04, 05),
             Duration = "4",
             Progress = 40,
             ParentId = 1
@@ -984,7 +984,7 @@ A column template is used to customize the column’s look. The following code e
         new TaskData() {
             TaskId = 4,
             TaskName = "Soil test approval",
-            StartDate = new DateTime(2022, 04, 02),
+            StartDate = new DateTime(2022, 04, 05),
             Duration = "0",
             Progress = 30,
             ParentId = 1
@@ -992,13 +992,13 @@ A column template is used to customize the column’s look. The following code e
         new TaskData() {
             TaskId = 5,
             TaskName = "Project estimation",
-            StartDate = new DateTime(2022, 04, 02),
+            StartDate = new DateTime(2022, 04, 06),
             EndDate = new DateTime(2022, 04, 21)
         },
         new TaskData() {
             TaskId = 6,
             TaskName = "Develop floor plan for estimation",
-            StartDate = new DateTime(2022, 04, 04),
+            StartDate = new DateTime(2022, 04, 06),
             Duration = "3",
             Progress = 30,
             ParentId = 5
@@ -1006,7 +1006,7 @@ A column template is used to customize the column’s look. The following code e
         new TaskData() {
             TaskId = 7,
             TaskName = "List materials",
-            StartDate = new DateTime(2022, 04, 04),
+            StartDate = new DateTime(2022, 04, 06),
             Duration = "3",
             Progress = 40,
             ParentId = 5
@@ -1014,7 +1014,7 @@ A column template is used to customize the column’s look. The following code e
         new TaskData() {
             TaskId = 8,
             TaskName = "Estimation approval",
-            StartDate = new DateTime(2022, 04, 04),
+            StartDate = new DateTime(2022, 04, 06),
             Duration = "0",
             Progress = 30,
             ParentId = 5
@@ -1074,13 +1074,13 @@ The default items are displayed in the following table:
                 new TaskData() {
                     TaskId = 1,
                     TaskName = "Project initiation",
-                    StartDate = new DateTime(2022, 04, 02),
+                    StartDate = new DateTime(2022, 04, 05),
                     EndDate = new DateTime(2022, 04, 21),
                 },
                 new TaskData() {
                     TaskId = 2,
                     TaskName = "Identify Site location",
-                    StartDate = new DateTime(2022, 04, 02),
+                    StartDate = new DateTime(2022, 04, 05),
                     Duration = "0",
                     Progress = 30,
                     ParentId = 1
@@ -1088,7 +1088,7 @@ The default items are displayed in the following table:
                 new TaskData() {
                     TaskId = 3,
                     TaskName = "Perform soil test",
-                    StartDate = new DateTime(2022, 04, 02),
+                    StartDate = new DateTime(2022, 04, 05),
                     Duration = "4",
                     Progress = 40,
                     ParentId = 1
@@ -1096,7 +1096,7 @@ The default items are displayed in the following table:
                 new TaskData() {
                     TaskId = 4,
                     TaskName = "Soil test approval",
-                    StartDate = new DateTime(2022, 04, 02),
+                    StartDate = new DateTime(2022, 04, 05),
                     Duration = "0",
                     Progress = 30,
                     ParentId = 1
@@ -1104,13 +1104,13 @@ The default items are displayed in the following table:
                 new TaskData() {
                     TaskId = 5,
                     TaskName = "Project estimation",
-                    StartDate = new DateTime(2022, 04, 02),
+                    StartDate = new DateTime(2022, 04, 06),
                     EndDate = new DateTime(2022, 04, 21),
                 },
                 new TaskData() {
                     TaskId = 6,
                     TaskName = "Develop floor plan for estimation",
-                    StartDate = new DateTime(2022, 04, 04),
+                    StartDate = new DateTime(2022, 04, 06),
                     Duration = "3",
                     Progress = 30,
                     ParentId = 5
@@ -1118,7 +1118,7 @@ The default items are displayed in the following table:
                 new TaskData() {
                     TaskId = 7,
                     TaskName = "List materials",
-                    StartDate = new DateTime(2022, 04, 04),
+                    StartDate = new DateTime(2022, 04, 06),
                     Duration = "3",
                     Progress = 40,
                     ParentId = 5
@@ -1126,7 +1126,7 @@ The default items are displayed in the following table:
                 new TaskData() {
                     TaskId = 8,
                     TaskName = "Estimation approval",
-                    StartDate = new DateTime(2022, 04, 04),
+                    StartDate = new DateTime(2022, 04, 06),
                     Duration = "0",
                     Progress = 30,
                     ParentId = 5
@@ -1183,13 +1183,13 @@ You can toggle the column visibility based on media queries, which are defined i
             new TaskData() {
                 TaskId = 1,
                 TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 EndDate = new DateTime(2022, 04, 21),
             },
             new TaskData() {
                 TaskId = 2,
                 TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 1
@@ -1197,7 +1197,7 @@ You can toggle the column visibility based on media queries, which are defined i
             new TaskData() {
                 TaskId = 3,
                 TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "4",
                 Progress = 40,
                 ParentId = 1
@@ -1205,7 +1205,7 @@ You can toggle the column visibility based on media queries, which are defined i
             new TaskData() {
                 TaskId = 4,
                 TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 1
@@ -1213,13 +1213,13 @@ You can toggle the column visibility based on media queries, which are defined i
             new TaskData() {
                 TaskId = 5,
                 TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 06),
                 EndDate = new DateTime(2022, 04, 21),
             },
             new TaskData() {
                 TaskId = 6,
                 TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "3",
                 Progress = 30,
                 ParentId = 5
@@ -1227,7 +1227,7 @@ You can toggle the column visibility based on media queries, which are defined i
             new TaskData() {
                 TaskId = 7,
                 TaskName = "List materials",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "3",
                 Progress = 40,
                 ParentId = 5
@@ -1235,7 +1235,7 @@ You can toggle the column visibility based on media queries, which are defined i
             new TaskData() {
                 TaskId = 8,
                 TaskName = "Estimation approval",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 5
@@ -1281,13 +1281,13 @@ The tree/expander column is a column in the Gantt Chart component that has icons
             new TaskData() {
                 TaskId = 1,
                 TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 EndDate = new DateTime(2022, 04, 21),
             },
             new TaskData() {
                 TaskId = 2,
                 TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 1
@@ -1295,7 +1295,7 @@ The tree/expander column is a column in the Gantt Chart component that has icons
             new TaskData() {
                 TaskId = 3,
                 TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "4",
                 Progress = 40,
                 ParentId = 1
@@ -1303,7 +1303,7 @@ The tree/expander column is a column in the Gantt Chart component that has icons
             new TaskData() {
                 TaskId = 4,
                 TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 1
@@ -1311,13 +1311,13 @@ The tree/expander column is a column in the Gantt Chart component that has icons
             new TaskData() {
                 TaskId = 5,
                 TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 06),
                 EndDate = new DateTime(2022, 04, 21),
             },
             new TaskData() {
                 TaskId = 6,
                 TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "3",
                 Progress = 30,
                 ParentId = 5
@@ -1325,7 +1325,7 @@ The tree/expander column is a column in the Gantt Chart component that has icons
             new TaskData() {
                 TaskId = 7,
                 TaskName = "List materials",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "3",
                 Progress = 40,
                 ParentId = 5
@@ -1333,7 +1333,7 @@ The tree/expander column is a column in the Gantt Chart component that has icons
             new TaskData() {
                 TaskId = 8,
                 TaskName = "Estimation approval",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 5
@@ -1399,13 +1399,13 @@ You can show or hide gantt component columns dynamically using external buttons 
             new TaskData() {
                 TaskId = 1,
                 TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 EndDate = new DateTime(2022, 04, 21),
             },
             new TaskData() {
                 TaskId = 2,
                 TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 1
@@ -1413,7 +1413,7 @@ You can show or hide gantt component columns dynamically using external buttons 
             new TaskData() {
                 TaskId = 3,
                 TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "4",
                 Progress = 40,
                 ParentId = 1
@@ -1421,7 +1421,7 @@ You can show or hide gantt component columns dynamically using external buttons 
             new TaskData() {
                 TaskId = 4,
                 TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 1
@@ -1429,13 +1429,13 @@ You can show or hide gantt component columns dynamically using external buttons 
             new TaskData() {
                 TaskId = 5,
                 TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 06),
                 EndDate = new DateTime(2022, 04, 21),
             },
             new TaskData() {
                 TaskId = 6,
                 TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "3",
                 Progress = 30,
                 ParentId = 5
@@ -1443,7 +1443,7 @@ You can show or hide gantt component columns dynamically using external buttons 
             new TaskData() {
                 TaskId = 7,
                 TaskName = "List materials",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "3",
                 Progress = 40,
                 ParentId = 5
@@ -1451,7 +1451,7 @@ You can show or hide gantt component columns dynamically using external buttons 
             new TaskData() {
                 TaskId = 8,
                 TaskName = "Estimation approval",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "0",
                 Progress = 30,
                 ParentId = 5
@@ -1507,14 +1507,14 @@ You can enable or disable gantt component action for a particular column by sett
             new TaskData() {
                 TaskId = 1,
                 TaskName = "Project initiation",
-                StartDate = new DateTime(2019, 04, 02),
-                EndDate = new DateTime(2019, 04, 21),
+                StartDate = new DateTime(2022, 04, 05),
+                EndDate = new DateTime(2022, 04, 21),
                 Verified = true,
             },
             new TaskData() {
                 TaskId = 2,
                 TaskName = "Identify Site location",
-                StartDate = new DateTime(2019, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "0",
                 Verified = true,
                 Progress = 30,
@@ -1523,7 +1523,7 @@ You can enable or disable gantt component action for a particular column by sett
             new TaskData() {
                 TaskId = 3,
                 TaskName = "Perform soil test",
-                StartDate = new DateTime(2019, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "4",
                 Verified = false,
                 Progress = 40,
@@ -1541,14 +1541,14 @@ You can enable or disable gantt component action for a particular column by sett
             new TaskData() {
                 TaskId = 5,
                 TaskName = "Project estimation",
-                StartDate = new DateTime(2019, 04, 02),
-                EndDate = new DateTime(2019, 04, 21),
+                StartDate = new DateTime(2022, 04, 06),
+                EndDate = new DateTime(2022, 04, 21),
                 Verified = false,
             },
             new TaskData() {
                 TaskId = 6,
                 TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2019, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "3",
                 Verified = true,
                 Progress = 30,
@@ -1557,7 +1557,7 @@ You can enable or disable gantt component action for a particular column by sett
             new TaskData() {
                 TaskId = 7,
                 TaskName = "List materials",
-                StartDate = new DateTime(2019, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "3",
                 Verified = false,
                 Progress = 40,
@@ -1566,7 +1566,7 @@ You can enable or disable gantt component action for a particular column by sett
             new TaskData() {
                 TaskId = 8,
                 TaskName = "Estimation approval",
-                StartDate = new DateTime(2019, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "0",
                 Verified = true,
                 Progress = 30,
@@ -1641,7 +1641,7 @@ Using the `GanttColumns` property, you can define the Custom Columns in Gantt Ch
             new TaskData() {
                 TaskId = 1,
                 TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 EndDate = new DateTime(2022, 04, 21),
                 Status="Progress",
                 WorkersCount=20,
@@ -1649,7 +1649,7 @@ Using the `GanttColumns` property, you can define the Custom Columns in Gantt Ch
             new TaskData() {
                 TaskId = 2,
                 TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "0",
                 Progress = 5,
                 Status="Progress",
@@ -1659,7 +1659,7 @@ Using the `GanttColumns` property, you can define the Custom Columns in Gantt Ch
             new TaskData() {
                 TaskId = 3,
                 TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "4",
                 Progress = 10,
                 Status="Hold",
@@ -1669,7 +1669,7 @@ Using the `GanttColumns` property, you can define the Custom Columns in Gantt Ch
             new TaskData() {
                 TaskId = 4,
                 TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 05),
                 Duration = "0",
                 Progress = 30,
                 Status="PostPoned",
@@ -1679,7 +1679,7 @@ Using the `GanttColumns` property, you can define the Custom Columns in Gantt Ch
             new TaskData() {
                 TaskId = 5,
                 TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 04, 02),
+                StartDate = new DateTime(2022, 04, 06),
                 EndDate = new DateTime(2022, 04, 21),
                 Status="Progress",
                 WorkersCount=25,
@@ -1687,7 +1687,7 @@ Using the `GanttColumns` property, you can define the Custom Columns in Gantt Ch
             new TaskData() {
                 TaskId = 6,
                 TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "3",
                 Progress = 30,
                 Status="PostPoned",
@@ -1697,7 +1697,7 @@ Using the `GanttColumns` property, you can define the Custom Columns in Gantt Ch
             new TaskData() {
                 TaskId = 7,
                 TaskName = "List materials",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "3",
                 Progress = 40,
                 Status="Progress",
@@ -1707,7 +1707,7 @@ Using the `GanttColumns` property, you can define the Custom Columns in Gantt Ch
             new TaskData() {
                 TaskId = 8,
                 TaskName = "Estimation approval",
-                StartDate = new DateTime(2022, 04, 04),
+                StartDate = new DateTime(2022, 04, 06),
                 Duration = "0",
                 Progress = 30,
                 Status="Progress",
@@ -1769,16 +1769,16 @@ The column chooser has options to show or hide columns dynamically. It can be en
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation" ,StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21), IsExpanded = false, Done = "Yes"},
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location",StartDate = new DateTime(2019, 04, 02), Duration = "10", Progress = 30, ParentId = 1, IsExpanded = true, Done = "No"},
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test",StartDate = new DateTime(2019, 04, 02), Duration = "4", Progress = 40, ParentId = 1, Predecessor = "2", IsExpanded = true, Done = "No",IsMilestone = true },
-            new TaskData() { TaskId = 4, TaskName = "Soil test approval",StartDate = new DateTime(2019, 04, 02), Duration = "3", Progress = 30, ParentId = 1, Predecessor = "3", IsExpanded = true, Done = "No" },
-            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019,04, 21), IsExpanded = true, Done = "Yes" },
-            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 04, 04), Duration = "3",Progress = 30, ParentId = 5, IsExpanded = true, Done = "No" },
-            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2019, 04, 04), Duration = "13", Progress = 40,ParentId = 5, IsExpanded = true,  },
-            new TaskData() { TaskId = 8, TaskName = "Estimation approval",StartDate = new DateTime(2019, 04, 04), Duration = "25", Progress = 30, ParentId = 5, IsExpanded = true, Predecessor="7-2", Done = "No" },
-            new TaskData() { TaskId = 9, TaskName = "Demand Analysis", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21),IsExpanded = true, Done = "Yes" },
-            new TaskData() { TaskId = 10, TaskName = "Customer Strength",StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 30, ParentId = 9, IsExpanded = false, Done = "Yes" },
+            new TaskData() { TaskId = 1, TaskName = "Project initiation" ,StartDate = new DateTime(2019, 04, 05), EndDate = new DateTime(2019, 04, 21), IsExpanded = false, Done = "Yes"},
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location",StartDate = new DateTime(2019, 04, 05), Duration = "10", Progress = 30, ParentId = 1, IsExpanded = true, Done = "No"},
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test",StartDate = new DateTime(2019, 04, 05), Duration = "4", Progress = 40, ParentId = 1, Predecessor = "2", IsExpanded = true, Done = "No",IsMilestone = true },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval",StartDate = new DateTime(2019, 04, 05), Duration = "3", Progress = 30, ParentId = 1, Predecessor = "3", IsExpanded = true, Done = "No" },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2019, 04, 06), EndDate = new DateTime(2019,04, 21), IsExpanded = true, Done = "Yes" },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 04, 06), Duration = "3",Progress = 30, ParentId = 5, IsExpanded = true, Done = "No" },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2019, 04, 06), Duration = "13", Progress = 40,ParentId = 5, IsExpanded = true,  },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval",StartDate = new DateTime(2019, 04, 06), Duration = "25", Progress = 30, ParentId = 5, IsExpanded = true, Predecessor="7-2", Done = "No" },
+            new TaskData() { TaskId = 9, TaskName = "Demand Analysis", StartDate = new DateTime(2019, 04, 06), EndDate = new DateTime(2019, 04, 21),IsExpanded = true, Done = "Yes" },
+            new TaskData() { TaskId = 10, TaskName = "Customer Strength",StartDate = new DateTime(2019, 04, 06), Duration = "3", Progress = 30, ParentId = 9, IsExpanded = false, Done = "Yes" },
         };
         return Tasks;
     }
@@ -1796,7 +1796,7 @@ In the following example, ListView has been rendered as custom component inside 
 @using Syncfusion.Blazor.Grids;
 <div style="height: 100%; width: 100%">
     <div style="position: relative;border:1px solid red; height: 100%;width:100%;min-height: 450px;min-width:800px">
-        <SfGantt DataSource="@Orders" ShowColumnChooser="true" ProjectStartDate="new DateTime(2019,4,1)" ID="GanttChart" Width="1200px" Height="450px" @ref="Gantt" HighlightWeekends="true" AllowReordering="true" TreeColumnIndex=1 GridLines="Syncfusion.Blazor.Gantt.GridLine.None">
+        <SfGantt DataSource="@Orders" ShowColumnChooser="true" ProjectStartDate="new DateTime(2022,4,1)" ID="GanttChart" Width="1200px" Height="450px" @ref="Gantt" HighlightWeekends="true" AllowReordering="true" TreeColumnIndex=1 GridLines="Syncfusion.Blazor.Gantt.GridLine.None">
             <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" ParentID="ParentId" Dependency="Predecessor"></GanttTaskFields>
             <GanttColumnChooserSettings>
                 <Template>
@@ -1959,30 +1959,30 @@ In the following example, ListView has been rendered as custom component inside 
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21), IsExpanded = false, Done = "Yes" },
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2019, 04, 02), Duration = "10", Progress = 30, ParentId = 1, IsExpanded = true, Done = "No" },
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2019, 04, 02), Duration = "4", Progress = 40, ParentId = 1, Predecessor = "2", IsExpanded = true, Done = "No", IsMilestone = true },
-            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2019, 04, 02), Duration = "3", Progress = 30, ParentId = 1, Predecessor = "3", IsExpanded = true, Done = "No" },
-            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21), IsExpanded = true, Done = "Yes" },
-            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 30, ParentId = 5, IsExpanded = true, Done = "No" },
-            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2019, 04, 04), Duration = "13", Progress = 40, ParentId = 5, IsExpanded = true, Done = "No", Predecessor = "6+2", IsMilestone = true },
-            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2019, 04, 04), Duration = "25", Progress = 30, ParentId = 5, IsExpanded = true, Predecessor="7-2", Done = "No" },
-            new TaskData() { TaskId = 9, TaskName = "Demand Analysis", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21), IsExpanded = true, Done = "Yes" },
-            new TaskData() { TaskId = 10, TaskName = "Customer Strength", StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 30, ParentId = 9, IsExpanded = false, Done = "Yes" },
-            new TaskData() { TaskId = 11, TaskName = "Competitor analysis", StartDate = new DateTime(2019, 04, 04), Duration = "13", Progress = 40, ParentId = 10, IsExpanded = true, Done = "Yes" },
-            new TaskData() { TaskId = 12, TaskName = "Product Strength Analysis", StartDate = new DateTime(2019, 04, 04), Duration = "25", Progress = 30, ParentId = 11, IsExpanded = true, Done = "No" },
-            new TaskData() { TaskId = 13, TaskName = "Project estimation", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21), IsExpanded = true, Done = "Yes" },
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), IsExpanded = false, Done = "Yes" },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "10", Progress = 30, ParentId = 1, IsExpanded = true, Done = "No" },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1, Predecessor = "2", IsExpanded = true, Done = "No", IsMilestone = true },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "3", Progress = 30, ParentId = 1, Predecessor = "3", IsExpanded = true, Done = "No" },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), IsExpanded = true, Done = "Yes" },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5, IsExpanded = true, Done = "No" },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "13", Progress = 40, ParentId = 5, IsExpanded = true, Done = "No", Predecessor = "6+2", IsMilestone = true },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "25", Progress = 30, ParentId = 5, IsExpanded = true, Predecessor="7-2", Done = "No" },
+            new TaskData() { TaskId = 9, TaskName = "Demand Analysis", StartDate = new DateTime(2022, 04, 07), EndDate = new DateTime(2022, 04, 21), IsExpanded = true, Done = "Yes" },
+            new TaskData() { TaskId = 10, TaskName = "Customer Strength", StartDate = new DateTime(2022, 04, 07), Duration = "3", Progress = 30, ParentId = 9, IsExpanded = false, Done = "Yes" },
+            new TaskData() { TaskId = 11, TaskName = "Competitor analysis", StartDate = new DateTime(2022, 04, 07), Duration = "13", Progress = 40, ParentId = 10, IsExpanded = true, Done = "Yes" },
+            new TaskData() { TaskId = 12, TaskName = "Product Strength Analysis", StartDate = new DateTime(2022, 04, 07), Duration = "25", Progress = 30, ParentId = 11, IsExpanded = true, Done = "No" },
+            new TaskData() { TaskId = 13, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 07), EndDate = new DateTime(2019, 04, 21), IsExpanded = true, Done = "Yes" },
             new TaskData() { TaskId = 14, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 04, 22), Duration = "25", Progress = 30, ParentId = 13, IsExpanded = true, Done = "Yes" },
-            new TaskData() { TaskId = 15, TaskName = "List materials", StartDate = new DateTime(2019, 04, 20), Duration = "12", Progress = 40, ParentId = 14, IsExpanded = true, Done = "Yes" },
-            new TaskData() { TaskId = 16, TaskName = "Estimation approval", StartDate = new DateTime(2019, 04, 19), Duration = "6", Progress = 30, ParentId = 15, IsExpanded = true, Done = "Yes" },
-            new TaskData() { TaskId = 17, TaskName = "Identifying raw materials", StartDate = new DateTime(2019, 04, 17), Duration = "6", ParentId=16, IsExpanded = true, Done = "Yes" },
-            new TaskData() { TaskId = 18, TaskName = "Define cost plan", StartDate = new DateTime(2019, 04, 15), Progress = 30, ParentId=17, IsExpanded = true, Done = "Yes" },
-            new TaskData() { TaskId = 19, TaskName = "Manufacturing cost", StartDate = new DateTime(2019, 04, 13), Duration = "7", Progress = 40, ParentId = 18, IsExpanded = true, Done = "Yes" },
-            new TaskData() { TaskId = 20, TaskName = "Selling cost", StartDate = new DateTime(2019, 04, 12), Duration = "6", Progress = 30, ParentId = 19, IsExpanded = true, Done = "Yes" },
-            new TaskData() { TaskId = 21, TaskName = "Development of final design", StartDate = new DateTime(2019, 04, 09), Duration = "5", ParentId=20, IsExpanded = true, Done = "Yes" },
-            new TaskData() { TaskId = 22, TaskName = "Develope dimensions and design", StartDate = new DateTime(2019, 04, 08), Duration = "15", Progress = 30, ParentId=21, IsExpanded = true, Done = "Yes" },
-            new TaskData() { TaskId = 23, TaskName = "Develope designs to meet industry", StartDate = new DateTime(2019, 04, 05), Duration = "15", Progress = 40, ParentId = 22, IsExpanded = true, Done = "Yes" },
-            new TaskData() { TaskId = 24,TaskName = "Include all the details", StartDate = new DateTime(2019, 04, 02), Duration = "25", Progress = 30, ParentId = 23, IsExpanded = true, Done = "No" },
+            new TaskData() { TaskId = 15, TaskName = "List materials", StartDate = new DateTime(2022, 04, 07), Duration = "12", Progress = 40, ParentId = 14, IsExpanded = true, Done = "Yes" },
+            new TaskData() { TaskId = 16, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 07), Duration = "6", Progress = 30, ParentId = 15, IsExpanded = true, Done = "Yes" },
+            new TaskData() { TaskId = 17, TaskName = "Identifying raw materials", StartDate = new DateTime(2022, 04, 07), Duration = "6", ParentId=16, IsExpanded = true, Done = "Yes" },
+            new TaskData() { TaskId = 18, TaskName = "Define cost plan", StartDate = new DateTime(2022, 04, 12), Progress = 30, ParentId=17, IsExpanded = true, Done = "Yes" },
+            new TaskData() { TaskId = 19, TaskName = "Manufacturing cost", StartDate = new DateTime(2022, 04, 12), Duration = "7", Progress = 40, ParentId = 18, IsExpanded = true, Done = "Yes" },
+            new TaskData() { TaskId = 20, TaskName = "Selling cost", StartDate = new DateTime(2022, 04, 12), Duration = "6", Progress = 30, ParentId = 19, IsExpanded = true, Done = "Yes" },
+            new TaskData() { TaskId = 21, TaskName = "Development of final design", StartDate = new DateTime(2022, 04, 12), Duration = "5", ParentId=20, IsExpanded = true, Done = "Yes" },
+            new TaskData() { TaskId = 22, TaskName = "Develope dimensions and design", StartDate = new DateTime(2022, 04, 12), Duration = "15", Progress = 30, ParentId=21, IsExpanded = true, Done = "Yes" },
+            new TaskData() { TaskId = 23, TaskName = "Develope designs to meet industry", StartDate = new DateTime(2022, 04, 12), Duration = "15", Progress = 40, ParentId = 22, IsExpanded = true, Done = "Yes" },
+            new TaskData() { TaskId = 24,TaskName = "Include all the details", StartDate = new DateTime(2022, 04, 12), Duration = "25", Progress = 30, ParentId = 23, IsExpanded = true, Done = "No" },
         };
         return Tasks;
     }
