@@ -11,6 +11,8 @@ documentation: ug
 
 Diagram provides support to export its content as image/svg files. The server-side method [ExportDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_ExportDiagram_Syncfusion_Blazor_Diagrams_IExportOptions_) helps to export the diagram. The following code illustrates how to export the diagram as image.
 
+> A new blazor diagram component which provides better performance than this diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram/getting-started)
+
 <!-- markdownlint-disable MD033 -->
 
 ```cshtml
