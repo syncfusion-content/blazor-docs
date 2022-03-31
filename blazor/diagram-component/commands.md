@@ -1051,13 +1051,13 @@ The following code example shows how to disable a command and how to modify the 
 ```
 ### BringIntoView
 
-The BringIntoView command brings the specified rectangular region into the viewport of the diagram.
+The BringIntoView command brings a specified rectangular region into the viewport of the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
- <input type="button" value="BringIntoView" @onclick="BringIntoView"/>
- <SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" @bind-Nodes="@nodes"><PageSettings @bind-Orientation="@pageOrientation" @bind-MultiplePage="@IsMultiplePage"></PageSettings>
+<input type="button" value="BringIntoView" @onclick="BringIntoView"/>
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" @bind-Nodes="@nodes"><PageSettings @bind-Orientation="@pageOrientation" @bind-MultiplePage="@IsMultiplePage"></PageSettings>
 </SfDiagramComponent>
 @code
 {
@@ -1084,13 +1084,13 @@ protected override void OnInitialized()
 ```
 ### BringIntoCenter
 
-The BringIntoCenter command brings the specified rectangular region into the center of the viewport of the diagram.
+The BringIntoCenter command brings a specified rectangular region into the center of the viewport of the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
- <input type="button" value="BringIntoCenter" @onclick="BringIntoCenter"/>
- <SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" @bind-Nodes="@nodes"><PageSettings @bind-Orientation="@pageOrientation" @bind-MultiplePage="@IsMultiplePage"></PageSettings>
+<input type="button" value="BringIntoCenter" @onclick="BringIntoCenter"/>
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" @bind-Nodes="@nodes"><PageSettings @bind-Orientation="@pageOrientation" @bind-MultiplePage="@IsMultiplePage"></PageSettings>
 </SfDiagramComponent>
 @code
 {
