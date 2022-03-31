@@ -1052,10 +1052,10 @@ The following code example shows how to disable a command and how to modify the 
 ```
 ### FitToPage command in Blazor Diagram
 
-The FitToPage diagram is used to bring the entire diagram into the view. The [FitOptions] parameter is used to customize the FitToPage command behavior.
+The FitToPage diagram is used to bring the entire diagram into view. The [FitOptions] parameter is used to customize the FitToPage command behavior.
 If the parameter is null, the entire diagram is fit into the view. 
 
-The following code illustrates how to execute FitToPage command.
+The following code illustrates how to execute the FitToPage command.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -1064,7 +1064,7 @@ The following code illustrates how to execute FitToPage command.
 <SfDiagramComponent @ref="diagram" Width="1000px" Height="600px" Nodes="nodes" Connectors="connectors">
 </SfDiagramComponent>
 @code {
-        //Intialization of all the variables, methods and classes
+        //Intialize of all the variables, methods and classes.
         public SfDiagramComponent diagram;
         FitOptions options = new FitOptions() {Mode = FitMode.Both, Region = DiagramRegion.Content };
         DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
@@ -1178,7 +1178,7 @@ The following code illustrates how to execute FitToPage command.
         }
     }
 
-    //fit the diagram to the page with respect to mode and region
+    //fit the diagram to the page with respect to mode and region.
         private void FitToPage()
         {
          diagram.FitToPage(options);
@@ -1191,23 +1191,23 @@ The [FitOptions] parameter is used to customize the FitToPage command behavior.
 
 ### FitToPage
 
-The [FitToPage] is used to enable or disable the fit to page behavior with respect to height or width
+The [FitToPage] is used to enable or disable the fit to page behavior with respect to height or width.
 
 |Values  | Description     |
 |---------|----------------|
-|FitToWidth | It is used enable the fit to page behavior only with respect to width.         |
-|FitToHeight | It is used enable the fit to page behavior only with respect to height.       |
-|Both  | It is used to enable the fit to page behavior with respect to both height and width of the diagram. |
+|FitToWidth | It is used to enable the fit to page behavior only with respect to width.         |
+|FitToHeight | It is used to enable the fit to page behavior only with respect to height.       |
+|Both  | It is used to enable the fit to page behavior with respect to both the height and width of the diagram. |
 
 ![Fit to page Command](./images/FitPage.gif)
 
 ### Region
 
-The [Region] is used to set the region where to perform fittopage in the diagram.
+The [Region] is used to set the region where fittopage should be performed in the diagram.
 
-|Values    | Description      |
+|Values    | Description     |
 |------------|------------------|
-|PageSettings   | It is used to perform the fit to page based on the page width and page height   |
+|PageSettings   | It is used to perform the fit to page based on the width and height of the page  |
 |Content   | It is used to perform the fit to page for the content area only    |
 
 ![Region](./images/Region.gif)
