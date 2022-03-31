@@ -1056,8 +1056,8 @@ The BringIntoView command brings a specified rectangular region into the viewpor
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
- <input type="button" value="BringIntoView" @onclick="BringIntoView"/>
- <SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" @bind-Nodes="@nodes"><PageSettings @bind-Orientation="@pageOrientation" @bind-MultiplePage="@IsMultiplePage"></PageSettings>
+<input type="button" value="BringIntoView" @onclick="BringIntoView"/>
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" @bind-Nodes="@nodes"><PageSettings @bind-Orientation="@pageOrientation" @bind-MultiplePage="@IsMultiplePage"></PageSettings>
 </SfDiagramComponent>
 @code
 {
@@ -1089,8 +1089,8 @@ The BringIntoCenter command brings a specified rectangular region into the cente
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
- <input type="button" value="BringIntoCenter" @onclick="BringIntoCenter"/>
- <SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" @bind-Nodes="@nodes"><PageSettings @bind-Orientation="@pageOrientation" @bind-MultiplePage="@IsMultiplePage"></PageSettings>
+<input type="button" value="BringIntoCenter" @onclick="BringIntoCenter"/>
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" @bind-Nodes="@nodes"><PageSettings @bind-Orientation="@pageOrientation" @bind-MultiplePage="@IsMultiplePage"></PageSettings>
 </SfDiagramComponent>
 @code
 {
