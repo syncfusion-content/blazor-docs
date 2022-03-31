@@ -7,12 +7,11 @@ control: Diagram
 documentation: ug
 ---
 
+> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram-component/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+
 # Interaction in Blazor Diagram Component
 
 Basic interactions of selecting and resizing can be applied over an annotation. These interactions can be controlled by annotation and its parent node or connector. To learn about annotation constraints, refer to the [Annotation Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramNodeAnnotation_Constraints).
-
-> A new blazor diagram component which provides better performance than this diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram/getting-started)
-
 
 ## Selecting the annotation
 

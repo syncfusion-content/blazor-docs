@@ -7,6 +7,8 @@ control: Diagram
 documentation: ug
 ---
 
+> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram-component/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+
 # Serialization in Blazor Diagram Component
 
 **Serialization** is the process of saving and loading for state persistence of the diagram.
@@ -14,8 +16,6 @@ documentation: ug
 ## Save
 
 The diagram is serialized as string while saving. The server-side method, [SaveDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_SaveDiagram) helps to serialize the diagram as a string. The following code illustrates how to save the diagram.
-
-> A new blazor diagram component which provides better performance than this diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram/getting-started)
 
 
 ```csharp
@@ -34,7 +34,6 @@ saveData = localStorage.getItem('fileName');
 
 Diagram can also be saved as raster or vector image files. For more information about saving the diagram as images, refer to [Print and Export](./export).
 
-> A new blazor diagram component which provides better performance than the existing diagram control in Blazor WebAssembly App. It is available in preview mode.  Refer the [Link](https://blazor.syncfusion.com/documentation/diagram-component/serialization)
 
 ## Load
 

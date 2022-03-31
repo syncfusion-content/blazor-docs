@@ -7,13 +7,13 @@ control: Diagram
 documentation: ug
 ---
 
+> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram-component/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+
 # Events in Blazor Diagram Component
 
 ## Text edit
 
 The TextEdit event will notify the annotation content changes after editing. The [IBlazorTextEditEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IBlazorTextEditEventArgs.html) interface is used to get event arguments.
-
-> A new blazor diagram component which provides better performance than this diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram/getting-started)
 
 The following code example shows how to register and get the notification from the TextEdit event.
 

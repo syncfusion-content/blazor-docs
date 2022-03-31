@@ -7,6 +7,8 @@ control: Diagram
 documentation: ug
 ---
 
+> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram-component/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+
 # Shapes in Blazor Diagram Component
 
 Diagram provides support to add different kind of nodes. They are as follows:
@@ -20,8 +22,6 @@ Diagram provides support to add different kind of nodes. They are as follows:
 
 <!-- markdownlint-disable MD033 -->
 <!-- markdownlint-disable MD010 -->
-
-> A new blazor diagram component which provides better performance than this diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram/getting-started)
 
 ## Text
 
