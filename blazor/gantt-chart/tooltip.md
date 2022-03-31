@@ -13,7 +13,7 @@ The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gan
 
 ## Enable tooltip
 
-In the Gantt Chart component, you can enable or disable the mouse hover tooltip for the following UI elements using the `GanttTooltipSettings.ShowTooltip` property:
+In the Gantt Chart component, you can enable or disable the mouse hover tooltip for the following UI elements using the [GanttTooltipSettings.ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTooltipSettings-1.html#Syncfusion_Blazor_Gantt_GanttTooltipSettings_1_ShowTooltip) property:
 
 * Taskbar
 * Connector line
@@ -57,64 +57,13 @@ In the Gantt Chart component, you can enable or disable the mouse hover tooltip 
         private static List<TaskData> GetTaskCollection()
         {
             List<TaskData> Tasks = new List<TaskData>() {
-                new TaskData() {
-                    TaskId = 1,
-                    TaskName = "Project initiation",
-                    StartDate = new DateTime(2022, 01, 04),
-                    EndDate = new DateTime(2022, 01, 17),
-                },
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify site location",
-                    StartDate = new DateTime(2022, 01, 04),
-                    Duration = "4",
-                    BaselineStartDate = new DateTime(2022, 01, 04),
-                    BaselineEndDate = new DateTime(2022, 01, 08),
-                    Progress = 70,
-                    ParentId = 1,
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2022, 01, 04),
-                    Duration = "4",
-                    Predecessor = "2FS",
-                    Progress = 50,
-                    ParentId = 1,
-                },
-                new TaskData() {
-                    TaskId = 4,
-                    TaskName = "Soil test approval",
-                    StartDate = new DateTime(2022, 01, 04),
-                    Duration = "4",
-                    Progress = 50,
-                    ParentId = 1,
-                },
-                new TaskData() {
-                    TaskId = 5,
-                    TaskName = "Project estimation",
-                    StartDate = new DateTime(2022, 01, 04),
-                    EndDate = new DateTime(2022, 01, 17),
-                },
-                new TaskData() {
-                    TaskId = 6,
-                    TaskName = "Develop floor plan for estimation",
-                    StartDate = new DateTime(2022, 01, 04),
-                    Duration = "3",
-                    Progress = 70,
-                    BaselineStartDate = new DateTime(2022, 01, 04),
-                    BaselineEndDate = new DateTime(2022, 01, 06),
-                    ParentId = 5,
-                },
-                new TaskData() {
-                    TaskId = 7,
-                    TaskName = "List materials",
-                    StartDate = new DateTime(2022, 01, 04),
-                    Duration = "3",
-                    Predecessor = "6SS",
-                    Progress = 50,
-                    ParentId = 5,
-                }
+                new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 23), },
+                new TaskData() { TaskId = 2, TaskName = "Identify site location", StartDate = new DateTime(2022, 01, 04), Duration = "4", BaselineStartDate = new DateTime(2022, 01, 04), BaselineEndDate = new DateTime(2022, 01, 11), Progress = 70, ParentId = 1, },
+                new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Predecessor = "2FS", Progress = 50, ParentId = 1, },
+                new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 50, ParentId = 1, },
+                new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 23), },
+                new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 70, BaselineStartDate = new DateTime(2022, 01, 04), BaselineEndDate = new DateTime(2022, 01, 07), ParentId = 5, },
+                new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 04), Duration = "3", Predecessor = "6SS", Progress = 50, ParentId = 5, }
         };
         return Tasks;
     }
@@ -147,7 +96,7 @@ Event Marker Tooltip
 
 ## Timeline cells tooltip
 
-In the Gantt Chart component, you can enable or disable the mouse hover tooltip of timeline cells using the `GanttTimelineSettings.ShowTooltip` property. The default value of this property is true. The following code example shows how to enable the timeline cells tooltip in Gantt Chart.
+In the Gantt Chart component, you can enable or disable the mouse hover tooltip of timeline cells using the [GanttTooltipSettings.ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTooltipSettings-1.html#Syncfusion_Blazor_Gantt_GanttTooltipSettings_1_ShowTooltip) property. The default value of this property is true. The following code example shows how to enable the timeline cells tooltip in Gantt Chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -178,68 +127,15 @@ In the Gantt Chart component, you can enable or disable the mouse hover tooltip 
 
     private static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>()
+        List<TaskData> Tasks = new List<TaskData>() 
         {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 01, 04),
-                EndDate = new DateTime(2022, 01, 17),
-                },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 01, 04),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1,
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 01, 04),
-                Duration = "4",
-                Progress = 40,
-                ParentId = 1,
-            },
-            new TaskData() {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 01, 04),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1,
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 01, 04),
-                EndDate = new DateTime(2022, 01, 17),
-            },
-            new TaskData() {
-                TaskId = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 01, 06),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5,
-            },
-            new TaskData() {
-                TaskId = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2022, 01, 06),
-                Duration = "3",
-                Progress = 40,
-                ParentId = 5,
-            },
-            new TaskData() {
-                TaskId = 8,
-                TaskName = "Estimation approval",
-                StartDate = new DateTime(2022, 01, 06),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 5,
-            }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify site location", StartDate = new DateTime(2022, 01, 04), Duration = "4", BaselineStartDate = new DateTime(2022, 01, 04), BaselineEndDate = new DateTime(2022, 01, 11), Progress = 70, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Predecessor = "2FS", Progress = 50, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 50, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 70, BaselineStartDate = new DateTime(2022, 01, 04), BaselineEndDate = new DateTime(2022, 01, 07), ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 04), Duration = "3", Predecessor = "6SS", Progress = 50, ParentId = 5, }
         };
         return Tasks;
     }
@@ -250,7 +146,7 @@ In the Gantt Chart component, you can enable or disable the mouse hover tooltip 
 
 ## Cell tooltip
 
-You can enable or disable the Grid cell tooltip using the `GanttColumn.ClipMode` property.
+You can enable or disable the Grid cell tooltip using the [GanttColumn.ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ClipMode) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -290,66 +186,14 @@ You can enable or disable the Grid cell tooltip using the `GanttColumn.ClipMode`
     {
         List<TaskData> Tasks = new List<TaskData>()
     {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 01, 04),
-                EndDate = new DateTime(2022, 01, 17),
-                },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 01, 04),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1,
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 01, 04),
-                Duration = "4",
-                Progress = 40,
-                ParentId = 1,
-            },
-            new TaskData() {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 01, 04),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1,
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 01, 04),
-                EndDate = new DateTime(2022, 01, 17),
-            },
-            new TaskData() {
-                TaskId = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 01, 06),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5,
-            },
-            new TaskData() {
-                TaskId = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2022, 01, 06),
-                Duration = "3",
-                Progress = 40,
-                ParentId = 5,
-            },
-            new TaskData() {
-                TaskId = 8,
-                TaskName = "Estimation approval",
-                StartDate = new DateTime(2022, 01, 06),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 5,
-            }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
         };
         return Tasks;
     }
@@ -373,7 +217,7 @@ The following are three types of `ClipMode`:
 
 ### Taskbar tooltip
 
-The default tooltip in the Gantt Chart component can be customized using the `GanttTooltipSettings.TaskbarTemplate` property. You can map the template script element’s ID value or template string directly to this property.
+The default tooltip in the Gantt Chart component can be customized using the [GanttTooltipSettings.TaskbarTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTooltipSettings-1.html#Syncfusion_Blazor_Gantt_GanttTooltipSettings_1_TaskbarTemplate) property. You can map the template script element’s ID value or template string directly to this property.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -412,66 +256,14 @@ The default tooltip in the Gantt Chart component can be customized using the `Ga
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 01, 04),
-                EndDate = new DateTime(2022, 01, 17),
-                },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 01, 04),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1,
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 01, 04),
-                Duration = "4",
-                Progress = 40,
-                ParentId = 1,
-            },
-            new TaskData() {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 01, 04),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1,
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 01, 04),
-                EndDate = new DateTime(2022, 01, 17),
-            },
-            new TaskData() {
-                TaskId = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 01, 06),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5,
-            },
-            new TaskData() {
-                TaskId = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2022, 01, 06),
-                Duration = "3",
-                Progress = 40,
-                ParentId = 5,
-            },
-            new TaskData() {
-                TaskId = 8,
-                TaskName = "Estimation approval",
-                StartDate = new DateTime(2022, 01, 06),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 5,
-            }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
         };
         return Tasks;
     }
@@ -584,7 +376,7 @@ The below screenshot shows the output of above code example.
 
 ### Baseline tooltip
 
-A baseline tooltip can be customized using the `GanttTooltipSettings.BaselineTemplate` property. The following code example shows how to customize the baseline tooltip in Gantt Chart.
+A baseline tooltip can be customized using the [GanttTooltipSettings.BaselineTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTooltipSettings-1.html#Syncfusion_Blazor_Gantt_GanttTooltipSettings_1_BaselineTemplate) property. The following code example shows how to customize the baseline tooltip in Gantt Chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -625,66 +417,14 @@ A baseline tooltip can be customized using the `GanttTooltipSettings.BaselineTem
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() 
-        {
-                new TaskData() {
-                    TaskId = 1,
-                    TaskName = "Project initiation",
-                    StartDate = new DateTime(2022, 01, 04),
-                    EndDate = new DateTime(2022, 01, 17),
-                },
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify site location",
-                    StartDate = new DateTime(2022, 01, 04),
-                    Duration = "4",
-                    BaselineStartDate = new DateTime(2022, 01, 04),
-                    BaselineEndDate = new DateTime(2022, 01, 08),
-                    Progress = 70,
-                    ParentId = 1,
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2022, 01, 04),
-                    Duration = "4",
-                    Predecessor = "2FS",
-                    Progress = 50,
-                    ParentId = 1,
-                },
-                new TaskData() {
-                    TaskId = 4,
-                    TaskName = "Soil test approval",
-                    StartDate = new DateTime(2022, 01, 04),
-                    Duration = "4",
-                    Progress = 50,
-                    ParentId = 1,
-                },
-                new TaskData() {
-                    TaskId = 5,
-                    TaskName = "Project estimation",
-                    StartDate = new DateTime(2022, 01, 04),
-                    EndDate = new DateTime(2022, 01, 17),
-                },
-                new TaskData() {
-                    TaskId = 6,
-                    TaskName = "Develop floor plan for estimation",
-                    StartDate = new DateTime(2022, 01, 04),
-                    Duration = "3",
-                    Progress = 70,
-                    BaselineStartDate = new DateTime(2022, 01, 04),
-                    BaselineEndDate = new DateTime(2022, 01, 06),
-                    ParentId = 5,
-                },
-                new TaskData() {
-                    TaskId = 7,
-                    TaskName = "List materials",
-                    StartDate = new DateTime(2022, 01, 04),
-                    Duration = "3",
-                    Predecessor = "6SS",
-                    Progress = 50,
-                    ParentId = 5,
-                }
+        List<TaskData> Tasks = new List<TaskData>() {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify site location", StartDate = new DateTime(2022, 01, 04), Duration = "4", BaselineStartDate = new DateTime(2022, 01, 04), BaselineEndDate = new DateTime(2022, 01, 11), Progress = 70, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Predecessor = "2FS", Progress = 50, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 50, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 70, BaselineStartDate = new DateTime(2022, 01, 04), BaselineEndDate = new DateTime(2022, 01, 07), ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Predecessor = "6SS", Progress = 50, ParentId = 5, }
         };
         return Tasks;
     }
@@ -697,7 +437,7 @@ The following screenshot shows the template for baseline in Gantt Chart.
 
 ### Manual taskbar tooltip
 
-A manual taskbar tooltip can be customized using the `GanttTooltipSettings.ManualTaskbarTemplate` property. The following code example shows how to customize the manual taskbar tooltip in Gantt Chart.
+A manual taskbar tooltip can be customized using the [GanttTooltipSettings.ManualTaskbarTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTooltipSettings-1.html#Syncfusion_Blazor_Gantt_GanttTooltipSettings_1_ManualTaskbarTemplate) property. The following code example shows how to customize the manual taskbar tooltip in Gantt Chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -739,66 +479,14 @@ A manual taskbar tooltip can be customized using the `GanttTooltipSettings.Manua
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 01, 04),
-                EndDate = new DateTime(2022, 01, 17),
-                },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 01, 04),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1,
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 01, 04),
-                Duration = "4",
-                Progress = 40,
-                ParentId = 1,
-            },
-            new TaskData() {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 01, 04),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1,
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 01, 04),
-                EndDate = new DateTime(2022, 01, 17),
-            },
-            new TaskData() {
-                TaskId = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 01, 06),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5,
-            },
-            new TaskData() {
-                TaskId = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2022, 01, 06),
-                Duration = "3",
-                Progress = 40,
-                ParentId = 5,
-            },
-            new TaskData() {
-                TaskId = 8,
-                TaskName = "Estimation approval",
-                StartDate = new DateTime(2022, 01, 06),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 5,
-            }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 4), Duration="4" },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 05), Duration = "2", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 05), Duration = "4", ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 05), Duration = "4",Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 05), EndDate = new DateTime(2022, 01, 07), Duration="4" },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 05), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "2", ParentId = 5, }
         };
         return Tasks;
     }

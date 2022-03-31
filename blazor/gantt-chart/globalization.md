@@ -239,66 +239,14 @@ namespace BlazorServer
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 01, 04),
-                EndDate = new DateTime(2022, 01, 23),
-                },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 01, 04),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1,
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 01, 04),
-                Duration = "4",
-                Progress = 40,
-                ParentId = 1,
-            },
-            new TaskData() {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 01, 04),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1,
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 01, 04),
-                EndDate = new DateTime(2022, 01, 23),
-            },
-            new TaskData() {
-                TaskId = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 01, 06),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5,
-            },
-            new TaskData() {
-                TaskId = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2022, 01, 06),
-                Duration = "3",
-                Progress = 40,
-                ParentId = 5,
-            },
-            new TaskData() {
-                TaskId = 8,
-                TaskName = "Estimation approval",
-                StartDate = new DateTime(2022, 01, 06),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 5,
-            }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
         };
         return Tasks;
     }
@@ -409,66 +357,14 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 01, 04),
-                EndDate = new DateTime(2022, 01, 23),
-                },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 01, 04),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1,
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 01, 04),
-                Duration = "4",
-                Progress = 40,
-                ParentId = 1,
-            },
-            new TaskData() {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 01, 04),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1,
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 01, 04),
-                EndDate = new DateTime(2022, 01, 23),
-            },
-            new TaskData() {
-                TaskId = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 01, 06),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5,
-            },
-            new TaskData() {
-                TaskId = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2022, 01, 06),
-                Duration = "3",
-                Progress = 40,
-                ParentId = 5,
-            },
-            new TaskData() {
-                TaskId = 8,
-                TaskName = "Estimation approval",
-                StartDate = new DateTime(2022, 01, 06),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 5,
-            }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
         };
         return Tasks;
     }
@@ -518,66 +414,14 @@ RTL provides an option to switch the text direction and layout of the Gantt comp
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 01, 04),
-                EndDate = new DateTime(2022, 01, 23),
-                },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 01, 04),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1,
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 01, 04),
-                Duration = "4",
-                Progress = 40,
-                ParentId = 1,
-            },
-            new TaskData() {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 01, 04),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1,
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 01, 04),
-                EndDate = new DateTime(2022, 01, 23),
-            },
-            new TaskData() {
-                TaskId = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 01, 06),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5,
-            },
-            new TaskData() {
-                TaskId = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2022, 01, 06),
-                Duration = "3",
-                Progress = 40,
-                ParentId = 5,
-            },
-            new TaskData() {
-                TaskId = 8,
-                TaskName = "Estimation approval",
-                StartDate = new DateTime(2022, 01, 06),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 5,
-            }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 23), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
         };
         return Tasks;
     }

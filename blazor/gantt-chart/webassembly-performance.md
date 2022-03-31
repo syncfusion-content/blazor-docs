@@ -70,76 +70,15 @@ In the following example:
     {
         List<TaskData> Tasks = new List<TaskData>()
             {
-                new TaskData() {
-                    TaskId = 1,
-                    TaskName = "Product concept",
-                    StartDate = new DateTime(2022, 01, 04),
-                    EndDate = new DateTime(2022, 01, 21),
-                    Duration = "5days"
-                    },
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Defining the product usage",
-                    StartDate = new DateTime(2022, 01, 04),
-                    EndDate = new DateTime(2022, 01, 21),
-                    Duration = "3",
-                    Progress = 30,
-                    ParentId = 1
-                    },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Defining the Target audience",
-                    EndDate = new DateTime(2022, 01, 10),
-                    Progress = 40,
-                    ParentId = 1
-                    },
-                new TaskData() {
-                    TaskId = 4,
-                    TaskName = "Prepare product sketch and notes",
-                    StartDate = new DateTime(2022, 01, 04),
-                    Duration = "2",
-                    Progress = 30,
-                    ParentId = 1
-                    },
-                new TaskData() {
-                    TaskId = 5,
-                    TaskName = "Concept approval",
-                    StartDate = new DateTime(2022, 01, 04),
-                    EndDate = new DateTime(2022, 01, 21),
-                    Duration="0"
-                    },
-                new TaskData() {
-                    TaskId = 6,
-                    TaskName = "Market Research",
-                    StartDate = new DateTime(2022, 01, 04),
-                    EndDate = new DateTime(2022, 01, 21),
-                    Duration = "4",
-                    Progress = 30
-                    },
-                new TaskData() {
-                    TaskId = 7,
-                    TaskName = "Demand Analysis",
-                    Duration = "4",
-                    Progress = 40,
-                    ParentId = 6
-                    },
-                new TaskData() {
-                    TaskId = 8,
-                    TaskName = "Customer Strength",
-                    StartDate = new DateTime(2022, 01, 10),
-                    EndDate = new DateTime(2022, 01, 21),
-                    Duration = "4",
-                    Progress = 30,
-                    ParentId = 7
-                    },
-                new TaskData() {
-                    TaskId = 9,
-                    TaskName = "Market Opportunity analysis",
-                    StartDate = new DateTime(2022, 01, 10),
-                    EndDate = new DateTime(2022, 01, 21),
-                    Duration="4",
-                    ParentId= 7
-                    }
+                new TaskData() { TaskId = 1, TaskName = "Product concept", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 21), Duration = "5days" },
+                new TaskData() { TaskId = 2, TaskName = "Defining the product usage", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 21), Duration = "3", Progress = 30, ParentId = 1 },
+                new TaskData() { TaskId = 3, TaskName = "Defining the Target audience", EndDate = new DateTime(2022, 01, 10), Progress = 40, ParentId = 1 },
+                new TaskData() { TaskId = 4, TaskName = "Prepare product sketch and notes", StartDate = new DateTime(2022, 01, 04), Duration = "2", Progress = 30, ParentId = 1 },
+                new TaskData() { TaskId = 5, TaskName = "Concept approval", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 21), Duration="0" },
+                new TaskData() { TaskId = 6, TaskName = "Market Research", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 21), Duration = "4", Progress = 30 },
+                new TaskData() { TaskId = 7, TaskName = "Demand Analysis", Duration = "4", Progress = 40, ParentId = 6 },
+                new TaskData() { TaskId = 8, TaskName = "Customer Strength", StartDate = new DateTime(2022, 01, 10), EndDate = new DateTime(2022, 01, 21), Duration = "4", Progress = 30, ParentId = 7 },
+                new TaskData() { TaskId = 9, TaskName = "Market Opportunity analysis", StartDate = new DateTime(2022, 01, 10), EndDate = new DateTime(2022, 01, 21), Duration="4", ParentId= 7 }
             };
         return Tasks;
     }

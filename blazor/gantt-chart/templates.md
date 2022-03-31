@@ -152,42 +152,11 @@ You can design your taskbars to view the tasks in Gantt Chart Chart by using `Ga
         public static List<TaskbarData> TaskTemplateData()
         {
             List<TaskbarData> TaskDataCollection = new List<TaskbarData>()
-        {
-                new TaskbarData(){
-                TaskId = 1,
-                TaskName = "Oscar Moments",
-                StartDate = new DateTime(2022, 03, 07, 18, 0, 0),
-                EndDate = new DateTime(2022, 03, 08, 18, 15, 0),
-                Winner = "",
-                Performance = "90th Academy awards kicks-off and Jimmy Kimmel hosts the show"
-                },
-                new TaskbarData(){
-                TaskId = 2,
-                TaskName = "Actor in Supporting Role",
-                StartDate = new DateTime(2022, 03, 07, 18, 30, 0),
-                EndDate = new DateTime(2022, 03, 07, 19, 20, 0),
-                Winner = "Sam Rockwell",
-                Movie = "Three Billboards Outside Ebbing, Missouri",
-                ParentId = 1,
-                },
-                new TaskbarData(){
-                TaskId = 3,
-                TaskName = "Hair and Makeup",
-                StartDate = new DateTime(2022, 03, 07, 18, 36, 0),
-                EndDate = new DateTime(2022, 03, 07, 19, 42, 0),
-                Movie = "Darkest Hour",
-                ParentId = 1,
-            },
-                new TaskbarData()
-                {
-                TaskId = 4,
-                TaskName = "Costume Design",
-                StartDate = new DateTime(2022, 03, 07, 18, 36, 0),
-                EndDate = new DateTime(2022, 03, 07, 19, 50, 0),
-                Winner = "Mark Bridges",
-                Movie = "Phantom Thread",
-                ParentId = 1,
-            }
+            {
+                new TaskbarData(){ TaskId = 1, TaskName = "Oscar Moments", StartDate = new DateTime(2022, 03, 07, 18, 0, 0), EndDate = new DateTime(2022, 03, 08, 18, 15, 0), Winner = "", Performance = "90th Academy awards kicks-off and Jimmy Kimmel hosts the show" },
+                new TaskbarData(){ TaskId = 2, TaskName = "Actor in Supporting Role", StartDate = new DateTime(2022, 03, 07, 18, 30, 0), EndDate = new DateTime(2022, 03, 07, 19, 20, 0), Winner = "Sam Rockwell", Movie = "Three Billboards Outside Ebbing, Missouri", ParentId = 1, },
+                new TaskbarData(){ TaskId = 3, TaskName = "Hair and Makeup", StartDate = new DateTime(2022, 03, 07, 18, 36, 0), EndDate = new DateTime(2022, 03, 07, 19, 42, 0), Movie = "Darkest Hour", ParentId = 1, },
+                new TaskbarData() { TaskId = 4, TaskName = "Costume Design", StartDate = new DateTime(2022, 03, 07, 18, 36, 0), EndDate = new DateTime(2022, 03, 07, 19, 50, 0), Winner = "Mark Bridges", Movie = "Phantom Thread", ParentId = 1, }
             };
             return TaskDataCollection;
         }

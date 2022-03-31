@@ -9,7 +9,7 @@ documentation: ug
 
 # Hide Chart Part in Blazor Gantt Chart Component
 
-In the Gantt Chart component, you can hide chart part and display Tree Grid part alone by setting the value of `GanttSplitterSettings.View` property as `Grid`.
+In the Gantt Chart component, you can hide chart part and display Tree Grid part alone by setting the value of [GanttSplitterSettings.View](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSplitterSettings.html#Syncfusion_Blazor_Gantt_GanttSplitterSettings_View) property as `Grid`.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -40,28 +40,9 @@ In the Gantt Chart component, you can hide chart part and display Tree Grid part
     private static List<TaskData> GetTaskCollection()
     {
             List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 01, 04),
-                EndDate = new DateTime(2022, 01, 23),
-            },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 01, 04),
-                Duration = "4",
-                Progress = 50,
-                ParentId = 1,
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 01, 04),
-                Duration = "4",
-                Progress = 50,
-                ParentId = 1,
-            }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 23), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 50, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 50, ParentId = 1, }
         };
         return Tasks;
     }
