@@ -1051,7 +1051,7 @@ The following code example shows how to disable a command and how to modify the 
 ```
 ### BringIntoView
 
-The BringIntoView command brings the specified rectangular region into the viewport of the diagram.
+The BringIntoView command brings a specified rectangular region into the viewport of the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -1084,7 +1084,7 @@ protected override void OnInitialized()
 ```
 ### BringIntoCenter
 
-The BringIntoCenter command brings the specified rectangular region into the center of the viewport of the diagram.
+The BringIntoCenter command brings a specified rectangular region into the center of the viewport of the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
