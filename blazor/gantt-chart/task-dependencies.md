@@ -41,7 +41,7 @@ You cannot finish a task until the dependent task is completed.
 
 ## Define task relationship
 
-Task relationship is defined in the data source as a string value, and this value is mapped to the Gantt Chart component by using the `GanttTaskFields.Dependency` property. The following code example demonstrates how to enable the predecessor in the Gantt Chart component.
+Task relationship is defined in the data source as a string value, and this value is mapped to the Gantt Chart component by using the [GanttTaskFields.Dependency](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Dependency) property. The following code example demonstrates how to enable the predecessor in the Gantt Chart component.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -73,80 +73,14 @@ Task relationship is defined in the data source as a string value, and this valu
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData()
-            {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2019, 04, 02),
-                EndDate = new DateTime(2019, 04, 21),
-            },
-            new TaskData()
-            {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2019, 04, 02),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1
-            },
-            new TaskData()
-            {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2019, 04, 02),
-                Duration = "4",
-                Progress = 40,
-                Predecessor = "2",
-                ParentId = 1
-            },
-            new TaskData()
-            {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2019, 04, 02),
-                Duration = "0",
-                Progress = 30,
-                Predecessor = "3",
-                ParentId = 1
-            },
-            new TaskData()
-            {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2019, 04, 02),
-                EndDate = new DateTime(2019, 04, 21),
-                Predecessor = "1FS",
-            },
-            new TaskData() 
-            {
-                TaskId = 6, 
-                TaskName = "Develop floor plan for estimation", 
-                StartDate = new DateTime(2019, 04, 04), 
-                Duration = "3", 
-                Progress = 30, 
-                Predecessor = "4" ,
-                ParentId = 5
-            },
-            new TaskData() 
-            { 
-                TaskId = 7, 
-                TaskName = "List materials", 
-                StartDate = new DateTime(2019, 04, 04), 
-                Duration = "3", 
-                Progress = 40, 
-                Predecessor = "6" ,
-                ParentId = 5
-            },
-            new TaskData() 
-            { 
-                TaskId = 8, 
-                TaskName = "Estimation approval", 
-                StartDate = new DateTime(2019, 04, 04), 
-                Duration = "0", 
-                Progress = 30, 
-                Predecessor = "7" ,
-                ParentId = 5
-            },
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2019, 04, 05), EndDate = new DateTime(2019, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2019, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2019, 04, 05), Duration = "4", Progress = 40, Predecessor = "2", ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2019, 04, 05), Duration = "0", Progress = 30, Predecessor = "3", ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2019, 04, 06), EndDate = new DateTime(2019, 04, 21), Predecessor = "1FS", },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 04, 06), Duration = "3", Progress = 30, Predecessor = "4" , ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2019, 04, 06), Duration = "3", Progress = 40, Predecessor = "6" , ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2019, 04, 06), Duration = "0", Progress = 30, Predecessor = "7" , ParentId = 5 },
         };
         return Tasks;
     }
@@ -196,68 +130,13 @@ You can define an offset with various offset duration units for predecessors by 
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData()
-            {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData()
-            {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1
-            },
-            new TaskData()
-            {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "4",
-                Progress = 40,
-                Predecessor = "2FS+2d",
-                ParentId = 1
-            },
-            new TaskData()
-            {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "0",
-                Progress = 30,
-                Predecessor = "3FF+960m",
-                ParentId = 1
-            },
-            new TaskData()
-            {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData()
-            {
-                TaskId = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 04, 04),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5
-            },
-            new TaskData()
-            {
-                TaskId = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2022, 04, 04),
-                Duration = "3",
-                Progress = 40,
-                Predecessor = "6SS+16h",
-                ParentId = 5
-            }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, Predecessor = "2FS+2d", ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, Predecessor = "3FF+960m", ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, Predecessor = "6SS+16h", ParentId = 5 }
         };
         return Tasks;
     }
