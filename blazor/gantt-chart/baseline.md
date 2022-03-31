@@ -9,7 +9,7 @@ documentation: ug
 
 # Baseline in Blazor Gantt Chart Component
 
-The baseline feature enables users to view the deviation between the planned dates and actual dates of the tasks in a project. Baseline dates or planned dates of a task may or may not be same as the actual task dates. The baseline can be enabled by setting the `RenderBaseline` property to `true` and the baseline color can be changed using the `BaselineColor` property. To render the baseline, you should map the baseline start and end date values from the data source. This can be done using the `GanttTaskFields.BaselineStartDate` and `GanttTaskFields.BaselineEndDate` properties. The following code example shows how to enable a baseline in the Gantt Chart component.
+The baseline feature enables users to view the deviation between the planned dates and actual dates of the tasks in a project. Baseline dates or planned dates of a task may or may not be same as the actual task dates. The baseline can be enabled by setting the [RenderBaseline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_RenderBaseline) property to `true` and the baseline color can be changed using the [BaselineColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_BaselineColor) property. To render the baseline, you should map the baseline start and end date values from the data source. This can be done using the [GanttTaskFields.BaselineStartDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_BaselineStartDate) and [GanttTaskFields.BaselineEndDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_BaselineEndDate) properties. The following code example shows how to enable a baseline in the Gantt Chart component.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -47,68 +47,13 @@ The baseline feature enables users to view the deviation between the planned dat
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify site location",
-                StartDate = new DateTime(2022, 04, 02),
-                BaselineStartDate = new DateTime(2022, 04, 02),
-                BaselineEndDate = new DateTime(2022, 04, 02),
-                Duration = "0",
-                Progress = 70,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
-                BaselineStartDate = new DateTime(2022, 04, 04),
-                BaselineEndDate = new DateTime(2022, 04, 09),
-                Duration = "8",
-                Progress = 50,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 04, 02),
-                BaselineStartDate = new DateTime(2022, 04, 08),
-                BaselineEndDate = new DateTime(2022, 04, 12),
-                Duration = "4",
-                Progress = 50,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 04, 04),
-                BaselineStartDate = new DateTime(2022, 04, 08),
-                BaselineEndDate = new DateTime(2022, 04, 12),
-                Duration = "4",
-                Progress = 70,
-                ParentId = 5
-            },
-            new TaskData() {
-                TaskId = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2022, 04, 04),
-                BaselineStartDate = new DateTime(2022, 04, 02),
-                BaselineEndDate = new DateTime(2022, 04, 02),
-                Duration = "0",
-                Progress = 50,
-                ParentId = 5
-            },
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify site location", StartDate = new DateTime(2022, 04, 05), BaselineStartDate = new DateTime(2022, 04, 06), BaselineEndDate = new DateTime(2022, 04, 08), Duration = "0", Progress = 70, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), BaselineStartDate = new DateTime(2022, 04, 04), BaselineEndDate = new DateTime(2022, 04, 09), Duration = "8", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), BaselineStartDate = new DateTime(2022, 04, 08), BaselineEndDate = new DateTime(2022, 04, 12), Duration = "4", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), BaselineStartDate = new DateTime(2022, 04, 08), BaselineEndDate = new DateTime(2022, 04, 12), Duration = "4", Progress = 70, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), BaselineStartDate = new DateTime(2022, 04, 02), BaselineEndDate = new DateTime(2022, 04, 02), Duration = "0", Progress = 50, ParentId = 5 },
         };
         return Tasks;
     }
