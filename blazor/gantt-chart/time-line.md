@@ -20,7 +20,7 @@ Gantt Chart contains the following in-built timeline view modes:
 * Month
 * Year
 
-Timescale mode in Gantt Chart can be defined by using `GanttTimelineSettings.TimelineViewMode` property and also you can define timescale mode of top tier and bottom tier by using `GanttTopTierSettings.Unit` and `GanttBottomTierSettings.Unit` properties.
+Timescale mode in Gantt Chart can be defined by using [GanttTimelineSettings.TimelineViewMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineSettings_TimelineViewMode) property and also you can define timescale mode of top tier and bottom tier by using `GanttTopTierSettings.Unit` and `GanttBottomTierSettings.Unit` properties.
 
 Following table explains how top tier and bottom tier unit changes as per `GanttTimelineSettings.TimelineViewMode` property.
 
@@ -67,58 +67,13 @@ In the `Week` timeline mode, top tier of the schedule header displays the weeks,
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify site location",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "5",
-                Progress = 70,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "5",
-                Progress = 50,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "5",
-                Progress = 50,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 04, 10),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 04, 10),
-                Duration = "5",
-                Progress = 70,
-                ParentId = 5
-            },
-            new TaskData() {
-                TaskId = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2022, 04, 10),
-                Duration = "5",
-                Progress = 50,
-                ParentId = 5
-            },
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify site location", StartDate = new DateTime(2022, 04, 05), Duration = "5", Progress = 70, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "5", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "5", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "5", Progress = 70, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "5", Progress = 50, ParentId = 5 },
         };
         return Tasks;
     }
@@ -162,58 +117,13 @@ In the `Month` timeline mode, top tier of the schedule header displays the month
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify site location",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "20",
-                Progress = 70,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "20",
-                Progress = 50,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "20",
-                Progress = 50,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 04, 10),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 04, 10),
-                Duration = "20",
-                Progress = 70,
-                ParentId = 5
-            },
-            new TaskData() {
-                TaskId = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2022, 04, 10),
-                Duration = "20",
-                Progress = 50,
-                ParentId = 5
-            },
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify site location", StartDate = new DateTime(2022, 04, 05), Duration = "20", Progress = 70, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "20", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "20", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "20", Progress = 70, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "20", Progress = 50, ParentId = 5 },
         };
         return Tasks;
     }
@@ -258,58 +168,13 @@ In the `Year` timeline mode, top tier of the schedule header displays the years,
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify site location",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "50",
-                Progress = 70,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "50",
-                Progress = 50,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "50",
-                Progress = 50,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 05, 02),
-                EndDate = new DateTime(2022, 09, 21),
-            },
-            new TaskData() {
-                TaskId = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 05, 10),
-                Duration = "50",
-                Progress = 70,
-                ParentId = 5
-            },
-            new TaskData() {
-                TaskId = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2022, 05, 10),
-                Duration = "50",
-                Progress = 50,
-                ParentId = 5
-            },
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify site location", StartDate = new DateTime(2022, 04, 05), Duration = "50", Progress = 70, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "50", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "50", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 05, 06), EndDate = new DateTime(2022, 09, 21), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 05, 06), Duration = "50", Progress = 70, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 05, 06), Duration = "50", Progress = 50, ParentId = 5 },
         };
         return Tasks;
     }
@@ -353,58 +218,13 @@ In the `Day` timeline mode, top tier of the schedule header displays the days, w
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify site location",
-                StartDate = new DateTime(2022, 04, 02, 09, 0, 0),
-                Duration = "5",
-                Progress = 70,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02, 09, 0, 0),
-                Duration = "5",
-                Progress = 50,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 04, 02, 09, 0, 0),
-                Duration = "5",
-                Progress = 50,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 04, 02, 11, 0, 0),
-                Duration = "5",
-                Progress = 70,
-                ParentId = 5
-            },
-            new TaskData() {
-                TaskId = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2022, 04, 02, 11, 0, 0),
-                Duration = "5",
-                Progress = 50,
-                ParentId = 5
-            },
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify site location", StartDate = new DateTime(2022, 04, 05, 09, 0, 0), Duration = "5", Progress = 70, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05, 09, 0, 0), Duration = "5", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05, 09, 0, 0), Duration = "5", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06, 11, 0, 0), Duration = "5", Progress = 70, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06, 11, 0, 0), Duration = "5", Progress = 50, ParentId = 5 },
         };
         return Tasks;
     }   
@@ -449,58 +269,13 @@ An `Hour` timeline mode tracks the tasks in minutes scale. In this mode, the top
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify site location",
-                StartDate = new DateTime(2022, 04, 02, 8, 4, 0),
-                Duration = "5",
-                Progress = 70,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02, 8, 4, 0),
-                Duration = "5",
-                Progress = 50,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 04, 02, 8, 4, 0),
-                Duration = "5",
-                Progress = 50,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 04, 02, 8, 10, 0),
-                Duration = "5",
-                Progress = 70,
-                ParentId = 5
-            },
-            new TaskData() {
-                TaskId = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2022, 04, 02, 8, 10, 0),
-                Duration = "5",
-                Progress = 50,
-                ParentId = 5
-            },
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify site location", StartDate = new DateTime(2022, 04, 05, 8, 4, 0), Duration = "5", Progress = 70, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05, 8, 4, 0), Duration = "5", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05, 8, 4, 0), Duration = "5", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06, 8, 10, 0), Duration = "5", Progress = 70, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06, 8, 10, 0), Duration = "5", Progress = 50, ParentId = 5 },
         };
         return Tasks;
     }
@@ -511,7 +286,7 @@ An `Hour` timeline mode tracks the tasks in minutes scale. In this mode, the top
 
 ## Top tier and bottom tier
 
-Gantt Chart component contains two tier layout in timeline, you can customize the top tier and bottom tier using `GanttTopTierSettings` and `GanttBottomTierSettings` properties. Timeline tier's unit can be defined by using `Unit` property and `Format` property was used to define date format of timeline cell and `Count` property was used to define how many unit will be combined as single cell.
+Gantt Chart component contains two tier layout in timeline, you can customize the top tier and bottom tier using [GanttTopTierSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTopTierSettings.html) and [GanttBottomTierSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttBottomTierSettings.html) properties. Timeline tier's unit can be defined by using `Unit` property and `Format` property was used to define date format of timeline cell and `Count` property was used to define how many unit will be combined as single cell.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -547,66 +322,14 @@ Gantt Chart component contains two tier layout in timeline, you can customize th
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "4",
-                Progress = 40,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 04, 04),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5
-            },
-            new TaskData() {
-                TaskId = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2022, 04, 04),
-                Duration = "3",
-                Progress = 40,
-                ParentId = 5
-            },
-            new TaskData() {
-                TaskId = 8,
-                TaskName = "Estimation approval",
-                StartDate = new DateTime(2022, 04, 04),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 5
-            },
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 },
         };
         return Tasks;
     }
@@ -653,56 +376,13 @@ In Gantt Chart, timeline cells in top tier and bottom tier can be combined with 
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 08, 21),
-            },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify site location",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "150",
-                Progress = 70,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "150",
-                Progress = 50,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "150",
-                Progress = 50,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 05, 02),
-                EndDate = new DateTime(2022, 09, 21),
-            },
-            new TaskData() {
-                TaskId = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 05, 02),
-                Duration = "150",
-                Progress = 70,
-            },
-            new TaskData() {
-                TaskId = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2022, 05, 02),
-                Duration = "150",
-                Progress = 50,
-            },
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 08, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify site location", StartDate = new DateTime(2022, 04, 05), Duration = "150", Progress = 70, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "150", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "150", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 05, 06), EndDate = new DateTime(2022, 09, 21), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 05, 06), Duration = "150", Progress = 70, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 05, 06), Duration = "150", Progress = 50, ParentId = 5 },
         };
         return Tasks;
     }
@@ -768,67 +448,14 @@ In the Gantt Chart component, you can format the value of top and bottom timelin
     }
     public static List <TaskData> GetTaskCollection() {
     List <TaskData> Tasks = new List <TaskData> () {
-
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2022, 04, 02),
-            EndDate = new DateTime(2022, 06, 21)
-        },
-        new TaskData() {
-            TaskId = 2,
-            TaskName = "Identify Site location",
-            StartDate = new DateTime(2022, 04, 02),
-            Duration = "20",
-            Progress = 30,
-            ParentId = 1
-        },
-        new TaskData() {
-            TaskId = 3,
-            TaskName = "Perform soil test",
-            StartDate = new DateTime(2022, 04, 20),
-            Duration = "24",
-            Progress = 40,
-            ParentId = 1
-        },
-        new TaskData() {
-            TaskId = 4,
-            TaskName = "Soil test approval",
-            StartDate = new DateTime(2022, 05, 02),
-            Duration = "25",
-            Progress = 30,
-            ParentId = 1
-        },
-        new TaskData() {
-            TaskId = 5,
-            TaskName = "Project estimation",
-            StartDate = new DateTime(2022, 06, 02),
-            EndDate = new DateTime(2022, 09, 21)
-        },
-        new TaskData() {
-            TaskId = 6,
-            TaskName = "Develop floor plan for estimation",
-            StartDate = new DateTime(2022, 06, 04),
-            Duration = "33",
-            Progress = 30,
-            ParentId = 5
-        },
-        new TaskData() {
-            TaskId = 7,
-            TaskName = "List materials",
-            StartDate = new DateTime(2022, 07, 04),
-            Duration = "23",
-            Progress = 40,
-            ParentId = 5
-        },
-        new TaskData() {
-            TaskId = 8,
-            TaskName = "Estimation approval",
-            StartDate = new DateTime(2022, 08, 04),
-            Duration = "20",
-            Progress = 30,
-            ParentId = 5
-        }
+        new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 06, 21) },
+        new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "20", Progress = 30, ParentId = 1 },
+        new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "24", Progress = 40, ParentId = 1 },
+        new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 05, 05), Duration = "25", Progress = 30, ParentId = 1 },
+        new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 06, 06), EndDate = new DateTime(2022, 09, 21) },
+        new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 06, 06), Duration = "33", Progress = 30, ParentId = 5 },
+        new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 07, 06), Duration = "23", Progress = 40, ParentId = 5 },
+        new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 08, 06), Duration = "20", Progress = 30, ParentId = 5 }
     };
     return Tasks;
     }
@@ -870,66 +497,14 @@ In the Gantt Chart component, you can define the width value of timeline cell us
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "4",
-                Progress = 40,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 04, 04),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5
-            },
-            new TaskData() {
-                TaskId = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2022, 04, 04),
-                Duration = "3",
-                Progress = 40,
-                ParentId = 5
-            },
-            new TaskData() {
-                TaskId = 8,
-                TaskName = "Estimation approval",
-                StartDate = new DateTime(2022, 04, 04),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 5
-            }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
         };
         return Tasks;
     }
@@ -973,66 +548,14 @@ In the Gantt Chart component, you can customize the week start day using the `Ga
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "4",
-                Progress = 40,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 04, 04),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5
-            },
-            new TaskData() {
-                TaskId = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2022, 04, 04),
-                Duration = "3",
-                Progress = 40,
-                ParentId = 5
-            },
-            new TaskData() {
-                TaskId = 8,
-                TaskName = "Estimation approval",
-                StartDate = new DateTime(2022, 04, 04),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 5
-            }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
         };
         return Tasks;
     }
@@ -1077,66 +600,14 @@ In the Gantt Chart component, the schedule timeline will be automatically update
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "4",
-                Progress = 40,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 04, 04),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5
-            },
-            new TaskData() {
-                TaskId = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2022, 04, 04),
-                Duration = "3",
-                Progress = 40,
-                ParentId = 5
-            },
-            new TaskData() {
-                TaskId = 8,
-                TaskName = "Estimation approval",
-                StartDate = new DateTime(2022, 04, 04),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 5
-            }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
         };
         return Tasks;
     }
@@ -1190,71 +661,14 @@ This support is used to view all the tasks available in a project to specific ti
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "0",
-                Progress = 30,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "4",
-                Progress = 40,
-                Predecessor = "2",
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "0",
-                Progress = 30,
-                Predecessor = "3",
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2022, 04, 04),
-                Duration = "3",
-                Progress = 30,
-                Predecessor = "4",
-                ParentId = 5
-            },
-            new TaskData() {
-                TaskId = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2022, 04, 04),
-                Duration = "3",
-                Progress = 40,
-                Predecessor = "6",
-                ParentId = 5
-            },
-            new TaskData() {
-                TaskId = 8,
-                TaskName = "Estimation approval",
-                StartDate = new DateTime(2022, 04, 04),
-                Duration = "0",
-                Progress = 30,
-                Predecessor = "7",
-                ParentId = 5
-            },
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, Predecessor = "2", ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, Predecessor = "3", ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, Predecessor = "4", ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, Predecessor = "6", ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, Predecessor = "7", ParentId = 5 },
         };
         return Tasks;
     }
