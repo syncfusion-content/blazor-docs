@@ -31,6 +31,9 @@ The following table shows built-in toolbar items and its actions.
 | PrevTimeSpan | Navigate the Gantt Chart timeline to previous time span. |
 | Search | Searches the records by the given key. |
 | Update | Updates the edited record. |
+| ZoomIn | To perform zoom-in action on Gantt Chart timeline. |
+| ZoomOut | To perform zoom-out action on Gantt Chart timeline. |
+| ZoomToFit | To show all tasks with timeline fit into available Chart width. |
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
