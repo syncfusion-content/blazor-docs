@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Markers in Blazor Gantt Chart Component
 
-Data markers are a set of events used to represent the schedule events for a task. Data markers are defined in data source as array of objects, and this value is mapped to the Gantt Chart component using the `GanttTaskFields.Indicators` property. You can represent more than one data marker in a task.
+[Data markers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttIndicator.html) are a set of events used to represent the schedule events for a task. Data markers are defined in data source as array of objects, and this value is mapped to the Gantt Chart component using the `GanttTaskFields.Indicators` property. You can represent more than one data marker in a task.
 
 Data markers can be defined using the following properties:
 
@@ -52,23 +52,23 @@ The following code example demonstrates how to implement data markers in the Gan
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2019, 03, 27), EndDate = new DateTime(2019, 04, 06), Indicators=(new List<GanttIndicator>()
-                {
-                    new GanttIndicator() { Name="product", IconClass="e-btn-icon e-notes-info e-icons e-icon-left e-gantt e-notes-info::before", Date=new DateTime(2019, 04, 11), Tooltip="sales"}
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 06), Indicators=(new List<GanttIndicator>()
+            {
+                    new GanttIndicator() { Name="product", IconClass="e-btn-icon e-notes-info e-icons e-icon-left e-gantt e-notes-info::before", Date=new DateTime(2022, 01, 11), Tooltip="sales"}
                 })
             },
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2019, 04, 02), Duration = "2", Progress = 30, ParentId = 1, Indicators=(new List<GanttIndicator>()
-                {
-                    new GanttIndicator(){ Name="customer", IconClass="e-btn-icon e-notes-info e-icons e-icon-left e-gantt e-notes-info::before", Date=new DateTime(2019, 04, 14), Tooltip="people" },
-                    new GanttIndicator(){ Name="product", IconClass="e-btn-icon e-notes-info e-icons e-icon-left e-gantt e-notes-info::before", Date=new DateTime(2019, 04, 17), Tooltip="sales" }
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "2", Progress = 30, ParentId = 1, Indicators=(new List<GanttIndicator>()
+            {
+                    new GanttIndicator(){ Name="customer", IconClass="e-btn-icon e-notes-info e-icons e-icon-left e-gantt e-notes-info::before", Date=new DateTime(2022, 01, 11), Tooltip="people" },
+                    new GanttIndicator(){ Name="product", IconClass="e-btn-icon e-notes-info e-icons e-icon-left e-gantt e-notes-info::before", Date=new DateTime(2022, 01, 8), Tooltip="sales" }
                 })
             },
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 06), Duration = "5", Progress = 40, ParentId = 1 },
-            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2019, 04, 02), Duration = "5", EndDate = new DateTime(2019, 04, 06), Progress = 30, ParentId = 1 },
-            new TaskData() { TaskId = 5, TaskName = "Project initiation", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 08) },
-            new TaskData() { TaskId = 6, TaskName = "Identify Site location", StartDate = new DateTime(2019, 04, 02), Duration = "2", Progress = 30, ParentId = 5 },
-            new TaskData() { TaskId = 7, TaskName = "Perform soil test", StartDate = new DateTime(2019, 04, 02), Duration = "4", Progress = 40, ParentId = 5 },
-            new TaskData() { TaskId = 8, TaskName = "Soil test approval", StartDate = new DateTime(2019, 04, 02), Duration = "5", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 08), Duration = "5", Progress = 40, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "5", EndDate = new DateTime(2022, 01, 08), Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 08) },
+            new TaskData() { TaskId = 6, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "2", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "5", Progress = 30, ParentId = 5 },
         };
         return Tasks;
     }
