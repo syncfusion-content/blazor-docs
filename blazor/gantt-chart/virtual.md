@@ -67,371 +67,46 @@ namespace GanttComponent.Data
         {
             List<GanttDataSource> GanttDataSourceCollection = new List<GanttDataSource>();
 
-            GanttDataSource Record1 = new GanttDataSource()
-            {
-                TaskId = 1,
-                TaskName = "Product concept",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 29),
-                ParentID = 0
-            };
-            GanttDataSource Record2 = new GanttDataSource()
-            {
-                TaskId = 2,
-                TaskName = "Defining the product and its usage",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "3",
-                Progress = 30,
-                ParentID = 1,
-            };
-            GanttDataSource Record3 = new GanttDataSource()
-            {
-                TaskId = 3,
-                TaskName = "Defining target audience",
-                StartDate = new DateTime(2022, 04, 02),
-                ParentID = 1,
-                Duration = "3"
-            };
-            GanttDataSource Record4 = new GanttDataSource()
-            {
-                TaskId = 4,
-                TaskName = "Prepare product sketch and notes",
-                StartDate = new DateTime(2022, 04, 05),
-                Duration = "2",
-                ParentID = 1,
-                Predecessor = "2",
-                Progress = 30
-            };
-            GanttDataSource Record5 = new GanttDataSource()
-            {
-                TaskId = 5,
-                TaskName = "Concept approval",
-                StartDate = new DateTime(2022, 04, 08),
-                ParentID = 0,
-                Duration = "0",
-                Predecessor = "3,4"
-            };
-            GanttDataSource Record6 = new GanttDataSource()
-            {
-                TaskId = 6,
-                TaskName = "Market research",
-                StartDate = new DateTime(2022, 04, 02),
-                ParentID = 0,
-                EndDate = new DateTime(2022, 04, 21),
-            };
-            GanttDataSource Record7 = new GanttDataSource()
-            {
-                TaskId = 7,
-                TaskName = "Demand analysis",
-                StartDate = new DateTime(2022, 04, 04),
-                EndDate = new DateTime(2022, 04, 21),
-                ParentID = 6,
-            };
-            GanttDataSource Record8 = new GanttDataSource()
-            {
-                TaskId = 8,
-                TaskName = "Customer strength",
-                StartDate = new DateTime(2022, 04, 09),
-                Duration = "4",
-                Predecessor = "5",
-                ParentID = 7,
-                Progress = 30
-            };
-            GanttDataSource Record9 = new GanttDataSource()
-            {
-                TaskId = 9,
-                TaskName = "Market opportunity analysis",
-                StartDate = new DateTime(2022, 04, 9),
-                Duration = "4",
-                ParentID = 7,
-                Predecessor = "5"
-            };
-            GanttDataSource Record10 = new GanttDataSource()
-            {
-                TaskId = 10,
-                TaskName = "Competitor analysis",
-                StartDate = new DateTime(2022, 04, 15),
-                Duration = "4",
-                Predecessor = "7, 8",
-                ParentID = 6,
-                Progress = 30
-            };
-            GanttDataSource Record11 = new GanttDataSource()
-            {
-                TaskId = 11,
-                TaskName = "Product strength analysis",
-                StartDate = new DateTime(2022, 04, 15),
-                Duration = "4",
-                ParentID = 6,
-                Predecessor = "9"
-            };
-            GanttDataSource Record12 = new GanttDataSource()
-            {
-                TaskId = 12,
-                TaskName = "Research complete",
-                StartDate = new DateTime(2022, 04, 18),
-                Duration = "0",
-                ParentID = 6,
-                Predecessor = "10"
-            };
-            GanttDataSource Record13 = new GanttDataSource()
-            {
-                TaskId = 13,
-                TaskName = "Product design and development",
-                StartDate = new DateTime(2022, 04, 04),
-                ParentID = 0,
-                EndDate = new DateTime(2022, 04, 21),
-            };
-            GanttDataSource Record14 = new GanttDataSource()
-            {
-                TaskId = 14,
-                TaskName = "Functionality design",
-                StartDate = new DateTime(2022, 04, 19),
-                Duration = "3",
-                ParentID = 13,
-                Progress = 30,
-                Predecessor = "12"
-            };
-            GanttDataSource Record15 = new GanttDataSource()
-            {
-                TaskId = 15,
-                TaskName = "Quality design",
-                StartDate = new DateTime(2022, 04, 19),
-                Duration = "3",
-                ParentID = 13,
-                Predecessor = "12"
-            };
-            GanttDataSource Record16 = new GanttDataSource()
-            {
-                TaskId = 16,
-                TaskName = "Define reliability",
-                StartDate = new DateTime(2022, 04, 24),
-                Duration = "2",
-                Progress = 30,
-                ParentID = 13,
-                Predecessor = "15"
-            };
-            GanttDataSource Record17 = new GanttDataSource()
-            {
-                TaskId = 17,
-                TaskName = "Identifying raw materials",
-                StartDate = new DateTime(2022, 04, 24),
-                Duration = "2",
-                ParentID = 13,
-                Predecessor = "15"
-            };
-            GanttDataSource Record18 = new GanttDataSource()
-            {
-                TaskId = 18,
-                TaskName = "Define cost plan",
-                StartDate = new DateTime(2022, 04, 04),
-                ParentID = 13,
-                EndDate = new DateTime(2022, 04, 21),
-            };
-            GanttDataSource Record19 = new GanttDataSource()
-            {
-                TaskId = 19,
-                TaskName = "Manufacturing cost",
-                StartDate = new DateTime(2022, 04, 26),
-                Duration = "2",
-                Progress = 30,
-                ParentID = 18,
-                Predecessor = "17"
-            };
-            GanttDataSource Record20 = new GanttDataSource()
-            {
-                TaskId = 20,
-                TaskName = "Selling cost",
-                StartDate = new DateTime(2022, 04, 26),
-                Duration = "2",
-                ParentID = 18,
-                Predecessor = "17"
-            };
-            GanttDataSource Record21 = new GanttDataSource()
-            {
-                TaskId = 21,
-                TaskName = "Development of the final design",
-                StartDate = new DateTime(2022, 04, 30),
-                ParentID = 13,
-                EndDate = new DateTime(2022, 04, 21),
-            };
-            GanttDataSource Record22 = new GanttDataSource()
-            {
-                TaskId = 22,
-                TaskName = "Defining dimensions and package volume",
-                StartDate = new DateTime(2022, 04, 30),
-                Duration = "2",
-                ParentID = 21,
-                Progress = 30,
-                Predecessor = "19,20"
-            };
-            GanttDataSource Record23 = new GanttDataSource()
-            {
-                TaskId = 23,
-                TaskName = "Develop design to meet industry standards",
-                StartDate = new DateTime(2022, 05, 02),
-                Duration = "2",
-                ParentID = 21,
-                Predecessor = "22"
-            };
-            GanttDataSource Record24 = new GanttDataSource()
-            {
-                TaskId = 24,
-                TaskName = "Include all the details",
-                StartDate = new DateTime(2022, 05, 06),
-                Duration = "3",
-                ParentID = 21,
-                Predecessor = "23"
-            };
-            GanttDataSource Record25 = new GanttDataSource()
-            {
-                TaskId = 25,
-                TaskName = "CAD computer-aided design",
-                StartDate = new DateTime(2022, 05, 09),
-                Duration = "3",
-                ParentID = 13,
-                Progress = 30,
-                Predecessor = "24"
-            };
-            GanttDataSource Record26 = new GanttDataSource()
-            {
-                TaskId = 26,
-                TaskName = "CAM computer-aided manufacturing",
-                StartDate = new DateTime(2022, 05, 14),
-                Duration = "3",
-                ParentID = 13,
-                Predecessor = "25"
-            };
-            GanttDataSource Record27 = new GanttDataSource()
-            {
-                TaskId = 27,
-                TaskName = "Design complete",
-                StartDate = new DateTime(2022, 05, 16),
-                Duration = "0",
-                ParentID = 13,
-                Predecessor = "26"
-            };
-            GanttDataSource Record28 = new GanttDataSource()
-            {
-                TaskId = 28,
-                TaskName = "Prototype testing",
-                StartDate = new DateTime(2022, 05, 17),
-                Duration = "4",
-                Progress = 30,
-                ParentID = 0,
-                Predecessor = "27"
-            };
-            GanttDataSource Record29 = new GanttDataSource()
-            {
-                TaskId = 29,
-                TaskName = "Include feedback",
-                StartDate = new DateTime(2022, 05, 17),
-                Duration = "4",
-                ParentID = 0,
-                Predecessor = "28ss"
-            };
-            GanttDataSource Record30 = new GanttDataSource()
-            {
-                TaskId = 30,
-                TaskName = "Manufacturing",
-                StartDate = new DateTime(2022, 05, 23),
-                Duration = "5",
-                Progress = 30,
-                ParentID = 0,
-                Predecessor = "28,29"
-            };
-            GanttDataSource Record31 = new GanttDataSource()
-            {
-                TaskId = 31,
-                TaskName = "Assembling materials to finished goods",
-                StartDate = new DateTime(2022, 05, 30),
-                Duration = "5",
-                ParentID = 0,
-                Predecessor = "30"
-            };
-            GanttDataSource Record32 = new GanttDataSource()
-            {
-                TaskId = 32,
-                TaskName = "Feedback and testing",
-                StartDate = new DateTime(2022, 05, 04),
-                ParentID = 0,
-                EndDate = new DateTime(2022, 05, 21),
-            };
-            GanttDataSource Record33 = new GanttDataSource()
-            {
-                TaskId = 33,
-                TaskName = "Internal testing and feedback",
-                StartDate = new DateTime(2022, 06, 06),
-                Duration = "3",
-                ParentID = 32,
-                Progress = 45,
-                Predecessor = "31"
-            };
-            GanttDataSource Record34 = new GanttDataSource()
-            {
-                TaskId = 34,
-                TaskName = "Customer testing and feedback",
-                StartDate = new DateTime(2022, 06, 11),
-                Duration = "3",
-                ParentID = 32,
-                Progress = 50,
-                Predecessor = "33"
-            };
-            GanttDataSource Record35 = new GanttDataSource()
-            {
-                TaskId = 35,
-                TaskName = "Final product development",
-                StartDate = new DateTime(2022, 06, 06),
-                ParentID = 0,
-                EndDate = new DateTime(2022, 06, 06),
-            };
-            GanttDataSource Record36 = new GanttDataSource()
-            {
-                TaskId = 36,
-                TaskName = "Important improvements",
-                StartDate = new DateTime(2022, 06, 14),
-                Duration = "4",
-                Progress = 30,
-                ParentID = 35,
-                Predecessor = "34"
-            };
-            GanttDataSource Record37 = new GanttDataSource()
-            {
-                TaskId = 37,
-                TaskName = "Address any unforeseen issues",
-                StartDate = new DateTime(2022, 06, 14),
-                Duration = "4",
-                Progress = 30,
-                ParentID = 35,
-                Predecessor = "36ss"
-            };
-            GanttDataSource Record38 = new GanttDataSource()
-            {
-                TaskId = 38,
-                TaskName = "Final product",
-                StartDate = new DateTime(2022, 06, 06),
-                ParentID = 0,
-                EndDate = new DateTime(2022, 06, 06),
-            };
-            GanttDataSource Record39 = new GanttDataSource()
-            {
-                TaskId = 39,
-                TaskName = "Branding product",
-                StartDate = new DateTime(2022, 06, 20),
-                Duration = "4",
-                ParentID = 38,
-                Predecessor = "37"
-            };
-            GanttDataSource Record40 = new GanttDataSource()
-            {
-                TaskId = 40,
-                TaskName = "Marketing and presales",
-                StartDate = new DateTime(2022, 06, 26),
-                Duration = "4",
-                Progress = 30,
-                ParentID = 38,
-                Predecessor = "39"
-            };
+            GanttDataSource Record1 = new GanttDataSource() { TaskId = 1, TaskName = "Product concept", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 29), ParentID = 0 };
+            GanttDataSource Record2 = new GanttDataSource() { TaskId = 2, TaskName = "Defining the product and its usage", StartDate = new DateTime(2022, 04, 05), Duration = "3", Progress = 30, ParentID = 1, };
+            GanttDataSource Record3 = new GanttDataSource() { TaskId = 3, TaskName = "Defining target audience", StartDate = new DateTime(2022, 04, 05), ParentID = 1, Duration = "3" };
+            GanttDataSource Record4 = new GanttDataSource() { TaskId = 4, TaskName = "Prepare product sketch and notes", StartDate = new DateTime(2022, 04, 05), Duration = "2", ParentID = 1, Predecessor = "2", Progress = 30 };
+            GanttDataSource Record5 = new GanttDataSource() { TaskId = 5, TaskName = "Concept approval", StartDate = new DateTime(2022, 04, 08), ParentID = 0, Duration = "0", Predecessor = "3,4" };
+            GanttDataSource Record6 = new GanttDataSource() { TaskId = 6, TaskName = "Market research", StartDate = new DateTime(2022, 04, 05), ParentID = 0, EndDate = new DateTime(2022, 04, 21), };
+            GanttDataSource Record7 = new GanttDataSource() { TaskId = 7, TaskName = "Demand analysis", StartDate = new DateTime(2022, 04, 04), EndDate = new DateTime(2022, 04, 21), ParentID = 6, };
+            GanttDataSource Record8 = new GanttDataSource() { TaskId = 8, TaskName = "Customer strength", StartDate = new DateTime(2022, 04, 11), Duration = "4", Predecessor = "5", ParentID = 7, Progress = 30 };
+            GanttDataSource Record9 = new GanttDataSource() { TaskId = 9, TaskName = "Market opportunity analysis", StartDate = new DateTime(2022, 04, 11), Duration = "4", ParentID = 7, Predecessor = "5" };
+            GanttDataSource Record10 = new GanttDataSource() { TaskId = 10, TaskName = "Competitor analysis", StartDate = new DateTime(2022, 04, 15), Duration = "4", Predecessor = "7, 8", ParentID = 6, Progress = 30 };
+            GanttDataSource Record11 = new GanttDataSource() { TaskId = 11, TaskName = "Product strength analysis", StartDate = new DateTime(2022, 04, 15), Duration = "4", ParentID = 6, Predecessor = "9" };
+            GanttDataSource Record12 = new GanttDataSource() { TaskId = 12, TaskName = "Research complete", StartDate = new DateTime(2022, 04, 18), Duration = "0", ParentID = 6, Predecessor = "10" };
+            GanttDataSource Record13 = new GanttDataSource() { TaskId = 13, TaskName = "Product design and development", StartDate = new DateTime(2022, 04, 05), ParentID = 0, EndDate = new DateTime(2022, 04, 21), };
+            GanttDataSource Record14 = new GanttDataSource() { TaskId = 14, TaskName = "Functionality design", StartDate = new DateTime(2022, 04, 19), Duration = "3", ParentID = 13, Progress = 30, Predecessor = "12" };
+            GanttDataSource Record15 = new GanttDataSource() { TaskId = 15, TaskName = "Quality design", StartDate = new DateTime(2022, 04, 19), Duration = "3", ParentID = 13, Predecessor = "12" };
+            GanttDataSource Record16 = new GanttDataSource() { TaskId = 16, TaskName = "Define reliability", StartDate = new DateTime(2022, 04, 25), Duration = "2", Progress = 30, ParentID = 13, Predecessor = "15" };
+            GanttDataSource Record17 = new GanttDataSource() { TaskId = 17, TaskName = "Identifying raw materials", StartDate = new DateTime(2022, 04, 25), Duration = "2", ParentID = 13, Predecessor = "15" };
+            GanttDataSource Record18 = new GanttDataSource() { TaskId = 18, TaskName = "Define cost plan", StartDate = new DateTime(2022, 04, 05), ParentID = 13, EndDate = new DateTime(2022, 04, 21), };
+            GanttDataSource Record19 = new GanttDataSource() { TaskId = 19, TaskName = "Manufacturing cost", StartDate = new DateTime(2022, 04, 26), Duration = "2", Progress = 30, ParentID = 18, Predecessor = "17" };
+            GanttDataSource Record20 = new GanttDataSource() { TaskId = 20, TaskName = "Selling cost", StartDate = new DateTime(2022, 04, 26), Duration = "2", ParentID = 18, Predecessor = "17" };
+            GanttDataSource Record21 = new GanttDataSource() { TaskId = 21, TaskName = "Development of the final design", StartDate = new DateTime(2022, 04, 30), ParentID = 13, EndDate = new DateTime(2022, 04, 21), };
+            GanttDataSource Record22 = new GanttDataSource() { TaskId = 22, TaskName = "Defining dimensions and package volume", StartDate = new DateTime(2022, 04, 29), Duration = "2", ParentID = 21, Progress = 30, Predecessor = "19,20" };
+            GanttDataSource Record23 = new GanttDataSource() { TaskId = 23, TaskName = "Develop design to meet industry standards", StartDate = new DateTime(2022, 05, 05), Duration = "2", ParentID = 21, Predecessor = "22" };
+            GanttDataSource Record24 = new GanttDataSource() { TaskId = 24, TaskName = "Include all the details", StartDate = new DateTime(2022, 05, 06), Duration = "3", ParentID = 21, Predecessor = "23" };
+            GanttDataSource Record25 = new GanttDataSource() { TaskId = 25, TaskName = "CAD computer-aided design", StartDate = new DateTime(2022, 05, 09), Duration = "3", ParentID = 13, Progress = 30, Predecessor = "24" };
+            GanttDataSource Record26 = new GanttDataSource() { TaskId = 26, TaskName = "CAM computer-aided manufacturing", StartDate = new DateTime(2022, 05, 14), Duration = "3", ParentID = 13, Predecessor = "25" };
+            GanttDataSource Record27 = new GanttDataSource() { TaskId = 27, TaskName = "Design complete", StartDate = new DateTime(2022, 05, 15), Duration = "0", ParentID = 13, Predecessor = "26" };
+            GanttDataSource Record28 = new GanttDataSource() { TaskId = 28, TaskName = "Prototype testing", StartDate = new DateTime(2022, 05, 18), Duration = "4", Progress = 30, ParentID = 0, Predecessor = "27" };
+            GanttDataSource Record29 = new GanttDataSource() { TaskId = 29, TaskName = "Include feedback", StartDate = new DateTime(2022, 05, 18), Duration = "4", ParentID = 0, Predecessor = "28ss" };
+            GanttDataSource Record30 = new GanttDataSource() { TaskId = 30, TaskName = "Manufacturing", StartDate = new DateTime(2022, 05, 22), Duration = "5", Progress = 30, ParentID = 0, Predecessor = "28,29" };
+            GanttDataSource Record31 = new GanttDataSource() { TaskId = 31, TaskName = "Assembling materials to finished goods", StartDate = new DateTime(2022, 05, 29), Duration = "5", ParentID = 0, Predecessor = "30" };
+            GanttDataSource Record32 = new GanttDataSource() { TaskId = 32, TaskName = "Feedback and testing", StartDate = new DateTime(2022, 05, 05), ParentID = 0, EndDate = new DateTime(2022, 05, 21), };
+            GanttDataSource Record33 = new GanttDataSource() { TaskId = 33, TaskName = "Internal testing and feedback", StartDate = new DateTime(2022, 06, 06), Duration = "3", ParentID = 32, Progress = 45, Predecessor = "31" };
+            GanttDataSource Record34 = new GanttDataSource() { TaskId = 34, TaskName = "Customer testing and feedback", StartDate = new DateTime(2022, 06, 11), Duration = "3", ParentID = 32, Progress = 50, Predecessor = "33" };
+            GanttDataSource Record35 = new GanttDataSource() { TaskId = 35, TaskName = "Final product development", StartDate = new DateTime(2022, 06, 06), ParentID = 0, EndDate = new DateTime(2022, 06, 06), };
+            GanttDataSource Record36 = new GanttDataSource() { TaskId = 36, TaskName = "Important improvements", StartDate = new DateTime(2022, 06, 14), Duration = "4", Progress = 30, ParentID = 35, Predecessor = "34" };
+            GanttDataSource Record37 = new GanttDataSource() { TaskId = 37, TaskName = "Address any unforeseen issues", StartDate = new DateTime(2022, 06, 14), Duration = "4", Progress = 30, ParentID = 35, Predecessor = "36ss" };
+            GanttDataSource Record38 = new GanttDataSource() { TaskId = 38, TaskName = "Final product", StartDate = new DateTime(2022, 06, 06), ParentID = 0, EndDate = new DateTime(2022, 06, 06), };
+            GanttDataSource Record39 = new GanttDataSource() { TaskId = 39, TaskName = "Branding product", StartDate = new DateTime(2022, 06, 20), Duration = "4", ParentID = 38, Predecessor = "37" };
+            GanttDataSource Record40 = new GanttDataSource() { TaskId = 40, TaskName = "Marketing and presales", StartDate = new DateTime(2022, 06, 26), Duration = "4", Progress = 30, ParentID = 38, Predecessor = "39" };
             GanttDataSourceCollection.Add(Record1);
             GanttDataSourceCollection.Add(Record2);
             GanttDataSourceCollection.Add(Record3);
