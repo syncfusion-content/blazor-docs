@@ -53,64 +53,8 @@ public class TaskData
 public static List<TaskData> GetTaskCollection()
 {
     List<TaskData> Tasks = new List<TaskData>() {
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2022, 04, 02),
-            EndDate = new DateTime(2022, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify Site location",
-                    StartDate = new DateTime(2022, 04, 02),
-                    Duration = "0",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2022, 04, 02),
-                    Duration = "4",
-                    Progress = 40,
-                },
-                new TaskData() {
-                    TaskId = 4,
-                    TaskName = "Soil test approval",
-                    StartDate = new DateTime(2022, 04, 02),
-                    Duration = "0",
-                    Progress = 30
-                },
-            })
-        },
-        new TaskData() {
-            TaskId = 5,
-            TaskName = "Project estimation",
-            StartDate = new DateTime(2022, 04, 02),
-            EndDate = new DateTime(2022, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 6,
-                    TaskName = "Develop floor plan for estimation",
-                    StartDate = new DateTime(2022, 04, 04),
-                    Duration = "3",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 7,
-                    TaskName = "List materials",
-                    StartDate = new DateTime(2022, 04, 04),
-                    Duration = "3",
-                    Progress = 40
-                },
-                new TaskData() {
-                    TaskId = 8,
-                    TaskName = "Estimation approval",
-                    StartDate = new DateTime(2022, 04, 04),
-                    Duration = "0",
-                    Progress = 30,
-                }
-            })
-        }
+        new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), SubTasks = (new List <TaskData> () { new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, }, new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, }, new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30 }, }) },
+        new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), SubTasks = (new List <TaskData> () { new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, }, new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40 }, new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, } }) }
     };
     return Tasks;
 }
@@ -155,67 +99,14 @@ The Gantt Chart component can be bound with self-referential data by mapping the
 
     public static List <TaskData> GetTaskCollection() {
     List <TaskData> Tasks = new List <TaskData> () {
-
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2022, 04, 02),
-            EndDate = new DateTime(2022, 04, 21)
-        },
-        new TaskData() {
-            TaskId = 2,
-            TaskName = "Identify Site location",
-            StartDate = new DateTime(2022, 04, 02),
-            Duration = "0",
-            Progress = 30,
-            ParentId = 1
-        },
-        new TaskData() {
-            TaskId = 3,
-            TaskName = "Perform soil test",
-            StartDate = new DateTime(2022, 04, 02),
-            Duration = "4",
-            Progress = 40,
-            ParentId = 1
-        },
-        new TaskData() {
-            TaskId = 4,
-            TaskName = "Soil test approval",
-            StartDate = new DateTime(2022, 04, 02),
-            Duration = "0",
-            Progress = 30,
-            ParentId = 1
-        },
-        new TaskData() {
-            TaskId = 5,
-            TaskName = "Project estimation",
-            StartDate = new DateTime(2022, 04, 02),
-            EndDate = new DateTime(2022, 04, 21)
-        },
-        new TaskData() {
-            TaskId = 6,
-            TaskName = "Develop floor plan for estimation",
-            StartDate = new DateTime(2022, 04, 04),
-            Duration = "3",
-            Progress = 30,
-            ParentId = 5
-        },
-        new TaskData() {
-            TaskId = 7,
-            TaskName = "List materials",
-            StartDate = new DateTime(2022, 04, 04),
-            Duration = "3",
-            Progress = 40,
-            ParentId = 5
-        },
-        new TaskData() {
-            TaskId = 8,
-            TaskName = "Estimation approval",
-            StartDate = new DateTime(2022, 04, 04),
-            Duration = "0",
-            Progress = 30,
-            ParentId = 5
-        }
+        new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21) },
+        new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+        new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1 },
+        new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+        new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21) },
+        new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
+        new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
+        new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
     };
     return Tasks;
 }
