@@ -104,7 +104,7 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 {% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
 
 <head>
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/blazor/19.4.48/styles/bootstrap5.css" rel="stylesheet" />
 </head>
 
 {% endhighlight %}
@@ -112,7 +112,7 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 {% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" %}
 
 <head>
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/blazor/19.4.48/styles/bootstrap5.css" rel="stylesheet" />
 </head>
 
 {% endhighlight %}
@@ -131,8 +131,8 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 <head>
     ....
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <script src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
+    <link href="https://cdn.syncfusion.com/blazor/19.4.48/styles/bootstrap5.css" rel="stylesheet" />
+    <script src="https://cdn.syncfusion.com/blazor/19.4.48/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
 </head>
 
 {% endhighlight %}
@@ -141,12 +141,14 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 <head>
     ....
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <script src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
+    <link href="https://cdn.syncfusion.com/blazor/19.4.48/styles/bootstrap5.css" rel="stylesheet" />
+    <script src="https://cdn.syncfusion.com/blazor/19.4.48/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
 </head>
 
 {% endhighlight %}
 {% endtabs %}
+
+* [How to generate custom script to use Document Editor along with other Syncfusion Blazor component](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)
 
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
