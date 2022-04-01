@@ -148,7 +148,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 {% endhighlight %}
 {% endtabs %}
 
-In the above example code, we have referred the script which is specfic to Document Editor component. If you want to use Document Editor along the other Syncfusion Blazor component like Grid, RTE etc. Please refer below topic
+In the above example code, we have referred the script which is specific to Document Editor component. If you want to use Document Editor along the other Syncfusion Blazor component like Grid, RTE etc. Please refer below topic
 
 * [Adding script reference](https://blazor.syncfusion.com/documentation/common/adding-script-references)
 * [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)
