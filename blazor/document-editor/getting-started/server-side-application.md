@@ -148,7 +148,10 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 {% endhighlight %}
 {% endtabs %}
 
-In the above example code, we have refered the script which is specfic to Document Editor component. If you want to use Document Editor along the other Syncfusion Blazor component like Grid, RTE etc. Please refer the [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)
+In the above example code, we have refered the script which is specfic to Document Editor component. If you want to use Document Editor along the other Syncfusion Blazor component like Grid, RTE etc. Please refer below topic
+
+* [Adding script reference](https://blazor.syncfusion.com/documentation/common/adding-script-references)
+* [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)
 
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
