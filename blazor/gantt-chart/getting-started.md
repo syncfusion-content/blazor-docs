@@ -295,28 +295,9 @@ Bind data with the Gantt Chart component by using the `DataSource` property. It 
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "4",
-                Progress = 50,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "4",
-                Progress = 50,
-                ParentId = 1
-            }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 }
         };
         return Tasks;
     }
@@ -358,28 +339,9 @@ The data source fields that are required to render the tasks are mapped to the G
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "4",
-                Progress = 50,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "4",
-                Progress = 50,
-                ParentId = 1
-            }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 }
         };
         return Tasks;
     }
@@ -436,28 +398,9 @@ Gantt Chart has an option to define columns as an array. You can customize the G
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "4",
-                Progress = 50,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "4",
-                Progress = 50,
-                ParentId = 1
-            }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 }
         };
         return Tasks;
     }
@@ -502,28 +445,9 @@ The editing feature enables you to edit the tasks in the Gantt Chart component. 
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "4",
-                Progress = 50,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "4",
-                Progress = 50,
-                ParentId = 1
-            }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 }
         };
         return Tasks;
     }
@@ -569,28 +493,9 @@ The filtering feature enables you to view the reduced amount of records based on
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "4",
-                Progress = 50,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "4",
-                Progress = 50,
-                ParentId = 1
-            }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 }
         };
         return Tasks;
     }
@@ -634,28 +539,9 @@ The sorting feature enables you to order the records. It can be enabled by setti
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "4",
-                Progress = 50,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "4",
-                Progress = 50,
-                ParentId = 1
-            }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 }
         };
         return Tasks;
     }
@@ -706,29 +592,9 @@ You can show the relationship in tasks by using the `Dependency` property as sho
     public static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2022, 04, 02),
-                EndDate = new DateTime(2022, 04, 21),
-            },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "4",
-                Progress = 50,
-                ParentId = 1
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2022, 04, 02),
-                Duration = "4",
-                Progress = 50,
-                ParentId = 1,
-                Predecessor = "2"
-            }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 50, ParentId = 1, Predecessor = "2" }
         };
         return Tasks;
     }
