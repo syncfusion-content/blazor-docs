@@ -151,7 +151,7 @@ To create a node, define the Node object and add it to the nodes collection of t
 
 ### Clear
 
-Clear method is used to remove all the elements such as nodes, connectors and groups from the diagram.
+[Clear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) method is used to remove all the elements such as nodes, connectors and groups from the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
