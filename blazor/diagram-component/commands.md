@@ -1262,7 +1262,7 @@ The [FitToPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
 |FitToHeight | It is used to enable the fit to page behavior only with respect to height.       |
 |Both  | It is used to enable the fit to page behavior with respect to both the height and width of the diagram. |
 
-![Fit to page Command](./images/FitPage.gif)
+![Fit to page Command](./images/FitToPage.gif)
 
 ### Region
 
