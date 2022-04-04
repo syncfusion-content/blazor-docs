@@ -1051,7 +1051,7 @@ The following code example shows how to disable a command and how to modify the 
 ```
 ### BringIntoView
 
-The BringIntoView command brings a specified rectangular region into the viewport of the diagram.
+The [BringIntoView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BringIntoView_Syncfusion_Blazor_Diagram_DiagramRect_) command brings a specified rectangular region into the viewport of the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -1084,7 +1084,7 @@ protected override void OnInitialized()
 ```
 ### BringIntoCenter
 
-The BringIntoCenter command brings a specified rectangular region into the center of the viewport of the diagram.
+The [BringIntoCenter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BringIntoCenter_Syncfusion_Blazor_Diagram_DiagramRect_) command brings a specified rectangular region into the center of the viewport of the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
