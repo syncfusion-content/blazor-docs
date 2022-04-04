@@ -1146,7 +1146,7 @@ By default, the `EnableToggle` property is set to `false`.
 
 ## Drag selection
 
-The GanttChart allows to select range of cells or rows by mouse ot touch dragging.To enable drag selection, set the `AllowDragSelection` property of [GanttSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html) as true.
+The GanttChart allows to select range of cells or rows by mouse or touch dragging.To enable drag selection, set the `AllowDragSelection` property of [GanttSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html) as true.
 
 * Set [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html#Syncfusion_Blazor_Gantt_GanttSelectionSettings_Type) property as `Multiple`, to select multiple rows or cells in grid by mouse/touch dragging.
 
