@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor ListView Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor ListView component and much more.
+description: Checkout and learn here all about data binding in Syncfusion Blazor ListView component and much more.
 platform: Blazor
 control: Listview
 documentation: ug
@@ -25,7 +25,7 @@ ListView provides an option to load the data either from local dataSource or rem
 | SortBy | string | Specifies sorting field, that is used to sort the listview data. |
 | HtmlAttributes | string | Specifies list item html attributes field. |
 
-> When complex data bind to ListView, you should map the ListViewFieldSettings properly. Otherwise, the ListView properties remain as undefined or null.
+> When complex data bind to ListView, you should map the ListViewFieldSettings properly. Otherwise, the ListView properties remains as undefined or null.
 
 ## Bind to local data
 
@@ -70,8 +70,6 @@ ListView can generate its list items through an array of complex data. To get it
 }
 ```
 
-Output be like the below.
-
 ![Data Binding in Blazor ListView](./images/list/blazor-listview-data-binding.png)
 
 ## Bind to remote data
@@ -104,8 +102,6 @@ In the following sample, first 6 products from the Product table of NorthWind da
 }
 ```
 
-Output be like the below.
-
 ![Data Binding in Blazor ListView](./images/list/blazor-listview-binding-data.png)
 
 ## Entity Framework
@@ -114,7 +110,7 @@ You need to follow the below steps to consume data from the **Entity Framework**
 
 ### Handle CRUD in data access layer class
 
-Now add methods **AddProduct, DeleteProduct** in the **“DataAccessLayer.cs”** to handle the insert and remove operations respectively. The **CRUD** list items are bound to the **Products** parameter. Please refer the following code.
+Now, add methods **AddProduct, DeleteProduct** in the **“DataAccessLayer.cs”** to handle the insert and remove operations respectively. The **CRUD** list items are bound to the **Products** parameter.
 
 ```csharp
 using System.Collections.Generic;
@@ -280,5 +276,5 @@ You can perform CRUD operations like Add and Delete by using the `AddItem`, `Rem
 
 > You can find the fully working sample [here](https://github.com/SyncfusionExamples/Blazor-ListView-Entity-Framework).
 
-The following GIF represents the ListView with Add, Delete the list items,
+The following GIF represents the ListView with Add and Delete the list items.
 ![Blazor ListView with CRUD Operations](./images/blazor-listview-crud-operation.gif)

@@ -9,7 +9,7 @@ documentation: ug
 
 # DateTime Range in Blazor Datetime Picker Component
 
-DateTimePicker provides an option to select a date and time value within a specified range by using the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_Min) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_Max) properties. Always the Min value has to be lesser than the Max value.
+DateTimePicker provides an option to select a date and time value within a specified range by using the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_Min) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_Max) properties. The Min value must always be less than the Max value.
 
 The `Value` property depends on the Min/Max with respect to [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_StrictMode) property. For more information about StrictMode, refer to the [Strict Mode](./strict-mode) section from the documentation.
 
@@ -27,11 +27,10 @@ The following code allows selecting a date within the range from 7th to 27th day
 }
 ```
 
-The output will be as follows.
 
 ![DateTime Selection in Blazor DateTimePicker](./images/blazor-datetimepicker-selection.png)
 
-When the Min and Max properties are configured and the selected datetime value is out-of-range or invalid, then the model value will be set to `out of range` datetime value or `null` respectively with highlighted `error` class to indicates the datetime is out of range or invalid.
+When the Min and Max properties are configured and the selected datetime value is out-of-range or invalid, then the model value will be set to `out of range` datetime value or `null` respectively with highlighted `error` class to indicate the datetime is out of range or invalid.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -45,7 +44,6 @@ When the Min and Max properties are configured and the selected datetime value i
 }
 ```
 
-The output will be as follows.
 
 ![Blazor DateTimePicker displays Selected Date and Time](./images/blazor-datetimepicker-date-time-selection.png)
 

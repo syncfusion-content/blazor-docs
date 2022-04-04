@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working in offline mode in Blazor DataManager Component | Syncfusion
-description: Checkout and learn here all about Working in offline mode in Syncfusion Blazor DataManager component and more.
+description: Checkout and learn here all about working in offline mode in Syncfusion Blazor DataManager component and more.
 platform: Blazor
 control: DataManager
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Working in offline mode in Blazor DataManager Component
+# Working in Offline Mode in Blazor DataManager Component
 
 On binding data through remote services, request will be sent to the server-side for every query. To avoid post back to server, you can set the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to load all the data on initialization itself and make the query processing in client-side. This behavior can be enabled by using [Offline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Offline) property of the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html).
 

@@ -30,54 +30,53 @@ Local data can be represented in two ways as described below.
 
 The ComboBox can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
 
-In the following example, `Name` column from complex data have been mapped to the `Value` field.
+In the following example, `Name` column from complex data has been mapped to the `Value` field.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-<SfComboBox TValue="string" TItem="Countries" Placeholder="e.g. Australia" DataSource="@Country">
+<SfComboBox TValue="string" TItem="Country" Placeholder="e.g. Australia" DataSource="@Countries">
     <ComboBoxFieldSettings Text="Name" Value="Code"></ComboBoxFieldSettings>
 </SfComboBox>
 
 @code {
 
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
 
         public string Code { get; set; }
     }
 
-    List<Countries> Country = new List<Countries>
+    List<Country> Countries = new List<Country>
     {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-        new Countries() { Name = "Denmark", Code = "DK" },
-        new Countries() { Name = "France", Code = "FR" },
-        new Countries() { Name = "Finland", Code = "FI" },
-        new Countries() { Name = "Germany", Code = "DE" },
-        new Countries() { Name = "Greenland", Code = "GL" },
-        new Countries() { Name = "Hong Kong", Code = "HK" },
-        new Countries() { Name = "India", Code = "IN" },
-        new Countries() { Name = "Italy", Code = "IT" },
-        new Countries() { Name = "Japan", Code = "JP" },
-        new Countries() { Name = "Mexico", Code = "MX" },
-        new Countries() { Name = "Norway", Code = "NO" },
-        new Countries() { Name = "Poland", Code = "PL" },
-        new Countries() { Name = "Switzerland", Code = "CH" },
-        new Countries() { Name = "United Kingdom", Code = "GB" },
-        new Countries() { Name = "United States", Code = "US" },
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" },
+        new Country() { Name = "France", Code = "FR" },
+        new Country() { Name = "Finland", Code = "FI" },
+        new Country() { Name = "Germany", Code = "DE" },
+        new Country() { Name = "Greenland", Code = "GL" },
+        new Country() { Name = "Hong Kong", Code = "HK" },
+        new Country() { Name = "India", Code = "IN" },
+        new Country() { Name = "Italy", Code = "IT" },
+        new Country() { Name = "Japan", Code = "JP" },
+        new Country() { Name = "Mexico", Code = "MX" },
+        new Country() { Name = "Norway", Code = "NO" },
+        new Country() { Name = "Poland", Code = "PL" },
+        new Country() { Name = "Switzerland", Code = "CH" },
+        new Country() { Name = "United Kingdom", Code = "GB" },
+        new Country() { Name = "United States", Code = "US" },
     };
 }
 ```
 
-The output will be as follows.
 
 ![Binding Blazor ComboBox Items](./images/blazor-combobox-binding-items.png)
 
-### Array of Complex data
+### Array of complex data
 
 The ComboBox can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
 
@@ -122,13 +121,12 @@ public IEnumerable<Complex> LocalData { get; set; } = new Complex().GetData();
 }
 ```
 
-The output will be as follows.
 
 ![Binding Complex Items with Blazor ComboBox](./images/blazor-combobox-complex-data.png)
 
 ## Binding remote data
 
-The ComboBox supports retrieval of data from remote data services with the help of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property is used to fetch data from the database and bind it to the ComboBox.
+The ComboBox supports retrieval of data from remote data services with the help of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property, which is used to fetch data from the database and bind it to the ComboBox.
 
 In the following sample, First 6 contacts are displayed from the **Customers** table of `Northwind` Data Service.
 
@@ -161,7 +159,6 @@ In the following sample, First 6 contacts are displayed from the **Customers** t
 }
 ```
 
-The output will be as follows.
 
 ![Blazor ComboBox with Data Binding](./images/blazor-combobox-binding-data.png)
 
@@ -191,11 +188,10 @@ Use the `WebApiAdaptor` to bind ComboBox with Web API created using OData.
 }
 ```
 
-Output will be like the below.
 
 ![Blazor ComboBox with Web API Data](./images/blazor-combobox-web-api-data.png)
 
-### Custom Adaptor
+### Custom adaptor
 
 The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the ComboBox component.
 
@@ -279,7 +275,7 @@ The following sample code demonstrates implementing custom data binding using cu
 
 ### Offline mode
 
-To avoid post back for every action, set the ComboBox to load all data on initialization and make the actions process in client-side. To enable this behaviour, use the `Offline` property of [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html).
+To avoid post back for every action, set the ComboBox to load all data on initialization and make the actions process in client-side. To enable this behavior, use the `Offline` property of [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html).
 
 The following example for remote data binding and enabled offline mode,
 
@@ -305,7 +301,7 @@ The following example for remote data binding and enabled offline mode,
 }
 ```
 
-The output will be as follows.
+
 
 ![Blazor ComboBox in Offline Mode](./images/blazor-combobox-web-api-data.png)
 
@@ -324,7 +320,6 @@ You can bind [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.val
 
 ```
 
-The output will shown as follows,
 
 ![Blazor ComboBox ValueTuple Data](./images/blazor_combobox_valuetuple.png)
 
@@ -343,7 +338,6 @@ You can bind [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.val
 
 ```
 
-The output will shown as follows,
 
 ![Blazor ComboBox ValueTuple Data](./images/blazor_combobox_valuetuple.png)
 
@@ -376,7 +370,7 @@ You can bind [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.
 
 ```
 
-The output will shown as follows,
+
 
 ![Blazor ComboBox with expando object data binding](./images/blazor_combobox_expando-object.png)
 
@@ -428,7 +422,6 @@ You can bind [DynamicObject](https://docs.microsoft.com/en-us/dotnet/api/system.
 
 ```
 
-The output will shown as follows,
 
 ![Blazor ComboBox with dynamic object data binding](./images/blazor_combobox_dynamic-object.png)
 
@@ -473,7 +466,7 @@ You can bind [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/
 
 ```
 
-The output will shown as follows,
+
 
 ![Blazor ComboBox with observable collection data binding](./images/blazor_combobox_observable-collection.png)
 
@@ -612,3 +605,9 @@ Now, you can configure the ComboBox using the **'SfDataManager'** to interact wi
     }
 }
 ```
+
+### Configure cascading in the Blazor ComboBox component
+
+To get started quickly with cascading in the Blazor ComboBox component, you can check the video below.
+
+{% youtube "https://www.youtube.com/watch?v=zGGntfBPQNI" %}

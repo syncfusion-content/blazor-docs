@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axes in Blazor Linear Gauge Component | Syncfusion
-description: Checkout and learn here all about Axes in Syncfusion Blazor Linear Gauge component and much more details.
+description: Checkout and learn here all about axes in Syncfusion Blazor Linear Gauge component and much more details.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
@@ -227,13 +227,13 @@ The numeric formats such as currency, percentage, and so on can be displayed in 
 <td>1000</td>
 <td>n2</td>
 <td>1000.00</td>
-<td>The number is rounded to 2 decimal place.</td>
+<td>The number is rounded to 2 decimal places.</td>
 </tr>
 <tr>
 <td>1000</td>
 <td>n3</td>
 <td>1000.000</td>
-<td>The number is rounded to 3 decimal place.</td>
+<td>The number is rounded to 3 decimal places.</td>
 </tr>
 <tr>
 <td>0.01</td>
@@ -245,13 +245,13 @@ The numeric formats such as currency, percentage, and so on can be displayed in 
 <td>0.01</td>
 <td>p2</td>
 <td>1.00%</td>
-<td>The number is converted to percentage with 2 decimal place.</td>
+<td>The number is converted to percentage with 2 decimal places.</td>
 </tr>
 <tr>
 <td>0.01</td>
 <td>p3</td>
 <td>1.000%</td>
-<td>The number is converted to percentage with 3 decimal place.</td>
+<td>The number is converted to percentage with 3 decimal places.</td>
 </tr>
 <tr>
 <td>1000</td>
@@ -263,7 +263,7 @@ The numeric formats such as currency, percentage, and so on can be displayed in 
 <td>1000</td>
 <td>c2</td>
 <td>$1,000.00</td>
-<td>The currency symbol is appended to number and number is rounded to 2 decimal place.</td>
+<td>The currency symbol is appended to number and number is rounded to 2 decimal places.</td>
 </tr>
 </table>
 
@@ -342,7 +342,7 @@ To place an axis opposite from its original position, [OpposedPosition](https://
 
 ## Multiple Axes
 
-Multiple axes can be added to the Linear Gauge by adding multiple [LinearGaugeAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html) classes in the [LinearGaugeAxes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxes.html) class and customization can be done with the [LinearGaugeAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html) class. Each axis can be customized separately as shown in the following example.
+Multiple axes can be added to the Linear Gauge by adding multiple [LinearGaugeAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html) classes in the [LinearGaugeAxes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxes.html) class and customization can be done with the [LinearGaugeAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html) class. Each axis can be customized separately.
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dimensions in Blazor Kanban Component | Syncfusion
-description: Checkout and learn here all about Dimensions in Syncfusion Blazor Kanban component and much more details.
+description: Checkout and learn here all about dimensions in Syncfusion Blazor Kanban component and much more details.
 platform: Blazor
 control: Kanban
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Dimensions in Blazor Kanban Component
 
-The Kanban dimensions refers to both height and width of the entire layout and it accepts three types of values.
+The [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) dimensions refers to both height and width of the entire layout and it accepts three types of values.
 
 * Auto
 * Pixel
@@ -77,8 +77,6 @@ When height and width of the Kanban are set to `auto`, it will try as hard as po
 
 ```
 
-Output be like the below.
-
 ![Changing Blazor Kanban Card Height and Width in Automatic](./images/blazor-kanban-change-height-and-width.png)
 
 ## Height and width in pixel
@@ -143,8 +141,6 @@ The Kanban height and width will be rendered exactly as per the given pixel valu
 
 ```
 
-Output be like the below.
-
 ![Changing Blazor Kanban Card Height and Width in Pixel](./images/blazor-kanban-change-height-width-in-pixel.png)
 
 ## Height and width in percentage
@@ -208,7 +204,5 @@ When height and width of the Kanban are given in percentage, it will make the Ka
 }
 
 ```
-
-Output be like the below.
 
 ![Changing Blazor Kanban Card Height and Width in Percentage](./images/blazor-kanban-change-height-width-in-percentage.png)

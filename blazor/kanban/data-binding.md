@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor Kanban Component | Syncfusion
-description: Check out and learn here all about Data Binding in Syncfusion Blazor Kanban component and much more.
+description: Check out and learn here all about data binding in Syncfusion Blazor Kanban component and much more.
 platform: Blazor
 control: Kanban
 documentation: ug
@@ -16,7 +16,7 @@ It supports the following types of data binding:
 * Local data
 * Remote data
 
-> When using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) as `IEnumerable<T>`, component type(TValue) will be inferred from its value. When using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding, the TValue must be provided explicitly in the Kanban component.
+> When using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) as `IEnumerable<T>`, component type(TValue) will be inferred from its value. When using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding, the TValue must be provided explicitly in the [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component.
 
 ## Local data
 
@@ -66,7 +66,7 @@ Kanban is a generic component that is strongly bound to a model type.  In some c
 
 ExpandoObject can be bound to Kanban by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) property. Kanban can also perform all kinds of supported data operations and editing in ExpandoObject.
 
-To get start quickly with Blazor Kanban component using ExpandoObject and DynamicObject binding, you can check on this video
+To get start quickly with Blazor Kanban component using ExpandoObject and DynamicObject binding, you can check on this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=qkm_zPW3MSk" %}
@@ -184,6 +184,11 @@ This [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.c
 
 Here, the Order class implements the interface of **INotifyPropertyChanged** and it raises the event when the Status property value was changed.
 
+To get start quickly with Blazor Kanban component using Observable collection, you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=jfUzKzS093w" %}
+
 {% highlight cshtml %}
 
 {% include_relative code-snippet/observable-collection.razor %}
@@ -200,7 +205,7 @@ Bind the remote data services to Kanban component by assigning service data as a
 
 ### Binding with OData services
 
-[OData](https://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. You can retrieve data from the OData service using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). Refer to the following code example for remote Data binding using the OData service.
+[OData](https://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. You can retrieve data from the OData service using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -422,8 +427,6 @@ The following sample code demonstrates sending additional parameters using the Q
 
 It is possible to dynamically modify Kanban [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_Query) property value.
 
-The following sample code demonstrates achieving this,
-
 ```cshtml
 
 @using Syncfusion.Blazor.Data
@@ -590,7 +593,7 @@ You can find the fully working sample [here](https://github.com/SyncfusionExampl
 
 ## Complex data binding
 
-Kanban support to map the complex properties to fields of [KanbanCardSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanCardSettings.html), [KanbanSwimlaneSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanSwimlaneSettings.html) and [KanbanSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanSortSettings.html). Kanban support to map complex properties when using `ExpandoObject` and `DynamicObject` also.
+Kanban supports to map the complex properties to fields of [KanbanCardSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanCardSettings.html), [KanbanSwimlaneSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanSwimlaneSettings.html) and [KanbanSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanSortSettings.html). Kanban supports to map complex properties when using `ExpandoObject` and `DynamicObject` also.
 
 In the following sample, Kanban fields are mapped with complex data binding.
 

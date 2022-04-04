@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Styling And Appearance in Blazor Kanban Component | Syncfusion
-description: Checkout and learn here all about Styling And Appearance in Syncfusion Blazor Kanban component and more.
+description: Checkout and learn here all about styling and appearance in Syncfusion Blazor Kanban component and more.
 platform: Blazor
 control: Kanban
 documentation: ug
@@ -13,7 +13,7 @@ To modify the Kanban appearance, you need to override the default CSS of Kanban.
 
 | CSS class | Purpose |
 |-------|---------|
-| .e-kanban .e-kanban-table | customize the kanban. |
+| .e-kanban .e-kanban-table | Customize the kanban. |
 | .e-kanban .e-kanban-header .e-header-cells | Header cells of kanban. |
 | .e-kanban .e-kanban-header .e-header-cells .e-header-wrap .e-header-title | Header title of kanban. |
 | .e-kanban .e-kanban-header .e-header-cells.e-min-color | Header cells minimum color of kanban. |
@@ -47,7 +47,7 @@ To modify the Kanban appearance, you need to override the default CSS of Kanban.
 | .e-kanban .e-kanban-content .e-content-row.e-swimlane-row .e-content-cells .e-swimlane-header .e-swimlane-row-collapse | Content cells of swimlane row collapse of kanban. |
 | .e-kanban .e-kanban-content .e-content-row.e-swimlane-row .e-content-cells .e-swimlane-header .e-swimlane-text | Content cells of swimlane header text of kanban. |
 | .e-kanban .e-kanban-content .e-content-row.e-swimlane-row .e-content-cells .e-swimlane-header .e-item-count | Content cells of swimlane items count of kanban. |
-| .e-kanban .e-kanban-content .e-content-row:not(.e-swimlane-row) .e-content-cells | swimlane content cells of kanban. |
+| .e-kanban .e-kanban-content .e-content-row:not(.e-swimlane-row) .e-content-cells | Swimlane content cells of kanban. |
 | .e-kanban .e-kanban-content .e-content-row:not(.e-swimlane-row) .e-content-cells.e-dropping | Customize swimlane content cells card dropping of kanban. |
 | .e-kanban .e-kanban-content .e-content-row:not(.e-swimlane-row) .e-content-cells .e-card-wrapper | Swimlane content cells of card wrapper. |
 | .e-kanban .e-kanban-content .e-content-row:not(.e-swimlane-row) .e-content-cells.e-min-color | Swimlane content cells of minimum color of kanban. |
@@ -57,7 +57,7 @@ To modify the Kanban appearance, you need to override the default CSS of Kanban.
 | .e-kanban .e-kanban-table .e-header-cells .e-item-count | Header cells Item count of Kanban. |
 | .e-kanban .e-kanban-table .e-header-cells .e-column-expand | Header cells of toggle icon in column expand. |
 | .e-kanban .e-kanban-table .e-header-cells .e-column-collapse | Header cells of toggle icon in column collapse. |
-| .e-kanban .e-kanban-table.e-content-table .e-content-row:not(.e-swimlane-row) .e-content-cells | swimlane content cells of kanban. |
+| .e-kanban .e-kanban-table.e-content-table .e-content-row:not(.e-swimlane-row) .e-content-cells | Swimlane content cells of kanban. |
 | .e-kanban .e-kanban-table.e-content-table .e-content-row.e-swimlane-row .e-swimlane-text | Content cells of swimlane header text of kanban.|
 | .e-kanban .e-kanban-table.e-content-table .e-content-row.e-swimlane-row .e-item-count | Content cells of swimlane items count of kanban. |
 | .e-kanban .e-kanban-table.e-content-table .e-content-row .e-show-add-button .e-show-add-icon | Add icon in content cells of kanban. |

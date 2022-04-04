@@ -67,13 +67,15 @@ container.DocumentEditor.ImportFormDataAsync(formData);
 
 ## Reset form fields
 
-Reset all the form fields in current document to default value using [`resetFormFields`](../api/document-editor/#resetformfields).
+Reset all the form fields in current document to default value using [`ResetFormFieldsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_ResetFormFieldsAsync_System_String_).
 
 ```csharp
 container.DocumentEditor.ResetFormFieldsAsync();
 ```
 
-## Protect and unprotect document programmatically
+## Protect the document in form filling mode
+
+Document Editor provides support for protecting the document with `FormFieldsOnly` protection. In this protection, user can only fill form fields in the document.
 
 Document editor provides an option to protect and unprotect document using [`EnforceProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_EnforceProtectionAsync_System_String_Syncfusion_Blazor_DocumentEditor_ProtectionType_) and [`StopProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_StopProtectionAsync_System_String_) API.
 
@@ -98,4 +100,4 @@ The following example code illustrates how to enforce and stop protection in Doc
 }
 ```
 
->Note: In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly`. In stop protection method, parameter denotes the password.
+>Note: In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly | CommentsOnly`. In stop protection method, parameter denotes the password.

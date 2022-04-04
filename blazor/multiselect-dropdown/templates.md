@@ -11,6 +11,10 @@ documentation: ug
 
 The MultiSelect has been provided with several options to customize each list item, group title, selected value, header, and footer elements.
 
+To get started quickly with templates in the Blazor MultiSelect Dropdown component, you can check the video below.
+
+{% youtube "https://www.youtube.com/watch?v=6A61PDatD0s" %}
+
 ## Item template
 
 The content of each list item within the MultiSelect can be customized with the help of [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property.

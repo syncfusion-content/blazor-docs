@@ -9,14 +9,14 @@ documentation: ug
 
 # Data Binding in Blazor ComboBox Component
 
-Data binding can be achieved by using the `bind-Value` attribute and it supports string, int, Enum, and bool types. If the component value is changed, it will affect all the places where we bind the variable for the **bind-value** attribute.
+Data binding can be achieved by using the `bind-Value` attribute and it supports string, int, Enum, and bool types. If the component value is changed, it will affect all places where the variable is bound for the **bind-value** attribute.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <p>ComboBox value is:<strong>@ComboVal</strong></p>
 
-<SfComboBox Placeholder="e.g. Australia" @bind-Value="@ComboVal" DataSource="@Country">
+<SfComboBox Placeholder="e.g. Australia" @bind-Value="@ComboVal" DataSource="@Countries">
     <ComboBoxFieldSettings Value="Name"></ComboBoxFieldSettings>
 </SfComboBox>
 
@@ -24,31 +24,31 @@ Data binding can be achieved by using the `bind-Value` attribute and it supports
 
     public string ComboVal = "Austarila";
 
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
 
         public string Code { get; set; }
     }
 
-    List<Countries> Country = new List<Countries>
+    List<Country> Countries = new List<Country>
     {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
     };
 }
 ```
 
-## Index Value Binding
+## Index value binding
 
 Index value binding can be achieved by using `bind-Index` attribute and it supports int and int nullable types. By using this attribute you can bind the values respective to its index.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-<SfComboBox TValue="string" Placeholder="e.g. Australia" TItem="Countries" @bind-Index="@ddlIndex" DataSource="@Country">
+<SfComboBox TValue="string" Placeholder="e.g. Australia" TItem="Country" @bind-Index="@ddlIndex" DataSource="@Countries">
     <ComboBoxFieldSettings Value="Name"></ComboBoxFieldSettings>
 </SfComboBox>
 
@@ -56,19 +56,19 @@ Index value binding can be achieved by using `bind-Index` attribute and it suppo
 
     private int? ddlIndex { get; set; } = 1;
 
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
 
         public string Code { get; set; }
     }
 
-    List<Countries> Country = new List<Countries>
+    List<Country> Countries = new List<Country>
 {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
     };
 }
 ```

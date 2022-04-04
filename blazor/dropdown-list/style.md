@@ -11,9 +11,9 @@ documentation: ug
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
-## Customizing the appearance of wrapper element
+## Customizing the appearance of container element
 
-Use the following CSS to customize the appearance of wrapper element.
+Use the following CSS to customize the appearance of container element.
 
 ```css
 .e-ddl.e-input-group.e-control-wrapper .e-input {

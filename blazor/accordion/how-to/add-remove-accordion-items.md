@@ -85,6 +85,6 @@ In the following demo, initially there are three accordion items in the [Accordi
 }
 ```
 
-Output:
+
 
 ![Adding or Removing items in Blazor Accordion](../images/blazor-accordion-add-remove-item.gif)

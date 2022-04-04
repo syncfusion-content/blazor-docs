@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting in Blazor Kanban Component | Syncfusion
-description: Checkout and learn here all about Sorting in Syncfusion Blazor Kanban component and much more details.
+description: Checkout and learn here all about sorting in Syncfusion Blazor Kanban component and much more details.
 platform: Blazor
 control: Kanban
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Sorting in Blazor Kanban Component
 
-The Kanban provides built-in support to arrange the cards in their columns based on the JSON data order and drop the cards in the columns based on the dropped clone.
+The [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) provides built-in support to arrange the cards in their columns based on the JSON data order and drop the cards in the columns based on the dropped clone.
 
 ## SortBy
 
@@ -82,8 +82,6 @@ The SortBy `DataSourceOrder` property does not require any `Field` mapping. In t
 }
 
 ```
-
-The output will be as follows.
 
 ![Sorting in Blazor Kanban](./images/blazor-kanban-sorting.png)
 
@@ -191,8 +189,6 @@ For Example,
 
 ```
 
-The output will be as follows.
-
 ![Blazor Kanban Card with Index](./images/blazor-kanban-card-index.PNG)
 
 ### Custom
@@ -257,8 +253,6 @@ The SortBy `Custom` property must require datasource `Field` mapping. In this be
 }
 
 ```
-
-The output will be as follows.
 
 ![Custom Sorting in Blazor Kanban](./images/blazor-kanban-custom-sorting.png)
 
@@ -328,7 +322,5 @@ In the following sample, cards are aligned in `Descending` order.
 }
 
 ```
-
-The output will be as follows.
 
 ![Changing Sort Direction in Blazor Kanban](./images/blazor-kanban-sort-direction.png)

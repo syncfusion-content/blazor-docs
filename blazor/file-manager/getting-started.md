@@ -45,6 +45,8 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
 Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
+> From 2022 Vol1 (20.1) version - The default value of `IgnoreScriptIsolation` is changed as `true`, so, you don’t have to set `IgnoreScriptIsolation` property explicitly to refer scripts externally.
+
 ### Blazor Server App
 
 * For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
@@ -137,7 +139,7 @@ namespace WebApplication1
 
 ## Add Style Sheet
 
-Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
+Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/appearance/themes#enable-static-web-assets-usage) topic to use static assets in your project.
 
 To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
 
@@ -167,7 +169,7 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 
 ### Blazor WebAssembly App
 
-For Blazor WebAssembly App, Refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
+For Blazor WebAssembly App, refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/index.html" %}
@@ -181,13 +183,13 @@ For Blazor WebAssembly App, Refer the theme style sheet from NuGet in the `<head
 
 ## Add Script Reference
 
-Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows,
+Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows. Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/common/adding-script-references#enable-static-web-assets-usage) topic to use static assets in your project.
 
 ### Blazor Server App
 
-* For **.NET 6** app, Refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+* For **.NET 6** app, refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
-* For **.NET 5 and .NET 3.X** app, Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For **.NET 5 and .NET 3.X** app, refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
 {% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4" %}
@@ -213,7 +215,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 ### Blazor WebAssembly App
 
-For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html** file.
+For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/index.html" hl_lines="4" %}
@@ -270,9 +272,9 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Features;
-//File Manager's base functions are available in the below namespace
+//File Manager's base functions are available in the below namespace.
 using Syncfusion.EJ2.FileManager.Base;
-//File Manager's operations are available in the below namespace
+//File Manager's operations are available in the below namespace.
 using Syncfusion.EJ2.FileManager.PhysicalFileProvider;
 using Newtonsoft.Json;
 using System.Linq;
@@ -294,18 +296,18 @@ namespace filemanager.Server.Controllers
             this.operation.RootFolder(this.basePath + "\\" + this.root); // It denotes in which files and folders are available.
         }
 
-        // Processing the File Manager operations
+        // Processing the File Manager operations.
         [Route("FileOperations")]
         public object FileOperations([FromBody] FileManagerDirectoryContent args)
         {
             switch (args.Action)
             {
-                // Add your custom action here
+                // Add your custom action here.
                 case "read":
-                    // Path - Current path; ShowHiddenItems - Boolean value to show/hide hidden items
+                    // Path - Current path; ShowHiddenItems - Boolean value to show/hide hidden items.
                     return this.operation.ToCamelCase(this.operation.GetFiles(args.Path, args.ShowHiddenItems));
                 case "delete":
-                    // Path - Current path where of the folder to be deleted; Names - Name of the files to be deleted
+                    // Path - Current path where the folder to be deleted; Names - Name of the files to be deleted
                     return this.operation.ToCamelCase(this.operation.Delete(args.Path, args.Names));
                 case "copy":
                     //  Path - Path from where the file was copied; TargetPath - Path where the file/folder is to be copied; RenameFiles - Files with same name in the copied location that is confirmed for renaming; TargetData - Data of the copied file
@@ -338,7 +340,7 @@ To access the above File Operations, you need some model class files that have f
 
 Add your required files and folders under the `wwwroot\Files` directory.
 
-> For Server-side application, Add the following code in your **Startup.cs** file.
+> For Server-side application, add the following code in your **Startup.cs** file.
 
 {% tabs %}
 {% highlight cs tabtitle="Startup.cs" %}
@@ -356,6 +358,8 @@ app.UseEndpoints(endpoints =>
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor FileManager` component will be rendered in the default web browser.
 
 ![Blazor FileManager Component](images/blazor-filemanager-component.png)
+
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FileManager).
 
 ## File download support
 
@@ -383,11 +387,11 @@ namespace filemanager.Server.Controllers
     [Route("api/[controller]")]
     public class SampleDataController : Controller
     {
-        // Processing the Download operation
+        // Processing the Download operation.
         [Route("Download")]
         public IActionResult Download(string downloadInput)
         {
-            //Invoking download operation with the required paramaters
+            //Invoking download operation with the required parameters.
             // path - Current path where the file is downloaded; Names - Files to be downloaded;
             FileManagerDirectoryContent args = JsonConvert.DeserializeObject<FileManagerDirectoryContent>(downloadInput);
             return operation.Download(args.Path, args.Names);
@@ -424,11 +428,11 @@ namespace filemanager.Server.Controllers
     [Route("api/[controller]")]
     public class SampleDataController : Controller
     {
-        // Processing the Upload operation
+        // Processing the Upload operation.
         [Route("Upload")]
         public IActionResult Upload(string path, IList<IFormFile> uploadFiles, string action)
         {
-            //Invoking upload operation with the required paramaters
+            //Invoking upload operation with the required parameters.
             // path - Current path where the file is to uploaded; uploadFiles - Files to be uploaded; action - name of the operation(upload)
             FileManagerResponse uploadResponse;
             uploadResponse = operation.Upload(path, uploadFiles, action, null);
@@ -449,7 +453,7 @@ namespace filemanager.Server.Controllers
 
 ## Image preview support
 
-To perform image preview support in the File Manager component,  initialize the [GetImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_GetImageUrl) property in a FileManagerAjaxSettings.
+To perform image preview support in the File Manager component, initialize the [GetImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_GetImageUrl) property in a FileManagerAjaxSettings.
 
 {% tabs %}
 {% highlight razor %}
@@ -473,11 +477,11 @@ namespace filemanager.Server.Controllers
     [Route("api/[controller]")]
     public class SampleDataController : Controller
     {
-        // Processing the GetImage operation
+        // Processing the GetImage operation.
         [Route("GetImage")]
         public IActionResult GetImage(FileManagerDirectoryContent args)
         {
-            //Invoking GetImage operation with the required paramaters
+            //Invoking GetImage operation with the required parameters.
             // path - Current path of the image file; Id - Image file id;
             return this.operation.GetImage(args.Path, args.Id, false, null, null);
         }

@@ -9,7 +9,7 @@ documentation: ug
 
 # Globalization in Blazor Datetime Picker Component
 
-Globalization is the combination of  adapting the control to various languages by means of parsing and formatting the date or number `Internationalization` and also by adding cultural specific customizations and translating the text `localization`.
+Globalization is the combination of adapting the control to various languages by means of parsing and formatting the date or number `Internationalization` and also by adding cultural specific customizations and translating the text `localization`.
 
 ## Blazor server side
 
@@ -40,9 +40,9 @@ namespace BlazorApplication
 
 The **Localization** library allows you to localize default text content. The DateTimePicker component has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.).
 
-In the following examples, demonstrate how to enable **Localization** for DateTimePicker in server side Blazor samples. Here, we have used Resource file to translate the static text.
+The following examples demonstrate how to enable **Localization** for DateTimePicker in server-side Blazor samples. Here, resource file is used to translate the static text.
 
-The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.NET Core application framework.
+The Resource file is an XML file that contains the strings(key and value pairs) that you want to translate into different languages. You can also refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.NET Core application framework.
 
 * Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
 
@@ -196,8 +196,6 @@ The following steps explain how to render the DateTimePicker in German culture (
     }
     ```
 
-The output will be as follows.
-
 ![Localization in Blazor DateTimePicker](./images/blazor-datetimepicker-localization.png)
 
 ## Customize the localized text
@@ -219,13 +217,12 @@ The output will be as follows.
     }
     ```
 
-    The output will be as follows.
 
     ![Customizing Localized Text in Blazor DateTimePicker](./images/blazor-datetimepicker-localize-text.png)
 
 ## Right-To-Left
 
-The DateTimePicker supports RTL (right-to-left) functionality for languages like Arabic and Hebrew to displays the text in the right-to-left direction. Use [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_EnableRtl) property to set the RTL direction.
+The DateTimePicker supports RTL (right-to-left) functionality for languages like Arabic and Hebrew to display the text in the right-to-left direction. Use [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_EnableRtl) property to set the RTL direction.
 
 The following code example initialize the DateTimePicker component in `Arabic` culture.
 
@@ -244,7 +241,5 @@ The following code example initialize the DateTimePicker component in `Arabic` c
     }
 }
 ```
-
-The output will be as follows.
 
 ![Right to Left in Blazor DateTimePicker with Arabic Culture](./images/blazor-datetimepicker-right-to-left.png)

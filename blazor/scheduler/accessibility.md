@@ -33,10 +33,10 @@ All the Scheduler actions can be controlled via keyboard keys and is availed by 
 
 Interaction Keys |Description
 -----|-----
-<kbd>Alt</kbd> + <kbd>j</kbd> |Focuses the Scheduler [Provided from application end].
-<kbd>Tab</kbd> |Focuses the first or active item on the scheduler header bar and then move the focus to the next available event elements. If no events present, then focus moves out of the component.
-<kbd>Shift</kbd> + <kbd>Tab</kbd> |Reverse focusing of the Tab functionality. Inverse focusing of event elements from the last one and then move onto the first or active item on Scheduler header bar and then moves out of the component.
-<kbd>Enter</kbd> |Opens the quick popup on the selected cells or events.
+<kbd>Alt</kbd> + <kbd>J</kbd> |Focuses the Scheduler [Provided from application end].
+<kbd>Tab</kbd> |Focuses the first or active item on the scheduler header bar and then moves the focus to the next available event elements. If no events present, then focus moves out of the component.
+<kbd>Shift</kbd> + <kbd>Tab</kbd> |Reverse focusing of the Tab functionality. Inverse focusing of event elements from the last one and then moves onto the first or active item on Scheduler header bar and then moves out of the component.
+<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow</kbd> (keys) |Focuses the event element and then moves the focus to the next available event elements between the resources.
 <kbd>Escape</kbd> |Closes any of the popup that are in open state.
 <kbd>Arrow</kbd> |To move onto the next available cells in either of the needed directions (left, right, top and right)
 <kbd>Shift</kbd> + <kbd>Arrow</kbd> |For multiple cell selection on either direction.
@@ -49,3 +49,4 @@ Interaction Keys |Description
 <kbd>Space</kbd> or <kbd>Enter</kbd> |It activates any of the focused items.
 <kbd>Page Up</kbd> & <kbd>Page Down</kbd> |To scroll through the work cells area.
 <kbd>Home</kbd> |To move the selection to the first cell of Scheduler.
+<kbd>F12</kbd> |To have the inline option for both cells and events.

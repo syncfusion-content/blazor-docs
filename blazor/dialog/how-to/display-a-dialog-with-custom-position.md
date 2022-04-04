@@ -41,6 +41,6 @@ By default, the dialog is displayed in the center of the target container. The d
 
 ```
 
-The output will be as follows.
+
 
 ![Blazor Dialog with Custom Position](../images/blazor-dialog-custom-position.png)

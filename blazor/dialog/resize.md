@@ -13,6 +13,10 @@ The Dialog supports resizing feature. To resize the dialog, select and resize it
 
 The resizable dialog can be created by setting the `EnableResize` property to true, which is used to change the size of a dialog dynamically and view its content with expanded mode. The `ResizeHandles` property can also be configured for all the directions in which the dialog should be resized. When you configure the target property along with the `EnableResize` property, the dialog can be resized within its specified target container.
 
+To get started quickly with resizing in Blazor Dialog Component, you can check the video below.
+
+{% youtube "https://www.youtube.com/watch?v=qNW5d7C2L7g" %}
+
 ```cshtml
 
 @using Syncfusion.Blazor.Popups
@@ -59,6 +63,6 @@ The resizable dialog can be created by setting the `EnableResize` property to tr
 
 ```
 
-The output will be as follows.
+
 
 ![Resizing in Blazor Dialog](./images/blazor-dialog-resizing.gif)

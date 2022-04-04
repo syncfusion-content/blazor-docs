@@ -13,6 +13,9 @@ documentation: ug
 
 Drawing tool allows you to draw any kind of node/connector during runtime by clicking and dragging on the diagram page.
 
+> A new blazor diagram component which provides better performance than this diagram control in Blazor WebAssembly App. It is available in preview mode. Refer the [Link](https://blazor.syncfusion.com/documentation/diagram/getting-started)
+
+
 ## Shapes
 
 To draw a shape, set the JSON of that shape to the drawType property of the diagram and activate the drawing tool by using the [Tool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Tool) property. The following code example illustrates how to draw a rectangle at runtime.

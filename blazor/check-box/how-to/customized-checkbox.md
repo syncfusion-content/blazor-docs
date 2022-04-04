@@ -9,7 +9,7 @@ documentation: ug
 
 # Customized Checkbox in Blazor CheckBox Component
 
-## Customize Checkbox Appearance
+## Customize checkbox appearance
 
 You can customize the appearance of the Checkbox component using the CSS rules. Define own CSS rules according to your requirement and assign the class name to the
 [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html) property.
@@ -77,7 +77,6 @@ The background and border color of the Checkbox is customized through the custom
 
 ```
 
-Output will be as follows
 
 ![Customizing Appearance of Blazor CheckBox](./../images/blazor-checkbox-appearance-customization.png)
 
@@ -121,10 +120,10 @@ The following section explains about how to customize the height and width of th
 
 ```
 
-Output will be as follows
+
 ![Customizing Height and Width of Blazor CheckBox](./../images/blazor-checkbox-height-width-customization.png)
 
-## Custom Frame
+## Custom frame
 
 Checkbox frame can be customized as per the requirement by adding CSS rules.
 
@@ -180,11 +179,10 @@ In the following example, to-do list is displayed with round checkbox by changin
 
 ```
 
-Output will be as follows
 
 ![Customizing Blazor CheckBox Frame](./../images/blazor-checkbox-frame-customization.png)
 
-## Custom Check Icon
+## Custom check icon
 
 Checkbox check icon can be customized as per the requirement by adding CSS rules.
 
@@ -231,6 +229,5 @@ In the following example, the check icon can be customized by changing check ico
 
 ```
 
-Output will be as follows
 
 ![Customizing Check Icon in Blazor CheckBox](./../images/blazor-checkbox-check-icon-customization.png)

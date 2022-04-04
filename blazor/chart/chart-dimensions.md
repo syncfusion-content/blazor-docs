@@ -23,7 +23,7 @@ documentation: ug
 </head>
 ```
 
-## Size for Container
+## Size for container
 
 The chart can be scaled to fit the container. As shown below, the size can be set using CSS.
 
@@ -66,11 +66,11 @@ The chart can be scaled to fit the container. As shown below, the size can be s
 
 ![Changing Blazor Chart Size as Fit to Container](images/chart-dimensions/blazor-chart-size-for-container.png)
 
-## Size for Chart
+## Size for chart
 
 The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Height) properties specify the size of the chart in pixels or percentages directly.
 
-### In Pixel
+### In pixel
 
 The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Height) properties can be set in pixel as shown below.
 
@@ -111,7 +111,7 @@ The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfCha
 
 ![Changing Blazor Chart Size in Pixel](images/chart-dimensions/blazor-chart-size-in-pixel.png)
 
-### In Percentage
+### In percentage
 
 By setting the values of [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Height) properties in percentage, the chart gets its dimension with respect to its container. For example, when the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Height) is set to **50%**, the chart is half the height of its container.
 

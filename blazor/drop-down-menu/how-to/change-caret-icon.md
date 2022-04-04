@@ -52,6 +52,6 @@ In the following example, the up arrow is updated on popup close and down arrow 
 
 ```
 
-Output be like
+
 
 ![Changing Caret Icon in Blazor DropDownMenu](./../images/blazor-dropdownmenu-caret-icon.png)
