@@ -25,12 +25,8 @@ This is demonstrated in the following sample code,
         <Content> You are about to Delete a Record @SelectedData ?</Content>
     </DialogTemplates>
     <DialogButtons>
-        <DialogButton OnClick="@OkClick">
-            <DialogButtonModel Content="OK" IsPrimary="true"></DialogButtonModel>
-        </DialogButton>
-        <DialogButton OnClick="@CancelClick">
-            <DialogButtonModel Content="Cancel"></DialogButtonModel>
-        </DialogButton>
+        <DialogButton OnClick="@OkClick" Content="OK" IsPrimary="true"></DialogButton>
+        <DialogButton OnClick="@CancelClick" Content="Cancel"></DialogButton>
     </DialogButtons>
 </SfDialog>
 

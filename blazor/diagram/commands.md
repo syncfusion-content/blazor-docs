@@ -7,6 +7,8 @@ control: Diagram
 documentation: ug
 ---
 
+> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram-component/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+
 # Commands in Blazor Diagram Component
 
 <!-- markdownlint-disable MD010 -->
@@ -22,7 +24,7 @@ There are several commands available in the diagram as follows.
 * Zoom commands
 * Nudge commands
 * FitToPage commands
-* Undo/Redo commands
+* Undo/Redo commands 
 
 ## Alignment commands
 

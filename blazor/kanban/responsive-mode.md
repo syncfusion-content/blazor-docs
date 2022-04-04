@@ -9,7 +9,7 @@ documentation: ug
 
 # Responsive Mode in Blazor Kanban Component
 
-The Kanban component has support for responsive behavior based on the client browser's width and height.
+The [Blazor Kanban Board](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component has support for responsive behavior based on the client browser's width and height.
 
 ## Layouts
 

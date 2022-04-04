@@ -9,6 +9,9 @@ documentation: ug
 
 # Installing Syncfusion Blazor Web Installer
 
+I> Starting with 2022 Volume 1 v20.1.0.47, all Syncfusion customers (evaluators and paid customers) who use Syncfusion installers or nuget packages from [nuget.org](https://www.nuget.org/packages?q=Syncfusion) must generate and register the corresponding platform and version license key in your projects.<br>
+For more information, please see [this](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) help topic.
+
 ## Installation
 
 The steps below show how to install Essential Studio Blazor Web Installer.
@@ -75,9 +78,7 @@ The steps below show how to install Essential Studio Blazor Web Installer.
 
 9. The login wizard will appear. You must enter your Syncfusion email address and password. If you do not already have a Syncfusion account, you can create one by clicking on **Create an Account**. If you have forgotten your password, click **Forgot Password** to create a new one. Click the Install button.
 
-   ![Web Installer Login Wizard](images/webinstaller-10.png)
-
-   > **IMPORTANT** <br /> The products you have chosen will be installed based on your Syncfusion License (Trial or Licensed).
+   ![Web Installer Login Wizard](images/webinstaller-10.png)   
 
 10. The download and installation/uninstallation progress will be displayed as shown below.
    ![Web Installer Installation Wizard](images/webinstaller-11.png)
@@ -152,9 +153,7 @@ You can uninstall all the installed products by selecting the **Syncfusion Essen
 
 8. The ***login wizard*** will appear. You must enter your Syncfusion email address and password. If you do not already have a Syncfusion account, you can create one by clicking on **Create an Account**. If you have forgotten your password, click **Forgot Password** to create a new one. Click the Install button.
 
-   ![Web Installer Login Wizard](images/webinstaller-10.png)
-
-   > **IMPORTANT** <br /> The products you have chosen will be installed based on your Syncfusion License (Trial or Licensed).
+   ![Web Installer Login Wizard](images/webinstaller-10.png)   
 
 9. The download, installation, and uninstallation processes will be shown.
 
