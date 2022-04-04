@@ -1,13 +1,16 @@
 ---
 layout: post
 title: Installing Syncfusion Blazor installer - Syncfusion
-description: Learn here about the how to install Syncfusion Blazor offline installer after downloading from our syncfusion website.
+description: Learn here about how to install Syncfusion Blazor offline installer after downloading from our Syncfusion website.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Installing Syncfusion Blazor offline installer
+# Installing Syncfusion Blazor Offline Installer
+
+I> Starting with 2022 Volume 1 v20.1.0.47, all Syncfusion customers (evaluators and paid customers) who use Syncfusion installers or nuget packages from [nuget.org](https://www.nuget.org/packages?q=Syncfusion) must generate and register the corresponding platform and version license key in your projects.<br>
+For more information, please see [this](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) help topic.
 
 ## Installing with UI
 

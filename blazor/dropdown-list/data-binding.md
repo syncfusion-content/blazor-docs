@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in Blazor DropDown List Component
 
-Data binding can be achieved by using the `bind-Value` attribute and it supports string, int, Enum and bool types. If component value has been changed, it will affect the all places where you bind the variable for the **bind-value** attribute.
+Data binding can be achieved by using the `bind-Value` attribute and it supports string, int, Enum and bool types. If component value has been changed, it will affect all the places where you bind the variable for the **bind-value** attribute.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns

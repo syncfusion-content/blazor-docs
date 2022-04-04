@@ -9,7 +9,7 @@ documentation: ug
 
 # Images in Blazor DocumentEditor Component
 
-[Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) supports common raster format images like PNG, BMP, JPEG, and GIF. You can insert an image file or online image in the document using the `InsertImage()` method.
+[`Blazor Document Editor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) supports common raster format images like PNG, BMP, JPEG, SVG and GIF. You can insert an image file or online image in the document using the `InsertImage()` method.
 
 ```csharp
 documentEditor.Editor.InsertImage("<<base64String>>");
@@ -41,4 +41,4 @@ Text wrapping refers to how images fit with surrounding text in a document. Plea
 
 DocumentEditor preserves the position properties of the image and displays the image based on position properties. It does not support modifying the position properties. Whereas the image will be automatically moved along with text edited if it is positioned relative to the line or paragraph.
 
-You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.
+You can also explore our [`Blazor Word Processor`](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.

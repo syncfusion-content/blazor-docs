@@ -7,6 +7,8 @@ control: Diagram
 documentation: ug
 ---
 
+> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram-component/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+
 # Symbol Palette in Blazor Diagram Component
 
 The **SymbolPalette** displays a collection of palettes. The palette shows a set of nodes and connectors. It allows to drag and drop the nodes and connectors into the diagram.

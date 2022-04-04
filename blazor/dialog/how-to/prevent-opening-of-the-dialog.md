@@ -9,7 +9,7 @@ documentation: ug
 
 # Open a Dialog on condition in Blazor Dialog Component
 
-You can prevent opening of  the dialog by setting the `OnOpen` event argument cancel value to true. In the following sample, the success dialog is opened when you enter the username value with minimum 4 characters. Otherwise, it will not be opened.
+You can prevent opening of the dialog by setting the `OnOpen` event argument cancel value to true. In the following sample, the success dialog is opened when you enter the username value with minimum 4 characters. Otherwise, it will not be opened.
 
 ```cshtml
 
@@ -147,7 +147,7 @@ You can prevent opening of  the dialog by setting the `OnOpen` event argument ca
         {
             args.Cancel = true;
             this.Visibility = false;
-            this.ErrorMessage = "Username must be minimum 4 characters";
+            this.ErrorMessage = "Username must contain minimum 4 characters";
         }
         else
         {

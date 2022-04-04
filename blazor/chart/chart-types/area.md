@@ -108,7 +108,7 @@ The following properties can be used to customize the [Area](https://help.syncfu
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Opacity="0.5" DashArray="5,5" Fill="blue" Type="ChartSeriesType.Area">
-            <ChartSeriesBorder Width="2" Color="red"></ChartSeriesBorder>
+            <ChartSeriesBorder Width="2"></ChartSeriesBorder>
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -132,7 +132,7 @@ The following properties can be used to customize the [Area](https://help.syncfu
 
 ```
 
-![Blazor Area Chart with Custom Series](../images/chart-types-images/blazor-area-chart-custom-series.png)
+![Blazor Area Chart with Custom Series](../images/chart-types-images/blazor-area-chart-border.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

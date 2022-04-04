@@ -1,13 +1,15 @@
 ---
 layout: post
 title: Events in Blazor Diagram Component | Syncfusion 
-description: Learn about Events in Blazor Diagram component of Syncfusion, and more details.
+description: Checkout and learn here all about Events in the Blazor Diagram component of Syncfusion and much more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Events
+> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram-component/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+
+# Events in Blazor Diagram Component
 
 ## Created
 
@@ -28,6 +30,9 @@ Triggered when the diagram is rendered completely.
     }
 }
 ```
+
+> A new blazor diagram component which provides better performance than the existing diagram control in Blazor WebAssembly App. It is available in preview mode.  Refer the [Link](https://blazor.syncfusion.com/documentation/diagram-component/events)
+
 
 ## Clicked
 

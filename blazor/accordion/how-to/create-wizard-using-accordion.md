@@ -9,7 +9,7 @@ documentation: ug
 
 # Create Wizard in Blazor Accordion Component
 
-Accordion items can be disabled and expanded dynamically using the accordion item's [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Disabled) and [Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Expanded) property.
+Accordion items can be disabled and expanded dynamically using the accordion item's [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Disabled) and [Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Expanded) properties.
 
 The following demo is designed for simple payment module that enable or disable Accordion based on the sequential validation of each Accordion content.
 
@@ -121,7 +121,7 @@ The following demo is designed for simple payment module that enable or disable 
     <DialogEvents Created="DialogCreate"></DialogEvents>
     <DialogTemplates>
         <Header><div>Alert</div></Header>
-        <Content><div>Your payment successfully processed</div></Content>
+        <Content><div>Your payment was successfully processed</div></Content>
     </DialogTemplates>
     <DialogButtons>
         <DialogButton OnClick="@OnSubmit" Content="OK" IsPrimary="true"></DialogButton>
