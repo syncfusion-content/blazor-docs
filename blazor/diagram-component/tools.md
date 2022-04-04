@@ -191,7 +191,7 @@ The Diagram allows you to draw TextNode on the go when you click on the diagram 
 }
 ```
 
-![Text Tool in Blazor Diagram](./images/blazor-diagram-Text-drawingtool)
+![Text Tool in Blazor Diagram](./images/blazor-diagram-Text-drawingtool.gif)
 
 ## Drawing polygon shape
 
