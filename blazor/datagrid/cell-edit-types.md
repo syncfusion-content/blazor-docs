@@ -717,3 +717,66 @@ You can able to render SfMultiSelect component in EditTemplate. In the below sam
 
 In the following image, **SfMultiSelect** component is rendered with **EditTemplate** in ChosenItems column
 ![Blazor DataGrid with Editing in Custom MultiSelect](./images/blazor-datagrid-editing-in-custom-multiselect.png)
+
+### Using RichTextEditor in EditTemplate
+
+You can able to render **SfRichTextEditor** component in [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate). To display the RTE text in the Grid, you can disable the [DisableHtmlEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). In the below sample, we have rendered the **SfRichTextEditor** component in [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) for the Customer ID column.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings> 
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" DisableHtmlEncode="false"  Width="120">
+            <EditTemplate>
+                <SfRichTextEditor ID="CustomerID" @bind-value="@((context as Order).CustomerID)"/>
+            </EditTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150">
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+            ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
+        }).ToList();
+    }
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCountry { get; set; }
+    }
+    public List<Country> Countries { get; set; } = new List<Country>()
+    {
+        new Country(){ CountryName="Brazil", ID=1},
+        new Country(){ CountryName="Argentina", ID=2},
+        new Country(){ CountryName="Canada", ID=3}
+    };
+    public class Country
+    {
+        public string CountryName { get; set; }
+        public int ID { get; set; }
+    }
+}
+```
+
+In the following image, **SfRichTextEditor** component is rendered with **EditTemplate** in Customer ID column
+![Blazor DataGrid with Editing in Custom RichTextEditor](./images/blazor-datagrid-editing-in-custom-richtexteditor.png)
