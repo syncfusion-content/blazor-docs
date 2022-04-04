@@ -7,10 +7,11 @@ control: Diagram
 documentation: ug
 ---
 
+> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram-component/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+
 # Page Settings in Blazor Diagram Component
 
 Page settings enable to customize the appearance, width, and height of the diagram page.
-
 ## Page size and appearance
 
 * The size and appearance of the diagram pages can be customized with the page settings property.

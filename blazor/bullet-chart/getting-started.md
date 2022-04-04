@@ -46,6 +46,8 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
 Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
+> From 2022 Vol1 (20.1) version - The default value of `IgnoreScriptIsolation` is changed as `true`, so, you don’t have to set `IgnoreScriptIsolation` property explicitly to refer scripts externally.
+
 ### Blazor Server App
 
 * For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
@@ -325,5 +327,7 @@ Use the tooltip to show the measured values by setting the [Enable](https://help
 {% endtabs %}
 
 ![Blazor Bullet Chart displays ToolTip](images/blazor-bullet-chart-tooltip.png)
+
+> You can also explore our [Blazor Bullet Chart example](https://blazor.syncfusion.com/demos/bullet-chart/default-functionalities?theme=bootstrap5) that shows you how to render and configure the bullet chart.
 
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/BulletChart).
