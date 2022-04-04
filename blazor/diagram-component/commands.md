@@ -1052,7 +1052,7 @@ The following code example shows how to disable a command and how to modify the 
 ```
 ### FitToPage command in Blazor Diagram
 
-The FitToPage diagram is used to bring the entire diagram into view. The [FitOptions] parameter is used to customize the FitToPage command behavior.
+The FitToPage diagram is used to bring the entire diagram into view. The [FitOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitOptions.html) parameter is used to customize the FitToPage command behavior.
 If the parameter is null, the entire diagram is fit into the view. 
 
 The following code illustrates how to execute the FitToPage command.
@@ -1187,11 +1187,11 @@ The following code illustrates how to execute the FitToPage command.
 ```
 ### FitToPage Parameter
 
-The [FitOptions] parameter is used to customize the FitToPage command behavior.
+The [FitOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitOptions.html) parameter is used to customize the FitToPage command behavior.
 
 ### FitToPage
 
-The [FitToPage] is used to enable or disable the fit to page behavior with respect to height or width.
+The [FitToPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitMode.html) is used to enable or disable the fit to page behavior with respect to height or width.
 
 |Values  | Description     |
 |---------|----------------|
@@ -1203,7 +1203,7 @@ The [FitToPage] is used to enable or disable the fit to page behavior with respe
 
 ### Region
 
-The [Region] is used to set the region where fittopage should be performed in the diagram.
+The [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramRegion.html) is used to set the region where fittopage should be performed in the diagram.
 
 |Values    | Description     |
 |------------|------------------|
