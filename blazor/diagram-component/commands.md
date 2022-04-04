@@ -1115,6 +1115,169 @@ protected override void OnInitialized()
     }
 }
 ```
+### FitToPage command in Blazor Diagram
+
+The FitToPage diagram is used to bring the entire diagram into view. The [FitOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitOptions.html) parameter is used to customize the FitToPage command behavior.
+If the parameter is null, the entire diagram is fit into the view. 
+
+The following code illustrates how to execute the FitToPage command.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using Node = Syncfusion.Blazor.Diagram.Node
+
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="600px" Nodes="nodes" Connectors="connectors">
+</SfDiagramComponent>
+@code {
+        //Intialize of all the variables, methods and classes.
+        public SfDiagramComponent diagram;
+        FitOptions options = new FitOptions() {Mode = FitMode.Both, Region = DiagramRegion.Content };
+        DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+        DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+        string selectedMode;
+        string selectedRegion;
+     
+      protected override void OnInitialized()
+        {
+            Node node1 = new Node()
+            {
+                ID = "node1",
+                OffsetX = 100,
+                OffsetY = 100,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+            };
+            Node node2 = new Node()
+            {
+                ID = "node2",
+                OffsetX = 500,
+                OffsetY = 700,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+            };
+            Node node3 = new Node()
+            {
+                ID = "node3",
+                OffsetX = 500,
+                OffsetY = 500,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+            };
+            Node node4 = new Node()
+            {
+                ID = "node4",
+                OffsetX = 1000,
+                OffsetY = 700,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+            };
+            Node node5 = new Node()
+            {
+                ID = "node5",
+                OffsetX = 1150,
+                OffsetY = 400,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+        };
+        Node node6 = new Node()
+        {
+            ID = "node6",
+            OffsetX = 500,
+            OffsetY = 1000,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+        };
+        nodes.Add(node1);
+        nodes.Add(node2);
+        nodes.Add(node3);
+        nodes.Add(node4);
+        nodes.Add(node5);
+        nodes.Add(node6);
+    }
+      private void Mode(ChangeEventArgs e)
+    {
+        if (e.Value != null)
+        {
+            selectedMode = (string)e.Value;
+            switch (selectedMode)
+            {
+                case "Both":
+                    options = new FitOptions();
+                    options.Mode = FitMode.Both;
+                    break;
+                case "Width":
+                    options = new FitOptions();
+                    options.Mode = FitMode.Width;
+                    break;
+                case "Height":
+                    options = new FitOptions();
+                    options.Mode = FitMode.Height;
+                    break;
+            }
+        }
+    }
+
+
+    private void RegionChange(ChangeEventArgs e)
+    {
+        if (e.Value != null)
+        {
+            selectedRegion = (string)e.Value;
+            switch (selectedRegion)
+            {
+                case "PageSettings":
+                    options = new FitOptions();
+                    options.Region = DiagramRegion.PageSettings;
+                    break;
+                case "Content":
+                    options = new FitOptions();
+                    options.Region = DiagramRegion.Content;
+                    break;
+            }
+        }
+    }
+
+    //fit the diagram to the page with respect to mode and region.
+        private void FitToPage()
+        {
+         diagram.FitToPage(options);
+        }
+}
+```
+### FitToPage Parameter
+
+The [FitOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitOptions.html) parameter is used to customize the FitToPage command behavior.
+
+### FitToPage
+
+The [FitToPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitMode.html) is used to enable or disable the fit to page behavior with respect to height or width.
+
+|Values  | Description     |
+|---------|----------------|
+|FitToWidth | It is used to enable the fit to page behavior only with respect to width.         |
+|FitToHeight | It is used to enable the fit to page behavior only with respect to height.       |
+|Both  | It is used to enable the fit to page behavior with respect to both the height and width of the diagram. |
+
+![Fit to page Command](./images/FitPage.gif)
+
+### Region
+
+The [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramRegion.html) is used to set the region where fittopage should be performed in the diagram.
+
+|Values    | Description     |
+|------------|------------------|
+|PageSettings   | It is used to perform the fit to page based on the width and height of the page  |
+|Content   | It is used to perform the fit to page for the content area only    |
+
+![Region](./images/Region.gif)
+
+
 
                 
               
