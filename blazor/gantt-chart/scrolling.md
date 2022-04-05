@@ -118,7 +118,7 @@ Specify the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gan
 
 ## Auto Scroll to Taskbar
 
-Taskbar that is not visible in the viewport can be auto scrolled to make it visible when selecting the row and setting the `ScrollToTaskbarOnClick` property to true.
+Taskbar that is not visible in the viewport can be auto scrolled to make it visible when selecting the row and setting the [ScrollToTaskbarOnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ScrollToTaskbarOnClick) property to true.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -163,4 +163,4 @@ Taskbar that is not visible in the viewport can be auto scrolled to make it visi
 ```
 ![Blazor Gantt Chart taskbar auto focus](images/scroll-to-taskbar-on-click.gif)
 
-* You can also programatically scroll to taskbar using  `ScrollToTaskbarAsync` method and scroll to timeline using `ScrollToTimelineAsync`.
+* You can also programmatically scroll to taskbar using  [ScrollToTaskbarAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ScrollToTaskbarAsync_System_Int32_) method and scroll to timeline using [ScrollToTimelineAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ScrollToTimelineAsync_System_DateTime_).
