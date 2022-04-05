@@ -241,7 +241,7 @@ The following screen shot depicts the predecessor configuration support.
 ![Blazor Gantt Chart with predecessor configuration](images/predecessor-configuration.gif)
 
 > NOTE
-> Based on the types configured, respective connector points render on hovering the taskbar and also in the type column of the dependency tab of add or edit dialog.
+> Based on the types configured, respective connector points render on hovering the taskbar. Also the dropdown-data of type column in the dependency tab of add or edit dialog populates based on the type configured.
 
 ## Limitations
 
