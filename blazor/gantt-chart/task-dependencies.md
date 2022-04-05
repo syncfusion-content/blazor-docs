@@ -149,22 +149,65 @@ The following screen shot depicts the duration unit support in the predecessor o
 
 ## Predecessor configuration
 
-The predecessor types can be configured, in the Gantt component by using the [DependencyTypes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DependencyTypes) property.
+The required predecessor types can be configured, in the Gantt component by using the [DependencyTypes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DependencyTypes) property.
 
-You can define the predecessor types in any order. The default order will be FS, SS, FF, and SF. The default type will be the type mentioned in the first index of the `DependencyTypes` property.
+You can define the predecessor types in any order. The default order will be FS, SS, FF, and SF. The types can be configured, as per the requirement and the default type will be the type mentioned in the first index of the `DependencyTypes` property.
+
 ```cshtml
 @using Syncfusion.Blazor.Gantt
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" DependencyTypes="new PredecessorTypes[] { PredecessorTypes.FS,  PredecessorTypes.SS }">
+@using Syncfusion.Blazor.DropDowns
+
+<SfDropDownList TItem="Types" TValue="string" PopupHeight="230px" Width="250px" @bind-Value="@DropDownValue" DataSource="@PTypes">
+    <DropDownListEvents TItem="Types" TValue="string" ValueChange="OnChange"/>
+    <DropDownListFieldSettings Text="Text" Value="ID"/>
+</SfDropDownList>
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="950px" DependencyTypes="@types" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })" >
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" ParentID="ParentId">
     </GanttTaskFields>
+    <GanttEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" AllowTaskbarEditing="true">
+    </GanttEditSettings>
 </SfGantt>
 @code{
     public List<TaskData> TaskCollection { get; set; }
+    public PredecessorTypes[] types = new PredecessorTypes[] { PredecessorTypes.FS };
+    public class Types
+    {
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+    private List<Types> PTypes = new List<Types>() 
+    {
+        new Types(){ ID= "Type1", Text= "FS" },
+        new Types(){ ID= "Type2", Text= "FS, SS" },
+        new Types(){ ID= "Type3", Text= "FS, SS, SF" },
+        new Types(){ ID= "Type4", Text= "FS, SS, SF, FF" }
+     };
+    public string DropDownValue = "Type1";
+    public string ChangeValue { get; set; } = "FS";
+    public void OnChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, Types> args)
+    {
+        this.ChangeValue = args.ItemData.Text;
+        if (args.ItemData.ID == "Type1")
+        {
+            types = new PredecessorTypes[] { PredecessorTypes.FS };
+        } 
+        else if (args.ItemData.ID == "Type2")
+        {
+            types = new PredecessorTypes[] { PredecessorTypes.FS, PredecessorTypes.SS };
+        }  
+        else if (args.ItemData.ID == "Type3")
+        {
+            types = new PredecessorTypes[] { PredecessorTypes.FS, PredecessorTypes.SS, PredecessorTypes.SF };
+        }  
+        if (args.ItemData.ID == "Type4")
+        {
+            types = new PredecessorTypes[] { PredecessorTypes.FS, PredecessorTypes.SS, PredecessorTypes.SF, PredecessorTypes.FF };
+        } 
+    }
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
     }
-
     public class TaskData
     {
         public int TaskId { get; set; }
@@ -180,7 +223,7 @@ You can define the predecessor types in any order. The default order will be FS,
     public static List <TaskData> GetTaskCollection() {
     List <TaskData> Tasks = new List <TaskData> () {
         new TaskData() {TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21)},
-        new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2019, 04, 02), Duration = "0", Progress = 30, ParentId = 1 },
+        new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2019, 04, 02), Duration = "3", Progress = 30, ParentId = 1 },
         new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2019, 04, 02), Duration = "4", Progress = 40, Predecessor = "2FS", ParentId = 1 },
         new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2019, 04, 02), Duration = "0", Progress = 30, Predecessor = "3FF", ParentId = 1 },
         new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21)},
@@ -195,7 +238,10 @@ You can define the predecessor types in any order. The default order will be FS,
 
 The following screen shot depicts the predecessor configuration support.
 
-![Blazor Gantt Chart with predecessor configuration](images/predecessor-configuration.PNG)
+![Blazor Gantt Chart with predecessor configuration](images/predecessor-configuration.gif)
+
+> NOTE
+> Based on the types configured, respective connector points render on hovering the taskbar and also in the type column of the dependency tab of add or edit dialog.
 
 ## Limitations
 
