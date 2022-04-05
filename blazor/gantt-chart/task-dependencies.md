@@ -194,7 +194,7 @@ You can define the predecessor types in any order. The default order will be FS,
 }
 ```
 
-The following screen shot depicts the duration unit support in the predecessor offset.
+The following screen shot depicts the predecessor configuration support.
 
 ![Blazor Gantt Chart with predecessor configuration](images/predecessor-configuration.PNG)
 
