@@ -126,7 +126,7 @@ Items| Description
 }
 ```
 
-## Custom Context Menu Items
+## Custom context menu items
 
 The custom context menu items can be added by defining the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ContextMenuItems) as a collection of [ContextMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html). Actions for these customized items can be defined in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_ContextMenuItemClicked) event.
 
@@ -135,7 +135,7 @@ The following sample code demonstrates defining custom context menu item and its
 ```cshtml
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
-<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px" ContextMenuItems="@(new List<ContextMenuItemModel>(){ new ContextMenuItemModel(){Text="Refresh", Target=".e-content",Id="refresh"}})">
+<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px" ContextMenuItems="@contextMenuItems">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEvents ContextMenuItemClicked=ContextMenuItemClickedHandler TValue="TaskData"></GanttEvents>
@@ -144,6 +144,10 @@ The following sample code demonstrates defining custom context menu item and its
 @code {
     public List<TaskData> TaskCollection { get; set; }
     private SfGantt<TaskData> Gantt;
+    private List<ContextMenuItemModel> contextMenuItems = new List<ContextMenuItemModel>()
+    {
+        new ContextMenuItemModel(){Text="Refresh", Target=".e-content",Id="refresh"}
+    };
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -155,7 +159,6 @@ The following sample code demonstrates defining custom context menu item and its
             await Gantt.RefreshAsync();
         }
     }
-
 
     public class TaskData
     {

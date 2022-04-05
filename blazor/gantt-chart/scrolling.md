@@ -116,9 +116,9 @@ Specify the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gan
 }
 ```
 
-## Auto Scroll to Taskbar
+## Auto scroll to taskbar
 
-Taskbar that is not visible in the viewport can be auto scrolled to make it visible when selecting the row and setting the [ScrollToTaskbarOnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ScrollToTaskbarOnClick) property to true.
+Taskbar that is not visible in the viewport can be auto scrolled to make it visible when selecting the row, by enabling the [ScrollToTaskbarOnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ScrollToTaskbarOnClick) property to true.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
