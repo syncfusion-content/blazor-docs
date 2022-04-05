@@ -13,7 +13,7 @@ The Signature component supports to open the signature by using hosted/online UR
 
 ## Open Signature
 
-The signature component opens a pre-drawn signature as either base64 or hosted/ online URL using the [`LoadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_LoadAsync_System_String_System_Int32_System_Int32_) method. It supports the PNG, JPEG, and SVG image's base64.
+The signature component opens a pre-drawn signature as either base64 or hosted/ online URL using the [`LoadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_LoadAsync_System_String_System_Int32_System_Int32_) method. It supports the PNG, JPEG, and SVG image’s base64.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -68,7 +68,7 @@ The Signature component saves the signature as base64, blob, and image like PNG,
 
 ### Save as Base64
 
-The Signature component gets the signature as base64 using the [`GetSignatureAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_GetSignatureAsync_Syncfusion_Blazor_Inputs_SignatureFileType_) method. It also supports the PNG, JPEG, and SVG format as base64.
+The [`GetSignatureAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_GetSignatureAsync_Syncfusion_Blazor_Inputs_SignatureFileType_) method is used to get the signature as base64 with the PNG, JPEG, and SVG type. This can be loaded to signature using [`LoadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_LoadAsync_System_String_System_Int32_System_Int32_) method.
 
 ```cshtml
 
@@ -93,7 +93,7 @@ The Signature component gets the signature as base64 using the [`GetSignatureAsy
 
 ### Save as Blob
 
-The signature component saves the signature as Blob using [`SaveAsBlobAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_SaveAsBlobAsync) method.
+The [`SaveAsBlobAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_SaveAsBlobAsync) method is used to saves the signature as Blob. It is defined as the chunk of binary data stored as a single entity in a database system.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -117,7 +117,7 @@ The signature component saves the signature as Blob using [`SaveAsBlobAsync`](ht
 
 ### Save as Image
 
-The Signature component saves the signature as an image using [`SaveAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_SaveAsync_Syncfusion_Blazor_Inputs_SignatureFileType_System_String_) method. And it accepts file name and file type as parameter. The default file type is PNG.
+The [`SaveAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_SaveAsync_Syncfusion_Blazor_Inputs_SignatureFileType_System_String_) method is used to saves the signature as an image. And it accepts file name and file type as parameter. The file type parameter supports PNG, JPEG, and SVG and the default file type is PNG.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -170,7 +170,7 @@ The Signature component saves the signature as an image using [`SaveAsync`](http
 
 ## Save with Background
 
-The Signature component saves the signature with its background by using the [`SaveWithBackground`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_SaveWithBackground) property. Its default value is true.
+The [`SaveWithBackground`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_SaveWithBackground) property is used to saves the signature with its background and its default value is true. So, by default the signature is saved with its background.
 
 In the following sample, the background color is set as ‘rgb(103, 58, 183)’ and save with background as true.
 
