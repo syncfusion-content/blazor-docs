@@ -280,8 +280,3 @@ You can add the header by using [CardHeader](https://help.syncfusion.com/cr/blaz
 {% endtabs %}
 
 ![Blazor Card Component](images/blazor-card-component.png)
-![Blazor Card Component](images/blazor-card-component.png)
-
-> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Card).
-
-You can also explore our [Blazor Card example](https://blazor.syncfusion.com/documentation/card/getting-started) that shows how to configure the tooltip in Blazor.
