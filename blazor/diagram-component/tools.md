@@ -135,7 +135,7 @@ To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 
 ## Drawing Text Node through the drawing tool
 
-The Diagram allows you to draw TextNode on the go when you click on the diagram page, enabling us to add text in the preferred location. The following code illustrates how to draw a text.
+Diagram allows you to create a text Node as soon as you click on the Diagram page. The following code illustrates how to draw a text.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
