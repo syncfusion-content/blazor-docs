@@ -58,7 +58,7 @@ In the following sample, each list item is split into two columns to display rel
 </style>
 ```
 
-The output will be as follows.
+
 
 ![Blazor AutoComplete with ItemTemplate](./images/blazor-autocomplete-item-template.png)
 
@@ -107,7 +107,7 @@ In the following sample, employees are grouped according to their country.
 </style>
 ```
 
-The output will be as follows.
+
 
 ![Blazor AutoComplete with GroupTemplate](./images/blazor-autocomplete-group-template.png)
 
@@ -178,7 +178,7 @@ In the following sample, the list items and its headers are designed and display
 </style>
 ```
 
-The output will be as follows.
+
 
 ![Blazor AutoComplete with HeaderTemplate](./images/blazor-autocomplete-header-template.png)
 
@@ -230,7 +230,7 @@ In the following sample, footer element displays the total number of list items 
 </style>
 ```
 
-The output will be as follows.
+
 
 ![Blazor AutoComplete with FooterTemplate](./images/blazor-autocomplete-footer-template.png)
 
@@ -243,8 +243,8 @@ In the following sample, suggestion list content displays the notification of no
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-<SfAutoComplete TValue="string" TItem="Countries" Placeholder="Select a customer" DataSource="@Country">
-    <AutoCompleteTemplates TItem="Countries">
+<SfAutoComplete TValue="string" TItem="Country" Placeholder="Select a customer" DataSource="@Country">
+    <AutoCompleteTemplates TItem="Country">
         <NoRecordsTemplate>
             <span class='norecord'> NO DATA AVAILABLE</span>
         </NoRecordsTemplate>
@@ -259,25 +259,25 @@ In the following sample, suggestion list content displays the notification of no
     }
     public EmployeeData Data = new EmployeeData();
 
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
 
         public string Code { get; set; }
     }
 
-    List<Countries> Country = new List<Countries>
+    List<Country> Country = new List<Country>
 {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-        new Countries() { Name = "Denmark", Code = "DK" },
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" },
     };
 }
 ```
 
-The output will be as follows.
+
 
 ![Blazor AutoComplete without Data](./images/blazor-autocomplete-without-data.png)
 

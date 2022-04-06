@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Labels in Blazor Bullet Chart Component
 
-Data Labels are used to identify the value of actual bar in the Bullet Chart component. The Data Labels will be shown by specifying the [BulletChartDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartDataLabel.html) setting.
+Data Labels are used to identify the value of actual bar in the [Blazor Bullet Chart](https://www.syncfusion.com/blazor-components/blazor-bullet-chart) component. The Data Labels will be shown by specifying the [BulletChartDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartDataLabel.html) setting.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts

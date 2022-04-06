@@ -1,6 +1,6 @@
 ---
 layout: post
-title: BPMN event in Blazor Diagram Component | Syncfusion
+title: BPMN Event in Blazor Diagram Component | Syncfusion
 description: Learn here all about how to create the BPMN event and event trigger in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
@@ -9,11 +9,11 @@ documentation: ug
 
 # BPMN event in Blazor Diagram Component
 
-An `Event` is a common BPMN process model element that represents something happens during a business process and its is notated with a circle. The type of events are as follows:
+An `Event` is a common BPMN process model element that represents something that happens during a business process and is notated with a circle. The type of events are as follows:
 
-* Start - indicates the beginning of the process and every business process start with an event.
-* Intermediate - indicates the middle of the process.
-* End - indicates the beginning of the process and every business process end with an event.
+* Start - Indicates the beginning of the process and every business process start with an event.
+* Intermediate - Indicates the middle of the process.
+* End - Indicates the beginning of the process and every business process end with an event.
 
 The event property of the node allows you to define the type of the event. The default value of the event is **Start**. The following code example explains how to create a BPMN event.
 
@@ -25,7 +25,7 @@ The event property of the node allows you to define the type of the event. The d
 
 @code
 {
-    // Initialize node collection with Node
+    // Initialize node collection with Node.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -33,20 +33,20 @@ The event property of the node allows you to define the type of the event. The d
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            // Unique Id of the node
+            // Unique Id of the node.
             ID = "node1",
-            //Sets type as Bpmn and shape as Event
+            //Sets type as Bpmn and shape as Event.
             Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
                 Shape = BpmnShapes.Event,
-                // set the event type as End
+                // Set the event type as End.
                 Events = new BpmnSubEvent() { Event = BpmnEvents.End }
             }
         };
@@ -68,7 +68,7 @@ Event triggers are notated as icons inside the circle and they represent the spe
 
 @code
 {
-    // Initialize node collection with Node
+    // Initialize node collection with Node.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -76,23 +76,23 @@ Event triggers are notated as icons inside the circle and they represent the spe
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            // Unique Id of the node
+            // Unique Id of the node.
             ID = "node1",
             //Sets type as Bpmn and shape as Event
             Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
                 Shape = BpmnShapes.Event,
-                // set the event type as End
+                // Set the event type as End.
                 Events = new BpmnSubEvent()
                 {
-                    // Set the event type to NonInterruptingIntermediate and set the trigger as message
+                    // Set the event type to NonInterruptingIntermediate and set the trigger as message.
                     Event = BpmnEvents.NonInterruptingIntermediate,
                     Trigger = BpmnTriggers.Message
                 }

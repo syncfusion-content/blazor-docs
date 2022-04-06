@@ -34,7 +34,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void BlurHandler(Syncfusion.Blazor.Calendars.BlurEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -53,7 +53,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void ValueChangeHandler(ChangedEventArgs<DateTime?> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -72,7 +72,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void OnCloseHandler(PopupObjectArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -91,7 +91,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void CreatedHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -110,7 +110,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void DestroyHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -129,14 +129,14 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void FocusHandler(FocusEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
 
 ## Navigated
 
-`Navigated` event triggers when the Calendar is navigated to another level or within the same level of view
+`Navigated` event triggers when the Calendar is navigated to another level or within the same level of view.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -148,14 +148,14 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void NavigateHandler(NavigatedEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
 
 ## OnOpen
 
-`OnOpen` event triggers when the popup is opened
+`OnOpen` event triggers when the popup is opened.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -167,7 +167,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void OpenHandler(PopupObjectArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -186,7 +186,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void onRenderDayCellHandler(RenderDayCellEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```

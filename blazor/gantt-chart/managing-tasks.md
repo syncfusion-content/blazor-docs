@@ -656,7 +656,7 @@ In the Gantt Chart dialog, you can define the required tabs or editing sections 
                     Duration = "4",
                     Predecessor = "2",
                     ResourceId = new List<TaskResources>(){ new TaskResources() { ResourceId=2}, new TaskResources() { ResourceId=3} },
-                    Notes = "Obtain an engineered soil test of lot where construction is planned.From an engineer or company specializing in soil testing"
+                    Notes = "Obtain an engineered soil test of a plot where construction is planned from an engineer or company specializing in soil testing"
 
                 },
                 new TaskData() {
@@ -832,7 +832,7 @@ In the Gantt Chart dialog, you can make only specific data source fields visible
                     Duration = "4",
                     Predecessor = "2",
                     ResourceId = new List<TaskResources>(){ new TaskResources() { ResourceId=2}, new TaskResources() { ResourceId=3} },
-                    Notes = "Obtain an engineered soil test of lot where construction is planned.From an engineer or company specializing in soil testing"
+                    Notes = "Obtain an engineered soil test of a plot where construction is planned from an engineer or company specializing in soil testing"
                 },
                 new TaskData() {
                     TaskId = 4,

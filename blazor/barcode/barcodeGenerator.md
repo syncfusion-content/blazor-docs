@@ -131,7 +131,7 @@ A page or printed media with barcode often appears colorful in the background an
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
 
-<SfBarcodeGenerator Width="200px" Height="150px" Type="@BarcodeType.Code128" foreColor="red" Value="SYNCFUSION"></SfBarcodeGenerator>
+<SfBarcodeGenerator Width="200px" Height="150px" Type="@BarcodeType.Code128" ForeColor="red" Value="SYNCFUSION"></SfBarcodeGenerator>
 
 ```
 
@@ -158,7 +158,7 @@ In barcode generators, you can customize the barcode text by using display [Text
 @using Syncfusion.Blazor.BarcodeGenerator
 
 <SfBarcodeGenerator Width="300px" Height="300px" Type="@BarcodeType.Code128" Value="SYNCFUSION">
-     <BarcodeGeneratorDisplayText text="Text"></BarcodeGeneratorDisplayText>
+     <BarcodeGeneratorDisplayText Text="Text"></BarcodeGeneratorDisplayText>
 </SfBarcodeGenerator>
 
 ```

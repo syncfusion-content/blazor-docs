@@ -9,7 +9,7 @@ documentation: ug
 
 # Disable the Blazor DateRangePicker Component
 
-DateRangePicker can be inactivated on a page. By setting [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_Enabled) value to false will disable the component completely from all the user interactions including in the form post. The following code demonstrates the disabled component.
+DateRangePicker can be deactivated on a page. Setting [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_Enabled) value to false will disable the component completely from all user interactions, including form post. The following code demonstrates the disabled component.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -22,7 +22,6 @@ DateRangePicker can be inactivated on a page. By setting [Enabled](https://help.
 }
 ```
 
-The output will be as follows.
 
 ![Disable State in Blazor DateRangePicker](../images/blazor-daterangepicker-disable-state.png)
 

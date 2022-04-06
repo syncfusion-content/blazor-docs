@@ -246,8 +246,8 @@ In the following sample, popup list content displays the notification of no data
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-<SfComboBox TValue="string" TItem="Countries" Placeholder="Select a customer" DataSource="@Country">
-    <ComboBoxTemplates TItem="Countries">
+<SfComboBox TValue="string" TItem="Country" Placeholder="Select a customer" DataSource="@Countries">
+    <ComboBoxTemplates TItem="Country">
         <NoRecordsTemplate>
             <span class='norecord'> NO DATA AVAILABLE</span>
         </NoRecordsTemplate>
@@ -259,9 +259,9 @@ In the following sample, popup list content displays the notification of no data
     public class EmployeeData { }
     public EmployeeData Data = new EmployeeData();
 
-    public class Countries { }
+    public class Country { }
 
-    List<Countries> Country = new List<Countries> { };
+    List<Country> Countries = new List<Country> { };
 }
 ```
 

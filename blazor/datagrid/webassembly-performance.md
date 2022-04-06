@@ -15,7 +15,7 @@ This section provides performance guidelines for using Syncfusion data grid comp
 
 ## Avoid unnecessary component renders
 
-During Blazor diffing algorithm, every cells of the grid component and its child component will be checked for re-rendering.  For instance, having **EventCallBack** on the application or grid will check every child component once event callback is completed.
+During Blazor diffing algorithm, every cell of the grid component and its child component will be checked for re-rendering. For instance, having **EventCallBack** on the application or grid will check every child component once event callback is completed.
 
 You can have fine-grained control over grid component rendering. **PreventRender** method help you to avoid unnecessary re-rendering of the grid component. This method internally overrides the **ShouldRender** method of the grid to prevent rendering.
 
@@ -130,7 +130,7 @@ In the following example:
 
     private void OnRowSelected(RowSelectEventArgs<Order> args)
     {
-        args.PreventRender = true; //without this, you may see noticable delay in selection with 75 rows in grid.
+        args.PreventRender = true; //without this, you may see noticeable delay in selection with 75 rows in grid.
         SelectedOrder = args.Data;
     }
 

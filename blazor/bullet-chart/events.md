@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Bullet Chart Component
 
-This section describes about the Bullet Chart component's events that will be triggered when appropriate actions are performed. The events should be provided to the Bullet Chart through the [BulletChartEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html).
+This section describes about the [Blazor Bullet](https://www.syncfusion.com/blazor-components/blazor-bullet-chart) Chart component's events that will be triggered when appropriate actions are performed. The events should be provided to the Bullet Chart through the [BulletChartEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html).
 
 ## Loaded
 
