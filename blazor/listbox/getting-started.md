@@ -290,7 +290,7 @@ After initializing, populate the ListBox with data using the `DataSource` proper
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor ListBox` component will be rendered in the default web browser.
 
-![Blazor ListBox Component](./images/blazor-listbox.png)
+![Blazor bind ListBox Component](./images/blazor-listbox.png)
 
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ListBox).
 
@@ -299,3 +299,5 @@ After initializing, populate the ListBox with data using the `DataSource` proper
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)
 * [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)
+
+> You can also explore our [Blazor ListBox example](https://blazor.syncfusion.com/demos/listbox/default-functionalities) that shows how to bind lists of data to the ListBox component in Blazor.

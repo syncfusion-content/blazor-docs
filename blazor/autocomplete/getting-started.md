@@ -353,7 +353,7 @@ By default, suggestion list width automatically adjusts according to the AutoCom
 {% endhighlight %}
 {% endtabs %}
 
-![Customizing Popup Height and Width in Blazor AutoComplete](./images/blazor-autocomplete-popup-customization.png)
+![Customizing Popup Height and Width in Blazor AutoComplete control](./images/blazor-autocomplete-popup-customization.png)
 
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/AutoComplete).
 
@@ -362,3 +362,5 @@ By default, suggestion list width automatically adjusts according to the AutoCom
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli/)
 * [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio/)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli/)
+
+> You can also explore our [Blazor AutoComplete example](https://blazor.syncfusion.com/demos/autocomplete/default-functionalities) that shows how to bind lists of data to the AutoComplete control in Blazor.
