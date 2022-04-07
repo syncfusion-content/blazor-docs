@@ -9,11 +9,13 @@ documentation: ug
 
 # Render Maps componnet inside the other components
 
-The Maps can be rendered within components such as the dashboard layout, tabs, card, dialogue, and others. The rendering of the Maps component begins before the rendering of the other components. These scenarios can be overcome by a boolean value. The boolean value is used to decide the rendering of the Maps component.
+The Maps can be rendered within components such as the Dashboard Layout, Tabs, Dialog, and others. The rendering of the Maps component begins before the rendering of the other components. These scenarios can be overcome by a boolean value. The boolean value is used to decide the rendering of the Maps component.
 
 ## Maps component with Dashboard Layout
 
-When the Maps component renders within the Dashboard Layout component. The "Created" event is triggered when the Layout component is rendered first. A boolean value must be set to "true" in this event. This boolean value will be used to determine the rendering of the component. When we drag or resize the panel, the Maps are not properly rendered within the panel, to overcome this scenario, we must call the "Refresh" method in the "OnResizeStop" and "OnWindowResize" events of the Dashboard layout. Since, the size of the Dashboard layout's panel is determined after a delay in the Maps component, a time delay of 1000 milliseconds must be provided before refreshing the Maps component.
+When the Maps component renders within a panel of the Dashboard Layout component, its rendering begins concurrently with the Dashboard Layout component's rendering. So the size of the Maps will not be proper. To properly render the Maps component, a boolean value (i.e. **IsInitialRender**) must be created which is used to decide the rendering of the Maps component. The boolean value is intially **false**. So, the Maps component will not be rendered initially. When the dashboard layout component is first rendered, the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Created) event is fired. In this event, the boolean value must be set as **true** to render the Maps component.
+
+When we drag and resize the panel, the Maps component is not notified of the resize, so the Maps are not rendered properly within the panel. To overcome this scenario, the [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Refresh) method of the Maps component must be called in the Dashboard layout's [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnResizeStop) and [OnWindowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnWindowResize) events. Since the size of the Dashboard layout's panel is determined after a delay, a 1000 milliseconds delay must be provided before refreshing the Maps component.
 
 
 ```cshtml
@@ -25,7 +27,7 @@ When the Maps component renders within the Dashboard Layout component. The "Crea
         <DashboardLayoutPanel Id="24" Row="0" Col="1" SizeX="@SizeX" SizeY="@SizeY">
             <HeaderTemplate><div> Maps </div></HeaderTemplate>
             <ContentTemplate>
-                @if (isInitialRender)
+                @if (IsInitialRender)
                 {
                     <SfMaps ID="Maps" @ref="Maps" Width="100%">
                         <MapsLayers>
@@ -49,7 +51,7 @@ When the Maps component renders within the Dashboard Layout component. The "Crea
     public int SizeY = 7;
     SfMaps Maps;
 
-    public bool isInitialRender { get; set; }
+    public bool IsInitialRender { get; set; }
 
     public async void ResizingHandler(ResizeArgs args)
     {
@@ -59,7 +61,7 @@ When the Maps component renders within the Dashboard Layout component. The "Crea
    
     public async void Created(Object args)
     {
-        isInitialRender = true;
+        IsInitialRender = true;
 
     }
 }
@@ -69,7 +71,7 @@ When the Maps component renders within the Dashboard Layout component. The "Crea
 
 ## Maps component with Tab
 
-When the Maps component renders within the Tab component.The "Created" event is triggered when the Tab component is rendered first. A boolean value must be set to "true" in this event. This boolean value will be used to determine the rendering of the component.
+When the Maps component renders within the Tab component, its rendering begins concurrently with the Tab component's rendering. So the size of the Maps will not be proper. To properly render the Maps component, a boolean value (i.e. **IsInitialRender**) must be created which is used to decide the rendering of the Maps component. The boolean value is intially **false**. So, the Maps component will not be rendered initially. When the Tab component is first rendered, the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabEvents.html#Syncfusion_Blazor_Navigations_TabEvents_Created) event is fired. In this event, the boolean value must be set as **true** to render the Maps component.
 
 
 ```cshtml
@@ -86,7 +88,7 @@ When the Maps component renders within the Tab component.The "Created" event is 
                     <TabHeader Text="Maps"></TabHeader>
                 </ChildContent>
                 <ContentTemplate>
-                 @if (isInitialRender)
+                 @if (IsInitialRender)
                  {
                     <SfMaps Width="100%">
                         <MapsLayers>
@@ -102,7 +104,7 @@ When the Maps component renders within the Tab component.The "Created" event is 
                     <TabHeader Text="OSM Maps"></TabHeader>
                 </ChildContent>
                  <ContentTemplate>
-                 @if (isInitialRender)
+                 @if (IsInitialRender)
                  {
                     <SfMaps ID="OSM" @ref="MapsOne" Width="100%">
                         <MapsLayers>
@@ -117,7 +119,7 @@ When the Maps component renders within the Tab component.The "Created" event is 
                     <TabHeader Text="SubLayer Maps"></TabHeader>
                 </ChildContent>
                  <ContentTemplate>
-                 @if (isInitialRender)
+                 @if (IsInitialRender)
                  {
                     <SfMaps ID="SubLayer">
                         <MapsLayers>
@@ -147,10 +149,10 @@ When the Maps component renders within the Tab component.The "Created" event is 
     </SfTab>
 
 @code{
-    public bool isInitialRender { get; set; }
+    public bool IsInitialRender { get; set; }
     public void Created()
     {
-        isInitialRender = true;
+        IsInitialRender = true;
     }
     }
 
@@ -160,7 +162,7 @@ When the Maps component renders within the Tab component.The "Created" event is 
 
 ## Maps component with Dialog
 
-When the Maps component renders within the Dialog component.The "Opened" event is triggered when the Dialog component is rendered first. A boolean value must be set to "true" in this event. This boolean value will be used to determine the rendering of the component. When the Dialog is closed, the "Closed" event is triggered, and the boolean value must be set to "false" in this event.
+When the Maps component renders within the Dialog component, its rendering begins concurrently with the Dialog component's rendering. So the size of the Maps will not be proper. To properly render the Maps component, a boolean value (i.e. **IsInitialRender**) must be created which is used to decide the rendering of the Maps component. The boolean value is intially **false**. So, the Maps component will not be rendered initially. When the Dialog component is first rendered, the [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Opened) event is fired. In this event, the boolean value must be set to **true** to render the Maps component. When the Dialog is closed, the [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Closed) event is fired and the boolean value must be set to **false** in this event.
 
 ```cshtml
 
@@ -178,7 +180,7 @@ When the Maps component renders within the Dialog component.The "Opened" event i
         <DialogTemplates>
             <Header>Maps</Header>
             <Content> 
-                @if(isInitialRender)
+                @if(IsInitialRender)
                 {
                      <SfMaps ID="Maps" @ref="Maps" Width="100%">
                         <MapsLayers>
@@ -197,19 +199,19 @@ When the Maps component renders within the Dialog component.The "Opened" event i
 </style>
 @code {
     SfMaps Maps;
-    public bool isInitialRender { get; set; }
+    public bool IsInitialRender { get; set; }
     private bool Visibility { get; set; } = true;
     private bool ShowButton { get; set; } = false;
     private ResizeDirection[] dialogResizeDirections { get; set; } = new ResizeDirection[] { ResizeDirection.All };
     private void DialogOpen(Object args)
     {
         this.ShowButton = false;
-        isInitialRender = true;
+        IsInitialRender = true;
     }
     private void DialogClose(Object args)
     {
         this.ShowButton = true;
-        isInitialRender = false;
+        IsInitialRender = false;
     }
     private void OnClicked()
     {
@@ -223,7 +225,7 @@ When the Maps component renders within the Dialog component.The "Opened" event i
 
 ## Maps component with Accordion
 
-When the Maps component renders within the Accordion component.The "Created" event is triggered when the Accordion component is rendered first. A boolean value must be set to "true" in this event. This boolean value will be used to determine the rendering of the component.
+When the Maps component renders within the Accordion component, its rendering begins concurrently with the Accordion component's rendering. So the size of the Maps will not be proper. To properly render the Maps component, a boolean value (i.e. **IsInitialRender**) must be created which is used to decide the rendering of the Maps component. The boolean value is intially **false**. So, the Maps component will not be rendered initially. When the Accordion component is first rendered, the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Created) event is fired. In this event, the boolean value must be set as **true** to render the Maps component.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -238,7 +240,7 @@ When the Maps component renders within the Accordion component.The "Created" eve
             <AccordionItem Expanded="true">
                 <HeaderTemplate>Maps</HeaderTemplate>
                 <ContentTemplate>
-                 @if (isInitialRender)
+                 @if (IsInitialRender)
                  {
                     <SfMaps ID="Maps" Width="100%">
                         <MapsLayers>
@@ -252,7 +254,7 @@ When the Maps component renders within the Accordion component.The "Created" eve
             <AccordionItem>
                 <HeaderTemplate>OSM</HeaderTemplate>
                 <ContentTemplate>
-                    @if (isInitialRender)
+                    @if (IsInitialRender)
                     {
                        <SfMaps ID="OSM" Width="100%">
                            <MapsLayers>
@@ -265,7 +267,7 @@ When the Maps component renders within the Accordion component.The "Created" eve
             <AccordionItem>
                 <HeaderTemplate>Maps SubLayer</HeaderTemplate>
                 <ContentTemplate>
-                     @if (isInitialRender)
+                     @if (IsInitialRender)
                      {
                         <SfMaps ID="SubLayer">
                             <MapsLayers>
@@ -321,11 +323,11 @@ When the Maps component renders within the Accordion component.The "Created" eve
 </style>
 
 @code{
-    public bool isInitialRender { get; set; }
+    public bool IsInitialRender { get; set; }
 
     public void Created()
     {
-        isInitialRender = true;
+        IsInitialRender = true;
     }
 
 }
