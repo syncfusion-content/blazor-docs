@@ -18,13 +18,15 @@ When the Circular Gauge component renders within a panel of the Dashboard Layout
 When you drag and resize the Dashboard Layout's panel, the Circular Gauge component is not notified, so the Circular Gauge are not properly rendered within the panel. To avoid this scenario, the Circular Gauge component's [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_RefreshAsync) method must be called in the Dashboard Layout's [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnResizeStop) and [OnWindowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnWindowResize) events. Because the panel size of the Dashboard Layout is determined after a delay, a 1000 millisecond delay must be provided before refreshing the Circular Gauge component.
 
 ```cshtml
+
 @using Syncfusion.Blazor.CircularGauge
 @using Syncfusion.Blazor.Layouts
+@using Syncfusion.Blazor.Inputs
 
 <SfDashboardLayout AllowResizing="@AllowResizing"  AllowFloating="@AllowFloating" CellSpacing="@CellSpacing" Columns="@Columns">
 <DashboardLayoutEvents Created="Created" OnResizeStop="@ResizingHandler" OnWindowResize="@ResizingHandler" Resizing="ResizingHandler"></DashboardLayoutEvents>
     <DashboardLayoutPanels>
-        <DashboardLayoutPanel Id="24" Row="0" Col="5" SizeX="5" SizeY="7">
+        <DashboardLayoutPanel Id="LayoutOne" Row="0" Col="5" SizeX="5" SizeY="7">
             <HeaderTemplate><div> Circular Gauge </div></HeaderTemplate>
             <ContentTemplate>
                 @if (IsInitialRender)
@@ -53,12 +55,118 @@ When you drag and resize the Dashboard Layout's panel, the Circular Gauge compon
                 }
             </ContentTemplate>
         </DashboardLayoutPanel> 
+        <DashboardLayoutPanel Id="LayoutTwo" Row="1" Col="5" SizeX="5" SizeY="7">
+            <HeaderTemplate><div>  Semi Circular Gauge </div></HeaderTemplate>
+            <ContentTemplate>
+                @if (IsInitialRender)
+                {
+                     <SfCircularGauge ID="GaugeOne" @ref="GaugeOne" Width="100%" Height="100%">
+                            <CircularGaugeAxes>
+                                <CircularGaugeAxis Radius="80%" StartAngle="270" EndAngle="90">
+                                    <CircularGaugeAxisLabelStyle Offset="-1">
+                                    <CircularGaugeAxisLabelFont FontFamily="inherit"></CircularGaugeAxisLabelFont>
+                                    </CircularGaugeAxisLabelStyle>
+                                    <CircularGaugeAxisLineStyle Width="0" Color="white" />
+                                    <CircularGaugeAxisMajorTicks Offset="15" />
+                                    <CircularGaugeAxisMinorTicks Offset="15" />
+                                    <CircularGaugeRanges>
+                                        <CircularGaugeRange Start="0" End="40" StartWidth="10" EndWidth="10" Color="Red">
+                                        </CircularGaugeRange>
+                                        <CircularGaugeRange Start="40" End="70" StartWidth="10" EndWidth="10" Color="Green">
+                                        </CircularGaugeRange>
+                                        <CircularGaugeRange Start="70" End="100" StartWidth="10" EndWidth="10" Color="Yellow">
+                                        </CircularGaugeRange>
+                                    </CircularGaugeRanges>
+                                </CircularGaugeAxis>
+                            </CircularGaugeAxes>
+                      </SfCircularGauge>
+                }
+            </ContentTemplate>
+        </DashboardLayoutPanel>
+        <DashboardLayoutPanel Id="LayoutThree" Row="2" Col="5" SizeX="5" SizeY="7">
+            <HeaderTemplate><div> Arc Gauge </div></HeaderTemplate>
+            <ContentTemplate>
+                @if (IsInitialRender)
+                {
+                     <SfCircularGauge Background="transparent" ID="GaugeTwo" @ref="GaugeTwo" Width="100%" Height="100%">
+                            <CircularGaugeTitleStyle FontFamily="inherit"></CircularGaugeTitleStyle>
+                            <CircularGaugeAxes>
+                                <CircularGaugeAxis StartAngle="200" EndAngle="160" Minimum="1" Maximum="100" Radius="80%">
+                                    <CircularGaugeAxisLineStyle Width="0" />
+                                    <CircularGaugeAxisLabelStyle>
+                                        <CircularGaugeAxisLabelFont Size="0px" FontFamily="inherit" />
+                                    </CircularGaugeAxisLabelStyle>
+                                    <CircularGaugeAxisMajorTicks Height="0" />
+                                    <CircularGaugeAxisMinorTicks Height="0" />
+                                    <CircularGaugeRanges>
+                                        <CircularGaugeRange Start="1" End="100" Radius="90%" StartWidth="30" EndWidth="30" Color="#E0E0E0" RoundedCornerRadius="20" />
+                                    </CircularGaugeRanges>
+                                    <CircularGaugePointers>
+                                        <CircularGaugePointer Value="@PointerValue" RoundedCornerRadius="20" Type="PointerType.RangeBar" Radius="90%" Color="@PointerColor" PointerWidth="30">
+                                            <CircularGaugePointerAnimation Enable="false" />
+                                            <CircularGaugePointerBorder Width="0" />
+                                        </CircularGaugePointer>
+                                    </CircularGaugePointers>
+                                    <CircularGaugeAnnotations>
+                                        <CircularGaugeAnnotation Radius="0%" Angle="0" ZIndex="1">
+                                            <ContentTemplate>
+                                                <div class="annotationText">@SliderValueText</div>
+                                            </ContentTemplate>
+                                        </CircularGaugeAnnotation>
+                                        <CircularGaugeAnnotation Angle="0" ZIndex="1" Radius="-100%">
+                                            <ContentTemplate>
+                                                <div class="sliderAlign">
+                                                    <div style="width: 60%;">
+                                                        <div style="margin-left:-80%">
+                                                            <SfSlider TValue="double" ID="gradient_slider" Value="@SliderPointerValue" Type=SliderType.MinRange Min="0" Max="100" Width="250px">
+                                                                <SliderEvents TValue="double" OnChange="RangeStartChange" />
+                                                            </SfSlider>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </ContentTemplate>
+                                        </CircularGaugeAnnotation>
+                                    </CircularGaugeAnnotations>
+                                </CircularGaugeAxis>
+                            </CircularGaugeAxes>
+                    </SfCircularGauge>
+                }
+            </ContentTemplate>
+        </DashboardLayoutPanel> 
     </DashboardLayoutPanels>
 </SfDashboardLayout>
+
+<style>
+    .annotationText {
+        font-size: 35px;
+        width: 120px;
+        text-align: center;
+        margin-top: -30px;
+        margin-left: -55px
+    }
+    .sliderAlign {
+        height: 70px;
+        width: 250px;
+    }
+    #gradient_slider.e-control.e-slider .e-slider-track {
+        background: -webkit-linear-gradient(left, #ea501a 0, #f79c02 20%, #e5ce20 40%, #a1cb43 60%, #82b944 80%);
+        background: linear-gradient(left, #ea501a 0, #f79c02 20%, #e5ce20 40%, #a1cb43 60%, #82b944 80%);
+        background: -moz-linear-gradient(left, #ea501a 0, #f79c02 20%, #e5ce20 40%, #a1cb43 60%, #82b944 80%);
+    }
+    #gradient_slider.e-control.e-slider .e-range {
+        background-color: transparent;
+    }
+    .e-control-wrapper.e-slider-container #gradient_slider.e-control.e-slider .e-handle {
+        background-color: #fff;
+        border: 2px solid #666;
+    }
+</style>
 
 @code {
     public bool IsInitialRender { get; set; }
     SfCircularGauge Gauge;
+    SfCircularGauge GaugeOne;
+    SfCircularGauge GaugeTwo;
     public double[] CellSpacing = { 10, 10 };
     public bool FloatCheck = true;
     public bool ResizeCheck = true;
@@ -66,18 +174,49 @@ When you drag and resize the Dashboard Layout's panel, the Circular Gauge compon
     public bool AllowFloating { get; set; } = true;
     public bool AllowResizing { get; set; } = true; 
 
+    public double SliderPointerValue = 60;
+    public string PointerColor = "#e5ce20";
+    public double PointerValue = 60;
+    public string SliderValueText = "60/100";
+    private void RangeStartChange(Syncfusion.Blazor.Inputs.SliderChangeEventArgs<double> args)
+    {
+        SliderPointerValue = Convert.ToDouble(args.Value);
+        PointerValue = SliderPointerValue;
+        if (SliderPointerValue >= 0 && SliderPointerValue < 20)
+            PointerColor = "#ea501a";
+        else if (SliderPointerValue >= 20 && SliderPointerValue < 40)
+            PointerColor = "#f79c02";
+        else if (SliderPointerValue >= 40 && SliderPointerValue < 60)
+            PointerColor = "#e5ce20";
+        else if (SliderPointerValue >= 60 && SliderPointerValue < 80)
+            PointerColor = "#a1cb43";
+        else if (SliderPointerValue >= 80 && SliderPointerValue < 100)
+            PointerColor = "#82b944";
+        SliderValueText = SliderPointerValue.ToString() + "/100";
+    }
+
     public async void Created(Object args)
     {
         IsInitialRender = true;
 
     }
-    
-    public async void ResizingHandler()
-    {
-        await Task.Delay(1000);
-        Gauge.Refresh();
-    }
 
+    public async void ResizingHandler(ResizeArgs args)
+    {
+        if(args.Id == "LayoutOne")
+        {
+            await Task.Delay(1000);
+            Gauge.Refresh();
+        } else if (args.Id == "LayoutTwo")
+        {
+            await Task.Delay(1000);
+            GaugeOne.Refresh();
+        } else if(args.Id == "LayoutThree")
+        {
+            await Task.Delay(1000);
+            GaugeTwo.Refresh();
+        }   
+    }
 }
 
 ```
@@ -91,6 +230,7 @@ When the Circular Gauge component renders within the Tab component, its renderin
 
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.CircularGauge
+@using Syncfusion.Blazor.Inputs
 
     <SfTab CssClass="default-tab">
         <TabEvents Created="Created"></TabEvents>
@@ -128,47 +268,140 @@ When the Circular Gauge component renders within the Tab component, its renderin
             </TabItem>
             <TabItem>
                 <ChildContent>
-                    <TabHeader Text="Circular Gauge Ranges"></TabHeader>
+                    <TabHeader Text="Semi Circular Gauge"></TabHeader>
                 </ChildContent>
                  <ContentTemplate>
                  @if (IsInitialRender)
                  {
-                    <SfCircularGauge ID="GaugeOne" @ref="Gauge">
+                         <SfCircularGauge ID="GaugeOne">
                             <CircularGaugeAxes>
-                                <CircularGaugeAxis>
+                                <CircularGaugeAxis Radius="80%" StartAngle="270" EndAngle="90">
+                                    <CircularGaugeAxisLabelStyle Offset="-1">
+                                    <CircularGaugeAxisLabelFont FontFamily="inherit"></CircularGaugeAxisLabelFont>
+                                    </CircularGaugeAxisLabelStyle>
+                                    <CircularGaugeAxisLineStyle Width="0" Color="white" />
+                                    <CircularGaugeAxisMajorTicks Offset="15" />
+                                    <CircularGaugeAxisMinorTicks Offset="15" />
                                     <CircularGaugeRanges>
-                                        <CircularGaugeRange Start="40" End="80">
+                                        <CircularGaugeRange Start="0" End="40" StartWidth="10" EndWidth="10" Color="Red">
+                                        </CircularGaugeRange>
+                                        <CircularGaugeRange Start="40" End="70" StartWidth="10" EndWidth="10" Color="Green">
+                                        </CircularGaugeRange>
+                                        <CircularGaugeRange Start="70" End="100" StartWidth="10" EndWidth="10" Color="Yellow">
                                         </CircularGaugeRange>
                                     </CircularGaugeRanges>
+                                </CircularGaugeAxis>
+                            </CircularGaugeAxes>
+                      </SfCircularGauge>
+                 }   
+                 </ContentTemplate>
+            </TabItem>
+            <TabItem>
+                <ChildContent>
+                    <TabHeader Text="Arc Gauge"></TabHeader>
+                </ChildContent>
+                 <ContentTemplate>
+                 @if (IsInitialRender)
+                 {
+                     <SfCircularGauge Background="transparent" ID="GaugeTwo">
+                            <CircularGaugeTitleStyle FontFamily="inherit"></CircularGaugeTitleStyle>
+                            <CircularGaugeAxes>
+                                <CircularGaugeAxis StartAngle="200" EndAngle="160" Minimum="1" Maximum="100" Radius="80%">
+                                    <CircularGaugeAxisLineStyle Width="0" />
+                                    <CircularGaugeAxisLabelStyle>
+                                        <CircularGaugeAxisLabelFont Size="0px" FontFamily="inherit" />
+                                    </CircularGaugeAxisLabelStyle>
+                                    <CircularGaugeAxisMajorTicks Height="0" />
+                                    <CircularGaugeAxisMinorTicks Height="0" />
+                                    <CircularGaugeRanges>
+                                        <CircularGaugeRange Start="1" End="100" Radius="90%" StartWidth="30" EndWidth="30" Color="#E0E0E0" RoundedCornerRadius="20" />
+                                    </CircularGaugeRanges>
+                                    <CircularGaugePointers>
+                                        <CircularGaugePointer Value="@PointerValue" RoundedCornerRadius="20" Type="PointerType.RangeBar" Radius="90%" Color="@PointerColor" PointerWidth="30">
+                                            <CircularGaugePointerAnimation Enable="false" />
+                                            <CircularGaugePointerBorder Width="0" />
+                                        </CircularGaugePointer>
+                                    </CircularGaugePointers>
+                                    <CircularGaugeAnnotations>
+                                        <CircularGaugeAnnotation Radius="0%" Angle="0" ZIndex="1">
+                                            <ContentTemplate>
+                                                <div class="annotationText">@SliderValueText</div>
+                                            </ContentTemplate>
+                                        </CircularGaugeAnnotation>
+                                        <CircularGaugeAnnotation Angle="0" ZIndex="1" Radius="-100%">
+                                            <ContentTemplate>
+                                                <div class="sliderAlign">
+                                                    <div style="width: 60%;">
+                                                        <div style="margin-left:-80%">
+                                                            <SfSlider TValue="double" ID="gradient_slider" Value="@SliderPointerValue" Type=SliderType.MinRange Min="0" Max="100" Width="250px">
+                                                                <SliderEvents TValue="double" OnChange="RangeStartChange" />
+                                                            </SfSlider>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </ContentTemplate>
+                                        </CircularGaugeAnnotation>
+                                    </CircularGaugeAnnotations>
                                 </CircularGaugeAxis>
                             </CircularGaugeAxes>
                     </SfCircularGauge>
                  }   
                  </ContentTemplate>
             </TabItem>
-            <TabItem>
-                <ChildContent>
-                    <TabHeader Text="Semi Circular Gauge"></TabHeader>
-                </ChildContent>
-                 <ContentTemplate>
-                 @if (IsInitialRender)
-                 {
-                    <SfCircularGauge ID="Gauge" @ref="Gauge">
-                        <CircularGaugeAxes>
-                            <CircularGaugeAxis Maximum="200" StartAngle="270" EndAngle="90" Minimum="0" HideIntersectingLabel="true">
-                                <CircularGaugeAxisMajorTicks Interval="4"></CircularGaugeAxisMajorTicks>
-                                <CircularGaugeAxisMinorTicks Interval="2"></CircularGaugeAxisMinorTicks>
-                            </CircularGaugeAxis>
-                        </CircularGaugeAxes>
-                    </SfCircularGauge>
-                 }   
-                 </ContentTemplate>
-            </TabItem>
         </TabItems>
     </SfTab>
+
+<style>
+    .annotationText {
+        font-size: 35px;
+        width: 120px;
+        text-align: center;
+        margin-top: -30px;
+        margin-left: -55px
+    }
+    .sliderAlign {
+        height: 70px;
+        width: 250px;
+    }
+    #gradient_slider.e-control.e-slider .e-slider-track {
+        background: -webkit-linear-gradient(left, #ea501a 0, #f79c02 20%, #e5ce20 40%, #a1cb43 60%, #82b944 80%);
+        background: linear-gradient(left, #ea501a 0, #f79c02 20%, #e5ce20 40%, #a1cb43 60%, #82b944 80%);
+        background: -moz-linear-gradient(left, #ea501a 0, #f79c02 20%, #e5ce20 40%, #a1cb43 60%, #82b944 80%);
+    }
+    #gradient_slider.e-control.e-slider .e-range {
+        background-color: transparent;
+    }
+    .e-control-wrapper.e-slider-container #gradient_slider.e-control.e-slider .e-handle {
+        background-color: #fff;
+        border: 2px solid #666;
+    }
+</style>
+
 @code{
     SfCircularGauge Gauge;
     public bool IsInitialRender { get; set; }
+
+     public double SliderPointerValue = 60;
+    public string PointerColor = "#e5ce20";
+    public double PointerValue = 60;
+    public string SliderValueText = "60/100";
+    private void RangeStartChange(Syncfusion.Blazor.Inputs.SliderChangeEventArgs<double> args)
+    {
+        SliderPointerValue = Convert.ToDouble(args.Value);
+        PointerValue = SliderPointerValue;
+        if (SliderPointerValue >= 0 && SliderPointerValue < 20)
+            PointerColor = "#ea501a";
+        else if (SliderPointerValue >= 20 && SliderPointerValue < 40)
+            PointerColor = "#f79c02";
+        else if (SliderPointerValue >= 40 && SliderPointerValue < 60)
+            PointerColor = "#e5ce20";
+        else if (SliderPointerValue >= 60 && SliderPointerValue < 80)
+            PointerColor = "#a1cb43";
+        else if (SliderPointerValue >= 80 && SliderPointerValue < 100)
+            PointerColor = "#82b944";
+        SliderValueText = SliderPointerValue.ToString() + "/100";
+    }
+
     public void Created()
     {
         IsInitialRender = true;
@@ -274,8 +507,218 @@ When the Circular Gauge component renders within the Accordion component, its re
 
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.CircularGauge
+@using Syncfusion.Blazor.Inputs
 
+<div class="control-section accordion-control-section">
+    <SfAccordion>
+        <AccordionEvents Created="Created" Expanded="Expand"></AccordionEvents>
+        <AccordionItems>
+            <AccordionItem Expanded="true">
+                <HeaderTemplate>Circular Gauge</HeaderTemplate>
+                <ContentTemplate>
+                 @if (IsInitialRender)
+                 {
+                    <SfCircularGauge @ref="Gauge" ID="CircularGauge" Background="transparent" Width="100%">
+                        <CircularGaugeAxes>
+                            <CircularGaugeAxis Radius="80%" StartAngle="230" EndAngle="130">
+                                <CircularGaugeAxisLabelStyle Offset="-1">
+                                    <CircularGaugeAxisLabelFont FontFamily="inherit"></CircularGaugeAxisLabelFont>
+                                </CircularGaugeAxisLabelStyle>
+                                <CircularGaugeAxisLineStyle Width="8" Color="#E0E0E0" />
+                                <CircularGaugeAxisMajorTicks Offset="5" />
+                                <CircularGaugeAxisMinorTicks Offset="5" />
+                                <CircularGaugePointers>
+                                    <CircularGaugePointer Value=60 Radius="60%" PointerWidth="7" Color="#c06c84">
+                                        <CircularGaugePointerAnimation Duration="500" />
+                                        <CircularGaugeCap Radius="8" Color="#c06c84">
+                                            <CircularGaugeCapBorder Width="0" />
+                                        </CircularGaugeCap>
+                                        <CircularGaugeNeedleTail Length="0%" />
+                                    </CircularGaugePointer>
+                                </CircularGaugePointers>
+                            </CircularGaugeAxis>
+                        </CircularGaugeAxes>
+                    </SfCircularGauge>
+                 }
+                </ContentTemplate>
+            </AccordionItem>
+            <AccordionItem>
+                <HeaderTemplate>Semi Circular Gauge</HeaderTemplate>
+                <ContentTemplate>
+                    @if (IsInitialRender)
+                    {
+                        <SfCircularGauge ID="GaugeOne" @ref="GaugeOne">
+                            <CircularGaugeAxes>
+                                <CircularGaugeAxis Radius="80%" StartAngle="270" EndAngle="90">
+                                    <CircularGaugeAxisLabelStyle Offset="-1">
+                                    <CircularGaugeAxisLabelFont FontFamily="inherit"></CircularGaugeAxisLabelFont>
+                                    </CircularGaugeAxisLabelStyle>
+                                    <CircularGaugeAxisLineStyle Width="0" Color="white" />
+                                    <CircularGaugeAxisMajorTicks Offset="15" />
+                                    <CircularGaugeAxisMinorTicks Offset="15" />
+                                    <CircularGaugeRanges>
+                                        <CircularGaugeRange Start="0" End="40" StartWidth="10" EndWidth="10" Color="Red">
+                                        </CircularGaugeRange>
+                                        <CircularGaugeRange Start="40" End="70" StartWidth="10" EndWidth="10" Color="Green">
+                                        </CircularGaugeRange>
+                                        <CircularGaugeRange Start="70" End="100" StartWidth="10" EndWidth="10" Color="Yellow">
+                                        </CircularGaugeRange>
+                                    </CircularGaugeRanges>
+                                </CircularGaugeAxis>
+                            </CircularGaugeAxes>
+                      </SfCircularGauge>
+                    }      
+                </ContentTemplate>
+            </AccordionItem>
+            <AccordionItem>
+                <HeaderTemplate>Semi Circular Gauge</HeaderTemplate>
+                <ContentTemplate>
+                     @if (IsInitialRender)
+                     {
+                         <SfCircularGauge Background="transparent" ID="GaugeTwo" @ref="GaugeTwo">
+                            <CircularGaugeTitleStyle FontFamily="inherit"></CircularGaugeTitleStyle>
+                            <CircularGaugeAxes>
+                                <CircularGaugeAxis StartAngle="200" EndAngle="160" Minimum="1" Maximum="100" Radius="80%">
+                                    <CircularGaugeAxisLineStyle Width="0" />
+                                    <CircularGaugeAxisLabelStyle>
+                                        <CircularGaugeAxisLabelFont Size="0px" FontFamily="inherit" />
+                                    </CircularGaugeAxisLabelStyle>
+                                    <CircularGaugeAxisMajorTicks Height="0" />
+                                    <CircularGaugeAxisMinorTicks Height="0" />
+                                    <CircularGaugeRanges>
+                                        <CircularGaugeRange Start="1" End="100" Radius="90%" StartWidth="30" EndWidth="30" Color="#E0E0E0" RoundedCornerRadius="20" />
+                                    </CircularGaugeRanges>
+                                    <CircularGaugePointers>
+                                        <CircularGaugePointer Value="@PointerValue" RoundedCornerRadius="20" Type="PointerType.RangeBar" Radius="90%" Color="@PointerColor" PointerWidth="30">
+                                            <CircularGaugePointerAnimation Enable="false" />
+                                            <CircularGaugePointerBorder Width="0" />
+                                        </CircularGaugePointer>
+                                    </CircularGaugePointers>
+                                    <CircularGaugeAnnotations>
+                                        <CircularGaugeAnnotation Radius="0%" Angle="0" ZIndex="1">
+                                            <ContentTemplate>
+                                                <div class="annotationText">@SliderValueText</div>
+                                            </ContentTemplate>
+                                        </CircularGaugeAnnotation>
+                                        <CircularGaugeAnnotation Angle="0" ZIndex="1" Radius="-100%">
+                                            <ContentTemplate>
+                                                <div class="sliderAlign">
+                                                    <div style="width: 60%;">
+                                                        <div style="margin-left:-80%">
+                                                            <SfSlider TValue="double" ID="gradient_slider" Value="@SliderPointerValue" Type=SliderType.MinRange Min="0" Max="100" Width="250px">
+                                                                <SliderEvents TValue="double" OnChange="RangeStartChange" />
+                                                            </SfSlider>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </ContentTemplate>
+                                        </CircularGaugeAnnotation>
+                                    </CircularGaugeAnnotations>
+                                </CircularGaugeAxis>
+                            </CircularGaugeAxes>
+                        </SfCircularGauge>
+                     }   
+                </ContentTemplate>
+            </AccordionItem>
+        </AccordionItems>
+    </SfAccordion>
+</div>
+<style>
+    @@-moz-document url-prefix() {
+        .e-accordion .e-content table {
+            border-collapse: initial;
+        }
+    }
+    .e-accordion table {
+        width: 100%;
+    }
+    #nested-accordion.e-accordion {
+        padding: 4px;
+    }
+    .e-accordion table th,
+    .e-accordion table td {
+        padding: 5px;
+        border: 1px solid #ddd;
+    }
+    .accordion-control-section {
+        margin: 0 10% 0 10%;
+        padding-bottom: 25px;
+    }
+    .source-link {
+        padding-bottom: 25px;
+    }
+    .annotationText {
+        font-size: 35px;
+        width: 120px;
+        text-align: center;
+        margin-top: -30px;
+        margin-left: -55px
+    }
+    .sliderAlign {
+        height: 70px;
+        width: 250px;
+    }
+    #gradient_slider.e-control.e-slider .e-slider-track {
+        background: -webkit-linear-gradient(left, #ea501a 0, #f79c02 20%, #e5ce20 40%, #a1cb43 60%, #82b944 80%);
+        background: linear-gradient(left, #ea501a 0, #f79c02 20%, #e5ce20 40%, #a1cb43 60%, #82b944 80%);
+        background: -moz-linear-gradient(left, #ea501a 0, #f79c02 20%, #e5ce20 40%, #a1cb43 60%, #82b944 80%);
+    }
+    #gradient_slider.e-control.e-slider .e-range {
+        background-color: transparent;
+    }
+    .e-control-wrapper.e-slider-container #gradient_slider.e-control.e-slider .e-handle {
+        background-color: #fff;
+        border: 2px solid #666;
+    }
+</style>
+@code{
+    SfCircularGauge Gauge;
+    SfCircularGauge GaugeOne;
+    SfCircularGauge GaugeTwo;
+    public bool IsInitialRender { get; set; }
 
+    public double SliderPointerValue = 60;
+    public string PointerColor = "#e5ce20";
+    public double PointerValue = 60;
+    public string SliderValueText = "60/100";
+    private void RangeStartChange(Syncfusion.Blazor.Inputs.SliderChangeEventArgs<double> args)
+    {
+        SliderPointerValue = Convert.ToDouble(args.Value);
+        PointerValue = SliderPointerValue;
+        if (SliderPointerValue >= 0 && SliderPointerValue < 20)
+            PointerColor = "#ea501a";
+        else if (SliderPointerValue >= 20 && SliderPointerValue < 40)
+            PointerColor = "#f79c02";
+        else if (SliderPointerValue >= 40 && SliderPointerValue < 60)
+            PointerColor = "#e5ce20";
+        else if (SliderPointerValue >= 60 && SliderPointerValue < 80)
+            PointerColor = "#a1cb43";
+        else if (SliderPointerValue >= 80 && SliderPointerValue < 100)
+            PointerColor = "#82b944";
+        SliderValueText = SliderPointerValue.ToString() + "/100";
+    }
+
+    public void Created(Object args)
+    {
+        IsInitialRender = true;
+    }
+
+    public void Expand(ExpandedEventArgs args)
+    {
+        if(args.Index == 0)
+        {
+            Gauge.RefreshAsync();
+
+        } else if (args.Index == 1)
+        {
+            GaugeOne.RefreshAsync();
+
+        } else if(args.Index == 2)
+        {
+            GaugeTwo.RefreshAsync();
+        } 
+    }
+}
 
 ```
-![Blazor Circular Gauge inside Accordion component](./images/CircularGauge-with-accordion.png)
+![Blazor Circular Gauge inside Accordion component](./images/blazor-circulargauge-with-accordion.png)
