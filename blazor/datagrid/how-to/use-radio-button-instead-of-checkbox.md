@@ -1,0 +1,62 @@
+---
+layout: post
+title: Use Radio Button instead of Checkbox in Blazor DataGrid | Syncfusion
+description: Learn here all about how to use radio button instead of checkbox in single selection mode in Syncfusion Blazor DataGrid component and more.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+
+# How to Use RadioButton Instead of Checkbox in Single Selection Mode of Grid
+
+Checkbox selection provides an option to select datagrid records with the help of a checkbox in each row. Instead, we can render the radio button for selecting the Grid row. This can be achieved by using the column template feature of the Grid.
+
+In the following sample, the **SfRadioButton** component is rendered in the Grid column. In the [valueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html#Syncfusion_Blazor_Buttons_SfRadioButton_1_ValueChange) event of the [SfRadioButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html), we can select the row using the [selectRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsAsync_System_Double___) method of the Grid based on the row index fetched from the PrimaryKey column value of the Grid. To prevent selection in the Grid by clicking the row, we have enabled the [CheckboxOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CheckboxOnly) property.
+
+```csharp
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+
+<SfGrid @ref="GridInstance" DataSource="@Orders" AllowSelection="true" AllowPaging="true" TValue="Order">
+    <GridSelectionSettings CheckboxOnly="true"></GridSelectionSettings>
+    <GridColumns>
+        <GridColumn>
+             <Template>
+                @{
+                    var PrimaryVal = (context as Order);
+                    <SfRadioButton @ref="Radio"  Name="RadioBtn "Value="@PrimaryVal.CustomerID" ValueChange="ValueChange" TChecked="string"></SfRadioButton>
+                }
+            </Template>
+        </GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"  IsPrimaryKey="true" >
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Order> Orders { get; set; }
+    SfRadioButton<string> Radio;
+    SfGrid<Order> GridInstance;
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 4).Select(x => new Order()
+        {
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[x]
+        }).ToList();
+    }
+    public async void ValueChange(ChangeArgs<string> args)
+    {
+        var index = await GridInstance.GetRowIndexByPrimaryKey(args.Value); //Fetch the row index based on the unique value of RadioButton.
+        GridInstance.SelectRow(index); //Select the corresponding Grid row.
+    }
+
+    public class Order {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+
+```
