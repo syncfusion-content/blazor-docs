@@ -271,7 +271,7 @@ Using the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ## Legend customization
 
-**Legend Shape**
+### Legend Shape
 
 The [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_LegendShape) property in the [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) can be used to change the shape of the legend icon. The default icon shape for legends is [SeriesType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendShape.html#Syncfusion_Blazor_Charts_LegendShape_SeriesType).
 
@@ -318,7 +318,7 @@ The [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ![Changing Legend Shape in Blazor Column Chart](images/legend/blazor-column-chart-legend-shape.png)
 
-**Legend Size**
+### Legend Size
 
 When the legend is placed on the top or bottom of the chart, it takes up 20% - 25% of the chart's height, and 20% - 25% of the chart's width when it is positioned on the left or right side of the chart. So, the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Height) properties can be used to adjust the default legend size.
 
@@ -370,7 +370,7 @@ When the legend is placed on the top or bottom of the chart, it takes up 20% - 2
 
 ![Blazor Column Chart Legend with Custom Size](images/legend/blazor-column-chart-legend-custom-size.png)
 
-**Legend Shape Size**
+### Legend Shape Size
 
 The [ShapeHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ShapeHeight) and [ShapeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ShapeWidth) properties can be used to adjust the dimensions of the legend shape.
 
@@ -421,9 +421,9 @@ The [ShapeHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ![Blazor Column Chart Legend Shape with Custom Size](images/legend/blazor-column-chart-custom-legend-shape-size.png)
 
-**Legend Item Padding**
+### Legend Item Padding
 
-The **ItemPadding** property can be used to adjust the space between the legend items.
+The [ItemPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ItemPadding) property can be used to adjust the space between the legend items.
 
 ```cshtml
 
@@ -471,7 +471,7 @@ The **ItemPadding** property can be used to adjust the space between the legend 
 ![Blazor Column Chart Legend Shape with Item Padding](images/legend/blazor-column-chart-legend-item-padding.png)
 
 
-**Legend Paging**
+### Legend Paging
 
 When the legend items exceed legend bounds, paging will be enabled by default. End user can view each legend item using the navigation buttons to navigate between pages.
 
@@ -524,7 +524,7 @@ When the legend items exceed legend bounds, paging will be enabled by default. E
 
 ![Blazor Column Chart Legend with Paging](images/legend/blazor-column-chart-legend-paging.png)
 
-**Legend Text Wrap**
+### Legend Text Wrap
 
 When the legend text exceeds the container, the text can be wrapped by using [TextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_TextWrap) Property. End user can also wrap the legend text based on the [MaximumLabelWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_MaximumLabelWidth) property.
 
