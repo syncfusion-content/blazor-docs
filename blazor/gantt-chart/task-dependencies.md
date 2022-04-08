@@ -151,7 +151,7 @@ The following screen shot depicts the duration unit support in the predecessor o
 
 The required predecessor types can be configured, in the Gantt component by using the [DependencyTypes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DependencyTypes) property.
 
-You can define the predecessor types in any order. The default order will be FS, SS, FF, and SF. The types can be configured, as per the requirement by using an enum type namely `PredecessorTypes` and the default type will be the type mentioned in the first index of the `DependencyTypes` property.
+You can define the predecessor types in any order. The default order will be FS, SS, FF, and SF. The types can be configured, as per the requirement by using an enum type namely `DependencyType`, and the type mentioned in the first index of the `DependencyTypes` property will be the default type.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -241,7 +241,7 @@ The following screen shot depicts the predecessor configuration support.
 ![Blazor Gantt Chart with predecessor configuration](images/predecessor-configuration.gif)
 
 > NOTE
-> Based on the types configured, respective connector points appears on hovering the taskbar. Also the dropdown-data of type column in the dependency tab of add or edit dialog populates based on the type configured.
+> Based on the types configured, respective connector points appear on hovering the taskbar. Also, the dropdown-data of the type column in the dependency tab of add or edit dialog populates based on the type configured.
 
 ## Limitations
 
