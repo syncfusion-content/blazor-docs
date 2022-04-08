@@ -645,6 +645,61 @@ Learn more about axis label format in-relation to axis types from the pages belo
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
+## Label customization
+
+You can customize the axis labels by using `OnAxisLabelRender` event in this event you can change the `LabelStyle`, `Text`, `Value` 
+
+* [LabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_LabelStyle) – Specifies the font information of the axis label.
+* [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_Text) – Specifies the text to be displayed in the axis label.
+* [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_Value) – Specifies the value of the axis label.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartEvents OnAxisLabelRender="AxisLabelEvent"></ChartEvents>
+	
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class SalesInfo
+    {
+        public string Month { get; set; }
+        public double SalesValue { get; set; }
+    }
+	
+    public List<SalesInfo> Sales = new List<SalesInfo>
+    {
+        new SalesInfo { Month = "Jan", SalesValue = 35 },
+        new SalesInfo { Month = "Feb", SalesValue = 28 },
+        new SalesInfo { Month = "Mar", SalesValue = 34 },
+        new SalesInfo { Month = "Apr", SalesValue = 32 },
+        new SalesInfo { Month = "May", SalesValue = 40 },
+        new SalesInfo { Month = "Jun", SalesValue = 32 },
+        new SalesInfo { Month = "Jul", SalesValue = 35 }
+    };
+
+    public void AxisLabelEvent(AxisLabelRenderEventArgs args)
+    {
+       args.LabelStyle.Color = "Red";
+        if (args.Value == 4)
+        {
+            args.Text = "chart"; 
+        }
+    }
+}
+
+```
+
+![Blazor Column Chart Axis with Label customization](images/axis-labels/blazor-column-chart-label-customization.png)
+
 ## See Also
 
 * [Data Label](./data-labels)

@@ -202,28 +202,9 @@ Refer to the following code, in which the `e-bigger` class is added for enabling
 
 ## Change font size for all components
 
-You can change the font-size for all the components by overriding the CSS in `<style>` 
+You can change the font-size for all the components by overriding the CSS in `<style>` for `e-control` class.
 
-```cshtml
-
-@page "/"
-
-@using Syncfusion.Blazor.Calendars;
-@using Syncfusion.Blazor.Buttons;
-@using Syncfusion.Blazor.Popups;
-
-<div class="e-control">
-    <SfCalendar TValue="DateTime?" Value="@DateValue"></SfCalendar>
-</div>
-
-<div class="e-control">
-    <SfButton> Button </SfButton>
-</div>
-
-<div class="e-control">
-    <SfCheckBox Label="checked" @bind-Checked="isChecked"></SfCheckBox>
-</div>
-
+```css
 <style>
     .e-control, .e-control [class^='e-'], .e-control [class*=' e-'] {
 
@@ -231,11 +212,6 @@ You can change the font-size for all the components by overriding the CSS in `<s
 
     }
 </style>
-
-@code {
-    private bool isChecked = true;
-    public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 28);
-}
 ```
 
 ## See Also
