@@ -233,7 +233,7 @@ You can change the font-size for all the components by overriding the CSS in `<s
 
 @code {
     private bool isChecked = true;
-    public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 28) ;
+    public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 28)  ;
 }
 ```
 
