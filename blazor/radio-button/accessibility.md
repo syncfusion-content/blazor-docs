@@ -16,6 +16,7 @@ RadioButton provides built-in compliance with `WAI-ARIA` specifications. `WAI-AR
 | Properties | Functionality |
 | ------------ | ----------------------- |
 | role | Indicates the type of input element. |
+| aria-checked | Indicates whether the input is checked, unchecked, or represents mixture of checked and unchecked values. |
 | aria-disabled | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable. |
 
 ## Keyboard interaction
