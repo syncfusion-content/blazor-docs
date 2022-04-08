@@ -1,22 +1,21 @@
 ---
 layout: post
-title: How to render Maps component inside the other components | Syncfusion
+title: How to render Maps component inside other components | Syncfusion
 description: How to render Maps component inside the other components.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Render Maps componnet inside the other components
+# Render Maps component inside other components
 
-The Maps can be rendered within components such as the Dashboard Layout, Tabs, Dialog, and others. The rendering of the Maps component begins before the rendering of the other components. These scenarios can be overcome by a boolean value. The boolean value is used to decide the rendering of the Maps component.
+The Maps can be rendered within components such as the Dashboard Layout, Tabs, Dialog, and others. In general, the Maps component renders before other components, so a boolean variable ((i.e. boolean flag) is used to determine when to begin rendering the Maps component.
 
-## Maps component with Dashboard Layout
+## Maps component inside Dashboard Layout
 
-When the Maps component renders within a panel of the Dashboard Layout component, its rendering begins concurrently with the Dashboard Layout component's rendering. So the size of the Maps will not be proper. To properly render the Maps component, a boolean value (i.e. **IsInitialRender**) must be created which is used to decide the rendering of the Maps component. The boolean value is intially **false**. So, the Maps component will not be rendered initially. When the dashboard layout component is first rendered, the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Created) event is fired. In this event, the boolean value must be set as **true** to render the Maps component.
+When the Maps component renders within a panel of the Dashboard Layout component, its rendering begins concurrently with the Dashboard Layout component's rendering. As a result, the size of the Maps component will not be proper. To properly render the Maps component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the Maps component's rendering. The boolean variable is set to **false** by default, so the Maps component will not be rendered initially. When the Dashboard Layout component is rendered, its [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Created) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **true** to initiate the render of the Maps component.
 
-When we drag and resize the panel, the Maps component is not notified of the resize, so the Maps are not rendered properly within the panel. To overcome this scenario, the [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Refresh) method of the Maps component must be called in the Dashboard layout's [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnResizeStop) and [OnWindowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnWindowResize) events. Since the size of the Dashboard layout's panel is determined after a delay, a 1000 milliseconds delay must be provided before refreshing the Maps component.
-
+When you drag and resize the Dashboard Layout's panel, the Maps component is not notified, so the Maps are not properly rendered within the panel. To avoid this scenario, the Maps component's [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Refresh) method must be called in the Dashboard Layout's [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnResizeStop) and [OnWindowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnWindowResize) events. Because the panel size of the Dashboard Layout is determined after a delay, a 1000 millisecond delay must be provided before refreshing the Maps component.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -67,12 +66,11 @@ When we drag and resize the panel, the Maps component is not notified of the res
 }
 
 ```
-![Blazor Maps with Dashboard Layout](../images/maps-with-dashboard-layout.png)
+![Blazor Maps inside Dashboard Layout component](../images/maps-with-dashboard-layout.png)
 
-## Maps component with Tab
+## Maps component inside Tab
 
-When the Maps component renders within the Tab component, its rendering begins concurrently with the Tab component's rendering. So the size of the Maps will not be proper. To properly render the Maps component, a boolean value (i.e. **IsInitialRender**) must be created which is used to decide the rendering of the Maps component. The boolean value is intially **false**. So, the Maps component will not be rendered initially. When the Tab component is first rendered, the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabEvents.html#Syncfusion_Blazor_Navigations_TabEvents_Created) event is fired. In this event, the boolean value must be set as **true** to render the Maps component.
-
+When the Maps component renders within the Tab component, its rendering begins concurrently with the Tab component's rendering. As a result, the size of the Maps component will not be proper. To properly render the Maps component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the Maps component's rendering. The boolean variable is set to **false** by default, so the Maps component will not be rendered initially. When the Tab component is rendered, its [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabEvents.html#Syncfusion_Blazor_Navigations_TabEvents_Created) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **true** to initiate the render of the Maps component.
 
 ```cshtml
 
@@ -154,15 +152,15 @@ When the Maps component renders within the Tab component, its rendering begins c
     {
         IsInitialRender = true;
     }
-    }
+}
 
 ```
-![Blazor Maps with Tab](../images/maps-with-tab.png)
+![Blazor Maps inside Tab component](../images/maps-with-tab.png)
 
 
-## Maps component with Dialog
+## Maps component inside Dialog
 
-When the Maps component renders within the Dialog component, its rendering begins concurrently with the Dialog component's rendering. So the size of the Maps will not be proper. To properly render the Maps component, a boolean value (i.e. **IsInitialRender**) must be created which is used to decide the rendering of the Maps component. The boolean value is intially **false**. So, the Maps component will not be rendered initially. When the Dialog component is first rendered, the [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Opened) event is fired. In this event, the boolean value must be set to **true** to render the Maps component. When the Dialog is closed, the [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Closed) event is fired and the boolean value must be set to **false** in this event.
+When the Maps component renders within the Dialog component, its rendering begins concurrently with the Dialog component's rendering. As a result, the size of the Maps component will not be proper. To properly render the Maps component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the Maps component's rendering. The boolean variable is set to **false** by default, so the Maps component will not be rendered initially. When the Dialog component is being opened, its [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnOpen) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **true** to initiate the render of the Maps component. When the Dialog component is closed, its [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Closed) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **false**.
 
 ```cshtml
 
@@ -220,12 +218,12 @@ When the Maps component renders within the Dialog component, its rendering begin
 }
 
 ```
-![Blazor Maps with Dialog](../images/maps-with-dialog.png)
+![Blazor Maps inside Dialog component](../images/maps-with-dialog.png)
 
 
-## Maps component with Accordion
+## Maps component inside Accordion
 
-When the Maps component renders within the Accordion component, its rendering begins concurrently with the Accordion component's rendering. So the size of the Maps will not be proper. To properly render the Maps component, a boolean value (i.e. **IsInitialRender**) must be created which is used to decide the rendering of the Maps component. The boolean value is intially **false**. So, the Maps component will not be rendered initially. When the Accordion component is first rendered, the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Created) event is fired. In this event, the boolean value must be set as **true** to render the Maps component.
+When the Maps component renders within the Accordion component, its rendering begins concurrently with the Accordion component's rendering. As a result, the size of the Maps component will not be proper. To properly render the Maps component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the Maps component's rendering. The boolean variable is set to **false** by default, so the Maps component will not be rendered initially. When the Accordion component is rendered, its [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Created) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **true** to initiate the render of the Maps component.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -333,4 +331,4 @@ When the Maps component renders within the Accordion component, its rendering be
 }
 
 ```
-![Blazor Maps with Accordion](../images/maps-with-accordion.png)
+![Blazor Maps inside Accordion component](../images/maps-with-accordion.png)
