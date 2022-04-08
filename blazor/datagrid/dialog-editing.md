@@ -137,3 +137,95 @@ In the below example we have changed the dialog's header text and footer button 
 ```
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+
+## Add the default PreventRender value for dialog editing/adding
+
+By default, we have prevented the unnecessary rendering of the Grid component on an external StateHasChanged call. Due to this, any changes made in the Grid Add/Edit dialog form will not reflect changes that are executed dynamically or externally. To dynamically re-render the Grid's Add/Edit form to reflect the changes, we must call the Grid's PreventRender() method with a false argument.
+
+In the following sample, we have rendered the checkbox component in a dialog edit form. By calling the PreventRender() method with a false argument in the [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) event, we can update the checkbox component state.
+
+```cshtml
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Grids
+
+<div class="form-group">
+    <SfCheckBox Label="Option 1" @bind-Checked="@FirstOption"
+                Disabled="SecondOption || ThirdOption" />
+</div>
+<div class="form-group">
+    <SfCheckBox Label="Option 2" @bind-Checked="@SecondOption"
+                Disabled="FirstOption || ThirdOption" />
+</div>
+<div class="form-group">
+    <SfCheckBox Label="Option 3" @bind-Checked="@ThirdOption"
+                Disabled="FirstOption || SecondOption" />
+</div>
+
+
+<div>
+    <SfGrid @ref="MyGrid"
+            DataSource="MyOptList ?? new List<Options>()"
+            TValue="Options"
+            Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update" })">
+        <GridEvents TValue="Options" OnActionComplete="ActionComplete"></GridEvents>
+        <GridEditSettings AllowAdding="true"
+                          AllowEditing="true"
+                          Mode="EditMode.Dialog">
+            <Template>
+                @{
+                    Options MyOpts = (context as Options);
+                }
+                <div class="form-group">
+                    <SfCheckBox Label="Option 1" @bind-Checked="@MyOpts.FirstOption"
+                                Disabled="MyOpts.SecondOption || MyOpts.ThirdOption" />
+                </div>
+                <div class="form-group">
+                    <SfCheckBox Label="Option 2" @bind-Checked="@MyOpts.SecondOption"
+                                Disabled="MyOpts.FirstOption || MyOpts.ThirdOption" />
+                </div>
+                <div class="form-group">
+                    <SfCheckBox Label="Option 3" @bind-Checked="@MyOpts.ThirdOption"
+                                Disabled="MyOpts.FirstOption || MyOpts.SecondOption" />
+                </div>
+            </Template>
+        </GridEditSettings>
+        <GridColumns>
+            <GridColumn Field="@nameof(Options.FirstOption)" HeaderText="First" />
+            <GridColumn Field="@nameof(Options.SecondOption)" HeaderText="Second" />
+            <GridColumn Field="@nameof(Options.ThirdOption)" HeaderText="Third" />
+        </GridColumns>
+    </SfGrid>
+</div>
+
+@code{
+    public SfGrid<Options> MyGrid { get; set; }
+
+    public class Options
+    {
+        public bool FirstOption { get; set; } = false;
+        public bool SecondOption { get; set; } = false;
+        public bool ThirdOption { get; set; } = false;
+    }
+
+    public List<Options> MyOptList = new List<Options>()
+    {
+        new Options(),
+        new Options(),
+        new Options()
+    };
+
+    public void ActionComplete(ActionEventArgs<Options> args)
+    {
+        if (args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Add) || args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.BeginEdit))
+        {
+            MyGrid.PreventRender(false);
+        }
+    }
+
+    public bool FirstOption = false;
+    public bool SecondOption = false;
+    public bool ThirdOption = false;
+}
+```
+
+>  Commenting the PreventRender method in the OnActionComplete event will result in the failure to update the Checkbox component state.
