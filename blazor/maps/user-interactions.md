@@ -272,9 +272,9 @@ The zoom factor range can be adjusted using the [MinZoom](https://help.syncfusio
 </SfMaps>
 ```
 
-### Zooming with animation
+### Zooming with layer animation
 
-To zoom in or zoom out the Maps with animation, use the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_AnimationDuration) property in [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html).
+To zoom in and zoom out the shape maps with animation, set the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_AnimationDuration) property in [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) with duration value in milliseconds. Most importantly, the animation for the layer works when the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_AnimationDuration) is set for the base layer of the Maps and not the sublayer.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
