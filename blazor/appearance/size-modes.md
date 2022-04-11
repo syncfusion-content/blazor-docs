@@ -202,7 +202,7 @@ Refer to the following code, in which the `e-bigger` class is added for enabling
 
 ## Change font size for all components
 
-You can change the font-size for all the components by overriding the CSS in `<style>` for `e-control` class.
+You can change the font-size for all the components by overriding the CSS for `e-control` class as follows. 
 
 ```css
 <style>
