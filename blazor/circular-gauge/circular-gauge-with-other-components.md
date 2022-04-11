@@ -145,20 +145,20 @@ When you drag and resize the Dashboard Layout's panel, the Circular Gauge compon
         IsInitialRender = true;
     }
 
-    public async void ResizingHandler(ResizeArgs args)
+    public async Task ResizingHandler(ResizeArgs args)
     {
-        if(args.Id == "LayoutOne")
+        if (args.Id == "LayoutOne")
         {
             await Task.Delay(100);
-            GaugeOne.Refresh();
+            GaugeOne.RefreshAsync();
         } else if (args.Id == "LayoutTwo")
         {
             await Task.Delay(100);
-            GaugeTwo.Refresh();
-        } else if(args.Id == "LayoutThree")
+            GaugeTwo.RefreshAsync();
+        } else if (args.Id == "LayoutThree")
         {
             await Task.Delay(100);
-            GaugeThree.Refresh();
+            GaugeThree.RefreshAsync();
         }
     }
 }
@@ -372,7 +372,7 @@ When you drag and resize the Dialog component, the Circular Gauge component is n
     public async Task OnResizeStopHandler(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
     {
         await Task.Delay(100);
-        Gauge.Refresh();
+        Gauge.RefreshAsync();
     }
 
     private void DialogOpen(Object args)
@@ -552,9 +552,9 @@ When you expand the Accordion component, the Circular Gauge component is not not
         IsInitialRender = true;
     }
 
-    public void Expand(ExpandedEventArgs args)
+    public async Task Expand(ExpandedEventArgs args)
     {
-        if(args.Index == 0)
+        if (args.Index == 0)
         {
             GaugeOne.RefreshAsync();
 
@@ -562,7 +562,7 @@ When you expand the Accordion component, the Circular Gauge component is not not
         {
             GaugeTwo.RefreshAsync();
 
-        } else if(args.Index == 2)
+        } else if (args.Index == 2)
         {
             GaugeThree.RefreshAsync();
         } 
