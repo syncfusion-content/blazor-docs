@@ -29,17 +29,3 @@ The TextBox supports three types of validation styles namely `error`, `warning`,
 ## Limit no of character count
 
 You can limit the number of characters using the `maxlength` attribute through `HtmlAttribute property` as mentioned in the below code snippet.
-
-```cshtml
-@using Syncfusion.Blazor.Inputs
-
-<SfTextBox  Placeholder='First Name'  HtmlAttributes="@htmlattribute"></SfTextBox>
-
-@code
-{
-    Dictionary<string, object> htmlattribute = new Dictionary<string, object>() 
-    { 
-           { "maxlength", "5" }, 
-    }; 
-}
-```
