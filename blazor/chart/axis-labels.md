@@ -649,9 +649,19 @@ Learn more about axis label format in-relation to axis types from the pages belo
 
 You can customize the axis labels by using [OnAxisLabelRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisLabelRender) event in this event you can change the `LabelStyle`, `Text`, `Value` 
 
-* [LabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_LabelStyle) – Specifies the font information of the axis label.
+* [LabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_LabelStyle) – Specifies the font information of the axis label and it contains the following properties
+
+Properties|Description
+-----|-----
+Color |To customize the color of the text 
+FontFamily |To customize the font
+FontStyle |To customize the text
+FontWeight |To customize the font weight
+Opacity |To customize the transparency of text
+
 * [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_Text) – Specifies the text to be displayed in the axis label.
-* [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_Value) – Specifies the value of the axis label.
+* [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_Value) – Specifies the value of the axis label. For `CategoryAxis` it denotes the `index` of the datapoints and For other axis `Value` denotes the actual value of the datapoints.   
+* [Axis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_Axis) – Specifies the current axis.we can determine whether it is Primary axis or Secondary axis by using `Axis` and if the user wants to give two different color for X axis and Y axis by using this property it is possible   
 
 ```cshtml
 
@@ -688,11 +698,19 @@ You can customize the axis labels by using [OnAxisLabelRender](https://help.sync
 
     public void AxisLabelEvent(AxisLabelRenderEventArgs args)
     {
-       args.LabelStyle.Color = "Red";
-        if (args.Value == 4)
+       if (args.Axis.Name == "PrimaryXAxis")
+        {
+            args.LabelStyle.Color = "Red";
+
+        } else if (args.Axis.Name == "PrimaryYAxis")
+        {
+            args.LabelStyle.Color = "Blue";
+
+        } if (args.Value == 4)
         {
             args.Text = "chart"; 
         }
+       
     }
 }
 
