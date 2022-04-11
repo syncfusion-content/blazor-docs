@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to place Circular Gauge inside other components | Syncfusion
-description: Learn here about how to place Circular Gauge component inside the other components.
+description: Learn here about how to place the Circular Gauge inside other components like Dashboard Layout, Tab, Dialog and Accordion.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
@@ -399,7 +399,7 @@ When you drag and resize the Dialog component, the Circular Gauge component is n
 
 When the Circular Gauge component renders within the Accordion component, its rendering begins concurrently with the Accordion component's rendering. As a result, the size of the Circular Gauge component will not be proper. To properly render the Circular Gauge component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the Circular Gauge component's rendering. The boolean variable is set to **false** by default, so the Circular Gauge component will not be rendered initially. When the Accordion component is rendered, its [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Created) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **true** to initiate the render of the Circular Gauge component.
 
-When you expand the Accordion component, the Circular Gauge component is not notified, so the Circular Gauge is not properly rendered within the Accordion. To avoid this scenario, the Circular Gauge component's `RefreshAsync` method must be called in the Dialog's [Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Expanded) event.
+When you expand the Accordion component, the Circular Gauge component is not notified, so the Circular Gauge is not properly rendered within the Accordion. To avoid this scenario, the Circular Gauge component's `RefreshAsync` method must be called in the Accordion's [Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Expanded) event.
 
 ```cshtml
 

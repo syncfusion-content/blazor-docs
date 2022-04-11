@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to place Maps component inside other components | Syncfusion
-description: Learn here about how to place Maps component inside the other components.
+description: Learn here about how to place the Map inside other components like Dashboard Layout, Tab, Dialog and Accordion.
 platform: Blazor
 control: Maps
 documentation: ug
