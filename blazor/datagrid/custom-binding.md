@@ -772,9 +772,9 @@ The following sample code demonstrates implementing the grouping operation for t
 
 ## How to pass additional parameters to custom adaptor
 
-To send a additional parameter to the data request, use the AddParams method of Query class. Assign the Query object with additional parameters to the DataGrid’s Query property.
+To send an additional parameter to the data request, use the AddParams method of Query class. Assign the Query object with additional parameters to the DataGrid’s Query property.
 
-The following sample code demonstrates sending additional parameters to custom adaptor using the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property of Grid.
+The following sample code demonstrates sending additional parameters to the custom adaptor using the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property of Grid.
 
 ```cshtml
 @using Syncfusion.Blazor
