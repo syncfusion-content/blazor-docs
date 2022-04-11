@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to render Circular Gauge inside other components | Syncfusion
-description: How to render Circular Gauge component inside the other components.
+title: How to place Circular Gauge inside other components | Syncfusion
+description: Learn here about how to place Circular Gauge component inside the other components.
 platform: Blazor
 control: Circular Gauge
 documentation: ug

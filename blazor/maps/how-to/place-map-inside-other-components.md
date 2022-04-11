@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to render Maps component inside other components | Syncfusion
-description: How to render Maps component inside the other components.
+title: How to place Maps component inside other components | Syncfusion
+description: Learn here about how to place Maps component inside the other components.
 platform: Blazor
 control: Maps
 documentation: ug
