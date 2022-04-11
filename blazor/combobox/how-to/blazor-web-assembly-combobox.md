@@ -135,7 +135,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 {% tabs %}
 {% highlight razor %}
 @using Syncfusion.Blazor.DropDowns
-            <SfComboBox TValue="string" TItem="GameFields" PopupHeight="230px" Placeholder="e.g. Basketball" @bind-Value="@ComboBoxValue" DataSource="@Games">
+            <SfComboBox TValue="string" TItem="GameFields" Placeholder="e.g. Basketball" @bind-Value="@ComboBoxValue" DataSource="@Games">
                 <ComboBoxEvents TValue="string" TItem="GameFields" ValueChange="OnChange"/>
                 <ComboBoxFieldSettings Text="Text" Value="ID"/>
             </SfComboBox>
