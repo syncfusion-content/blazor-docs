@@ -110,7 +110,7 @@ When you drag and resize the Dashboard Layout's panel, the Maps component is not
 }
 
 ```
-![Blazor Maps inside Dashboard Layout component](./images/blazor-maps-with-dashboard-layout.png)
+![Blazor Maps inside Dashboard Layout component](../images/blazor-maps-with-dashboard-layout.png)
 
 ## Maps component inside Tab
 
@@ -192,7 +192,7 @@ When the Maps component renders within the Tab component, its rendering begins c
 }
 
 ```
-![Blazor Maps inside Tab component](./images/blazor-maps-with-tab.png)
+![Blazor Maps inside Tab component](../images/blazor-maps-with-tab.png)
 
 
 ## Maps component inside Dialog
@@ -267,7 +267,7 @@ When you drag and resize the Dialog component, the Maps component is not notifie
 }
 
 ```
-![Blazor Maps inside Dialog component](./images/blazor-maps-with-dialog.png)
+![Blazor Maps inside Dialog component](../images/blazor-maps-with-dialog.png)
 
 
 ## Maps component inside Accordion
@@ -400,4 +400,4 @@ When you expand the Accordion component, the Maps component is not notified, so 
 }
 
 ```
-![Blazor Maps inside Accordion component](./images/blazor-maps-with-accordion.png)
+![Blazor Maps inside Accordion component](../images/blazor-maps-with-accordion.png)
