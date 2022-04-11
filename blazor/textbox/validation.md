@@ -26,7 +26,7 @@ The TextBox supports three types of validation styles namely `error`, `warning`,
 
 ![Validation in Blazor TextBox](./images/blazor-textbox-validation.png)
 
-## Limit number of character count
+## Limit no of character count
 
 You can limit the number of characters using the `maxlength` attribute through `HtmlAttribute property` as mentioned in the below code snippet.
 
@@ -35,11 +35,11 @@ You can limit the number of characters using the `maxlength` attribute through `
 
 <SfTextBox  Placeholder='First Name'  HtmlAttributes="@htmlattribute"></SfTextBox>
 
- @code
+@code
 {
- Dictionary<string, object> htmlattribute = new Dictionary<string, object>()
-   {
-       { "maxlength", "5" },
-   };
+    Dictionary<string, object> htmlattribute = new Dictionary<string, object>() 
+    { 
+           { "maxlength", "5" }, 
+    }; 
 }
 ```
