@@ -279,9 +279,7 @@ When you expand the Accordion component, the Maps component is not notified, so 
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
-
 @using Syncfusion.Blazor.Navigations
-@using Syncfusion.Blazor.Maps
 
 <div class="control-section accordion-control-section">
     <SfAccordion>
@@ -402,4 +400,4 @@ When you expand the Accordion component, the Maps component is not notified, so 
 }
 
 ```
-![Blazor Maps inside Accordion component](../images/blazor-maps-with-accordion.png)
+![Blazor Maps inside Accordion component](./images/blazor-maps-with-accordion.png)
