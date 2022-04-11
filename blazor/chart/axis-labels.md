@@ -701,16 +701,14 @@ Opacity |To customize the transparency of text
        if (args.Axis.Name == "PrimaryXAxis")
         {
             args.LabelStyle.Color = "Red";
+             if (args.Value == 4)
+             args.Text = "chart"; 
 
         } else if (args.Axis.Name == "PrimaryYAxis")
         {
             args.LabelStyle.Color = "Blue";
 
-        } if (args.Value == 4)
-        {
-            args.Text = "chart"; 
-        }
-       
+        } 
     }
 }
 
