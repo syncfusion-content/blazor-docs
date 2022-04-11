@@ -28,7 +28,7 @@ The TextBox supports three types of validation styles namely `error`, `warning`,
 
 ## Limit no of character count
 
-You can limit the number of charactors using the `maxlength` attribute through `HtmlAttribute property` as mentioned in the below code snippet.
+You can limit the number of characters using the `maxlength` attribute through `HtmlAttribute property` as mentioned in the below code snippet.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
