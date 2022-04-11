@@ -15,7 +15,7 @@ The Circular Gauge can be rendered within components such as the Dashboard Layou
 
 When the Circular Gauge component renders within a panel of the Dashboard Layout component, its rendering begins concurrently with the Dashboard Layout component's rendering. As a result, the size of the Circular Gauge component will not be proper. To properly render the Circular Gauge component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the Circular Gauge component's rendering. The boolean variable is set to **false** by default, so the Circular Gauge component will not be rendered initially. When the Dashboard Layout component is rendered, its [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Created) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **true** to initiate the render of the Circular Gauge component.
 
-When you drag and resize the Dashboard Layout's panel, the Circular Gauge component is not notified, so the Circular Gauge are not properly rendered within the panel. To avoid this scenario, the Circular Gauge component's [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_RefreshAsync) method must be called in the Dashboard Layout's [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnResizeStop) and [OnWindowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnWindowResize) events. Because the panel size of the Dashboard Layout is determined after a delay, a 1000 millisecond delay must be provided before refreshing the Circular Gauge component.
+When you drag and resize the Dashboard Layout's panel, the Circular Gauge component is not notified, so the Circular Gauge are not properly rendered within the panel. To avoid this scenario, by getting the Id for the specified Dashboard Layout from the arguments in the resize events and the Circular Gauge component's [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_RefreshAsync) method must be called in the Dashboard Layout's [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnResizeStop) and [OnWindowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnWindowResize) events. Because the panel size of the Dashboard Layout is determined after a delay, a 1000 millisecond delay must be provided before refreshing the Circular Gauge component.
 
 ```cshtml
 
@@ -23,7 +23,7 @@ When you drag and resize the Dashboard Layout's panel, the Circular Gauge compon
 @using Syncfusion.Blazor.Layouts
 @using Syncfusion.Blazor.Inputs
 
-<SfDashboardLayout AllowResizing="@AllowResizing"  AllowFloating="@AllowFloating" CellSpacing="@CellSpacing" Columns="@Columns">
+<SfDashboardLayout AllowResizing="true"  AllowFloating="true" CellSpacing="@CellSpacing" Columns="20">
 <DashboardLayoutEvents Created="Created" OnResizeStop="@ResizingHandler" OnWindowResize="@ResizingHandler" Resizing="ResizingHandler"></DashboardLayoutEvents>
     <DashboardLayoutPanels>
         <DashboardLayoutPanel Id="LayoutOne" Row="0" Col="5" SizeX="5" SizeY="7">
@@ -31,7 +31,7 @@ When you drag and resize the Dashboard Layout's panel, the Circular Gauge compon
             <ContentTemplate>
                 @if (IsInitialRender)
                 {
-                     <SfCircularGauge @ref="Gauge" ID="CircularGauge" Background="transparent" Height="100%" Width="100%">
+                     <SfCircularGauge ID="GaugeOne @ref="GaugeOne" ID="CircularGauge" Background="transparent" Height="100%" Width="100%">
                         <CircularGaugeAxes>
                             <CircularGaugeAxis Radius="80%" StartAngle="230" EndAngle="130">
                                 <CircularGaugeAxisLabelStyle Offset="-1">
@@ -60,7 +60,7 @@ When you drag and resize the Dashboard Layout's panel, the Circular Gauge compon
             <ContentTemplate>
                 @if (IsInitialRender)
                 {
-                     <SfCircularGauge ID="GaugeOne" @ref="GaugeOne" Width="100%" Height="100%">
+                     <SfCircularGauge ID="GaugeTwo" @ref="GaugeTwo" Width="100%" Height="100%" MoveToCenter="true">
                             <CircularGaugeAxes>
                                 <CircularGaugeAxis Radius="80%" StartAngle="270" EndAngle="90">
                                     <CircularGaugeAxisLabelStyle Offset="-1">
@@ -88,7 +88,7 @@ When you drag and resize the Dashboard Layout's panel, the Circular Gauge compon
             <ContentTemplate>
                 @if (IsInitialRender)
                 {
-                     <SfCircularGauge Background="transparent" ID="GaugeTwo" @ref="GaugeTwo" Width="100%" Height="100%">
+                     <SfCircularGauge Background="transparent" ID="GaugeThree" @ref="GaugeThree" Width="100%" Height="100%">
                             <CircularGaugeTitleStyle FontFamily="inherit"></CircularGaugeTitleStyle>
                             <CircularGaugeAxes>
                                 <CircularGaugeAxis StartAngle="200" EndAngle="160" Minimum="1" Maximum="100" Radius="80%">
@@ -102,7 +102,7 @@ When you drag and resize the Dashboard Layout's panel, the Circular Gauge compon
                                         <CircularGaugeRange Start="1" End="100" Radius="90%" StartWidth="30" EndWidth="30" Color="#E0E0E0" RoundedCornerRadius="20" />
                                     </CircularGaugeRanges>
                                     <CircularGaugePointers>
-                                        <CircularGaugePointer Value="@PointerValue" RoundedCornerRadius="20" Type="PointerType.RangeBar" Radius="90%" Color="@PointerColor" PointerWidth="30">
+                                        <CircularGaugePointer Value="60" RoundedCornerRadius="20" Type="PointerType.RangeBar" Radius="90%" Color="#e5ce20" PointerWidth="30">
                                             <CircularGaugePointerAnimation Enable="false" />
                                             <CircularGaugePointerBorder Width="0" />
                                         </CircularGaugePointer>
@@ -110,20 +110,7 @@ When you drag and resize the Dashboard Layout's panel, the Circular Gauge compon
                                     <CircularGaugeAnnotations>
                                         <CircularGaugeAnnotation Radius="0%" Angle="0" ZIndex="1">
                                             <ContentTemplate>
-                                                <div class="annotationText">@SliderValueText</div>
-                                            </ContentTemplate>
-                                        </CircularGaugeAnnotation>
-                                        <CircularGaugeAnnotation Angle="0" ZIndex="1" Radius="-100%">
-                                            <ContentTemplate>
-                                                <div class="sliderAlign">
-                                                    <div style="width: 60%;">
-                                                        <div style="margin-left:-80%">
-                                                            <SfSlider TValue="double" ID="gradient_slider" Value="@SliderPointerValue" Type=SliderType.MinRange Min="0" Max="100" Width="250px">
-                                                                <SliderEvents TValue="double" OnChange="RangeStartChange" />
-                                                            </SfSlider>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <div class="annotationText">60/100</div>
                                             </ContentTemplate>
                                         </CircularGaugeAnnotation>
                                     </CircularGaugeAnnotations>
@@ -144,78 +131,35 @@ When you drag and resize the Dashboard Layout's panel, the Circular Gauge compon
         margin-top: -30px;
         margin-left: -55px
     }
-    .sliderAlign {
-        height: 70px;
-        width: 250px;
-    }
-    #gradient_slider.e-control.e-slider .e-slider-track {
-        background: -webkit-linear-gradient(left, #ea501a 0, #f79c02 20%, #e5ce20 40%, #a1cb43 60%, #82b944 80%);
-        background: linear-gradient(left, #ea501a 0, #f79c02 20%, #e5ce20 40%, #a1cb43 60%, #82b944 80%);
-        background: -moz-linear-gradient(left, #ea501a 0, #f79c02 20%, #e5ce20 40%, #a1cb43 60%, #82b944 80%);
-    }
-    #gradient_slider.e-control.e-slider .e-range {
-        background-color: transparent;
-    }
-    .e-control-wrapper.e-slider-container #gradient_slider.e-control.e-slider .e-handle {
-        background-color: #fff;
-        border: 2px solid #666;
-    }
 </style>
-
 @code {
-    public bool IsInitialRender { get; set; }
-    SfCircularGauge Gauge;
     SfCircularGauge GaugeOne;
     SfCircularGauge GaugeTwo;
-    public double[] CellSpacing = { 10, 10 };
-    public bool FloatCheck = true;
-    public bool ResizeCheck = true;
-    public int Columns = 20;
-    public bool AllowFloating { get; set; } = true;
-    public bool AllowResizing { get; set; } = true; 
+    SfCircularGauge GaugeThree;
 
-    public double SliderPointerValue = 60;
-    public string PointerColor = "#e5ce20";
-    public double PointerValue = 60;
-    public string SliderValueText = "60/100";
-    private void RangeStartChange(Syncfusion.Blazor.Inputs.SliderChangeEventArgs<double> args)
-    {
-        SliderPointerValue = Convert.ToDouble(args.Value);
-        PointerValue = SliderPointerValue;
-        if (SliderPointerValue >= 0 && SliderPointerValue < 20)
-            PointerColor = "#ea501a";
-        else if (SliderPointerValue >= 20 && SliderPointerValue < 40)
-            PointerColor = "#f79c02";
-        else if (SliderPointerValue >= 40 && SliderPointerValue < 60)
-            PointerColor = "#e5ce20";
-        else if (SliderPointerValue >= 60 && SliderPointerValue < 80)
-            PointerColor = "#a1cb43";
-        else if (SliderPointerValue >= 80 && SliderPointerValue < 100)
-            PointerColor = "#82b944";
-        SliderValueText = SliderPointerValue.ToString() + "/100";
-    }
+    public bool IsInitialRender { get; set; }
+    public double[] CellSpacing = { 10, 10 };
 
     public async void Created(Object args)
     {
         IsInitialRender = true;
-
     }
 
     public async void ResizingHandler(ResizeArgs args)
     {
         if(args.Id == "LayoutOne")
         {
-            await Task.Delay(1000);
-            Gauge.Refresh();
+            await Task.Delay(200);
+            GaugeOne.Refresh();
         } else if (args.Id == "LayoutTwo")
         {
-            await Task.Delay(1000);
-            GaugeOne.Refresh();
+            await Task.Delay(200);
+            GaugeTwo.Refresh();
         } else if(args.Id == "LayoutThree")
         {
-            await Task.Delay(1000);
-            GaugeTwo.Refresh();
-        }   
+            await Task.Delay(200);
+            GaugeThree.Refresh();
+        }
     }
 }
 
@@ -232,7 +176,7 @@ When the Circular Gauge component renders within the Tab component, its renderin
 @using Syncfusion.Blazor.CircularGauge
 @using Syncfusion.Blazor.Inputs
 
-    <SfTab CssClass="default-tab">
+     <SfTab CssClass="default-tab">
         <TabEvents Created="Created"></TabEvents>
         <TabItems>
             <TabItem>
@@ -242,7 +186,7 @@ When the Circular Gauge component renders within the Tab component, its renderin
                 <ContentTemplate>
                  @if (IsInitialRender)
                  {
-                        <SfCircularGauge @ref="Gauge" ID="CircularGauge" Background="transparent">
+                    <SfCircularGauge @ref="Gauge" ID="CircularGauge" Background="transparent">
                         <CircularGaugeAxes>
                             <CircularGaugeAxis Radius="80%" StartAngle="230" EndAngle="130">
                                 <CircularGaugeAxisLabelStyle Offset="-1">
@@ -273,26 +217,26 @@ When the Circular Gauge component renders within the Tab component, its renderin
                  <ContentTemplate>
                  @if (IsInitialRender)
                  {
-                         <SfCircularGauge ID="GaugeOne">
-                            <CircularGaugeAxes>
-                                <CircularGaugeAxis Radius="80%" StartAngle="270" EndAngle="90">
-                                    <CircularGaugeAxisLabelStyle Offset="-1">
-                                    <CircularGaugeAxisLabelFont FontFamily="inherit"></CircularGaugeAxisLabelFont>
-                                    </CircularGaugeAxisLabelStyle>
-                                    <CircularGaugeAxisLineStyle Width="0" Color="white" />
-                                    <CircularGaugeAxisMajorTicks Offset="15" />
-                                    <CircularGaugeAxisMinorTicks Offset="15" />
-                                    <CircularGaugeRanges>
-                                        <CircularGaugeRange Start="0" End="40" StartWidth="10" EndWidth="10" Color="Red">
-                                        </CircularGaugeRange>
-                                        <CircularGaugeRange Start="40" End="70" StartWidth="10" EndWidth="10" Color="Green">
-                                        </CircularGaugeRange>
-                                        <CircularGaugeRange Start="70" End="100" StartWidth="10" EndWidth="10" Color="Yellow">
-                                        </CircularGaugeRange>
-                                    </CircularGaugeRanges>
-                                </CircularGaugeAxis>
-                            </CircularGaugeAxes>
-                      </SfCircularGauge>
+                    <SfCircularGauge ID="GaugeOne" MoveToCenter="true">
+                        <CircularGaugeAxes>
+                            <CircularGaugeAxis Radius="80%" StartAngle="270" EndAngle="90">
+                                <CircularGaugeAxisLabelStyle Offset="-1">
+                                <CircularGaugeAxisLabelFont FontFamily="inherit"></CircularGaugeAxisLabelFont>
+                                </CircularGaugeAxisLabelStyle>
+                                <CircularGaugeAxisLineStyle Width="0" Color="white" />
+                                <CircularGaugeAxisMajorTicks Offset="15" />
+                                <CircularGaugeAxisMinorTicks Offset="15" />
+                                <CircularGaugeRanges>
+                                    <CircularGaugeRange Start="0" End="40" StartWidth="10" EndWidth="10" Color="Red">
+                                    </CircularGaugeRange>
+                                    <CircularGaugeRange Start="40" End="70" StartWidth="10" EndWidth="10" Color="Green">
+                                    </CircularGaugeRange>
+                                    <CircularGaugeRange Start="70" End="100" StartWidth="10" EndWidth="10" Color="Yellow">
+                                    </CircularGaugeRange>
+                                </CircularGaugeRanges>
+                            </CircularGaugeAxis>
+                        </CircularGaugeAxes>
+                    </SfCircularGauge>
                  }   
                  </ContentTemplate>
             </TabItem>
@@ -317,7 +261,7 @@ When the Circular Gauge component renders within the Tab component, its renderin
                                         <CircularGaugeRange Start="1" End="100" Radius="90%" StartWidth="30" EndWidth="30" Color="#E0E0E0" RoundedCornerRadius="20" />
                                     </CircularGaugeRanges>
                                     <CircularGaugePointers>
-                                        <CircularGaugePointer Value="@PointerValue" RoundedCornerRadius="20" Type="PointerType.RangeBar" Radius="90%" Color="@PointerColor" PointerWidth="30">
+                                        <CircularGaugePointer Value="60" RoundedCornerRadius="20" Type="PointerType.RangeBar" Radius="90%" Color="#e5ce20" PointerWidth="30">
                                             <CircularGaugePointerAnimation Enable="false" />
                                             <CircularGaugePointerBorder Width="0" />
                                         </CircularGaugePointer>
@@ -325,20 +269,7 @@ When the Circular Gauge component renders within the Tab component, its renderin
                                     <CircularGaugeAnnotations>
                                         <CircularGaugeAnnotation Radius="0%" Angle="0" ZIndex="1">
                                             <ContentTemplate>
-                                                <div class="annotationText">@SliderValueText</div>
-                                            </ContentTemplate>
-                                        </CircularGaugeAnnotation>
-                                        <CircularGaugeAnnotation Angle="0" ZIndex="1" Radius="-100%">
-                                            <ContentTemplate>
-                                                <div class="sliderAlign">
-                                                    <div style="width: 60%;">
-                                                        <div style="margin-left:-80%">
-                                                            <SfSlider TValue="double" ID="gradient_slider" Value="@SliderPointerValue" Type=SliderType.MinRange Min="0" Max="100" Width="250px">
-                                                                <SliderEvents TValue="double" OnChange="RangeStartChange" />
-                                                            </SfSlider>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <div class="annotationText">60/100</div>
                                             </ContentTemplate>
                                         </CircularGaugeAnnotation>
                                     </CircularGaugeAnnotations>
@@ -359,54 +290,17 @@ When the Circular Gauge component renders within the Tab component, its renderin
         margin-top: -30px;
         margin-left: -55px
     }
-    .sliderAlign {
-        height: 70px;
-        width: 250px;
-    }
-    #gradient_slider.e-control.e-slider .e-slider-track {
-        background: -webkit-linear-gradient(left, #ea501a 0, #f79c02 20%, #e5ce20 40%, #a1cb43 60%, #82b944 80%);
-        background: linear-gradient(left, #ea501a 0, #f79c02 20%, #e5ce20 40%, #a1cb43 60%, #82b944 80%);
-        background: -moz-linear-gradient(left, #ea501a 0, #f79c02 20%, #e5ce20 40%, #a1cb43 60%, #82b944 80%);
-    }
-    #gradient_slider.e-control.e-slider .e-range {
-        background-color: transparent;
-    }
-    .e-control-wrapper.e-slider-container #gradient_slider.e-control.e-slider .e-handle {
-        background-color: #fff;
-        border: 2px solid #666;
-    }
 </style>
 
 @code{
     SfCircularGauge Gauge;
     public bool IsInitialRender { get; set; }
 
-     public double SliderPointerValue = 60;
-    public string PointerColor = "#e5ce20";
-    public double PointerValue = 60;
-    public string SliderValueText = "60/100";
-    private void RangeStartChange(Syncfusion.Blazor.Inputs.SliderChangeEventArgs<double> args)
-    {
-        SliderPointerValue = Convert.ToDouble(args.Value);
-        PointerValue = SliderPointerValue;
-        if (SliderPointerValue >= 0 && SliderPointerValue < 20)
-            PointerColor = "#ea501a";
-        else if (SliderPointerValue >= 20 && SliderPointerValue < 40)
-            PointerColor = "#f79c02";
-        else if (SliderPointerValue >= 40 && SliderPointerValue < 60)
-            PointerColor = "#e5ce20";
-        else if (SliderPointerValue >= 60 && SliderPointerValue < 80)
-            PointerColor = "#a1cb43";
-        else if (SliderPointerValue >= 80 && SliderPointerValue < 100)
-            PointerColor = "#82b944";
-        SliderValueText = SliderPointerValue.ToString() + "/100";
-    }
-
     public void Created()
     {
         IsInitialRender = true;
     }
-    }
+}
 
 ```
 ![Blazor Circular Gauge inside Tab component](./images/blazor-circulargauge-with-tab.png)
@@ -415,6 +309,8 @@ When the Circular Gauge component renders within the Tab component, its renderin
 ## Circular Gauge component inside Dialog
 
 When the Circular Gauge component renders within the Dialog component, its rendering begins concurrently with the Dialog component's rendering. As a result, the size of the Circular Gauge component will not be proper. To properly render the Circular Gauge component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the Circular Gauge component's rendering. The boolean variable is set to **false** by default, so the Circular Gauge component will not be rendered initially. When the Dialog component is being opened, its [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnOpen) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **true** to initiate the render of the Circular Gauge component. When the Dialog component is closed, its [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Closed) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **false**.
+
+When you drag and resize the Dialog component, the Circular Gauge component is not notified, so the Circular Gauge are not properly rendered within the dialog. To avoid this scenario, the Circular Gauge component's [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_RefreshAsync) method must be called in the Dialog [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnResizeStop) and [Resizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Resizing) events. Because the panel size of the Dialog is determined after a delay, a 100 millisecond delay must be provided before refreshing the Circular Gauge component.
 
 ```cshtml
 
@@ -434,7 +330,7 @@ When the Circular Gauge component renders within the Dialog component, its rende
             <Header>Circular Gauge</Header>
             <Content> 
                 @if(IsInitialRender)
-                {  
+                {
                    <SfCircularGauge @ref="Gauge" ID="CircularGauge" Background="transparent" Height="100%" Width="100%">
                         <CircularGaugeAxes>
                             <CircularGaugeAxis Radius="80%" StartAngle="230" EndAngle="130">
@@ -455,7 +351,7 @@ When the Circular Gauge component renders within the Dialog component, its rende
                                 </CircularGaugePointers>
                             </CircularGaugeAxis>
                         </CircularGaugeAxes>
-                    </SfCircularGauge>
+                    </SfCircularGauge>  
                 }
             </Content>
         </DialogTemplates>
@@ -475,7 +371,7 @@ When the Circular Gauge component renders within the Dialog component, its rende
 
     public async Task OnResizeStopHandler(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
     {
-        await Task.Delay(3000);
+        await Task.Delay(100);
         Gauge.Refresh();
     }
 
@@ -503,6 +399,8 @@ When the Circular Gauge component renders within the Dialog component, its rende
 
 When the Circular Gauge component renders within the Accordion component, its rendering begins concurrently with the Accordion component's rendering. As a result, the size of the Circular Gauge component will not be proper. To properly render the Circular Gauge component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the Circular Gauge component's rendering. The boolean variable is set to **false** by default, so the Circular Gauge component will not be rendered initially. When the Accordion component is rendered, its [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Created) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **true** to initiate the render of the Circular Gauge component.
 
+When you expand the Accordion component, the Circular Gauge component is not notified, so the Circular Gauge are not properly rendered within the accordion. To avoid this scenario, by getting the index for the specified accordion from the arguments in the expand events and the Circular Gauge component's [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_RefreshAsync) method must be called in the Dialog [Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Expanded) events.
+
 ```cshtml
 
 @using Syncfusion.Blazor.Navigations
@@ -518,7 +416,7 @@ When the Circular Gauge component renders within the Accordion component, its re
                 <ContentTemplate>
                  @if (IsInitialRender)
                  {
-                    <SfCircularGauge @ref="Gauge" ID="CircularGauge" Background="transparent" Width="100%">
+                    <SfCircularGauge ID="GaugeOne" @ref="GaugeOne" ID="CircularGauge" Background="transparent" Width="100%">
                         <CircularGaugeAxes>
                             <CircularGaugeAxis Radius="80%" StartAngle="230" EndAngle="130">
                                 <CircularGaugeAxisLabelStyle Offset="-1">
@@ -538,7 +436,7 @@ When the Circular Gauge component renders within the Accordion component, its re
                                 </CircularGaugePointers>
                             </CircularGaugeAxis>
                         </CircularGaugeAxes>
-                    </SfCircularGauge>
+                    </SfCircularGauge>   
                  }
                 </ContentTemplate>
             </AccordionItem>
@@ -547,7 +445,7 @@ When the Circular Gauge component renders within the Accordion component, its re
                 <ContentTemplate>
                     @if (IsInitialRender)
                     {
-                        <SfCircularGauge ID="GaugeOne" @ref="GaugeOne">
+                        <SfCircularGauge ID="GaugeTwo" @ref="GaugeTwo" MoveToCenter="true" Width="100%">
                             <CircularGaugeAxes>
                                 <CircularGaugeAxis Radius="80%" StartAngle="270" EndAngle="90">
                                     <CircularGaugeAxisLabelStyle Offset="-1">
@@ -566,16 +464,16 @@ When the Circular Gauge component renders within the Accordion component, its re
                                     </CircularGaugeRanges>
                                 </CircularGaugeAxis>
                             </CircularGaugeAxes>
-                      </SfCircularGauge>
+                        </SfCircularGauge>
                     }      
                 </ContentTemplate>
             </AccordionItem>
             <AccordionItem>
-                <HeaderTemplate>Semi Circular Gauge</HeaderTemplate>
+                <HeaderTemplate>Arc Gauge</HeaderTemplate>
                 <ContentTemplate>
                      @if (IsInitialRender)
                      {
-                         <SfCircularGauge Background="transparent" ID="GaugeTwo" @ref="GaugeTwo">
+                        <SfCircularGauge Background="transparent" ID="GaugeThree" @ref="GaugeThree" Width="100%">
                             <CircularGaugeTitleStyle FontFamily="inherit"></CircularGaugeTitleStyle>
                             <CircularGaugeAxes>
                                 <CircularGaugeAxis StartAngle="200" EndAngle="160" Minimum="1" Maximum="100" Radius="80%">
@@ -589,7 +487,7 @@ When the Circular Gauge component renders within the Accordion component, its re
                                         <CircularGaugeRange Start="1" End="100" Radius="90%" StartWidth="30" EndWidth="30" Color="#E0E0E0" RoundedCornerRadius="20" />
                                     </CircularGaugeRanges>
                                     <CircularGaugePointers>
-                                        <CircularGaugePointer Value="@PointerValue" RoundedCornerRadius="20" Type="PointerType.RangeBar" Radius="90%" Color="@PointerColor" PointerWidth="30">
+                                        <CircularGaugePointer Value="60" RoundedCornerRadius="20" Type="PointerType.RangeBar" Radius="90%" Color="#e5ce20" PointerWidth="30">
                                             <CircularGaugePointerAnimation Enable="false" />
                                             <CircularGaugePointerBorder Width="0" />
                                         </CircularGaugePointer>
@@ -597,27 +495,14 @@ When the Circular Gauge component renders within the Accordion component, its re
                                     <CircularGaugeAnnotations>
                                         <CircularGaugeAnnotation Radius="0%" Angle="0" ZIndex="1">
                                             <ContentTemplate>
-                                                <div class="annotationText">@SliderValueText</div>
-                                            </ContentTemplate>
-                                        </CircularGaugeAnnotation>
-                                        <CircularGaugeAnnotation Angle="0" ZIndex="1" Radius="-100%">
-                                            <ContentTemplate>
-                                                <div class="sliderAlign">
-                                                    <div style="width: 60%;">
-                                                        <div style="margin-left:-80%">
-                                                            <SfSlider TValue="double" ID="gradient_slider" Value="@SliderPointerValue" Type=SliderType.MinRange Min="0" Max="100" Width="250px">
-                                                                <SliderEvents TValue="double" OnChange="RangeStartChange" />
-                                                            </SfSlider>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <div class="annotationText">60/100</div>
                                             </ContentTemplate>
                                         </CircularGaugeAnnotation>
                                     </CircularGaugeAnnotations>
                                 </CircularGaugeAxis>
                             </CircularGaugeAxes>
                         </SfCircularGauge>
-                     }   
+                    }   
                 </ContentTemplate>
             </AccordionItem>
         </AccordionItems>
@@ -654,49 +539,13 @@ When the Circular Gauge component renders within the Accordion component, its re
         margin-top: -30px;
         margin-left: -55px
     }
-    .sliderAlign {
-        height: 70px;
-        width: 250px;
-    }
-    #gradient_slider.e-control.e-slider .e-slider-track {
-        background: -webkit-linear-gradient(left, #ea501a 0, #f79c02 20%, #e5ce20 40%, #a1cb43 60%, #82b944 80%);
-        background: linear-gradient(left, #ea501a 0, #f79c02 20%, #e5ce20 40%, #a1cb43 60%, #82b944 80%);
-        background: -moz-linear-gradient(left, #ea501a 0, #f79c02 20%, #e5ce20 40%, #a1cb43 60%, #82b944 80%);
-    }
-    #gradient_slider.e-control.e-slider .e-range {
-        background-color: transparent;
-    }
-    .e-control-wrapper.e-slider-container #gradient_slider.e-control.e-slider .e-handle {
-        background-color: #fff;
-        border: 2px solid #666;
-    }
 </style>
 @code{
-    SfCircularGauge Gauge;
     SfCircularGauge GaugeOne;
     SfCircularGauge GaugeTwo;
-    public bool IsInitialRender { get; set; }
+    SfCircularGauge GaugeThree;
 
-    public double SliderPointerValue = 60;
-    public string PointerColor = "#e5ce20";
-    public double PointerValue = 60;
-    public string SliderValueText = "60/100";
-    private void RangeStartChange(Syncfusion.Blazor.Inputs.SliderChangeEventArgs<double> args)
-    {
-        SliderPointerValue = Convert.ToDouble(args.Value);
-        PointerValue = SliderPointerValue;
-        if (SliderPointerValue >= 0 && SliderPointerValue < 20)
-            PointerColor = "#ea501a";
-        else if (SliderPointerValue >= 20 && SliderPointerValue < 40)
-            PointerColor = "#f79c02";
-        else if (SliderPointerValue >= 40 && SliderPointerValue < 60)
-            PointerColor = "#e5ce20";
-        else if (SliderPointerValue >= 60 && SliderPointerValue < 80)
-            PointerColor = "#a1cb43";
-        else if (SliderPointerValue >= 80 && SliderPointerValue < 100)
-            PointerColor = "#82b944";
-        SliderValueText = SliderPointerValue.ToString() + "/100";
-    }
+    public bool IsInitialRender { get; set; }
 
     public void Created(Object args)
     {
@@ -707,15 +556,15 @@ When the Circular Gauge component renders within the Accordion component, its re
     {
         if(args.Index == 0)
         {
-            Gauge.RefreshAsync();
+            GaugeOne.RefreshAsync();
 
         } else if (args.Index == 1)
         {
-            GaugeOne.RefreshAsync();
+            GaugeTwo.RefreshAsync();
 
         } else if(args.Index == 2)
         {
-            GaugeTwo.RefreshAsync();
+            GaugeThree.RefreshAsync();
         } 
     }
 }
