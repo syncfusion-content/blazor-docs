@@ -309,7 +309,7 @@ The ComboBox allows the users to give input as custom value, which is not requir
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor ComboBox with Custom Values](./images/blazor-combobox-custom-values.png)
+![Custom ComboBox control in Blazor](./images/blazor-combobox-custom-values.png)
 
 ## Configure the popup list
 
@@ -334,3 +334,5 @@ By default, the width of the popup list automatically adjusts according to the C
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli/)
 * [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio/)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli/)
+
+> You can also explore our [Blazor ComboBox example](https://blazor.syncfusion.com/demos/combobox/default-functionalities) that shows how to bind data to the ComboBox control in Blazor.
