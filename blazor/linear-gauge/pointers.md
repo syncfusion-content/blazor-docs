@@ -183,9 +183,9 @@ Multiple pointers can be added to the Linear Gauge by adding multiple [LinearGau
 
 ![Blazor Linear Gauge with Multiple Pointers](images/blazor-linear-gauge-multiple-pointer.png)
 
-## Pointer animation
+## Pointer Animation
 
-Pointer is animated on loading the gauge. This can be handled using the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html#Syncfusion_Blazor_LinearGauge_LinearGaugePointer_AnimationDuration) property. The duration of the animation can be specified in milliseconds.
+When the gauge is initially loaded and when the pointer value is changed dynamically, the pointer is animated. The [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html#Syncfusion_Blazor_LinearGauge_LinearGaugePointer_AnimationDuration) property in the LinearGaugePointer can be used to customize the duration of the animation, and it must be specified in milliseconds. NOTE: Even if animation is turned on, it does not work when the pointer is dragged.
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
