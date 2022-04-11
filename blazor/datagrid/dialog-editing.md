@@ -140,9 +140,9 @@ In the below example we have changed the dialog's header text and footer button 
 
 ## Add the default PreventRender value for dialog editing/adding
 
-By default, we have prevented the unnecessary rendering of the Grid component on an external StateHasChanged call. Due to this, any changes made in the Grid Add/Edit dialog form will not reflect changes that are executed dynamically or externally. To dynamically re-render the Grid's Add/Edit form to reflect the changes, we must call the Grid's PreventRender() method with a false argument.
+By default, the unnecessary rendering of the Grid component on an external StateHasChanged call is prevented. Due to this, any changes made in the Grid Add/Edit dialog form will not reflect changes that are executed dynamically or externally. To dynamically re-render the Grid's Add/Edit form to reflect the changes, you must call the Grid's PreventRender() method with a false argument.
 
-In the following sample, we have rendered the checkbox component in a dialog edit form. By calling the PreventRender() method with a false argument in the [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) event, we can update the checkbox component state.
+In the following sample, the checkbox component is rendered in a dialog edit form. By calling the PreventRender() method with a false argument in the [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) event, you can update the checkbox component state.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -228,4 +228,4 @@ In the following sample, we have rendered the checkbox component in a dialog edi
 }
 ```
 
->  Commenting the PreventRender method in the OnActionComplete event will result in the failure to update the Checkbox component state.
+>  Commenting the PreventRender method in the [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) event will result in the failure to update the Checkbox component state.
