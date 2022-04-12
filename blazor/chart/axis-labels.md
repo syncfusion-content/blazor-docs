@@ -714,6 +714,77 @@ You can customize the axis labels by using [OnAxisLabelRender](https://help.sync
 
 ![Blazor Column Chart Axis with Label customization](images/axis-labels/blazor-column-chart-label-customization.png)
 
+## Label customization using event
+
+You can customize the axis labels by using [OnAxisLabelRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisLabelRender) event. Below properties in event args can be used to customize the label rendering. 
+
+* [LabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_LabelStyle) – Specifies the font information of the axis label with following properties,
+
+	|Properties|Description|
+	|-----|-----|
+	|Color |To customize the color of the text. |
+	|FontFamily |To customize the font family of label. |
+	|FontStyle |To customize the font style. |
+	|FontWeight |To customize the font weight.|
+	|Opacity |To customize the transparency of text.|
+
+* [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_Text) – Get or sets the text to be displayed in the axis label. You can change the text based on `Value` and `Axis` properties.
+* [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_Value) – Specifies the value of the axis label. For `CategoryAxis`, it denotes the index of the datapoints and for numerix and date time axis `Value` denotes the actual value of the datapoints.   
+* [Axis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_Axis) – Specifies the axis for which labels are rendering.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartEvents OnAxisLabelRender="AxisLabelEvent"></ChartEvents>
+	
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class SalesInfo
+    {
+        public string Month { get; set; }
+        public double SalesValue { get; set; }
+    }
+	
+    public List<SalesInfo> Sales = new List<SalesInfo>
+    {
+        new SalesInfo { Month = "Jan", SalesValue = 35 },
+        new SalesInfo { Month = "Feb", SalesValue = 28 },
+        new SalesInfo { Month = "Mar", SalesValue = 34 },
+        new SalesInfo { Month = "Apr", SalesValue = 32 },
+        new SalesInfo { Month = "May", SalesValue = 40 },
+        new SalesInfo { Month = "Jun", SalesValue = 32 },
+        new SalesInfo { Month = "Jul", SalesValue = 35 }
+    };
+
+    public void AxisLabelEvent(AxisLabelRenderEventArgs args)
+    {
+       if (args.Axis.Name == "PrimaryXAxis")
+        {
+            args.LabelStyle.Color = "Red";
+             if (args.Value == 4)
+             args.Text = "chart"; 
+
+        } else if (args.Axis.Name == "PrimaryYAxis")
+        {
+            args.LabelStyle.Color = "Blue";
+
+        } 
+    }
+}
+
+```
+
+![Blazor Column Chart Axis with Label customization](images/axis-labels/blazor-column-chart-label-customization.png)
+
 ## See Also
 
 * [Data Label](./data-labels)

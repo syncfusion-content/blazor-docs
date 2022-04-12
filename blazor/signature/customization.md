@@ -9,11 +9,11 @@ documentation: ug
 
 # Customization of Signature component
 
-The Signature component draws stroke/path to connect one or more points while drawing in canvas. This path is drawn with moveTo() and lineTo() method. We can able to customize the stroke by modifying its color and width. And the background of the signature also customizable by using its color and image.
+The Signature component draws stroke/path using moveTo() and lineTo() methods to connect one or more points while drawing in canvas. The stroke width can be modified by using its color and width. And the background can be modified by using its background color and background image.
 
 ## Stroke Width
 
-The stroke width depends on the [`MaxStrokeWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_MaxStrokeWidth), [`MinStrokeWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_MinStrokeWidth) and [`Velocity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_Velocity) values. And the variable stroke width is calculated based on the values of MaxStrokeWidth and MinStrokeWidth for smoother signature and velocity value is used for realistic signature.
+The variable stroke width is based on the values of [`MaxStrokeWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_MaxStrokeWidth), [`MinStrokeWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_MinStrokeWidth) and [`Velocity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_Velocity) for smoother and realistic signature. The default value of minimum stroke width is set as 0.5, maximum stroke width is set as 2.5 and velocity is set as 0.7.
 
 In the following example, minimum stroke width is set as 0.5, maximum stroke width is set as 3 and velocity is set as 0.7.
 
@@ -27,7 +27,7 @@ In the following example, minimum stroke width is set as 0.5, maximum stroke wid
 
 ## Stroke Color
 
-Specify [`StrokeColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_StrokeColor) property to set color of a stroke that accepts hex value, RGB, and text. The default value of this property is "#000000".
+Color of the stroke can be specified by using [`StrokeColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_StrokeColor) property and it accepts hexadecimal code, RGB, and text. The default value of this property is “#000000”.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -78,7 +78,7 @@ Specify [`StrokeColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ## Background Color
 
-Specify [`BackgroundColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_BackgroundColor) property to set a background color of a signature that accepts hex code, RGB, and text.
+Background color of a signature can be specified by using [`BackgroundColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_BackgroundColor) property and it accepts hexadecimal code, RGB, and text. The default value of this property is “#ffffff”.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -129,7 +129,7 @@ Specify [`BackgroundColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ## Background Image
 
-Specify [`BackgroundImage`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_BackgroundImage) property to set the background image of a signature. The background image can be set by either hosting the image in our local IIS or online image.
+Background image of a signature can be specified by using [`BackgroundImage`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSignature.html#Syncfusion_Blazor_Inputs_SfSignature_BackgroundImage) property. The background image can be set by either hosting the image in our local IIS or online image.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
