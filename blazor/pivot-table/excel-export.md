@@ -165,6 +165,32 @@ The Excel export provides an option to change file name of the document before e
 
 ![Changing Blazor PivotTable File Name while Exporting](images/blazor-pivottable-change-excel-file-name.png)
 
+## Customize the cell value
+
+You can customize the cell value during excel export by using `ExcelQueryCellInfo` event.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+
+@code{
+  public void ExcelQueryCellInfo(ExcelQueryCellInfoEventArgs<ProductDetails> args)
+      {
+        if(args.Column.Index > 0)
+          {
+            if(Convert.ToInt32(args.Value) > 1000)
+              {
+                 args.Cell.Value = "Completed";
+               }
+            else if(Convert.ToInt32(args.Value) < 1000)
+            {
+             args.Cell.Value = "Pending";
+             }
+        }
+      }
+    }
+
+```
+
 ## CSV Export
 
 The Excel export allows pivot table data to be exported in **CSV** file format as well. To enable CSV export in the pivot table, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowExcelExport) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class as **true**. Once the API is set, user needs to call the [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_CsvExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method for exporting on external button click.
