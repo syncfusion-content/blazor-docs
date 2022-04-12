@@ -52,22 +52,3 @@ You can specify absolute URL in the [Url](https://help.syncfusion.com/cr/blazor/
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-absolute-url.png)
 
-## Enable navigation for last Breadcrumb item
-
-Breadcrumb enables the navigation for the last item by setting the [EnableActiveItemNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableActiveItemNavigation) property as `true`. In the following example, the navigation is enabled for last Breadcrumb item.
-
-```cshtml
-@using Syncfusion.Blazor.Navigations
-
-<SfBreadcrumb EnableActiveItemNavigation="true">
-    <BreadcrumbItems>
-        <BreadcrumbItem Text="Home" Url="https://blazor.syncfusion.com/documentation/breadcrumb/introduction"></BreadcrumbItem>
-        <BreadcrumbItem Text="Getting" Url="https://blazor.syncfusion.com/documentation/breadcrumb/getting-started"></BreadcrumbItem>
-        <BreadcrumbItem Text="Icons" Url="https://blazor.syncfusion.com/documentation/breadcrumb/icons"></BreadcrumbItem>
-        <BreadcrumbItem Text="Navigation" Url="https://blazor.syncfusion.com/documentation/breadcrumb/navigation"></BreadcrumbItem>
-        <BreadcrumbItem Text="Overflow" Url="https://blazor.syncfusion.com/documentation/breadcrumb/overflow"></BreadcrumbItem>
-    </BreadcrumbItems>
-</SfBreadcrumb>
-```
-
-![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-enable-navigation.png)
