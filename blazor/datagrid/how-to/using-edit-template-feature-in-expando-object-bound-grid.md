@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ExpandoObject Bound Grid in Blazor DataGrid Component | Syncfusion
-description: Learn here all about using edit template feature in expando object bound in Syncfusion Blazor DataGrid component and more.
+description: Learn here all about using edit template feature in ExpandoObject bound grid in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
