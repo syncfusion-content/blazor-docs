@@ -200,20 +200,6 @@ Refer to the following code, in which the `e-bigger` class is added for enabling
 > [View sample in GitHub](https://github.com/SyncfusionExamples/size-mode-in-blazor-application)
 
 
-## Change font size for all components
-
-You can change the font-size for all the components by overriding the CSS for `e-control` class as follows. 
-
-```css
-<style>
-    .e-control, .e-control [class^='e-'], .e-control [class*=' e-'] {
-
-    font-size:1rem;
-
-    }
-</style>
-```
-
 ## See Also
 
 Refer below topics to learn about responsiveness components based on available size in Syncfusion Blazor Components.
