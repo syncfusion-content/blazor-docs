@@ -746,6 +746,39 @@ The following image represents AutoFit column by method
 
 > You can autofit all the columns by invoking the **AutoFitColumns** method without column names.
 
+### Autofit columns while using column chooser
+
+When changing the column visibility using `ColumnChooser`, you can invoke the **AutoFitColumnsAsync** method in the [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event with RequestType of ColumnState to auto fit the columns.
+
+```cshtml
+
+@using Syncfusion.Blazor.Grids;
+
+<SfGrid @ref="Grid" DataSource="@Employees" ShowColumnChooser="true" Toolbar=@ToolbarItems>
+    <GridEvents OnActionComplete="Complete" TValue="EmployeeData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Center" HeaderText="Employee ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.HireDate) HeaderText="Hire Date" Format="d" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public string[] ToolbarItems = new string[] { "ColumnChooser" };
+    SfGrid<EmployeeData> Grid{ get; set; }
+    public async Task Complete(ActionEventArgs<EmployeeData> Args)
+    {
+        if(Args.RequestType == Syncfusion.Blazor.Grids.Action.ColumnState)
+        {
+            await Task.Delay(200);
+            await Grid.AutoFitColumnsAsync();
+        }
+    }
+
+```
+
 ## Responsive columns
 
 You can toggle column visibility based on media queries. This can be achieved by defining Media Queries in the [HideAtMedia](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HideAtMedia) Column property. The [HideAtMedia](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HideAtMedia) accepts valid [Media Queries](http://cssmediaqueries.com/what-are-css-media-queries.html).

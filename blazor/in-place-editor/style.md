@@ -53,3 +53,22 @@ Use the following CSS to customize the default In-place Editor's action buttons.
     background-color: antiquewhite;
 }
 ```
+
+## Customizing the In-place Editor outer style
+
+```css
+/* To remove the default bottom underline */
+.e-inplaceeditor .e-editable-value-container .e-editable-value {
+    border-bottom: none;
+}
+/* To change background color and border radius of in-place editor container */
+.e-inplaceeditor .e-editable-value-container {
+    background: #e9ecef;
+    border-radius: 4px;
+}
+/* To show the edit icon */
+.e-inplaceeditor .e-editable-value-container .e-editable-overlay-icon {
+    visibility: visible;
+}
+
+```
