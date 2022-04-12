@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Use Radio Button instead of Checkbox in Blazor DataGrid | Syncfusion
+title: Use radio button instead of checkbox in Blazor DataGrid | Syncfusion
 description: Learn here all about how to use radio button instead of checkbox in single selection mode in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# How to Use RadioButton Instead of Checkbox in a Grid Selection
+# How to Use Radio Button Instead of Checkbox in a Grid Selection
 
 Checkbox selection provides an option to select datagrid records with the help of a checkbox in each row.Instead, you can render the radio button for selecting the Grid row. This can be achieved by using the column template feature of the Grid.
 
@@ -24,7 +24,7 @@ In the following sample, the **SfRadioButton** component is rendered in the Grid
             <Template>
                 @{
                     var PrimaryVal = (context as Order);
-                    <SfRadioButton @ref="Radio"  Name="RadioBtn "Value="@PrimaryVal.CustomerID" ValueChange="ValueChange" TChecked="string"></SfRadioButton>
+                    <SfRadioButton @ref="RadioButtonInstance"  Name="RadioBtn "Value="@PrimaryVal.CustomerID" ValueChange="ValueChange" TChecked="string"></SfRadioButton>
                 }
             </Template>
         </GridColumn>
@@ -38,7 +38,7 @@ In the following sample, the **SfRadioButton** component is rendered in the Grid
 
 @code {
     public List<Order> Orders { get; set; }
-    SfRadioButton<string> Radio;
+    SfRadioButton<string> RadioButtonInstance;
     SfGrid<Order> GridInstance;
 
     protected override void OnInitialized()
