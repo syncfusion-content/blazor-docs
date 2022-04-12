@@ -147,84 +147,54 @@ In the following sample, the checkbox component is rendered in a dialog edit for
 ```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
-
-<div class="form-group">
-    <SfCheckBox Label="Option 1" @bind-Checked="@FirstOption"
-                Disabled="SecondOption || ThirdOption" />
-</div>
-<div class="form-group">
-    <SfCheckBox Label="Option 2" @bind-Checked="@SecondOption"
-                Disabled="FirstOption || ThirdOption" />
-</div>
-<div class="form-group">
-    <SfCheckBox Label="Option 3" @bind-Checked="@ThirdOption"
-                Disabled="FirstOption || SecondOption" />
-</div>
-
-
-<div>
-    <SfGrid @ref="MyGrid"
-            DataSource="MyOptList ?? new List<Options>()"
-            TValue="Options"
-            Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update" })">
-        <GridEvents TValue="Options" OnActionComplete="ActionComplete"></GridEvents>
-        <GridEditSettings AllowAdding="true"
-                          AllowEditing="true"
-                          Mode="EditMode.Dialog">
-            <Template>
-                @{
-                    Options MyOpts = (context as Options);
-                }
-                <div class="form-group">
-                    <SfCheckBox Label="Option 1" @bind-Checked="@MyOpts.FirstOption"
-                                Disabled="MyOpts.SecondOption || MyOpts.ThirdOption" />
-                </div>
-                <div class="form-group">
-                    <SfCheckBox Label="Option 2" @bind-Checked="@MyOpts.SecondOption"
-                                Disabled="MyOpts.FirstOption || MyOpts.ThirdOption" />
-                </div>
-                <div class="form-group">
-                    <SfCheckBox Label="Option 3" @bind-Checked="@MyOpts.ThirdOption"
-                                Disabled="MyOpts.FirstOption || MyOpts.SecondOption" />
-                </div>
-            </Template>
-        </GridEditSettings>
-        <GridColumns>
-            <GridColumn Field="@nameof(Options.FirstOption)" HeaderText="First" />
-            <GridColumn Field="@nameof(Options.SecondOption)" HeaderText="Second" />
-            <GridColumn Field="@nameof(Options.ThirdOption)" HeaderText="Third" />
-        </GridColumns>
-    </SfGrid>
-</div>
+<SfGrid @ref="GridInstance" DataSource="@Orders" TValue="Order" Toolbar="@(new List<string>() { "Edit", "Delete", "Update" })">
+    <GridEvents TValue="Order" OnActionComplete="ActionComplete"></GridEvents>
+    <GridEditSettings AllowEditing="true" Mode="EditMode.Dialog">
+        <Template>
+            @{
+                Order MyOpts = (context as Order);
+            }
+            <div class="form-group">
+                <SfCheckBox Label="Option 1" @bind-Checked="@MyOpts.IsAdd" Disabled="MyOpts.IsDelete" />
+            </div>
+            <div class="form-group">
+                <SfCheckBox Label="Option 2" @bind-Checked="@MyOpts.IsDelete" Disabled="MyOpts.IsAdd" />
+            </div>
+        </Template>
+    </GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="CustomerID" HeaderText="Customer ID" IsPrimaryKey="true"/>
+        <GridColumn Field="IsAdd" HeaderText="Is Add" />
+        <GridColumn Field="IsDelete" HeaderText="Is Delete" />
+    </GridColumns>
+</SfGrid>
 
 @code{
-    public SfGrid<Options> MyGrid { get; set; }
+    public SfGrid<Order> GridInstance { get; set; }
+    public List<Order> Orders { get; set; }
 
-    public class Options
+    public class Order
     {
-        public bool FirstOption { get; set; } = false;
-        public bool SecondOption { get; set; } = false;
-        public bool ThirdOption { get; set; } = false;
+        public string CustomerID { get; set; }
+        public bool IsAdd { get; set; } = false;
+        public bool IsDelete { get; set; } = false;
     }
-
-    public List<Options> MyOptList = new List<Options>()
+    protected override void OnInitialized()
     {
-        new Options(),
-        new Options(),
-        new Options()
-    };
-
-    public void ActionComplete(ActionEventArgs<Options> args)
-    {
-        if (args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Add) || args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.BeginEdit))
+        Orders = Enumerable.Range(1, 4).Select(x => new Order()
         {
-            MyGrid.PreventRender(false);
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[x],
+            IsAdd = false,
+            IsDelete = false,
+        }).ToList();
+    }
+    public void ActionComplete(ActionEventArgs<Order> args)
+    {
+        if (args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.BeginEdit) || args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
+        {
+            GridInstance.PreventRender(false);
         }
     }
-
-    public bool FirstOption = false;
-    public bool SecondOption = false;
-    public bool ThirdOption = false;
 }
 ```
 
