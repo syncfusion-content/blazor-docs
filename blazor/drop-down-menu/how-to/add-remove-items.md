@@ -9,7 +9,7 @@ documentation: ug
 
 # Add and Remove Items in Blazor Dropdown Menu Component
 
-Dropdown Menu component can be dynamically add or remove items using  `AddItems`, `RemoveItems` method.
+Dropdown Menu component can dynamically add or remove items using the `AddItems` and `RemoveItems` methods.
 
 The following example illustrates how to add and remove items in Dropdown Menu component.
 

@@ -7,7 +7,7 @@ control: DropDown List
 documentation: ug
 ---
 
-# Style and appearance in Blazor DropDown List Component
+# Style and Appearance in Blazor DropDown List Component
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
@@ -101,9 +101,9 @@ Use the following CSS to add the mandatory indicator * to the float label elemen
 }
 ```
 
-## Customizing the background color of focus, hover, and active item's
+## Customizing the background color of focus, hover, and active items
 
-Use the following CSS to customize the background color of focus, hover and active item's.
+Use the following CSS to customize the background color of focus, hover, and active items.
 
 ```css
 .e-dropdownbase .e-list-item.e-item-focus, .e-dropdownbase .e-list-item.e-active, .e-dropdownbase .e-list-item.e-active.e-hover, .e-dropdownbase .e-list-item.e-hover {

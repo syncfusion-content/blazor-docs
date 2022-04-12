@@ -289,7 +289,7 @@ You can customize the font family, font size, and color of the data label by usi
 
 ### Format
 
-You can change the format of the data label, such as currency, decimal, percent etc. by using `Format` property.
+You can change the format of the data label, such as currency, decimal, percent, etc. by using the `Format` property.
 
 ```cshtml
 

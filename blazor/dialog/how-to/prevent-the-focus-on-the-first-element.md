@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Prevent the focus on the first element in Blazor Dialog | Syncfusion
-description: Learn here all about Prevent the focus on the first element in Syncfusion Blazor Dialog component and more.
+description: Learn here all about Preventing the focus on the first element in Syncfusion Blazor Dialog component and more.
 platform: Blazor
 control: Dialog
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 By default, the Blazor dialog focuses on the first elements of the content area which can be active and focusable. You can prevent this default focusing behavior using the `Opened` event and by enabling the `PreventFocus` argument.
 
-Bind the Opened event and enable the PreventFocus argument within an event like the below example.
+Bind the Opened event and enable the PreventFocus argument within an event like the following example.
 
 ```cshtml
 

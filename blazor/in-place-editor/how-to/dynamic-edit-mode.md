@@ -7,7 +7,7 @@ control: In Place Editor
 documentation: ug
 ---
 
-# Dynamically move In-place Editor to edit mode in Blazor
+# Dynamically Move In-place Editor to Edit Mode in Blazor
 
 At component initial load, you can open the editor state without interacting with the In-place Editor input element by configuring the `EnableEditMode` property to `true`.
 

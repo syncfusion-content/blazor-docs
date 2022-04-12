@@ -85,7 +85,7 @@ The following properties are available in the [AccumulationTextRenderEventArgs](
 
     public void DataLabelRenderEvent(AccumulationTextRenderEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -136,14 +136,14 @@ The following properties are available in the [AccumulationLegendRenderEventArgs
 
     public void LegendRenderEvent(AccumulationLegendRenderEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
 
 ## OnPointRender
 
-[OnPointRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnPointRender) event triggers, before each points for the accumulation chart is rendered.
+[OnPointRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnPointRender) event triggers before each point for the accumulation chart is rendered.
 
 ### Arguments
 
@@ -183,7 +183,7 @@ The following properties are available in the [AccumulationPointRenderEventArgs]
 
     public void PointRenderEvent(AccumulationPointRenderEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -236,14 +236,14 @@ The following field is available in the [ExportEventArgs](https://help.syncfusio
 
     public void ExportCompleteEvent(ExportEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
 
 ## OnPrintComplete
 
-`OnPrintComplete` event triggers, after printing the accumulation chart
+`OnPrintComplete` event triggers after printing the accumulation chart.
 
 ```cshtml 
 @using Syncfusion.Blazor.Charts
@@ -282,7 +282,7 @@ The following field is available in the [ExportEventArgs](https://help.syncfusio
 
     public void PrintCompleteEvent()
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -330,7 +330,7 @@ The following fields are available in the [AccumulationResizeEventArgs](https://
 
     public void SizeChangedEvent(AccumulationResizeEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -370,7 +370,7 @@ The following fields are available in the [AccumulationResizeEventArgs](https://
 
     public void LoadHandler(AccumulationLoadedEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -423,14 +423,14 @@ The following fields are available in the [AccumulationPointEventArgs](https://h
 
     public void PointClick(AccumulationPointEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
 
 ## TooltipRender
 
-[TooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_TooltipRender) event triggers, before the tooltip for series is rendered.
+[TooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_TooltipRender) event triggers before the tooltip for series is rendered.
 
 ### Arguments
 
@@ -472,7 +472,7 @@ The following property is available in the [TooltipRenderEventArgs](https://help
 
     public void TooltipRenderEvent(TooltipRenderEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```

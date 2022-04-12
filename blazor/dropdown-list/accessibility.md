@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor DropDown List Component
 
-The DropDownList component has been designed, keeping in mind the `WAI-ARIA` specifications, and applies the WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
+The DropDownList component has been designed, keeping in mind the `WAI-ARIA` specifications, and applied the WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
 
 ## ARIA attributes
 
@@ -22,7 +22,7 @@ The DropDownList component uses the `Listbox` role, and each list item has an `o
 | aria-selected | Indicates the selected option. |
 | aria-readonly | Indicates the readonly state of the DropDownList element. |
 | aria-disabled | Indicates whether the DropDownList component is in a disabled state or not. |
-| aria-activedescendent | This attribute holds the ID of the active list item  to focus its descendant child element. |
+| aria-activedescendent | This attribute holds the ID of the active list item to focus its descendant child element. |
 | aria-owns | This attribute contains the ID of the popup list to indicate popup as a child element. |
 
 ## Keyboard interaction

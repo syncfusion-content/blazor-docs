@@ -23,7 +23,7 @@ This section explains the list of events of the Input Mask component which will 
 @code {
     private void BlurHandler(MaskBlurEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -40,7 +40,7 @@ This section explains the list of events of the Input Mask component which will 
 @code {
     private void CreatedHandler(Object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -57,7 +57,7 @@ This section explains the list of events of the Input Mask component which will 
 @code {
     private void DestroyedHandler(Object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -74,7 +74,7 @@ This section explains the list of events of the Input Mask component which will 
 @code {
     private void FocusHandler(MaskFocusEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -91,7 +91,7 @@ This section explains the list of events of the Input Mask component which will 
 @code {
     private void ValueChangeHandler(MaskChangeEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -108,7 +108,7 @@ This section explains the list of events of the Input Mask component which will 
 @code {
     private void ValueChangedHandler(String args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```

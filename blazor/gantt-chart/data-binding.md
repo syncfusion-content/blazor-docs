@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in Blazor Gantt Chart Component
 
-The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) uses [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports both RESTful JSON data services binding and IEnumerable binding. The `DataSource` value can be assigned either with the property values from [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) or list of business objects.
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) uses [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports both RESTful JSON data services binding and IEnumerable binding. The `DataSource` value can be assigned either with the property values from `SfDataManager` or list of business objects.
 It supports the following kinds of data binding method:
 
 * List binding
@@ -19,7 +19,7 @@ It supports the following kinds of data binding method:
 
 ## List binding
 
-To bind list binding to the Gantt component, you can assign a IEnumerable object to the `DataSource` property. The list data source can also be provided as an instance of the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using[SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
+To bind list binding to the Gantt component, you can assign a IEnumerable object to the `DataSource` property. The list data source can also be provided as an instance of the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using `SfDataManager` component.
 
 ### Hierarchical data Binding
 
@@ -33,7 +33,7 @@ The `Child` property is used to map the child records in hierarchical data. The 
 </SfGantt>
 
 @code{
-public List<TaskData> TaskCollection { get; set; }
+private List<TaskData> TaskCollection { get; set; }
 protected override void OnInitialized()
 {
     this.TaskCollection = GetTaskCollection();
@@ -53,64 +53,8 @@ public class TaskData
 public static List<TaskData> GetTaskCollection()
 {
     List<TaskData> Tasks = new List<TaskData>() {
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify Site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 40,
-                },
-                new TaskData() {
-                    TaskId = 4,
-                    TaskName = "Soil test approval",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30
-                },
-            })
-        },
-        new TaskData() {
-            TaskId = 5,
-            TaskName = "Project estimation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 6,
-                    TaskName = "Develop floor plan for estimation",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 7,
-                    TaskName = "List materials",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 40
-                },
-                new TaskData() {
-                    TaskId = 8,
-                    TaskName = "Estimation approval",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "0",
-                    Progress = 30,
-                }
-            })
-        }
+        new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), SubTasks = (new List <TaskData> () { new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, }, new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, }, new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30 }, }) },
+        new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), SubTasks = (new List <TaskData> () { new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, }, new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40 }, new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, } }) }
     };
     return Tasks;
 }
@@ -136,7 +80,7 @@ The Gantt Chart component can be bound with self-referential data by mapping the
 </SfGantt>
 
 @code{
-    public List<TaskData> TaskCollection { get; set; }
+    private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -155,67 +99,14 @@ The Gantt Chart component can be bound with self-referential data by mapping the
 
     public static List <TaskData> GetTaskCollection() {
     List <TaskData> Tasks = new List <TaskData> () {
-
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21)
-        },
-        new TaskData() {
-            TaskId = 2,
-            TaskName = "Identify Site location",
-            StartDate = new DateTime(2019, 04, 02),
-            Duration = "0",
-            Progress = 30,
-            ParentId = 1
-        },
-        new TaskData() {
-            TaskId = 3,
-            TaskName = "Perform soil test",
-            StartDate = new DateTime(2019, 04, 02),
-            Duration = "4",
-            Progress = 40,
-            ParentId = 1
-        },
-        new TaskData() {
-            TaskId = 4,
-            TaskName = "Soil test approval",
-            StartDate = new DateTime(2019, 04, 02),
-            Duration = "0",
-            Progress = 30,
-            ParentId = 1
-        },
-        new TaskData() {
-            TaskId = 5,
-            TaskName = "Project estimation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21)
-        },
-        new TaskData() {
-            TaskId = 6,
-            TaskName = "Develop floor plan for estimation",
-            StartDate = new DateTime(2019, 04, 04),
-            Duration = "3",
-            Progress = 30,
-            ParentId = 5
-        },
-        new TaskData() {
-            TaskId = 7,
-            TaskName = "List materials",
-            StartDate = new DateTime(2019, 04, 04),
-            Duration = "3",
-            Progress = 40,
-            ParentId = 5
-        },
-        new TaskData() {
-            TaskId = 8,
-            TaskName = "Estimation approval",
-            StartDate = new DateTime(2019, 04, 04),
-            Duration = "0",
-            Progress = 30,
-            ParentId = 5
-        }
+        new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21) },
+        new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+        new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1 },
+        new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+        new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21) },
+        new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
+        new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
+        new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
     };
     return Tasks;
 }
@@ -248,11 +139,11 @@ Gantt Chart is a generic component which is strongly bound to a model type. Ther
 
 @code {
     SfGantt<DynamicDictionary> GanttChart;
-    public string NumberFormat = "C";
-    public static List<DynamicDictionary> Data = new List<DynamicDictionary>();
-    public List<DynamicDictionary> GanttDynamicData { get; set; }
-    public static int ParentRecordID { get; set; }
-    public static int ChildRecordID { get; set; }
+    private string NumberFormat = "C";
+    private static List<DynamicDictionary> Data = new List<DynamicDictionary>();
+    private List<DynamicDictionary> GanttDynamicData { get; set; }
+    private static int ParentRecordID { get; set; }
+    private static int ChildRecordID { get; set; }
 
     protected override void OnInitialized()
     {
@@ -267,7 +158,7 @@ Gantt Chart is a generic component which is strongly bound to a model type. Ther
         for (var i = 1; i <= 10; i++)
         {
             Random ran = new Random();
-            DateTime start = new DateTime(2021, 01, 07);
+            DateTime start = new DateTime(2022, 01, 07);
             int range = (DateTime.Today - start).Days;
             DateTime startingDate = start.AddDays(ran.Next(range));
             dynamic ParentRecord = new DynamicDictionary();
@@ -288,7 +179,7 @@ Gantt Chart is a generic component which is strongly bound to a model type. Ther
         for (var i = 1; i < 4; i++)
         {
             Random ran = new Random();
-            DateTime start = new DateTime(2021, 01, 07);
+            DateTime start = new DateTime(2022, 01, 07);
             int range = (DateTime.Today - start).Days;
             DateTime startingDate = start.AddDays(ran.Next(range));
             dynamic ChildRecord = new DynamicDictionary();
@@ -344,14 +235,14 @@ ExpandoObject can be bound to Gantt by assigning to the `DataSource` property. G
 
 @code {
     SfGantt<ExpandoObject> Gantt;
-    public List<ExpandoObject> TreeData { get; set; }
+    private List<ExpandoObject> TreeData { get; set; }
     protected override void OnInitialized()
     {
         this.TreeData = GetData().ToList();
     }
-    public static List<ExpandoObject> Data = new List<ExpandoObject>();
-    public static int ParentRecordID { get; set; }
-    public static int ChildRecordID { get; set; }
+    private static List<ExpandoObject> Data = new List<ExpandoObject>();
+    private static int ParentRecordID { get; set; }
+    private static int ChildRecordID { get; set; }
     public static List<ExpandoObject> GetData()
     {
         Data.Clear();
@@ -360,7 +251,7 @@ ExpandoObject can be bound to Gantt by assigning to the `DataSource` property. G
         for (var i = 1; i <= 60; i++)
         {
             Random ran = new Random();
-            DateTime start = new DateTime(2020, 06, 07);
+            DateTime start = new DateTime(2022, 03, 07);
             int range = (DateTime.Today - start).Days;
             DateTime startingDate = start.AddDays(ran.Next(range));
             dynamic ParentRecord = new ExpandoObject();
@@ -380,7 +271,7 @@ ExpandoObject can be bound to Gantt by assigning to the `DataSource` property. G
         for (var i = 1; i < 4; i++)
         {
             Random ran = new Random();
-            DateTime start = new DateTime(2020, 06, 07);
+            DateTime start = new DateTime(2022, 03, 07);
             int range = (DateTime.Today - start).Days;
             DateTime startingDate = start.AddDays(ran.Next(range));
             dynamic ChildRecord = new ExpandoObject();
@@ -424,7 +315,7 @@ checkboxState | Specifies the checkbox state of a record
 
 ## Remote Data
 
-To bind remote data to Gantt component, assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the `DataSource` property or by using[SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component. To interact with remote data source, provide the endpoint **Url**.
+To bind remote data to Gantt component, assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the `DataSource` property or by using `SfDataManager` component. To interact with remote data source, provide the endpoint **Url**.
 
  > When using [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding,  the **TValue** must be provided explicitly in the Gantt component.
 > By default, [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **ODataAdaptor** for remote data-binding.
@@ -479,8 +370,8 @@ The following sample code demonstrates sending additional paramaters using the Q
 </SfGantt>
 
 @code{
-    public string ParamValue = "true";
-    public Query GanttQuery { get; set; }
+    private string ParamValue = "true";
+    private Query GanttQuery { get; set; }
 
     protected override void OnInitialized() {
         GanttQuery = new Query().AddParams("ej2gantt", ParamValue);
@@ -528,7 +419,7 @@ The following sample code demonstrates notifying user when server-side exception
 </style>
 
 @code{
-    public string ErrorDetails = "";
+    private string ErrorDetails = "";
     public class TaskData
     {
         public int TaskId { get; set; }

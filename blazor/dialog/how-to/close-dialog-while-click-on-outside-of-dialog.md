@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Close Blazor Dialog  when clicking outside of its region | Syncfusion
+title: Close Blazor Dialog when clicking outside of its region | Syncfusion
 description: Learn here all about closing the Blazor Dialog Component when clicking outside of its region and more.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Close Blazor Dialog Component when clicking outside of its region
+# Close Blazor Dialog Component When Clicking Outside of Its Region
 
 By default, dialog can be closed by pressing `Esc` key and clicking the close icon at the right of dialog header. It can also be closed by clicking outside of the dialog using `Visible` property. Set the `CloseOnEscape` property value to `false` to prevent closing of the dialog when pressing `Esc` key.
 

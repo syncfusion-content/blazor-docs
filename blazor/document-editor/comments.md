@@ -46,3 +46,36 @@ You can delete all the comments in the document using [`DeleteAllCommentsAsync`]
 ```csharp
 container.DocumentEditor.Editor.DeleteAllCommentsAsync();
 ```
+
+## Protect the document in comments only mode
+
+Document Editor provides support for protecting the document with `CommentsOnly` protection. In this protection, user allowed to add or edit comments alone in the document.
+
+Document editor provides an option to protect and unprotect document using [`EnforceProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_EnforceProtectionAsync_System_String_Syncfusion_Blazor_DocumentEditor_ProtectionType_) and [`StopProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_StopProtectionAsync_System_String_) API.
+
+The following example code illustrates how to enforce and stop protection in Document editor container.
+
+```csharp
+@using Syncfusion.Blazor.DocumentEditor
+
+<button @onclick="protectDocument">Protection</button>
+<SfDocumentEditorContainer @ref="container" EnableToolbar=true></SfDocumentEditorContainer>
+
+@code {
+
+    SfDocumentEditorContainer container;
+    protected void protectDocument(object args)
+    {
+        //enforce protection
+        container.DocumentEditor.Editor.EnforceProtectionAsync("123", ProtectionType.CommentsOnly);
+        //stop the document protection
+        container.DocumentEditor.Editor.StopProtectionAsync("123");
+    }
+}
+```
+
+Comment only protection can be enabled in UI by using `Restrict Editing pane`
+
+![Enable comment only protection](images/commentsonly.png)
+
+>Note: In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly`. In stop protection method, parameter denotes the password.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Render a dialog header dynamically in Blazor Dialog | Syncfusion
-description: Learn here all about Render a dialog header dynamically in Syncfusion Blazor Dialog component and more.
+description: Learn here all about rendering a dialog header dynamically in Syncfusion Blazor Dialog component and more.
 platform: Blazor
 control: Dialog
 documentation: ug

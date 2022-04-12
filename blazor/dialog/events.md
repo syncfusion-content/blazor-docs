@@ -26,7 +26,7 @@ This section explains the list of events of the Dialog component which will be t
 
     public void CreatedHandler(Object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -47,7 +47,7 @@ This section explains the list of events of the Dialog component which will be t
 
     public void OpenedHandler(OpenEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -68,7 +68,7 @@ This section explains the list of events of the Dialog component which will be t
 
     public void OnOpenHandler(BeforeOpenEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -89,7 +89,7 @@ This section explains the list of events of the Dialog component which will be t
 
     public void ClosedHandler(CloseEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -110,7 +110,7 @@ This section explains the list of events of the Dialog component which will be t
 
     public void OnCloseHandler(BeforeCloseEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -131,7 +131,7 @@ This section explains the list of events of the Dialog component which will be t
 
     public void OnDragStartHandler(DragStartEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -152,7 +152,7 @@ This section explains the list of events of the Dialog component which will be t
 
     public void OnDragStopHandler(DragStopEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -173,7 +173,7 @@ This section explains the list of events of the Dialog component which will be t
 
     public void OnDragHandler(DragEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -194,7 +194,7 @@ This section explains the list of events of the Dialog component which will be t
 
     public void OnOverlayModalClickHandler(OverlayModalClickEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -215,7 +215,7 @@ This section explains the list of events of the Dialog component which will be t
 
     public void OnResizeStartHandler(MouseEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -236,7 +236,7 @@ This section explains the list of events of the Dialog component which will be t
 
     public void ResizingHandler(MouseEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -257,7 +257,7 @@ This section explains the list of events of the Dialog component which will be t
 
     public void OnResizeStopHandler(MouseEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -278,7 +278,7 @@ This section explains the list of events of the Dialog component which will be t
 
     public void DestroyedHandler(Object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 

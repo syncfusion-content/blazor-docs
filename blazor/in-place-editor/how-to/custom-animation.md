@@ -7,7 +7,7 @@ control: In Place Editor
 documentation: ug
 ---
 
-# Custom Animation for popup mode in Blazor In-place Editor Component
+# Custom Animation for Popup Mode in Blazor In-place Editor Component
 
 In popup mode, the In-place Editor is rendered with the Blazor `Tooltip` component. You can use the tooltip properties and events to customize the popup by configuring properties using the `InPlaceEditorPopupSettings` tag.
 

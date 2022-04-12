@@ -13,7 +13,7 @@ In [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gant
 
 ## Resource collection
 
-The resource collection contains details about resources that are used in the project. Resources are a list of TResources objects that contain id, name, and unit of the resources, and this collection is mapped to the Gantt Chart component using the `GanttResourceFields.Resources` property. Id, name, and unit field of the resources are mapped by using the `GanttResourceFields.Id`, `GanttResourceFields.Name`, and `GanttResourceFields.Unit` properties. The following code snippets show resource collection and how it is assigned to the Gantt Chart component.
+The resource collection contains details about resources that are used in the project. Resources are a list of TResources objects that contain id, name, and unit of the resources, and this collection is mapped to the Gantt Chart component using the [GanttResourceFields.Resources](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResourceFields-1.html#Syncfusion_Blazor_Gantt_GanttResourceFields_1_Resources) property. Id, name, and unit field of the resources are mapped by using the `GanttResourceFields.Id`, `GanttResourceFields.Name`, and `GanttResourceFields.Unit` properties. The following code snippets show resource collection and how it is assigned to the Gantt Chart component.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -34,10 +34,10 @@ The resource collection contains details about resources that are used in the pr
 </SfGantt>
 
 @code{
-    public DateTime ProjectStart = new DateTime(2019, 03, 25);
-    public DateTime ProjectEnd = new DateTime(2019, 05, 10);
-    public List<TaskData> TaskCollection { get; set; }
-    public List<ResourceAlloacteData> ResourceCollection { get; set; }
+    private DateTime ProjectStart = new DateTime(2022, 03, 25);
+    private DateTime ProjectEnd = new DateTime(2022, 05, 10);
+    private List<TaskData> TaskCollection { get; set; }
+    private List<ResourceAlloacteData> ResourceCollection { get; set; }
 
     protected override void OnInitialized()
     {
@@ -81,73 +81,14 @@ The resource collection contains details about resources that are used in the pr
     }
     public static List <TaskData> GetTaskCollection() {
         List <TaskData> Tasks = new List <TaskData> () {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2019, 03, 28),
-                EndDate = new DateTime(2019, 07, 28),
-                Duration="4"
-            },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2019, 03, 29),
-                Progress = 30,
-                ParentId = 1,
-                Duration="2",
-                Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=1, Unit=70} ,new ResourceAlloacteData() { ResourceId=6} }
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2019, 03, 29),
-                Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=2} ,new ResourceAlloacteData() { ResourceId=3} },
-                ParentId = 1,
-                Duration="4"
-            },
-            new TaskData() {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2019, 03, 29),
-                Duration = "1",
-                Progress = 30,
-                ParentId = 1,
-                Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=8} ,new ResourceAlloacteData() { ResourceId=9} }
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2019, 03, 29),
-                EndDate = new DateTime(2019, 04, 2),
-                Duration="4"
-            },
-            new TaskData() {
-                TaskId = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2019, 03, 29),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5,
-                Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4} }
-            },
-            new TaskData() {
-                TaskId = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2019, 04, 01),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5,
-                Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4},new ResourceAlloacteData() { ResourceId=8} },
-
-            },
-            new TaskData() {
-                TaskId = 8,
-                TaskName = "Estimation approval",
-                StartDate = new DateTime(2019, 04, 01),
-                Duration = "2",
-                ParentId = 5,
-                Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId= 12},new ResourceAlloacteData() { ResourceId= 5} },
-            }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 03, 28), EndDate = new DateTime(2022, 07, 28), Duration="4" },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 03, 29), Progress = 30, ParentId = 1, Duration="2", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=1, Unit=70} ,new ResourceAlloacteData() { ResourceId=6} } },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 03, 29), Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=2} ,new ResourceAlloacteData() { ResourceId=3} }, ParentId = 1, Duration="4" },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 03, 29), Duration = "1", Progress = 30, ParentId = 1, Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=8} ,new ResourceAlloacteData() { ResourceId=9} } },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 03, 29), EndDate = new DateTime(2022, 04, 2), Duration="4" },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 03, 29), Duration = "3", Progress = 30, ParentId = 5, Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4} } },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 01), Duration = "3", Progress = 30, ParentId = 5, Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4},new ResourceAlloacteData() { ResourceId=8} }, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 01), Duration = "2", ParentId = 5, Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId= 12},new ResourceAlloacteData() { ResourceId= 5} }, }
         };
         return Tasks;
     }
@@ -156,7 +97,7 @@ The resource collection contains details about resources that are used in the pr
 
 ## Assign resource
 
-You can assign resources for a task at initial load by using the resource id value of the resources as a collection. This collection is mapped from the dataSource to the Gantt Chart component using the `GanttTaskFields.ResourceInfo` property.
+You can assign resources for a task at initial load by using the resource id value of the resources as a collection. This collection is mapped from the dataSource to the Gantt Chart component using the [GanttTaskFields.ResourceInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_ResourceInfo) property.
 
 * Gantt TValue for Resource mapping collection name should be the same as `GanttTaskFields.ResourceInfo`.
 * Gantt Resource mapping collection should have the value for Id. Both Name and Unit values are optional.
@@ -170,7 +111,7 @@ You can assign the quantity of work done by the resources for the specific task 
 new TaskData() {
     TaskId = 2,
     TaskName = "Identify Site location",
-    StartDate = new DateTime(2019, 03, 29),
+    StartDate = new DateTime(2022, 03, 29),
     Progress = 30,
     ParentId = 1,
     Duration="2",
@@ -203,10 +144,10 @@ The following code snippet shows how to assign the resource for each task and ma
 </SfGantt>
 
 @code{
-    public DateTime ProjectStart = new DateTime(2019, 03, 25);
-    public DateTime ProjectEnd = new DateTime(2019, 05, 10);
-    public List<TaskData> TaskCollection { get; set; }
-    public List<ResourceAlloacteData> ResourceCollection { get; set; }
+    private DateTime ProjectStart = new DateTime(2022, 03, 25);
+    private DateTime ProjectEnd = new DateTime(2022, 05, 10);
+    private List<TaskData> TaskCollection { get; set; }
+    private List<ResourceAlloacteData> ResourceCollection { get; set; }
 
     protected override void OnInitialized()
     {
@@ -252,88 +193,14 @@ The following code snippet shows how to assign the resource for each task and ma
     }
     public static List <TaskData> GetTaskCollection() {
         List <TaskData> Tasks = new List <TaskData> () {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2019, 03, 28),
-                EndDate = new DateTime(2019, 07, 28),
-                TaskType ="FixedDuration",
-                Work=128,
-                Duration="4"
-            },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2019, 03, 29),
-                Progress = 30,
-                ParentId = 1,
-                Duration="2",
-                Work=16,
-                Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=1, Unit=70} ,new ResourceAlloacteData() { ResourceId=6} }
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2019, 03, 29),
-                Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=2} ,new ResourceAlloacteData() { ResourceId=3} },
-                ParentId = 1,
-                Work=96,
-                Duration="4",
-                TaskType="Fixed work"
-            },
-            new TaskData() {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2019, 03, 29),
-                Duration = "1",
-                Progress = 30,
-                ParentId = 1,
-                Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=8} ,new ResourceAlloacteData() { ResourceId=9} },
-                Work=16,
-                TaskType="Fixed work"
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2019, 03, 29),
-                EndDate = new DateTime(2019, 04, 2),
-
-                TaskType="Fixed Duration",
-                Duration="4"
-            },
-            new TaskData() {
-                TaskId = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2019, 03, 29),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5,
-                Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4, Unit=30} },
-                Work=30,
-                TaskType="Fixed work"
-            },
-            new TaskData() {
-                TaskId = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2019, 04, 01),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5,
-                TaskType="Fixedwork",
-                Work=48,
-                Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4},new ResourceAlloacteData() { ResourceId=8} },
-
-            },
-            new TaskData() {
-                TaskId = 8,
-                TaskName = "Estimation approval",
-                StartDate = new DateTime(2019, 04, 01),
-                Duration = "2",
-                ParentId = 5,
-                Work=60,
-                TaskType="Fixedwork",
-                Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId= 12},new ResourceAlloacteData() { ResourceId= 5} },
-            }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 03, 28), EndDate = new DateTime(2022, 07, 28), TaskType ="FixedDuration", Work=128, Duration="4" },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 03, 29), Progress = 30, ParentId = 1, Duration="2", Work=16, Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=1, Unit=70} ,new ResourceAlloacteData() { ResourceId=6} } },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 03, 29), Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=2} ,new ResourceAlloacteData() { ResourceId=3} }, ParentId = 1, Work=96, Duration="4", TaskType="Fixed work" },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 03, 29), Duration = "1", Progress = 30, ParentId = 1, Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=8} ,new ResourceAlloacteData() { ResourceId=9} }, Work=16, TaskType="Fixed work" },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 03, 29), EndDate = new DateTime(2022, 04, 2), TaskType="Fixed Duration", Duration="4" },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 03, 29), Duration = "3", Progress = 30, ParentId = 5, Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4, Unit=30} }, Work=30, TaskType="Fixed work" },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 01), Duration = "3", Progress = 30, ParentId = 5, TaskType="Fixedwork", Work=48, Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4},new ResourceAlloacteData() { ResourceId=8} }, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 01), Duration = "2", ParentId = 5, Work=60, TaskType="Fixedwork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId= 12},new ResourceAlloacteData() { ResourceId= 5} }, }
         };
         return Tasks;
     }
@@ -366,10 +233,10 @@ By using cell editing or dialog editing, you can add/remove the resource for par
 </SfGantt>
 
 @code{
-    public DateTime ProjectStart = new DateTime(2019, 03, 25);
-    public DateTime ProjectEnd = new DateTime(2019, 05, 10);
-    public List<TaskData> TaskCollection { get; set; }
-    public List<ResourceAlloacteData> ResourceCollection { get; set; }
+    private DateTime ProjectStart = new DateTime(2022, 03, 25);
+    private DateTime ProjectEnd = new DateTime(2022, 05, 10);
+    private List<TaskData> TaskCollection { get; set; }
+    private List<ResourceAlloacteData> ResourceCollection { get; set; }
 
     protected override void OnInitialized()
     {
@@ -415,88 +282,14 @@ By using cell editing or dialog editing, you can add/remove the resource for par
     }
     public static List <TaskData> GetTaskCollection() {
         List <TaskData> Tasks = new List <TaskData> () {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2019, 03, 28),
-                EndDate = new DateTime(2019, 07, 28),
-                TaskType ="FixedDuration",
-                Work=128,
-                Duration="4"
-            },
-            new TaskData() {
-                TaskId = 2,
-                TaskName = "Identify Site location",
-                StartDate = new DateTime(2019, 03, 29),
-                Progress = 30,
-                ParentId = 1,
-                Duration="2",
-                Work=16,
-                Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=1, Unit=70} ,new ResourceAlloacteData() { ResourceId=6} }
-            },
-            new TaskData() {
-                TaskId = 3,
-                TaskName = "Perform soil test",
-                StartDate = new DateTime(2019, 03, 29),
-                Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=2} ,new ResourceAlloacteData() { ResourceId=3} },
-                ParentId = 1,
-                Work=96,
-                Duration="4",
-                TaskType="Fixed work"
-            },
-            new TaskData() {
-                TaskId = 4,
-                TaskName = "Soil test approval",
-                StartDate = new DateTime(2019, 03, 29),
-                Duration = "1",
-                Progress = 30,
-                ParentId = 1,
-                Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=8} ,new ResourceAlloacteData() { ResourceId=9} },
-                Work=16,
-                TaskType="Fixed work"
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2019, 03, 29),
-                EndDate = new DateTime(2019, 04, 2),
-
-                TaskType="Fixed Duration",
-                Duration="4"
-            },
-            new TaskData() {
-                TaskId = 6,
-                TaskName = "Develop floor plan for estimation",
-                StartDate = new DateTime(2019, 03, 29),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5,
-                Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4} },
-                Work=30,
-                TaskType="Fixed work"
-            },
-            new TaskData() {
-                TaskId = 7,
-                TaskName = "List materials",
-                StartDate = new DateTime(2019, 04, 01),
-                Duration = "3",
-                Progress = 30,
-                ParentId = 5,
-                TaskType="Fixedwork",
-                Work=48,
-                Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4},new ResourceAlloacteData() { ResourceId=8} },
-
-            },
-            new TaskData() {
-                TaskId = 8,
-                TaskName = "Estimation approval",
-                StartDate = new DateTime(2019, 04, 01),
-                Duration = "2",
-                ParentId = 5,
-                Work=60,
-                TaskType="Fixedwork",
-                Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId= 12},new ResourceAlloacteData() { ResourceId= 5} },
-            }
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 03, 28), EndDate = new DateTime(2022, 07, 28), TaskType ="FixedDuration", Work=128, Duration="4" },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 03, 29), Progress = 30, ParentId = 1, Duration="2", Work=16, Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=1, Unit=70} ,new ResourceAlloacteData() { ResourceId=6} } },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 03, 29), Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=2} ,new ResourceAlloacteData() { ResourceId=3} }, ParentId = 1, Work=96, Duration="4", TaskType="Fixed work" },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 03, 29), Duration = "1", Progress = 30, ParentId = 1, Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=8} ,new ResourceAlloacteData() { ResourceId=9} }, Work=16, TaskType="Fixed work" },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 03, 29), EndDate = new DateTime(2022, 04, 2), TaskType="Fixed Duration", Duration="4" },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 03, 29), Duration = "3", Progress = 30, ParentId = 5, Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4} }, Work=30, TaskType="Fixed work" },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 01), Duration = "3", Progress = 30, ParentId = 5, TaskType="Fixedwork", Work=48, Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=4},new ResourceAlloacteData() { ResourceId=8} }, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 01), Duration = "2", ParentId = 5, Work=60, TaskType="Fixedwork", Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId= 12},new ResourceAlloacteData() { ResourceId= 5} }, }
         };
         return Tasks;
     }

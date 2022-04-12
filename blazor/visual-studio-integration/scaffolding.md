@@ -21,49 +21,49 @@ Syncfusion provides **Visual Studio Scaffolding** for the Syncfusion Blazor plat
 
 The steps below assist you to how to add a scaffolded item to your Blazor application.
 
-> Before use the Syncfusion Blazor Scaffolding, check whether the Syncfusion Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, please install the extension by follow the steps from the [download and installation](https://blazor.syncfusion.com/documentation/visual-studio-integration/visual-studio-extensions/download-and-installation/) help topic.
+> Before use the Syncfusion Blazor Scaffolding, check whether the Syncfusion Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, please install the extension by follow the steps from the [download and installation](download-and-installation) help topic.
 
 1. If the application type is **Blazor ServerSide**, right-click the **Pages** folder in the Solution Explorer, click **Add**, and then select **New Scaffolded Item..**
 
-    ![Scaffolded add-in from server project](../images/Add_scaffold_Serverside.png)
+    ![Scaffolded add-in from server project](images/Add_scaffold_Serverside.png)
 
     If the application type is **Blazor Hosted**, right-click the **Controllers** folder from **{Project Name}.Server** application in the Solution Explorer, click **Add**, and then select **New Scaffolded Item**.
 
-    ![Scaffolded add-in from the hosted project](../images/Add_scaffold_hosted.png)
+    ![Scaffolded add-in from the hosted project](images/Add_scaffold_hosted.png)
 
     > Scheduler control is not applicable for Blazor Hosted application.
 
 2. In the **Add New Scaffolded item** dialog, select **Syncfusion Blazor Scaffolder** and then click **‘Add’**.
 
-    ![Choose Syncfusion Scaffolding from Visual Studio Add scaffold dialog](../images/Syncfusion_scaffolder.png)
+    ![Choose Syncfusion Scaffolding from Visual Studio Add scaffold dialog](images/Syncfusion_scaffolder.png)
 
 3. In the Syncfusion UI Scaffolder dialog, select the desired control to perform scaffolding, and then click **Next**.
 
-    ![Choose required control](../images/Control_Window.png)
+    ![Choose required control](images/Control_Window.png)
 
 4. The Syncfusion UI Scaffolder dialog for the selected control will be displayed. As application requirements, enter the **Controller/Service Name** and **Razor Name**, then select the active application's required **Model Class** and its relevant **Data Context Class**, and then click **Next**.
 
-    ![Choose required Model](../images/Model_Window.png)
+    ![Choose required Model](images/Model_Window.png)
 
 5. The dialog for the selected control feature will be opened in the Syncfusion UI Scaffolder. Select the required features, update the necessary data fields, and then click **Add**.
 
     For **ServerSide Application**, both Local data and Remote data types will be available.
 
-    ![Choose required selected control features for the serverside project](../images/Feature_Window_serverside.png)
+    ![Choose required selected control features for the serverside project](images/Feature_Window_serverside.png)
 
     For **Hosted Application**, Remote data type only available.
 
-    ![Choose required selected control features for the hosted project](../images/Fetaure_window_hosted.png)
+    ![Choose required selected control features for the hosted project](images/Fetaure_window_hosted.png)
 
 6. With the selected features of the Syncfusion control code snippet, the **Controller/Service** file and the corresponding **Razor** files are generated.
 
     If you select **Local Data**, the service file and razor file will be added to the application.
 
-    ![Required Controller and Razor files added in the project for the selected control](../images/Files_for_local_data.png)
+    ![Required Controller and Razor files added in the project for the selected control](images/Files_for_local_data.png)
 
     If you select **Remote Data**, the controller file and razor file will be added to the application.
 
-    ![Required Controller and Razor files added in the project for the selected control](../images/Files_for_remote_data.png)
+    ![Required Controller and Razor files added in the project for the selected control](images/Files_for_remote_data.png)
 
 7. Then, add navigation to the created razor file based on your requirement to open on the webpage.
 
@@ -97,7 +97,7 @@ The steps below will assist you to how to add a scaffolded item from command-lin
 
     **syncfusion_scaffold**
 
-    ![CommandLine Scaffold Available Controls](../images/AvailableControl.png)
+    ![CommandLine Scaffold Available Controls](images/AvailableControl.png)
 
 2. To add a scaffolded item from command-line you must invoke syncfusion_scaffold application like below syntax
 
@@ -123,19 +123,19 @@ The steps below will assist you to how to add a scaffolded item from command-lin
 
 3. If you run the syncfusion_scaffold [control] command, the parameters of control shown like below image.
 
-    ![control parameter details](../images/controlparameter.png)
+    ![control parameter details](images/controlparameter.png)
 
 4. Run the following command to generate controller and view files through command-line by passing required arguments of the given control.
 
     ```syncfusion_scaffold {controlName} --project "{projectFileNamewithPath}" --model {model} -dc {dbContext} -cname {controllerName} -vname {viewName} [controlMantoryParameter] [controlMantatoryParameterValue]```
 
-    ![CommandLine Scaffold](../images/commandline.png)
+    ![CommandLine Scaffold](images/commandline.png)
 
 5. As we can see controller and view files generated successfully and also added the Syncfusion NuGet packages and styles which is required to render Syncfusion control.
 
-    ![Blazor added Files](../images/blazorfile.png)
+    ![Blazor added Files](images/blazorfile.png)
 
-    ![Blazor Service Changes](../images/blazorstyle.png)
+    ![Blazor Service Changes](images/blazorstyle.png)
 
 <!-- markdownlint-disable MD026 -->
 

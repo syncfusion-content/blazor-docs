@@ -21,7 +21,8 @@ To achieve better performance in the Scheduler when loading a large number of re
     </ScheduleResources>
     <ScheduleEventSettings DataSource="@AppointmentData"></ScheduleEventSettings>
     <ScheduleViews>
-        <ScheduleView Option="View.TimelineMonth" AllowVirtualScrolling="true"></ScheduleView>
+        <ScheduleView Option="View.TimelineMonth" AllowVirtualScrolling="true" IsSelected="true"></ScheduleView>
+        <ScheduleView Option="View.TimelineYear" Orientation="Syncfusion.Blazor.Schedule.Orientation.Vertical" AllowVirtualScrolling="true"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
 
@@ -136,7 +137,8 @@ In Blazor Scheduler, templates can be applied when `AllowVirtualScrolling` prope
         </Template>
     </ScheduleEventSettings>
     <ScheduleViews>
-        <ScheduleView Option="View.TimelineMonth" AllowVirtualScrolling="true"></ScheduleView>
+        <ScheduleView Option="View.TimelineMonth" AllowVirtualScrolling="true" IsSelected="true"></ScheduleView>
+        <ScheduleView Option="View.TimelineYear" Orientation="Syncfusion.Blazor.Schedule.Orientation.Vertical" AllowVirtualScrolling="true"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
 
@@ -226,4 +228,4 @@ In Blazor Scheduler, templates can be applied when `AllowVirtualScrolling` prope
 }
 ```
 
-> For now, the virtual loading of resources and events is available only for timeline views. In the future, we plan to port the same virtual loading on all other applicable Scheduler views.
+> For now, the virtual loading of resources and events is available only for `TimelineDay`, `TimelineWeek`, `TimelineWorkWeek`, `TimelineMonth` and `TimelineYear` (Vertical Orientation alone) views. In the future, we plan to port the same virtual loading on all other applicable Scheduler views.

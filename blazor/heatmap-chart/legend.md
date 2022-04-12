@@ -309,7 +309,7 @@ Paging is available only for the list type legend in the heat map, and it can be
 
 ![Heatmap Sample](images/legend/paging.gif)
 
-## Smart Legend
+## Smart legend
 
 Smart legend is another way of showing list type legend with responsiveness and readability, when the palette has more number of items. You can enable this smart legend by using the `EnableSmartLegend` property when the palette type is set to `Fixed`.
 
@@ -375,7 +375,7 @@ The following are the legend label display types:
 
 
 
-## Legend Selection
+## Legend selection
 
 In the HeatMap, the legend selection is used to toggle the visibility of cell for viewing the specific range value. You can enable the legend selection using the `ToggleVisibility` property.
 

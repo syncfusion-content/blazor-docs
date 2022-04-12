@@ -21,7 +21,8 @@ HTML attribute support is given for button using [HtmlAttributes](https://help.s
     public string Content = "Submit";
     private Dictionary<string, object> submit = new Dictionary<string, object>()
      {
-        { "type", "submit"}
+        { "type", "submit"},
+        { "title", "Primary Button" }
     };
 }
 
