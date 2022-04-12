@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Use Radio Button instead of Checkbox in Blazor DataGrid | Syncfusion
+title: Use Radio Button for Selection in Blazor DataGrid | Syncfusion
 description: Learn here all about how to use radio button instead of checkbox in single selection mode in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
@@ -21,15 +21,18 @@ In the following sample, the **SfRadioButton** component is rendered in the Grid
     <GridSelectionSettings CheckboxOnly="true"></GridSelectionSettings>
     <GridColumns>
         <GridColumn>
-             <Template>
+            <Template>
                 @{
                     var PrimaryVal = (context as Order);
                     <SfRadioButton @ref="Radio"  Name="RadioBtn "Value="@PrimaryVal.CustomerID" ValueChange="ValueChange" TChecked="string"></SfRadioButton>
                 }
             </Template>
         </GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"  IsPrimaryKey="true" >
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name"  IsPrimaryKey="true" >
         </GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Width="110" Type="ColumnType.Date"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -42,20 +45,23 @@ In the following sample, the **SfRadioButton** component is rendered in the Grid
     {
         Orders = Enumerable.Range(1, 4).Select(x => new Order()
         {
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[x]
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[x],
+             ShipCity = (new string[] { "Berlin", "Madrid", "Cholchester", "Marseille", "Tsawassen" })[new Random().Next(5)],
+              Freight = 2.1 * x,
+               OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
     }
     public async void ValueChange(ChangeArgs<string> args)
     {
-        var index = await GridInstance.GetRowIndexByPrimaryKey(args.Value); //Fetch the row index based on the unique value of RadioButton.
-        GridInstance.SelectRow(index); //Select the corresponding Grid row.
+        var index = await GridInstance.GetRowIndexByPrimaryKey(args.Value); // Fetch the row index based on the unique value of RadioButton.
+        GridInstance.SelectRow(index); // Select the corresponding Grid row.
     }
-
     public class Order {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
+        public string ShipCity { get; set; }
     }
 }
 
