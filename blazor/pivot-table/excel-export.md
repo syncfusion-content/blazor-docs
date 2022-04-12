@@ -165,9 +165,9 @@ The Excel export provides an option to change file name of the document before e
 
 ![Changing Blazor PivotTable File Name while Exporting](images/blazor-pivottable-change-excel-file-name.png)
 
-## Customize the cell value
+## Customize cell value during Excel export
 
-You can customize the cell value during excel export by using `ExcelQueryCellInfo` event.
+You can customize the cell value during excel export by using `ExcelQueryCellInfo` event of `PivotViewEvents`.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
