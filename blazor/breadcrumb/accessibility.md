@@ -7,7 +7,7 @@ control: Breadcrumb
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor Breadcrumb Component
 
 ## ARIA attributes
 
