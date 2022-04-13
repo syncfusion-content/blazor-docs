@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# How to Use Radio Button Instead of Checkbox in a Grid Selection
+# How to use radio button instead of checkbox for row selection of grid
 
 Checkbox selection provides an option to select datagrid records with the help of a checkbox in each row. Instead, you can render the radio button for selecting the Grid row. This can be achieved by using the column template feature of the Grid.
 
