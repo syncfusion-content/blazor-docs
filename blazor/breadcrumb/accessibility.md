@@ -43,6 +43,3 @@ Navigate to the previous item also previous item in the popup of menu type overf
 <kbd>Enter key in collapsed mode</kbd></td><td>
  To open the popup of menu type overflow mode when you press enter on collapsed button and It will expand the items of collapsed type overflow mode when you press enter on collapsed button.</td></tr>
 </table>
-
-
-

@@ -36,4 +36,3 @@ Move and select the previous options.</td></tr>
 <kbd>Down/Right arrow</kbd></td><td>
 Move and select the next options.</td></tr>
 </table>
-
