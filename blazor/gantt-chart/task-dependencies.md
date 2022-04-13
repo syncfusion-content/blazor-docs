@@ -169,7 +169,7 @@ You can define the predecessor types in any order. The default order will be FS,
 </SfGantt>
 @code{
     public List<TaskData> TaskCollection { get; set; }
-    public DependencyType[] types = new DependencyType[] { DependencyType.FS };
+    public List<DependencyType> types = new List<DependencyType>() { DependencyType.FS };
     public class Types
     {
         public string ID { get; set; }
@@ -189,19 +189,19 @@ You can define the predecessor types in any order. The default order will be FS,
         this.ChangeValue = args.ItemData.Text;
         if (args.ItemData.ID == "Type1")
         {
-            types = new DependencyType[] { DependencyType.FS };
+            types = new List<DependencyType>() { DependencyType.FS };
         } 
         else if (args.ItemData.ID == "Type2")
         {
-            types = new DependencyType[] { DependencyType.FS, DependencyType.SS };
+            types = new List<DependencyType>() { DependencyType.FS, DependencyType.SS };
         }  
         else if (args.ItemData.ID == "Type3")
         {
-            types = new DependencyType[] { DependencyType.FS, DependencyType.SS, DependencyType.SF };
+            types = new List<DependencyType>() { DependencyType.FS, DependencyType.SS, DependencyType.SF };
         }  
         if (args.ItemData.ID == "Type4")
         {
-            types = new DependencyType[] { DependencyType.FS, DependencyType.SS, DependencyType.SF, DependencyType.FF };
+            types = new List<DependencyType>() { DependencyType.FS, DependencyType.SS, DependencyType.SF, DependencyType.FF };
         } 
     }
     protected override void OnInitialized()
