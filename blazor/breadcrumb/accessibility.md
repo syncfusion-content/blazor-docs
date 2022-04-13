@@ -1,7 +1,10 @@
 ---
-title: "Breadcrumb Accessibility"
-component: "Breadcrumb"
-description: "TypeScript Breadcrumb component has accessibility support to help access the features via keyboard, on-screen readers, or other assistive technology devices."
+layout: post
+title: Accessibility in Blazor Breadcrumb Component | Syncfusion
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor Breadcrumb component and much more.
+platform: Blazor
+control: Breadcrumb
+documentation: ug
 ---
 
 # Accessibility

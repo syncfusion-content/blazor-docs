@@ -1,7 +1,10 @@
 ---
-title: "ButtonGroup Accessibility"
-component: "ButtonGroup"
-description: "ButtonGroup component has accessibility support to help access the features via keyboard, on-screen readers, or other assistive technology devices."
+layout: post
+title: Accessibility in Blazor ButtonGroup Component | Syncfusion
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor ButtonGroup component and much more.
+platform: Blazor
+control: ButtonGroup
+documentation: ug
 ---
 
 # Accessibility
