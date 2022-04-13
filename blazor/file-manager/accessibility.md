@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor FileManager Component
 
-The File Manager component has been designed with keeping the `WAI-ARIA` specifications in mind, and applying the `WAI-ARIA` roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support, which makes navigation easy for people who use assistive technologies (AT) or for users who completely rely on keyboard navigation.
+The File Manager component has been designed with keeping the `WAI-ARIA` specifications in mind, and applied the `WAI-ARIA` roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support, which makes navigation easy for people who use assistive technologies (AT) or for users who completely rely on keyboard navigation.
 
 ## ARIA attributes
 
@@ -30,7 +30,7 @@ The File Manager component has been designed with keeping the `WAI-ARIA` specifi
 | aria-checked | Indicates whether the checkbox is in checked state. |
 | aria-labelledby | Labels the dialog. Often, the value of the aria-labelledby attribute will be the id of the element, which is used to title the dialog |
 | aria-describedby | Describes the contents of the dialog. |
-| aria-modal | Indicates whether an element is a modal when display. |
+| aria-modal | Indicates whether an element is a modal when displayed. |
 | aria-colcount | Specifies the number of columns in full table. |
 | aria-colindexnt | Defines the number of columns within a grid. |
 | aria-rowspan | Defines the number of rows a cell spanned within a grid. |

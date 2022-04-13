@@ -7,7 +7,7 @@ control: Dropdown Menu
 documentation: ug
 ---
 
-# Open a dialog on popup item click in Blazor Dropdown Menu Component
+# Open a Dialog on Popup Item Click in Blazor Dropdown Menu Component
 
 This section explains about how to open a dialog on Dropdown Menu popup item click. This can be achieved by handling dialog open in [ItemSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_ItemSelected) event of the Dropdown Menu.
 
@@ -30,12 +30,8 @@ In the following example, Dialog will open while selecting `Other Folder...` ite
 <SfDialog Content="@Content" Header="@Header" Width="250px" Height="150px" Visible="false" @ref="DialogObj" >
     <DialogPositionData X="300" Y="200"></DialogPositionData>
     <DialogButtons>
-       <DialogButton OnClick="@click">
-            <DialogButton Content="OK" IsPrimary="true"></DialogButton>
-        </DialogButton>
-        <DialogButton OnClick="@click">
-            <DialogButton Content="Cancel"></DialogButton>
-        </DialogButton>
+       <DialogButton Content="OK" IsPrimary="true" OnClick="@click"></DialogButton>
+       <DialogButton Content="Cancel" OnClick="@click"></DialogButton>
     </DialogButtons>
 </SfDialog>
 

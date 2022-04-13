@@ -328,3 +328,7 @@ In the below sample, we have customized the Pager component in DataGrid control 
 ```
 
 > You can refer to our [Blazor Grid Pager Template](https://blazor.syncfusion.com/demos/datagrid/pager-template) online demo of Pager Template feature in Blazor DataGrid.
+
+## See Also
+
+* [How to customize page size dropdown value of pager](https://www.syncfusion.com/forums/166711/how-to-customize-the-grid-page-size-dropdown)

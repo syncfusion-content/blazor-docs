@@ -99,7 +99,7 @@ The [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accu
 
 ![Blazor Accumulation Chart with Region](images/annotation/blazor-accumulation-chart-region.png)
 
-## Co-ordinate Units
+## Co-ordinate units
 
 The [CoordinateUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_CoordinateUnits) property allows to specify the annotation's coordinate units either in [Pixel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Units.html#Syncfusion_Blazor_Charts_Units_Pixel) or [Point](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Units.html#Syncfusion_Blazor_Charts_Units_Point).
 
