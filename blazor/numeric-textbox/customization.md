@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customization in Blazor Numeric TextBox Component | Syncfusion
+title: Read only Input in Blazor Numeric TextBox Component | Syncfusion
 description: Checkout and learn here all about data binding in Syncfusion Blazor Numeric TextBox component and more.
 platform: Blazor
 control: Numeric TextBox
