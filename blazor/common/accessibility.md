@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessible and ADA compliant Syncfusion Blazor components
+title: Accessibility with ADA compliance in Syncfusion Blazor components
 description: The Syncfusion Blazor UI components are compliant with section 508, ADA, WAI-ARIA, WCAG, and keyboard accessibility standards.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Accessibility support with ADA compliance in Syncfusion Blazor components
+# Accessibility with ADA Compliance in Syncfusion Blazor Components
 
 All the Syncfusion Blazor components follow the WAI-ARIA accessibility standard by default. This enables you to build accessible web applications, which are fully navigable by users with disabilities.
 
