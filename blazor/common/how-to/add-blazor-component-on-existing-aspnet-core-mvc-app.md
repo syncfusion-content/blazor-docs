@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# How to Add Syncfusion Blazor Component into Existing ASP.NET Core MVC Application
+# How to Add Blazor Component into Existing ASP.NET Core MVC Application
 
 This section explains how to add Syncfusion Blazor component on an existing ASP.NET Core MVC application.
 
