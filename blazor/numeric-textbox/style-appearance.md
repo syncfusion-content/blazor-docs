@@ -35,3 +35,14 @@ Use the following CSS to customize the Numeric TextBox icons
         background-color: beige;
 }
 ```
+
+## Disable textbox from editing
+
+You can disable the textbox from editing by setting the `readonly` attribute to the input element.
+
+```
+window.OnCreated = function (id) {
+    document.getElementById(id).setAttribute("readonly", true);
+    
+}
+```
