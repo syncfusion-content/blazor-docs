@@ -646,7 +646,7 @@ The column width can be set using the **Width** property of the **GridColumn**. 
 * When only some columns are provided with the width value and if the cumulative width of the columns is lesser than the grid element width then columns with no width will share the available space evenly.
 * When no width is provided in a column and MinWidth property is defined, if the cumulative width of the column is greater than the grid element width then MinWidth would be used as the column width to avoid it from becoming invisible.
 
-## Autofit
+## Autofit columns
 
 You can auto fit a column interactively by double clicking the right border of the header cells.
 
@@ -746,9 +746,9 @@ The following image represents AutoFit column by method
 
 > You can autofit all the columns by invoking the **AutoFitColumns** method without column names.
 
-### Autofit columns while using column chooser
+### Autofit columns when changing column visibility using column chooser
 
-When changing the column visibility using `ColumnChooser`, you can invoke the **AutoFitColumnsAsync** method in the [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event with RequestType of ColumnState to auto fit the columns.
+You can auto fit columns when the column visibility is changed using column choose by calling **AutoFitColumnsAsync** method in the [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event. Using `RequestType` property in event args, you can differentiate actions and in the below code `AutoFitColumnsAsync` method is called when `RequestType` is `ColumnState`.
 
 ```cshtml
 
