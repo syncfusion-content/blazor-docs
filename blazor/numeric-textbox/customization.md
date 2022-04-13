@@ -39,4 +39,4 @@ Numeric textbox supports to set the attributes directly also.
 
 ## Disable interaction in input
 
-You can also remove the curzor focus on the text box by eliminating the `css` from code snippet.
+You can also remove the cursor focus on the text box by eliminating the `css` from code snippet.
