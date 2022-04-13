@@ -1,17 +1,17 @@
 ---
 layout: post
-title: ExpandoObject Bound Grid in Blazor DataGrid Component | Syncfusion
+title: ExpandoObject data binding with edit template feature in Blazor DataGrid Component | Syncfusion
 description: Learn here all about using edit template feature in ExpandoObject bound grid in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Using EditTemplate Feature in ExpandoObject Bound Grid
+# ExpandoObject data binding with edit template feature
 
-By defining the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), you can render a custom editor component in Grid edit form. Two-way (@bind-Value) binding cannot be defined to the editor component inside EditTemplate, since its data type is unknown when Grid is bound by ExpandoObject. In this case, you can use the following way to perform a CRUD operation in the ExpandoObject bound Grid with EditTemplate.
+By defining the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), you can render a custom editor component in Grid edit form. Two-way (@bind-Value) binding cannot be defined to the editor component inside EditTemplate, since its data type is unknown when Grid is bound by ExpandoObject. In this case, you can use the following way to perform a CRUD operation in the ExpandoObject data binding Grid with EditTemplate.
 
-The TextBox component is defined inside the EditTemplate and changes can be saved into the Grid using the ValueChange event of the TextBox and the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid.
+The `SfTextBox` component is defined inside the EditTemplate and changes can be saved into the Grid using the ValueChange event of the TextBox and the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
