@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Configure Syncfusion Blazor Client Resources in Production Environment in Blazor - Syncfusion
+title: Configure Client Resources in Production Environment in Blazor
 description: Check out the documentation for Configure Syncfusion Blazor Client Resources in Production Environment in Blazor
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# How to Add Syncfusion Blazor Component on an Existing ASP.NET Core MVC Application
+# How to Add Syncfusion Blazor Component into Existing ASP.NET Core MVC Application
 
 This section explains how to add Syncfusion Blazor component on an existing ASP.NET Core MVC application.
 
@@ -15,7 +15,7 @@ This section explains how to add Syncfusion Blazor component on an existing ASP.
 
 2. Right-click on the project and select `Manage NuGet Package`.
 
-    ![Mangage NuGet package on ASP.NET Core MVC app](images/asp-mvc-manage-nuget-package.png)
+    ![Manage NuGet package on ASP.NET Core MVC app](images/asp-mvc-manage-nuget-package.png)
 
 3. Search `Syncfusion.Blazor.Grid` and install the NuGet package.
 
@@ -120,7 +120,7 @@ This section explains how to add Syncfusion Blazor component on an existing ASP.
     }
     ```
 
-10. Now, add the razor component in the `~/Views/Home/Index.cshtml` page using `component` tag helper. The `.razor` file name will be consider as a Razor component. For example, the above SfGrid component is added on `~/Components/MyGrid.razor` file.
+10. Now, add the razor component in the `~/Views/Home/Index.cshtml` page using `component` tag helper. The `.razor` file name will be considered as a Razor component. For example, the above SfGrid component is added on `~/Components/MyGrid.razor` file.
 
     ```cshtml
     @using AspCoreMvcApp.Components;

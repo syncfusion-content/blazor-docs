@@ -9,7 +9,7 @@ documentation: ug
 
 # How to export the document as PDF in Blazor Document Editor
 
-In this article, we are going to see how to export the document as PDF format.
+In this article, you can learn how to export the document as PDF format.
 
 With the help of [`Syncfusion DocIO`](https://help.syncfusion.com/file-formats/docio/word-to-pdf), you can export the document as PDF.
 

@@ -363,7 +363,7 @@ The following sample code demonstrates the customization applied to DatePicker c
 
 ## Custom editors using template/Cell edit template
 
-> Before adding edit template to the datagrid, we strongly recommend you to go through the [template](./templates/#templates) section topic to configure the template.
+> Before adding edit template to the datagrid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
 
 The cell edit template is used to add a custom component for a particular column. You can use the **EditTemplate** of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component to add the custom component. You can access the parameters passed to the templates using implicit parameter named **context**.
 
