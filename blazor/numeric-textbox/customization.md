@@ -6,7 +6,7 @@ platform: Blazor
 control: Numeric TextBox
 documentation: ug
 ---
-# Read only Input
+# Read only Input in Blazor Numeric TextBox Component
 
 You can disable the text box from editing by setting the `readonly` attribute to the input element.
 
