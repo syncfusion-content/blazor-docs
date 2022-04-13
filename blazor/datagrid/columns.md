@@ -646,7 +646,7 @@ The column width can be set using the **Width** property of the **GridColumn**. 
 * When only some columns are provided with the width value and if the cumulative width of the columns is lesser than the grid element width then columns with no width will share the available space evenly.
 * When no width is provided in a column and MinWidth property is defined, if the cumulative width of the column is greater than the grid element width then MinWidth would be used as the column width to avoid it from becoming invisible.
 
-## Autofit
+## Autofit columns
 
 You can auto fit a column interactively by double clicking the right border of the header cells.
 
@@ -745,6 +745,39 @@ The following image represents AutoFit column by method
 ![Blazor DataGrid with Autofit Columns](./images/blazor-datagrid-autofit-methods.png)
 
 > You can autofit all the columns by invoking the **AutoFitColumns** method without column names.
+
+### Autofit columns when changing column visibility using column chooser
+
+You can auto fit columns when the column visibility is changed using column choose by calling [AutoFitColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoFitColumnsAsync) method in the [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event. Using `RequestType` property in event args, you can differentiate actions and in the below code `AutoFitColumnsAsync` method is called when `RequestType` is `ColumnState`.
+
+```cshtml
+
+@using Syncfusion.Blazor.Grids;
+
+<SfGrid @ref="Grid" DataSource="@Employees" ShowColumnChooser="true" Toolbar=@ToolbarItems>
+    <GridEvents OnActionComplete="Complete" TValue="EmployeeData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Center" HeaderText="Employee ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.HireDate) HeaderText="Hire Date" Format="d" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public string[] ToolbarItems = new string[] { "ColumnChooser" };
+    SfGrid<EmployeeData> Grid{ get; set; }
+    public async Task Complete(ActionEventArgs<EmployeeData> Args)
+    {
+        if(Args.RequestType == Syncfusion.Blazor.Grids.Action.ColumnState)
+        {
+            await Task.Delay(200);
+            await Grid.AutoFitColumnsAsync();
+        }
+    }
+
+```
 
 ## Responsive columns
 
