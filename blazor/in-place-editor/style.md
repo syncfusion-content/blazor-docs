@@ -56,7 +56,7 @@ Use the following CSS to customize the default In-place Editor's action buttons.
 
 ## Customizing In-place editor outer style like material filled
 
-Use the following CSS to customize the In-place editor outer style like material filled.
+Use the following CSS to customize the In-place editor outer style like material filled text fields.
 
 ```css
 /* To remove the default bottom underline */
