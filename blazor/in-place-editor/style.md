@@ -54,7 +54,9 @@ Use the following CSS to customize the default In-place Editor's action buttons.
 }
 ```
 
-## Customizing the In-place Editor outer style
+## Customizing In-place editor outer style like material filled
+
+Use the following CSS to customize the In-place editor outer style like material filled.
 
 ```css
 /* To remove the default bottom underline */
@@ -72,3 +74,5 @@ Use the following CSS to customize the default In-place Editor's action buttons.
 }
 
 ```
+
+![Blazor In-place Editor outer style like material filled](./images/outer-style-like-material-filled.png)

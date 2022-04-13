@@ -748,7 +748,7 @@ The following image represents AutoFit column by method
 
 ### Autofit columns when changing column visibility using column chooser
 
-You can auto fit columns when the column visibility is changed using column choose by calling **AutoFitColumnsAsync** method in the [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event. Using `RequestType` property in event args, you can differentiate actions and in the below code `AutoFitColumnsAsync` method is called when `RequestType` is `ColumnState`.
+You can auto fit columns when the column visibility is changed using column choose by calling [AutoFitColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoFitColumnsAsync) method in the [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event. Using `RequestType` property in event args, you can differentiate actions and in the below code `AutoFitColumnsAsync` method is called when `RequestType` is `ColumnState`.
 
 ```cshtml
 
