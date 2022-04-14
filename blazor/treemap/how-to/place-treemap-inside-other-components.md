@@ -103,17 +103,6 @@ When you drag and resize the Dashboard Layout's panel, the TreeMap component is 
     </DashboardLayoutPanels>
 </SfDashboardLayout>
 
-<style>
-    .annotationText {
-        font-size: 35px;
-        width: 120px;
-        text-align: center;
-        margin-top: -30px;
-        margin-left: -55px
-    }
-</style>
-
-
 @code {
     SfTreeMap<CarSalesDetails> TreeOne;
     SfTreeMap<LeafData> TreeTwo;
@@ -380,16 +369,6 @@ When the TreeMap component renders within the Tab component, its rendering begin
             </TabItem>
         </TabItems>
     </SfTab>
-
-<style>
-    .annotationText {
-        font-size: 35px;
-        width: 120px;
-        text-align: center;
-        margin-top: -30px;
-        margin-left: -55px
-    }
-</style>
 
 @code{
     SfTreeMap<CarSalesDetails> TreeOne;
@@ -784,13 +763,6 @@ When you expand the Accordion component, the TreeMap component is not notified, 
     }
     .source-link {
         padding-bottom: 25px;
-    }
-    .annotationText {
-        font-size: 35px;
-        width: 120px;
-        text-align: center;
-        margin-top: -30px;
-        margin-left: -55px
     }
 </style>
 @code{
