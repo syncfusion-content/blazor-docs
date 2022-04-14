@@ -54,7 +54,7 @@ When you drag and resize the Dashboard Layout's panel, the TreeMap component is 
             </ContentTemplate>
         </DashboardLayoutPanel> 
         <DashboardLayoutPanel Id="LayoutTwo" Row="1" Col="5" SizeX="5" SizeY="7">
-            <HeaderTemplate><div>  TreeMap Layout </div></HeaderTemplate>
+            <HeaderTemplate><div>  TreeMap - Layout </div></HeaderTemplate>
             <ContentTemplate>
                 @if (IsInitialRender)
                 {
@@ -77,7 +77,7 @@ When you drag and resize the Dashboard Layout's panel, the TreeMap component is 
             </ContentTemplate>
         </DashboardLayoutPanel>
         <DashboardLayoutPanel Id="LayoutThree" Row="2" Col="5" SizeX="5" SizeY="7">
-            <HeaderTemplate><div> TreeMap ColorMapping </div></HeaderTemplate>
+            <HeaderTemplate><div> TreeMap - ColorMapping </div></HeaderTemplate>
             <ContentTemplate>
                 @if (IsInitialRender)
                 {
@@ -313,7 +313,7 @@ When the TreeMap component renders within the Tab component, its rendering begin
             </TabItem>
             <TabItem>
                 <ChildContent>
-                    <TabHeader Text="TreeMap Layout"></TabHeader>
+                    <TabHeader Text="TreeMap - Layout"></TabHeader>
                 </ChildContent>
                  <ContentTemplate>
                  @if (IsInitialRender)
@@ -338,7 +338,7 @@ When the TreeMap component renders within the Tab component, its rendering begin
             </TabItem>
             <TabItem>
                 <ChildContent>
-                    <TabHeader Text="TreeMap ColorMapping"></TabHeader>
+                    <TabHeader Text="TreeMap - ColorMapping"></TabHeader>
                 </ChildContent>
                  <ContentTemplate>
                  @if (IsInitialRender)
@@ -684,7 +684,7 @@ When you expand the Accordion component, the TreeMap component is not notified, 
                 </ContentTemplate>
             </AccordionItem>
             <AccordionItem>
-                <HeaderTemplate>TreeMap Layout</HeaderTemplate>
+                <HeaderTemplate>TreeMap - Layout</HeaderTemplate>
                 <ContentTemplate>
                     @if (IsInitialRender)
                     {
@@ -707,7 +707,7 @@ When you expand the Accordion component, the TreeMap component is not notified, 
                 </ContentTemplate>
             </AccordionItem>
             <AccordionItem>
-                <HeaderTemplate>TreeMap ColorMapping</HeaderTemplate>
+                <HeaderTemplate>TreeMap - ColorMapping</HeaderTemplate>
                 <ContentTemplate>
                      @if (IsInitialRender)
                      {
