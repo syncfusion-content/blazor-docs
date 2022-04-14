@@ -129,17 +129,6 @@ When you drag and resize the Dashboard Layout's panel, the Linear Gauge componen
     </DashboardLayoutPanels>
 </SfDashboardLayout>
 
-<style>
-    .annotationText {
-        font-size: 35px;
-        width: 120px;
-        text-align: center;
-        margin-top: -30px;
-        margin-left: -55px
-    }
-</style>
-
-
 @code {
     SfLinearGauge GaugeOne;
     SfLinearGauge GaugeTwo;
@@ -214,7 +203,6 @@ When the Linear Gauge component renders within the Tab component, its rendering 
                 <ContentTemplate>
                  @if (IsInitialRender)
                  {
-                    
                         <SfLinearGauge ID="GaugeOne" @ref="GaugeOne" Orientation="@GaugeOrientation" Width="100%" Background="transparent">
                            <LinearGaugeTitleStyle FontWeight="499" FontFamily="inherit" />
                            <LinearGaugeAxes>
@@ -236,8 +224,6 @@ When the Linear Gauge component renders within the Tab component, its rendering 
                                </LinearGaugeAxis>
                            </LinearGaugeAxes>
                      </SfLinearGauge> 
-                    
-                     
                  }   
                  </ContentTemplate>
             </TabItem>
@@ -248,7 +234,6 @@ When the Linear Gauge component renders within the Tab component, its rendering 
                  <ContentTemplate>
                  @if (IsInitialRender)
                  {
-                     
                          <SfLinearGauge ID="GaugeTwo" @ref="GaugeTwo" Width="100%"  Orientation="@GaugeOrientation"  Background="transparent">
                             <LinearGaugeTitleStyle FontWeight="499" FontFamily="inherit"></LinearGaugeTitleStyle>
                             <LinearGaugeEvents AxisLabelRendering="AxisLabelChange" />
@@ -273,8 +258,6 @@ When the Linear Gauge component renders within the Tab component, its rendering 
                                 </LinearGaugeAxis>
                             </LinearGaugeAxes>
                         </SfLinearGauge>
-                     
-                     
                  }   
                  </ContentTemplate>
             </TabItem>
@@ -325,16 +308,6 @@ When the Linear Gauge component renders within the Tab component, its rendering 
             </TabItem>
         </TabItems>
     </SfTab>
-
-<style>
-    .annotationText {
-        font-size: 35px;
-        width: 120px;
-        text-align: center;
-        margin-top: -30px;
-        margin-left: -55px
-    }
-</style>
 
 @code{
     SfLinearGauge GaugeOne;
@@ -393,8 +366,7 @@ When you drag and resize the Dialog component, the Linear Gauge component is not
             <Header>Linear Gauge</Header>
             <Content> 
                 @if(IsInitialRender)
-                {
-                    
+                { 
                    <SfLinearGauge ID="GaugeOne" @ref="GaugeOne" Orientation="@GaugeOrientation" Width="100%" Background="transparent">
                            <LinearGaugeTitleStyle FontWeight="499" FontFamily="inherit" />
                            <LinearGaugeAxes>
@@ -416,7 +388,6 @@ When you drag and resize the Dialog component, the Linear Gauge component is not
                                </LinearGaugeAxis>
                            </LinearGaugeAxes>
                      </SfLinearGauge> 
-                     
                 }
             </Content>
         </DialogTemplates>
@@ -424,8 +395,7 @@ When you drag and resize the Dialog component, the Linear Gauge component is not
 </div>
 <style>
     #target {
-        min-height: 400px;
-        
+        min-height: 400px; 
     }
    
 </style>
@@ -611,14 +581,8 @@ When you expand the Accordion component, the Linear Gauge component is not notif
     .source-link {
         padding-bottom: 25px;
     }
-    .annotationText {
-        font-size: 35px;
-        width: 120px;
-        text-align: center;
-        margin-top: -30px;
-        margin-left: -55px
-    }
 </style>
+
 @code{
     SfLinearGauge GaugeOne;
     SfLinearGauge GaugeTwo;
@@ -640,7 +604,6 @@ When you expand the Accordion component, the Linear Gauge component is not notif
             args.Text = " ";
     }
 
-
     public bool IsInitialRender { get; set; }
 
     public void Created(Object args)
@@ -653,7 +616,6 @@ When you expand the Accordion component, the Linear Gauge component is not notif
         if (args.Index == 0)
         {
             await GaugeOne.RefreshAsync();
-            //await GaugeOne.RefreshAsync();
 
         } else if (args.Index == 1)
         {

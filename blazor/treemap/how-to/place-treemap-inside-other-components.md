@@ -180,9 +180,9 @@ When you drag and resize the Dashboard Layout's panel, the TreeMap component is 
         new CarSalesDetails { Continent="Canada", Company="Ford", Sales=305086},
         new CarSalesDetails { Continent="Canada", Company="FCA", Sales=278011 },
         new CarSalesDetails { Continent="Canada", Company="GM", Sales=266884 },
-   }; 
+    }; 
     
-     public class USAElectionResult
+    public class USAElectionResult
     {
         public string State { get; set; }
         public double Trump { get; set; }
@@ -290,7 +290,6 @@ When the TreeMap component renders within the Tab component, its rendering begin
                 <ContentTemplate>
                  @if (IsInitialRender)
                  {
-                    
                     <SfTreeMap ID="TreeOne" @ref="TreeOne" TValue="CarSalesDetails" Format="N0" EnableGroupingSeparator="true" WeightValuePath="Sales" RangeColorValuePath="Sales" DataSource="@DataSource" Palette="@Palette" Width="100%">
                          <TreeMapTitleSettings Text="Car Sales by Country - 2017">
                              <TreeMapTitleTextStyle FontFamily="Segoe UI" Size="15px"></TreeMapTitleTextStyle>
@@ -309,7 +308,6 @@ When the TreeMap component renders within the Tab component, its rendering begin
                              <TreeMapTooltipTextStyle FontFamily="Segoe UI"></TreeMapTooltipTextStyle>
                          </TreeMapTooltipSettings>
                      </SfTreeMap>
-                     
                  }   
                  </ContentTemplate>
             </TabItem>
@@ -320,7 +318,6 @@ When the TreeMap component renders within the Tab component, its rendering begin
                  <ContentTemplate>
                  @if (IsInitialRender)
                  {
-                     
                          <SfTreeMap ID="TreeTwo" @ref="TreeTwo" WeightValuePath="GDP" DataSource="@Economics" RangeColorValuePath="GDP" TValue="LeafData" LayoutType="@LayoutModes" RenderDirection="@RenderMode" Width="100%">
                             <TreeMapTitleSettings Text="Top 10 Countries by GDP Nominal - 2015">
                                 <TreeMapTitleTextStyle Size="15px" FontFamily="Segoe UI" />
@@ -336,8 +333,6 @@ When the TreeMap component renders within the Tab component, its rendering begin
                                 <TreeMapLeafBorder Color="#000000" Width="0.5" />
                             </TreeMapLeafItemSettings>
                         </SfTreeMap>
-                     
-                     
                  }   
                  </ContentTemplate>
             </TabItem>
@@ -384,7 +379,6 @@ When the TreeMap component renders within the Tab component, its rendering begin
     public Syncfusion.Blazor.TreeMap.LegendMode LegendModes = Syncfusion.Blazor.TreeMap.LegendMode.Default;
     public Syncfusion.Blazor.TreeMap.LegendPosition LegendPositions = Syncfusion.Blazor.TreeMap.LegendPosition.Top;
    
-
     public bool IsInitialRender { get; set; }
 
     public void Created()
@@ -432,7 +426,7 @@ When the TreeMap component renders within the Tab component, its rendering begin
         new CarSalesDetails { Continent="Canada", Company="GM", Sales=266884 },
    }; 
     
-     public class USAElectionResult
+    public class USAElectionResult
     {
         public string State { get; set; }
         public double Trump { get; set; }
@@ -571,7 +565,6 @@ When you drag and resize the Dialog component, the TreeMap component is not noti
 <style>
     #target {
         min-height: 400px;
-        
     }
    
 </style>
