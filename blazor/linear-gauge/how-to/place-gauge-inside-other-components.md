@@ -23,7 +23,7 @@ When you drag and resize the Dashboard Layout's panel, the Linear Gauge componen
 <DashboardLayoutEvents Created="Created" OnResizeStop="@ResizingHandler" OnWindowResize="@ResizingHandler" Resizing="ResizingHandler"></DashboardLayoutEvents>
     <DashboardLayoutPanels>
         <DashboardLayoutPanel Id="LayoutOne" Row="0" Col="5" SizeX="5" SizeY="7">
-            <HeaderTemplate><div> Linear Gauge Vertical</div></HeaderTemplate>
+            <HeaderTemplate><div> Linear Gauge - Vertical</div></HeaderTemplate>
             <ContentTemplate>
                 @if (IsInitialRender)
                 {
@@ -52,7 +52,7 @@ When you drag and resize the Dashboard Layout's panel, the Linear Gauge componen
             </ContentTemplate>
         </DashboardLayoutPanel> 
         <DashboardLayoutPanel Id="LayoutTwo" Row="1" Col="5" SizeX="5" SizeY="7">
-            <HeaderTemplate><div>  Linear Gauge Custom Labels </div></HeaderTemplate>
+            <HeaderTemplate><div>  Linear Gauge - Custom Labels </div></HeaderTemplate>
             <ContentTemplate>
                 @if (IsInitialRender)
                 {
@@ -84,7 +84,7 @@ When you drag and resize the Dashboard Layout's panel, the Linear Gauge componen
             </ContentTemplate>
         </DashboardLayoutPanel>
         <DashboardLayoutPanel Id="LayoutThree" Row="2" Col="5" SizeX="5" SizeY="7">
-            <HeaderTemplate><div> Linear Gauge Horizontal </div></HeaderTemplate>
+            <HeaderTemplate><div> Linear Gauge - Horizontal </div></HeaderTemplate>
             <ContentTemplate>
                 @if (IsInitialRender)
                 {
@@ -209,7 +209,7 @@ When the Linear Gauge component renders within the Tab component, its rendering 
         <TabItems>
             <TabItem>
                 <ChildContent>
-                    <TabHeader Text="Linear Gauge Vertical"></TabHeader>
+                    <TabHeader Text="Linear Gauge - Vertical"></TabHeader>
                 </ChildContent>
                 <ContentTemplate>
                  @if (IsInitialRender)
@@ -243,7 +243,7 @@ When the Linear Gauge component renders within the Tab component, its rendering 
             </TabItem>
             <TabItem>
                 <ChildContent>
-                    <TabHeader Text="Linear Gauge Custom Labels"></TabHeader>
+                    <TabHeader Text="Linear Gauge - Custom Labels"></TabHeader>
                 </ChildContent>
                  <ContentTemplate>
                  @if (IsInitialRender)
@@ -280,7 +280,7 @@ When the Linear Gauge component renders within the Tab component, its rendering 
             </TabItem>
             <TabItem>
                 <ChildContent>
-                    <TabHeader Text="Linear Gauge Horizontal"></TabHeader>
+                    <TabHeader Text="Linear Gauge - Horizontal"></TabHeader>
                 </ChildContent>
                  <ContentTemplate>
                  @if (IsInitialRender)
@@ -481,7 +481,7 @@ When you expand the Accordion component, the Linear Gauge component is not notif
         <AccordionEvents Created="Created" Expanded="Expand"></AccordionEvents>
         <AccordionItems>
             <AccordionItem Expanded="true">
-                <HeaderTemplate>Linear Gauge Vertical</HeaderTemplate>
+                <HeaderTemplate>Linear Gauge - Vertical</HeaderTemplate>
                 <ContentTemplate>
                  @if (IsInitialRender)
                  {
@@ -510,7 +510,7 @@ When you expand the Accordion component, the Linear Gauge component is not notif
                 </ContentTemplate>
             </AccordionItem>
             <AccordionItem>
-                <HeaderTemplate>Linear Gauge Custom Labels</HeaderTemplate>
+                <HeaderTemplate>Linear Gauge - Custom Labels</HeaderTemplate>
                 <ContentTemplate>
                     @if (IsInitialRender)
                     {
@@ -542,7 +542,7 @@ When you expand the Accordion component, the Linear Gauge component is not notif
                 </ContentTemplate>
             </AccordionItem>
             <AccordionItem>
-                <HeaderTemplate>Linear Gauge Horizontal</HeaderTemplate>
+                <HeaderTemplate>Linear Gauge - Horizontal</HeaderTemplate>
                 <ContentTemplate>
                      @if (IsInitialRender)
                      {
