@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to place TreeMap component inside other components | Syncfusion
-description: Learn here about how to place the Map inside other components like Dashboard Layout, Tab, Dialog and Accordion.
+description: Learn here about how to place the TreeMap inside other components like Dashboard Layout, Tab, Dialog and Accordion.
 platform: Blazor
 control: TreeMap
 documentation: ug
@@ -562,7 +562,7 @@ When you drag and resize the Dialog component, the TreeMap component is not noti
     <SfDialog ResizeHandles="@DialogResizeDirections" AllowDragging="true" Height="300px" Width="400px" EnableResize="true" ShowCloseIcon="true" @bind-Visible="Visibility">
         <DialogEvents OnResizeStop="@OnResizeStopHandler" Resizing="OnResizeStopHandler" OnOpen="@DialogOpen" Closed="@DialogClose"></DialogEvents>
         <DialogTemplates>
-            <Header>Linear Gauge</Header>
+            <Header>TreeMap</Header>
             <Content> 
                 @if(IsInitialRender)
                 {
