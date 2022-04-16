@@ -579,7 +579,7 @@ The following screenshots represent a datagrid by customizing toolbar styles.
 
 ## Customizing the toolbar items tooltip text
 
-You can able to customize the toolbar items tooltip text by using the [ItemModel's](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor) `TooltipText` property.
+You can customize the toolbar items tooltip text by adding toolbar items externally by setting [ItemModel.TooltipText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor) property.
 
 ```csharp
 
@@ -601,9 +601,9 @@ You can able to customize the toolbar items tooltip text by using the [ItemModel
     public List<Order> Orders { get; set; }
     SfGrid<Order> DefaultGrid;
     private List<object> ToolbarItems = new List<object>() {
-        new ItemModel() { Text = "Excel",TooltipText="ExportExcel", PrefixIcon = "e-excelexport", Id = "Grid_excelexport"},//Here Grid is SfGrid ID
-        new ItemModel(){ Text = "Pdf",TooltipText="ExportPDF", PrefixIcon= "e-pdfexport", Id="Grid_pdfexport"},
-        new ItemModel(){ Text = "CSV",TooltipText="ExportCSV", PrefixIcon= "e-csvexport", Id="Grid_csvexport"},
+        new ItemModel() { Text = "Excel",TooltipText="Export to Excel", PrefixIcon = "e-excelexport", Id = "Grid_excelexport"},//Here Grid is SfGrid ID
+        new ItemModel(){ Text = "Pdf",TooltipText="Export to PDF", PrefixIcon= "e-pdfexport", Id="Grid_pdfexport"},
+        new ItemModel(){ Text = "CSV",TooltipText="Export to CSV", PrefixIcon= "e-csvexport", Id="Grid_csvexport"},
            };
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
@@ -644,5 +644,7 @@ You can able to customize the toolbar items tooltip text by using the [ItemModel
 
 The following screenshot represent a datagrid by customizing toolbar items tooltip text.
 ![Customizing Toolbar items tooltip text in Blazor DataGrid](./images/blazor-datagrid-toolbar-tooltip-customization.png)
+
+[View Sample in GitHub](https://github.com/SyncfusionExamples/Customizing-the-toolbar-items-tooltip-text-in-Blazor-Grid)
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
