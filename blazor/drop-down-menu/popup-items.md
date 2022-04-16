@@ -114,7 +114,7 @@ In the following sample, navigation URL for Flipkart, Amazon, and Snapdeal actio
 
 ### Item Templating
 
-Popup items can be customized using the `CssClass` property. We have customize the items using CSS style.
+Popup items can be customized using the `CssClass` property. Customize the items using CSS style.
 
 ```cshtml
 
