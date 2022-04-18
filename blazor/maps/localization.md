@@ -9,7 +9,7 @@ documentation: ug
 
 # Localization in Blazor Maps Component
 
-The localization library allows localizing the default text content of the Maps component. The Maps component has the static text of some features such as tooltip of zoom toolbar, and that can be changed to other cultures (Arabic, Deutsch, French, etc.) by referring to the Resource file. Refer to more details about localization [here](https://blazor.syncfusion.com/documentation/common/localization/).
+The localization library allows localizing the default text content of the Maps component. The Maps component has the static text of some features such as tooltip of zoom toolbar, and that can be changed to other cultures (Arabic, Deutsch, French, etc..) by referring to the Resource file. Refer to more details about localization [here](https://blazor.syncfusion.com/documentation/common/localization/).
 
 <!-- markdownlint-disable MD033 -->
 
