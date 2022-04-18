@@ -19,7 +19,7 @@ You can disable the text box from editing by setting the `readonly` attribute to
 </SfNumericTextBox>
 ```
 
-![Blazor NumericTextBox](./images/blazor-numerictextbox-customization.png)
+![Blazor NumericTextBox](./images/blazor-numericte-xtbox-customization.png)
 
 ## Disable interaction in input
 
