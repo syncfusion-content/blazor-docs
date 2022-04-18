@@ -1,13 +1,15 @@
 ---
 layout: post
-title: Read only Input in Blazor Numeric TextBox Component | Syncfusion
-description: Checkout and learn here all about data binding in Syncfusion Blazor Numeric TextBox component and more.
+title: Customization in Blazor Numeric TextBox Component | Syncfusion
+description: Checkout and learn here all about customization in Syncfusion Blazor Numeric TextBox component and more.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
 ---
-# Read only Input in Blazor Numeric TextBox Component
 
+# Customization in Blazor Numeric TextBox Component
+
+## Read only Input
 You can disable the text box from editing by setting the `readonly` attribute to the input element.
 
 ```cshtml
@@ -18,7 +20,7 @@ You can disable the text box from editing by setting the `readonly` attribute to
 
 ## Disable interaction in input
 
-You can also remove the cursor focus on the text box by eliminating the `css` from code snippet.
+You can disable cursor focus on the text box by setting `pointer-events` as `none` for input element as below,
 
 ```
 <style>
