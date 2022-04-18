@@ -600,11 +600,13 @@ You can customize the toolbar items tooltip text by adding toolbar items externa
 @code{
     public List<Order> Orders { get; set; }
     SfGrid<Order> DefaultGrid;
+    
     private List<object> ToolbarItems = new List<object>() {
-        new ItemModel() { Text = "Excel",TooltipText="Export to Excel", PrefixIcon = "e-excelexport", Id = "Grid_excelexport"},//Here Grid is SfGrid ID
+        new ItemModel() { Text = "Excel",TooltipText="Export to Excel", PrefixIcon = "e-excelexport", Id = "Grid_excelexport"}, //Here Grid is SfGrid ID
         new ItemModel(){ Text = "Pdf",TooltipText="Export to PDF", PrefixIcon= "e-pdfexport", Id="Grid_pdfexport"},
         new ItemModel(){ Text = "CSV",TooltipText="Export to CSV", PrefixIcon= "e-csvexport", Id="Grid_csvexport"},
-           };
+    };
+    
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_excelexport") //Id is combination of Grid's ID and itemname
@@ -620,8 +622,8 @@ You can customize the toolbar items tooltip text by adding toolbar items externa
         {
            await this.DefaultGrid.CsvExport();
         }
-        
     }
+    
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
@@ -642,7 +644,6 @@ You can customize the toolbar items tooltip text by adding toolbar items externa
     }
 ```
 
-The following screenshot represent a datagrid by customizing toolbar items tooltip text.
 ![Customizing Toolbar items tooltip text in Blazor DataGrid](./images/blazor-datagrid-toolbar-tooltip-customization.png)
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/Customizing-the-toolbar-items-tooltip-text-in-Blazor-Grid)
