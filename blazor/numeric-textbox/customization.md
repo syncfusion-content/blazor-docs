@@ -9,7 +9,7 @@ documentation: ug
 
 # Customization in Blazor Numeric TextBox Component
 
-# Read only Input
+## Read only Input
 
 You can disable the text box from editing by setting the `readonly` attribute to numeric textbox where textbox is marked as read-only. Still end-users can select text in textbox and only editing is disabled.  
 
