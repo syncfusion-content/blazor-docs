@@ -10,7 +10,8 @@ documentation: ug
 # Customization in Blazor Numeric TextBox Component
 
 ## Read only Input
-You can disable the text box from editing by setting the `readonly` attribute to the input element.
+
+You can disable the text box from editing by setting the `readonly` attribute to numeric textbox where textbox is marked as read-only. Still end-users can select text in textbox and only editing is disabled.  
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -20,7 +21,7 @@ You can disable the text box from editing by setting the `readonly` attribute to
 
 ## Disable interaction in input
 
-You can disable cursor focus on the text box by setting `pointer-events` as `none` for input element as below,
+You can disable cursor focus and selection on the text box by setting `pointer-events` as `none` for input element as below,
 
 ```
 <style>
