@@ -111,3 +111,25 @@ Offset values are set to specify the distance between the target and tooltip ele
 ![Blazor Tooltip with Offset Value](images/blazor-tooltip-offset-value.gif)
 
 > By default, collision is handled automatically and therefore when collision is detected the Tooltip fits horizontally and flips vertically.
+
+## Change collision target to viewport when setting Target
+
+You can set the [WindowCollision](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_WindowCollision) property to change collision target to `viewport` instead of parent of ToolTip element.
+
+```cshtml
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+
+<SfTooltip ID="Tooltip" Target="#btn" Content="@content" Position="Position.TopCenter" WindowCollision="true">
+     <SfButton ID="btn" Content="Show Tooltip"></SfButton>
+</SfTooltip>
+@code
+{
+    string content = "Lets go green & Save Earth !!";
+}
+
+```
+
+![Blazor Tooltip with Window Collision](images/blazor-tooltip-window-collision.png)
+
+[View Sample in GitHub](https://github.com/SyncfusionExamples/Change-collision-target-to-viewport-in-Blazor-Tooltip)
