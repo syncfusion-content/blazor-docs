@@ -244,9 +244,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 * Now, add the Syncfusion Blazor Carousel component in razor file. Here, the Carousel component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
-{% tabs %}
-{% highlight razor %}
-
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <div class="control-container">
@@ -286,8 +284,6 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
         justify-content: center;
     }
 </style>
+```
 
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor Carousel Component](images/blazor-carousel-component.png)
+![Blazor Carousel Component](images/blazor-carousel-component.gif)
