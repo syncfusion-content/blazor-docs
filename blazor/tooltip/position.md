@@ -114,16 +114,15 @@ Offset values are set to specify the distance between the target and tooltip ele
 
 ## Change collision target to viewport
 
-By enabling [WindowCollision](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_WindowCollision) property, You can set the Tooltip collision target to `viewport` which will helpful for positioning the tooltip properly.
+You can set the [WindowCollision](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_WindowCollision) property to change collision target to `viewport`, which will helpful for positioning the tooltip properly.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
- <SfTooltip ID="Tooltip" Target="#btn" Content="@content" Position="Position.TopCenter" WindowCollision="true">
-        <SfButton ID="btn" Content="Show Tooltip"></SfButton>
-    </SfTooltip>
+<SfTooltip ID="Tooltip" Target="#btn" Content="@content" Position="Position.TopCenter" WindowCollision="true">
+     <SfButton ID="btn" Content="Show Tooltip"></SfButton>
+</SfTooltip>
 @code
 {
     string content = "Lets go green & Save Earth !!";
