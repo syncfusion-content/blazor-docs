@@ -244,70 +244,46 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 * Now, add the Syncfusion Blazor Carousel component in razor file. Here, the Carousel component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
-{% tabs %}
-{% highlight razor %}
+```cshtml
+@using Syncfusion.Blazor.Navigations
 
-<div class="control-section default-carousel-section">
-    <div class="col-lg-12 content-wrapper">
-        <div class="carousel-sample">
-            <SfCarousel CssClass="default-carousel">
-                <CarouselItem>
-                    <figure class="img-container">
-                        <img src="images/carousel/bridge.png" alt="Golden Gate Bridge, San Francisco" style="height:100%;width:100%;" />
-                        <figcaption class="img-caption">Golden Gate Bridge, San Francisco</figcaption>
-                    </figure>
-                </CarouselItem>
-                <CarouselItem>
-                    <figure class="img-container">
-                        <img src="images/carousel/trees.png" alt="Spring Flower Trees" style="height:100%;width:100%;" />
-                        <figcaption class="img-caption">Spring Flower Trees</figcaption>
-                    </figure>
-                </CarouselItem>
-                <CarouselItem>
-                    <figure class="img-container">
-                        <img src="images/carousel/waterfall.png" alt="Oddadalen Waterfalls, Norway" style="height:100%;width:100%;" />
-                        <figcaption class="img-caption">Oddadalen Waterfalls, Norway</figcaption>
-                    </figure>
-                </CarouselItem>
-                <CarouselItem>
-                    <figure class="img-container">
-                        <img src="images/carousel/sea.png" alt="Anse Source d'Argent, Seychelles" style="height:100%;width:100%;" />
-                        <figcaption class="img-caption">Anse Source d'Argent, Seychelles</figcaption>
-                    </figure>
-                </CarouselItem>
-                <CarouselItem>
-                    <figure class="img-container">
-                        <img src="images/carousel/rocks.png" alt="Stonehenge, England" style="height:100%;width:100%;" />
-                        <figcaption class="img-caption">Stonehenge, England</figcaption>
-                    </figure>
-                </CarouselItem>
-            </SfCarousel>
-        </div>
-    </div>
+<div class="control-container">
+    <SfCarousel>
+        <CarouselItem>
+            <div class="fs-5">Slide 1</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="fs-5">Slide 2</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="fs-5">Slide 3</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="fs-5">Slide 4</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="fs-5">Slide 5</div>
+        </CarouselItem>
+    </SfCarousel>
 </div>
 
 <style>
-    .default-carousel-section .carousel-sample {
-        margin: 0 auto 2em;
-        max-width: 500px;
+    .control-container {
+        background-color: #adb5bd;
         height: 300px;
+        margin: 0 auto;
+        width: 500px;
     }
-    .default-carousel .e-carousel-items .e-carousel-item .img-container {
-        height: 100%;
-    }
-    .default-carousel .e-carousel-items .e-carousel-item .img-caption {
-        bottom: 4em;
-        color: #fff;
-        font-size: 12pt;
-        height: 2em;
-        position: relative;
-        padding: 0.3em 1em;
-        text-align: center;
-        width: 100%;
+
+    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-prev,
+    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-next,
+    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-active {
+        align-items: center;
+        border: 1px solid #f5f5f5;
+        display: flex;
+        justify-content: center;
     }
 </style>
+```
 
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor Carousel Component](images/blazor-carousel-component.png)
+![Blazor Carousel Component](images/blazor-carousel-component.gif)
