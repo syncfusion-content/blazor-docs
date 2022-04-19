@@ -134,8 +134,14 @@ When you drag and resize the Dashboard Layout's panel, the Linear Gauge componen
     SfLinearGauge GaugeTwo;
     SfLinearGauge GaugeThree;
 
+    public double[] CellSpacing = { 10, 10 };
+    public string BorderColor = "#E5E7EB";
+    public string TextColor = "#000000";
     public Syncfusion.Blazor.LinearGauge.Orientation GaugeOrientation = Syncfusion.Blazor.LinearGauge.Orientation.Vertical;
     public string DeliveredPointerColor = "#E5E7EB";
+
+    public bool IsInitialRender { get; set; }
+
     public void AxisLabelChange(AxisLabelRenderEventArgs args)
     {
         if (args.Text == "20")
@@ -149,12 +155,6 @@ When you drag and resize the Dashboard Layout's panel, the Linear Gauge componen
         else
             args.Text = " ";
     }
-
-    public bool IsInitialRender { get; set; }
-    public double[] CellSpacing = { 10, 10 };
-
-    public string BorderColor = "#E5E7EB";
-    public string TextColor = "#000000";
 
     public async void Created(Object args)
     {
@@ -177,7 +177,6 @@ When you drag and resize the Dashboard Layout's panel, the Linear Gauge componen
             GaugeTwo.RefreshAsync();
         }
     }
-
 }
 
 ```
@@ -316,6 +315,11 @@ When the Linear Gauge component renders within the Tab component, its rendering 
 
     public Syncfusion.Blazor.LinearGauge.Orientation GaugeOrientation = Syncfusion.Blazor.LinearGauge.Orientation.Vertical;
     public string DeliveredPointerColor = "#E5E7EB";
+    public string BorderColor = "#E5E7EB";
+    public string TextColor = "#000000";
+
+    public bool IsInitialRender { get; set; }
+
     public void AxisLabelChange(AxisLabelRenderEventArgs args)
     {
         if (args.Text == "20")
@@ -330,16 +334,11 @@ When the Linear Gauge component renders within the Tab component, its rendering 
             args.Text = " ";
     }
 
-    public string BorderColor = "#E5E7EB";
-    public string TextColor = "#000000";
-
-    public bool IsInitialRender { get; set; }
-
     public void Created()
     {
         IsInitialRender = true;
     }
-    }
+}
 
 ```
 ![Blazor Linear Gauge inside Tab component](../images/blazor-LinearGauge-with-tab.png)
@@ -405,7 +404,6 @@ When you drag and resize the Dialog component, the Linear Gauge component is not
     public bool Visibility { get; set; } = true;
     public bool ShowButton { get; set; } = false;
     public ResizeDirection[] DialogResizeDirections { get; set; } = new ResizeDirection[] { ResizeDirection.All };
-
     public Syncfusion.Blazor.LinearGauge.Orientation GaugeOrientation = Syncfusion.Blazor.LinearGauge.Orientation.Horizontal;
 
     public async Task OnResizeStopHandler(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
@@ -590,6 +588,11 @@ When you expand the Accordion component, the Linear Gauge component is not notif
 
     public Syncfusion.Blazor.LinearGauge.Orientation GaugeOrientation = Syncfusion.Blazor.LinearGauge.Orientation.Vertical;
     public string DeliveredPointerColor = "#E5E7EB";
+    public string BorderColor = "#E5E7EB";
+    public string TextColor = "#000000";
+    
+    public bool IsInitialRender { get; set; }
+
     public void AxisLabelChange(AxisLabelRenderEventArgs args)
     {
         if (args.Text == "20")
@@ -603,8 +606,6 @@ When you expand the Accordion component, the Linear Gauge component is not notif
         else
             args.Text = " ";
     }
-
-    public bool IsInitialRender { get; set; }
 
     public void Created(Object args)
     {
@@ -626,10 +627,6 @@ When you expand the Accordion component, the Linear Gauge component is not notif
             await GaugeThree.RefreshAsync();
         } 
     }
-
-    public string BorderColor = "#E5E7EB";
-    public string TextColor = "#000000";
-    
 }
 
 ```

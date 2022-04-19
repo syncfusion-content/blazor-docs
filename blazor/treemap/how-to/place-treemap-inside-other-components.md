@@ -120,6 +120,8 @@ When you drag and resize the Dashboard Layout's panel, the TreeMap component is 
     public bool IsInitialRender { get; set; }
     public double[] CellSpacing = { 10, 10 };
 
+    public string[] Palette = new string[] { "#C33764", "#AB3566", "#993367", "#853169", "#742F6A", "#632D6C", "#532C6D", "#412A6F", "#312870", "#1D2671" };
+
     public async void Created(Object args)
     {
         IsInitialRender = true;
@@ -142,7 +144,6 @@ When you drag and resize the Dashboard Layout's panel, the TreeMap component is 
         }
     }
 
-    public string[] Palette = new string[] { "#C33764", "#AB3566", "#993367", "#853169", "#742F6A", "#632D6C", "#532C6D", "#412A6F", "#312870", "#1D2671" };
     public class CarSalesDetails
     {
         public string Continent { get; set; }
@@ -370,7 +371,7 @@ When the TreeMap component renders within the Tab component, its rendering begin
     SfTreeMap<LeafData> TreeTwo;
     SfTreeMap<USAElectionResult> TreeThree;
 
-     public string[] LeafColor = new string[] { "#9cbb59" };
+    public string[] LeafColor = new string[] { "#9cbb59" };
     public string[] LeafColorOne = new string[] { "#D84444" };
     public string[] LeafColorTwo = new string[] { "#316DB5" };
 
@@ -378,15 +379,16 @@ When the TreeMap component renders within the Tab component, its rendering begin
     public Syncfusion.Blazor.TreeMap.RenderingMode RenderMode = Syncfusion.Blazor.TreeMap.RenderingMode.TopLeftBottomRight;
     public Syncfusion.Blazor.TreeMap.LegendMode LegendModes = Syncfusion.Blazor.TreeMap.LegendMode.Default;
     public Syncfusion.Blazor.TreeMap.LegendPosition LegendPositions = Syncfusion.Blazor.TreeMap.LegendPosition.Top;
-   
+
     public bool IsInitialRender { get; set; }
+
+    public string[] Palette = new string[] { "#C33764", "#AB3566", "#993367", "#853169", "#742F6A", "#632D6C", "#532C6D", "#412A6F", "#312870", "#1D2671" };
 
     public void Created()
     {
         IsInitialRender = true;
     }
 
-    public string[] Palette = new string[] { "#C33764", "#AB3566", "#993367", "#853169", "#742F6A", "#632D6C", "#532C6D", "#412A6F", "#312870", "#1D2671" };
     public class CarSalesDetails
     {
         public string Continent { get; set; }
@@ -424,7 +426,7 @@ When the TreeMap component renders within the Tab component, its rendering begin
         new CarSalesDetails { Continent="Canada", Company="Ford", Sales=305086},
         new CarSalesDetails { Continent="Canada", Company="FCA", Sales=278011 },
         new CarSalesDetails { Continent="Canada", Company="GM", Sales=266884 },
-   }; 
+    }; 
     
     public class USAElectionResult
     {
@@ -796,6 +798,7 @@ When you expand the Accordion component, the TreeMap component is not notified, 
     }
 
     public string[] Palette = new string[] { "#C33764", "#AB3566", "#993367", "#853169", "#742F6A", "#632D6C", "#532C6D", "#412A6F", "#312870", "#1D2671" };
+
     public class CarSalesDetails
     {
         public string Continent { get; set; }
@@ -833,9 +836,9 @@ When you expand the Accordion component, the TreeMap component is not notified, 
         new CarSalesDetails { Continent="Canada", Company="Ford", Sales=305086},
         new CarSalesDetails { Continent="Canada", Company="FCA", Sales=278011 },
         new CarSalesDetails { Continent="Canada", Company="GM", Sales=266884 },
-   }; 
+    }; 
     
-     public class USAElectionResult
+    public class USAElectionResult
     {
         public string State { get; set; }
         public double Trump { get; set; }
