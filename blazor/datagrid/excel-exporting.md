@@ -579,7 +579,7 @@ You can assign the file name for the exported document by defining **fileName** 
 
 ### Add additional worksheets to excel file while exporting
 
-Additional worksheets can be added to the excel file while exporting using the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) properties. 
+Additional worksheets can be added to the excel file while exporting using the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html).
 
 In the following sample, you can add the additional worksheets to excel file by creating a workbook using [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html). Additional sheets will be added along with the Grid data.
 
@@ -625,12 +625,12 @@ In the following sample, you can add the additional worksheets to excel file by 
     public async Task ToolbarClickHandler()
     {
         ExcelExportProperties ExportProperties = new ExcelExportProperties();
-        // Add a new wrokbook to excel file which will contain only 1 work sheet.
+        // Add a new workbook to the excel file that contains only 1 worksheet.
         ExportProperties.Workbook = new Workbook();
-        // Add additonal wroksheets as many.
+        // Add additional worksheets.
         ExportProperties.Workbook.Worksheets.Add();
         ExportProperties.Workbook.Worksheets.Add();
-        // Define the Gridsheet index where Grid data has to exported.
+        // Define the Gridsheet index where Grid data must be exported.
         ExportProperties.GridSheetIndex = 0;
         // Export the document. 
         await this.DefaultGrid.ExcelExport(ExportProperties);
