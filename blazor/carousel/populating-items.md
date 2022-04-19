@@ -7,7 +7,7 @@ control: Carousel
 documentation: ug
 ---
 
-# Populating Items
+# Populating Items with Blazor Carousel Component
 
 ## Populating items using carousel item
 

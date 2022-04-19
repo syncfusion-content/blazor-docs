@@ -7,7 +7,7 @@ control: Carousel
 documentation: ug
 ---
 
-# Navigators and Indicators
+# Navigators and Indicators with Blazor Carousel Component
 
 The navigators and indicators are used to transition the slides manually.
 

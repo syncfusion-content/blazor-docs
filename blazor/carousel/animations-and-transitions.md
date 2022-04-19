@@ -7,7 +7,7 @@ control: Carousel
 documentation: ug
 ---
 
-# Animations and Transitions
+# Animations and Transitions with Blazor Carousel Component
 
 ## Animations
 
