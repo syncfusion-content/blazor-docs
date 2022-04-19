@@ -1,13 +1,13 @@
 ---
 layout: post
-title: ExpandoObject binding with edit template in Blazor DataGrid Component | Syncfusion
+title: ExpandoObject binding in Blazor DataGrid component | Syncfusion
 description: Learn here all about ExpandoObject binding with edit template in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# ExpandoObject data binding with edit template feature
+# ExpandoObject Data Binding with Edit Template Feature
 
 By defining the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), you can render a custom editor component in Grid edit form. Two-way (@bind-Value) binding cannot be defined to the editor component inside EditTemplate, since its data type is unknown when Grid is bound by ExpandoObject. In this case, you can use the following way to perform a CRUD operation in the ExpandoObject data binding Grid with EditTemplate.
 
