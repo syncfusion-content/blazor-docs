@@ -64,7 +64,7 @@ The Carousel items will be populated from the first index of the Carousel items 
 
 ### Select an item using the property
 
-Using the `SelectedIndex` property of the Carousel component, you can set the slide to be populated at the time of initial rendering else you can switch to the particular slide item.
+Using the [SelectedIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_SelectedIndex) property of the Carousel component, you can set the slide to be populated at the time of initial rendering else you can switch to the particular slide item.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -114,7 +114,7 @@ Using the `SelectedIndex` property of the Carousel component, you can set the sl
 
 ### Select an item using the method
 
-Using the `PreviousAsync` or `NextAsync` public method of the Carousel component, you can switch the current populating slide to a previous or next slide.
+Using the [PreviousAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_PreviousAsync) or [NextAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_NextAsync) public method of the Carousel component, you can switch the current populating slide to a previous or next slide.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
