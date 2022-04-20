@@ -94,7 +94,7 @@ We have provided some basic built-in [PortShapes](https://help.syncfusion.com/cr
 
 ### Custom shape
 
- We have provided custom shape support for port. You can able to add the custom path data instead of build-in shapes. Please find the code example that explains how to change the custom shape for port.
+ Custom shape support has been provided for port. You can able to add the custom path data instead of build-in shapes. Please find the code example that explains how to change the custom shape for port.
 
  ```cshtml
 @using Syncfusion.Blazor.Diagram

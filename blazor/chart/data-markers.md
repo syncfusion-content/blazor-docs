@@ -131,6 +131,48 @@ Apart from shapes, one can also add custom images to mark the data point using t
 
 ```
 
+## Fill marker with series color
+
+Marker can be filled with the series color by setting [IsFilled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_IsFilled) property to **true** of [ChartMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMarker.html).
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@ConsumerReports" XName="X" YName="Y" Type="ChartSeriesType.Line">
+            <ChartMarker Visible="true" Height="10" Width="10" IsFilled="true">
+            </ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public double X { get; set; }
+        public double Y { get; set; }
+    }
+
+    public List<ChartData> ConsumerReports = new List<ChartData>
+	{
+		new ChartData{ X= 2005, Y= 28 },
+		new ChartData{ X= 2006, Y= 25 },
+		new ChartData{ X= 2007, Y= 26 },
+		new ChartData{ X= 2008, Y= 27 },
+		new ChartData{ X= 2009, Y= 32 },
+		new ChartData{ X= 2010, Y= 35 },
+		new ChartData{ X= 2011, Y= 30 }
+	};
+}
+
+```
+
+![Blazor Line Chart with Custom Markers](images/marker/blazor-line-chart-filled-marker.png)
+
 ## Customization
 
 Markers color can be customized using [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_Fill) property and the border color and width can be customized based on the specified value in [ChartMarkerBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMarkerBorder.html).
@@ -174,50 +216,6 @@ Markers color can be customized using [Fill](https://help.syncfusion.com/cr/blaz
 ```
 
 ![Blazor Line Chart with Custom Markers](images/marker/blazor-line-chart-custom-marker.png)
-
-### Filled Marker
-
-Marker can be filled with the series color by setting **IsFilled** property to **true** of [ChartMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMarker.html).
-
-```cshtml
-
-@using Syncfusion.Blazor.Charts
-
-<SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
-
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@ConsumerReports" XName="X" YName="Y" Type="ChartSeriesType.Line">
-            <ChartMarker Visible="true" Height="10" Width="10" Fill="red">
-                <ChartMarkerBorder Width="2" Color="blue"></ChartMarkerBorder>
-            </ChartMarker>
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
-
-@code{
-    public class ChartData
-    {
-        public double X { get; set; }
-        public double Y { get; set; }
-    }
-
-    public List<ChartData> ConsumerReports = new List<ChartData>
-	{
-		new ChartData{ X= 2005, Y= 28 },
-		new ChartData{ X= 2006, Y= 25 },
-		new ChartData{ X= 2007, Y= 26 },
-		new ChartData{ X= 2008, Y= 27 },
-		new ChartData{ X= 2009, Y= 32 },
-		new ChartData{ X= 2010, Y= 35 },
-		new ChartData{ X= 2011, Y= 30 }
-	};
-}
-
-```
-
-![Blazor Line Chart with Custom Markers](images/marker/blazor-line-chart-marker-filled.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
