@@ -137,3 +137,65 @@ In the below example we have changed the dialog's header text and footer button 
 ```
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+
+## Add the default PreventRender value for dialog editing/adding
+
+By default, the unnecessary rendering of the Grid component on an external StateHasChanged call is prevented. Due to this, any changes made in the Grid Add/Edit dialog form will not reflect changes that are executed dynamically or externally. To dynamically re-render the Grid's Add/Edit form to reflect the changes, you must call the Grid's PreventRender() method with a false argument.
+
+In the following sample, the checkbox component is rendered in a dialog edit form. By calling the PreventRender() method with a false argument in the [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) event, you can update the checkbox component state.
+
+```cshtml
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Grids
+<SfGrid @ref="GridInstance" DataSource="@Orders" TValue="Order" Toolbar="@(new List<string>() { "Edit", "Delete", "Update" })">
+    <GridEvents TValue="Order" OnActionComplete="ActionComplete"></GridEvents>
+    <GridEditSettings AllowEditing="true" Mode="EditMode.Dialog">
+        <Template>
+            @{
+                Order MyOpts = (context as Order);
+            }
+            <div class="form-group">
+                <SfCheckBox Label="Option 1" @bind-Checked="@MyOpts.IsAdd" Disabled="MyOpts.IsDelete" />
+            </div>
+            <div class="form-group">
+                <SfCheckBox Label="Option 2" @bind-Checked="@MyOpts.IsDelete" Disabled="MyOpts.IsAdd" />
+            </div>
+        </Template>
+    </GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="CustomerID" HeaderText="Customer ID" IsPrimaryKey="true"/>
+        <GridColumn Field="IsAdd" HeaderText="Is Add" />
+        <GridColumn Field="IsDelete" HeaderText="Is Delete" />
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public SfGrid<Order> GridInstance { get; set; }
+    public List<Order> Orders { get; set; }
+
+    public class Order
+    {
+        public string CustomerID { get; set; }
+        public bool IsAdd { get; set; } = false;
+        public bool IsDelete { get; set; } = false;
+    }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 4).Select(x => new Order()
+        {
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[x],
+            IsAdd = false,
+            IsDelete = false,
+        }).ToList();
+    }
+    public void ActionComplete(ActionEventArgs<Order> args)
+    {
+        if (args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.BeginEdit) || args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
+        {
+            GridInstance.PreventRender(false);
+        }
+    }
+}
+```
+
+>  Commenting the PreventRender method in the [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) event will result in the failure to update the Checkbox component state.
