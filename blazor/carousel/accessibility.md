@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Carousel Component
 
-The Carousel component has been designed, keeping in mind the [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/) specifications, and applying the WAI-ARIA roles, states and properties along with keyboard support for people who use assistive devices. WAI-ARIA accessibility support is achieved through attributes like `aria-roledescription`, `aria-label`, `aria-current`, `aria-live`, `aria-role` and `aria-hidden`. It provides information about elements in a document for assistive technology. The component implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/) and has been tested in major screen readers.
+The Carousel component has been designed, keeping in mind the [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/) specifications, and applying the WAI-ARIA roles, states and properties along with keyboard support for people who use assistive devices. WAI-ARIA accessibility support is achieved through attributes like `aria-role description`, `aria-label`, `aria-current`, `aria-live`, `aria-role` and `aria-hidden`. It provides information about elements in a document for assistive technology. The component implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/) and has been tested in major screen readers.
 
 ## ARIA attributes
 
@@ -17,7 +17,7 @@ The carousel component is designed by considering [WAI-ARIA](https://www.w3.org/
 
 | **Roles and Attributes** | **Functionalities**                                                                                                                         |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `aria-roledescription`   | The role description attribute should be added for the root element (carousel) and each carousel slide item (slide).                        |
+| `aria-role description`   | The role description attribute should be added for the root element (carousel) and each carousel slide item (slide).                        |
 | `aria-label`             | Previous, next and play/pause buttons and all indicator elements.                                                                           |
 | `aria-current`           | For the active item indicator element, `aria-current` is set to `true`.                                                                     |
 | `aria-hidden`            | For all carousel elements except the currently visible item, `aria-hidden` is set to `true`.                                                |
