@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Excel Like Filter in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Excel Like Filter in Syncfusion Blazor DataGrid component and much more details.
+description: Checkout and learn here all about Excel like filter in Syncfusion Blazor DataGrid component and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -56,7 +56,7 @@ The following screenshot represents Custom filter in Excel filter
 
 ## Filter item template
 
-This **`FilterItemTemplate`** helps you to customize each CheckBox list element/value for display purposes. To access the checkbox list values inside the `FilterItemTemplate`, you can use the implicit named parameter context. You can type cast the context as [FilterItemTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterItemTemplateContext.html) to get list values inside template.
+This **`FilterItemTemplate`** helps to customize each CheckBox list element or value for display purposes. To access the checkbox list values inside the `FilterItemTemplate`, you can use the implicit named parameter context. You can type cast the context as [FilterItemTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterItemTemplateContext.html) to get list values inside template.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -103,12 +103,11 @@ This **`FilterItemTemplate`** helps you to customize each CheckBox list element/
 }
 ```
 
-The following screenshot represents Filter Item template
 ![Blazor DataGrid Filter with Item Template](./images/blazor-datagrid-filter-item-template.png)
 
 ## Customize filter icon for filtered columns
 
-By default, DataGrid will display the in-built filtered icon with predefined styles after filtering the column. You can also customize the filtered icon using <b>.e-grid .e-filtered::before</b> class.
+After filtering the column, the DataGrid will display the in-built filtered icon with predefined styles by default. The filtered icon can also be customized using <b>.e-grid .e-filtered::before</b> class.
 
 ```cshtml
 
