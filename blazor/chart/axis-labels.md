@@ -662,6 +662,9 @@ You can customize the axis labels by using [OnAxisLabelRender](https://help.sync
 * [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_Text) – Get or sets the text to be displayed in the axis label. You can change the text based on `Value` and `Axis` properties.
 * [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_Value) – Specifies the value of the axis label. For `CategoryAxis`, it denotes the index of the datapoints and for numerix and date time axis `Value` denotes the actual value of the datapoints.   
 * [Axis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_Axis) – Specifies the axis for which labels are rendering.
+* `Name`- Denotes the event name.
+* `Cancel`- Gets or sets whether to cancel the rendering of particular label.
+
 
 ```cshtml
 
@@ -715,6 +718,8 @@ You can customize the axis labels by using [OnAxisLabelRender](https://help.sync
 ```
 
 ![Blazor Column Chart Axis with Label customization](images/axis-labels/blazor-column-chart-label-customization.png)
+
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Chart-Axis-Label-Customization).
 
 ## See Also
 
