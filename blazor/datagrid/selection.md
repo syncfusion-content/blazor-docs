@@ -253,7 +253,7 @@ and hold CTRL key and click the desired rows. To select range of rows, press and
 }
 ```
 
-### How to hide select all checkbox in checkbox column
+### Hide select all checkbox in column header
 
 By default, setting the type as "ColumnType.CheckBox" will render a column with checkboxes only for selection purpose. You can hide the "select all" checkbox in the column header.
 
