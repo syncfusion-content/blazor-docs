@@ -394,7 +394,7 @@ This feature has the below limitations, along with the above mentioned Frozen Gr
 
 ## Add or remove frozen columns by dragging the column separator
 
-The [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumns.html) can be add or removed from frozen content by dragging and dropping the column separator. To enable this feature, set the `AllowFreezeLineMoving` property to true.
+The [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumns.html) can be added or removed from frozen content by dragging and dropping the column separator. To enable this feature, set the `AllowFreezeLineMoving` property to true.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -456,6 +456,6 @@ The [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.
 
 ```
 
-> If frozen columns are not specified, the frozen column separator will be displayed at the left and right end. You can dynamically change the frozen columns by dragging the column separator.
+> If frozen columns are not specified, the frozen column separator will be displayed at the left and right ends. You can dynamically change the frozen columns by dragging the column separator.
 
 ![Add or Remove Frozen Blazor DataGrid Columns by Dragging the Column Separator](./images/blazor-datagrid-drag-and-drop-the-column-separator.gif)
