@@ -48,8 +48,10 @@ You can enable Excel like filter by defining [Type](https://help.syncfusion.com/
 
 ```
 
+The following screenshot represents Excel filter
 ![Blazor DataGrid with Excel Filter](./images/blazor-datagrid-excel-filter.png)
 
+The following screenshot represents Custom filter in Excel filter
 ![Blazor DataGrid Custom Excel Filter](./images/blazor-datagrid-custom-excel-filter.png)
 
 ## Filter item template
