@@ -307,4 +307,4 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 </style>
 ```
 
-![Blazor Carousel Component](images/getting-started.png)
+![Blazor Carousel Component](images/getting_started.png)
