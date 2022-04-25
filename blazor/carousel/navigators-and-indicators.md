@@ -29,19 +29,19 @@ The following example depicts the code to show/hide the navigators in the carous
 <div class="control-container">
     <SfCarousel ButtonsVisibility="CarouselButtonVisibility.Visible">
         <CarouselItem>
-            <div class="fs-5">Slide 1</div>
+            <div class="slide-content">Slide 1</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 2</div>
+            <div class="slide-content">Slide 2</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 3</div>
+            <div class="slide-content">Slide 3</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 4</div>
+            <div class="slide-content">Slide 4</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 5</div>
+            <div class="slide-content">Slide 5</div>
         </CarouselItem>
     </SfCarousel>
 </div>
@@ -54,12 +54,11 @@ The following example depicts the code to show/hide the navigators in the carous
         width: 500px;
     }
 
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-prev,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-next,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-active {
+    .e-carousel .slide-content {
         align-items: center;
-        border: 1px solid #f5f5f5;
         display: flex;
+        font-size: 1.25rem;
+        height: 100%;
         justify-content: center;
     }
 </style>
@@ -75,19 +74,19 @@ In the carousel, you can show the previous and next buttons only on mouse hover 
 <div class="control-container">
     <SfCarousel ButtonsVisibility="CarouselButtonVisibility.VisibleOnHover">
         <CarouselItem>
-            <div class="fs-5">Slide 1</div>
+            <div class="slide-content">Slide 1</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 2</div>
+            <div class="slide-content">Slide 2</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 3</div>
+            <div class="slide-content">Slide 3</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 4</div>
+            <div class="slide-content">Slide 4</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 5</div>
+            <div class="slide-content">Slide 5</div>
         </CarouselItem>
     </SfCarousel>
 </div>
@@ -100,12 +99,11 @@ In the carousel, you can show the previous and next buttons only on mouse hover 
         width: 500px;
     }
 
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-prev,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-next,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-active {
+    .e-carousel .slide-content {
         align-items: center;
-        border: 1px solid #f5f5f5;
         display: flex;
+        font-size: 1.25rem;
+        height: 100%;
         justify-content: center;
     }
 </style>
@@ -123,19 +121,19 @@ Template options are provided to customize the previous button using [PreviousBu
     <SfCarousel>
         <ChildContent>
             <CarouselItem>
-                <div class="fs-5">Slide 1</div>
+                <div class="slide-content">Slide 1</div>
             </CarouselItem>
             <CarouselItem>
-                <div class="fs-5">Slide 2</div>
+                <div class="slide-content">Slide 2</div>
             </CarouselItem>
             <CarouselItem>
-                <div class="fs-5">Slide 3</div>
+                <div class="slide-content">Slide 3</div>
             </CarouselItem>
             <CarouselItem>
-                <div class="fs-5">Slide 4</div>
+                <div class="slide-content">Slide 4</div>
             </CarouselItem>
             <CarouselItem>
-                <div class="fs-5">Slide 5</div>
+                <div class="slide-content">Slide 5</div>
             </CarouselItem>
         </ChildContent>
         <PreviousButtonTemplate>
@@ -163,12 +161,11 @@ Template options are provided to customize the previous button using [PreviousBu
         width: 500px;
     }
 
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-prev,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-next,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-active {
+    .e-carousel .slide-content {
         align-items: center;
-        border: 1px solid #f5f5f5;
         display: flex;
+        font-size: 1.25rem;
+        height: 100%;
         justify-content: center;
     }
 
@@ -205,19 +202,19 @@ In indicators, the total slides and current slide state have been depicted. You 
 <div class="control-container">
     <SfCarousel ShowIndicators="true">
         <CarouselItem>
-            <div class="fs-5">Slide 1</div>
+            <div class="slide-content">Slide 1</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 2</div>
+            <div class="slide-content">Slide 2</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 3</div>
+            <div class="slide-content">Slide 3</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 4</div>
+            <div class="slide-content">Slide 4</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 5</div>
+            <div class="slide-content">Slide 5</div>
         </CarouselItem>
     </SfCarousel>
 </div>
@@ -230,12 +227,11 @@ In indicators, the total slides and current slide state have been depicted. You 
         width: 500px;
     }
 
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-prev,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-next,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-active {
+    .e-carousel .slide-content {
         align-items: center;
-        border: 1px solid #f5f5f5;
         display: flex;
+        font-size: 1.25rem;
+        height: 100%;
         justify-content: center;
     }
 </style>
@@ -252,19 +248,19 @@ Template option is provided to customize the indicators by using the [IndicatorT
     <SfCarousel ShowIndicators="true">
         <ChildContent>
             <CarouselItem>
-                <div class="fs-5">Slide 1</div>
+                <div class="slide-content">Slide 1</div>
             </CarouselItem>
             <CarouselItem>
-                <div class="fs-5">Slide 2</div>
+                <div class="slide-content">Slide 2</div>
             </CarouselItem>
             <CarouselItem>
-                <div class="fs-5">Slide 3</div>
+                <div class="slide-content">Slide 3</div>
             </CarouselItem>
             <CarouselItem>
-                <div class="fs-5">Slide 4</div>
+                <div class="slide-content">Slide 4</div>
             </CarouselItem>
             <CarouselItem>
-                <div class="fs-5">Slide 5</div>
+                <div class="slide-content">Slide 5</div>
             </CarouselItem>
         </ChildContent>
         <IndicatorsTemplate>
@@ -286,12 +282,11 @@ Template option is provided to customize the indicators by using the [IndicatorT
         width: 500px;
     }
 
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-prev,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-next,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-active {
+    .e-carousel .slide-content {
         align-items: center;
-        border: 1px solid #f5f5f5;
         display: flex;
+        font-size: 1.25rem;
+        height: 100%;
         justify-content: center;
     }
 
@@ -324,19 +319,19 @@ You can customize the indicators by showing the preview image of each slide usin
     <SfCarousel ShowIndicators="true">
         <ChildContent>
             <CarouselItem>
-                <div class="fs-5">Slide 1</div>
+                <div class="slide-content">Slide 1</div>
             </CarouselItem>
             <CarouselItem>
-                <div class="fs-5">Slide 2</div>
+                <div class="slide-content">Slide 2</div>
             </CarouselItem>
             <CarouselItem>
-                <div class="fs-5">Slide 3</div>
+                <div class="slide-content">Slide 3</div>
             </CarouselItem>
             <CarouselItem>
-                <div class="fs-5">Slide 4</div>
+                <div class="slide-content">Slide 4</div>
             </CarouselItem>
             <CarouselItem>
-                <div class="fs-5">Slide 5</div>
+                <div class="slide-content">Slide 5</div>
             </CarouselItem>
         </ChildContent>
         <IndicatorsTemplate>
@@ -358,12 +353,11 @@ You can customize the indicators by showing the preview image of each slide usin
         width: 500px;
     }
 
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-prev,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-next,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-active {
+    .e-carousel .slide-content {
         align-items: center;
-        border: 1px solid #f5f5f5;
         display: flex;
+        font-size: 1.25rem;
+        height: 100%;
         justify-content: center;
     }
 
@@ -398,19 +392,19 @@ In the carousel, [AutoPlay](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 <div class="control-container">
     <SfCarousel ButtonsVisibility="CarouselButtonVisibility.Visible" ShowPlayButton="true">
         <CarouselItem>
-            <div class="fs-5">Slide 1</div>
+            <div class="slide-content">Slide 1</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 2</div>
+            <div class="slide-content">Slide 2</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 3</div>
+            <div class="slide-content">Slide 3</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 4</div>
+            <div class="slide-content">Slide 4</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 5</div>
+            <div class="slide-content">Slide 5</div>
         </CarouselItem>
     </SfCarousel>
 </div>
@@ -423,12 +417,11 @@ In the carousel, [AutoPlay](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
         width: 500px;
     }
 
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-prev,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-next,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-active {
+    .e-carousel .slide-content {
         align-items: center;
-        border: 1px solid #f5f5f5;
         display: flex;
+        font-size: 1.25rem;
+        height: 100%;
         justify-content: center;
     }
 </style>
@@ -446,19 +439,19 @@ Template option is provided to customize the play button by using the [PlayButto
     <SfCarousel AutoPlay="@IsSlidePlay" ButtonsVisibility="CarouselButtonVisibility.Visible" ShowPlayButton="true">
         <ChildContent>
             <CarouselItem>
-                <div class="fs-5">Slide 1</div>
+                <div class="slide-content">Slide 1</div>
             </CarouselItem>
             <CarouselItem>
-                <div class="fs-5">Slide 2</div>
+                <div class="slide-content">Slide 2</div>
             </CarouselItem>
             <CarouselItem>
-                <div class="fs-5">Slide 3</div>
+                <div class="slide-content">Slide 3</div>
             </CarouselItem>
             <CarouselItem>
-                <div class="fs-5">Slide 4</div>
+                <div class="slide-content">Slide 4</div>
             </CarouselItem>
             <CarouselItem>
-                <div class="fs-5">Slide 5</div>
+                <div class="slide-content">Slide 5</div>
             </CarouselItem>
         </ChildContent>
         <PlayButtonTemplate>
@@ -492,12 +485,11 @@ Template option is provided to customize the play button by using the [PlayButto
         width: 500px;
     }
 
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-prev,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-next,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-active {
+    .e-carousel .slide-content {
         align-items: center;
-        border: 1px solid #f5f5f5;
         display: flex;
+        font-size: 1.25rem;
+        height: 100%;
         justify-content: center;
     }
 

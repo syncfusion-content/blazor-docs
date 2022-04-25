@@ -23,19 +23,19 @@ The following demo depicts the example for fade animation,
 <div class="control-container">
     <SfCarousel AnimationEffect="CarouselAnimationEffect.Fade">
         <CarouselItem>
-            <div class="fs-5">Slide 1</div>
+            <div class="slide-content">Slide 1</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 2</div>
+            <div class="slide-content">Slide 2</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 3</div>
+            <div class="slide-content">Slide 3</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 4</div>
+            <div class="slide-content">Slide 4</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 5</div>
+            <div class="slide-content">Slide 5</div>
         </CarouselItem>
     </SfCarousel>
 </div>
@@ -48,10 +48,11 @@ The following demo depicts the example for fade animation,
         width: 500px;
     }
 
-    .e-carousel .e-carousel-items.e-carousel-fade-animation .e-carousel-item {
+    .e-carousel .slide-content {
         align-items: center;
-        border: 1px solid #f5f5f5;
         display: flex;
+        font-size: 1.25rem;
+        height: 100%;
         justify-content: center;
     }
 </style>
@@ -67,19 +68,19 @@ Using the items property, you can set different intervals for each item to trans
 <div class="control-container">
     <SfCarousel>
         <CarouselItem Interval="2000">
-            <div class="fs-5">Slide 1</div>
+            <div class="slide-content">Slide 1</div>
         </CarouselItem>
         <CarouselItem Interval="4000">
-            <div class="fs-5">Slide 2</div>
+            <div class="slide-content">Slide 2</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 3</div>
+            <div class="slide-content">Slide 3</div>
         </CarouselItem>
         <CarouselItem Interval="6000">
-            <div class="fs-5">Slide 4</div>
+            <div class="slide-content">Slide 4</div>
         </CarouselItem>
         <CarouselItem Interval="8000">
-            <div class="fs-5">Slide 5</div>
+            <div class="slide-content">Slide 5</div>
         </CarouselItem>
     </SfCarousel>
 </div>
@@ -92,12 +93,11 @@ Using the items property, you can set different intervals for each item to trans
         width: 500px;
     }
 
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-prev,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-next,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-active {
+    .e-carousel .slide-content {
         align-items: center;
-        border: 1px solid #f5f5f5;
         display: flex;
+        font-size: 1.25rem;
+        height: 100%;
         justify-content: center;
     }
 </style>
@@ -115,19 +115,19 @@ In the carousel, all slides transitions are performed continuously after the spe
 <div class="control-container">
     <SfCarousel AutoPlay="false">
         <CarouselItem>
-            <div class="fs-5">Slide 1</div>
+            <div class="slide-content">Slide 1</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 2</div>
+            <div class="slide-content">Slide 2</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 3</div>
+            <div class="slide-content">Slide 3</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 4</div>
+            <div class="slide-content">Slide 4</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 5</div>
+            <div class="slide-content">Slide 5</div>
         </CarouselItem>
     </SfCarousel>
 </div>
@@ -140,12 +140,11 @@ In the carousel, all slides transitions are performed continuously after the spe
         width: 500px;
     }
 
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-prev,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-next,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-active {
+    .e-carousel .slide-content {
         align-items: center;
-        border: 1px solid #f5f5f5;
         display: flex;
+        font-size: 1.25rem;
+        height: 100%;
         justify-content: center;
     }
 </style>
@@ -161,19 +160,19 @@ In the carousel, slides transitions are repeated continuously when you reach the
 <div class="control-container">
     <SfCarousel Loop="false">
         <CarouselItem>
-            <div class="fs-5">Slide 1</div>
+            <div class="slide-content">Slide 1</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 2</div>
+            <div class="slide-content">Slide 2</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 3</div>
+            <div class="slide-content">Slide 3</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 4</div>
+            <div class="slide-content">Slide 4</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 5</div>
+            <div class="slide-content">Slide 5</div>
         </CarouselItem>
     </SfCarousel>
 </div>
@@ -186,12 +185,11 @@ In the carousel, slides transitions are repeated continuously when you reach the
         width: 500px;
     }
 
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-prev,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-next,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-active {
+    .e-carousel .slide-content {
         align-items: center;
-        border: 1px solid #f5f5f5;
         display: flex;
+        font-size: 1.25rem;
+        height: 100%;
         justify-content: center;
     }
 </style>
@@ -209,19 +207,19 @@ The following demo depicts the example for carousel events,
 <div class="control-container">
     <SfCarousel SelectedIndexChanged="OnSelectedIndexChanged">
         <CarouselItem>
-            <div class="fs-5">Slide 1</div>
+            <div class="slide-content">Slide 1</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 2</div>
+            <div class="slide-content">Slide 2</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 3</div>
+            <div class="slide-content">Slide 3</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 4</div>
+            <div class="slide-content">Slide 4</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 5</div>
+            <div class="slide-content">Slide 5</div>
         </CarouselItem>
     </SfCarousel>
 </div>
@@ -241,12 +239,11 @@ The following demo depicts the example for carousel events,
         width: 500px;
     }
 
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-prev,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-next,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-active {
+    .e-carousel .slide-content {
         align-items: center;
-        border: 1px solid #f5f5f5;
         display: flex;
+        font-size: 1.25rem;
+        height: 100%;
         justify-content: center;
     }
 </style>
@@ -262,19 +259,19 @@ In the carousel, we can able to perform swipe the carousel slides using touch ac
 <div class="control-container">
     <SfCarousel EnableTouchSwipe="false">
         <CarouselItem>
-            <div class="fs-5">Slide 1</div>
+            <div class="slide-content">Slide 1</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 2</div>
+            <div class="slide-content">Slide 2</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 3</div>
+            <div class="slide-content">Slide 3</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 4</div>
+            <div class="slide-content">Slide 4</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 5</div>
+            <div class="slide-content">Slide 5</div>
         </CarouselItem>
     </SfCarousel>
 </div>
@@ -287,12 +284,11 @@ In the carousel, we can able to perform swipe the carousel slides using touch ac
         width: 500px;
     }
 
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-prev,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-next,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-active {
+    .e-carousel .slide-content {
         align-items: center;
-        border: 1px solid #f5f5f5;
         display: flex;
+        font-size: 1.25rem;
+        height: 100%;
         justify-content: center;
     }
 </style>
