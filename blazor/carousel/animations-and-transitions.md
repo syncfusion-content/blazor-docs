@@ -150,6 +150,8 @@ In the carousel, all slides transitions are performed continuously after the spe
 </style>
 ```
 
+![Carousel AutoPlay Slides](images/auto_play.png)
+
 ## Looping slides
 
 In the carousel, slides transitions are repeated continuously when you reach the last slide by default. You can enable or disable the infinite slide transition using the [Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_Loop) property. The following example depicts the code to enable or disable the infinite slide transitions.
@@ -194,6 +196,8 @@ In the carousel, slides transitions are repeated continuously when you reach the
     }
 </style>
 ```
+
+![Carousel Looping Slides](images/looping_slides.png)
 
 ## Slide changing events
 

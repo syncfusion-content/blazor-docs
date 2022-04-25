@@ -64,6 +64,8 @@ The following example depicts the code to show/hide the navigators in the carous
 </style>
 ```
 
+![Carousel Navigators](images/navigators_hidden.png)
+
 ### Show previous and next button on hover
 
 In the carousel, you can show the previous and next buttons only on mouse hover using the [ButtonsVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_ButtonsVisibility) property. The following example depicts the code to show the navigators on mouse hover in the carousel.
@@ -108,6 +110,8 @@ In the carousel, you can show the previous and next buttons only on mouse hover 
     }
 </style>
 ```
+
+![Carousel Navigators OnHover](images/navigators_onhover.gif)
 
 ### Previous and next button Template
 
@@ -190,6 +194,8 @@ Template options are provided to customize the previous button using [PreviousBu
 </style>
 ```
 
+![Carousel Navigators Template](images/navigators_template.png)
+
 ## Indicators
 
 ### Show or hide indicators
@@ -236,6 +242,8 @@ In indicators, the total slides and current slide state have been depicted. You 
     }
 </style>
 ```
+
+![Carousel Indicators](images/indicators.png)
 
 ### Indicators Template
 
@@ -307,6 +315,8 @@ Template option is provided to customize the indicators by using the [IndicatorT
     }
 </style>
 ```
+
+![Carousel Indicators](images/indicators_template.png)
 
 ### Showing preview of slide in indicator
 
@@ -380,6 +390,8 @@ You can customize the indicators by showing the preview image of each slide usin
 </style>
 ```
 
+![Carousel Indicators](images/indicators_preview.png)
+
 ## Play button
 
 ### Show or hide the play button
@@ -426,6 +438,8 @@ In the carousel, [AutoPlay](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
     }
 </style>
 ```
+
+![Carousel Indicators](images/play_button.png)
 
 ### Play button template
 
@@ -504,3 +518,5 @@ Template option is provided to customize the play button by using the [PlayButto
     }
 </style>
 ```
+
+![Carousel Indicators](images/play_button_template.png)
