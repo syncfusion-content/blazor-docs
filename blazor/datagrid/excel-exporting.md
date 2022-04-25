@@ -581,7 +581,7 @@ You can assign the file name for the exported document by defining **fileName** 
 
 Additional worksheets can be added to the excel file while exporting using the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html).
 
-In the following sample, you can add the additional worksheets to excel file by creating a workbook using [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html). Additional sheets will be added along with the Grid data.
+In the following sample, you can add the additional worksheets to excel file by creating a workbook using `ExcelExportProperties`. Additional sheets will be added along with the Grid data.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
