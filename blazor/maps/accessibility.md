@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Maps Component | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor Maps component and much more details.
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug
@@ -38,7 +38,7 @@ Maps provides built-in compliance with the [WAI-ARIA](https://www.w3.org/TR/wai-
 
 To change this default description, use the [`Description`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Description) property available in [`MapsLegendTitle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendTitle.html#Syncfusion_Blazor_Maps_MapsLegendTitle_Description), [`MapsTitleSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTitleSettings.html#Syncfusion_Blazor_Maps_MapsTitleSettings_Description), [`MapsSubtitleSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsSubtitleSettings.html#Syncfusion_Blazor_Maps_MapsSubtitleSettings_Description) and [`SfMaps`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Description). It helps the screen reader to read for an assistive purpose.
 
-## Keyboard Navigation
+## KeyBoard Navigation
 
 All the Maps actions can be controlled via keyboard keys. The applicable key combinations and their relative functionalities are listed below for the appropriate UI features available in the component.
 

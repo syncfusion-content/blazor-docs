@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Navigation Lines in Blazor Maps Component | Syncfusion
-description: Checkout and learn here all about navigation lines in Syncfusion Blazor Maps component and much more.
+description: Checkout and learn here all about Navigation Lines in Syncfusion Blazor Maps component and much more.
 platform: Blazor
 control: Maps
 documentation: ug
