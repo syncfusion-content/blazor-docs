@@ -19,19 +19,19 @@ When rendering the Carousel component using items binding, you can assign templa
 <div class="control-container">
     <SfCarousel>
         <CarouselItem>
-            <div class="fs-5">Slide 1</div>
+            <div class="slide-content">Slide 1</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 2</div>
+            <div class="slide-content">Slide 2</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 3</div>
+            <div class="slide-content">Slide 3</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 4</div>
+            <div class="slide-content">Slide 4</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 5</div>
+            <div class="slide-content">Slide 5</div>
         </CarouselItem>
     </SfCarousel>
 </div>
@@ -44,12 +44,11 @@ When rendering the Carousel component using items binding, you can assign templa
         width: 500px;
     }
 
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-prev,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-next,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-active {
+    .e-carousel .slide-content {
         align-items: center;
-        border: 1px solid #f5f5f5;
         display: flex;
+        font-size: 1.25rem;
+        height: 100%;
         justify-content: center;
     }
 </style>
@@ -72,19 +71,19 @@ Using the [SelectedIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 <div class="control-container">
     <SfCarousel @bind-SelectedIndex="@CurrentIndex">
         <CarouselItem>
-            <div class="fs-5">Slide 1</div>
+            <div class="slide-content">Slide 1</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 2</div>
+            <div class="slide-content">Slide 2</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 3</div>
+            <div class="slide-content">Slide 3</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 4</div>
+            <div class="slide-content">Slide 4</div>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 5</div>
+            <div class="slide-content">Slide 5</div>
         </CarouselItem>
     </SfCarousel>
 </div>
@@ -101,12 +100,11 @@ Using the [SelectedIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
         width: 500px;
     }
 
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-prev,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-next,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-active {
+    .e-carousel .slide-content {
         align-items: center;
-        border: 1px solid #f5f5f5;
         display: flex;
+        font-size: 1.25rem;
+        height: 100%;
         justify-content: center;
     }
 </style>
@@ -124,19 +122,19 @@ Using the [PreviousAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
     <div class="row control-container">
         <SfCarousel @ref="@CarouselRef" @bind-SelectedIndex="@CurrentIndex" ButtonsVisibility="CarouselButtonVisibility.Hidden">
             <CarouselItem>
-                <div class="fs-5">Slide 1</div>
+                <div class="slide-content">Slide 1</div>
             </CarouselItem>
             <CarouselItem>
-                <div class="fs-5">Slide 2</div>
+                <div class="slide-content">Slide 2</div>
             </CarouselItem>
             <CarouselItem>
-                <div class="fs-5">Slide 3</div>
+                <div class="slide-content">Slide 3</div>
             </CarouselItem>
             <CarouselItem>
-                <div class="fs-5">Slide 4</div>
+                <div class="slide-content">Slide 4</div>
             </CarouselItem>
             <CarouselItem>
-                <div class="fs-5">Slide 5</div>
+                <div class="slide-content">Slide 5</div>
             </CarouselItem>
         </SfCarousel>
     </div>
@@ -171,12 +169,11 @@ Using the [PreviousAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
         width: 500px;
     }
 
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-prev,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-next,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-active {
+    .e-carousel .slide-content {
         align-items: center;
-        border: 1px solid #f5f5f5;
         display: flex;
+        font-size: 1.25rem;
+        height: 100%;
         justify-content: center;
     }
 </style>
