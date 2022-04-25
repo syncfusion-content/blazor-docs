@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Maps Component | Syncfusion
-description: Checkout and learn here all about the events in Syncfusion Blazor Maps component and much more details.
+description: Checkout and learn here all about the Events in Syncfusion Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug
@@ -13,7 +13,7 @@ This section explains the list of events that will be triggered for appropriate 
 
 ## AnimationCompleted
 
-When the animation in the component is completed, the [AnimationCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_AnimationCompleted) event will be triggered. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.AnimationCompleteEventArgs.html).
+When the animation in the component is completed, the [AnimationCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_AnimationCompleted) event will be triggered. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.AnimationCompleteEventArgs.html)
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -952,7 +952,7 @@ The [ShapeRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Map
 
 ## ShapeSelected
 
-The [ShapeSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_ShapeSelected) event is triggered when a shape is selected in Maps. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.ShapeSelectedEventArgs.html).
+The [ShapeSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_ShapeSelected) event is triggered when select a shape in Maps. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.ShapeSelectedEventArgs.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Maps

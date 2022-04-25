@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Layers in Blazor Maps Component | Syncfusion
-description: Checkout and learn here all about the layers in Syncfusion Blazor Maps component and much more details.
+description: Checkout and learn here all about the Layers in Syncfusion Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug
@@ -17,7 +17,7 @@ The Multilayer support allows loading multiple shape files and map providers in 
 
 ## Sublayer
 
-Sublayer is a type of shape file layer. It allows loading multiple shape files in a single map view. For example, a sublayer can be added over the main layer to view the geographic features such as rivers, valleys and cities in a map of a country. Similar to the main layer, elements in the Maps such as markers, bubbles, color mapping and legends can be added to the sub-layer.
+Sublayer is a type of shape file layer. It allows loading multiple shape files in a single map view. For example, a sublayer can be added over the main layer to view geographic features such as rivers, valleys and cities in a map of a country. Similar to the main layer, elements in the Maps such as markers, bubbles, color mapping and legends can be added to the sub-layer.
 
 In this example, the United States map shape is used as shape data by utilizing **usa.ts** file, and **texas.ts** and **california.ts** files are used as sub-layers in the United States map.
 
