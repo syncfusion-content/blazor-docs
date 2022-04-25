@@ -250,40 +250,61 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 <div class="control-container">
     <SfCarousel>
         <CarouselItem>
-            <div class="fs-5">Slide 1</div>
+            <figure class="img-container">
+                <img src="images/carousel/bridge.png" alt="Golden Gate Bridge, San Francisco" style="height:100%;width:100%;" />
+                <figcaption class="img-caption">Golden Gate Bridge, San Francisco</figcaption>
+            </figure>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 2</div>
+            <figure class="img-container">
+                <img src="images/carousel/trees.png" alt="Spring Flower Trees" style="height:100%;width:100%;" />
+                <figcaption class="img-caption">Spring Flower Trees</figcaption>
+            </figure>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 3</div>
+            <figure class="img-container">
+                <img src="images/carousel/waterfall.png" alt="Oddadalen Waterfalls, Norway" style="height:100%;width:100%;" />
+                <figcaption class="img-caption">Oddadalen Waterfalls, Norway</figcaption>
+            </figure>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 4</div>
+            <figure class="img-container">
+                <img src="images/carousel/sea.png" alt="Anse Source d'Argent, Seychelles" style="height:100%;width:100%;" />
+                <figcaption class="img-caption">Anse Source d'Argent, Seychelles</figcaption>
+            </figure>
         </CarouselItem>
         <CarouselItem>
-            <div class="fs-5">Slide 5</div>
+            <figure class="img-container">
+                <img src="images/carousel/rocks.png" alt="Stonehenge, England" style="height:100%;width:100%;" />
+                <figcaption class="img-caption">Stonehenge, England</figcaption>
+            </figure>
         </CarouselItem>
     </SfCarousel>
 </div>
 
 <style>
     .control-container {
-        background-color: #adb5bd;
+        background-color: #e5e5e5;
         height: 300px;
         margin: 0 auto;
         width: 500px;
     }
 
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-prev,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-next,
-    .e-carousel .e-carousel-items.e-carousel-slide-animation .e-carousel-item.e-active {
-        align-items: center;
-        border: 1px solid #f5f5f5;
-        display: flex;
-        justify-content: center;
+    .e-carousel .e-carousel-items .e-carousel-item .img-container {
+        height: 100%;
+    }
+
+    .e-carousel .e-carousel-items .e-carousel-item .img-caption {
+        bottom: 4em;
+        color: #fff;
+        font-size: 12pt;
+        height: 2em;
+        position: relative;
+        padding: 0.3em 1em;
+        text-align: center;
+        width: 100%;
     }
 </style>
 ```
 
-![Blazor Carousel Component](images/blazor-carousel-component.gif)
+![Blazor Carousel Component](images/getting_started.png)
