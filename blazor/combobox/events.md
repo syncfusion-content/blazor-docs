@@ -18,10 +18,10 @@ This section explains the list of events of the ComboBox component which will be
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-<SfDropDownList TItem="GameFields" TValue="string" DataSource="@Games">
-    <DropDownListEvents TItem="GameFields" TValue="string" Blur="@BlurHandler"></DropDownListEvents>
-    <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
-</SfDropDownList>
+<SfComboBox TItem="GameFields" TValue="string" DataSource="@Games">
+    <ComboBoxEvents TItem="GameFields" TValue="string" Blur="@BlurHandler"></ComboBoxEvents>
+    <ComboBoxFieldSettings Text="Text" Value="ID"></ComboBoxFieldSettings>
+</SfComboBox>
 
 @code {
     public class GameFields
@@ -392,11 +392,11 @@ This section explains the list of events of the ComboBox component which will be
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
-<SfDropDownList TValue="string" TItem="OrderDetails" Query="@RemoteDataQuery">
+<SfComboBox TValue="string" TItem="OrderDetails" Query="@RemoteDataQuery">
     <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
-    <DropDownListEvents TValue="string" TItem="OrderDetails" OnActionBegin="@OnActionBeginhandler"></DropDownListEvents>
-    <DropDownListFieldSettings Text="CustomerID" Value="CustomerID"></DropDownListFieldSettings>
-</SfDropDownList>
+    <ComboBoxEvents TValue="string" TItem="OrderDetails" OnActionBegin="@OnActionBeginhandler"></ComboBoxEvents>
+    <ComboBoxFieldSettings Text="CustomerID" Value="CustomerID"></ComboBoxFieldSettings>
+</SfComboBox>
 
 @code {
     public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" }).Take(6).RequiresCount();
