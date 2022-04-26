@@ -168,7 +168,7 @@ The following sample code demonstrates custom validations implemented in the fie
 
 You can perform validation for complex data binding columns using the [ValidateComplexType](https://docs.microsoft.com/en-us/aspnet/core/blazor/forms-validation?view=aspnetcore-5.0#data-annotations-validator-component-and-custom-validation) attribute of data annotation.
 
-In the following sample, you can use the `ValidateComplexType` attribute for the EmployeeName class and display custom message in the "First Name" column using the `RequiredAttribute` of data annotation.
+In the following sample, you must be use the `ValidateComplexType` attribute for the EmployeeName class and display custom message in the "First Name" column using the `RequiredAttribute` of data annotation.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
