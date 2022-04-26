@@ -595,4 +595,4 @@ In the following sample, **SfNumericTextBox** is rendered in the dialog template
 }
 ```
 
-![Complex Data Binding With Dialog Template in Blazor DataGrid](./images/blazor-datagrid-complex-data-binding-with-dialog-template.gif)
+![Complex Data Binding with Dialog Template in Blazor DataGrid](./images/blazor-datagrid-complex-data-binding-with-dialog-template.gif)
