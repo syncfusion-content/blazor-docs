@@ -166,7 +166,7 @@ The following sample code demonstrates custom validations implemented in the fie
 
 ### Validate complex column using data annotation attribute
 
-You can perform validation for complex data binding columns using [ValidateComplexType](https://docs.microsoft.com/en-us/aspnet/core/blazor/forms-validation?view=aspnetcore-5.0#data-annotations-validator-component-and-custom-validation) attribute of data annotation.
+You can perform validation for complex data binding columns using the [ValidateComplexType](https://docs.microsoft.com/en-us/aspnet/core/blazor/forms-validation?view=aspnetcore-5.0#data-annotations-validator-component-and-custom-validation) attribute of data annotation.
 
 In the following sample, you can use the `ValidateComplexType` attribute for the EmployeeName class and display custom message in the "First Name" column using the `RequiredAttribute` of data annotation.
 
@@ -219,7 +219,7 @@ In the following sample, you can use the `ValidateComplexType` attribute for the
 }
 ```
 
-![Blazor DataGrid with Validate Complex Column using Data Annotation Attribute](./images/blazor-datagrid-validate-complex-column-using-data-annotation-attribute.gif)
+![Validate Complex Column Using Data Annotation Attribute in Blazor DataGrid](./images/blazor-datagrid-validate-complex-column-using-data-annotation-attribute.gif)
 
 ## Custom validator component
 
