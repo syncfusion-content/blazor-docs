@@ -94,7 +94,41 @@ It is not recommended to have a connection string with sensitive information in 
 
 Now, the DbContext must be configured using connection string and registered as scoped service using the AddDbContext method in **Startup.cs**.
 
-![Register service in Blazor](../images/odata-startup.png)
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
+
+builder.Services.AddDbContext<OrdersDetailsContext>(option =>
+                option.UseSqlServer(builder.Configuration.GetConnectionString("OrdersDetailsDatabase")));
+
+{% endhighlight %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
+
+namespace ODataServiceProject
+{
+    public class Startup
+    {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        public IConfiguration Configuration { get; }
+        // This method gets called by the runtime. Use this method to add services to the container.
+        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+        public void ConfigureServices(IServiceCollection services)
+        {
+            
+            services.AddDbContext<OrdersDetailsContext>(option => 
+                option.UseSqlServer(Configuration.GetConnectionString("OrdersDetailsDatabase")));
+            ...
+        }
+        ....
+        ....
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Creating ODataV4 service
 
@@ -104,7 +138,7 @@ To create OData controller, right-click **Controller** folder in ODataServicePro
 
 Now, replace the controller with the following code which contains code to handle CRUD operations in the Orders table.
 
-```c#
+{% tabs %}
 
 using Microsoft.AspNet.OData;
 using System.Threading.Tasks;
@@ -155,7 +189,7 @@ namespace ODataServiceProject.Controllers
     }
 }
 
-```
+{% endtabs %}
 
 Add the following line in the **launchSettings.json** file.
 
@@ -193,9 +227,53 @@ Add the following line in the **launchSettings.json** file.
 
 ```
 
-Open **Startup.cs** file and configure by referring to the following codes.
+Open **Startup.cs** file in .NET 5 and .NET 3.X applications, **Program.cs** file in .NET 6 application and configure by referring to the following codes.
 
-```c#
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+
+static IEdmModel GetEdmModel()
+{   
+    ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
+    var books = builder.EntitySet<Orders>("Orders");
+    FunctionConfiguration myFirstFunction = books.EntityType.Collection.Function("MyFirstFunction");
+    myFirstFunction.ReturnsCollectionFromEntitySet<Orders>("Orders");
+    return builder.GetEdmModel();
+}
+
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new() { Title = "ODataTutorial", Version = "v1" });
+});
+builder.Services.AddDbContext<OrdersDetailsContext>(option =>
+                option.UseSqlServer(builder.Configuration.GetConnectionString("OrdersDetailsDatabase")));
+builder.Services.AddControllers().AddOData(opt => opt.AddRouteComponents("odata", GetEdmModel()).Count().Filter().OrderBy().Expand().Select().SetMaxTop(null));
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
+
+{% endhighlight %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
 
 namespace ODataServiceProject
 {
@@ -243,13 +321,14 @@ namespace ODataServiceProject
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Create Blazor Server Application
 
-Open Visual Studio 2019 and follow the steps in the below documentation to create the Blazor Server Application.
+Open Visual Studio 2019 or Visual Studio 2022 and follow the steps in the below documentation to create the Blazor Server Application.
 
-[Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
+[Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 
 ### Add Syncfusion Blazor DataGrid package
 
@@ -265,28 +344,16 @@ Now, in the **Browse** tab, search and install the **Syncfusion.Blazor.Grid** Nu
 
 Open **_Import.razor** file and add the following namespaces which are required to use Syncfusion Blazor components in this application.
 
-```cshtml
+{% tabs %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 @using ODataServiceProject.Models
 
-```
+{% endtabs %}
 
-Open **Startup.cs** file and register the Syncfusion service in the **ConfigureServices** method as follows.
-
-```c#
-
-public void ConfigureServices(IServiceCollection services)
-{
-    services.AddRazorPages();
-    services.AddServerSideBlazor();
-    services.AddSingleton<WeatherForecastService>();
-    services.AddSyncfusionBlazor();
-}
-
-```
+Refer to [Register Services](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio#register-syncfusion-blazor-service) and add the Syncfusion service in the application.
 
 Themes provide life to components. Syncfusion Blazor has different themes. They are:
 
@@ -298,21 +365,21 @@ Themes provide life to components. Syncfusion Blazor has different themes. They 
 
 In this demo application, the **Bootstrap4** theme will be used. To add the theme, open **Pages/_Host.cshtml** file and add the following CSS reference code.
 
-```html
+{% tabs %}
 
 <link href="_content/Syncfusion.Blazor.Themes/fabric.css" rel="stylesheet" />
 
-```
+{% endtabs %}
 
 ## Add Syncfusion Blazor DataGrid component to an application
 
 In previous steps, we have successfully configured the Syncfusion Blazor package in the application. Now, we can add the grid component to the **Index.razor** page.
 
-```cshtml
+{% tabs %}
 
 <SfGrid TValue="Orders"></SfGrid>
 
-```
+{% endtabs %}
 
 ## Binding data to Blazor DataGrid component using ODataV4Adaptor
 
@@ -320,19 +387,19 @@ To consume data from the OData Controller, you need to add the **SfDataManager**
 
 [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor)
 
-```cshtml
+{% tabs %}
 
 <SfGrid TValue="Orders">
     <SfDataManager Url="https://localhost:44392/odata/orders" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
 </SfGrid>
 
-```
+{% endtabs %}
 
 > In the above code example, we have used our localhost address from our application. Instead of localhost, you can give the exact URL of your OData service.
 
 Grid columns can be defined by using the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. We are going to create columns using the following code.
 
-```cshtml
+{% tabs %}
 
 <SfGrid TValue="Orders">
     <SfDataManager Url="https://localhost:44392/odata/orders" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
@@ -344,11 +411,11 @@ Grid columns can be defined by using the [GridColumn](https://help.syncfusion.co
     </GridColumns>
 </SfGrid>
 
-```
+{% endtabs %}
 
 When you run the application, the **Get()** method will be called in your OData controller.
 
-```c#
+{% tabs %}
 
 [Route("api/[controller]")]
 public class OrdersController : ODataController
@@ -367,7 +434,7 @@ public class OrdersController : ODataController
     ...
 }
 
-```
+{% endtabs %}
 
 ## Handling CRUD operations with our Syncfusion Blazor DataGrid component
 
@@ -376,7 +443,7 @@ You can enable editing in the grid component using the [GridEditSettings](https:
 Here, we are using **Inline** edit mode and used Toolbar property to show toolbar items for editing.
 We have added the DataGrid Editing and Toolbar code with previous Grid model.
 
-```cshtml
+{% tabs %}
 
 <SfGrid TValue="Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
     <SfDataManager Url="https://localhost:44392/odata/orders" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
@@ -389,7 +456,7 @@ We have added the DataGrid Editing and Toolbar code with previous Grid model.
     </GridColumns>
 </SfGrid>
 
-```
+{% endtabs %}
 
 > Normal editing is the default edit mode for the DataGrid component. Set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property of Column as **true** for a particular column, whose value is a unique value for editing purposes.
 
@@ -401,7 +468,7 @@ To insert a new row, click the **Add** toolbar button. The new record edit form 
 
 Clicking the **Update** toolbar button will insert the record in the Orders table by calling the below **POST** method of the OData controller.
 
-```c#
+{% tabs %}
 
 [EnableQuery]
 public async Task<IActionResult> Post([FromBody] Orders book)
@@ -411,7 +478,7 @@ public async Task<IActionResult> Post([FromBody] Orders book)
     return Created(book);
 }
 
-```
+{% endtabs %}
 
 ![Insert Operation in Blazor](../images/odata-add-two.png)
 
@@ -423,7 +490,7 @@ To edit a row, select any row and click the **Edit** toolbar button. The edit fo
 
 Clicking the **Update** toolbar button will update the record in the Orders table by calling the below **PATCH** method of the OData controller.
 
-```c#
+{% tabs %}
 
 [EnableQuery]
 public async Task<IActionResult> Patch([FromODataUri] long key, [FromBody] Delta<Orders> book)
@@ -434,7 +501,7 @@ public async Task<IActionResult> Patch([FromODataUri] long key, [FromBody] Delta
     return Updated(entity);
 }
 
-```
+{% endtabs %}
 
 The resultant grid will look like below.
 
@@ -444,7 +511,7 @@ The resultant grid will look like below.
 
 To delete a row, select any row and click the **Delete** toolbar button. Deleting operation will send a **DELETE** request to the OData controller with the selected record's primary key value to remove the corresponding record from the Orders table.
 
-```c#
+{% tabs %}
 
 [EnableQuery]
 public long Delete([FromODataUri] long key)
@@ -455,6 +522,6 @@ public long Delete([FromODataUri] long key)
     return key;
 }
 
-```
+{% endtabs %}
 
 > Please find the sample from this [Github](https://github.com/SyncfusionExamples/binding-odata-services-and-perform-crud) location.
