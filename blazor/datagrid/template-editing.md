@@ -514,3 +514,111 @@ This is demonstrated in the following sample code, where the first input element
 
 The following image represents the AutoComplete component in focused state inside the dialog template of the DataGrid component,
 ![Blazor DataGrid displays Dynamic Focus of Components](./images/blazor-datagrid-dynamic-focus-component.png)
+
+### Use FileUploader in Grid dialog edit template
+
+You can upload an image while adding or editing the column and show that image in the Grid column using the Column Template and Dialog Template features of the Grid. The Column Template feature is used to display the image in a Grid column, and the Dialog Template feature is used to render the SfUploader component for uploading the image while performing the dialog editing.
+
+In the following sample, the add and edit operations of dialog editing are performed using the OnActionBegin event of the Grid. The image file selecting and uploading actions are performed using the FileSelected and ValueChange events of the SfUploader.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Inputs
+@using System.IO 
+
+<SfGrid AllowPaging="true" DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEvents OnActionBegin="BeginHandler" OnActionComplete="OnActionComplete" TValue="Order"></GridEvents>
+    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="EditMode.Dialog">
+          <Template>
+                @{
+                    var imageUrl = (context as Order).Imagesrc;
+                    <div class="image">
+                        <img src=@imageUrl />
+                        <SfUploader ID="uploadFiles" AllowedExtensions=".jpg,.png,.jpeg" Multiple="false">
+                    <UploaderEvents FileSelected="Selected" ValueChange="OnChange"></UploaderEvents>
+                </SfUploader>
+                    </div>
+                }
+            </Template>
+    </GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="@TextAlign.Center" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" EditType="EditType.NumericEdit" Format="C2" Width="140" TextAlign="@TextAlign.Right"></GridColumn>
+        <GridColumn Field="Imagesrc" HeaderText="Customer Name" Width="200">
+        <Template>
+                @{
+                    var imageUrl = (context as Order).Imagesrc;
+                    <div class="image">
+                        <img src="@imageUrl" />          
+                    </div>
+                }
+            </Template>
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+<style>
+    .image img {
+        height: 55px;
+        width: 55px;
+        border-radius: 50px;
+        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0, 0, 0, 0.2);
+    }
+</style>
+
+@code{
+    public int? DefaultValue = 100;
+    public string UploadedFile { get; set; }
+    public void BeginHandler(ActionEventArgs<Order> Args)
+    {
+        if (Args.RequestType == Syncfusion.Blazor.Grids.Action.Save && Args.Action == "Add")
+        {
+            Args.Data.Imagesrc = "scripts/Images/Employees/"+UploadedFile;
+        } 
+        else if (Args.RequestType == Syncfusion.Blazor.Grids.Action.Save && Args.Action == "Edit")
+        {
+            Args.Data.Imagesrc = "scripts/Images/Employees/" + UploadedFile;
+        }
+
+    }
+    public void Selected(SelectedEventArgs Args)
+    {
+        UploadedFile = Args.FilesData[0].Name;    
+    }
+
+    public void OnChange(UploadChangeEventArgs args)
+    {
+        foreach (var file in args.Files)
+        {
+            var size = file.FileInfo.Size;
+            var path = @"./wwwroot/scripts/Images/Employees/" + file.FileInfo.Name;
+            FileStream filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
+            file.Stream.WriteTo(filestream);
+            filestream.Close();
+            file.Stream.Close();
+        }  
+    }
+    public List<Order> Orders { get; set; }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 9).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            EmployeeID = x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Imagesrc = "scripts/Images/Employees/" + x + ".png",
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public int EmployeeID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public string Imagesrc { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
