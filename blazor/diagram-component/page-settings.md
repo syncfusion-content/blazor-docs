@@ -223,3 +223,35 @@ The following code example illustrates how to define boundary constraints with r
     }
 }
 ```
+
+## Responsive with parent container
+
+Specify the Width and Height as 100% to make the diagram element fill its parent container.
+Setting the Height to 100% requires the diagram parent element to have explicit height or you can use calc function to set explicit height based on the browser layout.
+
+The following code example illustrates how to set width and height in percentage
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using System.Collections.ObjectModel
+<div style="width:700px; height:700px;">
+    <SfDiagramComponent @ref="@diagram" Width="100%" Height="100%" Nodes="nodes"></SfDiagramComponent>
+</div>
+@code
+{
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    SfDiagramComponent diagram;
+    protected override void OnInitialized()
+    {
+        nodes.Add(new Node()
+        {
+            ID = "node1",
+            OffsetX = 100,
+            OffsetY = 100,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+        });
+    }
+}
+```
