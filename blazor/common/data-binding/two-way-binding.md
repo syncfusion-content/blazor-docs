@@ -51,3 +51,38 @@ The following Syncfusion Blazor components support two-way binding:
 * [Splitter](https://blazor.syncfusion.com/documentation/splitter/two-way-binding)
 * [TextBox](https://blazor.syncfusion.com/documentation/textbox/data-binding)
 * [TimePicker](https://blazor.syncfusion.com/documentation/timepicker/data-binding)
+
+## Bind component generated dynamically using RenderFragment
+
+The following code explains how to bind value for `Timepicker` component which is generated dynamically using `RenderFragment` 
+
+```cshtml
+
+<div id="component-container">
+    @DynamicRender
+</div>
+
+<SfButton ID="dynamic-button" Content="Render TimePicker" @onclick="RenderComponent"></SfButton>
+
+@code {
+    public DateTime? DateValue { get; set; } = DateTime.Now;
+    private RenderFragment DynamicRender { get; set; }
+    private RenderFragment CreateComponent() => builder =>
+    {
+        builder.OpenComponent(0, typeof(SfTimePicker<DateTime>));
+        builder.AddAttribute(1, "ID", "MyDynamicId");
+        builder.AddAttribute(2, "Placeholder", "Choose a date");
+        builder.AddAttribute(3, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<DateTime?>(DateValue));
+        builder.CloseComponent();
+    };
+
+    private void RenderComponent()
+    {
+        DynamicRender = CreateComponent();
+    }
+}
+
+```
+
+![Bind component](../images/Time-picker.png)
+
