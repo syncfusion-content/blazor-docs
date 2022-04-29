@@ -54,7 +54,7 @@ The following Syncfusion Blazor components support two-way binding:
 
 ## Bind component generated dynamically using RenderFragment
 
-The following code explains how to bind value for `Timepicker` component which is generated dynamically using `RenderFragment` 
+The following code explains how to bind value for `TimePicker` component which is generated dynamically using `RenderFragment` 
 
 ```cshtml
 
@@ -84,5 +84,5 @@ The following code explains how to bind value for `Timepicker` component which i
 
 ```
 
-![Bind component](../images/Time-picker.png)
+![Bind component](../images/Time-Picker.png)
 
