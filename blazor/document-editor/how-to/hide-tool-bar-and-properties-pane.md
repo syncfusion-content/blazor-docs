@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Hide the default tool bar and properties pane in Blazor DocumentEditor | Syncfusion
+title: Hide toolbar and properties pane in Blazor DocumentEditor | Syncfusion
 description: Learn how to hide the default tool bar properties pane in the Syncfusion Blazor Document Editor component and much more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# How to hide the default tool bar and properties pane in Blazor Document Editor component
+# How to hide the tool bar and properties pane in Blazor Document Editor
 
 **Document editor container** provides the main document view area along with the built-in toolbar and properties pane.
 

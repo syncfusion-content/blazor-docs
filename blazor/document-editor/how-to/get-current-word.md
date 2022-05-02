@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Select and retrieve current word and Paragraph in Blazor DocumentEditor | Syncfusion
+title: Retrieve word and Paragraph in Blazor DocumentEditor | Syncfusion
 description: Learn how to select and retrieve current word and Paragraph in the Syncfusion Blazor Document Editor component and much more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# How to select and retrieve the word and paragraph in current cursor position in Blazor Document Editor component
+# How to select and retrieve the word and paragraph in Document Editor
 
 You can get the current word or paragraph content from the Blazor Document Editor component as plain text and SFDT (rich text).
 

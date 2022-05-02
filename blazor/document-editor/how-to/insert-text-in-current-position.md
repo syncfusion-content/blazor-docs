@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Insert text, paragraph and rich-text content in Blazor DocumentEditor | Syncfusion
+title: Insert text and rich-text in Blazor DocumentEditor | Syncfusion
 description: Learn how to insert text, paragraph and rich-text content in Blazor Document Editor component and much more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# How to insert text, paragraph and rich-text content in Blazor Document Editor component
+# Insert text , paragraph and rich-text content in Blazor DocumentEditor
 
 You can insert the text, paragraph and rich-text content in Blazor Document Editor component.
 
@@ -37,7 +37,7 @@ container.DocumentEditor.Editor.InsertTextAsync('\n');
 
 To insert the HTML content, you have to convert the HTML content to SFDT Format and then use [`PasteAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_PasteAsync_System_String_System_Nullable_Syncfusion_Blazor_DocumentEditor_PasteOptions__) API to insert the sfdt at current cursor position.
 
->Note: Html string should be welformatted html. [`DocIO`](https://help.syncfusion.com/file-formats/docio/html) support only welformatted XHTML.  
+>Note: HTML string should be `welformatted HTML`. [`DocIO`](https://help.syncfusion.com/file-formats/docio/html) support only `welformatted XHTML`.  
 
 The following example illustrates how to insert the HTML content at current cursor position.
 
