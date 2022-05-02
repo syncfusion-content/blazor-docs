@@ -58,18 +58,24 @@ The following code explains how to bind value for `TimePicker` component which i
 
 ```cshtml
 
+@using Syncfusion.Blazor.Calendars
+@using Syncfusion.Blazor.Buttons
+
 <div id="component-container">
     @DynamicRender
 </div>
 
-<SfButton ID="dynamic-button" Content="Render TimePicker" @onclick="RenderComponent"></SfButton>
+<SfButton ID="dynamic-button" Content="Render DatePicker" @onclick="RenderComponent"></SfButton>
+<SfButton ID="button" Content="Change Date" @onclick="onChange"></SfButton>
 
 @code {
-    public DateTime? DateValue { get; set; } = DateTime.Now;
-    private RenderFragment DynamicRender { get; set; }
+    public DateTime? DateValue { get; set; } = DateTime.Now.Date;
+    //Bind the value of the SfDatePicker to the propery DateValue.
+    private RenderFragment DynamicRender { get; set; } 
+    //RenderFragment is used to bind value
     private RenderFragment CreateComponent() => builder =>
     {
-        builder.OpenComponent(0, typeof(SfTimePicker<DateTime>));
+        builder.OpenComponent(0, typeof(SfDatePicker<DateTime>));
         builder.AddAttribute(1, "ID", "MyDynamicId");
         builder.AddAttribute(2, "Placeholder", "Choose a date");
         builder.AddAttribute(3, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<DateTime?>(DateValue));
@@ -80,9 +86,13 @@ The following code explains how to bind value for `TimePicker` component which i
     {
         DynamicRender = CreateComponent();
     }
+    private void onChange()
+    {
+        DateValue = new DateTime(DateTime.Now.Year,DateTime.Now.Month,07);
+        //changed the date value to 7
+    }
 }
-
 ```
 
-![Bind component](../images/Time-Picker.png)
+![Bind component](../images/Date-Picker.png)
 
