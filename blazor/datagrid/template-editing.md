@@ -519,32 +519,71 @@ The following image represents the AutoComplete component in focused state insid
 
 You can upload an image while adding or editing the column and show that image in the Grid column using the Column Template and Dialog Template features of the Grid. The Column Template feature is used to display the image in a Grid column, and the Dialog Template feature is used to render the SfUploader component for uploading the image while performing the dialog editing.
 
-In the following sample, the add and edit operations of dialog editing are performed using the OnActionBegin event of the Grid. The image file selecting and uploading actions are performed using the FileSelected and ValueChange events of the SfUploader.
+In the following sample, the add and edit operations of dialog editing are performed using the OnActionBegin and OnActionComplete events of the Grid. The image file selecting and uploading actions are performed using the FileSelected and ValueChange events of the SfUploader.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
 @using System.IO 
 
-<SfGrid AllowPaging="true" DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
-    <GridEvents OnActionBegin="BeginHandler" OnActionComplete="OnActionComplete" TValue="Order"></GridEvents>
+<SfGrid AllowPaging="true" @ref="MyGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEvents OnActionBegin="BeginHandler" OnActionComplete="ActionComplete" TValue="Order"></GridEvents>
     <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="EditMode.Dialog">
-          <Template>
+           <Template>
                 @{
-                    var imageUrl = (context as Order).Imagesrc;
-                    <div class="image">
-                        <img src=@imageUrl />
-                        <SfUploader ID="uploadFiles" AllowedExtensions=".jpg,.png,.jpeg" Multiple="false">
-                    <UploaderEvents FileSelected="Selected" ValueChange="OnChange"></UploaderEvents>
-                </SfUploader>
-                    </div>
+                    var Order = (context as Order);
                 }
+                <div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span>Employee Name</span>
+                                </td>
+                                <td>
+                                    <b style="margin-left: -50px;">@Order.CustomerID</b><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>Employee Image</span>
+                                </td>
+                                <td>
+                                    <div class="image"><img class="upload-image" style="margin-top: 10px;margin-left: -50px;" src="@Order.Imagesrc"/></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <div class="image" style="margin-top: 10px; width: 300px">
+                                    <SfUploader ID="uploadFiles" AllowedExtensions=".jpg,.png,.jpeg">
+                                    <UploaderEvents  ValueChange="OnChange" FileSelected="Selected"></UploaderEvents>
+                                    <UploaderTemplates>
+                                        <Template Context="HttpContext">
+                                        @{ 
+                                            <table>
+                                            <tr>
+                                                <td>
+                                                    <span>Updated Employee Image</span>
+                                                </td>
+                                                <td>
+                                                    <img class="upload-image" style="margin-left:10px;" src="@(files.Count >0 ? files.Where(item=>item.Name == HttpContext.Name)?.FirstOrDefault()?.Path : string.Empty)">    
+                                                </td>
+                                            </tr>
+                                            </table>
+                                        }
+                                        </Template>
+                                    </UploaderTemplates>
+                                    </SfUploader>
+                                </div>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </Template>
     </GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="@TextAlign.Center" Width="140"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" EditType="EditType.NumericEdit" Format="C2" Width="140" TextAlign="@TextAlign.Right"></GridColumn>
-        <GridColumn Field="Imagesrc" HeaderText="Customer Name" Width="200">
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Employee ID" IsPrimaryKey="true" TextAlign="@TextAlign.Center" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Employee Name"  Width="140"></GridColumn>
+        <GridColumn Field="Imagesrc" HeaderText="Employee Image" Width="200">
         <Template>
                 @{
                     var imageUrl = (context as Order).Imagesrc;
@@ -566,38 +605,52 @@ In the following sample, the add and edit operations of dialog editing are perfo
 </style>
 
 @code{
-    public int? DefaultValue = 100;
+
+    public List<fileInfo> files = new List<fileInfo>();
+    public SfGrid<Order> MyGrid { get; set; }
     public string UploadedFile { get; set; }
+    public List<Order> Orders { get; set; }
+
+    public void ActionComplete(ActionEventArgs<Order> args)
+    {
+        if (args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Add) || args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.BeginEdit))
+        {
+            MyGrid.PreventRender(false);
+        }
+    }
+
+    public void OnChange(UploadChangeEventArgs args)
+    {
+          files = new List<fileInfo>();
+        foreach (var file in args.Files)
+        {
+            var path = Path.GetFullPath("wwwroot\\scripts\\Images\\Employees\\") + file.FileInfo.Name;
+            FileStream filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
+            file.Stream.WriteTo(filestream);
+            filestream.Close();
+            file.Stream.Close();
+            files.Add(new fileInfo() { Path = "scripts/Images/Employees/" + file.FileInfo.Name , Name = file.FileInfo.Name, Size = file.FileInfo.Size });         
+        }
+    }
+  
     public void BeginHandler(ActionEventArgs<Order> Args)
     {
         if (Args.RequestType == Syncfusion.Blazor.Grids.Action.Save && Args.Action == "Add")
         {
             Args.Data.Imagesrc = "scripts/Images/Employees/"+UploadedFile;
-        } 
-        else if (Args.RequestType == Syncfusion.Blazor.Grids.Action.Save && Args.Action == "Edit")
+        } else if (Args.RequestType == Syncfusion.Blazor.Grids.Action.Save && Args.Action == "Edit")
         {
             Args.Data.Imagesrc = "scripts/Images/Employees/" + UploadedFile;
         }
 
     }
+
     public void Selected(SelectedEventArgs Args)
     {
-        UploadedFile = Args.FilesData[0].Name;    
+        UploadedFile = Args.FilesData[0].Name;
+       
     }
 
-    public void OnChange(UploadChangeEventArgs args)
-    {
-        foreach (var file in args.Files)
-        {
-            var size = file.FileInfo.Size;
-            var path = @"./wwwroot/scripts/Images/Employees/" + file.FileInfo.Name;
-            FileStream filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
-            file.Stream.WriteTo(filestream);
-            filestream.Close();
-            file.Stream.Close();
-        }  
-    }
-    public List<Order> Orders { get; set; }
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 9).Select(x => new Order()
@@ -619,6 +672,13 @@ In the following sample, the add and edit operations of dialog editing are perfo
         public DateTime? OrderDate { get; set; }
         public string Imagesrc { get; set; }
         public double? Freight { get; set; }
+    }
+
+    public class fileInfo
+    {
+        public string Path { get; set; }
+        public string Name { get; set; }
+        public double Size { get; set; }
     }
 }
 ```
