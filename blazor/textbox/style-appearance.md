@@ -37,7 +37,7 @@ Use the following CSS to customize the TextBox placeholder
 
 ## Align text in TextBox
 
-You can align the text in textbox to right side 
+You can change alignment of text in textbox by setting `text-align` attribute using `.e-textbox`.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -52,9 +52,9 @@ text-align: right;
 </style>
 ```
 
-![Align text in Right](./images/blazor-textbox-align-right.png)
+![Blazor TextBox Text Alignment](./images/blazor-textbox-align-right.png)
 
-You can also align specific textbox by using the `CssClass` API.
+You can change alignment of text in particular textbox by setting `text-align` attribute directly using `CssClass` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -68,8 +68,7 @@ text-align: right;
 </style>
 ```
 
-
-![Individual align in textbox](./images/blazor-textbox-align-individual.png)
+![Blazor TextBox Text Alignment](./images/blazor-textbox-align-individual.png)
 
 ## See also
 
