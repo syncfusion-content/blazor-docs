@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Automatically open dropdown in Blazor ComboBox | Syncfusion
-description: Learn here all about dropdown in Syncfusion Blazor ComboBox component and more.
+description: Learn here all about Automatically open the dropdown in Syncfusion Blazor ComboBox component and more.
 platform: Blazor
 control: ComboBox
 documentation: ug
