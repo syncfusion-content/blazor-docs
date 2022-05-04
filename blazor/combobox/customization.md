@@ -1,16 +1,17 @@
 ---
 layout: post
 title: Customization in Blazor ComboBox | Syncfusion
-description: Learn here all about customization in Syncfusion Blazor ComboBox component and much more.
+description: Checkout and learn here all about Customization in Syncfusion Blazor ComboBox component and much more.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
+
 # Customization in Blazor ComboBox
 
 ## Open combobox dropdown on focus
 
-You can automatically open the dropdown by using [ShowPopupAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowPopupAsync) method on [Focus](https://blazor.syncfusion.com/documentation/combobox/events#focus) event. The `ShowPopupAsync` method opens the popup that displays the list of items.
+You can automatically open the dropdown by using [ShowPopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowPopupAsync) method on [Focus](https://blazor.syncfusion.com/documentation/combobox/events#focus) event. The `ShowPopupAsync()` method opens the popup that displays the list of items.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -42,4 +43,5 @@ You can automatically open the dropdown by using [ShowPopupAsync](https://help.s
 }
 ```
 
-![Blazor ComboBox Customization](../images/blazor-combobox-customization.png)
+
+![Blazor ComboBox Customization](./images/blazor-combobox-customization.png)
