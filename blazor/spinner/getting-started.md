@@ -278,4 +278,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 
 ![Blazor Spinner Component](./images/blazor-spinner.png)
 
-> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Spinner).
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Spinner)
+    
+## See also
+* [How to prevent focus on the controls beneath the overlay of the Blazor spinner?](https://www.syncfusion.com/kb/13139/how-to-prevent-focus-on-the-controls-beneath-the-overlay-of-the-blazor-spinner)
