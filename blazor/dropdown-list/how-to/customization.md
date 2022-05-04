@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ShowPopupAsync method in Blazor DropDown List| Syncfusion
+title: ShowPopupAsync method in Blazor DropDown List | Syncfusion
 description: Learn here all about ShowPopupAsync method in Syncfusion Blazor DropDown List component and more.
 platform: Blazor
 control: DropDown List
