@@ -1,0 +1,44 @@
+---
+layout: post
+title: ShowPopupAsync method in Blazor DropDown List| Syncfusion
+description: Learn here all about ShowPopupAsync method in Syncfusion Blazor DropDown List component and more.
+platform: Blazor
+control: DropDown List
+documentation: ug
+---
+
+# Automatically open the dropdown when it is clicked
+
+You can automatically open the dropdown by using `ShowPopupAsync()` method on [Focus](https://blazor.syncfusion.com/documentation/dropdown-list/events#focus) event. The [ShowPopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowPopupAsync) method opens the popup that displays the list of items.
+
+```cshtml
+@using Syncfusion.Blazor.DropDowns
+
+<SfDropDownList @ref=@popup TItem="GameFields" TValue="string" DataSource="@Games">
+    <DropDownListEvents  TItem="GameFields" TValue="string" Focus="@FocusHandler"></DropDownListEvents>
+    <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
+</SfDropDownList>
+
+@code {
+    public class GameFields
+    {
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+    SfDropDownList<string, GameFields> popup;
+    private List<GameFields> Games = new List<GameFields>() {
+        new GameFields(){ ID= "Game1", Text= "American Football" },
+        new GameFields(){ ID= "Game2", Text= "Badminton" },
+        new GameFields(){ ID= "Game3", Text= "Basketball" },
+        new GameFields(){ ID= "Game4", Text= "Cricket" },
+     };
+
+    private void FocusHandler()
+    {
+        popup.ShowPopupAsync();
+       
+    }
+}
+```
+
+![Customization](../images/blazor-dropdownlist-customization.png)
