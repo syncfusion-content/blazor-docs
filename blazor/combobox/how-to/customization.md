@@ -1,7 +1,7 @@
 ---
 layout: post
-title: ShowPopupAsync method in Blazor ComboBox | Syncfusion
-description: Learn here all about ShowPopupAsync method in Syncfusion Blazor ComboBox component and more.
+title: Automatically open dropdown in Blazor ComboBox | Syncfusion
+description: Learn here all about dropdown in Syncfusion Blazor ComboBox component and more.
 platform: Blazor
 control: ComboBox
 documentation: ug
