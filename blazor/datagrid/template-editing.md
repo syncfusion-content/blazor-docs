@@ -517,9 +517,9 @@ The following image represents the AutoComplete component in focused state insid
 
 ### Use FileUploader in Grid dialog edit template
 
-You can upload an image while adding or editing the column and show that image in the Grid column using the Column Template and Dialog Template features of the Grid. The Column Template feature is used to display the image in a Grid column, and the Dialog Template feature is used to render the SfUploader component for uploading the image while performing the dialog editing.
+To upload an image while adding or editing the column, show the image in Grid column using Column Template and Dialog Template features of the Grid. The Column Template feature is used to display image in a Grid column, and Dialog Template feature is used to render the `SfUploader` component for uploading the image while performing dialog editing.
 
-In the following sample, the add and edit operations of dialog editing are performed using the OnActionBegin and OnActionComplete events of the Grid. The image file selecting and uploading actions are performed using the FileSelected and ValueChange events of the SfUploader.
+In the following sample, the add and edit operations of dialog editing are performed using the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) and [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) events of the Grid. The image file selecting and uploading actions are performed using the [FileSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_FileSelected) and [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) events of the `SfUploader`.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -621,7 +621,7 @@ In the following sample, the add and edit operations of dialog editing are perfo
 
     public void OnChange(UploadChangeEventArgs args)
     {
-          files = new List<fileInfo>();
+        files = new List<fileInfo>();
         foreach (var file in args.Files)
         {
             var path = Path.GetFullPath("wwwroot\\scripts\\Images\\Employees\\") + file.FileInfo.Name;
@@ -682,3 +682,5 @@ In the following sample, the add and edit operations of dialog editing are perfo
     }
 }
 ```
+
+> Refer [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Grid-DialogTemplate2064434438) for code sample.
