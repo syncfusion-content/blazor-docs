@@ -273,3 +273,159 @@ Both the width and height properties allow setting pixels/numbers/percentage. Th
 ```
 
 ![Changing Blazor Toast Size](./images/blazor-toast-size.png)
+
+## Show or hide toast using service
+
+You can render the `Sftoast` as an service in blazor.
+
+Follow below steps to configure the `Sftoast` as an service.
+
+1. Create folder `Components` in the root folder.
+2. Add `ToastOption.cs` class file add below code snippet (If require more SfToast properties, add and configure in ToastComponent)
+
+```cshtml
+
+using Microsoft.AspNetCore.Components;  
+  
+namespace BlazorSignalRApp.Components  
+{  
+    public class ToastOptions  
+    {  
+        public string Title { get; set; }  
+        public string Content { get; set; }  
+    }  
+} 
+
+```
+
+3. Add `ToastService.cs` and add below code snippet
+
+```cshtml
+
+using System;  
+using Microsoft.AspNetCore.Components;  
+  
+namespace BlazorSignalRApp.Components  
+{  
+    public class ToastService  
+    {  
+        public event Action<ToastOptions> ToastInstance;  
+        public void Open(ToastOptions options)  
+        {  
+           // Invoke ToastComponent to update and show the toast with messages  
+            this.ToastInstance.Invoke(options);  
+        }  
+    }  
+} 
+
+```
+
+4. Add `ToastComponent.razor` file and below code snippet
+
+```cshtml
+
+@using Syncfusion.Blazor.Popups;  
+@using Syncfusion.Blazor.Notifications;  
+  
+  
+<SfToast @ref="ToastObj" Timeout=3000>  
+    <ToastTemplates>  
+        <Title>  
+            @Options.Title  
+        </Title>  
+        <Content>  
+            @Options.Content  
+        </Content>  
+    </ToastTemplates>  
+    <ToastPosition X="Right"></ToastPosition>  
+</SfToast>  
+  
+@code {  
+    [Inject]  
+    public ToastService ToastService { get; set; }  
+    SfToast ToastObj;  
+  
+    private bool RenderToast { get; set; } = false;  
+  
+    // Parameter  
+    private ToastOptions Options = new ToastOptions();  
+  
+    protected override async Task OnInitializedAsync()  
+    {  
+        // Update the parameter in local variable and render the toast  
+        ToastService.ToastInstance += (ToastOptions options) =>  
+        {  
+            InvokeAsync(() =>  
+            {  
+                this.Options.Title = options.Title;  
+                this.Options.Content = options.Content;  
+                this.RenderToast = true;                  
+                this.StateHasChanged();  
+                this.ToastObj.ShowAsync(); 
+            });  
+        };  
+    }  
+}  
+
+```
+
+5. Register the `ToastService` in `startup.cs` files as like below
+
+```cshtml
+
+using BlazorSignalRApp.Components;  
+   
+namespace BlazorSignalRApp  
+{   
+    public class Startup   
+    {   
+        public void ConfigureServices(IServiceCollection services)  
+     {  
+            ....      
+        services.AddScoped<ToastService>();             
+            ....
+        }   
+    }   
+}
+
+```
+
+6. Initialize the `ToastComponent` at the end of the `MainLayout.razor` file for update the instance in `ToastService`
+
+```cshtml
+
+@using BlazorSignalRApp.Components  
+   
+ ....  
+ ....
+  
+<ToastComponent /> 
+
+```
+
+7. Update the SfToast dynamically in the options, which will load a content to `SfToast`
+8. Add below code in `index.razor` file and run the application
+
+```cshtml
+
+@page "/"   
+   
+@using BlazorSignalRApp.Components  
+  
+@inject ToastService ToastServices  
+  
+<button class="e-btn" @onclick="@ShowToast1"> Show Toast</button>  
+  
+@code {  
+    private void ShowToast1()  
+    {  
+       this.ToastServices.Open(new ToastOptions()  
+        {  
+            Title = "Toast Title",  
+            Content = "Toast content", // Dynamic Content  
+        });  
+    }  
+}  
+
+```
+   
