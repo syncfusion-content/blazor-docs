@@ -514,3 +514,85 @@ This is demonstrated in the following sample code, where the first input element
 
 The following image represents the AutoComplete component in focused state inside the dialog template of the DataGrid component,
 ![Blazor DataGrid displays Dynamic Focus of Components](./images/blazor-datagrid-dynamic-focus-component.png)
+
+### Complex data binding with dialog template
+
+You can edit the complex objects in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) using the dialog template in the following way.
+
+In the following sample, **SfNumericTextBox** is rendered in the dialog template and changes can be updated in the `GridColumn` using the two-way(**@bind-Value**) binding.
+
+> Also, ensure to define **ID** property for the complex column as (`___`) replacing the (`.`) operator in the Field value.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Inputs
+
+<SfGrid DataSource="@Employees" Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="@EditMode.Dialog">
+        <Template>
+            @{
+                var order = (context as EmployeeData);
+            }
+            <div>
+                <div class="mb-4"><SfNumericTextBox TValue="int?" ID="EmployeeID" Enabled="@((order.EmployeeID == null) ? true : false)" @bind-Value="order.EmployeeID"></SfNumericTextBox></div>
+                <div class="mb-4"><SfNumericTextBox TValue="int?" ID="EmpDetails__DepartmentID" @bind-Value="order.EmpDetails.DepartmentID"></SfNumericTextBox></div>
+                <div class="mb-4"><SfNumericTextBox TValue="int?" ID="EmpDetails__salarydetails__Salary" @bind-Value="order.EmpDetails.salarydetails.Salary"></SfNumericTextBox></div>
+            </div>
+        </Template>
+    </GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.EmployeeID) HeaderText="EmployeeID" IsPrimaryKey="true"  Width="120"></GridColumn>
+        <GridColumn Field="EmpDetails.FirstName" HeaderText="First Name" Width="150"></GridColumn>
+        <GridColumn Field="EmpDetails.LastName" HeaderText="Last Name" Width="130"></GridColumn>
+        <GridColumn Field="EmpDetails.DepartmentID" HeaderText="DepID" Width="150"></GridColumn>
+        <GridColumn Field="EmpDetails.salarydetails.Salary" HeaderText="Salary" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Job Title" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<EmployeeData> Employees { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
+        {
+            EmployeeID = x,
+            EmpDetails = new EmployeeDetails()
+            {
+                FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+                LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
+                DepartmentID = x,
+                salarydetails = new SalaryDetails()
+                {
+                    Salary = x * 1000
+                }
+            },
+            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
+                                          "Inside Sales Coordinator" })[new Random().Next(4)],
+        }).ToList();
+    }
+
+    public class EmployeeData
+    {
+        public int? EmployeeID { get; set; }
+        public EmployeeDetails EmpDetails { get; set; }
+        public string Title { get; set; }
+    }
+
+    public class EmployeeDetails
+    {
+        public int? DepartmentID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public SalaryDetails salarydetails { get; set; }
+    }
+
+    public class SalaryDetails
+    {
+        public int? Salary { get; set; }
+    }
+}
+```
+
+![Complex Data Binding with Dialog Template in Blazor DataGrid](./images/blazor-datagrid-complex-data-binding-with-dialog-template.gif)
