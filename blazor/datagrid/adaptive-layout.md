@@ -71,8 +71,12 @@ The DataGrid will render the row elements vertically while setting the [RowRende
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
+@{
+    var RenderingMode = RowDirection.Vertical;
+}
+
 <div style="position:relative; min-height: 500px;">
-    <SfGrid DataSource="@Orders" AllowSorting="true" AllowFiltering="true" EnableAdaptiveUI="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update", "Search" })" RowRenderingMode="RowDirection.Vertical" Height="100%" Width="100%" AllowPaging="true">
+    <SfGrid DataSource="@Orders" AllowSorting="true" AllowFiltering="true" EnableAdaptiveUI="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update", "Search" })" RowRenderingMode="@RenderingMode" Height="100%" Width="100%" AllowPaging="true">
         <GridFilterSettings Type="@FilterType.Excel"></GridFilterSettings>
         <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Dialog"></GridEditSettings>
          <GridAggregates>
