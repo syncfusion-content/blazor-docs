@@ -278,10 +278,10 @@ Both the width and height properties allow setting pixels/numbers/percentage. Th
 
 You can render the `SfToast` as an service in blazor.
 
-Follow below steps to configure the `SfToast` as an service.
+Follow the below steps to configure the `SfToast` as an service.
 
-1. Create folder `Components` in the root folder.
-2. Add `ToastOption.cs` class file add below code snippet (If require more SfToast properties, add and configure in ToastComponent).
+1. Create a new folder and name it as `Components` in the root folder.
+2. Add `ToastOption.cs` class file into `Components` folder and add below code snippet (If require more SfToast properties, add and configure in ToastComponent).
 
 ```cshtml
 
@@ -298,7 +298,7 @@ namespace BlazorSignalRApp.Components
 
 ```
 
-3. Add `ToastService.cs` and add below code snippet.
+3. Add `ToastService.cs` file into `Components` folder and add below code snippet.
 
 ```cshtml
 
@@ -320,7 +320,7 @@ namespace BlazorSignalRApp.Components
 
 ```
 
-4. Add `ToastComponent.razor` file and below code snippet.
+4. Add `ToastComponent.razor` file into `Components` folder and add below code snippet.
 
 ```cshtml
 
@@ -369,7 +369,7 @@ namespace BlazorSignalRApp.Components
 
 ```
 
-5. Register the `ToastService` in `startup.cs` files as like below.
+5. Register the `ToastService` in `startup.cs` file as follows.
 
 ```cshtml
 
@@ -390,7 +390,7 @@ namespace BlazorSignalRApp
 
 ```
 
-6. Initialize the `ToastComponent` at the end of the `MainLayout.razor` file for update the instance in `ToastService`.
+6. Initialize the `ToastComponent` at the end of the `MainLayout.razor` file to update the instance in `ToastService`.
 
 ```cshtml
 
@@ -403,8 +403,8 @@ namespace BlazorSignalRApp
 
 ```
 
-7. Update the SfToast dynamically in the options, which will load a content to `SfToast`.
-8. Add below code in `index.razor` file and run the application.
+7. Update the SfToast dynamically in the options, which will load the content to `SfToast`.
+8. Add below code snippet in `index.razor` file and run the application.
 
 ```cshtml
 
