@@ -189,5 +189,3 @@ Formatting is a way of representing the value in different formats. You can form
 
 
 ![Formatting in Blazor In-place Editor](./images/blazor-inplace-editor-formatting.png)
-
-> You can refer to our [Blazor In-Place Edtor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor In-Place Edtor example](https://blazor.syncfusion.com/demos/in-place-editor/overview?theme=bootstrap5) to understand how to render and configure the In-Place Edtor.
