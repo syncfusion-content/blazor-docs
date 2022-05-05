@@ -308,3 +308,5 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 ```
 
 ![Blazor Carousel Component](images/getting_started.png)
+
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Carousel).
