@@ -21,13 +21,13 @@ In navigators, the previous and next slide transition buttons are used to perfor
 - `Visible` – the navigator’s buttons are visible.
 - `VisibleOnHover` – the navigator’s buttons are visible only when hovering over the carousel.
 
-The following example depicts the code to show/hide the navigators in the carousel.
+The following example depicts the code to hide the navigators in the carousel.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <div class="control-container">
-    <SfCarousel ButtonsVisibility="CarouselButtonVisibility.Visible">
+    <SfCarousel ButtonsVisibility="CarouselButtonVisibility.Hidden">
         <CarouselItem>
             <div class="slide-content">Slide 1</div>
         </CarouselItem>
@@ -113,7 +113,7 @@ In the carousel, you can show the previous and next buttons only on mouse hover 
 
 ![Carousel Navigators OnHover](images/navigators_onhover.gif)
 
-### Previous and next button Template
+### Previous and next button template
 
 Template options are provided to customize the previous button using [PreviousButtonTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_PreviousButtonTemplate) and the next button using [NextButtonTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_NextButtonTemplate). The following example depicts the code for applying the template to previous and next buttons in the carousel.
 
@@ -200,13 +200,13 @@ Template options are provided to customize the previous button using [PreviousBu
 
 ### Show or hide indicators
 
-In indicators, the total slides and current slide state have been depicted. You can show/hide the indicators using the [ShowIndicators](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_ShowIndicators) property. The following example depicts the code to show/hide the indicators in the carousel.
+In indicators, the total slides and current slide state have been depicted. You can show/hide the indicators using the [ShowIndicators](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_ShowIndicators) property. The following example depicts the code to hide the indicators in the carousel.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <div class="control-container">
-    <SfCarousel ShowIndicators="true">
+    <SfCarousel ShowIndicators="false">
         <CarouselItem>
             <div class="slide-content">Slide 1</div>
         </CarouselItem>
@@ -243,11 +243,11 @@ In indicators, the total slides and current slide state have been depicted. You 
 </style>
 ```
 
-![Carousel Indicators](images/indicators.png)
+![Carousel Indicators](images/indicators_hidden.png)
 
-### Indicators Template
+### Indicators template
 
-Template option is provided to customize the indicators by using the [IndicatorTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsTemplate) property. The following example depicts the code for applying a template to indicators in the carousel.
+Template option is provided to customize the indicators by using the [IndicatorsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsTemplate) property. The following example depicts the code for applying a template to indicators in the carousel.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -306,8 +306,12 @@ Template option is provided to customize the indicators by using the [IndicatorT
         height: 2rem;
         justify-content: center;
         margin: 0.5rem;
-        width: 2rem;
+        width: 3rem;
     }
+
+        .e-carousel .e-carousel-indicators .e-indicator-bars .e-indicator-bar .indicator .fs-6 {
+            margin: auto;
+        }
 
     .e-carousel .e-carousel-indicators .e-indicator-bars .e-indicator-bar.e-active .indicator {
         background-color: #3C78EF;
@@ -320,72 +324,74 @@ Template option is provided to customize the indicators by using the [IndicatorT
 
 ### Showing preview of slide in indicator
 
-You can customize the indicators by showing the preview image of each slide using the [IndicatorTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsTemplate) property. The following example depicts the code for showing the preview image using a template for indicators in the carousel.
+You can customize the indicators by showing the preview image of each slide using the [IndicatorsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsTemplate) property. The following example depicts the code for showing the preview image using a template for indicators in the carousel.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <div class="control-container">
-    <SfCarousel ShowIndicators="true">
+    <SfCarousel CssClass="template-carousel">
         <ChildContent>
-            <CarouselItem>
-                <div class="slide-content">Slide 1</div>
-            </CarouselItem>
-            <CarouselItem>
-                <div class="slide-content">Slide 2</div>
-            </CarouselItem>
-            <CarouselItem>
-                <div class="slide-content">Slide 3</div>
-            </CarouselItem>
-            <CarouselItem>
-                <div class="slide-content">Slide 4</div>
-            </CarouselItem>
-            <CarouselItem>
-                <div class="slide-content">Slide 5</div>
-            </CarouselItem>
+            @foreach (Bird bird in birds)
+            {
+                <CarouselItem>
+                    <figure class="img-container">
+                        <img src="@("https://ej2.syncfusion.com/products/images/carousel/" + bird.ImageName + ".png")" alt="@bird.ImageName" style="height:100%;width:100%;" />
+                    </figure>
+                </CarouselItem>
+            }
         </ChildContent>
         <IndicatorsTemplate>
-            @{
-                string slideName = "Slide " + (context.Index + 1);
-                <div class="indicator">
-                    <div class="fs-6">@slideName</div>
-                </div>
-            }
+            <div class="indicator">
+                <img src="@("https://ej2.syncfusion.com/products/images/carousel/" + previewImage[context.Index] + ".png")" alt="image" style="height:100%;width:100%;" />
+            </div>
         </IndicatorsTemplate>
     </SfCarousel>
 </div>
+@code{
+    private List<string> previewImage = new List<string>() { "cardinal", "hunei", "costa-rica", "kaohsiung", "bee-eater" };
+    public List<Bird> birds = new List<Bird> {
+        new Bird { ID = 1, Name = "Cardinal", ImageName = "cardinal" },
+        new Bird { ID = 2, Name = "Kingfisher", ImageName = "hunei" },
+        new Bird { ID = 3, Name = "Keel-billed-toucan", ImageName = "costa-rica" },
+        new Bird { ID = 4, Name = "Yellow-warbler", ImageName = "kaohsiung" },
+        new Bird { ID = 5, Name = "Bee-eater", ImageName = "bee-eater" }
+    };
 
+    public class Bird
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string ImageName { get; set; }
+    }
+}
 <style>
     .control-container {
-        background-color: #adb5bd;
-        height: 300px;
-        margin: 0 auto;
-        width: 500px;
+        margin: 0 auto 2em;
+        max-width: 500px;
+        height: 350px;
     }
 
-    .e-carousel .slide-content {
-        align-items: center;
-        display: flex;
-        font-size: 1.25rem;
-        height: 100%;
-        justify-content: center;
+    .template-carousel .e-carousel-items,
+    .template-carousel .e-carousel-navigators {
+        height: calc(100% - 3rem);
     }
 
-    .e-carousel .e-carousel-indicators .e-indicator-bars .e-indicator-bar .indicator {
-        align-items: center;
+    .template-carousel .e-carousel-indicators .e-indicator-bars .e-indicator-bar .indicator {
         background-color: #ECECEC;
         border-radius: 0.25rem;
         cursor: pointer;
-        display: flex;
-        height: 2.5rem;
-        justify-content: center;
-        margin: 0.5rem 0.25rem;
-        width: 3.5rem;
+        height: 2rem;
+        margin: 0.6rem;
+        width: 3rem;
     }
 
-    .e-carousel .e-carousel-indicators .e-indicator-bars .e-indicator-bar.e-active .indicator {
+        .template-carousel .e-carousel-indicators .e-indicator-bars .e-indicator-bar .indicator img {
+            padding: 2px;
+        }
+
+    .template-carousel .e-carousel-indicators .e-indicator-bars .e-indicator-bar.e-active .indicator {
         background-color: #3C78EF;
-        color: #fff;
     }
 </style>
 ```
@@ -402,7 +408,7 @@ In the carousel, [AutoPlay](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 @using Syncfusion.Blazor.Navigations
 
 <div class="control-container">
-    <SfCarousel ButtonsVisibility="CarouselButtonVisibility.Visible" ShowPlayButton="true">
+    <SfCarousel ShowPlayButton="true">
         <CarouselItem>
             <div class="slide-content">Slide 1</div>
         </CarouselItem>
@@ -450,7 +456,7 @@ Template option is provided to customize the play button by using the [PlayButto
 @using Syncfusion.Blazor.Navigations
 
 <div class="control-container">
-    <SfCarousel AutoPlay="@IsSlidePlay" ButtonsVisibility="CarouselButtonVisibility.Visible" ShowPlayButton="true">
+    <SfCarousel AutoPlay="@IsSlidePlay" ShowPlayButton="true">
         <ChildContent>
             <CarouselItem>
                 <div class="slide-content">Slide 1</div>
