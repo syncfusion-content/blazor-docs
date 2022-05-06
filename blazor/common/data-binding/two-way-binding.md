@@ -54,7 +54,7 @@ The following Syncfusion Blazor components support two-way binding:
 
 ## Bind component generated dynamically using RenderFragment
 
-The following code explains how to bind value for `TimePicker` component which is generated dynamically using `RenderFragment` 
+The following code explains how to bind value for `DatePicker` component which is generated dynamically using `RenderFragment` 
 
 ```cshtml
 
@@ -70,14 +70,13 @@ The following code explains how to bind value for `TimePicker` component which i
 
 @code {
     public DateTime? DateValue { get; set; } = DateTime.Now.Date;
-    //Bind the value of the SfDatePicker to the propery DateValue.
     private RenderFragment DynamicRender { get; set; } 
-    //RenderFragment is used to bind value
     private RenderFragment CreateComponent() => builder =>
     {
         builder.OpenComponent(0, typeof(SfDatePicker<DateTime>));
         builder.AddAttribute(1, "ID", "MyDynamicId");
         builder.AddAttribute(2, "Placeholder", "Choose a date");
+        //Binding the value property with DateValue property
         builder.AddAttribute(3, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<DateTime?>(DateValue));
         builder.CloseComponent();
     };
@@ -89,7 +88,6 @@ The following code explains how to bind value for `TimePicker` component which i
     private void onChange()
     {
         DateValue = new DateTime(DateTime.Now.Year,DateTime.Now.Month,07);
-        //changed the date value to 7
     }
 }
 ```
