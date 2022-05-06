@@ -13,9 +13,9 @@ documentation: ug
 
 ### Fade animation
 
-In Carousel, two built-in animations are provided for slide transitions. You can disable animation using the [AnimationEffect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_AnimationEffect) property. By default, Slide animation is applied for the transition between slides.
+In Carousel, two built-in animations are provided for slide transitions. You can disable animation using the [AnimationEffect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_AnimationEffect) property. By default, `Slide` animation is applied for the transition between slides.
 
-The following demo depicts the example for fade animation,
+The following demo depicts the example for `Fade` animation,
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -57,6 +57,8 @@ The following demo depicts the example for fade animation,
     }
 </style>
 ```
+
+![Carousel fade animation](images/fade_animation.gif)
 
 ## Intervals between slides
 
@@ -107,7 +109,7 @@ Using the items property, you can set different intervals for each item to trans
 
 ## Auto play slides
 
-In the carousel, all slides transitions are performed continuously after the specified or default intervals. You can enable or disable the auto slide transition using the [AutoPlay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_AutoPlay) property. The following example depicts the code to enable or disable the auto slide transitions.
+In the carousel, all slides transitions are performed continuously after the specified or default intervals. You can enable or disable the auto slide transition using the [AutoPlay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_AutoPlay) property. The following example depicts the code to disable the auto slide transitions.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -150,11 +152,9 @@ In the carousel, all slides transitions are performed continuously after the spe
 </style>
 ```
 
-![Carousel AutoPlay Slides](images/auto_play.png)
-
 ## Looping slides
 
-In the carousel, slides transitions are repeated continuously when you reach the last slide by default. You can enable or disable the infinite slide transition using the [Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_Loop) property. The following example depicts the code to enable or disable the infinite slide transitions.
+In the carousel, slides transitions are repeated continuously when you reach the last slide by default. You can enable or disable the infinite slide transition using the [Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_Loop) property. The following example depicts the code to disable the infinite slide transitions.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -255,7 +255,7 @@ The following demo depicts the example for carousel events,
 
 ## Disable touch swiping
 
-In the carousel, we can able to perform swipe the carousel slides using touch actions by default. We had the option to enable or disable the swipe action using the [EnableTouchSwipe](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_EnableTouchSwipe) property. The following example depicts the code to disable the swipe action for the slide.
+In the carousel, you can able to perform swipe the carousel slides using touch actions by default. You can enable or disable the swipe action using the [EnableTouchSwipe](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_EnableTouchSwipe) property. The following example depicts the code to disable the swipe action for the slide.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

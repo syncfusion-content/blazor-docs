@@ -110,6 +110,8 @@ Using the [SelectedIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 </style>
 ```
 
+![Carousel selected slide](images/selected_index.png)
+
 ### Select an item using the method
 
 Using the [PreviousAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_PreviousAsync) or [NextAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_NextAsync) public method of the Carousel component, you can switch the current populating slide to a previous or next slide.

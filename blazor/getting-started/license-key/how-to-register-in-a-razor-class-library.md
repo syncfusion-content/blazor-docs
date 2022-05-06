@@ -19,7 +19,7 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY
 * Place the license key between double quotes.  Also, ensure that Syncfusion.Licensing.dll is referenced in your project where the license key is being registered.
 * Syncfusion license validation is done offline during application execution and does not require internet access.  Apps registered with a Syncfusion license key can be deployed on any system that does not have an internet connection.
 
-If your Razor Class Library (RCL) project uses Syncfusion Blazor packages from [nuget.org](https://www.nuget.org/packages?q=syncfusion) or the installer, you must register your license key. We need to register the license key in RCL project similar to how we do for the Blazor project based on your application type (Server application / Client WebAssembly application).
+If your Razor Class Library (RCL) project uses Syncfusion Blazor packages from [nuget.org](https://www.nuget.org/packages?q=syncfusion) or the trial installer, you must register your license key. We need to register the license key in RCL project similar to how we do for the Blazor project based on your application type (Server application / Client WebAssembly application).
 
 Refer to this [link](https://blazor.syncfusion.com/documentation/getting-started/razor-class-library/) for more information on getting started with the Syncfusion Blazor components in the RCL project.
 

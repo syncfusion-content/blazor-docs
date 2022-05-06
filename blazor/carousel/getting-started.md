@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Carousel Component
 
-This section briefly explains about how to include `Blazor Carousel component` in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor Carousel](https://www.syncfusion.com/blazor-components/blazor-carousel) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 ## Prerequisites
 
@@ -308,3 +308,5 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 ```
 
 ![Blazor Carousel Component](images/getting_started.png)
+
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Carousel).
