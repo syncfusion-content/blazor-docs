@@ -62,7 +62,7 @@ The following code explains how to bind value for `DatePicker` component which i
 @using Syncfusion.Blazor.Buttons
 
 <div id="component-container">
-    @DynamicRender
+    @dynamicComponent
 </div>
 
 <SfButton ID="dynamic-button" Content="Render DatePicker" @onclick="RenderComponent"></SfButton>
@@ -70,7 +70,7 @@ The following code explains how to bind value for `DatePicker` component which i
 
 @code {
     public DateTime? DateValue { get; set; } = DateTime.Now.Date;
-    private RenderFragment DynamicRender { get; set; } 
+    private RenderFragment dynamicComponent { get; set; } 
     private RenderFragment CreateComponent() => builder =>
     {
         builder.OpenComponent(0, typeof(SfDatePicker<DateTime>));
@@ -83,7 +83,7 @@ The following code explains how to bind value for `DatePicker` component which i
 
     private void RenderComponent()
     {
-        DynamicRender = CreateComponent();
+        dynamicComponent = CreateComponent();
     }
     private void onChange()
     {
@@ -92,5 +92,5 @@ The following code explains how to bind value for `DatePicker` component which i
 }
 ```
 
-![Bind component](../images/Date-Picker.png)
+![Binding in Blazor](../images/blazor-date-picker.png)
 
