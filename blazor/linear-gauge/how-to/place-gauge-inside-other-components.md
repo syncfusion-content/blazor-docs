@@ -17,10 +17,15 @@ When the Linear Gauge component renders within a panel of the Dashboard Layout c
 
 When you drag and resize the Dashboard Layout's panel, the Linear Gauge component is not notified, so the Linear Gauge is not properly rendered within the panel. To avoid this scenario, the Linear Gauge component's [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_RefreshAsync) method must be called in the Dashboard Layout's [Resizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Resizing), [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnResizeStop) and [OnWindowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnWindowResize) events. Because the panel size of the Dashboard Layout is determined after a delay, a 100 millisecond delay must be provided before refreshing the Linear Gauge component.
 
+On Window resizing, the Linear Gauge component is not notified, so the Linear Gauge is not properly rendered within the panel. To avoid this scenario, the Dashboard Layout component's [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_RefreshAsync) and  the Linear Gauge component's [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_RefreshAsync) method must be called in the Dashboard Layout's [OnWindowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnWindowResize) events.
+
 ```cshtml
 
-<SfDashboardLayout AllowResizing="true" AllowFloating="true" CellSpacing="@CellSpacing" Columns="20">
-<DashboardLayoutEvents Created="Created" OnResizeStop="@ResizingHandler" OnWindowResize="@ResizingHandler" Resizing="ResizingHandler"></DashboardLayoutEvents>
+@using Syncfusion.Blazor.LinearGauge
+@using Syncfusion.Blazor.Layouts
+
+<SfDashboardLayout ID="DashBoard" @ref="DashboardLayout" AllowResizing="true" AllowFloating="true" CellSpacing="@CellSpacing" Columns="20">
+<DashboardLayoutEvents Created="Created" OnResizeStop="@ResizingHandler" OnWindowResize="@ResizingWindow" Resizing="ResizingHandler"></DashboardLayoutEvents>
     <DashboardLayoutPanels>
         <DashboardLayoutPanel Id="LayoutOne" Row="0" Col="5" SizeX="5" SizeY="7">
             <HeaderTemplate><div> Linear Gauge - Vertical</div></HeaderTemplate>
@@ -52,13 +57,12 @@ When you drag and resize the Dashboard Layout's panel, the Linear Gauge componen
             </ContentTemplate>
         </DashboardLayoutPanel> 
         <DashboardLayoutPanel Id="LayoutTwo" Row="1" Col="5" SizeX="5" SizeY="7">
-            <HeaderTemplate><div>  Linear Gauge - Custom Labels </div></HeaderTemplate>
+            <HeaderTemplate><div>  Linear Gauge - Step Progress Bar </div></HeaderTemplate>
             <ContentTemplate>
                 @if (IsInitialRender)
                 {
                      <SfLinearGauge ID="GaugeTwo" @ref="GaugeTwo" Height="100%"  Orientation="@GaugeOrientation"  Background="transparent">
-                            <LinearGaugeTitleStyle FontWeight="499" FontFamily="inherit"></LinearGaugeTitleStyle>
-                            <LinearGaugeEvents AxisLabelRendering="AxisLabelChange" />
+                        <LinearGaugeTitleStyle FontWeight="499" FontFamily="inherit"></LinearGaugeTitleStyle>
                             <LinearGaugeAxes>
                                 <LinearGaugeAxis Minimum="5" Maximum="20" OpposedPosition="true">
                                     <LinearGaugeLine Width="5" />
@@ -68,18 +72,19 @@ When you drag and resize the Dashboard Layout's panel, the Linear Gauge componen
                                         <LinearGaugeAxisLabelFont FontFamily="inherit"></LinearGaugeAxisLabelFont>
                                     </LinearGaugeAxisLabelStyle>
                                     <LinearGaugePointers>
-                                        <LinearGaugePointer PointerValue="20" Height="15" Width="15" Color="#0DC9AB" Placement="Syncfusion.Blazor.LinearGauge.Placement.Near" MarkerType="MarkerType.Circle" Offset="7" />
-                                        <LinearGaugePointer PointerValue="15" Height="15" Width="15" Color="#0DC9AB" Placement="Syncfusion.Blazor.LinearGauge.Placement.Near" MarkerType="MarkerType.Circle" Offset="7" />
+                                        <LinearGaugePointer PointerValue="5" Height="15" Width="15" Color="#0DC9AB" Placement="Syncfusion.Blazor.LinearGauge.Placement.Near" MarkerType="MarkerType.Circle" Offset="7" />
                                         <LinearGaugePointer PointerValue="10" Height="15" Width="15" Color="#0DC9AB" Placement="Syncfusion.Blazor.LinearGauge.Placement.Near" MarkerType="MarkerType.Circle" Offset="7" />
-                                        <LinearGaugePointer PointerValue="5" Height="15" Width="15" Color="@DeliveredPointerColor" Placement="Syncfusion.Blazor.LinearGauge.Placement.Near" MarkerType="MarkerType.Circle" Offset="7" />
+                                        <LinearGaugePointer PointerValue="15" Height="15" Width="15" Color="#0DC9AB" Placement="Syncfusion.Blazor.LinearGauge.Placement.Near" MarkerType="MarkerType.Circle" Offset="7" />
+                                        <LinearGaugePointer PointerValue="20" Height="15" Width="15" Color="@DeliveredPointerColor" Placement="Syncfusion.Blazor.LinearGauge.Placement.Near" MarkerType="MarkerType.Circle" Offset="7" />
                                     </LinearGaugePointers>
                                     <LinearGaugeRanges>
-                                        <LinearGaugeRange Start="15" End="20" StartWidth="5" EndWidth="5" Color="#0DC9AB" />
+                                        <LinearGaugeRange Start="5" End="10" StartWidth="5" EndWidth="5" Color="#0DC9AB" />
                                         <LinearGaugeRange Start="10" End="15" StartWidth="5" EndWidth="5" Color="#0DC9AB" />
+                                        <LinearGaugeRange Start="15" End="20" StartWidth="5" EndWidth="5" Color="@DeliveredPointerColor" />
                                     </LinearGaugeRanges>
                                 </LinearGaugeAxis>
                             </LinearGaugeAxes>
-                        </SfLinearGauge>
+                    </SfLinearGauge>
                 }
             </ContentTemplate>
         </DashboardLayoutPanel>
@@ -88,7 +93,7 @@ When you drag and resize the Dashboard Layout's panel, the Linear Gauge componen
             <ContentTemplate>
                 @if (IsInitialRender)
                 {
-                     <SfLinearGauge ID="GaugeThree" @ref="GaugeThree" Orientation="Syncfusion.Blazor.LinearGauge.Orientation.Horizontal" Height="100%" Background="transparent">
+                    <SfLinearGauge ID="GaugeThree" @ref="GaugeThree" Orientation="Syncfusion.Blazor.LinearGauge.Orientation.Horizontal" Height="100%" Background="transparent">
                             <LinearGaugeContainer Width="58" Type="ContainerType.RoundedRectangle">
                             <LinearGaugeContainerBorder Width="5"></LinearGaugeContainerBorder>
                             <LinearGaugeAxes>
@@ -125,7 +130,7 @@ When you drag and resize the Dashboard Layout's panel, the Linear Gauge componen
                         </SfLinearGauge> 
                 }
             </ContentTemplate>
-        </DashboardLayoutPanel> 
+        </DashboardLayoutPanel>
     </DashboardLayoutPanels>
 </SfDashboardLayout>
 
@@ -133,6 +138,7 @@ When you drag and resize the Dashboard Layout's panel, the Linear Gauge componen
     SfLinearGauge GaugeOne;
     SfLinearGauge GaugeTwo;
     SfLinearGauge GaugeThree;
+    SfDashboardLayout DashboardLayout;
 
     public double[] CellSpacing = { 10, 10 };
     public string BorderColor = "#E5E7EB";
@@ -142,23 +148,18 @@ When you drag and resize the Dashboard Layout's panel, the Linear Gauge componen
 
     public bool IsInitialRender { get; set; }
 
-    public void AxisLabelChange(AxisLabelRenderEventArgs args)
-    {
-        if (args.Text == "20")
-            args.Text = "Ordered";
-        else if (args.Text == "15")
-            args.Text = "Packed";
-        else if (args.Text == "10")
-            args.Text = "Shipped";
-        else if (args.Text == "5")
-            args.Text = "Delivered";
-        else
-            args.Text = " ";
-    }
 
     public async void Created(Object args)
     {
         IsInitialRender = true;
+    }
+
+    public async Task ResizingWindow(ResizeArgs args)
+    {
+        await DashboardLayout.RefreshAsync();
+        await GaugeOne.RefreshAsync();
+        await GaugeTwo.RefreshAsync();
+        await GaugeThree.RefreshAsync();
     }
 
     public async Task ResizingHandler(ResizeArgs args)
@@ -166,15 +167,15 @@ When you drag and resize the Dashboard Layout's panel, the Linear Gauge componen
         if (args.Id == "LayoutOne")
         {
             await Task.Delay(100);
-            GaugeOne.RefreshAsync();
+            await GaugeOne.RefreshAsync();
         } else if (args.Id == "LayoutTwo")
         {
             await Task.Delay(100);
-            GaugeOne.RefreshAsync();
+            await GaugeTwo.RefreshAsync();
         } else if (args.Id == "LayoutThree")
         {
             await Task.Delay(100);
-            GaugeTwo.RefreshAsync();
+            await GaugeThree.RefreshAsync();
         }
     }
 }
@@ -228,14 +229,13 @@ When the Linear Gauge component renders within the Tab component, its rendering 
             </TabItem>
             <TabItem>
                 <ChildContent>
-                    <TabHeader Text="Linear Gauge - Custom Labels"></TabHeader>
+                    <TabHeader Text="Linear Gauge - Step Progress Bar"></TabHeader>
                 </ChildContent>
                  <ContentTemplate>
                  @if (IsInitialRender)
                  {
                          <SfLinearGauge ID="GaugeTwo" @ref="GaugeTwo" Width="100%"  Orientation="@GaugeOrientation"  Background="transparent">
                             <LinearGaugeTitleStyle FontWeight="499" FontFamily="inherit"></LinearGaugeTitleStyle>
-                            <LinearGaugeEvents AxisLabelRendering="AxisLabelChange" />
                             <LinearGaugeAxes>
                                 <LinearGaugeAxis Minimum="5" Maximum="20" OpposedPosition="true">
                                     <LinearGaugeLine Width="5" />
@@ -245,14 +245,15 @@ When the Linear Gauge component renders within the Tab component, its rendering 
                                         <LinearGaugeAxisLabelFont FontFamily="inherit"></LinearGaugeAxisLabelFont>
                                     </LinearGaugeAxisLabelStyle>
                                     <LinearGaugePointers>
-                                        <LinearGaugePointer PointerValue="20" Height="15" Width="15" Color="#0DC9AB" Placement="Syncfusion.Blazor.LinearGauge.Placement.Near" MarkerType="MarkerType.Circle" Offset="7" />
-                                        <LinearGaugePointer PointerValue="15" Height="15" Width="15" Color="#0DC9AB" Placement="Syncfusion.Blazor.LinearGauge.Placement.Near" MarkerType="MarkerType.Circle" Offset="7" />
+                                        <LinearGaugePointer PointerValue="5" Height="15" Width="15" Color="#0DC9AB" Placement="Syncfusion.Blazor.LinearGauge.Placement.Near" MarkerType="MarkerType.Circle" Offset="7" />
                                         <LinearGaugePointer PointerValue="10" Height="15" Width="15" Color="#0DC9AB" Placement="Syncfusion.Blazor.LinearGauge.Placement.Near" MarkerType="MarkerType.Circle" Offset="7" />
-                                        <LinearGaugePointer PointerValue="5" Height="15" Width="15" Color="@DeliveredPointerColor" Placement="Syncfusion.Blazor.LinearGauge.Placement.Near" MarkerType="MarkerType.Circle" Offset="7" />
+                                        <LinearGaugePointer PointerValue="15" Height="15" Width="15" Color="#0DC9AB" Placement="Syncfusion.Blazor.LinearGauge.Placement.Near" MarkerType="MarkerType.Circle" Offset="7" />
+                                        <LinearGaugePointer PointerValue="20" Height="15" Width="15" Color="@DeliveredPointerColor" Placement="Syncfusion.Blazor.LinearGauge.Placement.Near" MarkerType="MarkerType.Circle" Offset="7" />
                                     </LinearGaugePointers>
                                     <LinearGaugeRanges>
-                                        <LinearGaugeRange Start="15" End="20" StartWidth="5" EndWidth="5" Color="#0DC9AB" />
+                                        <LinearGaugeRange Start="5" End="10" StartWidth="5" EndWidth="5" Color="#0DC9AB" />
                                         <LinearGaugeRange Start="10" End="15" StartWidth="5" EndWidth="5" Color="#0DC9AB" />
+                                        <LinearGaugeRange Start="15" End="20" StartWidth="5" EndWidth="5" Color="@DeliveredPointerColor" />
                                     </LinearGaugeRanges>
                                 </LinearGaugeAxis>
                             </LinearGaugeAxes>
@@ -320,20 +321,6 @@ When the Linear Gauge component renders within the Tab component, its rendering 
 
     public bool IsInitialRender { get; set; }
 
-    public void AxisLabelChange(AxisLabelRenderEventArgs args)
-    {
-        if (args.Text == "20")
-            args.Text = "Ordered";
-        else if (args.Text == "15")
-            args.Text = "Packed";
-        else if (args.Text == "10")
-            args.Text = "Shipped";
-        else if (args.Text == "5")
-            args.Text = "Delivered";
-        else
-            args.Text = " ";
-    }
-
     public void Created()
     {
         IsInitialRender = true;
@@ -352,6 +339,9 @@ When you drag and resize the Dialog component, the Linear Gauge component is not
 
 ```cshtml
 
+@using Syncfusion.Blazor.LinearGauge;
+@using Syncfusion.Blazor.Popups;
+
 <div class="col-lg-12 control-section" id="target">
     <div>
         @if (this.ShowButton)
@@ -366,7 +356,7 @@ When you drag and resize the Dialog component, the Linear Gauge component is not
             <Content> 
                 @if(IsInitialRender)
                 { 
-                   <SfLinearGauge ID="GaugeOne" @ref="GaugeOne" Orientation="@GaugeOrientation" Width="100%" Background="transparent">
+                   <SfLinearGauge ID="GaugeOne" @ref="GaugeOne" Orientation="@GaugeOrientation" Width="100%" Height="100%" Background="transparent">
                            <LinearGaugeTitleStyle FontWeight="499" FontFamily="inherit" />
                            <LinearGaugeAxes>
                                <LinearGaugeAxis Minimum="0" Maximum="100" OpposedPosition="true">
@@ -404,7 +394,7 @@ When you drag and resize the Dialog component, the Linear Gauge component is not
     public bool Visibility { get; set; } = true;
     public bool ShowButton { get; set; } = false;
     public ResizeDirection[] DialogResizeDirections { get; set; } = new ResizeDirection[] { ResizeDirection.All };
-    public Syncfusion.Blazor.LinearGauge.Orientation GaugeOrientation = Syncfusion.Blazor.LinearGauge.Orientation.Horizontal;
+    public Syncfusion.Blazor.LinearGauge.Orientation GaugeOrientation = Syncfusion.Blazor.LinearGauge.Orientation.Vertical;
 
     public async Task OnResizeStopHandler(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
     {
@@ -478,13 +468,12 @@ When you expand the Accordion component, the Linear Gauge component is not notif
                 </ContentTemplate>
             </AccordionItem>
             <AccordionItem>
-                <HeaderTemplate>Linear Gauge - Custom Labels</HeaderTemplate>
+                <HeaderTemplate>Linear Gauge - Step Progress Bar</HeaderTemplate>
                 <ContentTemplate>
                     @if (IsInitialRender)
                     {
                          <SfLinearGauge ID="GaugeTwo" @ref="GaugeTwo"  Width="100%"  Orientation="@GaugeOrientation"  Background="transparent">
                             <LinearGaugeTitleStyle FontWeight="499" FontFamily="inherit"></LinearGaugeTitleStyle>
-                            <LinearGaugeEvents AxisLabelRendering="AxisLabelChange" />
                             <LinearGaugeAxes>
                                 <LinearGaugeAxis Minimum="5" Maximum="20" OpposedPosition="true">
                                     <LinearGaugeLine Width="5" />
@@ -494,14 +483,15 @@ When you expand the Accordion component, the Linear Gauge component is not notif
                                         <LinearGaugeAxisLabelFont FontFamily="inherit"></LinearGaugeAxisLabelFont>
                                     </LinearGaugeAxisLabelStyle>
                                     <LinearGaugePointers>
-                                        <LinearGaugePointer PointerValue="20" Height="15" Width="15" Color="#0DC9AB" Placement="Syncfusion.Blazor.LinearGauge.Placement.Near" MarkerType="MarkerType.Circle" Offset="7" />
-                                        <LinearGaugePointer PointerValue="15" Height="15" Width="15" Color="#0DC9AB" Placement="Syncfusion.Blazor.LinearGauge.Placement.Near" MarkerType="MarkerType.Circle" Offset="7" />
+                                        <LinearGaugePointer PointerValue="5" Height="15" Width="15" Color="#0DC9AB" Placement="Syncfusion.Blazor.LinearGauge.Placement.Near" MarkerType="MarkerType.Circle" Offset="7" />
                                         <LinearGaugePointer PointerValue="10" Height="15" Width="15" Color="#0DC9AB" Placement="Syncfusion.Blazor.LinearGauge.Placement.Near" MarkerType="MarkerType.Circle" Offset="7" />
-                                        <LinearGaugePointer PointerValue="5" Height="15" Width="15" Color="@DeliveredPointerColor" Placement="Syncfusion.Blazor.LinearGauge.Placement.Near" MarkerType="MarkerType.Circle" Offset="7" />
+                                        <LinearGaugePointer PointerValue="15" Height="15" Width="15" Color="#0DC9AB" Placement="Syncfusion.Blazor.LinearGauge.Placement.Near" MarkerType="MarkerType.Circle" Offset="7" />
+                                        <LinearGaugePointer PointerValue="20" Height="15" Width="15" Color="@DeliveredPointerColor" Placement="Syncfusion.Blazor.LinearGauge.Placement.Near" MarkerType="MarkerType.Circle" Offset="7" />
                                     </LinearGaugePointers>
                                     <LinearGaugeRanges>
-                                        <LinearGaugeRange Start="15" End="20" StartWidth="5" EndWidth="5" Color="#0DC9AB" />
+                                        <LinearGaugeRange Start="5" End="10" StartWidth="5" EndWidth="5" Color="#0DC9AB" />
                                         <LinearGaugeRange Start="10" End="15" StartWidth="5" EndWidth="5" Color="#0DC9AB" />
+                                        <LinearGaugeRange Start="15" End="20" StartWidth="5" EndWidth="5" Color="@DeliveredPointerColor" />
                                     </LinearGaugeRanges>
                                 </LinearGaugeAxis>
                             </LinearGaugeAxes>
@@ -592,20 +582,6 @@ When you expand the Accordion component, the Linear Gauge component is not notif
     public string TextColor = "#000000";
     
     public bool IsInitialRender { get; set; }
-
-    public void AxisLabelChange(AxisLabelRenderEventArgs args)
-    {
-        if (args.Text == "20")
-            args.Text = "Ordered";
-        else if (args.Text == "15")
-            args.Text = "Packed";
-        else if (args.Text == "10")
-            args.Text = "Shipped";
-        else if (args.Text == "5")
-            args.Text = "Delivered";
-        else
-            args.Text = " ";
-    }
 
     public void Created(Object args)
     {
