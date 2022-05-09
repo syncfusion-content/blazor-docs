@@ -78,5 +78,3 @@ There is no need to call this method for native events since it’s called after
     }
 }
 ```
-
-> You can refer to our [Blazor NumericTextBox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor NumericTextBox example](https://blazor.syncfusion.com/demos/numeric-textbox/default-functionalities?theme=bootstrap5) to understand how to render and configure the Numeric TextBox.
