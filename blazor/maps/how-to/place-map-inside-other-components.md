@@ -17,16 +17,18 @@ When the Maps component renders within a panel of the Dashboard Layout component
 
 When you drag and resize the Dashboard Layout's panel, the Maps component is not notified, so the Maps are not properly rendered within the panel. To avoid this scenario, the Maps component's [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Refresh) method must be called in the Dashboard Layout's [Resizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Resizing), [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnResizeStop) and [OnWindowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnWindowResize) events. Because the panel size of the Dashboard Layout is determined after a delay, a 500 millisecond delay must be provided before refreshing the Maps component.
 
+On window resizing, the Maps component is not notified, so the Maps is not properly rendered within the panel. To avoid this scenario, the Dashboard Layout component's [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_RefreshAsync) and  the Maps component's [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Refresh) method must be called in the Dashboard Layout's [OnWindowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnWindowResize) events.
+
 ```cshtml
 
 @using Syncfusion.Blazor.Maps
 @using Syncfusion.Blazor.Layouts
 
-<SfDashboardLayout AllowResizing="true"  AllowFloating="true" CellSpacing="@CellSpacing" Columns="20">
-<DashboardLayoutEvents Created="Created" OnResizeStop="@ResizingHandler" OnWindowResize="@ResizingHandler" Resizing="ResizingHandler"></DashboardLayoutEvents>
+<SfDashboardLayout ID="DashBoard" @ref="DashboardLayout" AllowResizing="true"  AllowFloating="true" CellSpacing="@CellSpacing" Columns="20">
+<DashboardLayoutEvents Created="Created" OnResizeStop="@ResizingHandler" OnWindowResize="@ResizingWindow" Resizing="ResizingHandler"></DashboardLayoutEvents>
     <DashboardLayoutPanels>
         <DashboardLayoutPanel Id="LayoutOne" Row="0" Col="5" SizeX="5" SizeY="7">
-            <HeaderTemplate><div> Maps </div></HeaderTemplate>
+            <HeaderTemplate><div>Maps</div></HeaderTemplate>
             <ContentTemplate>
                 @if (IsInitialRender)
                 {
@@ -40,7 +42,7 @@ When you drag and resize the Dashboard Layout's panel, the Maps component is not
             </ContentTemplate>
         </DashboardLayoutPanel> 
         <DashboardLayoutPanel Id="LayoutTwo" Row="1" Col="5" SizeX="5" SizeY="7">
-            <HeaderTemplate><div> Maps </div></HeaderTemplate>
+            <HeaderTemplate><div>Maps - OSM</div></HeaderTemplate>
             <ContentTemplate>
                 @if (IsInitialRender)
                 {
@@ -53,7 +55,7 @@ When you drag and resize the Dashboard Layout's panel, the Maps component is not
             </ContentTemplate>
         </DashboardLayoutPanel> 
         <DashboardLayoutPanel Id="LayoutThree" Row="2" Col="5" SizeX="5" SizeY="7">
-            <HeaderTemplate><div> Maps </div></HeaderTemplate>
+            <HeaderTemplate><div>Maps - SubLayer</div></HeaderTemplate>
             <ContentTemplate>
                 @if (IsInitialRender)
                 {
@@ -82,6 +84,7 @@ When you drag and resize the Dashboard Layout's panel, the Maps component is not
     SfMaps MapsOne;
     SfMaps MapsTwo;
     SfMaps MapsThree;
+    SfDashboardLayout DashboardLayout;
 
     public double[] CellSpacing = { 10, 10 };
     public bool IsInitialRender { get; set; }
@@ -89,6 +92,14 @@ When you drag and resize the Dashboard Layout's panel, the Maps component is not
     public async void Created(Object args)
     {
         IsInitialRender = true;
+    }
+
+    public async Task ResizingWindow(ResizeArgs args)
+    {
+        await DashboardLayout.RefreshAsync();
+        MapsOne.Refresh();
+        MapsTwo.Refresh();
+        MapsThree.Refresh();
     }
     
     public async void ResizingHandler(ResizeArgs args)
@@ -142,7 +153,7 @@ When the Maps component renders within the Tab component, its rendering begins c
             </TabItem>
             <TabItem>
                 <ChildContent>
-                    <TabHeader Text="OSM Maps"></TabHeader>
+                    <TabHeader Text="Maps - OSM"></TabHeader>
                 </ChildContent>
                  <ContentTemplate>
                  @if (IsInitialRender)
@@ -157,7 +168,7 @@ When the Maps component renders within the Tab component, its rendering begins c
             </TabItem>
             <TabItem>
                 <ChildContent>
-                    <TabHeader Text="SubLayer Maps"></TabHeader>
+                    <TabHeader Text="Maps - SubLayer"></TabHeader>
                 </ChildContent>
                  <ContentTemplate>
                  @if (IsInitialRender)
@@ -300,7 +311,7 @@ When you expand the Accordion component, the Maps component is not notified, so 
                 </ContentTemplate>
             </AccordionItem>
             <AccordionItem>
-                <HeaderTemplate>OSM</HeaderTemplate>
+                <HeaderTemplate>Maps - OSM</HeaderTemplate>
                 <ContentTemplate>
                     @if (IsInitialRender)
                     {
@@ -313,7 +324,7 @@ When you expand the Accordion component, the Maps component is not notified, so 
                 </ContentTemplate>
             </AccordionItem>
             <AccordionItem>
-                <HeaderTemplate>Maps SubLayer</HeaderTemplate>
+                <HeaderTemplate>Maps - SubLayer</HeaderTemplate>
                 <ContentTemplate>
                      @if (IsInitialRender)
                      {

@@ -17,6 +17,8 @@ When the TreeMap component renders within a panel of the Dashboard Layout compon
 
 When you drag and resize the Dashboard Layout's panel, the TreeMap component is not notified, so the TreeMap are not properly rendered within the panel. To avoid this scenario, the TreeMap component's [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_RefreshAsync) method must be called in the Dashboard Layout's [Resizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Resizing), [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnResizeStop) and [OnWindowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnWindowResize) events. Because the panel size of the Dashboard Layout is determined after a delay, a 500 millisecond delay must be provided before refreshing the TreeMap component.
 
+On window resizing, the TreeMap component is not notified, so the TreeMap is not properly rendered within the panel. To avoid this scenario, the Dashboard Layout component's [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_RefreshAsync) and  the TreeMap component's [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_RefreshAsync) method must be called in the Dashboard Layout's [OnWindowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnWindowResize) events.
+
 ```cshtml
 
 @using Syncfusion.Blazor.TreeMap
@@ -24,8 +26,8 @@ When you drag and resize the Dashboard Layout's panel, the TreeMap component is 
 @using Syncfusion.Blazor.Inputs
 
 
-<SfDashboardLayout AllowResizing="true" AllowFloating="true" CellSpacing="@CellSpacing" Columns="20">
-<DashboardLayoutEvents Created="Created" OnResizeStop="@ResizingHandler" OnWindowResize="@ResizingHandler" Resizing="ResizingHandler"></DashboardLayoutEvents>
+<SfDashboardLayout ID="DashBoard" @ref="DashboardLayout" AllowResizing="true" AllowFloating="true" CellSpacing="@CellSpacing" Columns="20">
+<DashboardLayoutEvents Created="Created" OnResizeStop="@ResizingHandler" OnWindowResize="@ResizingWindow" Resizing="ResizingHandler"></DashboardLayoutEvents>
     <DashboardLayoutPanels>
         <DashboardLayoutPanel Id="LayoutOne" Row="0" Col="5" SizeX="5" SizeY="7">
             <HeaderTemplate><div>TreeMap</div></HeaderTemplate>
@@ -107,6 +109,7 @@ When you drag and resize the Dashboard Layout's panel, the TreeMap component is 
     SfTreeMap<CarSalesDetails> TreeOne;
     SfTreeMap<LeafData> TreeTwo;
     SfTreeMap<USAElectionResult> TreeThree;
+    SfDashboardLayout DashboardLayout;
 
     public string[] LeafColor = new string[] { "#9cbb59" };
     public string[] LeafColorOne = new string[] { "#D84444" };
@@ -125,6 +128,14 @@ When you drag and resize the Dashboard Layout's panel, the TreeMap component is 
     public async void Created(Object args)
     {
         IsInitialRender = true;
+    }
+
+    public async Task ResizingWindow(ResizeArgs args)
+    {
+        await DashboardLayout.RefreshAsync();
+        await TreeOne.RefreshAsync();
+        await TreeTwo.RefreshAsync();
+        await TreeThree.RefreshAsync();
     }
 
     public async Task ResizingHandler(ResizeArgs args)
