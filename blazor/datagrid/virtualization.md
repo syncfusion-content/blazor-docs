@@ -85,7 +85,7 @@ the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfG
 
 ```
 
-
+> Refter these methods [ScrollIntoViewAsync](https://blazor.syncfusion.com/documentation/datagrid/virtualization#scroll-the-content-by-external-button) and [UpdatePageSizeAsync](https://blazor.syncfusion.com/documentation/datagrid/virtualization#refresh-virtualized-grid-externally). This methods are used to scroll the grid content and refresh the virtualized grid externally.
 
 
 ## Column virtualization
