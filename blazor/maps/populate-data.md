@@ -189,7 +189,7 @@ In the above example, both **name** fields contain the same value as **Afghanist
 
 To read the JSON file data, convert it to the C# object, and assign it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property.
 
-The **Http.GetJsonAsync** is used in the **OnInitAsync** lifecycle method to load JSON file data. As this will be executed asynchronously, check whether **populationDensity** is available, render the Maps component, or display the loading statement.
+The **Http.GetFromJsonAsync** is used in the **OnInitializedAsync** lifecycle method to load JSON file data. As this will be executed asynchronously, check whether **populationDensity** is available, render the Maps component, or display the loading statement.
 
 ```cshtml
 @inject HttpClient Http;
@@ -214,9 +214,9 @@ else
 }
 @code{
     PopulationData[] PopulationDensity;
-    protected override async Task OnInitAsync()
+    protected override async Task OnInitializedAsync()
     {
-        PopulationDensity = await Http.GetJsonAsync<PopulationDensity[]>("sample-data/PopulationDensity.json");
+        PopulationDensity = await Http.GetFromJsonAsync<PopulationData[]>("sample-data/PopulationDensity.json");
     }
 
     public class PopulationData
