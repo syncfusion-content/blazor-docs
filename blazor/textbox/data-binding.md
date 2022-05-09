@@ -114,4 +114,3 @@ The complex data values can be bound to the TextBox component.The following code
     }
 }
 ```
-> You can refer to our [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor TextBox example](https://blazor.syncfusion.com/demos/textbox/default-functionalities?theme=bootstrap5) to understand how to render and configure the TextBox.

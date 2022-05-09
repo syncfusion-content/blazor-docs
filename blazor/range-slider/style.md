@@ -66,5 +66,3 @@ Use the following CSS to customize the slider buttons.
     width: 25px;
 }
 ```
-
-> You can refer to our [Blazor Range Slider](https://blazor.syncfusion.com/demos/range-slider/default?theme=bootstrap5) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Range Slider example](https://blazor.syncfusion.com/demos/range-slider/default?theme=bootstrap5) to understand how to render and configure the Range Slider.
