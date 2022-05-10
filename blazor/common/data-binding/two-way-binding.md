@@ -97,3 +97,4 @@ You can build Blazor render trees manually with `RenderTreeBuilder` which provid
 
 ![Binding in Blazor when build a render tree](../images/blazor-date-picker.png)
 
+Refer [Manually build a render tree](https://docs.microsoft.com/en-us/aspnet/core/blazor/advanced-scenarios?#manually-build-a-render-tree-rendertreebuilder) topic for more details.
