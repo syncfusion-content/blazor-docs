@@ -262,7 +262,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 ## Render chip items from collection
 
-You can render the chip items in `Blazor Chip` component using foreach loop.
+You can render the chip items from collection using for loop in Blazor Chip component as follows.
 
 ```cshtml
 
