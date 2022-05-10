@@ -121,3 +121,42 @@ LessThan |Checks whether the value is less than the specified value. |Number &
 LessThanOrEqual |Checks whether the value is less than or equal to the specified value. |Number &#124; Date
 
 > By default, the **Operator** value is **Equal** in [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of **GridFilterSettings** component.
+
+## Get filtered records when using remote data source
+
+Using the [GetFilteredRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetFilteredRecordsAsync) method, you can retrieve the filtered records details from the Grid component. The `GetFilteredRecordsAsync` method returns the filtered records in the form of objects when using a remote data source. So, you need to deserialize the object to retrieve the filtered records.
+
+```cshtml
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+@using Newtonsoft.Json
+
+<SfButton OnClick="Click">GetFilteredRecord</SfButton>
+
+<SfGrid @ref="Grid" TValue="EmployeeData" ID="Grid" AllowPaging="true" AllowFiltering="true">
+    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders/" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.OrderID) TextAlign="TextAlign.Center" HeaderText="Order ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Center" HeaderText="Customer ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.CustomerID) TextAlign="TextAlign.Center" HeaderText="Customer Name" Width="130"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    SfGrid<EmployeeData> Grid;
+    public class EmployeeData
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public int EmployeeID { get; set; }
+    }
+
+    public async Task Click()
+    {
+        var filteredData = await Grid.GetFilteredRecordsAsync();
+        List<EmployeeData> filteredList = JsonConvert.DeserializeObject<List<EmployeeData>>(JsonConvert.SerializeObject(filteredData));
+    }
+}
+
+```
