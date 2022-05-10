@@ -15,7 +15,9 @@ The Circular Gauge can be rendered within components such as the Dashboard Layou
 
 When the Circular Gauge component renders within a panel of the Dashboard Layout component, its rendering begins concurrently with the Dashboard Layout component's rendering. As a result, the size of the Circular Gauge component will not be proper. To properly render the Circular Gauge component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the Circular Gauge component's rendering. The boolean variable is set to **false** by default, so the Circular Gauge component will not be rendered initially. When the Dashboard Layout component is rendered, its [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Created) event is fired, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to **true** to initiate the render of the Circular Gauge component.
 
-When you drag and resize the Dashboard Layout's panel, the Circular Gauge component is not notified, so the Circular Gauge is not properly rendered within the panel. To avoid this scenario, the Circular Gauge component's [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_RefreshAsync) method must be called in the Dashboard Layout's [Resizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Resizing), [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnResizeStop) and [OnWindowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnWindowResize) events. Because the panel size of the Dashboard Layout is determined after a delay, a 100 millisecond delay must be provided before refreshing the Circular Gauge component.
+When you drag and resize the Dashboard Layout's panel, the Circular Gauge component is not notified, so the Circular Gauge is not properly rendered within the panel. To avoid this scenario, the Circular Gauge component's [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_RefreshAsync) method must be called in the Dashboard Layout's [Resizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_Resizing) and [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnResizeStop) events. Because the panel size of the Dashboard Layout is determined after a delay, a 100 millisecond delay must be provided before refreshing the Circular Gauge component.
+
+On window resizing, the Circular Gauge component is not notified, so the Circular Gauge is not properly rendered within the panel. To avoid this scenario, the Dashboard Layout component's [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_RefreshAsync) and  the Circular Gauge component's [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_RefreshAsync) method must be called in the Dashboard Layout's [OnWindowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutEvents.html#Syncfusion_Blazor_Layouts_DashboardLayoutEvents_OnWindowResize) events.
 
 ```cshtml
 
@@ -23,15 +25,15 @@ When you drag and resize the Dashboard Layout's panel, the Circular Gauge compon
 @using Syncfusion.Blazor.Layouts
 @using Syncfusion.Blazor.Inputs
 
-<SfDashboardLayout AllowResizing="true"  AllowFloating="true" CellSpacing="@CellSpacing" Columns="20">
-<DashboardLayoutEvents Created="Created" OnResizeStop="@ResizingHandler" OnWindowResize="@ResizingHandler" Resizing="ResizingHandler"></DashboardLayoutEvents>
+<SfDashboardLayout ID="DashBoard" @ref="DashboardLayout" AllowResizing="true"  AllowFloating="true" CellSpacing="@CellSpacing" Columns="20">
+<DashboardLayoutEvents Created="Created" OnResizeStop="@ResizingHandler" OnWindowResize="@ResizingWindow" Resizing="ResizingHandler"></DashboardLayoutEvents>
     <DashboardLayoutPanels>
         <DashboardLayoutPanel Id="LayoutOne" Row="0" Col="5" SizeX="5" SizeY="7">
             <HeaderTemplate><div> Circular Gauge </div></HeaderTemplate>
             <ContentTemplate>
                 @if (IsInitialRender)
                 {
-                     <SfCircularGauge ID="GaugeOne @ref="GaugeOne" ID="CircularGauge" Background="transparent" Height="100%" Width="100%">
+                     <SfCircularGauge ID="GaugeOne" @ref="GaugeOne" Background="transparent" Height="100%" Width="100%">
                         <CircularGaugeAxes>
                             <CircularGaugeAxis Radius="80%" StartAngle="230" EndAngle="130">
                                 <CircularGaugeAxisLabelStyle Offset="-1">
@@ -136,6 +138,7 @@ When you drag and resize the Dashboard Layout's panel, the Circular Gauge compon
     SfCircularGauge GaugeOne;
     SfCircularGauge GaugeTwo;
     SfCircularGauge GaugeThree;
+    SfDashboardLayout DashboardLayout;
 
     public bool IsInitialRender { get; set; }
     public double[] CellSpacing = { 10, 10 };
@@ -143,6 +146,14 @@ When you drag and resize the Dashboard Layout's panel, the Circular Gauge compon
     public async void Created(Object args)
     {
         IsInitialRender = true;
+    }
+
+    public async Task ResizingWindow(ResizeArgs args)
+    {
+        await DashboardLayout.RefreshAsync();
+        await GaugeOne.RefreshAsync();
+        await GaugeTwo.RefreshAsync();
+        await GaugeThree.RefreshAsync();
     }
 
     public async Task ResizingHandler(ResizeArgs args)
@@ -416,7 +427,7 @@ When you expand the Accordion component, the Circular Gauge component is not not
                 <ContentTemplate>
                  @if (IsInitialRender)
                  {
-                    <SfCircularGauge ID="GaugeOne" @ref="GaugeOne" ID="CircularGauge" Background="transparent" Width="100%">
+                    <SfCircularGauge ID="GaugeOne" @ref="GaugeOne" Background="transparent" Width="100%">
                         <CircularGaugeAxes>
                             <CircularGaugeAxis Radius="80%" StartAngle="230" EndAngle="130">
                                 <CircularGaugeAxisLabelStyle Offset="-1">
