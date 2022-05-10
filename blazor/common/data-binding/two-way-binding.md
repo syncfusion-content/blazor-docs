@@ -54,7 +54,7 @@ The following Syncfusion Blazor components support two-way binding:
 
 ## Bind component generated dynamically using RenderFragment
 
-The following code explains how to bind value for `DatePicker` component which is generated dynamically using `RenderFragment` 
+You can build Blazor render trees manually with `RenderTreeBuilder` which provides methods for building and manipulating components manually in C# code. The following code explains how to bind value for `DatePicker` component which is generated dynamically using `RenderFragment`. Refer sequence 3,4 where binding and call back is handled.
 
 ```cshtml
 
@@ -76,8 +76,11 @@ The following code explains how to bind value for `DatePicker` component which i
         builder.OpenComponent(0, typeof(SfDatePicker<DateTime>));
         builder.AddAttribute(1, "ID", "MyDynamicId");
         builder.AddAttribute(2, "Placeholder", "Choose a date");
-        //Binding the value property with DateValue property
-        builder.AddAttribute(3, "Value", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck<DateTime?>(DateValue));
+        //Binding the value property with DateValue property.
+        builder.AddAttribute(3, "Value", DateValue);
+        builder.AddAttribute(4, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.
+                CreateBinder(this, _value => DateValue = _value, DateValue));
+                
         builder.CloseComponent();
     };
 
@@ -92,5 +95,5 @@ The following code explains how to bind value for `DatePicker` component which i
 }
 ```
 
-![Binding in Blazor](../images/blazor-date-picker.png)
+![Binding in Blazor when build a render tree](../images/blazor-date-picker.png)
 
