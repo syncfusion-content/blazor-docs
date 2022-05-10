@@ -191,7 +191,7 @@ You can create Blazor WebAssembly App or Blazor Server App to fetch the data fro
 
 To read the JSON file data, convert it to the C# object, and assign it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property.
 
-### Fetching data from JSON file using Blazor Web Assembly App
+### Fetching data from JSON file using Blazor WebAssembly App
 
 The **Http.GetFromJsonAsync** is used in the **OnInitializedAsync** lifecycle method to load JSON file data. As this will be executed asynchronously, check whether **populationDensity** is available, render the Maps component, or display the loading statement.
 
@@ -302,7 +302,7 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        string path = NavigationManager.Uri + "population-data.json";
+        string path = NavigationManager.Uri + "sample-data/PopulationDensity.json";
         HttpClient httpClient = new HttpClient();
         HttpResponseMessage response = await Http.GetAsync(path);
         result = response.Content.ReadAsStringAsync().Result;
