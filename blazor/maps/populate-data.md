@@ -187,9 +187,7 @@ In the above example, both **name** fields contain the same value as **Afghanist
 
 ## Fetching data from JSON file
 
-You can create Blazor WebAssembly App or Blazor Server App to fetch the data from JSON file.
-
-To read the JSON file data, convert it to the C# object, and assign it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property.
+To retrieve data from a JSON file, you can create a Blazor WebAssembly App or a Blazor Server App. The data from the JSON file is then read, convert it to a C# object, and assign it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property.
 
 ### Fetching data from JSON file using Blazor WebAssembly App
 
@@ -267,7 +265,6 @@ Here, the `PopulationDensity.json` file contains following data.
 ### Fetching data from JSON file using  Blazor Server App
 
 The **Http.GetAsync** is used in the **OnInitializedAsync** lifecycle method to get the JSON file data and read the JSON file as a string. Then, the GeoJSON data in the string can be converted as a deserialized object list and set in the **DataSource** property of the Maps component. As this will be executed asynchronously, check whether **populationDensity** is available, render the Maps component, or display the loading statement.
-
 
 
 ```cshtml
