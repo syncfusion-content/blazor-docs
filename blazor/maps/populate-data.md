@@ -187,9 +187,11 @@ In the above example, both **name** fields contain the same value as **Afghanist
 
 ## Fetching data from JSON file
 
-To read the JSON file data, convert it to the C# object, and assign it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property.
+To retrieve data from a JSON file, you can create a Blazor WebAssembly App or a Blazor Server App. The data from the JSON file is then read, convert it to a C# object, and assign it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property.
 
-The **Http.GetJsonAsync** is used in the **OnInitAsync** lifecycle method to load JSON file data. As this will be executed asynchronously, check whether **populationDensity** is available, render the Maps component, or display the loading statement.
+### Fetching data from JSON file using Blazor WebAssembly App
+
+The **Http.GetFromJsonAsync** is used in the **OnInitializedAsync** lifecycle method to load JSON file data. As this will be executed asynchronously, check whether **populationDensity** is available, render the Maps component, or display the loading statement.
 
 ```cshtml
 @inject HttpClient Http;
@@ -214,9 +216,9 @@ else
 }
 @code{
     PopulationData[] PopulationDensity;
-    protected override async Task OnInitAsync()
+    protected override async Task OnInitializedAsync()
     {
-        PopulationDensity = await Http.GetJsonAsync<PopulationDensity[]>("sample-data/PopulationDensity.json");
+        PopulationDensity = await Http.GetFromJsonAsync<PopulationData[]>("sample-data/PopulationDensity.json");
     }
 
     public class PopulationData
@@ -258,4 +260,61 @@ Here, the `PopulationDensity.json` file contains following data.
 ]
 ```
 
-![Blazor Maps with JSON Data Source](./images/populatedata/blazor-map-data-binding.png)
+![Blazor Maps with JSON Data Source using WASM App](./images/populatedata/blazor-map-data-binding.png)
+
+### Fetching data from JSON file using  Blazor Server App
+
+The **Http.GetAsync** is used in the **OnInitializedAsync** lifecycle method to get the JSON file data and read the JSON file as a string. Then, the GeoJSON data in the string can be converted as a deserialized object list and set in the **DataSource** property of the Maps component. As this will be executed asynchronously, check whether **populationDensity** is available, render the Maps component, or display the loading statement.
+
+
+```cshtml
+@inject HttpClient Http;
+@using Syncfusion.Blazor.Maps
+@using System.Net.Http.Json
+@using System.Text.Json;
+@using Newtonsoft.Json;
+@inject NavigationManager NavigationManager
+
+
+@if (PopulationDensity == null)
+{
+    <p><em>Loading Maps component...</em></p>
+}
+else
+{
+    <SfMaps>
+        <MapsLayers>
+            <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
+                       DataSource="PopulationDensity"
+                       ShapeDataPath="Name"
+                       ShapePropertyPath='new string[] {"name"}' TValue="PopulationData">
+                <MapsDataLabelSettings Visible="true" LabelPath="Name"></MapsDataLabelSettings>
+            </MapsLayer>
+        </MapsLayers>
+    </SfMaps>
+}
+@code{
+    public List<PopulationData> PopulationDensity;
+    public string result;
+
+    protected override async Task OnInitializedAsync()
+    {
+        string path = NavigationManager.Uri + "sample-data/PopulationDensity.json";
+        HttpClient httpClient = new HttpClient();
+        HttpResponseMessage response = await Http.GetAsync(path);
+        result = response.Content.ReadAsStringAsync().Result;
+        PopulationDensity = JsonConvert.DeserializeObject<List<PopulationData>>(result);
+    }
+
+    public class PopulationData
+    {
+        public string Code { get; set; }
+        public double Value { get; set; }
+        public string Name { get; set; }
+        public double Population { get; set; }
+        public float Density { get; set; }
+    }
+}
+```
+
+![Blazor Maps with JSON Data Source using Blazor Server App](./images/populatedata/blazor-map-data-binding.png)
