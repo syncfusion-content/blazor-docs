@@ -260,7 +260,64 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 ![Blazor Chip Component](./images/blazor-chip-component.png)
 
-> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chip).
+## Render chip items from collection
+
+You can render the chip items from collection using for loop in Blazor Chip component as follows.
+
+```cshtml
+
+@using Syncfusion.Blazor.Buttons
+@if(ChipData.Count != 0) {
+<SfChip EnableDelete="true">
+    <ChipItems>
+        @foreach (ChipCollection currentData in ChipData)
+        {
+             <ChipItem Text=@currentData.text Enabled=@currentData.enabled></ChipItem>
+        }
+    </ChipItems>
+</SfChip>
+}
+
+@code{
+
+    public List<ChipCollection> ChipData = new List<ChipCollection>();
+    public class ChipCollection
+    {
+        public string text { get; set; }
+        public bool enabled { get; set; }
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        await Task.Delay(2000);
+        ChipData.Add(new ChipCollection
+        {
+            text = "Jenifer",
+            enabled = true
+        });
+        ChipData.Add(new ChipCollection
+        {
+            text = "Amenda",
+            enabled = true
+        });
+        ChipData.Add(new ChipCollection
+        {
+            text = "Isabella",
+            enabled = true
+        });
+        ChipData.Add(new ChipCollection
+        {
+            text = "James",
+            enabled = true
+        });
+
+    }
+}
+
+```
+
+![Blazor Chip Component](./images/blazor-chip-sample.png)
+
 
 ## See Also
 
