@@ -379,6 +379,166 @@ The following image represents foreign key column
 > * For remote data, the sorting and grouping is done based on [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) instead of [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue).
 > * If [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) is not defined, then the column uses [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_StackingGroup) property of **GridColumn** tag helper.
 
+### Prevent filter query generation for foreignkey column
+
+By default, a filter query for the foreignkey column can be generated based on the foreignkey value. When the URL query string is too long (containing the filter queries), exception occur while performing filtering operations. To overcome this issue, we can prevent filter query generation for the foreignkey column. This can be achieved by setting the PreventFilterQuery argument of the OnActionBegin event to true.
+
+In the following sample, we can prevent default filter query generation using the PreventFilterQuery property and generate a custom filter query to execute a filter operation.
+
+```cshtml
+@using System.ComponentModel.DataAnnotations;
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+@using Newtonsoft.Json
+@implements IDisposable
+@inject IJSRuntime JSRuntime
+
+<SfButton Content="clearfilter" OnClick="@clearFilter"></SfButton>
+
+<SfGrid ID="Grid" @ref="Grid" TValue="Book" Toolbar="@ToolbarItems" Height="100%" AllowPaging="true" AllowSorting="true" AllowFiltering="true">
+    <GridPageSettings PageSize="10" PageSizes="true"></GridPageSettings>
+    <SfDataManager @ref="DataManagerRef" Url="http://localhost:64956/odata/books" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+    <GridEvents TValue="Book" OnActionFailure="OnActionFailure" OnActionBegin="OnActionBegin"/>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="@EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Book.Id) IsPrimaryKey="true" Width="150"></GridColumn>
+        <GridForeignColumn TValue="Customer" Field=@nameof(Book.CustomerId) AllowFiltering="true" ForeignKeyValue="Name" ForeignKeyField="Id" HeaderText="Name" Width="100">
+            <SfDataManager Url="http://localhost:64956/odata/customers" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+        </GridForeignColumn>
+        <GridColumn Field=@nameof(Book.CreditLimit) Width="200" EditType="EditType.NumericEdit"></GridColumn>
+        <GridColumn Field=@nameof(Book.Active) Width="200" EditType="EditType.BooleanEdit"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+
+<style>
+    .e-grid .e-gridcontent .e-rowcell.highlight {
+        color: red;
+        font-weight: bolder;
+    }
+</style>
+
+@code{
+    public SfDataManager DataManagerRef { get; set; }
+    SfGrid<Book> GridInstance;
+    SfGrid<Book> Grid { get; set; }
+    private Query currentQuery = new Query();
+    public static Query OdataQuery = new Query();
+    public List<string> ToolbarItems = new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" };
+
+    public void Check()
+    {
+        var check = GridInstance.Query;
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            DataManagerRef.DataAdaptor = new TestOData(DataManagerRef);
+        }
+        base.OnAfterRender(firstRender);
+    }
+
+    public class TestOData : ODataV4Adaptor
+    {
+        public TestOData(DataManager dm) : base(dm)
+        {
+        }
+        public override Query PreventOdataFilter(Query query)
+        {
+            return OdataQuery;
+        }
+    }
+
+    public void clearFilter()
+    {
+        Grid.ClearFiltering();
+    }
+
+    private void OnActionFailure(Syncfusion.Blazor.Grids.FailureEventArgs args)
+    {
+        JSRuntime.InvokeVoidAsync("console.log", args.Error);
+    }
+
+    private void OnActionBegin(Syncfusion.Blazor.Grids.ActionEventArgs<Book> args)
+    {
+        if(args.RequestType == Syncfusion.Blazor.Grids.Action.FilterSearchBegin)
+        {
+            if(args.SearchString != string.Empty)
+            {
+                args.SearchString = string.Empty;
+                args.CheckboxListData = new List<Book>() { new Book() { Id = Guid.NewGuid(), CustomerId = Guid.NewGuid(), CustomerId1 = Guid.NewGuid(), Active =false, CreditLimit = 20 } };
+            }
+        }
+        if (args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.ClearFiltering))
+        {
+            OdataQuery = new Query();    
+        }
+        if (args.RequestType == Syncfusion.Blazor.Grids.Action.Filtering)
+        {
+            if (String.Equals(args.CurrentFilteringColumn, null, StringComparison.OrdinalIgnoreCase) && String.Equals(args.CurrentFilterObject?.Field, "Name", StringComparison.OrdinalIgnoreCase))
+            {
+                OdataQuery = new Query();
+            }
+            if (String.Equals(args.CurrentFilteringColumn, nameof(Book.CustomerId), StringComparison.OrdinalIgnoreCase))
+            {
+               args.PreventFilterQuery = true;
+                List<WhereFilter> AndPredicate = new List<WhereFilter>(); 
+                if (args.Columns != null)
+                {
+                    foreach (var col in args.Columns)
+                    {
+                        AndPredicate.Add(new WhereFilter() { Field = "Customer/Name", Operator = col.Operator.ToString().ToLower(), value = col.Value, Condition = col.Predicate });
+                    }
+                    if (AndPredicate[0].Condition == "and")
+                    {
+                        OdataQuery = new Query().Where(new WhereFilter() { Condition = "and", IsComplex = true, predicates = AndPredicate });
+                    }
+                    else
+                    {
+                        OdataQuery = new Query().Where(new WhereFilter() { Condition = "or", IsComplex = true, predicates = AndPredicate });
+                    }
+                }
+                else if(args.Columns == null)
+                {
+                    OdataQuery = new Query().Where("Customer/Name", args.CurrentFilterObject.Operator.ToString().ToLower(), args.CurrentFilterObject.Value, true, true);
+                }
+            }            
+        }
+    }
+
+    void IDisposable.Dispose()
+    {        
+        OdataQuery = null;
+    }
+
+    public class Book
+    {
+        [Key]
+        public Guid Id { get; set; }
+        public Guid CustomerId { get; set; }
+        public Guid CustomerId1 { get; set; }
+        public virtual Customer Customer { get; set; }
+        public int CreditLimit { get; set; }
+        public bool Active { get; set; }
+        public bool IsDeleted { get; set; }
+    }
+
+    public class Customer
+    {
+        [Key]
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        [JsonIgnore]
+        public List<Book> CustomerBooks { get; set; }
+    }
+}
+
+```
+
 ## Header text
 
 By default, column header title is displayed from column [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) value. To override the default header title, you have to define the **HeaderText** value in the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) property of **GridColumn** directive.
