@@ -256,6 +256,8 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 
 ![Blazor Range Slider Component](images/blazor-rangeslider.gif)
 
+> You can refer to our [Blazor Range Slider](https://blazor.syncfusion.com/demos/range-slider/default?theme=bootstrap5) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Range Slider example](https://blazor.syncfusion.com/demos/range-slider/default?theme=bootstrap5) to understand how to render and configure the Range Slider.
+
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RangeSlider).
 
 ## See Also

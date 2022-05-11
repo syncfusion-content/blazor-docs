@@ -259,6 +259,8 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 ![Blazor ColorPicker Component](./images/blazor-colorpicker-component.png)
 
+> You can refer to our [Blazor Color Picker](https://www.syncfusion.com/blazor-components/blazor-color-picker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Color Picker example](https://blazor.syncfusion.com/demos/color-picker/default-functionalities?theme=bootstrap5) to understand how to render and configure the Color Picker.
+
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ColorPicker).
 
 ## See Also
