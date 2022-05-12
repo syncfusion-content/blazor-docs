@@ -11,10 +11,6 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
-To get start quickly with Blazor File Upload component, refer to the video below,
-{% youtube
-"youtube:https://www.youtube.com/watch?v=MxyrifDwud4"%}
-
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)

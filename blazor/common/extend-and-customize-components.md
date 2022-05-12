@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Extend and Customize the Syncfusion Components in Blazor - Syncfusion
-description: Checkout and learn here about how to extend, customize, and reuse the Syncfusion Components in Blazor
+description: Check out the documentation for Extend and Customize the Syncfusion Components in Blazor
 platform: Blazor
 component: Common
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 The Blazor framework provides the support to extend a component or customize it within another component for a strong composite model.
 
-## Extend Syncfusion Blazor component
+## Extend Syncfusion Blazor Component
 
 The Syncfusion Blazor components can extend and customize the logic by creating a new Blazor component.
 
@@ -84,7 +84,7 @@ The Syncfusion Blazor components can extend and customize the logic by creating 
 
     ![Output of extending Syncfusion component](images/extend-sync-component.png)
 
-## Use Syncfusion Blazor component within another Blazor component
+## Use Syncfusion Blazor Component within Another Blazor Component
 
 The Syncfusion Blazor component can be implemented within another Blazor component.
 
@@ -156,7 +156,7 @@ The Syncfusion Blazor component can be implemented within another Blazor compone
 
     ![Render Syncfusion Blazor components inside another Blazor component](images/todolist.gif)
 
-## Render Syncfusion Blazor component dynamically
+## Render Syncfusion Blazor Component Dynamically
 
 The following methods can be used to render the Syncfusion Blazor components dynamically:
 
@@ -210,7 +210,7 @@ The following code demonstrates the RenderFragment that renders the `SfGrid` com
 }
 ```
 
-## RenderFragment with RenderTreeBuilder methods
+## RenderFragment with RenderTreeBuilder Methods
 
 You can define the RenderFragment delegate with [RenderTreeBuilder](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder?view=aspnetcore-5.0)'s methods.
 
@@ -258,7 +258,7 @@ You can render the nested components by using `RenderFragment`.
 }
 ```
 
-## BuildRenderTree method
+## BuildRenderTree Method
 
 The `BuildRenderTree` is an override method that can be used to render a reusable component dynamically.
 

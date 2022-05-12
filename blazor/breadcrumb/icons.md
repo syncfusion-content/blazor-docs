@@ -50,7 +50,7 @@ In the Breadcrumb component, you can add images to the items using [IconCss](htt
 
 <style>
     .e-image-home {
-        background-image: url(./images/home.png);
+        background-image: url(/home.png);
         height: 20px;
         width: 20px;
     }
@@ -77,7 +77,7 @@ In the Breadcrumb component, SVG image can be added for the items using the [Ico
 
 <style>
     .e-svg-home {
-        background-image: url('./images/home.svg');
+        background-image: url('/home.svg');
         height: 20px;
         width: 20px;
     }

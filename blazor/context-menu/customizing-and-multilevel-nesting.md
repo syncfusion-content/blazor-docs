@@ -43,7 +43,7 @@ To customize Context Menu items in your application, set your customized templat
         user-select: none;
     }
     .shortcut {
-        padding: 5px 5px 5px 30px;
+        float: right;
         font-size: 10px;
         opacity: 0.5;
     }

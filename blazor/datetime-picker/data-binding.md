@@ -64,8 +64,7 @@ There is no need to call this method for native events since it’s called after
 <p>DateTimePicker value is: @DateValue</p>
 
 <SfDateTimePicker TValue="DateTime?" Value="@DateValue">
-    <DateTimePickerEvents TValue="DateTime?" ValueChange="@onChange">
-    </DateTimePickerEvents>
+    <DatePickerEvents TValue="DateTime?" ValueChange="@onChange"></DatePickerEvents>
 </SfDateTimePicker>
 
 @code {

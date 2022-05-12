@@ -7,7 +7,7 @@ component: DataGrid component and DataManager
 documentation: ug
 ---
 
-# SQL Server Data Binding and Performing CRUD Operations
+# SQL server data binding and performing CRUD operations
 
 ## Introduction
 
@@ -124,7 +124,7 @@ Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com
 
 ```
 
-In the custom adaptor’s **Read** method, you can get the Grid action details like paging, filtering, sorting information, etc., using **DataManagerRequest**.
+In the custom adaptor’s **Read** method, you can get the Grid action details like paging,filtering,sorting information, etc., using **DataManagerRequest**.
 
 * Based on the DataManagerRequest, form a SQL query string (to perform paging) and execute the SQL query. Retrieve the data from the database using SqlDataAdapter.
 
@@ -241,9 +241,9 @@ The CRUD operations can be performed and customized on our own by overriding the
 
 Let’s see how to perform CRUD operation using SQL server data with Syncfusion Blazor DataGrid component
 
-### Insert operation
+### Insert Operation
 
-To perform the insert operation, override the Insert/InsertAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
+To Perform the Insert operation, override the Insert/InsertAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
 
 ```c#
 
@@ -279,12 +279,13 @@ public override object Insert(DataManager DataManager, object Value, string Key)
 
 ```
 
+The resultant grid will look like below.
 
-![Insert Operation in Blazor](../images/SQLInsert.png)
+![Insert Operation](../images/SQLInsert.png)
 
-### Update operation
+### Update Operation
 
-To perform the update operation, override the Update/UpdateAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
+To Perform the Update operation, override the Update/UpdateAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
 
 ```c#
 
@@ -319,12 +320,13 @@ public override object Update(DataManager DataManager, object Value, string KeyF
 
 ```
 
+The resultant grid will look like below.
 
-![Update Operation in Blazor](../images/SQLUpdate.png)
+![Update Operation](../images/SQLUpdate.png)
 
-### Delete operation
+### Delete Operation
 
-To perform the delete operation, override the Remove/RemoveAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
+To Perform the Delete operation, override the Remove/RemoveAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
 
 ```c#
 
@@ -360,7 +362,8 @@ public override object Remove(DataManager DataManager, object Value, string KeyF
 
 ```
 
+The resultant grid will look like below.
 
-![Delete Operation in Blazor](../images/SQLDelete.png)
+![Delete Operation](../images/SQLDelete.png)
 
 You can find the sample in this [GitHub location](https://github.com/SyncfusionExamples/blazor-grid-sqldatabinding)

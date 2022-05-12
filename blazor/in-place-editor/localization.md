@@ -11,7 +11,110 @@ documentation: ug
 
 ## Localization
 
-[Blazor In-place Editor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
+Localization library allows you to localize the default text content of the In-place Editor to different cultures using the `Locale` property. The following keys in the In-place Editor will be localized based on culture.
+
+> Use `Resource` file to translate the static text of the In-place Editor. The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [Localization](../../common/localization/) link to know more about how to configure and use localization in the Blazor Server and WebAssembly project for Syncfusion Blazor components.
+
+| Locale key | en-US (default) |
+|------|------|
+| InPlaceEditor_Save | Save |
+| InPlaceEditor_Cancel | Cancel |
+| InPlaceEditor_LoadingText | Loading... |
+| InPlaceEditor_EditIcon | Click to edit |
+| InPlaceEditor_EditAreaClick | Click to edit |
+| InPlaceEditor_EditAreaDoubleClick | Double click to edit |
+
+In the following sample, `French` culture is set to In-place Editor and changed the tooltip text.
+
+```cshtml
+
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.InPlaceEditor
+@using Syncfusion.Blazor.Inputs
+
+<table class="table-section">
+    <tr>
+        <td> Choose Editable Type: </td>
+        <td>
+            <SfDropDownList Width="90%" TValue="string" TItem="InplaceEditableModes" DataSource="@EditableData" @bind-Value="@DropDownValue">
+                <DropDownListEvents TValue="string" TItem="InplaceEditableModes" ValueChange="@OnChange"></DropDownListEvents>
+                <DropDownListFieldSettings Text="text" Value="value"></DropDownListFieldSettings>
+            </SfDropDownList>
+        </td>
+    </tr>
+    <tr>
+        <td class="sample-td"> Enter your name: </td>
+        <td class="sample-td">
+            <SfInPlaceEditor @bind-Value="@TextValue" EditableOn="@EditableOn" TValue="string" Locale="fr-BE">
+                <EditorComponent>
+                    <SfTextBox @bind-Value="@TextValue"></SfTextBox>
+                </EditorComponent>
+            </SfInPlaceEditor>
+        </td>
+    </tr>
+</table>
+
+<style>
+    .table-section {
+        margin: 0 auto;
+    }
+
+    tr td:first-child {
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    .sample-td {
+        padding-top: 10px;
+        min-width: 230px;
+        height: 100px;
+    }
+</style>
+
+@code {
+    private string TextValue = "Andrew";
+    public string DropDownValue = "Click";
+    private EditableType EditableOn = EditableType.Click;
+
+    public class InplaceEditableModes
+    {
+        public string value { get; set; }
+        public string text { get; set; }
+    }
+
+    private List<InplaceEditableModes> EditableData = new List<InplaceEditableModes>()
+    {
+        new InplaceEditableModes(){ value= "Click", text= "Click" },
+        new InplaceEditableModes(){ value= "Double Click", text= "Double Click" },
+        new InplaceEditableModes(){ value= "Edit Icon Click", text= "Edit Icon Click" }
+    };
+
+
+    private void OnChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, InplaceEditableModes> args)
+    {
+        if (args.Value != null)
+        {
+            if (args.Value.ToString() == "Click")
+            {
+                this.EditableOn = EditableType.Click;
+            }
+            else if (args.Value.ToString() == "Double Click")
+            {
+                this.EditableOn = EditableType.DoubleClick;
+            }
+            else
+            {
+                this.EditableOn = EditableType.EditIconClick;
+            }
+            this.StateHasChanged();
+        }
+    }
+}
+
+```
+
+
+![Localization in Blazor In-place Editor](./images/blazor-inplace-editor-localization.png)
 
 ## Right to left
 

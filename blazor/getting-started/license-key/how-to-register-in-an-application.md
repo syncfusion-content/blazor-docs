@@ -9,7 +9,7 @@ documentation: ug
 
 # Register Syncfusion License key in Blazor application
 
-Syncfusion license key should be registered, if your project using Syncfusion Blazor packages reference from [nuget.org](https://www.nuget.org/packages?q=syncfusion) or from trial installer. The generated license key is just a string that needs to be registered before any Syncfusion control is initiated. The following code is used to register the license.
+Syncfusion license key should be registered, if your project using Syncfusion Blazor packages reference from [nuget.org](https://www.nuget.org/packages?q=syncfusion) or from installer. The generated license key is just a string that needs to be registered before any Syncfusion control is initiated. The following code is used to register the license.
 
 ```csharp
 Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");

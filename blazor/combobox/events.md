@@ -18,10 +18,10 @@ This section explains the list of events of the ComboBox component which will be
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-<SfComboBox TItem="GameFields" TValue="string" DataSource="@Games">
-    <ComboBoxEvents TItem="GameFields" TValue="string" Blur="@BlurHandler"></ComboBoxEvents>
-    <ComboBoxFieldSettings Text="Text" Value="ID"></ComboBoxFieldSettings>
-</SfComboBox>
+<SfDropDownList TItem="GameFields" TValue="string" DataSource="@Games">
+    <DropDownListEvents TItem="GameFields" TValue="string" Blur="@BlurHandler"></DropDownListEvents>
+    <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
+</SfDropDownList>
 
 @code {
     public class GameFields
@@ -392,11 +392,11 @@ This section explains the list of events of the ComboBox component which will be
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
-<SfComboBox TValue="string" TItem="OrderDetails" Query="@RemoteDataQuery">
+<SfDropDownList TValue="string" TItem="OrderDetails" Query="@RemoteDataQuery">
     <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
-    <ComboBoxEvents TValue="string" TItem="OrderDetails" OnActionBegin="@OnActionBeginhandler"></ComboBoxEvents>
-    <ComboBoxFieldSettings Text="CustomerID" Value="CustomerID"></ComboBoxFieldSettings>
-</SfComboBox>
+    <DropDownListEvents TValue="string" TItem="OrderDetails" OnActionBegin="@OnActionBeginhandler"></DropDownListEvents>
+    <DropDownListFieldSettings Text="CustomerID" Value="CustomerID"></DropDownListFieldSettings>
+</SfDropDownList>
 
 @code {
     public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" }).Take(6).RequiresCount();
@@ -527,8 +527,4 @@ This section explains the list of events of the ComboBox component which will be
 
 ```
 
-## See also
-* [How to pass an extra parameter to Blazor ComboBox ValueChange handler?](https://www.syncfusion.com/kb/13138/how-to-pass-an-extra-parameter-to-blazor-combobox-valuechange-handler)
-
 > ComboBox is limited with these events and new events will be added in the future based on the user requests. If the event you are looking for is not on the list, then please request [here](https://www.syncfusion.com/feedback/blazor-components).
-

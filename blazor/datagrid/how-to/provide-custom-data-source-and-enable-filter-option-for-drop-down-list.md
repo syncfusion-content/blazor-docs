@@ -54,6 +54,11 @@ This is demonstrated in the following sample code,
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
     }
+    public class Country
+    {
+        public string CustomerID { get; set; }
+        public int? CountryId { get; set; }
+    }
     public static List<Order> LocalData = new List<Order> {
                 new Order() { CustomerID= "United States" },
                 new Order() { CustomerID= "Australia" },

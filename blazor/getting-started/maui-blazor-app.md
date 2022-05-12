@@ -176,6 +176,3 @@ Before running the sample, make sure the mode is `Windows Machine`.
     If you get error dialog like "There were deployment errors", Enable developer mode. For more details refer [Enable your device for development](https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development).
 
    ![Enable developer mode in system settings](images\maui\enable-developer-mode.png)
-   
-## See also
-* [How to create Diagram Builder in MAUI platform?](https://www.syncfusion.com/kb/13059/how-to-create-diagram-builder-in-maui-platform)

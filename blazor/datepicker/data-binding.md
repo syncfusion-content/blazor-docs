@@ -54,7 +54,7 @@ public DateTime? DateValue { get; set; } = DateTime.Now;
 
 ## Dynamic value binding
 
-The property value can be changed dynamically only by manually calling the `StateHasChanged()` method inside public event of **Blazor DatePicker component**. This method notifies the component that its state has changed and queues a re-render.
+You can change the property value dynamically by manually calling the `StateHasChanged()` method inside public event of **Blazor DatePicker component** only. This method notifies the component that its state has changed and queues a re-render.
 
 There is no need to call this method for native events since it’s called after any lifecycle method has been called and can also be invoked manually to trigger a re-render. Please refer the below mentioned code example.
 

@@ -19,7 +19,7 @@ Globalization is the process of designing and developing a component that can wo
 </SfSparkline>
 ```
 
-> Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
+> Refer [here](https://blazor.syncfusion.com/documentation/common/localization/#enable-localization-in-blazor-server-application) to configure localization for the Blazor server application, and [here](https://blazor.syncfusion.com/documentation/common/localization/#enable-localization-in-blazor-webassembly-application) for the Blazor web assembly application.
 
 On successful configuration, the Sparkline will be rendered as following.
 
