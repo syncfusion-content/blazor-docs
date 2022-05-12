@@ -1085,7 +1085,7 @@ In the following code example, the Employee Name is a foreign key column. When e
 }
 ```
 
-## Enum column editing
+## Edit enum column
 
 You can edit the enum type data in the grid column using the Edit Template feature of the Grid.
 
