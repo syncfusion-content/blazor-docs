@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Enable or Disable the Blazor Grid | Syncfusion
-description: Learn here all about how to make enable or disable the Syncfusion Blazor DataGrid component and more.
+description: Learn here all about how to enable or disable the Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 You can enable or disable the Grid component by adding the attributes for the Grid and applying the style accordingly.
 
-In the following sample, the `SfRadioButton` is rendered. Using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html#Syncfusion_Blazor_Buttons_SfRadioButton_1_ValueChange) event of the `SfRadioButton`, you can enable or disable the Grid component.
+In the following sample, the `SfRadioButton` is rendered: Using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html#Syncfusion_Blazor_Buttons_SfRadioButton_1_ValueChange) event of the `SfRadioButton`, you can enable or disable the Grid component.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -76,3 +76,5 @@ In the following sample, the `SfRadioButton` is rendered. Using the [ValueChange
 }
 
 ```
+
+![Enable or Disable the Blazor DataGrid](../images/enable-or-disable-the-blazor-datagrid.gif)
