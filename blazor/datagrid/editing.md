@@ -378,7 +378,7 @@ The following sample code demonstrates the different **RequestType** parameters 
 
 ## Perform CRUD operation for complex object using EditTemplate
 
-Before performing CRUD operations with complex Objects, we recommend you to go through the [Complex DataBinding](https://blazor.syncfusion.com/documentation/datagrid/columns/#complex-data-binding) documentation.
+Before performing CRUD operations with complex Objects, it is recommended to go through the [Complex DataBinding](https://blazor.syncfusion.com/documentation/datagrid/columns/#complex-data-binding) documentation.
 
 To customize the default Grid EditForm TextBox component, we will use [EditTemplate](https://blazor.syncfusion.com/documentation/datagrid/editing/#cell-edit-template) to customize the Grid EditForm.
 
@@ -1083,4 +1083,67 @@ In the following code example, the Employee Name is a foreign key column. When e
         public string FirstName { get; set; }
     }
 }
+```
+
+## Edit enum column
+
+You can edit the enum type data in the grid column using the Edit Template feature of the Grid.
+
+In the following sample, the `SfDropDownList` component is rendered in the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) for the Employee Feedback column. The enumerated list data can be bound to the Employee Feedback column using the two-way binding (**@bind-Value**).
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.DropDowns
+
+<SfGrid DataSource="@Details" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" >
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal">
+    </GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="@nameof(EmployeeDetails.Id)" HeaderText="Employee ID" IsPrimaryKey="true" TextAlign="TextAlign.Center" Width="90"></GridColumn>
+        <GridColumn Field="@nameof(EmployeeDetails.CustomerID)" HeaderText="Employee Name" TextAlign="TextAlign.Center" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(EmployeeDetails.FeedbackDetails)" HeaderText="Employee Feedback" Type="ColumnType.Number" Width="120">
+            <EditTemplate>
+                @{
+                    var Order = (context as EmployeeDetails);
+                    <SfDropDownList @ref="DropDownList" ID="Edge" DataSource="@DropDownEnumValue" @bind-Value="@((context as EmployeeDetails).FeedbackDetails)" TValue="Feedback" TItem="string" Placeholder="Feedback Detail" FloatLabelType="FloatLabelType.Always">
+                    </SfDropDownList>
+                }
+            </EditTemplate>
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    SfDropDownList<Feedback, string> DropDownList;
+    public List<string> DropDownEnumValue = new List<string>();
+    public enum Feedback
+    {
+        Positive = 0,
+        Negative = 1
+    }
+
+    public class EmployeeDetails
+    {
+
+        public int Id { get; set; }
+        public string CustomerID { get; set; }
+        public Feedback FeedbackDetails { get; set; }
+
+    }
+    protected override void OnInitialized()
+    {
+        foreach (string item in Enum.GetNames(typeof(Feedback)))
+        {
+            DropDownEnumValue.Add(item);
+        }
+    }
+    public List<EmployeeDetails> Details = Enumerable.Range(1, 8).Select(x => new EmployeeDetails()
+    {
+        Id = x,
+        CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID", "PETER", "BLOP", "CHRISTN" })[new Random().Next(8)],
+        FeedbackDetails = Feedback.Positive,
+    }).ToList();
+}
+
 ```
