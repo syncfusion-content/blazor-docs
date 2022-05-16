@@ -273,3 +273,27 @@ Both the width and height properties allow setting pixels/numbers/percentage. Th
 ```
 
 ![Changing Blazor Toast Size](./images/blazor-toast-size.png)
+
+## Show or hide toast using service
+
+To render the `SfToast` as an service in blazor. First create `ToastService` in program.cs file then call `ToastServices.Open` toast services will be available.
+
+In this Example by clicking showtoast button the toast service will be available.
+
+```cshtml
+@using BlazorSignalRApp.Components  
+@inject ToastService ToastServices  
+  
+<button class="e-btn" @onclick="@ShowToast1"> Show Toast</button>  
+  
+@code {  
+    private void ShowToast1()  
+    {  
+       this.ToastServices.Open(new ToastOptions()  
+        {  
+            Title = "Toast Title",  
+            Content = "Toast content", // Dynamic Content  
+        });  
+    }  
+}  
+``` 
