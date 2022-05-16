@@ -77,3 +77,56 @@ Add the custom CSS class to the specified column by using the [CustomAttributes]
 
 
 ![Customizing Column Style in Blazor DataGrid](../images/blazor-datagrid-column-style-customization.PNG)
+
+## Customize column header style
+
+You can customize the column header using the **e-headercell** CSS class.
+
+In the following sample, you can override the default style for column headers using the **e-headercell** CSS class.
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true"  Width="900" @ref="Grid">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="80"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="90" ></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date"  Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2"  Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+<style>
+    .e-headercell{
+        font-family: "Bell MT";
+        color: red;
+        font-size: 5px;
+    }
+</style>
+
+@code{
+    SfGrid<Order> Grid;
+    public List<Order> Orders { get; set; }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 10).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+
+```
+
+![Customizing Header Style in Blazor DataGrid](../images/blazor-datagrid-header-style-customization.PNG)
