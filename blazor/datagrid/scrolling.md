@@ -462,9 +462,11 @@ The [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.
 
 ## Customize grid scroll bar
 
-The Grid component uses the native browser scroll bar to scroll through the content when the content is larger than the Grid. If you want to customize the appearance of the scroll bar, you need to refer to [this](https://css-tricks.com/almanac/properties/s/scrollbar/).
+The Grid component uses the native browser scroll bar to scroll through the content when the content is larger than the Grid. Refer to [this](https://css-tricks.com/almanac/properties/s/scrollbar/) to customize the appearance of the scroll bar.
 
-By following the above link, we have customized the appearance of the scroll bar in the following sample.
+By referring to the above link, we have customized the appearance of the scroll bar in the following sample.
+
+> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-customize-default-scrollbar).
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -518,4 +520,4 @@ By following the above link, we have customized the appearance of the scroll bar
 
 ```
 
-![Customizing Scrollbar in Blazor DataGrid](./images/blazor-datagrid-scrollbar-customization.png)
+![Customizing the Scroll bar in the Blazor DataGrid](./images/blazor-datagrid-scrollbar-customization.png)
