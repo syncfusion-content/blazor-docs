@@ -459,3 +459,63 @@ The [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.
 > If frozen columns are not specified, the frozen column separator will be displayed at the left and right ends. You can dynamically change the frozen columns by dragging the column separator.
 
 ![Add or Remove Frozen Blazor DataGrid Columns by Dragging the Column Separator](./images/blazor-datagrid-drag-and-drop-the-column-separator.gif)
+
+## Customize grid scroll bar
+
+The Grid component uses the native browser scroll bar to scroll through the content when the content is larger than the Grid. If you want to customize the appearance of the scroll bar, you need to refer to [this](https://css-tricks.com/almanac/properties/s/scrollbar/).
+
+By following the above link, we have customized the appearance of the scroll bar in the following sample.
+
+```csharp
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" Height="315" Width="400">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+            ShipCountry = (new string[] { "USA", "UK", "JAPAN" })[new Random().Next(3)]
+        }).ToList();
+    }
+
+    public class Order {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCountry { get; set; }
+    }
+}
+
+<style>
+    ::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 10px
+    }
+    ::-webkit-scrollbar {
+        background-color: white;
+    }
+    ::-webkit-scrollbar-button {
+        background-color: #bbbbbb;
+    }
+</style>
+
+```
+
+![Customizing Scrollbar in Blazor DataGrid](./images/blazor-datagrid-scrollbar-customization.png)
