@@ -11,7 +11,7 @@ documentation: ug
 
 ## Inline template
 
-> Before adding an Inline template to the DataGrid, we strongly recommend you to go through the [Template](./templates/#templates) section topic to configure the template.
+> Before adding an Inline template to the DataGrid, it is recommended to go through the [Template](./templates/#templates) section topic to configure the template.
 
 The Inline template editing provides an option to customize the default behavior of Inline editing. Using the Inline template, you can render your editors by defining the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component's [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property as **Normal** and wrapping the HTML elements inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
 
@@ -132,7 +132,7 @@ The following sample code demonstrates DataGrid enabled with Inline template edi
 
 ## Dialog template
 
-> Before adding dialog template to the datagrid, we strongly recommend you to go through the [Template](./templates/#templates) section topic to configure the template.
+> Before adding dialog template to the datagrid, it is recommended to go through the [Template](./templates/#templates) section topic to configure the template.
 
 To know about customizing the  **Dialog Template** in Blazor DataGrid Component, you can check this video.
 
@@ -596,3 +596,173 @@ In the following sample, **SfNumericTextBox** is rendered in the dialog template
 ```
 
 ![Complex Data Binding with Dialog Template in Blazor DataGrid](./images/blazor-datagrid-complex-data-binding-with-dialog-template.gif)
+
+### Use FileUploader in Grid dialog edit template
+
+You can upload an image while adding or editing the column and show that image in the grid column using the Column Template and Dialog Template features of the grid. The Column Template feature is used to display the image in a grid column, and the Dialog Template feature is used to render the `SfUploader` component for uploading the image while performing dialog editing.
+
+In the following sample, the add and edit operations of dialog editing are performed using the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) and [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) events of the grid. The image file selecting and uploading actions are performed using the [FileSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_FileSelected) and [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) events of the `SfUploader`.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Inputs
+@using System.IO 
+
+<SfGrid AllowPaging="true" @ref="MyGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEvents OnActionBegin="BeginHandler" OnActionComplete="ActionComplete" TValue="Order"></GridEvents>
+    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="EditMode.Dialog">
+           <Template>
+                @{
+                    var Order = (context as Order);
+                }
+                <div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span>Employee Name</span>
+                                </td>
+                                <td>
+                                    <b style="margin-left: -50px;">@Order.CustomerID</b><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>Employee Image</span>
+                                </td>
+                                <td>
+                                    <div class="image"><img class="upload-image" style="margin-top: 10px;margin-left: -50px;" src="@Order.Imagesrc"/></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <div class="image" style="margin-top: 10px; width: 300px">
+                                    <SfUploader ID="uploadFiles" AllowedExtensions=".jpg,.png,.jpeg">
+                                    <UploaderEvents  ValueChange="OnChange" FileSelected="Selected"></UploaderEvents>
+                                    <UploaderTemplates>
+                                        <Template Context="HttpContext">
+                                        @{ 
+                                            <table>
+                                            <tr>
+                                                <td>
+                                                    <span>Updated Employee Image</span>
+                                                </td>
+                                                <td>
+                                                    <img class="upload-image" style="margin-left:10px;" src="@(files.Count >0 ? files.Where(item=>item.Name == HttpContext.Name)?.FirstOrDefault()?.Path : string.Empty)">    
+                                                </td>
+                                            </tr>
+                                            </table>
+                                        }
+                                        </Template>
+                                    </UploaderTemplates>
+                                    </SfUploader>
+                                </div>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </Template>
+    </GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Employee ID" IsPrimaryKey="true" TextAlign="@TextAlign.Center" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Employee Name"  Width="140"></GridColumn>
+        <GridColumn Field="Imagesrc" HeaderText="Employee Image" Width="200">
+        <Template>
+                @{
+                    var imageUrl = (context as Order).Imagesrc;
+                    <div class="image">
+                        <img src="@imageUrl" />          
+                    </div>
+                }
+            </Template>
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+<style>
+    .image img {
+        height: 55px;
+        width: 55px;
+        border-radius: 50px;
+        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0, 0, 0, 0.2);
+    }
+</style>
+
+@code{
+
+    public List<fileInfo> files = new List<fileInfo>();
+    public SfGrid<Order> MyGrid { get; set; }
+    public string UploadedFile { get; set; }
+    public List<Order> Orders { get; set; }
+
+    public void ActionComplete(ActionEventArgs<Order> args)
+    {
+        if (args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Add) || args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.BeginEdit))
+        {
+            MyGrid.PreventRender(false);
+        }
+    }
+
+    public void OnChange(UploadChangeEventArgs args)
+    {
+        files = new List<fileInfo>();
+        foreach (var file in args.Files)
+        {
+            var path = Path.GetFullPath("wwwroot\\scripts\\Images\\Employees\\") + file.FileInfo.Name;
+            FileStream filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
+            file.Stream.WriteTo(filestream);
+            filestream.Close();
+            file.Stream.Close();
+            files.Add(new fileInfo() { Path = "scripts/Images/Employees/" + file.FileInfo.Name , Name = file.FileInfo.Name, Size = file.FileInfo.Size });         
+        }
+    }
+  
+    public void BeginHandler(ActionEventArgs<Order> Args)
+    {
+        if (Args.RequestType == Syncfusion.Blazor.Grids.Action.Save && Args.Action == "Add")
+        {
+            Args.Data.Imagesrc = "scripts/Images/Employees/"+UploadedFile;
+        } else if (Args.RequestType == Syncfusion.Blazor.Grids.Action.Save && Args.Action == "Edit")
+        {
+            Args.Data.Imagesrc = "scripts/Images/Employees/" + UploadedFile;
+        }
+
+    }
+
+    public void Selected(SelectedEventArgs Args)
+    {
+        UploadedFile = Args.FilesData[0].Name;
+       
+    }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 9).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            EmployeeID = x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Imagesrc = "scripts/Images/Employees/" + x + ".png",
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public int EmployeeID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public string Imagesrc { get; set; }
+        public double? Freight { get; set; }
+    }
+
+    public class fileInfo
+    {
+        public string Path { get; set; }
+        public string Name { get; set; }
+        public double Size { get; set; }
+    }
+}
+```
+
+> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-crud-dialog-fileuploader)
