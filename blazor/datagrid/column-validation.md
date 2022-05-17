@@ -403,9 +403,11 @@ Now the HandleValidation method of the MyCustomValidator component would be chan
 
 ## Display validation message in dialog template
 
-Using form validation, display a validation message for a column that is not defined in the grid.
+Use the form validation to display a validation message for a column that is not defined in the grid.
 
-Using the **Validator** property, we can display a validation message for one of the fields in the dialog template that is not defined in the Grid column. The validation message for **ShipAddress** is displayed in the dialog template in the following example. In the grid column, the **ShipAddress** field is not defined.
+Use the **Validator** property to display a validation message for one of the fields in the dialog template that is not defined in the Grid column. The validation message for the **ShipAddress** is displayed in the dialog template in the following example. In the grid column, the **ShipAddress** field is not defined.
+
+> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-display-validation-message-in-dialog-template).
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -512,4 +514,4 @@ Using the **Validator** property, we can display a validation message for one of
 
 ```
 
-![Blazor DataGrid with Disply Validation in Dialog Template](./images/blazor-datagrid-display-validation-in-dialog-template.png)
+![Display Validation in Blazor DataGrid Dialog Template](./images/blazor-datagrid-display-validation-in-dialog-template.png)
