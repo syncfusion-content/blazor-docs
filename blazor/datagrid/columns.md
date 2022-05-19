@@ -91,6 +91,11 @@ The following image represents DataGrid with dynamically build columns,
 
 You can achieve complex data binding in the DataGrid by using the dot(.) operator in the column.field. In the following examples, **Name.FirstName** and **Name.LastName** are complex data.
 
+> You can also use the **nameof** for complex columns instead of assigning static text for `Field` property.
+> ```cshtml
+> <GridColumn Field="@(nameof(EmployeeData. EmployeeName) + "." + nameof(EmployeeName. FirstName))" HeaderText="First Name" Width="150"></GridColumn>
+> ```
+
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
