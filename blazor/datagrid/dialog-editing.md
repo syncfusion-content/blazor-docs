@@ -140,7 +140,7 @@ In the below example we have changed the dialog's header text and footer button 
 
 ## Implement calculated column inside grid dialog editing
 
-You can perform calculations based on the field values available in the grid's dialog editform and display the result in another field. 
+You can perform calculations based on the field values available in the grid's dialog edit form and display the results in another field.
 
 In the following sample, the `SfNumericTextBox` component is rendered inside the dialog edit form. We have updated the **Total** column value based on the **Price** and **Quantity** columns using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.NumericTextBoxEvents-1.html#Syncfusion_Blazor_Inputs_NumericTextBoxEvents_1_ValueChange) event of the `SfNumericTextBox` and the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid.
 
