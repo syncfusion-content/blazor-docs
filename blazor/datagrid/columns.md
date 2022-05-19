@@ -388,23 +388,18 @@ In the following code sample, we can prevent default filter query generation usi
 ```cshtml
 @using System.ComponentModel.DataAnnotations;
 @using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 @using Newtonsoft.Json
-@implements IDisposable
-@inject IJSRuntime JSRuntime
 
-<SfButton Content="clearfilter" OnClick="@clearFilter"></SfButton>
-
-<SfGrid ID="Grid" @ref="Grid" TValue="Book" Toolbar="@ToolbarItems" Height="100%" AllowPaging="true" AllowSorting="true" AllowFiltering="true">
+<SfGrid ID="Grid" @ref="Grid" Query="@currentQuery" TValue="Book" Toolbar="@ToolbarItems" Height="100%" AllowPaging="true" AllowSorting="true" AllowFiltering="true">
     <GridPageSettings PageSize="10" PageSizes="true"></GridPageSettings>
-    <SfDataManager @ref="DataManagerRef" Url="http://localhost:64956/odata/books" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
-    <GridEvents TValue="Book" OnActionFailure="OnActionFailure" OnActionBegin="OnActionBegin"/>
+    <SfDataManager Url="http://localhost:64956/odata/books" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+    <GridEvents TValue="Book" OnActionBegin="OnActionBegin"/>
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="@EditMode.Normal"></GridEditSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Book.Id) IsPrimaryKey="true" Width="150"></GridColumn>
-        <GridForeignColumn TValue="Customer" Field=@nameof(Book.CustomerId) AllowFiltering="true" ForeignKeyValue="Name" ForeignKeyField="Id" HeaderText="Name" Width="100">
+        <GridForeignColumn TValue="Customer" Field=@nameof(Book.CustomerId)  AllowFiltering="true" ForeignKeyValue="Name" ForeignKeyField="Id" HeaderText="Name" Width="100" >
             <SfDataManager Url="http://localhost:64956/odata/customers" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
         </GridForeignColumn>
         <GridColumn Field=@nameof(Book.CreditLimit) Width="200" EditType="EditType.NumericEdit"></GridColumn>
@@ -412,107 +407,21 @@ In the following code sample, we can prevent default filter query generation usi
     </GridColumns>
 </SfGrid>
 
-
-<style>
-    .e-grid .e-gridcontent .e-rowcell.highlight {
-        color: red;
-        font-weight: bolder;
-    }
-</style>
-
 @code{
-    public SfDataManager DataManagerRef { get; set; }
-    SfGrid<Book> GridInstance;
     SfGrid<Book> Grid { get; set; }
     private Query currentQuery = new Query();
-    public static Query OdataQuery = new Query();
     public List<string> ToolbarItems = new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" };
-
-    public void Check()
-    {
-        var check = GridInstance.Query;
-    }
-
-    protected override void OnAfterRender(bool firstRender)
-    {
-        if (firstRender)
-        {
-            DataManagerRef.DataAdaptor = new TestOData(DataManagerRef);
-        }
-        base.OnAfterRender(firstRender);
-    }
-
-    public class TestOData : ODataV4Adaptor
-    {
-        public TestOData(DataManager dm) : base(dm)
-        {
-        }
-        public override Query PreventOdataFilter(Query query)
-        {
-            return OdataQuery;
-        }
-    }
-
-    public void clearFilter()
-    {
-        Grid.ClearFiltering();
-    }
-
-    private void OnActionFailure(Syncfusion.Blazor.Grids.FailureEventArgs args)
-    {
-        JSRuntime.InvokeVoidAsync("console.log", args.Error);
-    }
-
+ 
     private void OnActionBegin(Syncfusion.Blazor.Grids.ActionEventArgs<Book> args)
-    {
-        if(args.RequestType == Syncfusion.Blazor.Grids.Action.FilterSearchBegin)
-        {
-            if(args.SearchString != string.Empty)
-            {
-                args.SearchString = string.Empty;
-                args.CheckboxListData = new List<Book>() { new Book() { Id = Guid.NewGuid(), CustomerId = Guid.NewGuid(), CustomerId1 = Guid.NewGuid(), Active =false, CreditLimit = 20 } };
-            }
-        }
-        if (args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.ClearFiltering))
-        {
-            OdataQuery = new Query();    
-        }
+    {  
         if (args.RequestType == Syncfusion.Blazor.Grids.Action.Filtering)
         {
-            if (String.Equals(args.CurrentFilteringColumn, null, StringComparison.OrdinalIgnoreCase) && String.Equals(args.CurrentFilterObject?.Field, "Name", StringComparison.OrdinalIgnoreCase))
-            {
-                OdataQuery = new Query();
-            }
             if (String.Equals(args.CurrentFilteringColumn, nameof(Book.CustomerId), StringComparison.OrdinalIgnoreCase))
             {
-               args.PreventFilterQuery = true;
-                List<WhereFilter> AndPredicate = new List<WhereFilter>(); 
-                if (args.Columns != null)
-                {
-                    foreach (var col in args.Columns)
-                    {
-                        AndPredicate.Add(new WhereFilter() { Field = "Customer/Name", Operator = col.Operator.ToString().ToLower(), value = col.Value, Condition = col.Predicate });
-                    }
-                    if (AndPredicate[0].Condition == "and")
-                    {
-                        OdataQuery = new Query().Where(new WhereFilter() { Condition = "and", IsComplex = true, predicates = AndPredicate });
-                    }
-                    else
-                    {
-                        OdataQuery = new Query().Where(new WhereFilter() { Condition = "or", IsComplex = true, predicates = AndPredicate });
-                    }
-                }
-                else if(args.Columns == null)
-                {
-                    OdataQuery = new Query().Where("Customer/Name", args.CurrentFilterObject.Operator.ToString().ToLower(), args.CurrentFilterObject.Value, true, true);
-                }
-            }            
+                args.PreventFilterQuery = true;
+                currentQuery = new Query().Where("Customer/Name", args.CurrentFilterObject.Operator.ToString().ToLower(), args.CurrentFilterObject.Value, true, true);
+            }
         }
-    }
-
-    void IDisposable.Dispose()
-    {        
-        OdataQuery = null;
     }
 
     public class Book
@@ -531,7 +440,7 @@ In the following code sample, we can prevent default filter query generation usi
     {
         [Key]
         public Guid Id { get; set; }
-        public string Name { get; set; }
+        public string Name { get; set; }      
         [JsonIgnore]
         public List<Book> CustomerBooks { get; set; }
     }
