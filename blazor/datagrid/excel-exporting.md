@@ -577,6 +577,68 @@ You can assign the file name for the exported document by defining **fileName** 
 }
 ```
 
+### Add additional worksheets to excel file while exporting
+
+Additional worksheets can be added to the excel file while exporting using the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html).
+
+In the following sample, you can add the additional worksheets to excel file by creating a workbook using `ExcelExportProperties`. Additional sheets will be added along with the Grid data.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.ExcelExport
+
+@{
+    var Tool = (new List<string>() { "ExcelExport"});
+}
+
+<SfGrid @ref="DefaultGrid" DataSource="@Orders" Toolbar=@Tool AllowExcelExport="true">
+   <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    private SfGrid<Order> DefaultGrid;
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+    public async Task ToolbarClickHandler()
+    {
+        ExcelExportProperties ExportProperties = new ExcelExportProperties();
+        // Add a new workbook to the excel file that contains only 1 worksheet.
+        ExportProperties.Workbook = new Workbook();
+        // Add additional worksheets.
+        ExportProperties.Workbook.Worksheets.Add();
+        ExportProperties.Workbook.Worksheets.Add();
+        // Define the Gridsheet index where Grid data must be exported.
+        ExportProperties.GridSheetIndex = 0;
+        // Export the document. 
+        await this.DefaultGrid.ExcelExport(ExportProperties);
+    }
+}
+
+```
+
 ## Exporting grouped records
 
 The excel export provides outline option for grouped records which hides the detailed data for better viewing.
@@ -1075,3 +1137,7 @@ The following sample code demonstrates modifying the export options for hierarch
     }
 }
 ``` -->
+
+## See also
+* [How to import data from Excel sheet and bind to Blazor Grid?](https://www.syncfusion.com/kb/13131/how-to-import-data-from-excel-sheet-and-bind-to-blazor-grid)
+
