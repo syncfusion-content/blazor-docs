@@ -34,7 +34,7 @@ Right-click on the **Tables** folder of the created database and click **Add New
 
 Use the following query to add a new table named **Orders**.
 
-```sql
+{% highlight sql %}
 
 Create Table Orders(
  OrderID BigInt Identity(1,1) Primary Key Not Null,
@@ -43,7 +43,7 @@ Create Table Orders(
  OrderDate datetime null
 )
 
-```
+{% endhighlight %}
 
 Now, the Orders table design will look like below. Click on the **Update** button.
 
@@ -69,11 +69,12 @@ Run the following commands in the **Package Manager Console**.
 
 Once the above packages are installed, you can scaffold DbContext and Model classes. Run the following command in the **Package Manager Console**.
 
-```
+{% highlight %}
+
 
 Scaffold-DbContext “Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
 
-```
+{% endhighlight %}
 
 The above scaffolding command contains the following details for creating DbContext and model classes for the existing database and its tables.
 * **Connection string**: Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
@@ -138,7 +139,7 @@ To create OData controller, right-click **Controller** folder in ODataServicePro
 
 Now, replace the controller with the following code which contains code to handle CRUD operations in the Orders table.
 
-{% tabs %}
+{% highlight c# tabtitle="OrdersController.cs" %}
 
 using Microsoft.AspNet.OData;
 using System.Threading.Tasks;
@@ -189,11 +190,11 @@ namespace ODataServiceProject.Controllers
     }
 }
 
-{% endtabs %}
+{% endhighlight %}
 
 Add the following line in the **launchSettings.json** file.
 
-```json
+{% highlight json %}
 
 {
   "iisSettings": {
@@ -225,7 +226,7 @@ Add the following line in the **launchSettings.json** file.
   }
 }
 
-```
+{% endhighlight %}
 
 Open **Startup.cs** file in .NET 5 and .NET 3.X applications, **Program.cs** file in .NET 6 application and configure by referring to the following codes.
 
@@ -344,14 +345,14 @@ Now, in the **Browse** tab, search and install the **Syncfusion.Blazor.Grid** Nu
 
 Open **_Import.razor** file and add the following namespaces which are required to use Syncfusion Blazor components in this application.
 
-{% tabs %}
+{% highlight c# tabtitle="_Import.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 @using ODataServiceProject.Models
 
-{% endtabs %}
+{% endhighlight %}
 
 Refer to [Register Services](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio#register-syncfusion-blazor-service) and add the Syncfusion service in the application.
 
@@ -365,21 +366,21 @@ Themes provide life to components. Syncfusion Blazor has different themes. They 
 
 In this demo application, the **Bootstrap4** theme will be used. To add the theme, open **Pages/_Host.cshtml** file and add the following CSS reference code.
 
-{% tabs %}
+{% highlight html %}
 
 <link href="_content/Syncfusion.Blazor.Themes/fabric.css" rel="stylesheet" />
 
-{% endtabs %}
+{% endhighlight %}
 
 ## Add Syncfusion Blazor DataGrid component to an application
 
 In previous steps, we have successfully configured the Syncfusion Blazor package in the application. Now, we can add the grid component to the **Index.razor** page.
 
-{% tabs %}
+{% highlight c# %}
 
 <SfGrid TValue="Orders"></SfGrid>
 
-{% endtabs %}
+{% endhighlight %}
 
 ## Binding data to Blazor DataGrid component using ODataV4Adaptor
 
@@ -387,19 +388,19 @@ To consume data from the OData Controller, you need to add the **SfDataManager**
 
 [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor)
 
-{% tabs %}
+{% highlight c# %}
 
 <SfGrid TValue="Orders">
     <SfDataManager Url="https://localhost:44392/odata/orders" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
 </SfGrid>
 
-{% endtabs %}
+{% endhighlight %}
 
 > In the above code example, we have used our localhost address from our application. Instead of localhost, you can give the exact URL of your OData service.
 
 Grid columns can be defined by using the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. We are going to create columns using the following code.
 
-{% tabs %}
+{% highlight c# %}
 
 <SfGrid TValue="Orders">
     <SfDataManager Url="https://localhost:44392/odata/orders" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
@@ -411,11 +412,11 @@ Grid columns can be defined by using the [GridColumn](https://help.syncfusion.co
     </GridColumns>
 </SfGrid>
 
-{% endtabs %}
+{% endhighlight %}
 
 When you run the application, the **Get()** method will be called in your OData controller.
 
-{% tabs %}
+{% highlight c# %}
 
 [Route("api/[controller]")]
 public class OrdersController : ODataController
@@ -434,7 +435,7 @@ public class OrdersController : ODataController
     ...
 }
 
-{% endtabs %}
+{% endhighlight %}
 
 ## Handling CRUD operations with our Syncfusion Blazor DataGrid component
 
@@ -443,7 +444,7 @@ You can enable editing in the grid component using the [GridEditSettings](https:
 Here, we are using **Inline** edit mode and used Toolbar property to show toolbar items for editing.
 We have added the DataGrid Editing and Toolbar code with previous Grid model.
 
-{% tabs %}
+{% highlight c# %}
 
 <SfGrid TValue="Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
     <SfDataManager Url="https://localhost:44392/odata/orders" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
@@ -456,7 +457,7 @@ We have added the DataGrid Editing and Toolbar code with previous Grid model.
     </GridColumns>
 </SfGrid>
 
-{% endtabs %}
+{% endhighlight %}
 
 > Normal editing is the default edit mode for the DataGrid component. Set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property of Column as **true** for a particular column, whose value is a unique value for editing purposes.
 
@@ -468,7 +469,7 @@ To insert a new row, click the **Add** toolbar button. The new record edit form 
 
 Clicking the **Update** toolbar button will insert the record in the Orders table by calling the below **POST** method of the OData controller.
 
-{% tabs %}
+{% highlight c# %}
 
 [EnableQuery]
 public async Task<IActionResult> Post([FromBody] Orders book)
@@ -478,7 +479,7 @@ public async Task<IActionResult> Post([FromBody] Orders book)
     return Created(book);
 }
 
-{% endtabs %}
+{% endhighlight %}
 
 ![Insert Operation in Blazor](../images/odata-add-two.png)
 
@@ -490,7 +491,7 @@ To edit a row, select any row and click the **Edit** toolbar button. The edit fo
 
 Clicking the **Update** toolbar button will update the record in the Orders table by calling the below **PATCH** method of the OData controller.
 
-{% tabs %}
+{% highlight c# %}
 
 [EnableQuery]
 public async Task<IActionResult> Patch([FromODataUri] long key, [FromBody] Delta<Orders> book)
@@ -501,7 +502,7 @@ public async Task<IActionResult> Patch([FromODataUri] long key, [FromBody] Delta
     return Updated(entity);
 }
 
-{% endtabs %}
+{% endhighlight %}
 
 The resultant grid will look like below.
 
@@ -511,7 +512,7 @@ The resultant grid will look like below.
 
 To delete a row, select any row and click the **Delete** toolbar button. Deleting operation will send a **DELETE** request to the OData controller with the selected record's primary key value to remove the corresponding record from the Orders table.
 
-{% tabs %}
+{% highlight c# %}
 
 [EnableQuery]
 public long Delete([FromODataUri] long key)
@@ -522,6 +523,6 @@ public long Delete([FromODataUri] long key)
     return key;
 }
 
-{% endtabs %}
+{% endhighlight %}
 
 > Please find the sample from this [Github](https://github.com/SyncfusionExamples/binding-odata-services-and-perform-crud) location.

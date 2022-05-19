@@ -33,7 +33,7 @@ Right-click on the **Tables** folder of the created database and click **Add New
 
 Use the following query to add a new table named **Orders**.
 
-```sql
+{% highlight sql %}
 
 Create Table Orders(
  OrderID BigInt Identity(1,1) Primary Key Not Null,
@@ -42,7 +42,7 @@ Create Table Orders(
  OrderDate datetime null
 )
 
-```
+{% endhighlight %}
 
 Now, the Orders table design will look like below. Click on the **Update** button.
 
@@ -69,11 +69,11 @@ Run the following commands in the **Package Manager Console**.
 
 Once the above packages are installed, you can scaffold DbContext and Model classes. Run the following command in the **Package Manager Console**.
 
-```
+{% highlight %}
 
 Scaffold-DbContext “Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data
 
-```
+{% endhighlight %}
 
 The above scaffolding command contains the following details for creating DbContext and model classes for the existing database and its tables.
 * **Connection string**: Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
@@ -92,9 +92,43 @@ It is not recommended to have a connection string with sensitive information in 
 
 ![Add connection string in appsettings](../images/odata-appsettings.png)
 
-Now, the DbContext must be configured using connection string and registered as scoped service using the **AddDbContext** method in **Startup.cs**.
+Now, the DbContext must be configured using connection string and registered as scoped service using the AddDbContext method in **Startup.cs**.
 
-![Startup file in Blazor](../images/webapi-startup.png)
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
+
+builder.Services.AddDbContext<OrdersDetailsContext>(option =>
+                option.UseSqlServer(builder.Configuration.GetConnectionString("OrdersDetailsDatabase")));
+
+{% endhighlight %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
+
+namespace ODataServiceProject
+{
+    public class Startup
+    {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        public IConfiguration Configuration { get; }
+        // This method gets called by the runtime. Use this method to add services to the container.
+        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+        public void ConfigureServices(IServiceCollection services)
+        {
+            
+            services.AddDbContext<OrdersDetailsContext>(option => 
+                option.UseSqlServer(Configuration.GetConnectionString("OrdersDetailsDatabase")));
+            ...
+        }
+        ....
+        ....
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Creating API Controller
 
@@ -104,7 +138,7 @@ To create a Web API controller, right-click the **Controller** folder in the Ser
 
 Now, replace the Web API controller with the following code which contains code to handle CRUD operations in the Orders table.
 
-```c#
+{% highlight c# tabtitle="OrdersController.cs" %}
 
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -158,11 +192,25 @@ namespace WebAPICRUDServerApp
     }
 }
 
-```
+{% endhighlight %}
 
-Open **Startup.cs** file and add **MapDefaultControllerRoute** in **Configure** method as follows.
+For .NET 5 and .NET 3.X applications open **Startup.cs** file and add **MapDefaultControllerRoute** in **Configure** method as follows.
 
-```c#
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
+
+......
+
+app.UseRouting();
+
+app.MapDefaultControllerRoute();
+app.MapBlazorHub();
+app.MapFallbackToPage("/_Host");
+
+app.Run();
+
+{% endhighlight %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
 
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
@@ -175,7 +223,8 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     });
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Add Syncfusion Blazor DataGrid package
 
@@ -191,18 +240,29 @@ Now, in the **Browse** tab, search and install the Syncfusion.Blazor.Grid NuGet 
 
 Open **_Import.razor** file and add the following namespaces which are required to use Syncfusion Blazor components in this application.
 
-```cshtml
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
 @using WebAPICRUDServerApp.Data
 
-```
+{% endhighlight %}
 
 Open **Startup.cs** file and register the Syncfusion service in the **ConfigureServices** method as follows.
 
-```c#
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
+
+builder.Services.AddDbContext<OrdersDetailsContext>(option =>
+                option.UseSqlServer(builder.Configuration.GetConnectionString("OrdersDetailsDatabase")));
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddSyncfusionBlazor();
+
+{% endhighlight %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
 
 public void ConfigureServices(IServiceCollection services)
 {
@@ -213,7 +273,8 @@ public void ConfigureServices(IServiceCollection services)
     services.AddSyncfusionBlazor();
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 Themes provide life to components. Syncfusion Blazor has different themes. They are:
 
@@ -225,21 +286,21 @@ Themes provide life to components. Syncfusion Blazor has different themes. They 
 
 In this demo application, the **Bootstrap4** theme will be used. To add the theme, open **Pages/_Host.cshtml** file and add the following CSS reference code.
 
-```html
+{% highlight html %}
 
 <link href="_content/Syncfusion.Blazor.Themes/fabric.css" rel="stylesheet" />
 
-```
+{% endhighlight %}
 
 ## Add Syncfusion Blazor DataGrid component to an application
 
 In previous steps, we have successfully configured the Syncfusion Blazor package in the application. Now, we can add the grid component to the **Index.razor** page.
 
-```cshtml
+{% highlight c# %}
 
 <SfGrid TValue="Orders"></SfGrid>
 
-```
+{% endhighlight %}
 
 ## Binding data to Blazor DataGrid component using WebApiAdaptor
 
@@ -247,17 +308,17 @@ To consume data from the WebApi Controller, we need to add the **SfDataManager**
 
 [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#web-api-adaptor)
 
-```cshtml
+{% highlight c# %}
 
 <SfGrid TValue="Orders">
     <SfDataManager Url="api/Orders" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
 </SfGrid>
 
-```
+{% endhighlight %}
 
 Grid columns can be defined by using the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. We are going to create columns using the following code.
 
-```cshtml
+{% highlight c# %}
 
 <SfGrid TValue="Orders">
     <SfDataManager Url="api/Orders" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
@@ -269,11 +330,11 @@ Grid columns can be defined by using the [GridColumn](https://help.syncfusion.co
     </GridColumns>
 </SfGrid>
 
-```
+{% endhighlight %}
 
 When you run the application, the `Get()` method will be called in your API controller.
 
-```c#
+{% highlight c# %}
 
 using System.Collections.Generic;
 using System.Linq;
@@ -301,20 +362,20 @@ namespace WebAPICRUDServerApp
     }
 }
 
-```
+{% endhighlight %}
 
 The response object from the Web API should contain the properties, `Items` and `Count`, whose values are a collection of entities and the total count of the entities, respectively.
 
 The sample response object should look like this:
 
-```c#
+{% highlight %}
 
 {
     "Items": [{..}, {..}, {..}, ...],
     "Count": 830
 }
 
-```
+{% endhighlight %}
 
 ## Handling CRUD operations with our Syncfusion Blazor DataGrid component
 
@@ -323,7 +384,7 @@ You can enable editing in the grid component using the [GridEditSettings](https:
 Here, we are using **Inline** edit mode and used Toolbar property to show toolbar items for editing.
 We have added the DataGrid Editing and Toolbar code with previous Grid model.
 
-```cshtml
+{% highlight c# %}
 
 <SfGrid TValue="Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
     <SfDataManager Url="api/Orders" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
@@ -336,7 +397,7 @@ We have added the DataGrid Editing and Toolbar code with previous Grid model.
     </GridColumns>
 </SfGrid>
 
-```
+{% endhighlight %}
 
 > Normal editing is the default edit mode for the DataGrid component. Set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property of Column as **true** for a particular column, whose value is a unique value for editing purposes.
 
@@ -348,7 +409,7 @@ To insert a new row, click the **Add** toolbar button. The new record edit form 
 
 Clicking the **Update** toolbar button will insert the record in the Orders table by calling the following **POST** method of the Web API.
 
-```c#
+{% highlight c# %}
 
 [HttpPost]
 public void Post([FromBody] Orders book)
@@ -357,7 +418,7 @@ public void Post([FromBody] Orders book)
     _context.SaveChanges();
 }
 
-```
+{% endhighlight %}
 
 ![Insert Operation in Blazor](../images/odata-add-two.png)
 
@@ -369,7 +430,7 @@ To edit a row, select any row and click the **Edit** toolbar button. The edit fo
 
 Clicking the **Update** toolbar button will update the record in the Orders table by calling the following **PUT** method of the Web API.
 
-```c#
+{% highlight c# %}
 
 [HttpPut]
 public void Put(long id, [FromBody] Orders book)
@@ -381,7 +442,7 @@ public void Put(long id, [FromBody] Orders book)
     _context.SaveChanges();
 }
 
-```
+{% endhighlight %}
 
 
 ![Update Operation in Blazor](../images/odata-update-two.png)
@@ -390,7 +451,7 @@ public void Put(long id, [FromBody] Orders book)
 
 To delete a row, select any row and click the **Delete** toolbar button. Deleting operation will send a **DELETE** request to the Web API with the selected record's primary key value to remove the corresponding record from the Orders table.
 
-```c#
+{% highlight c# %}
 
 [HttpDelete("{id}")]
 public void Delete(long id)
@@ -400,6 +461,6 @@ public void Delete(long id)
     _context.SaveChanges();
 }
 
-```
+{% endhighlight %}
 
 > Please find the sample from this [Github](https://github.com/SyncfusionExamples/binding-webapi-services-and-perform-crud) location.
