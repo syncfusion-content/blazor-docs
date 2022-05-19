@@ -376,7 +376,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 ## DataBound
 
-[DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when data source is populated in the DataGrid. You can able to customize you code.
+[DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when data source is populated in the DataGrid.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
