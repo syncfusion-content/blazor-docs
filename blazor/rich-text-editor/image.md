@@ -26,7 +26,7 @@ Rich Text Editor allows inserting images from online sources and local computer 
 | MaxHeight | Defines the maximum Height of the image.|
 | ResizeByPercent | Image resizing should be done by percentage calculation.|
 
-## Upload options
+## Upload Images
 
 Through the `browse` option in the Image dialog, select the image from the local machine and insert into the Rich Text Editor content.
 
@@ -145,7 +145,7 @@ After selecting the image from the local machine, the URL for the image will be 
 
 ![Removing Image in Blazor RichTextEditor Content](./images/blazor-richtexteditor-remove-image.png)
 
-## Insert from web
+## Insert Image from web
 
 To insert an image from online source like Google, Ping, and more, enable images tool on the editor’s toolbar. By default, the images tool opens an image dialog that allows to insert an image from online source.
 

@@ -56,10 +56,6 @@ Point the cursor anywhere within the editor where you would like to insert the l
 
 ![Displaying Link Icon in Blazor RichTextEditor](./images/blazor-richtexteditor-link-icon.png)
 
-## Remove Link
-
-To remove a hyperlink from a text or image, select the text or image with the hyperlink and click `Remove Hyperlink` tool from the toolbar. It will keep the text or image.
-
 ## Auto-link
 
 When you type URL and enter key to the Rich Text Editor, the typed URL will be automatically changed into the hyperlink.
@@ -68,7 +64,7 @@ When you type URL and enter key to the Rich Text Editor, the typed URL will be a
 
 When the [EnableAutoUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableAutoUrl) property is enabled, it will accept the given URL (relative or absolute) without validating it for hyperlinks. Otherwise, the given URL will be automatically converted to absolute path URL by prefixing https:// for hyperlinks, and it defaults to false.
 
-## Manipulation
+## Edit and Remove Link
 
 Add the custom tools on the selected link inside the Rich Text Editor through the quick toolbar.
 

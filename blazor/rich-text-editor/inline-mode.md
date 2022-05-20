@@ -9,21 +9,52 @@ documentation: ug
 
 # Inline Mode in Blazor RichTextEditor Component
 
-This is the inline example for the Rich Text Editor. For this, you must set the `RichTextEditorInlineMode` property. Inline editing allows to select any editable element or click the element on the page and edit it in-place. Inline editing is a true WYSIWYG formation and on the contrary to Rich Text Editor HTML/MD editing, the styles that are used for edited content comes directly from the document stylesheet. This means that inline editors ignore the default Rich Text Editor content styles.
+This is the inline example for the Rich Text Editor. For this, you must set the [`RichTextEditorInlineMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorInlineMode.html) property. Inline editing allows to select any editable element or click the element on the page and edit it in-place. Inline editing is a true WYSIWYG formation and on the contrary to Rich Text Editor HTML/MD editing, the styles that are used for edited content comes directly from the document stylesheet. This means that inline editors ignore the default Rich Text Editor content styles.
 
-## Show on select/click
+```cshtml
+@using Syncfusion.Blazor.RichTextEditor
+<SfRichTextEditor>
+    <RichTextEditorInlineMode Enable="true" />
+    <p>
+        The sample is configured with inline mode of editor. Initially, the editor is rendered without a
+        <a href='https://blazor.syncfusion.com/home/' target='_blank'>toolbar</a>. The toolbar becomes visible only when the content is selected.
+    </p>
+</SfRichTextEditor>
 
-Enabling the `ShowOnSelection` option of `RichTextEditorInlineMode` makes the inline Rich Text Editor to appear. You can select the text in the editable area, otherwise the inline Rich Text Editor will be appeared after clicking the editable area.
+```
+![Enabling inline mode in Blazor RichTextEditor](./images/blazor-richtexteditor-enable-inline.png)
+
+
+## Edit on Select
+
+Enabling the [`ShowOnSelection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorInlineMode.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorInlineMode_ShowOnSelection) option of `RichTextEditorInlineMode` makes the inline Rich Text Editor to appear. You can select the text in the editable area, otherwise the inline Rich Text Editor will be appeared after clicking the editable area.
 
 ```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
+    <RichTextEditorToolbarSettings Items="@Tools" />
     <RichTextEditorInlineMode Enable="true" ShowOnSelection="true" />
-    <p>The sample is configured with inline mode of editor. Initially, the editor is rendered without a
-    <a href='https://blazor.syncfusion.com/home/' target='_blank'>toolbar</a>. The toolbar becomes visible only when the content is selected.</p>
+    <p>
+        The sample is configured with inline mode of editor. Initially, the editor is rendered without a
+        <a href='https://blazor.syncfusion.com/home/' target='_blank'>toolbar</a>. The toolbar becomes visible only when the content is selected.
+    </p>
 </SfRichTextEditor>
+@code {
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.FontName },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontSize },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.BackgroundColor },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
+        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
+        new ToolbarItemModel() { Command = ToolbarCommand.NumberFormatList },
+        new ToolbarItemModel() { Command = ToolbarCommand.BulletFormatList },
+    };
+}
 
 ```
 
