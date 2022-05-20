@@ -3,665 +3,670 @@ layout: post
 title: Constraints in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Constraints in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
-
-> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram-component/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
 
 # Constraints in Blazor Diagram Component
 
 Constraints are used to enable or disable certain behaviors of the diagram, nodes, and connectors. Constraints are provided as flagged enumerations, so that multiple behaviors can be enabled or disabled using the Bitwise operators `(&, |, ~, <<, etc.)`.
 
-To know more about Bitwise operators, refer to the [Bitwise Operations](#bitwise-operations).
+To know more about Bitwise operators, refer to the [Bitwise Operations](constraints#bitwise-operations).
 
 ## Diagram constraints
 
-Diagram constraints allow you to enable or disable the following behaviors:
+[DiagramConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html#Syncfusion_Blazor_Diagram_DiagramConstraints) allow you to enable or disable the following behaviors. 
 
-* Page editing
+* PageEditable
 * Bridging
-* Zoom and pan
-* Undo or redo
-* Tooltip
-
-The following list of diagram constraints are used to Enables or Disables certain features of the diagram.
+* Zoom
+* UndoRedo
+* UserInteraction
 
 | Constraints | Description |
 | -------- | -------- |
-|None|Disable all diagram functionalities|
-|Bridging|Enables or Disable Bridging support for connector in diagram|
-|Undo/redo|Enables or Disable the Undo/Redo support for the diagram|
-|Tooltip|Enables or Disable Tooltip support support for the diagram|
-|UserInteraction|Enables or Disable user interaction support for the diagram|
-|ApiUpdate|Enables or Disable update API support for the diagram|
-|PageEditable|Enables or Disable Page Editable support for the diagram|
-|Zoom|Enables or Disable Zoom support for the diagram|
-|PanX|Enables or Disable Paning X coordinate support for the diagram|
-|PanY|Enables or Disable Paning Y coordinate support for the diagram|
-|Pan|Enables or Disable panning both X and Y coordinates support for the diagram|
-|ZoomTextEdit|Enables or Disables zooming the text box while editing the text|
-|LineRouting|Enables or Disable the line routing for the diagram|
-|Virtualization|Enables or Disable Virtualization support the diagram|
-|Default|Enables or Disable all constraints in diagram|
+|None|Disable all diagram functionalities.|
+|Bridging|Enables or disables Bridging support for connector in diagram.|
+|Undo/redo|Enables or disables the Undo/Redo support for the diagram.|
+|UserInteraction|Enables or disables user interaction support for the diagram.|
+|ApiUpdate|Enables or disables update API support for the diagram.|
+|PageEditable|Enables or disables Page Editable support for the diagram.|
+|Zoom|Enables or disables Zoom support for the diagram.|
+|PanX|Enables or disables Panning X coordinate support for the diagram.|
+|PanY|Enables or disables Panning Y coordinate support for the diagram.|
+|Pan|Enables or disables panning both X and Y coordinates support for the diagram.|
+|ZoomTextEdit|Enables or disables zooming the text box while editing the text.|
+|Default|Enables or disables all constraints in diagram.|
 
-The following example shows how to disable page editing using the diagram constraints.
+The following example shows how to disable PageEditable constraint from default diagram constraints.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize the diagram with constraints *@
-<SfDiagram Height="600px" Nodes="@NodeCollection" Constraints="@DiagramConstraints">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Nodes="@nodes" 
+Constraints="@DiagramConstraints" />
 
-@code{
-    //sets the Diagram constraints...
+@code
+{
+    //Sets the Diagram constraints.
     DiagramConstraints DiagramConstraints = DiagramConstraints.Default & ~DiagramConstraints.PageEditable;
-
     //Initialize the Nodes Collection.
-    ObservableCollection<DiagramNode> NodeCollection;
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node = new DiagramNode()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            Id = "node1",
+            ID = "node1",
             Height = 100,
             Width = 100,
             OffsetX = 100,
             OffsetY = 100,
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
 
-The following another code example shows how the virtualization can be enabled for the diagram.
+The following example shows how to add Bridging constraint to the default constraints of diagram.
 
 ```csharp
-//enabled the Virtualization functionality for the diagram
-Diagram.Constraints = DiagramConstraints.Default | DiagramConstraints.Virtualization;
+DiagramConstraints DiagramConstraints = DiagramConstraints.Default | DiagramConstraints.Bridging;
 ```
 
-For more information about diagram constraints, refer to the [DiagramConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConstraints.html).
+The diagram constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](constraints#bitwise-operations) in the diagram.
+
+```csharp
+//Removing multiple constraints from default.
+DiagramConstraints DiagramConstraints = DiagramConstraints.Default & ~(DiagramConstraints.PageEditable|DiagramConstraints.Zoom);
+```
+
+For more information about diagram constraints, refer to the [Diagram constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html).
 
 > By default, the following constraints are enabled in the diagram,
->* UndoRedo
->* UserInteraction
 >* ApiUpdate
->* PageEditable
->* Zoom
+>* PanX
+>* PanY
 >* Pan
-
-The diagram constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](#bitwise-operations) in the diagram.
+>* ZoomTextEdit
+>* Default
+>* None
 
 ## Node constraints
 
-Node constraints allows you to enable or disable the following behaviors of node. They are as follows:
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Constraints) property of the Node allows you to enable or disable the following behaviors. 
 
-* Selection
-* Deletion
+* Select
 * Drag
 * Resize
 * Rotate
-* Connect
-* Shadow
-* Tooltip
-
-The following list of node constraints are used to Enables or Disables certain features of node.
+* Delete
+* InConnect
+* OutConnect
 
 | Constraints | Description |
 | -------- | -------- |
 |None|Disable all node Constraints|
-|Select|Enables or Disables node to be selected|
-|Drag|Enables or Disables node to be Dragged|
-|Rotate|Enables or Disables node to be rotating|
-|Shadow|Enables or disables node to display shadow|
-|PointerEvents|Enables or disables node to provide pointer option|
-|Delete|Enables or Disables node to be deleting|
-|InConnect|Enables or disables node to provide in connect option|
-|OutConnect|Enables or disables node to provide out connect option|
-|Individual|Enables node to provide individual resize option|
-|Expandable|Enables node to provide Expandable option|
-|AllowDrop|Enables node to provide allow to drop option|
-|Inherit|Enables node to inherit the interaction option from the parent object|
-|ResizeNorthEast|Enable or disable to Resizing NorthEast side of the node|
-|ResizeEast|Enable or disable to Resizing East side of the node|
-|ResizeSouthEast|Enable or disable to Resizing SouthEast side of the node|
-|ResizeSouth|Enable or disable to Resizing South side of the node|
-|ResizeSouthWest|Enable or disable to Resizing SouthWest side of the node|
-|ResizeWest|Enable or disable to Resizing West side of the node|
-|ResizeNorthWest|Enable or disable to Resizing NorthWest side of the node|
-|ResizeNorth|Enable or disable to Resizing North side of the node|
-|Resize|Enables or Disables to Resizing of the node|
-|AspectRatio|Enables the Aspect ratio of the node|
-|Tooltip|Enables or disables tool tip for the Nodes|
-|InheritTooltip|Enables or disables inherit tool tip option from the parent object|
-|ReadOnly|Enables the  ReadOnly support for annotation in node|
-|HideThumbs|Enable to hide all resize thumbs for the node|
-|AllowMovingOutsideLane|Enables or disables child in parent for the swimLane node|
-|Default|Enables all default constraints for the node|
+|Select|Enables or disables the node to be selected.|
+|Drag|Enables or disables the node to be dragged.|
+|Rotate|Enables or disables the node to be rotated.|
+|Shadow|Enables or disables the node to display shadow.|
+|PointerEvents|Enables or disables the node to provide pointer option.|
+|Delete|Enables or disables node to be deleted.|
+|InConnect|Enables or disables node to provide in connect option.|
+|OutConnect|Enables or disables node to provide out connect option.|
+|AllowDrop|Enables node to provide allow to drop option.|
+|ResizeNorthEast|Enable or disable to resize NorthEast side of the node.|
+|ResizeEast|Enable or disable to resize East side of the node.|
+|ResizeSouthEast|Enable or disable to resize SouthEast side of the node.|
+|ResizeSouth|Enable or disable to resize South side of the node.|
+|ResizeSouthWest|Enable or disable to resize SouthWest side of the node.|
+|ResizeWest|Enable or disable to resize West side of the node.|
+|ResizeNorthWest|Enable or disable to resize NorthWest side of the node.|
+|ResizeNorth|Enable or disable to resize North side of the node.|
+|AspectRatio|Enables the Aspect ratio of the node.|
+|ReadOnly|Enables the ReadOnly support for annotation in the node.|
+|HideThumbs|Enable to hide all resize thumbs for the node.|
+|Resize|Enables or Disables the expansion or compression of a node.|
+|Inherit|Enables the node to inherit the interaction option from the parent object.|
+|Default|Enables all default constraints for the node.|
 
-The following example shows how to disable rotation using the node constraints.
+The following example shows how to disable rotate constraint from the default node constraints.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize the diagram with NodeCollection *@
-<SfDiagram Height="600px" Nodes="@NodeCollection">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
-    ObservableCollection<DiagramNode> NodeCollection;
+@code
+{
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node = new DiagramNode()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            Id = "node1",
+            ID = "node1",
             Height = 100,
             Width = 100,
             OffsetX = 100,
             OffsetY = 100,
-            //sets the NodeConstraints constraints...
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "White" },
+            //Sets the NodeConstraints constraints.
             Constraints = NodeConstraints.Default & ~NodeConstraints.Rotate
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
 
-The following another code example shows how the tooltip can be enabled for the node.
+![Node Constraints in Blazor Diagram](images/blazor-diagram-node-constraints.png)
+
+The following example shows how to add Shadow constraint to the default constraints of node.
 
 ```csharp
-//enabled the tooltip constraints for the node
-node.Constraints = NodeConstraints.Default | NodeConstraints.Tooltip;
+NodeConstraints NodeConstraints = NodeConstraints.Default | NodeConstraints.Shadow;
 ```
 
-For more information about node constraints, refer to the [NodeConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeConstraints.html).
+The node constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](constraints#bitwise-operations).
+
+```csharp
+ //Removing multiple constraints from default.
+NodeConstraints NodeConstraints = NodeConstraints.Default & ~ (NodeConstraints.Select | NodeConstraints.Drag);
+```
+
+For more information about node constraints, refer to the [NodeConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html).
 
 >**Note** : By default, the following constraints are enabled for the node,
->* Select
->* Drag
->* Resize
->* Rotate
->* Delete
->* InConnect
->* OutConnect
->* Expandable
->* InheritTooltip
-
-> The node constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](#bitwise-operations).
+>* Shadow
+>* PointerEvents
+>* AllowDrop
+>* ResizeNorthEast
+>* ResizeEast
+>* ResizeSouthEast
+>* ResizeSouth
+>* ResizeSouthWest
+>* ResizeWest
+>* ResizeNorthWest
+>* ResizeNorth
+>* AspectRatio
+>* ReadOnly
+>* HideThumbs
+>* Inherit
+>* Default
 
 ## Connector constraints
 
-Connector constraints allow you to enable or disable certain behaviors of connectors.
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Constraints) property of the Connector allows you to enable or disable the following behaviors of connectors. 
 
-* Selection
-* Deletion
+* Select
 * Drag
-* Segment editing
-* Tooltip
-* Bridging
-
-The following list of connector constraints are used to Enables or Disables certain features of connectors.
+* DragSourceEnd
+* DragTargetEnd
+* Delete
+* InheritBridging
+* PointerEvents
 
 | Constraints | Description |
 | -------- | -------- |
-|None|Disable all connector Constraints|
-|Select|Enables or Disables node to be selected|
-|Delete|Enables or Disables node to be deleting|
-|Drag|Enables or Disables node to be Dragged|
-|DragSourceEnd|Enables connectors source end to be selected|
-|DragTargetEnd|Enables connectors target end to be selected|
-|DragSegmentThumb|Enables control point and end point of every segment in a connector for editing|
-|AllowDrop|Enables allow drop support to the connector|
-|Bridging|Enables bridging to the connector|
-|BridgeObstacle|Enables or Disables Bridge Obstacles with overlapping of connectors|
-|InheritBridging|Enables to inherit bridging option from the parent object|
-|PointerEvents|Enables to set the pointer events|
-|Tooltip|Enables or disables tool tip for the connectors|
-|InheritTooltip|Enables or disables to inheriting tool tip option from the parent object|
-|Interaction|Enables or disables Interaction for the connector|
-|ReadOnly|Enables or disables readonly for the connector|
-|LineRouting|Enables or disables routing to the connector|
-|InheritLineRouting|Enables or disables to inheriting routing option from the parent|
-|Default|Enables all constraints for the connector|
+|None|Disable all connector Constraints.|
+|Select|Enables or disables node to be selected.|
+|Delete|Enables or disables node to be deleted.|
+|Drag|Enables or disables node to be dragged.|
+|DragSourceEnd|Enables connectors source end to be selected.|
+|DragTargetEnd|Enables connectors target end to be selected.|
+|DragSegmentThumb|Enables control point and end point of every segment in a connector for editing.|
+|Interaction|Enables or disables Interaction for the connector.|
+|AllowDrop|Enables allow drop support to the connector.|
+|Bridging|Enables bridging to the connector.|
+|InheritBridging|Enables to inherit bridging option from the parent object.|
+|PointerEvents|Enables to set the pointer events.|
+|ConnectToNearByNode|Enables to connect to the nearest node.|
+|ConnectToNearByPort|Enables to connect to the nearest port.|
+|ConnectToNearByElement|Enables to connect to the nearest elements.|
+|ReadOnly|Enables or disables readonly for the connector.|
+|Default|Enables all constraints for the connector.|
 
-The following code shows how to disable selection by using the connector constraints.
+The following code shows how to disable select constraint from the default constraints of connector.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
-@* Initialize the diagram with ConnectorCollection *@
-<SfDiagram Height="600px" Connectors="@ConnectorCollection">
-</SfDiagram>
+@* Initialize the diagram with connectors *@
+<SfDiagramComponent Height="600px" Connectors="@connectors" />
 
-@code{
-    ObservableCollection<DiagramConnector> ConnectorCollection;
+@code
+{
+    DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
     {
-        ConnectorCollection = new ObservableCollection<DiagramConnector>();
-        DiagramConnector connector = new DiagramConnector()
+        connectors = new DiagramObjectCollection<Connector>();
+        Connector connector = new Connector()
         {
-            Id = "connector1",
-            Type = Segments.Straight,
-            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
-            TargetPoint = new ConnectorTargetPoint() { X = 200, Y = 200 },
-            //sets the ConnectorConstraints...
+            ID = "connector1",
+            Type = ConnectorSegmentType.Straight,
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
+            //Sets the ConnectorConstraints.
             Constraints = ConnectorConstraints.Default & ~ConnectorConstraints.Select
         };
-        ConnectorCollection.Add(connector);
+        connectors.Add(connector);
     }
 }
 ```
 
-The following another code example shows how the tooltip can be enabled for the connector.
+The following example shows how to add Bridging constraint to the default constraints of connector.
 
 ```csharp
-//enabled the tooltip constraints for the connector
-connector.Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip;
+ConnectorConstraints ConnectorConstraints = ConnectorConstraints.Default | ConnectorConstraints.Bridging;
 ```
 
-For more information about connector constraints, refer to the [ConnectorConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.ConnectorConstraints.html).
+The connector constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](constraints#bitwise-operations).
+
+```csharp
+//Removing multiple constraints from default.
+ConnectorConstraints ConnectorConstraints = ConnectorConstraints.Default & ~ (ConnectorConstraints.Select | ConnectorConstraints.Drag);
+```
+
+For more information about connector constraints, refer to the [ConnectorConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html).
 
 >By default, the following constraints are enabled for the connector,
->* Select
->* Drag
->* DragSourceEnd
->* DragTargetEnd
->* Delete
->* BridgeObstacle
+>* DragSegmentThumb
+>* Interaction
+>* AllowDrop
+>* Bridging
 >* InheritBridging
->* PointerEvents
->* InheritTooltip
->* InheritLineRouting
-
-**Note** : The connector constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](#bitwise-operations).
+>* ConnectToNearByNode
+>* ConnectToNearByPort
+>* ConnectToNearByElement
+>* ReadOnly
+>* Default
 
 ## Port constraints
 
-You can enable or disable certain behaviors of port. They are as follows:
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Constraints) property of the Port allows you to enable or disable the following behaviors of port. 
 
-* Connect
-* ConnectOnDrag
-
-The following list of port constraints are used to Enables or Disables certain features of ports.
+* InConnect
+* OutConnect
 
 | Constraints | Description |
 | -------- | -------- |
-|None|Disable all port Constraints|
-|Drag|Enables or disables to drag the port|
-|Draw|Enables to create the connection when mouse hover on the port|
-|InConnect|Enables or disables to only connect the target end of connector|
-|OutConnect|Enables or disables to only connect the source end of connector|
-|Default|Enables all constraints for the port|
+|None|Disable all port Constraints.|
+|Draw|Enables to create the connection when mouse hover on the port.|
+|InConnect|Enables or disables to connect only the target end of connector.|
+|OutConnect|Enables or disables to connect only the source end of connector.|
+|Default|Enables all constraints for the port.|
 
 The following code shows how to disable creating connections with a port.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize the diagram with NodeCollection *@
-<SfDiagram Height="600px" Nodes="@NodeCollection">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
-    ObservableCollection<DiagramNode> NodeCollection;
+@code
+{
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
-        //Initialize the NodeCollection.
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node = new DiagramNode()
+        // Initialize the NodeCollection.
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            Id = "node1",
+            ID = "node1",
             Height = 100,
             Width = 100,
             OffsetX = 100,
             OffsetY = 100,
         };
-        node.Ports = new ObservableCollection<DiagramPort>()
+        node.Ports = new DiagramObjectCollection<PointPort>()
         {
-            new DiagramPort()
+            new PointPort()
             {
-                Id="port1",
-                Offset=new NodePortOffset(){X=0,Y=0.5},
+                ID="port1",
+                Offset=new DiagramPoint(){X=0,Y=0.5},
                 Shape=PortShapes.Circle,
                 Visibility=PortVisibility.Visible,
-                //sets the PortConstraints...
+                // Sets the PortConstraints.
                 Constraints=PortConstraints.None
             }
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
 
-The following another code example shows to modify the port constraints to accept target connection alone.
+The following code example shows how to modify the port constraints to accept target connection alone.
 
 ```csharp
 //Enable to create target connection alone.
 port.Constraints = PortConstraints.InConnect;
 ```
 
-For more information about port constraints, refer to the [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortConstraints.html).
+The port constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](constraints#bitwise-operations).
+
+```csharp
+//Enable to create target connection alone.
+port.Constraints = PortConstraints.Default | PortConstraints.Draw;
+```
+
+For more information about port constraints, refer to the [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html).
 
 > By default, the following constraints are enabled for the port,
->* InConnect
->* OutConnect
-
-**Note** : The port constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](#bitwise-operations).
+>* Draw
+>* Default
 
 ## Annotation constraints
 
-You can enable or disable read-only mode for the annotations by using the annotation constraints.
-
-The following list of annotation constraints are used to Enables or Disables certain features of annotations.
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Constraints) property of the Annotations allows you to enable or disable read-only mode for the annotations by using the annotation constraints.
 
 | Constraints | Description |
 | -------- | -------- |
-|ReadOnly|Enables or Disables the ReadOnly Constraints|
-|InheritReadOnly|Enables or Disables to inherit the ReadOnly option from the parent object|
-|Select|Enables or Disable select support for the annotation|
-|Drag|Enables or Disable drag support for the annotation|
-|Resize|Enables or Disable resize support for the annotation|
-|Rotate|Enables or Disable rotate support for the annotation|
-|Interaction|Enables or Disable annotation to inherit the interaction option|
-|None|Disables all constraints for the annotation|
+|ReadOnly|Enables or disables the ReadOnly Constraints,|
+|InheritReadOnly|Enables or disables to inherit the ReadOnly option from the parent object.|
+|None|Disables all constraints for the annotation.|
 
 The following code shows how to enable read-only mode for the annotations.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize the diagram with NodeCollection *@
-<SfDiagram Height="600px" Nodes="@NodeCollection">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
-    ObservableCollection<DiagramNode> NodeCollection;
+@code
+{
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
         //Initialize the NodeCollection.
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node = new DiagramNode()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            Id = "node1",
+            ID = "node1",
             Height = 100,
             Width = 100,
             OffsetX = 100,
             OffsetY = 100,
         };
-        node.Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
         {
-            new DiagramNodeAnnotation()
+            new ShapeAnnotation()
             {
-                Id="annotation1",
+                ID="annotation1",
                 Content="Annotation Text Wrapping",
-                //sets the Constraints for Annotation...
+                // Sets the Constraints for Annotation.
                 Constraints=AnnotationConstraints.ReadOnly,
-                Style=new AnnotationStyle(){Color="#000000", Fill="transparent",
-                FontFamily="TimesNewRoman", FontSize=12, Bold=true, Italic=true},
+                Style= new TextStyle()
+                {
+                    Color="#000000",
+                    Fill="Transparent",
+                    FontFamily="TimesNewRoman",
+                    FontSize=12,
+                    Bold=true,
+                    Italic=true
+                },
             }
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
 
-The following another code example shows how to enable the selection and dragging functionality for the annotation.
-
-```csharp
-//Enable select and drag constraints for the annotation.
-annotation.Constraints = AnnotationConstraints.Select | AnnotationConstraints.Drag;
-```
-
-For more details about annotation constraints, refer to the [AnnotationConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AnnotationConstraints.html).
-
-> The annotation constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](#bitwise-operations).
+For more details about annotation constraints, refer to the [AnnotationConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html).
 
 ## Selector constraints
 
 Selector visually represents the selected elements with certain editable thumbs. The visibility of the thumbs can be controlled with selector constraints. The part of selector is categorized as follows:
 
-* Resizer
-* Rotator
-* User handles
-
-The following list of selector constraints are used to Enables or Disables certain features of selected items.
+* ResizeAll
+* UserHandle
+* Rotate
 
 | Constraints | Description |
 | -------- | -------- |
-|None|Hides all the selector elements|
-|ConnectorSourceThumb|Shows or hides the source thumb of the connector|
-|ConnectorTargetThumb|Shows or hides the target thumb of the connector|
-|ResizeSouthEast|Shows or hides the bottom right resize handle of the selector|
-|ResizeSouthWest|Shows or hides the bottom left resize handle of the selector|
-|ResizeNorthEast|Shows or hides the top right resize handle of the selector|
-|ResizeNorthWest|Shows or hides the top left resize handle of the selector|
-|ResizeEast|Shows or hides the middle right resize handle of the selector|
-|ResizeWest|Shows or hides the middle left resize handle of the selector|
-|ResizeSouth|Shows or hides the bottom center resize handle of the selector|
-|ResizeNorth|Shows or hides the top center resize handle of the selector|
-|Rotate|Shows or hides the rotate handle of the selector|
-|UserHandle|Shows or hides the user handles of the selector|
-|ToolTip|Shows or hides the default tooltip of selected items|
-|ResizeAll|Shows or hides all resize handles of the selector|
-|All|Shows all handles of the selector|
+|None|Hides all the selector elements.|
+|ConnectorSourceThumb|Shows or hides the source thumb of the connector.|
+|ConnectorTargetThumb|Shows or hides the target thumb of the connector.|
+|ResizeSouthEast|Shows or hides the bottom right resize handle of the selector.|
+|ResizeSouthWest|Shows or hides the bottom left resize handle of the selector.|
+|ResizeNorthEast|Shows or hides the top right resize handle of the selector.|
+|ResizeNorthWest|Shows or hides the top left resize handle of the selector.|
+|ResizeEast|Shows or hides the middle right resize handle of the selector.|
+|ResizeWest|Shows or hides the middle left resize handle of the selector.|
+|ResizeSouth|Shows or hides the bottom center resize handle of the selector.|
+|ResizeNorth|Shows or hides the top center resize handle of the selector.|
+|Rotate|Shows or hides the rotate handle of the selector.|
+|UserHandle|Shows or hides the user handles of the selector.|
+|ResizeAll|Shows or hides all resize handles of the selector.|
+|All|Shows all handles of the selector.|
 
 The following code shows how to hide rotator.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
-<SfDiagram Height="600px" Nodes="@NodeCollection" SelectedItems="@selectedItems">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Nodes="@nodes" SelectionSettings="@selectionSettings"/>
 
-@code{
-    ObservableCollection<DiagramNode> NodeCollection;
-
-    DiagramSelectedItems selectedItems = new DiagramSelectedItems() { Constraints = SelectorConstraints.All & ~SelectorConstraints.Rotate };
+@code
+{
+    DiagramObjectCollection<Node> nodes;
+    public DiagramSelectionSettings selectionSettings = new DiagramSelectionSettings() 
+    { 
+        Constraints = SelectorConstraints.All & ~SelectorConstraints.Rotate 
+    };
 
     protected override void OnInitialized()
     {
         //Initialize the NodeCollection.
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node = new DiagramNode()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            Id = "node1",
+            ID = "node1",
             Height = 100,
             Width = 100,
             OffsetX = 100,
             OffsetY = 100,
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
 
-The following another code example shows how to enable the userhandle functionality for the selected item.
+![Selector Constraints in Blazor Diagram](images/blazor-diagram-node-constraints.png)
+
+> Element should be in selected state, then only Rotator, UserHandle and Resizer thumbs will be visible.
+
+The following another code example shows how to disable the userhandle functionality for the selected item.
 
 ```csharp
 //Enable userhandle constraint for the selected item.
-selectedItems.Constraints = SelectorConstraints.All | SelectorConstraints.UserHandle;
+selectedItems.Constraints = SelectorConstraints.All &~ SelectorConstraints.UserHandle;
 ```
 
-For more information about selector constraints, refer to the [SelectorConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SelectorConstraints.html).
+For more information about selector constraints, refer to the [SelectorConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectorConstraints.html).
 
 > By default, the following constraints are enabled for the selected items,
->* ResizeAll
->* UserHandle
->* Rotate
->* ToolTip
-
-**Note** : The port constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](#bitwise-operations).
+>* ConnectorSourceThumb
+>* ConnectorTargetThumb
+>* ResizeSouthEast
+>* ResizeSouthWest
+>* ResizeEast
+>* ResizeWest
+>* ResizeSouth
+>* ResizeNorth
+>* All
 
 ## Snap constraints
 
-Snap constraints control the visibility of gridlines and enable or disable snapping. Snap constraints allow to set the following behaviors.
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_Constraints) property of the SnapConstraints control the visibility of gridlines and enable or disable snapping. Snap constraints allow to set the following behaviors.
 
 * Show only horizontal or vertical gridlines.
 * Show both horizontal and vertical gridlines.
 * Snap to either horizontal or vertical gridlines.
 * Snap to both horizontal and vertical gridlines.
 
-The following list of snapping constraints are used to Enables or Disables certain features of snapping.
+The following list of snapping constraints are used to enable or disable certain features of snapping.
 
 | Constraints | Description |
 | -------- | -------- |
-|None|Disable to snapping the nodes/connectors in diagram|
-|ShowHorizontalLines|Displays only the horizontal gridlines in diagram|
-|ShowVerticalLines|Displays only the Vertical gridlines in diagram|
-|ShowLines|Display both Horizontal and Vertical gridlines|
-|SnapToHorizontalLines|Enables the object to snap only with horizontal gridlines|
-|SnapToVerticalLines|Enables the object to snap only with Vertical gridlines|
-|SnapToLines|Enables the object to snap with both horizontal and Vertical gridlines|
-|SnapToObject|Enables the object to snap with the other objects in the diagram|
-|All|Shows gridlines and enables snapping|
+|None|Disable snapping the nodes/connectors in diagram.|
+|ShowHorizontalLines|Displays only the horizontal gridlines in diagram.|
+|ShowVerticalLines|Displays only the Vertical gridlines in diagram.|
+|ShowLines|Display both Horizontal and Vertical gridlines.|
+|SnapToHorizontalLines|Enables the object to snap only with horizontal gridlines.|
+|SnapToVerticalLines|Enables the object to snap only with Vertical gridlines.|
+|SnapToLines|Enables the object to snap with both horizontal and Vertical gridlines.|
+|SnapToObject|Enables the object to snap with the other objects in the diagram.|
+|All|Shows gridlines and enables snapping.|
 
 The following code shows how to show only horizontal gridlines.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
-<SfDiagram Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes">
     @* Initialize the snapsettings with constraints *@
-    <DiagramSnapSettings Constraints="SnapConstraints.ShowHorizontalLines"></DiagramSnapSettings>
-</SfDiagram>
+    <SnapSettings Constraints="SnapConstraints.ShowHorizontalLines" />
+</SfDiagramComponent>
 
-@code{
-    ObservableCollection<DiagramNode> NodeCollection;
+@code
+{
+    DiagramObjectCollection<Node> nodes;
+
     protected override void OnInitialized()
     {
         //Initialize the NodeCollection.
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node = new DiagramNode()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            Id = "node1",
+            ID = "node1",
             Height = 100,
             Width = 100,
             OffsetX = 100,
             OffsetY = 100,
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
 
-For more information about snap constraints, refer to the [SnapConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SnapConstraints.html).
+The snap constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](constraints#bitwise-operations).
+
+```csharp
+snapconstraints = SnapConstraints.ShowHorizontalLines | SnapConstraints.ShowVerticalLines | SnapConstraints.ShowLines;
+```
+
+For more information about snap constraints, refer to the [SnapConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapConstraints.html).
 
 > By default, the following constraints are enabled for the snap functionality in the diagram,
 >* ShowLines
->* SnapToLines
-
-**Note** : The snap constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](#bitwise-operations).
+>* ShowVerticalLines
+>* ShowHorizontalLines
+>* SnapToHorizontalLines
+>* SnapToObject
+>* All
 
 ## Boundary constraints
 
 Boundary constraints defines a boundary for the diagram inside that the interaction should be done. Boundary constraints allow to set the following behaviors.
 
-* Infinite boundary
-* Diagram sized boundary
-* Page sized boundary
+* Infinity
+* Diagram
+* Page
 
-The following list of constraints are used to Enables or Disables certain features of boundary interactions of the diagram.
+The following list of constraints are used to enable or disable certain features of boundary interactions of the diagram.
 
 | Constraints | Description |
 | -------- | -------- |
-|Infinity|Allow the interactions to take place at the infinite height and width|
-|Diagram|Allow the interactions to take place around the diagram height and width|
-|Page|Allow the interactions to take place around the page height and width|
+|Infinity|Allow the interactions to take place at the infinite height and width.|
+|Diagram|Allow the interactions to take place around the diagram height and width.|
+|Page|Allow the interactions to take place around the page height and width.|
 
 The following code shows how to limit the interaction done inside a diagram within a page.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
-<SfDiagram Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes">
     @* Initialize the pagesettings with boundary constraints *@
-    <DiagramPageSettings Width="600" Height="500" BoundaryConstraints="BoundaryConstraints.Page"></DiagramPageSettings>
-</SfDiagram>
+    <PageSettings Width="600" Height="500" BoundaryConstraints="BoundaryConstraints.Page"/>
+</SfDiagramComponent>
 
-@code{
-    ObservableCollection<DiagramNode> NodeCollection;
+@code
+{
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
         //Initialize the NodeCollection.
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node = new DiagramNode()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            Id = "node1",
+            ID = "node1",
             Height = 100,
             Width = 100,
             OffsetX = 100,
             OffsetY = 100,
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
 
-For more information about selector constraints, refer to the [BoundaryConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.BoundaryConstraints.html).
+For more information about selector constraints, refer to the [BoundaryConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BoundaryConstraints.html).
 
 > By default, the following boundary constraints are enabled for the snap functionality in the diagram,
 >* Diagram
-
-**Note** : The boundary constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](#bitwise-operations).
 
 ## Inherit behaviors
 
 Some of the behaviors can be defined through both the specific object (node or connector) and diagram. When the behaviors are contradictorily defined through both, the actual behavior is set through inherit options.
 
-The following code example shows how to inherit the line bridging behavior from the diagram model.
+The following code example shows how to inherit the line bridging behavior from the diagram.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize the diagram with constraints *@
-<SfDiagram Height="600px" Connectors="@ConnectorCollection" Constraints="@DiagramConstraints">
-</SfDiagram>
+<SfDiagramComponent Height="600px"
+                    Connectors="@connectors"
+                    Constraints="@diagramConstraints">
+</SfDiagramComponent>
 
-@code{
-    //Sets the diagram constraints
-    public DiagramConstraints DiagramConstraints = DiagramConstraints.Default | DiagramConstraints.Bridging;
-
-    ObservableCollection<DiagramConnector> ConnectorCollection;
+@code
+{
+    //Sets the diagram constraints.
+    DiagramConstraints diagramConstraints = DiagramConstraints.Default | DiagramConstraints.Bridging;
+    DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
     {
-        ConnectorCollection = new ObservableCollection<DiagramConnector>();
-
-        DiagramConnector connector = new DiagramConnector()
+        connectors = new DiagramObjectCollection<Connector>();
+        Connector connector = new Connector()
         {
-            Id = "connector1",
-            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
-            TargetPoint = new ConnectorTargetPoint() { X = 200, Y = 200 },
-            //sets the ConnectorConstraints...
+            ID = "connector1",
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
+            //Sets the ConnectorConstraints.
             Constraints = ConnectorConstraints.Default | ConnectorConstraints.InheritBridging
         };
-        DiagramConnector connector1 = new DiagramConnector()
+        Connector connector1 = new Connector()
         {
-            Id = "connector2",
-            SourcePoint = new ConnectorSourcePoint() { X = 200, Y = 100 },
-            TargetPoint = new ConnectorTargetPoint() { X = 100, Y = 200 },
+            ID = "connector2",
+            SourcePoint = new DiagramPoint() { X = 200, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 100, Y = 200 },
         };
-        ConnectorCollection.Add(connector);
-        ConnectorCollection.Add(connector1);
+        connectors.Add(connector);
+        connectors.Add(connector1);
     }
 }
 ```
@@ -674,38 +679,36 @@ Bitwise operations are used to manipulate the flagged enumerations `enum`. In th
 
 You can add or enable multiple values at a time by using the Bitwise `|` (OR) operator.
 
-The following code shows to add line routing constraints into the default diagram constraints to enable line routing functionality into the diagram.
+The following code shows how to add bridging constraints into the default diagram constraints to enable bridging functionality in the diagram.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
-<SfDiagram Height="600px" Constraints="@DiagramConstraint">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Constraints="@diagramConstraint"/>
 
-@code{
-//To adding line routing constraint with default contraints.
-DiagramConstraints DiagramConstraint = DiagramConstraints.Default | DiagramConstraints.LineRouting;
+@code
+{
+    //To add line routing constraint with default contraints.
+    DiagramConstraints diagramConstraint = DiagramConstraints.Default | DiagramConstraints.Bridging;
 }
 ```
 
-## Remove Operation
+## Remove operation
 
 You can remove or disable values by using the Bitwise ‘&~’ (XOR) operator.
 
 The following code shows to remove zoom and pan constraints from the default constraints to disable zoom and panning functionality in the diagram.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
-<SfDiagram Height="600px" Constraints="@DiagramConstraint">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Constraints="@diagramConstraint"/>
 
-@code{
-//To removing zoom and panning constraints from the default contraints
-//It has disabled zoom and panning funcationality for the diagram.
-DiagramConstraints DiagramConstraint = DiagramConstraints.Default &~ (DiagramConstraints.Zoom | DiagramConstraints.Pan);
+@code
+{
+    //To remove zoom and panning constraints from the default constraints.
+    //It has disabled zoom and panning functionality for the diagram.
+    DiagramConstraints diagramConstraint = DiagramConstraints.Default &~ (DiagramConstraints.Zoom | DiagramConstraints.Pan);
 }
 ```
 
