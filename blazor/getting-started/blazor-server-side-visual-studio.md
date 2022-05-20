@@ -88,6 +88,7 @@ namespace BlazorApplication
 {% endhighlight %}
 {% endtabs %}
 
+> From 20.1 (2022 Vol1) release: You don't have to set `IgnoreScriptIsolation` property as `true` explicitly, since the default value changed to true and this property marked as obsolete. 
 
 ## Add style sheet
 
@@ -131,6 +132,8 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
     ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    <!--Use below script reference if you are using Syncfusion.Blazor Single NuGet-->
+    <!--<script  src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js"  type="text/javascript"></script>-->
 </head>
 
 {% endhighlight %}
@@ -140,6 +143,8 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
     ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <script  src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    <!--Use below script reference if you are using Syncfusion.Blazor Single NuGet-->
+    <!--<script  src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js"  type="text/javascript"></script>-->
 </head>
 
 {% endhighlight %}
