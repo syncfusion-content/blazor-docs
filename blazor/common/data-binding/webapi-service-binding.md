@@ -92,7 +92,7 @@ It is not recommended to have a connection string with sensitive information in 
 
 ![Add connection string in appsettings](../images/odata-appsettings.png)
 
-Now, the DbContext must be configured using connection string and registered as scoped service using the AddDbContext method in **Startup.cs**.
+Now, the DbContext must be configured using connection string and registered as scoped service using the AddDbContext method in **Startup.cs** for .NET 5 and .NET 3.X application and in **Program.cs** file in .NET 6 application.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
@@ -249,7 +249,7 @@ Open **_Import.razor** file and add the following namespaces which are required 
 
 {% endhighlight %}
 
-Open **Startup.cs** file and register the Syncfusion service in the **ConfigureServices** method as follows.
+Open **Startup.cs** file in .NET 5 and .NET 3.X applications, **Program.cs** file in .NET 6 application and register the Syncfusion service in the **ConfigureServices** method as follows.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
