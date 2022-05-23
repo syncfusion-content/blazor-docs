@@ -137,7 +137,7 @@ The following sample code demonstrates defining a custom context menu item and i
 
 ## Built-in and Custom context menu items
 
-Gantt has an option to use both built-in and custom context menu items at the same time.
+Gantt Chart has an option to use both built-in and custom context menu items at the same time.
 
 The following sample code demonstrates defining built-in and custom context menu items and custom context menu item corresponding action in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_ContextMenuItemClicked) event,
 
