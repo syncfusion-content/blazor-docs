@@ -43,29 +43,36 @@ Now, in the Browse tab, search and install the Syncfusion.Blazor.Grid NuGet pack
 
 Open **_Import.razor** file and add the following namespaces which are required to use Syncfusion Blazor DataGrid Component in this application.
 
-```cshtml
+{% highlight cshtml %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 
-```
+{% endhighlight %}
 
-Open **Startup.cs** file and register the Syncfusion service in the ConfigureServices method as follows.
+Open **Startup.cs** file in .NET 5 and .NET 3.X applications, **Program.cs** file in .NET 6 application and register the Syncfusion service in the **ConfigureServices** method as follows.
 
-```c#
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
 
-using Syncfusion.Blazor;
-public class Startup
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddSyncfusionBlazor();
+
+{% endhighlight %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
+
+public void ConfigureServices(IServiceCollection services)
 {
-   public void ConfigureServices(IServiceCollection services)
-   {
-      services.AddRazorPages();
-      services.AddServerSideBlazor();
-      services.AddSyncfusionBlazor();
-    }
+    services.AddRazorPages();
+    services.AddServerSideBlazor();
+    services.AddSingleton<WeatherForecastService>();
+    services.AddSyncfusionBlazor();
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 Themes provide life to components. Syncfusion Blazor has different themes. They are as follows:
 
@@ -77,20 +84,20 @@ Themes provide life to components. Syncfusion Blazor has different themes. They 
 
 To add the theme, open the **Pages/_Host.cshtml** file and add the following CSS reference code.
 
-```html
+{% highlight html %}
 
 <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
 
-```
+{% endhighlight %}
 
 In previous steps, Syncfusion Blazor DataGrid package is successfully configured in the application. Now, add the DataGrid Component to the **Index.razor**.
 
-```cshtml
+{% highlight cshtml %}
 
 <SfGrid TValue="Order" AllowPaging="true">
 </SfGrid >
 
-```
+{% endhighlight %}
 
 ## Binding SQL data to the Blazor DataGrid Component
 
@@ -98,7 +105,8 @@ Now, get the SQL data from the SQL server and bind it to the DataGrid component 
 
 Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns/) component. Create columns using the following code. The properties used and their usage are discussed below.
 
-```cshtml
+{% highlight cshtml %}
+
 [Index.razor]
 
 <SfGrid @ref="Grid" TValue="Order" AllowPaging="true" >
@@ -122,7 +130,7 @@ Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com
     }
 }
 
-```
+{% endhighlight %}
 
 In the custom adaptor’s **Read** method, you can get the Grid action details like paging, filtering, sorting information, etc., using **DataManagerRequest**.
 
@@ -132,7 +140,8 @@ In the custom adaptor’s **Read** method, you can get the Grid action details l
 
 * Return the response in Result and Count pair object in Read method to bind the data to the DataGrid.
 
-```cshtml
+{% highlight cshtml %}
+
 [CustomAdaptorComponent.razor]
 
 @using Syncfusion.Blazor;
@@ -210,7 +219,7 @@ string ConnectionStr = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='{
 }
 }
 
-```
+{% endhighlight %}
 
 While running the application, the grid will be displayed as follows.
 
@@ -222,13 +231,13 @@ Enable editing in the grid component using the [GridEditSettings](https://blazor
 
 Here, inline edit mode and [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar/) property are used to show toolbar items for editing.
 
-```cshtml
+{% highlight cshtml %}
 
 <SfGrid @ref="Grid" TValue="Order" AllowPaging="true" Toolbar="@(new List<string>() { "Add","Edit","Delete","Update","Cancel"})">
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
 </SfGrid>
 
-```
+{% endhighlight %}
 
 > Normal editing is the default edit mode for the DataGrid component. Also, to perform CRUD operations, set IsPrimaryKey property as True for a particular GridColumn, whose value is a unique.
 
@@ -245,7 +254,7 @@ Let’s see how to perform CRUD operation using SQL server data with Syncfusion 
 
 To perform the insert operation, override the Insert/InsertAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
 
-```c#
+{% highlight c# %}
 
 // Performs Insert operation
 //You will get the DataManager instance in the DataManager parameter
@@ -277,7 +286,7 @@ public override object Insert(DataManager DataManager, object Value, string Key)
     return Value;
 }
 
-```
+{% endhighlight %}
 
 
 ![Insert Operation in Blazor](../images/SQLInsert.png)
@@ -286,7 +295,7 @@ public override object Insert(DataManager DataManager, object Value, string Key)
 
 To perform the update operation, override the Update/UpdateAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
 
-```c#
+{% highlight c# %}
 
 // Performs Update operation
 //You will get the DataManager instance in the DataManager parameter
@@ -317,7 +326,7 @@ public override object Update(DataManager DataManager, object Value, string KeyF
     return Value;
 }
 
-```
+{% endhighlight %}
 
 
 ![Update Operation in Blazor](../images/SQLUpdate.png)
@@ -326,7 +335,7 @@ public override object Update(DataManager DataManager, object Value, string KeyF
 
 To perform the delete operation, override the Remove/RemoveAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
 
-```c#
+{% highlight c# %}
 
 // Performs Remove operation
 //You will get the DataManager instance in the DataManager parameter
@@ -358,9 +367,9 @@ public override object Remove(DataManager DataManager, object Value, string KeyF
     return Value;
 }
 
-```
+{% endhighlight %}
 
 
 ![Delete Operation in Blazor](../images/SQLDelete.png)
 
-You can find the sample in this [GitHub location](https://github.com/SyncfusionExamples/blazor-grid-sqldatabinding)
+> You can find the sample in this [GitHub location](https://github.com/SyncfusionExamples/blazor-grid-sqldatabinding)
