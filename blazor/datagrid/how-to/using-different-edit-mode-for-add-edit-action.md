@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Using different edit mode for add and edit action in Blazor DataGrid | Syncfusion
-description: Learn here all about using different edit mode for add and edit action in Syncfusion Blazor DataGrid component and more.
+title: Using different edit mode for add and edit action in the Blazor DataGrid | Syncfusion
+description: Learn here all about using different edit mode for add and edit action in the Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Use different EditMode for Add/Edit action
 
-You can customize the EditMode for add and edit actions as `Dialog` or `Normal` based on the RequestType value in [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event.
+Customize the EditMode for add and edit actions as `Dialog` or `Normal` based on the RequestType value in the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event.
 
-This is demonstrated in the below sample code,
+This is demonstrated in the following sample code:
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -81,3 +81,5 @@ This is demonstrated in the below sample code,
 }
 
 ```
+
+> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-different-editmode-for-add-edit-action).
