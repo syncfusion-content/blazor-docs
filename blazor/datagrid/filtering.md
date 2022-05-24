@@ -163,9 +163,9 @@ Use the [GetFilteredRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ## Filter enum column
 
-You can filter the enum type data in the grid column using the Filter Template feature of the Grid.
+Filter the enum type data in the grid column using the Filter Template feature of the Grid.
 
-In the following sample, the `SfDropDownList` component is rendered in the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) for the Type column. The enumerated list data can be bound to the Type column. In the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of the `SfDropDownList`, you can dynamically filter the Type column using the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_System_Object_) method of the Grid.
+In the following sample, the `SfDropDownList` component is rendered in the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) for the Type column. The enumerated list data can be bound to the Type column. In the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of the `SfDropDownList`, dynamically filter the Type column using the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_System_Object_) method of the Grid.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -247,3 +247,5 @@ In the following sample, the `SfDropDownList` component is rendered in the [Filt
 }
 
 ```
+
+> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-filtering-enum-column).
