@@ -161,7 +161,8 @@ The Rich Text Editor provides an option to localize its strings; it is used for 
 
 The following sample code block demonstrates that the Rich Text Editor control rendered with `de-DE` German language.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="~/localization.razor" %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -178,23 +179,32 @@ The following sample code block demonstrates that the Rich Text Editor control r
     </ul>
 </SfRichTextEditor>
 
-```
+{% endhighlight %}
+{% endtabs %}
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/localization.razor %}
+
+{% endhighlight %}
 
 ![Localization in Blazor RichTextEditor](./images/blazor-richtexteditor-localization.png)
 
-## RTL
+## Enable RTL Mode
 
-Specifies the direction of the Rich Text Editor component using the `EnableRtl` property. For writing systems will require Arabic, Hebrew, and more. The direction can be switched to right-to-left.
+Specifies the direction of the Rich Text Editor component using the [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableRtl) property. For writing systems will require Arabic, Hebrew, and more. The direction can be switched to right-to-left.
 
-> `EnableRtl` property will not change, based on current culture.
+> [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableRtl) property will not change, based on current culture.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="~/rtl.razor" %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor EnableRtl="true" />
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Right to Left in Blazor RichTextEditor](./images/blazor-richtexteditor-right-to-left.png)
 

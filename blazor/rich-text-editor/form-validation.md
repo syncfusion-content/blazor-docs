@@ -13,7 +13,8 @@ This following sample demonstrate how to get the Rich Text Editor validation err
 
 ## Render the editor in a form
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="~/edit-form.razor" %}
 
 @using Syncfusion.Blazor.RichTextEditor
 @using System.ComponentModel.DataAnnotations;
@@ -60,11 +61,17 @@ This following sample demonstrate how to get the Rich Text Editor validation err
         [MinLength(20, ErrorMessage = "Please enter at least 20 characters.")]
         public string Description { get; set; }
     }
-
     private FormModel Model = new FormModel();
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/edit-form.razor %}
+
+{% endhighlight %}
 
 ![Form Validation in Blazor RichTextEditor](./images/blazor-richtexteditor-form-validation.png)
 
@@ -80,7 +87,8 @@ The Rich Text Editor is a textarea control. The Rich Text Editor also provides t
 
 This sample is demonstrated form validation using the `DataAnnotationsValidator`.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="~/validation-rules.razor" %}
 
 @using Syncfusion.Blazor.RichTextEditor
 @using System.ComponentModel.DataAnnotations;
@@ -90,7 +98,6 @@ This sample is demonstrated form validation using the `DataAnnotationsValidator`
     <p>
         <label for="description">Enter Text</label>
         <SfRichTextEditor ShowCharCount="true" MaxLength="200" Placeholder="Type something" @bind-Value="@MyForm.Description">
-            <RichTextEditorToolbarSettings Items="@Tools" />
         </SfRichTextEditor>
         <ValidationMessage For="@(() => MyForm.Description)"></ValidationMessage>
     </p>
@@ -104,90 +111,27 @@ This sample is demonstrated form validation using the `DataAnnotationsValidator`
         [MinLength(20, ErrorMessage = "Please enter at least 20 characters.")]
         public string Description { get; set; } = "<div>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</div>";
     }
-
     private Form MyForm = new Form();
-
-    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
-    {
-        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
-        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
-        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
-        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
-        new ToolbarItemModel() { Command = ToolbarCommand.Image },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
-        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
-    };
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/validation-rules.razor %}
+
+{% endhighlight %}
 
 ![Char Count Validation in Blazor RichTextEditor](./images/blazor-richtexteditor-char-count-validation.png)
 
-## Validation Message
-
-The default error message for a rule can be customizable by defining it along with concern rule object as follows.
-
-```cshtml
-
-@using Syncfusion.Blazor.RichTextEditor
-@using System.ComponentModel.DataAnnotations;
-
-<EditForm Model="@MyForm">
-    <DataAnnotationsValidator />
-    <p>
-        <label for="description">Enter Text</label>
-        <SfRichTextEditor @bind-Value="@MyForm.Description" ShowCharCount="true" MaxLength="200" Placeholder="Type something">
-            <RichTextEditorToolbarSettings items="@Tools" />
-        </SfRichTextEditor>
-        <ValidationMessage For="@(() => MyForm.Description)"></ValidationMessage>
-    </p>
-    <button class="e-btn" type="submit">Submit</button>
-</EditForm>
-
-@code{
-    public class Form
-    {
-        [Required]
-        [MinLength(10, ErrorMessage = "Please enter at least 10 characters.")]
-        [MaxLength(100, ErrorMessage = "Maximum 200 characters only")]
-        public string Description { get; set; } = "<div>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</div>";
-    }
-
-    private Form MyForm = new Form();
-
-    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
-    {
-        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
-        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
-        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
-        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
-        new ToolbarItemModel() { Command = ToolbarCommand.Image },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
-        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
-    };
-}
-
-```
 
 ## Custom Placement of Validation Message
 
 The Form Validation error message can be placed from default position to desired custom location.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="~/custom-placement-validation-message.razor" %}
 
 @using Syncfusion.Blazor.RichTextEditor
 @using System.ComponentModel.DataAnnotations;
@@ -200,7 +144,6 @@ The Form Validation error message can be placed from default position to desired
     <p>
         <label for="description">Enter Text</label>
         <SfRichTextEditor ShowCharCount="true" MaxLength="200" Placeholder="Type something" @bind-Value="@MyForm.Description">
-            <RichTextEditorToolbarSettings Items="@Tools" />
         </SfRichTextEditor>
     </p>
     <button class="e-btn" type="submit">Submit</button>
@@ -214,29 +157,17 @@ The Form Validation error message can be placed from default position to desired
         [MaxLength(100, ErrorMessage = "RTE: Maximum 200 characters only")]
         public string Description { get; set; } = "<div>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</div>";
     }
-
     private Form MyForm = new Form();
-
-    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
-    {
-        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
-        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
-        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
-        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
-        new ToolbarItemModel() { Command = ToolbarCommand.Image },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
-        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
-    };
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/custom-placement-validation-message.razor %}
+
+{% endhighlight %}
 
 ![Blazor RichTextEditor Validation in Custom placement](./images/blazor-richtexteditor-validation-placement.png)
 

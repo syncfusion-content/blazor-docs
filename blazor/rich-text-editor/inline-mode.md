@@ -11,8 +11,11 @@ documentation: ug
 
 This is the inline example for the Rich Text Editor. For this, you must set the [`RichTextEditorInlineMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorInlineMode.html) property. Inline editing allows to select any editable element or click the element on the page and edit it in-place. Inline editing is a true WYSIWYG formation and on the contrary to Rich Text Editor HTML/MD editing, the styles that are used for edited content comes directly from the document stylesheet. This means that inline editors ignore the default Rich Text Editor content styles.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="~/inline-mode.razor" %}
+
 @using Syncfusion.Blazor.RichTextEditor
+
 <SfRichTextEditor>
     <RichTextEditorInlineMode Enable="true" />
     <p>
@@ -21,7 +24,15 @@ This is the inline example for the Rich Text Editor. For this, you must set the 
     </p>
 </SfRichTextEditor>
 
-```
+{% endhighlight %}
+{% endtabs %}
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/inline-mode.razor %}
+
+{% endhighlight %}
+
 ![Enabling inline mode in Blazor RichTextEditor](./images/blazor-richtexteditor-enable-inline.png)
 
 
@@ -29,7 +40,8 @@ This is the inline example for the Rich Text Editor. For this, you must set the 
 
 Enabling the [`ShowOnSelection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorInlineMode.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorInlineMode_ShowOnSelection) option of `RichTextEditorInlineMode` makes the inline Rich Text Editor to appear. You can select the text in the editable area, otherwise the inline Rich Text Editor will be appeared after clicking the editable area.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="~/edit-on-select.razor" %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -56,7 +68,14 @@ Enabling the [`ShowOnSelection`](https://help.syncfusion.com/cr/blazor/Syncfusio
     };
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/edit-on-select.razor %}
+
+{% endhighlight %}
 
 ![Enabling Selection in Blazor RichTextEditor](./images/blazor-richtexteditor-enable-selection.png)
 

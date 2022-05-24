@@ -9,8 +9,10 @@ documentation: ug
 
 # ExecCommand in Rich Text Editor in Blazor RichTextEditor Component
 
+### HTML Editor Commands  
+
 In Rich Text Editor, the ExecuteCommand is used to perform commands for the modification of content in editable area.
-The `ExecuteCommand` will perform the following commands.
+The [`ExecuteCommand`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html) will perform the following commands.
 
 | Commands | Description | Code snippets |
 |----------------|---------| -----------|
@@ -45,42 +47,93 @@ The `ExecuteCommand` will perform the following commands.
 
 The following code block demonstrates the usage of the ExecuteCommand in Rich Text Editor.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="~/html-execute-command.razor" %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor @ref="@RteObj">
     <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
-    <p><b> Key features:</b></p>
-    <ul>
-        <li><p> Provides <b>IFRAME</b> and <b>DIV</b> modes </p></li>
-        <li><p> Capable of handling markdown editing.</p></li>
-        <li><p> Contains a modular library to load the necessary functionality on demand.</p></li>
-        <li><p> Provides a fully customizable toolbar.</p></li>
-        <li><p> Provides HTML view to edit the source directly for developers.</p></li>
-        <li><p> Supports third - party library integration.</p></li>
-    </ul>
 </SfRichTextEditor>
 <SfButton Content="Bold" @onclick="@OnBoldCommand" />
 <SfButton Content="InsertHTML" @onclick="@OnInsertHtmlCommand" />
 
 @code {
     SfRichTextEditor RteObj;
-
     private async Task OnBoldCommand()
     {
         await this.RteObj.ExecuteCommandAsync(CommandName.Bold);
     }
-
     private async Task OnInsertHtmlCommand()
     {
         await this.RteObj.ExecuteCommandAsync(CommandName.InsertHTML, "<div>Syncfusion Rich Text Editor component</div>");
     }
 }
+{% endhighlight %}
+{% endtabs %}
 
-```
+{% highlight cshtml %}
+
+{% include_relative code-snippet/html-execute-command.razor %}
+
+{% endhighlight %}
 
 ![Execute Command in Blazor RichTextEditor](./images/blazor-richtexteditor-execute-command.png)
+
+### Markdown Editor Commands  
+
+In Rich Text Editor, the ExecuteCommand is used to perform commands for the modification of content in editable area.
+The [`ExecuteCommand`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html) will perform the following commands.
+
+| Commands | Description | Code snippets |
+|----------------|---------| -----------|
+| Bold | Bold the selected content in the Rich Text Editor. |`await this.RteObj.ExecuteCommandAsync(CommandName.Bold);`|
+| Italic | The selected text will be italics. |`await this.RteObj.ExecuteCommandAsync(CommandName.Italic);`|
+| StrikeThrough | Apply single line strike through formatting for the selected text. |`await this.RteObj.ExecuteCommandAsync(CommandName.StrikeThrough);`|
+| Superscript | Makes the selected text as superscript (higher). |`await this.RteObj.ExecuteCommandAsync(CommandName.Superscript);`|
+| Subscript | Makes the selected text as subscript (lower). |`await this.RteObj.ExecuteCommandAsync(CommandName.Subscript);`|
+| Uppercase | Change the case of selected text to upper  in the content. |`await this.RteObj.ExecuteCommandAsync(CommandName.Uppercase);`|
+| Lowercase | Change the case of selected text to lower in the content. |`await this.RteObj.ExecuteCommandAsync(CommandName.Lowercase);`|
+| CreateLink | Creates a hyperlink to a text or image to a specific location in the content. |`await this.RteObj.ExecuteCommandAsync(CommandName.CreateLink, new LinkCommandsArgs() { Text = "Links", Url= "http://", Title = "Link"});}` |
+| InsertOrderedList | Create a new list item(numbered). | `await this.RteObj.ExecuteCommandAsync(CommandName.InsertOrderedList);`|
+| InsertUnorderedList | Create a new list item(bulleted). |`await this.RteObj.ExecuteCommandAsync(CommandName.InsertUnorderedList);`|
+| Redo | Allows to redo the actions | `await this.RteObj.ExecuteCommandAsync(CommandName.Redo);`|
+| InsertText | Insert text to the current cursor position. | `await this.RteObj.ExecuteCommandAsync(CommandName.InsertText, "Inserted text");`|
+| InsertImage | Insert an image to the current cursor position. | `await this.RteObj.ExecuteCommandAsync(CommandName.InsertImage, new ImageCommandsArgs() { Url = "https://ej2.syncfusion.com/javascript/demos/src/rich-text-editor/images/RTEImage-Feather.png", CssClass = "rte-img" });`|
+
+{% tabs %}
+{% highlight razor tabtitle="~/markdown-execute-command.razor" %}
+
+@using Syncfusion.Blazor.RichTextEditor
+@using Syncfusion.Blazor.Buttons
+
+<SfRichTextEditor @ref="@RteObj" EditorMode="EditorMode.Markdown">
+    <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
+</SfRichTextEditor>
+<SfButton Content="Bold" @onclick="@OnBoldCommand" />
+<SfButton Content="Italic" @onclick="@OnItalicCommand />
+
+@code {
+    SfRichTextEditor RteObj;
+    private async Task OnBoldCommand()
+    {
+        await this.RteObj.ExecuteCommandAsync(CommandName.Bold);
+    }
+    private async Task OnItalicCommand()
+    {
+        await this.RteObj.ExecuteCommandAsync(CommandName.Italic);
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/markdown-execute-command.razor %}
+
+{% endhighlight %}
+
+![Execute Command in Markdown Blazor RichTextEditor](./images/blazor-richtexteditor-execute-command-markdown.png)
 
 > You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.

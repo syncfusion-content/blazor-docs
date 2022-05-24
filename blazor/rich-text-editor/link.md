@@ -24,9 +24,10 @@ Point the cursor anywhere within the editor where you would like to insert the l
 | Tooltip | Displays additional helpful information when you place the pointer on the hyperlink, type the required text in the "Tooltip" field. |
 | Open Link in New Window | Specifies whether the given link will open in new window or not |
 
-> The Rich Text Editor link tool validates the URLs as you type them in Web Address. URLs considered invalid will be highlighted with red color by clicking the insert button in the `Insert Link` dialog.
+> The Rich Text Editor link tool validates the URLs as you type them in Web Address. URLs considered invalid will be highlighted with red color by clicking the insert button in the [`Insert Link`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_ToolbarCommand_CreateLink) dialog.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="~/insert-link.razor" %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -52,7 +53,14 @@ Point the cursor anywhere within the editor where you would like to insert the l
     };
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/insert-link.razor %}
+
+{% endhighlight %}
 
 ![Displaying Link Icon in Blazor RichTextEditor](./images/blazor-richtexteditor-link-icon.png)
 
@@ -78,7 +86,8 @@ The quick toolbar for the link has the following options.
 | Edit Link | Edits the link in the Rich Text Editor content. |
 | Remove Link | Removes link from the content of Rich Text Editor. |
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="~/edit-remove-link.razor" %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -105,7 +114,14 @@ The quick toolbar for the link has the following options.
     };
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/edit-remove-link.razor %}
+
+{% endhighlight %}
 
 ![Quick Link in Blazor RichTextEditor Content](./images/blazor-richtexteditor-quick-link.png)
 
