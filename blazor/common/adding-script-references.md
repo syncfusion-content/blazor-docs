@@ -24,11 +24,45 @@ You can refer the Syncfusion Blazor scripts through the CDN resources.
 
 Syncfusion Blazor components are available in CDN for each version. Make sure that the version in the URLs matches the version of the Syncfusion Blazor Package you are using.
 
-| Component  | CDN Script Reference |
-| --- | --- |
-| All components except PDF Viewer & Document Editor | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js |
-| PDF Viewer | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-pdfviewer.min.js |
-| Document Editor | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-documenteditor.min.js |
+<table>
+<tr>
+<td><b>Component</b></td>
+<td><b>CDN Script Reference</b></td>
+</tr>
+
+<tr>
+<td><p>All components except PDF Viewer & Document Editor</p></td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js
+{% endhighlight %}
+
+</td>
+</tr>
+
+<tr>
+<td><p>PDF Viewer</p></td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-pdfviewer.min.js
+{% endhighlight %}
+
+</td>
+</tr>
+
+<tr>
+<td><p>Document Editor</p></td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-documenteditor.min.js
+{% endhighlight %}
+
+</td>
+</tr>
+</table>
 
 ```html
 <head>
