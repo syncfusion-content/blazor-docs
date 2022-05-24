@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Using different edit mode for add and edit action in the Blazor DataGrid | Syncfusion
+title: Using different edit modes in the Blazor DataGrid | Syncfusion
 description: Learn here all about using different edit mode for add and edit action in the Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
