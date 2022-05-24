@@ -11,9 +11,8 @@ documentation: ug
 
 This section explains how to bind the `Value` to the Rich Text Editor component that can be achieved in the following ways:
 
-* One-way data binding
 * Two-way data binding
-* Dynamic value binding
+
 
 ## One-way data binding
 
