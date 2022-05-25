@@ -34,7 +34,7 @@ Right-click on the **Tables** folder of the created database and click **Add New
 
 Use the following query to add a new table named **Orders**.
 
-{% highlight sql %}
+```
 
 Create Table Orders(
  OrderID BigInt Identity(1,1) Primary Key Not Null,
@@ -43,7 +43,7 @@ Create Table Orders(
  OrderDate datetime null
 )
 
-{% endhighlight %}
+```
 
 Now, the Orders table design will look like below. Click on the **Update** button.
 
@@ -69,12 +69,12 @@ Run the following commands in the **Package Manager Console**.
 
 Once the above packages are installed, you can scaffold DbContext and Model classes. Run the following command in the **Package Manager Console**.
 
-{% highlight %}
+```
 
 
 Scaffold-DbContext “Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
 
-{% endhighlight %}
+```
 
 The above scaffolding command contains the following details for creating DbContext and model classes for the existing database and its tables.
 * **Connection string**: Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
@@ -345,7 +345,7 @@ Now, in the **Browse** tab, search and install the **Syncfusion.Blazor.Grid** Nu
 
 Open **_Import.razor** file and add the following namespaces which are required to use Syncfusion Blazor components in this application.
 
-{% highlight c# tabtitle="_Import.razor" %}
+{% highlight razor tabtitle="_Import.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
@@ -366,7 +366,7 @@ Themes provide life to components. Syncfusion Blazor has different themes. They 
 
 In this demo application, the **Bootstrap4** theme will be used. To add the theme, open **Pages/_Host.cshtml** file and add the following CSS reference code.
 
-{% highlight html %}
+{% highlight cshtml %}
 
 <link href="_content/Syncfusion.Blazor.Themes/fabric.css" rel="stylesheet" />
 
@@ -376,7 +376,7 @@ In this demo application, the **Bootstrap4** theme will be used. To add the them
 
 In previous steps, we have successfully configured the Syncfusion Blazor package in the application. Now, we can add the grid component to the **Index.razor** page.
 
-{% highlight c# %}
+{% highlight razor %}
 
 <SfGrid TValue="Orders"></SfGrid>
 
@@ -388,7 +388,7 @@ To consume data from the OData Controller, you need to add the **SfDataManager**
 
 [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor)
 
-{% highlight c# %}
+{% highlight razor %}
 
 <SfGrid TValue="Orders">
     <SfDataManager Url="https://localhost:44392/odata/orders" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
@@ -400,7 +400,7 @@ To consume data from the OData Controller, you need to add the **SfDataManager**
 
 Grid columns can be defined by using the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. We are going to create columns using the following code.
 
-{% highlight c# %}
+{% highlight razor %}
 
 <SfGrid TValue="Orders">
     <SfDataManager Url="https://localhost:44392/odata/orders" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
@@ -444,7 +444,7 @@ You can enable editing in the grid component using the [GridEditSettings](https:
 Here, we are using **Inline** edit mode and used Toolbar property to show toolbar items for editing.
 We have added the DataGrid Editing and Toolbar code with previous Grid model.
 
-{% highlight c# %}
+{% highlight razor %}
 
 <SfGrid TValue="Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
     <SfDataManager Url="https://localhost:44392/odata/orders" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
