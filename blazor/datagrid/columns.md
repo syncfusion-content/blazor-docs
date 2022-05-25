@@ -381,9 +381,9 @@ The following image represents foreign key column
 
 ### Prevent filter query generation for foreignkey column
 
-By default, a filter query for the foreignkey column will be generated based on the foreignkey value. When the URL query string is too long (containing the filter queries), exception occurs while performing filtering operations. To overcome this issue, we can prevent filter query generation for the foreignkey column. This can be achieved by setting the PreventFilterQuery argument of the OnActionBegin event to true.
+By default, a filter query for the foreignkey column will be generated based on the foreignkey value. You can prevent this filter query generation for the foreignkey column. This can be achieved by setting the PreventFilterQuery argument of the OnActionBegin event to true.
 
-In the following code sample, we can prevent default filter query generation using the PreventFilterQuery property and generate a custom filter query to execute a filter operation.
+In the following code sample, you can prevent default filter query generation using the PreventFilterQuery property and generate a custom filter query to execute a filter operation.
 
 ```cshtml
 @using System.ComponentModel.DataAnnotations;
