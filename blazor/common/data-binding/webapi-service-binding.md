@@ -33,7 +33,7 @@ Right-click on the **Tables** folder of the created database and click **Add New
 
 Use the following query to add a new table named **Orders**.
 
-{% highlight sql %}
+```
 
 Create Table Orders(
  OrderID BigInt Identity(1,1) Primary Key Not Null,
@@ -42,7 +42,7 @@ Create Table Orders(
  OrderDate datetime null
 )
 
-{% endhighlight %}
+```
 
 Now, the Orders table design will look like below. Click on the **Update** button.
 
