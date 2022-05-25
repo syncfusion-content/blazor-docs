@@ -29,7 +29,7 @@ The first step is to create a Library database and a table named Book to hold a 
 * Right-click on the created database and select New Query.
 * Use the following SQL query to create a table named Book.
 
-{% highlight sql %}
+```
 
 Create Table Book(
 Id BigInt Identity(1,1) Primary Key Not Null,
@@ -39,7 +39,7 @@ Quantity int,
 Price int Not Null,
 Available bit)
 
-{% endhighlight %}
+```
 
 Now, the Book table design will look like below.
 
@@ -70,11 +70,11 @@ Run the following commands in the Package Manager Console.
 
 Once the above packages are installed, you can scaffold DbContext and Model classes. Run the following command in the Package Manager Console under the LibraryManagement project.
 
-{% highlight %}
+```
 
 Scaffold-DbContext “Server=localhost;Database=Library;Integrated Security=True” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
 
-{% endhighlight %}
+```
 
 The above scaffolding command contains the following details for creating DbContext and model classes for the existing database and its tables.
 
@@ -285,7 +285,7 @@ Now, in the Browse tab, search and install the **Syncfusion.Blazor.Grid** NuGet 
 
 Open **_Import.razor** file and add the following namespaces which are required to use the Syncfusion Blazor components in this application.
 
-{% highlight cshtml %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
@@ -319,14 +319,14 @@ public void ConfigureServices(IServiceCollection services)
 Themes provide life to components. Syncfusion Blazor has different themes. They are:
 
 * Fabric
-* Bootstrap4
+* Bootstrap
 * Material
 * Bootstrap
 * High Contrast
 
 In this demo application, the Fabric theme will be used. To add the theme, open the **Pages/_Host.cshtml** file and add the following CSS reference code.
 
-{% highlight html %}
+{% highlight cshtml %}
 
 <link href="_content/Syncfusion.Blazor.Themes/fabric.css" rel="stylesheet" />
 
@@ -336,7 +336,7 @@ In this demo application, the Fabric theme will be used. To add the theme, open 
 
 In previous steps, we have successfully configured the Syncfusion Blazor package in the application. Now, we can add the grid component to the **Index.razor** page.
 
-{% highlight cshtml %}
+{% highlight razor %}
 
 <SfGrid TValue="Book">
 </SfGrid>
@@ -347,7 +347,7 @@ In previous steps, we have successfully configured the Syncfusion Blazor package
 
 To consume data from the database using **Entity Framework**, you need to inject the LibraryService into the razor page and assign it to the DataGrid’s datasource variable. Here, the **DataSource** property of the DataGrid component is used to bind the SQL data using Entity Framework in the Server-side application  
 
-{% highlight cshtml %}
+{% highlight razor %}
 
 @using LibraryManagement.Models
 @inject ILibraryService LibraryService
@@ -375,7 +375,7 @@ Grid columns can be defined using the **GridColumn** component. We are going to 
 * **Format** property helps to format number, currencies, and date in a particular culture. Here, the Price column has been formatted.
 * **DisplayAsCheckBox** property renders checkbox in cells and sets check state based on the property value. Here, Available column is rendered as a checkbox column.
 
-{% highlight cshtml %}
+{% highlight razor %}
 
 @using LibraryManagement.Models
 @inject ILibraryService LibraryService
@@ -420,7 +420,7 @@ While using the DataSource property of Grid, changes will be reflected only in t
 
 We have added the DataGrid editing, toolbar, and OnActionBegin and OnActionComplete event code with the previous Grid model.
 
-{% highlight cshtml %}
+{% highlight razor %}
 
 @using LibraryManagement.Models
 @inject ILibraryService LibraryService
