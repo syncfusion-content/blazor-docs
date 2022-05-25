@@ -1,54 +1,50 @@
 ---
 layout: post
-title: BPMN Gateway in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about BPMN Gateway in Syncfusion Blazor Diagram component and much more.
+title: BPMN gateway in Blazor Diagram Component | Syncfusion
+description: Learn here all about how to create the BPMN gateway in Syncfusion Blazor Diagram component and more.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
-# BPMN Gateway in Blazor Diagram Component
+# BPMN gateway in Blazor Diagram Component
 
-Gateway is used to control the flow of a process and it is represented as a diamond shape. To create a gateway, the shape property of the node should be set to “Gateway” and the [Gateway](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnGateway.html) property can be set with any of the appropriate gateways. The following code example explains how to create a BPMN Gateway.
+Gateway is used to control the flow of a process and it is represented as a diamond shape. To create a gateway, the shape property of the node should be set to “Gateway” and the `Gateway` property can be set with any of the appropriate gateways. The following code example explains how to create a BPMN Gateway.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagram Height="600px" Nodes="@NodeCollection">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
-    //Defines diagram's node collection
-    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+@code
+{
+    // Initialize node collection with Node.
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node = new DiagramNode()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            //Position of the node
+            //Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            //Size of the node
+            //Size of the node.
             Width = 100,
             Height = 100,
-            //Unique Id of the node
-            Id = "node1",
-            Shape = new DiagramShape()
+            //Unique Id of the node.
+            ID = "node1",
+            Shape = new BpmnShape()
             {
-                //Sets type to Bpmn and shape to Gateway
+                //Sets type to Bpmn and shape to Gateway.
                 Type = Shapes.Bpmn,
-                BpmnShape = BpmnShapes.Gateway,
-                //Sets type of the gateway to None
-                Gateway = new DiagramBpmnGateway()
-                {
-                    Type = BpmnGateways.None
-                }
+                Shape = BpmnShapes.Gateway,
+                //Sets type of the gateway to None.
+                Gateway = new BpmnGateway() { Type = BpmnGateways.None }
             }
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```

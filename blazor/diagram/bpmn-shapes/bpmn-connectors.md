@@ -1,9 +1,9 @@
 ---
 layout: post
 title: BPMN Connectors in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about BPMN Connectors in Syncfusion Blazor Diagram component and much more.
+description: Learn here all about BPMN Connectors such as association, sequence in Syncfusion Blazor Diagram component and more.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
@@ -18,7 +18,7 @@ They are classified as follows.
 
 ## Association
 
-The [BPMN Association](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.BpmnAssociationFlows.html) flow is used to link flow objects with its corresponding text or artifact. An association is represented as a dotted graphical line with an opened arrow. The types of association are as follows:
+The `BPMN Association` flow is used to link flow objects with its corresponding text or artifact. An association is represented as a dotted graphical line with an opened arrow. The types of association are as follows:
 
 * Directional
 * BiDirectional
@@ -27,36 +27,35 @@ The [BPMN Association](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
 The association property allows you to define the type of association. The following code example explains how to create an association.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagram Height="600px" Connectors="@ConnectorCollection">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Connectors="@connectors"/>
 
-@code{
-    //Defines diagram's connector collection
-    public ObservableCollection<DiagramConnector> ConnectorCollection { get; set; }
+@code
+{
+    // Create connector and store it in the connector collection.
+    DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
     {
-        ConnectorCollection = new ObservableCollection<DiagramConnector>();
-        DiagramConnector connector = new DiagramConnector()
+        connectors = new DiagramObjectCollection<Connector>();
+        Connector connector = new Connector()
         {
-            //Unique Id of the connector
-            Id = "connector1",
+            // Unique Id of the connector.
+            ID = "connector1",
             // Start and end point of the connector
-            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 200 },
-            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 200 },
-            //Sets the type to Bpmn, flow to Association and association to bidirectional
-            Shape = new DiagramConnectorShape()
+            SourcePoint = new Point() { X = 100, Y = 200 },
+            TargetPoint = new Point() { X = 300, Y = 200 },
+            // Sets the type to Bpmn, flow to Association and association to bidirectional.
+            Shape = new BpmnFlow()
             {
                 Type = ConnectionShapes.Bpmn,
-                BpmnFlow = BpmnFlows.Association,
+                Flow = BpmnFlows.Association,
                 Association = BpmnAssociationFlows.BiDirectional
             }
         };
-        ConnectorCollection.Add(connector);
+        connectors.Add(connector);
     }
 }
 ```
@@ -73,7 +72,7 @@ The following table shows the visual representation of association flows.
 
 ## Sequence
 
-A [Sequence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.BpmnSequenceFlows.html) flow shows the order that the activities are performed in a BPMN process and is represented by a solid graphical line. The types of sequence are as follows:
+A `Sequence` flow shows the order that the activities are performed in a BPMN process and is represented by a solid graphical line. The types of sequence are as follows:
 
 * Normal
 * Conditional
@@ -82,36 +81,35 @@ A [Sequence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Bp
 The sequence property allows you to define the type of sequence. The following code example explains how to create a sequence flow.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagram Height="600px" Connectors="@ConnectorCollection">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Connectors="@connectors"/>
 
-@code{
-    //Defines diagram's connector collection
-    public ObservableCollection<DiagramConnector> ConnectorCollection { get; set; }
+@code
+{
+    // Create connector and store it in the connector collection.
+    DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
     {
-        ConnectorCollection = new ObservableCollection<DiagramConnector>();
-        DiagramConnector connector = new DiagramConnector()
+        connectors = new DiagramObjectCollection<Connector>();
+        Connector connector = new Connector()
         {
-            //Unique Id of the connector
-            Id = "connector1",
-            // Start and end point of the connector
-            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 200 },
-            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 200 },
-            //Sets type to Bpmn, flow to Sequence, and sequence to Conditional
-            Shape = new DiagramConnectorShape()
+            // Unique Id of the connector.
+            ID = "connector1",
+            // Start and end point of the connector.
+            SourcePoint = new Point() { X = 100, Y = 200 },
+            TargetPoint = new Point() { X = 300, Y = 200 },
+            // Sets the type to Bpmn, flow to Association and association to bidirectional.
+            Shape = new BpmnFlow()
             {
                 Type = ConnectionShapes.Bpmn,
-                BpmnFlow = BpmnFlows.Sequence,
+                Flow = BpmnFlows.Sequence,
                 Sequence = BpmnSequenceFlows.Conditional
             }
         };
-        ConnectorCollection.Add(connector);
+        connectors.Add(connector);
     }
 }
 ```
@@ -128,7 +126,7 @@ The following table contains various representation of sequence flows.
 
 ## Message
 
-A [Message](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.BpmnMessageFlows.html) flow shows the flow of messages between two participants and is represented by dashed line. The types of message are as follows:
+A `Message` flow shows the flow of messages between two participants and is represented by dashed line. The types of messages are as follows:
 
 * InitiatingMessage
 * NonInitiatingMessage
@@ -137,36 +135,35 @@ A [Message](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Bpm
 The message property allows you to define the type of message. The following code example explains how to define a message flow.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagram Height="600px" Connectors="@ConnectorCollection">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Connectors="@connectors"/>
 
-@code{
-    //Defines diagram's connector collection
-    public ObservableCollection<DiagramConnector> ConnectorCollection { get; set; }
+@code
+{
+    // Create connector and store it in the connector collection.
+    DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
     {
-        ConnectorCollection = new ObservableCollection<DiagramConnector>();
-        DiagramConnector connector = new DiagramConnector()
+        connectors = new DiagramObjectCollection<Connector>();
+        Connector connector = new Connector()
         {
-            //Unique Id of the connector
-            Id = "connector1",
-            // Start and end point of the connector
-            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 200 },
-            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 200 },
-            //Sets type to Bpmn, flow to Message, and message to InitiatingMessage
-            Shape = new DiagramConnectorShape()
+            // Unique Id of the connector.
+            ID = "connector1",
+            // Start and end point of the connector.
+            SourcePoint = new Point() { X = 100, Y = 200 },
+            TargetPoint = new Point() { X = 300, Y = 200 },
+            // Sets the type to Bpmn, flow to Association and association to bidirectional.
+            Shape = new BpmnFlow()
             {
                 Type = ConnectionShapes.Bpmn,
-                BpmnFlow = BpmnFlows.Message,
+                Flow = BpmnFlows.Message,
                 Message = BpmnMessageFlows.InitiatingMessage
             }
         };
-        ConnectorCollection.Add(connector);
+        connectors.Add(connector);
     }
 }
 ```

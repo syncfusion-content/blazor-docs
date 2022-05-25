@@ -1,105 +1,103 @@
 ---
 layout: post
-title: BPMN Activity in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about BPMN Activity in Syncfusion Blazor Diagram component and much more.
+title: BPMN activity in Blazor Diagram Component | Syncfusion
+description: Learn here all about BPMN activity such as task, subprocess in Syncfusion Blazor Diagram component and more.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
-# BPMN Activity in Blazor Diagram Component
+# BPMN activity in Blazor Diagram Component
 
-The [Activity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnActivity.html) is the task that is performed in a business process. It is represented by a rounded rectangle. There are two types of activities. They are listed as follows:
+The `Activity` is the task that is performed in a business process. It is represented by a rounded rectangle.
+
+There are two types of activities. They are listed as follows:
 
 * Task: Occurs within a process and it is not broken down to a finer level of detail.
 * Subprocess: Occurs within a process and it is broken down to a finer level of detail.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagram Height="600px" Nodes="@NodeCollection">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
-    //Defines diagram's node collection
-    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+@code
+{
+    // Initialize the node collection with node.
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node = new DiagramNode()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            //Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            //Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            //Unique Id of the node
-            Id = "node1",
-            //sets the type of shape to Bpmn and shape to activity
-            Shape = new DiagramShape()
+            // Unique Id of the node.
+            ID = "node1",
+            // Sets the type of shape to Bpmn and shape to activity.
+            Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
-                BpmnShape = BpmnShapes.Activity,
-                //Sets the activity type to task
-                Activity = new DiagramBpmnActivity() { Activity = BpmnActivities.Task },
+                Shape = BpmnShapes.Activity,
+                // Sets the activity type to task.
+                Activity = new BpmnActivity() { Activity = BpmnActivities.Task },
             }
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
 
 ## BPMN activity task
 
-The [Task](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnTask.html) property of the node allows you to define the type of task such as sending, receiving, user-based task, etc. By default, the `Type` property of task is set to **None**. The following code explains how to create different types of BPMN tasks.
-
-The events property of tasks allows you to represent these results as an event attached to the task.
+The `Task` property of the node allows you to define the type of task such as sending, receiving, user-based task, etc. By default, the `Type` property of task is set to **None**. The following code explains how to create different types of BPMN tasks. The events property of tasks allows you to represent these results as an event attached to the task.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagram Height="600px" Nodes="@NodeCollection">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Nodes="@nodes"/>
 
-@code{
-    //Defines diagram's node collection
-    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+@code
+{
+    // Initialize the node collection with node.
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node = new DiagramNode()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            //Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            //Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            //Unique Id of the node
-            Id = "node1",
-            //Sets the type to bpmn and shape to activity
-            Shape = new DiagramShape()
+            // Unique Id of the node.
+            ID = "node1",
+            // Sets the type of shape to Bpmn and shape to activity.
+            Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
-                BpmnShape = BpmnShapes.Activity,
-                //Sets activity to Task
-                Activity = new DiagramBpmnActivity()
-                {
+                Shape = BpmnShapes.Activity,
+                // Sets the activity type to task.
+                Activity = new BpmnActivity() 
+                { 
                     Activity = BpmnActivities.Task,
-                    //Sets the type of the task to Send
-                    Task = new DiagramBpmnTask() { Type = BpmnTasks.Send }
-                }
+                    // Sets the type of the task to Send.
+                    Task = new BpmnTask() { Type = BpmnTasks.Send }
+                },
             }
         };
-        NodeCollection.Add(node);
-    }
+        nodes.Add(node);
+    }   
 }
 ```
 
@@ -118,103 +116,102 @@ The various types of BPMN tasks are tabulated as follows.
 
 ## BPMN activity sub process
 
-A [Sub-process](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html) is a group of tasks that is used to hide or reveal details of additional levels using the `Collapsed` property.
+A `Sub-process` is a group of tasks that is used to hide or reveal details of additional levels using the `Collapsed` property.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagram Height="600px" Nodes="@NodeCollection">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Nodes="@nodes"/>
 
-@code{
-    //Defines diagram's node collection
-    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+@code
+{
+    // Initialize the node collection with node.
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node = new DiagramNode()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            //Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            //Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            //Unique id of the node
-            Id = "node1",
-            Shape = new DiagramShape()
+            // Unique Id of the node.
+            ID = "node1",
+            // Sets the type of shape to Bpmn and shape to activity.
+            Shape = new BpmnShape()
             {
-                //Sets type to Bpmn and shape to Activity
                 Type = Shapes.Bpmn,
-                BpmnShape = BpmnShapes.Activity,
-                Activity = new DiagramBpmnActivity()
+                Shape = BpmnShapes.Activity,
+                // Sets the activity type to task.
+                Activity = new BpmnActivity()
                 {
-                    //Sets activity to subprocess
+                    // Sets activity to subprocess.
                     Activity = BpmnActivities.SubProcess,
-                    // Set collapsed of subprocess to true
-                    SubProcess = new DiagramBpmnSubProcess() { Collapsed = true }
+                    // Set collapsed of subprocess to true.
+                    SubProcess = new BpmnSubProcess() { Collapsed = true }
                 },
             }
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
 
 The different types of subprocess are as follows:
-* Event subprocess
-* Transaction
 
-### Event sub process
+    * Event subprocess
+    * Transaction
 
-A [SubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html) is defined as an event SubProcess when it is triggered by an event. An event SubProcess is placed within another subprocess that part of the normal flow of its parent process is not. You can set event to a subprocess with the `Event` and `Trigger` properties of the subprocess. The `Type` property of subprocess allows you to define the type of subprocess whether it should be event subprocess or transaction subprocess.
+### Event sub Process
+
+A `SubProcess` is defined as an event SubProcess when it is triggered by an event. An event SubProcess is placed within another subprocess that part of the normal flow of its parent process is not. You can set event to a subprocess with the `Event` and `Trigger` properties of the subprocess. The `Type` property of subprocess allows you to define the type of subprocess whether it should be event subprocess or transaction subprocess.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagram Height="600px" Nodes="@NodeCollection">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
-    //Defines diagram's node collection
-    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+@code
+{
+    // Initialize the node collection with node.
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node = new DiagramNode()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
             // Size of the node
             Width = 100,
             Height = 100,
-            // Unique id of the node
-            Id = "node1",
-            // Sets the type to Bpmn and shape to Activity
-            Shape = new DiagramShape()
+            // Unique id of the node.
+            ID = "node1",
+            Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
-                BpmnShape = BpmnShapes.Activity,
-                //Sets activity to SubProcess
-                Activity = new DiagramBpmnActivity()
+                Shape = BpmnShapes.Activity,
+                // Sets activity to SubProcess.
+                Activity = new BpmnActivity()
                 {
                     Activity = BpmnActivities.SubProcess,
-                    //Sets the collapsed to true and type to Event
-                    SubProcess = new DiagramBpmnSubProcess()
+                    // Sets the collapsed to true and type to Event.
+                    SubProcess = new BpmnSubProcess()
                     {
                         Collapsed = true,
                         Type = BpmnSubProcessTypes.Event,
-                        //Sets event to Start and trigger to Message
-                        Events = new ObservableCollection<DiagramBpmnSubEvent>()
+                        // Sets event to Start and trigger to Message.
+                        Events = new List<BpmnSubEvent>()
                         {
-                            new DiagramBpmnSubEvent()
+                            new BpmnSubEvent()
                             {
                                 Event = BpmnEvents.Start, Trigger = BpmnTriggers.Message
                             }
@@ -223,14 +220,14 @@ A [SubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.
                 }
             }
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
 
 ### Transaction sub process
 
-The [Transaction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Transaction) is a set of activities that logically belong together that all contained activities must complete their parts of the transaction, otherwise the process is fail.
+The `Transaction` is a set of activities that logically belong together that all contained activities must complete their parts of the transaction, otherwise the process is fail.
 
 The execution result of a transaction is one of
 * Successful Completion
@@ -248,136 +245,124 @@ The `Events` property of subprocess allows you to represent these results as an 
 * You can also use define ports and labels to subprocess events by using the event’s ports and labels properties.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagram Height="600px" Nodes="@NodeCollection">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
-    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+@code
+{
+    // Initialize the node collection with node.
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node = new DiagramNode()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            // Unique id of the node
-            Id = "node1",
-            //Defines the type to BPMN and shape to activity
-            Shape = new DiagramShape()
+            // Unique id of the node.
+            ID = "node1",
+            // Defines the type to BPMN and shape to activity.
+            Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
-                BpmnShape = BpmnShapes.Activity,
-                //Sets the activity to subprocess
-                Activity = new DiagramBpmnActivity()
+                Shape = BpmnShapes.Activity,
+                // Sets the activity to subprocess.
+                Activity = new BpmnActivity()
                 {
                     Activity = BpmnActivities.SubProcess,
-                    //Sets collapsed to true and type to Transaction
-                    SubProcess = new DiagramBpmnSubProcess()
+                    // Sets collapsed to true and type to Transaction.
+                    SubProcess = new BpmnSubProcess()
                     {
                         Collapsed = true,
                         Type = BpmnSubProcessTypes.Transaction,
-                        //Sets offset and visible for cancel and offset for failure
-                        Transaction = new DiagramBpmnTransactionSubProcess()
+                        // Sets offset and visible for cancel and offset for failure.
+                        Transaction = new BpmnTransactionSubProcess()
                         {
-                            Cancel = new CancelSubEvent()
-                            {
-                                Visible = true,
-                                Offset = new BpmnSubEventOffset() { X = 0.25, Y = 1 }
-                            },
-                            Failure = new FailureSubEvent()
-                            {
-                                Offset = new BpmnSubEventOffset() { X = 0.75, Y = 1 }
-                            }
+                            Cancel = new BpmnSubEvent() { Visible = true, Offset = new Point() { X = 0.25, Y = 1 } },
+                            Failure = new BpmnSubEvent() { Offset = new Point() { X = 0.75, Y = 1 } }
                         }
                     },
                 }
             }
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
 
 ### Process
 
-[Processes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Processes) is an array collection that defines the children values for BPMN subprocess.
+The `Processes` is an array collection that defines the children values for BPMN subprocess.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagram Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" />
 
-@code{
-    //Defines diagram's node collection
-    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
-    //Defines diagram's connector collection
-    public ObservableCollection<DiagramConnector> ConnectorCollection { get; set; }
+@code
+{
+    //Initialize the node collection with node.
+    DiagramObjectCollection<Node> nodes;
+    DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
     {
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node1 = new DiagramNode()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node1 = new Node()
         {
-            Id = "Start",
+            ID = "Start",
             Width = 50,
             Height = 50,
-            Margin = new NodeMargin() { Left = 10, Top = 50 },
-            Shape = new DiagramShape()
+            Margin = new Margin() { Left = 10, Top = 50 },
+            Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
-                BpmnShape = BpmnShapes.Event,
-                Event = new DiagramBpmnEvent() { Event = BpmnEvents.Start }
+                Shape = BpmnShapes.Event,
+                Events = new BpmnSubEvent() { Event = BpmnEvents.Start }
             }
         };
-        DiagramNode node2 = new DiagramNode()
+        Node node2 = new Node()
         {
-            Id = "End",
+            ID = "End",
             Width = 50,
             Height = 50,
-            Margin = new NodeMargin() { Left = 200, Top = 50 },
-            Shape = new DiagramShape()
+            Margin = new Margin() { Left = 200, Top = 50 },
+            Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
-                BpmnShape = BpmnShapes.Event,
-                Event = new DiagramBpmnEvent() { Event = BpmnEvents.End }
+                Shape = BpmnShapes.Event,
+                Events = new BpmnSubEvent() { Event = BpmnEvents.End }
             }
         };
-        DiagramNode node3 = new DiagramNode()
+        Node node3 = new Node()
         {
-            Id = "Node1",
+            ID = "Node1",
             Width = 50,
             Height = 50,
-            Margin = new NodeMargin() { Left = 100, Top = 200 },
-            Shape = new DiagramShape()
+            Margin = new Margin() { Left = 100, Top = 200 },
+            Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
-                BpmnShape = BpmnShapes.Activity,
-                Activity = new DiagramBpmnActivity()
+                Shape = BpmnShapes.Activity,
+                Activity = new BpmnActivity()
                 {
                     Activity = BpmnActivities.SubProcess,
-                    SubProcess = new DiagramBpmnSubProcess()
-                    {
-                        Collapsed = false
-                    }
+                    SubProcess = new BpmnSubProcess() { Collapsed = false }
                 }
             },
             Constraints = NodeConstraints.Default | NodeConstraints.AllowDrop
         };
-        DiagramNode node4 = new DiagramNode()
+        Node node4 = new Node()
         {
-            Id = "ActivityProcessNode",
+            ID = "ActivityProcessNode",
             Width = 300,
             Height = 300,
             MaxHeight = 400,
@@ -386,88 +371,86 @@ The `Events` property of subprocess allows you to represent these results as an 
             MinHeight = 200,
             OffsetX = 200,
             OffsetY = 200,
-            Shape = new DiagramShape()
+            Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
-                BpmnShape = BpmnShapes.Activity,
-                Activity = new DiagramBpmnActivity()
+                Shape = BpmnShapes.Activity,
+                Activity = new BpmnActivity()
                 {
                     Activity = BpmnActivities.SubProcess,
-                    SubProcess = new DiagramBpmnSubProcess()
+                    SubProcess = new BpmnSubProcess()
                     {
                         Collapsed = false,
                         Type = BpmnSubProcessTypes.Event,
-                        Processes = new string[] { "Start", "End", "Node1" }
+                        Processes = new DiagramObjectCollection<string> { "Start", "End", "Node1" }
                     }
                 }
             },
             Constraints = NodeConstraints.Default | NodeConstraints.AllowDrop
         };
-        NodeCollection.Add(node1);
-        NodeCollection.Add(node2);
-        NodeCollection.Add(node3);
-        NodeCollection.Add(node4);
-        ConnectorCollection = new ObservableCollection<DiagramConnector>();
-        DiagramConnector connector1 = new DiagramConnector()
+        nodes.Add(node1);
+        nodes.Add(node2);
+        nodes.Add(node3);
+        nodes.Add(node4);
+
+        connectors = new DiagramObjectCollection<Connector>();
+        Connector connector1 = new Connector()
         {
-            Id = "Connector1",
+            ID = "Connector1",
             SourceID = "Start",
             TargetID = "Node1"
         };
-        DiagramConnector connector2 = new DiagramConnector()
+        Connector connector2 = new Connector()
         {
-            Id = "Connector2",
+            ID = "Connector2",
             SourceID = "Node1",
             TargetID = "End"
         };
-        ConnectorCollection.Add(connector1);
-        ConnectorCollection.Add(connector2);
+        connectors.Add(connector1);
+        connectors.Add(connector2);
     }
 }
 ```
 
 ### Loop
 
-[Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Loop) is a task that is internally being looped. The loop property of task allows you to define the type of loop. The default value for [Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Loop) is **None**.
-
-You can define the loop property in subprocess BPMN shape as shown in the following code.
+`Loop` is a task that is internally being looped. The loop property of task allows you to define the type of loop. The default value for `Loop` is **None**. You can define the loop property in subprocess BPMN shape as shown in the following code.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagram Height="600px" Nodes="@NodeCollection">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Nodes="@nodes"/>
 
-@code{
-    //Defines diagram's node collection
-    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+@code
+{       
+    // Initialize the node collection with node.
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node = new DiagramNode()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            //Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            //Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            //Unique id of the node
-            Id = "node1",
-            //Defines the type to BPMN and shape to activity
-            Shape = new DiagramShape()
+            // Unique Id of the node.
+            ID = "node1",
+            // Defines the type to BPMN and shape to activity.
+            Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
-                BpmnShape = BpmnShapes.Activity,
-                //Set the activity to subprocess
-                Activity = new DiagramBpmnActivity()
+                Shape = BpmnShapes.Activity,
+                // Set the activity to subprocess.
+                Activity = new BpmnActivity()
                 {
                     Activity = BpmnActivities.SubProcess,
-                    //Sets collapsed to true and loop to standard
-                    SubProcess = new DiagramBpmnSubProcess()
+                    // Sets collapsed to true and loop to standard.
+                    SubProcess = new BpmnSubProcess()
                     {
                         Collapsed = true,
                         Loop = BpmnLoops.Standard,
@@ -475,7 +458,7 @@ You can define the loop property in subprocess BPMN shape as shown in the follow
                 }
             }
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
@@ -490,71 +473,70 @@ The following table contains various types of BPMN loops.
 
 ### Compensation
 
-[Compensation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Compensation) is triggered when the operation is partially failed and enabled it with the compensation property of the task and the subprocess.
+`Compensation` is triggered when the operation is partially failed and enabled it with the compensation property of the task and the subprocess.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagram Height="600px" Nodes="@NodeCollection">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
-    //Defines diagram's node collection
-    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+@code
+{
+    // Initialize the node collection with node.
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node1 = new DiagramNode()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node1 = new Node()
         {
-            //Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            //Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            //Unique id of the node
-            Id = "node1",
-            //Defines the type to BPMN and shape to activity
-            Shape = new DiagramShape()
+            // Unique id of the node.
+            ID = "node1",
+            // Defines the type to BPMN and shape to activity.
+            Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
-                BpmnShape = BpmnShapes.Activity,
-                //Set the activity to task
-                Activity = new DiagramBpmnActivity()
+                Shape = BpmnShapes.Activity,
+                // Set the activity to task.
+                Activity = new BpmnActivity()
                 {
                     Activity = BpmnActivities.Task,
-                    //set compensation to true
-                    Task = new DiagramBpmnTask()
+                    // Set compensation to true.
+                    Task = new BpmnTask()
                     {
                         Compensation = true,
                     },
                 }
             }
         };
-        DiagramNode node2 = new DiagramNode()
+        Node node2 = new Node()
         {
-            //Position of the node
+            // Position of the node.
             OffsetX = 300,
             OffsetY = 100,
-            //Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            //Unique id of the node
-            Id = "node2",
-            //Defines the type to BPMN and shape to activity
-            Shape = new DiagramShape()
+            // Unique id of the node.
+            ID = "node2",
+            // Defines the type to BPMN and shape to activity.
+            Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
-                BpmnShape = BpmnShapes.Activity,
-                //Set the activity to SubProcess
-                Activity = new DiagramBpmnActivity()
+                Shape = BpmnShapes.Activity,
+                // Set the activity to SubProcess
+                Activity = new BpmnActivity()
                 {
                     Activity = BpmnActivities.SubProcess,
-                    //Sets collapsed and compensation to true
-                    SubProcess = new DiagramBpmnSubProcess()
+                    // Sets collapsed and compensation to true.
+                    SubProcess = new BpmnSubProcess()
                     {
                         Collapsed = true,
                         Compensation = true,
@@ -562,104 +544,101 @@ The following table contains various types of BPMN loops.
                 }
             }
         };
-        NodeCollection.Add(node1);
-        NodeCollection.Add(node2);
+        nodes.Add(node1);
+        nodes.Add(node2);
     }
 }
 ```
 
 ### Call
 
-A [Call](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnTask.html#Syncfusion_Blazor_Diagrams_DiagramBpmnTask_Call) activity is a global subprocess that is reused at various points of the business flow and set it with the call property of the task.
+A `Call` activity is a global subprocess that is reused at various points of the business flow and set it with the call property of the task.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagram Height="600px" Nodes="@NodeCollection">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Nodes="@nodes"/>
 
-@code{
-    //Defines diagram's node collection
-    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+@code
+{
+    // Initialize the node collection with node.
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node = new DiagramNode()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            //Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            //Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            //Unique id of the node
-            Id = "node1",
-            //Defines the type to BPMN and shape to activity
-            Shape = new DiagramShape()
+            // Unique Id of the node.
+            ID = "node1",         
+            // Defines the type to BPMN and shape to activity.
+            Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
-                BpmnShape = BpmnShapes.Activity,
-                //sets the activity to task
-                Activity = new DiagramBpmnActivity()
+                Shape = BpmnShapes.Activity,
+                // Sets the activity to task.
+                Activity = new BpmnActivity()
                 {
                     Activity = BpmnActivities.Task,
-                    //Sets call to true
-                    Task = new DiagramBpmnTask()
+                    // Sets call to true.
+                    Task = new BpmnTask()
                     {
                         Call = true,
                     },
                 }
             }
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
 
 ### Ad-Hoc
 
-An ad-hoc subprocess is a group of tasks that are executed in any order or skipped in order to fulfill the end condition and set it with the [Ad-hoc](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Adhoc) property of subprocess.
+An ad-hoc subprocess is a group of tasks that are executed in any order or skipped in order to fulfill the end condition and set it with the `Ad-hoc` property of subprocess.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagram Height="600px" Nodes="@NodeCollection">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
 @code
 {
-    //Defines diagram's node collection
-    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+    // Initialize the node collection with node.
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node = new DiagramNode()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            //Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            //Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            //unique id of the node
-            Id = "node1",
-            //Defines the type to BPMN and shape to activity
-            Shape = new DiagramShape()
+            // Unique id of the node.
+            ID = "node1",
+            // Defines the type to BPMN and shape to activity
+            Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
-                BpmnShape = BpmnShapes.Activity,
-                //Sets the activity to subprocess
-                Activity = new DiagramBpmnActivity()
+                Shape = BpmnShapes.Activity,
+                // Sets the activity to subprocess
+                Activity = new BpmnActivity()
                 {
                     Activity = BpmnActivities.SubProcess,
-                    //sets collapsed and ad hoc to true
-                    SubProcess = new DiagramBpmnSubProcess()
+                    // Sets collapsed and ad hoc to true.
+                    SubProcess = new BpmnSubProcess()
                     {
                         Collapsed = true,
                         Adhoc = true
@@ -667,60 +646,58 @@ An ad-hoc subprocess is a group of tasks that are executed in any order or skipp
                 }
             }
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
 
 ### Boundary
 
-Boundary represents the type of task that is being processed. The [Boundary](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Boundary) property of subprocess allows you to define the type of boundary. By default, it is set to **Default**.
+Boundary represents the type of task that is being processed. The `Boundary` property of subprocess allows you to define the type of boundary. By default, it is set to **Default**.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagram Height="600px" Nodes="@NodeCollection">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
 @code
 {
-    //Defines diagram's node collection
-    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+    // Initialize the node collection with node.
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node = new DiagramNode()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            //Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            //Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            //Unique Id of the node
-            Id = "node1",
-            //Sets type to Bpmn and shape to Activity
-            Shape = new DiagramShape()
+            // Unique Id of the node.
+            ID = "node1",
+            // Sets type to Bpmn and shape to Activity.
+            Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
-                BpmnShape = BpmnShapes.Activity,
-                //Sets activity to SubProcess
-                Activity = new DiagramBpmnActivity()
+                Shape = BpmnShapes.Activity,
+                // Sets activity to SubProcess.
+                Activity = new BpmnActivity()
                 {
                     Activity = BpmnActivities.SubProcess,
-                    //Sets collapsed to true and boundary to Call
-                    SubProcess = new DiagramBpmnSubProcess()
+                    // Sets collapsed to true and boundary to Call.
+                    SubProcess = new BpmnSubProcess()
                     {
                         Collapsed = true,
-                        Boundary = BpmnBoundary.Call
+                        Boundary = Syncfusion.Blazor.Diagram.BpmnBoundary.Call
                     },
                 }
             }
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```

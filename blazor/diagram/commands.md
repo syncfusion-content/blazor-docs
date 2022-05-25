@@ -3,15 +3,11 @@ layout: post
 title: Commands in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Commands in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
-> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram-component/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
-
 # Commands in Blazor Diagram Component
-
-<!-- markdownlint-disable MD010 -->
 
 There are several commands available in the diagram as follows.
 
@@ -20,49 +16,371 @@ There are several commands available in the diagram as follows.
 * Sizing commands
 * Clipboard commands
 * Grouping commands
-* Z-order commands
 * Zoom commands
-* Nudge commands
-* FitToPage commands
-* Undo/Redo commands 
+* Undo/Redo commands
 
 ## Alignment commands
 
-Alignment commands enable you to align the selected or defined objects such as nodes and connectors with respect to the selection boundary. Refer to `Align` commands which shows how to use align methods in the diagram.
+Alignment commands enable you to align the selected or defined objects such as nodes and connectors with respect to the selection boundary. Following are the [AlignmentOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AlignmentOptions.html) in [SetAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetAlign_Syncfusion_Blazor_Diagram_AlignmentOptions_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__Syncfusion_Blazor_Diagram_AlignmentMode_) commands which shows how to use align methods in the diagram.
 
+### How to align the selected objects to the left
 
-| Parameters | Description |
-|:------------| :------ |
-|[Alignment Options](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AlignmentOptions.html) | Defines the specific direction, with respect to which the objects to be aligned. The accepted values of the argument "alignment options" are as follows. <br> Left - Aligns all the selected objects at the left of the selection boundary. <br> Right - Aligns all the selected objects at the right of the selection boundary. <br> Center - Aligns all the selected objects at the center of the selection boundary. <br> Top - Aligns all the selected objects at the top of the selection boundary. <br> Bottom - Aligns all the selected objects at the bottom of the selection boundary. <br> Middle - Aligns all the selected objects at the middle of the selection boundary.|
-| Objects | Defines the objects to be aligned. This is an optional parameter. By default, all the nodes and connectors in the selected region of the diagram gets aligned. |
-[Alignment Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AlignmentMode.html)  | Defines the specific mode, with respect to which the objects to be aligned. This is an optional parameter. The default alignment mode is `Object`. <br> The accepted values of the argument "alignment mode" are as follows. <br> Object - Aligns the objects based on the first object in the selected list. <br> Selector - Aligns the objects based on the selection boundary. | 
-
-
-The following code example illustrates how to align all the selected objects at the left side of the selection boundary.
+The following code example illustrates how to align all the selected objects to the left side of the selection boundary.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
+@using Syncfusion.Blazor.Diagram
 
-<SfDiagram @ref="@diagram" Height="600px" />
+<input type="button" value="Left" @onclick="@OnAlignLeft" />
+
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
 
 @code
 {
-    //Reference to diagram
-    SfDiagram diagram;
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
 
-    private void Align()
+    protected override void OnInitialized()
     {
-        //Aligns the selected items to left
-        diagram.Align(AlignmentOptions.Left, null, AlignmentMode.Selector);
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 30,
+            OffsetX = 500,
+            OffsetY = 100,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 60,
+            Height = 40,
+            OffsetX = 500,
+            OffsetY = 300,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+        };
+        nodes.Add(node2);
+        Node node3 = new Node()
+        {
+            ID = "node3",
+            Width = 70,
+            Height = 50,
+            OffsetX = 500,
+            OffsetY = 500,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+        };
+        nodes.Add(node3);
     }
+
+    private void OnAlignLeft()
+    {
+        //Aligns the selected objects to the left side of the selection boundary.
+        diagram.SetAlign(AlignmentOptions.Left);
+    }      
 }
 ```
 
+### How to align the selected objects to the right
+
+The following code example illustrates how to align all the selected objects at the right side of the selection boundary.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<input type="button" value="Right" @onclick="@OnAlignRight" />
+
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
+
+@code
+{
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
+
+   protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 30,
+            OffsetX = 500,
+            OffsetY = 100,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 60,
+            Height = 40,
+            OffsetX = 500,
+            OffsetY = 300,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+        };
+        nodes.Add(node2);
+        Node node3 = new Node()
+        {
+            ID = "node3",
+            Width = 70,
+            Height = 50,
+            OffsetX = 500,
+            OffsetY = 500,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+        };
+        nodes.Add(node3);
+    }
+
+    private void OnAlignRight()
+    {
+        //Aligns the selected objects to the right side of the selection boundary.
+        diagram.SetAlign(AlignmentOptions.Right);
+    }     
+}
+```
+
+### How to align the selected objects to the top
+
+The following code example illustrates how to align all the selected objects at the top of the selection boundary.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<input type="button" value="Top" @onclick="@OnAlignTop" />
+
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
+
+@code
+{
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
+
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 30,
+            OffsetX = 500,
+            OffsetY = 100,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 60,
+            Height = 40,
+            OffsetX = 500,
+            OffsetY = 300,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+        };
+        nodes.Add(node2);
+        Node node3 = new Node()
+        {
+            ID = "node3",
+            Width = 70,
+            Height = 50,
+            OffsetX = 500,
+            OffsetY = 500,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+        };
+        nodes.Add(node3);
+    }
+
+    private void OnAlignTop()
+    {
+        //Aligns the selected objects at the top of the selection boundary.
+        diagram.SetAlign(AlignmentOptions.Top);
+    }       
+}
+```
+
+### How to align the selected objects to the bottom
+
+The following code example illustrates how to align all the selected objects at the bottom of the selection boundary.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<input type="button" value="Bottom" @onclick="@OnAlignBottom" />
+
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
+
+@code
+{
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
+
+   protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 30,
+            OffsetX = 500,
+            OffsetY = 100,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 60,
+            Height = 40,
+            OffsetX = 500,
+            OffsetY = 300,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+        };
+        nodes.Add(node2);
+        Node node3 = new Node()
+        {
+            ID = "node3",
+            Width = 70,
+            Height = 50,
+            OffsetX = 500,
+            OffsetY = 500,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+        };
+        nodes.Add(node3);
+    }
+
+    private void OnAlignBottom()
+    {
+        //Aligns the selected objects at the bottom of the selection boundary.
+        diagram.SetAlign(AlignmentOptions.Bottom);
+    }     
+}
+```
+
+### How to align the selected objects to the middle
+
+The following code example illustrates how to align all the selected objects at the middle of the selection boundary.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<input type="button" value="Middle" @onclick="@OnAlignMiddle" />
+
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
+
+@code
+{
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
+
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 30,
+            OffsetX = 500,
+            OffsetY = 100,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 60,
+            Height = 40,
+            OffsetX = 500,
+            OffsetY = 300,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+        };
+        nodes.Add(node2);
+        Node node3 = new Node()
+        {
+            ID = "node3",
+            Width = 70,
+            Height = 50,
+            OffsetX = 500,
+            OffsetY = 500,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+        };
+        nodes.Add(node3);
+    }
+
+    private void OnAlignMiddle()
+    {
+        //Aligns the selected objects at the middle of the selection boundary
+        diagram.SetAlign(AlignmentOptions.Middle);
+    }         
+}
+```
+
+### How to align the selected objects to the center
+
+The following code example illustrates how to align all the selected objects at the center of the selection boundary.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<input type="button" value="Center" @onclick="@OnAlignCenter" />
+
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
+
+@code
+{
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
+
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 30,
+            OffsetX = 230,
+            OffsetY = 180,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 60,
+            Height = 40,
+            OffsetX = 500,
+            OffsetY = 300,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+        };
+        nodes.Add(node2);
+        Node node3 = new Node()
+        {
+            ID = "node3",
+            Width = 70,
+            Height = 50,
+            OffsetX = 235,
+            OffsetY = 425,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+        };
+        nodes.Add(node3);
+    }
+
+    private void OnAlignCenter()
+    {
+        //Aligns the selected objects at the center of the selection boundary.
+        diagram.SetAlign(AlignmentOptions.Center);
+    }        
+}
+```
 ## Distribute
 
-The [Distribute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Distribute_Syncfusion_Blazor_Diagrams_DistributeOptions_System_Object_) commands enable to place the selected objects on the page at equal intervals from each other. The selected objects are equally spaced within the selection boundary.
+The [SetDistribute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetDistribute_Syncfusion_Blazor_Diagram_DistributeOptions_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) commands enable to place the selected objects on the page at equal intervals from each other. The selected objects are equally spaced within the selection boundary.
 
-The factor to distribute the shapes `DistributeOptions` are listed as follows:
+The factor to distribute the shapes [DistributeOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DistributeOptions.html) are listed as follows:
 
 * RightToLeft: Distributes the objects based on the distance between the right and left sides of the adjacent objects.
 * Left: Distributes the objects based on the distance between the left sides of the adjacent objects.
@@ -76,262 +394,393 @@ The factor to distribute the shapes `DistributeOptions` are listed as follows:
 The following code example illustrates how to execute the space commands.
 
 ```cshtml
+@using Syncfusion.Blazor.Diagram
 
-@using Syncfusion.Blazor.Diagrams
+<input type="button" value="Left" @onclick="@OnDistributeLeft" />
+<input type="button" value="Right" @onclick="@OnDistributeRight" />
+<input type="button" value="Top" @onclick="@OnDistributeTop" />
+<input type="button" value="Bottom" @onclick="@OnDistributeBottom" />
+<input type="button" value="Center" @onclick="@OnDistributeCenter" />
+<input type="button" value="Middle" @onclick="@OnDistributeMiddle" />
+<input type="button" value="BottomToTop" @onclick="@OnDistributeBottomToTop" />
+<input type="button" value="RightToLeft" @onclick="@OnDistributeRightToLeft" />
 
-<SfDiagram @ref="@diagram" Height="600px" />
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
 
 @code
 {
-    //Reference to diagram
-    SfDiagram diagram;
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
 
-    private void Distribute()
+     protected override void OnInitialized()
     {
-        //Distribute the elements in equal spacing
-        diagram.Distribute(DistributeOptions.RightToLeft);
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 30,
+            OffsetX = 500,
+            OffsetY = 100,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 60,
+            Height = 40,
+            OffsetX = 400,
+            OffsetY = 200,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+        };
+        nodes.Add(node2);
+        Node node3 = new Node()
+        {
+            ID = "node3",
+            Width = 70,
+            Height = 50,
+            OffsetX = 500,
+            OffsetY = 300,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+        };
+        nodes.Add(node3);
+    }
+
+    private void OnDistributeLeft()
+    {
+        //Distributes the objects based on the distance between the left sides of the adjacent objects.
+        diagram.SetDistribute(DistributeOptions.Left);
+    }
+
+    private void OnDistributeRight()
+    {
+        //Distributes the objects based on the distance between the right sides of the adjacent objects.
+        diagram.SetDistribute(DistributeOptions.Right);
+    }
+
+    private void OnDistributeTop()
+    {
+        //Distributes the objects based on the distance between the top sides of the adjacent objects.
+        diagram.SetDistribute(DistributeOptions.Top);
+    }
+
+    private void OnDistributeBottom()
+    {
+        //Distributes the objects based on the distance between the bottom sides of the adjacent objects.
+        diagram.SetDistribute(DistributeOptions.Bottom);
+    }
+
+    private void OnDistributeMiddle()
+    {
+        //Distributes the objects based on the distance between vertical centers of the adjacent objects.
+        diagram.SetDistribute(DistributeOptions.Middle);
+    }
+
+    private void OnDistributeCenter()
+    {
+        //Distributes the objects based on the distance between the centers of the adjacent objects.
+        diagram.SetDistribute(DistributeOptions.Center);
+    }
+
+    private void OnDistributeBottomToTop()
+    {
+        //Distributes the objects based on the distance between bottom and top sides of adjacent objects.
+        diagram.SetDistribute(DistributeOptions.BottomToTop);
+    }
+
+    private void OnDistributeRightToLeft()
+    {
+        //Distributes the objects based on the distance between right and left sides of adjacent objects.
+        diagram.SetDistribute(DistributeOptions.RightToLeft);
     }
 }
 ```
 
 ## Sizing Commands
 
-Sizing [SameSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_SameSize_Syncfusion_Blazor_Diagrams_SizingOptions_System_Object_) commands enable to equally size the selected nodes with respect to the first selected object.
+Sizing [SetSameSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetSameSize_Syncfusion_Blazor_Diagram_SizingMode_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) commands are used to resize all selected object based on width, height, and size of the reference object (FirstSelectedItem).
 
-`SizingOptions` are as follows:
+[SizingMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizingMode.html) are as follows:
 
-* Width: Scales the width of the selected objects.
-* Height: Scales the height of the selected objects.
-* Size: Scales the selected objects both vertically and horizontally.
+* [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizingMode.html#Syncfusion_Blazor_Diagram_SizingMode_Width) : Scales the width of the selected objects.
+* [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizingMode.html#Syncfusion_Blazor_Diagram_SizingMode_Height) : Scales the height of the selected objects.
+* [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizingMode.html#Syncfusion_Blazor_Diagram_SizingMode_Size) : Scales the selected objects both vertically and horizontally.
 
 The following code example illustrates how to execute the size commands.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
+@using Syncfusion.Blazor.Diagram
 
-<SfDiagram @ref="@diagram" Height="600px" />
+<input type="button" value="SameSize" @onclick="@OnSameSize" />
+<input type="button" value="SameWidth" @onclick="@OnSameWidth" />
+<input type="button" value="SameHeight" @onclick="@OnSameHeight" />
+
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" Connectors="@connectors" />
 
 @code
 {
-    //Reference to diagram
-    SfDiagram diagram;
+    //Reference to diagram.
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
-    private void SameSize()
+    protected override void OnInitialized()
     {
-        //Changing the selected nodes to same size
-        SizingOptions sizingOptions = SizingOptions.Size;
-        diagram.SameSize(sizingOptions);
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 30,
+            OffsetX = 500,
+            OffsetY = 100,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 60,
+            Height = 40,
+            OffsetX = 400,
+            OffsetY = 200,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
+        };
+        nodes.Add(node2);
+        Node node3 = new Node()
+        {
+            ID = "node3",
+            Width = 70,
+            Height = 50,
+            OffsetX = 500,
+            OffsetY = 300,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
+        };
+        nodes.Add(node3);
+    }
+
+    private void OnSameSize()
+    {
+        //Scales the selected objects both vertically and horizontally.
+        diagram.SetSameSize(SizingMode.Size);
+    }
+
+    private void OnSameWidth()
+    {
+        //Scales the width of the selected objects.
+        diagram.SetSameSize(SizingMode.Width);
+    }
+
+    private void OnSameHeight()
+    {
+        //Scales the height of the selected objects.
+        diagram.SetSameSize(SizingMode.Height);
     }
 }
 ```
 
-## Clipboard
+## Clipboard commands
 
-Clipboard commands are used to cut, copy, or paste the selected elements. Refer to the following link which shows how to use clipboard methods in the diagram.
+Clipboard commands are used to cut, copy, or paste the selected elements.
 
-* Cuts the selected elements from the diagram to the diagram’s clipboard, [Cut](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Cut).
+* Cuts the selected elements from the diagram to the diagram’s clipboard using [Cut](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Cut) command.
 
-* Copies the selected elements from the diagram to the diagram’s clipboard, [Copy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Copy).
+* Copies the selected elements from the diagram to the diagram’s clipboard using [Copy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Copy) command.
 
-* Pastes the diagram’s clipboard data (nodes/connectors) into the diagram, [Paste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Paste_System_Object_).
+* Pastes the diagram’s clipboard data (nodes/connectors) into the diagram using [Paste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Paste) command.
 
 The following code illustrates how to execute the clipboard commands.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
+@using Syncfusion.Blazor.Diagram
 
-<SfDiagram @ref="@diagram" Height="600px">
-</SfDiagram>
+<input type="button" value="Cut" @onclick="@OnCut" />
+<input type="button" value="Copy" @onclick="@OnCopy" />
+<input type="button" value="Paste" @onclick="@OnPaste" />
+
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" Connectors="@Connectors"/>
 
 @code
 {
-    //Reference to diagram
-    SfDiagram diagram;
+    //Reference to diagram.
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
 
-    private void Cut()
+    protected override void OnInitialized()
     {
-        //copies the selected nodes
-        this.diagram.Cut();
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 30,
+            OffsetX = 500,
+            OffsetY = 100,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 60,
+            Height = 40,
+            OffsetX = 400,
+            OffsetY = 200,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
+        };
+        nodes.Add(node2);
     }
 
-    private void Copy()
+    private void OnCut()
     {
-        //copies the selected nodes
-        this.diagram.Copy();
+        //Removes the selected object.
+        diagram.Cut();
     }
 
-    private void Paste()
+    private void OnCopy()
     {
-        //pastes the copied objects
-        this.diagram.Paste();
+        //Copies the selected object.
+        diagram.Copy();
+    }
+
+    private void OnPaste()
+    {
+        //Pastes the copied object.
+        diagram.Paste();
     }
 }
 ```
 
-## Grouping
+## Grouping commands
 
-**Grouping commands** are used to group/ungroup the selected elements on the diagram. Refer to the following link which shows how to use grouping commands in the diagram.
+**Grouping commands** are used to group/ungroup the selected elements on the diagram. To group the elements, select the elements using select all command and group the selected elements using group command.
 
-[Group](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Group) the selected nodes and connectors in the diagram.
+[Group](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Group) command is used to group the selected nodes and connectors in the diagram.
 
-[Ungroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_UnGroup) the selected nodes and connectors in the diagram.
+[UnGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_UnGroup) command is used to ungroup the selected nodes and connectors in the diagram.
 
 The following code illustrates how to execute the grouping commands.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
+@using Syncfusion.Blazor.Diagram
 
-<SfDiagram @ref="@diagram" Height="600px">
-</SfDiagram>
+<input type="button" value="Group" @onclick="@OnGroup" />
+<input type="button" value="UnGroup" @onclick="@OnUnGroup" />
+<input type="button" value="SelectAll" @onclick="@OnSelectAll" />
+
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" Connectors="@Connectors" />
 
 @code
 {
-    //Reference to diagram
-    SfDiagram diagram;
+    //Reference to diagram.
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
 
-    private void SelectAll()
+    protected override void OnInitialized()
     {
-        //Selects the nodes
-        this.diagram.SelectAll();
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 30,
+            OffsetX = 500,
+            OffsetY = 100,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 60,
+            Height = 40,
+            OffsetX = 400,
+            OffsetY = 200,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
+        };
+        nodes.Add(node2);
     }
-    private void Group()
+
+    private void OnGroup()
     {
-        //Groups the selected elements.
-        this.diagram.Group();
+        //Group the selected items in the diagram.
+        diagram.Group();
+    }
+
+    private void OnUnGroup()
+    {
+        //Ungroup the selected items in the diagram.
+        diagram.UnGroup();
+    }
+
+    private void OnSelectAll()
+    {
+        //Select all the items in the diagram.
+        diagram.SelectAll();
     }
 }
 ```
 
-## Z-Order command
+## Zoom command
 
-**Z-Order commands** enable you to visually arrange the selected objects such as nodes and connectors on the page.
-
-## BringToFront command
-
-The [BringToFront](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_BringToFront) command visually brings the selected element to front over all the other overlapped elements. The following code illustrates how to execute the `BringToFront` command.
-
-```cshtml
-@using Syncfusion.Blazor.Diagrams
-
-<SfDiagram @ref="@diagram" Height="600px">
-</SfDiagram>
-
-@code
-{
-    //Reference to diagram
-    SfDiagram diagram;
-
-    private void BringToFront()
-    {
-        //Brings to front the selected node.
-        this.diagram.BringToFront();
-    }
-}
-```
-
-## SendToBack command
-
-The [SendToBack](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_SendToBack) command visually moves the selected element behind all the other overlapped elements. The following code illustrates how to execute the `SendToBack` command.
-
-```cshtml
-@using Syncfusion.Blazor.Diagrams
-
-<SfDiagram @ref="@diagram" Height="600px">
-</SfDiagram>
-
-@code
-{
-    //Reference to diagram
-    SfDiagram diagram;
-
-    private void SendToBack()
-    {
-        //Sends to front the selected node.
-        this.diagram.SendToBack();
-    }
-}
-```
-
-## MoveForward command
-
-The [MoveForward](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_MoveForward) command visually moves the selected element over the nearest overlapping element. The following code illustrates how to execute the `MoveForward` command.
-
-```cshtml
-@using Syncfusion.Blazor.Diagrams
-
-<SfDiagram @ref="@diagram" Height="600px">
-</SfDiagram>
-
-@code
-{
-    //Reference to diagram
-    SfDiagram diagram;
-
-    private void MoveForward()
-    {
-        //move to Forward the selected node.
-        this.diagram.MoveForward();
-    }
-}
-```
-
-## SendBackward command
-
-The [SendBackward](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_SendBackward) command visually moves the selected element behind the underlying element. The following code illustrates how to execute the `SendBackward` command.
-
-```cshtml
-@using Syncfusion.Blazor.Diagrams
-
-<SfDiagram @ref="@diagram" Height="600px">
-</SfDiagram>
-
-@code
-{
-    //Reference to diagram
-    SfDiagram diagram;
-
-    private void SendBackward()
-    {
-        //send to Forward the selected node.
-        this.diagram.SendBackward();
-    }
-}
-```
-
-## Zoom
-
-The [Zoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Zoom_System_Double_Syncfusion_Blazor_Diagrams_PointModel_) command is used to zoom-in and zoom-out the diagram view.
+The [Zoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Zoom_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) command is used to zoom-in and zoom-out the diagram view.
 
 The following code illustrates how to zoom-in/zoom out the diagram.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
+@using Syncfusion.Blazor.Diagram
 
-<SfDiagram @ref="@diagram" Height="600px">
-</SfDiagram>
+<input type="button" value="Zoom" @onclick="@OnZoom" />
+
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" Connectors="@Connectors"/>
 
 @code
 {
-    //Reference to diagram
-    SfDiagram diagram;
+    //Reference to diagram.
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
 
-    private void Zoom()
+    protected override void OnInitialized()
     {
-        // Sets the ZoomFactor
-        //Defines the FocusPoint to zoom the Diagram with respect to any point
-        //When you do not set focus point, zooming is performed with reference to the center of current Diagram view.
-        this.diagram.Zoom(1.2, new PointModel() { X = 100, Y = 100 });
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 30,
+            OffsetX = 500,
+            OffsetY = 100,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
+        };
+        nodes.Add(node1);
+    }
+
+    private void OnZoom()
+    {
+        // Sets the ZoomFactor.
+        // Defines the FocusPoint to zoom the Diagram with respect to any point.
+        // When you do not set focus point, zooming is performed with reference to the center of current Diagram view.
+        diagram.Zoom(1.2, new DiagramPoint() { X = 100, Y = 100 });
     }
 }
 ```
+![Zoom Command](./images/Zoom.gif)
 
 ## Nudge command
 
-The [Nudge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Nudge_Syncfusion_Blazor_Diagrams_NudgeDirection_System_Nullable_System_Double__System_Nullable_System_Double__) commands move the selected elements towards up, down, left, or right by 1 pixel.
+The [Nudge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nudge_Syncfusion_Blazor_Diagram_Direction_System_Nullable_System_Int32__) commands repositions the selected object by the specified delta in the given direction.
 
-`NudgeDirection` nudge command moves the selected elements towards the specified direction by 1 pixel, by default.
+[Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html) nudge command moves the selected elements towards the specified direction by 1 pixel, by default.
 
-The accepted values of the argument "direction" are as follows:
+The accepted values of the argument direction are as follows:
 
 * Up: Moves the selected elements towards up by the specified delta value.
 * Down: Moves the selected elements towards down by the specified delta value.
@@ -341,20 +790,18 @@ The accepted values of the argument "direction" are as follows:
 The following code illustrates how to execute nudge command.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
+@using Syncfusion.Blazor.Diagram
 
-<SfDiagram @ref="@diagram" Height="600px">
-</SfDiagram>
+<SfDiagramComponent @ref="diagram" Height="600px" />
 
 @code
 {
-    //Reference to diagram
-    SfDiagram diagram;
+    SfDiagramComponent diagram;
 
-    private void NudgeRight()
+    private void NudgeLeft()
     {
-        //Nudges to right
-        this.diagram.Nudge(NudgeDirection.Right);
+        //Repositions the selected objects by 50 towards left direction.
+        diagram.Nudge(Direction.Left, 50);
     }
 }
 ```
@@ -363,121 +810,34 @@ The following code illustrates how to execute nudge command.
 
 The corresponding arrow keys are used to move the selected elements towards up, down, left, or right direction by 1 pixel.
 
-![Nudge Command](images/Commands_img4.png)
+![Nudge Command in Blazor Diagram](images/blazor-diagram-nudge-command.png)
 
 Nudge commands are particularly useful for accurate placement of elements.
 
-## BringIntoView
-
-The [BringIntoView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_BringIntoView_System_Object_) command brings the specified rectangular region into the viewport of the diagram.
-
-The following code illustrates how to execute the `BringIntoView` command.
-
-```cshtml
-@using Syncfusion.Blazor.Diagrams
-
-<SfDiagram @ref="@diagram" Height="600px">
-</SfDiagram>
-
-@code
-{
-    //Reference to diagram
-    SfDiagram diagram;
-
-    private void BringIntoView()
-    {
-        var bound = new System.Drawing.Rectangle(600, 600, 500, 400);
-        //Brings the specified rectangular region of the Diagram content to the viewport of the page.
-        this.diagram.BringIntoView(bound);
-    }
-}
-```
-
-## BringToCenter
-
-The [BringToCenter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_BringToCenter_System_Object_) command brings the specified rectangular region of the diagram content to the center of the viewport.
-
-The following code illustrates how to execute the `BringToCenter` command.
-
-```cshtml
-@using Syncfusion.Blazor.Diagrams
-
-<SfDiagram @ref="@diagram" Height="600px">
-</SfDiagram>
-
-@code
-{
-    //Reference to diagram
-    SfDiagram diagram;
-
-    private void BringToCenter()
-    {
-        var bound = new System.Drawing.Rectangle(600, 600, 500, 400);
-        //Brings the specified rectangular region of the Diagram content to the viewport of the page.
-        this.diagram.BringToCenter(bound);
-    }
-}
-```
-
-## FitToPage command
-
-The [FitToPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_FitToPage_Syncfusion_Blazor_Diagrams_IFitOptions_) command helps to fit the diagram content into the view with respect to either width, height, or at the whole.
-
-The [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IFitOptions.html#Syncfusion_Blazor_Diagrams_IFitOptions_Mode) parameter defines whether the diagram must be horizontally/vertically fit into the viewport with respect to width, height, or entire bounds of the diagram.
-
-The [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IFitOptions.html#Syncfusion_Blazor_Diagrams_IFitOptions_Region) parameter defines the region that must be drawn as an image.
-
-The [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IFitOptions.html#Syncfusion_Blazor_Diagrams_IFitOptions_Margin) parameter defines the region/bounds of the diagram content that is to be fit into the view.
-
-The [CanZoomIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IFitOptions.html#Syncfusion_Blazor_Diagrams_IFitOptions_CanZoomIn) parameter enables/disables zooming to fit the smaller content into a larger viewport.
-
-The [CustomBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IFitOptions.html#Syncfusion_Blazor_Diagrams_IFitOptions_CustomBounds) parameter the custom region that must be fit into the viewport.
-
-The following code illustrates how to execute `FitToPage` command.
-
-```cshtml
-@using Syncfusion.Blazor.Diagrams
-
-<SfDiagram @ref="@diagram" Height="600px">
-</SfDiagram>
-
-@code
-{
-    //Reference to diagram
-    SfDiagram diagram;
-
-    private void FitToPage()
-    {
-        //fit the diagram to the page
-        diagram.FitToPage();
-    }
-}
-```
-
 ## Undo and Redo command
 
-The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Undo) and [Redo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Redo) commands help you to revert/restore the changes.
+The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Undo) and [Redo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Redo) commands help you to revert/restore the changes.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
+@using Syncfusion.Blazor.Diagram
 
-<SfDiagram @ref="@diagram" Height="600px">
-</SfDiagram>
+<SfDiagramComponent @ref="@diagram" Height="600px">
+</SfDiagramComponent>
 
 @code
 {
-    //Reference to diagram
-    SfDiagram diagram;
+    //Reference to diagram.
+    SfDiagramComponent diagram;
 
     private void Undo()
     {
-        //Revert the changes
+        //Revert the changes.
         diagram.Undo();
     }
 
     private void Redo()
     {
-        //Restore the changes
+        //Restore the changes.
         diagram.Redo();
     }
 }
@@ -486,105 +846,112 @@ The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDi
 ## Command manager
 
 Diagram provides support to map or bind command execution with desired combination of key gestures. Diagram provides some built-in commands.
-The [CommandManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramCommandManager.html) provides support to define custom commands. The custom commands are executed when the specified key gesture is recognized.
+The [CommandManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html) provides support to define custom commands. The custom commands are executed when the specified key gesture is recognized.
 
-### Command Execution Event
+### Command Execution
 
-You can use the [OnCommandExecuted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnCommandExecuted) event to trigger when execute the custom command in diagram.
+The [Execute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html#Syncfusion_Blazor_Diagram_CommandManager_Execute) event call back method will invoke when executing the custom command in the diagram.
 
-### Custom command
+The [CanExecute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html#Syncfusion_Blazor_Diagram_CommandManager_CanExecute) event determines whether this command can execute in its current state.
+
+### How to create custom command
 
 To define a custom command, specify the following properties:
-* [Gesture](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramCommand.html#Syncfusion_Blazor_Diagrams_DiagramCommand_Gesture): A combination of [Keys](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramKeyGesture.html#Syncfusion_Blazor_Diagrams_DiagramKeyGesture_Key) and [KeyModifiers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramKeyGesture.html#Syncfusion_Blazor_Diagrams_DiagramKeyGesture_KeyModifiers).
-* [Parameter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramCommand.html#Syncfusion_Blazor_Diagrams_DiagramCommand_Parameter): Defines any additional parameters that are required at runtime.
-* [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramCommand.html#Syncfusion_Blazor_Diagrams_DiagramCommand_Name): Defines the name of the command.
+* [Gesture](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyboardCommand.html#Syncfusion_Blazor_Diagram_KeyboardCommand_Gesture): A combination of [Keys](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyGesture.html#Syncfusion_Blazor_Diagram_KeyGesture_Key) and [Modifiers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyGesture.html#Syncfusion_Blazor_Diagram_KeyGesture_Modifiers).
+* [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyboardCommand.html#Syncfusion_Blazor_Diagram_KeyboardCommand_Name): Defines the name of the command.
 
-To explore the properties of custom commands, refer to the [Commands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramCommandManager.html).
+To explore the properties of custom commands, refer to the [Commands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html#Syncfusion_Blazor_Diagram_CommandManager_Commands).
 
 The following code example shows how to define a custom command.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
-<SfDiagram @ref="@Diagram" Height="600px"
-           Nodes="@NodeCollection">
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
     @* Initializing the custom commands *@
-    <DiagramCommandManager>
-        <DiagramCommands>
-            <DiagramCommand Name="customGroup">
-                <DiagramKeyGesture Key="Keys.G" KeyModifiers="KeyModifiers.Control"></DiagramKeyGesture>
-            </DiagramCommand>
-            <DiagramCommand Name="customUnGroup">
-                <DiagramKeyGesture Key="Keys.U" KeyModifiers="KeyModifiers.Control"></DiagramKeyGesture>
-            </DiagramCommand>
-        </DiagramCommands>
-    </DiagramCommandManager>
-    @* To define the custom commands execution event *@
-    <DiagramEvents OnCommandExecuted="@CommandExecute"></DiagramEvents>
-</SfDiagram>
+    <CommandManager>
+        <CommandManager Commands="@command" Execute="@CommandExecute" CanExecute="@Canexe">
+        </CommandManager>
+    </CommandManager>
+</SfDiagramComponent>
 
-@code {
-    // Reference to diagram
-    SfDiagram Diagram;
-
-    // Defines diagram's nodes collection
-    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+@code
+{
+    // Reference to diagram.
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<KeyboardCommand> command = new DiagramObjectCollection<KeyboardCommand>()
+    {
+        new KeyboardCommand()
+        {
+            Name = "CustomGroup",
+            Gesture = new KeyGesture() { Key = Keys.G, Modifiers = ModifierKeys.Control }
+        },
+        new KeyboardCommand()
+        {
+            Name = "CustomUnGroup",
+            Gesture = new KeyGesture() { Key = Keys.U, Modifiers = ModifierKeys.Control }
+        },
+     };
+    // Defines diagram's nodes collection.
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
-        //Initializing the nodes collection
-        NodeCollection = new ObservableCollection<DiagramNode>();
-
-        DiagramNode diagramNode = new DiagramNode()
+        Node node1 = new Node()
         {
-            Id = "node1",
+            ID = "node1",
             OffsetX = 100,
             OffsetY = 100,
             Width = 100,
             Height = 100,
-            Style = new NodeShapeStyle() { Fill = "#659be5", StrokeColor = "none" },
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new DiagramNodeAnnotation() { Content = "Node" }
+                new ShapeAnnotation() { Content = "Node" }
             }
         };
-
-        NodeCollection.Add(diagramNode);
-
-        DiagramNode diagramNode1 = new DiagramNode()
+        nodes.Add(node1);
+        Node node2 = new Node()
         {
-            Id = "node2",
+            ID = "node2",
             OffsetX = 300,
             OffsetY = 100,
             Width = 100,
             Height = 100,
-            Style = new NodeShapeStyle() { Fill = "#659be5", StrokeColor = "none" },
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new DiagramNodeAnnotation() { Content = "Node" }
+                new ShapeAnnotation() { Content = "Node1" }
             }
         };
-        NodeCollection.Add(diagramNode1);
+        nodes.Add(node2);
+    }
+
+    public void Canexe(CommandKeyArgs args)
+    {
+        args.CanExecute = true;
     }
 
     /// <summary>
-    /// Custom command execution event
+    /// Custom command execution.
     /// </summary>
-    public void CommandExecute(ICommandExecuteEventArgs args)
+    public void CommandExecute(CommandKeyArgs args)
     {
-        if (args.Gesture.KeyModifiers == KeyModifiers.Control && args.Gesture.Key == Keys.G)
+        if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == Keys.G)
         {
-            //Custom command to group the selected nodes
-            Diagram.Group();
+            //Custom command to group the selected nodes.
+            diagram.Group();
         }
-        if (args.Gesture.KeyModifiers == KeyModifiers.Control && args.Gesture.Key == Keys.U)
+        if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == Keys.U)
         {
-            //Custom command to ungroup the selected items
-            if (Diagram.SelectedItems.Nodes.Count > 0 && Diagram.SelectedItems.Nodes[0].Children != null &&
-            Diagram.SelectedItems.Nodes[0].Children.Length > 0)
+            DiagramSelectionSettings selector = diagram.SelectionSettings;
+            //Custom command to ungroup the selected items.
+            if (selector.Nodes.Count > 0 && selector.Nodes[0] is NodeGroup)
             {
-                Diagram.UnGroup();
+                if ((selector.Nodes[0] as NodeGroup).Children.Length > 0)
+                {
+                    diagram.UnGroup();
+                }
             }
         }
     }
@@ -593,86 +960,318 @@ The following code example shows how to define a custom command.
 
 ### Modify the existing command
 
-When any one of the default commands is not desired, they can be disabled. To change the functionality of a specific command, the command can be completely modified.
+When any one of the default commands is not desired, it can be disabled. To change the functionality of a specific command, the command can be completely modified.
 
 The following code example shows how to disable a command and how to modify the built-in commands.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
-<SfDiagram @ref="@Diagram" Height="600px"
-           Nodes="@NodeCollection">
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
     @* Initializing the custom commands *@
-    <DiagramCommandManager>
-        <DiagramCommands>
-            <DiagramCommand Name="navigationDown">
-                <DiagramKeyGesture Key="Keys.Down"></DiagramKeyGesture>
-            </DiagramCommand>
-            <DiagramCommand Name="navigationUp">
-                <DiagramKeyGesture Key="Keys.Up"></DiagramKeyGesture>
-            </DiagramCommand>
-            <DiagramCommand Name="navigationLeft">
-                <DiagramKeyGesture Key="Keys.Left"></DiagramKeyGesture>
-            </DiagramCommand>
-            <DiagramCommand Name="navigationRight">
-                <DiagramKeyGesture Key="Keys.Right"></DiagramKeyGesture>
-            </DiagramCommand>
-        </DiagramCommands>
-    </DiagramCommandManager>
-    @* To define the custom commands execution event *@
-    <DiagramEvents OnCommandExecuted="@CommandExecute"></DiagramEvents>
-</SfDiagram>
+    <CommandManager>
+        <CommandManager Commands="@commands" Execute="@CommandExecute" CanExecute="@Canexe">
+        </CommandManager>
+    </CommandManager>
+</SfDiagramComponent>
 
-@code {
-    // Reference to diagram
-    SfDiagram Diagram;
-
-    // Defines diagram's nodes collection
-    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+@code
+{
+    // Reference to diagram.
+    SfDiagramComponent diagram;
+    // Defines diagram's nodes collection.
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<KeyboardCommand> commands = new DiagramObjectCollection<KeyboardCommand>()
+    {
+        new KeyboardCommand()
+        {
+            Name = "SelectAll",
+            Gesture = new KeyGesture() { Key = Keys.A, Modifiers = ModifierKeys.Control }
+        },
+        new KeyboardCommand()
+        {
+            Name = "Copy",
+            Gesture = new KeyGesture() { Key = Keys.C, Modifiers = ModifierKeys.Control }
+        }
+    };
 
     protected override void OnInitialized()
     {
-        //Initializing the nodes collection
-        NodeCollection = new ObservableCollection<DiagramNode>();
-
-        DiagramNode diagramNode = new DiagramNode()
+        Node node1 = new Node()
         {
-            Id = "node1",
+            ID = "node1",
             OffsetX = 100,
             OffsetY = 100,
             Width = 100,
             Height = 100,
-
-            Style = new NodeShapeStyle() { Fill = "#659be5", StrokeColor = "none" },
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new DiagramNodeAnnotation() { Content = "Node" }
+                new ShapeAnnotation() { Content = "Node" }
             }
         };
-        NodeCollection.Add(diagramNode);
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            OffsetX = 300,
+            OffsetY = 100,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation() { Content = "Node1" }
+            }
+        };
+        nodes.Add(node2);
+    }
+
+    public void Canexe(CommandKeyArgs args)
+    {
+        args.CanExecute = true;
     }
 
     /// <summary>
-    /// Custom command execute event
+    /// Custom command execution event.
     /// </summary>
-    public void CommandExecute(ICommandExecuteEventArgs args)
+    public void CommandExecute(CommandKeyArgs args)
     {
-        if (args.Gesture.Key == Keys.Left)
-        {
-            //Allow left arrow key to nudge the selected node in left
-            if (Diagram.SelectedItems.Nodes.Count > 0)
-                Diagram.Nudge(NudgeDirection.Left);
-        }
-        if (args.Gesture.Key == Keys.Down || args.Gesture.Key == Keys.Up ||
-        args.Gesture.Key == Keys.Right)
+        if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == Keys.A)
         {
             //to disable a built-in command and none of action execute
+        }
+        if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == Keys.C)
+        {
+            //Modify the existing copy command to cut command.
+            diagram.Cut();
         }
     }
 }
 ```
+### BringIntoView
 
-## See Also
+The [BringIntoView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BringIntoView_Syncfusion_Blazor_Diagram_DiagramRect_) command brings a specified rectangular region into the viewport of the diagram.
 
-* [How to create the custom context menu items](./context-menu)
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<input type="button" value="BringIntoView" @onclick="BringIntoView"/>
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" @bind-Nodes="@nodes"><PageSettings @bind-Orientation="@pageOrientation" @bind-MultiplePage="@IsMultiplePage"></PageSettings>
+</SfDiagramComponent>
+@code
+{
+SfDiagramComponent diagram;
+DiagramObjectCollection<Node> nodes;     
+DiagramObjectCollection<Connector> connectors;
+protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>()
+        {
+        new Node { ID = "node1", Width = 150, Height = 100, OffsetX = 1100, OffsetY = 900, 
+        Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+        { 
+            new ShapeAnnotation() { Content = "Node1" } } },
+        };
+    }
+    Brings the specified bounds into the view port of the diagram
+    private void BringIntoView()
+    {
+    DiagramRect bound = new DiagramRect(950,650,500,500);
+    diagram.BringIntoView(bound);
+    }
+}
+```
+### BringIntoCenter
+
+The [BringIntoCenter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BringIntoCenter_Syncfusion_Blazor_Diagram_DiagramRect_) command brings a specified rectangular region into the center of the viewport of the diagram.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<input type="button" value="BringIntoCenter" @onclick="BringIntoCenter"/>
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" @bind-Nodes="@nodes"><PageSettings @bind-Orientation="@pageOrientation" @bind-MultiplePage="@IsMultiplePage"></PageSettings>
+</SfDiagramComponent>
+@code
+{
+SfDiagramComponent diagram;
+DiagramObjectCollection<Node> nodes;     
+DiagramObjectCollection<Connector> connectors;
+protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>()
+        {
+        new Node { ID = "node1", Width = 150, Height = 100, OffsetX = 1100, OffsetY = 900, 
+        Annotations = new DiagramObjectCollection<ShapeAnnotation>() 
+        { 
+            new ShapeAnnotation() { Content = "Node1" } } },
+        };
+    }
+    Brings the specified bounds into the center of the view port of the diagram
+    private void BringIntoCenter()
+    {
+    DiagramRect bound = new DiagramRect(950,650,500,500);
+    diagram.BringIntoCenter(bound);
+    }
+}
+```
+### FitToPage command in Blazor Diagram
+
+The FitToPage diagram is used to bring the entire diagram into view. The [FitOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitOptions.html) parameter is used to customize the FitToPage command behavior.
+If the parameter is null, the entire diagram is fit into the view. 
+
+The following code illustrates how to execute the FitToPage command.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using Node = Syncfusion.Blazor.Diagram.Node
+
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="600px" Nodes="nodes" Connectors="connectors">
+</SfDiagramComponent>
+@code {
+        //Intialize of all the variables, methods and classes.
+        public SfDiagramComponent diagram;
+        FitOptions options = new FitOptions() {Mode = FitMode.Both, Region = DiagramRegion.Content };
+        DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+        DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+        string selectedMode;
+        string selectedRegion;
+     
+      protected override void OnInitialized()
+        {
+            Node node1 = new Node()
+            {
+                ID = "node1",
+                OffsetX = 100,
+                OffsetY = 100,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+            };
+            Node node2 = new Node()
+            {
+                ID = "node2",
+                OffsetX = 500,
+                OffsetY = 700,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+            };
+            Node node3 = new Node()
+            {
+                ID = "node3",
+                OffsetX = 500,
+                OffsetY = 500,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+            };
+            Node node4 = new Node()
+            {
+                ID = "node4",
+                OffsetX = 1000,
+                OffsetY = 700,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+            };
+            Node node5 = new Node()
+            {
+                ID = "node5",
+                OffsetX = 1150,
+                OffsetY = 400,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+        };
+        Node node6 = new Node()
+        {
+            ID = "node6",
+            OffsetX = 500,
+            OffsetY = 1000,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+        };
+        nodes.Add(node1);
+        nodes.Add(node2);
+        nodes.Add(node3);
+        nodes.Add(node4);
+        nodes.Add(node5);
+        nodes.Add(node6);
+    }
+      private void Mode(ChangeEventArgs e)
+    {
+        if (e.Value != null)
+        {
+            selectedMode = (string)e.Value;
+            switch (selectedMode)
+            {
+                case "Both":
+                    options = new FitOptions();
+                    options.Mode = FitMode.Both;
+                    break;
+                case "Width":
+                    options = new FitOptions();
+                    options.Mode = FitMode.Width;
+                    break;
+                case "Height":
+                    options = new FitOptions();
+                    options.Mode = FitMode.Height;
+                    break;
+            }
+        }
+    }
+
+
+    private void RegionChange(ChangeEventArgs e)
+    {
+        if (e.Value != null)
+        {
+            selectedRegion = (string)e.Value;
+            switch (selectedRegion)
+            {
+                case "PageSettings":
+                    options = new FitOptions();
+                    options.Region = DiagramRegion.PageSettings;
+                    break;
+                case "Content":
+                    options = new FitOptions();
+                    options.Region = DiagramRegion.Content;
+                    break;
+            }
+        }
+    }
+
+    //fit the diagram to the page with respect to mode and region.
+        private void FitToPage()
+        {
+         diagram.FitToPage(options);
+        }
+}
+```
+### FitToPage Parameter
+
+The [FitOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitOptions.html) parameter is used to customize the FitToPage command behavior.
+
+### FitToPage
+
+The [FitToPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitMode.html) is used to enable or disable the fit to page behavior with respect to height or width.
+
+|Values  | Description     |
+|---------|----------------|
+|FitToWidth | It is used to enable the fit to page behavior only with respect to width.         |
+|FitToHeight | It is used to enable the fit to page behavior only with respect to height.       |
+|Both  | It is used to enable the fit to page behavior with respect to both the height and width of the diagram. |
+
+![Fit to page Command](./images/FitToPage.gif)
+
+### Region
+
+The [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramRegion.html) is used to set the region where fittopage should be performed in the diagram.
+
+|Values    | Description     |
+|------------|------------------|
+|PageSettings   | It is used to perform the fit to page based on the width and height of the page  |
+|Content   | It is used to perform the fit to page for the content area only    |
+
+![Region](./images/Region.gif)
+
