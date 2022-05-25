@@ -43,7 +43,7 @@ Now, in the Browse tab, search and install the Syncfusion.Blazor.Grid NuGet pack
 
 Open **_Import.razor** file and add the following namespaces which are required to use Syncfusion Blazor DataGrid Component in this application.
 
-{% highlight cshtml %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
@@ -84,7 +84,7 @@ Themes provide life to components. Syncfusion Blazor has different themes. They 
 
 To add the theme, open the **Pages/_Host.cshtml** file and add the following CSS reference code.
 
-{% highlight html %}
+{% highlight cshtml %}
 
 <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
 
@@ -92,7 +92,7 @@ To add the theme, open the **Pages/_Host.cshtml** file and add the following CSS
 
 In previous steps, Syncfusion Blazor DataGrid package is successfully configured in the application. Now, add the DataGrid Component to the **Index.razor**.
 
-{% highlight cshtml %}
+{% highlight razor %}
 
 <SfGrid TValue="Order" AllowPaging="true">
 </SfGrid >
@@ -105,7 +105,7 @@ Now, get the SQL data from the SQL server and bind it to the DataGrid component 
 
 Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns/) component. Create columns using the following code. The properties used and their usage are discussed below.
 
-{% highlight cshtml %}
+{% highlight razor %}
 
 [Index.razor]
 
@@ -140,7 +140,7 @@ In the custom adaptor’s **Read** method, you can get the Grid action details l
 
 * Return the response in Result and Count pair object in Read method to bind the data to the DataGrid.
 
-{% highlight cshtml %}
+{% highlight razor %}
 
 [CustomAdaptorComponent.razor]
 
@@ -231,7 +231,7 @@ Enable editing in the grid component using the [GridEditSettings](https://blazor
 
 Here, inline edit mode and [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar/) property are used to show toolbar items for editing.
 
-{% highlight cshtml %}
+{% highlight razor %}
 
 <SfGrid @ref="Grid" TValue="Order" AllowPaging="true" Toolbar="@(new List<string>() { "Add","Edit","Delete","Update","Cancel"})">
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
