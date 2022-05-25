@@ -24,9 +24,10 @@ Point the cursor anywhere within the editor where you would like to insert the l
 | Tooltip | Displays additional helpful information when you place the pointer on the hyperlink, type the required text in the "Tooltip" field. |
 | Open Link in New Window | Specifies whether the given link will open in new window or not |
 
-> The Rich Text Editor link tool validates the URLs as you type them in Web Address. URLs considered invalid will be highlighted with red color by clicking the insert button in the `Insert Link` dialog.
+> The Rich Text Editor link tool validates the URLs as you type them in Web Address. URLs considered invalid will be highlighted with red color by clicking the insert button in the [`Insert Link`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_ToolbarCommand_CreateLink) dialog.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="~/insert-link.razor" %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -52,13 +53,16 @@ Point the cursor anywhere within the editor where you would like to insert the l
     };
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/insert-link.razor %}
+
+{% endhighlight %}
 
 ![Displaying Link Icon in Blazor RichTextEditor](./images/blazor-richtexteditor-link-icon.png)
-
-## Remove Link
-
-To remove a hyperlink from a text or image, select the text or image with the hyperlink and click `Remove Hyperlink` tool from the toolbar. It will keep the text or image.
 
 ## Auto-link
 
@@ -68,7 +72,7 @@ When you type URL and enter key to the Rich Text Editor, the typed URL will be a
 
 When the [EnableAutoUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableAutoUrl) property is enabled, it will accept the given URL (relative or absolute) without validating it for hyperlinks. Otherwise, the given URL will be automatically converted to absolute path URL by prefixing https:// for hyperlinks, and it defaults to false.
 
-## Manipulation
+## Edit and Remove Link
 
 Add the custom tools on the selected link inside the Rich Text Editor through the quick toolbar.
 
@@ -82,7 +86,8 @@ The quick toolbar for the link has the following options.
 | Edit Link | Edits the link in the Rich Text Editor content. |
 | Remove Link | Removes link from the content of Rich Text Editor. |
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="~/edit-remove-link.razor" %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -109,7 +114,14 @@ The quick toolbar for the link has the following options.
     };
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/edit-remove-link.razor %}
+
+{% endhighlight %}
 
 ![Quick Link in Blazor RichTextEditor Content](./images/blazor-richtexteditor-quick-link.png)
 

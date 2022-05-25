@@ -1,0 +1,22 @@
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor @ref="@RteObj">
+    <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
+</SfRichTextEditor>
+<SfButton Content="Bold" @onclick="@OnBoldCommand" />
+<SfButton Content="InsertHTML" @onclick="@OnInsertHtmlCommand" />
+
+@code {
+    SfRichTextEditor RteObj;
+
+    private async Task OnBoldCommand()
+    {
+        await this.RteObj.ExecuteCommandAsync(CommandName.Bold);
+    }
+
+    private async Task OnInsertHtmlCommand()
+    {
+        await this.RteObj.ExecuteCommandAsync(CommandName.InsertHTML, "<div>Syncfusion Rich Text Editor component</div>");
+    }
+}

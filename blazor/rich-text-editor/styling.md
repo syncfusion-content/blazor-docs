@@ -15,7 +15,7 @@ By default, the editor is initialized with default items of font name and font s
 
 To apply different font style for section of the content, select the text that you would like to change, and select a required font style from the drop-down to apply the changes to the selected text.
 
-### Font name
+### Buil-in Font name
 
 The following table, lists the default font name and width of the `FontName` dropdown and available list of font names.
 
@@ -25,9 +25,40 @@ The following table, lists the default font name and width of the `FontName` dro
 | Width | 65px|
 | Items | new List&lt;DropDownItemModel&gt;()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Segoe UI", Value = "Segoe UI" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Arial", Value = "Arial,Helvetica,sans-serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Georgia", Value = "Georgia,serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Impact", Value = "Impact,Charcoal,sans-serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Tahoma", Value = "Tahoma,Geneva,sans-serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Times New Roman", Value = "Times New Roman,Times,serif" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Verdana", Value = "Verdana,Geneva,sans-serif"}<br>}; |
 
-### Font size
 
-The following table list the default font size and width of the `FontSize` dropdown and available list of font size.
+{% tabs %}
+{% highlight razor tabtitle="~/build-in-font-name.razor" %}
+
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor>
+    <RichTextEditorToolbarSettings Items="@Tools" />
+    <RichTextEditorFontFamily Default="Georgia" />
+    <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
+</SfRichTextEditor>
+@code{
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.FontName },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontSize },
+    };
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/build-in-font-name.razor %}
+
+{% endhighlight %}
+
+
+![Changing Build-in Font Name in Blazor RichTextEditor](./images/blazor-richtexteditor-buildin-font-name.png)
+
+### Build-in Font size
+
+The following table list the default font size and width of the [`FontSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontSize.html) dropdown and available list of font size.
 
 | Default Key | Default Value |
 |-----|--------------------------------------|
@@ -35,9 +66,40 @@ The following table list the default font size and width of the `FontSize` dropd
 | Width | 35px.|
 | Items | new List&lt;DropDownItemModel&gt;()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "8 pt", Value = "8pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "10 pt", Value = "10pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "12 pt", Value = "12pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "14 pt", Value = "14pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "18 pt", Value = "18pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "24 pt", Value = "24pt" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "36 pt", Value = "36pt" }<br>}; |
 
+{% tabs %}
+{% highlight razor tabtitle="~/build-in-font-size.razor" %}
+
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor>
+    <RichTextEditorToolbarSettings Items="@Tools" />
+    <RichTextEditorFontSize Default="10pt" />
+    <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
+</SfRichTextEditor>
+@code{
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.FontName },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontSize },
+    };
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/build-in-font-size.razor %}
+
+{% endhighlight %}
+
+
+![Changing Build-in Font Size in Blazor RichTextEditor](./images/blazor-richtexteditor-change-buildin-font-size.png)
+
 The following sample demonstrates the option to add the font name and font size tools to the toolbar as well as modify the default `Width` of the tools.
 
-```csharp
+{% tabs %}
+{% highlight razor tabtitle="~/font-size.razor" %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -46,94 +108,45 @@ The following sample demonstrates the option to add the font name and font size 
     <RichTextEditorFontFamily Width="50px" />
     <RichTextEditorFontSize Width="50px" />
     <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
-    <p><b> Key features:</b></p>
-    <ul>
-    <li><p> Provides <b>IFRAME</b> and <b>DIV</b> modes </p></li>
-    <li><p> Capable of handling markdown editing.</p></li>
-    <li><p> Contains a modular library to load the necessary functionality on demand.</p></li>
-    <li><p> Provides a fully customizable toolbar.</p></li>
-    <li><p> Provides HTML view to edit the source directly for developers.</p></li>
-    <li><p> Supports third - party library integration.</p></li>
-    </ul>
 </SfRichTextEditor>
 
 @code{
     private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
     {
-        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
-        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
-        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
         new ToolbarItemModel() { Command = ToolbarCommand.FontName },
         new ToolbarItemModel() { Command = ToolbarCommand.FontSize },
-        new ToolbarItemModel() { Command = ToolbarCommand.FontColor },
-        new ToolbarItemModel() { Command = ToolbarCommand.BackgroundColor },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
-        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
-        new ToolbarItemModel() { Command = ToolbarCommand.Image },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
-        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
     };
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Changing Font Size in Blazor RichTextEditor](./images/blazor-richtexteditor-change-font-size.png)
 
 ## Custom font and size
 
 Rich Text Editor provides support to custom fonts and size with existing list.
-If you want to add additional font names and font sizes to font drop-down, pass the font information as `List<DropDownItemModel>` data to the `Items` field of `RichTextEditorFontSize` and `RichTextEditorFontFamily` tag.
+If you want to add additional font names and font sizes to font drop-down, pass the font information as `List<DropDownItemModel>` data to the `Items` field of [`RichTextEditorFontSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontSize.html) and [`RichTextEditorFontFamily`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontFamily.html) tag.
 
-```csharp
+{% tabs %}
+{% highlight razor tabtitle="~/custom-font-size.razor" %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
-<SfRichTextEditor>
-        <RichTextEditorToolbarSettings Items="@Tools" />
-        <RichTextEditorFontFamily Width="50px" Items="@FontFamilyItems" />
-        <RichTextEditorFontSize Width="50px" Items="@FontSizeItems" />
-        <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
-        <p><b> Key features:</b></p>
-        <ul>
-            <li><p> Provides <b>IFRAME</b> and <b>DIV</b> modes </p></li>
-            <li><p> Capable of handling markdown editing.</p></li>
-            <li><p> Contains a modular library to load the necessary functionality on demand.</p></li>
-            <li><p> Provides a fully customizable toolbar.</p></li>
-            <li><p> Provides HTML view to edit the source directly for developers.</p></li>
-            <li><p> Supports third - party library integration.</p></li>
-        </ul>
+<SfRichTextEditor CssClass="customClass">
+    <RichTextEditorToolbarSettings Items="@Tools" />
+    <RichTextEditorFontSize Items="@FontSizeItems" />
+    <RichTextEditorFontFamily Default="Georgia" Items="@FontFamilyItems" />
+    <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
 </SfRichTextEditor>
 
 @code{
     private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
     {
-        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
-        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
-        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
         new ToolbarItemModel() { Command = ToolbarCommand.FontName },
         new ToolbarItemModel() { Command = ToolbarCommand.FontSize },
-        new ToolbarItemModel() { Command = ToolbarCommand.FontColor },
-        new ToolbarItemModel() { Command = ToolbarCommand.BackgroundColor },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
-        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
-        new ToolbarItemModel() { Command = ToolbarCommand.Image },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
-        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
-    };
-
-    private List<DropDownItemModel> FontFamilyItems = new List<DropDownItemModel>()
+    };  
+   private List<DropDownItemModel> FontFamilyItems = new List<DropDownItemModel>()
     {
         new DropDownItemModel() { Text = "Segoe UI", Value = "Arial,Helvetica,sans-serif" },
         new DropDownItemModel() { Text = "Arial", Value = "Roboto" },
@@ -141,7 +154,6 @@ If you want to add additional font names and font sizes to font drop-down, pass 
         new DropDownItemModel() { Text = "Impact", Value = "Impact,Charcoal,sans-serif" },
         new DropDownItemModel() { Text = "Tahoma", Value = "Tahoma,Geneva,sans-serif" }
     };
-
     private List<DropDownItemModel> FontSizeItems = new List<DropDownItemModel>()
     {
         new DropDownItemModel() { Text = "8 pt", Value = "8pt" },
@@ -152,11 +164,106 @@ If you want to add additional font names and font sizes to font drop-down, pass 
     };
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/build-in-font-size.razor %}
+
+{% endhighlight %}
+
 
 ![Blazor RichTextEditor with Custom Fonts](./images/blazor-richtexteditor-custom-font.png)
 
 ![Blazor RichTextEditor with Custom Font Size](./images/blazor-richtexteditor-custom-font-size.png)
+
+## Google Fonts Support
+
+To use web fonts in Rich Text Editor, the web fonts need not be present in the local machine. To add the web fonts to Rich Text Editor, refer to the web font links and add the font names in the [RichTextEditorFontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontFamily.html) tag.
+
+
+The following font style links are referred in the page.
+
+### Blazor Server App
+
+* For **.NET 6** app, Refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+
+* For **.NET 5 and .NET 3.X** app, Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
+
+{% tabs %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4" %}
+
+<head>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Great+Vibes">
+</head>
+
+{% endhighlight %}
+
+{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="4" %}
+
+<head>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Great+Vibes">
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Blazor WebAssembly App
+
+For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html** file.
+
+{% tabs %}
+{% highlight html tabtitle="~/index.html" hl_lines="4" %}
+
+<head>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Great+Vibes">
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight razor tabtitle="~/google-font-name.razor" %}
+
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor>
+    <RichTextEditorToolbarSettings Items="@Tools" />
+    <RichTextEditorFontFamily Items="@FontFamilyItems" />
+    <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
+</SfRichTextEditor>
+
+@code {
+    private List<DropDownItemModel> FontFamilyItems = new List<DropDownItemModel>()
+    {
+        new DropDownItemModel() { CssClass = "e-segoe-ui", Command = "Font", SubCommand = "FontName", Text = "Segoe UI", Value = "Arial,Helvetica,sans-serif" },
+        new DropDownItemModel() { CssClass = "e-arial", Command = "Font", SubCommand = "FontName", Text = "Arial", Value = "Roboto" },
+        new DropDownItemModel() { CssClass = "e-georgia", Command = "Font", SubCommand = "FontName", Text = "Georgia", Value = "Georgia,serif" },
+        new DropDownItemModel() { CssClass = "e-impact", Command = "Font", SubCommand = "FontName", Text = "Impact", Value = "Impact,Charcoal,sans-serif" },
+        new DropDownItemModel() { CssClass = "e-tahoma", Command = "Font", SubCommand = "FontName", Text = "Tahoma", Value = "Tahoma,Geneva,sans-serif" }
+    };
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.FontName },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontSize },
+    };
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/google-font-name.razor %}
+
+{% endhighlight %}
+
+
+![Blazor RichTextEditor with Google Font](./images/blazor-richtexteditor-with-custom-font.png)
 
 ## Formats
 
@@ -164,7 +271,7 @@ By default, the editor is initialized with default items of formats. To change i
 
 To apply different format style for section of the content, select a required format from the drop-down to apply the changes to the selection.
 
-The following table, lists the default format name and width of the `Format` dropdown and available list of format names.
+The following table, lists the default format name and width of the [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormat.html#properties) dropdown and available list of format names.
 
 | Default Key | Default Value |
 |-----|--------------------------------------|
@@ -172,12 +279,48 @@ The following table, lists the default format name and width of the `Format` dro
 | Width | 65px|
 | Items | new List&lt;DropDownItemModel&gt;()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Paragraph", Value = "P" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Code", Value = "Pre" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Quotation", Value = "BlockQuote" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 1", Value = "H1" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 2", Value = "H2" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 3", Value = "H3" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 4", Value = "H4" }<br>}; |
 
+
+
+### Build-in Format
+
+{% tabs %}
+{% highlight razor tabtitle="~/build-in-formats.razor" %}
+
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor>
+    <RichTextEditorToolbarSettings Items="@Tools" />
+    <RichTextEditorFormat Default="Paragraph"/>
+    <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
+</SfRichTextEditor>
+
+@code{
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.FontName },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontSize },
+        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
+    };
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/build-in-formats.razor %}
+
+{% endhighlight %}
+
+![Blazor RichTextEditor with Build-in Format](./images/blazor-richtexteditor-buildin-format.png)
+
 ### Custom formats
 
 Rich Text Editor provides support to custom formats with existing list.
-If you want to add additional formats to format drop-down, pass the format information as `List<DropDownItemModel>` data to the `Items` field of `RichTextEditorFormat` tag.
+If you want to add additional formats to format drop-down, pass the format information as `List<DropDownItemModel>` data to the `Items` field of [`RichTextEditorFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormat.html) tag.
 
-```csharp
+{% tabs %}
+{% highlight razor tabtitle="~/custom-formats.razor" %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -185,40 +328,15 @@ If you want to add additional formats to format drop-down, pass the format infor
     <RichTextEditorToolbarSettings Items="@Tools" />
     <RichTextEditorFormat Items="@FormatItems" />
     <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
-    <p><b> Key features:</b></p>
-    <ul>
-        <li><p> Provides <b>IFRAME</b> and <b>DIV</b> modes </p></li>
-        <li><p> Capable of handling markdown editing.</p></li>
-        <li><p> Contains a modular library to load the necessary functionality on demand.</p></li>
-        <li><p> Provides a fully customizable toolbar.</p></li>
-        <li><p> Provides HTML view to edit the source directly for developers.</p></li>
-        <li><p> Supports third - party library integration.</p></li>
-    </ul>
 </SfRichTextEditor>
 
 @code{
     private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
     {
-        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
-        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
-        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
         new ToolbarItemModel() { Command = ToolbarCommand.FontName },
         new ToolbarItemModel() { Command = ToolbarCommand.FontSize },
-        new ToolbarItemModel() { Command = ToolbarCommand.FontColor },
-        new ToolbarItemModel() { Command = ToolbarCommand.BackgroundColor },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
         new ToolbarItemModel() { Command = ToolbarCommand.Formats },
-        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
-        new ToolbarItemModel() { Command = ToolbarCommand.Image },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
-        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
     };
-
     private List<DropDownItemModel> FormatItems = new List<DropDownItemModel>()
     {
         new DropDownItemModel() { Text = "Paragraph", Value = "P" },
@@ -233,7 +351,15 @@ If you want to add additional formats to format drop-down, pass the format infor
     };
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/custom-formats.razor %}
+
+{% endhighlight %}
+
 
 ![Blazor RichTextEditor with Custom Format](./images/blazor-richtexteditor-custom-format.png)
 
@@ -241,11 +367,12 @@ If you want to add additional formats to format drop-down, pass the format infor
 
 To apply font color or background color for a selected content of RTE, use the font color and background color tools.
 
-Rich Text Editor support to provide customs font color and background color with existing list through the `ColorCode` field of `RichTextEditorFontColor` and `RichTextEditorBackgroundColor`.
+Rich Text Editor support to provide customs font color and background color with existing list through the `ColorCode` field of [`RichTextEditorFontColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontColor.html) and [`RichTextEditorBackgroundColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBackgroundColor.html).
 
 The RichTextEditorFontColor and RichTextEditorBackgroundColor tag has two `Mode` of `Picker` and `Palette`. Palette mode has predefined set of `ColorCode` and in the picker mode, more colors has been provided. Through `ModeSwitcher`, you can able to switch between these two options.
 
-```csharp
+{% tabs %}
+{% highlight razor tabtitle="~/font-background-color.razor" %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -254,48 +381,33 @@ The RichTextEditorFontColor and RichTextEditorBackgroundColor tag has two `Mode`
     <RichTextEditorBackgroundColor ModeSwitcher="true" />
     <RichTextEditorFontColor ModeSwitcher="true" />
     <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
-    <p><b> Key features:</b></p>
-    <ul>
-    <li><p> Provides <b>IFRAME</b> and <b>DIV</b> modes </p></li>
-    <li><p> Capable of handling markdown editing.</p></li>
-    <li><p> Contains a modular library to load the necessary functionality on demand.</p></li>
-    <li><p> Provides a fully customizable toolbar.</p></li>
-    <li><p> Provides HTML view to edit the source directly for developers.</p></li>
-    <li><p> Supports third - party library integration.</p></li>
-    </ul>
 </SfRichTextEditor>
 
 @code{
     private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
     {
-        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
-        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
-        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
         new ToolbarItemModel() { Command = ToolbarCommand.FontName },
         new ToolbarItemModel() { Command = ToolbarCommand.FontSize },
         new ToolbarItemModel() { Command = ToolbarCommand.FontColor },
         new ToolbarItemModel() { Command = ToolbarCommand.BackgroundColor },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
-        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
-        new ToolbarItemModel() { Command = ToolbarCommand.Image },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
-        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
-        new ToolbarItemModel() { Command = ToolbarCommand.Redo }
     };
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/font-background-color.razor %}
+
+{% endhighlight %}
+
 
 ![Displaying Font Color in Blazor RichTextEditor](./images/blazor-richtexteditor-font-color.png)
 
 ![Displaying Background Color in Blazor RichTextEditor](./images/blazor-richtexteditor-background-color.png)
 
-## Editor content styles
+## Build-in Editor content styles
 
 By default, The content styles of Rich Text Editor are not returned while retrieving HTML value from the editor. So, the styles are not applied when using the HTML value outside of the editor. To get the styles to Rich Text Editor’s content for your application, You can copy and use the below styles directly in your application. The styles listed below which used in the UI elements of the Rich Text Editor.
 
@@ -520,6 +632,87 @@ By default, The content styles of Rich Text Editor are not returned while retrie
 }
 
 ```
+## Number and Bullet Format Lists
+
+This feature allows the user to change the appearance of the Numbered and Bulleted lists. Users can also apply different numbering or bullet formats lists such as lowercase greek, upper Alpha, square and circles. You can also customize the style type of the lists to be populated in the dropdown from the toolbar by using the [`NumberFormatList`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorNumberFormatList.html) and [`BulletFormatList`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBulletFormatList.html) properties in the Rich Text Editor.
+
+{% tabs %}
+{% highlight razor tabtitle="~/number-bullet-format.razor" %}
+
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor>
+    <RichTextEditorToolbarSettings Items="@Tools" />
+    <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
+    <p><b> Key features:</b></p>
+    <ul>
+    <li><p> Provides <b>IFRAME</b> and <b>DIV</b> modes </p></li>
+    <li><p> Capable of handling markdown editing.</p></li>
+    </ul>
+</SfRichTextEditor>
+
+@code {
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.NumberFormatList },
+        new ToolbarItemModel() { Command = ToolbarCommand.BulletFormatList },
+    };
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% highlight cshtml %}
+
+{% highlight razor tabtitle="~/number-bullet-format.razor" %}
+
+{% endhighlight %}
+
+![Number format list in Blazor RichTextEditor](./images/blazor-richtexteditor-number-format.png)
+
+![Bullet format list in Blazor RichTextEditor](./images/blazor-richtexteditor-bullet-format.png)
+
+## Format Code Block
+
+You can configure code block formatting as a separate toolbar button by adding the **InsertCode** Command within the [`RichTextEditorToolbarSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html) - `Items` property. The InsertCode button has a toggle state to apply code block formatting to the editor and remove code block formatting from the editor.
+
+The following code will configure the InsertCode button in toolbar and set the background color to “pre” tag for highlighting the code block.
+
+{% tabs %}
+{% highlight razor tabtitle="~/format-code-block.razor" %}
+
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor>
+    <RichTextEditorToolbarSettings Items="@Tools" />
+        <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
+</SfRichTextEditor>
+
+<style>
+    .e-richtexteditor .e-rte-content .e-content pre {
+        padding: 10px;
+        background: #F4F5F7 !important;
+    }
+</style>
+
+@code{
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.InsertCode }
+    };
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% highlight cshtml %}
+
+{% highlight razor tabtitle="~/format-code-block.razor" %}
+
+{% endhighlight %}
+
+![Format Code Block in Blazor RichTextEditor](./images/blazor-richtexteditor-format-code-block.png)
+
 
 > You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
 

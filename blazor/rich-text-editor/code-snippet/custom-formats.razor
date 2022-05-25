@@ -1,0 +1,29 @@
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor>
+    <RichTextEditorToolbarSettings Items="@Tools" />
+    <RichTextEditorFormat Items="@FormatItems" />
+    <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
+</SfRichTextEditor>
+
+@code{
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.FontName },
+        new ToolbarItemModel() { Command = ToolbarCommand.FontSize },
+        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
+    };
+
+    private List<DropDownItemModel> FormatItems = new List<DropDownItemModel>()
+    {
+        new DropDownItemModel() { Text = "Paragraph", Value = "P" },
+        new DropDownItemModel() { Text = "Code", Value = "Pre" },
+        new DropDownItemModel() { Text = "Quotation", Value = "BlockQuote" },
+        new DropDownItemModel() { Text = "Heading 1", Value = "H1" },
+        new DropDownItemModel() { Text = "Heading 2", Value = "H2" },
+        new DropDownItemModel() { Text = "Heading 3", Value = "H3" },
+        new DropDownItemModel() { Text = "Heading 4", Value = "H4" },
+        new DropDownItemModel() { Text = "Heading 5", Value = "H5" },
+        new DropDownItemModel() { Text = "Heading 6", Value = "H6" }
+    };
+}
