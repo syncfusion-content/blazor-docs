@@ -11,9 +11,35 @@ documentation: ug
 
 In Rich Text Editor, click the toolbar buttons to format the words and the changes are visible immediately.
 
-Markdown is not like that. When you format the word in Markdown format, you need to add Markdown syntax to the word to indicate which words and phrases should look different from each other. Rich Text Editor supports markdown editing when the `EditorMode` set as `Markdown` and using both *keyboard interaction* and *toolbar action*, you can apply the formatting to text.
+Markdown is not like that. When you format the word in Markdown format, you need to add Markdown syntax to the word to indicate which words and phrases should look different from each other. Rich Text Editor supports markdown editing when the [`EditorMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.EditorMode.html#fields) set as [`Markdown`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.EditorMode.html#Syncfusion_Blazor_RichTextEditor_EditorMode_Markdown) and using both *keyboard interaction* and *toolbar action*, you can apply the formatting to text.
 
-## Supported Commands
+
+{% tabs %}
+{% highlight razor tabtitle="~/markdown.razor" %}
+
+```cshtml
+
+@using Syncfusion.Blazor.RichTextEditor
+
+
+<SfRichTextEditor EditorMode="EditorMode.Markdown">
+
+    The sample is added to showcase **markdown editing**.
+
+    Type or edit the content and apply formatting to view markdown formatted content.
+
+    We can add our own custom formation syntax for the Markdown formation, [sample link](https://blazor.syncfusion.com/demos/rich-text-editor/markdown-custom-format).
+
+    The third-party library **Marked** is used in this sample to convert markdown into HTML content.
+
+</SfRichTextEditor>
+
+```
+
+![Blazor RichTextEditor with Markdown Editor](./images/blazor-richtexteditor-markdown-editor.png)
+
+
+## Markdown  Commands
 
 The [Blazor Markdown editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor/wysiwyg-markdown-editor) supports the following commands to format the markdown content:
 
@@ -48,15 +74,13 @@ The [Blazor Markdown editor](https://www.syncfusion.com/blazor-components/blazor
 
 > The above listed commands alone are supported in Syncfusion Markdown editor. For other unsupported commands, you can achieve using the HTML tags in Markdown editor. The foot notes, definitions, math, and check list markdown syntax are also not supported.
 
-## Table
-
-Rich Text Editor allows to insert Markdown table in edit panel with 2 X 2 rows and columns along with the heading. To use table tool, add the `CreateTable` item in toolbar items.
 
 ### Insert table
 
-To insert the table in Rich Text Editor, click the `Table` toolbar option to insert the table into Rich Text Editor content and this is the default way in all the devices. Refer to the following sample and code snippets to add the table in Markdown editor.
+To insert the table in Rich Text Editor, click the [`Table`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorTableSettings.html#properties) toolbar option to insert the table into Rich Text Editor content and this is the default way in all the devices. Refer to the following sample and code snippets to add the table in Markdown editor.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="~/markdown-insert-table.razor" %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -83,16 +107,148 @@ To insert the table in Rich Text Editor, click the `Table` toolbar option to ins
         new ToolbarItemModel() { Command = ToolbarCommand.CreateTable }
     };
 }
+{% endhighlight %}
+{% endtabs %}
 
-```
+{% highlight cshtml %}
+
+{% include_relative code-snippet/markdown-insert-table.razor %}
+
+{% endhighlight %}
 
 ![Blazor RichTextEditor with Markdown Table](./images/blazor-richtexteditor-markdown-table.png)
 
-### Changing table constants
 
-The Markdown table constants can be changed for the table heading and the column names.
+### Insert Image
 
-> You can also explore our [Blazor Markdown editor](https://blazor.syncfusion.com/demos/rich-text-editor/markdown-overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
+ We can insert an image into the Rich Text Editor content. Click the Insert Image button in the toolbar item to insert an image. Refer to the following sample and code snippets to insert the image in Markdown editor.
+
+{% tabs %}
+{% highlight razor tabtitle="~/markdown-insert-image.razor" %}
+
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor EditorMode="EditorMode.Markdown">
+    <RichTextEditorToolbarSettings Items="@Tools" />
+    Rich Text Editor allows inserting images from online sources as well as the local computers where you want to insert the image in your content.
+
+    Get started Quick Toolbar to click on the image
+
+    It is possible to add custom style on the selected image inside the Rich Text Editor through the quick toolbar.
+
+</SfRichTextEditor>
+@code{
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Image }
+    };
+
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/markdown-insert-image.razor %}
+
+{% endhighlight %}
+
+![Blazor RichTextEditor with Markdown Image](./images/blazor-richtexteditor-markdown-image.png)
+
+
+### Insert Link
+
+Point the cursor anywhere within the editor where you would like to insert the link. It is also possible to select a text or an image within the editor and can be converted to the hyperlink. Click the Insert HyperLink tool on the toolbar. The Insert Link Dialog will open. The dialog has the following options.
+
+| Options | Description |
+|----------------|--------------------------------------|
+| Web Address | Types or pastes the destination for the link you are creating |
+| Display Text | Types or edits the required text that you want to display text for the link|
+
+{% tabs %}
+{% highlight razor tabtitle="~/markdown-insert-link.razor" %}
+
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor EditorMode="EditorMode.Markdown">
+    <RichTextEditorToolbarSettings Items="@Tools" />
+
+    Rich Text Editor allows inserting images from online sources as well as the local computers where you want to insert the image in your content.
+
+    Get started Quick Toolbar to click on the image
+
+    It is possible to add custom style on the selected image inside the Rich Text Editor through the quick toolbar.
+
+</SfRichTextEditor>
+
+@code{
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink }
+
+    };
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/markdown-insert-link.razor %}
+
+{% endhighlight %}
+
+![Blazor RichTextEditor with Markdown Link](./images/blazor-richtexteditor-markdown-link.png)
+
+### Custom Format
+
+The Rich Text Editor allows you to customize the markdown syntax by overriding its default syntax. Configure the customized markdown syntax using [`ListSyntax`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMarkdownOptions.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMarkdownOptions_ListSyntax), [`FormatSyntax`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMarkdownOptions.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMarkdownOptions_FormatSyntax), [`SelectionSyntax`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMarkdownOptions.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMarkdownOptions_SelectionSyntax) properties of RichTextEditorMarkdownOptions.
+
+{% tabs %}
+{% highlight razor tabtitle="~/markdown-custom-formats.razor" %}
+
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor Height="250px" EditorMode="EditorMode.Markdown">
+        The sample is configured with customized markdown syntax using the [RichTextEditorMarkdownOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMarkdownOptions.html). 
+        Type the content and click the toolbar item to view customized markdown syntax.
+        + To make a phrase bold, you need to add two underscores before and after the phrase (e.g., __this text is bold__).
+        <RichTextEditorMarkdownOptions ListSyntax="@ListSyntax" FormatSyntax="@FormatSyntax" SelectionSyntax="@SelectionSyntax" />
+</SfRichTextEditor>
+
+@code{
+    private Dictionary<string, string> ListSyntax { get; set; } = new Dictionary<string, string>()
+    {
+        { "OL", "2. " },
+        { "UL", "+ " }
+    };
+    private Dictionary<string, string> FormatSyntax { get; set; } = new Dictionary<string, string>()
+    {
+        { "Blockquote", "> " }
+    };
+    private Dictionary<string, string> SelectionSyntax { get; set; } = new Dictionary<string, string>()
+    {
+        { "Bold", "__" },
+        { "Italic", "_" }
+    };
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/markdown-custom-formats.razor %}
+
+{% endhighlight %}
+
+
+![Blazor RichTextEditor with Markdown Custom List Syntax](./images/blazor-richtexteditor-markdown-custom-list.png)
+
+![Blazor RichTextEditor with Markdown Custom Format Syntax](./images/blazor-richtexteditor-markdown-custom-formats.png)
+
+![Blazor RichTextEditor with Markdown Custom Selection Syntax](./images/blazor-richtexteditor-markdown-custom-bold.png)
+
 
 ## See Also
 
