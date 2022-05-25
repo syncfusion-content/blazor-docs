@@ -160,3 +160,92 @@ Use the [GetFilteredRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusi
 }
 
 ```
+
+## Filter enum column
+
+Filter the enum type data in the grid column using the Filter Template feature of the Grid.
+
+In the following sample, the `SfDropDownList` component is rendered in the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) for the Type column. The enumerated list data can be bound to the Type column. In the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of the `SfDropDownList`, dynamically filter the Type column using the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_System_Object_) method of the Grid.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+
+<SfGrid @ref="Grid" DataSource="@Orders" AllowFiltering="true">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.Type) HeaderText="Type" Type="ColumnType.String" Width="130">
+            <FilterTemplate>
+                <SfDropDownList Placeholder="Type" ID="Type" Value="@((string)(context as PredicateModel).Value)" DataSource="@FilterDropData" TValue="string" TItem="Data">
+                    <DropDownListEvents TItem="Data" ValueChange="Change" TValue="string"></DropDownListEvents>
+                    <DropDownListFieldSettings Value="Type" Text="Type"></DropDownListFieldSettings>
+                </SfDropDownList>
+            </FilterTemplate>
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+
+
+@code{
+    public SfGrid<Order> Grid;
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Random rnd = new Random();
+        var values = Enum.GetValues(typeof(FileType));
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = (new DateTime[] { new DateTime(2010, 5, 1), new DateTime(2010, 5, 2), new DateTime(2010, 5, 3), })[new Random().Next(3)],
+            Type = (FileType)(values.GetValue(rnd.Next(values.Length)))
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public FileType Type { get; set; }
+    }
+
+    public enum FileType : short
+    {
+        Base = 1,
+        Replace = 2,
+        Delta = 3
+    }
+    public class Data
+    {
+        public string Type { get; set; }
+    }
+    List<Data> FilterDropData = new List<Data>
+    {
+        new Data() { Type= "All" },
+        new Data() { Type= "Base" },
+        new Data() { Type= "Replace" },
+        new Data() { Type= "Delta" }
+    };
+    public async Task Change(ChangeEventArgs<string, Data> args)
+    {
+        if (args.Value == "All")
+        {
+           await this.Grid.ClearFilteringAsync();
+        }
+        else
+        {
+            await this.Grid.FilterByColumnAsync("Type", "contains", args.Value);
+        }
+    }
+}
+
+```
+
+> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-filtering-enum-column).
