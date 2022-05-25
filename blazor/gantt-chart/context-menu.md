@@ -194,7 +194,7 @@ The following sample code demonstrates defining built-in and custom context menu
     }
 ```
 
-## Sub context menu items 
+## Sub context menu items
 
 The sub-context menu items can be added by defining the collection of **MenuItems** for **Items** Property in [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ContextMenuItems). Actions for these customized items can be defined in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_ContextMenuItemClicked) event.
 
@@ -264,7 +264,7 @@ The following sample code demonstrates defining the sub-context menu item and it
     }
 }
 ```
-## Disable the context menu for specific columns 
+## Disable the context menu for specific columns
 
 Context Menu can be prevented for specific columns using [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event of Gantt. This event will be triggered before opening the ContextMenu. You can prevent the context menu from opening by defining the **Cancel** arguments of [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) to **false**.
 
