@@ -32,7 +32,7 @@ First, create a database named `BugTracker` and a table named `Bugs` to hold the
 3. Right-click on the created database and select New Query.
 4. Use the following SQL query to create a table named Bugs.
 
-{% highlight sql %}
+```
 
 Create Table Bugs(
 Id BigInt Identity(1,1) Primary Key Not Null,
@@ -41,7 +41,7 @@ BugPriority Varchar(100) Not Null,
 Assignee Varchar(100),
 BugStatus Varchar(100) Not Null)
 
-{% endhighlight %}
+```
 
 Now, the table design will look like below.
 
@@ -189,7 +189,7 @@ Now, in the `Browse` tab, search and install the `Syncfusion.Blazor.Grid` NuGet 
 
 Open `_Import.razor` file and add the following namespaces which are required to use the Syncfusion Blazor DataGrid Component in this application.
 
-{% highlight cshtml %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
@@ -233,7 +233,7 @@ Syncfusion Blazor provides different themes. They are:
 
 In this demo application, the Bootstrap4 theme will be used. To add the theme, open the `Pages/_Host.cshtml` file and add the following CSS reference code.
 
-{% highlight html %}
+{% highlight cshtml %}
 
 <link href="_content/Syncfusion.Blazor.Themes/ bootstrap4.css" rel="stylesheet" />
 
@@ -321,7 +321,7 @@ In the following code example,
 
 * `TValue` is specified as `Bug` class.
 
-{% highlight cshtml %}
+{% highlight razor %}
 
 <SfGrid TValue="Bug">
     <SfDataManager AdaptorInstance="typeof(BugDataAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
@@ -331,7 +331,7 @@ In the following code example,
 
 Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns/) component. We are going to create columns using the following code, let us see the properties used and their usage.
 
-{% highlight cshtml %}
+{% highlight razor %}
 
 <SfGrid TValue="Bug">
     <SfDataManager AdaptorInstance="typeof(BugDataAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
@@ -360,7 +360,7 @@ You can enable editing in the grid component using the [GridEditSettings](https:
 
 Here, we are using inline edit mode and the [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar/) property to show toolbar items for editing.
 
-{% highlight cshtml %}
+{% highlight razor %}
 
 <SfGrid TValue="Bug" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
     <SfDataManager AdaptorInstance="typeof(BugDataAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
