@@ -104,7 +104,7 @@ Image tools used to insert an image to the Rich Text Editor and click on the ima
 
 ## Link quick Toolbar
 
-You can costomise the selected link inside the Rich Text Editor through the quick toolbar.
+You can customize the selected link inside the Rich Text Editor through the quick toolbar.
 
 The quick toolbar for the link has the following options.
 
