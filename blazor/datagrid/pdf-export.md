@@ -1124,6 +1124,65 @@ To apply theme in exported PDF, define the **theme** in export properties.
 
 > By default, material theme is applied to exported PDF document.
 
+### Customize column in PDF exported document
+
+The PDF export provides an option to customize the column being exported to a PDF format using the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Columns) property of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class. While defining the column, we can change its width as per the requirement.
+
+In the following code sample, we have customized the column width for the PDF exported grid by enabling the [DisableAutoFitWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_DisableAutoFitWidth) property of the `PdfExportProperties` class.
+
+```cshtml
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Grids
+
+<SfButton OnClick="PdfExport" Content="Pdf Export"></SfButton>
+<SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowPdfExport="true" AllowPaging="true">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    private SfGrid<Order> DefaultGrid;
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+    public async Task PdfExport()
+    {
+        PdfExportProperties ExportProperties = new PdfExportProperties();
+        ExportProperties.DisableAutoFitWidth = true;
+        ExportProperties.Columns = new List<GridColumn>()
+        {
+                new GridColumn(){ Field="OrderID", HeaderText="Order ID", TextAlign=TextAlign.Left, Width="300"},
+                new GridColumn(){ Field="CustomerID", HeaderText="Customer Name", TextAlign=TextAlign.Left, Width="100"},
+                new GridColumn(){ Field="OrderDate", HeaderText=" Order Date", Type=ColumnType.Date, Format="d", TextAlign=TextAlign.Left, Width="80"}
+        };
+        await this.DefaultGrid.PdfExport(ExportProperties);
+    }
+}
+
+```
+
+> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-customize-column-in-pdf-exported-document).
+
 ### Grid cell customization in PDF export
 
 DataGrid has support to customize the column header and content styles, such as changing text orientation, the font color, the width of the header and content text, and so on in the exported PDF file. To achieve this requirement, define the `BeginCellLayout` event of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) with an event handler to perform the required action.
