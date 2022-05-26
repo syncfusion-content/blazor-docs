@@ -295,5 +295,5 @@ On and Off text can be set using [OnLabel](https://help.syncfusion.com/cr/blazor
 * [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)
 
-N> You can also explore our [Blazor Toggle Switch Button example](https://blazor.syncfusion.com/demos/buttons/toggle-switch-button) that shows you how to render and configure the toggle switch button.
+N> You can also explore our [Blazor Toggle Switch Button example](https://blazor.syncfusion.com/demos/buttons/toggle-switch-button) that shows you how to render and configure the Toggle Switch Button.
 
