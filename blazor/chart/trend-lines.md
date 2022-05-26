@@ -554,7 +554,6 @@ You can show or hide the trendline by setting trendline `visible` property.
 
 ![Hide Trendlines in Blazor Spline Chart](images/trend-lines/blazor-spline-chart-hide-trendlines.png)
 
-
 ## See Also
 
 * [Data label](./data-labels)
