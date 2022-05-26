@@ -756,7 +756,6 @@ The following code example describes, how to define the Edit template for a part
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" Toolbar="@(new List<string>() { "Add", "Cancel", "Edit", "Update", })">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
-    <GanttEditSettings AllowAdding="true" AllowEditing="true"></GanttEditSettings>
     <GanttColumns>
         <GanttColumn Field="TaskId" IsPrimaryKey=true></GanttColumn>
         <GanttColumn Field="TaskName">
@@ -764,7 +763,8 @@ The following code example describes, how to define the Edit template for a part
                 @{
                     var task = (context as TaskData);
                 }
-                <SfDropDownList @ref="dropdown" ID="TaskName" @bind-Value="task.TaskName" TItem="string" TValue="string" DataSource="@DropDownData"></SfDropDownList>
+                <SfDropDownList @ref="dropdown" Placeholder="Name" FloatLabelType="Syncfusion.Blazor.Inputs.FloatLabelType.Always" ID="TaskName" Value="task.TaskName" TItem="string" TValue="string" DataSource="@DropDownData">
+                </SfDropDownList>
             </EditTemplate>
         </GanttColumn>
         <GanttColumn Field="Duration"></GanttColumn>

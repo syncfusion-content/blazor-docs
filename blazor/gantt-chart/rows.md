@@ -539,7 +539,7 @@ You can prevent drag action of the particular record by setting the `Cancel` pro
 
 ### Perform row drag and drop action programmatically
 
-Gantt provides option to perform row drag and drop action programmatically by using the `ReorderRowsAsync` method. This method can be used for any external actions like button click.
+Gantt provides option to perform row drag and drop action programmatically by using the [ReorderRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ReorderRowAsync_System_Double_System_Double_System_String_) method. This method can be used for any external actions like button click.
 The following arguments are used to specify the positions to drag and drop a row:
 
 * `FromIndexes`: Index value of source(dragging) row.

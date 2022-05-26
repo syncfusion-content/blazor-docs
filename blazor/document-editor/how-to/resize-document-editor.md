@@ -9,7 +9,7 @@ documentation: ug
 
 # How to change height and width of Blazor Document Editor component
 
-In this article, you can learn how to change height and width of Document editor.
+In this article, we are going to see how to change height and width of Document editor.
 
 ## Change height of Document Editor
 

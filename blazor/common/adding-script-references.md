@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Adding script references in Blazor - Syncfusion
-description: Checkout and learn here about how to add the script references manually in the Syncfusion Blazor Components.
+description: Learn here about that how to add the script references manually in the Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Reference Scripts in Blazor Application
+# Reference scripts in Blazor Application
 
 This section provides information about the script isolation process and how to reference scripts from CDN, Static Web Assets and Custom resource generator (CRG) for Syncfusion Blazor Components.
 
@@ -109,7 +109,7 @@ To use static web assets, ensure [UseStaticFiles](https://docs.microsoft.com/en-
 
 ## JavaScript isolation
 
-Syncfusion Blazor components support JavaScript isolation where the needed scripts are loaded by the component itself when it is rendered. So, you don't have to reference scripts externally in application. 
+Syncfusion Blazor components supports JavaScript isolation where the needed scripts are loaded by the component itself when its rendered. So, you don't have to reference scripts externally in application. 
 
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) over JavaScript isolation approach for better loading performance of the blazor application. 
 

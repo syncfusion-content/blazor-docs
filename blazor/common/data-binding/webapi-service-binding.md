@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Bind data to the Syncfusion Blazor components using WebApiAdaptor
-description: Learn how to retrieve data from WebApi controller, bind it to the DataGrid component using WebApiAdaptor of SfDataManager, and perform CRUD operations.
+title: Bind data to Blazor components using WebApiAdaptor | CRUD | Syncfusion
+description: Learn how to retrieve data from WebApi controller, bind it to the Syncfusion DataGrid component using WebApiAdaptor of DataManager, and perform CRUD operations.
 component: General
 platform: Blazor
 ---
 
-# Bind Data to the Syncfusion Blazor Components Using WebApiAdaptor
+# Bind data to Blazor components using WebApiAdaptor and perform CRUD
 
 In this topic, you can learn how to retrieve data from WebApi Controller, bind to Grid component using [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#web-api-adaptor) of `SfDataManger`, and perform CRUD operations.
 
@@ -93,6 +93,8 @@ It is not recommended to have a connection string with sensitive information in 
 ![Add connection string in appsettings](../images/odata-appsettings.png)
 
 Now, the DbContext must be configured using connection string and registered as scoped service using the AddDbContext method in **Startup.cs** for .NET 5 and .NET 3.X application and in **Program.cs** file in .NET 6 application.
+
+![Startup file](../images/webapi-startup.png)
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
@@ -449,7 +451,7 @@ public void Put(long id, [FromBody] Orders book)
 
 ### Delete a row
 
-To delete a row, select any row and click the **Delete** toolbar button. Deleting operation will send a **DELETE** request to the Web API with the selected record's primary key value to remove the corresponding record from the Orders table.
+To delete a row, select any row and click the **Delete** toolbar button. Deleting operation will send a **DELETE** request to the Web API with the selected record`s primary key value to remove the corresponding record from the Orders table.
 
 {% highlight c# %}
 

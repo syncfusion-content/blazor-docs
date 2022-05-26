@@ -15,8 +15,6 @@ In the following example, ListView element is given as `PopupContent` to Dropdow
 
 ```cshtml
 
-@using Syncfusion.Blazor.SplitButtons
-@using Syncfusion.Blazor.Lists
 <SfDropDownButton CssClass="e-caret-hide" IconCss="e-icons e-down">
         <PopupContent>
             <SfListView ID="listview" DataSource="@Data" ShowCheckBox="true">
@@ -41,12 +39,6 @@ In the following example, ListView element is given as `PopupContent` to Dropdow
         public string Category { get; set; }
     }
 }
-
-<style>
-    .e-down::before {
-    content: '\e969'; /* Referred this icon from material theme */
-    }
-</style>
 
 ```
 

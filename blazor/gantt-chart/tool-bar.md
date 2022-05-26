@@ -242,8 +242,8 @@ You can enable or disable the toolbar items by using the `EnableItems` method.
 
 @code{
     public SfGantt<TaskData> Gantt;
-    public List<ItemModel> Toolbaritems = new List<ItemModel>() { new ItemModel() { Text = "Quick Filter", TooltipText = "Quick Filter", Id = "quickfilter" },
-    new ItemModel() { Text = "Clear Filter", TooltipText = "Clear Filter", Id = "clearfilter" } };
+    public List<ToolbarItem> Toolbaritems = new List<ToolbarItem>() { new ToolbarItem() { Text = "Quick Filter", TooltipText = "Quick Filter", Id = "quickfilter" },
+    new ToolbarItem() { Text = "Clear Filter", TooltipText = "Clear Filter", Id = "clearfilter" } };
     public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "quickfilter")
