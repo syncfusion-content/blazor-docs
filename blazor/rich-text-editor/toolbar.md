@@ -77,6 +77,20 @@ The following sample demonstrates the option to insert the image to the Rich Tex
 
 ## Image quick Toolbar
 
+Image tools used to insert an image to the Rich Text Editor and click on the image to easily customize the image using quick toolbar. The quick toolbar has the following items.
+
+| Image Toolabr items | Description |
+| --------------------| ------------- |
+| Replace | can replace the image with some other image.  |
+| Align | Align the image with left, right and justify |
+| Caption | set the captions for the image |
+| Remove | delete the image |
+| InsertLink | provide the link to the image |
+| Display | display the image as inline or with break |
+| AltText | provide the alternative text for the image if the image is not present in the location |
+| Dimension |  "rotation" related commands are added as custom commands to the image element |
+
+
 {% tabs %}
 {% highlight razor tabtitle="~/custom-image-quick-toolbar.razor" %}
 
@@ -90,6 +104,16 @@ The following sample demonstrates the option to insert the image to the Rich Tex
 
 ## Link quick Toolbar
 
+You can costomise the selected link inside the Rich Text Editor through the quick toolbar.
+
+The quick toolbar for the link has the following options.
+
+| Tools | Description |
+|----------------|--------------------------------------|
+| Open | The given link page will open in new window. |
+| Edit Link | Edits the link in the Rich Text Editor content. |
+| Remove Link | Removes link from the content of Rich Text Editor. |
+
 {% tabs %}
 {% highlight razor tabtitle="~/custom-link-quick-toolbar.razor" %}
 
@@ -101,6 +125,19 @@ The following sample demonstrates the option to insert the image to the Rich Tex
 ![Blazor RichTextEditor with Link Toolbar](./images/blazor-richtexteditor-link-toolbar.png)
 
 ## Table quick Toolbar
+
+Quick toolbar is opened by clicking the table. It has different sets of commands to be performed on the table which increases the feasibility to edit the table easily.
+
+| Tools | Description |
+|----------------|--------------------------------------|
+| TableHeader | header row can be added or removed from the inserted table |
+| TableRows| can be inserted above or below the required table cell |
+| TableColumns | can be inserted to the left or right side of the required table cell |
+| BackgroundColor| can be set each table cell Background Color |
+| TableRemove | delete the entire table |
+| Alignments |  can be aligned the table |
+| Styles | style the table border |
+
 
 {% tabs %}
 {% highlight razor tabtitle="~/custom-table-quick-toolbar.razor" %}

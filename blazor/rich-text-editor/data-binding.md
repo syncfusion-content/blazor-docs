@@ -11,10 +11,6 @@ documentation: ug
 
 This section explains how to bind the [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) to the Rich Text Editor component that can be achieved in the following way:
 
-* Two-way data binding
-
-## Two-way data binding
-
 The two-way data binding can be achieved by using the `@bind-Value` attribute from code-behind in Rich Text Editor.
 
 {% tabs %}
@@ -55,7 +51,11 @@ AutoSaveOnIdle is set to true in this demo, and the SaveInterval is set to 5 sec
 {% endhighlight %}
 {% endtabs %}
 
-We can also check whether RichTextEditor's content is changed or not.This can be achieved by using the [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_ValueChange) event of the Rich Text Editor to check whether the editor’s value is changed or not.
+## Get editor content
+
+You can also get the RichTextEditor's edited content by using the [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_ValueChange) event to get the updated edited value.
+
+When the user changes the content, the ValueChange event is invoked on every [SaveInterval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_SaveInterval) time or when the editor loses focus.
 
 {% tabs %}
 {% highlight razor tabtitle="~/value-change.razor" %}
@@ -70,14 +70,10 @@ We can also check whether RichTextEditor's content is changed or not.This can be
 @code {
     SfRichTextEditor RteObj;
     private string Value { get; set; } = "<p>Syncfusion RichTextEditor</p>";
-    private string PreviousValue { get; set; } = "<p>Syncfusion RichTextEditor</p>";
-    public void ValueChangeHandler(object args)
+    public void ValueChangeHandler(Syncfusion.Blazor.RichTextEditor.ChangeEventArgs args)
     {
-        if (PreviousValue != this.Value)
-        {
             //here you can write your code
-            this.PreviousValue = this.Value;
-        }
+            this.Value = "<p> Value changed </p>";
     }
 }
 
