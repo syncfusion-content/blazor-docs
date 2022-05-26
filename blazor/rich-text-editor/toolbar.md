@@ -7,7 +7,7 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Toolbar types
+# Toolbar types in Blazor RichTextEditor Component
 
 The Rich Text Editor toolbar contains a collection of tools such as bold, Italic, and text alignment buttons that are used to format the content. However, in most integrations, you can customize the toolbar configurations easily to suit your needs. The Rich Text Editor allows to configure different types of toolbar using [`RichTextEditorToolbarSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html) - `Type` property. The types of toolbar are:
 
@@ -44,7 +44,7 @@ Set the [`RichTextEditorToolbarSettings`](https://help.syncfusion.com/cr/blazor/
 
 ![Blazor RichTextEditor with MultiRow Toolbar](./images/blazor-richtexteditor-multirow-toolbar.png)
 
-# Floating Toolbar
+## Floating Toolbar
 
 By default, toolbar is float at the top of the Rich Text Editor on scrolling. It can be customized by specifying the offset of the floating toolbar from documents top position using [`FloatingToolbarOffset`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_FloatingToolbarOffset).
 
@@ -63,7 +63,7 @@ Enable or disable the floating toolbar using [`EnableFloating`](https://help.syn
 {% endhighlight %}
 {% endtabs %}
 
-# Quick Toolbar 
+## Quick Toolbar 
 
 Quick commands are opened as context-menu on clicking the corresponding element. The commands must be passed to image, link and table attributes of the [`RichTextEditorQuickToolbarSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html) property.
 
@@ -75,7 +75,7 @@ Quick commands are opened as context-menu on clicking the corresponding element.
 
 The following sample demonstrates the option to insert the image to the Rich Text Editor content as well as option to rotate the image through the quick toolbar. The image rotation functionalities have been achieved through the [`OnToolbarClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnToolbarClick) event.
 
-## Image quick Toolbar
+### Image quick Toolbar
 
 Image tools used to insert an image to the Rich Text Editor and click on the image to easily customize the image using quick toolbar. The quick toolbar has the following items.
 
@@ -102,7 +102,7 @@ Image tools used to insert an image to the Rich Text Editor and click on the ima
 
 ![Blazor RichTextEditor with Image Toolbar](./images/blazor-richtexteditor-image-toolbar.png)
 
-## Link quick Toolbar
+### Link quick Toolbar
 
 You can customize the selected link inside the Rich Text Editor through the quick toolbar.
 
@@ -124,7 +124,7 @@ The quick toolbar for the link has the following options.
 
 ![Blazor RichTextEditor with Link Toolbar](./images/blazor-richtexteditor-link-toolbar.png)
 
-## Table quick Toolbar
+### Table quick Toolbar
 
 Quick toolbar is opened by clicking the table. It has different sets of commands to be performed on the table which increases the feasibility to edit the table easily.
 

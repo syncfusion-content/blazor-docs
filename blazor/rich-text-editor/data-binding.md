@@ -7,11 +7,9 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Value Binding
+# Value Binding in Blazor RichTextEditor Component
 
-This section explains how to bind the [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) to the Rich Text Editor component that can be achieved in the following way:
-
-The two-way data binding can be achieved by using the `@bind-Value` attribute from code-behind in Rich Text Editor.
+This section explains how to bind the [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) to the Rich Text Editor component that can be achieved by using the `@bind-Value` attribute from code-behind in Rich Text Editor.
 
 {% tabs %}
 {% highlight razor tabtitle="~/value-binding.razor" %}
@@ -80,7 +78,7 @@ When the user changes the content, the ValueChange event is invoked on every [Sa
 {% endhighlight %}
 {% endtabs %}
 
-# Event
+## Event
 
 The Rich Text Editor triggers the events based on its actions. The events can be used as an extension point to perform custom operations.
 
