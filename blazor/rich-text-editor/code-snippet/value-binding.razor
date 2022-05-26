@@ -1,0 +1,11 @@
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor @bind-Value="@Value" />
+
+<br />
+
+<textarea rows="5" cols="60" @bind="@Value" />
+
+@code {
+    private string Value { get; set; } = "<p>Syncfusion RichTextEditor</p>";
+}
