@@ -9,7 +9,7 @@ documentation: ug
 
 # Icons in Blazor Breadcrumb Component
 
-The Breadcrumb component contains an icon, image, and SVG to provide a visual representation of an item.
+The [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) component contains an icon, image, and SVG to provide a visual representation of an item.
 
 ## Breadcrumb with font icon
 
