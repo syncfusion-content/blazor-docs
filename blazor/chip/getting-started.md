@@ -268,6 +268,6 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)
 
-N> You can also explore our [Blazor Chip example](https://blazor.syncfusion.com/demos/chips/default-functionalities?theme=bootstrap5) that shows you how to render and configure the chip.
+N> You can also explore our [Blazor Chip example](https://blazor.syncfusion.com/demos/chips/default-functionalities?theme=bootstrap5) that shows you how to render and configure the Chip.
 
 
