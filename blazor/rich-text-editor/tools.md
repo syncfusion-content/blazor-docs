@@ -1151,7 +1151,7 @@ The Background Color can be set for each table cell through the [`BackgroundColo
 ![Changing Table Background Color in Blazor RichTextEditor](./images/blazor-richtexteditor-table-background-color.png)
 
 
-## Custom Tool
+## Add custom tool to Toolbar
 
 The Rich Text Editor allows to configure your own tools to its toolbar using [`RichTextEditorCustomToolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorCustomToolbarItems.html) tag directive with in a [`RichTextEditorToolbarSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html). The tools can be plain text, icon, HTML template. You can also define the order and group where the tool should be included.
 
