@@ -273,3 +273,177 @@ Both the width and height properties allow setting pixels/numbers/percentage. Th
 ```
 
 ![Changing Blazor Toast Size](./images/blazor-toast-size.png)
+
+## Show or hide toast using service
+
+You can initialize single toast instance and use it all over application by creating server. Refer below steps to create service to show toast from any page.
+
+1. Create a toast service to inject in pages to show toast messages from anywhere. Here, title and content can be passed to show the toast message. 
+
+```c#
+public class ToastOption
+{
+    public string Title { get; set; }
+    public string Content { get; set; }
+}
+
+public class ToastService
+{
+    public event Action<ToastOption> ShowToastTrigger;
+    public void ShowToast(ToastOption options)
+    {
+        //Invoke ToastComponent to update and show the toast with messages  
+        this.ShowToastTrigger.Invoke(options);
+    }
+}
+``` 
+
+2. Add the `ToastService` to services collection in **Program.cs**.
+
+{% tabs %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="13 14" %}
+
+using BlazorApp.Data;
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
+using Syncfusion.Blazor;
+using BlazorApp.Components;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddSingleton<ToastService>();
+builder.Services.AddSyncfusionBlazor();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+
+app.UseStaticFiles();
+
+app.UseRouting();
+
+app.MapBlazorHub();
+app.MapFallbackToPage("/_Host");
+
+app.Run();
+    
+{% endhighlight %}
+{% endtabs %}
+    
+3. Create `ToastComponent` which shows `SfToast` based on `ToastService` notification.
+        
+{% tabs %}
+{% highlight razor tabtitle="ToastComponent.razor" hl_lines="13 14" %}
+    
+@using Syncfusion.Blazor.Notifications;  
+@inject ToastService ToastService
+
+<SfToast @ref="Toast" Timeout=2000>  
+    <ToastTemplates>  
+        <Title>  
+            @Options.Title  
+        </Title>  
+        <Content>  
+            @Options.Content  
+        </Content>  
+    </ToastTemplates>  
+    <ToastPosition X="Right"></ToastPosition>  
+</SfToast>  
+  
+@code{
+
+    SfToast Toast;  
+
+    private bool IsToastVisible { get; set; } = false;  
+
+    private ToastOption Options = new ToastOption();
+
+    protected override void OnInitialized()
+    {
+        ToastService.ShowToastTrigger += (ToastOption options) =>
+        {
+            InvokeAsync(() =>
+            {
+                this.Options.Title = options.Title;
+                this.Options.Content = options.Content;
+                this.IsToastVisible = true;
+                this.StateHasChanged();
+                this.Toast.ShowAsync();
+            });
+        };
+        base.OnInitialized();
+    }
+}  
+    
+{% endhighlight %}
+{% endtabs %}
+    
+4. Add `ToastComponent` create in above step in `MainLayout.razor`.
+
+{% tabs %}
+{% highlight razor tabtitle="MainLayout.razor" hl_lines="21" %}
+    
+@inherits LayoutComponentBase
+@using BlazorApp.Components;
+
+<PageTitle>BlazorApp</PageTitle>
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+<ToastComponent />
+
+{% endhighlight %}
+{% endtabs %}
+    
+5. Now, you can inject `ToastService` in any page and call `ToastService.ShowToast()` method to show toast notifications.
+
+{% tabs %}
+{% highlight razor tabtitle="RAZOR" hl_lines="3 10 11 12 13 14" %}
+    
+@page "/"
+@using BlazorApp.Components  
+@inject ToastService ToastService 
+
+<button class="e-btn" @onclick="@ShowToast"> Show Toast</button>  
+  
+@code {  
+    private void ShowToast()  
+    {  
+        this.ToastService.ShowToast(new ToastOption()  
+        {  
+            Title = "Toast Title",  
+            Content = "Toast content"
+        });  
+    }  
+}  
+    
+{% endhighlight %}
+{% endtabs %}
+    
+[View Sample in GitHub](https://github.com/SyncfusionExamples/Show-or-hide-toast-using-service-in-Blazor)
+    
