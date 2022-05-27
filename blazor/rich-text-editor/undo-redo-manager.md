@@ -7,7 +7,7 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Undo Redo manager in Blazor RichTextEditor
+# Undo Redo manager in Blazor RichTextEditor Component
 
 Undo and redo tools allows to edit the text by disregard or cancel the recently made changes and restore it to previous state. It is a useful tool to restore the performed action which got changed by mistake. By default, upto 30 actions can be undo/redo in the editor.
 
