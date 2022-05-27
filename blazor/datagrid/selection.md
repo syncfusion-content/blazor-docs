@@ -395,7 +395,7 @@ The DataGrid allows to select range of cells or rows by mouse or touch dragging.
 
 ## Perform toggle selection programmatically
 
-You can perform toggle selection programmatically by using the **SelectRowAsync** method by passing **true** value as the second argument. In the below code example, we have programmatically toggle the row index 2.
+You can perform toggle selection programmatically by using the **SelectRowAsync** method by passing **true** value as the second argument. In the below code example, we have programmatically toggled the row index 2.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
