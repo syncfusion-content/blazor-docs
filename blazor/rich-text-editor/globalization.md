@@ -9,7 +9,7 @@ documentation: ug
 
 # Globalization in Blazor RichTextEditor Component
 
-## RTL 
+## Enable RTL mode 
 
 Specifies the direction of the Rich Text Editor component using the `EnableRtl` property. For writing systems will require Arabic, Hebrew, and more. The direction can be switched to right-to-left.
 
