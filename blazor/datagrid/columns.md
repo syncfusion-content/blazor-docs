@@ -1220,7 +1220,7 @@ The following image represents the DisplayAsCheckBox enabled for a DataGrid colu
 
 The Grid columns can be stacked or grouped in order to show multiple levels of column headers. This can be achieved by nesting the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn) directive within another `GridColumn` directive.
 
-In this following sample, the columns **Order Date**, **Freight** are grouped under **Order Details** and the columns **Shipped Date**, **Ship Country** are grouped under **Shipped Details**.
+In the following sample, the columns **Order Date**, and **Freight** are grouped under **Order Details** and the columns **Shipped Date**, and **Ship Country** are grouped under **Shipped Details**.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
