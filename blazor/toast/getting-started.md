@@ -303,3 +303,5 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 * [Getting Started with Syncfusion Blazor for server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio/)
 
 * [Getting Started with Syncfusion Blazor for server-side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli/)
+
+N> You can also explore our [Blazor Toast example](https://blazor.syncfusion.com/demos/toast/default-functionalities?theme=bootstrap5) that shows you how to render and configure the toast.

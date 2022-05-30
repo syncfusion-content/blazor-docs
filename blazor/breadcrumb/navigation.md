@@ -9,7 +9,7 @@ documentation: ug
 
 # Navigation in Blazor Breadcrumb Component
 
-By default, Breadcrumb items support navigation for relative or absolute URL. You can handle the custom navigation by setting [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableNavigation) property as `false`.
+By default, [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) items support navigation for relative or absolute URL. You can handle the custom navigation by setting [EnableNavigation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_EnableNavigation) property as `false`.
 
 ## Relative URL
 

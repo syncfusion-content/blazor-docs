@@ -30,6 +30,7 @@ The first step is to create a Library database and a table named Book to hold a 
 * Use the following SQL query to create a table named Book.
 
 ```
+
 Create Table Book(
 Id BigInt Identity(1,1) Primary Key Not Null,
 Name Varchar(200) Not Null,
@@ -37,6 +38,7 @@ Author Varchar(100) Not Null,
 Quantity int,
 Price int Not Null,
 Available bit)
+
 ```
 
 Now, the Book table design will look like below.
@@ -69,7 +71,9 @@ Run the following commands in the Package Manager Console.
 Once the above packages are installed, you can scaffold DbContext and Model classes. Run the following command in the Package Manager Console under the LibraryManagement project.
 
 ```
+
 Scaffold-DbContext “Server=localhost;Database=Library;Integrated Security=True” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
 ```
 
 The above scaffolding command contains the following details for creating DbContext and model classes for the existing database and its tables.
@@ -90,9 +94,43 @@ It is not recommended to have a connection string with sensitive information in 
 
 ![Move connection string to appsettings.json in Blazor](../images/change-connection-string.png)
 
-Now, the **DbContext** must be configured using connection string and registered as scoped service using the **AddDbContext** method in **Startup.cs**.
+Now, the **DbContext** must be configured using connection string and registered as scoped service using the **AddDbContext** method in **Startup.cs** in .NET 5 and .NET 3.X application and in **Program.cs** file in .NET 6 application.
 
-![Modified appsettings.json in Blazor](../images/configure-startup.png)
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
+
+builder.Services.AddDbContext<OrdersDetailsContext>(option =>
+                option.UseSqlServer(builder.Configuration.GetConnectionString("LibraryDatabase")));
+
+{% endhighlight %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
+
+namespace ODataServiceProject
+{
+    public class Startup
+    {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        public IConfiguration Configuration { get; }
+        // This method gets called by the runtime. Use this method to add services to the container.
+        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+        public void ConfigureServices(IServiceCollection services)
+        {
+            
+            services.AddDbContext<OrdersDetailsContext>(option => 
+                option.UseSqlServer(Configuration.GetConnectionString("LibraryDatabase")));
+            ...
+        }
+        ....
+        ....
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Creating a Data Access Layer
 
@@ -104,7 +142,8 @@ To create an interface, right-click on the Models folder and create an interface
 
 Create a data access layer LibraryService.cs.
 
-```c#
+{% highlight c# %}
+
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -186,13 +225,49 @@ namespace LibraryManagement.Models
         }
     }
 }
-```
+
+{% endhighlight %}
 
 ## Register the service in Startup.cs
 
-Now, you need to register the **LibraryService** and **ILibraryService** as services in the **startup.cs** file. Kindly register the Scoped Services like below.
+Now, you need to register the **LibraryService** and **ILibraryService** as services in the **startup.cs** file for .NET 5 and .NET 3.X applications and in **Program.cs** file for .NET6 applications. Kindly register the Scoped Services like below.
 
-![Register the created interface as Service in Blazor](../images/register-service.png)
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
+
+builder.Services.AddScoped<ILibraryService, LibraryService>();
+builder.Services.AddDbContext<OrdersDetailsContext>(option =>
+                option.UseSqlServer(builder.Configuration.GetConnectionString("LibraryDatabase")));
+
+{% endhighlight %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
+
+namespace ODataServiceProject
+{
+    public class Startup
+    {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        public IConfiguration Configuration { get; }
+        // This method gets called by the runtime. Use this method to add services to the container.
+        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddScoped<ILibraryService, LibraryService>();            
+            services.AddDbContext<OrdersDetailsContext>(option => 
+                option.UseSqlServer(Configuration.GetConnectionString("LibraryDatabase")));
+            ...
+        }
+        ....
+        ....
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add Syncfusion Blazor DataGrid package
 
@@ -210,73 +285,70 @@ Now, in the Browse tab, search and install the **Syncfusion.Blazor.Grid** NuGet 
 
 Open **_Import.razor** file and add the following namespaces which are required to use the Syncfusion Blazor components in this application.
 
-```cshtml
+{% highlight razor %}
+
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
-```
 
-Open **Startup.cs** file and register the Syncfusion service in the **ConfigureServices** method as follows.
+{% endhighlight %}
 
-```c#
-using Syncfusion.Blazor;
+Open **Startup.cs** file in .NET 5 and .NET 3.X applications, **Program.cs** file in .NET 6 application and register the Syncfusion service in the **ConfigureServices** method as follows.
 
-namespace LibraryManagement
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
+
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddSyncfusionBlazor();
+
+{% endhighlight %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
+
+public void ConfigureServices(IServiceCollection services)
 {
-    public class Startup
-    {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
+    services.AddRazorPages();
+    services.AddServerSideBlazor();
+    services.AddSingleton<WeatherForecastService>();
+    services.AddSyncfusionBlazor();
+}
 
-        public IConfiguration Configuration { get; }
-
-        // This method gets called at the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddRazorPages();
-            services.AddServerSideBlazor();
-            services.AddSyncfusionBlazor();
-            services.AddSingleton<WeatherForecastService>();
-        }
-
-        // This method gets called at the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-
-        }
-    }
-```
+{% endhighlight %}
+{% endtabs %}
 
 Themes provide life to components. Syncfusion Blazor has different themes. They are:
 
 * Fabric
-* Bootstrap4
+* Bootstrap
 * Material
 * Bootstrap
 * High Contrast
 
 In this demo application, the Fabric theme will be used. To add the theme, open the **Pages/_Host.cshtml** file and add the following CSS reference code.
 
-```html
+{% highlight cshtml %}
+
 <link href="_content/Syncfusion.Blazor.Themes/fabric.css" rel="stylesheet" />
-```
+
+{% endhighlight %}
 
 ## Add Syncfusion Blazor DataGrid component to an application
 
 In previous steps, we have successfully configured the Syncfusion Blazor package in the application. Now, we can add the grid component to the **Index.razor** page.
 
-```cshtml
+{% highlight razor %}
+
 <SfGrid TValue="Book">
 </SfGrid>
-```
+
+{% endhighlight %}
 
 ## Bind data to Blazor DataGrid component using Entity Framework
 
 To consume data from the database using **Entity Framework**, you need to inject the LibraryService into the razor page and assign it to the DataGrid’s datasource variable. Here, the **DataSource** property of the DataGrid component is used to bind the SQL data using Entity Framework in the Server-side application  
 
-```cshtml
+{% highlight razor %}
+
 @using LibraryManagement.Models
 @inject ILibraryService LibraryService
 
@@ -291,7 +363,8 @@ To consume data from the database using **Entity Framework**, you need to inject
         LibraryBooks = LibraryService.GetBooks();
     }
 }
-```
+
+{% endhighlight %}
 
 Grid columns can be defined using the **GridColumn** component. We are going to create columns using the following code. Let us see the properties used and their usage.
 
@@ -302,7 +375,8 @@ Grid columns can be defined using the **GridColumn** component. We are going to 
 * **Format** property helps to format number, currencies, and date in a particular culture. Here, the Price column has been formatted.
 * **DisplayAsCheckBox** property renders checkbox in cells and sets check state based on the property value. Here, Available column is rendered as a checkbox column.
 
-```cshtml
+{% highlight razor %}
+
 @using LibraryManagement.Models
 @inject ILibraryService LibraryService
   
@@ -325,7 +399,8 @@ Grid columns can be defined using the **GridColumn** component. We are going to 
         LibraryBooks = LibraryService.GetBooks();
     }
 }
-```
+
+{% endhighlight %}
 
 Now, the data from the SQL server is loaded into the DataGrid component. Refer to the following screenshot for the output of above.  
 
@@ -345,7 +420,8 @@ While using the DataSource property of Grid, changes will be reflected only in t
 
 We have added the DataGrid editing, toolbar, and OnActionBegin and OnActionComplete event code with the previous Grid model.
 
-```cshtml
+{% highlight razor %}
+
 @using LibraryManagement.Models
 @inject ILibraryService LibraryService
 
@@ -382,7 +458,8 @@ We have added the DataGrid editing, toolbar, and OnActionBegin and OnActionCompl
         }
     }
 }
-```
+
+{% endhighlight %}
 
 > Normal edit mode is the default mode of editing.
 
@@ -394,7 +471,8 @@ To insert a new row, click the **Add** toolbar button. The new record edit form 
 
 Clicking the **Update** toolbar button will initiate the insert action in Grid. Now, the **OnActionBegin** event will be triggered with a **RequestType** as **Save**. You can insert the record into the database (Book table) by calling the **InsertBook()** method of the **LibraryService**.
 
-```c#
+{% highlight c# %}
+
 public void ActionBeginHandler(ActionEventArgs<Book> Args)
 {
     if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
@@ -406,7 +484,8 @@ public void ActionBeginHandler(ActionEventArgs<Book> Args)
         }
     }
 }
-```
+
+{% endhighlight %}
 
 ![After Inserting a record in Grid](../images/after-inserting.png)
 
@@ -418,7 +497,8 @@ To edit a row, select any row and click the **Edit** toolbar button. The edit fo
 
 Now, the Price column value is changed to 125 from 250. Clicking the **Update** toolbar button will initiate the update action and trigger the OnActionBegin event with **Save RequestType**. Here, you can update the record in the Book table by calling the **UpdateBook()** method of the LibraryService when **Args.Action** is **Edit**.  Refer to the following code example.  
 
-```c#
+{% highlight c# %}
+
 public void ActionBeginHandler(ActionEventArgs<Book> Args)
 {
     if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
@@ -430,7 +510,8 @@ public void ActionBeginHandler(ActionEventArgs<Book> Args)
         }
     }
 }
-```
+
+{% endhighlight %}
 
 The resultant grid will look like below.
 
@@ -440,7 +521,8 @@ The resultant grid will look like below.
 
 To delete a row, select any row and click the **Delete** toolbar button. Deleting operation will initiate the OnActionBegin event with RequestType as Delete. Now, you can delete the record from the database by calling **DeleteBook()** method of LibraryService with the selected record`s primary key value. Refer to the following code example.
 
-```c#
+{% highlight c# %}
+
 public void ActionBeginHandler(ActionEventArgs<Book> Args)
 {
     if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Delete))
@@ -449,7 +531,8 @@ public void ActionBeginHandler(ActionEventArgs<Book> Args)
         LibraryService.DeleteBook(Args.Data.Id);
     }
 }
-```
+
+{% endhighlight %}
 
 ![Final Project in Blazor](../images/final-gif.gif)
 

@@ -33,12 +33,14 @@ First, create a database named `BugTracker` and a table named `Bugs` to hold the
 4. Use the following SQL query to create a table named Bugs.
 
 ```
+
 Create Table Bugs(
 Id BigInt Identity(1,1) Primary Key Not Null,
 Summary Varchar(400) Not Null,
 BugPriority Varchar(100) Not Null,
 Assignee Varchar(100),
 BugStatus Varchar(100) Not Null)
+
 ```
 
 Now, the table design will look like below.
@@ -83,7 +85,8 @@ In the following example,
 * `UpdateBugAsync` method updates the given bug object in the table.
 * `RemoveBugAsync` method removes the given bug by Id.
 
-```c#
+{% highlight c# %}
+
 public class BugDataAccessLayer
 {
     public IConfiguration Configuration;
@@ -141,11 +144,32 @@ public class BugDataAccessLayer
         }
     }
 }
-```
 
-Now, register `BugDataAccessLayer` as scoped service in the `Startup.cs` as follows.
+{% endhighlight %}
 
-![Adding data access layer as service in Blazor](../images/adding-data-access-layer-as-service.png)
+Now, register `BugDataAccessLayer` as scoped service in the `Startup.cs` file in .NET 5 and .NET 3.X application, in `Program.cs` file in .NET 6 application as follows.
+
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
+
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddScoped<BugDataAccessLayer>();
+
+{% endhighlight %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
+
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddRazorPages();
+    services.AddServerSideBlazor();
+    services.AddSingleton<WeatherForecastService>();
+    services.AddScoped<BugDataAccessLayer>();
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Adding Syncfusion Blazor components Package
 
@@ -165,33 +189,39 @@ Now, in the `Browse` tab, search and install the `Syncfusion.Blazor.Grid` NuGet 
 
 Open `_Import.razor` file and add the following namespaces which are required to use the Syncfusion Blazor DataGrid Component in this application.
 
-```cshtml
+{% highlight razor %}
+
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
-```
 
-Open `Startup.cs` file and register the Syncfusion service in the `ConfigureServices` method as follows.
+{% endhighlight %}
 
-```c#
-using Syncfusion.Blazor;
+Open `Startup.cs` file in .NET 5 and .NET 3.X applications, `Program.cs` file in .NET 6 application and register the Syncfusion service in the `ConfigureServices` method as follows.
 
-namespace BlazorDapper
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
+
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddScoped<BugDataAccessLayer>();
+builder.Services.AddSyncfusionBlazor();
+
+{% endhighlight %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
+
+public void ConfigureServices(IServiceCollection services)
 {
-    public class Startup
-    {
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddRazorPages();
-            services.AddServerSideBlazor();
-            services.AddSingleton<WeatherForecastService>();
-            services.AddScoped<BugDataAccessLayer>();
-            services.AddSyncfusionBlazor();
-        }
-    }
+    services.AddRazorPages();
+    services.AddServerSideBlazor();
+    services.AddSingleton<WeatherForecastService>();
+    services.AddScoped<BugDataAccessLayer>();
+    services.AddSyncfusionBlazor();
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 Syncfusion Blazor provides different themes. They are:
 
@@ -203,17 +233,20 @@ Syncfusion Blazor provides different themes. They are:
 
 In this demo application, the Bootstrap4 theme will be used. To add the theme, open the `Pages/_Host.cshtml` file and add the following CSS reference code.
 
-```html
+{% highlight cshtml %}
+
 <link href="_content/Syncfusion.Blazor.Themes/ bootstrap4.css" rel="stylesheet" />
-```
+
+{% endhighlight %}
 
 In previous steps, we have successfully configured the Syncfusion Blazor package in the application. Now, we can add the DataGrid Component to the `Index.razor`.
 
-```cshtml
+{% highlight cshtml %}
+
 <SfGrid>
 </SfGrid>
 
-```
+{% endhighlight %}
 
 ## Binding data to the DataGrid component
 
@@ -232,7 +265,8 @@ In the following code example,
 * Extended `BugDataAdaptor` class with `DataAdaptor` base class.
 * Injected `BugDataAccessLayer` instance to perform data operations.
 
-```c#
+{% highlight c# %}
+
 public class BugDataAdaptor: DataAdaptor
 {
     private BugDataAccessLayer _dataLayer;
@@ -248,21 +282,36 @@ public class BugDataAdaptor: DataAdaptor
         return dataManagerRequest.RequiresCounts ? new DataResult() { Result = bugs, Count = count } : count;
     }
 }
-```
 
-Now, Open the `Startup.cs` file and register the `BugDataAdaptor` class in the `ConfigureServices` method as follows.
+{% endhighlight %}
 
-```c#
+Now, Open the `Startup.cs` file in .NET 5 and .NET 3.X application, in `Program.cs` file in .NET 6 application and register the `BugDataAdaptor` class in the `ConfigureServices` method as follows.
+
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
+
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddScoped<BugDataAccessLayer>();
+builder.Services.AddSyncfusionBlazor();
+builder.Services.AddScoped<BugDataAdaptor>();
+
+{% endhighlight %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
+
 public void ConfigureServices(IServiceCollection services)
 {
-   services.AddRazorPages();
-   services.AddServerSideBlazor();
-   services.AddSingleton<WeatherForecastService>();
-   services.AddScoped<BugDataAccessLayer>();
-   services.AddSyncfusionBlazor();
-   services.AddScoped<BugDataAdaptor>();
+    services.AddRazorPages();
+    services.AddServerSideBlazor();
+    services.AddSingleton<WeatherForecastService>();
+    services.AddScoped<BugDataAccessLayer>();
+    services.AddSyncfusionBlazor();
+    services.AddScoped<BugDataAdaptor>();
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Now, we have added `SfDataManager` in Grid for binding the data to the Grid and added column definition.
 
@@ -272,15 +321,18 @@ In the following code example,
 
 * `TValue` is specified as `Bug` class.
 
-```cshtml
+{% highlight razor %}
+
 <SfGrid TValue="Bug">
     <SfDataManager AdaptorInstance="typeof(BugDataAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
 </SfGrid>
-```
+
+{% endhighlight %}
 
 Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns/) component. We are going to create columns using the following code, let us see the properties used and their usage.
 
-```cshtml
+{% highlight razor %}
+
 <SfGrid TValue="Bug">
     <SfDataManager AdaptorInstance="typeof(BugDataAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridColumns>
@@ -291,7 +343,8 @@ Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com
         <GridColumn Field="@nameof(Bug.BugStatus)" HeaderText="Status" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
-```
+
+{% endhighlight %}
 
 Now, the DataGrid will look like this while running the application. The displayed records are fetched from the database.
 
@@ -307,7 +360,8 @@ You can enable editing in the grid component using the [GridEditSettings](https:
 
 Here, we are using inline edit mode and the [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar/) property to show toolbar items for editing.
 
-```cshtml
+{% highlight razor %}
+
 <SfGrid TValue="Bug" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
     <SfDataManager AdaptorInstance="typeof(BugDataAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
@@ -319,7 +373,8 @@ Here, we are using inline edit mode and the [Toolbar](https://blazor.syncfusion.
         <GridColumn Field="@nameof(Bug.BugStatus)" HeaderText="Status" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
-```
+
+{% endhighlight %}
 
 We have already created CRUD operations method in the data access layer section itself. Now, we are going to call those methods while performing CRUD actions in DataGrid.
 
@@ -327,13 +382,15 @@ We have already created CRUD operations method in the data access layer section 
 
 Add the following codes(`InsertAsync`) in the `BugDataAdaptor`(CustomAdaptor) class to perform insert operation.
 
-```c#
+{% highlight c# %}
+
 public override async Task<object> InsertAsync(DataManager dataManager, object data, string key)
 {
     await _dataLayer.AddBugAsync(data as Bug);
     return data;
 }
-```
+
+{% endhighlight %}
 
 To insert a new row, click the `Add` toolbar button. The new record edit form will look like below.
 
@@ -347,13 +404,15 @@ Clicking the `Update` toolbar button will call the `InsertAsync` method of our `
 
 Add the following codes (`UpdateAsync`) in the `BugDataAdaptor`(CustomAdaptor) class to perform update operation.
 
-```c#
+{% highlight c# %}
+
 public override async Task<object> UpdateAsync(DataManager dataManager, object data, string keyField, string key)
 {
     await _dataLayer.UpdateBugAsync(data as Bug);
     return data;
 }
-```
+
+{% endhighlight %}
 
 To edit a row, select any row and click the `Edit` toolbar button. The edit form will look like below.
 
@@ -367,13 +426,15 @@ Here, the `Status` field value is changed from `Not started` to `In progress`. C
 
 Add the following codes(`RemoveAsync`) in the `BugDataAdaptor`(CustomAdaptor) class to perform update operation.
 
-```c#
+{% highlight c# %}
+
 public override async Task<object> RemoveAsync(DataManager dataManager, object primaryKeyValue, string keyField, string key)
 {
     await _dataLayer.RemoveBugAsync(Convert.ToInt32(primaryKeyValue));
     return primaryKeyValue;
 }
-```
+
+{% endhighlight %}
 
 To delete a row, select any row and click the `Delete` toolbar button. Clicking the `Delete` toolbar button will call the `RemoveAsync` method of our `BugDataAdaptor` to update the record in the `Bug` table.
 

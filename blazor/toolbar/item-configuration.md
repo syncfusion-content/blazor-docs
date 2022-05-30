@@ -9,7 +9,7 @@ documentation: ug
 
 # Item Configuration in Blazor Toolbar Component
 
-The Toolbar can be rendered by defining a list of items. Items can be constructed with the following built-in command types or item template.
+The [Blazor Toolbar](https://www.syncfusion.com/blazor-components/blazor-toolbar) can be rendered by defining a list of items. Items can be constructed with the following built-in command types or item template.
 
 * Align
 * CssClass
