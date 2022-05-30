@@ -9,7 +9,7 @@ documentation: ug
 
 # Realtime editing with SignalR
 
-The richtexteditor allows, two or more users can editing in the same richtexteditor. This can be archived by SignalR service. Which will now update the Editor value real-time, when loading it in multiple pages.
+The richtexteditor allows, two or more users can edit the same editor by using SignalR services. Which will update the Editor value real-time, when loading it in multiple pages.
 
 {% tabs %}
 {% highlight razor tabtitle="~/realtime-editong.razor" %}

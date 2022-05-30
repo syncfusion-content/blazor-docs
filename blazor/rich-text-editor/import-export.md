@@ -9,7 +9,7 @@ documentation: ug
 
 # Import and Export in Blazor RichTextEditor Component
 
-You can load an external HTML file in the SfRichTextEditor which contains the text and images. You can read the file path using the [`Path`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Path) and `FileStream` property in the System.IO directory.
+You can load an external HTML file in the SfRichTextEditor which contains the text and images. You can read the file path using the [Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Path) and `FileStream` property in the System.IO directory.
 
 {% tabs %}
 {% highlight razor tabtitle="~/import-export.razor" %}
@@ -81,7 +81,7 @@ You can use the EJ1 Syncfusion. EJ.Export, Syncfusion.DocIO libraries to convert
 
  You can import the RTF file content into the Rich Text Editor using our Uploader component and EJ1 Syncfusion. EJ.Export, Syncfusion.DocIO libraries for RTF to HTML conversions. 
  
- You can import the RTF file in the uploader, and once the file is uploaded successfully, We can replace the editor value with the converted HTML text and also can export the RichTextEditor value to the RTF file.
+ You can import the RTF file in the uploader, and once the file is uploaded successfully, You can able to replace the editor value with the converted HTML text and also can export the RichTextEditor value to the RTF file.
 
 {% tabs %}
 {% highlight razor tabtitle="~/import-rte-editor.razor" %}
@@ -124,7 +124,7 @@ You can use the EJ1 Syncfusion. EJ.Export, Syncfusion.DocIO libraries to convert
 
  ## Import text file to editor 
 
- We can import the text file to editor this can be achieved by using server-side action which retrieves the RTF file from the uploader and converts it into the HTML string which then can be retrieved in the success event of the uploader and the binding to the ‘Value’ property of the Rich Text Editor.
+ You can import the text file to editor by using server-side action which retrieves the RTF file from the uploader and converts it into the HTML string which then can be retrieved in the success event of the uploader and the binding to the `Value` property of the Rich Text Editor.
 
 {% tabs %}
 {% highlight razor tabtitle="~/import-text.razor" %}
@@ -155,7 +155,7 @@ You can use the EJ1 Syncfusion. EJ.Export, Syncfusion.DocIO libraries to convert
 {% endhighlight %}
 {% endtabs %}
 
-You can also render html Iframe inside Rich Text Editor,this can be archived by setting the [`EnableHtmlSanitizer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableHtmlSanitizer) to false in the Rich Text Editor.
+You can also render html Iframe inside Rich Text Editor by setting the [EnableHtmlSanitizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableHtmlSanitizer) to false in the Rich Text Editor.
 
 {% tabs %}
 {% highlight razor tabtitle="~/import-text.razor" %}

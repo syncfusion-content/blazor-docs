@@ -25,7 +25,7 @@ This following sample demonstrate how to get the Rich Text Editor validation err
 
 ## Validation Rules
 
-The Rich Text Editor is a textarea control. The Rich Text Editor also provides the functionality of character count and its validation. So, you can validate the Rich Text Editor's value on form submission by applying Validation Rules and Validation Message to the Rich Text Editor.
+The Rich Text Editor is a textarea control. The editor also provides the functionality of character count and its validation. So, you can validate the editor's value on form submission by applying Validation Rules and Validation Message to the editor.
 
 | Rules | Description |
 |----------------|---------|

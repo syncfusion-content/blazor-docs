@@ -11,7 +11,7 @@ documentation: ug
 
 ## Set placeholder
 
-Specifies the placeholder for the Rich Text Editor’s content used when the Rich Text Editor body is empty through the [`Placeholder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Placeholder) property.
+Specifies the placeholder for the Rich Text Editor’s content used when the Rich Text Editor body is empty through the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Placeholder) property.
 
 Use the `e-rte-placeholder` class to define the custom font family, font color, and styles to the placeholder text.
 
@@ -123,9 +123,7 @@ While rendering the Rich Text Editor inside the Dialog component, the dialog con
 
 ## Highlight the specific lines
 
-You can programmatically highlight a portion of the text in the RTE. Like setting the background color of a portion of the text.
-
-You can achieve this requirement by applying background style to the particular text using RichTextEditor ExecuteCommand method and the `jsinterop`
+You can programmatically highlight a portion of the text in the editor, like setting the background color of the text by applying background style to the particular text using RichTextEditor ExecuteCommand method and the `jsinterop` method.
 
 Refer the jsintrob method in `<head>` **wwwroot/jsinterop.js** of file.
 

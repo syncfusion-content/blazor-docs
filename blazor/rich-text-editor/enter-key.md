@@ -25,6 +25,8 @@ When the <kbd>Enter</kbd> key is customized with any of the above possible value
 {% endhighlight %}
 {% endtabs %}
 
+> Note: Enter key not work inside the <pre> tag
+
 ![Enter key confuguration in Blazor RichTextEditor](./images/blazor-richtexteditor-enter-key.png)
 
 > [Blazor Enter Key Configuration Demo](https://blazor.syncfusion.com/demos/rich-text-editor/enterkeyconfiguration)
