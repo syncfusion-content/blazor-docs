@@ -94,8 +94,6 @@ It is not recommended to have a connection string with sensitive information in 
 
 Now, the DbContext must be configured using connection string and registered as scoped service using the AddDbContext method in **Startup.cs** for .NET 5 and .NET 3.X application and in **Program.cs** file in .NET 6 application.
 
-![Startup file](../images/webapi-startup.png)
-
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
 
