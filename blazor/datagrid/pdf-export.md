@@ -1124,7 +1124,7 @@ To apply theme in exported PDF, define the **theme** in export properties.
 
 > By default, material theme is applied to exported PDF document.
 
-### Customize column in PDF exported document
+### Customize column width in exported PDF document
 
 The PDF export provides an option to customize the column being exported to a PDF format using the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Columns) property of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class. While defining the column, we can change its width as per the requirement.
 
