@@ -1,49 +1,48 @@
 ---
 layout: post
-title: BPMN Group in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about BPMN Group in Syncfusion Blazor Diagram component and much more details.
+title: BPMN group in Blazor Diagram Component | Syncfusion
+description: Learn here all about how to create and update the BPMN group in Syncfusion Blazor Diagram component and more.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
 # BPMN Group in Blazor Diagram Component
 
-A group is used to frame a part of the diagram, shows that elements included in it are logically belong together and does not have any other semantics other than organizing elements. To create a group, the shape property of the node should be set to **group**. The following code example explains how to create a BPMN group.
+A group is used to frame a part of the diagram, shows that elements included in it logically belong together and do not have any other semantics other than organizing elements. To create a group, the shape property of the node should be set to **Group**. The following code example explains how to create a BPMN group.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagram Height="600px" Nodes="@NodeCollection">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
-    //Defines diagram's node collection
-    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+@code
+{
+    // Initialize node collection with Node.
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node = new DiagramNode()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            //Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            //Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            //Unique Id of the node
-            Id = "node1",
-            //Sets type to Bpmn and shape to Group
-            Shape = new DiagramShape()
+            // Unique Id of the node.
+            ID = "node1",
+            // Sets type to Bpmn and shape to Group.
+            Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
-                BpmnShape = BpmnShapes.Group,
+                Shape = BpmnShapes.Group,
             }
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```

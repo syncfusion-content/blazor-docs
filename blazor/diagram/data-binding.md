@@ -1,27 +1,27 @@
 ---
 layout: post
 title: Data Binding in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor Diagram component and much more.
+description: Learn here all about Data Binding such as local data, remote data in Syncfusion Blazor Diagram component and more.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
 # Data Binding in Blazor Diagram Component
 
-* Diagram can be populated with the `Nodes` and `Connectors` based on the information provided from an external data source.
+* [Diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) can be populated with the [Nodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nodes) and [Connectors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Connectors) based on the information provided from an external data source.
 
-* Diagram exposes its specific data-related properties allowing you to specify the data source fields from where the node information has to be retrieved from.
+* Diagram exposes its specific data-related properties allowing you to specify the data source fields from where the node information has to be retrieved.
 
-* The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramDataSource.html#Syncfusion_Blazor_Diagrams_DiagramDataSource_DataSource) property is used to define the data source either as a collection of objects or as an instance of [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramDataSource.html#Syncfusion_Blazor_Diagrams_DiagramDataSource_DataSource) that needs to be populated in the diagram.
+* The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_DataSource) property is used to define the data source either as a collection of objects or as an instance of `DataSource` that needs to be populated in the diagram.
 
-* The `ID` property is used to define the unique field of each JSON data.
+* The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ID) property is used to define the unique field of each JSON data.
 
-* The `ParentId` property is used to defines the parent field which builds the relationship between ID and parent field.
+* The [ParentID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ParentID) property is used to define the parent field which builds the relationship between ID and parent field.
 
-* The `Root` property is used to define the root node for the diagram populated from the data source.
+* The [Root](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_Root) property is used to define the root node for the diagram populated from the data source.
 
-* To explore those properties, see [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_DataSourceSettings).
+* To explore those properties, see [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html).
 
 * Diagram supports two types of data binding. They are:
 
@@ -32,112 +32,286 @@ documentation: ug
 
 Diagram can be populated based on the user defined JSON data (Local Data) by mapping the relevant data source fields.
 
-To map the user defined JSON data with diagram, configure the fields of [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_DataSourceSettings). The following code example illustrates how to bind local data with the diagram.
+To map the user defined JSON data with diagram, configure the fields of `DataSourceSettings`. The following code example illustrates how to bind local data with the diagram.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
-<SfDiagram Height="600px" Layout="@LayoutValue" ConnectorDefaults="@ConnectorDefault" NodeDefaults="@NodeDefaults">
-    <DiagramDataSource Id="Name" ParentId="Category" DataSource="@DataSource" DataMapSettings="@datamap">
-        <DiagramDataMapSettings>
-            <DiagramDataMapSetting Property="Annotations[0].Content" Field="Name"></DiagramDataMapSetting>
-        </DiagramDataMapSettings>
-    </DiagramDataSource>
-</SfDiagram>
+<SfDiagramComponent @ref="@Diagram" 
+                    Height="499px"
+                    InteractionController="InteractionController.ZoomPan" 
+                    ConnectorCreating="@ConnectorDefaults" 
+                    NodeCreating="@NodeDefaults">
+    <DataSourceSettings ID="Name" ParentID="Category" DataSource="DataSource"/>
+    <Layout @bind-Type="type" 
+            @bind-HorizontalSpacing="@HorizontalSpacing" 
+            @bind-Orientation="@orientation" 
+            @bind-VerticalSpacing="@VerticalSpacing" 
+            @bind-HorizontalAlignment="@horizontalAlignment" 
+            @bind-VerticalAlignment="@verticalAlignment" 
+            GetLayoutInfo="GetLayoutInfo">
+        <LayoutMargin Top="50" Bottom="50" Right="50" Left="50"/>
+    </Layout>
+</SfDiagramComponent>
 
 @code
 {
-    //Defines diagram's nodes collection
-    public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();
-    //Defines diagram's connector collection
-    public ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>();
+    SfDiagramComponent Diagram;
+    // Specify the layout type.
+    LayoutType type = LayoutType.HierarchicalTree;
+    // Specify the orientation of the layout.
+    LayoutOrientation orientation = LayoutOrientation.TopToBottom;
+    HorizontalAlignment horizontalAlignment = HorizontalAlignment.Auto;
+    VerticalAlignment verticalAlignment = VerticalAlignment.Auto;
+    int HorizontalSpacing = 30;
+    int VerticalSpacing = 30;
 
-    //Defines the node default values.
-    DiagramNode NodeDefaults = new DiagramNode()
+    // Defines the connector's default values.
+    private void ConnectorDefaults(IDiagramObject connector)
     {
-        Width = 95,
-        Height = 30,
-        BackgroundColor = "#6BA5D7",
-        Shape = new DiagramShape() { Type = Shapes.Basic, BasicShape = BasicShapes.Rectangle },
-        Style = new NodeShapeStyle { Fill = "#ffeec7", StrokeColor = "#ffeec7", StrokeWidth = 1, },
-        Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+        (connector as Connector).Type = ConnectorSegmentType.Orthogonal;
+        (connector as Connector).TargetDecorator.Shape = DecoratorShape.None;
+        (connector as Connector).Style = new ShapeStyle() { StrokeColor = "#6d6d6d" };
+        (connector as Connector).Constraints = 0;
+        (connector as Connector).CornerRadius = 5;
+    }
+
+    // Create the layout info.
+    private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
+    {
+        // Enable the sub-tree.
+        options.EnableSubTree = true;
+        // Specify the subtree orientation.
+        options.Orientation = Orientation.Horizontal;
+        return options;
+    }
+
+    // Defines the node's default values.
+    private void NodeDefaults(IDiagramObject obj)
+    {
+        Node node = obj as Node;
+        if (node.Data is System.Text.Json.JsonElement)
         {
-            new DiagramNodeAnnotation()
+            node.Data = System.Text.Json.JsonSerializer.Deserialize<HierarchicalDetails>(node.Data.ToString());
+        }
+        HierarchicalDetails hierarchicalData = node.Data as HierarchicalDetails;
+        node.Style = new ShapeStyle() { Fill = "#659be5", StrokeColor = "none", StrokeWidth = 2, };
+        node.BackgroundColor = "#659be5";
+        node.Width = 150;
+        node.Height = 50;
+        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+        {
+            new ShapeAnnotation()
             {
-                Id = "label1",
-                Style = new AnnotationStyle()
-                {
-                    Color = "black"
-                },
+                Content = hierarchicalData.Name,
+                Style =new TextStyle(){Color = "white"}
             }
-        }
-    };
-    //Defines the connector's default values.
-    DiagramConnector ConnectorDefault = new DiagramConnector
-    {
-        Type = Segments.Orthogonal,
-        Style = new ConnectorShapeStyle() { StrokeColor = "#4d4d4d", StrokeWidth = 2 },
-        TargetDecorator = new ConnectorTargetDecorator()
-        {
-            Shape = DecoratorShapes.None,
-        }
-    };
-    //Create the layout info
-    TreeInfo LayoutInfo = new TreeInfo()
-    {
-        //Enable the sub-tree.
-        CanEnableSubTree = true,
-        //Specify the sub-tree orientation
-        Orientation = SubTreeOrientation.Horizontal,
-    };
-    //Create the data map settings.
-    List<DiagramDataMapSetting> datamap { get; set; } = new List<DiagramDataMapSetting>()
-    {
-        new DiagramDataMapSetting() { Property = "Shape.TextContent", Field = "Name" }
-    };
-
-    DiagramLayout LayoutValue = new DiagramLayout() { };
-
-    protected override void OnInitialized()
-    {
-        LayoutValue = new DiagramLayout()
-        {
-            Type = LayoutType.HierarchicalTree,
-            VerticalSpacing = 30,
-            HorizontalSpacing = 30,
-            EnableAnimation = true,
-            LayoutInfo = this.LayoutInfo
         };
     }
 
-    //Create the hierarchical details with needed properties.
+    // Create the hierarchical details with needed properties.
     public class HierarchicalDetails
     {
         public string Name { get; set; }
         public string FillColor { get; set; }
         public string Category { get; set; }
     }
-    
-    //Create the data source with node name and fill color values.
-    public List<object> DataSource = new List<object>()
+
+    // Create the data source with node name and fill color values.
+    public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
     {
-        new HierarchicalDetails(){ Name ="Diagram", Category="",FillColor="#916DAF"},
-        new HierarchicalDetails(){ Name ="Layout", Category="Diagram",FillColor=""},
-        new HierarchicalDetails(){ Name ="Tree Layout", Category="Layout",FillColor=""},
-        new HierarchicalDetails(){ Name ="Organizational Chart", Category="Layout",FillColor=""},
-        new HierarchicalDetails(){ Name ="Hierarchical Tree", Category="Tree Layout",FillColor=""},
-        new HierarchicalDetails(){ Name ="Radial Tree", Category="Tree Layout",FillColor=""},
-        new HierarchicalDetails(){ Name ="Mind Map", Category="Hierarchical Tree",FillColor=""},
-        new HierarchicalDetails(){ Name ="Family Tree", Category="Hierarchical Tree",FillColor=""},
-        new HierarchicalDetails(){ Name ="Management", Category="Organizational Chart",FillColor=""},
-        new HierarchicalDetails(){ Name ="Human Resources", Category="Management",FillColor=""},
-        new HierarchicalDetails(){ Name ="University", Category="Management",FillColor=""},
-        new HierarchicalDetails(){ Name ="Business", Category="#Management",FillColor=""}
+        new HierarchicalDetails(){ Name ="Diagram", Category="",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="Layout", Category="Diagram",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="Tree layout", Category="Layout",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="Organizational chart", Category="Layout",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="Hierarchical tree", Category="Tree layout",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="Radial tree", Category="Tree layout",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="Mind map", Category="Hierarchical tree",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="Family tree", Category="Hierarchical tree",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="Management", Category="Organizational chart",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="Human resources", Category="Management",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="University", Category="Management",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="Business", Category="#Management",FillColor="#659be5"}
     };
+}
+```
+
+## JSON Data
+
+Local JSON data can be bound to the Diagram component by assigning the array of objects to the Json property of the SfDataManager component.
+
+The following sample code demonstrates binding local data through the SfDataManager to the Diagram component,
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Data
+
+<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px"
+                    NodeCreating="NodeDefaults" SetNodeTemplate="SetTemplate">
+    <DataSourceSettings ID="Name" ParentID="Category">
+        <SfDataManager Json="DataSource" Adaptor="Syncfusion.Blazor.Adaptors.JsonAdaptor"></SfDataManager>
+    </DataSourceSettings>
+    <Layout HorizontalSpacing="40" VerticalSpacing="40" Type="LayoutType.HierarchicalTree"></Layout>
+</SfDiagramComponent>
+
+@code
+{
+    SfDiagramComponent Diagram;
+    float x = 100;
+    float y = 100;
+    Query Query = new Query().Select(new List<string>() { "EmployeeID", "ReportsTo", "FirstName" }).Take(9);
+
+    // Create the hierarchical details with needed properties.
+    public class HierarchicalDetails
+    {
+        public string Name { get; set; }
+        public string FillColor { get; set; }
+        public string Category { get; set; }
+    }
+
+    // Create the data source with node name and fill color values.
+    public HierarchicalDetails[] DataSource = new HierarchicalDetails[]
+    {
+        new HierarchicalDetails(){ Name ="Diagram", Category="",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="Layout", Category="Diagram",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="Organizational chart", Category="Diagram",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="Tree layout", Category="Layout",FillColor="#659be5"},
+        new HierarchicalDetails(){ Name ="Hierarchical tree", Category="Tree layout",FillColor="#659be5"},
+    };
+    
+    // Defines the node's default values.
+    private void NodeDefaults(IDiagramObject obj)
+    {
+        Node node = obj as Node;
+        node.OffsetX = x;
+        node.OffsetY = y;
+        x += 100;
+        HierarchicalDetails hierarchicalData = node.Data as HierarchicalDetails;
+        node.Style.Fill = hierarchicalData.FillColor;
+        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+        {
+            new ShapeAnnotation()
+            {
+                Content = hierarchicalData.Name
+            }
+        };
+    }
+
+    private ICommonElement SetTemplate(IDiagramObject node)
+    {
+        return null;
+    }
+}
+```
+
+## Remote data
+
+To bind remote data to [Diagram component](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html), assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_DataSource) property or by using SfDataManager component. To interact with remote data source, provide the endpoint Url.
+
+When using SfDataManager for data binding then the TValue must be provided explicitly in the diagram component. By default, SfDataManager uses ODataAdaptor for remote data-binding.
+
+### Binding with OData v4 services
+
+The ODataV4 is an improved version of OData protocols, and the SfDataManager can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData v4 service, use the ODataV4Adaptor.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Data
+
+<div style="width:100%">
+    <div style="width:70%">
+        <SfDiagramComponent Height="400px" InteractionController="@InteractionController.ZoomPan" 
+                            NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating" SetNodeTemplate="SetTemplate">
+            <DataSourceSettings Id="EmployeeID" ParentId="ReportsTo">
+                <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Employees" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor"></SfDataManager>
+            </DataSourceSettings>
+            <SnapSettings Constraints ="SnapConstraints.None"></SnapSettings>
+            <Layout HorizontalSpacing="40" VerticalSpacing="40" Type="LayoutType.HierarchicalTree"></Layout>
+        </SfDiagramComponent>
+    </div>
+</div>
+
+@code
+{
+    SfDiagramComponent Diagram;
+    private float x = 100;
+    private float y = 100;
+    public class Employee
+    {
+        public int? EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public int? ReportsTo { get; set; }
+    }
+    private Query Query = new Query().Select(new List<string>() { "EmployeeID", "ReportsTo", "FirstName" }).Take(9);
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+        Node node = obj as Node;
+        node.OffsetX = x;
+        node.OffsetY = y;
+        node.Width = 80;
+        node.Height = 40;        
+        node.Shape = new BasicShape() { Type = Syncfusion.Blazor.Diagram.Shapes.Basic, Shape = BasicShapeType.Rectangle, CornerRadius = 8 };
+        node.Style = new ShapeStyle() { StrokeWidth = 0, Fill = "" };
+        x += 100;
+
+        Dictionary<string, object> data = node.Data as Dictionary<string, object>;
+        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+        {
+            new ShapeAnnotation()
+            {
+                Content = data["FirstName"].ToString(),
+                Style = new TextStyle(){ Color = "white"}
+            }
+        };
+        if (data["FirstName"].ToString() == "Andrew")
+        {
+            node.Style.Fill = "#3A4857";
+        }
+        else if (data["FirstName"].ToString() == "Nancy")
+        {
+            node.Style.Fill = "#2B8C68";
+        }
+        else if (data["FirstName"].ToString() == "Janet")
+        {
+            node.Style.Fill = "#488CC1";
+        }
+        else if (data["FirstName"].ToString() == "Janet")
+        {
+            node.Style.Fill = "#488CC1";
+        }
+        else if (data["FirstName"].ToString() == "Margaret")
+        {
+            node.Style.Fill = "#4C888F";
+        }
+        else if (data["FirstName"].ToString() == "Steven")
+        {
+            node.Style.Fill = "#8E4DB4";
+        }
+        else if (data["FirstName"].ToString() == "Laura")
+        {
+            node.Style.Fill = "#CD6A32";
+        }
+        else
+        {
+            node.Style.Fill = "#8E4DB4";
+        }
+    }
+    private void OnConnectorCreating(IDiagramObject obj)
+    {
+        Connector connector = obj as Connector;
+        connector.Style.StrokeColor = "#048785";
+        connector.Type = ConnectorSegmentType.Orthogonal;
+        connector.TargetDecorator.Shape = DecoratorShape.None;
+        connector.SourceDecorator.Shape = DecoratorShape.None;
+        connector.Style = new ShapeStyle() { StrokeColor = "#3A4857", Fill = "#3A4857", StrokeWidth = 1, StrokeDashArray = "3,3" };
+    }
+    private ICommonElement SetTemplate(IDiagramObject node)
+    {
+        return null;
+    }
 }
 ```
 
 ## See Also
 
-* [How to arrange the diagram nodes and connectors using varies layout](https://blazor.syncfusion.com/documentation/diagram/layout/automatic-layout/)
+* [How to arrange the diagram nodes and connectors using varies layout](./layout/automatic-layout/)

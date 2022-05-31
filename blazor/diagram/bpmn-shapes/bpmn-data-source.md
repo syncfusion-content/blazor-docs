@@ -1,9 +1,9 @@
 ---
 layout: post
 title: BPMN Datasource in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about BPMN Datasource in Syncfusion Blazor Diagram component and much more.
+description: Learn here all about how to create the BPMN Datasource in Syncfusion Blazor Diagram component and more.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
@@ -12,38 +12,37 @@ documentation: ug
 Datasource is used to store or access data associated with a business process. To create a datasource, set the shape to **DataSource**. The following code example explains how to create a datasource.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagram Height="600px" Nodes="@NodeCollection">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Nodes="@nodes"/>
 
-@code{
-    //Defines diagram's node collection
-    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+@code
+{
+    // Initialize the node collection with node.
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node = new DiagramNode()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            //Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            //Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            //Unique Id of the node
-            Id = "node1",
-            //Sets type to Bpmn and shape to DataSource
-            Shape = new DiagramShape()
+            // Unique Id of the node.
+            ID = "node1",
+            // Sets type to Bpmn and shape to DataSource.
+            Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
-                BpmnShape = BpmnShapes.DataSource,
+                Shape = BpmnShapes.DataSource,
             }
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
