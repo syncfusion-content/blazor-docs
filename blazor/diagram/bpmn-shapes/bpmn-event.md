@@ -1,57 +1,56 @@
 ---
 layout: post
 title: BPMN Event in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about BPMN Event in Syncfusion Blazor Diagram component and much more details.
+description: Learn here all about how to create the BPMN event and event trigger in Syncfusion Blazor Diagram component and more.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
-# BPMN Event in Blazor Diagram Component
+# BPMN event in Blazor Diagram Component
 
-An [Event](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnEvent.html#Syncfusion_Blazor_Diagrams_DiagramBpmnEvent_Event) is a common BPMN process model element that represents something that happens during a business process and is notated with a circle. The type of events are as follows:
+An `Event` is a common BPMN process model element that represents something that happens during a business process and is notated with a circle. The type of events are as follows:
 
-* Start - indicates the beginning of the process and every business process start with an event.
-* Intermediate - indicates the middle of the process.
-* End - indicates the beginning of the process and every business process end with an event.
+* Start - Indicates the beginning of the process and every business process start with an event.
+* Intermediate - Indicates the middle of the process.
+* End - Indicates the beginning of the process and every business process end with an event.
 
-The event property of the node allows you to define the type of the event. The default value of the event is **start**. The following code example explains how to create a BPMN event.
+The event property of the node allows you to define the type of the event. The default value of the event is **Start**. The following code example explains how to create a BPMN event.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagram Height="600px" Nodes="@NodeCollection">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
-    //Defines diagram's node collection
-    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+@code
+{
+    // Initialize node collection with Node.
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node = new DiagramNode()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            //Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            //Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            //Unique Id of the node
-            Id = "node1",
-            Shape = new DiagramShape()
+            // Unique Id of the node.
+            ID = "node1",
+            //Sets type as Bpmn and shape as Event.
+            Shape = new BpmnShape()
             {
-                //Sets type to Bpmn and shape to Event
                 Type = Shapes.Bpmn,
-                BpmnShape = BpmnShapes.Event,
-                // Set the event type to End
-                Event = new DiagramBpmnEvent() { Event = BpmnEvents.End }
+                Shape = BpmnShapes.Event,
+                // Set the event type as End.
+                Events = new BpmnSubEvent() { Event = BpmnEvents.End }
             }
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
@@ -61,44 +60,45 @@ The event property of the node allows you to define the type of the event. The d
 Event triggers are notated as icons inside the circle and they represent the specific details of the process. The Trigger property of the node allows you to set the type of trigger and by default, it is set to None. The following code example explains how to create a BPMN trigger.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagram Height="600px" Nodes="@NodeCollection">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
-    //Defines diagram's node collection
-    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+@code
+{
+    // Initialize node collection with Node.
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node = new DiagramNode()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            //Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            //Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            //Unique Id of the node
-            Id = "node1",
-            Shape = new DiagramShape()
+            // Unique Id of the node.
+            ID = "node1",
+            //Sets type as Bpmn and shape as Event
+            Shape = new BpmnShape()
             {
-                //Sets type to Bpmn and shape to Event
                 Type = Shapes.Bpmn,
-                BpmnShape = BpmnShapes.Event,
-                // Set the event type to NonInterruptingIntermediate and set the trigger as message
-                Event = new DiagramBpmnEvent()
+                Shape = BpmnShapes.Event,
+                // Set the event type as End.
+                Events = new BpmnSubEvent()
                 {
+                    // Set the event type to NonInterruptingIntermediate and set the trigger as message.
                     Event = BpmnEvents.NonInterruptingIntermediate,
                     Trigger = BpmnTriggers.Message
                 }
             }
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```

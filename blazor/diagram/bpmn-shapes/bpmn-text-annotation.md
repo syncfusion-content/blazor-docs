@@ -1,9 +1,9 @@
 ---
 layout: post
 title: BPMN Text Annotation in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about BPMN Text Annotation in Syncfusion Blazor Diagram component and more.
+description: Learn here all about how to create BPMN text annotation in Syncfusion Blazor Diagram component and more.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
@@ -24,54 +24,53 @@ documentation: ug
 * The annotation text property defines the additional information about the flow object in a BPMN process.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagram Height="600px" Nodes="@NodeCollection">
-</SfDiagram>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
-    //Defines diagram's node collection
-    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+@code
+{
+    // Initialize node collection with Node.
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node = new DiagramNode()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            //Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            //Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            //Unique Id of the node
-            Id = "node1",
-            //Sets type as Bpmn and shape as DataObject
-            Shape = new DiagramShape()
+            // Unique Id of the node.
+            ID = "node1",
+            // Sets type as Bpmn and shape as DataObject
+            Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
-                BpmnShape = BpmnShapes.DataObject,
-                //Sets collection as true when Dataobject is not a Single instance
-                DataObject = new DiagramBpmnDataObject()
+                Shape = BpmnShapes.DataObject,
+                // Sets collection as true when Dataobject is not a Single instance.
+                DataObject = new BpmnDataObject()
                 {
                     Collection = true,
                     Type = BpmnDataObjects.Input
                 }
             },
-            //Sets the id, angle, and text for the annotation
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            // Sets the id, angle, and text for the annotation.
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new DiagramNodeAnnotation()
+                new ShapeAnnotation()
                 {
-                    Id="Left",
+                    ID="Left",
                     RotateAngle=45,
                     Content="Left"
                 }
             }
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```

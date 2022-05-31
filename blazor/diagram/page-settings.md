@@ -3,93 +3,33 @@ layout: post
 title: Page Settings in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Page Settings in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
-> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram-component/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
-
 # Page Settings in Blazor Diagram Component
 
-Page settings enable to customize the appearance, width, and height of the diagram page.
-## Page size and appearance
+By default, Diagram’s page size is decided based on the position of its diagramming elements. The size and appearance of the diagram pages can be customized using the [PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html) property of the diagram.
 
-* The size and appearance of the diagram pages can be customized with the page settings property.
+* The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_Height) properties of `PageSettings` define the size of the page. The default value for width is 1123 pixels and height is 794 pixels.
 
-* The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPageSettings.html#Syncfusion_Blazor_Diagrams_DiagramPageSettings_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPageSettings.html#Syncfusion_Blazor_Diagrams_DiagramPageSettings_Height) properties of page settings define the size of the page and based on the size, the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPageSettings.html#Syncfusion_Blazor_Diagrams_DiagramPageSettings_Orientation) will be set for the page. In addition to that, the appearance of the page can be customized with `Source` and set of appearance specific properties.
+* The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_Orientation) property of `PageSettings` is used to change the page orientation to portrait or landscape. The default orientation is landscape.
 
-* The `Color` property is used to customize the background color and border color of the page.
+* Page breaks are used as a visual guide to show how the pages are split into multiple pages. The [ShowPageBreaks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_ShowPageBreaks) property decides the Visibility of Page breaks. By default, it is false. If it is true, then the page break lines will be visible.
 
-* The [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPageSettings.html#Syncfusion_Blazor_Diagrams_DiagramPageSettings_Margin) property is used to define the page margin.
-
-* To explore those properties, refer to `Page Settings`.
+* To explore those properties, refer to [PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html).
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
-<SfDiagram Height="600px" id="diagram">
+<SfDiagramComponent Height="600px">
     @*Initialize the page settings with page orientation and break lines*@
-    <DiagramPageSettings Height="300" Width="300" Orientation="@orientation" ShowPageBreaks="true">
-        @*Set the page background image*@
-        <DiagramBackground Source="https://www.w3schools.com/images/w3schools_green.jpg" />
-        @*Set the page margin*@
-        <PageSettingsMargin Left="10" Top="10" Bottom="10" />
-    </DiagramPageSettings>
-</SfDiagram>
-
-@code
-{
-    //Sets the page orientation as landscape.
-    public PageOrientation orientation = PageOrientation.Landscape;
-    //Defines diagram's nodes collection.
-    public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();
-
-    protected override void OnInitialized()
-    {
-        DiagramNode node = new DiagramNode()
-        {
-            Id = "group",
-            OffsetX = 200,
-            OffsetY = 200,
-            Width = 100,
-            Height = 100,
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
-            {
-                new DiagramNodeAnnotation()
-                {
-                    Content = "Node1",
-                    Style = new AnnotationStyle()
-                    {
-                        Color = "white",
-                    }
-                }
-            },
-            Style = new NodeShapeStyle() { Fill = "cornflowerblue", StrokeColor = "white" }
-        };
-        NodeCollection.Add(node);
-    }
-}
-```
-
-## Set background image
-
-Stretch and align the background image anywhere over the diagram area. 
-* The [Source](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBackground.html#Syncfusion_Blazor_Diagrams_DiagramBackground_Source) property of [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPageSettings.html#Syncfusion_Blazor_Diagrams_DiagramPageSettings_Background) allows you to set the path of the image.
-* The [Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBackground.html#Syncfusion_Blazor_Diagrams_DiagramBackground_Scale) and the [Align](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBackground.html#Syncfusion_Blazor_Diagrams_DiagramBackground_Align) properties help to stretch/align the background images.
-
-The following code illustrates how to stretch and align the background image.
-
-```cshtml
-@using Syncfusion.Blazor.Diagrams
-
-<SfDiagram Height="600px" id="diagram">
-    @*Initialize the page settings with page orientation and break lines*@
-    <DiagramPageSettings Height="300" Width="300" Orientation="@orientation" ShowPageBreaks="true">
-        <DiagramBackground Source="https://www.w3schools.com/images/w3schools_green.jpg" />
-        <PageSettingsMargin Left="10" Top="10" Bottom="10" />
-    </DiagramPageSettings>
-</SfDiagram>
+    <PageSettings Height="300" 
+                  Width="300" 
+                  Orientation="@orientation" 
+                  ShowPageBreaks="true">
+    </PageSettings>
+</SfDiagramComponent>
 
 @code
 {
@@ -98,115 +38,186 @@ The following code illustrates how to stretch and align the background image.
 }
 ```
 
-## Multiple page and page breaks
+|Orientation|Output|
+|-------|-------|
+|Landscape|![Landscape Orientation](./images/LandscapeOrientation.png)|
+|Portrait|![Portrait Orientation](./images/PortraitOrientation.png)|
 
-When multiple page is enabled, the size of the page dynamically increases or decreases in multiples of page width and height and completely fits diagram within the page boundaries. Page breaks is used as a visual guide to see how pages are split into multiple pages.
+## How to enable the multiple page
 
-The [MultiplePage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPageSettings.html#Syncfusion_Blazor_Diagrams_DiagramPageSettings_MultiplePage) and [ShowPageBreak](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPageSettings.html#Syncfusion_Blazor_Diagrams_DiagramPageSettings_ShowPageBreaks) properties of page settings allow you to enable/disable multiple pages and page breaks respectively. The following code illustrates how to enable multiple page and page break lines.
+Based on the diagramming element position, the size of the page dynamically increases or decreases in multiples of page width and height using the [MultiplePage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_MultiplePage) property of `PageSettings`.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
-<SfDiagram Nodes="@NodeCollection" Height="600px" id="diagram">
-    <DiagramSnapSettings>
-        <HorizontalGridlines LineColor="gray" />
-        <VerticalGridlines LineColor="gray" />
-    </DiagramSnapSettings>
-    @*Initialize the page settings with page orientation and multiple pages*@
-    <DiagramPageSettings Height="300" Width="300" MultiplePage="true" Orientation="@orientation" ShowPageBreaks="true">
-        <DiagramBackground Color="lightblue" />
-        <PageSettingsMargin Left="10" Top="10" Bottom="10" />
-    </DiagramPageSettings>
-</SfDiagram>
+<SfDiagramComponent Height="600px" Nodes="nodes">
+    @*Initialize the page settings with multiple page, page orientation and break lines*@
+    <PageSettings Height="300"
+                  Width="300"
+                  MultiplePage="true"
+                  Orientation="@orientation"
+                  ShowPageBreaks="true">
+    </PageSettings>
+</SfDiagramComponent>
 
 @code
 {
     //Sets the page orientation as landscape.
     public PageOrientation orientation = PageOrientation.Landscape;
-    //Defines diagram's nodes collection.
-    public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();
-
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
-        DiagramNode node = new DiagramNode()
+        Node node = new Node()
         {
-            Id = "group",
-            OffsetX = 200,
-            OffsetY = 200,
-            Width = 100,
-            Height = 100,
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            ID = "node6",
+            Width = 50,
+            Height = 50,
+            OffsetX = 150,
+            OffsetY = 100,
+            Style = new ShapeStyle()
             {
-                new DiagramNodeAnnotation()
-                {
-                    Content = "Node1",
-                    Style = new AnnotationStyle()
-                    {
-                        Color = "white",
-                    }
-                }
-            },
-            Style = new NodeShapeStyle() { Fill = "cornflowerblue", StrokeColor = "white" }
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            }
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
+```
+![Multiple Page](./images/MultiplePage.png)
+
+## How to change the page appearance
+
+The appearance of the pages can be customized by using the following properties of the PageSettings class:
+
+* The `Background` property of [BackgroundStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BackgroundStyle.html) is used to customize the background color of the page.
+
+* The [Image Source](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BackgroundStyle.html#Syncfusion_Blazor_Diagram_BackgroundStyle_ImageSource) property of the [Background Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BackgroundStyle.html) allows you to set the path of the image.
+
+* The [Image Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BackgroundStyle.html#Syncfusion_Blazor_Diagram_BackgroundStyle_ImageScale) and [Image Align](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BackgroundStyle.html#Syncfusion_Blazor_Diagram_BackgroundStyle_ImageAlign) properties of the `BackgroundStyle` help to stretch/align the background images.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="nodes">
+    @*Initialize the page settings with page orientation and break lines*@
+    <PageSettings Height="300"
+                  Width="300"
+                  Orientation="@orientation"
+                  MultiplePage="true"
+                  ShowPageBreaks="true">
+        @*Set the page background color*@
+        <BackgroundStyle Background="LightGreen" />
+        <PageMargin Left="10" Top="10" Bottom="10" />
+    </PageSettings>
+</SfDiagramComponent>
+
+@code
+{
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    protected override void OnInitialized()
+    {
+        Node node = new Node()
+        {
+            ID = "node6",
+            Width = 50,
+            Height = 50,
+            OffsetX = 150,
+            OffsetY = 100,
+            Style = new ShapeStyle()
+            {
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            }
+        };
+        nodes.Add(node);
+    }
+    //Set the page orientation as landscape.
+    public PageOrientation orientation = PageOrientation.Landscape;
+}
+```
+![PageBackground Color](./images/PageBackground.png)
+
+## How to change the margin around the pages
+
+The area between the main content of a page and the page edges can be changed by using the PageMargin property. The default values for the margin are set to 25 on all sides.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px">
+    @*Initialize the page settings with page margin*@
+    <PageSettings Height="300" 
+                  Width="300" 
+                  MultiplePage="true"                  
+                  ShowPageBreaks="true">
+        <BackgroundStyle Background="lightblue"/>
+        <PageMargin Left="50" Right="50" Top="50" Bottom="50"/> 
+    </PageSettings>
+</SfDiagramComponent>
 ```
 
 ## Boundary constraints
 
-The diagram provides support to restrict/customize the interactive region, out of which the elements cannot be dragged, resized, or rotated. The [BoundaryConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPageSettings.html#Syncfusion_Blazor_Diagrams_DiagramPageSettings_BoundaryConstraints) property of page settings allows you to customize the interactive region. To explore the boundary constraints, refer to [Boundary Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPageSettings.html#Syncfusion_Blazor_Diagrams_DiagramPageSettings_BoundaryConstraints).
+The diagram provides support to restrict/customize the interactive region, out of which the elements cannot be dragged, resized, or rotated. The [BoundaryConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_BoundaryConstraints) property of page settings allows you to customize the interactive region. To explore the boundary constraints, refer to [Boundary Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BoundaryConstraints.html).
 
 The following code example illustrates how to define boundary constraints with respect to the page.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
-<SfDiagram Nodes="@NodeCollection" Height="600px">
-    <DiagramSnapSettings>
-        <HorizontalGridlines LineColor="gray" />
-        <VerticalGridlines LineColor="gray" />
-    </DiagramSnapSettings>
+<SfDiagramComponent Nodes="@NodeCollection" Height="600px">
+    <SnapSettings>
+        <HorizontalGridLines LineColor="gray"/>
+        <VerticalGridLines LineColor="gray"/>
+    </SnapSettings>
     @*Initialize the page settings with page orientation and break lines*@
-    <DiagramPageSettings Height="300" Width="300" MultiplePage="true" Orientation="@orientation" BoundaryConstraints="@boundaryConstraints" ShowPageBreaks="true">
-        <DiagramBackground Color="lightblue" />
-        <PageSettingsMargin Left="10" Top="10" Bottom="10" />
-    </DiagramPageSettings>
-</SfDiagram>
+    <PageSettings Height="300" 
+                  Width="300" 
+                  MultiplePage="true" 
+                  Orientation="@orientation" 
+                  BoundaryConstraints="@boundaryConstraints" 
+                  ShowPageBreaks="true">
+        <BackgroundStyle Background="lightblue"/>
+        <PageMargin Left="10" Top="10" Bottom="10"/>        
+    </PageSettings>
+</SfDiagramComponent>
 
 @code
 {
     //Reference to diagram.
-    SfDiagram diagram;
+    SfDiagramComponent diagram;
     public PageOrientation orientation = PageOrientation.Landscape;
     public BoundaryConstraints boundaryConstraints = BoundaryConstraints.Page;
     //Defines diagram's nodes collection.
-    public ObservableCollection<DiagramNode>
-    NodeCollection = new ObservableCollection<DiagramNode>();
+    public DiagramObjectCollection<Node>
+    NodeCollection = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
-        DiagramNode node = new DiagramNode()
+        Node node = new Node()
         {
-            Id = "group",
+            ID = "group",
             OffsetX = 200,
             OffsetY = 200,
             Width = 100,
             Height = 100,
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new DiagramNodeAnnotation()
+                new ShapeAnnotation()
                 {
                     Content = "Node1",
-                    Style = new AnnotationStyle()
+                    Style = new TextStyle()
                     {
                         Color = "white",
                     }
                 }
             },
-            Style = new NodeShapeStyle() { Fill = "cornflowerblue", StrokeColor = "white" }
+            Style = new ShapeStyle() 
+            { 
+                Fill = "cornflowerblue", 
+                StrokeColor = "white" 
+            }
         };
         NodeCollection.Add(node);
     }
