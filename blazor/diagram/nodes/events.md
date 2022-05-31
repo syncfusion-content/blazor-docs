@@ -3,202 +3,268 @@ layout: post
 title: Events in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Events in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
-> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram-component/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+# Events and Constraints in Blazor Diagram Component
 
-# Events in Blazor Diagram Component
+## Events
 
-Diagram provides some events support for node that triggers when interacting the node.
+Diagram provides some events support for node that triggers when interacting with the node.
 
-## Selection change
+## Selection change event
 
-The [SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_SelectionChanged) events is triggered when select/unselect the node or connector. The [IBlazorSelectionChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IBlazorSelectionChangeEventArgs.html) interface is used to get selection change event arguments.
+* While selecting the diagram elements, the following events can be used to do the customization.
+* When selecting or unselecting the diagram elements, the following events are getting triggered. 
+
+|Event Name|Arguments|Description|
+|------------|-----------|------------------------|
+|[SelectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanging)|[SelectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangingEventArgs.html)|Triggers before the selection is changed in the diagram.|
+|[SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanged)|[SelectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangedEventArgs.html)|Triggers when the node's or connector's selection is changed in the diagram.|
 
 The following code example explains how to get the selection change event in the diagram.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
-<SfDiagram Height="600px" Nodes="@NodeCollection">
-    <DiagramEvents SelectionChanged="@SelectionChanged"></DiagramEvents>
-</SfDiagram>
+<SfDiagramComponent Height="600px" 
+                    Nodes="@nodes" 
+                    SelectionChanging="OnSelectionChanging"
+                    SelectionChanged="OnSelectionChanged" />
 
-@code{
-    // To define node collection
-    public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
+@code
+{
+    // To define node collection.
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
+        nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes collection.
-        DiagramNode node1 = new DiagramNode()
+        Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             // Apperence of the node
-            Style = new NodeShapeStyle()
-            {
-                Fill = "#6BA5D7",
-                StrokeColor = "white"
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6BA5D7", 
+                StrokeColor = "white" 
             }
         };
-        // Add node
-        NodeCollection.Add(node1);
+        // Add node.
+        nodes.Add(node);
     }
 
-    // SelectionChange event for diagram
-    public void SelectionChanged(IBlazorSelectionChangeEventArgs args)
+    // Event to notify the selection changing event before selecting/unselecting the diagram elements.
+    public void OnSelectionChanging(SelectionChangingEventArgs args)
     {
-        Console.WriteLine(args.NewValue.Nodes[0].Id);
+        // Sets true to cancel the selection.
+        args.Cancel = true;
+    }
+
+    // Event to notify the selection changed event after selecting/unselecting the diagram elements.
+    public void OnSelectionChanged(SelectionChangedEventArgs args)
+    {
+        // Action to be performed.
     }
 }
 ```
 
-## Position change
+## Position change event
 
-The [OnPositionChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnPositionChange) events is triggered when drag the node or connector in interaction. The [IBlazorDraggingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IBlazorDraggingEventArgs.html) interface is used to get position change event arguments.
+* While dragging the node or connector through interaction, the following events can be used to do the customization.
+* When dragging the node, the following events are getting triggered. 
 
-```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
-
-<SfDiagram Height="600px" Nodes="@NodeCollection">
-    <DiagramEvents OnPositionChange="@OnPositionChange"></DiagramEvents>
-</SfDiagram>
-
-@code{
-    // To define node collection
-    public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
-    protected override void OnInitialized()
-    {
-        // A node is created and stored in nodes collection.
-        DiagramNode node1 = new DiagramNode()
-        {
-            // Position of the node
-            OffsetX = 250,
-            OffsetY = 250,
-            // Size of the node
-            Width = 100,
-            Height = 100,
-            Style = new NodeShapeStyle()
-            {
-                Fill = "#6BA5D7",
-                StrokeColor = "white"
-            }
-        };
-        // Add node
-        NodeCollection.Add(node1);
-    }
-
-    // Position change event for diagram
-    public void OnPositionChange(IBlazorDraggingEventArgs args)
-    {
-        Console.WriteLine(args.NewValue.Nodes[0].Id);
-    }
-}
-```
-
-## Size change
-
-The [OnSizeChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnSizeChange) events is triggered when resizing the node during the interaction. The [ISizeChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.ISizeChangeEventArgs.html) interface is used to get size change event arguments.
+|Event Name|Arguments|Description|
+|------------|-----------|------------------------|
+|[PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging)|[PositionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangingEventArgs.html)|Triggers while dragging the elements in the diagram.|
+|[PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged)|[PositionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangedEventArgs.html)|Triggers when the node's or connector's position is changed.|
 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
-<SfDiagram Height="600px" Nodes="@NodeCollection">
-    <DiagramEvents OnSizeChange="@OnSizeChange"></DiagramEvents>
-</SfDiagram>
+<SfDiagramComponent Height="600px" 
+                    Nodes="@nodes"
+                    PositionChanging="OnPositionChanging"
+                    PositionChanged="OnPositionChanged" />
 
-@code{
-    // To define node collection
-    public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
+@code
+{
+    // To define node collection.
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
+        nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes collection.
-        DiagramNode node1 = new DiagramNode()
+        Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            Style = new NodeShapeStyle()
-            {
-                Fill = "#6BA5D7",
-                StrokeColor = "white"
-            }
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            },
+            Shape = new Shape() { Type = Shapes.Basic}
         };
-        // Add node
-        NodeCollection.Add(node1);
+        // Add node.
+        nodes.Add(node);
     }
 
-    // Size change event for diagram
-    public void OnSizeChange(ISizeChangeEventArgs args)
+    // Event to notify the position changing event while dragging the elements in diagram.
+    public void OnPositionChanging(PositionChangingEventArgs args)
     {
-        Console.WriteLine(args.NewValue.Nodes[0].Id);
+        // Sets true to cancel the action.
+        args.Cancel = true;
+    }
+
+    //Event to notify the position changed event when the node's or connector's position is changed.
+    public void OnPositionChanged(PositionChangedEventArgs args)
+    {
+        // Action to be performed.
     }
 }
 ```
 
-## Rotate change
+## Size change event
 
-The [OnRotateChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnRotateChange) events is triggered when resizing the node during the interaction. The [IRotationEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IRotationEventArgs.html) interface is used to get size change event arguments.
+* While resizing the node during the interaction, the following events can be used to do the customization.
+* When resizing the node, the following events are getting triggered. 
 
+|Event Name|Arguments|Description|
+|------------|------------|-----------------------|
+|[SizeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanging)|[SizeChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizeChangingEventArgs.html)|Triggers before the node is resized.|
+|[SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanged)|[SizeChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizeChangedEventArgs.html)|Triggers when the node is resized.|
+ 
 ```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Diagram
 
-<SfDiagram Height="600px" Nodes="@NodeCollection">
-    <DiagramEvents OnRotateChange="@OnRotateChange"></DiagramEvents>
-</SfDiagram>
+<SfDiagramComponent Height="600px" 
+                    Nodes="@nodes" 
+                    SizeChanged="OnSizeChanged" 
+                    SizeChanging="OnSizeChanging"/>
 
-@code{
-    // To define node collection
-    public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
+@code
+{
+    // To define node collection.
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
+        nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes collection.
-        DiagramNode node1 = new DiagramNode()
+        Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            Style = new NodeShapeStyle()
-            {
-                Fill = "#6BA5D7",
-                StrokeColor = "white"
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6BA5D7", 
+                StrokeColor = "white" 
             }
         };
-        // Add node
-        NodeCollection.Add(node1);
+        // Add node.
+        nodes.Add(node);
     }
 
-    // Rotate change event for diagram
-    public void OnRotateChange(IRotationEventArgs args)
+    // Event to notify the Size changing event before the diagram elements size is changed.
+    public void OnSizeChanging(SizeChangingEventArgs args)
     {
-        Console.WriteLine(args.NewValue.Nodes[0].Id);
+        // Sets true to cancel the resize action
+        args.Cancel = true;
+    }
+
+    // Event to notify the Size change event after the diagram elements size is changed.
+    public void OnSizeChanged(SizeChangedEventArgs args)
+    {
+        // Action to be performed.
     }
 }
 ```
+
+## Rotate change event
+
+* While rotating the node during the interaction, the following events can be used to do the customization.
+* When rotating the node, the following events are getting triggered. 
+
+|Event Name|Arguments|Description|
+|------------|----------|-------------------------|
+|[RotationChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanging)|[RotationChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RotationChangingEventArgs.html)|Triggers before the diagram elements are rotated.|
+|[RotationChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanged)|[RotationChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RotationChangedEventArgs.html)|Triggers when the diagram elements are rotated.|
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" 
+                    Nodes="@nodes" 
+                    RotationChanging="OnRotateChanging"
+                    RotationChanged="OnRotateChanged" />
+
+@code
+{
+    // To define node collection.
+    DiagramObjectCollection<Node> nodes;
+
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        // A node is created and stored in nodes collection.
+        Node node = new Node()
+        {
+            // Position of the node.
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6BA5D7", 
+                StrokeColor = "white" 
+            }
+        };
+        // Add node.
+        nodes.Add(node);
+    }
+
+    // Event to notify the rotation changing event before the node is rotated.
+    public void OnRotateChanging(RotationChangingEventArgs args)
+    {
+        // Sets true to cancel the rotation
+        args.Cancel = true;
+    }
+
+    // Event to notify the rotation changed event after the node is rotated.
+    public void OnRotateChanged(RotationChangedEventArgs args)
+    {
+        // Action to be performed.
+    }
+}
+```
+
+## How to enable or disable certain behaviors of the node
+
+The Constraints property of node allows you to enable or disable certain features. For more information about node constraints, refer to the [Node Constraints](../constraints).
 
 ## See also
 
-* [How to interact the node in diagram](./interaction)
+* [How to interact with the node in diagram](./interaction)
 
-* [How to get events when they interact the connector](../connectors/events)
+* [How to get events when they interact with the connector](../connectors/events)
 
-* [How to get events when they interact the annotation](../annotations/events)
+* [How to get events when they interact with the annotation](../annotations/events)
