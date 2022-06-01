@@ -113,3 +113,41 @@ The following example demonstrates the MaskedTextBox with customized prompt char
 
 
 ![Blazor MaskedTextBox with Prompt Character](./images/blazor-maskedtextbox-with-prompt-char.png)
+
+## Include Literals in the Value
+
+The Include Literals is used to obtain the Value with Masked format. You can enable this feature by set true Value for the [EnableLiterals]() property.
+By Default the EnableLiterals value is false.
+Also you can change the EnableLiterals property value Dynamically.
+
+The following example Demonstrates the MaskedTextBox with
+Dynamic EnableLiterals value.
+
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/mask-configuration/EnableLiterals.razor %}
+
+{% endhighlight %}
+
+
+## Prompt Placeholder
+The Prompt Placeholder character is used to fill no user input places in the maskedTextBox Value. The Default Prompt Placeholder is Empty string. You can Customize placeholder character by using [PromptPlaceholder]() property.
+
+**Note:**
+The PromptPlaceholder charater only Enabled when EnableLiterals value is set `True`.
+
+Set The Prompt Placeholder Value as `Null` when using Length Validation property. Because the PromptPlaceholder character also takes count in the Validation.
+
+**Information:**
+Don't use the Numeric or Alphabet characters as PromptPlaceholder. It may causes to get the wrong Value.Suggested PromptPlaceHolder characters are (#, _, *).
+
+The following example Demonstrates the MaskedTextBox with
+Customized PromptPlaceholder characters as `#`, `_` ,`*`.
+
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/mask-configuration/PromptPlaceholder.razor %}
+
+{% endhighlight %}

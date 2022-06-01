@@ -1,0 +1,19 @@
+﻿@page "/EnableLiterals"
+
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Buttons
+
+<div class="example-content" style="width:160px">
+<SfMaskedTextBox Mask="(000)-000-0000" EnableLiterals="@IncludeLiterals" @bind-Value="@Value"></SfMaskedTextBox>
+</div>
+<br />
+<label class="example-label">Included Literals</label>
+<SfCheckBox id="maskedtextbox-include-literals-checkbox" @bind-Checked="@IncludeLiterals"></SfCheckBox>
+<br />
+<label>Value :"@Value"</label>
+
+@code
+{
+    public bool IncludeLiterals { get; set; }
+    public string Value { get; set; } = "9867433221";
+}
