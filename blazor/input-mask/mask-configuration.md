@@ -150,4 +150,4 @@ Customized PromptPlaceholder characters as `#`, `_` ,`*`.
 
 {% include_relative code-snippet/mask-configuration/PromptPlaceholder.razor %}
 
-{% endhighlight %}
+{% endhighlight %} 
