@@ -161,3 +161,4 @@ namespace GanttComponent.Data
 * Cell selection will not be persisted in a row.
 * Programmatic selection using the **SelectRows** method is not supported in virtual scrolling.
 * Currently Editing, Row Drag and Drop are not supported with Virtual scrolling.
+* Collapse all tasks and Expand all tasks are not supported with Virtual scrolling.
