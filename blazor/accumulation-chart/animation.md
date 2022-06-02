@@ -47,7 +47,7 @@ You can customize animation for a series using [`Animation`](https://help.syncfu
 
 ## Disable animation on programmatic refresh
 
-You can disable the animation by setting false inside the `Refresh` method.
+You can programmatically refrsh chart using [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_Refresh_System_Boolean_) method. You can enable or disable animation by passing boolean parameter to `Refresh` method. 
 
 ```cshtml 
 @using Syncfusion.Blazor.Charts
@@ -78,10 +78,10 @@ You can disable the animation by setting false inside the `Refresh` method.
         new Statistics { Browser = "Opera", Users = 11 },
         new Statistics { Browser = "Android", Users = 12 },
     };
+    
     public void ButtonClick()
     {
       accumulationChart.Refresh(false);
-
     }         
 }
 ```
