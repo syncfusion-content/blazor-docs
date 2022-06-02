@@ -44,3 +44,44 @@ You can customize animation for a series using [`Animation`](https://help.syncfu
     };
 }
 ```
+
+## Disable animation on programmatic refresh
+
+You can disable the animation by setting false inside the `Refresh` method.
+
+```cshtml 
+@using Syncfusion.Blazor.Charts
+
+<SfAccumulationChart @ref=accumulationChart Title="Mobile Browser Statistics">
+    <AccumulationChartSeriesCollection>
+       <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser">
+      </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+   <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
+</SfAccumulationChart>
+<button  @onclick="ButtonClick">Click me</button>
+
+@code{
+    SfAccumulationChart accumulationChart;
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+    {
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+    public void ButtonClick()
+    {
+      accumulationChart.Refresh(false);
+
+    }         
+}
+```
