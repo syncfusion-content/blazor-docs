@@ -9,9 +9,9 @@ documentation: ug
 
 # Customize Filter Popup Using CSS
 
-You can set the height and width for each column in the filter popup dialog using the CSS style.
+You can set the height and width of each column in the filter popup dialog using the CSS style.
 
-In the following sample, we have enabled an Excel like filter by defining Type as `Excel`. You can set the height and width for each column in the popup filter based on the condition in the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid.
+In the following sample, we have enabled an Excel-like filter by defining Type as `Excel`. You can set the height and width of each column in the pop-up filter based on the condition in the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -92,3 +92,5 @@ In the following sample, we have enabled an Excel like filter by defining Type a
 }
 
 ```
+
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-customize-filter-popup-using-css)
