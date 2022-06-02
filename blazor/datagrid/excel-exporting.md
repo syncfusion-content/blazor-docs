@@ -366,11 +366,11 @@ To apply theme in exported Excel, define the **theme** in export properties.
 
 > By default, material theme is applied to exported excel document.
 
-### Customize background color for Grid in Excel Exported document
+### Customizing the background color for a Grid in an exported Excel document
 
-You can set the background color for Grid in the exported document using the [Theme](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Theme) property of [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) class.
+You can set the background color for a Grid in the exported document using the [Theme](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Theme) property of [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) class.
 
-This can be demonstrated in the following sample:
+This can be demonstrated using the following sample:
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -429,11 +429,13 @@ This can be demonstrated in the following sample:
 
 ```
 
-### Customize background color for particular column in Excel Exported document
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-customize-background-color-for-grid-exported-excel-file)
 
-You can set the background color for particular column in the exported document. This can be achieved by the [ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelQueryCellInfoEvent) of the Grid.
+### Customizing the background color for a particular column in an exported Excel document
 
-This can be demonstrated in the following sample:
+You can set the background color for a particular column in the exported document. This can be achieved by the [ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelQueryCellInfoEvent) of the Grid.
+
+This can be demonstrated using the following sample:
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -508,6 +510,8 @@ This can be demonstrated in the following sample:
 }
 
 ```
+
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-customize-background-color-for-particular-column)
 
 <!-- To add header and footer
 
