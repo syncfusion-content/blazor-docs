@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Show or Hide spinner in Blazor DataGrid | Syncfusion
-description: Learn here all about Show or Hide spinner in Syncfusion Blazor DataGrid component and more.
+title: Show or hide spinner in Blazor DataGrid | Syncfusion
+description: Learn here all about how to hide default spinner and show customize spinner in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -87,3 +87,5 @@ The `ShowAsync` and `HideAsync` methods of the `SfSpinner` have been used in the
 </style>
 
 ```
+
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-how-to-hide-default-grid-spinner-and-show-customized-spinner)
