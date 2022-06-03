@@ -11,15 +11,17 @@ documentation: ug
 
 It is possible to hide the default spinner in Grid and show the customized spinner in Grid. You can hide the default spinner in Grid using the below CSS style.
 
-> <style> 
->     .e-grid .e-spinner-pane{ // Hide the Grid spinner.
->          display:none; 
->      } 
-> </style>
+```cshtml
+<style> 
+    .e-grid .e-spinner-pane{ // Hide the Grid spinner.
+          display:none; 
+     } 
+</style>
+```
 
-You can show or hide the customized spinner based on the specific actions like initial load or data bind or performing any data operations. These actions can be performed by using the OnLoad, DataBound, and OnActionBegin events.
+You can show or hide the customized spinner based on the specific actions like initial load or data bind or performing any data operations. These actions can be performed by using the [OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnLoad), [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound), and [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) events.
 
-The ShowAsync and HideAsync methods of the SfSpinner have been used in the OnLoad, DataBound, and OnActionBegin events of the Grid to show and hide the customized spinner in the following sample.
+The `ShowAsync` and `HideAsync` methods of the `SfSpinner` have been used in the `OnLoad`, `DataBound`, and `OnActionBegin` events of the Grid to show and hide the customized spinner in the following sample.
 
 ```cshtml
 @using Syncfusion.Blazor.Spinner
