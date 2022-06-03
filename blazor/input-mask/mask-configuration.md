@@ -116,12 +116,9 @@ The following example demonstrates the MaskedTextBox with customized prompt char
 
 ## Include Literals in the Value
 
-The Include Literals is used to obtain the Value with Masked format. You can enable this feature by set true Value for the [EnableLiterals]() property.
-By Default the EnableLiterals value is false.
-Also you can change the EnableLiterals property value Dynamically.
+The Value with Masked format is obtained using IncludeLiterals. The [EnableLiterals]() property can be set to true to enable this feature. EnableLiterals is set to false by default. You can also alter the value of the EnableLiterals attribute dynamically.
 
-The following example Demonstrates the MaskedTextBox with
-Dynamic EnableLiterals value.
+The following example Demonstrates the MaskedTextBox with Dynamic EnableLiterals value.
 
 
 {% highlight Razor %}
@@ -132,15 +129,15 @@ Dynamic EnableLiterals value.
 
 
 ## Prompt Placeholder
-The Prompt Placeholder character is used to fill no user input places in the maskedTextBox Value. The Default Prompt Placeholder is Empty string. You can Customize placeholder character by using [PromptPlaceholder]() property.
+The Prompt Placeholder character is used to fill the maskedTextBox Value's unfilled user input spots. Empty string is the default prompt placeholder. The [PromptPlaceholder]() property can be used to customise placeholder characters.
 
 **Note:**
-The PromptPlaceholder charater only Enabled when EnableLiterals value is set `True`.
+When the EnableLiterals value is set to `True`, the PromptPlaceholder character is enabled.
 
-Set The Prompt Placeholder Value as `Null` when using Length Validation property. Because the PromptPlaceholder character also takes count in the Validation.
+When utilising the Length Validation property, set the PromptPlaceholder Value to `Null`. The PromptPlaceholder character is counted in the Validation.
 
 **Information:**
-Don't use the Numeric or Alphabet characters as PromptPlaceholder. It may causes to get the wrong Value.Suggested PromptPlaceHolder characters are (#, _, *).
+Don't use the Numeric or Alphabet characters as PromptPlaceholder. It may result in the incorrect Value being returned. Suggested PromptPlaceHolder characters are (#, _, *).
 
 The following example Demonstrates the MaskedTextBox with
 Customized PromptPlaceholder characters as `#`, `_` ,`*`.
