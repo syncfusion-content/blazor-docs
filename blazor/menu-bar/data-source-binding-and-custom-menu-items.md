@@ -9,7 +9,7 @@ documentation: ug
 
 # DataSource Binding and Custom Items in Blazor Menu Bar Component
 
-The Menu Bar supports data source bindings such as data source that can be structured as `Self-referential` data.
+The [Blazor Menu Bar](https://www.syncfusion.com/blazor-components/blazor-menu-bar) supports data source bindings such as data source that can be structured as `Self-referential` data.
 
 ## Self-referential data
 

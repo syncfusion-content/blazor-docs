@@ -198,6 +198,8 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
     ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    <!--Use below script reference if you are using Syncfusion.Blazor Single NuGet-->
+    <!--<script  src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js"  type="text/javascript"></script>-->
 </head>
 
 {% endhighlight %}
@@ -208,6 +210,8 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
     ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    <!--Use below script reference if you are using Syncfusion.Blazor Single NuGet-->
+    <!--<script  src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js"  type="text/javascript"></script>-->
 </head>
 
 {% endhighlight %}
@@ -224,6 +228,8 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
     ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    <!--Use below script reference if you are using Syncfusion.Blazor Single NuGet-->
+    <!--<script  src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js"  type="text/javascript"></script>-->
 </head>
 
 {% endhighlight %}
@@ -295,3 +301,5 @@ Breadcrumb component enables or disables built-in URL navigation based on the [E
 * [Getting Started with Syncfusion Blazor for client side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)
 * [Getting Started with Syncfusion Blazor for server side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Syncfusion Blazor for server side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)
+
+N> You can also explore our [Blazor Breadcrumb example](https://blazor.syncfusion.com/demos/breadcrumb/default-functionalities?theme=bootstrap5) that shows you how to render and configure the breadcrumb.

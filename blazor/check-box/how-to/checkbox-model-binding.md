@@ -15,6 +15,9 @@ In this sample, first check the option and click the submit button to post the s
 
 ```csharp
 
+@using Syncfusion.Blazor.Buttons
+@using System.ComponentModel.DataAnnotations
+
 <EditForm Model="Annotate">
     <DataAnnotationsValidator></DataAnnotationsValidator>
     <div class="form-group">
