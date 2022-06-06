@@ -129,12 +129,12 @@ The following example Demonstrates the MaskedTextBox with Dynamic EnableLiterals
 
 
 ## Prompt Placeholder
-The Prompt Placeholder character is used to fill the maskedTextBox Value's unfilled user input spots. Empty string is the default prompt placeholder. The [PromptPlaceholder]() property can be used to customise placeholder characters.
+The Prompt Placeholder character is used to fill the maskedTextBox Value's unfilled user input spots. Empty string is the default prompt placeholder. The [PromptPlaceholder]() property can be used to customize placeholder characters.
 
 **Note:**
 When the EnableLiterals value is set to `True`, the PromptPlaceholder character is enabled.
 
-When utilising the Length Validation property, set the PromptPlaceholder Value to `Null`. The PromptPlaceholder character is counted in the Validation.
+When utilizing the Length Validation property, set the PromptPlaceholder Value to `Null`. The PromptPlaceholder character is counted in the Validation.
 
 **Information:**
 Don't use the Numeric or Alphabet characters as PromptPlaceholder. It may result in the incorrect Value being returned. Suggested PromptPlaceHolder characters are (#, _, *).
