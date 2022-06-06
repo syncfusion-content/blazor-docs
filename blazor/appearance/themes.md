@@ -163,6 +163,26 @@ You can add the theme for the Blazor applications through **npm packages** using
 
 * Run the application and see the fabric themes from installed npm packages were applied.
 
+## Render Syncfusion Controls in offline with Material Themes and Tailwind Themes
+
+* If you are running on the machine that has no internet access, but you want to render the Syncfusion controls with Material theme or Tailwind theme you can render the Controls without any issues by following the below steps
+
+**Step 1:** Download the styles for the required components from [CRG](https://blazor.syncfusion.com/crg/) site.
+
+**Step 2:** Unzip the file and open the styles folder from the file.
+
+   ![Select styles folder](images\crg-styles.png)
+
+**Step 3:** Under styles folder we will find the CSS files and `customized` folder when we download Material theme or Tailwind theme. These CSS files under styles folder contains the online dependencies like google fonts.
+
+   ![Open customized folder](images\customized-folder-crg.png)
+
+**Step 4:** Open the `customized` folder. We will find the CSS files for Material and Tailwind themes, these CSS files contains no online dependecies like google fonts.
+
+   ![Customized CSS](images\custom-css-crg.png)
+
+**Step 5:** The CSS files from Step 4 i.e, under customized folder can be added and are referred in the application to render the components without any issues on the machines that contains no internet access.
+
 ## Change theme dynamically
 
 In the Blazor application, the application theme can be changed dynamically by changing its style sheet reference in code. 
