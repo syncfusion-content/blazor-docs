@@ -116,10 +116,9 @@ The following example demonstrates the MaskedTextBox with customized prompt char
 
 ## Include Literals in the Value
 
-The Value with Masked format is obtained using IncludeLiterals. The [EnableLiterals]() property can be set to true to enable this feature. EnableLiterals is set to false by default. You can also alter the value of the EnableLiterals attribute dynamically.
+By default, you will get the raw value as Value of the component. Now, you can get the component Value with mask literals by enabling [EnableLiterals]() property.
 
-The following example Demonstrates the MaskedTextBox with Dynamic EnableLiterals value.
-
+The following example demonstrates how to obtain the value with mask literals.
 
 {% highlight Razor %}
 
@@ -127,24 +126,29 @@ The following example Demonstrates the MaskedTextBox with Dynamic EnableLiterals
 
 {% endhighlight %}
 
+![Blazor MaskedTextBox with Included Literals](./images/EnableLiterals.gif)
 
 ## Prompt Placeholder
-The Prompt Placeholder character is used to fill the maskedTextBox Value's unfilled user input spots. Empty string is the default prompt placeholder. The [PromptPlaceholder]() property can be used to customize placeholder characters.
 
-**Note:**
-When the EnableLiterals value is set to `True`, the PromptPlaceholder character is enabled.
+By default, non-filling blank spaces in the mask are replaced with empty string in the Value property. You can change that prompt placeholder by using [PromptPlaceholder]() property.
 
-When utilizing the Length Validation property, set the PromptPlaceholder Value to `Null`. The PromptPlaceholder character is counted in the Validation.
+Set the Null value to the PromptPlaceholder property when you don't want to use this character in the Value property.
 
-**Information:**
-Don't use the Numeric or Alphabet characters as PromptPlaceholder. It may result in the incorrect Value being returned. Suggested PromptPlaceHolder characters are (#, _, *).
-
-The following example Demonstrates the MaskedTextBox with
-Customized PromptPlaceholder characters as `#`, `_` ,`*`.
-
+**Limitation >**
+PromptPlaceholder will apply to the Value property when you have enabled the EnableLiterals property.
 
 {% highlight Razor %}
 
 {% include_relative code-snippet/mask-configuration/PromptPlaceholder.razor %}
 
 {% endhighlight %} 
+
+![Blazor MaskedTextBox with Prompt Character](./images/promptplaceholder.gif)
+
+**Limitation >**
+Don't use the PromptPlaceholder character as valid for the user input in the mask.
+
+For example, if you have a mask "00/00/0000" and PromptPlaceholder as "5" then you type 2 in the input, Value will become "25/55/5555". Its lead to return wrong value as Value of the component.
+
+
+
