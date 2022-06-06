@@ -7,10 +7,16 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# HTML Editor Commands in Rich Text Editor in Blazor RichTextEditor Component
+# Execute Command
 
-In Rich Text Editor, the ExecuteCommand is used to perform commands for the modification of content in editable area.
-The [ExecuteCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html) will perform the following commands.
+In Rich Text Editor, the ExecuteCommand method runs the HTML and Markdown commands 
+programmatically to manipulate content in the current editable area.
+
+## HTML editor commands
+
+The [ExecuteCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html) methods 
+support following HTML editor commands.
+
 
 | Commands | Description | Code snippets |
 |----------------|---------| -----------|
@@ -55,10 +61,9 @@ The following code block demonstrates the usage of the ExecuteCommand in Rich Te
 
 ![Execute Command in Blazor RichTextEditor](./images/blazor-richtexteditor-execute-command.png)
 
-## Markdown Editor Commands  
+## Markdown editor commands  
 
-In Rich Text Editor, the ExecuteCommand is used to perform commands for the modification of content in editable area.
-The [ExecuteCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html) will perform the following commands.
+The [ExecuteCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html) methods support following Markdown commands.
 
 | Commands | Description | Code snippets |
 |----------------|---------| -----------|

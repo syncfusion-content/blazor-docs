@@ -9,9 +9,7 @@ documentation: ug
 
 # Form validation in Blazor RichTextEditor Component
 
-This following sample demonstrate how to get the Rich Text Editor validation error message in button click.
-
-## Render the editor in a form
+The Rich Text Editor support validation using the [EditForm]( https://docs.microsoft.com/en-us/aspnet/core/blazor/forms-validation?view=aspnetcore-6.0). The user type text content inside the editor is validated with [data annotations]( https://docs.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-5.0)  attributes. In the following example, the FormModel class has the Description property marked required with the RequiredAttribute and MinLengthAttribute minimum string length validation and error message. The Description property binding to editor @bind-Value property and validation work based on user input.
 
 {% tabs %}
 {% highlight razor tabtitle="~/edit-form.razor" %}
@@ -23,9 +21,9 @@ This following sample demonstrate how to get the Rich Text Editor validation err
 
 ![Form Validation in Blazor RichTextEditor](./images/blazor-richtexteditor-form-validation.png)
 
-## Validation Rules
+## Validation attribute
 
-The Rich Text Editor is a textarea control. The editor also provides the functionality of character count and its validation. So, you can validate the editor's value on form submission by applying Validation Rules and Validation Message to the editor.
+The Rich Text Editor provides the functionality of character count and its validation. So, you can validate the editor's value on form submission by applying validation attributes and validation messages to the editor.
 
 | Rules | Description |
 |----------------|---------|
@@ -46,7 +44,7 @@ This sample is demonstrated form validation using the `DataAnnotationsValidator`
 ![Char Count Validation in Blazor RichTextEditor](./images/blazor-richtexteditor-char-count-validation.png)
 
 
-## Custom Placement of Validation Message
+## Custom placement of validation message
 
 The Form Validation error message can be placed from default position to desired custom location.
 
