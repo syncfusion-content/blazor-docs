@@ -9,7 +9,7 @@ documentation: ug
 
 # Calendar Views in Blazor Calendar Component
 
-A [Blazor Calendar](https://blazor.syncfusion.com/documentation/calendar/data-binding) has the following predefined views that provide a flexible way to navigate back and forth when selecting dates.
+A [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) has the following predefined views that provide a flexible way to navigate back and forth when selecting dates.
 
 | **View** | **Description** |
 | --- | --- |
