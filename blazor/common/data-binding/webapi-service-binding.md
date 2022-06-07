@@ -86,11 +86,60 @@ After running the above command, **OrdersDetailsContext.cs** and **Orders.cs** f
 
 You can see that OrdersDetailsContext.cs file contains the connection string details in the **OnConfiguring** method.
 
-![Remove connection string from context file in Blazor](../images/webapi-context.png)
+{% highlight c# hl_lines="25" %}
+
+using System;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
+
+namespace WebAPICRUDServerApp.Data
+{
+    public partial class OrdersDetailsContext : DbContext
+    {
+        public OrdersDetailsContext()
+        {
+        }
+
+        public OrdersDetailsContext(DbContextOptions<OrdersDetailsContext> options)
+            : base(options)
+        {
+        }
+
+        public virtual DbSet<Order> Orders { get; set; } = null!;
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            }
+        }
+
+        ...
+    }
+}
+
+{% endhighlight %}
 
 It is not recommended to have a connection string with sensitive information in the OrdersDetailsContext.cs file, so the connection string is moved to the **appsettings.json** file.
 
-![Add connection string in appsettings](../images/odata-appsettings.png)
+{% highlight %}
+
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "OrdersDetailsDatabase": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+  }
+}
+
+{% endhighlight %}
 
 Now, the DbContext must be configured using connection string and registered as scoped service using the AddDbContext method in **Startup.cs** for .NET 5 and .NET 3.X application and in **Program.cs** file in .NET 6 application.
 
