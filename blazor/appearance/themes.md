@@ -494,12 +494,12 @@ The following example demonstrates how to change a theme dynamically in Blazor W
   
 ## Render Syncfusion Components in offline with Material and Tailwind Themes
 
-Material and Tailwind Themes uses online roboto font. If your app is designed to work in a local network without internet connection, follow below steps to use offline fonts to work in offlince scenarios.
+Material and Tailwind Themes uses online roboto font. If your app is designed to work in a local network without internet connection, follow the below steps to use offline fonts to work in offlince scenarios.
    
-1. Download the styles for the required components from [CRG](https://blazor.syncfusion.com/crg/) site. Learn more about CRG in [help documentation](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)
-2. Unzip the file and the it contains the styles of the selected components an `import.json` file, which stores the current settings..
+1. Download the minified styles for the required components from [CRG](https://blazor.syncfusion.com/crg/) site. Learn more about CRG in [help documentation](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
+2. Unzip the file and it contains the styles of the selected components and an `import.json` file, which stores the current settings.
    ![Select styles folder](images/crg-styles.png)
-3. The styles folder of material and tailwind theme contains styles file and and **customized** folder. The CSS files under **customized** folder doesn't contain the online google font dependencies.
+3. The styles folder of material and tailwind theme contains css files and a **customized** folder. The CSS files under **customized** folder doesn't contain the online google font dependencies.
    ![Open customized folder](images/customized-folder-crg.png)
 4. Open the **customized** folder which contains CSS files without online dependecies of google fonts.
    ![Customized CSS](images/custom-css-crg.png)
@@ -514,8 +514,7 @@ Material and Tailwind Themes uses online roboto font. If your app is designed to
     <head>
         ....
         ....
-        <link href="material.css" rel="stylesheet" />
-        <script src="syncfusion-blazor.min.js" type="text/javascript"></script>
+        <link href="material.min.css" rel="stylesheet" />
     </head>
     ```
    
