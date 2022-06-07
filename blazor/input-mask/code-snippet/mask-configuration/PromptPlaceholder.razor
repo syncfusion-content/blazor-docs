@@ -2,9 +2,9 @@
 @using Syncfusion.Blazor.DropDowns;
 
 <div class="example-content">
-<label>Mobile Number</label>
+<label class="example-label">Mobile Number</label>
 <SfMaskedTextBox Mask="000-000-0000" @bind-Value="@Value" EnableLiterals=true PromptPlaceholder="@PromptPlaceHolder" ></SfMaskedTextBox>
-<label>Value :"@Value"</label>           
+<label  class="example-label">Value : "@Value"</label>           
 <label class="example-label">Prompt Placeholder Character</label>
 <SfDropDownList TValue="string" TItem="PromptPlaceHolders" DataSource="@PlaceholderList"  @bind-Index="@PlaceholderCharater">
 <DropDownListEvents TItem="PromptPlaceHolders" TValue="string" ValueChange="@OnPromptPlaceChange"></DropDownListEvents>
@@ -36,11 +36,11 @@
     }
 }
 <style>
-.example-content{
-    padding : 5px;
-    width :300px;
-}
-.example-label{
-    margin : 2px;
-}
+    .example-content{
+        padding : 5px;
+        width :300px;
+    }
+    .example-label{
+        margin : 3px;
+    }
 </style>
