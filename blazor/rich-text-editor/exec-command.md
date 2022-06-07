@@ -9,24 +9,22 @@ documentation: ug
 
 # Execute Command
 
-In Rich Text Editor, the ExecuteCommand method runs the HTML and Markdown commands 
+In Rich Text Editor, the [ExecuteCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html) method runs the HTML and Markdown commands 
 programmatically to manipulate content in the current editable area.
 
 ## HTML editor commands
 
-The [ExecuteCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html) methods 
-support following HTML editor commands.
-
+The `ExecuteCommand` methods support following HTML editor commands.
 
 | Commands | Description | Code snippets |
 |----------------|---------| -----------|
 | Bold | Bold the selected content in the Rich Text Editor. |`await this.RteObj.ExecuteCommandAsync(CommandName.Bold);`|
-| Italic | The selected text will be italics. |`await this.RteObj.ExecuteCommandAsync(CommandName.Italic);`|
+| Italic | Apply the italic style for the selected text. |`await this.RteObj.ExecuteCommandAsync(CommandName.Italic);`|
 | Underline | Underline the selected text in the Rich Text Editor. |`await this.RteObj.ExecuteCommandAsync(CommandName.Underline);`|
 | StrikeThrough | Apply single line strike through formatting for the selected text. |`await this.RteObj.ExecuteCommandAsync(CommandName.StrikeThrough);`|
 | Superscript | Makes the selected text as superscript (higher). |`await this.RteObj.ExecuteCommandAsync(CommandName.Superscript);`|
 | Subscript | Makes the selected text as subscript (lower). |`await this.RteObj.ExecuteCommandAsync(CommandName.Subscript);`|
-| Uppercase | Change the case of selected text to upper  in the content. |`await this.RteObj.ExecuteCommandAsync(CommandName.Uppercase);`|
+| Uppercase | Change the case of selected text to upper in the content. |`await this.RteObj.ExecuteCommandAsync(CommandName.Uppercase);`|
 | Lowercase | Change the case of selected text to lower in the content. |`await this.RteObj.ExecuteCommandAsync(CommandName.Lowercase);`|
 | FontColor | Apply the specified font color for the selected text. |`await this.RteObj.ExecuteCommandAsync(CommandName.FontColor, "Red");`|
 | FontName | Apply the specified font name for the selected text. |`await this.RteObj.ExecuteCommandAsync(CommandName.FontName, "Impact");`|
@@ -63,12 +61,12 @@ The following code block demonstrates the usage of the ExecuteCommand in Rich Te
 
 ## Markdown editor commands  
 
-The [ExecuteCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html) methods support following Markdown commands.
+The `ExecuteCommand` methods support following Markdown commands.
 
 | Commands | Description | Code snippets |
 |----------------|---------| -----------|
 | Bold | Bold the selected content in the Rich Text Editor. |`await this.RteObj.ExecuteCommandAsync(CommandName.Bold);`|
-| Italic | The selected text will be italics. |`await this.RteObj.ExecuteCommandAsync(CommandName.Italic);`|
+| Italic | Apply the italic style for the selected text. |`await this.RteObj.ExecuteCommandAsync(CommandName.Italic);`|
 | StrikeThrough | Apply single line strike through formatting for the selected text. |`await this.RteObj.ExecuteCommandAsync(CommandName.StrikeThrough);`|
 | Superscript | Makes the selected text as superscript (higher). |`await this.RteObj.ExecuteCommandAsync(CommandName.Superscript);`|
 | Subscript | Makes the selected text as subscript (lower). |`await this.RteObj.ExecuteCommandAsync(CommandName.Subscript);`|
@@ -78,7 +76,6 @@ The [ExecuteCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ric
 | InsertOrderedList | Create a new list item(numbered). | `await this.RteObj.ExecuteCommandAsync(CommandName.InsertOrderedList);`|
 | InsertUnorderedList | Create a new list item(bulleted). |`await this.RteObj.ExecuteCommandAsync(CommandName.InsertUnorderedList);`|
 | Redo | Allows to redo the actions | `await this.RteObj.ExecuteCommandAsync(CommandName.Redo);`|
-| InsertText | Insert text to the current cursor position. | `await this.RteObj.ExecuteCommandAsync(CommandName.InsertText, "Inserted text");`|
 | InsertImage | Insert an image to the current cursor position. | `await this.RteObj.ExecuteCommandAsync(CommandName.InsertImage, new ImageCommandsArgs() { Url = "https://ej2.syncfusion.com/javascript/demos/src/rich-text-editor/images/RTEImage-Feather.png", CssClass = "rte-img" });`|
 
 {% tabs %}
