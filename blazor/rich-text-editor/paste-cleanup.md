@@ -19,6 +19,25 @@ By default, the Rich Text Editor consider the following processes on paste conte
 
 **Tags and comments:** The Microsoft Word specific XML tags and comments are removed when cleanup on paste.
 
+You can also get the pasted Text as a HTML text using the [AfterPasteCleanup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_AfterPasteCleanup) event argument Value.
+
+{% tabs %}
+{% highlight razor tabtitle="~/html.text.razor" %}
+
+<SfRichTextEditor @ref="RteObj" @bind-Value="htmlText" EditorMode="EditorMode.HTML">
+    <RichTextEditorEvents AfterPasteCleanup="@AfterPasteCleanupHandler" />
+</SfRichTextEditor>
+
+@code {
+    public void AfterPasteCleanupHandler(PasteCleanupArgs args)
+    {
+        // Here you can get the pasted Html string using args.Value
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Paste settings
 
 You can control the formatting and styles on pasting the content to the editor using the pasteCleanup settings property. The following settings are available to clean up the content:
