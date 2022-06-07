@@ -138,7 +138,7 @@ If you want to add additional font names and font sizes to font drop-down, pass 
 
 ![Blazor RichTextEditor with Custom Fonts Family](./images/blazor-richtexteditor-custom-font.png)
 
-### Google fonts support
+### Google font support
 
 To use web fonts in Rich Text Editor, the web fonts need not be present in the local machine. To add the web fonts to Rich Text Editor, refer to the web font links and add the font names in the [RichTextEditorFontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontFamily.html) tag.
 
@@ -245,6 +245,8 @@ By default, the editor is initialized with default items of formats. To change i
 
 To apply different format style for section of the content, select a required format from the drop-down to apply the changes to the selection.
 
+### Build-in formats
+
 The following table, lists the default format name and width of the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormat.html#properties) dropdown and available list of format names.
 
 | Default Key | Default Value |
@@ -252,9 +254,6 @@ The following table, lists the default format name and width of the [Format](htt
 | Default | null |
 | Width | 65px|
 | Items | new List&lt;DropDownItemModel&gt;()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Paragraph", Value = "P" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Code", Value = "Pre" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Quotation", Value = "BlockQuote" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 1", Value = "H1" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 2", Value = "H2" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 3", Value = "H3" },<br>&nbsp;&nbsp;&nbsp;&nbsp;new DropDownItemModel() { Text = "Heading 4", Value = "H4" }<br>}; |
-
-
-### Build-in formats
 
 {% tabs %}
 {% highlight razor tabtitle="~/build-in-formats.razor" %}
@@ -285,7 +284,7 @@ If you want to add additional formats to format drop-down, pass the format infor
 
 To apply font color or background color for a selected content of RTE, use the font color and background color tools.
 
-Rich Text Editor support to provide customs font color and background color with existing list through the `ColorCode` field of [RichTextEditorFontColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontColor.html) and [RichTextEditorBackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBackgroundColor.html).
+Rich Text Editor support to provide customs font color and background color with existing list through the [ColorCode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ColorItemBase.html#Syncfusion_Blazor_RichTextEditor_ColorItemBase_ColorCode) field of [RichTextEditorFontColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontColor.html) and [RichTextEditorBackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBackgroundColor.html).
 
 The RichTextEditorFontColor and RichTextEditorBackgroundColor tag has two `Mode` of `Picker` and `Palette`. Palette mode has predefined set of `ColorCode` and in the picker mode, more colors has been provided. Through `ModeSwitcher`, you can able to switch between these two options.
 
@@ -1000,7 +999,7 @@ When you type URL and enter key to the Rich Text Editor, the typed URL will be a
 
 When the [EnableAutoUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableAutoUrl) property is enabled, it will accept the given URL (relative or absolute) without validating it for hyperlinks. Otherwise, the given URL will be automatically converted to absolute path URL by prefixing https:// for hyperlinks, and it defaults to false.
 
-### Edit and Remove Link
+### Edit and remove link
 
 Add the custom tools on the selected link inside the Rich Text Editor through the quick toolbar.
 
@@ -1059,7 +1058,7 @@ Quick toolbar is opened by clicking the table. It has different sets of commands
 
 > For more details about quick toolbar, refer this documentation [section](./toolbar.md)
 
-## Table Properties
+## Table properties
 
 Sets the default width of the table when it is inserted in the Rich Text Editor using the width of [RichTextEditorTableSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorTableSettings.html).
 

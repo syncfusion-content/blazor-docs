@@ -7,7 +7,7 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Markdown Editor in Blazor RichTextEditor Component
+# Markdown Editor
 
 In Rich Text Editor, click the toolbar buttons to format the words and the changes are visible immediately.
 
@@ -74,7 +74,7 @@ To insert the table in Rich Text Editor, click the [Table](https://help.syncfusi
 ![Blazor RichTextEditor with Markdown Table](./images/blazor-richtexteditor-markdown-table.png)
 
 
-## Insert Image
+## Insert image
 
  We can insert an image into the Rich Text Editor content. Click the Insert Image button in the toolbar item to insert an image. Refer to the following sample and code snippets to insert the image in Markdown editor.
 
@@ -89,7 +89,7 @@ To insert the table in Rich Text Editor, click the [Table](https://help.syncfusi
 ![Blazor RichTextEditor with Markdown Image](./images/blazor-richtexteditor-markdown-image.png)
 
 
-## Insert Link
+## Insert link
 
 Point the cursor anywhere within the editor where you would like to insert the link. It is also possible to select a text or an image within the editor and can be converted to the hyperlink. Click the Insert HyperLink tool on the toolbar. The Insert Link Dialog will open. The dialog has the following options.
 
@@ -108,7 +108,7 @@ Point the cursor anywhere within the editor where you would like to insert the l
 
 ![Blazor RichTextEditor with Markdown Link](./images/blazor-richtexteditor-markdown-link.png)
 
-## Custom Format
+## Custom format
 
 The Rich Text Editor allows you to customize the markdown syntax by overriding its default syntax. Configure the customized markdown syntax using [ListSyntax](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMarkdownOptions.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMarkdownOptions_ListSyntax), [FormatSyntax](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMarkdownOptions.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMarkdownOptions_FormatSyntax), [SelectionSyntax](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMarkdownOptions.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMarkdownOptions_SelectionSyntax) properties of RichTextEditorMarkdownOptions.
 

@@ -7,7 +7,7 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Style and appearance in Blazor RichTextEditor Component
+# Style and Appearance
 
 ## Set placeholder
 

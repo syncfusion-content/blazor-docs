@@ -7,7 +7,7 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Globalization in Blazor RichTextEditor Component
+# Globalization
 
 ## Enable RTL mode 
 

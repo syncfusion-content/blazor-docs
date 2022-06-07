@@ -7,7 +7,7 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Localization in Blazor RichTextEditor Component
+# Localization
 
 The Rich Text Editor provides an option to localize its strings; it is used for adapting the editor to a particular local language. By default, the editor will use the `US English (en-US)` as its language. Find the table with a list of keys and their corresponding values for the default language (en-US).
 

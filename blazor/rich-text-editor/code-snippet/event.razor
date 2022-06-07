@@ -1,17 +1,16 @@
 @using Syncfusion.Blazor.RichTextEditor
 
-<SfRichTextEditor AutoSaveOnIdle="true" EnableResize="true">
-    <RichTextEditorEvents ValueChange="@Change" />
-        <p>The Rich Text Editor component is a WYSIWYG ("what you see is what you get") editor that provides the best  user experience to create and update the content.Users can format their content using the standard toolbar commands.<p>
+<SfRichTextEditor @bind-Value="@Value" @ref="RteObj">
+    <RichTextEditorEvents ValueChange="@ValueChangeHandler">
+    </RichTextEditorEvents>
 </SfRichTextEditor>
 
-<div class="property-panel-header">Event Trace</div>
-<span>@((MarkupString)Output)</span>
-
 @code {
-    private string Output = "";
-    private void Change(Syncfusion.Blazor.RichTextEditor.ChangeEventArgs args)
+    SfRichTextEditor RteObj;
+    private string Value { get; set; } = "<p>Syncfusion RichTextEditor</p>";
+    public void ValueChangeHandler(Syncfusion.Blazor.RichTextEditor.ChangeEventArgs args)
     {
-        this.Output = this.Output + "<span><b>ValueChange</b> event called<hr></span>";
+            //here you can write your code
+            this.Value = "<p> Value changed </p>";
     }
 }
