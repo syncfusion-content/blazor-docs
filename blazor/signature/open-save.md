@@ -9,7 +9,7 @@ documentation: ug
 
 # Open and Save Signature
 
-The Signature component supports to open the signature by using hosted/online URL or base64. And it also supports various save options like image, base64, and blob.
+The [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signature) component supports to open the signature by using hosted/online URL or base64. And it also supports various save options like image, base64, and blob.
 
 ## Open Signature
 

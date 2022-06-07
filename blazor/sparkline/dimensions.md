@@ -11,7 +11,7 @@ documentation: ug
 
 ## Size for the container
 
-The size of the Sparkline Chart is determined by the container size, and it can be changed inline or via CSS as following.
+The size of the [Blazor Sparkline Chart](https://www.syncfusion.com/blazor-components/blazor-sparkline) is determined by the container size, and it can be changed inline or via CSS as following.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
