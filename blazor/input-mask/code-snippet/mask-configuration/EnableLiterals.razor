@@ -1,7 +1,7 @@
 ﻿@using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Buttons
 
-<div class="sample-content">
+<div class="example-content">
 <label>Mobile Number</label>
 <SfMaskedTextBox Mask="(000)-000-0000" EnableLiterals="@IncludeLiterals" @bind-Value="@Value"></SfMaskedTextBox>
 <SfCheckBox Label="Included Literals" @bind-Checked="@IncludeLiterals"></SfCheckBox>
@@ -14,7 +14,7 @@
     public string Value { get; set; } = "9867433221"; 
 }
 <style>
-    .sample-content{
+    .example-content{
         margin : 10px;
         width :130px;
     }    
