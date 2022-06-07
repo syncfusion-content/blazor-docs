@@ -501,9 +501,23 @@ Material and Tailwind Themes uses online roboto font. If your app is designed to
    ![Select styles folder](images/crg-styles.png)
 3. The styles folder of material and tailwind theme contains styles file and and **customized** folder. The CSS files under **customized** folder doesn't contain the online google font dependencies.
    ![Open customized folder](images/customized-folder-crg.png)
-4. Open the customized` folder. We will find the CSS files for Material and Tailwind themes, these CSS files contains no online dependecies like google fonts.
+4. Open the **customized** folder which contains CSS files without online dependecies of google fonts.
    ![Customized CSS](images/custom-css-crg.png)
-5. The CSS files from Step 4 i.e, under customized folder can be added and are referred in the application to render the components without any issues on the machines that contains no internet access.
+5. Copy the files under the **customized** folder to Blazor application `~/wwwroot` folder.
+6. Now, manually add the custom styles in the Blazor App to render the components without any issues on the machines that contains no internet access.
+    * For **Blazor WASM App**, reference custom interop script in `~/wwwroot/index.html` file. 
+    * For **Blazor Server App**, reference custom interop script in 
+        * `~/Pages/_Layout.cshtml` file for `.NET 6` project
+        * `~/Pages/_Host.cshtml` file for `.NET 5 and .NET Core 3.X` project.
+
+    ```html
+    <head>
+        ....
+        ....
+        <link href="material.css" rel="stylesheet" />
+        <script src="syncfusion-blazor.min.js" type="text/javascript"></script>
+    </head>
+    ```
    
 ## See also
 
