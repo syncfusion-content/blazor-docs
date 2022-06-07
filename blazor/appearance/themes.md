@@ -491,6 +491,32 @@ The following example demonstrates how to change a theme dynamically in Blazor W
     ![Change theme dynamically in blazor WASM app](images/blazor-dynamic-theme-switching-wasm.gif) 
     
     > [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-WASM-app)
+  
+## Render Syncfusion Components in offline with Material and Tailwind Themes
+
+Material and Tailwind Themes uses online roboto font. If your app is designed to work in a local network without internet connection, follow the below steps to use offline fonts to work in offlince scenarios.
+   
+1. Download the minified styles for the required components from [CRG](https://blazor.syncfusion.com/crg/) site. Learn more about CRG in [help documentation](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
+2. Unzip the file and it contains the styles of the selected components and an `import.json` file, which stores the current settings.
+   ![Select styles folder](images/crg-styles.png)
+3. The styles folder of material and tailwind theme contains css files and a **customized** folder. The CSS files under **customized** folder doesn't contain the online google font dependencies.
+   ![Open customized folder](images/customized-folder-crg.png)
+4. Open the **customized** folder which contains CSS files without online dependecies of google fonts.
+   ![Customized CSS](images/custom-css-crg.png)
+5. Copy the files under the **customized** folder to Blazor application `~/wwwroot` folder.
+6. Now, manually add the custom styles in the Blazor App to render the components without any issues on the machines that contains no internet access.
+    * For **Blazor WASM App**, reference custom interop script in `~/wwwroot/index.html` file. 
+    * For **Blazor Server App**, reference custom interop script in 
+        * `~/Pages/_Layout.cshtml` file for `.NET 6` project
+        * `~/Pages/_Host.cshtml` file for `.NET 5 and .NET Core 3.X` project.
+
+    ```html
+    <head>
+        ....
+        ....
+        <link href="material.min.css" rel="stylesheet" />
+    </head>
+    ```
    
 ## See also
 
