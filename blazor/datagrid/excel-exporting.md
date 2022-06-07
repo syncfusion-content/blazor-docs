@@ -428,6 +428,7 @@ This can be demonstrated using the following sample:
 }
 
 ```
+![Customizing the background color for a Blazor DataGrid in an exported Excel document](./images/blazor-datagrid-customize-background-color.png)
 
 > [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-customize-background-color-for-grid-exported-excel-file)
 
@@ -510,6 +511,8 @@ This can be demonstrated using the following sample:
 }
 
 ```
+
+![Customizing the background color for a particular column in an exported Excel document](./images/blazor-datagrid-customize-background-color-for-particular-column.png)
 
 > [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-customize-background-color-for-particular-column)
 
