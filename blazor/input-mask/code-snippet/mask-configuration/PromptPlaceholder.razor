@@ -1,43 +1,46 @@
-﻿@page "/counter"
-
-@using Syncfusion.Blazor.Inputs
+﻿@using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.DropDowns;
 
- <div class="example-content" style="width:160px">
-<label class="example-label">Mobile Number</label>
+ <div class="example-content">
+<label>Mobile Number</label>
 <SfMaskedTextBox Mask="000-000-0000" @bind-Value="@Value" EnableLiterals=true PromptPlaceholder="@PromptPlaceHolder" ></SfMaskedTextBox>
-<br />   
-</div>
-<label>Value :"@Value"</label>
-<br />            
- <div class="property-panel-content" style="width:160px">
+<label>Value :"@Value"</label>           
 <label class="example-label">Prompt Placeholder Character</label>
-<SfDropDownList TValue="string" TItem="PromptPlaceHolders" DataSource="@Datas"  @bind-Index="@Char">
+<SfDropDownList TValue="string" TItem="PromptPlaceHolders" DataSource="@PlaceholderList"  @bind-Index="@PlaceholderCharater">
 <DropDownListEvents TItem="PromptPlaceHolders" TValue="string" ValueChange="@OnPromptPlaceChange"></DropDownListEvents>
-<DropDownListFieldSettings Text="Text1" Value="ID1"></DropDownListFieldSettings>
+<DropDownListFieldSettings Text="Character" Value="ID"></DropDownListFieldSettings>
 </SfDropDownList>  
 </div>
           
 
-@code{
-
-    public string? Value { get; set; } = "12345"; 
+@code
+{
+    public string Value { get; set; } = "9876543";
     public char PromptPlaceHolder { get; set; } = '#';
     public class PromptPlaceHolders
     {
-        public string ID1 { get; set; }
-        public char Text1 { get; set; }
+        public char ID { get; set; }
+        public char Character { get; set; }
     }
-    private int? Char { get; set; } = 0;
-    private List<PromptPlaceHolders> Datas = new List<PromptPlaceHolders>() 
+    private int? PlaceholderCharater { get; set; } = 0;
+    private List<PromptPlaceHolders> PlaceholderList = new List<PromptPlaceHolders>() 
     {
-        new PromptPlaceHolders(){ ID1= "1", Text1= '#' },
-        new PromptPlaceHolders(){ ID1= "2", Text1= '_' },
-        new PromptPlaceHolders(){ ID1= "3", Text1= '*' }
+        new PromptPlaceHolders(){ ID= '1', Character = '#' },
+        new PromptPlaceHolders(){ ID= '2', Character = '_' },
+        new PromptPlaceHolders(){ ID= '3', Character = '*' }
     };
 
     private void OnPromptPlaceChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, PromptPlaceHolders> args)
     {
-        this.PromptPlaceHolder = args.ItemData.Text1;
+        this.PromptPlaceHolder = args.ItemData.Character;
     }
 }
+<style>
+.example-content{
+    padding : 5px;
+    width :300px;
+}
+.example-label{
+    margin : 2px;
+}
+</style>

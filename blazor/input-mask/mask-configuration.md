@@ -116,7 +116,7 @@ The following example demonstrates the MaskedTextBox with customized prompt char
 
 ## Include Literals in the Value
 
-By default, you will get the raw value as Value of the component. Now, you can get the component Value with mask literals by enabling [EnableLiterals]() property.
+By default, you will get the raw value as [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_Value) of the component. Now, you can get the component Value with mask literals by enabling [EnableLiterals](https://www.syncfusion.com/blazor-components/blazor-input-mask) property.
 
 The following example demonstrates how to obtain the value with mask literals.
 
@@ -130,12 +130,11 @@ The following example demonstrates how to obtain the value with mask literals.
 
 ## Prompt Placeholder
 
-By default, non-filling blank spaces in the mask are replaced with empty string in the Value property. You can change that prompt placeholder by using [PromptPlaceholder]() property.
+By default, non-filling blank spaces in the mask are replaced with empty string in the Value property. You can change that prompt placeholder by using [PromptPlaceholder](https://www.syncfusion.com/blazor-components/blazor-input-mask) property.
 
-Set the Null value to the PromptPlaceholder property when you don't want to use this character in the Value property.
-
-**Limitation >**
-PromptPlaceholder will apply to the Value property when you have enabled the EnableLiterals property.
+Set the `Null` value to the PromptPlaceholder property when you don't want to use this character in the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_Value) property.
+ 
+>PromptPlaceholder will apply to the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_Value) property when you have enabled the [EnableLiterals](https://www.syncfusion.com/blazor-components/blazor-input-mask) property.
 
 {% highlight Razor %}
 
@@ -145,10 +144,7 @@ PromptPlaceholder will apply to the Value property when you have enabled the Ena
 
 ![Blazor MaskedTextBox with Prompt Character](./images/promptplaceholder.gif)
 
-**Limitation >**
-Don't use the PromptPlaceholder character as valid for the user input in the mask.
-
-For example, if you have a mask "00/00/0000" and PromptPlaceholder as "5" then you type 2 in the input, Value will become "25/55/5555". Its lead to return wrong value as Value of the component.
+>Don't use the PromptPlaceholder character as valid for the user input in the mask. For example, if you have a mask "00/00/0000" and PromptPlaceholder as "5" then you type 2 in the input, [Value]() will become "25/55/5555". Its lead to return wrong value as Value of the component.
 
 
 
