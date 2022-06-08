@@ -34,14 +34,12 @@ Right-click on the **Tables** folder of the created database and click **Add New
 Use the following query to add a new table named **Orders**.
 
 ```
-
 Create Table Orders(
  OrderID BigInt Identity(1,1) Primary Key Not Null,
  CustomerID Varchar(100) Not Null,
  Freight int Null,
  OrderDate datetime null
 )
-
 ```
 
 Now, the Orders table design will look like below. Click on the **Update** button.
@@ -70,9 +68,7 @@ Run the following commands in the **Package Manager Console**.
 Once the above packages are installed, you can scaffold DbContext and Model classes. Run the following command in the **Package Manager Console**.
 
 ```
-
 Scaffold-DbContext “Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data
-
 ```
 
 The above scaffolding command contains the following details for creating DbContext and model classes for the existing database and its tables.
@@ -86,7 +82,7 @@ After running the above command, **OrdersDetailsContext.cs** and **Orders.cs** f
 
 You can see that OrdersDetailsContext.cs file contains the connection string details in the **OnConfiguring** method.
 
-{% highlight c# hl_lines="25" %}
+{% highlight c# hl_lines="25 26" %}
 
 using System;
 using System.Collections.Generic;
@@ -124,7 +120,7 @@ namespace WebAPICRUDServerApp.Data
 
 It is not recommended to have a connection string with sensitive information in the OrdersDetailsContext.cs file, so the connection string is moved to the **appsettings.json** file.
 
-{% highlight %}
+{% highlight json %}
 
 {
   "Logging": {
@@ -418,12 +414,10 @@ The response object from the Web API should contain the properties, `Items` and 
 The sample response object should look like this:
 
 ```
-
 {
     "Items": [{..}, {..}, {..}, ...],
     "Count": 830
 }
-
 ```
 
 ## Handling CRUD operations with our Syncfusion Blazor DataGrid component
