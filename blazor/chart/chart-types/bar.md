@@ -190,5 +190,6 @@ The following properties can be used to customize the [Bar](https://help.syncfus
 
 ## See Also
 
+* [Creating stacked waterfall chart using Blazor bar chart](https://www.syncfusion.com/kb/13237/creating-stacked-waterfall-chart-using-blazor-bar-chart)
 * [Data Label](../data-labels)
 * [Tooltip](../tool-tip)
