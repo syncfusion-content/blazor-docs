@@ -30,7 +30,6 @@ The first step is to create a Library database and a table named Book to hold a 
 * Use the following SQL query to create a table named Book.
 
 ```
-
 Create Table Book(
 Id BigInt Identity(1,1) Primary Key Not Null,
 Name Varchar(200) Not Null,
@@ -38,7 +37,6 @@ Author Varchar(100) Not Null,
 Quantity int,
 Price int Not Null,
 Available bit)
-
 ```
 
 Now, the Book table design will look like below.
@@ -71,9 +69,7 @@ Run the following commands in the Package Manager Console.
 Once the above packages are installed, you can scaffold DbContext and Model classes. Run the following command in the Package Manager Console under the LibraryManagement project.
 
 ```
-
 Scaffold-DbContext “Server=localhost;Database=Library;Integrated Security=True” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
-
 ```
 
 The above scaffolding command contains the following details for creating DbContext and model classes for the existing database and its tables.

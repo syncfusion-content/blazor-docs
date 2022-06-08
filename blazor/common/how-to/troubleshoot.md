@@ -223,3 +223,4 @@ documentation: ug
 ## See also
 
 * [How to solve AOT publish failure when using Syncfusion.Blazor](https://www.syncfusion.com/forums/169884/aot-publish-fails-for-syncfusion-blazor-dll)
+* [Syncfusion components doesn't render in Blazor WebAssembly application](https://www.syncfusion.com/kb/13439/syncfusion-components-doesnt-render-in-blazor-webassembly-application)

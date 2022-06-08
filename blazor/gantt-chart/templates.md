@@ -210,3 +210,7 @@ You can design your taskbars to view the tasks in Gantt Chart Chart by using `Ga
 ```
 
 ![Blazor Gantt Chart with Taskbar Template](images/blazor-gantt-chart-taskbar-template.png)
+
+## See also
+
+* [Customizing the Blazor Gantt Chart’s Taskbar](https://www.syncfusion.com/blogs/post/customizing-the-blazor-gantt-charts-taskbar-an-overview.aspx)
