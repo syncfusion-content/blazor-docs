@@ -261,7 +261,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 ![Blazor Button Component](./images/blazor-button-component.png)
 
-> You can refer to our [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Button example](https://blazor.syncfusion.com/demos/buttons/default-functionalities?theme=bootstrap5) that shows how to configure the button in Blazor.
+> You can refer to our [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) feature tour page for its groundbreaking feature representations.
 
 ## See Also
 
@@ -269,4 +269,4 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 * [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)
 
- You can also explore our [Blazor Button example](https://blazor.syncfusion.com/demos/buttons/default-functionalities?) that shows how to configure the Button in Blazor.
+You can also explore our [Blazor Button example](https://blazor.syncfusion.com/demos/buttons/default-functionalities?) that shows how to configure the Button in Blazor.
