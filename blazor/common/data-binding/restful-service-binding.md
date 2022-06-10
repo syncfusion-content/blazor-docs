@@ -82,7 +82,7 @@ After running the above command, the **OrdersDetailsContext.cs** and **Orders.cs
 
 You can see that OrdersDetailsContext.cs file contains the connection string details in the **OnConfiguring** method.
 
-{% highlight c# hl_lines="24 25" %}
+{% highlight c# hl_lines="24" %}
 
 using System;
 using Microsoft.EntityFrameworkCore;
