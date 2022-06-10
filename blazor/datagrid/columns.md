@@ -1271,4 +1271,6 @@ In the following sample, the columns **Order Date**, and **Freight** are grouped
 
 ```
 
+![Stacked Column Header in Blazor DataGrid](./images/blazor-datagrid-stacked-column-header.png)
+
 > You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

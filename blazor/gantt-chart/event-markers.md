@@ -68,4 +68,9 @@ The event markers in the Gantt Chart component is used to highlight the importan
 
 ![Blazor Gantt Chart with Event Markers](images/blazor-gantt-chart-event-markers.png)
 
+## See also
+
+* [Display Striplines in Blazor Gantt](https://www.syncfusion.com/forums/175385/display-striplines-in-blazor-gantt)
+
+
 > You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities) to know how to render and configure the Gantt.

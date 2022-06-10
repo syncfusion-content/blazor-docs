@@ -1502,3 +1502,7 @@ public class TreeData
 ## Troubleshoot: Editing works only for first row
 
 The Editing functionalities can be performed based upon the primary key value of the selected row. If [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~IsPrimaryKey.html) is not defined in the tree grid, then edit or delete action take places the first row.
+
+## See also
+    
+* [Cascading DropDownList while Editing in Blazor TreeGrid](https://www.syncfusion.com/forums/175409/cascading-dropdown-dont-work-inside-grid-dialog-form-template)
