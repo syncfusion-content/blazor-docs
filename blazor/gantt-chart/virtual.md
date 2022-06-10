@@ -156,9 +156,9 @@ namespace GanttComponent.Data
 
 ## Column virtualization
 
-Column virtualization allows you to load more number of column with high performance. It renders only the columns which are in the viewport and other columns are rendered on demands while horizontal scrolling.
+Column virtualization allows you to load more columns with high performance. It renders only the columns in the viewport, while other columns render on-demand during horizontal scrolling.
 
-To setup the column virtualization, set the
+To set up the column virtualization, set the
 [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableVirtualization) and
 [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableColumnVirtualization) properties as **true**.
 
@@ -275,16 +275,16 @@ To setup the column virtualization, set the
 }
 ```
 
-> Column's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Width) is required for column virtualization. If column's width is not defined then Gantt Chart will consider its value as **150px**.
+> Column's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Width) is required for column virtualization. If the column's width is not defined, then the Gantt Chart will consider its value as **150px**.
 
 ![Blazor GanttChart with cloumn virtualization](./images/Column_Virtual.gif)
 
 ## Scroll the content by external button
 
-This section shows you how to invoke a [ScrollIntoViewAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ScrollIntoViewAsync_System_Int32_System_Int32_) method to scroll the gantt chart content into view externally by passing column index or row index as parameter.
-To scroll the gantt chart content in horizontal direction set the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableVirtualization) and
-[EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableColumnVirtualization)  properties as **true**. 
-To scroll the gantt chart content in vertical direction, set `EnableVirtualization` property as **true**.
+This section shows you how to invoke a [ScrollIntoViewAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ScrollIntoViewAsync_System_Int32_System_Int32_) method to scroll the Gantt chart content programmatically by passing column index or row index as parameter.
+To scroll the Gantt chart content in a horizontal direction, set the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableVirtualization) and
+[EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableColumnVirtualization) properties as **true**. 
+To scroll the Gantt chart content in a vertical direction, set the  `EnableVirtualization` property as **true**.
 
  ```cshtml
 @using Syncfusion.Blazor.Gantt
