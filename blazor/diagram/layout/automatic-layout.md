@@ -7,6 +7,8 @@ control: Diagram
 documentation: ug
 ---
 
+> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram-component/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+
 # Automatic Layout in Blazor Diagram Component
 
 Diagram provides support to auto-arrange the nodes in the diagram area that is referred as [Layout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html). It includes the following layout modes:

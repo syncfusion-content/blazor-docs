@@ -120,7 +120,7 @@ The excel export provides an option to export the current page into excel. To ex
 
 ### Export hidden columns
 
-The excel export provides an option to export hidden columns of datagrid by defining **includeHiddenColumn** as **true**.
+The excel export provides an option to export hidden columns of DataGrid by defining [IncludeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_IncludeHiddenColumn) as **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -171,9 +171,74 @@ The excel export provides an option to export hidden columns of datagrid by defi
 }
 ```
 
+### Export template columns
+
+The excel export provides an option to export template columns of the DataGrid by defining the [IncludeTemplateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_IncludeTemplateColumn) of [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) as true. In the following sample, the CustomerID column is a template column. The template values cannot be directly exported into the cells. To customize the values of the template columns in Excel file, you must use [ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelQueryCellInfoEvent).
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "ExcelExport" })" AllowExcelExport="true" AllowPaging="true">
+    <GridEvents ExcelQueryCellInfoEvent="ExcelQueryCellInfoHandler" OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150">
+            <Template>
+                @{
+                    var con = (context as Order);
+                }
+                <span>Mr.@con.CustomerID</span>
+            </Template>
+        </GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    private SfGrid<Order> DefaultGrid;
+    public List<Order> Orders { get; set; }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_excelexport")  // Id is the combination of Grid's ID and item name.
+        {
+            ExcelExportProperties ExportProperties = new ExcelExportProperties();
+            ExportProperties.IncludeTemplateColumn = true;
+            await this.DefaultGrid.ExportToExcelAsync(ExportProperties);
+        }
+    }
+    public void ExcelQueryCellInfoHandler(ExcelQueryCellInfoEventArgs<Order> args)
+    {
+        if (args.Column.Field == "CustomerID")
+        {
+            args.Cell.Value = "Mr." + args.Data.CustomerID;
+        }
+    }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "Alfki", "Anantr", "Anton", "Blonp", "Bolid" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
 <!-- Show or hide columns on exported excel
 
-You can show a hidden column or hide a visible column while exporting the datagrid by customizing the vsibility settings while exporting.
+You can show a hidden column or hide a visible column while exporting the DataGrid by customizing the visibility settings.
 
 This is demonstrated in the below sample code where initially the **CustomerID** is hidden. While exporting, we have changed CustomerID to visible column and Freight as hidden column. Then in the `ExcelExportComplete` event, we have reversed the column's visibility state back to the previous state.
 
@@ -510,6 +575,68 @@ You can assign the file name for the exported document by defining **fileName** 
         public double? Freight { get; set; }
     }
 }
+```
+
+### Add additional worksheets to excel file while exporting
+
+Additional worksheets can be added to the excel file while exporting using the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html).
+
+In the following sample, you can add the additional worksheets to excel file by creating a workbook using `ExcelExportProperties`. Additional sheets will be added along with the Grid data.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.ExcelExport
+
+@{
+    var Tool = (new List<string>() { "ExcelExport"});
+}
+
+<SfGrid @ref="DefaultGrid" DataSource="@Orders" Toolbar=@Tool AllowExcelExport="true">
+   <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    private SfGrid<Order> DefaultGrid;
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+    public async Task ToolbarClickHandler()
+    {
+        ExcelExportProperties ExportProperties = new ExcelExportProperties();
+        // Add a new workbook to the excel file that contains only 1 worksheet.
+        ExportProperties.Workbook = new Workbook();
+        // Add additional worksheets.
+        ExportProperties.Workbook.Worksheets.Add();
+        ExportProperties.Workbook.Worksheets.Add();
+        // Define the Gridsheet index where Grid data must be exported.
+        ExportProperties.GridSheetIndex = 0;
+        // Export the document. 
+        await this.DefaultGrid.ExcelExport(ExportProperties);
+    }
+}
+
 ```
 
 ## Exporting grouped records
@@ -1010,3 +1137,7 @@ The following sample code demonstrates modifying the export options for hierarch
     }
 }
 ``` -->
+
+## See also
+* [How to import data from Excel sheet and bind to Blazor Grid?](https://www.syncfusion.com/kb/13131/how-to-import-data-from-excel-sheet-and-bind-to-blazor-grid)
+

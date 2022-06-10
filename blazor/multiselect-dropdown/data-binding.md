@@ -19,7 +19,7 @@ Data binding can be achieved by using the `bind-Value` attribute and its support
     <p>MultiSelect value is:<strong>@SelectedValue</strong></p>
 }
 
-<SfMultiSelect Placeholder="e.g. Australia" @bind-Value="@MultiVal" DataSource="@Country">
+<SfMultiSelect Placeholder="e.g. Australia" @bind-Value="@MultiVal" DataSource="@Countries">
     <MultiSelectFieldSettings Value="Name"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
@@ -27,19 +27,19 @@ Data binding can be achieved by using the `bind-Value` attribute and its support
 
    public string[] MultiVal { get; set; } = new string[] { };
 
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
 
         public string Code { get; set; }
     }
 
-    List<Countries> Country = new List<Countries>
+    List<Country> Countries = new List<Country>
 {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
     };
 }
 ```

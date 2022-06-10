@@ -31,7 +31,6 @@ In the following sample, you can select a range from 15th day of this month to 1
 }
 ```
 
-The output will be as follows.
 
 ![Range Restriction in Blazor DateRangePicker](./images/blazor-daterangepicker-range-restriction.png)
 
@@ -51,7 +50,6 @@ In the following sample, the range selection should be greater than 5 days and l
 </SfDateRangePicker>
 ```
 
-The output will be as follows.
 
 ![Blazor DateRangePicker Selection in Span between Range](./images/blazor-daterangepicker-range-span.png)
 
@@ -74,19 +72,18 @@ DateRangePicker provides an option to limit the user towards entering the valid 
 
 If the value of `Min` or `Max` property is changed through code behind, update the `StartDate` and `EndDate` properties to set within the range.
 
-If the Start and End date is out of specified date range, a validation error class will be appended to the input element. If `StrictMode` is enabled and both the Start and End date is lesser than the Min date, then the Start and End date will be updated with Min date.
+If the Start and End dates are out of specified date range, a validation error class will be appended to the input element. If `StrictMode` is enabled and both the Start and End dates are less than the Min date, then the Start and End dates will be updated with Min date.
 
-If both the Start and End date is higher than the Max date, then Start and End date will be updated with Max date.
+If both the Start and End dates are higher than the Max date, then Start and End dates will be updated with the Max date.
 
-If StartDate is less than Min date, it will be updated with Min date or if EndDate is greater than Max date,  will be updated with the Max date.
+If StartDate is less than Min date, it will be updated with Min date. If EndDate is greater than Max date, it will be updated with the Max date.
 
-The output will be as follows.
 
 ![Blazor DateRangePicker in Strict Mode](./images/blazor-daterangepicker-strict-mode.png)
 
 By default, the DatePicker acts in `StrictMode` false state that allows you to enter the invalid or out-of-range date in text box.
 
-If the Start and End date is out of specified date range or invalid, then the model value will be set to `out of range` value or `null` respectively with highlighted  `error` class to indicate the value is out of range or invalid.
+If the Start and End dates are out of specified date range or invalid, then the model value will be set to `out of range` value or `null` respectively with highlighted  `error` class to indicate the value is out of range or invalid.
 
 The following code demonstrates the `StrictMode` as false. Here, it allows you to enter the valid or invalid value in text box.
 
@@ -103,7 +100,7 @@ The following code demonstrates the `StrictMode` as false. Here, it allows you t
 }
 ```
 
-The output will be as follows.
+
 
 ![Blazor DateRangePicker without Strict Mode](./images/blazor-daterangepicker-without-strict-mode.png)
 

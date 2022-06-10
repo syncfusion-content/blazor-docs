@@ -1,13 +1,13 @@
 ---
 layout: post
-title: BPMN text annotation in Blazor Diagram Component | Syncfusion
+title: BPMN Text Annotation in Blazor Diagram Component | Syncfusion
 description: Learn here all about how to create BPMN text annotation in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# BPMN text annotation in Blazor Diagram Component
+# BPMN Text Annotation in Blazor Diagram Component
 
 * A BPMN object can be associated with a text annotation that does not affect the flow but gives details about objects within a flow. The annotation property of the node is used to connect an annotation element to the BPMN node.
 
@@ -31,7 +31,7 @@ documentation: ug
 
 @code
 {
-    // Initialize node collection with Node
+    // Initialize node collection with Node.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -39,27 +39,27 @@ documentation: ug
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            // Unique Id of the node
+            // Unique Id of the node.
             ID = "node1",
             // Sets type as Bpmn and shape as DataObject
             Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
                 Shape = BpmnShapes.DataObject,
-                // Sets collection as true when Dataobject is not a Single instance
+                // Sets collection as true when Dataobject is not a Single instance.
                 DataObject = new BpmnDataObject()
                 {
                     Collection = true,
                     Type = BpmnDataObjects.Input
                 }
             },
-            // Sets the id, angle, and text for the annotation
+            // Sets the id, angle, and text for the annotation.
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
                 new ShapeAnnotation()

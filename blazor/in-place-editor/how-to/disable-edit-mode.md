@@ -7,7 +7,7 @@ control: In Place Editor
 documentation: ug
 ---
 
-# Disable the edit mode specifically in Blazor In-place Editor Component
+# Disable the Edit Mode Specifically in Blazor In-place Editor Component
 
 The edit mode of the In-place Editor can be disabled by setting the `Disabled` property value to `true`. In the following example, when you check or uncheck the checkbox, the In-place Editor component will disable or enable the edit mode respectively.
 

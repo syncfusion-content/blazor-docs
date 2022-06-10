@@ -1,8 +1,7 @@
 ---
 layout: post
-title: Undo redo in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about undo redo support in Syncfusion Blazor Diagram component and much more details.
-platform: Blazor
+title: Undo Redo in Blazor Diagram Component | Syncfusion
+description: Checkout and learn here all about undo redo support in Syncfusion Blazor Diagram component and much more.
 control: Diagram Component
 documentation: ug
 ---
@@ -21,15 +20,15 @@ Undo/redo commands can be executed through shortcut keys. Shortcut key for undo 
 
 ## Undo/redo through public APIs
 
-The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Undo) and [Redo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Redo) methods helps you to revert/restore the changes. The following code example illustrates how to undo/redo the changes through code.
+The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Undo) and [Redo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Redo) methods help you to revert/restore the changes. The following code example illustrates how to undo/redo the changes through code.
 
 ```cshtml
 SfDiagramComponent Diagram;
 
-// Reverts the last action performed
+// Reverts the last action performed.
 diagram.Undo();
 
-// Restores the last undone action
+// Restores the last undone action.
 diagram.Redo();
 ```
 
@@ -39,22 +38,22 @@ When a change in the diagram is reverted or restored (undo/redo), the [HistoryCh
 
 History list allows to revert or restore multiple changes through a single undo/redo command. For example, revert/restore the fill color change of multiple elements at a time.
 
-[StartGroupAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_StartGroupAction) is used to notify the diagram to start grouping the changes. [EndGroupAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EndGroupAction) is used to notify to stop grouping the changes. The following code illustrates how to undo/redo to change of multiple elements at a time.
+[StartGroupAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_StartGroupAction) is used to notify the diagram to start grouping the changes. [EndGroupAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EndGroupAction) is used to notify to stop grouping the changes. The following code illustrates how to undo/redo to change multiple elements at a time.
 
 ```cshtml
 SfDiagramComponent diagram;
 
-//Starts grouping the changes
+//Starts grouping the changes.
 diagram.StartGroupAction();
 
-//Ends grouping the changes
+//Ends grouping the changes.
 diagram.EndGroupAction();
 ```
 
 ## History change event
 
-* While interacting the elements in the diagram, this event can be used to do the customization.
-* When interacting the node or connector, the entries getting added to the history list to trigger this event.
+* While interacting with the elements in the diagram, this event can be used to do the customization.
+* When interacting with the node or connector, the entries get added to the history list to trigger this event.
 
 The [HistoryChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HistoryChangedEventArgs.html) notifies while the changes occurs during undo/redo process.
 
@@ -71,7 +70,7 @@ The [HistoryChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
     public void Onhistorychange(HistoryChangedEventArgs args)
     {
-        //causes of history change
+        //Causes of history change.
         HistoryChangedAction ActionTrigger = args.ActionTrigger;
     }
 }
@@ -104,16 +103,16 @@ The [HistoryChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.B
         Node node = new Node()
         {
             ID = "node1",
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
             AdditionalInfo = NodeInfo
         };
-        // Add node
+        // Add node.
         nodes.Add(node);
     }
 
@@ -150,15 +149,15 @@ The [HistoryChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.B
         Node node = new Node()
         {
             ID = "node1",
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
         };
-        // Add node
+        // Add node.
         nodes.Add(node);
     }
 
@@ -199,15 +198,15 @@ The purpose of custom undo redo process is to store actions which are not done t
         Node node = new Node()
         {
             ID = "node1",
-            // Position of the node
+            // Position of the node.
             OffsetX = 250,
             OffsetY = 250,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
         };
-        // Add node
+        // Add node.
         nodes.Add(node);
     }
 

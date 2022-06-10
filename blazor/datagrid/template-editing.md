@@ -11,7 +11,7 @@ documentation: ug
 
 ## Inline template
 
-> Before adding an Inline template to the DataGrid, we strongly recommend you to go through the [Template](./templates/#templates) section topic to configure the template.
+> Before adding an Inline template to the DataGrid, it is recommended to go through the [Template](./templates/#templates) section topic to configure the template.
 
 The Inline template editing provides an option to customize the default behavior of Inline editing. Using the Inline template, you can render your editors by defining the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component's [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property as **Normal** and wrapping the HTML elements inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
 
@@ -132,7 +132,7 @@ The following sample code demonstrates DataGrid enabled with Inline template edi
 
 ## Dialog template
 
-> Before adding dialog template to the datagrid, we strongly recommend you to go through the [Template](./templates/#templates) section topic to configure the template.
+> Before adding dialog template to the datagrid, it is recommended to go through the [Template](./templates/#templates) section topic to configure the template.
 
 To know about customizing the  **Dialog Template** in Blazor DataGrid Component, you can check this video.
 
@@ -264,7 +264,7 @@ The following image represents the dialog template that is displayed on double-c
 
 It is possible to disable particular components rendered inside the dialog template using the data source value. This can be achieved by utilizing the `Enabled` property of the components which specifies whether the component is enabled or disabled.
 
-This is demonstrated in the below sample code where if the `RequestType` argument value of the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event is **BeginEdit** then the `Enabled` property of the **OrderID** Textbox is set to false.
+This is demonstrated in the following sample code, where if the `RequestType` argument value of the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event is **BeginEdit** then the `Enabled` property of the **OrderID** Textbox is set to false.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -397,7 +397,7 @@ The following image represents the dialog template of the DataGrid component wit
 
 By default, the first input element in the dialog will be focused while opening it. If the first input element is in the a disabled or hidden state, you can set focus to the required input element in the corresponding components **Created** or **DataBound** event.
 
-This is demonstrated in the below sample code where the first input element is in disabled state. So the  **CustomerID** Autocomplete component is focused by invoking its [FocusIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusIn) method in the AutoComplete's [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_DataBound) event.
+This is demonstrated in the following sample code, where the first input element is in disabled state. So the  **CustomerID** Autocomplete component is focused by invoking its [FocusIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusIn) method in the AutoComplete's [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_DataBound) event.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -514,3 +514,85 @@ This is demonstrated in the below sample code where the first input element is i
 
 The following image represents the AutoComplete component in focused state inside the dialog template of the DataGrid component,
 ![Blazor DataGrid displays Dynamic Focus of Components](./images/blazor-datagrid-dynamic-focus-component.png)
+
+### Complex data binding with dialog template
+
+You can edit the complex objects in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) using the dialog template in the following way.
+
+In the following sample, **SfNumericTextBox** is rendered in the dialog template and changes can be updated in the `GridColumn` using the two-way(**@bind-Value**) binding.
+
+> Also, ensure to define **ID** property for the complex column as (`___`) replacing the (`.`) operator in the Field value.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Inputs
+
+<SfGrid DataSource="@Employees" Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="@EditMode.Dialog">
+        <Template>
+            @{
+                var order = (context as EmployeeData);
+            }
+            <div>
+                <div class="mb-4"><SfNumericTextBox TValue="int?" ID="EmployeeID" Enabled="@((order.EmployeeID == null) ? true : false)" @bind-Value="order.EmployeeID"></SfNumericTextBox></div>
+                <div class="mb-4"><SfNumericTextBox TValue="int?" ID="EmpDetails__DepartmentID" @bind-Value="order.EmpDetails.DepartmentID"></SfNumericTextBox></div>
+                <div class="mb-4"><SfNumericTextBox TValue="int?" ID="EmpDetails__salarydetails__Salary" @bind-Value="order.EmpDetails.salarydetails.Salary"></SfNumericTextBox></div>
+            </div>
+        </Template>
+    </GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.EmployeeID) HeaderText="EmployeeID" IsPrimaryKey="true"  Width="120"></GridColumn>
+        <GridColumn Field="EmpDetails.FirstName" HeaderText="First Name" Width="150"></GridColumn>
+        <GridColumn Field="EmpDetails.LastName" HeaderText="Last Name" Width="130"></GridColumn>
+        <GridColumn Field="EmpDetails.DepartmentID" HeaderText="DepID" Width="150"></GridColumn>
+        <GridColumn Field="EmpDetails.salarydetails.Salary" HeaderText="Salary" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Job Title" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<EmployeeData> Employees { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
+        {
+            EmployeeID = x,
+            EmpDetails = new EmployeeDetails()
+            {
+                FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+                LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
+                DepartmentID = x,
+                salarydetails = new SalaryDetails()
+                {
+                    Salary = x * 1000
+                }
+            },
+            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
+                                          "Inside Sales Coordinator" })[new Random().Next(4)],
+        }).ToList();
+    }
+
+    public class EmployeeData
+    {
+        public int? EmployeeID { get; set; }
+        public EmployeeDetails EmpDetails { get; set; }
+        public string Title { get; set; }
+    }
+
+    public class EmployeeDetails
+    {
+        public int? DepartmentID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public SalaryDetails salarydetails { get; set; }
+    }
+
+    public class SalaryDetails
+    {
+        public int? Salary { get; set; }
+    }
+}
+```
+
+![Complex Data Binding with Dialog Template in Blazor DataGrid](./images/blazor-datagrid-complex-data-binding-with-dialog-template.gif)

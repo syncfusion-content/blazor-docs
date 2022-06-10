@@ -43,6 +43,8 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
 Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
+> From 2022 Vol1 (20.1) version - The default value of `IgnoreScriptIsolation` is changed as `true`, so, you don’t have to set `IgnoreScriptIsolation` property explicitly to refer scripts externally.
+
 ### Blazor Server App
 
 * For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
@@ -405,6 +407,9 @@ When space constraints prevents from displaying information using data labels, t
 > Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
 
 ![Blazor TreeMap with Tooltip](images/blazor-treemap-tooltip.png)
+
+
+> You can also explore our [Blazor TreeMap example](https://blazor.syncfusion.com/demos/treemap/default-functionalities?theme=bootstrap5) that shows you how to render and configure the treemap.
 
 ## See also
 

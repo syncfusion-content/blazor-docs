@@ -7,9 +7,9 @@ control: Diagram Component
 documentation: ug
 ---
 
-# BPMN group in Blazor Diagram Component
+# BPMN Group in Blazor Diagram Component
 
-A group is used to frame a part of the diagram, shows that elements included in it are logically belong together and does not have any other semantics other than organizing elements. To create a group, the shape property of the node should be set to **Group**. The following code example explains how to create a BPMN group.
+A group is used to frame a part of the diagram, shows that elements included in it logically belong together and do not have any other semantics other than organizing elements. To create a group, the shape property of the node should be set to **Group**. The following code example explains how to create a BPMN group.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -19,7 +19,7 @@ A group is used to frame a part of the diagram, shows that elements included in 
 
 @code
 {
-    // Initialize node collection with Node
+    // Initialize node collection with Node.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -27,15 +27,15 @@ A group is used to frame a part of the diagram, shows that elements included in 
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            // Unique Id of the node
+            // Unique Id of the node.
             ID = "node1",
-            // Sets type to Bpmn and shape to Group
+            // Sets type to Bpmn and shape to Group.
             Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,

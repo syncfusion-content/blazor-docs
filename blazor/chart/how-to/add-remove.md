@@ -96,7 +96,7 @@ By clicking the **Add Chart Series** button a new series will be added to the ch
 
     List<SeriesData> SeriesCollection;
 
-    // Here we have added the chart series by adding series data to the "SeriesCollection" list.
+    // Here, the chart series has been added by adding series data to the "SeriesCollection" list.
     public void AddChartSeries()
     {
         SeriesCollection.Add(new SeriesData
@@ -107,7 +107,7 @@ By clicking the **Add Chart Series** button a new series will be added to the ch
         });
     }
 
-    // Here we have removed the chart series by removing the series data in the "SeriesCollection" list.
+    // Here, the chart series has been removed by removing the series data in the "SeriesCollection" list.
     public void RemoveChartSeries()
     {
         if (SeriesCollection.Count > 0)

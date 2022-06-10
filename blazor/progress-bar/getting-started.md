@@ -9,7 +9,10 @@ documentation: ug
 
 # Getting Started with Blazor ProgressBar Component
 
-This section briefly explains about how to include [Blazor ProgressBar](https://www.syncfusion.com/blazor-components/blazor-progressbar) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor ProgressBar](https://www.syncfusion.com/blazor-components/blazor-progressbar) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio. To get start quickly with Bullet Chart Component using Blazor, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=Kf04zbPJmHM"%}
 
 ## Prerequisites
 
@@ -42,6 +45,8 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 {% endtabs %}
 
 Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
+
+> From 2022 Vol1 (20.1) version - The default value of `IgnoreScriptIsolation` is changed as `true`, so, you don’t have to set `IgnoreScriptIsolation` property explicitly to refer scripts externally.
 
 ### Blazor Server App
 

@@ -379,6 +379,77 @@ The following image represents foreign key column
 > * For remote data, the sorting and grouping is done based on [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) instead of [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue).
 > * If [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) is not defined, then the column uses [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_StackingGroup) property of **GridColumn** tag helper.
 
+### Prevent filter query generation for foreignkey column
+
+By default, a filter query for the foreignkey column will be generated based on the foreignkey value. You can prevent the default filter query generation for the foreignkey column and add the custom filter query. This can be achieved by setting the [PreventFilterQuery](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ActionEventArgs-1.html#Syncfusion_Blazor_Grids_ActionEventArgs_1_PreventFilterQuery) argument of the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event to true.
+
+In the following code sample, you can prevent default filter query generation using the `PreventFilterQuery` property and generate a custom filter query to execute a filter operation.
+
+```cshtml
+@using System.ComponentModel.DataAnnotations;
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+@using Newtonsoft.Json
+
+<SfGrid ID="Grid" @ref="Grid" Query="@currentQuery" TValue="Book" Toolbar="@ToolbarItems" Height="100%" AllowPaging="true" AllowSorting="true" AllowFiltering="true">
+    <GridPageSettings PageSize="10" PageSizes="true"></GridPageSettings>
+    <SfDataManager Url="http://localhost:64956/odata/books" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+    <GridEvents TValue="Book" OnActionBegin="OnActionBegin"/>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="@EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Book.Id) IsPrimaryKey="true" Width="150"></GridColumn>
+        <GridForeignColumn TValue="Customer" Field=@nameof(Book.CustomerId)  AllowFiltering="true" ForeignKeyValue="Name" ForeignKeyField="Id" HeaderText="Name" Width="100" >
+            <SfDataManager Url="http://localhost:64956/odata/customers" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+        </GridForeignColumn>
+        <GridColumn Field=@nameof(Book.CreditLimit) Width="200" EditType="EditType.NumericEdit"></GridColumn>
+        <GridColumn Field=@nameof(Book.Active) Width="200" EditType="EditType.BooleanEdit"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    SfGrid<Book> Grid { get; set; }
+    private Query currentQuery = new Query();
+    public List<string> ToolbarItems = new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" };
+ 
+    private void OnActionBegin(Syncfusion.Blazor.Grids.ActionEventArgs<Book> args)
+    {  
+        if (args.RequestType == Syncfusion.Blazor.Grids.Action.Filtering)
+        {
+            if (String.Equals(args.CurrentFilteringColumn, nameof(Book.CustomerId), StringComparison.OrdinalIgnoreCase))
+            {
+                args.PreventFilterQuery = true;
+                currentQuery = new Query().Where("Customer/Name", args.CurrentFilterObject.Operator.ToString().ToLower(), args.CurrentFilterObject.Value, true, true);
+            }
+        }
+    }
+
+    public class Book
+    {
+        [Key]
+        public Guid Id { get; set; }
+        public Guid CustomerId { get; set; }
+        public Guid CustomerId1 { get; set; }
+        public virtual Customer Customer { get; set; }
+        public int CreditLimit { get; set; }
+        public bool Active { get; set; }
+        public bool IsDeleted { get; set; }
+    }
+
+    public class Customer
+    {
+        [Key]
+        public Guid Id { get; set; }
+        public string Name { get; set; }      
+        [JsonIgnore]
+        public List<Book> CustomerBooks { get; set; }
+    }
+}
+
+```
+
+> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-prevent-query-generation-for-foriegnkey-column).
+
 ## Header text
 
 By default, column header title is displayed from column [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) value. To override the default header title, you have to define the **HeaderText** value in the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) property of **GridColumn** directive.
@@ -426,7 +497,7 @@ are not defined in the column, the column renders with “empty” header text.
 
 ## Header template
 
-> Before adding header template to the datagrid, we strongly recommend you to go through the [template](./templates/#templates) section topic to configure the template.
+> Before adding header template to the datagrid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
 
 To know about **Header Template** in Blazor DataGrid Component, you can check this video.
 
@@ -646,7 +717,7 @@ The column width can be set using the **Width** property of the **GridColumn**. 
 * When only some columns are provided with the width value and if the cumulative width of the columns is lesser than the grid element width then columns with no width will share the available space evenly.
 * When no width is provided in a column and MinWidth property is defined, if the cumulative width of the column is greater than the grid element width then MinWidth would be used as the column width to avoid it from becoming invisible.
 
-## Autofit
+## Autofit columns
 
 You can auto fit a column interactively by double clicking the right border of the header cells.
 
@@ -745,6 +816,39 @@ The following image represents AutoFit column by method
 ![Blazor DataGrid with Autofit Columns](./images/blazor-datagrid-autofit-methods.png)
 
 > You can autofit all the columns by invoking the **AutoFitColumns** method without column names.
+
+### Autofit columns when changing column visibility using column chooser
+
+You can auto fit columns when the column visibility is changed using column choose by calling [AutoFitColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoFitColumnsAsync) method in the [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event. Using `RequestType` property in event args, you can differentiate actions and in the below code `AutoFitColumnsAsync` method is called when `RequestType` is `ColumnState`.
+
+```cshtml
+
+@using Syncfusion.Blazor.Grids;
+
+<SfGrid @ref="Grid" DataSource="@Employees" ShowColumnChooser="true" Toolbar=@ToolbarItems>
+    <GridEvents OnActionComplete="Complete" TValue="EmployeeData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Center" HeaderText="Employee ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.HireDate) HeaderText="Hire Date" Format="d" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public string[] ToolbarItems = new string[] { "ColumnChooser" };
+    SfGrid<EmployeeData> Grid{ get; set; }
+    public async Task Complete(ActionEventArgs<EmployeeData> Args)
+    {
+        if(Args.RequestType == Syncfusion.Blazor.Grids.Action.ColumnState)
+        {
+            await Task.Delay(200);
+            await Grid.AutoFitColumnsAsync();
+        }
+    }
+
+```
 
 ## Responsive columns
 

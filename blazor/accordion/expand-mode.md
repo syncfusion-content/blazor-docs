@@ -26,13 +26,13 @@ This property enables to expand only one Accordion item at a time. If any new it
     <AccordionItems>
         <AccordionItem Expanded="true" Header="ASP.NET" Content="Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services."></AccordionItem>
         <AccordionItem Header="ASP.NET MVC" Content="The Model-View-Controller (MVC) architectural pattern separates an application into three main components: the model, the view, and the controller."></AccordionItem>
-        <AccordionItem Header="JavaScript" Content="JavaScript (JS) is an interpreted computer programming language.It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed."></AccordionItem>
+        <AccordionItem Header="JavaScript" Content="JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed."></AccordionItem>
     </AccordionItems>
 </SfAccordion>
 
 ```
 
-Output:
+
 
 ![Blazor Accordion Component with Single Expand Mode](./images/blazor-accordion-single-expand-mode.png)
 
@@ -48,7 +48,7 @@ The default [ExpandMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     <AccordionItems>
         <AccordionItem Header="ASP.NET" Content="Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services."></AccordionItem>
         <AccordionItem Header="ASP.NET MVC" Content="The Model-View-Controller (MVC) architectural pattern separates an application into three main components: the model, the view, and the controller."></AccordionItem>
-        <AccordionItem Header="JavaScript" Content="JavaScript (JS) is an interpreted computer programming language.It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed."></AccordionItem>
+        <AccordionItem Header="JavaScript" Content="JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed."></AccordionItem>
     </AccordionItems>
 </SfAccordion>
 
@@ -58,7 +58,7 @@ The default [ExpandMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-Output:
+
 
 ![Blazor Accordion Component with Multiple Expand Mode](./images/blazor-accordion-multiple-expand-mode.png)
 
@@ -128,6 +128,6 @@ By default, accordion items were in collapsed state on initial load. To expand a
 
 ```
 
-Output:
+
 
 ![Blazor Accordion Component with Expanding Items](./images/blazor-accordion-expand-items.png)

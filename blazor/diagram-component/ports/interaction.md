@@ -45,7 +45,7 @@ The following code explains how to draw the connector by using the port constrai
                 new PointPort()
                 {
                     ID = "port1",
-                    Offset = new DiagramPoint() { X = 0.5, Y = 0.5 },
+                    Offset = new DiagramPoint() { X = 1, Y = 0.5 },
                     Visibility = PortVisibility.Visible,
                     //Set the style for the port.
                     Style = new ShapeStyle()

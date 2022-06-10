@@ -33,7 +33,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void BlurHandler(Syncfusion.Blazor.Calendars.BlurEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -53,7 +53,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void ValueChangeHandler(ChangedEventArgs<DateTime?> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -73,7 +73,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void OnCloseHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -93,7 +93,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void CreatedHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -113,7 +113,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void DestroyHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -133,7 +133,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void FocusHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -141,7 +141,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
 ## Navigated
 
-`Navigated` event triggers when the Calendar is navigated to another level or within the same level of view
+`Navigated` event triggers when the Calendar is navigated to another level or within the same level of view.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -155,7 +155,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void NavigateHandler(NavigatedEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -176,7 +176,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void OpenHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -196,7 +196,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void onRenderDayCellHandler(RenderDayCellEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```

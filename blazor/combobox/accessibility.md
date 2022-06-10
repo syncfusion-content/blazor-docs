@@ -51,32 +51,32 @@ You can use the following key shortcuts to access the ComboBox without interrupt
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-<SfComboBox TValue="string" TItem="Countries" @ref="ComboObj" Enabled="@enable" Placeholder="Select a country" @onkeypress="@(e => KeyPressed(e))" DataSource="@LocalData">
+<SfComboBox TValue="string" TItem="Country" @ref="ComboObj" Enabled="@enable" Placeholder="Select a country" @onkeypress="@(e => KeyPressed(e))" DataSource="@LocalData">
     <ComboBoxFieldSettings Value="Code" Text="Name"></ComboBoxFieldSettings>
 </SfComboBox>
 
 @code {
 
-    public SfComboBox<string, Countries> ComboObj;
+    public SfComboBox<string, Country> ComboObj;
 
     public bool enable { get; set; } = true;
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
         public string Code { get; set; }
     }
 
-    List<Countries> LocalData = new List<Countries> {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-        new Countries() { Name = "Denmark", Code = "DK" },
-        new Countries() { Name = "France", Code = "FR" },
-        new Countries() { Name = "Finland", Code = "FI" },
-        new Countries() { Name = "Germany", Code = "DE" },
-        new Countries() { Name = "Greenland", Code = "GL" },
-        new Countries() { Name = "Hong Kong", Code = "HK" },
+    List<Country> LocalData = new List<Country> {
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" },
+        new Country() { Name = "France", Code = "FR" },
+        new Country() { Name = "Finland", Code = "FI" },
+        new Country() { Name = "Germany", Code = "DE" },
+        new Country() { Name = "Greenland", Code = "GL" },
+        new Country() { Name = "Hong Kong", Code = "HK" },
     };
 
     public void KeyPressed(KeyboardEventArgs args)

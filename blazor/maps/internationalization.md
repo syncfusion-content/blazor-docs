@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor Maps Component | Syncfusion
-description: Checkout and learn here all about Globalization in Syncfusion Blazor Maps component and much more details.
+description: Checkout and learn here all about globalization in Syncfusion Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug
@@ -9,14 +9,14 @@ documentation: ug
 
 # Globalization in Blazor Maps Component
 
-Maps provide support for internationalization for the below elements.
+Maps provide support for internationalization for the following elements.
 
 * Data label
 * Tooltip
 
 ## Globalization
 
-Globalization is the process of designing and developing a component that works in different cultures/locales. It can be provided to the Blazor server-side and client-side applications. Refer to [Blazor server-side](https://blazor.syncfusion.com/documentation/common/localization/#enable-localization-in-blazor-server-application) and [Blazor client-side](https://blazor.syncfusion.com/documentation/common/localization/#enable-localization-in-blazor-webassembly-application) sections for configuring the globalization for the Maps component. It is used to globalize number, date, time values in
+Globalization is the process of designing and developing a component that works in different cultures or locales. It can be provided to the Blazor server-side and client-side applications. Refer to [Blazor server-side](https://blazor.syncfusion.com/documentation/common/localization/#enable-localization-in-blazor-server-application) and [Blazor client-side](https://blazor.syncfusion.com/documentation/common/localization/#enable-localization-in-blazor-webassembly-application) sections for configuring the globalization for the Maps component. It is used to globalize number, date, time values in
 Maps component using [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Format) property in the Maps component.
 
 ```cshtml
@@ -59,7 +59,7 @@ Maps component using [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 ## Numeric Format
 
-The numeric formats such as currency, percentage and so on can be displayed in the tooltip and data labels of the Maps using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Format) property in the [SfMaps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html) class. In the below example, the tooltip is globalized to **German** culture. When setting the [UseGroupingSeparator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_UseGroupingSeparator) property as **true**, the numeric text in the Maps separates with the comma separator.
+The numeric formats such as currency, percentage and so on can be displayed in the tooltip and data labels of the Maps using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Format) property in the [SfMaps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html) class. In the following example, the tooltip is globalized to **German** culture. When setting the [UseGroupingSeparator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_UseGroupingSeparator) property as **true**, the numeric text in the Maps separates with the comma separator.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps

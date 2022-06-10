@@ -9,7 +9,7 @@ documentation: ug
 
 # Globalization in Blazor TreeMap Component
 
-The TreeMap component supports globalization for the following elements:
+The [Blazor TreeMap](https://www.syncfusion.com/blazor-components/blazor-treemap) component supports globalization for the following elements:
 
 * Data Label
 * Tooltip
@@ -49,6 +49,6 @@ In the following code example, tooltip and Data Label is globalized to currency 
 }
 ```
 
-> Refer  [here](https://blazor.syncfusion.com/documentation/common/localization/#enable-localization-in-blazor-server-application) to configure localization for the Blazor server application, and refer [here](https://blazor.syncfusion.com/documentation/common/localization/#enable-localization-in-blazor-webassembly-application) for the Blazor web assembly application.
+> Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
 
 ![Localization in Blazor TreeMap](images/Internationalization/blazor-treemap-localization.png)

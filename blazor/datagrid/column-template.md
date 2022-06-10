@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Template in Blazor DataGrid
 
-> Before adding column template to the DataGrid, we strongly recommend you to go through the [template](./templates/#templates) section topic to configure the template.
+> Before adding column template to the DataGrid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
 
 To know about **Column Template** in Blazor DataGrid Component, you can check this video.
 
@@ -17,6 +17,8 @@ To know about **Column Template** in Blazor DataGrid Component, you can check th
 "youtube:https://www.youtube.com/watch?v=9YF9HnFY5Ew"%}
 
 The Column template has options to display custom element value or content in the column. You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template)  of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component to specify the custom content. Inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template), you can access the data using the implicit named parameter **context**.
+
+> The column template feature is used to render the customized element value in the UI for a particular column. The data operations like filtering, sorting, etc., will not work based on the column template values. It will be handled based on the values you have provided to the particular column in the datasource.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids

@@ -18,7 +18,7 @@ The following code example illustrate how to open a document in read only mode.
 @using Syncfusion.Blazor.DocumentEditor
 @using System.IO
 @using System.Net
-@using Newtonsoft.Json
+@using System.Text.Json
 
 
 
@@ -44,7 +44,7 @@ The following code example illustrate how to open a document in read only mode.
         stream.Dispose();
         //To observe the memory go down, null out the reference of stream variable.
         stream = null;
-        sfdtString = JsonConvert.SerializeObject(document);
+        sfdtString = JsonSerializer.Serialize(document);
         document.Dispose();
         //To observe the memory go down, null out the reference of document variable.
         document = null;

@@ -9,7 +9,7 @@ documentation: ug
 
 # Dimensions in Blazor Kanban Component
 
-The Kanban dimensions refers to both height and width of the entire layout and it accepts three types of values.
+The [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) dimensions refers to both height and width of the entire layout and it accepts three types of values.
 
 * Auto
 * Pixel

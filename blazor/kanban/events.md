@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Kanban Component
 
-This section explains the list of events of the Kanban component which will be triggered for appropriate Kanban actions.
+This section explains the list of events of the [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component which will be triggered for appropriate Kanban actions.
 
 ## OnLoad
 

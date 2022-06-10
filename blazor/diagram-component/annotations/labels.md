@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Actions of Annotation in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Actions of Annotation in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about actions of annotation in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 The [Annotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html) is a block of text that can be displayed over a node or connector and it is used to textually represent an object with a string that can be edited at run time. Multiple annotations can be added to a node or connector.
 
-## Create Annotations
+## Create annotations
 
 An annotation can be added to a node or connector by defining the annotation object and adding that to the annotation collection of the node or connector. The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Content) property of annotation defines the text to be displayed. The following code explains how to create an annotation.
 
@@ -22,10 +22,10 @@ An annotation can be added to a node or connector by defining the annotation obj
 
 @code
 {
-    // Defines diagram's connector collection
+    // Defines diagram's connector collection.
     DiagramObjectCollection<Connector> connectors;
 
-    // Defines diagram's node collection
+    // Defines diagram's node collection.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -40,7 +40,7 @@ An annotation can be added to a node or connector by defining the annotation obj
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                // A annotation is created and stored in Annotations collection of Node.
+                // Annotation is created and stored in Annotations collection of Node.
                 new ShapeAnnotation { Content = "Node" }
             }
         };
@@ -54,7 +54,7 @@ An annotation can be added to a node or connector by defining the annotation obj
             Style = new TextStyle() { StrokeColor = "#6495ED" },
             Annotations = new DiagramObjectCollection<PathAnnotation>()
             {
-                // A annotation is created and stored in Annotations collection of Connector.
+                // Annotation is created and stored in Annotations collection of Connector.
                 new PathAnnotation { Content = "Connector" }
             }
         };
@@ -84,10 +84,10 @@ The following code explains how to add an annotation to a node at runtime by usi
 
 @code
 {
-    // Reference to diagram
+    // Reference to diagram.
     SfDiagramComponent diagram;
 
-    // Defines diagram's node collection
+    // Defines diagram's node collection.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -104,7 +104,7 @@ The following code explains how to add an annotation to a node at runtime by usi
         nodes.Add(node);
     }
 
-    // Method to add annotation at runtime
+    // Method to add annotation at runtime.
     public void AddLabel()
     {
         ShapeAnnotation annotation = new ShapeAnnotation { Content = "Annotation" };
@@ -115,10 +115,10 @@ The following code explains how to add an annotation to a node at runtime by usi
 
 Also, the annotations can be added at runtime by using the [AddAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramObjectCollection-1.html#Syncfusion_Blazor_Diagram_DiagramObjectCollection_1_AddAsync__0_) method. The `await` operator suspends evaluation of the enclosing async method until the asynchronous operation represented by its operand completes.
 
-The following code explains how to add an annotation to a node at runtime by using `AddAsync` method.
+The following code explains how to add an annotation to a node at runtime by using the `AddAsync` method.
 
 ```csharp
-//Method to add annotation at runtime
+//Method to add annotation at runtime.
 public async void AddLabel()
 {
     ShapeAnnotation annotation = new ShapeAnnotation { Content = "Annotation" };
@@ -128,9 +128,9 @@ public async void AddLabel()
 
 ![Adding Annotation in Blazor Diagram](../images/blazor-diagram-add-annotation.png)
 
-## Remove Annotations
+## Remove annotations
 
-A collection of annotations can be removed from the node by using the `RemoveAt` method. The following code explains how to remove an annotation to a node.
+A collection of annotations can be removed from the node by using the `RemoveAt` method. The following code explains how to remove an annotation from a node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -141,10 +141,10 @@ A collection of annotations can be removed from the node by using the `RemoveAt`
 
 @code
 {
-    // Reference to diagram
+    // Reference to diagram.
     SfDiagramComponent diagram;
 
-    // Defines diagram's node collection
+    // Defines diagram's node collection.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -165,7 +165,7 @@ A collection of annotations can be removed from the node by using the `RemoveAt`
         nodes.Add(node);
     }
 
-    // Method to remove annotation at runtime
+    // Method to remove annotation at runtime.
     public void RemoveLabel()
     {
         (diagram.Nodes[0].Annotations as DiagramObjectCollection<ShapeAnnotation>).RemoveAt(0);
@@ -173,7 +173,7 @@ A collection of annotations can be removed from the node by using the `RemoveAt`
 }
 ```
 
-Also, A collection of annotations can be removed from the node by using the `Remove` method.
+Also, a collection of annotations can be removed from the node by using the `Remove` method.
 
 ```cshtml
     // Method to remove annotation at runtime using Remove method.
@@ -187,7 +187,7 @@ Also, A collection of annotations can be removed from the node by using the `Rem
 >* You can delete multiple annotations from node to pass the collection of annotation objects as argument.
 >* The `Add`, `Remove`, and `RemoveAt` methods are applicable for connectors too.
 
-## Update Annotations at runtime
+## Update annotations at runtime
 
 You can get the annotation directly from the node’s annotations collection property and you can change any annotation properties at runtime.
 
@@ -202,10 +202,10 @@ The following code sample shows how the annotation of the node changed at runtim
 
 @code
 {
-    // Reference to diagram
+    // Reference to diagram.
     SfDiagramComponent diagram;
 
-    // Defines diagram's node collection
+    // Defines diagram's node collection.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -226,7 +226,7 @@ The following code sample shows how the annotation of the node changed at runtim
         nodes.Add(node);
     }
 
-    // Method to update the annotation at runtime
+    // Method to update the annotation at runtime.
     public void UpdateLabel()
     {
         diagram.Nodes[0].Annotations[0].Content = "Updated Annotation";

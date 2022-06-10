@@ -88,7 +88,7 @@ You can customize the appearance of a row by using the [RowDataBound](https://he
 }
 ```
 
-The output will be as follows.
+
 
 ![Customizing Blazor DataGrid Rows](./images/blazor-datagrid-rows-customization.png)
 
@@ -150,6 +150,5 @@ Please refer to the following example.
 }
 ```
 
-The output will be as follows.
 
 ![Customizing Alternate Row in Blazor DataGrid](./images/blazor-datagrid-alter-row-customization.png)

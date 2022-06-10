@@ -37,7 +37,7 @@ select |[RangeSelected](events/#rangeselected)
 
     public void BlurHandler(Syncfusion.Blazor.Calendars.BlurEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -56,7 +56,7 @@ select |[RangeSelected](events/#rangeselected)
 
     public void ValueChangeHandler(RangePickerEventArgs<DateTime?> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -75,7 +75,7 @@ select |[RangeSelected](events/#rangeselected)
 
     public void OnCloseHandler(RangePopupEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -94,7 +94,7 @@ select |[RangeSelected](events/#rangeselected)
 
     public void CreatedHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -113,7 +113,7 @@ select |[RangeSelected](events/#rangeselected)
 
     public void DestroyHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -133,14 +133,14 @@ select |[RangeSelected](events/#rangeselected)
 
     public void FocusHandler(Syncfusion.Blazor.Calendars.FocusEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
 
 ## Navigated
 
-`Navigated` event triggers when the Calendar is navigated to another level or within the same level of view
+`Navigated` event triggers when the Calendar is navigated to another level or within the same level of view.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -153,7 +153,7 @@ select |[RangeSelected](events/#rangeselected)
 
     public void NavigateHandler(NavigatedEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -173,7 +173,7 @@ select |[RangeSelected](events/#rangeselected)
 
     public void OpenHandler(RangePopupEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -193,7 +193,7 @@ select |[RangeSelected](events/#rangeselected)
 
     public void onRenderDayCellHandler(RenderDayCellEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -213,7 +213,7 @@ select |[RangeSelected](events/#rangeselected)
 
     public void RangeSelectHandler(RangePickerEventArgs<DateTime?> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```

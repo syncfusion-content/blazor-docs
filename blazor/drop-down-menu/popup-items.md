@@ -13,7 +13,7 @@ documentation: ug
 
 The popup action item have an icon or image to provide visual representation of the action. To place the icon on a popup item, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_IconCss) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the popup action item.
 
-In the following sample, the icons for edit, delete, mark as read  and like message menu items are added using the `IconCss` property.
+In the following sample, the icons for edit, delete, mark as read and like message menu items are added using the `IconCss` property.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -47,7 +47,7 @@ In the following sample, the icons for edit, delete, mark as read  and like mess
 
 ```
 
-Output be like
+
 
 ![Blazor DropDownMenu displays Icon in Popup Items](./images/blazor-dropdownmenu-with-popup-icon.png)
 
@@ -74,7 +74,7 @@ In the following sample, cut, copy, and paste popup items are grouped using the 
 
 ```
 
-Output be like
+
 
 ![Blazor DropDownMenu with Separator](./images/blazor-dropdownmenu-separator.png)
 
@@ -106,7 +106,7 @@ In the following sample, navigation URL for Flipkart, Amazon, and Snapdeal actio
 
 ```
 
-Output be like
+
 
 ![Blazor DropDownMenu Items with Navigation Link](./images/blazor-dropdownmenu-navigation.png)
 
@@ -114,7 +114,7 @@ Output be like
 
 ### Item Templating
 
-Popup items can be customized using the `CssClass` property. We have customize the items using CSS style.
+Popup items can be customized using the `CssClass` property. Customize the items using CSS style.
 
 ```cshtml
 
@@ -138,6 +138,103 @@ Popup items can be customized using the `CssClass` property. We have customize t
 
 ```
 
-Output be like
+
 
 ![Blazor DropDownMenu with Popup Items](./images/blazor-dropdownmenu-with-popup-items.png)
+
+## Populate multilevel sub menu items
+
+You can populate multilevel sub menu items in DropDown menu by using context menu in `PopupContent` directive tag.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.SplitButtons
+
+<SfDropDownButton @ref="FileButton" Id="btnFileMenu" Content="File" CssClass="e-dropDown-button">
+    <ChildContent>
+        <DropDownButtonEvents OnClose="@DropDownButtonClose"></DropDownButtonEvents>
+    </ChildContent>
+    <PopupContent>
+        <SfContextMenu @ref="ContextMenu" Items="FileMenuItems" TValue="ContextMenuItemModel" ShowItemOnClick="true">
+            <MenuFieldSettings Text="Content"></MenuFieldSettings>
+            <MenuEvents TValue="ContextMenuItemModel" OnClose="BeforeClose" Created="OnMenuCreated" ItemSelected="Selected"></MenuEvents>
+        </SfContextMenu>
+    </PopupContent>
+</SfDropDownButton>
+
+@code {
+    SfDropDownButton FileButton;
+    SfContextMenu<ContextMenuItemModel> ContextMenu;
+    public bool isClose = false;
+
+    private void DropDownButtonClose(BeforeOpenCloseMenuEventArgs args)
+    {
+        args.Cancel = true;
+    }
+    private void BeforeClose(BeforeOpenCloseMenuEventArgs<ContextMenuItemModel> args)
+    {
+        if (!isClose)
+        {
+            FileButton.Toggle();
+        }
+    }
+    public class ContextMenuItemModel
+    {
+        public List<ContextMenuItemModel> Items { get; set; }
+        public string Content { get; set; }
+        public string Id { get; set; }
+        public string IconCss { get; set; }
+        public Boolean Separator { get; set; }
+    }
+    private List<ContextMenuItemModel> FileMenuItems = new List<ContextMenuItemModel>{
+                new ContextMenuItemModel {Id ="FileMenuItemsNew", Content = "Align" , Items = new List<ContextMenuItemModel> {
+                        new ContextMenuItemModel { Content="Left" },
+                        new ContextMenuItemModel { Content="Right" },
+                        new ContextMenuItemModel { Content="Center" },
+                        new ContextMenuItemModel { Content="Top"},
+                        new ContextMenuItemModel { Content="Bottom" },
+                        new ContextMenuItemModel { Content="Middle"}
+                    }},
+                new ContextMenuItemModel {Id ="FileMenuItemsOpen", Content = "Open" },
+                new ContextMenuItemModel { Separator = true },
+                new ContextMenuItemModel { Id ="FileMenuItemsSave",Content = "Space", Items = new List<ContextMenuItemModel> {
+                        new ContextMenuItemModel { Content="Double" },
+                        new ContextMenuItemModel { Content="Single" },
+                        new ContextMenuItemModel { Content="Small" },
+                        new ContextMenuItemModel { Content="Big"},
+                        new ContextMenuItemModel { Content="Large" },
+                    }},
+                new ContextMenuItemModel { Id ="FileMenuItemsSaveAs",Content = "Save As", Items = new List<ContextMenuItemModel> {
+                        new ContextMenuItemModel { Content="PDF" },
+                        new ContextMenuItemModel { Content="Excel" },
+                        new ContextMenuItemModel { Content="Word" },
+                        new ContextMenuItemModel { Content=".XLS"},
+                    } },
+                new ContextMenuItemModel {Id ="FileMenuItemsExport", Content = "Export"},
+                new ContextMenuItemModel { Separator = true},
+                new ContextMenuItemModel { Id ="FileMenuItemsPrint",Content = "Print" }
+            };
+
+    public void OnMenuCreated()
+    {
+        ContextMenu.Open();
+    }
+
+    public void Selected(MenuEventArgs<ContextMenuItemModel> args)
+    {
+        if (args.Item.Content == "Space" || args.Item.Content == "Save As" || args.Item.Content == "Align")
+        {
+            isClose = true;
+        }
+        else
+        {
+            isClose = false;
+        }
+    }
+}
+
+```
+
+![Blazor DropDownMenu with multilevel sub menu items](./images/blazor-dropdownmenu-submenu.png)
+
+[View Sample in GitHub](https://github.com/SyncfusionExamples/Populate-multilevel-sub-menu-items-in-Blazor-Dropdown-Menu)

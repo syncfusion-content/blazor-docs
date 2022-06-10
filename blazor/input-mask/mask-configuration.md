@@ -48,7 +48,7 @@ The following example demonstrates the usage of standard mask elements.
 <SfMaskedTextBox Mask="\\A999" Placeholder="Mask \\A999 (ex: A321)" FloatLabelType="@FloatLabelType.Always"></SfMaskedTextBox>
 ```
 
-The output will be as follows.
+
 
 ![Blazor MaskedTextBox with Standard Mask Elements](./images/blazor-maskedtextbox-with-standard-mask.png)
 
@@ -76,7 +76,6 @@ In the following example, non-mask element `P` accepts the values `P, A, p, a`, 
 }
 ```
 
-The output will be as follows.
 
 ![Blazor MaskedTextBox with Custom Mask Elements](./images/blazor-maskedtextbox-with-custom-mask.png)
 
@@ -92,7 +91,6 @@ In the following example, regular expression has been set for each input places.
 <SfMaskedTextBox Placeholder="Enter value" Mask="[0-2][0-9][0-9].[0-2][0-9][0-9].[0-2][0-9][0-9].[0-2][0-9][0-9]" FloatLabelType="@FloatLabelType.Auto"></SfMaskedTextBox>
 ```
 
-The output will be as follows.
 
 ![Blazor MaskedTextBox with Regular Expression](./images/blazor-maskedtextbox-regular-expression.png)
 
@@ -112,6 +110,6 @@ The following example demonstrates the MaskedTextBox with customized prompt char
 }
 ```
 
-The output will be as follows,
+
 
 ![Blazor MaskedTextBox with Prompt Character](./images/blazor-maskedtextbox-with-prompt-char.png)

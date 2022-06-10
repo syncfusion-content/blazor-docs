@@ -11,7 +11,7 @@ documentation: ug
 
 ## Size for an annotation
 
-Diagram allows you set size for annotations by using the Height and Width properties. The default value of the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Height) properties are 0, and it takes the node or connector size as default. The following code example shows how the annotation size is customized.
+Diagram allows you to set size for annotations by using the Height and Width properties. The default value of the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Height) properties is 0, and it takes the node or connector size as default. The following code example shows how the annotation size is customized.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -20,7 +20,7 @@ Diagram allows you set size for annotations by using the Height and Width proper
 
 @code
 {
-    // Defines diagram's connector collection
+    // Defines diagram's connector collection.
     DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
@@ -37,7 +37,7 @@ Diagram allows you set size for annotations by using the Height and Width proper
               new PathAnnotation 
               { 
                   Content = "Annotation length will be varied", 
-                  // Sets the size of the annotation
+                  // Sets the size of the annotation.
                   Width = 50, 
                   Height = 50 
               },
@@ -61,7 +61,7 @@ Diagram provides support to add a [Hyperlink](https://help.syncfusion.com/cr/bla
 
 @code
 {
-    // Defines diagram's node collection
+    // Defines diagram's node collection.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -74,7 +74,7 @@ Diagram provides support to add a [Hyperlink](https://help.syncfusion.com/cr/bla
             Height = 100,
             OffsetX = 100,
             OffsetY = 100,
-            // Sets the annotation for the Node
+            // Sets the annotation for the Node.
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
                 // Add text as hyperlink.
@@ -104,7 +104,7 @@ Diagram provides support to add a [Hyperlink](https://help.syncfusion.com/cr/bla
 
 @code
 {
-    // Defines diagram's node collection
+    // Defines diagram's node collection.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -117,7 +117,7 @@ Diagram provides support to add a [Hyperlink](https://help.syncfusion.com/cr/bla
             Height = 100,
             OffsetX = 100,
             OffsetY = 100,
-            // Sets the annotation for the Node
+            // Sets the annotation for the Node.
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
                 // Add text as hyperlink.
@@ -150,7 +150,7 @@ The [TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
 
 @code
 {
-    // Defines diagram's node collection
+    // Defines diagram's node collection.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -163,7 +163,7 @@ The [TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
             Height = 100,
             OffsetX = 100,
             OffsetY = 100,
-            // Sets the annotation for the node
+            // Sets the annotation for the node.
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
                 new ShapeAnnotation 
@@ -171,7 +171,7 @@ The [TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
                     Content = "Annotation Text Wrapping",
                     Style = new TextStyle()
                     { 
-                        // Sets the text wrapping of the annotation as Wrap
+                        // Sets the text wrapping of the annotation as Wrap.
                         TextWrapping = TextWrap.Wrap
                     } 
                 }
@@ -194,7 +194,7 @@ The [TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
 The [TextOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextOverflow) property specifies how the overflowed content that is not displayed should be signaled to the user. The TextOverflow can have the following values.
 
 * **Wrap**: Wraps the text to next line, when it exceeds its bounds.
-* **Ellipsis**: It truncates the overflown text and render an ellipsis ("...") to represent the clipped text.
+* **Ellipsis**: It truncates the overflown text and renders an ellipsis ("...") to represent the clipped text.
 * **Clip**: The text is clipped and the overflow text will not be shown.
 
 The following code sample shows how the different types of overflow property working for the different types of text wrapping.
@@ -206,7 +206,7 @@ The following code sample shows how the different types of overflow property wor
 
 @code
 {
-    // Defines diagram's node collection
+    // Defines diagram's node collection.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -219,7 +219,7 @@ The following code sample shows how the different types of overflow property wor
             Height = 100,
             OffsetX = 100,
             OffsetY = 100,
-            // Sets the style for the text to be displayed
+            // Sets the style for the text to be displayed.
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
                 new ShapeAnnotation
@@ -227,7 +227,7 @@ The following code sample shows how the different types of overflow property wor
                     Content = "The text element with property of overflow as Wrap and wrapping as NoWrap",
                     Style = new TextStyle()
                     { 
-                        // Sets the text overflow of the annotation as Wrap
+                        // Sets the text overflow of the annotation as Wrap.
                         TextOverflow = TextOverflow.Wrap,
                         TextWrapping = TextWrap.NoWrap 
                     }
@@ -273,7 +273,7 @@ The Fill, Border, and Opacity appearances of the text can also be customized wit
 
 @code
 {
-    // Defines diagram's node collection
+    // Defines diagram's node collection.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -286,7 +286,7 @@ The Fill, Border, and Opacity appearances of the text can also be customized wit
             Height = 100,
             OffsetX = 100,
             OffsetY = 100,
-            // Sets the annotation for the node
+            // Sets the annotation for the node.
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
                 new ShapeAnnotation 
@@ -294,7 +294,7 @@ The Fill, Border, and Opacity appearances of the text can also be customized wit
                     Content = "Annotation Text",
                     Style = new TextStyle() 
                     {
-                        // Sets the style for the annotation
+                        // Sets the style for the annotation.
                         Color="black",
                         Bold = true,
                         Italic = true,
@@ -326,10 +326,10 @@ You can change the font style of the annotations with the font specific properti
 
 @code
 {
-    // Reference of the diagram
+    // Reference of the diagram.
     SfDiagramComponent Diagram;
 
-    // Defines diagram's node collection
+    // Defines diagram's node collection.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -342,7 +342,7 @@ You can change the font style of the annotations with the font specific properti
             Height = 100,
             OffsetX = 100,
             OffsetY = 100,
-            // Sets the annotation for the node
+            // Sets the annotation for the node.
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
                 new ShapeAnnotation
@@ -366,7 +366,7 @@ You can change the font style of the annotations with the font specific properti
 
     public void UpdateStyle()
     {
-        // Change the style of the annotation
+        // Change the style of the annotation.
         Diagram.BeginUpdate();
         Diagram.Nodes[0].Annotations[0].Style.Bold = false;
         Diagram.Nodes[0].Annotations[0].Style.TextDecoration = TextDecoration.None;
@@ -378,7 +378,7 @@ You can change the font style of the annotations with the font specific properti
 
 ## Change the editing mode
 
-Diagram provides support to edit an annotation at runtime, either programmatically or interactively. By default, the annotation is in view mode. But it can be brought to edit mode in two ways.
+Diagram provides support to edit an annotation at runtime, either programmatically or interactively. By default, the annotation is in view mode. However, it can be brought into edit mode in two ways.
 
 * You can edit the annotation programmatically by using the [StartTextEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_StartTextEdit_Syncfusion_Blazor_Diagram_IDiagramObject_System_String_) method.
 * Also, you can edit the annotation interactively.
@@ -398,7 +398,7 @@ Diagram allows to create read-only annotations. You have to set the read-only pr
 
 @code
 {
-    // Defines diagram's node collection
+    // Defines diagram's node collection.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -416,7 +416,7 @@ Diagram allows to create read-only annotations. You have to set the read-only pr
                 new ShapeAnnotation 
                 {
                     Content = "Annotation Text",
-                    // Sets the constraints as Read only            
+                    // Sets the constraints as Read only.           
                     Constraints = AnnotationConstraints.ReadOnly
                 }
             },
@@ -427,7 +427,7 @@ Diagram allows to create read-only annotations. You have to set the read-only pr
 }
 ```
 
-## Create Multiple Annotations
+## Create multiple annotations
 
 You can add any number of annotations to a node or connector. The following code example shows how to add multiple annotations to a node. 
 
@@ -438,10 +438,10 @@ You can add any number of annotations to a node or connector. The following code
 
 @code
 {
-    // Defines diagram's node collection
+    // Defines diagram's node collection.
     DiagramObjectCollection<Node> nodes;
 
-    // Defines diagram's connector collection
+    // Defines diagram's connector collection.
     DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
@@ -455,7 +455,7 @@ You can add any number of annotations to a node or connector. The following code
             OffsetX = 100,
             OffsetY = 100,
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
-            // Sets the multiple annotation for the node
+            // Sets the multiple annotation for the node.
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
                 new ShapeAnnotation 

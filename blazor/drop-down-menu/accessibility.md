@@ -75,5 +75,5 @@ Opens the popup</td></tr>
 
 ```
 
-Output be like
+
 ![Accessibility in Blazor DropDownMenu](./images/blazor-dropdownmenu-component.png)

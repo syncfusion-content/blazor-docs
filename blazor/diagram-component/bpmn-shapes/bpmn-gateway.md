@@ -19,7 +19,7 @@ Gateway is used to control the flow of a process and it is represented as a diam
 
 @code
 {
-    // Initialize node collection with Node
+    // Initialize node collection with Node.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -27,20 +27,20 @@ Gateway is used to control the flow of a process and it is represented as a diam
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
-            //Position of the node
+            //Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            //Size of the node
+            //Size of the node.
             Width = 100,
             Height = 100,
-            //Unique Id of the node
+            //Unique Id of the node.
             ID = "node1",
             Shape = new BpmnShape()
             {
-                //Sets type to Bpmn and shape to Gateway
+                //Sets type to Bpmn and shape to Gateway.
                 Type = Shapes.Bpmn,
                 Shape = BpmnShapes.Gateway,
-                //Sets type of the gateway to None
+                //Sets type of the gateway to None.
                 Gateway = new BpmnGateway() { Type = BpmnGateways.None }
             }
         };

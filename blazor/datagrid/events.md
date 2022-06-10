@@ -50,7 +50,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void ActionBeginHandler(ActionEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 
     public class Order
@@ -65,7 +65,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 ## OnActionComplete
 
-[OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when DataGrid actions such as sorting, filtering, paging, grouping,[editing](https://blazor.syncfusion.com/documentation/datagrid/editing/#event-trace-while-editing) etc. are completed.
+[OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when DataGrid actions such as sorting, filtering, paging, grouping, [editing](https://blazor.syncfusion.com/documentation/datagrid/editing/#event-trace-while-editing), etc. are completed.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -103,7 +103,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void ActionCompletedHandler(ActionEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -131,7 +131,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 @code{
     public void ActionFailureHandler(FailureEventArgs args)
     {
-        // Here you can get the error details in the args
+        // Here, you can get the error details in the args.
     }
 
     public class Order {
@@ -189,7 +189,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
     }
     public void BeforeOpenColumnChooserHandler(ColumnChooserEventArgs Args)
     {
-        //customize your code here
+        //Customize your code here.
     }
 }
 ```
@@ -234,7 +234,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void CreatedHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -279,7 +279,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void LoadHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -324,7 +324,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void DestroyHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -369,7 +369,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void DataBoundHandler(BeforeDataBoundArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -414,7 +414,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void DataBoundHandler()
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -459,7 +459,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void RowDataBoundHandler(RowDataBoundEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -577,51 +577,6 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 }
 ```
 
-## HeaderCellInfo
-
-[HeaderCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers during the rendering of every header cells in the DataGrid so that you can able to customize the header cells.
-
-```cshtml
-@using Syncfusion.Blazor.Grids
-
-<SfGrid DataSource="@Orders">
-    <GridEvents HeaderCellInfo="HeaderCellInfoHandler" TValue="Order"></GridEvents>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code{
-    public List<Order> Orders { get; set; }
-
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class Order {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-
-    public void HeaderCellInfoHandler(HeaderCellInfoEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-```
-
 ## QueryCellInfo
 
 [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers every time a request is made to access cell information, element, or data and also before the cell element is appended to the DataGrid element.
@@ -662,14 +617,14 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void QueryCellInfoHandler(QueryCellInfoEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
 
 ## OnBeginEdit
 
-[OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before the record is to be edit.
+[OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before the record is to be edited.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -708,7 +663,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void BeginEditHandler(BeginEditArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -754,7 +709,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void BatchAddHandler(BeforeBatchAddArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -801,7 +756,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void BatchSaveHandler(BeforeBatchSaveArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -847,7 +802,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void BatchDeleteHandler(BeforeBatchDeleteArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -894,7 +849,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void CellEditHandler(CellEditArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -941,7 +896,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void CellSaveHandler(CellSaveArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -987,7 +942,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void CellSavedHandler(CellSaveArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1032,7 +987,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void RowSelectingHandler(RowSelectingEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1077,7 +1032,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void RowSelectHandler(RowSelectEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1123,7 +1078,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void RowDeselectingHandler(RowDeselectEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1168,7 +1123,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void RowDeselectHandler(RowDeselectEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1215,7 +1170,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void CellSelectingHandler(CellSelectingEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1261,7 +1216,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void CellSelectedHandler(CellSelectEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1309,7 +1264,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void CellDeselectingHandler(CellDeselectEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1357,7 +1312,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void CellDeselectHandler(CellDeselectEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1404,7 +1359,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void RecordClickHandler(RecordClickEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1450,7 +1405,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void RecordDoubleClickHandler(RecordDoubleClickEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1496,7 +1451,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1553,14 +1508,14 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void OnCommandClicked(CommandClickEventArgs<Order> args)
     {
-        // Perform required operations here
+        // Perform required operations here.
     }
 }
 ```
 
 ## ColumnMenuItemClicked
 
-[ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when click on column menu.
+[ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when clicking on the column menu.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1601,14 +1556,14 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void ColumnMenuItemClickedHandler(ColumnMenuClickEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
 
 ## ContextMenuItemClicked
 
-[ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when click on context menu.
+[ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when clicking on the context menu.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1697,7 +1652,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void ContextMenuOpenHandler(ContextMenuOpenEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1750,7 +1705,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void PdfExportHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1803,7 +1758,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void PdfHeaderQueryCellInfoHandler(PdfHeaderQueryCellInfoEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1856,7 +1811,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void PdfQueryCellInfoHandler(PdfQueryCellInfoEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -1939,7 +1894,71 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void PdfAggregateTemplateInfoHandler(PdfAggregateEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
+    }
+}
+```
+
+## PdfGroupCaptionTemplateInfo
+
+[PdfGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when exporting the group caption template of the PDF document. It can be used to customize the DataGrid group caption content in a PDF document.
+
+```csharp
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true" AllowGrouping="true">
+    <GridEvents PdfGroupCaptionTemplateInfo="PdfGroupCaptionHandler" OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
+    <GridGroupSettings Columns="@Initial">
+        <CaptionTemplate>
+            @{
+                var order = (context as CaptionTemplateContext);
+                <div>@order.Field - @order.Key</div>
+            }
+        </CaptionTemplate>
+    </GridGroupSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    private SfGrid<Order> DefaultGrid;
+    public List<Order> Orders { get; set; }
+    string[] Initial = new string[] { "CustomerID" };
+
+    public void PdfGroupCaptionHandler(PdfCaptionTemplateArgs Args)
+    {
+        // Here, you can customize your code.
+        Args.Cell.Value = Args.Field + " - " + Args.Key;
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_pdfexport")  // Id is the combination of Grid's ID and item name.
+        {
+            await this.DefaultGrid.ExportToPdfAsync();
+        }
+    }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
     }
 }
 ```
@@ -1992,7 +2011,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void ExcelExportHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -2045,7 +2064,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void ExcelHeaderQueryCellInfoHandler(ExcelHeaderQueryCellInfoEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -2098,7 +2117,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void ExcelQueryCellInfoHandler(ExcelQueryCellInfoEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -2181,7 +2200,72 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void ExcelAggregateTemplateInfoHandler(ExcelAggregateEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
+    }
+}
+```
+
+## ExcelGroupCaptionTemplateInfo
+
+[ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when exporting the group caption template of the Excel File. It can be used to customize the DataGrid group caption content in Excel File.
+
+```csharp
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "ExcelExport" })" AllowExcelExport="true" AllowPaging="true" AllowGrouping="true">
+    <GridEvents ExcelGroupCaptionTemplateInfo="ExcelGroupCaptionHandler" OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
+    <GridGroupSettings Columns="@Initial">
+        <CaptionTemplate>
+            @{
+                var order = (context as CaptionTemplateContext);
+                <div>@order.Field - @order.Key</div>
+            }
+        </CaptionTemplate>
+    </GridGroupSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    private SfGrid<Order> DefaultGrid;
+    public List<Order> Orders { get; set; }
+    string[] Initial = new string[] { "CustomerID" };
+
+    public void ExcelGroupCaptionHandler(ExcelCaptionTemplateArgs Args)
+    {
+        // Here, you can customize your code.
+        Args.Cell.Value = Args.Field + " - " + Args.Key;
+    }
+
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_excelexport")  // Id is the combination of Grid's ID and item name.
+        {
+            await this.DefaultGrid.ExportToExcelAsync();
+        }
+    }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
     }
 }
 ```
@@ -2245,7 +2329,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void ExportCompleteHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -2291,7 +2375,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void OnResizeStartHanlder(ResizeArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -2337,7 +2421,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void ResizeStoppedHanlder(ResizeArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -2383,7 +2467,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void RowDragStartHandler(RowDragEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -2431,7 +2515,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
     public void RowDropHandler(RowDragEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```

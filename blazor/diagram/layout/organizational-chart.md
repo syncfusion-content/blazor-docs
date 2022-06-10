@@ -7,6 +7,8 @@ control: Diagram
 documentation: ug
 ---
 
+> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram-component/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+
 # Organizational Chart in Blazor Diagram Component
 
 An organizational chart is a diagram that displays the structure of an organization and relationships. To create an organizational chart, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html#Syncfusion_Blazor_Diagrams_DiagramLayout_Type) of layout should be set as an `OrganizationalChart`.
@@ -120,6 +122,8 @@ Node **LayoutInfo** property to set chart orientations, chart types, and offset 
 ## Assistant
 
 Assistants are child item that have a different relationship with the parent node. They are laid out in a dedicated part of the tree. A node can be specified as an assistant of its parent by adding it to the assistants property of the argument `Assistants`.
+
+In the `Root` property, define the node that is set to be the parent of the assistant node. In the `Assistant` property, define the node that  is set to be assistant for the parent node. Both properties should be defined in the "LayoutInfo" property.
 
 The following code example illustrates how to add assistants to layout.
 

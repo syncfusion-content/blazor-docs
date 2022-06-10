@@ -28,6 +28,6 @@ The following example demonstrates how to open the DatePicker popup when the inp
 }
 ```
 
-The output will be as follows.
+
 
 ![Opening Blazor DatePicker Popup](../images/blazor-datepicker-popup.png)

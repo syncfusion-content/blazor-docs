@@ -7,7 +7,7 @@ control: Dialog
 documentation: ug
 ---
 
-# Customize the appearance in Blazor Dialog Component
+# Customize the Appearance in Blazor Dialog Component
 
 You can customize the dialog appearance by providing dialog template as string or HTML element to the `Content` template property. In the following code block, dialog is customized as error window appearance.
 
@@ -24,7 +24,7 @@ You can customize the dialog appearance by providing dialog template as string o
         <Content>
             <div class='msg-wrapper  col-lg-12'>
                 <span class='e-icons close-icon col-lg-2'></span>
-                <span class='error-msg col-lg-10'>Can not rename 'pictures' because a file or folder with that name already exists</span>
+                <span class='error-msg col-lg-10'>Cannot rename 'pictures' because a file or folder with that name already exists</span>
             </div>
             <div class='error-detail col-lg-8'>
                 <span>Specify a different name</span>
@@ -126,6 +126,6 @@ You can customize the dialog appearance by providing dialog template as string o
 
 ```
 
-The output will be as follows.
+
 
 ![Customizing Blazor Dialog Appearance](../images/dialog-custom-apperance.png)

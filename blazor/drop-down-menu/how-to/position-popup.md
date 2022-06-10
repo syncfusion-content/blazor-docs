@@ -33,6 +33,6 @@ In the following example, the `Top` position of the popup element.
 
 ```
 
-Output be like
+
 
 ![Changing Popup Position in Blazor DropDownMenu](./../images/blazor-dropdownmenu-popup-position.png)

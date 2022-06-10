@@ -25,7 +25,7 @@ The following code example shows how to register and get the notification from t
 
 @code
 {
-    // Defines diagram's nodes collection
+    // Defines diagram's nodes collection.
     DiagramObjectCollection<Node> nodes;
 
     // Triggered this event when complete the editing for Annotation and update the old text and new text values.

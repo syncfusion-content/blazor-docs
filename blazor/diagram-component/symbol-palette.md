@@ -482,7 +482,7 @@ To initialize drag and drop, you must add the diagram to the [Targets](https://h
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.SymbolPalette
+@using Syncfusion.Blazor.Diagram.SymbolPalette
 
 <div class="control-section">    
     <div style="width: 100%">
@@ -832,7 +832,7 @@ The following code example illustrates how to change the preview size of a palet
 
 @code
 {
-    Size symbolDragPreviewSize;
+    DiagramSize symbolDragPreviewSize;
     SymbolMargin SymbolMargin = new SymbolMargin 
     { 
         Left = 15, 

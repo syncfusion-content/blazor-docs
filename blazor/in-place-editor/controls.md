@@ -9,7 +9,7 @@ documentation: ug
 
 # List of Components in Blazor In-place Editor Component
 
-In-place Editor renders various components based on the `Type` property and the Editor components should be rendered inside the In-place Editor. Also, need to configure the two-way binding between the In-place Editor and its EditorComponent. It is used to update the EditorComponent value into the In-place Editor component.
+In-place Editor renders various components based on the `Type` property and the Editor components should be rendered inside the In-place Editor. Also, the two-way binding between the In-place Editor and its EditorComponent needs to be configured. It is used to update the EditorComponent value into the In-place Editor component.
 
 The following table explains Editor components name and their configurations.
 
@@ -283,7 +283,6 @@ The following example demonstrates how to render the Editor components in the In
 
 ```
 
-The output will be as follows.
 
 ![Blazor In-place Editor with Different Components](./images/blazor-inplace-editor-with-different-components.png)
 

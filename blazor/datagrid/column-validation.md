@@ -164,6 +164,63 @@ The following sample code demonstrates custom validations implemented in the fie
 }
 ```
 
+### Validate complex column using data annotation attribute
+
+You can perform validation for complex data binding columns using the [ValidateComplexType](https://docs.microsoft.com/en-us/aspnet/core/blazor/forms-validation?view=aspnetcore-5.0#data-annotations-validator-component-and-custom-validation) attribute of data annotation.
+
+In the following sample, you must use the `ValidateComplexType` attribute for the EmployeeName class and display custom message in the "First Name" column using the `RequiredAttribute` of data annotation.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using System.ComponentModel.DataAnnotations;
+
+<SfGrid DataSource="@Employees" Height="315" AllowSorting=true Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.EmployeeID) HeaderText="EmployeeID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="Name.FirstName" HeaderText="First Name" Width="150"></GridColumn>
+        <GridColumn Field="Name.LastName" HeaderText="Last Name"Width="130"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<EmployeeData> Employees { get; set; }
+
+    protected override void OnInitialized()
+    {
+    Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
+    {
+        EmployeeID = x,
+        Name = new EmployeeName() {
+            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+            LastName =(new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)]
+        },
+        Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
+                                              "Inside Sales Coordinator" })[new Random().Next(4)],
+    }).ToList();
+    }
+
+    public class EmployeeData
+    {
+        [Required]
+        public int? EmployeeID { get; set; }
+        [ValidateComplexType]
+        public EmployeeName Name { get; set; }
+        public string Title { get; set; }
+    }
+
+    public class EmployeeName
+    {
+        [Required(ErrorMessage ="First name should not be empty")]
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+    }
+}
+```
+
+![Validate Complex Column Using Data Annotation Attribute in Blazor DataGrid](./images/blazor-datagrid-validate-complex-column-using-data-annotation-attribute.gif)
+
 ## Custom validator component
 
 Apart from using default validation and custom validation, there are cases where you might want to use your validator component to validate the grid edit form. Such cases can be achieved using the **Validator** property of the **GridEditSettings** component which accepts a validation component and inject it inside the **EditForm** of the grid. Inside the **Validator**, you can access the data using the implicit named parameter context which is of type [ValidatorTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html).

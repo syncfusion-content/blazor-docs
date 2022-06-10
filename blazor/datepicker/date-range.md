@@ -25,7 +25,7 @@ The following code allows selecting a date within the range from 7th to 27th in 
 }
 ```
 
-The output will be as follows.
+
 
 ![Date Selection in Blazor DatePicker](./images/blazor-datepicker-date-selection.png)
 
@@ -43,7 +43,7 @@ When the Min and Max properties are configured and the selected date value is ou
 }
 ```
 
-The output will be as follows.
+
 
 ![Blazor DatePicker displays Selected Date](./images/blazor-datepicker-selected-date.png)
 

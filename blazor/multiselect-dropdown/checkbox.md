@@ -16,40 +16,40 @@ To use checkbox, inject the `CheckBoxSelection` module in the MultiSelect.
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-<SfMultiSelect TValue="string[]" Placeholder="e.g. Australia" Mode="VisualMode.CheckBox" DataSource="@Country">
+<SfMultiSelect TValue="string[]" Placeholder="e.g. Australia" Mode="VisualMode.CheckBox" DataSource="@Countries">
     <MultiSelectFieldSettings Value="Code" Text="Name"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
 @code {
 
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
 
         public string Code { get; set; }
     }
 
-    List<Countries>Country = new List<Countries>
+    List<Country>Countries = new List<Country>
     {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-        new Countries() { Name = "Denmark", Code = "DK" },
-        new Countries() { Name = "France", Code = "FR" },
-        new Countries() { Name = "Finland", Code = "FI" },
-        new Countries() { Name = "Germany", Code = "DE" },
-        new Countries() { Name = "Greenland", Code = "GL" },
-        new Countries() { Name = "Hong Kong", Code = "HK" },
-        new Countries() { Name = "India", Code = "IN" },
-        new Countries() { Name = "Italy", Code = "IT" },
-        new Countries() { Name = "Japan", Code = "JP" },
-        new Countries() { Name = "Mexico", Code = "MX" },
-        new Countries() { Name = "Norway", Code = "NO" },
-        new Countries() { Name = "Poland", Code = "PL" },
-        new Countries() { Name = "Switzerland", Code = "CH" },
-        new Countries() { Name = "United Kingdom", Code = "GB" },
-        new Countries() { Name = "United States", Code = "US" },
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" },
+        new Country() { Name = "France", Code = "FR" },
+        new Country() { Name = "Finland", Code = "FI" },
+        new Country() { Name = "Germany", Code = "DE" },
+        new Country() { Name = "Greenland", Code = "GL" },
+        new Country() { Name = "Hong Kong", Code = "HK" },
+        new Country() { Name = "India", Code = "IN" },
+        new Country() { Name = "Italy", Code = "IT" },
+        new Country() { Name = "Japan", Code = "JP" },
+        new Country() { Name = "Mexico", Code = "MX" },
+        new Country() { Name = "Norway", Code = "NO" },
+        new Country() { Name = "Poland", Code = "PL" },
+        new Country() { Name = "Switzerland", Code = "CH" },
+        new Country() { Name = "United Kingdom", Code = "GB" },
+        new Country() { Name = "United States", Code = "US" },
     };
 }
 ```
@@ -65,40 +65,40 @@ For the unSelect All option, by default unSelect All text will show. You can cus
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-<SfMultiSelect TValue="string[]" Placeholder="e.g. Australia" ShowSelectAll=true SelectAllText="Select All" UnSelectAllText="unSelect All" Mode="VisualMode.CheckBox" DataSource="@Country">
+<SfMultiSelect TValue="string[]" Placeholder="e.g. Australia" ShowSelectAll=true SelectAllText="Select All" UnSelectAllText="unSelect All" Mode="VisualMode.CheckBox" DataSource="@Countries">
     <MultiSelectFieldSettings Text="Name" Value="Code"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
 @code {
 
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
 
         public string Code { get; set; }
     }
 
-    List<Countries>Country = new List<Countries>
+    List<Country>Countries = new List<Country>
     {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-        new Countries() { Name = "Denmark", Code = "DK" },
-        new Countries() { Name = "France", Code = "FR" },
-        new Countries() { Name = "Finland", Code = "FI" },
-        new Countries() { Name = "Germany", Code = "DE" },
-        new Countries() { Name = "Greenland", Code = "GL" },
-        new Countries() { Name = "Hong Kong", Code = "HK" },
-        new Countries() { Name = "India", Code = "IN" },
-        new Countries() { Name = "Italy", Code = "IT" },
-        new Countries() { Name = "Japan", Code = "JP" },
-        new Countries() { Name = "Mexico", Code = "MX" },
-        new Countries() { Name = "Norway", Code = "NO" },
-        new Countries() { Name = "Poland", Code = "PL" },
-        new Countries() { Name = "Switzerland", Code = "CH" },
-        new Countries() { Name = "United Kingdom", Code = "GB" },
-        new Countries() { Name = "United States", Code = "US" },
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" },
+        new Country() { Name = "France", Code = "FR" },
+        new Country() { Name = "Finland", Code = "FI" },
+        new Country() { Name = "Germany", Code = "DE" },
+        new Country() { Name = "Greenland", Code = "GL" },
+        new Country() { Name = "Hong Kong", Code = "HK" },
+        new Country() { Name = "India", Code = "IN" },
+        new Country() { Name = "Italy", Code = "IT" },
+        new Country() { Name = "Japan", Code = "JP" },
+        new Country() { Name = "Mexico", Code = "MX" },
+        new Country() { Name = "Norway", Code = "NO" },
+        new Country() { Name = "Poland", Code = "PL" },
+        new Country() { Name = "Switzerland", Code = "CH" },
+        new Country() { Name = "United Kingdom", Code = "GB" },
+        new Country() { Name = "United States", Code = "US" },
     };
 }
 ```
@@ -110,40 +110,40 @@ For the unSelect All option, by default unSelect All text will show. You can cus
 Defines the limit of the selected items using [MaximumSelectionLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_MaximumSelectionLength).
 
 ```cshtml
-<SfMultiSelect TValue="string[]" Placeholder="e.g. Australia" MaximumSelectionLength=3 Mode="VisualMode.CheckBox" DataSource="@Country">
+<SfMultiSelect TValue="string[]" Placeholder="e.g. Australia" MaximumSelectionLength=3 Mode="VisualMode.CheckBox" DataSource="@Countries">
     <MultiSelectFieldSettings Text="Name" Value="Code"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
 @code {
 
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
 
         public string Code { get; set; }
     }
 
-    List<Countries>Country = new List<Countries>
+    List<Country>Countries = new List<Country>
     {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-        new Countries() { Name = "Denmark", Code = "DK" },
-        new Countries() { Name = "France", Code = "FR" },
-        new Countries() { Name = "Finland", Code = "FI" },
-        new Countries() { Name = "Germany", Code = "DE" },
-        new Countries() { Name = "Greenland", Code = "GL" },
-        new Countries() { Name = "Hong Kong", Code = "HK" },
-        new Countries() { Name = "India", Code = "IN" },
-        new Countries() { Name = "Italy", Code = "IT" },
-        new Countries() { Name = "Japan", Code = "JP" },
-        new Countries() { Name = "Mexico", Code = "MX" },
-        new Countries() { Name = "Norway", Code = "NO" },
-        new Countries() { Name = "Poland", Code = "PL" },
-        new Countries() { Name = "Switzerland", Code = "CH" },
-        new Countries() { Name = "United Kingdom", Code = "GB" },
-        new Countries() { Name = "United States", Code = "US" },
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" },
+        new Country() { Name = "France", Code = "FR" },
+        new Country() { Name = "Finland", Code = "FI" },
+        new Country() { Name = "Germany", Code = "DE" },
+        new Country() { Name = "Greenland", Code = "GL" },
+        new Country() { Name = "Hong Kong", Code = "HK" },
+        new Country() { Name = "India", Code = "IN" },
+        new Country() { Name = "Italy", Code = "IT" },
+        new Country() { Name = "Japan", Code = "JP" },
+        new Country() { Name = "Mexico", Code = "MX" },
+        new Country() { Name = "Norway", Code = "NO" },
+        new Country() { Name = "Poland", Code = "PL" },
+        new Country() { Name = "Switzerland", Code = "CH" },
+        new Country() { Name = "United Kingdom", Code = "GB" },
+        new Country() { Name = "United States", Code = "US" },
     };
 }
 ```
@@ -155,40 +155,40 @@ Defines the limit of the selected items using [MaximumSelectionLength](https://h
 Using [EnableSelectionOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_EnableSelectionOrder) to Reorder the selected items in popup visibility state.
 
 ```cshtml
-<SfMultiSelect TValue="string[]" Placeholder="e.g. Australia" EnableSelectionOrder=false  Mode="VisualMode.CheckBox" DataSource="@Country">
+<SfMultiSelect TValue="string[]" Placeholder="e.g. Australia" EnableSelectionOrder=false  Mode="VisualMode.CheckBox" DataSource="@Countries">
     <MultiSelectFieldSettings Text="Name" Value="Code"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
 @code {
 
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
 
         public string Code { get; set; }
     }
 
-    List<Countries>Country = new List<Countries>
+    List<Country>Countries = new List<Country>
     {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-        new Countries() { Name = "Denmark", Code = "DK" },
-        new Countries() { Name = "France", Code = "FR" },
-        new Countries() { Name = "Finland", Code = "FI" },
-        new Countries() { Name = "Germany", Code = "DE" },
-        new Countries() { Name = "Greenland", Code = "GL" },
-        new Countries() { Name = "Hong Kong", Code = "HK" },
-        new Countries() { Name = "India", Code = "IN" },
-        new Countries() { Name = "Italy", Code = "IT" },
-        new Countries() { Name = "Japan", Code = "JP" },
-        new Countries() { Name = "Mexico", Code = "MX" },
-        new Countries() { Name = "Norway", Code = "NO" },
-        new Countries() { Name = "Poland", Code = "PL" },
-        new Countries() { Name = "Switzerland", Code = "CH" },
-        new Countries() { Name = "United Kingdom", Code = "GB" },
-        new Countries() { Name = "United States", Code = "US" },
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" },
+        new Country() { Name = "France", Code = "FR" },
+        new Country() { Name = "Finland", Code = "FI" },
+        new Country() { Name = "Germany", Code = "DE" },
+        new Country() { Name = "Greenland", Code = "GL" },
+        new Country() { Name = "Hong Kong", Code = "HK" },
+        new Country() { Name = "India", Code = "IN" },
+        new Country() { Name = "Italy", Code = "IT" },
+        new Country() { Name = "Japan", Code = "JP" },
+        new Country() { Name = "Mexico", Code = "MX" },
+        new Country() { Name = "Norway", Code = "NO" },
+        new Country() { Name = "Poland", Code = "PL" },
+        new Country() { Name = "Switzerland", Code = "CH" },
+        new Country() { Name = "United Kingdom", Code = "GB" },
+        new Country() { Name = "United States", Code = "US" },
     };
 }
 ```

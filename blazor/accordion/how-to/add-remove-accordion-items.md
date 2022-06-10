@@ -7,7 +7,7 @@ control: Accordion
 documentation: ug
 ---
 
-# Add/Remove Accordion items in Blazor Accordion Component
+# Add/Remove Accordion Items in Blazor Accordion Component
 
 Accordion can be added/removed dynamically by iteration of the Accordion Items using conditional **foreach** loop.
 
@@ -44,7 +44,7 @@ In the following demo, initially there are three accordion items in the [Accordi
         new AccordionData
         {
         Header = "ASP.NET",
-        Content = "Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services. ASP.NET pages execute on the server and generate markup such as HTML, WML, or XML that is sent to a desktop or mobile browser. ASP.NET pages use a compiled,event-driven programming model that improves performance and enables the separation of application logic and user interface.",
+        Content = "Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services. ASP.NET pages execute on the server and generate markup such as HTML, WML, or XML that is sent to a desktop or mobile browser. ASP.NET pages use a compiled, event-driven programming model that improves performance and enables the separation of application logic and user interface.",
         IsExpanded = true
         },
         new AccordionData
@@ -71,7 +71,7 @@ In the following demo, initially there are three accordion items in the [Accordi
         AccordionItems.Add(new AccordionData
         {
             Header = "JavaScript",
-            Content = "JavaScript (JS) is an interpreted computer programming language.It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed.",
+            Content = "JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed.",
             IsExpanded = false
         });
     }
@@ -85,6 +85,6 @@ In the following demo, initially there are three accordion items in the [Accordi
 }
 ```
 
-Output:
+
 
 ![Adding or Removing items in Blazor Accordion](../images/blazor-accordion-add-remove-item.gif)

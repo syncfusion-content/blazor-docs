@@ -23,6 +23,5 @@ The following code demonstrates the disabled component.
 }
 ```
 
-The output will be as follows.
 
 ![Disable State in Blazor DateTimePicker](../images/blazor-datetimepicker-disable-state.png)

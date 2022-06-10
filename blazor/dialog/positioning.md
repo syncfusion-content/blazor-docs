@@ -140,7 +140,7 @@ The following code demonstrates the different Dialog positions.
 
 ```
 
-The output will be as follows.
+
 
 ![Blazor Dialog displays Different Position](./images/blazor-dialog-position.png)
 

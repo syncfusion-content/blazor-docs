@@ -53,7 +53,7 @@ Divider used to separate the elements inside the card. You can add divider insid
     <CardHeader Title="Explore Cities"></CardHeader>
     <CardContent EnableSeparator="true">
         Sydney is a city on the east coast of Australia. Sydney is the capital city of New South
-        Wales. About four million people live in Sydney which makes it the biggest cityin Oceania.
+        Wales. About four million people live in Sydney which makes it the biggest city in Oceania.
     </CardContent>
     <CardContent EnableSeparator="true">
         New York City has been described as the cultural, financial, and media capital of the

@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Style and appearance in Blazor DateRangePicker Component | Syncfusion
-description: Checkout and learn here all about Style and appearance in Syncfusion Blazor DateRangePicker component and more.
+description: Checkout and learn here all about style and appearance in Syncfusion Blazor DateRangePicker component and more.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
 ---
 
-# Style and appearance in Blazor DateRangePicker Component
+# Style and Appearance in Blazor DateRangePicker Component
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
@@ -25,7 +25,7 @@ Use the following CSS to customize the appearance like height and font size of t
 
 ## Customizing the DateRangePicker icon element
 
-Use the following CSS to customize the DateRangePicker icon element
+Use the following CSS to customize the DateRangePicker icon element.
 
 ```css
 /* To specify background color and font size */
@@ -37,7 +37,7 @@ Use the following CSS to customize the DateRangePicker icon element
 
 ## Customizing the DateRangePicker popup calendar header
 
-Use the following CSS to customize the DateRangePicker popup calendar header
+Use the following CSS to customize the DateRangePicker popup calendar header.
 
 ```css
 /* To specify background and height */
@@ -49,7 +49,7 @@ Use the following CSS to customize the DateRangePicker popup calendar header
 
 ## Customizing the DateRangePicker popup calendar header title
 
-Use the following CSS to customize the DateRangePicker popup calendar header title
+Use the following CSS to customize the DateRangePicker popup calendar header title.
 
 ```css
 /* To specify color and font size */
@@ -61,7 +61,7 @@ Use the following CSS to customize the DateRangePicker popup calendar header tit
 
 ## Customizing the DateRangePicker popup calendar content
 
-Use the following CSS to customize the DateRangePicker popup calendar content
+Use the following CSS to customize the DateRangePicker popup calendar content.
 
 ```css
 /* To specify background color */
@@ -72,7 +72,7 @@ Use the following CSS to customize the DateRangePicker popup calendar content
 
 ## Customizing the DateRangePicker popup calendar content title
 
-Use the following CSS to customize the DateRangePicker popup calendar content title
+Use the following CSS to customize the DateRangePicker popup calendar content title.
 
 ```css
 /* To specify color and font size */
@@ -84,7 +84,7 @@ Use the following CSS to customize the DateRangePicker popup calendar content ti
 
 ## Customizing the DateRangePicker popup calendar previous and next icon
 
-Use the following CSS to customize the DateRangePicker popup calendar previous and next icon
+Use the following CSS to customize the DateRangePicker popup calendar previous and next icon.
 
 ```css
 /* To specify font size */
@@ -95,7 +95,7 @@ Use the following CSS to customize the DateRangePicker popup calendar previous a
 
 ## Customizing the DateRangePicker popup calendar date cell grid on hovering
 
-Use the following CSS to customize the DateRangePicker popup calendar date cell grid on hovering
+Use the following CSS to customize the DateRangePicker popup calendar date cell grid on hovering.
 
 ```css
 /* To specify background color and border */
@@ -107,7 +107,7 @@ Use the following CSS to customize the DateRangePicker popup calendar date cell 
 
 ## Customizing the DateRangePicker popup calendar primary button in footer
 
-Use the following CSS to customize the DateRangePicker popup calendar primary button in footer
+Use the following CSS to customize the DateRangePicker popup calendar primary button in footer.
 
 ```css
 /* To specify background color and border color */
@@ -119,7 +119,7 @@ Use the following CSS to customize the DateRangePicker popup calendar primary bu
 
 ## Customizing the DateRangePicker popup calendar cancel button in footer
 
-Use the following CSS to customize the DateRangePicker popup calendar cancel button in footer
+Use the following CSS to customize the DateRangePicker popup calendar cancel button in footer.
 
 ```css
 /* To specify background color, color, and border color */
@@ -132,7 +132,7 @@ Use the following CSS to customize the DateRangePicker popup calendar cancel but
 
 ## Customizing the footer element in the DateRangePicker popup calendar 
 
-Use the following CSS to customize the DateRangePicker popup calendar footer element
+Use the following CSS to customize the DateRangePicker popup calendar footer element.
 
 ```css
 /* To specify background color, color, and border color */
@@ -144,7 +144,7 @@ Use the following CSS to customize the DateRangePicker popup calendar footer ele
 
 ## Customizing the selected date cell grid in the DateRangePicker popup calendar 
 
-Use the following CSS to customize the selected date cell grid in the DateRangePicker popup calendar 
+Use the following CSS to customize the selected date cell grid in the DateRangePicker popup calendar.
 
 ```css
 /* To specify background and border */

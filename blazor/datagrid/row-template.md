@@ -9,7 +9,7 @@ documentation: ug
 
 # Row Template in Blazor DataGrid Component
 
-> Before adding row template to the datagrid, we strongly recommend you to go through the [template](./templates/#templates) section topic to configure the template.
+> Before adding row template to the datagrid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
 
 To know about **Row Template** in Blazor DataGrid Component, you can check this video.
 
@@ -147,7 +147,6 @@ The **RowTemplate** has an option to customize the look and behavior of the data
 
 ```
 
-The output will be as follows.
 
 ![Rows in Blazor DataGrid](./images/blazor-datagrid-rows.png)
 
@@ -294,13 +293,13 @@ Here [Custom DateTime](https://docs.microsoft.com/en-us/dotnet/standard/base-typ
 }
 ```
 
-The output will be as follows.
+
 
 ![Row Formatting in Blazor DataGrid](./images/blazor-datagrid-row-format.png)
 
 ## Limitations
 
-Row template feature is not compatible with all the features which are available in datagrid and it has limited features support. Here we have listed out the features which are compatible with row template feature.
+Row template feature is not compatible with all the features which are available in datagrid and it has limited features support. The features that are compatible with the row template feature are listed below.
 
 * Filtering
 * Paging

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Configure Syncfusion Blazor Client Resources in Production Environment in Blazor - Syncfusion
+title: Configure Syncfusion Blazor Client Resources in Production Environment
 description: Check out the documentation for Configure Syncfusion Blazor Client Resources in Production Environment in Blazor
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# How to upgrade Syncfusion Blazor Components to 18.1.0.36 version
+# How to Upgrade Syncfusion Blazor Components to 18.1.0.36 Version
 
 To upgrade Syncfusion Blazor Components to 18.1.0.36 version, you need to check the following:
 

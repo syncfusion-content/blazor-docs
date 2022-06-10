@@ -16,9 +16,10 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY
 ```
 
 > **Note:** <br />
-Place the license key between double quotes. Also, ensure that Syncfusion.Licensing.dll is referenced in your project where the license key is being registered.
+* Place the license key between double quotes.  Also, ensure that Syncfusion.Licensing.dll is referenced in your project where the license key is being registered.
+* Syncfusion license validation is done offline during application execution and does not require internet access.  Apps registered with a Syncfusion license key can be deployed on any system that does not have an internet connection.
 
-## For Server side application
+## Server side application
 
 Register the license key in Configure method of Startup.cs
 
@@ -53,7 +54,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 }
 ```
 
-## For server side application using .NET 6.0
+## Server side application using .NET 6.0
 
 Register the license key in the Program.cs file if you created the Blazor server side application with Visual Studio 2022 and .NET 6.0. 
 
@@ -71,7 +72,7 @@ if (!app.Environment.IsDevelopment())
 }
 ```
 
-## For client side application
+## Client side application
 
 Register the license key in main method of Program.cs
 

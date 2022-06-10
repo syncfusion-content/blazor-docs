@@ -14,43 +14,43 @@ The DropDownList has built-in support to filter data items when [AllowFiltering]
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-<SfDropDownList TValue="string" TItem="Countries" Placeholder="Select a country" AllowFiltering="true" DataSource="@Country">
+<SfDropDownList TValue="string" TItem="Country" Placeholder="Select a country" AllowFiltering="true" DataSource="@Countries">
     <DropDownListFieldSettings Text="Name" Value="Code"></DropDownListFieldSettings>
 </SfDropDownList>
 
 @code{
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
         public string Code { get; set; }
     }
     
-    private List<Countries> Country = new List<Countries>
+    private List<Country> Countries = new List<Country>
     {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-        new Countries() { Name = "Denmark", Code = "DK" },
-        new Countries() { Name = "France", Code = "FR" },
-        new Countries() { Name = "Finland", Code = "FI" },
-        new Countries() { Name = "Germany", Code = "DE" },
-        new Countries() { Name = "Greenland", Code = "GL" },
-        new Countries() { Name = "Hong Kong", Code = "HK" },
-        new Countries() { Name = "India", Code = "IN" },
-        new Countries() { Name = "Italy", Code = "IT" },
-        new Countries() { Name = "Japan", Code = "JP" },
-        new Countries() { Name = "Mexico", Code = "MX" },
-        new Countries() { Name = "Norway", Code = "NO" },
-        new Countries() { Name = "Poland", Code = "PL" },
-        new Countries() { Name = "Switzerland", Code = "CH" },
-        new Countries() { Name = "United Kingdom", Code = "GB" },
-        new Countries() { Name = "United States", Code = "US" },
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" },
+        new Country() { Name = "France", Code = "FR" },
+        new Country() { Name = "Finland", Code = "FI" },
+        new Country() { Name = "Germany", Code = "DE" },
+        new Country() { Name = "Greenland", Code = "GL" },
+        new Country() { Name = "Hong Kong", Code = "HK" },
+        new Country() { Name = "India", Code = "IN" },
+        new Country() { Name = "Italy", Code = "IT" },
+        new Country() { Name = "Japan", Code = "JP" },
+        new Country() { Name = "Mexico", Code = "MX" },
+        new Country() { Name = "Norway", Code = "NO" },
+        new Country() { Name = "Poland", Code = "PL" },
+        new Country() { Name = "Switzerland", Code = "CH" },
+        new Country() { Name = "United Kingdom", Code = "GB" },
+        new Country() { Name = "United States", Code = "US" },
     };
 }
 ```
 
-The output will be as follows.
+
 
 ![Filtering in Blazor DropDownList](./images/blazor-dropdownlist-filtering.png)
 
@@ -62,38 +62,38 @@ The DropDownList component filter queries can be customized. You can also use yo
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
-<SfDropDownList TValue="string" @ref="ddlObj" TItem="Countries" Placeholder="e.g. Australia" DataSource="@Country" AllowFiltering="true">
+<SfDropDownList TValue="string" @ref="ddlObj" TItem="Country" Placeholder="e.g. Australia" DataSource="@Countries" AllowFiltering="true">
     <DropDownListFieldSettings Text="Name" Value="Code"></DropDownListFieldSettings>
-    <DropDownListEvents TValue="string" TItem="Countries" Filtering="OnFilter"></DropDownListEvents>
+    <DropDownListEvents TValue="string" TItem="Country" Filtering="OnFilter"></DropDownListEvents>
 </SfDropDownList>
 
 
 @code {
 
-    SfDropDownList<string, Countries> ddlObj { get; set; }
+    SfDropDownList<string, Country> ddlObj { get; set; }
 
-    public class Countries
+    public class Country
     {
         public string Name { get; set; }
 
         public string Code { get; set; }
     }
 
-    List<Countries> Country = new List<Countries>
+    List<Country> Countries = new List<Country>
     {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-        new Countries() { Name = "Denmark", Code = "DK" }
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" }
     };
 
-    List<Countries> Country1 = new List<Countries>
+    List<Country> CountriesFiltered = new List<Country>
     {
-        new Countries() { Name = "France", Code = "FR" },
-        new Countries() { Name = "Finland", Code = "FI" },
-        new Countries() { Name = "Germany", Code = "DE" },
-        new Countries() { Name = "Greenland", Code = "GL" }
+        new Country() { Name = "France", Code = "FR" },
+        new Country() { Name = "Finland", Code = "FI" },
+        new Country() { Name = "Germany", Code = "DE" },
+        new Country() { Name = "Greenland", Code = "GL" }
     };
 
     private async Task OnFilter(FilteringEventArgs args)
@@ -103,7 +103,7 @@ The DropDownList component filter queries can be customized. You can also use yo
 
         query = !string.IsNullOrEmpty(args.Text) ? query : new Query();
 
-        await ddlObj.FilterAsync(Country1, query);
+        await ddlObj.FilterAsync(CountriesFiltered, query);
     }
 }
 ```

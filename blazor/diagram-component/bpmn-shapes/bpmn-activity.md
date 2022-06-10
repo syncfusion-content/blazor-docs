@@ -1,7 +1,7 @@
 ---
 layout: post
 title: BPMN activity in Blazor Diagram Component | Syncfusion
-description: Learn here all about BPMN activity such as task , subprocess in Syncfusion Blazor Diagram component and more.
+description: Learn here all about BPMN activity such as task, subprocess in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -24,7 +24,7 @@ There are two types of activities. They are listed as follows:
 
 @code
 {
-    // Initialize the node collection with node
+    // Initialize the node collection with node.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -32,20 +32,20 @@ There are two types of activities. They are listed as follows:
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            // Unique Id of the node
+            // Unique Id of the node.
             ID = "node1",
-            // Sets the type of shape to Bpmn and shape to activity
+            // Sets the type of shape to Bpmn and shape to activity.
             Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
                 Shape = BpmnShapes.Activity,
-                // Sets the activity type to task
+                // Sets the activity type to task.
                 Activity = new BpmnActivity() { Activity = BpmnActivities.Task },
             }
         };
@@ -66,7 +66,7 @@ The `Task` property of the node allows you to define the type of task such as se
 
 @code
 {
-    // Initialize the node collection with node
+    // Initialize the node collection with node.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -74,24 +74,24 @@ The `Task` property of the node allows you to define the type of task such as se
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            // Unique Id of the node
+            // Unique Id of the node.
             ID = "node1",
-            // Sets the type of shape to Bpmn and shape to activity
+            // Sets the type of shape to Bpmn and shape to activity.
             Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
                 Shape = BpmnShapes.Activity,
-                // Sets the activity type to task
+                // Sets the activity type to task.
                 Activity = new BpmnActivity() 
                 { 
                     Activity = BpmnActivities.Task,
-                    // Sets the type of the task to Send
+                    // Sets the type of the task to Send.
                     Task = new BpmnTask() { Type = BpmnTasks.Send }
                 },
             }
@@ -126,7 +126,7 @@ A `Sub-process` is a group of tasks that is used to hide or reveal details of ad
 
 @code
 {
-    // Initialize the node collection with node
+    // Initialize the node collection with node.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -134,25 +134,25 @@ A `Sub-process` is a group of tasks that is used to hide or reveal details of ad
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            // Unique Id of the node
+            // Unique Id of the node.
             ID = "node1",
-            // Sets the type of shape to Bpmn and shape to activity
+            // Sets the type of shape to Bpmn and shape to activity.
             Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
                 Shape = BpmnShapes.Activity,
-                // Sets the activity type to task
+                // Sets the activity type to task.
                 Activity = new BpmnActivity()
                 {
-                    // Sets activity to subprocess
+                    // Sets activity to subprocess.
                     Activity = BpmnActivities.SubProcess,
-                    // Set collapsed of subprocess to true
+                    // Set collapsed of subprocess to true.
                     SubProcess = new BpmnSubProcess() { Collapsed = true }
                 },
             }
@@ -179,7 +179,7 @@ A `SubProcess` is defined as an event SubProcess when it is triggered by an even
 
 @code
 {
-    // Initialize the node collection with node
+    // Initialize the node collection with node.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -187,28 +187,28 @@ A `SubProcess` is defined as an event SubProcess when it is triggered by an even
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
             // Size of the node
             Width = 100,
             Height = 100,
-            // Unique id of the node
+            // Unique id of the node.
             ID = "node1",
             Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
                 Shape = BpmnShapes.Activity,
-                // Sets activity to SubProcess
+                // Sets activity to SubProcess.
                 Activity = new BpmnActivity()
                 {
                     Activity = BpmnActivities.SubProcess,
-                    // Sets the collapsed to true and type to Event
+                    // Sets the collapsed to true and type to Event.
                     SubProcess = new BpmnSubProcess()
                     {
                         Collapsed = true,
                         Type = BpmnSubProcessTypes.Event,
-                        // Sets event to Start and trigger to Message
+                        // Sets event to Start and trigger to Message.
                         Events = new List<BpmnSubEvent>()
                         {
                             new BpmnSubEvent()
@@ -252,7 +252,7 @@ The `Events` property of subprocess allows you to represent these results as an 
 
 @code
 {
-    // Initialize the node collection with node
+    // Initialize the node collection with node.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -260,29 +260,29 @@ The `Events` property of subprocess allows you to represent these results as an 
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            // Unique id of the node
+            // Unique id of the node.
             ID = "node1",
-            // Defines the type to BPMN and shape to activity
+            // Defines the type to BPMN and shape to activity.
             Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
                 Shape = BpmnShapes.Activity,
-                // Sets the activity to subprocess
+                // Sets the activity to subprocess.
                 Activity = new BpmnActivity()
                 {
                     Activity = BpmnActivities.SubProcess,
-                    // Sets collapsed to true and type to Transaction
+                    // Sets collapsed to true and type to Transaction.
                     SubProcess = new BpmnSubProcess()
                     {
                         Collapsed = true,
                         Type = BpmnSubProcessTypes.Transaction,
-                        // Sets offset and visible for cancel and offset for failure
+                        // Sets offset and visible for cancel and offset for failure.
                         Transaction = new BpmnTransactionSubProcess()
                         {
                             Cancel = new BpmnSubEvent() { Visible = true, Offset = new Point() { X = 0.25, Y = 1 } },
@@ -309,7 +309,7 @@ The `Processes` is an array collection that defines the children values for BPMN
 
 @code
 {
-    //Initialize the node collection with node
+    //Initialize the node collection with node.
     DiagramObjectCollection<Node> nodes;
     DiagramObjectCollection<Connector> connectors;
 
@@ -424,7 +424,7 @@ The `Processes` is an array collection that defines the children values for BPMN
 
 @code
 {       
-    // Initialize the node collection with node
+    // Initialize the node collection with node.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -432,24 +432,24 @@ The `Processes` is an array collection that defines the children values for BPMN
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            // Unique Id of the node
+            // Unique Id of the node.
             ID = "node1",
-            // Defines the type to BPMN and shape to activity
+            // Defines the type to BPMN and shape to activity.
             Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
                 Shape = BpmnShapes.Activity,
-                // Set the activity to subprocess
+                // Set the activity to subprocess.
                 Activity = new BpmnActivity()
                 {
                     Activity = BpmnActivities.SubProcess,
-                    // Sets collapsed to true and loop to standard
+                    // Sets collapsed to true and loop to standard.
                     SubProcess = new BpmnSubProcess()
                     {
                         Collapsed = true,
@@ -483,7 +483,7 @@ The following table contains various types of BPMN loops.
 
 @code
 {
-    // Initialize the node collection with node
+    // Initialize the node collection with node.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -491,24 +491,24 @@ The following table contains various types of BPMN loops.
         nodes = new DiagramObjectCollection<Node>();
         Node node1 = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            // Unique id of the node
+            // Unique id of the node.
             ID = "node1",
-            // Defines the type to BPMN and shape to activity
+            // Defines the type to BPMN and shape to activity.
             Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
                 Shape = BpmnShapes.Activity,
-                // Set the activity to task
+                // Set the activity to task.
                 Activity = new BpmnActivity()
                 {
                     Activity = BpmnActivities.Task,
-                    // Set compensation to true
+                    // Set compensation to true.
                     Task = new BpmnTask()
                     {
                         Compensation = true,
@@ -518,15 +518,15 @@ The following table contains various types of BPMN loops.
         };
         Node node2 = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 300,
             OffsetY = 100,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            // Unique id of the node
+            // Unique id of the node.
             ID = "node2",
-            // Defines the type to BPMN and shape to activity
+            // Defines the type to BPMN and shape to activity.
             Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
@@ -535,7 +535,7 @@ The following table contains various types of BPMN loops.
                 Activity = new BpmnActivity()
                 {
                     Activity = BpmnActivities.SubProcess,
-                    // Sets collapsed and compensation to true
+                    // Sets collapsed and compensation to true.
                     SubProcess = new BpmnSubProcess()
                     {
                         Collapsed = true,
@@ -562,7 +562,7 @@ A `Call` activity is a global subprocess that is reused at various points of the
 
 @code
 {
-    // Initialize the node collection with node
+    // Initialize the node collection with node.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -570,24 +570,24 @@ A `Call` activity is a global subprocess that is reused at various points of the
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            // Unique Id of the node
+            // Unique Id of the node.
             ID = "node1",         
-            // Defines the type to BPMN and shape to activity
+            // Defines the type to BPMN and shape to activity.
             Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
                 Shape = BpmnShapes.Activity,
-                // Sets the activity to task
+                // Sets the activity to task.
                 Activity = new BpmnActivity()
                 {
                     Activity = BpmnActivities.Task,
-                    // Sets call to true
+                    // Sets call to true.
                     Task = new BpmnTask()
                     {
                         Call = true,
@@ -612,7 +612,7 @@ An ad-hoc subprocess is a group of tasks that are executed in any order or skipp
 
 @code
 {
-    // Initialize the node collection with node
+    // Initialize the node collection with node.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -620,13 +620,13 @@ An ad-hoc subprocess is a group of tasks that are executed in any order or skipp
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            // unique id of the node
+            // Unique id of the node.
             ID = "node1",
             // Defines the type to BPMN and shape to activity
             Shape = new BpmnShape()
@@ -637,7 +637,7 @@ An ad-hoc subprocess is a group of tasks that are executed in any order or skipp
                 Activity = new BpmnActivity()
                 {
                     Activity = BpmnActivities.SubProcess,
-                    // Sets collapsed and ad hoc to true
+                    // Sets collapsed and ad hoc to true.
                     SubProcess = new BpmnSubProcess()
                     {
                         Collapsed = true,
@@ -663,7 +663,7 @@ Boundary represents the type of task that is being processed. The `Boundary` pro
 
 @code
 {
-    // Initialize the node collection with node
+    // Initialize the node collection with node.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -671,24 +671,24 @@ Boundary represents the type of task that is being processed. The `Boundary` pro
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
-            // Position of the node
+            // Position of the node.
             OffsetX = 100,
             OffsetY = 100,
-            // Size of the node
+            // Size of the node.
             Width = 100,
             Height = 100,
-            // Unique Id of the node
+            // Unique Id of the node.
             ID = "node1",
-            // Sets type to Bpmn and shape to Activity
+            // Sets type to Bpmn and shape to Activity.
             Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
                 Shape = BpmnShapes.Activity,
-                // Sets activity to SubProcess
+                // Sets activity to SubProcess.
                 Activity = new BpmnActivity()
                 {
                     Activity = BpmnActivities.SubProcess,
-                    // Sets collapsed to true and boundary to Call
+                    // Sets collapsed to true and boundary to Call.
                     SubProcess = new BpmnSubProcess()
                     {
                         Collapsed = true,

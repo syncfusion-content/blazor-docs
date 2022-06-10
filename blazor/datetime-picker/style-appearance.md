@@ -7,7 +7,7 @@ control: Datetime Picker
 documentation: ug
 ---
 
-# Style and appearance in Blazor Datetime Picker Component
+# Style and Appearance in Blazor Datetime Picker Component
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
@@ -25,7 +25,7 @@ Use the following CSS to customize the appearance of Datetime Picker container e
 
 ## Customizing the Datetime Picker icons element
 
-Use the following CSS to customize the Datetime Picker icons element
+Use the following CSS to customize the Datetime Picker icons element.
 
 ```css
 /* To specify background color and font size */
@@ -37,7 +37,7 @@ Use the following CSS to customize the Datetime Picker icons element
 
 ## Customizing the time picker popup in the Datetime Picker 
 
-Use the following CSS to customize the time picker popup in the Datetime Picker 
+Use the following CSS to customize the time picker popup in the Datetime Picker.
 
 ```css
 /* To specify height */
@@ -48,6 +48,6 @@ Use the following CSS to customize the time picker popup in the Datetime Picker
 
 ## Customizing the Calendar popup of the Datetime Picker
 
-Please check the below section, to customize the style and appearance of the Calendar component in the Datetime Picker
+Please check the below section to customize the style and appearance of the Calendar component in the Datetime Picker.
 
 [Customizing Calendar's style and appearance](../calendar/style-appearance/)

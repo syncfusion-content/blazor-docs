@@ -7,7 +7,7 @@ control: DatePicker
 documentation: ug
 ---
 
-# Style and appearance in Blazor DatePicker Component
+# Style and Appearance in Blazor DatePicker Component
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
@@ -37,6 +37,6 @@ Use the following CSS to customize the DatePicker icon element
 
 ## Customizing the Calendar popup of the DatePicker
 
-Please check the below section, to customize the style and appearance of the Calendar component
+Please check the below section to customize the style and appearance of the Calendar component
 
 [Customizing Calendar's style and appearance](../calendar/style-appearance/)

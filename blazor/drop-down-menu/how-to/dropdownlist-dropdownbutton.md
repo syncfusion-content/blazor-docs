@@ -76,6 +76,6 @@ In the following example, render `DropDownList` component in popup.
 
 ```
 
-Output be like
+
 
 ![Creating DropDown List in Popup of Blazor DropDownMenu](./../images/blazor-dropdownmenu-create-dropdownlist.png)

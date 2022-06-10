@@ -7,7 +7,7 @@ control: DropDown List
 documentation: ug
 ---
 
-# DropDownList options with tooltip in Blazor DropDown List Component
+# DropDownList Options with Tooltip in Blazor DropDown List Component
 
 You can achieve this behavior by using tooltip component. When the mouse is hovered over the DropDownList option, a tooltip appears with information about the hovered list item.
 
@@ -74,6 +74,6 @@ The following code demonstrates how to display a tooltip when hovering over the 
 }
 ```
 
-The output will be as follows.
+
 
 ![Blazor DropDownList displays ToolTip](../images/blazor-dropdownlist-tooltip.png)

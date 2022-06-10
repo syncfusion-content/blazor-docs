@@ -15,6 +15,7 @@ The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Sf
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using System.Collections.ObjectModel
 
 <SfDiagramComponent @ref="@Diagram"
                     Width="100%"
@@ -25,10 +26,22 @@ The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Sf
 
 @code{
     SfDiagramComponent Diagram;
-
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    protected override void OnInitialized()
+    {
+        Node node = new Node()
+        {
+            OffsetX = 250,
+            OffsetY = 250,
+            Width = 100,
+            Height = 100
+        };
+        nodes.Add(node);
+    }
     private void OnCreated(object args)
     {
-        Diagram.Select(new ObservableCollection<IDiagramObject>() { Diagram.Nodes[2] });
+
+        Diagram.Select(new ObservableCollection<IDiagramObject>() { Diagram.Nodes[0] });
     }
 }
 ```

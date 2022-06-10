@@ -30,7 +30,7 @@ The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Pat
 
 @code
 {
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
@@ -47,19 +47,19 @@ The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Pat
                 new PathAnnotation 
                 { 
                     Content = "Offset as 0",
-                    // Sets the offset of the annotation as 0
+                    // Sets the offset of the annotation as 0.
                     Offset = 0 
                 },
                 new PathAnnotation 
                 { 
                     Content = "Offset as 0.5",
-                    // Sets the offset of the annotation as 0.5
+                    // Sets the offset of the annotation as 0.5.
                     Offset = 0.5 
                 },
                 new PathAnnotation 
                 { 
                     Content = "Offset as 1",
-                    // Sets the offset of the annotation as 1
+                    // Sets the offset of the annotation as 1.
                     Offset = 1 
                 },
             }
@@ -86,7 +86,7 @@ The connector’s annotation can be aligned over its segment path using the [Ali
 
 @code
 {
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
@@ -103,13 +103,13 @@ The connector’s annotation can be aligned over its segment path using the [Ali
                 new PathAnnotation 
                 { 
                     Content = "Before",
-                    // Sets the alignment of the annotation as Before
+                    // Sets the alignment of the annotation as Before.
                     Alignment = AnnotationAlignment.Before 
                 },
                 new PathAnnotation 
                 { 
                     Content = "After",
-                    // Sets the alignment of the annotation as After
+                    // Sets the alignment of the annotation as After.
                     Alignment = AnnotationAlignment.After 
                 },
             }
@@ -137,7 +137,7 @@ The [Displacement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
 
 @code
 {
-    //Defines diagram's connector collection
+    //Defines diagram's connector collection.
     public DiagramObjectCollection<Connector> connectors { get; set; }
 
     protected override void OnInitialized()
@@ -157,7 +157,7 @@ The [Displacement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
                 new PathAnnotation()
                 {
                     Content = "After",
-                    // Set the displacement to the annotation
+                    // Set the displacement to the annotation.
                     Displacement = new DiagramPoint() { X = 50, Y = 50 },
                     Alignment = AnnotationAlignment.After
                 },
@@ -181,7 +181,7 @@ The following code example shows how the connector annotation rotated in its pat
 
 @code
 {
-    // Defines diagram's connector collection
+    // Defines diagram's connector collection.
     DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
@@ -198,7 +198,7 @@ The following code example shows how the connector annotation rotated in its pat
                 new PathAnnotation 
                 { 
                     Content = "Annotation", 
-                    // Set the segment angle for the connector's annotation
+                    // Set the segment angle for the connector's annotation.
                     SegmentAngle = true,
                     Offset = 0.7 
                 },
