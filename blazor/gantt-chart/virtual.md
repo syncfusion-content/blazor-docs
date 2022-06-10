@@ -154,6 +154,265 @@ namespace GanttComponent.Data
 
 ```
 
+## Column virtualization
+
+Column virtualization allows you to load more columns with high performance. It renders only the columns in the viewport, while other columns render on-demand during horizontal scrolling.
+
+To set up the column virtualization, set the
+[EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableVirtualization) and
+[EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableColumnVirtualization) properties as **true**.
+
+```csharp
+
+@using Syncfusion.Blazor.Gantt
+
+<SfGantt ID="Gantt" DataSource="@TaskCollection" 
+    EnableVirtualization="true" EnableColumnVirtualization="true"  Height="450px" Width="1000px">
+    <GanttTaskFields Id="ProjectId" Name="ProjectName" StartDate="ProjectStartDate" EndDate="ProjectEndDate" Duration="ProjectDuration" Progress="ProjectProgress" Dependency="Predecessor" ParentID="ParentId">
+    </GanttTaskFields>
+     <GanttColumns>
+        <GanttColumn Field="ProjectId" HeaderText="Task ID"></GanttColumn>
+        <GanttColumn Field="ProjectName" HeaderText="Task Name"> </GanttColumn>
+        <GanttColumn Field="ProjectStartDate" HeaderText="Start Date"></GanttColumn>
+        <GanttColumn Field="ProjectEndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="ProjectDuration" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="Field1" HeaderText="Rebounds" Width="150"></GanttColumn>
+        <GanttColumn Field="FIELD2" HeaderText="Year" Width="150"></GanttColumn>
+        <GanttColumn Field="FIELD3" HeaderText="Stint" Width="150"></GanttColumn>
+        <GanttColumn Field="FIELD4" HeaderText="TMID" Width="150"> </GanttColumn>
+        <GanttColumn Field="FIELD5" HeaderText="LGID" Width="150"></GanttColumn>
+        <GanttColumn Field="FIELD6" HeaderText="GP" Width="150"></GanttColumn>
+        <GanttColumn Field="Field7" HeaderText="GS" Width="150"></GanttColumn>
+        <GanttColumn Field="Field8" HeaderText="Minutes" Width="150"></GanttColumn>
+        <GanttColumn Field="Field9" HeaderText="Points" Width="150"></GanttColumn>
+        <GanttColumn Field="Field10" HeaderText="ORebounds" Width="150"></GanttColumn>
+        <GanttColumn Field="Field11" HeaderText="DRebounds" Width="150"></GanttColumn>
+    </GanttColumns>
+</SfGantt>
+@code {
+    public List<TaskData> TaskCollection { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = VirtualData.GetTreeVirtualData();
+    }
+    public class VirtualData
+    {
+        public static List<TaskData> GetTreeVirtualData()
+        {
+            string[] Names = new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD", "HANAR", "CHOPS", "RICSU", "WELLI", "HILAA", "ERNSH", "CENTC", "OTTIK", "QUEDE", "RATTC", "ERNSH", "FOLKO", "BLONP", "WARTH", "FRANK", "GROSR", "WHITC", "WARTH", "SPLIR", "RATTC", "QUICK", "VINET", "MAGAA", "TORTU", "MORGK", "BERGS", "LEHMS", "BERGS", "ROMEY", "ROMEY", "LILAS", "LEHMS", "QUICK", "QUICK", "RICAR", "REGGC", "BSBEV", "COMMI", "QUEDE", "TRADH", "TORTU", "RATTC", "VINET", "LILAS", "BLONP", "HUNGO", "RICAR", "MAGAA", "WANDK", "SUPRD", "GODOS", "TORTU", "OLDWO", "ROMEY", "LONEP", "ANATR", "HUNGO", "THEBI", "DUMON", "WANDK", "QUICK", "RATTC", "ISLAT", "RATTC", "LONEP", "ISLAT", "TORTU", "WARTH", "ISLAT", "PERIC", "KOENE", "SAVEA", "KOENE", "BOLID", "FOLKO", "FURIB", "SPLIR", "LILAS", "BONAP", "MEREP", "WARTH", "VICTE", "HUNGO", "PRINI", "FRANK", "OLDWO", "MEREP", "BONAP", "SIMOB", "FRANK", "LEHMS", "WHITC", "QUICK", "RATTC", "FAMIA" };
+            List<TaskData> DataCollection = new List<TaskData>();
+            Random random = new Random();
+            var x = 0;
+            for (var i = 1; i <= 100; i++)
+            {
+                var name = random.Next(0, 100);
+                TaskData Parent = new TaskData()
+                {
+                    ProjectId = ++x,
+                    ProjectName = "Task " + x,
+                    ProjectStartDate = new DateTime(2022, 1, 9),
+                    ProjectEndDate = new DateTime(2022, 1, 13),
+                    ProjectDuration = "10",
+                    ProjectProgress = random.Next(100),
+                    ParentId = null,
+                    Predecessor = null,
+                };
+                DataCollection.Add(Parent);
+                for (var j = 1; j <= 50; j++)
+                {
+                    var childName = random.Next(0, 100);
+                    DataCollection.Add(new TaskData()
+                    {
+                        ProjectId = ++x,
+                        ProjectName = "Task " + x,
+                        ProjectStartDate = new DateTime(2022, 1, 9),
+                        ProjectEndDate = new DateTime(2022, 1, 13),
+                        ProjectDuration = "10",
+                        ProjectProgress = random.Next(100),
+                        ParentId = Parent.ProjectId,
+                        Predecessor = i + "FS",
+                        Field1 = Names[name],
+                        FIELD2 = 1967 + random.Next(0, 10),
+                        FIELD3 = 395 + random.Next(100, 600),
+                        FIELD4 = 87 + random.Next(50, 250),
+                        FIELD5 = 410 + random.Next(100, 600),
+                        FIELD6 = 67 + random.Next(50, 250),
+                        Field7 = (int)Math.Floor(random.NextDouble() * 100),
+                        Field8 = (int)Math.Floor(random.NextDouble() * 10),
+                        Field9 = (int)Math.Floor(random.NextDouble() * 10),
+                        Field10 = (int)Math.Floor(random.NextDouble() * 100),
+                        Field11 = (int)Math.Floor(random.NextDouble() * 100),
+                        Field12 = (int)Math.Floor(random.NextDouble() * 1000),
+                    });
+                }
+            }
+            return DataCollection;
+        }
+    }
+    public class TaskData
+    {
+        public int ProjectId { get; set; }
+        public string ProjectName { get; set; }
+        public DateTime ProjectStartDate { get; set; }
+        public DateTime ProjectEndDate { get; set; }
+        public string ProjectDuration { get; set; }
+        public int ProjectProgress { get; set; }
+        public int? ParentId { get; set; }
+        public string Predecessor { get; set; }
+        public string Field1 { get; set; }
+        public int FIELD2 { get; set; }
+        public int FIELD3 { get; set; }
+        public int FIELD4 { get; set; }
+        public int FIELD5 { get; set; }
+        public int FIELD6 { get; set; }
+        public int Field7 { get; set; }
+        public int Field8 { get; set; }
+        public int Field9 { get; set; }
+        public int Field10 { get; set; }
+        public int Field11 { get; set; }
+        public int Field12 { get; set; }
+    }
+}
+```
+
+> Column's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Width) is required for column virtualization. If the column's width is not defined, then the Gantt Chart will consider its value as **150px**.
+
+![Blazor GanttChart with cloumn virtualization](./images/Column_Virtual.gif)
+
+## Scroll the content by external button
+
+This section shows you how to invoke a [ScrollIntoViewAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ScrollIntoViewAsync_System_Int32_System_Int32_) method to scroll the Gantt chart content programmatically by passing column index or row index as parameter.
+To scroll the Gantt chart content in a horizontal direction, set the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableVirtualization) and
+[EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableColumnVirtualization) properties as **true**. 
+To scroll the Gantt chart content in a vertical direction, set the  `EnableVirtualization` property as **true**.
+
+ ```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Buttons
+
+ColumnIndex : <input @bind-value = "@ColumnIndex" />
+<SfButton @onclick="Scroll" Content="Scroll Horizontally"></SfButton>
+<br><br>
+RowIndex : <input @bind-value = "@RowIndex" />
+<SfButton @onclick="Scroll" Content="Scroll Vertically"></SfButton>
+<SfGantt @ref="Gantt" ID="Gantt" DataSource="@TaskCollection" 
+    EnableVirtualization="true" EnableColumnVirtualization="true"  Height="350px" Width="650px">
+    <GanttTaskFields Id="ProjectId" Name="ProjectName" StartDate="ProjectStartDate" EndDate="ProjectEndDate" Duration="ProjectDuration" Progress="ProjectProgress" Dependency="Predecessor" ParentID="ParentId">
+    </GanttTaskFields>
+     <GanttColumns>
+        <GanttColumn Field="ProjectId" HeaderText="Task ID"></GanttColumn>
+        <GanttColumn Field="ProjectName" HeaderText="Task Name"> </GanttColumn>
+        <GanttColumn Field="ProjectStartDate" HeaderText="Start Date"></GanttColumn>
+        <GanttColumn Field="ProjectEndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="ProjectDuration" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="Field1" HeaderText="Rebounds"></GanttColumn>
+        <GanttColumn Field="FIELD2" HeaderText="Year"></GanttColumn>
+        <GanttColumn Field="FIELD3" HeaderText="Stint"></GanttColumn>
+        <GanttColumn Field="FIELD4" HeaderText="TMID"> </GanttColumn>
+        <GanttColumn Field="FIELD5" HeaderText="LGID"></GanttColumn>
+        <GanttColumn Field="FIELD6" HeaderText="GP"></GanttColumn>
+        <GanttColumn Field="Field7" HeaderText="GS"></GanttColumn>
+        <GanttColumn Field="Field8" HeaderText="Minutes"></GanttColumn>
+        <GanttColumn Field="Field9" HeaderText="Points"></GanttColumn>
+        <GanttColumn Field="Field10" HeaderText="ORebounds"></GanttColumn>
+        <GanttColumn Field="Field11" HeaderText="DRebounds"></GanttColumn>
+    </GanttColumns>
+</SfGantt>
+@code {
+    public SfGantt<TaskData> Gantt;
+    public List<TaskData> TaskCollection { get; set; }
+
+    public int ColumnIndex { get; set; } = -1;
+    public int RowIndex { get; set; } = -1;
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = VirtualData.GetTreeVirtualData();
+    }
+    public async Task Scroll()
+    {
+        await Gantt.ScrollIntoViewAsync(ColumnIndex, RowIndex);
+    }
+    public class VirtualData
+    {
+        public static List<TaskData> GetTreeVirtualData()
+        {
+            string[] Names = new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD", "HANAR", "CHOPS", "RICSU", "WELLI", "HILAA", "ERNSH", "CENTC", "OTTIK", "QUEDE", "RATTC", "ERNSH", "FOLKO", "BLONP", "WARTH", "FRANK", "GROSR", "WHITC", "WARTH", "SPLIR", "RATTC", "QUICK", "VINET", "MAGAA", "TORTU", "MORGK", "BERGS", "LEHMS", "BERGS", "ROMEY", "ROMEY", "LILAS", "LEHMS", "QUICK", "QUICK", "RICAR", "REGGC", "BSBEV", "COMMI", "QUEDE", "TRADH", "TORTU", "RATTC", "VINET", "LILAS", "BLONP", "HUNGO", "RICAR", "MAGAA", "WANDK", "SUPRD", "GODOS", "TORTU", "OLDWO", "ROMEY", "LONEP", "ANATR", "HUNGO", "THEBI", "DUMON", "WANDK", "QUICK", "RATTC", "ISLAT", "RATTC", "LONEP", "ISLAT", "TORTU", "WARTH", "ISLAT", "PERIC", "KOENE", "SAVEA", "KOENE", "BOLID", "FOLKO", "FURIB", "SPLIR", "LILAS", "BONAP", "MEREP", "WARTH", "VICTE", "HUNGO", "PRINI", "FRANK", "OLDWO", "MEREP", "BONAP", "SIMOB", "FRANK", "LEHMS", "WHITC", "QUICK", "RATTC", "FAMIA" };
+            List<TaskData> DataCollection = new List<TaskData>();
+            Random random = new Random();
+            var x = 0;
+            for (var i = 1; i <= 100; i++)
+            {
+                var name = random.Next(0, 100);
+                TaskData Parent = new TaskData()
+                {
+                    ProjectId = ++x,
+                    ProjectName = "Task " + x,
+                    ProjectStartDate = new DateTime(2022, 1, 9),
+                    ProjectEndDate = new DateTime(2022, 1, 13),
+                    ProjectDuration = "10",
+                    ProjectProgress = random.Next(100),
+                    ParentId = null,
+                    Predecessor = null,
+                };
+                DataCollection.Add(Parent);
+                for (var j = 1; j <= 50; j++)
+                {
+                    var childName = random.Next(0, 100);
+                    DataCollection.Add(new TaskData()
+                    {
+                        ProjectId = ++x,
+                        ProjectName = "Task " + x,
+                        ProjectStartDate = new DateTime(2022, 1, 9),
+                        ProjectEndDate = new DateTime(2022, 1, 13),
+                        ProjectDuration = "10",
+                        ProjectProgress = random.Next(100),
+                        ParentId = Parent.ProjectId,
+                        Predecessor = i + "FS",
+                        Field1 = Names[name],
+                        FIELD2 = 1967 + random.Next(0, 10),
+                        FIELD3 = 395 + random.Next(100, 600),
+                        FIELD4 = 87 + random.Next(50, 250),
+                        FIELD5 = 410 + random.Next(100, 600),
+                        FIELD6 = 67 + random.Next(50, 250),
+                        Field7 = (int)Math.Floor(random.NextDouble() * 100),
+                        Field8 = (int)Math.Floor(random.NextDouble() * 10),
+                        Field9 = (int)Math.Floor(random.NextDouble() * 10),
+                        Field10 = (int)Math.Floor(random.NextDouble() * 100),
+                        Field11 = (int)Math.Floor(random.NextDouble() * 100),
+                        Field12 = (int)Math.Floor(random.NextDouble() * 1000),
+                    });
+                }
+            }
+            return DataCollection;
+        }
+    }
+    public class TaskData
+    {
+        public int ProjectId { get; set; }
+        public string ProjectName { get; set; }
+        public DateTime ProjectStartDate { get; set; }
+        public DateTime ProjectEndDate { get; set; }
+        public string ProjectDuration { get; set; }
+        public int ProjectProgress { get; set; }
+        public int? ParentId { get; set; }
+        public string Predecessor { get; set; }
+        public string Field1 { get; set; }
+        public int FIELD2 { get; set; }
+        public int FIELD3 { get; set; }
+        public int FIELD4 { get; set; }
+        public int FIELD5 { get; set; }
+        public int FIELD6 { get; set; }
+        public int Field7 { get; set; }
+        public int Field8 { get; set; }
+        public int Field9 { get; set; }
+        public int Field10 { get; set; }
+        public int Field11 { get; set; }
+        public int Field12 { get; set; }
+    }
+}
+```
+![Blazor GanttChart with cloumn virtualization](./images/column-virtual-scroll.gif)
+
 ## Limitations for Virtualization
 
 * Due to the element height limitation in browsers, the maximum number of records loaded by the Gantt chart is limited by the browser capability.
@@ -162,3 +421,4 @@ namespace GanttComponent.Data
 * Programmatic selection using the **SelectRows** method is not supported in virtual scrolling.
 * Currently Editing, Row Drag and Drop are not supported with Virtual scrolling.
 * Collapse all and expand all actions are performed only for the current view-port data in virtual scrolling.
+* While using column virtualization, column width should be in the pixel. Percentage values are not accepted.
