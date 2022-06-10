@@ -156,7 +156,7 @@ namespace GanttComponent.Data
 
 ## Column virtualization
 
-Column virtualization allows you to virtualize columns. It will render columns which are in the viewport. You can scroll horizontally to view more columns.
+Column virtualization allows you to load more number of column with high performance. It renders only the columns which are in the viewport and other columns are rendered on demands while horizontal scrolling.
 
 To setup the column virtualization, set the
 [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableVirtualization) and
