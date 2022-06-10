@@ -213,6 +213,55 @@ The following are three types of `ClipMode`:
 > NOTE
 > By default, all the column's `ClipMode` property is defined as `EllipsisWithTooltip`.
 
+## Editing tooltip
+
+It is possible to enable or disable the tooltip while performing editing actions on taskbar like left resizing, right resizing, dragging and progress resizing by using the [GanttTooltipSettings.ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTooltipSettings-1.html#Syncfusion_Blazor_Gantt_GanttTooltipSettings_1_ShowTooltip) property. By default, this property is set to true.
+
+```cshtml
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" TreeColumnIndex="1"
+    Toolbar="@(new List<string>() { "Add", "Cancel", "CollapseAll", "Delete", "Edit", "ExpandAll", "Search", "Update" , "Indent" , "Outdent"})">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+        Duration="Duration" Progress="Progress" Dependency="Predecessor" ParentID="ParentId" Notes="Notes">
+    </GanttTaskFields>
+    <GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" AllowAdding="true" AllowDeleting="true">
+    </GanttEditSettings>
+    <GanttTooltipSettings ShowTooltip="true" TValue="TaskData"></GanttTooltipSettings>
+</SfGantt>
+@code {
+    private List<TaskData> TaskCollection { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = this.TaskCollection = GetTaskCollection();
+    }
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public string Predecessor { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>() {
+            new TaskData() {TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21)},
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2019, 04, 02), Duration = "3", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2019, 04, 02), Duration = "4", Progress = 40, Predecessor = "2FS", ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2019, 04, 02), Duration = "0", Progress = 30, Predecessor = "3FF", ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21)},
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 40, Predecessor = "6SS", ParentId = 5 }
+        };
+        return Tasks;
+    }
+```
+
+![Blazor Gantt Chart displays Editing Tooltip](images/editing_tooltip.gif)
+
 ## Tooltip template
 
 ### Taskbar tooltip
@@ -274,31 +323,58 @@ The below screenshot shows the output of above code example.
 
 ![Blazor Gantt Chart displays Taskbar Tooltip](images/blazor-gantt-chart-with-taskbar-tooltip.png)
 
-<!-- Taskbar editing tooltip
+### Taskbar editing tooltip
 
-The taskbar editing tooltip can be customized using the `GanttTooltipSettings.Editing` property. The following code example shows how to customize the taskbar editing tooltip in Gantt Chart.
+The taskbar editing tooltip can be customized using the [GanttTooltipSettings.EditingTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTooltipSettings-1.html#Syncfusion_Blazor_Gantt_GanttTooltipSettings_1_EditingTemplate) property. The following code example shows how to customize the taskbar editing tooltip in Gantt Chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
-    </GanttTaskFields>
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"    Progress="Progress" ParentID="ParentId"></GanttTaskFields>
+    <GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" AllowAdding="true"
+        AllowDeleting="true"  ShowDeleteConfirmDialog="true">
+    </GanttEditSettings>
     <GanttTooltipSettings ShowTooltip="true" TValue="TaskData">
         <EditingTemplate>
-            @{
-                <div>Duration: @context.Duration</div>
-            }
-        </EditingTemplate>
-    </GanttTooltipSettings>
-    <GanttEditSettings AllowTaskbarEditing="true"></GanttEditSettings>
+            <table>
+                @{
+                    var template = (context as TaskData);
+                    if (TaskbarEditAction == "LeftResizing")
+                    {
+                        <tr> <td style="padding:3px">@(template.StartDate.ToString("MMM dd, yyyy"))</td> </tr>
+                        <tr> <td style="padding:6px">@(template.Duration) days</td> </tr>
+                    } 
+                    else if (TaskbarEditAction == "RightResizing")
+                    {
+                        <tr> <td style="padding:3px">@(template.EndDate.ToString("MMM dd, yyyy"))</td> </tr>
+                        <tr> <td style="padding:6px">@(template.Duration) days</td> </tr>
+                    }
+                    else if (TaskbarEditAction == "ChildDrag" || TaskbarEditAction == "ParentDrag" || TaskbarEditAction == "MilestoneDrag")
+                    {
+                        <tr> <td style="padding:3px">@(template.StartDate.ToString("MMM dd, yyyy"))</td> </tr>
+                        <tr> <td style="padding:3px">@(template.EndDate.ToString("MMM dd, yyyy"))</td> </tr>
+                    }
+                    else if (TaskbarEditAction == "ProgressResizing")
+                    {
+                        tr> <td style="padding:3px">@(template.Progress) %</td> </tr>
+                    }
+                }
+            </table>
+            </EditingTemplate>
+        </GanttTooltipSettings>
+        <GanttEvents TaskbarEditing="TaskbarEditingHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
-@code{
-    public List<TaskData> TaskCollection { get; set; }
+@code {
+    private List<TaskData> TaskCollection { get; set; }
+    private string TaskbarEditAction { get; set; }
+    private void TaskbarEditingHandler(TaskbarEditingEventArgs<TaskData> args)
+    {
+        TaskbarEditAction = args.Action;
+    }
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
     }
-
     public class TaskData
     {
         public int TaskId { get; set; }
@@ -307,72 +383,27 @@ The taskbar editing tooltip can be customized using the `GanttTooltipSettings.Ed
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public List<TaskData> SubTasks { get; set; }
+        public int? ParentId { get; set; }
     }
 
-    public static List <TaskData> GetTaskCollection() {
-    List <TaskData> Tasks = new List <TaskData> () {
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 70
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 50
-                },
-                new TaskData() {
-                    TaskId = 4,
-                    TaskName = "Soil test approval",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 50
-                },
-            })
-        },
-        new TaskData() {
-            TaskId = 5,
-            TaskName = "Project estimation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 6,
-                    TaskName = "Develop floor plan for estimation",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 70,
-                },
-                new TaskData() {
-                    TaskId = 7,
-                    TaskName = "List materials",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 50
-                },
-            })
-        }
-    };
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>() {
+            new TaskData() {TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21)},
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2019, 04, 02), Duration = "3", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2019, 04, 02), Duration = "4", Progress = 40, Predecessor = "2FS", ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2019, 04, 02), Duration = "0", Progress = 30, Predecessor = "3FF", ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21)},
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 40, Predecessor = "6SS", ParentId = 5 }
+        };
+        return Tasks;
+    }
+}
 
-    return Tasks;
-}
-}
 ```
 
-The below screenshot shows the output of above code example.
-
-![Alt text](images/editingTemplate.png) -->
+![Blazor Gantt Chart displays editing tooltip template](images/editing-tooltip-template.gif)
 
 ### Baseline tooltip
 
