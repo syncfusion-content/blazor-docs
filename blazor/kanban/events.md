@@ -19,8 +19,8 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 @using Syncfusion.Blazor.Kanban
 
-<SfKanban>
-   <KanbanEvents OnLoad="@OnLoadHandler" ></KanbanEvents>
+<SfKanban TValue="TasksModel">
+   <KanbanEvents TValue="TasksModel" OnLoad="@OnLoadHandler" ></KanbanEvents>
 </SfKanban>
 @code{
 
@@ -40,8 +40,8 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 @using Syncfusion.Blazor.Kanban
 
-<SfKanban>
-   <KanbanEvents ActionBegin="@ActionBeginHandler" ></KanbanEvents>
+<SfKanban TValue="TasksModel">
+   <KanbanEvents TValue="TasksModel" ActionBegin="@ActionBeginHandler" ></KanbanEvents>
 </SfKanban>
 @code{
 
@@ -61,8 +61,8 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 @using Syncfusion.Blazor.Kanban
 
-<SfKanban>
-   <KanbanEvents ActionComplete="@ActionCompleteHandler" ></KanbanEvents>
+<SfKanban TValue="TasksModel">
+   <KanbanEvents TValue="TasksModel" ActionComplete="@ActionCompleteHandler" ></KanbanEvents>
 </SfKanban>
 @code{
 
@@ -82,8 +82,8 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 @using Syncfusion.Blazor.Kanban
 
-<SfKanban>
-   <KanbanEvents ActionFailure="@ActionFailureHandler" ></KanbanEvents>
+<SfKanban TValue="TasksModel">
+   <KanbanEvents TValue="TasksModel" ActionFailure="@ActionFailureHandler" ></KanbanEvents>
 </SfKanban>
 @code{
 
@@ -103,8 +103,8 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 @using Syncfusion.Blazor.Kanban
 
-<SfKanban>
-   <KanbanEvents CardClick="@CardClickHandler" ></KanbanEvents>
+<SfKanban TValue="TasksModel">
+   <KanbanEvents TValue="TasksModel" CardClick="@CardClickHandler" ></KanbanEvents>
 </SfKanban>
 @code{
 
@@ -124,8 +124,8 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 @using Syncfusion.Blazor.Kanban
 
-<SfKanban>
-   <KanbanEvents CardDoubleClick="@CardDoubleClickHandler" ></KanbanEvents>
+<SfKanban TValue="TasksModel">
+   <KanbanEvents TValue="TasksModel" CardDoubleClick="@CardDoubleClickHandler" ></KanbanEvents>
 </SfKanban>
 @code{
 
@@ -145,8 +145,8 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 @using Syncfusion.Blazor.Kanban
 
-<SfKanban>
-   <KanbanEvents CardRendered="@CardRenderedHandler" ></KanbanEvents>
+<SfKanban TValue="TasksModel">
+   <KanbanEvents TValue="TasksModel" CardRendered="@CardRenderedHandler" ></KanbanEvents>
 </SfKanban>
 @code{
 
@@ -166,8 +166,8 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 @using Syncfusion.Blazor.Kanban
 
-<SfKanban>
-   <KanbanEvents DataBinding="@DataBindingHandler" ></KanbanEvents>
+<SfKanban TValue="TasksModel">
+   <KanbanEvents TValue="TasksModel" DataBinding="@DataBindingHandler" ></KanbanEvents>
 </SfKanban>
 @code{
 
@@ -187,8 +187,8 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 @using Syncfusion.Blazor.Kanban
 
-<SfKanban>
-   <KanbanEvents DialogClose="@DialogCloseHandler" ></KanbanEvents>
+<SfKanban TValue="TasksModel">
+   <KanbanEvents TValue="TasksModel" DialogClose="@DialogCloseHandler" ></KanbanEvents>
 </SfKanban>
 @code{
 
@@ -208,8 +208,8 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 @using Syncfusion.Blazor.Kanban
 
-<SfKanban>
-   <KanbanEvents DialogOpen="@DialogOpenHandler" ></KanbanEvents>
+<SfKanban TValue="TasksModel">
+   <KanbanEvents TValue="TasksModel" DialogOpen="@DialogOpenHandler" ></KanbanEvents>
 </SfKanban>
 @code{
 
@@ -229,8 +229,8 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 @using Syncfusion.Blazor.Kanban
 
-<SfKanban>
-   <KanbanEvents DragStart="@DragStartHandler" ></KanbanEvents>
+<SfKanban TValue="TasksModel">
+   <KanbanEvents TValue="TasksModel" DragStart="@DragStartHandler" ></KanbanEvents>
 </SfKanban>
 @code{
 
@@ -250,8 +250,8 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 @using Syncfusion.Blazor.Kanban
 
-<SfKanban>
-   <KanbanEvents DragStop="@DragStopHandler" ></KanbanEvents>
+<SfKanban TValue="TasksModel">
+   <KanbanEvents TValue="TasksModel" DragStop="@DragStopHandler" ></KanbanEvents>
 </SfKanban>
 @code{
 
@@ -271,8 +271,8 @@ This section explains the list of events of the [Blazor Kanban](https://www.sync
 
 @using Syncfusion.Blazor.Kanban
 
-<SfKanban>
-   <KanbanEvents QueryCellInfo="@QueryCellInfoHandler" ></KanbanEvents>
+<SfKanban TValue="TasksModel">
+   <KanbanEvents TValue="TasksModel" QueryCellInfo="@QueryCellInfoHandler" ></KanbanEvents>
 </SfKanban>
 @code{
 
