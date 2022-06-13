@@ -7,73 +7,63 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Data Binding in Blazor RichTextEditor Component
+# Value Binding in Blazor RichTextEditor
 
-This section explains how to bind the `Value` to the Rich Text Editor component that can be achieved in the following ways:
+You can bind the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) to the editor component, by using the `@bind-Value` attribute. If component value has been changed, it will affect all the places where the variable is bound for the bind-value attribute.
 
-* One-way data binding
-* Two-way data binding
-* Dynamic value binding
+{% tabs %}
+{% highlight razor tabtitle="~/value-binding.razor" %}
 
-## One-way data binding
+{% include_relative code-snippet/value-binding.razor %}
 
-You can bind the value to the Rich Text Editor by using the `Value` property directly as string or from code-behind as the following example.
+{% endhighlight %}
+{% endtabs %}
 
-```cshtml
+## Auto save
 
-@using Syncfusion.Blazor.RichTextEditor
+The Rich Text Editor saves its content automatically when you focus out the editor, and you can save its content automatically at regular intervals based on the [SaveInterval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_SaveInterval) and [AutoSaveOnIdle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_AutoSaveOnIdle) properties while editing.
 
-<SfRichTextEditor Value="@Value" />
+* If `AutoSaveOnIdle` is set to true, the content is saved if the editor is idle for the number of milliseconds specified in the `SaveInterval` property.
 
-@code {
-    private string Value { get; set; } = "<p>Syncfusion RichTextEditor</p>";
-}
+* If `AutoSaveOnIdle` is set to false, the editor saves the content at the regular interval of milliseconds specified in the `SaveInterval` property.
+AutoSaveOnIdle is set to true in this demo, and the SaveInterval is set to 5 seconds.
 
-```
-
-## Two-way data binding
-
-The two-way data binding can be achieved by using the `@bind-Value` attribute from code-behind in Rich Text Editor.
-
-
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="~/auto-save.razor" %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
-<SfRichTextEditor @bind-Value="@Value" />
+<SfRichTextEditor ID="AutoSave" SaveInterval="saveInterval" AutoSaveOnIdle="true" Value="@Value">
+    <p>Type or edit the content to be saved automatically in the editor </p>
+    <RichTextEditorEvents ValueChange="UpdateStatus" />
+</SfRichTextEditor>
 
-<br />
-
-<textarea rows="5" cols="60" @bind="@Value" />
-
-@code {
-    private string Value { get; set; } = "<p>Syncfusion RichTextEditor</p>";
-}
-
-```
-
-## Dynamic value binding
-
-You can update the value dynamically by using the `Value` property.
-
-```cshtml
-
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.RichTextEditor
-
-<SfButton @onclick="@Update">Update Value</SfButton>
-
-<SfRichTextEditor Value="@Value" />
-
-@code {
-    private string Value { get; set; } = "<p>Syncfusion RichTextEditor</p>";
-
-    private void Update()
+@code{
+    private string Value { get; set; } = "<p>Start to type a content to save </p>";
+    private int saveInterval { get; set; } = 5000;
+    private void UpdateStatus(Syncfusion.Blazor.RichTextEditor.ChangeEventArgs args)
     {
-        this.Value = "<p>Dynamic Value</p>";
+        // Place the codes here, which save the Rich Text Editor value into database.
+        this.Value = args.Value;
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
+
+## Get editor content
+
+You can also get the RichTextEditor's edited content by using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_ValueChange) event to get the updated edited value.
+
+When the user changes the content, the ValueChange event is invoked on every [SaveInterval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_SaveInterval) time or when the editor loses focus.
+
+{% tabs %}
+{% highlight razor tabtitle="~/event.razor" %}
+
+{% include_relative code-snippet/event.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
 
 > You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
