@@ -68,15 +68,13 @@ Enable or disable the floating toolbar using [EnableFloating](https://help.syncf
 
 ## Quick Toolbar 
 
-Quick commands are opened as context-menu on clicking the corresponding element. The commands must be passed to image, link and table attributes of the [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html) property.
+The Rich text editor has quick toolbars that are open as context-menu on clicking the image, link, and table elements. By default, the below quick toolbar items show on click on the corresponding elements. You can customize the quick toolbar items using the [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html) property.
 
 | Target Element | Default Quick Toolbar items |
 |----------------|---------|
 | Image | 'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', 'Display', 'AltText', 'Dimension'. |
 | Link | 'Open', 'Edit', 'UnLink'. |
 | Table | 'TableHeader', 'TableRows', 'TableColumns', 'BackgroundColor', 'TableRemove', 'Alignments', 'TableCellVerticalAlign', 'Styles'. |
-
-The following sample demonstrates the option to insert the image to the Rich Text Editor content as well as option to rotate the image through the quick toolbar. The image rotation functionalities have been achieved through the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnToolbarClick) event.
 
 ### Image quick Toolbar
 
