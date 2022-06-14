@@ -149,6 +149,8 @@ else if (OrderIDFreezeDirection == FreezeDirection.Right)
 
 ![Customize Column Menu in Blazor DataGrid](images/blazor-datagrid-custom-column-menu.gif)
 
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-customize-column-menu)
+
 <!-- Column menu events
 
 The grid component triggers the below events when column menu operations are performed,
