@@ -283,4 +283,4 @@ Change the type of the ProgressBar by using the [Type](https://help.syncfusion.c
 
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ProgressBar).
 
-N> You can refer to our [Blazor ProgressBar](https://www.syncfusion.com/blazor-components/blazor-progressbar) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor ProgressBar example](https://blazor.syncfusion.com/demos/progress-bar/linear?theme=fluent) that shows how to configure the ProgressBar.
+N> You can also explore our [Blazor ProgressBar example](https://blazor.syncfusion.com/demos/progress-bar/linear?theme=fluent) that shows how to render and configure the ProgressBar.
