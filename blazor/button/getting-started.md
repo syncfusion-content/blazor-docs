@@ -271,10 +271,10 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Button).
 
+N> You can also explore our [Blazor Button example](https://blazor.syncfusion.com/demos/buttons/default-functionalities?) that shows how to configure the button.
+
 ## See Also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)
 * [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)
-
-N> You can refer to our [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Button example](https://blazor.syncfusion.com/demos/buttons/default-functionalities?) that shows how to configure the button.
