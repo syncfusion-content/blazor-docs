@@ -7,7 +7,7 @@ control: Pager
 documentation: ug
 ---
 
-# Customization in Pager DataGrid Component
+# Customization in Pager Component
 
 ## Custom text
 
