@@ -278,6 +278,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Tooltip).
 
 N> You can also explore our [Blazor Tooltip example](https://blazor.syncfusion.com/demos/tooltip/default?) that shows how to render and  configure the tooltip.
+
 ## See Also
 
 * [Positioning Tooltip](./position)
