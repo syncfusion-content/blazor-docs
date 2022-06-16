@@ -844,6 +844,8 @@ You can auto fit columns when the column visibility is changed using column choo
 @code{
     public string[] ToolbarItems = new string[] { "ColumnChooser" };
     SfGrid<EmployeeData> Grid{ get; set; }
+    public List<EmployeeData> Employees { get; set; }
+
     public async Task Complete(ActionEventArgs<EmployeeData> Args)
     {
         if(Args.RequestType == Syncfusion.Blazor.Grids.Action.ColumnState)
@@ -852,6 +854,29 @@ You can auto fit columns when the column visibility is changed using column choo
             await Grid.AutoFitColumnsAsync();
         }
     }
+
+    protected override void OnInitialized()
+    {
+        Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
+        {
+            EmployeeID = x,
+            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+            LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
+            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
+                                    "Inside Sales Coordinator" })[new Random().Next(4)],
+            HireDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class EmployeeData
+    {
+        public int? EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Title { get; set; }
+        public DateTime? HireDate { get; set; }
+    }
+}
 
 ```
 
@@ -1272,5 +1297,9 @@ In the following sample, the columns **Order Date**, and **Freight** are grouped
 ```
 
 ![Stacked Column Header in Blazor DataGrid](./images/blazor-datagrid-stacked-column-header.png)
+
+## See also
+
+* [How to create a Custom Grid Column component](https://www.syncfusion.com/kb/12703/blazor-grid-how-to-create-a-custom-grid-column-component)
 
 > You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
