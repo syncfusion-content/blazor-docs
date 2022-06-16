@@ -11,7 +11,7 @@ documentation: ug
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on the user preference.
 
-## Customizing Accordion
+## Customizing accordion
 
 Use the following CSS to customize the [Accordion](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html).
 
@@ -23,7 +23,7 @@ Use the following CSS to customize the [Accordion](https://help.syncfusion.com/c
 
 ```
 
-## Customizing the Accordion's items
+## Customizing the accordion items
 
 Use the following CSS to customize the items of Accordion.
 
@@ -37,7 +37,7 @@ Use the following CSS to customize the items of Accordion.
 
 ```
 
-## Customizing Accordion's header
+## Customizing accordion item header
 
 Use the following CSS to customize the header of Accordion control.
 
@@ -50,7 +50,7 @@ Use the following CSS to customize the header of Accordion control.
 
 ```
 
-## Customizing Accordion's expand and collapse icons
+## Customizing accordion expand and collapse icons
 
 The following CSS can be viewed to customize the expand and collapse icons of the Accordion control.
 
@@ -62,7 +62,7 @@ The following CSS can be viewed to customize the expand and collapse icons of th
 
 ```
 
-## Customizing the hover state of Accordion control
+## Customizing the hover state of accordion
 
 Use the following CSS to customize the [accordion item](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html) when hovering.
 
@@ -74,7 +74,7 @@ Use the following CSS to customize the [accordion item](https://help.syncfusion.
 
 ```
 
-## Customizing selected item of Accordion control
+## Customizing selected item of accordion
 
 Use the following CSS to customize the selected accordion item.
 
@@ -98,7 +98,7 @@ Use the following CSS to customize the selected accordion item text.
 
 ```
 
-## Customize each Accordion Item Header
+## Customize each accordion item header
 
 You can customize each accordion item header by setting [AccordionItem.CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_CssClass) property.
 
