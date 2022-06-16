@@ -98,9 +98,9 @@ Use the following CSS to customize the selected accordion item text.
 
 ```
 
-## Customize each Accordion Item Header
+## Customize each accordion item header
 
-[Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) support you can customize each accordion item header by setting `AccordionItem.CssClass` property.
+You can customize each accordion item header by setting [AccordionItem.CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_CssClass) property.
 
 ```cshtml
 
