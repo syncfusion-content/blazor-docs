@@ -131,4 +131,4 @@ Use the following CSS to customize the selected accordion item text.
 
 ```
 
-![Blazor Accordion with CssClass property](./images/blazor-accordion-CssClass.png)
+![Accordion Item Header Appearance Customization](./images/accordino-item-header-appearance.png)
