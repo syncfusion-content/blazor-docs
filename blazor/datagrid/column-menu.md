@@ -74,7 +74,7 @@ The following image represents DataGrid with column menu property enabled,
 
 Custom column menu items can be added by defining [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) as a collection of [ColumnMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuItemModel.html) class. Actions for the customized column menu item can be defined in the [ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnMenuItemClicked) event of the Grid.
 
-In the following sample, we have changed the freeze direction of the column using the custom column menu:
+In the following sample, we have initially frozen the OrderID column on the left side. When you click the custom column menu for the corresponding column, the freeze direction of the OrderID column is changed.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
