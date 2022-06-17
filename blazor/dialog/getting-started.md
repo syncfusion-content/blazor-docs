@@ -433,8 +433,6 @@ By adding the [DialogButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Dialog).
 
-N>  You can also explore our [Blazor Dialog example](https://blazor.syncfusion.com/demos/dialog/default-functionalities?theme=fluent) that shows how to render and configure the Dialog.
-
 ## See Also
 
 * [Getting Started with Syncfusion Blazor for client-side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli/)
@@ -443,3 +441,4 @@ N>  You can also explore our [Blazor Dialog example](https://blazor.syncfusion.c
 
 * [Getting Started with Syncfusion Blazor for server-side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli/)
 
+N>  You can also explore our [Blazor Dialog example](https://blazor.syncfusion.com/demos/dialog/default-functionalities?theme=fluent) that shows how to render and configure the Dialog.
