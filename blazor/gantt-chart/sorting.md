@@ -63,7 +63,7 @@ The following screenshot shows the output of multicolumn sorting in Gantt Chart 
 > * Gantt Chart columns are sorted in the ascending order. If you click the already sorted column, the sort direction toggles.
 > * To disable sorting for a particular column, set the `GanttColumn.AllowSorting` property to false.
 
-## Sorting column on Gantt Chart initialization
+## Sorting column on Gantt chart initialization
 
 The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component can be rendered with sorted columns initially, and this can be achieved by using the `GanttSortSettings` property. You can add columns that are sorted initially in the `GanttSortSettings.GanttSortDescriptors` collection defined with `Field` and `Direction` properties. The following code example shows how to add the sorted column to Gantt Chart initialization.
 
@@ -172,7 +172,7 @@ Columns in the Gantt Chart component can be sorted dynamically using the [SortBy
 
 ![Sorting in Blazor Gantt Chart](images/blazor-gantt-chart-sorting.png)
 
-## Clear all the sorted Columns dynamically
+## Clear all the sorted columns dynamically
 
 In the Gantt Chart component, you can clear all the sorted columns and return to previous position using the [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ClearSortingAsync) public method. The following code snippet shows how to clear all the sorted columns by clicking the custom button.
 

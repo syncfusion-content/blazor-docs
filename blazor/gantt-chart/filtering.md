@@ -62,7 +62,7 @@ The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gan
 
 > The `AllowFiltering` property should be set to `true` to enable the filter menu. Setting the `GanttColumn.AllowFiltering` property to `false` prevents rendering the filter menu for a particular column.
 
-### Filter Hierarchy Modes
+### Filter hierarchy modes
 
 The Gantt Chart supports a set of filtering modes with the [GanttFilterSettings.HierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttFilterSettings.html#Syncfusion_Blazor_Gantt_GanttFilterSettings_HierarchyMode) property. The following are the types of filter hierarchy modes available in the Gantt Chart component:
 
@@ -118,7 +118,7 @@ The Gantt Chart supports a set of filtering modes with the [GanttFilterSettings.
 }
 ```
 
-### Initial Filter
+### Initial filter
 
 To apply the filter at initial rendering, set the filter `Predicate` collections in the [GanttFilterSettings.Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttFilterSettings.html#Syncfusion_Blazor_Gantt_GanttFilterSettings_Columns) property.
 
@@ -247,7 +247,7 @@ In the following sample, type **Perform** in the **TaskName** column to filter d
 
 ![Filtering Diacritic Characters in Blazor Gantt Chart](images/blazor-gantt-chart-filter-diacritic-charater.png)
 
-### Filtering a specific column by Method
+### Filtering a specific column by method
 
 You can filter the columns dynamically by using the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_FilterByColumnAsync_System_String_System_String_System_String_) method.
 
