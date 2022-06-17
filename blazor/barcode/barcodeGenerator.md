@@ -165,6 +165,20 @@ In barcode generators, you can customize the barcode text by using display [Text
 
 ![Customizing the Text in Blazor Barcode](images/blazor-barcode-text-customization.png)
 
+## Enable Check Sum
+The [EnableCheckSum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_EnableCheckSum) property specifies an error detection in which some additional characters are added to a barcode to protect the integrity of barcode data. The default value of this property is set as true for BarcodeType.Code39. 
+
+The below code explains on how to set the EnableCheckSum property to hide the extra characters displayed at the end of the barcode.
+
+```cshtml
+<SfBarcodeGenerator EnableCheckSum=false
+                    Width="200px"
+                    Height="150px"
+                    Type="@BarcodeType.Code39"
+                    Value="SYNCFUSION">
+</SfBarcodeGenerator>
+```
+
 ## Event
 
 [OnValidationFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_OnValidationFailed) event in the [SfBarcodeGenerator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html) is used to trigger when the input is an invalid string.

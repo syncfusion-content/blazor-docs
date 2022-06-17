@@ -61,6 +61,25 @@ In barcode generators, you can customize the barcode text by using display [Text
 
 ![Customizing the Text for QR Code in Blazor Barcode](images/blazor-barcode-qrcode-text-customization.png)
 
+## Error Correction Level
+
+The QR Barcode employs error correction to generate a series of error correction codewords which are added to the data code word sequence in order to enable the symbol to withstand damage without loss of data. There are four user–selectable levels of error correction, as shown in the table, offering the capability of recovery from the following amounts of damage. By default the [Error correction level](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.ErrorCorrectionLevel.html) is Low.
+
+Error Correction Level Table
+
+|Error Correction Level|	Recovery Capacity % (approx.)|
+|----------|--------------|
+|L	|7|
+|M	|15|
+|Q	|25|
+|H	|30|
+
+```cshtml
+<SfQRCodeGenerator Width="200px" Height="200px" ErrorCorrectionLevel="ErrorCorrectionLevel.Low" Value=https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.ErrorCorrectionLevel.html>
+    <QRCodeGeneratorDisplayText Visibility="false"></QRCodeGeneratorDisplayText>
+</SfQRCodeGenerator>
+```
+
 ## Event
 
 [OnValidationFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfQRCodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfQRCodeGenerator_OnValidationFailed) event in the [SfQRCodeGenerator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfQRCodeGenerator.html) is used to trigger when the input is an invalid string.
