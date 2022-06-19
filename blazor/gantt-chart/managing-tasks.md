@@ -299,7 +299,7 @@ Modify the task details through the edit dialog by setting the `GanttEditSetting
 
 ![Dialog Editing in Blazor Gantt Chart](images/blazor-gantt-chart-dialog-editing.png)
 
-#### Sections or Tabs in Dialog
+#### Sections or tabs in Dialog
 
 In the Gantt Chart dialog, you can define the required tabs or editing sections using the [GanttAddDialogFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAddDialogFields.html) and [GanttEditDialogFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditDialogFields.html) properties. Every tab is defined using the `GanttAddDialogField.Type` or `GanttEditDialogField.Type` property.
 
@@ -391,7 +391,7 @@ Tabs in Add Dialog
 
 ![Adding New DialogTabs in Blazor Gantt Chart](images/blazor-gantt-chart-add-dialogtab.png)
 
-#### Limiting Data Fields in General Tab
+#### Limiting data fields in general tab
 
 In the Gantt Chart dialog, you can make only specific data source fields visible for editing by using the `GanttAddDialogFields` and `GanttEditDialogFields` properties. The data fields are defined with `GanttEditDialogField.Type` and `GanttEditDialogField.Fields` properties.
 
@@ -711,7 +711,7 @@ Tasks' value can be dynamically updated by using the [UpdateRecordByIDAsync](htt
 
 ![Updating Record in Blazor Gantt Chart](images/blazor-gantt-chart-update-record.png)
 
-## Cell Edit Type and its Params
+## Cell edit type and its params
 
 The `GanttColumn.EditType` is used to customize the edit type of the particular column. You can set the `GanttColumn.EditType` based on data type of the column.
 
@@ -1050,7 +1050,7 @@ The following code snippet explains how to enable the delete confirmation messag
 
 ![Blazor Gantt Chart displays Delete Confirmation Dialog](images/blazor-gantt-chart-delete-confirmation-dialog.png)
 
-## Entity FrameWork
+## Entity frameWork
 
 You need to follow the below steps to consume data from the **Entity Framework** in the Gantt Chart component.
 
@@ -1174,11 +1174,11 @@ namespace GanttEF.Models
 
 The following sections will give details about the steps that need to be followed when working with server-side and client-side applications individually. You can also find samples attached at the end of each section for server-side applications and client-side applications.
 
-### Entity Framework in Server-Side Application
+### Entity framework in server-side application
 
 You need to follow the following steps when working with a server-side application.
 
-#### Custom Adaptor
+#### Custom adaptor
 
 In Gantt Chart, you can fetch data from the SQL database using `Entity Framework` Data Model and update the changes on CRUD action to the server by using `DataManager` support. To communicate with the remote data, `CustomAdaptor` of DataManager property is used to call the server method. You can know more about `CustomAdaptor` from [here](https://blazor.syncfusion.com/documentation/data/custom-binding/). You can populate the datasource in Gantt from the SQL table using Entity Framework using **Read** method. Please Check the following code snippet to assign the data source to Gantt.
 
@@ -1226,7 +1226,7 @@ In Gantt Chart, you can fetch data from the SQL database using `Entity Framework
 }
 ```
 
-#### Perform CRUD operation in CustomAdaptor
+#### Perform CRUD operation in custom adaptor
 
 All the CRUD operations in the Gantt Chart are done through DataManager. The DataManager has an option to bind all the CRUD related data in server-side.
 
@@ -1318,11 +1318,11 @@ Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "Exp
 
 >You can find the sample for server-side application using entity framework [here](https://github.com/SyncfusionExamples/Blazor-Gantt-Chart-with-Entity-framework).
 
-### Entity Framework in client-side application
+### Entity framework in client-side application
 
 You need to follow the following steps when working with a client-side application.
 
-#### Custom Adaptor
+#### Custom adaptor
 
 In Gantt Chart, you can fetch data from the SQL database using `Entity Framework` Data Model and update the changes on CRUD action to the server by using `DataManager` support. To communicate with the
 remote data, `CustomAdaptor` of DataManager property is used to call the server method. You can know more about `CustomAdaptor` from [here](https://blazor.syncfusion.com/documentation/data/custom-binding/). You can populate the datasource in Gantt from the SQL table using Entity Framework using **ReadAsync** method. Please Check the following code snippet to assign the data source to Gantt.
@@ -1371,7 +1371,7 @@ remote data, `CustomAdaptor` of DataManager property is used to call the server 
 
 ```
 
-#### Perform CRUD operation in CustomAdaptor
+#### Perform CRUD operation in custom adaptor
 
 All the CRUD operations in the Gantt Chart are done through DataManager. The DataManager has an option to bind all the CRUD related data in server-side.
 
@@ -1444,7 +1444,7 @@ The following sample code explains you about, how to implement CRUD operations f
 
 You can find the sample for client-side application using entity framework [here](https://github.com/SyncfusionExamples/Blazor-Gantt-Chart-Client-Side-Application-with-EF).
 
-## Indent and Outdent
+## Indent and outdent
 
 Indent and Outdent of a task are used to update the level of task in the hierarchical order of the task. It can be performed by enabling the `GanttEditSettings.AllowEditing` property.
 

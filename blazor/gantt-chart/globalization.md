@@ -253,7 +253,7 @@ namespace BlazorServer
 }
 ```
 
-### Blazor WebAssembly
+### Blazor webAssembly
 
 The following examples demonstrate how to enable **Localization** for Gantt in client-side Blazor samples.
 
@@ -379,7 +379,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 
 [Changing culture and Adding Resx file in the application](https://blazor.syncfusion.com/documentation/gantt-chart/globalization/#localization)
 
-## Right to Left (RTL)
+## Right to left (RTL)
 
 RTL provides an option to switch the text direction and layout of the Gantt component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). In the following sample, **EnableRtl** property is used to enable RTL in the Gantt.
 

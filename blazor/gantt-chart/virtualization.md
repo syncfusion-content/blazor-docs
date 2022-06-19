@@ -11,7 +11,7 @@ documentation: ug
 
 Gantt Chart allows you to load a large amount of data without performance degradation.
 
-## Row Virtualization
+## Row virtualization
 
 Row virtualization allows you to render rows only in the content viewport on load time. It is an alternative way of paging in which the rows will be loaded while scrolling vertically. To set up the row virtualization, you need to define `EnableVirtualization` as true and content height by [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_Height) property.
 
@@ -277,7 +277,7 @@ To set up the column virtualization, set the [EnableVirtualization](https://help
 
 ![Blazor GanttChart with cloumn virtualization](./images/Column_Virtual.gif)
 
-## Limitations for Virtualization
+## Limitations for virtualization
 
 * Due to the element height limitation in browsers, the maximum number of records loaded by the Gantt chart is limited by the browser capability.
 * It is necessary to mention the height of the Gantt in pixels when enabling Virtual Scrolling.

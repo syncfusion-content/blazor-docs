@@ -726,7 +726,7 @@ You can toggle the column visibility based on media queries, which are defined i
 }
 ```
 
-## Change Tree/Expander column
+## Change tree/expander column
 
 The tree/expander column is a column in the Gantt Chart component that has icons to expand or collapse the parent records. You can define the tree column index in the Gantt Chart component by using the `TreeColumnIndex` property and the default value of this property is `0`. The following code example shows how to use this property.
 
@@ -838,7 +838,7 @@ You can show or hide gantt component columns dynamically using external buttons 
 }
 ```
 
-## Controlling Gantt Column actions
+## Controlling Gantt column actions
 
 You can enable or disable gantt component action for a particular column by setting the `AllowFiltering`, `AllowSorting`, `AllowReordering`, and `AllowEditing` properties.
 
@@ -894,7 +894,7 @@ You can enable or disable gantt component action for a particular column by sett
 }
 ```
 
-## Column Type
+## Column type
 
 Column type can be specified using the `GanttColumn.Type` property. It specifies the type of data the column binds. If the `GanttColumn.Format` is defined for a column, the column uses `GanttColumn.Type` to select the appropriate format option number or date.
 
