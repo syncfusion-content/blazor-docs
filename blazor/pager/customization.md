@@ -21,6 +21,8 @@ The `CustomText` property of a pager allows you to add custom text along with nu
 
 ```
 
+![Blazor Pager with Custom Text](./images/blazor-pager-custom-text.png)
+
 ## External message
 
 The pager control also allows to define a external message using `ExternalMessage` API to display an additional information. To use external message, we need to enable it using `EnableExternalMessage` API. In the sample below, the `ExternalMessage` of pager is used to show the current active page of the pager control. Whenever the current page value of the pager changes, the `ExternalMessage` will be updated with the current page value.
@@ -44,6 +46,8 @@ The pager control also allows to define a external message using `ExternalMessag
 
 ```
 
+![Blazor Pager with External Message](./images/blazor-pager-external-message.png)
+
 ## Custom CSS
 
 Pager control allows you to customize the appearance using user defined CSS and custom skin options such as colors and backgrounds. To apply custom themes, we can make use of `CssClass` property. Using `CssClass` property, we can override the existing theme styles. In the following sample, the value for `CssClass` property is set as customCss and this root class is used to customize the pager control theme.
@@ -66,3 +70,5 @@ Pager control allows you to customize the appearance using user defined CSS and 
         
 </style>
 ```
+
+![Blazor Pager with Custom CSS](./images/blazor-pager-custom-css.png)
