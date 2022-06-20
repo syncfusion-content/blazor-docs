@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor Pager Component | Syncfusion
-description: Checkout and learn here all about Globalization in Syncfusion Blazor Pager component and much more.
+description: Checkout and learn here all about Globalization in Syncfusion Blazor Pager component and much more details.
 platform: Blazor
 control: Pager
 documentation: ug
