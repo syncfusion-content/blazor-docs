@@ -566,3 +566,5 @@ In the following sample, the Grid headers will be sticky while scrolling the Gri
 }
 
 ```
+
+![Sticky Header in Blazor DataGrid](./images/blazor-datagrid-sticky-header.gif)
