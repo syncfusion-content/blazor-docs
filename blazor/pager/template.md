@@ -7,7 +7,7 @@ control: Pager
 documentation: ug
 ---
 
-# Pager Template
+# Pager Component with Template
 
 The Pager component provides an option to render a custom element or content in the Pager. This can be achieved by using the `Template` property of the Pager. 
 
