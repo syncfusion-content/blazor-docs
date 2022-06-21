@@ -16,7 +16,7 @@ The MultiSelect allows the user to select and tag the typed custom value that is
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-<SfMultiSelect TValue="string[]" Placeholder="Favorite Sports" AllowCustomValue=true DataSource="@LocalData">
+<SfMultiSelect TValue="Games[]" TItem="Games" Placeholder="Favorite Sports" AllowCustomValue=true DataSource="@LocalData">
     <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
