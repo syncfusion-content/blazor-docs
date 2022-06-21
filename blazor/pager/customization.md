@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in Blazor Pager Component | Syncfusion
-description: Checkout and learn here all about Customization in the Syncfusion Blazor Pager component and much more.
+description: Checkout and learn here all about how to customize the elements of Syncfusion Blazor Pager component and much more.
 platform: Blazor
 control: Pager
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Custom text
 
-The `CustomText` property of a pager allows you to add custom text along with numeric values in the pager numeric elements that are used for navigation in the pager control.
+The Pager component provides an option to define custom text along with numeric items. This can be achieved by using the `CustomText` property. The default value of `CustomText` is "null".
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
@@ -21,36 +21,40 @@ The `CustomText` property of a pager allows you to add custom text along with nu
 
 ```
 
-![Blazor Pager with Custom Text](./images/blazor-pager-custom-text.png)
+<!-- ![Blazor Pager with Custom Text](./images/blazor-pager-custom-text.png) -->
 
 ## External message
 
-The pager control also allows to define a external message using `ExternalMessage` API to display an additional information. To use external message, we need to enable it using `EnableExternalMessage` API. In the sample below, the `ExternalMessage` of pager is used to show the current active page of the pager control. Whenever the current page value of the pager changes, the `ExternalMessage` will be updated with the current page value.
+The Pager component provides an option to display the additional information using the `ShowExternalMessage` property. By enabling the `EnableExternalMessage` property, you can use the external message on the Pager.
+
+In the following sample, an external message is used to show the current active page of the Pager component. Whenever the current page value of the Pager changes, the external message will be updated with the current page value.
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
 
-<SfPager PageCount="5" PageSize="5" TotalItemsCount=50 EnableExternalMessage=true ExternalMessage="@Externalmessage">
+<SfPager PageCount="5" PageSize="5" TotalItemsCount=50 EnableExternalMessage=true ShowExternalMessage ="@Externalmessage">
     <PagerEvents PageChanging="Click" ></PagerEvents>
 </SfPager>
 
 @code{
-    public string Externalmessage { get; set; } = "You are in Page 1 now";
+    public string Externalmessage { get; set; } = "You are in Page No 1 now";
 
     public void Click(PageChangingEventArgs args)
     {
         var pageNumber = args.CurrentPage.ToString();
-        this.Externalmessage = "You are in Page " + pageNumber + " now";
+        this.Externalmessage = "You are in Page No " + pageNumber + " now";
     }
 }
 
 ```
 
-![Blazor Pager with External Message](./images/blazor-pager-external-message.png)
+<!-- ![Blazor Pager with External Message](./images/blazor-pager-external-message.png) -->
 
 ## Custom CSS
 
-Pager control allows you to customize the appearance using user defined CSS and custom skin options such as colors and backgrounds. To apply custom themes, we can make use of `CssClass` property. Using `CssClass` property, we can override the existing theme styles. In the following sample, the value for `CssClass` property is set as customCss and this root class is used to customize the pager control theme.
+To modify the Pager's appearance, you need to override the default CSS of the Pager. This can be achieved by using the `CSSClass` property.
+
+In the following sample, the value for the `CSSClass` property is set as customCss, and this root class is used to customize the Pager appearance.
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
@@ -71,4 +75,4 @@ Pager control allows you to customize the appearance using user defined CSS and 
 </style>
 ```
 
-![Blazor Pager with Custom CSS](./images/blazor-pager-custom-css.png)
+<!-- ![Blazor Pager with Custom CSS](./images/blazor-pager-custom-css.png) -->

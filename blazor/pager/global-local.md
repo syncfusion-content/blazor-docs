@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor Pager Component | Syncfusion
-description: Checkout and learn here all about Globalization in Syncfusion Blazor Pager component and much more details.
+description: Checkout and learn here all about globalization and RTL in Syncfusion Blazor Pager component and much more details.
 platform: Blazor
 control: Pager
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Localization
 
-`Blazor Pager` component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
+Blazor Pager component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
 
 ## Right to left (RTL)
 

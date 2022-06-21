@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pager with Dropdown in Blazor Pager Component | Syncfusion
-description: Checkout and learn here all about Pager with Dropdown in the Syncfusion Blazor Pager component and much more.
+description: Checkout and learn here all about how to render the Syncfusion Blazor Pager component with dropdown and much more.
 platform: Blazor
 control: Pager
 documentation: ug
@@ -12,9 +12,9 @@ documentation: ug
 
 ## Page size list
 
-The `PageSizes` property of the Pager control allows an option to have multiple options of page size values. By enabling `PageSizes`, a dropdown will render in a pager with the current page size as the selected value in the dropdown.
+The Pager component provides an option to change the number of records dynamically using a dropdown list. This can be achieved by using the `PageSizes` property of the Pager. 
 
-The selected value in a dropdown will be set to the `PageSize` property and the pager will refresh based on this new page size.
+In the following sample, the selected value in a dropdown will be set to the `PageSize` property, and the Pager will refresh based on this new page size.
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
@@ -24,4 +24,4 @@ The selected value in a dropdown will be set to the `PageSize` property and the 
 
 ```
 
-![Blazor Pager with Dropdown](./images/blazor-pager-drop-down.png)
+<!-- ![Blazor Pager with Dropdown](./images/blazor-pager-drop-down.png) -->

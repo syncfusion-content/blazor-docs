@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Behaviour Settings in Blazor Pager Component | Syncfusion
-description: Checkout and learn here all about Behaviour Settings in the Syncfusion Blazor Pager component and much more.
+description: Checkout and learn here all about basic functionalites of render the Syncfusion Blazor Pager component and much more.
 platform: Blazor
 control: Pager
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Page size
 
-The `PageSize` property of the Pager control allows an option to get or set a value that indicates whether to define the number of records displayed per page.
+The Pager component provides an option to define the number of records to be displayed per page. This can be achieved by using the `PageSize` property. The default value of the `PageSize` property is "12".
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
@@ -23,7 +23,7 @@ The `PageSize` property of the Pager control allows an option to get or set a va
 
 ## Page count
 
-The `PageCount` property of the Pager control allows an option to get or set a value that indicates whether to define the number of pages displayed in the pager for navigation.
+The Pager component provides an option to define the number of numeric items to be displayed in the Pager for navigation. This can be achieved by using the `PageCount` property. The default value of the `PageCount` property is "10".
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
@@ -35,7 +35,7 @@ The `PageCount` property of the Pager control allows an option to get or set a v
 
 ## Total pages
 
-The `TotalPages` property of the Pager control allows an option to get or set a value for the total number of pages in the Pager. The `TotalPages` value is calculated based on page size and total items.
+The Pager component provides an option to define the number of pages available in the Pager. This can be achieved by using the `TotalPages` property. The `TotalPages` value is calculated based on the `TotalItemsCount`.
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
@@ -47,7 +47,7 @@ The `TotalPages` property of the Pager control allows an option to get or set a 
 
 ## Total items count
 
-The `TotalItemsCount` property of the Pager control allows an option to get the value of the total number of records which are bound to a data item.
+The Pager component provides an option to define the total record count, which is used to render the numeric Pager container. This can be achieved by using the `TotalItemsCount` property of the Pager.
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
@@ -59,12 +59,24 @@ The `TotalItemsCount` property of the Pager control allows an option to get the 
 
 ## Current page
 
-The `CurrentPage` property of the Pager control allows an option to get or set a value that indicates whether to define which page to display currently in the pager.
+The Pager component provides an option to define which page to display currently in the Pager. This can be achieved by using the `CurrentPage` property. The default value of the `CurrentPage` property is "1".
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
 
 <SfPager CurrentPage="1">
+</SfPager>
+
+```
+
+## Show pager message
+
+The Pager component provides an option to show or hide the Pager information in the Pager container. This can be achieved by using the `ShowPagerMessage` property. The default value of the `ShowPagerMessage` is "true". If you set the `ShowPagerMessage` to false, then the Pager information will be hidden.
+
+```csharp
+@using Syncfusion.Blazor.Navigations
+
+<SfPager ShowPagerMessage="true">
 </SfPager>
 
 ```

@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Pager Component
 
-This section briefly explains about how to include `Blazor Pager` component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include Blazor Pager component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 ## Prerequisites
 
@@ -258,4 +258,4 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 ```
 
-![Blazor Pager with Responsive](./images/Capture.PNG)
+<!-- ![Blazor Pager with Responsive](./images/Capture.PNG) -->

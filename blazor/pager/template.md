@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pager with Template in Blazor Pager Component | Syncfusion
-description: Checkout and learn here all about Pager with Template in the Syncfusion Blazor Pager component and much more.
+description: Checkout and learn here all about how to render a custom element in the Syncfusion Blazor Pager component and much more.
 platform: Blazor
 control: Pager
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Pager Template
 
-The Pager template has options to display custom element value or content in the pager. You can use the `Template` of the Pager component to specify the custom content.
+The Pager component provides an option to render a custom element or content in the Pager. This can be achieved by using the `Template` property of the Pager. 
 
 In this following sample, we have rendered two anchor tags for navigating next and previous pages. And the pager info detail is displayed in between those two anchor tags. The anchor tags will be disabled based on the current page number using Pager APIs.
 
@@ -163,3 +163,5 @@ In this following sample, we have rendered two anchor tags for navigating next a
 }
 
 ```
+
+![Blazor Pager with Template](./images/blazor-pager-with-template.gif)
