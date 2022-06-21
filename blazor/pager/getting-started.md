@@ -257,5 +257,3 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 </SfPager>
 
 ```
-
-<!-- ![Blazor Pager with Responsive](./images/Capture.PNG) -->

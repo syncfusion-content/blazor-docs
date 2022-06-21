@@ -21,8 +21,6 @@ The Pager component provides an option to define custom text along with numeric 
 
 ```
 
-<!-- ![Blazor Pager with Custom Text](./images/blazor-pager-custom-text.png) -->
-
 ## External message
 
 The Pager component provides an option to display the additional information using the `ShowExternalMessage` property. By enabling the `EnableExternalMessage` property, you can use the external message on the Pager.
@@ -48,8 +46,6 @@ In the following sample, an external message is used to show the current active 
 
 ```
 
-<!-- ![Blazor Pager with External Message](./images/blazor-pager-external-message.png) -->
-
 ## Custom CSS
 
 To modify the Pager's appearance, you need to override the default CSS of the Pager. This can be achieved by using the `CSSClass` property.
@@ -74,5 +70,3 @@ In the following sample, the value for the `CSSClass` property is set as customC
         
 </style>
 ```
-
-<!-- ![Blazor Pager with Custom CSS](./images/blazor-pager-custom-css.png) -->

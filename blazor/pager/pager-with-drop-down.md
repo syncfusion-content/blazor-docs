@@ -23,5 +23,3 @@ In the following sample, the selected value in a dropdown will be set to the `Pa
 </SfPager>
 
 ```
-
-<!-- ![Blazor Pager with Dropdown](./images/blazor-pager-drop-down.png) -->
