@@ -275,7 +275,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 
 ![Blazor Tooltip Component](./images/blazor-tooltip.gif)
 
-> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Tooltip).
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Tooltip)..
 
 ## See Also
 
@@ -290,3 +290,5 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 * [Getting Started with Syncfusion Blazor for Client-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
 
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)
+
+N> You can also explore our [Blazor Tooltip example](https://blazor.syncfusion.com/demos/tooltip/default?) that shows how to render and  configure the tooltip
