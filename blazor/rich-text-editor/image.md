@@ -13,7 +13,7 @@ Rich Text Editor allows inserting images from online sources and local computer 
 
 | Options | Description |
 |----------------|---------|
-| AllowedTypes | Specifies the extensions of the image types allowed to insert on bowering and passing the extensions with comma separators. For example, pass AllowedTypes as .jpg and .png.|
+| AllowedTypes | Specifies the extensions of the image types allowed to insert on bowering and passing the extensions with List<string>. For example, private List<string> AllowedTypes = new List<string> { ".jpg",".png", ".gif" };|
 | Display | Sets the default display for an image when it is inserted into the Rich Text Editor. Possible options are: `Inline` and `Break`.|
 | Width | Sets the default width of the image when it is inserted in the Rich Text Editor.|
 | Height | Sets the default height of the image when it is inserted in the Rich Text Editor.|
