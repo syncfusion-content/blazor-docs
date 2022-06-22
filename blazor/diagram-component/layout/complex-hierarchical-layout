@@ -1,0 +1,228 @@
+---
+layout: post
+title: Complex Hierarchical Layout in Blazor Diagram Component | Syncfusion
+description: Learn here all about how to create hierarchical layout in Syncfusion Blazor Diagram component and more.
+platform: Blazor
+control: Diagram Component
+documentation: ug
+---
+
+# Complex Hierarchical Layout in Blazor Diagram Component
+
+Complex hierarchical tree layout is the extended version of the hierarchical tree layout. The child had been two or more parents. To create a complex hierarchical tree, the type of layout should be set as ComplexHierarchicalTree.
+
+```csharp
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
+    <Layout Type="LayoutType.ComplexHierarchicalTree" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing">
+    </Layout>
+    <SnapSettings>
+        <HorizontalGridLines LineColor="white" LineDashArray="2,2">
+        </HorizontalGridLines>
+        <VerticalGridLines LineColor="white" LineDashArray="2,2">
+        </VerticalGridLines>
+    </SnapSettings>
+</SfDiagramComponent>
+
+@code 
+{
+    int left = 40;
+    int top = 50;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    int HorizontalSpacing = 40;
+    int VerticalSpacing = 40;
+
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+        Node node = obj as Node;
+        node.Height = 40;
+        node.Width = 100;
+        //Initializing the default node's shape style.
+        node.Style = new ShapeStyle() { Fill = "darkcyan", StrokeWidth = 3, StrokeColor = "Black" };
+        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+        {
+            new ShapeAnnotation 
+            { 
+                Content = node.Annotations[0].Content,
+                Style = new TextStyle() { Color = "white", Bold = true }, 
+            }
+        };
+    }
+
+    private void OnConnectorCreating(IDiagramObject connector)
+    {
+        (connector as Connector).Type = ConnectorSegmentType.Orthogonal;
+    }
+
+    protected override void OnInitialized()
+    {
+        //Initializing node and connectors.
+        nodes = new DiagramObjectCollection<Node>()
+        {
+            new Node() { ID="node1", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node1"} } },
+            new Node() { ID="node2", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node2"} } },
+            new Node() { ID="node3", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node3"} } },
+            new Node() { ID="node4", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node4"} } },
+            new Node() { ID="node5", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node5"} } },
+            new Node() { ID="node8", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node8"} } },
+            new Node() { ID="node9", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node9"} } },
+        };
+        connectors = new DiagramObjectCollection<Connector>()
+        {
+            new Connector() { ID="connector1", SourceID="node1", TargetID="node4" },
+            new Connector() { ID="connector2", SourceID="node2", TargetID="node4" },
+            new Connector() { ID="connector3", SourceID="node3", TargetID="node4" },
+            new Connector() { ID="connector4", SourceID="node4", TargetID="node5" },
+        };
+    }
+}
+
+```
+
+### Linear Arrangement
+
+Line distribution is used to arrange the connectors without overlapping in automatic layout. In some cases, the automatic layout connectors connecting to the nodes will be overlapped with one another. So user can decide whether the segment of each connector from a single parent node should be same point or different point. The connectionPointOrigin property of layout is used to enable or disable the line distribution in layout. By default ConnectionPointOrigin will be SamePoint.
+
+The following code example illustrates how to create a complex hierarchical tree with line distribution.
+
+```csharp
+<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
+    <Layout Type="LayoutType.ComplexHierarchicalTree" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing">
+    </Layout>
+    <SnapSettings>
+        <HorizontalGridLines LineColor="white" LineDashArray="2,2">
+        </HorizontalGridLines>
+        <VerticalGridLines LineColor="white" LineDashArray="2,2">
+        </VerticalGridLines>
+    </SnapSettings>
+</SfDiagramComponent>
+
+@code 
+{
+    int left = 40;
+    int top = 50;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    int HorizontalSpacing = 40;
+    int VerticalSpacing = 40;
+
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+        Node node = obj as Node;
+        node.Height = 40;
+        node.Width = 100;
+        //Initializing the default node's shape style.
+        node.Style = new ShapeStyle() { Fill = "darkcyan", StrokeWidth = 3, StrokeColor = "Black" };
+        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+        {
+            new ShapeAnnotation 
+            { 
+                Content = node.Annotations[0].Content,
+                Style = new TextStyle() { Color = "white", Bold = true }, 
+            }
+        };
+    }
+
+    private void OnConnectorCreating(IDiagramObject connector)
+    {
+        (connector as Connector).Type = ConnectorSegmentType.Orthogonal;
+    }
+
+    protected override void OnInitialized()
+    {
+        //Initializing node and connectors.
+        nodes = new DiagramObjectCollection<Node>()
+        {
+            new Node() { ID="node1", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node1"} } },
+            new Node() { ID="node2", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node2"} } },
+            new Node() { ID="node3", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node3"} } },
+            new Node() { ID="node4", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node4"} } },
+            new Node() { ID="node5", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node5"} } },
+            new Node() { ID="node8", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node8"} } },
+            new Node() { ID="node9", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node9"} } },
+        };
+        connectors = new DiagramObjectCollection<Connector>()
+        {
+            new Connector() { ID="connector1", SourceID="node1", TargetID="node4" },
+            new Connector() { ID="connector2", SourceID="node2", TargetID="node4" },
+            new Connector() { ID="connector3", SourceID="node3", TargetID="node4" },
+            new Connector() { ID="connector4", SourceID="node4", TargetID="node5" },
+        };
+    }
+}
+
+```
+
+### Linear Arrangement
+
+Linear arrangement is used to linearly arrange the child nodes in layout, which means the parent node is placed in the center corresponding to its children. When line distribution is enabled, linear arrangement is also activated by default. The arrangement property of layout is used to enable or disable the linear arrangement in layout. By default arrangement will be Nonlinear.
+
+```csharp
+<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
+    <Layout Type="LayoutType.ComplexHierarchicalTree" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing">
+    </Layout>
+    <SnapSettings>
+        <HorizontalGridLines LineColor="white" LineDashArray="2,2">
+        </HorizontalGridLines>
+        <VerticalGridLines LineColor="white" LineDashArray="2,2">
+        </VerticalGridLines>
+    </SnapSettings>
+</SfDiagramComponent>
+
+@code 
+{
+    int left = 40;
+    int top = 50;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    int HorizontalSpacing = 40;
+    int VerticalSpacing = 40;
+
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+        Node node = obj as Node;
+        node.Height = 40;
+        node.Width = 100;
+        //Initializing the default node's shape style.
+        node.Style = new ShapeStyle() { Fill = "darkcyan", StrokeWidth = 3, StrokeColor = "Black" };
+        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+        {
+            new ShapeAnnotation 
+            { 
+                Content = node.Annotations[0].Content,
+                Style = new TextStyle() { Color = "white", Bold = true }, 
+            }
+        };
+    }
+
+    private void OnConnectorCreating(IDiagramObject connector)
+    {
+        (connector as Connector).Type = ConnectorSegmentType.Orthogonal;
+    }
+
+    protected override void OnInitialized()
+    {
+        //Initializing node and connectors.
+        nodes = new DiagramObjectCollection<Node>()
+        {
+            new Node() { ID="node1", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node1"} } },
+            new Node() { ID="node2", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node2"} } },
+            new Node() { ID="node3", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node3"} } },
+            new Node() { ID="node4", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node4"} } },
+            new Node() { ID="node5", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node5"} } },
+            new Node() { ID="node8", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node8"} } },
+            new Node() { ID="node9", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="node9"} } },
+        };
+        connectors = new DiagramObjectCollection<Connector>()
+        {
+            new Connector() { ID="connector1", SourceID="node1", TargetID="node4" },
+            new Connector() { ID="connector2", SourceID="node2", TargetID="node4" },
+            new Connector() { ID="connector3", SourceID="node3", TargetID="node4" },
+            new Connector() { ID="connector4", SourceID="node4", TargetID="node5" },
+        };
+    }
+}
+
+```
