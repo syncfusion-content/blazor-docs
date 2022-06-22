@@ -35,7 +35,7 @@ The Pager component provides an option to define the number of numeric items to 
 
 ## Total pages
 
-The Pager component provides an option to define the number of pages available in the Pager. This can be achieved by using the `TotalPages` property. The `TotalPages` value is calculated based on the `TotalItemsCount`.
+The Pager component provides an option to define the number of pages available in the Pager. This can be achieved by using the `TotalPages` property. The `TotalPages` value is calculated based on the page size and total items count properties.
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
@@ -47,7 +47,7 @@ The Pager component provides an option to define the number of pages available i
 
 ## Total items count
 
-The Pager component provides an option to define the total record count, which is used to render the numeric Pager container. This can be achieved by using the `TotalItemsCount` property of the Pager.
+The Pager component provides an option to define the total number of items available in the assigned data collection, which is used to render the elements(numeric items, navigation buttons) of Pager component. This can be achieved by using the `TotalItemsCount` property of the Pager.
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
@@ -59,7 +59,7 @@ The Pager component provides an option to define the total record count, which i
 
 ## Current page
 
-The Pager component provides an option to define which page to display currently in the Pager. This can be achieved by using the `CurrentPage` property. The default value of the `CurrentPage` property is "1".
+The Pager component provides an option to define which page to be displayed currently in the Pager. This can be achieved by using the `CurrentPage` property. The default value of the `CurrentPage` property is "1".
 
 ```csharp
 @using Syncfusion.Blazor.Navigations

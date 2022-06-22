@@ -11,7 +11,7 @@ documentation: ug
 
 ## Custom text
 
-The Pager component provides an option to define custom text along with numeric items. This can be achieved by using the `CustomText` property. The default value of `CustomText` is "null".
+The Pager component provides an option to define custom text along with numeric items. This can be achieved by using the `CustomText` property.
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
