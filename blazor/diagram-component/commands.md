@@ -728,6 +728,154 @@ The following code illustrates how to execute the grouping commands.
 }
 ```
 
+## Z-Order commands
+
+Z – Order commands are used to visually arrange the selected objects such as Nodes and Connectors on the diagram page with its Z-order values.
+
+### BringToFront
+
+The BringToFront command is used to visually brings the selected element to the front over all other overlapped elements.
+
+The following code illustrates how to execute the BringToFront command.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<input type="button" value="BringToFront" @onclick="@BringToFront"></input>
+
+<SfDiagramComponent @ref="diagram"  Width="1000px" Height="500px" @bind-Nodes="@nodes">
+    <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
+</SfDiagramComponent>
+
+@code{
+
+    SfDiagramComponent diagram; 
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>(); 
+    protected override void OnInitialized() 
+    { 
+        Node node1 = new Node() { ID = "node1", Width = 90, Height = 80, OffsetX = 100, OffsetY = 100, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }, Style = new ShapeStyle() { Fill = "#FF99CC", StrokeColor = "#ffff"} }; 
+        nodes.Add(node1); 
+        Node node2 = new Node() { ID = "node2", Width = 90, Height = 80, OffsetX = 240, OffsetY = 100, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Cylinder }, Style = new ShapeStyle() { Fill = "#FF99FF", StrokeColor = "#ffff"}  }; 
+        nodes.Add(node2);
+        Node node3 = new Node() { ID = "node3", Width = 120, Height = 80, OffsetX = 175, OffsetY = 80, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Ellipse }, Style = new ShapeStyle() { Fill = "#FFCC99", StrokeColor = "#ffff"} }; 
+        nodes.Add(node3);            
+    }
+    private void BringToFront() 
+    {   
+        diagram.BringToFront(); 
+    } 
+}
+```
+![BringToFront](images/BringToFront.gif)
+
+### SendToBack
+
+The SendToBack command visually moves the selected elements behind all the other overlapped elements.
+
+The following code illustrates how to execute the SendToBack command.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<input type="button" value="SendToBack" @onclick="@SendToBack"></input>
+
+<SfDiagramComponent @ref="diagram"  Width="1000px" Height="500px" @bind-Nodes="@nodes">
+</SfDiagramComponent>
+
+@code{
+
+    SfDiagramComponent diagram; 
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>(); 
+    protected override void OnInitialized() 
+    { 
+        Node node1 = new Node() { ID = "node1", Width = 90, Height = 80, OffsetX = 100, OffsetY = 100, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }, Style = new ShapeStyle() { Fill = "#FF99CC", StrokeColor = "#ffff"} }; 
+        nodes.Add(node1); 
+        Node node2 = new Node() { ID = "node2", Width = 90, Height = 80, OffsetX = 240, OffsetY = 100, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Cylinder }, Style = new ShapeStyle() { Fill = "#FF99FF", StrokeColor = "#ffff"}  }; 
+        nodes.Add(node2);
+        Node node3 = new Node() { ID = "node3", Width = 120, Height = 80, OffsetX = 175, OffsetY = 80, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Ellipse }, Style = new ShapeStyle() { Fill = "#FFCC99", StrokeColor = "#ffff"} }; 
+        nodes.Add(node3);             
+    }
+    private void SendToBack() 
+    {   
+        //Send the selected object behind all other objects
+        diagram.SendToBack(); 
+    } 
+}
+```
+![SendToBack](images/SendToBack.gif)
+
+### BringForward
+
+The BringForward command visually moves the selected element over the nearest overlapping element.
+
+The following code illustrates how to execute the BringForward command.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<input type="button" value="BringForward" @onclick="@BringForward"></input>
+
+<SfDiagramComponent @ref="diagram"  Width="1000px" Height="500px" @bind-Nodes="@nodes">
+</SfDiagramComponent>
+
+@code{
+
+    SfDiagramComponent diagram; 
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>(); 
+    protected override void OnInitialized() 
+    { 
+        Node node1 = new Node() { ID = "node1", Width = 90, Height = 80, OffsetX = 100, OffsetY = 100, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }, Style = new ShapeStyle() { Fill = "#FF99CC", StrokeColor = "#ffff"} }; 
+        nodes.Add(node1);    
+        Node node2 = new Node() { ID = "node2", Width = 120, Height = 80, OffsetX = 175, OffsetY = 80, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Ellipse }, Style = new ShapeStyle() { Fill = "#FFCC99", StrokeColor = "#ffff"} }; 
+        nodes.Add(node2);
+        Node node3 = new Node() { ID = "node3", Width = 90, Height = 80, OffsetX = 240, OffsetY = 100, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Cylinder }, Style = new ShapeStyle() { Fill = "#FF99FF", StrokeColor = "#ffff"}  }; 
+        nodes.Add(node3);              
+    }
+    private void BringForward() 
+    {   
+        //Bring the selected object forward one level
+        diagram.BringForward(); 
+    } 
+}
+```
+![BringForward](images/BringForward.gif)
+
+### SendBackward
+
+The SendBackward command visually moves the selected elements behind the underlying element.
+
+The following code illustrates how to execute the SendBackward command.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<input type="button" value="SendBackward" @onclick="@SendBackward"></input>
+
+<SfDiagramComponent @ref="diagram"  Width="1000px" Height="500px" @bind-Nodes="@nodes">
+</SfDiagramComponent>
+
+@code{
+
+    SfDiagramComponent diagram; 
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>(); 
+    protected override void OnInitialized() 
+    { 
+        Node node1 = new Node() { ID = "node1", Width = 90, Height = 80, OffsetX = 100, OffsetY = 100, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }, Style = new ShapeStyle() { Fill = "#FF99CC", StrokeColor = "#ffff"} }; 
+        nodes.Add(node1);    
+        Node node2 = new Node() { ID = "node2", Width = 120, Height = 80, OffsetX = 175, OffsetY = 80, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Ellipse }, Style = new ShapeStyle() { Fill = "#FFCC99", StrokeColor = "#ffff"} }; 
+        nodes.Add(node2);
+        Node node3 = new Node() { ID = "node3", Width = 90, Height = 80, OffsetX = 240, OffsetY = 100, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Cylinder }, Style = new ShapeStyle() { Fill = "#FF99FF", StrokeColor = "#ffff"}  }; 
+        nodes.Add(node3);
+    }
+    private void SendBackward() 
+    {   
+        //Send the selected object back one level
+        diagram.SendBackward(); 
+    } 
+}
+```
+![SendBackward](images/SendBackward.gif)
+
 ## Zoom command
 
 The [Zoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Zoom_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) command is used to zoom-in and zoom-out the diagram view.
