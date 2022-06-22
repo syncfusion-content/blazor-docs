@@ -763,7 +763,7 @@ The following code illustrates how to execute the BringToFront command.
             OffsetX = 100,
             OffsetY = 100,
             Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
-            Style = new ShapeStyle() { Fill = "#FF99CC", StrokeColor = "#ffff"}
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"},
         };
         nodes.Add(node1);
         Node node2 = new Node()
@@ -774,7 +774,7 @@ The following code illustrates how to execute the BringToFront command.
             OffsetX = 240,
             OffsetY = 100,
             Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Cylinder },
-            Style = new ShapeStyle() { Fill = "#FF99FF", StrokeColor = "#ffff"}
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"},
         };
         nodes.Add(node2);
         Node node3 = new Node()
@@ -782,13 +782,13 @@ The following code illustrates how to execute the BringToFront command.
             ID = "node3",
             Width = 120,
             Height = 80,
-            OffsetX = 175,
-            OffsetY = 80,
+            OffsetX = 170,
+            OffsetY = 60,
             Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Ellipse },
-            Style = new ShapeStyle() { Fill = "#FFCC99", StrokeColor = "#ffff"}
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"},
         };
         nodes.Add(node3);            
-    }   
+    }
     private void BringToFront() 
     {   
         diagram.Select(new ObservableCollection<IDiagramObject>() { diagram.Nodes[0] });
@@ -826,7 +826,7 @@ The following code illustrates how to execute the SendToBack command.
             OffsetX = 100,
             OffsetY = 100,
             Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
-            Style = new ShapeStyle() { Fill = "#FF99CC", StrokeColor = "#ffff"}
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"},
         };
         nodes.Add(node1);
         Node node2 = new Node()
@@ -837,7 +837,7 @@ The following code illustrates how to execute the SendToBack command.
             OffsetX = 240,
             OffsetY = 100,
             Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Cylinder },
-            Style = new ShapeStyle() { Fill = "#FF99FF", StrokeColor = "#ffff"}
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"},
         };
         nodes.Add(node2);
         Node node3 = new Node()
@@ -845,13 +845,13 @@ The following code illustrates how to execute the SendToBack command.
             ID = "node3",
             Width = 120,
             Height = 80,
-            OffsetX = 175,
-            OffsetY = 80,
+            OffsetX = 170,
+            OffsetY = 60,
             Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Ellipse },
-            Style = new ShapeStyle() { Fill = "#FFCC99", StrokeColor = "#ffff"}
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"},
         };
         nodes.Add(node3);            
-    }   
+    }
     private void SendToBack() 
     {   
         diagram.Select(new ObservableCollection<IDiagramObject>() { diagram.Nodes[2] });
@@ -889,7 +889,7 @@ The following code illustrates how to execute the BringForward command.
             OffsetX = 100,
             OffsetY = 100,
             Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
-            Style = new ShapeStyle() { Fill = "#FF99CC", StrokeColor = "#ffff"}
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"},
         };
         nodes.Add(node1);
         Node node2 = new Node()
@@ -900,7 +900,7 @@ The following code illustrates how to execute the BringForward command.
             OffsetX = 240,
             OffsetY = 100,
             Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Cylinder },
-            Style = new ShapeStyle() { Fill = "#FF99FF", StrokeColor = "#ffff"}
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"},
         };
         nodes.Add(node2);
         Node node3 = new Node()
@@ -908,13 +908,13 @@ The following code illustrates how to execute the BringForward command.
             ID = "node3",
             Width = 120,
             Height = 80,
-            OffsetX = 175,
-            OffsetY = 80,
+            OffsetX = 170,
+            OffsetY = 60,
             Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Ellipse },
-            Style = new ShapeStyle() { Fill = "#FFCC99", StrokeColor = "#ffff"}
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"},
         };
         nodes.Add(node3);            
-    }    
+    }
     private void BringForward() 
     {   
         diagram.Select(new ObservableCollection<IDiagramObject>() { diagram.Nodes[1] });
@@ -952,7 +952,7 @@ The following code illustrates how to execute the SendBackward command.
             OffsetX = 100,
             OffsetY = 100,
             Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
-            Style = new ShapeStyle() { Fill = "#FF99CC", StrokeColor = "#ffff"}
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"},
         };
         nodes.Add(node1);
         Node node2 = new Node()
@@ -963,7 +963,7 @@ The following code illustrates how to execute the SendBackward command.
             OffsetX = 240,
             OffsetY = 100,
             Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Cylinder },
-            Style = new ShapeStyle() { Fill = "#FF99FF", StrokeColor = "#ffff"}
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"},
         };
         nodes.Add(node2);
         Node node3 = new Node()
@@ -971,21 +971,21 @@ The following code illustrates how to execute the SendBackward command.
             ID = "node3",
             Width = 120,
             Height = 80,
-            OffsetX = 175,
-            OffsetY = 80,
+            OffsetX = 170,
+            OffsetY = 60,
             Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Ellipse },
-            Style = new ShapeStyle() { Fill = "#FFCC99", StrokeColor = "#ffff"}
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"},
         };
         nodes.Add(node3);            
     }
     private void SendBackward() 
     {   
-        diagram.Select(new ObservableCollection<IDiagramObject>() { diagram.Nodes[1] });
+        diagram.Select(new ObservableCollection<IDiagramObject>() { diagram.Nodes[2] });
         diagram.SendBackward(); 
     } 
 }
 ```
-The following image illustrates the Z-Order commands.
+The following gif illustrates how to perfrom z-order commands.
 
 ![Z-order Commands](./images/Z-Order-Commands.gif)
 
