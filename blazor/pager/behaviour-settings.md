@@ -11,7 +11,7 @@ documentation: ug
 
 ## Page size
 
-The Pager component provides an option to define the number of records to be displayed per page. This can be achieved by using the `PageSize` property. The default value of the `PageSize` property is "12".
+The Pager component provides an option to define the number of items to be displayed per page. This can be achieved by using the `PageSize` property. The default value of the `PageSize` property is "12".
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
@@ -29,18 +29,6 @@ The Pager component provides an option to define the number of numeric items to 
 @using Syncfusion.Blazor.Navigations
 
 <SfPager PageCount="5">
-</SfPager>
-
-```
-
-## Total pages
-
-The Pager component provides an option to define the number of pages available in the Pager. This can be achieved by using the `TotalPages` property. The `TotalPages` value is calculated based on the page size and total items count properties.
-
-```csharp
-@using Syncfusion.Blazor.Navigations
-
-<SfPager TotalPages="1">
 </SfPager>
 
 ```
@@ -64,7 +52,7 @@ The Pager component provides an option to define which page to be displayed curr
 ```csharp
 @using Syncfusion.Blazor.Navigations
 
-<SfPager CurrentPage="1">
+<SfPager CurrentPage="3">
 </SfPager>
 
 ```

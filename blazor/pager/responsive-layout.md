@@ -13,4 +13,4 @@ documentation: ug
 
 The Pager component has responsive support such that component also fit with mobile resolutions. While resizing the browser window, the inner elements in the Pager component will adjust automatically to equalize the size.
 
-![Blazor Pager with Responsive](./images/blazor-pager-responsive-layout.gif)
+![Blazor Pager with Responsive](./images/blazor-pager-responsive-layout.png)

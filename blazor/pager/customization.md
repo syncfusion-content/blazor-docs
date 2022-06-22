@@ -23,9 +23,9 @@ The Pager component provides an option to define custom text along with numeric 
 
 ## Custom CSS
 
-To modify the Pager's appearance, you need to override the default CSS of the Pager. This can be achieved by using the `CSSClass` property.
+To modify the Pager's appearance, you need to override the default CSS of the Pager. This can be achieved by using the `CssClass` property.
 
-In the following sample, the value for the `CSSClass` property is set as customCss, and this root class is used to customize the Pager appearance.
+In the following sample, the value for the `CssClass` property is set as custom CSS, and this root class is used to customize the Pager appearance.
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
