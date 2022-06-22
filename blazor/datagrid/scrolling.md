@@ -531,6 +531,10 @@ In the following sample, the Grid headers will be sticky while scrolling the Gri
 ```csharp
 @using Syncfusion.Blazor.Grids
 
+<div> You can make Grid column headers remain fixed while scrolling its first scrollable parent element by using the <b>EnableStickyHeader</b> property.</div>
+<br>
+<br>
+
 <SfGrid DataSource="@Orders" EnableStickyHeader ="true">
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey=true TextAlign="TextAlign.Right" Width="120"></GridColumn>
