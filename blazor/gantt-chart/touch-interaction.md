@@ -45,24 +45,22 @@ Action |Description
 -----|-----
 [Cell editing](managing-tasks/#cell-editing) | To perform `double tap` on a specific cell, initiate the cell to be in edit state.
 [Dialog editing](managing-tasks/#dialog-editing) | To perform `double tap` on a specific row, initiate the edit dialog to be opened.
-[Taskbar editing](managing-tasks/#taskbar-editing) | Taskbar editing action is initiated using the `tap` action on the taskbar. <br> **Parent taskbar** : Once you tap on the parent taskbar, it will be changed to editing state. Perform only dragging action on parent taskbar editing. <br><br> **Child taskbar** : Once you tap the child taskbar, it will be changed to editing state. <br> <br> **Dragging taskbar** : To drag a taskbar to the left or right in editing state. <br> <br> **Resizing taskbar** : To resize a taskbar, drag the left/right resize icon. <br> <br> **Progress resizing** : To change the progress, drag the progress resize icon to the left or right direction.
+[Taskbar editing](managing-tasks/#taskbar-editing) | Taskbar editing action is initiated using the `tap` action on the taskbar. <br> **Parent taskbar** : Once you tap on the parent taskbar, it will be changed to editing state. Perform only dragging action on parent taskbar editing.<br>![Blazor Gantt Chart displays editing parent taskbar in touch mode](images/editingparent.PNG) <br><br> **Child taskbar** : Once you tap the child taskbar, it will be changed to editing state.<br>![Blazor Gantt Chart displays editing parent taskbar in touch mode](images/editingstate.PNG) <br> <br> **Dragging taskbar** : To drag a taskbar to the left or right in editing state. <br> <br> **Resizing taskbar** : To resize a taskbar, drag the left/right resize icon. <br> <br> **Progress resizing** : To change the progress, drag the progress resize icon to the left or right direction.
 
-<!-- Task Dependency Editing
+### Task Dependency Editing
 
-You can `tap` the left/right connector point to initiate `Task Dependencies`](managing-tasks/#task-dependencies) edit mode and again tap another taskbar to establish the dependency line between two taskbars.
+To initiate dependency editing, you need to tap the taskbar. Once it enters into the edited state, you can `tap` the left/right connector point to initiate [`Task Dependencies`](managing-tasks/#task-dependencies) editing. The dialog will be rendered with a message `Choose the another task` and `Cancel` button.
+![Task Dependency Editing in Blazor Gantt Chart](images/dependency-editing-touch.png)
+
+To cancel edit action click the `Cancel` button, to continue editing, tap another taskbar to establish the dependency line between two taskbars.
+
+Once the second taskbar is tapped, the dialog will display a message `Select the connector position` and `Cancel` button and a tooltip is displayed near the second taskbar with `Left` and `Right` button. Click any button to establish dependency relation betweeen two tasks.
+
+![Task Dependency Editing in Blazor Gantt Chart](images/dependency-editing.png)
 
 The following table explains the taskbar state in dependency edit mode.
 
 ![Taskbar states](images/taskbar-states.png)
-
-Taskbar state |Description
------|-----
-`Parent taskbar` | You cannot create dependency relationship to parent tasks. <br> ![Parent taskbar](images/parent-taskbar.PNG)
-`Taskbar without dependency` |  If you tap a valid child taskbar, it will create `FS` type dependency line between tasks, otherwise exits from task dependency edit mode. <br> ![Valid taskbar](images/valid-taskbar.PNG)
-`Taskbar with dependency` | If you tap the second taskbar, which has already been directly connected, it will ask to remove it. <br> ![Invalid taskbar](images/invalid-taskbar.PNG)
-`Removing dependency` | Once you tap the taskbar with direct dependency, then confirmation dialog will be shown for removing dependency. <br> ![Confirm dialog](images/confirm-dialog.PNG)
-
-> In mobile device, you cannot create dependency other than `FS` by taskbar editing. By using cell/dialog editing, you can add all type of dependencies. -->
 
 ## Selection
 
