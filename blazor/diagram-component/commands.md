@@ -16,6 +16,7 @@ There are several commands available in the diagram as follows.
 * Sizing commands
 * Clipboard commands
 * Grouping commands
+* Z-Order commands
 * Zoom commands
 * Undo/Redo commands
 
@@ -725,6 +726,262 @@ The following code illustrates how to execute the grouping commands.
         //Select all the items in the diagram.
         diagram.SelectAll();
     }
+}
+```
+
+## Z-Order commands
+
+Z – Order commands are used to visually arrange the selected objects such as Nodes and Connectors on the diagram page with its Z-order values.
+
+### BringToFront
+
+The BringToFront command is used to visually brings the selected element to the front over all other overlapped elements.
+
+The following code illustrates how to execute the BringToFront command.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using System.Collections.ObjectModel
+
+<input type="button" value="BringToFront" @onclick="@BringToFront"></input>
+
+<SfDiagramComponent @ref="diagram"  Width="1000px" Height="500px" @bind-Nodes="@nodes">
+    <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
+</SfDiagramComponent>
+
+
+@code{
+
+    SfDiagramComponent diagram; 
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>(); 
+    protected override void OnInitialized() 
+    { 
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 90,
+            Height = 60,
+            OffsetX = 100,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"}
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 90,
+            Height = 60,
+            OffsetX = 240,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"}
+        };
+        nodes.Add(node2);
+        Node node3 = new Node()
+        {
+            ID = "node3",
+            Width = 90,
+            Height = 60,
+            OffsetX = 160,
+            OffsetY = 90,
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"}
+        };
+        nodes.Add(node3);           
+    }
+    
+    private void BringToFront() 
+    {   
+        diagram.Select(new ObservableCollection<IDiagramObject>() { diagram.Nodes[0] });
+        diagram.BringToFront(); 
+    } 
+}
+```
+
+### SendToBack
+
+The SendToBack command visually moves the selected elements behind all the other overlapped elements.
+
+The following code illustrates how to execute the SendToBack command.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using System.Collections.ObjectModel
+
+<input type="button" value="BringToFront" @onclick="@BringToFront"></input>
+
+<SfDiagramComponent @ref="diagram"  Width="1000px" Height="500px" @bind-Nodes="@nodes">
+    <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
+</SfDiagramComponent>
+
+
+@code{
+
+    SfDiagramComponent diagram; 
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>(); 
+    protected override void OnInitialized() 
+    { 
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 90,
+            Height = 60,
+            OffsetX = 100,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"}
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 90,
+            Height = 60,
+            OffsetX = 240,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"}
+        };
+        nodes.Add(node2);
+        Node node3 = new Node()
+        {
+            ID = "node3",
+            Width = 90,
+            Height = 60,
+            OffsetX = 160,
+            OffsetY = 90,
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"}
+        };
+        nodes.Add(node3);           
+    }
+    
+    private void BringToFront() 
+    {   
+        diagram.Select(new ObservableCollection<IDiagramObject>() { diagram.Nodes[2] });
+        diagram.BringToFront(); 
+    } 
+}
+```
+
+### BringForward
+
+The BringForward command visually moves the selected element over the nearest overlapping element.
+
+The following code illustrates how to execute the BringForward command.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using System.Collections.ObjectModel
+
+<input type="button" value="BringToFront" @onclick="@BringToFront"></input>
+
+<SfDiagramComponent @ref="diagram"  Width="1000px" Height="500px" @bind-Nodes="@nodes">
+    <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
+</SfDiagramComponent>
+
+
+@code{
+
+    SfDiagramComponent diagram; 
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>(); 
+    protected override void OnInitialized() 
+    { 
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 90,
+            Height = 60,
+            OffsetX = 100,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"}
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 90,
+            Height = 60,
+            OffsetX = 240,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"}
+        };
+        nodes.Add(node2);
+        Node node3 = new Node()
+        {
+            ID = "node3",
+            Width = 90,
+            Height = 60,
+            OffsetX = 160,
+            OffsetY = 90,
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"}
+        };
+        nodes.Add(node3);           
+    }
+    
+    private void BringToFront() 
+    {   
+        diagram.Select(new ObservableCollection<IDiagramObject>() { diagram.Nodes[1] });
+        diagram.BringToFront(); 
+    } 
+}
+```
+
+### SendBackward
+
+The SendBackward command visually moves the selected elements behind the underlying element.
+
+The following code illustrates how to execute the SendBackward command.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using System.Collections.ObjectModel
+
+<input type="button" value="BringToFront" @onclick="@BringToFront"></input>
+
+<SfDiagramComponent @ref="diagram"  Width="1000px" Height="500px" @bind-Nodes="@nodes">
+    <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
+</SfDiagramComponent>
+
+
+@code{
+
+    SfDiagramComponent diagram; 
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>(); 
+    protected override void OnInitialized() 
+    { 
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 90,
+            Height = 60,
+            OffsetX = 100,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"}
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 90,
+            Height = 60,
+            OffsetX = 240,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"}
+        };
+        nodes.Add(node2);
+        Node node3 = new Node()
+        {
+            ID = "node3",
+            Width = 90,
+            Height = 60,
+            OffsetX = 160,
+            OffsetY = 90,
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"}
+        };
+        nodes.Add(node3);           
+    }
+    
+    private void BringToFront() 
+    {   
+        diagram.Select(new ObservableCollection<IDiagramObject>() { diagram.Nodes[1] });
+        diagram.BringToFront(); 
+    } 
 }
 ```
 
