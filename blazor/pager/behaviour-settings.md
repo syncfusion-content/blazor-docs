@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Behaviour Settings in Blazor Pager Component | Syncfusion
-description: Checkout and learn here all about basic functionalites of render the Syncfusion Blazor Pager component and much more.
+description: Checkout here and learn about all the basic functionalities of rendering the Syncfusion Blazor Pager component and much more.
 platform: Blazor
 control: Pager
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Page size
 
-The Pager component provides an option to define the number of items to be displayed per page. This can be achieved by using the `PageSize` property. The default value of the `PageSize` property is "12".
+The Pager component provides an option to define the number of items to be displayed per page. This can be achieved by using the `PageSize` property. The default value of the `PageSize` property is "12."
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
@@ -23,7 +23,7 @@ The Pager component provides an option to define the number of items to be displ
 
 ## Page count
 
-The Pager component provides an option to define the number of numeric items to be displayed in the Pager for navigation. This can be achieved by using the `PageCount` property. The default value of the `PageCount` property is "10".
+The Pager component provides an option to define the number of numeric items to be displayed in the Pager for navigation. This can be achieved by using the `PageCount` property. The default value of the `PageCount` property is "10."
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
