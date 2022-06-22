@@ -246,6 +246,117 @@ The position of the Tab header icons can be customized using the [IconPosition](
 
 ![Blazor Tabs with Icon](./images/blazor-tabs-icon.png)
 
+## Edit the tab header inline
+
+You can edit the tab header inline by setting `FocusAsync()` to input element in onclick() event.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Buttons
+
+<SfTab @ref="Tab">
+   <TabEvents Selected="@ItemSelected"></TabEvents>
+    <TabItems>
+     <TabItem>
+      <HeaderTemplate>
+        <div>
+         <input @ref="@inputObj" type="text" @bind-value="@inputText" @onclick="@InputClick" />
+        </div>
+       </HeaderTemplate>
+     <ContentTemplate>
+        <ul>
+       <li>Click on the "+" header to add dynamic tab items. </li>
+       <li>It displays input elements to get the new tab information. </li>
+       <li>Add details and click the "Add Tab" button to open the newly added tab.</li>
+        </ul>
+      </ContentTemplate>
+       </TabItem>
+          <TabItem>
+            <ChildContent>
+              <TabHeader IconCss="e-plus"></TabHeader>
+            </ChildContent>
+      <ContentTemplate>
+        <div id="form-container">
+          <div>
+      <SfTextBox @bind-Value="@dynamicHeader" Placeholder="Enter Header"></SfTextBox>
+          </div>
+          <br />
+         <div>
+      <SfTextBox @bind-Value="@dynamicContent" Placeholder="Enter Content"></SfTextBox>
+         </div>
+         <br /> 
+         <div>
+     <SfButton Content="@Content" IsPrimary="true" @onclick="onClick"></SfButton>
+         </div>
+           </div>
+       </ContentTemplate>
+         </TabItem>
+          </TabItems>
+</SfTab>
+<style>
+.info {
+    font-weight: bold;
+}
+.e-content .e-item {
+    font-size: 12px;
+    margin: 10px;
+    text-align: justify;
+}
+.e-add-icon::before {
+    content: '\e823';
+}
+.e-tab .e-tab-header .e-toolbar-items:not(.e-tbar-pos) .e-toolbar-item:last-child .e-add-icon,
+.e-tab .e-tab-header .e-toolbar-item .e-tab-icon.e-add-icon::before {
+    line-height: 1.5 !important;
+    font-size: 14px !important;
+}
+
+.e-tab .e-tab-header .e-toolbar-items:not(.e-tbar-pos) .e-toolbar-item:last-child .e-close-icon {
+    display: none !important;
+}
+</style>
+
+
+@code {
+
+    SfTab Tab;
+    ElementReference inputObj;
+    public string inputText { get; set; }
+    public string Content = "Add Tab";
+    public string dynamicHeader { get; set; }
+    public string dynamicContent { get; set; }
+
+    private async Task InputClick()
+      {
+        await inputObj.FocusAsync();
+      }
+    public void onClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+      {
+        List<TabItem> source = new List<TabItem>()
+         {
+           new TabItem() { Header = new TabHeader() { Text = @dynamicHeader }, Content = @dynamicContent }
+         };
+       this.Tab.AddTab(source, this.Tab.Items.Count() - 1);
+      }
+    public void ItemSelected(Syncfusion.Blazor.Navigations.SelectEventArgs args)
+       {
+         if (args.SelectedIndex == this.Tab.Items.Count() - 1)
+          {
+            this.dynamicHeader = "";
+            this.dynamicContent = "";
+          }
+        else if (args.SelectedIndex == 0)
+          {
+            inputText = string.Empty;
+          }
+       }
+ }
+ ```
+ ![Blazor inline tab edit](./images/blazor-tabs-inline.png)
+
+[View Sample in GitHub](https://github.com/SyncfusionExamples/How-to-do-inline-tab-edit-in-header-of-Blazor-Tab)
+
 ## See Also
 
 * [How to customize selected tab styles](./how-to/customize-selected-tab-styles)
