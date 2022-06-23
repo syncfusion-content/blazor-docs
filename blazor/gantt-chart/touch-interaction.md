@@ -49,13 +49,13 @@ Action |Description
 
 ### Task Dependency Editing
 
-To initiate dependency editing, you need to tap the taskbar. Once it enters into the edited state, you can `tap` the left/right connector point to initiate [`Task Dependencies`](managing-tasks/#task-dependencies) editing. The dialog will be rendered with a message `Choose the another task` and `Cancel` button.
+Tap the taskbar to initiate the taskbar editing for predecessors. Once it enters the edited state, `tap` the left or right connector point to initiate the task [dependencies](managing-tasks/#task-dependencies) editing. The dialog will be rendered with the message `Choose another task` and `Cancel` button.
 
 ![Task Dependency Editing in Blazor Gantt Chart](images/dependency-editing-touch.png)
 
-To cancel edit action click the `Cancel` button, to continue editing, tap another taskbar to establish the dependency line between two taskbars.
+Click the `Cancel` button to cancel the edit action and to continue editing, tap another taskbar to establish the dependency line between the two taskbars.
 
-Once the second taskbar is tapped, the dialog will display a message `Select the connector position` and `Cancel` button and a tooltip is displayed near the second taskbar with `Left` and `Right` button. Click any button to establish dependency relation betweeen two tasks.
+Once the second taskbar is tapped, the dialog will display a message `Select the connector position` and `Cancel` button. A tooltip is also displayed near the second taskbar with the `Left` and `Right` buttons. Click any button to establish a dependency relationship between the two tasks.
 
 ![Task Dependency Editing in Blazor Gantt Chart](images/dependency-editing.png)
 
