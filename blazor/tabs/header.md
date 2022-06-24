@@ -248,7 +248,8 @@ The position of the Tab header icons can be customized using the [IconPosition](
 
 ## Edit the tab header inline
 
-Refer below steps to edit the tab header inline
+You can load input element in tab header for inline editing using [HeaderTemplate]() property. Also, ensure to call `FocusAsync()` method in the `onclick` event of input element to focus and edit the header. 
+
 
 1. You can give preferred header content and insert the textbox inside the `HeaderTemplate` element. 
 
@@ -346,7 +347,7 @@ Refer below steps to edit the tab header inline
 
 {% endtabs %}
 
- ![Blazor tab inline editing](./images/blazor-tabs-inline-editing.png)
+![Blazor tab inline editing](./images/blazor-tabs-inline-editing.png)
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/How-to-do-inline-tab-edit-in-header-of-Blazor-Tab)
 
