@@ -248,9 +248,11 @@ The position of the Tab header icons can be customized using the [IconPosition](
 
 ## Edit the tab header inline
 
-You can edit the tab header inline by setting `FocusAsync()` to input element in onclick() event.
+Refer below steps to edit the tab header inline
 
-```cshtml
+1. You can give preferred header content and insert the textbox inside the `HeaderTemplate` element. 
+
+```c#
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Buttons
@@ -263,62 +265,51 @@ You can edit the tab header inline by setting `FocusAsync()` to input element in
         <div>
          <input @ref="@inputObj" type="text" @bind-value="@inputText" @onclick="@InputClick" />
         </div>
-       </HeaderTemplate>
-     <ContentTemplate>
-        <ul>
-       <li>Click on the "+" header to add dynamic tab items. </li>
-       <li>It displays input elements to get the new tab information. </li>
-       <li>Add details and click the "Add Tab" button to open the newly added tab.</li>
-        </ul>
-      </ContentTemplate>
-       </TabItem>
-          <TabItem>
-            <ChildContent>
-              <TabHeader IconCss="e-plus"></TabHeader>
-            </ChildContent>
+    </HeaderTemplate>
+
+ ```
+ 2. You can give preferred content inside the `ContentTemplate` element.
+
+ {% tabs %}
+
+ <ContentTemplate>
+    <ul>
+    <li>Click on the "+" header to add dynamic tab items. </li>
+    <li>It displays input elements to get the new tab information. </li>
+    <li>Add details and click the "Add Tab" button to open the newly added tab.</li>
+    </ul>
+</ContentTemplate>
+    </TabItem>
+     <TabItem>
+      <ChildContent>
+         <TabHeader IconCss="e-plus"></TabHeader>
+       </ChildContent>
       <ContentTemplate>
         <div id="form-container">
-          <div>
-      <SfTextBox @bind-Value="@dynamicHeader" Placeholder="Enter Header"></SfTextBox>
-          </div>
-          <br />
-         <div>
-      <SfTextBox @bind-Value="@dynamicContent" Placeholder="Enter Content"></SfTextBox>
-         </div>
-         <br /> 
-         <div>
-     <SfButton Content="@Content" IsPrimary="true" @onclick="onClick"></SfButton>
-         </div>
-           </div>
-       </ContentTemplate>
-         </TabItem>
-          </TabItems>
+        <div>
+   <SfTextBox @bind-Value="@dynamicHeader" Placeholder="Enter Header"></SfTextBox>
+        </div>
+        <br />
+        <div>
+   <SfTextBox @bind-Value="@dynamicContent" Placeholder="Enter Content"></SfTextBox>
+        </div>
+        <br /> 
+        <div>
+   <SfButton Content="@Content" IsPrimary="true" @onclick="onClick"></SfButton>
+        </div>
+        </div>
+    </ContentTemplate>
+    </TabItem>
+</TabItems>
 </SfTab>
-<style>
-.info {
-    font-weight: bold;
-}
-.e-content .e-item {
-    font-size: 12px;
-    margin: 10px;
-    text-align: justify;
-}
-.e-add-icon::before {
-    content: '\e823';
-}
-.e-tab .e-tab-header .e-toolbar-items:not(.e-tbar-pos) .e-toolbar-item:last-child .e-add-icon,
-.e-tab .e-tab-header .e-toolbar-item .e-tab-icon.e-add-icon::before {
-    line-height: 1.5 !important;
-    font-size: 14px !important;
-}
 
-.e-tab .e-tab-header .e-toolbar-items:not(.e-tbar-pos) .e-toolbar-item:last-child .e-close-icon {
-    display: none !important;
-}
-</style>
+{% endtabs %}
 
+3. You can edit the tab header inline by calling `FocusAsync()` method inside the `onclick` event. Sets the focus to the TextBox component for interaction.
 
-@code {
+ {% tabs %}
+
+ @code {
 
     SfTab Tab;
     ElementReference inputObj;
@@ -352,8 +343,10 @@ You can edit the tab header inline by setting `FocusAsync()` to input element in
           }
        }
  }
- ```
- ![Blazor inline tab edit](./images/blazor-tabs-inline.png)
+
+{% endtabs %}
+
+ ![Blazor tab inline editing](./images/blazor-tabs-inline-editing.png)
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/How-to-do-inline-tab-edit-in-header-of-Blazor-Tab)
 
