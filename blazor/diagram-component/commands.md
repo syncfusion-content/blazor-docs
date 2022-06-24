@@ -742,15 +742,10 @@ The following code illustrates how to execute the BringToFront command.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
-
-<input type="button" value="BringToFront" @onclick="@BringToFront"></input>
-
+<input type="button" value="BringToFront" @onclick="@bringToFront"></input>
 <SfDiagramComponent @ref="diagram"  Width="1000px" Height="500px" @bind-Nodes="@nodes">
 </SfDiagramComponent>
-
-
 @code{
-
     SfDiagramComponent diagram;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>(); 
     protected override void OnInitialized() 
@@ -762,7 +757,7 @@ The following code illustrates how to execute the BringToFront command.
             Height = 80,
             OffsetX = 100,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle },
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"},
         };
         nodes.Add(node1);
@@ -773,7 +768,7 @@ The following code illustrates how to execute the BringToFront command.
             Height = 80,
             OffsetX = 240,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Cylinder },
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Cylinder },
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"},
         };
         nodes.Add(node2);
@@ -784,12 +779,12 @@ The following code illustrates how to execute the BringToFront command.
             Height = 80,
             OffsetX = 170,
             OffsetY = 60,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Ellipse },
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Ellipse },
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"},
         };
         nodes.Add(node3);            
     }
-    private void BringToFront() 
+    private void bringToFront() 
     {   
         diagram.Select(new ObservableCollection<IDiagramObject>() { diagram.Nodes[0] });
         diagram.BringToFront(); 
@@ -806,14 +801,10 @@ The following code illustrates how to execute the SendToBack command.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
-
-<input type="button" value="SendToBack" @onclick="@SendToBack"></input>
-
+<input type="button" value="SendToBack" @onclick="@sendToBack"></input>
 <SfDiagramComponent @ref="diagram"  Width="1000px" Height="500px" @bind-Nodes="@nodes">
 </SfDiagramComponent>
-
 @code{
-
     SfDiagramComponent diagram;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>(); 
     protected override void OnInitialized() 
@@ -825,7 +816,7 @@ The following code illustrates how to execute the SendToBack command.
             Height = 80,
             OffsetX = 100,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle },
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"},
         };
         nodes.Add(node1);
@@ -836,7 +827,7 @@ The following code illustrates how to execute the SendToBack command.
             Height = 80,
             OffsetX = 240,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Cylinder },
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Cylinder },
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"},
         };
         nodes.Add(node2);
@@ -847,12 +838,12 @@ The following code illustrates how to execute the SendToBack command.
             Height = 80,
             OffsetX = 170,
             OffsetY = 60,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Ellipse },
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Ellipse },
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"},
         };
         nodes.Add(node3);            
     }
-    private void SendToBack() 
+    private void sendToBack() 
     {   
         diagram.Select(new ObservableCollection<IDiagramObject>() { diagram.Nodes[2] });
         diagram.SendToBack(); 
@@ -869,14 +860,10 @@ The following code illustrates how to execute the BringForward command.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
-
-<input type="button" value="BringForward" @onclick="@BringForward"></input>
-
+<input type="button" value="BringForward" @onclick="@bringForward"></input>
 <SfDiagramComponent @ref="diagram"  Width="1000px" Height="500px" @bind-Nodes="@nodes">
 </SfDiagramComponent>
-
 @code{
-
     SfDiagramComponent diagram;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>(); 
     protected override void OnInitialized() 
@@ -888,7 +875,7 @@ The following code illustrates how to execute the BringForward command.
             Height = 80,
             OffsetX = 100,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle },
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"},
         };
         nodes.Add(node1);
@@ -899,7 +886,7 @@ The following code illustrates how to execute the BringForward command.
             Height = 80,
             OffsetX = 240,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Cylinder },
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Cylinder },
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"},
         };
         nodes.Add(node2);
@@ -910,12 +897,12 @@ The following code illustrates how to execute the BringForward command.
             Height = 80,
             OffsetX = 170,
             OffsetY = 60,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Ellipse },
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Ellipse },
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"},
         };
         nodes.Add(node3);            
     }
-    private void BringForward() 
+    private void bringForward() 
     {   
         diagram.Select(new ObservableCollection<IDiagramObject>() { diagram.Nodes[1] });
         diagram.BringForward(); 
@@ -932,14 +919,10 @@ The following code illustrates how to execute the SendBackward command.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
-
-<input type="button" value="SendBackward" @onclick="@SendBackward"></input>
-
+<input type="button" value="SendBackward" @onclick="@sendBackward"></input>
 <SfDiagramComponent @ref="diagram"  Width="1000px" Height="500px" @bind-Nodes="@nodes">
 </SfDiagramComponent>
-
 @code{
-
     SfDiagramComponent diagram;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>(); 
     protected override void OnInitialized() 
@@ -951,7 +934,7 @@ The following code illustrates how to execute the SendBackward command.
             Height = 80,
             OffsetX = 100,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle },
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"},
         };
         nodes.Add(node1);
@@ -962,7 +945,7 @@ The following code illustrates how to execute the SendBackward command.
             Height = 80,
             OffsetX = 240,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Cylinder },
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Cylinder },
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"},
         };
         nodes.Add(node2);
@@ -973,12 +956,12 @@ The following code illustrates how to execute the SendBackward command.
             Height = 80,
             OffsetX = 170,
             OffsetY = 60,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Ellipse },
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Ellipse },
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#ffff"},
         };
         nodes.Add(node3);            
     }
-    private void SendBackward() 
+    private void sendBackward() 
     {   
         diagram.Select(new ObservableCollection<IDiagramObject>() { diagram.Nodes[2] });
         diagram.SendBackward(); 
