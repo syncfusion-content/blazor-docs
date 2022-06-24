@@ -9,6 +9,8 @@ documentation: ug
 
 # Behaviour Settings in Pager Component
 
+This section briefly explains how to calculate the total number of items available in the assigned data collection, which is used to render the elements (numeric items and navigation buttons) of the Pager component.
+
 ## Page size
 
 The Pager component provides an option to define the number of items to be displayed per page. This can be achieved by using the `PageSize` property. The default value of the `PageSize` property is "12."
@@ -23,12 +25,12 @@ The Pager component provides an option to define the number of items to be displ
 
 ## Page count
 
-The Pager component provides an option to define the number of numeric items to be displayed in the Pager for navigation. This can be achieved by using the `PageCount` property. The default value of the `PageCount` property is "10."
+The Pager component provides an option to define the number of numeric items to be displayed in the Pager for navigation. This can be achieved by using the `NumericItemsCount` property. The default value of the `NumericItemsCount` property is "10."
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
 
-<SfPager PageCount="5">
+<SfPager NumericItemsCount="5">
 </SfPager>
 
 ```
@@ -47,7 +49,7 @@ The Pager component provides an option to define the total number of items avail
 
 ## Current page
 
-The Pager component provides an option to define which page to be displayed currently in the Pager. This can be achieved by using the `CurrentPage` property. The default value of the `CurrentPage` property is "1".
+Blazor Pager component support to define which page to be displayed currently in the Pager using the `CurrentPage` property. The default value of the `CurrentPage` property is "1".
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
@@ -68,3 +70,5 @@ The Pager component provides an option to show or hide the Pager information in 
 </SfPager>
 
 ```
+
+![Show Blazor Pager Message](./images/blazor-pager-message.png)

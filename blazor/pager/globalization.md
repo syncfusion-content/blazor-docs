@@ -20,5 +20,5 @@ RTL provides an option to switch the text direction and layout of the Pager comp
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 
-<SfPager TotalItemsCount=20 PageCount=5 PageSize=5 EnableRtl=true></SfPager>
+<SfPager TotalItemsCount=20 NumericItemsCount=5 PageSize=5 EnableRtl=true></SfPager>
 ```

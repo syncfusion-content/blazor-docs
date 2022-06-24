@@ -29,7 +29,7 @@ In this following sample, we have rendered two anchor tags for navigating next a
     </GridColumns>
 </SfGrid>
 
-<SfPager @ref="Pager" TotalItemsCount=80 PageCount=5 PageSize=10 CurrentPage=1 PageSizes=true TotalPages=8>
+<SfPager @ref="Pager" TotalItemsCount=80 NumericItemsCount=5 PageSize=10 CurrentPage=1 PageSizes=true TotalPages=8>
     <Template>
         @{
             var Page = (context as PagerTemplateContext);
