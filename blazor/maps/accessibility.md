@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Maps Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Maps component and much more details.
+description: Checkout and learn here all about accessibility in Syncfusion Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug
