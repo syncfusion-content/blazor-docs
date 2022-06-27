@@ -41,7 +41,7 @@ The user handle can be enabled for the selected nodes/connectors by setting a [S
         {
             //Name of the user handle.
             Name = "clone",
-            //Set pathdata for userhandle.
+            //Set path data for userhandle.
             PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z",
             //Set visibility for the user handle.
             Visible = true,
@@ -50,7 +50,7 @@ The user handle can be enabled for the selected nodes/connectors by setting a [S
             //Set side based on the given offset.
             Side = Direction.Bottom,
             //Set margin for the user handle.
-            Margin = new Margin() { Top = 0, Bottom = 0, Left = 0, Right = 0 }
+            Margin = new DiagramThickness() { Top = 0, Bottom = 0, Left = 0, Right = 0 }
         };
         //Add user handle to the collection.
         UserHandles = new DiagramObjectCollection<UserHandle>()
@@ -141,7 +141,7 @@ The following code explains how to customize the appearance of the user handle.
         {
             //Name of the user handle.
             Name = "clone",
-            //Set pathdata for userhandle.
+            //Set path data for userhandle.
             PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z",
             //Set visibility for the user handle.
             Visible = true,
@@ -150,10 +150,10 @@ The following code explains how to customize the appearance of the user handle.
             //Set side based on the given offset.
             Side = Direction.Bottom,
             //Set margin for the user handle.
-            Margin = new Margin() { Top = 0, Bottom = 0, Left = 0, Right = 0 },
+            Margin = new DiagramThickness() { Top = 0, Bottom = 0, Left = 0, Right = 0 },
             //Set size of the user handle.
             Size = 50,
-            //Set pathcolor for given pathdata.
+            //Set path color for given path data.
             PathColor = "yellow",
             //Set Border color of the user handle.
             BorderColor = "red",
@@ -228,8 +228,8 @@ To create the fixed user handles, define and add them to the collection of nodes
                     Height = 20, 
                     Width = 20, 
                     Visibility = true,
-                    Padding = new Margin() { Bottom = 1, Left = 1, Right = 1, Top = 1 }, 
-                    Margin = new Margin() { Right = 20 }, Offset = new DiagramPoint() { X = 0 , Y = 0 }, 
+                    Padding = new DiagramThickness() { Bottom = 1, Left = 1, Right = 1, Top = 1 }, 
+                    Margin = new DiagramThickness() { Right = 20 }, Offset = new DiagramPoint() { X = 0 , Y = 0 }, 
                     PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z" 
                 },
             }
@@ -301,7 +301,7 @@ The following code explains how to customize the appearance of the fixed user ha
                     Offset = 0.5,
                     Alignment = FixedUserHandleAlignment.After,
                     Displacement = new DiagramPoint() { Y = 10 },
-                    Visibility = true, Padding = new Margin() { Bottom = 1, Left = 1, Right = 1, Top = 1 },
+                    Visibility = true, Padding = new DiagramThickness() { Bottom = 1, Left = 1, Right = 1, Top = 1 },
                     PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"
                 }
             },
@@ -375,8 +375,8 @@ The following code explains how to customize the node fixed user handle.
                     Height = 20, 
                     Width = 20, 
                     Visibility = true,
-                    Padding = new Margin() { Bottom = 1, Left = 1, Right = 1, Top = 1 },
-                    Margin = new Margin() { Left = 20 },
+                    Padding = new DiagramThickness() { Bottom = 1, Left = 1, Right = 1, Top = 1 },
+                    Margin = new DiagramThickness() { Left = 20 },
                     Offset = new DiagramPoint() { Y = 0 },
                     PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"  
                 },
@@ -458,7 +458,7 @@ The following code explains how to customize the connector fixed user handle.
                     Offset = 0.5,
                     Alignment = FixedUserHandleAlignment.After,
                     Displacement = new DiagramPoint { Y = 10 },
-                    Visibility = true, Padding = new Margin() { Bottom = 1, Left = 1, Right = 1, Top = 1 },
+                    Visibility = true, Padding = new DiagramThickness() { Bottom = 1, Left = 1, Right = 1, Top = 1 },
                     PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"
                 }
             }
@@ -518,8 +518,8 @@ The Diagram control provides the following event for the fixed user handle.
                     Height = 20,
                     Width = 20,
                     Visibility = true,
-                    Padding = new Margin() { Bottom = 1, Left = 1, Right = 1, Top = 1 },
-                    Margin = new Margin() { Right = 20 },
+                    Padding = new DiagramThickness() { Bottom = 1, Left = 1, Right = 1, Top = 1 },
+                    Margin = new DiagramThickness() { Right = 20 },
                     Offset = new DiagramPoint() { X = 0 , Y = 0 },
                     PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"
                 },

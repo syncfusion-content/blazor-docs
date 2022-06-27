@@ -38,9 +38,9 @@ A data object represents information flowing through the process, such as data p
             // Sets type to Bpmn and shape to DataObject.
             Shape = new BpmnShape()
             {
-                Type = Shapes.Bpmn,
+                Type = NodeShapes.Bpmn,
                 Shape = BpmnShapes.DataObject,
-                // Sets collection to true when Dataobject is not a Single instance.
+                // Sets collection to true when DataObject is not a Single instance.
                 DataObject = new BpmnDataObject()
                 {
                     Collection = true,

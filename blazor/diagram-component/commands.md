@@ -49,7 +49,7 @@ The following code example illustrates how to align all the selected objects to 
             Height = 30,
             OffsetX = 500,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
         };
         nodes.Add(node1);
         Node node2 = new Node()
@@ -59,7 +59,7 @@ The following code example illustrates how to align all the selected objects to 
             Height = 40,
             OffsetX = 500,
             OffsetY = 300,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
         };
         nodes.Add(node2);
         Node node3 = new Node()
@@ -69,7 +69,7 @@ The following code example illustrates how to align all the selected objects to 
             Height = 50,
             OffsetX = 500,
             OffsetY = 500,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
         };
         nodes.Add(node3);
     }
@@ -108,7 +108,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 30,
             OffsetX = 500,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
         };
         nodes.Add(node1);
         Node node2 = new Node()
@@ -118,7 +118,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 40,
             OffsetX = 500,
             OffsetY = 300,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
         };
         nodes.Add(node2);
         Node node3 = new Node()
@@ -128,7 +128,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 50,
             OffsetX = 500,
             OffsetY = 500,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
         };
         nodes.Add(node3);
     }
@@ -167,7 +167,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 30,
             OffsetX = 500,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
         };
         nodes.Add(node1);
         Node node2 = new Node()
@@ -177,7 +177,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 40,
             OffsetX = 500,
             OffsetY = 300,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
         };
         nodes.Add(node2);
         Node node3 = new Node()
@@ -187,7 +187,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 50,
             OffsetX = 500,
             OffsetY = 500,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
         };
         nodes.Add(node3);
     }
@@ -226,7 +226,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 30,
             OffsetX = 500,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
         };
         nodes.Add(node1);
         Node node2 = new Node()
@@ -236,7 +236,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 40,
             OffsetX = 500,
             OffsetY = 300,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
         };
         nodes.Add(node2);
         Node node3 = new Node()
@@ -246,7 +246,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 50,
             OffsetX = 500,
             OffsetY = 500,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
         };
         nodes.Add(node3);
     }
@@ -285,7 +285,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 30,
             OffsetX = 500,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
         };
         nodes.Add(node1);
         Node node2 = new Node()
@@ -295,7 +295,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 40,
             OffsetX = 500,
             OffsetY = 300,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
         };
         nodes.Add(node2);
         Node node3 = new Node()
@@ -305,7 +305,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 50,
             OffsetX = 500,
             OffsetY = 500,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
         };
         nodes.Add(node3);
     }
@@ -344,7 +344,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 30,
             OffsetX = 230,
             OffsetY = 180,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
         };
         nodes.Add(node1);
         Node node2 = new Node()
@@ -354,7 +354,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 40,
             OffsetX = 500,
             OffsetY = 300,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
         };
         nodes.Add(node2);
         Node node3 = new Node()
@@ -364,7 +364,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 50,
             OffsetX = 235,
             OffsetY = 425,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
         };
         nodes.Add(node3);
     }
@@ -422,7 +422,7 @@ The following code example illustrates how to execute the space commands.
             Height = 30,
             OffsetX = 500,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
         };
         nodes.Add(node1);
         Node node2 = new Node()
@@ -432,7 +432,7 @@ The following code example illustrates how to execute the space commands.
             Height = 40,
             OffsetX = 400,
             OffsetY = 200,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
         };
         nodes.Add(node2);
         Node node3 = new Node()
@@ -442,7 +442,7 @@ The following code example illustrates how to execute the space commands.
             Height = 50,
             OffsetX = 500,
             OffsetY = 300,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
         };
         nodes.Add(node3);
     }
@@ -505,7 +505,7 @@ Sizing [SetSameSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
 
 * [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizingMode.html#Syncfusion_Blazor_Diagram_SizingMode_Width) : Scales the width of the selected objects.
 * [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizingMode.html#Syncfusion_Blazor_Diagram_SizingMode_Height) : Scales the height of the selected objects.
-* [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizingMode.html#Syncfusion_Blazor_Diagram_SizingMode_Size) : Scales the selected objects both vertically and horizontally.
+* [Both](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizingMode.html#Syncfusion_Blazor_Diagram_SizingMode_Both) : Scales the selected objects both vertically and horizontally.
 
 The following code example illustrates how to execute the size commands.
 
@@ -534,7 +534,7 @@ The following code example illustrates how to execute the size commands.
             Height = 30,
             OffsetX = 500,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
         };
         nodes.Add(node1);
@@ -545,7 +545,7 @@ The following code example illustrates how to execute the size commands.
             Height = 40,
             OffsetX = 400,
             OffsetY = 200,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
         };
         nodes.Add(node2);
@@ -556,7 +556,7 @@ The following code example illustrates how to execute the size commands.
             Height = 50,
             OffsetX = 500,
             OffsetY = 300,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
         };
         nodes.Add(node3);
@@ -565,7 +565,7 @@ The following code example illustrates how to execute the size commands.
     private void OnSameSize()
     {
         //Scales the selected objects both vertically and horizontally.
-        diagram.SetSameSize(SizingMode.Size);
+        diagram.SetSameSize(SizingMode.Both);
     }
 
     private void OnSameWidth()
@@ -619,7 +619,7 @@ The following code illustrates how to execute the clipboard commands.
             Height = 30,
             OffsetX = 500,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
         };
         nodes.Add(node1);
@@ -630,7 +630,7 @@ The following code illustrates how to execute the clipboard commands.
             Height = 40,
             OffsetX = 400,
             OffsetY = 200,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
         };
         nodes.Add(node2);
@@ -662,7 +662,7 @@ The following code illustrates how to execute the clipboard commands.
 
 [Group](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Group) command is used to group the selected nodes and connectors in the diagram.
 
-[UnGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_UnGroup) command is used to ungroup the selected nodes and connectors in the diagram.
+[Ungroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Ungroup) command is used to ungroup the selected nodes and connectors in the diagram.
 
 The following code illustrates how to execute the grouping commands.
 
@@ -670,7 +670,7 @@ The following code illustrates how to execute the grouping commands.
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Group" @onclick="@OnGroup" />
-<input type="button" value="UnGroup" @onclick="@OnUnGroup" />
+<input type="button" value="Ungroup" @onclick="@OnUngroup" />
 <input type="button" value="SelectAll" @onclick="@OnSelectAll" />
 
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" Connectors="@Connectors" />
@@ -691,7 +691,7 @@ The following code illustrates how to execute the grouping commands.
             Height = 30,
             OffsetX = 500,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
         };
         nodes.Add(node1);
@@ -702,7 +702,7 @@ The following code illustrates how to execute the grouping commands.
             Height = 40,
             OffsetX = 400,
             OffsetY = 200,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
         };
         nodes.Add(node2);
@@ -714,10 +714,10 @@ The following code illustrates how to execute the grouping commands.
         diagram.Group();
     }
 
-    private void OnUnGroup()
+    private void OnUngroup()
     {
         //Ungroup the selected items in the diagram.
-        diagram.UnGroup();
+        diagram.Ungroup();
     }
 
     private void OnSelectAll()
@@ -757,7 +757,7 @@ The following code illustrates how to zoom-in/zoom out the diagram.
             Height = 30,
             OffsetX = 500,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
         };
         nodes.Add(node1);
@@ -857,7 +857,7 @@ The [CanExecute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 ### How to create custom command
 
 To define a custom command, specify the following properties:
-* [Gesture](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyboardCommand.html#Syncfusion_Blazor_Diagram_KeyboardCommand_Gesture): A combination of [Keys](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyGesture.html#Syncfusion_Blazor_Diagram_KeyGesture_Key) and [Modifiers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyGesture.html#Syncfusion_Blazor_Diagram_KeyGesture_Modifiers).
+* [Gesture](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyboardCommand.html#Syncfusion_Blazor_Diagram_KeyboardCommand_Gesture): A combination of [Key](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyGesture.html#Syncfusion_Blazor_Diagram_KeyGesture_Key) and [Modifiers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyGesture.html#Syncfusion_Blazor_Diagram_KeyGesture_Modifiers).
 * [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyboardCommand.html#Syncfusion_Blazor_Diagram_KeyboardCommand_Name): Defines the name of the command.
 
 To explore the properties of custom commands, refer to the [Commands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html#Syncfusion_Blazor_Diagram_CommandManager_Commands).
@@ -870,7 +870,7 @@ The following code example shows how to define a custom command.
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
     @* Initializing the custom commands *@
     <CommandManager>
-        <CommandManager Commands="@command" Execute="@CommandExecute" CanExecute="@Canexe">
+        <CommandManager Commands="@command" Execute="@CommandExecute" CanExecute="@CanExe">
         </CommandManager>
     </CommandManager>
 </SfDiagramComponent>
@@ -884,12 +884,12 @@ The following code example shows how to define a custom command.
         new KeyboardCommand()
         {
             Name = "CustomGroup",
-            Gesture = new KeyGesture() { Key = Keys.G, Modifiers = ModifierKeys.Control }
+            Gesture = new KeyGesture() { Key = DiagramKeys.G, Modifiers = ModifierKeys.Control }
         },
         new KeyboardCommand()
         {
-            Name = "CustomUnGroup",
-            Gesture = new KeyGesture() { Key = Keys.U, Modifiers = ModifierKeys.Control }
+            Name = "CustomUngroup",
+            Gesture = new KeyGesture() { Key = DiagramKeys.U, Modifiers = ModifierKeys.Control }
         },
      };
     // Defines diagram's nodes collection.
@@ -927,7 +927,7 @@ The following code example shows how to define a custom command.
         nodes.Add(node2);
     }
 
-    public void Canexe(CommandKeyArgs args)
+    public void CanExe(CommandKeyArgs args)
     {
         args.CanExecute = true;
     }
@@ -937,12 +937,12 @@ The following code example shows how to define a custom command.
     /// </summary>
     public void CommandExecute(CommandKeyArgs args)
     {
-        if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == Keys.G)
+        if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == DiagramKeys.G)
         {
             //Custom command to group the selected nodes.
             diagram.Group();
         }
-        if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == Keys.U)
+        if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == DiagramKeys.U)
         {
             DiagramSelectionSettings selector = diagram.SelectionSettings;
             //Custom command to ungroup the selected items.
@@ -950,7 +950,7 @@ The following code example shows how to define a custom command.
             {
                 if ((selector.Nodes[0] as NodeGroup).Children.Length > 0)
                 {
-                    diagram.UnGroup();
+                    diagram.Ungroup();
                 }
             }
         }
@@ -970,7 +970,7 @@ The following code example shows how to disable a command and how to modify the 
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
     @* Initializing the custom commands *@
     <CommandManager>
-        <CommandManager Commands="@commands" Execute="@CommandExecute" CanExecute="@Canexe">
+        <CommandManager Commands="@commands" Execute="@CommandExecute" CanExecute="@CanExe">
         </CommandManager>
     </CommandManager>
 </SfDiagramComponent>
@@ -986,12 +986,12 @@ The following code example shows how to disable a command and how to modify the 
         new KeyboardCommand()
         {
             Name = "SelectAll",
-            Gesture = new KeyGesture() { Key = Keys.A, Modifiers = ModifierKeys.Control }
+            Gesture = new KeyGesture() { Key = DiagramKeys.A, Modifiers = ModifierKeys.Control }
         },
         new KeyboardCommand()
         {
             Name = "Copy",
-            Gesture = new KeyGesture() { Key = Keys.C, Modifiers = ModifierKeys.Control }
+            Gesture = new KeyGesture() { Key = DiagramKeys.C, Modifiers = ModifierKeys.Control }
         }
     };
 
@@ -1027,7 +1027,7 @@ The following code example shows how to disable a command and how to modify the 
         nodes.Add(node2);
     }
 
-    public void Canexe(CommandKeyArgs args)
+    public void CanExe(CommandKeyArgs args)
     {
         args.CanExecute = true;
     }
@@ -1037,11 +1037,11 @@ The following code example shows how to disable a command and how to modify the 
     /// </summary>
     public void CommandExecute(CommandKeyArgs args)
     {
-        if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == Keys.A)
+        if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == DiagramKeys.A)
         {
             //to disable a built-in command and none of action execute
         }
-        if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == Keys.C)
+        if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == DiagramKeys.C)
         {
             //Modify the existing copy command to cut command.
             diagram.Cut();
@@ -1127,7 +1127,7 @@ The following code illustrates how to execute the FitToPage command.
 <SfDiagramComponent @ref="diagram" Width="1000px" Height="600px" Nodes="nodes" Connectors="connectors">
 </SfDiagramComponent>
 @code {
-        //Intialize of all the variables, methods and classes.
+        //Initialize of all the variables, methods and classes.
         public SfDiagramComponent diagram;
         FitOptions options = new FitOptions() {Mode = FitMode.Both, Region = DiagramRegion.Content };
         DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
@@ -1266,7 +1266,7 @@ The [FitToPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
 
 ### Region
 
-The [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramRegion.html) is used to set the region where fittopage should be performed in the diagram.
+The [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramRegion.html) is used to set the region where fit to page should be performed in the diagram.
 
 |Values    | Description     |
 |------------|------------------|
