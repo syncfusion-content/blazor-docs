@@ -246,14 +246,11 @@ The position of the Tab header icons can be customized using the [IconPosition](
 
 ![Blazor Tabs with Icon](./images/blazor-tabs-icon.png)
 
-## Edit the tab header inline
+## Load input element and edit the tab header
 
 You can load input element in tab header for inline editing using [TabItem.HeaderTemplate]() property. Also, ensure to call `FocusAsync()` method in the `onclick` event of input element to focus and edit the header. 
 
-
-1. You can give preferred header content and insert the textbox inside the `HeaderTemplate` element. 
-
-```c#
+{% tabs %}
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Buttons
@@ -267,12 +264,6 @@ You can load input element in tab header for inline editing using [TabItem.Heade
          <input @ref="@inputObj" type="text" @bind-value="@inputText" @onclick="@InputClick" />
         </div>
     </HeaderTemplate>
-
- ```
- 2. You can give preferred content inside the `ContentTemplate` element.
-
- {% tabs %}
-
  <ContentTemplate>
     <ul>
     <li>Click on the "+" header to add dynamic tab items. </li>
@@ -303,13 +294,6 @@ You can load input element in tab header for inline editing using [TabItem.Heade
     </TabItem>
 </TabItems>
 </SfTab>
-
-{% endtabs %}
-
-3. You can edit the tab header inline by calling `FocusAsync()` method inside the `onclick` event.Sets the focus to the TextBox component for interaction.
-
- {% tabs %}
-
  @code {
 
     SfTab Tab;
