@@ -248,7 +248,7 @@ The position of the Tab header icons can be customized using the [IconPosition](
 
 ## Load input element and edit the tab header
 
-You can load input element in tab header for inline editing using `HeaderTemplate()` property. Also, ensure to call `FocusAsync()` method in the `onclick` event of input element to focus and edit the header. 
+You can load input element in tab header for inline editing using [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_HeaderTemplate) property. Also, ensure to call `FocusAsync()` method in the `onclick` event of input element to focus and edit the header. 
 
 {% tabs %}
 @using Syncfusion.Blazor.Navigations
