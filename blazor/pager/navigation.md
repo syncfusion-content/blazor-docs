@@ -22,15 +22,3 @@ The following methods are available in the Pager component for performing Pager 
 |     UpdatePageSize           |    This method updates the page size of the Pager. |
 |     UpdatePageCount           |    This method updates the page count of the Pager. |
 |      Refresh           |    This method can be used to change the state of the component and render it again. |
-
-## EnableQueryString
-
-The Pager component provides an option to pass the current page information as a query string along with the URL while navigating to other page. This can be achieved by enabling the `EnableQueryString` property of the Pager.
-
-```csharp
-@using Syncfusion.Blazor.Navigations
-
-<SfPager ID="Pager" @ref="pager" EnableQueryString="true" TotalItemsCount="75" PageSize="5" NumericItemsCount="5">
-</SfPager>
-
-```

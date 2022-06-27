@@ -250,7 +250,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 * Now, add the Syncfusion Blazor Pager component in razor file. Here, the Pager component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
-In the following sample, Pager component is integrated with ListView component.
+In the following sample, Pager component is integrated with ListView component. Pager provides an option to splits the list view data set into sectioned pages and view them into page by page. Here, navigation can be done with built-in numeric elements and buttons that can also be customized with the help of Pager API's.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -259,7 +259,7 @@ In the following sample, Pager component is integrated with ListView component.
 
 <div class="col-lg-12 control-section sb-property-border">
     @{
-         var listData = ListData.Skip(SkipValue).Take(TakeValue).ToList();
+    var listData = ListData.Skip(SkipValue).Take(TakeValue).ToList();
     <SfListView @ref="@List" DataSource="@listData" TValue="DataModel"  CssClass="e-list-template ui-list" HeaderTitle="Contacts" Height="355px" ShowHeader="true">
         <ListViewTemplates TValue="DataModel">
             <Template>
