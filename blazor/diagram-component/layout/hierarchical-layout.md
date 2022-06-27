@@ -145,7 +145,7 @@ int left = 40;
 int top = 50;
 
 // Update the margin values.
-public void UpdateDiagramThickness()
+public void UpdateMargin()
 {
     Diagram.BeginUpdate();
     left += 10;
