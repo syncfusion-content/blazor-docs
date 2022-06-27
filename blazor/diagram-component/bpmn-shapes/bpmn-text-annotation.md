@@ -50,9 +50,9 @@ documentation: ug
             // Sets type as Bpmn and shape as DataObject
             Shape = new BpmnShape()
             {
-                Type = Shapes.Bpmn,
+                Type = NodeShapes.Bpmn,
                 Shape = BpmnShapes.DataObject,
-                // Sets collection as true when Dataobject is not a Single instance.
+                // Sets collection as true when DataObject is not a Single instance.
                 DataObject = new BpmnDataObject()
                 {
                     Collection = true,

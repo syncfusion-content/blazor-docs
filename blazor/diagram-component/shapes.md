@@ -94,7 +94,7 @@ The following code illustrates how an image node is created.
             OffsetY = 100,
             Shape = new ImageShape()
             {
-                Type = Shapes.Image,
+                Type = NodeShapes.Image,
                 //Sets the source to the image shape
                 Source = "/diagram/images/syncfusion.png"
             }
@@ -135,7 +135,7 @@ The following code illustrates how to add Base64 image into the image node.
             //Sets type of the shape as image.
             Shape = new ImageShape()
             {
-                Type = Shapes.Image,
+                Type = NodeShapes.Image,
                 //Sets the Base64 image to the image shape 
                 Source = "data:image/gif;base64,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"
             },
@@ -152,7 +152,7 @@ The following code illustrates how to add Base64 image into the image node.
 
 ### Stretch and align the image
 
-Stretch and align the image content anywhere but within the node boundary. The [Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ImageShape.html#Syncfusion_Blazor_Diagram_ImageShape_Scale) property of the node allows you to stretch the image as you desire. (either to maintain proportion or to stretch). By default, the Scale property of the node is set as [Meet](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Scale.html#Syncfusion_Blazor_Diagram_Scale_Meet). The following code illustrates how to scale or stretch the content of the image node.
+Stretch and align the image content anywhere but within the node boundary. The [Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ImageShape.html#Syncfusion_Blazor_Diagram_ImageShape_Scale) property of the node allows you to stretch the image as you desire. (either to maintain proportion or to stretch). By default, the Scale property of the node is set as [Meet](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramScale.html#Syncfusion_Blazor_Diagram_DiagramScale_Meet). The following code illustrates how to scale or stretch the content of the image node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -178,10 +178,10 @@ Stretch and align the image content anywhere but within the node boundary. The [
             OffsetY = 100,
             Shape = new ImageShape()
             {
-                Type = Shapes.Image,
+                Type = NodeShapes.Image,
                 Source = "/diagram/images/productmanager.png",
                 //To stretch the image.
-                Scale = Scale.Meet,
+                Scale = DiagramScale.Meet,
                 //To align the image.
                 ImageAlign = ImageAlignment.XMinYMax
             }
@@ -205,12 +205,12 @@ Stretch and align the image content anywhere but within the node boundary. The [
 
 ## HTML template shape
 
-Html elements can be embedded in the diagram through [HTML](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shapes.html#Syncfusion_Blazor_Diagram_Shapes_HTML) type node. The Shape property of Node allows you to set the type of node and to create a HTML node it should be set as **HTML**. The following code illustrates how an HTML node is created.
+Html elements can be embedded in the diagram through [HTML](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeShapes.html#Syncfusion_Blazor_Diagram_Shapes_HTML) type node. The Shape property of Node allows you to set the type of node and to create a HTML node it should be set as **HTML**. The following code illustrates how an HTML node is created.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-@* Add a Namespace for a syncfusion control used in Diagrm HTML node *@
+@* Add a Namespace for a syncfusion control used in Diagram HTML node *@
 @using Syncfusion.Blazor.CircularGauge
 
 @* Initialize Diagram with node template *@
@@ -287,7 +287,7 @@ Html elements can be embedded in the diagram through [HTML](https://help.syncfus
             //Sets the type of the shape as HTML.
             Shape = new Shape()
             {
-                Type = Shapes.HTML,
+                Type = NodeShapes.HTML,
             }
         };
         nodes.Add(node);
@@ -301,7 +301,7 @@ Html elements can be embedded in the diagram through [HTML](https://help.syncfus
 
 ## Node with basic shapes
 
-The [BasicShapes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BasicShape.html) are common shapes that are used to represent the geometrical information visually. To create basic shapes, the **Type** of the shape should be set as [Basic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shapes.html#Syncfusion_Blazor_Diagram_Shapes_Basic). Its Shape property can be set with any one of the built-in shapes. To render a rounded rectangle, you need to set the type as **Basic** and shape as **Rectangle**. Set the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BasicShape.html#Syncfusion_Blazor_Diagram_BasicShape_CornerRadius) property to specify the radius of rounded rectangle.
+The [BasicShapes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BasicShape.html) are common shapes that are used to represent the geometrical information visually. To create basic shapes, the **Type** of the shape should be set as [Basic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeShapes.html#Syncfusion_Blazor_Diagram_Shapes_Basic). Its Shape property can be set with any one of the built-in shapes. To render a rounded rectangle, you need to set the type as **Basic** and shape as **Rectangle**. Set the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BasicShape.html#Syncfusion_Blazor_Diagram_BasicShape_CornerRadius) property to specify the radius of rounded rectangle.
 
 The following code example illustrates how to create a basic shape.
 
@@ -330,8 +330,8 @@ The following code example illustrates how to create a basic shape.
             //Sets the type of the shape as basic.
             Shape = new BasicShape()
             {
-                Type = Shapes.Basic,
-                Shape = BasicShapeType.Rectangle,
+                Type = NodeShapes.Basic,
+                Shape = NodeBasicShapes.Rectangle,
                 //Sets the corner radius to the node shape.
                 CornerRadius = 10
             },
@@ -422,8 +422,8 @@ The [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowS
             //Sets the type of the shape as flow.
             Shape = new FlowShape()
             {
-                Type = Shapes.Flow,
-                Shape = FlowShapeType.DirectData
+                Type = NodeShapes.Flow,
+                Shape = NodeFlowShapes.DirectData
             }
         };
         nodes.Add(node);
@@ -437,7 +437,7 @@ The list of flow shapes are as follows.
 
 ## SVG template shape
 
-Diagram provides support to embed SVG element into a node. The Shape property of the node allows to set the type of node. To create a SVG node, it should be set as [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shapes.html#Syncfusion_Blazor_Diagram_Shapes_SVG). The following code illustrates how a SVG node is created.
+Diagram provides support to embed SVG element into a node. The Shape property of the node allows to set the type of node. To create a SVG node, it should be set as [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeShapes.html#Syncfusion_Blazor_Diagram_Shapes_SVG). The following code illustrates how a SVG node is created.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -480,7 +480,7 @@ Diagram provides support to embed SVG element into a node. The Shape property of
             OffsetX = 100,
             OffsetY = 100,
             //Sets type of the shape as SVG.
-            Shape = new Shape() { Type = Shapes.SVG },
+            Shape = new Shape() { Type = NodeShapes.SVG },
         };
         nodes.Add(node);
     }

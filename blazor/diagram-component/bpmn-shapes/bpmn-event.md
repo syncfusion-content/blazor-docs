@@ -44,7 +44,7 @@ The event property of the node allows you to define the type of the event. The d
             //Sets type as Bpmn and shape as Event.
             Shape = new BpmnShape()
             {
-                Type = Shapes.Bpmn,
+                Type = NodeShapes.Bpmn,
                 Shape = BpmnShapes.Event,
                 // Set the event type as End.
                 Events = new BpmnSubEvent() { Event = BpmnEvents.End }
@@ -87,7 +87,7 @@ Event triggers are notated as icons inside the circle and they represent the spe
             //Sets type as Bpmn and shape as Event
             Shape = new BpmnShape()
             {
-                Type = Shapes.Bpmn,
+                Type = NodeShapes.Bpmn,
                 Shape = BpmnShapes.Event,
                 // Set the event type as End.
                 Events = new BpmnSubEvent()

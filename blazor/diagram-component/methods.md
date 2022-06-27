@@ -88,7 +88,7 @@ To create a node, define the Node object and add it to the nodes collection of t
             Width = 100,
             ID = "node1",
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
         };
  
         Node node2 = new Node()
@@ -110,7 +110,7 @@ To create a node, define the Node object and add it to the nodes collection of t
                }
             },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
         };
 
         Connector Connector = new Connector()

@@ -38,7 +38,7 @@ Datasource is used to store or access data associated with a business process. T
             // Sets type to Bpmn and shape to DataSource.
             Shape = new BpmnShape()
             {
-                Type = Shapes.Bpmn,
+                Type = NodeShapes.Bpmn,
                 Shape = BpmnShapes.DataSource,
             }
         };

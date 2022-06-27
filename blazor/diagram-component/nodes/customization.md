@@ -80,8 +80,8 @@ The following code shows how to customize the appearance of the shape.
             // Shape of the Node.
             Shape = new BasicShape() 
             { 
-                Type = Shapes.Basic, 
-                Shape = BasicShapeType.Rectangle 
+                Type = NodeShapes.Basic, 
+                Shape = NodeBasicShapes.Rectangle 
             }
         };
         Node node2 = new Node()
@@ -92,8 +92,8 @@ The following code shows how to customize the appearance of the shape.
             // Shape of the Node.
             Shape = new BasicShape() 
             { 
-                Type = Shapes.Basic, 
-                Shape = BasicShapeType.Ellipse 
+                Type = NodeShapes.Basic, 
+                Shape = NodeBasicShapes.Ellipse 
             }
         };
         nodes.Add(node1);
@@ -178,7 +178,7 @@ You can define node style using template in [NodeTemplate](https://help.syncfusi
             OffsetX = 300,
             OffsetY = 100,
             ID = "html1",
-            Shape = new Shape() { Type = Shapes.HTML },
+            Shape = new Shape() { Type = NodeShapes.HTML },
         };
         nodes.Add(node);
     }
@@ -238,7 +238,7 @@ The [SetNodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
         nodes.Add(node2);
     }
 
-    private ICommonElement SetNodeTemplate(IDiagramObject node)
+    private CommonElement SetNodeTemplate(IDiagramObject node)
     {
         if ((node as Node).ID == "node6")
         {
@@ -247,34 +247,34 @@ The [SetNodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
             table.Orientation = Orientation.Horizontal;
             StackPanel column1 = new StackPanel();
             column1.Style = new ShapeStyle() { Fill = "#6F409F", StrokeColor = "#6F409F" };
-            column1.Margin = new Margin() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
-            column1.Padding = new Thickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
-            column1.Children = new ObservableCollection<ICommonElement>();
+            column1.Margin = new DiagramThickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
+            column1.Padding = new DiagramThickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
+            column1.Children = new ObservableCollection<CommonElement>();
             column1.Children.Add(getTextElement("Events"));
 
             StackPanel column2 = new StackPanel();
-            column2.Margin = new Margin() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
-            column2.Padding = new Thickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
-            column2.Children = new ObservableCollection<ICommonElement>();
+            column2.Margin = new DiagramThickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
+            column2.Padding = new DiagramThickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
+            column2.Children = new ObservableCollection<CommonElement>();
             column2.Children.Add(getTextElement("Emails"));
             column2.Style = new ShapeStyle() { Fill = "#6F409F", StrokeColor = "#6F409F" };
 
             StackPanel column3 = new StackPanel();
-            column3.Margin = new Margin() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
-            column3.Padding = new Thickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
-            column3.Children = new ObservableCollection<ICommonElement>();
+            column3.Margin = new DiagramThickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
+            column3.Padding = new DiagramThickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
+            column3.Children = new ObservableCollection<CommonElement>();
             column3.Children.Add(getTextElement("Calls"));
             column3.Style = new ShapeStyle() { Fill = "#6F409F", StrokeColor = "#6F409F" };
 
             StackPanel column4 = new StackPanel();
-            column4.Margin = new Margin() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
-            column4.Padding = new Thickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
-            column4.Children = new ObservableCollection<ICommonElement>();
+            column4.Margin = new DiagramThickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
+            column4.Padding = new DiagramThickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
+            column4.Children = new ObservableCollection<CommonElement>();
             column4.Children.Add(getTextElement("Smart contents"));
             column4.Style = new ShapeStyle() { Fill = "#6F409F", StrokeColor = "#6F409F" };
 
             table.Orientation = Orientation.Vertical;
-            table.Children = new ObservableCollection<ICommonElement>() { column1, column2, column3, column4 };
+            table.Children = new ObservableCollection<CommonElement>() { column1, column2, column3, column4 };
             return table;
         }
         else
@@ -287,8 +287,8 @@ The [SetNodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
             };
             (node as Node).Shape = new BasicShape() 
             { 
-                Type = Shapes.Basic, 
-                Shape = BasicShapeType.Rectangle, 
+                Type = NodeShapes.Basic, 
+                Shape = NodeBasicShapes.Rectangle, 
                 CornerRadius = 10 
             };
         }
@@ -482,8 +482,8 @@ There are two types of gradients as follows:
             Height = 100,
             Shape = new BasicShape() 
             { 
-                Type = Shapes.Basic, 
-                Shape = BasicShapeType.Ellipse 
+                Type = NodeShapes.Basic, 
+                Shape = NodeBasicShapes.Ellipse 
             },
             Style = new ShapeStyle()
             {

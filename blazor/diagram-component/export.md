@@ -20,8 +20,8 @@ Diagram provides support to export the diagram as an image/svg files. The follow
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<input type="button" @onclick="@Exportbase64" />
-<input type="button" @onclick="@Exportpng" />
+<input type="button" @onclick="@ExportBase64" />
+<input type="button" @onclick="@ExportPng" />
 <SfDiagramComponent Height="600px" @ref="@diagram">
 </SfDiagramComponent>
 
@@ -29,14 +29,14 @@ Diagram provides support to export the diagram as an image/svg files. The follow
      SfDiagramComponent diagram;
 
      //To export the diagram as base64 string.
-     private async Task Exportbase64()
+     private async Task ExportBase64()
      {
           DiagramExportSettings export = new DiagramExportSettings();         
           string[] base64 = await diagram.ExportAsync(DiagramExportFormat.PNG, export);          
      }
 
      //To export the diagram as png.
-     private async Task Exportpng()
+     private async Task ExportPng()
      {
           DiagramExportSettings export = new DiagramExportSettings();                   
           await diagram.ExportAsync("diagram",DiagramExportFormat.PNG, export);
@@ -119,7 +119,7 @@ Diagram provides support to change the page size. Page size can be changed by se
      {
           DiagramExportSettings export = new DiagramExportSettings();
           export.Region = DiagramPrintExportRegion.PageSettings;
-          export.Margin = new Margin() { Left = 10, Top = 10, Right = 10, Bottom = 10 };
+          export.Margin = new DiagramThickness() { Left = 10, Top = 10, Right = 10, Bottom = 10 };
           //To export the diagram
           await diagram.ExportAsync(DiagramExportFormat.PNG, export);
      }
@@ -154,7 +154,7 @@ The following code example illustrates how to export the diagram based on page s
           export.Region = DiagramPrintExportRegion.PageSettings;
           export.PageWidth = 816;
           export.PageHeight = 1054;                
-          export.Margin = new Margin() { Left = 10, Top = 10, Right = 10, Bottom = 10 };          
+          export.Margin = new DiagramThickness() { Left = 10, Top = 10, Right = 10, Bottom = 10 };          
           //To export the diagram
           await diagram.ExportAsync(DiagramExportFormat.PNG, export);
      }
@@ -183,7 +183,7 @@ The following code example illustrates how to export the region specified in the
           export.Region = DiagramPrintExportRegion.PageSettings;
           export.PageWidth = 816;
           export.PageHeight = 1054;                  
-          export.Margin = new Margin() { Left = 10, Top = 10, Right = 10, Bottom = 10 };
+          export.Margin = new DiagramThickness() { Left = 10, Top = 10, Right = 10, Bottom = 10 };
           export.ClipBounds = new DiagramRect() { X = 0, Y = 0, Width = 500, Height = 500 };
           //To export the diagram
           await diagram.ExportAsync(DiagramExportFormat.PNG, export);
@@ -218,7 +218,7 @@ The following code example illustrates how to export the diagram to a single pag
           export.PageHeight = 1054;
           //To export the diagram in single page.
           export.FitToPage = true;         
-          export.Margin = new Margin() { Left = 10, Top = 10, Right = 10, Bottom = 10 };
+          export.Margin = new DiagramThickness() { Left = 10, Top = 10, Right = 10, Bottom = 10 };
           export.ClipBounds = new DiagramRect() { X = 0, Y = 0, Width = 500, Height = 500 };
           //To export the diagram
           await diagram.ExportAsync(DiagramExportFormat.PNG, export);
@@ -249,7 +249,7 @@ Diagram provides support to switch between [Portrait](https://help.syncfusion.co
           //To export the diagram in single page.
           export.FitToPage = true;
           export.Orientation = PageOrientation.Landscape;         
-          export.Margin = new Margin() { Left = 10, Top = 10, Right = 10, Bottom = 10 };
+          export.Margin = new DiagramThickness() { Left = 10, Top = 10, Right = 10, Bottom = 10 };
           export.ClipBounds = new DiagramRect() { X = 0, Y = 0, Width = 500, Height = 500 };
           //To export the diagram
           await diagram.ExportAsync(DiagramExportFormat.PNG, export);
@@ -281,7 +281,7 @@ The following code illustrates how to export the diagram as PDF file.
         print.PageHeight = pageHeight;
         print.Orientation = orientation;
         print.FitToPage = multiplePage;
-        print.Margin = new Margin() { Left = left, Top = top, Right = right, Bottom = bottom };
+        print.Margin = new DiagramThickness() { Left = left, Top = top, Right = right, Bottom = bottom };
         print.ClipBounds = new DiagramRect() { X = double.Parse(x), Y = double.Parse(y), Width = double.Parse(cwidth), Height = double.Parse(cheight) };
         //To export the diagram into base64
         var images = await diagram.ExportAsync(format, print);

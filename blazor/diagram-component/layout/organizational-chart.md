@@ -61,7 +61,7 @@ An organizational chart is a diagram that displays the structure of an organizat
             new Node() { ID = "node8",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Targeting" } } },
             new Node() { ID = "node9",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Evaluation" } } },
             new Node() { ID = "node10",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "HR-Team" } } },
-            new Node() { ID = "node11",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Recruiment" } } },
+            new Node() { ID = "node11",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Recruitment" } } },
             new Node() { ID = "node12",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Employee-Relation" } } },
             new Node() { ID = "node13",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Production & Sales Team" } } },
             new Node() { ID = "node14",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Design" } } },

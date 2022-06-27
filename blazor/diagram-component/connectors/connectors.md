@@ -324,7 +324,7 @@ The following code example illustrates how to connect two nodes.
                 Width = 100,
                 ID = "node1",
                 Style = new ShapeStyle(){ Fill = "#6495ED", StrokeColor = "#6495ED" },
-                Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
             },
             new Node()
             {
@@ -334,7 +334,7 @@ The following code example illustrates how to connect two nodes.
                 Width = 100,
                 ID = "node2",
                 Style = new ShapeStyle(){ Fill = "#6495ED", StrokeColor = "#6495ED" },
-                Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
             }
         };
         Connector Connector = new Connector()
@@ -412,7 +412,7 @@ The following code example illustrates how to create port to port connections.
                 Width = 100,
                 ID = "node1",
                 Style = new ShapeStyle(){ Fill = "#6495ED", StrokeColor = "#6495ED"},
-                Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
             },
             new Node()
             {
@@ -433,7 +433,7 @@ The following code example illustrates how to create port to port connections.
                     }
                 },
                 Style = new ShapeStyle(){ Fill = "#6495ED", StrokeColor = "#6495ED" },
-                Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
               }
         };
         Connector Connector = new Connector()

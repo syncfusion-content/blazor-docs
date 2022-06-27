@@ -39,7 +39,7 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
 
 <SfDiagramComponent @ref="@Diagram" 
                     Height="499px"
-                    InteractionController="InteractionController.ZoomPan" 
+                    InteractionController="DiagramInteractions.ZoomPan" 
                     ConnectorCreating="@ConnectorDefaults" 
                     NodeCreating="@NodeDefaults">
     <DataSourceSettings ID="Name" ParentID="Category" DataSource="DataSource"/>
@@ -197,7 +197,7 @@ The following sample code demonstrates binding local data through the SfDataMana
         };
     }
 
-    private ICommonElement SetTemplate(IDiagramObject node)
+    private CommonElement SetTemplate(IDiagramObject node)
     {
         return null;
     }
@@ -220,7 +220,7 @@ The ODataV4 is an improved version of OData protocols, and the SfDataManager can
 
 <div style="width:100%">
     <div style="width:70%">
-        <SfDiagramComponent Height="400px" InteractionController="@InteractionController.ZoomPan" 
+        <SfDiagramComponent Height="400px" InteractionController="@DiagramInteractions.ZoomPan" 
                             NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating" SetNodeTemplate="SetTemplate">
             <DataSourceSettings Id="EmployeeID" ParentId="ReportsTo">
                 <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Employees" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor"></SfDataManager>
@@ -250,7 +250,7 @@ The ODataV4 is an improved version of OData protocols, and the SfDataManager can
         node.OffsetY = y;
         node.Width = 80;
         node.Height = 40;        
-        node.Shape = new BasicShape() { Type = Syncfusion.Blazor.Diagram.Shapes.Basic, Shape = BasicShapeType.Rectangle, CornerRadius = 8 };
+        node.Shape = new BasicShape() { Type = Syncfusion.Blazor.Diagram.NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle, CornerRadius = 8 };
         node.Style = new ShapeStyle() { StrokeWidth = 0, Fill = "" };
         x += 100;
 
@@ -305,7 +305,7 @@ The ODataV4 is an improved version of OData protocols, and the SfDataManager can
         connector.SourceDecorator.Shape = DecoratorShape.None;
         connector.Style = new ShapeStyle() { StrokeColor = "#3A4857", Fill = "#3A4857", StrokeWidth = 1, StrokeDashArray = "3,3" };
     }
-    private ICommonElement SetTemplate(IDiagramObject node)
+    private CommonElement SetTemplate(IDiagramObject node)
     {
         return null;
     }

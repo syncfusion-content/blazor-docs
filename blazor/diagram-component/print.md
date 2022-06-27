@@ -68,7 +68,7 @@ The following code example illustrates how to print the region occupied by the d
         print.Region = region;
         print.FitToPage = multiplePage;
         print.Orientation = orientation;
-        print.Margin = new Margin() { Left = left, Top = top, Right = right, Bottom = bottom };
+        print.Margin = new DiagramThickness() { Left = left, Top = top, Right = right, Bottom = bottom };
         await diagram.PrintAsync(print);
      }
 }

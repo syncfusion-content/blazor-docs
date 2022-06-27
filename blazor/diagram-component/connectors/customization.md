@@ -172,7 +172,7 @@ Padding is used to leave the space between the Connector's end point and the obj
                 Width = 100,
                 ID = "node1",
                 Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#6BA5D7" },
-                Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
           },
           new Node() 
           {   
@@ -182,7 +182,7 @@ Padding is used to leave the space between the Connector's end point and the obj
                 Width = 100,
                 ID = "node2",
                 Style = new ShapeStyle(){ Fill = "#6BA5D7", StrokeColor = "#6BA5D7" },
-                Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
           }
         };
         Connector Connector = new Connector()

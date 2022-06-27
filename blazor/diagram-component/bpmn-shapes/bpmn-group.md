@@ -38,7 +38,7 @@ A group is used to frame a part of the diagram, shows that elements included in 
             // Sets type to Bpmn and shape to Group.
             Shape = new BpmnShape()
             {
-                Type = Shapes.Bpmn,
+                Type = NodeShapes.Bpmn,
                 Shape = BpmnShapes.Group,
             }
         };

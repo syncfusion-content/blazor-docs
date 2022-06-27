@@ -43,7 +43,7 @@ There are two types of activities. They are listed as follows:
             // Sets the type of shape to Bpmn and shape to activity.
             Shape = new BpmnShape()
             {
-                Type = Shapes.Bpmn,
+                Type = NodeShapes.Bpmn,
                 Shape = BpmnShapes.Activity,
                 // Sets the activity type to task.
                 Activity = new BpmnActivity() { Activity = BpmnActivities.Task },
@@ -85,7 +85,7 @@ The `Task` property of the node allows you to define the type of task such as se
             // Sets the type of shape to Bpmn and shape to activity.
             Shape = new BpmnShape()
             {
-                Type = Shapes.Bpmn,
+                Type = NodeShapes.Bpmn,
                 Shape = BpmnShapes.Activity,
                 // Sets the activity type to task.
                 Activity = new BpmnActivity() 
@@ -145,7 +145,7 @@ A `Sub-process` is a group of tasks that is used to hide or reveal details of ad
             // Sets the type of shape to Bpmn and shape to activity.
             Shape = new BpmnShape()
             {
-                Type = Shapes.Bpmn,
+                Type = NodeShapes.Bpmn,
                 Shape = BpmnShapes.Activity,
                 // Sets the activity type to task.
                 Activity = new BpmnActivity()
@@ -197,7 +197,7 @@ A `SubProcess` is defined as an event SubProcess when it is triggered by an even
             ID = "node1",
             Shape = new BpmnShape()
             {
-                Type = Shapes.Bpmn,
+                Type = NodeShapes.Bpmn,
                 Shape = BpmnShapes.Activity,
                 // Sets activity to SubProcess.
                 Activity = new BpmnActivity()
@@ -271,7 +271,7 @@ The `Events` property of subprocess allows you to represent these results as an 
             // Defines the type to BPMN and shape to activity.
             Shape = new BpmnShape()
             {
-                Type = Shapes.Bpmn,
+                Type = NodeShapes.Bpmn,
                 Shape = BpmnShapes.Activity,
                 // Sets the activity to subprocess.
                 Activity = new BpmnActivity()
@@ -321,10 +321,10 @@ The `Processes` is an array collection that defines the children values for BPMN
             ID = "Start",
             Width = 50,
             Height = 50,
-            Margin = new Margin() { Left = 10, Top = 50 },
+            Margin = new DiagramThickness() { Left = 10, Top = 50 },
             Shape = new BpmnShape()
             {
-                Type = Shapes.Bpmn,
+                Type = NodeShapes.Bpmn,
                 Shape = BpmnShapes.Event,
                 Events = new BpmnSubEvent() { Event = BpmnEvents.Start }
             }
@@ -334,10 +334,10 @@ The `Processes` is an array collection that defines the children values for BPMN
             ID = "End",
             Width = 50,
             Height = 50,
-            Margin = new Margin() { Left = 200, Top = 50 },
+            Margin = new DiagramThickness() { Left = 200, Top = 50 },
             Shape = new BpmnShape()
             {
-                Type = Shapes.Bpmn,
+                Type = NodeShapes.Bpmn,
                 Shape = BpmnShapes.Event,
                 Events = new BpmnSubEvent() { Event = BpmnEvents.End }
             }
@@ -347,10 +347,10 @@ The `Processes` is an array collection that defines the children values for BPMN
             ID = "Node1",
             Width = 50,
             Height = 50,
-            Margin = new Margin() { Left = 100, Top = 200 },
+            Margin = new DiagramThickness() { Left = 100, Top = 200 },
             Shape = new BpmnShape()
             {
-                Type = Shapes.Bpmn,
+                Type = NodeShapes.Bpmn,
                 Shape = BpmnShapes.Activity,
                 Activity = new BpmnActivity()
                 {
@@ -373,7 +373,7 @@ The `Processes` is an array collection that defines the children values for BPMN
             OffsetY = 200,
             Shape = new BpmnShape()
             {
-                Type = Shapes.Bpmn,
+                Type = NodeShapes.Bpmn,
                 Shape = BpmnShapes.Activity,
                 Activity = new BpmnActivity()
                 {
@@ -443,7 +443,7 @@ The `Processes` is an array collection that defines the children values for BPMN
             // Defines the type to BPMN and shape to activity.
             Shape = new BpmnShape()
             {
-                Type = Shapes.Bpmn,
+                Type = NodeShapes.Bpmn,
                 Shape = BpmnShapes.Activity,
                 // Set the activity to subprocess.
                 Activity = new BpmnActivity()
@@ -502,7 +502,7 @@ The following table contains various types of BPMN loops.
             // Defines the type to BPMN and shape to activity.
             Shape = new BpmnShape()
             {
-                Type = Shapes.Bpmn,
+                Type = NodeShapes.Bpmn,
                 Shape = BpmnShapes.Activity,
                 // Set the activity to task.
                 Activity = new BpmnActivity()
@@ -529,7 +529,7 @@ The following table contains various types of BPMN loops.
             // Defines the type to BPMN and shape to activity.
             Shape = new BpmnShape()
             {
-                Type = Shapes.Bpmn,
+                Type = NodeShapes.Bpmn,
                 Shape = BpmnShapes.Activity,
                 // Set the activity to SubProcess
                 Activity = new BpmnActivity()
@@ -581,7 +581,7 @@ A `Call` activity is a global subprocess that is reused at various points of the
             // Defines the type to BPMN and shape to activity.
             Shape = new BpmnShape()
             {
-                Type = Shapes.Bpmn,
+                Type = NodeShapes.Bpmn,
                 Shape = BpmnShapes.Activity,
                 // Sets the activity to task.
                 Activity = new BpmnActivity()
@@ -631,7 +631,7 @@ An ad-hoc subprocess is a group of tasks that are executed in any order or skipp
             // Defines the type to BPMN and shape to activity
             Shape = new BpmnShape()
             {
-                Type = Shapes.Bpmn,
+                Type = NodeShapes.Bpmn,
                 Shape = BpmnShapes.Activity,
                 // Sets the activity to subprocess
                 Activity = new BpmnActivity()
@@ -682,7 +682,7 @@ Boundary represents the type of task that is being processed. The `Boundary` pro
             // Sets type to Bpmn and shape to Activity.
             Shape = new BpmnShape()
             {
-                Type = Shapes.Bpmn,
+                Type = NodeShapes.Bpmn,
                 Shape = BpmnShapes.Activity,
                 // Sets activity to SubProcess.
                 Activity = new BpmnActivity()
