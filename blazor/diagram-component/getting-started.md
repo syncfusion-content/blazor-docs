@@ -285,12 +285,12 @@ Let us create and add a [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
     private void InitDiagramModel()
     {
-        CreateNode("Start", 300, 50, FlowShapeType.Terminator, "Start");
-        CreateNode("Init", 300, 140, FlowShapeType.Process, "var i = 0");
-        CreateNode("Condition", 300, 230, FlowShapeType.Decision, "i < 10?");
-        CreateNode("Print", 300, 320, FlowShapeType.PreDefinedProcess, "print(\'Hello!!\');");
-        CreateNode("Increment", 300, 410, FlowShapeType.Process, "i++;");
-        CreateNode("End", 300, 500, FlowShapeType.Terminator, "End");
+        CreateNode("Start", 300, 50, NodeFlowShapes.Terminator, "Start");
+        CreateNode("Init", 300, 140, NodeFlowShapes.Process, "var i = 0");
+        CreateNode("Condition", 300, 230, NodeFlowShapes.Decision, "i < 10?");
+        CreateNode("Print", 300, 320, NodeFlowShapes.PreDefinedProcess, "print(\'Hello!!\');");
+        CreateNode("Increment", 300, 410, NodeFlowShapes.Process, "i++;");
+        CreateNode("End", 300, 500, NodeFlowShapes.Terminator, "End");
         // Creates orthogonal connector.
         OrthogonalSegment segment1 = new OrthogonalSegment()
         {
@@ -369,7 +369,7 @@ Let us create and add a [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.
             // Defines the style of the node.
             Style = new ShapeStyle { Fill = "#357BD2", StrokeColor = "White" },
             // Defines the shape of the node.
-            Shape = new FlowShape() { Type = Shapes.Flow, Shape = shape },
+            Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = shape },
             // Defines the annotation collection of the node.
             Annotations = new DiagramObjectCollection<ShapeAnnotation>
             {
