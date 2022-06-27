@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor Pager Component | Syncfusion
-description: Checkout and learn here all about data binding in Syncfusion Blazor Pager component and much more.
+description: Checkout and learn here all about working with data in Syncfusion Blazor Pager component and much more.
 platform: Blazor
 control: Pager
 documentation: ug

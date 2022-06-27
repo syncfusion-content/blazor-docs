@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Navigation in Blazor Pager Component | Syncfusion
-description: Checkout and learn here all about navigation in Syncfusion Blazor Pager component and much more.
+description: Checkout and learn here all about available methods in Syncfusion Blazor Pager component and much more.
 platform: Blazor
 control: Pager
 documentation: ug
