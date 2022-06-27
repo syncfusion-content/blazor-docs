@@ -80,8 +80,8 @@ The following code shows how to customize the appearance of the shape.
             // Shape of the Node.
             Shape = new BasicShape() 
             { 
-                Type = Shapes.Basic, 
-                Shape = BasicShapeType.Rectangle 
+                Type = NodeShapes.Basic, 
+                Shape = NodeBasicShapes.Rectangle 
             }
         };
         Node node2 = new Node()
