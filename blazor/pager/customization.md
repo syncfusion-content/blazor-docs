@@ -11,7 +11,7 @@ documentation: ug
 
 ## Custom text
 
-The Pager component provides an option to define custom text along with the prefix of numeric items. This can be achieved by using the `NumericItemPrefix` property.
+The Pager component provides an option to define custom text and it is added as a prefix for numeric items. This can be achieved by using the `NumericItemPrefix` property.
 
 ```csharp
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor Pager Component | Syncfusion
-description: Checkout and learn here all about working with data in Syncfusion Blazor Pager component and much more.
+description: Checkout and learn here all about working Syncfusion Blazor Pager component with both local or remote data collection and how it splits into sectioned pages.
 platform: Blazor
 control: Pager
 documentation: ug
@@ -11,7 +11,9 @@ documentation: ug
 
 ## Local Data
 
-Local data can be represented in Array of JSON data:
+The ListView component provides an option to get the list view items from the local data. It can be done through a list of business objects or a collection of values. 
+
+Using the Click event of the Pager, how many number of items displayed per page in the ListView component is demonstrated in the following sample.
 
 ```csharp
 @using Syncfusion.Blazor.Data
