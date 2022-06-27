@@ -306,7 +306,7 @@ You can load input element in tab header for inline editing using [TabItem.Heade
 
 {% endtabs %}
 
-3. You can edit the tab header inline by calling `FocusAsync()` method inside the `onclick` event. Sets the focus to the TextBox component for interaction.
+3. You can edit the tab header inline by calling `FocusAsync()` method inside the `onclick` event.Sets the focus to the TextBox component for interaction.
 
  {% tabs %}
 
