@@ -248,7 +248,7 @@ The position of the Tab header icons can be customized using the [IconPosition](
 
 ## Load input element and edit the tab header
 
-You can load input element in tab header for inline editing using [TabItem.HeaderTemplate]() property. Also, ensure to call `FocusAsync()` method in the `onclick` event of input element to focus and edit the header. 
+You can load input element in tab header for inline editing using `HeaderTemplate()` property. Also, ensure to call `FocusAsync()` method in the `onclick` event of input element to focus and edit the header. 
 
 {% tabs %}
 @using Syncfusion.Blazor.Navigations
@@ -256,77 +256,78 @@ You can load input element in tab header for inline editing using [TabItem.Heade
 @using Syncfusion.Blazor.Buttons
 
 <SfTab @ref="Tab">
-   <TabEvents Selected="@ItemSelected"></TabEvents>
-    <TabItems>
-     <TabItem>
-      <HeaderTemplate>
-        <div>
+ <TabEvents Selected="@ItemSelected"></TabEvents>
+  <TabItems>
+   <TabItem>
+     <HeaderTemplate>
+       <div>
          <input @ref="@inputObj" type="text" @bind-value="@inputText" @onclick="@InputClick" />
         </div>
-    </HeaderTemplate>
+   </HeaderTemplate>
  <ContentTemplate>
-    <ul>
-    <li>Click on the "+" header to add dynamic tab items. </li>
-    <li>It displays input elements to get the new tab information. </li>
-    <li>Add details and click the "Add Tab" button to open the newly added tab.</li>
-    </ul>
+   <ul>
+     <li>Click on the "+" header to add dynamic tab items. </li>
+     <li>It displays input elements to get the new tab information. </li>
+     <li>Add details and click the "Add Tab" button to open the newly added tab.</li>
+   </ul>
 </ContentTemplate>
     </TabItem>
      <TabItem>
       <ChildContent>
-         <TabHeader IconCss="e-plus"></TabHeader>
-       </ChildContent>
-      <ContentTemplate>
-        <div id="form-container">
-        <div>
-   <SfTextBox @bind-Value="@dynamicHeader" Placeholder="Enter Header"></SfTextBox>
+          <TabHeader IconCss="e-plus"></TabHeader>
+         </ChildContent>
+ <ContentTemplate>
+   <div id="form-container">
+     <div>
+       <SfTextBox @bind-Value="@dynamicHeader" Placeholder="Enter Header"></SfTextBox>
         </div>
-        <br />
-        <div>
-   <SfTextBox @bind-Value="@dynamicContent" Placeholder="Enter Content"></SfTextBox>
+      <br/>
+     <div>
+       <SfTextBox @bind-Value="@dynamicContent" Placeholder="Enter Content"></SfTextBox>
+       </div>
+     <br/> 
+     <div>
+       <SfButton Content="@Content" IsPrimary="true" @onclick="onClick"></SfButton>
         </div>
-        <br /> 
-        <div>
-   <SfButton Content="@Content" IsPrimary="true" @onclick="onClick"></SfButton>
-        </div>
-        </div>
-    </ContentTemplate>
-    </TabItem>
-</TabItems>
+     </div>
+        </ContentTemplate>
+      </TabItem>
+   </TabItems>
 </SfTab>
  @code {
 
-    SfTab Tab;
-    ElementReference inputObj;
-    public string inputText { get; set; }
-    public string Content = "Add Tab";
-    public string dynamicHeader { get; set; }
-    public string dynamicContent { get; set; }
+  SfTab Tab;
+  ElementReference inputObj;
+  public string inputText { get; set; }
+  public string Content = "Add Tab";
+  public string dynamicHeader { get; set; }
+  public string dynamicContent { get; set; }
 
-    private async Task InputClick()
+  private async Task InputClick()
+   {
+     await inputObj.FocusAsync();
+   }
+  public void onClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+   {
+     List<TabItem> source = new List<TabItem>()
       {
-        await inputObj.FocusAsync();
-      }
-    public void onClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
-      {
-        List<TabItem> source = new List<TabItem>()
-         {
-           new TabItem() { Header = new TabHeader() { Text = @dynamicHeader }, Content = @dynamicContent }
-         };
+         new TabItem() { 
+         Header = new TabHeader() { Text = @dynamicHeader }, Content = @dynamicContent }
+       };
        this.Tab.AddTab(source, this.Tab.Items.Count() - 1);
       }
-    public void ItemSelected(Syncfusion.Blazor.Navigations.SelectEventArgs args)
+   public void ItemSelected(Syncfusion.Blazor.Navigations.SelectEventArgs args)
+    {
+      if (args.SelectedIndex == this.Tab.Items.Count() - 1)
        {
-         if (args.SelectedIndex == this.Tab.Items.Count() - 1)
-          {
-            this.dynamicHeader = "";
-            this.dynamicContent = "";
-          }
-        else if (args.SelectedIndex == 0)
-          {
-            inputText = string.Empty;
-          }
-       }
+         this.dynamicHeader = "";
+         this.dynamicContent = "";
+        }
+      else if (args.SelectedIndex == 0)
+        {
+          inputText = string.Empty;
+        }
+    }
  }
 
 {% endtabs %}
