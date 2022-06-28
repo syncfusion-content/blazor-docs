@@ -301,7 +301,7 @@ The following GIF represent a Tree Grid with Column virtualization.
 
 ## Frozen columns virtualization
 
-This feature virtualize the row and movable column data. Column virtualization allows you to virtualize the movable columns and cell placeholder renders before new columns loading the viewport.
+This feature virtualize the movable column data. Column virtualization allows you to virtualize the movable columns and cell placeholder renders before new columns loading the viewport.
 
 Row virtualization allows you to virtualize the vertical data with cell placeholder. This placeholder renders before new row data loading in the viewport.
 
@@ -311,7 +311,7 @@ To setup the frozen right/left columns, you need to define Column property of **
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.TreeGrid;
 
-<SfTreeGrid DataSource="@TreeData" IdMapping="TaskID" TreeColumnIndex="1" ParentIdMapping="ParentID" Height="400" Width="600" EnableHover="false" RowHeight="38" EnableVirtualization="true" EnableColumnVirtualization="true" EnableVirtualMaskRow="true">
+<SfTreeGrid DataSource="@TreeData" IdMapping="TaskID" TreeColumnIndex="1" ParentIdMapping="ParentID" Height="400" Width="600" EnableHover="false" RowHeight="38" EnableVirtualization="true" EnableColumnVirtualization="true">
     <TreeGridPageSettings PageSize="40"></TreeGridPageSettings>
     <TreeGridColumns>
         <TreeGridColumn Field="TaskID" HeaderText="Jersey No" TextAlign="TextAlign.Right" Width="150" IsFrozen="true" Freeze="FreezeDirection.Left"></TreeGridColumn>
@@ -403,7 +403,7 @@ To setup the frozen right/left columns, you need to define Column property of **
 }
 ```
 
-The following GIF represent a tree grid with Frozen columns/row virtualization.
+The following GIF represent a tree grid with Frozen column virtualization.
 ![Blazor TreeGrid with Frozen Column virtualization](./images/blazor-treegrid-frozencolumn-virtualization.gif)
 
 ### Limitations for Virtualization
