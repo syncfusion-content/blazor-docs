@@ -342,7 +342,7 @@ The following code example illustrates how to create an icon of various shapes.
     }
 }
 ```
-![Displaying DiagramIcon in Blazor Diagram](../images/blazor-diagram-DiagramIcon.png)
+![Displaying DiagramIcon in Blazor Diagram](../images/blazor-diagram-ExpandCollapse.gif)
 
 For more information about node interaction, refer to [Node Interaction](../interaction).
 
