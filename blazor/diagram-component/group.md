@@ -46,13 +46,13 @@ A node group can be added to the diagram model through [Nodes](https://help.sync
         Node node1 = createNode("node1", 100, 100, "Node1");
         Node node2 = createNode("node2", 300, 100, "Node2");
         Node node3 = createNode("node3", 200, 250, "Node3");
-        NodeGroup GroupNode = new NodeGroup();
+        NodeGroup groupNode = new NodeGroup();
         // Grouping node 1 and node 2 into a single nodegroup.
-        GroupNode.Children = new string[] { "node1", "node2" };
+        groupNode.Children = new string[] { "node1", "node2" };
         nodes.Add(node1);
         nodes.Add(node2);
         nodes.Add(node3);
-        nodes.Add(GroupNode);
+        nodes.Add(groupNode);
     }
 
     public Node createNode(string id, double offsetX, double offsetY, string content)
@@ -78,7 +78,7 @@ A node group can be added to the diagram model through [Nodes](https://help.sync
             },
         };
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-    {
+        {
             annotation
         };
         return node;
@@ -115,12 +115,12 @@ The following code illustrates how to ungroup at runtime.
     {
         Node node1 = createNode("node1", 100, 100, "Node1");
         Node node2 = createNode("node2", 300, 100, "Node2");
-        NodeGroup GroupNode = new NodeGroup();
+        NodeGroup groupNode = new NodeGroup();
         // Grouping node 1 and node 2 into a single nodegroup.
-        GroupNode.Children = new string[] { "node1", "node2" };
+        groupNode.Children = new string[] { "node1", "node2" };
         nodes.Add(node1);
         nodes.Add(node2);
-        nodes.Add(GroupNode);
+        nodes.Add(groupNode);
     }
 
     public Node createNode(string id, double offsetX, double offsetY, string content)
@@ -181,14 +181,14 @@ The following code illustrates how a node group is added at runtime.
 @code
 {
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    NodeGroup GroupNode = new NodeGroup();
+    NodeGroup groupNode = new NodeGroup();
 
     protected override void OnInitialized()
     {
         Node node1 = createNode("node1", 100, 100, "Node1");
         Node node2 = createNode("node2", 300, 100, "Node2");
         // Grouping node 1 and node 2 into a single node-group.
-        GroupNode.Children = new string[] { "node1", "node2" };
+        groupNode.Children = new string[] { "node1", "node2" };
         nodes.Add(node1);
         nodes.Add(node2);
     }
@@ -224,7 +224,7 @@ The following code illustrates how a node group is added at runtime.
 
     private void AddGroup()
     {
-        nodes.Add(GroupNode);
+        nodes.Add(groupNode);
     }
 }
 ```
@@ -242,17 +242,17 @@ The following code illustrates how a node group is added at runtime.
 {
     SfDiagramComponent diagram;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    NodeGroup GroupNode = new NodeGroup();
+    NodeGroup groupNode = new NodeGroup();
 
     protected override void OnInitialized()
     {
         Node node1 = createNode("node1", 100, 100, "Node1");
         Node node2 = createNode("node2", 300, 100, "Node2");
         // Grouping node 1 and node 2 into a single node-group.
-        GroupNode.Children = new string[] { "node1", "node2" };
+        groupNode.Children = new string[] { "node1", "node2" };
         nodes.Add(node1);
         nodes.Add(node2);
-        nodes.Add(GroupNode);
+        nodes.Add(groupNode);
     }
 
     public Node createNode(string id, double offsetX, double offsetY, string content)
@@ -328,18 +328,18 @@ You can change the position of the node group similar to node. For more informat
 @code
 {
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    NodeGroup GroupNode = new NodeGroup();
+    NodeGroup groupNode = new NodeGroup();
 
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
         Node node1 = createNode("node1", 100, 100, "Node1");
         Node node2 = createNode("node2", 300, 100, "Node2");
-        // Grouping node 1 and node 2 into a single nodegroup.
-        GroupNode.Children = new string[] { "node1", "node2" };
+        // Grouping node 1 and node 2 into a single NodeGroup.
+        groupNode.Children = new string[] { "node1", "node2" };
         nodes.Add(node1);
         nodes.Add(node2);
-        nodes.Add(GroupNode);
+        nodes.Add(groupNode);
     }
 
     public Node createNode(string id, double offsetX, double offsetY, string content)
