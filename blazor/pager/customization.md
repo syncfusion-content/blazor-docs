@@ -9,7 +9,7 @@ documentation: ug
 
 # Customization in Pager Component
 
-## Custom text
+## Custom text for numeric items
 
 The Pager component provides an option to define custom text and it is added as a prefix for numeric items. This can be achieved by using the `NumericItemPrefix` property.
 

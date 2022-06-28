@@ -18,19 +18,19 @@ The Pager component provides an option to define the number of items to be displ
 ```csharp
 @using Syncfusion.Blazor.Navigations
 
-<SfPager PageSize="5">
+<SfPager PageSize="5" TotalItemsCount="20">
 </SfPager>
 
 ```
 
-## Page count
+## Numeric items count
 
 The Pager component provides an option to define the number of numeric items to be displayed in the Pager for navigation. This can be achieved by using the `NumericItemsCount` property. The default value of the `NumericItemsCount` property is "10."
 
 ```csharp
 @using Syncfusion.Blazor.Navigations
 
-<SfPager NumericItemsCount="5">
+<SfPager NumericItemsCount="5" TotalItemsCount="20" PageSize="4">
 </SfPager>
 
 ```
@@ -54,7 +54,7 @@ Blazor Pager component support to define which page to be displayed currently in
 ```csharp
 @using Syncfusion.Blazor.Navigations
 
-<SfPager CurrentPage="3">
+<SfPager CurrentPage="3" TotalItemsCount="20" PageSize="4" NumericItemsCount="5">
 </SfPager>
 
 ```
@@ -66,7 +66,7 @@ The Pager component provides an option to show or hide the Pager information in 
 ```csharp
 @using Syncfusion.Blazor.Navigations
 
-<SfPager ShowPagerMessage="true">
+<SfPager ShowPagerMessage="true" PageSize="4" NumericItemsCount="5" TotalItemsCount="20">
 </SfPager>
 
 ```

@@ -28,8 +28,7 @@ Using the Click event of the Pager, how many number of items displayed per page 
     </SfListView>
     }
      <div class="pager-container">
-        <SfPager @ref="@Page" PageSize=5  NumericItemsCount=5 TotalItemsCount=25>
-            <PagerEvents Click="Click"></PagerEvents>
+        <SfPager @ref="@Page" PageSize=5  NumericItemsCount=5 TotalItemsCount=25 Click="Click">
         </SfPager>
     </div>
 </div>
@@ -114,8 +113,7 @@ Using the Click event of the Pager, how many number of items displayed per page 
     </SfListView>
     }
      <div class="pager-container">
-        <SfPager @ref="@Page" PageSize=5  NumericItemsCount=5 TotalItemsCount=25>
-            <PagerEvents Click="Click"></PagerEvents>
+        <SfPager @ref="@Page" PageSize=5  NumericItemsCount=5 TotalItemsCount=25 Click="Click">
         </SfPager>
     </div>
 </div>

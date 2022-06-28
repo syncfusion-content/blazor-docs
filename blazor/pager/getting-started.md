@@ -276,8 +276,7 @@ In the following sample, Pager component is integrated with ListView component. 
     </SfListView>
     }
     <div class="pager-container">
-        <SfPager @ref="@Page" PageSize=5 NumericItemsCount=2 TotalItemsCount=25>
-            <PagerEvents Click="Click"></PagerEvents>
+        <SfPager @ref="@Page" PageSize=5 NumericItemsCount=2 TotalItemsCount=25 Click="Click">
         </SfPager>
     </div>
 </div>
