@@ -7,7 +7,7 @@ control: Gantt Chart
 documentation: ug
 ---
 
-# Cell Selection
+## Cell Selection
 
 You can select a cell in the Gantt Chart component by setting the `SelectionSettings.Mode` property to cell. You can get the selected cell information using the `GetSelectedRowCellIndexes` method. This method returns the result as an object collection, which has `CellIndexes` and `RowIndex` information of the selected cells.
 

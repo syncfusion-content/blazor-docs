@@ -7,7 +7,7 @@ control: Gantt Chart
 documentation: ug
 ---
 
-# Column template
+## Column template
 
 A column template is used to customize the column’s look. The following code example explains how to define the custom template in Gantt Chart using the `Template` property.
 

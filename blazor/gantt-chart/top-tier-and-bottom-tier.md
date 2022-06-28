@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Top tier and bottom tier timeline cells in Blazor Gantt Chart Component | Syncfusion
+title: Top tier and bottom tier in Blazor Gantt Chart Component | Syncfusion
 description: Checkout and learn here all about Top tier and bottom tier timeline cells in Syncfusion Blazor Gantt Chart component and much more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Top tier and bottom tier
+## Top tier and bottom tier
 
 Gantt Chart component contains two tier layout in timeline, you can customize the top tier and bottom tier using [GanttTopTierSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTopTierSettings.html) and [GanttBottomTierSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttBottomTierSettings.html) properties. Timeline tier's unit can be defined by using `Unit` property and `Format` property was used to define date format of timeline cell and `Count` property was used to define how many unit will be combined as single cell.
 
@@ -61,7 +61,7 @@ Gantt Chart component contains two tier layout in timeline, you can customize th
 
 ![Blazor Gantt Chart with Top and Bottom Tier](images/blazor-gantt-chart-top-bottom-tier.png)
 
-## Combining timeline cells
+#### Combining timeline cells
 
 In Gantt Chart, timeline cells in top tier and bottom tier can be combined with number of timeline units, this can be achieved by using `GanttTopTierSettings.Count` and `GanttBottomTierSettings.Count` properties. Please refer the following sample.
 
@@ -114,7 +114,7 @@ In Gantt Chart, timeline cells in top tier and bottom tier can be combined with 
 
 ![Combining Timeline Cells in Blazor Gantt Chart](images/blazor-gantt-chart-combine-cells.png)
 
-## Format value of timeline cell
+#### Customize header timeline cells
 
 In the Gantt Chart component, you can format the value of top and bottom timeline cells using the standard date format string or the custom formatter method. This can be done using the `GanttTopTierSettings.Format`, `GanttTopTierSettings.FormatterTemplate`, `GanttBottomTierSettings.Format`, and `GanttBottomTierSettings.FormatterTemplate` properties. The following example shows how to use the formatter method for timeline cells.
 
@@ -185,7 +185,7 @@ In the Gantt Chart component, you can format the value of top and bottom timelin
 }
 ```
 
-## Timeline cell width
+#### Timeline cell width
 
 In the Gantt Chart component, you can define the width value of timeline cell using the `GanttTimelineSettings.TimelineUnitSize` property. This value will be set to the bottom timeline cell, and the width value of top timeline cell will be calculated automatically based on bottom tier cell width using the `GanttTopTierSettings.Unit` and `GanttTimelineSettings.TimelineUnitSize` properties. Refer the following example.
 

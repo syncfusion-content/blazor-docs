@@ -7,7 +7,7 @@ control: Gantt Chart
 documentation: ug
 ---
 
-# Column menu
+## Column menu
 
 The column menu has options to integrate features like sorting, filtering, and autofit. It will show a menu with the integrated feature when users click the Multiple icon of the column. To enable the column menu, you should set the `ShowColumnMenu` property to true.
 

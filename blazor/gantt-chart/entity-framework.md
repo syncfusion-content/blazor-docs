@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Entity frameWork
+## Entity frameWork
 
 You need to follow the below steps to consume data from the **Entity Framework** in the Gantt Chart component.
 

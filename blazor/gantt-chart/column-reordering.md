@@ -7,7 +7,7 @@ control: Gantt Chart
 documentation: ug
 ---
 
-# Column Reordering
+## Column Reordering
 
 The column reordering can be done by dragging a column header from one index to another index within the Tree Grid. To enable reordering, set the `AllowReordering` property to true.
 
@@ -58,7 +58,8 @@ The column reordering can be done by dragging a column header from one index to 
 ![Reordering Column in Blazor Gantt Chart](images/blazor-gantt-chart-column-reorder.png)
 
 > You can disable the reordering of a particular column by setting the `GanttColumn.AllowReordering` property to `false`.
-## Reorder single column
+
+#### Reorder single column
 
 Gantt chart has option to reorder single column either by Interaction or by using the [ReorderColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ReorderColumnsAsync_System_Collections_Generic_List_System_String__System_String_) method. In the following sample, **Duration** column is reordered to last column position by using the method.
 
@@ -119,7 +120,7 @@ Gantt chart has option to reorder single column either by Interaction or by usin
     }
 }
 ```
-## Reorder multiple columns
+#### Reorder multiple columns
 
 Multiple columns can be reordered at a time by using the `ReorderColumnsAsync` method.
 

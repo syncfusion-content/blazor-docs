@@ -7,7 +7,7 @@ control: Gantt Chart
 documentation: ug
 ---
 
-# Responsive columns
+## Responsive columns
 
 You can toggle the column visibility based on media queries, which are defined in the `HideAtMedia`. The `HideAtMedia` accepts valid [Media Queries]( http://cssmediaqueries.com/what-are-css-media-queries.html ).
 

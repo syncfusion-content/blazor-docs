@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Zooming in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about Zooming in Syncfusion Blazor Gantt Chart component and much more.
+description: Checkout and learn here all about Zooming timespan levels in Syncfusion Blazor Gantt Chart component and much more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Zooming
+## Zooming
 
 Gantt Chart has 25 predefined zooming timespan levels from year timespan to hour timespan. This support enables you to view the tasks in a project clearly from minute to decade timespan. To enable the zooming features, define the `ZoomIn`, `ZoomOut`, and `ZoomToFit` items to toolbar items collections. The following zooming options are available to view the project:
 

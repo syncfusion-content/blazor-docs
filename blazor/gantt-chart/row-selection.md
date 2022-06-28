@@ -7,7 +7,7 @@ control: Gantt Chart
 documentation: ug
 ---
 
-# Row Selection
+## Row Selection
 
 The row selection in the Gantt Chart component can be enabled or disabled using the `AllowSelection` property. You can get the selected row object using the [GetSelectedRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetSelectedRecordsAsync) method. The following code example shows how to disable the row selection in Gantt Chart.
 

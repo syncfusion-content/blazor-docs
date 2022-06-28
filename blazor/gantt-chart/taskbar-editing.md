@@ -7,7 +7,7 @@ control: Gantt Chart
 documentation: ug
 ---
 
-# Taskbar editing
+## Taskbar editing
 
 Modify the task details through user interaction, such as resizing and dragging the taskbar, by enabling the `GanttEditSettings.AllowTaskbarEditing` property.
 
