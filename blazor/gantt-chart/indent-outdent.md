@@ -7,7 +7,7 @@ control: Gantt Chart
 documentation: ug
 ---
 
-## Indent and outdent
+# Indent and outdent in Blazor Gantt Chart Component
 
 Indent and Outdent of a task are used to update the level of task in the hierarchical order of the task. It can be performed by enabling the `GanttEditSettings.AllowEditing` property.
 

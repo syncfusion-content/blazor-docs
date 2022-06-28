@@ -7,7 +7,7 @@ control: Gantt Chart
 documentation: ug
 ---
 
-## Column Reordering
+# Column Reordering in Blazor Gantt Chart Component
 
 The column reordering can be done by dragging a column header from one index to another index within the Tree Grid. To enable reordering, set the `AllowReordering` property to true.
 

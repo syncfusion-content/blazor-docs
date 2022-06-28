@@ -7,7 +7,7 @@ control: Gantt Chart
 documentation: ug
 ---
 
-## Search
+# Search in Blazor Gantt Chart Component
 
 You can search for records in the Gantt Chart component by using the [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SearchAsync_System_String_) method with search key as a parameter. The Gantt Chart component provides an option to integrate the search text box in the toolbar by adding the search item to the `Toolbar` property.
 

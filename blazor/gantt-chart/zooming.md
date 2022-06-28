@@ -7,7 +7,7 @@ control: Gantt Chart
 documentation: ug
 ---
 
-## Zooming
+# Zooming in Blazor Gantt Chart Component
 
 Gantt Chart has 25 predefined zooming timespan levels from year timespan to hour timespan. This support enables you to view the tasks in a project clearly from minute to decade timespan. To enable the zooming features, define the `ZoomIn`, `ZoomOut`, and `ZoomToFit` items to toolbar items collections. The following zooming options are available to view the project:
 

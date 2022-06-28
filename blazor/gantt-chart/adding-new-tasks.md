@@ -7,7 +7,7 @@ control: Gantt Chart
 documentation: ug
 ---
 
-## Adding new tasks
+# Adding new tasks in Blazor Gantt Chart Component
 
 Tasks can be dynamically added to the Gantt Chart project by enabling the [GanttEditSettings.AllowAdding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowAdding) property.
 
