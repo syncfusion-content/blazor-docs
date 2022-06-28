@@ -246,6 +246,98 @@ The position of the Tab header icons can be customized using the [IconPosition](
 
 ![Blazor Tabs with Icon](./images/blazor-tabs-icon.png)
 
+
+## Add floating button to the right of existing tabs
+
+Refer below steps to add floating button to the right of existing tabs
+
+1. You can give preferred header title inside the [TabHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabHeader.html) property. Also, You can give preferred content inside the [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_ContentTemplate) property.
+
+```c#
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Buttons
+
+<SfTab @ref="Tab">
+  <TabEvents Selected="@ItemSelected"></TabEvents>
+    <TabItems>
+       <TabItem>
+         <ChildContent>
+             <TabHeader Text="Project Time"></TabHeader>
+         </ChildContent>
+            <ContentTemplate>
+                <ul>
+                    <li>Click on the "+" header to add dynamic tab items. </li>
+                    <li>It displays input elements to get the new tab information. </li>
+                    <li>Add details and click the "Add Tab" button to open the newly added tab.</li>
+                </ul>
+           </ContentTemplate>
+     </TabItem>
+``` 
+2. Create button inside the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_HeaderTemplate) property and Enter the Header title and it's content.
+
+ ```cshtml
+  <TabItem>
+    <HeaderTemplate>
+       <SfButton  Content="+"></SfButton>
+    </HeaderTemplate>
+      <ContentTemplate>
+        <div id="form-container">
+           <div>
+             <SfTextBox @bind-Value="@dynamicHeader" Placeholder="Enter Header"></SfTextBox>
+            </div>
+                <br />
+            <div>
+              <SfTextBox @bind-Value="@dynamicContent" Placeholder="Enter Content"></SfTextBox>
+            </div>
+               <br />
+            <div>
+              <SfButton Content="@Content" IsPrimary="true" @onclick="onClick"></SfButton>
+                </div>
+                </div>
+            </ContentTemplate>
+        </TabItem>
+    </TabItems>
+</SfTab>
+
+```
+3. On AddTab button click new tab is added to the existing tab.
+
+ ```cshtml
+ @code {
+    SfTab Tab;
+    public string inputText { get; set; }
+    public string Content = "Add Tab";
+    public string dynamicHeader { get; set; }
+    public string dynamicContent { get; set; }
+
+    public void onClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        List<TabItem> source = new List<TabItem>()
+        {
+            new TabItem() { Header = new TabHeader() { Text = @dynamicHeader }, Content = @dynamicContent }
+        };
+        this.Tab.AddTab(source, this.Tab.Items.Count() - 1);
+    }
+    public void ItemSelected(Syncfusion.Blazor.Navigations.SelectEventArgs args)
+    {
+        if (args.SelectedIndex == this.Tab.Items.Count() - 1)
+        {
+            this.dynamicHeader = "";
+            this.dynamicContent = "";
+        }
+        else if (args.SelectedIndex == 0)
+        {
+            inputText = string.Empty;
+        }
+    }
+}
+
+```
+![Blazor Tabs with Floating button](./images/blazor-tabs-floating-button.png)
+
+[View Sample in GitHub](https://github.com/SyncfusionExamples/How-to-do-inline-tab-edit-in-header-of-Blazor-Tab)
+
 ## See Also
 
 * [How to customize selected tab styles](./how-to/customize-selected-tab-styles)
