@@ -336,7 +336,7 @@ Refer below steps to add floating button to the right of existing tabs
 ```
 ![Blazor Tabs with Floating button](./images/blazor-tabs-floating-button.png)
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/How-to-do-inline-tab-edit-in-header-of-Blazor-Tab)
+[View Sample in GitHub](https://github.com/SyncfusionExamples/How-to-add-floating-button-to-the-right-of-tabs-in-Blazor-Tab)
 
 ## See Also
 
