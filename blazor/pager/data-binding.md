@@ -13,7 +13,7 @@ documentation: ug
 
 The Blazor Pager component has an option to split the collection of data sets (local data) into sectioned pages.
 
-Using the `Click` event of the Pager, how many items are displayed per page in the ListView component is demonstrated in the following sample. Here, items in the ListView component are loaded from local data collection.
+In the following sample, initially list view items are displayed per page based on the Pager's PageSize property. While navigating the numeric items in the Pager, the `Click` event will be triggered. In the `Click` event of the Pager, we have calculated the number of items displayed per page in the ListView component. Here, items in the ListView component are loaded from local data collection.
 
 ```csharp
 @using Syncfusion.Blazor.Data
@@ -96,7 +96,7 @@ Using the `Click` event of the Pager, how many items are displayed per page in t
 
 The Blazor Pager component has an option to split the collection of data sets (remote data) into sectioned pages.
 
-Using the `Click` event of the Pager, how many items are displayed per page in the ListView component is demonstrated in the following sample. Here, items in the ListView component are loaded from the remote data services.
+In the following sample, initially list view items are displayed per page based on the Pager's PageSize property. While navigating the numeric items in the Pager, the `Click` event will be triggered. In the `Click` event of the Pager, we have calculated the number of items displayed per page in the ListView component. Here, items in the ListView component are loaded from the remote data services.
 
 ```csharp
 @using Syncfusion.Blazor.Lists
