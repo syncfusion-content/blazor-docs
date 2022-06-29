@@ -16,7 +16,17 @@ The following example demonstrates Button in `Disabled` state.
 ```cshtml
 @using Syncfusion.Blazor.Buttons
 
-<SfButton Disabled="true">Disabled</SfButton>
+<SfButton Disabled="true" @ref="ButtonObj">Disabled</SfButton>
+<SfButton OnClick="click">Enable</SfButton>
+
+@code{
+    SfButton ButtonObj;
+    private Boolean disable = true;
+    public void click()
+    {
+        disable = false;
+    }
+}
 
 ```
 
