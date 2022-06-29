@@ -354,7 +354,7 @@ Let us create and add a [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.
     }
 
     // Method to create node.
-    private void CreateNode(string id, double x, double y, FlowShapeType shape, string label)
+    private void CreateNode(string id, double x, double y, NodeFlowShapes shape, string label)
     {
         Node diagramNode = new Node()
         {

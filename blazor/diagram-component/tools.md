@@ -120,7 +120,7 @@ To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
     private void AddConnector()
     {
         //To draw an object once, activate draw once.
-        diagram.InteractionController = InteractionController.DrawOnce;
+        diagram.InteractionController = DiagramInteractions.DrawOnce;
         //Initialize the drawing object to draw the connectors.
         diagram.DrawingObject = new Connector()
         {
@@ -180,7 +180,7 @@ Diagram allows you to create a text Node as soon as you click on the Diagram pag
     private void AddNode()
     {
         //To draw an object once, activate draw once.
-        diagram.InteractionController = InteractionController.DrawOnce;
+        diagram.InteractionController = DiagramInteractions.DrawOnce;
         //Initialize the drawing object to draw the shape.
         diagram.DrawingObject = new Node()
         {
@@ -243,7 +243,7 @@ The following code illustrates how to draw a polygon shape.
     private void Polygon()
     {
         //To draw an object once, activate draw once.
-        diagram.InteractionController = InteractionController.DrawOnce;
+        diagram.InteractionController = DiagramInteractions.DrawOnce;
         //Initialize the drawing object to draw the polygon shape.
         diagram.DrawingObject = new Node()
         {
@@ -269,7 +269,7 @@ There are some functionalities that can be achieved by clicking and dragging on 
 As all the three behaviors are completely different, you can achieve only one behavior at a time based on the interaction controller that you choose.
 When more than one of those interaction controllers are applied, an interaction controller is activated based on the precedence given in the following table.
 
-|Precedence|InteractionControllers|Description|
+|Precedence|DiagramInteractions|Description|
 |----------|-----|-----------|
 |1st|[ContinuesDraw](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramInteractions.html#Syncfusion_Blazor_Diagram_DiagramInteractions_ContinuousDraw)|Allows you to draw the nodes or connectors continuously. Once it is activated, you cannot perform any other interaction in the diagram.|
 |2nd|[DrawOnce](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramInteractions.html#Syncfusion_Blazor_Diagram_DiagramInteractions_DrawOnce)|Allows you to draw a single node or connector. Once you complete the DrawOnce action, SingleSelect, and MultipleSelect interaction controllers are automatically enabled.|
@@ -291,7 +291,7 @@ The following code illustrates how to enable single interaction controller,
 @code
 {
     //Enable the single tool.
-    public InteractionController tool = InteractionController.DrawOnce;
+    public DiagramInteractions tool = DiagramInteractions.DrawOnce;
     //Defines diagram's connectors collection.
     public DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 }
@@ -309,7 +309,7 @@ The following code illustrates how to enable multiple interaction controllers,
     //Reference to diagram.
     SfDiagramComponent diagram;
     //Enable the multiple tools.
-    public InteractionController tool = InteractionController.DrawOnce | InteractionController.ZoomPan;
+    public DiagramInteractions tool = DiagramInteractions.DrawOnce | DiagramInteractions.ZoomPan;
     //Defines diagram's connectors collection.
     public DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 }

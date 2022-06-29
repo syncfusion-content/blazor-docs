@@ -75,7 +75,7 @@ The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Symb
         CreatePaletteNode(NodeFlowShapes.Terminator, "Terminator");       
     }
 
-    private void CreatePaletteNode(FlowShapeType flowShape, string id)
+    private void CreatePaletteNode(NodeFlowShapes flowShape, string id)
     {
         Node node = new Node()
         {
@@ -134,7 +134,7 @@ The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Symb
            new Palette(){Symbols =PaletteNodes, Title="Flow Shapes", ID="Flow Shapes" },
         };
     }
-    private void CreatePaletteNode(FlowShapeType flowShape, string id)
+    private void CreatePaletteNode(NodeFlowShapes flowShape, string id)
     {
         Node node = new Node()
         {
@@ -396,7 +396,7 @@ Palettes = new DiagramObjectCollection<Palette>()
         };
     }
 
-    private void CreatePaletteNode(FlowShapeType flowShape, string id)
+    private void CreatePaletteNode(NodeFlowShapes flowShape, string id)
     {
         Node node = new Node()
         {
@@ -551,7 +551,7 @@ To initialize drag and drop, you must add the diagram to the [Targets](https://h
         };
     }
 
-    private void CreatePaletteNode(FlowShapeType flowShape, string id)
+    private void CreatePaletteNode(NodeFlowShapes flowShape, string id)
     {
         Node node = new Node()
         {
