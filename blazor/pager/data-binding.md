@@ -11,9 +11,9 @@ documentation: ug
 
 ## Local Data
 
-The ListView component provides an option to get the list view items from the local data. It can be done through a list of business objects or a collection of values. 
+The Blazor Pager component has an option to split the collection of data sets (local data) into sectioned pages.
 
-Using the Click event of the Pager, how many number of items displayed per page in the ListView component is demonstrated in the following sample.
+Using the `Click` event of the Pager, how many items are displayed per page in the ListView component is demonstrated in the following sample. Here, items in the ListView component are loaded from local data collection.
 
 ```csharp
 @using Syncfusion.Blazor.Data
@@ -94,9 +94,9 @@ Using the Click event of the Pager, how many number of items displayed per page 
 
 ## Remote Data
 
-The ListView supports to retrieve the data from remote data services with the help of `DataManager` component. The `Query` property allows to fetch data and return it to the ListView from the database.
+The Blazor Pager component has an option to split the collection of data sets (remote data) into sectioned pages.
 
-Using the Click event of the Pager, how many number of items displayed per page in the ListView component is demonstrated in the following sample.
+Using the `Click` event of the Pager, how many items are displayed per page in the ListView component is demonstrated in the following sample. Here, items in the ListView component are loaded from the remote data services.
 
 ```csharp
 @using Syncfusion.Blazor.Lists
