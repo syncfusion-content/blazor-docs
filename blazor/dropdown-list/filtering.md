@@ -107,3 +107,16 @@ The DropDownList component filter queries can be customized. You can also use yo
     }
 }
 ```
+
+## Custom Filtering with Custom Data Adaptor
+
+The DropDownList component filter queries can be customized along with custom data adaptor.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+{% include_relative code-snippet/filter-using-custom-adaptor.razor %}
+
+{% endhighlight %}
+
+​​​​​​​{% endtabs %}
