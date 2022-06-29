@@ -88,6 +88,7 @@ namespace BlazorApplication
 {% endhighlight %}
 {% endtabs %}
 
+> From 20.1 (2022 Vol1) release: You don't have to set `IgnoreScriptIsolation` property as `true` explicitly, since the default value changed to true and this property marked as obsolete. 
 
 ## Add style sheet
 
