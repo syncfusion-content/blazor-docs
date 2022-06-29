@@ -249,9 +249,9 @@ The position of the Tab header icons can be customized using the [IconPosition](
 
 ## Add floating button to the right of existing tabs
 
-You can add floating button to the right of existing tabs by creating button inside the[HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_HeaderTemplate) property.
+You can add floating button to the right of existing tabs by adding button inside the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_HeaderTemplate) of last TabItem.
 
-On AddTab button click new tab is added to the existing tab by using `AddTab` method.
+Here, New tab items added when user clicks on the `Button` inside `HeaderTemplate`.
 
 ```cshtml
 
