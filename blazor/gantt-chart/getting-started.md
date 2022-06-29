@@ -671,6 +671,8 @@ The following sample code demonstrates notifying user when server-side exception
 {% endhighlight %}
 {% endtabs %}
 
+![Blazor Gantt Chart](images/blazor-gantt-chart-handling-exception.PNG)
+
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/GanttChart).
 
 ## See Also
