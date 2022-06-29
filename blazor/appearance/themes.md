@@ -152,6 +152,7 @@ You can add the theme for the Blazor applications through **npm packages** using
       {
         "outputFile": "wwwroot/styles/customstyle.css",
         "inputFile": "wwwroot/styles/customstyle.scss",
+        "useNodeSass": true,
         "options": {
           "includePath": "node_modules/@syncfusion"
         }
