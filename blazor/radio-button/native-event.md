@@ -45,3 +45,5 @@ The `onclick` attribute is used to bind the click event for Radio Button.
 }
 
 ```
+
+![Blazor RadioButton with Native Event](./images/blazor-radiobutton-native-event.png)
