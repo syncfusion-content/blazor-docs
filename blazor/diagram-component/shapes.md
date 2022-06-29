@@ -205,7 +205,7 @@ Stretch and align the image content anywhere but within the node boundary. The [
 
 ## HTML template shape
 
-Html elements can be embedded in the diagram through [HTML](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeShapes.html#Syncfusion_Blazor_Diagram_Shapes_HTML) type node. The Shape property of Node allows you to set the type of node and to create a HTML node it should be set as **HTML**. The following code illustrates how an HTML node is created.
+Html elements can be embedded in the diagram through [HTML](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeShapes.html#Syncfusion_Blazor_Diagram_NodeShapes_HTML) type node. The Shape property of Node allows you to set the type of node and to create a HTML node it should be set as **HTML**. The following code illustrates how an HTML node is created.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -301,7 +301,7 @@ Html elements can be embedded in the diagram through [HTML](https://help.syncfus
 
 ## Node with basic shapes
 
-The [BasicShapes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BasicShape.html) are common shapes that are used to represent the geometrical information visually. To create basic shapes, the **Type** of the shape should be set as [Basic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeShapes.html#Syncfusion_Blazor_Diagram_Shapes_Basic). Its Shape property can be set with any one of the built-in shapes. To render a rounded rectangle, you need to set the type as **Basic** and shape as **Rectangle**. Set the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BasicShape.html#Syncfusion_Blazor_Diagram_BasicShape_CornerRadius) property to specify the radius of rounded rectangle.
+The [BasicShapes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BasicShape.html) are common shapes that are used to represent the geometrical information visually. To create basic shapes, the **Type** of the shape should be set as [Basic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeShapes.html#Syncfusion_Blazor_Diagram_NodeShapes_Basic). Its Shape property can be set with any one of the built-in shapes. To render a rounded rectangle, you need to set the type as **Basic** and shape as **Rectangle**. Set the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BasicShape.html#Syncfusion_Blazor_Diagram_BasicShape_CornerRadius) property to specify the radius of rounded rectangle.
 
 The following code example illustrates how to create a basic shape.
 
@@ -437,7 +437,7 @@ The list of flow shapes are as follows.
 
 ## SVG template shape
 
-Diagram provides support to embed SVG element into a node. The Shape property of the node allows to set the type of node. To create a SVG node, it should be set as [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeShapes.html#Syncfusion_Blazor_Diagram_Shapes_SVG). The following code illustrates how a SVG node is created.
+Diagram provides support to embed SVG element into a node. The Shape property of the node allows to set the type of node. To create a SVG node, it should be set as [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeShapes.html#Syncfusion_Blazor_Diagram_NodeShapes_SVG). The following code illustrates how a SVG node is created.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
