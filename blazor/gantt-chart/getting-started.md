@@ -663,7 +663,7 @@ The following sample code demonstrates notifying user when server-side exception
 
     public void ActionFailure(FailureEventArgs args)
     {
-        this.ErrorDetails = "The SSL connection could not be established, see inner exception.";
+        this.ErrorDetails = args.Error.Message.ToString();
         StateHasChanged();
     }
 }
