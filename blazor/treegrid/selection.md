@@ -472,7 +472,10 @@ The Tree Grid allows to select range of cells or rows by mouse or touch dragging
 
 * Tree Grid supports drag selection in both `Flow` and `Box` [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridSelectionSettings_CellSelectionMode), when cell selection enabled.
 
-```cshtml
+{% tabs %}
+
+{% highlight razor %}
+
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
 
@@ -531,7 +534,11 @@ public class TreeData
         }
     }
 }
-```
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ![Blazor TreeGrid Allow Drag Selection](images/blazor-treegrid-dragselection.gif)
 
 ## Select row at initial rendering
