@@ -250,6 +250,6 @@ In the following sample, the `SfDropDownList` component is rendered in the [Filt
 
 > You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-filtering-enum-column).
 
-## see also
+## See Also
 
 * [How to Perform Multiple Value Filtering for Same Column in Grid](https://www.syncfusion.com/kb/12472/how-to-perform-multiple-value-filtering-for-same-column-in-grid)
