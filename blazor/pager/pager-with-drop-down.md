@@ -19,7 +19,9 @@ In the following sample, the selected value in a dropdown will be set to the `Pa
 ```csharp
 @using Syncfusion.Blazor.Navigations
 
-<SfPager TotalItemsCount="75" PageSizes="true" PageSize="5" PageCount="5">
+<SfPager TotalItemsCount="75" PageSizes="true" PageSize="5" NumericItemsCount="3">
 </SfPager>
 
 ```
+
+![Blazor Pager with Dropdown](./images/blazor-pager-with-drop-down.png)
