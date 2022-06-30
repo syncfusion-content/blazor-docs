@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Pager Component | Syncfusion
-description: Checkout here and learn about all Accessibility in Syncfusion Blazor Pager components and much more details.
+description: Checkout here and learn about accessibility in Syncfusion Blazor Pager component and much more details.
 platform: Blazor
 control: Pager
 documentation: ug
