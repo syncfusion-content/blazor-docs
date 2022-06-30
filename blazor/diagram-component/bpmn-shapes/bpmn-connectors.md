@@ -118,9 +118,9 @@ The following table contains various representation of sequence flows.
 
 | Sequence | Image |
 | -------- | -------- |
-| Default | ![Default Sequence BPMN Shpae](../images/Default2.png) |
-| Conditional | ![Conditional Sequence BPMN Shpae](../images/Conditional.png) |
-| Normal | ![Normal Sequence BPMN Shpae](../images/Normal.png) |
+| Default | ![Default Sequence BPMN Shape](../images/Default2.png) |
+| Conditional | ![Conditional Sequence BPMN Shape](../images/Conditional.png) |
+| Normal | ![Normal Sequence BPMN Shape](../images/Normal.png) |
 
 > The default value for the property `Sequence` is **Normal**.
 

@@ -21,7 +21,7 @@ A node group can be added to the diagram model through [Nodes](https://help.sync
 
 * Add a node to the existing node group child by using the [Group](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Group) method.
 
-* The nodegroup’s [UnGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_UnGroup) method is used to define whether the node group can be ungrouped or not.
+* The nodegroup’s [Ungroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Ungroup) method is used to define whether the node group can be ungrouped or not.
 
 * A node group can be added into a child of another node group.
 
@@ -46,22 +46,22 @@ A node group can be added to the diagram model through [Nodes](https://help.sync
         Node node1 = createNode("node1", 100, 100, "Node1");
         Node node2 = createNode("node2", 300, 100, "Node2");
         Node node3 = createNode("node3", 200, 250, "Node3");
-        NodeGroup groupnode = new NodeGroup();
+        NodeGroup groupNode = new NodeGroup();
         // Grouping node 1 and node 2 into a single nodegroup.
-        groupnode.Children = new string[] { "node1", "node2" };
+        groupNode.Children = new string[] { "node1", "node2" };
         nodes.Add(node1);
         nodes.Add(node2);
         nodes.Add(node3);
-        nodes.Add(groupnode);
+        nodes.Add(groupNode);
     }
 
-    public Node createNode(string id, double offx, double offy, string content)
+    public Node createNode(string id, double offsetX, double offsetY, string content)
     {
         Node node = new Node()
         {
             ID = id,
-            OffsetX = offx,
-            OffsetY = offy,
+            OffsetX = offsetX,
+            OffsetY = offsetY,
             Height = 100,
             Width = 100,
             Style = new ShapeStyle() { Fill = "#6495ED" }
@@ -78,7 +78,7 @@ A node group can be added to the diagram model through [Nodes](https://help.sync
             },
         };
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-    {
+        {
             annotation
         };
         return node;
@@ -115,21 +115,21 @@ The following code illustrates how to ungroup at runtime.
     {
         Node node1 = createNode("node1", 100, 100, "Node1");
         Node node2 = createNode("node2", 300, 100, "Node2");
-        NodeGroup groupnode = new NodeGroup();
+        NodeGroup groupNode = new NodeGroup();
         // Grouping node 1 and node 2 into a single nodegroup.
-        groupnode.Children = new string[] { "node1", "node2" };
+        groupNode.Children = new string[] { "node1", "node2" };
         nodes.Add(node1);
         nodes.Add(node2);
-        nodes.Add(groupnode);
+        nodes.Add(groupNode);
     }
 
-    public Node createNode(string id, double offx, double offy, string content)
+    public Node createNode(string id, double offsetX, double offsetY, string content)
     {
         Node node = new Node()
         {
             ID = id,
-            OffsetX = offx,
-            OffsetY = offy,
+            OffsetX = offsetX,
+            OffsetY = offsetY,
             Height = 100,
             Width = 100,
             Style = new ShapeStyle() { Fill = "#6495ED" }
@@ -159,7 +159,7 @@ The following code illustrates how to ungroup at runtime.
             await Task.Delay(500);
             diagram.SelectAll();
             // Ungroup the selected group into nodes.
-            diagram.UnGroup();
+            diagram.Ungroup();
         }
     }
 }
@@ -181,25 +181,25 @@ The following code illustrates how a node group is added at runtime.
 @code
 {
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    NodeGroup groupnode = new NodeGroup();
+    NodeGroup groupNode = new NodeGroup();
 
     protected override void OnInitialized()
     {
         Node node1 = createNode("node1", 100, 100, "Node1");
         Node node2 = createNode("node2", 300, 100, "Node2");
-        // Grouping node 1 and node 2 into a single nodegroup.
-        groupnode.Children = new string[] { "node1", "node2" };
+        // Grouping node 1 and node 2 into a single node-group.
+        groupNode.Children = new string[] { "node1", "node2" };
         nodes.Add(node1);
         nodes.Add(node2);
     }
 
-    public Node createNode(string id, double offx, double offy, string content)
+    public Node createNode(string id, double offsetX, double offsetY, string content)
     {
         Node node = new Node()
         {
             ID = id,
-            OffsetX = offx,
-            OffsetY = offy,
+            OffsetX = offsetX,
+            OffsetY = offsetY,
             Height = 100,
             Width = 100,
             Style = new ShapeStyle() { Fill = "#6495ED" }
@@ -224,7 +224,7 @@ The following code illustrates how a node group is added at runtime.
 
     private void AddGroup()
     {
-        nodes.Add(groupnode);
+        nodes.Add(groupNode);
     }
 }
 ```
@@ -242,26 +242,26 @@ The following code illustrates how a node group is added at runtime.
 {
     SfDiagramComponent diagram;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    NodeGroup groupnode = new NodeGroup();
+    NodeGroup groupNode = new NodeGroup();
 
     protected override void OnInitialized()
     {
         Node node1 = createNode("node1", 100, 100, "Node1");
         Node node2 = createNode("node2", 300, 100, "Node2");
-        // Grouping node 1 and node 2 into a single nodegroup.
-        groupnode.Children = new string[] { "node1", "node2" };
+        // Grouping node 1 and node 2 into a single node-group.
+        groupNode.Children = new string[] { "node1", "node2" };
         nodes.Add(node1);
         nodes.Add(node2);
-        nodes.Add(groupnode);
+        nodes.Add(groupNode);
     }
 
-    public Node createNode(string id, double offx, double offy, string content)
+    public Node createNode(string id, double offsetX, double offsetY, string content)
     {
         Node node = new Node()
         {
             ID = id,
-            OffsetX = offx,
-            OffsetY = offy,
+            OffsetX = offsetX,
+            OffsetY = offsetY,
             Height = 100,
             Width = 100,
             Style = new ShapeStyle() { Fill = "#6495ED" }
@@ -328,27 +328,27 @@ You can change the position of the node group similar to node. For more informat
 @code
 {
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    NodeGroup groupnode = new NodeGroup();
+    NodeGroup groupNode = new NodeGroup();
 
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
         Node node1 = createNode("node1", 100, 100, "Node1");
         Node node2 = createNode("node2", 300, 100, "Node2");
-        // Grouping node 1 and node 2 into a single nodegroup.
-        groupnode.Children = new string[] { "node1", "node2" };
+        // Grouping node 1 and node 2 into a single NodeGroup.
+        groupNode.Children = new string[] { "node1", "node2" };
         nodes.Add(node1);
         nodes.Add(node2);
-        nodes.Add(groupnode);
+        nodes.Add(groupNode);
     }
 
-    public Node createNode(string id, double offx, double offy, string content)
+    public Node createNode(string id, double offsetX, double offsetY, string content)
     {
         Node node = new Node()
         {
             ID = id,
-            OffsetX = offx,
-            OffsetY = offy,
+            OffsetX = offsetX,
+            OffsetY = offsetY,
             Height = 100,
             Width = 100,
             Style = new ShapeStyle() { Fill = "#6495ED" }
