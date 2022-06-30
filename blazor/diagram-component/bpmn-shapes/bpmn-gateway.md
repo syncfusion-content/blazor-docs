@@ -38,7 +38,7 @@ Gateway is used to control the flow of a process and it is represented as a diam
             Shape = new BpmnShape()
             {
                 //Sets type to Bpmn and shape to Gateway.
-                Type = Shapes.Bpmn,
+                Type = NodeShapes.Bpmn,
                 Shape = BpmnShapes.Gateway,
                 //Sets type of the gateway to None.
                 Gateway = new BpmnGateway() { Type = BpmnGateways.None }

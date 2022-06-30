@@ -40,7 +40,7 @@ The following code example explains how to create a simple business process.
             // Sets type as Bpmn and shape as Event.
             Shape = new BpmnShape()
             {
-                Type = Shapes.Bpmn,
+                Type = NodeShapes.Bpmn,
             }
         };
         nodes.Add(node);
@@ -58,6 +58,6 @@ The list of BPMN shapes are as follows:
 | Gateway | ![Gateway Shape](../images/Gateway.png) |
 | Task | ![Task Shape](../images/Task.png) |
 | Message | ![Message Shape](../images/Message.png) |
-| DataSource | ![Datasource Shape](../images/Datasource.png) |
-| DataObject | ![Dataobject Shape](../images/Dataobject.png) |
+| DataSource | ![DataSource Shape](../images/Datasource.png) |
+| DataObject | ![DataObject Shape](../images/Dataobject.png) |
 | Group | ![Group Shape](../images/Group.png) |
