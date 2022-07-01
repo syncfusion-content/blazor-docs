@@ -11,10 +11,10 @@ documentation: ug
 
 The Rich Text Editor support validation using the [EditForm]( https://docs.microsoft.com/en-us/aspnet/core/blazor/forms-validation?view=aspnetcore-6.0). The user type text content inside the editor is validated with [data annotations]( https://docs.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-5.0)  attributes. In the following example, the `FormModel` class has the `Description` property marked required with the `RequiredAttribute` and `MinLengthAttribute` minimum string length validation and error message. The Description property binding to editor `@bind-Value` property and validation work based on user input.
 
-> The runnable Blazor Server app demo is available in this [Github](https://github.com/SyncfusionExamples/rich_text_editor_editform_validation) repository.
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/rich_text_editor_editform_validation)
 
 {% tabs %}
-{% highlight razor tabtitle="~/edit-form.razor" %}
+{% highlight razor %}
 
 {% include_relative code-snippet/edit-form.razor %}
 
@@ -36,7 +36,7 @@ The Rich Text Editor provides the functionality of character count and its valid
 This sample is demonstrated form validation using the `DataAnnotationsValidator`.
 
 {% tabs %}
-{% highlight razor tabtitle="~/validation-rules.razor" %}
+{% highlight razor %}
 
 {% include_relative code-snippet/validation-rules.razor %}
 
@@ -51,7 +51,7 @@ This sample is demonstrated form validation using the `DataAnnotationsValidator`
 The Form Validation error message can be placed from default position to desired custom location.
 
 {% tabs %}
-{% highlight razor tabtitle="~/custom-placement-validation-message.razor" %}
+{% highlight razor %}
 
 {% include_relative code-snippet/custom-placement-validation-message.razor %}
 
