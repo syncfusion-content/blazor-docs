@@ -335,6 +335,304 @@ namespace WebApplication1
 
 > If you set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true`, You need to reference scripts externally via [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) or [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) or and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator). 
 
+## Individual control script Reference
+
+Syncfusion Blazor components support for referring component-wise Blazor scripts externally in the application end. Each component has only one script reference and no need to refer it’s dependent component scripts (handled internally to load their dependency scripts automatically) in the application end. Blazor component-wise scripts are also now available in CDN links.
+
+You can add a component script reference in one of the following ways, for example, to use the TextBox component script.
+
+> Note: The individual component-wise script referring support in Syncfusion Blazor is provided from the 20.2 release.
+
+**Reference scripts from NuGet**
+
+From Syncfusion.Blazor NuGet package:
+
+```html
+    <head>
+        ...
+        <script  src="_content/Syncfusion.Blazor/scripts/sf-textbox.min.js"  type="text/javascript"></script>
+    </head>
+```
+
+From individual NuGet package:
+
+```html
+    <head>
+        ...
+        <script  src="_content/Syncfusion.Blazor.Inputs/scripts/sf-textbox.min.js"  type="text/javascript"></script>
+    </head>
+```
+
+**Reference scripts from CDN**
+
+```html
+    <head>
+        ...
+        <script  src="https://cdn.syncfusion.com/blazor/20.2.36/sf-textbox.min.js"  type="text/javascript"></script>
+    </head>
+```
+
+The following table demonstrates the list of individual Syncfusion Blazor control script references.
+
+<table>
+    <tr>
+        <th>Controls</th>
+        <th>Scripts</th>
+    </tr>
+    <tr>
+        <th>TextBox</th>
+        <th>sf-textbox.min.js</th>
+    </tr>
+    <tr>
+        <th>NumericTextBox</th>
+        <th>sf-numerictextbox.min.js</th>
+    </tr>
+    <tr>
+        <th>MaskedTextBox</th>
+        <th>sf-maskedtextbox.min.js</th>
+    </tr>
+    <tr>
+        <th>Uploader</th>
+        <th>sf-uploader.min.js</th>
+    </tr>
+    <tr>
+        <th>Calendar</th>
+        <th>sf-calendar.min.js</th>
+    </tr>
+    <tr>
+        <th>DatePicker</th>
+        <th>sf-datepicker.min.js</th>
+    </tr>
+    <tr>
+        <th>DateTimePicker</th>
+        <th>sf-datepicker.min.js</th>
+    </tr>
+    <tr>
+        <th>DateRangePicker</th>
+        <th>sf-daterangepicker.min.js</th>
+    </tr>
+    <tr>
+        <th>DiagramComponent</th>
+        <th>sf-diagramcomponent.min.js</th>
+    </tr>
+    <tr>
+        <th>TimePicker</th>
+        <th>sf-timepicker.min.js</th>
+    </tr>
+    <tr>
+        <th>AutoComplete</th>
+        <th>sf-dropdownlist.min.js</th>
+    </tr>
+    <tr>
+        <th>ComboBox</th>
+        <th>sf-dropdownlist.min.js</th>
+    </tr>
+    <tr>
+        <th>DropDownList</th>
+        <th>sf-dropdownlist.min.js</th>
+    </tr>
+    <tr>
+        <th>MultiSelect</th>
+        <th>sf-multiselect.min.js</th>
+    </tr>
+    <tr>
+        <th>DropDownButton</th>
+        <th>sf-drop-down-button.min.js</th>
+    </tr>
+    <tr>
+        <th>SplitButton</th>
+        <th>sf-drop-down-button.min.js</th>
+    </tr>
+    <tr>
+        <th>ProgressButton</th>
+        <th>sf-spinner.min.js</th>
+    </tr>
+    <tr>
+        <th>ListBox</th>
+        <th>sf-listbox.min.js</th>
+    </tr>
+    <tr>
+        <th>ColorPicker</th>
+        <th>sf-colorpicker.min.js</th>
+    </tr>
+    <tr>
+        <th>Signature</th>
+        <th>sf-signature.min.js</th>
+    </tr>
+    <tr>
+        <th>ContextMenu</th>
+        <th>sf-contextmenu.min.js</th>
+    </tr>
+    <tr>
+        <th>Menu</th>
+        <th>sf-menu.min.js</th>
+    </tr>
+    <tr>
+        <th>Breadcrumb</th>
+        <th>sf-breadcrumb.min.js</th>
+    </tr>
+    <tr>
+        <th>QueryBuilder</th>
+        <th>sf-querybuilder.min.js</th>
+    </tr>
+    <tr>
+        <th>Grid</th>
+        <th>sf-grid.min.js</th>
+    </tr>
+    <tr>
+        <th>Accordion</th>
+        <th>sf-accordion.min.js</th>
+    </tr>
+    <tr>
+        <th>Tab</th>
+        <th>sf-tab.min.js</th>
+    </tr>
+    <tr>
+        <th>Toolbar</th>
+        <th>sf-toolbar.min.js</th>
+    </tr>
+    <tr>
+        <th>Schedule</th>
+        <th>sf-schedule.min.js</th>
+    </tr>
+    <tr>
+        <th>BarcodeGenerator</th>
+        <th>sf-barcode.min.js</th>
+    </tr>
+    <tr>
+        <th>Maps</th>
+        <th>sf-maps.min.js</th>
+    </tr>
+    <tr>
+        <th>CircularGauge</th>
+        <th>sf-circulargauge.min.js</th>
+    </tr>
+    <tr>
+        <th>LinearGauge</th>
+        <th>sf-lineargauge.min.js</th>
+    </tr>
+    <tr>
+        <th>Chart</th>
+        <th>sf-chart.min.js</th>
+    </tr>
+    <tr>
+        <th>AccumulationChart</th>
+        <th>sf-accumulation-chart.min.js</th>
+    </tr>
+    <tr>
+        <th>StockChart</th>
+        <th>sf-stock-chart.min.js</th>
+    </tr>
+    <tr>
+        <th>BulletChart</th>
+        <th>sf-bullet-chart.min.js</th>
+    </tr>
+    <tr>
+        <th>Sparkline</th>
+        <th>sf-sparkline.min.js</th>
+    </tr>
+    <tr>
+        <th>TreeMap</th>
+        <th>sf-treemap.min.js</th>
+    </tr>
+    <tr>
+        <th>ProgressBar</th>
+        <th>sf-progressbar.min.js</th>
+    </tr>
+    <tr>
+        <th>SmithChart</th>
+        <th>sf-smith-chart.min.js</th>
+    </tr>
+    <tr>
+        <th>RangeNavigator</th>
+        <th>sf-range-navigator.min.js</th>
+    </tr>
+    <tr>
+        <th>HeatMap</th>
+        <th>sf-heatmap.min.js</th>
+    </tr>
+    <tr>
+        <th>FileManager</th>
+        <th>sf-filemanager.min.js</th>
+    </tr>
+    <tr>
+        <th>Slider</th>
+        <th>sf-slider.min.js</th>
+    </tr>
+    <tr>
+        <th>Tooltip</th>
+        <th>sf-tooltip.min.js</th>
+    </tr>
+    <tr>
+        <th>ListView</th>
+        <th>sf-listview.min.js</th>
+    </tr>
+    <tr>
+        <th>DashboardLayout</th>
+        <th>sf-dashboard-layout.min.js</th>
+    </tr>
+    <tr>
+        <th>Sidebar</th>
+        <th>sf-sidebar.min.js</th>
+    </tr>
+    <tr>
+        <th>TreeView</th>
+        <th>sf-treeview.min.js</th>
+    </tr>
+    <tr>
+        <th>PivotView</th>
+        <th>sf-pivotview.min.js</th>
+    </tr>
+    <tr>
+        <th>TreeGrid</th>
+        <th>sf-treegrid.min.js</th>
+    </tr>
+    <tr>
+        <th>Spinner</th>
+        <th>sf-spinner.min.js</th>
+    </tr>
+    <tr>
+        <th>Splitter</th>
+        <th>sf-splitter.min.js</th>
+    </tr>
+    <tr>
+        <th>Toast</th>
+        <th>sf-toast.min.js</th>
+    </tr>
+    <tr>
+        <th>Dialog</th>
+        <th>sf-dialog.min.js</th>
+    </tr>
+    <tr>
+        <th>RichTextEditor</th>
+        <th>sf-richtexteditor.min.js</th>
+    </tr>
+    <tr>
+        <th>InPlaceEditor</th>
+        <th>sf-inplaceeditor.min.js</th>
+    </tr>
+    <tr>
+        <th>Kanban</th>
+        <th>sf-kanban.min.js</th>
+    </tr>
+    <tr>
+        <th>Gantt</th>
+        <th>sf-gantt.min.js</th>
+    </tr>
+    <tr>
+        <th>PdfViewer</th>
+        <th>sf-pdfviewer.min.js</th>
+    </tr>
+    <tr>
+        <th>DocumentEditor</th>
+        <th>sf-documenteditor.min.js</th>
+    </tr>
+    <tr>
+        <th>Pager</th>
+        <th>sf-pager.min.js</th>
+    </tr>
+</table>
+
 ## Custom Resource Generator
 
 The Syncfusion Blazor provides an option to generate a component's interop scripts using the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) tool for the Blazor components. Refer [here to generate the component-wise scripts externally using CRG](./custom-resource-generator).
