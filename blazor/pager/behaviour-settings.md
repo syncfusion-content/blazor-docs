@@ -9,6 +9,8 @@ documentation: ug
 
 # Behaviour Settings in Pager Component
 
+This section briefly explains how the Pager APIS are helped to render the elements (numeric items and navigation buttons) of the Pager component. The total pages of the Pager component is calculated based on the defined `PageSize` and `TotalItemsCount` property.
+
 This section briefly explains how to calculate the total number of items available in the assigned data collection, which is used to render the elements (numeric items and navigation buttons) of the Pager component.
 
 ## Page size
