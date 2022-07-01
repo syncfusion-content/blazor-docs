@@ -17,19 +17,20 @@ By default, the `<p>` tag is created while pressing the <kbd>Enter</kbd> key. Th
 
 When the <kbd>Enter</kbd> key is customized with any of the above possible values, pressing the <kbd>Enter</kbd> key in the editor will create a new tag that is configured.
 
+
+> The `pre` tag will be inserted when code format is applied, enter key press will created only `<br>` tag if the editor content is inside the `pre` tag. Need to press enter key twice to come out of the `pre` tag.
+
 {% tabs %}
-{% highlight razor tabtitle="~/enter-key-customization.razor" %}
+{% highlight razor %}
 
 {% include_relative code-snippet/enter-key-customization.razor %}
 
 {% endhighlight %}
 {% endtabs %}
 
-> Note: Enter key not working inside the <pre> tag
-
 ![Enter key confuguration in Blazor RichTextEditor](./images/blazor-richtexteditor-enter-key.png)
 
-> [Blazor Enter Key Configuration Demo](https://blazor.syncfusion.com/demos/rich-text-editor/enterkeyconfiguration)
+> [View Sample](https://blazor.syncfusion.com/demos/rich-text-editor/enterkeyconfiguration)
 
 ## Shift-Enter key customization
 
@@ -38,13 +39,12 @@ By default, the `<br>` tag is created while pressing the <kbd>Shift</kbd> + <kbd
 When the <kbd>Shift</kbd> + <kbd>Enter</kbd> key is customized with any of the possible values, pressing the <kbd>Shift</kbd> + <kbd>Enter</kbd> key in the editor will create a new tag that is configured.
 
 {% tabs %}
-{% highlight razor tabtitle="~/shift-enter-key.razor" %}
+{% highlight razor %}
 
 {% include_relative code-snippet/shift-enter-key-customization.razor %}
 
 {% endhighlight %}
 {% endtabs %}
-
 
 ![Shift + Enter key confuguration in Blazor RichTextEditor](./images/blazor-richtexteditor-shift-enter-key.png)
 

@@ -31,7 +31,7 @@ The following code example shows how to register and get the notification from t
     // Triggered this event when complete the editing for Annotation and update the old text and new text values.
     private void OnTextChanged(TextChangeEventArgs args)
     {
-        Console.WriteLine("Oldvalue", args.OldValue);
+        Console.WriteLine("OldValue", args.OldValue);
         Console.WriteLine("NewValue", args.NewValue);
     }
 

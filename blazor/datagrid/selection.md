@@ -667,3 +667,7 @@ You can select multiple rows by clicking on rows one by one. This will not desel
 ```
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+
+## See also
+
+* [How to use radio button instead of checkbox for row selection of grid](https://blazor.syncfusion.com/documentation/datagrid/how-to/use-radio-button-instead-of-checkbox)

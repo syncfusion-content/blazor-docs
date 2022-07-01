@@ -25,7 +25,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 ## Install Syncfusion Blazor Gantt NuGet in the App
 
-Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
+Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages).
 
 To add Blazor Gantt Chart component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Gantt](https://www.nuget.org/packages/Syncfusion.Blazor.Gantt) and then install it.
 
@@ -141,6 +141,8 @@ Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/a
 
 To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
 
+> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) single NuGet, you don't have to refer [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet. Since style sheets already inside the assets of `Syncfusion.Blazor` NuGet. 
+
 ### Blazor Server App
 
 * For .NET 6 app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
@@ -148,18 +150,24 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 * For .NET 5 and .NET 3.X app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
-{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="3 4 5" %}
 
 <head>
+    ...
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <!--Refer theme style sheet as below if you are using Syncfusion.Blazor Single NuGet-->
+    <!--<link href="_content/Syncfusion.Blazor/styles/bootstrap5.css" rel="stylesheet" />-->
 </head>
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" %}
+{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="3 4 5" %}
 
 <head>
+    ...
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <!--Refer theme style sheet as below if you are using Syncfusion.Blazor Single NuGet-->
+    <!--<link href="_content/Syncfusion.Blazor/styles/bootstrap5.css" rel="stylesheet" />-->
 </head>
 
 {% endhighlight %}
@@ -170,10 +178,13 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 For Blazor WebAssembly App, refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
 
 {% tabs %}
-{% highlight cshtml tabtitle="~/index.html" %}
+{% highlight cshtml tabtitle="~/index.html" hl_lines="3 4 5" %}
 
 <head>
+    ...
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <!--Refer theme style sheet as below if you are using Syncfusion.Blazor Single NuGet-->
+    <!--<link href="_content/Syncfusion.Blazor/styles/bootstrap5.css" rel="stylesheet" />-->
 </head>
 
 {% endhighlight %}
@@ -190,7 +201,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * For **.NET 5 and .NET 3.X** app, refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
-{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4" %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4 5 6" %}
 
 <head>
     ....
@@ -202,7 +213,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="4" %}
+{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="4 5 6" %}
 
 <head>
     ....
@@ -220,7 +231,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html** file.
 
 {% tabs %}
-{% highlight html tabtitle="~/index.html" hl_lines="4" %}
+{% highlight html tabtitle="~/index.html" hl_lines="4 5 6" %}
 
 <head>
     ....
@@ -614,6 +625,64 @@ You can show the relationship in tasks by using the `Dependency` property as sho
 You can find the full information regarding Predecessors from [here](https://blazor.syncfusion.com/documentation/gantt-chart/task-dependencies/)
 
 ![Blazor Gantt Chart](images/blazor-gantt-chart.gif)
+
+## Handling exceptions 
+Exceptions that occur during Gantt actions can be handled without stopping the application. These error messages or exception details can be acquired using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionFailure) event.
+
+The argument passed to the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionFailure)event contains the error details returned from the server.
+
+> We recommend you bind the `OnActionFailure` event during your application development phase, this helps you to find any exceptions. You can pass these exception details to our support team to get a solution as early as possible.
+
+
+The following sample code demonstrates notifying user when server-side exception has occurred during data operation,
+
+{% tabs %}
+{% highlight razor %}
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+
+<span class="error">@ErrorDetails</span>
+<SfGantt TValue="TaskData" Height="450px" Width="700px">
+     <SfDataManager Url="https://some.com/invalidUrl" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"
+        Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEvents TValue="TaskData" OnActionFailure="ActionFailure"></GanttEvents>
+</SfGantt>
+
+<style>
+    .error {
+        color: red;
+    }
+</style>
+
+@code{
+    private string ErrorDetails = "";
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    public void ActionFailure(FailureEventArgs args)
+    {
+        this.ErrorDetails = args.Error.Message.ToString();
+        StateHasChanged();
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor Gantt Chart](images/blazor-gantt-chart-handling-exception.PNG)
 
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/GanttChart).
 

@@ -11,7 +11,7 @@ documentation: ug
 
 ## Taskbar customization
 
-### Taskbar Height
+### Taskbar height
 
 Height of child taskbars and parent taskbars can be customized by using [TaskbarHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_TaskbarHeight) property. The following code example shows how to use the property.
 

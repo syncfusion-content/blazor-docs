@@ -50,7 +50,7 @@ The following code example explains how to get the selection change event in the
             // Size of the node.
             Width = 100,
             Height = 100,
-            // Apperence of the node
+            // Appearances of the node
             Style = new ShapeStyle() 
             { 
                 Fill = "#6BA5D7", 
@@ -116,7 +116,7 @@ The following code example explains how to get the selection change event in the
                 Fill = "#6495ED", 
                 StrokeColor = "white" 
             },
-            Shape = new Shape() { Type = Shapes.Basic}
+            Shape = new Shape() { Type = NodeShapes.Basic}
         };
         // Add node.
         nodes.Add(node);
