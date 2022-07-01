@@ -9,7 +9,7 @@ documentation: ug
 
 # Toolbar types in Blazor RichTextEditor
 
-The Rich Text Editor toolbar contains a collection of tools such as bold, Italic, and text alignment buttons that are used to format the content. However, in most integrations, you can customize the toolbar configurations easily to suit your needs. The editor allows to configure different types of toolbar using `RichTextEditorToolbarSettings` - [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Type) property. The types of toolbar are:
+The Rich Text Editor toolbar contains a collection of tools such as bold, Italic, and text alignment buttons that are used to format the content. However, in most integrations, you can customize the toolbar configurations easily to suit your needs. The editor allows to configure different types of toolbar using [RichTextEditorToolbarSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Type) property. The types of toolbar are:
 
 1. Expand
 2. MultiRow
@@ -18,10 +18,10 @@ The Rich Text Editor toolbar contains a collection of tools such as bold, Italic
 
 ## Expand Toolbar
 
-The default mode of `RichTextEditorToolbarSettings` - `Type` as [Expand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarType.html#Syncfusion_Blazor_RichTextEditor_ToolbarType_Expand) to hide the overflowing items in the next row. By clicking the expand arrow, view the overflowing toolbar items.
+The default mode of [ToolbarType.Expand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarType.html#Syncfusion_Blazor_RichTextEditor_ToolbarType_Expand) to hide the overflowing items in the next row. By clicking the expand arrow, view the overflowing toolbar items.
 
 {% tabs %}
-{% highlight razor tabtitle="~/expand-toolbar.razor" %}
+{% highlight razor %}
 
 {% include_relative code-snippet/expand-toolbar.razor %}
 
@@ -32,10 +32,10 @@ The default mode of `RichTextEditorToolbarSettings` - `Type` as [Expand](https:/
 
 ## Multi-row Toolbar
 
-Set the `RichTextEditorToolbarSettings`- `Type` as [MultiRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarType.html#Syncfusion_Blazor_RichTextEditor_ToolbarType_MultiRow) to display the toolbar items in a row-wise format. All toolbar items are visible always.
+Set the [ToolbarType.MultiRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarType.html#Syncfusion_Blazor_RichTextEditor_ToolbarType_MultiRow) to display the toolbar items in a row-wise format. All toolbar items are visible always.
 
 {% tabs %}
-{% highlight razor tabtitle="~/multirow-toolbar.razor" %}
+{% highlight razor %}
 
 {% include_relative code-snippet/multirow-toolbar.razor %}
 
@@ -48,10 +48,10 @@ Set the `RichTextEditorToolbarSettings`- `Type` as [MultiRow](https://help.syncf
 
 By default, toolbar is float at the top of the Rich Text Editor on scrolling. It can be customized by specifying the offset of the floating toolbar from documents top position using [FloatingToolbarOffset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_FloatingToolbarOffset).
 
-Enable or disable the floating toolbar using [EnableFloating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_EnableFloating) of the `RichTextEditorToolbarSettings` property.
+Enable or disable the floating toolbar using [RichTextEditorToolbarSettings.EnableFloating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_EnableFloating) property.
 
 {% tabs %}
-{% highlight razor tabtitle="~/floating-toolbar.razor" %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -82,24 +82,22 @@ Image tools used to insert an image to the editor and click on the image to easi
 
 | Image Toolabr items | Description |
 | --------------------| ------------- |
-| Replace | can replace the image with some other image.  |
+| Replace | Can replace the image with some other image.  |
 | Align | Align the image with left, right and justify |
-| Caption | set the captions for the image |
-| Remove | delete the image |
-| InsertLink | provide the link to the image |
-| Display | display the image as inline or with break |
-| AltText | provide the alternative text for the image if the image is not present in the location |
-| Dimension |  "rotation" related commands are added as custom commands to the image element |
-
+| Caption | Set the captions for the image |
+| Remove | Delete the image |
+| InsertLink | Provide the link to the image |
+| Display | Display the image as inline or with break |
+| AltText | Provide the alternative text for the image if the image is not present in the location |
+| Dimension |  "Rotation" related commands are added as custom commands to the image element |
 
 {% tabs %}
-{% highlight razor tabtitle="~/custom-image-quick-toolbar.razor" %}
+{% highlight razor %}
 
 {% include_relative code-snippet/custom-image-quick-toolbar.razor %}
 
 {% endhighlight %}
 {% endtabs %}
-
 
 ![Blazor RichTextEditor with Image Toolbar](./images/blazor-richtexteditor-image-toolbar.png)
 
@@ -114,7 +112,7 @@ You can customize the selected link inside the editor through the quick toolbar.
 | Remove Link | Removes link from the content of Rich Text Editor. |
 
 {% tabs %}
-{% highlight razor tabtitle="~/custom-link-quick-toolbar.razor" %}
+{% highlight razor %}
 
 {% include_relative code-snippet/custom-link-quick-toolbar.razor %}
 
@@ -129,17 +127,17 @@ Quick toolbar is opened by clicking the table. It has different sets of commands
 
 | Tools | Description |
 |----------------|--------------------------------------|
-| TableHeader | header row can be added or removed from the inserted table |
-| TableRows| can be inserted above or below the required table cell |
-| TableColumns | can be inserted to the left or right side of the required table cell |
-| BackgroundColor| can be set each table cell Background Color |
-| TableRemove | delete the entire table |
-| Alignments |  can be aligned the table |
-| Styles | style the table border |
+| TableHeader | Header row can be added or removed from the inserted table |
+| TableRows| Can be inserted above or below the required table cell |
+| TableColumns | Can be inserted to the left or right side of the required table cell |
+| BackgroundColor| Can be set each table cell Background Color |
+| TableRemove | Delete the entire table |
+| Alignments |  Can be aligned the table |
+| Styles | Style the table border |
 
 
 {% tabs %}
-{% highlight razor tabtitle="~/custom-table-quick-toolbar.razor" %}
+{% highlight razor %}
 
 {% include_relative code-snippet/custom-table-quick-toolbar.razor %}
 
@@ -151,6 +149,6 @@ Quick toolbar is opened by clicking the table. It has different sets of commands
 
 > You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
 
-## See Also
+## See also
 
 * [How to render the toolbar in inline mode](./inline-mode/)

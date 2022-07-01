@@ -100,7 +100,7 @@ To explore about the options , refer [ScrollLimitMode](https://help.syncfusion.c
 
 * CurrentZoomChanged : Specifies the callback to be triggered when the current zoom value changes.
 * HorizontalOffsetChanged : Specifies the callback to be triggered when the horizontal offset changes.
-* VerticalOffsetChanged : Specifies the callback to be triggered when the vetical offset changes.
+* VerticalOffsetChanged : Specifies the callback to be triggered when the vertical offset changes.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
