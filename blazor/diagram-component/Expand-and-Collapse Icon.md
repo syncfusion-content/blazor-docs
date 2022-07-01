@@ -13,11 +13,11 @@ Diagram provides support to describe the state of the node. i.e., the node is ex
 
 ## Initializing the DiagramIcon
 
-There are two types of DiagramIcon each to represent the State of the Node:
+The following properties of the Node are used to represent the state of the node and allows user to Expand and Collapse the desired Node :
 
-* DiagramExpandIcon
+* [ExpandIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_ExpandIcon)
 
-* DiagramCollapseIcon
+* [CollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_CollapseIcon)
 
 
 
@@ -248,7 +248,7 @@ The following code example illustrates how to create an icon of various shapes i
 ![Displaying DiagramIcon in Blazor Diagram layout](./images/blazor-diagram-ExpandCollapse-Layout.gif)
 
 ## Customization
-To explore the properties of expand and collapse icon, refer to [DiagramExpandIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExpandIcon.html) and [DiagramCollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramCollapseIcon.html).
+To explore the properties of Expand and Collapse icon, refer to [DiagramExpandIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExpandIcon.html) and [DiagramCollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramCollapseIcon.html).
 
 ### Change the shape of the DiagramIcon
 
@@ -360,7 +360,7 @@ The following code explains how to change the appearance of the port.
 
 ### The Position of the Icon can be customized by using the OfsetX, OffsetY, properties.
 
-The following table shows the relationship between the DiagramIcon  position and DiagramIcon OffsetX and OffsetY values (fraction values).
+The following table shows the relationship between the Icon  position and Icon OffsetX and OffsetY values (fraction values).
 
 | OffsetX,OffsetY values | Output |
 |---|---|
