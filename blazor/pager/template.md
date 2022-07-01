@@ -14,49 +14,50 @@ The Pager component provides an option to render a custom element or content in 
 In this following sample, we have rendered two anchor tags for navigating next and previous pages. And the pager info detail is displayed in between those two anchor tags. The anchor tags will be disabled based on the current page number using Pager APIs.
 
 ```cshtml
-@using Syncfusion.Blazor.Navigations
-@using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Buttons
 
-<SfGrid @ref="Grid" DataSource="@Orders" Query="@QueryData">
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShippedDate) HeaderText=" Shipped Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-    </GridColumns>
-</SfGrid>
+<div class="control-section"> 
+    <SfGrid @ref="Grid" DataSource="@Orders" Query="@QueryData">
+        <GridColumns>
+            <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+            <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+            <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+            <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+            <GridColumn Field=@nameof(Order.ShippedDate) HeaderText=" Shipped Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        </GridColumns>
+    </SfGrid>
 
-<SfPager @ref="Pager" TotalItemsCount=80 PageCount=5 PageSize=10 CurrentPage=1 PageSizes=true TotalPages=8>
-    <Template>
-        @{
-            var Page = (context as PagerTemplateContext);
-            <div class=" e-pagerContainer">
-                <div class="@($" e-navigationStyle {EnablePreviousButton()}")" @onclick="NavigatePreviousPage">
-                    <a>Previous</a>
-                </div>
-                <div>
-                    <span>Page</span>
+    <SfPager @ref="Pager" TotalItemsCount=80 NumericItemsCount=5 PageSize=10 CurrentPage=1 PageSizes=true >
+        <Template>
+            @{
+                var Page = (context as PagerTemplateContext);
+                <div class=" e-pagerContainer">
+                    <div class="@($" e-navigationStyle {EnablePreviousButton()}")" @onclick="NavigatePreviousPage">
+                        <a>Previous</a>
+                    </div>
                     <div>
-                        <SfDropDownList Width="64px" Value=@(ddlIndex+1)  DataSource=@DropdownDataSource TValue="int" TItem="TemplateDropdown">
-                            <DropDownListEvents TItem="TemplateDropdown" TValue="int" ValueChange="@ValueChangeHandler" ></DropDownListEvents>
-                            <DropDownListFieldSettings Value="Paging" ></DropDownListFieldSettings>
-                        </SfDropDownList></div><span> of <b>@Page.TotalPages</b></span>
+                       <span>Page </span><div><SfDropDownList Width="64px" Value=@(ddlIndex+1)  DataSource=@DropdownDataSource TValue="int" TItem="TemplateDropdown">
+                <DropDownListEvents TItem="TemplateDropdown" TValue="int" ValueChange="@ValueChangeHandler" ></DropDownListEvents>
+                <DropDownListFieldSettings Value="Paging" ></DropDownListFieldSettings>
+                </SfDropDownList></div><span> of <b>@Page.TotalPages</b></span>
+                    </div>
+                    <div class="@($" e-navigationStyle {EnableNextButton()}")" @onclick="NavigateNextPage">
+                        <a>Next</a>
+                    </div>
                 </div>
-                <div class="@($" e-navigationStyle {EnableNextButton()}")" @onclick="NavigateNextPage">
-                    <a>Next</a>
-                </div>
-            </div>
-        }
-    </Template>    
-</SfPager>
+            }
+        </Template>    
+    </SfPager>
+</div>
 
 @code
 {
     public List<Order> Orders { get; set; }
-    public SfGrid<Order> Grid { get; set; }
+    public SfGrid<Order> Grid { get; set; }    
     public SfPager Pager { get; set; }
     private bool BackButtonDisabled { get; set; } = true;
     private bool ForwardButtonDisabled { get; set; }
@@ -70,7 +71,8 @@ In this following sample, we have rendered two anchor tags for navigating next a
         int takeValue = Pager.PageSize;
         QueryData = new Query().Skip(skipValue).Take(takeValue);
         ddlIndex = currentPage;
-        if (args.Value == Pager.TotalPages)
+        int totalPages = (int)(Math.Ceiling((double)(Pager.TotalItemsCount / Pager.PageSize)));
+        if (args.Value == totalPages)
         {
             ForwardButtonDisabled = true;
             BackButtonDisabled = false;
@@ -85,6 +87,7 @@ In this following sample, we have rendered two anchor tags for navigating next a
             ForwardButtonDisabled = false;
             BackButtonDisabled = false;
         }
+        await Task.Yield();
         await Grid.Refresh();
         await Pager.GoToPageAsync(args.Value);
     }
@@ -116,7 +119,8 @@ In this following sample, we have rendered two anchor tags for navigating next a
     public async Task NavigateNextPage()
     {
         BackButtonDisabled = BackButtonDisabled ? false : BackButtonDisabled;
-        ForwardButtonDisabled = Pager.CurrentPage == Pager.TotalPages - 1 ? true : false;
+        int totalPages = (int)(Math.Ceiling((double)(Pager.TotalItemsCount / Pager.PageSize)));
+        ForwardButtonDisabled = Pager.CurrentPage == totalPages - 1 ? true : false;
         int skipValue = (Pager.CurrentPage * Pager.PageSize);
         int takeValue = Pager.PageSize;
         QueryData = new Query().Skip(skipValue).Take(takeValue);
@@ -135,6 +139,7 @@ In this following sample, we have rendered two anchor tags for navigating next a
             OrderDate = DateTime.Now.AddDays(-x),
             ShippedDate = DateTime.Now.AddDays(x),
         }).ToList();
+       
     }
 
     public class Order 
@@ -159,9 +164,25 @@ In this following sample, we have rendered two anchor tags for navigating next a
         new TemplateDropdown() { Paging = 6},
         new TemplateDropdown() { Paging = 7},
         new TemplateDropdown() { Paging = 8}
-   };
+    };
 }
 
+<style>
+    .disable-pointer{
+        pointer-events: none;
+    }
+    .enable-pointer{
+        pointer-events: auto;
+    }
+    .disable-hover{
+        pointer-events: none;
+    }
+    .e-navigationStyle {
+        padding: 13px 12px 10px 12px;
+        text-align: center;
+        min-width: 26px;
+    }
+</style>
 ```
 
 ![Blazor Pager with Template](./images/blazor-pager-with-template.gif)
