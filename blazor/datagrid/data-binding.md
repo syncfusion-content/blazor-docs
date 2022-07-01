@@ -297,7 +297,7 @@ You can achieve DynamicObject complex data binding in the datagrid by using the 
 The following image represents DynamicObject complex data binding
 ![Binding DynamicObject with Complex Data in Blazor DataGrid](./images/blazor-datagrid-dynamic-complex-data.png)
 
-> While binding the Grid DataSource dynamically in the form of a list of IENumerable collections, you need to call the Refresh() method of the Grid to reflect the changes externally. Because tracking items of IEnumerable for changes made externally is avoided for performance considerations.
+> While binding the Grid DataSource dynamically in the form of a list of IEnumerable collections, you need to call the Refresh() method of the Grid to reflect the changes externally. Because tracking items of IEnumerable for changes made externally is avoided for performance considerations.
 
 ## Remote data
 
