@@ -75,7 +75,7 @@ The following properties are available in the [ChartMouseEventArgs](https://help
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnChartMouseMove="OnMouseEvent"></ChartEvents>
+    <ChartEvents ChartMouseMove="OnMouseEvent"></ChartEvents>
 	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 	
@@ -127,7 +127,7 @@ The following properties are available in the [ChartMouseEventArgs](https://help
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnChartMouseClick="OnMouseEvent"></ChartEvents>
+    <ChartEvents ChartMouseClick="OnMouseEvent"></ChartEvents>
 	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 	
@@ -181,7 +181,7 @@ The following properties are available in the [ChartMouseEventArgs](https://help
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnChartMouseUp="OnMouseEvent"></ChartEvents>
+    <ChartEvents ChartMouseUp="OnMouseEvent"></ChartEvents>
 	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 	
@@ -233,7 +233,7 @@ The following properties are available in the [ChartMouseEventArgs](https://help
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnChartMouseDown="OnMouseEvent"></ChartEvents>
+    <ChartEvents ChartMouseDown="OnMouseEvent"></ChartEvents>
 	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 	
