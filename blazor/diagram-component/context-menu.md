@@ -12,11 +12,11 @@ documentation: ug
 <!-- markdownlint-disable MD010 -->
 
 In graphical user interface (GUI), a context menu is a type of menu that appears when you perform right-click operation. You can create a nested level of context menu items.
-Diagram provides some in-built context menu items and allows to define custom menu items through the `ContextMenuSettings` property.
+Diagram provides some in-built context menu items and allows to define custom menu items through the [ContextMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuSettings.html) property.
 
 ## Default context menu
 
-The `Show` property helps you to enable or disable the context menu. Diagram provides some default context menu items such as copy, cut, select all, order,cut undo, redo, and group options. The following code shows how to enable the default context menu items.
+The [Show](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuSettings.html#Syncfusion_Blazor_Diagram_ContextMenuSettings_Show) property helps you to enable or disable the context menu. Diagram provides some default context menu items such as copy, cut, select all, order,cut undo, redo, and group options. The following code shows how to enable the default context menu items.
 
 ```cshtml
 <SfDiagramComponent @ref="diagram" Height="600px">
@@ -42,25 +42,25 @@ The following code shows how to disable the default context menu items.
 
 Custom context menu provides an option to add the new custom items to the context menu.
 
-* Apart from the default context menu items, define some additional context menu items. Those additional items have to be defined and added to the `Items` property of the context menu.
+* Apart from the default context menu items, define some additional context menu items. Those additional items have to be defined and added to the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuSettings.html#Syncfusion_Blazor_Diagram_ContextMenuSettings_Items) property of the context menu.
 
-* You can set the text and ID for the context menu item using the context menu `Text` and `Id` properties respectively.
+* You can set the text and ID for the context menu item using the context menu [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuItem.html#Syncfusion_Blazor_Diagram_ContextMenuItem_Text) and [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuItem.html#Syncfusion_Blazor_Diagram_ContextMenuItem_ID) properties respectively.
 
-* You can set an navigation url for the context menu item using the context menu `url` property.
+* You can set an navigation url for the context menu item using the context menu [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuItem.html#Syncfusion_Blazor_Diagram_ContextMenuItem_Url) property.
 
-* The `IconCss` property defines the class or multiple classes separated by a space for the menu item that is used to include an icon. Menu item can include the font icon and sprite image.
+* The [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuItem.html#Syncfusion_Blazor_Diagram_ContextMenuItem_IconCss) property defines the class or multiple classes separated by a space for the menu item that is used to include an icon. Menu item can include the font icon and sprite image.
 
-* The `Separator` property defines the horizontal lines that are used to separate the menu items. You cannot select the separators. You can enable separators to group the menu items using the separator property.
+* The [Separator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuItem.html#Syncfusion_Blazor_Diagram_ContextMenuItem_Separator) property defines the horizontal lines that are used to separate the menu items. You cannot select the separators. You can enable separators to group the menu items using the separator property.
 
-* You can Hide/Show menu item using the `Hidden` property.
+* You can Hide/Show menu item using the [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuItem.html#Syncfusion_Blazor_Diagram_ContextMenuItem_Hidden) property.
 
-* You can Enable/Disable menu item using the `Disabled` property.
+* You can Enable/Disable menu item using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuItem.html#Syncfusion_Blazor_Diagram_ContextMenuItem_Disabled) property.
 
-* You can add submenu items using the `Items` property.
+* You can add submenu items using the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuItem.html#Syncfusion_Blazor_Diagram_ContextMenuItem_Items) property.
 
 ### Custom context menu along with default context menu
 
-The following code example shows how to add custom context menu items along with the default context menu. set  the `ShowCustomMenuOnly` property to false to render both custom context menu and default context menu.
+The following code example shows how to add custom context menu items along with the default context menu. set  the [ShowCustomMenuOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuSettings.html#Syncfusion_Blazor_Diagram_ContextMenuSettings_ShowCustomMenuOnly) property to false to render both custom context menu and default context menu.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -150,7 +150,7 @@ The following code example shows how to add custom context menu items along with
 
 ### Custom context menu alone
 
-To display the custom context menu items alone, set  the `ShowCustomMenuOnly` property to true.
+To display the custom context menu items alone, set  the [ShowCustomMenuOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuSettings.html#Syncfusion_Blazor_Diagram_ContextMenuSettings_ShowCustomMenuOnly) property to true.
 The following code example shows how to add custom context menu items alone.
 
 ```cshtml
@@ -167,7 +167,7 @@ The following code example shows how to add custom context menu items alone.
 
 ## Template Support for Context menu 
 
-Diagram provides template support for context menu. The context menu items can be customized by using the `ContextMenuTemplate` at tag level. The following code explains how to define template for context menu items.
+Diagram provides template support for context menu. The context menu items can be customized by using the [ContextMenuTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuSettings.html#Syncfusion_Blazor_Diagram_ContextMenuSettings_ContextMenuTemplate) at tag level. The following code explains how to define template for context menu items.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -224,7 +224,7 @@ The Diagram control provides event support for context menu that triggers when r
 
 ### ContextMenuOpening
 
-The Diagram control triggers the event `ContextMenuOpening` when performing right click on the diagram or the diagram object.
+The Diagram control triggers the event [ContextMenuOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuSettings.html#Syncfusion_Blazor_Diagram_ContextMenuSettings_ContextMenuOpening) when performing right click on the diagram or the diagram object.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -246,7 +246,7 @@ The Diagram control triggers the event `ContextMenuOpening` when performing righ
 
 ### ContextMenuItemClicked
 
-The Diagram control triggers the event `ContextMenuItemClicked` when clicking the context menu item.
+The Diagram control triggers the event [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuSettings.html#Syncfusion_Blazor_Diagram_ContextMenuSettings_ContextMenuItemClicked) when clicking the context menu item.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
