@@ -216,7 +216,7 @@ To create a node, define the Node object and add it to the nodes collection of t
 ![Diagram Clear](images/Clear.gif)
 
 ### ResetZoom
-`ResetZoom` method is used to reset the diagram when the diagram get zoomin or zoomout state. 
+[ResetZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ResetZoom) method is used to reset the diagram when the diagram get zoomin or zoomout state. 
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
