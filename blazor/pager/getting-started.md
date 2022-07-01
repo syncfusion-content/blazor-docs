@@ -250,10 +250,116 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 * Now, add the Syncfusion Blazor Pager component in razor file. Here, the Pager component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
-```cshtml
-@using Syncfusion.Blazor.Navigations
+In the following sample, Pager component is integrated with ListView component. Pager provides an option to splits the list view data set into sectioned pages and view them into page by page. Here, navigation can be done with built-in numeric elements and buttons that can also be customized with the help of Pager API's.
 
-<SfPager TotalItemsCount="75" PageSizes="true" PageSize="5" PageCount="5">
-</SfPager>
+```cshtml
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Lists
+
+<div class="col-lg-12 control-section sb-property-border">
+    @{
+    var listData = ListData.Skip(SkipValue).Take(TakeValue).ToList();
+    <SfListView @ref="@List" DataSource="@listData" TValue="DataModel"  CssClass="e-list-template ui-list" HeaderTitle="Contacts" Height="355px" ShowHeader="true">
+        <ListViewTemplates TValue="DataModel">
+            <Template>
+                <div class='e-list-wrapper e-list-avatar'>
+                    @if (context.ImgSrc != string.Empty)
+                    {
+                        <img id='showUI' class='e-avatar e-avatar-circle' src=@context.ImgSrc/>
+                    }
+                    <span class='e-list-content'>@context.Name</span>
+                </div>
+            </Template>
+        </ListViewTemplates>
+        <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Name"></ListViewFieldSettings>
+    </SfListView>
+    }
+    <div class="pager-container">
+        <SfPager @ref="@Page" PageSize=5 NumericItemsCount=2 TotalItemsCount=25 Click="Click">
+        </SfPager>
+    </div>
+</div>
+@code {
+    SfPager Page;
+    public SfListView<DataModel> List { get; set; }
+    public int pageSize { get; set; } 
+    public int SkipValue ;
+    public int TakeValue = 5;
+    List<DataModel> ListData = new List<DataModel>();
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        ListData.Add(new DataModel { Name = "Nancy, Berlin, France",  ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/1.png" });
+        ListData.Add(new DataModel { Name = "Andrew, Madrid, Germany", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/3.png" });
+        ListData.Add(new DataModel { Name = "Janet, London, Brazil", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/4.png" });
+        ListData.Add(new DataModel { Name = "Margaret, Marseille, Belgium",  ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/2.png" });
+        ListData.Add(new DataModel { Name = "Steven, Cholchester, Switzerland", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/5.png" });
+        ListData.Add(new DataModel { Name = "Laura , Tsawassen, Venezuela",ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/6.png" });
+        ListData.Add(new DataModel { Name = "Robert, Tacoma, Austria", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/7.png" });
+        ListData.Add(new DataModel { Name = "Michael, Redmond, Mexico", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/8.png" });
+        ListData.Add(new DataModel { Name = "Albert, Kirkland, USA", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/9.png" });
+        ListData.Add(new DataModel { Name = "Nolan, London, Sweden",ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/1.png" });
+        ListData.Add(new DataModel { Name = "Jennifer, Berlin, Finland", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/3.png" });
+        ListData.Add(new DataModel { Name = "Carter, Madrid, Italy", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/2.png" });
+        ListData.Add(new DataModel { Name = "Allison, Marseille, Spain", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/4.png" });
+        ListData.Add(new DataModel { Name = "John, Tsawassen, UK", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/5.png" });
+        ListData.Add(new DataModel { Name = "Susan, Redmond, Ireland" ,ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/7.png" });
+        ListData.Add(new DataModel { Name = "Lydia, Cholchester, Portugal", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/6.png" });
+        ListData.Add(new DataModel { Name = "Kelsey, London, Canada", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/9.png" });
+        ListData.Add(new DataModel { Name = "Jessica, Kirkland, Denmark", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/8.png" });
+        ListData.Add(new DataModel { Name = "Robert, Berlin, Austria", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/5.png" });
+        ListData.Add(new DataModel { Name = "Shelley, Tacoma, Poland", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/3.png" });
+        ListData.Add(new DataModel { Name = "Vanjack, Tsawassen, Norway", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/1.png" });
+        ListData.Add(new DataModel { Name = "shelley, Cholchester, Argentina", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/8.png" });
+        ListData.Add(new DataModel { Name = "Lydia, Kirkland, Finland", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/7.png" });
+        ListData.Add(new DataModel { Name = "Jessica, Madrid, Sweden", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/4.png" });
+        ListData.Add(new DataModel { Name = "Nolan, London, UK", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/9.png" });
+        ListData.Add(new DataModel { Name = "Jennifer, Redmond, Italy", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/2.png" });
+    }
+    public void Click(PageClickEventArgs args)
+    {
+        SkipValue = (args.CurrentPage * Page.PageSize) - Page.PageSize;
+        TakeValue = Page.PageSize;
+    }
+    public class DataModel
+    {
+        public string Name { get; set; }
+        public string ImgSrc { get; set; }
+        public string Id { get; set; }
+    }
+}
+<style>
+    /* ListView template customization */
+    .ui-list.e-listview {
+        margin: auto;
+        max-width: 460px;
+        line-height: initial;
+        border: 1px solid lightgray;
+    }
+    .ui-list.e-listview .e-list-header {
+        height: 50px
+    }
+    .ui-list.e-listview .e-list-header .e-text {
+        line-height: 18px;
+        padding-left: 10px;
+    }
+    .ui-list.e-listview #showUI {
+        display: flex;
+    }
+    .ui-list.e-listview .e-list-item {
+        padding: 3px 0;
+    }
+    .highcontrast .ui-list.e-listview .e-list-item.e-active {
+        background: #ffd939;
+        color: #000000;
+    }
+    .pager-container {
+        margin: 0 auto 2em;
+        max-width: 460px;
+    }
+</style>
 
 ```
+
+![Blazor Pager with ListView](./images/blazor-pager-with-list-view.png)
