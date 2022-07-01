@@ -59,23 +59,23 @@ BeforeExport|
 Load|
 OnPointDoubleClick|
 PointMoved|
-## OnChartMouseMove
 
-It triggers when mouse moved over the chart
+## ChartMouseMove
+
+ChartMouseMove triggers when mouse moved over the chart.
 
 ### Arguments
 
 The following property is available in the ChartMouseEventArgs
-* MouseX - Specifies the current mouseX.
-* MouseY - Specifies the current mouseY.
-* Name - Specifies the name of the event.
+* MouseX - Specifies the current mouseX value.
+* MouseY - Specifies the current mouseY value.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnChartMouseMove="OnMouseEvent"></ChartEvents>
+    <ChartEvents ChartMouseMove="OnMouseEvent"></ChartEvents>
 	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 	
@@ -112,23 +112,22 @@ The following property is available in the ChartMouseEventArgs
 }
 
 ```
-## OnChartMouseClick
+## ChartMouseClick
 
-It triggers when the chart got clicked. 
+ChartMouseClick triggers when the chart got clicked. 
 
 ### Arguments
 
 The following property is available in the ChartMouseEventArgs
-* MouseX - Specifies the current mouseX.
-* MouseY - Specifies the current mouseY.
-* Name - Specifies the name of the event.
+* MouseX - Specifies the current mouseX value.
+* MouseY - Specifies the current mouseY value.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnChartMouseClick="OnMouseEvent"></ChartEvents>
+    <ChartEvents ChartMouseClick="OnMouseEvent"></ChartEvents>
 	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 	
@@ -167,23 +166,22 @@ The following property is available in the ChartMouseEventArgs
 
 ```
 
-## OnChartMouseUp
+## ChartMouseUp
 
-It triggers when the mouse left button is released over the chart elements.  
+ChartMouseUp triggers when the mouse left button is released over the chart elements.  
 
 ### Arguments
 
 The following property is available in the ChartMouseEventArgs
-* MouseX - Specifies the current mouseX.
-* MouseY - Specifies the current mouseY.
-* Name - Specifies the name of the event.
+* MouseX - Specifies the current mouseX value.
+* MouseY - Specifies the current mouseY value.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnChartMouseUp="OnMouseEvent"></ChartEvents>
+    <ChartEvents ChartMouseUp="OnMouseEvent"></ChartEvents>
 	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 	
@@ -220,23 +218,22 @@ The following property is available in the ChartMouseEventArgs
 }
 
 ```
-## OnChartMouseDown
+## ChartMouseDown
 
-It triggers when the mouse left button is pressed over the chart elements.  
+ChartMouseDown triggers when the mouse left button is pressed over the chart elements.  
 
 ### Arguments
 
 The following property is available in the ChartMouseEventArgs
-* MouseX - Specifies the current mouseX.
-* MouseY - Specifies the current mouseY.
-* Name - Specifies the name of the event.
+* MouseX - Specifies the current mouseX value.
+* MouseY - Specifies the current mouseY value.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartEvents OnChartMouseDown="OnMouseEvent"></ChartEvents>
+    <ChartEvents ChartMouseDown="OnMouseEvent"></ChartEvents>
 	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 	
