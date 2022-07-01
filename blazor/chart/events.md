@@ -13,7 +13,7 @@ In this section, we have provided a list of chart component events that will be 
 
 The events should be provided to the chart using [ChartEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html) component.
 
-> From `v18.4.*`, we have added few additional events for the chart component
+> From `v18.4.*`, we have added few additional events for the chart component.
 
 Event Name|
 -----|
@@ -27,7 +27,7 @@ Event Name|
 [OnAxisActualRangeCalculated](events/#onaxisactualrangecalculated)|
 [OnAxisMultiLevelLabelRender](events/#onaxismultilevellabelrender)|
 
-> From `v18.4.*`, some event names are different from the previous releases. The following are the event name changes from `v18.3.*` to `v18.4.*`
+> From `v18.4.*`, some event names are different from the previous releases. The following are the event name changes from `v18.3.*` to `v18.4.*`.
 
 Event Name(`v18.3.*`) |Event Name(`v18.4.*`)
 -----|-----
@@ -44,7 +44,7 @@ MultiLevelLabelClick |[OnMultiLevelLabelClick](events/#onmultilevellabelclick)
 OnSelectionComplete |[OnSelectionChanged](events/#onselectionchanged)
 OnDragComplete |[OnSelectionChanged](events/#onselectionchanged)
 
-> From `v18.4.*`, We have removed the following previous release events from chart component
+> From `v18.4.*`, We have removed the following previous release events from chart component.
 
 Event Name|
 -----|
@@ -59,16 +59,16 @@ BeforeExport|
 Load|
 OnPointDoubleClick|
 PointMoved|
-## OnChartMouseMove
 
-It triggers when mouse moved over the chart
+## ChartMouseMove
+
+[ChartMouseMove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_ChartMouseMove) event triggers when mouse moved over the chart.
 
 ### Arguments
 
-The following property is available in the ChartMouseEventArgs
-* MouseX - Specifies the current mouseX.
-* MouseY - Specifies the current mouseY.
-* Name - Specifies the name of the event.
+The following properties are available in the [ChartMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMouseEventArgs.html).
+* MouseX - Specifies the current mouse x coordinate.
+* MouseY - Specifies the current mouse y coordinate.
 
 ```cshtml
 
@@ -112,16 +112,15 @@ The following property is available in the ChartMouseEventArgs
 }
 
 ```
-## OnChartMouseClick
+## ChartMouseClick
 
-It triggers when the chart got clicked. 
+[ChartMouseClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_ChartMouseClick) event triggers when the chart got clicked. 
 
 ### Arguments
 
-The following property is available in the ChartMouseEventArgs
-* MouseX - Specifies the current mouseX.
-* MouseY - Specifies the current mouseY.
-* Name - Specifies the name of the event.
+The following properties are available in the [ChartMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMouseEventArgs.html).
+* MouseX - Specifies the current mouse x coordinate.
+* MouseY - Specifies the current mouse y coordinate.
 
 ```cshtml
 
@@ -167,16 +166,15 @@ The following property is available in the ChartMouseEventArgs
 
 ```
 
-## OnChartMouseUp
+## ChartMouseUp
 
-It triggers when the mouse left button is released over the chart elements.  
+[ChartMouseUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_ChartMouseUp) event triggers when the mouse left button is released over the chart element.  
 
 ### Arguments
 
-The following property is available in the ChartMouseEventArgs
-* MouseX - Specifies the current mouseX.
-* MouseY - Specifies the current mouseY.
-* Name - Specifies the name of the event.
+The following properties are available in the [ChartMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMouseEventArgs.html).
+* MouseX - Specifies the current mouse x coordinate.
+* MouseY - Specifies the current mouse y coordinate.
 
 ```cshtml
 
@@ -220,16 +218,15 @@ The following property is available in the ChartMouseEventArgs
 }
 
 ```
-## OnChartMouseDown
+## ChartMouseDown
 
-It triggers when the mouse left button is pressed over the chart elements.  
+[ChartMouseDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_ChartMouseDown) event triggers when the mouse left button is pressed over the chart element.  
 
 ### Arguments
 
-The following property is available in the ChartMouseEventArgs
-* MouseX - Specifies the current mouseX.
-* MouseY - Specifies the current mouseY.
-* Name - Specifies the name of the event.
+The following properties are available in the [ChartMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMouseEventArgs.html).
+* MouseX - Specifies the current mouse x coordinate.
+* MouseY - Specifies the current mouse y coordinate.
 
 ```cshtml
 
