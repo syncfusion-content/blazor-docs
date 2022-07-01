@@ -9,17 +9,20 @@ documentation: ug
 
 # Customization in Pager Component
 
-## Custom text
+## Custom text for numeric items
 
-The Pager component provides an option to define custom text along with numeric items. This can be achieved by using the `CustomText` property.
+The Pager component provides an option to define custom text and it is added as a prefix for numeric items. This can be achieved by using the `NumericItemPrefix` property.
 
 ```csharp
+
 @using Syncfusion.Blazor.Navigations
 
-<SfPager ID="Pager" TotalItemsCount="75" CustomText="PageNo" PageSizes="true" PageSize="5" PageCount="5">
+<SfPager TotalItemsCount="75" NumericItemPrefix="PageNo" PageSize="5" NumericItemsCount="2">
 </SfPager>
 
 ```
+
+![Blazor Pager with Custom Text](./images/blazor-pager-custom-text.png)
 
 ## Custom CSS
 
@@ -28,9 +31,10 @@ To modify the Pager's appearance, you need to override the default CSS of the Pa
 In the following sample, the value for the `CssClass` property is set as custom CSS, and this root class is used to customize the Pager appearance.
 
 ```csharp
+
 @using Syncfusion.Blazor.Navigations
 
-<SfPager PageCount="5" PageSize="5" TotalItemsCount=50 CssClass=customCss>
+<SfPager NumericItemsCount="3" PageSize="5" TotalItemsCount=50 CssClass=customCss>
 </SfPager>
 
 <style>
@@ -44,4 +48,7 @@ In the following sample, the value for the `CssClass` property is set as custom 
     }
         
 </style>
+
 ```
+
+![Blazor Pager with Custom CSS](./images/blazor-pager-custom-css.png)
