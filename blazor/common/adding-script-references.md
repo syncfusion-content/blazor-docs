@@ -335,49 +335,70 @@ namespace WebApplication1
 
 > If you set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true`, You need to reference scripts externally via [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) or [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) or and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator). 
 
-## Individual control script Reference
+## Individual control script reference
 
-Syncfusion Blazor components support for referring component-wise Blazor scripts externally in the application end. Each component has only one script reference and no need to refer it’s dependent component scripts (handled internally to load their dependency scripts automatically) in the application end. Blazor component-wise scripts are also now available in CDN links.
+Syncfusion Blazor components provides component-wise scripts which can be referenced externally in application. If you are using minimal components, then you can import the selected components scripts via CDN or Static web assets directly without using [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) instead of referencing single script with all components. 
 
-You can add a component script reference in one of the following ways, for example, to use the TextBox component script.
+You can add a component script reference in one of the following ways based on usage, 
 
-> Note: The individual component-wise script referring support in Syncfusion Blazor is provided from the 20.2 release.
+<table>
+<tr>
+<td><b>Usage</b></td>
+<td><b>Script reference</b></td>
+</tr>
 
-**Reference scripts from NuGet**
+<tr>
+<td><p>Refer from Static web assets when using <strong>Syncfusion.Blazor</strong> NuGet</p></td>
+<td>
 
-From Syncfusion.Blazor NuGet package:
+{% highlight cshtml %}
+<head>
+    ...
+    <!--<script src="_content/Syncfusion.Blazor/scripts/<Component script name>" type="text/javascript"></script>-->
+    <script src="_content/Syncfusion.Blazor/scripts/sf-textbox.min.js" type="text/javascript"></script>
+</head>
+{% endhighlight %}
 
-```html
-    <head>
-        ...
-        <script  src="_content/Syncfusion.Blazor/scripts/sf-textbox.min.js"  type="text/javascript"></script>
-    </head>
-```
+</td>
+</tr>
 
-From individual NuGet package:
+<tr>
+<td><p>Refer from Static web assets when using <a href="https://blazor.syncfusion.com/documentation/nuget-packages">individual NuGet packages</a></p></td>
+<td>
 
-```html
-    <head>
-        ...
-        <script  src="_content/Syncfusion.Blazor.Inputs/scripts/sf-textbox.min.js"  type="text/javascript"></script>
-    </head>
-```
+{% highlight cshtml %}
+<head>
+    ...
+    <!--<script src="_content/<Package name>/scripts/<Component script name>" type="text/javascript"></script>-->
+    <script src="_content/Syncfusion.Blazor.Inputs/scripts/sf-textbox.min.js" type="text/javascript"></script>
+</head>
+{% endhighlight %}
 
-**Reference scripts from CDN**
+</td>
+</tr>
 
-```html
-    <head>
-        ...
-        <script  src="https://cdn.syncfusion.com/blazor/20.2.36/sf-textbox.min.js"  type="text/javascript"></script>
-    </head>
-```
+<tr>
+<td><p>Refer scripts from CDN</p></td>
+<td>
 
-The following table demonstrates the list of individual Syncfusion Blazor control script references.
+{% highlight cshtml %}
+<head>
+    ...
+    <!--<script src="https://cdn.syncfusion.com/blazor/<Version>/<Component script name>" type="text/javascript"></script>-->
+    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/sf-textbox.min.js" type="text/javascript"></script>
+</head>
+{% endhighlight %}
+
+</td>
+</tr>
+</table>
+
+The following table lists components and its script reference.
 
 <table>
     <tr>
-        <th>Controls</th>
-        <th>Scripts</th>
+        <th>Component</th>
+        <th>Script name</th>
     </tr>
     <tr>
         <th>TextBox</th>
