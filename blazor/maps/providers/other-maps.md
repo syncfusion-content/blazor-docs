@@ -180,7 +180,7 @@ The legend can be added to the tile Maps by setting the [Visible](https://help.s
 
 ```
 
-![Blazor Google Maps with Sublayer](../images/MapProviders/blazor-google-maps-legend.png)
+![Blazor Google Maps with Legend](../images/MapProviders/blazor-google-maps-legend.png)
 
 ## Other supportive online map service providers
 

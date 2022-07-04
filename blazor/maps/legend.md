@@ -684,4 +684,4 @@ To imitate or map the marker shape with its legend item shape, set the [UseMarke
 }
 ```
 
-![Blazor Maps Marker shape with legend shape](./images/Marker/blazor-maps-marker-legend-shape.png)
+![Blazor Maps - Marker shape mapped to legend items shape](./images/Marker/blazor-maps-marker-legend-shape.png)

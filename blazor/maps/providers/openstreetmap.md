@@ -172,4 +172,4 @@ The legend can be added to the tile Maps by setting the [Visible](https://help.s
 
 ```
 
-![Blazor OpenStreetMap with SubLayer](../images/MapProviders/blazor-open-street-map-legend.png)
+![Blazor OpenStreetMap with Legend](../images/MapProviders/blazor-open-street-map-legend.png)
