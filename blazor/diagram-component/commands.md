@@ -731,11 +731,11 @@ The following code illustrates how to execute the grouping commands.
 
 ## Z-Order commands
 
-Z – Order commands are used to visually arrange the selected objects such as Nodes and Connectors on the diagram page with its Z-order values.
+Z – Order commands are used to visually arrange the selected objects such as Nodes, Connectors and Groups on the diagram page with its Z-order values.
 
 ### BringToFront
 
-The BringToFront command is used to visually brings the selected element to the front over all other overlapped elements.
+The [BringToFront](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BringToFront) command is used to visually brings the selected element to the front over all other overlapped elements.
 
 The following code illustrates how to execute the BringToFront command.
 
@@ -794,7 +794,7 @@ The following code illustrates how to execute the BringToFront command.
 
 ### SendToBack
 
-The SendToBack command visually moves the selected elements behind all the other overlapped elements.
+The [SendToBack](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SendToBack) command visually moves the selected elements behind all the other overlapped elements.
 
 The following code illustrates how to execute the SendToBack command.
 
@@ -853,7 +853,7 @@ The following code illustrates how to execute the SendToBack command.
 
 ### BringForward
 
-The BringForward command visually moves the selected element over the nearest overlapping element.
+The [BringForward](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BringForward) command visually moves the selected element over the nearest overlapping element.
 
 The following code illustrates how to execute the BringForward command.
 
@@ -912,7 +912,7 @@ The following code illustrates how to execute the BringForward command.
 
 ### SendBackward
 
-The SendBackward command visually moves the selected elements behind the underlying element.
+The [SendBackward](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SendBackward) command visually moves the selected elements behind the underlying element.
 
 The following code illustrates how to execute the SendBackward command.
 
