@@ -572,7 +572,7 @@ The selected image can be uploaded to the required destination by using [RichTex
 
 The following code block shows saving the image file uploaded to Rich Text Editor using the `Blazor Server App` project. 
 
-> [View sample in Github](https://github.com/SyncfusionExamples/blazor-richtexteditor-image-upload) repository.
+> [View sample in Github](https://github.com/SyncfusionExamples/blazor-richtexteditor-image-upload)
 
 `Index.razor`
 
