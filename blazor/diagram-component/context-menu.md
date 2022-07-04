@@ -151,7 +151,7 @@ The following code example shows how to add custom context menu items along with
 ### Custom context menu alone
 
 To display the custom context menu items alone, set  the [ShowCustomMenuOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuSettings.html#Syncfusion_Blazor_Diagram_ContextMenuSettings_ShowCustomMenuOnly) property to true.
-The following code example shows how to add custom context menu items alone.
+The following code example shows how to show custom context menu items alone.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -224,7 +224,7 @@ The Diagram control provides event support for context menu that triggers when r
 
 ### ContextMenuOpening
 
-The Diagram control triggers the event [ContextMenuOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuSettings.html#Syncfusion_Blazor_Diagram_ContextMenuSettings_ContextMenuOpening) when performing right click on the diagram or the diagram object.
+The Diagram control triggers the event [ContextMenuOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuSettings.html#Syncfusion_Blazor_Diagram_ContextMenuSettings_ContextMenuOpening) when performing right click on the diagram or the diagram elements such as Node, Connector and Groups.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -375,5 +375,3 @@ The following code example shows how to add separate custom context menu items f
 }
 
 ```
-
-![Custom Context Menu](images/ContextMenuEvents.gif)
