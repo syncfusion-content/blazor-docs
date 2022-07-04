@@ -29,7 +29,7 @@ The `ExecuteCommand` methods support following HTML editor commands.
 | FontColor | Apply the specified font color for the selected content. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.FontColor, "Red"); {% endhighlight %}|
 | FontName | Apply the specified font name for the selected content. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.FontName, "Impact");{% endhighlight %}|
 | FontSize | Apply the specified font size for the selected content. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.FontSize, "10pt");{% endhighlight %}|
-| BackgroundColor | Apply the specified background color the selected content. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.BackgroundColor, "red");`|
+| BackgroundColor | Apply the specified background color the selected content. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.BackgroundColor, "red");{% endhighlight %}|
 | JustifyCenter | Align the content with center margin. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.JustifyCenter); {% endhighlight %}|
 | JustifyFull | Align the content with justify margin. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.JustifyFull); {% endhighlight %}|
 | JustifyLeft | Align the content with left margin. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.JustifyLeft); {% endhighlight %}|
