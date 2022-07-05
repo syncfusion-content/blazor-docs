@@ -379,6 +379,14 @@ This event will be triggered before engine framing works gets initiated and allo
 
 The [EnginePopulated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldListEvents-1.html#Syncfusion_Blazor_PivotView_PivotFieldListEvents_1_EnginePopulated) event is available in both Pivot Table and Field List. To know more about this event, refer [here](./field-list/#enginepopulated).
 
+## ExcelHeaderQueryCellInfo
+
+To know more about this event, refer [here](./excel-export.md/#excelheaderquerycellinfo).
+
+## ExcelQueryCellInfo
+
+To know more about this event, refer [here](./excel-export.md/#excelquerycellinfo).
+
 ## FetchReport
 
 To know more about this event, refer [here](./tool-bar/#fetchreport).
@@ -423,11 +431,31 @@ To know more about this event, refer [here](./filtering/#membereditoropen).
 
 To know more about this event, refer [here](./tool-bar/#newreport).
 
+## OnActionBegin
+
+To know more about this event, refer [here](./tool-bar.md/#onactionbegin).
+
+## OnActionComplete
+
+To know more about this event, refer [here](./tool-bar.md/#onactioncomplete).
+
+## OnActionFailure
+
+To know more about this event, refer [here](./tool-bar.md/#onactionfailure).
+
 ## OnLoad
 
 The [OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnLoad) event is available in both Pivot Table and Field List.
 
 To know more about this event, refer [here](./data-binding/#event).
+
+## PdfHeaderQueryCellInfo
+
+To know more about this event, refer [here](./pdf-export.md/#pdfheaderquerycellinfo).
+
+## PdfQueryCellInfo
+
+To know more about this event, refer [here](./pdf-export.md/#pdfquerycellinfo).
 
 ## RenameReport
 

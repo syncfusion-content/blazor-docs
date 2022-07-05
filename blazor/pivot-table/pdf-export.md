@@ -19,7 +19,7 @@ The PDF export allows Pivot Table data to be exported as PDF document. To enable
 
 <SfButton OnClick="OnPdfExport" Content="Pdf Export"></SfButton>
 <SfPivotView TValue="ProductDetails" @ref="@pivot" AllowPdfExport="true" >
-    <PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
+    <PivotViewDataSourceSettings DataSource="@Data" EnableSorting=true>
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -40,7 +40,7 @@ The PDF export allows Pivot Table data to be exported as PDF document. To enable
 
 @code{
     SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> data { get; set; }
+    public List<ProductDetails> Data { get; set; }
     protected override void OnInitialized()
     {
         this.data = ProductDetails.GetProductData().ToList();
@@ -67,7 +67,7 @@ The PDF export provides an option to change colors for headers, caption and reco
 
 <SfButton OnClick="OnPdfExport" Content="Pdf Export"></SfButton>
 <SfPivotView TValue="ProductDetails" @ref="@pivot" AllowPdfExport="true" >
-    <PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
+    <PivotViewDataSourceSettings DataSource="@Data" EnableSorting=true>
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -88,7 +88,7 @@ The PDF export provides an option to change colors for headers, caption and reco
 
 @code{
     SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> data { get; set; }
+    public List<ProductDetails> Data { get; set; }
     protected override void OnInitialized()
     {
         this.data = ProductDetails.GetProductData().ToList();
@@ -139,7 +139,7 @@ The PDF export provides an option to change the file name of the document before
 
 <SfButton OnClick="OnPdfExport" Content="Pdf Export"></SfButton>
 <SfPivotView TValue="ProductDetails" @ref="@pivot" AllowPdfExport="true" >
-    <PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
+    <PivotViewDataSourceSettings DataSource="@Data" EnableSorting=true>
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -189,7 +189,7 @@ Arche, Flsa, HalfLetter, Letter11x17, Ledger.
 
 <SfButton OnClick="OnPdfExport" Content="Pdf Export"></SfButton>
 <SfPivotView TValue="ProductDetails" @ref="@pivot" AllowPdfExport="true" >
-    <PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
+    <PivotViewDataSourceSettings DataSource="@Data" EnableSorting=true>
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -210,7 +210,7 @@ Arche, Flsa, HalfLetter, Letter11x17, Ledger.
 
 @code{
     SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> data { get; set; }
+    public List<ProductDetails> Data { get; set; }
     protected override void OnInitialized()
     {
         this.data = ProductDetails.GetProductData().ToList();
@@ -236,7 +236,7 @@ The PDF export provides an option to change page orientation of the document bef
 
 <SfButton OnClick="OnPdfExport" Content="Pdf Export"></SfButton>
 <SfPivotView TValue="ProductDetails" @ref="@pivot" AllowPdfExport="true" >
-    <PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
+    <PivotViewDataSourceSettings DataSource="@Data" EnableSorting=true>
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -257,7 +257,7 @@ The PDF export provides an option to change page orientation of the document bef
 
 @code{
     SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> data { get; set; }
+    public List<ProductDetails> Data { get; set; }
     protected override void OnInitialized(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
     {
         this.data = ProductDetails.GetProductData().ToList();
@@ -272,5 +272,183 @@ The PDF export provides an option to change page orientation of the document bef
 ```
 
 ![Changing Blazor PivotTable Page Orientation while Exporting](images/blazor-pivottable-change-pdf-orientation.png)
+
+## Events
+
+### PdfQueryCellInfo
+
+The event [PdfQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_PdfQueryCellInfo) triggers on framing each row and value cell during PDF export. It allows the user customize the cell value, style, etc. of the current cell. It has the following parameters.
+
+* [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfQueryCellInfoEventArgs-1.html#Syncfusion_Blazor_Grids_PdfQueryCellInfoEventArgs_1_Value) : It holds the cell value.
+* [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfQueryCellInfoEventArgs-1.html#Syncfusion_Blazor_Grids_PdfQueryCellInfoEventArgs_1_Column) : It holds the column information, including row and column indexes required to obtain the current cell information. **Note:** This option is applicable only when virtualization is disabled.
+* [Cell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfQueryCellInfoEventArgs-1.html#Syncfusion_Blazor_Grids_PdfQueryCellInfoEventArgs_1_Cell) : It holds the current cell information.
+* [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfQueryCellInfoEventArgs-1.html#Syncfusion_Blazor_Grids_PdfQueryCellInfoEventArgs_1_Style) : It holds the style properties for the cell.
+* [RowIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfQueryCellInfoEventArgs-1.html#Syncfusion_Blazor_Grids_PdfQueryCellInfoEventArgs_1_RowIndex) : It holds the row index required to get the current cell information. **Note:** When virtualization is enabled, this option is applicable.
+* [ColumnIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfQueryCellInfoEventArgs-1.html#Syncfusion_Blazor_Grids_PdfQueryCellInfoEventArgs_1_ColumnIndex) : It holds the column index required to get the current cell information. **Note:** When virtualization is enabled, this option is applicable.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Grids
+
+<SfButton OnClick="OnPdfExport" Content="Pdf Export"></SfButton>
+<SfPivotView TValue="ProductDetails" @ref="@pivot" EnableVirtualization="true" AllowPdfExport="true" >
+    <PivotViewDataSourceSettings DataSource="@Data" EnableSorting=true>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+     <PivotViewEvents TValue="ProductDetails" PdfQueryCellInfo="PdfQueryCellEvent"></PivotViewEvents>
+</SfPivotView>
+
+@code{
+    private SfPivotView<ProductDetails> pivot;
+    public List<ProductDetails> Data { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+    
+    public void OnPdfExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        this.pivot.ExportToPdfAsync();
+    }
+
+    // Triggers every time for row header and value cells during exporting.
+    public void PdfQueryCellEvent(PdfQueryCellInfoEventArgs<ProductDetails> args)
+    {
+        Matrix<Matrix<AxisSet>> pivotValues = Pivot?.PivotValues;
+        AxisSet cellInfo = null;
+        if (Pivot?.EnableVirtualization == true)
+        {
+            if (pivotValues != null)
+            {
+                cellInfo = pivotValues[args.RowIndex]?[args.ColumnIndex];
+            }
+        }
+        else
+        {
+            IDictionary<string, object> cellCoordinates = args.Column?.CustomAttributes;
+            if (pivotValues != null && cellCoordinates != null && cellCoordinates.ContainsKey("aria-colindex") && cellCoordinates.ContainsKey("aria-rowindex"))
+            {
+                // You will get the row index required to find the current cell information from the pivot value collection here.
+                int rowIndex = int.Parse(cellCoordinates["aria-rowindex"].ToString(), System.Globalization.NumberStyles.None);
+                // You will get the column index required to find the current cell information from the pivot value collection here.
+                int colIndex = int.Parse(cellCoordinates["aria-colindex"].ToString(), System.Globalization.NumberStyles.None);
+                cellInfo = pivotValues[rowIndex]?[colIndex];
+            }
+        }
+        if (cellInfo?.IsGrandSum == true || cellInfo?.Axis == "row")
+        {
+            args.Style.BackgroundBrush = new Syncfusion.PdfExport.PdfSolidBrush(cellInfo?.Axis == "row" ? new Syncfusion.PdfExport.PdfColor(System.Drawing.Color.LightGoldenrodYellow) : new Syncfusion.PdfExport.PdfColor(System.Drawing.Color.LightYellow));
+            args.Style.TextPen = new Syncfusion.PdfExport.PdfPen(System.Drawing.Color.IndianRed);
+        }
+    }
+}
+```
+
+### PdfHeaderQueryCellInfo
+
+> The row header cell can be obtained by using the `PdfQueryCellInfo` event. It can be identified using `AxisSet.Axis == "row"` and for reference, please see the code snippet in the previous topic.
+
+The event [PdfHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_PdfHeaderQueryCellInfo) triggers on framing each column header cell during PDF export. It allows the user to customize the cell value, style, etc. of the current cell. It has the following parameters:
+
+* [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderQueryCellInfoEventArgs.html#Syncfusion_Blazor_Grids_PdfHeaderQueryCellInfoEventArgs_Column) : It holds the column information, including row and column indexes required to obtain the current cell information. **Note:** This option is applicable only when virtualization is disabled.
+* [Cell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderQueryCellInfoEventArgs.html#Syncfusion_Blazor_Grids_PdfHeaderQueryCellInfoEventArgs_Cell) : It holds the current cell information.
+* [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderQueryCellInfoEventArgs.html#Syncfusion_Blazor_Grids_PdfHeaderQueryCellInfoEventArgs_Style) : It holds the style properties for the cell.
+* [RowIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderQueryCellInfoEventArgs.html#Syncfusion_Blazor_Grids_PdfHeaderQueryCellInfoEventArgs_RowIndex) : It holds the row index required to get the current cell information. **Note:** When virtualization is enabled, this option is applicable.
+* [ColumnIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderQueryCellInfoEventArgs.html#Syncfusion_Blazor_Grids_PdfHeaderQueryCellInfoEventArgs_ColumnIndex) : It holds the column index required to get the current cell information. **Note:** When virtualization is enabled, this option is applicable.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Grids
+
+<SfButton OnClick="OnPdfExport" Content="Pdf Export"></SfButton>
+<SfPivotView TValue="ProductDetails" @ref="@pivot" EnableVirtualization="true" AllowPdfExport="true" >
+    <PivotViewDataSourceSettings DataSource="@Data" EnableSorting=true>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+     <PivotViewEvents TValue="ProductDetails" PdfHeaderQueryCellInfo="PdfHeaderEvent"></PivotViewEvents>
+</SfPivotView>
+
+@code{
+    private SfPivotView<ProductDetails> pivot;
+    public List<ProductDetails> Data { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+
+    public void OnPdfExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        this.pivot.ExportToPdfAsync();
+    }
+
+    // Triggers every time for column header cell during exporting.
+    public void PdfHeaderEvent(PdfHeaderQueryCellInfoEventArgs args)
+    {
+        Matrix<Matrix<AxisSet>> pivotValues = Pivot?.PivotValues;
+        AxisSet cellInfo = null;
+
+        if (Pivot?.EnableVirtualization == true)
+        {
+            if (pivotValues != null)
+            {
+                cellInfo = pivotValues[args.RowIndex]?[args.ColumnIndex];
+            }
+        }
+        else
+        {
+            IDictionary<string, object> cellCoordinates = args.Column?.CustomAttributes;
+            if (pivotValues != null && cellCoordinates != null && cellCoordinates.ContainsKey("aria-colindex") && cellCoordinates.ContainsKey("index"))
+            {
+                // You will get the row index required to find the current cell information from the pivot value collection here.
+                int rowIndex = int.Parse(cellCoordinates["index"].ToString(), System.Globalization.NumberStyles.None);
+                // You will get the column index required to find the current cell information from the pivot value collection here.
+                int colIndex = int.Parse(cellCoordinates["aria-colindex"].ToString(), System.Globalization.NumberStyles.None);
+                cellInfo = pivotValues[rowIndex]?[colIndex];
+            }
+        }
+        if (cellInfo != null)
+        {
+            args.Style.BackgroundBrush = new Syncfusion.PdfExport.PdfSolidBrush(new Syncfusion.PdfExport.PdfColor(System.Drawing.Color.LightGoldenrodYellow));
+            args.Style.TextPen = new Syncfusion.PdfExport.PdfPen(System.Drawing.Color.IndianRed);
+        }
+    }
+}
+```
+
+![Customizing Blazor PivotTable cell values and styles while Exporting](images/blazor-pivottable-pdfexportevents.png)
 
 > You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
