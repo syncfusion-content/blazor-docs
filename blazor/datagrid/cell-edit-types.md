@@ -983,3 +983,7 @@ The `SfTextBox` component is defined inside the EditTemplate and changes can be 
     }
 }
 ```
+
+## See also
+
+* [Edit one column update the value in another column](https://www.syncfusion.com/forums/151238/edit-one-column-update-the-value-in-another-column)
