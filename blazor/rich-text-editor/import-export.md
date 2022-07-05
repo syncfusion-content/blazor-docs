@@ -1,0 +1,245 @@
+---
+layout: post
+title: Import and Export in Blazor RichTextEditor Component | Syncfusion
+description: Checkout and learn here all about import and export in Syncfusion Blazor RichTextEditor component and more.
+platform: Blazor
+control: RichTextEditor
+documentation: ug
+---
+
+# Import and Export in Blazor RichTextEditor
+
+## Export to Html file stream
+
+You can load an external HTML file in the editor which contains the text and images. You can read the file path using the [Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Path) and `FileStream` property in the System.IO directory.
+
+{% tabs %}
+{% highlight razor %}
+
+@using System.IO; 
+@using Syncfusion.Blazor.RichTextEditor 
+ 
+<SfRichTextEditor @bind-Value="@HtmlString"> 
+    <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p> 
+    <p><b>Get started Quick Toolbar to click on the image</b></p> 
+    <p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p> 
+</SfRichTextEditor> 
+ 
+@code { 
+    private string HtmlString { get; set; } 
+    private string PathToHTMLFile = Path.GetFullPath(Directory.GetCurrentDirectory() + @"\wwwroot\HtmlFiles\HtmlTest.html"); 
+    protected override void OnInitialized() 
+    { 
+        using (FileStream fs = File.Open(PathToHTMLFile, FileMode.Open, FileAccess.ReadWrite)) 
+        { 
+            using (StreamReader sr = new StreamReader(fs)) 
+            { 
+                HtmlString = sr.ReadToEnd(); 
+            } 
+        } 
+    } 
+} 
+
+{% endhighlight %}
+{% endtabs %}
+
+You can convert the editor value to html file using the external button click action.Refer the below code.
+
+{% tabs %}
+{% highlight razor %}
+
+<button @onclick="DownloadFile">Download</button>
+<SfRichTextEditor ID="defalt_RTE" @ref="RteObj" @bind-Value="@rteValue">
+    <ChildContent>
+        <RichTextEditorToolbarSettings Items="@Tools" Type="ToolbarType.Expand"></RichTextEditorToolbarSettings>
+    </ChildContent>
+</SfRichTextEditor>
+
+@code {
+    [Inject]
+    IJSRuntime jsRuntime { get; set; }
+    SfRichTextEditor RteObj;
+    private string rteValue { get; set; } = "<p>Starting Text</p>";
+    public void DownloadFile()
+    {
+        var text = rteValue;
+        var bytes = System.Text.Encoding.UTF8.GetBytes(text);
+        exportService.SaveAs(js, "filename.html", bytes);
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+ExportService.cs:
+
+```cshtml
+ public async Task SaveAs(IJSRuntime js, string filename, byte[] data)
+        {
+         var data = Convert.ToBase64String(data);    
+         //You can upload this data to the azure.
+        }
+```
+
+You can use the EJ1 Syncfusion. EJ.Export, Syncfusion.DocIO libraries to convert the editor value string to Html FileStream.
+
+{% tabs %}
+{% highlight razor %}
+
+<button @onclick="DownloadFile">Download</button>
+<SfRichTextEditor ID="defalt_RTE" @ref="RteObj" @bind-Value="@rteValue">
+    <ChildContent>
+        <RichTextEditorToolbarSettings Items="@Tools" Type="ToolbarType.Expand"></RichTextEditorToolbarSettings>
+    </ChildContent>
+</SfRichTextEditor>
+
+@code {
+    [Inject]
+    IJSRuntime jsRuntime { get; set; }
+    SfRichTextEditor RteObj;
+    private string rteValue { get; set; } = "<p>Starting Text</p>";
+    public object[] Tools = new object[]{
+        "Bold", "Italic", "Underline", "SubScript", "SuperScript", "StrikeThrough",
+        "FontName", "FontSize", "FontColor", "BackgroundColor",
+        "LowerCase", "UpperCase", "|",
+        "Formats", "Alignments", "OrderedList", "UnorderedList",
+        "Outdent", "Indent", "|", "CreateTable",
+        "CreateLink", "Image", "|", "ClearFormat", "Print",
+        "SourceCode", "FullScreen", "|", "Undo", "Redo"
+    };
+    public void DownloadFile()
+    {
+        exportService.ExportToHtml(rteValue);
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+ExportService.cs:
+
+```cshtml 
+public void ExportToHtml(string value)
+{
+    WordDocument document = GetDocument(value);
+    //Saves the Word document to MemoryStream
+    MemoryStream stream = new MemoryStream();
+    document.Save(stream, FormatType.Html);
+    stream.Position = 0;
+    FileStream outputStream = new FileStream("filename.html", FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite);
+    document.Save(outputStream, FormatType.Html);
+    document.Close();
+    outputStream.Flush();
+    outputStream.Dispose();
+    // You can upload this stream to the azure
+}
+
+public WordDocument GetDocument(string htmlText)
+{
+    WordDocument document = null;
+    MemoryStream stream = new MemoryStream();
+    StreamWriter writer = new StreamWriter(stream, System.Text.Encoding.Default);
+    htmlText = htmlText.Replace("\"", "'");
+    XmlConversion XmlText = new XmlConversion(htmlText);
+    XhtmlConversion XhtmlText = new XhtmlConversion(XmlText);
+    writer.Write(XhtmlText.ToString());
+    writer.Flush();
+    stream.Position = 0;
+    document = new WordDocument(stream, FormatType.Html, XHTMLValidationType.None);
+    return document;
+}
+
+```
+
+ ## Import RTF file to editor
+
+ You can import the RTF file content into the editor using Uploader component and EJ1 Syncfusion. EJ.Export, Syncfusion.DocIO libraries for RTF to HTML conversions. 
+ 
+ You can import the RTF file in the uploader, and once the file is uploaded successfully, You can able to replace the editor value with the converted HTML text and also can export the RichTextEditor value to the RTF file.
+
+{% tabs %}
+{% highlight razor %}
+
+<Syncfusion.Blazor.Buttons.SfButton OnClick="OnExport">Export</Syncfusion.Blazor.Buttons.SfButton>
+    <SfRichTextEditor ID="customtool" @ref="RteObj" @bind-Value="@rteValue" EnableHtmlSanitizer="false">
+        <RichTextEditorImageSettings SaveUrl="api/SampleData/Save" Path="../images/"></RichTextEditorImageSettings>
+    </SfRichTextEditor>
+    <SfUploader ID="UploadFiles">
+        <UploaderAsyncSettings SaveUrl="api/SampleData/Import" RemoveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Remove"></UploaderAsyncSettings>
+        <UploaderEvents Success="@onSuccess"></UploaderEvents>
+    </SfUploader>
+
+@code {
+    SfRichTextEditor RteObj;
+    [Inject]
+    IJSRuntime jsRuntime { get; set; }
+    private string rteValue { get; set; } = "<div><p>Iframe Content Loaded</p><iframe width='560' height='315' src='https://www.youtube.com/embed/9ahkQLmtEy4'></iframe></div>";
+    public async Task OnExport()
+    {
+        HttpClientHandler clientHandler = new HttpClientHandler();
+        clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+        HttpClient client = new HttpClient(clientHandler);
+        var content = new StringContent(rteValue);
+        content.Headers.Add("value", rteValue);
+        await client.PostAsync(navigationManager.Uri + "api/SampleData/ExportToRtf", content);
+        await SampleInterop.SaveAs<object>(jsRuntime, "Sample.rtf");
+    }
+    public void onSuccess(SuccessEventArgs args)
+    {
+        var headers = args.Response.Headers.ToString();
+        var header = headers.Split("rtevalue: ");
+        header = header[1].Split("\r");
+        this.rteValue = header[0];
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+ ## Import text file to editor 
+
+ You can import the text file to editor by using server-side action which retrieves the RTF file from the uploader and converts it into the HTML string which can be retrieved in the success event of the uploader and the binding to the `Value` property of the Rich Text Editor.
+
+{% tabs %}
+{% highlight razor %}
+
+@using Syncfusion.Blazor.RichTextEditor
+@inject ExportService exportService
+ 
+<SfRichTextEditor ID="defalt_RTE" @ref="RteObj" @bind-Value="@rteValue" EnableHtmlSanitizer ="false"> 
+    <RichTextEditorImageSettings SaveUrl="api/SampleData/Save" Path="../images/"></RichTextEditorImageSettings> 
+</SfRichTextEditor> 
+<SfUploader ID="UploadFiles"> 
+    <UploaderAsyncSettings SaveUrl="api/SampleData/Import" RemoveUrl=https://aspnetmvc.syncfusion.com/services/api/uploadbox/Remove></UploaderAsyncSettings> 
+    <UploaderEvents Success="@onSuccess"></UploaderEvents> 
+</SfUploader> 
+ 
+@code { 
+    SfRichTextEditor RteObj; 
+    private string rteValue { get; set; } = "<div><p>Iframe Content Loaded</p><iframe width='560' height='315' src='https://www.youtube.com/embed/9ahkQLmtEy4'></iframe></div>"; 
+    public void onSuccess(SuccessEventArgs args) 
+    { 
+        var headers = args.Response.Headers.ToString(); 
+        var header = headers.Split("rtevalue: "); 
+        header = header[1].Split("\r"); 
+        this.rteValue = header[0]; 
+    } 
+} 
+
+{% endhighlight %}
+{% endtabs %}
+
+You can also render html Iframe inside Rich Text Editor by setting the [EnableHtmlSanitizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableHtmlSanitizer) to false in the Rich Text Editor.
+
+{% tabs %}
+{% highlight %}
+
+@using Syncfusion.Blazor.RichTextEditor
+@inject ExportService exportService
+
+<SfRichTextEditor ID="defalt_RTE" @ref="RteObj" @bind-Value="@rteValue" EnableHtmlSanitizer="false"> 
+    . . . 
+</SfRichTextEditor> 
+
+{% endhighlight %}
+{% endtabs %}
