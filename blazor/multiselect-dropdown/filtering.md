@@ -106,3 +106,16 @@ The MultiSelect component filter queries can be customized. You can also use you
     }
 }
 ```
+
+## Custom Filtering with Custom Adaptor
+
+The following sample code demonstrates implementing custom filtering with custom data adaptor, which allows to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the MultiSelect component.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+{% include_relative code-snippet/multiselect-filter-using-custom-adaptor.razor %}
+
+{% endhighlight %}
+
+​​​​​​​{% endtabs %}
