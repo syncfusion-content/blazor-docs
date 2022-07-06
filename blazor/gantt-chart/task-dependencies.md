@@ -15,25 +15,25 @@ Task dependency or task relationship can be established between two tasks in Gan
 
 Task relationships are categorized into four types based on the start and finish dates of the task.
 
-### Start to Start (SS)
+### Start to start (SS)
 
 You cannot start a task until the dependent task also starts.
 
 ![Blazor Gantt Chart displays Start to Start Task Relationship](images/blazor-gantt-chart-start-to-start-relation.png)
 
-### Start to Finish (SF)
+### Start to finish (SF)
 
 You cannot finish a task until the dependent task is started.
 
 ![Blazor Gantt Chart displays Start to Finish Task Relationship](images/blazor-gantt-chart-start-to-finish-relation.png)
 
-### Finish to Start (FS)
+### Finish to start (FS)
 
 You cannot start a task until the dependent task is completed.
 
 ![Blazor Gantt Chart displays Finish to Start Task Relationship](images/blazor-gantt-chart-finish-to-start-relation.png)
 
-### Finish to Finish (FF)
+### Finish to finish (FF)
 
 You cannot finish a task until the dependent task is completed.
 

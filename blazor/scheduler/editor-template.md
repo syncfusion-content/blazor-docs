@@ -1081,13 +1081,6 @@ The quick popup accepts the template that customizes quick popup only on event b
 
 The quick popup accepts the template that customizes only event click quick popup by giving `TemplateType.Both` to the `TemplateType` option in `ScheduleQuickInfoTemplates`.
 
-You can also do different customization for quick popup on cell and event by checking the `ElementType` option within the event. You can check ElementType with any of the following.
-
-| Element type | Description |
-|-------|---------|
-| cell | customizes cell popup.|
-| event | customized event popup.|
-
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Inputs
@@ -1101,14 +1094,14 @@ You can also do different customization for quick popup on cell and event by che
             <div class="quick-info-header">
                 <div class="quick-info-header-content" style="@(GetHeaderStyles((context as AppointmentData)))">
                     <div class="quick-info-title">
-                        @((context as AppointmentData).ElementType == "cell" ? "Add Appointment" : "Appointment Details")
+                        @((context as AppointmentData).Id == default(int)? "Add Appointment" : "Appointment Details")
                     </div>
                     <div class="duration-text">@(GetEventDetails((context as AppointmentData)))</div>
                 </div>
             </div>
         </HeaderTemplate>
         <ContentTemplate>
-            @if ((context as AppointmentData).ElementType == "cell")
+            @if ((context as AppointmentData).Id == default(int))
             {
                 <div class="e-cell-content">
                     <div class="content-area">
@@ -1144,7 +1137,7 @@ You can also do different customization for quick popup on cell and event by che
             }
         </ContentTemplate>
         <FooterTemplate>
-            @if ((context as AppointmentData).ElementType == "cell")
+            @if ((context as AppointmentData).Id == default(int))
             {
                 <div class="cell-footer">
                     <SfButton Content="More Details" OnClick="@(e => OnMoreDetailsClick(e, (context as AppointmentData), false))"></SfButton>
@@ -1182,7 +1175,7 @@ You can also do different customization for quick popup on cell and event by che
     }
     private string GetHeaderStyles(AppointmentData data)
     {
-        if (data.ElementType == "cell")
+        if (data.Id == default(int))
         {
             //CellClick Header Styles
             return "align-items: center ; color: #919191;";
@@ -1276,7 +1269,6 @@ You can also do different customization for quick popup on cell and event by che
         public Nullable<int> RecurrenceID { get; set; }
         public string RecurrenceException { get; set; }
         public int RoomId { get; set; }
-        public virtual string ElementType { get; set; }
     }
     public class RoomsData
     {
