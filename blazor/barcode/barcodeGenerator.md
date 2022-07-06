@@ -54,7 +54,7 @@ Codabar is a variable length symbol that encodes the following 20 characters:
 
 0123456789-$:/.+ABCD
 
-The characters, A, B, C and D are used as start and stop characters. Codabar is used in libraries, blood banks, the package delivery industry and a variety of other information processing applications.
+The characters A, B, C and D are used as start and stop characters. Codabar is used in libraries, blood banks, the package delivery industry and a variety of other information processing applications.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -68,11 +68,12 @@ The characters, A, B, C and D are used as start and stop characters. Codabar is 
 ## Code 32
 
 Code 32 is mainly used for coding pharmaceuticals, cosmetics, and dietetics. It is often used to encode Italian Pharmacode that has the following structure:
+
 * ‘A’ character (ASCII 65), that is not really encoded.
 * 8 digits for Pharmacode (It generally begins with / and prefixed with 0).
 * 1 digit for checksum module 10, that is automatically calculated by barcode.
 
-The value to be encoded must be 8 digits Pharmacode (prefix it with ‘0’ if necessary) and the 9th digit (the checksum) is automatically calculated by barcode.
+The value to be encoded must be 8 digits Pharmacode (prefix it with ‘0’ if necessary), and the 9th digit (the checksum) is automatically calculated by barcode.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -85,7 +86,7 @@ The value to be encoded must be 8 digits Pharmacode (prefix it with ‘0’ if n
 
 ## Code 93
 
-Code 93 is designed to complement and improve upon Code 39. It can represent the entire ASCII character set by using combinations of 2 characters. Code 93 is a continuous, variable-length symbology and produces denser code. The Standard Mode (default implementation) can encode uppercase letters (A-Z), digits (0-9), and special characters like *, -, $, %, (Space), ., /, and +.
+Code 93 is designed to complement and improve Code 39. It can represent the entire ASCII character set by using combinations of 2 characters. Code 93 is a continuous, variable-length symbology and produces denser code. The Standard Mode (default implementation) can encode uppercase letters (A-Z), digits (0-9), and special characters like *, -, $, %, (Space), ., /, and +.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -102,7 +103,7 @@ The Code 93 Extended Barcode symbology is continuous, variable length, and self-
 
 ## Code 128
 
-Code 128 is a variable length, high density, alphanumeric, linear bar code symbology, capable of encoding the full 128-character ASCII character set and extended character sets. This symbology includes a checksum digit for verification and the barcode can also be verified character-by-character by verifying the parity of each data byte.
+Code 128 is a variable length, high density, alphanumeric, linear bar code symbology capable of encoding full 128-character ASCII character set and extended character sets. This symbology includes a checksum digit for verification and the barcode can also be verified character-by-character by verifying the parity of each data byte.
 
 ### Code 128 Code Sets
 
@@ -164,6 +165,21 @@ In barcode generators, you can customize the barcode text by using display [Text
 ```
 
 ![Customizing the Text in Blazor Barcode](images/blazor-barcode-text-customization.png)
+
+## Enable Check Sum
+
+The [EnableCheckSum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_EnableCheckSum) property specifies an error detection in which some additional characters are added to a barcode to protect the integrity of the barcode data. The default value of this property is set as true for BarcodeType.Code39.
+
+The below code explains how to set the EnableCheckSum property to hide the extra characters displayed at the end of the barcode.
+
+```cshtml
+<SfBarcodeGenerator EnableCheckSum=false
+                    Width="200px"
+                    Height="150px"
+                    Type="@BarcodeType.Code39"
+                    Value="SYNCFUSION">
+</SfBarcodeGenerator>
+```
 
 ## Event
 
