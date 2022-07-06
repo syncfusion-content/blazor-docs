@@ -3,7 +3,7 @@ layout: post
 title: Working with Data in Blazor Range Selector Component | Syncfusion
 description: Checkout and learn here all about Working with Data in Syncfusion Blazor Range Selector Component and much more.
 platform: Blazor
-control: Chart
+control: Range Selector
 documentation: ug
 ---
 
@@ -97,6 +97,67 @@ Range Selector is a generic component which is strongly bound to a model type. T
 ```
 
 ![Blazor RangeNavigator with ExpandoObject](images/working-data/blazor-range-expando-object.png)
+
+### Dynamic Object
+
+The range selector supports **DynamicObject** data source when the model type is unknown. This can be set in [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property in [RangeNavigatorSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html) class.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+@using System.Dynamic
+
+<SfRangeNavigator ValueType="RangeValueType.DateTime" Width="450">
+    <RangeNavigatorSeriesCollection>
+        <RangeNavigatorSeries DataSource="@MedalDetails" XName="X" Type="RangeNavigatorType.Area" YName="Y">
+        </RangeNavigatorSeries>
+    </RangeNavigatorSeriesCollection>
+</SfRangeNavigator>
+
+
+@code{
+    
+    private List<DateTime> Dates = new List<DateTime> { new DateTime(2005, 01, 01), new DateTime(2006, 01, 01), 
+        new DateTime(2007, 01, 01), new DateTime(2008, 01, 01), new DateTime(2009, 01, 01), new DateTime(2010, 01, 01), new DateTime(2011, 01, 01) };
+    public DateTime[] Value = new DateTime[] { new DateTime(2006, 01, 01), new DateTime(2008, 01, 01) };
+    private Random randomNum = new Random();
+    public List<DynamicDictionary> MedalDetails = new List<DynamicDictionary>() { };
+    protected override void OnInitialized()
+    {
+        MedalDetails = Enumerable.Range(0, 5).Select((x) =>
+        {
+            dynamic d = new DynamicDictionary();
+            d.X = Dates[x];
+            d.Y = randomNum.Next(20, 80);
+            return d;
+        }).Cast<DynamicDictionary>().ToList<DynamicDictionary>();
+    }
+    public class DynamicDictionary : DynamicObject
+    {
+        Dictionary<string, object> dictionary = new Dictionary<string, object>();
+
+        public override bool TryGetMember(GetMemberBinder binder, out object result)
+        {
+            string name = binder.Name;
+            return dictionary.TryGetValue(name, out result);
+        }
+        public override bool TrySetMember(SetMemberBinder binder, object value)
+        {
+            dictionary[binder.Name] = value;
+            return true;
+        }
+
+        public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
+        {
+            return this.dictionary?.Keys;
+        }
+    }
+
+}
+
+```
+
+![Blazor RangeNavigator with Dynamic Object](images/working-data/blazor-range-dynamic-object.png)
 
 ## Remote data
 
@@ -211,10 +272,4 @@ The following sample code shows how to send parameters using the Query property 
 ```
 ![Blazor RangeNavigator with Chart Query](images/working-data/blazor-range-remote-data.png)
 
-> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
-
-## See Also
-
-* [Data label](./data-labels)
-* [Tooltip](./tool-tip)
-* [Marker](./data-markers)
+> Refer to our [Blazor Range Selector](https://www.syncfusion.com/blazor-components/blazor-range-selector) feature tour page for its groundbreaking feature representations and also explore our [Blazor Range Selector Example](https://blazor.syncfusion.com/demos/range-selector/range-navigator?theme=fluent) to know various range selector types and how to represent time-dependent data, showing trends at equal intervals.
