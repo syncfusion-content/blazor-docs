@@ -61,14 +61,14 @@ The [HistoryChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent @ref="@diagram" Height="600px" HistoryChanged="@Onhistorychange">
+<SfDiagramComponent @ref="@diagram" Height="600px" HistoryChanged="@OnHistoryChange">
 </SfDiagramComponent>
 
 @code
  {
     SfDiagramComponent diagram;
 
-    public void Onhistorychange(HistoryChangedEventArgs args)
+    public void OnHistoryChange(HistoryChangedEventArgs args)
     {
         //Causes of history change.
         HistoryChangedAction ActionTrigger = args.ActionTrigger;

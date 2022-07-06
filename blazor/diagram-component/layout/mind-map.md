@@ -31,7 +31,7 @@ A mind map is a diagram that displays the nodes as a spider diagram organizes in
         node.Width = 25;
         node.BackgroundColor = "#6BA5D7";
         node.Style = new ShapeStyle() { Fill = "#6495ED", StrokeWidth = 1, StrokeColor = "white" };
-        node.Shape = new BasicShape() { Type = Shapes.Basic }; ;
+        node.Shape = new BasicShape() { Type = NodeShapes.Basic }; ;
     }
     
     //Creates connectors with some default values.
@@ -105,13 +105,13 @@ You can also decide the branch for mind map using [GetBranch](https://help.syncf
         node.Height = 50;
         node.Width = 100;
         node.Style = new ShapeStyle() { Fill = "#6495ED", StrokeWidth = 1, StrokeColor = "white" };
-        node.Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Ellipse };
-        MindMapDetails mindmapData = node.Data as MindMapDetails;
+        node.Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Ellipse };
+        MindMapDetails mindMapData = node.Data as MindMapDetails;
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
         {
             new ShapeAnnotation()
             {
-                Content = mindmapData.Label
+                Content = mindMapData.Label
             }
         };
     }

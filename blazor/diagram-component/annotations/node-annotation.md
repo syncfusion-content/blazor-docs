@@ -164,7 +164,7 @@ The following code explains how to align annotations.
                 { 
                     Content = "Task1",
                     // Sets the margin for the content.
-                    Margin = new Margin() { Top = 10},
+                    Margin = new DiagramThickness() { Top = 10},
                     HorizontalAlignment = HorizontalAlignment.Center,
                     VerticalAlignment = VerticalAlignment.Top,
                     Offset = new DiagramPoint(){ X = 0.5 ,Y = 1}
