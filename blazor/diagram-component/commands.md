@@ -731,7 +731,7 @@ The following code illustrates how to execute the grouping commands.
 
 ## Z-Order commands
 
-Z – Order commands are used to visually arrange the selected objects such as Nodes, Connectors and Groups on the diagram page with its Z-order values.
+Z – Order commands are used to control the stacking order (Z-Order) of the diagram elements such as nodes, connectors, and groups. Also, you can arrange the selected objects on the diagram page with its Z-order values by using Bring to front, Bring forward, Send to back, and Send backward features.
 
 ### BringToFront
 
