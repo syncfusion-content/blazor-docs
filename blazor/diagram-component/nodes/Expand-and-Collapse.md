@@ -7,9 +7,9 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Expand and Collaspe support for Node in Blazor Diagram Component
+# Expand and Collapse support for Node in Blazor Diagram Component
 
-Diagram provides support to describe the state of the node. i.e., the node is expanded or collapsed state. The IsExpanded property of node is used to expand or collapse the children nodes.The Expand and Collapse support is used to compress the view of a hierarchy so that only the roots of each elements are visible.
+Diagram provides support to describe the state of the node. i.e., the node is in expanded or collapsed state. The IsExpanded property of node is used to expand or collapse the children nodes.The Expand and Collapse support is used to compress the hierarchy view so that only the roots of each elements are visible.
 
 The following properties of the Node are used to represent the state of the node and allows user to Expand and Collapse the desired Node :
 
@@ -244,14 +244,14 @@ The following code example illustrates how to create an icon of various shapes i
 ![Displaying DiagramIcon in Blazor Diagram layout](../images/blazor-diagram-ExpandCollapse-Layout.gif)
 
 ## Customization
-Diagram allows you to customize the Expand and collapse Icon of the Node. To explore the properties of Expand and Collapse icon, refer to [DiagramExpandIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExpandIcon.html) and [DiagramCollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramCollapseIcon.html).
+Diagram allows you to customize the Expand and collapse Icon of the Node. To explore Expand and Collapse icon properties, refer to [DiagramExpandIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExpandIcon.html) and [DiagramCollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramCollapseIcon.html).
 
 ### Size
 The size of the icon can be changed with the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_Width) properties.
 
 ### Shape
 
-The shape of a [ExpandIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_ExpandIcon) and [CollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_CollapseIcon) can be changed by using the Shape property of [DiagramExpandIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExpandIcon.html) and [DiagramCollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramCollapseIcon.html) respectively. 
+The shape of an [ExpandIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_ExpandIcon) and a [CollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_CollapseIcon) can be changed by using the Shape property of [DiagramExpandIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExpandIcon.html) and [DiagramCollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramCollapseIcon.html) respectively. 
 To explore the different types of DiagramExpandIcon shapes, refer to [DiagramExpandIcons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExpandIcons.html).
 To explore the different types of DiagramCollapseIcon shapes, refer to [DiagramCollapseIcons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramCollapseIcons.html).
 If you need to render a custom shape, then you can set shape to [Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExpandIcons.html#Syncfusion_Blazor_Diagram_DiagramExpandIcons_Path) and define the path using the [PathData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_PathData) property.
@@ -537,7 +537,7 @@ The following code explains how to change the appearance of the Icon using [Corn
 
 ### Position and Alignment
 
-Diagram allows you to customize the position and alignment of the Icon efficiently. Icon can be aligned relative to the node boundaries. The following properties are used to position the Icon. 
+Diagram allows you to customize the position and alignment of the Icon efficiently. An Icon can be aligned in respect to the node boundaries. The following properties are used to position the Icon. 
 
 * [OffsetX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_OffsetX)
 * [OffsetY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_OffsetY)
