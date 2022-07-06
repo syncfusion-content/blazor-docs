@@ -297,3 +297,7 @@ After that, add new razor page for routing with routing url along with the param
 
 The following GIF represents template routing in DataGrid
 ![Blazor DataGrid with Routing Template](./images/blazor-datagrid-template-routing.gif)
+
+## See also
+
+* [FileUpload in Grid Column Template](https://www.syncfusion.com/forums/151021/fileupload-in-grid-column-template)

@@ -246,6 +246,56 @@ The position of the Tab header icons can be customized using the [IconPosition](
 
 ![Blazor Tabs with Icon](./images/blazor-tabs-icon.png)
 
+
+## Add floating button to the right of existing tabs
+
+You can add floating button to the right of existing tabs by adding button inside the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_HeaderTemplate) of last TabItem.
+
+Here, New tab items added when user clicks on the `Button` inside `HeaderTemplate`.
+
+```cshtml
+
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Buttons
+
+<SfTab @ref="Tab">
+    <TabItems>
+       <TabItem>
+         <ChildContent>
+             <TabHeader Text="Project Time"></TabHeader>
+         </ChildContent>
+            <ContentTemplate>
+                <ul>
+                    <li>Click on the "+" header to add dynamic tab items. </li>
+                </ul>
+           </ContentTemplate>
+     </TabItem>
+         <TabItem>
+             <HeaderTemplate>
+                  <SfButton  Content="+"  @onclick="onClick"></SfButton>
+             </HeaderTemplate>
+        </TabItem>
+    </TabItems>
+</SfTab>
+
+@code {
+    SfTab Tab;
+
+    public void onClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        List<TabItem> source = new List<TabItem>()
+        {
+            new TabItem() { Header = new TabHeader() { Text = "new tab"} }
+        };
+        this.Tab.AddTab(source, this.Tab.Items.Count() - 1);
+    }
+}
+```
+
+![Blazor Tabs with Floating button](./images/blazor-tabs-floating-button.png)
+
+[View Sample in GitHub](https://github.com/SyncfusionExamples/How-to-add-floating-button-to-the-right-of-tabs-in-Blazor-Tab)
+
 ## See Also
 
 * [How to customize selected tab styles](./how-to/customize-selected-tab-styles)

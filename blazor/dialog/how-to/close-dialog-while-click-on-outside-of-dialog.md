@@ -53,6 +53,11 @@ In the following code, dialog is closed when clicking outside the dialog area us
     {
         this.IsVisible = false;
     }
+
+    private void CloseDialog()
+    {
+        this.IsVisible = false;
+    }
 }
 
 ```

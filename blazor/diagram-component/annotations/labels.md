@@ -78,7 +78,7 @@ The following code explains how to add an annotation to a node at runtime by usi
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<input value="Addlabel" type="button" @onclick="@AddLabel" name="Addlabel" />
+<input value="AddLabel" type="button" @onclick="@AddLabel" name="AddLabel" />
 <SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes">
 </SfDiagramComponent>
 
@@ -135,7 +135,7 @@ A collection of annotations can be removed from the node by using the `RemoveAt`
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<input value="Removelabel" type="button" @onclick="@RemoveLabel" name="Removelabel" />
+<input value="RemoveLabel" type="button" @onclick="@RemoveLabel" name="RemoveLabel" />
 
 <SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
 
@@ -196,7 +196,7 @@ The following code sample shows how the annotation of the node changed at runtim
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<input value="Updatelabel" type="button" @onclick="@UpdateLabel" name="Updatelabel" />
+<input value="UpdateLabel" type="button" @onclick="@UpdateLabel" name="UpdateLabel" />
 
 <SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
 
