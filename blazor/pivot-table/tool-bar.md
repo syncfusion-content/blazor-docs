@@ -479,6 +479,8 @@ In the below sample, toolbar UI actions such as add new report and save current 
     private SfPivotFieldList<PivotProductDetails> fieldList;
     private SfPivotView<PivotProductDetails> pivot;
     private List<Syncfusion.Blazor.PivotView.ToolbarItems> toolbar = new List<Syncfusion.Blazor.PivotView.ToolbarItems> {
+        ToolbarItems.New,
+        ToolbarItems.Save,
         ToolbarItems.Grid,
         ToolbarItems.Chart,
         ToolbarItems.Export,
@@ -667,6 +669,8 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
     private SfPivotFieldList<PivotProductDetails> fieldList;
     private SfPivotView<PivotProductDetails> Pivot;
     public List<Syncfusion.Blazor.PivotView.ToolbarItems> toolbar = new List<Syncfusion.Blazor.PivotView.ToolbarItems> {
+        ToolbarItems.New,
+        ToolbarItems.Save,
         ToolbarItems.Grid,
         ToolbarItems.Chart,
         ToolbarItems.Export,
@@ -688,7 +692,7 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
     // Triggers when the UI action fails to achieve the desired result.
     public void actionFailure(PivotActionFailureEventArgs args)
     {
-        if(args.ActionName=="Chart view")
+        if(args.ActionName=="Add new report")
         {
             /// Your code here.
         }       
