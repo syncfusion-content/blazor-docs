@@ -9,7 +9,7 @@ documentation: ug
 
 # Complex Hierarchical Layout in Blazor Diagram Component
 
-Complex hierarchical tree layout is the extended version of the hierarchical tree layout. The child had been two or more parents. To create a complex hierarchical tree, the type of layout should be set as ComplexHierarchicalTree.
+Complex hierarchical tree layout arranges nodes in a tree-like structure, where the child node can have more than one parent. This layout is an extended version of the hierarchical tree layout. To create a complex hierarchical tree, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) property of layout should be set as [ComplexHierarchicalTree](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_ComplexHierarchicalTree).
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -81,7 +81,7 @@ Complex hierarchical tree layout is the extended version of the hierarchical tre
 ![Blazor Complex Hierarchical Diagram](../images/blazor-diagram-complex.png)
 ### Line Distribution
 
-Line distribution is used to arrange the connectors without overlapping in automatic layout. In some cases, the automatic layout connectors connecting to the nodes will be overlapped with one another. So user can decide whether the segment of each connector from a single parent node should be same point or different point. The SamePoint property of layout is used to enable or disable the line distribution in layout. By default value is true.
+Line distribution is used to arrange the connectors without overlapping in automatic layout. In some cases, the automatic layout connectors connecting to the nodes will be overlapped with one another. So user can decide whether the segment of each connector from a single parent node should be same point or different point. The [SamePoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_SamePoint) property of layout is used to enable or disable the line distribution in layout. By default value is true.
 
 The following code example illustrates how to create a complex hierarchical tree with line distribution.
 
@@ -156,7 +156,7 @@ The following code example illustrates how to create a complex hierarchical tree
 
 ### Linear Arrangement
 
-Linear arrangement is used to linearly arrange the child nodes in layout, which means the parent node is placed in the center corresponding to its children. When line distribution is enabled, linear arrangement is also activated by default. The LinearArrangement property of layout is used to enable or disable the linear arrangement in layout. By default value is false.
+In layout, linear arrangement is used to arrange the child nodes in a linear or nonlinear manner, which means the parent node is placed in the center corresponding to its children. When line distribution is enabled, linear arrangement is also activated by default. The [LinearArrangement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_LinearArrangement) property of layout is used to enable or disable the linear arrangement in layout. By default value is false.
 The following code illustrates how to arrange the nodes in non linear manner.
 ```csharp
  <SfDiagramComponent Height="600px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
@@ -289,7 +289,3 @@ The following code illustrates how to arrange the nodes in  linear manner.
 }
 ```
 ![Blazor Complex Hierarchical Diagram](../images/blazor-diagram-lineararrangement.png)
-
-
-
-
