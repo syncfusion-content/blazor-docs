@@ -226,8 +226,7 @@ The following code example illustrates how to define boundary constraints with r
 
 ## Responsive with parent container
 
-By setting the value in percentage, diagram gets its dimention with respect to its parent container.Specify the Width and Height as 100% to make the diagram element fill its parent container.
-Setting the Height to 100% requires the diagram parent element to have explicit height or you can use calc function to set explicit height based on the browser layout.
+By setting the value in percentage, diagram gets its dimention with respect to its parent container.Specify the Width and Height as 100% to make the diagram element fill its parent container. Setting the Height to 100% requires the diagram parent element to have explicit height or you can use calc function to set explicit height based on the browser layout.
 
 The following code example illustrates how to set width and height in percentage
 
