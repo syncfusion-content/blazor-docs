@@ -165,6 +165,90 @@ The WebApiAdaptor can be used to bind query builder with Web API created using O
 
 ```
 
-![Data Binding in Blazor QueryBuilder](./images/blazor-querybuilder-data-binding.png)
+## Complex Data Binding
+
+Complex Data Binding allows you to create subfield for columns. To implement complex data binding, either bind the complex data in nested columns or specify complex data source and Separator must be given in querybuilder.
+
+```cshtml
+
+@using Syncfusion.Blazor.QueryBuilder
+
+<SfQueryBuilder TValue="Complex" Separator="." @ref="QueryBuilderObj">
+    <QueryBuilderRule Condition="or" Rules="@Rules"></QueryBuilderRule>
+    <QueryBuilderColumns>
+        <QueryBuilderColumn Field="Employee" Label="Employee" Type="ColumnType.Object">
+            <QueryBuilderColumns>
+                <QueryBuilderColumn Field="ID" Label="Employee ID" Type="ColumnType.Number"></QueryBuilderColumn>
+                <QueryBuilderColumn Field="DOB" Label="Date of birth" Type="ColumnType.Date"></QueryBuilderColumn>
+                <QueryBuilderColumn Field="HireDate" Label="Hire Date" Type="ColumnType.Date"></QueryBuilderColumn>
+                <QueryBuilderColumn Field="Salary" Label="Salary" Type="ColumnType.Number"></QueryBuilderColumn>
+                <QueryBuilderColumn Field="Age" Label="Age" Type="ColumnType.Number"></QueryBuilderColumn>
+                <QueryBuilderColumn Field="Title" Label="Title" Type="ColumnType.String"></QueryBuilderColumn>
+            </QueryBuilderColumns>
+        </QueryBuilderColumn>
+        <QueryBuilderColumn Field="Name" Label="Name" Type="ColumnType.Object">
+            <QueryBuilderColumns>
+                <QueryBuilderColumn Field="FirstName" Label="First Name" Type="ColumnType.String"></QueryBuilderColumn>
+                <QueryBuilderColumn Field="LasttName" Label="Last Name" Type="ColumnType.String"></QueryBuilderColumn>
+            </QueryBuilderColumns>
+        </QueryBuilderColumn>
+        <QueryBuilderColumn Field="Country" Label="Country" Type="ColumnType.Object">
+            <QueryBuilderColumns>
+                <QueryBuilderColumn Field="State" Label="State" Type="ColumnType.Object">
+                    <QueryBuilderColumns>
+                        <QueryBuilderColumn Field="City" Label="City" Type="ColumnType.String"></QueryBuilderColumn>
+                        <QueryBuilderColumn Field="ZipCode" Label="Zip Code" Type="ColumnType.String"></QueryBuilderColumn>
+                    </QueryBuilderColumns>
+                </QueryBuilderColumn>
+                <QueryBuilderColumn Field="Region" Label="Region" Type="ColumnType.String"></QueryBuilderColumn>
+                <QueryBuilderColumn Field="Name" Label="Name" Type="ColumnType.String"></QueryBuilderColumn>
+            </QueryBuilderColumns>
+        </QueryBuilderColumn>
+    </QueryBuilderColumns>
+</SfQueryBuilder>
+@code {
+    SfQueryBuilder<Complex> QueryBuilderObj;
+    List<RuleModel> Rules = new List<RuleModel>()
+    {
+        new RuleModel { Field="Employee.ID", Label="ID", Type="Number", Operator="equal", Value = 1001 },
+        new RuleModel { Field="Name.FirstName", Label="First Name", Type="String", Operator="equal", Value = "Mark" },
+        new RuleModel { Field="Country.State.City", Label="City", Type="String", Operator="equal", Value = "Jersey City" }
+    };
+    public class Employee
+    {
+        public string ID { get; set; }
+        public DateTime DOB { get; set; }
+        public DateTime HireDate { get; set; }
+        public int Salary { get; set; }
+        public int Age { get; set; }
+        public string Title { get; set; }
+    }
+    public class Country
+    {
+        public State State { get; set; }
+        public string Region { get; set; }
+        public string Name { get; set; }
+    }
+    public class State
+    {
+        public string City { get; set; }
+        public int Zipcode { get; set; }
+    }
+    public class Name
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+    }
+    public class Complex
+    {
+        public Employee Employee { get; set; }
+        public Name Name { get; set; }
+        public Country Country { get; set; }
+    }
+}
+
+```
+
+![Complex Data Binding in Blazor QueryBuilder](./images/blazor-query-builder-complex-db.png)
 
 > You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.
