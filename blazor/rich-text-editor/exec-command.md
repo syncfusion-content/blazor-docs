@@ -18,39 +18,39 @@ The `ExecuteCommand` methods support following HTML editor commands.
 
 | Commands | Description | Code snippets |
 |----------------|---------| -----------|
-| Bold | Bold the selected content. |`await this.RteObj.ExecuteCommandAsync(CommandName.Bold);`|
-| Italic | Apply the italic style for the selected content. |`await this.RteObj.ExecuteCommandAsync(CommandName.Italic);`|
-| Underline | Underline the selected content |`await this.RteObj.ExecuteCommandAsync(CommandName.Underline);`|
-| StrikeThrough | Apply single line strike through formatting for the selected content. |`await this.RteObj.ExecuteCommandAsync(CommandName.StrikeThrough);`|
-| Superscript | Makes the selected content as superscript (higher). |`await this.RteObj.ExecuteCommandAsync(CommandName.Superscript);`|
-| Subscript | Makes the selected content as subscript (lower). |`await this.RteObj.ExecuteCommandAsync(CommandName.Subscript);`|
-| Uppercase | Change the selected content into upper case. |`await this.RteObj.ExecuteCommandAsync(CommandName.Uppercase);`|
-| Lowercase | Change the selected content into lower case. |`await this.RteObj.ExecuteCommandAsync(CommandName.Lowercase);`|
-| FontColor | Apply the specified font color for the selected content. |`await this.RteObj.ExecuteCommandAsync(CommandName.FontColor, "Red");`|
-| FontName | Apply the specified font name for the selected content. |`await this.RteObj.ExecuteCommandAsync(CommandName.FontName, "Impact");`|
-| FontSize | Apply the specified font size for the selected content. |`await this.RteObj.ExecuteCommandAsync(CommandName.FontSize, "10pt");`|
-| BackgroundColor | Apply the specified background color the selected content. | `await this.RteObj.ExecuteCommandAsync(CommandName.BackgroundColor, "red");`|
-| JustifyCenter | Align the content with center margin. | `await this.RteObj.ExecuteCommandAsync(CommandName.JustifyCenter);`|
-| JustifyFull | Align the content with justify margin. |`await this.RteObj.ExecuteCommandAsync(CommandName.JustifyFull);`|
-| JustifyLeft | Align the content with left margin. | `await this.RteObj.ExecuteCommandAsync(CommandName.JustifyLeft);`|
-| JustifyRight | Align the content with right margin. | `await this.RteObj.ExecuteCommandAsync(CommandName.JustifyRight);`|
-| CreateLink | Creates a hyperlink to a text or image to a specific location in the content. |`await this.RteObj.ExecuteCommandAsync(CommandName.CreateLink, new LinkCommandsArgs() { Text = "Links", Url= "http://", Title = "Link"});}` |
-| Indent | Allows to increase the indent level of the content. | `await this.RteObj.ExecuteCommandAsync(CommandName.Indent);`|
-| InsertHTML | Insert the html content to the current cursor position. |`await this.RteObj.ExecuteCommandAsync(CommandName.InsertHTML,"<div>Syncfusion Rich Text Editor`|
-| InsertOrderedList | Create a new list item(numbered). | `await this.RteObj.ExecuteCommandAsync(CommandName.InsertOrderedList);`|
-| InsertUnorderedList | Create a new list item(bulleted). |`await this.RteObj.ExecuteCommandAsync(CommandName.InsertUnorderedList);`|
-| Outdent | Allows to decrease the indent level of the content. | `await this.RteObj.ExecuteCommandAsync(CommandName.Outdent);`|
-| Redo | Allows to redo the actions | `await this.RteObj.ExecuteCommandAsync(CommandName.Redo);`|
-| RemoveFormat | Remove all formatting styles (such as bold, italic, underline, color, superscript, subscript, and more) from currently selected text. |`await this.RteObj.ExecuteCommandAsync(CommandName.RemoveFormat);`|
-| InsertText | Insert text to the current cursor position. | `await this.RteObj.ExecuteCommandAsync(CommandName.InsertText, "Inserted text");`|
-| InsertImage | Insert an image to the current cursor position. | `await this.RteObj.ExecuteCommandAsync(CommandName.InsertImage, new ImageCommandsArgs() { Url = "https://ej2.syncfusion.com/javascript/demos/src/rich-text-editor/images/RTEImage-Feather.png", CssClass = "rte-img" });`|
+| Bold | Bold the selected content. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.Bold); {% endhighlight %}|
+| Italic | Apply the italic style for the selected content. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.Italic); {% endhighlight %}|
+| Underline | Underline the selected content |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.Underline);{% endhighlight %}|
+| StrikeThrough | Apply single line strike through formatting for the selected content. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.StrikeThrough);{% endhighlight %}|
+| Superscript | Makes the selected content as superscript (higher). |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.Superscript);{% endhighlight %}|
+| Subscript | Makes the selected content as subscript (lower). | {% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.Subscript); {% endhighlight %}|
+| Uppercase | Change the selected content into upper case. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.Uppercase); {% endhighlight %}|
+| Lowercase | Change the selected content into lower case. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.Lowercase); {% endhighlight %}|
+| FontColor | Apply the specified font color for the selected content. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.FontColor, "Red"); {% endhighlight %}|
+| FontName | Apply the specified font name for the selected content. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.FontName, "Impact");{% endhighlight %}|
+| FontSize | Apply the specified font size for the selected content. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.FontSize, "10pt");{% endhighlight %}|
+| BackgroundColor | Apply the specified background color the selected content. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.BackgroundColor, "red"); {% endhighlight %} |
+| JustifyCenter | Align the content with center margin. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.JustifyCenter); {% endhighlight %}|
+| JustifyFull | Align the content with justify margin. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.JustifyFull); {% endhighlight %}|
+| JustifyLeft | Align the content with left margin. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.JustifyLeft); {% endhighlight %}|
+| JustifyRight | Align the content with right margin. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.JustifyRight);{% endhighlight %}|
+| CreateLink | Creates a hyperlink to a text or image to a specific location in the content. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.CreateLink, new LinkCommandsArgs() { Text = "Links", Url= "http://", Title = "Link"});}{% endhighlight %} |
+| Indent | Allows to increase the indent level of the content. | {% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.Indent);{% endhighlight %}|
+| InsertHTML | Insert the html content to the current cursor position. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.InsertHTML,"<div>Syncfusion Rich Text Editor</div>");{% endhighlight %}|
+| InsertOrderedList | Create a new list item(numbered). | {% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.InsertOrderedList);{% endhighlight %}|
+| InsertUnorderedList | Create a new list item(bulleted). | {% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.InsertUnorderedList);{% endhighlight %}|
+| Outdent | Allows to decrease the indent level of the content. | {% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.Outdent);{% endhighlight %}|
+| Redo | Allows to redo the actions | {% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.Redo);{% endhighlight %}|
+| RemoveFormat | Remove all formatting styles (such as bold, italic, underline, color, superscript, subscript, and more) from currently selected text. |{% highlight cshtml %}await this.RteObj.ExecuteCommandAsync(CommandName.RemoveFormat);{% endhighlight %}|
+| InsertText | Insert text to the current cursor position. | {% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.InsertText, "Inserted text");{% endhighlight %}|
+| InsertImage | Insert an image to the current cursor position. | {% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.InsertImage, new ImageCommandsArgs() { Url = "https://ej2.syncfusion.com/javascript/demos/src/rich-text-editor/images/RTEImage-Feather.png", CssClass = "rte-img" });{% endhighlight %}|
 
 > Provided support to apply execute commands which do not require direct DOM access.
 
 The following code block demonstrates the usage of the `ExecuteCommand` in Rich Text Editor.
 
 {% tabs %}
-{% highlight razor tabtitle="~/html-execute-command.razor" %}
+{% highlight razor %}
 
 {% include_relative code-snippet/html-execute-command.razor %}
 
@@ -65,21 +65,22 @@ The `ExecuteCommand` methods support following Markdown commands.
 
 | Commands | Description | Code snippets |
 |----------------|---------| -----------|
-| Bold | Bold the selected content in markdown mode. |`await this.RteObj.ExecuteCommandAsync(CommandName.Bold);`|
-| Italic | Apply the italic style for the selected content in markdown mode. |`await this.RteObj.ExecuteCommandAsync(CommandName.Italic);`|
-| StrikeThrough | Apply single line strike through formatting for the selected content in markdown mode. |`await this.RteObj.ExecuteCommandAsync(CommandName.StrikeThrough);`|
-| Superscript | Makes the selected content as superscript (higher) in markdown mode. |`await this.RteObj.ExecuteCommandAsync(CommandName.Superscript);`|
-| Subscript | Makes the selected content as subscript (lower) in markdown mode. |`await this.RteObj.ExecuteCommandAsync(CommandName.Subscript);`|
-| Uppercase | Change the selected content into upper case in markdown mode. |`await this.RteObj.ExecuteCommandAsync(CommandName.Uppercase);`|
-| Lowercase | Change the selected content into lower case in markdown mode. |`await this.RteObj.ExecuteCommandAsync(CommandName.Lowercase);`|
-| CreateLink | Creates a hyperlink to a content or image to a specific location in the content in markdown mode. |`await this.RteObj.ExecuteCommandAsync(CommandName.CreateLink, new LinkCommandsArgs() { Text = "Links", Url= "http://", Title = "Link"});}` |
-| InsertOrderedList | Create a new list item(numbered) in markdown mode. | `await this.RteObj.ExecuteCommandAsync(CommandName.InsertOrderedList);`|
-| InsertUnorderedList | Create a new list item(bulleted) in markdown mode. |`await this.RteObj.ExecuteCommandAsync(CommandName.InsertUnorderedList);`|
-| Redo | Allows to redo the actions | `await this.RteObj.ExecuteCommandAsync(CommandName.Redo);`|
-| InsertImage | Insert an image to the current cursor position in markdowm mode. | `await this.RteObj.ExecuteCommandAsync(CommandName.InsertImage, new ImageCommandsArgs() { Url = "https://ej2.syncfusion.com/javascript/demos/src/rich-text-editor/images/RTEImage-Feather.png", CssClass = "rte-img" });`|
+| Bold | Bold the selected content in markdown mode. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.Bold); {% endhighlight %} |
+| Italic | Apply the italic style for the selected content in markdown mode. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.Italic);{% endhighlight %}|
+| StrikeThrough | Apply single line strike through formatting for the selected content in markdown mode. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.StrikeThrough);{% endhighlight %}|
+| Superscript | Makes the selected content as superscript (higher) in markdown mode. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.Superscript);{% endhighlight %}|
+| Subscript | Makes the selected content as subscript (lower) in markdown mode. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.Subscript);{% endhighlight %}|
+| Uppercase | Change the selected content into upper case in markdown mode. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.Uppercase);{% endhighlight %}|
+| Lowercase | Change the selected content into lower case in markdown mode. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.Lowercase);{% endhighlight %}|
+| CreateLink | Creates a hyperlink to a content or image to a specific location in the content in markdown mode. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.CreateLink, new LinkCommandsArgs() { Text = "Links", Url= "http://", Title = "Link"});}{% endhighlight %} |
+| InsertOrderedList | Create a new list item(numbered) in markdown mode. | {% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.InsertOrderedList);{% endhighlight %}|
+| InsertUnorderedList | Create a new list item(bulleted) in markdown mode. |{% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.InsertUnorderedList);{% endhighlight %}|
+| Redo | Allows to redo the actions | {% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.Redo);{% endhighlight %}|
+| InsertText | Insert text to the current cursor position. | {% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.InsertText, "Inserted text");{% endhighlight %}|
+| InsertImage | Insert an image to the current cursor position in markdowm mode. | {% highlight cshtml %} await this.RteObj.ExecuteCommandAsync(CommandName.InsertImage, new ImageCommandsArgs() { Url = "https://ej2.syncfusion.com/javascript/demos/src/rich-text-editor/images/RTEImage-Feather.png", CssClass = "rte-img" });{% endhighlight %}|
 
 {% tabs %}
-{% highlight razor tabtitle="~/markdown-execute-command.razor" %}
+{% highlight razor %}
 
 {% include_relative code-snippet/markdown-execute-command.razor %}
 
