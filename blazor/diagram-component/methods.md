@@ -214,3 +214,101 @@ To create a node, define the Node object and add it to the nodes collection of t
 ```
 
 ![Diagram Clear](images/Clear.gif)
+
+### ResetZoom
+  The [ResetZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ResetZoom) method is used to reset the current zoom value of the diagram page to 100% when the diagram is either in a zoomed in or zoomed out state. The following code example shows how to reset the current zoom value of the diagram page.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<style>
+    #diagram-space {
+        float: left;
+    }
+
+    #properties {
+        float: right;
+    }
+</style>
+
+<div id="diagram-space">
+    <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors">
+         
+        <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
+    </SfDiagramComponent>
+</div>
+
+<div id="properties">
+           <input type="button" value="ZoomIn" @onclick="ZoomIn" />
+           <input type="button" value="ZoomOut" @onclick="ZoomOut" />
+           <input type="button" value="Reset" @onclick="ResetZoom" />
+   
+</div>
+
+@code {
+    public SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
+
+    protected override void OnInitialized()
+    {
+        Node node = new Node()
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 50,
+            OffsetX = 350,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        };
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 50,
+            Height = 50,
+            OffsetX = 450,
+            OffsetY = 100,
+             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+        };
+           Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetDecorator = new DecoratorSettings()
+            {
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                    StrokeColor = "#6495ED",
+                }
+            },
+            TargetID = "node2",
+            Style = new ShapeStyle()
+            {
+                Fill = "#6495ED",
+                StrokeColor = "#6495ED",
+            },
+            Type = ConnectorSegmentType.Straight,
+        };
+        connectors.Add(Connector);
+        nodes.Add(node);
+        nodes.Add(node2);
+
+    }
+  
+    public void ZoomIn()
+    {
+        diagram.Zoom(1.2, new DiagramPoint { X = 100, Y = 100 });
+    }
+     public void ZoomOut()
+    {
+        diagram.Zoom(1/1.2, new DiagramPoint {  X = 100, Y = 100 });
+    }
+    private void ResetZoom()
+    {
+        diagram.ResetZoom();
+    }
+}
+```
+![Diagram Reset](images/ResetZoom-Method.gif)

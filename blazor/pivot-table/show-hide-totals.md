@@ -21,7 +21,7 @@ End user can also hide grand totals for row or columns separately by setting the
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
-     <PivotViewDataSourceSettings DataSource="@data" ShowGrandTotals=false>
+     <PivotViewDataSourceSettings DataSource="@Data" ShowGrandTotals=false>
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -41,7 +41,7 @@ End user can also hide grand totals for row or columns separately by setting the
 </SfPivotView>
 
 @code{
-    public List<ProductDetails> data { get; set; }
+    public List<ProductDetails> Data { get; set; }
     protected override void OnInitialized()
     {
         this.data = ProductDetails.GetProductData().ToList();
@@ -53,6 +53,47 @@ End user can also hide grand totals for row or columns separately by setting the
 
 ![Hiding Grand Total in Blazor PivotTable](images/blazor-pivottable-hide-grand-total.png)
 
+## Show grand totals at top or bottom
+
+Allows to show grand totals either at top or bottom in rows and columns using the [GrandTotalsPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.GrandTotalsPosition.html) property. To show grand totals at top in rows and columns, set the [GrandTotalsPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.GrandTotalsPosition.html) property in [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) to **Top**. 
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="ProductDetails">
+     <PivotViewDataSourceSettings DataSource="@Data" ExpandAll="false" GrandTotalsPosition=GrandTotalsPosition.Top>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country" ShowSubTotals="false"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code{
+    public List<ProductDetails> Data { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+}
+
+```
+
+![Grand total position top at in Blazor PivotTable](images/blazor-pivottable-grand-total-position-top.png)
+
 ## Show or hide sub-totals
 
 Allows to show or hide sub-totals in rows and columns using the [ShowSubTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html#Syncfusion_Blazor_PivotView_DataSourceSettingsModel_1_ShowSubTotals) property. To hide all the sub-totals in rows and columns, set the property [ShowSubTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html#Syncfusion_Blazor_PivotView_DataSourceSettingsModel_1_ShowSubTotals) in [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class to **false**. End user can also hide sub-totals for rows or columns separately by setting the property [ShowRowSubTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html#Syncfusion_Blazor_PivotView_DataSourceSettingsModel_1_ShowRowSubTotals) or [ShowColumnSubTotals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html#Syncfusion_Blazor_PivotView_DataSourceSettingsModel_1_ShowColumnSubTotals) in [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class to **false** respectively.
@@ -63,7 +104,7 @@ Allows to show or hide sub-totals in rows and columns using the [ShowSubTotals](
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
-     <PivotViewDataSourceSettings DataSource="@data" ExpandAll="true" ShowSubTotals="false">
+     <PivotViewDataSourceSettings DataSource="@Data" ExpandAll="true" ShowSubTotals="false">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -83,7 +124,8 @@ Allows to show or hide sub-totals in rows and columns using the [ShowSubTotals](
 </SfPivotView>
 
 @code{
-    public List<ProductDetails> data { get; set; }
+    public List<ProductDetails> Data { get; set; }
+
     protected override void OnInitialized()
     {
         this.data = ProductDetails.GetProductData().ToList();
@@ -105,7 +147,7 @@ Allows to show or hide sub-totals for specific fields in rows and columns using 
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
-     <PivotViewDataSourceSettings DataSource="@data" ExpandAll="true">
+     <PivotViewDataSourceSettings DataSource="@Data" ExpandAll="true">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -125,7 +167,7 @@ Allows to show or hide sub-totals for specific fields in rows and columns using 
 </SfPivotView>
 
 @code{
-    public List<ProductDetails> data { get; set; }
+    public List<ProductDetails> Data { get; set; }
     protected override void OnInitialized()
     {
         this.data = ProductDetails.GetProductData().ToList();
@@ -145,7 +187,7 @@ It can also be achieved using built-in toolbar options by setting the [ShowToolb
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails" ShowToolbar="true" Toolbar="@toolbar">
-        <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewDataSourceSettings DataSource="@Data">
             <PivotViewColumns>
                 <PivotViewColumn Name="Year"></PivotViewColumn>
                 <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -169,7 +211,7 @@ It can also be achieved using built-in toolbar options by setting the [ShowToolb
         ToolbarItems.SubTotal,
         ToolbarItems.GrandTotal
     };
-    public List<ProductDetails> data { get; set; }
+    public List<ProductDetails> Data { get; set; }
     protected override void OnInitialized()
     {
         this.data = ProductDetails.GetProductData().ToList();
@@ -184,5 +226,51 @@ It can also be achieved using built-in toolbar options by setting the [ShowToolb
 <br/>
 <br/>
 ![Displaying Specific Total using Toolbar in Blazor PivotTable](images/blazor-pivottable-show-sub-total-using-toolbar.png)
+
+## Show or hide totals using toolbar 
+
+It can also be achieved using built-in toolbar options setting the [ShowToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowToolbar) property in pivot table to **true** . Also,include the items `GrandTotal` and `SubTotal` within the  [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_Toolbar)  property in pivottable. End user can now see "Show/Hide Grand totals" and "Show/Hide Sub totals" icons in toolbar UI automatically.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="ProductDetails" ShowToolbar="true" Toolbar="@toolbar">
+        <PivotViewDataSourceSettings DataSource="@Data" ExpandAll="false" EnableSorting="true">
+            <PivotViewColumns>
+                <PivotViewColumn Name="Year"></PivotViewColumn>
+                <PivotViewColumn Name="Quarter"></PivotViewColumn>
+            </PivotViewColumns>
+            <PivotViewRows>
+                <PivotViewRow Name="Country"></PivotViewRow>
+                <PivotViewRow Name="Products"></PivotViewRow>
+            </PivotViewRows>
+            <PivotViewValues>
+                <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+            </PivotViewValues>
+            <PivotViewFormatSettings>
+                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            </PivotViewFormatSettings>
+        </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code{
+    public List<ToolbarItems> toolbar = new List<ToolbarItems> {
+        ToolbarItems.SubTotal,
+        ToolbarItems.GrandTotal
+    };
+    public List<ProductDetails> Data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+}
+
+```
+
+Additionally, with the built-in option available in the grand totals drop down menu, the grand totals can be dynamically displayed at the top or bottom of the pivot table’s row and column axes. By default, the grand totals are displayed at the bottom of the pivot table’s row and column axes.
+
+![Displaying Grand Total Position using Toolbar in Blazor PivotTable](images/blazor-pivottable-show-grand-total-position.png)
 
 > You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.

@@ -412,4 +412,290 @@ For example, you can add the header and footer for the pdf document by setting t
 
 ```
 
+### OnActionBegin
+
+The event [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) triggers when the UI actions such as switching between pivot table and pivot chart, changing chart types, conditional formatting, exporting, etc. that are present in toolbar UI begin. This allows user to identify the current action being performed at runtime. It has the following parameters:
+
+* [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_DataSourceSettings) : It holds the current data source settings such as input data source, rows, columns, values, filters, format settings and so on.
+* [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_ActionName) : It holds the name of the current action began. The following are the UI actions and their names:
+
+|Action |	Action Name|
+| ------ | --------- |
+|New report	| Add new report |
+|Save report | 	Save current report |
+|Save as report	| Save as current report |
+|Rename report | Rename current report |
+|Remove report | Remove current report |
+|Report change | Report change |
+|Conditional Formatting | Open conditional formatting dialog |
+|Number Formatting|	Open number formatting dialog|
+|Export menu | PDF export, Excel export, CSV export, JPG export, PNG export |
+|Show field list | Open field list |
+|Show Table | Show table view |
+|Chart menu | Show chart view |
+|MDX query | Open MDX query dialog |
+|Sub-totals menu |	Hide sub-totals, Show row sub-totals, Show column sub-totals, Show sub-totals |
+|Grand totals menu | Hide grand totals, Show row grand totals, Show column grand totals, Show grand totals |
+
+
+* [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_Cancel) : It allows user to restrict the current action.
+
+In the below sample, toolbar UI actions such as add new report and save current report can be restricted by setting the **args.Cancel** option to **true** in the `OnActionBegin` event.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView;
+
+<div class="Pivot">
+<SfPivotView TValue="ProductDetails" ID="PivotView" AllowExcelExport="true" AllowPdfExport="true" @ref="pivot" Width="100%"  ShowToolbar="true" ShowTooltip="false" Toolbar="@toolbar" ShowGroupingBar="true" AllowCalculatedField="true"  AllowDrillThrough="true" AllowConditionalFormatting="true" AllowNumberFormatting="true" EnableVirtualization="true" ShowFieldList="true" Height="400">
+    <PivotViewDisplayOption Primary="Primary.Table" View="View.Both"></PivotViewDisplayOption>
+    <PivotViewDataSourceSettings DataSource="@Data" ExpandAll="true" EmptyCellsTextContent="nil" EnableSorting=true>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold" ></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount" ></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="N" UseGrouping=true></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewCellEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode=EditMode.Normal></PivotViewCellEditSettings>
+    <PivotChartSettings Title="Sales Analysis" >       
+        <PivotChartPrimaryYAxis>
+            <PivotChartPrimaryYAxisBorder Width="0"></PivotChartPrimaryYAxisBorder>
+        </PivotChartPrimaryYAxis>
+    </PivotChartSettings>
+    <PivotViewEvents TValue="PivotProductDetails" OnActionBegin="actionBegin"></PivotViewEvents>
+</SfPivotView>
+
+@code{
+
+    private SfPivotFieldList<PivotProductDetails> fieldList;
+    private SfPivotView<PivotProductDetails> pivot;
+    private List<Syncfusion.Blazor.PivotView.ToolbarItems> toolbar = new List<Syncfusion.Blazor.PivotView.ToolbarItems> {
+        ToolbarItems.New,
+        ToolbarItems.Save,
+        ToolbarItems.Grid,
+        ToolbarItems.Chart,
+        ToolbarItems.Export,
+        ToolbarItems.SubTotal,
+        ToolbarItems.GrandTotal,
+        ToolbarItems.ConditionalFormatting,
+        ToolbarItems.NumberFormatting,
+        ToolbarItems.FieldList            
+    };
+    public List<PivotProductDetails> Data { get; set; }
+   
+    protected override void OnInitialized()
+    {
+        this.Data = ProductDetails.GetProductData();
+        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+        
+    }
+    
+    // Triggers when the UI action begins.
+    public void actionBegin(PivotActionBeginEventArgs args)
+    {
+        if(args.ActionName == "Add new report" && args.ActionName == "Save current report")
+        {
+          args.Cancel=true;
+        }       
+    }
+
+```
+
+### OnActionComplete
+
+The event [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionComplete) triggers when the UI actions such as as switching between pivot table and pivot chart, changing chart types, conditional formatting, exporting, etc. that are present in toolbar UI, is completed. This allows user to identify the current UI actions being completed at runtime. It has the following parameters:
+
+* [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_DataSourceSettings) : It holds the current data source settings such as input data source, rows, columns, values, filters, format settings and so on.
+* [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_ActionName) : It holds the name of the current action completed. The following are the UI actions and their names:
+
+|Action |	Action Name|
+| ------ | --------- |
+|New report	| New report added |
+|Save report | 	Report saved |
+|Save as report	| Report re-saved |
+|Rename report | Report renamed |
+|Remove report | Report removed |
+|Report change | Report changed |
+|Conditional Formatting | Conditionally formatted |
+|Number Formatting|	Number formatted|
+|Export menu | PDF exported, Excel exported, CSV exported, JPG exported, PNG exported |
+|Show field list | Field list closed |
+|Show Table | Table view shown |
+|Chart menu | Chart view shown |
+|MDX query | MDX query copied |
+|Sub-totals menu |	Sub-totals hidden, Row sub-totals shown, Column sub-totals shown, Sub-totals shown |
+|Grand-totals menu | Grand totals hidden, Row grand totals shown, Column grand totals shown, Grand totals shown |
+
+* [ActionInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_ActionInfo) : It holds the unique information about the current UI action. For example, while adding new report, the event argument contains information such as report name and the action name.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView;
+
+<div class="Pivot">
+<SfPivotView TValue="ProductDetails" ID="PivotView" AllowExcelExport="true" AllowPdfExport="true" @ref="pivot" Width="100%"  ShowToolbar="true" ShowTooltip="false" Toolbar="@toolbar" ShowGroupingBar="true" AllowCalculatedField="true"  AllowDrillThrough="true" AllowConditionalFormatting="true" AllowNumberFormatting="true" EnableVirtualization="true" ShowFieldList="true" Height="400">
+    <PivotViewDisplayOption Primary="Primary.Table" View="View.Both"></PivotViewDisplayOption>
+    <PivotViewDataSourceSettings DataSource="@Data" ExpandAll="true" EmptyCellsTextContent="nil" EnableSorting=true>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold" ></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount" ></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="N" UseGrouping=true></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewCellEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode=EditMode.Normal></PivotViewCellEditSettings>
+    <PivotChartSettings Title="Sales Analysis" >       
+        <PivotChartPrimaryYAxis>
+            <PivotChartPrimaryYAxisBorder Width="0"></PivotChartPrimaryYAxisBorder>
+        </PivotChartPrimaryYAxis>
+    </PivotChartSettings>
+    <PivotViewEvents TValue="PivotProductDetails" OnActionComplete="actionComplete"></PivotViewEvents>
+</SfPivotView>
+
+@code{
+
+    private SfPivotFieldList<PivotProductDetails> fieldList;
+    private SfPivotView<PivotProductDetails> pivot;
+    private List<Syncfusion.Blazor.PivotView.ToolbarItems> toolbar = new List<Syncfusion.Blazor.PivotView.ToolbarItems> {
+        ToolbarItems.New,
+        ToolbarItems.Save,
+        ToolbarItems.Grid,
+        ToolbarItems.Chart,
+        ToolbarItems.Export,
+        ToolbarItems.SubTotal,
+        ToolbarItems.GrandTotal,
+        ToolbarItems.ConditionalFormatting,
+        ToolbarItems.NumberFormatting,
+        ToolbarItems.FieldList            
+    };
+    public List<PivotProductDetails> Data { get; set; }
+   
+    protected override void OnInitialized()
+    {
+        this.Data = ProductDetails.GetProductData();
+        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+
+    }
+    
+    // Triggers when the UI action is completed.
+    public void actionComplete(PivotActionCompleteEventArgs args)
+    {
+        if(args.ActionName == "New report added" && args.ActionName == "Report saved")
+        {
+            /// Your code here.
+        }
+    }
+
+```
+
+### OnActionFailure
+
+The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionFailure) triggers when the current UI action fails to achieve the desired result. It has the following parameters:
+
+* [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ActionName) : It holds the name of the current action failed. The following are the UI actions and their names:
+
+|Action |	Action Name|
+| ------ | --------- |
+|New report	| Add new report |
+|Save report | 	Save current report |
+|Save as report	| Save as current report |
+|Rename report | Rename current report |
+|Remove report | Remove current report |
+|Report change | Report change |
+|Conditional Formatting | Open conditional formatting dialog |
+|Number Formatting|	Open number formatting dialog|
+|Export menu | PDF export, Excel export, CSV export, JPG export, PNG export |
+|Show field list | Open field list |
+|Show Table | Show table view |
+|Chart menu | Show chart view |
+|MDX query | Open MDX query dialog |
+|Sub-totals menu |	Hide sub-totals, Show row sub-totals, Show column sub-totals, Show sub-totals |
+|Grand totals menu | Hide grand totals, Show row grand totals, Show column grand totals, Show grand totals|
+
+* [ErrorInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ErrorInfo) : It holds the error information of the current UI action.
+
+ 
+```cshtml
+@using Syncfusion.Blazor.PivotView;
+
+<div class="Pivot">
+<SfPivotView TValue="ProductDetails" ID="PivotView" AllowExcelExport="true" AllowPdfExport="true" @ref="pivot" Width="100%"  ShowToolbar="true" ShowTooltip="false" Toolbar="@toolbar" ShowGroupingBar="true" AllowCalculatedField="true"  AllowDrillThrough="true" AllowConditionalFormatting="true" AllowNumberFormatting="true" EnableVirtualization="true" ShowFieldList="true" Height="400">
+    <PivotViewDisplayOption Primary="Primary.Table" View="View.Both"></PivotViewDisplayOption>
+    <PivotViewDataSourceSettings DataSource="@Data" ExpandAll="true" EmptyCellsTextContent="nil" EnableSorting=true>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold" ></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount" ></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="N" UseGrouping=true></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewCellEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode=EditMode.Normal></PivotViewCellEditSettings>
+    <PivotChartSettings Title="Sales Analysis" >       
+        <PivotChartPrimaryYAxis>
+            <PivotChartPrimaryYAxisBorder Width="0"></PivotChartPrimaryYAxisBorder>
+        </PivotChartPrimaryYAxis>
+    </PivotChartSettings>
+    <PivotViewEvents TValue="PivotProductDetails" OnActionFailure="actionFailure"></PivotViewEvents>
+</SfPivotView>
+
+@code{
+
+    private SfPivotFieldList<PivotProductDetails> fieldList;
+    private SfPivotView<PivotProductDetails> Pivot;
+    public List<Syncfusion.Blazor.PivotView.ToolbarItems> toolbar = new List<Syncfusion.Blazor.PivotView.ToolbarItems> {
+        ToolbarItems.New,
+        ToolbarItems.Save,
+        ToolbarItems.Grid,
+        ToolbarItems.Chart,
+        ToolbarItems.Export,
+        ToolbarItems.SubTotal,
+        ToolbarItems.GrandTotal,
+        ToolbarItems.ConditionalFormatting,
+        ToolbarItems.NumberFormatting,
+        ToolbarItems.FieldList            
+    };
+    public List<PivotProductDetails> Data { get; set; }
+   
+    protected override void OnInitialized()
+    {
+        this.Data = ProductDetails.GetProductData();
+        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+        
+    }
+
+    // Triggers when the UI action fails to achieve the desired result.
+    public void actionFailure(PivotActionFailureEventArgs args)
+    {
+        if(args.ActionName=="Add new report")
+        {
+            /// Your code here.
+        }       
+    }
+
 > You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.

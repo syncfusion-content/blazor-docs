@@ -35,8 +35,8 @@ You can also get the pasted Text as a HTML text using the [AfterPasteCleanup](ht
     }
 }
 
-{% tabs %}
-{% highlight razor %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Paste settings
 
