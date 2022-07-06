@@ -138,6 +138,36 @@ The appearance of the pages can be customized by using the following properties 
 ```
 ![PageBackground Color](./images/PageBackground.png)
 
+### How to customize the appearance of the page break
+
+The appearance of the PageBreak can be customized by using the style properties such as stroke, stroke-width and stroke-dasharray of the diagram pagebreak class.
+Refer to the following code example on how to change the stroke, stroke-dasharray of the pagebreak.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<style>
+    .e-diagram-page-break 
+    {
+        stroke: blue;
+        stroke-width: 3;
+        stroke-dasharray: 20,20;
+    }
+</style>
+
+<SfDiagramComponent Height="600px">
+    <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
+    @*Initialize the page settings with page orientation and break lines*@
+    <PageSettings Height="500"
+                  Width="500"
+                  MultiplePage="true"
+                  ShowPageBreaks="true">
+                  <PageMargin Left="50" Right="50" Top="50" Bottom="50"></PageMargin>
+    </PageSettings>
+</SfDiagramComponent>
+```
+![Pagebreak Color](./images/Pagebreak.png)
+
 ## How to change the margin around the pages
 
 The area between the main content of a page and the page edges can be changed by using the PageMargin property. The default values for the margin are set to 25 on all sides.
