@@ -23,7 +23,7 @@ The deletion of appointments can be done by using the [DeleteEventAsync](https:/
 <SfSchedule TValue="ResourceData" @ref="ScheduleRef" Height="650px" @bind-SelectedDate="@SelectedDate">
     <ScheduleGroup Resources="@groupData"></ScheduleGroup>
     <ScheduleResources>
-        <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@Resources" Field="TaskId" Title="Category" Name="Categories" TextField="Text" IdField="Id" GroupIDField="GroupId" ColorField="Color" AllowMultiple="true"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@Resources" Field="TaskId" Title="Category" Name="Categories" TextField="Name" IdField="Id" GroupIDField="GroupId" ColorField="Color" AllowMultiple="true"></ScheduleResource>
     </ScheduleResources>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
     <ScheduleViews>
