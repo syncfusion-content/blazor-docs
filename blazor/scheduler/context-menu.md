@@ -70,13 +70,13 @@ The deletion of appointments can be done by using the [DeleteEventAsync](https:/
     private ElementInfo<ResourceData> ElementData { get; set; }
     private string[] groupData = new string[] { "Projects", "Categories" };
     private List<ResourceData> Resources { get; set; } = new List<ResourceData> {
-        new ResourceData { Text = "Nancy", Id= 1, GroupId = 1, Color = "#df5286" },
-        new ResourceData { Text = "Steven", Id= 2, GroupId = 1, Color = "#7fa900" },
-        new ResourceData { Text = "Robert", Id= 3, GroupId = 2, Color = "#ea7a57" }, 
+        new ResourceData { Name = "Nancy", Id= 1, GroupId = 1, Color = "#df5286" },
+        new ResourceData { Name = "Steven", Id= 2, GroupId = 1, Color = "#7fa900" },
+        new ResourceData { Name = "Robert", Id= 3, GroupId = 2, Color = "#ea7a57" }, 
     };
     public class ResourceData
     {
-        public string Text { get; set; }
+        public string Name { get; set; }
         public int Id { get; set; }
         public int GroupId { get; set; }
         public string Color { get; set; }
