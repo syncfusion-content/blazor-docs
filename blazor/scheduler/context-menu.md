@@ -9,11 +9,11 @@ documentation: ug
 
 # Context Menu in Blazor Scheduler Component
 
-The context menu can be displayed on work cells, resource cells and appointments of Scheduler by making use of the `ContextMenu` control manually from the application end. In the following code example, context menu control is being added from sample end and set its target as `Scheduler` and the target element is got by using `GetElementInfoAsync` public method in Blazor.
+The context menu can be displayed on work cells, resource cells and appointments of Scheduler by making use of the `ContextMenu` control manually from the application end. In the following code example, context menu control is being added from sample end and set its target as `Scheduler` and the target element is got by using [GetElementInfoAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_GetElementInfoAsync_System_Int32_System_Int32_) public method in Blazor.
 
-On Scheduler cells, the menu items can be displayed such as `New Event`, `New Recurring Event` and `Today` option. For appointments, its related options can be displayed such as `Edit Event` and `Delete Event`. For resource cells, the related resource cell information can be displayed. The default event window can be opened for appointment creation and editing using the `OpenEditorAsync` method of Scheduler.
+On Scheduler cells, the menu items can be displayed such as `New Event`, `New Recurring Event` and `Today` option. For appointments, its related options can be displayed such as `Edit Event` and `Delete Event`. For resource cells, the related resource cell information can be displayed. The default event window can be opened for appointment creation and editing using the [OpenEditorAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditorAsync__0_Syncfusion_Blazor_Schedule_CurrentAction_) method of Scheduler.
 
-The deletion of appointments can be done by using the `DeleteEventAsync` public method. Also, the `SelectedDate` property can be used to navigate between different dates.
+The deletion of appointments can be done by using the [DeleteEventAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_DeleteEventAsync__1___0_System_Nullable_Syncfusion_Blazor_Schedule_CurrentAction__) public method. Also, the [SelectedDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_SelectedDate) property can be used to navigate between different dates.
 
 > You can also display custom menu options on Scheduler cells and appointments. Context menu will open on tap-hold in responsive mode.
 
@@ -23,67 +23,56 @@ The deletion of appointments can be done by using the `DeleteEventAsync` public 
 <SfSchedule TValue="ResourceData" @ref="ScheduleRef" Height="650px" @bind-SelectedDate="@SelectedDate">
     <ScheduleGroup Resources="@groupData"></ScheduleGroup>
     <ScheduleResources>
-        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@ProjectData" Field="ProjectId" Title="Choose Project" Name="Projects" TextField="Text" IdField="Id" ColorField="Color"></ScheduleResource>
-        <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@TaskData" Field="TaskId" Title="Category" Name="Categories" TextField="Text" IdField="Id" GroupIDField="GroupId" ColorField="Color" AllowMultiple="true"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@Resources" Field="TaskId" Title="Category" Name="Categories" TextField="Text" IdField="Id" GroupIDField="GroupId" ColorField="Color" AllowMultiple="true"></ScheduleResource>
     </ScheduleResources>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
     <ScheduleViews>
         <ScheduleView Option="View.Day"></ScheduleView>
-        <ScheduleView Option="View.Week"></ScheduleView>
-        <ScheduleView Option="View.WorkWeek"></ScheduleView>
         <ScheduleView Option="View.Month"></ScheduleView>
-        <ScheduleView Option="View.Agenda"></ScheduleView>
         <ScheduleView Option="View.TimelineDay"></ScheduleView>
-        <ScheduleView Option="View.TimelineWeek"></ScheduleView>
-        <ScheduleView Option="View.TimelineWorkWeek"></ScheduleView>
         <ScheduleView Option="View.TimelineMonth"></ScheduleView>
-        </ScheduleViews>
-    </SfSchedule>
-    <SfContextMenu TValue="MenuItem" Target=".e-schedule">
-        <MenuItems>
-            <MenuItem Text="New Event" IconCss="e-icons e-plus" Id="Add" Hidden="@isCell"></MenuItem>
-            <MenuItem Text="New Recurring Event" IconCss="e-icons e-repeat" Hidden="@isCell" Id="AddRecurrence"></MenuItem>
-            <MenuItem Text="Today" IconCss="e-icons e-timeline-today" Id="Today" Hidden="@isCell"></MenuItem>
-            <MenuItem Text="Edit Event" IconCss="e-icons e-edit" Id="Save" Hidden="@isEvent"></MenuItem>
-            <MenuItem Text="Edit Event" IconCss="e-icons e-edit" Id="EditRecurrenceEvent" Hidden="@isRecurrence">
-                <MenuItems>
-                    <MenuItem Text="Edit Occurrence" Id="EditOccurrence" Hidden="@isRecurrence"></MenuItem>
-                    <MenuItem Text="Edit Series" Id="EditSeries" Hidden="@isRecurrence"></MenuItem>
-                </MenuItems>
-            </MenuItem>
-            <MenuItem Text="Delete Event" IconCss="e-icons e-trash" Id="Delete" Hidden="@isEvent"></MenuItem>
-            <MenuItem Text="Delete Event" IconCss="e-icons e-trash" Id="DeleteRecurrenceEvent" Hidden="@isRecurrence">
-                <MenuItems>
-                    <MenuItem Text="Delete Occurrence" Id="DeleteOccurrence" Hidden="@isRecurrence"></MenuItem>
-                    <MenuItem Text="Delete Series" Id="DeleteSeries" Hidden="@isRecurrence"></MenuItem>
-                </MenuItems>
-            </MenuItem>
-        </MenuItems>
-        <MenuEvents TValue="MenuItem" OnOpen="OnOpen" ItemSelected="OnItemSelected"></MenuEvents>
-    </SfContextMenu>
+    </ScheduleViews>
+</SfSchedule>
+<SfContextMenu TValue="MenuItem" Target=".e-schedule">
+    <MenuItems>
+        <MenuItem Text="New Event" IconCss="e-icons e-plus" Id="Add" Hidden="@isCell"></MenuItem>
+        <MenuItem Text="New Recurring Event" IconCss="e-icons e-repeat" Hidden="@isCell" Id="AddRecurrence"></MenuItem>
+        <MenuItem Text="Today" IconCss="e-icons e-timeline-today" Id="Today" Hidden="@isCell"></MenuItem>
+        <MenuItem Text="Edit Event" IconCss="e-icons e-edit" Id="Save" Hidden="@isEvent"></MenuItem>
+        <MenuItem Text="Edit Event" IconCss="e-icons e-edit" Id="EditRecurrenceEvent" Hidden="@isRecurrence">
+            <MenuItems>
+                <MenuItem Text="Edit Occurrence" Id="EditOccurrence" Hidden="@isRecurrence"></MenuItem>
+                <MenuItem Text="Edit Series" Id="EditSeries" Hidden="@isRecurrence"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Delete Event" IconCss="e-icons e-trash" Id="Delete" Hidden="@isEvent"></MenuItem>
+        <MenuItem Text="Delete Event" IconCss="e-icons e-trash" Id="DeleteRecurrenceEvent" Hidden="@isRecurrence">
+            <MenuItems>
+                <MenuItem Text="Delete Occurrence" Id="DeleteOccurrence" Hidden="@isRecurrence"></MenuItem>
+                <MenuItem Text="Delete Series" Id="DeleteSeries" Hidden="@isRecurrence"></MenuItem>
+            </MenuItems>
+        </MenuItem>
+        <MenuItem Text="Rename" Id="Rename" Hidden="@isResource"></MenuItem>
+    </MenuItems>
+    <MenuEvents TValue="MenuItem" OnOpen="OnOpen" ItemSelected="OnItemSelected"></MenuEvents>
+</SfContextMenu>
 
 @code{
-    private DateTime SelectedDate = new DateTime(2020, 1, 8);
+    private DateTime SelectedDate { get; set; } = new DateTime(2020, 1, 8);
     private bool isCell;
     private bool isEvent;
     private bool isRecurrence;
+    private bool isResource;
+    private List<AppointmentData> dataSource = new List<AppointmentData>();
     SfSchedule<ResourceData> ScheduleRef;
     private ResourceData EventData { get; set; }
     private CellClickEventArgs CellData { get; set; }
     private ElementInfo<ResourceData> ElementData { get; set; }
     private string[] groupData = new string[] { "Projects", "Categories" };
-    private List<ResourceData> ProjectData { get; set; } = new List<ResourceData> {
-        new ResourceData {Text = "PROJECT 1", Id= 1, Color= "#cb6bb2"},
-        new ResourceData {Text = "PROJECT 2", Id= 2, Color= "#56ca85"},
-        new ResourceData {Text = "PROJECT 3", Id= 3, Color= "#df5286"}
-    };
-    private List<ResourceData> TaskData { get; set; } = new List<ResourceData> {
+    private List<ResourceData> Resources { get; set; } = new List<ResourceData> {
         new ResourceData { Text = "Nancy", Id= 1, GroupId = 1, Color = "#df5286" },
         new ResourceData { Text = "Steven", Id= 2, GroupId = 1, Color = "#7fa900" },
-        new ResourceData { Text = "Robert", Id= 3, GroupId = 2, Color = "#ea7a57" },
-        new ResourceData { Text = "Smith", Id= 4, GroupId = 2, Color = "#5978ee" },
-        new ResourceData { Text = "Michael", Id= 5, GroupId = 3, Color = "#df5286" },
-        new ResourceData { Text = "Root", Id= 6, GroupId = 3, Color = "#00bdae" }
+        new ResourceData { Text = "Robert", Id= 3, GroupId = 2, Color = "#ea7a57" }, 
     };
     public class ResourceData
     {
@@ -105,11 +94,12 @@ The deletion of appointments can be done by using the `DeleteEventAsync` public 
         new ResourceData { Id = 1, Subject = "Workflow Analysis", StartTime = new DateTime(2020, 1, 8, 10, 30, 0) , EndTime = new DateTime(2020, 1, 8, 12, 30, 0) , IsAllDay = false,  ProjectId = 1, TaskId = 2},
         new ResourceData { Id = 2, Subject = "Requirement planning", StartTime = new DateTime(2020, 1, 8, 9, 30, 0) , EndTime = new DateTime(2020, 1, 8, 12, 30, 0) , IsAllDay = false,  ProjectId = 1, TaskId = 1},
     };
-        
+
     public async Task OnOpen(BeforeOpenCloseMenuEventArgs<MenuItem> args)
     {
         if (args.ParentItem == null)
         {
+            isResource = true;
             ElementData = await ScheduleRef.GetElementInfoAsync((int)args.Left, (int)args.Top);
             if (ElementData.ElementType == ElementType.Event)
             {
@@ -152,6 +142,7 @@ The deletion of appointments can be done by using the `DeleteEventAsync` public 
 
             if (ElementData.ElementType == ElementType.ResourceHeader)
             {
+                isResource = false;
                 Console.WriteLine(ElementData.ResourceData);
             }
         }
@@ -196,6 +187,19 @@ The deletion of appointments can be done by using the `DeleteEventAsync` public 
                 await ScheduleRef.DeleteEventAsync(EventData, CurrentAction.DeleteSeries);
                 break;
         }
+    }
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
     }
 }
 
