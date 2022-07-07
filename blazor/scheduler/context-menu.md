@@ -20,7 +20,7 @@ The deletion of appointments can be done by using the [DeleteEventAsync](https:/
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Navigations
-<SfSchedule TValue="ResourceData" @ref="ScheduleRef" Height="650px" @bind-SelectedDate="@SelectedDate">
+<SfSchedule TValue="AppointmentData" @ref="ScheduleRef" Height="650px" @bind-SelectedDate="@SelectedDate">
     <ScheduleGroup Resources="@groupData"></ScheduleGroup>
     <ScheduleResources>
         <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@Resources" Field="TaskId" Title="Category" Name="Categories" TextField="Name" IdField="Id" GroupIDField="GroupId" ColorField="Color" AllowMultiple="true"></ScheduleResource>
@@ -63,11 +63,10 @@ The deletion of appointments can be done by using the [DeleteEventAsync](https:/
     private bool isEvent;
     private bool isRecurrence;
     private bool isResource;
-    private List<AppointmentData> dataSource = new List<AppointmentData>();
-    SfSchedule<ResourceData> ScheduleRef;
-    private ResourceData EventData { get; set; }
+    SfSchedule<AppointmentData> ScheduleRef;
+    private AppointmentData EventData { get; set; }
     private CellClickEventArgs CellData { get; set; }
-    private ElementInfo<ResourceData> ElementData { get; set; }
+    private ElementInfo<AppointmentData> ElementData { get; set; }
     private string[] groupData = new string[] { "Projects", "Categories" };
     private List<ResourceData> Resources { get; set; } = new List<ResourceData> {
         new ResourceData { Name = "Nancy", Id= 1, GroupId = 1, Color = "#df5286" },
@@ -80,19 +79,11 @@ The deletion of appointments can be done by using the [DeleteEventAsync](https:/
         public int Id { get; set; }
         public int GroupId { get; set; }
         public string Color { get; set; }
-        public string Subject { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
-        public bool IsAllDay { get; set; }
-        public string RecurrenceRule { get; set; }
-        public Nullable<int> RecurrenceID { get; set; }
-        public int ProjectId { get; set; }
-        public int TaskId { get; set; }
     }
-    public List<ResourceData> DataSource = new List<ResourceData>
+    public List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new ResourceData { Id = 1, Subject = "Workflow Analysis", StartTime = new DateTime(2020, 1, 8, 10, 30, 0) , EndTime = new DateTime(2020, 1, 8, 12, 30, 0) , IsAllDay = false,  ProjectId = 1, TaskId = 2},
-        new ResourceData { Id = 2, Subject = "Requirement planning", StartTime = new DateTime(2020, 1, 8, 9, 30, 0) , EndTime = new DateTime(2020, 1, 8, 12, 30, 0) , IsAllDay = false,  ProjectId = 1, TaskId = 1},
+        new AppointmentData { Id = 1, Subject = "Workflow Analysis", StartTime = new DateTime(2020, 1, 8, 10, 30, 0) , EndTime = new DateTime(2020, 1, 8, 12, 30, 0) , IsAllDay = false,  ProjectId = 1, TaskId = 2},
+        new AppointmentData { Id = 2, Subject = "Requirement planning", StartTime = new DateTime(2020, 1, 8, 9, 30, 0) , EndTime = new DateTime(2020, 1, 8, 12, 30, 0) , IsAllDay = false,  ProjectId = 1, TaskId = 1},
     };
 
     public async Task OnOpen(BeforeOpenCloseMenuEventArgs<MenuItem> args)
@@ -173,8 +164,8 @@ The deletion of appointments can be done by using the [DeleteEventAsync](https:/
                 await ScheduleRef.OpenEditorAsync(EventData, CurrentAction.EditOccurrence);
                 break;
             case "EditSeries":
-                List<ResourceData> Events = await ScheduleRef.GetEventsAsync();
-                EventData = (ResourceData)Events.Where(data => data.Id == EventData.RecurrenceID).FirstOrDefault();
+                List<AppointmentData> Events = await ScheduleRef.GetEventsAsync();
+                EventData = (AppointmentData)Events.Where(data => data.Id == EventData.RecurrenceID).FirstOrDefault();
                 await ScheduleRef.OpenEditorAsync(EventData, CurrentAction.EditSeries);
                 break;
             case "Delete":
@@ -200,6 +191,8 @@ The deletion of appointments can be done by using the [DeleteEventAsync](https:/
         public string RecurrenceRule { get; set; }
         public string RecurrenceException { get; set; }
         public Nullable<int> RecurrenceID { get; set; }
+        public int ProjectId { get; set; }
+        public int TaskId { get; set; }
     }
 }
 
