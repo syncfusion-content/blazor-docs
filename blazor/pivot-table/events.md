@@ -381,11 +381,11 @@ The [EnginePopulated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pi
 
 ## ExcelHeaderQueryCellInfo
 
-To know more about this event, refer [here](./excel-export.md/#excelheaderquerycellinfo).
+To know more about this event, refer [here](./excel-export/#excelheaderquerycellinfo).
 
 ## ExcelQueryCellInfo
 
-To know more about this event, refer [here](./excel-export.md/#excelquerycellinfo).
+To know more about this event, refer [here](./excel-export/#excelquerycellinfo).
 
 ## FetchReport
 
@@ -433,15 +433,15 @@ To know more about this event, refer [here](./tool-bar/#newreport).
 
 ## OnActionBegin
 
-To know more about this event, refer [here](./tool-bar.md/#onactionbegin).
+To know more about this event, refer [here](./tool-bar/#onactionbegin).
 
 ## OnActionComplete
 
-To know more about this event, refer [here](./tool-bar.md/#onactioncomplete).
+To know more about this event, refer [here](./tool-bar/#onactioncomplete).
 
 ## OnActionFailure
 
-To know more about this event, refer [here](./tool-bar.md/#onactionfailure).
+To know more about this event, refer [here](./tool-bar/#onactionfailure).
 
 ## OnLoad
 
@@ -451,11 +451,11 @@ To know more about this event, refer [here](./data-binding/#event).
 
 ## PdfHeaderQueryCellInfo
 
-To know more about this event, refer [here](./pdf-export.md/#pdfheaderquerycellinfo).
+To know more about this event, refer [here](./pdf-export/#pdfheaderquerycellinfo).
 
 ## PdfQueryCellInfo
 
-To know more about this event, refer [here](./pdf-export.md/#pdfquerycellinfo).
+To know more about this event, refer [here](./pdf-export/#pdfquerycellinfo).
 
 ## RenameReport
 
