@@ -471,7 +471,7 @@ In the below sample, toolbar UI actions such as add new report and save current 
             <PivotChartPrimaryYAxisBorder Width="0"></PivotChartPrimaryYAxisBorder>
         </PivotChartPrimaryYAxis>
     </PivotChartSettings>
-    <PivotViewEvents TValue="PivotProductDetails" OnActionBegin="actionBegin"></PivotViewEvents>
+    <PivotViewEvents TValue="PivotProductDetails" OnActionBegin="ActionBegin"></PivotViewEvents>
 </SfPivotView>
 
 @code{
@@ -499,7 +499,7 @@ In the below sample, toolbar UI actions such as add new report and save current 
     }
     
     // Triggers when the UI action begins.
-    public void actionBegin(PivotActionBeginEventArgs args)
+    public void ActionBegin(PivotActionBeginEventArgs args)
     {
         if(args.ActionName == "Add new report" && args.ActionName == "Save current report")
         {
@@ -565,7 +565,7 @@ The event [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
             <PivotChartPrimaryYAxisBorder Width="0"></PivotChartPrimaryYAxisBorder>
         </PivotChartPrimaryYAxis>
     </PivotChartSettings>
-    <PivotViewEvents TValue="PivotProductDetails" OnActionComplete="actionComplete"></PivotViewEvents>
+    <PivotViewEvents TValue="PivotProductDetails" OnActionComplete="ActionComplete"></PivotViewEvents>
 </SfPivotView>
 
 @code{
@@ -593,7 +593,7 @@ The event [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
     }
     
     // Triggers when the UI action is completed.
-    public void actionComplete(PivotActionCompleteEventArgs args)
+    public void ActionComplete(PivotActionCompleteEventArgs args)
     {
         if(args.ActionName == "New report added" && args.ActionName == "Report saved")
         {
@@ -659,7 +659,7 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
             <PivotChartPrimaryYAxisBorder Width="0"></PivotChartPrimaryYAxisBorder>
         </PivotChartPrimaryYAxis>
     </PivotChartSettings>
-    <PivotViewEvents TValue="PivotProductDetails" OnActionFailure="actionFailure"></PivotViewEvents>
+    <PivotViewEvents TValue="PivotProductDetails" OnActionFailure="ActionFailure"></PivotViewEvents>
 </SfPivotView>
 
 @code{
@@ -687,7 +687,7 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
     }
 
     // Triggers when the UI action fails to achieve the desired result.
-    public void actionFailure(PivotActionFailureEventArgs args)
+    public void ActionFailure(PivotActionFailureEventArgs args)
     {
         if(args.ActionName=="Add new report")
         {
