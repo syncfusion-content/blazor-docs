@@ -46,25 +46,27 @@ In DocumentEditor, we have built-in review panel in which we have provided suppo
 
 Document Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, all the users are allowed to view the document and do their corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
 
-Document editor provides an option to protect and unprotect document using [`enforceProtection`](../api/document-editor/editor/#enforceprotection) and [`stopProtection`](../api/document-editor/editor/#stopprotection) API.
+Document editor provides an option to protect and unprotect document using [`EnforceProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_EnforceProtectionAsync_System_String_Syncfusion_Blazor_DocumentEditor_ProtectionType_) and [`StopProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_StopProtectionAsync_System_String_) API.
 
 The following example code illustrates how to enforce and stop protection in Document editor container.
 
 ```typescript
-let container: DocumentEditorContainer = new DocumentEditorContainer({
-  enableToolbar: true,
-  height: '590px',
-});
-DocumentEditorContainer.Inject(Toolbar);
-container.serviceUrl =
-  'http://localhost:5000/api/documenteditor/';
-container.appendTo('#container');
+@using Syncfusion.Blazor.DocumentEditor
 
-//enforce protection
-container.documentEditor.editor.enforceProtection('123', 'RevisionsOnly');
+<button @onclick="protectDocument">Protection</button>
+<SfDocumentEditorContainer @ref="container" EnableToolbar=true></SfDocumentEditorContainer>
 
-//stop the document protection
-container.documentEditor.editor.stopProtection('123');
+@code {
+
+    SfDocumentEditorContainer container;
+    protected void protectDocument(object args)
+    {
+        //enforce protection
+        container.DocumentEditor.Editor.EnforceProtectionAsync("123", ProtectionType.RevisionsOnly);
+        //stop the document protection
+        container.DocumentEditor.Editor.StopProtectionAsync("123");
+    }
+}
 ```
 
 Tracked changes only protection can be enabled in UI by using [Restrict Editing pane](../document-editor/document-management#restrict-editing-pane/)
