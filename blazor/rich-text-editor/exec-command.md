@@ -30,7 +30,6 @@ The `ExecuteCommand` methods support following HTML editor commands.
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Bold); 
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -40,7 +39,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Bold);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Italic);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -50,7 +48,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Italic);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Underline);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -60,7 +57,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Underline);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.StrikeThrough);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -70,7 +66,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.StrikeThrough);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Superscript);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -80,7 +75,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Superscript);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Subscript);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -90,7 +84,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Subscript);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Uppercase);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -100,7 +93,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Uppercase);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Lowercase);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -110,7 +102,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Lowercase);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.FontColor, "Red");
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -120,7 +111,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.FontColor, "Red");
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.FontName, "Impact");
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -130,7 +120,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.FontName, "Impact");
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.FontSize, "10pt");
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -140,7 +129,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.FontSize, "10pt");
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.BackgroundColor, "red");
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -150,7 +138,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.BackgroundColor, "red");
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.JustifyCenter);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -160,7 +147,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.JustifyCenter);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.JustifyFull);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -170,7 +156,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.JustifyFull);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.JustifyLeft);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -180,7 +165,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.JustifyLeft);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.JustifyRight);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -190,7 +174,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.JustifyRight);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.CreateLink, new LinkCommandsArgs() { Text = "Links", Url= "http://", Title = "Link"});
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -200,7 +183,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.CreateLink, new LinkCommandsAr
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Indent);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -210,7 +192,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Indent);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.InsertHTML,"<div>Syncfusion Rich Text Editor</div>");
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -220,7 +201,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertHTML,"<div>Syncfusion Ri
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.InsertOrderedList);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -230,7 +210,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertOrderedList);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.InsertUnorderedList);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -240,7 +219,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertUnorderedList);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Outdent);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -250,7 +228,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Outdent);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Redo);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -260,7 +237,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Redo);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.RemoveFormat);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -270,7 +246,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.RemoveFormat);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.InsertText, "Inserted text");
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -280,7 +255,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertText, "Inserted text");
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.InsertImage, new ImageCommandsArgs() { Url = "https://ej2.syncfusion.com/javascript/demos/src/rich-text-editor/images/RTEImage-Feather.png", CssClass = "rte-img" });
 {% endhighlight %}</td>
-<td>
 </tr>
 </table>
 
@@ -317,7 +291,6 @@ The `ExecuteCommand` methods support following Markdown commands.
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Bold); 
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -327,7 +300,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Bold);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Italic);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -337,7 +309,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Italic);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.StrikeThrough);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -347,7 +318,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.StrikeThrough);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Superscript);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -357,7 +327,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Superscript);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Subscript);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -367,7 +336,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Subscript);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Uppercase);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -377,7 +345,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Uppercase);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Lowercase);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -387,7 +354,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Lowercase);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.CreateLink, new LinkCommandsArgs() { Text = "Links", Url= "http://", Title = "Link"});
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -397,7 +363,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.CreateLink, new LinkCommandsAr
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.InsertOrderedList);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -407,7 +372,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertOrderedList);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.InsertUnorderedList);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -417,7 +381,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertUnorderedList);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Redo);
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -427,7 +390,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Redo);
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.InsertText, "Inserted text");
 {% endhighlight %}</td>
-<td>
 </tr>
 
 <tr>
@@ -437,7 +399,6 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertText, "Inserted text");
 {% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.InsertImage, new ImageCommandsArgs() { Url = "https://ej2.syncfusion.com/javascript/demos/src/rich-text-editor/images/RTEImage-Feather.png", CssClass = "rte-img" });
 {% endhighlight %}</td>
-<td>
 </tr>
 </table>
 
