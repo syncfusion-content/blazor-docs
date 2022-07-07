@@ -41,3 +41,34 @@ container.DocumentEditor.Selection.NavigatePreviousRevisionAsync();
 In DocumentEditor, we have built-in review panel in which we have provided support for filtering changes based on the user.
 
 ![Track changes in Blazor DocumentEditor](images/track-changes.png)
+
+## Protect the document in track changes only mode
+
+Document Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, all the users are allowed to view the document and do their corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
+
+Document editor provides an option to protect and unprotect document using [`enforceProtection`](../api/document-editor/editor/#enforceprotection) and [`stopProtection`](../api/document-editor/editor/#stopprotection) API.
+
+The following example code illustrates how to enforce and stop protection in Document editor container.
+
+```typescript
+let container: DocumentEditorContainer = new DocumentEditorContainer({
+  enableToolbar: true,
+  height: '590px',
+});
+DocumentEditorContainer.Inject(Toolbar);
+container.serviceUrl =
+  'http://localhost:5000/api/documenteditor/';
+container.appendTo('#container');
+
+//enforce protection
+container.documentEditor.editor.enforceProtection('123', 'RevisionsOnly');
+
+//stop the document protection
+container.documentEditor.editor.stopProtection('123');
+```
+
+Tracked changes only protection can be enabled in UI by using [Restrict Editing pane](../document-editor/document-management#restrict-editing-pane/)
+
+![Enable track changes only protection](images/tracked-changes.png)
+
+>Note: In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly |RevisionsOnly`. In stop protection method, parameter denotes the password.
