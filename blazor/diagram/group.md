@@ -316,7 +316,7 @@ The following code illustrates how a node group is added at runtime.
 
 ## Update position at runtime
 
-You can change the position of the node group similar to node. For more information about node positioning, refer to [Positioning](https://blazor.syncfusion.com/documentation/diagram-component/nodes/positioning).
+You can change the position of the node group similar to node. For more information about node positioning, refer to [Positioning](https://blazor.syncfusion.com/documentation/diagram/nodes/positioning).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -381,11 +381,11 @@ You can change the position of the node group similar to node. For more informat
 
 ## Change the appearance of the node group
 
-You can change the appearance of the node group similar to node. For more information about node appearance, refer to [Appearance](https://blazor.syncfusion.com/documentation/diagram-component/nodes/customization).
+You can change the appearance of the node group similar to node. For more information about node appearance, refer to [Appearance](https://blazor.syncfusion.com/documentation/diagram/nodes/customization).
 
 ## Interact with the node group
 
-You can edit the node group and its children at runtime. You can interact with the nodegroup as like the node interaction like resize, rotate and drag. For more information about node interaction, refer to [Interaction](https://blazor.syncfusion.com/documentation/diagram-component/nodes/interaction).
+You can edit the node group and its children at runtime. You can interact with the nodegroup as like the node interaction like resize, rotate and drag. For more information about node interaction, refer to [Interaction](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction).
 
 ### Selecting a NodeGroup
 

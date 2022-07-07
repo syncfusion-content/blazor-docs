@@ -135,7 +135,7 @@ The [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
 }
 ```
 
-For more information about dragging, refer [Node Drag](https://blazor.syncfusion.com/documentation/diagram-component/nodes/interaction/#drag)
+For more information about dragging, refer [Node Drag](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction/#drag)
 
 ## Resize
 
@@ -185,9 +185,9 @@ For more information about dragging, refer [Node Drag](https://blazor.syncfusion
 }
 ```
 
-For more information about resizing, refer [Node Resize](https://blazor.syncfusion.com/documentation/diagram-component/nodes/interaction/#resize)
+For more information about resizing, refer [Node Resize](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction/#resize)
 
->Note:  While dragging and resizing, the objects are snapped towards the nearest objects to make better alignments. For better alignments, refer to [Snapping](https://blazor.syncfusion.com/documentation/diagram-component/grid-lines#snapping).
+>Note:  While dragging and resizing, the objects are snapped towards the nearest objects to make better alignments. For better alignments, refer to [Snapping](https://blazor.syncfusion.com/documentation/diagram/grid-lines#snapping).
 
 ## Rotate
 
@@ -238,7 +238,7 @@ For more information about resizing, refer [Node Resize](https://blazor.syncfusi
 }
 ```
 
-For more information about resizing, refer [Node Rotate](https://blazor.syncfusion.com/documentation/diagram-component/nodes/interaction/#rotate)
+For more information about resizing, refer [Node Rotate](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction/#rotate)
 
 ## Connection editing
 
@@ -248,7 +248,7 @@ For more information about resizing, refer [Node Rotate](https://blazor.syncfusi
 
 Source and target points of the selected connectors are represented with two handles. Clicking and dragging those handles help you to adjust the source and target points.
 
-For more information, refer [End Point Dragging](https://blazor.syncfusion.com/documentation/diagram-component/connectors/interactions/#end-point-dragging)
+For more information, refer [End Point Dragging](https://blazor.syncfusion.com/documentation/diagram/connectors/interactions/#end-point-dragging)
 
 * If you drag the connector end points, then the following events can be used to do your customization.
 * When you connect connector with ports/node or disconnect from it, the following events are triggered.
@@ -337,7 +337,7 @@ For more information, refer [End Point Dragging](https://blazor.syncfusion.com/d
 * Any number of new segments can be inserted into a straight line by clicking, when Shift and Ctrl keys are pressed (Ctrl+Shift+Click).
 * Straight segments can be removed by clicking the segment end point, when Ctrl and Shift keys are pressed (Ctrl+Shift+Click).
 
-For more information about straight segment editing, refer [Straight Segment Editing](https://blazor.syncfusion.com/documentation/diagram-component/connectors/interactions/#straight-segment-editing)
+For more information about straight segment editing, refer [Straight Segment Editing](https://blazor.syncfusion.com/documentation/diagram/connectors/interactions/#straight-segment-editing)
 
 ## Orthogonal segment editing
 
@@ -412,7 +412,7 @@ For more information about straight segment editing, refer [Straight Segment Edi
 }
 ```
 
-For more information about orthogonal segment editing, refer [Orthogonal Segment Editing](https://blazor.syncfusion.com/documentation/diagram-component/connectors/interactions/#orthogonal-segment-editing).
+For more information about orthogonal segment editing, refer [Orthogonal Segment Editing](https://blazor.syncfusion.com/documentation/diagram/connectors/interactions/#orthogonal-segment-editing).
 
 ## User handles
 

@@ -146,7 +146,7 @@ We have provided some basic built-in [PortShapes](https://help.syncfusion.com/cr
 
 ## How to enable or disable certain behavior of the port
 
-The constraints property allows you to enable or disable certain behaviors of ports. For more information about port constraints, refer to [Port Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html). You can verify the [Constraints](https://blazor.syncfusion.com/documentation/diagram-component/constraints) to learn how to enable or disable the port constraints.
+The constraints property allows you to enable or disable certain behaviors of ports. For more information about port constraints, refer to [Port Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html). You can verify the [Constraints](https://blazor.syncfusion.com/documentation/diagram/constraints) to learn how to enable or disable the port constraints.
 
 The PortConstraints may have multiple behaviors like listed below:
 

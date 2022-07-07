@@ -1016,7 +1016,6 @@ The following code illustrates how to zoom-in/zoom out the diagram.
     }
 }
 ```
-![Zoom Command](./images/Zoom.gif)
 
 ## Nudge command
 
