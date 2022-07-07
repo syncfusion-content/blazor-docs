@@ -3,7 +3,7 @@ layout: post
 title: Working with Data in Blazor Range Selector Component | Syncfusion
 description: Checkout and learn here all about Working with Data in Syncfusion Blazor Range Selector Component and much more.
 platform: Blazor
-control: Range Selector
+control: Chart
 documentation: ug
 ---
 
@@ -11,7 +11,7 @@ documentation: ug
 
 # Working with Data in Blazor Range Selector Component
 
-The Range Selector uses [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports both RESTful JSON data services binding and IEnumerable binding. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) value can be set using either [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) property values or a list of business objects.
+The Range Selector uses [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports both RESTful JSON data services binding and IEnumerable binding. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) value can be set using either [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) property value or a list of business objects.
 
 It supports the following data binding methods:
 * List binding
@@ -19,7 +19,7 @@ It supports the following data binding methods:
 
 ## List binding
 
-An IEnumerable object can be assigned to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property. The list data source can alternatively be given as an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) or as a component of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). The data fields should now be mapped to the [XName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_XName) and [YName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_YName) properties.
+To do list binding to the Range Selector, you can assign a IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property. The list data source can also be provided as an instance of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
 
 ```cshtml
 
@@ -56,13 +56,13 @@ An IEnumerable object can be assigned to the [DataSource](https://help.syncfusio
 
 ```
 
-![Blazor RangeNavigator with List binding](images/working-data/blazor-range-list-binding.png)
+![Blazor Range Navigator with List](images/working-data/blazor-range-list-binding.png)
 
 > By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
 
 ### ExpandoObject binding
 
-Range Selector is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile time. In such circumstances data can be bound to the range selector as a list of **ExpandoObjects**. The **ExpandoObject** can be bound to range selector by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property.
+Range Selector is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile time. In such circumstances data can be bound to the Range Selector as a list of **ExpandoObject**. The **ExpandoObject** can be bound to Range Selector by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property.
 
 ```cshtml
 
@@ -96,11 +96,11 @@ Range Selector is a generic component which is strongly bound to a model type. T
 }
 ```
 
-![Blazor RangeNavigator with ExpandoObject](images/working-data/blazor-range-expando-object.png)
+![Blazor Range Navigator with ExpandoObject](images/working-data/blazor-range-expando-object.png)
 
-### Dynamic Object
+### DynamicObject binding
 
-The range selector supports **DynamicObject** data source when the model type is unknown. This can be set in [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property in [RangeNavigatorSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html) class.
+Range Selector supports **DynamicObject** data source when the model type is unknown. The **DynamicObject** can be bound to Range Selector by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property.
 
 ```cshtml
 
@@ -157,32 +157,13 @@ The range selector supports **DynamicObject** data source when the model type is
 
 ```
 
-![Blazor RangeNavigator with Dynamic Object](images/working-data/blazor-range-dynamic-object.png)
+![Blazor Range Navigator with DynamicObject](images/working-data/blazor-range-dynamic-object.png)
 
 ## Remote data
 
-Assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property to bind remote data to the range selector component. Provide the endpoint Url to communicate with a remote data source.
-
-```cshtml
-
-@using Syncfusion.Blazor.Charts
-@using Syncfusion.Blazor.Data
-
-<SfRangeNavigator ValueType="RangeValueType.Double">    
-    <RangeNavigatorSeriesCollection>
-        <RangeNavigatorSeries XName="OrderID" Type="RangeNavigatorType.Line" YName="Freight">
-            <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
-        </RangeNavigatorSeries>
-    </RangeNavigatorSeriesCollection>
-</SfRangeNavigator>
-
-```
-
-![Blazor RangeNavigator with Remote Data](images/working-data/blazor-range-remote-data.png)
-
 ### Binding with OData services
 
-[OData](http://www.odata.org/documentation/odata-version-3-0/) is a standardized data creation and consumption protocol. The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) can be used to retrieve data from an [OData](http://www.odata.org/documentation/odata-version-3-0/) service. For remote data binding using the [OData](http://www.odata.org/documentation/odata-version-3-0/) service, see the code below.
+[OData](http://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. You can retrieve data from OData service using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). Refer to the following code example for remote data binding using OData service.
 
 ```cshtml
 
@@ -199,7 +180,7 @@ Assign service data as an instance of [SfDataManager](https://help.syncfusion.co
 
 ```
 
-![Blazor RangeNavigator with OData Adaptor](images/working-data/blazor-range-remote-data.png)
+![Blazor Range Navigator with OData Adaptor](images/working-data/blazor-range-remote-data.png)
 
 ### Binding with OData v4 services
 
@@ -220,11 +201,11 @@ The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 
 ```
 
-![Blazor RangeNavigator with OData V4 Adaptor](images/working-data/blazor-range-remote-data.png)
+![Blazor Range Navigator with OData v4 adaptor](images/working-data/blazor-range-remote-data.png)
 
 ### Web API
 
-The [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WebApiAdaptor.html) can be used to bind a range selector to a Web API created using an [OData](http://www.odata.org/documentation/odata-version-3-0/) endpoint.
+The [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WebApiAdaptor.html) can be used to bind a Range Selector to a Web API created using an [OData](http://www.odata.org/documentation/odata-version-3-0/) endpoint.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -240,13 +221,13 @@ The [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 
 ```
 
-![Blazor RangeNavigator with Web API Adaptor](images/working-data/blazor-range-remote-data.png)
+![Blazor Range Navigator with Web API](images/working-data/blazor-range-remote-data.png)
 
 ### Sending additional parameters to the server
 
-To create a data request with a custom parameter, add additional parameters to the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Query) object and assign it to the range selector's Query property.
+To create a data request with a custom parameter, add additional parameters to the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Query) object and assign it to the Range Selector's `Query` property.
 
-The following sample code shows how to send parameters using the Query property in the series.
+The following sample code shows how to send parameters using the `Query` property in the series.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -254,22 +235,22 @@ The following sample code shows how to send parameters using the Query property 
 
 <SfRangeNavigator ValueType="RangeValueType.Double">    
     <RangeNavigatorSeriesCollection>
-        <RangeNavigatorSeries Query="@ChartQuery" XName="OrderID" Type="RangeNavigatorType.Line" YName="Freight">
+        <RangeNavigatorSeries Query="@RNQuery" XName="OrderID" Type="RangeNavigatorType.Line" YName="Freight">
             <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
         </RangeNavigatorSeries>
     </RangeNavigatorSeriesCollection>
 </SfRangeNavigator>
 
 @code {
-    public Query ChartQuery { get; set; }
+    public Query RNQuery { get; set; }
 
     protected override void OnInitialized()
     {
-        ChartQuery = new Query().Take(10).Where("Freight", "GreaterThan", 300, false);
+        RNQuery = new Query().Take(10).Where("Freight", "GreaterThan", 300, false);
     }
 
 }
 ```
-![Blazor RangeNavigator with Chart Query](images/working-data/blazor-range-remote-data.png)
+![Blazor Range Navigator with Query](images/working-data/blazor-range-remote-data.png)
 
-> Refer to our [Blazor Range Selector](https://www.syncfusion.com/blazor-components/blazor-range-selector) feature tour page for its groundbreaking feature representations and also explore our [Blazor Range Selector Example](https://blazor.syncfusion.com/demos/range-selector/range-navigator?theme=fluent) to know various range selector types and how to represent time-dependent data, showing trends at equal intervals.
+> Refer to our [Blazor Range Selector](https://www.syncfusion.com/blazor-components/blazor-range-selector) feature tour page for its groundbreaking feature representations and also explore our [Blazor Range Selector Example](https://blazor.syncfusion.com/demos/range-selector/range-navigator?theme=fluent) to know various Range Selector types and how to represent time-dependent data, showing trends at equal intervals.
