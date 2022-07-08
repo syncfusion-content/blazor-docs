@@ -13,7 +13,7 @@ In this section, we have provided a list of chart component events that will be 
 
 The events should be provided to the chart using [ChartEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html) component.
 
-> From `v18.4.*`, we have added few additional events for the chart component
+> From `v18.4.*`, we have added few additional events for the chart component.
 
 Event Name|
 -----|
@@ -27,7 +27,7 @@ Event Name|
 [OnAxisActualRangeCalculated](events/#onaxisactualrangecalculated)|
 [OnAxisMultiLevelLabelRender](events/#onaxismultilevellabelrender)|
 
-> From `v18.4.*`, some event names are different from the previous releases. The following are the event name changes from `v18.3.*` to `v18.4.*`
+> From `v18.4.*`, some event names are different from the previous releases. The following are the event name changes from `v18.3.*` to `v18.4.*`.
 
 Event Name(`v18.3.*`) |Event Name(`v18.4.*`)
 -----|-----
@@ -44,7 +44,7 @@ MultiLevelLabelClick |[OnMultiLevelLabelClick](events/#onmultilevellabelclick)
 OnSelectionComplete |[OnSelectionChanged](events/#onselectionchanged)
 OnDragComplete |[OnSelectionChanged](events/#onselectionchanged)
 
-> From `v18.4.*`, We have removed the following previous release events from chart component
+> From `v18.4.*`, We have removed the following previous release events from chart component.
 
 Event Name|
 -----|
@@ -59,6 +59,217 @@ BeforeExport|
 Load|
 OnPointDoubleClick|
 PointMoved|
+
+## ChartMouseMove
+
+[ChartMouseMove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_ChartMouseMove) event triggers when mouse moved over the chart.
+
+### Arguments
+
+The following properties are available in the [ChartMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMouseEventArgs.html).
+* MouseX - Specifies the current mouse x coordinate.
+* MouseY - Specifies the current mouse y coordinate.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartEvents ChartMouseMove="OnMouseEvent"></ChartEvents>
+	
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
+        </ChartSeries>
+    </ChartSeriesCollection>
+	
+    <ChartZoomSettings EnableSelectionZooming="true"></ChartZoomSettings>
+</SfChart>
+
+@code{
+    public class SalesInfo
+    {
+        public string Month { get; set; }
+        public double SalesValue { get; set; }
+    }
+	
+    public List<SalesInfo> Sales = new List<SalesInfo>
+    {
+        new SalesInfo { Month = "Jan", SalesValue = 35 },
+        new SalesInfo { Month = "Feb", SalesValue = 28 },
+        new SalesInfo { Month = "Mar", SalesValue = 34 },
+        new SalesInfo { Month = "Apr", SalesValue = 32 },
+        new SalesInfo { Month = "May", SalesValue = 40 },
+        new SalesInfo { Month = "Jun", SalesValue = 32 },
+        new SalesInfo { Month = "Jul", SalesValue = 35 }
+    };
+
+    public void OnMouseEvent(ChartMouseEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+}
+
+```
+## ChartMouseClick
+
+[ChartMouseClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_ChartMouseClick) event triggers when the chart got clicked. 
+
+### Arguments
+
+The following properties are available in the [ChartMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMouseEventArgs.html).
+* MouseX - Specifies the current mouse x coordinate.
+* MouseY - Specifies the current mouse y coordinate.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartEvents ChartMouseClick="OnMouseEvent"></ChartEvents>
+	
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
+        </ChartSeries>
+    </ChartSeriesCollection>
+	
+    <ChartZoomSettings EnableSelectionZooming="true"></ChartZoomSettings>
+</SfChart>
+
+@code{
+    public class SalesInfo
+    {
+        public string Month { get; set; }
+        public double SalesValue { get; set; }
+    }
+	
+    public List<SalesInfo> Sales = new List<SalesInfo>
+    {
+        new SalesInfo { Month = "Jan", SalesValue = 35 },
+        new SalesInfo { Month = "Feb", SalesValue = 28 },
+        new SalesInfo { Month = "Mar", SalesValue = 34 },
+        new SalesInfo { Month = "Apr", SalesValue = 32 },
+        new SalesInfo { Month = "May", SalesValue = 40 },
+        new SalesInfo { Month = "Jun", SalesValue = 32 },
+        new SalesInfo { Month = "Jul", SalesValue = 35 }
+    };
+
+    public void OnMouseEvent(ChartMouseEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+    
+}
+
+```
+
+## ChartMouseUp
+
+[ChartMouseUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_ChartMouseUp) event triggers when the mouse left button is released over the chart element.  
+
+### Arguments
+
+The following properties are available in the [ChartMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMouseEventArgs.html).
+* MouseX - Specifies the current mouse x coordinate.
+* MouseY - Specifies the current mouse y coordinate.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartEvents ChartMouseUp="OnMouseEvent"></ChartEvents>
+	
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
+        </ChartSeries>
+    </ChartSeriesCollection>
+	
+    <ChartZoomSettings EnableSelectionZooming="true"></ChartZoomSettings>
+</SfChart>
+
+@code{
+    public class SalesInfo
+    {
+        public string Month { get; set; }
+        public double SalesValue { get; set; }
+    }
+	
+    public List<SalesInfo> Sales = new List<SalesInfo>
+    {
+        new SalesInfo { Month = "Jan", SalesValue = 35 },
+        new SalesInfo { Month = "Feb", SalesValue = 28 },
+        new SalesInfo { Month = "Mar", SalesValue = 34 },
+        new SalesInfo { Month = "Apr", SalesValue = 32 },
+        new SalesInfo { Month = "May", SalesValue = 40 },
+        new SalesInfo { Month = "Jun", SalesValue = 32 },
+        new SalesInfo { Month = "Jul", SalesValue = 35 }
+    };
+
+    public void OnMouseEvent(ChartMouseEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+}
+
+```
+## ChartMouseDown
+
+[ChartMouseDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_ChartMouseDown) event triggers when the mouse left button is pressed over the chart element.  
+
+### Arguments
+
+The following properties are available in the [ChartMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMouseEventArgs.html).
+* MouseX - Specifies the current mouse x coordinate.
+* MouseY - Specifies the current mouse y coordinate.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartEvents ChartMouseDown="OnMouseEvent"></ChartEvents>
+	
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
+        </ChartSeries>
+    </ChartSeriesCollection>
+	
+    <ChartZoomSettings EnableSelectionZooming="true"></ChartZoomSettings>
+</SfChart>
+
+@code{
+    public class SalesInfo
+    {
+        public string Month { get; set; }
+        public double SalesValue { get; set; }
+    }
+	
+    public List<SalesInfo> Sales = new List<SalesInfo>
+    {
+        new SalesInfo { Month = "Jan", SalesValue = 35 },
+        new SalesInfo { Month = "Feb", SalesValue = 28 },
+        new SalesInfo { Month = "Mar", SalesValue = 34 },
+        new SalesInfo { Month = "Apr", SalesValue = 32 },
+        new SalesInfo { Month = "May", SalesValue = 40 },
+        new SalesInfo { Month = "Jun", SalesValue = 32 },
+        new SalesInfo { Month = "Jul", SalesValue = 35 }
+    };
+
+    public void OnMouseEvent(ChartMouseEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+}
+
+```
 
 ## OnZoomStart
 
