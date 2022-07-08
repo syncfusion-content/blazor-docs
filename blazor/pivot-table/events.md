@@ -381,11 +381,11 @@ The [EnginePopulated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pi
 
 ## ExcelHeaderQueryCellInfo
 
-To know more about this event, refer [here](./excel-export.md/#excelheaderquerycellinfo).
+To know more about this event, refer [here](./excel-export/#excelheaderquerycellinfo).
 
 ## ExcelQueryCellInfo
 
-To know more about this event, refer [here](./excel-export.md/#excelquerycellinfo).
+To know more about this event, refer [here](./excel-export/#excelquerycellinfo).
 
 ## FetchReport
 
@@ -433,15 +433,15 @@ To know more about this event, refer [here](./tool-bar/#newreport).
 
 ## OnActionBegin
 
-To know more about this event, refer [here](./tool-bar.md/#onactionbegin).
+To know more about this event, refer [here](./tool-bar/#onactionbegin).
 
 ## OnActionComplete
 
-To know more about this event, refer [here](./tool-bar.md/#onactioncomplete).
+To know more about this event, refer [here](./tool-bar/#onactioncomplete).
 
 ## OnActionFailure
 
-To know more about this event, refer [here](./tool-bar.md/#onactionfailure).
+To know more about this event, refer [here](./tool-bar/#onactionfailure).
 
 ## OnLoad
 
@@ -451,11 +451,11 @@ To know more about this event, refer [here](./data-binding/#event).
 
 ## PdfHeaderQueryCellInfo
 
-To know more about this event, refer [here](./pdf-export.md/#pdfheaderquerycellinfo).
+To know more about this event, refer [here](./pdf-export/#pdfheaderquerycellinfo).
 
 ## PdfQueryCellInfo
 
-To know more about this event, refer [here](./pdf-export.md/#pdfquerycellinfo).
+To know more about this event, refer [here](./pdf-export/#pdfquerycellinfo).
 
 ## RenameReport
 
@@ -469,16 +469,16 @@ To know more about this event, refer [here](./tool-bar/#removereport).
 
 To know more about this event, refer [here](./tool-bar/#savereport).
 
-## ToolbarRender
+## ToolbarRendered
 
-The event [ToolbarRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ToolbarRendered) is triggered before rendering of toolbar. This event is available only when toolbar is enabled in the Pivot Table. It has following parameter - [CustomToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ToolbarArgs.html#Syncfusion_Blazor_PivotView_ToolbarArgs_CustomToolbar). Using this event user can add custom toolbar items as well as remove existing items from the toolbar.
+The event [ToolbarRendered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ToolbarRendered) is triggered before rendering of toolbar. This event is available only when toolbar is enabled in the Pivot Table. It has following parameter - [CustomToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ToolbarArgs.html#Syncfusion_Blazor_PivotView_ToolbarArgs_CustomToolbar). Using this event user can add custom toolbar items as well as remove existing items from the toolbar.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
-
-<SfPivotView TValue="ProductDetails" ShowFieldList="true" ShowToolbar="true" Toolbar="@toolbar" AllowConditionalFormatting="true" AllowPdfExport="true" AllowExcelExport="true">
+@using Syncfusion.Blazor.Navigations
+<SfPivotView @ref="pivot" TValue="ProductDetails" ShowFieldList="true" ShowToolbar="true" Toolbar="@toolbar" ShowTooltip="true" AllowConditionalFormatting="true" AllowPdfExport="true" AllowExcelExport="true">
     <PivotViewDisplayOption Primary=Primary.Table View=View.Both></PivotViewDisplayOption>
-        <PivotViewDataSourceSettings DataSource="@data" ShowGrandTotals="true" ShowSubTotals="true">
+        <PivotViewDataSourceSettings DataSource="@Data" ShowGrandTotals="true" ShowSubTotals="true">
             <PivotViewColumns>
                 <PivotViewColumn Name="Year"></PivotViewColumn>
                 <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -495,105 +495,46 @@ The event [ToolbarRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
                 <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
             </PivotViewFormatSettings>
         </PivotViewDataSourceSettings>
-        <PivotViewEvents TValue="ProductDetails" ToolbarRendered="toolbarRender" RenameReport="renameReport" RemoveReport="removeReport" SaveReport="saveReport" LoadReport="loadReport" FetchReport="fetchReport" ></PivotViewEvents>
+        <PivotViewEvents TValue="ProductDetails" ToolbarRendered="ToolbarRender" ></PivotViewEvents>
         <PivotViewGridSettings ColumnWidth="140"></PivotViewGridSettings>
 </SfPivotView>
 
-@code{
-    public List<ToolbarItems> toolbar = new List<ToolbarItems> {
-        ToolbarItems.New,
-        ToolbarItems.Load,
-        ToolbarItems.Remove,
-        ToolbarItems.Rename,
-        ToolbarItems.SaveAs,
-        ToolbarItems.Save,
-        ToolbarItems.Grid,
-        ToolbarItems.Chart,
-        ToolbarItems.Export,
-        ToolbarItems.SubTotal,
-        ToolbarItems.GrandTotal,
-        ToolbarItems.ConditionalFormatting,
-        ToolbarItems.FieldList
+@code {
+    private List< Syncfusion.Blazor.PivotView.ToolbarItems> toolbar = new List<Syncfusion.Blazor.PivotView.ToolbarItems> {
+        Syncfusion.Blazor.PivotView.ToolbarItems.New,
+        Syncfusion.Blazor.PivotView.ToolbarItems.Grid,
+        Syncfusion.Blazor.PivotView.ToolbarItems.Chart,
+        Syncfusion.Blazor.PivotView.ToolbarItems.Export,
+        Syncfusion.Blazor.PivotView.ToolbarItems.SubTotal,
+        Syncfusion.Blazor.PivotView.ToolbarItems.GrandTotal,
+        Syncfusion.Blazor.PivotView.ToolbarItems.ConditionalFormatting,
+        Syncfusion.Blazor.PivotView.ToolbarItems.FieldList
     };
-    SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> data { get; set; }
+    private SfPivotView<ProductDetails> pivot;
+    public List<ProductDetails> Data { get; set; }
     protected override void OnInitialized()
     {
-        this.data = ProductDetails.GetProductData().ToList();
+        this.Data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
-        public void toolbarRender(ToolbarArgs args)
+    public void ToolbarRender(ToolbarArgs args)
     {
-        //args.CustomToolbar -> Can add or remove toolbar items.
-    }
-    public List<string> report = new List<string>();
-    public List<string> reportName = new List<string>();
-    //to save report
-    public void saveReport(SaveReportArgs args)
-    {
-        var i = 0;
-        bool isSaved = false;
-        for (i = 0; i < this.reportName.Count; i++)
+        //To change text of New report button
+        args.CustomToolbar[0].Text = "New Report";
+        //To remove Export menu
+        args.CustomToolbar.RemoveAt(3);
+        //To add PDF export button
+        args.CustomToolbar.Add(new ItemModel
         {
-            if (this.reportName[i] == args.ReportName)
-            {
-                this.report[i] = args.Report;
-                isSaved = true;
-            }
-        }
-        if (args.Report != null && !(isSaved))
-        {
-            this.report.Add(args.Report);
-            this.reportName.Add(args.ReportName);
-        }
-
+            Text = "PDF Export",
+            TooltipText = "PDF Export",
+            Click = EventCallback.Factory.Create<ClickEventArgs>(this, PDFButtonClick)
+        });
     }
-    //fetch reports
-    public void fetchReport(FetchReportArgs args)
+    public void PDFButtonClick(ClickEventArgs args)
     {
-        args.ReportName = this.reportName.ToArray();
-
-    }
-    //to load the selected report
-    public void loadReport(LoadReportArgs args)
-    {
-        var i = 0;
-        var j = 0;
-        for (i = 0; i < this.reportName.Count; i++)
-        {
-            if (this.reportName[i] == args.ReportName)
-            {
-                j = i;
-            }
-        }
-        this.pivot.LoadPersistDataAsync(this.report[j]);
-    }
-    //to delete a report
-    public void removeReport(RemoveReportArgs args)
-    {
-        var i = 0;
-        for( i=0;i<this.reportName.Count; i++)
-        {
-            if(this.reportName[i] == args.ReportName)
-            {
-                this.reportName.RemoveAt(i);
-                this.report.RemoveAt(i);
-            }
-        }
-    }
-    // to rename a report
-    public void renameReport(RenameReportArgs args)
-    {
-        var i = 0;
-        for( i=0;i<=(this.reportName.Count - 1); i++)
-        {
-            if(this.reportName[i] == args.ReportName)
-            {
-                this.reportName.RemoveAt(i);
-                this.reportName.Add(args.Rename);
-            }
-        }
-    }
+        this.pivot.ExportToPdfAsync();
+    }   
 }
 
 ```

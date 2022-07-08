@@ -103,6 +103,60 @@ By default, the tooltip displays information in points for the x and y values. I
 
 <!-- markdownlint-disable MD013 -->
 
+## Tooltip template
+
+Any HTML elements can be displayed within the tooltip by using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Template) property of the [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html). You can use the **data.X** and **data.Y** as place holders in the HTML element to display x and y values of the corresponding data point.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Unemployment Rates 1975-2010">
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.StepLine" XName="Year" YName="YValue" Name="China">
+            <ChartMarker Visible="true" Width="10" Height="10">
+            </ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+    <ChartTooltipSettings Enable="true">
+        <Template>
+            @{
+                    var data = context as ChartTooltipInfo;
+                    <div>                       
+                        <table style="width:100%;  border: 1px solid black;">
+                            <tr><th colspan="2" bgcolor="#00FFFF">Unemployment</th></tr>
+                            <tr><td bgcolor="#00FFFF">@data.X:</td><td bgcolor="#00FFFF">@data.Y</td></tr>
+                        </table>
+                    </div>
+                }         
+        </Template>
+    </ChartTooltipSettings>
+</SfChart>
+
+@code{
+    public List<StepChartData> StepChartValues = new List<StepChartData>
+    {
+        new StepChartData { Year = "1975", YValue = 16 },
+        new StepChartData { Year = "1980", YValue = 12.5 },
+        new StepChartData { Year = "1985", YValue = 19 },
+        new StepChartData { Year = "1990", YValue = 14.4 },
+        new StepChartData { Year = "1995", YValue = 11.5 },
+        new StepChartData { Year = "2000", YValue = 14 },
+        new StepChartData { Year = "2005", YValue = 10 },
+        new StepChartData { Year = "2010", YValue = 16 }
+    };
+
+    public class StepChartData
+    {
+        public string Year { get; set; }
+        public double YValue { get; set; }
+    }
+}
+
+```
+
+![Blazor StepLine Chart with Tooltip Template](images/tooltip/blazor-step-chart-tooltip-template.png)
+
 ## Tooltip customization
 
 The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Fill) and [Border](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Border) properties are used to customize the background color and the border of the tooltip respectively. The [ChartTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipTextStyle.html) is used to customize the tooltip text. The `highlightColor` property is used to customize the point color while hovering for tooltip.
