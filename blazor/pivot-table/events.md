@@ -478,7 +478,7 @@ The event [ToolbarRendered](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 @using Syncfusion.Blazor.Navigations
 <SfPivotView @ref="pivot" TValue="ProductDetails" ShowFieldList="true" ShowToolbar="true" Toolbar="@toolbar" ShowTooltip="true" AllowConditionalFormatting="true" AllowPdfExport="true" AllowExcelExport="true">
     <PivotViewDisplayOption Primary=Primary.Table View=View.Both></PivotViewDisplayOption>
-        <PivotViewDataSourceSettings DataSource="@data" ShowGrandTotals="true" ShowSubTotals="true">
+        <PivotViewDataSourceSettings DataSource="@Data" ShowGrandTotals="true" ShowSubTotals="true">
             <PivotViewColumns>
                 <PivotViewColumn Name="Year"></PivotViewColumn>
                 <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -500,7 +500,7 @@ The event [ToolbarRendered](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 </SfPivotView>
 
 @code {
-    public List< Syncfusion.Blazor.PivotView.ToolbarItems> toolbar = new List<Syncfusion.Blazor.PivotView.ToolbarItems> {
+    private List< Syncfusion.Blazor.PivotView.ToolbarItems> toolbar = new List<Syncfusion.Blazor.PivotView.ToolbarItems> {
         Syncfusion.Blazor.PivotView.ToolbarItems.New,
         Syncfusion.Blazor.PivotView.ToolbarItems.Grid,
         Syncfusion.Blazor.PivotView.ToolbarItems.Chart,
@@ -510,11 +510,11 @@ The event [ToolbarRendered](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
         Syncfusion.Blazor.PivotView.ToolbarItems.ConditionalFormatting,
         Syncfusion.Blazor.PivotView.ToolbarItems.FieldList
     };
-    SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> data { get; set; }
+    private SfPivotView<ProductDetails> pivot;
+    public List<ProductDetails> Data { get; set; }
     protected override void OnInitialized()
     {
-        this.data = ProductDetails.GetProductData().ToList();
+        this.Data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
     public void ToolbarRender(ToolbarArgs args)
