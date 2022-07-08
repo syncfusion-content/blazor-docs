@@ -60,6 +60,89 @@ The following demo depicts the example for `Fade` animation,
 
 ![Carousel fade animation](images/fade_animation.gif)
 
+## Custom animation
+
+In Carousel, you can use customized animation effects for slide transitions using the [`customEffect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CarouselAnimationEffect.html) option of the [`animation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CarouselAnimationEffect.html) property and apply custom animation css via [`cssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_CssClass) property.
+
+The following demo depicts the example for `parallax` custom animation
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<div class="control-container">
+    <SfCarousel AnimationEffect="CarouselAnimationEffect.Custom" CssClass="parallax">
+        <CarouselItem>
+            <div class="slide-content">Slide 1</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 2</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 3</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 4</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 5</div>
+        </CarouselItem>
+    </SfCarousel>
+</div>
+
+<style>
+    .control-container {
+        background-color: #adb5bd;
+        height: 300px;
+        margin: 0 auto;
+        width: 500px;
+    }
+
+    .e-carousel .slide-content {
+        align-items: center;
+        display: flex;
+        font-size: 1.25rem;
+        height: 100%;
+        justify-content: center;
+    }
+     /* Parallax animation */
+.parallax .e-carousel-item {
+  transition: transform 1s ease-in-out;
+}
+
+.parallax .e-carousel-item.e-next {
+  animation: ParallaxIn 1s ease-in-out;
+}
+
+.parallax .e-carousel-item.e-prev {
+  animation: ParallaxOut 1s ease-in-out;
+}
+
+@@keyframes ParallaxIn {
+  from {
+    opacity: 0;
+    transform: scale(0) translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@@keyframes ParallaxOut {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0) translateY(-100%);
+  }
+</style>
+```
+![Carousel custom animation](images/custom_animation.gif)
+
 ## Intervals between slides
 
 Using the items property, you can set different intervals for each item to transition between slides. The default interval is `5000 ms` (5 seconds). The following example depicts the code for setting the different intervals between each item.
@@ -116,6 +199,52 @@ In the carousel, all slides transitions are performed continuously after the spe
 
 <div class="control-container">
     <SfCarousel AutoPlay="false">
+        <CarouselItem>
+            <div class="slide-content">Slide 1</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 2</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 3</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 4</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 5</div>
+        </CarouselItem>
+    </SfCarousel>
+</div>
+
+<style>
+    .control-container {
+        background-color: #adb5bd;
+        height: 300px;
+        margin: 0 auto;
+        width: 500px;
+    }
+
+    .e-carousel .slide-content {
+        align-items: center;
+        display: flex;
+        font-size: 1.25rem;
+        height: 100%;
+        justify-content: center;
+    }
+</style>
+```
+## Pause on hover
+
+By default, Slide transitions are paused when hovering the mouse pointer over the Carousel element. You can enable or disable this functionality using the [`pauseOnHover`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_PauseOnHover) property.
+
+The following example depicts the code to play the slides when hovering the mouse pointer over the Carousel element.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<div class="control-container">
+    <SfCarousel  PauseOnHover="true">
         <CarouselItem>
             <div class="slide-content">Slide 1</div>
         </CarouselItem>
