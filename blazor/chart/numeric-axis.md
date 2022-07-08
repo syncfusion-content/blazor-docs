@@ -357,13 +357,13 @@ The table below shows the results of applying various commonly used label format
 <td>1000</td>
 <td>n2</td>
 <td>1000.00</td>
-<td>The number is rounded to 2 decimal place.</td>
+<td>The number is rounded to 2 decimal places.</td>
 </tr>
 <tr>
 <td>1000</td>
 <td>n3</td>
 <td>1000.000</td>
-<td>The number is rounded to 3 decimal place.</td>
+<td>The number is rounded to 3 decimal places.</td>
 </tr>
 <tr>
 <td>0.01</td>
@@ -375,13 +375,13 @@ The table below shows the results of applying various commonly used label format
 <td>0.01</td>
 <td>p2</td>
 <td>1.00%</td>
-<td>The number is converted to percentage with 2 decimal place.</td>
+<td>The number is converted to percentage with 2 decimal places.</td>
 </tr>
 <tr>
 <td>0.01</td>
 <td>p3</td>
 <td>1.000%</td>
-<td>The number is converted to percentage with 3 decimal place.</td>
+<td>The number is converted to percentage with 3 decimal places.</td>
 </tr>
 <tr>
 <td>1000</td>
@@ -393,7 +393,7 @@ The table below shows the results of applying various commonly used label format
 <td>1000</td>
 <td>c2</td>
 <td>$1000.00</td>
-<td>The currency symbol is appended to number and number is rounded to 2 decimal place.</td>
+<td>The currency symbol is appended to number and number is rounded to 2 decimal places.</td>
 </tr>
 </table>
 

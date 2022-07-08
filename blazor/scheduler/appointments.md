@@ -584,6 +584,7 @@ Multiple appointments can be dragged and dropped by enabling the `AllowMultiDrag
 Multiple events can also be dragged from one resource to another resource. In this case, if all the selected events are in the different resources, then all the events should be moved to the single resource that is related to the target event.
 
 >Note: Multiple events drag and drop is not supported on mobile devices.
+
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 
