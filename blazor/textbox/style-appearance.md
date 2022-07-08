@@ -35,6 +35,41 @@ Use the following CSS to customize the TextBox placeholder
 }
 ```
 
+## Align text in TextBox
+
+You can change alignment of text in textbox by setting `text-align` attribute using `.e-textbox`.
+
+```cshtml
+@using Syncfusion.Blazor.Inputs
+
+<SfTextBox Placeholder='First Name'></SfTextBox>
+<SfTextBox Placeholder='Last Name'></SfTextBox>
+
+<style>
+.e-textbox{
+text-align: right;
+}
+</style>
+```
+
+![Blazor TextBox Text Alignment](./images/blazor-textbox-align-right.png)
+
+You can change alignment of text in particular textbox by setting `text-align` attribute directly using `CssClass` property.
+
+```cshtml
+@using Syncfusion.Blazor.Inputs
+
+<SfTextBox Placeholder='First Name'></SfTextBox>
+<SfTextBox CssClass="e-custom" Placeholder='Last Name'></SfTextBox>
+
+<style>
+.e-custom .e-textbox{
+text-align: right;
+</style>
+```
+
+![Blazor TextBox Text Alignment](./images/blazor-textbox-align-individual.png)
+
 ## See also
 
 * [Adding icons to the Textbox](https://blazor.syncfusion.com/documentation/textbox/getting-started#adding-icons-to-the-textbox)

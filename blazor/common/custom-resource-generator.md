@@ -23,7 +23,7 @@ Refer to the following steps to search and select the components in CRG:
 2. Type the required component name in the search bar, and then select the checkbox. The dependency of the selected component is resolved in the application itself, so you do not need to choose each dependent component manually.
 ![Search and select Syncfusion Blazor UI components](images/search-non-injectable.png)
 3. Select the required built-in themes from the **Select Themes** option. This provides an option to select more than one theme.
-![Select the built-in themes](images/select-inbuilt-themes.png)
+![Select the built-in themes in Blazor](images/select-inbuilt-themes.png)
 
 ## Download the selected component resources
 
@@ -32,13 +32,13 @@ After selecting the required component resources, download the custom interop sc
 Refer to the following steps to download the custom resources in CRG:
 
 1. Click the **DOWNLOAD** button at the bottom of the page. Select the **Minified** option to generate the minified file output for production.
-![Download option](images/download-option.png)
+![Download option in Blazor](images/download-option.png)
 2. Change the file name as needed, and then click **GENERATE** button in the pop-up.
 ![Export popup for generation custom resources](images/export-popup.png)
 3. Now, the bundling process for the selected components will be started, and the output will be downloaded as a zip file.
-![blazor Bundle custom resources](images/bundling-custom-resources.png)
+![Blazor Bundle custom resources](images/bundling-custom-resources.png)
 4. The final output contains the custom interop script and styles for the selected components and an **import.json** file, which stores the current settings.
-![Final output of customized resources](images/customized-resources.png)
+![Final output of customized resources in Blazor](images/customized-resources.png)
 
 ## How to use custom resources in the Blazor application
 
