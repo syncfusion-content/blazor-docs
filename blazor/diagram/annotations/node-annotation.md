@@ -224,6 +224,6 @@ The [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
 
 * [How to add annotation for Connector](./connector-annotation)
 
-* [How to add or remove annotation constraints](../constraints/#annotation-constraints)
+* [How to add or remove annotation constraints](../constraints#annotation-constraints)
 
 * [How to customize the annotation](./appearance)

@@ -222,6 +222,6 @@ The `HorizontalAlignment`, `VerticalAlignment` and `Margin` properties were expl
 
 * [How to add annotation for Node](./node-annotation)
 
-* [How to add or remove annotation constraints](../constraints/#annotation-constraints)
+* [How to add or remove annotation constraints](../constraints#annotation-constraints)
 
 * [How to customize the annotation](./appearance)
