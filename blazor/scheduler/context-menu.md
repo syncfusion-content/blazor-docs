@@ -35,18 +35,18 @@ The deletion of appointments can be done by using the [DeleteEventAsync](https:/
 </SfSchedule>
 <SfContextMenu TValue="MenuItem" Target=".e-schedule">
     <MenuItems>
-        <MenuItem Text="New Event" IconCss="e-icons e-plus" Id="Add" Hidden="@isCell"></MenuItem>
-        <MenuItem Text="New Recurring Event" IconCss="e-icons e-repeat" Hidden="@isCell" Id="AddRecurrence"></MenuItem>
-        <MenuItem Text="Today" IconCss="e-icons e-timeline-today" Id="Today" Hidden="@isCell"></MenuItem>
-        <MenuItem Text="Edit Event" IconCss="e-icons e-edit" Id="Save" Hidden="@isEvent"></MenuItem>
-        <MenuItem Text="Edit Event" IconCss="e-icons e-edit" Id="EditRecurrenceEvent" Hidden="@isRecurrence">
+        <MenuItem Text="New Event" Id="Add" Hidden="@isCell"></MenuItem>
+        <MenuItem Text="New Recurring Event" Hidden="@isCell" Id="AddRecurrence"></MenuItem>
+        <MenuItem Text="Today" Id="Today" Hidden="@isCell"></MenuItem>
+        <MenuItem Text="Edit Event" Id="Save" Hidden="@isEvent"></MenuItem>
+        <MenuItem Text="Edit Event" Id="EditRecurrenceEvent" Hidden="@isRecurrence">
             <MenuItems>
                 <MenuItem Text="Edit Occurrence" Id="EditOccurrence" Hidden="@isRecurrence"></MenuItem>
                 <MenuItem Text="Edit Series" Id="EditSeries" Hidden="@isRecurrence"></MenuItem>
             </MenuItems>
         </MenuItem>
-        <MenuItem Text="Delete Event" IconCss="e-icons e-trash" Id="Delete" Hidden="@isEvent"></MenuItem>
-        <MenuItem Text="Delete Event" IconCss="e-icons e-trash" Id="DeleteRecurrenceEvent" Hidden="@isRecurrence">
+        <MenuItem Text="Delete Event" Id="Delete" Hidden="@isEvent"></MenuItem>
+        <MenuItem Text="Delete Event" Id="DeleteRecurrenceEvent" Hidden="@isRecurrence">
             <MenuItems>
                 <MenuItem Text="Delete Occurrence" Id="DeleteOccurrence" Hidden="@isRecurrence"></MenuItem>
                 <MenuItem Text="Delete Series" Id="DeleteSeries" Hidden="@isRecurrence"></MenuItem>
