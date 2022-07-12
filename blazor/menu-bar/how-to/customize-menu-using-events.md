@@ -77,8 +77,10 @@ The available events are [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusi
         this.eventName = "Closed";
     }
 
-    private void itemSelected()
+    private void itemSelected(MenuEventArgs<MenuItem> args)
     {
+        //Selected menu item
+        var selectedItem = args.Item.Text;
         this.eventName = "ItemSelected";
     }
 }
