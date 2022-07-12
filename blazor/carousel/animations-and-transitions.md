@@ -66,7 +66,7 @@ The following demo depicts the example for `Fade` animation,
 
 ![Carousel fade animation](images/fade_animation.gif)
 
-## Custom animation
+### Custom animation
 
 In Carousel, you can use customized animation effects for slide transitions using the [`Custom`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CarouselAnimationEffect.html) option of the [`AnimationEffect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_AnimationEffect) property and apply custom animation css via [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_CssClass) property.
 
