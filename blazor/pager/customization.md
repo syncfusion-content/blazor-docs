@@ -11,7 +11,7 @@ documentation: ug
 
 ## Custom text for numeric items
 
-The Pager component provides an option to define custom text and it is added as a prefix for numeric items. This can be achieved by using the `NumericItemPrefix` property.
+The Pager component provides an option to define custom text and it is added as a prefix for numeric items. This can be achieved by using the [NumericItemPrefix](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_NumericItemPrefix) property.
 
 ```csharp
 
@@ -26,7 +26,7 @@ The Pager component provides an option to define custom text and it is added as 
 
 ## Custom CSS
 
-To modify the Pager's appearance, you need to override the default CSS of the Pager. This can be achieved by using the `CssClass` property.
+To modify the Pager's appearance, you need to override the default CSS of the Pager. This can be achieved by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_CssClass) property.
 
 In the following sample, the value for the `CssClass` property is set as custom CSS, and this root class is used to customize the Pager appearance.
 

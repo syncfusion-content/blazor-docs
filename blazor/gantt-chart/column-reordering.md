@@ -120,7 +120,7 @@ Gantt chart has option to reorder single column either by Interaction or by usin
     }
 }
 ```
-#### Reorder multiple columns
+## Reorder multiple columns
 
 Multiple columns can be reordered at a time by using the `ReorderColumnsAsync` method.
 

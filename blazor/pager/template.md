@@ -9,7 +9,7 @@ documentation: ug
 
 # Pager Component with Template
 
-The Pager component provides an option to render a custom element or content in the Pager. This can be achieved by using the `Template` property of the Pager. 
+The Pager component provides an option to render a custom element or content in the Pager. This can be achieved by using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_Template) property of the Pager. 
 
 In this following sample, we have rendered two anchor tags for navigating next and previous pages. And the pager info detail is displayed in between those two anchor tags. The anchor tags will be disabled based on the current page number using Pager APIs.
 
