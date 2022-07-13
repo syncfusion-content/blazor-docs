@@ -332,125 +332,6 @@ To use Custom aggregate, specify the **AggregateType** as **Custom** in **GridAg
 
 > You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
-## Handling aggregates in custom adaptor
-
-When using Custom Adaptor, the aggregates has to be handled in the Read/ReadAsync method of Custom adaptor.
-
-The following sample code demonstrates implementing the aggregates for the custom bounded data,
-
-```cshtml
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor
-
-<SfGrid TValue="Order" AllowPaging="true">
-    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
-    <GridPageSettings PageSize="8"></GridPageSettings>
-    <GridAggregates>
-        <GridAggregate>
-            <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Sum" Format="C2">
-                    <FooterTemplate>
-                        @{
-                            var aggregate = (context as AggregateTemplateContext);
-                            <div>
-                                <p>Sum: @aggregate.Sum</p>
-                            </div>
-                        }
-                    </FooterTemplate>
-                </GridAggregateColumn>
-            </GridAggregateColumns>
-        </GridAggregate>
-        <GridAggregate>
-            <GridAggregateColumns>
-                <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Average" Format="C2">
-                    <FooterTemplate>
-                        @{
-                            var aggregate = (context as AggregateTemplateContext);
-                            <div>
-                                <p>Average: @aggregate.Average</p>
-                            </div>
-                        }
-                    </FooterTemplate>
-                </GridAggregateColumn>
-            </GridAggregateColumns>
-        </GridAggregate>
-    </GridAggregates>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code{
-    public static List<Order> Orders { get; set; }
-
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-    public class CustomAdaptor : DataAdaptor
-    {
-        // Performs data Read operation
-        public override object Read(DataManagerRequest dm, string key = null)
-        {
-            IEnumerable<Order> DataSource = Orders;
-            if (dm.Search != null && dm.Search.Count > 0)
-            {
-                // Searching
-                DataSource = DataOperations.PerformSearching(DataSource, dm.Search);
-            }
-            if (dm.Sorted != null && dm.Sorted.Count > 0)
-            {
-                // Sorting
-                DataSource = DataOperations.PerformSorting(DataSource, dm.Sorted);
-            }
-            if (dm.Where != null && dm.Where.Count > 0)
-            {
-                // Filtering
-                DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
-            }
-            int count = DataSource.Cast<Order>().Count();
-            if (dm.Skip != 0)
-            {
-                //Paging
-                DataSource = DataOperations.PerformSkip(DataSource, dm.Skip);
-            }
-            if (dm.Take != 0)
-            {
-                DataSource = DataOperations.PerformTake(DataSource, dm.Take);
-            }
-            DataResult DataObject = new DataResult();
-            if (dm.Aggregates != null) // Aggregation
-            {
-                DataObject.Result = DataSource;
-                DataObject.Count = count;
-                DataObject.Aggregates = DataUtil.PerformAggregation(DataSource, dm.Aggregates);
-
-                return dm.RequiresCounts ? DataObject : (object)DataSource;
-            }
-            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
-        }
-    }
-}
-```
-
 ## Reactive aggregate
 
 When using batch editing, the aggregate values will be refreshed on every cell save. The footer, group footer, and group caption aggregate values will be refreshed.
@@ -538,3 +419,7 @@ When using batch editing, the aggregate values will be refreshed on every cell s
 ```
 
 ![Reactive Aggregate in Blazor DataGrid](./images/blazor-datagrid-reactive-aggregate.gif)
+
+## See also
+
+* [Handling Aggregates in Custom Adaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding#handling-aggregates-in-custom-adaptor)
