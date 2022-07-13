@@ -220,30 +220,37 @@ To create a node, define the Node object and add it to the nodes collection of t
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+
 <style>
     #diagram-space {
         float: left;
     }
+
     #properties {
         float: right;
     }
 </style>
+
 <div id="diagram-space">
     <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors">
          
         <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
     </SfDiagramComponent>
 </div>
+
 <div id="properties">
            <input type="button" value="ZoomIn" @onclick="ZoomIn" />
            <input type="button" value="ZoomOut" @onclick="ZoomOut" />
            <input type="button" value="Reset" @onclick="ResetZoom" />
    
 </div>
+
 @code {
     public SfDiagramComponent diagram;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
      DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
+
     protected override void OnInitialized()
     {
         Node node = new Node()
@@ -287,6 +294,7 @@ To create a node, define the Node object and add it to the nodes collection of t
         connectors.Add(Connector);
         nodes.Add(node);
         nodes.Add(node2);
+
     }
   
     public void ZoomIn()

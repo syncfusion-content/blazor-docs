@@ -401,256 +401,256 @@ The following table lists components and its script reference.
         <th>Script name</th>
     </tr>
     <tr>
-        <th>TextBox</th>
-        <th>sf-textbox.min.js</th>
+        <td>TextBox</td>
+        <td>sf-textbox.min.js</td>
     </tr>
     <tr>
-        <th>NumericTextBox</th>
-        <th>sf-numerictextbox.min.js</th>
+        <td>NumericTextBox</td>
+        <td>sf-numerictextbox.min.js</td>
     </tr>
     <tr>
-        <th>MaskedTextBox</th>
-        <th>sf-maskedtextbox.min.js</th>
+        <td>MaskedTextBox</td>
+        <td>sf-maskedtextbox.min.js</td>
     </tr>
     <tr>
-        <th>Uploader</th>
-        <th>sf-uploader.min.js</th>
+        <td>Uploader</td>
+        <td>sf-uploader.min.js</td>
     </tr>
     <tr>
-        <th>Calendar</th>
-        <th>sf-calendar.min.js</th>
+        <td>Calendar</td>
+        <td>sf-calendar.min.js</td>
     </tr>
     <tr>
-        <th>DatePicker</th>
-        <th>sf-datepicker.min.js</th>
+        <td>DatePicker</td>
+        <td>sf-datepicker.min.js</td>
     </tr>
     <tr>
-        <th>DateTimePicker</th>
-        <th>sf-datepicker.min.js</th>
+        <td>DateTimePicker</td>
+        <td>sf-datepicker.min.js</td>
     </tr>
     <tr>
-        <th>DateRangePicker</th>
-        <th>sf-daterangepicker.min.js</th>
+        <td>DateRangePicker</td>
+        <td>sf-daterangepicker.min.js</td>
     </tr>
     <tr>
-        <th>DiagramComponent</th>
-        <th>sf-diagramcomponent.min.js</th>
+        <td>DiagramComponent</td>
+        <td>sf-diagramcomponent.min.js</td>
     </tr>
     <tr>
-        <th>TimePicker</th>
-        <th>sf-timepicker.min.js</th>
+        <td>TimePicker</td>
+        <td>sf-timepicker.min.js</td>
     </tr>
     <tr>
-        <th>AutoComplete</th>
-        <th>sf-dropdownlist.min.js</th>
+        <td>AutoComplete</td>
+        <td>sf-dropdownlist.min.js</td>
     </tr>
     <tr>
-        <th>ComboBox</th>
-        <th>sf-dropdownlist.min.js</th>
+        <td>ComboBox</td>
+        <td>sf-dropdownlist.min.js</td>
     </tr>
     <tr>
-        <th>DropDownList</th>
-        <th>sf-dropdownlist.min.js</th>
+        <td>DropDownList</td>
+        <td>sf-dropdownlist.min.js</td>
     </tr>
     <tr>
-        <th>MultiSelect</th>
-        <th>sf-multiselect.min.js</th>
+        <td>MultiSelect</td>
+        <td>sf-multiselect.min.js</td>
     </tr>
     <tr>
-        <th>DropDownButton</th>
-        <th>sf-drop-down-button.min.js</th>
+        <td>DropDownButton</td>
+        <td>sf-drop-down-button.min.js</td>
     </tr>
     <tr>
-        <th>SplitButton</th>
-        <th>sf-drop-down-button.min.js</th>
+        <td>SplitButton</td>
+        <td>sf-drop-down-button.min.js</td>
     </tr>
     <tr>
-        <th>ProgressButton</th>
-        <th>sf-spinner.min.js</th>
+        <td>ProgressButton</td>
+        <td>sf-spinner.min.js</td>
     </tr>
     <tr>
-        <th>ListBox</th>
-        <th>sf-listbox.min.js</th>
+        <td>ListBox</td>
+        <td>sf-listbox.min.js</td>
     </tr>
     <tr>
-        <th>ColorPicker</th>
-        <th>sf-colorpicker.min.js</th>
+        <td>ColorPicker</td>
+        <td>sf-colorpicker.min.js</td>
     </tr>
     <tr>
-        <th>Signature</th>
-        <th>sf-signature.min.js</th>
+        <td>Signature</td>
+        <td>sf-signature.min.js</td>
     </tr>
     <tr>
-        <th>ContextMenu</th>
-        <th>sf-contextmenu.min.js</th>
+        <td>ContextMenu</td>
+        <td>sf-contextmenu.min.js</td>
     </tr>
     <tr>
-        <th>Menu</th>
-        <th>sf-menu.min.js</th>
+        <td>Menu</td>
+        <td>sf-menu.min.js</td>
     </tr>
     <tr>
-        <th>Breadcrumb</th>
-        <th>sf-breadcrumb.min.js</th>
+        <td>Breadcrumb</td>
+        <td>sf-breadcrumb.min.js</td>
     </tr>
     <tr>
-        <th>QueryBuilder</th>
-        <th>sf-querybuilder.min.js</th>
+        <td>QueryBuilder</td>
+        <td>sf-querybuilder.min.js</td>
     </tr>
     <tr>
-        <th>Grid</th>
-        <th>sf-grid.min.js</th>
+        <td>Grid</td>
+        <td>sf-grid.min.js</td>
     </tr>
     <tr>
-        <th>Accordion</th>
-        <th>sf-accordion.min.js</th>
+        <td>Accordion</td>
+        <td>sf-accordion.min.js</td>
     </tr>
     <tr>
-        <th>Tab</th>
-        <th>sf-tab.min.js</th>
+        <td>Tab</td>
+        <td>sf-tab.min.js</td>
     </tr>
     <tr>
-        <th>Toolbar</th>
-        <th>sf-toolbar.min.js</th>
+        <td>Toolbar</td>
+        <td>sf-toolbar.min.js</td>
     </tr>
     <tr>
-        <th>Schedule</th>
-        <th>sf-schedule.min.js</th>
+        <td>Schedule</td>
+        <td>sf-schedule.min.js</td>
     </tr>
     <tr>
-        <th>BarcodeGenerator</th>
-        <th>sf-barcode.min.js</th>
+        <td>BarcodeGenerator</td>
+        <td>sf-barcode.min.js</td>
     </tr>
     <tr>
-        <th>Maps</th>
-        <th>sf-maps.min.js</th>
+        <td>Maps</td>
+        <td>sf-maps.min.js</td>
     </tr>
     <tr>
-        <th>CircularGauge</th>
-        <th>sf-circulargauge.min.js</th>
+        <td>CircularGauge</td>
+        <td>sf-circulargauge.min.js</td>
     </tr>
     <tr>
-        <th>LinearGauge</th>
-        <th>sf-lineargauge.min.js</th>
+        <td>LinearGauge</td>
+        <td>sf-lineargauge.min.js</td>
     </tr>
     <tr>
-        <th>Chart</th>
-        <th>sf-chart.min.js</th>
+        <td>Chart</td>
+        <td>sf-chart.min.js</td>
     </tr>
     <tr>
-        <th>AccumulationChart</th>
-        <th>sf-accumulation-chart.min.js</th>
+        <td>AccumulationChart</td>
+        <td>sf-accumulation-chart.min.js</td>
     </tr>
     <tr>
-        <th>StockChart</th>
-        <th>sf-stock-chart.min.js</th>
+        <td>StockChart</td>
+        <td>sf-stock-chart.min.js</td>
     </tr>
     <tr>
-        <th>BulletChart</th>
-        <th>sf-bullet-chart.min.js</th>
+        <td>BulletChart</td>
+        <td>sf-bullet-chart.min.js</td>
     </tr>
     <tr>
-        <th>Sparkline</th>
-        <th>sf-sparkline.min.js</th>
+        <td>Sparkline</td>
+        <td>sf-sparkline.min.js</td>
     </tr>
     <tr>
-        <th>TreeMap</th>
-        <th>sf-treemap.min.js</th>
+        <td>TreeMap</td>
+        <td>sf-treemap.min.js</td>
     </tr>
     <tr>
-        <th>ProgressBar</th>
-        <th>sf-progressbar.min.js</th>
+        <td>ProgressBar</td>
+        <td>sf-progressbar.min.js</td>
     </tr>
     <tr>
-        <th>SmithChart</th>
-        <th>sf-smith-chart.min.js</th>
+        <td>SmithChart</td>
+        <td>sf-smith-chart.min.js</td>
     </tr>
     <tr>
-        <th>RangeNavigator</th>
-        <th>sf-range-navigator.min.js</th>
+        <td>RangeNavigator</td>
+        <td>sf-range-navigator.min.js</td>
     </tr>
     <tr>
-        <th>HeatMap</th>
-        <th>sf-heatmap.min.js</th>
+        <td>HeatMap</td>
+        <td>sf-heatmap.min.js</td>
     </tr>
     <tr>
-        <th>FileManager</th>
-        <th>sf-filemanager.min.js</th>
+        <td>FileManager</td>
+        <td>sf-filemanager.min.js</td>
     </tr>
     <tr>
-        <th>Slider</th>
-        <th>sf-slider.min.js</th>
+        <td>Slider</td>
+        <td>sf-slider.min.js</td>
     </tr>
     <tr>
-        <th>Tooltip</th>
-        <th>sf-tooltip.min.js</th>
+        <td>Tooltip</td>
+        <td>sf-tooltip.min.js</td>
     </tr>
     <tr>
-        <th>ListView</th>
-        <th>sf-listview.min.js</th>
+        <td>ListView</td>
+        <td>sf-listview.min.js</td>
     </tr>
     <tr>
-        <th>DashboardLayout</th>
-        <th>sf-dashboard-layout.min.js</th>
+        <td>DashboardLayout</td>
+        <td>sf-dashboard-layout.min.js</td>
     </tr>
     <tr>
-        <th>Sidebar</th>
-        <th>sf-sidebar.min.js</th>
+        <td>Sidebar</td>
+        <td>sf-sidebar.min.js</td>
     </tr>
     <tr>
-        <th>TreeView</th>
-        <th>sf-treeview.min.js</th>
+        <td>TreeView</td>
+        <td>sf-treeview.min.js</td>
     </tr>
     <tr>
-        <th>PivotView</th>
-        <th>sf-pivotview.min.js</th>
+        <td>PivotView</td>
+        <td>sf-pivotview.min.js</td>
     </tr>
     <tr>
-        <th>TreeGrid</th>
-        <th>sf-treegrid.min.js</th>
+        <td>TreeGrid</td>
+        <td>sf-treegrid.min.js</td>
     </tr>
     <tr>
-        <th>Spinner</th>
-        <th>sf-spinner.min.js</th>
+        <td>Spinner</td>
+        <td>sf-spinner.min.js</td>
     </tr>
     <tr>
-        <th>Splitter</th>
-        <th>sf-splitter.min.js</th>
+        <td>Splitter</td>
+        <td>sf-splitter.min.js</td>
     </tr>
     <tr>
-        <th>Toast</th>
-        <th>sf-toast.min.js</th>
+        <td>Toast</td>
+        <td>sf-toast.min.js</td>
     </tr>
     <tr>
-        <th>Dialog</th>
-        <th>sf-dialog.min.js</th>
+        <td>Dialog</td>
+        <td>sf-dialog.min.js</td>
     </tr>
     <tr>
-        <th>RichTextEditor</th>
-        <th>sf-richtexteditor.min.js</th>
+        <td>RichTextEditor</td>
+        <td>sf-richtexteditor.min.js</td>
     </tr>
     <tr>
-        <th>InPlaceEditor</th>
-        <th>sf-inplaceeditor.min.js</th>
+        <td>InPlaceEditor</td>
+        <td>sf-inplaceeditor.min.js</td>
     </tr>
     <tr>
-        <th>Kanban</th>
-        <th>sf-kanban.min.js</th>
+        <td>Kanban</td>
+        <td>sf-kanban.min.js</td>
     </tr>
     <tr>
-        <th>Gantt</th>
-        <th>sf-gantt.min.js</th>
+        <td>Gantt</td>
+        <td>sf-gantt.min.js</td>
     </tr>
     <tr>
-        <th>PdfViewer</th>
-        <th>sf-pdfviewer.min.js</th>
+        <td>PdfViewer</td>
+        <td>sf-pdfviewer.min.js</td>
     </tr>
     <tr>
-        <th>DocumentEditor</th>
-        <th>sf-documenteditor.min.js</th>
+        <td>DocumentEditor</td>
+        <td>sf-documenteditor.min.js</td>
     </tr>
     <tr>
-        <th>Pager</th>
-        <th>sf-pager.min.js</th>
+        <td>Pager</td>
+        <td>sf-pager.min.js</td>
     </tr>
 </table>
 

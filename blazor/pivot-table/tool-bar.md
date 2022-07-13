@@ -471,7 +471,7 @@ In the below sample, toolbar UI actions such as add new report and save current 
             <PivotChartPrimaryYAxisBorder Width="0"></PivotChartPrimaryYAxisBorder>
         </PivotChartPrimaryYAxis>
     </PivotChartSettings>
-    <PivotViewEvents TValue="PivotProductDetails" OnActionBegin="actionBegin"></PivotViewEvents>
+    <PivotViewEvents TValue="PivotProductDetails" OnActionBegin="ActionBegin"></PivotViewEvents>
 </SfPivotView>
 
 @code{
@@ -479,6 +479,8 @@ In the below sample, toolbar UI actions such as add new report and save current 
     private SfPivotFieldList<PivotProductDetails> fieldList;
     private SfPivotView<PivotProductDetails> pivot;
     private List<Syncfusion.Blazor.PivotView.ToolbarItems> toolbar = new List<Syncfusion.Blazor.PivotView.ToolbarItems> {
+        ToolbarItems.New,
+        ToolbarItems.Save,
         ToolbarItems.Grid,
         ToolbarItems.Chart,
         ToolbarItems.Export,
@@ -493,12 +495,11 @@ In the below sample, toolbar UI actions such as add new report and save current 
     protected override void OnInitialized()
     {
         this.Data = ProductDetails.GetProductData();
-        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        
+        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.  
     }
     
     // Triggers when the UI action begins.
-    public void actionBegin(PivotActionBeginEventArgs args)
+    public void ActionBegin(PivotActionBeginEventArgs args)
     {
         if(args.ActionName == "Add new report" && args.ActionName == "Save current report")
         {
@@ -564,7 +565,7 @@ The event [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
             <PivotChartPrimaryYAxisBorder Width="0"></PivotChartPrimaryYAxisBorder>
         </PivotChartPrimaryYAxis>
     </PivotChartSettings>
-    <PivotViewEvents TValue="PivotProductDetails" OnActionComplete="actionComplete"></PivotViewEvents>
+    <PivotViewEvents TValue="PivotProductDetails" OnActionComplete="ActionComplete"></PivotViewEvents>
 </SfPivotView>
 
 @code{
@@ -589,11 +590,10 @@ The event [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
     {
         this.Data = ProductDetails.GetProductData();
         // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-
     }
     
     // Triggers when the UI action is completed.
-    public void actionComplete(PivotActionCompleteEventArgs args)
+    public void ActionComplete(PivotActionCompleteEventArgs args)
     {
         if(args.ActionName == "New report added" && args.ActionName == "Report saved")
         {
@@ -659,7 +659,7 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
             <PivotChartPrimaryYAxisBorder Width="0"></PivotChartPrimaryYAxisBorder>
         </PivotChartPrimaryYAxis>
     </PivotChartSettings>
-    <PivotViewEvents TValue="PivotProductDetails" OnActionFailure="actionFailure"></PivotViewEvents>
+    <PivotViewEvents TValue="PivotProductDetails" OnActionFailure="ActionFailure"></PivotViewEvents>
 </SfPivotView>
 
 @code{
@@ -667,6 +667,8 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
     private SfPivotFieldList<PivotProductDetails> fieldList;
     private SfPivotView<PivotProductDetails> Pivot;
     public List<Syncfusion.Blazor.PivotView.ToolbarItems> toolbar = new List<Syncfusion.Blazor.PivotView.ToolbarItems> {
+        ToolbarItems.New,
+        ToolbarItems.Save,
         ToolbarItems.Grid,
         ToolbarItems.Chart,
         ToolbarItems.Export,
@@ -681,17 +683,18 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
     protected override void OnInitialized()
     {
         this.Data = ProductDetails.GetProductData();
-        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        
+        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.  
     }
 
     // Triggers when the UI action fails to achieve the desired result.
-    public void actionFailure(PivotActionFailureEventArgs args)
+    public void ActionFailure(PivotActionFailureEventArgs args)
     {
-        if(args.ActionName=="Chart view")
+        if(args.ActionName=="Add new report")
         {
             /// Your code here.
         }       
     }
+
+```
 
 > You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.

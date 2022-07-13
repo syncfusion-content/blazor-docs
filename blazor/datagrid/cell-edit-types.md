@@ -868,7 +868,7 @@ The ComboBox component is defined inside the `EditTemplate` and changes can be s
         {
             if (Args.Action == "Add")
             {
-                Orders.Add(Args.Data);
+                ((OrdersDetails)Args.Data).TrySetMember(new DataSetMemberBinderClone("Account", false), ComboBoxValue);
             }
            else if (Args.Action == "Edit")
             {

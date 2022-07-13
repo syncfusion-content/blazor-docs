@@ -23,42 +23,140 @@ The following demo depicts the example for `Fade` animation,
 <div class="control-container">
     <SfCarousel AnimationEffect="CarouselAnimationEffect.Fade">
         <CarouselItem>
-            <div class="slide-content">Slide 1</div>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/cardinal.png" alt="cardinal" style="height:100%;width:100%;" /><figcaption class="img-caption">Cardinal</figcaption></figure>
         </CarouselItem>
         <CarouselItem>
-            <div class="slide-content">Slide 2</div>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/hunei.png" alt="kingfisher" style="height:100%;width:100%;" /><figcaption class="img-caption">Kingfisher</figcaption></figure>
         </CarouselItem>
         <CarouselItem>
-            <div class="slide-content">Slide 3</div>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/costa-rica.png" alt="keel-billed-toucan" style="height:100%;width:100%;" /><figcaption class="img-caption">Keel-billed-toucan</figcaption></figure>
         </CarouselItem>
         <CarouselItem>
-            <div class="slide-content">Slide 4</div>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/kaohsiung.png" alt="yellow-warbler" style="height:100%;width:100%;" /><figcaption class="img-caption">Yellow-warbler</figcaption></figure>
         </CarouselItem>
         <CarouselItem>
-            <div class="slide-content">Slide 5</div>
+           <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/bee-eater.png" alt="bee-eater" style="height:100%;width:100%;" /><figcaption class="img-caption">Bee-eater</figcaption></figure>
         </CarouselItem>
     </SfCarousel>
 </div>
 
 <style>
     .control-container {
-        background-color: #adb5bd;
         height: 300px;
         margin: 0 auto;
         width: 500px;
     }
 
-    .e-carousel .slide-content {
-        align-items: center;
-        display: flex;
-        font-size: 1.25rem;
+    .img-container {
         height: 100%;
-        justify-content: center;
+        margin: 0;
     }
+
+    .img-caption {
+        color: #fff;
+        font-size: 1rem;
+        position: absolute;
+        bottom: 3rem;
+        width: 100%;
+        text-align: center;
+    }
+
 </style>
 ```
 
 ![Carousel fade animation](images/fade_animation.gif)
+
+### Custom animation
+
+In Carousel, you can use customized animation effects for slide transitions using the [`Custom`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CarouselAnimationEffect.html) option of the [`AnimationEffect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_AnimationEffect) property and apply custom animation css via [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_CssClass) property.
+
+The following demo depicts the example for `parallax` custom animation
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<div class="control-container">
+    <SfCarousel AnimationEffect="CarouselAnimationEffect.Custom" CssClass="parallax">
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/cardinal.png" alt="cardinal" style="height:100%;width:100%;" /><figcaption class="img-caption">Cardinal</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/hunei.png" alt="kingfisher" style="height:100%;width:100%;" /><figcaption class="img-caption">Kingfisher</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/costa-rica.png" alt="keel-billed-toucan" style="height:100%;width:100%;" /><figcaption class="img-caption">Keel-billed-toucan</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/kaohsiung.png" alt="yellow-warbler" style="height:100%;width:100%;" /><figcaption class="img-caption">Yellow-warbler</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+           <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/bee-eater.png" alt="bee-eater" style="height:100%;width:100%;" /><figcaption class="img-caption">Bee-eater</figcaption></figure>
+        </CarouselItem>
+    </SfCarousel>
+</div>
+
+<style>
+    .control-container {
+        height: 300px;
+        margin: 0 auto;
+        width: 500px;
+    }
+
+    .img-container {
+        height: 100%;
+        margin: 0;
+    }
+
+    .img-caption {
+        color: #fff;
+        font-size: 1rem;
+        position: absolute;
+        bottom: 3rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Parallax animation */
+    .parallax .e-carousel-item {
+        transition: transform 1s ease-in-out;
+    }
+
+    .parallax .e-carousel-item.e-next {
+        animation: ParallaxIn 1s ease-in-out;
+    }
+
+    .parallax .e-carousel-item.e-prev {
+        animation: ParallaxOut 1s ease-in-out;
+    }
+
+    @@keyframes ParallaxIn {
+        from {
+         opacity: 0;
+        transform: scale(0) translateY(100%);
+        }   
+
+        to {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+    }
+
+    @@keyframes ParallaxOut {
+        from {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+
+        to {
+            opacity: 0;
+            transform: scale(0) translateY(-100%);
+        }
+    }
+
+</style>
+```
+
+![Carousel custom animation](images/custom_animation.gif)
 
 ## Intervals between slides
 
@@ -116,6 +214,53 @@ In the carousel, all slides transitions are performed continuously after the spe
 
 <div class="control-container">
     <SfCarousel AutoPlay="false">
+        <CarouselItem>
+            <div class="slide-content">Slide 1</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 2</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 3</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 4</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 5</div>
+        </CarouselItem>
+    </SfCarousel>
+</div>
+
+<style>
+    .control-container {
+        background-color: #adb5bd;
+        height: 300px;
+        margin: 0 auto;
+        width: 500px;
+    }
+
+    .e-carousel .slide-content {
+        align-items: center;
+        display: flex;
+        font-size: 1.25rem;
+        height: 100%;
+        justify-content: center;
+    }
+</style>
+```
+
+## Pause on hover
+
+By default, Slide transitions are paused when hovering the mouse pointer over the Carousel element. You can enable or disable this functionality using the [`PauseOnHover`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_PauseOnHover) property.
+
+The following example depicts the code to play the slides when hovering the mouse pointer over the Carousel element.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<div class="control-container">
+    <SfCarousel  PauseOnHover="false">
         <CarouselItem>
             <div class="slide-content">Slide 1</div>
         </CarouselItem>
