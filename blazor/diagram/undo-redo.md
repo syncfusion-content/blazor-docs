@@ -2,6 +2,7 @@
 layout: post
 title: Undo Redo in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about undo redo support in Syncfusion Blazor Diagram component and much more.
+platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
