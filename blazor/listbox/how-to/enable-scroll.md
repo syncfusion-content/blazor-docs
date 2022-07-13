@@ -11,12 +11,12 @@ documentation: ug
 
 The ListBox supports scrolling and it can be achieved by restricting the height of the listbox using [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_Height) property.
 
-In the following sample, `Height` of the listbox is restricted to `290px`.
+In the following sample, `Height` of the listbox is restricted to `250px`.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-<SfListBox TValue="string[]" DataSource="@Vehicles" Height="290px" TItem="VehicleData">
+<SfListBox TValue="string[]" DataSource="@Vehicles" Height="250px" TItem="VehicleData">
    <ListBoxFieldSettings Text="Text" Value="Id" />
 </SfListBox>
 

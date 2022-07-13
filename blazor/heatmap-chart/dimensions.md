@@ -11,7 +11,7 @@ documentation: ug
 
 ## Size for heat map
 
-You can  set the size of heat map directly by using the  `Width` and `Height` properties.
+You can set the size of heat map directly by using the  `Width` and `Height` properties.
 
 ### In pixel
 
@@ -58,7 +58,7 @@ You can set the size for heat map in a pixel.
 
 ### In percentage
 
-By setting value in percentage, heat map gets its dimension with respect to its container. For example, when the height is ‘50%’, heat map rendered to half of the container height.
+By setting the value in percentage, the heat map gets its dimension with respect to its container. For example, when the height is ‘50%’, the heat map is rendered to half of the container height.
 
 ```cshtml
 

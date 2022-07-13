@@ -7,6 +7,8 @@ control: Diagram
 documentation: ug
 ---
 
+> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram-component/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+
 # Annotation for Connector in Blazor Diagram Component
 
 Annotations of a connector can be positioned using the following properties of AnnotationEditorViewModel class.

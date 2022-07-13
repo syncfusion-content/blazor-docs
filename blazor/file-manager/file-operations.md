@@ -174,7 +174,7 @@ The following table represents the request parameters of *rename* operations.
 |action|String|rename|Name of the file operation.|
 |path|String|-|Relative path in which the item is located.|
 |name|String|-|Current name of the item to be renamed.|
-|newname|String|-|New name for the item.|
+|NewName|String|-|New name for the item.|
 |data|FileManagerDirectoryContent|-|Details of the item to be renamed.|
 
 *Refer [File request and response contents](#file-request-and-response-contents) for the contents of data*.
@@ -599,7 +599,9 @@ The following table represents the request parameters of *download* operations.
 
 *Example:*
 
-```csharp
+{% tabs %}
+{% highlight c# tabtitle="Download action" %}
+
 {
     action:"download",
     path:"/",
@@ -649,7 +651,8 @@ The following table represents the request parameters of *download* operations.
         }
     ]
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 Downloads the requested items from the file server in response.
 
@@ -702,11 +705,11 @@ The following table represents the contents of *details* in the file manager req
 |type|String|-|File extension|
 |multipleFiles|Boolean|-|Say whether the details are about single file or multiple files.|
 
-## Action Buttons
+## Action buttons
 
 The file manager has several menu buttons to access the file operations. The list of menu buttons available in the file manager is given in the following table.
 
-|Menu Button|Behaviour|
+|Menu Button|Behavior|
 |----|----|
 |SortBy| Opens the sub menu to choose the sorting order and sorting parameter.|
 |View| Opens the sub menu to choose the View.|

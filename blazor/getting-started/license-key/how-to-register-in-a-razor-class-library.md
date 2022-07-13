@@ -23,7 +23,7 @@ If your Razor Class Library (RCL) project uses Syncfusion Blazor packages from [
 
 Refer to this [link](https://blazor.syncfusion.com/documentation/getting-started/razor-class-library/) for more information on getting started with the Syncfusion Blazor components in the RCL project.
 
-## For server side application
+## Server side application
 
 After configuring the RCL project with your Blazor Server application, register the license key in Configure method of Startup.cs
 
@@ -62,7 +62,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 }
 ```
 
-## For client side application
+## Client side application
 
 After configuring the RCL project with your Blazor Client WebAssembly application, register the license key in main method of Program.cs
 

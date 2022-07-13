@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in Blazor Dialog Component | Syncfusion
-description: Checkout and learn here all about Localization in Syncfusion Blazor Dialog component and much more details.
+description: Checkout and learn here all about Localization in the Syncfusion Blazor Dialog component and much more.
 platform: Blazor
 control: Dialog
 documentation: ug

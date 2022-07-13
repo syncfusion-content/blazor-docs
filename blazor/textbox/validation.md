@@ -25,3 +25,7 @@ The TextBox supports three types of validation styles namely `error`, `warning`,
 ```
 
 ![Validation in Blazor TextBox](./images/blazor-textbox-validation.png)
+
+## See also
+
+* [Create Edit Forms with FluentValidation and Syncfusion Blazor Components](https://www.syncfusion.com/blogs/post/create-edit-forms-with-fluentvalidation-and-syncfusion-blazor-components.aspx)

@@ -150,7 +150,7 @@ You can upload the files and files of folders in the Blazor application without 
 
 ### Save and Remove actions
 
-You can get the uploaded files as file stream in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange)  event argument. Now, you can write the save handler inside ValueChange event to save the files to desired location. Please find the save action code on below.
+You can get the uploaded files as file stream in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange)  event argument. Now, you can write the save handler inside ValueChange event to save the files to desired location. Please find the save action code below.
 
 {% tabs %}
 {% highlight razor %}
@@ -179,7 +179,7 @@ You can get the uploaded files as file stream in the [ValueChange](https://help.
 
 ![Blazor FileUpload displays Updated Files](../images/blazor-fileupload-with-updated-files.png)
 
-While clicking on the remove icon in the file list, you will get the [OnRemove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnRemove) event with removing file name as argument. So, you can write the remove handler inside OnRemove event to remove the particular file from desired location. Please find the remove action code on below.
+While clicking on the remove icon in the file list, you will get the [OnRemove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnRemove) event with removing file name as argument. So, you can write the remove handler inside OnRemove event to remove the particular file from desired location. Please find the remove action code below.
 
 {% tabs %}
 {% highlight cshtml %}

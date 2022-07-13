@@ -11,12 +11,58 @@ documentation: ug
 
 Diagram provides support to add different kind of nodes. They are as follows:
 
+* Text shape
 * Image shape
 * Path shape
 * Basic shape
 * Flow shape
 * SVG shape
 * HTML template 
+
+## Text node
+
+The Diagram allows you to add texts as [TextShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextShape.html). The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextShape.html#Syncfusion_Blazor_Diagram_TextShape_Content) property defines the text that is to be added. [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html) of the node is used as [TextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html) to customize the appearance of the text.
+
+The following code illustrates how to create a text node.
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+@* Initialize Diagram *@
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
+
+@code
+{
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+    protected override void OnInitialized()
+    {
+        Node node = new Node()
+        {
+            ID = "node1",
+            //Size of the node.
+            Height = 100,
+            Width = 100,
+            //Position of the node.
+            OffsetX = 100,
+            OffsetY = 100,
+            Shape = new TextShape()
+            {
+                //Set the Content of the text shape.
+                Content = "Text Node"
+            },
+            Style = new TextStyle()
+            {
+                Fill = "Yellow",
+                TextAlign= TextAlign.Left
+            }
+        };
+        nodes.Add(node);
+    }
+}
+```
+
+![Text Node in Blazor Diagram](images/blazor-diagram-TextNode.png)
 
 ## Image node
 

@@ -148,3 +148,69 @@ To create a node, define the Node object and add it to the nodes collection of t
     }
 }
 ```
+
+### Clear
+
+[Clear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Clear) method is used to remove all the elements such as nodes, connectors and groups from the diagram.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<input type="button" value="Clear" @onclick="Clear" />
+<SfDiagramComponent @ref="diagram" Width="500px" Height="500px" @bind-Nodes="@Nodes" @bind-Connectors="@Connectors"></SfDiagramComponent>
+
+@code
+{
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> Nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
+
+    protected override void OnInitialized()
+    {
+        Nodes.Add(new Node()
+        {
+            ID = "node1",
+            OffsetX = 100,
+            OffsetY = 100,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+        });
+        Nodes.Add(new Node()
+        {
+            ID = "node2",
+            OffsetX = 270,
+            OffsetY = 70,
+            Width = 50,
+            Height = 50,
+        });
+        Nodes.Add(new Node()
+        {
+            ID = "node3",
+            OffsetX = 330,
+            OffsetY = 130,
+            Width = 50,
+            Height = 50,
+        });
+        Nodes.Add(new NodeGroup()
+        {
+            ID = "group",
+            Children = new string[] { "node2", "node3" },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+        });
+        Connectors.Add(new Connector()
+        {
+            SourceID = "node1",
+            TargetID = "group",
+            Style = new ShapeStyle() { StrokeColor = "#6495ED" },
+            TargetDecorator = new DecoratorSettings() { Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" } }
+        });
+    }
+    private void Clear()
+    {
+        diagram.Clear();
+    }
+}
+```
+
+![Diagram Clear](images/Clear.gif)

@@ -21,7 +21,9 @@ The following list of themes are included in the Syncfusion Blazor components li
 |Google’s Material | material.css |
 |Google’s Material-Dark | material-dark.css |
 |Tailwind CSS | tailwind.css |
-|TailwindDark CSS | tailwind-dark.css |
+|Tailwind CSS Dark | tailwind-dark.css |
+|Fluent | fluent.css |
+|Fluent Dark | fluent-dark.css |
 |Microsoft Office Fabric | fabric.css |
 |Microsoft Office Fabric Dark | fabric-dark.css |
 |High Contrast | highcontrast.css |
@@ -105,7 +107,9 @@ Syncfusion Blazor Themes are available in the CDN. Make sure that the version in
 | Google’s Material | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material.css |
 | Google’s Material Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material-dark.css |
 | Tailwind CSS | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind.css |
-| Tailwind Dark CSS | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-dark.css |
+| Tailwind CSS Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-dark.css |
+| Fluent | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent.css |
+| Fluent Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent-dark.css |
 | Microsoft Office Fabric  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric.css |
 | Microsoft Office Fabric Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-dark.css |
 | High Contrast  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/highcontrast.css |
@@ -148,6 +152,7 @@ You can add the theme for the Blazor applications through **npm packages** using
       {
         "outputFile": "wwwroot/styles/customstyle.css",
         "inputFile": "wwwroot/styles/customstyle.scss",
+        "useNodeSass": true,
         "options": {
           "includePath": "node_modules/@syncfusion"
         }
@@ -487,6 +492,32 @@ The following example demonstrates how to change a theme dynamically in Blazor W
     ![Change theme dynamically in blazor WASM app](images/blazor-dynamic-theme-switching-wasm.gif) 
     
     > [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-WASM-app)
+  
+## Render Syncfusion Components in offline with Material and Tailwind Themes
+
+Material and Tailwind Themes uses online roboto font. If your app is designed to work in a local network without internet connection, follow the below steps to use offline fonts to work in offlince scenarios.
+   
+1. Download the minified styles for the required components from [CRG](https://blazor.syncfusion.com/crg/) site. Learn more about CRG in [help documentation](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
+2. Unzip the file and it contains the styles of the selected components and an `import.json` file, which stores the current settings.
+   ![Select styles folder](images/crg-styles.png)
+3. The styles folder of material and tailwind theme contains css files and a **customized** folder. The CSS files under **customized** folder doesn't contain the online google font dependencies.
+   ![Open customized folder](images/customized-folder-crg.png)
+4. Open the **customized** folder which contains CSS files without online dependecies of google fonts.
+   ![Customized CSS](images/custom-css-crg.png)
+5. Copy the files under the **customized** folder to Blazor application `~/wwwroot` folder.
+6. Now, manually add the custom styles in the Blazor App to render the components without any issues on the machines that contains no internet access.
+    * For **Blazor WASM App**, reference custom interop script in `~/wwwroot/index.html` file. 
+    * For **Blazor Server App**, reference custom interop script in 
+        * `~/Pages/_Layout.cshtml` file for `.NET 6` project
+        * `~/Pages/_Host.cshtml` file for `.NET 5 and .NET Core 3.X` project.
+
+    ```html
+    <head>
+        ....
+        ....
+        <link href="material.min.css" rel="stylesheet" />
+    </head>
+    ```
    
 ## See also
 

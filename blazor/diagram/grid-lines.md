@@ -7,6 +7,8 @@ control: Diagram
 documentation: ug
 ---
 
+> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram-component/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+
 # Gridlines in Blazor Diagram Component
 
 Gridlines are the pattern of lines drawn behind the diagram elements. It provides a visual guidance while dragging or arranging the objects on the diagram surface.

@@ -9,7 +9,7 @@ documentation: ug
 
 # Check list in Blazor ListView Component
 
-The ListView supports checkbox in default and group-lists which is used to select multiple items. The checkbox can be enabled by the `ShowCheckBox` property.
+The [Blazor ListView](https://www.syncfusion.com/blazor-components/blazor-listview) supports checkbox in default and group-lists which is used to select multiple items. The checkbox can be enabled by the `ShowCheckBox` property.
 
 The Checkbox will be useful in the scenario where there is a need to select multiple options. For example, in shipping cart it is possible to select or unselect the desired items before checkout and also it will be useful in selecting multiple items that belongs to same category using the group list.
 

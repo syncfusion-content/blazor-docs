@@ -25,7 +25,7 @@ You can create **Blazor WebAssembly App** using Visual Studio in one of the foll
 
 ## Install Syncfusion Blazor WordProcessor NuGet in the App
 
-Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
+Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages).
 
 To add Blazor DocumentEditor component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor) and then install it.
 
@@ -42,6 +42,8 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 {% endtabs %}
 
 Now, register the Syncfusion Blazor Service in the Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
+
+> From 2022 Vol1 (20.1) version - The default value of `IgnoreScriptIsolation` is changed as `true`, so, you don’t have to set `IgnoreScriptIsolation` property explicitly to refer scripts externally.
 
 * Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
 
@@ -96,6 +98,7 @@ Refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html**
 {% highlight cshtml tabtitle="~/index.html" %}
 
 <head>
+    ...
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 
@@ -119,6 +122,11 @@ Refer script in the `<head>` of the **~/index.html** file.
 
 {% endhighlight %}
 {% endtabs %}
+
+In the above example code, we have referred the script which is specific to Document Editor component. If you want to use Document Editor along the other Syncfusion Blazor component like Grid, RTE etc. Please refer below topic
+
+* [Adding script reference](https://blazor.syncfusion.com/documentation/common/adding-script-references)
+* [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)
 
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 

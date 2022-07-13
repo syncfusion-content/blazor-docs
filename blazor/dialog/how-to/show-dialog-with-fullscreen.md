@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Show Dialog with fullscreen in Blazor Dialog Component | Syncfusion
-description: Checkout and learn here all about Show Dialog with fullscreen in Syncfusion Blazor Dialog component and more.
+title: Show Dialog with full screen in Blazor Dialog Component | Syncfusion
+description: Checkout and learn here all about Show Dialog with full screen in Syncfusion Blazor Dialog component and more.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Show Dialog with fullscreen in Blazor Dialog Component
+# Show Dialog with full screen in Blazor Dialog Component
 
-You can show the dialog in fullscreen by passing `true` as argument to the dialog `Show` method. By using `Visible` property you can prevent the dialog from showing initially.
+You can show the dialog in full screen by passing `true` as argument to the dialog `Show` method. By using the `Visible` property, you can prevent the dialog from showing initially.
 
 ```cshtml
 

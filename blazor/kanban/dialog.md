@@ -9,7 +9,7 @@ documentation: ug
 
 # Card Editing in Blazor Kanban Component
 
-The Kanban provides built-in support to add, edit and delete a card using dialog module. User can edit a card using the following ways.
+The [Blazor Kanban Board](https://www.syncfusion.com/blazor-components/blazor-kanban-board) provides built-in support to add, edit and delete a card using dialog module. User can edit a card using the following ways.
 
 * Built-in dialog module
 * Dialog template

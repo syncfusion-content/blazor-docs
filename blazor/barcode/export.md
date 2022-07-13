@@ -18,7 +18,7 @@ documentation: ug
 
 <input type="button" value="Export" @onclick="@OnExport" />
 <SfQRCodeGenerator Width="200px" Height="150px" Value="Syncfusion" @ref="@QRcode" >
-    <QRCodeGeneratorDisplayText text="Text"></QRCodeGeneratorDisplayText>
+    <QRCodeGeneratorDisplayText Text="Text"></QRCodeGeneratorDisplayText>
 </SfQRCodeGenerator>
 @code{
     SfQRCodeGenerator QRcode;
@@ -38,7 +38,7 @@ Barcode provides support to export as an image in the specified image type and r
 
 <input type="button" value="Export" @onclick="@OnExport" />
 <SfQRCodeGenerator Width="200px" Height="150px" Value="Syncfusion" @ref="@QRcode">
-    <QRCodeGeneratorDisplayText text="Text"></QRCodeGeneratorDisplayText>
+    <QRCodeGeneratorDisplayText Text="Text"></QRCodeGeneratorDisplayText>
 </SfQRCodeGenerator>
 
 @code

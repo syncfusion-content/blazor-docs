@@ -39,7 +39,7 @@ This section explains the list of events of the DropDown List component which wi
 
     private void BlurHandler(Object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -73,7 +73,7 @@ This section explains the list of events of the DropDown List component which wi
 
     private void ValueChangeHandler(ChangeEventArgs<string, GameFields> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -108,7 +108,7 @@ This section explains the list of events of the DropDown List component which wi
 
     private void CloseHandler(ClosedEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -141,7 +141,7 @@ This section explains the list of events of the DropDown List component which wi
 
     private void CreatedHandler(Object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -174,7 +174,7 @@ This section explains the list of events of the DropDown List component which wi
 
     private void DestroyedHandler(Object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -207,7 +207,7 @@ This section explains the list of events of the DropDown List component which wi
 
     private void FocusHandler(Object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -240,7 +240,7 @@ This section explains the list of events of the DropDown List component which wi
 
     private void OnOpenHandler(BeforeOpenEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -273,7 +273,7 @@ This section explains the list of events of the DropDown List component which wi
 
     private void OnCloseHandler(PopupEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -306,7 +306,7 @@ This section explains the list of events of the DropDown List component which wi
 
     private void DataBoundHandler(DataBoundEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -340,7 +340,7 @@ This section explains the list of events of the DropDown List component which wi
 
     private void Filteringhandler(FilteringEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -379,7 +379,7 @@ This section explains the list of events of the DropDown List component which wi
 
     private void OnActionBeginhandler(ActionBeginEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -418,7 +418,7 @@ This section explains the list of events of the DropDown List component which wi
 
     private void OnActionBeginhandler(ActionBeginEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -456,7 +456,7 @@ This section explains the list of events of the DropDown List component which wi
 
     private void OnActionFailurehandler(Exception args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -490,7 +490,7 @@ This section explains the list of events of the DropDown List component which wi
 
     private void OnValueSelecthandler(SelectEventArgs<GameFields> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -523,7 +523,7 @@ This section explains the list of events of the DropDown List component which wi
 
     private void Openedhandler(PopupEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 

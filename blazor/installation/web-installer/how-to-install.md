@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Installing Syncfusion Blazor web installer - Syncfusion
-description: Learn here about the how to install Syncfusion Blazor web installer after downloding from our syncfusion website.
+description: Learn here about how to install Syncfusion Blazor web installer after downloading from our Syncfusion website.
 platform: Blazor
 component: Common
 documentation: ug
@@ -130,7 +130,7 @@ You can uninstall all the installed products by selecting the **Syncfusion Essen
 
    ![Web Installer Uninstall Available Tab](images/webinstaller-uninstall-3.png)
 
-3. If any other products selected for installation, ***Uninstall previous version wizard*** will be displayed with previous version(s) installed for the selected products. Here you can view the list of installed previous versions for the selected products. Select **Uninstall All** checkbox to select all the versions. Click Next.
+3. If any other products are selected for installation, ***Uninstall previous version wizard*** will be displayed with previous version(s) installed for the selected products. Here you can view the list of installed previous versions for the selected products. Select **Uninstall All** checkbox to select all the versions. Click Next.
 
    ![Web Installer Uninstall Previous version Wizard](images/webinstaller-uninstall-4.png)
 

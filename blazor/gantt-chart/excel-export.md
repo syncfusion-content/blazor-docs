@@ -9,18 +9,19 @@ documentation: ug
 
 # Excel Export in Blazor Gantt Chart Component
 
-The excel export allows exporting GanttChart data to Excel and CSV formats. You need to use the  **ExcelExportAsync** and **CsvExportAsync** method for exporting. To enable Excel export in the Gantt chart, set the `AllowExcelExport` property as true.
+The excel export allows exporting GanttChart data to Excel and CSV formats. You need to use the  **ExcelExportAsync** and **CsvExportAsync** method for exporting. To enable Excel export in the Gantt chart, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowExcelExport) property as true.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
+
 <SfGantt ID="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })" DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" Child="SubTasks"></GanttTaskFields>
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
     <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code{
     public SfGantt<TaskData> Gantt;
-    public List<TaskData> TaskCollection { get; set; }
+    private List<TaskData> TaskCollection { get; set; }
     public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "GanttContainer_excelexport")
@@ -46,76 +47,26 @@ The excel export allows exporting GanttChart data to Excel and CSV formats. You 
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
-        public List<TaskData> SubTasks { get; set; }
+        public int? ParentId { get; set; }
         public int[] ResourceId { get; set; }
     }
 
-    public static List <TaskData> GetTaskCollection() {
-        List <TaskData> Tasks = new List <TaskData> () {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2019, 04, 02),
-                EndDate = new DateTime(2019, 04, 21),
-                SubTasks = (new List <TaskData> () {
-                    new TaskData() {
-                        TaskId = 2,
-                        TaskName = "Identify Site location",
-                        StartDate = new DateTime(2019, 04, 02),
-                        Duration = "0",
-                        Progress = 30
-                    },
-                    new TaskData() {
-                        TaskId = 3,
-                        TaskName = "Perform soil test",
-                        StartDate = new DateTime(2019, 04, 02),
-                        Duration = "4",
-                        Predecessor = "2"
-                    },
-                    new TaskData() {
-                        TaskId = 4,
-                        TaskName = "Soil test approval",
-                        StartDate = new DateTime(2019, 04, 02),
-                        Duration = "0",
-                        Progress = 30,
-                        Predecessor = "3"
-                    },
-                })
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2019, 04, 02),
-                EndDate = new DateTime(2019, 04, 21),
-                SubTasks = (new List <TaskData> () {
-                    new TaskData() {
-                        TaskId = 6,
-                        TaskName = "Develop floor plan for estimation",
-                        StartDate = new DateTime(2019, 04, 04),
-                        Duration = "3",
-                        Progress = 30,
-                        Predecessor = "4"
-                    },
-                    new TaskData() {
-                        TaskId = 7,
-                        TaskName = "List materials",
-                        StartDate = new DateTime(2019, 04, 04),
-                        Duration = "3",
-                        Predecessor = "6"
-                    },
-                    new TaskData() {
-                        TaskId = 8,
-                        TaskName = "Estimation approval",
-                        StartDate = new DateTime(2019, 04, 04),
-                        Duration = "0",
-                        Predecessor = "7"
-                    }
-                })
-            }
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentId = 1, Predecessor="2", },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, Predecessor="3", },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentId = 5, Predecessor="4", },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentId = 5, Predecessor="6", },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentId = 5, Predecessor="7", }
         };
-    return Tasks;
-}
-}
+        return Tasks;
+    }
+    }   
 ```
 
 ## Customize the excel export
@@ -142,7 +93,7 @@ The excel export provides an option to export hidden columns of gantt chart by d
 
 @code{
     public SfGantt<TaskData> Gantt;
-    public List<TaskData> TaskCollection { get; set; }
+    private List<TaskData> TaskCollection { get; set; }
     public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         Syncfusion.Blazor.Grids.ExcelExportProperties ExportProperties = new Syncfusion.Blazor.Grids.ExcelExportProperties();
@@ -172,89 +123,38 @@ The excel export provides an option to export hidden columns of gantt chart by d
         public int? ParentId { get; set; }
     }
 
-    public static List <TaskData> GetTaskCollection() {
-    List <TaskData> Tasks = new List <TaskData> () {
-
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21)
-        },
-        new TaskData() {
-            TaskId = 2,
-            TaskName = "Identify Site location",
-            StartDate = new DateTime(2019, 04, 02),
-            Duration = "0",
-            Progress = 30,
-            ParentId = 1
-        },
-        new TaskData() {
-            TaskId = 3,
-            TaskName = "Perform soil test",
-            StartDate = new DateTime(2019, 04, 02),
-            Duration = "4",
-            Progress = 40,
-            ParentId = 1
-        },
-        new TaskData() {
-            TaskId = 4,
-            TaskName = "Soil test approval",
-            StartDate = new DateTime(2019, 04, 02),
-            Duration = "0",
-            Progress = 30,
-            ParentId = 1
-        },
-        new TaskData() {
-            TaskId = 5,
-            TaskName = "Project estimation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21)
-        },
-        new TaskData() {
-            TaskId = 6,
-            TaskName = "Develop floor plan for estimation",
-            StartDate = new DateTime(2019, 04, 04),
-            Duration = "3",
-            Progress = 30,
-            ParentId = 5
-        },
-        new TaskData() {
-            TaskId = 7,
-            TaskName = "List materials",
-            StartDate = new DateTime(2019, 04, 04),
-            Duration = "3",
-            Progress = 40,
-            ParentId = 5
-        },
-        new TaskData() {
-            TaskId = 8,
-            TaskName = "Estimation approval",
-            StartDate = new DateTime(2019, 04, 04),
-            Duration = "0",
-            Progress = 30,
-            ParentId = 5
-        }
-    };
-    return Tasks;
-}
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+        };
+        return Tasks;
+    }
 }
 ```
 
 ### Theme
 
-The Excel export also provides an option to include custom theme for exported Excel document. To apply theme in exported Excel, define the `Theme` in `ExcelExportProperties`.
+The Excel export also provides an option to include custom theme for exported Excel document. To apply theme in exported Excel, define the `Theme` in [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_).
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt ID="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })" DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" Child="SubTasks"></GanttTaskFields>
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
     <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code{
     public SfGantt<TaskData> Gantt;
-    public List<TaskData> TaskCollection { get; set; }
+    private List<TaskData> TaskCollection { get; set; }
     public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         Syncfusion.Blazor.Grids.ExcelExportProperties ExportProperties = new Syncfusion.Blazor.Grids.ExcelExportProperties();
@@ -289,75 +189,25 @@ The Excel export also provides an option to include custom theme for exported Ex
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
-        public List<TaskData> SubTasks { get; set; }
+        public int? ParentId { get; set; }
         public int[] ResourceId { get; set; }
     }
 
-    public static List <TaskData> GetTaskCollection() {
-        List <TaskData> Tasks = new List <TaskData> () {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2019, 04, 02),
-                EndDate = new DateTime(2019, 04, 21),
-                SubTasks = (new List <TaskData> () {
-                    new TaskData() {
-                        TaskId = 2,
-                        TaskName = "Identify Site location",
-                        StartDate = new DateTime(2019, 04, 02),
-                        Duration = "0",
-                        Progress = 30
-                    },
-                    new TaskData() {
-                        TaskId = 3,
-                        TaskName = "Perform soil test",
-                        StartDate = new DateTime(2019, 04, 02),
-                        Duration = "4",
-                        Predecessor = "2"
-                    },
-                    new TaskData() {
-                        TaskId = 4,
-                        TaskName = "Soil test approval",
-                        StartDate = new DateTime(2019, 04, 02),
-                        Duration = "0",
-                        Progress = 30,
-                        Predecessor = "3"
-                    },
-                })
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2019, 04, 02),
-                EndDate = new DateTime(2019, 04, 21),
-                SubTasks = (new List <TaskData> () {
-                    new TaskData() {
-                        TaskId = 6,
-                        TaskName = "Develop floor plan for estimation",
-                        StartDate = new DateTime(2019, 04, 04),
-                        Duration = "3",
-                        Progress = 30,
-                        Predecessor = "4"
-                    },
-                    new TaskData() {
-                        TaskId = 7,
-                        TaskName = "List materials",
-                        StartDate = new DateTime(2019, 04, 04),
-                        Duration = "3",
-                        Predecessor = "6"
-                    },
-                    new TaskData() {
-                        TaskId = 8,
-                        TaskName = "Estimation approval",
-                        StartDate = new DateTime(2019, 04, 04),
-                        Duration = "0",
-                        Predecessor = "7"
-                    }
-                })
-            }
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentId = 1, Predecessor="2", },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, Predecessor="3", },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentId = 5, Predecessor="4", },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentId = 5, Predecessor="6", },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentId = 5, Predecessor="7", }
         };
-    return Tasks;
-}
+        return Tasks;
+    }
 }
 ```
 
@@ -370,13 +220,13 @@ You can assign the file name for the exported document by defining **FileName** 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt ID="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })" DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" Child="SubTasks"></GanttTaskFields>
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
     <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code{
     public SfGantt<TaskData> Gantt;
-    public List<TaskData> TaskCollection { get; set; }
+    private List<TaskData> TaskCollection { get; set; }
     public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "GanttContainer_excelexport")
@@ -406,75 +256,25 @@ You can assign the file name for the exported document by defining **FileName** 
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
-        public List<TaskData> SubTasks { get; set; }
+        public int? ParentId { get; set; }
         public int[] ResourceId { get; set; }
     }
 
-    public static List <TaskData> GetTaskCollection() {
-        List <TaskData> Tasks = new List <TaskData> () {
-            new TaskData() {
-                TaskId = 1,
-                TaskName = "Project initiation",
-                StartDate = new DateTime(2019, 04, 02),
-                EndDate = new DateTime(2019, 04, 21),
-                SubTasks = (new List <TaskData> () {
-                    new TaskData() {
-                        TaskId = 2,
-                        TaskName = "Identify Site location",
-                        StartDate = new DateTime(2019, 04, 02),
-                        Duration = "0",
-                        Progress = 30
-                    },
-                    new TaskData() {
-                        TaskId = 3,
-                        TaskName = "Perform soil test",
-                        StartDate = new DateTime(2019, 04, 02),
-                        Duration = "4",
-                        Predecessor = "2"
-                    },
-                    new TaskData() {
-                        TaskId = 4,
-                        TaskName = "Soil test approval",
-                        StartDate = new DateTime(2019, 04, 02),
-                        Duration = "0",
-                        Progress = 30,
-                        Predecessor = "3"
-                    },
-                })
-            },
-            new TaskData() {
-                TaskId = 5,
-                TaskName = "Project estimation",
-                StartDate = new DateTime(2019, 04, 02),
-                EndDate = new DateTime(2019, 04, 21),
-                SubTasks = (new List <TaskData> () {
-                    new TaskData() {
-                        TaskId = 6,
-                        TaskName = "Develop floor plan for estimation",
-                        StartDate = new DateTime(2019, 04, 04),
-                        Duration = "3",
-                        Progress = 30,
-                        Predecessor = "4"
-                    },
-                    new TaskData() {
-                        TaskId = 7,
-                        TaskName = "List materials",
-                        StartDate = new DateTime(2019, 04, 04),
-                        Duration = "3",
-                        Predecessor = "6"
-                    },
-                    new TaskData() {
-                        TaskId = 8,
-                        TaskName = "Estimation approval",
-                        StartDate = new DateTime(2019, 04, 04),
-                        Duration = "0",
-                        Predecessor = "7"
-                    }
-                })
-            }
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentId = 1, Predecessor="2", },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, Predecessor="3", },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentId = 5, Predecessor="4", },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentId = 5, Predecessor="6", },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentId = 5, Predecessor="7", }
         };
-    return Tasks;
-}
+        return Tasks;
+    }
 }
 ```
 

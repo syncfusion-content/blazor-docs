@@ -394,7 +394,7 @@ This section explains the list of events of the ComboBox component which will be
 
 <SfDropDownList TValue="string" TItem="OrderDetails" Query="@RemoteDataQuery">
     <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
-    <DropDownListEvents TValue="string" TItem="OrderDetails" OnActionBegin="@OnActionBeginhandler"></DropDownListEvents>
+    <DropDownListEvents TValue="string" TItem="OrderDetails" OnActionComplete="@OnActionCompletehandler"></DropDownListEvents>
     <DropDownListFieldSettings Text="CustomerID" Value="CustomerID"></DropDownListFieldSettings>
 </SfDropDownList>
 
@@ -415,7 +415,7 @@ This section explains the list of events of the ComboBox component which will be
         public string ShipAddress { get; set; }
     }
 
-    private void OnActionBeginhandler(ActionBeginEventArgs args)
+    private void OnActionCompletehandler(ActionCompleteEventArgs args)
     {
         // Here, you can customize your code.
     }

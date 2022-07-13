@@ -13,7 +13,7 @@ This section explains the list of events of the In-place Editor's component whic
 
 ## Created
 
-`Created` event  triggers once the component rendering is completed.
+`Created` event triggers once the component rendering is completed.
 
 ```cshtml
 
@@ -26,7 +26,7 @@ This section explains the list of events of the In-place Editor's component whic
 
     public void CreatedHandler(Object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -34,7 +34,7 @@ This section explains the list of events of the In-place Editor's component whic
 
 ## OnActionBegin
 
-`OnActionBegin` event  triggers before the data submitted to the server.
+`OnActionBegin` event triggers before the data submitted to the server.
 
 ```cshtml
 
@@ -47,7 +47,7 @@ This section explains the list of events of the In-place Editor's component whic
 
     public void OnActionBeginHandler(ActionBeginEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -55,7 +55,7 @@ This section explains the list of events of the In-place Editor's component whic
 
 ## OnActionSuccess
 
-`OnActionSuccess` event  triggers when data submitted successfully to the server.
+`OnActionSuccess` event triggers when data is submitted successfully to the server.
 
 ```cshtml
 
@@ -68,7 +68,7 @@ This section explains the list of events of the In-place Editor's component whic
 
     public void OnActionSuccessHandler(ActionEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -76,7 +76,7 @@ This section explains the list of events of the In-place Editor's component whic
 
 ## OnActionFailure
 
-`OnActionFailure` event  triggers when data submission failed.
+`OnActionFailure` event triggers when data submission failed.
 
 ```cshtml
 
@@ -89,7 +89,7 @@ This section explains the list of events of the In-place Editor's component whic
 
     public void OnActionFailureHandler(ActionEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -97,7 +97,7 @@ This section explains the list of events of the In-place Editor's component whic
 
 ## ValueChange
 
-`ValueChange` event  triggers when the integrated component value has changed that render based on the `type` property in the In-place editor.
+`ValueChange` event triggers when the integrated component value has changed that render based on the `type` property in the In-place editor.
 
 ```cshtml
 
@@ -110,7 +110,7 @@ This section explains the list of events of the In-place Editor's component whic
 
     public void ValueChangeHandler(ChangeEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -131,7 +131,7 @@ This section explains the list of events of the In-place Editor's component whic
 
     public void DestroyedHandler(Object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 

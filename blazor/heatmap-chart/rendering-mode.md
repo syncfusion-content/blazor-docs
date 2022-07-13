@@ -7,7 +7,7 @@ control: HeatMap Chart
 documentation: ug
 ---
 
-# Rendering mode in Blazor HeatMap Chart Component
+# Rendering Mode in Blazor HeatMap Chart Component
 
 Heat map can be displayed using `Scalable Vector Graphics (SVG)` rendering logic to improve the initial load performance and scalability.
 

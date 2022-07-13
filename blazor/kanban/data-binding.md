@@ -16,7 +16,7 @@ It supports the following types of data binding:
 * Local data
 * Remote data
 
-> When using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) as `IEnumerable<T>`, component type(TValue) will be inferred from its value. When using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding, the TValue must be provided explicitly in the Kanban component.
+> When using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) as `IEnumerable<T>`, component type(TValue) will be inferred from its value. When using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding, the TValue must be provided explicitly in the [Blazor Kanban](https://www.syncfusion.com/blazor-components/blazor-kanban-board) component.
 
 ## Local data
 

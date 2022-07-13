@@ -7,7 +7,7 @@ control: HeatMap Chart
 documentation: ug
 ---
 
-# Bubble heat map in Blazor HeatMap Chart Component
+# Bubble Heat Map in Blazor HeatMap Chart Component
 
 Data points represent the data source values with `Gradient` or `Fixed` colors in the heat map. You can customize the appearance of these data points by changing the `Color` and `Shape` attributes. The data points can be represented in color fill or bubble shape by defining the `TileType` property. By default, the data points are color filled with `Gradient` or `Fixed` and this depiction of data points is defined as `Rect` in the `TileType` property.
 

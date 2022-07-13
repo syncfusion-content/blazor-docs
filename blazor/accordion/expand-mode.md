@@ -9,7 +9,7 @@ documentation: ug
 
 # Expand Mode in Blazor Accordion Component
 
- The Accordion supports the two listed types of expand modes while expanding or collapsing the item.
+ The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) supports the two listed types of expand modes while expanding or collapsing the item.
 
 * Single
 * Multiple
@@ -26,7 +26,7 @@ This property enables to expand only one Accordion item at a time. If any new it
     <AccordionItems>
         <AccordionItem Expanded="true" Header="ASP.NET" Content="Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services."></AccordionItem>
         <AccordionItem Header="ASP.NET MVC" Content="The Model-View-Controller (MVC) architectural pattern separates an application into three main components: the model, the view, and the controller."></AccordionItem>
-        <AccordionItem Header="JavaScript" Content="JavaScript (JS) is an interpreted computer programming language.It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed."></AccordionItem>
+        <AccordionItem Header="JavaScript" Content="JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed."></AccordionItem>
     </AccordionItems>
 </SfAccordion>
 
@@ -48,7 +48,7 @@ The default [ExpandMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     <AccordionItems>
         <AccordionItem Header="ASP.NET" Content="Microsoft ASP.NET is a set of technologies in the Microsoft .NET Framework for building Web applications and XML Web services."></AccordionItem>
         <AccordionItem Header="ASP.NET MVC" Content="The Model-View-Controller (MVC) architectural pattern separates an application into three main components: the model, the view, and the controller."></AccordionItem>
-        <AccordionItem Header="JavaScript" Content="JavaScript (JS) is an interpreted computer programming language.It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed."></AccordionItem>
+        <AccordionItem Header="JavaScript" Content="JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate asynchronously, and alter the document content that was displayed."></AccordionItem>
     </AccordionItems>
 </SfAccordion>
 

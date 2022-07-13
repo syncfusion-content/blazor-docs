@@ -51,3 +51,50 @@ The following Syncfusion Blazor components support two-way binding:
 * [Splitter](https://blazor.syncfusion.com/documentation/splitter/two-way-binding)
 * [TextBox](https://blazor.syncfusion.com/documentation/textbox/data-binding)
 * [TimePicker](https://blazor.syncfusion.com/documentation/timepicker/data-binding)
+
+## Bind component generated dynamically using RenderFragment
+
+You can build Blazor render trees manually with `RenderTreeBuilder` which provides methods for building and manipulating components manually in C# code. The following code explains how to bind value for `DatePicker` component which is generated dynamically using `RenderFragment`. Refer sequence 3,4 where binding and call back is handled.
+
+```cshtml
+
+@using Syncfusion.Blazor.Calendars
+@using Syncfusion.Blazor.Buttons
+
+<div id="component-container">
+    @dynamicComponent
+</div>
+
+<SfButton ID="dynamic-button" Content="Render DatePicker" @onclick="RenderComponent"></SfButton>
+<SfButton ID="button" Content="Change Date" @onclick="onChange"></SfButton>
+
+@code {
+    public DateTime? DateValue { get; set; } = DateTime.Now.Date;
+    private RenderFragment dynamicComponent { get; set; } 
+    private RenderFragment CreateComponent() => builder =>
+    {
+        builder.OpenComponent(0, typeof(SfDatePicker<DateTime>));
+        builder.AddAttribute(1, "ID", "MyDynamicId");
+        builder.AddAttribute(2, "Placeholder", "Choose a date");
+        //Binding the value property with DateValue property.
+        builder.AddAttribute(3, "Value", DateValue);
+        builder.AddAttribute(4, "onchange", Microsoft.AspNetCore.Components.EventCallback.Factory.
+                CreateBinder(this, _value => DateValue = _value, DateValue));
+                
+        builder.CloseComponent();
+    };
+
+    private void RenderComponent()
+    {
+        dynamicComponent = CreateComponent();
+    }
+    private void onChange()
+    {
+        DateValue = new DateTime(DateTime.Now.Year,DateTime.Now.Month,07);
+    }
+}
+```
+
+![Binding in Blazor when build a render tree](../images/blazor-date-picker.png)
+
+Refer [Manually build a render tree](https://docs.microsoft.com/en-us/aspnet/core/blazor/advanced-scenarios?#manually-build-a-render-tree-rendertreebuilder) topic for more details.

@@ -25,7 +25,7 @@ You can create **Blazor Server App** using Visual Studio in one of the following
 
 ## Install Syncfusion Blazor WordProcessor NuGet in the App
 
-Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details.
+Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages).
 
 To add Blazor DocumentEditor component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor) and then install it.
 
@@ -42,6 +42,8 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 {% endtabs %}
 
 Now, register the Syncfusion Blazor Service in the Blazor Server App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
+
+> From 2022 Vol1 (20.1) version - The default value of `IgnoreScriptIsolation` is changed as `true`, so, you don’t have to set `IgnoreScriptIsolation` property explicitly to refer scripts externally.
 
 * For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
@@ -102,6 +104,7 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 {% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
 
 <head>
+    ...
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 
@@ -110,6 +113,7 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 {% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" %}
 
 <head>
+    ...
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 
@@ -145,6 +149,11 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 {% endhighlight %}
 {% endtabs %}
+
+In the above example code, we have referred the script which is specific to Document Editor component. If you want to use Document Editor along the other Syncfusion Blazor component like Grid, RTE etc. Please refer below topic
+
+* [Adding script reference](https://blazor.syncfusion.com/documentation/common/adding-script-references)
+* [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)
 
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
@@ -198,7 +207,7 @@ To load an existing document during control initialization, use the following co
         using (FileStream fileStream = new FileStream(filePath, System.IO.FileMode.Open, System.IO.FileAccess.Read))
         {
             WordDocument document = WordDocument.Load(fileStream, ImportFormatType.Docx);
-            string json = Newtonsoft.Json.JsonConvert.SerializeObject(document);
+            string json = JsonSerializer.Serialize(document);
             document.Dispose();
             //To observe the memory go down, null out the reference of document variable.
             document = null;

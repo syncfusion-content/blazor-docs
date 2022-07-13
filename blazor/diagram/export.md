@@ -7,6 +7,8 @@ control: Diagram
 documentation: ug
 ---
 
+> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram-component/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+
 # Printing and Exporting in Blazor Diagram Component
 
 Diagram provides support to export its content as image/svg files. The server-side method [ExportDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_ExportDiagram_Syncfusion_Blazor_Diagrams_IExportOptions_) helps to export the diagram. The following code illustrates how to export the diagram as image.

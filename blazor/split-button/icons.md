@@ -11,7 +11,7 @@ documentation: ug
 
 ## Split Button Icons
 
-Split Button can have an icon to provide the visual representation of the action. To place the icon on a Split Button, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_IconCss) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the Split Button. The icon's position can be customized by using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_IconPosition) property.
+[Blazor Split Button](https://www.syncfusion.com/blazor-components/blazor-split-button) can have an icon to provide the visual representation of the action. To place the icon on a Split Button, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_IconCss) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the Split Button. The icon's position can be customized by using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_IconPosition) property.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
