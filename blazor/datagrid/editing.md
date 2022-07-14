@@ -1225,6 +1225,123 @@ This is demonstrated in the following sample code:
 
 > You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-different-editmode-for-add-edit-action).
 
+## Bind and edit many-to-many relationship data
+
+Grid does not have direct support to bind column with many to many relation and perform CRUD operation. But, this can be achieved by using the column template and editing template features of the Grid.
+
+In the following sample, we have rendered the multi-select component in the Roles column. When the `RequestType` is Save, the edited changes can be saved into the grid.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+
+<SfGrid DataSource="@Employees" Height="315">
+    <GridEvents OnActionBegin="OnBegin" TValue="Person"></GridEvents>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Person.EmployeeID) HeaderText="EmployeeID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Person.Roles) HeaderText="Roles" Width="200" TextAlign="TextAlign.Left">
+            <Template>
+                @{
+                    var item = (context as Person);
+                    var output = "";
+                    if (item.Roles != null)
+                    {
+                        for (int i = 0; i < item.Roles.Count; i++)
+                        {
+                            if (item.Roles[i].Childrens != null)
+                            {
+                                output += item.Roles[i].Childrens.Child;
+                                if (i < item.Roles.Count - 1) output += ", ";
+                            }
+                        }
+                        @output
+                    }
+                }
+            </Template>
+            <EditTemplate>
+                @{
+                    var item = (context as Person);
+                    string output = "";
+                    if (item.Roles != null)
+                    {
+                        for (int i = 0; i < item.Roles.Count; i++)
+                        {
+                            if (item.Roles[i].Childrens != null)
+                            {
+                                output += item.Roles[i].Childrens.Child;
+                                if (i < item.Roles.Count - 1) output += ", ";
+                            }
+                        }                       
+                    }                    
+                    <SfMultiSelect @ref="MultiSelect" TItem="Name" TValue="string[]" Value="@output.Split(",")" Placeholder="Roles" DataSource="@RoleList">
+                        <MultiSelectFieldSettings Text="Child" Value="Child"></MultiSelectFieldSettings>
+                    </SfMultiSelect>
+                }
+            </EditTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(Person.Title) HeaderText="Title" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Person> Employees { get; set; }
+    SfMultiSelect<string[],Name> MultiSelect { get; set; }
+    public List<EmployeeName> Emp { get; set; }
+    public List<Name> RoleList { get; set; }
+    public void OnBegin(ActionEventArgs<Person> Args)
+    {
+        if(Args.RequestType == Syncfusion.Blazor.Grids.Action.Save)
+        {
+            Args.Data.Roles[0].Childrens.Child = String.Join(",",MultiSelect.Value);
+        }
+    }
+    protected override void OnInitialized()
+    {
+        RoleList = Enumerable.Range(1, 5).Select(x => new Name()
+        {
+            Child = "ALFKI" + x,
+        }).ToList();
+
+        Emp = Enumerable.Range(1, 5).Select(x => new EmployeeName()
+        {
+            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+            Childrens = new Name()
+            {
+                Child = "ALFKI"+x,
+            },
+            LastName = (new string[] { "Davalio", "Dew", "Vincent", "Rose", "Jobs" })[new Random().Next(5)],
+
+        }).ToList();
+        Employees = Enumerable.Range(1, 5).Select(x => new Person()
+        {
+            EmployeeID = x,
+            Roles = Emp,
+            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
+                                    "Inside Sales Coordinator" })[new Random().Next(4)],
+        }).ToList();
+    }
+
+    public class Person
+    {
+        public int? EmployeeID { get; set; }
+        public List<EmployeeName> Roles { get; set; }
+        public string Title { get; set; }
+    }
+
+    public class EmployeeName
+    {
+        public string FirstName { get; set; }
+        public Name Childrens { get; set; }
+        public string LastName { get; set; }
+    }
+    public class Name
+    {
+        public string Child { get; set; }
+    }
+}
+```
+
 ## See also
 
 * [Edit one column update the value in another column](https://www.syncfusion.com/forums/151238/edit-one-column-update-the-value-in-another-column)
