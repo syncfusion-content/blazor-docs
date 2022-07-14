@@ -230,9 +230,9 @@ You can customize the dialog position by using [Position](https://help.syncfusio
 
 ![Alert position Dialog](./images/blazor-alert-position.png)
 
-![Prompt position Dialog](./images/blazor-prompt-position.png)
+![Confirm position Dialog](./images/blazor-confirm-position.png)
 
-![Prompt position Dialog](./images/blazor-confirm-position.png)
+![Prompt position Dialog](./images/blazor-prompt-position.png)
 
 ## Dimension
 
@@ -265,14 +265,6 @@ You can customize the dialog dimensions using [DialogDimension.Height](https://h
 You can customize the close icon using [ShowCloseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_ShowCloseIcon) property. If the `ShowCloseIcon` property is set to `true` then the close icon will appear. Use the following code to enable the `ShowCloseIcon`.
 
 {% tabs %}
-{% highlight razor %}
-
-{% include_relative code-snippet/alert-close-button.razor %}
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
 
 {% highlight tabtitle="alert.razor" %}
 {% include_relative code-snippet/alert-close-button.razor %}
@@ -298,6 +290,8 @@ You can customize the close icon using [ShowCloseIcon](https://help.syncfusion.c
 
 You can customize the predefined dialog buttons by using [PrimaryButtonOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_IsPrimary) property. Use the following code to customize the predefined dialog buttons.
 
+{% tabs %}
+
 {% highlight tabtitle="alert.razor" %}
 {% include_relative code-snippet/alert-action-button.razor %}
 {% endhighlight %}
@@ -309,6 +303,8 @@ You can customize the predefined dialog buttons by using [PrimaryButtonOptions](
 {% highlight tabtitle="prompt.razor" %}
 {% include_relative code-snippet/prompt-action-button.razor %}
 {% endhighlight %}
+
+{% endtabs %}
 
 ![Alert action buttons Dialog](./images/blazor-alert-action-button.png)
 
