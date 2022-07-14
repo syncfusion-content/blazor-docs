@@ -7,7 +7,7 @@ control: Dialog
 documentation: ug
 ---
 
-# Predefined dialogs in Blazor Dialog componen
+# Predefined Dialogs in Blazor Dialog component
 
 The dialog component is used to render the `Alert`, `Confirm` and `Prompt` dialogs with the minimal code. The alert, confirm and prompt dialogs are shown using [DialogServices](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html).
 
