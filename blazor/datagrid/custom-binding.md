@@ -770,6 +770,197 @@ The following sample code demonstrates implementing the grouping operation for t
 }
 ```
 
+## Handling Filtering in Custom Adaptor
+
+When using a custom adaptor, the filtering operation has to be handled using the built-in `PerformFiltering` method of the `DataOperations` class.
+
+> If you want to handle the filter action in a custom way, kindly replace the `PerformFiltering` method with your custom method and return filtered data to display in the Grid.
+
+The following sample code demonstrates implementing the filtering operation for the custom bounded data,
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+@using System.Collections
+
+<SfGrid TValue="Order" ID="Grid" AllowSorting="true" AllowFiltering="true" AllowPaging="true" AllowGrouping="true">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <GridPageSettings PageSize="8"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="@TextAlign.Center" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public static List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
+    }
+
+    // Implementing custom adaptor by extending the DataAdaptor class
+    public class CustomAdaptor : DataAdaptor
+    {
+        // Performs data Read operation
+        public override object Read(DataManagerRequest dm, string key = null)
+        {
+            IEnumerable<Order> DataSource = Orders;
+            if (dm.Search != null && dm.Search.Count > 0)
+            {
+                // Searching
+                DataSource = DataOperations.PerformSearching(DataSource, dm.Search);
+            }
+            if (dm.Sorted != null && dm.Sorted.Count > 0)
+            {
+                // Sorting
+                DataSource = DataOperations.PerformSorting(DataSource, dm.Sorted);
+            }
+            if (dm.Where != null && dm.Where.Count > 0)
+            {
+                // Filtering
+                DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+            }
+            int count = DataSource.Cast<Order>().Count();
+            if (dm.Skip != 0)
+            {
+                //Paging
+                DataSource = DataOperations.PerformSkip(DataSource, dm.Skip);
+            }
+            if (dm.Take != 0)
+            {
+                DataSource = DataOperations.PerformTake(DataSource, dm.Take);
+            }
+            DataResult DataObject = new DataResult();
+            if (dm.Group != null)
+            {
+                IEnumerable ResultData = DataSource.ToList();
+                // Grouping
+                foreach (var group in dm.Group)
+                {
+                    ResultData = DataUtil.Group<Order>(ResultData, group, dm.Aggregates, 0, dm.GroupByFormatter);
+                }
+                DataObject.Result = ResultData;
+                DataObject.Count = count;
+                return dm.RequiresCounts ? DataObject : (object)ResultData;
+            }
+            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
+        }
+    }
+}
+
+```
+
+## Handling Sorting in Custom Adaptor
+
+When using a custom adaptor, the sorting operation has to be handled using the built-in `PerformSorting` method of the `DataOperations` class.
+
+> If you want to handle the sorting action in a custom way, kindly replace the `PerformSorting` method with your custom method and return sorted data to display in the Grid.
+
+The following sample code demonstrates implementing the sorting operation for the custom bounded data,
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+@using System.Collections
+
+<SfGrid TValue="Order" ID="Grid" AllowSorting="true" AllowFiltering="true" AllowPaging="true" AllowGrouping="true">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <GridPageSettings PageSize="8"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="@TextAlign.Center" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public static List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
+    }
+
+    // Implementing custom adaptor by extending the DataAdaptor class
+    public class CustomAdaptor : DataAdaptor
+    {
+        // Performs data Read operation
+        public override object Read(DataManagerRequest dm, string key = null)
+        {
+            IEnumerable<Order> DataSource = Orders;
+            if (dm.Search != null && dm.Search.Count > 0)
+            {
+                // Searching
+                DataSource = DataOperations.PerformSearching(DataSource, dm.Search);
+            }
+            if (dm.Sorted != null && dm.Sorted.Count > 0)
+            {
+                // Sorting
+                DataSource = DataOperations.PerformSorting(DataSource, dm.Sorted);
+            }
+            if (dm.Where != null && dm.Where.Count > 0)
+            {
+                // Filtering
+                DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+            }
+            int count = DataSource.Cast<Order>().Count();
+            if (dm.Skip != 0)
+            {
+                //Paging
+                DataSource = DataOperations.PerformSkip(DataSource, dm.Skip);
+            }
+            if (dm.Take != 0)
+            {
+                DataSource = DataOperations.PerformTake(DataSource, dm.Take);
+            }
+            DataResult DataObject = new DataResult();
+            if (dm.Group != null)
+            {
+                IEnumerable ResultData = DataSource.ToList();
+                // Grouping
+                foreach (var group in dm.Group)
+                {
+                    ResultData = DataUtil.Group<Order>(ResultData, group, dm.Aggregates, 0, dm.GroupByFormatter);
+                }
+                DataObject.Result = ResultData;
+                DataObject.Count = count;
+                return dm.RequiresCounts ? DataObject : (object)ResultData;
+            }
+            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
+        }
+    }
+}
+```
+
 ## How to pass additional parameters to custom adaptor
 
 To send an additional parameter to the data request, use the AddParams method of Query class. Assign the Query object with additional parameters to the DataGrid’s Query property.
