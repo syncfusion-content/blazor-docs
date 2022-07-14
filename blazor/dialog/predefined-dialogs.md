@@ -236,7 +236,7 @@ You can customize the dialog position by using [Position](https://help.syncfusio
 
 ## Dimension
 
-You can customize the dialog dimensions using [DialogDimension.Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogDimension.html#Syncfusion_Blazor_Popups_DialogDimension_Height) and [DialogDimension.Width] properties. Use the following code to customize the dialog dimensions.
+You can customize the dialog dimensions using [DialogDimension.Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogDimension.html#Syncfusion_Blazor_Popups_DialogDimension_Height) and [DialogDimension.Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogDimension.html#Syncfusion_Blazor_Popups_DialogDimension_Width) properties. Use the following code to customize the dialog dimensions.
 
 {% tabs %}
 
