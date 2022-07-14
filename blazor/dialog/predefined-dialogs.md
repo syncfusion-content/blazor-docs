@@ -168,7 +168,7 @@ Use the following code to render a simple prompt dialog in an application.
 
 ## Dragging
 
-The Dialog supports to drag within its target container by grabbing the Dialog header, which allows the user to reposition the Dialog dynamically by using [AllowDragging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowDragging) property.
+The Dialog supports to drag within its target container by grabbing the Dialog header, which allows the user to reposition the Dialog dynamically by using [DialogOptions.AllowDragging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_AllowDragging) property.
 
 {% tabs %}
 
@@ -188,7 +188,7 @@ The Dialog supports to drag within its target container by grabbing the Dialog h
 
 ## Animations
 
-The predefined ialog can be animated during the open and close actions. Also, users can customize animation’s [DialogAnimationSettings.Delay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogAnimationSettings.html#Syncfusion_Blazor_Popups_DialogAnimationSettings_Delay), [DialogAnimationSettings.Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogAnimationSettings.html#Syncfusion_Blazor_Popups_DialogAnimationSettings_Duration) and [DialogAnimationSettings.Effect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogAnimationSettings.html#Syncfusion_Blazor_Popups_DialogAnimationSettings_Effect) by using the `DialogAnimationSettings` property.
+The predefined dialog can be animated during the open and close actions. Also, users can customize animation’s [DialogAnimationSettings.Delay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogAnimationSettings.html#Syncfusion_Blazor_Popups_DialogAnimationSettings_Delay), [DialogAnimationSettings.Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogAnimationSettings.html#Syncfusion_Blazor_Popups_DialogAnimationSettings_Duration) and [DialogAnimationSettings.Effect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogAnimationSettings.html#Syncfusion_Blazor_Popups_DialogAnimationSettings_Effect) by using the `DialogAnimationSettings` property.
 
 In the following sample, `Zoom` effect is enabled. So, The Dialog will open with `ZoomIn` and close with `ZoomOut` effects.
 
