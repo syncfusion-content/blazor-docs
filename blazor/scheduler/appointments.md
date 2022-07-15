@@ -2298,7 +2298,7 @@ The entire collection of appointments rendered on the Scheduler can be accessed 
 }
 ```
 
-> You can also get the specific range of appointments by passing the start and end time in the `GetEventsAsync` method. To get the block events, you can make use of the method `RefreshEventsAsync`.
+> You can also get the specific range of appointments by passing the start and end time in the `GetEventsAsync` method. To get the block events, you can make use of the method `GetBlockEventsAsync`.
 
 ## Refresh appointments
 
