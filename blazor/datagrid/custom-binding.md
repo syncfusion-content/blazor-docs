@@ -821,7 +821,7 @@ The following sample code demonstrates implementing the filtering operation for 
 
 When using a custom adaptor, the sorting operation has to be handled by overriding the Read/ReadAsync method of the DataAdaptor abstract class. In the DataManagerRequest class, you can get the grid action details as shown in the below image.
 
-![Handling Filtering in Custom Adaptor](./images/blazor-datagrid-custom-adaptor.png)
+![Handling Sorting in Custom Adaptor](./images/blazor-datagrid-custom-adaptor.png)
 
 Based on this grid action details, you can sort the custom data by using the built-in PerformSorting method.
 
