@@ -15,7 +15,7 @@ Blazor Pager component can be localized. Refer to [Blazor Localization](https://
 
 ## Right to left (RTL)
 
-RTL provides an option to switch the text direction and layout of the Pager component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). In the following sample, **EnableRtl** property is used to enable RTL in the Pager.
+RTL provides an option to switch the text direction and layout of the Pager component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). In the following sample, [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_EnableRtl) property is used to enable RTL in the Pager.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

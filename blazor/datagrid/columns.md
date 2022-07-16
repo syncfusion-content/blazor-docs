@@ -721,6 +721,7 @@ The column width can be set using the **Width** property of the **GridColumn**. 
 * When only some columns are provided with the width value and if the cumulative width of the columns is greater than the grid element width then columns with no width might be invisible as their width is zero.
 * When only some columns are provided with the width value and if the cumulative width of the columns is lesser than the grid element width then columns with no width will share the available space evenly.
 * When no width is provided in a column and MinWidth property is defined, if the cumulative width of the column is greater than the grid element width then MinWidth would be used as the column width to avoid it from becoming invisible.
+* When AllowResizing is enabled in the Data Grid, columns whose width is unspecified will be defined as 200px.
 
 ## Autofit columns
 
