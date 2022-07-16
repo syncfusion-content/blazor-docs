@@ -100,8 +100,9 @@ To create ButtonGroup with icons, [IconCss](https://help.syncfusion.com/cr/blazo
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
+@using Syncfusion.Blazor.Buttons
 
-<SfButtonGroup>
+<SfButtonGroup Mode="SelectionMode.Single">
     <ButtonGroupButton IconCss="e-icons e-play-icon" IconPosition="IconPosition.Right">PLAY</ButtonGroupButton>
     <ButtonGroupButton IconCss="e-icons e-pause-icon">PAUSE</ButtonGroupButton>
     <ButtonGroupButton>Delete</ButtonGroupButton>
