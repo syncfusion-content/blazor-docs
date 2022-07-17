@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Realtime Editing with SignalR in Blazor RichTextEditor | Syncfusion
+title: Realtime Editing with SignalR in RichTextEditor | Syncfusion
 description: Learn here all about renaming images before inserting it in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
