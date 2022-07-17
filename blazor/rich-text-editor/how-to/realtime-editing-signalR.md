@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Realtime Editing with SignalR in Blazor RichTextEditor Component | Syncfusion
+title: Realtime Editing with SignalR in Blazor RichTextEditor | Syncfusion
 description: Learn here all about renaming images before inserting it in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
@@ -34,7 +34,7 @@ The Rich Text Editor allows, two or more users can edit the same editor by using
     protected override async Task OnInitializedAsync()
     {
         //Creates a new instance of the HubConnectionBuilder class.
-        
+
         hubConnection = new HubConnectionBuilder()
             .WithUrl(NavigationManager.ToAbsoluteUri("/chathub"))
             .Build();
