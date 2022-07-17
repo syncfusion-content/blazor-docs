@@ -9,7 +9,9 @@ documentation: ug
 
 # Iframe Editable in Blazor RichTextEditor
 
-When the `RichTextEditorIframeSettings` option is [RichTextEditorIframeSettings.enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorIFrameSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorIFrameSettings_Enable), the editor creates the iframe element as the content area on component initialization, it is used to display and edit the content. In content area, the editor displays only the body tag of a `<iframe>` document.
+When the `RichTextEditorIframeSettings` option is [RichTextEditorIframeSettings.enabled]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorIFrameSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorIFrameSettings_Enable)), the editor creates the iframe element as the content area on component initialization, it is used to display and edit the content. In the content area, the editor displays only the body tag of a `<iframe>` document.
+
+Basically, in an iframe mode, you have got the entire document only the editor content, and also you can use styles and scripts only for the particular Editor.
 
 {% tabs %}
 {% highlight razor %}
@@ -28,7 +30,7 @@ When the `RichTextEditorIframeSettings` option is [RichTextEditorIframeSettings.
 
 ## IFrame attributes
 
-The editor allows to pass an additional attribute to body tag of a `<iframe>` element using [RichTextEditorIframeSettings.Attributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorIFrameSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorIFrameSettings_Attributes) property. This property contains name or value pairs in string format. It is used to override the default appearance of the content area.
+The editor allows you to pass an additional attribute to body tag of a `<iframe>` element using [RichTextEditorIframeSettings.Attributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorIFrameSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorIFrameSettings_Attributes) property. This property contains name or value pairs in string format. It is used to override the default appearance of the content area.
 
 {% tabs %}
 {% highlight razor %}

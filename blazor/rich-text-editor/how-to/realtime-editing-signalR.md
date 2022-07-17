@@ -9,7 +9,7 @@ documentation: ug
 
 # Realtime editing with SignalR
 
-The richtexteditor allows, two or more users can edit the same editor by using SignalR services. Which will update the editor value real-time, when loading it in multiple pages.
+The Rich Text Editor allows, two or more users can edit the same editor by using [SignalR](https://docs.microsoft.com/en-us/aspnet/core/tutorials/signalr?view=aspnetcore-6.0&tabs=visual-studio) services. Which will update the editor value in real-time, when loading it on multiple pages. In the below example create the `SignalR HubConnectionBuilder` in the `OnInitializedAsync` method and the editor updated value send to the SignalR message in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_ValueChange) event.
 
 {% tabs %}
 {% highlight razor %}
@@ -33,6 +33,8 @@ The richtexteditor allows, two or more users can edit the same editor by using S
     private string RTEValue;
     protected override async Task OnInitializedAsync()
     {
+        //Creates a new instance of the HubConnectionBuilder class.
+        
         hubConnection = new HubConnectionBuilder()
             .WithUrl(NavigationManager.ToAbsoluteUri("/chathub"))
             .Build();
@@ -43,6 +45,9 @@ The richtexteditor allows, two or more users can edit the same editor by using S
         });
         await hubConnection.StartAsync();
     }
+
+    // Sending RTEValue to new connection state.
+
     async Task Send() =>
         await hubConnection.SendAsync("SendMessage", RTEValue, messageInput);
     public bool IsConnected =>
@@ -59,6 +64,7 @@ The richtexteditor allows, two or more users can edit the same editor by using S
 {% endhighlight %}
 {% endtabs %}
 
+
 `chathup.cs`
 
 ```csharp
@@ -70,3 +76,5 @@ The richtexteditor allows, two or more users can edit the same editor by using S
         } 
     } 
 ```
+
+![SignalR servecies](../images/blazor-richtexteditor-singnalr.png)
