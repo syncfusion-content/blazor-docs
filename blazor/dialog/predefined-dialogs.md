@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Predefined dialog in Blazor Dialog Component | Syncfusion
-description: Checkout and learn here all about Predefined dialog in Syncfusion Blazor Dialog component and much more.
+description: Check out and learn all about Predefined dialog in Syncfusion Blazor Dialog component and much more here.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Predefined Dialogs in Blazor Dialog component
+# Predefined dialogs in the Blazor Dialog component
 
-The dialog component is used to render the `Alert`, `Confirm` and `Prompt` dialogs with the minimal code. The alert, confirm and prompt dialogs are shown using [DialogServices](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html).
+The dialog component is used to render the `Alert`, `Confirm`, and `Prompt` dialogs with minimal code. The alert, confirm, and prompt dialogs are shown using [DialogServices](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html).
 
 ## Configuration
 
@@ -122,7 +122,7 @@ There are three available predefined dialogs:
 
 An [Alert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_AlertAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) dialog box is used to display errors, warnings, and information that needs user awareness.
 
-Use the following code to render a simple alert dialog in an application.
+Use the following code to render a simple alert dialog in an application:
 
 {% tabs %}
 {% highlight razor %}
@@ -136,9 +136,9 @@ Use the following code to render a simple alert dialog in an application.
 
 ### Confirm
 
-A [Confirm](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_ConfirmAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) dialog displays a specified message along with ‘OK’ and ‘Cancel’ button. Used to get approval from user that appears before any critical action.
+A [Confirm](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_ConfirmAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) dialog displays a specified message along with ‘OK’ and ‘Cancel’ button. It is used to get approval from a user and it appears before any critical action.
 
-Use the following code to render a simple confirm dialog in an application.
+Use the following code to render a simple confirm dialog in an application:
 
 {% tabs %}
 {% highlight razor %}
@@ -152,9 +152,9 @@ Use the following code to render a simple confirm dialog in an application.
 
 ### Prompt
 
-A [Prompt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_PromptAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) dialog is used to get input from the user. When the user enters "OK", the input value is returned. When they click "Cancel", the null value  returned.
+A [Prompt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_PromptAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) dialog is used to get input from a user. When the user enters "OK", the input value is returned. When they click "Cancel", the null value is returned.
 
-Use the following code to render a simple prompt dialog in an application.
+Use the following code to render a simple prompt dialog in an application:
 
 {% tabs %}
 {% highlight razor %}
@@ -168,7 +168,7 @@ Use the following code to render a simple prompt dialog in an application.
 
 ## Dragging
 
-The Dialog supports to drag within its target container by grabbing the Dialog header, which allows the user to reposition the Dialog dynamically by using [DialogOptions.AllowDragging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_AllowDragging) property.
+The Dialog supports dragging within its target container by grabbing the Dialog header, which allows the user to reposition the Dialog dynamically by using the [DialogOptions.AllowDragging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_AllowDragging) property.
 
 {% tabs %}
 
@@ -190,7 +190,7 @@ The Dialog supports to drag within its target container by grabbing the Dialog h
 
 The predefined dialog can be animated during the open and close actions. Also, users can customize animation’s [DialogAnimationSettings.Delay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogAnimationSettings.html#Syncfusion_Blazor_Popups_DialogAnimationSettings_Delay), [DialogAnimationSettings.Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogAnimationSettings.html#Syncfusion_Blazor_Popups_DialogAnimationSettings_Duration) and [DialogAnimationSettings.Effect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogAnimationSettings.html#Syncfusion_Blazor_Popups_DialogAnimationSettings_Effect) by using the `DialogAnimationSettings` property.
 
-In the following sample, `Zoom` effect is enabled. So, The Dialog will open with `ZoomIn` and close with `ZoomOut` effects.
+In the following sample, the `Zoom` effect is enabled. So, the Dialog will open with `ZoomIn` and close with `ZoomOut` effects.
 
 {% tabs %}
 
@@ -210,7 +210,7 @@ In the following sample, `Zoom` effect is enabled. So, The Dialog will open with
 
 ## Position
 
-You can customize the dialog position by using [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.Position.html#fields) property. Use the following code to customize the dialog position.
+You can customize the dialog position by using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.Position.html#fields)  property. Use the following code to customize the dialog position:
 
 {% tabs %}
 
@@ -236,7 +236,7 @@ You can customize the dialog position by using [Position](https://help.syncfusio
 
 ## Dimension
 
-You can customize the dialog dimensions using [DialogDimension.Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogDimension.html#Syncfusion_Blazor_Popups_DialogDimension_Height) and [DialogDimension.Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogDimension.html#Syncfusion_Blazor_Popups_DialogDimension_Width) properties. Use the following code to customize the dialog dimensions.
+You can customize the dialog dimensions using [DialogDimension.Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogDimension.html#Syncfusion_Blazor_Popups_DialogDimension_Height) and [DialogDimension.Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogDimension.html#Syncfusion_Blazor_Popups_DialogDimension_Width) properties. Use the following code to customize the dialog dimensions:
 
 {% tabs %}
 
@@ -262,7 +262,7 @@ You can customize the dialog dimensions using [DialogDimension.Height](https://h
 
 ## Close Button Dialog
 
-You can customize the close icon using [ShowCloseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_ShowCloseIcon) property. If the `ShowCloseIcon` property is set to `true` then the close icon will appear. Use the following code to enable the `ShowCloseIcon`.
+You can customize the close icon using [ShowCloseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_ShowCloseIcon) property. If the ShowCloseIcon property is set to true then the close icon will appear. Use the following code to enable the ShowCloseIcon:
 
 {% tabs %}
 
@@ -288,7 +288,7 @@ You can customize the close icon using [ShowCloseIcon](https://help.syncfusion.c
 
 ## Customization of Action Buttons
 
-You can customize the predefined dialog buttons by using [PrimaryButtonOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_IsPrimary) property. Use the following code to customize the predefined dialog buttons.
+You can customize the predefined dialog buttons by using the [PrimaryButtonOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButton.html#Syncfusion_Blazor_Popups_DialogButton_IsPrimary) property. Use the following code to customize the predefined dialog buttons:
 
 {% tabs %}
 
@@ -314,7 +314,7 @@ You can customize the predefined dialog buttons by using [PrimaryButtonOptions](
 
 ## Customization of Dialog Content
 
-You can customize the predefined dialogs using [DialogTemplates.childContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogTemplates.html#Syncfusion_Blazor_Popups_DialogTemplates_Content) property. Use the following code, to render the textbox component inside `Prompt` dialog.
+You can customize the predefined dialogs using the [DialogTemplates.childContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogTemplates.html#Syncfusion_Blazor_Popups_DialogTemplates_Content) property. Use the following code to render the textbox component inside `Prompt` dialog:
 
 {% tabs %}
 {% highlight razor %}
