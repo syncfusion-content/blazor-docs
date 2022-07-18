@@ -51,7 +51,6 @@ You can import the RTF file into the editor using file uploader component, and g
 
 While cliking on the export button you can call make the RTE content to the RTF file using [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries.
 
-
 {% tabs %}
 {% highlight razor %}
 
