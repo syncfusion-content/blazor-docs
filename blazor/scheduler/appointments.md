@@ -85,6 +85,8 @@ The CSS customization can be used to prevent the display of all-day row appointm
 
 It represents an appointment that is created for a certain time interval and occurring repeatedly on a daily, weekly, monthly or yearly basis at the same time interval based on the provided recurrence rule. Usually, the recurring events are indicated by a repeat marker added at the bottom-right position.
 
+>To create recurring events, must give the `RecurrenceRule` property.
+
 ### Creating a recurring event
 
 The following example depicts how to create a recurring event on Scheduler with the specific recurrence rule. In the following example, an event is made to repeat on daily mode and ends after 5 occurrences.
@@ -209,7 +211,9 @@ In this example, a recurring instance that displays on the date 30th January 202
 
 ### Edit/Delete following recurrence events
 
-The Scheduler allows the user to edit the following recurrence events by setting true value to `AllowEditFollowingEvents` within the `ScheduleEventSettings` tag. Once the recurrence events are edited/ deleted as following events, then the following recurrence events will be considered as separate series, the changes will not reflect to parent series. In the following code example, if any of the recurrence event is edited or deleted with the following events option, then the edit or delete action is applied to further recurrence events.
+The Scheduler allows the user to edit the following recurrence events by setting true value to [AllowEditFollowingEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_AllowEditFollowingEvents) within the `ScheduleEventSettings` tag. Once the recurrence events are edited/ deleted as following events, then the following recurrence events will be considered as separate series, the changes will not reflect to parent series. In the following code example, if any of the recurrence event is edited or deleted with the following events option, then the edit or delete action is applied to further recurrence events.
+
+>To edit/delete following recurrence events into the scheduler, set `AllowEditFollowingEvents` field to **true** in `ScheduleEventSettings`.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -366,7 +370,7 @@ The built-in fields available on Scheduler event object are as follows.
 
 ### Binding different field names
 
-When the fields of event instances has the default mapping name, it is not mandatory to map them manually. If a Scheduler's dataSource holds the events collection with different field names, then it is necessary to map them with its equivalent field name within the `EventSettings` property.
+When the fields of event instances has the default mapping name, it is not mandatory to map them manually. If a Scheduler's dataSource holds the events collection with different field names, then it is necessary to map them with its equivalent field name within the [EventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ISchedule.html#Syncfusion_Blazor_Schedule_ISchedule_EventSettings) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -475,7 +479,7 @@ In following example, the Subject field in event editor will display its appropr
 
 ## Adding Custom fields
 
-Apart from the default Scheduler fields, the user can include 'n' number of custom fields for appointments. The following code example shows how to include two custom fields namely **Status** and **Priority** within event collection. It is not necessary to bind the custom fields within the `EventSettings`. However, those additional fields can be accessed easily, for internal processing as well as from application end.
+Apart from the default Scheduler fields, the user can include 'n' number of custom fields for appointments. The following code example shows how to include two custom fields namely **Status** and **Priority** within event collection. It is not necessary to bind the custom fields within the [EventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ISchedule.html#Syncfusion_Blazor_Schedule_ISchedule_EventSettings). However, those additional fields can be accessed easily, for internal processing as well as from application end.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -519,7 +523,7 @@ Apart from the default Scheduler fields, the user can include 'n' number of cust
 
 ## Customize the order of the overlapping events
 
-By default, the scheduler will render the overlapping events based on the start and end time. Now, the order of the overlapping events can be customized based on the custom fields by using the `SortBy` property grouped under the `EventSettings` property. The following code example shows how to sort the appointments based on the custom field **RankId** as follows.
+By default, the scheduler will render the overlapping events based on the start and end time. Now, the order of the overlapping events can be customized based on the custom fields by using the [SortBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_SortBy) property grouped under the [EventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ISchedule.html#Syncfusion_Blazor_Schedule_ISchedule_EventSettings) property. The following code example shows how to sort the appointments based on the custom field **RankId** as follows.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -568,7 +572,7 @@ By default, the scheduler will render the overlapping events based on the start 
 
 ## Drag and drop appointments
 
-Appointments can be rescheduled to any time by dragging and dropping them onto the desired location. To work with drag and drop functionality make sure that `AllowDragAndDrop` is set to **true** on Scheduler. In mobile mode, you can drag and drop the events by tap holding an event and dropping them on to the desired location.
+Appointments can be rescheduled to any time by dragging and dropping them onto the desired location. To work with drag and drop functionality make sure that [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowDragAndDrop) is set to **true** on Scheduler. In mobile mode, you can drag and drop the events by tap holding an event and dropping them on to the desired location.
 
 > By default, drag and drop action is applicable on all Scheduler views, except Agenda and Month-Agenda view.
 
@@ -579,7 +583,7 @@ To get start quickly about drag options available in our Scheduler, you can chec
 
 ### Drag and drop multiple appointments
 
-Multiple appointments can be dragged and dropped by enabling the `AllowMultiDrag` property. Multiple appointments can be selected by holding the CTRL key. Once the events are selected, leave the CTRL key and start dragging the event.
+Multiple appointments can be dragged and dropped by enabling the [AllowMultiDrag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowMultiDrag) property. Multiple appointments can be selected by holding the CTRL key. Once the events are selected, leave the CTRL key and start dragging the event.
 
 Multiple events can also be dragged from one resource to another resource. In this case, if all the selected events are in the different resources, then all the events should be moved to the single resource that is related to the target event.
 
@@ -624,7 +628,7 @@ Multiple events can also be dragged from one resource to another resource. In th
 
 ### Disable the drag action
 
-By default, the events can be dragged and dropped within any of the applicable scheduler views, and to disable it, set **false** to the `AllowDragAndDrop` property.
+By default, the events can be dragged and dropped within any of the applicable scheduler views, and to disable it, set **false** to the [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowDragAndDrop) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -664,7 +668,7 @@ By default, the events can be dragged and dropped within any of the applicable s
 
 ### Preventing drag and drop on specific targets
 
-It is possible to prevent the drag action on particular target, by passing the target to be excluded in the `ExcludeSelectors` option within `OnDragStart` event. 
+It is possible to prevent the drag action on particular target, by passing the target to be excluded in the `ExcludeSelectors` option within [OnDragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnDragStart) event. 
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -709,7 +713,7 @@ It is possible to prevent the drag action on particular target, by passing the t
 
 ### Disable scrolling on drag action
 
-By default, while dragging an appointment to the edges, either top/bottom in the vertical Scheduler or left/right in the timeline Scheduler, scrolling action takes place automatically. To prevent this scrolling, set `false` to the `Scroll` value within the `OnDragStart` event arguments.
+By default, while dragging an appointment to the edges, either top/bottom in the vertical Scheduler or left/right in the timeline Scheduler, scrolling action takes place automatically. To prevent this scrolling, set `false` to the `Scroll` value within the [OnDragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnDragStart) event arguments.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -754,7 +758,7 @@ By default, while dragging an appointment to the edges, either top/bottom in the
 
 ### Controlling scroll speed while dragging an event
 
-The speed of the scrolling action while dragging an appointment to the Scheduler edges can be controlled within the `OnDragStart` event by setting the desired value to the `ScrollBy` and `TimeDelay` option, whereas its default value is 30 minutes and 100ms.
+The speed of the scrolling action while dragging an appointment to the Scheduler edges can be controlled within the [OnDragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnDragStart) event by setting the desired value to the `ScrollBy` and `TimeDelay` option, whereas its default value is 30 minutes and 100ms.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -800,9 +804,9 @@ The speed of the scrolling action while dragging an appointment to the Scheduler
 
 ### Auto navigation of date ranges on dragging an event
 
-When an event is dragged either to the left or right extreme edges of the Scheduler and kept hold for few seconds without dropping, the auto navigation of date ranges will be enabled allowing the Scheduler to navigate from current date range to back and forth respectively. This action is set to `false` by default and to enable it, set `Navigation` to true within the `OnDragStart` event.
+When an event is dragged either to the left or right extreme edges of the Scheduler and kept hold for few seconds without dropping, the auto navigation of date ranges will be enabled allowing the Scheduler to navigate from current date range to back and forth respectively. This action is set to `false` by default and to enable it, set `Navigation` to true within the [OnDragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnDragStart) event.
 
-By default, the navigation delay is set to 2000ms. The navigation delay decides how long the user needs to drag and hold the appointments at the extremities. You can also set your own delay value for letting the users to navigate based on it, using the `TimeDelay` within the `OnDragStart` event.
+By default, the navigation delay is set to 2000ms. The navigation delay decides how long the user needs to drag and hold the appointments at the extremities. You can also set your own delay value for letting the users to navigate based on it, using the `TimeDelay` within the [OnDragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnDragStart) event.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -848,7 +852,7 @@ By default, the navigation delay is set to 2000ms. The navigation delay decides 
 
 ### Setting drag time interval
 
-By default, while dragging an appointment, it moves at an interval of 30 minutes. To change the dragging time interval, pass the appropriate values to the `Interval` option within the `OnDragStart` event.
+By default, while dragging an appointment, it moves at an interval of 30 minutes. To change the dragging time interval, pass the appropriate values to the `Interval` option within the [OnDragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnDragStart) event.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -893,14 +897,14 @@ By default, while dragging an appointment, it moves at an interval of 30 minutes
 
 ### Drag and drop items from external source
 
-It is possible to drag and drop the unplanned items from any of the external source into the scheduler, by manually saving those dropped item as a new appointment data through `AddEventAsync` method of Scheduler.
+It is possible to drag and drop the unplanned items from any of the external source into the scheduler, by manually saving those dropped item as a new appointment data through [AddEventAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AddEventAsync__0_) method of Scheduler.
 
 To get start quickly about dropping items from external source to our Scheduler, you can check on this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=QxBBZYef6cg"%}
 
-In this example, the tree view control is used as an external source and the child nodes from the tree view component are dragged and dropped onto the Scheduler. Therefore, it is necessary to make use of the `OnNodeDragStop` event of the TreeView component, where an event object can be formed and save it using the `AddEventAsync` method.
+In this example, the tree view control is used as an external source and the child nodes from the tree view component are dragged and dropped onto the Scheduler. Therefore, it is necessary to make use of the `OnNodeDragStop` event of the TreeView component, where an event object can be formed and save it using the [AddEventAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AddEventAsync__0_) method.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1003,7 +1007,7 @@ In this example, the tree view control is used as an external source and the chi
 
 ### Drag and drop items to external source
 
-You can drag and drop the events to external source by setting the target to the property `EventDragArea`. In the following code example, we have two Scheduler and events from the first scheduler that can be dropped to the second scheduler. In the `Dragged` event of the first scheduler, the dragged event has been deleted from the first scheduler and added to the second scheduler.
+You can drag and drop the events to external source by setting the target to the property [EventDragArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_EventDragArea). In the following code example, we have two Scheduler and events from the first scheduler that can be dropped to the second scheduler. In the [Dragged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_Dragged) event of the first scheduler, the dragged event has been deleted from the first scheduler and added to the second scheduler.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1072,7 +1076,7 @@ You can drag and drop the events to external source by setting the target to the
 
 ### Opening the editor window on drag stop
 
-There are scenarios where you want to open the editor filled with data on newly dropped location and may need to proceed to save it, only when `Save` button is clicked on the editor. Clicking on the cancel button should revert these changes. This can be achieved using the `Dragged` event of Scheduler.
+There are scenarios where you want to open the editor filled with data on newly dropped location and may need to proceed to save it, only when `Save` button is clicked on the editor. Clicking on the cancel button should revert these changes. This can be achieved using the [Dragged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_Dragged) event of Scheduler.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1119,7 +1123,7 @@ There are scenarios where you want to open the editor filled with data on newly 
 
 ## Appointment Resizing
 
-Another way of rescheduling an appointment can be done by resizing it through either of its handlers. To work with resizing functionality make sure that `AllowResizing` property is set to **true**.
+Another way of rescheduling an appointment can be done by resizing it through either of its handlers. To work with resizing functionality make sure that [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowResizing) property is set to **true**.
 
 To get start quickly about resize options available in our Scheduler, you can check on this video:
 
@@ -1128,7 +1132,7 @@ To get start quickly about resize options available in our Scheduler, you can ch
 
 ### Disable the resize action
 
-By default, resizing of events is allowed on all Scheduler views except Agenda and Month-Agenda view. To disable this event resizing action, set false to the `AllowResizing` property.
+By default, resizing of events is allowed on all Scheduler views except Agenda and Month-Agenda view. To disable this event resizing action, set false to the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowResizing) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1168,7 +1172,7 @@ By default, resizing of events is allowed on all Scheduler views except Agenda a
 
 ### Disable scrolling on resize action
 
-By default, while resizing an appointment, when its handler reaches the extreme edges of the Scheduler, scrolling action will takes place along with event resizing. To prevent this scrolling action, set false to `Scroll` value within the `OnResizeStart` event.
+By default, while resizing an appointment, when its handler reaches the extreme edges of the Scheduler, scrolling action will takes place along with event resizing. To prevent this scrolling action, set false to `Scroll` value within the [OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnResizeStart) event.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1213,7 +1217,7 @@ By default, while resizing an appointment, when its handler reaches the extreme 
 
 ### Controlling scroll speed while resizing an event
 
-The speed of the scrolling action while resizing an appointment to the Scheduler edges, can be controlled within the `OnResizeStart` event by setting the desired value to the `ScrollBy` option.
+The speed of the scrolling action while resizing an appointment to the Scheduler edges, can be controlled within the [OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnResizeStart) event by setting the desired value to the [ScrollBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScrollOptions.html#Syncfusion_Blazor_Schedule_ScrollOptions_ScrollBy) option.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1258,7 +1262,7 @@ The speed of the scrolling action while resizing an appointment to the Scheduler
 
 ### Setting resize time interval
 
-By default, while resizing an appointment, it extends or shrinks at an interval of 30 minutes. To change this default resize interval, set appropriate values to `Interval` option within the `OnResizeStart` event.
+By default, while resizing an appointment, it extends or shrinks at an interval of 30 minutes. To change this default resize interval, set appropriate values to `Interval` option within the [OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnResizeStart) event.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1311,7 +1315,7 @@ The look and feel of the Scheduler events can be customized using any one of the
 
 ### Using template
 
-Any kind of text, images and links can be added to customize the look of the events. The user can format and change the default appearance of the events by making use of the `Template` option available within the `ScheduleEventSettings` tag helper. 
+Any kind of text, images and links can be added to customize the look of the events. The user can format and change the default appearance of the events by making use of the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_Template) option available within the `ScheduleEventSettings` tag helper. 
 
 To get start quickly on customizing events using template, you can check on this video:
 
@@ -1366,9 +1370,9 @@ The following code example customizes the appointment.
 
 ### Using EventRendered event
 
-The `EventRendered` event triggers before the appointment renders on the Scheduler. Therefore, this event can be utilized to customize the look of events based on any specific criteria, before rendering them on the scheduler.
+The [EventRendered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_EventRendered) event triggers before the appointment renders on the Scheduler. Therefore, this event can be utilized to customize the look of events based on any specific criteria, before rendering them on the scheduler.
 
-In the following code example, the custom class has been added to events using `CssClasses` to apply color to the events.
+In the following code example, the custom class has been added to events using [CssClasses](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.EventRenderedArgs-1.html#Syncfusion_Blazor_Schedule_EventRenderedArgs_1_CssClasses) to apply color to the events.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1417,7 +1421,7 @@ In the following code example, the custom class has been added to events using `
 </style>
 ```
 
-Also, we can customize the events by adding or modifying its element attribute using `Attributes`. In the following code example, event attributes have been modified through the `Attributes` to apply color to the events.
+Also, we can customize the events by adding or modifying its element attribute using [Attributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.EventRenderedArgs-1.html#Syncfusion_Blazor_Schedule_EventRenderedArgs_1_Attributes). In the following code example, event attributes have been modified through the `Attributes` to apply color to the events.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1463,7 +1467,7 @@ Also, we can customize the events by adding or modifying its element attribute u
 
 ### Using CssClass
 
-The customization of events can also be achieved using the built-in field `CssClass` in which you can pass the class name to be applied to specific appointments. In the following example, the background of appointments has been changed.
+The customization of events can also be achieved using the built-in field [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CssClass) in which you can pass the class name to be applied to specific appointments. In the following example, the background of appointments has been changed.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1515,7 +1519,7 @@ The customization of events can also be achieved using the built-in field `CssCl
 </style>
 ```
 
-Also, the customization of events can be achieved using `CssClass` property of the Scheduler. In the following example, the background of appointments has been changed using the CssClass.
+Also, the customization of events can be achieved using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CssClass) property of the Scheduler. In the following example, the background of appointments has been changed using the CssClass.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1566,7 +1570,7 @@ Also, the customization of events can be achieved using `CssClass` property of t
 
 ## Block Date and Time
 
-It is possible to block a set of dates or a particular time ranges on the Scheduler. To do so, define an appointment object within `EventSettings` along with the required time range to block and set the `IsBlock` field to **true**. Usually, the event objects defined with `IsBlock` field set to true will block the entire time cells lying within the appropriate time ranges specified through `StartTime` and `EndTime` fields.
+It is possible to block a set of dates or a particular time ranges on the Scheduler. To do so, define an appointment object within [EventSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ISchedule.html#Syncfusion_Blazor_Schedule_ISchedule_EventSettings) along with the required time range to block and set the [IsBlock](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleField.html#Syncfusion_Blazor_Schedule_ScheduleField_IsBlock) field to **true**. Usually, the event objects defined with `IsBlock` field set to true will block the entire time cells lying within the appropriate time ranges specified through `StartTime` and `EndTime` fields.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1648,7 +1652,7 @@ Block events can also be defined to repeat on several days as shown in the follo
 
 ## Readonly
 
-An interaction with the appointments of Scheduler can be enabled/disabled using the `Readonly` property. With this property enabled, you can simply navigate between the Scheduler dates, views and can be able to view the appointment details in the quick info window. Most importantly, the users are not allowed to perform any CRUD actions on Scheduler, when this property is set to true. By default, it is set as **false**.
+An interaction with the appointments of Scheduler can be enabled/disabled using the [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_Readonly) property. With this property enabled, you can simply navigate between the Scheduler dates, views and can be able to view the appointment details in the quick info window. Most importantly, the users are not allowed to perform any CRUD actions on Scheduler, when this property is set to true. By default, it is set as **false**.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1688,7 +1692,7 @@ An interaction with the appointments of Scheduler can be enabled/disabled using 
 
 ## Make specific events readonly
 
-There are scenarios where you need to restrict the CRUD action on specific appointments alone based on certain conditions. In the following example, the events that has occurred on the past hours from the current date of the Scheduler are made as read-only and the CRUD actions has been prevented only on those appointments. This can be achieved by setting `IsReadonly` field of read-only events to `true`.
+There are scenarios where you need to restrict the CRUD action on specific appointments alone based on certain conditions. In the following example, the events that has occurred on the past hours from the current date of the Scheduler are made as read-only and the CRUD actions has been prevented only on those appointments. This can be achieved by setting [IsReadonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleField.html#Syncfusion_Blazor_Schedule_ScheduleField_IsReadonly) field of read-only events to `true`.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1783,7 +1787,7 @@ You can restrict the users to create and update more than one appointment on spe
 
 ## Differentiate the past time events
 
-To differentiate the appearance of the appointments based on specific criteria such as displaying the past hour appointments with different colors on Scheduler, `EventRendered` event can be used which triggers before the appointment renders on the Scheduler.
+To differentiate the appearance of the appointments based on specific criteria such as displaying the past hour appointments with different colors on Scheduler, [EventRendered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_EventRendered) event can be used which triggers before the appointment renders on the Scheduler.
 
 In the following code example, the appointments beyond current date of the scheduler were differentiated with chocolate brown color.
 
@@ -1833,9 +1837,9 @@ In the following code example, the appointments beyond current date of the sched
 
 ## Appointments occupying entire cell
 
-The Scheduler allows the event to occupy the full height of the cell without its header part by setting `true` for `EnableMaxHeight` Property.
+The Scheduler allows the event to occupy the full height of the cell without its header part by setting `true` for [EnableMaxHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_EnableMaxHeight) Property.
 
-More indicator can be shown if more than one appointment is available in a same cell by setting `true` to `EnableIndicator` property whereas its default value is false.
+More indicator can be shown if more than one appointment is available in a same cell by setting `true` to [EnableIndicator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_EnableIndicator) property whereas its default value is false.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1880,7 +1884,7 @@ The tooltip shows the Scheduler appointment's information in a formatted style b
 
 ### Show or hide built-in tooltip
 
-The tooltip can be displayed for appointments by setting `true` to the `EnableTooltip` option within the `ScheduleEventSettings` tag helper.
+The tooltip can be displayed for appointments by setting `true` to the [EnableTooltip](https://help.syncfusion.com/cr/blazor/Syncfulsion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_EnableTooltip) option within the `ScheduleEventSettings` tag helper.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1923,7 +1927,7 @@ The tooltip can be displayed for appointments by setting `true` to the `EnableTo
 
 ### Customizing event tooltip using template
 
-After enabling the default tooltip, it is possible to customize the display of needed event information on tooltip by making use of the `TooltipTemplate` option within the `ScheduleEventSettings`.
+After enabling the default tooltip, it is possible to customize the display of needed event information on tooltip by making use of the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_TooltipTemplate) option within the `ScheduleEventSettings`.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1974,7 +1978,7 @@ After enabling the default tooltip, it is possible to customize the display of n
 
 ## Appointment filtering
 
-The appointments can be filtered by passing the predicate value to `Query` option in `ScheduleEventSettings`. The following code example shows how to filter and render the selected appointments alone in the Scheduler.
+The appointments can be filtered by passing the predicate value to [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_Query) option in `ScheduleEventSettings`. The following code example shows how to filter and render the selected appointments alone in the Scheduler.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -2197,11 +2201,11 @@ With the options available to select multiple appointments, it is also possible 
 
 ## Retrieve event details from the UI of an event
 
-It is possible to access the information about the event fields of an appointment based on the X and Y co-ordinates. This can be achieved by passing an X and Y co-ordinates to the public method `GetTargetEventAsync`. You can also get the selected appointment details using `GetSelectedEventsAsync` method.
+It is possible to access the information about the event fields of an appointment based on the X and Y co-ordinates. This can be achieved by passing an X and Y co-ordinates to the public method [GetTargetEventAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_GetTargetEventAsync_System_Int32_System_Int32_). You can also get the selected appointment details using [GetSelectedEventsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_GetSelectedEventsAsync) method.
 
 ## Get the current view appointments
 
-To retrieve the appointments present in the current view of the Scheduler, the `GetCurrentViewEvents` public method can be used. In the following example, current view appointment collection rendered has been traced in `DataBound` event.
+To retrieve the appointments present in the current view of the Scheduler, the [GetCurrentViewEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_GetCurrentViewEvents) public method can be used. In the following example, current view appointment collection rendered has been traced in [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_DataBound) event.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -2249,7 +2253,7 @@ To retrieve the appointments present in the current view of the Scheduler, the `
 
 ## Get the entire appointment collections
 
-The entire collection of appointments rendered on the Scheduler can be accessed using the `GetEventsAsync` public method. In the following example, entire appointment collection rendered on the Scheduler has been traced in `DataBound` event.
+The entire collection of appointments rendered on the Scheduler can be accessed using the [GetEventsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_GetEventsAsync_System_Nullable_System_DateTime__System_Nullable_System_DateTime__System_Nullable_System_Boolean__) public method. In the following example, entire appointment collection rendered on the Scheduler has been traced in [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_DataBound) event.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -2298,7 +2302,7 @@ The entire collection of appointments rendered on the Scheduler can be accessed 
 
 ## Refresh appointments
 
-If the requirement is to simply refresh the appointments instead of refreshing the entire Scheduler elements from the application end, make use of the `RefreshEventsAsync` public method.
+If the requirement is to simply refresh the appointments instead of refreshing the entire Scheduler elements from the application end, make use of the [RefreshEventsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_RefreshEventsAsync) public method.
 
 ```csharp
 ScheduleRef.RefreshEventsAsync();
