@@ -469,7 +469,7 @@ To retrieve the editor contents, use the [Value](https://help.syncfusion.com/cr/
 {% endhighlight %}
 {% endtabs %}
 
-## Retrieve the number of characters in the Rich Text Editor
+## Retrieve the number of characters
 
 To retrieve the maximum number of characters in the Rich Text Editor's content, use the `GetCharCount` property of the Rich Text Editor.
 
@@ -513,7 +513,7 @@ To retrieve the maximum number of characters in the Rich Text Editor's content, 
 {% endhighlight %}
 {% endtabs %}
 
-## See Also
+## See also
 
 * [Getting Started with Syncfusion Blazor for client-side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli/)
 
