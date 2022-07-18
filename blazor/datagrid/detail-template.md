@@ -330,13 +330,11 @@ By default, detail rows render in collapsed state. You can expand a detail row b
 > * You can expand all the rows by using `ExpandAll` method.
 > * If you want to expand all the rows at initial DataGrid rendering, then use `ExpandAll` method in [dataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event of the DataGrid.
 
-## How to get the selected records from the detail(child) Grid
+## How to set grid instance for child component in detail template
 
-The Grid has an option to get the child row element records using the [GetSelectedRecords](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRecordsAsync) method of the Grid.
+The Grid component has an option to get the child (custom) component details, which are rendered inside the detail template. This can be achieved by setting the instance as a dictionary object in the child component. Also, the key values should be unique.
 
-In the following sample, the Grid component is rendered as the child component in the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate). We can get the selected row details of child grid using the `GetSelectedRecords` method in the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event of the child grid.
-
-> If there is more than one detail grid open with items selected inside of it, you need to set the grid instance as a dictionary in the child grid. Also, the key values should be unique.
+We have rendered the grid as a child component in a detailed template. In the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event of the child grid, we can get the selected row details of the child grid using the [GetSelectedRecords](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRecordsAsync) method. This can be demonstrated in the following sample.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
