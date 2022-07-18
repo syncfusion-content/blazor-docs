@@ -87,6 +87,71 @@ You can refer the following code example to achieve this.
 The following image represents DataGrid with dynamically build columns,
 ![Blazor DataGrid with Dynamic Column](./images/blazor-datagrid-dynamic-column.png)
 
+## Dynamic column binding using ExpandoObject
+
+It is possible to build a column dynamically without knowing the model type during compile time. This can be achieved by binding data to the grid as a list of `ExpandoObject`.
+
+In the following sample, columns are built dynamically using the `ExpandoObject`.
+
+```cshtml
+@using System.Dynamic
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+
+<SfButton Content="Generate new data" OnClick=@OnGenerateNewData />
+    <SfGrid @ref="grid" Height="400px" Width="100%" TValue="ExpandoObject" DataSource=@data>
+        <GridColumns>
+            @if (data != null && data.Any())
+            {
+                var firstItem = data.First();
+                var dictionaryItem = (IDictionary<string, object>)firstItem;
+                var fields = dictionaryItem.Keys;
+                foreach (var item in dictionaryItem)
+                {
+                    <GridColumn Field="@item.Key"></GridColumn>
+                }
+            }
+        </GridColumns>
+    </SfGrid>
+
+
+@code{
+    private SfGrid<ExpandoObject> grid;
+    private List<ExpandoObject> data = GenerateNewData();
+
+    public void OnGenerateNewData()
+    {
+        this.data = GenerateNewData();
+    }
+
+    private static List<ExpandoObject> GenerateNewData()
+    {
+        var data = new List<ExpandoObject>();
+        var random = new Random();
+        var colCount = random.Next(2, 6);
+        var colNames = new string[colCount];
+
+        for (var col = 0; col < colCount; col++)
+        {
+            colNames[col] = "Col" + random.Next(0, 5000);
+        }
+
+        for (var row = 0; row < 100; row++)
+        {
+            dynamic item = new ExpandoObject();
+            var dict = (IDictionary<string, object>)item;
+            for (var col = 0; col < colCount; col++)
+            {
+                dict[colNames[col]] = random.Next(0, 10000);
+            }
+            data.Add(item);
+        }
+        return data;
+    }
+}
+
+```
+
 ## Complex data binding
 
 You can achieve complex data binding in the DataGrid by using the dot(.) operator in the column.field. In the following examples, **Name.FirstName** and **Name.LastName** are complex data.
