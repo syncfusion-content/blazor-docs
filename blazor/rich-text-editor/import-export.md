@@ -124,7 +124,9 @@ You can import the text file into the editor using file uploader component, and 
 {% endhighlight %}
 {% endtabs %}
 
-```Import Services.cs 
+Import Services.cs:
+
+```cshtml 
 
 [HttpPost] 
 [Route("Import")] 
@@ -164,6 +166,7 @@ public string ExtractBodyContent(string html)
     } 
     return html; 
 } 
+
 ```
 ## Export to HTML file
 
