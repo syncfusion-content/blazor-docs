@@ -332,7 +332,7 @@ By default, detail rows render in collapsed state. You can expand a detail row b
 
 ## How to set grid instance for child component in detail template
 
-The Grid component has an option to get the child (custom) component details, which are rendered inside the detail template. This can be achieved by setting the instance as a dictionary object in the child component. Also, the key values should be unique.
+Using the detail template feature of Grid, a hierarchical grid-like structure can be achieved. We can get an instance of each child grid by defining the @ref property with a dictionary object in the DetailTemplate Grid component. Also, the key values should be unique.
 
 We have rendered the grid as a child component in a detailed template. In the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event of the child grid, we can get the selected row details of the child grid using the [GetSelectedRecords](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRecordsAsync) method. This can be demonstrated in the following sample.
 
