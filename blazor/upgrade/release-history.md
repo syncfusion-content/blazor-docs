@@ -17,3 +17,11 @@ See our [Upgrade Guide](https://help.syncfusion.com/upgrade-guide/blazor-compone
 * Bug Fixes
 * Features
 * Knows Issues between your current version and the latest version you are trying to upgrade.
+
+## Upgrade to different versions
+
+**Main Release:** Includes the new features and bug fixes. Update to this when needed for planned upgrades. Check out [upgrade guide](https://help.syncfusion.com/upgrade-guide/blazor-components) for breaking changes before update.
+
+**Service Pack Release:** Includes minor features and bug fixes. Update to this when needed for planned upgrades. Check out [upgrade guide](https://help.syncfusion.com/upgrade-guide/blazor-components) for breaking changes before update.
+
+**Weekly Releases:** Update to this only when specific fixes are needed. 
