@@ -190,3 +190,5 @@ The Grid component has an option to render an adaptive layout based on the devic
 }
 
 ```
+
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-render-adaptive-layout)
