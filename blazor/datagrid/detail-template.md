@@ -425,3 +425,5 @@ We have rendered the grid as a child component in a detailed template. In the [
 }
 
 ```
+
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-set-instance-for-child-component)

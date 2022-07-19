@@ -1342,6 +1342,8 @@ In the following sample, we have rendered the multi-select component in the Role
 }
 ```
 
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-bind-many-to-many-relation-data)
+
 ## See also
 
 * [Edit one column update the value in another column](https://www.syncfusion.com/forums/151238/edit-one-column-update-the-value-in-another-column)
