@@ -817,6 +817,8 @@ The following sample code demonstrates implementing the filtering operation for 
 
 ```
 
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-filtering-with-custom-adaptor)
+
 ## Handling Sorting in Custom Adaptor
 
 When using a custom adaptor, the sorting operation has to be handled by overriding the Read/ReadAsync method of the DataAdaptor abstract class. In the DataManagerRequest class, you can get the grid action details as shown in the below image.
@@ -892,6 +894,8 @@ The following sample code demonstrates implementing the sorting operation for th
     }
 }
 ```
+
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-sorting-with-custom-adaptor)
 
 ## How to pass additional parameters to custom adaptor
 
