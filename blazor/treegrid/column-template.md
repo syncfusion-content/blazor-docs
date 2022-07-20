@@ -9,9 +9,9 @@ documentation: ug
 
 # Column Template in Blazor Tree Grid
 
-> Before adding column template to the Tree Grid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
+> Before adding column template to the tree grid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
 
-To know about **Column Template** in Blazor Tree Grid Component, you can check this video.
+To know about **Column Template** in Blazor tree grid Component, you can check this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=PnM11O-BPVU"%}
@@ -666,9 +666,9 @@ The following screenshot represents the Image Template.
 
 ## Using hyperlink column and performing routing on click
 
-The Column template property can be used to provide routing links inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html). For routing, [UriHelper](https://docs.microsoft.com/en-us/aspnet/core/blazor/routing?view=aspnetcore-3.0#uri-and-navigation-state-helpers) can be utilized.
+The column template property can be used to provide routing links inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Template) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html). For routing, [UriHelper](https://docs.microsoft.com/en-us/aspnet/core/blazor/routing?view=aspnetcore-3.0#uri-and-navigation-state-helpers) can be utilized.
 
-This can be achieved by initially defining an anchor tag inside the column template and binding click event to it. In this event, the Tree Grid data **context** is passed on to its function.
+This can be achieved by initially defining an anchor tag inside the column template and binding click event to it. In this event, the tree grid data **context** is passed on to its function.
 
 ```cshtml
 @inject NavigationManager UriHelper
@@ -727,7 +727,7 @@ This can be achieved by initially defining an anchor tag inside the column templ
 }
 ```
 
-In the above code, the url to be navigated is specified in the Link variable of the Tree Grid data. Based on this, the page is routed to the corresponding url.
+In the above code, the url to be navigated is specified in the Link variable of the tree grid data. Based on this, the page is routed to the corresponding url.
 
 After that, add new razor page for routing with routing url along with the parameters to be received, and initialize it with the required details.
 
@@ -759,5 +759,5 @@ After that, add new razor page for routing with routing url along with the param
 }
 ```
 
-The following GIF represents template routing in Tree Grid
+The following GIF represents template routing in tree grid
 ![Blazor Tree Grid with Routing Template](./images/blazor-treegrid-template-routing.gif)
