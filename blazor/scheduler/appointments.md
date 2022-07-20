@@ -85,7 +85,7 @@ The CSS customization can be used to prevent the display of all-day row appointm
 
 It represents an appointment that is created for a certain time interval and occurring repeatedly on a daily, weekly, monthly or yearly basis at the same time interval based on the provided recurrence rule. Usually, the recurring events are indicated by a repeat marker added at the bottom-right position.
 
->To create recurring events, must give the `RecurrenceRule` property.
+>Set `RecurrenceRule` property to create recurring events.
 
 ### Creating a recurring event
 
