@@ -36,7 +36,7 @@ To add Blazor In-place Editor component in the app, open the NuGet package manag
 Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
 {% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+{% highlight cshtml tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 
@@ -253,7 +253,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 * Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.InPlaceEditor** namespace.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Imports.razor" %}
+{% highlight cshtml tabtitle="~/Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.InPlaceEditor
@@ -265,7 +265,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 * Now, add the Syncfusion In-place Editor component in razor file. Here, the In-place Editor component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 <table>
     <tr>
@@ -304,7 +304,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 The following code explains how to initialize a simple In-place Editor with popup in the Blazor page.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.DropDowns
@@ -358,7 +358,7 @@ The following code explains how to initialize a simple In-place Editor with popu
 You can render the Blazor DropDownList by changing the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InPlaceEditor.SfInPlaceEditor-1.html#Syncfusion_Blazor_InPlaceEditor_SfInPlaceEditor_1_Type) property as `DropDownList` and configuring the `DropDownList` component inside the Editor component.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.InPlaceEditor
@@ -401,7 +401,7 @@ You can render the Blazor DropDownList by changing the [Type](https://help.syncf
 You can render the Blazor `DatePicker` by changing the `Type` property as `Date` and configuring the `DatePicker` component inside the Editor component. Also, configure its properties directly in the `Datepicker` component.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.Calendars
@@ -423,7 +423,7 @@ You can render the Blazor `DatePicker` by changing the `Type` property as `Da
 In the following code, it is configured to render the `DatePicker`, `DropDownList` and `Textbox` components.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.Inputs
@@ -528,7 +528,7 @@ You can submit editor value to the server by configuring the [SaveUrl](https://h
 The edited data is submitted to the server and you can see the new values getting reflected in the In-place Editor.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.InPlaceEditor
