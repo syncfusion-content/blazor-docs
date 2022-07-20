@@ -18,10 +18,14 @@ See our [Upgrade Guide](https://help.syncfusion.com/upgrade-guide/blazor-compone
 * Features
 * Known Issues between your current version and the latest version you are trying to upgrade.
 
-## Upgrade to different versions
+## What's the difference between main, service pack and weekly releases 
 
-**Main Release:** Includes the new features and bug fixes. Update to this when needed for planned upgrades. Check out [upgrade guide](https://help.syncfusion.com/upgrade-guide/blazor-components) for breaking changes before update.
+**Main Release:** - Includes the new features and bug fixes. Update to this when needed for planned upgrades. Check out [upgrade guide](https://help.syncfusion.com/upgrade-guide/blazor-components) for breaking changes before update.
 
-**Service Pack Release:** Includes minor features and bug fixes. Update to this when needed for planned upgrades. Check out [upgrade guide](https://help.syncfusion.com/upgrade-guide/blazor-components) for breaking changes before update.
+**Service Pack Release:** - Includes minor features and bug fixes. Update to this when needed for planned upgrades. Check out [upgrade guide](https://help.syncfusion.com/upgrade-guide/blazor-components) for breaking changes before update.
 
-**Weekly Releases:** Update to this only when specific fixes are needed. 
+**Weekly Releases:** - Bug fix release. Update to this only when specific fixes are needed. 
+
+## See also
+
+* [Version Compatibility and Syncfusion Version Information](https://blazor.syncfusion.com/documentation/common/how-to/version-compatibility)
