@@ -232,8 +232,6 @@ You can customize the dialog position by using the [Position](https://help.syncf
 
 ![Confirm position Dialog](./images/blazor-confirm-position.png)
 
-![Prompt position Dialog](./images/blazor-prompt-position.png)
-
 ## Dimension
 
 You can customize the dialog dimensions using [DialogDimension.Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogDimension.html#Syncfusion_Blazor_Popups_DialogDimension_Height) and [DialogDimension.Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogDimension.html#Syncfusion_Blazor_Popups_DialogDimension_Width) properties. Use the following code to customize the dialog dimensions:
