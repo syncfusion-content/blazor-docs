@@ -40,7 +40,7 @@ To add Blazor Splitter component in the app, open the NuGet package manager in V
 Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
 {% tabs %}
-{% highlight cshtml tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 
@@ -257,7 +257,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 * Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Layouts** namespace.
 
 {% tabs %}
-{% highlight cshtml tabtitle="~/Imports.razor" %}
+{% highlight razor tabtitle="~/Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Layouts
@@ -268,7 +268,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 * Now, add the Syncfusion Splitter component in razor file. Here, the Splitter component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 <div>Horizontal Splitter</div>
 

@@ -42,7 +42,7 @@ To add Blazor RichTextEditor component in the app, open the NuGet package manage
 Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
 {% tabs %}
-{% highlight cshtml tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 
@@ -259,7 +259,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 * Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.RichTextEditor** namespace.
 
 {% tabs %}
-{% highlight cshtml tabtitle="~/Imports.razor" %}
+{% highlight razor tabtitle="~/Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.RichTextEditor
@@ -270,7 +270,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 * Now, add the Syncfusion RichTextEditor component in razor file. Here, the RichTextEditor component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 <SfRichTextEditor>
     <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p>
@@ -290,7 +290,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 Configure the toolbar with the tools using `Items` field of the [RichTextEditorToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html) property as your application requires.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Tools" />
@@ -361,7 +361,7 @@ The `Image` module inserts an image into Rich Text Editor's content area, and th
 Specifies the items to be rendered in quick toolbar based on the target elements such as image, link and table element. The quick toolbar opens to customize the element by clicking the target element.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Tools" />
@@ -424,7 +424,7 @@ Specifies the items to be rendered in quick toolbar based on the target elements
 To retrieve the editor contents, use the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) property of Rich Text Editor. To fetch the Rich Text Editor's text content, use `GetText` method of Rich Text Editor.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.RichTextEditor
@@ -474,7 +474,7 @@ To retrieve the editor contents, use the [Value](https://help.syncfusion.com/cr/
 To retrieve the maximum number of characters in the Rich Text Editor's content, use the `GetCharCount` property of the Rich Text Editor.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.RichTextEditor

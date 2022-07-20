@@ -12,7 +12,7 @@ documentation: ug
 The Rich Text Editor provides an option to display a toolbar on demand by enabling the property of [RichTextEditorInlineMode.Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorInlineMode.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorInlineMode_Enable). When the editable text is focused or selected the inline floating toolbar appears, and also inline toolbar item can be customized by setting [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/inline-mode.razor %}
 
@@ -27,7 +27,7 @@ The Rich Text Editor provides an option to display a toolbar on demand by enabli
 The inline toolbar will appears only for the selected text by enabling the [RichTextEditorInlineMode.ShowOnSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorInlineMode.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorInlineMode_ShowOnSelection) property. Otherwise the inline toolbar will not be appeared after clicking the editable area.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/edit-on-select.razor %}
 

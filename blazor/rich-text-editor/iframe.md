@@ -14,7 +14,7 @@ When the `RichTextEditorIframeSettings` option is [RichTextEditorIframeSettings.
 Basically, in an iframe mode, you have got the entire document only the editor content, and also you can use styles and scripts only for the particular Editor.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -33,7 +33,7 @@ Basically, in an iframe mode, you have got the entire document only the editor c
 The editor allows you to pass an additional attribute to body tag of a `<iframe>` element using [RichTextEditorIframeSettings.Attributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorIFrameSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorIFrameSettings_Attributes) property. This property contains name or value pairs in string format. It is used to override the default appearance of the content area.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/iframe-attribute.razor %}
 
@@ -49,7 +49,7 @@ The editor offers to add external CSS file to style the `<iframe>` element. Easi
 Likewise, add the external script file to the `<iframe>` element using `Resources - Scripts` field of `RichTextEditorIframeSettings` to provide the additional functionalities to the Rich Text Editor.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 

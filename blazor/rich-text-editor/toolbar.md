@@ -21,7 +21,7 @@ The Rich Text Editor toolbar contains a collection of tools such as bold, Italic
 The default mode of [ToolbarType.Expand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarType.html#Syncfusion_Blazor_RichTextEditor_ToolbarType_Expand) to hide the overflowing items in the next row. By clicking the expand arrow, view the overflowing toolbar items.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/expand-toolbar.razor %}
 
@@ -35,7 +35,7 @@ The default mode of [ToolbarType.Expand](https://help.syncfusion.com/cr/blazor/S
 Set the [ToolbarType.MultiRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarType.html#Syncfusion_Blazor_RichTextEditor_ToolbarType_MultiRow) to display the toolbar items in a row-wise format. All toolbar items are visible always.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/multirow-toolbar.razor %}
 
@@ -51,7 +51,7 @@ By default, toolbar is float at the top of the Rich Text Editor on scrolling. It
 Enable or disable the floating toolbar using [RichTextEditorToolbarSettings.EnableFloating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_EnableFloating) property.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -92,7 +92,7 @@ Image tools used to insert an image to the editor and click on the image to easi
 | Dimension |  "Rotation" related commands are added as custom commands to the image element |
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/custom-image-quick-toolbar.razor %}
 
@@ -112,7 +112,7 @@ You can customize the selected link inside the editor through the quick toolbar.
 | Remove Link | Removes link from the content of Rich Text Editor. |
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/custom-link-quick-toolbar.razor %}
 
@@ -137,7 +137,7 @@ Quick toolbar is opened by clicking the table. It has different sets of commands
 
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/custom-table-quick-toolbar.razor %}
 

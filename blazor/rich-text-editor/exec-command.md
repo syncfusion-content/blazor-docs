@@ -264,7 +264,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertImage, new ImageCommands
 The following code block demonstrates the usage of the `ExecuteCommand` in Rich Text Editor.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/html-execute-command.razor %}
 
@@ -403,7 +403,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertImage, new ImageCommands
 </table>
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/markdown-execute-command.razor %}
 

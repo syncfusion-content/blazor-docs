@@ -12,7 +12,7 @@ documentation: ug
 The Rich Text Editor allows, two or more users can edit the same editor by using [SignalR](https://docs.microsoft.com/en-us/aspnet/core/tutorials/signalr?view=aspnetcore-6.0&tabs=visual-studio) services. Which will update the editor value in real-time, when loading it on multiple pages. In the below example create the `SignalR HubConnectionBuilder` in the `OnInitializedAsync` method and the editor updated value send to the SignalR message in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_ValueChange) event.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 @using Microsoft.AspNetCore.SignalR.Client
 @inject NavigationManager NavigationManager
