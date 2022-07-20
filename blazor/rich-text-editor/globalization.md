@@ -22,7 +22,7 @@ Specifies the direction of the Rich Text Editor component using the [EnableRtl](
 > `EnableRtl` property will not change, based on current culture.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 

@@ -21,7 +21,7 @@ When the <kbd>Enter</kbd> key is customized with any of the above possible value
 > The `pre` tag will be inserted when code format is applied, enter key press will created only `<br>` tag if the editor content is inside the `pre` tag. Need to press enter key twice to come out of the `pre` tag.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/enter-key-customization.razor %}
 
@@ -39,7 +39,7 @@ By default, the `<br>` tag is created while pressing the <kbd>Shift</kbd> + <kbd
 When the <kbd>Shift</kbd> + <kbd>Enter</kbd> key is customized with any of the possible values, pressing the <kbd>Shift</kbd> + <kbd>Enter</kbd> key in the editor will create a new tag that is configured.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/shift-enter-key-customization.razor %}
 

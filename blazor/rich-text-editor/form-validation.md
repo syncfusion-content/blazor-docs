@@ -14,7 +14,7 @@ The Rich Text Editor support validation using the [EditForm]( https://docs.micro
 > [View Sample in GitHub.](https://github.com/SyncfusionExamples/rich_text_editor_editform_validation)
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/edit-form.razor %}
 
@@ -36,7 +36,7 @@ The Rich Text Editor provides the functionality of character count and its valid
 This sample is demonstrated form validation using the `DataAnnotationsValidator`.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/validation-rules.razor %}
 
@@ -51,7 +51,7 @@ This sample is demonstrated form validation using the `DataAnnotationsValidator`
 The Form Validation error message can be placed from default position to desired custom location.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/custom-placement-validation-message.razor %}
 

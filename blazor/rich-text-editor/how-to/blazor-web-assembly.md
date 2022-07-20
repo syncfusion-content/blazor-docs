@@ -36,7 +36,7 @@ To add Blazor RichTextEditor component in the app, open the NuGet package manage
 Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
 {% tabs %}
-{% highlight cshtml tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 
@@ -124,7 +124,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.RichTextEditor** namespace.
 
 {% tabs %}
-{% highlight cshtml tabtitle="~/Imports.razor" %}
+{% highlight razor tabtitle="~/Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.RichTextEditor
@@ -135,7 +135,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 * Now, add the Syncfusion RichTextEditor component in razor file. Here, the RichTextEditor component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 <SfRichTextEditor>
 <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p>

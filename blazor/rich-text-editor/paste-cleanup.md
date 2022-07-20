@@ -22,7 +22,7 @@ By default, the editor consider the following processes on paste content from Mi
 You can also get the pasted Text as a HTML text using the [AfterPasteCleanup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_AfterPasteCleanup) event argument Value.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 <SfRichTextEditor @ref="RteObj" @bind-Value="htmlText" EditorMode="EditorMode.HTML">
     <RichTextEditorEvents AfterPasteCleanup="@AfterPasteCleanupHandler" />
@@ -54,7 +54,7 @@ You can control the formatting and styles on pasting the content to the editor u
 > To use paste cleanup, configure paste cleanup using the `RichTextEditorPasteCleanupSettings`.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/paste-cleanup.razor %}
 
@@ -73,7 +73,7 @@ When [Prompt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEd
 > When `Prompt` value is set true, the API properties [PlainText](#paste-as-plain-text) and [KeepFormat](#keep-format) will not be considered for processing when pasting the content.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/prompt-paste-cleanup.razor %}
 
@@ -89,7 +89,7 @@ When [PlainText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTex
 > When `PlainText` value is set true, the API property [Prompt](#prompt-dialog) should be set to false, and [KeepFormat](#keep-format) will not be considered for processing when pasting the content.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/plain-text-paste-cleanup.razor %}
 
@@ -108,7 +108,7 @@ When `KeepFormat` is set to false, the style in the copied content will be remov
 
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/keep-format-paste-cleanup.razor %}
 
@@ -126,7 +126,7 @@ When [DeniedTags](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTe
 3. `'a[href, target]'`: Paste the content by filtering out anchor tags that have the 'href' and 'target' attributes.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/denied-tag-paste-cleanup.razor %}
 
@@ -142,7 +142,7 @@ When the [DeniedAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 `'id', 'title'`: This will remove the attributes ‘id’ and ‘title’ from all tags.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/denied-attribute-paste-cleanup.razor %}
 
@@ -164,7 +164,7 @@ For Example, `public string[] AllowedStyles = new string[] { "color", "margin" }
 In the following example, the paste cleanup related settings are explained with configuration.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/allowed-style-paste-cleanup.razor %}
 

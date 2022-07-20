@@ -40,7 +40,7 @@ To add Blazor Card component in the app, open the NuGet package manager in Visua
 Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
 {% tabs %}
-{% highlight cshtml tabtitle="~/_Imports.razor" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 
@@ -257,7 +257,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 * Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Cards** namespace.
 
 {% tabs %}
-{% highlight cshtml tabtitle="~/Imports.razor" %}
+{% highlight razor tabtitle="~/Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Cards
@@ -268,7 +268,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 * Now, add the Syncfusion Blazor Card component in razor file. Here, the Card component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 <SfCard> Sample Card </SfCard>
 
@@ -282,7 +282,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 You can add the header by using [CardHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html) tag and add [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html#Syncfusion_Blazor_Cards_CardHeader_Title) and [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardHeader.html#Syncfusion_Blazor_Cards_CardHeader_SubTitle) in that tag. You can also add the content by using [CardContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.CardContent.html) tag.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 <div class="control-section">
     <div class="row">

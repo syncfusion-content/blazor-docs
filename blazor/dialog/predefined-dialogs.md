@@ -103,7 +103,7 @@ namespace WebApplication1
 open  **~/_MainLayout.razor** file and add SfDialogProvider
 
 {% tabs %}
-{% highlight cshtml tabtitle="~/_MainLayout.razor" %}
+{% highlight razor tabtitle="~/_MainLayout.razor" %}
 
 <Syncfusion.Blazor.Popups.SfDialogProvider/>
 
@@ -125,7 +125,7 @@ An [Alert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDial
 Use the following code to render a simple alert dialog in an application:
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/alert-dialog.razor %}
 
@@ -141,7 +141,7 @@ A [Confirm](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDia
 Use the following code to render a simple confirm dialog in an application:
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/confirm-dialog.razor %}
 
@@ -157,7 +157,7 @@ A [Prompt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDial
 Use the following code to render a simple prompt dialog in an application:
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/prompt-dialog.razor %}
 
@@ -231,6 +231,8 @@ You can customize the dialog position by using the [Position](https://help.syncf
 ![Alert position Dialog](./images/blazor-alert-position.png)
 
 ![Confirm position Dialog](./images/blazor-confirm-position.png)
+
+![Prompt position Dialog](./images/blazor-prompt-position.png)
 
 ## Dimension
 
@@ -315,7 +317,7 @@ You can customize the predefined dialog buttons by using the [PrimaryButtonOptio
 You can customize the predefined dialogs using the [DialogTemplates.childContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogTemplates.html#Syncfusion_Blazor_Popups_DialogTemplates_Content) property. Use the following code to render the textbox component inside `Prompt` dialog:
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/customize-dialog.razor %}
 

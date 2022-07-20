@@ -345,7 +345,7 @@ app.Run();
 3. Create `ToastComponent` which shows `SfToast` based on `ToastService` notification.
         
 {% tabs %}
-{% highlight cshtml tabtitle="ToastComponent.razor" hl_lines="13 14" %}
+{% highlight razor tabtitle="ToastComponent.razor" hl_lines="13 14" %}
     
 @using Syncfusion.Blazor.Notifications;  
 @inject ToastService ToastService
@@ -393,7 +393,7 @@ app.Run();
 4. Add `ToastComponent` create in above step in `MainLayout.razor`.
 
 {% tabs %}
-{% highlight cshtml tabtitle="MainLayout.razor" hl_lines="21" %}
+{% highlight razor tabtitle="MainLayout.razor" hl_lines="21" %}
     
 @inherits LayoutComponentBase
 @using BlazorApp.Components;
@@ -423,7 +423,7 @@ app.Run();
 5. Now, you can inject `ToastService` in any page and call `ToastService.ShowToast()` method to show toast notifications.
 
 {% tabs %}
-{% highlight cshtml tabtitle="RAZOR" hl_lines="3 10 11 12 13 14" %}
+{% highlight razor tabtitle="RAZOR" hl_lines="3 10 11 12 13 14" %}
     
 @page "/"
 @using BlazorApp.Components  
