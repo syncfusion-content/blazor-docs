@@ -400,10 +400,9 @@ You can customize the height and width of the column chooser dialog by using the
     #Grid .e-dialog.e-ccdlg {         
         max-height: 600px !important; 
         width: 300px !important; 
-        height: 585px; 
     } 
     #Grid .e-ccdlg .e-cc-contentdiv { 
-        height: 375px !important; 
+        height: 250px !important; 
         width: 250px !important;         
     } 
 </style> 
@@ -456,11 +455,12 @@ This can be demonstrated in the following sample:
     #Grid .e-dialog.e-ccdlg {         
         max-height: 600px !important; 
         width: 300px !important; 
-        height: 585px; 
     } 
     #Grid .e-ccdlg .e-cc-contentdiv { 
-        height: 375px !important; 
+        height: 250px !important; 
         width: 250px !important;         
     } 
 </style> 
 ```
+
+![Customize Column Chooser Dialog Size](./images/blazor-datagrid-customize-column-chooser-dialog.png)
