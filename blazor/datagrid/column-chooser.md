@@ -407,6 +407,7 @@ You can customize the height and width of the column chooser dialog by using the
     } 
 </style> 
 ```
+> Here, **!important** attribute is used to apply custom styles since the column chooser dialog position will be calculated dynamically based on content.
 
 This can be demonstrated in the following sample:
 
