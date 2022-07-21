@@ -79,7 +79,7 @@ public class TreeData
 
 ## Reorder single column
 
-Tree Grid has option to reorder single column either by Interaction or by using the [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ReorderColumnsAsync_System) method. In the following sample, **TaskName** column is reordered to third column position by using the method.
+Tree Grid has option to reorder single column either by Interaction or by using the **ReorderColumns** method. In the following sample, **TaskName** column is reordered to third column position by using the method.
 
 {% tabs %}
 
@@ -107,7 +107,7 @@ Tree Grid has option to reorder single column either by Interaction or by using 
     }
     private async Task ReorderColumn()
     {
-        await TreeGrid.ReorderColumnsAsync(new List<string>(){ "TaskName" }, "Duration");
+        await TreeGrid.ReorderColumns(new List<string>(){ "TaskName" }, "Duration");
     }
 }
 
@@ -154,7 +154,7 @@ The following GIF represents Reordering column **TaskName** by using method,
 
 ## Reorder multiple columns
 
-User can reorder a single column at a time by Interaction. Sometimes, you need to reorder multiple columns at the same time. This can be achieved programmatically by using the [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ReorderColumnsAsync_System) method.
+User can reorder a single column at a time by Interaction. Sometimes, you need to reorder multiple columns at the same time. This can be achieved programmatically by using the **ReorderColumns** method.
 
 In the following sample, **TaskName** and **Duration** columns are reordered to last column position by using this method on button click.
 
@@ -184,7 +184,7 @@ In the following sample, **TaskName** and **Duration** columns are reordered to 
     }
     private async Task ReorderColumn()
     {
-        await TreeGrid.ReorderColumnsAsync(new List<string>() { "TaskName", "Duration" }, "Progress");
+        await TreeGrid.ReorderColumns(new List<string>() { "TaskName", "Duration" }, "Progress");
     }
 }
 
