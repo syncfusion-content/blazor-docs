@@ -126,7 +126,7 @@ In the following sample, columns are built dynamically using the `ExpandoObject`
             ColNames[col] = "Col" + random.Next(0, 5000);
         }
         s
-        // Generate 25 rows based on the generated columns name.s
+        // Generate 25 rows based on the generated columns name.
         for (var row = 0; row < 25; row++)
         {
             dynamic item = new ExpandoObject();
