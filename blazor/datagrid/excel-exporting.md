@@ -175,7 +175,7 @@ The excel export provides an option to export hidden columns of DataGrid by defi
 
 You can add text and customize its styles either in the header or footer of an exported excel document by using the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Footer) properties of the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) class.
 
-The following sample code demonstrates adding the custom text (date format values) and customizing its styles in the Header section of the exported document. Here, date range values are obtained from the `DateRangePicker` component.
+The following sample code demonstrates adding custom text and customizing its styles in the header section of the exported document,
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -214,7 +214,7 @@ The following sample code demonstrates adding the custom text (date format value
 
             List<ExcelRow> HeaderContent = new List<ExcelRow>
             {
-                new ExcelRow() {  Cells = cell, Index=1 }
+                new ExcelRow() {  Cells = cell, Index = 1 }
             };
             header.Rows = HeaderContent;
             ExportProperties.Header = header;
