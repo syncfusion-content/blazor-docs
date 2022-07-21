@@ -746,7 +746,7 @@ When using a custom adaptor, the filtering operation has to be handled by overri
 
 ![Handling Filtering in Custom Adaptor](./images/blazor-datagrid-filtering-in-custom-adaptor.png)
 
-Based on this grid action details, you can filter the custom data by using the built-in performFiltering method.
+Based on these grid action details, a custom data source can be filtered using the built-in `PerformFiltering` method of the `DataOperations` class.
 
 > Also, you can use your own method to do the filtering operation and bind the resultant data to the grid.
 
@@ -825,7 +825,7 @@ When using a custom adaptor, the sorting operation has to be handled by overridi
 
 ![Handling Sorting in Custom Adaptor](./images/blazor-datagrid-sorting-in-custom-adaptor.png)
 
-Based on this grid action details, you can sort the custom data by using the built-in PerformSorting method.
+Based on these grid action details, a custom data source can be sorted using the built-in `PerformSorting` method of the `DataOperations` class.
 
 > Also, you can use your own method to do the sorting operation and bind the resultant data to the grid.
 
