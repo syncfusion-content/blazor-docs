@@ -98,51 +98,42 @@ In the following sample, columns are built dynamically using the `ExpandoObject`
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
-<SfButton Content="Generate new data" OnClick=@OnGenerateNewData />
-    <SfGrid @ref="grid" Height="400px" Width="100%" TValue="ExpandoObject" DataSource=@data>
-        <GridColumns>
-            @if (data != null && data.Any())
+<SfGrid TValue="ExpandoObject" DataSource=@GridData>
+    <GridColumns>
+        @if (GridData != null && GridData.Any())
+        {
+            foreach (var item in (IDictionary<string, object>)GridData.First())
             {
-                var firstItem = data.First();
-                var dictionaryItem = (IDictionary<string, object>)firstItem;
-                var fields = dictionaryItem.Keys;
-                foreach (var item in dictionaryItem)
-                {
-                    <GridColumn Field="@item.Key"></GridColumn>
-                }
+                <GridColumn Field="@item.Key"></GridColumn>
             }
-        </GridColumns>
-    </SfGrid>
+        }
+    </GridColumns>
+</SfGrid>
 
-
-@code{
-    private SfGrid<ExpandoObject> grid;
-    private List<ExpandoObject> data = GenerateNewData();
-
-    public void OnGenerateNewData()
-    {
-        this.data = GenerateNewData();
-    }
+@code {
+    private List<ExpandoObject> GridData = GenerateNewData();
 
     private static List<ExpandoObject> GenerateNewData()
     {
         var data = new List<ExpandoObject>();
         var random = new Random();
-        var colCount = random.Next(2, 6);
-        var colNames = new string[colCount];
+        var ColCount = random.Next(2, 6);
+        var ColNames = new string[ColCount];
 
-        for (var col = 0; col < colCount; col++)
+        // Generate random number of columns.
+        for (var col = 0; col < ColCount; col++)
         {
-            colNames[col] = "Col" + random.Next(0, 5000);
+            ColNames[col] = "Col" + random.Next(0, 5000);
         }
-
-        for (var row = 0; row < 100; row++)
+        s
+        // Generate 25 rows based on the generated columns name.s
+        for (var row = 0; row < 25; row++)
         {
             dynamic item = new ExpandoObject();
             var dict = (IDictionary<string, object>)item;
-            for (var col = 0; col < colCount; col++)
+            for (var col = 0; col < ColCount; col++)
             {
-                dict[colNames[col]] = random.Next(0, 10000);
+                dict[ColNames[col]] = random.Next(0, 10000);
             }
             data.Add(item);
         }
