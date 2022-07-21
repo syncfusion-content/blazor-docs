@@ -1229,7 +1229,7 @@ This is demonstrated in the following sample code:
 
 Grid does not have direct support to bind column with many to many relation and perform CRUD operation. But, this can be achieved by using the column template and editing template features of the Grid.
 
-In the following sample, we have rendered the multi-select component in the Roles column. When the `RequestType` is Save, the edited changes can be saved into the grid.
+In the following sample, the `SfMultiSelect` component is rendered in the `EditTemplate` for the Roles column. The edited changes will be saved in the grid when the `RequestType` is `Save` in the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1341,6 +1341,9 @@ In the following sample, we have rendered the multi-select component in the Role
     }
 }
 ```
+
+![Many to Many Relationship Data in Blazor DataGrid](./images/blazor-datagrid-many-to-many-relationship-data.gif)
+
 
 > [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-bind-many-to-many-relation-data)
 
