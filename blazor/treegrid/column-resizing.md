@@ -225,4 +225,4 @@ When the right edge of the header cell is tapped, a floating handler will be vis
 
 The following screenshot represents the column resizing in touch device.
 
-![Blazor Tree Grid Column Resizing in Touch Interaction](./images/blazor-treegrid-column-resizing.png)
+![Blazor Tree Grid Column Resizing in Touch Interaction](./images/blazor-treegrid-column-resizing-touch.png)
