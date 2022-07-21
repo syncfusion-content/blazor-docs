@@ -524,7 +524,7 @@ By referring to the above link, we have customized the appearance of the scroll 
 
 ## Sticky header
 
-You can make the Grid column headers remain fixed while scrolling by using the `EnableStickyHeader` property.
+You can make the Grid column headers remain fixed while scrolling by using the [EnableStickyHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableStickyHeader) property.
 
 In the following sample, the Grid headers will be sticky while scrolling the Grid’s parent div element.
 
