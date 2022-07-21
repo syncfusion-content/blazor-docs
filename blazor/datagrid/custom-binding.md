@@ -406,7 +406,7 @@ The following sample code demonstrates `DataAdaptor` extended from `OwningCompon
 }
 ```
 
-## CRUD operation
+## Handling Editing in Custom Adaptor
 
 The CRUD operations for the custom bound data in the DataGrid component can be implemented by overriding the following CRUD methods of the **DataAdaptor** abstract class,
 
@@ -637,21 +637,6 @@ The following sample code demonstrates implementing the aggregates for the custo
         public override object Read(DataManagerRequest dm, string key = null)
         {
             IEnumerable<Order> DataSource = Orders;
-            if (dm.Search != null && dm.Search.Count > 0)
-            {
-                // Searching
-                DataSource = DataOperations.PerformSearching(DataSource, dm.Search);
-            }
-            if (dm.Sorted != null && dm.Sorted.Count > 0)
-            {
-                // Sorting
-                DataSource = DataOperations.PerformSorting(DataSource, dm.Sorted);
-            }
-            if (dm.Where != null && dm.Where.Count > 0)
-            {
-                // Filtering
-                DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
-            }
             int count = DataSource.Cast<Order>().Count();
             if (dm.Skip != 0)
             {
@@ -689,7 +674,7 @@ The following sample code demonstrates implementing the grouping operation for t
 @using Syncfusion.Blazor.Grids
 @using System.Collections
 
-<SfGrid TValue="Order" ID="Grid" AllowSorting="true" AllowFiltering="true" AllowPaging="true" AllowGrouping="true">
+<SfGrid TValue="Order" ID="Grid" AllowPaging="true" AllowGrouping="true">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridColumns>
@@ -726,21 +711,6 @@ The following sample code demonstrates implementing the grouping operation for t
         public override object Read(DataManagerRequest dm, string key = null)
         {
             IEnumerable<Order> DataSource = Orders;
-            if (dm.Search != null && dm.Search.Count > 0)
-            {
-                // Searching
-                DataSource = DataOperations.PerformSearching(DataSource, dm.Search);
-            }
-            if (dm.Sorted != null && dm.Sorted.Count > 0)
-            {
-                // Sorting
-                DataSource = DataOperations.PerformSorting(DataSource, dm.Sorted);
-            }
-            if (dm.Where != null && dm.Where.Count > 0)
-            {
-                // Filtering
-                DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
-            }
             int count = DataSource.Cast<Order>().Count();
             if (dm.Skip != 0)
             {
@@ -769,6 +739,163 @@ The following sample code demonstrates implementing the grouping operation for t
     }
 }
 ```
+
+## Handling Filtering in Custom Adaptor
+
+When using a custom adaptor, the filtering operation has to be handled by overriding the Read/ReadAsync method of the DataAdaptor abstract class. In the DataManagerRequest class, you can get the grid action details as shown in the below image.
+
+![Handling Filtering in Custom Adaptor](./images/blazor-datagrid-filtering-in-custom-adaptor.png)
+
+Based on these grid action details, a custom data source can be filtered using the built-in `PerformFiltering` method of the `DataOperations` class.
+
+> Also, you can use your own method to do the filtering operation and bind the resultant data to the grid.
+
+The following sample code demonstrates implementing the filtering operation for the custom bounded data,
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+@using System.Collections
+
+<SfGrid TValue="Order" ID="Grid" AllowFiltering="true" AllowPaging="true">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <GridPageSettings PageSize="8"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="@TextAlign.Center" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public static List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
+    }
+
+    // Implementing custom adaptor by extending the DataAdaptor class
+    public class CustomAdaptor : DataAdaptor
+    {
+        // Performs data Read operation
+        public override object Read(DataManagerRequest dm, string key = null)
+        {
+            IEnumerable<Order> DataSource = Orders;
+            if (dm.Where != null && dm.Where.Count > 0)
+            {
+                // Filtering
+                DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+            }
+            int count = DataSource.Cast<Order>().Count();
+            if (dm.Skip != 0)
+            {
+                //Paging
+                DataSource = DataOperations.PerformSkip(DataSource, dm.Skip);
+            }
+            if (dm.Take != 0)
+            {
+                DataSource = DataOperations.PerformTake(DataSource, dm.Take);
+            }
+            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
+        }
+    }
+}
+
+```
+
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-filtering-with-custom-adaptor)
+
+## Handling Sorting in Custom Adaptor
+
+When using a custom adaptor, the sorting operation has to be handled by overriding the Read/ReadAsync method of the DataAdaptor abstract class. In the DataManagerRequest class, you can get the grid action details as shown in the below image.
+
+![Handling Sorting in Custom Adaptor](./images/blazor-datagrid-sorting-in-custom-adaptor.png)
+
+Based on these grid action details, a custom data source can be sorted using the built-in `PerformSorting` method of the `DataOperations` class.
+
+> Also, you can use your own method to do the sorting operation and bind the resultant data to the grid.
+
+The following sample code demonstrates implementing the sorting operation for the custom bounded data,
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+@using System.Collections
+
+<SfGrid TValue="Order" ID="Grid" AllowSorting="true" AllowPaging="true">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <GridPageSettings PageSize="8"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="@TextAlign.Center" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public static List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
+    }
+
+    // Implementing custom adaptor by extending the DataAdaptor class
+    public class CustomAdaptor : DataAdaptor
+    {
+        // Performs data Read operation
+        public override object Read(DataManagerRequest dm, string key = null)
+        {
+            IEnumerable<Order> DataSource = Orders;
+            if (dm.Sorted != null && dm.Sorted.Count > 0)
+            {
+                // Sorting
+                DataSource = DataOperations.PerformSorting(DataSource, dm.Sorted);
+            }
+            int count = DataSource.Cast<Order>().Count();
+            if (dm.Skip != 0)
+            {
+                //Paging
+                DataSource = DataOperations.PerformSkip(DataSource, dm.Skip);
+            }
+            if (dm.Take != 0)
+            {
+                DataSource = DataOperations.PerformTake(DataSource, dm.Take);
+            }
+            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
+        }
+    }
+}
+```
+
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-sorting-with-custom-adaptor)
 
 ## How to pass additional parameters to custom adaptor
 
