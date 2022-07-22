@@ -25,7 +25,7 @@ The default options available within the `Resources` collection are as follows,
 | `Title` | string | It holds the title of the resource field to be displayed on the event editor window. |
 | `Name` | string | A unique resource name used for differentiating various resource objects while grouping. |
 | `AllowMultiple` | bool | When set to `true`, allows multiple selection of resource names, thus creating multiple instances of same appointment for the selected resources. |
-| `DataSource` | Object | Assigns the resource `DataSource`, where data can be passed either as an array of JavaScript objects, or else can create an instance of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) in case of processing remote data and can be assigned to the `DataSource` property. With the remote data assigned to `DataSource`, check the available [Adaptors](https://blazor.syncfusion.com/documentation/data/adaptors/) to customize the data processing. |
+| `DataSource` | Object | Assigns the resource [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleResource-2.html#Syncfusion_Blazor_Schedule_ScheduleResource_2_DataSource), where data can be passed either as an array of JavaScript objects, or else can create an instance of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) in case of processing remote data and can be assigned to the `DataSource` property. With the remote data assigned to `DataSource`, check the available [Adaptors](https://blazor.syncfusion.com/documentation/data/adaptors/) to customize the data processing. |
 | `Query` | query | Defines the external [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) that will be executed along with the data processing. |
 | `IdField` | string/int/Guid | Binds the resource ID field name from the resources `DataSource`. |
 | `TextField` | string | Binds the text field name from the resources `DataSource`. It usually holds the resource names. |
@@ -59,7 +59,7 @@ The following code example depicts how to bind the list of object collection to 
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 4, 4);
+    DateTime CurrentDate = new DateTime(2022, 6, 1  );
     public List<ResourceData> OwnerData { get; set; } = new List<ResourceData> {
         new ResourceData{ Text = "Nancy", Id= 1, Color = "#df5286" },
         new ResourceData{ Text = "Steven", Id= 2, Color = "#7fa900" },
@@ -90,9 +90,9 @@ The following code example depicts how to bind the list of object collection to 
 
 ### Binding ExpandoObject
 
-Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases data can be bound to the scheduler as list of  **ExpandoObject**.
+Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases data can be bound to the scheduler as list of [**ExpandoObject**](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-6.0).
 
-**ExpandoObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleResource` tag. Scheduler can also perform all kind of supported data operations and editing in ExpandoObject.
+**ExpandoObject** can be bound to the `DataSource` option of the scheduler within the [`ScheduleResource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleResource-2.html) tag. Scheduler can also perform all kind of supported data operations and editing in ExpandoObject.
 
 ```csharp
 @using System.Dynamic
@@ -112,12 +112,12 @@ Scheduler is a generic component which is strongly bound to a model type. There 
     </ScheduleViews>
 </SfSchedule>
 @code {
-    DateTime CurrentDate = new DateTime(2020, 3, 9);
+    DateTime CurrentDate = new DateTime(2022, 6, 1);
     public string[] Resources { get; set; } = { "Owners" };
     public List<ExpandoObject> ResourceCollection = new List<ExpandoObject>() { };
     List<AppointmentData> DataSource = new List<AppointmentData>
-    {
-    new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 9, 9, 0, 0) , EndTime = new DateTime(2020, 3, 9, 11, 0, 0), OwnerId = 1  }
+     {
+    new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 1, 9, 0, 0) , EndTime = new DateTime(2022, 6, 1, 11, 0, 0), OwnerId = 1  }
     };
     protected override void OnInitialized()
     {
@@ -138,9 +138,9 @@ Scheduler is a generic component which is strongly bound to a model type. There 
         public string Subject { get; set; }
         public string Location { get; set; }
         public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
+        public DateTime EndTime { get; set; }       
         public string Description { get; set; }
-        public bool IsAllDay { get; set; }
+        public bool IsAllDay { get; set; }      
         public string RecurrenceRule { get; set; }
         public string RecurrenceException { get; set; }
         public Nullable<int> RecurrenceID { get; set; }
@@ -150,10 +150,12 @@ Scheduler is a generic component which is strongly bound to a model type. There 
     }
 }
 ```
+The following image depicts how the data can be bound to the scheduler as list of **ExpandoObject**.
+![ExpandoObject in Blazor Scheduler](images/blazor-scheduler-expandoobject.png)
 
 ## Binding DynamicObject
 
-Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases data can be bound to the scheduler as list of  **DynamicObject**.
+Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases data can be bound to the scheduler as list of  [**DynamicObject**](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-6.0).
 
 **DynamicObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleResource` tag. Scheduler can also perform all kinds of supported data operations and editing in DynamicObject.
 
@@ -265,7 +267,7 @@ Here, ResourceData class implements the interface of **INotifyPropertyChanged** 
 
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2022, 6, 1);
     int roomId = 2;
     int ownerId = 3;
     public string[] Resources { get; set; } = { "Rooms", "Owners" };
@@ -299,9 +301,10 @@ Here, ResourceData class implements the interface of **INotifyPropertyChanged** 
     }
 
     List<AppointmentData> DataSource = new List<AppointmentData>
-    {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), OwnerId = 1, RoomId = 1 }
+     {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 1, 9, 30, 0) , EndTime = new DateTime(2022, 6, 1, 11, 0, 0), OwnerId = 1, RoomId = 1 }
     };
+
 
     public void AddRecord()
     {
@@ -378,6 +381,8 @@ Here, ResourceData class implements the interface of **INotifyPropertyChanged** 
     }
 }
 ```
+The following image depicts how this **ObservableCollection** (dynamic data collection) provides notifications when items are added, removed and moved.
+![BindingObservableCollection in Blazor Scheduler](images/blazor-scheduler-bindingobservablecollection.png)
 
 ## Scheduler with multiple resources
 
@@ -409,10 +414,12 @@ To get start quickly about multiple resource on scheduler, you can check on this
     </ScheduleViews>
 </SfSchedule>
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2022, 6, 1);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), OwnerId = 1 }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 1, 9, 30, 0) , EndTime = new DateTime(2022, 6, 1, 11, 0, 0), OwnerId = 1 },
+        new AppointmentData { Id = 2, Subject = "Swimming", StartTime = new DateTime(2022, 6, 1, 9, 30, 0) , EndTime = new DateTime(2022, 6, 1, 11, 0, 0), OwnerId = 2 },
+        new AppointmentData { Id = 3, Subject = "Movie", StartTime = new DateTime(2022, 6, 2, 10, 0, 0) , EndTime = new DateTime(2022, 6, 2, 12, 0, 0), OwnerId = 3 }
     };
     public List<ResourceData> OwnersData { get; set; } = new List<ResourceData>
     {
@@ -442,6 +449,8 @@ To get start quickly about multiple resource on scheduler, you can check on this
     }
 }
 ```
+The following image depicts how appointments belonging to the different resources will be displayed altogether on the default Scheduler.
+![Multiple Resources in Blazor Scheduler](images/blazor-scheduler-multipleresources.png)
 
 > Setting `AllowMultiple` to `true` in the above code example allows to select multiple resources from the event editor and also creates multiple copies of the same appointment in the Scheduler for each resources while rendering.
 
@@ -479,7 +488,7 @@ The following code example displays how the multiple resources are grouped and i
     </ScheduleViews>
 </SfSchedule>
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2022, 6, 1);
     public string[] Resources { get; set; } = { "Rooms", "Owners" };
     public List<ResourceData> RoomData { get; set; } = new List<ResourceData>
     {
@@ -493,8 +502,8 @@ The following code example displays how the multiple resources are grouped and i
         new ResourceData{ OwnerText = "Michael", Id = 3, OwnerGroupId = 1, OwnerColor = "#7499e1" }
     };
     List<AppointmentData> DataSource = new List<AppointmentData>
-    {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), OwnerId = 1, RoomId = 1 }
+     {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 1, 9, 30, 0) , EndTime = new DateTime(2022, 6, 1, 11, 0, 0), OwnerId = 1, RoomId = 1 }
     };
     public class AppointmentData
     {
@@ -522,6 +531,8 @@ The following code example displays how the multiple resources are grouped and i
     }
 }
 ```
+The following image displays how the multiple resources are grouped and its events are portrayed in the default calendar views.
+![Vertical Resource view in Blazor Scheduler](images/blazor-scheduler-verticalresourceview.png)
 
 ### Timeline resource view
 
@@ -544,7 +555,7 @@ The following code example depicts how to group the multiple resources on Timeli
     </ScheduleViews>
 </SfSchedule>
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2022, 6, 1);
     public string[] Resources { get; set; } = { "Rooms", "Owners" };
     public List<ResourceData> RoomData { get; set; } = new List<ResourceData>
     {
@@ -558,8 +569,8 @@ The following code example depicts how to group the multiple resources on Timeli
         new ResourceData{ OwnerText = "Michael", Id = 3, OwnerGroupId = 1, OwnerColor = "#7499e1" }
     };
     List<AppointmentData> DataSource = new List<AppointmentData>
-    {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), OwnerId = 1, RoomId = 1 }
+     {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 1, 9, 30, 0) , EndTime = new DateTime(2022, 6, 1, 11, 0, 0), OwnerId = 1, RoomId = 1 }
     };
     public class AppointmentData
     {
@@ -587,6 +598,8 @@ The following code example depicts how to group the multiple resources on Timeli
     }
 }
 ```
+The following image depicts how the multiple resources will be displayed in Timeline Resource view accordingly.
+![Timeline Resource view in Blazor Scheduler](images/blazor-scheduler-timelineresourceview.png)
 
 ### Grouping single-level resources
 
@@ -612,11 +625,13 @@ This kind of grouping allows the Scheduler to display all the resources at a sin
     </ScheduleViews>
 </SfSchedule>
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2022, 6, 1);
     public string[] Resources { get; set; } = { "Owners" };
     List<AppointmentData> DataSource = new List<AppointmentData>
-    {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), OwnerId = 1 }
+     {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 2, 9, 30, 0) , EndTime = new DateTime(2022, 6, 2, 11, 0, 0), OwnerId = 1 },
+        new AppointmentData { Id = 2, Subject = "Swimming", StartTime = new DateTime(2022, 6, 3, 10, 30, 0) , EndTime = new DateTime(2022, 6, 3, 12, 30, 0), OwnerId = 2 },
+        new AppointmentData { Id = 3, Subject = "Movie", StartTime = new DateTime(2022, 6, 4, 10, 0, 0) , EndTime = new DateTime(2022,6 , 4, 12, 0, 0), OwnerId = 3 }
     };
     public List<ResourceData> OwnersData { get; set; } = new List<ResourceData>
     {
@@ -646,6 +661,8 @@ This kind of grouping allows the Scheduler to display all the resources at a sin
     }
 }
 ```
+The following image display the Scheduler with single level resource grouping.
+![Grouping single-level resources in Blazor Scheduler](images/blazor-scheduler-groupingsinglelevelresources.png)
 
 > The `Name` field defined in the **Resources** collection namely `Owners` will be mapped within the `Group` property, in order to enable the grouping option with those resource levels on the Scheduler.
 
@@ -674,7 +691,7 @@ It is possible to group the resources of Scheduler in multiple levels, by mappin
     </ScheduleViews>
 </SfSchedule>
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2022, 6, 1);
     public string[] Resources { get; set; } = { "Hotels", "Rooms", "Owners" };
     public List<ResourceData> HotelData { get; set; } = new List<ResourceData>
     {
@@ -694,7 +711,7 @@ It is possible to group the resources of Scheduler in multiple levels, by mappin
     };
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0),
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 2, 9, 30, 0) , EndTime = new DateTime(2022, 6, 2, 11, 0, 0),
          OwnerId = 1, RoomId = 1, HotelId = 1 }
     };
     public class AppointmentData
@@ -727,6 +744,8 @@ It is possible to group the resources of Scheduler in multiple levels, by mappin
     }
 }
 ```
+The following image displays the resources of Scheduler in multi levels.
+![Grouping multi-level resources in Blazor Scheduler](images/blazor-scheduler-groupingmultiplelevelresources.png)
 
 ### One-to-One grouping
 
@@ -752,7 +771,7 @@ In multi-level grouping, Scheduler usually groups the resources on the child lev
     </ScheduleViews>
 </SfSchedule>
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2022, 6, 1);
     public string[] Resources { get; set; } = { "Rooms", "Owners" };
     public List<ResourceData> RoomData { get; set; } = new List<ResourceData>
     {
@@ -766,7 +785,7 @@ In multi-level grouping, Scheduler usually groups the resources on the child lev
     };
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), OwnerId = 1, RoomId = 1 }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 2, 9, 30, 0) , EndTime = new DateTime(2022, 6, 2, 11, 0, 0), OwnerId = 1, RoomId = 1 }
     };
     public class AppointmentData
     {
@@ -823,7 +842,7 @@ It groups the number of resources under each date and is applicable only on the 
     </ScheduleViews>
 </SfSchedule>
 @code{
-    private DateTime CurrentDate = new DateTime(2020, 1, 31);
+    private DateTime CurrentDate = new DateTime(2022, 6, 1);
     public string[] Resources { get; set; } = { "Owners" };
     public List<ResourceData> OwnersData { get; set; } = new List<ResourceData>
 {
@@ -833,7 +852,7 @@ It groups the number of resources under each date and is applicable only on the 
     };
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), OwnerId = 1 }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 2, 9, 30, 0) , EndTime = new DateTime(2022, 6, 2, 11, 0, 0), OwnerId = 1 }
     };
     public class AppointmentData
     {
@@ -889,11 +908,11 @@ Multiple resources can share the same events, thus allowing the CRUD action made
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2022, 6, 1);
     public string[] Resources { get; set; } = { "Conferences" };
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0),
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 2, 9, 30, 0) , EndTime = new DateTime(2022, 6, 2, 11, 0, 0),
         ConferenceId = new int[] { 1, 2, 3 } }
     };
     public List<ResourceData> ConferenceData { get; set; } = new List<ResourceData>
@@ -924,6 +943,7 @@ Multiple resources can share the same events, thus allowing the CRUD action made
     }
 }
 ```
+![Grouping Resources as shared events](images/blazor-scheduler-sharedevents.png)
 
 ## Simple resource header customization
 
@@ -962,7 +982,7 @@ It is possible to customize the resource header cells using built-in template op
     </ScheduleViews>
 </SfSchedule>
 @code{
-    DateTime CurrentDate = new DateTime(2020, 4, 4);
+    DateTime CurrentDate = new DateTime(2022, 6, 1);
     public string[] Resources { get; set; } = { "Doctors" };
     public List<ResourceData> DoctorsData { get; set; } = new List<ResourceData>
     {
@@ -1074,7 +1094,7 @@ It is possible to customize the resource headers to display with multiple column
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2022, 6, 1);
     private View CurrentView = View.TimelineWeek;
     public string[] GroupData { get; set; } = { "Owner" };
 
@@ -1100,8 +1120,9 @@ It is possible to customize the resource headers to display with multiple column
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
 {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0),
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 16, 9, 30, 0) , EndTime = new DateTime(2022, 6, 16, 11, 0, 0),
         OwnerId = 1 }
+
     };
     public class AppointmentData
     {
@@ -1279,7 +1300,7 @@ It is possible to expand and collapse the resource field. By default, resource f
     </ScheduleViews>
 </SfSchedule>
 @code{
-    private DateTime CurrentDate = new DateTime(2020, 1, 31);
+    private DateTime CurrentDate = new DateTime(2022, 6, 1);
     public string[] Resources { get; set; } = { "Rooms", "Owners" };
     public List<ResourceData> RoomData { get; set; } = new List<ResourceData>
     {
@@ -1294,7 +1315,7 @@ It is possible to expand and collapse the resource field. By default, resource f
     };
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), OwnerId = 1, RoomId = 1 }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 2, 9, 30, 0) , EndTime = new DateTime(2022, 6, 2, 11, 0, 0), OwnerId = 1, RoomId = 1 }
     };
     public class AppointmentData
     {
@@ -1323,10 +1344,11 @@ It is possible to expand and collapse the resource field. By default, resource f
     }
 }
 ```
+![Blazor Scheduler expand and collapse resources](images/blazor-schedule-expandandcollapse.png)
 
 ## Displaying tooltip for resource headers
 
-It is possible to display tooltip over the resource headers showing the resource information. By default, there won't be any tooltip displayed on the resource headers, and to enable it, you need to assign the customized template design to the `HeaderTooltipTemplate` option within the `ScheduleGroup`.
+It is possible to display tooltip over the resource headers showing the resource information. By default, there won't be any tooltip displayed on the resource headers, and to enable it, you need to assign the customized template design to the `HeaderTooltipTemplate` option within the [`ScheduleGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1359,12 +1381,12 @@ It is possible to display tooltip over the resource headers showing the resource
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2022, 6, 1);
     public string[] Resources { get; set; } = { "Conferences" };
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0),
-        ConferenceId = 1 }
+       new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 16, 9, 30, 0) , EndTime = new DateTime(2022, 6, 16, 11, 0, 0),
+       ConferenceId = 1 }
     };
     public List<ResourceData> ConferenceData { get; set; } = new List<ResourceData>
     {
@@ -1395,6 +1417,7 @@ It is possible to display tooltip over the resource headers showing the resource
     }
 }
 ```
+![Blazor Scheduler tooltip for resource headers](images/blazor-schedule-tooltip.png)
 
 ## Choosing between resource colors for appointments
 
@@ -1428,7 +1451,7 @@ By default, the colors defined on the top level resources collection will be app
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2022, 6, 1);
     public string ResourceColor { get; set; } = "Rooms";
     public string[] Resources { get; set; } = { "Hotels", "Rooms", "Owners" };
     public List<ResourceData> HotelData { get; set; } = new List<ResourceData>
@@ -1449,8 +1472,8 @@ By default, the colors defined on the top level resources collection will be app
     };
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0),
-        OwnerId = 1, RoomId = 1, HotelId = 1 }
+            new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 16, 9, 30, 0) , EndTime = new DateTime(2022, 6, 16, 11, 0, 0),
+            OwnerId = 1, RoomId = 1, HotelId = 1 }
     };
     public class AppointmentData
     {
@@ -1482,6 +1505,9 @@ By default, the colors defined on the top level resources collection will be app
     }
 }
 ```
+![Blazor Scheduler tooltip for resource headers](images/blazor-schedule-resourccecolors.png)
+
+![Blazor Scheduler tooltip for resource headers](images/blazor-schedule-resourccecolors1.png)
 
 > The value of the `ResourceColorField` field should be mapped with the `Name` value given within the `ScheduleResource`.
 
@@ -1512,7 +1538,7 @@ Different working days can be set for the resources of Scheduler using the `Work
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2022, 6, 1);
     View CurrentView = View.WorkWeek;
     public string[] Resources { get; set; } = { "Doctors" };
     public List<ResourceData> DoctorsData { get; set; } = new List<ResourceData>
@@ -1557,7 +1583,7 @@ Working hours indicates the work hour duration of a day, which is highlighted vi
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
+<SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
     <ScheduleGroup Resources="@Resources"></ScheduleGroup>
     <ScheduleResources>
         <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@DoctorsData" Field="DoctorId" Title="Doctor Name" Name="Doctors" TextField="Text" IdField="Id"
@@ -1573,7 +1599,7 @@ Working hours indicates the work hour duration of a day, which is highlighted vi
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2022, 6, 1);
     public string[] Resources { get; set; } = { "Doctors" };
     public List<ResourceData> DoctorsData { get; set; } = new List<ResourceData>
     {
@@ -1606,7 +1632,9 @@ Working hours indicates the work hour duration of a day, which is highlighted vi
 }
 ```
 
-In this example, a resource named `Will Smith` is depicted with working hours ranging from 8.00 AM to 3.00 PM and is visually illustrated with active colors, whereas the other two resources have different working hours set.
+In this example, a resource named `Will Smith` is depicted with working hours ranging from 7.00 AM to 1.00 PM and is visually illustrated with active colors, whereas the other two resources have different working hours set.
+
+![Resources with Different Workhours in Blazor Scheduler](images/blazor-schedule-differentworkhour.png)
 
 ## Compact view in mobile
 
@@ -1645,10 +1673,10 @@ Some of the default changes made for compact Scheduler to render in desktop devi
 
 @code{
     private View CurrentView = View.Month;
-    public DateTime CurrentDate = new DateTime(2020, 1, 31);
+    public DateTime CurrentDate = new DateTime(2022, 6, 1);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), ProjectId = 1, TaskId = 1 }
+         new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 16, 9, 30, 0) , EndTime = new DateTime(2022, 6, 16, 11, 0, 0), ProjectId = 1, TaskId = 1 }
     };
     private string[] GroupData = new string[] { "Projects", "Categories" };
     private List<ResourceData> ProjectData { get; set; } = new List<ResourceData> {
@@ -1688,6 +1716,7 @@ Some of the default changes made for compact Scheduler to render in desktop devi
     }
 }
 ```
+![Blazor Scheduler Resources in Adaptive UI](images/blazor-schedule-adaptiveui.png)
 
 ## See Also
 
