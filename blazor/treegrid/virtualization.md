@@ -406,7 +406,7 @@ To setup the frozen right/left columns, you need to define Column property of **
 The following GIF represent a tree grid with Frozen column virtualization.
 ![Blazor TreeGrid with Frozen Column virtualization](./images/blazor-treegrid-frozencolumn-virtualization.gif)
 
-### Limitations for Virtualization
+## Limitations for Virtualization
 
 * While using column virtualization, column width should be in the pixel. Percentage values are not accepted.
 * Due to the element height limitation in browsers, the maximum number of records loaded by the tree grid is limited by the browser capability.
