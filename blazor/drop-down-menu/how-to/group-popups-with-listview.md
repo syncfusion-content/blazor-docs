@@ -17,6 +17,7 @@ In the following example, ListView element is given as `PopupContent` to Dropdow
 
 @using Syncfusion.Blazor.SplitButtons
 @using Syncfusion.Blazor.Lists
+
 <SfDropDownButton CssClass="e-caret-hide" IconCss="e-icons e-down">
         <PopupContent>
             <SfListView ID="listview" DataSource="@Data" ShowCheckBox="true">
