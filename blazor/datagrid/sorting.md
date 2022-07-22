@@ -190,7 +190,9 @@ During the sort action, the datagrid component triggers two events. The [OnActio
     }
 
     public void SortEvent(ActionEventArgs<Order> args) {
-        // You can get action information from the argument.
+        if (args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Sorting)){
+            // You can get action information from the argument.
+        }    
     }
 }
 ```
