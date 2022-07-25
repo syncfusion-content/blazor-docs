@@ -1198,6 +1198,90 @@ The following sample code demonstrates notifying user when server-side exception
     }
 }
 ```
+
+## Performing DataGrid operations in server side
+
+You can get the data from a database and bind it to the DataGrid using the WepAPI service. This can be achieved by the WebApiAdaptor adaptor of SfDataManager. The DataGrid operations (sorting, filtering, paging, and searching) performed on the server side using "Request.Query" from the Get method of the controller class. This "Request.Query" contains all the required parameters for performing server-side operations such as paging, sorting, and filtering. 
+
+In the following sample, paging, filtering, and sorting operations performed at the server side.
+
+```cshtml
+@using Grid_WebAPI.Data
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+
+<SfGrid TValue="Order" AllowFiltering="true" Toolbar="@(new List<string> {"Add","Edit","Delete","Update","Cancel","Search" })" AllowSorting="true" AllowPaging="true">
+    <SfDataManager Url="api/Default" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>    
+   
+    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="EmployeeID" HeaderText="ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="CustomerID" HeaderText="Customer Name" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+```
+
+```csharp
+public class DefaultController : ControllerBase
+    {
+    public OrderDataAccessLayer OrderService = new OrderDataAccessLayer();
+    // GET: api/Default
+    [HttpGet]
+    public async Task<object> Get(int? code)
+        {
+            try
+            {
+                Microsoft.AspNetCore.Http.IQueryCollection queryString = Request.Query;
+                if (queryString == null)
+                return null;
+                IQueryable<Order> dataSource = OrderService.GetAllOrders();
+                int countAll = dataSource.Count();
+                StringValues sSkip, sTake, sFilter, sSort;
+
+                // Performing Paging operation at server side.
+                int skip = (queryString.TryGetValue("$skip", out sSkip)) ? Convert.ToInt32(sSkip[0]) : 0;
+                int top = (queryString.TryGetValue("$top", out sTake)) ? Convert.ToInt32(sTake[0]) : countAll;
+                dataSource = dataSource.Skip(skip).Take(top);
+
+                // Performing Filtering operation at server side.
+                string filter = (queryString.TryGetValue("$filter", out sFilter)) ? sFilter[0] : null; //filter query   
+                List<DynamicLinqExpression.Filter> listFilter = ParsingFilterFormula.PrepareFilter(filter);
+                if (listFilter.Count() > 0)
+                {
+                    Expression<Func<Order, bool>> deleg = DynamicLinqExpression.ExpressionBuilder.GetExpressionFilter<Order>(listFilter);
+                    dataSource = dataSource.Where(deleg);
+                }
+
+               // Performing Sorting operation at server side.
+               string sort = (queryString.TryGetValue("$orderby", out sSort)) ? sSort[0] : null;         //sort query
+                if (sort != null)
+                {
+                    string s = DynamicLinqExpression.GetSortString(sort);
+                    if (s == null)
+                        return null;
+                    else if (s.Length > 0)
+                    {
+                      dataSource = dataSource.OrderBy(s);
+                    }
+                }
+
+                int countFiltered = dataSource.Count();
+                if (queryString.Keys.Contains("$inlinecount"))
+                    return new { Items = dataSource, Count = countFiltered };
+                else
+                    return dataSource;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }       
+    }
+```
+> View Sample in GitHub.
+
 ## See also
 
 * [A Full-Stack Web App Using Blazor WebAssembly and GraphQL: Part 1](https://www.syncfusion.com/blogs/post/a-full-stack-web-app-using-blazor-webassembly-and-graphql-part-1.aspx)
