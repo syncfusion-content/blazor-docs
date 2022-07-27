@@ -3,7 +3,7 @@ layout: post
 title: Getting Started with Blazor Predefined Dialogs Component | Syncfusion
 description: Checkout and learn about getting started with Blazor Predefined Dialogs component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
-control: Dialog
+control: Predefined Dialogs
 documentation: ug
 ---
 
@@ -42,7 +42,7 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor and Syncfusion.B
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
+Now, register the Syncfusion Blazor Service and Sycnfusion Dialog Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
 > From 2022 Vol1 (20.1) version - The default value of `IgnoreScriptIsolation` is changed as `true`, so, you don’t have to set `IgnoreScriptIsolation` property explicitly to refer scripts externally.
 
@@ -248,34 +248,23 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
-## Add SfDialogProvider service
+## Add Blazor DialogProvider Component
 
-### Blazor Server App
-
-* For **.NET 6** app, Add SfDialogProvider in **~/_MainLayout.razor** file.
-
-* For **.NET 5 and .NET 3.X** app, Add SfDialogProvider in **~/_MainLayout.razor** file.
+* Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Popups** namespace.
 
 {% tabs %}
-{% highlight cshtml tabtitle=".NET 6 (~/_MainLayout.razor)" hl_lines="1" %}
+{% highlight razor tabtitle="~/Imports.razor" %}
 
-<Syncfusion.Blazor.Popups.SfDialogProvider/>
-
-{% endhighlight %}
-
-{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="1" %}
-
-<Syncfusion.Blazor.Popups.SfDialogProvider/>
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Popups
 
 {% endhighlight %}
 {% endtabs %}
 
-### Blazor WebAssembly App
-
-For Blazor WebAssembly App, Add SfDialogProvider in **~/_MainLayout.razor** file.
+* Now, add the Syncfusion DialogProvider Component in **~/_MainLayout.razor** file.
 
 {% tabs %}
-{% highlight cshtml tabtitle=".NET 6 (~/_MainLayout.razor)" hl_lines="1" %}
+{% highlight razor tabtitle=".NET 6 (~/_MainLayout.razor)" %}
 
 <Syncfusion.Blazor.Popups.SfDialogProvider/>
 
@@ -326,7 +315,7 @@ Use the following code to render a simple confirm dialog in an application:
 
 ### Show prompt dialog
 
-A `Prompt`dialog is used to get input from user by using [DialogService.PromptAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_PromptAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. When the user enters ‘OK’, the input value is returned. When they click ‘Cancel’, the null value is returned.
+A `Prompt` dialog is used to get input from user by using [DialogService.PromptAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_PromptAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. When the user enters ‘OK’, the input value is returned. When they click ‘Cancel’, the null value is returned.
 
 Use the following code to render a simple prompt dialog in an application:
 

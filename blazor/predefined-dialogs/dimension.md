@@ -1,27 +1,27 @@
 ---
 layout: post
-title: Dimension in Blazor Predefined Dialog Component | Syncfusion
-description: Checkout and learn here all about Draggable in Syncfusion Blazor Predefined Dialog component and much more details.
+title: Dimension in Blazor Predefined Dialogs Component | Syncfusion
+description: Checkout and learn here all about dimensions in Syncfusion Blazor Predefined Dialogs component and much more details.
 platform: Blazor
-control: Dialog
+control: Predefined Dialogs
 documentation: ug
 ---
 
-# Dimension in Blazor Predefined Dialog Component
+# Dimension in Blazor Predefined Dialogs Component
 
-You can customize the dialog dimensions using [DialogOptions.Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_Height) and `DialogOptions.Width` properties. Use the following code to customize the dialog dimensions:
+You can customize the Predefined Dialogs dimensions using [DialogOptions.Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_Height) and [DialogOptions.Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_Width) properties. Use the following code to customize the dialog dimensions:
 
 {% tabs %}
 
-{% highlight tabtitle="alert.razor" %}
+{% highlight razor tabtitle="alert.razor" %}
 {% include_relative code-snippet/alert-dimension.razor %}
 {% endhighlight %}
 
-{% highlight tabtitle="confirm.razor" %}
+{% highlight razor tabtitle="confirm.razor" %}
 {% include_relative code-snippet/confirm-dimension.razor %}
 {% endhighlight %}
 
-{% highlight tabtitle="prompt.razor" %}
+{% highlight razor tabtitle="prompt.razor" %}
 {% include_relative code-snippet/prompt-dimension.razor %}
 {% endhighlight %}
 

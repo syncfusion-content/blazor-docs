@@ -1,3 +1,4 @@
+
 @using Syncfusion.Blazor.Popups
 @inject SfDialogService DialogService
     <div>
@@ -6,12 +7,10 @@
 @code {
     private async Task AlertBtn()
     {
-        await DialogService.AlertAsync("10% of battery remaining", "Low Battery", new DialogOptions()
+        await DialogService.AlertAsync("Delete certain files to free up space to store more items.", "Not enough space", new DialogOptions()
             {
-                ShowCloseIcon = true,
-                Width = "400px",
+                Width = "300px",
                 Height = "200px",
-
             });
         }    
 }
