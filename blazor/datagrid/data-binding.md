@@ -1199,11 +1199,13 @@ The following sample code demonstrates notifying user when server-side exception
 }
 ```
 
-## Performing DataGrid operations in server side
+## Perform data operation in WebAPI service
 
-You can get the data from a database and bind it to the DataGrid using the WepAPI service. This can be achieved by the WebApiAdaptor adaptor of SfDataManager. The DataGrid operations (sorting, filtering, paging, and searching) performed on the server side using "Request.Query" from the Get method of the controller class. This "Request.Query" contains all the required parameters for performing server-side operations such as paging, sorting, and filtering. 
+While using the WebAPI adaptor type in the SfDataManager component, queries will be generated for data operations to be sent to the server side as query strings, and based on these query string values, actions(filtering, sorting, paging, etc.) will be performed on the server side.
 
-In the following sample, paging, filtering, and sorting operations performed at the server side.
+Requests sent to the server can be retrieved using "Request.Query", and these values can be differentiated as below. create a table or points using $skip, $top, $filter, $search , $sort along with the explanation.
+
+Using the above querystring keys, you can get the corresponding values and perform the required actions. In the following sample, simple filtering, sorting, and paging operations are demonstrated.
 
 ```cshtml
 @using Grid_WebAPI.Data
@@ -1240,11 +1242,6 @@ public class DefaultController : ControllerBase
                 int countAll = dataSource.Count();
                 StringValues sSkip, sTake, sFilter, sSort;
 
-                // Performing Paging operation at server side.
-                int skip = (queryString.TryGetValue("$skip", out sSkip)) ? Convert.ToInt32(sSkip[0]) : 0;
-                int top = (queryString.TryGetValue("$top", out sTake)) ? Convert.ToInt32(sTake[0]) : countAll;
-                dataSource = dataSource.Skip(skip).Take(top);
-
                 // Performing Filtering operation at server side.
                 string filter = (queryString.TryGetValue("$filter", out sFilter)) ? sFilter[0] : null; //filter query   
                 List<DynamicLinqExpression.Filter> listFilter = ParsingFilterFormula.PrepareFilter(filter);
@@ -1268,6 +1265,12 @@ public class DefaultController : ControllerBase
                 }
 
                 int countFiltered = dataSource.Count();
+
+                // Performing Paging operation at server side.
+                int skip = (queryString.TryGetValue("$skip", out sSkip)) ? Convert.ToInt32(sSkip[0]) : 0;
+                int top = (queryString.TryGetValue("$top", out sTake)) ? Convert.ToInt32(sTake[0]) : countAll;
+                dataSource = dataSource.Skip(skip).Take(top);
+
                 if (queryString.Keys.Contains("$inlinecount"))
                     return new { Items = dataSource, Count = countFiltered };
                 else
@@ -1280,7 +1283,9 @@ public class DefaultController : ControllerBase
         }       
     }
 ```
-> View Sample in GitHub.
+> Similarly, we suggest you handle the same scenarios for complex queries.
+
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-data-operations-in-wep-api-service)
 
 ## See also
 
