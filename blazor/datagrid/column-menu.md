@@ -74,54 +74,35 @@ The following image represents DataGrid with column menu property enabled,
 
 Custom column menu items can be added by defining [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) as a collection of [ColumnMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuItemModel.html) class. Actions for the customized column menu item can be defined in the [ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnMenuItemClicked) event of the Grid.
 
-In the following sample, we have initially frozen the OrderID column on the left side. When you click the custom column menu for the corresponding column, the freeze direction of the OrderID column is changed.
+In the following sample, sorting will be cleared when clicking the custom column menu item using the [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSortingAsync) method in the `ColumnMenuItemClicked` event.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
-@if (OrderIDFreezeDirection == FreezeDirection.Left)
-{
-    <SfGrid @ref="Grid" DataSource="@Orders" Height="315" ColumnMenuItems="@(new List<ColumnMenuItemModel>() { new ColumnMenuItemModel { Text = "Change Freeze Direction", Id = "OrderID" } })" ShowColumnMenu="true" AllowPaging="true">
-        <GridEvents ColumnMenuItemClicked="ColumnMenuItemClickedHandler" TValue="Order"></GridEvents>
-        <GridColumns>
-            <GridColumn Field=@nameof(Order.OrderID) Freeze="@OrderIDFreezeDirection" IsFrozen="true" HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-            <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150" TextAlign="TextAlign.Center" ShowColumnMenu="false"></GridColumn>
-            <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Center" Width="130"></GridColumn>
-            <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-        </GridColumns>
-    </SfGrid>
-}
-else if (OrderIDFreezeDirection == FreezeDirection.Right)
-{
-    <SfGrid @ref="Grid" DataSource="@Orders" Height="315" ColumnMenuItems="@(new List<ColumnMenuItemModel>() { new ColumnMenuItemModel { Text = "Change Freeze Direction", Id = "OrderID" } })" ShowColumnMenu="true" AllowPaging="true">
-        <GridEvents ColumnMenuItemClicked="ColumnMenuItemClickedHandler" TValue="Order"></GridEvents>
-        <GridColumns>
-            <GridColumn Field=@nameof(Order.OrderID) Freeze="@OrderIDFreezeDirection" IsFrozen="true" HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-            <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150" TextAlign="TextAlign.Center" ShowColumnMenu="false"></GridColumn>
-            <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Center" Width="130"></GridColumn>
-            <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-        </GridColumns>
-    </SfGrid>
-}
+<SfGrid @ref="Grid" DataSource="@Orders" Height="315" ColumnMenuItems="@(new List<ColumnMenuItemModel>() { new ColumnMenuItemModel { Text = "Clear Sorting", Id = "OrderID" } })" ShowColumnMenu="true" AllowPaging="true" AllowSorting="true">
+    <GridSortSettings>
+        <GridSortColumns>
+            <GridSortColumn Field="OrderID" Direction="SortDirection.Descending"></GridSortColumn>
+        </GridSortColumns>
+    </GridSortSettings>
+    <GridEvents ColumnMenuItemClicked="ColumnMenuItemClickedHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID)  HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150" TextAlign="TextAlign.Center" ShowColumnMenu="false"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Center" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
 
 @code{
-    public string[] MenuItems = new string[] { "Group", "Ungroup", "ColumnChooser", "Filter" };
     SfGrid<Order> Grid { get; set; }
     public List<Order> Orders { get; set; }
-    public FreezeDirection OrderIDFreezeDirection { get; set; } = FreezeDirection.Left;
 
     public void ColumnMenuItemClickedHandler(ColumnMenuClickEventArgs args)
     {
         if (args.Item.Id == "OrderID")
         {
-            if (OrderIDFreezeDirection == FreezeDirection.Left)
-            {
-                OrderIDFreezeDirection = FreezeDirection.Right;
-            }
-            else
-            {
-                OrderIDFreezeDirection = FreezeDirection.Left;
-            }
+            Grid.ClearSortingAsync();
         }
     }
 
@@ -135,7 +116,6 @@ else if (OrderIDFreezeDirection == FreezeDirection.Right)
             OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
     }
-
     public class Order
     {
         public int? OrderID { get; set; }
@@ -148,8 +128,6 @@ else if (OrderIDFreezeDirection == FreezeDirection.Right)
 ```
 
 ![Customize Column Menu in Blazor DataGrid](images/blazor-datagrid-custom-column-menu.gif)
-
-> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-customize-column-menu)
 
 <!-- Column menu events
 
