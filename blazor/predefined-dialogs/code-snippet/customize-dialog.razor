@@ -9,26 +9,19 @@
 @code {
     private async Task PromptBtn()
     {
-        string promptText = await DialogService.PromptAsync(null, "Template", new DialogOptions()
+        string promptText = await DialogService.PromptAsync(null, "Join Chat Group", new DialogOptions()
             {
               
         ChildContent = @<table class="Table">
                         <tbody>
                             <tr>
-                                <td>SSID:</td>
-                            </tr>
-                            <tr>
-                                <td><b>AndroidAP</b></td>
-                            </tr>
-                            <tr>
                                 <td>
-                                    <label class="control-label" style="text-align: left;font-size: 14px;font-weight: 400">Password</label>
+                                    <label>Enter your name: </label>
                                 </td>
                                 <td>
-                                <SfTextBox Placeholder="Password" Value="Password" Type="InputType.Password"></SfTextBox>
+                                <SfTextBox Placeholder="Enter your name" Value="text" Type="InputType.Text"></SfTextBox>
                                 </td>
                             </tr>
-                            
                         </tbody>
                     </table>
         });

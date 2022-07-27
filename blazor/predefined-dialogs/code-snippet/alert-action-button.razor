@@ -7,7 +7,7 @@
 
     private async Task AlertBtn()
     {
-        await DialogService.AlertAsync("10% of battery remaining", "Low Battery", new DialogOptions()
+        await DialogService.AlertAsync("You clicked the alert button!", "Good job!", new DialogOptions()
         {
             PrimaryButtonOptions = new DialogButtonOptions() { Content = "close"}
         });

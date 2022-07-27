@@ -1,0 +1,34 @@
+---
+layout: post
+title: Close Button Dialog in Blazor Predefined Dialog Component | Syncfusion
+description: Checkout and learn here all about Draggable in Syncfusion Blazor Predefined Dialog component and much more details.
+platform: Blazor
+control: Dialog
+documentation: ug
+---
+
+# Close Button Dialog in Blazor Predefined Dialog Component
+
+You can customize the close icon using [DialogOptions.ShowCloseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_ShowCloseIcon) property. If the ShowCloseIcon property is set to true then the close icon will appear. Use the following code to enable the ShowCloseIcon:
+
+{% tabs %}
+
+{% highlight tabtitle="alert.razor" %}
+{% include_relative code-snippet/alert-close-button.razor %}
+{% endhighlight %}
+
+{% highlight tabtitle="confirm.razor" %}
+{% include_relative code-snippet/confirm-close-button.razor %}
+{% endhighlight %}
+
+{% highlight tabtitle="prompt.razor" %}
+{% include_relative code-snippet/prompt-close-button.razor %}
+{% endhighlight %}
+
+{% endtabs %}
+
+![Alert close icon Dialog](./images/blazor-alert-close-button.png)
+
+![Confirm close icon Dialog](./images/blazor-confirm-close-button.png)
+
+![Prompt close icon Dialog](./images/blazor-prompt-close-button.png)

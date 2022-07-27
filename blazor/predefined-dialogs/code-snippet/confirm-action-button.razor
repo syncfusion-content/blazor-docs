@@ -6,7 +6,7 @@
 @code {
         private async Task ConfirmBtn()
         {
-            bool isConfirm = await DialogService.ConfirmAsync("Are you sure you want to permanently delete these items?", "Delete Multiple Items", new DialogOptions()
+            bool isConfirm = await DialogService.ConfirmAsync("Are you sure you want to permanently delete these file?", "Delete File", new DialogOptions()
             {
                 PrimaryButtonOptions = new DialogButtonOptions() { Content = "Yes"},
                 CancelButtonOptions = new DialogButtonOptions() { Content = "No"},
