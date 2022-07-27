@@ -16,10 +16,10 @@ To overcome this behavior, override the below CSS style of the `SfTab` component
 ```cshtml
 <style>
     .e-tab > .e-content {
-        height: calc(100% - 36px) !important; /*tab height - tab header height*/
+        height: calc(100% - 36px); /*tab height - tab header height*/
     }
     .e-tab > .e-content .e-item {
-        height: 100% !important;
+        height: 100%;
     }
 </style>
 ```
@@ -111,10 +111,10 @@ This can be demonstrated in the following sample:
 
 <style>
     .e-tab > .e-content {
-        height: calc(100% - 36px) !important; /*tab height - tab header height*/
+        height: calc(100% - 36px); /*tab height - tab header height*/
     }
     .e-tab > .e-content .e-item {
-        height: 100% !important;
+        height: 100%;
     }
 </style>
 ```
