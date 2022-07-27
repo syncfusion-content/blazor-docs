@@ -13,15 +13,15 @@ The Predefined Dialogs supports dragging within its target container by grabbing
 
 {% tabs %}
 
-{% highlight tabtitle="alert.razor" %}
+{% highlight razor tabtitle="alert.razor" %}
 {% include_relative code-snippet/alert-drag.razor %}
 {% endhighlight %}
 
-{% highlight tabtitle="confirm.razor" %}
+{% highlight razor tabtitle="confirm.razor" %}
 {% include_relative code-snippet/confirm-drag.razor %}
 {% endhighlight %}
 
-{% highlight tabtitle="prompt.razor" %}
+{% highlight razor tabtitle="prompt.razor" %}
 {% include_relative code-snippet/prompt-drag.razor %}
 {% endhighlight %}
 

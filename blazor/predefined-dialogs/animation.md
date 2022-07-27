@@ -14,15 +14,15 @@ In the following sample, the `Zoom` effect is enabled. So, the Dialog will open 
 
 {% tabs %}
 
-{% highlight tabtitle="alert.razor" %}
+{% highlight razor tabtitle="alert.razor" %}
 {% include_relative code-snippet/alert-animation.razor %}
 {% endhighlight %}
 
-{% highlight tabtitle="confirm.razor" %}
+{% highlight razor tabtitle="confirm.razor" %}
 {% include_relative code-snippet/confirm-animation.razor %}
 {% endhighlight %}
 
-{% highlight tabtitle="prompt.razor" %}
+{% highlight razor tabtitle="prompt.razor" %}
 {% include_relative code-snippet/prompt-animation.razor %}
 {% endhighlight %}
 

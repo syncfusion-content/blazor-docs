@@ -288,7 +288,7 @@ An `Alert` dialog box is used to display errors, warnings, and information that 
 Use the following code to render a simple alert dialog in an application:
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/alert-dialog.razor %}
 
@@ -304,7 +304,7 @@ A `Confirm` dialog displays a specified message along with ‘OK’ and ‘Cance
 Use the following code to render a simple confirm dialog in an application:
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/confirm-dialog.razor %}
 
@@ -320,7 +320,7 @@ A `Prompt` dialog is used to get input from user by using [DialogService.PromptA
 Use the following code to render a simple prompt dialog in an application:
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/prompt-dialog.razor %}
 

@@ -13,15 +13,15 @@ You can customize the close icon using [DialogOptions.ShowCloseIcon](https://hel
 
 {% tabs %}
 
-{% highlight tabtitle="alert.razor" %}
+{% highlight razor tabtitle="alert.razor" %}
 {% include_relative code-snippet/alert-close-button.razor %}
 {% endhighlight %}
 
-{% highlight tabtitle="confirm.razor" %}
+{% highlight razor tabtitle="confirm.razor" %}
 {% include_relative code-snippet/confirm-close-button.razor %}
 {% endhighlight %}
 
-{% highlight tabtitle="prompt.razor" %}
+{% highlight razor tabtitle="prompt.razor" %}
 {% include_relative code-snippet/prompt-close-button.razor %}
 {% endhighlight %}
 
