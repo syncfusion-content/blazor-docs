@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customization of Action Buttons in Blazor Predefined Dialogs
+title: Customization of Action Buttons in Predefined Dialogs | Syncfusion
 description: Checkout and learn here all about Draggable in Syncfusion Blazor Predefined Dialog component and much more details.
 platform: Blazor
 control: Dialog
