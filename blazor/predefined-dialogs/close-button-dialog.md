@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Close Button dialog in Blazor Predefined Dialogs Component | Syncfusion
+title: Close Button dialog in Predefined Dialogs Component | Syncfusion
 description: Checkout and learn here all about close button dialog in Syncfusion Blazor Predefined Dialogs component and much more details.
 platform: Blazor
 control: Predefined Dialogs
