@@ -138,9 +138,9 @@ Scheduler is a generic component which is strongly bound to a model type. There 
         public string Subject { get; set; }
         public string Location { get; set; }
         public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }       
+        public DateTime EndTime { get; set; }     
         public string Description { get; set; }
-        public bool IsAllDay { get; set; }      
+        public bool IsAllDay { get; set; }
         public string RecurrenceRule { get; set; }
         public string RecurrenceException { get; set; }
         public Nullable<int> RecurrenceID { get; set; }
@@ -150,8 +150,6 @@ Scheduler is a generic component which is strongly bound to a model type. There 
     }
 }
 ```
-The following image depicts how the data can be bound to the scheduler as list of **ExpandoObject**.
-![ExpandoObject in Blazor Scheduler](images/blazor-scheduler-expandoobject.png)
 
 ## Binding DynamicObject
 
@@ -381,8 +379,6 @@ Here, ResourceData class implements the interface of **INotifyPropertyChanged** 
     }
 }
 ```
-The following image depicts how this **ObservableCollection** (dynamic data collection) provides notifications when items are added, removed and moved.
-![BindingObservableCollection in Blazor Scheduler](images/blazor-scheduler-bindingobservablecollection.png)
 
 ## Scheduler with multiple resources
 
@@ -531,8 +527,6 @@ The following code example displays how the multiple resources are grouped and i
     }
 }
 ```
-The following image displays how the multiple resources are grouped and its events are portrayed in the default calendar views.
-![Vertical Resource view in Blazor Scheduler](images/blazor-scheduler-verticalresourceview.png)
 
 ### Timeline resource view
 
@@ -1506,8 +1500,6 @@ By default, the colors defined on the top level resources collection will be app
 }
 ```
 ![Blazor Scheduler tooltip for resource headers](images/blazor-schedule-resourccecolors.png)
-
-![Blazor Scheduler tooltip for resource headers](images/blazor-schedule-resourccecolors1.png)
 
 > The value of the `ResourceColorField` field should be mapped with the `Name` value given within the `ScheduleResource`.
 
