@@ -1201,11 +1201,18 @@ The following sample code demonstrates notifying user when server-side exception
 
 ## Perform data operation in WebAPI service
 
-While using the WebAPI adaptor type in the SfDataManager component, queries will be generated for data operations to be sent to the server side as query strings, and based on these query string values, actions(filtering, sorting, paging, etc.) will be performed on the server side.
+While using the WebAPI adaptor type in the SfDataManager component, queries will be generated for data operations to be sent to the server side as QueryString, and based on these QueryString values, actions(filtering, sorting, paging, etc.) will be performed on the server side.
 
-Requests sent to the server can be retrieved using "Request.Query", and these values can be differentiated as below. create a table or points using $skip, $top, $filter, $search , $sort along with the explanation.
+Requests sent to the server can be retrieved using "Request.Query", and these values can be differentiated as below.
 
-Using the above querystring keys, you can get the corresponding values and perform the required actions. In the following sample, simple filtering, sorting, and paging operations are demonstrated.
+|   Keys    |   Explanation                            |
+|----------------------| -----------------------------------------|
+|     $skip, $top      |   This contains query for performing paging operation in server side.|
+|     $filter             |    This contains query for performing filtering operation in server side. |
+|     $search           |   This contains query for performing searching operation in server side. |
+|     $orderby           |    This contains query for performing sorting operation in server side. |
+
+Using the above QueryString keys, you can get the corresponding values and perform the required actions. In the following sample, simple filtering, sorting, and paging operations are demonstrated.
 
 ```cshtml
 @using Grid_WebAPI.Data
