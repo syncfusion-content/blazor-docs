@@ -326,13 +326,16 @@ The Dashboard layout with simple content will be rendered in the web browser as 
 
 A dashboard layout can be rendered with the components like the chart, grids, maps, gauge, and more as a content of dashboard layout panel.
 
-These complex data (components) are placed as the panel content by assigning the corresponding component element as the `ContentTemplate` of the panel.
+These complex data (components) are placed as the panel content by assigning the corresponding component element as the `ContentTemplate` of the panel. 
+
+To add Blazor Range Navigator component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.RangeNavigator](https://www.nuget.org/packages/Syncfusion.Blazor.RangeNavigator) and then install it.
 
 {% tabs %}
 {% highlight razor %}
 
 @using Syncfusion.Blazor.Charts
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Layouts
 
 <div class="content">
     <SfDashboardLayout Columns="6" CellSpacing="@(new double[]{10 ,10 })">
@@ -382,7 +385,6 @@ These complex data (components) are placed as the panel content by assigning the
                             </ChartSeriesCollection>
                         </SfChart>
                     </div>
-
                 </ContentTemplate>
             </DashboardLayoutPanel>
             <DashboardLayoutPanel Id="Panel4" SizeX=3 SizeY=2 Row=2 Column=0>
@@ -422,6 +424,7 @@ These complex data (components) are placed as the panel content by assigning the
         </DashboardLayoutPanels>
     </SfDashboardLayout>
 </div>
+
 @code
  { SfChart chartObj;
     SfChart barchartObj;
@@ -430,26 +433,25 @@ These complex data (components) are placed as the panel content by assigning the
     private object[] Value = new object[] { new DateTime(2006, 01, 01), new DateTime(2008, 01, 01) };
     public class ChartData
     {
-        public DateTime XValue;
-        public double YValue;
-        public string X;
-        public double Y;
-        public string Country;
-        public string X1;
-        public double Y1;
-        public double Y2;
-        public double Y3;
-        public double Y4;
+        public DateTime XValue { get; set; }
+        public double YValue { get; set; }
+        public string X { get; set; }
+        public double Y { get; set; }
+        public string Country { get; set; }
+        public string X1 { get; set; }
+        public double Y1 { get; set; }
+        public double Y2 { get; set; }
+        public double Y3 { get; set; }
+        public double Y4 { get; set; }
     }
     public List<ChartData> DataSource = new List<ChartData>
-{
+    {
         new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 21, X = "USA", Y =300.2, Country = "USA: 72", X1= "2012"},
         new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 24, X = "Russia", Y = 103.1, Country = "RUS: 103.1", X1= "2013"},
         new ChartData { XValue = new DateTime(2007, 01, 01), YValue = 36, X = "Brazil", Y = 139.1, Country = "BRZ: 139.1", X1= "2014"},
         new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 38, X = "India", Y = 262.1, Country = "IND: 262.1", X1= "2015"},
-        };
+    };
     public List<Order> Orders { get; set; }
-
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 6).Select(x => new Order()
@@ -460,7 +462,6 @@ These complex data (components) are placed as the panel content by assigning the
             OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
     }
-
     public class Order
     {
         public int? OrderID { get; set; }
@@ -475,7 +476,7 @@ These complex data (components) are placed as the panel content by assigning the
         this.linechartObj.Refresh();
         this.barchartObj.Refresh();
     }
- }
+}
 
 <style>
     #linechart, #grid, #chart1, #chart, #range {
