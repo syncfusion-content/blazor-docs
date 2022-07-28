@@ -445,7 +445,7 @@ To get start quickly about multiple resource on scheduler, you can check on this
     }
 }
 ```
-The following image depicts how appointments belonging to the different resources will be displayed altogether on the default Scheduler.
+The following image shows the appointment rendering on the multiple resource Scheduler.
 ![Multiple Resources in Blazor Scheduler](images/blazor-scheduler-multipleresources.png)
 
 > Setting `AllowMultiple` to `true` in the above code example allows to select multiple resources from the event editor and also creates multiple copies of the same appointment in the Scheduler for each resources while rendering.
@@ -592,7 +592,7 @@ The following code example depicts how to group the multiple resources on Timeli
     }
 }
 ```
-The following image depicts how the multiple resources will be displayed in Timeline Resource view accordingly.
+The following image shows the multiple resources rendering on the Timeline view Scheduler.
 ![Timeline Resource view in Blazor Scheduler](images/blazor-scheduler-timelineresourceview.png)
 
 ### Grouping single-level resources
