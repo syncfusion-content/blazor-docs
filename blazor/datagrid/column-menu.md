@@ -82,7 +82,9 @@ In the following sample, sorting will be cleared when clicking the custom column
 <SfGrid @ref="Grid" DataSource="@Orders" Height="315" ColumnMenuItems="@(new List<ColumnMenuItemModel>() { new ColumnMenuItemModel { Text = "Clear Sorting", Id = "OrderID" } })" ShowColumnMenu="true" AllowPaging="true" AllowSorting="true">
     <GridSortSettings>
         <GridSortColumns>
-            <GridSortColumn Field="OrderID" Direction="SortDirection.Descending"></GridSortColumn>
+            <GridSortColumn Field="OrderID" Direction="SortDirection.Ascending"></GridSortColumn>
+            <GridSortColumn Field="OrderDate" Direction="SortDirection.Ascending"></GridSortColumn>
+            <GridSortColumn Field="Freight" Direction="SortDirection.Descending"></GridSortColumn>
         </GridSortColumns>
     </GridSortSettings>
     <GridEvents ColumnMenuItemClicked="ColumnMenuItemClickedHandler" TValue="Order"></GridEvents>
@@ -97,13 +99,11 @@ In the following sample, sorting will be cleared when clicking the custom column
 @code{
     SfGrid<Order> Grid { get; set; }
     public List<Order> Orders { get; set; }
+    public List<string> columns = new List<string>(){ "OrderID"};
 
     public void ColumnMenuItemClickedHandler(ColumnMenuClickEventArgs args)
     {
-        if (args.Item.Id == "OrderID")
-        {
-            Grid.ClearSortingAsync();
-        }
+     Grid.ClearSortingAsync(columns);
     }
 
     protected override void OnInitialized()
