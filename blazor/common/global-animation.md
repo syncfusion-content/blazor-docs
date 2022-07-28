@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Enable/Disable the Animation Globally
+# Global Animation
 
 This section provides information about the animation process and how to enable/disable it globally for Syncfusion Blazor Components.
 
