@@ -327,7 +327,7 @@ Using the Skip and Take values, current page items are bound to the Listview com
 }    
 ```
 
-Through the navigation of pager items, you can view the items in the list view accordingly. This can be achieved by using the [Click](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_Click) event of the Pager. In the `Click` event of the Pager, SkipValue and TakeValue are calculated using the pager API's.
+Through the navigation of pager items, you can view the items in the list view into page by page. This can be achieved by using the [Click](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_Click) event of the Pager. In the `Click` event of the Pager, SkipValue and TakeValue are calculated using the pager API's.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
