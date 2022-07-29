@@ -416,4 +416,4 @@ The full code sample demonstrated in the following:
 
 ![Blazor Pager with ListView](./images/blazor-pager-with-list-view.png)
 
-> View Sample in GitHub.
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-pager-component)
