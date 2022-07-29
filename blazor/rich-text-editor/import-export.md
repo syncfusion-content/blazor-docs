@@ -14,7 +14,7 @@ documentation: ug
 The Rich Text Editor allows you to load an external HTML file in the editor content which contains the text with styling and images. You can read the HTML file from your path using [StremReader](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamreader?view=net-6.0) class and assign it to the editor with the `@bind-Value` property.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 @using System.IO; 
 @using Syncfusion.Blazor.RichTextEditor 
@@ -52,7 +52,7 @@ You can import the RTF file into the editor using file uploader component, and g
 While cliking on the export button you can call make the RTE content to the RTF file using [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 <Syncfusion.Blazor.Buttons.SfButton OnClick="OnExport">Export</Syncfusion.Blazor.Buttons.SfButton>
     <SfRichTextEditor ID="customtool" @ref="RteObj" @bind-Value="@rteValue" EnableHtmlSanitizer="false">
@@ -95,7 +95,7 @@ While cliking on the export button you can call make the RTE content to the RTF 
 You can import the text file into the editor using file uploader component, and get the text file content from uploader success event. Then, you can able to import the text file values to the editor.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 @using Syncfusion.Blazor.RichTextEditor
 @inject ExportService exportService
@@ -174,7 +174,7 @@ You can export the RTE content to the HTML format using the [Syncfusion.DocIO](h
 While clicking on the export button it makes call to the Export to HTML service.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 <button @onclick="ExportFile">Export</button>
 <SfRichTextEditor ID="defalt_RTE" @ref="RteObj" @bind-Value="@rteValue">

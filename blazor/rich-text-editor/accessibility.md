@@ -32,7 +32,7 @@ The Rich Text Editor element is assigned the role of application.
 | aria-disabled | Indicates the disabled state of the editor. |
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 {% include_relative code-snippet/aria-attribute.razor %}
 
@@ -109,7 +109,7 @@ You can use the following key shortcuts when the Rich Text Editor renders with `
 | Unordered list| <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>O</kbd> |
 
 {% tabs %}
-{% highlight razor" %}
+{% highlight cshtml %}
 
 {% include_relative code-snippet/markdown-shortcuts.razor %}
 
@@ -125,7 +125,7 @@ Customize the key config for the keyboard interaction of Rich Text Editor, using
 In the following code block, customize the bold and italic, toolbar actions with `ctrl+1`, `ctrl+2` respectively.
 
 {% tabs %}
-{% highlight razor" %}
+{% highlight cshtml %}
 
 {% include_relative code-snippet/custom-key-config.razor %}
 

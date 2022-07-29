@@ -12,7 +12,7 @@ documentation: ug
 The Rich Text Editor allows it to be resized dynamically, so the users can able to change the size of the editor based on their needs. You can enable or disable this feature using the [EnableResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableResize) property in the Rich Text Editor. If `EnableResize` is set to true, the editor component creates a grip at the bottom right corner, which allows resizing the component in the diagonal direction.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 {% include_relative code-snippet/resize-editor.razor %}
 
@@ -38,7 +38,7 @@ To have a restricted resizable area for the Rich Text Editor, you need to specif
 ```
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
