@@ -16,7 +16,7 @@ This section briefly explains about how to include [Blazor DropDown Menu](https:
 To get start quickly with Dropdown Menu Component using Blazor, you can check on this video:
 
 {% youtube
-"youtube:https://www.youtube.com/watch?v=LkszhsAVuHc"%}
+"youtube:https://www.youtube.com/watch?v=LKszhsAVuHc"%}
 
 ## Prerequisites
 

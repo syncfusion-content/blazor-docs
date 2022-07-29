@@ -19,3 +19,5 @@ To modify the Menu appearance, you need to override the default CSS of Menu comp
 | .e-menu-container .e-ul .e-menu-item.e-focused | To customize the menu items on focus |
 | .e-menu-container ul .e-menu-item .e-caret::before | To customize the menu items caret icon |
 | .e-menu-container .e-ul .e-menu-item.e-selected | To customize selected menu item |
+
+![Blazor Menubar with Style and Appearance](./images/blazor-menubar-style-and-appearance.png)

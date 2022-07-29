@@ -38,7 +38,7 @@ To add Blazor Toast component in the app, open the NuGet package manager in Visu
 Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
 {% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+{% highlight cshtml tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 
@@ -255,7 +255,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 * Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Notifications** namespace.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Imports.razor" %}
+{% highlight cshtml tabtitle="~/Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Notifications
@@ -266,7 +266,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 * Now, add the Syncfusion Toast component in razor file. Here, the Toast component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 <div class="col-lg-12 control-section toast-default-section">
     <SfToast ID="toast_default" @ref="ToastObj" Title="Adaptive Tiles Meeting" Content="@ToastContent" Timeout="5000" Icon="e-meeting">

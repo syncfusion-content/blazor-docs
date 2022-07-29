@@ -41,7 +41,7 @@ To add Blazor Kanban component in the app, open the NuGet package manager in Vis
 Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
 {% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+{% highlight cshtml tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 
@@ -261,7 +261,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 * Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Kanban** namespace.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Imports.razor" %}
+{% highlight cshtml tabtitle="~/Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Kanban
@@ -272,7 +272,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 * Now, add the Syncfusion Kanban component in razor file. Here, the Kanban component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 <SfKanban TValue="TasksModel">
     <KanbanColumns>
@@ -305,7 +305,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 To populate the empty Kanban with cards, define the Enumerable object or remote data using the `DataSource` property. To define `DataSource`, the mandatory fields in object or remote data should be relevant to `KeyField`. In the following example, you can see the cards defined with default fields such as ID, Summary, and Status.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks">
     <KanbanColumns>
@@ -349,7 +349,7 @@ To populate the empty Kanban with cards, define the Enumerable object or remote 
 `Swimlane` can be enabled by mapping the fields `KanbanSwimlaneSettings.KeyField` to appropriate column name in DataSource. This enables the grouping of the cards based on the mapped column values.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 <SfKanban TValue="TasksModel" KeyField="Status" DataSource="Tasks">
     <KanbanColumns>

@@ -32,7 +32,7 @@ A dotted border is added on Kanban cells except the dragged clone cells when dra
 In the following example, the drag and drop behavior is disabled on the Kanban board.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight cshtml tabtitle="Index.razor" %}
 
 {% include_relative code-snippet/column-drag-drop.razor %}
 
@@ -44,7 +44,7 @@ In the following example, the drag and drop behavior is disabled on the Kanban b
 By default, the Kanban does not allow dragging the cards across the swimlane rows. Enabling the [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_AllowDragAndDrop) property allows to drag the cards across the swimlane rows, which is specified inside [KanbanSwimlaneSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_SwimlaneSettings) property.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight cshtml tabtitle="Index.razor" %}
 
 {% include_relative code-snippet/swimlane-drag-drop.razor %}
 
@@ -62,7 +62,7 @@ Drag and drop the card from one Kanban to another Kanban and vice versa. This ca
 In the following example, a card can be dragged from one Kanban and dropped into another Kanban using the [DragStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanEvents-1.html#Syncfusion_Blazor_Kanban_KanbanEvents_1_DragStop) event.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight cshtml tabtitle="Index.razor" %}
 
 {% include_relative code-snippet/kanban-to-kanban.razor %}
 
@@ -76,7 +76,7 @@ Drag the card from the Kanban board and drop it to the Schedule component.
 In the following sample, the data is removed from the Kanban board using the [DeleteCard](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DeleteCardAsync__0_) public method at the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnActionBegin) event of Schedule component and added to the Schedule component at Kanban [DragStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanEvents-1.html#Syncfusion_Blazor_Kanban_KanbanEvents_1_DragStop) event when dragging and dropping the card to the Schedule.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
+{% highlight cshtml tabtitle="Index.razor" %}
 
 {% include_relative code-snippet/kanban-to-schedule.razor %}
 

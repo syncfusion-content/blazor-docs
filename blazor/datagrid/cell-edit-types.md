@@ -868,7 +868,7 @@ The ComboBox component is defined inside the `EditTemplate` and changes can be s
         {
             if (Args.Action == "Add")
             {
-                Orders.Add(Args.Data);
+                ((OrdersDetails)Args.Data).TrySetMember(new DataSetMemberBinderClone("Account", false), ComboBoxValue);
             }
            else if (Args.Action == "Edit")
             {
@@ -983,3 +983,7 @@ The `SfTextBox` component is defined inside the EditTemplate and changes can be 
     }
 }
 ```
+
+## See also
+
+* [Edit one column update the value in another column](https://www.syncfusion.com/forums/151238/edit-one-column-update-the-value-in-another-column)

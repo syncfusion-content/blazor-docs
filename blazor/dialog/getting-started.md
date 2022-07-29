@@ -38,7 +38,7 @@ To add Blazor Dialog component in the app, open the NuGet package manager in Vis
 Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
 {% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+{% highlight cshtml tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 
@@ -255,7 +255,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 * Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Popups** namespace.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Imports.razor" %}
+{% highlight cshtml tabtitle="~/Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Popups
@@ -266,7 +266,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 * Now, add the Syncfusion Dialog component in razor file. Here, the Dialog component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 <SfDialog Width="250px">
     <DialogTemplates>
@@ -302,7 +302,7 @@ The dialog component is maintained in the DOM after hiding the dialog when the [
 * If the [AllowPrerender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialog.html#Syncfusion_Blazor_Popups_SfDialog_AllowPrerender) property is set to `true`, the dialog elements are maintained in the DOM when hiding the dialog.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 @using Syncfusion.Blazor.Buttons
 
@@ -320,7 +320,7 @@ A `modal` shows an overlay behind the Dialog. So, the users must interact with t
 While the user clicks the overlay, the action can be handled through the [OnOverlayClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnOverlayClick) event. In the following code, it explains the Dialog close action performed while clicking the overlay.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 @using Syncfusion.Blazor.Buttons
 
@@ -358,7 +358,7 @@ While the user clicks the overlay, the action can be handled through the [OnOver
 The Dialog header can be enabled by adding the header content as text or HTML content using the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogTemplates.html#Syncfusion_Blazor_Popups_DialogTemplates_Header) template of the dialog.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 @using Syncfusion.Blazor.Buttons
 
@@ -390,7 +390,7 @@ The Dialog header can be enabled by adding the header content as text or HTML co
 By adding the [DialogButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtons.html) can render a Dialog with buttons in Razor page.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Popups
