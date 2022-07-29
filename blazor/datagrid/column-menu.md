@@ -70,6 +70,65 @@ The default menu items are displayed in the following table,
 The following image represents DataGrid with column menu property enabled,
 ![Blazor DataGrid with Column Menu](images/blazor-datagrid-column-menu.gif)
 
+## Custom column menu
+
+Custom column menu items can be added by defining [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) as a collection of [ColumnMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuItemModel.html) class. Actions for the customized column menu item can be defined in the [ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnMenuItemClicked) event of the Grid.
+
+In the following sample, Order ID, Order Date, and Freight columns are sorted at initial rendering. When clicking the custom column menu item in the OrderID column, sorting will be cleared using the [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSortingAsync_System_Collections_Generic_List_System_String__) method in the `ColumnMenuItemClicked` event.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="Grid" DataSource="@Orders" Height="315" ColumnMenuItems="@(new List<ColumnMenuItemModel>() { new ColumnMenuItemModel { Text = "Clear Sorting", Id = "OrderID" } })" ShowColumnMenu="true" AllowPaging="true" AllowSorting="true">
+    <GridSortSettings>
+        <GridSortColumns>
+            <GridSortColumn Field="OrderID" Direction="SortDirection.Ascending"></GridSortColumn>
+            <GridSortColumn Field="OrderDate" Direction="SortDirection.Ascending"></GridSortColumn>
+            <GridSortColumn Field="Freight" Direction="SortDirection.Descending"></GridSortColumn>
+        </GridSortColumns>
+    </GridSortSettings>
+    <GridEvents ColumnMenuItemClicked="ColumnMenuItemClickedHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID)  HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150" TextAlign="TextAlign.Center" ShowColumnMenu="false"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Center" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    SfGrid<Order> Grid { get; set; }
+    public List<Order> Orders { get; set; }
+    public List<string> columns = new List<string>(){ "OrderID"};
+
+    public void ColumnMenuItemClickedHandler(ColumnMenuClickEventArgs args)
+    {
+     Grid.ClearSortingAsync(columns);
+    }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+
+```
+
+![Customize Column Menu in Blazor DataGrid](images/blazor-datagrid-custom-column-menu.gif)
+
 <!-- Column menu events
 
 The grid component triggers the below events when column menu operations are performed,
