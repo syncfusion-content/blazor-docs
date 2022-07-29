@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animation in Blazor Components | Syncfusion
-description: Enable and disable animation globally for Syncfusion Blazor Components.
+description: Checkout and learn here all about enable or disable animation globally for Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug
