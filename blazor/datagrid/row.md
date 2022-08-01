@@ -255,3 +255,5 @@ In the following sample, simply click the row in the master DataGrid, which show
     }
 } 
 ```
+
+![Master Detail Blazor DataGrid](images/blazor-master-detail-datagrid.gif)
