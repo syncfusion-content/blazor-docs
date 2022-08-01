@@ -257,3 +257,5 @@ In the following sample, simply click the row in the master DataGrid, which show
 ```
 
 ![Master Detail Blazor DataGrid](images/blazor-master-detail-datagrid.gif)
+
+> [View Sample.](https://blazor.syncfusion.com/demos/datagrid/master-details?theme=fluent)
