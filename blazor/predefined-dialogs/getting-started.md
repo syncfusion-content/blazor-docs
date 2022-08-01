@@ -52,6 +52,8 @@ Now, register the Syncfusion Blazor Service and Sycnfusion Dialog Service in the
 
 * For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and import Syncfusion Blazor Service and Sycnfusion Blazor Dialog Service.
 
+The **DialogService** must be registered as scoped service using the **SfDialogService** method for getting the Predefined dialogs instance at any page.
+
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="1 2 7 8" %}
 
@@ -277,9 +279,9 @@ The dialog component is used to render the `Alert`, `Confirm`, and `Prompt` dial
 
 There are three types of predefined dialogs available:
 
-        * Alert
-        * Confirm
-        * Prompt
+* [Alert](#show-alert-dialog)
+* [Confirm](#show-confirm-dialog)
+* [Prompt](#show-prompt-dialog)
 
 ### Show alert dialog
 
@@ -328,3 +330,5 @@ Use the following code to render a simple prompt dialog in an application:
 {% endtabs %}
 
 ![Prompt Dialog](./images/blazor-prompt-dialog.png)
+
+
