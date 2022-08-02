@@ -9,7 +9,7 @@ documentation: ug
 
 # Customization of Blazor Predefined Dialogs Component
 
-## Customization of Action Buttons
+## Customization of action buttons
 
 Customize the Predefined Dialogs buttons by using the [DialogOptions.PrimaryButtonOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_PrimaryButtonOptions) property. Use the following code to customize the predefined dialog buttons.
 
