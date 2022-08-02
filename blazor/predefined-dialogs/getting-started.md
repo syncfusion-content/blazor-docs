@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Predefined Dialogs Component
 
-This section briefly explains about how to include Blazor Predefined Dialog component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains how to include Blazor Predefined Dialog component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ This section briefly explains about how to include Blazor Predefined Dialog comp
 
 ## Create a new Blazor App in Visual Studio
 
-You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways,
+Create the **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio in one of the following ways:
 
 * [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
@@ -25,13 +25,13 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 ## Install Syncfusion Blazor Popups NuGet in the App
 
-Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages).
+The Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add a reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages).
 
-To add Blazor Predefined Dialog component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Popups](https://www.nuget.org/packages/Syncfusion.Blazor.Popups) and then install it.
+To add the Blazor Predefined Dialog component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.Blazor.Popups](https://www.nuget.org/packages/Syncfusion.Blazor.Popups), then install it.
 
 ## Register Syncfusion Blazor Service and Sycnfusion Dialog Service.
 
-Open **~/_Imports.razor** file and import the Syncfusion.Blazor and Syncfusion.Blazor.Popups namespace.
+Open the **~/_Imports.razor** file and import the Syncfusion.Blazor and Syncfusion.Blazor.Popups namespace.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/_Imports.razor" %}
@@ -42,15 +42,15 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor and Syncfusion.B
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service and Sycnfusion Dialog Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
+Now, register the Syncfusion Blazor Service and Sycnfusion Dialog Service in the Blazor Server App or Blazor WebAssembly App. Here, the Syncfusion Blazor Service is registered by setting the [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
-> From 2022 Vol1 (20.1) version - The default value of `IgnoreScriptIsolation` is changed as `true`, so, you don’t have to set `IgnoreScriptIsolation` property explicitly to refer scripts externally.
+> From 2022 Vol1 (20.1) version: The default value of the `IgnoreScriptIsolationis` changed to `true`,so you don’t have to set `theIgnoreScriptIsolation` property explicitly to refer to scripts externally.
 
 ### Blazor Server App
 
-* For **.NET 6** app, open the **~/Program.cs** file and import Syncfusion Blazor Service and Sycnfusion Blazor Dialog Service.
+* For the **.NET 6** app, open the **~/Program.cs** file and import the Syncfusion Blazor Service and Sycnfusion Blazor Dialog Service.
 
-* For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and import Syncfusion Blazor Service and Sycnfusion Blazor Dialog Service.
+* For the **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and import the Syncfusion Blazor Service and Sycnfusion Blazor Dialog Service.
 
 The **DialogService** must be registered as scoped service using the **SfDialogService** method for getting the Predefined dialogs instance at any page.
 
@@ -99,7 +99,7 @@ namespace BlazorApplication
 
 ### Blazor WebAssembly App
 
-Open **~/Program.cs** file and register the Syncfusion Blazor Service and Sycnfusion Blazor Dialog Service in the client web app.
+Open the **~/Program.cs** file and register the Syncfusion Blazor Service and Sycnfusion Blazor Dialog Service in the client web app.
 
 {% tabs %}
 {% highlight C# tabtitle=".NET 6 (~/Program.cs)" hl_lines="1 2 7 8" %}
@@ -141,11 +141,11 @@ namespace WebApplication1
 
 ## Add Style Sheet
 
-Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/appearance/themes#enable-static-web-assets-usage) topic to use static assets in your project.
+Check out the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer to themes in the Blazor application, and to have the expected appearance for the Syncfusion Blazor components. Here, the theme is referred to using the [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Refer to the Enable static web assets usage topic to use static assets in your project.
 
-To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
+To add a theme to the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/), then install it. The theme style sheet from NuGet can be referred to as follows.
 
-> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) single NuGet, you don't have to refer [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet. Since style sheets already inside the assets of `Syncfusion.Blazor` NuGet. 
+> If you are using the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) single NuGet, you don't have to refer to the Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet. Since the style sheets are already inside the assets of the `Syncfusion.Blazor` NuGet.
 
 ### Blazor Server App
 
@@ -179,7 +179,7 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 
 ### Blazor WebAssembly App
 
-For Blazor WebAssembly App, Refer the theme style sheet from NuGet in the `<head>` of **wwwroot/index.html** file in the client web app.
+For the Blazor WebAssembly App, Refer to the theme style sheet from NuGet in the `<head>` of the **wwwroot/index.html** file in the client web app.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/index.html" hl_lines="3 4 5" %}
@@ -200,9 +200,9 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 ### Blazor Server App
 
-* For **.NET 6** app, Refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+* For the **.NET 6**, refer to the script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
-* For **.NET 5 and .NET 3.X** app, Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For the **.NET 5 and .NET 3.X** app, refer to the script in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
 {% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4 5 6" %}
@@ -232,7 +232,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 ### Blazor WebAssembly App
 
-For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html** file.
+For the Blazor WebAssembly App, refer to the script in the `<head>` of the **~/index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/index.html" hl_lines="4 5 6" %}
@@ -248,11 +248,11 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 {% endhighlight %}
 {% endtabs %}
 
-> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
+> Syncfusion recommends to reference scripts using the [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
 ## Add Blazor DialogProvider Component
 
-* Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Popups** namespace.
+* Open the **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Popups** namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Imports.razor" %}
@@ -263,7 +263,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 {% endhighlight %}
 {% endtabs %}
 
-* Now, add the Syncfusion DialogProvider Component in **~/_MainLayout.razor** file.
+* Now, add the Syncfusion DialogProvider Component in the **~/_MainLayout.razor** file.
 
 {% tabs %}
 {% highlight razor tabtitle=".NET 6 (~/_MainLayout.razor)" %}
@@ -275,7 +275,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 
 ## Available predefined dialogs
 
-The dialog component is used to render the `Alert`, `Confirm`, and `Prompt` dialogs with minimal code. The alert, confirm, and prompt dialogs are shown using [DialogServices](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html).
+The dialog component renders the `Alert`, `Confirm`, and `Prompt` dialogs with minimal code. The alert, confirm, and prompt dialogs are shown using the [DialogServices](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html).
 
 There are three types of predefined dialogs available:
 
@@ -285,7 +285,7 @@ There are three types of predefined dialogs available:
 
 ### Show alert dialog
 
-An `Alert` dialog box is used to display errors, warnings, and information that needs user awareness, this can be achieved by using [DialogService.AlertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_AlertAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. The `Alert` dialog display along with ‘Ok’ button.But, it does not has any specific return type. When you click on ‘Ok’ button then the `Alert` method will complete.
+An `Alert` dialog box displays errors, warnings, and information that needs user awareness. This can be achieved by using the [DialogService.AlertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_AlertAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. The `Alert` dialog is displayed along with the ‘Ok’ button but does not have any specific return type. When you click ‘Ok,’ the `Alert` method will complete.
 
 Use the following code to render a simple alert dialog in an application:
 
