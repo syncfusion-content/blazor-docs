@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization of Predefined Dialogs in Blazor Predefined Dialogs Component | Syncfusion
-description: Checkout and learn here all about customization of Predefined Dialogs in Syncfusion Blazor Predefined Dialogs component and much more details.
+title: Customization of Blazor Predefined Dialogs Component | Syncfusion
+description: Checkout and learn here all about customization of Blazor Predefined Dialogs in Syncfusion  component and much more details.
 platform: Blazor
 control: Predefined Dialogs
 documentation: ug
 ---
 
-# Customization of Predefined Dialogs in Blazor Predefined Dialogs Component
+# Customization of Blazor Predefined Dialogs Component
 
 ## Customization of Action Buttons
 
@@ -63,7 +63,7 @@ Customize the close icon using the [DialogOptions.ShowCloseIcon](https://help.sy
 
 ## Customization of dialog content
 
-Customize the predefined dialogs using the [DialogOptions.ChildContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_ChildContent) property. Use the following code to customize the Dialog content to render the textbox component inside the `Propmt` dialog to get the username from the user.
+Customize the Predefined Dialogs using the [DialogOptions.ChildContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_ChildContent) property. Use the following code to customize the dialog content to render the TextBox component inside the `Propmt` dialog to get the username from the user.
 
 {% tabs %}
 {% highlight razor %}

@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Predefined Dialogs Component
 
-This section briefly explains how to include Blazor Predefined Dialog component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains how to include Blazor Predefined Dialogs component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 ## Prerequisites
 
