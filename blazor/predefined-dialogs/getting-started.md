@@ -301,7 +301,7 @@ Use the following code to render a simple alert dialog in an application:
 
 ### Show confirm dialog
 
-A `Confirm` dialog displays a specified message along with ‘OK’ and ‘Cancel’ button where it returns a boolean value according to the user's click action, this can be achieved by using [DialogService.ConfirmAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_ConfirmAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. It is used to get approval from a user and it appears before any critical action.
+A `Confirm` dialog displays a specified message along with the ‘OK’ and ‘Cancel’ buttons, which returns a boolean value according to the user's click action. This can be achieved by using the [DialogService.ConfirmAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_ConfirmAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. It is used to get approval from the user, and it appears before any critical action.
 
 Use the following code to render a simple confirm dialog in an application:
 
@@ -317,7 +317,7 @@ Use the following code to render a simple confirm dialog in an application:
 
 ### Show prompt dialog
 
-A `Prompt` dialog is used to get input from user by using [DialogService.PromptAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_PromptAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. When the user enters ‘OK’, the input value is returned. When they click ‘Cancel’, the null value is returned.
+A `Prompt` dialog is used to get input from the user by using the [DialogService.PromptAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_PromptAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. When the user clicks ‘OK,’ the input value is returned. When they click ‘Cancel,’ the null value is returned.
 
 Use the following code to render a simple prompt dialog in an application:
 

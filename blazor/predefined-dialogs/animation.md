@@ -9,8 +9,9 @@ documentation: ug
 
 # Animation in Blazor Predefined Dialogs Component
 
-The Predefined Dialogs can be animated during the open and close actions. Also, users can customize animation’s `Delay`, `Duration` and `Effect` by using the [DialogOptions.AnimationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_AnimationSettings) property.
-In the following sample, the `Zoom` effect is enabled. So, the Dialog will open with `ZoomIn` and close with `ZoomOut` effects.
+The Predefined Dialogs can be animated during the open and close actions. Also, users can customize animation’s `Delay`, `Duration`, and `Effect` by using the [DialogOptions.AnimationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_AnimationSettings) property.
+
+In the following sample, the `Zoom` effect is enabled. So, the Dialog will open with the `ZoomIn` and close with the `ZoomOut` effects.
 
 {% tabs %}
 
