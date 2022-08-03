@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization of Blazor Predefined Dialogs Component | Syncfusion
-description: Checkout and learn here all about customization of Blazor Predefined Dialogs in Syncfusion  component and much more details.
+title: Customization of the Blazor Predefined Dialogs Component | Syncfusion
+description: Check out and learn here all about customization of the Blazor Predefined Dialogs in the Syncfusion component and much more details.
 platform: Blazor
 control: Predefined Dialogs
 documentation: ug

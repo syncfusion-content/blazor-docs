@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Animation in Blazor Predefined Dialogs component | Syncfusion
-description: Checkout and learn here all about animation in Syncfusion Blazor Predefined Dialogs component and much more details.
+title: Animation in the Blazor Predefined Dialogs component | Syncfusion
+description: Check out and learn here all about animation in the Syncfusion Blazor Predefined Dialogs component and much more details.
 platform: Blazor
 control: Predefined Dialogs
 documentation: ug

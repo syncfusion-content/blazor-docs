@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Predefined Dialogs Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Predefined Dialogs component in Blazor Server App and Blazor WebAssembly App.
+title: Getting Started with the Blazor Predefined Dialogs Component | Syncfusion
+description: Check out and learn about getting started with the Blazor Predefined Dialogs component in the Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Predefined Dialogs
 documentation: ug
