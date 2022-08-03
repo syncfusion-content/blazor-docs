@@ -248,7 +248,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 {% endhighlight %}
 {% endtabs %}
 
-Here, the Pager component is integrated with the ListView component. So, first ListView component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder. Refer [here](https://blazor.syncfusion.com/documentation/listview/getting-started) for create the Syncfusion ListView component.
+Here, the Pager component is integrated with the ListView component. So, the first ListView component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder. Refer [here](https://blazor.syncfusion.com/documentation/listview/getting-started) to create the Syncfusion ListView component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -298,7 +298,7 @@ Here, the Pager component is integrated with the ListView component. So, first L
 }
 ```
 
-In the previous sample, list view items are rendered. The Pager component provides an option to split this list view data set into sectioned pages and view them page by page. So, now the Pager component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder as the following.
+In the previous sample, the list view items are rendered. The Pager component provides an option to split this list view data set into sectioned pages and view them page by page. So, the Pager component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder as follows.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -307,8 +307,7 @@ In the previous sample, list view items are rendered. The Pager component provi
 </SfPager>
 ```
 
-
-Based on the [PageSize]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize)) property of the pager, list view items are bound to the current page. In the following code snippet, `PageSize` is defined as "5", so that the first five items from the data source of the list view will be displayed on the current page using the Skip and Take values.
+Based on the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) property of the pager, the list view items are bound to the current page. In the following code sample, the `PageSize` is defined as "5" so that the first five items from the data source of the list view will be displayed on the current page using the Skip and Take values.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -368,7 +367,7 @@ Based on the [PageSize]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 }  
 ```
 
-Through the navigation of pager items, you can view the items in the list view page by page. This can be achieved by using the [Click](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_Click) event of the Pager. In the `Click` event of the Pager, SkipValue and TakeValue are calculated using the `PageSize` property and arguments of the `Click` event(CurrentPage, PreviousPage). Based on these details, you can view the items in the list view page by page.
+Through the navigation of the pager items, view the items in the list view page by page. This can be achieved by using the [Click](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_Click) event of the Pager. In the `Click` event of the Pager, the SkipValue and TakeValue are calculated using the `PageSize` property and arguments of the `Click` event (CurrentPage, PreviousPage). Based on these details, view the items in the list view page by page.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
