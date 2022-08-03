@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Predefined Dialogs Component
 
-This section briefly explains how to include Blazor Predefined Dialogs component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains how to include the Blazor Predefined Dialogs component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ Open the **~/_Imports.razor** file and import the Syncfusion.Blazor and Syncfusi
 
 Now, register the Syncfusion Blazor Service and Sycnfusion Dialog Service in the Blazor Server App or Blazor WebAssembly App. Here, the Syncfusion Blazor Service is registered by setting the [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
-> From 2022 Vol1 (20.1) version: The default value of the `IgnoreScriptIsolationis` changed to `true`,so you don’t have to set `theIgnoreScriptIsolation` property explicitly to refer to scripts externally.
+> From 2022 Vol1 (20.1) version: The default value of the `IgnoreScriptIsolationis` changed to `true`, so you don’t have to set the `IgnoreScriptIsolation` property explicitly to refer to scripts externally.
 
 ### Blazor Server App
 
@@ -149,7 +149,7 @@ To add a theme to the app, open the NuGet package manager in Visual Studio (Tool
 
 ### Blazor Server App
 
-* For the **.NET 6** app, add the Syncfusion bootstrap5 theme in the `<head>` of  **~/Pages/_Layout.cshtml** file.
+* For the **.NET 6** app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
 * For the **.NET 5 and .NET 3.X** app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
