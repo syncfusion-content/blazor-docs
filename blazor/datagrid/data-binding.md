@@ -1130,6 +1130,8 @@ Here, Order class implements the interface of **INotifyPropertyChanged** and it 
 
  The following screenshot represents the DataGrid with **Observable Collection**.![Blazor DataGrid with ObservableCollection](./images/blazor-datagrid-observable-collection.PNG)
 
+> While using an Observable collection, the added, removed, and changed records are reflected in the UI. But while updating the Observable collection using external actions like timers, events, and other notifications, you need to call the StateHasChanged method to reflect the changes in the UI.
+
 ## Troubleshoot: DataGrid renders without data even though server returns with correct data
 
 In ASP.NET Core, by default the JSON results are returned in **camelCase** format. So datagrid field names are also changed in **camelCase**.
