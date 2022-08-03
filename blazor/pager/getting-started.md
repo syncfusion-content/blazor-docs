@@ -254,12 +254,11 @@ Here, the Pager component is integrated with the ListView component. So, first L
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Lists
 
-<SfListView @ref="@List" DataSource="@ListData" TValue="DataModel">
+<SfListView DataSource="@ListData" TValue="DataModel">
         <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Name"></ListViewFieldSettings>
 </SfListView>
 
 @code {
-    public SfListView<DataModel> List { get; set; }
     List<DataModel> ListData = new List<DataModel>();
     protected override void OnInitialized()
     {
@@ -299,55 +298,17 @@ Here, the Pager component is integrated with the ListView component. So, first L
 }
 ```
 
-Now, the Pager component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder as the following.
+In the previous sample, list view items are rendered. The Pager component provides an option to split this list view data set into sectioned pages and view them page by page. So, now the Pager component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder as the following.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 
-<SfPager PageSize=5 NumericItemsCount=2 TotalItemsCount=25>
+<SfPager PageSize=5 NumericItemsCount=4 TotalItemsCount=25>
 </SfPager>
 ```
 
-Pager component provides an option to splits the list view data set into sectioned pages and view them into page by page.
 
-Using the Skip and Take values, current page items are bound to the Listview component. In the following code snippet, TakeValue is defined as "5", so that the first five items from the data source of the list view will be displayed on the current page.
-
-```cshtml
-@using Syncfusion.Blazor.Navigations
-
-@{
-    var listData = ListData.Skip(SkipValue).Take(TakeValue).ToList();
-    <SfListView DataSource="@listData">
-    </SfListView>
-}
-
-@code {
-    public int SkipValue;
-    public int TakeValue = 5;
-}    
-```
-
-Through the navigation of pager items, you can view the items in the list view into page by page. This can be achieved by using the [Click](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_Click) event of the Pager. In the `Click` event of the Pager, SkipValue and TakeValue are calculated using the pager API's.
-
-```cshtml
-@using Syncfusion.Blazor.Navigations
-
-<SfPager @ref="@Page" PageSize=5 NumericItemsCount=2 TotalItemsCount=25 Click="Click">
-</SfPager>
-
-@code {
-    public int SkipValue;
-    public int TakeValue = 5;
-    public void Click(PageClickEventArgs args)
-    {
-        SkipValue = (args.CurrentPage * Page.PageSize) - Page.PageSize;
-        TakeValue = Page.PageSize;
-    }
-}
-
-```
-
-The full code sample demonstrated in the following:
+Based on the [PageSize]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize)) property of the pager, list view items are bound to the current page. In the following code snippet, `PageSize` is defined as "5", so that the first five items from the data source of the list view will be displayed on the current page using the Skip and Take values.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -357,13 +318,72 @@ The full code sample demonstrated in the following:
 <div class="col-lg-12 control-section sb-property-border">
     @{
     var listData = ListData.Skip(SkipValue).Take(TakeValue).ToList();
-    <SfListView @ref="@List" DataSource="@listData" TValue="DataModel" HeaderTitle="Contacts" ShowHeader="true">
+    <SfListView DataSource="@listData" TValue="DataModel" HeaderTitle="Contacts" ShowHeader="true">
         <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Name"></ListViewFieldSettings>
     </SfListView>
     }
-    <SfPager @ref="@Page" PageSize=5 NumericItemsCount=2 TotalItemsCount=25 Click="Click">
-        </SfPager>
+    <SfPager PageSize=5 NumericItemsCount=4 TotalItemsCount=25>
+    </SfPager>
 
+</div>
+@code {
+    public int SkipValue;
+    public int TakeValue = 5;
+    List<DataModel> ListData = new List<DataModel>();
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        ListData.Add(new DataModel { Name = "Nancy, Berlin, France" });
+        ListData.Add(new DataModel { Name = "Andrew, Madrid, Germany" });
+        ListData.Add(new DataModel { Name = "Janet, London, Brazil" });
+        ListData.Add(new DataModel { Name = "Margaret, Marseille, Belgium" });
+        ListData.Add(new DataModel { Name = "Steven, Cholchester, Switzerland" });
+        ListData.Add(new DataModel { Name = "Laura , Tsawassen, Venezuela" });
+        ListData.Add(new DataModel { Name = "Robert, Tacoma, Austria" });
+        ListData.Add(new DataModel { Name = "Michael, Redmond, Mexico" });
+        ListData.Add(new DataModel { Name = "Albert, Kirkland, USA" });
+        ListData.Add(new DataModel { Name = "Nolan, London, Sweden" });
+        ListData.Add(new DataModel { Name = "Jennifer, Berlin, Finland" });
+        ListData.Add(new DataModel { Name = "Carter, Madrid, Italy" });
+        ListData.Add(new DataModel { Name = "Allison, Marseille, Spain" });
+        ListData.Add(new DataModel { Name = "John, Tsawassen, UK" });
+        ListData.Add(new DataModel { Name = "Susan, Redmond, Ireland" });
+        ListData.Add(new DataModel { Name = "Lydia, Cholchester, Portugal" });
+        ListData.Add(new DataModel { Name = "Kelsey, London, Canada" });
+        ListData.Add(new DataModel { Name = "Jessica, Kirkland, Denmark" });
+        ListData.Add(new DataModel { Name = "Robert, Berlin, Austria" });
+        ListData.Add(new DataModel { Name = "Shelley, Tacoma, Poland" });
+        ListData.Add(new DataModel { Name = "Vanjack, Tsawassen, Norway" });
+        ListData.Add(new DataModel { Name = "shelley, Cholchester, Argentina" });
+        ListData.Add(new DataModel { Name = "Lydia, Kirkland, Finland" });
+        ListData.Add(new DataModel { Name = "Jessica, Madrid, Sweden" });
+        ListData.Add(new DataModel { Name = "Nolan, London, UK" });
+        ListData.Add(new DataModel { Name = "Jennifer, Redmond, Italy" });
+    }
+    public class DataModel
+    {
+        public string Name { get; set; }
+        public string Id { get; set; }
+    }
+}  
+```
+
+Through the navigation of pager items, you can view the items in the list view page by page. This can be achieved by using the [Click](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_Click) event of the Pager. In the `Click` event of the Pager, SkipValue and TakeValue are calculated using the `PageSize` property and arguments of the `Click` event(CurrentPage, PreviousPage). Based on these details, you can view the items in the list view page by page.
+
+```cshtml
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Lists
+
+<div class="col-lg-12 control-section sb-property-border">
+ @{
+    var listData = ListData.Skip(SkipValue).Take(TakeValue).ToList();
+    <SfListView @ref="@List" DataSource="@listData" TValue="DataModel" HeaderTitle="Contacts" ShowHeader="true">
+        <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Name"></ListViewFieldSettings>
+    </SfListView>
+}
+    <SfPager @ref="@Page" PageSize=5 NumericItemsCount=4 TotalItemsCount=25 Click="Click">
+    </SfPager>
 </div>
 @code {
     SfPager Page;
@@ -412,8 +432,9 @@ The full code sample demonstrated in the following:
         public string Id { get; set; }
     }
 }
+
 ```
 
-![Blazor Pager with ListView](./images/blazor-pager-with-list-view.png)
+![Blazor Pager with ListView](./images/blazor-pager-with-list-view.gif)
 
 > [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-pager-component)
