@@ -1278,7 +1278,7 @@ In the following sample, boolean values as checkboxes in the Verified column are
 }
 ```
 
-> [View Github Sample.]()
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-single-click-editing-with-boolean-column)
 
 ## See also
 
