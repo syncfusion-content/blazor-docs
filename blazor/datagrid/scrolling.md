@@ -595,6 +595,8 @@ This can be demonstrated in the following sample:
 </style>
 ```
 
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-show-or-hide-column--separator)
+
 ## Customize grid scroll bar
 
 The Grid component uses the native browser scroll bar to scroll through the content when the content is larger than the Grid. Refer to [this](https://css-tricks.com/almanac/properties/s/scrollbar/) to customize the appearance of the scroll bar.
