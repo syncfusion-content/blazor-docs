@@ -38,7 +38,7 @@ To add Blazor Spinner component in the app, open the NuGet package manager in Vi
 Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
 {% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+{% highlight cshtml tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 
@@ -255,7 +255,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 * Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Charts** namespace.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Imports.razor" %}
+{% highlight cshtml tabtitle="~/Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
@@ -267,7 +267,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 * Now, add the Syncfusion Sparkline component in razor file. Here, the Sparkline component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 <div>
     <SfButton @onclick="@ClickHandler">Show/Hide Spinner</SfButton>

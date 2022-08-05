@@ -12,7 +12,7 @@ documentation: ug
 You can bind the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) to the editor component, by using the `@bind-Value` attribute. If component value has been changed, it will affect all the places where the variable is bound for the bind-value attribute.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 {% include_relative code-snippet/value-binding.razor %}
 
@@ -29,7 +29,7 @@ The Rich Text Editor saves its content automatically when you focus out the edit
 AutoSaveOnIdle is set to true in this demo, and the SaveInterval is set to 5 seconds.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -58,7 +58,7 @@ You can also get the RichTextEditor's edited content by using the [ValueChange](
 When the user changes the content, the ValueChange event is invoked on every [SaveInterval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_SaveInterval) time or when the editor loses focus.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 {% include_relative code-snippet/event.razor %}
 

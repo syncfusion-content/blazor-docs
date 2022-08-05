@@ -12,7 +12,7 @@ documentation: ug
 The Blazor Rich Text Editor support editing the Markdown contents when the [EditorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.EditorMode.html#fields) property is set to `Markdown`. Markdown is the lightweight text formatting with the simple syntax, it can apply the using keyboard interactions and toolbar action.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 {% include_relative code-snippet/markdown.razor %}
 
@@ -61,7 +61,7 @@ The [Blazor Markdown editor](https://www.syncfusion.com/blazor-components/blazor
 To insert the table in the Markdown editor, click the [Table](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorTableSettings.html#properties) icon in the toolbar to insert the table into the editor area and this is the default way in all the devices. By default insert the Markdown table with 2 X 2 rows and columns along with the heading.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 {% include_relative code-snippet/markdown-insert-table.razor %}
 
@@ -75,7 +75,7 @@ To insert the table in the Markdown editor, click the [Table](https://help.syncf
 To insert an image in the Markdown editor, click the [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html) icon in the toolbar to insert an image into the editor area. Refer the following sample and code snippets for insert an image in the Markdown editor.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 {% include_relative code-snippet/markdown-insert-image.razor %}
 
@@ -94,7 +94,7 @@ Point the cursor anywhere within the editor where you would like to insert the l
 | Display Text | Types or edits the required text that you want to display text for the link|
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 {% include_relative code-snippet/markdown-insert-link.razor %}
 
@@ -108,7 +108,7 @@ Point the cursor anywhere within the editor where you would like to insert the l
 The Rich Text Editor allows you to customize the markdown syntax by overriding its default syntax. Configure the customized markdown syntax using [ListSyntax](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMarkdownOptions.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMarkdownOptions_ListSyntax), [FormatSyntax](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMarkdownOptions.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMarkdownOptions_FormatSyntax), [SelectionSyntax](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMarkdownOptions.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMarkdownOptions_SelectionSyntax) properties of RichTextEditorMarkdownOptions.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight cshtml %}
 
 {% include_relative code-snippet/markdown-custom-formats.razor %}
 

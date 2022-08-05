@@ -1,0 +1,16 @@
+@using Syncfusion.Blazor.Popups
+@inject SfDialogService DialogService
+    <div>
+        <button @onclick="@ConfirmBtn">Confirm</button>
+    </div>
+@code {
+        private async Task ConfirmBtn()
+        {
+            bool isConfirm = await DialogService.ConfirmAsync("Are you sure you want to permanently delete these items?", "Delete Multiple Items", new DialogOptions()
+            {
+                Width = "400px",
+                Height = "200px",
+            });
+    }
+}
+  
