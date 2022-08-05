@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with the Blazor Predefined Dialogs Component | Syncfusion
-description: Check out and learn about getting started with the Blazor Predefined Dialogs component in the Blazor Server App and Blazor WebAssembly App.
+title: Getting Started with the Predefined Dialogs in Blazor | Syncfusion
+description: Check out and learn about getting started with the predefined dialogs in the Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Predefined Dialogs
 documentation: ug
 ---
 
-# Getting Started with Blazor Predefined Dialogs Component
+# Getting Started with Predefined Dialogs in Blazor
 
-This section briefly explains how to include the Blazor Predefined Dialogs component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains how to include the predefined dialogs in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ The Syncfusion Blazor components are available in [nuget.org](https://www.nuget.
 
 To add the Blazor Predefined Dialog component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.Blazor.Popups](https://www.nuget.org/packages/Syncfusion.Blazor.Popups), then install it.
 
-## Register Syncfusion Blazor Service and Sycnfusion Dialog Service.
+## Register Syncfusion Blazor Service and Sycnfusion Dialog Service
 
 Open the **~/_Imports.razor** file and import the Syncfusion.Blazor and Syncfusion.Blazor.Popups namespace.
 
@@ -250,8 +250,10 @@ For the Blazor WebAssembly App, refer to the script in the `<head>` of the **~/i
 
 > Syncfusion recommends to reference scripts using the [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
-## Add Blazor DialogProvider Component
+## Add Dialog Provider
 
+`SfDialogProvider` allows to open predefined dialogs based on `SfDialogService` settings from any where in application. You can add `SfDialogProvider` in `MainLayout.razor` or any page. But it should be added only once in the app. If you add in `MainLayout.razor`, you can open predefined dialogs from any where in application. If you add in particular page, you can open dialogs only within the page.
+    
 * Open the **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Popups** namespace.
 
 {% tabs %}
@@ -263,7 +265,7 @@ For the Blazor WebAssembly App, refer to the script in the `<head>` of the **~/i
 {% endhighlight %}
 {% endtabs %}
 
-* Now, add the Syncfusion DialogProvider Component in the **~/_MainLayout.razor** file.
+* Now, add `SfDialogProvider` in the **~/_MainLayout.razor** file.
 
 {% tabs %}
 {% highlight razor tabtitle=".NET 6 (~/_MainLayout.razor)" %}
@@ -273,22 +275,16 @@ For the Blazor WebAssembly App, refer to the script in the `<head>` of the **~/i
 {% endhighlight %}
 {% endtabs %}
 
-## Available predefined dialogs
+## Open Predefined Dialog
 
-The dialog component renders the `Alert`, `Confirm`, and `Prompt` dialogs with minimal code. The alert, confirm, and prompt dialogs are shown using the [DialogServices](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html).
-
-There are three types of predefined dialogs available:
-
-* [Alert](#show-alert-dialog)
-* [Confirm](#show-confirm-dialog)
-* [Prompt](#show-prompt-dialog)
+Once you added `SfDialogService` and `SfDialogProvider`, you can open predefined dialogs from any where in application using [AlertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_AlertAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_),[ConfirmAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_ConfirmAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) or [PromptAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_PromptAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) methods in [DialogServices](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html).
 
 ### Show alert dialog
 
-An `Alert` dialog box displays errors, warnings, and information that needs user awareness. This can be achieved by using the [DialogService.AlertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_AlertAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. The `Alert` dialog is displayed along with the ‘Ok’ button but does not have any specific return type. When you click ‘Ok,’ the `Alert` method will complete.
+An alert dialog box used to display errors, warnings, and information alerts that needs user awareness. This can be achieved by using the [DialogService.AlertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_AlertAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. The alert dialog is displayed along with the `OK` button. When user clicks on `OK` button, alery dialog will get closed.
 
-Use the following code to render a simple alert dialog in an application:
-
+In the below code exmaple aleary dialog displayed on button click action.
+    
 {% tabs %}
 {% highlight razor %}
 

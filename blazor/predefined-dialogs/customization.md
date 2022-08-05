@@ -9,9 +9,13 @@ documentation: ug
 
 # Customization of Blazor Predefined Dialogs Component
 
-## Customization of action buttons
+## Customize action buttons
 
-Customize the Predefined Dialogs buttons by using the [DialogOptions.PrimaryButtonOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_PrimaryButtonOptions) property. Use the following code to customize the predefined dialog buttons.
+You can customize the predefined dialogs buttons by using below properties.
+* [DialogOptions.PrimaryButtonOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_PrimaryButtonOptions) - Use this property to customize **OK** button text and appearence.
+*  [https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_CancelButtonOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_CancelButtonOptions) - Use this property to customize **Cancel** button text and appearence.
+
+Use the following code to customize the predefined dialog action buttons.
 
 {% tabs %}
 
@@ -35,9 +39,9 @@ Customize the Predefined Dialogs buttons by using the [DialogOptions.PrimaryButt
 
 ![Prompt action buttons Dialog](./images/blazor-prompt-action-button.png)
 
-## Customization of close button dialog
+## Show or hide close button dialog
 
-Customize the close icon using the [DialogOptions.ShowCloseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_ShowCloseIcon) property. If the `ShowCloseIcon` property is set to true, then the close icon will appear. Use the following code to enable the `ShowCloseIcon`.
+You can show or hide close button in dialog using the [DialogOptions.ShowCloseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_ShowCloseIcon) property.The default value is `true`.
 
 {% tabs %}
 
@@ -61,9 +65,11 @@ Customize the close icon using the [DialogOptions.ShowCloseIcon](https://help.sy
 
 ![Prompt close icon Dialog](./images/blazor-prompt-close-button.png)
 
-## Customization of dialog content
+## Customize dialog content
 
-Customize the Predefined Dialogs using the [DialogOptions.ChildContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_ChildContent) property. Use the following code to customize the dialog content to render the TextBox component inside the `Propmt` dialog to get the username from the user.
+You can load custom content in predefined dialogs using the [DialogOptions.ChildContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_ChildContent) property. 
+
+Use the following code to customize the dialog content to render the TextBox component inside the `Propmt` dialog to get the username from the user.
 
 {% tabs %}
 {% highlight razor %}
