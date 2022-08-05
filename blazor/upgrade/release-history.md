@@ -16,7 +16,7 @@ See our [Upgrade Guide](https://help.syncfusion.com/upgrade-guide/blazor-compone
 * Breaking Changes
 * Bug Fixes
 * Features
-* Knows Issues between your current version and the latest version you are trying to upgrade.
+* Known issues between your current version and the latest version you are trying to upgrade.
 
 ## What's the difference between main, service pack and weekly releases 
 

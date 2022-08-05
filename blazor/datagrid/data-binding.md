@@ -57,7 +57,7 @@ To bind list binding to the datagrid, you can assign a IEnumerable object to the
 }
 ```
 
-> By default, [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
+> By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
 
 ### ExpandoObject binding
 
@@ -407,6 +407,8 @@ The sample response object should look like this:
     Count: 830
 }
 ```
+
+> The data source is returned in the form of items and count pairs while using the WebAPI Adaptor. But when the [Offline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Offline) property of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) is enabled, the entire data source is returned from the server as a collection of objects. So, the `$inlinecount` will not be present when the `Offline` property is enabled. Also, only one request will be made to fetch the entire details from the server and no further request will be sent to the server.
 
 ### Enable SfDataManager after initial rendering
 
@@ -1198,6 +1200,104 @@ The following sample code demonstrates notifying user when server-side exception
     }
 }
 ```
+
+## Perform data operation in WebAPI service
+
+While using the WebAPI adaptor type in the SfDataManager component, queries will be generated for data operations to be sent to the server side as QueryString, and based on these QueryString values, actions(filtering, sorting, paging, etc.) will be performed on the server side.
+
+Requests sent to the server can be retrieved using "Request.Query", and these values can be differentiated as below.
+
+|   Keys    |   Explanation                            |
+|----------------------| -----------------------------------------|
+|     $skip, $top      |   This contains query for performing paging operation in server side.|
+|     $filter             |    This contains query for performing filtering operation in server side. |
+|     $search           |   This contains query for performing searching operation in server side. |
+|     $orderby           |    This contains query for performing sorting operation in server side. |
+
+Using the above QueryString keys, you can get the corresponding values and perform the required actions. In the following sample, simple filtering, sorting, and paging operations are demonstrated.
+
+```cshtml
+@using Grid_WebAPI.Data
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+
+<SfGrid TValue="Order" AllowFiltering="true" Toolbar="@(new List<string> {"Add","Edit","Delete","Update","Cancel","Search" })" AllowSorting="true" AllowPaging="true">
+    <SfDataManager Url="api/Default" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>    
+   
+    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="EmployeeID" HeaderText="ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="CustomerID" HeaderText="Customer Name" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+```
+
+```csharp
+public class DefaultController : ControllerBase
+    {
+    public OrderDataAccessLayer OrderService = new OrderDataAccessLayer();
+    // GET: api/Default
+    [HttpGet]
+    public async Task<object> Get(int? code)
+        {
+            try
+            {
+                Microsoft.AspNetCore.Http.IQueryCollection queryString = Request.Query;
+                if (queryString == null)
+                return null;
+                IQueryable<Order> dataSource = OrderService.GetAllOrders();
+                int countAll = dataSource.Count();
+                StringValues sSkip, sTake, sFilter, sSort;
+
+                // Performing Filtering operation at server side.
+                string filter = (queryString.TryGetValue("$filter", out sFilter)) ? sFilter[0] : null; //filter query   
+                List<DynamicLinqExpression.Filter> listFilter = ParsingFilterFormula.PrepareFilter(filter);
+                if (listFilter.Count() > 0)
+                {
+                    Expression<Func<Order, bool>> deleg = DynamicLinqExpression.ExpressionBuilder.GetExpressionFilter<Order>(listFilter);
+                    dataSource = dataSource.Where(deleg);
+                }
+
+               // Performing Sorting operation at server side.
+               string sort = (queryString.TryGetValue("$orderby", out sSort)) ? sSort[0] : null;         //sort query
+                if (sort != null)
+                {
+                    string s = DynamicLinqExpression.GetSortString(sort);
+                    if (s == null)
+                        return null;
+                    else if (s.Length > 0)
+                    {
+                      dataSource = dataSource.OrderBy(s);
+                    }
+                }
+
+                int countFiltered = dataSource.Count();
+
+                // Performing Paging operation at server side.
+                int skip = (queryString.TryGetValue("$skip", out sSkip)) ? Convert.ToInt32(sSkip[0]) : 0;
+                int top = (queryString.TryGetValue("$top", out sTake)) ? Convert.ToInt32(sTake[0]) : countAll;
+                dataSource = dataSource.Skip(skip).Take(top);
+
+                if (queryString.Keys.Contains("$inlinecount"))
+                    return new { Items = dataSource, Count = countFiltered };
+                else
+                    return dataSource;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }       
+    }
+```
+> Similarly, we suggest you handle the same scenarios for complex queries.
+
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-data-operations-in-wep-api-service)
+
+> ASP.NET Core (Blazor) Web API with batch handling is not yet supported by ASP.NET Core v3+. Hence, it is not feasible for us to support batch mode CRUD operations until ASP.NET Core provides the support for the batch handler. Refer [here](https://github.com/dotnet/aspnetcore/issues/14722) for more details.
+
 ## See also
 
 * [A Full-Stack Web App Using Blazor WebAssembly and GraphQL: Part 1](https://www.syncfusion.com/blogs/post/a-full-stack-web-app-using-blazor-webassembly-and-graphql-part-1.aspx)
@@ -1205,5 +1305,7 @@ The following sample code demonstrates notifying user when server-side exception
 * [A Full-Stack Web App Using Blazor WebAssembly and GraphQL: Part 3](https://www.syncfusion.com/blogs/post/a-full-stack-web-app-using-blazor-webassembly-and-graphql-part-3.aspx)
 * [How to import data from Excel sheet and bind to Blazor Grid](https://www.syncfusion.com/kb/13131/how-to-import-data-from-excel-sheet-and-bind-to-blazor-grid)
 * [How to clear all Data from Grid](https://www.syncfusion.com/forums/150965/how-to-clear-all-data-from-grid)
+* [Binding SQL data to the Blazor DataGrid Component](https://blazor.syncfusion.com/documentation/common/data-binding/sql-server-data-binding#binding-sql-data-to-the-blazor-datagrid-component)
+* [Handling CRUD operations with our Syncfusion Blazor DataGrid component](https://blazor.syncfusion.com/documentation/common/data-binding/sql-server-data-binding#handling-crud-operations-with-our-syncfusion-blazor-datagrid-component)
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
