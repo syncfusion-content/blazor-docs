@@ -172,15 +172,15 @@ The Dialog supports dragging within its target container by grabbing the Dialog 
 
 {% tabs %}
 
-{% highlight tabtitle="alert.razor" %}
+{% highlight razor tabtitle="alert.razor" %}
 {% include_relative code-snippet/alert-drag.razor %}
 {% endhighlight %}
 
-{% highlight tabtitle="confirm.razor" %}
+{% highlight razor tabtitle="confirm.razor" %}
 {% include_relative code-snippet/confirm-drag.razor %}
 {% endhighlight %}
 
-{% highlight tabtitle="prompt.razor" %}
+{% highlight razor tabtitle="prompt.razor" %}
 {% include_relative code-snippet/prompt-drag.razor %}
 {% endhighlight %}
 
@@ -194,15 +194,15 @@ In the following sample, the `Zoom` effect is enabled. So, the Dialog will open 
 
 {% tabs %}
 
-{% highlight tabtitle="alert.razor" %}
+{% highlight razor tabtitle="alert.razor" %}
 {% include_relative code-snippet/alert-animation.razor %}
 {% endhighlight %}
 
-{% highlight tabtitle="confirm.razor" %}
+{% highlight razor tabtitle="confirm.razor" %}
 {% include_relative code-snippet/confirm-animation.razor %}
 {% endhighlight %}
 
-{% highlight tabtitle="prompt.razor" %}
+{% highlight razor tabtitle="prompt.razor" %}
 {% include_relative code-snippet/prompt-animation.razor %}
 {% endhighlight %}
 
@@ -214,15 +214,15 @@ You can customize the dialog position by using the [Position](https://help.syncf
 
 {% tabs %}
 
-{% highlight tabtitle="alert.razor" %}
+{% highlight razor tabtitle="alert.razor" %}
 {% include_relative code-snippet/alert-position.razor %}
 {% endhighlight %}
 
-{% highlight tabtitle="confirm.razor" %}
+{% highlight razor tabtitle="confirm.razor" %}
 {% include_relative code-snippet/confirm-position.razor %}
 {% endhighlight %}
 
-{% highlight tabtitle="prompt.razor" %}
+{% highlight razor tabtitle="prompt.razor" %}
 {% include_relative code-snippet/prompt-position.razor %}
 {% endhighlight %}
 
@@ -238,15 +238,15 @@ You can customize the dialog dimensions using [DialogDimension.Height](https://h
 
 {% tabs %}
 
-{% highlight tabtitle="alert.razor" %}
-{% include_relative code-snippet/alert-dimension.razor %}
+{% highlight razor tabtitle="alert.razor" %}
+{% include_relative code-snippet/alert-dimensions.razor %}
 {% endhighlight %}
 
-{% highlight tabtitle="confirm.razor" %}
+{% highlight razor tabtitle="confirm.razor" %}
 {% include_relative code-snippet/confirm-dimension.razor %}
 {% endhighlight %}
 
-{% highlight tabtitle="prompt.razor" %}
+{% highlight razor tabtitle="prompt.razor" %}
 {% include_relative code-snippet/prompt-dimension.razor %}
 {% endhighlight %}
 
@@ -264,15 +264,15 @@ You can customize the close icon using [ShowCloseIcon](https://help.syncfusion.c
 
 {% tabs %}
 
-{% highlight tabtitle="alert.razor" %}
+{% highlight razor tabtitle="alert.razor" %}
 {% include_relative code-snippet/alert-close-button.razor %}
 {% endhighlight %}
 
-{% highlight tabtitle="confirm.razor" %}
+{% highlight razor tabtitle="confirm.razor" %}
 {% include_relative code-snippet/confirm-close-button.razor %}
 {% endhighlight %}
 
-{% highlight tabtitle="prompt.razor" %}
+{% highlight razor tabtitle="prompt.razor" %}
 {% include_relative code-snippet/prompt-close-button.razor %}
 {% endhighlight %}
 
@@ -290,15 +290,15 @@ You can customize the predefined dialog buttons by using the [PrimaryButtonOptio
 
 {% tabs %}
 
-{% highlight tabtitle="alert.razor" %}
+{% highlight razor tabtitle="alert.razor" %}
 {% include_relative code-snippet/alert-action-button.razor %}
 {% endhighlight %}
 
-{% highlight tabtitle="confirm.razor" %}
+{% highlight razor tabtitle="confirm.razor" %}
 {% include_relative code-snippet/confirm-action-button.razor %}
 {% endhighlight %}
 
-{% highlight tabtitle="prompt.razor" %}
+{% highlight razor tabtitle="prompt.razor" %}
 {% include_relative code-snippet/prompt-action-button.razor %}
 {% endhighlight %}
 
