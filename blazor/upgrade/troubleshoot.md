@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to troubleshoot after upgrading between different versions.
-description: Checkout and learn here all about troubleshooting after upgrading between versions in Blazor.
+title: How to troubleshoot after upgrading to Latest versions in Blazor - Syncfusion.
+description: Checkout and learn here all about troubleshooting after upgrading Syncfusion Components to latest versions in Blazor.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# TroubleShoot
+# TroubleShoot While Upgrading Syncfusion Packages
 
 ## Syncfusion Components doesnt render after upgrading to 20.1.* versions from 19.* version
 
