@@ -160,6 +160,6 @@ Since Syncfusion PDF Viewer (Blazor WebAssembly) component depends on server-sid
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor PDF Viewer` component will be rendered in the default web browser.
 
-![Blazor PDF Viewer Component](../images/blazor-pdfviewer.png)
+![Blazor PDF Viewer Component](GettingStarted_images/blazor-pdfviewer.png)
 
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer).
