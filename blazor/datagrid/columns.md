@@ -571,6 +571,8 @@ In the following example, two different column fields ("EmpFirstNameID", "EmpLa
 }
 ```
 
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-enable-multiple-foreignkey-columns)
+
 ## Header text
 
 By default, column header title is displayed from column [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) value. To override the default header title, you have to define the **HeaderText** value in the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) property of **GridColumn** directive.
