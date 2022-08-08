@@ -742,6 +742,8 @@ This can be demonstrated in the following sample:
 
 ![Orientation of Header Text in Blazor DataGrid](./images/blazor-datagrid-header-text-orientation.png)
 
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-change-orientation-of-header-text)
+
 ## Column type
 
 Column type can be specified using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) property. It specifies the type of data the column binds.
