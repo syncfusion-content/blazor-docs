@@ -75,7 +75,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor TreeGrid with Custom Row Height](images/blazor-treegrid-custom-row-height.png)
+![Blazor TreeGrid with Custom Row Height](../images/blazor-treegrid-custom-row-height.png)
 
 ## Customize row height for particular row
 
@@ -160,4 +160,4 @@ public class TreeData
 
 {% endtabs %}
 
-![Customizing Specific Row Height in Blazor Tree Grid](./images/blazor-treegrid-specific-row-height-customization.png)
+![Customizing Specific Row Height in Blazor Tree Grid](../images/blazor-treegrid-specific-row-height-customization.png)

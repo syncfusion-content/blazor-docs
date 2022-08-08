@@ -91,7 +91,7 @@ public class Employee
 
 {% endtabs %}
 
-![Blazor Tree Grid with Detail Template](images/blazor-treegrid-detail-template.png)
+![Blazor Tree Grid with Detail Template](../images/blazor-treegrid-detail-template.png)
 
 ## Rendering custom component
 
@@ -174,7 +174,7 @@ In the following sample, tree grid component is rendered as custom component usi
 }
 ```
 
-![Rendering Custom Component in Blazor Tree Grid Row](./images/blazor-treegrid-row-with-custom-component.png)
+![Rendering Custom Component in Blazor Tree Grid Row](../images/blazor-treegrid-row-with-custom-component.png)
 
 ## Expand by external button
 
