@@ -19,7 +19,7 @@ Use the following code to customize the predefined dialog action buttons.
 
 For alert dialog , customized the default dialog button content as `Okay` by using the [DialogButtonOptions.Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtonOptions.html#Syncfusion_Blazor_Popups_DialogButtonOptions_Content) property.
 
-For confirm dialog, customized the default dialog buttons content as `Yes` and `No` by using the `DialogButtonOptions.Content` property and also customized the dialog button icons by using[DialogButtonOptions.IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtonOptions.html#Syncfusion_Blazor_Popups_DialogButtonOptions_IconCss) property.
+For confirm dialog, customized the default dialog buttons content as `Yes` and `No` by using the `DialogButtonOptions.Content` property and also customized the dialog button icons by using [DialogButtonOptions.IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtonOptions.html#Syncfusion_Blazor_Popups_DialogButtonOptions_IconCss) property.
 
 For prompt dialog , customized the default dialog buttons content as `Connect` and `Close` by using [DialogButtonOptions.Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtonOptions.html#Syncfusion_Blazor_Popups_DialogButtonOptions_Content) property.
 
@@ -75,7 +75,7 @@ You can show or hide close button in dialog using the [DialogOptions.ShowCloseIc
 
 You can load custom content in predefined dialogs using the [DialogOptions.ChildContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_ChildContent) property. 
 
-Use the following code to customize the dialog content to render the custom TextBox inside the propmt dialog to get the username from the user.
+Use the following code to customize the dialog content to render the custom TextBox component inside the prompt dialog to get the username from the user.
 
 {% tabs %}
 {% highlight razor %}
