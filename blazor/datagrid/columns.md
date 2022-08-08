@@ -645,7 +645,7 @@ The following screenshot represents the Header Template.
 
 ## Change the orientation of header text
 
-You can change the orientation of the header text by using the [CustomAttributes] property.
+You can change the orientation of the header text by using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_CustomAttributes) property.
 
 Ensure the following steps to rotate the header text of particular column.
 
