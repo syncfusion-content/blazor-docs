@@ -513,7 +513,7 @@ In the following code sample, you can prevent default filter query generation us
 
 ### Use filter bar template in foreignkey column
 
-You can use the filter bar template in a foreign key column using the [FilterTemplate] feature of the Grid. The following example demonstrates how to use the filter bar template in a foreign column.
+You can use the filter bar template in a foreign key column using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) feature of the Grid. The following example demonstrates how to use the filter bar template in a foreign column.
 
 In the following example, the Employee Name is a foreign key column. An `SfDropDownList` component is rendered in the Employee Name column using the `FilterTemplate`.
 
