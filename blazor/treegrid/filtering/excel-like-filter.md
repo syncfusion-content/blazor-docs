@@ -160,56 +160,6 @@ namespace TreeGridComponent.Data {
 
 ![Blazor Tree Grid Filter with Item Template](../images/blazor-treegrid-filter-item-template.png)
 
-<!-- ## Customize filter icon for filtered columns
-
-After filtering the column, the DataGrid will display the in-built filtered icon with predefined styles by default. The filtered icon can also be customized using <b>.e-grid .e-filtered::before</b> class.
-
-```cshtml
-
-@using Syncfusion.Blazor.Grids
-
-<SfGrid DataSource="@Orders" AllowFiltering="true">
-    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Excel"></GridFilterSettings>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code{
-    public List<Order> Orders { get; set; }
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = (new DateTime[] { new DateTime(2010, 5, 1), new DateTime(2010, 5, 2), new DateTime(2010, 5, 3), })[new Random().Next(3)],
-        }).ToList();
-    }
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-}
-
-<style>
-    .e-grid .e-filtered::before {
-        color: red;               // set the color to filtered icon
-        font-size: medium;        // set the font-size to filtered icon
-    }
-</style>
-
-```
-
-![Blazor DataGrid Customized Filtered Icon](./images/blazor-datagrid-custom-filtered-icon.png) -->
-
 ## Customize the height and width of filter popup
 
 You can customize the height and width of each column’s filter dialog using the CSS style in the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionBegin) event of the tree grid.
