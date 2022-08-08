@@ -9,21 +9,23 @@ documentation: ug
 
 # Getting Started with Blazor PDF Viewer Component in Blazor Server App
 
-This section briefly explains about how to include [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component in your Blazor Server App using Visual Studio.
+This section briefly explains about how to integrate [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component in your Blazor Server App using Visual Studio.
 
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a new Blazor App in Visual Studio
+## Integrate PDF Viewer into Blazor Server App
 
-You can create **Blazor Server App** using Visual Studio in one of the following ways,
+1. Start Visual Studio and select **Create a new project**.
+2. For a Blazor Server experience, choose the **Blazor Server App** template. Select **Next**. 
+![Create-new-blazor-server-app](GettingStarted_images/start-window-create-new-project.png)
+3. Provide a **Project Name** and confirm that the *Location* is correct. Select Next. 
+![Set-project-name](GettingStarted_images/Set-project-name.png)
+4. In the **Additional information** dialog, set the target framework. 
+![Set-target-framework](GettingStarted_images/Additional_information.png)
 
-* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
-
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/vs2019-extensions/create-project)
-
-## Install Syncfusion Blazor PDFViewerServer NuGet package in the App
+## Install Blazor PDF Viewer NuGet package in Blazor Server App
 
 To add Blazor PDF Viewer component in Blazor Server App, use `SfPdfViewerServer` component in corresponding NuGet based on the operating system of the server you intend to host, as shown below.,
 * For **Windows**, use [Syncfusion.Blazor.PdfViewerServer.Windows](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Windows)

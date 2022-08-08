@@ -15,7 +15,15 @@ This section briefly explains about how to include [Blazor PDF Viewer](https://w
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a new Blazor App in Visual Studio
+## Integrate PDF Viewer into Blazor WebAssembly App
+
+1. Start Visual Studio and select **Create a new project**.
+2. For a Blazor WebAssembly experience, choose the **Blazor WebAssembly App** template and select **Next**. 
+![Create-a-new-WASM-app](GettingStarted_images/Create-new-WASM-app.png)
+3. Provide a **Project name** and confirm that the *Location* is correct. Select **Next**.
+![Set-project-name](GettingStarted_images/Set-WASM-project-name.png)
+4. In **Additional information dialog**, set target framework.  
+![Addition-information-WASM](GettingStarted_images/Additional_information_WASM.png)
 
 You can create **Blazor WebAssembly App** using Visual Studio in one of the following ways,
 
@@ -23,9 +31,9 @@ You can create **Blazor WebAssembly App** using Visual Studio in one of the foll
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/vs2019-extensions/create-project)
 
-## Install Syncfusion Blazor PDF Viewer NuGet package in the App
+## Install Blazor PDF Viewer NuGet package in WASM App
 
-Kindly install [Syncfusion.Blazor.PdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.PDFViewer) NuGet package in your Blazor WebAssembly app to add Blazor PDF Viewer Component. 
+To add Blazor PDF Viewer component in Blazor WebAssembly App, use `SfPdfViewer` component in [Syncfusion.Blazor.PdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewer) NuGet package. 
 
 N> This component requires server-side processing to render the PDF files through web service.
 
