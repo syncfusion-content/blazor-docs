@@ -3,13 +3,23 @@
     <div>
         <button @onclick="@ConfirmBtn">Confirm</button>
     </div>
+    <style>
+
+    .e-ok-icon::before {
+        content: '\e7ff';
+    }
+
+    .e-close-icon::before{
+        content: '\e825';
+    }
+</style>
 @code {
         private async Task ConfirmBtn()
         {
             bool isConfirm = await DialogService.ConfirmAsync("Are you sure you want to permanently delete these file?", "Delete File", new DialogOptions()
             {
-                PrimaryButtonOptions = new DialogButtonOptions() { Content = "Yes"},
-                CancelButtonOptions = new DialogButtonOptions() { Content = "No"},
+                PrimaryButtonOptions = new DialogButtonOptions() {Content = "Yes", IconCss="e-icons e-ok-icon"},
+                CancelButtonOptions = new DialogButtonOptions() {Content = "No", IconCss="e-icons e-close-icon"},
             });
     }
 }

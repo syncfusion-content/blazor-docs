@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Animation in the Blazor Predefined Dialogs component | Syncfusion
-description: Check out and learn here all about animation in the Syncfusion Blazor Predefined Dialogs component and much more details.
+title: Animation in the Predefined Dialogs in Blazor | Syncfusion
+description: Check out and learn here all about animation in the predefined dialogs in Blazor and much more details.
 platform: Blazor
 control: Predefined Dialogs
 documentation: ug
 ---
 
-# Animation in Blazor Predefined Dialogs Component
+# Animation in Predefined Dialogs in Blazor
 
 The predefined dialogs can be animated during the open and close actions. You can customize the `Delay`, `Duration`, and `Effect` of animation by using the [DialogOptions.AnimationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_AnimationSettings) property.
 

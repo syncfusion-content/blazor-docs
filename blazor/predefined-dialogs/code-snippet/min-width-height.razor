@@ -1,0 +1,20 @@
+@using Syncfusion.Blazor.Popups
+@inject SfDialogService DialogService
+    <div>
+        <button @onclick="@AlertBtn">Alert</button>
+    </div>
+    <style>
+        .e-dialog.customClass {
+            min-width: 300px;
+            min-height: 200px;
+        }
+    </style>
+@code {
+    private async Task AlertBtn()
+    {
+        await DialogService.AlertAsync("The Succinctly series was born in 2012.", "About SYNCFUSION Succinctly Serires", new DialogOptions()
+            {
+               CssClass ="customClass ",
+            });
+    }   
+}

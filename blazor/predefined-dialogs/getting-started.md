@@ -27,7 +27,7 @@ Create the **Blazor Server App** or **Blazor WebAssembly App** using Visual Stud
 
 The Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add a reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages).
 
-To add the Blazor Predefined Dialog component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.Blazor.Popups](https://www.nuget.org/packages/Syncfusion.Blazor.Popups), then install it.
+To add the predefined dialog component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.Blazor.Popups](https://www.nuget.org/packages/Syncfusion.Blazor.Popups), then install it.
 
 ## Register Syncfusion Blazor Service and Sycnfusion Dialog Service
 
@@ -52,13 +52,13 @@ Now, register the Syncfusion Blazor Service and Sycnfusion Dialog Service in the
 
 * For the **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and import the Syncfusion Blazor Service and Sycnfusion Blazor Dialog Service.
 
-The **DialogService** must be registered as scoped service using the **SfDialogService** method for getting the Predefined dialogs instance at any page.
+The **DialogService** must be registered as scoped service using the **SfDialogService** method for getting the predefined dialogs instance at any page.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="1 2 7 8" %}
 
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Popups
+using Syncfusion.Blazor
+using Syncfusion.Blazor.Popups
 
 // Add services to the container.
 builder.Services.AddRazorPages();
@@ -73,8 +73,8 @@ var app = builder.Build();
 
 {% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="1 2 14 15" %}
 
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Popups
+using Syncfusion.Blazor
+using Syncfusion.Blazor.Popups
 
 namespace BlazorApplication
 {
@@ -104,8 +104,8 @@ Open the **~/Program.cs** file and register the Syncfusion Blazor Service and Sy
 {% tabs %}
 {% highlight C# tabtitle=".NET 6 (~/Program.cs)" hl_lines="1 2 7 8" %}
 
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Popups
+using Syncfusion.Blazor
+using Syncfusion.Blazor.Popups
 
 // Add services to the container.
 
@@ -119,8 +119,8 @@ await builder.Build().RunAsync();
 
 {% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="1 2 11 12" %}
 
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Popups
+using Syncfusion.Blazor
+using Syncfusion.Blazor.Popups
 
 namespace WebApplication1
 {
@@ -281,9 +281,9 @@ Once you added `SfDialogService` and `SfDialogProvider`, you can open predefined
 
 ### Show alert dialog
 
-An alert dialog box used to display errors, warnings, and information alerts that needs user awareness. This can be achieved by using the [DialogService.AlertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_AlertAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. The alert dialog is displayed along with the `OK` button. When user clicks on `OK` button, alery dialog will get closed.
+An alert dialog box used to display an errors, warnings, and information alerts that needs user awareness. This can be achieved by using the [DialogService.AlertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_AlertAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. The alert dialog is displayed along with the `OK` button. When user clicks on `OK` button, alert dialog will get closed.
 
-In the below code exmaple aleary dialog displayed on button click action.
+In the below code example, alert dialog displayed on button click action.
     
 {% tabs %}
 {% highlight razor %}
@@ -297,10 +297,10 @@ In the below code exmaple aleary dialog displayed on button click action.
 
 ### Show confirm dialog
 
-A `Confirm` dialog displays a specified message along with the ‘OK’ and ‘Cancel’ buttons, which returns a boolean value according to the user's click action. This can be achieved by using the [DialogService.ConfirmAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_ConfirmAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. It is used to get approval from the user, and it appears before any critical action.
+A confirm dialog box used to displays a specified message along with the `OK` and `Cancel` buttons, which returns a boolean value according to the user's click action. When the user clicks the `OK` button, the `true` value is returned otherwise it will returns the `false` value. This can be achieved by using the [DialogService.ConfirmAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_ConfirmAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. It is used to get approval from the user, and it appears before any critical action. After get approval from the user the dialog will disappear automatically.
 
-Use the following code to render a simple confirm dialog in an application:
-
+In the below code example, the confirm dialog displayed on `OK` and `Cancel` button click action.
+ 
 {% tabs %}
 {% highlight razor %}
 
@@ -313,9 +313,9 @@ Use the following code to render a simple confirm dialog in an application:
 
 ### Show prompt dialog
 
-A `Prompt` dialog is used to get input from the user by using the [DialogService.PromptAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_PromptAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. When the user clicks ‘OK,’ the input value is returned. When they click ‘Cancel,’ the null value is returned.
+A prompt dialog is used to get the input from the user by using the [DialogService.PromptAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_PromptAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. When the user clicks the `OK` button the input value from the dialog is returned. If the user clicks the `Cancel` button the `null` value is returned. After getting the input from the user the dialog will disappear automatically.
 
-Use the following code to render a simple prompt dialog in an application:
+In the below code example, the prompt dialog displayed on `OK` and `Cancel` button click action.
 
 {% tabs %}
 {% highlight razor %}

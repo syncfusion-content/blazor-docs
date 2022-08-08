@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Positioning in the Blazor Predefined Dialog Component | Syncfusion
-description: Check out and learn here all about positioning in the Syncfusion Predefined Dialogs component and much more details.
+title: Positioning in the Predefined Dialog in Blazor | Syncfusion
+description: Check out and learn here all about positioning in the predefined dialogs and much more details.
 platform: Blazor
 control: Predefined Dialogs
 documentation: ug
 ---
 
-# Positioning in Blazor Predefined Dialogs Component
+# Positioning in Predefined Dialogs in Blazor
 
 Customize the dialog position by using the [DialogOptions.Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_Position) property. The position can be represented with specific `X` and `Y` values.
 
 * The `PositionDataModel.X` can be configured with a left, center, right, or offset value. By default, the value is set as `center`.
 * The `PositionDataModel.Y` can be configured with a top, center, bottom, or offset value. By default, the value is set as `center`.
 
-Use the following code to customize the dialog position:
+In the following code example, customized the dialog position as X= "top" and Y= "center".
 
 {% tabs %}
 

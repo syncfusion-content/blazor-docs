@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Draggable in the Blazor Predefined Dialogs Component | Syncfusion
-description: Check out and learn here all about draggable in the Syncfusion Blazor Predefined Dialogs component and much more details.
+title: Draggable in the Predefined Dialogs in Blazor | Syncfusion
+description: Check out and learn here all about draggable in the predefined dialogs and much more details.
 platform: Blazor
 control: Predefined Dialogs
 documentation: ug
 ---
 
-# Draggable in Blazor Predefined Dialogs Component
+# Draggable in Predefined Dialogs
 
-The Predefined Dialogs supports dragging within its target container by grabbing the dialog header, which allows the user to reposition the dialog dynamically by using the [DialogOptions.AllowDragging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_AllowDragging) property.
+The predefined dialogs supports dragging within its target container by grabbing the dialog header, which allows the user to reposition the dialog dynamically by using the [DialogOptions.AllowDragging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_AllowDragging) property.
 
 {% tabs %}
 
