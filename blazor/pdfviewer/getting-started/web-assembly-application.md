@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor PDF Viewer Component | Syncfusion
+title: Getting Started with PDF Viewer in Blazor WASM App | Syncfusion
 description: Checkout and learn about getting started with Blazor PDF Viewer component in Blazor WebAssembly (WASM) App using Visual Studio and more.
 platform: Blazor
 control: PDF Viewer
@@ -24,12 +24,6 @@ This section briefly explains about how to include [Blazor PDF Viewer](https://w
 ![Set-project-name](GettingStarted_images/Set-WASM-project-name.png)
 4. In **Additional information dialog**, set target framework.  
 ![Addition-information-WASM](GettingStarted_images/Additional_information_WASM.png)
-
-You can create **Blazor WebAssembly App** using Visual Studio in one of the following ways,
-
-* [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
-
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/vs2019-extensions/create-project)
 
 ## Install Blazor PDF Viewer NuGet package in WASM App
 
