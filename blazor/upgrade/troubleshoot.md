@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to troubleshoot after upgrading to Latest versions in Blazor - Syncfusion.
+title: How to troubleshoot upgrading to latest version issues | Syncfusion.
 description: Checkout and learn here all about troubleshooting after upgrading Syncfusion Components to latest versions in Blazor.
 platform: Blazor
 component: Common
