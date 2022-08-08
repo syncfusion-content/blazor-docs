@@ -17,11 +17,11 @@ You can customize the predefined dialogs buttons by using below properties.
 
 Use the following code to customize the predefined dialog action buttons.
 
-For alert dialog , customized the default dialog button content as "Okay" by using the [DialogButtonOptions.Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtonOptions.html#Syncfusion_Blazor_Popups_DialogButtonOptions_Content) property.
+For alert dialog , customized the default dialog button content as `Okay` by using the [DialogButtonOptions.Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtonOptions.html#Syncfusion_Blazor_Popups_DialogButtonOptions_Content) property.
 
-For confirm dialog, customized the default dialog buttons content as "Yes" and "No" by using the `DialogButtonOptions.Content` property and also customized the dialog button icons by using[DialogButtonOptions.IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtonOptions.html#Syncfusion_Blazor_Popups_DialogButtonOptions_IconCss) property.
+For confirm dialog, customized the default dialog buttons content as `Yes` and `No` by using the `DialogButtonOptions.Content` property and also customized the dialog button icons by using[DialogButtonOptions.IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtonOptions.html#Syncfusion_Blazor_Popups_DialogButtonOptions_IconCss) property.
 
-For prompt dialog , customized the default dialog buttons content as "Connect" and "Close" by using [DialogButtonOptions.Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtonOptions.html#Syncfusion_Blazor_Popups_DialogButtonOptions_Content) property.
+For prompt dialog , customized the default dialog buttons content as `Connect` and `Close` by using [DialogButtonOptions.Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtonOptions.html#Syncfusion_Blazor_Popups_DialogButtonOptions_Content) property.
 
 {% tabs %}
 
