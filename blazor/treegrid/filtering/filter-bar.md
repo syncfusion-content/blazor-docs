@@ -195,4 +195,4 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Blazor TreeGrid with Filter Template](images/blazor-treegrid-filter-template.png)
+![Blazor TreeGrid with Filter Template](../images/blazor-treegrid-filter-template.png)

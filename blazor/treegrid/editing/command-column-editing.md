@@ -92,7 +92,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor TreeGrid with Command Column](images/blazor-treegrid-command-column.png)
+![Blazor TreeGrid with Command Column](../images/blazor-treegrid-command-column.png)
 
 ## Custom command
 
@@ -161,4 +161,4 @@ The following sample code demonstrates adding custom command in the **Manage Rec
 ```
 
 The following image represents the custom command added in the **Manage Records** column of the Tree Grid component,
-![Blazor TreeGrid with Custom Command](./images/blazor-treegrid-custom-command.png)
+![Blazor TreeGrid with Custom Command](../images/blazor-treegrid-custom-command.png)

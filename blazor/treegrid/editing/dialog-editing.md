@@ -76,4 +76,4 @@ public class TreeData
 
 {% endtabs %}
 
-![Dialog Editing in Blazor TreeGrid](images/blazor-treegrid-dialog-editing.png)
+![Dialog Editing in Blazor TreeGrid](../images/blazor-treegrid-dialog-editing.png)

@@ -138,6 +138,6 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor TreeGrid with Dialog Template](images/blazor-treegrid-dialog-template.png)
+![Blazor TreeGrid with Dialog Template](../images/blazor-treegrid-dialog-template.png)
 
 > The template form editors should have **name** attribute.

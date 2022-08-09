@@ -11,17 +11,17 @@ documentation: ug
 
 The [TreeGridColumn.EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~EditType.html) is used to customize the edit type of the particular column. The [TreeGridColumn.EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~EditType.html) can be set based on the data type of the column.
 
-* [NumericTextBox](../numerictextbox/getting-started) component for integers, double, and decimal data types.
+* [NumericTextBox](../../numerictextbox/getting-started) component for integers, double, and decimal data types.
 
-* [TextBox](../textbox/getting-started) component for string data type.
+* [TextBox](../../textbox/getting-started) component for string data type.
 
-* [DropDownList](../dropdownlist/getting-started) component for list data type.
+* [DropDownList](../../dropdownlist/getting-started) component for list data type.
 
-* [DatePicker](../datepicker/getting-started) component for date values.
+* [DatePicker](../../datepicker/getting-started) component for date values.
 
-* [DateTimePicker](../datetimepicker/getting-started) component for datetime type.
+* [DateTimePicker](../../datetimepicker/getting-started) component for datetime type.
 
-* [Checkbox](../check-box/getting-started) component for boolean type.
+* [Checkbox](../../check-box/getting-started) component for boolean type.
 
 Also, the model of the [TreeGridColumn.EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~EditType.html) component can be customized through the [TreeGridColumn.Edit.params](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Edit.html).
 
@@ -29,12 +29,12 @@ The following table describes cell edit type component and their corresponding e
 
 Component |Example
 -----|-----
-[NumericTextBox](../numerictextbox/getting-started) | @(new { @params = new { format = "n"} })
-[TextBox](../textbox/getting-started) | -
-[DropDownList](../dropdownlist/getting-started) | @(new { @params = new { value = "Germany"} })
-[DatePicker](../datepicker/getting-started) | @(new { @params = new { format = "yyyy-MM-dd"} })
-[DateTimePicker](../datetimepicker/getting-started) | @(new { @params = new { strictMode = true} })
-[Checkbox](../check-box/getting-started) | @(new { @params = new { checked = true} })
+[NumericTextBox](../../numerictextbox/getting-started) | @(new { @params = new { format = "n"} })
+[TextBox](../../textbox/getting-started) | -
+[DropDownList](../../dropdownlist/getting-started) | @(new { @params = new { value = "Germany"} })
+[DatePicker](../../datepicker/getting-started) | @(new { @params = new { format = "yyyy-MM-dd"} })
+[DateTimePicker](../../datetimepicker/getting-started) | @(new { @params = new { strictMode = true} })
+[Checkbox](../../check-box/getting-started) | @(new { @params = new { checked = true} })
 
 {% tabs %}
 
@@ -114,7 +114,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Cell Editing in Blazor TreeGrid](images/blazor-treegrid-cell-editing.png)
+![Cell Editing in Blazor TreeGrid](../images/blazor-treegrid-cell-editing.png)
 
 > If edit type is not defined in the column, then it will be considered as the **stringedit** type (Textbox component).
 
@@ -198,4 +198,4 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor TreeGrid with Cell Edit Template](images/blazor-treegrid-cell-edit-template.png)
+![Blazor TreeGrid with Cell Edit Template](../images/blazor-treegrid-cell-edit-template.png)

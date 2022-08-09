@@ -77,6 +77,6 @@ public class TreeData
 
 {% endtabs %}
 
-![Cell Editing in Blazor TreeGrid](images/blazor-treegrid-cell-edit.png)
+![Cell Editing in Blazor TreeGrid](../images/blazor-treegrid-cell-edit.png)
 
 > Cell edit mode is default mode of editing.

@@ -76,7 +76,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Displaying Filter Menu in Blazor TreeGrid](images/blazor-treegrid-filter-menu.png)
+![Displaying Filter Menu in Blazor TreeGrid](../images/blazor-treegrid-filter-menu.png)
 
 > * [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_AllowFiltering) must be set as true to enable filter menu.
 > * Setting [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_AllowFiltering) property of [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) as false will prevent filter menu rendering for a particular column.
@@ -163,7 +163,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}.
 
-![Blazor TreeGrid with Custom Filter Menu](images/blazor-treegrid-custom-filter-menu.png)
+![Blazor TreeGrid with Custom Filter Menu](../images/blazor-treegrid-custom-filter-menu.png)
 
 ### Enable different filter for a column
 
