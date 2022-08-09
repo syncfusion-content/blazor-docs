@@ -1,7 +1,8 @@
 @using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
 @inject SfDialogService DialogService
     <div>
-        <button @onclick="@AlertBtn">Alert</button>
+        <SfButton @onclick="@AlertBtn">Alert</SfButton>
     </div>
     <div class="status" style ="padding-top:10px">@DialogStatus</div>
 @code {

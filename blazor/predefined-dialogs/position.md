@@ -35,3 +35,5 @@ In the following code example, customized the dialog position as X= "top" and Y=
 ![Alert position Dialog](./images/blazor-alert-position.png)
 
 ![Confirm position Dialog](./images/blazor-confirm-position.png)
+
+![Prompt position Dialog](./images/blazor-prompt-position.png)

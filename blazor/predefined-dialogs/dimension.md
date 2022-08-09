@@ -45,7 +45,7 @@ To have a restricted max-width and max-height dialog dimension, you need to spec
 Use the following code to customize the max-width and max-height for alert dialog:
 
 {% tabs %}
-{% highlight razor tabtitle="Max-width-height.razor" %}
+{% highlight razor %}
 
 {% include_relative code-snippet/max-width-height.razor %}
 
@@ -62,7 +62,7 @@ To have a restricted min-width and min-height dialog dimension, you need to spec
 Use the following code to customize the min-width and min-height for alert dialog:
 
 {% tabs %}
-{% highlight razor tabtitle="Min-width-height.razor" %}
+{% highlight razor %}
 
 {% include_relative code-snippet/min-width-height.razor %}
 
