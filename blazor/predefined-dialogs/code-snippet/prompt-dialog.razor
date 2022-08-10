@@ -1,0 +1,19 @@
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+@inject SfDialogService DialogService
+    <div>
+        <SfButton @onclick="@PromptBtn">Prompt</SfButton>
+    </div>
+    <div class="status" style ="padding-top:10px">
+    @DialogStatus
+</div>
+@code {
+    private string DialogStatus { get; set; }
+    
+    private async Task PromptBtn()
+    {
+        string promptText = await DialogService.PromptAsync("Enter your name:", "Join Chat Group");
+
+        this.DialogStatus = $"Input from the user is returned as \"{promptText}\".";
+    }
+}
