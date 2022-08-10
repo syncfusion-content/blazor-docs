@@ -1,0 +1,15 @@
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+@inject SfDialogService DialogService
+    <div>
+        <SfButton @onclick="@AlertBtn">Alert</SfButton>
+    </div>
+@code {
+    private async Task AlertBtn()
+    {
+        await DialogService.AlertAsync("10% of battery remaining", "Low Battery", new DialogOptions()
+            {
+                AllowDragging = true,
+            });
+        }    
+}
