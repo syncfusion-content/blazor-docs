@@ -14,7 +14,7 @@ documentation: ug
 The Rich Text Editor allows you to load an external HTML file in the editor content which contains the text with styling and images. You can read the HTML file from your path using [StremReader](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamreader?view=net-6.0) class and assign it to the editor with the `@bind-Value` property.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 @using System.IO; 
 @using Syncfusion.Blazor.RichTextEditor 
@@ -35,7 +35,6 @@ The Rich Text Editor allows you to load an external HTML file in the editor cont
             using (StreamReader sr = new StreamReader(fs)) 
             {
                 // Importing values from HTML file.
-
                 HtmlString = sr.ReadToEnd(); 
             } 
         } 
@@ -45,14 +44,14 @@ The Rich Text Editor allows you to load an external HTML file in the editor cont
 {% endhighlight %}
 {% endtabs %}
 
- ## Import and Export RTF file
+## Import and Export RTF file
 
 You can import the RTF file into the editor using file uploader component, and get the RTF file content from uploader success event. Then, you can able to import the RTF values to the editor.
 
 While cliking on the export button you can call make the RTE content to the RTF file using [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 <Syncfusion.Blazor.Buttons.SfButton OnClick="OnExport">Export</Syncfusion.Blazor.Buttons.SfButton>
     <SfRichTextEditor ID="customtool" @ref="RteObj" @bind-Value="@rteValue" EnableHtmlSanitizer="false">
@@ -90,12 +89,12 @@ While cliking on the export button you can call make the RTE content to the RTF 
 {% endhighlight %}
 {% endtabs %}
 
- ## Import text file to editor 
+## Import text file to editor 
 
 You can import the text file into the editor using file uploader component, and get the text file content from uploader success event. Then, you can able to import the text file values to the editor.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
 @inject ExportService exportService
@@ -123,9 +122,8 @@ You can import the text file into the editor using file uploader component, and 
 {% endhighlight %}
 {% endtabs %}
 
-Import Services.cs:
-
-```cshtml 
+{% tabs %}
+{% highlight cshtml tabtitle="~/ImportServices.cs" %}
 
 [HttpPost] 
 [Route("Import")] 
@@ -156,17 +154,18 @@ public string Import(IList<IFormFile> UploadFiles)
     } 
     return HtmlString; 
 } 
- 
 public string ExtractBodyContent(string html) 
 { 
-    if (html.Contains("<html") && html.Contains("<body")) 
+    if (html.Contains("<html>") && html.Contains("<body>"))
     { 
         return html.Remove(0, html.IndexOf("<body>") + 6).Replace("</body></html>", ""); 
     } 
     return html; 
 } 
 
-```
+{% endhighlight %}
+{% endtabs %}
+
 ## Export to HTML file
 
 You can export the RTE content to the HTML format using the [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries.
@@ -174,7 +173,7 @@ You can export the RTE content to the HTML format using the [Syncfusion.DocIO](h
 While clicking on the export button it makes call to the Export to HTML service.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 <button @onclick="ExportFile">Export</button>
 <SfRichTextEditor ID="defalt_RTE" @ref="RteObj" @bind-Value="@rteValue">
@@ -208,9 +207,8 @@ While clicking on the export button it makes call to the Export to HTML service.
 
 Here, the [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) values are converted into document type and then coverted to HTML format.
 
-ExportService.cs:
-
-```cshtml 
+{% tabs %}
+{% highlight cshtml tabtitle="~/ExportService.cs" %}
 
 public void ExportToHtml(string value)
 {
@@ -226,7 +224,6 @@ public void ExportToHtml(string value)
     outputStream.Dispose();
     // You can upload this stream to the azure
 }
-
 public WordDocument GetDocument(string htmlText)
 {
     WordDocument document = null;
@@ -242,4 +239,5 @@ public WordDocument GetDocument(string htmlText)
     return document;
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
