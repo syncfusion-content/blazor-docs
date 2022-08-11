@@ -513,15 +513,15 @@ The [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.
 
 ## Show or hide the column separator
 
-By default, enabling the AllowFreezeLineMoving property, the frozen column separator will be displayed at the left and right ends. You can show or hide this column separator using the below CSS style.
+By default, enabling the [AllowFreezeLineMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFreezeLineMoving) property of the DataGrid component, the frozen column separator will be displayed at the left and right end of the DataGrid component. You can show or hide this column separator using the below CSS style.
 
 ```csharp
 <style>
-.e-frozen-cursor.e-frozen-left-cursor.e-frozen-default-cursor {
+.e-frozen-cursor.e-frozen-left-cursor.e-frozen-default-cursor { // To hide the column separator on the left side.
     display:none;
 }
 
-.e-frozen-cursor.e-frozen-right-cursor.e-frozen-default-cursor {
+.e-frozen-cursor.e-frozen-right-cursor.e-frozen-default-cursor { // To hide the column separator on the right side.
     display:none;
 }
 </style>
@@ -586,10 +586,10 @@ This can be demonstrated in the following sample:
 }
 
 <style>
-.e-frozen-cursor.e-frozen-left-cursor.e-frozen-default-cursor {
+.e-frozen-cursor.e-frozen-left-cursor.e-frozen-default-cursor { // To hide the column separator on the left side.
     display:none;
 }
-.e-frozen-cursor.e-frozen-right-cursor.e-frozen-default-cursor {
+.e-frozen-cursor.e-frozen-right-cursor.e-frozen-default-cursor { // To hide the column separator on the right side.
     display:none;
 }
 </style>
