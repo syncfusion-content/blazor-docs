@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resizable editor in Blazor RichTextEditor Component | Syncfusion
+title: Resizable editor in Blazor RichTextEditor | Syncfusion
 description: Checkout and learn here all about Resizable editor in Syncfusion Blazor RichTextEditor component and much more.
 platform: Blazor
 control: RichTextEditor

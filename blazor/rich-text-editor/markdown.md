@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Markdown in Blazor RichTextEditor Component | Syncfusion
+title: Markdown in Blazor RichTextEditor | Syncfusion
 description: Checkout and learn here all about Markdown in Syncfusion Blazor RichTextEditor component and much more.
 platform: Blazor
 control: RichTextEditor

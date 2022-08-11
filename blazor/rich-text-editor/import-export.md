@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Import and Export in RichTextEditor | Syncfusion
-description: Checkout and learn here all about import and export in RichTextEditor and more.
+description: Checkout and learn here all about import and export in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug

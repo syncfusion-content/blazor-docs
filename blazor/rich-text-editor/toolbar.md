@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Toolbar in Blazor RichTextEditor | Syncfusion
-description: Checkout and learn here all about Toolbar in RichTextEditor and much more.
+description: Checkout and learn here all about Toolbar in Syncfusion Blazor RichTextEditor component and much more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -66,7 +66,6 @@ Enable or disable the floating toolbar using [RichTextEditorToolbarSettings.Enab
 {% endtabs %}
 
 ![Blazor RichTextEditor with MultiRow Toolbar](./images/blazor-richtexteditor-floating.toolbar.png)
-
 
 ## Quick Toolbar 
 
@@ -135,7 +134,7 @@ Quick toolbar is opened by clicking the table. It has different sets of commands
 | BackgroundColor| Can be set each table cell background color |
 | TableRemove | Can be delete the entire table from editor |
 | Alignments |  Can be aligned the table content|
-| Styles | Can be style table border |
+| Styles | Can be style the table border |
 
 {% tabs %}
 {% highlight razor %}

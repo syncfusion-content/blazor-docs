@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Paste Clean-up in Blazor RichTextEditor | Syncfusion
-description: Checkout and learn here all about paste clean-up in RichTextEditor and more.
+description: Checkout and learn here all about Paste from MS Word in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -26,7 +26,7 @@ You can control the formatting and styles on pasting the content to the editor u
 
 ## Paste options in prompt dialog
 
-When [Prompt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_Prompt) is set to true, pasting the content in the editor will open a dialog box that contains three options `Keep`, `Clean`, and `Plain Text` as radio buttons:
+When [Prompt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_Prompt) is set to true, pasting the content in the editor will open a dialog box that contains three options keep, clean, and plain text as radio buttons:
 1. **Keep**: Radio button to keep the same format with copied content.
 2. **Clean**: Radio button to clear all the style formats with copied content.
 3. **Plain Text**: Radio button to paste the copied content as plain text without any formatting or style (including the removal of all tags).
@@ -66,7 +66,6 @@ When [KeepFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTe
 When `KeepFormat` is set to false, the style in the copied content will be removed without considering the allowed styles in the `AllowedStyleProperties` when pasting the content in the editor.
 
 > When `KeepFormat` value is set true, the API property [Prompt](#prompt-dialog) and [PlainText](#paste-as-plain-text) should be set to false.
-
 
 {% tabs %}
 {% highlight razor %}
@@ -116,11 +115,11 @@ The [DeniedAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.R
 
 By default, the following basic styles are allowed on pasting the content to the editor.
 
-['background', 'background-color', 'border', 'border-bottom', 'border-left', 'border-radius', 'border-right', 'border-style', 'border-top', 'border-width', 'clear', 'color', 'cursor', 'direction', 'display', 'float', 'font', 'font-family', 'font-size', 'font-weight', 'font-style', 'height', 'left', 'line-height', 'margin', 'margin-top', 'margin-left', 'margin-right', 'margin-bottom', 'max-height', 'max-width', 'min-height', 'min-width', 'overflow', 'overflow-x', 'overflow-y', 'padding', 'padding-bottom', 'padding-left', 'padding-right', 'padding-top', 'position', 'right', 'table-layout', 'text-align', 'text-decoration', 'text-indent', 'top', 'vertical-align', 'visibility', 'white-space', 'width']
+[background, background-color, border, border-bottom, border-left, border-radius, border-right, border-style, border-top, border-width, clear, color, cursor, direction, display, float, font, font-family, font-size, font-weight, font-style, height, left, line-height, margin, margin-top, margin-left, margin-right, margin-bottom, max-height, max-width, min-height, min-width, overflow, overflow-x, overflow-y, padding, padding-bottom, padding-left, padding-right, padding-top, position, right, table-layout, text-align, text-decoration, text-indent, top, vertical-align, visibility, white-space, width]
 
 When you configure `AllowedStyleProperties`, the styles which matches the 'allowed style properties' list are allowed, all other style properties will be removed on pasting the content in the editor.
 
-For Example, `public string[] AllowedStyles = new string[] { "color", "margin" };`: This will allow only the style properties 'color' and 'margin' in each pasted element.
+For Example, **public string[] AllowedStyles = new string[] { "color", "margin" };** This will allow only the style properties 'color' and 'margin' in each pasted element.
 
 In the following example, the paste cleanup related settings are explained with configuration.
 

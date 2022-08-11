@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Inline Mode in RichTextEditor in Blazor | Syncfusion
-description: Checkout and learn here all about inline mode in RichTextEditor and more.
+description: Checkout and learn here all about Inline Mode in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
