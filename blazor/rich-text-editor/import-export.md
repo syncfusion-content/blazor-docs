@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Import and Export in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn here all about import and export in Syncfusion Blazor RichTextEditor component and more.
+title: Import and Export in RichTextEditor | Syncfusion
+description: Checkout and learn here all about import and export in RichTextEditor and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -44,39 +44,33 @@ The Rich Text Editor allows you to load an external HTML file in the editor cont
 {% endhighlight %}
 {% endtabs %}
 
-## Import and Export RTF file
+![Import to HTML file](./images/blazor-import-html.png)
+
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/import-html-file-to-blazor-rich-text-editor).
+
+## Import to RTF file
 
 You can import the RTF file into the editor using file uploader component, and get the RTF file content from uploader success event. Then, you can able to import the RTF values to the editor.
-
-While cliking on the export button you can call make the RTE content to the RTF file using [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries.
 
 {% tabs %}
 {% highlight razor %}
 
-<Syncfusion.Blazor.Buttons.SfButton OnClick="OnExport">Export</Syncfusion.Blazor.Buttons.SfButton>
-    <SfRichTextEditor ID="customtool" @ref="RteObj" @bind-Value="@rteValue" EnableHtmlSanitizer="false">
-        <RichTextEditorImageSettings SaveUrl="api/SampleData/Save" Path="../images/"></RichTextEditorImageSettings>
-    </SfRichTextEditor>
-    <SfUploader ID="UploadFiles">
-        <UploaderAsyncSettings SaveUrl="api/SampleData/Import" RemoveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Remove"></UploaderAsyncSettings>
-        <UploaderEvents Success="@onSuccess"></UploaderEvents>
-    </SfUploader>
+@using Import_RTF_File.Data;
+@using Syncfusion.Blazor.RichTextEditor;
+@using Syncfusion.Blazor.Inputs;
+@inject ExportService exportService
+
+<SfRichTextEditor ID="defalt_RTE" @ref="RteObj" @bind-Value="@rteValue" EnableHtmlSanitizer="false">
+    <RichTextEditorImageSettings SaveUrl="api/SampleData/Save" Path="../images/"></RichTextEditorImageSettings>
+</SfRichTextEditor>
+<SfUploader ID="UploadFiles">
+    <UploaderAsyncSettings SaveUrl="api/SampleData/Import" RemoveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Remove"></UploaderAsyncSettings>
+    <UploaderEvents Success="@onSuccess"></UploaderEvents>
+</SfUploader>
 
 @code {
     SfRichTextEditor RteObj;
-    [Inject]
-    IJSRuntime jsRuntime { get; set; }
-    private string rteValue { get; set; } = "<div><p>RTF Content Loaded</p></div>";
-    public async Task OnExport()
-    {
-        HttpClientHandler clientHandler = new HttpClientHandler();
-        clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
-        HttpClient client = new HttpClient(clientHandler);
-        var content = new StringContent(rteValue);
-        content.Headers.Add("value", rteValue);
-        await client.PostAsync(navigationManager.Uri + "api/SampleData/ExportToRtf", content);
-        await SampleInterop.SaveAs<object>(jsRuntime, "Sample.rtf");
-    }
+    private string rteValue { get; set; } = "<div>Example of Importing Text File into the Editor</div>";
     public void onSuccess(SuccessEventArgs args)
     {
         var headers = args.Response.Headers.ToString();
@@ -88,6 +82,10 @@ While cliking on the export button you can call make the RTE content to the RTF 
 
 {% endhighlight %}
 {% endtabs %}
+
+![Import to RTF file](./images/blazor-import-rtf.png)
+
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/import-rtf-file-to-blazor-rich-text-editor).
 
 ## Import text file to editor 
 
@@ -166,6 +164,53 @@ public string ExtractBodyContent(string html)
 {% endhighlight %}
 {% endtabs %}
 
+![Import to text file](./images/blazor-import-text.png)
+
+> [View Sample in GitHub]().
+
+## Export to RTF file
+
+You can export the RTE content to the RTF format using the [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries. Use the following code to export the RTF file. 
+
+While cliking on the export button you can call make the RTE content to the RTF file using [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries.
+
+{% tabs %}
+{% highlight cshtml %}
+
+@using Syncfusion.Blazor.RichTextEditor;
+@using Syncfusion.Blazor.Inputs;
+@inject NavigationManager navigationManager;
+@inject HttpClient Http
+@using System.Net.Http;
+@using System.Threading.Tasks;
+
+<Syncfusion.Blazor.Buttons.SfButton OnClick="OnExport">Export</Syncfusion.Blazor.Buttons.SfButton>
+    <SfRichTextEditor ID="customtool" @ref="RteObj" @bind-Value="@rteValue" EnableHtmlSanitizer="false">
+        <RichTextEditorImageSettings SaveUrl="api/SampleData/Save" Path="../images/"></RichTextEditorImageSettings>
+    </SfRichTextEditor>
+
+@code {
+    SfRichTextEditor RteObj;
+    [Inject]
+    IJSRuntime jsRuntime { get; set; }
+    private string rteValue { get; set; } = "<p>Click the export button to download the RTE content in RTF format</p>";
+    public async Task OnExport()
+    {
+        HttpClientHandler clientHandler = new HttpClientHandler();
+        clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+        HttpClient client = new HttpClient(clientHandler);
+        var content = new StringContent(rteValue);
+        content.Headers.Add("value", rteValue);
+        await client.PostAsync(navigationManager.Uri + "api/SampleData/ExportToRtf", content);
+        await SampleInterop.SaveAs<object>(jsRuntime, "Sample.rtf");
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+> [View Sample in GitHub]().
+
 ## Export to HTML file
 
 You can export the RTE content to the HTML format using the [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries.
@@ -241,3 +286,5 @@ public WordDocument GetDocument(string htmlText)
 
 {% endhighlight %}
 {% endtabs %}
+
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-rich-text-editor-export-to-html).

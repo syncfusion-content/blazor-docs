@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Enter key customization in Blazor RichTextEditor | Syncfusion
-description: Checkout and learn here all about the Enter key and Shift + Enter key customization feature in Syncfusion Blazor RichTextEditor component and more.
+title: Enter key customization in RichTextEditor | Syncfusion
+description: Checkout and learn here all about the enter key and shift + enter key customization feature in RichTextEditor and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -17,8 +17,7 @@ By default, the `<p>` tag is created while pressing the <kbd>Enter</kbd> key. Th
 
 When the <kbd>Enter</kbd> key is customized with any of the above possible values, pressing the <kbd>Enter</kbd> key in the editor will create a new tag that is configured.
 
-
-> The `pre` tag will be inserted when code format is applied, enter key press will created only `<br>` tag if the editor content is inside the `pre` tag. Need to press enter key twice to come out of the `pre` tag.
+> The **pre** tag will be inserted when code format is applied, enter key press will created only `<br>` tag if the editor content is inside the **pre** tag. Need to press enter key twice to come out of the **pre** tag.
 
 {% tabs %}
 {% highlight cshtml %}

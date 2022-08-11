@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Paste from MS Word in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn here all about Paste from MS Word in Syncfusion Blazor RichTextEditor component and more.
+title: Paste Clean-up in Blazor RichTextEditor | Syncfusion
+description: Checkout and learn here all about paste clean-up in RichTextEditor and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -9,34 +9,7 @@ documentation: ug
 
 # Paste Clean-up in Blazor RichTextEditor
 
-The Rich Text Editor allows to reduce the effort while converting the Microsoft Word content to HTML format with format and styles.
-
-By default, the editor consider the following processes on paste content from Microsoft Word.
-
-**List conversion:** The list elements copied from the Microsoft Word document contains paragraph tags with styles and classes. The list elements are converted to standard HTML list elements by referring the styles and class names in the paragraph tags.
-
-**Converting style:** The styles of the elements copied from the Microsoft Word document are converted to standard CSS styles and added as inline styles for each respective element.
-
-**Tags and comments:** The Microsoft Word specific XML tags and comments are removed when cleanup on paste.
-
-You can also get the pasted Text as a HTML text using the [AfterPasteCleanup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_AfterPasteCleanup) event argument Value.
-
-{% tabs %}
-{% highlight cshtml %}
-
-<SfRichTextEditor @ref="RteObj" @bind-Value="htmlText" EditorMode="EditorMode.HTML">
-    <RichTextEditorEvents AfterPasteCleanup="@AfterPasteCleanupHandler" />
-</SfRichTextEditor>
-
-@code {
-    public void AfterPasteCleanupHandler(PasteCleanupArgs args)
-    {
-        // Here you can get the pasted Html string using args.Value
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
+The Blazor Rich Text Editor offers a built-in option to paste content from Microsoft Word, Microsoft Outlook, Microsoft Excel, and other websites by filtering out tags, attributes, and styles. Copy content from Microsoft Office or other websites and paste it into the editor, where it is cleaned up and pasted based on the settings in the [PasteCleanupSettings]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html))property values. 
 
 ## Paste settings
 
@@ -49,38 +22,26 @@ You can control the formatting and styles on pasting the content to the editor u
 | [KeepFormat](#keep-format) | To keep the same format with copied content. | true | boolean |
 | [DeniedTags](#denied-tags) | To ignore the tags when pasting HTML content. | null | string[] |
 | [DeniedAttributes](#denied-attributes) | To paste the content by filtering out these attributes from the content. | null | string[] |
-| [AllowedStyleProperties](#allowed-style-properties) | To paste the content by accepting these style attributes and removing other style attributes. | ['background', 'background-color', 'border', 'border-bottom', 'border-left', 'border-radius', 'border-right', 'border-style', 'border-top', 'border-width', 'clear', 'color', 'cursor', 'direction', 'display', 'float', 'font', 'font-family', 'font-size', 'font-weight', 'font-style', 'height', 'left', 'line-height', 'margin', 'margin-top', 'margin-left', 'margin-right', 'margin-bottom', 'max-height', 'max-width', 'min-height', 'min-width', 'overflow', 'overflow-x', 'overflow-y', 'padding', 'padding-bottom', 'padding-left', 'padding-right', 'padding-top', 'position', 'right', 'table-layout', 'text-align', 'text-decoration', 'text-indent', 'top', 'vertical-align', 'visibility', 'white-space', 'width'] | string[] |
-
-> To use paste cleanup, configure paste cleanup using the `RichTextEditorPasteCleanupSettings`.
-
-{% tabs %}
-{% highlight cshtml %}
-
-{% include_relative code-snippet/paste-cleanup.razor %}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor RichTextEditor with Paste CleanUp](./images/blazor-richtexteditor-paste-cleanup.png)
+| [AllowedStyleProperties](#allowed-style-properties) | To paste the content by accepting these style attributes and removing other style attributes. | [background, background-color, border, border-bottom, border-left, border-radius, border-right, border-style, border-top, border-width, clear, color, cursor, direction, display, float, font, font-family, font-size, font-weight, font-style, height, left, line-height, margin, margin-top, margin-left, margin-right, margin-bottom, max-height, max-width, min-height, min-width, overflow, overflow-x, overflow-y, padding, padding-bottom, padding-left, padding-right, padding-top, position, right, table-layout, text-align, text-decoration, text-indent, top, vertical-align, visibility, white-space, width] | string[] |
 
 ## Paste options in prompt dialog
 
 When [Prompt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_Prompt) is set to true, pasting the content in the editor will open a dialog box that contains three options `Keep`, `Clean`, and `Plain Text` as radio buttons:
-1. `Keep`: Radio button to keep the same format with copied content.
-2. `Clean`: Radio button to clear all the style formats with copied content.
-3. `Plain Text`: Radio button to paste the copied content as plain text without any formatting or style (including the removal of all tags).
+1. **Keep**: Radio button to keep the same format with copied content.
+2. **Clean**: Radio button to clear all the style formats with copied content.
+3. **Plain Text**: Radio button to paste the copied content as plain text without any formatting or style (including the removal of all tags).
 
 > When `Prompt` value is set true, the API properties [PlainText](#paste-as-plain-text) and [KeepFormat](#keep-format) will not be considered for processing when pasting the content.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/prompt-paste-cleanup.razor %}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Prompt Paste CleanUp](./images/blazor-richtexteditor-paste-prompt.png)
+![Blazor RichTextEditor with Prompt Paste CleanUp](./images/blazor-richtexteditor-paste-prompt.gif)
 
 ## Paste as plain text
 
@@ -89,14 +50,14 @@ When [PlainText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTex
 > When `PlainText` value is set true, the API property [Prompt](#prompt-dialog) should be set to false, and [KeepFormat](#keep-format) will not be considered for processing when pasting the content.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/plain-text-paste-cleanup.razor %}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Plain text Paste CleanUp](./images/blazor-richtexteditor-paste-plain-text.png)
+![Blazor RichTextEditor with Plain text Paste CleanUp](./images/blazor-richtexteditor-paste-plain-text.gif)
 
 ## Keep format
 
@@ -108,41 +69,41 @@ When `KeepFormat` is set to false, the style in the copied content will be remov
 
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/keep-format-paste-cleanup.razor %}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Keep Format Paste CleanUp](./images/blazor-richtexteditor-paste-keep-format.png)
+![Blazor RichTextEditor with Keep Format Paste CleanUp](./images/blazor-richtexteditor-paste-keep-format.gif)
 
 ## Denied tags
 
-When [DeniedTags](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_DeniedTags) values are set, the tags that matches the 'denied tags' list will be removed on pasting the copied content in the editor. For Example,
+The [DeniedTags](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_DeniedTags) property tags value are removed with their content when pasting the content into the Rich Text Editor. For Example, 
 
-1. `'a'`: Paste the content by filtering out anchor tags.
-2. `'a[!href]'`: Paste the content by filtering out anchor tags that do not have the ‘href’ attribute.
-3. `'a[href, target]'`: Paste the content by filtering out anchor tags that have the 'href' and 'target' attributes.
+1. **a**: Paste the content by filtering out anchor tags.
+2. **a[!href]**: Paste the content by filtering out anchor tags that do not have the ‘href’ attribute.
+3. **a[href, target]**: Paste the content by filtering out anchor tags that have the 'href' and 'target' attributes.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/denied-tag-paste-cleanup.razor %}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Denied Tag Paste CleanUp](./images/blazor-richtexteditor-paste-denied-tag.png)
+![Blazor RichTextEditor with Denied Tag Paste CleanUp](./images/blazor-richtexteditor-paste-denied-tag.gif)
 
 ## Denied attributes
 
-When the [DeniedAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_DeniedAttributes) values are set, the attributes that matches the 'denied attributes' list will be removed on pasting the copied content in the editor. For Example,
+The [DeniedAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_DeniedAttributes) property attributes are removed with their content when pasting the content into the Rich Text Editor. For Example, 
 
-`'id', 'title'`: This will remove the attributes ‘id’ and ‘title’ from all tags.
+'id', 'title' attributes will remove from all paste content. 
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/denied-attribute-paste-cleanup.razor %}
 
@@ -164,7 +125,7 @@ For Example, `public string[] AllowedStyles = new string[] { "color", "margin" }
 In the following example, the paste cleanup related settings are explained with configuration.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 {% include_relative code-snippet/allowed-style-paste-cleanup.razor %}
 
@@ -185,7 +146,7 @@ When pasting a large text into the editor it displays "Attempting to reconnect" 
 * For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 10" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="11" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -204,7 +165,7 @@ var app = builder.Build();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="1 12" %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="13" %}
 
 using Syncfusion.Blazor;
 
@@ -232,7 +193,7 @@ namespace BlazorApplication
 Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
 
 {% tabs %}
-{% highlight C# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 11" %}
+{% highlight C# tabtitle=".NET 6 (~/Program.cs)" hl_lines="13" %}
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -245,12 +206,13 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
 builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+builder.Services.AddSignalR(e => { e.MaximumReceiveMessageSize = 1024000000; });
 await builder.Build().RunAsync();
 ....
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="11" %}
 
 using Syncfusion.Blazor;
 
@@ -270,5 +232,27 @@ namespace WebApplication1
 
 {% endhighlight %}
 {% endtabs %}
+
+## Get pasted content
+
+You can get the pasted Text as a HTML text using the [AfterPasteCleanup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_AfterPasteCleanup) event argument value.
+
+{% tabs %}
+{% highlight razor %}
+
+<SfRichTextEditor @ref="RteObj" @bind-Value="htmlText" EditorMode="EditorMode.HTML">
+    <RichTextEditorEvents AfterPasteCleanup="@AfterPasteCleanupHandler" />
+</SfRichTextEditor>
+
+@code {
+    public void AfterPasteCleanupHandler(PasteCleanupArgs args)
+    {
+        // Here you can get the pasted Html string using args.Value
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 
 > You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
