@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dimension in the Predefined Dialogs in Blazor | Syncfusion
-description: Check out and learn here all about dimensions in the predefined dialogs and much more details.
+description: Check out and learn here all about dimensions in predefined dialogs in blazor and much more details.
 platform: Blazor
 control: Predefined Dialogs
 documentation: ug
@@ -13,7 +13,7 @@ Customize the predefined dialogs dimensions using the [DialogOptions.Height](htt
 
 By default, the predefined dialogs `Width` and `Height` property value is set as `auto`. Depends on the dialog content the width and height values are automatically adjust. You can specify the dimension values in both pixels and percentage format to change the default dialog width and height values.
 
-Use the following code to customize the dialog dimensions:
+Use the following code snippet for **alert.razor**, **confirm.razor** and **prompt.razor** to customize the dialog dimensions.
 
 {% tabs %}
 
@@ -31,12 +31,19 @@ Use the following code to customize the dialog dimensions:
 
 {% endtabs %}
 
+## Output images
+
+### Alert dialog dimension
+
 ![Alert dimension Dialog](./images/blazor-alert-dimension.png)
+
+### Confirm dialog dimension
 
 ![confirm dimension Dialog](./images/blazor-confirm-dimension.png)
 
-![prompt dimension Dialog](./images/blazor-prompt-dimension.png)
+### Prompt dialog dimension
 
+![prompt dimension Dialog](./images/blazor-prompt-dimension.png)
 
 ## Max-width and max-height
 
@@ -53,7 +60,6 @@ Use the following code to customize the max-width and max-height for alert dialo
 {% endtabs %}
 
 ![Max width and height](./images/blazor-max-width-height.png)
-
 
 ## Min-width and min-height
 
