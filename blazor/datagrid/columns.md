@@ -645,7 +645,7 @@ The following screenshot represents the Header Template.
 
 ## Change the orientation of header text
 
-You can change the orientation of the header text by using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_CustomAttributes) property.
+You can change the orientation of the header text by using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_CustomAttributes) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
 Ensure the following steps to rotate the header text of particular column.
 
@@ -661,7 +661,7 @@ Create a CSS class with orientation style for the grid header cell.
 
 **Step2:**
 
-Add the custom CSS class to a particular column by using the `CustomAttributes` property.
+Add the custom CSS class to a particular column by using the `CustomAttributes` property of the `GridColumn`.
 
 ```cshtml
     <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "customerclass" }})" Width="150">
