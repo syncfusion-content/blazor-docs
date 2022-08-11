@@ -524,9 +524,10 @@ In the following example, two different column fields ("EmpFirstNameID", "EmpLa
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true"></GridColumn>
-        <GridForeignColumn Field=@nameof(Order.EmpFirstNameID) ForeignKeyField="EmployeeID" HeaderText="First Name" ForeignKeyValue="FirstName" ForeignDataSource="@Employees" Width="150"></GridForeignColumn>
-        <GridForeignColumn Field=@nameof(Order.EmpLastNameID) ForeignKeyField="EmployeeID"  HeaderText="Last Name" ForeignKeyValue="LastName" ForeignDataSource="@Employees" Width="150"></GridForeignColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Joined Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridForeignColumn Field=@nameof(Order.EmployeeFirstName) ForeignKeyField="EmployeeID" HeaderText="First Name" ForeignKeyValue="FirstName" ForeignDataSource="@Employees" Width="150"></GridForeignColumn>
+        <GridForeignColumn Field=@nameof(Order.EmployeeLastName) ForeignKeyField="EmployeeID"  HeaderText="Last Name" ForeignKeyValue="LastName" ForeignDataSource="@Employees" Width="150"></GridForeignColumn>
+        <GridColumn Field=@nameof(Order.Title) HeaderText="Title" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.HireDate) HeaderText="Hire Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -539,10 +540,10 @@ In the following example, two different column fields ("EmpFirstNameID", "EmpLa
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
         {
             OrderID = 1000 + x,
-            EmpFirstNameID = x,
-            EmpLastNameID = x,
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
+            EmployeeFirstName = x,
+            EmployeeLastName = x,
+            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager", "Inside Sales Coordinator" })[new Random().Next(4)],
+            HireDate = DateTime.Now.AddDays(-x),
         }).ToList();
 
         Employees = Enumerable.Range(1, 75).Select(x => new EmployeeData()
@@ -556,10 +557,10 @@ In the following example, two different column fields ("EmpFirstNameID", "EmpLa
     public class Order
     {
         public int? OrderID { get; set; }
-        public int? EmpFirstNameID { get; set; }
-        public int? EmpLastNameID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        public int? EmployeeFirstName { get; set; }
+        public int? EmployeeLastName { get; set; }
+        public string? Title { get; set; }
+        public DateTime? HireDate { get; set; }
     }
 
     public class EmployeeData
