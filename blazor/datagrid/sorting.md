@@ -271,6 +271,7 @@ The following GIF represents custom SortComparer for CustomerID column. When the
 ![Custom sort comparer in Blazor DataGrid](./images/blazor-datagrid-custom-sort-comparer.gif)
 
 > The SortComparer property will work only for local data.
+> If you're using a Template to display the data in a column, you still need the Field parameter in GridColumn -- it's required in order for SortComparer to work.
 
 ## Touch interaction
 
