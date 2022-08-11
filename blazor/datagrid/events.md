@@ -2522,7 +2522,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 ## OnBatchCancel
 
-The [OnBatchCancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchCancel) event is triggered when the cancel operation is started in batch mode.
+The [OnBatchCancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBatchCancel) event is triggered when the cancel operation is initiated in batch mode.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
