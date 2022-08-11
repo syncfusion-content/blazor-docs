@@ -1225,7 +1225,7 @@ This is demonstrated in the following sample code:
 
 > You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-different-editmode-for-add-edit-action).
 
-## Single click editing with boolean column
+## Update boolean column value in single click
 
 You can make the boolean column editable with a single click in the normal mode of editing by using the column template feature of the Grid.
 
