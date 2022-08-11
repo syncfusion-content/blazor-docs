@@ -39,17 +39,17 @@ For prompt dialog , customized the default dialog buttons content as `Connect` a
 
 {% endtabs %}
 
-## Output images
+**Results from the code snippet**
 
-### Alert dialog action button
+**Alert**
 
 ![Alert action buttons Dialog](./images/blazor-alert-action-button.png)
 
-### Confirm dialog action buttons
+**Confirm**
 
 ![Confirm action buttons Dialog](./images/blazor-confirm-action-button.png)
 
-### Prompt dialog action buttons
+**Prompt**
 
 ![Prompt action buttons Dialog](./images/blazor-prompt-action-button.png)
 
@@ -75,17 +75,17 @@ Use the following code snippet for **alert.razor**, **confirm.razor** and **prom
 
 {% endtabs %}
 
-## Output images
+**Results from the code snippet**
 
-### Alert dialog close button 
+**Alert**
 
 ![Alert close icon Dialog](./images/blazor-alert-close-button.png)
 
-### Confirm dialog close button
+**Confirm**
 
 ![Confirm close icon Dialog](./images/blazor-confirm-close-button.png)
 
-### Prompt dialog close button
+**Prompt**
 
 ![Prompt close icon Dialog](./images/blazor-prompt-close-button.png)
 

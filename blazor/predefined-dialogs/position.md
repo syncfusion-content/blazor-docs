@@ -32,16 +32,16 @@ Use the following code snippet for **alert.razor**, **confirm.razor** and **prom
 
 {% endtabs %}
 
-## Output images
+**Results from the code snippet**
 
-### Alert dialog position
+**Alert**
 
 ![Alert position Dialog](./images/blazor-alert-position.png)
 
-### Confirm dialog position
+**Confirm**
 
 ![Confirm position Dialog](./images/blazor-confirm-position.png)
 
-### Prompt dialog position
+**Prompt**
 
 ![Prompt position Dialog](./images/blazor-prompt-position.png)
