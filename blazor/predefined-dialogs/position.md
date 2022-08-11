@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Positioning in the Predefined Dialog in Blazor | Syncfusion
-description: Check out and learn here all about positioning in the predefined dialogs and much more details.
+description: Check out and learn here all about positioning in predefined dialogs in blazor and much more details.
 platform: Blazor
 control: Predefined Dialogs
 documentation: ug
