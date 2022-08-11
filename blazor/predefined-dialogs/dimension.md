@@ -31,17 +31,17 @@ Use the following code snippet for **alert.razor**, **confirm.razor** and **prom
 
 {% endtabs %}
 
-## Output images
+**Results from the code snippet**
 
-### Alert dialog dimension
+**Alert**
 
 ![Alert dimension Dialog](./images/blazor-alert-dimension.png)
 
-### Confirm dialog dimension
+**Confirm**
 
 ![confirm dimension Dialog](./images/blazor-confirm-dimension.png)
 
-### Prompt dialog dimension
+**Prompt**
 
 ![prompt dimension Dialog](./images/blazor-prompt-dimension.png)
 
@@ -74,6 +74,5 @@ Use the following code to customize the min-width and min-height for alert dialo
 
 {% endhighlight %}
 {% endtabs %}
-
 
 ![Min width and height](./images/blazor-min-width-height.png)
