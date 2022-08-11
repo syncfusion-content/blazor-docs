@@ -15,7 +15,7 @@ You can customize the predefined dialogs buttons by using below properties.
 * [DialogOptions.PrimaryButtonOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_PrimaryButtonOptions) - Use this property to customize **OK** button text and appearence.
 * [DialogOptions.CancelButtonOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_CancelButtonOptions) - Use this property to customize **Cancel** button text and appearence.
 
-Use the following code to customize the predefined dialog action buttons.
+Use the following code snippet for **alert.razor**, **confirm.razor** and **prompt.razor** to customize the predefined dialog action buttons.
 
 For alert dialog , customized the default dialog button content as `Okay` by using the [DialogButtonOptions.Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogButtonOptions.html#Syncfusion_Blazor_Popups_DialogButtonOptions_Content) property.
 
@@ -39,15 +39,25 @@ For prompt dialog , customized the default dialog buttons content as `Connect` a
 
 {% endtabs %}
 
+**Results from the code snippet**
+
+**Alert**
+
 ![Alert action buttons Dialog](./images/blazor-alert-action-button.png)
 
+**Confirm**
+
 ![Confirm action buttons Dialog](./images/blazor-confirm-action-button.png)
+
+**Prompt**
 
 ![Prompt action buttons Dialog](./images/blazor-prompt-action-button.png)
 
 ## Show or hide dialog close button 
 
 You can show or hide close button in dialog using the [DialogOptions.ShowCloseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_ShowCloseIcon) property.The default value is `false`.
+
+Use the following code snippet for **alert.razor**, **confirm.razor** and **prompt.razor** to customize the show or hide dialog close button.
 
 {% tabs %}
 
@@ -65,13 +75,21 @@ You can show or hide close button in dialog using the [DialogOptions.ShowCloseIc
 
 {% endtabs %}
 
+**Results from the code snippet**
+
+**Alert**
+
 ![Alert close icon Dialog](./images/blazor-alert-close-button.png)
+
+**Confirm**
 
 ![Confirm close icon Dialog](./images/blazor-confirm-close-button.png)
 
+**Prompt**
+
 ![Prompt close icon Dialog](./images/blazor-prompt-close-button.png)
 
-## Customize dialog content
+### Customize dialog content
 
 You can load custom content in predefined dialogs using the [DialogOptions.ChildContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_ChildContent) property. 
 
