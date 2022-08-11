@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dimension in the Predefined Dialogs in Blazor | Syncfusion
-description: Check out and learn here all about dimensions in the predefined dialogs and much more details.
+description: Check out and learn here all about dimensions in predefined dialogs in blazor and much more details.
 platform: Blazor
 control: Predefined Dialogs
 documentation: ug
@@ -13,7 +13,7 @@ Customize the predefined dialogs dimensions using the [DialogOptions.Height](htt
 
 By default, the predefined dialogs `Width` and `Height` property value is set as `auto`. Depends on the dialog content the width and height values are automatically adjust. You can specify the dimension values in both pixels and percentage format to change the default dialog width and height values.
 
-Use the following code to customize the dialog dimensions:
+Use the following code snippet for **alert.razor**, **confirm.razor** and **prompt.razor** to customize the dialog dimensions.
 
 {% tabs %}
 
@@ -31,12 +31,19 @@ Use the following code to customize the dialog dimensions:
 
 {% endtabs %}
 
+**Results from the code snippet**
+
+**Alert**
+
 ![Alert dimension Dialog](./images/blazor-alert-dimension.png)
+
+**Confirm**
 
 ![confirm dimension Dialog](./images/blazor-confirm-dimension.png)
 
-![prompt dimension Dialog](./images/blazor-prompt-dimension.png)
+**Prompt**
 
+![prompt dimension Dialog](./images/blazor-prompt-dimension.png)
 
 ## Max-width and max-height
 
@@ -54,7 +61,6 @@ Use the following code to customize the max-width and max-height for alert dialo
 
 ![Max width and height](./images/blazor-max-width-height.png)
 
-
 ## Min-width and min-height
 
 To have a restricted min-width and min-height dialog dimension, you need to specify the min-width, min-height CSS properties for the component’s container element by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogOptions.html#Syncfusion_Blazor_Popups_DialogOptions_CssClass) property.
@@ -68,6 +74,5 @@ Use the following code to customize the min-width and min-height for alert dialo
 
 {% endhighlight %}
 {% endtabs %}
-
 
 ![Min width and height](./images/blazor-min-width-height.png)
