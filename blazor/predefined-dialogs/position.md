@@ -14,7 +14,7 @@ Customize the dialog position by using the [DialogOptions.Position](https://help
 * The `PositionDataModel.X` can be configured with a left, center, right, or offset value. By default, the value is set as `center`.
 * The `PositionDataModel.Y` can be configured with a top, center, bottom, or offset value. By default, the value is set as `center`.
 
-In the following code example, customized the dialog position as X= "top" and Y= "center".
+Use the following code snippet for **alert.razor**, **confirm.razor** and **prompt.razor** to customize the position. Here, customized the dialog position as X= "top" and Y= "center".
 
 {% tabs %}
 
@@ -32,8 +32,16 @@ In the following code example, customized the dialog position as X= "top" and Y=
 
 {% endtabs %}
 
+## Output images
+
+### Alert dialog position
+
 ![Alert position Dialog](./images/blazor-alert-position.png)
 
+### Confirm dialog position
+
 ![Confirm position Dialog](./images/blazor-confirm-position.png)
+
+### Prompt dialog position
 
 ![Prompt position Dialog](./images/blazor-prompt-position.png)
