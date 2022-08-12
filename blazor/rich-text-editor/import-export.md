@@ -89,7 +89,7 @@ You can import the RTF file into the editor by using file uploader component, an
 
 ## Import text file to editor 
 
-You can import the text file into the editor by using the file stream objects. In the following example the text file import of stream and converting it to string and assigning to the editor value.
+The Rich Text Editor allows you to load an external text file in the editor. You can read the HTML file from your path using [StremReader](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamreader?view=net-6.0) class and assign it to the editor with the `@bind-Value` property.
 
 {% tabs %}
 {% highlight razor %}
