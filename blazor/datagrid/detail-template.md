@@ -426,9 +426,9 @@ In the following sample, you can get the instance of that particular child gr
 
 > [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-set-instance-for-child-component)
 
-## Customize detail template
+## Customize detail template icon
 
-To customize the icon, which is used to expand and collapse the detail content, use the below CSS style.
+Detail template icon is used to expand or collapse the detail content. You can customize this icon using the below CSS style.
 
 ```cshtml
 .e-grid .e-icon-grightarrow::before {
