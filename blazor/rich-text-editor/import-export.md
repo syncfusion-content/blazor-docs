@@ -50,7 +50,7 @@ The Rich Text Editor allows you to load an external HTML file in the editor cont
 
 ## Import to RTF file
 
-You can import the RTF file into the editor using file uploader component, and get the RTF file content from uploader success event. Then, you can able to import the RTF values to the editor.
+You can import the RTF file into the editor by using file uploader component, and get the RTF file content from uploader success event. Then, you can able to import the RTF values to the editor.
 
 {% tabs %}
 {% highlight razor %}
@@ -89,90 +89,52 @@ You can import the RTF file into the editor using file uploader component, and g
 
 ## Import text file to editor 
 
-You can import the text file into the editor using file uploader component, and get the text file content from uploader success event. Then, you can able to import the text file values to the editor.
+You can import the text file into the editor by using the file stream objects. In the following example the text file import of stream and converting it to string and assigning to the editor value.
 
 {% tabs %}
 {% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor
-@inject ExportService exportService
- 
-<SfRichTextEditor ID="defalt_RTE" @ref="RteObj" @bind-Value="@rteValue" EnableHtmlSanitizer ="false"> 
-    <RichTextEditorImageSettings SaveUrl="api/SampleData/Save" Path="../images/"></RichTextEditorImageSettings> 
-</SfRichTextEditor> 
-<SfUploader ID="UploadFiles"> 
-    <UploaderAsyncSettings SaveUrl="api/SampleData/Import" RemoveUrl=https://aspnetmvc.syncfusion.com/services/api/uploadbox/Remove></UploaderAsyncSettings> 
-    <UploaderEvents Success="@onSuccess"></UploaderEvents> 
-</SfUploader> 
- 
-@code { 
-    SfRichTextEditor RteObj; 
-    private string rteValue { get; set; } = "<div><p>Text file Content Loaded</p></div>"; 
-    public void onSuccess(SuccessEventArgs args) 
-    { 
-        var headers = args.Response.Headers.ToString(); 
-        var header = headers.Split("rtevalue: "); 
-        header = header[1].Split("\r"); 
-        this.rteValue = header[0]; 
-    } 
-} 
+@using Syncfusion.Blazor.Buttons
+@using System.IO
+@using System.Text
 
-{% endhighlight %}
-{% endtabs %}
+<SfButton OnClick="@importStream">Import Text Data</SfButton>
+<SfRichTextEditor ID="defalt_RTE" @ref="RteObj" @bind-Value="@rteValue" EnableHtmlSanitizer="false">
+</SfRichTextEditor>
 
-{% tabs %}
-{% highlight cshtml tabtitle="~/ImportServices.cs" %}
+@code {
+    SfRichTextEditor RteObj;
+    public string text { get; set; }
+    private string rteValue { get; set; } = "<p>Click the button to import text file</p>";
+    private string HtmlString { get; set; }
+    private string PathToHTMLFile = Path.GetFullPath(Directory.GetCurrentDirectory() + @"\wwwroot\RTESample.txt");
 
-[HttpPost] 
-[Route("Import")] 
-public string Import(IList<IFormFile> UploadFiles) 
-{ 
-    string HtmlString = string.Empty; 
-    if (UploadFiles != null) 
-    { 
-        foreach (var file in UploadFiles) 
-        { 
-            string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"'); 
-            filename = hostingEnv.WebRootPath + \\files + $@"\{filename}"; 
-            using (FileStream fs = System.IO.File.Create(filename)) 
-            { 
-                file.CopyTo(fs); 
-                fs.Flush(); 
-            } 
-            using (var mStream = new MemoryStream()) 
-            { 
-                new WordDocument(file.OpenReadStream(), FormatType.Rtf).Save(mStream, FormatType.Html); 
-                mStream.Position = 0; 
-                HtmlString = new StreamReader(mStream).ReadToEnd(); 
-            }; 
-            HtmlString = ExtractBodyContent(HtmlString); 
-            var str = HtmlString.Replace("\r\n", ""); 
-            Response.Headers.Add("rteValue", str); 
-        } 
-    } 
-    return HtmlString; 
-} 
-public string ExtractBodyContent(string html) 
-{ 
-    if (html.Contains("<html>") && html.Contains("<body>"))
-    { 
-        return html.Remove(0, html.IndexOf("<body>") + 6).Replace("</body></html>", ""); 
-    } 
-    return html; 
-} 
+    public void importStream()
+    {
+        using (FileStream fs = File.Open(PathToHTMLFile, FileMode.Open, FileAccess.ReadWrite))
+        {
+            using (StreamReader sr = new StreamReader(fs))
+            {
+                HtmlString = sr.ReadToEnd();
+                this.rteValue = HtmlString;
+            }
+        }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 ![Import to text file](./images/blazor-import-text.png)
 
-> [View Sample in GitHub]().
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/import-text-file-to-blazor-rich-text-editor).
 
 ## Export to RTF file
 
-You can export the RTE content to the RTF format using the [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries. Use the following code to export the RTF file. 
+You can able to export the RTE content to RTF format by using the [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries. 
 
-While cliking on the export button you can call make the RTE content to the RTF file using [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries.
+Use the following code to export the RTF file. While cliking on the export button you can call make the RTE content to the RTF file by using **Syncfusion.DocIO** libraries.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -209,11 +171,11 @@ While cliking on the export button you can call make the RTE content to the RTF 
 {% endhighlight %}
 {% endtabs %}
 
-> [View Sample in GitHub]().
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-rich-text-editor-export-to-rtf).
 
 ## Export to HTML file
 
-You can export the RTE content to the HTML format using the [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries.
+You can export the RTE content to the HTML format by using the [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries.
 
 While clicking on the export button it makes call to the Export to HTML service.
 
