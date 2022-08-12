@@ -83,7 +83,7 @@ The [DeniedTags](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTex
 
 1. **a**: Paste the content by filtering out anchor tags.
 2. **a[!href]**: Paste the content by filtering out anchor tags that do not have the ‘href’ attribute.
-3. **a[href, target]**: Paste the content by filtering out anchor tags that have the 'href' and 'target' attributes.
+3. **a[href, target]**: Paste the content by filtering out anchor tags that have the ‘href’ and ‘target’ attributes.
 
 {% tabs %}
 {% highlight razor %}

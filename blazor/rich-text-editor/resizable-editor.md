@@ -23,7 +23,7 @@ The Rich Text Editor allows it to be resized dynamically, so the users can able 
 
 ## Restrict resize
 
-To have a restricted resizable area for the Rich Text Editor, you need to specify the min-width, max-width, min-height, and max-height CSS properties for the component’s container element. By default, the editor is capable of resizing up to the current viewport. The `e-richtexteditor` CSS class will be available in the component's container and can be used for applying the bellow mentioned styles.
+To have a restricted resizable area for the Rich Text Editor, you need to specify the min-width, max-width, min-height, and max-height CSS properties for the component’s container element. By default, the editor is capable of resizing up to the current viewport. The **e-richtexteditor** CSS class will be available in the component's container and can be used for applying the bellow mentioned styles.
 
 ```css
 <style>

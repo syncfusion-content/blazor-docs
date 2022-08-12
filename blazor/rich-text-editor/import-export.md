@@ -89,7 +89,7 @@ You can import the RTF file into the editor by using file uploader component, an
 
 ## Import text file to editor 
 
-The Rich Text Editor allows you to load an external text file in the editor. You can read the HTML file from your path using [StremReader](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamreader?view=net-6.0) class and assign it to the editor with the `@bind-Value` property.
+The Rich Text Editor allows you to load an external text file in to the editor. You can read the text file from your path using [StremReader](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamreader?view=net-6.0) class and assign it to the editor with the `@bind-Value` property.
 
 {% tabs %}
 {% highlight razor %}
@@ -109,7 +109,6 @@ The Rich Text Editor allows you to load an external text file in the editor. You
     private string rteValue { get; set; } = "<p>Click the button to import text file</p>";
     private string HtmlString { get; set; }
     private string PathToHTMLFile = Path.GetFullPath(Directory.GetCurrentDirectory() + @"\wwwroot\RTESample.txt");
-
     public void importStream()
     {
         using (FileStream fs = File.Open(PathToHTMLFile, FileMode.Open, FileAccess.ReadWrite))
