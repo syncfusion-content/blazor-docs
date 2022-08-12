@@ -356,7 +356,7 @@ Configure the toolbar with the tools using [RichTextEditorToolbarSettings.Items]
 
 ## Insert images and links
 
-The "Image" inserts an image into Rich Text Editor's content area, and the "Link" links an external resources such as website URLs to the selected text in the Rich Text Editor's content respectively.
+The **Image** inserts an image into Rich Text Editor's content area, and the **Link** links an external resources such as website URLs to the selected text in the Rich Text Editor's content respectively.
 
 Specifies the items to be rendered in quick toolbar based on the target elements such as image, link and table element. The quick toolbar opens to customize the element by clicking the target element.
 
