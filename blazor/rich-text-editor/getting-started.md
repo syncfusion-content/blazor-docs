@@ -215,8 +215,6 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
     ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-    <!--Use below script reference if you are using Syncfusion.Blazor Single NuGet-->
-    <!--<script  src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js"  type="text/javascript"></script>-->
 </head>
 
 {% endhighlight %}
@@ -227,8 +225,6 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
     ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-    <!--Use below script reference if you are using Syncfusion.Blazor Single NuGet-->
-    <!--<script  src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js"  type="text/javascript"></script>-->
 </head>
 
 {% endhighlight %}
@@ -245,8 +241,6 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
     ....
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-    <!--Use below script reference if you are using Syncfusion.Blazor Single NuGet-->
-    <!--<script  src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js"  type="text/javascript"></script>-->
 </head>
 
 {% endhighlight %}
