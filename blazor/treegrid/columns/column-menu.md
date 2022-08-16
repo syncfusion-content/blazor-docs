@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Column Menu in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about column menu in Syncfusion Blazor TreeGrid component and much more details.
+title: Column Menu in Blazor Tree Grid Component | Syncfusion
+description: Checkout and learn here all about column menu in Syncfusion Blazor Tree Grid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Column menu in Blazor TreeGrid Component
+# Column menu in Blazor Tree Grid Component
 
 The column menu has options to integrate features like sorting, filtering, and autofit. It will show a menu with the integrated feature when users click on multiple icon of the column. To enable column menu, define the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ShowColumnMenu.html) property as true.
 
@@ -85,6 +85,6 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor TreeGrid with Column Menu](../images/blazor-treegrid-column-menu.png)
+![Blazor Tree Grid with Column Menu](../images/blazor-treegrid-column-menu.png)
 
 > The column menu can be disabled for a particular column by defining the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ShowColumnMenu.html) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) tag helper as false.

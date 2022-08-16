@@ -64,7 +64,7 @@ The complex data binding in the Tree Grid can be achieved by using the dot(.) op
 }
 ```
 
-![Blazor TreeGrid Columns with Data Binding](../images/blazor-treegrid-column-data-binding.png)
+![Blazor Tree Grid Columns with Data Binding](../images/blazor-treegrid-column-data-binding.png)
 
 ### Expando data binding
 
@@ -134,7 +134,7 @@ Tree Grid supports Complex Data Binding with ExpandoObject. In the below example
 }
 ```
 
-![Blazor TreeGrid Columns with Expando Data Binding](../images/blazor-treegrid-column-expando-binding.png)
+![Blazor Tree Grid Columns with Expando Data Binding](../images/blazor-treegrid-column-expando-binding.png)
 
 ## Header template
 
@@ -233,7 +233,7 @@ public class Employee
 {% endtabs %}
 
 
-![Blazor TreeGrid Column with Header Template](../images/blazor-treegrid-column-header-template.png)
+![Blazor Tree Grid Column with Header Template](../images/blazor-treegrid-column-header-template.png)
 
 > For Templated Tree Grid component, [ModelType](../templates/#template-modeltype) property of Tree Grid should be defined.
 
@@ -306,7 +306,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor TreeGrid Column with Header Text](../images/blazor-treegrid-column-header-text.png)
+![Blazor Tree Grid Column with Header Text](../images/blazor-treegrid-column-header-text.png)
 
 > If both the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Field.html) and [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~HeaderText.html) are not defined in the column, the column renders with **empty** header text.
 
@@ -541,7 +541,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor TreeGrid with AutoFit Columns](../images/blazor-treegrid-autofit-column.png)
+![Blazor Tree Grid with AutoFit Columns](../images/blazor-treegrid-autofit-column.png)
 
 > All the columns can be autofitted by invoking the **AutoFitColumns** method without column names.
 
@@ -702,7 +702,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor TreeGrid with CheckBox Column](../images/blazor-treegrid-checkbox-column.png)
+![Blazor Tree Grid with CheckBox Column](../images/blazor-treegrid-checkbox-column.png)
 
 ## Responsive columns
 
@@ -771,7 +771,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor TreeGrid displays Responsive Columns](../images/blazor-treegrid-responsive-column.png)
+![Blazor Tree Grid displays Responsive Columns](../images/blazor-treegrid-responsive-column.png)
 
 ## Controlling treegrid actions
 
@@ -989,4 +989,4 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor TreeGrid Column with CheckBox](../images/blazor-treegrid-column-with-checkbox.png)
+![Blazor Tree Grid Column with CheckBox](../images/blazor-treegrid-column-with-checkbox.png)

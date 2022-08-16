@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Column Chooser in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about column chooser in Syncfusion Blazor TreeGrid component and much more details.
+title: Column Chooser in Blazor Tree Grid Component | Syncfusion
+description: Checkout and learn here all about column chooser in Syncfusion Blazor Tree Grid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Column Chooser in Blazor TreeGrid Component
+# Column Chooser in Blazor Tree Grid Component
 
 The column chooser has options to show or hide columns dynamically. It can be enabled by defining the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ShowColumnChooser.html) as true.
 
@@ -157,7 +157,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Opening Column Chooser in Blazor TreeGrid](../images/blazor-treegrid-open-column-chooser.png)
+![Opening Column Chooser in Blazor Tree Grid](../images/blazor-treegrid-open-column-chooser.png)
 
 > The column names in column chooser can be hidden by defining the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ShowInColumnChooser.html) property as false.
 
@@ -259,7 +259,7 @@ namespace TreeGridComponent.Data
 
 {% endtabs %}
 
-![Column Chooser Template with Blazor TreeGrid](../images/blazor-treegrid-column-chooser-template.png)
+![Column Chooser Template with Blazor Tree Grid](../images/blazor-treegrid-column-chooser-template.png)
 
 ### Custom component in column chooser template
 
@@ -486,7 +486,7 @@ namespace TreeGridComponent.Data
 
 The following output is displayed as a result of the above code example.
 
-![Column Chooser Template with Blazor TreeGrid](../images/blazor-treegrid-column-with-chooser-template.png)
+![Column Chooser Template with Blazor Tree Grid](../images/blazor-treegrid-column-with-chooser-template.png)
 
 ### Column Chooser with group template
 
@@ -591,4 +591,4 @@ namespace TreeGridComponent.Data
 
 The following output is displayed as a result of the above code example.
 
-![Column Chooser with Group in Blazor TreeGrid](../images/blazor-treegrid-column-chooser-group-template.png)
+![Column Chooser with Group in Blazor Tree Grid](../images/blazor-treegrid-column-chooser-group-template.png)
