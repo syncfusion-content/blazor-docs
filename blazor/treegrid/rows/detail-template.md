@@ -95,7 +95,7 @@ public class Employee
 
 ## Rendering custom component
 
-To render the custom component inside the detail row, define the template in the [DetailTemplate](./templates/#detailtemplates-component) and render the custom component in any of the detail row element.
+To render the custom component inside the detail row, define the template in the [DetailTemplate](../templates/#detailtemplates-component) and render the custom component in any of the detail row element.
 
 In the following sample, tree grid component is rendered as custom component using detailed row details.
 

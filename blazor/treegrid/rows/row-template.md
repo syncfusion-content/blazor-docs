@@ -112,7 +112,7 @@ public class Employee
 
 {% endtabs %}
 
-![Blazor TreeGrid with Row Template](../images/blazor-treegrid-row-template.png)
+![Blazor Tree Grid with Row Template](../images/blazor-treegrid-row-template.png)
 
 ## Row template with formatting
 
@@ -216,7 +216,7 @@ public class Employee
 
 {% endtabs %}
 
-![Blazor TreeGrid Row Template with Formatting](../images/blazor-treegrid-row-template-formatting.png)
+![Blazor Tree Grid Row Template with Formatting](../images/blazor-treegrid-row-template-formatting.png)
 
 ## Limitations
 

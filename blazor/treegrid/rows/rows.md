@@ -102,7 +102,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Customizing Blazor TreeGrid Rows](../images/blazor-treegrid-row-customization.png)
+![Customizing Blazor Tree Grid Rows](../images/blazor-treegrid-row-customization.png)
 
 ## Styling alternate rows
 
@@ -184,7 +184,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Customizing Alternate Rows in Blazor TreeGrid](../images/blazor-treegrid-alternate-rows-customization.png)
+![Customizing Alternate Rows in Blazor Tree Grid](../images/blazor-treegrid-alternate-rows-customization.png)
 
 ### See Also
 
