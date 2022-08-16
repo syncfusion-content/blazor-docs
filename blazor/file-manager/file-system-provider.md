@@ -108,7 +108,7 @@ After cloning, just open the project in Visual Studio and restore the NuGet pack
 
 ```csharp
 
-             this.operation.RegisterAzure("<--accountName-->", "<--accountKey-->", "<--blobName-->");
+this.operation.RegisterAzure("<--accountName-->", "<--accountKey-->", "<--blobName-->");
 
  ```
 
@@ -117,13 +117,13 @@ Then, set the blob container and the root blob directory by passing the correspo
 ```csharp
 
 public AzureProviderController(IHostingEnvironment hostingEnvironment)
-        {
-            this.operation = new AzureFileProvider();
-            blobPath = "<--blobPath-->";
-            filePath = "<--filePath-->";
-            ...
-            this.operation.SetBlobContainer(blobPath, filePath);            
-        }
+    {
+        this.operation = new AzureFileProvider();
+        blobPath = "<--blobPath-->";
+        filePath = "<--filePath-->";
+        ...
+        this.operation.SetBlobContainer(blobPath, filePath);            
+    }
 
 ```
 
@@ -132,10 +132,10 @@ public AzureProviderController(IHostingEnvironment hostingEnvironment)
 ```csharp
 
 public AzureProviderController(IHostingEnvironment hostingEnvironment)
-{
-    this.operation = new AzureFileProvider();
-    blobPath = "https://azure_service_account.blob.core.windows.net/files/";
-    filePath = "https://azure_service_account.blob.core.windows.net/files/Files";
+    {
+        this.operation = new AzureFileProvider();
+        blobPath = "https://azure_service_account.blob.core.windows.net/files/";
+        filePath = "https://azure_service_account.blob.core.windows.net/files/Files";
 
 ``` 
 
