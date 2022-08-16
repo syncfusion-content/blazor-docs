@@ -122,7 +122,7 @@ You can use the following key shortcuts when the Rich Text Editor renders with `
 
 Customize the key config for the keyboard interaction of Rich Text Editor, using the [KeyConfigure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_KeyConfigure) property.
 
-In the following code block, customize the bold and italic, toolbar actions with `ctrl+1`, `ctrl+2` respectively.
+In the following code block, customize the bold and italic, toolbar actions with **ctrl+1**, **ctrl+2** respectively.
 
 {% tabs %}
 {% highlight cshtml %}
