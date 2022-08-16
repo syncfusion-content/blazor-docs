@@ -1,6 +1,6 @@
 ---
 layout: post
-title: IFrame Rendering in Blazor RichTextEditor Component | Syncfusion
+title: IFrame Rendering in Blazor RichTextEditor | Syncfusion
 description: Checkout and learn here all about IFrame Rendering in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
@@ -44,9 +44,9 @@ The editor allows you to pass an additional attribute to body tag of a `<iframe>
 
 ## Adding external CSS/Script file
 
-The editor offers to add external CSS file to style the `<iframe>` element. Easily change the appearance of editor’s content using an external CSS file using `Resources - Styles` field in the `RichTextEditorIframeSettings` property.
+The editor offers to add external CSS file to style the `<iframe>` element. Easily change the appearance of editor’s content using an external CSS file using **Resources - Styles** field in the [RichTextEditorIframeSettings.Resources](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorIFrameSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorIFrameSettings_Resources) property.
 
-Likewise, add the external script file to the `<iframe>` element using `Resources - Scripts` field of `RichTextEditorIframeSettings` to provide the additional functionalities to the Rich Text Editor.
+Likewise, add the external script file to the `<iframe>` element using **Resources - Scripts** field of `RichTextEditorIframeSettings.Resources` to provide the additional functionalities to the Rich Text Editor.
 
 {% tabs %}
 {% highlight cshtml %}
