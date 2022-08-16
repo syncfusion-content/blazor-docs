@@ -75,7 +75,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Filtering in Blazor TreeGrid](../images/blazor-treegrid-filtering.png)
+![Filtering in Blazor Tree Grid](../images/blazor-treegrid-filtering.png)
 
 > * Apply and clear filtering by using the [FilterByColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~FilterByColumn.html) and [ClearFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ClearFiltering.html) methods.
 > * To disable filtering for a particular column, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~AllowFiltering.html) property of [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) to false.
@@ -171,7 +171,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Blazor TreeGrid with Initial Filter](../images/blazor-treegrid-initial-filter.png)
+![Blazor Tree Grid with Initial Filter](../images/blazor-treegrid-initial-filter.png)
 
 ## Filter operators
 
