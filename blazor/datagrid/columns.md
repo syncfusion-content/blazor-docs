@@ -651,21 +651,21 @@ Ensure the following steps to rotate the header text of particular column.
 
 **Step1:**
 
+Add the custom CSS class to a particular column by using the `CustomAttributes` property of the `GridColumn`.
+
+```cshtml
+    <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "customerclass" }})" Width="150">
+    </GridColumn>
+```
+
+**Step2:**
+
 Create a CSS class with orientation style for the grid header cell.
 
 ```cshtml
     .e-grid .e-columnheader .e-headercell.orientationclass .e-headercelldiv { // Rotate a particular headertext
         transform: rotate(45deg);
     }
-```
-
-**Step2:**
-
-Add the custom CSS class to a particular column by using the `CustomAttributes` property of the `GridColumn`.
-
-```cshtml
-    <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "customerclass" }})" Width="150">
-    </GridColumn>
 ```
 
 **Step3:**
