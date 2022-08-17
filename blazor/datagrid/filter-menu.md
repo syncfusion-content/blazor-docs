@@ -325,3 +325,5 @@ In the following sample, the MultiSelect component is rendered in the filter men
     } 
 }
 ```
+
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-filter-by-multiple-keywords-using-filter-menu)
