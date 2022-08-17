@@ -1229,7 +1229,7 @@ This is demonstrated in the following sample code:
 
 You can make the boolean column editable with a single click in the normal mode of editing by using the column template feature of the Grid.
 
-In the following sample, boolean values as checkboxes in the Verified column are rendered by setting the [DisplayAsCheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisplayAsCheckBox) property to true. To make them editable with a single click, the `SfCheckbox` component is rendered as a template in the Verified column.
+In the following sample, the `SfCheckbox` component is rendered as a template in the Verified column to make it editable with a single click.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1242,10 +1242,9 @@ In the following sample, boolean values as checkboxes in the Verified column are
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(Order.Verified) HeaderText="Verified" Type="ColumnType.Boolean" DisplayAsCheckBox="true" TextAlign="TextAlign.Right" Width="90">
+        <GridColumn Field=@nameof(Order.Verified) HeaderText="Verified" TextAlign="TextAlign.Right" Width="90">
                <Template>
                 @{
-                    var a = (context as Order);
                     <SfCheckBox @bind-Checked=@((context as Order).Verified)></SfCheckBox>
                 }
             </Template>
