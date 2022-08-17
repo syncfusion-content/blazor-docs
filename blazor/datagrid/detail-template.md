@@ -428,7 +428,7 @@ In the following sample, you can get the instance of that particular child gr
 
 ## Customize detail template icon
 
-Detail template icon is used to expand or collapse the detail content. You can customize this icon using the below CSS style.
+The Detail template icon is used to expand or collapse the detail content. You can customize this icon through CSS itself. You can achieve this requirement by overriding the below two CSS styles.
 
 ```cshtml
 .e-grid .e-icon-grightarrow::before {
