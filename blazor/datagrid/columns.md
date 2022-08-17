@@ -513,7 +513,7 @@ In the following code sample, you can prevent default filter query generation us
 
 ### Enable multiple foreign key columns
 
-Multiple foreign key columns can be enabled by defining the multiple `GridForeignColumn` directives.
+The Grid has an option to show multiple foreign key columns. This can be achieved by defining multiple `GridForeignColumn` directives in the Grid component.
 
 In the following example, two different column fields ("EmpFirstNameID", "EmpLastNameID") are used to show two different ForeignKeyValue ("FirstName" and "LastName") using the same ForeignKeyField ("EmployeeID"). First Name and Last Name are foreign key columns that display the data from the foreign data source.
 
