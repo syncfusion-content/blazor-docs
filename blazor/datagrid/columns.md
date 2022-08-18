@@ -513,15 +513,20 @@ In the following code sample, you can prevent default filter query generation us
 
 ### Customize filter UI in foreignkey column
 
-A custom filtering UI can be rendered using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) feature of the Grid. The following example demonstrates the way to create a custom filtering UI in the foreign column.
+A custom component can be rendered in the filter UI of the foreign key column using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) feature of Grid.
 
-In the following example, the Employee Name is a foreign key column. An `SfDropDownList` component is rendered in the Employee Name column using the `FilterTemplate`.
+The following example demonstrates the way to create a custom filtering UI by rendering the `SfDropDownList` component in the foreign key column.
+
+> * For all filter types other than FilterBar, filtering parameters will be sent in the form of `PredicateModel<T>`.
+
+> * For the foreign key column, T represents the type of `ForeignKeyValue` property.
+
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 
-<SfGrid DataSource="@Orders" Height="315" AllowFiltering="true">
+<SfGrid DataSource="@Orders" Height="315" AllowFiltering="true" AllowPaging>
     <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
