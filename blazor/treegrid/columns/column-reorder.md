@@ -75,24 +75,25 @@ public class TreeData
 
 ![Reordering Columns in Blazor Tree Grid](../images/blazor-treegrid-column-reorder.gif)
 
-> You can disable reordering a particular column by setting the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_AllowReordering) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) tag helper as false.
+> You can disable reordering a particular column by setting the `AllowReordering` property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) tag helper as false.
 
 ## Reorder single column
 
-Tree Grid has option to reorder single column either by Interaction or by using the **ReorderColumns** method. In the following sample, **TaskName** column is reordered to third column position by using the method.
+Tree Grid has option to reorder a column either by interaction or by using the [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ReorderColumnsAsync_System_Collections_Generic_List_System_String__System_String_) method. In the following sample, **TaskName** column is reordered to third column position by using the method on button click.
 
 {% tabs %}
 
 {% highlight razor %}
 
-@using Syncfusion.Blazor.Buttons
+@using TreeGridComponent.Data;
+@using Syncfusion.Blazor.Buttons;
 @using Syncfusion.Blazor.TreeGrid;
 
 <SfButton OnClick="ReorderColumn" CssClass="e-primary" IsPrimary="true" Content="Reorder TaskName"></SfButton>
 <SfTreeGrid @ref="TreeGrid" IdMapping="TaskId" ParentIdMapping="ParentId" AllowReordering="true" DataSource="@TreeGridData" TreeColumnIndex="1">
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="TaskName" HeaderText="Task Name" MinWidth="170" MaxWidth="250" Width="180"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="180"></TreeGridColumn>
         <TreeGridColumn Field="Duration" HeaderText="Duration" MinWidth="50" MaxWidth="150" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="80"></TreeGridColumn>
         <TreeGridColumn Field="Progress" HeaderText="Progress" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="80"></TreeGridColumn>
     </TreeGridColumns>
@@ -107,7 +108,7 @@ Tree Grid has option to reorder single column either by Interaction or by using 
     }
     private async Task ReorderColumn()
     {
-        await TreeGrid.ReorderColumns(new List<string>(){ "TaskName" }, "Duration");
+        await TreeGrid.ReorderColumnsAsync(new List<string>(){ "TaskName" }, "Duration");
     }
 }
 
@@ -154,7 +155,7 @@ The following GIF represents Reordering column **TaskName** by using method,
 
 ## Reorder multiple columns
 
-User can reorder a single column at a time by Interaction. Sometimes, you need to reorder multiple columns at the same time. This can be achieved programmatically by using the **ReorderColumns** method.
+User can reorder a single column at a time by Interaction. Sometimes, you need to reorder multiple columns at the same time. This can be achieved by passing list of columns programmatically in the [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ReorderColumnsAsync_System_Collections_Generic_List_System_String__System_String_) method.
 
 In the following sample, **TaskName** and **Duration** columns are reordered to last column position by using this method on button click.
 
@@ -162,7 +163,8 @@ In the following sample, **TaskName** and **Duration** columns are reordered to 
 
 {% highlight razor %}
 
-@using Syncfusion.Blazor.Buttons
+@using TreeGridComponent.Data;
+@using Syncfusion.Blazor.Buttons;
 @using Syncfusion.Blazor.TreeGrid;
 
 <SfButton OnClick="ReorderColumn" CssClass="e-primary" IsPrimary="true" Content="Reorder TaskName and Duration"></SfButton>
@@ -184,7 +186,7 @@ In the following sample, **TaskName** and **Duration** columns are reordered to 
     }
     private async Task ReorderColumn()
     {
-        await TreeGrid.ReorderColumns(new List<string>() { "TaskName", "Duration" }, "Progress");
+        await TreeGrid.ReorderColumnsAsync(new List<string>() { "TaskName", "Duration" }, "Progress");
     }
 }
 
