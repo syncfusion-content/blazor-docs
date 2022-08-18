@@ -11,7 +11,7 @@ documentation: ug
 
 Blazor applications can be developed using one of the following IDEs or using [.NET CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/).
 
-## Integrated Development Environment
+## Integrated development environment
 
 Blazor applications can be developed using one of the following IDEs. You can also develop using [.NET CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/) without below IDEs.
 
