@@ -1225,6 +1225,57 @@ This is demonstrated in the following sample code:
 
 > You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-different-editmode-for-add-edit-action).
 
+## How to make a Grid column always editable
+
+You can make the Grid column always editable by using the column template feature of the Grid.
+
+In the following example, the `SfTextBox` is rendered in the ShipCountry column using a column template. The edited changes are saved in the data source using the two-way binding(@bind-Value) of the `SfTextBox` component.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Inputs
+
+<SfGrid AllowPaging="true" DataSource="@Orders">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="@TextAlign.Center" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field="OrderDate" HeaderText=" Order Date" Format="d"  Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150">
+            <Template>
+                @{
+                    var orderdetails = (context as Order);
+                }
+                <div @onkeydown:stopPropagation="true">
+                    <SfTextBox @bind-Value="@orderdetails.ShipCountry"></SfTextBox>
+                </div>
+            </Template>
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            OrderDate = DateTime.Now.AddDays(-x),
+            ShipCountry = (new string[] { "USA", "UK", "JAPAN" })[new Random().Next(3)]
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public string ShipCountry { get; set; }
+    }
+}
+```
+
 ## See also
 
 * [Edit one column update the value in another column](https://www.syncfusion.com/forums/151238/edit-one-column-update-the-value-in-another-column)
