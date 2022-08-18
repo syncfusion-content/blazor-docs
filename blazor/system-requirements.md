@@ -45,6 +45,8 @@ The following table represents the supported .NET and .NET Core versions by diff
 | [.NET Core 3.1.1](https://devblogs.microsoft.com/dotnet/net-core-january-2020/) | 17.4.0.46  and above |
 | [.NET Core 3.1](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-net-core-3-1/) | 17.4.0.39 and above |
 
+> Use only supported .NET version as per [.NET support policy](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core) in production app. 
+
 ## See also
 
 * [Syncfusion Product release lifecycle](https://www.syncfusion.com/support/product-lifecycle/)
