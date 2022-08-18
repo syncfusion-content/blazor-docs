@@ -654,8 +654,7 @@ Ensure the following steps to rotate the header text of particular column.
 Add the custom CSS class to a particular column by using the `CustomAttributes` property of the `GridColumn`.
 
 ```cshtml
-    <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "customerclass" }})" Width="150">
-    </GridColumn>
+    <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "textorientationclass" }})" Width="150"></GridColumn>
 ```
 
 **Step2:**
@@ -663,18 +662,18 @@ Add the custom CSS class to a particular column by using the `CustomAttributes` 
 Create a CSS class with orientation style for the grid header cell.
 
 ```cshtml
-    .e-grid .e-columnheader .e-headercell.orientationclass .e-headercelldiv { // Rotate a particular headertext
-        transform: rotate(45deg);
+    .e-grid .e-columnheader .e-headercell.textorientationclass .e-headercelldiv { // Rotate a particular headertext
+        transform: rotate(90deg);    
     }
 ```
 
 **Step3:**
 
-Resize the header cell height by using the following code.
+Change the header cell height with respect to the orientation of headertext using the following code.
 
 ```cshtml
 function setHeaderHeight(args) {
-    var textWidth = document.querySelector(".e-headercell > div").scrollWidth; // obtain the width of the headerText content.
+    var textWidth = document.querySelector(".textorientationclass > div").scrollWidth; // obtain the width of the headerText content.
     var headerCell = document.querySelectorAll(".e-headercell");
     for (var i = 0; i < headerCell.length; i++) {
         (headerCell.item(i)).style.height = textWidth + 'px'; // assign the obtained textWidth as the height of the headerCell.
@@ -688,32 +687,30 @@ This can be demonstrated in the following sample:
 @using Syncfusion.Blazor.Grids
 @inject IJSRuntime IJSRuntime
 
-<SfGrid DataSource="@Orders" Height="240">
+<SfGrid DataSource="@Orders">
     <GridEvents DataBound="DataBound" Created="Created" TValue="Order"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "customerclass" }})" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "textorientationclass" }})" Width="150"></GridColumn>
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Center" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 <style>
-    .e-grid .e-columnheader .e-headercell.customerclass .e-headercelldiv { // Rotate a particular headertext.
-        transform: rotate(90deg);
+    .e-grid .e-columnheader .e-headercell.textorientationclass .e-headercelldiv { // Rotate a particular headertext
+        transform: rotate(90deg);      
     }
 </style>
-
 @code{
     public List<Order> Orders { get; set; }
     public bool InitialRender = false;
-
     public void Created()
     {
         InitialRender = true;
     }
     public void DataBound()
     {
-        if (InitialRender) // Call the JS method by checking for initial Grid rendering.
+        if (InitialRender) //Call the JS method by checking for initial Grid rendering
         {
             InitialRender = false;
             IJSRuntime.InvokeAsync<object>("setHeaderHeight");
