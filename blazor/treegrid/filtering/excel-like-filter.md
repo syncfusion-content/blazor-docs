@@ -81,7 +81,7 @@ namespace TreeGridComponent.Data {
 
 ## Filter item template
 
-This **`FilterItemTemplate`** helps to customize each excel list element or value for display purposes. To access the excel list values inside the `FilterItemTemplate`, you can use the implicit named parameter context. You can type cast the context as [FilterItemTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterItemTemplateContext.html) to get list values inside template.
+The [FilterItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_FilterItemTemplate) helps to customize each excel list element or value for display purposes. To access the excel list values inside the `FilterItemTemplate`, you can use the implicit named parameter **context** of [FilterItemTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterItemTemplateContext.html) type to get list values inside template.
 
 {% tabs %}
 
@@ -164,7 +164,9 @@ namespace TreeGridComponent.Data {
 
 You can customize the height and width of each column’s filter dialog using the CSS style in the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionBegin) event of the tree grid.
 
-Before opening a filter dialog for each column, the `OnActionBegin` event will be triggered with the [RequestType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ActionEventArgs-1.html#Syncfusion_Blazor_Grids_ActionEventArgs_1_RequestType) argument as `FilterBeforeOpen`. At that point, based on the boolean value, we have set the height and width of the TaskId and TaskName columns using the CSS style in the following sample.
+Before opening a filter dialog for each column, the `OnActionBegin` event will be triggered with the [RequestType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ActionEventArgs-1.html#Syncfusion_Blazor_Grids_ActionEventArgs_1_RequestType) argument as `FilterBeforeOpen`. At that point, we can set the height and width of filter popup dynamically using CSS.
+
+In the following sample we have set the height and width of the TaskId and TaskName column's filter dialog using the CSS style.
 
 {% tabs %}
 

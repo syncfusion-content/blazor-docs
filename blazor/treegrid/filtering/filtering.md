@@ -78,7 +78,7 @@ namespace TreeGridComponent.Data {
 ![Filtering in Blazor Tree Grid](../images/blazor-treegrid-filtering.png)
 
 > * Apply and clear filtering by using the [FilterByColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~FilterByColumn.html) and [ClearFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ClearFiltering.html) methods.
-> * To disable filtering for a particular column, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~AllowFiltering.html) property of [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) to false.
+> * To disable filtering for a particular column, set the `AllowFiltering` property of [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) to false.
 
 ## Filter hierarchy modes
 
@@ -197,7 +197,9 @@ lessthanorequal |Checks whether the value is lesser than or equal to the specif
 
 Filter the enum type data in the tree grid column using the Filter Template feature of the tree grid.
 
-In the following sample, the `SfDropDownList` component is rendered in the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_FilterTemplate) for the Type column. The enumerated list data can be bound to the Type column. In the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of the `SfDropDownList`, dynamically filter the Type column using the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_String_System_String_) method of the tree grid.
+In the following sample, the enumerated list data is bound to the Priority column and the `SfDropDownList` component is rendered in the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_FilterTemplate) for the Priority column.  
+
+In the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of the `SfDropDownList`, dynamically filter the Type column using the [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_String_System_String_) method of the tree grid.
 
 {% tabs %}
 
@@ -216,12 +218,11 @@ In the following sample, the `SfDropDownList` component is rendered in the [Filt
                     <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="145"></TreeGridColumn>
                     <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="TextAlign.Right"></TreeGridColumn>
                     <TreeGridColumn Field="Progress" HeaderText="Progress" Width="200"></TreeGridColumn>
-                    <TreeGridColumn Field="Priority" HeaderText="Priority" Width="200"></TreeGridColumn>
-                    <TreeGridColumn Field="Type" HeaderText="Type" Type="ColumnType.String" Width="130">
+                    <TreeGridColumn Field="Priority" HeaderText="Priority" Width="200">
                         <FilterTemplate>
-                            <SfDropDownList Placeholder="Type" ID="Type" Value="@((string)(context as PredicateModel).Value)" DataSource="@FilterDropData" TValue="string" TItem="Data">
+                            <SfDropDownList Placeholder="Priority" ID="Priority" Value="@((string)(context as PredicateModel).Value)" DataSource="@FilterDropData" TValue="string" TItem="Data">
                                 <DropDownListEvents TItem="Data" ValueChange="Change" TValue="string"></DropDownListEvents>
-                                <DropDownListFieldSettings Value="Type" Text="Type"></DropDownListFieldSettings>
+                                <DropDownListFieldSettings Value="Priority" Text="Priority"></DropDownListFieldSettings>
                             </SfDropDownList>
                         </FilterTemplate>
                     </TreeGridColumn>
@@ -238,22 +239,22 @@ In the following sample, the `SfDropDownList` component is rendered in the [Filt
     {
         this.TreeData = SelfReferenceData.GetTree().Take(50).ToList();
     }
-    public enum FileType : short
+    public enum Prioritize : short
     {
-        Base = 1,
-        Replace = 2,
-        Delta = 3
+        High = 1,
+        Low = 2,
+        Critical = 3
     }
     public class Data
     {
-        public string Type { get; set; }
+        public string Priority { get; set; }
     }
     List<Data> FilterDropData = new List<Data>
     {
-        new Data() { Type= "All" },
-        new Data() { Type= "Base" },
-        new Data() { Type= "Replace" },
-        new Data() { Type= "Delta" }
+        new Data() { Priority= "All" },
+        new Data() { Priority= "High" },
+        new Data() { Priority= "Low" },
+        new Data() { Priority= "Critical" }
     };
     public async Task Change(ChangeEventArgs<string, Data> args)
     {
@@ -263,7 +264,7 @@ In the following sample, the `SfDropDownList` component is rendered in the [Filt
         }
         else
         {
-            await this.TreeGrid.FilterByColumnAsync("Type", "contains", args.Value);
+            await this.TreeGrid.FilterByColumnAsync("Priority", "contains", args.Value);
         }
     }
 }
@@ -275,18 +276,17 @@ In the following sample, the `SfDropDownList` component is rendered in the [Filt
 namespace TreeGridComponent.Data {
 
         public class SelfReferenceData
-    {
+        {
         public static List<SelfReferenceData> tree = new List<SelfReferenceData>();
         public int? TaskID { get; set; }
         public string TaskName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public String Progress { get; set; }
-        public String Priority { get; set; }
+        public Prioritize Priority { get; set; }
         public double? Duration { get; set; }
         public int? ParentID { get; set; }
         public bool? IsParent { get; set; }
-        public FileType Type { get; set; }
         public int? ParentItem { get; set;}
         public SelfReferenceData() { }
         public static List<SelfReferenceData> GetTree()
@@ -296,7 +296,7 @@ namespace TreeGridComponent.Data {
                 int TaskNameID = 0;
                 int ChildCount = -1;
                 int SubTaskCount = -1;
-                var values = Enum.GetValues(typeof(FileType));
+                var values = Enum.GetValues(typeof(Prioritize));
                 for (var t = 1; t <= 60; t++)
                 {
                 Random gen = new Random();
@@ -307,12 +307,11 @@ namespace TreeGridComponent.Data {
                 DateTime end = new DateTime(2023, 08, 25);
                 int endrange = (end - DateTime.Today).Days;
                 DateTime endingDate = end.AddDays(gen.Next(endrange));
-                string math = (ran.Next() % 3) == 0 ? "High" : (ran.Next() % 2) == 0 ? "Low" : "Critical";
                     string progr = (ran.Next() % 3) == 0 ? "Started" : (ran.Next() % 2) == 0 ? "Open" : "In Progress";
                     bool appr = (ran.Next() % 3) == 0 ? true : (ran.Next() % 2) == 0 ? false : true;
                     root++; TaskNameID++;
                     int rootItem = root + 1;
-                    tree.Add(new SelfReferenceData() { TaskID = rootItem, TaskName = "Parent task " + TaskNameID.ToString(), StartDate = startingDate, EndDate = endingDate, IsParent = true, ParentID = null, Progress = progr, Priority = math, Duration = ran.Next(1, 50),Type = (FileType)(values.GetValue(gen.Next(values.Length))) });
+                    tree.Add(new SelfReferenceData() { TaskID = rootItem, TaskName = "Parent task " + TaskNameID.ToString(), StartDate = startingDate, EndDate = endingDate, IsParent = true, ParentID = null, Progress = progr, Priority = (Prioritize)(values.GetValue(gen.Next(values.Length))), Duration = ran.Next(1, 50) });
                     int parent = tree.Count;
                     for (var c = 0; c < 2; c++)
                     {
@@ -323,12 +322,11 @@ namespace TreeGridComponent.Data {
                     int endrange1 = (end1 - DateTime.Today).Days;
                     DateTime endingDate1 = end1.AddDays(gen.Next(endrange1));
                     root++; ChildCount++;
-                        string val = ((parent + c + 1) % 3 == 0) ? "Low" : "Critical";
                         int parn = parent + c + 1;
                         progr = (ran.Next() % 3) == 0 ? "In Progress" : (ran.Next() % 2) == 0 ? "Open" : "Validated";
                         appr = (ran.Next() % 3) == 0 ? true : (ran.Next() % 2) == 0 ? false : true;
                         int iD = root + 1;
-                        tree.Add(new SelfReferenceData() { TaskID = iD, TaskName = "Child task " + (ChildCount + 1).ToString(), StartDate = startingDate1, EndDate = endingDate1, IsParent = (((parent + c + 1) % 3) == 0), ParentID = rootItem, Progress = progr, Priority = val, Duration = ran.Next(1, 50),Type = (FileType)(values.GetValue(gen.Next(values.Length))) });
+                        tree.Add(new SelfReferenceData() { TaskID = iD, TaskName = "Child task " + (ChildCount + 1).ToString(), StartDate = startingDate1, EndDate = endingDate1, IsParent = (((parent + c + 1) % 3) == 0), ParentID = rootItem, Progress = progr, Priority = (Prioritize)(values.GetValue(gen.Next(values.Length))), Duration = ran.Next(1, 50) });
                         if ((((parent + c + 1) % 3) == 0))
                         {
                         int immParent = tree.Count;
@@ -341,8 +339,7 @@ namespace TreeGridComponent.Data {
                             int endrange2 = (end2 - DateTime.Today).Days;
                             DateTime endingDate2 = end2.AddDays(gen.Next(endrange2));
                             root++; SubTaskCount++;
-                                string Prior = (immParent % 2 == 0) ? "Validated" : "Normal";
-                                tree.Add(new SelfReferenceData() { TaskID = root + 1, TaskName = "Sub task " + (SubTaskCount + 1).ToString(), StartDate = startingDate2, EndDate = endingDate2, IsParent = false, ParentID = iD, Progress = (immParent % 2 == 0) ? "In Progress" : "Closed", Priority = Prior, Duration = ran.Next(1, 50),Type = (FileType)(values.GetValue(gen.Next(values.Length))) });
+                                tree.Add(new SelfReferenceData() { TaskID = root + 1, TaskName = "Sub task " + (SubTaskCount + 1).ToString(), StartDate = startingDate2, EndDate = endingDate2, IsParent = false, ParentID = iD, Progress = (immParent % 2 == 0) ? "In Progress" : "Closed", Priority = (Prioritize)(values.GetValue(gen.Next(values.Length))), Duration = ran.Next(1, 50) });
                             }
                         }
                     }
