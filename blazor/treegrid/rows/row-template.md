@@ -14,7 +14,7 @@ To know about Row Template in Blazor tree grid Component, you can check this vid
 {% youtube
 "youtube:https://www.youtube.com/watch?v=cB4NjwFya_U"%}
 
-The **RowTemplate** has an option to customize the look and behavior of the tree grid rows. The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowTemplate.html) property accepts either the **template** string or HTML elements.
+The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowTemplate.html) has an option to customize the look and behavior of the tree grid rows. The `RowTemplate` property accepts either the **template** string or HTML elements.
 
 {% tabs %}
 
