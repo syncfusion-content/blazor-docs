@@ -279,7 +279,7 @@ To set up the column virtualization, set the [EnableVirtualization](https://help
 
 ## Timeline virtualization
 
-Timeline virtualization allows you to load large timespan with high performance. Initially it renders timeline, twice the width of the gantt element, while other timeline cells render on-demand during horizontal scrolling. To set up the timeline virtualization, you need to define [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableVirtualization) as true.
+Timeline virtualization allows you to load data sources having a large timespan with high performance. Initially, it renders the timeline with twice the width of the gantt element, while other timeline cells render on-demand during horizontal scrolling. To set up the timeline virtualization, you need to define [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableVirtualization) as true.
 
 
 ```csharp
@@ -416,6 +416,5 @@ Timeline virtualization allows you to load large timespan with high performance.
 * It is necessary to mention the height of the Gantt in pixels when enabling Virtual Scrolling.
 * Cell selection will not be persisted in a row.
 * Programmatic selection using the **SelectRows** method is not supported in virtual scrolling.
-* Currently Editing, Row Drag and Drop are not supported with Virtual scrolling.
 * Collapse all and expand all actions are performed only for the current view-port data in virtual scrolling.
 * While using column virtualization, column width should be in the pixel. Percentage values are not accepted.
