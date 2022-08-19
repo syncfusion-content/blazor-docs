@@ -11,11 +11,15 @@ documentation: ug
 
 # Working with Data in Blazor Stock Chart Component
 
-Stock Chart can visualize data bound from local or remote data.
+The Stock Chart uses [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports both RESTful JSON data services binding and IEnumerable binding. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) value can be set using either [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) property value or a list of business objects.
 
-## Local Data
+It supports the following data binding methods:
+* List binding
+* Remote data
 
-To bind list binding to the stock chart, a IEnumerable object can be assigned to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property. The list data source can also be provided as an instance of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) or by using SfDataManager component. Now map the fields in list to
+## List binding
+
+To do list binding to the stock chart, an IEnumerable object can be assigned to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property. The list data source can also be provided as an instance of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) or by using SfDataManager component. Now map the fields in list to
 [XName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_XName), [High](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_High), [Low](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Low), [Open](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Open) and [Close](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Close)
 properties.
 
@@ -55,10 +59,48 @@ properties.
    };
 }
 
-
 ```
 
 ![Binding Local Data in Blazor Stock Chart](images/common/blazor-stock-chart-bind-local-data.png)
+
+> By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
+
+### ExpandoObject binding
+
+Stock Chart is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile time. In such circumstances data can be bound to the Stock chart as a list of **ExpandoObject**. The **ExpandoObject** can be bound to Stock chart by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+@using System.Dynamic
+
+<SfRangeNavigator Value="@Value" ValueType="RangeValueType.DateTime">
+    <RangeNavigatorSeriesCollection>
+        <RangeNavigatorSeries DataSource="@StockInfo" XName="X" Type="RangeNavigatorType.Area" YName="Y">
+        </RangeNavigatorSeries>
+    </RangeNavigatorSeriesCollection>
+</SfRangeNavigator>
+
+@code{
+    private List<DateTime> Dates = new List<DateTime> { new DateTime(2005, 01, 01), new DateTime(2006, 01, 01), 
+        new DateTime(2007, 01, 01), new DateTime(2008, 01, 01), new DateTime(2009, 01, 01), new DateTime(2010, 01, 01), new DateTime(2011, 01, 01) };
+    public DateTime[] Value = new DateTime[] { new DateTime(2006, 01, 01), new DateTime(2008, 01, 01) };
+    public List<ExpandoObject> StockInfo { get; set; } = new List<ExpandoObject>();
+    private Random randomNum = new Random();
+    protected override void OnInitialized()
+    {
+        StockInfo = Enumerable.Range(0, 6).Select((x) =>
+        {
+            dynamic d = new ExpandoObject();
+            d.X = Dates[x];
+            d.Y = randomNum.Next(20, 70);
+            return d;
+        }).Cast<ExpandoObject>().ToList<ExpandoObject>();
+    }
+}
+```
+
+![Blazor Range Navigator with ExpandoObject](images/working-data/blazor-range-expando-object.png)
 
 ## Remote Data
 
