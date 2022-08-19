@@ -428,7 +428,7 @@ In the following sample, you can get the instance of that particular child gr
 
 ## Customize detail template icon
 
-The Detail template icon is used to expand or collapse the detail content. You can customize this icon through CSS itself. You can achieve this requirement by overriding the below two CSS styles.
+The Detail template icon is used to expand or collapse the detail content. You can customize this icon through CSS itself. This can be achieved by overriding the two CSS styles listed below.
 
 ```cshtml
 .e-grid .e-icon-grightarrow::before {
@@ -440,7 +440,7 @@ The Detail template icon is used to expand or collapse the detail content. You c
 }
 ```
 
-This can be demonstrate in the following sample:
+This is demonstrated in the following sample:
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -506,7 +506,6 @@ This can be demonstrate in the following sample:
         text-overflow: ellipsis;
         white-space: nowrap;
     }
-
     .photo {
         width: 100px;
         height: 100px;
