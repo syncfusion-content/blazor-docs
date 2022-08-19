@@ -513,14 +513,11 @@ In the following code sample, you can prevent default filter query generation us
 
 ### Customize filter UI in foreignkey column
 
-A custom component can be rendered in the filter UI of the foreign key column using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) feature of Grid.
+The Grid has an option to render the custom component in the filter menu. This can be achieved by using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) feature of the Grid.
 
-The following example demonstrates the way to create a custom filtering UI by rendering the `SfDropDownList` component in the foreign key column.
+> For all filter types other than FilterBar, filtering parameters will be sent in the form of `PredicateModel<T>`. Here, T represents the type of `ForeignKeyValue` property when using the foreignkey column.
 
-> * For all filter types other than FilterBar, filtering parameters will be sent in the form of `PredicateModel<T>`.
-
-> * For the foreign key column, T represents the type of `ForeignKeyValue` property.
-
+The following sample demonstrates how to render the custom filter UI in the foreign key column. Here, `SfDropDownList` is rendered in the filter menu of the Employee Name foreign key column.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
