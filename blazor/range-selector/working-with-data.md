@@ -253,4 +253,54 @@ The following sample code shows how to send parameters using the `Query` propert
 ```
 ![Blazor Range Navigator with Query](images/working-data/blazor-range-remote-data.png)
 
+## Observable collection
+
+The [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0) (dynamic data collection) provides notifications when items are added, removed, and moved. The implemented [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-6.0) provides notification when the dynamic changes of adding, removing, moving, and clearing the collection occur.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+@using System.Collections.ObjectModel;
+
+<SfRangeNavigator Value="@Value" ValueType="RangeValueType.DateTime" IntervalType="RangeIntervalType.Years">
+    <RangeNavigatorSeriesCollection>
+        <RangeNavigatorSeries DataSource="@ChartPoints" XName="Date" Type="RangeNavigatorType.Line" YName="Close">
+        </RangeNavigatorSeries>
+    </RangeNavigatorSeriesCollection>
+</SfRangeNavigator>
+
+@code {
+    public ObservableCollection<RangeData> ChartPoints { get; set; }
+
+    public DateTime[] Value = new DateTime[] { new DateTime(2006, 01, 01), new DateTime(2008, 01, 01) };
+
+    public class RangeData
+    {
+        public DateTime Date { get; set; }
+        public double Close { get; set; }
+        public static ObservableCollection<RangeData> GetData()
+        {
+            ObservableCollection<RangeData> ChartPoints = new ObservableCollection<RangeData>()
+            {
+                new RangeData { Date = new DateTime(2005, 01, 01), Close = 21 },
+                new RangeData { Date = new DateTime(2006, 01, 01), Close = 24 },
+                new RangeData { Date = new DateTime(2007, 01, 01), Close = 36 },
+                new RangeData { Date = new DateTime(2008, 01, 01), Close = 38 },
+                new RangeData { Date = new DateTime(2009, 01, 01), Close = 54 },
+                new RangeData { Date = new DateTime(2010, 01, 01), Close = 57 },
+                new RangeData { Date = new DateTime(2011, 01, 01), Close = 70 }
+            };
+            return ChartPoints;
+        }
+    }
+
+    protected override void OnInitialized()
+    {
+        this.ChartPoints = RangeData.GetData();
+    }
+}
+```
+
+![Blazor Chart with Web API Binding](images/working-data/blazor-range-observable-collection.png)
+
 > Refer to our [Blazor Range Selector](https://www.syncfusion.com/blazor-components/blazor-range-selector) feature tour page for its groundbreaking feature representations and also explore our [Blazor Range Selector Example](https://blazor.syncfusion.com/demos/range-selector/range-navigator?theme=fluent) to know various Range Selector types and how to represent time-dependent data, showing trends at equal intervals.
