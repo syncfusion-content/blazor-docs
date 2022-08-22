@@ -1227,7 +1227,7 @@ This is demonstrated in the following sample code:
 
 ## How to make a Grid column always editable
 
-You can make the Grid column always editable by using the column template feature of the Grid.
+You can make the Grid column always editable by using the [column template](https://blazor.syncfusion.com/documentation/datagrid/column-template) feature of the Grid.
 
 In the following example, the `SfTextBox` is rendered in the ShipCountry column using a column template. The edited changes are saved in the data source using the two-way binding(@bind-Value) of the `SfTextBox` component.
 
@@ -1242,11 +1242,8 @@ In the following example, the `SfTextBox` is rendered in the ShipCountry column 
         <GridColumn Field="OrderDate" HeaderText=" Order Date" Format="d"  Width="130" Type="ColumnType.Date"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150">
             <Template>
-                @{
-                    var orderdetails = (context as Order);
-                }
                 <div @onkeydown:stopPropagation="true">
-                    <SfTextBox @bind-Value="@orderdetails.ShipCountry"></SfTextBox>
+                    <SfTextBox @bind-Value="(context as Order).ShipCountry"></SfTextBox>
                 </div>
             </Template>
         </GridColumn>
@@ -1265,7 +1262,6 @@ In the following example, the `SfTextBox` is rendered in the ShipCountry column 
             ShipCountry = (new string[] { "USA", "UK", "JAPAN" })[new Random().Next(3)]
         }).ToList();
     }
-
     public class Order
     {
         public int? OrderID { get; set; }
