@@ -94,6 +94,63 @@ Chart is a generic component which is strongly bound to a model type. There are 
 
 ![Blazor Chart with ExpandoObject Binding](images/working-data/blazor-chart-expando-object-binding.png)
 
+### DynamicObject binding
+
+Chart supports **DynamicObject** data source when the model type is unknown. The **DynamicObject** can be bound to chart by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property.
+
+```cshtml
+@using Syncfusion.Blazor.Charts
+@using System.Dynamic
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"></ChartPrimaryXAxis>
+    <ChartPrimaryYAxis></ChartPrimaryYAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="MedalDetails" XName="X" YName="Y" Type="ChartSeriesType.Area"></ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    private List<DateTime> Dates = new List<DateTime> { new DateTime(2005, 01, 01), new DateTime(2006, 01, 01), 
+        new DateTime(2007, 01, 01), new DateTime(2008, 01, 01), new DateTime(2009, 01, 01), new DateTime(2010, 01, 01), new DateTime(2011, 01, 01) };
+    public DateTime[] Value = new DateTime[] { new DateTime(2006, 01, 01), new DateTime(2008, 01, 01) };
+    private Random randomNum = new Random();
+    public List<DynamicDictionary> MedalDetails = new List<DynamicDictionary>() { };
+    protected override void OnInitialized()
+    {
+        MedalDetails = Enumerable.Range(0, 5).Select((x) =>
+        {
+            dynamic d = new DynamicDictionary();
+            d.X = Dates[x];
+            d.Y = randomNum.Next(20, 80);
+            return d;
+        }).Cast<DynamicDictionary>().ToList<DynamicDictionary>();
+    }
+    public class DynamicDictionary : DynamicObject
+    {
+        Dictionary<string, object> dictionary = new Dictionary<string, object>();
+
+        public override bool TryGetMember(GetMemberBinder binder, out object result)
+        {
+            string name = binder.Name;
+            return dictionary.TryGetValue(name, out result);
+        }
+        public override bool TrySetMember(SetMemberBinder binder, object value)
+        {
+            dictionary[binder.Name] = value;
+            return true;
+        }
+
+        public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
+        {
+            return this.dictionary?.Keys;
+        }
+    }
+}
+```
+
+![Blazor Chart with DynamicObject Binding](images/working-data/blazor-chart-dynamic-object.png)
+
 ## Remote data
 
 Assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property to bind remote data to the chart component. Provide the endpoint Url to communicate with a remote data source.
@@ -393,6 +450,62 @@ On the other hand, to configure the chart using Web API, provide the appropriate
 </SfChart>
 
 ```
+
+## Observable collection
+
+The [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0) (dynamic data collection) provides notifications when items are added, removed, and moved. The implemented [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-6.0) provides notification when the dynamic changes of adding, removing, moving, and clearing the collection occur.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+@using System.Collections.ObjectModel;
+
+<SfChart @ref="ChartObj" Title="Olympic Medal Counts - RIO" Width="450px">
+    <ChartArea><ChartAreaBorder Width="0"></ChartAreaBorder></ChartArea>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" Interval="1">
+        <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
+        <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
+    </ChartPrimaryXAxis>
+    <ChartPrimaryYAxis Title="Medal Count" Maximum="50" Interval="10">
+        <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
+        <ChartAxisLineStyle Width="0"></ChartAxisLineStyle>
+    </ChartPrimaryYAxis>
+    <ChartSeriesCollection>
+        <ChartSeries TooltipMappingName="MappingName" DataSource="@ChartPoints" XName="Country" YName="GoldMedal" Name="Gold" ColumnSpacing="0.1" Type="ChartSeriesType.Column">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    SfChart ChartObj;
+
+    public ObservableCollection<ColumnChartData> ChartPoints { get; set; }
+
+    public class ColumnChartData
+    {
+        public string Country { get; set; }
+        public double GoldMedal { get; set; }
+        public static ObservableCollection<ColumnChartData> GetData()
+        {
+            ObservableCollection<ColumnChartData> ChartPoints = new ObservableCollection<ColumnChartData>()
+            {
+                new ColumnChartData { Country = "GBR", GoldMedal = 27 },
+                new ColumnChartData { Country = "CHN", GoldMedal = 26 },
+                new ColumnChartData { Country = "AUS", GoldMedal = 8 },
+                new ColumnChartData { Country = "RUS", GoldMedal = 19 }
+            };
+            return ChartPoints;
+        }
+    }
+    protected override void OnInitialized()
+    {
+        this.ChartPoints = ColumnChartData.GetData();
+    }
+}
+
+```
+
+![Blazor Chart with Web API Binding](images/working-data/observable-collection.png)
 
 ## Empty points
 
