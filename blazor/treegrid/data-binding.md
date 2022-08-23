@@ -642,6 +642,21 @@ namespace WebAPI.Controller
         }
 
     }
+    public static class SortingExtend
+    {    
+        public static IQueryable<T> Sort<T>(this IQueryable<T> source, string sortBy)    
+        {        
+            if (source == null)            
+                    throw new ArgumentNullException("source");
+
+            if (string.IsNullOrEmpty(sortBy))            
+                    throw new ArgumentNullException("sortBy");
+
+            source = (IQueryable<T>)source.OrderBy(sortBy);
+
+            return source;    
+        }
+    }
 }
 
 {% endhighlight %}
