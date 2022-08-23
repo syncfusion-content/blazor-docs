@@ -30,7 +30,7 @@ Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
         TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right">
         </TreeGridColumn>
         <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" 
-        ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules { Number = true,
+        ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules { Required = true, Number = true,
         Min = 0 })" EditType="Syncfusion.Blazor.Grids.EditType.NumericEdit"
         TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right">
         </TreeGridColumn>
