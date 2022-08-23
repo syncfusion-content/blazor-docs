@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Azure Maps in Blazor Maps Component | Syncfusion
-description: Checkout and learn here all about Azure maps in Syncfusion Blazor Maps component and much more details.
+description: Checkout and learn here all about Azure Maps in the Syncfusion Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug
@@ -30,9 +30,9 @@ The Azure Maps can be rendered by setting the [UrlTemplate](https://help.syncfus
 
 ![Blazor Azure Maps](../images/MapProviders/blazor-azure-map.png)
 
-**Enable zooming and panning**
+## Enable zooming and panning
 
-Tile Maps layer can be zoomed and panned. Zooming helps to get a closer look at a particular area on a Maps for in-depth analysis. Panning helps to move Maps around to focus the targeted area.
+The Azure Maps layer can be zoomed and panned. Zooming helps to get a closer look at a particular area on a map for in-depth analysis. Panning helps to move a map around to focus the targeted area.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -52,11 +52,11 @@ Tile Maps layer can be zoomed and panned. Zooming helps to get a closer look at 
 </SfMaps>
 ```
 
-![Blazor Azure Maps with Zooming](../images/MapProviders/blazor-azure-map-zooming.png)
+![Blazor Azure Maps with zooming and panning](../images/MapProviders/blazor-azure-map-zooming.png)
 
-**Adding markers and navigation line**
+## Adding markers and navigation line
 
-Markers can be added to the layers of tile Maps by setting the corresponding location's coordinates of latitude and longitude using [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) class. Navigation lines can be added on top of the tile Maps layer for highlighting a path among various places by setting the corresponding location's coordinates of latitude and longitude in the [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
+Markers can be added to the layers of Azure Maps by setting the corresponding location's coordinates of latitude and longitude using [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html). Navigation lines can be added on top of the Azure Maps layer for highlighting a path among various places by setting the corresponding location's coordinates of latitude and longitude in the [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
 
 ```csharp
 @using Syncfusion.Blazor.Maps
@@ -95,11 +95,11 @@ Markers can be added to the layers of tile Maps by setting the corresponding loc
 }
 ```
 
-![Blazor Azure Maps with Markers and Navigation Line](../images/MapProviders/blazor-azure-map-marker-and-line.png)
+![Blazor Azure Maps with markers and navigation line](../images/MapProviders/blazor-azure-map-marker-and-line.png)
 
-**Adding sublayer**
+## Adding sublayer
 
-Any GeoJSON shape can be rendered as a sublayer on top of the tile Maps layer for highlighting a particular continent or country in tile maps by adding another layer and specifying the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to **SubLayer**.
+Any GeoJSON shape can be rendered as a sublayer on top of the Azure Maps layer for highlighting a particular continent or country in Azure maps by adding another layer and specifying the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to **SubLayer**.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -117,11 +117,11 @@ Any GeoJSON shape can be rendered as a sublayer on top of the tile Maps layer fo
 </SfMaps>
 ```
 
-![Blazor Azure Maps with Sublayer](../images/MapProviders/blazor-azure-map-sublayer.png)
+![Blazor Azure Maps with sublayer](../images/MapProviders/blazor-azure-map-sublayer.png)
 
-**Enable legend**
+## Enable legend
 
-The legend can be added to the tile Maps by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property of [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) to **true**.
+The legend can be added to the Azure Maps by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property of [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) to **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -176,4 +176,4 @@ The legend can be added to the tile Maps by setting the [Visible](https://help.s
 
 ```
 
-![Blazor Azure Maps with Legend](../images/MapProviders/blazor-azure-map-legend.png)
+![Blazor Azure Maps with legend](../images/MapProviders/blazor-azure-map-legend.png)
