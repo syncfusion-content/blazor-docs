@@ -7,9 +7,15 @@ control: Maps
 documentation: ug
 ---
 
-The Maps control can render tile server URL's provided by online map providers. By specifying the tile server URL in the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property, we can render the Azure maps.
+# Azure Maps in Blazor Maps Component
 
->Refer to [Azure Maps Licensing](https://developers.google.com/maps/terms#10-license-restrictions).
+Azure Maps is yet another online Maps provider, owned by Microsoft. As like OSM and Bing Maps, it provides Maps tile images based on our requests and combines those images into a single one to display Maps area.
+
+## Adding Azure Maps
+
+The Azure Maps can be rendered by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property with the tile server URL provided by online map providers. In the meantime, a subscription key is required for Azure Maps. Follow the steps in this [link](https://docs.microsoft.com/en-us/azure/search/search-security-api-keys) to generate an API key, and then added the key to the URL.
+
+>Refer to [Azure Maps Licensing](https://azure.microsoft.com/en-in/support/legal/).
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
