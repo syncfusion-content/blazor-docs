@@ -308,7 +308,7 @@ The [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.co
 }
 ```
 
-![Blazor Chart with Web API Binding](images\common\blazor-stock-chart-observable-collection.png)
+![Blazor Chart with Web API Binding](images/common/blazor-stock-chart-observable-collection.png)
 
 ## Entity Framework
 
