@@ -88,7 +88,7 @@ The following sample demonstrates the option to add the font name and font size 
 ## Custom font and size
 
 Rich Text Editor provides support to custom fonts and size with existing list.
-If you want to add additional font names and font sizes to font drop-down, pass the font information as `List<DropDownItemModel>` data to the field of [RichTextEditorFontSize.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontSize.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorFontSize_Items) and [RichTextEditorFontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontFamily.html) tag.
+If you want to add additional font names and font sizes to font drop-down, pass the font information as `List<DropDownItemModel>` data to the `Items` field of `RichTextEditorFontSize` and `RichTextEditorFontFamily` tag.
 
 ```csharp
 
