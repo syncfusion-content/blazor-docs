@@ -649,6 +649,75 @@ You can able to render SfTimePicker component in EditTemplate. In the below samp
 In the following image, **SfTimePicker** component is rendered with **EditTemplate** in OrderDate column
 ![Blazor DataGrid with Editing in Custom TimePicker](./images/blazor-datagrid-editing-in-custom-timepicker.png)
 
+### Using TextBox in EditTemplate
+
+By defining the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), you can render a custom editor component in the Grid edit form.
+
+In the following sample, the `SfTextBox` component is rendered in EditTemplate for the Customer ID column. You can prevent the default save action on pressing the enter key in the Grid when editing the Customer ID column. This can be achieved by calling the JavaScript function using the Microsoft JsInterop support in the OnFocus event of the `SfTextbox`.
+
+```cshtml
+function EditKeyDown(id) {    
+    document.getElementById(id).addEventListener("keydown", function (e) {        
+        if (e.key == "Enter") {            
+            e.stopPropagation();
+        }
+    });
+}
+```
+
+```cshtml
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Grids
+@inject IJSRuntime Runtime
+
+<SfGrid DataSource="@OrderData" Toolbar=@ToolbarItems>
+    <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" EditType="EditType.DefaultEdit" TextAlign="TextAlign.Center" Width="130">
+            <EditTemplate>
+                <SfTextBox ID="CustomerID" OnFocus="Focus" ShowClearButton="false" Multiline="true" @bind-Value="((context as Order).CustomerID)">
+                </SfTextBox>
+            </EditTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" EditType="EditType.NumericEdit" TextAlign="TextAlign.Center" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Center" EditType="EditType.DropDownEdit" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public string[] ToolbarItems = new string[] { "Add", "Edit", "Delete", "Update", "Cancel" };
+
+    public void Focus()
+    {
+        Runtime.InvokeVoidAsync("EditKeyDown", "CustomerID");
+    }
+
+    List<Order> OrderData = new List<Order>
+    {
+        new Order() { OrderID = 10248, CustomerID = "VINET", Freight = 32.38, ShipName = "Vins et alcools Chevalier", Verified = true },
+        new Order() { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61, ShipName = "Toms Spezialitäten", Verified = false },
+        new Order() { OrderID = 10250, CustomerID = "HANAR", Freight = 65.83, ShipName = "Hanari Carnes", Verified = true },
+        new Order() { OrderID = 10251, CustomerID = "VICTE", Freight = 41.34, ShipName = "Victuailles en stock", Verified = false },
+        new Order() { OrderID = 10252, CustomerID = "SUPRD", Freight = 51.3, ShipName = "Suprêmes délices", Verified = false },
+        new Order() { OrderID = 10253, CustomerID = "HANAR", Freight = 58.17, ShipName = "Hanari Carnes", Verified = false },
+        new Order() { OrderID = 10254, CustomerID = "CHOPS", Freight = 22.98, ShipName = "Chop-suey Chinese", Verified = true },
+        new Order() { OrderID = 10255, CustomerID = "RICSU", Freight = 148.33, ShipName = "Richter Supermarket", Verified = true },
+        new Order() { OrderID = 10256, CustomerID = "WELLI", Freight = 13.97, ShipName = "Wellington Importadora", Verified = false },
+        new Order() { OrderID = 10257, CustomerID = "HILAA", Freight = 81.91, ShipName = "HILARION-Abastos", Verified = true }
+    };
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
+        public string ShipName { get; set; }
+    }
+}
+```
+
+
 ### Using MultiSelect Dropdown in EditTemplate
 
 You can able to render SfMultiSelect component in EditTemplate. In the below sample we have rendered  **SfMultiSelect** component in **EditTemplate** for ChosenItems column.
