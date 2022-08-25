@@ -87,7 +87,7 @@ To apply search at initial rendering, set the Fields, Operator, Key, and IgnoreC
 @using Syncfusion.Blazor.TreeGrid;
 @using Syncfusion.Blazor.Data;
 
-<SfTreeGrid IdMapping="TaskId" TValue="TreeData.BusinessObject" ParentIdMapping="ParentId" TreeColumnIndex="1" Toolbar="@(new List<string>() { "Search" })">
+<SfTreeGrid IdMapping="TaskId" TValue="BusinessObject" ParentIdMapping="ParentId" TreeColumnIndex="1" Toolbar="@(new List<string>() { "Search" })">
     <SfDataManager Json="@TreeGridData" Adaptor="Syncfusion.Blazor.Adaptors.JsonAdaptor">
     </SfDataManager>
     <TreeGridSearchSettings Key="Child Task 1"></TreeGridSearchSettings>
@@ -101,10 +101,10 @@ To apply search at initial rendering, set the Fields, Operator, Key, and IgnoreC
 </SfTreeGrid>
 
 @code{
-    public TreeData.BusinessObject[] TreeGridData { get; set; }
+    public BusinessObject[] TreeGridData { get; set; }
     protected override void OnInitialized()
     {
-        this.TreeGridData = TreeData.GetSelfDataSource().ToList().Cast<TreeData.BusinessObject>().ToArray();
+        this.TreeGridData = BusinessObject.GetSelfDataSource().ToList().Cast<BusinessObject>().ToArray();
     }
 }
 
