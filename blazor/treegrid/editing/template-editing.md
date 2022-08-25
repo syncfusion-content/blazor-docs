@@ -282,7 +282,7 @@ The following image represents the dialog template of the tree grid component wi
 
 By default, the first input element in the dialog will be focused while opening it. If the first input element is in disabled or hidden state, you can set focus to the required input element in the corresponding components [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_Created) or [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_DataBound) event.
 
-In the following sample code, where the first input element is in disabled state. So the **CustomerID** edit field is focused by invoking its [FocusIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusIn) method in the AutoComplete's `DataBound` event.
+In the following sample code, where the first input element is in disabled state. So the **TaskName** edit field is focused by invoking its [FocusIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusIn) method in the AutoComplete's `DataBound` event.
 
 {% tabs %}
 
@@ -405,4 +405,4 @@ public class TreeData
 {% endtabs %}
 
 The following image represents the AutoComplete component in focused state inside the dialog template of the tree grid component,
-![Blazor Tree Grid displays Dynamic Focus of Components](../images/blazor-treegrid-dynamic-focus-component.gif)
+![Blazor Tree Grid displays Dynamic Focus of Component](../images/blazor-treegrid-dynamic-focus-component.gif)

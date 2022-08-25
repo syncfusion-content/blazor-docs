@@ -279,14 +279,14 @@ public class TreeData
 
 {% endtabs %}
 
-In the following image, `Autocomplete` component is rendered with `EditTemplate` in TaskName column.
+In the following image, `Autocomplete` component is rendered with `EditTemplate` in **TaskName** column.
 ![Blazor Tree Grid with Autocomplete Edit Template](../images/blazor-treegrid-autocomplete-edit-template.png)
 
 ### Using ComboBox in EditTemplate
 
 You can render the [SfComboBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html) component in [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate).
 
-In the following sample, the `SfComboBox` component is rendered in the `EditTemplate` for the Priority column.
+In the following sample, the `SfComboBox` component is rendered in the `EditTemplate` for the **Priority** column.
 
 {% tabs %}
 
@@ -378,7 +378,7 @@ public class TreeData
 
 You can render the [SfNumericTextBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html) component in [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate).
 
-In the following sample, the `SfNumericTextBox` component is rendered in the `EditTemplate` for the Freight column.
+In the following sample, the `SfNumericTextBox` component is rendered in the `EditTemplate` for the **Duration** column.
 
 {% tabs %}
 
@@ -587,7 +587,7 @@ public class SelfReferenceData
 In the following image, `SfTimePicker` component is rendered with `EditTemplate` in **StartDate** column
 ![Blazor Tree Grid with Editing in Custom TimePicker](../images/blazor-treegrid-editing-in-custom-timepicker.png)
 
-### Using MultiSelect Dropdown in EditTemplate
+### Using MultiSelect dropdown in EditTemplate
 
 You can able to render [SfMultiSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html) component in [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate). In the below sample we have rendered `SfMultiSelect` component in `EditTemplate` for ChosenItems column.
 
@@ -760,5 +760,5 @@ public class TreeData
 
 {% endtabs %}
 
-In the following image, `SfRichTextEditor` component is rendered with `EditTemplate` in **Task Name** column
+In the following image, `SfRichTextEditor` component is rendered with `EditTemplate` in **TaskName** column
 ![Blazor Tree Grid with Editing in Custom RichTextEditor](../images/blazor-treegrid-editing-in-custom-richtexteditor.png)
