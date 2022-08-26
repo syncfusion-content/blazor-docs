@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Detail Template in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn here all about Detail Template in Syncfusion Blazor Tree Grid component and much more details.
+description: Check out here and learn more details about the Detail Template in the Syncfusion Blazor Tree Grid component.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Detail Template in Blazor Tree Grid Component
 
-The detail template provides additional information about a particular row. By expanding the parent row the child rows are expanded along with their detail template. The [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~DetailTemplate.html) property accepts either the template string or HTML elements.
+The detail template provides additional information about a particular row. By expanding the parent row, the child rows are expanded along with their detail template. The [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~DetailTemplate.html) property accepts either the template string or HTML elements.
 
 {% tabs %}
 
@@ -95,9 +95,9 @@ public class Employee
 
 ## Rendering custom component
 
-To render the custom component inside the detail row, define the template in the [DetailTemplate](../templates/#detailtemplates-component) and render the custom component in any of the detail row element.
+To render the custom component inside the detail row, define the template in the [DetailTemplate](../templates/#detailtemplates-component) and render the custom component in any detail row element.
 
-In the following sample, tree grid component is rendered as a detailed template of the row.
+The tree grid component is rendered as a detailed row template in the following sample.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid

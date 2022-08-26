@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Row Template in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn here all about Row Template in Syncfusion Blazor Tree Grid component and much more details.
+description: Check out here and learn more details about the Row Template in the Syncfusion Blazor Tree Grid component.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Row Template in Blazor Tree Grid Component
 
-To know about Row Template in Blazor tree grid Component, you can check this video.
+To know more about Row Template in the Blazor tree grid Component, you can check this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=cB4NjwFya_U"%}
