@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Column Reorder in Blazor Tree Grid Component | Syncfusion
-description: Checkout here and learn more about column reorder in the Syncfusion Blazor Tree Grid component and much more details.
+description: Checkout here and learn more details about the column reorder in the Syncfusion Blazor Tree Grid component.
 platform: Blazor
 control: Tree Grid
 documentation: ug
