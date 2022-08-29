@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Column Menu in Blazor Tree Grid Component | Syncfusion
-description: Checkout here and learn more about the column menu in the Syncfusion Blazor Tree Grid component.
+description: Checkout here and learn more about the column menu in the Syncfusion Blazor Tree Grid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
