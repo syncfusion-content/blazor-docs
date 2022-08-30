@@ -44,4 +44,4 @@ The following code example shows the review status of the annotation.
     }
 }
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples)
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples).

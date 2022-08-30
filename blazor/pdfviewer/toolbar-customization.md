@@ -60,6 +60,8 @@ The following code snippet explains how to show or hide toolbar using the ShowTo
 }
 ```
 
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples).
+
 ## Show or hide navigation toolbar
 
 Navigation toolbar is the side bar, which contains the options to expand and collapse the bookmark panel and page thumbnail panel. This navigation toolbar visibility can be toggled either by using the `EnableNavigationToolbar` property or `ShowNavigationToolbar` method.
@@ -128,5 +130,35 @@ You can show or hide the toolbar items using the “PdfViewerToolbarSettings” 
     };
 }
 ```
+
+## Show or hide annotation toolbar
+
+Annotation toolbar appears below the main toolbar, which contains the options to edit the annotations. This annotation toolbar visibility can be toggled either by using the `EnableAnnotationToolbar` or `ShowAnnotationToolbar` method.
+
+The following code snippet explains how to show or hide annotation toolbar using the ShowAnnotationToolbar method.
+
+```cshtml
+@using Syncfusion.Blazor.PdfViewerServer
+@using Syncfusion.Blazor.PdfViewer
+
+<SfPdfViewerServer @ref="viewer" Width="1000" Height="700" DocumentPath="@documentPath">
+    <PdfViewerEvents DocumentLoaded="DocumentLoad"></PdfViewerEvents>
+</SfPdfViewerServer>
+
+@code{
+
+    private string documentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";    
+
+    SfPdfViewerServer viewer;
+
+    //Invokes while loading document in the PDFViewer. 
+    public void DocumentLoad(LoadEventArgs args)
+    {
+        //Shows the AnnotationToolbar on initial loading.
+        viewer.ShowAnnotationToolbar(true);        
+    }
+}
+```
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples).
 
 > You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.
