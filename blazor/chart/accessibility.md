@@ -9,7 +9,21 @@ documentation: ug
 
 # Accessibility in Blazor Chart Component
 
-Accessibility is achieved in the Chart component through keyboard navigations. The Chart features can be effectively accessed through assistive technologies such as screen readers.
+Accessibility is achieved in the Chart component through WAI-ARIA standard and keyboard navigation. The chart features can be effectively accessed through assistive technologies such as screen readers.
+
+## WAI-ARIA
+
+WAI-ARIA(Accessibility Initiative - Accessible Rich Internet Applications) defines a way to increase the accessibility of web pages, dynamic content, and user interface components developed with AJAX, HTML, Javascript, and related technologies. ARIA provides additional semantics to describe the role, state, and functionality of web components.
+
+The following ARIA attributes are used in the chart:
+
+Element |Default description
+-----|-----
+Datalabel |Reads the Point y value.
+Legend |Click to show or hide the series.
+Axis Title |Reads the axis title.
+Chart Title |Reads the chart title.
+Series Points |Reads the Point x: Point y value.
 
 ## Keyboard navigation
 
