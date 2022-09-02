@@ -144,8 +144,8 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-The following GIF represents the confirmation dialog displayed while performing batch operations in tree grid,
+The following GIF represents the confirmation dialog displayed while performing batch operations in the tree grid.
 ![Blazor Tree Grid displays Update Confirmation Dialog](../images/blazor-treegrid-update-confirm-dialog.gif)
 
 > Enabling `ShowConfirmDialog` requires the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Mode) property value of the [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) component to be **Batch**.
-> If `ShowConfirmDialog` is set to false, then confirmation dialog will not be displayed on batch editing.
+> If `ShowConfirmDialog` is set to false, the confirmation dialog will not be displayed on batch editing.

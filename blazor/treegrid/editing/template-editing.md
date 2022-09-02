@@ -137,13 +137,13 @@ public class TreeData
 
 ![Blazor TreeGrid with Dialog Template](../images/blazor-treegrid-dialog-template.png)
 
-> The template form editors should have **name** attribute.
+> The template form editors should have a **name** attribute.
 
 ### Disable components in dialog template
 
 It is possible to disable particular components rendered inside the dialog template using the data source value. This can be achieved by utilizing the `Enabled` property of the components which specifies whether the component is enabled or disabled.
 
-This is demonstrated in the following sample code, where if the `RequestType` argument value of the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionBegin) event is **BeginEdit** then the `Enabled` property of the **TaskId** and **TaskName** Textbox is set to false.
+This is demonstrated in the following sample code, where if the `RequestType` argument value of the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionBegin) event is **BeginEdit**, the `Enabled` property of the **TaskId** and **TaskName** Textbox is set to false.
 
 {% tabs %}
 
@@ -275,14 +275,14 @@ public class TreeData
 
 {% endtabs %}
 
-The following image represents the dialog template of the tree grid component with disabled components,
+The following image represents the dialog template of the tree grid component with the disabled components,
 ![Blazor Tree Grid displays Disable components](../images/blazor-treegrid-disable-component.png)
 
 ### Set focus to editor
 
-By default, the first input element in the dialog will be focused while opening it. If the first input element is in disabled or hidden state, you can set focus to the required input element in the corresponding components [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_Created) or [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_DataBound) event.
+By default, the first input element in the dialog will be focused while opening it. If the first input element is in a disabled or hidden state, set focus to the required input element in the corresponding components [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_Created) or [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_DataBound) event.
 
-In the following sample code, where the first input element is in disabled state. So the **TaskName** edit field is focused by invoking its [FocusIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusIn) method in the AutoComplete's `DataBound` event.
+In the following sample code, where the first input element is in a disabled state. So the **TaskName** edit field is focused by invoking its [FocusIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusIn) method in the AutoComplete's `DataBound` event.
 
 {% tabs %}
 
@@ -404,5 +404,5 @@ public class TreeData
 
 {% endtabs %}
 
-The following image represents the AutoComplete component in focused state inside the dialog template of the tree grid component,
+The following image represents the AutoComplete component in a focused state inside the dialog template of the tree grid component,
 ![Blazor Tree Grid displays Dynamic Focus of Component](../images/blazor-treegrid-dynamic-focus-component.gif)
