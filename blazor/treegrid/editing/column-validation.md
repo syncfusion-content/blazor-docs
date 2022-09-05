@@ -522,7 +522,9 @@ namespace TreeGridComponent. Data
 
 Use the form validation to display a validation message for a column that is not defined in the tree grid column.
 
-Use the **Validator** property to display a validation message for one of the fields in the dialog template that is not defined in the tree grid column. The validation message for the **TaskName** is displayed in the dialog template in the following example. In the tree grid column, the **TaskName** field is not defined.
+Use the **Validator** property to display a validation message for one of the fields in the dialog template that is not defined in the tree grid column. 
+
+In the below example, the **TaskName** field is not defined in the tree grid column and the validation message for the **TaskName** is displayed in the dialog template. 
 
 > The validation message for fields that are not defined in the tree grid column will be shown as the validation summary (top of the dialog edit form) in the dialog edit form.
 

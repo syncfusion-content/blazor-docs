@@ -461,14 +461,14 @@ The Editing functionalities can be performed based upon the primary key value of
 
 ## Event trace while editing
 
-While editing operation is getting executed the following events will be notified,
+While the editing operation is getting executed, the following events are notified:
 
 * [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionBegin)
 * [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionComplete)
 
-In both of these events, the type of editing operation is returned in the **RequestType** parameter of the event arguments. In addition, the event arguments return the edited row data.
+In both events, the editing operation type is returned in the **RequestType** parameter of the event arguments. In addition, the event arguments return the edited row data.
 
-The **RequestType** values for the editing operations are listed in the below table,
+The **RequestType** values for the editing operations are listed in the below table.
 
 | RequestType | OnActionBegin | OnActionComplete |
 |----------|---------------|---------------|
@@ -478,7 +478,7 @@ The **RequestType** values for the editing operations are listed in the below ta
 | Save | Before save operation begins | After save operation is completed |
 | Cancel | Before cancel operation begins | After cancel operation is completed |
 
-The following sample code demonstrates the different **RequestType** parameters returned while performing editing operations in the OnActionBegin and OnActionComplete events,
+The following sample code demonstrates the different **RequestType** parameters of OnActionBegin and OnActionComplete events while performing editing operations.
 
 {% tabs %}
 
@@ -596,7 +596,7 @@ public class TreeData
 
 ## Performing CRUD operations programmatically
 
-You can perform CRUD operations like **Add**, **Update**, **Delete** by using the `AddRecord`, `UpdateRow`, `DeleteRow` methods.
+Perform the CRUD operations like **Add**, **Update**, **Delete** by using the `AddRecord`, `UpdateRow`, `DeleteRow` methods.
 
 * **AddRecord** - Add a new record into the tree grid.
 * **UpdateRow** - Update an existing record in a tree grid.
@@ -697,41 +697,16 @@ public class TreeData
 
 {% endtabs %}
 
-The following GIF represents the tree grid with Add, Update, Delete items,
+The following GIF represents the tree grid with Add, Update, and Delete items.
 ![CRUD operations in Blazor Tree Grid Editing](../images/blazor-treegrid-editing-in-crud-operation.gif)
-
-## Perform CRUD operation using tree grid events
-
-IQueryable data can be bound directly to tree grid component from database without using data adaptors. IQueryable data bound to tree grid component using DataSource property of SfTreeGrid. While binding the data to tree grid component using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) property, CRUD actions need to be handled using tree grid action events (i.e., using [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionBegin) and [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionComplete) events of tree grid).
-
-### Create an interface layer to the database
-
-Create an interface with CRUD methods like below based on your model class.
-
-```csharp
-using System.Collections.Generic;
-using System.Linq;
-
-namespace LibraryManagement.Models
-{
-    interface ILibraryService
-    {
-        IQueryable<Book> GetBooks();
-        void InsertBook(Book employee);
-        void UpdateBook(long id, Book employee);
-        Book SingleBook(long id);
-        void DeleteBook(long id);
-    }
-}
-```
 
 ## Cancel CRUD operation by using condition
 
-You can cancel the default CRUD operation by specifying args.Cancel as true based on the corresponding args RequestType values.
+Cancel the default CRUD operation by specifying the `Cancel` property as true based on the corresponding `RequestType` property values of the event argument.
 
 ### Cancel CRUD operation for Row/Dialog edit mode
 
-For Row/Dialog edit mode, you have to specify args.Cancel as true in the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionBegin) event.
+For Row or Dialog edit mode, you have to specify the `Cancel` property as true based on the corresponding `RequestType` property values in the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionBegin) event.
 
 {% tabs %}
 
@@ -821,7 +796,7 @@ public class TreeData
 
 ## Custom external edit form 
 
-You can perform the edit operation of tree grid in a custom external form. The edit operation can be done by [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowSelected) property.
+Perform the edit operation of tree grid in a custom external form. The edit operation can be done by the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowSelected) event and `UpdateRow` method of tree grid.
 
 {% tabs %}
 
@@ -947,12 +922,12 @@ public class TreeData
 
 {% endtabs %}
 
-The following GIF represent the tree grid with Custom External form editing,
+The following GIF represent the tree grid with the Custom External form editing,
 ![Blazor Tree Grid with Custom External Form Editing](../images/blazor-treegrid-custom-form-editing.gif)
 
 ## Edit enum column
 
-You can edit the enum type data in the tree grid column using the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate) feature of the tree grid.
+Edit the enum type data in the tree grid column using the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_EditTemplate) feature of the tree grid.
 
 In the following sample, the `SfDropDownList` component is rendered in the `EditTemplate` for the **Priority** column and the enumerated list data can be bound as two-way binding (**@bind-Value**).
 
