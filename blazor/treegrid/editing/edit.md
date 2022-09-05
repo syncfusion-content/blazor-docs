@@ -478,7 +478,7 @@ The **RequestType** values for the editing operations are listed in the below ta
 | Save | Before save operation begins | After save operation is completed |
 | Cancel | Before cancel operation begins | After cancel operation is completed |
 
-The following sample code demonstrates the different **RequestType** parameters returned while performing editing operations in the OnActionBegin and OnActionComplete events.
+The following sample code demonstrates the different **RequestType** parameters of OnActionBegin and OnActionComplete events while performing editing operations.
 
 {% tabs %}
 
@@ -700,38 +700,13 @@ public class TreeData
 The following GIF represents the tree grid with Add, Update, and Delete items.
 ![CRUD operations in Blazor Tree Grid Editing](../images/blazor-treegrid-editing-in-crud-operation.gif)
 
-## Perform CRUD operation using tree grid events
-
-The IQueryable data can be bound directly to the tree grid component from a database without using data adaptors. The IQueryable data is bound to tree grid component using the DataSource property of the SfTreeGrid. While binding the data to tree grid component using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) property, the CRUD actions need to be handled using the tree grid action events (that is, using the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionBegin) and [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionComplete) events of tree grid).
-
-### Create an interface layer to the database
-
-Create an interface with the CRUD methods as follows based on your model class.
-
-```csharp
-using System.Collections.Generic;
-using System.Linq;
-
-namespace LibraryManagement.Models
-{
-    interface ILibraryService
-    {
-        IQueryable<Book> GetBooks();
-        void InsertBook(Book employee);
-        void UpdateBook(long id, Book employee);
-        Book SingleBook(long id);
-        void DeleteBook(long id);
-    }
-}
-```
-
 ## Cancel CRUD operation by using condition
 
-Cancel the default CRUD operation by specifying args. Cancel as true based on the corresponding args RequestType values.
+Cancel the default CRUD operation by specifying the `Cancel` property as true based on the corresponding `RequestType` property values of the event argument.
 
 ### Cancel CRUD operation for Row/Dialog edit mode
 
-For Row or Dialog edit mode, you have to specify args.Cancel as true in the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionBegin) event.
+For Row or Dialog edit mode, you have to specify the `Cancel` property as true based on the corresponding `RequestType` property values in the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionBegin) event.
 
 {% tabs %}
 
@@ -821,7 +796,7 @@ public class TreeData
 
 ## Custom external edit form 
 
-Perform the edit operation of tree grid in a custom external form. The edit operation can be done by the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowSelected) property.
+Perform the edit operation of tree grid in a custom external form. The edit operation can be done by the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_RowSelected) event and `UpdateRow` method of tree grid.
 
 {% tabs %}
 
