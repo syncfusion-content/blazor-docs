@@ -328,7 +328,7 @@ A dashboard layout can be rendered with the components like the chart, grids, ma
 
 These complex data (components) are placed as the panel content by assigning the corresponding component element as the `ContentTemplate` of the panel. 
 
-To add Blazor Range Navigator component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.RangeNavigator](https://www.nuget.org/packages/Syncfusion.Blazor.RangeNavigator) and then install it.
+To add Blazor Data Grid/Chart/Range Navigator component in the app, refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages).
 
 {% tabs %}
 {% highlight razor %}
