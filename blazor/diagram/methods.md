@@ -312,3 +312,477 @@ To create a node, define the Node object and add it to the nodes collection of t
 }
 ```
 ![Diagram Reset](images/ResetZoom-Method.gif)
+
+
+
+## Flip
+The Flip  is used to mirror the selected object’s content and port in the diagram page for horizontal,Vertical and Both direction.
+
+###  FlipDirection:
+| FlipDirection | Description | 
+| -------- | -------- |
+|Horizontal|It is used to flip the node or connector is mirrored across the horizontal axis.|
+|Vertical|	It is used to flip the node or connector is mirrored across the vertical axis.|
+|Both|		It is used to flip the node or port is mirrored across the both horizontal and vertical axis.|
+|None|	It is used to disables all the flip behaviour.| 
+
+
+### FlipMode:
+The FlipMode is used to control the behaviour of the flip object.
+| FlipMode | Description | 
+| -------- | -------- |
+|Content|It is used to enable or disables the flip for object’s content..|
+|Port|	It is used to enable or disables the flip for object’s port.|
+|All|	It is used to enable or disables the flip for both object’s content and port.|
+|None|	It is used to disables all the flipmode behaviour.|
+
+The following code example shows how to change the FlipDirection and FlipMode.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using ChangeEventArgs = Microsoft.AspNetCore.Components.ChangeEventArgs
+
+<style>    
+    #diagram {
+        width: 70%;
+        float: left;
+    }
+    #properties {
+        width: 15%;
+        float: right;
+        margin-right:40px;
+    }
+</style>
+<div id="properties">
+    <h4>HORIZONTAL</h4>
+    <input type="button" value="HorizontalPort" @onclick="@HorizontalPort" />
+    <input type="button" value="HorizontalContent" @onclick="@HorizontalContent" />
+    <input type="button" value="HorizontalAll" @onclick="@HorizontalAll" />
+    <input type="button" value="HorizontalNone" @onclick="@HorizontalNone" /> 
+      <h4>VERTICAL</h4>
+    <input type="button" value="VerticalPort" @onclick="@VerticalPort" />
+    <input type="button" value="VerticalContent" @onclick="@VerticalContent" />
+    <input type="button" value="VerticalBoth" @onclick="@VerticalBoth" />
+    <input type="button" value="VerticalNone" @onclick="@VerticalNone" />
+     <h4>BOTH</h4>
+    <input type="button" value="BothPort" @onclick="@BothPort" />
+    <input type="button" value="BothContent" @onclick="@BothContent" />
+    <input type="button" value="BothAll" @onclick="@BothAll" />
+    <input type="button" value="BothNone" @onclick="@BothNone" />
+ </div>
+
+<div id="#diagram">
+    <SfDiagramComponent @ref="diagram" Width="1000px" Height="1000px"  Nodes="@NodeCollection" Connectors="@connectors">
+        <SnapSettings Constraints="@SnapConstraints.ShowLines"></SnapSettings>
+    </SfDiagramComponent>
+    </div>
+
+@code
+{
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    public SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> NodeCollection;
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+        {
+             ID = "node1",
+             Width = 100,
+             Height = 100,
+             OffsetX = 700,
+             OffsetY = 100,
+             Flip=FlipDirection.Horizontal,
+             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+             {
+                new ShapeAnnotation 
+                {
+                   ID="node1annotation",
+                   Content = "Offset(0,0)", 
+                   Offset = new DiagramPoint() { X = 0, Y = 0 } 
+                }
+             },
+             Shape= new ImageShape()
+             {
+                 Type=NodeShapes.Image,
+                 Source = "data:image/gif;base64,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"
+             },
+             Ports = new DiagramObjectCollection<PointPort>()
+             {
+                 new PointPort()
+                 {
+                     ID="ports",
+                     Style = new ShapeStyle(){ Fill = "gray" },
+                     Offset = new DiagramPoint() { X = 0, Y = 0 }, 
+                     Visibility = PortVisibility.Visible,                  
+                 }
+             }
+        };
+        Node node2 = new Node()
+        {
+             ID = "node2",
+             Width = 100,
+             Height = 100,
+             OffsetX = 900,
+             OffsetY = 100,
+             Flip=FlipDirection.Horizontal,
+             FlipMode=FlipMode.Port,
+             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+             {
+                 new ShapeAnnotation 
+                 {
+                    Content = "Offset(0,0)", 
+                    Offset = new DiagramPoint() { X = 0, Y = 0.5 } 
+                 }
+             },
+            Ports = new DiagramObjectCollection<PointPort>()
+            {
+               new PointPort()
+               {  
+                   Style = new ShapeStyle(){ Fill = "gray" },
+                   Offset = new DiagramPoint() { X = 0, Y = 0 }, 
+                   Visibility = PortVisibility.Visible
+               }
+            }
+        };
+        Connector Connector2 = new Connector()
+        {
+            ID = "connector2",
+            Annotations = new DiagramObjectCollection<PathAnnotation>()
+            {
+                new PathAnnotation 
+                { 
+                    Content = "Offset as 0.5",
+                    Offset = 0.5 
+                },
+            },         
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },            
+            Type = ConnectorSegmentType.Straight
+        };
+        connectors.Add(Connector2);        
+        NodeCollection = new DiagramObjectCollection<Node>() {node1,node2};
+    }
+    
+    public void HorizontalPort()
+    {     
+        if (diagram.SelectionSettings.Nodes.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+            {
+                diagram.SelectionSettings.Nodes[i].FlipMode = FlipMode.Port;
+                if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Horizontal;
+                }
+                else
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Horizontal;
+                }               
+            }
+        }
+        if (diagram.SelectionSettings.Connectors.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Connectors.Count; i++)
+            {
+                diagram.SelectionSettings.Connectors[i].Flip = FlipDirection.Horizontal;
+            }
+        }       
+    }
+    public void HorizontalContent()
+    {     
+        if (diagram.SelectionSettings.Nodes.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+            {
+                diagram.SelectionSettings.Nodes[i].FlipMode = FlipMode.Content;
+                if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Horizontal;
+                }
+                else
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Horizontal;
+                }               
+            }
+        }
+        if (diagram.SelectionSettings.Connectors.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Connectors.Count; i++)
+            {
+                diagram.SelectionSettings.Connectors[i].Flip = FlipDirection.Horizontal;
+            }
+        }       
+    }
+    public void HorizontalAll()
+    {     
+        if (diagram.SelectionSettings.Nodes.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+            {
+                diagram.SelectionSettings.Nodes[i].FlipMode = FlipMode.All;
+                if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Horizontal;
+                }
+                else
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Horizontal;
+                }              
+            }
+        }
+        if (diagram.SelectionSettings.Connectors.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Connectors.Count; i++)
+            {
+                diagram.SelectionSettings.Connectors[i].Flip = FlipDirection.Horizontal;
+            }
+        }       
+    }
+    public void HorizontalNone()
+    {     
+        if (diagram.SelectionSettings.Nodes.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+            {
+                diagram.SelectionSettings.Nodes[i].FlipMode = FlipMode.None;
+                if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Horizontal;
+                }
+                else
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Horizontal;
+                }                               
+            }
+        }
+        if (diagram.SelectionSettings.Connectors.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Connectors.Count; i++)
+            {
+                diagram.SelectionSettings.Connectors[i].Flip = FlipDirection.Horizontal;
+            }
+        }       
+    }
+   
+    public void VerticalPort()
+    {
+        if (diagram.SelectionSettings.Nodes.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+            {
+                diagram.SelectionSettings.Nodes[i].FlipMode = FlipMode.Port;
+                if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Vertical))
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Vertical;
+                }
+                else
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Vertical;
+                }               
+            }
+        }
+        if (diagram.SelectionSettings.Connectors.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Connectors.Count; i++)
+            {
+                diagram.SelectionSettings.Connectors[i].Flip = FlipDirection.Vertical;
+            }
+        }
+    }
+    public void VerticalContent()
+    {
+        if (diagram.SelectionSettings.Nodes.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+            {
+                diagram.SelectionSettings.Nodes[i].FlipMode = FlipMode.Content;
+                if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Vertical))
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Vertical;
+                }
+                else
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Vertical;
+                }                
+            }
+        }
+        if (diagram.SelectionSettings.Connectors.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Connectors.Count; i++)
+            {
+                diagram.SelectionSettings.Connectors[i].Flip = FlipDirection.Vertical;
+            }
+        }
+    }
+    public void VerticalBoth()
+    {
+        if (diagram.SelectionSettings.Nodes.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+            {
+                diagram.SelectionSettings.Nodes[i].FlipMode = FlipMode.All;
+                if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Vertical))
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Vertical;
+                }
+                else
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Vertical;
+                }                
+            }
+        }
+        if (diagram.SelectionSettings.Connectors.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Connectors.Count; i++)
+            {
+                diagram.SelectionSettings.Connectors[i].Flip = FlipDirection.Vertical;
+            }
+        }
+    }
+
+    public void VerticalNone()
+    {
+        if (diagram.SelectionSettings.Nodes.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+            {
+                diagram.SelectionSettings.Nodes[i].FlipMode = FlipMode.None;
+                if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Vertical))
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Vertical;
+                }
+                else
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Vertical;
+                }                              
+            }
+        }
+        if (diagram.SelectionSettings.Connectors.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Connectors.Count; i++)
+            {
+                diagram.SelectionSettings.Connectors[i].Flip = FlipDirection.Vertical;
+            }
+        }
+    }
+
+    public void BothPort()
+    {     
+        if (diagram.SelectionSettings.Nodes.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+            {
+                diagram.SelectionSettings.Nodes[i].FlipMode = FlipMode.Port;
+                if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Both))
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Both;
+                }
+                else
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Both;
+                }               
+            }
+        }
+        if (diagram.SelectionSettings.Connectors.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Connectors.Count; i++)
+            {
+                  diagram.SelectionSettings.Connectors[i].Flip = FlipDirection.Both;
+            }
+        }
+    }
+
+    public void BothContent()
+    {     
+        if (diagram.SelectionSettings.Nodes.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+            {
+                diagram.SelectionSettings.Nodes[i].FlipMode = FlipMode.Content;
+                if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Both))
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Both;
+                }
+                else
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Both;
+                }               
+            }
+        }
+        if (diagram.SelectionSettings.Connectors.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Connectors.Count; i++)
+            {
+                  diagram.SelectionSettings.Connectors[i].Flip = FlipDirection.Both;
+            }
+        }
+    }
+     public void BothAll()
+    {     
+        if (diagram.SelectionSettings.Nodes.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+            {
+                diagram.SelectionSettings.Nodes[i].FlipMode = FlipMode.All;
+                if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Both))
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Both;
+                }
+                else
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Both;
+                }                
+            }
+        }
+        if (diagram.SelectionSettings.Connectors.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Connectors.Count; i++)
+            {
+                  diagram.SelectionSettings.Connectors[i].Flip = FlipDirection.Both;
+            }
+        }
+    }
+    public void BothNone()
+    {     
+        if (diagram.SelectionSettings.Nodes.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+            {
+                diagram.SelectionSettings.Nodes[i].FlipMode = FlipMode.None;
+                if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Both))
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Both;
+                }
+                else
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Both;
+                }               
+            }
+        }
+        if (diagram.SelectionSettings.Connectors.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Connectors.Count; i++)
+            {
+                  diagram.SelectionSettings.Connectors[i].Flip = FlipDirection.Both;
+            }
+        }
+    }  
+}
+```
+| FlipDirection | FlipMode | Output|
+| -------- | -------- | -------- |
+|Horizontal|Port| ![HorizontalDirection with Port Mode](Images/HorizontalPort.png)|
+|Horizontal|Content|![HorizontalDirection with Content Mode](Images/HorizontalContent.png)|
+|Horizontal|All|![HorizontalDirection with All Mode](Images/HorizontalAll.png)|
+|Horizontal|None|![HorizontalDirection with None Mode](Images/HorizontalNone.png)|
+|Vertical|Port|![VerticalDirection with Port Mode](Images/VerticalPort.png)|
+|Vertical|Content|![VerticalDirection with Content Mode](Images/VerticalContent.png)|
+|Vertical|All|![VerticalDirection with All Mode](Images/VerticalAll.png)|
+|Vertical|None|![VerticalDirection with None Mode](Images/VerticalNone.png)|
+|Both|Port|![BothDirection with Port Mode](Images/BothPort.png)|
+|Both|Content|![BothDirection with Content Mode](Images/BothContent.png)|
+|Both|All|![BothDirection with All Mode](Images/BothAll.png)|
+|Both|None|![BothDirection with None Mode](Images/BothNone.png)|
+
+![Flip](images/FlipModes.gif)
+
