@@ -340,7 +340,6 @@ In the following sample, you can get the instance of that particular child gr
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Data
-@inject IJSRuntime JS
 
 <SfGrid DataSource="@Employees">
     <GridTemplates>
@@ -379,7 +378,6 @@ In the following sample, you can get the instance of that particular child gr
         if (args.Item.Id == "Click")
         {
             var SelectedRecords = await Grid[(int)EmployeeID].GetSelectedRecordsAsync();
-            await JS.InvokeVoidAsync("console.log", SelectedRecords);
         }
     }
     protected override void OnInitialized()
@@ -427,3 +425,130 @@ In the following sample, you can get the instance of that particular child gr
 ```
 
 > [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-set-instance-for-child-component)
+
+## Customize detail template icon
+
+The Detail template icon is used to expand or collapse the detail content. You can customize this icon through CSS itself. This can be achieved by overriding the two CSS styles listed below.
+
+```cshtml
+.e-grid .e-icon-grightarrow::before {
+    content: "\e7a9";
+}
+
+.e-grid .e-icon-gdownarrow::before {
+    content: "\e7fe";
+}
+```
+
+This is demonstrated in the following sample:
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Employees">
+    <GridTemplates>
+        <DetailTemplate>
+            @{
+                var employee = (context as EmployeeData);
+                <table class="detailtable" width="100%">
+                    <colgroup>
+                        <col width="35%">
+                        <col width="35%">
+                        <col width="30%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td rowspan="4" style="text-align: center;">
+                                <img class="photo" src="@($" scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Employee ID: </span> @employee.FirstName
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Hire Date: </span> @employee.HireDate.Value.ToShortDateString()
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="font-weight: 500;">Last Name: </span> @employee.LastName
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">City: </span> @employee.City
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="font-weight: 500;">Title: </span> @employee.Title
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Country: </span> @employee.Country
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            }
+        </DetailTemplate>
+    </GridTemplates>
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="110"> </GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Country) HeaderText="Country" Width="110"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<style type="text/css" class="cssStyles">
+    .detailtable td {
+        font-size: 13px;
+        padding: 4px;
+        max-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .photo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0,0,0,0.2);
+    }
+    .e-grid .e-icon-grightarrow::before {
+        content: "\e7a9";
+    }
+    .e-grid .e-icon-gdownarrow::before {
+        content: "\e7fe";
+    }
+</style>
+
+@code{
+    public List<EmployeeData> Employees { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
+        {
+            EmployeeID = x,
+            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+            LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
+            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
+                                    "Inside Sales Coordinator" })[new Random().Next(4)],
+            HireDate = DateTime.Now.AddDays(-x),
+            City = (new string[] { "Seattle", "Tacoma", "Redmond", "Kirkland", "London" })[new Random().Next(5)],
+            Country = (new string[] { "USA", "UK" })[new Random().Next(2)],
+        }).ToList();
+    }
+
+    public class EmployeeData
+    {
+        public int? EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Title { get; set; }
+        public DateTime? HireDate { get; set; }
+        public string City { get; set; }
+        public string Country { get; set; }
+    }
+}
+```
+
+![Blazor DataGrid with Detail Template icon](./images/blazor-datagrid-customize-detail-template-icon.png)
