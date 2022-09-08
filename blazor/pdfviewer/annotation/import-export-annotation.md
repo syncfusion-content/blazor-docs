@@ -60,6 +60,8 @@ public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 }
 ```
 
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples).
+
 >The JSON file for importing the annotation should be placed in the desired location and the path has to be provided correctly.
 
 ## Exporting annotation from the PDF document
@@ -96,5 +98,6 @@ You can export annotations as JSON file in code behind like the following code s
     }
 }
 ```
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples).
 
 > You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.
