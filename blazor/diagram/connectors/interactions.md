@@ -214,6 +214,118 @@ The connector can be selected by clicking it. When the connector is selected, ci
 
 ![Dragging Connector End Point in Blazor Diagram](../images/blazor-diagram-drag-connector-end-point.gif)
 
+## Flip
+The Flip  is used to mirror the selected object’s in the diagram page for horizontal,Vertical and Both direction.
+
+###  FlipDirection:
+The flipdirection is used to mirror across Horizontal,Vertical and Both direction.
+
+| FlipDirection | Description | 
+| -------- | -------- |
+|Horizontal|It is used to flip the node or connector is mirrored across the horizontal axis.|
+|Vertical|	It is used to flip the node or connector is mirrored across the vertical axis.|
+|Both|		It is used to flip the node or connector is mirrored across the both horizontal and vertical axis.|
+|None|	It is used to disables all the flip behaviour.| 
+
+**Note:** Flipmode is only applicable for Nodes not for Connectors
+
+The following code example shows how to change the FlipDirection and FlipMode.
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using ChangeEventArgs = Microsoft.AspNetCore.Components.ChangeEventArgs
+
+<style>    
+    #diagram {
+        width: 70%;
+        float: left;
+    }
+    #properties {
+        width: 15%;
+        float: right;
+        margin-right:300px;
+    }
+
+</style>
+<div id="properties">
+    <input type="button" value="Horizontal" @onclick="@Horizontal" />
+     <input type="button" value="Vertical" @onclick="@Vertical" />
+      <input type="button" value="Both" @onclick="@Both" />
+  
+ </div>
+
+<div id="#diagram">
+    <SfDiagramComponent @ref="diagram" Width="1000px" Height="1000px"  Nodes="@NodeCollection" Connectors="@connectors">
+        <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
+    </SfDiagramComponent>
+    </div>
+
+@code
+{
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    public SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> NodeCollection;
+    protected override void OnInitialized()
+    {     
+        Connector Connector = new Connector()
+        {
+            ID = "connector2",
+            Annotations = new DiagramObjectCollection<PathAnnotation>()
+            {
+                new PathAnnotation 
+                { 
+                    Content = "Offset as 0.5",
+                    Offset = 0.5 
+                },
+            },         
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },            
+            Type = ConnectorSegmentType.Straight
+        };
+        connectors.Add(Connector);     
+    }
+    public void Horizontal()
+    {     
+        if (diagram.SelectionSettings.Connectors.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Connectors.Count; i++)
+            {
+                diagram.SelectionSettings.Connectors[i].Flip = FlipDirection.Horizontal;
+            }
+        }       
+    }
+    public void Vertical()
+    {
+        if (diagram.SelectionSettings.Connectors.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Connectors.Count; i++)
+            {
+                diagram.SelectionSettings.Connectors[i].Flip = FlipDirection.Vertical;
+            }
+        }
+    }
+    public void Both()
+    {     
+        if (diagram.SelectionSettings.Connectors.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Connectors.Count; i++)
+            {
+               diagram.SelectionSettings.Connectors[i].Flip = FlipDirection.Both;
+            }
+        }
+    }
+}
+```
+### Initial Diagram:
+![Initial Diagram](../images/ConnectorInitial.png)
+
+| FlipDirection | Output|
+| -------- | -------- |
+|Horizontal|![HorizontalDirection](../images/HConnector.png)|
+|Vertical|![VerticalDirection](../images/VConnector.png)|
+|Both|![BothDirection](../images/BConnector.png)|
+
+![Flip Connector](../images/connector.gif)
+
 ## See also
 
 * [How to customize the connector properties](./customization)
