@@ -372,7 +372,7 @@ You can render the Blazor DropDownList by changing the [Type](https://help.syncf
 </SfInPlaceEditor>
 
 @code {
-    public string DropdownValue = "Cricket";
+    public string DropdownValue = "Game4";
 
     public class Games
     {

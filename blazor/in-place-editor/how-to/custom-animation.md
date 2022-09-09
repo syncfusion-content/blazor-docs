@@ -77,7 +77,7 @@ In the following example, popup animation can be customized by passing animation
         new DropDownFields(){ Text= "None" },
         new DropDownFields(){ Text= "FadeIn" },
         new DropDownFields(){ Text= "FadeZoomIn" },
-        new DropDownFields() { Text= "ZoomIn" }
+        new DropDownFields(){ Text= "ZoomIn" }
     };
 
     public string DropdownValue { get; set; } = "ZoomIn";
