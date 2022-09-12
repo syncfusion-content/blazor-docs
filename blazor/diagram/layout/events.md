@@ -89,11 +89,3 @@ The following code example explains data loaded event in the diagram.
     }
 }
 ```
-
-## See also
-
-* [How to customize the connector properties](./customization)
-
-* [How to interact with the connector](./interactions)
-
-* [How to change the segments](./segments)
