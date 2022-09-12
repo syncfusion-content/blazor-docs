@@ -45,3 +45,286 @@ The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Sf
     }
 }
 ```
+## Property Changed
+The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PropertyChanged) event is triggered when the property changed at run time.
+
+[PropertyChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PropertyChangedEventArgs.html)
+
+| Argument Name | Description |
+| -------- | -------- |
+| Element | Returns the object where the property change has occurred.|
+| NewValue | Returns the new value of the property that was changed.|
+| OldValue | Returns the old value of the property that was changed.|
+| PropertyName | Returns the name of the property that has a property change.|
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using System.Collections.ObjectModel
+
+<SfDiagramComponent @ref="@Diagram"
+                    Width="100%"
+                    Height="700px"
+                    Nodes="nodes"
+                    PropertyChanged="OnPropertyChanged>
+</SfDiagramComponent>
+
+@code{
+    SfDiagramComponent Diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    protected override void OnInitialized()
+    {
+        Node node = new Node()
+        {
+            OffsetX = 250,
+            OffsetY = 250,
+            Width = 100,
+            Height = 100
+        };
+        nodes.Add(node);
+    }
+     // To notify the property changed event while change property at run time.
+    private void OnPropertyChanged(PropertyChangedEventArgs args)
+    {
+        //Action to be performed.
+    }
+}
+```
+
+## Collection change
+* When the node/connector is added or removed from diagram, the following events can be used to do the customization.
+
+|Event Name|Arguments|Description|
+|------------|-----------|------------------------|
+|[CollectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_CollectionChanging)|[CollectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CollectionChangingEventArgs.html)|Triggers before the node/connector is adding or removing from the diagram.|
+|[CollectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_CollectionChanged)|[CollectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CollectionChangedEventArgs.html)|Triggers  the node/connector is added or removed from the diagram.|
+
+[CollectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CollectionChangingEventArgs.html)
+
+| Argument Name | Description |
+| -------- | -------- |
+| Cancel | Returns the value that indicates whether to cancel the change or not.|
+
+
+[CollectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CollectionChangedEventArgs.html)
+
+| Argument Name | Description |
+| -------- | -------- |
+| ActionTrigger |Returns current action, like Interactions, Drawing Tools, etc., to be performed in the diagram.. |
+| Element | Returns the actual object which is added, removed, or modified. |
+| Action | Returns the type of collection change like addition or removal. |
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using System.Collections.ObjectModel
+
+<SfDiagramComponent @ref="@Diagram"
+                    Width="100%"
+                    Height="700px"
+                    Nodes="nodes"
+                    CollectionChanged="OnCollectionChanged>
+</SfDiagramComponent>
+
+@code{
+    SfDiagramComponent Diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    protected override void OnInitialized()
+    {
+        Node node = new Node()
+        {
+            OffsetX = 250,
+            OffsetY = 250,
+            Width = 100,
+            Height = 100
+        };
+        nodes.Add(node);
+    }
+     // To notify the Collection Changed event while change collection of node/connector at run time.
+    private void OnCollectionChanged(CollectionChangedEventArgs args)
+    {
+        //Action to be performed.
+    }
+}
+```
+
+## Drag Start
+* The [DragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragStart) event is triggers when a symbol is dragged into the diagram from the symbol palette.
+
+[DragStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DragStartEventArgs.html)
+
+| Argument Name | Description |
+| -------- | -------- |
+| ActionTrigger |Returns current action, like Interactions, Drawing Tools, etc., to be performed in the diagram. |
+| Element | Returns the node or connector over which the symbol is dragged. |
+| Cancel | Returns the the value that indicates whether to add or remove the symbol from the diagram. |
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using System.Collections.ObjectModel
+
+<SfDiagramComponent @ref="@Diagram"
+                    Width="100%"
+                    Height="700px"
+                    Nodes="nodes"
+                    DragStart="DragStart">
+</SfDiagramComponent>
+<SfSymbolPaletteComponent Height="600px" Palettes="@Palettes" SymbolDragPreviewSize="@SymbolPreview" SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
+</SfSymbolPaletteComponent >
+@code{
+    SfDiagramComponent Diagram;
+    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    DiagramObjectCollection<NodeBase> TNodes = new DiagramObjectCollection<NodeBase>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SymbolInfo GetSymbolInfo(IDiagramObject symbol)
+    {
+            SymbolInfo SymbolInfo = new SymbolInfo();
+            SymbolInfo.Fit = true;
+            return SymbolInfo;
+          }
+    protected override void OnInitialized()
+    {
+             SymbolPreview = new DiagramSize();
+             SymbolPreview.Width = 80;
+             SymbolPreview.Height = 80;
+             symbolSizeWidth = 50;
+             symbolSizeHeight = 50;
+             TNodes = new DiagramObjectCollection<NodeBase>();
+             Node TNode2 = new Node()
+             { 
+                 ID = "node1", 
+                 Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = FlowShapeType.Decision } 
+             };
+            TNodes.Add(TNode2);
+            Palettes = new DiagramObjectCollection<Palette>()
+             {
+                new Palette(){Symbols =TNodes,Title="Flow Shapes",ID="Flow Shapes" },
+             };
+    }
+     // To notify the drag start event.
+    private void DragStart(DragStartEventArgs args)
+    {
+        //Action to be performed.
+    }
+}
+```
+
+## Dragging
+* The [Dragging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Dragging) event is triggers when an element drags over another diagram element.
+
+[DraggingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DraggingEventArgs.html)
+
+| Argument Name | Description |
+| -------- | -------- |
+| Element |Returns node or connector that is dragged outside the diagram |
+| Position | Returns the mouse position of the node/connector. |
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using System.Collections.ObjectModel
+
+<SfDiagramComponent @ref="@Diagram"
+                    Width="100%"
+                    Height="700px"
+                    Nodes="nodes"
+                    Dragging="Dragging">
+</SfDiagramComponent>
+<SfSymbolPaletteComponent Height="600px" Palettes="@Palettes" SymbolDragPreviewSize="@SymbolPreview" SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
+</SfSymbolPaletteComponent >
+@code{
+    SfDiagramComponent Diagram;
+    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    DiagramObjectCollection<NodeBase> TNodes = new DiagramObjectCollection<NodeBase>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SymbolInfo GetSymbolInfo(IDiagramObject symbol)
+    {
+            SymbolInfo SymbolInfo = new SymbolInfo();
+            SymbolInfo.Fit = true;
+            return SymbolInfo;
+          }
+    protected override void OnInitialized()
+    {
+             SymbolPreview = new DiagramSize();
+             SymbolPreview.Width = 80;
+             SymbolPreview.Height = 80;
+             symbolSizeWidth = 50;
+             symbolSizeHeight = 50;
+             TNodes = new DiagramObjectCollection<NodeBase>();
+             Node TNode2 = new Node()
+             { 
+                 ID = "node1", 
+                 Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = FlowShapeType.Decision } 
+             };
+            TNodes.Add(TNode2);
+            Palettes = new DiagramObjectCollection<Palette>()
+             {
+                new Palette(){Symbols =TNodes,Title="Flow Shapes",ID="Flow Shapes" },
+             };
+    }
+     // To notify dragging event.
+    private void Dragging(DraggingEventArgs args)
+    {
+        //Action to be performed.
+    }
+}
+```
+
+## DragDrop
+* The [DragDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragDrop) event is triggers when a symbol is dragged and dropped from the symbol palette to the drawing area.
+
+[DropEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DropEventArgs.html)
+
+| Argument Name | Description |
+| -------- | -------- |
+| Element |Returnsthe node or connector that is being dropped. |
+| Target | Returns the object from which the object will be dropped. |
+| Cancel | Returns the  value that indicates whether to cancel the drop event or not. |
+| Position | Returnsthe position of the object. |
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using System.Collections.ObjectModel
+
+<SfDiagramComponent @ref="@Diagram"
+                    Width="100%"
+                    Height="700px"
+                    Nodes="nodes"
+                    DragDrop="DragDrop">
+</SfDiagramComponent>
+<SfSymbolPaletteComponent Height="600px" Palettes="@Palettes" SymbolDragPreviewSize="@SymbolPreview" SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
+</SfSymbolPaletteComponent >
+@code{
+    SfDiagramComponent Diagram;
+    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    DiagramObjectCollection<NodeBase> TNodes = new DiagramObjectCollection<NodeBase>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    private SymbolInfo GetSymbolInfo(IDiagramObject symbol)
+    {
+            SymbolInfo SymbolInfo = new SymbolInfo();
+            SymbolInfo.Fit = true;
+            return SymbolInfo;
+          }
+    protected override void OnInitialized()
+    {
+             SymbolPreview = new DiagramSize();
+             SymbolPreview.Width = 80;
+             SymbolPreview.Height = 80;
+             symbolSizeWidth = 50;
+             symbolSizeHeight = 50;
+             TNodes = new DiagramObjectCollection<NodeBase>();
+             Node TNode2 = new Node()
+             { 
+                 ID = "node1", 
+                 Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = FlowShapeType.Decision } 
+             };
+            TNodes.Add(TNode2);
+            Palettes = new DiagramObjectCollection<Palette>()
+             {
+                new Palette(){Symbols =TNodes,Title="Flow Shapes",ID="Flow Shapes" },
+             };
+    }
+     // To notify drag drop event.
+    private void DragDrop(DropEventArgs args)
+    {
+        //Action to be performed.
+    }
+}
+```
