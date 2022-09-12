@@ -208,7 +208,7 @@ The ranges can be dragged over the axis values by clicking and dragging the rang
                 </CircularGaugePointer>
             </CircularGaugePointers>
             <CircularGaugeRanges>
-                <CircularGaugeRange Start="0" End="100" Radius="108%" Color="#30B32D" StartWidth="8" EndWidth="8">
+                <CircularGaugeRange Start="0" End="80" Radius="108%" Color="#30B32D" StartWidth="8" EndWidth="8">
                 </CircularGaugeRange>
             </CircularGaugeRanges>
         </CircularGaugeAxis>
