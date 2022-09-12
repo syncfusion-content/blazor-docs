@@ -378,9 +378,6 @@ In addition to the default pointer, you can add n number of pointers to an axis 
                     </CircularGaugeNeedleTail>
                 </CircularGaugePointer>
             </CircularGaugePointers>
-            <CircularGaugeAxisLabelStyle UseRangeColor="true">
-            </CircularGaugeAxisLabelStyle>
-            <CircularGaugeAxisMinorTicks UseRangeColor="true"></CircularGaugeAxisMinorTicks>
         </CircularGaugeAxis>
     </CircularGaugeAxes>
 </SfCircularGauge>
