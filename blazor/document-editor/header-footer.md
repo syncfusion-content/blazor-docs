@@ -19,9 +19,9 @@ You can define this by setting format properties of the corresponding section us
 
 ```csharp
 //Defines whether different header footer is required for first page of the section
-documentEditor.Selection.SectionFormat.SetDifferentFirstPage(true);
+container.DocumentEditor.Selection.SectionFormat.SetDifferentFirstPageAsync(true);
 //Defines whether different header footer is required for odd and even pages in the section
-documentEditor.Selection.SectionFormat.SetDifferentOddAndEvenPages(true);
+container.DocumentEditor.Selection.SectionFormat.SetDifferentOddAndEvenPagesAsync(true);
 ```
 
 ## Go to header footer region
@@ -29,9 +29,9 @@ documentEditor.Selection.SectionFormat.SetDifferentOddAndEvenPages(true);
 Double click in header or footer region to move the selection into it. You can also do this by using the following code.
 
 ```csharp
-documentEditor.Selection.GoToHeader();
+container.DocumentEditor.Selection.GoToHeaderAsync();
 
-documentEditor.Selection.GoToFooter();
+container.DocumentEditor.Selection.GoToFooterAsync();
 ```
 
 ## Header and footer distance
@@ -39,13 +39,13 @@ documentEditor.Selection.GoToFooter();
 You can define the distance of header region content from the top of the page. Refer to the following sample code.
 
 ```csharp
-documentEditor.Selection.SectionFormat.SetHeaderDistance(36);
+container.DocumentEditor.Selection.SectionFormat.SetHeaderDistanceAsync(36);
 ```
 
 Same way, you can define the distance of footer region content from the bottom of the page. Refer to the following sample code.
 
 ```csharp
-documentEditor.Selection.SectionFormat.SetFooterDistance(36);
+container.DocumentEditor.Selection.SectionFormat.SetFooterDistanceAsync(36);
 ```
 
 ## Close header footer region
@@ -53,7 +53,7 @@ documentEditor.Selection.SectionFormat.SetFooterDistance(36);
 Move the selection to the document body from header or footer region by double clicking or tapping the document area. You can also perform this by using the following sample code.
 
 ```csharp
-documentEditor.Selection.CloseHeaderFooter();
+container.DocumentEditor.Selection.CloseHeaderFooterAsync();
 ```
 
 You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.
