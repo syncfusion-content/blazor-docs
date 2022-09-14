@@ -367,7 +367,7 @@ Based on the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }  
 ```
 
-Through the navigation of the pager items, view the items in the list view page by page. This can be achieved by using the [Click](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_Click) event of the Pager. In the `Click` event of the Pager, the SkipValue and TakeValue are calculated using the `PageSize` property and arguments of the `Click` event (CurrentPage, PreviousPage). Based on these details, view the items in the list view page by page.
+Through the navigation of the pager items, view the items in the list view page by page. This can be achieved by using the `ItemClick` event of the Pager. In the `ItemClick` event of the Pager, the SkipValue and TakeValue are calculated using the `PageSize` property and arguments of the `ItemClick` event (CurrentPage, PreviousPage). Based on these details, view the items in the list view page by page.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -381,7 +381,7 @@ Through the navigation of the pager items, view the items in the list view page 
         <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Name"></ListViewFieldSettings>
     </SfListView>
 }
-    <SfPager @ref="@Page" PageSize=5 NumericItemsCount=4 TotalItemsCount=25 Click="Click">
+    <SfPager @ref="@Page" PageSize=5 NumericItemsCount=4 TotalItemsCount=25 ItemClick="Click">
     </SfPager>
 </div>
 @code {
@@ -420,7 +420,7 @@ Through the navigation of the pager items, view the items in the list view page 
         ListData.Add(new DataModel { Name = "Nolan, London, UK" });
         ListData.Add(new DataModel { Name = "Jennifer, Redmond, Italy" });
     }
-    public void Click(PageClickEventArgs args)
+    public void Click(PageItemClickEventArgs args)
     {
         SkipValue = (args.CurrentPage * Page.PageSize) - Page.PageSize;
         TakeValue = Page.PageSize;
