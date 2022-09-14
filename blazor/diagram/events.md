@@ -372,6 +372,96 @@ The [MouseHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
     }
 }
 ```
+## KeyDown
+
+The [KeyDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_KeyDown) event is triggered when a user presses a key.
+
+[KeyEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyEventArgs.html)
+
+| Argument Name | Description |
+| -------- | -------- |
+| Element | Returns the selected element of the diagram. palette into the diagram.|
+| Key | Returns the value of the key action.|
+| KeyCode | Returns a number that represents the actual key pressed.|
+| KeyModifiers | Returns any modifier keys that were pressed when the flick gesture occurred.|
+
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using System.Collections.ObjectModel
+
+<SfDiagramComponent @ref="@Diagram"
+                    Width="100%"
+                    Height="700px"
+                    Nodes="nodes"
+                     KeyDown="@OnKeyDown">
+</SfDiagramComponent>
+
+@code{
+    SfDiagramComponent Diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    protected override void OnInitialized()
+    {
+        Node node = new Node()
+        {
+            OffsetX = 250,
+            OffsetY = 250,
+            Width = 100,
+            Height = 100
+        };
+        nodes.Add(node);
+    }
+    private void OnKeyDown(KeyEventArgs args)
+    {
+
+    }
+}
+```
+## KeyUp
+
+The [KeyDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_KeyDown) event is triggered when a user releases a key.
+
+[KeyEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyEventArgs.html)
+
+| Argument Name | Description |
+| -------- | -------- |
+| Element | Returns the selected element of the diagram. palette into the diagram.|
+| Key | Returns the value of the key action.|
+| KeyCode | Returns a number that represents the actual key pressed.|
+| KeyModifiers | Returns any modifier keys that were pressed when the flick gesture occurred.|
+
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using System.Collections.ObjectModel
+
+<SfDiagramComponent @ref="@Diagram"
+                    Width="100%"
+                    Height="700px"
+                    Nodes="nodes"
+                     KeyUp="@OnKeyUp">
+</SfDiagramComponent>
+
+@code{
+    SfDiagramComponent Diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    protected override void OnInitialized()
+    {
+        Node node = new Node()
+        {
+            OffsetX = 250,
+            OffsetY = 250,
+            Width = 100,
+            Height = 100
+        };
+        nodes.Add(node);
+    }
+    private void OnKeyUp(KeyEventArgs args)
+    {
+
+    }
+}
+```
 ## Property Changed
 The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PropertyChanged) event is triggered when the property changed at run time.
 

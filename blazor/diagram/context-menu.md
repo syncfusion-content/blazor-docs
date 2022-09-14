@@ -224,7 +224,18 @@ The Diagram control provides event support for the context menu that triggers wh
 
 ### ContextMenuOpening
 
-The Diagram control triggers the event [ContextMenuOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuSettings.html#Syncfusion_Blazor_Diagram_ContextMenuSettings_ContextMenuOpening) when performing right click on the diagram or the diagram elements such as Node, Connector and Groups.
+| Event Name | Event Type | Description |
+| -------- | -------- | -------- |
+| [ContextMenuOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuSettings.html#Syncfusion_Blazor_Diagram_ContextMenuSettings_ContextMenuOpening) | [DiagramMenuOpeningEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramMenuOpeningEventArgs.html) | Triggered when performing right click on the diagram or the diagram elements such as Node, Connector and Groups. |
+
+[DiagramMenuOpeningEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramMenuOpeningEventArgs.html)
+
+| Argument Name | Description |
+| -------- | -------- |
+| HiddenItems | Returns a value indicating the collection of hidden items associated with context menu.|
+| Cancel | Returns the value indicates whether the user can prevent a menu from opening.|
+| Items | Returns the value indicates the collection of menu items.|
+
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -246,7 +257,16 @@ The Diagram control triggers the event [ContextMenuOpening](https://help.syncfus
 
 ### ContextMenuItemClicked
 
-The Diagram control triggers the event [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuSettings.html#Syncfusion_Blazor_Diagram_ContextMenuSettings_ContextMenuItemClicked) when the context menu item is clicked.
+| Event Name | Event Type | Description |
+| -------- | -------- | -------- |
+| [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuSettings.html#Syncfusion_Blazor_Diagram_ContextMenuSettings_ContextMenuItemClicked) | [DiagramMenuClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramMenuOpeningEventArgs.html) | Triggered when the context menu item is clicked. |
+
+[DiagramMenuClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramMenuClickEventArgs.html)
+
+| Argument Name | Description |
+| -------- | -------- |
+| Items | Returns the value  indicates the selected item.|
+
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

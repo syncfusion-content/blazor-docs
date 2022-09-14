@@ -476,6 +476,13 @@ The Diagram control provides the following event for the fixed user handle.
 | -------- | -------- | -------- |
 | [FixedUserHandleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_FixedUserHandleClick) | [FixedUserHandleClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandleClickEventArgs.html) | Triggered when the mouse pointer is over the user handle and mouse button is up. |
 
+[FixedUserHandleClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandleClickEventArgs.html)
+
+| Argument Name | Description |
+| -------- | -------- |
+| FixedUserHandle | Represents the instance of the clicked fixed user handle|
+| Element | Returns the  nodes or connector which have the clicked fixed user handle.|
+
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
