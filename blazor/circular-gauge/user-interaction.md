@@ -201,13 +201,19 @@ The ranges can be dragged over the axis values by clicking and dragging the rang
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge EnableRangeDrag="true">
-<CircularGaugeAxes >
-    <CircularGaugeAxis>
-        <CircularGaugePointers>
-            <CircularGaugePointer Value="50">
-            </CircularGaugePointer>
-        </CircularGaugePointers>
-    </CircularGaugeAxis>
-</CircularGaugeAxes>
+    <CircularGaugeAxes>
+        <CircularGaugeAxis>
+            <CircularGaugePointers>
+                <CircularGaugePointer Value="50">
+                </CircularGaugePointer>
+            </CircularGaugePointers>
+            <CircularGaugeRanges>
+                <CircularGaugeRange Start="0" End="80" Radius="108%" Color="#30B32D" StartWidth="8" EndWidth="8">
+                </CircularGaugeRange>
+            </CircularGaugeRanges>
+        </CircularGaugeAxis>
+    </CircularGaugeAxes>
 </SfCircularGauge>
 ```
+
+![Blazor Circular Gauge with Dragging Range](./images/blazor-circulargauge-dragging-range.gif)

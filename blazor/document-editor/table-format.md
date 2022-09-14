@@ -91,7 +91,7 @@ Set the desired width of table cells that will be considered when the table is l
     SfDocumentEditor documentEditor;
     protected void OnLoad(object args)
     {
-        documentEditor.Editor.InsertTable(2, 2);
+        documentEditor.Editor.InsertTableAsync(2, 2);
         documentEditor.Selection.CellFormat.SetPreferredWidth(100);
         documentEditor.Selection.CellFormat.SetPreferredWidthType(WidthType.Point);
     }
@@ -137,7 +137,7 @@ You can customize the height of a table row as `Auto`, `AtLeast`, or `Exactly`. 
     SfDocumentEditor documentEditor;
     protected void OnLoad(object args)
     {
-        documentEditor.Editor.InsertTable(2, 2);
+        documentEditor.Editor.InsertTableAsync(2, 2);
         documentEditor.Selection.RowFormat.SetHeight(20);
         documentEditor.Selection.RowFormat.SetHeightType(HeightType.Exactly);
     }

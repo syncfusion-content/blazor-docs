@@ -43,13 +43,13 @@ You can perform undo and redo by using `CTRL+Z` and `CTRL+Y` keyboard shortcuts.
 To undo the last editing operation in document editor, refer to the following sample code.
 
 ```csharp
-documentEditor.EditorHistory.Undo();
+container.DocumentEditor.EditorHistory.UndoAsync();
 ```
 
 To redo the last undone action, refer to the following code example.
 
 ```csharp
-documentEditor.EditorHistory.Redo();
+container.DocumentEditor.EditorHistory.RedoAsync();
 ```
 
 ## Stack size
