@@ -19,11 +19,11 @@ In the following sample, the selected value in a dropdown will be set to the [Pa
 ```csharp
 @using Syncfusion.Blazor.Navigations
 
-<SfPager TotalItemsCount="75" PageSizes=@pagesizes PageSize="5" NumericItemsCount="3">
+<SfPager TotalItemsCount="75" PageSizes=@pagesizes PageSize="5" NumericItemsCount="3" ShowAllInPageSizes="true">
 </SfPager>
 
 @code {
-    public object[] pagesizes = new object[] { "All", 5, 10, 12, 20 };
+    public List<int> pagesizes = new List<int> { 5, 10, 12, 20 };
 }
 
 ```
