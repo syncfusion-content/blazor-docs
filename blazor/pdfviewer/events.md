@@ -26,6 +26,7 @@ The events provided in PDF Viewer component are listed out as follows:
 |AnnotationPropertiesChanged|Triggers when the property of the annotation is changed.|
 |AnnotationResized|Triggers when an annotation is resized.|
 |AnnotationSelected|Triggers when an annotation is selected.|
+|Created|Triggers when the PDFViewer component is created.|
 
 ## Adding PDF Viewer events to Blazor component
 
@@ -44,5 +45,37 @@ The Syncfusion PDF Viewer events has to be wrapped inside the `PdfViewerEvents` 
     }
 }
 ```
+
+## Created event
+
+The Created event is triggered when the PDFViewer component is rendered.
+
+The following code illustrates how to load PDF document on created event.
+
+```cshtml
+@using Syncfusion.Blazor.PdfViewerServer
+@using Syncfusion.Blazor.PdfViewer
+
+<SfPdfViewerServer DocumentPath="@DocumentPath" Width="560" Height="315">
+    <PdfViewerEvents Created="created"></PdfViewerEvents>
+</SfPdfViewerServer>
+
+@code 
+{
+    public string DocumentPath { get; set; }
+
+    //Triggers when the PDFViewer component is created.
+    public void created()
+    {
+        string Link = "http://infolab.stanford.edu/pub/papers/google.pdf";
+        System.Net.WebClient webClient = new System.Net.WebClient();
+        //Returns the byte array containing the downloaded PDF file.
+        byte[] byteArray = webClient.DownloadData(Link);
+        //Converting the byte array to Base64 string and sets the document path.
+        DocumentPath = "data:application/pdf;base64," + Convert.ToBase64String(byteArray);
+    }  
+}
+```
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples).
 
 > You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.

@@ -108,3 +108,25 @@ The annotation comment and comment replies can be edited by the following ways:
 > The annotation will be deleted on deleting the comment using comment panel.
 
 > You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of the PDF Viewer.
+
+### Show or hide the Comment panel
+
+The PDF Viewer control provides an option to show or hide the Comment panel by using the `IsCommentPanelOpen` property of the SfPdfViewerServer class.
+
+The following code snippet explains how to show the Comment panel.
+
+```cshtml
+@using Syncfusion.Blazor.PdfViewerServer
+@using Syncfusion.Blazor.PdfViewer
+
+<SfPdfViewerServer IsCommentPanelOpen="true" Width="1000" Height="700" DocumentPath="@documentPath">   
+</SfPdfViewerServer>
+
+@code
+{
+    //Sets the PDF document path for initial loading.
+    private string documentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";    
+}
+
+```
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples)
