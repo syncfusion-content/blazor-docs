@@ -9,7 +9,7 @@ documentation: ug
 
 # Change the highlight color of the text in Blazor PDF Viewer Component
 
-You can change the highlight color of the selected annotation using the `Color` property of the `PdfViewerHighlightSettings` class.
+You can change the highlight color of the selected annotation using the `Color` property of the [PdfViewerHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfViewerHighlightSettings.html) class.
 
 The following code illustrates how to change the highlight color of the text.
 
@@ -35,5 +35,6 @@ The following code illustrates how to change the highlight color of the text.
 
 }
 ```
+![Highlight Text in Blazor PDFViewer](../../pdfviewer/images/HighlightText.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Customize%20Highlight%20Annotation).
