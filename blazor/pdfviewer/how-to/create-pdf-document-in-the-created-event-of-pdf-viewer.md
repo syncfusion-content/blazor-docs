@@ -58,4 +58,4 @@ The following code example shows how to create PDF document and load that docume
 }
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Events/Create%20PDF%20in%20Created%20Event).
