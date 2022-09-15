@@ -420,7 +420,7 @@ Through the navigation of the pager items, view the items in the list view page 
         ListData.Add(new DataModel { Name = "Nolan, London, UK" });
         ListData.Add(new DataModel { Name = "Jennifer, Redmond, Italy" });
     }
-    public void Click(PageItemClickEventArgs args)
+    public void Click(PagerItemClickEventArgs args)
     {
         SkipValue = (args.CurrentPage * Page.PageSize) - Page.PageSize;
         TakeValue = Page.PageSize;
