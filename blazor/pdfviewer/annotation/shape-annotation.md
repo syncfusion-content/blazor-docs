@@ -143,7 +143,6 @@ The following code illustrates how to change the resizer shape of the shape anno
     
 }
 ```
-[](screenshot)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Customize%20Annotation%20Selector).
 

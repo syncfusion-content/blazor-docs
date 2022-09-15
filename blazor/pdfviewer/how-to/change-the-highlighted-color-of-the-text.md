@@ -35,6 +35,5 @@ The following code illustrates how to change the highlight color of the text.
 
 }
 ```
-![screenshot]()
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Customize%20Highlight%20Annotation).

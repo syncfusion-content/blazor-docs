@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Create PDF document in the created event of Blazor PDF Viewer Component
+# Create PDF document in created event of Blazor PDF Viewer Component
 
 You can create PDF document in the PDFViewer's created event and load the same document in the viewer.
 

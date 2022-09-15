@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Stretch the PDF Viewer size to its container in Blazor PDF Viewer Component
+# Update PDF Viewer size at run-time in Blazor PDF Viewer Component
 
 You can stretch the PDF Viewer size to its container size while resizing the container at runtime. The following code snippet explains how to update the PDF Viewer size while resizing the Splitter at runtime. In this example, the Syncfusion’s Splitter component is used.
 
