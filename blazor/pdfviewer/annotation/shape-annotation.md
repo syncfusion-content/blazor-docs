@@ -112,7 +112,7 @@ The properties of the shape annotations can be set before creating the control u
 
 ## Customize annotation selector
 
-You can customize the appearance of the annotation's selector using the `AnnotationSelectorSettings` property of the `PdfViewerRectangleSettings` class.
+You can customize the appearance of the annotation's selector using the [AnnotationSelectorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfViewerAnnotationSelectorSettings.html) property of the [PdfViewerRectangleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfViewerRectangleSettings.html) class.
 
 The following code illustrates how to change the resizer shape of the shape annotation's selector.
 
