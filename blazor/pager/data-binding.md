@@ -68,7 +68,7 @@ In the following sample, initially list view items are displayed per page based 
         ListData.Add(new DataModel { ProductID = 24, ProductName = "Guaraná Fantástica" });
         ListData.Add(new DataModel { ProductID = 25, ProductName = "NuNuCa Nuß-Nougat-Creme" });
     }
-    public void Click(PageItemClickEventArgs args)
+    public void Click(PagerItemClickEventArgs args)
     {
         SkipValue = (args.CurrentPage * Page.PageSize) - Page.PageSize;
         TakeValue = Page.PageSize;
@@ -127,7 +127,7 @@ In the following sample, initially list view items are displayed per page based 
         public int ProductID { get; set; }
         public string ProductName { get; set; }
     }
-    public void Click(PageItemClickEventArgs args)
+    public void Click(PagerItemClickEventArgs args)
     {
         SkipValue = (args.CurrentPage * Page.PageSize) - Page.PageSize;
         TakeValue = Page.PageSize;
