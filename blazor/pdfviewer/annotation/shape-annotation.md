@@ -110,4 +110,53 @@ The properties of the shape annotations can be set before creating the control u
 }
 ```
 
+## Customize annotation selector
+
+You can customize the appearance of the annotation's selector using the `AnnotationSelectorSettings` property of the `PdfViewerRectangleSettings` class.
+
+The following code illustrates how to change the resizer shape of the shape annotation's selector.
+
+```cshtml
+@using Syncfusion.Blazor.PdfViewer
+@using Syncfusion.Blazor.PdfViewerServer
+
+<SfPdfViewerServer @ref="viewer" DocumentPath="@DocumentPath" Height="500px" Width="100%" RectangleSettings=@rectangleSettings>    
+</SfPdfViewerServer>
+
+
+@code{
+    //Sets the PDF document path for initial loading.
+    private string DocumentPath { get; set; } = "wwwroot/data/PDF Succinctly.pdf";
+    
+    SfPdfViewerServer viewer;
+
+    //Defines the settings of rectangle annotation.
+    PdfViewerRectangleSettings rectangleSettings = new PdfViewerRectangleSettings
+    {
+        //Defines the annotation selector settings for the annotation.
+        AnnotationSelectorSettings = new PdfViewerAnnotationSelectorSettings()
+        {
+            //Defines the shape of the resizer. By default it is square.
+            ResizerShape = AnnotationResizerShape.Circle
+        }
+    };
+    
+}
+```
+[](screenshot)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Customize%20Annotation%20Selector).
+
+
+
+
+
+
+
+
+
+
+
+
+
 > You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.

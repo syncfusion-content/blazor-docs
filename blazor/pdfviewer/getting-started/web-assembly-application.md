@@ -153,6 +153,8 @@ N> Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/docume
 {% endhighlight %}
 {% endtabs %}
 
+[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/Simple%20Sample%20PDFViewer%20-%20Wasm).
+
 ## Server side processing
 
 Since Syncfusion PDF Viewer (Blazor WebAssembly) component depends on server-side processing to render the PDF files, it is mandatory to create a web service as mentioned [here](https://www.syncfusion.com/kb/10346/how-to-create-pdf-viewer-web-service-application-in-asp-net-core)
@@ -163,3 +165,43 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 ![Blazor PDF Viewer Component](GettingStarted_images/blazor-pdfviewer.png)
 
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer).
+
+## How to load desired PDF for initial loading and change document path at runtime
+
+You can load your own PDF document for initial loading as well as change document at run-time in PDF Viewer WebAssembly projects. To achieve that, you need to create the webservice and add your documents in that webservice project. Then mention that webservice localhost path as service url in your webassembly project.
+
+Refer,[How to create PDF Viewer Web Service](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above).
+
+```cshtml
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.PdfViewer
+@using System.Web
+@inject HttpClient Http
+
+<SfButton OnClick="LoadAnotherDocument">Load Another Document</SfButton>
+
+<!--ServiceUrl must be the webservice output path and you have to run the webservice first to get the serviceurl. Also it should be in runnable state-->
+<SfPdfViewer DocumentPath="@DocumentPath" 
+             ServiceUrl="https://localhost:5001/pdfviewer" 
+             Height="500px" Width="1060px"></SfPdfViewer>
+
+@code
+{
+    SfPdfViewer PdfViewer;
+
+    //Sets the PDF document path for initial loading.
+    private string DocumentPath { get; set; } = "PDF Succinctly.pdf";
+
+    private async Task LoadAnotherDocument()
+    {
+        //Sends a GET request to a specified Uri and return the response body as a byte array. 
+        byte[] byteArray = await Http.GetByteArrayAsync("Data/FormFillingDocument.pdf");
+        //Converts the byte array into base64 string.
+        string base64String = Convert.ToBase64String(byteArray);
+        //Sets the base64 string as document path for the PDF Viewer.
+        DocumentPath = "data:application/pdf;base64," + base64String;
+    }
+}
+```
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/DocumentPath/Load%20desired%20PDF%20using%20WebService%20-Wasm).
