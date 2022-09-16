@@ -9,6 +9,11 @@ documentation: ug
 
 # Radio Button Model Binding in Blazor RadioButton Component
 
+To get start quickly with Model Binding in Blazor RadioButton Component, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=4vMuReo0Hz4"%}
+
 This section demonstrates the strongly typed extension support in Radio Button. The view that can bind with any model is called as strongly typed view. You can bind any class as model to view. You can access model properties on that view. You can use data associated with model to render the component.
 
 In this sample, first check the male value and click the submit button to post the selected value in the Radio Button. When female value is checked, validation error message will be shown below the Radio Button.
