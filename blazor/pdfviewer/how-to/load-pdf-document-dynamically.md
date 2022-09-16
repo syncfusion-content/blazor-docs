@@ -24,11 +24,11 @@ The following code example shows how to load a bas64 string dynamically.
     SfPdfViewerServer Viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public void clicked()
+    public async void clicked()
     {
         byte[] byteArray = System.IO.File.ReadAllBytes("wwwroot/Data/Python_Succinctly.pdf");
         string base64String = Convert.ToBase64String(byteArray);
-        Viewer.Load("data:application/pdf;base64," + base64String, null);
+        Viewer.LoadAsync("data:application/pdf;base64," + base64String, null);
     }
 }
 ```
@@ -46,11 +46,12 @@ The following code example shows how to load the PDF dynamically by specifying f
     SfPdfViewerServer Viewer;
     private string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 
-    public void clicked()
+    public async void clicked()
     {
-        Viewer.Load("wwwroot/data/Python_Succinctly.pdf", null);
+        Viewer.LoadAsync("wwwroot/data/Python_Succinctly.pdf", null);
     }
 }
 ```
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/DocumentPath/Load%20PDF%20from%20Stream%20-%20Wasm).
 
 > You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.
