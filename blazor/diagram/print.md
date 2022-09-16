@@ -60,7 +60,7 @@ The following code example illustrates how to print the region occupied by the d
      DiagramPrintExportRegion region = DiagramPrintExportRegion.PageSettings;
      PageOrientation orientation = PageOrientation.Portrait;
      
-     private void OnPrint()
+     private async Task  OnPrint()
      {
         DiagramPrintSettings print = new DiagramPrintSettings();
         print.PageWidth = width;

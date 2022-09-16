@@ -184,8 +184,6 @@ Snapping to gridlines can be enabled/disabled with the [SnapConstraints](https:/
 By default, the objects are snapped towards the nearest gridline. The gridline or position towards where the diagram object snaps can be customized by using [SnapIntervals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramGridLines.html#Syncfusion_Blazor_Diagram_DiagramGridLines_SnapIntervals) property of the HorizontalGridLines and VerticalGridLines.
 
 ```cshtml
-@page "/CustomSnapLineInterval Sample"
-
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
