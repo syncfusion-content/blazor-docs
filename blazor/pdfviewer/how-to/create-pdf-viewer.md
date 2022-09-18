@@ -35,10 +35,7 @@ The following code example shows how to view the created PDF document.
         textBoxField.ToolTip = "First Name";
         //Add the form field to the document.
         document.Form.Fields.Add(textBoxField);
-        //stream.Position = 0;
-
         var stream = new MemoryStream();
-
         //Save the document.
         document.Save(stream);
         bytes = stream.ToArray();
