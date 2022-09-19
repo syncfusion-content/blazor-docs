@@ -242,8 +242,10 @@ To setup the enable cell placeholder during virtualization, you need to define [
 }
 ```
 
-The following GIF represent a datagrid with Mask row virtualization.
+The following GIF represents a datagrid with Mask row virtualization:
 ![Blazor DataGrid with Mask Row virtualization](./images/blazor-datagrid-mask-row-virtualization.gif)
+
+> For a better experience, the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) property of the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html) class and the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property should be defined.
 
 ## Frozen columns virtualization
 
