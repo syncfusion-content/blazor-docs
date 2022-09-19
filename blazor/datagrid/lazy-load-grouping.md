@@ -63,7 +63,7 @@ The following GIF represents the lazy load grouping functionality with paging in
 
 ## Lazy load grouping with virtual scrolling
 
-When you enable lazy load grouping with the virtual scrolling feature, the Grid will render only the initial level caption rows in the collapsed state at grouping. The child rows of each caption will be fetched from the server and rendered in the Grid when you expand the caption row. The caption row expand/collapse state will be persisted while scrolling. In addition, for great performance, a loading placeholder indicator(masked row) is shown in-between the time of fetching the new data and binding it to the grid. Also, the same set of DOM elements is reused to improve performance.
+When you enable lazy load grouping with the virtual scrolling feature, the Grid will render only the initial level caption rows in the collapsed state at grouping. The child rows of each caption will be fetched from the server and rendered in the Grid when you expand the caption row. The caption row expand/collapse state will be persisted while scrolling. In addition, for great performance, a loading placeholder indicator(masked row) is shown between the time of fetching the new data and binding it to the grid. Also, the same set of DOM elements is reused to improve performance.
 
 To enable lazy load grouping with virtual scrolling in the datagrid, you need to define the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) property as true and the [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) property of the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) class as true.
 
@@ -71,7 +71,7 @@ To enable lazy load grouping with virtual scrolling in the datagrid, you need to
 
 > When enabling lazy load grouping with virtual scrolling, the [EnableVirtualMaskRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualMaskRow) property is enabled by default. There is no need to use this property explicitly.
 
-The following sample code demonstrates the above,
+The following sample code demonstrates the above:
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
