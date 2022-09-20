@@ -75,7 +75,7 @@ namespace RenameImage.Controllers
                 {
                     if (UploadFiles != null)
                     {
-                        string targetPath = hostingEnv.ContentRootPath + "\\wwwroot\\Images";
+                        string targetPath = hostingEnv.ContentRootPath + "//wwwroot//Images";
                         string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
 
                         // Create a new directory, if it does not exists
@@ -85,13 +85,13 @@ namespace RenameImage.Controllers
                         }
 
                         imageFileName = filename;
-                        string path = hostingEnv.WebRootPath + "\\Images" + $@"\{filename}";
+                        string path = hostingEnv.WebRootPath + "//Images" + $@"/{filename}";
 
                         // Rename a uploaded image file name
                         while (System.IO.File.Exists(path))
                         {
                             imageFileName = "rteImage" + x + "-" + filename;
-                            path = hostingEnv.WebRootPath + "\\Images" + $@"\rteImage{x}-{filename}";
+                            path = hostingEnv.WebRootPath + "//Images" + $@"/rteImage{x}-{filename}";
                             x++;
                         }
 

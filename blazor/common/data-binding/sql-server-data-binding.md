@@ -198,8 +198,8 @@ public static DataSet CreateCommand(string queryString, string connectionString)
 public override object Read(DataManagerRequest DataManagerReq, string Key = null)
 {
     string AppData = _env.ContentRootPath;
-    string DatabasePath = Path.Combine(AppData, "App_Data\\NORTHWND.MDF");
-string ConnectionStr = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='{DatabasePath}';Integrated Security=True;Connect Timeout=30";
+    string DatabasePath = Path.Combine(AppData, "App_Data//NORTHWND.MDF");
+string ConnectionStr = $"Data Source=(LocalDB)//MSSQLLocalDB;AttachDbFilename='{DatabasePath}';Integrated Security=True;Connect Timeout=30";
 
     // Here, we formed the SQL query string based on the skip and take count from the DataManagerRequest
 
@@ -265,8 +265,8 @@ public override object Insert(DataManager DataManager, object Value, string Key)
 //Here, you can implement your own code to update the record from the grid.
 
     string AppData = _env.ContentRootPath;
-    string DatabasePath = Path.Combine(AppData, "App_Data\\NORTHWND.MDF");
-    string ConnectionStr = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='{DatabasePath}';Integrated Security=True;Connect Timeout=30";
+    string DatabasePath = Path.Combine(AppData, "App_Data//NORTHWND.MDF");
+    string ConnectionStr = $"Data Source=(LocalDB)//MSSQLLocalDB;AttachDbFilename='{DatabasePath}';Integrated Security=True;Connect Timeout=30";
     string QueryStr = $"Insert into Orders(CustomerID) values('{(Value as Order).CustomerID}')";
     SqlConnection Con = new SqlConnection(ConnectionStr);
     try
@@ -306,8 +306,8 @@ public override object Update(DataManager DataManager, object Value, string KeyF
 {
 //Here, you can implement your own code to update the record from the grid.
     string AppData = _env.ContentRootPath;
-    string DatabasePath = Path.Combine(AppData, "App_Data\\NORTHWND.MDF");
-    string ConnectionStr = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='{DatabasePath}';Integrated Security=True;Connect Timeout=30";
+    string DatabasePath = Path.Combine(AppData, "App_Data//NORTHWND.MDF");
+    string ConnectionStr = $"Data Source=(LocalDB)//MSSQLLocalDB;AttachDbFilename='{DatabasePath}';Integrated Security=True;Connect Timeout=30";
     string QueryStr = $"Update Orders set CustomerID='{(Value as Order).CustomerID}' where OrderID={(Value as Order).OrderID}";
     SqlConnection Con = new SqlConnection(ConnectionStr);
     try
@@ -348,8 +348,8 @@ public override object Remove(DataManager DataManager, object Value, string KeyF
 //Here, you can implement your own code to delete the record from the grid.
 
     string AppData = _env.ContentRootPath;
-    string DatabasePath = Path.Combine(AppData, "App_Data\\NORTHWND.MDF");
-    string Connectionstr = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='{DatabasePath}';Integrated Security=True;Connect Timeout=30";
+    string DatabasePath = Path.Combine(AppData, "App_Data//NORTHWND.MDF");
+    string Connectionstr = $"Data Source=(LocalDB)//MSSQLLocalDB;AttachDbFilename='{DatabasePath}';Integrated Security=True;Connect Timeout=30";
     string QueryStr = $"Delete from Orders where OrderID={Value}";
     SqlConnection Con = new SqlConnection(Connectionstr);
     try

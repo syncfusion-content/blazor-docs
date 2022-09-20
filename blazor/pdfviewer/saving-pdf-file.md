@@ -30,7 +30,7 @@ You might need to save the PDF file back to the server.
         byte[] data = await viewer.GetDocument();
         //PDF document file stream
         Stream stream = new MemoryStream(data);
-        using (var fileStream = new FileStream(@"wwwroot\Data\PDF_Succinctly_Updated.pdf", FileMode.Create, FileAccess.Write))
+        using (var fileStream = new FileStream(@"wwwroot/Data/PDF_Succinctly_Updated.pdf", FileMode.Create, FileAccess.Write))
         {
             //Saving the new file in root path of application
             stream.CopyTo(fileStream);
@@ -62,7 +62,7 @@ If you have plenty of PDF files stored in database and you want to save the upda
     {
         string DocumentName = "PDF_Succinctly";
         byte[] data = await viewer.GetDocument();
-        string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\database.mdf;";
+        string connectionString = @"Data Source=(LocalDB)/MSSQLLocalDB;AttachDbFilename=D:/database.mdf;";
         string queryStmt = "Update PDFFiles SET Content = @Content where DocumentName = '" + DocumentName + "'";
         using (SqlConnection con = new SqlConnection(connectionString))
         {

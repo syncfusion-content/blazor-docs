@@ -758,8 +758,8 @@ Based on the DataManagerRequest, you can form SQL query string (to perform pagin
     public override object Read(DataManagerRequest dm, string key = null)
     {
         string appdata = _env.ContentRootPath;
-        string path = Path.Combine(appdata, "App_Data\\NORTHWND.MDF");
-        string str = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='{path}';Integrated Security=True;Connect Timeout=30";
+        string path = Path.Combine(appdata, "App_Data//NORTHWND.MDF");
+        string str = $"Data Source=(LocalDB)//MSSQLLocalDB;AttachDbFilename='{path}';Integrated Security=True;Connect Timeout=30";
         // based on the skip and take count from DataManagerRequest here we formed SQL query string
         string qs = "SELECT OrderID, CustomerID FROM dbo.Orders ORDER BY OrderID OFFSET " + dm.Skip + " ROWS FETCH NEXT " + dm.Take + " ROWS ONLY;";
         DataSet data = CreateCommand(qs, str);
@@ -807,7 +807,7 @@ namespace EFGrid.Shared.DataAccess
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='F:\blazor\EFGrid - CRUD - P6\EFGrid.Shared\App_Data\NORTHWND.MDF';Integrated Security=True;Connect Timeout=30");
+                optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)/MSSQLLocalDB;AttachDbFilename='F:/blazor/EFGrid - CRUD - P6/EFGrid.Shared/App_Data/NORTHWND.MDF';Integrated Security=True;Connect Timeout=30");
             }
         }
     }

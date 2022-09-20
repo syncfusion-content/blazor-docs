@@ -303,13 +303,13 @@ namespace filemanager.Server.Controllers
     {
         public PhysicalFileProvider operation;
         public string basePath;
-        string root = "wwwroot\\Files";
+        string root = "wwwroot//Files";
         [Obsolete]
         public SampleDataController(IHostingEnvironment hostingEnvironment)
         {
             this.basePath = hostingEnvironment.ContentRootPath;
             this.operation = new PhysicalFileProvider();
-            this.operation.RootFolder(this.basePath + "\\" + this.root); // It denotes in which files and folders are available.
+            this.operation.RootFolder(this.basePath + "//" + this.root); // It denotes in which files and folders are available.
         }
 
         // Processing the File Manager operations.
@@ -354,7 +354,7 @@ namespace filemanager.Server.Controllers
 
 To access the above File Operations, you need some model class files that have file operations methods. So, create `Models` folder in `server` part of the application and download the `PhysicalFileProvider.cs` and `Base` folder from the [this](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/tree/master/Models) link in the Models folder.
 
-Add your required files and folders under the `wwwroot\Files` directory.
+Add your required files and folders under the `wwwroot/Files` directory.
 
 > For Server-side application, add the following code in your **Startup.cs** file.
 

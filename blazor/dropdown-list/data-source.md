@@ -514,7 +514,7 @@ namespace EFDropDown.Shared.DataAccess
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Blazor\DropDownList\EFDropDown\Shared\App_Data\NORTHWND.MDF;Integrated Security=True;Connect Timeout=30");
+                optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)/MSSQLLocalDB;AttachDbFilename=D:/Blazor/DropDownList/EFDropDown/Shared/App_Data/NORTHWND.MDF;Integrated Security=True;Connect Timeout=30");
             }
         }
     }

@@ -208,7 +208,7 @@ The following code example shows how to open the Word document file in viewer fr
     public void OnLoad(object args)
     {
         string documentID = "GettingStarted.docx";
-        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\database.mdf;";
+        string connectionString = "Data Source=(LocalDB)//MSSQLLocalDB;AttachDbFilename=C://database.mdf;";
         SqlConnection connection = new SqlConnection(connectionString);
         //Searches for the Word document from the database
         string query = "select Data from DocumentsTable where DocumentName = '" + documentID + "'";

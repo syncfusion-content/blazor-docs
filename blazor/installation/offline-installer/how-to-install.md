@@ -42,7 +42,7 @@ The steps below show how to install the Essential Studio Blazor installer.
 
 3. After reading the License Terms and Privacy Policy, check the "**I agree to the License Terms and Privacy Policy**" check box. Click the Next button.
 
-4. Change the install and sample locations here. You can also change the Additional settings. Click Next\Install to install with the default settings.
+4. Change the install and sample locations here. You can also change the Additional settings. Click Next/Install to install with the default settings.
 
    ![Web Offline Installer Settings Wizard](images/webofflineinstaller-4.png)
 
@@ -102,11 +102,11 @@ To install through the Command Line in Silent mode, follow the steps below.
 
 6. Run Command Prompt in administrator mode and enter the following arguments.
 
-   **Arguments:** "installer file path\SyncfusionEssentialStudio(product)_(version).exe" /Install silent /UNLOCKKEY:"(product unlock key)" [/   log "{Log file path}"] [/InstallPath:{Location to install}] [/InstallSamples:{true/false}] [/CreateShortcut:{true/false}] [/   CreateStartMenuShortcut:{true/false}]
+   **Arguments:** "installer file path/SyncfusionEssentialStudio(product)_(version).exe" /Install silent /UNLOCKKEY:"(product unlock key)" [/   log "{Log file path}"] [/InstallPath:{Location to install}] [/InstallSamples:{true/false}] [/CreateShortcut:{true/false}] [/   CreateStartMenuShortcut:{true/false}]
 
    > **Note** <br /> [..] – Arguments inside the square brackets are optional.
 
-   **Example:** "D:\Temp\syncfusionessentialblazor_x.x.x.x.exe" /Install silent /UNLOCKKEY:"product unlock key" /log    "C:\Temp\EssentialStudio_Product.log" /InstallPath:C:\Syncfusion\x.x.x.x /InstallSamples:true /CreateShortcut:true /   CreateStartMenuShortcut:true
+   **Example:** "D:/Temp/syncfusionessentialblazor_x.x.x.x.exe" /Install silent /UNLOCKKEY:"product unlock key" /log    "C:/Temp/EssentialStudio_Product.log" /InstallPath:C:/Syncfusion/x.x.x.x /InstallSamples:true /CreateShortcut:true /   CreateStartMenuShortcut:true
 
 7. Essential Studio for Blazor is installed.
 
@@ -127,7 +127,7 @@ Syncfusion Essential Blazor can be uninstalled silently using the Command Line.
 5. Exit the Wizard.
 
 6. Run Command Prompt in administrator mode and enter the following arguments.<br /> <br />
-**Arguments:** "Copied installer file path\syncfusionessentialblazor_(version).exe" /uninstall silent <br /> <br />
-**Example:** "D:\Temp\syncfusionessentialblazor_x.x.x.x.exe" /uninstall silent
+**Arguments:** "Copied installer file path/syncfusionessentialblazor_(version).exe" /uninstall silent <br /> <br />
+**Example:** "D:/Temp/syncfusionessentialblazor_x.x.x.x.exe" /uninstall silent
 
 7. Essential Studio for Blazor is uninstalled.

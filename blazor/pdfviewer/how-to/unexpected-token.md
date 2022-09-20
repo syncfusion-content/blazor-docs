@@ -15,7 +15,7 @@ However, we have exposed the **ReferencePath** API to set the pdfium library loc
 
 ```csharp
 
-PdfRenderer.ReferencePath = _hostingEnvironment.WebRootPath + "\\";  
+PdfRenderer.ReferencePath = _hostingEnvironment.WebRootPath + "//";  
 
 ```
 
@@ -26,7 +26,7 @@ The following code example shows how to resolve the "Unexpected token T in JSON 
 public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
 {
     PdfRenderer pdfviewer = new PdfRenderer(_cache);
-    PdfRenderer.ReferencePath = _hostingEnvironment.WebRootPath + "\\";
+    PdfRenderer.ReferencePath = _hostingEnvironment.WebRootPath + "//";
     MemoryStream stream = new MemoryStream();
     object jsonResult = new object();
     if (jsonObject != null && jsonObject.ContainsKey("document"))
@@ -58,4 +58,4 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
 
 Download the [Pdfium.dll](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Pdfium1515619754).
 
-N> Kindly use the `Syncfusion.EJ2.PdfViewer.AspNet.Core.Linux` package in your application for Linux environment. Also, ensure whether the library dependencies of lib pdfium. so they are installed properly. If not, please execute the following command to install the RUN apt-get update\&& apt-get install -y --allow-unauthenticated \ libc6-dev \ libgdiplus \ libx11-dev \ curl \ vim \ supervisor \ pro cps
+N> Kindly use the `Syncfusion.EJ2.PdfViewer.AspNet.Core.Linux` package in your application for Linux environment. Also, ensure whether the library dependencies of lib pdfium. so they are installed properly. If not, please execute the following command to install the RUN apt-get update/&& apt-get install -y --allow-unauthenticated / libc6-dev / libgdiplus / libx11-dev / curl / vim / supervisor / pro cps

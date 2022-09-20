@@ -465,7 +465,7 @@ namespace Restful_Services.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\SchedulerCRUD\\Restful_Services\\App_Data\\ScheduleData.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework;Integrated Security=True");
+                optionsBuilder.UseSqlServer("Data Source=(LocalDB)//MSSQLLocalDB;AttachDbFilename=D://SchedulerCRUD//Restful_Services//App_Data//ScheduleData.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework;Integrated Security=True");
             }
         }
 

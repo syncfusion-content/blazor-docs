@@ -94,7 +94,7 @@ namespace ImageUpload.Controllers
                 {
                     if (UploadFiles != null)
                     {
-                        string targetPath = hostingEnv.ContentRootPath + "\\wwwroot\\Images";
+                        string targetPath = hostingEnv.ContentRootPath + "//wwwroot//Images";
                         string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
 
                         // Create a new directory, if it does not exists
@@ -104,7 +104,7 @@ namespace ImageUpload.Controllers
                         }
 
                         // Name which is used to save the image
-                        filename = targetPath + $@"\{filename}";
+                        filename = targetPath + $@"/{filename}";
 
                         if (!System.IO.File.Exists(filename))
                         {

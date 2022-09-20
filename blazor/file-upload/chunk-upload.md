@@ -41,7 +41,7 @@ public void Save(IList<IFormFile> chunkFile, IList<IFormFile> UploadFiles)
                                     .Parse(file.ContentDisposition)
                                     .FileName
                                     .Trim('"');
-            filename = hostingEnv.ContentRootPath + $@"\{filename}";
+            filename = hostingEnv.ContentRootPath + $@"/{filename}";
             size += file.Length;
             if (!System.IO.File.Exists(filename))
             {
@@ -74,7 +74,7 @@ public void Remove(IList<IFormFile> UploadFiles)
 {
     try
     {
-        var filename = hostingEnv.ContentRootPath + $@"\{UploadFiles[0].FileName}";
+        var filename = hostingEnv.ContentRootPath + $@"/{UploadFiles[0].FileName}";
         if (System.IO.File.Exists(filename))
         {
             System.IO.File.Delete(filename);

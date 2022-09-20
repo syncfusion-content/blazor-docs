@@ -27,7 +27,7 @@ The Rich Text Editor allows you to load an external HTML file in the editor cont
  
 @code { 
     private string HtmlString { get; set; } 
-    private string PathToHTMLFile = Path.GetFullPath(Directory.GetCurrentDirectory() + @"\wwwroot\HtmlFiles\HtmlTest.html"); 
+    private string PathToHTMLFile = Path.GetFullPath(Directory.GetCurrentDirectory() + @"/wwwroot/HtmlFiles/HtmlTest.html"); 
     protected override void OnInitialized() 
     { 
         using (FileStream fs = File.Open(PathToHTMLFile, FileMode.Open, FileAccess.ReadWrite)) 
@@ -108,7 +108,7 @@ The Rich Text Editor allows you to load an external text file in to the editor. 
     public string text { get; set; }
     private string rteValue { get; set; } = "<p>Click the button to import text file</p>";
     private string HtmlString { get; set; }
-    private string PathToHTMLFile = Path.GetFullPath(Directory.GetCurrentDirectory() + @"\wwwroot\RTESample.txt");
+    private string PathToHTMLFile = Path.GetFullPath(Directory.GetCurrentDirectory() + @"/wwwroot/RTESample.txt");
     public void importStream()
     {
         using (FileStream fs = File.Open(PathToHTMLFile, FileMode.Open, FileAccess.ReadWrite))

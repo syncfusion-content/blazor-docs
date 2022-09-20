@@ -751,7 +751,7 @@ namespace TreeGridWebApiEFSample.Shared.DataAccess
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Documentation\TreeGridWebApiEFSample\TreeGridWebApiEFSample\Shared\App_Data\TreeGridDB.mdf;Integrated Security=True;Connect Timeout=30");
+                optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)/MSSQLLocalDB;AttachDbFilename=D:/Documentation/TreeGridWebApiEFSample/TreeGridWebApiEFSample/Shared/App_Data/TreeGridDB.mdf;Integrated Security=True;Connect Timeout=30");
             }
         }
     }

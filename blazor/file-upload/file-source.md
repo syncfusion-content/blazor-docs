@@ -90,13 +90,13 @@ public void Save(IList<IFormFile> chunkFile, IList<IFormFile> UploadFiles)
             {
                 for (var i = 0; i < folders.Length - 1; i++)
                 {
-                    var newFolder = uploaderFilePath + $@"\{folders[i]}";
+                    var newFolder = uploaderFilePath + $@"/{folders[i]}";
                             Directory.CreateDirectory(newFolder);
                             uploaderFilePath = newFolder;
                             filename = folders[i + 1];
                 }
             }
-            filename = uploaderFilePath + $@"\{filename}";
+            filename = uploaderFilePath + $@"/{filename}";
             size += file.Length;
             if (!System.IO.File.Exists(filename))
             {
@@ -123,7 +123,7 @@ public void Remove(IList<IFormFile> UploadFiles)
 {
     try
     {
-        var filename = hostingEnv.ContentRootPath + $@"\{UploadFiles[0].FileName}";
+        var filename = hostingEnv.ContentRootPath + $@"/{UploadFiles[0].FileName}";
         if (System.IO.File.Exists(filename))
         {
             System.IO.File.Delete(filename);

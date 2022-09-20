@@ -404,7 +404,7 @@ The first step is to create a DBContext class called **OrderContext** for establ
                 if (!optionsBuilder.IsConfigured)
                 {
                     // Configures the context to connect to a Microsoft SQL Serve database
-                    optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='D:\blazor\EFTreeMap\App_Data\NORTHWND.MDF';Integrated Security=True;Connect Timeout=30");
+                    optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)/MSSQLLocalDB;AttachDbFilename='D:/blazor/EFTreeMap/App_Data/NORTHWND.MDF';Integrated Security=True;Connect Timeout=30");
                 }
             }
         }

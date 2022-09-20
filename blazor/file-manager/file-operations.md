@@ -79,7 +79,7 @@ The following table represents the response parameters of *read* operations.
         hasChild:false,
         isFile:false,
         type:"",
-        filterPath:"\\Download\\"
+        filterPath:"//Download//"
     },
     files:[
         {
@@ -90,7 +90,7 @@ The following table represents the response parameters of *read* operations.
             hasChild:false,
             isFile:true,
             type:".xlsx",
-            filterPath:"\\Download\\"
+            filterPath:"//Download//"
         }
     ],
     error:null,
@@ -120,7 +120,7 @@ The following table represents the request parameters of *create* operations.
         {
             dateCreated: "2019-02-27T17:36:15.6571949+00:00",
             dateModified: "2019-03-12T10:17:31.8505975+00:00",
-            filterPath: "\",
+            filterPath: "/",
             hasChild: true,
             isFile: false,
             name: files,
@@ -188,7 +188,7 @@ The following table represents the request parameters of *rename* operations.
         {
             dateCreated: "2019-03-20T05:22:34.621Z",
             dateModified: "2019-03-20T08:45:56.000Z",
-            filterPath: "\Pictures\Nature\",
+            filterPath: "/Pictures/Nature/",
             hasChild: false,
             iconClass: "e-fe-image",
             isFile: true,
@@ -226,7 +226,7 @@ The following table represents the response parameters of *rename* operations.
             hasChild:false,
             isFile:true,
             type:".jpg",
-            filterPath:"\\Pictures\\Nature\\seaview.jpg"
+            filterPath:"//Pictures//Nature//seaview.jpg"
         }
     ],
     error:null,
@@ -278,7 +278,7 @@ The following table represents the response parameters of *delete* operations.
         {
             dateCreated: "2019-03-15T10:13:30.346309+00:00",
             dateModified: "2019-03-15T10:13:30.346309+00:00",
-            filterPath: "\Hello\folder",
+            filterPath: "/Hello/folder",
             hasChild: true,
             isFile: false,
             name: "folder",
@@ -332,7 +332,7 @@ The following table represents the response parameters of *details* operations.
     details:
     {
         name:"All Files",
-        location:"\\Files\\FileContents\\All Files",
+        location:"//Files//FileContents//All Files",
         isFile:false,
         size:"679.8 KB",
         created:"3/8/2019 10:18:37 AM",
@@ -391,7 +391,7 @@ The following table represents the response parameters of *search* operations.
         hasChild:true,
         isFile:false,
         type:"",
-        filterPath:"\\"
+        filterPath:"//"
     },
     files:[
         {
@@ -402,7 +402,7 @@ The following table represents the response parameters of *search* operations.
             hasChild:true,
             isFile:false,
             type:"",
-            filterPath:"\\FileContents\\Nature"
+            filterPath:"//FileContents//Nature"
         }
     ],
     error:null,
@@ -465,7 +465,7 @@ The following table represents the response parameters of *copy* operations.
             isFile:true,
             type:".mp4",
             id:null,
-            filterPath:"\\"
+            filterPath:"//"
         }
     ],
     error:null,
@@ -528,7 +528,7 @@ The following table represents the response parameters of *copy* operations.
             isFile:true,
             type:".mp4",
             id:null,
-            filterPath:"\\Videos\\"
+            filterPath:"//Videos//"
         }
     ],
     error:null,
@@ -566,7 +566,7 @@ data: {
     isFile:false,
     type:"",
     id:null,
-    filterPath:"\\",
+    filterPath:"//",
     targetPath:null,
     renameFiles:null,
     uploadFiles:null,
@@ -621,7 +621,7 @@ The following table represents the request parameters of *download* operations.
             isFile:true,
             type:".png",
             id:null,
-            filterPath:"\\",
+            filterPath:"//",
             targetPath:null,
             renameFiles:null,
             uploadFiles:null,

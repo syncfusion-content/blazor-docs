@@ -114,7 +114,7 @@ The following code example shows how to open the PDF file in viewer from SQL Ser
     protected override void OnInitialized()
     {
         string documentID = "PDF Succinctly";
-        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Database.mdf;";
+        string connectionString = "Data Source=(LocalDB)//MSSQLLocalDB;AttachDbFilename=C://Database.mdf;";
         System.Data.SqlClient.SqlConnection connection = new System.Data.SqlClient.SqlConnection(connectionString);
         //Searches for the PDF document from the database
         string query = "select Data from Table where DocumentName = '" + documentID + "'";
