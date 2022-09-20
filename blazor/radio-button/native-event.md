@@ -34,8 +34,8 @@ The `onclick` attribute is used to bind the click event for Radio Button.
 ```cshtml
 @using Syncfusion.Blazor.Buttons
 
-<SfRadioButton Label="Credit/Debit Card" Name="payment" Value="credit/debit" ValueChange="onValueChange" @bind-Checked="stringChecked"></SfRadioButton><br />
-<SfRadioButton Label="Net Banking" Name="payment" Value="netbanking" ValueChange="onValueChange" @bind-Checked="stringChecked"></SfRadioButton>
+<SfRadioButton Label="Credit/Debit Card" Name="payment" Value="credit/debit" TChecked="string" ValueChange="onValueChange" @bind-Checked="stringChecked"></SfRadioButton><br />
+<SfRadioButton Label="Net Banking" Name="payment" Value="netbanking" TChecked="string" ValueChange="onValueChange" @bind-Checked="stringChecked"></SfRadioButton>
 
 @code {
     private string stringChecked = "netbanking";

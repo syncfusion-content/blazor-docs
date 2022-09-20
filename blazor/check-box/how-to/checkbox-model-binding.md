@@ -9,6 +9,11 @@ documentation: ug
 
 # Model Binding in Blazor CheckBox Component
 
+To get start quickly with Model Binding in Blazor CheckBox Component, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=4vMuReo0Hz4"%}
+
 This section demonstrates the strongly typed extension support in Checkbox. The view that can bind with any model is called as strongly typed view. You can bind any class as model to view, access model properties on that view, and use data associated with model to render the component.
 
 In this sample, first check the option and click the submit button to post the selected value in the Checkbox. When the value is not checked, validation error message will be shown below the Checkbox.
