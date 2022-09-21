@@ -15,7 +15,7 @@ However, we have exposed the **ReferencePath** API to set the pdfium library loc
 
 ```csharp
 
-PdfRenderer.ReferencePath = _hostingEnvironment.WebRootPath + "\\";  
+PdfRenderer.ReferencePath = _hostingEnvironment.WebRootPath + "/";  
 
 ```
 
@@ -26,7 +26,7 @@ The following code example shows how to resolve the "Unexpected token T in JSON 
 public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
 {
     PdfRenderer pdfviewer = new PdfRenderer(_cache);
-    PdfRenderer.ReferencePath = _hostingEnvironment.WebRootPath + "\\";
+    PdfRenderer.ReferencePath = _hostingEnvironment.WebRootPath + "/";
     MemoryStream stream = new MemoryStream();
     object jsonResult = new object();
     if (jsonObject != null && jsonObject.ContainsKey("document"))
