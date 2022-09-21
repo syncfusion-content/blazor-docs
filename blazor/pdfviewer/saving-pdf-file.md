@@ -30,7 +30,7 @@ You might need to save the PDF file back to the server.
         byte[] data = await viewer.GetDocument();
         //PDF document file stream
         Stream stream = new MemoryStream(data);
-        using (var fileStream = new FileStream(@"wwwroot\Data\PDF_Succinctly_Updated.pdf", FileMode.Create, FileAccess.Write))
+        using (var fileStream = new FileStream(@"wwwroot/Data/PDF_Succinctly_Updated.pdf", FileMode.Create, FileAccess.Write))
         {
             //Saving the new file in root path of application
             stream.CopyTo(fileStream);
