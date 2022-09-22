@@ -41,6 +41,25 @@ string data = Diagram.SaveDiagram();
 await Diagram.LoadDiagram(data);
 ```
 
+## Load the SfDiagramComponent from SfDiagram string
+
+The [LoadDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_LoadDiagram_System_String_) method loads the [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) from the serialized text data of the [SfDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html).
+
+* The data parameter is used to provide the serialized string of the [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) or [SfDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html)
+* If the Json data is a [SfDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html) string, then the isClassicData parameter should be true; otherwise, it should be false. The default value of the isClassicData is false.
+
+The following code illustrates how to load the SfDiagramComponent from SfDiagram serialized string data.
+
+```cshtml
+SfDiagram ClassicDiagram;
+//returns the serialized string of the SfDiagram
+string data = ClassicDiagram.SaveDiagram(); 
+
+SfDiagramComponent Diagram;
+//Loads the SfDiagramComponent from saved data of the SfDiagram
+await Diagram.LoadDiagram(data, true);
+```
+
 ## How to save and load the diagram using file stream
 
 The diagram provides support to save and load the diagram using file stream. The below code illustrates how to download the saved diagram as a file.
