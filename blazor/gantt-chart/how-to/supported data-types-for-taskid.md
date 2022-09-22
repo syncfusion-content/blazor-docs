@@ -7,9 +7,9 @@ control: Gantt Chart
 documentation: ug
 ---
 
-# Supported data types for task id and parent id
+# Supported data types for task id
 
-In the Gantt Chart component, you can bind the values of [GanttTaskFields.Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) in following types.
+In the Gantt Chart component, you can bind the values of [GanttTaskFields.Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) field in following types.
 
 * Integer
 * GUID
@@ -21,10 +21,10 @@ You can refer to our [Mapping task fields](https://blazor.syncfusion.com/documen
 
 ## GUID type
 
-You can use `GUID` type for `GanttTaskFields.Id`. When `GUID` type is used, it differs from `int` type or `string` type in following ways.
+You can also use `GUID` type for `GanttTaskFields.Id`. When `GUID` type is used, it differs from `int` type and `string` type in following ways.
 
 * Task id column will not be rendered in dependency tab of add/edit dialog.
-* Task id will not be displayed on tooltip, which renders on hovering the connector lines.
+* Task id will not be displayed in tooltip, which renders on hovering the connector lines.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -115,5 +115,5 @@ The following screenshot shows the output of the above code snippet.
 
 ## Limitations
 
-* The predecessor value contains id to which the task relationship should be established and [predecessor types](https://blazor.syncfusion.com/documentation/gantt-chart/task-dependencies#task-relationship-types). In string/GUID type, while providing predecessor values, a space should be given between task id and predecessor types.
+* The predecessor value contains id to which the task relationship should be established and [predecessor types](https://blazor.syncfusion.com/documentation/gantt-chart/task-dependencies#task-relationship-types). In string/GUID type, while providing predecessor values both on load time and on cell editing, a space should be given between task id and predecessor types.
 * In string type, the id field in add dialog will be in edited state. The id should not contain an empty space.

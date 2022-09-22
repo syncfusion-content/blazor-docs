@@ -1,0 +1,153 @@
+---
+layout: post
+title: State Management in Blazor Gantt Chart Component | Syncfusion
+description: Checkout and learn here all about State Management in Syncfusion Blazor Gantt Chart component and more.
+platform: Blazor
+control: Gantt Chart
+documentation: ug
+---
+
+# State Management
+
+State management allows users to save and load gantt state. The gantt will use user-provided state to render instead of its properties provided declaratively.
+
+Below properties can be saved and loaded into gantt later.
+
+Property|
+-----|
+Columns |
+GanttFilterSettings |
+GanttSortSettings |
+GanttSplitterSettings |
+GanttTimelineSettings |
+ProjectStartDate |
+ProjectEndDate |
+
+## Enabling persistence
+
+State persistence allows Gantt chart to retain the current gantt state in the browser local storage for state maintenance. This action is handled through the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnablePersistence) property which is set to false by default. When it is set to true, some properties of the gantt chart will be retained even after refreshing the page.
+
+> The state will be persisted based on **ID** property. So, it is recommended to explicitly set the **ID** property for Gantt chart.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Navigations
+
+<SfGantt ID="Persist" @ref="Gantt" DataSource="@TaskCollection" Width="750px" AllowReordering="true" AllowFiltering="true" AllowSorting="true"
+                AllowResizing="true" ShowColumnMenu="true" EnablePersistence="true">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+                    Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
+    
+</SfGantt>
+@code{
+    private SfGantt<TaskData> Gantt;
+    private List<TaskData> TaskCollection { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>() {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2021, 04, 05), EndDate = new DateTime(2021, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2021, 04, 05), Duration = "4", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2021, 04, 05), Duration = "4", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Prepare product sketch and notes", StartDate = new DateTime(2021, 04, 05), Duration = "2", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Concept approval", StartDate = new DateTime(2021, 04, 08), EndDate = new DateTime(2021, 04, 08), Duration="0", ParentId = 1 }
+        };
+        return Tasks;
+    }
+}
+```
+
+## Handling gantt state manually
+
+You can handle the gantt chart state manually by using in-built state persistence methods. You can use `GetPersistDataAsync`, `SetPersistDataAsync`, `ResetPersistDataAsync` methods of gantt to save, load and reset the gantt chart's persisted state manually. [GetPersistData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistData) method will return gantt chart current state as a string value, which is suitable for sending them over network and storing in data bases. You can use `ResetPersistData` method to reset gantt state to its original state. This will clear persisted data in window local storage and renders gantt with its original property values.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Navigations
+
+<SfGantt ID="Persist" @ref="Gantt" DataSource="@TaskCollection" Width="750px"
+                Toolbar="Toolbaritems" AllowReordering="true" AllowFiltering="true" AllowSorting="true"
+                AllowResizing="true" ShowColumnMenu="true" EnablePersistence="true">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+                    Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
+    <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+<style>
+.e-savestate::before {
+       content: '\e74d';
+    }
+    .e-setstate::before {
+       content: '\e75d';
+    }
+    .e-resetstate::before {
+       content: '\e710';
+    }
+</style>
+@code{
+    private SfGantt<TaskData> Gantt;
+    private List<TaskData> TaskCollection { get; set; }
+        private string PersistedState = null; 
+    private List<Object> Toolbaritems = new List<Object>() {
+         "ZoomIn", "ZoomOut", "ZoomToFit",
+         new ToolbarItem() { Text = "Save state", TooltipText = "Save state", Id = "GetPersistence", PrefixIcon= "e-savestate" },
+         new ToolbarItem() { Text = "Load state", TooltipText = "Load state", Id = "SetPersistence", PrefixIcon= "e-setstate" },
+         new ToolbarItem() { Text = "Reset state", TooltipText = "Reset state", Id = "ClearPersistence", PrefixIcon= "e-resetstate" }
+    };
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+    private async void ToolbarClickHandler(ClickEventArgs args)
+    {
+        if (args.Item.Id == "GetPersistence")
+        {
+            PersistedState = await Gantt.GetPersistDataAsync();
+        }
+        else if (args.Item.Id == "SetPersistence")
+        {
+            await Gantt.SetPersistDataAsync(PersistedState);  
+        }
+        else if (args.Item.Id == "ClearPersistence")
+        {
+            await Gantt.ResetPersistDataAsync();  
+        }
+    }
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>() {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2021, 04, 05), EndDate = new DateTime(2021, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2021, 04, 05), Duration = "4", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2021, 04, 05), Duration = "4", Progress = 50, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Prepare product sketch and notes", StartDate = new DateTime(2021, 04, 05), Duration = "2", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Concept approval", StartDate = new DateTime(2021, 04, 08), EndDate = new DateTime(2021, 04, 08), Duration="0", ParentId = 1 }
+        };
+        return Tasks;
+    }
+}
+```
+
+> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.
