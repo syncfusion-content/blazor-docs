@@ -1,0 +1,163 @@
+---
+layout: post
+title: Bind the native events in Blazor Gantt Chart Component | Syncfusion
+description: Learn here bind the native events in Syncfusion Blazor Gantt Chart component and more.
+platform: Blazor
+control: Gantt Chart
+documentation: ug
+---
+
+# Bind the native events in Blazor Gantt Chart Component
+
+Include the native events and attributes in the Blazor Gantt chart.
+
+In the following example, the KeyDown and KeyUp method is called every time any key is down and up, and the action is customized using the following keys.
+
+Interaction Keys |Description
+-----|-----
+<kbd>Ctrl + X</kbd> | It is used to cut the selected records from Gantt.
+<kbd>Ctrl + C</kbd> | It is used to copy the selected records from Gantt..
+<kbd>DownArrow</kbd> | Moves the cell focus/row or cell selection downward.
+<kbd>Ctrl + V</kbd> | It is used to paste the copied or cut records in the selected position..
+<kbd>Ctrl + D</kbd> | Used to duplicate a selected record.
+<kbd>Enter</kbd> | It is used to open the add dialog.
+
+### Example
+
+```cshtml
+<SfGantt @ref=Gantt DataSource="@TaskCollection" @onkeydown="KeyDown" @onkeyup="KeyUp" Height="450px" Width="700px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttSelectionSettings Mode="SelectionMode.Row" Type="SelectionType.Multiple"></GanttSelectionSettings>
+    <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true"></GanttEditSettings>
+    <GanttEvents RowSelected="RowSelect" RowDeselected="RowDeselect" TValue="TaskData"></GanttEvents>
+</SfGantt>
+@code {
+    private SfGantt<TaskData> Gantt;
+    private List<TaskData> TaskCollection { get; set; }
+    public List<TaskData> CopiedRecords { get; set; } = new List<TaskData>();
+    public List<TaskData> ClonedRecords { get; set; } = new List<TaskData>();
+    public TaskData SelectedRecords { get; set; }
+    public double SelectedIndex { get; set; }
+    public void RowDeselect(RowDeselectEventArgs<TaskData> Args)
+    {
+        //Remove the maintained value while deselecting the records
+        SelectedIndex = -1;
+        SelectedRecords = new TaskData();
+    }
+    public void RowSelect(RowSelectEventArgs<TaskData> Args)
+    {
+        SelectedRecords = Args.Data;
+        SelectedIndex = Args.RowIndex;
+    }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+    private async Task KeyDown(KeyboardEventArgs Args)
+    {
+        if (Args.CtrlKey && (Args.Code == "KeyC" || Args.Code == "KeyX"))
+        {
+            var selectedCount = await Gantt.GetSelectedRowIndexesAsync();
+            if (selectedCount.Count > 0)
+            {
+                if (Args.Code == "KeyC")
+                {
+                    ClonedRecords = new List<TaskData>();
+                    CopiedRecords = await Gantt.GetSelectedRecordsAsync();
+                }
+                else if (Args.Code == "KeyX")
+                {
+                    CopiedRecords = new List<TaskData>();
+                    ClonedRecords = await Gantt.GetSelectedRecordsAsync();
+                    if (ClonedRecords.Count > 0)
+                    {
+                        foreach (var i in ClonedRecords)
+                        {
+                            TaskCollection.Remove(TaskCollection.Where(x => x.TaskId == i.TaskId).FirstOrDefault());
+                        }
+                        Gantt.RefreshAsync();
+                    }
+                }
+            }
+        }
+        if (Args.Key == "Enter")
+        {
+            //Call add record method to insert the empty add row.
+            await Gantt.OpenAddDialogAsync();
+        }
+        if (Args.CtrlKey && Args.Code == "KeyD")
+        {
+            SelectedRecords.TaskId = TaskCollection.Count + 1;
+            //Insert the duplicate record here
+            TaskCollection.Insert((int)SelectedIndex + 1, SelectedRecords);
+            //Refresh the Gantt data.
+            Gantt.RefreshAsync();
+        }
+    }
+    private async Task KeyUp(KeyboardEventArgs Args)
+    {
+        if (Args.CtrlKey && Args.Code == "KeyV")
+        {
+            if (CopiedRecords.Count > 0 || ClonedRecords.Count > 0)
+            {
+                if (SelectedIndex > -1)
+                {
+                    var parentID = TaskCollection[(int)SelectedIndex].ParentId;
+                    for (var i = CopiedRecords.Count; i > 0; i--)
+                    {
+                        CopiedRecords[i - 1].TaskId = TaskCollection.Count + 1;
+                        CopiedRecords[i - 1].ParentId = parentID;
+                        TaskCollection.Insert((int)SelectedIndex, CopiedRecords[i - 1]);
+                    }
+                    for (var i = ClonedRecords.Count; i > 0; i--)
+                    {
+                        ClonedRecords[i - 1].ParentId = parentID;
+                        TaskCollection.Insert((int)SelectedIndex, ClonedRecords[i - 1]);
+                    }
+                }
+                else
+                {
+                    foreach (var rec in CopiedRecords)
+                    {
+                        TaskCollection.Insert((int)TaskCollection.Count, rec);
+                    }
+                    foreach (var rec in ClonedRecords)
+                    {
+                        TaskCollection.Insert((int)TaskCollection.Count, rec);
+                    }
+                }
+            }
+            // Refresh the Gantt data.
+            await Gantt.RefreshAsync();
+            await Gantt.ClearSelectionAsync();
+            CopiedRecords = new List<TaskData>();
+            ClonedRecords = new List<TaskData>();
+        }
+    }
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>() {
+        new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21) },
+        new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+        new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1 },
+        new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+        new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21) },
+        new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
+        new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
+        new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
+    };
+        return Tasks;
+    }
+}
+```
