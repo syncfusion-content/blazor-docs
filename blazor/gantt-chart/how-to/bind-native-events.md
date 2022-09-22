@@ -9,7 +9,7 @@ documentation: ug
 
 # Bind the native events in Blazor Gantt Chart Component
 
-Include the native events and attributes in the Blazor Gantt chart.
+Add the native events in the Blazor Gantt chart and the customize the action. Learn more about Blazor event handling [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/event-handling?view=aspnetcore-6.0).
 
 In the following example, the KeyDown and KeyUp method is called every time any key is down and up, and the action is customized using the following keys.
 
