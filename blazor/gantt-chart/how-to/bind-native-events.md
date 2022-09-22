@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bind the native events in Blazor Gantt Chart Component | Syncfusion
-description: Learn here bind the native events in Syncfusion Blazor Gantt Chart component and more.
+description: Learn here to bind the native events and customize the action in Syncfusion Blazor Gantt Chart component.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
