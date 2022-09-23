@@ -279,4 +279,4 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 </style>
 ```
 
-![Blazor AppBar Component](./images/getting_started.png)
+![Blazor AppBar Component](images/getting_started.png)
