@@ -1,7 +1,7 @@
 ---
 layout: post
 title: State Management in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about State Management in Syncfusion Blazor Gantt Chart component and more.
+description: Check out and learn all about State Management in Syncfusion Blazor Gantt Chart component and more here.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # State Management in Blazor Gantt Chart Component
 
-Gantt Chart component retains its state using local storage on browser reload. Also, it allows users to save and load gantt state manually. The gantt will use a user-provided state to render instead of its properties provided declaratively.
+Gantt Chart component retains its state using local storage on browser reload. Also, it allows users to save and load the Gantt state manually. The Gantt will use a user-provided state to render instead of its properties provided declaratively.
 
-Below properties can be saved and loaded into a gantt chart.
+The properties below can be saved and loaded into a Gantt chart:
 
 Property|
 -----|
@@ -26,9 +26,9 @@ ProjectEndDate |
 
 ## Enabling persistence
 
-State persistence allows the gantt chart to retain the current gantt state in the browser's local storage for state maintenance. This action is handled through the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnablePersistence) property, which is disabled by default. When it is enabled, some properties of the gantt will be retained even after refreshing the page.
+State persistence allows the Gantt chart to retain the current Gantt state in the browser's local storage for state maintenance. This action is handled through the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnablePersistence) property, which is disabled by default. When it is enabled, some properties of the Gantt will be retained even after refreshing the page.
 
-> The state will be persisted based on **ID** property. So, it is recommended to explicitly set the **ID** property for Gantt chart.
+> The state will be persisted based on the **ID** property. So, it is recommended to explicitly set the **ID** property for the Gantt chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -73,11 +73,11 @@ State persistence allows the gantt chart to retain the current gantt state in th
 
 ## Handling gantt state manually
 
-You can handle the gantt chart's state manually by using built-in state persistence methods. You can use `GetPersistDataAsync`, `SetPersistDataAsync`, `ResetPersistDataAsync` methods of gantt chart to save, load, and reset the gantt chart's persisted state respectively.
+You can manually handle the Gantt chart’s state by using built-in state persistence methods. You can use `GetPersistDataAsync`, `SetPersistDataAsync`, and `ResetPersistDataAsync` methods of the Gantt chart to save, load, and reset the Gantt chart's persisted state, respectively.
 
-* `GetPersistData` - Returns gantt chart properties as a string value, which is suitable for sending them over a network and storing them in databases.
-* `SetPersistData` - Loads already saved state of gantt chart.
-* `ResetPersistData` - Clears persisted data in window local storage and renders gantt chart with its original property values.
+* `GetPersistData` - Returns Gantt chart properties as a string value, which is suitable for sending them over a network and storing them in databases.
+* `SetPersistData` - Loads already saved state of the Gantt chart.
+* `ResetPersistData` - Clears persisted data in window local storage and renders the Gantt chart with its original property values.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
