@@ -7,9 +7,9 @@ control: Gantt Chart
 documentation: ug
 ---
 
-# State Management
+# State Management in Blazor Gantt Chart Component
 
-Gantt Chart Component retains its state using local storage on browser reload. Also, it allows users to save and load gantt state manually. The gantt will use a user-provided state to render instead of its properties provided declaratively.
+Gantt Chart component retains its state using local storage on browser reload. Also, it allows users to save and load gantt state manually. The gantt will use a user-provided state to render instead of its properties provided declaratively.
 
 Below properties can be saved and loaded into a gantt chart.
 
