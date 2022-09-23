@@ -9,9 +9,9 @@ documentation: ug
 
 # State management in Blazor TreeGrid Component
 
-Tree Grid Component retains its state using local storage on browser reload. Also it allows users to save and load tree grid state manually. The tree grid will use user-provided state to render instead of its properties provided declaratively.
+Tree Grid Component retains its state using local storage on browser reload. Also, it allows users to save and load tree grid state manually. The tree grid will use a user-provided state to render instead of its properties provided declaratively.
 
-Below properties can be saved and loaded into tree grid.
+Below properties can be saved and loaded into a tree grid.
 
 Property|
 -----|
@@ -23,7 +23,7 @@ TreeGridPageSettings
 
 ## Enabling persistence in tree grid
 
-State persistence allows the tree grid to retains the current tree grid state in the browser local storage for state maintenance. This action is handled through the `EnablePersistence` property which disabled by default. When it is enabled, some properties of the tree grid will be retained even after refreshing the page.
+State persistence allows the tree grid to retain the current tree grid state in the browser's local storage for state maintenance. This action is handled through the `EnablePersistence` property, which is disabled by default. When it is enabled, some properties of the tree grid will be retained even after refreshing the page.
 
 > The state will be persisted based on **ID** property. So, it is recommended to explicitly set the **ID** property for tree grid.
 > You can use [ResetPersistDataAsync](https://https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ResetPersistDataAsync) method to reset tree grid state to its original state. This will clear persisted data in window local storage and renders tree grid with its original property values.
@@ -71,12 +71,10 @@ State persistence allows the tree grid to retains the current tree grid state in
 
 ## Handling tree grid state manually
 
-You can handle the tree grid's state manually by using built-in state persistence methods. You can use [GetPersistDataAsync](https://https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetPersistDataAsync), [SetPersistDataAsync](https://https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_SetPersistDataAsync), [ResetPersistDataAsync](https://https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ResetPersistDataAsync) methods of tree grid to save, load and reset the tree grid's persisted state respectively. 
-<ol>
-<li> `GetPersistDataAsync` -  Returns tree grid properties as a string value, which is suitable for sending them over network and storing in data bases.</li>
-<li> `SetPersistDataAsync` -  Loads already saved state of tree grid.</li>
-<li> `ResetPersistDataAsync` -  Clears persisted data in window local storage and renders tree grid with its original property values.</li>
-</ol>  
+You can handle the tree grid's state manually by using built-in state persistence methods. You can use [GetPersistDataAsync](https://https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetPersistDataAsync), [SetPersistDataAsync](https://https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_SetPersistDataAsync), [ResetPersistDataAsync](https://https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ResetPersistDataAsync) methods of tree grid to save, load, and reset the tree grid's persisted state respectively.
+ 1. `GetPersistDataAsync` - Returns tree grid properties as a string value, which is suitable for sending them over a network and storing them in databases.
+ 2. `SetPersistDataAsync` - Loads already saved the state of the tree grid.
+ 3. `ResetPersistDataAsync` - Clears persisted data in window local storage and renders tree grid with its original property values.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
