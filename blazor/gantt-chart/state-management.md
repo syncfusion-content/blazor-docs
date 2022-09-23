@@ -9,13 +9,14 @@ documentation: ug
 
 # State Management
 
-State management allows users to save and load gantt state. The gantt will use user-provided state to render instead of its properties provided declaratively.
+Gantt Chart Component retains its state using local storage on browser reload. Also, it allows users to save and load gantt state manually. The gantt will use a user-provided state to render instead of its properties provided declaratively.
 
-Below properties can be saved and loaded into gantt later.
+Below properties can be saved and loaded into a gantt chart.
 
 Property|
 -----|
 Columns |
+TreeColumnIndex |
 GanttFilterSettings |
 GanttSortSettings |
 GanttSplitterSettings |
@@ -25,7 +26,7 @@ ProjectEndDate |
 
 ## Enabling persistence
 
-State persistence allows Gantt chart to retain the current gantt state in the browser local storage for state maintenance. This action is handled through the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnablePersistence) property which is set to false by default. When it is set to true, some properties of the gantt chart will be retained even after refreshing the page.
+State persistence allows the gantt chart to retain the current gantt state in the browser's local storage for state maintenance. This action is handled through the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnablePersistence) property, which is disabled by default. When it is enabled, some properties of the gantt will be retained even after refreshing the page.
 
 > The state will be persisted based on **ID** property. So, it is recommended to explicitly set the **ID** property for Gantt chart.
 
@@ -72,7 +73,11 @@ State persistence allows Gantt chart to retain the current gantt state in the br
 
 ## Handling gantt state manually
 
-You can handle the gantt chart state manually by using in-built state persistence methods. You can use `GetPersistDataAsync`, `SetPersistDataAsync`, `ResetPersistDataAsync` methods of gantt to save, load and reset the gantt chart's persisted state manually. [GetPersistData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistData) method will return gantt chart current state as a string value, which is suitable for sending them over network and storing in data bases. You can use `ResetPersistData` method to reset gantt state to its original state. This will clear persisted data in window local storage and renders gantt with its original property values.
+You can handle the gantt chart's state manually by using built-in state persistence methods. You can use `GetPersistDataAsync`, `SetPersistDataAsync`, `ResetPersistDataAsync` methods of gantt chart to save, load, and reset the gantt chart's persisted state respectively.
+
+* `GetPersistData` - Returns gantt chart properties as a string value, which is suitable for sending them over a network and storing them in databases.
+* `SetPersistData` - Loads already saved state of gantt chart.
+* `ResetPersistData` - Clears persisted data in window local storage and renders gantt chart with its original property values.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
