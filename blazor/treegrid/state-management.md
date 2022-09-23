@@ -1,7 +1,7 @@
 ---
 layout: post
 title: State management in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about State management in Syncfusion Blazor TreeGrid component and more.
+description: Learn here all about State management in Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
