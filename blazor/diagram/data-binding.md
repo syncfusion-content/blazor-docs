@@ -306,7 +306,7 @@ To map the user defined Expandoobject data with diagram, configure the fields of
     }
 }
 ```
-## Dynamic object data
+## DynamicObject data
 
 Diagram supports `DynamicObject` data source for layout creation. Data can be bound to the Diagram data source setting as a list of `DynamicObject`.The `DynamicObject` class enables you to define which operations can be performed on dynamic objects and how to perform those operations. For example, you can define what happens when you try to get or set an object property, call a method, or perform standard mathematical operations such as addition and multiplication. This class supports dynamic binding.It eleminates the need for creating a class to create a data source.
 
