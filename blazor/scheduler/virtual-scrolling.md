@@ -9,7 +9,7 @@ documentation: ug
 
 # Virtual Scrolling in Blazor Scheduler Component
 
-To achieve better performance in the Scheduler when loading a large number of resources and events, virtual scrolling support has been added in the timeline views to load a large set of resources and events instantly as you scroll. You can dynamically load large number of resources and events in timeline view of the Scheduler by setting `true` to the `AllowVirtualScrolling` property within the timeline view-specific settings. The virtual loading of events is possible in Agenda view, by setting `AllowVirtualScrolling` property to `true` within the agenda view specific settings.
+To achieve better performance in the Scheduler when loading a large number of resources and events, virtual scrolling support has been added to load a large set of resources and events instantly as you scroll. You can dynamically load large number of resources and events in the Scheduler by setting `true` to the `AllowVirtualScrolling` property within the view-specific settings. The virtual loading of events is possible in Agenda view, by setting `AllowVirtualScrolling` property to `true` within the agenda view specific settings.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -227,5 +227,3 @@ In Blazor Scheduler, templates can be applied when `AllowVirtualScrolling` prope
     }
 }
 ```
-
-> For now, the virtual loading of resources and events is available only for `TimelineDay`, `TimelineWeek`, `TimelineWorkWeek`, `TimelineMonth` and `TimelineYear` (Vertical Orientation alone) views. In the future, we plan to port the same virtual loading on all other applicable Scheduler views.
