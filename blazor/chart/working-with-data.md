@@ -59,6 +59,62 @@ An IEnumerable object can be assigned to the [DataSource](https://help.syncfusio
 
 > By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
 
+### Nested property
+
+
+
+```cshtml
+@using Syncfusion.Blazor.Charts
+
+    <SfChart Title="Crude Steel Production Annual Growth">
+        <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" EdgeLabelPlacement="EdgeLabelPlacement.Shift">
+        </ChartPrimaryXAxis>
+        <ChartPrimaryYAxis  Minimum="0" Maximum="20" Interval="4">
+        </ChartPrimaryYAxis>
+        <ChartLegendSettings Visible="false"></ChartLegendSettings>
+        <ChartSeriesCollection>
+            <ChartSeries DataSource="@ChartData" Name="Vietnam" XName="Period" Width="2"
+                         Opacity="1" YName="YData.Viet_Growth" Type="ChartSeriesType.Line">
+                <ChartMarker Visible="true" Width="7" Height="7" IsFilled="true" Shape="ChartShape.Circle">
+                </ChartMarker>
+            </ChartSeries>
+            <ChartSeries DataSource="@ChartData" Name="Canada" XName="Period" Width="2"
+                         Opacity="1" YName="YData.Can_Growth" Type="ChartSeriesType.Line">
+                <ChartMarker Visible="true" Width="6" IsFilled="true" Height="6" Shape="ChartShape.Triangle">
+                </ChartMarker>
+            </ChartSeries>
+        </ChartSeriesCollection>
+    </SfChart>
+
+@code{
+    public class LineChartData
+    {
+        public double Period { get; set; }
+        public GrowthData YData { get; set; }
+    }
+
+    public class GrowthData
+    {
+        public double Can_Growth { get; set; }
+        public double Viet_Growth { get; set; }        
+    }
+    public List<LineChartData> ChartData = new List<LineChartData>
+{
+        new LineChartData { Period = 2020, YData = new GrowthData{ Can_Growth = 11.0, Viet_Growth = 19.5} },
+        new LineChartData { Period = 2019, YData = new GrowthData{ Can_Growth = 12.9, Viet_Growth = 17.5} },
+        new LineChartData { Period = 2018, YData = new GrowthData{ Can_Growth = 13.4, Viet_Growth = 15.5} },
+        new LineChartData { Period = 2017, YData = new GrowthData{ Can_Growth = 13.7, Viet_Growth = 10.3} },
+        new LineChartData { Period = 2016, YData = new GrowthData{ Can_Growth = 12.7, Viet_Growth = 7.8} },
+        new LineChartData { Period = 2015, YData = new GrowthData{ Can_Growth = 12.5, Viet_Growth = 5.7} },
+        new LineChartData { Period = 2014, YData = new GrowthData{ Can_Growth = 12.7, Viet_Growth = 5.9} },
+        new LineChartData { Period = 2013, YData = new GrowthData{ Can_Growth = 12.4, Viet_Growth = 5.6} },
+        new LineChartData { Period = 2012, YData = new GrowthData{ Can_Growth = 13.5, Viet_Growth = 5.3} }
+    };
+}
+```
+
+![Blazor line chart in data binding with Nested property ](images/working-data/blazor-chart-Nested-property.png)
+
 ### ExpandoObject binding
 
 Chart is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile time. In such circumstances data can be bound to the chart as a list of **ExpandoObjects**. The **ExpandoObject** can be bound to chart by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property.
