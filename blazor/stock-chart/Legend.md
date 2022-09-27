@@ -91,6 +91,7 @@ By using the [position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ![Blazor stock chart with legend](images/blazor-stock-chart-legend-position.png)
 
+
 The [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.LegendPosition.html#Syncfusion_Blazor_Charts_StockChart_LegendPosition_Custom) position helps to position the legend anywhere in the chart using x and y coordinates.
 
 ```cshtml
