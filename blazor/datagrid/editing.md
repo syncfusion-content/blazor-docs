@@ -1326,7 +1326,7 @@ In the following example, the `SfTextBox` is rendered in the ShipCountry column 
 }
 ```
 
-> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid--always-editable-grid-columns)
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid--always-editable-grid-column)
 
 ## See also
 
