@@ -220,7 +220,7 @@ The following screenshot represents the editing disabled for the **CustomerID** 
 
 ## Disable editing for a particular row or cell
 
-You can disable the editing for a particular row by using the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid based on `RequestType` as `BeginEdit`.
+You can disable the editing for a particular row using the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid based on `RequestType` as `BeginEdit`.
 
 In the following sample, the rows that have the value for the ShipCountry column as "RUSSIA" are prevented from being edited by setting the **args.Cancel** as true.
 
