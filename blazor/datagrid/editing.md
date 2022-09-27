@@ -1281,7 +1281,7 @@ In the following sample, the `SfCheckbox` component is rendered as a template in
 
 ## How to make a Grid column always editable
 
-You can make the Grid column always editable by using the [column template](https://blazor.syncfusion.com/documentation/datagrid/column-template) feature of the Grid.
+You can make the Grid column always editable using the [column template](https://blazor.syncfusion.com/documentation/datagrid/column-template) feature of the Grid.
 
 In the following example, the `SfTextBox` is rendered in the ShipCountry column using a column template. The edited changes are saved in the data source using the two-way binding(@bind-Value) of the `SfTextBox` component.
 
