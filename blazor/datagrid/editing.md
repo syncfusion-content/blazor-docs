@@ -275,6 +275,8 @@ In the following sample, the rows that have the value for the ShipCountry column
 }
 ```
 
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-disable-editing-for-particular-row)
+
 ## Adding a new row at the bottom of the datagrid
 
 By default, a new row will be added at the top of the datagrid. You can change it by setting [NewRowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_NewRowPosition) property of the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component as **Bottom**.
