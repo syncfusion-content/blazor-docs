@@ -61,7 +61,7 @@ An IEnumerable object can be assigned to the [DataSource](https://help.syncfusio
 
 ### Nested property
 
-
+The data fields should now be mapped to the [XName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [YName]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName)) properties. We will provide the Nested functionality for [YName]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName)) property. The value of a property that references another resource is a proxy, and that proxy contains the properties requested in the NestedPropertyName.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
