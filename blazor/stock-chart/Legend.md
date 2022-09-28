@@ -9,11 +9,11 @@ documentation: ug
 
 # Legend in Blazor Stock Chart Component
 
-Legend provides information about the series rendered in the Stock chart. Legend can be added to a Stock chart by enabling the [visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChart_StockChartLegendSettings_Visible) option in the [StockChartlegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.StockChart.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChart_StockChartLegendSettings__ctor).
+Legend provides information about the series rendered in the Stock chart. Legend can be added to a Stock chart by enabling the `visible` option in the `StockChartlegendSettings`.
 
 ## Enable Legend
 
-To display the legend for the chart, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChart_StockChartLegendSettings_Visible) property in [StockChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.StockChart.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChart_StockChartLegendSettings__ctor) to true.
+To display the legend for the Stockchart, set the `visible` property in `StockChartlegendSettings` to true.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -53,7 +53,7 @@ To display the legend for the chart, set the [Visible](https://help.syncfusion.c
 
 ## Position and Alignment
 
-By using the [position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.StockChartLegendSettings.html?&_ga=2.95009564.1095830672.1664171074-593884109.1639917919#Syncfusion_Blazor_Charts_StockChart_StockChartLegendSettings_Position) property, legend can be placed at [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.LegendPosition.html#Syncfusion_Blazor_Charts_StockChart_LegendPosition_Left), [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.LegendPosition.html#Syncfusion_Blazor_Charts_StockChart_LegendPosition_Right), [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.LegendPosition.html#Syncfusion_Blazor_Charts_StockChart_LegendPosition_Top), [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.LegendPosition.html#Syncfusion_Blazor_Charts_StockChart_LegendPosition_Bottom) or [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.LegendPosition.html#Syncfusion_Blazor_Charts_StockChart_LegendPosition_Custom) of the Stock Chart. The legend is positioned at the bottom of the Stock Chart, by default.
+By using the `position` property, legend can be placed at `Left`, `Right`, `Top`, `Bottom` or `Custom` of the Stock Chart. The legend is positioned at the bottom of the Stock Chart, by default.
 
 ```cshtml
 
@@ -92,7 +92,7 @@ By using the [position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ![Blazor stock chart with legend](images/blazor-stock-chart-legend-position.png)
 
 
-The [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.LegendPosition.html#Syncfusion_Blazor_Charts_StockChart_LegendPosition_Custom) position helps to position the legend anywhere in the chart using x and y coordinates.
+The `Custom` position helps to position the legend anywhere in the Stockchart using x and y coordinates.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -134,7 +134,7 @@ The [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Stoc
 
 ## Legend Reverse
 
-You can reverse the order of the legend items by using the [Reverse](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChart_StockChartLegendSettings_Reverse) property. By default, legend for the first series in the collection will be placed first.
+You can reverse the order of the legend items by using the `Reverse` property. By default, legend for the first series in the collection will be placed first.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -143,9 +143,9 @@ You can reverse the order of the legend items by using the [Reverse](https://hel
            <StockChartLegendSettings Visible="true" Reversed="true">
             </StockChartLegendSettings>
            <StockChartSeriesCollection>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Apple company"></StockChartSeries>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Google company"></StockChartSeries>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Spline" XName="x" YName="close" Name="Tesla company"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Apple Stock Price"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Google Stock Price"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Spline" XName="x" YName="close" Name="Tesla Stock Price"></StockChartSeries>
             </StockChartSeriesCollection>
         </SfStockChart>
   
@@ -176,7 +176,7 @@ You can reverse the order of the legend items by using the [Reverse](https://hel
 
 ## Legend Alignment
 
-Using the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChart_StockChartLegendSettings_Alignment) property, place the legend in [Centre](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.Alignment.html#Syncfusion_Blazor_Charts_StockChart_Alignment_Center), [Far](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.Alignment.html#Syncfusion_Blazor_Charts_StockChart_Alignment_Far), or [Near](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.Alignment.html#Syncfusion_Blazor_Charts_StockChart_Alignment_Near) alignment.
+Using the `Alignment` property, place the legend in `Centre`, `Far`, or `Near` alignment.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -219,7 +219,7 @@ Using the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ### Legend Shape
 
-The [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChart_StockChartSeries_LegendShape) property in the [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.StockChartSeries.html) can be used to change the shape of the legend icon. The default icon shape for legends is [SeriesType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.StockChartSeries.LegendShape.html#Syncfusion_Blazor_Charts_StockChart_LegendShape_SeriesType).
+The `LegendShape` property in the `Series` can be used to change the shape of the legend icon. The default icon shape for legends is `SeriesType`.
 
 
 ```cshtml
@@ -260,7 +260,7 @@ The [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ### Legend Size
 
-When the legend is placed on the top or bottom of the chart, it takes up 20% - 25% of the StockChart's height, and 20% - 25% of the StockChart's width when it is positioned on the left or right side of the StockChart. So, the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChart_StockChartLegendSettings_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChart_StockChartLegendSettings_Height) properties can be used to adjust the default legend size.
+When the legend is placed on the top or bottom of the Stockchart, it takes up 20% - 25% of the StockChart's height, and 20% - 25% of the StockChart's width when it is positioned on the left or right side of the StockChart. So, the `Width` and `Height` properties can be used to adjust the default legend size.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -270,8 +270,8 @@ When the legend is placed on the top or bottom of the chart, it takes up 20% - 2
                 <StockChartLegendBorder Color="blue" Width="1"></StockChartLegendBorder>
             </StockChartLegendSettings>
             <StockChartSeriesCollection>
-               <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Apple company"></StockChartSeries>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Google company"></StockChartSeries>
+               <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Apple Stock Price"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Google Stock Price"></StockChartSeries>
             </StockChartSeriesCollection>
         </SfStockChart>
   
@@ -302,7 +302,7 @@ When the legend is placed on the top or bottom of the chart, it takes up 20% - 2
 
 ### Legend Shape Size
 
-The [ShapeHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChart_StockChartLegendSettings_ShapeHeight) and [ShapeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChart_StockChartLegendSettings_ShapeWidth) properties can be used to adjust the dimensions of the legend shape.
+The `ShapeHeight` and `ShapeWidth` properties can be used to adjust the dimensions of the legend shape.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -343,7 +343,7 @@ The [ShapeHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ### Legend Item Padding
 
-The [ItemPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChart_StockChartLegendSettings_ItemPadding) property can be used to adjust the space between the legend items.
+The `ItemPadding` property can be used to adjust the space between the legend items.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -427,7 +427,7 @@ When the legend items exceed legend bounds, paging will be enabled by default. E
 
 ### Legend Text Wrap
 
-When the legend text exceeds the container, the text can be wrapped by using [TextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChart_StockChartLegendSettings_TextWrap) Property. End user can also wrap the legend text based on the [MaximumLabelWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChart_StockChartLegendSettings_MaximumLabelWidth) property.
+When the legend text exceeds the container, the text can be wrapped by using `TextWrap` Property. End user can also wrap the legend text based on the `MaximumLabelWidth` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -436,9 +436,9 @@ When the legend text exceeds the container, the text can be wrapped by using [Te
            <StockChartLegendSettings Visible="true" Position="@LegendPosition.Right" TextWrap="@TextWrap.Wrap" MaxLabelWidth="70">
             </StockChartLegendSettings>
            <StockChartSeriesCollection>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Apple company"></StockChartSeries>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Google company"></StockChartSeries>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Spline" XName="x" YName="close" Name="Tesla company"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Apple Stock Price"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Google Stock Price"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Spline" XName="x" YName="close" Name="Tesla Stock Price"></StockChartSeries>
             </StockChartSeriesCollection>
         </SfStockChart>
   
@@ -469,7 +469,7 @@ When the legend text exceeds the container, the text can be wrapped by using [Te
 
 ## Series selection based on legend
 
-By default, when you click on the legend item, the appropriate series visibility is collapsed. On the other hand, [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChart_StockChartLegendSettings_ToggleVisibility) property is used to disable such functionality.
+By default, when you click on the legend item, the appropriate series visibility is collapsed. On the other hand, `ToggleVisibility` property is used to disable such functionality.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -478,9 +478,9 @@ By default, when you click on the legend item, the appropriate series visibility
            <StockChartLegendSettings Visible="true"  ToggleVisibility="false">
             </StockChartLegendSettings>
            <StockChartSeriesCollection>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Apple company"></StockChartSeries>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Google company"></StockChartSeries>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Spline" XName="x" YName="close" Name="Tesla company"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Apple Stock Price"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Google Stock Price"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Spline" XName="x" YName="close" Name="Tesla Stock Price"></StockChartSeries>
             </StockChartSeriesCollection>
         </SfStockChart>
   
@@ -511,7 +511,7 @@ By default, when you click on the legend item, the appropriate series visibility
 
 ## Hiding legend item
 
-The series [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChart_StockChartSeries_Name) will be displayed as the legend text by default. One can skip the legend for particular series by providing an empty string to the series [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChart.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChart_StockChartSeries_Name) property.
+The series `Name` will be displayed as the legend text by default. One can skip the legend for particular series by providing an empty string to the series `Name` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -520,9 +520,9 @@ The series [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
            <StockChartLegendSettings Visible="true"  ToggleVisibility="true">
             </StockChartLegendSettings>
            <StockChartSeriesCollection>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Apple company"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Apple Stock Price"></StockChartSeries>
                 <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name=""></StockChartSeries>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Spline" XName="x" YName="close" Name="Tesla company"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Spline" XName="x" YName="close" Name="Tesla Stock Price"></StockChartSeries>
             </StockChartSeriesCollection>
         </SfStockChart>
   
