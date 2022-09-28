@@ -254,7 +254,7 @@ The flipdirection is used to mirror across Horizontal,Vertical and Both directio
 
 ### FlipMode:
 The FlipMode is used to control the behaviour of the flip object.
-| FlipMode | Description | 
+| DiagramFlipMode | Description | 
 | -------- | -------- |
 |Content|It is used to enable or disables the flip for object’s content..|
 |Port|	It is used to enable or disables the flip for object’s port.|
@@ -344,7 +344,7 @@ The following code example shows how to change the FlipDirection and FlipMode.
             OffsetX = 900,
             OffsetY = 100,
             Flip=FlipDirection.Horizontal,
-            FlipMode=FlipMode.Port,
+            FlipMode=DiagramFlipMode.Port,
             Style = new ShapeStyle() 
             { 
                 Fill = "#6495ED", 
@@ -381,7 +381,7 @@ The following code example shows how to change the FlipDirection and FlipMode.
         {
             for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
             {
-                diagram.SelectionSettings.Nodes[i].FlipMode = FlipMode.Port;
+                diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.Port;
                 if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
                 {
                     diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Horizontal;
@@ -399,7 +399,7 @@ The following code example shows how to change the FlipDirection and FlipMode.
         {
             for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
             {
-                diagram.SelectionSettings.Nodes[i].FlipMode = FlipMode.Content;
+                diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.Content;
                 if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
                 {
                     diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Horizontal;
@@ -417,7 +417,7 @@ The following code example shows how to change the FlipDirection and FlipMode.
         {
             for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
             {
-                diagram.SelectionSettings.Nodes[i].FlipMode = FlipMode.All;
+                diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.All;
                 if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
                 {
                     diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Horizontal;
@@ -435,7 +435,7 @@ The following code example shows how to change the FlipDirection and FlipMode.
         {
             for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
             {
-                diagram.SelectionSettings.Nodes[i].FlipMode = FlipMode.None;
+                diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.None;
                 if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
                 {
                     diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Horizontal;
@@ -452,7 +452,7 @@ The following code example shows how to change the FlipDirection and FlipMode.
 ### Initial Diagram:
 ![Initial Diagram](../images/Initial.png)
 
-| FlipDirection | FlipMode | Output|
+| FlipDirection | DiagramFlipMode | Output|
 | -------- | -------- | -------- |
 |Horizontal|Port| ![HorizontalDirection with Port Mode](../images/HPort.png)|
 |Horizontal|Content|![HorizontalDirection with Content Mode](../images/HContent.png)|

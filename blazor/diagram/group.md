@@ -408,7 +408,7 @@ The flipdirection is used to mirror across Horizontal,Vertical and Both directio
 
 ### FlipMode:
 The FlipMode is used to control the behaviour of the flip object.
-| FlipMode | Description | 
+| DiagramFlipMode | Description | 
 | -------- | -------- |
 |Content|It is used to enable or disables the flip for object’s content..|
 |Port|	It is used to enable or disables the flip for object’s port.|
@@ -558,7 +558,7 @@ The FlipMode is used to control the behaviour of the flip object.
         {
             for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
             {
-                diagram.SelectionSettings.Nodes[i].FlipMode = FlipMode.Port;
+                diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.Port;
                 if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
                 {
                     diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Horizontal;
@@ -576,7 +576,7 @@ The FlipMode is used to control the behaviour of the flip object.
         {
             for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
             {
-                diagram.SelectionSettings.Nodes[i].FlipMode = FlipMode.Content;
+                diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.Content;
                 if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
                 {
                     diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Horizontal;
@@ -594,7 +594,7 @@ The FlipMode is used to control the behaviour of the flip object.
         {
             for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
             {
-                diagram.SelectionSettings.Nodes[i].FlipMode = FlipMode.All;
+                diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.All;
                 if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
                 {
                     diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Horizontal;
@@ -612,7 +612,7 @@ The FlipMode is used to control the behaviour of the flip object.
         {
             for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
             {
-                diagram.SelectionSettings.Nodes[i].FlipMode = FlipMode.None;
+                diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.None;
                 if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
                 {
                     diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Horizontal;
@@ -629,7 +629,7 @@ The FlipMode is used to control the behaviour of the flip object.
 ### Initial Diagram:
 ![Initial Diagram](Images/HGroupInitial.png)
 
-| FlipDirection | FlipMode | Output|
+| FlipDirection | DiagramFlipMode | Output|
 | -------- | -------- |-------- |
 |Horizontal|Port|![HorizontalDirection with PortMode](Images/HGroup.png)|
 |Horizontal|Content|![HorizontalDirection with ContentMode](Images/HContentg.png)|
