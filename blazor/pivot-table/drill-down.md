@@ -15,7 +15,7 @@ documentation: ug
 
 The drill down and drill up action helps to view the bound data in detailed and abstract view respectively. By default, if member(s) has children, then expand and collapse icon will be displayed in the respective row/column header. On clicking the icon, expand or collapse action will be performed automatically through built-in source code. Meanwhile, leaf member(s) does not contain expand and collapse icon.
 
-![DrillDown in Blazor PivotTable](images/blazor-pivottable-drill-down.png)
+![Drill down and drill up in the Blazor Pivot Table](images/blazor-pivottable-drill-down.png)
 
 ## Drill position
 
@@ -23,14 +23,13 @@ It allows to drill only the current position of the selected member and exclude 
 
 > This feature is built-in and occurs every time when expand or collapse action is done for better performance.
 
-![Blazor PivotTable with Custom DrillDown Position](images/blazor-pivottable-custom-drill-position.png)
+![Drill position in the Blazor Pivot Table](images/blazor-pivottable-custom-drill-position.png)
 
 ## Expand all
 
 > This property is applicable only for the relational data source.
 
-It allows to either expand or collapse all headers that are displayed in row and column axes. To display all headers in expanded state, set the property [ExpandAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html#Syncfusion_Blazor_PivotView_DataSourceSettingsModel_1_ExpandAll) to **true** and to collapse all
-headers, set the property [ExpandAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html#Syncfusion_Blazor_PivotView_DataSourceSettingsModel_1_ExpandAll) to **false**. By default, [ExpandAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html#Syncfusion_Blazor_PivotView_DataSourceSettingsModel_1_ExpandAll) property is set to **false**.
+It allows to either expand or collapse all headers that are displayed in row and column axes. To display all headers in expanded state, set the property [ExpandAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html#Syncfusion_Blazor_PivotView_DataSourceSettingsModel_1_ExpandAll) to **true** and to collapse all headers, set the property [ExpandAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html#Syncfusion_Blazor_PivotView_DataSourceSettingsModel_1_ExpandAll) to **false**. By default, [ExpandAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html#Syncfusion_Blazor_PivotView_DataSourceSettingsModel_1_ExpandAll) property is set to **false**.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -65,7 +64,49 @@ headers, set the property [ExpandAll](https://help.syncfusion.com/cr/blazor/Sync
 }
 ```
 
-![Blazor PivotTable with Expanded Items](images/blazor-pivottable-expanded-items.png)
+![Expand all option in the Blazor Pivot Table](images/blazor-pivottable-expanded-specific-field-items.png)
+
+## Expand all headers for specific fields
+
+> This option is applicable only for the relational data source.
+
+Allow to expand or collapse all headers for specific fields(only) in row and column axes. To expand headers for a specific field in row and column axes, set the property [ExpandAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_ExpandAll) in [PivotViewRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html) and [PivotViewColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html) to **true**. By default, [ExpandAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldOptions.html#Syncfusion_Blazor_PivotView_PivotFieldOptions_ExpandAll) property in [PivotViewRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html) and [PivotViewColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html) is set to **false**.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="ProductDetails">
+     <PivotViewDataSourceSettings DataSource="@data" ExpandAll="false">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year" ExpandAll="true"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country" ExpandAll="true"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code{
+    private List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+}
+
+```
+
+![Expand all headers for specific fields in the Blazor Pivot Table](images/blazor-pivottable-expanded-specific-field-items.png)
 
 ## Expand all except specific member(s)
 
@@ -115,7 +156,7 @@ In addition to the previous topic, there is an enhancement to expand and collaps
 
 ```
 
-![Expanding All Except Specific Items in Blazor PivotTable](images/blazor-pivottable-expandall-except-specific-items.png)
+![Expand all except specific members in the Blazor Pivot Table](images/blazor-pivottable-expandall-except-specific-items.png)
 
 ## Expand specific member(s)
 
@@ -162,6 +203,6 @@ End user can also manually expand or collapse specific member(s) in each fields 
 }
 ```
 
-![Expanding Specific Item in Blazor PivotTable](images/blazor-pivottable-expand-specific-item.png)
+![Expand specific members in the Blazor Pivot Table](images/blazor-pivottable-expand-specific-item.png)
 
 > You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.

@@ -245,7 +245,7 @@ The following example demonstrates how to render the Editor components in the In
 
     private string DropdownValue = "CA";
     private string AutoValue = "Australia";
-    private string ComboValue = "Finland";
+    private string ComboValue { get; set; } = "FI";
     private string[] MultiValue = new string[] { "AU", "BM" };
     public string DropMode { get; set; } = "Inline";
     private string colorValue { get; set; } = "#0db1e7";
