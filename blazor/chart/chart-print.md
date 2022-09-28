@@ -62,7 +62,7 @@ The `PrintAsync` method can be used to print a rendered chart directly from the 
 
 ![Printing in Blazor Chart](images/getting-started/blazor-chart-printing.png)
 
-## Print all our chart component 
+### Print all our chart component 
 
 The `PrintAsync` method can be used to print all our Chart component rendered chart directly from the browser.
 

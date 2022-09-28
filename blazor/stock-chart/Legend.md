@@ -390,7 +390,7 @@ When the legend items exceed legend bounds, paging will be enabled by default. E
 @using Syncfusion.Blazor.Charts
 
         <SfStockChart Title="AAPL Stock Price">
-           <StockChartLegendSettings Visible="true" >
+           <StockChartLegendSettings Visible="true" Width="100" Height="70" Padding="10" ShapePadding="10">
             </StockChartLegendSettings>
            <StockChartSeriesCollection>
                 <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Apple"></StockChartSeries>
