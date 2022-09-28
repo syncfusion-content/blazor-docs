@@ -96,7 +96,7 @@ Allow to expand or collapse all headers for specific fields(only) in row and col
 </SfPivotView>
 
 @code{
-    public List<ProductDetails> data { get; set; }
+    private List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
         this.data = ProductDetails.GetProductData().ToList();
