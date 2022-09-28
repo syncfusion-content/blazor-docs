@@ -9,7 +9,7 @@ documentation: ug
 
 # Bind native events in Gantt Chart
 
-There are default keyboard shortcuts available to perform actions in the Gantt Chart. Refer the Gantt Chart default keyboard shortcuts [here](https://blazor.syncfusion.com/documentation/gantt-chart/accessibility#keyboard-navigation). Now, you can create custom shortcut keys to perform your own actions in Gantt Chart by binding the native events like onkeydown, onkeyup, onkeypress, etc.
+There are default keyboard shortcuts available to perform actions in the Gantt Chart. Refer to the Gantt Chart default keyboard shortcuts [here](https://blazor.syncfusion.com/documentation/gantt-chart/accessibility#keyboard-navigation). Now, you can create custom shortcut keys to perform your own actions in Gantt Chart by binding the native events like onkeydown, onkeyup, onkeypress, etc.
 
 In the following Gantt Chart example, some of the actions can be performed by using `onkeydown` and `onkeyup` events.
 
