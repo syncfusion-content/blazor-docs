@@ -19,7 +19,7 @@ Columns |
 TreeColumnIndex |
 TreeGridFilterSettings |
 TreeGridSortSettings |
-TreeGridPageSettings
+TreeGridPageSettings |
 
 ## Enabling persistence in tree grid
 
