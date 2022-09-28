@@ -137,7 +137,7 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
 ```
 ## ExpandoObject data
 
-Diagram supports `Expandoobject` data source for layout creation. Data can be bound to the Diagram data source setting as a list of `ExpandoObjects`.The `ExpandoObject` class enables you to add and delete members of its instances at run time and also to set and get values of these members. This class supports dynamic binding.It eleminates the need for creating a class to create a data source.
+Diagram supports `Expandoobject` data source for layout creation. Data can be bound to the Diagram data source setting as a list of `ExpandoObject`.The `ExpandoObject` class enables you to add and delete members of its instances at run time and also to set and get values of these members. This class supports dynamic binding.It eleminates the need for creating a class to create a data source.
 
 To map the user defined Expandoobject data with diagram, configure the fields of `DataSourceSettings`. The following code example illustrates how to bind ExpandoObject data with the diagram.
 
