@@ -64,7 +64,7 @@ The `PrintAsync` method can be used to print a rendered chart directly from the 
 
 ### Print all our chart component 
 
-The `PrintAsync` method can be used to print all our Chart component rendered chart directly from the browser.
+The `PrintAsync` method can be used to print a rendered multiple Charts directly from the browser.
 
 ```cshtml
 
