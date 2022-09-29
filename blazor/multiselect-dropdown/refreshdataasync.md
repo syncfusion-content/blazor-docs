@@ -29,21 +29,37 @@ In this case, the url link is used to render and refresh the data source.
 
 The WebApiadaptor used with the controller and RefreshDataAsync function is denoted in the following code.
 
-{% highlight Razor %}
+{% tabs %}
+{% highlight cshtml tabtitle="Index.razor" %}
 
 {% include_relative code-snippet/WebApiAdaptor.razor %}
 
 {% endhighlight %}
+
+{% highlight c# tabtitle="Controller.cs" %}
+
+{% include_relative code-snippet/OrderController.cs %}
+
+{% endhighlight %}
+​​​​​​​{% endtabs %}
 
 ### Url adaptor:
 When the `RefreshDataAsync` method is used, The query property in the Urladaptor is required to render the data source initially with the Url link. But, the query property is not required to refresh the data source only the Url link is required.
 
 The Urladaptor used with the controller and RefreshDataAsync function is denoted in the following code.
 
-{% highlight Razor %}
+{% tabs %}
+{% highlight cshtml tabtitle="Index.razor" %}
 
 {% include_relative code-snippet/UrlAdaptor.razor %}
 
 {% endhighlight %}
+
+{% highlight c# tabtitle="Controller.cs" %}
+
+{% include_relative code-snippet/EmployeeDataController.cs %}
+
+{% endhighlight %}
+​​​​​​​{% endtabs %}
 
 
