@@ -134,7 +134,7 @@ The `Custom` position helps to position the legend anywhere in the Stockchart us
 
 ## Legend Reverse
 
-You can reverse the order of the legend items by using the `Reverse` property. By default, legend for the first series in the collection will be placed first.
+You can reverse the order of the legend items by using the `Reversed` property. By default, legend for the first series in the collection will be placed first.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -176,7 +176,7 @@ You can reverse the order of the legend items by using the `Reverse` property. B
 
 ## Legend Alignment
 
-Using the `Alignment` property, place the legend in `Centre`, `Far`, or `Near` alignment.
+Using the `Alignment` property, place the legend in `Centre`, `Far`, or `Near` to the stock chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -427,7 +427,7 @@ When the legend items exceed legend bounds, paging will be enabled by default. E
 
 ### Legend Text Wrap
 
-When the legend text exceeds the container, the text can be wrapped by using `TextWrap` Property. End user can also wrap the legend text based on the `MaximumLabelWidth` property.
+When the legend text exceeds the container, the text can be wrapped by using `TextWrap` Property. End user can also wrap the legend text based on the `MaxLabelWidth` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
