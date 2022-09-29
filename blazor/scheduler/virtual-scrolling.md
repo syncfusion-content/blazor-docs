@@ -9,7 +9,7 @@ documentation: ug
 
 # Virtual Scrolling in Blazor Scheduler Component
 
-To achieve better performance in the Scheduler when loading a large number of resources and events, virtual scrolling support has been added to load a large set of resources and events instantly as you scroll. You can dynamically load large number of resources and events in the Scheduler by setting `true` to the `AllowVirtualScrolling` property within the view-specific settings. The virtual loading of events is possible in Agenda view, by setting `AllowVirtualScrolling` property to `true` within the agenda view specific settings.
+To achieve better performance in the Scheduler when loading a large number of resources and events, virtual scrolling support has been added to load a large set of resources and events instantly as you scroll. You can dynamically load large number of resources and events in the Scheduler by setting `true` to the [AllowVirtualScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_AllowVirtualScrolling) property within the view-specific settings. The virtual loading of events is possible in Agenda view, by setting [AllowVirtualScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_AllowVirtualScrolling) property to `true` within the agenda view specific settings.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -227,3 +227,7 @@ In Blazor Scheduler, templates can be applied when `AllowVirtualScrolling` prope
     }
 }
 ```
+
+> For now, the virtual loading of resources and events is not supported in `Month Agenda`, `Year` and `TimelineYear` (Horizontal Orientation) views.
+In `TimelineYear` (Vertical orientation) virtual scrolling supports only vertical scrolling and not supports horizontal scrolling. Horizontal Virtual scrolling support will be provided in future for `TimelineYear` (Vertical orientation).
+By default Virtual scrolling displays only 30 resources, to increase  number of resources to be displayed in the scheduler use [VirtualResourceCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_VirtualResourceCount) property.
