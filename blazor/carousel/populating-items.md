@@ -235,65 +235,15 @@ The Carousel component supports to show one complete slide and a partial view of
 </style>
 ```
 
-![Carousel partial visible slide](images/partial-visible.png.png)
+![Carousel partial visible slide](images/partial-visible.png)
 
-Note: Slide animation only applicable if the partialVisible is enabled. 
+> Slide animation only applicable if the partialVisible is enabled. 
 
-You can change the slides by with and without loop using the [`loop`](../api/carousel/#loop) property.
+The last slide will be displayed as a partial slide at the initial rendering when the `loop` and `partialVisible` properties are enabled.
 
-The following example code depicts the functionality of with loop.
+The previous slide is not displayed at the initial rendering when the `loop` is disabled.
 
-```cshtml
-@using Syncfusion.Blazor.Navigations
-
-<div class="control-container">
-    <SfCarousel PartialVisible="true" Loop="true">
-        <CarouselItem>
-            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/cardinal.png" alt="cardinal" style="height:100%;width:100%;" /><figcaption class="img-caption">Cardinal</figcaption></figure>
-        </CarouselItem>
-        <CarouselItem>
-            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/hunei.png" alt="kingfisher" style="height:100%;width:100%;" /><figcaption class="img-caption">Kingfisher</figcaption></figure>
-        </CarouselItem>
-        <CarouselItem>
-            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/costa-rica.png" alt="keel-billed-toucan" style="height:100%;width:100%;" /><figcaption class="img-caption">Keel-billed-toucan</figcaption></figure>
-        </CarouselItem>
-        <CarouselItem>
-            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/kaohsiung.png" alt="yellow-warbler" style="height:100%;width:100%;" /><figcaption class="img-caption">Yellow-warbler</figcaption></figure>
-        </CarouselItem>
-        <CarouselItem>
-           <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/bee-eater.png" alt="bee-eater" style="height:100%;width:100%;" /><figcaption class="img-caption">Bee-eater</figcaption></figure>
-        </CarouselItem>
-    </SfCarousel>
-</div>
-
-<style>
-    .control-container {
-        margin: 0 auto 2em;
-        max-width: 800px;
-        height: 300px;
-    }
-
-    .img-container {
-        margin: 0 10px;
-        width: 100%;
-        height: 100%;
-    }
-
-    .img-caption {
-        bottom: 4em;
-        color: #fff;
-        font-size: 12pt;
-        height: 2em;
-        position: relative;
-        padding: 0.3em 1em;
-        text-align: center;
-        width: 100%;
-    }
-
-</style>
-```
-
-The following example code depicts the functionality of without loop. When set to false, the transition stops at last slide.
+The following example code depicts the functionality of `partialVisible` and without `loop` functionalities.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -344,5 +294,8 @@ The following example code depicts the functionality of without loop. When set t
 
 </style>
 ```
+![Carousel partial visible slide](images/without-loop.png)
 
-When the `partialVisible` property is enabled, you can customise the space between images in the sample end by overriding the padding values in the `e-partial` class for `e-carousel-slide-container`.
+## See Also
+
+* [Customizing partial slides area size](../carousel/styles-and-appearance.md)
