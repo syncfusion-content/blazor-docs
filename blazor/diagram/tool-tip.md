@@ -175,6 +175,8 @@ The following code example is used to set tooltip position for connectors.
 
 ## How to set tooltip content for nodes/connectors
 
+A text or a piece of information assigned to the Tooltip’s Content property will be displayed as the main text of the Tooltip
+
 The following code example is used to set tooltip content for nodes.
 
 ```cshtml
