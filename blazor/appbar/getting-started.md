@@ -263,14 +263,27 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Buttons
 
+<div class="control-container">
+    <SfAppBar ColorMode="AppBarColor.Primary">
+        <SfButton aria-label="menu" CssClass="e-inherit menu" IconCss="e-icons e-menu"></SfButton>
+        <span class="regular">Blazor AppBar</span>
+        <AppBarSpacer></AppBarSpacer>
+        <SfButton CssClass="e-inherit login" Content="FREE TRIAL"></SfButton>
+    </SfAppBar>
+</div>
 
-<SfAppBar ColorMode="AppBarColor.Primary">
-    <SfButton aria-label="menu" CssClass="e-inherit menu" IconCss="e-icons e-menu"></SfButton>
-    <span class="regular" style="margin:0 5px">Blazor AppBar</span>
-    <AppBarSpacer></AppBarSpacer>
-    <SfButton CssClass="e-inherit login" Content="FREE TRIAL"></SfButton>
-</SfAppBar>
+<style>
+    .control-container {
+        height: 300px;
+        margin: 0 auto;
+        width: 500px;
+    }
+    .e-appbar .regular {
+        margin:0 5px;
+    }
+</style>
 ```
 
 ![Blazor AppBar Component](images/getting_started.png)
