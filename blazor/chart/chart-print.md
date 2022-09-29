@@ -62,9 +62,9 @@ The `PrintAsync` method can be used to print a rendered chart directly from the 
 
 ![Printing in Blazor Chart](images/getting-started/blazor-chart-printing.png)
 
-### Print all our chart component 
+### Print Multiple Chart  
 
-The `PrintAsync` method can be used to print a rendered multiple Charts directly from the browser.
+The `PrintAsync` method can be used to print all our Chart component rendered directly from the browser by passing the element reference of the parent for all the chart component.
 
 ```cshtml
 
