@@ -183,7 +183,7 @@ Using the [PreviousAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ## Partial visible slides
 
-The Carousel component supports to show one complete slide and a partial view of adjacent (previous and next) slides at the same time. You can enable or disable the partial slides using the [`partialVisible`](../api/carousel/#partialVisible) property.
+The Carousel component supports to show one complete slide and a partial view of adjacent (previous and next) slides at the same time. You can enable or disable the partial slides using the [`partialVisible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_PartialVisible) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -239,7 +239,7 @@ The Carousel component supports to show one complete slide and a partial view of
 
 > Slide animation only applicable if the partialVisible is enabled. 
 
-The last slide will be displayed as a partial slide at the initial rendering when the `loop` and `partialVisible` properties are enabled.
+The last slide will be displayed as a partial slide at the initial rendering when the [`loop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_Loop) and `partialVisible` properties are enabled.
 
 The previous slide is not displayed at the initial rendering when the `loop` is disabled.
 
