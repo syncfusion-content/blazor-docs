@@ -183,7 +183,7 @@ Using the [PreviousAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ## Partial visible slides
 
-Using the [`partialVisible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_PartialVisible) property, you can set the next and previous slides to be partially displaye
+The Carousel component supports to show one complete slide and a partial view of adjacent (previous and next) slides at the same time. You can enable or disable the partial slides using the [`partialVisible`](../api/carousel/#partialVisible) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -234,3 +234,115 @@ Using the [`partialVisible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 </style>
 ```
+
+![Carousel partial visible slide](images/partial-visible.png.png)
+
+Note: Slide animation only applicable if the partialVisible is enabled. 
+
+You can change the slides by with and without loop using the [`loop`](../api/carousel/#loop) property.
+
+The following example code depicts the functionality of with loop.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<div class="control-container">
+    <SfCarousel PartialVisible="true" Loop="true">
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/cardinal.png" alt="cardinal" style="height:100%;width:100%;" /><figcaption class="img-caption">Cardinal</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/hunei.png" alt="kingfisher" style="height:100%;width:100%;" /><figcaption class="img-caption">Kingfisher</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/costa-rica.png" alt="keel-billed-toucan" style="height:100%;width:100%;" /><figcaption class="img-caption">Keel-billed-toucan</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/kaohsiung.png" alt="yellow-warbler" style="height:100%;width:100%;" /><figcaption class="img-caption">Yellow-warbler</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+           <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/bee-eater.png" alt="bee-eater" style="height:100%;width:100%;" /><figcaption class="img-caption">Bee-eater</figcaption></figure>
+        </CarouselItem>
+    </SfCarousel>
+</div>
+
+<style>
+    .control-container {
+        margin: 0 auto 2em;
+        max-width: 800px;
+        height: 300px;
+    }
+
+    .img-container {
+        margin: 0 10px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .img-caption {
+        bottom: 4em;
+        color: #fff;
+        font-size: 12pt;
+        height: 2em;
+        position: relative;
+        padding: 0.3em 1em;
+        text-align: center;
+        width: 100%;
+    }
+
+</style>
+```
+
+The following example code depicts the functionality of without loop. When set to false, the transition stops at last slide.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<div class="control-container">
+    <SfCarousel PartialVisible="true" Loop="false">
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/cardinal.png" alt="cardinal" style="height:100%;width:100%;" /><figcaption class="img-caption">Cardinal</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/hunei.png" alt="kingfisher" style="height:100%;width:100%;" /><figcaption class="img-caption">Kingfisher</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/costa-rica.png" alt="keel-billed-toucan" style="height:100%;width:100%;" /><figcaption class="img-caption">Keel-billed-toucan</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/kaohsiung.png" alt="yellow-warbler" style="height:100%;width:100%;" /><figcaption class="img-caption">Yellow-warbler</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+           <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/bee-eater.png" alt="bee-eater" style="height:100%;width:100%;" /><figcaption class="img-caption">Bee-eater</figcaption></figure>
+        </CarouselItem>
+    </SfCarousel>
+</div>
+
+<style>
+    .control-container {
+        margin: 0 auto 2em;
+        max-width: 800px;
+        height: 300px;
+    }
+
+    .img-container {
+        margin: 0 10px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .img-caption {
+        bottom: 4em;
+        color: #fff;
+        font-size: 12pt;
+        height: 2em;
+        position: relative;
+        padding: 0.3em 1em;
+        text-align: center;
+        width: 100%;
+    }
+
+</style>
+```
+
+When the `partialVisible` property is enabled, you can customise the space between images in the sample end by overriding the padding values in the `e-partial` class for `e-carousel-slide-container`.
