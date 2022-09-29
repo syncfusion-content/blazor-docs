@@ -237,7 +237,7 @@ The Carousel component supports to show one complete slide and a partial view of
 
 ![Carousel partial visible slide](images/partial-visible.jpg)
 
-> Slide animation only applicable if the partialVisible is enabled. 
+> Slide animation only applicable if the `partialVisible` is enabled. 
 
 The last slide will be displayed as a partial slide at the initial rendering when the [`loop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_Loop) and `partialVisible` properties are enabled.
 
