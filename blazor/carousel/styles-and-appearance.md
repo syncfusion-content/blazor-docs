@@ -7,7 +7,7 @@ control: Carousel
 documentation: ug
 ---
 
-# CSS Structure
+# CSS Structure in Blazor Carousel Component
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on user preference.
 
