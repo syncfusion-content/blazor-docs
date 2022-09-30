@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Position with Blazor AppBar Component | Syncfusion
-description: Checkout and learn about Position with Blazor AppBar component in Blazor Server App and Blazor WebAssembly App.
+title: Positioning in Blazor AppBar Component | Syncfusion
+description: Checkout and learn about Positioning in Blazor AppBar component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: AppBar
 documentation: ug
 ---
 
-# Position with Blazor AppBar Component
+# Positioning in Blazor AppBar Component
 
 This section briefly explains about how to configure the position of the AppBar. The AppBar provides the following options for setting its position:
 
@@ -17,7 +17,7 @@ This section briefly explains about how to configure the position of the AppBar.
 
 ### Top AppBar
 
-Top Appbar is the default once in which it positions the AppBar at the top of the content.
+Top Appbar is the default one in which it positions the AppBar at the top of the content.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -25,8 +25,7 @@ Top Appbar is the default once in which it positions the AppBar at the top of th
 
 <div class="control-container">
     <SfAppBar ColorMode="AppBarColor.Primary">
-        <SfButton aria-label="menu" CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
-        <span class="regular">Top AppBar</span>
+        <SfButton CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
         <AppBarSpacer></AppBarSpacer>
         <SfButton CssClass="e-inherit" Content="FREE TRIAL"></SfButton>
     </SfAppBar>
@@ -53,8 +52,8 @@ Top Appbar is the default once in which it positions the AppBar at the top of th
         width: 500px;
         overflow-y: scroll;
     }
-    .e-appbar .regular {
-        margin:0 5px;
+    .control-container .e-btn.e-inherit {
+        margin: 0 3px;
     }
 </style>
 ```
@@ -63,7 +62,7 @@ Top Appbar is the default once in which it positions the AppBar at the top of th
 
 ### Bottom AppBar
 
-This position can be set to the AppBar by setting `AppBarPosition.Bottom` to the property `Position`. Bottom Appbar positions the Appbar at the bottom of the content.
+This position can be set to the AppBar by setting `AppBarPosition.Bottom` to the property [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Position). Bottom Appbar positions the Appbar at the bottom of the content.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -71,8 +70,7 @@ This position can be set to the AppBar by setting `AppBarPosition.Bottom` to the
 
 <div class="control-container">
     <SfAppBar ColorMode="AppBarColor.Primary" Position="AppBarPosition.Bottom">
-        <SfButton aria-label="menu" CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
-        <span class="regular">Bottom AppBar</span>
+        <SfButton CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
         <AppBarSpacer></AppBarSpacer>
         <SfButton CssClass="e-inherit" Content="FREE TRIAL"></SfButton>
     </SfAppBar>
@@ -99,8 +97,8 @@ This position can be set to the AppBar by setting `AppBarPosition.Bottom` to the
         margin: 0 auto;
         position: relative;
     }
-    .e-appbar .regular {
-        margin:0 5px;
+    .control-container .e-btn.e-inherit {
+        margin: 0 3px;
     }
 </style>
 ```
@@ -109,7 +107,7 @@ This position can be set to the AppBar by setting `AppBarPosition.Bottom` to the
 
 ### Sticky AppBar
 
-This position can be set to the AppBar by setting `true` to the property `IsSticky`. AppBar will be sticky while scrolling the AppBar content.
+This position can be set to the AppBar by setting `true` to the property [IsSticky](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_IsSticky). AppBar will be sticky while scrolling the AppBar content.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -117,8 +115,7 @@ This position can be set to the AppBar by setting `true` to the property `IsStic
 
 <div class="control-container">
     <SfAppBar ColorMode="AppBarColor.Primary" IsSticky=true>
-        <SfButton aria-label="menu" CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
-        <span class="regular">Sticky AppBar</span>
+        <SfButton CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
         <AppBarSpacer></AppBarSpacer>
         <SfButton CssClass="e-inherit" Content="FREE TRIAL"></SfButton>
     </SfAppBar>
@@ -145,8 +142,8 @@ This position can be set to the AppBar by setting `true` to the property `IsStic
         width: 500px;
         overflow-y: scroll;
     }
-    .e-appbar .regular {
-        margin:0 5px;
+    .control-container .e-btn.e-inherit {
+        margin: 0 3px;
     }
 </style>
 ```

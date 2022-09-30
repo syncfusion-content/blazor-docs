@@ -267,10 +267,10 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 <div class="control-container">
     <SfAppBar ColorMode="AppBarColor.Primary">
-        <SfButton aria-label="menu" CssClass="e-inherit menu" IconCss="e-icons e-menu"></SfButton>
+        <SfButton CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
         <span class="regular">Blazor AppBar</span>
         <AppBarSpacer></AppBarSpacer>
-        <SfButton CssClass="e-inherit login" Content="FREE TRIAL"></SfButton>
+        <SfButton CssClass="e-inherit" Content="FREE TRIAL"></SfButton>
     </SfAppBar>
 </div>
 
@@ -280,8 +280,8 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
         margin: 0 auto;
         width: 500px;
     }
-    .e-appbar .regular {
-        margin:0 5px;
+    .control-container .e-btn.e-inherit {
+        margin: 0 3px;
     }
 </style>
 ```

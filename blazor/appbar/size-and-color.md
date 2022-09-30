@@ -27,7 +27,7 @@ This mode is the default one in which the AppBar is displayed with the default h
 
 <div class="control-container">
     <SfAppBar ColorMode="AppBarColor.Primary">
-        <SfButton aria-label="menu" CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
+        <SfButton CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
         <span class="regular">Regular AppBar</span>
         <AppBarSpacer></AppBarSpacer>
         <SfButton CssClass="e-inherit" Content="FREE TRIAL"></SfButton>
@@ -40,8 +40,8 @@ This mode is the default one in which the AppBar is displayed with the default h
         margin: 0 auto;
         width: 500px;
     }
-    .e-appbar .regular {
-        margin:0 5px;
+    .control-container .e-btn.e-inherit {
+        margin: 0 3px;
     }
 </style>
 ```
@@ -50,7 +50,7 @@ This mode is the default one in which the AppBar is displayed with the default h
 
 ### Prominent AppBar
 
-This height mode can be set to the AppBar by setting `AppBarMode.Prominent` to the property `Mode`. Prominent AppBar is displayed with longer height, and can be used for larger titles, images or texts. It is also longer than regular.
+This height mode can be set to the AppBar by setting `AppBarMode.Prominent` to the property [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Mode). Prominent AppBar is displayed with longer height, and can be used for larger titles, images or texts. It is also longer than regular. In the folllowing example, we have customized the prominent text using align-self and white-space CSS property. You can change the prominent AppBar height if larger titles, images or texts are used.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -58,7 +58,7 @@ This height mode can be set to the AppBar by setting `AppBarMode.Prominent` to t
 
 <div class="control-container">
     <SfAppBar ColorMode="AppBarColor.Primary" Mode="AppBarMode.Prominent">
-        <SfButton aria-label="menu" CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
+        <SfButton CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
         <span class="prominent">AppBar Component with Prominent mode</span>
         <AppBarSpacer></AppBarSpacer>
         <SfButton CssClass="e-inherit" Content="FREE TRIAL"></SfButton>
@@ -71,7 +71,7 @@ This height mode can be set to the AppBar by setting `AppBarMode.Prominent` to t
         margin: 0 auto;
         width: 500px;
     }
-    .e-appbar .prominent {
+    .control-container .e-appbar .prominent {
         margin:0 5px;
         align-self: flex-end;
         white-space: break-spaces;
@@ -84,7 +84,7 @@ This height mode can be set to the AppBar by setting `AppBarMode.Prominent` to t
 
 ### Dense AppBar
 
-This height mode can be set to the AppBar by setting `AppBarMode.Dense` to the property `Mode`. Dense AppBar is displayed with shorter height which is denser to accommodate all the AppBar content.
+This height mode can be set to the AppBar by setting `AppBarMode.Dense` to the property [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Mode). Dense AppBar is displayed with shorter height which is denser to accommodate all the AppBar content.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -92,7 +92,7 @@ This height mode can be set to the AppBar by setting `AppBarMode.Dense` to the p
 
 <div class="control-container">
     <SfAppBar ColorMode="AppBarColor.Primary" Mode="AppBarMode.Dense">
-        <SfButton aria-label="menu" CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
+        <SfButton CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
         <span class="dense">Dense AppBar</span>
         <AppBarSpacer></AppBarSpacer>
         <SfButton CssClass="e-inherit" Content="FREE TRIAL"></SfButton>
@@ -105,8 +105,8 @@ This height mode can be set to the AppBar by setting `AppBarMode.Dense` to the p
         margin: 0 auto;
         width: 500px;
     }
-    .e-appbar .dense {
-        margin:0 5px;
+    .control-container .e-btn.e-inherit {
+        margin: 0 3px;
     }
 </style>
 ```
@@ -115,7 +115,7 @@ This height mode can be set to the AppBar by setting `AppBarMode.Dense` to the p
 
 ## Color
 
-This section briefly explains the different types of background color used for AppBar. The background and font colors can be set using the `ColorMode` property. The available types of background color for Blazor AppBar are as follows:
+This section briefly explains the different types of background color used for AppBar. The background and font colors can be set using the [ColorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_ColorMode) property. The available types of background color for Blazor AppBar are as follows:
 
 * Light AppBar
 * Dark AppBar
@@ -132,8 +132,7 @@ This color mode is the default one in which the AppBar can be displayed with a l
 
 <div class="control-container">
     <SfAppBar>
-        <SfButton aria-label="menu" CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
-        <span class="regular">Light AppBar</span>
+        <SfButton CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
         <AppBarSpacer></AppBarSpacer>
         <SfButton IsPrimary=true Content="FREE TRIAL"></SfButton>
     </SfAppBar>
@@ -145,8 +144,8 @@ This color mode is the default one in which the AppBar can be displayed with a l
         margin: 0 auto;
         width: 500px;
     }
-    .e-appbar .regular {
-        margin:0 5px;
+    .control-container .e-btn.e-inherit {
+        margin: 0 3px;
     }
 </style>
 ```
@@ -155,7 +154,7 @@ This color mode is the default one in which the AppBar can be displayed with a l
 
 ### Dark AppBar
 
-This color mode can be set to the AppBar by setting `AppBarColor.Dark` to the property `ColorMode`. Dark AppBar can be displayed with a dark background and its corresponding font color.
+This color mode can be set to the AppBar by setting `AppBarColor.Dark` to the property [ColorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_ColorMode). Dark AppBar can be displayed with a dark background and its corresponding font color.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -163,8 +162,7 @@ This color mode can be set to the AppBar by setting `AppBarColor.Dark` to the pr
 
 <div class="control-container">
     <SfAppBar ColorMode="AppBarColor.Dark">
-        <SfButton aria-label="menu" CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
-        <span class="regular">Dark AppBar</span>
+        <SfButton CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
         <AppBarSpacer></AppBarSpacer>
         <SfButton CssClass="e-inherit" Content="FREE TRIAL"></SfButton>
     </SfAppBar>
@@ -176,8 +174,8 @@ This color mode can be set to the AppBar by setting `AppBarColor.Dark` to the pr
         margin: 0 auto;
         width: 500px;
     }
-    .e-appbar .regular {
-        margin:0 5px;
+    .control-container .e-btn.e-inherit {
+        margin: 0 3px;
     }
 </style>
 ```
@@ -186,7 +184,7 @@ This color mode can be set to the AppBar by setting `AppBarColor.Dark` to the pr
 
 ### Primary AppBar
 
-This color mode can be set to the AppBar by setting `AppBarColor.Primary` to the property `ColorMode`. Primary AppBar can be displayed with a primary colors.
+This color mode can be set to the AppBar by setting `AppBarColor.Primary` to the property [ColorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_ColorMode). Primary AppBar can be displayed with a primary colors.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -194,8 +192,7 @@ This color mode can be set to the AppBar by setting `AppBarColor.Primary` to the
 
 <div class="control-container">
     <SfAppBar ColorMode="AppBarColor.Primary">
-        <SfButton aria-label="menu" CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
-        <span class="regular">Primary AppBar</span>
+        <SfButton CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
         <AppBarSpacer></AppBarSpacer>
         <SfButton CssClass="e-inherit" Content="FREE TRIAL"></SfButton>
     </SfAppBar>
@@ -207,8 +204,8 @@ This color mode can be set to the AppBar by setting `AppBarColor.Primary` to the
         margin: 0 auto;
         width: 500px;
     }
-    .e-appbar .regular {
-        margin:0 5px;
+    .control-container .e-btn.e-inherit {
+        margin: 0 3px;
     }
 </style>
 ```
@@ -217,7 +214,7 @@ This color mode can be set to the AppBar by setting `AppBarColor.Primary` to the
 
 ### Inherit AppBar
 
-This color mode can be set to the AppBar by setting `AppBarColor.Inherit` to the property `ColorMode`. The AppBar inherits the background and font color from its parent element.
+This color mode can be set to the AppBar by setting `AppBarColor.Inherit` to the property [ColorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_ColorMode). The AppBar inherits the background and font color from its parent element.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -225,8 +222,7 @@ This color mode can be set to the AppBar by setting `AppBarColor.Inherit` to the
 
 <div class="control-container">
     <SfAppBar ColorMode="AppBarColor.Inherit">
-        <SfButton aria-label="menu" CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
-        <span class="regular">Inherit AppBar</span>
+        <SfButton CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
         <AppBarSpacer></AppBarSpacer>
         <SfButton IsPrimary=true Content="FREE TRIAL"></SfButton>
     </SfAppBar>
@@ -238,8 +234,8 @@ This color mode can be set to the AppBar by setting `AppBarColor.Inherit` to the
         margin: 0 auto;
         width: 500px;
     }
-    .e-appbar .regular {
-        margin:0 5px;
+    .control-container .e-btn.e-inherit {
+        margin: 0 3px;
     }
 </style>
 ```

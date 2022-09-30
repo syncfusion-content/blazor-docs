@@ -14,12 +14,18 @@ To modify the AppBar appearance, you need to override the default CSS of AppBar 
 |CSS Class | Purpose of Class |
 |-----|----- |
 |.e-appbar|To customize the appbar.|
+|.e-appbar.e-prominent|To customize the prominent appbar.|
+|.e-appbar.e-dense|To customize the dense appbar.|
+|.e-appbar.e-light|To customize the light appbar.|
+|.e-appbar.e-dark|To customize the dark appbar.|
+|.e-appbar.e-primary|To customize the dark appbar.|
+|.e-appbar.e-inherit|To customize the inherit appbar.|
 
->Note: You can change the default value of the property using customization(For Example: You can change the prominent appbar height)
+>Note: You can change the prominent AppBar height if larger titles, images or texts are used.
 
 ## CssClass
 
-CssClass is used for AppBar customization based on the custom class. In the below example AppBar background and color is customized using `CssClass` property.
+CssClass is used for AppBar customization based on the custom class. In the below example AppBar background and color is customized using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_CssClass) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -37,7 +43,7 @@ CssClass is used for AppBar customization based on the custom class. In the belo
         margin: 0 auto;
         width: 500px;
     }
-    .e-appbar.custom-appbar {
+    .control-container .e-appbar.custom-appbar {
         background: #adadb1;
         color: #fff;
     }
@@ -48,7 +54,7 @@ CssClass is used for AppBar customization based on the custom class. In the belo
 
 ## HtmlAttributes
 
-It can be used to additional inline attributes through `@attributes` directive. In the below code example, Elevation of the AppBar customized using `@attributes` directive.
+It can be used to additional inline attributes through `@attributes` directive. In the below code example, aria-label of the AppBar customized using `@attributes` directive.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -63,7 +69,7 @@ It can be used to additional inline attributes through `@attributes` directive. 
 @code { 
      Dictionary<string, object> customAttribute = new Dictionary<string, object>() 
      { 
-         { "style", "box-shadow: 0 5px 5px -3px rgba(0,0,0,.06), 0 8px 10px 1px rgba(0,0,0,.042), 0 3px 14px 2px rgba(0,0,0,.036)" } 
+         { "aria-label", "appbar" } 
      }; 
 }
 
@@ -75,6 +81,3 @@ It can be used to additional inline attributes through `@attributes` directive. 
     }
 </style>
 ```
-
-![Blazor AppBar with HtmlAttributes customization](./images/htmlattributes_appbar.png)
-
