@@ -214,8 +214,8 @@ The connector can be selected by clicking it. When the connector is selected, ci
 
 ![Dragging Connector End Point in Blazor Diagram](../images/blazor-diagram-drag-connector-end-point.gif)
 
-## Flip
-The Flip  is used to mirror the selected object’s in the diagram page for horizontal,Vertical and Both direction.
+## How to flip the connector
+The Flip command is used to flip the chosen object is mirrored across  in either the horizontal, vertical, or both directions on the diagram page..
 
 ###  FlipDirection:
 The flipdirection is used to mirror across Horizontal,Vertical and Both direction.
@@ -229,7 +229,7 @@ The flipdirection is used to mirror across Horizontal,Vertical and Both directio
 
 **Note:** Flipmode is only applicable for Nodes not for Connectors
 
-The following code example shows how to change the FlipDirection and FlipMode.
+The following code example shows how to change the FlipDirection.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using ChangeEventArgs = Microsoft.AspNetCore.Components.ChangeEventArgs
@@ -315,16 +315,17 @@ The following code example shows how to change the FlipDirection and FlipMode.
     }
 }
 ```
-### Initial Diagram:
-![Initial Diagram](../images/ConnectorInitial.png)
+Initial rendering:
+
+![Initial Diagram](../images/blazor-diagram-connector-flip-initial-rendering.png)
 
 | FlipDirection | Output|
 | -------- | -------- |
-|Horizontal|![HorizontalDirection](../images/HConnector.png)|
-|Vertical|![VerticalDirection](../images/VConnector.png)|
-|Both|![BothDirection](../images/BConnector.png)|
+|Horizontal|![HorizontalDirection](../images/blazor-diagram-flip-direction-as-horizontal.png)|
+|Vertical|![VerticalDirection](../images/blazor-diagram-flip-direction-as-vertical.png)|
+|Both|![BothDirection](../images/blazor-diagram-flip-direction-as-both.png)|
 
-![Flip Connector](../images/connector.gif)
+![Flip Connector](../images/blazor-diagram-connector-flip-direction.gif)
 
 ## See also
 

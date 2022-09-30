@@ -392,12 +392,12 @@ You can edit the node group and its children at runtime. You can interact with t
 When a child element of any node group is clicked, its contained node group is selected instead of the child element. With consecutive clicks on the selected element, selection is changed from top to bottom in the hierarchy of parent nodegroup to its children.
 
 ## How to flip the GroupNode
-The Flip  is used to mirror the selected object’s content and port in the diagram page for horizontal,Vertical and Both direction.
+The Flip command is used to flip the content and port of the chosen object is mirrored across  in either the horizontal, vertical, or both directions on the diagram page.
 
-**Note:** We can flip the groupnode as well as flip the selected ChildNodes.
+**Note:** We can flip the groupnode as well as the selected childnodes.
 
 ###  FlipDirection:
-The flipdirection is used to mirror across Horizontal,Vertical and Both direction.
+The flipdirection is used to flip the node or connector so that it is mirrored across in either horizontal, vertical, or both directions.
 
 | FlipDirection | Description | 
 | -------- | -------- |
@@ -410,12 +410,14 @@ The flipdirection is used to mirror across Horizontal,Vertical and Both directio
 The FlipMode is used to control the behaviour of the flip object.
 | DiagramFlipMode | Description | 
 | -------- | -------- |
-|Content|It is used to enable or disables the flip for object’s content..|
-|Port|	It is used to enable or disables the flip for object’s port.|
-|All|	It is used to enable or disables the flip for both object’s content and port.|
-|None|	It is used to disables all the flipmode behaviour.|
+|Content|It is used to enable or disable the flip for object’s content..|
+|Port|	It is used to enable or disable the flip for object’s port.|
+|All|	It is used to enable or disable the flip for both object’s content and port.|
+|None|	It is used to disable all the flipmode behaviour.|
 
-**Note:** Flipmode is only applicable for Nodes not for Connectors
+**Note:** Flipmode is only applicable for Nodes not for Connectors.
+
+The following code example shows how to change the FlipDirection and FlipMode.
 ```chtml
 @using Syncfusion.Blazor.Diagram
 @using ChangeEventArgs = Microsoft.AspNetCore.Components.ChangeEventArgs
@@ -626,15 +628,16 @@ The FlipMode is used to control the behaviour of the flip object.
     }
 }
 ```
-### Initial Diagram:
-![Initial Diagram](Images/HGroupInitial.png)
+Initial rendering:
+
+![Initial Diagram](Images/blazor-diagram-group-node-flip-initial-rendering.png)
 
 | FlipDirection | DiagramFlipMode | Output|
 | -------- | -------- |-------- |
-|Horizontal|Port|![HorizontalDirection with PortMode](Images/HGroup.png)|
-|Horizontal|Content|![HorizontalDirection with ContentMode](Images/HContentg.png)|
-|Horizontal|All|![HorizontalDirection with AllMode](Images/HAllg.png)|
-|Horizontal|None|![HorizontalDirection with NoneMode](Images/Hbothg.png)|
+|Horizontal|Port|![HorizontalDirection with PortMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-port.png)|
+|Horizontal|Content|![HorizontalDirection with ContentMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-content.png)|
+|Horizontal|All|![HorizontalDirection with AllMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-all.png)|
+|Horizontal|None|![HorizontalDirection with NoneMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-none.png)|
 
 ![Flip](Images/Nodegroupflip.gif)
 

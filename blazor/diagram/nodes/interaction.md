@@ -239,10 +239,10 @@ Also, rotate the node during the interaction.
 ![Displaying Node Rotation in Blazor Diagram](../images/blazor-diagram-node-rotation.gif)
 
 ## How to flip the Node
-The Flip  is used to mirror the selected object’s content and port in the diagram page for horizontal,Vertical and Both direction.
+The Flip command is used to flip the content and port of the chosen object is mirrored across  in either the horizontal, vertical, or both directions on the diagram page.
 
 ###  FlipDirection:
-The flipdirection is used to mirror across Horizontal,Vertical and Both direction.
+The flipdirection is used to flip the node or connector so that it is mirrored across in either horizontal, vertical, or both directions.
 
 | FlipDirection | Description | 
 | -------- | -------- |
@@ -256,12 +256,12 @@ The flipdirection is used to mirror across Horizontal,Vertical and Both directio
 The FlipMode is used to control the behaviour of the flip object.
 | DiagramFlipMode | Description | 
 | -------- | -------- |
-|Content|It is used to enable or disables the flip for object’s content..|
-|Port|	It is used to enable or disables the flip for object’s port.|
-|All|	It is used to enable or disables the flip for both object’s content and port.|
-|None|	It is used to disables all the flipmode behaviour.|
+|Content|It is used to enable or disable the flip for an object’s content.|
+|Port|It is used to enable or disable the flip for an object’s port.|
+|All|It is used to enable or disable the flip for both the object’s content and port.|
+|None|	It is used to disable all the flipmode behaviour.|
 
-**Note:** Flipmode is only applicable for Nodes not for Connectors
+**Note:** Flipmode is only applicable for nodes, not for connectors.
 
 The following code example shows how to change the FlipDirection and FlipMode.
 ```chtml
@@ -449,25 +449,26 @@ The following code example shows how to change the FlipDirection and FlipMode.
     }
 }
 ```
-### Initial Diagram:
-![Initial Diagram](../images/Initial.png)
+Initial Rendering:
+
+![Initial Diagram](../images/blazor-diagram-flip-initial-rendering.png)
 
 | FlipDirection | DiagramFlipMode | Output|
 | -------- | -------- | -------- |
-|Horizontal|Port| ![HorizontalDirection with Port Mode](../images/HPort.png)|
-|Horizontal|Content|![HorizontalDirection with Content Mode](../images/HContent.png)|
-|Horizontal|All|![HorizontalDirection with All Mode](../images/HAll.png)|
-|Horizontal|None|![HorizontalDirection with None Mode](../images/HNone.png)|
-|Vertical|Port|![VerticalDirection with Port Mode](../images/VPort.png)|
-|Vertical|Content|![VerticalDirection with Content Mode](../images/VContent.png)|
-|Vertical|All|![VerticalDirection with All Mode](../images/VBoth.png)|
-|Vertical|None|![VerticalDirection with None Mode](../images/VNone.png)|
-|Both|Port|![BothDirection with Port Mode](../images/BPort.png)|
-|Both|Content|![BothDirection with Content Mode](../images/BContent.png)|
-|Both|All|![BothDirection with All Mode](../images/BAll.png)|
-|Both|None|![BothDirection with None Mode](../images/BNone.png)|
+|Horizontal|Port| ![HorizontalDirection with Port Mode](../images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-port.png)|
+|Horizontal|Content|![HorizontalDirection with Content Mode](../images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-content.png)|
+|Horizontal|All|![HorizontalDirection with All Mode](../images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-all.png)|
+|Horizontal|None|![HorizontalDirection with None Mode](../images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-none.png)|
+|Vertical|Port|![VerticalDirection with Port Mode](../images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-port.png)|
+|Vertical|Content|![VerticalDirection with Content Mode](../images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-content.png)|
+|Vertical|All|![VerticalDirection with All Mode](../images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-both.png)|
+|Vertical|None|![VerticalDirection with None Mode](../images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-none.png)|
+|Both|Port|![BothDirection with Port Mode](../images/blazor-diagram-flip-direction-as-both-flip-mode-as-port.png)|
+|Both|Content|![BothDirection with Content Mode](../images/blazor-diagram-flip-direction-as-both-flip-mode-as-content.png)|
+|Both|All|![BothDirection with All Mode](../images/blazor-diagram-flip-direction-as-both-flip-mode-as-all.png)|
+|Both|None|![BothDirection with None Mode](../images/blazor-diagram-flip-direction-as-both-flip-mode-as-none.png)|
 
-![Flip](../images/flipnode.gif)
+![Flip](../images/blazor-diagram-flip-node.gif)
 
 For more information about node interaction, refer to [Node Interaction](../interaction).
 
