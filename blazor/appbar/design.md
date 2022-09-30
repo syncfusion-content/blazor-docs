@@ -78,12 +78,11 @@ The following example depicts the code to provide vertical line between home and
 
 ## Media Query
 
-It is used to adjust the AppBar for different screen sizes by using media queries. On mobile devices, media query is used to display the AppBar in adaptive views. You can click the menu to see the hidden AppBar content.
+It is used to adjust the AppBar for different screen sizes by using media queries. Resize the screen to observe the responsive layout of AppBar.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.SplitButtons
 
 <div class="control-container">
     <SfAppBar ColorMode="AppBarColor.Primary">
@@ -99,17 +98,6 @@ It is used to adjust the AppBar for different screen sizes by using media querie
         </div>
         <AppBarSeparator></AppBarSeparator>
         <SfButton CssClass="e-inherit login" Content="Login"></SfButton>
-        <SfMenu CssClass="e-inherit e-appbar-icon-menu" TValue="MenuItem">
-            <MenuItems>
-               <MenuItem aria-label="more vertical" IconCss="e-icons e-more-vertical-1">
-                  <MenuItems>
-                     <MenuItem Text="Home"></MenuItem>
-                     <MenuItem Text="Products"></MenuItem>
-                     <MenuItem Text="Login"></MenuItem>
-                  </MenuItems>
-               </MenuItem>
-            </MenuItems>
-        </SfMenu>
     </SfAppBar>
 </div>
 
@@ -123,7 +111,6 @@ It is used to adjust the AppBar for different screen sizes by using media querie
         margin: 0 auto;
         width: 500px;
     }
-    .control-container .e-dropdown-btn.e-inherit,
     .control-container .e-btn.e-inherit.home,
     .control-container .e-btn.e-inherit.products {
         margin: 0 5px;
@@ -131,43 +118,29 @@ It is used to adjust the AppBar for different screen sizes by using media querie
     .control-container .e-appbar .e-appbar-separator {
         margin: 0 10px;
     }
-    .control-container .e-appbar-icon-menu {
-        display: none;
+    @@media screen and (max-width: 1024px) {
+        .control-container .e-appbar {
+           flex-flow: row wrap;
+           height: auto;
+           gap: 8px;
+        }
+        .control-container {
+           width: 400px;
+        }
     }
     @@media screen and (max-width: 480px) {
         .control-container {
-           width: 300px;
-        }
-        .control-container .e-appbar-icon-menu {
-            display: block;
-        }
-        .control-container  .login,
-        .control-container .e-appbar-separator,
-        .control-container .e-menu-container.e-inherit.e-appbar-menu,
-        .control-container .e-menu-container.e-inherit.e-appbar-icon-menu .e-menu .e-menu-item .e-caret,
-        .control-container .e-btn.e-inherit.e-appbar-menu {
-            display: none;
-        }
-        .control-container .e-menu-container.e-inherit.e-appbar-icon-menu ul .e-menu-item.e-menu-caret-icon {
-            padding: 0 8px;
-        }
-        .control-container .e-menu-container.e-inherit ul .e-menu-item .e-menu-icon {
-            margin-right: 0;
-        }
-        .control-container .e-menu-container.e-inherit {
-            margin: 0 10px;
+           width: 250px;
+           margin: 0 2px
         }
         .control-container .e-input-group.e-control-wrapper.e-inherit {
-            margin-left: 10px;
-        }
-        .control-container .menu {
-            margin-bottom: 3px;
+           margin-left: 10px;
         }
     }
 </style>
 ```
 
-![Blazor AppBar with Media Query](./images/mobile_appbar.png)
+![Blazor AppBar with Media Query](./images/media_appbar.png)
 
 ## Designing AppBar with Menu
 
