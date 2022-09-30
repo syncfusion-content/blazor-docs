@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and Appearance in Blazor AppBar Component | Syncfusion
-description: Check out and learn about Style and Appearance in Syncfusion Blazor AppBar component and more here.
+title: Styles and Appearances in Blazor AppBar Component | Syncfusion
+description: Check out and learn about Styles and Appearances in Syncfusion Blazor AppBar component and more here.
 platform: Blazor
 control: AppBar
 documentation: ug
