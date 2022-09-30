@@ -135,11 +135,18 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
     };
 }
 ```
-## ExpandoObject data
+## Binding ExpandoObject
 
-Diagram supports `Expandoobject` data source for layout creation. Data can be bound to the Diagram data source setting as a list of `ExpandoObject`.The `ExpandoObject` class enables you to add and delete members of its instances at run time and also to set and get values of these members. This class supports dynamic binding.It eleminates the need for creating a class to create a data source.
+Diagram is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile time. In such circumstances data can be bound to the Diagram as a list of **ExpandoObjects**. 
+Diagram can also perform all kind of supported Layout operations in ExpandoObjects such as,
+* Hierarchical layout
+* Organization chart
+* Mind Map layout
+* Complex Hierarchical Tree layout
 
-To map the user defined Expandoobject data with diagram, configure the fields of `DataSourceSettings`. The following code example illustrates how to bind ExpandoObject data with the diagram.
+The **ExpandoObject** can be bound to Diagram by assigning to the [DataSource] property of the [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html).
+The following code example illustrates how to bind ExpandoObject data with the diagram.
+
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -306,11 +313,17 @@ To map the user defined Expandoobject data with diagram, configure the fields of
     }
 }
 ```
-## DynamicObject data
+## Binding DynamicObject
 
-Diagram supports `DynamicObject` data source for layout creation. Data can be bound to the Diagram data source setting as a list of `DynamicObject`.The `DynamicObject` class enables you to define which operations can be performed on dynamic objects and how to perform those operations. For example, you can define what happens when you try to get or set an object property, call a method, or perform standard mathematical operations such as addition and multiplication. This class supports dynamic binding.It eleminates the need for creating a class to create a data source.
+Diagram is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile time. In such circumstances data can be bound to the Diagram as a list of **DynamicObject**.
+Diagram can also perform all kind of supported Layout operations in DynamicObject such as,
+* Hierarchical layout
+* Organization chart
+* Mind Map layout
+* Complex Hierarchical Tree layout
 
-To map the user defined DynamicObject data with diagram, configure the fields of `DataSourceSettings`. The following code example illustrates how to bind DynamicObject data with the diagram.
+ The **DynamicObject** can be bound to Diagram by assigning to the [DataSource] property of the [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html).
+The following code example illustrates how to bind DynamicObject data with the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
