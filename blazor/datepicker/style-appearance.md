@@ -37,6 +37,20 @@ Use the following CSS to customize the DatePicker icon element
 
 ## Customizing the Calendar popup of the DatePicker
 
-Please check the below section to customize the style and appearance of the Calendar component
+### Full screen calendar popup in material theme
+
+We can render the full screen calendar popup in mobile device(s) by adding `e-popup-expand` class to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerModel.html#Syncfusion_Blazor_Calendars_DatePickerModel_CssClass) property of DatePicker component, Which supports both landscape and portrait orientations.
+
+{% highlight cshtml tabtitle="Index.razor" %}
+
+{% include_relative code-snippet/full-screen-popup.razor %}
+
+{% endhighlight %}
+
+![Landscape Mode](./images/blazor-datepicker-fullscreen-mode-landscape.gif)
+
+![Potrait Mode](./images/blazor-datepicker-fullscreen-mode-potrait.gif)
+
+Also check the below section to customize the style and appearance of the Calendar component
 
 [Customizing Calendar's style and appearance](../calendar/style-appearance/)
