@@ -283,14 +283,19 @@ The [`shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notificati
 {% tabs %}
 {% highlight razor %}
 
-<label>Circle</label><br/>
-<SfSkeleton Shape=SkeletonType.Circle Width="48px"></SfSkeleton><br/>
-<label>Rectangle</label><br/>
-<SfSkeleton Shape="SkeletonType.Rectangle" Width="80px" Height="48px"></SfSkeleton><br/>
-<label>Square</label><br/>
-<SfSkeleton Shape="SkeletonType.Square" Width="48px"></SfSkeleton><br/>
-<label>Text</label><br/>
-<SfSkeleton Shape="SkeletonType.Text" Width="100px" Height="15px"></SfSkeleton><br/>
+<div style="width: 200px">
+    <SfSkeleton Shape=SkeletonType.Circle Width="48px" CssClass="custom-css"></SfSkeleton>
+    <SfSkeleton Shape="SkeletonType.Square" Width="48px"></SfSkeleton>
+    <br/><br/>
+    <SfSkeleton Shape="SkeletonType.Text" Height="50px"></SfSkeleton>
+    <br/><br/>
+    <SfSkeleton Shape="SkeletonType.Rectangle" Width="15px" ></SfSkeleton>
+</div>
+<style>
+    .custom-css {
+        margin-right: 30px;
+    }
+</style>
 
 {% endhighlight %}
 {% endtabs %}
