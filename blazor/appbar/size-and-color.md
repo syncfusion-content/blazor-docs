@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Size and Color with Blazor AppBar Component | Syncfusion
-description: Checkout and learn about Size and Color with Blazor AppBar component in Blazor Server App and Blazor WebAssembly App.
+description: Check out and learn about Size and Color with the Blazor AppBar component in the Blazor Server App and the Blazor WebAssembly App.
 platform: Blazor
 control: AppBar
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Size
 
-This section briefly explains the different types of AppBar. The available types of Blazor AppBar are as follows:
+This section briefly explains the different types of AppBar. The available types of the Blazor AppBar are as follows:
 
 * Regular AppBar
 * Prominent AppBar
@@ -50,7 +50,7 @@ This mode is the default one in which the AppBar is displayed with the default h
 
 ### Prominent AppBar
 
-This height mode can be set to the AppBar by setting `AppBarMode.Prominent` to the property [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Mode). Prominent AppBar is displayed with longer height, and can be used for larger titles, images or texts. It is also longer than regular. In the folllowing example, we have customized the prominent text using align-self and white-space CSS property. You can change the prominent AppBar height if larger titles, images or texts are used.
+This height mode can be set to the AppBar by setting `AppBarMode.Prominent` to the property [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Mode). The prominent AppBar is displayed with a longer height and can be used for larger titles, images, or texts. It is also longer than the regular AppBar. In the following example, we have customized the prominent text using align-self and white-space CSS properties. You can change the prominent AppBar height if larger titles, images, or texts are used.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -115,7 +115,7 @@ This height mode can be set to the AppBar by setting `AppBarMode.Dense` to the p
 
 ## Color
 
-This section briefly explains the different types of background color used for AppBar. The background and font colors can be set using the [ColorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_ColorMode) property. The available types of background color for Blazor AppBar are as follows:
+This section briefly explains the different types of background colors used for the AppBar. The background and font colors can be set using the [ColorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_ColorMode) property. The available types of background color for the Blazor AppBar are as follows:
 
 * Light AppBar
 * Dark AppBar
@@ -154,7 +154,7 @@ This color mode is the default one in which the AppBar can be displayed with a l
 
 ### Dark AppBar
 
-This color mode can be set to the AppBar by setting `AppBarColor.Dark` to the property [ColorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_ColorMode). Dark AppBar can be displayed with a dark background and its corresponding font color.
+This color mode can be set to the AppBar by setting `AppBarColor.Dark` to the property [ColorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_ColorMode). A dark AppBar can be displayed with a dark background and its corresponding font color.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -184,7 +184,7 @@ This color mode can be set to the AppBar by setting `AppBarColor.Dark` to the pr
 
 ### Primary AppBar
 
-This color mode can be set to the AppBar by setting `AppBarColor.Primary` to the property [ColorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_ColorMode). Primary AppBar can be displayed with a primary colors.
+This color mode can be set to the AppBar by setting `AppBarColor.Primary` to the property [ColorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_ColorMode). The primary AppBar can be displayed with primary colors.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

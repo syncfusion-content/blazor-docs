@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Positioning in Blazor AppBar Component | Syncfusion
-description: Checkout and learn about Positioning in Blazor AppBar component in Blazor Server App and Blazor WebAssembly App.
+description: Check out and learn about Positioning in the Blazor AppBar component in the Blazor Server App and the Blazor WebAssembly App.
 platform: Blazor
 control: AppBar
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Positioning in Blazor AppBar Component
 
-This section briefly explains about how to configure the position of the AppBar. The AppBar provides the following options for setting its position:
+This section briefly explains how to configure the position of the AppBar. The AppBar provides the following options for setting its position:
 
 * Top AppBar
 * Bottom AppBar
@@ -17,7 +17,7 @@ This section briefly explains about how to configure the position of the AppBar.
 
 ### Top AppBar
 
-Top Appbar is the default one in which it positions the AppBar at the top of the content.
+The top AppBar is the default one in which it positions the AppBar at the top of the content.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -62,7 +62,7 @@ Top Appbar is the default one in which it positions the AppBar at the top of the
 
 ### Bottom AppBar
 
-This position can be set to the AppBar by setting `AppBarPosition.Bottom` to the property [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Position). Bottom Appbar positions the Appbar at the bottom of the content.
+This position can be set to the AppBar by setting `AppBarPosition.Bottom` to the property [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Position). The bottom AppBar positions the AppBar at the bottom of the content.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

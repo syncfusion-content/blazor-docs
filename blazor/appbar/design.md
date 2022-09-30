@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Design Components with Blazor AppBar Component | Syncfusion
-description: Checkout and learn about Design Components with Blazor AppBar component in Blazor Server App and Blazor WebAssembly App.
+description: Check out and learn about Design Components with the Blazor AppBar component in the Blazor Server App and the Blazor WebAssembly App.
 platform: Blazor
 control: AppBar
 documentation: ug
@@ -11,9 +11,9 @@ documentation: ug
 
 ## Spacer
 
-[AppBarSpacer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AppBarSpacer.html)  is used to provide spacing between the AppBar contents which gives an additional space on content layout.
+[AppBarSpacer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AppBarSpacer.html)  is used to provide spacing between the AppBar contents which gives additional space to the content layout.
 
-The following example depicts the code to provide spacing between home and pan button in the AppBar.
+The following example depicts the code to provide spacing between the home and pan buttons in the AppBar:
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -42,7 +42,7 @@ The following example depicts the code to provide spacing between home and pan b
 
 [AppBarSeparator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AppBarSeparator.html) shows a vertical line to visually group or separate the AppBar contents.
 
-The following example depicts the code to provide vertical line between group of buttons in the AppBar.
+The following example depicts the code to provide a vertical line between a group of buttons in the AppBar.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -81,7 +81,7 @@ The following example depicts the code to provide vertical line between group of
 
 ## Media Query
 
-Media Query is used to adjust the AppBar for different screen sizes. Resize the screen to observe the responsive layout of AppBar.
+Media Query is used to adjusting the AppBar for different screen sizes. Resize the screen to observe the responsive layout of the AppBar.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -132,7 +132,7 @@ Media Query is used to adjust the AppBar for different screen sizes. Resize the 
 
 ## Designing AppBar with Menu
 
-AppBar is rendered with Menu component in its AppBar header area. Menu component's styles are inherited from the AppBar component using the `e-inherit` CSS class.
+AppBar is rendered with a Menu component in its AppBar header area. Menu component's styles are inherited from the AppBar component using the `e-inherit` CSS class.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -174,7 +174,7 @@ AppBar is rendered with Menu component in its AppBar header area. Menu component
 
 ## Designing AppBar with Buttons
 
-AppBar is rendered with Button and DropDownButton component in its AppBar header area. Button and DropDownButton component's styles are inherited from the AppBar component using the `e-inherit` CSS class.
+The AppBar is rendered with a Button and DropDownButton component in its AppBar header area. Button and DropDownButton components’ styles are inherited from the AppBar component using the `e-inherit` CSS class.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -214,7 +214,7 @@ AppBar is rendered with Button and DropDownButton component in its AppBar header
 
 ## Designing AppBar with SideBar
 
-The AppBar is rendered with SideBar component below the AppBar. Click on the menu icon to expand/collapse the Sidebar. In the following sample, `IsOpen` property has been used to show or hide the Sidebar on AppBar button click.
+The AppBar is rendered with the SideBar component below the AppBar. Click on the menu icon to expand/collapse the Sidebar. In the following sample, the `IsOpen` property has been used to show or hide the Sidebar on the AppBar button click.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
