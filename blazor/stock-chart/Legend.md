@@ -9,11 +9,11 @@ documentation: ug
 
 # Legend in Blazor Stock Chart Component
 
-Legend provides information about the series rendered in the Stock chart. Legend can be added to a Stock chart by enabling the `visible` option in the `StockChartlegendSettings`.
+Legend provides information about the series rendered in the Stock Chart. Legend can be added to a Stock Chart by enabling the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_Visible) option in the [StockChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_Visible).
 
 ## Enable Legend
 
-To display the legend for the Stockchart, set the `visible` property in `StockChartlegendSettings` to true.
+To display the legend for the Stock Chart, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_Visible) property in [StockChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_Visible) to **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -27,7 +27,7 @@ To display the legend for the Stockchart, set the `visible` property in `StockCh
   
 
 @code {
-     public class ChartData
+    public class ChartData
     {
         public DateTime Date;
         public Double Open;
@@ -48,12 +48,12 @@ To display the legend for the Stockchart, set the `visible` property in `StockCh
 }
 ```
 
-![Blazor stock chart with legend](images/blazor-stock-chart-legend.png)
+![Blazor Stock Chart with legend](images/blazor-stock-chart-legend.png)
 
 
-## Position and Alignment
+## Legend Position
 
-By using the `position` property, legend can be placed at `Left`, `Right`, `Top`, `Bottom` or `Custom` of the Stock Chart. The legend is positioned at the bottom of the Stock Chart, by default.
+By using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_Position) property, legend can be placed at **Left**, **Right**, **Top**, **Bottom** or **Custom** of the Stock Chart. The legend is positioned at the bottom of the Stock Chart, by default.
 
 ```cshtml
 
@@ -68,7 +68,7 @@ By using the `position` property, legend can be placed at `Left`, `Right`, `Top`
   
 
 @code {
-     public class ChartData
+    public class ChartData
     {
         public DateTime Date;
         public Double Open;
@@ -89,10 +89,9 @@ By using the `position` property, legend can be placed at `Left`, `Right`, `Top`
 }
 ```
 
-![Blazor stock chart with legend](images/blazor-stock-chart-legend-position.png)
+![Blazor Stock Chart with legend position](images/blazor-stock-chart-legend-position.png)
 
-
-The `Custom` position helps to position the legend anywhere in the Stockchart using x and y coordinates.
+The **Custom** position helps to position the legend anywhere in the Stock Chart using x and y coordinates.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -109,7 +108,7 @@ The `Custom` position helps to position the legend anywhere in the Stockchart us
   
 
 @code {
-     public class ChartData
+    public class ChartData
     {
         public DateTime Date;
         public Double Open;
@@ -130,11 +129,11 @@ The `Custom` position helps to position the legend anywhere in the Stockchart us
 }
 ```
 
-![Blazor stock chart with legend location](images/blazor-stock-chart-legend-location.png)
+![Blazor Stock Chart with custom legend position](images/blazor-stock-chart-legend-location.png)
 
-## Legend Reverse
+## Reverse Legend
 
-You can reverse the order of the legend items by using the `Reverse` property. By default, legend for the first series in the collection will be placed first.
+You can reverse the order of the legend items by using the [Reversed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_Reversed) property. By default, legend for the first series in the collection will be placed first.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -151,7 +150,7 @@ You can reverse the order of the legend items by using the `Reverse` property. B
   
 
 @code {
-     public class ChartData
+    public class ChartData
     {
         public DateTime Date;
         public Double Open;
@@ -172,11 +171,11 @@ You can reverse the order of the legend items by using the `Reverse` property. B
 }
 ```
 
-![Blazor stock chart with legend reversed](images/blazor-stock-chart-legend-reversed.png)
+![Blazor Stock Chart with legend reversed](images/blazor-stock-chart-legend-reversed.png)
 
 ## Legend Alignment
 
-Using the `Alignment` property, place the legend in `Centre`, `Far`, or `Near` alignment.
+Using the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_Alignment) property, place the legend in **Centre**, **Far**, or **Near** alignment.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -192,7 +191,7 @@ Using the `Alignment` property, place the legend in `Centre`, `Far`, or `Near` a
   
 
 @code {
-     public class ChartData
+    public class ChartData
     {
         public DateTime Date;
         public Double Open;
@@ -213,13 +212,13 @@ Using the `Alignment` property, place the legend in `Centre`, `Far`, or `Near` a
 }
 ```
 
-![Blazor stock chart with legend Alignment](images/blazor-stock-chart-legend-alignment.png)
+![Blazor Stock Chart with legend alignment](images/blazor-stock-chart-legend-alignment.png)
 
-## Legend customization
+## Legend Customization
 
 ### Legend Shape
 
-The `LegendShape` property in the `Series` can be used to change the shape of the legend icon. The default icon shape for legends is `SeriesType`.
+The [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_LegendShape) property in the [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#properties) can be used to change the shape of the legend icon. The default icon shape for legends is **SeriesType**.
 
 
 ```cshtml
@@ -235,7 +234,7 @@ The `LegendShape` property in the `Series` can be used to change the shape of th
   
 
 @code {
-     public class ChartData
+    public class ChartData
     {
         public DateTime Date;
         public Double Open;
@@ -256,11 +255,11 @@ The `LegendShape` property in the `Series` can be used to change the shape of th
 }
 ```
 
-![Blazor stock chart with legend shape](images/blazor-stock-chart-legend-shape.png)
+![Blazor Stock Chart with legend shape](images/blazor-stock-chart-legend-shape.png)
 
 ### Legend Size
 
-When the legend is placed on the top or bottom of the Stockchart, it takes up 20% - 25% of the StockChart's height, and 20% - 25% of the StockChart's width when it is positioned on the left or right side of the StockChart. So, the `Width` and `Height` properties can be used to adjust the default legend size.
+When the legend is placed on the top or bottom of the Stock Chart, it takes up 20% - 25% of the Stock Chart's height, and 20% - 25% of the Stock Chart's width when it is positioned on the left or right side of the Stock Chart. So, the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_Height) properties can be used to adjust the default legend size.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -277,7 +276,7 @@ When the legend is placed on the top or bottom of the Stockchart, it takes up 20
   
 
 @code {
-     public class ChartData
+    public class ChartData
     {
         public DateTime Date;
         public Double Open;
@@ -298,11 +297,11 @@ When the legend is placed on the top or bottom of the Stockchart, it takes up 20
 }
 ```
 
-![Blazor stock chart with legend size](images/blazor-stock-chart-legend-size.png)
+![Blazor Stock Chart with legend size](images/blazor-stock-chart-legend-size.png)
 
 ### Legend Shape Size
 
-The `ShapeHeight` and `ShapeWidth` properties can be used to adjust the dimensions of the legend shape.
+The [ShapeHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_ShapeHeight) and [ShapeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_ShapeWidth) properties can be used to adjust the dimensions of the legend shape.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -317,7 +316,7 @@ The `ShapeHeight` and `ShapeWidth` properties can be used to adjust the dimensio
   
 
 @code {
-     public class ChartData
+    public class ChartData
     {
         public DateTime Date;
         public Double Open;
@@ -338,18 +337,18 @@ The `ShapeHeight` and `ShapeWidth` properties can be used to adjust the dimensio
 }
 ```
 
-![Blazor stock chart with legend size and shape](images/blazor-stock-chart-legend-size-shape.png)
+![Blazor Stock Chart with legend shape size](images/blazor-stock-chart-legend-size-shape.png)
 
 
 ### Legend Item Padding
 
-The `ItemPadding` property can be used to adjust the space between the legend items.
+The [ItemPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_ItemPadding) property can be used to adjust the space between the legend items.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
 
         <SfStockChart Title="AAPL Stock Price">
-           <StockChartLegendSettings Visible="true" >
+           <StockChartLegendSettings Visible="true" ItemPadding="30">
             </StockChartLegendSettings>
            <StockChartSeriesCollection>
                 <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Apple"></StockChartSeries>
@@ -359,7 +358,7 @@ The `ItemPadding` property can be used to adjust the space between the legend it
   
 
 @code {
-     public class ChartData
+    public class ChartData
     {
         public DateTime Date;
         public Double Open;
@@ -380,7 +379,7 @@ The `ItemPadding` property can be used to adjust the space between the legend it
 }
 ```
 
-![Blazor stock chart with legend item padding](images/Blazor-stock-chart-legend-itemPadding.png)
+![Blazor Stock Chart with legend item padding](images/Blazor-stock-chart-legend-itemPadding.png)
 
 ### Legend Paging
 
@@ -401,7 +400,7 @@ When the legend items exceed legend bounds, paging will be enabled by default. E
   
 
 @code {
-     public class ChartData
+    public class ChartData
     {
         public DateTime Date;
         public Double Open;
@@ -422,12 +421,12 @@ When the legend items exceed legend bounds, paging will be enabled by default. E
 }
 ```
 
-![Blazor stock chart with legend paging](images/blazor-stock-chart-legend-paging.png)
+![Blazor Stock Chart with legend paging](images/blazor-stock-chart-legend-paging.png)
 
 
 ### Legend Text Wrap
 
-When the legend text exceeds the container, the text can be wrapped by using `TextWrap` Property. End user can also wrap the legend text based on the `MaximumLabelWidth` property.
+When the legend text exceeds the container, the text can be wrapped by using [TextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_TextWrap) property. End user can also wrap the legend text based on the [MaxLabelWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_MaxLabelWidth) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -444,7 +443,7 @@ When the legend text exceeds the container, the text can be wrapped by using `Te
   
 
 @code {
-     public class ChartData
+    public class ChartData
     {
         public DateTime Date;
         public Double Open;
@@ -465,11 +464,11 @@ When the legend text exceeds the container, the text can be wrapped by using `Te
 }
 ```
 
-![Blazor stock chart with legend text wrap](images/blazor-stock-chart-legend-text-wrap.png)
+![Blazor Stock Chart with legend text wrap](images/blazor-stock-chart-legend-text-wrap.png)
 
 ## Series selection based on legend
 
-By default, when you click on the legend item, the appropriate series visibility is collapsed. On the other hand, `ToggleVisibility` property is used to disable such functionality.
+By default, when you click on the legend item, the appropriate series visibility is collapsed. On the other hand, [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartLegendSettings.html#Syncfusion_Blazor_Charts_StockChartLegendSettings_ToggleVisibility) property is used to disable such functionality.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -486,7 +485,7 @@ By default, when you click on the legend item, the appropriate series visibility
   
 
 @code {
-     public class ChartData
+    public class ChartData
     {
         public DateTime Date;
         public Double Open;
@@ -507,11 +506,11 @@ By default, when you click on the legend item, the appropriate series visibility
 }
 ```
 
-![Blazor stock chart with selection mode](images/blazor-stock-chart-selection-mode.png)
+![Blazor Stock Chart with selection mode](images/blazor-stock-chart-selection-mode.png)
 
 ## Hiding legend item
 
-The series `Name` will be displayed as the legend text by default. One can skip the legend for particular series by providing an empty string to the series `Name` property.
+The series [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Name) will be displayed as the legend text by default. You can skip the legend for particular series by providing an empty string to the series [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Name) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -528,7 +527,7 @@ The series `Name` will be displayed as the legend text by default. One can skip 
   
 
 @code {
-     public class ChartData
+    public class ChartData
     {
         public DateTime Date;
         public Double Open;
@@ -549,4 +548,4 @@ The series `Name` will be displayed as the legend text by default. One can skip 
 }
 ```
 
-![Blazor stock chart with hiding legend](images/blazor-stock-chart-hidding-legend.png)
+![Blazor Stock Chart hiding legend item](images/blazor-stock-chart-hidding-legend.png)
