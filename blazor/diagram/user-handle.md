@@ -191,25 +191,24 @@ The following code explains how to customize the appearance of the user handle.
 
 ![Customizing Appearance of Userhandle in Blazor Diagram](images/blazor-diagram-custom-user-handle-appearance.png)
 
-## VisibleTarget 
-The VisibleTarget are used to show or hide the user handle specifically from node or connector.
+### Change the visibletarget of the userhandle
+The VisibleTarget property is used to prevent the rendering of the userhandle in specific nodes and connectors.
 
 | VisibleTarget | Node | Connector | Description |
 | -------- | -------- | -------- |-------- |
-|Node|![VisibilityMode set as Node](Images/VNode.png)|![VisibilityMode set as Node](Images/VConnector.png)|When VisibleTarget set as Node Userhandle only show node not connector. |
-|Connector|![VisibilityMode set as connector](Images/MNode.png)|![VisibilityMode set as connector](Images/MConnector.png)|When VisibleTarget set as Connector Userhandle only show Connector not node. |
+|Node|![VisibleTarget set as Node](Images/blazor-diagram-user-handle-visible-target-node.png)|![VisibleTarget set as Node](Images/blazor-diagram-user-handle-visible-target-node1.png)|When visibletarget set as node,userhandle only render for nodes not for connectors. |
+|Connector|![VisibleTarget set as connector](Images/blazor-diagram-user-handle-visible-target-connector1.png)|![VisibleTarget set as connector](Images/blazor-diagram-user-handle-visible-target-connector.png)|When VisibleTarget set as connector, Userhandle only render for Connector not for nodes. |
+|Both|![VisibleTarget set as Both](Images/blazor-diagram-user-handle-visible-target-node.png)|![VisibleTarget set as Both](Images/blazor-diagram-user-handle-visible-target-connector.png)|When VisibleTarget set as Both, Userhandle  render both nodes and connectors |
 
-The following code example shows how to change the VisibleTarget in node and connector.
+The following code example shows how to change the visibletarget in Userhandle.
 ```chtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="@Diagram" Width="1200px" Height="600px" Nodes="@nodes"  GetCustomTool="@tools" GetCustomCursor="@cursor" Connectors="@connectors" 
-    SelectionSettings="@SelectedModel"> 
-  
+<SfDiagramComponent @ref="@Diagram" Width="1200px" Height="600px" Nodes="@nodes"  GetCustomTool="@tools" GetCustomCursor="@cursor" Connectors="@connectors" SelectionSettings="@SelectedModel"> 
 </SfDiagramComponent>
-  <input type="button" value="VisibilityNode" @onclick="VisibilityNode"/>
-  <input type="button" value="VisibilityConnector" @onclick="VisibilityConnector"/>
-  <input type="button" value="VisibilityBoth" @onclick="VisibilityBoth"/>
+<input type="button" value="VisibilityNode" @onclick="VisibilityNode"/>
+<input type="button" value="VisibilityConnector" @onclick="VisibilityConnector"/>
+<input type="button" value="VisibilityBoth" @onclick="VisibilityBoth"/>
   
 @code
 {
@@ -314,7 +313,6 @@ The following code example shows how to change the VisibleTarget in node and con
             sfDiagram.Paste();
             ObservableCollection<IDiagramObject> obj = new ObservableCollection<IDiagramObject>() { sfDiagram.Nodes[sfDiagram.Nodes.Count - 1] as IDiagramObject };
             sfDiagram.Select(obj);
-
             base.OnMouseDown(args);
             this.InAction = true;
         }
@@ -351,7 +349,7 @@ The following code example shows how to change the VisibleTarget in node and con
                 BorderWidth = 3,
         };
         UserHandle changeCursor = new UserHandle()
-            {
+        {
                 Name = "changeCursor",
                 Offset = 0.5,
                 Source = "https://www.w3schools.com/images/w3schools_green.jpg",
@@ -365,8 +363,6 @@ The following code example shows how to change the VisibleTarget in node and con
                 BorderWidth = 3,
         };
 
-
-        //Add user handle to the collection.
         UserHandles = new DiagramObjectCollection<UserHandle>()
         {
             cloneHandle,nodeDelete,changeCursor
@@ -430,7 +426,7 @@ The following code example shows how to change the VisibleTarget in node and con
     }
 }
 ```
-![VisibleTarget](Images/VisibleTarget.gif)
+![VisibleTarget](Images/blazor-diagram-user-handle-visible-target.gif)
 ## Fixed user handles
 
 The [FixedUserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html) is used to add some frequently used commands around the node and connector even without selecting it.
