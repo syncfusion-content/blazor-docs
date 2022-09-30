@@ -64,7 +64,7 @@ The `PrintAsync` method can be used to print a rendered chart directly from the 
 
 ### Print - Multiple Charts
 
-Again, the 'PrintAsync' method can be used to print all of the charts on a page by passing the element reference of the parent for all of the charts.
+Again, the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_PrintAsync_Microsoft_AspNetCore_Components_ElementReference_) method can be used to print all of the charts on a page by passing the element reference of the parent for all of the charts.
 
 ```cshtml
 
@@ -232,8 +232,8 @@ Again, the 'PrintAsync' method can be used to print all of the charts on a page 
 
 ```
 
-![Blazor Print all our charts](images/getting-started/blazor-chart-print-all-charts.png)
-![Blazor Print all our charts](images/getting-started/blazor-chart-print-all-charts2.png)
+![Blazor Chart - Print Multiple Charts](images/getting-started/blazor-chart-print-all-charts.png)
+![Blazor Chart - Print Multiple Charts](images/getting-started/blazor-chart-print-all-charts2.png)
 
 ## Export
 
