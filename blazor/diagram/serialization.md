@@ -31,7 +31,7 @@ string data = Diagram.SaveDiagram();
 
 ## Load the diagram from string
 
-The [diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) is loaded from the serialized string data by the [LoadDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_LoadDiagram_System_String_) method. The following code illustrates how to load the diagram from serialized string data.
+The [diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) is loaded from the serialized string data by the [LoadDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_LoadDiagram_System_String_System_Boolean_) method. The following code illustrates how to load the diagram from serialized string data.
 
 ```cshtml
 SfDiagramComponent Diagram;
@@ -41,12 +41,9 @@ string data = Diagram.SaveDiagram();
 await Diagram.LoadDiagram(data);
 ```
 
-## Load the SfDiagramComponent from SfDiagram string
+## Load the SfDiagram JSON data string using SfDiagramComponent
 
-The [LoadDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_LoadDiagram_System_String_) method loads the [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) from the serialized text data of the [SfDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html).
-
-* The data parameter is used to provide the serialized string of the [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) or [SfDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html)
-* If the Json data is a [SfDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html) string, then the isClassicData parameter should be true; otherwise, it should be false. The default value of the isClassicData is false.
+You can load the [SfDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html) serialized JSON data string into [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) using [LoadDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_LoadDiagram_System_String_System_Boolean_) method. When you load SfDiagram serialized string, then the isClassicData parameter should be set to true. The default value of the isClassicData is false.
 
 The following code illustrates how to load the SfDiagramComponent from SfDiagram serialized string data.
 
