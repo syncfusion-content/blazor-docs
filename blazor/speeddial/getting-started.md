@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with Blazor AppBar Component | Syncfusion
-description: Checkout and learn about getting started with Blazor AppBar component in Blazor Server App and Blazor WebAssembly App.
+title: Getting Started with Blazor SpeedDial Component | Syncfusion
+description: Checkout and learn about getting started with Blazor SpeedDial component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
-control: AppBar
+control: SpeedDial
 documentation: ug
 ---
 
-# Getting Started with Blazor AppBar Component
+# Getting Started with Blazor SpeedDial Component
 
-This section briefly explains about how to include Blazor AppBar component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor SpeedDial](https://www.syncfusion.com/blazor-components/blazor-speeddial) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 ## Prerequisites
 
@@ -23,11 +23,12 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
 
-## Install Syncfusion Blazor NuGet in the App
+## Install Syncfusion Blazor Buttons NuGet in the App
 
 Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages).
 
-To add Blazor AppBar component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and then install it.
+
+To add Blazor SpeedDial component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons) and then install it.
 
 ## Register Syncfusion Blazor Service
 
@@ -41,9 +42,9 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html?#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
+Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
-> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to `true`. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to true, and this property is obsolete.
+> From 2022 Vol1 (20.1) version - The default value of `IgnoreScriptIsolation` is changed as `true`, so, you don’t have to set `IgnoreScriptIsolation` property explicitly to refer scripts externally.
 
 ### Blazor Server App
 
@@ -63,7 +64,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSyncfusionBlazor();
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
 
 var app = builder.Build();
 ....
@@ -83,7 +84,7 @@ namespace BlazorApplication
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSyncfusionBlazor();
+            services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
         }
         ...
     }
@@ -109,7 +110,7 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddScoped(serviceProvider => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-builder.Services.AddSyncfusionBlazor();
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
 await builder.Build().RunAsync();
 ....
 
@@ -126,7 +127,7 @@ namespace WebApplication1
         public static async Task Main(string[] args)
         {
             ....
-            builder.Services.AddSyncfusionBlazor();
+            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
             await builder.Build().RunAsync();
         }
     }
@@ -135,13 +136,13 @@ namespace WebApplication1
 {% endhighlight %}
 {% endtabs %}
 
-## Add Style Sheet
+## Add style sheet
 
 Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/appearance/themes#enable-static-web-assets-usage) topic to use static assets in your project.
 
-To add theme to the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
+To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
 
-> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) single NuGet, you don't have to refer [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet. Since style sheets already inside the assets of `Syncfusion.Blazor` NuGet.
+> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) single NuGet, you don't have to refer [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet. Since style sheets already inside the assets of `Syncfusion.Blazor` NuGet. 
 
 ### Blazor Server App
 
@@ -246,39 +247,120 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
-## Add Blazor AppBar component
+## Add Blazor SpeedDial component
 
-* Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Navigations** namespace.
+* Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Buttons** namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Imports.razor" %}
 
 @using Syncfusion.Blazor
-@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Buttons
 
 {% endhighlight %}
 {% endtabs %}
 
-* Now, add the Syncfusion Blazor AppBar component in razor file. Here, the AppBar component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+* Now, add the Syncfusion Blazor SpeedDial component in razor file. Here, the SpeedDial component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
-```cshtml
-@using Syncfusion.Blazor.Navigations
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor.Buttons
 
-<div class="control-container">
-    <SfAppBar ColorMode="AppBarColor.Primary">
-        <SfButton CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
-        <span class="regular">Blazor AppBar</span>
-        <AppBarSpacer></AppBarSpacer>
-        <SfButton CssClass="e-inherit" Content="FREE TRIAL"></SfButton>
-    </SfAppBar>
+<div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
+    <SfSpeedDial Target="#target" Content="Edit">
+        <SpeedDialItems>
+            <SpeedDialItem Text="Cut"/>
+            <SpeedDialItem Text="Copy"/>
+            <SpeedDialItem Text="Paste"/>
+        </SpeedDialItems>
+    </SfSpeedDial>
+</div>
+{% endhighlight %}
+{% endtabs %}
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor SpeedDial` component will be rendered in the default web browser.
+
+![Blazor SpeedDial Component](./images/blazor-speeddial-component.png)
+
+## Positioning
+
+The speed dial can be positioned using the [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Position) property. The speed dial is positioned based on the [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Target), if target is defined else positioned based on the browser viewport. The position values are TopLeft, TopCenter, TopRight, MiddleLeft, MiddleCenter, MiddleRight, BottomLeft, BottomCenter and BottomRight.
+
+{% tabs %}
+{% highlight razor %}
+
+<div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
+    <SfSpeedDial Target="#target" Position="FabPosition.BottomCenter" Content="Edit">
+        <SpeedDialItems>
+            <SpeedDialItem IconCss="e-icons e-cut" Text="Cut"/>
+            <SpeedDialItem IconCss="e-icons e-copy" Text="Copy"/>
+            <SpeedDialItem IconCss="e-icons e-paste" Text="Paste"/>
+        </SpeedDialItems>
+    </SfSpeedDial>
 </div>
 
-<style>
-    .control-container .e-btn.e-inherit {
-        margin: 0 3px;
-    }
-</style>
-```
+{% endhighlight %}
+{% endtabs %}
 
-![Blazor AppBar Component](images/getting_started.png)
+![Blazor SpeedDial Component](./images/blazor-speeddial-position-sample.png)
+
+## Display Modes
+
+You can use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Mode) property to either display the menu in linear order like a list or like a radial menu in radial (circular) direction.
+
+{% tabs %}
+{% highlight razor %}
+
+<div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
+    <SfSpeedDial Target="#target" Position="FabPosition.BottomLeft" Mode="SpeedDialMode.Radial" OpenIconCss="e-icons e-edit">
+        <SpeedDialItems>
+            <SpeedDialItem IconCss="e-icons e-cut" Text="Cut"/>
+            <SpeedDialItem IconCss="e-icons e-copy" Text="Copy"/>
+            <SpeedDialItem IconCss="e-icons e-paste" Text="Paste"/>
+        </SpeedDialItems>
+    </SfSpeedDial>
+    <SfSpeedDial Target="#target" Position="FabPosition.BottomRight" Mode="SpeedDialMode.Linear" OpenIconCss="e-icons e-edit">
+        <SpeedDialItems>
+            <SpeedDialItem IconCss="e-icons e-cut" Text="Cut"/>
+            <SpeedDialItem IconCss="e-icons e-copy" Text="Copy"/>
+            <SpeedDialItem IconCss="e-icons e-paste" Text="Paste"/>
+        </SpeedDialItems>
+    </SfSpeedDial>
+</div>
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor SpeedDial Component](./images/blazor-speeddial-mode-linear-sample.png)
+![Blazor SpeedDial Component](./images/blazor-speeddial-mode-radial-sample.png)
+
+
+## Action Item click
+
+The speed dial control triggers the [`ItemClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemClicked) event with [`SpeedDialItemEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItemEventArgs.html) argument when an action item is clicked.
+You can use this event to perform the required action.
+
+{% tabs %}
+{% highlight razor %}
+
+<div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
+    <SfSpeedDial Target="#target" OpenIconCss="e-icons e-edit" ItemClicked="ItemEventClick">
+        <SpeedDialItems>
+            <SpeedDialItem IconCss="e-icons e-cut" Text="Cut"/>
+            <SpeedDialItem IconCss="e-icons e-copy" Text="Copy"/>
+            <SpeedDialItem IconCss="e-icons e-paste" Text="Paste"/>
+        </SpeedDialItems>        
+    </SfSpeedDial>
+</div>
+
+@code{
+    public void ItemEventClick(SpeedDialItemEventArgs args)
+        {
+         // Here, you can call your desired action.        
+        }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor SpeedDial Component](./images/blazor-speeddial-event-sample.png)
