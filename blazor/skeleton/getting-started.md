@@ -267,7 +267,8 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 @using Syncfusion.Blazor.Notifications
 
-<SfSkeleton Height="20px" Width="100px"></SfSkeleton>
+<SfSkeleton Height="50px" Width="200px"></SfSkeleton><br/>
+<SfSkeleton Height="50px" Width="100px"></SfSkeleton>
 
 {% endhighlight %}
 {% endtabs %}
@@ -302,5 +303,7 @@ The [`shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notificati
 
 ![Blazor Skeleton Component](./images/blazor-skeleton-shape-sample.png)
 
+[View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/).
 
+N> You can also explore our [Blazor Skeleton example](https://blazor.syncfusion.com/demos/speeddial/defaultfunctionalities?) that shows how to render and configure the skeleton.
 
