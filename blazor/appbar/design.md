@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Design Components with Blazor AppBar Component | Syncfusion
-description: Check out and learn about Design Components with the Blazor AppBar component in the Blazor Server App and the Blazor WebAssembly App.
+title: Design User Interface with Blazor AppBar Component | Syncfusion
+description: Check out and learn about Design User Interface with the Blazor AppBar component in the Blazor Server App and the Blazor WebAssembly App.
 platform: Blazor
 control: AppBar
 documentation: ug
 ---
 
-# Design Components with Blazor AppBar Component
+# Design User Interface with Blazor AppBar Component
 
 ## Spacer
 
@@ -23,17 +23,11 @@ The following example depicts the code to provide spacing between the home and p
     <SfAppBar ColorMode="AppBarColor.Primary">
         <SfButton CssClass="e-inherit" IconCss="e-icons e-home"></SfButton>
         <AppBarSpacer></AppBarSpacer>
+         <SfButton CssClass="e-inherit" IconCss="e-icons e-cut"></SfButton>
+        <AppBarSpacer></AppBarSpacer>
         <SfButton CssClass="e-inherit" IconCss="e-icons e-pan"></SfButton>
     </SfAppBar>
 </div>
-
-<style>
-    .control-container {
-        height: 300px;
-        margin: 0 auto;
-        width: 500px;
-    }
-</style>
 ```
 
 ![Blazor AppBar with Spacer](./images/spacer_appbar.png)
@@ -66,11 +60,6 @@ The following example depicts the code to provide a vertical line between a grou
 </div>
 
 <style>
-    .control-container {
-        height: 300px;
-        margin: 0 auto;
-        width: 500px;
-    }
     .control-container .e-btn.e-inherit {
         margin: 0 3px;
     }
@@ -101,11 +90,6 @@ Media Query is used to adjusting the AppBar for different screen sizes. Resize t
 </div>
 
 <style>
-    .control-container {
-        height: 300px;
-        margin: 0 auto;
-        width: 500px;
-    }
     .control-container .e-btn.e-inherit {
         margin: 0 3px;
     }
@@ -153,17 +137,34 @@ AppBar is rendered with a Menu component in its AppBar header area. Menu compone
                 </MenuItem>
             </MenuItems>
         </SfMenu>
+        <SfMenu CssClass="e-inherit" TValue="MenuItem">
+            <MenuItems>
+                <MenuItem Text="Products">
+                    <MenuItems>
+                       <MenuItem Text="Developer"></MenuItem>
+                       <MenuItem Text="Analytics"></MenuItem>
+                       <MenuItem Text="Reporting"></MenuItem>
+                       <MenuItem Text="Help Desk"></MenuItem>
+                    </MenuItems>
+                </MenuItem>
+            </MenuItems>
+        </SfMenu>
+        <SfMenu CssClass="e-inherit" TValue="MenuItem">
+            <MenuItems>
+                <MenuItem Text="About Us"></MenuItem>
+            </MenuItems>
+        </SfMenu>
+        <SfMenu CssClass="e-inherit" TValue="MenuItem">
+            <MenuItems>
+                <MenuItem Text="Carrers"></MenuItem>
+            </MenuItems>
+        </SfMenu>
         <AppBarSpacer></AppBarSpacer>
         <SfButton CssClass="e-inherit"Content="Login"></SfButton>
     </SfAppBar>
 </div>
 
 <style>
-    .control-container {
-        height: 300px;
-        margin: 0 auto;
-        width: 500px;
-    }
     .control-container .e-btn.e-inherit {
         margin: 0 3px;
     }
@@ -199,11 +200,6 @@ The AppBar is rendered with a Button and DropDownButton component in its AppBar 
 </div>
 
 <style>
-    .control-container {
-        height: 300px;
-        margin: 0 auto;
-        width: 500px;
-    }
     .control-container .e-btn.e-inherit {
         margin: 0 3px;
     }
@@ -230,7 +226,7 @@ The AppBar is rendered with the SideBar component below the AppBar. Click on the
             </div>
         </SfAppBar>
     </div>
-    <SfSidebar HtmlAttributes="@HtmlAttribute" Width="290px" Target=".main-content" MediaQuery="(min-width:600px)" @bind-IsOpen="SidebarToggle">
+    <SfSidebar HtmlAttributes="@HtmlAttribute" Width="210px" Target=".main-content" MediaQuery="(min-width:600px)" @bind-IsOpen="SidebarToggle">
         <ChildContent>
             <div class="main-menu">
                 <div class="table-content">
@@ -295,11 +291,6 @@ The AppBar is rendered with the SideBar component below the AppBar. Click on the
 }
 
 <style>
-    .control-container {
-        height: 300px;
-        margin: 0 auto;
-        width: 500px;
-    }
     .e-appbar .e-folder {
         margin:0 5px;
     }

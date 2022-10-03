@@ -29,7 +29,7 @@ The top AppBar is the default one in which it positions the AppBar at the top of
         <AppBarSpacer></AppBarSpacer>
         <SfButton CssClass="e-inherit" Content="FREE TRIAL"></SfButton>
     </SfAppBar>
-    <div class="appbar-content">
+    <div class="appbar-content" style="font-size: 12px">
         <p>
             The AppBar also known as action bar or nav bar displays information and actions related to the current application screen. It is used to show branding, screen titles, navigation, and actions. The control supports height mode, color mode, positioning, and more.
         </p>
@@ -74,7 +74,7 @@ This position can be set to the AppBar by setting `AppBarPosition.Bottom` to the
         <AppBarSpacer></AppBarSpacer>
         <SfButton CssClass="e-inherit" Content="FREE TRIAL"></SfButton>
     </SfAppBar>
-    <div class="appbar-content">
+    <div class="appbar-content" style="font-size: 12px">
         <p>
             The AppBar also known as action bar or nav bar displays information and actions related to the current application screen. It is used to show branding, screen titles, navigation, and actions. The control supports height mode, color mode, positioning, and more.
         </p>
@@ -119,7 +119,7 @@ This position can be set to the AppBar by setting `true` to the property [IsStic
         <AppBarSpacer></AppBarSpacer>
         <SfButton CssClass="e-inherit" Content="FREE TRIAL"></SfButton>
     </SfAppBar>
-    <div class="appbar-content">
+    <div class="appbar-content" style="font-size: 12px">
         <p>
             The AppBar also known as action bar or nav bar displays information and actions related to the current application screen. It is used to show branding, screen titles, navigation, and actions. The control supports height mode, color mode, positioning, and more.
         </p>

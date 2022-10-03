@@ -35,11 +35,6 @@ This mode is the default one in which the AppBar is displayed with the default h
 </div>
 
 <style>
-    .control-container {
-        height: 300px;
-        margin: 0 auto;
-        width: 500px;
-    }
     .control-container .e-btn.e-inherit {
         margin: 0 3px;
     }
@@ -57,7 +52,7 @@ This height mode can be set to the AppBar by setting `AppBarMode.Prominent` to t
 @using Syncfusion.Blazor.Buttons
 
 <div class="control-container">
-    <SfAppBar ColorMode="AppBarColor.Primary" Mode="AppBarMode.Prominent">
+    <SfAppBar ColorMode="AppBarColor.Primary" Mode="AppBarMode.Prominent" CssClass="prominent-appbar" >
         <SfButton CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
         <span class="prominent">AppBar Component with Prominent mode</span>
         <AppBarSpacer></AppBarSpacer>
@@ -66,16 +61,32 @@ This height mode can be set to the AppBar by setting `AppBarMode.Prominent` to t
 </div>
 
 <style>
-    .control-container {
-        height: 300px;
-        margin: 0 auto;
-        width: 500px;
-    }
     .control-container .e-appbar .prominent {
-        margin:0 5px;
-        align-self: flex-end;
+        align-self: center;
         white-space: break-spaces;
         text-align: inherit;
+        font-size: 35px;
+        line-height: 50px;
+    }
+    .control-container .e-appbar.prominent-appbar {
+        background-image: url("https://blazor.syncfusion.com/demos/_content/BlazorServerCommon_NET6/images/appbar/prominent.png");
+        background-size: 100% 400px;
+        color: #ffffff;
+        background-repeat: no-repeat;
+        height: 400px;
+    }
+    .control-container .prominent-appbar .e-inherit.e-btn {
+        background: transparent;
+    }
+    .control-container .prominent-appbar .e-inherit.e-btn:hover,
+    .control-container .prominent-appbar .e-inherit.e-btn:focus,
+    .control-container .prominent-appbar .e-inherit.e-btn:active,
+    .control-container .prominent-appbar .e-inherit.e-btn.e-active,
+    .control-container .prominent-appbar .e-inherit.e-css.e-btn:hover,
+    .control-container .prominent-appbar .e-inherit.e-css.e-btn:focus
+    .control-container .prominent-appbar .e-inherit.e-css.e-btn:active
+    .control-container .prominent-appbar .e-inherit.e-css.e-btn.e-active {
+        background: rgba(255, 255, 255, .08);
     }
 </style>
 ```
@@ -100,11 +111,6 @@ This height mode can be set to the AppBar by setting `AppBarMode.Dense` to the p
 </div>
 
 <style>
-    .control-container {
-        height: 300px;
-        margin: 0 auto;
-        width: 500px;
-    }
     .control-container .e-btn.e-inherit {
         margin: 0 3px;
     }
@@ -132,20 +138,21 @@ This color mode is the default one in which the AppBar can be displayed with a l
 
 <div class="control-container">
     <SfAppBar>
-        <SfButton CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
+        <a href="https://www.syncfusion.com/blazor-components" target="_blank" rel="noopener" role="link" aria-label="Syncfusion blazor components">
+            <div class="syncfusion-logo"></div>
+         </a>
         <AppBarSpacer></AppBarSpacer>
         <SfButton IsPrimary=true Content="FREE TRIAL"></SfButton>
     </SfAppBar>
 </div>
 
 <style>
-    .control-container {
-        height: 300px;
-        margin: 0 auto;
-        width: 500px;
-    }
-    .control-container .e-btn.e-inherit {
-        margin: 0 3px;
+    .control-container .syncfusion-logo {
+        background: url(https://cdn.syncfusion.com/blazor/images/demos/syncfusion-logo.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 30px;
+        width: 150px;
     }
 </style>
 ```
@@ -222,20 +229,21 @@ This color mode can be set to the AppBar by setting `AppBarColor.Inherit` to the
 
 <div class="control-container">
     <SfAppBar ColorMode="AppBarColor.Inherit">
-        <SfButton CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
+         <a href="https://www.syncfusion.com/blazor-components" target="_blank" rel="noopener" role="link" aria-label="Syncfusion blazor components">
+            <div class="syncfusion-logo"></div>
+         </a>
         <AppBarSpacer></AppBarSpacer>
         <SfButton IsPrimary=true Content="FREE TRIAL"></SfButton>
     </SfAppBar>
 </div>
 
 <style>
-    .control-container {
-        height: 300px;
-        margin: 0 auto;
-        width: 500px;
-    }
-    .control-container .e-btn.e-inherit {
-        margin: 0 3px;
+    .control-container .syncfusion-logo {
+        background: url(https://cdn.syncfusion.com/blazor/images/demos/syncfusion-logo.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 30px;
+        width: 150px;
     }
 </style>
 ```

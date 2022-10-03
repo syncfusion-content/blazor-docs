@@ -33,18 +33,13 @@ CssClass is used for AppBar customization based on the custom class. In the exam
 
 <div class="control-container">
     <SfAppBar ColorMode="AppBarColor.Primary" CssClass="custom-appbar">
-       <SfButton CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
+       <SfButton CssClass="e-inherit" IconCss="e-icons e-home"></SfButton>
     </SfAppBar>
 </div>
 
 <style>
-    .control-container {
-        height: 300px;
-        margin: 0 auto;
-        width: 500px;
-    }
     .control-container .e-appbar.custom-appbar {
-        background: #adadb1;
+        background: #ff0000;
         color: #fff;
     }
 </style>
@@ -61,23 +56,8 @@ It can be used for additional inline attributes through the `@attributes` direct
 @using Syncfusion.Blazor.Buttons
 
 <div class="control-container">
-    <SfAppBar ColorMode="AppBarColor.Primary" @attributes="customAttribute">
+    <SfAppBar ColorMode="AppBarColor.Primary" aria-label="appbar">
        <SfButton CssClass="e-inherit" IconCss="e-icons e-home"></SfButton>
     </SfAppBar>
 </div>
-
-@code { 
-     Dictionary<string, object> customAttribute = new Dictionary<string, object>() 
-     { 
-         { "aria-label", "appbar" } 
-     }; 
-}
-
-<style>
-    .control-container {
-        height: 300px;
-        margin: 0 auto;
-        width: 500px;
-    }
-</style>
 ```

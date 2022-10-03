@@ -275,11 +275,6 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 </div>
 
 <style>
-    .control-container {
-        height: 300px;
-        margin: 0 auto;
-        width: 500px;
-    }
     .control-container .e-btn.e-inherit {
         margin: 0 3px;
     }
