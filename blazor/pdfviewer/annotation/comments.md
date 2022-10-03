@@ -111,7 +111,7 @@ The annotation comment and comment replies can be edited by the following ways:
 
 ### Show or hide the Comment panel
 
-The PDF Viewer control provides an option to show or hide the Comment panel by using the `IsCommentPanelOpen` property of the SfPdfViewerServer class.
+The PDF Viewer control provides an option to show or hide the Comment panel by using the `CommentPanelVisible` property of the SfPdfViewerServer class.
 
 The following code snippet explains how to show the Comment panel.
 
@@ -119,7 +119,7 @@ The following code snippet explains how to show the Comment panel.
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.PdfViewer
 
-<SfPdfViewerServer IsCommentPanelOpen="true" Width="1000" Height="700" DocumentPath="@documentPath">   
+<SfPdfViewerServer CommentPanelVisible="true" Width="1000" Height="700" DocumentPath="@documentPath">   
 </SfPdfViewerServer>
 
 @code
