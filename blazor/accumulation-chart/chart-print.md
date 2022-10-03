@@ -11,7 +11,7 @@ documentation: ug
 
 ## Print
 
-The `PrintAsync` method can be used to print a rendered chart directly from the browser.
+The `PrintAsync` method can be used to print rendered chart directly from the browser.
 
 ```cshtml 
 
