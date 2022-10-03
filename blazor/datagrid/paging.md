@@ -329,6 +329,75 @@ In the below sample, we have customized the Pager component in DataGrid control 
 
 > You can refer to our [Blazor Grid Pager Template](https://blazor.syncfusion.com/demos/datagrid/pager-template) online demo of Pager Template feature in Blazor DataGrid.
 
+## How to render Pager at the top of the Grid
+
+By default, the Pager component will be rendered at the bottom of the Grid when the [AllowPaging] property is enabled. To render the Pager component at the top of the Grid, the SfPager component is used.
+
+In the following sample, the SfPager component is rendered on top of the grid. Initially, using the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) property of the Pager, the data for the Grid component is bound to the current page. In the following code snippet, the `PageSize` is defined as "10" so that the first ten records from the data source of the Grid will be displayed on the current page using the Skip and Take values. Through the navigation of the pager items, you can view the records in the Grid page by page. This can be achieved by using the [ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_Click) event of the Pager. In the `ItemClick` event of the Pager, the SkipValue and TakeValue are calculated using the `PageSize` property and arguments of the `ItemClick` event (CurrentPage, PreviousPage). Based on these details, you can view the records in the Grid page by page.
+
+```cshtml
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Grids
+
+<SfPager @ref="Page" PageSize="@TakeValue" NumericItemsCount=4 TotalItemsCount="@count" ItemClick="Click">
+</SfPager>
+
+@{
+    var Data = Orders.Skip(SkipValue).Take(TakeValue).ToList();
+    <SfGrid @ref="Grid" DataSource="@Data" >
+        <GridColumns>
+            <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+            <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+            <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+            <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+            <GridColumn Field=@nameof(Order.ShippedDate) HeaderText=" Shipped Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        </GridColumns>
+    </SfGrid>
+}
+
+@code
+{
+    public int SkipValue;
+    public SfGrid<Order> Grid { get; set; }   
+    public int TakeValue = 10;
+    public List<Order> Orders { get; set; }
+    public int count { get; set; }
+    public SfPager Page { get; set; }
+
+    public void Click(PagerItemClickEventArgs args)
+    {
+        SkipValue = (args.CurrentPage * Page.PageSize) - Page.PageSize;
+        TakeValue = Page.PageSize;
+    }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 80).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+            ShippedDate = DateTime.Now.AddDays(x),
+        }).ToList();
+        count = Orders.Count;
+    }
+
+    public class Order 
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public DateTime? ShippedDate { get; set; }
+    }
+}
+
+```
+
+![Render Pager at top of Blazor DataGrid ](./images/render-pager-at-top-of-blazor-datagrid.png)
+
 ## See Also
 
 * [How to customize page size dropdown value of pager](https://www.syncfusion.com/forums/166711/how-to-customize-the-grid-page-size-dropdown)
