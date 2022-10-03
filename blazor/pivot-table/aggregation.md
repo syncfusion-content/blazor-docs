@@ -245,8 +245,8 @@ In the following example, action taken during aggregation type selection via dro
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 
-<SfPivotView TValue="ProductDetails">
-     <PivotViewDataSourceSettings DataSource="@data" ShowFieldList="true" ShowGroupingBar="true>
+<SfPivotView TValue="ProductDetails" ShowFieldList="true" ShowGroupingBar="true">
+     <PivotViewDataSourceSettings DataSource="@data">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -273,7 +273,6 @@ In the following example, action taken during aggregation type selection via dro
         data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
-
     // Triggers when the UI action begins.
     public void ActionBegin(PivotActionBeginEventArgs args)
     {
@@ -282,7 +281,6 @@ In the following example, action taken during aggregation type selection via dro
           args.Cancel=true;
         }       
     }
-
 }
 ```
 ### ActionComplete
@@ -293,7 +291,7 @@ The event [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 * [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_ActionName): It holds the name of the current action completed. For example, after completing the aggregation, the action name will be shown as **Field aggregated**.
 
-* [FieldInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_FieldInfo): It holds the selected value field information.
+* [FieldInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_FieldInfo): It holds the selected value field information.
 
 > Note: This option is applicable only when the field based UI actions are performed such as filtering, sorting, removing field from grouping bar, editing and aggregation type change.
 
@@ -302,7 +300,7 @@ The event [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
-     <PivotViewDataSourceSettings DataSource="@data" ShowFieldList="true" ShowGroupingBar="true>
+     <PivotViewDataSourceSettings DataSource="@data" ShowFieldList="true" ShowGroupingBar="true">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -319,7 +317,7 @@ The event [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.
             <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
-   <PivotViewEvents TValue="PivotProductDetails" OnActionComplete="ActionComplete"></PivotViewEvents>
+   <PivotViewEvents TValue="ProductDetails" OnActionComplete="ActionComplete"></PivotViewEvents>
 </SfPivotView>
 
 @code{
@@ -329,7 +327,6 @@ The event [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.
         data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
-
     // Triggers when the UI action is completed.
     public void ActionComplete(PivotActionCompleteEventArgs<ProductDetails> args)
     {
@@ -338,7 +335,6 @@ The event [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.
           // Your code here
         }       
     }
-
 }
 ```
 ### ActionFailure
@@ -353,7 +349,7 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails" AllowExcelExport="true" AllowPdfExport="true" Width="100%"  ShowToolbar="true" Toolbar="@toolbar" ShowGroupingBar="true" AllowCalculatedField="true"  AllowDrillThrough="true" AllowConditionalFormatting="true" AllowNumberFormatting="true" ShowFieldList="true" Height="350">
-     <PivotViewDataSourceSettings DataSource="@data" ShowFieldList="true" ShowGroupingBar="true>
+     <PivotViewDataSourceSettings DataSource="@data" ShowFieldList="true" ShowGroupingBar="true">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -392,7 +388,6 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
         data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
-
     // Triggers when the current UI action fails to achieve the desired result.
     public void ActionFailure(PivotActionFailureEventArgs args)
     {
@@ -401,7 +396,6 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
           // Your code here.
         }       
     }
-
 }
 ```
 

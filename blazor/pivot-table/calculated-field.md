@@ -366,9 +366,9 @@ The event [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 | Action | Action Name|
 |------|-------------|
-| Calculated field button | Open calculated field dialog|
-| Edit icon in calculated field | Edit calculated field|
-| Context menu in the tree view inside the calculated field dialog | Calculated field context menu|
+| [`Calculated field button`](./calculated-field/#Calculated-Field)| Open calculated field dialog|
+| [`Edit icon in calculated field`](./calculated-field/#Editing-through-the-field-list-and-the-grouping-bar)| Edit calculated field|
+| [`Context menu in the tree view inside the calculated field dialog`](./calculated-field/#Calculated-Field)| Calculated field context menu|
 
 * [FieldInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_FieldInfo): It holds the selected value field information.
 
@@ -435,11 +435,11 @@ The event [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 | Action | Action Name|
 |------|-------------|
-| Calculated field button | Calculated field applied|
-| Edit icon in calculated field | Calculated field edited|
+| [`Calculated field button`](./calculated-field/#Calculated-Field)| Calculated field applied|
+| [`Edit icon in calculated field`](./calculated-field/#Editing-through-the-field-list-and-the-grouping-bar)| Calculated field edited|
 
 
-* [FieldInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_FieldInfo): It holds the selected value field information.
+* [FieldInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_FieldInfo): It holds the selected value field information.
 
 > Note: This option is applicable only when the field based UI actions are performed such as filtering, sorting, removing field from grouping bar, editing and aggregation type change.
 
@@ -481,7 +481,6 @@ The event [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.
         data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
-
     // Triggers when the UI action completed.
     public void ActionComplete(PivotActionCompleteEventArgs<ProductDetails> args)
     {
@@ -490,7 +489,6 @@ The event [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.
           // Triggers when the calculated field is applied.
         }       
     }
-
 }
 ```
 ### ActionFailure
@@ -499,11 +497,12 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 * [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ActionName): It holds the name of the current action failed. The following are the UI actions and their names:
 
-| Action | Action Name |
+| Action | Action Name|
 |------|-------------|
-| Calculated field button | Open calculated field dialog|
-| Edit icon in calculated field | Edit calculated field|
-| Context menu in the tree view inside the calculated field dialog | Calculated field context menu|
+| [`Calculated field button`](./calculated-field/#Calculated-Field)| Open calculated field dialog|
+| [`Edit icon in calculated field`](./calculated-field/#Editing-through-the-field-list-and-the-grouping-bar)| Edit calculated field|
+| [`Context menu in the tree view inside the calculated field dialog`](./calculated-field/#Calculated-Field)| Calculated field context menu|
+
 
 * [ErrorInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ErrorInfo): It holds the error information of the current UI action.
 
@@ -555,7 +554,6 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
         data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
-
     // Triggers when the current UI action fails to achieve the desired result.
     public void ActionFailure(PivotActionFailureEventArgs args)
     {
@@ -564,7 +562,6 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
           // Your code here.
         }       
     }
-
 }
 ```
 > You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.

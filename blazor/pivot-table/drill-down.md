@@ -226,8 +226,8 @@ In the following example, drill down and drill up action can be restricted by se
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 
-<SfPivotView TValue="ProductDetails">
-     <PivotViewDataSourceSettings DataSource="@data" ShowFieldList="true" ShowGroupingBar="true>
+<SfPivotView TValue="ProductDetails" ShowFieldList="true" ShowGroupingBar="true">
+     <PivotViewDataSourceSettings DataSource="@data">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -254,16 +254,14 @@ In the following example, drill down and drill up action can be restricted by se
         data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
-
     // Triggers when the UI action begins.
     public void ActionBegin(PivotActionBeginEventArgs args)
     {
-        if(args.ActionName == 'Drill down' && args.ActionName == 'Drill up')
+        if(args.ActionName == "Drill down" && args.ActionName == "Drill up")
         {
           args.Cancel=true;
         }       
     }
-
 }
 ```
 ### ActionComplete
@@ -272,7 +270,12 @@ The event [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 * [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_DataSourceSettings): It holds the current data source settings such as input data source, rows, columns, values, filters, format settings and so on.
 
-* [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_ActionName): It holds the name of the current action completed. For example, after completing the aggregation, the action name will be shown as **Field aggregated**.
+* [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_ActionName): It holds the name of the current action completed. The following are the UI actions and their names:
+
+| Action | Action Name|
+|------|-------------|
+| [`Expand`](./drill-down/#Drill-down-and-drill-up)| Drill down|
+| [`Collapse`](./drill-down/#Drill-down-and-drill-up)| Drill up|
 
 * [ActionInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_ActionInfo):  It holds the unique information about the current UI action.  For example, if drill down action is completed, the event argument contains information such as field name and the drill information.
 
@@ -280,7 +283,7 @@ The event [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
-     <PivotViewDataSourceSettings DataSource="@data" ShowFieldList="true" ShowGroupingBar="true>
+     <PivotViewDataSourceSettings DataSource="@data" ShowFieldList="true" ShowGroupingBar="true">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -307,16 +310,14 @@ The event [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.
         data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
-
     // Triggers when the UI action is completed.
     public void ActionComplete(PivotActionCompleteEventArgs<ProductDetails> args)
     {
-        if(args.actionName == 'Drill down' && args.actionName == 'Drill up')
+        if(args.ActionName == "Drill down" && args.ActionName == "Drill up")
         {
-          // // Triggers when the drill operations are completed.
+          // Triggers when the drill operations are completed.
         }       
     }
-
 }
 ```
 ### ActionFailure
@@ -336,7 +337,7 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails" AllowExcelExport="true" AllowPdfExport="true" Width="100%"  ShowToolbar="true" Toolbar="@toolbar" ShowGroupingBar="true" AllowCalculatedField="true"  AllowDrillThrough="true" AllowConditionalFormatting="true" AllowNumberFormatting="true" ShowFieldList="true" Height="350">
-     <PivotViewDataSourceSettings DataSource="@data" ShowFieldList="true" ShowGroupingBar="true>
+     <PivotViewDataSourceSettings DataSource="@data">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -353,7 +354,7 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
             <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
-   <PivotViewEvents TValue="PivotProductDetails" OnActionFailure="ActionFailure"></PivotViewEvents>
+   <PivotViewEvents TValue="ProductDetails" OnActionFailure="ActionFailure"></PivotViewEvents>
 </SfPivotView>
 
 @code{
@@ -375,16 +376,14 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
         data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
-
     // Triggers when the current UI action fails to achieve the desired result.
     public void ActionFailure(PivotActionFailureEventArgs args)
     {
-        if(args.ActionName == 'Drill down' && args.ActionName == 'Drill up')
+        if(args.ActionName == "Drill down" && args.ActionName == "Drill up")
         {
           // Your code here.
         }       
     }
-
 }
 ```
 
