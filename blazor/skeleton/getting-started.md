@@ -255,7 +255,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 {% highlight razor tabtitle="~/Imports.razor" %}
 
 @using Syncfusion.Blazor
-@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Notifications
 
 {% endhighlight %}
 {% endtabs %}
