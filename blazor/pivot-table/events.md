@@ -469,6 +469,10 @@ To know more about this event, refer [here](./tool-bar/#removereport).
 
 To know more about this event, refer [here](./tool-bar/#savereport).
 
+## OnHeadersSort
+
+To know more about this event, refer [here]().
+
 ## ToolbarRendered
 
 The event [ToolbarRendered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ToolbarRendered) is triggered before rendering of toolbar. This event is available only when toolbar is enabled in the Pivot Table. It has following parameter - [CustomToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ToolbarArgs.html#Syncfusion_Blazor_PivotView_ToolbarArgs_CustomToolbar). Using this event user can add custom toolbar items as well as remove existing items from the toolbar.

@@ -109,6 +109,51 @@ Usually string sorting is applied to field members even if it starts with number
 
 ![Alpha Numeric Sorting in Blazor PivotTable](images/blazor-pivottable-alpha-numberic-sorting.png)
 
+### Custom Sorting
+
+Allows to sort field headers (aka, members) in rows and columns based on user-defined order. This can be configured mainly using the [membersOrder]() in the [PivotViewSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewSortSetting.html) class through code behind, during initial rendering. The other settings required to sort are:
+
+* [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewSortSetting.html#Syncfusion_Blazor_PivotView_PivotViewSortSetting_Name): It allows to set the field name.
+* [MembersOrder](): It holds an array of headers in the order specified by the user.
+* [Order](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewSortSetting.html#Syncfusion_Blazor_PivotView_PivotViewSortSetting_Order): It allows to specify whether the array of headers should be sorted ascending or descending.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="ProductDetails" Height="350" ShowGroupingBar="true">
+     <PivotViewDataSourceSettings DataSource="@data" ExpandAll="false" EnableSorting=true>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewSortSettings>
+            <PivotViewSortSetting Name="Country" Order=Sorting.Ascending MembersOrder="@(new string[] {"United States","France"})"></PivotViewSortSetting>
+            <PivotViewSortSetting Name="Year" Order=Sorting.Descending MembersOrder="@(new string[] {"FY 2015","FY 2017"})"></PivotViewSortSetting>
+        </PivotViewSortSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+}
+
+```
+
+![Custom Sorting in Blazor PivotTable](images/blazor-pivottable-custom-sorting.png)
+
 ## Value sorting
 
 > This property is applicable only for relational data source.
@@ -159,5 +204,63 @@ The value sorting can also be configured using the [PivotViewValueSortSettings](
 ```
 
 ![Value Sorting in Blazor PivotTable](images/blazor-pivottable-value-sorting.png)
+
+## Event
+
+### OnHeadersSort
+
+When sorting is applied, the event [OnHeadersSort]() triggers every time while rendering each row and column header cell. This allows the user to re-arrange the order in which the pivot table's headers appear. It has the following parameters:
+
+* `FieldName`: It holds the field name where the sort settings applied.
+* `SortOrder`: It holds the current sort order of the field.
+* `Members`: It holds the sorted headers according to the specified sort order.
+* `LevelName`: It holds the specific field's unique level name. **Note:** This option is applicable only for OLAP data.
+* `IsOrderChanged`: By setting this boolean property to true, it allows to display the modified members order.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="ProductDetails" Height="350" ShowGroupingBar="true">
+     <PivotViewDataSourceSettings DataSource="@data" ExpandAll="false" EnableSorting=true>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+    </PivotViewDataSourceSettings>
+    <PivotViewEvents TValue="ProductDetails" OnHeadersSort="onHeadersSort" ></PivotViewEvents>
+    <PivotViewGridSettings ColumnWidth="140"></PivotViewGridSettings>
+</SfPivotView>
+
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+    private void onHeadersSort(HeadersSortEventArgs args)
+    {
+        if(args.FieldName == "Country")
+        {
+            args.Members = new string[] { "United States","Germany"};
+            args.IsOrderChanged = true;
+        }
+        if(args.FieldName == "Year")
+        {
+            args.Members = new string[] { "FY 2017","FY 2015"};
+            args.IsOrderChanged = true;
+        }
+    }
+}
+
+```
 
 > You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
