@@ -20,7 +20,7 @@ The following code example shows the review status of the annotation.
 @inject IJSRuntime JsRuntime;
 
 <SfButton OnClick="reviewStatus">Review Status</SfButton>
-<SfPdfViewerServer @ref="pdfviewer" IsCommentPanelOpen="true" DocumentPath="@DocumentPath" Height="500px" Width="1060px" ></SfPdfViewerServer>
+<SfPdfViewerServer @ref="pdfviewer" CommentPanelVisible="true" DocumentPath="@DocumentPath" Height="500px" Width="1060px" ></SfPdfViewerServer>
 
 @code{
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";

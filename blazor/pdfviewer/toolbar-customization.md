@@ -187,7 +187,7 @@ The following code represnts how to create custom toolbar with save and some cus
     </ToolbarItems>
 </SfToolbar>
 
-<SfPdfViewerServer @ref="PDFViewer" IsCommentPanelOpen="true" DocumentPath="PDF_Succinctly.pdf" ServiceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer" EnableNavigationToolbar="false" EnableToolbar="false"  Height="100%" Width="100%"></SfPdfViewerServer>
+<SfPdfViewerServer @ref="PDFViewer" CommentPanelVisible="true" DocumentPath="PDF_Succinctly.pdf" ServiceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer" EnableNavigationToolbar="false" EnableToolbar="false"  Height="100%" Width="100%"></SfPdfViewerServer>
 
 @code
 {
