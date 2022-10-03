@@ -511,6 +511,69 @@ In the following code sample, you can prevent default filter query generation us
 
 > You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-prevent-query-generation-for-foriegnkey-column).
 
+### Enable multiple foreign key columns
+
+The Grid component has support to display a value in a GridColumn which has foreign key behavior. It allows to show multiple foreign key columns in Grid, i.e., datasources from different tables with foreign key behavior can be displayed in a Grid and perform Data/CRUD operations.
+
+In the following example, two different column fields ("EmpFirstNameID", "EmpLastNameID") are used to show two different ForeignKeyValue ("FirstName" and "LastName") using the same ForeignKeyField ("EmployeeID"). First Name and Last Name are foreign key columns that display the data from the foreign data source.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" Height="315" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true"></GridColumn>
+        <GridForeignColumn Field=@nameof(Order.EmployeeFirstName) ForeignKeyField="EmployeeID" HeaderText="First Name" ForeignKeyValue="FirstName" ForeignDataSource="@Employees" Width="150"></GridForeignColumn>
+        <GridForeignColumn Field=@nameof(Order.EmployeeLastName) ForeignKeyField="EmployeeID"  HeaderText="Last Name" ForeignKeyValue="LastName" ForeignDataSource="@Employees" Width="150"></GridForeignColumn>
+        <GridColumn Field=@nameof(Order.Title) HeaderText="Title" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.HireDate) HeaderText="Hire Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+    public List<EmployeeData> Employees { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            EmployeeFirstName = x,
+            EmployeeLastName = x,
+            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager", "Inside Sales Coordinator" })[new Random().Next(4)],
+            HireDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+
+        Employees = Enumerable.Range(1, 75).Select(x => new EmployeeData()
+        {
+            EmployeeID = x,
+            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+            LastName = (new string[] {  "Peter", "John", "Reman", "Redmond", "George" })[new Random().Next(5)]
+        }).ToList();   
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public int? EmployeeFirstName { get; set; }
+        public int? EmployeeLastName { get; set; }
+        public string? Title { get; set; }
+        public DateTime? HireDate { get; set; }
+    }
+
+    public class EmployeeData
+    {
+        public int? EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+    }
+}
+```
+
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-enable-multiple-foreignkey-columns)
+
 ## Header text
 
 By default, column header title is displayed from column [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) value. To override the default header title, you have to define the **HeaderText** value in the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) property of **GridColumn** directive.
