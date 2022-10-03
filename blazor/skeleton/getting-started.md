@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with Blazor AppBar Component | Syncfusion
-description: Checkout and learn about getting started with Blazor AppBar component in Blazor Server App and Blazor WebAssembly App.
+title: Getting Started with Blazor Skeleton Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Skeleton component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
-control: AppBar
+control: Skeleton
 documentation: ug
 ---
 
-# Getting Started with Blazor AppBar Component
+# Getting Started with Blazor Skeleton Component
 
-This section briefly explains about how to include Blazor AppBar component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor Skeleton](https://www.syncfusion.com/blazor-components/blazor-skeleton) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 ## Prerequisites
 
@@ -23,11 +23,12 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
 
-## Install Syncfusion Blazor NuGet in the App
+## Install Syncfusion Blazor Notifications NuGet in the App
 
 Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages).
 
-To add Blazor AppBar component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and then install it.
+
+To add Blazor Skeleton component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons) and then install it.
 
 ## Register Syncfusion Blazor Service
 
@@ -41,7 +42,7 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html?#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
+Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
 > From 2022 Vol1 (20.1) version - The default value of `IgnoreScriptIsolation` is changed as `true`, so, you don’t have to set `IgnoreScriptIsolation` property explicitly to refer scripts externally.
 
@@ -135,13 +136,13 @@ namespace WebApplication1
 {% endhighlight %}
 {% endtabs %}
 
-## Add Style Sheet
+## Add style sheet
 
 Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/appearance/themes#enable-static-web-assets-usage) topic to use static assets in your project.
 
-To add theme to the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
+To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
 
-> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) single NuGet, you don't have to refer [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet. Since style sheets already inside the assets of `Syncfusion.Blazor` NuGet.
+> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) single NuGet, you don't have to refer [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet. Since style sheets already inside the assets of `Syncfusion.Blazor` NuGet. 
 
 ### Blazor Server App
 
@@ -246,39 +247,60 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
-## Add Blazor AppBar component
+## Add Blazor Skeleton component
 
-* Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Navigations** namespace.
+* Open **~/_Imports.razor** file or any other page under the `~/Pages` folder where the component is to be added and import the **Syncfusion.Blazor.Notifications** namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Imports.razor" %}
 
 @using Syncfusion.Blazor
-@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Notifications
 
 {% endhighlight %}
 {% endtabs %}
 
-* Now, add the Syncfusion Blazor AppBar component in razor file. Here, the AppBar component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+* Now, add the Syncfusion Blazor Skeleton component in razor file. Here, the Skeleton component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
-```cshtml
-@using Syncfusion.Blazor.Navigations
-@using Syncfusion.Blazor.Buttons
+{% tabs %}
+{% highlight razor %}
 
-<div class="control-container">
-    <SfAppBar ColorMode="AppBarColor.Primary">
-        <SfButton CssClass="e-inherit" IconCss="e-icons e-menu"></SfButton>
-        <span class="regular">Blazor AppBar</span>
-        <AppBarSpacer></AppBarSpacer>
-        <SfButton CssClass="e-inherit" Content="FREE TRIAL"></SfButton>
-    </SfAppBar>
+@using Syncfusion.Blazor.Notifications
+
+<SfSkeleton Height="20px" Width="100px"></SfSkeleton>
+
+{% endhighlight %}
+{% endtabs %}
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Skeleton` component will be rendered in the default web browser.
+
+![Blazor Skeleton Component](./images/blazor-skeleton-component.png)
+
+## Skeleton Shapes
+
+The [`shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Shape) property can be used to display skeleton in different shapes like circle, square, rectangle and text.
+
+{% tabs %}
+{% highlight razor %}
+
+<div style="width: 200px">
+    <SfSkeleton Shape=SkeletonType.Circle Width="48px" CssClass="custom-css"></SfSkeleton>
+    <SfSkeleton Shape="SkeletonType.Square" Width="48px"></SfSkeleton>
+    <br/><br/>
+    <SfSkeleton Shape="SkeletonType.Text" Height="50px"></SfSkeleton>
+    <br/><br/>
+    <SfSkeleton Shape="SkeletonType.Rectangle" Width="15px" ></SfSkeleton>
 </div>
-
 <style>
-    .control-container .e-btn.e-inherit {
-        margin: 0 3px;
+    .custom-css {
+        margin-right: 30px;
     }
 </style>
-```
 
-![Blazor AppBar Component](images/getting_started.png)
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor Skeleton Component](./images/blazor-skeleton-shape-sample.png)
+
+
+
