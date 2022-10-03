@@ -218,7 +218,7 @@ The connector can be selected by clicking it. When the connector is selected, ci
 The Flip command is used to flip the chosen object is mirrored across  in either the horizontal, vertical, or both directions on the diagram page..
 
 ###  FlipDirection:
-The flipdirection is used to mirror across Horizontal,Vertical and Both direction.
+The flipdirection is used to flip the node or connector so that it is mirrored across in either horizontal, vertical, or both directions.
 
 | FlipDirection | Description | 
 | -------- | -------- |
@@ -317,7 +317,7 @@ The following code example shows how to change the FlipDirection.
 ```
 Initial rendering:
 
-![Initial Diagram](../images/blazor-diagram-connector-flip-initial-rendering.png)
+![Initial Rendering](../images/blazor-diagram-connector-flip-initial-rendering.png)
 
 | FlipDirection | Output|
 | -------- | -------- |

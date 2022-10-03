@@ -630,7 +630,7 @@ The following code example shows how to change the FlipDirection and FlipMode.
 ```
 Initial rendering:
 
-![Initial Diagram](Images/blazor-diagram-group-node-flip-initial-rendering.png)
+![Initial Rendering](Images/blazor-diagram-group-node-flip-initial-rendering.png)
 
 | FlipDirection | DiagramFlipMode | Output|
 | -------- | -------- |-------- |
@@ -638,8 +638,6 @@ Initial rendering:
 |Horizontal|Content|![HorizontalDirection with ContentMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-content.png)|
 |Horizontal|All|![HorizontalDirection with AllMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-all.png)|
 |Horizontal|None|![HorizontalDirection with NoneMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-none.png)|
-
-![Flip](Images/Nodegroupflip.gif)
 
 ## See Also
 
