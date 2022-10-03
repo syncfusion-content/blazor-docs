@@ -339,3 +339,72 @@ Also, the add operation is handled while performing batch editing using the bool
 }
 
 ```
+
+## How to select a text in a cell when batch editing
+
+By default, when editing text in a particular cell in batch editing, the cursor will be placed at the end of the text. Instead of this behavior, you can change the text in the selected state when editing. This can be achieved by the [OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) and [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) events of the Grid.
+
+In the following sample, Using the Microsoft.JSInterop support you can call select() JS method in the `RowSelected` event handler to select the content of particular rendered input element.
+
+```csharp
+window.selectContent = function () {
+    document.getElementById("BatchGrid").getElementsByTagName("input")[0].select(); 
+}
+```
+
+```csharp
+@using Syncfusion.Blazor.Grids
+@inject IJSRuntime JSRunTime;
+
+<SfGrid  ID="BatchGrid" DataSource="@Orders"  AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
+    <GridEvents RowSelected="RowSelected" OnCellEdit="OnCellEdit" TValue="Order"></GridEvents>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Batch"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight"  TextAlign="TextAlign.Right"  Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country"  Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+            ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCountry { get; set; }
+    }
+
+    public bool flag = false;
+    public async Task OnCellEdit()
+    {
+        flag = true;
+    }
+    public async Task RowSelected()
+    {
+        if (flag)
+        {
+            await Task.Yield();
+            await JSRunTime.InvokeAsync<object>("selectContent");
+            flag = false;
+        }
+    }
+}
+```
