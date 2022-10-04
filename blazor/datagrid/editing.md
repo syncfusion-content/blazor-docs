@@ -277,6 +277,55 @@ In the following sample, the rows that have the value for the ShipCountry column
 
 > [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-disable-editing-for-particular-row)
 
+To disable a particular cell when using batch mode of editing, you can use the [OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnCellEdit) event of the Grid.
+
+In the following sample, the cells that have the value for the ShipCountry column as "INDIA" are prevented from being edited by setting the **args.Cancel** as true.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Height="315" Toolbar="@(new List<string>() { "Edit", "Cancel", "Update" })">
+    <GridEvents OnCellEdit="OnCellEdit" TValue="Order"></GridEvents>
+    <GridEditSettings AllowEditing="true" Mode="EditMode.Batch"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true"  TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name"  Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code{
+    public List<Order> Orders { get; set; }
+    public void OnCellEdit(CellEditArgs<Order> args)
+    {
+        if (args.RowData.ShipCountry == "INDIA" && args.ColumnName == "ShipCountry") {
+            args.Cancel = true;
+        }
+    }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+            ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
+        }).ToList();
+    }
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCountry { get; set; }
+    }
+}
+```
+
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-disable-editing-for-particular-cell)
+
 ## Adding a new row at the bottom of the datagrid
 
 By default, a new row will be added at the top of the datagrid. You can change it by setting [NewRowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_NewRowPosition) property of the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component as **Bottom**.
