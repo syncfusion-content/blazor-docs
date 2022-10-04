@@ -44,7 +44,7 @@ The following sample demonstrates the placeholder option in Rich Text Editor.
 
 ## Source code view 
 
-The Rich Text Editor includes the ability for users to directly edit HTML code via `Source View` in the text area. If you made any modification in Source view directly, the changes will be reflected in the editor content. So, the users will have more flexibility over the content they have created.
+The Rich Text Editor includes the ability for users to directly edit HTML code via `Source View` in the text area. If you made any modification in source view directly, the changes will be reflected in the editor content. So, the users will have more flexibility over the content they have created.
 
 {% tabs %}
 {% highlight razor %}
