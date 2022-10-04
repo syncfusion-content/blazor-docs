@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor FAB Component | Syncfusion
+title: Getting Started with Blazor Floating Action Button Component | Syncfusion
 description: Checkout and learn about getting started with Blazor Floating Action Button component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Floating Action Button
@@ -298,6 +298,6 @@ The floating action button control triggers the [`OnClick`](https://help.syncfus
 
 ![Blazor Floating Action Button Component](./images/blazor-fab-event-click-sample.png)
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/).
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FloatingActionButton).
 
 N> You can also explore our [Blazor Floating Action Button example](https://blazor.syncfusion.com/demos/fab/overview?) that shows how to render and configure the button.

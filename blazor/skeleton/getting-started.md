@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Skeleton Component
 
-This section briefly explains about how to include [Blazor Skeleton](https://www.syncfusion.com/blazor-components/blazor-skeleton) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include Blazor Skeleton component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 ## Prerequisites
 
@@ -303,7 +303,7 @@ The [`shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notificati
 
 ![Blazor Skeleton Component](./images/blazor-skeleton-shape-sample.png)
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/).
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Skeleton).
 
-N> You can also explore our [Blazor Skeleton example](https://blazor.syncfusion.com/demos/speeddial/defaultfunctionalities?) that shows how to render and configure the skeleton.
+N> You can also explore our [Blazor Skeleton example](https://blazor.syncfusion.com/demos/skeleton/defaultfunctionalities?) that shows how to render and configure the skeleton.
 

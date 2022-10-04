@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor SpeedDial Component
 
-This section briefly explains about how to include [Blazor SpeedDial](https://www.syncfusion.com/blazor-components/blazor-speeddial) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include Blazor SpeedDial component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 ## Prerequisites
 
@@ -310,7 +310,7 @@ You can use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeedDial Component](./images/blazor-speeddial-mode-linear-sample.png)
+![Blazor SpeedDial Component](./images/blazor-speeddial-linear-sample.png)
 ![Blazor SpeedDial Component](./images/blazor-speeddial-mode-radial-sample.png)
 
 
@@ -343,6 +343,6 @@ You can use this event to perform the required action.
 
 ![Blazor SpeedDial Component](./images/blazor-speeddial-event-sample.png)
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/).
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/SpeedDial).
 
 N> You can also explore our [Blazor Speed Dial Button example](https://blazor.syncfusion.com/demos/speeddial/defaultfunctionalities?) that shows how to render and configure the button.
