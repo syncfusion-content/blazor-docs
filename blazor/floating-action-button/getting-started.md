@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Floating Action Button Component | Syncfusion
+title: Getting Started with Blazor FAB Component | Syncfusion
 description: Checkout and learn about getting started with Blazor Floating Action Button component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Floating Action Button
