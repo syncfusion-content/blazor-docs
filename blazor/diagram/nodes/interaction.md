@@ -238,6 +238,235 @@ Also, rotate the node during the interaction.
 
 ![Displaying Node Rotation in Blazor Diagram](../images/blazor-diagram-node-rotation.gif)
 
+## How to flip the Node
+The Flip command is used to flip the content and port of the chosen object is mirrored across  in either the horizontal, vertical, or both directions on the diagram page.
+
+###  FlipDirection:
+The flipdirection is used to flip the node or connector so that it is mirrored across in either horizontal, vertical, or both directions.
+
+| FlipDirection | Description | 
+| -------- | -------- |
+|Horizontal|It is used to flip the node or connector so that it is mirrored across the horizontal axis.|
+|Vertical|	It is used to flip the node or connector so that it is mirrored across the vertical axis.|
+|Both|		It is used to flip the node or port so that it is mirrored across the both horizontal and vertical axis.|
+|None|	It is used to disables all the flip behaviour.| 
+
+
+### FlipMode:
+The FlipMode is used to control the behaviour of the flip object.
+| DiagramFlipMode | Description | 
+| -------- | -------- |
+|Content|It is used to enable or disable the flip for an object’s content.|
+|Port|It is used to enable or disable the flip for an object’s port.|
+|All|It is used to enable or disable the flip for both the object’s content and port.|
+|None|	It is used to disable all the flipmode behaviour.|
+
+**Note:** Flipmode is only applicable for nodes, not for connectors.
+
+The following code example shows how to change the FlipDirection and FlipMode.
+```chtml
+@using Syncfusion.Blazor.Diagram
+@using ChangeEventArgs = Microsoft.AspNetCore.Components.ChangeEventArgs
+<style>    
+    #diagram {
+        width: 70%;
+        float: left;
+    }
+    #properties {
+        width: 15%;
+        float: right;
+        margin-right:300px;
+    }
+</style>
+<div id="properties">
+    <input type="button" value="HorizontalPort" @onclick="@HorizontalPort" />
+    <input type="button" value="HorizontalContent" @onclick="@HorizontalContent" />
+    <input type="button" value="HorizontalAll" @onclick="@HorizontalAll" />
+    <input type="button" value="HorizontalNone" @onclick="@HorizontalNone" />  
+ </div>     
+<div id="#diagram">
+    <SfDiagramComponent @ref="diagram" Width="1000px" Height="1000px"  Nodes="@NodeCollection" Connectors="@connectors">
+        <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
+    </SfDiagramComponent>
+    </div>
+@code
+{
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    public SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> NodeCollection;
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 100,
+            Height = 100,
+            OffsetX = 700,
+            OffsetY = 100,
+            Flip=FlipDirection.Horizontal,
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation 
+                {
+                   ID="node1annotation",
+                   Content = "Offset(0,0)", 
+                   Offset = new DiagramPoint() { X = 0, Y = 0 } 
+                }
+            },
+             Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+            },
+            Shape= new FlowShape()
+            {
+                Type=NodeShapes.Flow,
+                Shape=NodeFlowShapes.Card                   
+            },
+            Ports = new DiagramObjectCollection<PointPort>()
+            {
+                new PointPort()
+                {
+                    ID="ports",
+                    Style = new ShapeStyle(){ Fill = "gray" },
+                    Offset = new DiagramPoint() { X = 0, Y = 0 }, 
+                    Visibility = PortVisibility.Visible,                  
+                }
+            }
+        };
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 100,
+            Height = 100,
+            OffsetX = 900,
+            OffsetY = 100,
+            Flip=FlipDirection.Horizontal,
+            FlipMode=DiagramFlipMode.Port,
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+            },
+            Shape= new FlowShape()
+            {
+                Type=NodeShapes.Flow,
+                Shape=NodeFlowShapes.Card           
+            },
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation 
+                {
+                    Content = "Offset(0,0)", 
+                    Offset = new DiagramPoint() { X = 0, Y = 0.5 } 
+                }
+            },
+            Ports = new DiagramObjectCollection<PointPort>()
+            {
+               new PointPort()
+               {  
+                   Style = new ShapeStyle(){ Fill = "gray" },
+                   Offset = new DiagramPoint() { X = 0, Y = 0 }, 
+                   Visibility = PortVisibility.Visible
+               }
+            }
+        };       
+        NodeCollection = new DiagramObjectCollection<Node>() {node1,node2};       
+    }
+    
+    public void HorizontalPort()
+    {     
+        if (diagram.SelectionSettings.Nodes.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+            {
+                diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.Port;
+                if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Horizontal;
+                }
+                else
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Horizontal;
+                }               
+            }
+        }            
+    }
+    public void HorizontalContent()
+    {     
+        if (diagram.SelectionSettings.Nodes.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+            {
+                diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.Content;
+                if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Horizontal;
+                }
+                else
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Horizontal;
+                }               
+            }
+        }            
+    }
+    public void HorizontalAll()
+    {     
+        if (diagram.SelectionSettings.Nodes.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+            {
+                diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.All;
+                if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Horizontal;
+                }
+                else
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Horizontal;
+                }              
+            }
+        }            
+    }
+    public void HorizontalNone()
+    {     
+        if (diagram.SelectionSettings.Nodes.Count > 0)
+        {
+            for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+            {
+                diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.None;
+                if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Horizontal;
+                }
+                else
+                {
+                    diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Horizontal;
+                }                               
+            }
+        }       
+    }
+}
+```
+Initial Rendering:
+
+![Initial Diagram](../images/blazor-diagram-flip-initial-rendering.png)
+
+| FlipDirection | DiagramFlipMode | Output|
+| -------- | -------- | -------- |
+|Horizontal|Port| ![HorizontalDirection with Port Mode](../images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-port.png)|
+|Horizontal|Content|![HorizontalDirection with Content Mode](../images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-content.png)|
+|Horizontal|All|![HorizontalDirection with All Mode](../images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-all.png)|
+|Horizontal|None|![HorizontalDirection with None Mode](../images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-none.png)|
+|Vertical|Port|![VerticalDirection with Port Mode](../images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-port.png)|
+|Vertical|Content|![VerticalDirection with Content Mode](../images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-content.png)|
+|Vertical|All|![VerticalDirection with All Mode](../images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-both.png)|
+|Vertical|None|![VerticalDirection with None Mode](../images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-none.png)|
+|Both|Port|![BothDirection with Port Mode](../images/blazor-diagram-flip-direction-as-both-flip-mode-as-port.png)|
+|Both|Content|![BothDirection with Content Mode](../images/blazor-diagram-flip-direction-as-both-flip-mode-as-content.png)|
+|Both|All|![BothDirection with All Mode](../images/blazor-diagram-flip-direction-as-both-flip-mode-as-all.png)|
+|Both|None|![BothDirection with None Mode](../images/blazor-diagram-flip-direction-as-both-flip-mode-as-none.png)|
+
+![Flip](../images/blazor-diagram-flip-node.gif)
+
 For more information about node interaction, refer to [Node Interaction](../interaction).
 
 ## See also
