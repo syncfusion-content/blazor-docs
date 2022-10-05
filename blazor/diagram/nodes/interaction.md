@@ -241,7 +241,7 @@ Also, rotate the node during the interaction.
 ## How to flip the Node
 The Flip command is used to flip the content and port of the chosen object is mirrored across  in either the horizontal, vertical, or both directions on the diagram page.
 
-###  FlipDirection:
+### How to change the flip direction:
 The flipdirection is used to flip the node or connector so that it is mirrored across in either horizontal, vertical, or both directions.
 
 | FlipDirection | Description | 
@@ -252,7 +252,7 @@ The flipdirection is used to flip the node or connector so that it is mirrored a
 |None|	It is used to disables all the flip behaviour.| 
 
 
-### FlipMode:
+### How to change the flip mode:
 The FlipMode is used to control the behaviour of the flip object.
 | DiagramFlipMode | Description | 
 | -------- | -------- |

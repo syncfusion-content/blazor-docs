@@ -396,7 +396,7 @@ The Flip command is used to flip the content and port of the chosen object is mi
 
 **Note:** We can flip the groupnode as well as the selected childnodes.
 
-###  FlipDirection:
+### How to change the Flip Direction:
 The flipdirection is used to flip the node or connector so that it is mirrored across in either horizontal, vertical, or both directions.
 
 | FlipDirection | Description | 
@@ -406,7 +406,7 @@ The flipdirection is used to flip the node or connector so that it is mirrored a
 |Both|		It is used to flip the node is mirrored across the both horizontal and vertical axis.|
 |None|	It is used to disables all the flip behaviour.| 
 
-### FlipMode:
+### How to change the Flip Mode:
 The FlipMode is used to control the behaviour of the flip object.
 | DiagramFlipMode | Description | 
 | -------- | -------- |
