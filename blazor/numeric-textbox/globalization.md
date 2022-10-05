@@ -11,25 +11,6 @@ documentation: ug
 
 [Blazor NumericTextBox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
 
-## Customize the localized text
-
-* You can change the localized text of particular component by editing the `wwwroot/blazor-locale/src/{{locale name}}.json` file.
-
-* In the following code, modified the localized text of `increment title` and `decrement title` in `de` culture. File - `wwwroot/blazor-locale/src/de.json`. 
-
-    ```
-    {
-    "de": {
-        "numerictextbox": {
-        "incrementTitle": "Wert erhöhen",
-        "decrementTitle": "Dekrementwert"
-        }
-    }
-    }
-    ```
-
-    ![Customizing Localized Text in Blazor NumericTextBox](./images/blazor-numerictextbox-localize-text.png)
-
 ## Right to Left
 
 RTL provides an option to switch the text direction and layout of the NumericTextBox component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Urdu, etc.). To enable RTL NumericTextBox, set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_EnableRtl) to true.
