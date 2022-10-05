@@ -217,7 +217,7 @@ The connector can be selected by clicking it. When the connector is selected, ci
 ## How to flip the connector
 The Flip command is used to flip the chosen object is mirrored across  in either the horizontal, vertical, or both directions on the diagram page..
 
-###  FlipDirection:
+### How to change the flip direction:
 The flipdirection is used to flip the node or connector so that it is mirrored across in either horizontal, vertical, or both directions.
 
 | FlipDirection | Description | 
