@@ -19,22 +19,6 @@ documentation: ug
 |[SelectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanging)|[SelectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangingEventArgs.html)|Triggers before the selection is changed in the diagram.|
 |[SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanged)|[SelectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangedEventArgs.html)|Triggers when the selection is changed in the diagram.|
 
-[SelectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangingEventArgs.html)
-
-| Argument Name | Description |
-| -------- | -------- |
-| Cancel | Returns value indicates whether the element can be selected. |
-
-
-[SelectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangedEventArgs.html)
-
-| Argument Name | Description |
-| -------- | -------- |
-| ActionTrigger | Returns the actual cause of the event. |
-| NewValue | Returns the selected element after the event has triggered. |
-| OldValue | Returns the last selected elements, it's empty if previously, not objects have selected. |
-| Type | Returns the item is added or removed from the list. |
-
 The following code example explains how to get the selection change event in the diagram.
 
 ```cshtml
@@ -107,19 +91,6 @@ The following code example explains how to get the selection change event in the
 |[PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging)|[PositionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangingEventArgs.html)|Triggers while dragging the elements in the diagram.|
 |[PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged)|[PositionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangedEventArgs.html)|Triggers when the node's/connector's position is changed.|
 
-[PositionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangingEventArgs.html)
-
-| Argument Name | Description |
-| -------- | -------- |
-| Cancel | Returns the value that indicates the user prevents dragging of element over the diagram. |
-
-[PositionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangedEventArgs.html)
-
-| Argument Name | Description |
-| -------- | -------- |
-| NewValue | Returns selector’s current value in which the node or the connector is being dragged. |
-| OldValue | Returns the Selector old value in which the node or the connector is being dragged. |
-| Element | Returns the node or connector that is being dragged. |
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -190,21 +161,6 @@ The following code example explains how to get the selection change event in the
 |------------|-----------|------------------------|
 |[ConnectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectionChanging)|[ConnectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectionChangingEventArgs.html)|Triggers before the connector’s source or target point is connected or disconnected from the source or target.|
 |[ConnectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectionChanged)|[ConnectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectionChangedEventArgs.html)|Triggers when the connector’s source or target point is connected or disconnected from the source or target.|
-
-[ConnectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectionChangingEventArgs.html)
-
-| Argument Name | Description |
-| -------- | -------- |
-| Cancel | Defines whether the user can prevent the connection or disconnection of the connector while its endpoint is dragging. |
-
-[ConnectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectionChangedEventArgs.html)
-
-| Argument Name | Description |
-| -------- | -------- |
-| Connector | Returns the new source node or target node of the connector. |
-| ConnectorAction | Returns whether it is a source end or a target end. |
-| NewValue | Represents the current source or target node while dragging the endpoint of the connector. |
-| OldValue |Specifies the previous source or target node of the connector. |
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -282,22 +238,6 @@ The following code example explains how to get the selection change event in the
 |[SourcePointChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SourcePointChanging)|[EndPointChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.EndPointChangingEventArgs.html)|Triggers before the connector’s source point is  Changing.|
 |[SourcePointChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SourcePointChanged)|[EndPointChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.EndPointChangedEventArgs.html)|Triggers before the connector’s source point is  Changed.|
 
-[EndPointChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.EndPointChangingEventArgs.html)
-
-| Argument Name | Description |
-| -------- | -------- |
-| Cancel | Returns the value that indicates whether to cancel the change or not. |
-
-[EndPointChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.EndPointChangedEventArgs.html)
-
-| Argument Name | Description |
-| -------- | -------- |
-| Connector | Returns the current connector from which the source point or target point is changed. |
-| OldValue | Returns the previous point of the mouse pointer. |
-| NewValue | Returns the current point of the mouse pointer. |
-| TargetNodeID | Returns  target node of the connector while dragging the end point. |
-| TargetPortID | Returns the target port of the node that is to be connected with  the connector while dragging the end point. |
-
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
@@ -351,21 +291,6 @@ The following code example explains how to get the selection change event in the
 |[TargetPointChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_TargetPointChanging)|[EndPointChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.EndPointChangingEventArgs.html)|Triggers before the connector’s target point is  Changing.|
 |[TargetPointChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_TargetPointChanged)|[EndPointChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.EndPointChangedEventArgs.html)|Triggers before the connector’s target point is  Changed.|
 
-[EndPointChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.EndPointChangingEventArgs.html)
-
-| Argument Name | Description |
-| -------- | -------- |
-| Cancel | Returns the value that indicates whether to cancel the change or not. |
-
-[EndPointChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.EndPointChangedEventArgs.html)
-
-| Argument Name | Description |
-| -------- | -------- |
-| Connector | Returns the current connector from which the source point or target point is changed. |
-| OldValue | Returns the previous point of the mouse pointer. |
-| NewValue | Returns the current point of the mouse pointer. |
-| TargetNodeID | Returns  target node of the connector while dragging the end point. |
-| TargetPortID | Returns the target port of the node that is to be connected with  the connector while dragging the end point. |
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -463,16 +388,6 @@ The following code example explains how to get the selection change event in the
 ## Segment Collection Change
 
 * [SegementCollectionChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SegmentCollectionChange) Triggers when the connector’s segment collection is updated.
-
-[SegmentCollectionChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentCollectionChangeEventArgs.html)
-
-| Argument Name | Description |
-| -------- | -------- |
-| AddedSegments | Returns the action of diagram. |
-| Cancel | Returns the value indicates whether to cancel the change or not. |
-| Element | Returns the selected element. |
-| RemovedSegments | Returns the removed segment collection. |
-| Type | Returns the type of the collection change. |
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

@@ -24,23 +24,6 @@ Diagram provides some events support for node that triggers when interacting wit
 |Triggers before the selection is changed in the diagram.|
 |[SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanged)|[SelectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangedEventArgs.html)|Triggers when the node's or connector's selection is changed in the diagram.|
 
-[SelectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangingEventArgs.html)
-
-| Argument Name | Description |
-| -------- | -------- |
-| Cancel | Returns value indicates whether the element can be selected. |
-
-
-[SelectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangedEventArgs.html)
-
-| Argument Name | Description |
-| -------- | -------- |
-| ActionTrigger | Returns the actual cause of the event. |
-| NewValue | Returns the selected element after the event has triggered. |
-| OldValue | Returns the last selected elements, it's empty if previously, not objects have selected. |
-| Type | Returns the item is added or removed from the list. |
-
-
 The following code example explains how to get the selection change event in the diagram.
 
 ```cshtml
@@ -104,20 +87,6 @@ The following code example explains how to get the selection change event in the
 |[PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging)|[PositionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangingEventArgs.html)|Triggers while dragging the elements in the diagram.|
 |[PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged)|[PositionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangedEventArgs.html)|Triggers when the node's or connector's position is changed.|
 
-[PositionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangingEventArgs.html)
-
-| Argument Name | Description |
-| -------- | -------- |
-| Cancel | Returns the value that indicates the user prevents dragging of element over the diagram. |
-
-[PositionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangedEventArgs.html)
-
-| Argument Name | Description |
-| -------- | -------- |
-| NewValue | Returns selector’s current value in which the node or the connector is being dragged. |
-| OldValue | Returns the Selector old value in which the node or the connector is being dragged. |
-| Element | Returns the node or connector that is being dragged. |
-
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
@@ -179,20 +148,6 @@ The following code example explains how to get the selection change event in the
 |[SizeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanging)|[SizeChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizeChangingEventArgs.html)|Triggers before the node is resized.|
 |[SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanged)|[SizeChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizeChangedEventArgs.html)|Triggers when the node is resized.|
 
-[SizeChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizeChangingEventArgs.html)
-
-| Argument Name | Description |
-| -------- | -------- |
-| Cancel | Returns the value indicates whether to cancel the change or not.|
-
-
-[SizeChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizeChangedEventArgs.html)
-
-| Argument Name | Description |
-| -------- | -------- |
-| NewValue | Returns the new width, height, offsetX and offsetY values of the element that is resized. |
-| OldValue | Returns the previous width, height, offsetX and offsetY values of the element that is resized. |
-| Element | Returns the element which has been selected for the resizing. |
  
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -253,21 +208,6 @@ The following code example explains how to get the selection change event in the
 |------------|----------|-------------------------|
 |[RotationChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanging)|[RotationChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RotationChangingEventArgs.html)|Triggers before the diagram elements are rotated.|
 |[RotationChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanged)|[RotationChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RotationChangedEventArgs.html)|Triggers when the diagram elements are rotated.|
-
-[RotationChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RotationChangingEventArgs.html)
-
-| Argument Name | Description |
-| -------- | -------- |
-| Cancel | Returns the value indicates whether to cancel the change or not.|
-
-
-[RotationChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RotationChangedEventArgs.html)
-
-| Argument Name | Description |
-| -------- | -------- |
-| NewValue | the new rotation angle. |
-| OldValue | Returns the the previous rotation angle. |
-| Element | Returns the node that is selected for rotation. |
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
