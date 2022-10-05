@@ -220,9 +220,9 @@ The following screenshot represents the editing disabled for the **CustomerID** 
 
 ## Disable editing for a particular row or cell
 
-You can disable the editing for a particular row using the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid based on `RequestType` as `BeginEdit`.
+Specific rows can be disabled from editing using the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid based on the `RequestType` as `BeginEdit`.
 
-In the following sample, the rows that have the value for the ShipCountry column as "RUSSIA" are prevented from being edited by setting the **args.Cancel** as true.
+In the following sample, the rows that have the value for the ShipCountry column as "RUSSIA" are prevented from being edited by updating the `Cancel` argument of the `OnActionBegin` event to true.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -277,9 +277,9 @@ In the following sample, the rows that have the value for the ShipCountry column
 
 > [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-disable-editing-for-particular-row)
 
-To disable a particular cell when using batch mode of editing, you can use the [OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnCellEdit) event of the Grid.
+Use the Grid's [OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnCellEdit) event to disable a specific cell when editing in batch mode. 
 
-In the following sample, the cells that have the value for the ShipCountry column as "INDIA" are prevented from being edited by setting the **args.Cancel** as true.
+In the following sample, the cells that have the value for the ShipCountry column as "INDIA" are prevented from being edited by updating the `Cancel` argument of the `OnCellEdit` event to true.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
