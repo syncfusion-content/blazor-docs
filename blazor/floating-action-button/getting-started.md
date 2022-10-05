@@ -296,6 +296,9 @@ The floating action button control triggers the [`OnClick`](https://help.syncfus
         }
 }
 
+{% endhighlight %}
+{% endtabs %}
+
 ![Blazor Floating Action Button Component](./images/blazor-fab-event-click-sample.png)
 
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FloatingActionButton).
