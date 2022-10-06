@@ -49,7 +49,7 @@ CssClass is used for AppBar customization based on the custom class. In the exam
 
 ## HtmlAttributes
 
-It can be used for additional inline attributes through the `@attributes` directive. In the code example below, the aria-label of the AppBar is customized using the `@attributes` directive.
+It can be used for additional inline attributes by specifying as inline attributes or by specifying `@attributes` directive. In the code example below, the aria-label of the AppBar is customized by specifying as inline attributes.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
