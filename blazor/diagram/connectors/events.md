@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Diagram Component
 
-## Selection change
+## Selection change event
 
 * While selecting the diagram elements, the following events can be used to do the customization.
 * When selecting/unselecting the diagram elements, the following events will be triggered to do customization on those events.
@@ -82,7 +82,7 @@ The following code example explains how to get the selection change event in the
 }
 ```
 
-## Position change
+## Position change event
 
 * While dragging the diagram elements, the following events can be used to do the customization.
 
@@ -153,7 +153,7 @@ The following code example explains how to get the selection change event in the
 }
 ```
 
-## Connection change
+## Connection change event
 
 * While changing the connection of the connector, the following events can be used to do the customization.
 
@@ -230,7 +230,7 @@ The following code example explains how to get the selection change event in the
     }
 }
 ```
-## Source Point change
+## Source point change event
 * While changing the source point  of the connector, the following events can be used to do the customization.
 
 |Event Name|Arguments|Description|
@@ -283,7 +283,7 @@ The following code example explains how to get the selection change event in the
     }
 }
 ```
-## Target Point change
+## Target point change event
 * While changing the source point  of the connector, the following events can be used to do the customization.
 
 |Event Name|Arguments|Description|
@@ -338,9 +338,9 @@ The following code example explains how to get the selection change event in the
 }
 ```
 
-## ConnectorCreating
+## ConnectorCreating event
 
-* [ConnectorCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectorCreating) helps to define default properties of connector.
+* [ConnectorCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectorCreating) helps to define default properties of connector. Connector creating is triggered  when diagram is initialized. In the Connector creating event, we can customize the connector properties. 
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -385,7 +385,7 @@ The following code example explains how to get the selection change event in the
         connector.TargetDecorator.Style.StrokeColor = "black";
     }
 ```
-## Segment Collection Change
+## Segment collection change event
 
 * [SegementCollectionChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SegmentCollectionChange) Triggers when the connector’s segment collection is updated.
 
