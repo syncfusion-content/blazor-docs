@@ -24,17 +24,12 @@ Use IconCss property to display icon. Floating Action Button can have an icon to
 In the following example, Floating Action Button is demonstrated with only icons by providing the IconCss property.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Buttons
 
 <div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
-    <SfFab id="fab" IconCss="e-icons e-edit"></SfFab>
+    <SfFab id="fab" Target="#target" IconCss="e-icons e-edit"></SfFab>
 </div>
-
-<style>
-    .e-menu::before {
-        content: '\e891';
-    }
-</style>
 
 ```
 
@@ -45,17 +40,12 @@ In the following example, Floating Action Button is demonstrated with only icons
 Use [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#properties) property and [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#properties) property to display the icon and text.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Buttons
 
 <div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
-    <SfFab id="fab" IconCss="e-icons e-edit" Content="Edit"></SfFab>
+    <SfFab id="fab" Target="#target" IconCss="e-icons e-edit" Content="Edit"></SfFab>
 </div>
-
-<style>
-    .e-menu::before {
-        content: '\e891';
-    }
-</style>
 
 ```
 
@@ -70,7 +60,7 @@ Use [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.Sf
 @using Syncfusion.Blazor.Buttons
 
 <div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
-    <SfFab id="fab" Content="Edit"></SfFab>
+    <SfFab id="fab" Target="#target" Content="Edit"></SfFab>
 </div>
 
 ```

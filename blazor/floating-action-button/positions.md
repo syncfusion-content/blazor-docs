@@ -41,12 +41,6 @@ In this example, Floating Action Button is demonstrated with BottomLeft position
     <SfFab Target="#target" Position="FabPosition.BottomLeft" IconCss="e-icons e-edit"></SfFab>
 </div>
 
-<style>
-    .e-menu::before {
-        content: '\e891';
-    }
-</style>
-
 ```
 
 ![Blazor Floating Action Button Component](./images/bottom-left-position.png)
@@ -70,12 +64,6 @@ In this example, Floating Action Button is demonstrated with All position using 
     <SfFab Target="#target" Position="FabPosition.BottomCenter" IconCss="e-icons e-edit"></SfFab>
     <SfFab Target="#target" Position="FabPosition.BottomRight" IconCss="e-icons e-edit"></SfFab>
 </div>
-
-<style>
-    .e-menu::before {
-        content: '\e891';
-    }
-</style>
 
 ```
 

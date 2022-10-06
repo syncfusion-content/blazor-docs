@@ -28,12 +28,12 @@ The Blazor Floating Action Button has the following predefined styles that can b
 @using Syncfusion.Blazor.Buttons
 
 <div id="target" style="height:200px; position:relative; width:450px; border:1px solid;">
-    <SfFab IsPrimary=true Content="Primary"></SfFab>
-    <SfFab CssClass="e-success" Content="Success"></SfFab>
-    <SfFab CssClass="e-info" Content="Info"></SfFab>
-    <SfFab CssClass="e-warning" Content="Warning"></SfFab>
-    <SfFab CssClass="e-danger" Content="Danger"></SfFab>
-    <SfFab CssClass="e-link" Content="Link"></SfFab>
+    <SfFab Target="#target" IsPrimary=true Content="Primary"></SfFab>
+    <SfFab Target="#target" CssClass="e-success" Content="Success"></SfFab>
+    <SfFab Target="#target" CssClass="e-info" Content="Info"></SfFab>
+    <SfFab Target="#target" CssClass="e-warning" Content="Warning"></SfFab>
+    <SfFab Target="#target" CssClass="e-danger" Content="Danger"></SfFab>
+    <SfFab Target="#target" CssClass="e-link" Content="Link"></SfFab>
 </div>
 
 ```

@@ -18,7 +18,7 @@ The different event argument types for each event are,
 
 ## How to bind click event to Floating Action Button
 
-The `onclick` attribute is used to bind the click event for button. Here, we have explained about the sample code snippets of toggle button.
+The floating action button control triggers the [`OnClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_OnClick) event when you click on the floating action button. You can use this event to perform the required action.
 
 ```csharp
 
@@ -27,15 +27,6 @@ The `onclick` attribute is used to bind the click event for button. Here, we hav
     <div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
         <SfFab id="fab" @ref="FabBtn" Target="#target" IconCss="@IconCss" Position="FabPosition.BottomRight" IsToggle="true" OnClick="@onToggleClick"></SfFab>
     </div>
-
-    <style>
-        .e-play::before{
-            content:'\e327';
-        }
-        .e-pause::before{
-            content:'\e325';
-        }
-    </style>
 
     @code{
         SfFab FabBtn;
