@@ -27,18 +27,18 @@ In the following example, Floating Action Button is demonstrated with only icons
 @using Syncfusion.Blazor.Buttons
 
 <div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
-    <SfFab id="fab" IconCss="e-icons e-menu"></SfFab>
+    <SfFab id="fab" IconCss="e-icons e-edit"></SfFab>
 </div>
 
 <style>
     .e-menu::before {
-        content: '\e99a';
+        content: '\e891';
     }
 </style>
 
 ```
 
-![Blazor Floating Action Button with Icon]()
+![Blazor Floating Action Button with Icon](./images/icon-only.png)
 
 ## Floating Action Button with Icon and Text
 
@@ -48,18 +48,18 @@ Use [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.Sf
 @using Syncfusion.Blazor.Buttons
 
 <div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
-    <SfFab id="fab" IconCss="e-icons e-menu" Content="Menu"></SfFab>
+    <SfFab id="fab" IconCss="e-icons e-edit" Content="Edit"></SfFab>
 </div>
 
 <style>
     .e-menu::before {
-        content: '\e99a';
+        content: '\e891';
     }
 </style>
 
 ```
 
-![Blazor Floating Action Button with Icon and Text]()
+![Blazor Floating Action Button with Icon and Text](./images/icon-with-text.png)
 
 ## Floating Action Button with Text Only
 
@@ -70,15 +70,9 @@ Use [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.Sf
 @using Syncfusion.Blazor.Buttons
 
 <div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
-    <SfFab id="fab" Content="Menu"></SfFab>
+    <SfFab id="fab" Content="Edit"></SfFab>
 </div>
-
-<style>
-    .e-menu::before {
-        content: '\e99a';
-    }
-</style>
 
 ```
 
-![Blazor Floating Action Button with Text only]()
+![Blazor Floating Action Button with Text only](./images/text-only.png)

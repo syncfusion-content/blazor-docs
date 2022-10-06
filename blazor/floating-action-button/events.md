@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Events in FloatingActionButton Component | Syncfusion
+title: Events in FloatingActionButton Component | Syncfusion
 description: Checkout and learn here all about Native Events in Syncfusion FloatingActionButton component and much more.
 platform: Blazor
 control: FloatingActionButton
 documentation: ug
 ---
 
-# Native Events in Floating Action Button Component
+# Events in Floating Action Button Component
 
 You can define the native event using `event` attribute in component. The value of attribute is treated as an event handler. The event specific data will be available in event arguments.
 
@@ -55,4 +55,5 @@ The `onclick` attribute is used to bind the click event for button. Here, we hav
 
 ```
 
-![Blazor Native Event Floating Action Button]()
+![Befor calling Event](./images/play-button.png)
+![After calling Event](./images/pause-button.png)

@@ -35,41 +35,48 @@ In this example, Floating Action Button is demonstrated with BottomLeft position
 
 ```cshtml
 
+@using Syncfusion.Blazor.Buttons
+
 <div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
-    <SfFab Target="#target" Position="FabPosition.BottomLeft" IconCss="e-icons e-link"></SfFab>
+    <SfFab Target="#target" Position="FabPosition.BottomLeft" IconCss="e-icons e-edit"></SfFab>
 </div>
 
 <style>
     .e-menu::before {
-        content: '\e34e';
+        content: '\e891';
     }
 </style>
 
 ```
+
+![Blazor Floating Action Button Component](./images/bottom-left-position.png)
+
 ## All avilable positions
 
 In this example, Floating Action Button is demonstrated with All position using Position property.
 
 ```cshtml
 
-<div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
-    <SfFab Target="#target" Position="FabPosition.TopLeft" IconCss="e-icons e-link"></SfFab>
-    <SfFab Target="#target" Position="FabPosition.TopCenter" IconCss="e-icons e-link"></SfFab>
-    <SfFab Target="#target" Position="FabPosition.TopRight" IconCss="e-icons e-link"></SfFab>
-    <SfFab Target="#target" Position="FabPosition.MiddleLeft" IconCss="e-icons e-link"></SfFab>
-    <SfFab Target="#target" Position="FabPosition.MiddleCenter" IconCss="e-icons e-link"></SfFab>
-    <SfFab Target="#target" Position="FabPosition.MiddleRight" IconCss="e-icons e-link"></SfFab>
-    <SfFab Target="#target" Position="FabPosition.BottomLeft" IconCss="e-icons e-link"></SfFab>
-    <SfFab Target="#target" Position="FabPosition.BottomCenter" IconCss="e-icons e-link"></SfFab>
-    <SfFab Target="#target" Position="FabPosition.BottomRight" IconCss="e-icons e-link"></SfFab>
+@using Syncfusion.Blazor.Buttons
+
+<div id="target" style="height:250px; position:relative; width:300px; border:1px solid;">
+    <SfFab Target="#target" Position="FabPosition.TopLeft" IconCss="e-icons e-edit"></SfFab>
+    <SfFab Target="#target" Position="FabPosition.TopCenter" IconCss="e-icons e-edit"></SfFab>
+    <SfFab Target="#target" Position="FabPosition.TopRight" IconCss="e-icons e-edit"></SfFab>
+    <SfFab Target="#target" Position="FabPosition.MiddleLeft" IconCss="e-icons e-edit"></SfFab>
+    <SfFab Target="#target" Position="FabPosition.MiddleCenter" IconCss="e-icons e-edit"></SfFab>
+    <SfFab Target="#target" Position="FabPosition.MiddleRight" IconCss="e-icons e-edit"></SfFab>
+    <SfFab Target="#target" Position="FabPosition.BottomLeft" IconCss="e-icons e-edit"></SfFab>
+    <SfFab Target="#target" Position="FabPosition.BottomCenter" IconCss="e-icons e-edit"></SfFab>
+    <SfFab Target="#target" Position="FabPosition.BottomRight" IconCss="e-icons e-edit"></SfFab>
 </div>
 
 <style>
     .e-menu::before {
-        content: '\e34e';
+        content: '\e891';
     }
 </style>
 
 ```
 
-![Blazor Floating Action Button Component]()
+![Blazor Floating Action Button Component](./images/all-positions.png)

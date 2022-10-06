@@ -27,14 +27,27 @@ The Blazor Floating Action Button has the following predefined styles that can b
 
 @using Syncfusion.Blazor.Buttons
 
-<SfFab IsPrimary=true Content="Primary"></SfFab>
-<SfFab CssClass="e-success" Content="Success"></SfFab>
-<SfFab CssClass="e-info" Content="Info"></SfFab>
-<SfFab CssClass="e-warning" Content="Warning"></SfFab>
-<SfFab CssClass="e-danger" Content="Danger"></SfFab>
-<SfFab CssClass="e-link" Content="Link"></SfFab>
+<div id="target" style="height:200px; position:relative; width:450px; border:1px solid;">
+    <SfFab IsPrimary=true Content="Primary"></SfFab>
+    <SfFab CssClass="e-success" Content="Success"></SfFab>
+    <SfFab CssClass="e-info" Content="Info"></SfFab>
+    <SfFab CssClass="e-warning" Content="Warning"></SfFab>
+    <SfFab CssClass="e-danger" Content="Danger"></SfFab>
+    <SfFab CssClass="e-link" Content="Link"></SfFab>
+</div>
 
 ```
 
+![Blazor Button Component with different Styles](./images/css-styles.png)
 
-![Blazor Button Component with different Styles]()
+## Styles Customization
+
+To modify the Floating Action Button appearance, you need to override the default CSS of Floating Action Button component. Please find the list of CSS classes and its corresponding section in Floating Action Button component. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+
+|CSS Class | Purpose of Class |
+|-----|----- |
+|.e-btn|To customize the button.|
+|.e-btn:hover|To customize the button on hover.|
+|.e-btn:focus|To customize the button on focus.|
+|.e-btn:active|To customize the button on active.|
+|.e-fab .e-icon-btn|To customize the fab button icons.|
