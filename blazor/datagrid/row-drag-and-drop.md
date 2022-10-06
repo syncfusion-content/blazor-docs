@@ -127,7 +127,7 @@ The following events are triggered while drag and drop the grid rows.
 [OnRowDragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRowDragStart) - Triggers when starts to drag the grid row.<br/>
 [RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDropped) -  Triggers when a drag element is dropped on the target element.
 
-> The Row feature requires a primary key column for row drag and drop action.
+> The Row feature requires a primary key column for the row drag and drop action.
 
 ## Limitations
 
