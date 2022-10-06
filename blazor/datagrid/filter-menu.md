@@ -227,9 +227,9 @@ The different filter types such as Excel, Menu, and Checkbox can be defined in d
 
 ## Filtering using DateRangePicker
 
-By default, for the date column in the filter menu, filtering action is performed based on a single date value selected from the `SfDatePicker` component. The Grid also has an option to perform the filtering action between the range of date values by rendering the `SfDateRangePicker` component in the filter menu. This can be achieved by the filter template feature of the Grid.
+By default, for the date column in the filter menu, filtering action is performed based on a single date value selected from the `SfDatePicker` component. The Grid also can perform the filtering action between the range of date values by rendering the `SfDateRangePicker` component in the filter menu. This can be achieved by the filter template feature of the Grid.
 
-In the following sample, the `SfDateRangePicker` component is rendered in the filter template. Using the ValueChange event of the `SfDateRangePicker`, you can get the start and end date values which are needed to perform the filtering action. In the OnActionBegin event of the Grid, the default filter action is prevented by setting the args.Cancel as true. Then you can perform the filtering action by setting the custom predicate values.
+In the following sample, the `SfDateRangePicker` component is rendered in the filter template. Using the `ValueChange` event of the `SfDateRangePicker`, get the start and end date values needed to perform the filtering action. In the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid, the default filter action is prevented by setting the `args.Cancel` as true. Then, perform the filtering action by setting the custom predicate values.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -326,3 +326,5 @@ In the following sample, the `SfDateRangePicker` component is rendered in the fi
     }
 }
 ```
+
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-filtering-using-date-range-picker)
