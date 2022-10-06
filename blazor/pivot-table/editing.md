@@ -281,6 +281,7 @@ Users can also add, delete, or update the underlying raw items of any data point
 ![Dialog Editing in Blazor PivotChart](images/blazor-pivotchart-editing-dialog.png)
 
 ## Events
+
 ### OnActionBegin
 
 The event [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) triggers when the UI actions such as CRUD operations (via dialog) and inline editing begin. This allows user to identify the current action being performed at runtime. It has the following parameters:
@@ -337,18 +338,18 @@ In the following example, editing actions such as add and save can be restricted
     {
         if(args.ActionName == "Add new record" && args.ActionName == "Save edited records")
         {
-          args.Cancel=true;
+          args.Cancel = true;
         }       
     }
 }
 ```
-### ActionComplete
+### OnActionComplete
 
-The event [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionComplete) triggers when a UI action such as CRUD operations (via dialog) or inline editing, is completed. This allows user to identify the current UI action being completed at runtime. It has the following parameters:
+The event [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionComplete) triggers when the UI action such as CRUD operations (via dialog) or inline editing, is completed. This allows user to identify the current UI action being completed at runtime. It has the following parameters:
 
-* [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_DataSourceSettings): It holds the current data source settings such as input data source, rows, columns, values, filters, format settings and so on.
+* [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_DataSourceSettings): It holds the current data source settings such as input data source, rows, columns, values, filters, format settings and so on.
 
-* [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_ActionName): It holds the name of the current action completed. The following are the UI actions and their names:
+* [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_ActionName): It holds the name of the current action completed. The following are the UI actions and their names:
 
 | Action | Action Name|
 |------|-------------|
@@ -357,7 +358,7 @@ The event [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 | Delete| Record removed |
 | Update| Records updated|
 
-* [ActionInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_ActionInfo):  It holds the unique information about the current UI action. For example, if save action is completed, the event argument contains information such as mode of editing and saved records.
+* [ActionInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_ActionInfo):  It holds the unique information about the current UI action. For example, if save action is completed, the event argument contains information such as mode of editing and saved records.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -391,7 +392,6 @@ The event [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.
         data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
-    // Triggers when the UI action is completed.
     public void ActionComplete(PivotActionCompleteEventArgs<ProductDetails> args)
     {
         if(args.ActionName == "New record added" && args.ActionName == "Edited records saved")
@@ -401,7 +401,7 @@ The event [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.
     }
 }
 ```
-### ActionFailure
+### OnActionFailure
 
 The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionFailure) triggers when the current UI action fails to achieve the desired result. It has the following parameters:
 
@@ -460,12 +460,11 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
         data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
-    // Triggers when the current UI action fails to achieve the desired result.
     public void ActionFailure(PivotActionFailureEventArgs args)
     {
-        if(args.ActionName == "Add new record" && args.ActionName == "Save edited records")
+        if(args.ActionName == "Add new record" && args.ActionName == "Edit record")
         {
-          // Your code here.
+          // Triggers when the current UI action fails to achieve the desired result.
         }       
     }
 }

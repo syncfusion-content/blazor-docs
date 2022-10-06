@@ -306,7 +306,7 @@ Allows end user to wrap the cell content to the next line when it exceeds the bo
 
 ## Text Align
 
-Allows end user to align the content of the pivot table's row and column headers and value cells by using the [`TextAlign`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_TextAlign) and [`HeaderTextAlign`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTextAlign) properties in the [`BeforeColumnsRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_BeforeColumnsRender) event. The following alignments are:
+Allows end user to align the content of the pivot table's row headers, column headers and value cells by using both [`TextAlign`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_TextAlign) and [`HeaderTextAlign`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTextAlign) properties in the [`BeforeColumnsRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_BeforeColumnsRender) event. The following alignments are:
 
 * [`Left`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.TextAlign.html#Syncfusion_Blazor_Grids_TextAlign_Left) - It allows the content to be positioned on the left.
 * [`Right`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.TextAlign.html#Syncfusion_Blazor_Grids_TextAlign_Right) - It allows the content to be positioned on the right.
@@ -343,7 +343,7 @@ Allows end user to align the content of the pivot table's row and column headers
     protected override void OnInitialized()
     {
         data = ProductDetails.GetProductData().ToList();
-        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
     private void ColumnRender(ColumnRenderEventArgs args)
     {
@@ -359,13 +359,15 @@ Allows end user to align the content of the pivot table's row and column headers
         }
         if (args.StackedColumns[1] != null && args.StackedColumns[1].Columns[0] != null && args.StackedColumns[1].Columns[0].Columns[0] != null)
         {
-            // Content for the values under "FY 2015 -> Q1 -> Units Sold" are Center-aligned here.
+            // Content for the values under "FY 2015 -> Q1 -> Units Sold" are center-aligned here.
             args.StackedColumns[1].Columns[0].Columns[0].TextAlign = Syncfusion.Blazor.Grids.TextAlign.Center;
         }
     }
 }
 
-![Aligning the content and header using TextAlign and HeaderTextAlign property](images/text-align.png)
+```
+
+![Align text inside the Blazor Pivot Table cell](images/text-align.png)
 
 ## Grid Lines
 
@@ -417,7 +419,7 @@ Available mode of grid lines are:
 
 ```
 
-![Blazor PivotGrid with GridLines](images/blazor-pivotgrid-gridlines.png)
+![Grid lines in Blazor Pivot Table](images/blazor-pivotgrid-gridlines.png)
 
 ## Selection
 

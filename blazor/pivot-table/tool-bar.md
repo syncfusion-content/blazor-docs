@@ -253,9 +253,9 @@ The event [SaveReport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.P
 
 ### BeforeExport
 
-The pivot table (or) pivot chart can be exported as a pdf, excel, csv etc.,  document using the toolbar options. And, you can customize the export settings for exporting document by using the `BeforeExport` event in the toolbar.
+The pivot table (or) pivot chart can be exported as a PDF, Excel, CSV, or other document via the toolbar options. And, you can customize the export settings for exporting document by using the `BeforeExport` event in the toolbar.
 
-For example, you can add the header and footer for the pdf document by setting the `header` and `footer` properties for the `PdfExportProperties` in the `BeforeExport` event.
+For example, you can add the header and footer for the PDF document by setting the `header` and `footer` properties for the `PdfExportProperties` in the `BeforeExport` event.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -500,9 +500,9 @@ In the below sample, toolbar UI actions such as add new report and save current 
     // Triggers when the UI action begins.
     public void ActionBegin(PivotActionBeginEventArgs args)
     {
-        if(args.ActionName == "Add new report" && args.ActionName == "Save current report")
+        if(args.ActionName == "Add new report" || args.ActionName == "Save current report")
         {
-          args.Cancel=true;
+          args.Cancel = true;
         }       
     }
 ```
@@ -588,12 +588,11 @@ The event [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
         data = ProductDetails.GetProductData();
         // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
-    // Triggers when the UI action is completed.
     public void ActionComplete(PivotActionCompleteEventArgs<ProductDetails> args)
     {
-        if(args.ActionName == "New report added" && args.ActionName == "Report saved")
+        if(args.ActionName == "New report added" || args.ActionName == "Report saved")
         {
-            /// Your code here.
+            // Triggers when the toolbar UI actions such as add new report and save current report icon are completed.
         }
     }
 ```
@@ -679,12 +678,11 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
         data = ProductDetails.GetProductData();
         // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.  
     }
-    // Triggers when the UI action fails to achieve the desired result.
     public void ActionFailure(PivotActionFailureEventArgs args)
     {
-        if(args.ActionName=="Add new report")
+        if(args.ActionName == "Add new report" || args.ActionName == "Save current report")
         {
-            /// Your code here.
+            // Triggers when the current UI action fails to achieve the desired result. 
         }       
     }
 
