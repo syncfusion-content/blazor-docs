@@ -986,12 +986,12 @@ The `SfTextBox` component is defined inside the EditTemplate and changes can be 
 
 ### Prevent enter key functionality in multiline textbox while editing
 
-By default, pressing the ENTER key will save the changes in the Grid when focus is in the Grid Edit form (both normal and dialog edit mode). In Multiline Textbox, the ENTER key should add a new line break instead of saving the edited changes while editing. This can be achieved by using Microsoft JsInterop.
+By default, pressing the ENTER key will save the changes in the Grid when focusing on the Grid Edit form (both normal and dialog edit mode). In Multiline Textbox, the ENTER key should add a new line break instead of saving the edited changes while editing. This can be achieved by using Microsoft JsInterop.
 
-In the following sample, the Multiline Textbox is rendered in the Customer ID column. The Microsoft JsInterop is used to call a JavaScript function in the SfTextBox's OnFocus event. Here, the ENTER key action can be prevented from occurring by using the `stopPropagation()` method.
+In the following sample, Multiline Textbox is rendered in the Customer ID column. The Microsoft JsInterop is used to call a JavaScript function in the SfTextBox's `OnFocus` event. Here, the ENTER key action can be prevented from occurring by using the `stopPropagation()` method.
 
 ```cshtml
-function EditKeyDown(id) {    
+function editKeyDown(id) {    
     document.getElementById(id).addEventListener("keydown", function (e) {        
         if (e.key == "Enter") {            
             e.stopPropagation();
@@ -1024,7 +1024,7 @@ function EditKeyDown(id) {
     public string[] ToolbarItems = new string[] { "Add", "Edit", "Delete", "Update", "Cancel" };
     public void Focus()
     {
-        Runtime.InvokeVoidAsync("EditKeyDown", "CustomerID");
+        Runtime.InvokeVoidAsync("editKeyDown", "CustomerID");
     }
     List<Order> OrderData = new List<Order>
     {
@@ -1045,9 +1045,12 @@ function EditKeyDown(id) {
         public string CustomerID { get; set; }
         public double Freight { get; set; }
         public string ShipName { get; set; }
+        public Boolean Verified { get; set; }
     }
 }
 ```
+
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-prevent-enter-key-functionality-in-multiline-textbox)
 
 ## See also
 
