@@ -13,6 +13,56 @@ documentation: ug
 
 To know more about this event, refer [here](./grouping-bar/#aggregatemenuopen).
 
+## BeforeColumnsRender
+
+The event [`BeforeColumnsRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_BeforeColumnsRender) triggers while framing each columns for rendering in the pivot table. It allows the user to customize the text alignment, column visibility, autofit, re-ordering, minimum and maximum width for a specific column. It has the following parameters: 
+
+* [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ColumnRenderEventArgs.html#Syncfusion_Blazor_PivotView_ColumnRenderEventArgs_Columns) - It holds the leaf level columns (i.e., value headers) information.
+
+* [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ColumnRenderEventArgs.html#Syncfusion_Blazor_PivotView_ColumnRenderEventArgs_DataSourceSettings) - It holds the current data source settings such as input data source, rows, columns, values, filters, format settings and so on.
+
+* [StackedColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ColumnRenderEventArgs.html#Syncfusion_Blazor_PivotView_ColumnRenderEventArgs_StackedColumns) - It holds the drilled columns (i.e., including column and value headers) information.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="ProductDetails">
+    <PivotViewDataSourceSettings DataSource="@data" ExpandAll="true">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="In_Stock" Caption="In Stock"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+            <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>        
+     <PivotViewEvents TValue="ProductDetails" BeforeColumnsRender="ColumnRender"></PivotViewEvents>   
+</SfPivotView>
+
+@code{
+    private List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        data = ProductDetails.GetProductData().ToList();
+        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+    private void ColumnRender(ColumnRenderEventArgs args)
+    {
+        // triggers before the columns are rendered.
+    }
+}
+
+```
+
 ## BeforeExport
 
 To know more about this event, refer [here](./tool-bar/#beforeexport).
@@ -425,6 +475,64 @@ To know more about this event, refer [here](./excel-export/#excelheaderquerycell
 ## ExcelQueryCellInfo
 
 To know more about this event, refer [here](./excel-export/#excelquerycellinfo).
+
+## ExportCompleted 
+
+The event [`ExportCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ExportCompleted) is triggered after the pivot table (or) pivot chart has been exported to a PDF, Excel, CSV, or other document.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.Grids
+
+<SfPivotView @ref="pivot" TValue="ProductDetails" EnableVirtualization="true" ShowFieldList="true" ShowToolbar="true" Toolbar="@toolbar" AllowNumberFormatting="true" AllowConditionalFormatting="true" AllowPdfExport="true" AllowExcelExport="true" Height="300" Width="800">
+    <PivotViewDisplayOption Primary=Primary.Table View=View.Both></PivotViewDisplayOption>
+        <PivotViewDataSourceSettings DataSource="@data" ShowGrandTotals="true" ShowSubTotals="true">
+            <PivotViewColumns>
+                <PivotViewColumn Name="Year"></PivotViewColumn>
+                <PivotViewColumn Name="Quarter"></PivotViewColumn>
+            </PivotViewColumns>
+            <PivotViewRows>
+                <PivotViewRow Name="Country"></PivotViewRow>
+                <PivotViewRow Name="Products"></PivotViewRow>
+            </PivotViewRows>
+            <PivotViewValues>
+                <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+            </PivotViewValues>
+            <PivotViewFormatSettings>
+                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            </PivotViewFormatSettings>
+        </PivotViewDataSourceSettings>
+        <PivotViewEvents TValue="ProductDetails" ExportCompleted="ExportCompleted"></PivotViewEvents>
+        <PivotViewGridSettings ColumnWidth="120"></PivotViewGridSettings>
+</SfPivotView>
+
+@code{
+    SfPivotView<ProductDetails> pivot;
+
+    public List<ToolbarItems> toolbar = new List<ToolbarItems> {
+        ToolbarItems.Grid,
+        ToolbarItems.Chart,
+        ToolbarItems.Export,
+        ToolbarItems.SubTotal,
+        ToolbarItems.GrandTotal,
+        ToolbarItems.ConditionalFormatting,
+        ToolbarItems.NumberFormatting,
+        ToolbarItems.FieldList
+    };
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+    private void ExportCompleted(object args)
+    {
+       // Triggers when the pivot table (or) pivot chart has been exported to a pdf, excel, csv etc., document.
+    }
+}
+
+```
 
 ## FetchReport
 

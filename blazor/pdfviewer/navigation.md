@@ -139,6 +139,29 @@ You can enable or disable the thumbnail navigation pane by setting the `EnableTh
 }
 ```
 
+### Open thumbnail panel programmatically
+
+You can view the thumbnail navigation initially while loading the PDF document in the PDFViewer using the `IsThumbnailPanelOpen` property.
+
+The following code illustrates how to open thumbnail panel programmatically.
+
+```cshtml
+@using Syncfusion.Blazor.PdfViewerServer
+@using Syncfusion.Blazor.PdfViewer
+
+<!--IsThumbnailPanelOpen property will enable the thumbnail panel on initial rendering itself-->
+<SfPdfViewerServer @ref="@PDFViewer" DocumentPath="@DocumentPath" IsThumbnailPanelOpen="true" Height="894px" Width="100%"> </SfPdfViewerServer>
+
+@code{
+    public SfPdfViewerServer PDFViewer { get; set; }
+
+    //Sets the PDF document path for initial loading.
+    private string DocumentPath { get; set; } = "wwwroot/data/PDF Succinctly.pdf";
+}
+```
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Open%20Thumbnail%20Programmatically).
+
 ## Hyperlink navigation
 
 Hyperlink navigation features enables navigation to the URLs (website links) in a PDF file.
