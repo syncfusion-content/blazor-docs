@@ -21,7 +21,7 @@ In this section, you can learn how to consume data from a database using [Dapper
 
 Open Visual Studio 2019 and follow the steps in the below documentation to create the Blazor Server Application.
 
-[Creating Blazor Server Application](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/)
+[Creating Blazor Server Application](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 
 ## Creating the database
 
