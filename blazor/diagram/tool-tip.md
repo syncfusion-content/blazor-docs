@@ -175,7 +175,9 @@ The following code example is used to set tooltip position for connectors.
 
 ## How to set tooltip content for nodes/connectors
 
-The following code example is used to set tooltip [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) for nodes.
+A text or a piece of information assigned to the Tooltip’s [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) property will be displayed as the main content of the Tooltip for nodes/connectors.
+
+The following code example is used to set tooltip content for nodes.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
