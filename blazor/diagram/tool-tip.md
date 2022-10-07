@@ -85,7 +85,7 @@ The following code example illustrates how to customize the tooltip for connecto
 
 ## How to set tooltip position for nodes/connectors
 
-Tooltips can be attached to 12 static locations around the target. On initializing the Tooltip, set the position property with any one of the following values:
+Tooltips can be attached to 12 static locations around the target. On initializing the Tooltip, set the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Position) property with any one of the following values:
 
 * `TopLeft`
 * `TopCenter`
@@ -175,7 +175,7 @@ The following code example is used to set tooltip position for connectors.
 
 ## How to set tooltip content for nodes/connectors
 
-The following code example is used to set tooltip content for nodes.
+The following code example is used to set tooltip [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) for nodes.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -249,7 +249,7 @@ The following code example is used to set tooltip content for connectors.
 
 ## How to shows/hides the tip pointer for tooltip
 
-ShowTipPointer property value is true, if the tip pointer is visible; otherwise, false.
+[ShowTipPointer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_ShowTipPointer) property value is true, if the tip pointer is visible; otherwise, false.
 
 The following code example is used to set tooltip tip pointer for nodes.
 
@@ -324,7 +324,7 @@ The following code example is used to set tooltip tip pointer for connectors.
 
 ## Tooltip template content
 
-To customize the tooltip content or to create your own visualized element on the tooltip, template can be used.
+To customize the tooltip content or to create your own visualized element on the tooltip, [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Template) can be used.
 
 The following code example illustrates how to add formatted template content to the tooltip for nodes.
 
@@ -410,7 +410,7 @@ The following code example illustrates how to add formatted template content to 
 
 ## Tooltip animation
 
-To animate the tooltip, a set of specific animation effects are available, and it can be controlled by using the animation property. The animation property also allows you to set delay, duration, and various other effects of your choice.
+To animate the tooltip, a set of specific animation effects are available, and it can be controlled by using the animation property. The [Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_AnimationSettings) property also allows you to set delay, duration, and various other effects of your choice.
 
 The following code example illustrates how to set animation to the tooltip for nodes.
 
@@ -502,7 +502,7 @@ The following code example illustrates how to set animation to the tooltip for c
 
 ## Tooltip Open Mode
 
-The mode on which the Tooltip is to be opened on a page, i.e., on hovering, focusing, or clicking on the target elements can be decided. On initializing the Tooltip, set the open mode property with any one of the following values:
+The mode on which the Tooltip is to be opened on a page, i.e., on hovering, focusing, or clicking on the target elements can be decided. On initializing the Tooltip, set the [OpensOn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_OpensOn) property with any one of the following values:
 
 * `Auto`
 * `Hover`
