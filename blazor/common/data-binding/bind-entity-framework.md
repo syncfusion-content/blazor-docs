@@ -116,7 +116,7 @@ namespace ODataServiceProject
         public void ConfigureServices(IServiceCollection services)
         {
             
-            services.AddDbContext<OrdersDetailsContext>(option => 
+            services.AddDbContext<LibraryContext>(option => 
                 option.UseSqlServer(Configuration.GetConnectionString("LibraryDatabase")));
             ...
         }
