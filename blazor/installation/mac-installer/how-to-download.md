@@ -42,7 +42,7 @@ You should initiate an evaluation if you have already obtained our components th
 
    ![Trial Download](images/start-trial-download.PNG)
 
-2. To access this page, you must sign up\log in with your Syncfusion account.
+2. To access this page, you must sign up/log in with your Syncfusion account.
 
 3. Begin your trial by selecting the Blazor product.
 
