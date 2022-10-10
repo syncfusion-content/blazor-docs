@@ -116,7 +116,7 @@ Syncfusion Blazor Themes are available in the CDN. Make sure that the version in
 
 ## NPM package reference
 
-The Blazor Themes NPM package contains `SCSS` files for all themes supported by Syncfusion Blazor components. These SCSS files customize theme variables using a web compiler. The package includes component SCSS files and single SCSS files.
+The Blazor Themes NPM package contains `SCSS` files for all themes supported by Syncfusion Blazor components. These SCSS files customize theme variables using a web compiler. The package includes component wise SCSS files and overall components SCSS files.
 
 You can add the `theme` for the Blazor applications through NPM package using the `SCSS` files by following the below process.
 
