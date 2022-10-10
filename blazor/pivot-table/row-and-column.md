@@ -304,6 +304,71 @@ Allows end user to wrap the cell content to the next line when it exceeds the bo
 
 ![Text Wrapping in Blazor PivotTable](images/blazor-pivottable-text-wrap.png)
 
+## Text Align
+
+Allows end user to align the content of the pivot table's row headers, column headers and value cells by using both [`TextAlign`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_TextAlign) and [`HeaderTextAlign`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTextAlign) properties in the [`BeforeColumnsRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_BeforeColumnsRender) event. The following alignments are:
+
+* [`Left`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.TextAlign.html#Syncfusion_Blazor_Grids_TextAlign_Left) - It allows the content to be positioned on the left.
+* [`Right`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.TextAlign.html#Syncfusion_Blazor_Grids_TextAlign_Right) - It allows the content to be positioned on the right.
+* [`Center`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.TextAlign.html#Syncfusion_Blazor_Grids_TextAlign_Center) - It allows the content to be positioned in the middle.
+* [`Justify`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.TextAlign.html#Syncfusion_Blazor_Grids_TextAlign_Justify) - It allows the content to be as flexible as possible, when the cell does not occupy the entire available area.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="ProductDetails">
+    <PivotViewDataSourceSettings DataSource="@data" ExpandAll="true">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="In_Stock" Caption="In Stock"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+            <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>        
+     <PivotViewEvents TValue="ProductDetails" BeforeColumnsRender="ColumnRender"></PivotViewEvents>   
+</SfPivotView>
+
+@code{
+    private List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        data = ProductDetails.GetProductData().ToList();
+        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+    private void ColumnRender(ColumnRenderEventArgs args)
+    {
+        if (args.StackedColumns[0] != null)
+        {
+            // Content for the row headers is right-aligned here.
+            args.StackedColumns[0].TextAlign = Syncfusion.Blazor.Grids.TextAlign.Right;
+        }        
+        if (args.StackedColumns[1] != null && args.StackedColumns[1].Columns[0] != null && args.StackedColumns[1].Columns[0].Columns[0] != null)
+        {
+            // Content for the value header "FY 2015 -> Q1 -> Units Sold" is right-aligned here.
+            args.StackedColumns[1].Columns[0].Columns[0].HeaderTextAlign = Syncfusion.Blazor.Grids.TextAlign.Right;
+        }
+        if (args.StackedColumns[1] != null && args.StackedColumns[1].Columns[0] != null && args.StackedColumns[1].Columns[0].Columns[0] != null)
+        {
+            // Content for the values under "FY 2015 -> Q1 -> Units Sold" are center-aligned here.
+            args.StackedColumns[1].Columns[0].Columns[0].TextAlign = Syncfusion.Blazor.Grids.TextAlign.Center;
+        }
+    }
+}
+
+```
+
+![Align text inside the Blazor Pivot Table cell](images/text-align.png)
+
 ## Grid Lines
 
 Allows end user to display cell border for each cells using [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_GridLines) property in [PivotViewGridSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) class.
@@ -354,7 +419,7 @@ Available mode of grid lines are:
 
 ```
 
-![Blazor PivotGrid with GridLines](images/blazor-pivotgrid-gridlines.png)
+![Grid lines in Blazor Pivot Table](images/blazor-pivotgrid-gridlines.png)
 
 ## Selection
 
