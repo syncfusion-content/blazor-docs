@@ -77,7 +77,7 @@ You can handle the grid's state manually by using in-built state persistence met
 <SfButton OnClick="@(() => Grid.SetPersistData(_state))">Set State</SfButton>
 <SfButton OnClick="@(() => Grid.ResetPersistData())">Reset State</SfButton>
 
-<SfGrid @ref="Grid" ID="GridOneTwo" DataSource="@Orders" Height="315" EnablePersistence="true" AllowPaging="true" AllowFiltering="true" AllowGrouping="true" AllowSorting="true">
+<SfGrid @ref="Grid" ID="GridOneTwo" DataSource="@Orders" Height="315" AllowPaging="true" AllowFiltering="true" AllowGrouping="true" AllowSorting="true">
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
