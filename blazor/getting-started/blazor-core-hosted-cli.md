@@ -103,7 +103,7 @@ namespace BlazorApp.Client
         {
             ....
             ....
-            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+            builder.Services.AddSyncfusionBlazor();
             await builder.Build().RunAsync();
         }
     }

@@ -107,7 +107,7 @@ Meanwhile, the user can also view calculated field dialog in UI by invoking [Cre
 
 ![Displaying Calculated Field Button in Blazor PivotTable](images/blazor-pivottable-calculated-field-button.png)
 
-![Displaying Calculated Field Button in Blazor PivotTable](images/blazor-pivottable-calc-field-button.png)
+![Displaying Calculated Field Button in Blazor PivotTable](images/blazor-pivottable-calc-field.png)
 
 ## Editing through the field list and the grouping bar
 
@@ -116,17 +116,17 @@ User can also modify the existing calculated field using the built-in edit optio
 ![Editing Calculated Field in Blazor PivotTable](images/blazor-pivottable-editing-calculated-field.png)
 <br/>
 <br/>
-![Editing Calculated Field Formula in Blazor PivotTable](images/blazor-pivottable-editing-field-formula.png)
+![Editing Calculated Field Formula in Blazor PivotTable](images/blazor-pivottable-calc-fieldlist-edit.png)
 
 ## Renaming the existing calculated field
 
 Existing calculated field can be renamed only through the UI at runtime. To do so, open the calculated field dialog, select the target field and click "Edit" icon. User can now see the existing name getting displayed in the text box at the top of the dialog. Now, change the name based on user requirement and click "OK".
 
 <!-- markdownlint-disable MD012 -->
-![Editing in Blazor PivotTable Calculated Field](images/blazor-pivottable-editing-calculate-field.png)
+![Editing in Blazor PivotTable Calculated Field](images/blazor-pivottable-edit-calculate-field.png)
 <br/>
 <br/>
-![Renaming in Blazor PivotTable Calculated Field](images/blazor-pivottable-renaming-calculate-field.png)
+![Renaming in Blazor PivotTable Calculated Field](images/blazor-pivottable-renaming-calc-field.png)
 
 ## Editing the existing calculated field formula
 
@@ -135,26 +135,39 @@ Existing calculated field formula can be edited only through the UI at runtime. 
 ![Editing in Blazor PivotTable Calculated Field](images/blazor-pivottable-editing-calculated-field.png)
 <br/>
 <br/>
-![Editing in Blazor PivotTable Calculated Field Formula](images/blazor-pivottable-edit-calculate-field-formula.png)
+![Editing in Blazor PivotTable Calculated Field Formula](images/blazor-pivottable-edit-calc-field-formula.png)
 
 ## Reusing the existing formula in a new calculate field
 
 While creating a new calculated field, if the user wants to the add the formula of an existing calculated field, it can be done easily. To do so, simply drag-and-drop the existing calculated field to the "Formula" section.
 
-![Dragging Existing Calculated Field in Blazor PivotTable](images/blazor-pivottable-drag-existing-calc-field.png)
+![Dragging Existing Calculated Field in Blazor PivotTable](images/blazor-pivottable-drag-existing-calculated-field.png)
 <br/>
 <br/>
-![Dragging Blazor PivotTable Field to Formula](images/blazor-pivottable-drag-field-to-formula.png)
+![Dragging Blazor PivotTable Field to Formula](images/blazor-pivottable-drag-calc-field-to-formula.png)
 <br/>
 <br/>
-![Reusing Existing Calculated Field Formula in Blazor PivotTable](images/blazor-pivottable-reusing-existed-field-formula.png)
+![Reusing Existing Calculated Field Formula in Blazor PivotTable](images/blazor-pivottable-reusing-existed-calc-field-formula.png)
 
 ## Apply the format to the calculated field values
 
-The values in the new or existing calculated field can be formatted through its UI and also through code behind. To format the calculated field values at runtime, the built-in textbox is available under the "Format" label where the user can set the desired format. Likewise, in code-behind, you can set the desired format using the [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.FormatSettingsModel.html) property as illustrated in the introduction section. For more information about the supported formats [refer here](https://blazor.syncfusion.com/documentation/pivot-table/number-formatting/).
+Values in a new or existing calculated field can be formatted via the calculated field UI or code behind. The [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html) property in code-behind can be used to specify the desired format. For more information about the supported formats [refer here](https://blazor.syncfusion.com/documentation/pivot-table/number-formatting/).
 
-![Applying Format to Blazor PivotTable Calculated Field](images/blazor-pivottable-apply-format-in-calculated-field.png)
+To apply format to calculated field values at runtime via UI, a built-in dropdown under the "Format" label is available, from which the user can select the pre-defined format options listed below.
 
+* **Standard** - Denotes the numeric type.
+* **Currency** - Denotes the currency type.
+* **Percentage** - Denotes the percentage type.
+* **Custom** - Denotes the custom format. For example: "C2". This shows the value "9584.3" as "$9584.30."
+* **None** - Denotes that no format will be applied.
+
+> By default, **None** will be selected from the dropdown.
+
+![Applying Format to Blazor PivotTable Calculated Field](images/blazor-pivottable-calc-formatstring.png)
+
+In addition, you can specify the desired custom formats by selecting the **Custom** option from the "Format" dropdown.
+
+![Applying custom format through Blazor PivotTable calculated field dialog UI](images/calculatdfield-apply-custom-Format.png)
 ## Supported operators and functions for the calculated field formula
 
 Below is a list of operators and functions that can be used in the formula to create the calculated fields.
