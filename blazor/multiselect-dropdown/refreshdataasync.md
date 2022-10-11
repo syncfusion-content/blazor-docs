@@ -44,7 +44,7 @@ The WebApiadaptor used with the controller and RefreshDataAsync function is deno
 ​​​​​​​{% endtabs %}
 
 ### Url adaptor:
-When the `RefreshDataAsync` method is used, The query property in the Urladaptor is required to render the data source initially with the Url link. But, the query property is not required to refresh the data source only the Url link is required.
+When the `RefreshDataAsync` method is used, In the Urladaptor the query's `RequiresCount()` property is required to render the data source initially with the Url link. But, the query property is not required to refresh the data source only the Url link is required.
 
 The Urladaptor used with the controller and RefreshDataAsync function is denoted in the following code.
 
