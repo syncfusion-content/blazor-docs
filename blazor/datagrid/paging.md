@@ -115,7 +115,7 @@ The pager dropdown allows you to change the number of records in the DataGrid dy
 
 ## Display All records through pager dropdown
 
-The Grid has an option to show all the records in the Grid component through the pager dropdown in the initial rendering. This can be achieved by setting the total record count to the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) property of the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html) class and customizing the dropdown values using the [PageSizes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSizes) property. This total count will select the "All" page size drop down on initial rendering.
+The Grid component has an option to show all the records through the pager dropdown during the initial rendering. This can be achieved by defining the total record count in the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) property of the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html) class and customizing the dropdown values using the [PageSizes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSizes) property. This total count will select the "All" page size drop down on initial rendering.
 
 This can be demonstrated in the following sample.
 
