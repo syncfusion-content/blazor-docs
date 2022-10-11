@@ -151,7 +151,7 @@ While creating a new calculated field, if the user wants to the add the formula 
 
 ## Apply the format to the calculated field values
 
-Values in a new or existing calculated field can be formatted via the calculated field UI or code behind. The [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html) property in code-behind can be used to specify the desired format. For more information about the supported formats [refer here](https://blazor.syncfusion.com/documentation/pivot-table/number-formatting/).
+Values in a new or existing calculated field can be formatted via the calculated field UI or code behind. The [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html) property in code-behind can be used to specify the desired format. For more information about the supported formats [refer here](https://blazor.syncfusion.com/documentation/pivot-table/number-formatting).
 
 To apply format to calculated field values at runtime via UI, a built-in dropdown under the "Format" label is available, from which the user can select the pre-defined format options listed below.
 
