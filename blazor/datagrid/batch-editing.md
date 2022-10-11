@@ -340,9 +340,9 @@ Also, the add operation is handled while performing batch editing using the bool
 
 ```
 
-## How to select a text in a cell when batch editing
+## Select entire text of cell while editing in batch editing mode
 
-By default, when editing the text in a particular cell in batch editing, the cursor will be placed at the end of the text. Instead of this behavior, the entire text of the corresponding cell to be selected when editing. This can be achieved by the [OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) and [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) events of the Grid.
+By default, while editing a particular cell in batch edit mode, the cursor will be placed at the end of the text once the cell is changed to edited state. Instead of this behavior, the entire text of the cell to be selected when the corresponding cell is in edited state. This can be achieved by the [OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) and [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) events of the Grid.
 
 In the following sample, the select() method is called using Microsoft.JSInterop in the `RowSelected` event handler to select the content or particular rendered input element.
 
