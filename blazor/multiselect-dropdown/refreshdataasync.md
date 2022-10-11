@@ -24,7 +24,7 @@ In the example below, the first render makes use of 5 datas without using the [Q
 >When utilising the `RefreshDataAsync` method with the filter enabled, you must prevent the component's default actions before calling the url link and the RefreshDataAsync function in the Filtering Event.
 
 ### Web API adaptor:
-We must use a local controller `WebApiadaptor` to use the `RefreshDataAsync` method in WebApiadaptor.
+We must use a customized controller `WebApiadaptor` to use the `RefreshDataAsync` method in WebApiadaptor.
 In this case, the url link is used to render and refresh the data source.
 
 The WebApiadaptor used with the controller and RefreshDataAsync function is denoted in the following code.
