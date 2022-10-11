@@ -15,13 +15,13 @@ To know more about this event, refer [here](./grouping-bar/#aggregatemenuopen).
 
 ## BeforeColumnsRender
 
-The event [`BeforeColumnsRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_BeforeColumnsRender) triggers while framing each columns for rendering in the pivot table. It allows the user to customize the text alignment, column visibility, autofit, re-ordering, minimum and maximum width for a specific column. It has the following parameters: 
+The event [BeforeColumnsRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_BeforeColumnsRender) triggers while framing each columns for rendering in the pivot table. It allows the user to customize the text alignment, column visibility, autofit, re-ordering, minimum and maximum width for a specific column. It has the following parameters: 
 
-* [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ColumnRenderEventArgs.html#Syncfusion_Blazor_PivotView_ColumnRenderEventArgs_Columns) - It holds the leaf level columns (i.e., value headers) information.
+* [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ColumnRenderEventArgs.html#Syncfusion_Blazor_PivotView_ColumnRenderEventArgs_Columns): It holds the leaf level columns (i.e., value headers) information.
 
-* [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ColumnRenderEventArgs.html#Syncfusion_Blazor_PivotView_ColumnRenderEventArgs_DataSourceSettings) - It holds the current data source settings such as input data source, rows, columns, values, filters, format settings and so on.
+* [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ColumnRenderEventArgs.html#Syncfusion_Blazor_PivotView_ColumnRenderEventArgs_DataSourceSettings): It holds the current data source settings such as input data source, rows, columns, values, filters, format settings and so on.
 
-* [StackedColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ColumnRenderEventArgs.html#Syncfusion_Blazor_PivotView_ColumnRenderEventArgs_StackedColumns) - It holds the drilled columns (i.e., including column and value headers) information.
+* [StackedColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ColumnRenderEventArgs.html#Syncfusion_Blazor_PivotView_ColumnRenderEventArgs_StackedColumns): It holds the drilled columns (i.e., including column and value headers) information.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
