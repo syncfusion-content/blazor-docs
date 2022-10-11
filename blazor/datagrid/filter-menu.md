@@ -224,3 +224,107 @@ The following screenshot represents CheckBox filter
 ### Limitations of using different filter types in different columns
 
 The different filter types such as Excel, Menu, and Checkbox can be defined in different columns of the same Grid. However, you cannot use these filter types along with filterBar type (default filter type). Because the filterbar type requires UI level changes with other filter types. For all other filter types, icons will be rendered in the column header.
+
+## Filtering using DateRangePicker
+
+By default, for the date column in the filter menu, filtering action is performed based on a single date value selected from the `SfDatePicker` component. The Grid also can perform the filtering action between the range of date values by rendering the `SfDateRangePicker` component in the filter menu. This can be achieved by the filter template feature of the Grid.
+
+In the following sample, the `SfDateRangePicker` component is rendered in the filter template. Using the `ValueChange` event of the `SfDateRangePicker`, get the start and end date values needed to perform the filtering action. In the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid, the default filter action is prevented by setting the `args.Cancel` as true. Then, perform the filtering action by setting the custom predicate values.
+
+```cshtml
+@using Syncfusion.Blazor.Calendars
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="Grid" TValue="Order" AllowFiltering="true" AllowPaging="true" DataSource="@Orders">
+    <GridEvents OnActionBegin="OnActionBegin" TValue="Order"></GridEvents>
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true"
+                    TextAlign ="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="MM/dd/yyyy hh:mm tt"
+                    TextAlign="TextAlign.Right" Width="250">
+            <FilterTemplate>
+            @{
+                <SfDateRangePicker Placeholder="Choose a Range" Width="500" ShowClearButton="true"
+                                   @bind-StartDate="StartDate" @bind-EndDate="EndDate" TValue="DateTime">
+                    <DateRangePickerEvents TValue="DateTime" ValueChange="ValueChangeHandler">
+                    </DateRangePickerEvents>
+                </SfDateRangePicker>
+            }
+            </FilterTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" 
+                    TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    private SfGrid<Order> Grid;
+    public DateTime StartDate { get; set; }
+    public DateTime EndDate { get; set; }
+    public List<Order> Orders { get; set; }
+    public async Task OnActionBegin(ActionEventArgs<Order> args)
+    {
+        if (args.RequestType == Syncfusion.Blazor.Grids.Action.Filtering && 
+            args.CurrentFilteringColumn == "OrderDate")
+        {
+            args.Cancel = true; //cancel default filter action
+            if (Grid.FilterSettings.Columns == null)
+            {
+                Grid.FilterSettings.Columns = new List<GridFilterColumn>();
+            }
+            if (Grid.FilterSettings.Columns.Count > 0)
+            {
+                Grid.FilterSettings.Columns.RemoveAll(c => c.Field == "OrderDate");
+            }
+            // Get all the Grid columns.
+            var columns = await Grid.GetColumns();
+            // Fetch the Uid of OrderDate column.
+            string fUid = columns[2].Uid;
+            Grid.FilterSettings.Columns.Add(new GridFilterColumn
+            {
+                Field = "OrderDate",
+                Operator = Syncfusion.Blazor.Operator.GreaterThanOrEqual,
+                Predicate = "and",
+                Value = StartDate,
+                Uid = fUid
+            });
+            Grid.FilterSettings.Columns.Add(new GridFilterColumn
+            {
+                Field = "OrderDate",
+                Operator = Syncfusion.Blazor.Operator.LessThanOrEqual,
+                Predicate = "and",
+                Value = EndDate.AddDays(1).AddSeconds(-1),
+                Uid = fUid
+            });
+            Grid.Refresh();
+        }
+    }
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+    public void ValueChangeHandler(RangePickerEventArgs<DateTime> args)
+    {
+        StartDate = args.StartDate;
+        EndDate = args.EndDate;
+    }
+}
+```
+
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-filtering-using-date-range-picker)

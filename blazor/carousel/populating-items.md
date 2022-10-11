@@ -180,3 +180,123 @@ Using the [PreviousAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
     }
 </style>
 ```
+
+## Partial visible slides
+
+The Carousel component supports to show one complete slide and a partial view of adjacent (previous and next) slides at the same time. You can enable or disable the partial slides using the [`partialVisible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_PartialVisible) property.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<div class="control-container">
+    <SfCarousel PartialVisible=true>
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/cardinal.png" alt="cardinal" style="height:100%;width:100%;" /><figcaption class="img-caption">Cardinal</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/hunei.png" alt="kingfisher" style="height:100%;width:100%;" /><figcaption class="img-caption">Kingfisher</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/costa-rica.png" alt="keel-billed-toucan" style="height:100%;width:100%;" /><figcaption class="img-caption">Keel-billed-toucan</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/kaohsiung.png" alt="yellow-warbler" style="height:100%;width:100%;" /><figcaption class="img-caption">Yellow-warbler</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+           <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/bee-eater.png" alt="bee-eater" style="height:100%;width:100%;" /><figcaption class="img-caption">Bee-eater</figcaption></figure>
+        </CarouselItem>
+    </SfCarousel>
+</div>
+
+<style>
+    .control-container {
+        margin: 0 auto 2em;
+        max-width: 800px;
+        height: 300px;
+    }
+
+    .img-container {
+        margin: 0 10px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .img-caption {
+        bottom: 4em;
+        color: #fff;
+        font-size: 12pt;
+        height: 2em;
+        position: relative;
+        padding: 0.3em 1em;
+        text-align: center;
+        width: 100%;
+    }
+
+</style>
+```
+
+![Carousel partial visible slide](images/partial-visible.jpg)
+
+> Slide animation only applicable if the `partialVisible` is enabled. 
+
+The last slide will be displayed as a partial slide at the initial rendering when the [`loop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_Loop) and `partialVisible` properties are enabled.
+
+The previous slide is not displayed at the initial rendering when the `loop` is disabled.
+
+The following example code depicts the functionality of `partialVisible` and without `loop` functionalities.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<div class="control-container">
+    <SfCarousel PartialVisible="true" Loop="false">
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/cardinal.png" alt="cardinal" style="height:100%;width:100%;" /><figcaption class="img-caption">Cardinal</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/hunei.png" alt="kingfisher" style="height:100%;width:100%;" /><figcaption class="img-caption">Kingfisher</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/costa-rica.png" alt="keel-billed-toucan" style="height:100%;width:100%;" /><figcaption class="img-caption">Keel-billed-toucan</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/kaohsiung.png" alt="yellow-warbler" style="height:100%;width:100%;" /><figcaption class="img-caption">Yellow-warbler</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+           <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/bee-eater.png" alt="bee-eater" style="height:100%;width:100%;" /><figcaption class="img-caption">Bee-eater</figcaption></figure>
+        </CarouselItem>
+    </SfCarousel>
+</div>
+
+<style>
+    .control-container {
+        margin: 0 auto 2em;
+        max-width: 800px;
+        height: 300px;
+    }
+
+    .img-container {
+        margin: 0 10px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .img-caption {
+        bottom: 4em;
+        color: #fff;
+        font-size: 12pt;
+        height: 2em;
+        position: relative;
+        padding: 0.3em 1em;
+        text-align: center;
+        width: 100%;
+    }
+
+</style>
+```
+
+![Carousel partial visible slide](images/without-loop.jpg)
+
+## See Also
+
+* [Customizing partial slides area size](./styles-and-appearance/#customizing-partial-slides-size)
