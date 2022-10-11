@@ -371,7 +371,7 @@ The event [CalculatedFieldCreate](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ### OnActionBegin
 
-The event [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) when clicking calculated field button, calculated field edit icon and context menu in the tree view inside the calculated field dialog. This allows user to identify the current action being performed at runtime. It has the following parameters:
+The event [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) when clicking calculated field button, calculated field edit icon and context menu in the tree view inside the calculated field dialog. This allows user to identify the current action being performed at runtime. It has the following parameters:
 
 * [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_DataSourceSettings): It holds the current data source settings such as input data source, rows, columns, values, filters, format settings and so on.
 
@@ -379,9 +379,9 @@ The event [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 | Action | Action Name|
 |------|-------------|
-| [`Calculated field button`](./calculated-field/#Calculated-Field)| Open calculated field dialog|
-| [`Edit icon in calculated field`](./calculated-field/#Editing-through-the-field-list-and-the-grouping-bar)| Edit calculated field|
-| [`Context menu in the tree view inside the calculated field dialog`](./calculated-field/#Calculated-Field)| Calculated field context menu|
+| [`Calculated field button`](./calculated-field)| Open calculated field dialog|
+| [`Edit icon in calculated field`](./calculated-field/#editing-through-the-field-list-and-the-groupingbar)| Edit calculated field|
+| [`Context menu in the tree view inside the calculated field dialog`](./calculated-field)| Calculated field context menu|
 
 * [FieldInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_FieldInfo): It holds the selected value field information.
 
@@ -448,15 +448,15 @@ The event [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 | Action | Action Name|
 |------|-------------|
-| [`Calculated field button`](./calculated-field/#Calculated-Field)| Calculated field applied|
-| [`Edit icon in calculated field`](./calculated-field/#Editing-through-the-field-list-and-the-grouping-bar)| Calculated field edited|
+| [`Calculated field button`](./calculated-field)| Calculated field applied|
+| [`Edit icon in calculated field`](./calculated-field/#editing-through-the-field-list-and-the-groupingbar)| Calculated field edited|
 
 
 * [FieldInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_FieldInfo): It holds the selected value field information.
 
 > Note: This option is applicable only when the field based UI actions are performed such as filtering, sorting, removing field from grouping bar, editing and aggregation type change.
 
-* [ActionInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_ActionInfo):  It holds the unique information about the current UI action. For example, if the edit action is completed, this event will be triggered, and the argument will display information such as the entire calculated field information and its formula, including the field name.
+* [ActionInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_ActionInfo): It holds the unique information about the current UI action. For example, if the edit action is completed, this event will be triggered, and the argument will display information such as the entire calculated field information and its formula, including the field name.
 
 ```cshtml
  @using Syncfusion.Blazor.PivotView
@@ -513,9 +513,9 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 | Action | Action Name|
 |------|-------------|
-| [`Calculated field button`](./calculated-field/#Calculated-Field)| Open calculated field dialog|
-| [`Edit icon in calculated field`](./calculated-field/#Editing-through-the-field-list-and-the-grouping-bar)| Edit calculated field|
-| [`Context menu in the tree view inside the calculated field dialog`](./calculated-field/#Calculated-Field)| Calculated field context menu|
+| [`Calculated field button`](./calculated-field)| Open calculated field dialog|
+| [`Edit icon in calculated field`](./calculated-field/#editing-through-the-field-list-and-the-groupingbar)| Edit calculated field|
+| [`Context menu in the tree view inside the calculated field dialog`](./calculated-field)| Calculated field context menu|
 
 
 * [ErrorInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ErrorInfo): It holds the error information of the current UI action.
