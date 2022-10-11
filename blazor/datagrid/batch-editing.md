@@ -340,7 +340,7 @@ Also, the add operation is handled while performing batch editing using the bool
 
 ```
 
-## Select entire text of cell while editing in batch editing mode
+## Select entire text of cell while editing in batch edit mode
 
 By default, while editing a particular cell in batch edit mode, the cursor will be placed at the end of the text once the cell is changed to edited state. Instead of this behavior, the entire text of the cell to be selected when the corresponding cell is in edited state. This can be achieved by the [OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) and [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) events of the Grid.
 
