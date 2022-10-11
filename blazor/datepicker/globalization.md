@@ -11,29 +11,6 @@ documentation: ug
 
 [Blazor DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
 
-## Customize the localized text
-
-* You can change the localized text of particular component by editing the `wwwroot/blazor-locale/src/{{locale name}}.json` file.
-
-* In the following code, modified the localized text of `today button` and `placeholder` in `de` culture.
-
-[`wwwroot/blazor-locale/src/de.json`]
-
-```csharp
-{
-  "de": {
-    "datepicker": {
-      "today": "Heutiges Datum",
-      "placeholder": "Wählen Sie ein Datum"
-    }
-  }
-}
-```
-
-
-
-![Customizing Localized Text in Blazor DatePicker](./images/blazor-datepicker-localize-text.png)
-
 ## Right-To-Left
 
 The DatePicker supports RTL (right-to-left) functionality for languages like Arabic and Hebrew to display the text in the right-to-left direction. Use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_EnableRtl) property to set the RTL direction.
