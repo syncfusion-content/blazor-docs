@@ -57,4 +57,4 @@ SpeedDial items are displayed like radial menu in radial direction (circular dir
 
 In `Auto` direction Speed dial action items are displayed clockwise or anti-clockwise based on the Speed Dial button position.
 
-> [To learn more about Radial Mode](https://blazor.syncfusion.com/documentation/speeddial/radial-menu)
+> [To learn more about Radial Mode](https://blazor.syncfusion.com/documentation/speeddial/radial-menu).

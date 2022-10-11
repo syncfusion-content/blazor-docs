@@ -131,4 +131,4 @@ The template content is defined as a child content of <b>ItemTemplate</b> tag di
 
 It can display a menu of related actions `SpeedDialItems` or a custom content `PopupTemplate`. The template content is defined as a child content of <b>PopupTemplate</b> tag directive.
 
-> [To learn more about Templates](https://blazor.syncfusion.com/documentation/speeddial/template)
+> [To learn more about Templates](https://blazor.syncfusion.com/documentation/speeddial/template).
