@@ -248,7 +248,7 @@ In previous steps, we have successfully configured the Syncfusion Blazor package
 
 ## Binding data to the DataGrid component
 
-Now, get SQL data using Dapper and bind it to the DataGrid component. To bind the database table to Syncfusion Blazor DataGrid, use the [custom data binding feature](https://blazor.syncfusion.com/documentation/datagrid/custom-binding/) here.
+Now, get SQL data using Dapper and bind it to the DataGrid component. To bind the database table to Syncfusion Blazor DataGrid, use the [custom data binding feature](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) here.
 
 The following points must be considered for creating a custom adaptor.
 
@@ -327,7 +327,7 @@ In the following code example,
 
 {% endhighlight %}
 
-Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns/) component. We are going to create columns using the following code, let us see the properties used and their usage.
+Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns) component. We are going to create columns using the following code, let us see the properties used and their usage.
 
 {% highlight razor %}
 
@@ -350,13 +350,13 @@ Now, the DataGrid will look like this while running the application. The display
 
 ## Handling CRUD operations with our Syncfusion Blazor DataGrid component
 
-You can enable editing in the grid component using the [GridEditSettings](https://blazor.syncfusion.com/documentation/datagrid/editing/) component. Grid provides various modes of editing options such as Inline/Normal, Dialog, and Batch editing. Kindly refer to the following documentation for your reference.
+You can enable editing in the grid component using the [GridEditSettings](https://blazor.syncfusion.com/documentation/datagrid/editing) component. Grid provides various modes of editing options such as Inline/Normal, Dialog, and Batch editing. Kindly refer to the following documentation for your reference.
 
 [Grid Editing in Blazor](https://blazor.syncfusion.com/documentation/datagrid/editing/#editing)
 
 > Normal editing is the default edit mode for the DataGrid component. You need to set the IsPrimaryKey property of Column as True for a particular column, whose value is a unique value for editing purposes.
 
-Here, we are using inline edit mode and the [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar/) property to show toolbar items for editing.
+Here, we are using inline edit mode and the [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar) property to show toolbar items for editing.
 
 {% highlight razor %}
 

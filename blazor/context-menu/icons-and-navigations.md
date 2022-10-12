@@ -51,7 +51,7 @@ The [Blazor Context Menu](https://www.syncfusion.com/blazor-components/blazor-co
 
 ![Blazor ContextMenu with Icon](./images/blazor-contextmenu-icon.png)
 
-> The Context Menu provides a set of [icons](https://blazor.syncfusion.com/documentation/appearance/icons/) that can be loaded by applying `e-icons` class name to the element.
+> The Context Menu provides a set of [icons](https://blazor.syncfusion.com/documentation/appearance/icons) that can be loaded by applying `e-icons` class name to the element.
 You can also use third party icons on the Context Menu using the `IconCss`property.
 
 ## Navigation
