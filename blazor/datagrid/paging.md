@@ -331,7 +331,7 @@ In the below sample, we have customized the Pager component in DataGrid control 
 
 ## How to render Pager at the top of the Grid
 
-By default, the Pager component will be rendered at the bottom of the Grid when the [AllowPaging] property is enabled. To render the Pager component at the top of the Grid, the SfPager component is used.
+By default, the Pager component will be rendered at the bottom of the Grid when the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property is enabled. To render the Pager component at the top of the Grid, the SfPager component is used.
 
 In the following sample, the SfPager component is rendered on top of the grid. Initially, using the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) property of the Pager, the data for the Grid component is bound to the current page. In the following code snippet, the `PageSize` is defined as "10" so that the first ten records from the data source of the Grid will be displayed on the current page using the Skip and Take values. Through the navigation of the pager items, you can view the records in the Grid page by page. This can be achieved by using the [ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_Click) event of the Pager. In the `ItemClick` event of the Pager, the SkipValue and TakeValue are calculated using the `PageSize` property and arguments of the `ItemClick` event (CurrentPage, PreviousPage). Based on these details, you can view the records in the Grid page by page.
 
