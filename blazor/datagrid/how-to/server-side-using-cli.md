@@ -11,7 +11,7 @@ documentation: ug
 
 # Blazor DataGrid Component in Server Side App using CLI
 
-This article provides a step-by-step instructions for building Blazor Server App with `Blazor DataGrid` using the [.NET CLI](https://dotnet.microsoft.com/download/dotnet-core/3.1).
+This article provides a step-by-step instructions for building Blazor Server App with `Blazor DataGrid` using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet/3.1).
 
 ## Prerequisites
 
