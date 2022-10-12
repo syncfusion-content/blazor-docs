@@ -11,7 +11,7 @@ documentation: ug
 
 ## Icons
 
-SpeedDial component can be visually represented with the use of [OpenIconCss]() property and [CloseIconCss]() property.
+SpeedDial component can be visually represented with the use of [OpenIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_OpenIconCss) property and [CloseIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_CloseIconCss) property.
 
 OpenIconCss will be visible when the Speed Dial items are hidden and CloseIconCss will be visible when Speed Dial items are shown.
 
