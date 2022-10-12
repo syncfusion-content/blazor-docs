@@ -31,7 +31,7 @@ string data = Diagram.SaveDiagram();
 
 ## Load the diagram from string
 
-The [diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) is loaded from the serialized string data by the [LoadDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_LoadDiagram_System_String_) method. The following code illustrates how to load the diagram from serialized string data.
+The [diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) is loaded from the serialized string data by the [LoadDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_LoadDiagram_System_String_System_Boolean_) method. The following code illustrates how to load the diagram from serialized string data.
 
 ```cshtml
 SfDiagramComponent Diagram;
@@ -39,6 +39,22 @@ SfDiagramComponent Diagram;
 string data = Diagram.SaveDiagram();
 //Loads the Diagram from saved data
 await Diagram.LoadDiagram(data);
+```
+
+## Load the SfDiagram JSON data string using SfDiagramComponent
+
+You can load the [SfDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html) serialized JSON data string into [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) using [LoadDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_LoadDiagram_System_String_System_Boolean_) method. When you load SfDiagram serialized string, then the isClassicData parameter should be set to true. The default value of the isClassicData is false.
+
+The following code illustrates how to load the SfDiagramComponent from SfDiagram serialized string data.
+
+```cshtml
+SfDiagram ClassicDiagram;
+//returns the serialized string of the SfDiagram
+string data = ClassicDiagram.SaveDiagram(); 
+
+SfDiagramComponent Diagram;
+//Loads the SfDiagramComponent from saved data of the SfDiagram
+await Diagram.LoadDiagram(data, true);
 ```
 
 ## How to save and load the diagram using file stream
