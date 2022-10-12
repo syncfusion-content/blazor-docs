@@ -69,7 +69,7 @@ Speed Dial component can show and hide the items programmatically by using `Show
 
 ## Programmatically Refresh the Position
 
-Refreshes the speed dial button position. Use this method to re-position button when the `target` is resized. 
+Refreshes the speed dial button position. Use `RefreshPositionAsync` method to re-position button when the `target` is resized. 
 
 ```cshtml
 
