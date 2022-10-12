@@ -116,9 +116,9 @@ Syncfusion Blazor Themes are available in the CDN. Make sure that the version in
 
 ## NPM package reference
 
-The Blazor [Themes NPM package](https://www.npmjs.com/package/@syncfusion/blazor-themes) contains `SCSS` files for all themes supported by Syncfusion Blazor components. These SCSS files customize theme variables using a web compiler. The package includes component wise SCSS files and overall components SCSS files.
+The [Blazor Themes NPM package](https://www.npmjs.com/package/@syncfusion/blazor-themes) contains `SCSS` files for all themes supported by Syncfusion Blazor components. These SCSS files customize theme variables using a web compiler. The package includes component wise SCSS files and overall components SCSS files.
 
-You can add the `SCSS theme` for Blazor applications through NPM package and compile it by using the [Web Compiler 2022+](https://marketplace.visualstudio.com/items?itemName=Failwyn.WebCompiler64) by following the below process.
+You can add the `SCSS theme` for Blazor applications through NPM package and compile it by using the [Web Compiler 2022+](https://marketplace.visualstudio.com/items?itemName=Failwyn.WebCompiler64) by following steps.
 
 * Open Visual Studio 2022 and click the Extensions in the toolbar.
 
@@ -128,7 +128,7 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
 
     ![Web Compiler 2022+](images/Web_Compiler.png)
 
-* Install the `Syncfusion Blazor Themes` NPM package in this application using the below command.
+* Install the [Syncfusion Blazor Themes](https://www.npmjs.com/package/@syncfusion/blazor-themes) NPM package using the below command.
 
     ```
     npm install @syncfusion/blazor-themes
@@ -192,7 +192,13 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
 
 * Run the application to see the customized Fluent theme applied.
 
-The following table lists the individual components and its importing theme path references.
+The following shows the importing theme path for the overall theme.
+
+```css
+@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'
+```
+
+Below table lists the importing theme path for the individual components.
 
 <table>
     <tr>
