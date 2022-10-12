@@ -116,17 +116,15 @@ Syncfusion Blazor Themes are available in the CDN. Make sure that the version in
 
 ## NPM package reference
 
-The Blazor Themes NPM package contains `SCSS` files for all themes supported by Syncfusion Blazor components. These SCSS files customize theme variables using a web compiler. The package includes component wise SCSS files and overall components SCSS files.
+The Blazor [Themes NPM package](https://www.npmjs.com/package/@syncfusion/blazor-themes) contains `SCSS` files for all themes supported by Syncfusion Blazor components. These SCSS files customize theme variables using a web compiler. The package includes component wise SCSS files and overall components SCSS files.
 
-You can add the `theme` for the Blazor applications through NPM package using the `SCSS` files by following the below process.
+You can add the `SCSS theme` for Blazor applications through NPM package and compile it by using the [Web Compiler 2022+](https://marketplace.visualstudio.com/items?itemName=Failwyn.WebCompiler64) by following the below process.
 
-* Install [Web Compiler 2022+](https://marketplace.visualstudio.com/items?itemName=Failwyn.WebCompiler64) in Visual Studio 2022 to use SCSS files in Blazor applications.
-
-* To install [Web Compiler 2022+](https://marketplace.visualstudio.com/items?itemName=Failwyn.WebCompiler64), open Visual Studio 2022 and click the Extensions in the toolbar.
+* Open Visual Studio 2022 and click the Extensions in the toolbar.
 
     ![VS Extension](images/VS_Extension.png)
 
-* Search the [Web Compiler 2022+](https://marketplace.visualstudio.com/items?itemName=Failwyn.WebCompiler64) in search box and download the extension.
+* Search the `Web Compiler 2022+` in search box and download the extension.
 
     ![Web Compiler 2022+](images/Web_Compiler.png)
 
