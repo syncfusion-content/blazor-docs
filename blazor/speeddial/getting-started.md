@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor SpeedDial Component
 
-This section briefly explains about how to include [Blazor SpeedDial](https://www.syncfusion.com/blazor-components/blazor-speeddial) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include Blazor SpeedDial component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 ## Prerequisites
 
@@ -283,28 +283,6 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 ![Blazor SpeedDial Component](./images/blazor-speeddial-component.png)
 
-## Positioning
-
-The speed dial can be positioned using the [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Position) property. The speed dial is positioned based on the [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Target), if target is defined else positioned based on the browser viewport. The position values are TopLeft, TopCenter, TopRight, MiddleLeft, MiddleCenter, MiddleRight, BottomLeft, BottomCenter and BottomRight.
-
-{% tabs %}
-{% highlight razor %}
-
-<div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
-    <SfSpeedDial Target="#target" Position="FabPosition.BottomCenter" Content="Edit">
-        <SpeedDialItems>
-            <SpeedDialItem IconCss="e-icons e-cut" Text="Cut"/>
-            <SpeedDialItem IconCss="e-icons e-copy" Text="Copy"/>
-            <SpeedDialItem IconCss="e-icons e-paste" Text="Paste"/>
-        </SpeedDialItems>
-    </SfSpeedDial>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor SpeedDial Component](./images/blazor-speeddial-position-sample.png)
-
 ## Display Modes
 
 You can use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Mode) property to either display the menu in linear order like a list or like a radial menu in radial (circular) direction.
@@ -315,9 +293,9 @@ You can use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 <div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
     <SfSpeedDial Target="#target" Position="FabPosition.BottomLeft" Mode="SpeedDialMode.Radial" OpenIconCss="e-icons e-edit">
         <SpeedDialItems>
-            <SpeedDialItem IconCss="e-icons e-cut" Text="Cut"/>
-            <SpeedDialItem IconCss="e-icons e-copy" Text="Copy"/>
-            <SpeedDialItem IconCss="e-icons e-paste" Text="Paste"/>
+            <SpeedDialItem IconCss="e-icons e-cut"/>
+            <SpeedDialItem IconCss="e-icons e-copy"/>
+            <SpeedDialItem IconCss="e-icons e-paste"/>
         </SpeedDialItems>
     </SfSpeedDial>
     <SfSpeedDial Target="#target" Position="FabPosition.BottomRight" Mode="SpeedDialMode.Linear" OpenIconCss="e-icons e-edit">
@@ -332,7 +310,7 @@ You can use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeedDial Component](./images/blazor-speeddial-mode-linear-sample.png)
+![Blazor SpeedDial Component](./images/blazor-speeddial-linear-sample.png)
 ![Blazor SpeedDial Component](./images/blazor-speeddial-mode-radial-sample.png)
 
 
@@ -356,11 +334,15 @@ You can use this event to perform the required action.
 
 @code{
     public void ItemEventClick(SpeedDialItemEventArgs args)
-        {
-         // Here, you can call your desired action.        
-        }
+    {
+        // Here, you can call your desired action.        
+    }
 }
 {% endhighlight %}
 {% endtabs %}
 
 ![Blazor SpeedDial Component](./images/blazor-speeddial-event-sample.png)
+
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/SpeedDial).
+
+N> You can also explore our [Blazor Speed Dial Button example](https://blazor.syncfusion.com/demos/speeddial/defaultfunctionalities) that shows how to render and configure the button.
