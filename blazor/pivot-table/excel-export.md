@@ -398,4 +398,61 @@ The event [ExcelHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncf
 
 ![Customizing the Blazor Pivot Table cell values and styles while exporting](images/blazor-pivottable-excelexportevents.png)
 
+## ExportCompleted 
+
+ The [ExportCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ExportCompleted) event triggers after Excel or CSV export is completed in the pivot table.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="OnExcelExport" Content="Excel Export"></SfButton>
+<SfButton OnClick="OnCSVExport" Content="CSV Export"></SfButton>
+<SfPivotView TValue="ProductDetails" @ref="@pivot" EnableVirtualization="true"  AllowExcelExport="true" >
+    <PivotViewDataSourceSettings DataSource="@data" ExpandAll="false" EnableSorting="true" >
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewEvents TValue="ProductDetails" ExportCompleted="ExportCompleted"></PivotViewEvents>
+</SfPivotView>
+
+@code{
+    private SfPivotView<ProductDetails> pivot;
+    private List<ProductDetails> data { get; set; }
+    protected override void OnInitialized(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        data = ProductDetails.GetProductData().ToList();
+        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+    public void OnExcelExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        pivot.ExportToExcelAsync();
+    }
+    public void OnCSVExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        pivot.ExportToCsvAsync();
+    }
+    private void ExportCompleted(object args)
+    {
+       // triggers when the Excel/CSV export is completed
+    }
+}
+
+```
+
+
+
 > You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.

@@ -11,28 +11,6 @@ documentation: ug
 
 [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
 
-## Customize the localized text
-
-* You can change the localized text of particular component by editing the `wwwroot/blazor-locale/src/{{locale name}}.json` file.
-
-* In the following code, modified the localized text of `today button` in `de` culture.
-
-[`wwwroot/blazor-locale/src/de.json`]
-
-```xml
-{
-  "de": {
-    "calendar": {
-     "today": "Heutiges Datum"
-    }
-  }
-}
-```
-
-
-
-![Changing Localized Text in Blazor Calendar](./images/blazor-calendar-localize-text.png)
-
 ## Right-To-Left
 
 The Calendar supports RTL (right-to-left) functionality for languages like Arabic and Hebrew to display the text in the right-to-left direction. Use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfCalendar-1.html#Syncfusion_Blazor_Calendars_SfCalendar_1_EnableRtl) property to set the RTL direction.
