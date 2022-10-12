@@ -44,7 +44,7 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
 Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
-> From 2022 Vol1 (20.1) version - The default value of `IgnoreScriptIsolation` is changed as `true`, so, you don’t have to set `IgnoreScriptIsolation` property explicitly to refer scripts externally.
+> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to `true`. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to true, and this property is obsolete.
 
 ### Blazor Server App
 
@@ -64,7 +64,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
 ....
@@ -84,7 +84,7 @@ namespace BlazorApplication
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+            services.AddSyncfusionBlazor();
         }
         ...
     }
@@ -110,7 +110,7 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddScoped(serviceProvider => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+builder.Services.AddSyncfusionBlazor();
 await builder.Build().RunAsync();
 ....
 
@@ -127,7 +127,7 @@ namespace WebApplication1
         public static async Task Main(string[] args)
         {
             ....
-            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+            builder.Services.AddSyncfusionBlazor();
             await builder.Build().RunAsync();
         }
     }
@@ -278,18 +278,29 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 ![Blazor Floating Action Button Component](./images/blazor-fab-component.png)
 
-## Positioning
+## Event Click In Floating Action Button
 
-The floating action button can be positioned using the [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#Syncfusion_Blazor_Buttons_SfFab_Position) property. The fab is positioned based on the [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#Syncfusion_Blazor_Buttons_SfFab_Target), if target is defined else positioned based on the browser viewport. The position values are TopLeft, TopCenter, TopRight, MiddleLeft, MiddleCenter, MiddleRight, BottomLeft, BottomCenter and BottomRight.
+The floating action button control triggers the [`OnClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_OnClick) event when you click on the floating action button. You can use this event to perform the required action.
 
 {% tabs %}
 {% highlight razor %}
 
 <div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
-    <SfFab Target="#target" Position="FabPosition.BottomLeft" Content="Add"></SfFab>
+    <SfFab Target="#target" IconCss="e-icons e-plus" OnClick="EventClick"></SfFab>
 </div>
+
+@code{
+    public void EventClick()
+    {
+        // Here, you can call your desired action.
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Floating Action Button Component](./images/blazor-fab-position-sample.png)
+![Blazor Floating Action Button Component](./images/blazor-fab-event-click-sample.png)
+
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FloatingActionButton).
+
+N> You can also explore our [Blazor Floating Action Button example](https://blazor.syncfusion.com/demos/fab/overview) that shows how to render and configure the button.
