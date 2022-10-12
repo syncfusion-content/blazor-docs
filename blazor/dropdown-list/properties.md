@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in Blazor DropDown List Component | Syncfusion
-description: Checkout and learn here all about Filtering in Syncfusion Blazor DropDown List component and much more.
+title: Properties in Blazor DropDown List Component | Syncfusion
+description: Checkout and learn here all about properties in Syncfusion Blazor DropDown List component and much more.
 platform: Blazor
 control: DropDown List
 documentation: ug
@@ -17,6 +17,8 @@ When AllowFiltering is set to true, show the filter bar (search box) of the comp
 
 The filter action retrieves matched items through the `Filtering` event based on the characters typed in the search TextBox.
 
+Default value of AllowFiltering is `false`.
+
 [Click to refer the code for AllowFiltering](https://blazor.syncfusion.com/documentation/dropdown-list/filtering)
 
 ## CssClass
@@ -25,9 +27,10 @@ Specifies the CSS class name that can be appended with the root element of the D
 
 Possible values are
 
-* `e-success` which denotes the component in success state that is added green color to the dropdownlist's input field.
-* `e-warning` which denotes the component in warning state that is added orange color to the dropdownlist's input field.
-* `e-error` which denotes the component in error state that is added red color to the dropdownlist's input field.
+* `e-success`, which denotes the component in success state that is added green color to the dropdownlist's input field.
+* `e-warning`, which denotes the component in warning state that is added orange color to the dropdownlist's input field.
+* `e-error`, which denotes the component in error state that is added red color to the dropdownlist's input field.
+* `e-outline`, which supports only in material theme.
 
 {% highlight Razor %}
 
@@ -38,6 +41,8 @@ Possible values are
 ## EnableRtl
 
 Enable or disable rendering component in right to left direction.
+
+Default value of EnableRtl is `false`.
 
 {% highlight Razor %}
 
@@ -69,9 +74,9 @@ Default value of FloatLabelType is `Never`.
 
 Possible values are:
 
-* `Never` The floating label is removed when enters the value in it.
-* `Always` The floating label always floats above the DropDownList.
-* `Auto` The floating label floats above the DropDownList after focusing it or when enters the value in it.
+* `Never` - The label will never float in the input when the placeholder is available.
+* `Always` - The floating label always floats above the DropDownList.
+* `Auto` - The floating label floats above the DropDownList after focusing it or when enters the value in it.
 
 {% highlight Razor %}
 
@@ -135,7 +140,7 @@ If you configured both the property and equivalent input attribute, then the com
 
 ## ItemsCount
 
-The data can be fetched in popup based on ItemsCount, when enabled the EnableVirtualization. 
+The data can be fetched in popup based on ItemsCount, when enabled the EnableVirtualization. ItemsCount is applicable only when EnableVirtualization is used as true. ItemsCount is depends on [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_EnableVirtualization)
 
 Default value of ItemsCount is `5`.
 
@@ -169,7 +174,7 @@ Default value of PopupHeight is `300px`.
 
 ## PopupWidth
 
-Specifies the width of the popup list. By default, the popup width sets based on the width of the component.
+Specifies the Width of the popup list. By default, the popup Width sets based on the Width of the component.
 
 Default value of PopupWidth is `100%`
 
@@ -183,6 +188,8 @@ Default value of PopupWidth is `100%`
 
 Specifies the boolean value whether the DropDownList allows the user to change the value.
 
+Default value of Readonly is `false`.
+
 {% highlight Razor %}
 
 {% include_relative code-snippet/properties/Readonly.razor %}
@@ -192,6 +199,8 @@ Specifies the boolean value whether the DropDownList allows the user to change t
 ## ShowClearButton
 
 Specifies whether to show or hide the clear button.
+
+Default value of ShowClearButton is `false`.
 
 When the clear button is clicked, `Value`, `Text`, and `Index` properties are reset to null.
 
@@ -205,19 +214,21 @@ When the clear button is clicked, `Value`, `Text`, and `Index` properties are re
 
 Specifies the tab order of the DropDownList component.
 
+{% highlight Razor %}
 
+{% include_relative code-snippet/properties/TabIndex.razor %}
+
+{% endhighlight %}
 
 ## Value
 
-Gets or sets the value of the selected item in the component.
+Gets or sets the Value of the selected item in the component.
 
 {% highlight Razor %}
 
 {% include_relative code-snippet/properties/Value.razor %}
 
 {% endhighlight %}
-
-## ValueExpression
 
 ## ValueTemplate
 
@@ -227,9 +238,9 @@ The currently selected value that is displayed by default on the DropDownList in
 
 ## Width
 
-Specifies the width of the component. By default, the component width sets based on the width of its parent container.
+Specifies the Width of the component. By default, the component Width sets based on the Width of its parent container.
 
-You can also set the width in pixel values.
+You can also set the Width in pixel values.
 
 Default value of Width is `100%`
 
