@@ -9,9 +9,34 @@ documentation: ug
 
 # Items in Blazor Speed Dial Component
 
-## Icon types
+## Icons
 
-The types of Speed Dial Item Icons are as follows:
+SpeedDial component can be visually represented with the use of [OpenIconCss]() property and [CloseIconCss]() property.
+
+OpenIconCss will be visible when the Speed Dial items are hidden and CloseIconCss will be visible when Speed Dial items are shown.
+
+```cshtml
+
+@using Syncfusion.Blazor.Buttons
+
+<div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
+    <SfSpeedDial id="speeddial" Target="#target" Position="FabPosition.BottomRight" OpenIconCss="e-icons e-edit" CloseIconCss="e-icons e-close">
+        <SpeedDialItems>
+            <SpeedDialItem IconCss="e-icons e-cut"/>
+            <SpeedDialItem IconCss="e-icons e-copy"/>
+            <SpeedDialItem IconCss="e-icons e-paste"/>
+        </SpeedDialItems>
+    </SfSpeedDial>
+</div>
+
+```
+
+![Blazor Speed Dial with Open Icon](./images/OpenIcon.png)
+![Blazor Speed Dial with Close Icon](./images/SDItemonly.png)
+
+## Customization
+
+For customization below types are available:
 
 * Icon Only
 * Icon with Text
