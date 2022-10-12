@@ -66,7 +66,7 @@ In the following illustration, the audio size has been validated before uploadin
 
 ### Server-side action
 
-The selected audio can be uploaded to the required destination using the controller action below. Map this method name in [RichTextEditorAudioSettings.SaveUrl]() and provide the required destination path through [RichTextEditorAudioSettings.Path]() properties.
+The selected audio can be uploaded to the required destination using the controller action below. Map this method name in [RichTextEditorMediaSettings.SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_SaveUrl) and provide the required destination path through [RichTextEditorMediaSettings.Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_Path) properties.
 
 > If you want to insert lower-sized audio files in the editor and don't want a specific physical location for saving audio, you can opt to save the format as `Base64`.
 In the following code blocks, you can insert the audio files which are saved in the specified path.
@@ -85,44 +85,50 @@ In the following code blocks, you can insert the audio files which are saved in 
 
 using System;
 using System.IO;
-using FileUpload.Models;
-using System.Diagnostics;
 using System.Net.Http.Headers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Hosting;
-namespace FileUpload.Controllers
+using Microsoft.AspNetCore.Http.Features;
+
+namespace AudioUpload.Controllers
 {
-    public class HomeController : Controller
+    [ApiController]
+    public class AudioController : ControllerBase
     {
-        private IHostingEnvironment hostingEnv;
-        public HomeController(IHostingEnvironment env)
+        private readonly IWebHostEnvironment hostingEnv;
+
+        public AudioController(IWebHostEnvironment env)
         {
-            hostingEnv = env;
+            this.hostingEnv = env;
         }
-        public IActionResult Index()
-        {
-            return View();
-        }
-        [AcceptVerbs("Post")]
-        public void SaveFiles(IList<IFormFile> UploadFiles)
+
+        [HttpPost("[action]")]
+        [Route("api/Image/Save")]
+        public void Save(IList<IFormFile> UploadFiles)
         {
             try
             {
-                foreach (IFormFile file in UploadFiles)
+                foreach (var file in UploadFiles)
                 {
                     if (UploadFiles != null)
                     {
+                        string targetPath = hostingEnv.ContentRootPath + "\\wwwroot\\Images";
                         string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
-                        filename = hostingEnv.WebRootPath + "\\Files" + $@"\{filename}";
+
                         // Create a new directory, if it does not exists
-                        if (!Directory.Exists(hostingEnv.WebRootPath + "\\Files"))
+                        if (!Directory.Exists(targetPath))
                         {
-                            Directory.CreateDirectory(hostingEnv.WebRootPath + "\\Files");
+                            Directory.CreateDirectory(targetPath);
                         }
+
+                        // Name which is used to save the image
+                        filename = targetPath + $@"\{filename}";
+
                         if (!System.IO.File.Exists(filename))
                         {
+                            // Upload a image, if the same file name does not exist in the directory
                             using (FileStream fs = System.IO.File.Create(filename))
                             {
                                 file.CopyTo(fs);
@@ -130,18 +136,19 @@ namespace FileUpload.Controllers
                             }
                             Response.StatusCode = 200;
                         }
+                        else
+                        {
+                            Response.StatusCode = 204;
+                        }
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                Response.StatusCode = 204;
+                Response.Clear();
+                Response.ContentType = "application/json; charset=utf-8";
+                Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
             }
-        }
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }
@@ -150,7 +157,7 @@ namespace FileUpload.Controllers
 
 ### Audio save format
 
-The audio files can be saved as `Blob` or `Base64` url by using the [RichTextEditorAudioSettings.SaveFormat]() property, which is of enum type and the generated url will be set to the `src` attribute of the `<source>` tag.
+The audio files can be saved as `Blob` or `Base64` url by using the [RichTextEditorAudioSettings.SaveFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_SaveFormat) property, which is of enum type and the generated url will be set to the `src` attribute of the `<source>` tag.
 
 > By default, the files are saved in the `Blob` format.
 
@@ -167,125 +174,21 @@ The audio files can be saved as `Blob` or `Base64` url by using the [RichTextEdi
 
 ## Replacing audio
 
-Once an audio file has been inserted, you can change it using the Rich Text Editor [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Audio) `audioReplace` option. You can replace the audio file using the web URL or the browse option in the audio dialog.
+Once an audio file has been inserted, you can change it using the Rich Text Editor [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Audio) “Replace” option. You can replace the audio file using the web URL or the browse option in the audio dialog.
 
 ![Insert replace](./images/blazor-richtexteditor-audio-replace.png)
 
 ## Delete audio
 
-To remove audio from the Rich Text Editor content, select the audio and click the `audioRemove` tool from the quick toolbar. It will delete the audio from the Rich Text Editor content as well as from the service location if the [RichTextEditorAudioSettings.RemoveUrl]() is given.
+To remove audio from the Rich Text Editor content, select the audio and click the “Remove” tool from the quick toolbar. It will delete the audio from the Rich Text Editor content.
 
 Once you select the audio from the local machine, the URL for the audio will be generated. You can remove the audio from the service location by clicking the cross icon.
 
 ![Remove audio](./images/blazor-richtexteditor-audio-remove.png)
 
-The following sample explains how to configure `RichTextEditorAudioSettings.RemoveUrl` to remove saved audio from the remote service location when the following audio removal actions are performed:
-
-* `delete` key action.
-* `backspace` key action.
-* Removing uploaded audio file from the insert audio dialog.
-* Deleting audio using the quick toolbar `audioRemove` option.
-
-{% tabs %}
-{% highlight cshtml %}
-
-{% include_relative code-snippet/audio-delete.razor %}
-
-{% endhighlight %}
-{% endtabs %}
-
-`controller.cs`
-
-```cshtml
-
-using System;
-using System.IO;
-using FileUpload.Models;
-using System.Diagnostics;
-using System.Net.Http.Headers;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
-using System.Collections.Generic;
-using Microsoft.AspNetCore.Hosting;
-namespace FileUpload.Controllers
-{
-    public class HomeController : Controller
-    {
-        private IWebHostEnvironment hostingEnv;
-
-        public HomeController(IWebHostEnvironment env)
-        {
-            hostingEnv = env;
-        }
-
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-        [AcceptVerbs("Post")]
-        public void SaveImage(IList<IFormFile> UploadFiles)
-        {
-            try
-            {
-                foreach (IFormFile file in UploadFiles)
-                {
-                    if (UploadFiles != null)
-                    {
-                        string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
-                        filename = hostingEnv.WebRootPath + "\\Uploads" + $@"\{filename}";
-
-                        // Create a new directory, if it does not exists
-                        if (!Directory.Exists(hostingEnv.WebRootPath + "\\Uploads"))
-                        {
-                            Directory.CreateDirectory(hostingEnv.WebRootPath + "\\Uploads");
-                        }
-
-                        if (!System.IO.File.Exists(filename))
-                        {
-                            using (FileStream fs = System.IO.File.Create(filename))
-                            {
-                                file.CopyTo(fs);
-                                fs.Flush();
-                            }
-                            Response.StatusCode = 200;
-                        }
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                Response.StatusCode = 204;
-            }
-        }
-
-        [AcceptVerbs("Post")]
-        public void RemoveImage(IList<IFormFile> UploadFiles)
-        {
-            try
-            {
-                foreach (IFormFile file in UploadFiles)
-                {
-                    if (UploadFiles != null)
-                    {
-                        // Do remove action here}
-                        Response.StatusCode = 200;
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                Response.StatusCode = 204;
-            }
-        }
-    }
-}
-
-```
-
 ## Display Position
 
-Sets the default display for an audio when it is inserted in the Rich Text Editor using the `RichTextEditorAudioSettings.layoutOption`. It has two possible options: `Inline` and `Break`. When updating the display positions, it updates the audio elements’ layout position.
+Sets the default display for an audio when it is inserted in the Rich Text Editor using the [RichTextEditorMediaSettings.layoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_LayoutOption). It has two possible options: `Inline` and `Break`. When updating the display positions, it updates the audio elements’ layout position.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -309,56 +212,87 @@ Refer `rename.cs` controller file for configure the server-side.
 {% endhighlight %}
 {% endtabs %}
 
-
 `rename.cs`
 
 ```cshtml
 
-int x = 0;
-string file;
-[AcceptVerbs("Post")]
-public void Rename()
+using System;
+using System.IO;
+using System.Net.Http.Headers;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http.Features;
+
+namespace RenameAudio.Controllers
 {
-    try
+    [ApiController]
+    public class AudioController : ControllerBase
     {
-        var httpPostedFile = System.Web.HttpContext.Current.Request.Files["UploadFiles"];
-        fileName = httpPostedFile.FileName;
-        if (httpPostedFile != null)
+        private double x;
+        private string audiofileName;
+        private readonly IWebHostEnvironment hostingEnv;
+
+        public AudioController(IWebHostEnvironment env)
         {
-            var fileSave = System.Web.HttpContext.Current.Server.MapPath("~/Files");
-            if (!Directory.Exists(fileSave))
+            this.hostingEnv = env;
+        }
+
+        [HttpPost("[action]")]
+        [Route("api/Image/Rename")]
+        public void Rename(IList<IFormFile> UploadFiles)
+        {
+            try
             {
-                Directory.CreateDirectory(fileSave);
+                foreach (IFormFile file in UploadFiles)
+                {
+                    if (UploadFiles != null)
+                    {
+                        string targetPath = hostingEnv.ContentRootPath + "\\wwwroot\\Images";
+                        string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
+
+                        // Create a new directory, if it does not exists
+                        if (!Directory.Exists(targetPath))
+                        {
+                            Directory.CreateDirectory(targetPath);
+                        }
+
+                        audiofileName = filename;
+                        string path = hostingEnv.WebRootPath + "\\Images" + $@"\{filename}";
+
+                        // Rename a uploaded image file name
+                        while (System.IO.File.Exists(path))
+                        {
+                            audiofileName = "rteImage" + x + "-" + filename;
+                            path = hostingEnv.WebRootPath + "\\Images" + $@"\rteImage{x}-{filename}";
+                            x++;
+                        }
+
+                        if (!System.IO.File.Exists(path))
+                        {
+                            using (FileStream fs = System.IO.File.Create(path))
+                            {
+                                file.CopyTo(fs);
+                                fs.Flush();
+                                fs.Close();
+                            }
+
+                            // Modified file name shared through response header by adding custom header
+                            Response.Headers.Add("name", audiofileName);
+                            Response.StatusCode = 200;
+                            Response.ContentType = "application/json; charset=utf-8";
+                        }
+                    }
+                }
             }
-            var fileName = Path.GetFileName(httpPostedFile.FileName);
-            var fileSavePath = Path.Combine(fileSave, fileName);
-            while (System.IO.File.Exists(fileSavePath))
+            catch (Exception e)
             {
-                fileName = "rteFiles" + x + "-" + fileName;
-                fileSavePath = Path.Combine(fileSave, fileName);
-                x++;
-            }
-            if (!System.IO.File.Exists(fileSavePath))
-            {
-                httpPostedFile.SaveAs(fileSavePath);
-                HttpResponse Response = System.Web.HttpContext.Current.Response;
                 Response.Clear();
-                Response.Headers.Add("name", fileName);
                 Response.ContentType = "application/json; charset=utf-8";
-                Response.StatusDescription = "File uploaded succesfully";
-                Response.End();
+                Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
             }
         }
-    }
-    catch (Exception e)
-    {
-        HttpResponse Response = System.Web.HttpContext.Current.Response;
-        Response.Clear();
-        Response.ContentType = "application/json; charset=utf-8";
-        Response.StatusCode = 204;
-        Response.Status = "204 No Content";
-        Response.StatusDescription = e.Message;
-        Response.End();
     }
 }
 
@@ -381,77 +315,6 @@ The Rich Text Editor control allows you to add additional data with the File Upl
 `controller.cs`
 
 ```cshtml
-
-using System;
-using System.IO;
-using FileUpload.Models;
-using System.Diagnostics;
-using System.Net.Http.Headers;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
-using System.Collections.Generic;
-using Microsoft.AspNetCore.Hosting;
-
-namespace FileUpload.Controllers
-{
-    public class HomeController : Controller
-    {
-        private IHostingEnvironment hostingEnv;
-
-        public HomeController(IHostingEnvironment env)
-        {
-            hostingEnv = env;
-        }
-
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        [AcceptVerbs("Post")]
-        public void SaveFiles(IList<IFormFile> UploadFiles)
-        {
-            string currentPath = Request.Form["Authorization"].ToString();
-            try
-            {
-                foreach (IFormFile file in UploadFiles)
-                {
-                    if (UploadFiles != null)
-                    {
-                        string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
-                        filename = hostingEnv.WebRootPath + "\\Files" + $@"\{filename}";
-
-                        // Create a new directory, if it does not exists
-                        if (!Directory.Exists(hostingEnv.WebRootPath + "\\Files"))
-                        {
-                            Directory.CreateDirectory(hostingEnv.WebRootPath + "\\Files");
-                        }
-
-                        if (!System.IO.File.Exists(filename))
-                        {
-                            using (FileStream fs = System.IO.File.Create(filename))
-                            {
-                                file.CopyTo(fs);
-                                fs.Flush();
-                            }
-                            Response.StatusCode = 200;
-                        }
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                Response.StatusCode = 204;
-            }
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-    }
-}
 
 ```
 

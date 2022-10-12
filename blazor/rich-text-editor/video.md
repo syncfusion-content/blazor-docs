@@ -74,7 +74,7 @@ In the following example, the video size has been validated before uploading and
 
 ### Server-side action
 
-The selected video can be uploaded to the required destination using the controller action below. Map this method name in [RichTextEditorVideoSettings.SaveUrl]() and provide required destination path through [RichTextEditorVideoSettings.Path]() properties.
+The selected video can be uploaded to the required destination using the controller action below. Map this method name in [RichTextEditorMediaSettings.SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_SaveUrl) and provide required destination path through [RichTextEditorMediaSettings.Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_Path) properties.
 
 > If you want to insert lower-sized video files in the editor and don't want a specific physical location for saving the video, you can save the format as `Base64`.
 In the following code blocks, you can insert the video files which are saved in the specified path.
@@ -93,44 +93,50 @@ In the following code blocks, you can insert the video files which are saved in 
 
 using System;
 using System.IO;
-using FileUpload.Models;
-using System.Diagnostics;
 using System.Net.Http.Headers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Hosting;
-namespace FileUpload.Controllers
+using Microsoft.AspNetCore.Http.Features;
+
+namespace VideoUpload.Controllers
 {
-    public class HomeController : Controller
+    [ApiController]
+    public class VideoController : ControllerBase
     {
-        private IHostingEnvironment hostingEnv;
-        public HomeController(IHostingEnvironment env)
+        private readonly IWebHostEnvironment hostingEnv;
+
+        public VideoController(IWebHostEnvironment env)
         {
-            hostingEnv = env;
+            this.hostingEnv = env;
         }
-        public IActionResult Index()
-        {
-            return View();
-        }
-        [AcceptVerbs("Post")]
-        public void SaveFiles(IList<IFormFile> UploadFiles)
+
+        [HttpPost("[action]")]
+        [Route("api/Image/Save")]
+        public void Save(IList<IFormFile> UploadFiles)
         {
             try
             {
-                foreach (IFormFile file in UploadFiles)
+                foreach (var file in UploadFiles)
                 {
                     if (UploadFiles != null)
                     {
+                        string targetPath = hostingEnv.ContentRootPath + "\\wwwroot\\Images";
                         string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
-                        filename = hostingEnv.WebRootPath + "\\Files" + $@"\{filename}";
+
                         // Create a new directory, if it does not exists
-                        if (!Directory.Exists(hostingEnv.WebRootPath + "\\Files"))
+                        if (!Directory.Exists(targetPath))
                         {
-                            Directory.CreateDirectory(hostingEnv.WebRootPath + "\\Files");
+                            Directory.CreateDirectory(targetPath);
                         }
+
+                        // Name which is used to save the image
+                        filename = targetPath + $@"\{filename}";
+
                         if (!System.IO.File.Exists(filename))
                         {
+                            // Upload a image, if the same file name does not exist in the directory
                             using (FileStream fs = System.IO.File.Create(filename))
                             {
                                 file.CopyTo(fs);
@@ -138,18 +144,19 @@ namespace FileUpload.Controllers
                             }
                             Response.StatusCode = 200;
                         }
+                        else
+                        {
+                            Response.StatusCode = 204;
+                        }
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                Response.StatusCode = 204;
+                Response.Clear();
+                Response.ContentType = "application/json; charset=utf-8";
+                Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
             }
-        }
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }
@@ -158,7 +165,7 @@ namespace FileUpload.Controllers
 
 ### Video save format
 
-The video files can be saved as `Blob` or `Base64` url by using the [RichTextEditorVideoSettings.saveFormat](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.RichTextEditor.RichTextEditorVideoSettings.html#Syncfusion_EJ2_RichTextEditor_RichTextEditorVideoSettings_SaveFormat) property, which is of enum type and the generated url will be set to the `src` attribute of the `<source>` tag.
+The video files can be saved as `Blob` or `Base64` url by using the [RichTextEditorMediaSettings.saveFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_SaveFormat) property, which is of enum type and the generated url will be set to the `src` attribute of the `<source>` tag.
 
 > By default, the files are saved in the `Blob` format.
 
@@ -175,7 +182,7 @@ The video files can be saved as `Blob` or `Base64` url by using the [RichTextEdi
 
 ## Replacing video
 
-Once a video file has been inserted, you can replace it using the Rich Text Editor [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Audio) `videoReplace` option. You can replace the video file either by using the embedded URL or the web URL and the browse option in the video dialog.
+Once a video file has been inserted, you can replace it using the Rich Text Editor [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Audio) “Replace” option. You can replace the video file either by using the embedded URL or the web URL and the browse option in the video dialog.
 
 ![Rich Text Editor Embed Video replace](./images/blazor-richtexteditor-video-replace-embed.png)
 
@@ -183,119 +190,15 @@ Once a video file has been inserted, you can replace it using the Rich Text Edit
 
 ## Delete video
 
-To remove a video from the Rich Text Editor content, select the video and click the `videoRemove` tool from the quick toolbar. It will delete the video from the Rich Text Editor content as well as from the service location if the [RichTextEditorVideoSettings.RemoveUrl]() is given.
+To remove a video from the Rich Text Editor content, select the video and click the “Remove” tool from the quick toolbar. It will delete the video from the Rich Text Editor content.
 
 Once you select the video from the local machine, the URL for the video will be generated. You can remove the video from the service location by clicking the cross icon.
 
 ![Rich Text Editor Video delete](./images/blazor-richtexteditor-video-del.png)
 
-The following example explains how to configure `RichTextEditorVideoSettings.RemoveUrl` to remove a saved video from the remote service location when the following video remove actions are performed:
-
-* `delete` key action.
-* `backspace` key action.
-* Removing uploaded video file from the insert video dialog.
-* Deleting video using the quick toolbar `videoRemove` option.
-
-{% tabs %}
-{% highlight cshtml %}
-
-{% include_relative code-snippet/audio-delete.razor %}
-
-{% endhighlight %}
-{% endtabs %}
-
-`controller.cs`
-
-```cshtml
-
-using System;
-using System.IO;
-using FileUpload.Models;
-using System.Diagnostics;
-using System.Net.Http.Headers;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
-using System.Collections.Generic;
-using Microsoft.AspNetCore.Hosting;
-namespace FileUpload.Controllers
-{
-    public class HomeController : Controller
-    {
-        private IWebHostEnvironment hostingEnv;
-
-        public HomeController(IWebHostEnvironment env)
-        {
-            hostingEnv = env;
-        }
-
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-        [AcceptVerbs("Post")]
-        public void SaveImage(IList<IFormFile> UploadFiles)
-        {
-            try
-            {
-                foreach (IFormFile file in UploadFiles)
-                {
-                    if (UploadFiles != null)
-                    {
-                        string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
-                        filename = hostingEnv.WebRootPath + "\\Uploads" + $@"\{filename}";
-
-                        // Create a new directory, if it does not exists
-                        if (!Directory.Exists(hostingEnv.WebRootPath + "\\Uploads"))
-                        {
-                            Directory.CreateDirectory(hostingEnv.WebRootPath + "\\Uploads");
-                        }
-
-                        if (!System.IO.File.Exists(filename))
-                        {
-                            using (FileStream fs = System.IO.File.Create(filename))
-                            {
-                                file.CopyTo(fs);
-                                fs.Flush();
-                            }
-                            Response.StatusCode = 200;
-                        }
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                Response.StatusCode = 204;
-            }
-        }
-
-        [AcceptVerbs("Post")]
-        public void RemoveImage(IList<IFormFile> UploadFiles)
-        {
-            try
-            {
-                foreach (IFormFile file in UploadFiles)
-                {
-                    if (UploadFiles != null)
-                    {
-                        // Do remove action here}
-                        Response.StatusCode = 200;
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                Response.StatusCode = 204;
-            }
-        }
-    }
-}
-
-```
-
 ## Dimension
 
-Set the default Width, MinWidth, Height and MinHeight of the video element, when it is inserted in the Rich Text Editor using the [Width](), [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorVideoSettings_MinWidth), [Height](), [MinHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorVideoSettings_MinHeight) properties.
+Set the default Width, MinWidth, Height and MinHeight of the video element, when it is inserted in the Rich Text Editor using the [RichTextEditorMediaSettings.Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_Width), [RichTextEditorVideoSettings.MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorVideoSettings_MinWidth), [RichTextEditorMediaSettings.Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_Height), [RichTextEditorVideoSettings.MinHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorVideoSettings_MinHeight) properties.
 
 Through the [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Video),  also you can change the width and height using `Change Size` option. Once you click on the option, the video size dialog will open as below. In that, specify the width and height of the video in pixels.
 
@@ -303,7 +206,7 @@ Through the [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/c
 
 ## Display Position
 
-Sets the default display for an video when it is inserted in the Rich Text Editor using the `RichTextEditorVideoSettings.layoutOption`. It has two possible options: `Inline` and `Break`. When updating the display positions, it updates the video elements’ layout position.
+Sets the default display for an video when it is inserted in the Rich Text Editor using the [RichTextEditorMediaSettings.layoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_LayoutOption). It has two possible options: `Inline` and `Break`. When updating the display positions, it updates the video elements’ layout position.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -317,9 +220,9 @@ Sets the default display for an video when it is inserted in the Rich Text Edito
 
 The Rich Text Editor has built-in video resizing support, which is enabled for the video elements added. The resize points will appear on each corner of the video when focusing so users can easily resize the video using mouse points or thumb through the resize points. Also, the resize calculation will be done based on the aspect ratio.
 
-You can disable the resize action by configuring `false` for the [RichTextEditorVideoSettings.Resize]() property.
+You can disable the resize action by configuring `false` for the [RichTextEditorVideoSettings.EnableResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorVideoSettings_EnableResize) property.
 
-> If the [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorVideoSettings_MinWidth) and [MinHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorVideoSettings_MinHeight) properties are configured the video resizing does not shrink below the specified values.
+> If the [RichTextEditorVideoSettings.MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorVideoSettings_MinWidth) and [RichTextEditorVideoSettings.MinHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorVideoSettings_MinHeight) properties are configured the video resizing does not shrink below the specified values.
 
 ![Rich Text Editor video resize](./images/blazor-richtexteditor-video-resize.png)
 
@@ -337,56 +240,87 @@ Refer `rename.cs` controller file for configure the server-side.
 {% endhighlight %}
 {% endtabs %}
 
-
 `rename.cs`
 
 ```cshtml
 
-int x = 0;
-string file;
-[AcceptVerbs("Post")]
-public void Rename()
+using System;
+using System.IO;
+using System.Net.Http.Headers;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http.Features;
+
+namespace RenameVideo.Controllers
 {
-    try
+    [ApiController]
+    public class VideoController : ControllerBase
     {
-        var httpPostedFile = System.Web.HttpContext.Current.Request.Files["UploadFiles"];
-        fileName = httpPostedFile.FileName;
-        if (httpPostedFile != null)
+        private double x;
+        private string videofileName;
+        private readonly IWebHostEnvironment hostingEnv;
+
+        public VideoController(IWebHostEnvironment env)
         {
-            var fileSave = System.Web.HttpContext.Current.Server.MapPath("~/Files");
-            if (!Directory.Exists(fileSave))
+            this.hostingEnv = env;
+        }
+
+        [HttpPost("[action]")]
+        [Route("api/Image/Rename")]
+        public void Rename(IList<IFormFile> UploadFiles)
+        {
+            try
             {
-                Directory.CreateDirectory(fileSave);
+                foreach (IFormFile file in UploadFiles)
+                {
+                    if (UploadFiles != null)
+                    {
+                        string targetPath = hostingEnv.ContentRootPath + "\\wwwroot\\Images";
+                        string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
+
+                        // Create a new directory, if it does not exists
+                        if (!Directory.Exists(targetPath))
+                        {
+                            Directory.CreateDirectory(targetPath);
+                        }
+
+                        videofileName = filename;
+                        string path = hostingEnv.WebRootPath + "\\Images" + $@"\{filename}";
+
+                        // Rename a uploaded image file name
+                        while (System.IO.File.Exists(path))
+                        {
+                            videofileName = "rteImage" + x + "-" + filename;
+                            path = hostingEnv.WebRootPath + "\\Images" + $@"\rteImage{x}-{filename}";
+                            x++;
+                        }
+
+                        if (!System.IO.File.Exists(path))
+                        {
+                            using (FileStream fs = System.IO.File.Create(path))
+                            {
+                                file.CopyTo(fs);
+                                fs.Flush();
+                                fs.Close();
+                            }
+
+                            // Modified file name shared through response header by adding custom header
+                            Response.Headers.Add("name", videofileName);
+                            Response.StatusCode = 200;
+                            Response.ContentType = "application/json; charset=utf-8";
+                        }
+                    }
+                }
             }
-            var fileName = Path.GetFileName(httpPostedFile.FileName);
-            var fileSavePath = Path.Combine(fileSave, fileName);
-            while (System.IO.File.Exists(fileSavePath))
+            catch (Exception e)
             {
-                fileName = "rteFiles" + x + "-" + fileName;
-                fileSavePath = Path.Combine(fileSave, fileName);
-                x++;
-            }
-            if (!System.IO.File.Exists(fileSavePath))
-            {
-                httpPostedFile.SaveAs(fileSavePath);
-                HttpResponse Response = System.Web.HttpContext.Current.Response;
                 Response.Clear();
-                Response.Headers.Add("name", fileName);
                 Response.ContentType = "application/json; charset=utf-8";
-                Response.StatusDescription = "File uploaded succesfully";
-                Response.End();
+                Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
             }
         }
-    }
-    catch (Exception e)
-    {
-        HttpResponse Response = System.Web.HttpContext.Current.Response;
-        Response.Clear();
-        Response.ContentType = "application/json; charset=utf-8";
-        Response.StatusCode = 204;
-        Response.Status = "204 No Content";
-        Response.StatusDescription = e.Message;
-        Response.End();
     }
 }
 
@@ -410,76 +344,7 @@ The Rich Text Editor control allows you to add additional data with the File Upl
 
 ```cshtml
 
-using System;
-using System.IO;
-using FileUpload.Models;
-using System.Diagnostics;
-using System.Net.Http.Headers;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
-using System.Collections.Generic;
-using Microsoft.AspNetCore.Hosting;
 
-namespace FileUpload.Controllers
-{
-    public class HomeController : Controller
-    {
-        private IHostingEnvironment hostingEnv;
-
-        public HomeController(IHostingEnvironment env)
-        {
-            hostingEnv = env;
-        }
-
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        [AcceptVerbs("Post")]
-        public void SaveFiles(IList<IFormFile> UploadFiles)
-        {
-            string currentPath = Request.Form["Authorization"].ToString();
-            try
-            {
-                foreach (IFormFile file in UploadFiles)
-                {
-                    if (UploadFiles != null)
-                    {
-                        string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
-                        filename = hostingEnv.WebRootPath + "\\Files" + $@"\{filename}";
-
-                        // Create a new directory, if it does not exists
-                        if (!Directory.Exists(hostingEnv.WebRootPath + "\\Files"))
-                        {
-                            Directory.CreateDirectory(hostingEnv.WebRootPath + "\\Files");
-                        }
-
-                        if (!System.IO.File.Exists(filename))
-                        {
-                            using (FileStream fs = System.IO.File.Create(filename))
-                            {
-                                file.CopyTo(fs);
-                                fs.Flush();
-                            }
-                            Response.StatusCode = 200;
-                        }
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                Response.StatusCode = 204;
-            }
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-    }
-}
 
 ```
 

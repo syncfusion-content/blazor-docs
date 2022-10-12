@@ -5,13 +5,21 @@
         <RichTextEditorAudioSettings SaveUrl="/Home/Rename" Path="./Uploads/"></RichTextEditorAudioSettings>
 </SfRichTextEditor>
 @code {
+    
+    public string[] header { get; set; }
+
     private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
     {
         new ToolbarItemModel() { Command = ToolbarCommand.Audio }
     };
     private void onFileUploadSuccess(FileUploadSuccessEventArgs args)
     {
-        
+        var headers = args.Response.Headers.ToString();
+        header = headers.Split("name: ");
+        header = header[1].Split("\r");
+
+        // Update the modified audio name to display a audio in the editor.
+        args.File.Name = header[0];
     }
 }
 
