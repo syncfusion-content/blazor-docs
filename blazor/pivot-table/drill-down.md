@@ -209,7 +209,7 @@ End user can also manually expand or collapse specific member(s) in each fields 
 
 ### OnActionBegin
 
-The event [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) triggers when the UI actions such as drill down and drill up begin. This allows user to identify the current action being performed at runtime. It has the following parameters:
+The event [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) triggers when the UI actions such as drill down and drill up begin. This allows user to identify the current action being performed at runtime. It has the following parameters:
 
 * [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_DataSourceSettings): It holds the current data source settings such as input data source, rows, columns, values, filters, format settings and so on.
 
@@ -217,8 +217,8 @@ The event [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 | Action | Action Name|
 |------|-------------|
-| [`Expand`](./drill-down/#Drill-down-and-drill-up)| Drill down|
-| [`Collapse`](./drill-down/#Drill-down-and-drill-up)| Drill up|
+| [`Expand`](./drill-down/#drill-down-and-drill-up)| Drill down|
+| [`Collapse`](./drill-down/#drill-down-and-drill-up)| Drill up|
 
 * [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_Cancel): It allows user to restrict the current action.
 
@@ -267,7 +267,7 @@ In the following example, drill down and drill up action can be restricted by se
 ```
 ### OnActionComplete
 
-The event [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionComplete) triggers when a UI action such as drill down or drill up, is completed. This allows user to identify the current UI action being completed at runtime. It has the following parameters:
+The event [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionComplete) triggers when a UI action such as drill down or drill up, is completed. This allows user to identify the current UI action being completed at runtime. It has the following parameters:
 
 * [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_DataSourceSettings): It holds the current data source settings such as input data source, rows, columns, values, filters, format settings and so on.
 
@@ -275,8 +275,8 @@ The event [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 | Action | Action Name|
 |------|-------------|
-| [`Expand`](./drill-down/#Drill-down-and-drill-up)| Drill down|
-| [`Collapse`](./drill-down/#Drill-down-and-drill-up)| Drill up|
+| [`Expand`](./drill-down/#drill-down-and-drill-up)| Drill down|
+| [`Collapse`](./drill-down/#drill-down-and-drill-up)| Drill up|
 
 * [ActionInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_ActionInfo):  It holds the unique information about the current UI action.  For example, if drill down action is completed, the event argument contains information such as field name and the drill information.
 
@@ -328,8 +328,8 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 | Action | Action Name|
 |------|-------------|
-| [`Expand`](./drill-down/#Drill-down-and-drill-up) | Drill down |
-| [`Collapse`](./drill-down/#Drill-down-and-drill-up)| Drill up |
+| [`Expand`](./drill-down/#drill-down-and-drill-up) | Drill down |
+| [`Collapse`](./drill-down/#drill-down-and-drill-up)| Drill up |
 
 * [ErrorInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ErrorInfo): It holds the error information of the current UI action.
 
