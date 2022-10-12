@@ -2,12 +2,12 @@
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Items" />
         <RichTextEditorEvents FileUploading="@onFileUploading"></RichTextEditorEvents>
-        <RichTextEditorAudioSettings SaveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save" Path="../Files/"></RichTextEditorAudioSettings>
+        <RichTextEditorVideoSettings SaveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save" Path="../Files/"></RichTextEditorVideoSettings>
 </SfRichTextEditor>
 @code {
     private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
     {
-        new ToolbarItemModel() { Command = ToolbarCommand.Audio }
+        new ToolbarItemModel() { Command = ToolbarCommand.Video }
     };
 
     private void onFileUploading(FileUploadingEventArgs args)

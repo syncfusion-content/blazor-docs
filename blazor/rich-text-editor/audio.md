@@ -56,6 +56,14 @@ Using the Rich Text Editor `FileUploading` event, you can restrict the audio to 
 
 In the following illustration, the audio size has been validated before uploading, and it is determined whether the audio has been uploaded or not.
 
+{% tabs %}
+{% highlight cshtml %}
+
+{% include_relative code-snippet/audio-restrict.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Server-side action
 
 The selected audio can be uploaded to the required destination using the controller action below. Map this method name in [RichTextEditorAudioSettings.SaveUrl]() and provide the required destination path through [RichTextEditorAudioSettings.Path]() properties.
