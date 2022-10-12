@@ -2,16 +2,17 @@
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Items" />
         <RichTextEditorEvents FileUploading="@onFileUploading"></RichTextEditorEvents>
-        <RichTextEditorAudioSettings SaveUrl="/Home/SaveFiles" Path="./Files/"></RichTextEditorAudioSettings>
+        <RichTextEditorVideoSettings SaveUrl="/Home/SaveFiles" Path="./Files/"></RichTextEditorVideoSettings>
 </SfRichTextEditor>
 @code {
     private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
     {
-        new ToolbarItemModel() { Command = ToolbarCommand.Audio }
+        new ToolbarItemModel() { Command = ToolbarCommand.Video }
     };
+
     private void onFileUploading(FileUploadingEventArgs args)
     {
         
     }
-
 }
+
