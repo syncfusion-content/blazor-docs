@@ -33,7 +33,7 @@ Please note that this license key is different from the installer unlock key tha
 | **Trial installer** | If the Syncfusion assemblies used in build server were from trial installer, we should register the corresponding version and platforms license key in the application to avoid trial license warning. | Yes | Any developer trial license can be used to [generate license keys](https://help.syncfusion.com/common/essential-studio/licensing/how-to-generate) for build environments also</td>
 | **Licensed installer** | If the Syncfusion assemblies used in build server were obtained from licensed installer, then there is no need to register the license keys. You can [download]((https://help.syncfusion.com/common/essential-studio/installation/web-installer/how-to-download#download-the-license-version)) and [install](https://blazor.syncfusion.com/documentation/installation/web-installer/how-to-install) the licensed version of our installer. | No | Not applicable |
 
-You can [download](https://blazor.syncfusion.com/documentation/installation/web-installer/how-to-download#download-the-licensed-version) and [install](https://blazor.syncfusion.com/documentation/installation/web-installer/how-to-install) the licensed version of our installer. | No | Not applicable|
+You can [download](https://blazor.syncfusion.com/documentation/installation/web-installer/how-to-download#download-the-licensed-version) and [install](https://blazor.syncfusion.com/documentation/installation/web-installer/how-to-install) the licensed version of our installer.
 
 ## See Also
 
