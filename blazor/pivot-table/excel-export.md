@@ -400,7 +400,7 @@ The event [ExcelHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncf
 
 ## ExportCompleted 
 
- The [`ExportCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ExportCompleted) event triggers after Excel or CSV export is completed in the pivot table.
+ The [ExportCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ExportCompleted) event triggers after Excel or CSV export is completed in the pivot table.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
