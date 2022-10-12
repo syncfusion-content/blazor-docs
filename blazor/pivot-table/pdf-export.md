@@ -451,7 +451,7 @@ The event [PdfHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfus
 
 ![Customizing the Blazor Pivot Table cell values and styles while exporting](images/blazor-pivottable-pdfexportevents.png)
 
-## ExportCompleted 
+### ExportCompleted 
 
  The [ExportCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ExportCompleted) event triggers after PDF export is completed in the pivot table.
 
