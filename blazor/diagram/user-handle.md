@@ -191,8 +191,9 @@ The following code explains how to customize the appearance of the user handle.
 
 ![Customizing Appearance of Userhandle in Blazor Diagram](images/blazor-diagram-custom-user-handle-appearance.png)
 
-### Change the visible target of the userhandle
-The VisibleTarget property is used to prevent the rendering of the userhandle in specific nodes and connectors.
+### Change the visible target of the userhandle 
+The [VisibleTarget](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.VisibleTarget.html) property is used to specify whether the userhandle is visible for Node or Connector or both.
+
 | VisibleTarget | Node | Connector | Description |
 | -------- | -------- | -------- |-------- |
 |Node|![VisibleTarget set as Node](Images/blazor-diagram-user-handle-visible-target-node.png)|![VisibleTarget set as Node](Images/blazor-diagram-user-handle-visible-target-node1.png)|When visibletarget set as node,userhandle only render for nodes not for connectors. |
@@ -415,6 +416,7 @@ The following code example shows how to change the visibletarget in Userhandle.
 }
 ```
 ![VisibleTarget](Images/blazor-diagram-user-handle-visible-target.gif)
+
 ## Fixed user handles
 
 The [FixedUserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html) is used to add some frequently used commands around the node and connector even without selecting it.
