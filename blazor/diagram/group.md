@@ -392,12 +392,12 @@ You can edit the node group and its children at runtime. You can interact with t
 When a child element of any node group is clicked, its contained node group is selected instead of the child element. With consecutive clicks on the selected element, selection is changed from top to bottom in the hierarchy of parent nodegroup to its children.
 
 ## How to flip the GroupNode
-The Flip command is used to flip the content and port of the chosen object is mirrored across  in either the horizontal, vertical, or both directions on the diagram page.
+The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) command is used to flip the content and port of the chosen object is mirrored across  in either the horizontal, vertical, or both directions on the diagram page.
 
 **Note:** We can flip the groupnode as well as the selected childnodes.
 
 ### How to change the Flip Direction:
-The flipdirection is used to flip the node or connector so that it is mirrored across in either horizontal, vertical, or both directions.
+The [FlipDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlipDirection.html) is used to flip the node or connector so that it is mirrored across in either horizontal, vertical, or both directions.
 
 | FlipDirection | Description | 
 | -------- | -------- |
@@ -407,7 +407,7 @@ The flipdirection is used to flip the node or connector so that it is mirrored a
 |None|	It is used to disables all the flip behaviour.| 
 
 ### How to change the Flip Mode:
-The FlipMode is used to control the behaviour of the flip object.
+The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) is used to control the behaviour of the flip object whether to flip the object along with port and content
 | DiagramFlipMode | Description | 
 | -------- | -------- |
 |Content|It is used to enable or disable the flip for object’s content..|
@@ -418,6 +418,7 @@ The FlipMode is used to control the behaviour of the flip object.
 **Note:** Flipmode is only applicable for Nodes not for Connectors.
 
 The following code example shows how to change the FlipDirection and FlipMode.
+
 ```chtml
 @using Syncfusion.Blazor.Diagram
 @using ChangeEventArgs = Microsoft.AspNetCore.Components.ChangeEventArgs

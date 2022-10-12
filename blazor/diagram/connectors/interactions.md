@@ -215,10 +215,10 @@ The connector can be selected by clicking it. When the connector is selected, ci
 ![Dragging Connector End Point in Blazor Diagram](../images/blazor-diagram-drag-connector-end-point.gif)
 
 ## How to flip the connector
-The Flip command is used to flip the chosen object is mirrored across  in either the horizontal, vertical, or both directions on the diagram page.
+The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) command is used to flip the chosen object is mirrored across  in either the horizontal, vertical, or both directions on the diagram page.
 
 ### How to change the flip direction:
-The flipdirection is used to flip the node or connector so that it is mirrored across in either horizontal, vertical, or both directions.
+The [FlipDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlipDirection.html) is used to flip the node or connector so that it is mirrored across in either horizontal, vertical, or both directions.
 
 | FlipDirection | Description | 
 | -------- | -------- |
@@ -246,9 +246,8 @@ The following code example shows how to change the FlipDirection.
 </style>
 <div id="properties">
     <input type="button" value="Horizontal" @onclick="@Horizontal" />
-     <input type="button" value="Vertical" @onclick="@Vertical" />
-      <input type="button" value="Both" @onclick="@Both" />
-  
+    <input type="button" value="Vertical" @onclick="@Vertical" />
+    <input type="button" value="Both" @onclick="@Both" /> 
  </div>
 <div id="#diagram">
     <SfDiagramComponent @ref="diagram" Width="1000px" Height="1000px"  Nodes="@NodeCollection" Connectors="@connectors">
