@@ -215,9 +215,10 @@ The following are three types of `ClipMode`:
 
 ## Editing tooltip
 
-It is possible to enable or disable the tooltip while performing editing actions on the taskbar like left resizing, right resizing, dragging, and progress resizing by using the [GanttTooltipSettings.ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTooltipSettings-1.html#Syncfusion_Blazor_Gantt_GanttTooltipSettings_1_ShowTooltip) property. By default, this property is set to 'true.'
+It is possible to enable or disable the tooltip while performing editing actions on the taskbar like left resizing, right resizing, dragging, and progress resizing by using the [GanttTooltipSettings.ShowTooltipOnEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTooltipSettings-1.html#Syncfusion_Blazor_Gantt_GanttTooltipSettings_1_ShowTooltipOnEditing) property. By default, this property is set to 'true.'
 
 ```cshtml
+@using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" TreeColumnIndex="1"
     Toolbar="@(new List<string>() { "Add", "Cancel", "CollapseAll", "Delete", "Edit", "ExpandAll", "Search", "Update" , "Indent" , "Outdent"})">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -225,7 +226,7 @@ It is possible to enable or disable the tooltip while performing editing actions
     </GanttTaskFields>
     <GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" AllowAdding="true" AllowDeleting="true">
     </GanttEditSettings>
-    <GanttTooltipSettings ShowTooltip="true" TValue="TaskData"></GanttTooltipSettings>
+    <GanttTooltipSettings ShowTooltipOnEditing="true" TValue="TaskData"></GanttTooltipSettings>
 </SfGantt>
 @code {
     private List<TaskData> TaskCollection { get; set; }
@@ -258,6 +259,7 @@ It is possible to enable or disable the tooltip while performing editing actions
         };
         return Tasks;
     }
+}
 ```
 
 ![Blazor Gantt Chart displays Editing Tooltip](images/editing_tooltip.gif)
