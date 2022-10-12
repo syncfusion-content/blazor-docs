@@ -453,7 +453,7 @@ The event [PdfHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfus
 
 ## ExportCompleted 
 
- The [`ExportCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ExportCompleted) event triggers after PDF export is completed in the pivot table.
+ The [ExportCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ExportCompleted) event triggers after PDF export is completed in the pivot table.
 
  ```cshtml
 @using Syncfusion.Blazor.PivotView
