@@ -48,5 +48,40 @@ You can change the interaction mode of PDF Viewer using the `InteractionMode` pr
     public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 }
 ```
+## Disable interaction with Annotations
+
+You can disable the annotation interactions such as dragging, resizing, deleting the annotations by using the `IsLock` property of `AnnotationSettings`.
+
+The following code illustrates how to disable the annotation interaction.
+
+```cshtml
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.PdfViewer
+
+<SfButton OnClick="@OnClick">Lock Annotation</SfButton>
+<SfPdfViewer @ref="PDFViewer" DocumentPath="@DocumentPath" ServiceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer">
+</SfPdfViewer>
+
+@code{
+    SfPdfViewer PDFViewer;
+
+    private string DocumentPath { get; set; } = "PDF_Succinctly.pdf";
+
+    public async void OnClick(MouseEventArgs args)
+    {
+        //Gets the annotation collection of the PDF Viewer.
+        var allAnnots = await PDFViewer.GetAnnotationsAsync();
+
+        foreach (var item in allAnnots)
+        {
+            //Disabling the interaction with annotation.
+            item.AnnotationSettings.IsLock = true;
+            await PDFViewer.EditAnnotationAsync(item);
+        }
+    }
+}
+```
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Lock%20Annotation).
 
 > You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.
