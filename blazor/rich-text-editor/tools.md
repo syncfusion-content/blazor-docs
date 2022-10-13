@@ -184,7 +184,7 @@ public List&lt;ToolbarItemModel&gt; Items = new List&lt;ToolbarItemModel&gt;() {
 <tr>
 <td><p>FontColor</p></td>
 <td><img src="./images/font-color.png"></td>
-<td><p>Specifies an array of colors can be used in the colors popup for font color.</p></td>
+<td><p>Specifies an array of colors that can be used in the colors popup for font color.</p></td>
 <td>
 {% highlight cshtml %} 
 public List&lt;ToolbarItemModel&gt; Items = new List&lt;ToolbarItemModel&gt;() {<br>&nbsp;&nbsp;&nbsp;&nbsp;new ToolbarItemModel() { Command = ToolbarCommand.FontColor } <br> };
@@ -194,7 +194,7 @@ public List&lt;ToolbarItemModel&gt; Items = new List&lt;ToolbarItemModel&gt;() {
 <tr>
 <td><p>BackgroundColor</p></td>
 <td><img src="./images/background-color.png"></td>
-<td><p>Specifies an array of colors can be used in the colors popup for background color.</p></td>
+<td><p>Specifies an array of colors that can be used in the colors popup for background color.</p></td>
 <td>
 {% highlight cshtml %} 
 public List&lt;ToolbarItemModel&gt; Items = new List&lt;ToolbarItemModel&gt;() {<br>&nbsp;&nbsp;&nbsp;&nbsp;new ToolbarItemModel() { Command = ToolbarCommand.BackgroundColor } <br> }; 
