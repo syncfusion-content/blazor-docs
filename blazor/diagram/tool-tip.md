@@ -249,7 +249,7 @@ The following code example sets the tooltip content for the connectors.
 
 ## How to shows/hides the tip pointer for tooltip
 
-[ShowTipPointer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_ShowTipPointer) property value is true if the tip pointer is visible; otherwise, false.
+The [ShowTipPointer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_ShowTipPointer) property value is true if the tip pointer is visible; otherwise, false.
 
 The following code example is used to set tooltip tip pointer for nodes.
 
