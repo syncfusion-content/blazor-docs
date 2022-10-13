@@ -240,34 +240,35 @@ Also, rotate the node during the interaction.
 
 ## How to flip the Node
 
-The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) command is used to flip the content and port of the chosen object is mirrored across  in either the horizontal, vertical, or both directions on the diagram page.
+The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) command is used to flip the content, and the port of the chosen object is mirrored across  in either the horizontal, vertical, or both directions on the diagram page.
 
 ### How to change the flip direction:
 
-The [FlipDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlipDirection.html) is used to flip the node or connector so that it is mirrored across in either horizontal, vertical, or both directions.
+The [FlipDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlipDirection.html) is used to flip the node or connector so that it is mirrored across in either the horizontal, vertical, or both directions.
 
 | FlipDirection | Description | 
 | -------- | -------- |
-|Horizontal|It is used to flip the node or connector so that it is mirrored across the horizontal axis.|
-|Vertical|	It is used to flip the node or connector so that it is mirrored across the vertical axis.|
-|Both|		It is used to flip the node or port so that it is mirrored across the both horizontal and vertical axis.|
-|None|	It is used to disables all the flip behaviour.| 
+|Horizontal| It is used to flip the node or connector to be mirrored across the horizontal axis.|
+|Vertical| It is used to flip the node or connector to be mirrored across the vertical axis.|
+|Both| It is used to flip the node or connector to be mirrored across the horizontal and vertical axes.|
+|None| It is used to disable all the flip behavior. |  
 
 
 ### How to change the flip mode:
 
-The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) is used to control the behaviour of the flip object whether to flip the object along with port and content.
+The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) is used to control the behavior of the flip object whether to flip the object along with the port and content.
 
 | DiagramFlipMode | Description | 
 | -------- | -------- |
-|Content|It is used to enable or disable the flip for an object’s content.|
-|Port|It is used to enable or disable the flip for an object’s port.|
-|All|It is used to enable or disable the flip for both the object’s content and port.|
-|None|	It is used to disable all the flipmode behaviour.|
+|Content| It is used to enable or disable the flip for an object’s content.|
+|Port| It enables or disables the flip for an object’s port.|
+|All| It is used to enable or disable the flip for both the object’s content and port.|
+|None| It is used to disable all the flip mode behavior.|
 
-**Note:** Flipmode is only applicable for nodes, not for connectors.
+**Note:** [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) is only applicable for nodes, not connectors.
 
 The following code example shows how to change the FlipDirection and FlipMode.
+
 ```chtml
 @using Syncfusion.Blazor.Diagram
 @using ChangeEventArgs = Microsoft.AspNetCore.Components.ChangeEventArgs
