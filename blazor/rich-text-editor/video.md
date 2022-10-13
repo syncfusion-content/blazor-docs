@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Video in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn here all about video in Syncfusion Blazor RichTextEditor component and more.
+description: Checkout and learn here all about insert video in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -113,7 +113,7 @@ namespace VideoUpload.Controllers
         }
 
         [HttpPost("[action]")]
-        [Route("api/Image/Save")]
+        [Route("api/Video/Save")]
         public void Save(IList<IFormFile> UploadFiles)
         {
             try
@@ -122,7 +122,7 @@ namespace VideoUpload.Controllers
                 {
                     if (UploadFiles != null)
                     {
-                        string targetPath = hostingEnv.ContentRootPath + "\\wwwroot\\Images";
+                        string targetPath = hostingEnv.ContentRootPath + "\\wwwroot\\Video";
                         string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
 
                         // Create a new directory, if it does not exists
@@ -344,6 +344,76 @@ The Rich Text Editor control allows you to add additional data with the File Upl
 
 ```cshtml
 
+using System;
+using System.IO;
+using System.Net.Http.Headers;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http.Features;
+
+namespace VideoUpload.Controllers
+{
+    [ApiController]
+    public class VideoController : ControllerBase
+    {
+        private readonly IWebHostEnvironment hostingEnv;
+
+        public VideoController(IWebHostEnvironment env)
+        {
+            this.hostingEnv = env;
+        }
+
+        [HttpPost("[action]")]
+        [Route("api/Video/Save")]
+        public void Save(IList<IFormFile> UploadFiles)
+        {
+            string currentPath = Request.Form["Authorization"].ToString();
+            try
+            {
+                foreach (var file in UploadFiles)
+                {
+                    if (UploadFiles != null)
+                    {
+                        string targetPath = hostingEnv.ContentRootPath + "\\wwwroot\\Video";
+                        string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
+
+                        // Create a new directory, if it does not exists
+                        if (!Directory.Exists(targetPath))
+                        {
+                            Directory.CreateDirectory(targetPath);
+                        }
+
+                        // Name which is used to save the image
+                        filename = targetPath + $@"\{filename}";
+
+                        if (!System.IO.File.Exists(filename))
+                        {
+                            // Upload a image, if the same file name does not exist in the directory
+                            using (FileStream fs = System.IO.File.Create(filename))
+                            {
+                                file.CopyTo(fs);
+                                fs.Flush();
+                            }
+                            Response.StatusCode = 200;
+                        }
+                        else
+                        {
+                            Response.StatusCode = 204;
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Response.Clear();
+                Response.ContentType = "application/json; charset=utf-8";
+                Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
+            }
+        }
+    }
+}
 
 
 ```
