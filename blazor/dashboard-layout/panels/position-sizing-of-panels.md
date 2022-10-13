@@ -119,4 +119,4 @@ These properties are helpful in designing a dashboard, where the content of each
 
 The following screenshot shows the sizing of panels within the dashboard layout using the SizeX and SizeY properties of the panels.
 
-![Changing Panel Size in Blazor DashboardLayout](../images/blazor-dashboard-layout-panel-size.png)
+![Changing Panel Size in Blazor DashboardLayout](../images/blazor-admin-template-layout-panel-size.png)
