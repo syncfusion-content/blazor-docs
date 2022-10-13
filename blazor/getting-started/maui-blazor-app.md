@@ -165,6 +165,16 @@ Before running the sample, make sure the mode is `Windows Machine`.
 
 > Download demo from [GitHub](https://github.com/SyncfusionExamples/MAUI-Blazor-App-using-Syncfusion-Blazor-Components)
 
+## How to add image in .NET MAUI Blazor Application
+
+1. [Create .NET MAUI Blazor Application.](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-6.0)
+2. Place the images to be rendered in the images folder ( a separate folder for images) under wwwroot folder of the application.
+3. Add the images at the required place in the application using [image tag.](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img). Please refer the code snippets to add image in the application
+
+![Code Snippets to add images in MAUI application](images\maui\image-codesnippets.jpeg)
+
+![MAUI Blazor App with added image](images\maui\maui-image.jpeg)
+
 ## Troubleshooting
 
 * How to solve "The project doesn't know how to run the profile Windows Machine" while running MAUI Blazor App?
