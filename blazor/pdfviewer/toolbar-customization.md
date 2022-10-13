@@ -60,7 +60,7 @@ The following code snippet explains how to show or hide toolbar using the ShowTo
 }
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar).
+> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar).
 
 ## Show or hide navigation toolbar
 
@@ -159,7 +159,7 @@ The following code snippet explains how to show or hide annotation toolbar using
     }
 }
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Show%20AnnotationToolbar).
+> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Show%20AnnotationToolbar).
 
 > You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.
 
@@ -272,11 +272,11 @@ The following code represnts how to create custom toolbar with save and some cus
     }
 </style>
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar%20with%20Save%20Option).
+> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar%20with%20Save%20Option).
 
 The following sample mimics all the options of the PDF Viewer default toolbar in a custom toolbar along with the save button.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar).
+> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar).
 
 ## Customize the toolbar icon in Blazor PDF Viewer Component
 
@@ -351,6 +351,6 @@ You can customize the appearance of the toolbar icons by disabling the default t
 Footer
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20toolbar%20with%20PNG%20image).
+> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20toolbar%20with%20PNG%20image).
 
->Note: This is applicable only for custom toolbar.
+> **Note**: This is applicable only for custom toolbar.

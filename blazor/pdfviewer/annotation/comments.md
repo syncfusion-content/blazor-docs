@@ -128,4 +128,4 @@ The following code snippet explains how to show the Comment panel.
     private string documentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";    
 }
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/CommentPanel/Show%20CommentPanel%20-%20Server)
+> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/CommentPanel/Show%20CommentPanel%20-%20Server).
