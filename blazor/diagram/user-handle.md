@@ -191,16 +191,18 @@ The following code explains how to customize the appearance of the user handle.
 
 ![Customizing Appearance of Userhandle in Blazor Diagram](images/blazor-diagram-custom-user-handle-appearance.png)
 
-### Change the visible target of the userhandle 
+### Change the visible target of the userhandle
+
 The [VisibleTarget](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.VisibleTarget.html) property is used to specify whether the userhandle is visible for Node or Connector or both.
 
 | VisibleTarget | Node | Connector | Description |
 | -------- | -------- | -------- |-------- |
-|Node|![VisibleTarget set as Node](Images/blazor-diagram-user-handle-visible-target-node.png)|![VisibleTarget set as Node](Images/blazor-diagram-user-handle-visible-target-node1.png)|When visibletarget set as Node,userhandle only render for nodes not for connectors. |
-|Connector|![VisibleTarget set as connector](Images/blazor-diagram-user-handle-visible-target-connector1.png)|![VisibleTarget set as connector](Images/blazor-diagram-user-handle-visible-target-connector.png)|When VisibleTarget set as Connector, userhandle only render for connectors not for nodes. |
-|Both|![VisibleTarget set as Both](Images/blazor-diagram-user-handle-visible-target-node.png)|![VisibleTarget set as Both](Images/blazor-diagram-user-handle-visible-target-connector.png)|When VisibleTarget set as Both, then userhandle render for both nodes and connectors |
+|Node|![VisibleTarget set as Node](Images/blazor-diagram-user-handle-visible-target-node.png)|![VisibleTarget set as Node](Images/blazor-diagram-user-handle-visible-target-node1.png)|When the visibletarget is set as the node, the userhandle only renders for nodes, not for connectors. |
+|Connector|![VisibleTarget set as connector](Images/blazor-diagram-user-handle-visible-target-connector1.png)|![VisibleTarget set as connector](Images/blazor-diagram-user-handle-visible-target-connector.png)|When VisibleTarget is set as the connector, the userhandle only renders for the connector, not for nodes. |
+|Both|![VisibleTarget set as Both](Images/blazor-diagram-user-handle-visible-target-node.png)|![VisibleTarget set as Both](Images/blazor-diagram-user-handle-visible-target-connector.png)|When the VisibleTarget is set as both, the userhandle renders both nodes and connectors |
 
-The following code example shows how to change the visibletarget in Userhandle.
+The following code example shows how to change the visibletarget in the userhandle.
+
 ```chtml
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent @ref="@Diagram" Width="1200px" Height="600px" Nodes="@nodes"  GetCustomTool="@tools" GetCustomCursor="@cursor" Connectors="@connectors" SelectionSettings="@SelectedModel"> 
