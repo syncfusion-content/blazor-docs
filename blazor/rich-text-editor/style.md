@@ -126,7 +126,7 @@ While rendering the Rich Text Editor inside the dialog component, the dialog con
 
 ## Highlight the specific lines
 
-You can programmatically highlight a portion of the text in the editor, like setting the background color of the text by applying background style to the particular text using RichTextEditor [ExecuteCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html) method and the `jsinterop` method.
+Programmatically highlight a portion of the text in the editor, like setting the background color of the text by applying background style to the particular text using the RichTextEditor [ExecuteCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html) method and the `jsinterop` method.
 
 Refer the jsintrob method in `<head>` **wwwroot/jsinterop.js** of file.
 
