@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Skeleton Component
 
-This section briefly explains about how to include [Blazor Skeleton](https://www.syncfusion.com/blazor-components/blazor-skeleton) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include Blazor Skeleton component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
 Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
-> From 2022 Vol1 (20.1) version - The default value of `IgnoreScriptIsolation` is changed as `true`, so, you don’t have to set `IgnoreScriptIsolation` property explicitly to refer scripts externally.
+> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to `true`. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to true, and this property is obsolete.
 
 ### Blazor Server App
 
@@ -64,7 +64,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
 ....
@@ -84,7 +84,7 @@ namespace BlazorApplication
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+            services.AddSyncfusionBlazor();
         }
         ...
     }
@@ -110,7 +110,7 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddScoped(serviceProvider => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+builder.Services.AddSyncfusionBlazor();
 await builder.Build().RunAsync();
 ....
 
@@ -127,7 +127,7 @@ namespace WebApplication1
         public static async Task Main(string[] args)
         {
             ....
-            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+            builder.Services.AddSyncfusionBlazor();
             await builder.Build().RunAsync();
         }
     }
@@ -267,7 +267,8 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 @using Syncfusion.Blazor.Notifications
 
-<SfSkeleton Height="20px" Width="100px"></SfSkeleton>
+<SfSkeleton Height="15px" Width="200px"></SfSkeleton><br/>
+<SfSkeleton Height="15px" Width="100px"></SfSkeleton>
 
 {% endhighlight %}
 {% endtabs %}
@@ -278,7 +279,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 ## Skeleton Shapes
 
-The [`shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Shape) property can be used to display skeleton in different shapes like circle, square, rectangle and text.
+The [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Shape) property can be used to display skeleton in different shapes like circle, square, rectangle and text.
 
 {% tabs %}
 {% highlight razor %}
@@ -287,9 +288,9 @@ The [`shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notificati
     <SfSkeleton Shape=SkeletonType.Circle Width="48px" CssClass="custom-css"></SfSkeleton>
     <SfSkeleton Shape="SkeletonType.Square" Width="48px"></SfSkeleton>
     <br/><br/>
-    <SfSkeleton Shape="SkeletonType.Text" Height="50px"></SfSkeleton>
+    <SfSkeleton Shape="SkeletonType.Text" Height="15px"></SfSkeleton>
     <br/><br/>
-    <SfSkeleton Shape="SkeletonType.Rectangle" Width="15px" ></SfSkeleton>
+    <SfSkeleton Shape="SkeletonType.Rectangle" Height="50px" Width="100%" ></SfSkeleton>
 </div>
 <style>
     .custom-css {
@@ -302,5 +303,7 @@ The [`shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notificati
 
 ![Blazor Skeleton Component](./images/blazor-skeleton-shape-sample.png)
 
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Skeleton).
 
+N> You can also explore our [Blazor Skeleton example](https://blazor.syncfusion.com/demos/skeleton/defaultfunctionalities) that shows how to render and configure the skeleton.
 
