@@ -214,116 +214,12 @@ The connector can be selected by clicking it. When the connector is selected, ci
 
 ![Dragging Connector End Point in Blazor Diagram](../images/blazor-diagram-drag-connector-end-point.gif)
 
-## How to flip the connector
+## Connector Flip
 
-The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) command is used to flip the chosen object is mirrored across in either the horizontal, vertical, or both directions on the diagram page.
+The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) is performed to give the mirrored image of the original element.
 
-### How to change the flip direction:
+For more information about the connector flip, refer to [Connector Flip](../flip).
 
-The [FlipDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlipDirection.html) is used to flip the node or connector so that it is mirrored across in either the horizontal, vertical, or both directions.
-
-| FlipDirection | Description | 
-| -------- | -------- |
-|Horizontal| It is used to flip the node or connector to be mirrored across the horizontal axis.|
-|Vertical| It is used to flip the node or connector to be mirrored across the vertical axis.|
-|Both| It is used to flip the node or connector to be mirrored across the horizontal and vertical axes.|
-|None| It is used to disable all the flip behavior. |
-
-**Note:** [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) is applicable only for Nodes not for Connectors.
-
-The following code example shows how to change the FlipDirection.
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-@using ChangeEventArgs = Microsoft.AspNetCore.Components.ChangeEventArgs
-<style>    
-    #diagram {
-        width: 70%;
-        float: left;
-    }
-    #properties {
-        width: 15%;
-        float: right;
-        margin-right:300px;
-    }
-</style>
-<div id="properties">
-    <input type="button" value="Horizontal" @onclick="@Horizontal" />
-    <input type="button" value="Vertical" @onclick="@Vertical" />
-    <input type="button" value="Both" @onclick="@Both" /> 
- </div>
-<div id="#diagram">
-    <SfDiagramComponent @ref="diagram" Width="1000px" Height="1000px"  Nodes="@NodeCollection" Connectors="@connectors">
-        <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
-    </SfDiagramComponent>
-    </div>
-@code
-{
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    public SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> NodeCollection;
-    protected override void OnInitialized()
-    {     
-        Connector Connector = new Connector()
-        {
-            ID = "connector2",
-            Annotations = new DiagramObjectCollection<PathAnnotation>()
-            {
-                new PathAnnotation 
-                { 
-                    Content = "Offset as 0.5",
-                    Offset = 0.5 
-                },
-            },         
-            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
-            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },            
-            Type = ConnectorSegmentType.Straight
-        };
-        connectors.Add(Connector);     
-    }
-    public void Horizontal()
-    {     
-        if (diagram.SelectionSettings.Connectors.Count > 0)
-        {
-            for(int i = 0; i < diagram.SelectionSettings.Connectors.Count; i++)
-            {
-                diagram.SelectionSettings.Connectors[i].Flip = FlipDirection.Horizontal;
-            }
-        }       
-    }
-    public void Vertical()
-    {
-        if (diagram.SelectionSettings.Connectors.Count > 0)
-        {
-            for(int i = 0; i < diagram.SelectionSettings.Connectors.Count; i++)
-            {
-                diagram.SelectionSettings.Connectors[i].Flip = FlipDirection.Vertical;
-            }
-        }
-    }
-    public void Both()
-    {     
-        if (diagram.SelectionSettings.Connectors.Count > 0)
-        {
-            for(int i = 0; i < diagram.SelectionSettings.Connectors.Count; i++)
-            {
-               diagram.SelectionSettings.Connectors[i].Flip = FlipDirection.Both;
-            }
-        }
-    }
-}
-```
-Initial rendering:
-
-![Initial Rendering](../images/blazor-diagram-connector-flip-initial-rendering.png)
-
-| FlipDirection | Output|
-| -------- | -------- |
-|Horizontal|![HorizontalDirection](../images/blazor-diagram-flip-direction-as-horizontal.png)|
-|Vertical|![VerticalDirection](../images/blazor-diagram-flip-direction-as-vertical.png)|
-|Both|![BothDirection](../images/blazor-diagram-flip-direction-as-both.png)|
-
-![Flip Connector](../images/blazor-diagram-connector-flip-direction.gif)
 ## See also
 
 * [How to customize the connector properties](./customization)
