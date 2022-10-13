@@ -60,7 +60,7 @@ The following code snippet explains how to show or hide toolbar using the ShowTo
 }
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar).
 
 ## Show or hide navigation toolbar
 
@@ -159,7 +159,7 @@ The following code snippet explains how to show or hide annotation toolbar using
     }
 }
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Show%20AnnotationToolbar).
 
 > You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.
 
@@ -187,7 +187,7 @@ The following code represnts how to create custom toolbar with save and some cus
     </ToolbarItems>
 </SfToolbar>
 
-<SfPdfViewerServer @ref="PDFViewer" IsCommentPanelOpen="true" DocumentPath="PDF_Succinctly.pdf" ServiceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer" EnableNavigationToolbar="false" EnableToolbar="false"  Height="100%" Width="100%"></SfPdfViewerServer>
+<SfPdfViewerServer @ref="PDFViewer" CommentPanelVisible="true" DocumentPath="PDF_Succinctly.pdf" ServiceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer" EnableNavigationToolbar="false" EnableToolbar="false"  Height="100%" Width="100%"></SfPdfViewerServer>
 
 @code
 {
@@ -272,8 +272,85 @@ The following code represnts how to create custom toolbar with save and some cus
     }
 </style>
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar%20with%20Save%20Option).
 
 The following sample mimics all the options of the PDF Viewer default toolbar in a custom toolbar along with the save button.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar).
+
+## Customize the toolbar icon in Blazor PDF Viewer Component
+
+You can customize the appearance of the toolbar icons by disabling the default toolbar and creating custom toolbar with template. The below code illustrates how to create custom toolbar with custom toolbar icon.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations;
+@using Syncfusion.Blazor.PdfViewer;
+@using Syncfusion.Blazor.PdfViewerServer;
+
+<!--Created custom toolbar with desired set of features such as page navigations, zoom options and stamp button-->
+<SfToolbar>
+    <ToolbarItems>
+        <ToolbarItem PrefixIcon="e-pv-previous-page-navigation-icon" TooltipText="Previous Page" id="previousPage" Align=@Syncfusion.Blazor.Navigations.ItemAlign.Left OnClick="@previousClicked"></ToolbarItem>
+        <ToolbarItem PrefixIcon="e-pv-next-page-navigation-icon" TooltipText="Next Page" id="nextPage" Align=@Syncfusion.Blazor.Navigations.ItemAlign.Left OnClick="@nextClicked"></ToolbarItem>
+        <ToolbarItem TooltipText="Stamp" id="stamp" OnClick="@stampClicked"> <Template>
+        <img width="30" height="30" src="Data/stamp.png" /> </Template> </ToolbarItem>
+    </ToolbarItems>
+</SfToolbar>
+
+<!--Rendering PDF Viewer with custom toolbar by disabling the default toolbar-->
+<SfPdfViewerServer @ref="PDFViewer" DocumentPath="@DocumentPath" EnableNavigationToolbar="false" EnableAnnotationToolbar="false" EnableToolbar="false" Height="800px" Width="100%">
+    <PdfViewerCustomStampSettings CustomStamps="@pdfViewerCustomStamps">
+    </PdfViewerCustomStampSettings>
+</SfPdfViewerServer>
+
+@code
+{
+    SfPdfViewerServer PDFViewer;
+
+    //Sets the PDF document path for initial loading.
+    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+    
+    public List<PdfViewerCustomStamp> pdfViewerCustomStamps { get; set; }
+
+    public void nextClicked(ClickEventArgs args)
+    {
+        //Navigate to next page of the PDF document loaded in the PDF Viewer.
+        PDFViewer.GoToNextPageAsync();
+    }
+
+    public void stampClicked(ClickEventArgs args)
+    {
+        pdfViewerCustomStamps = new List<PdfViewerCustomStamp>()
+        {
+            new PdfViewerCustomStamp()
+            {
+                //Defines the custom stamp name to be added in stamp menu of the PDF Viewer toolbar.
+                CustomStampName = "Stamp",                
+            }
+        };
+
+    }
+
+    public void previousClicked(ClickEventArgs args)
+    {
+        //Navigate to previous page of the PDF document.
+        PDFViewer.GoToPreviousPageAsync();
+    }
+}
+<style>
+    .e-pv-previous-page-navigation-icon::before {
+        content: '\e70d';
+     }
+    .e-pv-next-page-navigation-icon::before {
+          content: '\e76a';
+      }     
+    .e-pv-stamp-icon::before {
+        content: '\e74c';
+    }
+</style>
+Footer
+```
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20toolbar%20with%20PNG%20image).
+
+>Note: This is applicable only for custom toolbar.
