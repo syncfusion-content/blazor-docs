@@ -244,7 +244,7 @@ public List&lt;ToolbarItemModel&gt; Items = new List&lt;ToolbarItemModel&gt;() {
 <tr>
 <td><p>SourceCode</p></td>
 <td><img src="./images/code-view.png"></td>
-<td><p>Rich Text Editor includes the ability for users to directly edit HTML code via "Source View". If you made any modification in Source view directly, synchronize with Design view.</p></td>
+<td><p>The Rich Text Editor allows users to directly edit HTML code via "Source View". If you make any modifications in the Source view directly, synchronize with the Design view.</p></td>
 <td>
 {% highlight cshtml %} 
 public List&lt;ToolbarItemModel&gt; Items = new List&lt;ToolbarItemModel&gt;() {<br>&nbsp;&nbsp;&nbsp;&nbsp;new ToolbarItemModel() { Command = ToolbarCommand.SourceCode } <br> }; 
@@ -280,9 +280,9 @@ The tools order can be customized as your application requirement. If you are no
 
 ### Removing built-in tool from Toolbar
 
-You can remove the build-in tools from the toolbar by using the [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property.
+Remove the build-in tools from the toolbar by using the [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property.
 
-In the following example, Some default toolbar items removed and only added the required toolbar items.
+In the following example, some default toolbar items are removed, and only the required toolbar items are added.
 
 {% tabs %}
 {% highlight razor %}
@@ -322,7 +322,7 @@ To apply different font style for section of the content, select the text that y
 
 ### Buil-in font family
 
-The following table, lists the default font name and width of the `FontName` dropdown and available list of font names.
+The following table lists the default font name and width of the `FontName` dropdown and the available list of font names.
 
 | Default Key | Default Value |
 |-----|--------------------------------------|
@@ -342,8 +342,8 @@ The following table, lists the default font name and width of the `FontName` dro
 
 ### Custom font family
 
-Rich Text Editor provides support to custom fonts with existing list.
-If you want to add additional font names and font sizes to font drop-down, pass the font information as `List<DropDownItemModel>` data to the [RichTextEditorFontFamily.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontFamily.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorFontFamily_Items) property.
+The Rich Text Editor provides support to custom fonts with an existing list.
+If you want to add additional font names and font sizes to the font drop-down, pass the font information as `List<DropDownItemModel>` data to the [RichTextEditorFontFamily.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontFamily.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorFontFamily_Items) property.
 
 {% tabs %}
 {% highlight razor %}
@@ -357,7 +357,7 @@ If you want to add additional font names and font sizes to font drop-down, pass 
 
 ### Google font support
 
-To use web fonts in Rich Text Editor, the web fonts need not be present in the local machine. To add the web fonts to Rich Text Editor, refer to the web font links and add the font names in the [RichTextEditorFontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontFamily.html) tag.
+To use web fonts in the Rich Text Editor, the web fonts need not be present in the local machine. To add the web fonts to the Rich Text Editor, refer to the web font links and add the font names in the [RichTextEditorFontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontFamily.html) tag.
 
 The following font style links are referred in the page.
 
@@ -420,7 +420,7 @@ To apply different font style for section of the content, select the text that y
 
 ### Build-in font size
 
-The following table list the default font size and width of the [FontSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontSize.html) dropdown and available list of font size.
+The following table list the default font size and width of the [FontSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontSize.html) dropdown and the available list of the font size.
 
 | Default Key | Default Value |
 |-----|--------------------------------------|
@@ -440,8 +440,7 @@ The following table list the default font size and width of the [FontSize](https
 
 ### Custom font size
 
-Rich Text Editor provides support to custom font size with existing list.
-If you want to add additional font sizes to font drop-down, pass the font information as `List<DropDownItemModel>` data to the [RichTextEditorFontSize.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontSize.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorFontSize_Items) property.
+The Rich Text Editor provides support to custom the font size with the existing list. If you want to add additional font sizes to the font drop-down, pass the font information as `List<DropDownItemModel>` data to the [RichTextEditorFontSize.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontSize.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorFontSize_Items) property.
 
 {% tabs %}
 {% highlight razor %}
@@ -461,7 +460,7 @@ To apply different format style for section of the content, select a required fo
 
 ### Build-in formats
 
-The following table, lists the default format name and width of the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormat.html#properties) dropdown and available list of format names.
+The following table list the default format name and width of the  [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormat.html#properties) dropdown and the available list of format names.
 
 | Default Key | Default Value |
 |-----|--------------------------------------|
@@ -481,8 +480,8 @@ The following table, lists the default format name and width of the [Format](htt
 
 ### Custom format
 
-Rich Text Editor provides support to custom formats with existing list.
-If you want to add additional formats to format drop-down, pass the format information as `List<DropDownItemModel>` data to the [RichTextEditorFormat.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormat.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorFormat_Items) property.
+The Rich Text Editor provides support to custom formats with an existing list.
+If you want to add additional formats to the format drop-down, pass the format information as `List<DropDownItemModel>` data to the [RichTextEditorFormat.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormat.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorFormat_Items) property.
 
 {% tabs %}
 {% highlight razor %}
@@ -496,11 +495,11 @@ If you want to add additional formats to format drop-down, pass the format infor
 
 ### Font and background color
 
-To apply font color or background color for a selected content of RTE, use the font color and background color tools.
+To apply the font color or background color for a selected content of RTE, use the font color and background color tools.
 
-Rich Text Editor support to provide customs font color and background color with existing list through the [ColorCode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ColorItemBase.html#Syncfusion_Blazor_RichTextEditor_ColorItemBase_ColorCode) field of [RichTextEditorFontColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontColor.html) and [RichTextEditorBackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBackgroundColor.html).
+The Rich Text Editor support to provide customs font color and background color with an existing list through the [ColorCode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ColorItemBase.html#Syncfusion_Blazor_RichTextEditor_ColorItemBase_ColorCode) field of the [RichTextEditorFontColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontColor.html) and [RichTextEditorBackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBackgroundColor.html).
 
-The `RichTextEditorFontColor` and `RichTextEditorBackgroundColor` tag has two Mode of **Picker** and **Palette**. Palette mode has predefined set of **ColorCode** and in the picker mode, more colors has been provided. Through **ModeSwitcher**, you can able to switch between these two options.
+The `RichTextEditorFontColor` and `RichTextEditorBackgroundColor` tag has two Mode of **Picker** and **Palette**. The Palette mode has a predefined set of the **ColorCode**, and in the picker mode, more colors have been provided. Through the **ModeSwitcher**, switch between these two options.
 
 {% tabs %}
 {% highlight razor %}
@@ -516,7 +515,7 @@ The `RichTextEditorFontColor` and `RichTextEditorBackgroundColor` tag has two Mo
 
 ### Build-in editor content styles
 
-By default, The content styles of Rich Text Editor are not returned while retrieving HTML value from the editor. So, the styles are not applied when using the HTML value outside of the editor. To get the styles to Rich Text Editor’s content for your application, You can copy and use the below styles directly in your application. The styles listed below which used in the UI elements of the Rich Text Editor.
+By default, the content styles of the Rich Text Editor are not returned while retrieving the HTML value from the editor. So, the styles are not applied when using the HTML value outside the editor. To get the styles from the Rich Text Editor’s content for your application, copy and use the following styles directly in your application. The styles listed are used in the UI elements of the Rich Text Editor.
 
 > Make sure to add a CSS class ‘e-rte-content’ to the content container.
 
@@ -741,7 +740,7 @@ By default, The content styles of Rich Text Editor are not returned while retrie
 ```
 ### Number and bullet format lists
 
-This feature allows the user to change the appearance of the Numbered and Bulleted lists. Users can also apply different numbering or bullet formats lists such as lowercase greek, upper Alpha, square and circles. You can also customize the style type of the lists to be populated in the dropdown from the toolbar by using the [NumberFormatList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorNumberFormatList.html) and [BulletFormatList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBulletFormatList.html) properties in the Rich Text Editor.
+This feature allows users to change the appearance of the Numbered and Bulleted lists. Users can also apply different numbering or bullet formats lists such as lowercase greek, upper Alpha, square, and circles. Also, customize the style type of the lists to be populated in the dropdown from the toolbar by using the [NumberFormatList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorNumberFormatList.html) and [BulletFormatList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBulletFormatList.html) properties in the Rich Text Editor.
 
 {% tabs %}
 {% highlight razor %}
@@ -757,9 +756,9 @@ This feature allows the user to change the appearance of the Numbered and Bullet
 
 ### Code block
 
-You can configure code block formatting as a separate toolbar button by adding the **InsertCode** Command within the [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property. The InsertCode button has a toggle state to apply code block formatting to the editor and remove code block formatting from the editor.
+Configure code block formatting as a separate toolbar button by adding the **InsertCode** Command within the  [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property. The InsertCode button has a toggle state to apply code block formatting to the editor and remove code block formatting from the editor.
 
-The following code will configure the InsertCode button in toolbar and set the background color to “pre” tag for highlighting the code block.
+The following code will configure the InsertCode button in the toolbar and set the background color to “pre” tag for highlighting the code block.
 
 {% tabs %}
 {% highlight razor %}
@@ -775,7 +774,7 @@ The following code will configure the InsertCode button in toolbar and set the b
 
 ### Insert image from web
 
-To insert an image from online source like Google, Ping, and more, enable images tool on the editor’s toolbar. By default, the images tool opens an image dialog that allows to insert an image from online source.
+To insert an image from an online source like Google, Ping, and more, enable the images tool on the editor’s toolbar. By default, the images tool opens an image dialog that allows inserting an image from the online source.
 
 ![Inserting Image in Blazor RichTextEditor Content](./images/blazor-richtexteditor-insert-image.png)
 
@@ -783,7 +782,7 @@ To insert an image from online source like Google, Ping, and more, enable images
 
 Through the `browse` option in the Image dialog, select the image from the local machine and insert into the Rich Text Editor content.
 
-If the path field is not specified in the [RichTextEditorImageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html), the image will be converted into base64 and blob url for the image will be created then generated url will be set as "src" property of `<img>` tag as below.
+If the path field is not specified in the [RichTextEditorImageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html), the image will be converted into base64 and blob url for the image will be created then generated url will be set as "src" property of the `<img>` tag as follows.
 
 The image has been loaded from the local machine and it will be saved in the given location.
 
@@ -791,13 +790,13 @@ The image has been loaded from the local machine and it will be saved in the giv
 <img src="blob:http://blazor.syncfusion.com/3ab56a6e-ec0d-490f-85a5-f0aeb0ad8879" >
 
 ```
-> If you want to insert a lot of tiny images in the editor and don't want a specific physical location for saving images, you can opt to save format as `Base64`.
+> If you want to insert many tiny images in the editor and don't want a specific physical location for saving images, opt to save the format as `Base64`.
 
 #### Restrict image upload based on size
 
-By using the Rich text editor's [RichTextEditorEvents.OnImageUploading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnImageUploadSuccess) event, you can get the image size before uploading and restrict the image to upload, when the given image size is greater than the allowed size.
+By using the Rich text editor's [RichTextEditorEvents.OnImageUploading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnImageUploadSuccess)event, get the image size before uploading and restrict the image to upload, when the given image size is greater than the allowed size.
 
-In the following, the image size has been validated before uploading and determined whether the image has been uploaded or not.
+In the following code, the image size has been validated before uploading and determined whether the image has been uploaded or not.
 
 {% tabs %}
 {% highlight razor %}
@@ -823,13 +822,13 @@ In the following, the image size has been validated before uploading and determi
 {% endhighlight %}
 {% endtabs %}
 
-> You can't restrict while uploading an image as a hyperlink in insert image dialog. When inserting images using the link, editor does not allow you to limit the size of the image. You could not able to identify the image file size when the image was provided as a link.
+> You can't restrict while uploading an image as a hyperlink in the insert image dialog. When inserting images using the link, the editor does not allow you to limit the image size. You could not identify the image file size when the image was provided as a link.
 
 #### Server side action
+ 
+The selected image can be uploaded to the required destination by using the following controller action. Map controller method name in the [RichTextEditorImageSettings.SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_SaveUrl)  property and provide required destination path through the [RichTextEditorImageSettings.Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Path)  property.
 
-The selected image can be uploaded to the required destination by using the following controller action. Map controller method name in [RichTextEditorImageSettings.SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_SaveUrl) property and provide required destination path through [RichTextEditorImageSettings.Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Path) property.
-
-> The following code block shows saving the image file uploaded to Rich Text Editor using the `Blazor Server App` project. The runnable Blazor Server app demo is available in this [Github](https://github.com/SyncfusionExamples/blazor-richtexteditor-image-upload) repository.
+>The following code block shows saving the image file uploaded to the Rich Text Editor using the `Blazor Server App` project. The runnable Blazor Server app demo is available in this [Github](https://github.com/SyncfusionExamples/blazor-richtexteditor-image-upload) repository.
 
 {% tabs %}
 {% highlight razor %}
@@ -922,7 +921,7 @@ namespace ImageUpload.Controllers
 
 #### Save image in application path
 
-You can save the uploaded image in your application path by using the [RichTextEditorImageSettings.Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Path) property. You can also change the path of the image, by creating a folder structure as per your requirement under the folder wwwroot. You can’t create a path outside the wwwroot folder since any files including HTML files, CSS files, image files, and JavaScript files that are sent to the user's browser should be stored inside wwwroot folder.
+Save the uploaded image in your application path by using the [RichTextEditorImageSettings.Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Path) property. Also, change the path of the image by creating a folder structure as per your requirement under the folder wwwroot. You can’t create a path outside the wwwroot folder since any files including HTML files, CSS files, image files, and JavaScript files sent to the user's browser should be stored inside the wwwroot folder.
 
 {% tabs %}
 {% highlight razor %}
@@ -999,7 +998,7 @@ public class ImageController : ControllerBase
 ```
 #### Image save format
 
-By default, the Rich Text Editor inserts the images as [Blob](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SaveFormat.html#Syncfusion_Blazor_RichTextEditor_SaveFormat_Blob) format, but we can also change the save format  by setting the [RichTextEditorImageSettings.SaveFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_SaveFormat) property as "SaveFormat.Base64".
+By default, the Rich Text Editor inserts the images as [Blob](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SaveFormat.html#Syncfusion_Blazor_RichTextEditor_SaveFormat_Blob) format, but you can also change the save format by setting the [RichTextEditorImageSettings.SaveFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_SaveFormat) property as "SaveFormat.Base64."
 
 {% tabs %}
 {% highlight razor %}
@@ -1015,31 +1014,31 @@ By default, the Rich Text Editor inserts the images as [Blob](https://help.syncf
 
 ### Delete image 
 
-To remove an image from the Rich Text Editor content, select the image and click "Remove" tool from quick toolbar. It will delete the image from the Rich Text Editor content.
+To remove an image from the Rich Text Editor content, select the image and click the "Remove" tool from the quick toolbar. It will delete the image from the Rich Text Editor content.
 
-After selecting the image from the local machine, the URL for the image will be generated, from there also you can remove the image from the service location by clicking the cross icon as in the following image.
+After selecting the image from the local machine, the URL for the image will be generated. From there also, remove the image from the service location by clicking the cross icon as in the following image.
 
 ![Removing Image in Blazor RichTextEditor Content](./images/blazor-richtexteditor-remove-image.png)
 
 ### Dimension
 
-Set's the default width and height of the image when it is inserted in the Rich Text Editor using [RichTextEditorImageSettings.Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Width) and [RichTextEditorImageSettings.Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Height) property.
+Sets the default width and height of the image when it is inserted in the Rich Text Editor using the [RichTextEditorImageSettings.Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Width) and [RichTextEditorImageSettings.Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Height) property.
 
-Through the **QuickToolbar** also you can change the width and height using **Change Size** option. After clicking the option, the image size will open as below. In that specify the width and height of the image in pixel.
+Through the **QuickToolbar**, also change the width and height using the **Change Size** option. After clicking the option, the image size will open as follows. In that, specify the width and height of the image in pixels.
 
 ![Changing Image Dimension in Blazor RichTextEditor](./images/blazor-richtexteditor-image-size.png)
 
 ### Caption and alt text
 
-Image caption and alternative text can be specified for the inserted image in the Rich Text Editor using the [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html) options such as Image Caption and Alternative Text.
+The Image caption and alternative text can be specified for the inserted image in the Rich Text Editor using the [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html) options such as Image Caption and Alternative Text.
 
-Through the **Alternative Text** option, set the alternative text for the image, when the image is not uploaded successfully into the Rich Text Editor.
+Through the **Alternative Text** Text option, set the alternative text for the image when the image is not uploaded successfully into the Rich Text Editor.
 
-By clicking the **Image Caption**, the image will get wrapped in an image element with a caption. Then, you can type caption content inside the Rich Text Editor.
+By clicking the **Image Caption**, the image will get wrapped in an image element with a caption. Then, type the caption content inside the Rich Text Editor.
 
 ### Display position
 
-Sets the default display for an image when it is inserted in the Rich Text Editor using [RichTextEditorImageSettings.Display](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Display) property.
+Sets the default display for an image when it is inserted in the Rich Text Editor using the [RichTextEditorImageSettings.Display](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Display)  property.
 
 > It has two possible options: `Inline` and `Break`.
 
@@ -1050,9 +1049,9 @@ Sets the default display for an image when it is inserted in the Rich Text Edito
 
 <SfRichTextEditor>
     <RichTextEditorImageSettings Display="ImageDisplay.Inline" />
-    <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p>
-    <p><b>Get started Quick Toolbar to click on the image</b></p>
-    <p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p>
+    <p>The Rich Text Editor allows you to insert images from the online source as well as the local computer where you want to insert the image in your content.</p>
+    <p><b>Get started with Quick Toolbar to click on the image</b></p>
+    <p>It is possible to add a custom style on the selected image inside the Rich Text Editor through the quick toolbar.</p>
     <img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://blazor.syncfusion.com/demos/images/RichTextEditor/RTEImage-Feather.png' />
 </SfRichTextEditor>
 
@@ -1061,21 +1060,21 @@ Sets the default display for an image when it is inserted in the Rich Text Edito
 
 ### Image with link
 
-The hyperlink itself can be an image in Rich Text Editor. If the image given as hyperlink, the remove, edit, and open links will be added to the quick toolbar of image as below. For further details about link, refer to the [link documentation](#link-manipulation).
+The hyperlink itself can be an image in the Rich Text Editor. If the image is given as a hyperlink, the remove, edit, and open links will be added to the quick toolbar of the image as follows. For further details about the link, refer to the [link documentation](#link-manipulation).
 
 ![Blazor RichTextEditor Image with Link](./images/blazor-richtexteditor-image-link.png)
 
 ### Resize image
 
-Rich Text Editor has a built-in image inserting support. The resize points will be appearing on each corner of image when focus. So, users can resize the image using mouse points or thumb through the resize points easily. Also, the resize calculation will be done based on aspect ratio.
+The Rich Text Editor has built-in image inserting support. The resize points will appear on each corner of the image when focused. So, users can resize the image using mouse points or thumb through the resize points easily. Also, the resize calculation will be done based on the aspect ratio.
 
 ![Image Resizing in Blazor RichTextEditor](./images/blazor-richtexteditor-image-resize.png)
 
 ### Rename images before inserting
 
-You can rename the images before insert it into the rich text editor. The [RichTextEditorImageSettings.SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_SaveUrl) specifies the URL to map the action method to save the images. The [RichTextEditorImageSettings.Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Path) specifies the local path that is saved where the image needs to be retrieved from. 
+Rename the images before inserting them into the rich text editor. The [RichTextEditorImageSettings.SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_SaveUrl) specifies the URL to map the action method to save the images. The [RichTextEditorImageSettings.Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Path) specifies the local path that is saved where the image needs to be retrieved from.
  
-The image rename can be done when saving the image to the local machine, the below code renames the image saved locally.
+The image rename can be done when saving the image to the local machine. The following code renames the image saved locally.
 
 ```csharp
 
@@ -1092,7 +1091,7 @@ public void Rename(IList<IFormFile> UploadFiles)
                 string targetPath = hostingEnv.ContentRootPath + "\\wwwroot\\Images"; 
                 string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"'); 
  
-                // Create a new directory, if it does not exists 
+                // Create a new directory if it does not exist.
                 if (!Directory.Exists(targetPath)) 
                 { 
                     Directory.CreateDirectory(targetPath); 
@@ -1111,7 +1110,7 @@ public void Rename(IList<IFormFile> UploadFiles)
                         fs.Close(); 
                     } 
  
-                    // Modified file name shared through response header by adding custom header 
+                    // The modified file name is shared through the response header by adding a custom header.
                     Response.Headers.Add("name", imageFileName); 
                     Response.StatusCode = 200; 
                     Response.ContentType = "application/json; charset=utf-8"; 
@@ -1157,7 +1156,7 @@ Also, the renamed image name should be changed in the `OnImageUploadSuccess` eve
 
 ### Upload image with authentication
 
-You can upload an image in the Azure Blob with Rich Text Editor. Place authentication and image upload logic into `RichTextEditorImageSettings.SaveUrl` specified controller. Finally, update and return uploaded image remote Url through response headers. Follows the below steps to authenticate and upload an image from controller.
+Upload an image in the Azure Blob with the Rich Text Editor. Place authentication and image upload logic into the `RichTextEditorImageSettings.SaveUrl` specified controller. Finally, update and return the uploaded image remote Url through response headers. Follow these steps to authenticate and upload an image from the controller.
 
 ```csharp
 
@@ -1170,7 +1169,7 @@ public async void Save(IList<IFormFile> UploadFiles)
         foreach (var file in UploadFiles) 
         { 
             /* Azure blob storage related logics start here */ 
-            // use your credentials here to authenticate 
+            // use your credentials here to authenticate.
             const string accountName = "exampleaccount"; 
             const string key = "examplekey"; 
  
@@ -1194,7 +1193,7 @@ public async void Save(IList<IFormFile> UploadFiles)
  
         Response.Clear(); 
  
-        // Update the Azure uploaded image url into 'name' header to modify and display a image in RTE like below. 
+        // Update the Azure uploaded image url into the 'name' header to modify and display an image in RTE as follows.
         Response.Headers.Add("name", "https://blazor.syncfusion.com/documentation/rich-text-editor/images/image-upload.png"); 
         Response.ContentType = "application/json; charset=utf-8"; 
     } 
@@ -1202,7 +1201,7 @@ public async void Save(IList<IFormFile> UploadFiles)
 } 
 
 ```
-Configure empty string in the `Path`, to replace azure uploaded remote image Url into editor, you need to configure this in Rich Text Editor.
+Configure the empty string in the `Path` to replace the azure uploaded remote image Url into the editor. You need to configure this in the Rich Text Editor.
 
 {% tabs %}
 {% highlight razor %}
@@ -1216,7 +1215,7 @@ Configure empty string in the `Path`, to replace azure uploaded remote image Url
 {% endhighlight %}
 {% endtabs %}
 
-Bind `OnImageUploadSuccess` event and place the below code in the callback as follows,
+Bind the `OnImageUploadSuccess` event and place the following code in the callback as follows.
 
 {% tabs %}
 {% highlight razor %}
@@ -1244,11 +1243,11 @@ Bind `OnImageUploadSuccess` event and place the below code in the callback as fo
 
 ## Link Manipulation
 
-A hyperlink can be inserted into the editor for quick access to the related information. The hyperlink itself can be a text or an image.
+The hyperlink can be inserted into the editor for quick access to the related information. The hyperlink itself can be a text or an image.
 
 ### Insert link
 
-Point the cursor anywhere within the editor where you would like to insert the link. It is also possible to select a text or an image within the editor and can be converted to the hyperlink. Click the insert hyperLink tool on the toolbar. The insert link dialog will open. The dialog has the following options.
+Point the cursor anywhere within the editor where you want to insert the link. It is also possible to select a text or an image within the editor that can be converted to the hyperlink. Click the insert hyperLink tool on the toolbar. The insert link dialog will open. The dialog has the following options.
 
 ![Insert Link in Blazor RichTextEditor](./images/blazor-richtexteditor-insert-link.png)
 
@@ -1259,7 +1258,7 @@ Point the cursor anywhere within the editor where you would like to insert the l
 | Tooltip | Displays additional helpful information when you place the pointer on the hyperlink, type the required text in the "Tooltip" field. |
 | Open Link in New Window | Specifies whether the given link will open in new window or not |
 
-> The Rich Text Editor link tool validates the URLs as you type them in Web Address. URLs considered invalid will be highlighted with red color by clicking the insert button in the [Insert Link](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_ToolbarCommand_CreateLink) dialog.
+> The Rich Text Editor link tool validates the URLs as you type them in the Web Address. URLs considered invalid will be highlighted with the red color by clicking the insert button in the [Insert Link](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_ToolbarCommand_CreateLink) dialog.
 
 {% tabs %}
 {% highlight razor %}
@@ -1305,7 +1304,7 @@ The quick toolbar for the link has the following options.
 
 ## Table Manipulation
 
-Rich Text Editor allows to insert table of content in edit panel and provide options to add, edit, and remove the table as well as perform other table related action. For inserting the table to the Rich Text Editor, the following list of options have been provided in the [RichTextEditorTableSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorTableSettings.html)
+The Rich Text Editor allows you to insert the table of content in the edit panel and provide options to add, edit, and remove the table as well as to perform other table-related actions. For inserting the table into the Rich Text Editor, the following list of options has been provided in the [RichTextEditorTableSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorTableSettings.html).
 
 | Options | Description | Default Value |
 |----------------|---------|-----------------------------|
@@ -1317,9 +1316,9 @@ Rich Text Editor allows to insert table of content in edit panel and provide opt
 
 ### Insert table
 
-Using the [ToolbarCommand.CreateTable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_ToolbarCommand_CreateTable) toolbar option, select a number of rows and columns to be inserted over the table grid and insert table into Rich Text Editor content using the mouse. Tables can also be inserted through the option in the pop-up where the number of rows and columns can be provided manually and this is the default way in devices.
+Using the [ToolbarCommand.CreateTable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_ToolbarCommand_CreateTable) toolbar option, select a number of rows and columns to be inserted over the table grid and insert the table into the Rich Text Editor content using the mouse. Tables can also be inserted through the option in the pop-up where the number of rows and columns can be provided manually, and this is the default way in devices.
 
-In the following sample, the table has been inserted using `CreateTable` toolbar item.
+In the following sample, the table has been inserted using the `CreateTable` toolbar item.
 
 {% tabs %}
 {% highlight razor %}
@@ -1333,15 +1332,17 @@ In the following sample, the table has been inserted using `CreateTable` toolbar
 
 ### Quick Toolbar
 
-Quick toolbar is opened by clicking the table. It has different sets of commands to be performed on the table which increases the feasibility to edit the table easily.
+The Quick toolbar is opened by clicking the table. It has different sets of commands to be performed on the table, which increases the feasibility of editing the table easily.
 
-> For more details about quick toolbar, refer this documentation [section](./toolbar.md/#quick-toolbar)
+> For more details about quick toolbar, refer to this documentation [section](./toolbar.md/#quick-toolbar).
 
 ### Table properties
 
-Sets the default width of the table when it is inserted in the Rich Text Editor using the width of `RichTextEditorTableSettings`.
+Sets the default width of the table when it is inserted in the Rich Text Editor using the width of the `RichTextEditorTableSettings`.
 
 Using the quick toolbar, users can change the width, cell padding, and cell spacing in the selected table using the [TableToolbarCommand.TableEditProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_TableEditProperties) command dialog action.
+
+The TableToolbarCommand.TableCell item should be configured in the Table quickToolbarSettings property to show the merge or split icons while selecting the table cells.
 
 ![Displaying Table Properties for Blazor RichTextEditor](./images/blazor-richtexteditor-table-properties.png)
 
@@ -1349,56 +1350,55 @@ Using the quick toolbar, users can change the width, cell padding, and cell spac
 
 The Rich Text Editor allows users to change the appearance of the tables by splitting or merging the table cells.
 
-[TableToolbarCommand.TableCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_TableCell) item should be configured in the Table [quickToolbarSettings](./table.md/#quick-toolbar) property to show the merge/split icons while selecting the table cells.
+The [TableToolbarCommand.TableCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_TableCell) item should be configured in the Table [quickToolbarSettings](./table.md/#quick-toolbar) property to show the merge or split icons while selecting the table cells.
 
 ### Cell merging
 
-The table cell merge feature allows to merge two or more row and column cells into a single cell with its contents.
+The table cell merge feature allows the merging of two or more rows and column cells into a single cell with its contents.
 
 ![Table Cell Merging in Blazor RichTextEditor](./images/blazor-richtexteditor-table-cell-merge.png)
 
 ### Cell splitting
 
-The table cell split feature allows to a selected cell can be split both horizontally and vertically.
+The table cell split feature allows the selected cell to be splitted both horizontally and vertically.
 
 ![Table Cell Spliting in Blazor RichTextEditor](./images/blazor-richtexteditor-table-cell-split.png)
 
 ### Table header
 
-[TableToolbarCommand.TableHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_TableHeader) command is available with quick toolbar option through which the header row can be added or removed from the inserted table. The following image illustrates the table header.
+The [TableToolbarCommand.TableHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_TableHeader) command is available with the quick toolbar option through which the header row can be added or removed from the inserted table. The following image illustrates the table header.
 
 ![Blazor RichTextEditor with TableHeader](./images/blazor-richtexteditor-table-header.png)
 
 ### Insert rows
 
-[TableCommandsArgs.Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableCommandsArgs.html#Syncfusion_Blazor_RichTextEditor_TableCommandsArgs_Rows) can be inserted above or below the required table cell through the quick toolbar. Also, focused row can be deleted. The following screenshot shows the available options of the row item.
+The [TableCommandsArgs.Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableCommandsArgs.html#Syncfusion_Blazor_RichTextEditor_TableCommandsArgs_Rows) can be inserted above or under the required table cell through the quick toolbar. Also, the focused row can be deleted. The following screenshot shows the available options for the row item.
 
 ![Inserting Table Rows in Blazor RichTextEditor](./images/blazor-richtexteditor-insert-table-rows.png)
 
 ### Insert columns
 
-[TableCommandsArgs.Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableCommandsArgs.html#Syncfusion_Blazor_RichTextEditor_TableCommandsArgs_Columns) can be inserted to the left or right side of the required table cell through the quick toolbar. Also, the focused column can be deleted. The following screenshot shows the available
-options of the column item.
+The [TableCommandsArgs.Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableCommandsArgs.html#Syncfusion_Blazor_RichTextEditor_TableCommandsArgs_Columns) can be inserted to the left or right side of the required table cell through the quick toolbar. Also, the focused column can be deleted. The following screenshot shows the available options of the column item.
 
 ![Inserting Table Column in Blazor RichTextEditor](./images/blazor-richtexteditor-insert-table-column.png)
 
 ### Vertical align
 
-Text inside the table can be aligned to top, middle, or bottom using the [TableToolbarCommand.TableCellVerticalAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_TableCellVerticalAlign) command of the quick toolbar.
+The text inside the table can be aligned to the top, middle, or bottom using the [TableToolbarCommand.TableCellVerticalAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_TableCellVerticalAlign) command of the quick toolbar.
 
 ![Changing Vertical Alignment in Blazor RichTextEditor Table](./images/blazor-richtexteditor-vertical-alignment.png)
 
 ### Horizontal align
 
-Text inside the table can be aligned left, right, or center using the `TableCellHorizontalAlign` command of the quick toolbar.
+The text inside the table can be aligned left, right, or center using the `TableCellHorizontalAlign` command of the quick toolbar.
 
 ![Changing Horizontal Alignment in Blazor RichTextEditor Table](./images/blazor-richtexteditor-horizontal-alignment.png)
 
 ### Border Styles
 
-Table styles provided for class name should be appended to a table element. It helps to design the table in specific CSS styles when inserting in the editor.
+Table styles provided for the class name should be appended to a table element. It helps to design the table in specific CSS styles when inserted in the editor.
 
-By default, provides `Dashed border` and `Alternate rows`.
+By default, it provides `Dashed border` and `Alternate rows`.
 
 **Dashed border**: Applies the dashed border to the table.
 
@@ -1408,7 +1408,7 @@ By default, provides `Dashed border` and `Alternate rows`.
 
 ### Custom Styles
 
-Rich Text Editor provides support to custom styles for tables. If you want to add additional styles, pass the styles information as `List<DropDownItemModel>` data to the [RichTextEditorTableSettings.Styles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorTableSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorTableSettings_Styles) property.
+The Rich Text Editor provides support to custom styles for tables. If you want to add additional styles, pass the styles information as `List<DropDownItemModel>` data to the [RichTextEditorTableSettings.Styles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorTableSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorTableSettings_Styles)  property.
 
 {% tabs %}
 {% highlight razor %}
@@ -1422,7 +1422,7 @@ Rich Text Editor provides support to custom styles for tables. If you want to ad
 
 ## Cell Color
 
-The Background Color can be set for each table cell through the [TableToolbarCommand.BackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_BackgroundColor) command available with quick toolbar.
+The Background Color can be set for each table cell through the [TableToolbarCommand.BackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_BackgroundColor)  command available with the quick toolbar.
 
 ![Changing Table Background Color in Blazor RichTextEditor](./images/blazor-richtexteditor-table-background-color.png)
 
