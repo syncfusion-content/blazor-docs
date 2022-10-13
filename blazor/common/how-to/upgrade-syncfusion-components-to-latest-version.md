@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Upgrade Syncfusion Components to Latest Version in Blazor - Syncfusion
-description: Check out the documentation for Upgrade Syncfusion Components to Latest Version in Blazor
+description: Check out the documentation for Upgrade Syncfusion Components to Latest Version in Blazor Application.
 platform: Blazor
 component: Common
 documentation: ug
@@ -45,7 +45,7 @@ Before restoring the NuGet packages, clean the older versions of Syncfusion Blaz
 
 The following steps explain how to clean the cache:
 
-1. Delete the Syncfusion Blazor NuGet packages from the installed location `{System-driver}\Users\{user-name}\.nuget\packages\`. In Windows, the installed location of Syncfusion Blazor NuGet packages can be found using `%userprofile%\.nuget\packages\`.
+1. Delete the Syncfusion Blazor NuGet packages from the installed location `{System-driver}/Users/{user-name}/.nuget/packages/`. In Windows, the installed location of Syncfusion Blazor NuGet packages can be found using `%userprofile%/.nuget/packages/`.
 
 2. Update the latest version of Syncfusion Blazor NuGet packages.
 
@@ -53,7 +53,7 @@ The following steps explain how to clean the cache:
 
 In Blazor WebAssembly application, ensure if you have configured **Linker.xml** file in your Syncfusion Blazor application. Missing this configuration may prevent the rendering of Syncfusion Blazor components in the application.
 
-Refer to this [KB article](https://www.syncfusion.com/kb/10761/syncfusion-components-doesnt-render-in-blazor-webassembly-application) for more information on Linker.xml file usage.
+Refer to this [KB article](https://www.syncfusion.com/kb/13439/syncfusion-components-doesnt-render-in-blazor-webassembly-application) for more information on Linker.xml file usage.
 
 > Linker.xml configuration is applicable only for the Blazor WebAssembly application.
 
