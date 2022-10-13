@@ -11,7 +11,7 @@ documentation: ug
 
 ## Set placeholder
 
-Specifies the placeholder for the Rich Text Editor’s content used when the editor body is empty through the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Placeholder) property.
+Specify the placeholder for the Rich Text Editor’s content used when the editor body is empty through the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Placeholder) property.
 
 Use the `e-rte-placeholder` class to define the custom font family, font color, and styles to the placeholder text.
 
@@ -22,7 +22,7 @@ Use the `e-rte-placeholder` class to define the custom font family, font color, 
 }
 
 ```
-The following sample demonstrates the placeholder option in Rich Text Editor.
+The following sample demonstrates the placeholder option in the Rich Text Editor.
 
 {% tabs %}
 {% highlight razor %}
@@ -44,7 +44,7 @@ The following sample demonstrates the placeholder option in Rich Text Editor.
 
 ## Source code view 
 
-The Rich Text Editor includes the ability for users to directly edit HTML code via `Source View` in the text area. If you made any modification in source view directly, the changes will be reflected in the editor content. So, the users will have more flexibility over the content they have created.
+The Rich Text Editor allows users to directly edit HTML code via `Source View` in the text area. If you make any direct modifications in the source view, the changes will be reflected in the editor content. So, the users will have more flexibility over the content they have created.
 
 {% tabs %}
 {% highlight razor %}
@@ -112,7 +112,7 @@ Use the following CSS to customize the default color in the Rich Text Editor's t
 
 ### Refresh editor
 
-While rendering the Rich Text Editor inside the dialog component, the dialog container and its wrapper elements are styled with display as none, so the editor’s toolbar does not get proper offset width and will render above the edit area container. To resolve this issue, you can call the RefreshUI method of RichTextEditor in the dialog opened event.
+While rendering the Rich Text Editor inside the dialog component, the dialog container and its wrapper elements are styled with display as none. The editor’s toolbar does not get proper offset width and will render above the edit area container. To resolve this issue, call the RefreshUI method of the RichTextEditor in the dialog opened event.
 
 {% tabs %}
 {% highlight razor %}
@@ -128,7 +128,7 @@ While rendering the Rich Text Editor inside the dialog component, the dialog con
 
 Programmatically highlight a portion of the text in the editor, like setting the background color of the text by applying background style to the particular text using the RichTextEditor [ExecuteCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html) method and the `jsinterop` method.
 
-Refer the jsintrob method in `<head>` **wwwroot/jsinterop.js** of file.
+Refer the jsintrob method in the `<head>` wwwroot/jsinterop.js of the file.
 
 {% tabs %}
 {% highlight razor tabtitle="~/_jsinterop.js %}
@@ -159,7 +159,7 @@ Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
 {% endhighlight %}
 {% endtabs %}
 
-Now, add the Syncfusion RichTextEditor component in razor file. Here, the RichTextEditor component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+Now, add the Syncfusion RichTextEditor component in the razor file. Here, the RichTextEditor component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Index.Razor %}
@@ -182,4 +182,4 @@ Now, add the Syncfusion RichTextEditor component in razor file. Here, the RichTe
 {% endhighlight %}
 {% endtabs %}
 
-> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
+> Refer to the [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. Also, explore [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
