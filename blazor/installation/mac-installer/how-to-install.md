@@ -65,7 +65,7 @@ The steps below show how to install the Essential Studio Blazor Mac installer.
    ![Installation complete](images/Mac_installer_8.PNG)
 
    By default, Mac installer will install the files in following location.
-   Location: {Documents}\Syncfusion\{version}\Blazor
+   Location: {Documents}/Syncfusion/{version}/Blazor
 
    ![Installation complete](images/install_location.PNG)
 

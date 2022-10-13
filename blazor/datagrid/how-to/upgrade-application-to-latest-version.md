@@ -41,6 +41,6 @@ Before restoring the NuGet packages, clean the old version Syncfusion.Blazor NuG
 
 The following steps explain how to clean the cache:
 
-1. Delete/clear the package Syncfusion.Blazor from the installed location `{System-driver}\Users\{user-name}\.nuget\packages\syncfusion.blazor`. In Windows, the installed location of Syncfusion.Blazor package can be found using `%userprofile%\.nuget\packages\syncfusion.blazor`.
+1. Delete/clear the package Syncfusion.Blazor from the installed location `{System-driver}/Users/{user-name}/.nuget/packages/syncfusion.blazor`. In Windows, the installed location of Syncfusion.Blazor package can be found using `%userprofile%/.nuget/packages/syncfusion.blazor`.
 
 2. Update the latest version of Syncfusion.Blazor NuGet package.
