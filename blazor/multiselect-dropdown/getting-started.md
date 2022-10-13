@@ -275,7 +275,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor MultiSelect DropDown` component will be rendered in the default web browser.
 
-![Blazor MultiSelect DropDown Component](./images/blazor-multiselect-dropdown.png)
+![Blazor MultiSelect DropDown Component](./images/blazing-fast-multiselect-dropdown-blazor.png)
 
 ## Binding data source
 
@@ -312,7 +312,7 @@ After initialization, populate the MultiSelect with data using the [DataSource](
 {% endhighlight %}
 {% endtabs %}
 
-![Data Binding in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-data-binding.png)
+![Data Binding in Blazor MultiSelect DropDown](./images/blazing-fast-multiselect-dropdown-data-binding.png)
 
 ## Configure the popup list
 
