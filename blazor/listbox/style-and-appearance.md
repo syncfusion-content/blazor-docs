@@ -82,4 +82,4 @@ You can use [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
 
 ![Blazor Horizontal ListBox](./images/blazor-horizontal-listbox.png)
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/how-to-set-the-blazor-list-box-items-as-horizontal-list)
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/how-to-set-the-blazor-list-box-items-as-horizontal-list)

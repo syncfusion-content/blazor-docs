@@ -11,7 +11,7 @@ documentation: ug
 
 # Blazor DataGrid Component in WebAssembly App using CLI
 
-This article provides a step-by-step instructions for building Blazor WebAssembly App with Blazor DataGrid component using the [.NET CLI](https://dotnet.microsoft.com/download/dotnet-core/3.1).
+This article provides a step-by-step instructions for building Blazor WebAssembly App with Blazor DataGrid component using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet/3.1).
 
 ## Prerequisites
 
@@ -90,6 +90,8 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
 Now, Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
+> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to `true`. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to true, and this property is obsolete.
+
 {% tabs %}
 {% highlight razor tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 11" %}
 
@@ -103,7 +105,7 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+builder.Services.AddSyncfusionBlazor();
 await builder.Build().RunAsync();
 ....
 
@@ -120,7 +122,7 @@ namespace BlazorApp
         public static async Task Main(string[] args)
         {
             ....
-            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+            builder.Services.AddSyncfusionBlazor();
             await builder.Build().RunAsync();
         }
     }
