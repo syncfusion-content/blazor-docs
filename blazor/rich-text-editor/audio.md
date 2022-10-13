@@ -123,12 +123,12 @@ namespace AudioUpload.Controllers
                             Directory.CreateDirectory(targetPath);
                         }
 
-                        // Name which is used to save the image
+                        // Name which is used to save the audio
                         filename = targetPath + $@"\{filename}";
 
                         if (!System.IO.File.Exists(filename))
                         {
-                            // Upload a image, if the same file name does not exist in the directory
+                            // Upload a audio, if the same file name does not exist in the directory
                             using (FileStream fs = System.IO.File.Create(filename))
                             {
                                 file.CopyTo(fs);
@@ -240,7 +240,7 @@ namespace RenameAudio.Controllers
         }
 
         [HttpPost("[action]")]
-        [Route("api/Image/Rename")]
+        [Route("api/Audio/Rename")]
         public void Rename(IList<IFormFile> UploadFiles)
         {
             try
@@ -249,7 +249,7 @@ namespace RenameAudio.Controllers
                 {
                     if (UploadFiles != null)
                     {
-                        string targetPath = hostingEnv.ContentRootPath + "\\wwwroot\\Images";
+                        string targetPath = hostingEnv.ContentRootPath + "\\wwwroot\\Audio";
                         string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
 
                         // Create a new directory, if it does not exists
@@ -261,7 +261,7 @@ namespace RenameAudio.Controllers
                         audiofileName = filename;
                         string path = hostingEnv.WebRootPath + "\\Images" + $@"\{filename}";
 
-                        // Rename a uploaded image file name
+                        // Rename a uploaded audio file name
                         while (System.IO.File.Exists(path))
                         {
                             audiofileName = "rteImage" + x + "-" + filename;
@@ -357,12 +357,12 @@ namespace AudioUpload.Controllers
                             Directory.CreateDirectory(targetPath);
                         }
 
-                        // Name which is used to save the image
+                        // Name which is used to save the audio
                         filename = targetPath + $@"\{filename}";
 
                         if (!System.IO.File.Exists(filename))
                         {
-                            // Upload a image, if the same file name does not exist in the directory
+                            // Upload a audio, if the same file name does not exist in the directory
                             using (FileStream fs = System.IO.File.Create(filename))
                             {
                                 file.CopyTo(fs);

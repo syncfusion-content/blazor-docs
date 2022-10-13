@@ -131,12 +131,12 @@ namespace VideoUpload.Controllers
                             Directory.CreateDirectory(targetPath);
                         }
 
-                        // Name which is used to save the image
+                        // Name which is used to save the video
                         filename = targetPath + $@"\{filename}";
 
                         if (!System.IO.File.Exists(filename))
                         {
-                            // Upload a image, if the same file name does not exist in the directory
+                            // Upload a video, if the same file name does not exist in the directory
                             using (FileStream fs = System.IO.File.Create(filename))
                             {
                                 file.CopyTo(fs);
@@ -268,7 +268,7 @@ namespace RenameVideo.Controllers
         }
 
         [HttpPost("[action]")]
-        [Route("api/Image/Rename")]
+        [Route("api/Vedio/Rename")]
         public void Rename(IList<IFormFile> UploadFiles)
         {
             try
@@ -277,7 +277,7 @@ namespace RenameVideo.Controllers
                 {
                     if (UploadFiles != null)
                     {
-                        string targetPath = hostingEnv.ContentRootPath + "\\wwwroot\\Images";
+                        string targetPath = hostingEnv.ContentRootPath + "\\wwwroot\\Video";
                         string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
 
                         // Create a new directory, if it does not exists
@@ -385,12 +385,12 @@ namespace VideoUpload.Controllers
                             Directory.CreateDirectory(targetPath);
                         }
 
-                        // Name which is used to save the image
+                        // Name which is used to save the video
                         filename = targetPath + $@"\{filename}";
 
                         if (!System.IO.File.Exists(filename))
                         {
-                            // Upload a image, if the same file name does not exist in the directory
+                            // Upload a video, if the same file name does not exist in the directory
                             using (FileStream fs = System.IO.File.Create(filename))
                             {
                                 file.CopyTo(fs);
