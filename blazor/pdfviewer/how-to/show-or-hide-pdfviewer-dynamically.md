@@ -77,4 +77,4 @@ In the below code, the PDF Viewer is hidden at page load. Then, on clicking a bu
 }
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Render%20PDFViewer%20with%20different%20components/Show%20or%20Hide%20PDFViewer%20Dynamically).
+> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Render%20PDFViewer%20with%20different%20components/Show%20or%20Hide%20PDFViewer%20Dynamically).

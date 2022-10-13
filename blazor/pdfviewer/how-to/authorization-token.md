@@ -39,7 +39,7 @@ public PdfViewerAjaxRequestSettings AjaxRequestSettings = new PdfViewerAjaxReque
 
 >`AjaxRequestSettings` is applicable for Web assembly blazor alone.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/AJAX/Authorization%20token%20viewer%20AJAX%20request).
+> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/AJAX/Authorization%20token%20viewer%20AJAX%20request).
 
 Find the sample, [How to include the authorization token](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorWebAsssembly-493517519.zip)
 
