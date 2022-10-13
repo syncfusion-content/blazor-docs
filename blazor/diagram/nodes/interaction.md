@@ -260,9 +260,9 @@ The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.D
 
 | DiagramFlipMode | Description | 
 | -------- | -------- |
-|Content| It is used to enable or disable the flip for an object’s content.|
+|Content| It enables or disables the flip for an object’s content.|
 |Port| It enables or disables the flip for an object’s port.|
-|All| It is used to enable or disable the flip for both the object’s content and port.|
+|All| It enables or disables the flip for both the object’s content and port.|
 |None| It is used to disable all the flip mode behavior.|
 
 **Note:** [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) is only applicable for nodes, not connectors.
