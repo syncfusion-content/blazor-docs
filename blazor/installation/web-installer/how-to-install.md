@@ -79,7 +79,7 @@ The steps below show how to install Essential Studio Blazor Web Installer.
 
    > **IMPORTANT** <br /> The products you have chosen will be installed based on your Syncfusion License (Trial or Licensed).
 
-10. The download and installation\uninstallation progress will be displayed as shown below.
+10. The download and installation/uninstallation progress will be displayed as shown below.
    ![Web Installer Installation Wizard](images/webinstaller-11.png)
    To open the Syncfusion Control Panel, click **Launch Control Panel**.
 
