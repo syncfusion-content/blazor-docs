@@ -986,7 +986,7 @@ The `SfTextBox` component is defined inside the EditTemplate and changes can be 
 
 ### Prevent enter key functionality in multiline textbox while editing
 
-By default, pressing the ENTER key will save the changes in the Grid when focusing on the Grid Edit form (both normal and dialog edit mode). While performing editing with a multiline textbox , pressing the ENTER key should add a new linebreak in the text content instead of losing the focus of the textbox component and saving the edited changes. This can be achieved by using the `OnFocus` event of the `SfTextBox`.
+By default, while editing a particular row in normal or dialog edit mode, pressing the ENTER key will save the changes made in the particular cell or edit form. Similarly, pressing the ENTER key while performing editing with the Multiline textbox will save the changes. But, in a multiline textbox, instead of this behaviour, it should add a new line break in the text content while pressing the ENTER key. This can be achieved by using the `OnFocus` event of the `SfTextBox`.
 
 In the following sample, Multiline Textbox is rendered in the Customer ID column. The `stopPropagation()` method is called using Microsoft.JSInterop in the `OnFocus` event of the `SfTextBox` to prevent the ENTER key action when editing the Customer ID column.
 
