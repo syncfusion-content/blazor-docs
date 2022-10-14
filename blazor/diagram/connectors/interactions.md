@@ -218,7 +218,7 @@ The connector can be selected by clicking it. When the connector is selected, ci
 
 The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) is performed to give the mirrored image of the original element.
 
-For more information about the connector flip, refer to [Connector Flip](../flip).
+For more information about the connector flip, refer to [Connector Flip](../flip#how-to-flip-the-connector).
 
 ## See also
 

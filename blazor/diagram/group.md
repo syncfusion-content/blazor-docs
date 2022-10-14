@@ -395,7 +395,7 @@ When a child element of any node group is clicked, its contained node group is s
 
 The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) is performed to give the mirrored image of the original element.
 
-For more information about group node flip, refer to [Group Flip](./flip).
+For more information about group node flip, refer to [Group Flip](./flip#how-to-flip-the-node-or-group).
 
 ## See Also
 
