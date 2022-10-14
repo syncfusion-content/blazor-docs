@@ -15,6 +15,10 @@ This section explains the methods of the MultiSelect DropDown List component.
 
 Allows you to clear the selected values from the MultiSelect component.
 
+### Declaration
+
+> public Task ClearAsync()
+
 {% highlight Razor %}
 
 {% include_relative code-snippet/methods/ClearAsync.razor %}
@@ -25,11 +29,25 @@ Allows you to clear the selected values from the MultiSelect component.
 
 To filter the data from given data source by using query.
 
+### Declaration
+
+> public Task FilterAsync(IEnumerable<TItem> dataSource, Query query = null, FieldSettingsModel fields = null)
+
+### Parameters
+
+* dataSource -Specifies the data source.
+* query - Specifies the query.
+* fields - Specifies the fields.
+
 [Click to refer the code for FilterAsync](https://blazor.syncfusion.com/documentation/multiselect-dropdown/filtering)
 
 ## FocusAsync()
 
 Sets the focus to the MultiSelect component for interaction.
+
+### Declaration
+
+> public Task FocusAsync()
 
 {% highlight Razor %}
 
@@ -41,6 +59,10 @@ Sets the focus to the MultiSelect component for interaction.
 
 Remove the focus from the MultiSelect component, if the component is in focus state.
 
+### Declaration
+
+> public Task FocusOutAsync()
+
 {% highlight Razor %}
 
 {% include_relative code-snippet/methods/Focus.razor %}
@@ -50,6 +72,14 @@ Remove the focus from the MultiSelect component, if the component is in focus st
 ## GetDataByValueAsync(TValue)
 
 Gets the array of data Object that matches the given array of values.
+
+### Declaration
+
+> public Task<List<TItem>> GetDataByValueAsync(TValue dataValue)
+
+### Parameters
+
+* dataValue	- Specifies the value(s).
 
 {% highlight Razor %}
 
@@ -61,9 +91,23 @@ Gets the array of data Object that matches the given array of values.
 
 Gets all the list items bound on this component.
 
+### Declaration
+
+> public Task<IEnumerable<TItem>> GetItemsAsync()
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/methods/GetItemsAsync.razor %}
+
+{% endhighlight %}
+
 ## HidePopupAsync()
 
 Hides the popup if it is in an open state.
+
+### Declaration
+
+> public Task HidePopupAsync()
 
 {% highlight Razor %}
 
@@ -75,6 +119,10 @@ Hides the popup if it is in an open state.
 
 Hides the spinner loader.
 
+### Declaration
+
+> public Task HideSpinner()
+
 {% highlight Razor %}
 
 {% include_relative code-snippet/methods/SpinnerAsync.razor %}
@@ -84,6 +132,10 @@ Hides the spinner loader.
 ## RefreshDataAsync()
 
 Refreshes the popup list items. The method is useful if the popup list item changed externally.
+
+### Declaration
+
+> public Task RefreshDataAsync()
 
 {% highlight Razor %}
 
@@ -95,10 +147,14 @@ Refreshes the popup list items. The method is useful if the popup list item chan
 
 Based on the state parameter, entire list item will be selected/deselected.
 
-parameter
+### Declaration
 
-TrueSelects entire list items.
-FalseUn Selects entire list items.
+> public Task SelectAllAsync(bool state)
+
+### parameter
+
+* TrueSelects entire list items.
+* FalseUn Selects entire list items.
 
 {% highlight Razor %}
 
@@ -110,6 +166,10 @@ FalseUn Selects entire list items.
 
 Opens the popup that displays the list of items.
 
+### Declaration
+
+> public Task ShowPopupAsync()
+
 {% highlight Razor %}
 
 {% include_relative code-snippet/methods/PopupAsync.razor %}
@@ -119,6 +179,10 @@ Opens the popup that displays the list of items.
 ## ShowSpinner()
 
 Shows the spinner loader.
+
+### Declaration
+
+> public Task ShowSpinner()
 
 {% highlight Razor %}
 

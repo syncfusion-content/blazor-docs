@@ -393,6 +393,12 @@ Selects the list item which maps the data Value field in the component.
 
 {% endhighlight %}
 
+## ValueExpression
+
+Specifies the expression for defining the value of the bound.
+
+[Click to refer the code for ValueExpression](https://blazor.syncfusion.com/documentation/multiselect-dropdown/how-to/tooltip)
+
 ## ValueTemplate
 
 Accepts the template design and assigns it to the selected list item in the input element of the component.

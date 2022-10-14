@@ -230,6 +230,12 @@ Gets or sets the Value of the selected item in the component.
 
 {% endhighlight %}
 
+## ValueExpression
+
+Specifies the expression for defining the value of the bound.
+
+[Click to refer the code for ValueExpression](https://blazor.syncfusion.com/documentation/dropdown-list/how-to/tooltip)
+
 ## ValueTemplate
 
 The currently selected value that is displayed by default on the DropDownList input element can be customized using the ValueTemplate property.
