@@ -64,10 +64,8 @@ In the following example:
 }
 ```
 
-### Notes
-
-* **PreventRender** method accepts boolean argument that accepts true or false to disable or enable rendering respectively.
-* **PreventRender** method can be used only after Scheduler component completed initial rendering. Calling this method during initial rendering will not have any effect.
+> * **PreventRender** method accepts boolean argument that accepts true or false to disable or enable rendering respectively.
+> * **PreventRender** method can be used only after Scheduler component completed initial rendering. Calling this method during initial rendering will not have any effect.
 
 ## Avoid unnecessary component renders after Scheduler events
 
@@ -131,8 +129,6 @@ In the following example:
 }
 ```
 
-### Notes
-
-* **PreventRender** method internally overrides the **ShouldRender** method of the Scheduler to prevent rendering.
-* It is recommended to use **PreventRender** method for user interactive events such as OnCellClick, OnEventClick etc. for better performance.
-* For events without any argument such as **DataBound**, you can use **PreventRender** method of the Scheduler to disable rendering.
+> * **PreventRender** method internally overrides the **ShouldRender** method of the Scheduler to prevent rendering.
+> * It is recommended to use **PreventRender** method for user interactive events such as OnCellClick, OnEventClick etc. for better performance.
+> * For events without any argument such as **DataBound**, you can use **PreventRender** method of the Scheduler to disable rendering.
