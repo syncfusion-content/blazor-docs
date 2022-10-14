@@ -242,7 +242,7 @@ Also, rotate the node during the interaction.
 
 The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) is performed to give the mirrored image of the original element.
 
-For more information about node flip, refer to [Node Flip](../flip).
+For more information about node flip, refer to [Node Flip](../flip#how-to-flip-the-node-or-group).
 
 ## See also
 
