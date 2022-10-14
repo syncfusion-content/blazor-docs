@@ -706,7 +706,7 @@ In the following sample, the add and edit operations of dialog editing are perfo
         files = new List<fileInfo>();
         foreach (var file in args.Files)
         {
-            var path = Path.GetFullPath("wwwroot\\scripts\\Images\\Employees\\") + file.FileInfo.Name;
+            var path = Path.GetFullPath("wwwroot//scripts//Images//Employees//") + file.FileInfo.Name;
             FileStream filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
             file.Stream.WriteTo(filestream);
             filestream.Close();
