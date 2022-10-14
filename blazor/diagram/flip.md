@@ -44,7 +44,7 @@ The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.D
 
 The following code example shows how to flip the node.
 
-```chtml
+```cshtml
 
 @using Syncfusion.Blazor.Diagram
 
@@ -231,7 +231,7 @@ The following code example shows how to flip the node.
 
 The following code example shows how to flip the group.
 
-```chtml
+```cshtml
 
 @using Syncfusion.Blazor.Diagram
 <input type="button" value="HorizontalPort" @onclick="@HorizontalPort" />
