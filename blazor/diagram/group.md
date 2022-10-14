@@ -391,6 +391,12 @@ You can edit the node group and its children at runtime. You can interact with t
 
 When a child element of any node group is clicked, its contained node group is selected instead of the child element. With consecutive clicks on the selected element, selection is changed from top to bottom in the hierarchy of parent nodegroup to its children.
 
+## GroupNode Flip
+
+The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) is performed to give the mirrored image of the original element.
+
+For more information about group node flip, refer to [Group Flip](./flip#how-to-flip-the-node-or-group).
+
 ## See Also
 
 * [How to enable/disable the behavior of the node](./constraints)
