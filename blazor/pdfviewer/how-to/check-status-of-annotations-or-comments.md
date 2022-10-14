@@ -20,7 +20,7 @@ The following code example shows the review status of the annotation.
 @inject IJSRuntime JsRuntime;
 
 <SfButton OnClick="reviewStatus">Review Status</SfButton>
-<SfPdfViewerServer @ref="pdfviewer" IsCommentPanelOpen="true" DocumentPath="@DocumentPath" Height="500px" Width="1060px" ></SfPdfViewerServer>
+<SfPdfViewerServer @ref="pdfviewer" CommentPanelVisible="true" DocumentPath="@DocumentPath" Height="500px" Width="1060px" ></SfPdfViewerServer>
 
 @code{
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
@@ -44,4 +44,4 @@ The following code example shows the review status of the annotation.
     }
 }
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples).
+> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Annotation%20Review%20Status%20-%20Server).

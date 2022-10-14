@@ -114,55 +114,410 @@ Syncfusion Blazor Themes are available in the CDN. Make sure that the version in
 | Microsoft Office Fabric Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-dark.css |
 | High Contrast  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/highcontrast.css |
 
-## NPM packages
+## NPM package reference
 
-NPM is a node package manager. It is basically used for managing dependencies of various server-side dependencies. You can manage server-side dependencies manually. It is a command-line program for dealing with said repository that aids in package installation, version management, and dependency management. It is an online repository for the publishing of open-source `Node.js` projects.
+The [Blazor Themes NPM package](https://www.npmjs.com/package/@syncfusion/blazor-themes) contains `SCSS` files for all themes supported by Syncfusion Blazor components. These SCSS files customize theme variables using a web compiler. The package includes component wise SCSS files and overall components SCSS files.
 
-You can add the theme for the Blazor applications through **npm packages** using the **SCSS** files by following the below process.
+You can add the `SCSS theme` for Blazor applications through NPM package and compile it by using the [Web Compiler 2022+](https://marketplace.visualstudio.com/items?itemName=Failwyn.WebCompiler64) by following steps.
 
-* Install Web Compiler to use `SCSS` files in Blazor applications.
+* Open Visual Studio 2022 and click the Extensions in the toolbar.
 
-* To install Web Compiler, open Visual Studio and click the **Extensions** in the toolbar.
+    ![VS Extension](images/VS_Extension.png)
 
-    ![Themes-npm-package-extension](images/Themes-npm-package-extension.png)
- 
-    ![Themes-npm-package-webcompiler](images/Themes-npm-package-webcompiler.png)
- 
-* Install the Syncfusion `node_modules` in this application using this command.
+* Search the `Web Compiler 2022+` in search box and download the extension.
+
+    ![Web Compiler 2022+](images/Web_Compiler.png)
+
+* Install the [Syncfusion Blazor Themes](https://www.npmjs.com/package/@syncfusion/blazor-themes) NPM package using the below command.
 
     ```
-    npm install @syncfusion/ej2
+    npm install @syncfusion/blazor-themes
     ```
 
-* Create a `SCSS` file as `~/wwwroot/styles/custom.scss` and provide the variables to override as shown below.
+* Create a `SCSS` file in the Static Web Assets folder (e.g., ~/wwwroot/styles/custom.scss). Next, define the [theme variables](https://blazor.syncfusion.com/documentation/appearance/theme-studio#common-variables) to override and import the theme as shown in the following.
 
-    ``` scss
+    In the following code, the primary theme variable color is changed. For all components:
+    
+    ```scss
     $primary: blue !default;
-    @import 'ej2/fabric.scss';
+
+    /* @import 'blazor-themes/SCSS-Themes/<Theme name>.scss'; */
+    @import 'blazor-themes/SCSS-Themes/fluent.scss';
     ```
 
-* Right-click the `SCSS` file and click the Web Compiler to compile the file.
+    **Output:**
 
-    ![Themes-npm-packages-compile](images/Themes-npm-packages-compile.png) 
+    ![Overall Theme Output](images/Overall_Theme_Output.png)
 
-* The `compiler config.json` file is created. Then, provide the location of the compiled CSS file and include a path as shown in the following code snippet.
+    For the Calendar (individual) component:
+
+    ```scss
+    $primary: #666699 !default;
+
+    /* @import 'blazor-themes/SCSS-Themes/<Package name>/<Control name>/<Theme name>.scss'; */
+    @import 'blazor-themes/SCSS-Themes/calendars/calendar/fluent.scss';
+    ```
+
+    **Output:**
+
+    ![Individual Theme Output](images/Individual_Theme_Output.png)
+
+* Then, Right-click the created `SCSS` file and click the `Web Compiler` option to compile the file.
+
+    ![Web Compiler Option](images/Web_Compiler_Option.png)
+
+* The `compilerconfig.json` file is created by defualt. Then, provide the location of the compiled CSS file and include a path in `compilerconfig.json` as shown in the following code snippet.
 
     ```json
     [
       {
-        "outputFile": "wwwroot/styles/customstyle.css",
-        "inputFile": "wwwroot/styles/customstyle.scss",
-        "useNodeSass": true,
+        "outputFile": "wwwroot/styles/custom.css",
+        "inputFile": "wwwroot/styles/custom.scss",
         "options": {
-          "includePath": "node_modules/@syncfusion"
+          "loadPaths": "node_modules/@syncfusion"
         }
       }
     ]
     ```
 
-* The SCSS file has been compiled to the CSS file. Then, add this CSS file to the `<head>` element of the **~/Pages/_Host.cshtml** page.
+* The `SCSS` file has been compiled to the `CSS` file. Then, add the compiled CSS file to the `<head>` element of the Host page.
 
-* Run the application and see the fabric themes from installed npm packages were applied.
+    ```html
+    <head>
+      ...
+      ...
+      <link href="~/styles/custom.css" rel="stylesheet" />
+    </head>
+    ```
+
+* Run the application to see the customized Fluent theme applied.
+
+The following shows the importing theme path for the overall theme.
+
+```css
+@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'
+```
+
+Below table lists the importing theme path for the individual components.
+
+<table>
+    <tr>
+        <th>Component</th>
+        <th>Importing theme path</th>
+    </tr>
+    <tr>
+        <td>Accordion</td>
+        <td>@import 'blazor-themes/SCSS-Themes/navigations/accordion/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Accumulation Chart</td>
+        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>AppBar</td>
+        <td>@import 'blazor-themes/SCSS-Themes/navigations/appbar/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>AutoComplete</td>
+        <td>@import 'blazor-themes/SCSS-Themes/dropdowns/auto-complete/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Avatar</td>
+        <td>@import 'blazor-themes/SCSS-Themes/layouts/avatar/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Badge</td>
+        <td>@import 'blazor-themes/SCSS-Themes/notifications/badge/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Barcode</td>
+        <td>@import 'blazor-themes/SCSS-Themes/barcode-generator/barcode/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Breadcrumb</td>
+        <td>@import 'blazor-themes/SCSS-Themes/navigations/breadcrumb/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Bullet Chart</td>
+        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Button</td>
+        <td>@import 'blazor-themes/SCSS-Themes/buttons/button/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>ButtonGroup</td>
+        <td>@import 'blazor-themes/SCSS-Themes/buttons/button/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Calendar</td>
+        <td>@import 'blazor-themes/SCSS-Themes/calendars/calendar/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Card</td>
+        <td>@import 'blazor-themes/SCSS-Themes/layouts/card/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Carousel</td>
+        <td>@import 'blazor-themes/SCSS-Themes/navigations/carousel/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Charts</td>
+        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>CheckBox</td>
+        <td>@import 'blazor-themes/SCSS-Themes/buttons/check-box/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Chip</td>
+        <td>@import 'blazor-themes/SCSS-Themes/buttons/chips/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Circular Gauge</td>
+        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Color Picker</td>
+        <td>@import 'blazor-themes/SCSS-Themes/inputs/color-picker/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>ComboBox</td>
+        <td>@import 'blazor-themes/SCSS-Themes/dropdowns/combo-box/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>ContextMenu</td>
+        <td>@import 'blazor-themes/SCSS-Themes/navigations/context-menu/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Dashboard Layout</td>
+        <td>@import 'blazor-themes/SCSS-Themes/layouts/dashboard-layout/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>DataGrid</td>
+        <td>@import 'blazor-themes/SCSS-Themes/grids/grid/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>DatePicker</td>
+        <td>@import 'blazor-themes/SCSS-Themes/calendars/datepicker/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>DateRange Picker</td>
+        <td>@import 'blazor-themes/SCSS-Themes/calendars/daterangepicker/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>DateTime Picker</td>
+        <td>@import 'blazor-themes/SCSS-Themes/calendars/datetimepicker/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Diagram</td>
+        <td>@import 'blazor-themes/SCSS-Themes/diagrams/diagram/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Dialog</td>
+        <td>@import 'blazor-themes/SCSS-Themes/popups/dialog/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Predefined Dialogs</td>
+        <td>@import 'blazor-themes/SCSS-Themes/popups/dialog/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>DocumentEditor</td>
+        <td>@import 'blazor-themes/SCSS-Themes/documenteditor/document-editor/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Dropdown Menu</td>
+        <td>@import 'blazor-themes/SCSS-Themes/dropdowns/drop-down-list/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Dropdown List</td>
+        <td>@import 'blazor-themes/SCSS-Themes/dropdowns/drop-down-list/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>FileManager</td>
+        <td>@import 'blazor-themes/SCSS-Themes/filemanager/file-manager/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>File Upload</td>
+        <td>@import 'blazor-themes/SCSS-Themes/inputs/uploader/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Floating Action Button</td>
+        <td>@import 'blazor-themes/SCSS-Themes/buttons/floating-action-button/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Gantt Chart</td>
+        <td>@import 'blazor-themes/SCSS-Themes/gantt/gantt/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>HeatMap Chart</td>
+        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>In-place Editor</td>
+        <td>@import 'blazor-themes/SCSS-Themes/inplace-editor/inplace-editor/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Input Mask</td>
+        <td>@import 'blazor-themes/SCSS-Themes/inputs/input/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Kanban</td>
+        <td>@import 'blazor-themes/SCSS-Themes/kanban/kanban/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Linear Gauge</td>
+        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>ListBox</td>
+        <td>@import 'blazor-themes/SCSS-Themes/dropdowns/list-box/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>ListView</td>
+        <td>@import 'blazor-themes/SCSS-Themes/lists/list-view/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Maps</td>
+        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Menu Bar</td>
+        <td>@import 'blazor-themes/SCSS-Themes/navigations/menu/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Message</td>
+        <td>@import 'blazor-themes/SCSS-Themes/notification/message/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>MultiSelect Dropdown</td>
+        <td>@import 'blazor-themes/SCSS-Themes/dropdowns/multi-select/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Numeric TextBox</td>
+        <td>@import 'blazor-themes/SCSS-Themes/inputs/numerictextbox/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Pager</td>
+        <td>@import 'blazor-themes/SCSS-Themes/navigations/pager/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>PDF Viewer</td>
+        <td>@import 'blazor-themes/SCSS-Themes/pdfviewer/pdfviewer/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Pivot Table</td>
+        <td>@import 'blazor-themes/SCSS-Themes/pivotview/pivotview/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>ProgressBar</td>
+        <td>@import 'blazor-themes/SCSS-Themes/splitbuttons/progress-button/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>ProgressButton</td>
+        <td>@import 'blazor-themes/SCSS-Themes/splitbuttons/progress-button/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>QueryBuilder</td>
+        <td>@import 'blazor-themes/SCSS-Themes/querybuilder/query-builder/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>RadioButton</td>
+        <td>@import 'blazor-themes/SCSS-Themes/buttons/radio-button/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Range Selector</td>
+        <td>@import 'blazor-themes/SCSS-Themes/inputs/slider/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Range Slider</td>
+        <td>@import 'blazor-themes/SCSS-Themes/inputs/slider/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>RichTextEditor</td>
+        <td>@import 'blazor-themes/SCSS-Themes/richtexteditor/rich-text-editor/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Scheduler</td>
+        <td>@import 'blazor-themes/SCSS-Themes/schedule/schedule/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Sidebar</td>
+        <td>@import 'blazor-themes/SCSS-Themes/navigations/sidebar/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Signature</td>
+        <td>@import 'blazor-themes/SCSS-Themes/inputs/ignature/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Skeleton</td>
+        <td>@import 'blazor-themes/SCSS-Themes/notification/skeleton/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Smith Chart</td>
+        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Sparkline</td>
+        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Speed Dial</td>
+        <td>@import 'blazor-themes/SCSS-Themes/buttons/speed-dial/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Spinner</td>
+        <td>@import 'blazor-themes/SCSS-Themes/popups/spinner/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Stock Chart</td>
+        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Tabs</td>
+        <td>@import 'blazor-themes/SCSS-Themes/navigations/tab/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>TextBox</td>
+        <td>@import 'blazor-themes/SCSS-Themes/inputs/texbox/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>TimePicker</td>
+        <td>@import 'blazor-themes/SCSS-Themes/calendars\timepicker/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Toast</td>
+        <td>@import 'blazor-themes/SCSS-Themes/popups/toast/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Toggle Switch Button</td>
+        <td>@import 'blazor-themes/SCSS-Themes/buttons/button/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Toolbar</td>
+        <td>@import 'blazor-themes/SCSS-Themes/navigations/toolbar/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Tooltip</td>
+        <td>@import 'blazor-themes/SCSS-Themes/popups/tooltip/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>TreeGrid</td>
+        <td>@import 'blazor-themes/SCSS-Themes/treegrid/treegrid/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>TreeMap</td>
+        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>TreeView</td>
+        <td>@import 'blazor-themes/SCSS-Themes/navigations/treeview/{{THEME}}.scss'</td>
+    </tr>
+    <tr>
+        <td>Diagram(Classic)</td>
+        <td>@import 'blazor-themes/SCSS-Themes/diagrams/diagram/{{THEME}}.scss'</td>
+    </tr>
+</table>
 
 ## Change theme dynamically
 
@@ -176,58 +531,58 @@ The following example demonstrates how to change a theme dynamically in Blazor S
 
     * For **.NET6 Blazor Server Application**, In the **_Layout.cshtml** the theme is changed dynamically using `id` in `setTheme` method.
     * For **.NET5 & 3.1 Blazor Server Application**, In **_Host.cshtml**, the theme is changed based on query string. 
-    
-{% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/_Layout.cshtml)" %}
 
-<head>
-... 
-<link id="theme" href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-</head>
-... 
-<script>
-    function setTheme(theme) {
-        document.getElementsByTagName('body')[0].style.display = 'none';
-        let synclink = document.getElementById('theme');
-        synclink.href = '_content/Syncfusion.Blazor.Themes/' + theme + '.css';
-        setTimeout(function () { document.getElementsByTagName('body')[0].style.display = 'block'; }, 200);
+    {% tabs %}
+    {% highlight c# tabtitle=".NET 6 (~/_Layout.cshtml)" %}
+
+    <head>
+    ... 
+    <link id="theme" href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    </head>
+    ... 
+    <script>
+        function setTheme(theme) {
+            document.getElementsByTagName('body')[0].style.display = 'none';
+            let synclink = document.getElementById('theme');
+            synclink.href = '_content/Syncfusion.Blazor.Themes/' + theme + '.css';
+            setTimeout(function () { document.getElementsByTagName('body')[0].style.display = 'block'; }, 200);
+        }
+    </script>
+    ...
+
+    {% endhighlight %}
+    {% highlight c# tabtitle=".NET 5 & 3.1 (~/_Host.cshtml)" %}
+
+    @page "/"
+    @namespace BlazorThemeSwitcher.Pages
+    @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+        
+    @{
+        Layout = null;
+        QueryHelpers.ParseQuery(Request.QueryString.Value).TryGetValue("theme", out var themeName);
+        themeName = themeName.Count > 0 ? themeName.First() : "bootstrap4";
     }
-</script>
-...
 
-{% endhighlight %}
-{% highlight c# tabtitle=".NET 5 & 3.1 (~/_Host.cshtml)" %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BlazorThemeSwitcher</title>
+        <base href="~/" />
+        <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+        <link href="css/site.css" rel="stylesheet" />
+        <link href="BlazorThemeSwitcher.styles.css" rel="stylesheet" />
+        <link href=@("_content/Syncfusion.Blazor.Themes/" + themeName + ".css")rel="stylesheet" />
+    </head>
 
-@page "/"
-@namespace BlazorThemeSwitcher.Pages
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-    
-@{
-    Layout = null;
-    QueryHelpers.ParseQuery(Request.QueryString.Value).TryGetValue("theme", out var themeName);
-    themeName = themeName.Count > 0 ? themeName.First() : "bootstrap4";
-}
+    <body>
+        <script src="_framework/blazor.server.js"></script>
+    </ </body>
+    </html>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BlazorThemeSwitcher</title>
-    <base href="~/" />
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-    <link href="css/site.css" rel="stylesheet" />
-    <link href="BlazorThemeSwitcher.styles.css" rel="stylesheet" />
-    <link href=@("_content/Syncfusion.Blazor.Themes/" + themeName + ".css")rel="stylesheet" />
-</head>
-
-<body>
-    <script src="_framework/blazor.server.js"></script>
-</ </body>
-</html>
-
-{% endhighlight %}
-{% endtabs %}
+    {% endhighlight %}
+    {% endtabs %}
 
 2. Below step shows changing style sheet dynamically.
 

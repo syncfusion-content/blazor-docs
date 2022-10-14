@@ -148,9 +148,8 @@ The following code illustrates how to add the image as a stamp annotation in the
     .e-pv-download-document-icon::before {
         content: '\e75d';
     }
-
 </style>
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples).
+> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Create%20a%20Custom%20Dynamic%20Stamp).
 
 > You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.
