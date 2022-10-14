@@ -291,7 +291,7 @@ The event [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 * [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_ActionName): It holds the name of the current action began. The following are the UI actions and their names:
 
 | Action | Action Name|
-|------|-------------|
+|----------------|-------------|
 | Editing| Edit record|
 | Save| Save edited records|
 | Add| Add new record|
@@ -352,7 +352,7 @@ The event [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 * [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_ActionName): It holds the name of the current action completed. The following are the UI actions and their names:
 
 | Action | Action Name|
-|------|-------------|
+|----------------|-------------|
 | Save| Edited records saved|
 | Add| New record added|
 | Delete| Record removed |
@@ -408,7 +408,7 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 * [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ActionName): It holds the name of the current action failed. The following are the UI actions and their names:
 
 | Action | Action Name|
-|------|-------------|
+|----------------|-------------|
 | Editing| Edit record|
 | Save| Save edited records|
 | Add| Add new record|
