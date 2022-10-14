@@ -216,9 +216,9 @@ The event [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 * [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_ActionName): It holds the name of the current action began. The following are the UI actions and their names:
 
 | Action | Action Name|
-|------|-------------|
-| [`Expand`](./drill-down/#drill-down-and-drill-up)| Drill down|
-| [`Collapse`](./drill-down/#drill-down-and-drill-up)| Drill up|
+|----------------|---------------|
+| [Expand](./drill-down/#drill-down-and-drill-up)| Drill down|
+| [Collapse](./drill-down/#drill-down-and-drill-up)| Drill up|
 
 * [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_Cancel): It allows user to restrict the current action.
 
@@ -274,9 +274,9 @@ The event [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 * [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_ActionName): It holds the name of the current action completed. The following are the UI actions and their names:
 
 | Action | Action Name|
-|------|-------------|
-| [`Expand`](./drill-down/#drill-down-and-drill-up)| Drill down|
-| [`Collapse`](./drill-down/#drill-down-and-drill-up)| Drill up|
+|----------------|---------------|
+| [Expand](./drill-down/#drill-down-and-drill-up)| Drill down|
+| [Collapse](./drill-down/#drill-down-and-drill-up)| Drill up|
 
 * [ActionInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_ActionInfo):  It holds the unique information about the current UI action.  For example, if drill down action is completed, the event argument contains information such as field name and the drill information.
 
@@ -327,9 +327,9 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 * [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ActionName): It holds the name of the current action failed. The following are the UI actions and their names:
 
 | Action | Action Name|
-|------|-------------|
-| [`Expand`](./drill-down/#drill-down-and-drill-up) | Drill down |
-| [`Collapse`](./drill-down/#drill-down-and-drill-up)| Drill up |
+|----------------|---------------|
+| [Expand](./drill-down/#drill-down-and-drill-up) | Drill down |
+| [Collapse](./drill-down/#drill-down-and-drill-up)| Drill up |
 
 * [ErrorInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ErrorInfo): It holds the error information of the current UI action.
 
