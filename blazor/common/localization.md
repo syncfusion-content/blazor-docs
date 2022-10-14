@@ -450,9 +450,6 @@ Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the c
 
 {% endtabs %}
 
-
-5.You can select the culture dynamically from culture switcher at run time by setting the following ways,
-
 ### Blazor WASM App
 
 Set the `BlazorWebAssemblyLoadAllGlobalizationData` property to true in the project file:
