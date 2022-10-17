@@ -774,7 +774,7 @@ The event [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 * [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_ActionName): It holds the name of the current action began. The following are the UI actions and their names:
 
 | Action | Action Name|
-|------|-------------|
+|----------------|-------------|
 | Sort icon| Sort field|
 | Filter icon| Filter field|
 | Aggregation (Value type drop down and menu)| Aggregate field|
@@ -841,7 +841,7 @@ The event [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 * [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_ActionName): It holds the name of the current action completed. The following are the UI actions and their names:
 
 | Action | Action Name|
-|------|-------------|
+|----------------|-------------|
 | Sort icon| Field sorted|
 | Filter icon| Field filtered|
 | Aggregation (Value type drop down and menu)| Field aggregated|
@@ -902,7 +902,7 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 * [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ActionName): It holds the name of the current action failed. The following are the UI actions and their names:
 
 | Action | Action Name|
-|------|-------------|
+|----------------|-------------|
 | Sort icon| Sort field|
 | Filter icon| Filter field|
 | Aggregation (Value type drop down and menu)| Aggregate field|
