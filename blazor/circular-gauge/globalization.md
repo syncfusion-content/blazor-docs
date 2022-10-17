@@ -21,7 +21,7 @@ npm install cldr-data --save
 
 To know more about CLDR-Data, refer to [CLDR-Data](http://cldr.unicode.org/index/cldr-spec/json).
 
-After the package has been installed, you can find the culture-specific JSON data under the following location: `\node_modules\cldr-data\main`, and then copy the required `cldr-data` file into the `wwwroot\cldr-data` folder.
+After the package has been installed, you can find the culture-specific JSON data under the following location: `/node_modules/cldr-data/main`, and then copy the required `cldr-data` file into the `wwwroot/cldr-data` folder.
 
 Circular Gauge provides internationalization support for below elements.
 
