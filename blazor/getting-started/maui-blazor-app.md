@@ -171,7 +171,13 @@ Before running the sample, make sure the mode is `Windows Machine`.
 2. Place the images to be rendered in the images folder ( a separate folder for images) under wwwroot folder of the application.
 3. Add the images at the required place in the application using [image tag.](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img). Please refer the code snippets to add image in the application
 
-![Code Snippets to add images in MAUI application](images\maui\image-codesnippets.jpeg)
+{% tabs %}
+{% highlight razor %}
+
+<img src="images/welcome_picture.png" height="60" width="60" />
+
+{% endhighlight %}
+{% endtabs %}
 
 ![MAUI Blazor App with added image](images\maui\maui-image.jpeg)
 
