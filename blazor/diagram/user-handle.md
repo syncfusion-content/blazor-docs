@@ -203,7 +203,7 @@ The [VisibleTarget](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 
 The following code example shows how to change the VisibleTarget in the userhandle.
 
-```chtml
+```cshtml
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent @ref="@Diagram" Width="1200px" Height="600px" Nodes="@nodes"  GetCustomTool="@tools" GetCustomCursor="@cursor" Connectors="@connectors" SelectionSettings="@SelectedModel"> 
 </SfDiagramComponent>
