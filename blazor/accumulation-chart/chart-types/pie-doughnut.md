@@ -338,5 +338,5 @@ When the mouse hovers over the pie/doughnut chart, the border appears by default
 
 ## See Also
 
-* [Data label](../data-label/)
-* [Grouping](../grouping/)
+* [Data label](../data-label)
+* [Grouping](../grouping)
