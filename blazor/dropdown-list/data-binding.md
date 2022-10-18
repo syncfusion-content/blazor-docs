@@ -11,6 +11,13 @@ documentation: ug
 
 Data binding can be achieved by using the `bind-Value` attribute and it supports string, int, Enum and bool types. If component value has been changed, it will affect all the places where you bind the variable for the **bind-value** attribute.
 
+* **TValue** - specifies the type of the each list item of the dropdown component.
+* **TItem** - specifies the type of the whole list of the dropdown component.
+
+## Binding Local Data
+
+Below code demonstrate the binding local data to the DropDownList.
+
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
@@ -40,6 +47,75 @@ Data binding can be achieved by using the `bind-Value` attribute and it supports
     };
 }
 ```
+
+### Primitive type
+
+You can bind the data to the DropDownList as a list of string, int, double and bool type items.
+
+The following code demonstrates array of string and integer values to the DropDownList component.
+
+```cshtml
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/data-binding/primitive-type-string %}
+
+{% endhighlight %}
+
+```
+
+```cshtml
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/data-binding/primitive-type-int %}
+
+{% endhighlight %}
+
+```
+
+### Complex data type
+
+The DropDownList can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
+
+In the following example, `Code.ID` column and `Country.CountryID` column from complex data have been mapped to the `Value` field and `Text` field, respectively.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/data-binding/complex-data-type %}
+
+{% endhighlight %}
+
+### Expando object binding
+
+You can bind ExpandoObject data to the DropDownList component. The following example `ExpandoObject` is bound to the collection of vehicles data.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/data-binding/expando-object-binding %}
+
+{% endhighlight %}
+
+
+### Observable collection binding
+
+You can bind ObservableCollection data to the DropDownList component. In the following example, `Observable Data` is bound to a collection of colors data.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/data-binding/observable-collection %}
+
+{% endhighlight %}
+
+
+### Dynamic object binding
+
+
+
+### Enum data binding
+
+
+
 
 ## Index Value Binding
 
