@@ -11,7 +11,7 @@ documentation: ug
 
 ## Size
 
-This section briefly explains the different types of AppBar. The available types of the Blazor AppBar are as follows:
+The size of the AppBar can be set using the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Mode) property. The available types of the Blazor AppBar are as follows:
 
 * Regular AppBar
 * Prominent AppBar
@@ -121,7 +121,7 @@ This height mode can be set to the AppBar by setting `AppBarMode.Dense` to the p
 
 ## Color
 
-This section briefly explains the different types of background colors used for the AppBar. The background and font colors can be set using the [ColorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_ColorMode) property. The available types of background color for the Blazor AppBar are as follows:
+The background and font colors can be set using the [ColorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_ColorMode) property. The available types of background color for the Blazor AppBar are as follows:
 
 * Light AppBar
 * Dark AppBar

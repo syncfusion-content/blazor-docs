@@ -29,7 +29,7 @@ By default, the tooltip is not visible. You can enable the tooltip by setting th
     * [FontStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) - Specifies font style for tooltip text
     * [FontWeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) - Specifies font weight for tooltip text
     * [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) - Specifies font family for tooltip
-    * [Opacity](https://help.syncfusion.com/cr/blazor/) -  Specifies opacity for tooltip text
+    * [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.html) -  Specifies opacity for tooltip text
     * [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) - Specifies size for tooltip text
 
 ```cshtml
