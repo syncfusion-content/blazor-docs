@@ -33,7 +33,7 @@ Ensure our CSS files have been properly configured in your application.
 
 ## Breaking changes
 
-Some changes have been modified in our Blazor samples for each release. So, we suggest you to ensure the breaking changes. Refer to this [release notes](https://blazor.syncfusion.com/documentation/release-notes/index/) for our Blazor components.
+Some changes have been modified in our Blazor samples for each release. So, we suggest you to ensure the breaking changes. Refer to this [release notes](https://blazor.syncfusion.com/documentation/release-notes/19.4.47?type=all) for our Blazor components.
 
 ## Cache problem
 
