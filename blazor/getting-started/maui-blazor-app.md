@@ -197,6 +197,8 @@ In the below code images are added under `images` folder in `wwwroot` folder.
 
 ## See also
 
- ### MAUI Blazor Diagram
- * [How to create Diagram Builder in MAUI platform?](https://www.syncfusion.com/kb/13059/how-to-create-diagram-builder-in-maui-platform)
-   > [View MAUI Blazor Diagram Builder Source Code in GitHub](https://github.com/syncfusion/blazor-showcase-diagram-builder/tree/master/MAUI)
+### MAUI Blazor Diagram
+
+* [How to create Diagram Builder in MAUI platform?](https://www.syncfusion.com/kb/13059/how-to-create-diagram-builder-in-maui-platform)
+
+> [View MAUI Blazor Diagram Builder Source Code in GitHub](https://github.com/syncfusion/blazor-showcase-diagram-builder/tree/master/MAUI)
