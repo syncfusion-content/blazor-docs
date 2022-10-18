@@ -1,0 +1,12 @@
+@using Syncfusion.Blazor.RichTextEditor;
+<SfRichTextEditor>
+    <RichTextEditorToolbarSettings Items="@Items" />
+        <RichTextEditorAudioSettings SaveUrl="api/Audio/Save" Path="./Audio/"></RichTextEditorAudioSettings>
+</SfRichTextEditor>
+@code {
+    private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Audio }
+    };
+
+}
