@@ -1,11 +1,11 @@
 @using Syncfusion.Blazor.DropDowns
 
-<SfDropDownList TValue="string" TItem="Complex" Placeholder="e.g. Select a country" DataSource="@LocalData">
+<SfDropDownList TValue="string" TItem="Complex" Placeholder="e.g. Select a country" DataSource="@LocalData" @bind-Value="@CountryValue" Width="300px">
     <DropDownListFieldSettings Text="Country.CountryID" Value="Code.ID"></DropDownListFieldSettings>
 </SfDropDownList>
 
 @code {
-
+    public string CountryValue { get; set; } = "CM";
     public IEnumerable<Complex> LocalData { get; set; } = new Complex().GetData();
 
     public class Code

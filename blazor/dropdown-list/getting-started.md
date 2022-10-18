@@ -357,7 +357,6 @@ By default, the width of the popup list automatically adjusts according to the D
 
 * You can get the selected value of the DropDownList component from the `Value` property in the [ValueChange](https://blazor.syncfusion.com/documentation/dropdown-list/events#valuechange) event argument.  
 
-```cshtml
 
 {% highlight cshtml %}
 
@@ -365,19 +364,14 @@ By default, the width of the popup list automatically adjusts according to the D
 
 {% endhighlight %}
 
-```
-
 *  You can get the complete object list of the selected value from the `ItemData` property in the [ValueChange](https://blazor.syncfusion.com/documentation/dropdown-list/events#valuechange) event argument.
 
-```cshtml
 
 {% highlight cshtml %}
 
 {% include_relative code-snippet/getting-started/item-data.razor %}
 
 {% endhighlight %}
-
-```
 
 
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DropDownList).
