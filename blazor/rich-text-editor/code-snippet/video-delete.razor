@@ -1,0 +1,12 @@
+@using Syncfusion.Blazor.RichTextEditor;
+<SfRichTextEditor>
+    <RichTextEditorToolbarSettings Items="@Items" />
+        <RichTextEditorVideoSettings SaveUrl="/Home/SaveImage" RemoveUrl="/Home/RemoveImage" path="../Uploads/"></RichTextEditorVideoSettings>
+</SfRichTextEditor>
+@code {
+    private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Video }
+    };
+
+}
