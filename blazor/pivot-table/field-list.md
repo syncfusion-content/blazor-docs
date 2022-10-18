@@ -449,21 +449,21 @@ The event [FieldDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ### OnActionBegin
 
-The event [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) triggers when the UI actions such as sorting, filtering, aggregation or edit calculated field, that are present in the field list UI begin. This allows user to identify the current action being performed at runtime. It has the following parameters:
+The event [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) triggers when the UI actions such as sorting, filtering, aggregation or edit calculated field, that are present in the field list UI begin. This allows user to identify the current action being performed at runtime. It has the following parameters:
 
 * [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_DataSourceSettings) : It holds the current data source settings such as input data source, rows, columns, values, filters, format settings and so on.
 
 * [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_ActionName): It holds the name of the current action began. The following are the UI actions and their names:
 
 | Action | Action Name|
-|------|-------------|
-| [`Sort icon`](./field-list/#Sorting-members)| Sort field|
-| [`Filter icon`](./field-list/#Filtering-members)| Filter field|
-| [`Aggregation`](./field-list/#Changing-aggregation-type-of-value-fields-at-runtime) (Value type drop down and menu)| Aggregate field|
-| [`Edit icon`](./calculated-field/#Editing-the-existing-calculated-field-formula) | Edit calculated field|
-| [`Calculated field button`](./field-list/#calculated-fields)| Open calculated field dialog|
-| [`Field list`](./field-list/#In-built-Field-List-(popup))| Open field list|
-| [`Field list tree – Sort icon`](./field-list/#In-built-Field-List-(popup))| Sort field tree|
+|----------------|-------------|
+| [Sort icon](./field-list/#sorting-members)| Sort field|
+| [Filter icon](./field-list/#filtering-members)| Filter field|
+| [Aggregation](./field-list/#changing-aggregation-type-of-value-fields-at-runtime) (Value type drop down and menu)| Aggregate field|
+| [Edit icon](./calculated-field/#editing-the-existing-calculated-field-formula) | Edit calculated field|
+| [Calculated field button](./field-list/#calculated-fields)| Open calculated field dialog|
+| [Field list](./field-list/#in-built-field-list-popup)| Open field list|
+| [Field list tree – Sort icon](./field-list/#in-built-field-list-popup)| Sort field tree|
 
 * [FieldInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionBeginEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionBeginEventArgs_FieldInfo): It holds the selected field information.
 
@@ -518,21 +518,21 @@ In the following example, opening pop-up field list can be restricted by setting
 ```
 ### OnActionComplete
 
-The event [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionComplete) triggers when a UI action such as sorting, filtering, aggregation or edit calculated field, that are present in the field list UI, is completed. This allows user to identify the current UI action being completed at runtime. It has the following parameters:
+The event [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionComplete) triggers when a UI action such as sorting, filtering, aggregation or edit calculated field, that are present in the field list UI, is completed. This allows user to identify the current UI action being completed at runtime. It has the following parameters:
 
 * [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_DataSourceSettings): It holds the current data source settings such as input data source, rows, columns, values, filters, format settings and so on.
 
 * [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_ActionName): It holds the name of the current action completed. The following are the UI actions and their names:
 
 | Action | Action Name|
-|------|-------------|
-| [`Sort icon`](./field-list/#Sorting-members)| Field sorted|
-| [`Filter icon`](./field-list/#Filtering-members)| Field filtered|
-| [`Aggregation`](./field-list/#Changing-aggregation-type-of-value-fields-at-runtime)(Value type drop down and menu)| Field aggregated|
-| [`Edit icon`](./calculated-field/#Editing-the-existing-calculated-field-formula)| Calculated field edited|
-| [`Calculated field button`](./field-list/#calculated-fields)| Calculated field applied|
-| [`Field list`](./field-list/#In-built-Field-List)| Field list closed|
-| [`Field list tree – Sort icon`](./field-list/#In-built-Field-List)| Field tree sorted|
+|----------------|-------------|
+| [Sort icon](./field-list/#sorting-members)| Field sorted|
+| [Filter icon](./field-list/#filtering-members)| Field filtered|
+| [Aggregation](./field-list/#changing-aggregation-type-of-value-fields-at-runtime)(Value type drop down and menu)| Field aggregated|
+| [Edit icon](./calculated-field/#editing-the-existing-calculated-field-formula)| Calculated field edited|
+| [Calculated field button](./field-list/#calculated-fields)| Calculated field applied|
+| [Field list](./field-list/#in-built-field-list-popup)| Field list closed|
+| [Field list tree – Sort icon](./field-list/#in-built-field-list-popup)| Field tree sorted|
 
 * [FieldInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionCompleteEventArgs-1.html#Syncfusion_Blazor_PivotView_PivotActionCompleteEventArgs_1_FieldInfo): It holds the selected field information.
 
@@ -590,14 +590,14 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 * [ActionName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ActionName): It holds the name of the current action failed. The following are the UI actions and their names:
 
 | Action | Action Name|
-|------|-------------|
-| [`Sort icon`](./field-list/#Sorting-members)| Sort field|
-| [`Filter icon`](./field-list/#Filtering-members)| Filter field|
-| [`Aggregation`](./field-list/#Changing-aggregation-type-of-value-fields-at-runtime) (Value type drop down and menu)| Aggregate field|
-| [`Edit icon`](./calculated-field/#Editing-the-existing-calculated-field-formula)| Edit calculated field|
-| [`Calculated field button`](./field-list/#calculated-fields)| Open calculated field dialog|
-| [`Field list`](./field-list/#In-built-Field-List)| Open field list|
-| [`Field list tree – Sort icon`](./field-list/#In-built-Field-List)| Sort field tree|
+|----------------|-------------|
+| [Sort icon](./field-list/#sorting-members)| Sort field|
+| [Filter icon](./field-list/#filtering-members)| Filter field|
+| [Aggregation](./field-list/#changing-aggregation-type-of-value-fields-at-runtime) (Value type drop down and menu)| Aggregate field|
+| [Edit icon](./calculated-field/#editing-the-existing-calculated-field-formula)| Edit calculated field|
+| [Calculated field button](./field-list/#calculated-fields)| Open calculated field dialog|
+| [Field list](./field-list/#in-built-field-list-popup)| Open field list|
+| [Field list tree – Sort icon](./field-list/#in-built-field-list-popup)| Sort field tree|
 
 * [ErrorInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotActionFailureEventArgs.html#Syncfusion_Blazor_PivotView_PivotActionFailureEventArgs_ErrorInfo): It holds the error information of the current UI action.
 

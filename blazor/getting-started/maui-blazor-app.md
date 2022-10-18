@@ -28,13 +28,13 @@ Visual Studio provides **.NET MAUI Blazor app** template to create .NET MAUI Bla
 ## Create a new .NET MAUI Blazor App in Visual Studio
 
 1.  Launch Visual Studio 2022 (Preview), and in the start window **click Create a new project** to create a new project:
-![Create a new project in VS2022](images\maui\create-new-project.png)
+![Create a new project in VS2022](images/maui/create-new-project.png)
 2. For .NET MAUI Blazor app, choose the **.NET MAUI Blazor app** template. Select Next. 
-![Create .NET MAUI Blazor App](images\maui\create-maui-blazor-app.png)
+![Create .NET MAUI Blazor App](images/maui/create-maui-blazor-app.png)
 3. In the **Configure your new project** window, name your project, choose a location for the project and click the `Create` button.
-![Configure MAUI Blazor App](images\maui\configure-maui-blazor-app.png)
+![Configure MAUI Blazor App](images/maui/configure-maui-blazor-app.png)
 4. Wait for the project to be created, and its dependencies to be restored, then the project structure looks like below.
-![MAUI Blazor Project Structure](images\maui\maui-blazor-project-structure.png)
+![MAUI Blazor Project Structure](images/maui/maui-blazor-project-structure.png)
 
 ## BlazorWebView in .NET MAUI Blazor App
 
@@ -157,13 +157,29 @@ Now add Syncfusion Blazor component in any razor file. Here, the Calendar compon
 In the Visual Studio toolbar, select the **Windows Machine** button to build and run the app.
 Before running the sample, make sure the mode is `Windows Machine`.
 
-![Build and run MAUI Blazor App](images\maui\windows-machine-mode.png)
+![Build and run MAUI Blazor App](images/maui/windows-machine-mode.png)
 
 > If you want to run the application in Android or iOS refer [MAUI Getting Started](https://docs.microsoft.com/en-us/dotnet/maui/get-started/first-app) for the setup. 
 
-![MAUI Blazor App with Syncfusion Blazor Components](images\maui\maui-blazor-calendar.png)
+![MAUI Blazor App with Syncfusion Blazor Components](images/maui/maui-blazor-calendar.png)
 
 > Download demo from [GitHub](https://github.com/SyncfusionExamples/MAUI-Blazor-App-using-Syncfusion-Blazor-Components)
+
+## How to use images in .NET MAUI Blazor Application
+
+Add the images in the images in the `wwwroot` folder of the application and refer it using `img` tag in Blazor App. 
+
+In the below code images are added under `images` folder in `wwwroot` folder.
+
+{% tabs %}
+{% highlight razor %}
+
+<img src="images/welcome_picture.png" height="60" width="60" />
+
+{% endhighlight %}
+{% endtabs %}
+
+![MAUI Blazor App with added image](images\maui\maui-image.jpeg)
 
 ## Troubleshooting
 
@@ -177,7 +193,7 @@ Before running the sample, make sure the mode is `Windows Machine`.
 
     If you get error dialog like "There were deployment errors", Enable developer mode. For more details refer [Enable your device for development](https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development).
 
-   ![Enable developer mode in system settings](images\maui\enable-developer-mode.png)
+   ![Enable developer mode in system settings](images/maui/enable-developer-mode.png)
 
 ## See also
 
