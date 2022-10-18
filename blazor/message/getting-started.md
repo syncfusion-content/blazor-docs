@@ -83,7 +83,7 @@ namespace BlazorApplication
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+            services.AddSyncfusionBlazor();
         }
         ...
     }
