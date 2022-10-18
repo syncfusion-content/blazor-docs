@@ -11,7 +11,7 @@ documentation: ug
 
 The DataGrid component has options to dynamically insert, delete, and update records.
 
-> [Editing](https://blazor.syncfusion.com/documentation/datagrid/editing/) feature requires a primary key column for CRUD operations.
+> [Editing](https://blazor.syncfusion.com/documentation/datagrid/editing) feature requires a primary key column for CRUD operations.
 
 To know about editing feature in Blazor DataGrid component, you can check on this video.
 
