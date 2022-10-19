@@ -27,6 +27,8 @@ Copy default resx file (`SfResources.resx`) and the other required resx files ba
 
 ![Adding Resource Files in Blazor](images/localization-resource.png)
 
+> Update the localization files whenever you upgrade the Syncfusion NuGet packages in the application to avoid the issues occur due to localization strings.
+
 After adding the resource file in the application, double click default resx (`SfResources.resx`) file and open **Resource Editor**. In the Resource Editor, change **Access Modifier** option as **Public** to generate `designer.cs` file.
 
 ![Changing Access Modifier](images/localization-resource-file.png)

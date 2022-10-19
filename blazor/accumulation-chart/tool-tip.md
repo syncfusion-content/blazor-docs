@@ -232,5 +232,5 @@ By default, tooltip shows information of x and y value in points. In addition, b
 
 ## See Also
 
-* [Grouping](./grouping/)
-* [Data label](./data-label/)
+* [Grouping](./grouping)
+* [Data label](./data-label)
