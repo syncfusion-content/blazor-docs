@@ -46,9 +46,12 @@ The different event argument types for each event are,
 
 The following native event support has been provided to the Toggle Switch Button component:
 
-| List of Native events |  |  | | | |
-| --- | --- | --- | --- | --- | --- |
-|onfocus|onfocusout|onfocusin|onkeydown|onkeyup|Onkeypress|
+* onfocus
+* onfocusout
+* onfocusin
+* onkeydown
+* onkeyup
+* Onkeypress
 
 ## How to bind focus event to Toggle Switch Button
 
