@@ -34,7 +34,7 @@ The following example demonstrates how to set the `Year` as the start view of th
 ```
 
 
-![Changing Blazor Calendar View](./images/blazor-calendar-view.png)
+![Changing Blazor Calendar View](./images/blazor-full-calendar-view.png)
 
 ## View restriction
 
