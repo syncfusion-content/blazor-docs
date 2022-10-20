@@ -58,7 +58,7 @@ The following code demonstrates array of string and integer values to the DropDo
 
 {% highlight cshtml %}
 
-{% include_relative code-snippet/data-binding/primitive-type-string %}
+{% include_relative code-snippet/data-binding/primitive-type-string.razor %}
 
 {% endhighlight %}
 
@@ -66,7 +66,7 @@ The following code demonstrates array of string and integer values to the DropDo
 
 {% highlight cshtml %}
 
-{% include_relative code-snippet/data-binding/primitive-type-int %}
+{% include_relative code-snippet/data-binding/primitive-type-int.razor %}
 
 {% endhighlight %}
 
@@ -80,7 +80,7 @@ In the following example, `Code.ID` column and `Country.CountryID` column from c
 
 {% highlight cshtml %}
 
-{% include_relative code-snippet/data-binding/complex-data-type %}
+{% include_relative code-snippet/data-binding/complex-data-type.razor %}
 
 {% endhighlight %}
 
@@ -92,7 +92,7 @@ You can bind ExpandoObject data to the DropDownList component. The following exa
 
 {% highlight cshtml %}
 
-{% include_relative code-snippet/data-binding/expando-object-binding %}
+{% include_relative code-snippet/data-binding/expando-object-binding.razor %}
 
 {% endhighlight %}
 
@@ -104,7 +104,7 @@ You can bind ObservableCollection data to the DropDownList component. In the fol
 
 {% highlight cshtml %}
 
-{% include_relative code-snippet/data-binding/observable-collection-binding %}
+{% include_relative code-snippet/data-binding/observable-collection-binding.razor %}
 
 {% endhighlight %}
 
@@ -116,7 +116,7 @@ You can bind DynamicObject data to the DropDownList component. The following exa
 
 {% highlight cshtml %}
 
-{% include_relative code-snippet/data-binding/dynamic-object-binding %}
+{% include_relative code-snippet/data-binding/dynamic-object-binding.razor %}
 
 {% endhighlight %}
 
@@ -128,7 +128,7 @@ You can bind enum data to DropDownList component. The following code helps you g
 
 {% highlight cshtml %}
 
-{% include_relative code-snippet/data-binding/enum-data-binding %}
+{% include_relative code-snippet/data-binding/enum-data-binding.razor %}
 
 {% endhighlight %}
 
@@ -140,7 +140,7 @@ You can bind ValueTuple data to the DropDownList component. The following code h
 
 {% highlight cshtml %}
 
-{% include_relative code-snippet/data-binding/value-tuple-data-binding %}
+{% include_relative code-snippet/data-binding/value-tuple-data-binding.razor %}
 
 {% endhighlight %}
 
