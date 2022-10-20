@@ -9,15 +9,15 @@ documentation: ug
 
 # Icons
 
-The Message has an option to customize the appearance with icons. This section explains about the custom and close icon of the message.
+This section explains how to show or hide the close icon and add the custom severity icon to the message.
 
 ## Close icon
 
-The Message can be rendered with and without the close icon. The close icon is used to hide the message. If the user want to hide the messages after reading it, it can be achieved through these close icon.
+The message can be rendered with or without the close icon. The close icon is used to hide the message, either by manually clicking the close icon or through keyboard interaction.
 
-To show the close icon in the message, set the `ShowCloseIcon` property to `true` to make it visible.
+By default, the close icon is not rendered in the message. To show the close icon, set the `ShowCloseIcon` property to `true`.
 
-The following example demonstrates the message with close icon.
+In the following example, the messages are rendered with the close icon.
 
 {% tabs %}
 {% highlight razor %}
@@ -138,16 +138,15 @@ The following example demonstrates the message with close icon.
 
 ## Custom icon
 
-By default, the severity icons can be displayed according to the severity type to make the user more understandable by visual information better than text. If the user wants to customize these icons, then it can be achieved through `CssClass` property.
+By default, the severity icons can be displayed according to the severity type to make the user more understandable by visual information rather than text. If the user wants to customize these icons, then it can be achieved through `CssClass` property.
 
-The following example demonstrates the default message is rendered with a custom severity icon and custom appearance.
-
+The following example demonstrates how the default message is rendered with a custom severity icon and custom appearance.
 {% tabs %}
 {% highlight razor %}
 
 @using Syncfusion.Blazor.Notifications
 
-<div class="col-lg-12 control-section msg-custom-section">
+<div class="msg-custom-section">
   <div class="content-section">
     <h4>Custom Message with Icon</h4>
     <SfMessage  CssClass="custom">Essential JS 2 is a modern JavaScript UI Controls library that has

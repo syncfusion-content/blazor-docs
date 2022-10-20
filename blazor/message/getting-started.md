@@ -11,6 +11,10 @@ documentation: ug
 
 This section briefly explains how to include the Blazor Message component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
+To get start quickly with Blazor Message component, check on this video:
+{% youtube
+"youtube:https://www.youtube.com/watch?v=3H0pOZNYTfw"%}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
