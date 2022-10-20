@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with MSTeams App in Visual Studio | Syncfusion
-description: Check out the documentation for getting started with MSTeams App and Syncfusion Blazor Components in Visual Studio and much more.
+title: Getting Started with Microsoft Teams App in Visual Studio | Syncfusion
+description: Check out the documentation for getting started with Microsoft Teams App using Syncfusion Blazor Components in Visual Studio and much more.
 platform: Blazor
 component: Common
 documentation: ug
@@ -21,21 +21,20 @@ This section explains how to create and run the first Microsoft Teams applicatio
 
 ## Create a new Microsoft Team Application with Tab using Visual Studio
 
-1. Launch Visual Studio 2022, and in the start window **click Create a new project** to create a new project.
+1. Launch Visual Studio 2022, and in the start window click **Create a new project**.
 ![Create a new project in VS2022](images/maui/create-new-project.png)
-2. Search for Microsoft Teams app in Visual Studio template. Select Microsoft teams App and click on Next.
+2. Search for Microsoft Teams app in Visual Studio template. Select **Microsoft teams App** and click on Next.
 ![Create MSTeams App](images\MSTeams\create-msteams-app.png)
-3. Configure the Project with required Project name, select the location to save the application and click on Create.
+3. Configure the project with required project name, select the location to save the application and click on Create.
 ![Configure MSTeams App](images\MSTeams\configure-msteams-app.png)
-4. Select the type of Microsoft teams application to create. Here, in this example, Microsoft application with Tab is created.
+4. Select the type of Microsoft teams application to create. In this example, **Microsoft application with Tab** is selected.
 ![Select type of MSTeams application](images\MSTeams\select-type-msteams-app.png)
 5. Wait for the project to be created, and its dependencies to be restored, then the project structure looks like below.
-
 ![MSTeams project structure](images\MSTeams\msteams-project-structure.png)
 
-## Build and Run the first Microsoft Team Application
+## Build and run the first Microsoft Team Application
 
-1. To configure the project with the Microsoft teams application, right Click on the Project  Teams Toolkit  Prepare Teams App Dependencies.
+1. To configure the project with the Microsoft teams application, right Click on the Project Teams Toolkit Prepare Teams App Dependencies.
 ![Configure dependecies with MSTeams Application](images\MSTeams\configure-teams-dependencies.png)
 2. After configuring successfully, it dsipalys the window with Microsoft 365 Account. If you already have an account Select the available Office 365 account and click on continue. If you dont have account, create a new account and add the newly created account and click on continue.
 ![Select the MS365 account to SignIn](images\MSTeams\ms365-account-select.png)
