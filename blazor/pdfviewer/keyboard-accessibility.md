@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Keyboard interaction in PDF Viewer
+# Keyboard interaction
 
 The Blazor PDF Viewer supports the following keyboard interactions.
 
