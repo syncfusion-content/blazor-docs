@@ -7,7 +7,7 @@ control: Message
 documentation: ug
 ---
 
-# Severities
+# Severities in Blazor Message
 
 The severity denotes the importance and context of the message to the user. The message contains different severity types. Use the `Severity` property, to display the messages with different severity levels.
 

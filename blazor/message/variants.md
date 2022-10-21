@@ -7,7 +7,7 @@ control: Message
 documentation: ug
 ---
 
-# Variants
+# Variants in Blazor Message
 
 The Message has predefined appearance variants for different visual representations. The message can be displayed with different appearance variants based on the `Variant` property.
 

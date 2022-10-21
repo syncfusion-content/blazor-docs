@@ -7,7 +7,7 @@ control: Message
 documentation: ug
 ---
 
-# Icons
+# Icons in Blazor Message
 
 This section explains how to show or hide the close icon and add the custom severity icon to the message.
 
