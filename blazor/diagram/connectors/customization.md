@@ -644,7 +644,7 @@ The following code illustrates how to render connector based on the stack order.
 *Hit padding refers to the space around the connector's edges. To make it easy to select, it should be possible to select when mouse comes near its vicinity area. The HitPadding property allows you to customize the vicinity area while selecting. Default value is 10px. Within the hit padding region, the connector can be selected and deselected.
 
 
-The following code illustrates how to render connector based on the stack order.
+The following code illustrates how to set hitpadding for connector.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

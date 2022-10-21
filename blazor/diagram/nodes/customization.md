@@ -554,6 +554,8 @@ The following code shows how to set the AdditionalInfo value.
     }
 }
 ```
+**Note:** You can set any type of value for the AdditionalInfo property.
+
 ## How to set ZIndex property for node
 
 * The nodes z-order property specifies the stack order of the node. A node with greater stack order is always in front of a node with a lower stack order. By default value is -1.
@@ -599,7 +601,6 @@ The following code illustrates how to render node based on the stack order.
 }
 ```
 
-**Note:** You can set any type of value for the AdditionalInfo property.
 
 ## See also
 

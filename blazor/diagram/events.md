@@ -119,7 +119,7 @@ The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
 ```
 
 ## CollectionChange Event
-* When the node/connector is added or removed from diagram, the following events can be used to do the customization.
+* When the node/connector is added or removed from diagram, the following events can be used to do the customization. It triggered when node/ connector collection is changed.
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
