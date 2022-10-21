@@ -121,8 +121,6 @@ In the following example, the **Drill** event is bound with a callback method. S
 
 ```
 
-### Notes
-
-* The Pivot Table's **PreventRender** method internally overrides the component **ShouldRender** method to prevent rendering.
-* For better performance, it is recommended to use the **PreventRender** method for user interactive events like Drill, BeforeColumnsRender, BeforeExport, DrillThrough, CellClick, ChartSeriesCreated, etc.
-* For events without any argument such as **DataBound**, you can use **PreventRender** method of the Pivot Table to disable rendering.
+> * The Pivot Table's **PreventRender** method internally overrides the component **ShouldRender** method to prevent rendering.
+> * For better performance, it is recommended to use the **PreventRender** method for user interactive events like Drill, BeforeColumnsRender, BeforeExport, DrillThrough, CellClick, ChartSeriesCreated, etc.
+> * For events without any argument such as **DataBound**, you can use **PreventRender** method of the Pivot Table to disable rendering.

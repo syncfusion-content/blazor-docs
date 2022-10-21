@@ -9,7 +9,7 @@ documentation: ug
 
 # Render TreeMap component inside other components
 
-The TreeMap can be rendered within components such as the Dashboard Layout, Tabs, Dialog, and others. In general, the TreeMap component renders before other components, so a boolean variable ((i.e. boolean flag) is used to determine when to begin rendering the TreeMap component.
+The TreeMap can be rendered within components such as the Dashboard Layout, Tabs, Dialog, and others. In general, the TreeMap component renders before other components, so a boolean variable (i.e. boolean flag) is used to determine when to begin rendering the TreeMap component.
 
 ## TreeMap component inside Dashboard Layout
 
