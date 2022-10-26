@@ -1,0 +1,6 @@
+@using Syncfusion.Blazor.DropDowns;
+
+<SfDropDownList TItem="(DayOfWeek, string)" Width="250px" TValue="DayOfWeek"
+                DataSource="@(Enum.GetValues<DayOfWeek>().Select(e => (e, e.ToString())))">
+    <DropDownListFieldSettings Value="Item1" Text="Item2" />
+</SfDropDownList>
