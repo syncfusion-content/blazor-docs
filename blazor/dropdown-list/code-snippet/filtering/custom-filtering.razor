@@ -1,0 +1,36 @@
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
+
+<SfDropDownList TValue="string" @ref="ddlObj" TItem="OrderDetails" Placeholder="Select a customer" Query="@Query" AllowFiltering=true>
+    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Employees" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain=true></SfDataManager>
+    <DropDownListFieldSettings Text="FirstName" Value="LastName"></DropDownListFieldSettings>
+    <DropDownListEvents TValue=string TItem="OrderDetails" Filtering="OnFiltering"></DropDownListEvents>
+</SfDropDownList>
+@code {
+    SfDropDownList<string, OrderDetails> ddlObj;
+    public Query Query = new Query().Select(new List<string> { "FirstName", "LastName" }).Take(7).RequiresCount();
+    public class OrderDetails
+    {
+        public int? EmployeeID { get; set; }
+        public string LastName { get; set; }
+        public string FirstName { get; set; }
+        public string Title { get; set; }
+        public string TitleOfCourtesy { get; set; }
+        public DateTime? BirthDate { get; set; }
+        public DateTime? HireDate { get; set; }
+        public string Address { get; set; }
+        public int? Extension { get; set; }
+        public int? Phone { get; set; }
+    }
+    public async Task OnFiltering(FilteringEventArgs args)
+    {
+        args.PreventDefaultAction = true;
+        var pre = new WhereFilter();
+        var predicate = new List<WhereFilter>();
+        predicate.Add(new WhereFilter() { Condition = "or", Field = "FirstName", value = args.Text, Operator = "contains", IgnoreAccent = true, IgnoreCase = true });
+        predicate.Add(new WhereFilter() { Condition = "or", Field = "LastName", value = args.Text, Operator = "contains", IgnoreAccent = true, IgnoreCase = true });
+        pre = WhereFilter.Or(predicate);
+        var query = new Query().Where(pre);
+        await ddlObj.FilterAsync(ddlObj.DataSource, query);
+    }
+}
