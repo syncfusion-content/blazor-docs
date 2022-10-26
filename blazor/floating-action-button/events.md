@@ -9,44 +9,55 @@ documentation: ug
 
 # Events in Floating Action Button Component
 
-You can define the native event using `event` attribute in component. The value of attribute is treated as an event handler. The event specific data will be available in event arguments.
+This section lists the available events in Floating Action Button Component.
 
-The different event argument types for each event are,
+## Created
 
-* Focus Events - UIFocusEventArgs
-* Mouse Events - UIMouseEventArgs
+Event triggers after the creation of Floating Action Button.
 
-MouseEventArgs provide the mouse coordinates when the user moves the mouse pointer in the UI. For handling @onclick event of the HTML element, define a function/method in the @code section and then refer the delegate typed value to the @onclick attribute of the HTML element.
+```cshtml
 
-## How to bind click event to Floating Action Button
+@using Syncfusion.Blazor.Buttons
 
-The floating action button control triggers the [`OnClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_OnClick) event when you click on the floating action button. You can use this event to perform the required action.
+<div id="target" style="height:250px; position:relative; width:300px; border:1px solid;">
+    <SfFab IconCss="e-icons e-edit" Content="Edit" Created="Created"></SfFab>
+</div>
 
-```csharp
-
-    @using Syncfusion.Blazor.Buttons
-
-    <div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
-        <SfFab id="fab" @ref="FabBtn" Target="#target" IconCss="@IconCss" Position="FabPosition.BottomRight" IsToggle="true" OnClick="@onToggleClick"></SfFab>
-    </div>
-
-    @code{
-        SfFab FabBtn;
-        public string IconCss = "e-icons e-play";
-        private void onToggleClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
-        {
-            if (FabBtn.IconCss == "e-icons e-play")
-            {
-                IconCss = "e-icons e-pause";
-            }
-            else
-            {
-                IconCss = "e-icons e-play";
-            }
-        }
+@code{
+    public void Created()
+    {
+        // Your required action here
     }
+}
 
 ```
 
-![Befor calling Event](./images/play-button.png)
-![After calling Event](./images/pause-button.png)
+## OnClick
+
+Event triggers when the Floating Action Button is clicked. Below example shows the Click event of the Floating Action Button.
+
+```cshtml
+
+@using Syncfusion.Blazor.Buttons
+
+<div id="target" style="height:250px; position:relative; width:300px; border:1px solid;">
+    <SfFab IconCss="e-icons e-edit" Content="Edit" OnClick="EventClick"></SfFab>
+</div>
+
+<label>Event log</label>
+<div style="border:1px solid;min-height:20px;"> @((MarkupString)log)</div>
+
+@code{
+    private string log = "";
+    public void EventClick()
+    {
+        // Here, you can call your desired action.
+        log = log + "Fab Clicked.<br/>";
+    }
+}
+
+```
+
+![Blazor FAB Component with OnClick Event](./images/OnClickEvent.png)
+
+

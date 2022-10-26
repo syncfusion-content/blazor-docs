@@ -11,43 +11,78 @@ documentation: ug
 
 This section explains the different styles of Floating Action Button.
 
-## Floating Action Button styles
+## FAB styles
 
-The Blazor Floating Action Button has the following predefined styles that can be defined using the [CssClass]property for represent primary action we have IsPrimary property(https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#Syncfusion_Blazor_Buttons_SfFab_IsPrimary).
+The JavaScript Floating Action Button supports the following predefined styles that can be defined using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property. You can customize by replacing the `CssClass` property with the below defined class.
 
 | Class | Description |
 | -------- | -------- |
 | e-success | Used to represent a positive action. |
+| e-outline |  Used to represent an appearance of button with outline. |
 | e-info |  Used to represent an informative action. |
 | e-warning | Used to represent an action with caution. |
 | e-danger | Used to represent a negative action. |
-| e-link |  Changes the appearance of the Button like a hyperlink. |
 
 ```csharp
 
 @using Syncfusion.Blazor.Buttons
 
-<div id="target" style="height:200px; position:relative; width:450px; border:1px solid;">
-    <SfFab Target="#target" IsPrimary=true Content="Primary"></SfFab>
-    <SfFab Target="#target" CssClass="e-success" Content="Success"></SfFab>
-    <SfFab Target="#target" CssClass="e-info" Content="Info"></SfFab>
-    <SfFab Target="#target" CssClass="e-warning" Content="Warning"></SfFab>
-    <SfFab Target="#target" CssClass="e-danger" Content="Danger"></SfFab>
-    <SfFab Target="#target" CssClass="e-link" Content="Link"></SfFab>
+<div id="target" style="height:250px; position:relative; width:300px; border:1px solid;">
+    <SfFab Target="#target" CssClass="e-warning" IconCss="e-icons e-edit"></SfFab>
 </div>
 
 ```
 
-![Blazor Button Component with different Styles](./images/css-styles.png)
+> Predefined Floating Action Button styles provide only the visual indication. So, Floating Action Button [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_Content) property should define the Floating Action Button style for the users of assistive technologies such as screen readers.
+
+![Blazor FAB Component with Styles](./images/Style.png)
 
 ## Styles Customization
 
 To modify the Floating Action Button appearance, you need to override the default CSS of Floating Action Button component. Please find the list of CSS classes and its corresponding section in Floating Action Button component. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
-|CSS Class | Purpose of Class |
+| CSS Class | Purpose of Class |
 |-----|----- |
-|.e-btn|To customize the button.|
-|.e-btn:hover|To customize the button on hover.|
-|.e-btn:focus|To customize the button on focus.|
-|.e-btn:active|To customize the button on active.|
-|.e-fab .e-icon-btn|To customize the fab button icons.|
+|.e-fab.e-btn|To customize the FAB.|
+|.e-fab.e-btn:hover|To customize the FAB on hover.|
+|.e-fab.e-btn:focus|To customize the FAB on focus.|
+|.e-fab.e-btn:active|To customize the FAB on active.|
+|.e-fab.e-btn-icon|To customize the style of FAB icon.|
+
+## Show text on hover
+
+By using `CssClass`, you can customize the Floating Action Button to show text on hover with applied transition effect. For detailed information, refer file below.
+
+```csharp
+
+@using Syncfusion.Blazor.Buttons
+
+<div id="target" style="height:250px; position:relative; width:300px; border:1px solid;">
+    <SfFab Target="#target" IconCss="e-icons e-edit" CssClass="fab-hover"><span class="text-container"><span class="textEle">Edit</span></span></SfFab>
+</div>
+
+<style>
+
+    .e-fab.e-btn.fab-hover {
+        padding: 6px 0px 10px 10px;
+    }
+
+    .fab-hover .text-container {
+        overflow: hidden;
+        width: 0;
+        margin: 0;
+        transition: width .5s linear 0s, margin .2s linear .5s;
+    }
+
+    .fab-hover:hover .text-container {
+        width: 35px;
+        margin: 0 5px;
+        transition: width .5s linear .2s, margin .2s linear 0s;
+    }
+
+</style>
+
+```
+
+![Blazor FAB Component with Hover](./images/onhover.png)
+
