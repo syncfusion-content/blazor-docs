@@ -7,7 +7,7 @@ control: DropDown List
 documentation: ug
 ---
 
-# Selection in Blazor DropDown List Component
+# Selection
 
 ## Get Selected Value
 
