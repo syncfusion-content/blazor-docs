@@ -119,19 +119,19 @@ Below example demonstrates different supported positions of FAB.
 
 ## Custom position
 
-You can define the custom position of the Floating Action Button by override the `top`, `left`, `right`, and `bottom` CSS properities using `CssClass`. For detailed information, refer file below.
+You can define the custom position of the Floating Action Button by override the `top`, `left`, `right`, and `bottom` CSS properities using `CssClass`.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Buttons
 
 <div id="target" style="height:250px; position:relative; width:300px; border:1px solid;">
-    <SfFab Target="#target" CssClass="position" IconCss="e-icons e-edit"></SfFab>
+    <SfFab Target="#target" CssClass="custom-position" IconCss="e-icons e-edit"></SfFab>
 </div>
 
 <style>
 
-    .e-fab.e-btn.position {
+    .e-fab.e-btn.custom-position {
         left: 40px;
         top: 40px;
         bottom: unset;

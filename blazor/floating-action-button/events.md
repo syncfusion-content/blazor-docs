@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Floating Action Button Component
 
-This section lists the available events in Floating Action Button Component.
+This section explains the available events in Floating Action Button Component.
 
 ## Created
 
