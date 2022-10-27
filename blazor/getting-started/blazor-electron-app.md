@@ -72,7 +72,7 @@ Now, the Blazor server application with Sycnfusion Grid component is created.
 
 ## Configure Electron SetUp in the application
 
-You can run the below commands either in Visual Studio command prompt or CLI depends on the preparation of the application.
+You can run the below commands either in Visual Studio command prompt or CLI depending on the creation of the application.
 
 1. Install [ElectronNET.API](https://www.nuget.org/packages/ElectronNET.API/) NuGet package in the application running below command
 
