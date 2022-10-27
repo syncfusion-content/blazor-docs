@@ -200,6 +200,6 @@ Now add Syncfusion Blazor component in any razor file. Here, the Kanban componen
 {% endhighlight %}
 {% endtabs %} 
 
-![MS Teams Application with Syncfusion controls](images\MSTeams\output-msteams-syncfusion.png)
+![Microsoft Teams Application with Syncfusion controls](images\MSTeams\output-msteams-syncfusion.png)
 
 > [View the complete Microsoft Teams Application with Blazor Syncfusion Controls on GitHub](https://github.com/SyncfusionExamples/Building-Apps-for-Microsoft-Teams-with-Blazor-using-Syncfusion-Components)
