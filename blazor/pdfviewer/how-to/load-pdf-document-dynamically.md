@@ -32,7 +32,7 @@ The following code example shows how to load a bas64 string dynamically.
     }
 }
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Save%20and%20Load/LoadAsync).
+> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Save%20and%20Load/LoadAsync).
 
 The following code example shows how to load the PDF dynamically by specifying file path.
 
@@ -53,6 +53,6 @@ The following code example shows how to load the PDF dynamically by specifying f
     }
 }
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/DocumentPath/Load%20PDF%20from%20Stream%20-%20Wasm).
+> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/DocumentPath/Load%20PDF%20from%20Stream%20-%20Wasm).
 
 > You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.
