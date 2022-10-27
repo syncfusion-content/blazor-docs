@@ -15,156 +15,13 @@ This section explains how to create and run the Blazor Electron app with Syncfus
 
 [Electron](https://www.electronjs.org/) framework supports building cross-platform desktop applications with web technologies. It utilizes Node.js and the Chromium rendering engine to run a web application on a desktop shell.
 
-## Create a Blazor server-side application using .NET CLI
+## Create a Blazor server-side application
 
-Open command prompt from the location to create the application. Run the following command to create a new Blazor server-side application without HTTPS support. Here, the application is names as BlazorElectronAppNet6.
+You can create Blazor Server application using either CLI or Visual Studio referring the below links
 
-```
-dotnet new blazorserver --no-https -o BlazorElectronAppNet6
+* [Create Blazor server application using CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
 
-```
-## Install Syncfusion Blazor Packages in the App
-
-Navigate to the application folder and install required Syncfusion NuGet package in application. Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). To use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages). 
-
-To add Blazor Grid component in the app install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) NuGet package by running the below commands
-
-```
-cd BlazorElectronAppNet6
-
-dotnet add package Syncfusion.Blazor.Grid
-
-```
-
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
-
-{% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
-
-@using Syncfusion.Blazor
-
-{% endhighlight %}
-{% endtabs %}
-
-Now, register the Syncfusion Blazor Service in the Blazor Server App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` to load the scripts externally in the [next steps](#add-script-reference).
-
-> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to `true`. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to true, and this property is obsolete.
-
-* For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
-* For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
-
-{% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 10" %}
-
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
-using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
-builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
-....
-
-{% endhighlight %}
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="3 12" %}
-
-using Syncfusion.Blazor;
-
-namespace BlazorApplication
-{
-    public class Startup
-    {
-        ...
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddRazorPages();
-            services.AddServerSideBlazor();
-            services.AddSyncfusionBlazor();
-        }
-        ...
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Add style sheet
-
-Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) to refer themes in Blazor application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/appearance/themes#enable-static-web-assets-usage) topic to use static assets in your project.
-
-To add theme to the app, run the below commands to install [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) in the application. 
-
-```
-dotnet add package Syncfusion.Blazor.Themes
-
-```
-
-Then, the theme style sheet from NuGet can be referred inside the `<head>` as follows,
-
-* **~/Pages/_Host.cshtml** file for **.NET 5 and .NET 3.X**.
-* **~/Pages/_Layout.cshtml** for **.NET 6**.
-
-{% tabs %}
-{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="3 4 5" %}
-
-<head>
-    ...
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <!--Refer theme style sheet as below if you are using Syncfusion.Blazor Single NuGet-->
-    <!--<link href="_content/Syncfusion.Blazor/styles/bootstrap5.css" rel="stylesheet" />-->
-</head>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="3 4 5" %}
-
-<head>
-    ...
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <!--Refer theme style sheet as below if you are using Syncfusion.Blazor Single NuGet-->
-    <!--<link href="_content/Syncfusion.Blazor/styles/bootstrap5.css" rel="stylesheet" />-->
-</head>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Add script reference
-
-Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows. Refer to [Enable static web assets usage](https://blazor.syncfusion.com/documentation/common/adding-script-references#enable-static-web-assets-usage) topic to use static assets in your project.
-
-* **~/Pages/_Host.cshtml** file for **.NET 5 and .NET 3.X**.
-* **~/Pages/_Layout.cshtml** for **.NET 6**.
-
-{% tabs %}
-{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4 5 6" %}
-
-<head>
-    ...
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-    <!--Use below script reference if you are using Syncfusion.Blazor Single NuGet-->
-    <!--<script  src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js"  type="text/javascript"></script>-->
-</head>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="4 5 6" %}
-
-<head>
-    ...
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <script  src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-    <!--Use below script reference if you are using Syncfusion.Blazor Single NuGet-->
-    <!--<script  src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js"  type="text/javascript"></script>-->
-</head>
-
-{% endhighlight %}
-{% endtabs %}
-
-> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) for better loading performance of the Blazor application. 
+* [Create Blazor Server application using Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
  
  ## Add Blazor DataGrid component
 
@@ -214,6 +71,8 @@ Now, the Blazor server application with Sycnfusion Grid component is created.
 ![Blazor DataGrid Component](images\electron\server-syncfusion-grid.png)
 
 ## Configure Electron SetUp in the application
+
+You can run the below commands either in Visual Studio command prompt or CLI depends on the preparation of the application.
 
 1. Install [ElectronNET.API](https://www.nuget.org/packages/ElectronNET.API/) NuGet package in the application running below command
 
@@ -294,7 +153,7 @@ public class Program
 6. To open the Electron window add the below code in the **~/Startup.cs** file of .NET 3.X and .NET 5 applications, in **~/Program.cs** file of .NET 6 applications.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="9 10 12 13 14 15" %}
 
 using ElectronNET.API;
 
@@ -316,7 +175,7 @@ var app = builder.Build();
 ....
 
 {% endhighlight %}
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="13 18" %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="13 14 15" %}
 
 using ElectronNET.API;
 
@@ -350,7 +209,8 @@ dotnet electronize start
 
 > To close the electron app when closed the electron window add the below code in the application.
 
-```
+{% tabs %}
+{% highlight c# hl_lines="3 4 5" %}
 
 Task.Run(async () => {
         var window = await Electron.WindowManager.CreateWindowAsync();
@@ -359,7 +219,8 @@ Task.Run(async () => {
         };
     });
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 8. Run the below command lines to do production builds based on platform
 
