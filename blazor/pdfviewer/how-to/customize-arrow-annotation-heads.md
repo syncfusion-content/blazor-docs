@@ -44,4 +44,4 @@ The following code illustrates how to remove the starting arrow and end arrow fr
 }
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Customize%20Arrow%20Annotation%20Heads).
+> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Customize%20Arrow%20Annotation%20Heads).
