@@ -27,8 +27,7 @@ You can set the size of the Circular Gauge in pixel as demonstrated below.
 
 ### In percentage
 
-By setting value in percentage, gauge gets its dimension with respect to its container. For example, when
-the height is ‘50%’, gauge is rendered to half of the container height.
+By setting value in percentage, gauge gets its dimension with respect to its container. For example, when the height is ‘50%’, gauge is rendered to half of the container height.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge

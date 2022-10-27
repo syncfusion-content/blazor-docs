@@ -15,4 +15,4 @@ The Syncfusion's Blazor PDF Viewer component allows to increase the connection b
 builder.Services.AddServerSideBlazor().AddHubOptions(o => { o.MaximumReceiveMessageSize = 102400000; });
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Maximum%20Receive%20Message%20Size/Set%20Buffer%20limit).
+> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Maximum%20Receive%20Message%20Size/Set%20Buffer%20limit).

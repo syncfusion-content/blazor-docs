@@ -1358,8 +1358,7 @@ protected override void OnInitialized()
 ```
 ### FitToPage command in Blazor Diagram
 
-The FitToPage diagram is used to bring the entire diagram into view. The [FitOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitOptions.html) parameter is used to customize the FitToPage command behavior.
-If the parameter is null, the entire diagram is fit into the view. 
+The FitToPage diagram is used to bring the entire diagram into view. The [FitOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitOptions.html) parameter is used to customize the FitToPage command behavior. If the parameter is null, the entire diagram is fit into the view. 
 
 The following code illustrates how to execute the FitToPage command.
 
