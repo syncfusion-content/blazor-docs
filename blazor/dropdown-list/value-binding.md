@@ -7,7 +7,7 @@ control: DropDown List
 documentation: ug
 ---
 
-# Value Binding in Blazor DropDown List Component
+# Value Binding
 
 The value binding as the process of passing values between a component and its parent. There are two methods for binding values, as shown below.
 
