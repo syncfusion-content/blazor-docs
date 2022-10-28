@@ -19,9 +19,7 @@ You can show icon only in Floating Action Button by setting [IconCss](https://he
 
 @using Syncfusion.Blazor.Buttons
 
-<div id="target" style="height:200px; position:relative; width:300px; border:1px solid;">
-    <SfFab id="fab" IconCss="fab-icons fab-icon-people"></SfFab>
-</div>
+<SfFab id="fab" IconCss="fab-icons fab-icon-people"></SfFab>
 
 <style>
 
@@ -64,9 +62,7 @@ You can show icon along with text in Floating Action Button by setting [IconCss]
 
 @using Syncfusion.Blazor.Buttons
 
-<div id="target" style="height:200px; position:relative; width:300px; border:1px solid;">
-    <SfFab id="fab" IconCss="fab-icons fab-icon-people" Content="Contacts"></SfFab>
-</div>
+<SfFab id="fab" IconCss="fab-icons fab-icon-people" Content="Contacts"></SfFab>
 
 <style>
 
@@ -111,9 +107,7 @@ Below example demonstrates a FAB with icon and text.
 
 @using Syncfusion.Blazor.Buttons
 
-<div id="target" style="height:200px; position:relative; width:300px; border:1px solid;">
-    <SfFab id="fab" IconCss="fab-icons fab-icon-people" Content="Contacts" IconPosition=IconPosition.Right></SfFab>
-</div>
+<SfFab id="fab" IconCss="fab-icons fab-icon-people" Content="Contacts" IconPosition=IconPosition.Right></SfFab>
 
 <style>
 

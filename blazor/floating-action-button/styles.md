@@ -27,9 +27,7 @@ The Blazor Floating Action Button supports the following predefined styles that 
 
 @using Syncfusion.Blazor.Buttons
 
-<div id="target" style="height:250px; position:relative; width:300px; border:1px solid;">
-    <SfFab CssClass="e-warning" IconCss="e-icons e-edit"></SfFab>
-</div>
+<SfFab CssClass="e-warning" IconCss="e-icons e-edit"></SfFab>
 
 ```
 
@@ -57,14 +55,12 @@ By using `CssClass`, you can customize the Floating Action Button to show text o
 
 @using Syncfusion.Blazor.Buttons
 
-<div id="target" style="height:250px; position:relative; width:300px; border:1px solid;">
-    <SfFab IconCss="e-icons e-edit" CssClass="fab-hover"><span class="text-container"><span class="textEle">Edit</span></span></SfFab>
-</div>
+<SfFab IconCss="e-icons e-edit" CssClass="fab-hover"><span class="text-container"><span class="textEle">Edit</span></span></SfFab>
 
 <style>
 
     .e-fab.e-btn.fab-hover {
-        padding: 6px 0px 10px 10px;
+        padding: 6px 2px 8px 10px;
     }
 
     .fab-hover .text-container {
@@ -75,8 +71,8 @@ By using `CssClass`, you can customize the Floating Action Button to show text o
     }
 
     .fab-hover:hover .text-container {
-        width: 35px;
-        margin: 0 5px;
+        width: 25px;
+        margin-right:10px;
         transition: width .5s linear .2s, margin .2s linear 0s;
     }
 

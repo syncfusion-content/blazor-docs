@@ -19,9 +19,7 @@ Event triggers after the creation of Floating Action Button.
 
 @using Syncfusion.Blazor.Buttons
 
-<div id="target" style="height:250px; position:relative; width:300px; border:1px solid;">
-    <SfFab IconCss="e-icons e-edit" Content="Edit" Created="Created"></SfFab>
-</div>
+<SfFab IconCss="e-icons e-edit" Content="Edit" Created="Created"></SfFab>
 
 @code{
     public void Created()
@@ -40,9 +38,7 @@ Event triggers when the Floating Action Button is clicked. Below example shows t
 
 @using Syncfusion.Blazor.Buttons
 
-<div id="target" style="height:250px; position:relative; width:300px; border:1px solid;">
-    <SfFab IconCss="e-icons e-edit" Content="Edit" OnClick="EventClick"></SfFab>
-</div>
+<SfFab IconCss="e-icons e-edit" Content="Edit" OnClick="EventClick"></SfFab>
 
 <label>Event log</label>
 <div style="border:1px solid;min-height:20px;"> @((MarkupString)log)</div>
