@@ -7,7 +7,7 @@ control: DropDown List
 documentation: ug
 ---
 
-# Getting Started with Blazor DropDown List Component
+# Getting Started
 
 ## Overview
 
