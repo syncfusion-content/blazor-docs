@@ -58,6 +58,5 @@ Event triggers when the Floating Action Button is clicked. Below example shows t
 
 ```
 
-![Blazor FAB Component with OnClick Event](./images/OnClickEvent.png)
 
 

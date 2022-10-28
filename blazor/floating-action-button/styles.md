@@ -28,7 +28,7 @@ The Blazor Floating Action Button supports the following predefined styles that 
 @using Syncfusion.Blazor.Buttons
 
 <div id="target" style="height:250px; position:relative; width:300px; border:1px solid;">
-    <SfFab Target="#target" CssClass="e-warning" IconCss="e-icons e-edit"></SfFab>
+    <SfFab CssClass="e-warning" IconCss="e-icons e-edit"></SfFab>
 </div>
 
 ```
@@ -58,7 +58,7 @@ By using `CssClass`, you can customize the Floating Action Button to show text o
 @using Syncfusion.Blazor.Buttons
 
 <div id="target" style="height:250px; position:relative; width:300px; border:1px solid;">
-    <SfFab Target="#target" IconCss="e-icons e-edit" CssClass="fab-hover"><span class="text-container"><span class="textEle">Edit</span></span></SfFab>
+    <SfFab IconCss="e-icons e-edit" CssClass="fab-hover"><span class="text-container"><span class="textEle">Edit</span></span></SfFab>
 </div>
 
 <style>
