@@ -13,7 +13,7 @@ The TreeView control has been designed keeping in mind the `WAI-ARIA` specificat
 
 ## ARIA attributes
 
-The TreeView control uses the `tree` role, and each tree parent node has a `group` role where each node has `treeitem` role. The following ARIA attributes are used in TreeView:
+The TreeView control uses the `tree` role, and each tree parent node has a `group` role where each node has `treeitem` role. The following ARIA attributes are used in TreeView.
 
 | **Properties** | **Functionalities** |
 | --- | --- |

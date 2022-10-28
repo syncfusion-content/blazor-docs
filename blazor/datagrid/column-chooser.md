@@ -154,10 +154,6 @@ Using the column chooser template, you can customize the column chooser dialog u
 </SfGrid>
 
 <style>
-    #Grid.e-grid .e-ccdlg .e-cc-searchdiv, #Grid_ccdlg div.e-footer-content {
-        display: none;
-    }
-
     #Grid.e-grid .e-ccdlg .e-dlg-content {
         margin-top: 0px;
     }
