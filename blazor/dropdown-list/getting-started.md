@@ -9,6 +9,10 @@ documentation: ug
 
 # Getting Started with Blazor DropDown List Component
 
+## Overview
+
+The [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) is a dynamic replacement of HTML select tags. It has a rich appearance and allows users to select a single value that is non-editable from a list of predefined values. It has several out-of-the-box features, such as data binding, filtering, grouping, UI customization, accessibility, and preselected values.
+
 This section briefly explains about how to include [Blazor DropDown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 To get start quickly with Blazor DropDownList component, you can check on this video.
@@ -348,6 +352,27 @@ By default, the width of the popup list automatically adjusts according to the D
 {% endtabs %}
 
 ![Changing Popup List Height in Blazor DropDownList](./images/blazor-dropdownlist-popup-height.png)
+
+## Get Selected Value
+
+* You can get the selected value of the DropDownList component from the `Value` property in the [ValueChange](https://blazor.syncfusion.com/documentation/dropdown-list/events#valuechange) event argument.  
+
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/getting-started/get-selected-value.razor %}
+
+{% endhighlight %}
+
+*  You can get the complete object list of the selected value from the `ItemData` property in the [ValueChange](https://blazor.syncfusion.com/documentation/dropdown-list/events#valuechange) event argument.
+
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/getting-started/item-data.razor %}
+
+{% endhighlight %}
+
 
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DropDownList).
 

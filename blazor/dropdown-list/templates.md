@@ -11,48 +11,6 @@ documentation: ug
 
 The DropDownList has been provided with several options to customize each list item, group title, selected value, header, and footer elements.
 
-## Item template
-
-The content of each list item within the DropDownList can be customized with the help of [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property.
-
-In the following sample, each list item is split into two columns to display relevant data.
-
-```cshtml
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
-
-<SfDropDownList TValue="string" TItem="EmployeeData" Placeholder="Select a customer" Query="@Query">
-    <DropDownListTemplates TItem="EmployeeData">
-        <ItemTemplate>
-            <span><span class='name'>@((context as EmployeeData).FirstName)</span><span class='country'>@((context as EmployeeData).Country)</span></span>
-        </ItemTemplate>
-    </DropDownListTemplates>
-    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
-    <DropDownListFieldSettings Text="FirstName" Value="Country"></DropDownListFieldSettings>
-</SfDropDownList>
-
-@code {
-    public class EmployeeData
-    {
-        public string FirstName { get; set; }
-        public string Country { get; set; }
-    }
-    public EmployeeData Data = new EmployeeData();
-    public Query Query = new Query();
-}
-
-<style>
-    .country {
-        right: 15px;
-        position: absolute;
-    }
-</style>
-```
-
-
-
-![Blazor DropDownList with ItemTemplate](./images/blazor-dropdownlist-item-template.png)
-
 ## Value template
 
 The currently selected value that is displayed by default on the DropDownList input element can be customized using the [ValueTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ValueTemplate) property.
@@ -94,8 +52,49 @@ In the following sample, the selected value is displayed as a combined text of b
 ```
 
 
-
 ![Blazor DropDownList with ValueTemplate](./images/blazor-dropdownlist-value-template.png)
+
+## Item template
+
+The content of each list item within the DropDownList can be customized with the help of [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property.
+
+In the following sample, each list item is split into two columns to display relevant data.
+
+```cshtml
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
+
+<SfDropDownList TValue="string" TItem="EmployeeData" Placeholder="Select a customer" Query="@Query">
+    <DropDownListTemplates TItem="EmployeeData">
+        <ItemTemplate>
+            <span><span class='name'>@((context as EmployeeData).FirstName)</span><span class='country'>@((context as EmployeeData).Country)</span></span>
+        </ItemTemplate>
+    </DropDownListTemplates>
+    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
+    <DropDownListFieldSettings Text="FirstName" Value="Country"></DropDownListFieldSettings>
+</SfDropDownList>
+
+@code {
+    public class EmployeeData
+    {
+        public string FirstName { get; set; }
+        public string Country { get; set; }
+    }
+    public EmployeeData Data = new EmployeeData();
+    public Query Query = new Query();
+}
+
+<style>
+    .country {
+        right: 15px;
+        position: absolute;
+    }
+</style>
+```
+
+
+
+![Blazor DropDownList with ItemTemplate](./images/blazor-dropdownlist-item-template.png)
 
 ## Group template
 
