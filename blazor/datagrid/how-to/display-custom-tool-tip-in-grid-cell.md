@@ -25,13 +25,13 @@ This is demonstrated in the following sample code, where the tooltip for the **F
                 @{
                     var employee = (context as EmployeeData);
                     Count++;
-                    <SfTooltip Target="#txt" @key="@Count">
+                    <SfTooltip @key="@Count" Position="Position.BottomLeft">
                         <TooltipTemplates>
                             <Content>
                                 @employee.FirstName
                             </Content>
                         </TooltipTemplates>
-                        <span id="txt">@employee.FirstName</span>
+                        <span>@employee.FirstName</span>
                     </SfTooltip>
                 }
             </Template>
