@@ -119,7 +119,7 @@ You can achieve this by binding resize event in window and update the height of 
 
 ### OnOpen
 
-`OnOpen` event triggers when the popup is opened. If you cancel this event, the popup remains closed.
+The [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnOpen) event triggers when the popup is opened. If you cancel this event, the popup remains closed.
 
 {% highlight Razor %}
 
@@ -129,7 +129,7 @@ You can achieve this by binding resize event in window and update the height of 
 
 ### Opened
 
-`Opened` event triggers when the popup opens.
+The [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Opened) event triggers when the popup opens.
 
 {% highlight Razor %}
 
@@ -139,7 +139,7 @@ You can achieve this by binding resize event in window and update the height of 
 
 ### OnClose
 
-`OnClose` event triggers before the popup is closed. If you cancel this event, the popup will remain open.
+The [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnClose) event triggers before the popup is closed. If you cancel this event, the popup will remain open.
 
 {% highlight Razor %}
 
@@ -149,7 +149,7 @@ You can achieve this by binding resize event in window and update the height of 
 
 ### Closed
 
-`Closed` event triggers after the popup has been closed.
+The [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnClose) event triggers after the popup has been closed.
 
 {% highlight Razor %}
 
