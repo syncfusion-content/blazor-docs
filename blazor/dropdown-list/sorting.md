@@ -9,7 +9,7 @@ documentation: ug
 
 # Sorting 
 
-[Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_SortOrder) enables you to sort data in the `Ascending` or `Descending` order. To enable sorting in the DropDownList, set the `SortOrder` property to required value. 
+The Sorting enables you to sort data in the `Ascending` or `Descending` order. To enable sorting in the DropDownList, set the [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_SortOrder) property to required value. 
 
 The available type of sort orders are.
 
@@ -19,7 +19,7 @@ SortOrder     | Description
   Ascending     | The data source is sorting with ascending order.
   Descending      | The data source is sorting with descending order.
 
-In the below sample demonstration the items in the datasource are shuffled in random order, But we can decide whether the items to be listed in ascending or descending order alphanumerically in the popup.
+In the below sample demonstration the items in the datasource are shuffled in random order, But you can decide whether the items to be listed in ascending or descending order alphanumerically in the popup.
 
 {% highlight cshtml %}
 
@@ -27,4 +27,4 @@ In the below sample demonstration the items in the datasource are shuffled in ra
 
 {% endhighlight %}
 
-![Blazor DropDownList with clear button](./images/sorting/blazor_dropdown_sorting.png)
+![Blazor DropDownList with sortOrder descending](./images/sorting/blazor_dropdown_sorting.png)
