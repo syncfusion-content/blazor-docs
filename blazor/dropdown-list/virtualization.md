@@ -9,10 +9,10 @@ documentation: ug
 
 # Virtualization in Blazor DropDown List Component
 
-DropDownList has been provided virtualization to improve the UI performance for a large amount of data when [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_EnableVirtualization) is true. 
+The DropDownList has been provided virtualization to improve the UI performance for a large amount of data when [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_EnableVirtualization) is true. 
 This feature doesn’t render out the entire data source on initial component rendering. It loads the N number of items in the popup on initial rendering and the remaining set number of items will load on each scrolling action in the popup. It can work with both local and remote data.
 
-You can specify the count of the items to be appended  in the popup element using [ItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ItemsCount) property when **EnableVirtualization** is enabled. 
+You can specify the count of the items to be appended  in the popup element using [ItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ItemsCount) property when `EnableVirtualization` is enabled. 
 
 In the below sample demo, if the scroll action takes place, it will append 20 more items to the popup element.
 
@@ -22,7 +22,7 @@ In the below sample demo, if the scroll action takes place, it will append 20 mo
 
 {% endhighlight %}
 
-### Local Data
+## Local Data
 
 In the following code 150 local data items bound to the component, but only 6 items will load to the popup when you open the popup. Remaining set number of items will load on each scrolling action in the popup.
 
@@ -32,9 +32,9 @@ In the following code 150 local data items bound to the component, but only 6 it
 
 {% endhighlight %}
 
-![Blazor DropDownList with virtualization](./images/virtualization/blazor_dropdownlist_virtualization-local-data.gif)
+![Blazor DropDownList with virtualization of local data](./images/virtualization/blazor_dropdownlist_virtualization-local-data.gif)
 
-### Remote Data 
+## Remote Data 
 
 In the following code, remote data bound to the DropDownList component, but only 10 items will load to the popup when you open the popup. Remaining set number of items will load on each scrolling action in the popup.
 
@@ -44,5 +44,8 @@ In the following code, remote data bound to the DropDownList component, but only
 
 {% endhighlight %}
 
-![Blazor DropDownList with virtualization](./images/virtualization/blazor_dropdown_virtualization-remote-data.gif)
+![Blazor DropDownList with virtualization of remote data](./images/virtualization/blazor_dropdown_virtualization-remote-data.gif)
 
+## Limitation of virtualization
+
+* The Virtualization is not supported in the Grouping feature.
