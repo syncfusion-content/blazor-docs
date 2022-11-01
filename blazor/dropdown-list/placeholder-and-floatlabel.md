@@ -11,7 +11,7 @@ documentation: ug
 
 ## Placeholder in the Blazor DropDownList component
 
-You can use [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Placeholder) property to display small description of the expected value in the input. In the below sample demonstration, We have set **Select a game** as Placeholder property value, which will set respective value to the placeholder attribute of the input element in the DOM.
+You can use [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Placeholder) property to display small description of the expected value in the input. In the below sample demonstration, you have to set `Select a game` as Placeholder property value, which will set respective value to the placeholder attribute of the input element in the DOM.
 
 {% highlight cshtml %}
 
@@ -23,7 +23,7 @@ You can use [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ## Color of the placeholder text
 
-Use the following CSS to customize the text color of placeholder.
+Use the following code to customize the text color of placeholder.
 
 {% highlight cshtml %}
 
@@ -31,11 +31,11 @@ Use the following CSS to customize the text color of placeholder.
 
 {% endhighlight %}
 
-![Blazor DropdownList with placeholder](./images/placeholder-and-floatlabel/blazor_dropdown_placeholder-with-color.png)
+![Blazor DropdownList with color placeholder](./images/placeholder-and-floatlabel/blazor_dropdown_placeholder-with-color.png)
 
 ## Add mandatory indicator using placeholder
 
-Use the following CSS to add the mandatory indicator * to the float label element.
+Use the following code to add the mandatory indicator * to the float label element.
 
 {% highlight cshtml %}
 
@@ -43,7 +43,7 @@ Use the following CSS to add the mandatory indicator * to the float label elemen
 
 {% endhighlight %}
 
-![Blazor DropdownList with placeholder](./images/placeholder-and-floatlabel/blazor_dropdown_placeholder-with-mandatory.png)
+![Blazor DropdownList with mandatory indicator placeholder](./images/placeholder-and-floatlabel/blazor_dropdown_placeholder-with-mandatory.png)
 
 ## Float Label in the Blazor DropDownList component
 
@@ -65,11 +65,11 @@ FloatLabelType `Auto` is demonstrated in the below code sample.
 
 {% endhighlight %}
 
-![Blazor DropdownList with placeholder](./images/placeholder-and-floatlabel/blazor_dropdown_floatlabel.gif)
+![Blazor DropdownList with float label](./images/placeholder-and-floatlabel/blazor_dropdown_floatlabel.gif)
 
 ## Customizing the float label element’s focusing color
 
-Use the following CSS to customize the focusing color of float label element.
+Use the following code to customize the focusing color of float label element.
 
 {% highlight cshtml %}
 
@@ -77,4 +77,4 @@ Use the following CSS to customize the focusing color of float label element.
 
 {% endhighlight %}
 
-![Blazor DropdownList with placeholder](./images/placeholder-and-floatlabel/blazor_dropdown_floatlabel-focusing-color.png)
+![Blazor DropdownList with float label focusing color](./images/placeholder-and-floatlabel/blazor_dropdown_floatlabel-focusing-color.png)
