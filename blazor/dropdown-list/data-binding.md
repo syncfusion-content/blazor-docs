@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding
 
-Data binding can be achieved by using the `bind-Value` attribute and it supports string, int, Enum and bool types. If component value has been changed, it will affect all the places where you bind the variable for the **bind-value** attribute.
+The Data binding can be achieved by using the `@bind-Value` attribute and it supports string, int, Enum and bool types. If component value has been changed, it will affect all the places where you bind the variable for the `bind-value` attribute.
 
 * **TValue** - specifies the type of the each list item of the dropdown component.
 * **TItem** - specifies the type of the whole list of the dropdown component.
@@ -18,43 +18,19 @@ Data binding can be achieved by using the `bind-Value` attribute and it supports
 
 The DropDownList loads the data from local data sources through the DataSource property. It supports the data type of Array, Observable Collection, ExpandoObject, DynamicObject.
 
-Below code demonstrate the binding local data to the DropDownList.
+{% highlight cshtml %}
 
-```cshtml
-@using Syncfusion.Blazor.DropDowns
+{% include_relative code-snippet/data-binding/local-data-binding.razor %}
 
-<p>DropDownList value is:<strong>@DropVal</strong></p>
+{% endhighlight %}
 
-<SfDropDownList TValue="string" Placeholder="e.g. Australia" TItem="Country" @bind-Value="@DropVal" DataSource="@Countries">
-    <DropDownListFieldSettings Value="Name"></DropDownListFieldSettings>
-</SfDropDownList>
-
-@code {
-
-    public string DropVal;
-
-    public class Country
-    {
-        public string Name { get; set; }
-
-        public string Code { get; set; }
-    }
-
-    List<Country> Countries = new List<Country>
-{
-        new Country() { Name = "Australia", Code = "AU" },
-        new Country() { Name = "Bermuda", Code = "BM" },
-        new Country() { Name = "Canada", Code = "CA" },
-        new Country() { Name = "Cameroon", Code = "CM" },
-    };
-}
-```
+![Blazor DropdownList with local data binding](./images/data-binding/blazor_dropdown_local-binding.png)
 
 ### Primitive type
 
 You can bind the data to the DropDownList as a list of string, int, double and bool type items.
 
-The following code demonstrates array of string and integer values to the DropDownList component.
+The following code demonstrates array of string values to the DropDownList component.
 
 {% highlight cshtml %}
 
@@ -63,6 +39,8 @@ The following code demonstrates array of string and integer values to the DropDo
 {% endhighlight %}
 
 ![Blazor DropdownList with Primitive string type](./images/data-binding/blazor_dropdown_primitive-type-string.png)
+
+The following code demonstrates array of integer values to the DropDownList component.
 
 {% highlight cshtml %}
 
@@ -158,7 +136,7 @@ The DropDownList supports retrieval of data from remote data services with the h
 
 ### OData v4 services
 
-[OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) provides ability to consume and manipulate data from OData v4 services. The following sample displays the first 6 contacts from Customers table of the `Northwind` Data Service.
+The [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) provides ability to consume and manipulate data from OData v4 services. The following sample displays the first 6 contacts from Customers table of the `Northwind` Data Service.
 
 {% highlight cshtml %}
 
@@ -170,7 +148,7 @@ The DropDownList supports retrieval of data from remote data services with the h
 
 ### Web API Adaptor
 
-[Web Api Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) use this to interact with Web API created under OData standards. The WebApiAdaptor is extended from the ODataAdaptor. Hence to use WebApiAdaptor, the endpoint should understand the OData formatted queries sent along with request. 
+The [Web Api Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) use this to interact with Web API created under OData standards. The WebApiAdaptor is extended from the ODataAdaptor. Hence to use WebApiAdaptor, the endpoint should understand the OData formatted queries sent along with request. 
 
 {% highlight cshtml %}
 
@@ -233,7 +211,7 @@ You need to follow the below steps to consume data from the [Entity Framework](h
 
 #### Create DBContext class
 
-The first step is to create a DBContext class called **OrderContext** to connect to a Microsoft SQL Server database.
+The first step is to create a DBContext class called `OrderContext` to connect to a Microsoft SQL Server database.
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
@@ -351,6 +329,8 @@ Now, you can configure the DropDownList using the [SfDataManager](https://blazor
 
 {% endhighlight %}
 
+## Adding New Items
+
 You can add the new item in the popup with help of using [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_AddItemsAsync_System_Collections_Generic_IEnumerable__0__System_Nullable_System_Int32__) public method. This method will add a mentioned item in the DropDownList popup without affecting the data source items.
 
 {% highlight cshtml %}
@@ -365,7 +345,7 @@ You can add the new item in the popup with help of using [AddItemsAsync](https:/
 
 ### DataBound
 
-`DataBound` event triggers when the data source is populated in the popup list.
+The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_DataBound) event triggers when the data source is populated in the popup list.
 
 {% highlight cshtml %}
 
@@ -375,7 +355,7 @@ You can add the new item in the popup with help of using [AddItemsAsync](https:/
 
 ### OnActionBegin
 
-`OnActionBegin` event triggers before fetching data from the remote server.
+The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnActionBegin) event triggers before fetching data from the remote server.
 
 {% highlight cshtml %}
 
@@ -385,7 +365,7 @@ You can add the new item in the popup with help of using [AddItemsAsync](https:/
 
 ### OnActionComplete
 
-`OnActionComplete` event triggers after data is fetched successfully from the remote server.
+The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnActionComplete) event triggers after data is fetched successfully from the remote server.
 
 {% highlight cshtml %}
 
@@ -395,7 +375,7 @@ You can add the new item in the popup with help of using [AddItemsAsync](https:/
 
 ### OnActionFailure
 
-`OnActionFailure` event triggers when the data fetch request from the remote server fails.
+The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnActionFailure) event triggers when the data fetch request from the remote server fails.
 
 {% highlight cshtml %}
 
