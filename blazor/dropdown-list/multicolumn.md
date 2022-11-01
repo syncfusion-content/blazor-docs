@@ -24,6 +24,4 @@ You can provide 2 or more columns in the popup by providing the class name “e-
 
 ## Limitation of Multicolumn dropdown List
 
-Multicolumn dropdown has a certain limitations. Those are listed below.
-
 The component will not support column filtering and sorting and the column will be alligned as same like grid.
