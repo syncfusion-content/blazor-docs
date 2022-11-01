@@ -200,7 +200,6 @@ In the following sample, the list items and its headers are designed and display
 ```
 
 
-
 ![Blazor DropDownList with HeaderTemplate](./images/blazor-dropdownlist-header-template.png)
 
 ## Footer template
@@ -271,7 +270,6 @@ In the following sample, popup list content displays the notification of no data
 }
 ```
 
-The output will be as follows.
 
 ![Blazor DropDownList without Data](./images/blazor-dropdownlist-without-data.png)
 
@@ -304,7 +302,6 @@ In the following sample, when the data fetch request fails, the DropDownList dis
 }
 ```
 
-The output will be as follows,
 
 ![Blazor DropDownList with Action Failure Template](./images/blazor-dropdownlist-action-failure-template.png)
 
