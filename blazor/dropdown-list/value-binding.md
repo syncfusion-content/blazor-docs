@@ -15,7 +15,8 @@ The value binding as the process of passing values between a component and its p
     * bind-Index Binding
 
 ## Bind Value Binding
-Value binding can be achieved by using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute and it supports string, int, Enum, bool and complex types. If component value has been changed, it will affect the all places where you bind the variable for the bind-value attribute.
+
+The value binding can be achieved by using `@bind-Value` attribute and it supports string, int, Enum, bool and complex types. If component value has been changed, it will affect all places where you bind the variable for the `bind-value` attribute.
 
 {% highlight cshtml %}
 
@@ -27,7 +28,7 @@ Value binding can be achieved by using the [@bind-Value](https://help.syncfusion
 
 ## Index Value Binding
 
-Index value binding can be achieved by using [@bind-Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Index) attribute and it supports int and int nullable types. By using this attribute you can bind the values respective to its index.
+The Index value binding can be achieved by using `@bind-Index` attribute and it supports int and int nullable types. By using this attribute you can bind the values respective to its index.
 
 {% highlight cshtml %}
 
@@ -35,11 +36,11 @@ Index value binding can be achieved by using [@bind-Index](https://help.syncfusi
 
 {% endhighlight %}
 
-![Blazor DropDownList with Bind Value](./images/value-binding/blazor_dropdown_index-value.png)
+![Blazor DropDownList with Index Value](./images/value-binding/blazor_dropdown_index-value.png)
 
 ## Text and Value
 
-[Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value) field mapped to the component maintains the unique value of the item in the data source. The [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Text) field used to display the text in the popup list items for the respective value. We can specify these properties within the `DropDownListFieldSettings` tag helper.
+The DropdownList [DropDownListFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value) and [DropDownListFieldSettings.Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Text) properties point to the corresponding names of the model. The `Value` field mapped to the component maintains the unique value of the item in the data source, and the `Text` field is mapped to display the text in the popup list items for the respective text value.
 
 The following code demonstrates, Value and Text field of the DropDownList component For instance, the selected item is `Badminton` (Text Field i.e., Game) but the value field holds `Game2` (Value Field i.e., ID).
 
@@ -53,9 +54,9 @@ The following code demonstrates, Value and Text field of the DropDownList compon
 
 ## Primitive Type Binding
 
-You can bind the data to the DropDownList as a simple collection of string, int, double and bool type items.
+The DropDownList has support to load array of primitive data such as strings and numbers.
 
-The following code demonstrates array of string and integer values to the DropDownList component.
+The following code demonstrates array of string as datasource to the DropDownList component.
 
 {% highlight cshtml %}
 
@@ -63,7 +64,9 @@ The following code demonstrates array of string and integer values to the DropDo
 
 {% endhighlight %}
 
-![Blazor DropDownList with Text and Value](./images/value-binding/blazor_dropdown_primitive-type-string.png)
+![Blazor DropDownList with Primitive Type as string](./images/value-binding/blazor_dropdown_primitive-type-string.png)
+
+The following code demonstrates array of int as datasource to the DropDownList component.
 
 {% highlight cshtml %}
 
@@ -71,21 +74,19 @@ The following code demonstrates array of string and integer values to the DropDo
 
 {% endhighlight %}
 
-![Blazor DropDownList with Text and Value](./images/value-binding/blazor_dropdown_primitive-type-int.png)
+![Blazor DropDownList with Primitive Type as int](./images/value-binding/blazor_dropdown_primitive-type-int.png)
 
 ## Object Binding
 
-DropDownList can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
+object data binding refers a memory location where object data is stored.
 
-In the following example, `Game` column from complex data has been mapped to the `Value` field.
+In the following example, `Game` column has been mapped to the `Value` field.
 
 {% highlight cshtml %}
 
 {% include_relative code-snippet/value-binding/object-binding.razor %}
 
 {% endhighlight %}
-
-The output will be as follows.
 
 ![Blazor DropDownList with object values](./images/value-binding/blazor_dropdown_object-binding.png)
 
@@ -99,15 +100,14 @@ You can bind enum data to DropDownList component. The following code helps you g
 
 {% endhighlight %}
 
-The output will shown as follows,
-
 ![Blazor DropDownList with Enum Data](./images/value-binding/blazor_dropdown_enum-binding.png)
 
 ## Show or Hide Clear Button
 
 You can use [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowClearButton) property to specify whether to show or hide the clear button. When the clear button is clicked, `Value`, `Text`, and `Index` properties are reset to null.
 
-> If the TValue is non nullable type, then while using clear button, it will set the default value of the data type. 
+> If the TValue is non nullable type, then while using clear button, it will set the default value of the data type and TValue is set as nullable type while using clear button it will set to null value(eg: If TValue is int while clearing 0 is set to the component and if TValue is int? while clearing null is set to the component)
+
 The below sample demonstrates `string` is used as `TValue`. So, if we clear the value using clear button, it will set to null as it's the default value of the respective type.
 
 {% highlight cshtml %}
@@ -124,7 +124,7 @@ You can change the `TItem` property dynamically which defines the datasource typ
 
 ### Creating Generic DropDownList component
 
-First, you need to create a `DropDownList.razor` file in the `/Pages` folder as a parent component. We’ll also add a **[Parameter]** property for a `List<TItem>` and `TValue`.
+First, you need to create a `DropDownList.razor` file in the `/Pages` folder as a parent component. Also add a Parameter property for a List as `<TItem>` and `TValue`.
 
 {% tabs %}
 {% highlight razor %}
@@ -152,7 +152,7 @@ First, you need to create a `DropDownList.razor` file in the `/Pages` folder as 
 
 Then you can render the Generic DropDownList component with required TValue and TItem in the respective razor components. 
 
-Here, we have rendered the DropDownList component with **TValue** as **string** type in the `/Index.razor` file and DropDownList component with **TValue** as **int?** type in the `/Counter.razor` file.
+Here, we have rendered the DropDownList component with TValue as string type in the `/Index.razor` file and DropDownList component with TValue as int? type in the `/Counter.razor` file.
 
 **[Index.razor]**
 
