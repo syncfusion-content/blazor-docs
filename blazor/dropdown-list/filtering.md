@@ -57,7 +57,7 @@ In the following example, `EndsWith` filter type has been mapped to the `FilterT
 
 ## Case Sensitive Filtering
 
-Data items can be filtered either with or without case sensitivity using the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). This can be done by passing the fourth optional parameter [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_IgnoreCase) of the [Where clause](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html#Syncfusion_Blazor_Data_Query_Where_Syncfusion_Blazor_Data_WhereFilter_).
+The Data items can be filtered either with or without case sensitivity using the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). This can be done by passing the fourth optional parameter [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_IgnoreCase) of the [Where clause](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html#Syncfusion_Blazor_Data_Query_Where_Syncfusion_Blazor_Data_WhereFilter_).
 
 The following example shows how to perform case-sensitive filter.
 
@@ -83,7 +83,7 @@ You can use [FilterBarPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfus
 
 DropDownList component filter queries can be customized. You can also use your own filter libraries to filter data like Fuzzy search.
 
-In the below sample demonstration, We can filter the data either using its `FirstName` or `LastName` field. Hence in the Filtering event, [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Condition) is used with `or` condition for filtering both the fields. 
+In the below sample demonstration, filter the data either using its `FirstName` or `LastName` field. Hence in the Filtering event, [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Condition) is used with `or` condition for filtering both the fields. 
 
 For instance , the data source item consist of `FirstName` as `Nancy` and `LastName` as `Davalio`. But you can filter the data either by typing `N` or `D` character and it will showcase the `Nancy` (FirstName field) in the popup.
 
@@ -97,7 +97,7 @@ For instance , the data source item consist of `FirstName` as `Nancy` and `LastN
 
 ## Multi Column Filtering 
 
-Provided a multi column style class in the built-in Syncfusion Blazor theme files. So, we need to provide the multicolumn root class API name as `e-multi-column` in the CssClass property.
+Provided a multi column style class in the built-in Syncfusion Blazor theme files. So, need to provide the multicolumn root class API name as `e-multi-column` in the CssClass property.
 
 {% highlight cshtml %}
 
