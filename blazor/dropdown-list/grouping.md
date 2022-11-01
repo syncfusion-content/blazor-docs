@@ -9,7 +9,7 @@ documentation: ug
 
 # Grouping
 
-DropDownList supports wrapping nested elements into a group based on different categories. The category of each list item can be mapped through the [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListFieldSettings.html#Syncfusion_Blazor_DropDowns_DropDownListFieldSettings_GroupBy) field in the data table. The group header is displayed both as inline and fixed headers. The fixed group header content is updated dynamically on scrolling the popup list with its category value.
+The DropDownList supports wrapping nested elements into a group based on different categories. The category of each list item can be mapped through the [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListFieldSettings.html#Syncfusion_Blazor_DropDowns_DropDownListFieldSettings_GroupBy) field in the data table. The group header is displayed both as inline and fixed headers. The fixed group header content is updated dynamically on scrolling the popup list with its category value.
 
 To get started quickly with grouping in the Blazor DropDown List component, you can check the video below.
 
@@ -27,7 +27,7 @@ In the following sample, vegetables are grouped according on its category using 
 
 ## Fixed Group Header
 
-We can classify the items based on the **GroupBy** field mapped to the control. The headers of group items will fixed at the top till its belonging items ends up on scrolling.
+You can classify the items based on the `GroupBy` field mapped to the control. The headers of group items will fixed at the top till its belonging items ends up on scrolling.
 
 ## Group Header Template
 
@@ -37,8 +37,8 @@ Refer the [Group Template](https://blazor.syncfusion.com/documentation/dropdown-
 
 ## Limitations of Grouping
 
-We have certain limitations in Grouping feature. Those are listed below.
+Grouping feature has a certain limitations. Those are listed below.
 
-* The component will support only single level of grouping, and we cannot specify it as like TreeView component.
+* The component will support only single level of grouping, and you cannot specify it as like TreeView component.
 
-* The Virtualization is not supported in the Grouping feature. Only we can assign fixed number of datasource items at initial rendering of the component.
+* The Virtualization is not supported in the Grouping feature. Only assign fixed number of datasource items at initial rendering of the component.
