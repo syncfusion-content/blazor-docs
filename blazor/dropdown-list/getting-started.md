@@ -355,7 +355,7 @@ By default, the width of the popup list automatically adjusts according to the D
 
 ## Get Selected Value
 
-* You can get the selected value of the DropDownList component from the `Value` property in the [ValueChange](https://blazor.syncfusion.com/documentation/dropdown-list/events#valuechange) event argument.  
+You can get the selected value of the DropDownList component from the `args.Value` property in the [ValueChange](https://blazor.syncfusion.com/documentation/dropdown-list/events#valuechange) event argument.  
 
 
 {% highlight cshtml %}
@@ -364,7 +364,7 @@ By default, the width of the popup list automatically adjusts according to the D
 
 {% endhighlight %}
 
-*  You can get the complete object list of the selected value from the `ItemData` property in the [ValueChange](https://blazor.syncfusion.com/documentation/dropdown-list/events#valuechange) event argument.
+You can get the complete object list of the selected value from the `args.ItemData` property in the [ValueChange](https://blazor.syncfusion.com/documentation/dropdown-list/events#valuechange) event argument.
 
 
 {% highlight cshtml %}
@@ -378,6 +378,6 @@ By default, the width of the popup list automatically adjusts according to the D
 
 ## See Also
 
-* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)
-* [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
-* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli)
+* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli/)
+* [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio/)
+* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli/)
