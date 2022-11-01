@@ -9,11 +9,11 @@ documentation: ug
 
 # Customization in Blazor Message
 
-The Message component allows you to customize the content display positions and its appearance. This section explains the details about changing the content alignments and border styles for messages.
+The Message component allows you to customize the content display positions and appearance. This section explains the details about changing the content alignments and border styles for messages.
 
 ## Content Alignment
 
-Normally, the message content is aligned to the **left**. The Message component allows to align the message content in **center** or **right** through the `ContentAlignment` property.
+Normally, the message content is aligned to the **left**. The Message component allows you to align the message content in the **center** or **right** through the `ContentAlignment` property.
 
 The following example demonstrates the message with different content alignments.
 
@@ -50,9 +50,9 @@ The following example demonstrates the message with different content alignments
 
 ## Rounded and Square
 
-To customize the Message component's appearance, add the custom class to the message through `CssClass` property. This custom class will be added to the root element. Based on this custom class, the user can override the styles of the message at the application level.
+To customize the Message component's appearance, add the custom class to the message through the `CssClass` property. This custom class will be added to the root element. Based on this custom class, the user can override the message styles at the application level.
 
-The following example shows the rounded and squared appearance of the message, which can be achieved through adding the `CssClass` property.
+The following example shows the rounded and squared appearance of the message, which can be achieved by adding the `CssClass` property.
 
 {% tabs %}
 {% highlight razor %}
@@ -94,9 +94,9 @@ The following example shows the rounded and squared appearance of the message, w
 
 ## CSS Message
 
-The Blazor Message has predefined CSS classes that can be defined in the HTML elements, which renders the message without any script reference. This can be used to display the simple message with content and makes the code lighter.
+The Blazor Message has predefined CSS classes that can be defined in the HTML elements, which renders the message without any script reference. This can display a simple message with content and make the code lighter.
 
-The below DOM structure is required to display the simple message with content.
+The following DOM structure is required to display the simple message with the content.
 
 ```bash
 
@@ -106,7 +106,7 @@ The below DOM structure is required to display the simple message with content.
 
 ```
 
-The below DOM structure is required to display the simple message with content and severity icon.
+The following DOM structure is required to display the simple message with the content and severity icon.
 
 ```bash
 
