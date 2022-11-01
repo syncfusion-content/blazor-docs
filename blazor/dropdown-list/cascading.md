@@ -9,7 +9,7 @@ documentation: ug
 
 # Cascading Dropdown List
 
-Cascading DropDownList is the series of DropDownList, where the value of one DropDownList depends on another DropDownList value. 
+The Cascading DropDownList is the series of DropDownList, where the value of one DropDownList depends on another DropDownList value. 
 
 In the `ValueChange` event handler of first DropDownList, you should load the data for the second DropDownList based on the selected value of first DropDownList. The same has to be configured between second and third DropDownLists.
 
