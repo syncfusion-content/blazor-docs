@@ -7,7 +7,7 @@ control: SpeedDial
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor SpeedDial
 
 ## Keyboard interaction
 
