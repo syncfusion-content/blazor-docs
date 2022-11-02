@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Icons in Blazor FloatingActionButton Component | Syncfusion
-description: Checkout and learn here all about Icons in Syncfusion Blazor FloatingActionButton component and much more details.
+title: Icons in Blazor Floating Action Button Component | Syncfusion
+description: Checkout and learn here all about Icons in Syncfusion Blazor Floating Action Button component and much more details.
 platform: Blazor
 control: FloatingActionButton
 documentation: ug
@@ -97,7 +97,7 @@ You can show icon along with text in Floating Action Button by setting [IconCss]
 
 ![Blazor Floating Action Button with Icon and Text](./images/IconandText.png)
 
-### Icon position
+### Icon Position
 
 You can change the position of icon when showing along with content by setting [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconPosition) property. By default, the icon is positioned on the left side together with text.
 

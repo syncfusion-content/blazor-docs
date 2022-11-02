@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Events in FloatingActionButton Component | Syncfusion
-description: Checkout and learn here all about Native Events in Syncfusion FloatingActionButton component and much more.
+title: Events in Floating Action Button Component | Syncfusion
+description: Checkout and learn here all about Native Events in Syncfusion Floating Action Button component and much more.
 platform: Blazor
-control: FloatingActionButton
+control: Floating Action Button
 documentation: ug
 ---
 
@@ -32,7 +32,7 @@ Event triggers after the creation of Floating Action Button.
 
 ## OnClick
 
-Event triggers when the Floating Action Button is clicked. Below example shows the Click event of the Floating Action Button.
+Event triggers when the Floating Action Button is clicked. Below example shows the click event of the Floating Action Button.
 
 ```cshtml
 
@@ -53,6 +53,3 @@ Event triggers when the Floating Action Button is clicked. Below example shows t
 }
 
 ```
-
-
-

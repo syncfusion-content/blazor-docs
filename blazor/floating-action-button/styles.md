@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Styles in Blazor FloatingActionButton Component | Syncfusion
-description: Checkout and learn here all about Styles in Syncfusion Blazor FloatingActionButton component and much more.
+title: Styles in Blazor Floating Action Button Component | Syncfusion
+description: Checkout and learn here all about Styles in Syncfusion Blazor Floating Action Button component and much more.
 platform: Blazor
-control: FloatingActionButton
+control: Floating Action Button
 documentation: ug
 ---
 
@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains the different styles of Floating Action Button.
 
-## FAB styles
+## FAB Styles
 
 The Blazor Floating Action Button supports the following predefined styles that can be defined using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property. You can customize by replacing the `CssClass` property with the below defined class.
 
@@ -49,7 +49,7 @@ To modify the Floating Action Button appearance, you need to override the defaul
 
 ## Show text on hover
 
-By using `CssClass`, you can customize the Floating Action Button to show text on hover with applied transition effect.
+By using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass), you can customize the Floating Action Button to show text on hover with applied transition effect.
 
 ```csharp
 
