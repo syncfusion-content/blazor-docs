@@ -82,7 +82,6 @@ An annotation can be added to a node or connector by defining the annotation obj
 >* By default, node’s annotation positioned in center point of the shape.
 >* By default, connector’s path annotation positioned center point of its path.
 
-
 ## Add annotations at runtime
 
 Annotations can be added at runtime by using the [AddLabels](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_AddLabels_System_Object_System_Object_) method. The following code explains how to add an annotation to a node.
