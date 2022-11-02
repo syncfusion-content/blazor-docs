@@ -55,6 +55,8 @@ To create a node, define the [Node](https://help.syncfusion.com/cr/blazor/Syncfu
 }
 ```
 
+>**Note:** Do not use underscore(_) for node's id.
+
 ![Adding Node from Node Collection in Blazor Diagram](../images/blazor-diagram-add-node-from-collection.png)
 
 ## Add nodes at runtime
