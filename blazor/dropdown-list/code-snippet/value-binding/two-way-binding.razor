@@ -1,0 +1,26 @@
+<SfDropDownList ID="Assignee" Placeholder="Select Assignee" TItem="MemberModel" TValue="int?" DataSource="@Members" @bind-Value="@selectedStep.Assignee">
+
+    <DropDownListFieldSettings Text="Name" Value="Id"></DropDownListFieldSettings>
+
+</SfDropDownList>
+
+@code {
+
+    public MemberModel selectedStep = new MemberModel();
+
+    public class MemberModel
+    {
+        public int? Id { get; set; }
+        public string Name { get; set; }
+        public int? Assignee { get; set; } = 2;
+    }
+
+    List<MemberModel> Members = new List<MemberModel>()
+    {
+        new MemberModel() {Id = 0, Name="John" },
+        new MemberModel() {Id = 1, Name="Andrews" },
+        new MemberModel() {Id = 2, Name="Robert" },
+
+    };
+
+} 

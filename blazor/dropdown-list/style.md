@@ -124,3 +124,41 @@ Use the following CSS to customize the appearance of popup element.
     min-height: 29px;
 }
 ```
+
+## Adding conditional HTML attribute to list item
+
+You can achieve adding attributes to the li items based on datasource value with the help of JSInterop. In the, Opened event need to call the client side script by passing the required arguments (datasource and id) and add the attributes based on the datasource value obtained from the server.
+
+% highlight cshtml %}
+
+{% include_relative code-snippet/style/add-attribute-listitem.razor %}
+
+{% endhighlight %}
+
+{% tabs %}
+{% highlight razor tabtitle="~/_Layout.cshtml" %}
+
+    <script> 
+        function OnCreated(datasource, id) { 
+            setTimeout(() => { 
+                //Here popup element is uniquely identified with id. 
+                //Classes added via CssClass property will be added to the popup element also. 
+                //You can also uniquely identify the popup element with the help of added class. 
+                console.log(document.getElementById(id + "_popup")); 
+                var listItems = document.getElementById(id + "_popup").querySelectorAll('li'); 
+                for (var i = 0; i < listItems.length; i++) { 
+                    listItems[i].setAttribute(Object.keys(datasource[i])[2], datasource[i].isAvailable) 
+                } 
+            }, 100) 
+ 
+        } 
+    </script>
+
+{% endhighlight %}
+{% endtabs %}
+
+![Adding attribute to listitem in dropdown list](./images/style/blazor_dropdown_add-attribute-listitem.png)
+
+## Show Tooltip
+
+The OnAfterRenderAsync method will called every time the popup gets opened. In open event use the Global variable isOpen and set as false. In all the open event update the variable isOpen as true. So, while click on any of the Dropdownlist component, the OnAfterRenderAsync method will be triggered and refresh the tooltip in order to get the specific target element.
