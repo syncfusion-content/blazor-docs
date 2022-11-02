@@ -67,7 +67,7 @@ To add a connection port, define the port object and add it to node’s ports co
     }
 }
 ```
-**Note:** Do not use underscore(_) for port's id.
+>**Note:** Do not use underscore(_) for port's id.
 
 ![Creating Port in Blazor Diagram](../images/blazor-diagram-create-port.png)
 
