@@ -247,7 +247,7 @@ The [MouseHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
                     Width="100%"
                     Height="700px"
                     Nodes="nodes"
-                    MouseLeave="OnMouseLeave">
+                    MouseHover="OnMouseHover">
 </SfDiagramComponent>
 
 @code{
@@ -264,7 +264,7 @@ The [MouseHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
         };
         nodes.Add(node);
     }
-    private void OnMouseLeave(DiagramElementMouseEventArgs args)
+    private void OnMouseHover(DiagramElementMouseEventArgs args)
     {
 
     }

@@ -284,7 +284,7 @@ The following code example explains how to get the selection change event in the
 }
 ```
 ## Target point change event
-* While changing the source point  of the connector, the following events can be used to do the customization.
+* While changing the target point  of the connector, the following events can be used to do the customization.
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
@@ -340,7 +340,7 @@ The following code example explains how to get the selection change event in the
 
 ## ConnectorCreating event
 
-* The [ConnectorCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectorCreating)helps to define default properties of the connector. The connector creation is triggered when the diagram is initialized. In the Connector creating event, customize the connector properties. 
+* The [ConnectorCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectorCreating)helps to define default properties of the connector. The connector creation is triggered when the diagram is initialized. In the Connector creating event, you can customize the connector properties. 
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -387,7 +387,7 @@ The following code example explains how to get the selection change event in the
 ```
 ## Segment collection change event
 
-* The [SegmentCollectionChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SegmentCollectionChange)  triggers when the connector’s segment collection is updated. To explore aboutarguments, refer to the [SegmentCollectionChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentCollectionChangeEventArgs.html).
+* The [SegmentCollectionChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SegmentCollectionChange)  triggers when the connector’s segment collection is updated. To explore about arguments, refer to the [SegmentCollectionChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentCollectionChangeEventArgs.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

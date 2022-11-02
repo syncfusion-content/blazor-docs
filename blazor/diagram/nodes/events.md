@@ -20,8 +20,7 @@ Diagram provides some events support for node that triggers when interacting wit
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
-|[SelectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanging)|
-|Triggers before the selection is changed in the diagram.|
+|[SelectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanging)|[SelectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangingEventArgs.html)|Triggers before the selection is changed in the diagram.|
 |[SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanged)|[SelectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangedEventArgs.html)|Triggers when the node's or connector's selection is changed in the diagram.|
 
 The following code example explains how to get the selection change event in the diagram.
@@ -260,7 +259,7 @@ The following code example explains how to get the selection change event in the
 ```
 ## NodeCreating event
 
-* The [NodeCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_NodeCreating)  helps you to define the default properties of the node. The node creation is triggered when the diagram is initialized. In the node creating event, customize the node properties.
+* The [NodeCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_NodeCreating)  helps you to define the default properties of the node. The node creation is triggered when the diagram is initialized. In the node creating event, you can customize the node properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
