@@ -211,7 +211,7 @@ You can use [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% endhighlight %}
 
-![Blazor DropDownList with Popup height](./images/style/blazor_dropdown_popup-height.png)
+![Blazor DropDownList with Popup height](./images/style/blazor_dropdown_height.png)
 
 ### Width of dropdown list
 
