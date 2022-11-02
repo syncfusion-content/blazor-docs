@@ -21,7 +21,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/vs2019-extensions/create-project)
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
 
 ## Install Syncfusion Blazor NuGet in the App
 
@@ -43,7 +43,7 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
 Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html?&_ga=2.80827295.945255991.1647838461-1223836246.1561029397#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
-> From 2022 Vol1 (20.1) version - The default value of `IgnoreScriptIsolation` is changed to `true`, so, you don’t have to set the `IgnoreScriptIsolation` property explicitly to refer to scripts externally.
+> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to `true`. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to true, and this property is obsolete.
 
 ### Blazor Server App
 
@@ -367,7 +367,7 @@ Based on the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }  
 ```
 
-Through the navigation of the pager items, view the items in the list view page by page. This can be achieved by using the [Click](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_Click) event of the Pager. In the `Click` event of the Pager, the SkipValue and TakeValue are calculated using the `PageSize` property and arguments of the `Click` event (CurrentPage, PreviousPage). Based on these details, view the items in the list view page by page.
+Through the navigation of the pager items, view the items in the list view page by page. This can be achieved by using the `ItemClick` event of the Pager. In the `ItemClick` event of the Pager, the SkipValue and TakeValue are calculated using the `PageSize` property and arguments of the `ItemClick` event (CurrentPage, PreviousPage). Based on these details, view the items in the list view page by page.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -381,7 +381,7 @@ Through the navigation of the pager items, view the items in the list view page 
         <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Name"></ListViewFieldSettings>
     </SfListView>
 }
-    <SfPager @ref="@Page" PageSize=5 NumericItemsCount=4 TotalItemsCount=25 Click="Click">
+    <SfPager @ref="@Page" PageSize=5 NumericItemsCount=4 TotalItemsCount=25 ItemClick="Click">
     </SfPager>
 </div>
 @code {
@@ -420,7 +420,7 @@ Through the navigation of the pager items, view the items in the list view page 
         ListData.Add(new DataModel { Name = "Nolan, London, UK" });
         ListData.Add(new DataModel { Name = "Jennifer, Redmond, Italy" });
     }
-    public void Click(PageClickEventArgs args)
+    public void Click(PagerItemClickEventArgs args)
     {
         SkipValue = (args.CurrentPage * Page.PageSize) - Page.PageSize;
         TakeValue = Page.PageSize;

@@ -41,4 +41,28 @@ The PDF Viewer supports downloading the loaded PDF file from the toolbar by defa
 }
 ```
 
+## Download Filename
+
+The `DownloadFileName` property of the PDF Viewer enables you to sets the name of the file to be downloaded.
+
+The following code example shows how to set default filename to the downloaded file.
+
+```cshtml
+@using Syncfusion.Blazor.PdfViewerServer
+@using Syncfusion.Blazor.PdfViewer
+
+<SfPdfViewerServer DocumentPath="@documentPath" DownloadFileName="@downloadFileName" Height="800px" Width="1000px"></SfPdfViewerServer>
+
+@code
+{
+    //Sets the PDF document path for initial loading.
+    public string documentPath { get; set; } = "wwwroot/Data/PDF Succinctly.pdf";
+
+    //Sets the name of the file to be downloaded.
+    private string downloadFileName { get; set; } = "TOP-View_CutSheets.pdf";
+
+}
+```
+> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Download%20Filename/Download%20file%20with%20filename).
+
 > You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.

@@ -79,7 +79,7 @@ The following example code illustrates how to process the sfdt in server-side.
         DocIORenderer render = new DocIORenderer();
         //Converts Word document into PDF document
         Syncfusion.Pdf.PdfDocument pdfDocument = render.ConvertToPDF(doc);
-        using (var fileStream = new FileStream(@"wwwroot\data\GettingStarted.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite))
+        using (var fileStream = new FileStream(@"wwwroot/data/GettingStarted.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite))
         {
             //Saves the PDF file
             pdfDocument.Save(fileStream);

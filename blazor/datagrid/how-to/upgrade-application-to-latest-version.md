@@ -33,7 +33,7 @@ Ensure our CSS files have been properly configured in your application.
 
 ## Breaking changes
 
-Some changes have been modified in our Blazor samples for each release. So, we suggest you to ensure the breaking changes. Refer to this [release notes](https://blazor.syncfusion.com/documentation/release-notes/index/) for our Blazor components.
+Some changes have been modified in our Blazor samples for each release. So, we suggest you to ensure the breaking changes. Refer to this [release notes](https://blazor.syncfusion.com/documentation/release-notes/19.4.47?type=all) for our Blazor components.
 
 ## Cache problem
 
@@ -41,6 +41,6 @@ Before restoring the NuGet packages, clean the old version Syncfusion.Blazor NuG
 
 The following steps explain how to clean the cache:
 
-1. Delete/clear the package Syncfusion.Blazor from the installed location `{System-driver}\Users\{user-name}\.nuget\packages\syncfusion.blazor`. In Windows, the installed location of Syncfusion.Blazor package can be found using `%userprofile%\.nuget\packages\syncfusion.blazor`.
+1. Delete/clear the package Syncfusion.Blazor from the installed location `{System-driver}/Users/{user-name}/.nuget/packages/syncfusion.blazor`. In Windows, the installed location of Syncfusion.Blazor package can be found using `%userprofile%/.nuget/packages/syncfusion.blazor`.
 
 2. Update the latest version of Syncfusion.Blazor NuGet package.

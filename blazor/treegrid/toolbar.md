@@ -11,6 +11,11 @@ documentation: ug
 
 The Tree Grid provides Toolbar support to handle tree grid actions.
 
+To know about toolbar template in Blazor tree grid component, you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=yqp_Ukr_aQs"%}
+
 ## Built-in toolbar items
 
 Built-in toolbar items execute standard actions of the tree grid, and it can be added by defining the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Toolbar.html) as a collection of built-in items. It renders the button with icon and text.

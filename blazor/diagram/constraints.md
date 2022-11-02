@@ -22,6 +22,7 @@ To know more about Bitwise operators, refer to the [Bitwise Operations](constrai
 * Zoom
 * UndoRedo
 * UserInteraction
+* Tooltip
 
 | Constraints | Description |
 | -------- | -------- |
@@ -36,6 +37,7 @@ To know more about Bitwise operators, refer to the [Bitwise Operations](constrai
 |PanY|Enables or disables Panning Y coordinate support for the diagram.|
 |Pan|Enables or disables panning both X and Y coordinates support for the diagram.|
 |ZoomTextEdit|Enables or disables zooming the text box while editing the text.|
+|Tooltip|Enables or disables the tooltip for the diagram elements(Nodes and connectors).|
 |Default|Enables or disables all constraints in diagram.|
 
 The following example shows how to disable PageEditable constraint from default diagram constraints.
@@ -93,6 +95,7 @@ For more information about diagram constraints, refer to the [Diagram constraint
 >* ZoomTextEdit
 >* Default
 >* None
+>* Tooltip
 
 ## Node constraints
 
@@ -105,6 +108,7 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 * Delete
 * InConnect
 * OutConnect
+* Tooltip
 
 | Constraints | Description |
 | -------- | -------- |
@@ -129,6 +133,8 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 |AspectRatio|Enables the Aspect ratio of the node.|
 |ReadOnly|Enables the ReadOnly support for annotation in the node.|
 |HideThumbs|Enable to hide all resize thumbs for the node.|
+|Tooltip|Enables or disables tooltip for the Nodes.|
+|InheritTooltip|Enables or disables inherit tooltip option from the parent object.|
 |Resize|Enables or Disables the expansion or compression of a node.|
 |Inherit|Enables the node to inherit the interaction option from the parent object.|
 |Default|Enables all default constraints for the node.|
@@ -178,10 +184,16 @@ The node constraints are provided as flagged enumerations, so that multiple beha
  //Removing multiple constraints from default.
 NodeConstraints NodeConstraints = NodeConstraints.Default & ~ (NodeConstraints.Select | NodeConstraints.Drag);
 ```
+The following code example shows how the tooltip can be enabled for the node.
+
+```csharp
+//Enabled the tooltip constraints for the node.
+node.Constraints = NodeConstraints.Default | NodeConstraints.Tooltip;
+```
 
 For more information about node constraints, refer to the [NodeConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html).
 
->**Note** : By default, the following constraints are enabled for the node,
+>By default, the following constraints are enabled for the node,
 >* Shadow
 >* PointerEvents
 >* AllowDrop
@@ -210,6 +222,7 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 * Delete
 * InheritBridging
 * PointerEvents
+* Tooltip
 
 | Constraints | Description |
 | -------- | -------- |
@@ -227,6 +240,8 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 |PointerEvents|Enables to set the pointer events.|
 |ConnectToNearByNode|Enables to connect to the nearest node.|
 |ConnectToNearByPort|Enables to connect to the nearest port.|
+|Tooltip|Enables or disables tooltip for the connectors.|
+|InheritTooltip|Enables or disables inherit tooltip option from the parent object
 |ConnectToNearByElement|Enables to connect to the nearest elements.|
 |ReadOnly|Enables or disables readonly for the connector.|
 |Default|Enables all constraints for the connector.|
@@ -271,6 +286,13 @@ The connector constraints are provided as flagged enumerations, so that multiple
 ```csharp
 //Removing multiple constraints from default.
 ConnectorConstraints ConnectorConstraints = ConnectorConstraints.Default & ~ (ConnectorConstraints.Select | ConnectorConstraints.Drag);
+```
+
+The following code example shows how the tooltip can be enabled for the connector.
+
+```csharp
+//Enabled the tooltip constraints for the connector.
+connector.Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip;
 ```
 
 For more information about connector constraints, refer to the [ConnectorConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html).
@@ -430,6 +452,7 @@ Selector visually represents the selected elements with certain editable thumbs.
 * ResizeAll
 * UserHandle
 * Rotate
+* Tooltip
 
 | Constraints | Description |
 | -------- | -------- |
@@ -446,6 +469,7 @@ Selector visually represents the selected elements with certain editable thumbs.
 |ResizeNorth|Shows or hides the top center resize handle of the selector.|
 |Rotate|Shows or hides the rotate handle of the selector.|
 |UserHandle|Shows or hides the user handles of the selector.|
+|Tooltip| Shows or hides the tooltip for the drag, resize, and rotate operation of nodes and connectors. |
 |ResizeAll|Shows or hides all resize handles of the selector.|
 |All|Shows all handles of the selector.|
 
@@ -480,12 +504,63 @@ The following code shows how to hide rotator.
     }
 }
 ```
-
 ![Selector Constraints in Blazor Diagram](images/blazor-diagram-node-constraints.png)
+
+The following code illustrates how to show or hide the tooltip for the drag, resize and rotate operation of the nodes.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Popups
+<p>Selector Constraints</p>
+ <input type="checkbox" value="Tooltip" @onchange="@constraintschange"checked="@check5" />Tooltip
+<SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
+@code
+{
+    DiagramObjectCollection<Node> nodes;
+    bool selector=true;
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+        {
+            ID = "node1",
+            OffsetX = 250,
+            OffsetY = 250,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            },
+            Tooltip = new DiagramTooltip(){Content="NodeTooltip"},
+            Constraints = NodeConstraints.Default|NodeConstraints.Tooltip,
+        };
+        nodes.Add(node);
+    }
+     private void constraintschange(object value)
+    {
+        var obj = value as ChangeEventArgs;
+
+        if ((bool)obj.Value)
+        {
+             selection.Constraints |= SelectorConstraints.Tooltip;
+              selector = true;
+        }
+        else
+        {
+              selection.Constraints &= ~SelectorConstraints.Tooltip;
+              selector = false;
+        }
+
+    }
+}
+```
+|![ToolTip During hover the node with selectorconstraints](images/blazor-diagram-selectorconstraintsnode.gif) | 
 
 > Element should be in selected state, then only Rotator, UserHandle and Resizer thumbs will be visible.
 
-The following another code example shows how to disable the userhandle functionality for the selected item.
+The following code example shows how to disable the userhandle functionality for the selected item.
 
 ```csharp
 //Enable userhandle constraint for the selected item.
@@ -504,6 +579,7 @@ For more information about selector constraints, refer to the [SelectorConstrain
 >* ResizeSouth
 >* ResizeNorth
 >* All
+>* Tooltip
 
 ## Snap constraints
 

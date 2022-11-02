@@ -30,7 +30,7 @@ You might need to save the document back to the server. The following code examp
     public async void OnSave()
     {
         SfDocumentEditor editor = container.DocumentEditor;
-        string base64Data = await editor.SaveAsBlob(FormatType.Docx);
+        string base64Data = await editor.SaveAsBlobAsync(FormatType.Docx);
         byte[] data = Convert.FromBase64String(base64Data);
         //To observe the memory go down, null out the reference of base64Data variable.
         base64Data = null;
@@ -38,7 +38,7 @@ You might need to save the document back to the server. The following code examp
         Stream stream = new MemoryStream(data);
         //To observe the memory go down, null out the reference of data variable.
         data = null;
-        using (var fileStream = new FileStream(@"wwwroot\data\GettingStarted.docx", FileMode.Create, FileAccess.Write))
+        using (var fileStream = new FileStream(@"wwwroot/data/GettingStarted.docx", FileMode.Create, FileAccess.Write))
         {
             //Saving the new file in root path of application
             stream.CopyTo(fileStream);
@@ -72,11 +72,11 @@ If you have plenty of documents stored in database and you want to save the comp
     {
         string documentID = "Getting_Started.docx";
         SfDocumentEditor editor = container.DocumentEditor;
-        string base64Data = await editor.SaveAsBlob(FormatType.Docx);
+        string base64Data = await editor.SaveAsBlobAsync(FormatType.Docx);
         byte[] data = Convert.FromBase64String(base64Data);
         //To observe the memory go down, null out the reference of base64Data variable.
         base64Data = null;
-        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\database.mdf;";
+        string connectionString = "Data Source=(LocalDB)//MSSQLLocalDB;AttachDbFilename=C://database.mdf;";
         string queryStmt = "Update DocumentsTable SET Data = @Content where DocumentName = '" + documentID + "'";
         using (SqlConnection con = new SqlConnection(connectionString))
         using (SqlCommand cmd = new SqlCommand(queryStmt, con))
@@ -106,10 +106,10 @@ You can also save or download the document in local file system.
 
 @code {
     SfDocumentEditorContainer container;
-    public void OnDownload()
+    public async void OnDownload()
     {
-        SfDocumentEditor editor = container.DocumentEditor;
-        editor.Save("sample", FormatType.Docx);
+       SfDocumentEditor editor = container.DocumentEditor;
+       await editor.SaveAsync("sample", FormatType.Docx);
     }
 }
 ```

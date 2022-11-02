@@ -355,3 +355,51 @@ The following features are not supported in frozen rows and columns:
 * Row Template
 * Detail Template
 * Cell Editing
+
+## Add or remove frozen columns by dragging the column separator
+
+The [TreeGridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumns.html) can be added or removed from frozen content by dragging and dropping the column separator. To enable this feature, set the `AllowFreezeLineMoving` property to true.
+
+{% tabs %}
+
+{% highlight razor %}
+
+@using TreeGridComponent.Data;
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.TreeGrid;
+
+<div class="col-lg-12 control-section">
+    <div class="content-wrapper">
+        <div class="row">
+            <SfTreeGrid DataSource="@TreeData" IdMapping="TaskID" ParentIdMapping="ParentID" AllowFreezeLineMoving="true" TreeColumnIndex="1" Height="368" >
+                <TreeGridColumns>
+                    <TreeGridColumn Field="TaskID" HeaderText="Task ID" Width="115" TextAlign="TextAlign.Right" IsFrozen="true" Freeze="FreezeDirection.Left"></TreeGridColumn>
+                    <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="145"></TreeGridColumn>
+                    <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="TextAlign.Right"></TreeGridColumn>
+                    <TreeGridColumn Field="StartDate" HeaderText="Start Date" Format="d" Type=ColumnType.Date Width="200" TextAlign="TextAlign.Right"></TreeGridColumn>
+                    <TreeGridColumn Field="EndDate" HeaderText=" End Date" Format="d" Type=ColumnType.Date Width="200" TextAlign="TextAlign.Right"></TreeGridColumn>
+                    <TreeGridColumn Field="Progress" HeaderText="Progress" Width="200"></TreeGridColumn>
+                    <TreeGridColumn Field="Priority" HeaderText="Priority" Width="200"></TreeGridColumn>
+                    <TreeGridColumn Field="Approved" HeaderText="Approved" Width="100" Type="Syncfusion.Blazor.Grids.ColumnType.Boolean" DisplayAsCheckBox="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center" IsFrozen="true" Freeze="FreezeDirection.Right"></TreeGridColumn>
+                </TreeGridColumns>
+            </SfTreeGrid>
+        </div>
+    </div>
+</div>
+
+@code{
+    private List<SelfReferenceData> TreeData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.TreeData = SelfReferenceData.GetTree().Take(50).ToList();
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+> If frozen columns are not specified, the frozen column separator will be displayed at the left and right ends. You can dynamically change the frozen columns by dragging the column separator.
+
+![Add or Remove Frozen Blazor TreeGrid Columns by Dragging the Column Separator](./images/blazor-treegrid-freeze-line-moving.gif)

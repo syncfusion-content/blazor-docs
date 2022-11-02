@@ -76,4 +76,20 @@ documentEditor.Selection.ParagraphFormat.SetBeforeSpacing(24);
 documentEditor.Selection.ParagraphFormat.SetAfterSpacing(24);
 ```
 
+## Show or Hide Paragraph marks
+
+You can show or hide the hidden formatting symbols like spaces, tab, paragraph marks, and breaks in Document editor component. These marks help identify the start and end of a paragraph and all the hidden formatting symbols in a Word document.
+
+The following example code illustrates how to show or hide paragraph marks.
+
+```csharp
+<SfDocumentEditorContainer @ref="container" Height="590px" DocumentEditorSettings="settings">
+</SfDocumentEditorContainer>
+
+@code {
+    SfDocumentEditorContainer container;
+    DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel() { ShowHiddenMarks = true };
+}
+```
+
 You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.

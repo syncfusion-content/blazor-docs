@@ -11,6 +11,11 @@ documentation: ug
 
 Filtering allows to view specific or related records based on the filter criteria. To enable filtering in the Tree Grid, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~AllowFiltering.html) to true. Filtering options can be configured through the [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~FilterSettings.html).
 
+To know about filtering data in Blazor tree grid component, you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=7lhP9qa-UqY"%}
+
 {% tabs %}
 
 {% highlight razor %}

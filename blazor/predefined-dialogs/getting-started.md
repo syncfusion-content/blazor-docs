@@ -21,7 +21,7 @@ Create the **Blazor Server App** or **Blazor WebAssembly App** using Visual Stud
 
 * [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/vs2019-extensions/create-project)
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
 
 ## Install Syncfusion Blazor Popups NuGet in the App
 
@@ -44,7 +44,7 @@ Open the **~/_Imports.razor** file and import the Syncfusion.Blazor and Syncfusi
 
 Now, register the Syncfusion Blazor Service and Sycnfusion Dialog Service in the Blazor Server App or Blazor WebAssembly App. Here, the Syncfusion Blazor Service is registered by setting the [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
-> From 2022 Vol1 (20.1) version: The default value of the `IgnoreScriptIsolationis` changed to `true`, so you don’t have to set the `IgnoreScriptIsolation` property explicitly to refer to scripts externally.
+> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to `true`. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to true, and this property is obsolete.
 
 ### Blazor Server App
 
@@ -64,7 +64,7 @@ using Syncfusion.Blazor.Popups
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddScoped<SfDialogService>();
-builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
 ....
@@ -86,7 +86,7 @@ namespace BlazorApplication
          	services.AddRazorPages();
     		services.AddServerSideBlazor();
     		services.AddScoped<SfDialogService>();
-            services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+            services.AddSyncfusionBlazor();
     		services.AddServerSideBlazor().AddCircuitOptions(options => { options.DetailedErrors = true; });
     		services.AddServerSideBlazor().AddHubOptions(o =>
         }
@@ -111,7 +111,7 @@ using Syncfusion.Blazor.Popups
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 builder.Services.AddScoped<SfDialogService>();
-builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+builder.Services.AddSyncfusionBlazor();
 await builder.Build().RunAsync();
 ....
 
@@ -130,7 +130,7 @@ namespace WebApplication1
         {
             ....
             builder.Services.AddScoped<SfDialogService>();
-            builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+            builder.Services.AddSyncfusionBlazor();
             await builder.Build().RunAsync();
         }
     }

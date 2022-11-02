@@ -48,6 +48,42 @@ The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Acc
 
 ![Blazor Accumulation Chart with Data Label](images/data-label/blazor-accumulation-chart-with-data-label.png)
 
+## Text Wrap
+
+When the data label text exceeds the container, the text can be wrapped by using [TextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_TextWrap) Property. End user can also wrap the data label text based on the [MaxWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_MaxWidth) property.
+
+```cshtml 
+@using Syncfusion.Blazor.Charts
+
+ <SfAccumulationChart Title="Mobile Browser Statics">
+         <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@PieChartPoints" XName="Browser" YName="Users" Name="Browser">
+            <AccumulationDataLabelSettings EnableRotation="true" Visible="true" MaxWidth="100" TextWrap="TextWrap.Wrap" Name="DataLabelMappingName" Position="AccumulationLabelPosition.Inside">
+                </AccumulationDataLabelSettings>
+            </AccumulationChartSeries>
+        </AccumulationChartSeriesCollection>
+    </SfAccumulationChart>
+
+@code{
+    public List<PieData> PieChartPoints { get; set; } = new List<PieData>
+    {
+        new PieData { Browser =  "Opera Mini", Users = 80, DataLabelMappingName = "Opera Mini (80M) 32%" },
+        new PieData { Browser =  "UC Browser", Users = 80, DataLabelMappingName = "UC Browser (80M) 32%" },
+        new PieData { Browser =  "Internet Explorer", Users = 90, DataLabelMappingName = "Chromium (90M) 36%" },
+    };
+    
+    public class PieData
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+        public string DataLabelMappingName { get; set; }
+    }
+}
+```
+![Text Wrap in Blazor Accumulation Chart](images/data-label/blazor-accumulation-chart-with-data-label-text-wrapping.png)
+
 ## Position
 
 The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Position) property in the [AccumulationDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html) allows the data label to be placed either [Inside](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationLabelPosition.html#Syncfusion_Blazor_Charts_AccumulationLabelPosition_Inside) or [Outside](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationLabelPosition.html#Syncfusion_Blazor_Charts_AccumulationLabelPosition_Outside) of the chart.
@@ -229,5 +265,5 @@ The [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accumu
 
 ## See Also
 
-* [Tooltip](./tool-tip/)
-* [Legend](./legend/)
+* [Tooltip](./tool-tip)
+* [Legend](./legend)
