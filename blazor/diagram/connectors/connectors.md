@@ -54,7 +54,7 @@ The following code example illustrates how to add a connector through connector 
 
 > [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each connector should be unique and so it is further used to find the connector at runtime and do any customization.
 
-**Note:** Do not use underscore(_) for connector's id.
+>**Note:** Do not use underscore(_) for connector's id.
 
 ## Add connectors at runtime
 
