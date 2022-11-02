@@ -256,7 +256,7 @@ Custom toolbar can be placed inside SfGantt. In this example, the toolbar checkb
     }
 </style>
 ```
-![Blazor Gantt Chart with Custom toolbar](images/blazor-gantt-chart-with-custom-toolbar.png)
+![Blazor Gantt Chart with Custom toolbar](images/blazor-gantt-chart-custom-toolbar.gif)
 
 ## Built-in and custom items in toolbar
 
@@ -322,7 +322,7 @@ In the following example, the `ExpandAll` and `CollapseAll` are built-in toolbar
 }
 ```
 
-![Customizing Toolbar Items in Blazor Gantt Chart](images/blazor-gantt-chart-custom-toolbar.gif)
+![Customizing Toolbar Items in Blazor Gantt Chart](images/blazor-gantt-chart-with-custom-toolbar.png)
 
 ## Enable or disable toolbar items
 
