@@ -939,9 +939,9 @@ While adding more symbols such as nodes and connectors to the palette, define th
         Bottom = 15 
     };       
     SfSymbolPaletteComponent SymbolPalette;
-    //Define palettes collection.
+    //Define the palettes collection.
     DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
-    // Defines palette's flow-shape collection.
+    //  Define the palette's flow-shape collection.
     DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
      public void OnNodeCreating(IDiagramObject args)
     { 
@@ -1001,7 +1001,7 @@ While adding more symbols such as nodes and connectors to the palette, define th
 
 ## How to refresh the symbols at runtime
 
-The [RefreshSymbols](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_RefreshSymbols) method allows the user to redraw the symbols dynamically in SymbolPalette instead of re-rendering the complete Diagram component.
+The [RefreshSymbols](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_RefreshSymbols)  method allows you to redraw the symbols dynamically in the SymbolPalette instead of re-rendering the complete Diagram component.
 
 ```csharp
 

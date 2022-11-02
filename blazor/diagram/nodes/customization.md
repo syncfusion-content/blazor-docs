@@ -558,10 +558,10 @@ The following code shows how to set the AdditionalInfo value.
 
 ## How to set ZIndex property for node
 
-* The nodes z-order property specifies the stack order of the node. A node with greater stack order is always in front of a node with a lower stack order. By default value is -1.
+* The nodes' z-order property specifies the stack order of the node. A node with a greater stack order is always in front of a node with a lower stack order. By default, the value is -1.
 
 
-The following code illustrates how to render node based on the stack order.
+The following code illustrates how to render nodes based on the stack order.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

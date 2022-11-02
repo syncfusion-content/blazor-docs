@@ -603,7 +603,7 @@ The following code illustrates how to disable selection.
 ```
 ## How to set ZIndex property for connector
 
-* The connectors zIndex property specifies the stack order of the connector. A connector with greater stack order is always in front of a connector with a lower stack order. By default value is -1.
+* The connectors zIndex property specifies the stack order of the connector. A connector with a greater stack order is always in front of a connector with a lower stack order. By default, the value is -1.
 
 
 The following code illustrates how to render connector based on the stack order.
@@ -619,7 +619,7 @@ The following code illustrates how to render connector based on the stack order.
 @code
 {
     SnapConstraints snapConstraints = SnapConstraints.None;
-    //Defines diagram's connector collection.
+    //Define the diagram's connector collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
@@ -632,7 +632,7 @@ The following code illustrates how to render connector based on the stack order.
             TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
             // Type of the connector segments.
             Type = ConnectorSegmentType.Straight
-            //Define ZIndex property.
+            //Define the ZIndex property.
             ZIndex = -2;
         };
         connectors.Add(Connector);
@@ -641,10 +641,10 @@ The following code illustrates how to render connector based on the stack order.
 ```
 ## How to set HitPadding for connector
 
-*Hit padding refers to the space around the connector's edges. To make it easy to select, it should be possible to select when mouse comes near its vicinity area. The HitPadding property allows you to customize the vicinity area while selecting. Default value is 10px. Within the hit padding region, the connector can be selected and deselected.
+*The hit padding refers to the space around the connector's edges. To make it easy to select, selecting when the mouse comes near its vicinity area should be possible. The HitPadding property allows you to customize the vicinity area while selecting. The default value is 10px. Within the hit padding region, the connector can be selected and deselected.
 
 
-The following code illustrates how to set hitpadding for connector.
+The following code illustrates how to set the HitPadding for the connector.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -657,7 +657,7 @@ The following code illustrates how to set hitpadding for connector.
 @code
 {
     SnapConstraints snapConstraints = SnapConstraints.None;
-    //Defines diagram's connector collection.
+    //Define the diagram's connector collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
@@ -670,7 +670,7 @@ The following code illustrates how to set hitpadding for connector.
             TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
             // Type of the connector segments.
             Type = ConnectorSegmentType.Straight
-            //Define Hitpadding property.
+            //Define the HitPadding property.
             HitPadding = 20,
         };
         connectors.Add(Connector);

@@ -70,16 +70,8 @@ The Diagram control provides the following event for the scroll settings.
 
 | Event Name | Event Type | Description |
 | -------- | -------- | -------- |
-| [ScrollChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_FixedUserHandleClick) | [ScrollChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandleClickEventArgs.html) | Triggered when scrollbar is updated. |
+| [ScrollChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_FixedUserHandleClick) | [ScrollChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandleClickEventArgs.html) | Triggered when the scrollbar is updated |
 
-
-[ScrollChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollChangedEventArgs.html)
-
-| Argument Name | Description |
-| -------- | -------- |
-| ZoomFactor |Returnsthe the current close-up view of the diagram. By default, ZoomFactor is set to 1. |
-| ScrollX | Returns the value of the horizontal scroll offset. By default, the ScrollX is set to 0. |
-| ScrollY | Returns the value of the vertical scroll offset. By default, the ScrollY is set to 0. |
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -97,7 +89,7 @@ The Diagram control provides the following event for the scroll settings.
 
     public void updateScrollValues()
     {
-        //Update scroll settings.
+        //Update the scroll settings.
         verticalOffset = 400;
         horizontalOffset = 200;
     }

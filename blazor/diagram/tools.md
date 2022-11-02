@@ -259,7 +259,7 @@ The following code illustrates how to draw a polygon shape.
 ```
 ## Drawing polyline connector
 
-Diagram allows to create the [Polyline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Polyline) segments with straight lines and angled vertices at the control points by clicking and moving the mouse at runtime on the diagram page.
+The diagram allows you to create the [Polyline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Polyline) segments with straight lines and angled vertices at the control points by clicking and moving the mouse at runtime on the diagram page.
 
 The following code illustrates how to draw a polyline connector.
 
@@ -273,9 +273,9 @@ The following code illustrates how to draw a polyline connector.
 
 @code
 {
-    //Reference to diagram.
+    //Reference to the diagram.
     SfDiagramComponent diagram;
-    //Defines diagram's nodes collection.
+    //Define the diagram's nodes collection.
     public DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -306,7 +306,7 @@ The following code illustrates how to draw a polyline connector.
 
     private void Polyline()
     {
-        //To draw an object once, activate draw once.
+        //Draw an object once and activate the draw once.
         diagram.InteractionController = DiagramInteractions.DrawOnce;
         //Initialize the drawing object to draw the polyline connector.
         diagram.DrawingObject = new Connector()

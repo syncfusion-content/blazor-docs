@@ -260,7 +260,7 @@ The following code example explains how to get the selection change event in the
 ```
 ## NodeCreating event
 
-* [NodeCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_NodeCreating) helps to define default properties of node. Node creating is triggered  when diagram is initialized. In the Node creating event, we can customize the node properties. 
+* The [NodeCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_NodeCreating)  helps you to define the default properties of the node. The node creation is triggered when the diagram is initialized. In the node creating event, customize the node properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -271,13 +271,13 @@ The following code example explains how to get the selection change event in the
 
 @code
 {
-    // To define node collection.
+    // Define the node collection.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
-        // A node is created and stored in nodes collection.
+        //  A node is created and stored in node collection.
         Node node = new Node()
         {
             // Position of the node.

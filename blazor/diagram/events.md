@@ -11,7 +11,7 @@ documentation: ug
 
 ## Created Event
 
-The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Created) event is triggered when the Diagram component is rendered. We can perform any action in created event, such as selecting any object in the diagram.
+The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Created) event is triggered when the Diagram component is rendered. You can perform any action in the created event such as selecting any object in the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -47,7 +47,7 @@ The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Sf
 ```
 ## Click Event
 
-The [Click](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Click) event is triggered when a node, connector or diagram is clicked. To explore about arguments, refer to the [ClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ClickEventArgs.html)
+The [Click](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Click) event is triggered when a node, connector, or a diagram is clicked. To explore about arguments, refer to the [ClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ClickEventArgs.html)
 
 
 ```cshtml
@@ -83,7 +83,7 @@ The [Click](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
 ```
 
 ## PropertyChanged Event
-The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PropertyChanged) event is triggered when the property changed at run time. To explore about arguments, refer to the [PropertyChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PropertyChangedEventArgs.html)
+The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PropertyChanged) event is triggered when the property changed at run time. To explore about arguments, refer to[PropertyChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PropertyChangedEventArgs.html)
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -110,7 +110,7 @@ The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
         };
         nodes.Add(node);
     }
-     // To notify the property changed event while change property at run time.
+     // Notify the property changed event while the change property is at run time.
     private void OnPropertyChanged(PropertyChangedEventArgs args)
     {
         //Action to be performed.
@@ -119,12 +119,12 @@ The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
 ```
 
 ## CollectionChange Event
-* When the node/connector is added or removed from diagram, the following events can be used to do the customization. It triggered when node/ connector collection is changed.
+* When the node or connector is added or removed from the diagram, the following events are used for customization. It triggers when the node or connector collection is changed.
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
-|[CollectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_CollectionChanging)|[CollectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CollectionChangingEventArgs.html)|Triggers before the node/connector is adding or removing from the diagram.|
-|[CollectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_CollectionChanged)|[CollectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CollectionChangedEventArgs.html)|Triggers  the node/connector is added or removed from the diagram.|
+|[CollectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_CollectionChanging)|[CollectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CollectionChangingEventArgs.html)|Triggers before the node or connector is added or removed from the diagram.|
+|[CollectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_CollectionChanged)|[CollectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CollectionChangedEventArgs.html)|Triggers after the node or connector is added or removed from the diagram|
 
 
 ```cshtml
@@ -152,7 +152,7 @@ The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
         };
         nodes.Add(node);
     }
-     // To notify the Collection Changed event while change collection of node/connector at run time.
+     //  Notify the Collection Changed event while changing the collection of the node or connector at run time.
     private void OnCollectionChanged(CollectionChangedEventArgs args)
     {
         //Action to be performed.
@@ -163,7 +163,7 @@ The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
 
 ## MouseEnter Event
 
-The [MouseEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_MouseEnter) event is triggered when the mouse enters a node or connector. To explore about arguments, refer to the [DiagramElementMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramElementMouseEventArgs.html)
+The [MouseEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_MouseEnter)  event is triggered when the mouse enters a node or connector. To explore about arguments, refer to the [DiagramElementMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramElementMouseEventArgs.html)
 
 
 ```cshtml
@@ -199,7 +199,7 @@ The [MouseEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 ```
 ## MouseLeave Event
 
-The [MouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_MouseLeave) event is triggered when the mouse leaves a node or connector.  To explore about arguments, refer to the [DiagramElementMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramElementMouseEventArgs.html)
+The [MouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_MouseLeave) event is triggered when the mouse leaves a node or connector. To explore about arguments, refer to the [DiagramElementMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramElementMouseEventArgs.html)
 
 
 ```cshtml
@@ -236,7 +236,7 @@ The [MouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 
 ## MouseHover Event
 
-The [MouseHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_MouseHover) event is triggered when the mouse pointer rests on the node or connector.  To explore about arguments, refer to the [DiagramElementMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramElementMouseEventArgs.html)
+The [MouseHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_MouseHover)  event is triggered when the mouse pointer rests on the node or connector. To explore about arguments, refer to the[DiagramElementMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramElementMouseEventArgs.html)
 
 
 ```cshtml
@@ -272,7 +272,7 @@ The [MouseHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 ```
 ## KeyDown Event
 
-The [KeyDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_KeyDown) event is triggered when a user presses a key. To explore about arguments, refer to the [KeyEventArgs]https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyEventArgs.html)
+The [KeyDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_KeyDown) event is triggered when the user presses a key. To explore about arguments, refer to the [KeyEventArgs]https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyEventArgs.html)
 
 
 ```cshtml
@@ -308,7 +308,7 @@ The [KeyDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Sf
 ```
 ## KeyUp Event
 
-The [KeyDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_KeyDown) event is triggered when a user releases a key. To explore about arguments, refer to the [KeyEventArgs]https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyEventArgs.html)
+The [KeyUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_KeyUp)event is triggered when a user releases a key. To explore about arguments, refer to the [KeyEventArgs]https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyEventArgs.html)
 
 
 ```cshtml
@@ -344,7 +344,7 @@ The [KeyDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Sf
 ```
 
 ## DragStart Event
-* The [DragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragStart) event is triggers when a symbol is dragged into the diagram from the symbol palette. To explore about arguments, refer to the [DragStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DragStartEventArgs.html)
+* The [DragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragStart) event is triggered when a symbol is dragged into the diagram from the symbol palette. To explore about arguments, refer to the [DragStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DragStartEventArgs.html)
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -388,7 +388,7 @@ The [KeyDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Sf
                 new Palette(){Symbols =TNodes,Title="Flow Shapes",ID="Flow Shapes" },
              };
     }
-     // To notify the drag start event.
+     //Notify the drag start event.
     private void DragStart(DragStartEventArgs args)
     {
         //Action to be performed.
@@ -397,7 +397,7 @@ The [KeyDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Sf
 ```
 
 ## Dragging Event
-* The [Dragging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Dragging) event is triggers when an element drags over another diagram element. To explore about arguments, refer to the [DraggingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DraggingEventArgs.html)
+* The [Dragging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Dragging) event is triggered when an element drags over another diagram element. To explore about arguments, refer to the [DraggingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DraggingEventArgs.html)
 
 
 
@@ -443,7 +443,7 @@ The [KeyDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Sf
                 new Palette(){Symbols =TNodes,Title="Flow Shapes",ID="Flow Shapes" },
              };
     }
-     // To notify dragging event.
+     // Notify the dragging event.
     private void Dragging(DraggingEventArgs args)
     {
         //Action to be performed.
@@ -451,7 +451,7 @@ The [KeyDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Sf
 }
 ```
 ## DragLeave Event
-* The [DragLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Dragging) event is triggers when an element drags over another diagram element. To explore about arguments, refer to the [DraggingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DragLeaveEventArgs.html)
+* The [DragLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Dragging) event is triggered when an element drags over another diagram element. To explore about arguments, refer to the[DragLeaveEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DragLeaveEventArgs.html)
 
 
 
@@ -497,7 +497,7 @@ The [KeyDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Sf
                 new Palette(){Symbols =TNodes,Title="Flow Shapes",ID="Flow Shapes" },
              };
     }
-     // To notify dragleave event.
+     // Notify the DragLeave event.
     private void DragLeave(DragLeaveEventArgs args)
     {
         //Action to be performed.
@@ -506,7 +506,7 @@ The [KeyDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Sf
 ```
 
 ## DragDrop Event
-* The [DragDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragDrop) event is triggers when a symbol is dragged and dropped from the symbol palette to the drawing area.  To explore about arguments, refer to the [DropEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DropEventArgs.html)
+* The [DragDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragDrop) event is triggered when a symbol is dragged and dropped from the symbol palette to the drawing area. To explore about arguments, refer to the [DropEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DropEventArgs.html)
 
 
 ```cshtml
@@ -551,7 +551,7 @@ The [KeyDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Sf
                 new Palette(){Symbols =TNodes,Title="Flow Shapes",ID="Flow Shapes" },
              };
     }
-     // To notify drag drop event.
+     // Notify the DragDrop event.
     private void DragDrop(DropEventArgs args)
     {
         //Action to be performed.

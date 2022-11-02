@@ -11,9 +11,9 @@ documentation: ug
 
 ## Data Loaded
 
-* [DataLoaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DataLoaded) is triggers when the diagram layout is rendered completely.
+* The [DataLoaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DataLoaded)is triggered when the diagram layout is rendered completely.
 
-The following code example explains data loaded event in the diagram.
+The following code example explains the data loaded event in the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -43,7 +43,7 @@ The following code example explains data loaded event in the diagram.
         Node node = obj as Node;
         node.Height = 40;
         node.Width = 100;
-        //Initializing the default node's shape style.
+        //Initialize the default node's shape style.
         node.Style = new ShapeStyle() { Fill = "darkcyan", StrokeWidth = 3, StrokeColor = "Black" };
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
         {
@@ -66,7 +66,7 @@ The following code example explains data loaded event in the diagram.
 
     protected override void OnInitialized()
     {
-        //Initializing node and connectors.
+        //Initialize the node and connectors.
         nodes = new DiagramObjectCollection<Node>()
         {
             new Node() { ID="node1", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Steve-Ceo"} } },

@@ -269,14 +269,14 @@ The following code example explains how to get the selection change event in the
         connectors.Add(Connector);
     }
 
-    // To notify the source point changing event before the source point  change.
+    //Notify the source point changing event before the source point change.
     private void OnSourcePointChanging(EndPointChangingEventArgs args)
     {
-        //Sets true to cancel the source point change.
+        //Set true to cancel the source point change.
         args.Cancel = true;
     }
 
-    // To notify the sourcepoint changed event after the source point has changed.
+    // Notify the source point changed event after the source point has changed.
     private void OnSourcePointChanged(EndPointChangingEventArgs args)
     {
         //Action to be performed.
@@ -323,14 +323,14 @@ The following code example explains how to get the selection change event in the
         connectors.Add(Connector);
     }
 
-    // To notify the target point changing event before the target point  change.
+    //  Notify the target point changing event before the target point change.
     private void OnTargetChanging(EndPointChangingEventArgs args)
     {
-        //Sets true to cancel the target point change.
+        //Set true to cancel the target point change
         args.Cancel = true;
     }
 
-    // To notify the target point changed event after the target point has changed.
+    // Notify the target point changed event after the target point has changed.
     private void OnTargetChanged(EndPointChangingEventArgs args)
     {
         //Action to be performed.
@@ -340,7 +340,7 @@ The following code example explains how to get the selection change event in the
 
 ## ConnectorCreating event
 
-* [ConnectorCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectorCreating) helps to define default properties of connector. Connector creating is triggered  when diagram is initialized. In the Connector creating event, we can customize the connector properties. 
+* The [ConnectorCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectorCreating)helps to define default properties of the connector. The connector creation is triggered when the diagram is initialized. In the Connector creating event, customize the connector properties. 
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -351,13 +351,13 @@ The following code example explains how to get the selection change event in the
 
 @code
 {
-    // To define connector collection.
+    // Define the connector collection.
     DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
     {
         connectors = new DiagramObjectCollection<Connector>();
-        // A connector is created and stored in connectors collection.
+        //A connector is created and stored in the connectors collection.
         Connector Connector = new Connector()
         {
             ID = "connector1",
@@ -387,7 +387,7 @@ The following code example explains how to get the selection change event in the
 ```
 ## Segment collection change event
 
-* [SegmentCollectionChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SegmentCollectionChange) Triggers when the connector’s segment collection is updated. To explore about arguments, refer to the [SegmentCollectionChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentCollectionChangeEventArgs.html).
+* The [SegmentCollectionChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SegmentCollectionChange)  triggers when the connector’s segment collection is updated. To explore aboutarguments, refer to the [SegmentCollectionChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentCollectionChangeEventArgs.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -398,13 +398,13 @@ The following code example explains how to get the selection change event in the
 
 @code
 {
-    // To define connector collection.
+    // Define the connector collection.
     DiagramObjectCollection<Connector> connectors;
 
     protected override void OnInitialized()
     {
         connectors = new DiagramObjectCollection<Connector>();
-        // A connector is created and stored in connectors collection.
+        //A connector is created and stored in the connectors collection.
         Connector Connector = new Connector()
         {
             ID = "connector1",
