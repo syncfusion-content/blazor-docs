@@ -17,22 +17,22 @@ Sample Template: https://< domain_name >/maps/basic/{z}/{x}/{y}.png
 * "${x}" - It indicates tile image x-position (tileX).
 * "${y}" - It indicates tile image y-position (tileY).
 
-In this case, the key generated for those online map service providers can also be appended to the URL. This allows to create personalized Maps with your own content and imagery. In this example, Google Maps is rendered.
+In this case, the key generated for those online map service providers can also be appended to the URL. This allows to create personalized Maps with your own content and imagery.
 
-> Refer to [Google Maps Licensing](https://developers.google.com/maps/terms#10-license-restrictions).
+Below is the example of adding TomTom map. You can follow the steps in this [link](https://developer.tomtom.com/map-display-api/documentation/product-information/introduction) to generate an API key, and then added the key to the URL.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer UrlTemplate="http://mt1.google.com/vt/lyrs=m@129&hl=en&x=tileX&y=tileY&z=level" TValue="string">
+        <MapsLayer UrlTemplate="http://api.tomtom.com/map/1/tile/basic/main/level/tileX/tileY.png?key=subscription_key" TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
 ```
 
-![Blazor Google Maps](../images/MapProviders/blazor-google-map.png)
+![Blazor TomTom Maps](../images/MapProviders/blazor-tomtom-maps.png)
 
 **Enable zooming and panning**
 
@@ -50,13 +50,13 @@ Tile Maps layer can be zoomed and panned. Zooming helps to get a closer look at 
         </MapsZoomToolbarSettings>
     </MapsZoomSettings>
     <MapsLayers>
-        <MapsLayer UrlTemplate="http://mt1.google.com/vt/lyrs=m@129&hl=en&x=tileX&y=tileY&z=level" TValue="string">
+        <MapsLayer UrlTemplate="http://api.tomtom.com/map/1/tile/basic/main/level/tileX/tileY.png?key=subscription_key" TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
 ```
 
-![Blazor Google Maps with Zooming](../images/MapProviders/blazor-google-maps-zoom.png)
+![Blazor TomTom Maps with Zooming](../images/MapProviders/blazor-tomtom-maps-zooming.png)
 
 **Adding markers and navigation line**
 
@@ -69,7 +69,7 @@ Markers can be added to the layers of tile Maps by setting the corresponding loc
     <MapsZoomSettings ZoomFactor="4"></MapsZoomSettings>
     <MapsCenterPosition Latitude="29.394708" Longitude="-94.954653"></MapsCenterPosition>
     <MapsLayers>
-        <MapsLayer UrlTemplate="http://mt1.google.com/vt/lyrs=m@129&hl=en&x=tileX&y=tileY&z=level" TValue="string">
+        <MapsLayer UrlTemplate="http://api.tomtom.com/map/1/tile/basic/main/level/tileX/tileY.png?key=subscription_key" TValue="string">
             @* Add markers *@
             <MapsMarkerSettings>
                 <MapsMarker Visible="true" Height="25" Width="15" DataSource="Cities" TValue="City">
@@ -99,7 +99,7 @@ Markers can be added to the layers of tile Maps by setting the corresponding loc
 }
 ```
 
-![Blazor Google Maps with Markers and Navigation Line](../images/MapProviders/blazor-google-maps-marker-and-line.png)
+![Blazor TomTom Maps with Markers and Navigation Line](../images/MapProviders/blazor-tomtom-maps-marker-and-line.png)
 
 **Adding sublayer**
 
@@ -110,7 +110,7 @@ Any GeoJSON shape can be rendered as a sublayer on top of the tile Maps layer fo
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer UrlTemplate="http://mt1.google.com/vt/lyrs=m@129&hl=en&x=tileX&y=tileY&z=level" TValue="string">
+        <MapsLayer UrlTemplate="http://api.tomtom.com/map/1/tile/basic/main/level/tileX/tileY.png?key=subscription_key" TValue="string">
         </MapsLayer>
         @* To add geometry shape as sublayer *@
         <MapsLayer ShapeData='new {dataOptions = "https://cdn.syncfusion.com/maps/map-data/africa.json"}'
@@ -121,7 +121,7 @@ Any GeoJSON shape can be rendered as a sublayer on top of the tile Maps layer fo
 </SfMaps>
 ```
 
-![Blazor Google Maps with Sublayer](../images/MapProviders/blazor-google-maps-sublayer.png)
+![Blazor TomTom Maps with Sublayer](../images/MapProviders/blazor-tomtom-map-sublayer.png)
 
 **Enable legend**
 
@@ -143,7 +143,7 @@ The legend can be added to the tile Maps by setting the [Visible](https://help.s
         <MapsTitleTextStyle Size="16px" FontFamily="inherit" />
     </MapsTitleSettings>
     <MapsLayers>
-        <MapsLayer UrlTemplate="http://mt1.google.com/vt/lyrs=m@129&hl=en&x=tileX&y=tileY&z=level" TValue="string">
+        <MapsLayer UrlTemplate="http://api.tomtom.com/map/1/tile/basic/main/level/tileX/tileY.png?key=subscription_key" TValue="string">
         <MapsMarkerSettings>
                 <MapsMarker Visible="true" TValue="PopulationCityDetails" DataSource="@PopulatedCities" Shape="MarkerType.Circle" Fill="#FFFFFF" ColorValuePath="Color" LegendText="Name" Height="15" Width="15">
                     <MapsMarkerTooltipSettings Visible="true" ValuePath="Population" Format="City Name: ${Name}</br>Population: ${Population} million">
@@ -180,7 +180,7 @@ The legend can be added to the tile Maps by setting the [Visible](https://help.s
 
 ```
 
-![Blazor Google Maps with Legend](../images/MapProviders/blazor-google-maps-legend.png)
+![Blazor TomTom Maps with Legend](../images/MapProviders/blazor-tomtom-map-legend.png)
 
 ## Other supportive online map service providers
 
@@ -199,10 +199,10 @@ The Maps component can also render the following online map service providers, w
         <MapsLayer UrlTemplate="https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/level/tileX/tileY?access_token=" TValue="string">
         </MapsLayer>
         @* Renders TomTom map *@
-        <!--<MapsLayer UrlTemplate="http://api.tomtom.com/map/1/tile/basic/main/level/tileX/tileY.png?key=zzVjM8webeABaPadifIf9hFpmdC9XzmG" TValue="string">
+        <!--<MapsLayer UrlTemplate="http://api.tomtom.com/map/1/tile/basic/main/level/tileX/tileY.png?key=subscription_key" TValue="string">
         </MapsLayer>-->
         @* Renders ESRI map *@
-        <!--<MapsLayer UrlTemplate="https://ibasemaps-api.arcgis.com/arcgis/rest/services/World_Imagery/MapServer/tile/level/tileY/tileX?apiKey=AAPK04316d918e224b339f72d107b5aef880I2MT0hI3L2xIX4DMcuEELiOcb4DRmxeGp_-hqlsFhziOvqBwel-uIA-87Dp9h3eI" TValue="string">
+        <!--<MapsLayer UrlTemplate="https://ibasemaps-api.arcgis.com/arcgis/rest/services/World_Imagery/MapServer/tile/level/tileY/tileX?apiKey=subscription_key" TValue="string">
         </MapsLayer>-->
     </MapsLayers>
 </SfMaps>
