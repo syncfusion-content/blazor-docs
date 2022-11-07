@@ -328,3 +328,100 @@ In the following sample, the `SfDateRangePicker` component is rendered in the fi
 ```
 
 > [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-filtering-using-date-range-picker)
+
+## Filter by multiple keywords using filter menu
+
+By default, the filtering action is performed based on the single value selected from the built-in component of the filter menu dialog. Now the DataGrid has the option to perform filtering actions based on multiple values. This can be achieved by using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) feature and [FilterByColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterByColumnAsync_System_String_System_String_System_Object_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Object_System_Object_) method of the Grid.
+
+In the following sample, the MultiSelect component is rendered in the filter menu of the Customer Name column. Using the `ValueChange` event of `SfMultiSelect`, the selected values from the multiselect dropdown can be retrieved as a list. In the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid, when `RequestType` is `Filtering`, the list(selected values) can be passed to the `FilterByColumnAsync` method to get the filtered records.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+
+<SfGrid @ref="@Grid" DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="315">
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    <GridEvents OnActionBegin="OnActionBegin" TValue="Order"></GridEvents> 
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150">
+            <FilterTemplate>
+                <SfMultiSelect TValue="string[]" Placeholder="Customer" Value="@FilteredValues.ToArray()" ShowSelectAll="true" Mode="VisualMode.CheckBox" TItem="Data" DataSource="@Dropdown">
+                    <MultiSelectFieldSettings Value="CustomerID" Text="CustomerID" ></MultiSelectFieldSettings>
+                    <MultiSelectEvents ValueChange="OnChange" TValue="string[]" TItem="Data"></MultiSelectEvents>
+                </SfMultiSelect>
+            </FilterTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    SfGrid<Order> Grid;
+    public List<Order> Orders { get; set; }
+    List<string> FilteredValues = new List<string>();
+    bool IsFilterValueChange { get; set; }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = (new DateTime[] { new DateTime(2010, 5, 1), new DateTime(2010, 5, 2), new DateTime(2010, 5, 3), })[new Random().Next(3)],
+        }).ToList();
+    }
+    public class Data
+    {
+        public string CustomerID { get; set; }
+    }
+    List<Data> Dropdown = new List<Data>
+    {
+        new Data() { CustomerID= "ANTON" },
+        new Data() { CustomerID= "ANANTR" },
+        new Data() { CustomerID= "ALFKI" },
+        new Data() { CustomerID= "BOLID" },
+        new Data() { CustomerID= "BLONP" },
+    };
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+    public void OnChange(MultiSelectChangeEventArgs<string[]> args)
+    {
+        if(args.Value?.Length > 0)
+        {
+            FilteredValues = args.Value.ToList();
+            IsFilterValueChange = true;
+        } 
+        else
+        {
+            FilteredValues = new List<string>();
+            IsFilterValueChange = true; 
+        }
+    }
+    public void OnActionBegin(ActionEventArgs<Order> Args) 
+    { 
+        if (Args.RequestType == Syncfusion.Blazor.Grids.Action.Filtering) 
+        {
+            if (IsFilterValueChange)
+            {
+                IsFilterValueChange = false;
+                Args.Cancel = true;
+                Grid.ClearFilteringAsync(); 
+                Grid.FilterByColumnAsync("CustomerID", "equal", FilteredValues, "or");
+            }
+            if (Args.CurrentFilteringColumn == null)
+            {
+                FilteredValues = new List<string>();
+            }
+        } 
+    } 
+}
+```
+
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-filter-by-multiple-keywords-using-filter-menu)

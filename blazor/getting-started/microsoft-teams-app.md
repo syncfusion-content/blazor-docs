@@ -15,27 +15,26 @@ This section explains how to create and run the first Microsoft Teams applicatio
 
 * Visual Studio 2022 [>= 17.3 version] with the required work loads (Visula studio Installer -> Workloads -> ASP.NET and web development -> Select Microsoft Teams development tools from option check list).
 
-* Microsoft Team Application to enable side loading for testing the application.
+* Microsoft Team Application - Enable side loading for testing the application.
 
 * Microsoft Edge or Google Chrome browser with developer tools.
 
 ## Create a new Microsoft Team Application with Tab using Visual Studio
 
 1. Launch Visual Studio 2022, and in the start window click **Create a new project**.
-![Create a new project in VS2022](images/maui/create-new-project.png)
 2. Search for Microsoft Teams app in Visual Studio template. Select **Microsoft teams App** and click on Next.
-![Create MSTeams App](images\MSTeams\create-msteams-app.png)
+![Create Microsoft Teams App](images\MSTeams\create-msteams-app.png)
 3. Configure the project with required project name, select the location to save the application and click on Create.
-![Configure MSTeams App](images\MSTeams\configure-msteams-app.png)
+![Configure Microsoft Teams App](images\MSTeams\configure-msteams-app.png)
 4. Select the type of Microsoft teams application to create. In this example, **Microsoft application with Tab** is selected.
-![Select type of MSTeams application](images\MSTeams\select-type-msteams-app.png)
+![Select type of Microsoft Teams Application](images\MSTeams\select-type-msteams-app.png)
 5. Wait for the project to be created, and its dependencies to be restored, then the project structure looks like below.
-![MSTeams project structure](images\MSTeams\msteams-project-structure.png)
+![Microsoft Teams project structure](images\MSTeams\msteams-project-structure.png)
 
 ## Build and run the first Microsoft Team Application
 
 1. To configure the project with the Microsoft teams application, right Click on the Project Teams Toolkit Prepare Teams App Dependencies.
-![Configure dependecies with MSTeams Application](images\MSTeams\configure-teams-dependencies.png)
+![Configure dependecies with MS Teams Application](images\MSTeams\configure-teams-dependencies.png)
 2. After configuring successfully, it dsipalys the window with Microsoft 365 Account. If you already have an account Select the available Office 365 account and click on continue. If you dont have account, create a new account and add the newly created account and click on continue.
 ![Select the MS365 account to SignIn](images\MSTeams\ms365-account-select.png)
 3. After successful login. Click on Debug -> Start Debugging or click on F5 to run the application.
@@ -200,6 +199,6 @@ Now add Syncfusion Blazor component in any razor file. Here, the Kanban componen
 {% endhighlight %}
 {% endtabs %} 
 
-![Microsoft Teams Application with Syncfusion controls](images\MSTeams\output-msteams-syncfusion.png)
+![Microsoft Teams Application with Syncfusion Blazor controls](images\MSTeams\output-msteams-syncfusion.png)
 
 > [View the complete Microsoft Teams Application with Blazor Syncfusion Controls on GitHub](https://github.com/SyncfusionExamples/Building-Apps-for-Microsoft-Teams-with-Blazor-using-Syncfusion-Components)
