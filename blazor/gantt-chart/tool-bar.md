@@ -159,7 +159,7 @@ By default, the custom toolbar items are at left position. You can change the po
 
 ## Custom toolbar
 
-Custom toolbar can be placed inside SfGantt. In this example, the toolbar checkbox used to hide/show the baseline.
+A custom toolbar can be placed inside SfGantt. The baseline in the Gantt Chart can be hide by clicking the Checkbox.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
