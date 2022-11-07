@@ -20,7 +20,7 @@ Check out the video to quickly get started with the Blazor Icon component:
 
 Syncfusion Icon component provides support to render predefined Syncfusion icons or custom font icons.
 
-You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) for the introduction and configuring the common specifications.
+You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) for the introduction and configuring the common specifications.
 
 The following code example shows the rendering of built-in Syncfusion icons from predefined [IconName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.IconName.html) options using [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_Name) property by defining them in `SfIcon` tag.
 

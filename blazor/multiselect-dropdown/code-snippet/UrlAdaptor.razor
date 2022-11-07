@@ -1,0 +1,56 @@
+﻿
+@using MultiSelect_RefreshDataAsync.Data
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+
+<div>
+<button @onclick="ClickHandler">Refresh</button>
+</div>
+
+<div>
+<SfMultiSelect  TValue="string" TItem="EmployeeData" @ref="Ddlinstance" @bind-Value="AutoVal" AllowFiltering=true Placeholder="Select a Employee" Query="RemoteDataUnidad">
+       <SfDataManager Url="@url" Adaptor="Adaptors.UrlAdaptor" @ref="Datainstance" CrossDomain="true"></SfDataManager>
+        <MultiSelectFieldSettings Value="Title" />        
+        <MultiSelectEvents TValue="string" TItem="EmployeeData" Filtering="@Filter" />
+</SfMultiSelect>
+</div>
+
+@code{
+    public string AutoVal { get; set; }
+    public string url { get; set; } = "/api/Values/3";
+
+    DataManager Datainstance { get; set; }
+
+    SfMultiSelect<string, EmployeeData> Ddlinstance { get; set; }
+
+    async Task ClickHandler()
+    {
+        Datainstance.Url = "/api/Values/5";
+        await Ddlinstance.RefreshDataAsync();
+    }
+    async Task Filter(FilteringEventArgs args)
+    {
+        args.PreventDefaultAction = true;
+        Datainstance.Url = "/api/Values/5";
+        await Ddlinstance.RefreshDataAsync();
+    }
+
+    
+    public class EmployeeData
+    {
+        public int? Id { get; set; }
+        public EmployeeName Name { get; set; }
+        public string Title { get; set; }
+    }
+
+    public class EmployeeName
+    {
+        public int FirstName { get; set; }
+        public Emp LastName { get; set; }
+        public string Text { get; set; }
+    }
+    public static List<EmployeeData> order = new List<EmployeeData>();
+    public Query RemoteDataUnidad = new Query().RequiresCount();
+ }

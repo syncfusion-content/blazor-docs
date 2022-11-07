@@ -237,4 +237,4 @@ You can populate multilevel sub menu items in DropDown menu by using context men
 
 ![Blazor DropDownMenu with multilevel sub menu items](./images/blazor-dropdownmenu-submenu.png)
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/Populate-multilevel-sub-menu-items-in-Blazor-Dropdown-Menu)
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/Populate-multilevel-sub-menu-items-in-Blazor-Dropdown-Menu)

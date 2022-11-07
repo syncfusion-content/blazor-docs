@@ -1,0 +1,39 @@
+﻿
+
+@using MultiSelect_RefreshDataAsync.Data
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+
+<div>
+<button @onclick="ClickHandler">Refresh</button>
+</div>
+<div>
+<SfMultiSelect TValue="string" TItem="Order" @ref="Ddlinstance" AllowFiltering=true>
+     <MultiSelectEvents TValue="string" TItem="Order" Filtering="@Filter" ></MultiSelectEvents>
+     <SfDataManager Url="@url" Adaptor="Adaptors.WebApiAdaptor" @ref="Datainstance"></SfDataManager>    
+     <MultiSelectFieldSettings Text="CustomerID" Value="OrderID"></MultiSelectFieldSettings>    
+</SfMultiSelect>
+</div>
+
+@code{
+    
+     public string url { get; set; } = "/api/Default/?$top=8";
+
+     DataManager Datainstance { get; set; }
+
+    SfMultiSelect<string, Order> Ddlinstance { get; set; }
+
+    async Task ClickHandler()
+    {
+       Datainstance.Url = "/api/Default/?$top=5";
+        await Ddlinstance.RefreshDataAsync();
+    }
+    async Task Filter(FilteringEventArgs args)
+    {
+        args.PreventDefaultAction = true;
+        Datainstance.Url = "/api/Default/?$top=5";
+        await Ddlinstance.RefreshDataAsync();
+    }
+  }
