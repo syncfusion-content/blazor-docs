@@ -127,4 +127,3 @@ You can refresh the position of the Speed Dial using [RefreshPositionAsync](http
 }
 
 ```
-
