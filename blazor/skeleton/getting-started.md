@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Skeleton Component
 
-This section briefly explains about how to include [Blazor Skeleton](https://www.syncfusion.com/blazor-components/blazor-skeleton) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include Blazor Skeleton component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 ## Prerequisites
 
@@ -267,7 +267,8 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 @using Syncfusion.Blazor.Notifications
 
-<SfSkeleton Height="20px" Width="100px"></SfSkeleton>
+<SfSkeleton Height="15px" Width="200px"></SfSkeleton><br/>
+<SfSkeleton Height="15px" Width="100px"></SfSkeleton>
 
 {% endhighlight %}
 {% endtabs %}
@@ -278,7 +279,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 ## Skeleton Shapes
 
-The [`shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Shape) property can be used to display skeleton in different shapes like circle, square, rectangle and text.
+The [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Shape) property can be used to display skeleton in different shapes like circle, square, rectangle and text.
 
 {% tabs %}
 {% highlight razor %}
@@ -287,9 +288,9 @@ The [`shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notificati
     <SfSkeleton Shape=SkeletonType.Circle Width="48px" CssClass="custom-css"></SfSkeleton>
     <SfSkeleton Shape="SkeletonType.Square" Width="48px"></SfSkeleton>
     <br/><br/>
-    <SfSkeleton Shape="SkeletonType.Text" Height="50px"></SfSkeleton>
+    <SfSkeleton Shape="SkeletonType.Text" Height="15px"></SfSkeleton>
     <br/><br/>
-    <SfSkeleton Shape="SkeletonType.Rectangle" Width="15px" ></SfSkeleton>
+    <SfSkeleton Shape="SkeletonType.Rectangle" Height="50px" Width="100%" ></SfSkeleton>
 </div>
 <style>
     .custom-css {
@@ -302,5 +303,7 @@ The [`shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notificati
 
 ![Blazor Skeleton Component](./images/blazor-skeleton-shape-sample.png)
 
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Skeleton).
 
+N> You can also explore our [Blazor Skeleton example](https://blazor.syncfusion.com/demos/skeleton/defaultfunctionalities) that shows how to render and configure the skeleton.
 
