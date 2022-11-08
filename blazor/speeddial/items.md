@@ -7,153 +7,125 @@ control: SpeedDial
 documentation: ug
 ---
 
-# Items in Blazor Speed Dial Component
+# Items in Blazor Speed Dial
 
-## Icons
+The Blazor Speed Dial action items can be added by using [SpeedDialItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html) tag directive.
 
-SpeedDial component can be visually represented with the use of [OpenIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_OpenIconCss) property and [CloseIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_CloseIconCss) property.
+| Fields | Type | Description |
+|------|------|-------------|
+| [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Text) | `string` | Defines the text content of SpeedDialItem. |
+| [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_IconCss) | `string` | Defines one or more CSS classes to include an icon or image in speed dial item. |
+| [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Disabled) | `boolean` | Defines whether to enable or disable the SpeedDialItem. |
+| [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_ID) | `string` | Defines a unique value for the SpeedDialItem which can be used to identify the item in event args. |
+| [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Title) | `string` | Defines the title of SpeedDialItem to display tooltip. |
 
-OpenIconCss will be visible when the Speed Dial items are hidden and CloseIconCss will be visible when Speed Dial items are shown.
+## Icons in Speed Dial items
+
+You can customize the icon and text of Speed Dial action items using [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_IconCss) and [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Text) properties.
+
+### Icon only
+
+You can show icon only in SpeedDial items by setting [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_IconCss) property. You can show tooltip on hover to show additional details to end-user by setting [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Title) property.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Buttons
 
-<div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
-    <SfSpeedDial id="speeddial" Target="#target" Position="FabPosition.BottomRight" OpenIconCss="e-icons e-edit" CloseIconCss="e-icons e-close">
-        <SpeedDialItems>
-            <SpeedDialItem IconCss="e-icons e-cut"/>
-            <SpeedDialItem IconCss="e-icons e-copy"/>
-            <SpeedDialItem IconCss="e-icons e-paste"/>
-        </SpeedDialItems>
-    </SfSpeedDial>
-</div>
+<SfSpeedDial OpenIconCss="e-icons e-edit" CloseIconCss="e-icons e-close">
+    <SpeedDialItems>
+        <SpeedDialItem Title="Cut" IconCss="e-icons e-cut"/>
+        <SpeedDialItem Title="Copy" IconCss="e-icons e-copy"/>
+        <SpeedDialItem Title="Paste" IconCss="e-icons e-paste"/>
+    </SpeedDialItems>
+</SfSpeedDial>
 
 ```
 
-![Blazor Speed Dial with Open Icon](./images/OpenIcon.png)
-![Blazor Speed Dial with Close Icon](./images/SDItemonly.png)
+![Blazor Speed Dial with Icon](./images/SDItemOnly.png)
 
-## Customization
+### Text Only
 
-For customization below types are available:
-
-* Icon Only
-* Icon with Text
-* Text Only
-
-## Speed Dial Item with Icon Only
-
-Use IconCss property to display the icon. Speed Dial can have an icon to provide the visual representation of the action. To place the icon on a Speed Dial item, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_IconCss) property to `e-icons` with the required icon CSS.
-
-In the following example, Speed Dial Item is demonstrated with only icons by providing the IconCss property.
+You can show only text in Speed Dial items by setting [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Text) property.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Buttons
 
-<div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
-    <SfSpeedDial id="speeddial" Target="#target" Position="FabPosition.BottomRight" OpenIconCss="e-icons e-edit" CloseIconCss="e-icons e-close">
-        <SpeedDialItems>
-            <SpeedDialItem IconCss="e-icons e-cut"/>
-            <SpeedDialItem IconCss="e-icons e-copy"/>
-            <SpeedDialItem IconCss="e-icons e-paste"/>
-        </SpeedDialItems>
-    </SfSpeedDial>
-</div>
+<SfSpeedDial Content="Edit">
+    <SpeedDialItems>
+        <SpeedDialItem Text="Cut"/>
+        <SpeedDialItem Text="Copy"/>
+        <SpeedDialItem Text="Paste"/>
+    </SpeedDialItems>
+</SfSpeedDial>
 
 ```
 
-![Blazor Speed Dial with Icon](./images/SDItemonly.png)
+![Blazor Speed Dial with Text](./images/SDTextOnly.png)
 
-## Speed Dial Item with Icon and Text
+### Icon with Text
 
-Use [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Text) property and [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_IconCss) property to display the icon and text.
+You can show icon along with text in Speed Dial items by setting [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_IconCss) and [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Text) properties.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Buttons
-<div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
-    <SfSpeedDial id="speeddial" Target="#target" Position="FabPosition.BottomRight" OpenIconCss="e-icons e-edit" CloseIconCss="e-icons e-close">
-        <SpeedDialItems>
-            <SpeedDialItem IconCss="e-icons e-cut" Text="Cut"/>
-            <SpeedDialItem IconCss="e-icons e-copy" Text="Copy"/>
-            <SpeedDialItem IconCss="e-icons e-paste" Text="Paste"/>
-        </SpeedDialItems>
-    </SfSpeedDial>
-</div>
+
+<SfSpeedDial OpenIconCss="e-icons e-edit" CloseIconCss="e-icons e-close" Content="Edit">
+    <SpeedDialItems>
+        <SpeedDialItem Text="Cut" IconCss="e-icons e-cut"/>
+        <SpeedDialItem Text="Copy" IconCss="e-icons e-copy"/>
+        <SpeedDialItem Text="Paste" IconCss="e-icons e-paste"/>
+    </SpeedDialItems>
+</SfSpeedDial>
 
 ```
 
 ![Blazor Speed Dial with Icon and Text](./images/SDItemwithtext.png)
 
-## Speed Dial Item with Text Only
+### Disabled
 
-Use [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Text) property to display the text.
+You can disable Speed Dial items by setting [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_Disabled) property as `true`.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Buttons
 
-<div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
-    <SfSpeedDial id="speeddial" Target="#target" Position="FabPosition.BottomRight" OpenIconCss="e-icons e-edit" CloseIconCss="e-icons e-close">
-        <SpeedDialItems>
-            <SpeedDialItem Text="Cut"/>
-            <SpeedDialItem Text="Copy"/>
-            <SpeedDialItem Text="Paste"/>
-        </SpeedDialItems>
-    </SfSpeedDial>
-</div>
+<SfSpeedDial Content="Edit">
+    <SpeedDialItems>
+        <SpeedDialItem Text="Cut" Disabled=true/>
+        <SpeedDialItem Text="Copy"/>
+        <SpeedDialItem Text="Paste"/>
+    </SpeedDialItems>
+</SfSpeedDial>
 
 ```
 
-![Blazor Speed Dial with Text only](./images/SDTextonly.png)
+![Blazor Speed Dial with Disabled](./images/SDDisabled.png)
 
 ## Animation
 
-Animation provides options to customize the animation applied while opening and closing the popup. Use [Effect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialAnimationSettings.html#Syncfusion_Blazor_Buttons_SpeedDialAnimationSettings_Effect) property to customize animation effects. Animation effect applied when open and close the speed dial items.
+The Speed Dial items can be animated during the opening and closing of the popup action items. You can customize the animation's `Effect`, `Delay`, and `Duration` by setting [SpeedDialAnimationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialAnimationSettings.html) tag directive. By default, Speed Dial animates with a `Fade` effect and supports all [SpeedDialAnimationEffect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialAnimationEffect.html) effects.
 
-| List of Effects |  |  | 
-| --- | --- | --- | 
-| Fade | FadeZoom | FlipLeftDown | 
-| FlipLeftUp | FlipRightDown| FlipRightUp|
-| FlipXDown | FlipXUp | FlipYLeft |
-| FlipYRight | SlideBottom | SlideLeft |
-| SlideRight | SlideTop | Zoom |
-
-In the following example, Speed Dial Item is demonstrated with Effect property.
+Below example demonstrates the Speed Dial items with applied Zoom effect.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Buttons
 
-<div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
-    <SfSpeedDial Target="#target" Position="FabPosition.BottomRight" OpenIconCss="e-icons e-edit" CloseIconCss="e-icons e-close">
-        <SpeedDialItems>
-            <SpeedDialItem  Text="Cut"/>
-            <SpeedDialItem  Text="Copy"/>
-            <SpeedDialItem  Text="Paste"/>
-        </SpeedDialItems>
-        <SpeedDialAnimationSettings Effect=SpeedDialAnimationEffect.Zoom></SpeedDialAnimationSettings>
-    </SfSpeedDial>
-</div>
+<SfSpeedDial OpenIconCss="e-icons e-edit" CloseIconCss="e-icons e-close" Content="Edit">
+    <SpeedDialItems>
+        <SpeedDialItem Text="Cut" IconCss="e-icons e-cut"/>
+        <SpeedDialItem Text="Copy" IconCss="e-icons e-copy"/>
+        <SpeedDialItem Text="Paste" IconCss="e-icons e-paste"/>
+    </SpeedDialItems>
+    <SpeedDialAnimationSettings Effect="SpeedDialAnimationEffect.Zoom"></SpeedDialAnimationSettings>
+</SfSpeedDial>
 
 ```
 
-![Blazor Speed Dial Animation](./images/Animation.png)
+![Blazor Speed Dial Animation](./images/SDAnimation.png)
 
 ## Template
 
-Types of Template
-*Item Template
-*PopUp Template
-
-## Item Template
-
-The template content is defined as a child content of <b>ItemTemplate</b> tag directive. The default value of template content is null. The `ItemTemplate` used to define custom template for speed dial item. Use the template’s context parameter to access SpeedDialItem properties.
-
-## PopUp Template
-
-It can display a menu of related actions `SpeedDialItems` or a custom content `PopupTemplate`. The template content is defined as a child content of <b>PopupTemplate</b> tag directive.
-
-> [To learn more about Templates](https://blazor.syncfusion.com/documentation/speeddial/template).
+The Speed Dial supports to customize the action items and entire pop-up container by setting [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemTemplate) and [PopupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_PopupTemplate) tag directive. For more details about templates, check out the link [here](https://blazor.syncfusion.com/documentation/speeddial/template).
