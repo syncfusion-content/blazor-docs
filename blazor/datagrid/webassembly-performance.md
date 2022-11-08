@@ -11,7 +11,7 @@ documentation: ug
 
 This section provides performance guidelines for using Syncfusion data grid component efficiently in Blazor WebAssembly application. The general framework Blazor WebAssembly performance best practice/guidelines can be found [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-performance-best-practices).
 
-> You can refer to our Getting Started with [Blazor Server-Side DataGrid](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) and [Blazor WebAssembly DataGrid](https://blazor.syncfusion.com/documentation/datagrid/how-to/blazor-webassembly-datagrid-using-visual-studio/) documentation pages for configuration specifications.
+> You can refer to our Getting Started with [Blazor Server-Side DataGrid](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) and [Blazor WebAssembly DataGrid](https://blazor.syncfusion.com/documentation/datagrid/how-to/blazor-webassembly-datagrid-using-visual-studio) documentation pages for configuration specifications.
 
 ## Avoid unnecessary component renders
 
@@ -78,10 +78,8 @@ In the following example:
 }
 ```
 
-### Notes
-
-* **PreventRender** method accepts boolean argument that accepts true or false to disable or enable rendering respectively.
-* **PreventRender** method can be used only after grid component completed initial rendering. Calling this method during initial rendering will not have any effect.
+> * **PreventRender** method accepts boolean argument that accepts true or false to disable or enable rendering respectively.
+> * **PreventRender** method can be used only after grid component completed initial rendering. Calling this method during initial rendering will not have any effect.
 
 ## Avoid unnecessary component renders after grid events
 
@@ -145,11 +143,9 @@ In the following example:
 }
 ```
 
-### Notes
-
-* **PreventRender** property internally overrides the **ShouldRender** method of the grid to prevent rendering.
-* It is recommended to set **PreventRender** as true for user interactive events such as RowSelected, RowSelecting etc. for better performance.
-* For events without any argument such as **DataBound**, you can use **PreventRender** method of the grid to disable rendering.
+> * **PreventRender** property internally overrides the **ShouldRender** method of the grid to prevent rendering.
+> * It is recommended to set **PreventRender** as true for user interactive events such as RowSelected, RowSelecting etc. for better performance.
+> * For events without any argument such as **DataBound**, you can use **PreventRender** method of the grid to disable rendering.
 
 ## Use paging or virtualization to load only visible rows
 
