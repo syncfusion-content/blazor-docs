@@ -15,20 +15,20 @@ The Syncfusion Blazor UI components provide the most useful [public API](https:/
 
 The following is a list of Syncfusion Blazor UI components that use the standard HTML `input` element. You can apply the [HTML input attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) and DOM events directly to the input element used on these Syncfusion Blazor components.
 
-* [SfAutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started/)
-* [SfCheckBox](https://blazor.syncfusion.com/documentation/check-box/getting-started/)
-* [SfComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started/)
-* [SfDatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started/)
-* [SfDateRangePicker](https://blazor.syncfusion.com/documentation/daterangepicker/getting-started/)
-* [SfDateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started/)
-* [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started/)
-* [SfMaskedTextBox](https://blazor.syncfusion.com/documentation/input-mask/getting-started/)
-* [SfMultiSelect](https://blazor.syncfusion.com/documentation/multiselect-dropdown/getting-started/)
-* [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started/)
-* [SfRadioButton](https://blazor.syncfusion.com/documentation/radio-button/getting-started/)
-* [SfTextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started/)
-* [SfTimePicker](https://blazor.syncfusion.com/documentation/timepicker/getting-started/)
-* [SfUpload](https://blazor.syncfusion.com/documentation/file-upload/getting-started/)
+* [SfAutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started)
+* [SfCheckBox](https://blazor.syncfusion.com/documentation/check-box/getting-started)
+* [SfComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started)
+* [SfDatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started)
+* [SfDateRangePicker](https://blazor.syncfusion.com/documentation/daterangepicker/getting-started)
+* [SfDateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started)
+* [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started)
+* [SfMaskedTextBox](https://blazor.syncfusion.com/documentation/input-mask/getting-started)
+* [SfMultiSelect](https://blazor.syncfusion.com/documentation/multiselect-dropdown/getting-started)
+* [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started)
+* [SfRadioButton](https://blazor.syncfusion.com/documentation/radio-button/getting-started)
+* [SfTextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started)
+* [SfTimePicker](https://blazor.syncfusion.com/documentation/timepicker/getting-started)
+* [SfUpload](https://blazor.syncfusion.com/documentation/file-upload/getting-started)
 
 ### Available Syncfusion properties equivalent to HTML attributes
 

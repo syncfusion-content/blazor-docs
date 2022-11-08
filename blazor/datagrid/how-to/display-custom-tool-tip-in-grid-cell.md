@@ -9,7 +9,7 @@ documentation: ug
 
 # Display Custom Tooltip in Blazor DataGrid Cell
 
-You can display custom tooltip in Grid column using [Column Template](https://blazor.syncfusion.com/documentation/datagrid/columns/#column-template) feature by rendering the [SfTooltip](https://blazor.syncfusion.com/documentation/tooltip/getting-started/) components inside the template.
+You can display custom tooltip in Grid column using [Column Template](https://blazor.syncfusion.com/documentation/datagrid/columns/#column-template) feature by rendering the [SfTooltip](https://blazor.syncfusion.com/documentation/tooltip/getting-started) components inside the template.
 
 This is demonstrated in the following sample code, where the tooltip for the **FirstName** column is rendered using [Column Template](https://blazor.syncfusion.com/documentation/datagrid/columns/#column-template).
 
@@ -25,13 +25,13 @@ This is demonstrated in the following sample code, where the tooltip for the **F
                 @{
                     var employee = (context as EmployeeData);
                     Count++;
-                    <SfTooltip Target="#txt" @key="@Count">
+                    <SfTooltip @key="@Count" Position="Position.BottomLeft">
                         <TooltipTemplates>
                             <Content>
                                 @employee.FirstName
                             </Content>
                         </TooltipTemplates>
-                        <span id="txt">@employee.FirstName</span>
+                        <span>@employee.FirstName</span>
                     </SfTooltip>
                 }
             </Template>

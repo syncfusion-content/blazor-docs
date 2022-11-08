@@ -9,7 +9,7 @@ documentation: ug
 
 # Positioning in Blazor AppBar Component
 
-This section briefly explains how to configure the position of the AppBar. The AppBar provides the following options for setting its position:
+The position of the AppBar can be set using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_Position) and [IsSticky](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAppBar.html#Syncfusion_Blazor_Navigations_SfAppBar_IsSticky) property. The AppBar provides the following options for setting its position:
 
 * Top AppBar
 * Bottom AppBar

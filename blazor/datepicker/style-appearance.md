@@ -53,4 +53,4 @@ We can render the full screen calendar popup in mobile device(s) by adding `e-po
 
 Also check the below section to customize the style and appearance of the Calendar component
 
-[Customizing Calendar's style and appearance](../calendar/style-appearance/)
+[Customizing Calendar's style and appearance](../calendar/style-appearance)

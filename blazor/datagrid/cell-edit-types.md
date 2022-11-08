@@ -984,6 +984,74 @@ The `SfTextBox` component is defined inside the EditTemplate and changes can be 
 }
 ```
 
+### Prevent the enter key functionality in multiline textbox while editing
+
+While editing a particular row in normal or dialog edit mode, pressing the ENTER key will save the changes made in the specific cell or edit form. Similarly, pressing the ENTER key while performing editing with the multiline textbox will save the changes. But in a multiline textbox, instead of this behavior, it should add a new line break in the text content while pressing the ENTER key. This can be achieved using the `OnFocus` event of the `SfTextBox`.
+
+In the following sample, the multiline textbox is rendered in the Customer ID column. The `stopPropagation()` method is called using Microsoft.JSInterop in the `OnFocus` event of the `SfTextBox` to prevent the ENTER key action when editing the Customer ID column.
+
+```cshtml
+function editKeyDown(id) {    
+    document.getElementById(id).addEventListener("keydown", function (e) {        
+        if (e.key == "Enter") {            
+            e.stopPropagation();
+        }
+    });
+}
+```
+
+```cshtml
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Grids
+@inject IJSRuntime Runtime
+
+<SfGrid DataSource="@OrderData" Toolbar=@ToolbarItems>
+    <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" EditType="EditType.DefaultEdit" TextAlign="TextAlign.Center" Width="130">
+            <EditTemplate>
+                <SfTextBox ID="CustomerID" OnFocus="Focus" ShowClearButton="false" Multiline="true" @bind-Value="((context as Order).CustomerID)">
+                </SfTextBox>
+            </EditTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" EditType="EditType.NumericEdit" TextAlign="TextAlign.Center" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Center" EditType="EditType.DropDownEdit" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public string[] ToolbarItems = new string[] { "Add", "Edit", "Delete", "Update", "Cancel" };
+    public void Focus()
+    {
+        Runtime.InvokeVoidAsync("editKeyDown", "CustomerID");
+    }
+    List<Order> OrderData = new List<Order>
+    {
+        new Order() { OrderID = 10248, CustomerID = "VINET", Freight = 32.38, ShipName = "Vins et alcools Chevalier", Verified = true },
+        new Order() { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61, ShipName = "Toms Spezialitäten", Verified = false },
+        new Order() { OrderID = 10250, CustomerID = "HANAR", Freight = 65.83, ShipName = "Hanari Carnes", Verified = true },
+        new Order() { OrderID = 10251, CustomerID = "VICTE", Freight = 41.34, ShipName = "Victuailles en stock", Verified = false },
+        new Order() { OrderID = 10252, CustomerID = "SUPRD", Freight = 51.3, ShipName = "Suprêmes délices", Verified = false },
+        new Order() { OrderID = 10253, CustomerID = "HANAR", Freight = 58.17, ShipName = "Hanari Carnes", Verified = false },
+        new Order() { OrderID = 10254, CustomerID = "CHOPS", Freight = 22.98, ShipName = "Chop-suey Chinese", Verified = true },
+        new Order() { OrderID = 10255, CustomerID = "RICSU", Freight = 148.33, ShipName = "Richter Supermarket", Verified = true },
+        new Order() { OrderID = 10256, CustomerID = "WELLI", Freight = 13.97, ShipName = "Wellington Importadora", Verified = false },
+        new Order() { OrderID = 10257, CustomerID = "HILAA", Freight = 81.91, ShipName = "HILARION-Abastos", Verified = true }
+    };
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
+        public string ShipName { get; set; }
+        public Boolean Verified { get; set; }
+    }
+}
+```
+
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-prevent-enter-key-functionality-in-multiline-textbox)
+
 ## See also
 
 * [Edit one column update the value in another column](https://www.syncfusion.com/forums/151238/edit-one-column-update-the-value-in-another-column)

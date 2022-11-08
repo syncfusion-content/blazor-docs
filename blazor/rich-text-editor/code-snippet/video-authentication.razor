@@ -1,0 +1,20 @@
+@using Syncfusion.Blazor.RichTextEditor;
+<SfRichTextEditor>
+    <RichTextEditorToolbarSettings Items="@Items" />
+        <RichTextEditorEvents FileUploading="@onFileUploading"></RichTextEditorEvents>
+        <RichTextEditorVideoSettings SaveUrl="api/Video/Save" Path="./Video/"></RichTextEditorVideoSettings>
+</SfRichTextEditor>
+@code {
+    private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Video }
+    };
+
+    private void onFileUploading(FileUploadingEventArgs args)
+    {
+        var accessToken = "Authorization_token";
+        // adding custom Form Data
+        args.CustomFormData = new List<object> { new { Authorization = accessToken } };
+    }
+}
+

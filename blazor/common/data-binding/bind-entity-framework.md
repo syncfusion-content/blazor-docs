@@ -95,7 +95,7 @@ Now, the **DbContext** must be configured using connection string and registered
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
 
-builder.Services.AddDbContext<OrdersDetailsContext>(option =>
+builder.Services.AddDbContext<LibraryContext>(option =>
                 option.UseSqlServer(builder.Configuration.GetConnectionString("LibraryDatabase")));
 
 {% endhighlight %}
@@ -116,7 +116,7 @@ namespace ODataServiceProject
         public void ConfigureServices(IServiceCollection services)
         {
             
-            services.AddDbContext<OrdersDetailsContext>(option => 
+            services.AddDbContext<LibraryContext>(option => 
                 option.UseSqlServer(Configuration.GetConnectionString("LibraryDatabase")));
             ...
         }
@@ -232,7 +232,7 @@ Now, you need to register the **LibraryService** and **ILibraryService** as serv
 {% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
 
 builder.Services.AddScoped<ILibraryService, LibraryService>();
-builder.Services.AddDbContext<OrdersDetailsContext>(option =>
+builder.Services.AddDbContext<LibraryContext>(option =>
                 option.UseSqlServer(builder.Configuration.GetConnectionString("LibraryDatabase")));
 
 {% endhighlight %}
@@ -253,7 +253,7 @@ namespace ODataServiceProject
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<ILibraryService, LibraryService>();            
-            services.AddDbContext<OrdersDetailsContext>(option => 
+            services.AddDbContext<LibraryContext>(option => 
                 option.UseSqlServer(Configuration.GetConnectionString("LibraryDatabase")));
             ...
         }

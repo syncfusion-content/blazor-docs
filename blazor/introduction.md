@@ -110,6 +110,8 @@ border:0 !important;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/split-button/getting-started">SplitButton</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/chip/getting-started">Chips</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/appearance/icons">Icons</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/floating-action-button/getting-started">Floating Action Button</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/speeddial/getting-started">Speed Dial</a></div>
     </td>
     <td>
         <div><p class="controlcategory">CALENDARS</p></div>
@@ -154,11 +156,14 @@ border:0 !important;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/treeview/getting-started">TreeView</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/file-manager/getting-started">File Manager</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/pager/getting-started">Pager (Preview)</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/appbar/getting-started">AppBar</a></div>
         <div><p class="controlcategory">NOTIFICATION</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/toast/getting-started">Toast</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/progress-bar/getting-started">Progress Bar</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/spinner/getting-started">Spinner</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/badge/getting-started">Badge</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/skeleton/getting-started">Skeleton</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/message/getting-started">Message</a></div>
     </td>
 </tr>
 </table>

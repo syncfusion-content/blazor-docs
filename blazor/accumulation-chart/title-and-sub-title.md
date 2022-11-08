@@ -175,5 +175,5 @@ The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sf
 
 ## See Also
 
-* [Grouping](./grouping/)
-* [Data label](./data-label/)
+* [Grouping](./grouping)
+* [Data label](./data-label)

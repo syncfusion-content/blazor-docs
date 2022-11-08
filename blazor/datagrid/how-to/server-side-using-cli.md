@@ -11,7 +11,7 @@ documentation: ug
 
 # Blazor DataGrid Component in Server Side App using CLI
 
-This article provides a step-by-step instructions for building Blazor Server App with `Blazor DataGrid` using the [.NET CLI](https://dotnet.microsoft.com/download/dotnet-core/3.1).
+This article provides a step-by-step instructions for building Blazor Server App with `Blazor DataGrid` using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet/3.1).
 
 ## Prerequisites
 
@@ -71,6 +71,8 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
 Now, register the Syncfusion Blazor Service in the Blazor Server App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
+> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to `true`. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to true, and this property is obsolete.
+
 * For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
 * For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
@@ -87,7 +89,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; );
+builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
 ....
@@ -107,7 +109,7 @@ namespace BlazorApp
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; );
+            services.AddSyncfusionBlazor();
         }
         ...
     }

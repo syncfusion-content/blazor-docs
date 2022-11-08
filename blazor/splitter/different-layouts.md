@@ -13,8 +13,7 @@ By using splitter control, the different layouts can be created with multiple an
 
 ## Code editor style layout
 
-**Step 1**:
-Create the element with two child to render the outer splitter.
+**Step 1**: Create the element with two child to render the outer splitter.
 
 ```cshtml
 
@@ -44,9 +43,7 @@ Create the element with two child to render the outer splitter.
 
 ```
 
-**Step 2** :
-
-Render the first pane of vertical splitter as a horizontal splitter.
+**Step 2**: Render the first pane of vertical splitter as a horizontal splitter.
 
 ```cshtml
 
@@ -167,9 +164,7 @@ Once the above configurations has been completed, the output will be displayed l
 
 ## Outlook style layout
 
-**Step 1**:
-
-Create the element with three panes and place the elements within the pane to render `Treeview`, `Listview` and `RichTextEditor`.
+**Step 1**: Create the element with three panes and place the elements within the pane to render `Treeview`, `Listview` and `RichTextEditor`.
 
 ```cshtml
 
@@ -284,9 +279,7 @@ Create the element with three panes and place the elements within the pane to re
 
 ```
 
-**Step 2** :
-
-Place the `TreeViewTemplates` inside the `SfTreeView` to render the treeview template.
+**Step 2**: Place the `TreeViewTemplates` inside the `SfTreeView` to render the treeview template.
 
 ```cshtml
 
@@ -314,9 +307,7 @@ Place the `TreeViewTemplates` inside the `SfTreeView` to render the treeview tem
 
 ```
 
-**Step 3** :
-
-Define the components DataSource in `@code` section.
+**Step 3**: Define the components DataSource in `@code` section.
 
 ```cshtml
 

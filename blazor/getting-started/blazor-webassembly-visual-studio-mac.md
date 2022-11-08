@@ -131,7 +131,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 * <kbd>⌘</kbd>+<kbd>F5</kbd> to run the app. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
 
-![Blazor Calendar Component](images/browser-output.png)
+![Blazor Calendar Component](images/output-calendar-using-blazor-webassembly.png)
 
 > You need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for more information.
 

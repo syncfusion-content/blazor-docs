@@ -265,5 +265,5 @@ The [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accumu
 
 ## See Also
 
-* [Tooltip](./tool-tip/)
-* [Legend](./legend/)
+* [Tooltip](./tool-tip)
+* [Legend](./legend)
