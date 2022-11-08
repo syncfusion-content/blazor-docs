@@ -248,7 +248,7 @@ ExpandoObject can be bound to Gantt by assigning to the `DataSource` property. G
             ParentRecord.TaskID = ++ParentRecordID;
             ParentRecord.TaskName = "Parent Task " + i;
             ParentRecord.StartDate = start.AddDays(i*ParentRecordID);
-            ParentRecord.Progress = (i* ParentRecordID * 5);
+            ParentRecord.Progress = (i* ParentRecordID)% 5 * i *2;
             ParentRecord.Duration = ParentRecordID % 2 == 0 ? (32).ToString() : (76).ToString();
             ParentRecord.ParentID = null;
             Data.Add(ParentRecord);
@@ -265,7 +265,7 @@ ExpandoObject can be bound to Gantt by assigning to the `DataSource` property. G
             ChildRecord.TaskID = ++ParentRecordID;
             ChildRecord.TaskName = "Child Task " + ++ChildRecordID;
             ChildRecord.StartDate = start.AddDays(i*ParentRecordID);
-            ChildRecord.Progress = (i* ParentRecordID * 5);
+            ChildRecord.Progress = (i* ParentRecordID)% 5 * i *2;
             ChildRecord.Duration = ParentRecordID % 3 == 0 ? (64).ToString() : (98).ToString();
             ChildRecord.ParentID = ParentId;
             Data.Add(ChildRecord);
