@@ -355,7 +355,7 @@ By default, the width of the popup list automatically adjusts according to the D
 
 ## Get selected value
 
-You can get the selected value of the DropDownList component from the `args.Value` property in the [ValueChange](https://blazor.syncfusion.com/documentation/dropdown-list/events#valuechange) event argument.  
+You can get the selected value of the DropDownList component in [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event using [ChangeEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Value) property. 
 
 
 {% highlight cshtml %}
@@ -364,7 +364,7 @@ You can get the selected value of the DropDownList component from the `args.Valu
 
 {% endhighlight %}
 
-You can get the complete object list of the selected value from the `args.ItemData` property in the [ValueChange](https://blazor.syncfusion.com/documentation/dropdown-list/events#valuechange) event argument.
+You can get the complete object list of the selected value in [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event using [ChangeEventArgs.ItemData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_ItemData) property.
 
 
 {% highlight cshtml %}
