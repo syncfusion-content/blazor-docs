@@ -7,14 +7,14 @@ control: DropDown List
 documentation: ug
 ---
 
-# Value Binding
+# Value Binding in Dropdown List
 
 The value binding as the process of passing values between a component and its parent. There are two methods for binding values, as shown below.
 
     * bind-Value Binding 
     * bind-Index Binding
 
-## Bind Value Binding
+## Bind value binding
 
 The value binding can be achieved by using `@bind-Value` attribute and it supports string, int, Enum, bool and complex types. If component value has been changed, it will affect all places where you bind the variable for the `bind-value` attribute.
 
@@ -26,7 +26,7 @@ The value binding can be achieved by using `@bind-Value` attribute and it suppor
 
 ![Blazor DropDownList with Bind Value](./images/value-binding/blazor_dropdown_bind-value.png)
 
-## Index Value Binding
+## Index value binding
 
 The Index value binding can be achieved by using `@bind-Index` attribute and it supports int and int nullable types. By using this attribute you can bind the values respective to its index.
 
@@ -52,7 +52,7 @@ The following code demonstrates, Value and Text field of the DropDownList compon
 
 ![Blazor DropDownList with Text and Value](./images/value-binding/blazor_dropdown_text-and-value.png)
 
-## Primitive Type Binding
+## Primitive type binding
 
 The DropDownList has support to load array of primitive data such as strings and numbers.
 
@@ -76,7 +76,7 @@ The following code demonstrates array of int as datasource to the DropDownList c
 
 ![Blazor DropDownList with Primitive Type as int](./images/value-binding/blazor_dropdown_primitive-type-int.png)
 
-## Object Binding
+## Object binding
 
 object data binding refers a memory location where object data is stored.
 
@@ -90,7 +90,7 @@ In the following example, `Game` column has been mapped to the `Value` field.
 
 ![Blazor DropDownList with object values](./images/value-binding/blazor_dropdown_object-binding.png)
 
-## Enum Binding
+## Enum binding
 
 You can bind enum data to DropDownList component. The following code helps you get a string value from the enumeration data.
 
@@ -102,7 +102,7 @@ You can bind enum data to DropDownList component. The following code helps you g
 
 ![Blazor DropDownList with Enum Data](./images/value-binding/blazor_dropdown_enum-binding.png)
 
-## Show or Hide Clear Button
+## Show or hide clear button
 
 You can use [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowClearButton) property to specify whether to show or hide the clear button. When the clear button is clicked, `Value`, `Text`, and `Index` properties are reset to null.
 
@@ -118,11 +118,11 @@ The below sample demonstrates `string` is used as `TValue`. So, if we clear the 
 
 ![Blazor DropDownList with clear button](./images/value-binding/blazor_dropdown_show-hide-clear-button.png)
 
-## Dynamically Change TItem
+## Dynamically change TItem
 
 You can change the `TItem` property dynamically which defines the datasource type of the DropDownList component with help of `@typeparam` directive. The below sample demonstration explains how  to change  the TItem dynamically with different type of datasource.
 
-### Creating Generic DropDownList component
+### Creating generic dropdownList component
 
 First, you need to create a `DropDownList.razor` file in the `/Pages` folder as a parent component. Also add a Parameter property for a List as `<TItem>` and `TValue`.
 
@@ -148,7 +148,7 @@ First, you need to create a `DropDownList.razor` file in the `/Pages` folder as 
 {% endtabs %}
 {% endhighlight razor %}
 
-### Usage of Generic component with different type
+### Usage of generic component with different type
 
 Then you can render the Generic DropDownList component with required TValue and TItem in the respective razor components. 
 
