@@ -107,7 +107,7 @@ You can refresh the position of the Speed Dial using [RefreshPositionAsync](http
 @using Syncfusion.Blazor.Buttons
 
 <div id="target" style="min-height:350px; position:relative; border:1px solid;">
-    <SfButton style="float:right"  OnClick="RefreshPosition">Refresh</SfButton>
+    <SfButton OnClick="RefreshPosition">Refresh</SfButton>
     <SfSpeedDial @ref="speeddial" Target="#target" Position="FabPosition.MiddleRight" OpenIconCss="e-icons e-edit" CloseIconCss="e-icons e-close">
         <SpeedDialItems>
             <SpeedDialItem IconCss="e-icons e-cut"/>
