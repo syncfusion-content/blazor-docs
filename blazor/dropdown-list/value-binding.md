@@ -16,7 +16,7 @@ The value binding as the process of passing values between a component and its p
 
 ## Bind value binding
 
-The value binding can be achieved by using `@bind-Value` attribute and it supports string, int, Enum, bool and complex types. If component value has been changed, it will affect all places where you bind the variable for the `bind-value` attribute.
+The value binding can be achieved by using [`@bind-Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute and it supports string, int, Enum, bool and complex types. If component value has been changed, it will affect all places where you bind the variable for the [`@bind-value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute.
 
 {% highlight cshtml %}
 
@@ -28,7 +28,7 @@ The value binding can be achieved by using `@bind-Value` attribute and it suppor
 
 ## Index value binding
 
-The Index value binding can be achieved by using `@bind-Index` attribute and it supports int and int nullable types. By using this attribute you can bind the values respective to its index.
+The Index value binding can be achieved by using [`@bind-Index`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Index) attribute and it supports int and int nullable types. By using this attribute you can bind the values respective to its index.
 
 {% highlight cshtml %}
 
@@ -40,7 +40,7 @@ The Index value binding can be achieved by using `@bind-Index` attribute and it 
 
 ## Text and Value
 
-The DropdownList [DropDownListFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value) and [DropDownListFieldSettings.Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Text) properties point to the corresponding names of the model. The `Value` field mapped to the component maintains the unique value of the item in the data source, and the `Text` field is mapped to display the text in the popup list items for the respective text value.
+The DropdownList [`DropDownListFieldSettings.Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value) and [`DropDownListFieldSettings.Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Text) properties point to the corresponding names of the model. The [`DropDownListFieldSettings.Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value) mapped to the component maintains the unique value of the item in the data source, and the [`DropDownListFieldSettings.Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Text) is mapped to display the text in the popup list items for the respective text value.
 
 The following code demonstrates, Value and Text field of the DropDownList component For instance, the selected item is `Badminton` (Text Field i.e., Game) but the value field holds `Game2` (Value Field i.e., ID).
 
@@ -80,7 +80,7 @@ The following code demonstrates array of int as datasource to the DropDownList c
 
 object data binding refers a memory location where object data is stored.
 
-In the following example, `Game` column has been mapped to the `Value` field.
+In the following example, `Game` column has been mapped to the [`DropDownListFieldSettings.Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value).
 
 {% highlight cshtml %}
 
