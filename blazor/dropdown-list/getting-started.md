@@ -7,7 +7,7 @@ control: DropDown List
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started in Dropdown List
 
 ## Overview
 
@@ -353,7 +353,7 @@ By default, the width of the popup list automatically adjusts according to the D
 
 ![Changing Popup List Height in Blazor DropDownList](./images/blazor-dropdownlist-popup-height.png)
 
-## Get Selected Value
+## Get selected value
 
 You can get the selected value of the DropDownList component from the `args.Value` property in the [ValueChange](https://blazor.syncfusion.com/documentation/dropdown-list/events#valuechange) event argument.  
 
