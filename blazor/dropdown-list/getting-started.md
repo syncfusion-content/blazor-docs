@@ -7,7 +7,7 @@ control: DropDown List
 documentation: ug
 ---
 
-# Getting Started in Dropdown List
+# Getting Started with Dropdown List
 
 ## Overview
 
