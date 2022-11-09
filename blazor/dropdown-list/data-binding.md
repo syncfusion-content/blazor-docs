@@ -72,3 +72,70 @@ Index value binding can be achieved by using `bind-Index` attribute and it suppo
     };
 }
 ```
+
+## Get the datasource of dropdown list
+
+You can get the datasource from the component instance. In the below sample rendered with button click in which you will get the data form component instance.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/data-binding/get-datasource.razor %}
+
+{% endhighlight %}
+
+## Events
+
+### DataBound
+
+The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_DataBound) event triggers when the data source is populated in the popup list. After datasource is loaded databound event is triggered
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/data-binding/data-bound.razor %}
+
+{% endhighlight %}
+
+### OnActionBegin
+
+The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnActionBegin) event triggers before fetching data from the remote server.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/data-binding/action-begin.razor %}
+
+{% endhighlight %}
+
+### OnActionComplete
+
+The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnActionComplete) event triggers after data is fetched successfully from the remote server. After datasource is loaded databound event is triggered
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/data-binding/action-complete.razor %}
+
+{% endhighlight %}
+
+### OnActionFailure
+
+The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnActionFailure) event triggers when the data fetch request from the remote server fails.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/data-binding/action-failure.razor %}
+
+{% endhighlight %}
+
+
+### Complex data type
+
+#### Customizing TItem using Action keyword
+
+In the below code snippet, using Action keyword in TItem of the dropdown list
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/data-binding/customize-TItem.razor %}
+
+{% endhighlight %}
+
+![Blazor DropdownList with Complex data type of Customizing TItem](./images/data-binding/blazor_dropdown_customize-TItem.png)
