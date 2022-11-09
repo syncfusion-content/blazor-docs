@@ -29,7 +29,7 @@ You can get the complete object list of the selected value in [`ValueChange`](ht
 
 ## Preselected value on OnInitializedAsync
 
-You can bind pre-selected value to the DropDownList component using [`@bind-Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) property. Assign the value property inside [`OnInitializedAsync`](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-6.0#component-initialization-oninitializedasync) lifecycle. The below sample demonstrates how to bind the value on initial rendering of the component.
+You can bind pre-selected value to the DropDownList component using [`@bind-Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute. Assign the value property inside [`OnInitializedAsync`](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-6.0#component-initialization-oninitializedasync) lifecycle. The below sample demonstrates how to bind the value on initial rendering of the component.
 
 {% highlight cshtml %}
 
@@ -41,7 +41,7 @@ You can bind pre-selected value to the DropDownList component using [`@bind-Valu
 
 ## Programmatically change the selected value
 
-You can change the component value programmatically or externally by the component instance using [`@ref`](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ref) property of the component. The below sample demonstrates how to change the value of the component using click event of the button component.
+You can change the component value programmatically or externally by the component instance using [`@ref`](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ref) attribute of the component. The below sample demonstrates how to change the value of the component using click event of the button component.
 
 {% highlight cshtml %}
 
@@ -53,7 +53,7 @@ You can change the component value programmatically or externally by the compone
 
 ## Preselect value with index
 
-You can bind pre-selected value to the component also using [`@bind-Index`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Index) property. It binds the respective value present in the binded index.
+You can bind pre-selected value to the component also using [`@bind-Index`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Index) attribute. It binds the respective value present in the binded index.
 
 > It will dependent on [`SortOrder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SortOrder.html) type. It will bind the value to the component with sorted data if the corresponding property is defined.
 The below sample demonstrates how to bind the index on initial rendering.
