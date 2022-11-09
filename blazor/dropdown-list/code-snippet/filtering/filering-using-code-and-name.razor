@@ -1,0 +1,49 @@
+@using Syncfusion.Blazor.DropDowns;
+
+@using Syncfusion.Blazor.DropDowns;
+@using Syncfusion.Blazor.Data;
+@using System.IO
+
+
+<SfDropDownList @ref="ddlObj" AllowFiltering="true" TValue="Moc" TItem="Moc" DataSource="@data">
+    <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
+    <DropDownListEvents Filtering="OnFiltering" TValue="Moc" TItem="Moc"></DropDownListEvents>
+    <DropDownListTemplates TItem="Moc">
+        <ItemTemplate Context="itemContext">
+            @{
+                Moc sa = (itemContext as Moc);
+            }
+            @if (!string.IsNullOrEmpty(sa.ID))
+            {
+                <span>@(sa.ID + " - " + sa.Text)</span>
+            }
+        </ItemTemplate>
+    </DropDownListTemplates>
+</SfDropDownList>
+
+@code{
+    SfDropDownList<Moc, Moc> ddlObj;
+    public Query query { get; set; }
+    public class Moc
+    {
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+    List<Moc> data = new List<Moc>
+{
+      new Moc() { ID= "12H", Text= "American Football" },
+      new Moc() { ID= "14G", Text= "Badminton" },
+      new Moc() { ID= "17F", Text= "Basketball" }
+    };
+    public async Task OnFiltering(FilteringEventArgs args)
+    {
+        args.PreventDefaultAction = true;
+        var orWhere = WhereFilter.Or(new List<WhereFilter> {
+            new WhereFilter() { Field = "Text", Operator = "contains", value = args.Text, IgnoreCase = true },
+            new WhereFilter() { Field = "ID", Operator = "contains", value = args.Text, IgnoreCase = true }
+        });
+        var query = new Query().Where(orWhere);
+        query = !string.IsNullOrEmpty(args.Text) ? query : new Query();
+        await ddlObj.Filter(data, query);
+    }
+}

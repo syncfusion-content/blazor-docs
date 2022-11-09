@@ -9,7 +9,7 @@ documentation: ug
 
 # Filtering in Blazor DropDown List Component
 
-The DropDownList has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is enabled. The filter operation starts as soon as you start typing characters in the search box.
+The DropDownList has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is enabled. The filter operation starts as soon as you start typing characters in the search box. Default value of `AllowFiltering` is false and in the touch mode the virtual keyboard is not opened while focusing the component.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -107,3 +107,15 @@ The DropDownList component filter queries can be customized. You can also use yo
     }
 }
 ```
+
+## Added both code and name in popup
+
+In the below sample both the code and name are concatenated and filtering is done by both code and name.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/filtering/filtering-using-code-and-name.razor %}
+
+{% endhighlight %}
+
+![Blazor DropdownList with Remote Data filtering](./images/filtering/blazor_dropdown_filter-using-code-name.png)
