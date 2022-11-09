@@ -19,7 +19,7 @@ Sample Template: https://< domain_name >/maps/basic/{z}/{x}/{y}.png
 
 In this case, the key generated for those online map service providers can also be appended to the URL. This allows to create personalized Maps with your own content and imagery.
 
-Below is the example of adding TomTom map. You can follow the steps in this [link](https://developer.tomtom.com/map-display-api/documentation/product-information/introduction) to generate an API key, and then added the key to the URL.
+Following is an example of how to add a TomTom map. You can generate an API key by following the steps in this [link](https://developer.tomtom.com/map-display-api/documentation/product-information/introduction) and then adding the key to the URL.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -56,7 +56,7 @@ Tile Maps layer can be zoomed and panned. Zooming helps to get a closer look at 
 </SfMaps>
 ```
 
-![Blazor TomTom Maps with Zooming](../images/MapProviders/blazor-tomtom-maps-zooming.png)
+![Blazor TomTom Maps with Zooming and Panning](../images/MapProviders/blazor-tomtom-maps-zooming.png)
 
 **Adding markers and navigation line**
 
@@ -187,7 +187,6 @@ The legend can be added to the tile Maps by setting the [Visible](https://help.s
 The Maps component can also render the following online map service providers, which are listed below.
 
 * MapBox
-* TomTom
 * ESRI
 
 ```cshtml
@@ -198,9 +197,6 @@ The Maps component can also render the following online map service providers, w
         @* Renders Mapbox map *@
         <MapsLayer UrlTemplate="https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/level/tileX/tileY?access_token=" TValue="string">
         </MapsLayer>
-        @* Renders TomTom map *@
-        <!--<MapsLayer UrlTemplate="http://api.tomtom.com/map/1/tile/basic/main/level/tileX/tileY.png?key=subscription_key" TValue="string">
-        </MapsLayer>-->
         @* Renders ESRI map *@
         <!--<MapsLayer UrlTemplate="https://ibasemaps-api.arcgis.com/arcgis/rest/services/World_Imagery/MapServer/tile/level/tileY/tileX?apiKey=subscription_key" TValue="string">
         </MapsLayer>-->
@@ -209,5 +205,3 @@ The Maps component can also render the following online map service providers, w
 ```
 
 ![Blazor MapBox Map](../images/MapProviders/blazor-mapbox-map.png)
-
-![Blazor TomTom Map](../images/MapProviders/blazor-tomtom-map.png)
