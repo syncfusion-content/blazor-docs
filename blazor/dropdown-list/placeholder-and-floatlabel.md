@@ -7,11 +7,11 @@ control: DropDown List
 documentation: ug
 ---
 
-# Placeholder and Float Label
+# Placeholder and Float Label in Dropdown List
 
 ## Placeholder in the Blazor DropDownList component
 
-You can use [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Placeholder) property to display small description of the expected value in the input. In the below sample demonstration, you have to set `Select a game` as Placeholder property value, which will set respective value to the placeholder attribute of the input element in the DOM.
+You can use [`Placeholder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Placeholder) property to display small description of the expected value in the input. In the below sample demonstration, you have to set `Select a game` as Placeholder property value, which will set respective value to the placeholder attribute of the input element in the DOM.
 
 {% highlight cshtml %}
 
