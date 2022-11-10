@@ -41,8 +41,8 @@ The `Linear` directions of Speed Dial are as follows:
 
 ```
 
-![Blazor Speed Dial Linear Mode](./images/SDLinear.png)
+![Blazor Speed Dial Linear Mode](./images/Blazor-SpeedDial-LinearMode.png)
 
 ## Radial Display Mode (Radial Menu)
 
-In `Radial` mode, Speed Dial action items are displayed in a circular pattern like a radial menu. For more details about radial mode, check out the link [here](https://blazor.syncfusion.com/documentation/speeddial/radial-menu).
+In `Radial` mode, Speed Dial action items are displayed in a circular pattern like a radial menu. For more details about radial mode, check out the link [here](https://blazor.syncfusion.com/documentation/speeddial/getting-started).

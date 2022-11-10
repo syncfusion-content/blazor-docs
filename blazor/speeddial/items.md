@@ -9,7 +9,7 @@ documentation: ug
 
 # Items in Blazor Speed Dial
 
-The Blazor Speed Dial action items can be added by using [SpeedDialItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html) tag directive.
+The action items in Blazor Speed Dial can be added by using [SpeedDialItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html) tag directive.
 
 | Fields | Type | Description |
 |------|------|-------------|
@@ -41,7 +41,7 @@ You can show icon only in SpeedDial items by setting [IconCss](https://help.sync
 
 ```
 
-![Blazor Speed Dial with Icon](./images/SDIcon.png)
+![Blazor Speed Dial with Icon](./images/Blazor-SpeedDial-Icon.png)
 
 ### Text Only
 
@@ -61,7 +61,7 @@ You can show only text in Speed Dial items by setting [Text](https://help.syncfu
 
 ```
 
-![Blazor Speed Dial with Text](./images/SDText.png)
+![Blazor Speed Dial with Text](./images/Blazor-SpeedDial-Text.png)
 
 ### Icon with Text
 
@@ -81,7 +81,7 @@ You can show icon along with text in Speed Dial items by setting [IconCss](https
 
 ```
 
-![Blazor Speed Dial with Icon and Text](./images/SDItemwithtext.png)
+![Blazor Speed Dial with Icon and Text](./images/Blazor-SpeedDial-Iconwithtext.png)
 
 ### Disabled
 
@@ -101,7 +101,7 @@ You can disable Speed Dial items by setting [Disabled](https://help.syncfusion.c
 
 ```
 
-![Blazor Speed Dial with Disabled](./images/SDDisabled.png)
+![Blazor Speed Dial with Disabled](./images/Blazor-SpeedDial-DisabledItem.png)
 
 ## Animation
 
@@ -124,8 +124,8 @@ Below example demonstrates the Speed Dial items with applied Zoom effect.
 
 ```
 
-![Blazor Speed Dial Animation](./images/SDAnimation.png)
+![Blazor Speed Dial Animation](./images/Blazor-SpeedDial-Animation.png)
 
 ## Template
 
-The Speed Dial supports to customize the action items and entire pop-up container by setting [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemTemplate) and [PopupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_PopupTemplate) tag directive. For more details about templates, check out the link [here](https://blazor.syncfusion.com/documentation/speeddial/template).
+The Speed Dial supports to customize the action items and entire pop-up container by setting [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemTemplate) and [PopupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_PopupTemplate) tag directive. For more details about templates, check out the link [here](https://blazor.syncfusion.com/documentation/speeddial/getting-started).
