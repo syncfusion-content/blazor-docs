@@ -13,7 +13,7 @@ documentation: ug
 
 The Blazor Pager component has an option to split the collection of data sets (local data) into sectioned pages.
 
-In the following sample, initially list view items are displayed per page based on the Pager's PageSize property. While navigating the numeric items in the Pager, the [Click](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_Click) event will be triggered. In the `Click` event of the Pager, we have calculated the number of items displayed per page in the ListView component. Here, items in the ListView component are loaded from local data collection.
+In the following sample, initially list view items are displayed per page based on the Pager's PageSize property. While navigating the numeric items in the Pager, the `ItemClick` event will be triggered. In the `ItemClick` event of the Pager, we have calculated the number of items displayed per page in the ListView component. Here, items in the ListView component are loaded from local data collection.
 
 ```csharp
 @using Syncfusion.Blazor.Data
@@ -28,7 +28,7 @@ In the following sample, initially list view items are displayed per page based 
     </SfListView>
     }
      <div class="pager-container">
-        <SfPager @ref="@Page" PageSize=5  NumericItemsCount=5 TotalItemsCount=25 Click="Click">
+        <SfPager @ref="@Page" PageSize=5  NumericItemsCount=5 TotalItemsCount=25 ItemClick="Click">
         </SfPager>
     </div>
 </div>
@@ -68,7 +68,7 @@ In the following sample, initially list view items are displayed per page based 
         ListData.Add(new DataModel { ProductID = 24, ProductName = "Guaraná Fantástica" });
         ListData.Add(new DataModel { ProductID = 25, ProductName = "NuNuCa Nuß-Nougat-Creme" });
     }
-    public void Click(PageClickEventArgs args)
+    public void Click(PagerItemClickEventArgs args)
     {
         SkipValue = (args.CurrentPage * Page.PageSize) - Page.PageSize;
         TakeValue = Page.PageSize;
@@ -96,7 +96,7 @@ In the following sample, initially list view items are displayed per page based 
 
 The Blazor Pager component has an option to split the collection of data sets (remote data) into sectioned pages.
 
-In the following sample, initially list view items are displayed per page based on the Pager's PageSize property. While navigating the numeric items in the Pager, the [Click](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_Click) event will be triggered. In the `Click` event of the Pager, we have calculated the number of items displayed per page in the ListView component. Here, items in the ListView component are loaded from the remote data services.
+In the following sample, initially list view items are displayed per page based on the Pager's PageSize property. While navigating the numeric items in the Pager, the `ItemClick` event will be triggered. In the `ItemClick` event of the Pager, we have calculated the number of items displayed per page in the ListView component. Here, items in the ListView component are loaded from the remote data services.
 
 ```csharp
 @using Syncfusion.Blazor.Lists
@@ -113,7 +113,7 @@ In the following sample, initially list view items are displayed per page based 
     </SfListView>
     }
      <div class="pager-container">
-        <SfPager @ref="@Page" PageSize=5  NumericItemsCount=5 TotalItemsCount=25 Click="Click">
+        <SfPager @ref="@Page" PageSize=5  NumericItemsCount=5 TotalItemsCount=25 ItemClick="Click">
         </SfPager>
     </div>
 </div>
@@ -127,7 +127,7 @@ In the following sample, initially list view items are displayed per page based 
         public int ProductID { get; set; }
         public string ProductName { get; set; }
     }
-    public void Click(PageClickEventArgs args)
+    public void Click(PagerItemClickEventArgs args)
     {
         SkipValue = (args.CurrentPage * Page.PageSize) - Page.PageSize;
         TakeValue = Page.PageSize;

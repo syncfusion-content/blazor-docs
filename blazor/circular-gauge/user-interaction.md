@@ -29,7 +29,7 @@ By default, the tooltip is not visible. You can enable the tooltip by setting th
     * [FontStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) - Specifies font style for tooltip text
     * [FontWeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) - Specifies font weight for tooltip text
     * [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) - Specifies font family for tooltip
-    * [Opacity](https://help.syncfusion.com/cr/blazor/) -  Specifies opacity for tooltip text
+    * [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.html) -  Specifies opacity for tooltip text
     * [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) - Specifies size for tooltip text
 
 ```cshtml
@@ -201,13 +201,19 @@ The ranges can be dragged over the axis values by clicking and dragging the rang
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge EnableRangeDrag="true">
-<CircularGaugeAxes >
-    <CircularGaugeAxis>
-        <CircularGaugePointers>
-            <CircularGaugePointer Value="50">
-            </CircularGaugePointer>
-        </CircularGaugePointers>
-    </CircularGaugeAxis>
-</CircularGaugeAxes>
+    <CircularGaugeAxes>
+        <CircularGaugeAxis>
+            <CircularGaugePointers>
+                <CircularGaugePointer Value="50">
+                </CircularGaugePointer>
+            </CircularGaugePointers>
+            <CircularGaugeRanges>
+                <CircularGaugeRange Start="0" End="80" Radius="108%" Color="#30B32D" StartWidth="8" EndWidth="8">
+                </CircularGaugeRange>
+            </CircularGaugeRanges>
+        </CircularGaugeAxis>
+    </CircularGaugeAxes>
 </SfCircularGauge>
 ```
+
+![Blazor Circular Gauge with Dragging Range](./images/blazor-circulargauge-dragging-range.gif)

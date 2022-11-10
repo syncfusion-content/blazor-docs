@@ -42,7 +42,7 @@ The steps below show how to install the Essential Studio Blazor installer.
 
 3. After reading the License Terms and Privacy Policy, check the "**I agree to the License Terms and Privacy Policy**" check box. Click the Next button.
 
-4. Change the install and sample locations here. You can also change the Additional settings. Click Next\Install to install with the default settings.
+4. Change the install and sample locations here. You can also change the Additional settings. Click Next/Install to install with the default settings.
 
    ![Web Offline Installer Settings Wizard](images/webofflineinstaller-4.png)
 

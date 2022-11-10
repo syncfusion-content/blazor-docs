@@ -394,6 +394,7 @@ Similarly, if the user navigates to a new page, the root nodes of that specific 
 > * By default, **SfDataManager** uses **ODataAdaptor** for remote data-binding.
 > * Based on the RESTful web services, set the corresponding adaptor to SfDataManager. Refer [here](https://ej2.syncfusion.com/documentation/data/adaptors/?no-cache=1) for more details.
 > * Filtering and searching server-side data operations are not supported in load on demand.
+> * Only Self-Referential type data is supported with remote data binding in tree grid
 
 ### Offline mode
 
@@ -640,6 +641,21 @@ namespace WebAPI.Controller
             }
         }
 
+    }
+    public static class SortingExtend
+    {    
+        public static IQueryable<T> Sort<T>(this IQueryable<T> source, string sortBy)    
+        {        
+            if (source == null)            
+                    throw new ArgumentNullException("source");
+
+            if (string.IsNullOrEmpty(sortBy))            
+                    throw new ArgumentNullException("sortBy");
+
+            source = (IQueryable<T>)source.OrderBy(sortBy);
+
+            return source;    
+        }
     }
 }
 

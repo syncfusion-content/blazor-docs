@@ -48,7 +48,7 @@ You can invoke the search or find text functionality programmatically using the 
     SfDocumentEditorContainer container;
     protected void FindAll(object args)
     {
-        container.DocumentEditor.Search.FindAll("Some text", FindOption.None);
+        container.DocumentEditor.Search.FindAllAsync("Some text", FindOption.None);
     }
 }
 ```

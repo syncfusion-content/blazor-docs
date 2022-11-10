@@ -278,7 +278,7 @@ Both the width and height properties allow setting pixels/numbers/percentage. Th
 
 You can initialize single toast instance and use it all over application by creating server. Refer below steps to create service to show toast from any page.
 
-1. Create a toast service to inject in pages to show toast messages from anywhere. Here, title and content can be passed to show the toast message. 
+**Step 1**: Create a toast service to inject in pages to show toast messages from anywhere. Here, title and content can be passed to show the toast message. 
 
 ```c#
 public class ToastOption
@@ -298,7 +298,7 @@ public class ToastService
 }
 ``` 
 
-2. Add the `ToastService` to services collection in **Program.cs**.
+**Step 2**: Add the `ToastService` to services collection in **Program.cs**.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Program.cs" hl_lines="13 14" %}
@@ -342,7 +342,7 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
     
-3. Create `ToastComponent` which shows `SfToast` based on `ToastService` notification.
+**Step 3**: Create `ToastComponent` which shows `SfToast` based on `ToastService` notification.
         
 {% tabs %}
 {% highlight cshtml tabtitle="ToastComponent.razor" hl_lines="13 14" %}
@@ -390,7 +390,7 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
     
-4. Add `ToastComponent` create in above step in `MainLayout.razor`.
+**Step 4**: Add `ToastComponent` create in above step in `MainLayout.razor`.
 
 {% tabs %}
 {% highlight cshtml tabtitle="MainLayout.razor" hl_lines="21" %}
@@ -420,7 +420,7 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
     
-5. Now, you can inject `ToastService` in any page and call `ToastService.ShowToast()` method to show toast notifications.
+**Step 5**: Now, you can inject `ToastService` in any page and call `ToastService.ShowToast()` method to show toast notifications.
 
 {% tabs %}
 {% highlight cshtml tabtitle="RAZOR" hl_lines="3 10 11 12 13 14" %}
@@ -445,5 +445,5 @@ app.Run();
 {% endhighlight %}
 {% endtabs %}
     
-[View Sample in GitHub](https://github.com/SyncfusionExamples/Show-or-hide-toast-using-service-in-Blazor)
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/Show-or-hide-toast-using-service-in-Blazor)
     

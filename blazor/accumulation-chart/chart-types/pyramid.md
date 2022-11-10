@@ -212,5 +212,5 @@ By setting the [Explode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## See Also
 
-* [Data label](../data-label/)
-* [Grouping](../grouping/)
+* [Data label](../data-label)
+* [Grouping](../grouping)

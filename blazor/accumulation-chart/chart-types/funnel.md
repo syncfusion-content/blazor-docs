@@ -266,5 +266,5 @@ Labels will be arranged automatically on the left side of the funnel and pyramid
 
 ## See Also
 
-* [Data label](../data-label/)
-* [Grouping](../grouping/)
+* [Data label](../data-label)
+* [Grouping](../grouping)

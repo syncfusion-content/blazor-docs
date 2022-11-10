@@ -30,7 +30,7 @@ Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
         TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right">
         </TreeGridColumn>
         <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" 
-        ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules { Number = true,
+        ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules { Required = true, Number = true,
         Min = 0 })" EditType="Syncfusion.Blazor.Grids.EditType.NumericEdit"
         TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right">
         </TreeGridColumn>
@@ -95,7 +95,7 @@ Data Annotation validation attributes are used to validate the fields in the tre
 |-------|---------|
 | Validations are, <br><br>1. RequiredAttribute<br>2. StringLengthAttribute<br>3. RangeAttribute<br>4. RegularExpressionAttribute<br>5. MinLengthAttribute<br>6. MaxLengthAttribute<br>7. EmailAddressAttribute<br>8. CompareAttribute<br>9. DataTypeAttribute<br>10.  DataType. Custom<br>11. DataType. Date<br>12. DataType. DateTime<br>13. DataType. EmailAddress<br>14. DataType. ImageUrl<br>15. DataType. Url | The data annotation validation attributes are used as `validation rules` in the tree grid CRUD operations |
 
-More information on the data annotation can be found in this [documentation](https://blazor.syncfusion.com/documentation/datagrid/data-annotation/) section.
+More information on the data annotation can be found in this [documentation](https://blazor.syncfusion.com/documentation/datagrid/data-annotation) section.
 
 ## Custom validation
 

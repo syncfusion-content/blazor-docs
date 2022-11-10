@@ -23,7 +23,7 @@ The smooth transition between the given palette colors can be applied for the he
 
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap DataSource="@HeatMapData" RenderingMode="DrawType.SVG">
+<SfHeatMap DataSource="@HeatMapData">
     <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
     </HeatMapTitleSettings>
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
@@ -73,7 +73,7 @@ In fixed palette type, solid colors are applied to the heat map cells. The data 
 
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap DataSource="@HeatMapData" RenderingMode="DrawType.SVG">
+<SfHeatMap DataSource="@HeatMapData">
     <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
     </HeatMapTitleSettings>
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
@@ -123,7 +123,7 @@ You can define the colors ranges or color stops for data values in both gradient
 
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap DataSource="@HeatMapData" RenderingMode="DrawType.SVG">
+<SfHeatMap DataSource="@HeatMapData">
     <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
     </HeatMapTitleSettings>
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>

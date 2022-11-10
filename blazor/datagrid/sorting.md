@@ -190,7 +190,9 @@ During the sort action, the datagrid component triggers two events. The [OnActio
     }
 
     public void SortEvent(ActionEventArgs<Order> args) {
-        // You can get action information from the argument.
+        if (args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Sorting)){
+            // You can get action information from the argument.
+        }    
     }
 }
 ```
@@ -269,6 +271,7 @@ The following GIF represents custom SortComparer for CustomerID column. When the
 ![Custom sort comparer in Blazor DataGrid](./images/blazor-datagrid-custom-sort-comparer.gif)
 
 > The SortComparer property will work only for local data.
+> When using the column template to display data in a column, you will need to use the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property of [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to work with the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_SortComparer) property.
 
 ## Touch interaction
 

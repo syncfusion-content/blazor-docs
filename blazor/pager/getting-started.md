@@ -21,7 +21,7 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Microsoft Templates](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?pivots=windows)
 
-* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/vs2019-extensions/create-project)
+* [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
 
 ## Install Syncfusion Blazor NuGet in the App
 
@@ -43,7 +43,7 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
 Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html?&_ga=2.80827295.945255991.1647838461-1223836246.1561029397#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
-> From 2022 Vol1 (20.1) version - The default value of `IgnoreScriptIsolation` is changed to `true`, so, you don’t have to set the `IgnoreScriptIsolation` property explicitly to refer to scripts externally.
+> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to `true`. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to true, and this property is obsolete.
 
 ### Blazor Server App
 
@@ -248,9 +248,66 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 {% endhighlight %}
 {% endtabs %}
 
-* Now, add the Syncfusion Blazor Pager component in razor file. Here, the Pager component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+Here, the Pager component is integrated with the ListView component. So, the first ListView component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder. Refer [here](https://blazor.syncfusion.com/documentation/listview/getting-started) to create the Syncfusion ListView component.
 
-In the following sample, Pager component is integrated with ListView component. Pager provides an option to splits the list view data set into sectioned pages and view them into page by page. Here, navigation can be done with built-in numeric elements and buttons that can also be customized with the help of Pager API's.
+```cshtml
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Lists
+
+<SfListView DataSource="@ListData" TValue="DataModel">
+        <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Name"></ListViewFieldSettings>
+</SfListView>
+
+@code {
+    List<DataModel> ListData = new List<DataModel>();
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        ListData.Add(new DataModel { Name = "Nancy, Berlin, France" });
+        ListData.Add(new DataModel { Name = "Andrew, Madrid, Germany" });
+        ListData.Add(new DataModel { Name = "Janet, London, Brazil" });
+        ListData.Add(new DataModel { Name = "Margaret, Marseille, Belgium" });
+        ListData.Add(new DataModel { Name = "Steven, Cholchester, Switzerland" });
+        ListData.Add(new DataModel { Name = "Laura , Tsawassen, Venezuela" });
+        ListData.Add(new DataModel { Name = "Robert, Tacoma, Austria" });
+        ListData.Add(new DataModel { Name = "Michael, Redmond, Mexico" });
+        ListData.Add(new DataModel { Name = "Albert, Kirkland, USA" });
+        ListData.Add(new DataModel { Name = "Nolan, London, Sweden" });
+        ListData.Add(new DataModel { Name = "Jennifer, Berlin, Finland" });
+        ListData.Add(new DataModel { Name = "Carter, Madrid, Italy" });
+        ListData.Add(new DataModel { Name = "Allison, Marseille, Spain" });
+        ListData.Add(new DataModel { Name = "John, Tsawassen, UK" });
+        ListData.Add(new DataModel { Name = "Susan, Redmond, Ireland" });
+        ListData.Add(new DataModel { Name = "Lydia, Cholchester, Portugal" });
+        ListData.Add(new DataModel { Name = "Kelsey, London, Canada" });
+        ListData.Add(new DataModel { Name = "Jessica, Kirkland, Denmark" });
+        ListData.Add(new DataModel { Name = "Robert, Berlin, Austria" });
+        ListData.Add(new DataModel { Name = "Shelley, Tacoma, Poland" });
+        ListData.Add(new DataModel { Name = "Vanjack, Tsawassen, Norway" });
+        ListData.Add(new DataModel { Name = "shelley, Cholchester, Argentina" });
+        ListData.Add(new DataModel { Name = "Lydia, Kirkland, Finland" });
+        ListData.Add(new DataModel { Name = "Jessica, Madrid, Sweden" });
+        ListData.Add(new DataModel { Name = "Nolan, London, UK" });
+        ListData.Add(new DataModel { Name = "Jennifer, Redmond, Italy" });
+    }
+    public class DataModel
+    {
+        public string Name { get; set; }
+        public string Id { get; set; }
+    }
+}
+```
+
+In the previous sample, the list view items are rendered. The Pager component provides an option to split this list view data set into sectioned pages and view them page by page. So, the Pager component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder as follows.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<SfPager PageSize=5 NumericItemsCount=4 TotalItemsCount=25>
+</SfPager>
+```
+
+Based on the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) property of the pager, the list view items are bound to the current page. In the following code sample, the `PageSize` is defined as "5" so that the first five items from the data source of the list view will be displayed on the current page using the Skip and Take values.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -260,64 +317,110 @@ In the following sample, Pager component is integrated with ListView component. 
 <div class="col-lg-12 control-section sb-property-border">
     @{
     var listData = ListData.Skip(SkipValue).Take(TakeValue).ToList();
-    <SfListView @ref="@List" DataSource="@listData" TValue="DataModel"  CssClass="e-list-template ui-list" HeaderTitle="Contacts" Height="355px" ShowHeader="true">
-        <ListViewTemplates TValue="DataModel">
-            <Template>
-                <div class='e-list-wrapper e-list-avatar'>
-                    @if (context.ImgSrc != string.Empty)
-                    {
-                        <img id='showUI' class='e-avatar e-avatar-circle' src=@context.ImgSrc/>
-                    }
-                    <span class='e-list-content'>@context.Name</span>
-                </div>
-            </Template>
-        </ListViewTemplates>
+    <SfListView DataSource="@listData" TValue="DataModel" HeaderTitle="Contacts" ShowHeader="true">
         <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Name"></ListViewFieldSettings>
     </SfListView>
     }
-    <div class="pager-container">
-        <SfPager @ref="@Page" PageSize=5 NumericItemsCount=2 TotalItemsCount=25 Click="Click">
-        </SfPager>
-    </div>
+    <SfPager PageSize=5 NumericItemsCount=4 TotalItemsCount=25>
+    </SfPager>
+
 </div>
 @code {
-    SfPager Page;
-    public SfListView<DataModel> List { get; set; }
-    public int pageSize { get; set; } 
-    public int SkipValue ;
+    public int SkipValue;
     public int TakeValue = 5;
     List<DataModel> ListData = new List<DataModel>();
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        ListData.Add(new DataModel { Name = "Nancy, Berlin, France",  ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/1.png" });
-        ListData.Add(new DataModel { Name = "Andrew, Madrid, Germany", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/3.png" });
-        ListData.Add(new DataModel { Name = "Janet, London, Brazil", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/4.png" });
-        ListData.Add(new DataModel { Name = "Margaret, Marseille, Belgium",  ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/2.png" });
-        ListData.Add(new DataModel { Name = "Steven, Cholchester, Switzerland", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/5.png" });
-        ListData.Add(new DataModel { Name = "Laura , Tsawassen, Venezuela",ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/6.png" });
-        ListData.Add(new DataModel { Name = "Robert, Tacoma, Austria", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/7.png" });
-        ListData.Add(new DataModel { Name = "Michael, Redmond, Mexico", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/8.png" });
-        ListData.Add(new DataModel { Name = "Albert, Kirkland, USA", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/9.png" });
-        ListData.Add(new DataModel { Name = "Nolan, London, Sweden",ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/1.png" });
-        ListData.Add(new DataModel { Name = "Jennifer, Berlin, Finland", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/3.png" });
-        ListData.Add(new DataModel { Name = "Carter, Madrid, Italy", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/2.png" });
-        ListData.Add(new DataModel { Name = "Allison, Marseille, Spain", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/4.png" });
-        ListData.Add(new DataModel { Name = "John, Tsawassen, UK", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/5.png" });
-        ListData.Add(new DataModel { Name = "Susan, Redmond, Ireland" ,ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/7.png" });
-        ListData.Add(new DataModel { Name = "Lydia, Cholchester, Portugal", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/6.png" });
-        ListData.Add(new DataModel { Name = "Kelsey, London, Canada", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/9.png" });
-        ListData.Add(new DataModel { Name = "Jessica, Kirkland, Denmark", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/8.png" });
-        ListData.Add(new DataModel { Name = "Robert, Berlin, Austria", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/5.png" });
-        ListData.Add(new DataModel { Name = "Shelley, Tacoma, Poland", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/3.png" });
-        ListData.Add(new DataModel { Name = "Vanjack, Tsawassen, Norway", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/1.png" });
-        ListData.Add(new DataModel { Name = "shelley, Cholchester, Argentina", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/8.png" });
-        ListData.Add(new DataModel { Name = "Lydia, Kirkland, Finland", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/7.png" });
-        ListData.Add(new DataModel { Name = "Jessica, Madrid, Sweden", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/4.png" });
-        ListData.Add(new DataModel { Name = "Nolan, London, UK", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/9.png" });
-        ListData.Add(new DataModel { Name = "Jennifer, Redmond, Italy", ImgSrc = "https://ej2.syncfusion.com/demos/src/grid/images/2.png" });
+        ListData.Add(new DataModel { Name = "Nancy, Berlin, France" });
+        ListData.Add(new DataModel { Name = "Andrew, Madrid, Germany" });
+        ListData.Add(new DataModel { Name = "Janet, London, Brazil" });
+        ListData.Add(new DataModel { Name = "Margaret, Marseille, Belgium" });
+        ListData.Add(new DataModel { Name = "Steven, Cholchester, Switzerland" });
+        ListData.Add(new DataModel { Name = "Laura , Tsawassen, Venezuela" });
+        ListData.Add(new DataModel { Name = "Robert, Tacoma, Austria" });
+        ListData.Add(new DataModel { Name = "Michael, Redmond, Mexico" });
+        ListData.Add(new DataModel { Name = "Albert, Kirkland, USA" });
+        ListData.Add(new DataModel { Name = "Nolan, London, Sweden" });
+        ListData.Add(new DataModel { Name = "Jennifer, Berlin, Finland" });
+        ListData.Add(new DataModel { Name = "Carter, Madrid, Italy" });
+        ListData.Add(new DataModel { Name = "Allison, Marseille, Spain" });
+        ListData.Add(new DataModel { Name = "John, Tsawassen, UK" });
+        ListData.Add(new DataModel { Name = "Susan, Redmond, Ireland" });
+        ListData.Add(new DataModel { Name = "Lydia, Cholchester, Portugal" });
+        ListData.Add(new DataModel { Name = "Kelsey, London, Canada" });
+        ListData.Add(new DataModel { Name = "Jessica, Kirkland, Denmark" });
+        ListData.Add(new DataModel { Name = "Robert, Berlin, Austria" });
+        ListData.Add(new DataModel { Name = "Shelley, Tacoma, Poland" });
+        ListData.Add(new DataModel { Name = "Vanjack, Tsawassen, Norway" });
+        ListData.Add(new DataModel { Name = "shelley, Cholchester, Argentina" });
+        ListData.Add(new DataModel { Name = "Lydia, Kirkland, Finland" });
+        ListData.Add(new DataModel { Name = "Jessica, Madrid, Sweden" });
+        ListData.Add(new DataModel { Name = "Nolan, London, UK" });
+        ListData.Add(new DataModel { Name = "Jennifer, Redmond, Italy" });
     }
-    public void Click(PageClickEventArgs args)
+    public class DataModel
+    {
+        public string Name { get; set; }
+        public string Id { get; set; }
+    }
+}  
+```
+
+Through the navigation of the pager items, view the items in the list view page by page. This can be achieved by using the `ItemClick` event of the Pager. In the `ItemClick` event of the Pager, the SkipValue and TakeValue are calculated using the `PageSize` property and arguments of the `ItemClick` event (CurrentPage, PreviousPage). Based on these details, view the items in the list view page by page.
+
+```cshtml
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Lists
+
+<div class="col-lg-12 control-section sb-property-border">
+ @{
+    var listData = ListData.Skip(SkipValue).Take(TakeValue).ToList();
+    <SfListView @ref="@List" DataSource="@listData" TValue="DataModel" HeaderTitle="Contacts" ShowHeader="true">
+        <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Name"></ListViewFieldSettings>
+    </SfListView>
+}
+    <SfPager @ref="@Page" PageSize=5 NumericItemsCount=4 TotalItemsCount=25 ItemClick="Click">
+    </SfPager>
+</div>
+@code {
+    SfPager Page;
+    public SfListView<DataModel> List { get; set; }
+    public int SkipValue;
+    public int TakeValue = 5;
+    List<DataModel> ListData = new List<DataModel>();
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        ListData.Add(new DataModel { Name = "Nancy, Berlin, France" });
+        ListData.Add(new DataModel { Name = "Andrew, Madrid, Germany" });
+        ListData.Add(new DataModel { Name = "Janet, London, Brazil" });
+        ListData.Add(new DataModel { Name = "Margaret, Marseille, Belgium" });
+        ListData.Add(new DataModel { Name = "Steven, Cholchester, Switzerland" });
+        ListData.Add(new DataModel { Name = "Laura , Tsawassen, Venezuela" });
+        ListData.Add(new DataModel { Name = "Robert, Tacoma, Austria" });
+        ListData.Add(new DataModel { Name = "Michael, Redmond, Mexico" });
+        ListData.Add(new DataModel { Name = "Albert, Kirkland, USA" });
+        ListData.Add(new DataModel { Name = "Nolan, London, Sweden" });
+        ListData.Add(new DataModel { Name = "Jennifer, Berlin, Finland" });
+        ListData.Add(new DataModel { Name = "Carter, Madrid, Italy" });
+        ListData.Add(new DataModel { Name = "Allison, Marseille, Spain" });
+        ListData.Add(new DataModel { Name = "John, Tsawassen, UK" });
+        ListData.Add(new DataModel { Name = "Susan, Redmond, Ireland" });
+        ListData.Add(new DataModel { Name = "Lydia, Cholchester, Portugal" });
+        ListData.Add(new DataModel { Name = "Kelsey, London, Canada" });
+        ListData.Add(new DataModel { Name = "Jessica, Kirkland, Denmark" });
+        ListData.Add(new DataModel { Name = "Robert, Berlin, Austria" });
+        ListData.Add(new DataModel { Name = "Shelley, Tacoma, Poland" });
+        ListData.Add(new DataModel { Name = "Vanjack, Tsawassen, Norway" });
+        ListData.Add(new DataModel { Name = "shelley, Cholchester, Argentina" });
+        ListData.Add(new DataModel { Name = "Lydia, Kirkland, Finland" });
+        ListData.Add(new DataModel { Name = "Jessica, Madrid, Sweden" });
+        ListData.Add(new DataModel { Name = "Nolan, London, UK" });
+        ListData.Add(new DataModel { Name = "Jennifer, Redmond, Italy" });
+    }
+    public void Click(PagerItemClickEventArgs args)
     {
         SkipValue = (args.CurrentPage * Page.PageSize) - Page.PageSize;
         TakeValue = Page.PageSize;
@@ -325,41 +428,12 @@ In the following sample, Pager component is integrated with ListView component. 
     public class DataModel
     {
         public string Name { get; set; }
-        public string ImgSrc { get; set; }
         public string Id { get; set; }
     }
 }
-<style>
-    /* ListView template customization */
-    .ui-list.e-listview {
-        margin: auto;
-        max-width: 460px;
-        line-height: initial;
-        border: 1px solid lightgray;
-    }
-    .ui-list.e-listview .e-list-header {
-        height: 50px
-    }
-    .ui-list.e-listview .e-list-header .e-text {
-        line-height: 18px;
-        padding-left: 10px;
-    }
-    .ui-list.e-listview #showUI {
-        display: flex;
-    }
-    .ui-list.e-listview .e-list-item {
-        padding: 3px 0;
-    }
-    .highcontrast .ui-list.e-listview .e-list-item.e-active {
-        background: #ffd939;
-        color: #000000;
-    }
-    .pager-container {
-        margin: 0 auto 2em;
-        max-width: 460px;
-    }
-</style>
 
 ```
 
-![Blazor Pager with ListView](./images/blazor-pager-with-list-view.png)
+![Blazor Pager with ListView](./images/blazor-pager-with-list-view.gif)
+
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-pager-component)

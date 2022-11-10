@@ -87,6 +87,62 @@ You can refer the following code example to achieve this.
 The following image represents DataGrid with dynamically build columns,
 ![Blazor DataGrid with Dynamic Column](./images/blazor-datagrid-dynamic-column.png)
 
+## Dynamic column binding using ExpandoObject
+
+It is possible to build a column dynamically without knowing the model type during compile time. This can be achieved by binding data to the grid as a list of `ExpandoObject`.
+
+In the following sample, columns are built dynamically using the `ExpandoObject`.
+
+```cshtml
+@using System.Dynamic
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+
+<SfGrid TValue="ExpandoObject" DataSource=@GridData>
+    <GridColumns>
+        @if (GridData != null && GridData.Any())
+        {
+            foreach (var item in (IDictionary<string, object>)GridData.First())
+            {
+                <GridColumn Field="@item.Key"></GridColumn>
+            }
+        }
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private List<ExpandoObject> GridData = GenerateNewData();
+
+    private static List<ExpandoObject> GenerateNewData()
+    {
+        var data = new List<ExpandoObject>();
+        var random = new Random();
+        var ColCount = random.Next(2, 6);
+        var ColNames = new string[ColCount];
+
+        // Generate random number of columns.
+        for (var col = 0; col < ColCount; col++)
+        {
+            ColNames[col] = "Col" + random.Next(0, 5000);
+        }
+        s
+        // Generate 25 rows based on the generated columns name.
+        for (var row = 0; row < 25; row++)
+        {
+            dynamic item = new ExpandoObject();
+            var dict = (IDictionary<string, object>)item;
+            for (var col = 0; col < ColCount; col++)
+            {
+                dict[ColNames[col]] = random.Next(0, 10000);
+            }
+            data.Add(item);
+        }
+        return data;
+    }
+}
+
+```
+
 ## Complex data binding
 
 You can achieve complex data binding in the DataGrid by using the dot(.) operator in the column.field. In the following examples, **Name.FirstName** and **Name.LastName** are complex data.
@@ -455,6 +511,73 @@ In the following code sample, you can prevent default filter query generation us
 
 > You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-prevent-query-generation-for-foriegnkey-column).
 
+### Customize filter UI in foreignkey column
+
+The Grid has an option to render the custom component in the filter menu. This can be achieved using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) feature of the Grid.
+
+> For all filter types other than FilterBar, filtering parameters will be sent in the form of `PredicateModel<T>`. Here, T represents the type of `ForeignKeyValue` property when using the foreignkey column.
+
+The following sample demonstrates how to render the custom filter UI in the foreign key column. Here, `SfDropDownList` is rendered in the filter menu of the Employee Name foreign key column.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+
+<SfGrid DataSource="@Orders" Height="315" AllowFiltering="true" AllowPaging>
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridForeignColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee Name" ForeignKeyValue="FirstName" ForeignDataSource="@Employees" Width="150">
+            <FilterTemplate>
+                <SfDropDownList Placeholder="FirstName" ID="FirstName" @bind-Value="@((context as PredicateModel<string>).Value)" TItem="EmployeeData" TValue="string" DataSource="@Employees">
+                    <DropDownListFieldSettings Value="FirstName" Text="FirstName"></DropDownListFieldSettings>
+                </SfDropDownList>                
+            </FilterTemplate>
+        </GridForeignColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+    public List<EmployeeData> Employees { get; set; }
+   
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            EmployeeID = x,
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+
+        Employees = Enumerable.Range(1, 75).Select(x => new EmployeeData()
+        {
+            EmployeeID = x,
+            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public int? EmployeeID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+
+    public class EmployeeData
+    {
+        public int? EmployeeID { get; set; }
+        public string FirstName { get; set; }
+    }    
+}
+```
+
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-customize-filter-ui-in-foreignkey-column)
+
 ## Header text
 
 By default, column header title is displayed from column [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) value. To override the default header title, you have to define the **HeaderText** value in the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) property of **GridColumn** directive.
@@ -586,6 +709,104 @@ The Header Template has options to display custom element value or content in th
 
 The following screenshot represents the Header Template.
 ![Blazor DataGrid with Header Template](./images/blazor-datagrid-header-template.png)
+
+## Change the orientation of header text
+
+You can change the orientation of the header text by using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_CustomAttributes) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
+
+Follow the steps below to rotate the header text of a particular column.
+
+**Step1:**
+
+Add the custom CSS class to a particular column by using the `CustomAttributes` property of the `GridColumn`.
+
+```cshtml
+    <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "textorientationclass" }})" Width="150"></GridColumn>
+```
+
+**Step2:**
+
+Create a CSS class with orientation style for the grid header cell.
+
+```cshtml
+    .e-grid .e-columnheader .e-headercell.textorientationclass .e-headercelldiv { // Rotate a particular headertext
+        transform: rotate(90deg);    
+    }
+```
+
+**Step3:**
+
+Change the header cell height with respect to the orientation of headertext using the following code.
+
+```cshtml
+function setHeaderHeight(args) {
+    var textWidth = document.querySelector(".textorientationclass > div").scrollWidth; // Obtain the width of the headerText content.
+    var header = document.querySelectorAll(".e-columnheader");
+    for (var i = 0; i < header.length; i++) {
+        (header.item(i)).style.height = textWidth + 'px'; // Assign the obtained textWidth as the height of the column header.
+    }
+}
+```
+
+This is demonstrated in the following sample:
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@inject IJSRuntime IJSRuntime
+
+<SfGrid DataSource="@Orders">
+    <GridEvents DataBound="DataBound" Created="Created" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "textorientationclass" }})" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Center" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+<style>
+    .e-grid .e-columnheader .e-headercell.textorientationclass .e-headercelldiv { // Rotate a particular headertext
+        transform: rotate(90deg);      
+    }
+</style>
+@code{
+    public List<Order> Orders { get; set; }
+    public bool InitialRender = false;
+    public void Created()
+    {
+        InitialRender = true;
+    }
+    public void DataBound()
+    {
+        if (InitialRender) //Call the JS method by checking for initial Grid rendering
+        {
+            InitialRender = false;
+            IJSRuntime.InvokeAsync<object>("setHeaderHeight");
+        }
+    }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+
+![Orientation of Header Text in Blazor DataGrid](./images/blazor-datagrid-header-text-orientation.png)
+
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-change-orientation-of-header-text)
 
 ## Column type
 

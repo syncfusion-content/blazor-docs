@@ -63,9 +63,9 @@ The selected theme is added from Syncfusion NuGet and its reference at these app
 
 | Application type  | File location  |
 |---|---|
-| Syncfusion Blazor Server App | {Project location}\Pages\\_Host.cshtml |
-| Syncfusion Blazor WebAssembly App (ASPNET Core hosted) <br/> Syncfusion Blazor WebAssembly App (Progressive Web Application) | {Client Project location}\wwwroot\index.html  |
-| Syncfusion Blazor WebAssembly App  | {Project location}\wwwroot\index.html|
+| Syncfusion Blazor Server App | {Project location}/Pages//_Host.cshtml |
+| Syncfusion Blazor WebAssembly App (ASPNET Core hosted) <br/> Syncfusion Blazor WebAssembly App (Progressive Web Application) | {Client Project location}/wwwroot/index.html  |
+| Syncfusion Blazor WebAssembly App  | {Project location}/wwwroot/index.html|
 
 ![CDNLink](images/CDNLink.png)
 
