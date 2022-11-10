@@ -137,10 +137,10 @@ The cell [edit template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
         public string Name { get; set; }
     }
     List<Employee> Assignees = new List<Employee> {
-    new Employee() { ID= "1", Name= "Divya A" },
-    new Employee() { ID= "2", Name= "Pooja K" },
-    new Employee() { ID= "3", Name= "Hema P" },
-    
+    new Employee() { ID= "1", Name= "Martin Tamer" },
+    new Employee() { ID= "2", Name= "Rose Fuller" },
+    new Employee() { ID= "3", Name= "Jack Davolio" },
+    new Employee() { ID= "4", Name= "Van Jack"},
     };
     protected override void OnInitialized()
     {
@@ -162,13 +162,13 @@ The cell [edit template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
     public static List <TaskData> GetTaskCollection() {
     List <TaskData> Tasks = new List <TaskData> () {
-        new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21) , Assignee= new string[]{"Divya A"}},
+        new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21) , Assignee= new string[]{"Van Jack"}},
         new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
         new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1 },
         new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
         new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21) },
         new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
-        new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
+        new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 , Assignee= new string[]{"Rose Fuller"}},
         new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
     };
     return Tasks;
