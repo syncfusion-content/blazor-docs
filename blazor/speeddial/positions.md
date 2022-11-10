@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Position with Blazor SpeedDial Component | Syncfusion
-description: Checkout and learn about Position with Blazor SpeedDial component in Blazor Server App and Blazor WebAssembly App.
+title: Position in Blazor SpeedDial Component | Syncfusion
+description: Checkout and learn about different built in positions in Blazor SpeedDial component.
 platform: Blazor
 control: SpeedDial
 documentation: ug
 ---
 
-# Positions in Blazor Speed Dial
+# Positions in Blazor Speed Dial Component
 
 The Speed dial Component can be positioned anywhere on the [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Target) using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Position) property. If the `Target` is not defined, then Speed Dial is positioned based on the browser viewport.
 

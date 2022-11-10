@@ -1,13 +1,13 @@
 ---
 layout: post
-title: RadialMenu with Blazor SpeedDial Component | Syncfusion
-description: Checkout and learn about RadialMenu with Blazor SpeedDial component in Blazor Server App and Blazor WebAssembly App.
+title: RadialMenu in Blazor SpeedDial Component | Syncfusion
+description: Checkout and learn about radial menu and its customization in Blazor SpeedDial component.
 platform: Blazor
 control: SpeedDial
 documentation: ug
 ---
 
-# Radial Menu in Blazor Speed Dial
+# Radial Menu in Blazor Speed Dial Component
 
 The action items in Blazor Speed Dial can be displayed in a circular patter like a radial menu by setting [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Mode) property. You can customize the `Direction`, `StartAngle`, `EndAngle` and `Offset` by setting [SpeedDialRadialSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialRadialSettings.html) tag directive.
 

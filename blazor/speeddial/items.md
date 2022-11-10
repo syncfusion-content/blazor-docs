@@ -7,7 +7,7 @@ control: SpeedDial
 documentation: ug
 ---
 
-# Items in Blazor Speed Dial
+# Items in Blazor Speed Dial Component
 
 The action items in Blazor Speed Dial can be added by using [SpeedDialItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html) tag directive.
 
