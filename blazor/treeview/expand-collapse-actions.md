@@ -116,9 +116,9 @@ In the following example, the `ExpandAllAsync`, `CollapseAllAsync` methods are u
 
 The `ExpandOn` property is used to specify the action upon which the node expands or collapses in the TreeView. The available actions are,
 
-**Click** : The expand/collapse operation happens when you single-click the node on both desktop and mobile devices.
-**DoubleClick** : The expand/collapse operation happens when you double-click the node on both desktop and mobile devices. 
-**None** : The expand/collapse operation will not happen when you single-click or double-click the node on both desktop and mobile devices.
+* **Click** : The expand/collapse operation happens when you single-click the node on both desktop and mobile devices.
+* **DoubleClick** : The expand/collapse operation happens when you double-click the node on both desktop and mobile devices. 
+* **None** : The expand/collapse operation will not happen when you single-click or double-click the node on both desktop and mobile devices.
 
 The default value of the `ExpandOn` property is DoubleClick.
 
