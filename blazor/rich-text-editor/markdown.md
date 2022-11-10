@@ -9,7 +9,7 @@ documentation: ug
 
 # Markdown Editor in Blazor RichTextEditor
 
-The Blazor Rich Text Editor support editing the Markdown contents when the [EditorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.EditorMode.html#fields) property is set to `Markdown`. Markdown is the lightweight text formatting with the simple syntax, it can apply the using keyboard interactions and toolbar action.
+The Rich Text Editor support editing the Markdown contents when the [EditorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.EditorMode.html#fields) property is set to `Markdown`. Markdown is the lightweight text formatting with the simple syntax, it can apply the using keyboard interactions and toolbar action.
 
 {% tabs %}
 {% highlight cshtml %}

@@ -17,6 +17,7 @@ You can customize the toolbar configurations by usig the [RichTextEditorToolbarS
 
 1. Expand
 2. MultiRow
+3. Scrollable
 
 ## Expand Toolbar
 
@@ -45,6 +46,20 @@ You can display the toolbar items in a row-wise format by using the [ToolbarType
 {% endtabs %}
 
 ![Blazor RichTextEditor multirow toolbar](./images/blazor-richtexteditor-multirow-toolbar.png)
+
+## Scrollable Toolbar
+
+You can display the toolbar items in a single line with horizontal scrolling by using the [ToolbarType.Scrollable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarType.html#Syncfusion_Blazor_RichTextEditor_ToolbarType_Scrollable) property. 
+
+{% tabs %}
+{% highlight razor %}
+
+{% include_relative code-snippet/scrollable-toolbar.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor RichTextEditor multirow toolbar](./images/blazor-richtexteditor-scrollable-toolbar.png)
 
 ## Floating Toolbar
 
@@ -81,7 +96,7 @@ The Rich text editor has quick toolbars that are open as context-menu on clickin
 
 ### Image quick Toolbar
 
-You can customize the inserted image in rich text editor by using the [RichTextEditorQuickToolbarSettings.Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Image) property. The image quick toolbar has the following items.
+You can customize the inserted image in the editor by using the [RichTextEditorQuickToolbarSettings.Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Image) property. The image quick toolbar has the following items.
 
 | Image Toolabr items | Description |
 | --------------------| ------------- |
@@ -150,13 +165,13 @@ Quick toolbar is opened by clicking the table. You can customize the table by us
 
 ### Audio quick Toolbar
 
-The rich text editor allows you to customize the inserted audio by using the [RichTextEditorQuickToolbarSettings.Audio](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Audio) property. The audio quick toolbar has the following items.
+The Rich Text Editor allows you to customize the inserted audio by using the [RichTextEditorQuickToolbarSettings.Audio](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Audio) property. The audio quick toolbar has the following items.
 
 | Tools | Description |
 |----------------|--------------------------------------|
-| Replace | Can replace the audio with some other audio |
-| Remove| Delete the audio |
-| Display | Display the audio as inline or with break |
+| AudioReplace | Can replace the audio with some other audio |
+| AudioRemove | Delete the audio |
+| AudioLayoutOption | Display the audio as inline or with break |
 
 {% tabs %}
 {% highlight razor %}
@@ -170,15 +185,15 @@ The rich text editor allows you to customize the inserted audio by using the [Ri
 
 ### Video quick Toolbar
 
-The rich text editor allows you to customize the inserted video by using the [RichTextEditorQuickToolbarSettings.video](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Video) property. The video quick toolbar has the following items.
+The Rich Text Editor allows you to customize the inserted video by using the [RichTextEditorQuickToolbarSettings.video](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Video) property. The video quick toolbar has the following items.
 
 | Tools | Description |
 |----------------|--------------------------------------|
-| Replace | Can replace the video with some other video |
-| Align | Align the image with left, right and center |
-| Remove | Delete the video |
-| Layout option | Display the video as inline or with break |
-| Dimension | Can change an video dimensions, such as its height and width|
+| VideoReplace | Can replace the video with some other video |
+| VideoAlign | Align the image with left, right and center |
+| VideoRemove | Delete the video |
+| VideoLayoutOption | Display the video as inline or with break |
+| VideoDimension | Can change an video dimensions, such as its height and width|
 
 {% tabs %}
 {% highlight razor %}
