@@ -7,11 +7,11 @@ control: DropDown List
 documentation: ug
 ---
 
-# Localization
+# Localization in Dropdown List
 
-[Blazor DropDownList](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
+[`Blazor DropDownList`](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component can be localized. Refer to [`Blazor Localization`](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
 
-## Blazor Server Application
+## Blazor server application
 
 * For **.NET 6** app, specify the static culture in **~/Program.cs** file.
 * For **.NET 5 and .NET 3.X** app, specify the static culture in **~/Startup.cs** file.
@@ -50,11 +50,11 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
 {% endtabs %}
 
-### Blazor WASM Application
+### Blazor WASM application
 
 In Blazor WASM app, you can set culture statically in Blazor's start option or in C# code.
 
-#### Setting the culture Blazor's start option
+#### Setting the culture blazor's start option
 
 The app's culture can be set in JavaScript by setting `applicationCulture` in Blazor's start option by following the steps below,
 
@@ -107,7 +107,7 @@ The app's culture can be set in JavaScript by setting `applicationCulture` in Bl
 
 ### Enable RTL mode
 
-You can specifies [EnableRtl](Enable or disable rendering component in right to left direction.) as boolean value that indictes to Enable or disable rendering component in right to left direction.
+You can specifies `EnableRtl`(Enable or disable rendering component in right to left direction.) as boolean value that indictes to Enable or disable rendering component in right to left direction.
 
 {% highlight cshtml %}
 
