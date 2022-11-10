@@ -107,7 +107,7 @@ The app's culture can be set in JavaScript by setting `applicationCulture` in Bl
 
 ### Enable RTL mode
 
-You can specifies `EnableRtl`(Enable or disable rendering component in right to left direction.) as boolean value that indictes to Enable or disable rendering component in right to left direction.
+You can specifies [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_EnableRtl)(Enable or disable rendering component in right to left direction.) as boolean value that indictes to Enable or disable rendering component in right to left direction.
 
 {% highlight cshtml %}
 
