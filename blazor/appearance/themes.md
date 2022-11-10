@@ -527,68 +527,68 @@ In the Blazor application, the application theme can be changed dynamically by c
 
 The following example demonstrates how to change a theme dynamically in Blazor Server application using Syncfusion Blazor themes using Syncfusion Dropdown component.
 
-1. Below step shows how to reference style sheet in the way to change at dynamically.
+1.Below step shows how to reference style sheet in the way to change at dynamically.
 
-    * For **.NET6 Blazor Server Application**, In the **_Layout.cshtml** the theme is changed dynamically using `id` in `setTheme` method.
-    * For **.NET5 & 3.1 Blazor Server Application**, In **_Host.cshtml**, the theme is changed based on query string. 
+* For **.NET6 Blazor Server Application**, In the **_Layout.cshtml** the theme is changed dynamically using `id` in `setTheme` method.
+* For **.NET5 & 3.1 Blazor Server Application**, In **_Host.cshtml**, the theme is changed based on query string. 
 
-    {% tabs %}
-    {% highlight c# tabtitle=".NET 6 (~/_Layout.cshtml)" %}
+{% tabs %}
+{% highlight c# tabtitle=".NET 6 (~/_Layout.cshtml)" %}
 
-    <head>
-    ... 
-    <link id="theme" href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-    </head>
-    ... 
-    <script>
-        function setTheme(theme) {
-            document.getElementsByTagName('body')[0].style.display = 'none';
-            let synclink = document.getElementById('theme');
-            synclink.href = '_content/Syncfusion.Blazor.Themes/' + theme + '.css';
-            setTimeout(function () { document.getElementsByTagName('body')[0].style.display = 'block'; }, 200);
-        }
-    </script>
-    ...
-
-    {% endhighlight %}
-    {% highlight c# tabtitle=".NET 5 & 3.1 (~/_Host.cshtml)" %}
-
-    @page "/"
-    @namespace BlazorThemeSwitcher.Pages
-    @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-        
-    @{
-        Layout = null;
-        QueryHelpers.ParseQuery(Request.QueryString.Value).TryGetValue("theme", out var themeName);
-        themeName = themeName.Count > 0 ? themeName.First() : "bootstrap4";
+<head>
+... 
+<link id="theme" href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+</head>
+... 
+<script>
+    function setTheme(theme) {
+        document.getElementsByTagName('body')[0].style.display = 'none';
+        let synclink = document.getElementById('theme');
+        synclink.href = '_content/Syncfusion.Blazor.Themes/' + theme + '.css';
+        setTimeout(function () { document.getElementsByTagName('body')[0].style.display = 'block'; }, 200);
     }
+</script>
+...
 
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>BlazorThemeSwitcher</title>
-        <base href="~/" />
-        <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-        <link href="css/site.css" rel="stylesheet" />
-        <link href="BlazorThemeSwitcher.styles.css" rel="stylesheet" />
-        <link href=@("_content/Syncfusion.Blazor.Themes/" + themeName + ".css")rel="stylesheet" />
-    </head>
+{% endhighlight %}
+{% highlight c# tabtitle=".NET 5 & 3.1 (~/_Host.cshtml)" %}
 
-    <body>
-        <script src="_framework/blazor.server.js"></script>
-    </ </body>
-    </html>
+@page "/"
+@namespace BlazorThemeSwitcher.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+    
+@{
+    Layout = null;
+    QueryHelpers.ParseQuery(Request.QueryString.Value).TryGetValue("theme", out var themeName);
+    themeName = themeName.Count > 0 ? themeName.First() : "bootstrap4";
+}
 
-    {% endhighlight %}
-    {% endtabs %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlazorThemeSwitcher</title>
+    <base href="~/" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="BlazorThemeSwitcher.styles.css" rel="stylesheet" />
+    <link href=@("_content/Syncfusion.Blazor.Themes/" + themeName + ".css")rel="stylesheet" />
+</head>
 
-2. Below step shows changing style sheet dynamically.
+<body>
+    <script src="_framework/blazor.server.js"></script>
+</ </body>
+</html>
 
-    * For **.NET5 Blazor Server Application**, in **MainLayout.razor** page add dropdown list with themes. In `ValueChange` event handler, the page is refreshed by changing query string to change the theme in application.
+{% endhighlight %}
+{% endtabs %}
 
-    * For **.NET6 Blazor Server Application**, modify the **MainLayout.razor** page add dropdown list with themes. In `ValueChange` event handler, the theme is changed by calling `setTheme` method defined in step `. 
+2.Below step shows changing style sheet dynamically.
+
+* For **.NET5 Blazor Server Application**, in **MainLayout.razor** page add dropdown list with themes. In `ValueChange` event handler, the page is refreshed by changing query string to change the theme in application.
+
+* For **.NET6 Blazor Server Application**, modify the **MainLayout.razor** page add dropdown list with themes. In `ValueChange` event handler, the theme is changed by calling `setTheme` method defined in step `. 
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 (~/MainLayout.razor)" %}
