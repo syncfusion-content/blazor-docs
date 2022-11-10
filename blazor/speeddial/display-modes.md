@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mode with Blazor SpeedDial Component | Syncfusion
+title: Display Modes in Blazor SpeedDial Component | Syncfusion
 description: Checkout and learn about Mode with Blazor SpeedDial component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: SpeedDial
