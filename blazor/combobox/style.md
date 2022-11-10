@@ -135,3 +135,35 @@ Use the following CSS to customize the appearance of popup element.
     min-height: 29px;
 }
 ```
+
+## Show clear Button
+
+You can use [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_ShowClearButton) property to specify whether to show or hide the clear button. When the clear button is clicked, `Value`, `Text`, and `Index` properties are reset to null.
+
+> If the TValue is non nullable type, then while using clear button, it will set the default value of the data type and TValue is set as nullable type while using clear button it will set to null value(eg: If TValue is int while clearing 0 is set to the component and if TValue is int? while clearing null is set to the component)
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/show-clear-button.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with clear button](./images/style/blazor_combobox_show-clear-button.png)
+
+## Readonly-mode
+
+You can specify the boolean value to [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Readonly) whether the DropDownList allows the user to change the value.
+
+If you are setting Readonly property, then you could not interact the component. You can set initial value to the component alone.  
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/readonly-mode.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with Readonly mode](./images/style/blazor_combobox_readonly-mode.png)
+
+
+
+
