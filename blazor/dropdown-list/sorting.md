@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting in Blazor DropDown List Component | Syncfusion
-description: Checkout and learn here all about Sorting in Syncfusion Blazor DropDown List component and more.
+description: Checkout and learn here all about Sorting in Syncfusion Blazor DropDown List component and much more.
 platform: Blazor
 control: DropDown List
 documentation: ug
