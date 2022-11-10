@@ -9,7 +9,7 @@ documentation: ug
 
 # Display Modes in Blazor Speed Dial
 
-The Blazor Speed Dial, the action items can be displayed in `Linear` and `Radial` display modes by setting [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Mode) property.
+The action items in Blazor Speed Dial can be displayed in `Linear` and `Radial` display modes by setting [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Mode) property.
 
 ## Linear Display Mode
 
