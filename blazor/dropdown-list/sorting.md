@@ -7,9 +7,9 @@ control: DropDown List
 documentation: ug
 ---
 
-# Sorting 
+# Sorting in Dropdown List
 
-The Sorting enables you to sort data in the `Ascending` or `Descending` order. To enable sorting in the DropDownList, set the [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_SortOrder) property to required value. 
+The Sorting enables you to sort data in the `Ascending` or `Descending` order. To enable sorting in the DropDownList, set the [`SortOrder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_SortOrder) property to required value. 
 
 The available type of sort orders are.
 
