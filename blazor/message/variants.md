@@ -69,4 +69,8 @@ The following example demonstrates the default message with different variant ty
 {% endhighlight %}
 {% endtabs %}
 
-![Message Variants](./images/message-variants.png)
+![Filled Variant](./images/variants-filled.png)
+
+![Outlined Variant](./images/variants-outlined.png)
+
+![Text Variant](./images/variants-text.png)
