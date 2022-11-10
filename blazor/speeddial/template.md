@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Template with Blazor SpeedDial Component | Syncfusion
-description: Checkout and learn about template with Blazor SpeedDial component in Blazor Server App and Blazor WebAssembly App.
+title: Template in Blazor SpeedDial Component | Syncfusion
+description: Checkout and learn about template in Blazor SpeedDial component and much more.
 platform: Blazor
 control: SpeedDial
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Template in Blazor SpeedDial
 
-This section has a detailed explanation on the available templates in Speed Dial Component.
+This section explains available templates in Speed Dial Component and its usage.
 
-## Item Template
+## Item template
 
-You can use the [`ItemTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemTemplate) tag directive to get or set a template content for the SpeedDialItem. The template content is defined as a child content of `ItemTemplate` tag directive.
+You can use the [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemTemplate) to set a template content for the `SpeedDialItem`. The template content is defined as a child content of `ItemTemplate` tag directive.
 
 {% tabs %}
 {% highlight razor %}
@@ -54,9 +54,9 @@ You can use the [`ItemTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusio
 
 ![Blazor SpeedDial with ItemTemplate](./images/ItemTemplate.png)
 
-## Popup Template
+## Popup template
 
-You can use the [`PopupTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_PopupTemplate) tag directive to get or set a template content popup of SpeedDialItem. The template content is defined as a child content of `PopupTemplate` tag directive.
+You can use the [PopupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_PopupTemplate) to set a template content for popup of  SpeedDial component. The template content is defined as a child content of `PopupTemplate` tag directive.
 
 {% tabs %}  
 {% highlight razor %}

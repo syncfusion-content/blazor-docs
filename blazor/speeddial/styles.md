@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Styles with Blazor SpeedDial Component | Syncfusion
-description: Checkout and learn about styles with Blazor SpeedDial component in Blazor Server App and Blazor WebAssembly App.
+title: Styles in Blazor SpeedDial Component | Syncfusion
+description: Checkout and learn about styles in Blazor SpeedDial component and much more.
 platform: Blazor
 control: SpeedDial
 documentation: ug
@@ -9,15 +9,15 @@ documentation: ug
 
 # Styles in Blazor SpeedDial
 
-This section lists the available styles in SpeedDial Component.
+This section briefs different ways to stye SpeedDial Component.
 
-## SpeedDial Button
+## SpeedDial button
 
-You can customize the icon and text of Blazor SpeedDial using [`OpenIconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_OpenIconCss), [`CloseIconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_CloseIconCss) and [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Content) properties.
+You can customize the icon and text of Blazor SpeedDial component using [`OpenIconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_OpenIconCss), [`CloseIconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_CloseIconCss) and [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Content) properties.
 
 ### SpeedDial with Icon
 
-You can use the [`OpenIconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_OpenIconCss) and [`CloseIconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_CloseIconCss) property to represent the speed dial button with only icons. You can also show tooltip on hover to show additional details to end-user by setting `title` attribute.
+You can use the [`OpenIconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_OpenIconCss) and [`CloseIconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_CloseIconCss) properties to show icons in speed dial button. You can also show tooltip on hover to show additional details to end-user by setting `title` attribute.
 
 {% tabs %}
 {% highlight razor %}
@@ -39,7 +39,7 @@ You can use the [`OpenIconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ### SpeedDial with Text
 
-You can show text only in SpeedDial button by setting [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Content) property.
+You can show text only in SpeedDial button by setting [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Content) property without setting icon properties.
 
 {% tabs %}
 {% highlight razor %}
@@ -61,7 +61,7 @@ You can show text only in SpeedDial button by setting [`Content`](https://help.s
 
 ### SpeedDial with Icon and Text
 
-You can customize the icon and text of Blazor Speed Dial Button using [`OpenIconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_OpenIconCss), [`CloseIconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_CloseIconCss) and [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Content) properties together.
+You show icon and text in Blazor Speed Dial Button using [`OpenIconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_OpenIconCss), [`CloseIconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_CloseIconCss) and [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Content) properties together.
 
 {% tabs %}
 {% highlight razor %}
@@ -83,7 +83,7 @@ You can customize the icon and text of Blazor Speed Dial Button using [`OpenIcon
 
 ## Disabled
 
-You can enabled/disabled the Speed Dial Component using [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Disabled) property.
+You can enable or disable the Speed Dial Component using [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Disabled) property.
 
 {% tabs %}
 {% highlight razor %}
@@ -105,7 +105,7 @@ You can enabled/disabled the Speed Dial Component using [`Disabled`](https://hel
 
 ## CssClass
 
-The Blazor Speed Dial supports the following predefined styles that can be defined using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_CssClass) property. You can customize by replacing the `CssClass` property with the below defined class.
+The Blazor Speed Dial supports the following predefined styles that can be defined using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_CssClass) property. You can customize by setting the `CssClass` property with the below defined class.
 
 | CssClass | Description |
 | -------- | -------- |
@@ -174,9 +174,9 @@ You can show tooltip on hover to show additional details to end-user by setting 
 {% endhighlight %}
 {% endtabs %}
 
-## OpensOnHover
+## Opens on hover
 
-You can use [`OpensOnHover`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_OpensOnHover) property to hover the speeddial items without click the speeddial button.
+You can use [`OpensOnHover`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_OpensOnHover) property to open actions items on hover itself. By default action items displayed only when clicking the speed dial button.
 
 {% tabs %}
 {% highlight razor %}

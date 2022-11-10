@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Modal with Blazor SpeedDial Component | Syncfusion
-description: Checkout and learn about modal with Blazor SpeedDial component in Blazor Server App and Blazor WebAssembly App.
+title: Modal in Blazor SpeedDial Component | Syncfusion
+description: Checkout and learn about how to use modal in Blazor SpeedDial component to add overlay to prevent interaction. 
 platform: Blazor
 control: SpeedDial
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Modal in Blazor SpeedDial
 
-You can use the [`IsModal`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_IsModal) property to set the Speed Dial as modal which adds an overlay to prevent the background interaction.
+You can use the [IsModal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_IsModal) property to set the Speed Dial as modal which adds an overlay to prevent the background interaction.
 
 {% tabs %}
 {% highlight razor %}

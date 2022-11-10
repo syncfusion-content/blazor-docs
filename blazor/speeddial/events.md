@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events with Blazor SpeedDial Component | Syncfusion
-description: Checkout and learn about events with Blazor SpeedDial component in Blazor Server App and Blazor WebAssembly App.
+title: Events in Blazor SpeedDial Component | Syncfusion
+description: Checkout and learn about various events in Blazor SpeedDial component and much more.
 platform: Blazor
 control: SpeedDial
 documentation: ug
@@ -11,10 +11,9 @@ documentation: ug
 
 This section describes the Speed Dial events that will be triggered when appropriate actions are performed. The following events are available in the Speed Dial Component.
 
-## ItemClicked
+## Item clicked
 
-The speed dial Component triggers the [`ItemClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemClicked) event with [`SpeedDialItemEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItemEventArgs.html) argument when an action item is clicked.
-You can use this event to perform the required action.
+The speed dial Component triggers the [ItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemClicked) event with [SpeedDialItemEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItemEventArgs.html) argument when an action item is clicked. You can use this event to perform the required action.
 
 {% tabs %}
 {% highlight razor %}
@@ -39,9 +38,9 @@ You can use this event to perform the required action.
 {% endhighlight %}
 {% endtabs %}
 
-## Created 
+## Created
 
-The speed dial Component triggers the [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Created) event when SpeedDial Component rendering is completed.
+The speed dial Component triggers the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Created) event when SpeedDial Component rendering is completed.
 
 {% tabs %}
 {% highlight razor %}
@@ -66,63 +65,9 @@ The speed dial Component triggers the [`Created`](https://help.syncfusion.com/cr
 {% endhighlight %}
 {% endtabs %}
 
-## Opened
-
-The speed dial Component triggers the [`Opened`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Opened) event with [`SpeedDialOpenCloseEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialOpenCloseEventArgs.html) argument when SpeedDial popup is opened.
-
-{% tabs %}
-{% highlight razor %}
-
-@using Syncfusion.Blazor.Buttons
-
-<SfSpeedDial Opened="OpenedEvent" OpenIconCss="e-icons e-edit">
-    <SpeedDialItems>
-        <SpeedDialItem IconCss="e-icons e-cut"/>
-        <SpeedDialItem IconCss="e-icons e-copy"/>
-        <SpeedDialItem IconCss="e-icons e-paste"/>
-    </SpeedDialItems>
-</SfSpeedDial>
-
-@code{
-    public void OpenedEvent(SpeedDialOpenCloseEventArgs args)
-    {
-        // Here, you can call your desired action.
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Closed
-
-The speed dial Component triggers the [`Closed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Closed) event with [`SpeedDialOpenCloseEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialOpenCloseEventArgs.html) argument when SpeedDial popup is closed.
-
-{% tabs %}
-{% highlight razor %}
-
-@using Syncfusion.Blazor.Buttons
-
-<SfSpeedDial Closed="ClosedEvent" OpenIconCss="e-icons e-edit">
-    <SpeedDialItems>
-        <SpeedDialItem IconCss="e-icons e-cut"/>
-        <SpeedDialItem IconCss="e-icons e-copy"/>
-        <SpeedDialItem IconCss="e-icons e-paste"/>
-    </SpeedDialItems>
-</SfSpeedDial>
-
-@code{
-    public void ClosedEvent(SpeedDialOpenCloseEventArgs args)
-    {
-        // Here, you can call your desired action.
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Opening
 
-The speed dial Component triggers the [`Opening`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Opening) event with [`SpeedDialBeforeOpenCloseEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialBeforeOpenCloseEventArgs.html) argument before the SpeedDial popup is opened.
+The speed dial Component triggers the [Opening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Opening) event with [SpeedDialBeforeOpenCloseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialBeforeOpenCloseEventArgs.html) argument before the SpeedDial popup is opened.
 
 {% tabs %}
 {% highlight razor %}
@@ -147,9 +92,36 @@ The speed dial Component triggers the [`Opening`](https://help.syncfusion.com/cr
 {% endhighlight %}
 {% endtabs %}
 
+## Opened
+
+The speed dial Component triggers the [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Opened) event with [SpeedDialOpenCloseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialOpenCloseEventArgs.html) argument when SpeedDial popup is opened.
+
+{% tabs %}
+{% highlight razor %}
+
+@using Syncfusion.Blazor.Buttons
+
+<SfSpeedDial Opened="OpenedEvent" OpenIconCss="e-icons e-edit">
+    <SpeedDialItems>
+        <SpeedDialItem IconCss="e-icons e-cut"/>
+        <SpeedDialItem IconCss="e-icons e-copy"/>
+        <SpeedDialItem IconCss="e-icons e-paste"/>
+    </SpeedDialItems>
+</SfSpeedDial>
+
+@code{
+    public void OpenedEvent(SpeedDialOpenCloseEventArgs args)
+    {
+        // Here, you can call your desired action.
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Closing
 
-The speed dial Component triggers the [`Closing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Closing) event with [`SpeedDialBeforeOpenCloseEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialBeforeOpenCloseEventArgs.html) argument before the SpeedDial popup is closed.
+The speed dial Component triggers the [Closing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Closing) event with [SpeedDialBeforeOpenCloseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialBeforeOpenCloseEventArgs.html) argument before the SpeedDial popup is closed.
 
 {% tabs %}
 {% highlight razor %}
@@ -174,10 +146,36 @@ The speed dial Component triggers the [`Closing`](https://help.syncfusion.com/cr
 {% endhighlight %}
 {% endtabs %}
 
-## ItemRendered
+## Closed
 
-The speed dial Component triggers the [`ItemRendered`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemRendered) event with [`SpeedDialItemEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItemEventArgs.html) argument when a SpeedDialItem is rendered.
+The speed dial Component triggers the [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Closed) event with [SpeedDialOpenCloseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialOpenCloseEventArgs.html) argument when SpeedDial popup is closed.
 
+{% tabs %}
+{% highlight razor %}
+
+@using Syncfusion.Blazor.Buttons
+
+<SfSpeedDial Closed="ClosedEvent" OpenIconCss="e-icons e-edit">
+    <SpeedDialItems>
+        <SpeedDialItem IconCss="e-icons e-cut"/>
+        <SpeedDialItem IconCss="e-icons e-copy"/>
+        <SpeedDialItem IconCss="e-icons e-paste"/>
+    </SpeedDialItems>
+</SfSpeedDial>
+
+@code{
+    public void ClosedEvent(SpeedDialOpenCloseEventArgs args)
+    {
+        // Here, you can call your desired action.
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Item rendered
+
+The speed dial Component triggers the [ItemRendered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemRendered) event with [SpeedDialItemEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItemEventArgs.html) argument for each `SpeedDialItem` once its rendered.
 
 {% tabs %}
 {% highlight razor %}

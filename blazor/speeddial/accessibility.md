@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility with Blazor SpeedDial Component | Syncfusion
-description: Checkout and learn about accessibility with Blazor SpeedDial component in Blazor Server App and Blazor WebAssembly App.
+title: Accessibility in Blazor SpeedDial Component | Syncfusion
+description: Checkout and learn about accessibility in Blazor SpeedDial component and much more.
 platform: Blazor
 control: SpeedDial
 documentation: ug
@@ -9,9 +9,11 @@ documentation: ug
 
 # Accessibility in Blazor SpeedDial
 
+Accessibility is achieved in the Speed Dial component through WAI-ARIA standard and keyboard navigations. The Speed Dial component can be effectively accessed through assistive technologies such as screen readers.
+
 ## Keyboard interaction
 
-The following key shortcuts are used to access the Speed Dial Component without any interruption.
+The Speed Dial component is interactive with below keyboard shortcuts. 
 
 | Keyboard shortcuts | Actions |
 |------------|-------------------|
@@ -26,7 +28,7 @@ The following key shortcuts are used to access the Speed Dial Component without 
 
 ## ARIA attributes
 
-The following ARIA attributes are applicable for SpeedDial Component based on its state.
+The following ARIA attributes are used in SpeedDial Component based on its state.
 
 | Properties | Functionality |
 | ------------ | ----------------------- |
