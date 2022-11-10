@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RadialMenu in Blazor SpeedDial Component | Syncfusion
-description: Checkout and learn about radial menu and its customization in Blazor SpeedDial component.
+description: Checkout and learn about radial menu and its customization in Blazor SpeedDial component and much more.
 platform: Blazor
 control: SpeedDial
 documentation: ug

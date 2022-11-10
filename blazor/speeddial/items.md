@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Items in Blazor SpeedDial Component | Syncfusion
-description: Checkout and learn about action items and its customization in Blazor SpeedDial component.
+description: Checkout and learn about action items and its customization in Blazor SpeedDial component and much more.
 platform: Blazor
 control: SpeedDial
 documentation: ug
