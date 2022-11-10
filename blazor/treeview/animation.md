@@ -13,9 +13,9 @@ The Animation property is used to speed up or slow down the expand and collapse 
 
 In TreeView, we have the `TreeViewNodeAnimationSettings` API, which includes the `TreeViewAnimationExpand` and `TreeViewAnimationCollapse` APIs. Both collapse and expand APIs include the below properties.
 
-**Duration** - specifies the duration to animate.
-**Easing** - specifies the animation timing function.
-**Effect** - specifies the type of animation.
+* **Duration** - specifies the duration to animate.
+* **Easing** - specifies the animation timing function.
+* **Effect** - specifies the type of animation.
 
 In the following example, the `Animation` settings are defined.
 

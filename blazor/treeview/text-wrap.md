@@ -16,9 +16,11 @@ The default value of the `AllowTextWrap` property is false.
 In the following example, the `AllowTextWrap` property is enabled.
 
 ```cshtml
-<SfTreeView TValue="MailItem" @ref="treeview" AllowTextWrap="true">
-    <TreeViewFieldsSettings TValue="MailItem" Id="Id" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
-</SfTreeView>
+<div style="width:500px">
+    <SfTreeView TValue="MailItem" @ref="treeview" AllowTextWrap="true">
+        <TreeViewFieldsSettings TValue="MailItem" Id="Id" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
+    </SfTreeView>
+</div>
 
 @code{
     SfTreeView<MailItem> treeview;
@@ -37,7 +39,7 @@ In the following example, the `AllowTextWrap` property is enabled.
         MyFolder.Add(new MailItem
         {
             Id = "1",
-            FolderName = "The AllowTextWrap property is used to enable or disable wrapping the text in the TreeView node. When the this property is set to true, the TreeView node's text content will wrap to the next line when its text content exceeds the width of the TreeView node.",
+            FolderName = "The Inbox is the default location for all incoming mail, unless rules are set up to forward messages to another e-mail address, folder, or program.",
             HasSubFolders = true,
             Expanded = true,
         });

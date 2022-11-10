@@ -9,22 +9,25 @@ documentation: ug
 
 # Sorting in Blazor TreeView Component
 
-The `SortOrder` property is used to sort the TreeView nodes in ascending or descending order in the Blazor TreeView component.
+The `SortOrder` property is used to sort the TreeView nodes in ascending or descending order in the Blazor TreeView component. The default value of `SortOrder` property is none.
 
-The default value of `SortOrder` property is none.
+* **Ascending** - specifies the TreeView nodes are sorted in the ascending order.
+* **Descending** - specifies the TreeView nodes are sorted in the descending order.
+* **None** - specifies the TreeView nodes are not sorted.
 
-In the following example, the `SortOrder` property is dynamically updated on DropdownList selection.
+In the following example, the `SortOrder` property is dynamically updated on the button click.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
-<button @onclick="click">Get TreeView NodeOrders</button>
-<SfTreeView @ref="treeview" TValue="MailItem" AllowDragAndDrop="true" SortOrder="@SortOrder">
-    <TreeViewFieldsSettings TValue="MailItem" Id="Id" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
+<button @onclick="Ascending">TreeView Ascending Order</button>
+<button @onclick="Descending">TreeView Descending Order</button>
+<SfTreeView @ref="treeview" TValue="MailItem" AllowDragAndDrop="true" SortOrder="sortOrder">
+    <TreeViewFieldsSettings TValue="MailItem" DataSource="@MyFolder" Id="Id"  Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
 </SfTreeView>
 
 @code{
+    public SortOrder sortOrder;
     SfTreeView<MailItem> treeview;
-    public SortOrder SortOrder = SortOrder.Descending;
     public class MailItem
     {
         public string Id { get; set; }
@@ -101,9 +104,13 @@ In the following example, the `SortOrder` property is dynamically updated on Dro
         });
 
     }
-    public void click()
+    public void Ascending()
     {
-        var data = treeview.GetTreeData();
+        sortOrder = SortOrder.Ascending;
+    }
+    public void Descending()
+    {
+        sortOrder = SortOrder.Descending;
     }
 }
 
