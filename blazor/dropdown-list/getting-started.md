@@ -349,89 +349,10 @@ By default, the width of the popup list automatically adjusts according to the D
 
 ![Changing Popup List Height in Blazor DropDownList](./images/blazor-dropdownlist-popup-height.png)
 
-## Disable single listItem
-
-In below code single list Item is hidden using jsinterop.
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-```cshtml
-@inject IJSRuntime JSRuntime;
-@using Syncfusion.Blazor.DropDowns
-
-<SfDropDownList ID="mydropdown" TValue="string" TItem="Countries" Placeholder="e.g. Australia" DataSource="@Country" CssClass="e-custom-class">
-    <DropDownListFieldSettings Text="Name" Value="Code"></DropDownListFieldSettings>
-    <DropDownListEvents TItem="Countries" TValue="string" Opened="OnOpen"></DropDownListEvents>
-</SfDropDownList>
-
-@code {
-
-    public async Task OnOpen()
-    {
-        await this.JSRuntime.InvokeVoidAsync("disable", "mydropdown");
-    }
-    public class Countries
-    {
-        public string Name { get; set; }
-
-        public string Code { get; set; }
-    }
-
-    List<Countries> Country = new List<Countries>
-{
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" },
-        new Countries() { Name = "Denmark", Code = "DK" },
-        new Countries() { Name = "France", Code = "FR" },
-        new Countries() { Name = "Finland", Code = "FI" },
-        new Countries() { Name = "Germany", Code = "DE" },
-        new Countries() { Name = "Greenland", Code = "GL" },
-        new Countries() { Name = "Hong Kong", Code = "HK" },
-        new Countries() { Name = "India", Code = "IN" },
-        new Countries() { Name = "Italy", Code = "IT" },
-        new Countries() { Name = "Japan", Code = "JP" },
-        new Countries() { Name = "Mexico", Code = "MX" },
-        new Countries() { Name = "Norway", Code = "NO" },
-        new Countries() { Name = "Poland", Code = "PL" },
-        new Countries() { Name = "Switzerland", Code = "CH" },
-        new Countries() { Name = "United Kingdom", Code = "GB" },
-        new Countries() { Name = "United States", Code = "US" },
-    };
-}
-
-```
-
-{% endhighlight %}
-
-{% highlight cshtml tabtitle="Layout.cshtml" %}
-
-```cshtml
- <script>
-        window.disable = function (id) { 
-    setTimeout(function (e) { 
-        var liCollections = document.querySelectorAll('.e-popup.e-custom-class .e-list-item') 
-        if (liCollections && liCollections.length > 0) 
-        liCollections[1].classList.add('e-disabled'); 
-        liCollections[1].classList.add('e-overlay'); 
-    }, 30); 
- } 
-    </script>
-
-```
-
-{% endhighlight %}
-{% endtabs %}
-
-
-![Disable single listItem in Blazor DropDownList](./images/blazor_dropdown_disable-single-item.png)
-
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DropDownList).
 
 ## See Also
 
-* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli/)
-* [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio/)
-* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli/)
+* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)
+* [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
+* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli)
