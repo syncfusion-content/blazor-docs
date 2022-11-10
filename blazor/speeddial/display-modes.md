@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Display Modes in Blazor SpeedDial Component | Syncfusion
-description: Checkout and learn about Mode with Blazor SpeedDial component in Blazor Server App and Blazor WebAssembly App.
+description: Checkout and learn about linear and radial display modes in Blazor SpeedDial component and much more.
 platform: Blazor
 control: SpeedDial
 documentation: ug
