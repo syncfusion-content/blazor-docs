@@ -9,7 +9,7 @@ documentation: ug
 
 # Value Binding in Blazor RichTextEditor
 
-You can bind the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) to the editor component, by using the `@bind-Value` attribute and it supports string type. If component value has been changed, it will affect all the places where you bind the variable for the **bind-value** attribute.
+You can bind the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_Value) to the editor component, by using the `@bind-Value` attribute and it supports string type. If component value has been changed, it will affect all the places where you bind the variable for the **bind-Value** attribute.
 
 {% tabs %}
 {% highlight razor %}
