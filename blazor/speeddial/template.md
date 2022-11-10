@@ -7,7 +7,7 @@ control: SpeedDial
 documentation: ug
 ---
 
-# Template in Blazor SpeedDial
+# Template in Blazor SpeedDial Component
 
 This section explains available templates in Speed Dial Component and its usage.
 
@@ -52,7 +52,7 @@ You can use the [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeedDial with ItemTemplate](./images/ItemTemplate.png)
+![Blazor SpeedDial with ItemTemplate](./images/Blazor-SpeedDial-ItemTemplate.png)
 
 ## Popup template
 
@@ -86,4 +86,4 @@ You can use the [PopupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeedDial with PopupTemplate](./images/SDPopupTemp.png)
+![Blazor SpeedDial with PopupTemplate](./images/Blazor-SpeedDial-PopupTemp.png)

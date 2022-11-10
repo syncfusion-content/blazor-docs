@@ -11,7 +11,7 @@ documentation: ug
 
 The action items in Blazor Speed Dial can be displayed in `Linear` and `Radial` display modes by setting [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Mode) property.
 
-## Linear Display Mode
+## Linear display mode
 
 In `Linear` display mode, Speed Dial action items are displayed in a list-like format either horizontally or vertically. By default, Speed Dial items are displayed in `Linear` mode.
 
@@ -43,6 +43,6 @@ The `Linear` directions of Speed Dial are as follows:
 
 ![Blazor Speed Dial Linear Mode](./images/Blazor-SpeedDial-LinearMode.png)
 
-## Radial Display Mode (Radial Menu)
+## Radial display mode (Radial Menu)
 
 In `Radial` mode, Speed Dial action items are displayed in a circular pattern like a radial menu. For more details about radial mode, check out the link [here](https://blazor.syncfusion.com/documentation/speeddial/getting-started).
