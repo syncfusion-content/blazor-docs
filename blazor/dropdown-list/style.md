@@ -7,13 +7,13 @@ control: DropDown List
 documentation: ug
 ---
 
-# Style and Appearance
+# Style and Appearance in Dropdown List
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
-## Read-only Mode
+## Read-only mode
 
-You can specify the boolean value to [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Readonly) whether the DropDownList allows the user to change the value.
+You can specify the boolean value to [`Readonly`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Readonly) whether the DropDownList allows the user to change the value.
 
 {% highlight cshtml %}
 
@@ -25,7 +25,7 @@ You can specify the boolean value to [Readonly](https://help.syncfusion.com/cr/b
 
 ## Disabled state
 
-You can specifies the boolean value to `Enabled` property that indicates whether the component is enabled or not.
+You can specifies the boolean value to [`Enabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Enabled) property that indicates whether the component is enabled or not.
 
 {% highlight cshtml %}
 
@@ -35,7 +35,7 @@ You can specifies the boolean value to `Enabled` property that indicates whether
 
 ![Blazor DropDownList with Disabled ](./images/style/blazor_dropdown_disabled-state.png)
 
-## Customizing the Disabled Component’s Text color
+## Customizing the disabled component’s text color
 
 Use the following CSS to customize the text color when the component is disabled.
 
@@ -45,9 +45,9 @@ Use the following CSS to customize the text color when the component is disabled
 }
 ```
 
-## Show the custom Icon in dropdown Icon
+## Show the custom icon in dropdown icon
 
-You can change the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons/#material) by overriding the below style “content”.
+You can change the dropdown [`icon`](https://ej2.syncfusion.com/documentation/appearance/icons/#material) by overriding the below style “content”.
 
 {% highlight cshtml %}
 
@@ -57,7 +57,7 @@ You can change the dropdown [icon](https://ej2.syncfusion.com/documentation/appe
 
 ![Blazor DropDownList with dropdown icon](./images/style/blazor_dropdown_dropdown-icon.png)
 
-You can also change the dropdown icon for the particular component using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property and add style to the custom class which is mapped to CssClass.
+You can also change the dropdown icon for the particular component using [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property and add style to the custom class which is mapped to CssClass.
 
 {% highlight cshtml %}
 
@@ -80,7 +80,7 @@ Use the following CSS to customize the appearance of container element.
 }
 ```
 
-## Customizing the Dropdown Icon’s Color
+## Customizing the dropdown icon’s color
 
 Use the following CSS to customize the dropdown icon’s color.
 
@@ -91,7 +91,7 @@ Use the following CSS to customize the dropdown icon’s color.
 }
 ```
 
-## Customizing the Focus Color
+## Customizing the focus color
 
 Use the following CSS to customize the focusing color of input element.
 
@@ -147,9 +147,9 @@ Use the following CSS to customize the appearance of popup element.
 }
 ```
 
-## Change the HTML Attributes
+## Change the HTML attributes
 
-You can add the additional html attributes such as styles, class, and more to the root element using [HTMLAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_HtmlAttributes) property
+You can add the additional html attributes such as styles, class, and more to the root element using [`HTMLAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_HtmlAttributes) property
 
 {% highlight cshtml %}
 
@@ -159,9 +159,9 @@ You can add the additional html attributes such as styles, class, and more to th
 
 ![Blazor DropDownList with different font family](./images/style/blazor_dropdown_html-attributes.png)
 
-## Set the various Font family for Dropdown List Elements
+## Set the various font family for dropdown list elements
 
-You can override using the selector for changing the font-family of dropdown list. Also, you can override using the specific class name through [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property.
+You can override using the selector for changing the font-family of dropdown list. Also, you can override using the specific class name through [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property.
 
 In the below sample changed the font family of Dropdownlist, ListItem in dropdownlist and filterInput text.
 
@@ -173,7 +173,7 @@ In the below sample changed the font family of Dropdownlist, ListItem in dropdow
 
 ![Blazor DropDownList with different font family](./images/style/blazor_dropdown_font-family.png)
 
-## Show Tooltip on List Item
+## Show tooltip on list item
 
 You can achieve this behavior by using tooltip component. When the mouse is hovered over the DropDownList option, a tooltip appears with information about the hovered list item.
 
@@ -203,7 +203,7 @@ You can set opacity to the selected item using below selector.
 
 ### Height of dropdown list
 
-You can use [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) property to change the height of the popup.
+You can use [`PopupHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) property to change the height of the popup.
 
 % highlight cshtml %}
 
@@ -215,7 +215,7 @@ You can use [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ### Width of dropdown list
 
-You can use [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) property to change the width of the popup. By default, the popup width sets based on the width of the component. and use [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Width) to change the width of the component.
+You can use [`PopupWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) property to change the width of the popup. By default, the popup width sets based on the width of the component. and use [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Width) to change the width of the component.
 
 % highlight cshtml %}
 
@@ -225,7 +225,7 @@ You can use [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ![Blazor DropDownList with Popup Width](./images/style/blazor_dropdown_width-popup-width.png)
 
-## Disable Specfic Items in Dropdown List
+## Disable specfic items in dropdown list
 
 You can prevent some items in the popup list from selecting and it can be achieved by disable the item for specific dropdownlist component by adding the custom class for popup element using CssClass property
 
