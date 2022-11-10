@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor SpeedDial Component | Syncfusion
-description: Checkout and learn about various events in Blazor SpeedDial component and much more.
+description: Checkout and learn here all about events and how to use them in Syncfusion Speed Dial component and much more.
 platform: Blazor
 control: SpeedDial
 documentation: ug
