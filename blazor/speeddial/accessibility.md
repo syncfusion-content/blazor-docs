@@ -7,7 +7,7 @@ control: SpeedDial
 documentation: ug
 ---
 
-# Accessibility in Blazor SpeedDial
+# Accessibility in Blazor SpeedDial Component
 
 Accessibility is achieved in the Speed Dial component through WAI-ARIA standard and keyboard navigations. The Speed Dial component can be effectively accessed through assistive technologies such as screen readers.
 

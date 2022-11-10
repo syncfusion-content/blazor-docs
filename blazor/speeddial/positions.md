@@ -38,7 +38,7 @@ The position values of Speed Dial are as follows:
 
 ![Blazor Speed Dial Position](./images/Blazor-SpeedDial-Position.png)
 
-## OpensOnHover
+## Opens on hover
 
 You can open the Speed Dial action items on mouse hover by setting the [OpensOnHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_OpensOnHover) property as true.
 
@@ -58,7 +58,7 @@ You can open the Speed Dial action items on mouse hover by setting the [OpensOnH
 
 ![Blazor Speed Dial OpensOnHover](./images/Blazor-SpeedDial-Icon.png)
 
-## Programmatically Show/Hide
+## Programmatically show/hide
 
 You can open/close the Speed Dial action items programmatially using [ShowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ShowAsync) and 
 [HideAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_HideAsync) methods.
@@ -98,7 +98,7 @@ Below example demonstrates open/close action items on button click.
 ![Blazor Speed Dial Show Items](./images/Blazor-SpeedDial-ShowItem.png)
 ![Blazor Speed Dial Hide Items](./images/Blazor-SpeedDial-HideItem.png)
 
-## Programmatically Refresh the Position
+## Programmatically refresh the position
 
 You can refresh the position of the Speed Dial using [RefreshPositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_RefreshPositionAsync) method when the `Target`position is changed.
 
