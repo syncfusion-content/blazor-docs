@@ -20,7 +20,7 @@ To modify the Button appearance, you need to override the default CSS of Button 
 
 ## Customizing the appearance of button
 
-Use the following CSS to customize the background color of button while clicking, hovering and focus.
+Use the following CSS to customize the background color of button while clicking, hovering and focusing.
 
 ```cshtml
 
