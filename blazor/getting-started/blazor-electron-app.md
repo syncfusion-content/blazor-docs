@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Creating Desktop Application using Blazor and Electron Framework | Syncfusion
+title: Creating Desktop App using Blazor and Electron Framework | Syncfusion
 description: Check out the documentation for creating desktop application using Blazor and Electron Framework with Syncfusion Blazor Components in Visual Studio.
 platform: Blazor
 component: Common
@@ -39,7 +39,7 @@ dotnet add package ElectronNET.API
 dotnet new tool-manifest
 ```
 
-![Local dotnet tool](images\electron\net-tool-manifest.png)
+![.NET tool manifest file](images\electron\net-tool-manifest.png)
 
 3. Install the electronize tool locally in the project by running the below command.
 
@@ -148,10 +148,9 @@ public class Startup
 7. Run the application using the below command.
 
 ```
-
 dotnet electronize start
-
 ```
+
 ![Electron app output](images\electron\electron-grid-output.png)
 
 > To close the electron app when closed the electron window add the below code in **//Open the Electron-Window** in step 6 in the **~/Startup.cs** file of .NET 3.X and .NET 5 applications, in **~/Program.cs** file of .NET 6 applications.
@@ -172,11 +171,9 @@ Task.Run(async () => {
 8. Run the below command lines to do production builds based on platform
 
 ```
-
 dotnet electronize build /target win
 dotnet electronize build /target osx
 dotnet electronize build /target linux
-
 ```
 
 > [View the complete Blazor Server electron application with Syncfusion controls on GitHub](https://github.com/SyncfusionExamples/blazor-electron-app)
