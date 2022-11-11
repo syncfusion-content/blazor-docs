@@ -35,9 +35,9 @@ The `onclick` attribute is used to bind the click event for button. Here, we hav
 
 ```csharp
 
-    @using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Buttons
 
-    <SfButton @ref="ToggleBtn" @onclick="onToggleClick" CssClass="e-flat" IsToggle="true" IsPrimary="true" Content="@Content"></SfButton>
+<SfButton @ref="ToggleBtn" @onclick="onToggleClick" CssClass="e-flat" IsToggle="true" IsPrimary="true" Content="@Content"></SfButton>
 
 @code {
     SfButton ToggleBtn;

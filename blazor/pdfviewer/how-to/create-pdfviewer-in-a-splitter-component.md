@@ -43,6 +43,6 @@ You can use Splitter to render the PDF Viewer while rendering more than one comp
 }
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Render%20PDFViewer%20with%20different%20components/PDFViewer%20with%20Splitter).
+> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Render%20PDFViewer%20with%20different%20components/PDFViewer%20with%20Splitter).
 
 > You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.

@@ -63,8 +63,7 @@ If you have your Word document file in the web, you can open it in [Blazor Word 
 
 ## Opening a document from Cloud
 
-You can open the Word documents from Cloud storage.
-The following code example shows how to open and load the Word document file stored in Azure Blob Storage.
+You can open the Word documents from Cloud storage. The following code example shows how to open and load the Word document file stored in Azure Blob Storage.
 
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor
