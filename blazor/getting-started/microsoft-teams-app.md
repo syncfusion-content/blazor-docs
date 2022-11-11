@@ -89,7 +89,7 @@ Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/a
 
 To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred inside the `<head>` of **~/Pages/_Host.cshtml** file as follows,
 
-{% endhighlight %}
+{% tabs %}
 {% highlight cshtml tabtitle="~/_Host.cshtml" hl_lines="3" %}
 
 <head>
