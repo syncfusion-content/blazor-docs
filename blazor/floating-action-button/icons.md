@@ -7,11 +7,11 @@ control: FloatingActionButton
 documentation: ug
 ---
 
-# Icons in Blazor Floating Action Button Component
+# Icons in Blazor Floating Action Button component
 
 You can customize the icon and text of Blazor Floating Action Button(FAB) using [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconCss) and [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_Content) properties.
 
-## FAB with Icon
+## FAB with icon
 
 You can show icon only in Floating Action Button by setting [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconCss) property. You can show tooltip on hover to show additional details to end-user by setting `title` attribute.
 
@@ -54,7 +54,7 @@ You can show icon only in Floating Action Button by setting [IconCss](https://he
 
 ![Blazor Floating Action Button with Icon](./images/FabWithIcon.png)
 
-## FAB with Icon and Text
+## FAB with icon and text
 
 You can show icon along with text in Floating Action Button by setting [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconCss) and [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_Content) properties.
 
@@ -97,7 +97,7 @@ You can show icon along with text in Floating Action Button by setting [IconCss]
 
 ![Blazor Floating Action Button with Icon and Text](./images/IconandText.png)
 
-### Icon Position
+### Icon position
 
 You can change the position of icon when showing along with content by setting [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconPosition) property. By default, the icon is positioned on the left side together with text.
 

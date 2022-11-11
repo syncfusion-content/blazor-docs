@@ -7,7 +7,7 @@ control: Floating Action Button
 documentation: ug
 ---
 
-# Events in Floating Action Button Component
+# Events in Floating Action Button component
 
 This section explains the available events in Floating Action Button Component.
 
