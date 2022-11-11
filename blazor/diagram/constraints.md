@@ -193,7 +193,7 @@ node.Constraints = NodeConstraints.Default | NodeConstraints.Tooltip;
 
 For more information about node constraints, refer to the [NodeConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html).
 
->**Note** : By default, the following constraints are enabled for the node,
+>By default, the following constraints are enabled for the node,
 >* Shadow
 >* PointerEvents
 >* AllowDrop

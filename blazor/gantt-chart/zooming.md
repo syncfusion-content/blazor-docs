@@ -74,8 +74,6 @@ This support is used to view all the tasks available in a project to specific ti
 
 Zooming action also can be performed on external actions such as button click using the `ZoomIn()`, `ZoomOut()`, and `ZoomToFitAsync()` built-in methods.
 
-![Zooming in Blazor Gantt Chart](images/blazor-gantt-chart-zooming.png)
-
 ## Customizing zooming levels
 
 In the Gantt chart, the zoom-in and zoom-out actions are performed based on the predefined zooming Levels. You can customize the zooming actions by defining the required zooming levels to the [CustomZoomingLevels](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_CustomZoomingLevels) property.

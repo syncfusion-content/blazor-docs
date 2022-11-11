@@ -35,4 +35,4 @@ You can load your own PDF document for initial loading as well as change documen
 }
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Hosted%20Samples/Load%20desired%20PDF%20for%20Wasm%20in%20hosted%20sample).
+> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Hosted%20Samples/Load%20desired%20PDF%20for%20Wasm%20in%20hosted%20sample).
