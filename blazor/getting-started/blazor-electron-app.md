@@ -154,7 +154,7 @@ dotnet electronize start
 ```
 ![Electron app output](images\electron\electron-grid-output.png)
 
-> To close the electron app when closed the electron window add the below code in the application.
+> To close the electron app when closed the electron window add the below code in **//Open the Electron-Window** in step 6 in the **~/Startup.cs** file of .NET 3.X and .NET 5 applications, in **~/Program.cs** file of .NET 6 applications.
 
 {% tabs %}
 {% highlight c# hl_lines="3 4 5" %}
