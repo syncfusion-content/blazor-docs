@@ -283,7 +283,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 ![Blazor SpeedDial Component](./images/blazor-speeddial-component.png)
 
-## Display Modes
+## Linear and radial display modes
 
 You can use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Mode) property to either display the menu in linear order like a list or like a radial menu in radial (circular) direction.
 
@@ -314,7 +314,7 @@ You can use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 ![Blazor SpeedDial Component](./images/blazor-speeddial-mode-radial-sample.png)
 
 
-## Action Item click
+## Item clicked event
 
 The speed dial control triggers the [`ItemClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemClicked) event with [`SpeedDialItemEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItemEventArgs.html) argument when an action item is clicked.
 You can use this event to perform the required action.
