@@ -16,7 +16,7 @@ The value binding as the process of passing values between a component and its p
 
 ## Bind value binding
 
-The value binding can be achieved by using [`@bind-Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute and it supports string, int, Enum, bool and complex types. If component value has been changed, it will affect all places where you bind the variable for the [`@bind-value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute.
+The value binding can be achieved by using [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute and it supports string, int, Enum, bool and complex types. If component value has been changed, it will affect all places where you bind the variable for the `@bind-value` attribute.
 
 {% highlight cshtml %}
 
@@ -28,7 +28,7 @@ The value binding can be achieved by using [`@bind-Value`](https://help.syncfusi
 
 ## Index value binding
 
-The Index value binding can be achieved by using [`@bind-Index`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Index) attribute and it supports int and int nullable types. By using this attribute you can bind the values respective to its index.
+The Index value binding can be achieved by using [@bind-Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Index) attribute and it supports int and int nullable types. By using this attribute you can bind the values respective to its index.
 
 {% highlight cshtml %}
 
@@ -38,9 +38,9 @@ The Index value binding can be achieved by using [`@bind-Index`](https://help.sy
 
 ![Blazor DropDownList with Index Value](./images/value-binding/blazor_dropdown_index-value.png)
 
-## Text and Value
+## Text and value
 
-The DropdownList [`DropDownListFieldSettings.Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value) and [`DropDownListFieldSettings.Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Text) properties point to the corresponding names of the model. The [`DropDownListFieldSettings.Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value) mapped to the component maintains the unique value of the item in the data source, and the [`DropDownListFieldSettings.Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Text) is mapped to display the text in the popup list items for the respective text value.
+The DropdownList [DropDownListFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value) and [DropDownListFieldSettings.Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Text) properties point to the corresponding names of the model. The `DropDownListFieldSettings.Value` mapped to the component maintains the unique value of the item in the data source, and the `DropDownListFieldSettings.Text` is mapped to display the text in the popup list items for the respective text value.
 
 The following code demonstrates, Value and Text field of the DropDownList component For instance, the selected item is `Badminton` (Text Field i.e., Game) but the value field holds `Game2` (Value Field i.e., ID).
 
@@ -54,7 +54,7 @@ The following code demonstrates, Value and Text field of the DropDownList compon
 
 ## Primitive type binding
 
-The DropDownList has support to load array of primitive data such as strings and numbers.
+The DropDownList has support to load array of primitive data such as strings and numbers. You can bind value of primitive data to [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute of DropDownList 
 
 The following code demonstrates array of string as datasource to the DropDownList component.
 
@@ -78,9 +78,9 @@ The following code demonstrates array of int as datasource to the DropDownList c
 
 ## Object binding
 
-object data binding refers a memory location where object data is stored.
+You can bind Object data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute of the DropdownList component, You can map the class name to both `TValue` and `TItem`. 
 
-In the following example, `Game` column has been mapped to the [`DropDownListFieldSettings.Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value).
+In the following example, `Name` column has been mapped to the [`DropDownListFieldSettings.Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value).
 
 {% highlight cshtml %}
 
@@ -92,7 +92,7 @@ In the following example, `Game` column has been mapped to the [`DropDownListFie
 
 ## Enum binding
 
-You can bind enum data to DropDownList component. The following code helps you get a string value from the enumeration data.
+You can bind enum data to [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute of DropDownList component. The following code helps you get a string value from the enumeration data.
 
 {% highlight cshtml %}
 
@@ -150,7 +150,7 @@ First, you need to create a `DropDownList.razor` file in the `/Pages` folder as 
 
 ### Usage of generic component with different type
 
-Then you can render the Generic DropDownList component with required TValue and TItem in the respective razor components. 
+Then you can render the Generic DropDownList component with required `TValue` and `TItem` in the respective razor components. 
 
 Here, we have rendered the DropDownList component with TValue as string type in the `/Index.razor` file and DropDownList component with TValue as int? type in the `/Counter.razor` file.
 
