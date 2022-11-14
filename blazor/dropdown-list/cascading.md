@@ -11,7 +11,7 @@ documentation: ug
 
 The Cascading DropDownList is the series of DropDownList, where the value of one DropDownList depends on another DropDownList value. 
 
-In the [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event handler of first DropDownList, you should load the data for the second DropDownList based on the selected value of first DropDownList. The same has to be configured between second and third DropDownLists.
+In the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event handler of first DropDownList, you should load the data for the second DropDownList based on the selected value of first DropDownList. The same has to be configured between second and third DropDownLists.
 
 In this sample, if a country is selected from countries DropDownList, the respective states are loaded in the second DropDownList and in the same way states and cities DropDownList works.
 
