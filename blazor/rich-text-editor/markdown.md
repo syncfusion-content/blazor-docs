@@ -9,7 +9,7 @@ documentation: ug
 
 # Markdown Editor in Blazor RichTextEditor
 
-The Blazor Rich Text Editor support editing the Markdown contents when the [EditorMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.EditorMode.html#fields) property is set to `Markdown`. Markdown is the lightweight text formatting with the simple syntax, it can apply the using keyboard interactions and toolbar action.
+The Rich Text Editor supports to editing the markdown content by using the [EditorMode.Markdown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.EditorMode.html#Syncfusion_Blazor_RichTextEditor_EditorMode_Markdown) property. Markdown is the lightweight text formatting with the simple syntax and the markdown format will apply both keyboard interactions and toolbar action.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -19,9 +19,9 @@ The Blazor Rich Text Editor support editing the Markdown contents when the [Edit
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Markdown Editor](./images/blazor-richtexteditor-markdown-editor.png)
+![Blazor RichTextEditor markdown editor](./images/blazor-richtexteditor-markdown-editor.png)
 
-## Markdown  Commands
+## Markdown  commands
 
 The [Blazor Markdown editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor/wysiwyg-markdown-editor) supports the following commands to format the markdown content:
 
@@ -54,11 +54,11 @@ The [Blazor Markdown editor](https://www.syncfusion.com/blazor-components/blazor
 | Escape Character | `\(`any syntax`)` | Escape any markdown syntax by prefix `\` to the syntax.<br>Example:<br>`\**`Bold text`**`|
 | HTML Entities | Copyright: &copy; - `&copy;` <br>Trade mark: &trade; - `&trade;`<br>Registered: &reg; - `&reg;`<br>Ampersand: &amp; - `&amp;`<br>Less than: &lt; - `&lt;`<br>Greater than: &gt; - `&gt;` | For HTML entities, add & and ; to the front and back of the respective entities. |
 
-> The above listed commands alone are supported in Syncfusion Markdown editor. For other unsupported commands, you can achieve using the HTML tags in Markdown editor. The foot notes, definitions, math, and check list markdown syntax are also not supported.
+> The above listed commands alone are supported in Syncfusion markdown editor. For other unsupported commands, you can achieve using the HTML tags in markdown editor. The foot notes, definitions, math, and check list markdown syntax are also not supported.
 
 ## Insert table
 
-To insert the table in the Markdown editor, click the [Table](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorTableSettings.html#properties) icon in the toolbar to insert the table into the editor area and this is the default way in all the devices. By default insert the Markdown table with 2 X 2 rows and columns along with the heading.
+To insert the table in the markdown editor, click the [Table](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorTableSettings.html#properties) icon in the toolbar to insert the table into the editor area. By default, The markdown table insert with 2 X 2 rows and columns along with the heading.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -68,11 +68,11 @@ To insert the table in the Markdown editor, click the [Table](https://help.syncf
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Markdown Table](./images/blazor-richtexteditor-markdown-table.png)
+![Blazor RichTextEditor markdown table](./images/blazor-richtexteditor-markdown-table.png)
 
 ## Insert image
 
-To insert an image in the Markdown editor, click the [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html) icon in the toolbar to insert an image into the editor area. Refer the following sample and code snippets for insert an image in the Markdown editor.
+To insert an image in the markdown editor, click the [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html) icon in the toolbar to insert an image into the editor area.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -82,16 +82,16 @@ To insert an image in the Markdown editor, click the [Image](https://help.syncfu
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Markdown Image](./images/blazor-richtexteditor-markdown-image.png)
+![Blazor RichTextEditor markdown image](./images/blazor-richtexteditor-markdown-image.png)
 
 ## Insert link
 
-Point the cursor anywhere within the editor where you would like to insert the link. It is also possible to select a text or an image within the editor and can be converted to the hyperlink. Click the Insert HyperLink tool on the toolbar. The Insert Link Dialog will open. The dialog has the following options.
+To create the link for a text or an image in markdown editor, click the `HyperLink`(https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html) tool on the toolbar. The insert link dialog will open. The dialog has the following options.
 
 | Options | Description |
 |----------------|--------------------------------------|
-| Web Address | Types or pastes the destination for the link you are creating |
-| Display Text | Types or edits the required text that you want to display text for the link|
+| Web Address | Type or paste the destination for the link you are creating |
+| Display Text | Type or edit the required text that you want to display text for the link |
 
 {% tabs %}
 {% highlight cshtml %}
@@ -101,11 +101,11 @@ Point the cursor anywhere within the editor where you would like to insert the l
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Markdown Link](./images/blazor-richtexteditor-markdown-link.png)
+![Blazor RichTextEditor markdown link](./images/blazor-richtexteditor-markdown-link.png)
 
 ## Custom format
 
-The Rich Text Editor allows you to customize the markdown syntax by overriding its default syntax. Configure the customized markdown syntax using [ListSyntax](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMarkdownOptions.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMarkdownOptions_ListSyntax), [FormatSyntax](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMarkdownOptions.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMarkdownOptions_FormatSyntax), [SelectionSyntax](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMarkdownOptions.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMarkdownOptions_SelectionSyntax) properties of RichTextEditorMarkdownOptions.
+The Rich Text Editor allows you to customize the markdown syntax by overriding its default syntax. Configure the customized markdown syntax using [RichTextEditorMarkdownOptions.ListSyntax](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMarkdownOptions.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMarkdownOptions_ListSyntax), [RichTextEditorMarkdownOptions.FormatSyntax](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMarkdownOptions.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMarkdownOptions_FormatSyntax), [RichTextEditorMarkdownOptions.SelectionSyntax](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMarkdownOptions.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMarkdownOptions_SelectionSyntax) properties.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -115,11 +115,11 @@ The Rich Text Editor allows you to customize the markdown syntax by overriding i
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Markdown Custom List Syntax](./images/blazor-richtexteditor-markdown-custom-list.png)
+![Blazor RichTextEditor markdown custom list](./images/blazor-richtexteditor-markdown-custom-list.png)
 
-![Blazor RichTextEditor with Markdown Custom Format Syntax](./images/blazor-richtexteditor-markdown-custom-formats.png)
+![Blazor RichTextEditor markdown custom format](./images/blazor-richtexteditor-markdown-custom-formats.png)
 
-![Blazor RichTextEditor with Markdown Custom Selection Syntax](./images/blazor-richtexteditor-markdown-custom-bold.png)
+![Blazor RichTextEditor markdown custom selection](./images/blazor-richtexteditor-markdown-custom-bold.png)
 
 
 ## See also
