@@ -80,7 +80,7 @@ The following code demonstrates array of int as datasource to the DropDownList c
 
 ## Object binding
 
-You can bind Object data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute of the DropdownList component, You can map the class name to both `TValue` and `TItem`. 
+You can bind Object data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute of the DropdownList component, i.e You can map the class name to `TValue`. 
 
 In the following example, `Name` column has been mapped to the [`DropDownListFieldSettings.Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value).
 
