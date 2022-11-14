@@ -25,7 +25,7 @@ In the below code, demonstrated the filtering functionality with local data in t
 
 ## Remote data
 
-In the below code, demonstrated the filtering functionality with ODataAdaptor in the DropDownList component with help of [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
+In the below code, demonstrated the filtering functionality with [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) in the DropDownList component with help of [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
 
 {% highlight cshtml %}
 
@@ -37,7 +37,7 @@ In the below code, demonstrated the filtering functionality with ODataAdaptor in
 
 ## Filter type
 
-You can use [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_FilterType) property to determine on which filter type, the component needs to be considered on search action and its supported data types are,
+You can use [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_FilterType) property to determine on which filter type, the component needs to be considered on search action. The available `FilterType` and its supported data types are:
 
 FilterType     | Description
 ------------ | -------------
