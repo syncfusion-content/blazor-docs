@@ -39,7 +39,7 @@ In the below sample PopupWidth is set as 100px then text-overflow:ellipsis is au
 
 ![Grouping in Blazor DropdownList](./images/popup-setting/blazor_dropdown_text-overflow.png)
 
-## Change the popup Height
+## Change the popup height
 
 Specifies the height of the popup list.
 
@@ -53,13 +53,13 @@ Default value of PopupHeight is `300px`.
 
 ![Grouping in Blazor DropdownList](./images/popup-setting/blazor_dropdown_popup-height.png)
 
-## Change the Popup Z-index
+## Change the popup z-index
 
 Specifies the z-index value of the component popup element.
 
 Defaults to 1000
 
-## Show Popup on initial loading
+## Show popup on initial loading
 
 You can achieve this by using [`ShowPopupAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowPopupAsync) in the Created Event.
 
@@ -83,7 +83,7 @@ You can prevent the popup open and close in event argument like args.cancel as t
 
 ![Grouping in Blazor DropdownList](./images/popup-setting/blazor_dropdown_preventing-opening-closing.png)
 
-## Popup Height based on available space
+## Popup height based on available space
 
 You can achieve this by binding resize event in window and update the height of the popup based on the window height.
 
