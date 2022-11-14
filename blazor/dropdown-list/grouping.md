@@ -9,13 +9,13 @@ documentation: ug
 
 # Grouping in Dropdown List
 
-The DropDownList supports wrapping nested elements into a group based on different categories. The category of each list item can be mapped through the [`GroupBy`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListFieldSettings.html#Syncfusion_Blazor_DropDowns_DropDownListFieldSettings_GroupBy) field in the data table. The group header is displayed both as inline and fixed headers. The fixed group header content is updated dynamically on scrolling the popup list with its category value.
+The DropDownList supports wrapping nested elements into a group based on different categories. The category of each list item can be mapped through the [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListFieldSettings.html#Syncfusion_Blazor_DropDowns_DropDownListFieldSettings_GroupBy) field in the data table. The group header is displayed both as inline and fixed headers. The fixed group header content is updated dynamically on scrolling the popup list with its category value.
 
 To get started quickly with grouping in the Blazor DropDown List component, you can check the video below.
 
 {% youtube "https://www.youtube.com/watch?v=9Ouje7KEOEU" %}
 
-In the following sample, vegetables are grouped according on its category using [`GroupBy`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListFieldSettings.html#Syncfusion_Blazor_DropDowns_DropDownListFieldSettings_GroupBy) field.
+In the following sample, vegetables are grouped according on its category using [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListFieldSettings.html#Syncfusion_Blazor_DropDowns_DropDownListFieldSettings_GroupBy) field.
 
 {% highlight cshtml %}
 
@@ -27,13 +27,11 @@ In the following sample, vegetables are grouped according on its category using 
 
 ## Fixed group header
 
-You can classify the items based on the [`GroupBy`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListFieldSettings.html#Syncfusion_Blazor_DropDowns_DropDownListFieldSettings_GroupBy) field mapped to the control. The headers of group items will fixed at the top till its belonging items ends up on scrolling.
+You can classify the items based on the [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListFieldSettings.html#Syncfusion_Blazor_DropDowns_DropDownListFieldSettings_GroupBy) field mapped to the control. The headers of group items will fixed at the top till its belonging items ends up on scrolling.
 
 ## Group header template
 
-The group header title under which appropriate sub-items are categorized can also be customize with the help of [`GroupTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_GroupTemplate) property. This template is common for both inline and floating group header template.
-
-Refer the [`Group Template`](https://blazor.syncfusion.com/documentation/dropdown-list/templates#group-template) documentation to know more about this.
+The group header title under which appropriate sub-items are categorized can also be customize with the help of [GroupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_GroupTemplate) property. This template is common for both inline and floating group header template.
 
 ## Limitations of grouping
 
