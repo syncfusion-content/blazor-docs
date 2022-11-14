@@ -84,6 +84,7 @@ The cell [edit template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 ```cshtml
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.DropDowns
+
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
@@ -104,7 +105,7 @@ The cell [edit template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
             @{
                     var task1 = (context as TaskData);
              }
-            <SfMultiSelect TValue="string[]" TItem="Employee" @bind-Value="@task1.Assignee" DataSource="@Assignees">
+            <SfMultiSelect TValue="string[]" TItem="Employee" Mode="VisualMode.CheckBox" @bind-Value="@task1.Assignee" DataSource="@Assignees">
                 <MultiSelectFieldSettings Value="Name"></MultiSelectFieldSettings>
             </SfMultiSelect>
             </EditTemplate>
@@ -121,7 +122,6 @@ The cell [edit template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
         </GanttColumn>
         <GanttColumn Field="Duration"></GanttColumn>
         <GanttColumn Field="Progress"></GanttColumn>
-        
     </GanttColumns>
     <GanttEditSettings AllowEditing="true"></GanttEditSettings>
 </SfGantt>
@@ -140,7 +140,7 @@ The cell [edit template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     new Employee() { ID= "1", Name= "Martin Tamer" },
     new Employee() { ID= "2", Name= "Rose Fuller" },
     new Employee() { ID= "3", Name= "Jack Davolio" },
-    new Employee() { ID= "4", Name= "Van Jack"},
+    new Employee(){ID="4", Name ="Van Jack"},
     };
     protected override void OnInitialized()
     {
@@ -175,6 +175,7 @@ The cell [edit template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 }
 }
 ```
+![Cell edit template in Blazor Gantt Chart](images/blazor-gantt-chart-cell-edit-template.gif){:width="100%" height="502"}
 
 ## Dialog editing
 
