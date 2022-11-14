@@ -258,6 +258,8 @@ A custom toolbar can be placed inside SfGantt. The baseline in the Gantt Chart c
 ```
 ![Blazor Gantt Chart with Custom toolbar](images/blazor-gantt-chart-custom-toolbar.gif)
 
+>It is neccessary to include toolbar id to avoid height alignment issue. Toolbar ID format must be {Gantt_ID}_Gantt_Toolbar.
+
 ## Built-in and custom items in toolbar
 
 The Gantt Chart component has an option to use both built-in and custom toolbar items at the same time.
