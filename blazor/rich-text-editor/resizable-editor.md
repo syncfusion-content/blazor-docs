@@ -9,7 +9,7 @@ documentation: ug
 
 # Resizable Rich Text Editor
 
-The Rich Text Editor allows it to be resized dynamically, so the users can able to change the size of the editor based on their needs. You can enable or disable this feature using the [EnableResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableResize) property in the Rich Text Editor. If `EnableResize` is set to true, the editor component creates a grip at the bottom right corner, which allows resizing the component in the diagonal direction.
+The Rich Text Editor can be dynamically resized, allowing users to change the size of the editor based on their needs. You can enable or disable this feature using the [EnableResize] (https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableResize) property. If `EnableResize` is set to true, the editor component creates a grip at the bottom right corner, which allows resizing the component in the diagonal direction.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -19,7 +19,7 @@ The Rich Text Editor allows it to be resized dynamically, so the users can able 
 {% endhighlight %}
 {% endtabs %}
 
-![Resizing in Blazor RichTextEditor](./images/blazor-richtexteditor-resizing.png)
+![Blazor RichTextEditor resizing](./images/blazor-richtexteditor-resizing.png)
 
 ## Restrict resize
 
@@ -43,7 +43,7 @@ To have a restricted resizable area for the Rich Text Editor, you need to specif
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor EnableResize="true" CssClass='.e-richtexteditor'>
-    <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p><p><b>Get started Quick Toolbar to click on the image</b></p><p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p><img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='images/RichTextEditor/RTEImage-Feather.png' />
+    <p>The Rich Text Editor component is a WYSIWYG ("what you see is what you get") editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
 </SfRichTextEditor>
 <style>
     .e-richtexteditor {
@@ -57,6 +57,6 @@ To have a restricted resizable area for the Rich Text Editor, you need to specif
 {% endhighlight %}
 {% endtabs %}
 
-![Restrict resize in Blazor RichTextEditor](./images/blazor-richtexteditor-restrict-resize.png)
+![Blazor RichTextEditor restrict resize](./images/blazor-richtexteditor-restrict-resize.png)
 
 > You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
