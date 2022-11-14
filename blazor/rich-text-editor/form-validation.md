@@ -7,7 +7,7 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Edit Form support
+## Edit-Form Validation
 
 The Rich Text Editor support validation using the [EditForm]( https://docs.microsoft.com/en-us/aspnet/core/blazor/forms-validation?view=aspnetcore-6.0). The user type text content inside the editor is validated with [data annotations]( https://docs.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-5.0)  attributes. In the following example, the `FormModel` class has the `Description` property marked required with the `RequiredAttribute` and `MinLengthAttribute` minimum string length validation and error message. The Description property binding to editor `@bind-Value` property and validation work based on user input.
 
@@ -21,7 +21,7 @@ The Rich Text Editor support validation using the [EditForm]( https://docs.micro
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor form validation ](./images/blazor-richtexteditor-form-validation.png)
+![Form Validation in Blazor RichTextEditor](./images/blazor-richtexteditor-form-validation.png)
 
 ## Validation attributes
 
