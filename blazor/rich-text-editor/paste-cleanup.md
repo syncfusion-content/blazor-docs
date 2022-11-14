@@ -26,7 +26,7 @@ When pasting content into the editor, you can control the formatting and styles 
 
 ## Paste options in prompt dialog
 
-When [Prompt] (https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_Prompt) is set to true, pasting the content in the editor opens a dialogue box with three options as radio buttons: keep, clean, and plain text.
+When [Prompt] (https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_Prompt) is set to true, pasting the content in the editor opens a dialog box with three options as radio buttons: keep, clean, and plain text.
 
 1. **Keep**: To keep the same format with copied content.
 2. **Clean**: Radio button to clear all the style formats with copied content.
