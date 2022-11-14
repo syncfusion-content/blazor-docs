@@ -114,7 +114,7 @@ public class TreeData
 }
 ```
 
-Please refer to the following example.
+Refer to the following example.
 
 {% tabs %}
 

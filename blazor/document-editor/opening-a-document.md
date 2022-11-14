@@ -59,7 +59,7 @@ If you have your Word document file in the web, you can open it in [Blazor Word 
 }
 ```
 
-> As per the discussion thread [#30064](https://github.com/dotnet/aspnetcore/issues/30064), please null out the reference of streams and other instances when they are no longer required. Using this approach you'll observe the memory go down and become stable.
+> As per the discussion thread [#30064](https://github.com/dotnet/aspnetcore/issues/30064), null out the reference of streams and other instances when they are no longer required. Using this approach you'll observe the memory go down and become stable.
 
 ## Opening a document from Cloud
 
