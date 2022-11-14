@@ -116,7 +116,6 @@ The cell [edit template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
                     {
                         <span>@String.Join(",", d)</span>
                     }
-                    
                 }
             </Template>
         </GanttColumn>
