@@ -174,7 +174,7 @@ The cell [edit template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 }
 }
 ```
-![Cell edit template in Blazor Gantt Chart](images/blazor-gantt-chart-cell-edit-template.gif){:width="100%" height="502"}
+![Cell edit template in Blazor Gantt Chart](images/blazor-gantt-chart-cell-edit-template.gif)
 
 ## Dialog editing
 
