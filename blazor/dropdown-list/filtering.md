@@ -37,7 +37,7 @@ In the below code, demonstrated the filtering functionality with [ODataAdaptor](
 
 ## Filter type
 
-You can use [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_FilterType) property to determine on which filter type, the component needs to be considered on search action. The available `FilterType` and its supported data types are:
+You can use [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_FilterType) property to specify on which filter type, the component needs to be considered on search action. The available `FilterType` and its supported data types are:
 
 FilterType     | Description
 ------------ | -------------
