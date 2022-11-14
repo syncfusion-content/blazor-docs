@@ -11,7 +11,7 @@ documentation: ug
 
 ## Placeholder in the blazor dropdownlist component
 
-You can use [`Placeholder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Placeholder) property to display small description of the expected value in the input. In the below sample demonstration, you have to set `Select a game` as Placeholder property value, which will set respective value to the placeholder attribute of the input element in the DOM.
+You can use [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Placeholder) property to display small description of the expected value in the input. In the below sample demonstration, you have to set `Select a game` as Placeholder property value, which will set respective value to the placeholder attribute of the input element in the DOM.
 
 {% highlight cshtml %}
 
@@ -47,7 +47,7 @@ Use the following code to add the mandatory indicator * to the float label eleme
 
 ## Float Label in the blazor dropdownlist component
 
-You can use [`FloatLabelType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FloatLabelType) property to specify the floating label behavior of the DropDownList that the placeholder text floats above the TextBox based on the following values.
+You can use [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FloatLabelType) property to specify the floating label behavior of the DropDownList that the placeholder text floats above the TextBox based on the following values.
 
 Floating label supports the types of actions as given below.
 
