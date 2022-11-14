@@ -11,9 +11,7 @@ documentation: ug
 
 ## Change the popup width
 
-Specifies the width of the popup list. By default, the popup width sets based on the width of the component.
-
-Default value of [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) is `100%`
+You can customize the width of the popup using [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth). Default value of `PopupWidth` is `100%`.
 
 In the below sample PopupWidth is set as 300px
 
@@ -25,7 +23,7 @@ In the below sample PopupWidth is set as 300px
 
 ![Grouping in Blazor DropdownList](./images/popup-setting/blazor_dropdown_popup-width.png)
 
-### TextOverflow
+## Handling TextOverflow 
 
 When the width of popup is less than text's width, then text-overflow:ellipsis style will be automatically appeared.
 
@@ -41,7 +39,7 @@ In the below sample PopupWidth is set as 100px then text-overflow:ellipsis is au
 
 ## Change the popup height
 
-Specifies the height of the popup list.
+You can customize the height of the popup using [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight)
 
 Default value of PopupHeight is `300px`.
 
@@ -55,7 +53,7 @@ Default value of PopupHeight is `300px`.
 
 ## Change the popup z-index
 
-Specifies the z-index value of the component popup element.
+You can customize the [z-index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ZIndex) value of the component popup element.
 
 Defaults to 1000
 
