@@ -29,13 +29,13 @@ In the following sample, vegetables are grouped according on its category using 
 
 You can classify the items based on the [`GroupBy`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListFieldSettings.html#Syncfusion_Blazor_DropDowns_DropDownListFieldSettings_GroupBy) field mapped to the control. The headers of group items will fixed at the top till its belonging items ends up on scrolling.
 
-## Group Header Template
+## Group header template
 
 The group header title under which appropriate sub-items are categorized can also be customize with the help of [`GroupTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_GroupTemplate) property. This template is common for both inline and floating group header template.
 
 Refer the [`Group Template`](https://blazor.syncfusion.com/documentation/dropdown-list/templates#group-template) documentation to know more about this.
 
-## Limitations of Grouping
+## Limitations of grouping
 
 Grouping feature has a certain limitations. Those are listed below.
 
