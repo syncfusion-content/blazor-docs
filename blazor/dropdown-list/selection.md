@@ -41,7 +41,7 @@ You can bind pre-selected value to the DropDownList component using [@bind-Value
 
 ## Programmatically change the selected value
 
-You can change the component value programmatically or externally by the component instance using [`@ref`](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ref) attribute of the component. The below sample demonstrates how to change the value of the component using click event of the button component.
+You can change the component value programmatically or externally by the component instance using [`@ref`](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-7.0#ref) attribute of the component. The below sample demonstrates how to change the value of the component using click event of the button component.
 
 {% highlight cshtml %}
 

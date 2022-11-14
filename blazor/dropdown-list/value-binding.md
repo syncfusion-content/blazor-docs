@@ -18,6 +18,8 @@ The value binding as the process of passing values between a component and its p
 
 The value binding can be achieved by using [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute and it supports string, int, Enum, bool and complex types. If component value has been changed, it will affect all places where you bind the variable for the `@bind-value` attribute.
 
+* **TValue** - specifies the type of the each list item of the dropdown component.
+
 {% highlight cshtml %}
 
 {% include_relative code-snippet/value-binding/bind-value.razor %}
