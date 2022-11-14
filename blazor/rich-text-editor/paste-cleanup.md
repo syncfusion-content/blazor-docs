@@ -26,13 +26,13 @@ When pasting content into the editor, you can control the formatting and styles 
 
 ## Paste options in prompt dialog
 
-When [Prompt] (https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_Prompt) is set to true, pasting the content in the editor opens a dialogue box with three options as radio buttons: keep, clean, and plain text.
+When [Prompt] (https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_Prompt) is set to true, pasting the content in the editor opens a dialog box with three options as radio buttons: keep, clean, and plain text.
 
 1. **Keep**: To keep the same format with copied content.
-2. **Clean**: Radio button to clear all the style formats with copied content.
-3. **Plain Text**: Radio button to paste the copied content as plain text without any formatting or style (including the removal of all tags).
+2. **Clean**: To clear all the style formats with copied content.
+3. **Plain Text**: To paste the copied content as plain text without any formatting or style (including the removal of all tags).
 
-> When the "Prompt" value is set to true, the API properties [PlainText](#paste-as-plain-text) and [KeepFormat](#keep-format) will not be considered for processing when pasting the content.
+> When the `Prompt` value is set to true, the API properties [PlainText](#paste-as-plain-text) and [KeepFormat](#keep-format) will not be considered for processing when pasting the content.
 
 {% tabs %}
 {% highlight razor %}
@@ -80,7 +80,7 @@ When `KeepFormat` is set to false, the style in the copied content will be remov
 
 ## Denied tags
 
-The [DeniedTags](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_DeniedTags) specify the tags to restrict when pasting the content into the the Rich Text Editor.
+The [DeniedTags](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_DeniedTags) specify the tags to restrict when pasting the content into the Rich Text Editor.
 
 1. **a**: Paste the content by filtering out anchor tags.
 2. **a[!href]**: Paste the content by filtering out anchor tags that do not have the ‘href’ attribute.
@@ -112,7 +112,7 @@ The [DeniedAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.R
 
 ## Allowed style properties
 
-By default, the following basic styles are allowed when pasting the content into the editor:
+By default, the following basic styles are allowed when pasting the content into the editor.
 
 [background, background-color, border, border-bottom, border-left, border-radius, border-right, border-style, border-top, border-width, clear, color, cursor, direction, display, float, font, font-family, font-size, font-weight, font-style, height, left, line-height, margin, margin-top, margin-left, margin-right, margin-bottom, max-height, max-width, min-height, min-width, overflow, overflow-x, overflow-y, padding, padding-bottom, padding-left, padding-right, padding-top, position, right, table-layout, text-align, text-decoration, text-indent, top, vertical-align, visibility, white-space, width]
 
@@ -132,7 +132,7 @@ For Example, **public string[] AllowedStyles = new string[] { "color", "margin" 
 
 ## Pasting large text content
 
-When pasting a large text into the editor it displays "Attempting to reconnect" and then the text gets inserted. To achieve this, you can increase the SignalR size at the application level by adding the ‘signal’ method with a larger buffer size(’1024000000’).
+When pasting a large text into the editor it displays "Attempting to reconnect" and then the text gets inserted. To achieve this, you can increase the SignalR size at the application level by adding the ‘signalR’ method with a larger buffer size(’1024000000’).
 
 ### Blazor Server App
 
