@@ -156,14 +156,53 @@ dotnet electronize start
 > To close the electron app when closed the electron window add the below code in **//Open the Electron-Window** in step 6 in the **~/Startup.cs** file of .NET 3.X and .NET 5 applications, in **~/Program.cs** file of .NET 6 applications.
 
 {% tabs %}
-{% highlight c# hl_lines="3 4 5" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="14 15 16" %}
 
-Task.Run(async () => {
+using ElectronNET.API;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+...
+builder.WebHost.UseElectron(args);
+
+if (HybridSupport.IsElectronActive)
+{
+    // Open the Electron-Window
+    Task.Run(async () => {
         var window = await Electron.WindowManager.CreateWindowAsync();
         window.OnClosed += () => {
             Electron.App.Quit();
         };
     });
+}
+
+var app = builder.Build();
+....
+
+{% endhighlight %}
+{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="15 16 17" %}
+
+using ElectronNET.API;
+
+public class Startup
+{
+    ……
+    ……
+
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    {
+        ……
+        ……
+        // Open the Electron-Window
+        Task.Run(async () => {
+            var window = await Electron.WindowManager.CreateWindowAsync();
+            window.OnClosed += () => {
+                Electron.App.Quit();
+            };
+        });
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
