@@ -15,7 +15,7 @@ To get started quickly with grouping in the Blazor DropDown List component, you 
 
 {% youtube "https://www.youtube.com/watch?v=9Ouje7KEOEU" %}
 
-In the following sample, vegetables are grouped according on its category using [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListFieldSettings.html#Syncfusion_Blazor_DropDowns_DropDownListFieldSettings_GroupBy) field.
+In the following sample, vegetables are grouped according on its category using `GroupBy` field.
 
 {% highlight cshtml %}
 
