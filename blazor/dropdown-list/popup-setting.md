@@ -13,7 +13,7 @@ documentation: ug
 
 Specifies the width of the popup list. By default, the popup width sets based on the width of the component.
 
-Default value of [`PopupWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) is `100%`
+Default value of [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) is `100%`
 
 In the below sample PopupWidth is set as 300px
 
@@ -27,7 +27,7 @@ In the below sample PopupWidth is set as 300px
 
 ### TextOverflow
 
-You can see width of the popup is less than the text, then text-overflow:ellipsis will be automatically appeared.
+When the width of popup is less than text's width, then text-overflow:ellipsis style will be automatically appeared.
 
 In the below sample PopupWidth is set as 100px then text-overflow:ellipsis is automatically applied
 
@@ -61,7 +61,7 @@ Defaults to 1000
 
 ## Show popup on initial loading
 
-You can achieve this by using [`ShowPopupAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowPopupAsync) in the Created Event.
+You can achieve this by using [ShowPopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowPopupAsync) in the Created Event.
 
 {% highlight Razor %}
 
@@ -119,7 +119,7 @@ You can achieve this by binding resize event in window and update the height of 
 
 ### OnOpen event
 
-The [`OnOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnOpen) event triggers when the popup is opened. If you cancel this event, the popup remains closed.
+The [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnOpen) event triggers when the popup is opened. If you cancel this event, the popup remains closed.
 
 {% highlight Razor %}
 
@@ -129,7 +129,7 @@ The [`OnOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns
 
 ### Opened event
 
-The [`Opened`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Opened) event triggers when the popup opens.
+The [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Opened) event triggers when the popup opens.
 
 {% highlight Razor %}
 
@@ -139,7 +139,7 @@ The [`Opened`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns
 
 ### OnClose event
 
-The [`OnClose`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnClose) event triggers before the popup is closed. If you cancel this event, the popup will remain open.
+The [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnClose) event triggers before the popup is closed. If you cancel this event, the popup will remain open.
 
 {% highlight Razor %}
 
@@ -149,7 +149,7 @@ The [`OnClose`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDown
 
 ### Closed event
 
-The [`Closed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnClose) event triggers after the popup has been closed.
+The [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnClose) event triggers after the popup has been closed.
 
 {% highlight Razor %}
 
