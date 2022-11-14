@@ -7,7 +7,7 @@ control: SpeedDial
 documentation: ug
 ---
 
-# Events in Blazor SpeedDial
+# Events in Blazor SpeedDial Component
 
 This section describes the Speed Dial events that will be triggered when appropriate actions are performed. The following events are available in the Speed Dial Component.
 
