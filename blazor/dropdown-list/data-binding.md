@@ -9,14 +9,13 @@ documentation: ug
 
 # Data Binding in Dropdown List
 
-The DropDownList loads the data either from local data sources or remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports the data type of `array` or [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
+The DropDownList loads the data either from local data sources or remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property or [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html). It supports data binding of local data through `DataSource` property or remote data through `DataManager`.
 
-* **TValue** - specifies the type of the each list item of the dropdown component.
-* **TItem** - specifies the type of the whole list of the dropdown component.
+* **TItem** - specifies the type of the datasource of the dropdown component.
 
 ## Binding local data
 
-The DropDownList loads the data from local data sources through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource)property. It supports the data type of `Array`, `Observable Collection`, `ExpandoObject`, `DynamicObject`.
+The DropDownList loads the data from local data sources through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports the data type of `Array of primitive type`, `list of primitive type`, `Observable Collection`, `ExpandoObject`, `DynamicObject`.
 
 {% highlight cshtml %}
 
