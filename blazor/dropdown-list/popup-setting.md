@@ -27,7 +27,7 @@ In the below sample PopupWidth is set as 300px
 
 When the width of popup is less than text's width, then `text-overflow:ellipsis` style will be automatically appeared.
 
-In the below sample PopupWidth is set as 100px then `text-overflow:ellipsis` is automatically applied
+In the below sample `PopupWidth` is set as `100px` then `text-overflow:ellipsis` is automatically applied
 
 {% highlight cshtml %}
 
