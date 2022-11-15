@@ -101,6 +101,8 @@ For instance , the data source item consist of `FirstName` as `Nancy` and `LastN
 
 Provided a multi column style class in the built-in Syncfusion Blazor theme files. So, need to provide the multicolumn root class API name as `e-multi-column` in the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_CssClass) property.
 
+you can achieve multiple column(field) filtering by passing the List of [predicates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_predicates) to the `And` , `Or` methods of WhereFilters.
+
 {% highlight cshtml %}
 
 {% include_relative code-snippet/filtering/multi-column.razor %}
