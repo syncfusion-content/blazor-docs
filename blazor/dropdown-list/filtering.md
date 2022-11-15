@@ -25,6 +25,8 @@ In the below code, demonstrated the filtering functionality with local data in t
 
 ## Remote data
 
+For Remote data each key press, filter action request make in the server end.
+
 In the below code, demonstrated the filtering functionality with [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) in the DropDownList component with help of [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
 
 {% highlight cshtml %}
@@ -41,9 +43,9 @@ You can use [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 FilterType     | Description
 ------------ | -------------
-  StartsWith       | Checks whether a value begins with the specified value.
-  EndsWith     | Checks whether a value ends with specified value.
-  Contains      | Checks whether a value contains with specified value.
+  [StartsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_StartsWith)       | Checks whether a value begins with the specified value.
+  [EndsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_EndsWith)     | Checks whether a value ends with specified value.
+  [Contains](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_Contains)      | Checks whether a value contains with specified value.
 
 In the following example, `EndsWith` filter type has been mapped to the `FilterType` property.
 
@@ -69,7 +71,7 @@ The following example shows how to perform case-sensitive filter.
 
 ## Filter textbox placeholder 
 
-You can use [FilterBarPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FilterBarPlaceholder) to accept the value to be displayed as a watermark text on the filter bar.
+You can use [FilterBarPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FilterBarPlaceholder) to accept the value to be displayed as a watermark text on the filter bar TextBox.
 
 {% highlight cshtml %}
 
@@ -81,7 +83,7 @@ You can use [FilterBarPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfus
 
 ## Custom filtering
 
-DropDownList component filter queries can be customized. You can also use your own filter libraries to filter data like Fuzzy search.
+DropDownList component filter queries can be customized using [Filter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Filtering) event. You can also filter the text in multiple columns in the data source.
 
 In the below sample demonstration, filter the data either using its `FirstName` or `LastName` field. Hence in the Filtering event, [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Condition) is used with `or` condition for filtering both the fields. 
 
@@ -97,7 +99,7 @@ For instance , the data source item consist of `FirstName` as `Nancy` and `LastN
 
 ## Multi column filtering 
 
-Provided a multi column style class in the built-in Syncfusion Blazor theme files. So, need to provide the multicolumn root class API name as `e-multi-column` in the CssClass property.
+Provided a multi column style class in the built-in Syncfusion Blazor theme files. So, need to provide the multicolumn root class API name as `e-multi-column` in the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_CssClass) property.
 
 {% highlight cshtml %}
 
