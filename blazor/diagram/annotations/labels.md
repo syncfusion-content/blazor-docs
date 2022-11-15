@@ -74,9 +74,9 @@ An annotation can be added to a node or connector by defining the annotation obj
 
 ## Add Annotations at runtime
 
-You can add Annotation at runtime to the Annotations collection of the node/connector in the diagram component by using the Add method.
+You can add Annotation at runtime to the Annotations collection of the node/connector in the diagram component by using the `Add`  method.
 
-The following code explains how to add an annotation to a node at runtime by using Add method.
+The following code explains how to add an annotation to a node at runtime by using `Add`  method.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
