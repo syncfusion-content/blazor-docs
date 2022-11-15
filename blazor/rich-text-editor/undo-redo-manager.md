@@ -97,4 +97,4 @@ In the following code example, remove the undo and redo tools from the toolbar.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Rich Text Editor remove undo/redo tools](./images/blazor-richtexteditor-remove-undo-redo.png)
+![Blazor RichTextEditor remove undo/redo tools](./images/blazor-richtexteditor-remove-undo-redo.png)
