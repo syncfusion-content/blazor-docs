@@ -11,7 +11,7 @@ documentation: ug
 
 This article provides a step-by-step instructions to configure Syncfusion Blazor Diagram in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 
-**Note**: Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this help topic for more information.
+**Note**: Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Refer to this help topic for more information.
 
 ## Prerequisites
 
@@ -60,8 +60,7 @@ Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it 
 
 3. The Syncfusion Blazor package will be installed in the project, once the installation process is completed.
 
-4. Install **Syncfusion.EJ2.Blazor** NuGet package to the application using the **NuGet Package Manager**.
-Please ensure to check the Include prerelease option for our Beta release.
+4. Install **Syncfusion.EJ2.Blazor** NuGet package to the application using the **NuGet Package Manager**. Ensure to check the Include prerelease option for our Beta release.
 
 5. You can add the client-side style resources from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
@@ -74,7 +73,7 @@ Please ensure to check the Include prerelease option for our Beta release.
 
 ```
 
-For Internet Explorer 11 kindly refer the polyfills. Refer the documentation for more information.
+For Internet Explorer 11 refer the polyfills. Refer the documentation for more information.
 
 ```cshtml
 <head>

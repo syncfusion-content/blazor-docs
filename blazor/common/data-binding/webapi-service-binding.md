@@ -12,7 +12,7 @@ In this topic, you can learn how to retrieve data from WebApi Controller, bind t
 
 You can use the WebApiAdaptor of SfDataManager to interact with Web APIs created with OData endpoint. The WebApiAdaptor is extended from the ODataAdaptor. Hence, to use WebApiAdaptor, the endpoint should understand the OData formatted queries sent along with the request.
 
-To enable the OData query option for Web API, please refer to this [documentation](https://docs.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options).
+To enable the OData query option for Web API, Refer to this [documentation](https://docs.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options).
 
 ## Prerequisite software
 
@@ -349,7 +349,7 @@ In previous steps, we have successfully configured the Syncfusion Blazor package
 
 ## Binding data to Blazor DataGrid component using WebApiAdaptor
 
-To consume data from the WebApi Controller, we need to add the **SfDataManager** with **WebApiAdaptor**. Please refer to the following documentation for more details on WebApiAdaptor.
+To consume data from the WebApi Controller, we need to add the **SfDataManager** with **WebApiAdaptor**. Refer to the following documentation for more details on WebApiAdaptor.
 
 [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#web-api-adaptor)
 
@@ -506,4 +506,4 @@ public void Delete(long id)
 
 {% endhighlight %}
 
-> Please find the sample from this [Github](https://github.com/SyncfusionExamples/binding-webapi-services-and-perform-crud) location.
+> Find the sample from this [Github](https://github.com/SyncfusionExamples/binding-webapi-services-and-perform-crud) location.

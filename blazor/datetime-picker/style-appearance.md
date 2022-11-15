@@ -48,6 +48,6 @@ Use the following CSS to customize the time picker popup in the Datetime Picker.
 
 ## Customizing the Calendar popup of the Datetime Picker
 
-Please check the below section to customize the style and appearance of the Calendar component in the Datetime Picker.
+Check the below section to customize the style and appearance of the Calendar component in the Datetime Picker.
 
 [Customizing Calendar's style and appearance](../calendar/style-appearance/)

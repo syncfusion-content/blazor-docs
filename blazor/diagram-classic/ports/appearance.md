@@ -82,7 +82,7 @@ The visibility of the ports depends upon the properties of `Connect`, `Hidden`, 
 
 ## Types of port shapes
 
-We have provided some basic built-in [PortShapes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortShapes.html) for the port. Please find the shapes as follows.
+We have provided some basic built-in [PortShapes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortShapes.html) for the port. Find the shapes as follows.
 
 * Circle
 * Custom
@@ -91,7 +91,7 @@ We have provided some basic built-in [PortShapes](https://help.syncfusion.com/cr
 
 ### Custom shape
 
- We have provided custom shape support for port. you can able to add the custom path data instead of build-in shapes. Please find the code example that explains how to change the custom shape for port.
+ We have provided custom shape support for port. you can able to add the custom path data instead of build-in shapes. Find the code example that explains how to change the custom shape for port.
 
  ```cshtml
 @using Syncfusion.Blazor.Diagrams

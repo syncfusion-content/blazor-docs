@@ -9,13 +9,13 @@ documentation: ug
 
 # Resolve the “Client-side error…” issue in .Net 6.0
 
-Issue: “Client-side error is found. Please check the custom headers provided in the AjaxRequestSettings property and web action methods in the ServerActionSettings” issue in .Net 6.0 which uses System.Text.Json for serialization instead of Newtonsoft.Json
+Issue: “Client-side error is found. Check the custom headers provided in the AjaxRequestSettings property and web action methods in the ServerActionSettings” issue in .Net 6.0 which uses System.Text.Json for serialization instead of Newtonsoft.Json
 
 Earlier versions of .Net support non-string values for string values during serialization using Newtonsoft.Json. However, .Net 6.0 uses System.Text.Json for serialization and System.Text.Json doesn't support non-string values for string values during serialization and it throws the error like below.
 
 ![Client-side error](../../pdfviewer/images/clientError.png)
 
-Hence, we have to do the below non-string value to string value conversion. Please find the changes for resolving the issue from the following sample code snippet.
+Hence, we have to do the below non-string value to string value conversion. Find the changes for resolving the issue from the following sample code snippet.
 
 ```csharp
 
