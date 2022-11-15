@@ -250,6 +250,52 @@ In the following sample, the `SfDropDownList` component is rendered in the [Filt
 
 > You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-filtering-enum-column).
 
+## Filter column with multiple values
+
+Grid has an option to filter the column based on multiple values. This can be achieved by using the [WhereFilter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html) class of the `SfDataManager` and the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property of the `SfGrid`.
+
+In the following sample, initially empty query is assigned to the `Query` property. Then, while clicking the "Apply Filter" button, a custom predicate is generated for the CustomerID column with the multiple values (VINET, HANAR, and VICTE) using the WhereFilter class, and the generated predicates are passed to the `Query` property to perform filtering operations.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Buttons
+
+<SfButton Content="Apply Filter" OnClick="applyFilter"></SfButton>
+
+<SfGrid TValue="Order" @ref="GridObj" AllowPaging="true" Query="@QueryData">
+    <GridPageSettings PageSize="10"></GridPageSettings>
+    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Adaptors.ODataV4Adaptor">
+    </SfDataManager>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public SfGrid<Order> GridObj;
+    private Query QueryData = new Query();
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double? Freight { get; set; }
+    }
+    public void applyFilter()
+    {
+        var filterClass = new WhereFilter();
+        var predicate = new List<WhereFilter>();
+        predicate.Add(new WhereFilter() { Condition = "or", Field = "CustomerID", value = "VINET", Operator = "equal" });
+        predicate.Add(new WhereFilter() { Condition = "or", Field = "CustomerID", value = "HANAR", Operator = "equal" });
+        predicate.Add(new WhereFilter() { Condition = "or", Field = "CustomerID", value = "VICTE", Operator = "equal" });
+        filterClass = WhereFilter.Or(predicate);
+        QueryData = new Query().Where(filterClass); // To filter the Grid.
+    }
+}
+```
+
 ## See Also
 
 * [How to Perform Multiple Value Filtering for Same Column in Grid](https://www.syncfusion.com/kb/12472/how-to-perform-multiple-value-filtering-for-same-column-in-grid)
