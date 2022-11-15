@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ExpandAll/CollapseAll actions in Blazor TreeView Component | Syncfusion
+title: ExpandAll/CollapseAll in Blazor TreeView Component | Syncfusion
 description: Checkout and learn here all about ExpandAll/ CollapseAll/ CheckAll/ UnCheckAll methods in Syncfusion Blazor TreeView component and much more.
 platform: Blazor
 control: TreeView

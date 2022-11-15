@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about SortOrder in Syncfusion Blazor TreeView component and much more.
+description: Checkout and learn here all about the SortOrder in Syncfusion Blazor TreeView component and much more.
 platform: Blazor
 control: TreeView
 documentation: ug
