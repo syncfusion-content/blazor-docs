@@ -24,7 +24,7 @@ You can enable WeekNumber in the DatePicker by using the [WeekNumber](https://he
 
 ## Week Rule
 
-You can enable `WeekRule` in the DatePicker by using the [WeekRule](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_WeekRule) property. This property provide an option to specify the rule for defining the first week of the year. Please find the possible values of `WeekRule` property.
+You can enable `WeekRule` in the DatePicker by using the [WeekRule](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_WeekRule) property. This property provide an option to specify the rule for defining the first week of the year. Find the possible values of `WeekRule` property.
 
 Types  |Description  
 -----|-----

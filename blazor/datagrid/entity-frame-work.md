@@ -13,7 +13,7 @@ This section uses and follows the code explained in the [Entity Framework data b
 
 ## Handle CRUD in data access layer class
 
-Now, add methods **AddOrder**, **UpdateOrder**, and **DeleteOrder** in the **"OrderDataAccessLayer.cs"** to handle the insert, update, and remove operations respectively. **CRUD** record details are bound to the **Order** parameter. Please refer the following code.
+Now, add methods **AddOrder**, **UpdateOrder**, and **DeleteOrder** in the **"OrderDataAccessLayer.cs"** to handle the insert, update, and remove operations respectively. **CRUD** record details are bound to the **Order** parameter. Refer the following code.
 
 ```csharp
 using Microsoft.EntityFrameworkCore;

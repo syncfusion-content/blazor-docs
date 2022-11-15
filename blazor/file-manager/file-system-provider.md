@@ -142,7 +142,7 @@ After setting the blob container references, just build and run the project. Now
 
 > **NuGet:** Additionally, a [NuGet](https://www.nuget.org/packages/Syncfusion.EJ2.FileManager.AzureFileProvider.AspNet.Core) package of **ASP.NET Core Azure file system provider** has been created.
 
-Please, use the following command to install the NuGet package in an application.
+Use the following command to install the NuGet package in an application.
 
 ```
 

@@ -31,7 +31,7 @@ The available default edit types are,
 
 You can customize the behavior of the editor component through the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component.
 
-> We have limited the properties of editor components that can be customized using [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) in Grid default editor components. Kindly find the list of properties that can be customized the below topics.
+> We have limited the properties of editor components that can be customized using [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) in Grid default editor components. Find the list of properties that can be customized the below topics.
 > If you want to customize other properties, refer to our [EditTemplate](https://blazor.syncfusion.com/documentation/datagrid/editing/#cell-edit-template) documentation to render the custom components in EditForm along with your customization.
 
 ### DefaultEdit
