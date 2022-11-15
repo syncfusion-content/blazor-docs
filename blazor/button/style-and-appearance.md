@@ -17,3 +17,30 @@ To modify the Button appearance, you need to override the default CSS of Button 
 |.e-btn:hover|To customize the button on hover.|
 |.e-btn:focus|To customize the button on focus.|
 |.e-btn:active|To customize the button on active.|
+
+## Customizing the appearance of button
+
+Use the following CSS to customize the background color of button while clicking, hovering and focusing.
+
+```cshtml
+
+@using Syncfusion.Blazor.Buttons
+
+<SfButton CssClass="e-btn">CUSTOM</SfButton>
+
+<style>
+    .e-btn {
+        background-color: #ff6e40;
+    }
+
+    .e-btn:hover {
+        background-color: #0b6a0b;
+    }
+
+    .e-btn:focus, .e-btn:active {
+       background-color: #0078d4
+</style>
+
+```
+
+![Blazor Button with Style and Appearance](./images/blazor-button-style-and-appearance.gif)
