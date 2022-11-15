@@ -11,7 +11,7 @@ documentation: ug
 
 ## Change the popup width
 
-use this content - You can customize the width of the popup using [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth). Default value of `PopupWidth` is `100%` so the popup width sets based on the width of the DropdownList component.
+You can customize the width of the popup using [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth). Default value of `PopupWidth` is `100%` so the popup width sets based on the width of the DropdownList component.
 
 In the below sample PopupWidth is set as 300px
 
