@@ -250,18 +250,15 @@ In the following sample, the `SfDropDownList` component is rendered in the [Filt
 
 > You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-filtering-enum-column).
 
-## Filter column with multiple values
+## Filter a column with multiple values during initial rendering
 
-Grid has an option to filter the column based on multiple values. This can be achieved by using the [WhereFilter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html) class of the `SfDataManager` and the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property of the `SfGrid`.
+Grid has an option to filter the column based on multiple values during initial rendering. This can be achieved by using the [WhereFilter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html) class of the `SfDataManager` and the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property of the `SfGrid`.
 
-In the following sample, initially empty query is assigned to the `Query` property. Then, while clicking the "Apply Filter" button, a custom predicate is generated for the CustomerID column with the multiple values (VINET, HANAR, and VICTE) using the WhereFilter class, and the generated predicates are passed to the `Query` property to perform filtering operations.
+In the following sample, custom predicate is generated for the CustomerID column with the multiple values (VINET, HANAR, and VICTE) using the WhereFilter class, and the generated predicates are passed to the `Query` property to perform filtering operations.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.Buttons
-
-<SfButton Content="Apply Filter" OnClick="applyFilter"></SfButton>
 
 <SfGrid TValue="Order" @ref="GridObj" AllowPaging="true" Query="@QueryData">
     <GridPageSettings PageSize="10"></GridPageSettings>
@@ -283,7 +280,7 @@ In the following sample, initially empty query is assigned to the `Query` proper
         public string CustomerID { get; set; }
         public double? Freight { get; set; }
     }
-    public void applyFilter()
+    protected override void OnInitialized()
     {
         var filterClass = new WhereFilter();
         var predicate = new List<WhereFilter>();
@@ -292,7 +289,7 @@ In the following sample, initially empty query is assigned to the `Query` proper
         predicate.Add(new WhereFilter() { Condition = "or", Field = "CustomerID", value = "VICTE", Operator = "equal" });
         filterClass = WhereFilter.Or(predicate);
         QueryData = new Query().Where(filterClass); // To filter the Grid.
-    }
+    } 
 }
 ```
 
