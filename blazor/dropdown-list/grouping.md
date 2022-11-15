@@ -39,4 +39,4 @@ Grouping feature has a certain limitations. Those are listed below.
 
 * The component will support only single level of grouping, and you cannot specify it as like TreeView component.
 
-* The Virtualization is not supported in the Grouping feature. Only assign fixed number of datasource items at initial rendering of the component.
+* The Virtualization is not supported in the grouping feature. Only assign fixed number of datasource items at initial rendering of the component.
