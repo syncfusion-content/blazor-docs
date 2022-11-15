@@ -17,42 +17,13 @@ The currently selected value that is displayed by default on the DropDownList in
 
 In the following sample, the selected value is displayed as a combined text of both `FirstName` and `Designation` in the DropDownList input, which is separated by a hyphen.
 
-```cshtml
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
+{% highlight cshtml %}
 
-<SfDropDownList TValue="string" TItem="EmployeeData" Placeholder="Select a customer" Query="@Query">
-    <DropDownListTemplates TItem="EmployeeData">
-        <ItemTemplate>
-            <span><span class='name'>@((context as EmployeeData).FirstName)</span><span class='destination'>@((context as EmployeeData).Designation)</span></span>
-        </ItemTemplate>
-        <ValueTemplate>
-            <span>@((context as EmployeeData).FirstName) - @((context as EmployeeData).Designation)</span>
-        </ValueTemplate>
-    </DropDownListTemplates>
-    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
-    <DropDownListFieldSettings Text="FirstName" Value="Designation"></DropDownListFieldSettings>
-</SfDropDownList>
+{% include_relative code-snippet/template/value-template.razor %}
 
-@code {
-    public class EmployeeData
-    {
-        public string FirstName { get; set; }
-        public string Designation { get; set; }
-    }
-    public Query Query = new Query();
-}
+{% endhighlight %}
 
-<style>
-    .destination {
-        right: 15px;
-        position: absolute;
-    }
-</style>
-```
-
-
-![Blazor DropDownList with ValueTemplate](./images/blazor-dropdownlist-value-template.png)
+![Blazor DropDownList with ValueTemplate](./images/template/blazor-dropdownlist-value-template.png)
 
 ## Item template
 
@@ -60,41 +31,13 @@ The content of each list item within the DropDownList can be customized with the
 
 In the following sample, each list item is split into two columns to display relevant data.
 
-```cshtml
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
+{% highlight cshtml %}
 
-<SfDropDownList TValue="string" TItem="EmployeeData" Placeholder="Select a customer" Query="@Query">
-    <DropDownListTemplates TItem="EmployeeData">
-        <ItemTemplate>
-            <span><span class='name'>@((context as EmployeeData).FirstName)</span><span class='country'>@((context as EmployeeData).Country)</span></span>
-        </ItemTemplate>
-    </DropDownListTemplates>
-    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
-    <DropDownListFieldSettings Text="FirstName" Value="Country"></DropDownListFieldSettings>
-</SfDropDownList>
+{% include_relative code-snippet/template/item-template.razor %}
 
-@code {
-    public class EmployeeData
-    {
-        public string FirstName { get; set; }
-        public string Country { get; set; }
-    }
-    public EmployeeData Data = new EmployeeData();
-    public Query Query = new Query();
-}
+{% endhighlight %}
 
-<style>
-    .country {
-        right: 15px;
-        position: absolute;
-    }
-</style>
-```
-
-
-
-![Blazor DropDownList with ItemTemplate](./images/blazor-dropdownlist-item-template.png)
+![Blazor DropDownList with ItemTemplate](./images/template/blazor-dropdownlist-item-template.png)
 
 ## Group template
 
@@ -102,41 +45,13 @@ The group header title under which appropriate sub-items are categorized can als
 
 In the following sample, employees are grouped according to their city.
 
-```cshtml
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
+{% highlight cshtml %}
 
-<SfDropDownList TValue="string" TItem="EmployeeData" Placeholder="Select a customer" Query="@Query">
-    <DropDownListTemplates TItem="EmployeeData">
-        <GroupTemplate>
-            <span class="group">@(context.Text)</span>
-        </GroupTemplate>
-    </DropDownListTemplates>
-    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor" CrossDomain=true></SfDataManager>
-    <DropDownListFieldSettings Value="FirstName" GroupBy="Country"></DropDownListFieldSettings>
-</SfDropDownList>
+{% include_relative code-snippet/template/group-template.razor %}
 
-@code {
+{% endhighlight %}
 
-    public class EmployeeData
-    {
-        public string FirstName { get; set; }
-        public string Country { get; set; }
-    }
-
-   public Query Query = new Query();
-}
-
-<style>
-    .group {
-        color: slategrey;
-    }
-</style>
-```
-
-
-
-![Blazor DropDownList with GroupTemplate](./images/blazor-dropdownlist-group-template.png)
+![Blazor DropDownList with GroupTemplate](./images/template/blazor-dropdownlist-group-template.png)
 
 ## Header template
 
@@ -144,63 +59,13 @@ The header element is shown statically at the top of the popup list items within
 
 In the following sample, the list items and its headers are designed and displayed as two columns similar to multiple columns of the grid.
 
-```cshtml
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
+{% highlight cshtml %}
 
-<SfDropDownList TValue="string" TItem="EmployeeData" Placeholder="Select a customer" Query="@Query">
-    <DropDownListTemplates TItem="EmployeeData">
-        <ItemTemplate>
-            <span class='item'><span class='name'>@((context as EmployeeData).FirstName)</span><span class='city'>@((context as EmployeeData).Country)</span></span>
-        </ItemTemplate>
-        <HeaderTemplate>
-            <span class='head'><span class='name'>Name</span><span class='city'>Country</span></span>
-        </HeaderTemplate>
-    </DropDownListTemplates>
-    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor" CrossDomain=true></SfDataManager>
-    <DropDownListFieldSettings Value="Country" Text="FirstName"></DropDownListFieldSettings>
-</SfDropDownList>
+{% include_relative code-snippet/template/header-template.razor %}
 
-@code {
-    public class EmployeeData
-    {
-        public string FirstName { get; set; }
-        public string Country { get; set; }
-    }
-    public Query Query = new Query();
-}
+{% endhighlight %}
 
-<style>
-    .head, .item {
-        display: table;
-        width: 100%;
-        margin: auto;
-    }
-
-    .head {
-        height: 40px;
-        font-size: 15px;
-        font-weight: 600;
-    }
-
-    .name, .city {
-        display: table-cell;
-        vertical-align: middle;
-        width: 50%;
-    }
-
-    .head .name {
-        text-indent: 16px;
-    }
-
-    .head .city {
-        text-indent: 10px;
-    }
-</style>
-```
-
-
-![Blazor DropDownList with HeaderTemplate](./images/blazor-dropdownlist-header-template.png)
+![Blazor DropDownList with HeaderTemplate](./images/template/blazor-dropdownlist-header-template.png)
 
 ## Footer template
 
@@ -208,43 +73,13 @@ The DropDownList has options to show a footer element at the bottom of the list 
 
 In the following sample, footer element displays the total number of list items present in the DropDownList.
 
-```cshtml
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
+{% highlight cshtml %}
 
-<SfDropDownList TValue="string" TItem="EmployeeData" Query="@Query" Placeholder="Select a customer">
-    <DropDownListTemplates TItem="EmployeeData">
-        <FooterTemplate>
-            <span class='footer'>Total list Item: 6 </span>
-        </FooterTemplate>
-    </DropDownListTemplates>
-    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor" CrossDomain=true></SfDataManager>
-    <DropDownListFieldSettings Value="Country" Text="FirstName"></DropDownListFieldSettings>
-</SfDropDownList>
+{% include_relative code-snippet/template/footer-template.razor %}
 
-@code {
+{% endhighlight %}
 
-    public class EmployeeData
-    {
-        public string FirstName { get; set; }
-    }
-    public Query Query = new Query();
-}
-
-<style>
-    .footer {
-        text-indent: 1.2em;
-        display: block;
-        font-size: 15px;
-        line-height: 40px;
-        border-top: 1px solid #e0e0e0;
-    }
-</style>
-```
-
-The output will be as follows.
-
-![Blazor DropDownList with Footer Template](./images/blazor-dropdownlist-footer-template.png)
+![Blazor DropDownList with Footer Template](./images/template/blazor-dropdownlist-footer-template.png)
 
 ## No records template
 
@@ -252,26 +87,13 @@ The DropDownList is provided with support to custom design the popup list conten
 
 In the following sample, popup list content displays the notification of no data available.
 
-```cshtml
-@using Syncfusion.Blazor.DropDowns
+{% highlight cshtml %}
 
-<SfDropDownList TValue="string" TItem="Country" Placeholder="Select a customer" DataSource="@Countries">
-    <DropDownListTemplates TItem="Country">
-        <NoRecordsTemplate>
-            <span class='norecord'> NO DATA AVAILABLE</span>
-        </NoRecordsTemplate>
-    </DropDownListTemplates>
-</SfDropDownList>
+{% include_relative code-snippet/template/no-record-template.razor %}
 
-@code {
-    public class Country { }
+{% endhighlight %}
 
-    List<Country> Countries = new List<Country> { };
-}
-```
-
-
-![Blazor DropDownList without Data](./images/blazor-dropdownlist-without-data.png)
+![Blazor DropDownList without Data](./images/template/blazor-dropdownlist-without-data.png)
 
 ## Action failure template
 
@@ -279,31 +101,13 @@ There is also an option to custom design the popup list content when the data fe
 
 In the following sample, when the data fetch request fails, the DropDownList displays the notification.
 
-```cshtml
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
+{% highlight cshtml %}
 
-<SfDropDownList TValue="string" TItem="EmployeeData" Placeholder="Select a customer" Query="@Query">
-    <DropDownListTemplates TItem="EmployeeData">
-        <ActionFailureTemplate>
-            <span class='norecord'>Data fetch get fails </span>
-        </ActionFailureTemplate>
-    </DropDownListTemplates>
-    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svcs/Employees" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain=true></SfDataManager>
-    <DropDownListFieldSettings Value="Country" Text="FirstName"></DropDownListFieldSettings>
-</SfDropDownList>
+{% include_relative code-snippet/template/action-failure-template.razor %}
 
-@code {
-    public class EmployeeData
-    {
-        public string FirstName { get; set; }
-    }
-    public Query Query = new Query();
-}
-```
+{% endhighlight %}
 
-
-![Blazor DropDownList with Action Failure Template](./images/blazor-dropdownlist-action-failure-template.png)
+![Blazor DropDownList with Action Failure Template](./images/template/blazor-dropdownlist-action-failure-template.png)
 
 ## See Also
 
