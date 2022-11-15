@@ -42,7 +42,7 @@ When [Prompt] (https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextE
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with prompt paste cleanUp](./images/blazor-richtexteditor-paste-prompt.gif)
+![Blazor RichTextEditor with prompt](./images/blazor-richtexteditor-paste-prompt.gif)
 
 ## Paste as plain text
 
@@ -58,7 +58,7 @@ When [PlainText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTe
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Plain text Paste CleanUp](./images/blazor-richtexteditor-paste-plain-text.gif)
+![Blazor RichTextEditor with plain text](./images/blazor-richtexteditor-paste-plain-text.gif)
 
 ## Keep format
 
