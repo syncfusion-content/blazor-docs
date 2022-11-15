@@ -280,7 +280,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 ## Event Click In Floating Action Button
 
-The floating action button control triggers the [`OnClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_OnClick) event when you click on the floating action button. You can use this event to perform the required action.
+The floating action button control triggers the [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_OnClick) event when you click on the floating action button. You can use this event to perform the required action.
 
 {% tabs %}
 {% highlight razor %}
