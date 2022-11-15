@@ -57,7 +57,7 @@ You can change the dropdown [icon](https://ej2.syncfusion.com/documentation/appe
 
 ![Blazor DropDownList with dropdown icon](./images/style/blazor_dropdown_dropdown-icon.png)
 
-You can also change the dropdown icon for the particular component using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property and add style to the custom class which is mapped to CssClass.
+You can also change the dropdown icon for the particular component using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property and add style to the custom class which is mapped to `CssClass`.
 
 {% highlight cshtml %}
 
@@ -125,7 +125,7 @@ You can use `e-outline` to the [CssClass](https://help.syncfusion.com/cr/blazor/
 
 ## Customizing the background color of focus, hover, and active items
 
-Use the following CSS to customize the background color of focus, hover, and active items.
+Use the following CSS to customize the background color of `focus`, `hover`, and `active` items.
 
 ```css
 .e-dropdownbase .e-list-item.e-item-focus, .e-dropdownbase .e-list-item.e-active, .e-dropdownbase .e-list-item.e-active.e-hover, .e-dropdownbase .e-list-item.e-hover {
@@ -227,7 +227,7 @@ You can use [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## Disable specfic items in dropdown list
 
-You can prevent some items in the popup list from selecting and it can be achieved by disable the item for specific dropdownlist component by adding the custom class for popup element using CssClass property
+You can prevent some items in the popup list from selecting and it can be achieved by disable the item for specific dropdownlist component by adding the custom class for popup element using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property
 
 In below code single list Item is hidden using jsinterop.
 
