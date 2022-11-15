@@ -603,7 +603,7 @@ The following code illustrates how to disable selection.
 ```
 ## How to set ZIndex property for connector
 
-* The connectors zIndex property specifies the stack order of the connector. A connector with a greater stack order is always in front of a connector with a lower stack order. By default, the value is -1.
+* The connectors ZIndex property specifies the stack order of the connector. A connector with a greater stack order is always in front of a connector with a lower stack order. By default, the value is -1.
 
 
 The following code illustrates how to render connector based on the stack order.
@@ -641,7 +641,7 @@ The following code illustrates how to render connector based on the stack order.
 ```
 ## How to set HitPadding for connector
 
-*The hit padding refers to the space around the connector's edges. To make it easy to select, selecting when the mouse comes near its vicinity area should be possible. The HitPadding property allows you to customize the vicinity area while selecting. The default value is 10px. Within the hit padding region, the connector can be selected and deselected.
+*The [HitPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_HitPadding) refers to the space around the connector's edges. To make it easy to select, selecting when the mouse comes near its vicinity area should be possible. The HitPadding property allows you to customize the vicinity area while selecting. The default value is 10px. Within the hit padding region, the connector can be selected and deselected.
 
 
 The following code illustrates how to set the HitPadding for the connector.
