@@ -69,11 +69,14 @@ An annotation can be added to a node or connector by defining the annotation obj
 >* By default, node’s annotation positioned in center point of the shape.
 >* By default, connector’s path annotation positioned in center point of its path.
 
+>**Note:** Do not use underscore(_) for annotation's id.
+
+
 ## Add Annotations at runtime
 
-You can add Annotation at runtime to the Annotations collection of the node/connector in the diagram component by using the `Add` method.
+You can add Annotation at runtime to the Annotations collection of the node/connector in the diagram component by using the `AddDiagramElements` method.
 
-The following code explains how to add an annotation to a node at runtime by using `Add` method.
+The following code explains how to add an annotation to a node at runtime by using `AddDiagramElements` method.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -101,14 +104,17 @@ The following code explains how to add an annotation to a node at runtime by usi
             OffsetY = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
         };
-        nodes.Add(node);
+         DiagramObjectCollection<NodeBase> NodeCollection = new DiagramObjectCollection<NodeBase>();
+         NodeCollection.Add(node1);
+         await Diagram.AddDiagramElements(NodeCollection);
     }
 
     // Method to add annotation at runtime.
-    public void AddLabel()
+    public async void  AddLabel()
     {
         ShapeAnnotation annotation = new ShapeAnnotation { Content = "Annotation" };
-        (diagram.Nodes[0].Annotations as DiagramObjectCollection<ShapeAnnotation>).Add(annotation);
+        diagram.Nodes[0].Annotations= new DiagramObjectCollection<ShapeAnnotation>(){annotation};
+       await Diagram.AddDiagramElements(NodeCollection);
     }
 }
 ```

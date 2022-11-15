@@ -39,7 +39,7 @@ To map the user defined JSON data with diagram, configure the fields of [DataSou
 @using System.Collections.ObjectModel
 
 <SfDiagram Height="600px" Layout="@LayoutValue" ConnectorDefaults="@ConnectorDefault" NodeDefaults="@NodeDefaults">
-    <DiagramDataSource Id="Name" ParentId="Category" DataSource="@DataSource" DataMapSettings="@datamap">
+    <DiagramDataSource Id="Name" ParentId="Category" DataSource="@DataSource">
         <DiagramDataMapSettings>
             <DiagramDataMapSetting Property="Annotations[0].Content" Field="Name"></DiagramDataMapSetting>
         </DiagramDataMapSettings>
@@ -91,12 +91,6 @@ To map the user defined JSON data with diagram, configure the fields of [DataSou
         //Specify the sub-tree orientation
         Orientation = SubTreeOrientation.Horizontal,
     };
-    //Create the data map settings.
-    List<DiagramDataMapSetting> datamap { get; set; } = new List<DiagramDataMapSetting>()
-    {
-        new DiagramDataMapSetting() { Property = "Shape.TextContent", Field = "Name" }
-    };
-
     DiagramLayout LayoutValue = new DiagramLayout() { };
 
     protected override void OnInitialized()
