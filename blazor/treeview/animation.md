@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animation in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about Animation in Syncfusion Blazor TreeView component and much more.
+description: Checkout and learn here all about the Animation in Syncfusion Blazor TreeView component and much more.
 platform: Blazor
 control: TreeView
 documentation: ug

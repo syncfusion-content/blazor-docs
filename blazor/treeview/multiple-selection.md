@@ -112,7 +112,7 @@ In the following example, the `AllowMultiSelection` property is enabled.
 
 ![MultiSelection in Blazor TreeView](./images/blazor-treeview-multi-selection.png)
 
-# SelectedNodes in Blazor TreeView Component
+## SelectedNodes in Blazor TreeView Component
 
 The `SelectedNodes` property is used to represent the nodes that are selected in the Blazor TreeView component. We can select the specific nodes by passing the array of nodes ID.
 

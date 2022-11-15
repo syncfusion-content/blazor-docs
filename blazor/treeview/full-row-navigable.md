@@ -9,7 +9,7 @@ documentation: ug
 
 # Navigation in Blazor TreeView Component
 
-In the TreeView component, we have provided a **NavigateUrl** property. By using this property, you can navigate to other pages with TreeView node selection.
+The TreeView component's **NavigateUrl** property is used to navigate from one page to other pages with TreeView node selection.
 
 The TreeView [FullRowNavigable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_FullRowNavigable) property is used to make the entire TreeView node navigable instead of text element in the Blazor TreeView component.
 

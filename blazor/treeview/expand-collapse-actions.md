@@ -112,7 +112,7 @@ In the following example, the `ExpandAllAsync`, `CollapseAllAsync` methods are u
 
 ```
 
-# ExpandOn in Blazor TreeView Component
+## ExpandOn in Blazor TreeView Component
 
 The `ExpandOn` property is used to specify the action upon which the node expands or collapses in the TreeView. The available actions are,
 
@@ -183,7 +183,7 @@ In the following example, the `ExpandOn` property is enabled.
 
 ```
 
-# ExpandedNodes in Blazor TreeView Component
+## ExpandedNodes in Blazor TreeView Component
 
 The ExpandedNodes property is used to represent the nodes that are expanded in the Blazor TreeView component. We can expand the specific nodes by passing the array of nodes ID.
 

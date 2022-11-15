@@ -101,7 +101,7 @@ By default, the checkbox state of parent and child nodes are dependent on each o
 
 ![Blazor TreeView with CheckBox](./images/blazor-treeview-checkbox.png)
 
-# CheckAll/ UnCheckAll actions in Blazor TreeView Component
+## CheckAll/ UnCheckAll actions in Blazor TreeView Component
 
 The `CheckAllAsync` method is used to check all the unchecked TreeView nodes in the Blazor TreeView component. Also, we can check the specific nodes by passing the array of unchecked nodes.
 
@@ -204,7 +204,7 @@ In the following example, the `CheckAllAsync`, `UnCheckAllAsync` methods are use
 }
 ```
 
-# CheckedNodes in Blazor TreeView Component
+## CheckedNodes in Blazor TreeView Component
 
 The `CheckedNodes` property is used to represent the nodes that are checked in the Blazor TreeView component. We can check the specific nodes by passing the array of nodes ID.
 
