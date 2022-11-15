@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Wrpping Text in Blazor TreeView Component | Syncfusion
+title: Wrapping Text in Blazor TreeView Component | Syncfusion
 description: Checkout and learn here all about AllowTextWrap in Syncfusion Blazor TreeView component and much more.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Wrpping Text in Blazor TreeView Component
+# Wrapping Text in Blazor TreeView Component
 
-The `AllowTextWrap` property is used to enable or disable wrapping the text in the TreeView node. When this property is set to true, the TreeView node's text content will wrap to the next line when its text content exceeds the width of the TreeView node.
+The [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowTextWrap) property is used to enable or disable wrapping the text in the TreeView node. When this property is set to true, the TreeView node's text content will wrap to the next line when its text content exceeds the width of the TreeView node.
 
 The default value of the `AllowTextWrap` property is false.
 

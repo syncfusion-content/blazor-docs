@@ -9,9 +9,9 @@ documentation: ug
 
 # Animation in Blazor TreeView Component
 
-The Animation property is used to speed up or slow down the expand and collapse actions in the Blazor TreeView component.
+The [Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_Animation) property is used to speed up or slow down the expand and collapse actions in the Blazor TreeView component.
 
-In TreeView, we have the `TreeViewNodeAnimationSettings` API, which includes the `TreeViewAnimationExpand` and `TreeViewAnimationCollapse` APIs. Both collapse and expand APIs include the below properties.
+The `TreeViewNodeAnimationSettings` API, which includes the `TreeViewAnimationExpand` and `TreeViewAnimationCollapse` APIs helps in setting Animation in TreeView. Both collapse and expand APIs include the below properties.
 
 * **Duration** - specifies the duration to animate.
 * **Easing** - specifies the animation timing function.
@@ -23,10 +23,10 @@ In the following example, the `Animation` settings are defined.
 @using Syncfusion.Blazor.Navigations
 <SfTreeView TValue="MailItem" @ref="treeview">
     <TreeViewFieldsSettings TValue="MailItem" Id="Id" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
-    <TreeViewNodeAnimationSettings>
+    <b><TreeViewNodeAnimationSettings>
         <TreeViewAnimationExpand Duration="1000" Effect="Syncfusion.Blazor.AnimationEffect.SlideDown" Easing="Linear"></TreeViewAnimationExpand>
         <TreeViewAnimationCollapse Duration="1000" Effect="Syncfusion.Blazor.AnimationEffect.SlideUp" Easing="Linear"></TreeViewAnimationCollapse>
-    </TreeViewNodeAnimationSettings>
+    </TreeViewNodeAnimationSettings></b>
 </SfTreeView>
 
 @code{

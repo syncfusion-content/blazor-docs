@@ -11,7 +11,7 @@ documentation: ug
 
 The `ExpandAllAsync` method is used to expand all the collapsed TreeView nodes in the Blazor TreeView component. Also, we can expand the specific nodes by passing the array of collapsed nodes.
 
-The `CollapseAllAsync` method is used to collapse all the expanded TreeView nodes in the Blazor TreeView component. Also, we can collapse the specific nodes by passing the array of expanded nodes.
+The `CollapseAllAsync` method is used to collapse all the expanded TreeView nodes in the Blazor TreeView component.Also, collapse the specific nodes by passing the array of expanded nodes.
 
 In the following example, the `ExpandAllAsync`, `CollapseAllAsync` methods are used inside the button click.
 
@@ -118,7 +118,7 @@ The `ExpandOn` property is used to specify the action upon which the node expand
 
 * **Click** : The expand/collapse operation happens when you single-click the node on both desktop and mobile devices.
 * **DoubleClick** : The expand/collapse operation happens when you double-click the node on both desktop and mobile devices. 
-* **None** : The expand/collapse operation will not happen when you single-click or double-click the node on both desktop and mobile devices.
+* **None** : The expand/collapse operation will not happen.
 
 The default value of the `ExpandOn` property is DoubleClick.
 
