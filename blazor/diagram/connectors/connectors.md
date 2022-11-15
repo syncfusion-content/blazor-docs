@@ -100,7 +100,7 @@ You can add a connector at runtime by adding connector to the connectors collect
 ```
 ## Add connector with annotations at runtime
 
-You can add connector with annotation at runtime in the diagram component by using the `AddDiagramElements` method.
+You can add connector with annotation at runtime in the diagram component by using the [AddDiagramElements](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElements_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method.
 
 The following code explains how to add an connector with annotation  at runtime by using `AddDiagramElements` method.
 
