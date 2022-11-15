@@ -14,6 +14,12 @@ You can provide two or more columns in the popup by providing the class name `e-
 * [itemTemplate](https://blazor.syncfusion.com/documentation/dropdown-list/templates#item-template) – Using item template, you can add the columns in the popup.
 * [valueTemplate](https://blazor.syncfusion.com/documentation/dropdown-list/templates#value-template) – Using value template, you can display the value of which columns to be updated.
 
+Display the custom text alignment in each column using a built-in class, like in the following code example:
+
+* e-text-center: Displays the text in the center of the column.
+* e-text-right: Displays the text in the right side of the column.
+* e-text-left: Displays the text in the left side of the column.
+
 {% highlight cshtml %}
 
 {% include_relative code-snippet/multicolumn/multicolumn-dropdown.razor %}
