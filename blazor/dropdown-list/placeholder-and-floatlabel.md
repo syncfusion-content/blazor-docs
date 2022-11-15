@@ -35,6 +35,8 @@ Use the following code to customize the text color of `Placeholder`.
 
 ## Add mandatory indicator using placeholder
 
+You can achieve this by applying the mandatory indicator `*`​​ to the content style in the CSS level
+
 Use the following code to add the mandatory indicator * to the float label element.
 
 {% highlight cshtml %}
@@ -53,9 +55,9 @@ Floating label supports the types of actions as given below.
 
 Type     | Description
 ------------ | -------------
-  Auto       | The floating label will float above the input after focusing, or entering a value in the input.
-  Always     | The floating label will always float above the input.
-  Never      | By default, never float the label in the input when the placeholder is available.
+  [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Auto)       | The floating label will float above the input after focusing, or entering a value in the input.
+  [Always](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Always)     | The floating label will always float above the input.
+  [Never](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Never)      | By default, never float the label in the input when the placeholder is available.
 
 `FloatLabelType` as  `Auto` is demonstrated in the below code sample.
 
