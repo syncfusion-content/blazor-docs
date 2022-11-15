@@ -48,4 +48,4 @@ In the following code, remote data bound to the DropDownList component, but only
 
 ## Limitation of virtualization
 
-* virtualization is not supported in the Grouping feature.
+* Virtualization is not supported in the Grouping feature.
