@@ -42,7 +42,7 @@ When [Prompt] (https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextE
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with prompt](./images/blazor-richtexteditor-paste-prompt.gif)
+![Blazor RichTextEditor with prompt](./images/blazor-richtexteditor-paste-prompt.png)
 
 ## Paste as plain text
 
