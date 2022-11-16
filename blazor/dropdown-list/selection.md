@@ -1,10 +1,10 @@
 ---
-Layout: Post
-Title: Selection in Blazor DropDown List Component | Syncfusion
-Description: Checkout and learn here all about the Selection feature in Syncfusion Blazor DropDownList component and more.
-Platform: Blazor
-Control: DropDown List
-Documentation: UG
+layout: post
+title: Selection in Blazor DropDown List Component | Syncfusion
+description: Checkout and learn here all about the Selection feature in Syncfusion Blazor DropDownList component and more.
+platform: Blazor
+control: DropDown List
+documentation: ug
 ---
 
 # Selection in Dropdown List

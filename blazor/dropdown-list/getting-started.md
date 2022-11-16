@@ -1,10 +1,10 @@
 ---
-Layout: Post
-Title: Getting Started with Blazor DropDown List Component | Syncfusion
-Description: Checkout and learn about getting started with Blazor DropDown List component in Blazor Server App and Blazor WebAssembly App.
-Platform: Blazor
-Control: DropDown List
-Documentation: UG
+layout: post
+title: Getting Started with Blazor DropDown List Component | Syncfusion
+description: Checkout and learn about getting started with Blazor DropDown List component in Blazor Server App and Blazor WebAssembly App.
+platform: Blazor
+control: DropDown List
+documentation: ug
 ---
 
 # Getting Started with Dropdown List

@@ -1,10 +1,10 @@
 ---
-Layout: Post
-Title: Value Binding in Blazor DropDown List Component | Syncfusion
-Description: Checkout and learn here all about Value Binding in Syncfusion Blazor DropDown List component and more.
-Platform: Blazor
-Control: DropDown List
-Documentation: UG
+layout: post
+title: Value Binding in Blazor DropDown List Component | Syncfusion
+description: Checkout and learn here all about Value Binding in Syncfusion Blazor DropDown List component and more.
+platform: Blazor
+control: DropDown List
+documentation: ug
 ---
 
 # Value Binding in Dropdown List
