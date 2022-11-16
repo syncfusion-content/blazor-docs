@@ -23,7 +23,7 @@ Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 ## Color of the placeholder text
 
-Use the following code to customize the text color of `Placeholder`.
+Use the following code to customize the text color of the `Placeholder`.
 
 {% highlight cshtml %}
 
