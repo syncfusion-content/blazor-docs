@@ -11,9 +11,9 @@ documentation: ug
 
 ## Change the popup width
 
-You can customize the width of the popup using [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth). Default value of `PopupWidth` is `100%` so the popup width sets based on the width of the DropdownList component.
+Customize the width of the popup using the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth). The default value of the `PopupWidth` is `100%` so the popup width is set based on the width of the DropdownList component.
 
-In the below sample PopupWidth is set as 300px
+In the following sample, the `PopupWidth` is set as `300px`.
 
 {% highlight cshtml %}
 
@@ -25,9 +25,9 @@ In the below sample PopupWidth is set as 300px
 
 ## Handling TextOverflow 
 
-When the width of popup is less than text's width, then `text-overflow:ellipsis` style will be automatically appeared.
+When the width of the popup is less than text's width, then the `text-overflow:ellipsis` style will be automatically appeared.
 
-In the below sample `PopupWidth` is set as `100px` then `text-overflow:ellipsis` is automatically applied
+In the following sample, the `PopupWidth` is set as `100px` then the `text-overflow:ellipsis` is automatically applied
 
 {% highlight cshtml %}
 
@@ -39,7 +39,7 @@ In the below sample `PopupWidth` is set as `100px` then `text-overflow:ellipsis`
 
 ## Change the popup height
 
-You can customize the height of the popup using [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight). Default value of PopupHeight is `300px`.
+Customize the height of the popup using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight). The default value of the `PopupHeight` is `300px`.
 
 {% highlight Razor %}
 
@@ -51,13 +51,13 @@ You can customize the height of the popup using [PopupHeight](https://help.syncf
 
 ## Change the popup z-index
 
-You can customize the [z-index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ZIndex) value of the component popup element.
+Customize the [z-index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ZIndex) value of the component popup element.
 
 Defaults to 1000
 
 ## Show popup on initial loading
 
-You can achieve this by using [ShowPopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowPopupAsync) in the Created Event.
+You can achieve this by using [ShowPopupAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowPopupAsync) in the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Created) Event.
 
 {% highlight Razor %}
 
@@ -69,7 +69,7 @@ You can achieve this by using [ShowPopupAsync()](https://help.syncfusion.com/cr/
 
 ## Preventing opening and closing
 
-You can prevent the popup open and close in event argument like `BeforeOpenEventArgs.cancel` and `PopupEventArgs.cancel` as true. It can be achieved [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnOpen) and [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnClose) events. 
+Prevent the popup open and close in the event argument like `BeforeOpenEventArgs.cancel` and `PopupEventArgs.cancel` as true. It is achieved by the [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnOpen) and [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnClose) events. 
 
 {% highlight Razor %}
 
@@ -81,7 +81,7 @@ You can prevent the popup open and close in event argument like `BeforeOpenEvent
 
 ## Popup height based on available space
 
-You can achieve this by binding resize event in window and update the height of the popup based on the window height.
+You can achieve this by binding the `resize` event in window and update the height of the popup based on the window height.
 
 {% highlight Razor %}
 
