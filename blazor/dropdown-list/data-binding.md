@@ -1,7 +1,7 @@
 ---
 Layout: Post
-title: Data Binding in Blazor DropDown List Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor DropDown List component and more.
+Title: Data Binding in Blazor DropDown List Component | Syncfusion
+Description: Checkout and learn here all about Data Binding in Syncfusion Blazor DropDown List component and more.
 Platform: Blazor
 Control: DropDown List
 Documentation: UG
