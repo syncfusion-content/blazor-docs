@@ -226,7 +226,7 @@ namespace LibraryManagement.Models
 
 ## Register the service in Startup.cs
 
-Now, you need to register the **LibraryService** and **ILibraryService** as services in the **startup.cs** file for .NET 5 and .NET 3.X applications and in **Program.cs** file for .NET6 applications. Kindly register the Scoped Services like below.
+Now, you need to register the **LibraryService** and **ILibraryService** as services in the **startup.cs** file for .NET 5 and .NET 3.X applications and in **Program.cs** file for .NET6 applications. Register the Scoped Services like below.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
@@ -404,7 +404,7 @@ Now, the data from the SQL server is loaded into the DataGrid component. Refer t
 
 ## Handling CRUD operations with our Syncfusion Blazor DataGrid component
 
-You can enable editing in the grid component using the **GridEditSettings** component. Grid provides various modes of editing options such as Inline/Normal, Dialog, and Batch editing. Kindly refer to the following documentation for your reference.
+You can enable editing in the grid component using the **GridEditSettings** component. Grid provides various modes of editing options such as Inline/Normal, Dialog, and Batch editing. Refer to the following documentation for your reference.
 
 [Grid Editing in Blazor](https://blazor.syncfusion.com/documentation/datagrid/editing/#editing)
 
@@ -532,4 +532,4 @@ public void ActionBeginHandler(ActionEventArgs<Book> Args)
 
 ![Final Project in Blazor](../images/final-gif.gif)
 
-> Please find the sample from this [Github](https://github.com/SyncfusionExamples/blazor-server-datagrid-efcore-crud/) location.
+> Find the sample from this [Github](https://github.com/SyncfusionExamples/blazor-server-datagrid-efcore-crud/) location.
