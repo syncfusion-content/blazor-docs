@@ -1,17 +1,17 @@
 ---
-layout: post
-title: Data Binding in Blazor DropDown List Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor DropDown List component and more.
-platform: Blazor
-control: DropDown List
-documentation: ug
+Layout: Post
+Title: Data Binding in Blazor DropDown List Component | Syncfusion
+Description: Checkout and learn here all about Data Binding in Syncfusion Blazor DropDown List component and more.
+Platform: Blazor
+Control: DropDown List
+Documentation: UG
 ---
 
 # Data Binding in Dropdown List
 
-The DropDownList loads the data either from local data sources or remote data services. Using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property, you can bind local data or using [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) you can bind remote data.
+The DropDownList loads the data either from the local data sources or remote data services. Using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property,  bind the local data or using the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html), bind the remote data.
 
-* **TItem** - specifies the type of the datasource of the dropdown component.
+* **TItem** - Specifies the type of the datasource of the dropdown component.
 
 ## Binding local data
 
@@ -27,7 +27,7 @@ The DropDownList loads the data from local data sources through the [DataSource]
 
 ### Primitive type
 
-You can bind the data to the DropDownList as a array or list of `string`, `int`, `double` and `bool` type items.
+Bind the data to the DropDownList as an array or list of the `string`, `int`, `double` and `bool` type items.
 
 The following code demonstrates array of string values to the DropDownList component.
 
@@ -53,7 +53,7 @@ The following code demonstrates array of integer values to the DropDownList comp
 
 The DropDownList can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
 
-In the following example, `Code.ID` column and `Country.CountryID` column from complex data have been mapped to the [DropDownListFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value) and  [DropDownListFieldSettings.Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Text), respectively.
+In the following example, the `Code.ID` column and `Country.CountryID` column from complex data have been mapped to the [DropDownListFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value) and  [DropDownListFieldSettings.Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Text) respectively.
 
 {% highlight cshtml %}
 
@@ -65,7 +65,7 @@ In the following example, `Code.ID` column and `Country.CountryID` column from c
 
 ### Expando object binding
 
-You can bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-5.0) data to the DropDownList component. The following example `ExpandoObject` is bound to the collection of vehicles data.
+Bind the [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-5.0) data to the DropDownList component. In the following example, the `ExpandoObject` is bound to the collection of vehicles data.
 
 {% highlight cshtml %}
 
@@ -77,7 +77,7 @@ You can bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system
 
 ### Observable collection binding
 
-You can bind [ObservableCollection](https://blazor.syncfusion.com/documentation/common/data-binding/data-updates#observable-collection) data to the DropDownList component. In the following example, `Observable Data` is bound to a collection of colors data.
+Bind the [ObservableCollection](https://blazor.syncfusion.com/documentation/common/data-binding/data-updates#observable-collection) data to the DropDownList component. In the following example, the `Observable Data` is bound to a collection of colors data.
 
 {% highlight cshtml %}
 
@@ -89,7 +89,7 @@ You can bind [ObservableCollection](https://blazor.syncfusion.com/documentation/
 
 ### Dynamic object binding
 
-You can bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-5.0) data to the DropDownList component. The following example `DynamicObject` is bound to the collection of customers data.
+Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-5.0) data to the DropDownList component. In the following example, the `DynamicObject` is bound to the collection of customer data.
 
 {% highlight cshtml %}
 
@@ -101,7 +101,7 @@ You can bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system
 
 ### Enum data binding
 
-You can bind enum data to DropDownList component. The following code helps you get a description value from the enumeration data.
+Bind the enum data to the DropDownList component. The following code helps you to get a description value from the enumeration data.
 
 {% highlight cshtml %}
 
@@ -113,7 +113,7 @@ You can bind enum data to DropDownList component. The following code helps you g
 
 ### ValueTuple data binding
 
-You can bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0) data to the DropDownList component. The following code helps you to get a string value from the enumeration data by using `ValueTuple`
+Bind the [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0) data to the DropDownList component. The following code helps you to get a string value from the enumeration data by using `ValueTuple`
 
 {% highlight cshtml %}
 
@@ -127,15 +127,15 @@ You can bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.va
 
 The DropDownList loads the data from remote data services through the DataSource property. 
 
-The DropDownList supports retrieval of data from remote data services with the help of [DataManager](https://blazor.syncfusion.com/documentation/data/getting-started)  control. The [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property is used to fetch data from the database and bind it to the DropDownList.
+The DropDownList supports the retrieval of data from the remote data services with the help of the [DataManager](https://blazor.syncfusion.com/documentation/data/getting-started) control. The [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property is used to fetch data from the database and bind it to the DropDownList.
 
 * [DataManager.Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) - Defines the service endpoint to fetch data.
-* [DataManager.Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) - Defines the adaptor option. By default, ODataAdaptor is used for remote binding. The adaptor is responsible for processing responses and requests from/to the service endpoint. 
+* [DataManager.Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) - Defines the adaptor option. By default, the ODataAdaptor is used for remote binding. The adaptor is responsible for processing responses and requests from or to the service endpoint. 
 * [Syncfusion.Blazor.Data](https://www.nuget.org/packages/Syncfusion.Blazor.Data/) package provides some predefined adaptors that are designed to interact with particular service endpoints.
 
 ### OData v4 services
 
-The [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) provides ability to consume and manipulate data from OData v4 services. The following sample displays the first six customer details from `Customers` table of the `Northwind` Data Service.
+The [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) provides the ability to consume and manipulate data from OData v4 services. The following sample displays the first six customer details from `Customers` table of the `Northwind` Data Service.
 
 {% highlight cshtml %}
 
@@ -147,7 +147,7 @@ The [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors
 
 ### Web API adaptor
 
-The [Web Api Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) use this to interact with Web API created under OData standards. The `WebApiAdaptor` is extended from the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor). Hence use `WebApiAdaptor`, the endpoint should understand the OData formatted queries sent along with request. 
+The [Web Api Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) use this to interact with Web API created under OData standards. The `WebApiAdaptor` is extended from the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor), hence use the `WebApiAdaptor`. The endpoint should understand the OData formatted queries sent along with the request. 
 
 {% highlight cshtml %}
 
@@ -161,9 +161,9 @@ The [Web Api Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#
 
 The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the DropDownList component.
 
-For implementing custom data binding in DropDownList, the `DataAdaptor` class is used. This abstract class acts as a base class for the custom adaptor.
+For implementing custom data binding in the DropDownList, the `DataAdaptor` class is used. This abstract class acts as a base class for the custom adaptor.
 
-The `DataAdaptor` abstract class has both synchronous and asynchronous method signatures which can be overridden in the custom adaptor. Following are the method signatures present in this class,
+The `DataAdaptor` abstract class has both synchronous and asynchronous method signatures, which can be overridden in the custom adaptor. Following are the method signatures present in this class.
 
 ```csharp
 public abstract class DataAdaptor
@@ -182,7 +182,7 @@ public abstract class DataAdaptor
 
 The custom data binding can be performed in the DropDownList component by providing the custom adaptor class and overriding the Read or ReadAsync method of the DataAdaptor abstract class.
 
-The following sample code demonstrates implementing custom data binding using custom adaptor,
+The following sample code demonstrates implementing custom data binding using custom adaptor.
 
 {% highlight cshtml %}
 
@@ -192,9 +192,9 @@ The following sample code demonstrates implementing custom data binding using cu
 
 ### Offline mode
 
-To avoid post back for every action, set the DropDownList to load all data on initialization and make the actions process in client-side. To enable this behaviour, use the `Offline` property of `DataManager`.
+To avoid post back for every action, set the DropDownList to load all data on initialization and make the actions process on the client-side. To enable this behaviour, use the `Offline` property of `DataManager`.
 
-The following example for remote data binding and enabled offline mode.
+The following example is for remote data binding and enabled offline mode.
 
 {% highlight cshtml %}
 
@@ -206,7 +206,7 @@ The following example for remote data binding and enabled offline mode.
 
 ### Entity framework
 
-You need to follow the below steps to consume data from the [Entity Framework](https://blazor.syncfusion.com/documentation/common/data-binding/bind-entity-framework) in the DropDownList component.
+Follow these steps to consume data from the [Entity Framework](https://blazor.syncfusion.com/documentation/common/data-binding/bind-entity-framework) in the DropDownList component.
 
 #### Create DBContext class
 
@@ -239,7 +239,7 @@ namespace EFDropDown.Shared.DataAccess
 
 #### Create data access layer to perform data operation
 
-Now, you need to create a class named `OrderDataAccessLayer`, which act as data access layer for retrieving the records from the database table.
+Now, create a class named `OrderDataAccessLayer`, which act as data access layer for retrieving the records from the database table.
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
@@ -273,7 +273,7 @@ namespace EFDropDown.Shared.DataAccess
 
 #### Creating web API controller
 
- A Web API Controller has to be created which allows DropDownList directly to consume data from the Entity framework.
+ A Web API Controller has to be created, which allows the DropDownList to directly consume data from the Entity framework.
 
 ```csharp
 using EFDropDown.Shared.DataAccess;
@@ -320,7 +320,7 @@ namespace EFDropDown.Controllers
 
 ### Configure DropDownList component using Web API adaptor
 
-Now, you can configure the DropDownList using the [SfDataManager](https://blazor.syncfusion.com/documentation/data/getting-started) to interact with the created Web API and consume the data appropriately. To interact with web api, you need to use [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor).
+Now, configure the DropDownList using the [SfDataManager](https://blazor.syncfusion.com/documentation/data/getting-started) to interact with the created Web API and consume the data appropriately. To interact with web API, use the [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor).
 
 {% highlight cshtml %}
 
@@ -330,7 +330,7 @@ Now, you can configure the DropDownList using the [SfDataManager](https://blazor
 
 ## Adding new items
 
-You can add the new item in the popup with help of using [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_AddItemsAsync_System_Collections_Generic_IEnumerable__0__System_Nullable_System_Int32__) public method. This method will add a mentioned item in the DropDownList popup without affecting the data source items.
+Add the new item in the popup with the help of [AddItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_AddItemsAsync_System_Collections_Generic_IEnumerable__0__System_Nullable_System_Int32__) public method. This method will add a mentioned item in the DropDownList popup without affecting the data source items.
 
 {% highlight cshtml %}
 
