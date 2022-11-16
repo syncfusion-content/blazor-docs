@@ -9,7 +9,7 @@ documentation: ug
 
 # Resizable Rich Text Editor
 
-The Rich Text Editor can be dynamically resized, allowing users to change the size of the editor based on their needs. You can enable or disable this feature using the [EnableResize] (https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableResize) property. If `EnableResize` is set to true, the editor component creates a grip at the bottom right corner, which allows resizing the component in the diagonal direction.
+The Rich Text Editor can be dynamically resized, allowing users to change the size of the editor based on their needs. You can enable or disable this feature using the [EnableResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableResize) property. If `EnableResize` is set to true, the editor component creates a grip at the bottom right corner, which allows resizing the component in the diagonal direction.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -23,7 +23,7 @@ The Rich Text Editor can be dynamically resized, allowing users to change the si
 
 ## Restrict resize
 
-To have a restricted resizable area for the Rich Text Editor, you need to specify the min-width, max-width, min-height, and max-height CSS properties for the component’s container element. By default, the editor is capable of resizing up to the current viewport. The **e-richtexteditor** CSS class will be available in the component's container and can be used for applying the bellow mentioned styles.
+To have a restricted resizable area for the Rich Text Editor, you need to specify the `min-width`, `max-width`, `min-height`, and `max-height` CSS properties for the component’s container element. By default, the editor is capable of resizing up to the current viewport. The `e-richtexteditor` CSS class will be available in the component's container and can be used for applying the bellow mentioned styles.
 
 ```css
 <style>

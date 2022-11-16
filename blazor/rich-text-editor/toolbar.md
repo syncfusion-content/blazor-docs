@@ -11,8 +11,6 @@ documentation: ug
 
 The Rich Text Editor toolbar contains a collection of tools such as bold, Italic, and text alignment buttons that are used to format the content.
 
-![Blazor RichTextEditor toolbar](./images/blazor-richtexteditor-toolbar-types.png)
-
 You can customize the toolbar configurations by usig the [RichTextEditorToolbarSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Type) property. The types of toolbar are:
 
 1. Expand
@@ -88,11 +86,11 @@ The Rich text editor has quick toolbars that are open as context-menu on clickin
 
 | Target Element | Default Quick Toolbar items |
 |----------------|---------|
-| Image | Replace, Align, Caption, Remove, InsertLink, Display, AltText, Dimension |
-| Link | Open, Edit, UnLink |
-| Table | TableHeader, TableRows, TableColumns, BackgroundColor, TableRemove, Alignments, TableCellVerticalAlign, Styles |
-| Audio | Replae, Remove, Display |
-| Video | Replace, Align, Remove, Layout option, Dimension |
+| [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ImageToolbarCommand.html#fields) | Replace, Align, Caption, Remove, InsertLink, Display, AltText, Dimension |
+| [Link](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.LinkToolbarCommand.html#fields) | Open, Edit, UnLink |
+| [Table](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#fields) | TableHeader, TableRows, TableColumns, BackgroundColor, TableRemove, Alignments, TableCellVerticalAlign, Styles |
+| [Audio](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.AudioToolbarCommand.html#fields) | AudioReplace, AudioRemove, AudioLayoutOption |
+| [Video](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.VideoToolbarCommand.html#fields) | VideoReplace, VideoAlign, VideoRemove, VideoLayoutOption, VideoDimension |
 
 ### Image quick Toolbar
 
@@ -100,14 +98,14 @@ You can customize the inserted image in the editor by using the [RichTextEditorQ
 
 | Image Toolabr items | Description |
 | --------------------| ------------- |
-| Replace | Can replace the image with some other image |
-| Align | Align the image with left, right and justify |
-| Caption | Set the captions for the image |
-| Remove | Delete the image |
-| InsertLink | Provide the link to the image |
-| Display | Display the image as inline or with break |
-| AltText | Provide the alternative text for the image if the image is not present in the location |
-| Dimension | Can change an image dimensions, such as its height and width |
+| [Replace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ImageToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_ImageToolbarCommand_Replace) | Can replace the image with some other image |
+| [Align](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ImageToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_ImageToolbarCommand_Align) | Align the image with left, right and justify |
+| [Caption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ImageToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_ImageToolbarCommand_Caption) | Set the captions for the image |
+| [Remove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ImageToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_ImageToolbarCommand_Remove) | Delete the image |
+| [InsertLink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ImageToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_ImageToolbarCommand_InsertLink) | Provide the link to the image |
+| [Display](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ImageToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_ImageToolbarCommand_Display) | Display the image as inline or with break |
+| [AltText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ImageToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_ImageToolbarCommand_AltText) | Provide the alternative text for the image if the image is not present in the location |
+| [Dimension](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ImageToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_ImageToolbarCommand_Dimension) | Can change an image dimensions, such as its height and width |
 
 {% tabs %}
 {% highlight razor %}
@@ -125,9 +123,9 @@ You can customize the selected link inside the editor through the quick toolbar 
 
 | Tools | Description |
 |----------------|--------------------------------------|
-| Open | The given link page will open in new window |
-| Edit Link | Edits the link in the Rich Text Editor content |
-| Remove Link | Removes link from the content of Rich Text Editor |
+| [Open](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.LinkToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_LinkToolbarCommand_Open) | The given link page will open in new window |
+| [Edit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.LinkToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_LinkToolbarCommand_Edit) | Edits the link in the Rich Text Editor content |
+| [UnLink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.LinkToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_LinkToolbarCommand_UnLink) | Removes link from the content of Rich Text Editor |
 
 {% tabs %}
 {% highlight razor %}
@@ -145,13 +143,13 @@ Quick toolbar is opened by clicking the table. You can customize the table by us
 
 | Tools | Description |
 |----------------|--------------------------------------|
-| TableHeader | Header row can be added or removed from the inserted table |
-| TableRows| Can be inserted above or below the required table cell |
-| TableColumns | Can be inserted to the left or right side of the required table cell |
-| BackgroundColor| Can be set each table cell background color |
-| TableRemove | Can be delete the entire table from editor |
-| Alignments |  Can be aligned the table content|
-| Styles | Can be style the table border |
+| [TableHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_TableHeader) | Header row can be added or removed from the inserted table |
+| [TableRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_TableRows) | Can be inserted above or below the required table cell |
+| [TableColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_TableColumns) | Can be inserted to the left or right side of the required table cell |
+| [BackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_BackgroundColor) | Can be set each table cell background color |
+| [TableRemove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_TableRemove) | Can be delete the entire table from editor |
+| [Alignments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_Alignments) |  Can be aligned the table content|
+| [Styles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.TableToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_TableToolbarCommand_Alignments) | Can be style the table border |
 
 {% tabs %}
 {% highlight razor %}
@@ -169,9 +167,9 @@ The Rich Text Editor allows you to customize the inserted audio by using the [Ri
 
 | Tools | Description |
 |----------------|--------------------------------------|
-| AudioReplace | Can replace the audio with some other audio |
-| AudioRemove | Delete the audio |
-| AudioLayoutOption | Display the audio as inline or with break |
+| [AudioReplace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.AudioToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_AudioToolbarCommand_AudioReplace) | Can replace the audio with some other audio |
+| [AudioRemove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.AudioToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_AudioToolbarCommand_AudioRemove) | Delete the audio |
+| [AudioLayoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.AudioToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_AudioToolbarCommand_AudioLayoutOption) | Display the audio as inline or with break |
 
 {% tabs %}
 {% highlight razor %}
@@ -189,11 +187,11 @@ The Rich Text Editor allows you to customize the inserted video by using the [Ri
 
 | Tools | Description |
 |----------------|--------------------------------------|
-| VideoReplace | Can replace the video with some other video |
-| VideoAlign | Align the image with left, right and center |
-| VideoRemove | Delete the video |
-| VideoLayoutOption | Display the video as inline or with break |
-| VideoDimension | Can change an video dimensions, such as its height and width|
+| [VideoReplace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.VideoToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_VideoToolbarCommand_VideoReplace) | Can replace the video with some other video |
+| [VideoAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.VideoToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_VideoToolbarCommand_VideoAlign) | Align the image with left, right and center |
+| [VideoRemove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.VideoToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_VideoToolbarCommand_VideoRemove) | Delete the video |
+| [VideoLayoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.VideoToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_VideoToolbarCommand_VideoLayoutOption) | Display the video as inline or with break |
+| [VideoDimension](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.VideoToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_VideoToolbarCommand_VideoDimension) | Can change an video dimensions, such as its height and width|
 
 {% tabs %}
 {% highlight razor %}
