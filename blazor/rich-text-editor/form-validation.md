@@ -31,7 +31,7 @@ The Rich Text Editor provides the functionality of character counting and its va
 |----------------|---------|
 | Required | Requires a value for the Rich Text Editor control.|
 | MinLength | Requires the value to be of a given minimum character count.|
-| MaxLength | Requires the value to be of the given maximum character count.|
+| [MaxLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_MaxLength) | Requires the value to be of the given maximum character count.|
 
 {% tabs %}
 {% highlight cshtml %}
