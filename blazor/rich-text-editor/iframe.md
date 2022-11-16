@@ -9,9 +9,9 @@ documentation: ug
 
 # Iframe Editable in Blazor RichTextEditor
 
-When the `RichTextEditorIframeSettings` option is [RichTextEditorIframeSettings.enabled]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorIFrameSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorIFrameSettings_Enable)), the editor creates the iframe element as the content area on component initialization, it is used to display and edit the content. In the content area, the editor displays only the body tag of a `<iframe>` document.
+When the `RichTextEditorIframeSettings` option is set to [RichTextEditorIframeSettings.enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorIFrameSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorIFrameSettings_Enable), the editor creates the iframe element as the content area on component initialization, which is used to display and edit the content. The editor only displays the body tag of an `<iframe>` document in the content area.
 
-Basically, in an iframe mode, you have got the entire document only the editor content, and also you can use styles and scripts only for the particular Editor.
+Basically, in an iframe mode, you have the entire document but only the editor content, and you can also use styles and scripts only for the particular editor.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -26,11 +26,11 @@ Basically, in an iframe mode, you have got the entire document only the editor c
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with IFrame](./images/blazor-richtexteditor-iframe.png)
+![Blazor RichTextEditor with iframe](./images/blazor-richtexteditor-iframe.png)
 
 ## IFrame attributes
 
-The editor allows you to pass an additional attribute to body tag of a `<iframe>` element using [RichTextEditorIframeSettings.Attributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorIFrameSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorIFrameSettings_Attributes) property. This property contains name or value pairs in string format. It is used to override the default appearance of the content area.
+You can add an additional attribute to the body tag of an `<iframe>` element by using the [RichTextEditorIframeSettings.Attributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorIFrameSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorIFrameSettings_Attributes) property. This property contains name or value pairs in string format. It is used to override the default appearance of the content area.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -40,13 +40,13 @@ The editor allows you to pass an additional attribute to body tag of a `<iframe>
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with IFrame Attribute](./images/blazor-richtexteditor-iframe-attribute.png)
+![Blazor RichTextEditor with iframe attribute](./images/blazor-richtexteditor-iframe-attribute.png)
 
 ## Adding external CSS/Script file
 
-The editor offers to add external CSS file to style the `<iframe>` element. Easily change the appearance of editor’s content using an external CSS file using **Resources - Styles** field in the [RichTextEditorIframeSettings.Resources](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorIFrameSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorIFrameSettings_Resources) property.
+The editor offers to add an external CSS file to style the `<iframe>` element. Using the [RichTextEditorIframeSettings.Resources](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorIFrameSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorIFrameSettings_Resources) property, you can easily change the appearance of the editor's content by using an external CSS file.
 
-Likewise, add the external script file to the `<iframe>` element using **Resources - Scripts** field of `RichTextEditorIframeSettings.Resources` to provide the additional functionalities to the Rich Text Editor.
+Similarly, add the external script file to the `<iframe>` element using the `RichTextEditorIframeSettings.Resources` property, and it will provide the additional functionalities to the Rich Text Editor.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -72,6 +72,6 @@ Likewise, add the external script file to the `<iframe>` element using **Resourc
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with External css/script](./images/blazor-richtexteditor-iframe-external-CSS-script.png)
+![Blazor RichTextEditor with external css/script](./images/blazor-richtexteditor-iframe-external-CSS-script.png)
 
 > You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
