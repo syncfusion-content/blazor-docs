@@ -27,7 +27,7 @@ In the following sample, the selected value is displayed as a combined text of b
 
 ## Item template
 
-The content of each list item within the DropDownList can be customized with the help of [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property.
+The content of each list item within the DropDownList can be customized with the help of the [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property.
 
 In the following sample, each list item is split into two columns to display relevant data.
 
@@ -41,9 +41,9 @@ In the following sample, each list item is split into two columns to display rel
 
 ## Group template
 
-The group header title under which appropriate sub-items are categorized can also be customized with the help of [GroupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_GroupTemplate) property. This template is common for both inline and floating group header template.
+The group header title under which appropriate sub-items are categorized can also be customized with the help of the [GroupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_GroupTemplate) property. This template is common for both inline and floating group header template.
 
-In the following sample, employees are grouped according to their city.
+In the following sample, employees are grouped according to their cities.
 
 {% highlight cshtml %}
 
