@@ -9,7 +9,7 @@ documentation: ug
 
 # Styling and Appearance in Blazor TreeGrid Component
 
-To modify the Tree Grid appearance, override the default CSS of Tree Grid. Please find the list of CSS classes and its corresponding section in Tree Grid.
+To modify the Tree Grid appearance, override the default CSS of Tree Grid. Find the list of CSS classes and its corresponding section in Tree Grid.
 
 | Section |CSS class | Purpose of CSS class |
 | ----- | ----- | ----- |

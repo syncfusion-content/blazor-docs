@@ -308,7 +308,7 @@ The event [ExcelQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ### ExcelHeaderQueryCellInfo
 
-> The row header cell can be obtained by using the `ExcelQueryCellInfo` event. It can be identified using `AxisSet.Axis == "row"` and for reference, please see the code snippet in the previous topic.
+> The row header cell can be obtained by using the `ExcelQueryCellInfo` event. It can be identified using `AxisSet.Axis == "row"` and for reference, see the code snippet in the previous topic.
 
 The event [ExcelHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_ExcelHeaderQueryCellInfo) triggers on framing each column header cell during Excel export. It allows the user to customize the cell value, style, etc. of the current cell. It has the following parameters:
 

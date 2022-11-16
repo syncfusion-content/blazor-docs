@@ -49,7 +49,7 @@ Then, go to your **Client** project and install the following package:
 
 ## Add proto file and service to the project
 
-gRPC works with Proto files which are written in protocol buffer language that define your messaging. To learn more about the language, please visit this [guide](https://developers.google.com/protocol-buffers/docs/proto3#simple).
+gRPC works with Proto files which are written in protocol buffer language that define your messaging. To learn more about the language, visit this [guide](https://developers.google.com/protocol-buffers/docs/proto3#simple).
 
 To add a proto file, **Right-click** the **Shared** project, go to **Add**, and then select **New item**. You can choose a Class file and name it as `order.proto` and select **Add**.
 

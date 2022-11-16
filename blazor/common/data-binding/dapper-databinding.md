@@ -350,7 +350,7 @@ Now, the DataGrid will look like this while running the application. The display
 
 ## Handling CRUD operations with our Syncfusion Blazor DataGrid component
 
-You can enable editing in the grid component using the [GridEditSettings](https://blazor.syncfusion.com/documentation/datagrid/editing) component. Grid provides various modes of editing options such as Inline/Normal, Dialog, and Batch editing. Kindly refer to the following documentation for your reference.
+You can enable editing in the grid component using the [GridEditSettings](https://blazor.syncfusion.com/documentation/datagrid/editing) component. Grid provides various modes of editing options such as Inline/Normal, Dialog, and Batch editing. Refer to the following documentation for your reference.
 
 [Grid Editing in Blazor](https://blazor.syncfusion.com/documentation/datagrid/editing/#editing)
 
@@ -436,7 +436,7 @@ public override async Task<object> RemoveAsync(DataManager dataManager, object p
 
 To delete a row, select any row and click the `Delete` toolbar button. Clicking the `Delete` toolbar button will call the `RemoveAsync` method of our `BugDataAdaptor` to update the record in the `Bug` table.
 
-> Please find the sample from this [Github](https://github.com/SyncfusionExamples/blazor-datagrid-dapper-crud) location.
+> Find the sample from this [Github](https://github.com/SyncfusionExamples/blazor-datagrid-dapper-crud) location.
     
 ## See also
     

@@ -428,7 +428,7 @@ Gantt Chart has an option to define columns as an array. You can customize the G
 {% endhighlight %}
 {% endtabs %}
 
-For further details regarding Columns, Please refer [here](https://blazor.syncfusion.com/documentation/gantt-chart/columns/)
+For further details regarding Columns, refer [here](https://blazor.syncfusion.com/documentation/gantt-chart/columns/).
 
 ## Enable editing
 
