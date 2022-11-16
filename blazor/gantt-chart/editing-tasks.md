@@ -79,7 +79,7 @@ double click action on chart side
 
 ## Cell Edit Template
 
-The cell [edit template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_EditTemplate) is used to add custom component for a particular column when the column is edited. In the below sample, we have rendered [SfDropDownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) component for TaskName column and [SfMultiSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html) component for Assignee column.
+The cell [edit template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_EditTemplate) is used to add a custom component for a particular column when the column is edited. In the following code example, the [SfDropDownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) component is rendered for the TaskName column and the [SfMultiSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html) component for the Assignee column.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
