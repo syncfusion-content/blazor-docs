@@ -11,7 +11,7 @@ documentation: ug
 
 The [Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs) component supports custom animations for both previous and next actions from the provided animation option of `Animation` library. The animation property also allows to set `Easing`, `Duration` and various other effects.
 
-Default animation is given as `SlideLeftIn` for previous tab animation and `SlideRightIn` for next tab animation. Disable the animation by setting the animation `Effect` as `None`. Also, please use the following CSS to disable indicator animation for animation `Effect` as `None`.
+Default animation is given as `SlideLeftIn` for previous tab animation and `SlideRightIn` for next tab animation. Disable the animation by setting the animation `Effect` as `None`. Also, use the following CSS to disable indicator animation for animation `Effect` as `None`.
 
 ```CSS
 

@@ -121,7 +121,7 @@ The value sorting can also be configured using the [PivotViewValueSortSettings](
 * [HeaderDelimiter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValueSortSettings.html#Syncfusion_Blazor_PivotView_PivotViewValueSortSettings_HeaderDelimiter): It allows to set the delimiters string to separate the header text between levels.
 * [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValueSortSettings.html#Syncfusion_Blazor_PivotView_PivotViewValueSortSettings_SortOrder): It allows to set the sort direction of the value field.
 
-> Value fields are set to the column axis by default. In such cases, the value sorting applied will have an effect on the column alone. You need to place the value fields in the row axis to do so in row wise. For more information, please [refer here](https://blazor.syncfusion.com/documentation/pivot-table/data-binding/#values-in-row-axis).
+> Value fields are set to the column axis by default. In such cases, the value sorting applied will have an effect on the column alone. You need to place the value fields in the row axis to do so in row wise. For more information, [refer here](https://blazor.syncfusion.com/documentation/pivot-table/data-binding/#values-in-row-axis).
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
