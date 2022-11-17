@@ -391,5 +391,5 @@ namespace AudioUpload.Controllers
 
 ## See also
 
-* [How to edit the quick toolbar settings](./toolbar.md/#Audio-quick-toolbar)
+* [How to edit the quick toolbar settings](./toolbar/#Audio-quick-toolbar)
 * [How to use link editing option in the toolbar items](./tools/###-Insert-link)
