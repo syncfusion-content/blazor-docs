@@ -1110,7 +1110,7 @@ In the following demo, **Work 1**  cells have been spanned.
 
 ## Displaying the HTML element
 
-The HTML tags can be displayed in the Tree Grid header and content by enabling the [DisableHTMLEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_DisableHtmlEncode) property.
+The HTML tags are displayed in the Tree Grid header and content by enabling the [DisableHTMLEncode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_DisableHtmlEncode) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -1164,17 +1164,17 @@ The HTML tags can be displayed in the Tree Grid header and content by enabling t
 
 ## Customize cell styles
 
-The appearance of cells can be customized by using the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_QueryCellInfo). For more information refer [here](https://blazor.syncfusion.com/documentation/gantt-chart/appearance-and-customization#customize-rows-and-cells).
+The appearance of cells is customized by using the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_QueryCellInfo). For more information, refer [here](https://blazor.syncfusion.com/documentation/gantt-chart/appearance-and-customization#customize-rows-and-cells).
 
 ## Clip mode
 
-The clip mode provides options to display its overflow cell content and it can be defined by the [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ClipMode) property.
+The clip mode provides options to display its overflow cell content, and the [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ClipMode) property defines it.
 
 There are three types of [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ClipMode.html). They are:
 
-* **Clip**: Truncates the cell content when it overflows its area.
+* **Clip**: Reduces the cell content when it overflows its area.
 * **Ellipsis**: Displays ellipsis when the cell content overflows its area.
-* **EllipsisWithTooltip**: Displays ellipsis when the cell content overflows its area, also it will display the tooltip while hover on ellipsis is applied.
+* **EllipsisWithTooltip**: Displays ellipsis when the cell content overflows its area. Also it will display the tooltip while hovering on ellipsis is applied.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -1229,4 +1229,4 @@ There are three types of [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ![Clip Mode in Blazor Gantt Chart](images/blazor-gantt-chart-clip-mode.png)
 
-> By default, [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ClipMode) value is **Ellipsis**.
+> By default, the [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_ClipMode) value is **Ellipsis**.

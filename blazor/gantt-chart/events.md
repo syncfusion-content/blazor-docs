@@ -2261,7 +2261,7 @@ using Syncfusion.Blazor.Gantt
 
 ## OnTaskbarEditing
 
-[OnTaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_TaskbarEditing) event triggers when begining of taskbar editing actions such as taskbar resize, move.
+The [OnTaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_TaskbarEditing) event triggers when beginning the taskbar editing actions such as taskbar resize, and more.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -2310,4 +2310,4 @@ using Syncfusion.Blazor.Gantt
 }
 ```
 
-You can prevent the taskbar from editing using TaskbarEditing event. For more information refer [here](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#prevent-editing-for-specific-tasks).
+Prevent the taskbar from editing using TaskbarEditing event. For more information, refer [here](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#prevent-editing-for-specific-tasks).
