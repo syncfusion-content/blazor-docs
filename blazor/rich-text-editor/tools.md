@@ -312,7 +312,7 @@ Remove the build-in tools from the toolbar by using the [RichTextEditorToolbarSe
 
 By default, the editor is initialized with the default items of the font family. To change it, select a different font family from the drop-down menu in the editor’s toolbar.
 
-To apply a different font style to a section of the content, select the text that you would like to change and select a required font style from the drop-down to apply the changes to the selected text.
+To apply a different font style to a section of the content, select the text you would like to change and select a required font style from the drop-down to apply the changes to the selected text.
 
 ### Buil-in font family
 
@@ -489,7 +489,7 @@ To apply the font color or background color for a selected content of RTE, use t
 
 The Rich Text Editor supports providing custom font color and background color with an existing list through the [ColorCode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ColorItemBase.html#Syncfusion_Blazor_RichTextEditor_ColorItemBase_ColorCode) field of the [RichTextEditorFontColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontColor.html) and [RichTextEditorBackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBackgroundColor.html).
 
-The `RichTextEditorFontColor` and `RichTextEditorBackgroundColor` tag has two mode of `Picker` and `Palette`. The `Palette` mode has a predefined set of the `ColorCode`, and in the `Picker` mode, more colors have been provided. Through the `ModeSwitcher`, switch between these two options.
+The `RichTextEditorFontColor` and `RichTextEditorBackgroundColor` tag has two modes of `Picker` and `Palette`. The `Palette` mode has a predefined set of the `ColorCode`, and in the `Picker` mode, more colors have been provided. Through the `ModeSwitcher`, switch between these two options.
 
 {% tabs %}
 {% highlight razor %}
@@ -832,9 +832,8 @@ The selected image can be uploaded to the required destination using the control
 {% endhighlight %}
 {% endtabs %}
 
-`ImageController.cs`
-
-```csharp
+{% tabs %}
+{% highlight cshtml tabtitle="ImageController.cs" %}
 
 using System;
 using System.IO;
@@ -906,7 +905,9 @@ namespace ImageUpload.Controllers
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
+
 ![Blazor RichTextEditor with image](./images/blazor-richtexteditor-with-image.png)
 
 #### Save image in application path
@@ -925,67 +926,69 @@ Using the [RichTextEditorImageSettings.Path](https://help.syncfusion.com/cr/blaz
 {% endhighlight %}
 {% endtabs %}
 
-`ImageController.cs`
+{% tabs %}
+{% highlight cshtml tabtitle="ImageController.cs" %}
 
-```csharp
-
-public class ImageController : ControllerBase 
+  public class ImageController : ControllerBase 
     { 
-        private readonly IWebHostEnvironment hostingEnv; 
- 
-        public ImageController(IWebHostEnvironment env) 
-        { 
-            this.hostingEnv = env; 
-        } 
- 
-        [HttpPost("[action]")] 
-        [Route("api/Image/Save")] 
-        public void Save(IList<IFormFile> UploadFiles) 
-        { 
-            try 
-            { 
-                foreach (var file in UploadFiles) 
-                { 
-                    if (UploadFiles != null) 
-                    { 
-                        string targetPath = hostingEnv.ContentRootPath + \\wwwroot\\mnt\\momfiles\\WEB\\NoticeBoard\\Image; 
-                        string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"'); 
- 
-                        // Create a new directory, if it does not exists 
-                        if (!Directory.Exists(targetPath)) 
-                        { 
-                            Directory.CreateDirectory(targetPath); 
-                        } 
- 
-                        // Name which is used to save the image 
-                        filename = targetPath + $@"\{filename}"; 
- 
-                        if (!System.IO.File.Exists(filename)) 
-                        { 
-                            // Upload a image, if the same file name does not exist in the directory 
-                            using (FileStream fs = System.IO.File.Create(filename)) 
-                            { 
-                                file.CopyTo(fs); 
-                                fs.Flush(); 
-                            } 
-                            Response.StatusCode = 200; 
-                        } 
-                        else 
-                        { 
-                            Response.StatusCode = 204; 
-                        } 
-                    } 
-                } 
-            } 
-            catch (Exception e) 
-            { 
-                Response.Clear(); 
-                Response.ContentType = "application/json; charset=utf-8"; 
-                Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message; 
-            } 
-        } 
-    } 
-```
+      private readonly IWebHostEnvironment hostingEnv; 
+
+      public ImageController(IWebHostEnvironment env) 
+      { 
+          this.hostingEnv = env; 
+      } 
+
+      [HttpPost("[action]")] 
+      [Route("api/Image/Save")] 
+      public void Save(IList<IFormFile> UploadFiles) 
+      { 
+          try 
+          { 
+              foreach (var file in UploadFiles) 
+              { 
+                  if (UploadFiles != null) 
+                  { 
+                      string targetPath = hostingEnv.ContentRootPath + \\wwwroot\\mnt\\momfiles\\WEB\\NoticeBoard\\Image; 
+                      string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"'); 
+
+                      // Create a new directory, if it does not exists 
+                      if (!Directory.Exists(targetPath)) 
+                      { 
+                          Directory.CreateDirectory(targetPath); 
+                      } 
+
+                      // Name which is used to save the image 
+                      filename = targetPath + $@"\{filename}"; 
+
+                      if (!System.IO.File.Exists(filename)) 
+                      { 
+                          // Upload a image, if the same file name does not exist in the directory 
+                          using (FileStream fs = System.IO.File.Create(filename)) 
+                          { 
+                              file.CopyTo(fs); 
+                              fs.Flush(); 
+                          } 
+                          Response.StatusCode = 200; 
+                      } 
+                      else 
+                      { 
+                          Response.StatusCode = 204; 
+                      } 
+                  } 
+              } 
+          } 
+          catch (Exception e) 
+          { 
+              Response.Clear(); 
+              Response.ContentType = "application/json; charset=utf-8"; 
+              Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message; 
+          } 
+      } 
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
 #### Image save format
 
 By default, the Rich Text Editor inserts the images in [Blob](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SaveFormat.html#Syncfusion_Blazor_RichTextEditor_SaveFormat_Blob) format, but you can also change the save format by setting the [RichTextEditorImageSettings.SaveFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_SaveFormat) property as `SaveFormat.Base64`.
@@ -1094,7 +1097,8 @@ By using the `RichTextEditorImageSettings` property, the server handler can be s
 
 To configure the server-side handler in the Web API service, refer the below code.
 
-```csharp
+{% tabs %}
+{% highlight cshtml tabtitle="ImageController.cs" %}
 
 using System;
 using System.IO;
@@ -1176,7 +1180,8 @@ namespace RenameImage.Controllers
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Link Manipulation
 
@@ -1193,7 +1198,7 @@ Point the cursor anywhere within the editor where you want to insert the link. I
 | Web Address | Types or pastes the destination for the link you are creating |
 | Display Text | Types or edits the required text that you want to display text for the link |
 | Tooltip | Displays additional helpful information when you place the pointer on the hyperlink, type the required text in the `Tooltip` field. |
-| Open | Specifies whether the given link will open in new window or not |
+| Open Link | Specifies whether the given link will open in new window or not |
 
 > The Rich Text Editor link tool validates the URLs as you type them in the web address. URLs considered invalid will be highlighted with a red color by clicking the insert button in the [Insert Link](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_ToolbarCommand_CreateLink) dialog.
 
