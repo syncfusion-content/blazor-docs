@@ -183,7 +183,7 @@ To remove audio from the Rich Text Editor content, select the audio and click th
 
 Once you select the audio from the local machine, the URL for the audio will be generated. You can remove the audio from the service location by clicking the cross icon.
 
-![Blazor RIchTextEditor remove audio](./images/blazor-richtexteditor-audio-remove.png)
+![Blazor RichTextEditor remove audio](./images/blazor-richtexteditor-audio-remove.png)
 
 ## Display Position
 
