@@ -1193,7 +1193,7 @@ Point the cursor anywhere within the editor where you want to insert the link. I
 | Web Address | Types or pastes the destination for the link you are creating |
 | Display Text | Types or edits the required text that you want to display text for the link |
 | Tooltip | Displays additional helpful information when you place the pointer on the hyperlink, type the required text in the `Tooltip` field. |
-| Open | Specifies whether the given link will open in new window or not |
+| Open Link | Specifies whether the given link will open in new window or not |
 
 > The Rich Text Editor link tool validates the URLs as you type them in the web address. URLs considered invalid will be highlighted with a red color by clicking the insert button in the [Insert Link](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarCommand.html#Syncfusion_Blazor_RichTextEditor_ToolbarCommand_CreateLink) dialog.
 
