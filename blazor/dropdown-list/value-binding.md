@@ -145,8 +145,9 @@ First, you need to create a `DropDownList.razor` file in the `/Pages` folder as 
     [Parameter]
     public EventCallback<TValue> DDLValueChanged { get; set; }
 }
-{% endtabs %}
+
 {% endhighlight razor %}
+{% endtabs %}
 
 ### Usage of generic component with different type
 
@@ -182,8 +183,9 @@ Here, we have rendered the DropDownList component with TValue as string type in 
         new Games() { ID= "Game10", Text= "Tennis"},
     };
 }
-{% endtabs %}
+
 {% endhighlight razor %}
+{% endtabs %}
 
 **[Counter.razor]**
 
@@ -212,5 +214,6 @@ Here, we have rendered the DropDownList component with TValue as string type in 
         new Games() { ID= 10, Text= "Tennis"},
     };
 }
-{% endtabs %}
+
 {% endhighlight razor %}
+{% endtabs %}
