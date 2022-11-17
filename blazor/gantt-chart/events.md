@@ -2259,7 +2259,7 @@ using Syncfusion.Blazor.Gantt
 
 ## OnTaskbarEditing
 
-The [OnTaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_TaskbarEditing) event triggers when beginning the taskbar editing actions such as taskbar resize, and more.
+The [OnTaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_TaskbarEditing) event triggers when beginning the taskbar editing actions such as taskbar resize, and drag.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
