@@ -19,4 +19,4 @@ DropDownList component inside Edit form with required field validation is mentio
 
 {% endhighlight %}
 
-![Blazor DropdownList inside editform](./images/form-validation/blazor_dropodwn_with-editform.png)
+![Blazor DropdownList inside editform](./images/form-validation/blazor_dropodown_with-editform.png)

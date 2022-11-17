@@ -128,9 +128,9 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 ### Complex data type
 
-#### Customizing TItem using Action keyword
+#### Customizing TItem using action keyword
 
-In the below code snippet, using Action keyword in TItem of the dropdown list
+In the following code snippet, action keyword is using in the TItem of the dropdown list.
 
 {% highlight cshtml %}
 
@@ -139,3 +139,32 @@ In the below code snippet, using Action keyword in TItem of the dropdown list
 {% endhighlight %}
 
 ![Blazor DropdownList with Complex data type of Customizing TItem](./images/data-binding/blazor_dropdown_customize-TItem.png)
+
+#### Injectable datasource on OnInitialized
+
+The following code demonstratesto fetch the datasource from the service in the [OnInitialized]([OnInitializedAsync](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-6.0#component-initialization-oninitializedasync)) lifecycle method.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/data-binding/injectable-datasource.razor %}
+
+{% endhighlight %}
+
+{% tabs %}
+{% highlight razor tabtitle="OwnService.cs" %}
+
+    public class CountryService
+    {
+        public async Task<List<string>> GetDataAsync() {
+            List<string> Values = new List<string> { "item1", "item2", "item3" };
+
+            return await Task.FromResult(Values);
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor DropdownList with Complex data type of Customizing TItem](./images/data-binding/blazor_dropdown_injectable-datasource.png)
+
+

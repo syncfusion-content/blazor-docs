@@ -1,7 +1,7 @@
 
 ## Dropdown List with int type
 
-You can use DropDownListFieldSettings with int type by using TValue property.
+You can use DropDownListFieldSettings with TValue as int type demonstrated in the following code.
 
 {% highlight cshtml %}
 

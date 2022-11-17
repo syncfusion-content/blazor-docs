@@ -107,3 +107,15 @@ The DropDownList component filter queries can be customized. You can also use yo
     }
 }
 ```
+
+## Filtering using both code and name in popup
+
+In the below sample both the code and name are concatenated and filtering is done by both code and name.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/filtering/filtering-using-code-and-name.razor %}
+
+{% endhighlight %}
+
+![Blazor DropdownList with Remote Data filtering](./images/filtering/blazor_dropdown_filter-using-code-name.png)

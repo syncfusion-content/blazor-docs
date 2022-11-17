@@ -162,3 +162,44 @@ You can achieve adding attributes to the li items based on datasource value with
 ## Show Tooltip
 
 The OnAfterRenderAsync method will called every time the popup gets opened. In open event use the Global variable isOpen and set as false. In all the open event update the variable isOpen as true. So, while click on any of the Dropdownlist component, the OnAfterRenderAsync method will be triggered and refresh the tooltip in order to get the specific target element.
+
+### Tooltip using HTMLAttribute in dropdown component
+
+TO display the  tooltip in dropdown component, you need to add the title attribute through HtmlAttributes property, which update the attribute to the root element “input”
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/default-tooltip.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with tooltip](./images/style/blazor_dropdown_default-tooltip.png)
+
+## Disabled component
+
+Tabindex is not present in disable component or focus is not added when tabindex as -1.
+
+## Displaying dropdown List in Tab
+
+You can achieve this by rendering the dropdown list inside the SfTab
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/dropdown-in-tabview.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with tooltip](./images/style/blazor_dropdown-in-tabview.png)
+
+## Dropdownlist inside Dialog
+
+You can achieve this by rendering dropdownlist inside the SfDialog
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/dropdown-inside-dialog.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with tooltip](./images/style/blazor_dropdown_inside-dialog.gif)
+

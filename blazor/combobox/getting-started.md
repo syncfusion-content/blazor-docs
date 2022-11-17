@@ -347,53 +347,6 @@ By default, the width of the popup list automatically adjusts according to the C
 
 ![Customizing Popup Height and Width in Blazor ComboBox](./images/blazor-combobox-popup-customization.png)
 
-
-## Text with firstName and LastName
-
-Text concatenate with firstName and LastName can be achieved by define the new variable and pass the value with desired format with help of get and set method. 
-
-{% tabs %}
-{% highlight razor %}
-
-<SfComboBox TValue="string" TItem="GameFields" PopupHeight="230px" Placeholder="Select a game" DataSource="@Games">
-    <ComboBoxFieldSettings Text="Name" Value="ID"></ComboBoxFieldSettings>
-</SfComboBox>
-
-@code {
-    public class GameFields
-    {
-        public string ID { get; set; }
-        public string FirstName  { get; set; }
-        public string LastName  { get; set; }
-
-
-        public string _Name;
-        public string  Name
-        {
-            get
-            {
-                _Name = $"{FirstName} {LastName}";
-                return _Name;
-            }
-            set
-            {
-                _Name = value;
-            }
-        }
-    }
-    private List<GameFields> Games = new List<GameFields>() {
-        new GameFields(){ ID= "Game1", LastName= "Olsen", FirstName="Hans" },
-        new GameFields(){ ID= "Game2", LastName= "Fuller", FirstName="Andrew" },
-        new GameFields(){ ID= "Game3", LastName= "Bond", FirstName="James" },
-     };
-
-} 
-
-{% endhighlight %}
-{% endtabs %}
-
-![Text with firstName and lastName](./images/blazor_combobox_firstname-lastname.png)
-
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ComboBox).
 
 ## See Also

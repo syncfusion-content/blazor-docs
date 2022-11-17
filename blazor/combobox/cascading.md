@@ -7,11 +7,11 @@ control: DropDown List
 documentation: ug
 ---
 
-# Cascading in  Dropdown List
+# Cascading in  ComboBox
 
-The Cascading DropDownList is the series of DropDownList, where the value of one DropDownList depends on another DropDownList value. 
+The Cascading ComboBox is the series of ComboBox, where the value of one ComboBox depends on another ComboBox value. 
 
-In the [`ValueChange`]() event handler of first DropDownList, you should load the data for the second DropDownList based on the selected value of first DropDownList. The same has to be configured between second and third DropDownLists.
+In the [`ValueChange`](https://blazor.syncfusion.com/documentation/combobox/events#valuechange) event handler of first ComboBox, you should load the data for the second ComboBox based on the selected value of first ComboBox. The same has to be configured between second and third ComboBox.
 
 In this sample, if a country is selected from countries DropDownList, the respective states are loaded in the second DropDownList and in the same way states and cities DropDownList works.
 
@@ -25,7 +25,7 @@ In this sample, if a country is selected from countries DropDownList, the respec
 
 ## Cascading with filtering 
 
-The Cascading ComboBox is the series of ComboBox, where the value of one ComboBox depends on the another ComboBox value. In the [ValueChange](https://blazor.syncfusion.com/documentation/combobox/events#valuechange) event handler of 1st ComboBox, should load the data for the 2nd ComboBox based on the selected value of 1st ComboBox. The same has to be configured between 2nd and 3rd ComboBoxes.In the below code, if a country is chosen, then corresponding states for the chosen county is loaded in the next combobox with the support of TValue as int.
+In this sample, if a country is selected from countries DropDownList, the respective StateID, CountryID and Capital are loaded in the below textbox.
 
 {% highlight cshtml %}
 

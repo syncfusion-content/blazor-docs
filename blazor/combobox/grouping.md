@@ -56,3 +56,15 @@ In the following sample, vegetables are grouped by category using the `GroupBy` 
 
 
 ![Grouping in Blazor ComboBox](./images/blazor-combobox-grouping.png)
+
+## Text with firstName and LastName
+
+Text concatenate with firstName and LastName can be achieved by define the new variable and pass the value with desired format with help of get and set method. 
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/grouping/text-with-first-and-last-name.razor %}
+
+{% endhighlight %}
+
+![Text with firstName and lastName](./images/grouping/blazor_combobox_firstname-lastname.png)
