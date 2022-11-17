@@ -71,6 +71,8 @@ State persistence allows the Gantt chart to retain the current Gantt state in th
 }
 ```
 
+> No data stored in local storage when `EnablePersistance` is disabled.
+
 ## Handling gantt state manually
 
 You can manually handle the Gantt chart’s state by using built-in state persistence methods. You can use `GetPersistDataAsync`, `SetPersistDataAsync`, and `ResetPersistDataAsync` methods of the Gantt chart to save, load, and reset the Gantt chart's persisted state, respectively.
