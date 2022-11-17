@@ -2257,4 +2257,59 @@ using Syncfusion.Blazor.Gantt
 }
 ```
 
-> We are not going to limit Gantt Chart with these events, we will be adding new events in the future based on the user requests. If the event, you are looking for is not on the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
+## OnTaskbarEditing
+
+The [OnTaskbarEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_TaskbarEditing) event triggers when beginning the taskbar editing actions such as taskbar resize, and drag.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+<SfGantt DataSource="@TaskCollection" Height="350px" Width="700px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId" Dependency="Predecessor">
+    </GanttTaskFields>
+    <GanttEditSettings AllowTaskbarEditing="true"></GanttEditSettings>
+    <GanttEvents TaskbarEditing="TaskbarBeginEditHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+@code{
+    private void TaskbarBeginEditHandler(TaskbarEditingEventArgs<TaskData> args)
+    {
+         //Here, you can customize your code.
+    }
+    private List<TaskData> TaskCollection { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public string Predecessor { get; set; }
+        public int? ParentId { get; set; }
+    }
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2019, 04, 05), EndDate = new DateTime(2019, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2019, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2019, 04, 05), Duration = "4", Progress = 40, Predecessor = "2", ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2019, 04, 05), Duration = "0", Progress = 30, Predecessor = "3", ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2019, 04, 06), EndDate = new DateTime(2019, 04, 21), Predecessor = "1FS", },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 04, 06), Duration = "3", Progress = 30, Predecessor = "4" , ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2019, 04, 06), Duration = "3", Progress = 40, Predecessor = "6" , ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2019, 04, 06), Duration = "0", Progress = 30, Predecessor = "7" , ParentId = 5 },
+        };
+        return Tasks;
+    }
+}
+```
+
+Prevent the taskbar from editing using TaskbarEditing event. For more information, refer [here](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#prevent-editing-for-specific-tasks).
+
+
+> We are not going to limit Gantt Chart with these events, we will be adding new events in the future based on the user requests. If the event, you are looking for is not on the list, then please request  [here](https://www.syncfusion.com/feedback/blazor-components).
+
