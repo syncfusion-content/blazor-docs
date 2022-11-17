@@ -17,10 +17,10 @@ The toolbar of the Rich Text Editor has been assigned the role of toolbar and ha
 
 | **Roles and Attributes** | **Functionalities** |
 | --- | --- |
-| role="toolbar" | This attribute added to the toolbar element describes the actual role of the element. |
-| aria-orientation | Indicates the toolbar orientation. The default value is horizontal. |
-| aria-haspopup | Indicates the popup mode of the toolbar. The default value is false. When popup mode is enabled, the attribute value has to be changed to true. |
-| aria-disabled | Indicates the disabled state of the toolbar. |
+| `role="toolbar"` | This attribute added to the toolbar element describes the actual role of the element. |
+| `aria-orientation` | Indicates the toolbar orientation. The default value is horizontal. |
+| `aria-haspopup` | Indicates the popup mode of the toolbar. The default value is false. When popup mode is enabled, the attribute value has to be changed to true. |
+| `aria-disabled` | Indicates the disabled state of the toolbar. |
 
 For further details of toolbar ARIA attributes, refer to the accessibility of [Toolbar](../toolbar/accessibility) documentation.
 
@@ -28,8 +28,8 @@ The Rich Text Editor element is assigned the role of application.
 
 | **Roles and Attributes** | **Functionalities** |
 | --- | --- |
-| role="application" | This attribute added to the editor element describes the actual role of the element. |
-| aria-disabled | Indicates the disabled state of the editor. |
+| `role="application"` | This attribute added to the editor element describes the actual role of the element. |
+| `aria-disabled` | Indicates the disabled state of the editor. |
 
 {% tabs %}
 {% highlight cshtml %}
@@ -120,7 +120,7 @@ You can use the following key shortcuts when the Rich Text Editor renders with `
 
 ### Custom key configuration
 
-Customize the key configuration for the keyboard interaction of Rich Text Editor using the [KeyConfigure] (https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_KeyConfigure) property.
+Customize the key configuration for the keyboard interaction of Rich Text Editor using the [KeyConfigure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_KeyConfigure) property.
 
 In the following code block, customize the bold and italic, toolbar actions with **ctrl+1**, **ctrl+2** respectively.
 

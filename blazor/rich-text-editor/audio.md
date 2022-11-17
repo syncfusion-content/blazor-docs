@@ -17,7 +17,6 @@ The Rich Text Editor allows inserting audio files from online sources and the lo
 | [LayoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_LayoutOption) | Sets the default display for audio when it is inserted into the Rich Text Editor. Possible options are: `Inline` and `Break`.|
 | [SaveFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_SaveFormat) | Sets the default save format of the audio element when inserted. Possible options are: `Blob` and `Base64`.|
 | [SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_SaveUrl) | Provides URL to map the action result method to save the audio.|
-| RemoveUrl | Provides URL to map the action result method to remove the audio.|
 | [Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_Path) | Specifies the location to store the audio.|
 
 ## Configure audio tool in the toolbar
@@ -78,9 +77,8 @@ The selected audio can be uploaded to the required destination using the control
 {% endhighlight %}
 {% endtabs %}
 
-`controller.cs`
-
-```cshtml
+{% tabs %}
+{% highlight cshtml tabtitle="controller.cs" %}
 
 using System;
 using System.IO;
@@ -90,19 +88,16 @@ using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http.Features;
-
 namespace AudioUpload.Controllers
 {
     [ApiController]
     public class AudioController : ControllerBase
     {
         private readonly IWebHostEnvironment hostingEnv;
-
         public AudioController(IWebHostEnvironment env)
         {
             this.hostingEnv = env;
         }
-
         [HttpPost("[action]")]
         [Route("api/Audio/Save")]
         public void Save(IList<IFormFile> UploadFiles)
@@ -115,7 +110,6 @@ namespace AudioUpload.Controllers
                     {
                         string targetPath = hostingEnv.ContentRootPath + "\\wwwroot\\Audio";
                         string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
-
                         // Create a new directory, if it does not exists
                         if (!Directory.Exists(targetPath))
                         {
@@ -124,7 +118,6 @@ namespace AudioUpload.Controllers
 
                         // Name which is used to save the audio
                         filename = targetPath + $@"\{filename}";
-
                         if (!System.IO.File.Exists(filename))
                         {
                             // Upload a audio, if the same file name does not exist in the directory
@@ -152,7 +145,8 @@ namespace AudioUpload.Controllers
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Audio save format
 
@@ -211,9 +205,8 @@ Refer `rename.cs` controller file for configure the server-side.
 {% endhighlight %}
 {% endtabs %}
 
-`rename.cs`
-
-```cshtml
+{% tabs %}
+{% highlight cshtml tabtitle="rename.cs" %}
 
 using System;
 using System.IO;
@@ -295,7 +288,8 @@ namespace RenameAudio.Controllers
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Upload audio with authentication
 
@@ -311,9 +305,8 @@ The Rich Text Editor control allows you to add additional data with the File Upl
 {% endhighlight %}
 {% endtabs %}
 
-`controller.cs`
-
-```cshtml
+{% tabs %}
+{% highlight cshtml tabtitle="controller.cs" %}
 
 using System;
 using System.IO;
@@ -386,8 +379,8 @@ namespace AudioUpload.Controllers
     }
 }
 
-
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## See also
 
