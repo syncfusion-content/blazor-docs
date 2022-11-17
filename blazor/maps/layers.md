@@ -71,9 +71,9 @@ Multiple shape files and map providers can be loaded simultaneously in Maps. The
 
 Custom shapes (also known as custom maps) can be rendered in Maps to represent bus seat booking, cricket stadium, basic home plan/sketch, and so on. To accomplish this, a JSON file in GeoJSON format with proper geometries must be created manually or with the assistance of any online map vendor. The GeoJSON file created must be set to the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) in the Maps layer, and the [GeometryType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_GeometryType) must be set as **GeometryType.Normal**.
 
-Please refer this [link](https://cdn.syncfusion.com/maps/map-data/seat.json) for an example GeoJSON file containing information about bus seat selection.
+Refer this [link](https://cdn.syncfusion.com/maps/map-data/seat.json) for an example GeoJSON file containing information about bus seat selection.
 
-Please refer this [link](https://blazor.syncfusion.com/demos/maps/bus-seat-selection?theme=bootstrap5) for more information and a live demonstration.
+Refer this [link](https://blazor.syncfusion.com/demos/maps/bus-seat-selection?theme=bootstrap5) for more information and a live demonstration.
 
 ## See also
 

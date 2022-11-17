@@ -11,11 +11,11 @@ documentation: ug
 
 The Scheduler renders events based on current system time zone of server in server side application and in WASM application the events are rendered based on UTC timezone by default.
 
-* You can change the timezone of the scheduler by setting [Timezone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_Timezone) property. For more information, please refer to the [section](#display-appointments-based-on-Scheduler-time-zone).
+* You can change the timezone of the scheduler by setting [Timezone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_Timezone) property. For more information, refer to the [section](#display-appointments-based-on-Scheduler-time-zone).
 
-* You can also set timezone for each appointment (events) through [StartTimezone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldStartTimezone.html) and [EndTimezone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldEndTimezone.html) properties which can be defined as separate fields within the event fields collection. For more information, please refer to the [section](#create-appointments-in-different-time-zones).
+* You can also set timezone for each appointment (events) through [StartTimezone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldStartTimezone.html) and [EndTimezone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldEndTimezone.html) properties which can be defined as separate fields within the event fields collection. For more information, refer to the [section](#create-appointments-in-different-time-zones).
 
-* You can also set the timezone for both the scheduler `Timezone` property and as well as the event's `StartTimezone` and `EndTimezone` properties. For more information, please refer to the [section](#display-appointments-based-on-client’s-time-zone).
+* You can also set the timezone for both the scheduler `Timezone` property and as well as the event's `StartTimezone` and `EndTimezone` properties. For more information, refer to the [section](#display-appointments-based-on-client’s-time-zone).
 
 
 >**NOTE**

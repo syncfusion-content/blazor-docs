@@ -63,7 +63,7 @@ Gantt Chart component contains two tier layout in timeline, you can customize th
 
 ## Combining timeline cells
 
-In Gantt Chart, timeline cells in top tier and bottom tier can be combined with number of timeline units, this can be achieved by using `GanttTopTierSettings.Count` and `GanttBottomTierSettings.Count` properties. Please refer the following sample.
+In Gantt Chart, timeline cells in top tier and bottom tier can be combined with number of timeline units, this can be achieved by using `GanttTopTierSettings.Count` and `GanttBottomTierSettings.Count` properties. Refer the following sample.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt

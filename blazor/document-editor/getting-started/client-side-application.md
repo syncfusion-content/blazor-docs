@@ -123,7 +123,7 @@ Refer script in the `<head>` of the **~/index.html** file.
 {% endhighlight %}
 {% endtabs %}
 
-In the above example code, we have referred the script which is specific to Document Editor component. If you want to use Document Editor along the other Syncfusion Blazor component like Grid, RTE etc. Please refer below topic
+In the above example code, we have referred the script which is specific to Document Editor component. If you want to use Document Editor along the other Syncfusion Blazor component like Grid, RTE etc. Refer below topic,
 
 * [Adding script reference](https://blazor.syncfusion.com/documentation/common/adding-script-references)
 * [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)

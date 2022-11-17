@@ -9,7 +9,7 @@ documentation: ug
 
 # Create a Custom Component with Tooltip Validation Using Blazor TextBox
 
-Custom component allows to reuse the defined components in a razor page anywhere in the application by using the file name of the razor page as HTML tag. For more information please refer [here](https://www.syncfusion.com/faq/blazor/components/how-do-i-create-a-custom-component)
+Custom component allows to reuse the defined components in a razor page anywhere in the application by using the file name of the razor page as HTML tag. For more information refer [here](https://www.syncfusion.com/faq/blazor/components/how-do-i-create-a-custom-component)
 
 ## Defining Blazor TextBox component
 
@@ -27,7 +27,7 @@ T> In the above code, the properties and events are added to the razor page, and
 
 ## Adding the custom TextBox component in the EditForm
 
-The EditForm with the bound model is declared on the main razor page. Inside the EditForm, the `DataAnnotationsValidator` and `CustomTextBox` with wrapped `SfTooltip` component are added. The DataAnnotationsValidator is added to enable form validation based on validation attributes declared in the model. The CustomTextBox component is then bound with the "Text" property from the model and the "Text" property contains DataAnnotations attributes used for validation. To learn more about `SfTooltip` component please refer [here](https://blazor.syncfusion.com/documentation/tooltip/getting-started) 
+The EditForm with the bound model is declared on the main razor page. Inside the EditForm, the `DataAnnotationsValidator` and `CustomTextBox` with wrapped `SfTooltip` component are added. The DataAnnotationsValidator is added to enable form validation based on validation attributes declared in the model. The CustomTextBox component is then bound with the "Text" property from the model and the "Text" property contains DataAnnotations attributes used for validation. To learn more about `SfTooltip` component refer [here](https://blazor.syncfusion.com/documentation/tooltip/getting-started) 
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

@@ -101,7 +101,7 @@ In previous steps, Syncfusion Blazor DataGrid package is successfully configured
 
 ## Binding SQL data to the Blazor DataGrid Component
 
-Now, get the SQL data from the SQL server and bind it to the DataGrid component as a datasource by using the Custom adaptor feature. The Custom Adaptor can be created as a [Component](https://blazor.syncfusion.com/documentation/datagrid/custom-binding/#custom-adaptor-as-component). Please refer the [Grid Custom Binding](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) and [Custom adaptor as component](https://blazor.syncfusion.com/documentation/datagrid/custom-binding/#custom-adaptor-as-component) documentation for more details on the Custom adaptor.
+Now, get the SQL data from the SQL server and bind it to the DataGrid component as a datasource by using the Custom adaptor feature. The Custom Adaptor can be created as a [Component](https://blazor.syncfusion.com/documentation/datagrid/custom-binding/#custom-adaptor-as-component). Refer the [Grid Custom Binding](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) and [Custom adaptor as component](https://blazor.syncfusion.com/documentation/datagrid/custom-binding/#custom-adaptor-as-component) documentation for more details on the Custom adaptor.
 
 Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns) component. Create columns using the following code. The properties used and their usage are discussed below.
 
@@ -227,7 +227,7 @@ While running the application, the grid will be displayed as follows.
 
 ## Handling CRUD operations with our Syncfusion Blazor DataGrid component
 
-Enable editing in the grid component using the [GridEditSettings](https://blazor.syncfusion.com/documentation/datagrid/editing) component. Grid provides various modes of editing options such as Inline/Normal, Dialog and Batch editing. Kindly refer the [Grid Editing](https://blazor.syncfusion.com/documentation/datagrid/editing/#editing) documentation for reference.
+Enable editing in the grid component using the [GridEditSettings](https://blazor.syncfusion.com/documentation/datagrid/editing) component. Grid provides various modes of editing options such as Inline/Normal, Dialog and Batch editing. Refer the [Grid Editing](https://blazor.syncfusion.com/documentation/datagrid/editing/#editing) documentation for reference.
 
 Here, inline edit mode and [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar) property are used to show toolbar items for editing.
 

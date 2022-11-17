@@ -9,7 +9,7 @@ documentation: ug
 
 # Inline Editor in Blazor RichTextEditor
 
-The Rich Text Editor provides an option to display a toolbar on demand by enabling the property of [RichTextEditorInlineMode.Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorInlineMode.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorInlineMode_Enable). When the editable text is focused or selected the inline floating toolbar appears, and also inline toolbar item can be customized by setting [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property.
+The Rich Text Editor provides an option to display a toolbar on demand by enabling the property of [RichTextEditorInlineMode.Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorInlineMode.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorInlineMode_Enable). When the editable text is focused or selected the inline floating toolbar appears. The commands displayed in inline toolbar can be customized by setting [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property.
 
 {% tabs %}
 {% highlight razor %}
@@ -19,7 +19,7 @@ The Rich Text Editor provides an option to display a toolbar on demand by enabli
 {% endhighlight %}
 {% endtabs %}
 
-![Enabling inline mode in Blazor RichTextEditor](./images/blazor-richtexteditor-enable-inline.gif)
+![Blazor RichTextEditor enabling inline mode](./images/blazor-richtexteditor-enable-inline.gif)
 
 ## Edit on select
 
@@ -33,7 +33,7 @@ The inline toolbar will appears only for the selected text by enabling the [Rich
 {% endhighlight %}
 {% endtabs %}
 
-![Enabling Selection in Blazor RichTextEditor](./images/blazor-richtexteditor-enable-selection.gif)
+![Blazor RichTextEditor enabling selection](./images/blazor-richtexteditor-enable-selection.gif)
 
 > You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
 
