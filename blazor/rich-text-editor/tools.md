@@ -492,7 +492,7 @@ To apply the font color or background color for a selected content of RTE, use t
 
 The Rich Text Editor supports providing custom font color and background color with an existing list through the [ColorCode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ColorItemBase.html#Syncfusion_Blazor_RichTextEditor_ColorItemBase_ColorCode) field of the [RichTextEditorFontColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFontColor.html) and [RichTextEditorBackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorBackgroundColor.html).
 
-The `RichTextEditorFontColor` and `RichTextEditorBackgroundColor` tag has two Mode of `Picker` and `Palette`. The Palette mode has a predefined set of the `ColorCode`, and in the picker mode, more colors have been provided. Through the `ModeSwitcher`, switch between these two options.
+The `RichTextEditorFontColor` and `RichTextEditorBackgroundColor` tag has two mode of `Picker` and `Palette`. The `Palette` mode has a predefined set of the `ColorCode`, and in the `Picker` mode, more colors have been provided. Through the `ModeSwitcher`, switch between these two options.
 
 {% tabs %}
 {% highlight razor %}
