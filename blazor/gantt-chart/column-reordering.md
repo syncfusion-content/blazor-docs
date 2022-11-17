@@ -125,7 +125,7 @@ Gantt chart has option to reorder single column either by Interaction or by usin
 ```
 ## Reorder multiple columns
 
-Multiple columns can be reordered at a time by using the `ReorderColumnsAsync` method.
+Multiple columns can be reordered at a time by using the [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ReorderColumnsAsync_System_Collections_Generic_List_System_String__System_String_) method.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt

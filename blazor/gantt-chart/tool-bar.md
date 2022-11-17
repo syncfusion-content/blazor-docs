@@ -328,7 +328,7 @@ In the following example, the `ExpandAll` and `CollapseAll` are built-in toolbar
 
 ## Enable or disable toolbar items
 
-You can enable or disable the toolbar items by using the `EnableItems` method.
+You can enable or disable the toolbar items by using the [EnableItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableItems_System_Collections_Generic_List_System_Int32__System_Boolean_) method.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
