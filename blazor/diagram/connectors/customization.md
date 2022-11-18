@@ -603,7 +603,7 @@ The following code illustrates how to disable selection.
 ```
 ## How to set ZIndex property for connector
 
-* The connectors ZIndex property specifies the stack order of the connector. A connector with a greater stack order is always in front of a connector with a lower stack order. By default, the value is -1.
+* The connector's  [ZIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ZIndex) property specifies the stack order of the connector. A connector with a greater stack order is always in front of a connector with a lower stack order. By default, the value is -1.
 
 
 The following code illustrates how to render connector based on the stack order.
