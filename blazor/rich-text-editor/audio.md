@@ -173,7 +173,7 @@ Once an audio file has been inserted, you can change it using the Rich Text Edit
 
 ## Delete audio
 
-To remove audio from the Rich Text Editor content, select the audio and click the `Remove` tool from the quick toolbar. It will delete the audio from the Rich Text Editor content.
+To remove audio from the Rich Text Editor content, select audio and click the `Remove` tool from the quick toolbar. It will delete the audio from the Rich Text Editor content.
 
 Once you select the audio from the local machine, the URL for the audio will be generated. You can remove the audio from the service location by clicking the cross icon.
 

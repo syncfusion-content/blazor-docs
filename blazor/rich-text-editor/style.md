@@ -158,7 +158,7 @@ Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
 {% endhighlight %}
 {% endtabs %}
 
-Now, add the Syncfusion RichTextEditor component in the razor file. Here, the RichTextEditor component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+Now, add the Syncfusion RichTextEditor component in the razor file. The RichTextEditor component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Index.Razor %}
@@ -168,7 +168,7 @@ Now, add the Syncfusion RichTextEditor component in the razor file. Here, the Ri
 
 <SfButton OnClick="SetBackround">Apply</SfButton>
 <SfRichTextEditor @ref="@RteObj" ID="defaultRTE" Placeholder="Enter Some Content">
-    <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
+    <p>The Rich Text Editor component is the WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update content. Users can format their content using standard toolbar commands.</p>
 </SfRichTextEditor>
 
 @code {
