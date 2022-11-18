@@ -87,9 +87,9 @@ In the following example:
 > The [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_PreventRender_System_Boolean_) method accepts the Boolean argument that accepts true or false to disable or enable rendering respectively.
 This method can be used only after the Gantt component completed the initial rendering. Calling this method during initial rendering will not have any effect.
 
-## Avoid load time date validation
+## Avoid load time date validations
 
-Gantt has load time auto scheduling dates calculation. This validation is required for the invalid dates in the data source. The parent-child scheduling dates calculation and predecessor validation for the entire data source to make all the scheduling dates valid. But it is not necessary for the valid data source. Disable the [Auto Calculate Date Scheduling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AutoCalculateDateScheduling) and [Predecessor validation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnablePredecessorValidation) at load time to avoid date validation and then enable at Created event for dynamic updates.
+Gantt has load time auto scheduling dates calculation. This validation is required for the invalid dates in the data source. The parent-child scheduling dates calculation, holidays and predecessor validation for the entire data source to make all the scheduling dates valid. But it is not necessary for the valid data source. Disable the [Auto Calculate Date Scheduling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AutoCalculateDateScheduling) and [Predecessor validation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnablePredecessorValidation) at load time to avoid date validation and then enable at Created event for dynamic updates.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
