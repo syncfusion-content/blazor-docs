@@ -11,7 +11,7 @@ documentation: ug
 
 ## Import to Html file
 
-The Rich Text Editor allows you to load an external HTML file in the editor's content, which contains the text with styling and images. You can read the HTML file from your path using the [StremReader](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamreader?view=net-6.0) class and assign it to the editor with the `@bind-Value` property.
+The Rich Text Editor allows you to load an external HTML file in the editor's content, which contains the text with styling and images. Read the HTML file from your path using the [StremReader](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamreader?view=net-6.0) class and assign it to the editor with the `@bind-Value` property.
 
 {% tabs %}
 {% highlight razor %}
@@ -50,7 +50,7 @@ The Rich Text Editor allows you to load an external HTML file in the editor's co
 
 ## Import to RTF file
 
-You can import the RTF file into the editor by using the file uploader component, and you can get the RTF file content from the uploader success event. Then, you can import the RTF values into the editor.
+Import the RTF file into the editor by using the file uploader component and get the RTF file content from the uploader success event. Then, import the RTF values into the editor.
 
 {% tabs %}
 {% highlight razor %}
@@ -89,7 +89,7 @@ You can import the RTF file into the editor by using the file uploader component
 
 ## Import text file to editor
 
-The Rich Text Editor allows you to load an external text file into the editor. You can read the text file from your path using the [StremReader](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamreader?view=net-6.0) class and assign it to the editor with the `@bind-Value` property.
+The Rich Text Editor allows you to load an external text file into the editor. Read the text file from your path using the [StremReader](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamreader?view=net-6.0) class and assign it to the editor with the `@bind-Value` property.
 
 {% tabs %}
 {% highlight razor %}
@@ -131,9 +131,9 @@ The Rich Text Editor allows you to load an external text file into the editor. Y
 
 ## Export to RTF file
 
-Using the [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries, you can export RTE content to RTF format.
+Use the [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries to export the RTE content to the RTF format.
 
-Use the following code to export the RTF file: When you click the export button, you can use the **Syncfusion.DocIO** libraries to convert the RTE content to an RTF file.
+Click **Export**, and use **Syncfusion.DocIO** libraries to convert the RTE content to an RTF file. Use the following code to export the RTF file.
 
 {% tabs %}
 {% highlight razor %}
@@ -174,7 +174,7 @@ Use the following code to export the RTF file: When you click the export button,
 
 ## Export to HTML file
 
-Using the [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries, you can export RTE content to HTML format.
+Use [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries to export the RTE content to HTML format.
 
 While clicking on the export button, it makes a call to the Export to HTML service.
 

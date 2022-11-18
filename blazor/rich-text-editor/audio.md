@@ -13,9 +13,9 @@ The Rich Text Editor allows inserting audio files from online sources and the lo
 
 | Options | Description |
 |----------------|---------|
-| [AllowedTypes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorAudioSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorAudioSettings_AllowedTypes) | Specifies the extensions of the audio types allowed to insert on bowering and passing the extensions with comma separators. For example, pass allowedTypes as `.mp3`, `.wav`, `.m4a` and `.wma` |
-| [LayoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_LayoutOption) | Sets the default display for audio when it is inserted into the Rich Text Editor. Possible options are: `Inline` and `Break`.|
-| [SaveFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_SaveFormat) | Sets the default save format of the audio element when inserted. Possible options are: `Blob` and `Base64`.|
+| [AllowedTypes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorAudioSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorAudioSettings_AllowedTypes) |Specifies the extensions of the audio types allowed to insert on bowering and passing the extensions with comma separators. For example, pass allowedTypes as `.mp3,` `.wav,` `.m4a,` and `.wma.`|
+| [LayoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_LayoutOption) | Sets the default display for audio when it is inserted into the Rich Text Editor. Possible options are `Inline` and `Break.`|
+| [SaveFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_SaveFormat) | Sets the default save format of the video element when inserted. Possible options are `Blob` and `Base64.`|
 | [SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_SaveUrl) | Provides URL to map the action result method to save the audio.|
 | [Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_Path) | Specifies the location to store the audio.|
 
@@ -181,7 +181,7 @@ Once you select the audio from the local machine, the URL for the audio will be 
 
 ## Display Position
 
-Sets the default display for an audio file when it is inserted in the Rich Text Editor using the [RichTextEditorMediaSettings.layoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_LayoutOption) property. It has two possible options: `inline` and `break`. When updating the display positions, it also updates the audio elements’ layout position.
+Sets the default display for an audio file when it is inserted in the Rich Text Editor using the [RichTextEditorMediaSettings.layoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_LayoutOption) property. The possible options are `inline` and `break.` It also updates the audio elements’ layout position when updating the display positions.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -193,7 +193,7 @@ Sets the default display for an audio file when it is inserted in the Rich Text 
 
 ## Rename audio before inserting
 
-Using the [RichTextEditorAudioSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorAudioSettings.html) property, you can specify the server handler to upload the selected audio. Then, by binding the `FileUploadSuccess` event, you can receive the modified file name from the server and update it in the Rich Text Editor's insert audio dialog.
+Using the [RichTextEditorAudioSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorAudioSettings.html) property, specify the server handler to upload the selected audio. Then, by binding the `FileUploadSuccess` event, you will receive the modified file name from the server and update it in the Rich Text Editor's insert audio dialog.
 
 Refer `rename.cs` controller file for configure the server-side.
 

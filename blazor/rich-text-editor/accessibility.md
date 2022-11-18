@@ -9,11 +9,11 @@ documentation: ug
 
 # Accessibility in Blazor RichTextEditor
 
-The Rich Text Editor component has been designed with the `WAI-ARIA` specifications in mind, and applies the WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized by keyboard interaction support and ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
+The Rich Text Editor component has been designed with the `WAI-ARIA` specifications in mind and applies the WAI-ARIA roles, states, and properties along with the `keyboard support.` This component is characterized by keyboard interaction support and ARIA accessibility support, making it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
 
 ## ARIA attributes
 
-The toolbar of the Rich Text Editor has been assigned the role of toolbar and has the following list of ARIA attributes:
+The toolbar of the Rich Text Editor has been assigned the role of the toolbar and has the following list of ARIA attributes:
 
 | **Roles and Attributes** | **Functionalities** |
 | --- | --- |
@@ -120,7 +120,7 @@ You can use the following key shortcuts when the Rich Text Editor renders with `
 
 ### Custom key configuration
 
-Customize the key configuration for the keyboard interaction of Rich Text Editor using the [KeyConfigure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_KeyConfigure) property.
+Customize the key configuration for the keyboard interaction of the Rich Text Editor using the [KeyConfigure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_KeyConfigure) property.
 
 In the following code block, customize the bold and italic, toolbar actions with **ctrl+1**, **ctrl+2** respectively.
 

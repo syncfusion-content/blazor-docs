@@ -11,15 +11,15 @@ documentation: ug
 
 ## Localization
 
-[Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component can be localized. Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
+The [Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component can be localized. Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
 
 ## Globalization
 
 ### Enable RTL mode
 
-Specifies the direction of the Rich Text Editor component using the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableRtl) property. Writing systems will require Arabic, Hebrew, and more. The direction can be switched to right-to-left.
+Specify the direction of the Rich Text Editor component using the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableRtl) property. Writing systems will require Arabic, Hebrew, and more. The direction can be switched to right-to-left.
 
-> The `EnableRtl` property will not change based on current culture.
+> The `EnableRtl` property will not change based on the current culture.
 
 {% tabs %}
 {% highlight cshtml %}

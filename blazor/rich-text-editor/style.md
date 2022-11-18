@@ -43,7 +43,7 @@ Use the `e-rte-placeholder` class to define the custom font family, font color, 
 
 ## Source code view 
 
-The Rich Text Editor allows users to directly edit HTML code via `Source View` in the text area. If you make any direct modifications in the source view, the changes will be reflected in the editor content. So, the users will have more flexibility over the content they have created.
+The Rich Text Editor allows you to directly edit HTML code via `Source View` in the text area. If you make any direct modifications in the source view, the changes will be reflected in the editor content. So, you will have more flexibility over the content they have created.
 
 {% tabs %}
 {% highlight razor %}
@@ -125,7 +125,7 @@ While rendering the Rich Text Editor inside the dialog component, the dialog con
 
 ## Highlight the specific lines
 
-Programmatically highlight a portion of the text in the editor, like setting the background color of the text, by applying background style to the particular text using the RichTextEditor [ExecuteCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html) method and the `jsinterop` method.
+Programmatically highlight a portion of the text in the editor, like setting the background color of the text by applying background style to the particular text using the RichTextEditor [ExecuteCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ExecuteCommandOption.html) method and the `jsinterop` method.
 
 Refer the jsintrob method in the `<head>` wwwroot/jsinterop.js of the file.
 
