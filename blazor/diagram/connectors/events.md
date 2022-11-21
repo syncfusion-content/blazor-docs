@@ -235,8 +235,8 @@ The following code example explains how to get the selection change event in the
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
-|[SourcePointChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SourcePointChanging)|[EndPointChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.EndPointChangingEventArgs.html)|Triggers before the connector’s source point is  Changing.|
-|[SourcePointChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SourcePointChanged)|[EndPointChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.EndPointChangedEventArgs.html)|Triggers before the connector’s source point is  Changed.|
+|[SourcePointChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SourcePointChanging)|[EndPointChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.EndPointChangingEventArgs.html)|Triggers while dragging the connector’s source end in the diagram.|
+|[SourcePointChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SourcePointChanged)|[EndPointChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.EndPointChangedEventArgs.html)|Triggers when the connector’s source point is changed.|
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -277,19 +277,19 @@ The following code example explains how to get the selection change event in the
     }
 
     // Notify the source point changed event after the source point has changed.
-    private void OnSourcePointChanged(EndPointChangingEventArgs args)
+    private void OnSourcePointChanged(EndPointChangedEventArgs args)
     {
         //Action to be performed.
     }
 }
 ```
 ## Target point change event
-* While changing the target point  of the connector, the following events can be used to do the customization.
+* While changing the target point of the connector, the following events can be used to do the customization.
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
-|[TargetPointChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_TargetPointChanging)|[EndPointChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.EndPointChangingEventArgs.html)|Triggers before the connector’s target point is  Changing.|
-|[TargetPointChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_TargetPointChanged)|[EndPointChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.EndPointChangedEventArgs.html)|Triggers before the connector’s target point is  Changed.|
+|[TargetPointChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_TargetPointChanging)|[EndPointChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.EndPointChangingEventArgs.html)|Triggers while dragging the connector’s target end in the diagram.|
+|[TargetPointChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_TargetPointChanged)|[EndPointChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.EndPointChangedEventArgs.html)|Triggers when the connector’s target point is changed|
 
 
 ```cshtml
@@ -323,7 +323,7 @@ The following code example explains how to get the selection change event in the
         connectors.Add(Connector);
     }
 
-    //  Notify the target point changing event before the target point change.
+    //  Notify the target point changing event before the target point is change.
     private void OnTargetChanging(EndPointChangingEventArgs args)
     {
         //Set true to cancel the target point change
@@ -331,7 +331,7 @@ The following code example explains how to get the selection change event in the
     }
 
     // Notify the target point changed event after the target point has changed.
-    private void OnTargetChanged(EndPointChangingEventArgs args)
+    private void OnTargetChanged(EndPointChangedEventArgs args)
     {
         //Action to be performed.
     }
