@@ -49,7 +49,7 @@ To insert a video from the hosted link or local machine, you should enable the v
 
 By default, the video tool opens the video dialog, allowing you to insert an embedded URL.
 
-![Blazor RichTextEditor insert audio from web](./images/blazor-richtexteditor-video-web.png)
+![Blazor RichTextEditor insert audio from web](../images/blazor-richtexteditor-video-web.png)
 
 ## Upload and insert video
 
@@ -181,9 +181,9 @@ The video files can be saved as `Blob` or `Base64` url by using the [RichTextEdi
 
 Once a video file has been inserted, replace it using the Rich Text Editor [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Audio) `Replace` option. Replace the video file either by using the embedded URL or the web URL and the browse option in the video dialog.
 
-![Blazor RichTextEditor embed video replace](./images/blazor-richtexteditor-video-replace-embed.png)
+![Blazor RichTextEditor embed video replace](../images/blazor-richtexteditor-video-replace-embed.png)
 
-![Blazor RichTextEditor web video replace](./images/blazor-richtexteditor-video-replace-web.png)
+![Blazor RichTextEditor web video replace](../images/blazor-richtexteditor-video-replace-web.png)
 
 ## Delete video
 
@@ -191,7 +191,7 @@ To remove a video from the Rich Text Editor content, select the video and click 
 
 Once you select the video from the local machine, the URL for the video will be generated. You can remove the video from the service location by clicking the cross icon.
 
-![Blazor RichTextEditor video delete](./images/blazor-richtexteditor-video-del.png)
+![Blazor RichTextEditor video delete](../images/blazor-richtexteditor-video-del.png)
 
 ## Dimension
 
@@ -199,7 +199,7 @@ Set the default `Width,` `MinWidth,` `Height,` and `MinHeight` of the video elem
 
 Change the width and height of the [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Video) using the `Change Size` option. Once you click on the option, the video size dialog will open as follows. In that, specify the width and height of the video in pixels.
 
-![Blazor RichTextEditor video dimension](./images/blazor-richtexteditor-video-size.png)
+![Blazor RichTextEditor video dimension](../images/blazor-richtexteditor-video-size.png)
 
 ## Display Position
 
@@ -221,7 +221,7 @@ You can disable the resize action by configuring `false` for the [RichTextEditor
 
 > If the [RichTextEditorVideoSettings.MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorVideoSettings_MinWidth) and [RichTextEditorVideoSettings.MinHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorVideoSettings_MinHeight) properties are configured the video resizing does not shrink below the specified values.
 
-![Blazor RichTextEditor video resize](./images/blazor-richtexteditor-video-resize.png)
+![Blazor RichTextEditor video resize](../images/blazor-richtexteditor-video-resize.png)
 
 ## Rename video before inserting
 
@@ -416,5 +416,5 @@ namespace VideoUpload.Controllers
 
 ## See also
 
-* [How to edit the quick toolbar settings](./toolbar/###Video-quick-toolbar)
-* [How to use link editing option in the toolbar items](./tools/###-Insert-link)
+* [How to edit the quick toolbar settings](../toolbar#video-quick-toolbar)
+* [How to use link editing option in the toolbar items](../tools#insert-link)
