@@ -161,7 +161,7 @@ Add the additional html attributes such as styles, class, and more to the root e
 
 ## Set the various font family for dropdown list elements
 
-Override using the selector for changing the font-family of the dropdown list. Also, override using the specific class name through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property.
+The font-family of the dropdown list can be changed by overriding using the following selector. The overridden can be applied to specific component by adding a class name through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property.
 
 In the following sample, the font family of the Dropdownlist, ListItem text in dropdownlist and filterInput text are changed.
 
@@ -175,7 +175,7 @@ In the following sample, the font family of the Dropdownlist, ListItem text in d
 
 ## Show tooltip on list item
 
-You can achieve this behavior by using the tooltip component. When the mouse hovers over the DropDownList option, a tooltip appears with information about the hovered list item.
+You can achieve this behavior by integrating the tooltip component. When the mouse hovers over the DropDownList option, a tooltip appears with information about the hovered list item.
 
 The following code demonstrates how to display a tooltip when hovering over the DropDownList option.
 
@@ -215,7 +215,7 @@ Use the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 ### Width of dropdownlist
 
-Use the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) property to change the width of the popup. By default, the popup width is set based on the component's width. Use the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Width) to change the width of the component.
+To customize the width of the popup alone, use the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) property. By default, the popup width is set based on the component's width. Use the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Width) to change the width of the component.
 
 % highlight cshtml %}
 
