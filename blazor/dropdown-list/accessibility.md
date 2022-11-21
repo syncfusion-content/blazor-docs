@@ -13,17 +13,17 @@ The DropDownList component has been designed, keeping in mind the `WAI-ARIA` spe
 
 ## ARIA attributes
 
-The DropDownList component uses the `Listbox` role, and each list item has an `option` role. The following `ARIA attributes` denote the DropDownList state.
+The DropDownList component uses the `Combobox` role. The following `ARIA attributes` denote the DropDownList state.
 
 | **Properties** | **Functionalities** |
 | --- | --- |
-| aria-haspopup | Indicates whether the DropDownList input element has a popup list or not. |
-| aria-expanded | Indicates whether the popup list has expanded or not. |
-| aria-selected | Indicates the selected option. |
-| aria-readonly | Indicates the readonly state of the DropDownList element. |
-| aria-disabled | Indicates whether the DropDownList component is in a disabled state or not. |
-| aria-activedescendent | This attribute holds the ID of the active list item to focus its descendant child element. |
-| aria-owns | This attribute contains the ID of the popup list to indicate popup as a child element. |
+| [aria-haspopup](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) | Indicates whether the DropDownList input element has a popup list or not. |
+| [aria-expanded](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) | Indicates whether the popup list has expanded or not. |
+| [aria-selected](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) | Indicates the selected option. |
+| [aria-readonly](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) | Indicates the readonly state of the DropDownList element. |
+| [aria-disabled](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) | Indicates whether the DropDownList component is in a disabled state or not. |
+| [aria-activedescendent](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) | This attribute holds the ID of the active list item to focus its descendant child element. |
+| [aria-owns](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) | This attribute contains the ID of the popup list to indicate popup as a child element. |
 
 ## Keyboard interaction
 
