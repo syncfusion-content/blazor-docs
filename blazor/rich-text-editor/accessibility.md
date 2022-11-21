@@ -9,18 +9,18 @@ documentation: ug
 
 # Accessibility in Blazor RichTextEditor
 
-The Rich Text Editor component has been designed, keeping in mind the WAI-ARIA specifications, and applies the WAI-ARIA roles, states, and properties. This component is characterized by complete ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
+The Rich Text Editor component has been designed with the `WAI-ARIA` specifications in mind and applies the WAI-ARIA roles, states, and properties along with the `keyboard support.` This component is characterized by keyboard interaction support and ARIA accessibility support, making it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
 
 ## ARIA attributes
 
-The toolbar of Rich Text Editor, assigned the role of Toolbar and has the following list of ARIA attributes:
+The toolbar of the Rich Text Editor has been assigned the role of the toolbar and has the following list of ARIA attributes:
 
 | **Roles and Attributes** | **Functionalities** |
 | --- | --- |
-| role="toolbar" | This attribute added to the toolbar element describes the actual role of the element. |
-| aria-orientation | Indicates the toolbar orientation. Default value is horizontal. |
-| aria-haspopup | Indicates the popup mode of the toolbar. The default value is false. When popup mode is enabled, attribute value has to be changed to true. |
-| aria-disabled | Indicates the disabled state of the toolbar. |
+| `role="toolbar"` | This attribute added to the toolbar element describes the actual role of the element. |
+| `aria-orientation` | Indicates the toolbar orientation. The default value is horizontal. |
+| `aria-haspopup` | Indicates the popup mode of the toolbar. The default value is false. When popup mode is enabled, the attribute value has to be changed to true. |
+| `aria-disabled` | Indicates the disabled state of the toolbar. |
 
 For further details of toolbar ARIA attributes, refer to the accessibility of [Toolbar](../toolbar/accessibility) documentation.
 
@@ -28,8 +28,8 @@ The Rich Text Editor element is assigned the role of application.
 
 | **Roles and Attributes** | **Functionalities** |
 | --- | --- |
-| role="application" | This attribute added to the editor element describes the actual role of the element. |
-| aria-disabled | Indicates the disabled state of the editor. |
+| `role="application"` | This attribute added to the editor element describes the actual role of the element. |
+| `aria-disabled` | Indicates the disabled state of the editor. |
 
 {% tabs %}
 {% highlight cshtml %}
@@ -39,11 +39,11 @@ The Rich Text Editor element is assigned the role of application.
 {% endhighlight %}
 {% endtabs %}
 
-![Accessibility in Blazor RichTextEditor](./images/blazor-richtexteditor-accessibility.png)
+![Blazor RichTextEditor with accessibility](./images/blazor-richtexteditor-accessibility.png)
 
 ## Keyboard support
 
-The editor has full keyboard accessibility that includes shortcuts to open and other actions with toolbar items, drop-down lists, and dialogs.
+The editor has complete keyboard access, including shortcuts to open and other actions with toolbar items, drop-down lists, and dialogs. 
 
 ### HTML editor shortcuts
 
@@ -116,11 +116,11 @@ You can use the following key shortcuts when the Rich Text Editor renders with `
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with Key Configuration](./images/blazor-richtexteditor-key-configuration.png)
+![Blazor RichTextEditor with key configuration](./images/blazor-richtexteditor-key-configuration.png)
 
 ### Custom key configuration
 
-Customize the key config for the keyboard interaction of Rich Text Editor, using the [KeyConfigure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_KeyConfigure) property.
+Customize the key configuration for the keyboard interaction of the Rich Text Editor using the [KeyConfigure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_KeyConfigure) property.
 
 In the following code block, customize the bold and italic, toolbar actions with **ctrl+1**, **ctrl+2** respectively.
 
