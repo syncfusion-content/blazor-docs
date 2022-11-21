@@ -130,7 +130,7 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 #### Customizing TItem using action keyword
 
-In the following code snippet, action keyword is using in the TItem of the dropdown list.
+In the following code snippet, action keyword is using in the `TItem` of the dropdown list.
 
 {% highlight cshtml %}
 

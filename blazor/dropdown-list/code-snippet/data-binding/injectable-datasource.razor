@@ -1,0 +1,22 @@
+@using Blazor_latest_uploader.Data
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Buttons;
+@using System.ComponentModel.DataAnnotations;
+@using System.Collections.ObjectModel;
+@inject CountryService ownservice
+
+<SfDropDownList TValue="string" TItem="string" PopupHeight="230px" Placeholder="Project Status" FloatLabelType="Syncfusion.Blazor.Inputs.FloatLabelType.Auto"
+            DataSource="@DataSource" @bind-Value="@val">
+</SfDropDownList>
+
+@code {
+
+    public string val { get; set; }
+
+    public List<string> DataSource =new List<string>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        DataSource = await ownservice.GetDataAsync();
+    }
+}
