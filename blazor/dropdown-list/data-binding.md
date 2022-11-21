@@ -147,7 +147,7 @@ The [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors
 
 ### Web API adaptor
 
-The [Web Api Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) use this to interact with Web API created under OData standards. The `WebApiAdaptor` is extended from the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor), hence use the `WebApiAdaptor`. The endpoint should understand the OData formatted queries sent along with the request. 
+The [Web Api Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) is used to interact with Web API created under OData standards. The `WebApiAdaptor` is extended from the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor). Hence to use the `WebApiAdaptor`, the endpoint should understand the OData formatted queries sent along with the request. 
 
 {% highlight cshtml %}
 
