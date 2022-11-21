@@ -122,7 +122,7 @@ The following sample demonstrates the `string` used as `TValue`. So, if you clea
 
 ## Dynamically change TItem
 
-Change the `TItem` property dynamically, which defines the datasource type of the DropDownList component with the help of the `@typeparam` directive. The following sample demonstration explains how to change  the TItem dynamically with different type of datasource.
+The `TItem` property can be changed dynamically by defining the datasource type of the DropDownList component with the help of the `@typeparam` directive. The following sample demonstration explains how to change  the TItem dynamically with different type of datasource.
 
 ### Creating generic dropdownList component
 
