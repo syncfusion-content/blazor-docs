@@ -11,7 +11,7 @@ documentation: ug
 
 ## Change the popup width
 
-Customize the width of the popup using the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth). The default value of the `PopupWidth` is `100%` so the popup width is set based on the width of the DropdownList component.
+Customize the width of the popup using the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) property. The default value of the `PopupWidth` is `100%`. If popup width unspecified, it sets based on the width of the DropdownList component.
 
 In the following sample, the `PopupWidth` is set as `300px`.
 
@@ -25,7 +25,7 @@ In the following sample, the `PopupWidth` is set as `300px`.
 
 ## Handling TextOverflow 
 
-When the width of the popup is less than text's width, then the `text-overflow:ellipsis` style will be automatically appeared.
+When the width of the popup is less than text's width, then the `text-overflow:ellipsis` style will be added automatically.
 
 In the following sample, the `PopupWidth` is set as `100px` then the `text-overflow:ellipsis` is automatically applied
 
@@ -69,7 +69,7 @@ You can achieve this by using [ShowPopupAsync()](https://help.syncfusion.com/cr/
 
 ## Preventing opening and closing
 
-Prevent the popup open and close in the event argument like `BeforeOpenEventArgs.cancel` and `PopupEventArgs.cancel` as true. It is achieved by the [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnOpen) and [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnClose) events. 
+Prevent the popup open and close in the event argument like [BeforeOpenEventArgs.cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.BeforeOpenEventArgs.html#Syncfusion_Blazor_DropDowns_BeforeOpenEventArgs_Cancel) and [PopupEventArgs.cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.PopupEventArgs.html#Syncfusion_Blazor_DropDowns_PopupEventArgs_Cancel) as `true`. It is achieved by the [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnOpen) and [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnClose) events. 
 
 {% highlight Razor %}
 
