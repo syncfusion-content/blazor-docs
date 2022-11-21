@@ -35,7 +35,7 @@ Use the following code to customize the text color of the `Placeholder`.
 
 ## Add mandatory indicator using placeholder
 
-You can achieve this by applying the mandatory indicator `*​`​ to the `content` style at the CSS level
+The mandatory indicator `*​` can be applied to the placeholder using the content style in the CSS level.
 
 Use the following code to add the mandatory indicator * to the float label element.
 
@@ -47,7 +47,7 @@ Use the following code to add the mandatory indicator * to the float label eleme
 
 ![Blazor DropdownList with mandatory indicator placeholder](./images/placeholder-and-floatlabel/blazor_dropdown_placeholder-with-mandatory.png)
 
-## Float Label in the blazor dropdownlist component
+## FloatLabel in the blazor dropdownlist component
 
 Use the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FloatLabelType) property to specify the floating label behavior of the DropDownList that the `Placeholder` text floats above the TextBox based on the following values.
 
