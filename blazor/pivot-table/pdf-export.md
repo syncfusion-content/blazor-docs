@@ -164,7 +164,7 @@ The PDF export provides an option to change the file name of the document before
     protected override void OnInitialized()
     {
         this.data = PivotViewData.GetProductData().ToList();
-       //Bind your dataSource collection here, kindly refer the getting started section. for more information.
+       //Bind your dataSource collection here, refer the getting started section. for more information.
     }
     public void OnPdfExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
     {
@@ -362,7 +362,7 @@ The event [PdfQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 ### PdfHeaderQueryCellInfo
 
-> The row header cell can be obtained by using the `PdfQueryCellInfo` event. It can be identified using `AxisSet.Axis == "row"` and for reference, please see the code snippet in the previous topic.
+> The row header cell can be obtained by using the `PdfQueryCellInfo` event. It can be identified using `AxisSet.Axis == "row"` and for reference, see the code snippet in the previous topic.
 
 The event [PdfHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_PdfHeaderQueryCellInfo) triggers on framing each column header cell during PDF export. It allows the user to customize the cell value, style, etc. of the current cell. It has the following parameters:
 

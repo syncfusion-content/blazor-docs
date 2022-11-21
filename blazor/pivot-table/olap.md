@@ -19,7 +19,7 @@ This section briefly explains about how to create a simple [Blazor Pivot Table](
 
 ### Importing Syncfusion Blazor component package in the application
 
-Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`. Please ensure to check the Include **prerelease** option.
+Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`. Ensure to check the Include **prerelease** option.
 
 ### Initializing pivot table component in an application
 
@@ -391,7 +391,7 @@ Users can add a calculated field at runtime through the built-in dialog by using
 ![Displaying Create Calculated Field in Blazor PivotTable](images/blazor-pivottable-calculated-field-name.png)
 <br/>
 <br/>
-**Step 2:** Frame the expression by dragging and dropping the fields from the tree view on the left side of the dialog using simple arithmetic operators. **Example:** "IIF([Measures].[Internet Sales Amount]^0.5 > 100, [Measures].[Internet Sales Amount]*100, [Measures].[Internet Sales Amount]/100)". Please refer here to learn more about the supported [operators](https://docs.microsoft.com/en-us/sql/mdx/operators-mdx-syntax?view=sql-server-ver15) and [functions](https://docs.microsoft.com/en-us/sql/mdx/functions-mdx-syntax?view=sql-server-ver15) to frame the expression.
+**Step 2:** Frame the expression by dragging and dropping the fields from the tree view on the left side of the dialog using simple arithmetic operators. **Example:** "IIF([Measures].[Internet Sales Amount]^0.5 > 100, [Measures].[Internet Sales Amount]*100, [Measures].[Internet Sales Amount]/100)". Refer here to learn more about the supported [operators](https://docs.microsoft.com/en-us/sql/mdx/operators-mdx-syntax?view=sql-server-ver15) and [functions](https://docs.microsoft.com/en-us/sql/mdx/functions-mdx-syntax?view=sql-server-ver15) to frame the expression.
 <br/>
 <br/>
 ![Dragging Fields from TreeView to Blazor PivotTable Expression](images/blazor-pivottable-expression-in-calculated-field.png)

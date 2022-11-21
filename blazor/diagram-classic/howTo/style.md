@@ -9,7 +9,7 @@ documentation: ug
 
 # Styling And Appearance in Blazor Diagram Component
 
-To modify the Diagram appearance, you need to override the default CSS of the Diagram. Please find the list of CSS classes in the Diagram.
+To modify the Diagram appearance, you need to override the default CSS of the Diagram. Find the list of CSS classes in the Diagram.
 
 | CSS class | Purpose |
 |-------|---------|

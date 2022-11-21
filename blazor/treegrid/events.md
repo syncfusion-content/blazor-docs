@@ -2338,4 +2338,4 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Sy
 }
 ```
 
-> We are not going to limit Tree Grid with these events, we will be adding new events in future based on the user requests. If the event, you are looking for is not in the list, then please request [here](https://www.syncfusion.com/feedback/blazor-components).
+> We are not going to limit Tree Grid with these events, we will be adding new events in future based on the user requests. If the event, you are looking for is not in the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).

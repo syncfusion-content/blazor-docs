@@ -9,7 +9,7 @@ documentation: ug
 
 # Styles and Appearances in Blazor SplitButton Component
 
-To modify the SplitButton appearance, override the default CSS of SplitButton component. Please find the list of CSS classes and its corresponding section in SplitButton. Also, there is an option to create own custom theme for the controls using the [Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=material).
+To modify the SplitButton appearance, override the default CSS of SplitButton component. Find the list of CSS classes and its corresponding section in SplitButton. Also, there is an option to create own custom theme for the controls using the [Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=material).
 
 | CSS Class | Purpose of Class |
 | ----- | ----- |
