@@ -25,7 +25,7 @@ The following code demonstrates the filtering functionality with local data in t
 
 ## Remote data
 
-For Remote data, each key press, filter action request make in the server end.
+For Remote data, each key press, filter action request is made at the server end.
 
 The below code demonstrates the filtering functionality with [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) in the DropDownList component with help of [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
 
@@ -39,7 +39,7 @@ The below code demonstrates the filtering functionality with [ODataAdaptor](http
 
 ## Filter type
 
-You can use [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_FilterType) property to specify on which filter type, the component needs to be considered on search action. The available `FilterType` and its supported data types are:
+You can use [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_FilterType) property to specify on which filter type needed to be considered on the search action of the component. The available `FilterType` and its supported data types are:
 
 FilterType     | Description
 ------------ | -------------
@@ -99,7 +99,7 @@ For instance , the data source item consists of `FirstName` as `Nancy` and `Last
 
 ## Multi column filtering 
 
-Provided a multi column style class in the built-in Syncfusion Blazor theme files. So, you need to provide the multicolumn root class API name as `e-multi-column` in the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_CssClass) property.
+In the built-in Syncfusion Blazor theme files, support for multi column can be enabled by adding `e-multi-column` class in the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_CssClass) property.
 
 {% highlight cshtml %}
 
