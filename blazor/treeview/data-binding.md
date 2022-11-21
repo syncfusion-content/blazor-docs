@@ -264,6 +264,378 @@ The **OrderID**, **EmployeeID**, and **ShipName** columns from orders table have
 
 ![Blazor TreeView with Remote Data](./images/blazor-treeview-remote-data.png)
 
+### Custom adaptor 
+
+Sometimes the built-in adaptors do not meet your requirements, and in such cases, you can create your own adaptor.
+
+To create and use a custom adaptor, please follow the following steps:
+
+* Create a class that extended from the DataAdaptor class. DataAdaptor class will act as a base class for your custom adaptor.
+* Override the desired method to achieve your requirement.
+* Assign the custom adaptor class to the **AdaptorInstance** property of the SfDataManager component.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+<SfTreeView TValue="MailItem" @ref="treeObj">
+    <TreeViewFieldsSettings TValue="MailItem" Id="Id" Query="@DataQuery" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded">
+    <SfDataManager @ref="DataManagerRef" AdaptorInstance="@typeof(CustomAdaptor)"
+                   Adaptor="Adaptors.CustomAdaptor">
+    </SfDataManager>
+    </TreeViewFieldsSettings>
+
+</SfTreeView>
+ <button @onclick="GetAllData">@content</button>
+
+@code{
+    public string content = "See All";
+    SfTreeView<MailItem> treeObj;
+    public bool isFirstClick = false;
+    public SfDataManager DataManagerRef { get; set; }
+    public static List<MailItem> MyFolder = new List<MailItem>
+    {
+        new MailItem
+        {
+            Id = "1",
+            FolderName = "Inbox",
+            HasSubFolders = false,
+            Expanded = true
+        },
+        new MailItem
+        {
+            Id = "2",
+            FolderName = "Categories",
+            Expanded = true,
+            HasSubFolders = false
+        },
+        new MailItem
+        {
+            Id = "3",
+            FolderName = "Primary"
+        },
+        new MailItem
+        {
+            Id = "4",
+            FolderName = "Social"
+        },
+        new MailItem
+        {
+            Id = "5",
+            FolderName = "Promotions"
+        }
+    };
+    public class MailItem
+    {
+        public string Id { get; set; }
+        public string ParentId { get; set; }
+        public string FolderName { get; set; }
+        public bool Expanded { get; set; }
+        public bool HasSubFolders { get; set; }
+    }
+    public Query DataQuery { get; set; }
+    public Query InitialDataQuery = new Query().Take(3);
+    public Query UpdatedDataQuery = new Query().Take(5);
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        DataQuery = InitialDataQuery;
+    }
+    public void GetAllData()
+    {
+        if (!isFirstClick)
+        {
+            DataQuery = new Query().Take(5);
+            //StateHasChanged();
+            isFirstClick = true;
+            content = "See less";
+            treeObj.Refresh();
+        }
+        else
+        {
+            DataQuery = new Query().Take(3);
+            content = "See All";
+            isFirstClick = false;
+        }
+    }
+    public class CustomAdaptor : DataAdaptor
+    {
+        // Performs data Read operation
+        public override object Read(DataManagerRequest dm, string key = null)
+        {
+            IEnumerable<MailItem> DataSource = MyFolder;
+            int count = DataSource.Cast<MailItem>().Count();
+            DataSource = DataOperations.Execute<MailItem>(DataSource, dm);
+            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
+        }
+    }
+
+}
+```
+### Web API adaptor with CRUD operations
+
+The `WebApiAdaptor` to interact with web APIs created with OData endpoints. The `WebApiAdaptor` is an extension of the `ODataAdaptor`. Hence, to use `WebApiAdaptor`, the endpoint should understand the OData-formatted queries sent along with the request.
+
+To enable OData query option for Web API, refer to this [documentation](https://learn.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options).
+
+The following sample code demonstrates binding remote data to the TreeView component through the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) using Web API service,
+
+```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Data
+@using BlazorApp1.Data
+<div id="treeview">
+    <SfTreeView @ref="_tree" TValue="NodeResult" AllowEditing="true">
+        <TreeViewFieldsSettings TValue="NodeResult"
+                                Id="ProductID"
+                                Text="ProductName"
+                                ParentID="pid"
+                                HasChildren="haschild"
+                                Query="TreeQuery">
+            <SfDataManager @ref="AutoDM" Url="api/Nodes" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
+        </TreeViewFieldsSettings>
+        <TreeViewEvents TValue="NodeResult"
+                        NodeSelected="NodeSelected"
+                        NodeClicked="NodeClicked"
+                        DataBound="DataBound">
+        </TreeViewEvents>
+        <SfContextMenu @ref="_menu"
+                       Target="#treeview"
+                       Items="MenuItems">
+            <MenuEvents TValue="MenuItem"
+                        ItemSelected="@SelectedHandler">
+            </MenuEvents>
+            <MenuItems>
+
+                <MenuItem Text="Edit"></MenuItem>
+
+                <MenuItem Text="Add"></MenuItem>
+
+                <MenuItem Text="Remove"></MenuItem>
+
+            </MenuItems>
+        </SfContextMenu>
+    </SfTreeView>
+</div>
+
+@code
+ {
+    public Query TreeQuery = new Query();
+    public static SfDataManager AutoDM { get; set; }
+    SfTreeView<NodeResult> _tree;
+    SfContextMenu<MenuItem> _menu;
+    // Datasource for menu items
+    public List<MenuItem> MenuItems = new List<MenuItem>{
+        new MenuItem { Text = "Edit" },
+        new MenuItem { Text = "Remove" },
+        new MenuItem { Text = "Add" }
+    };
+
+    public class CustomWebApiNodeAdaptor : WebApiAdaptor
+    {
+        public CustomWebApiNodeAdaptor(DataManager dataManager) : base(dataManager)
+        {
+        }
+        public override string GetName()
+        {
+            return base.GetName();
+        }
+        public override bool IsRemote()
+        {
+            return base.IsRemote();
+        }
+        public override object Insert(DataManager dataManager, object data, string tableName = null, Query query = null, int position = 0)
+        {
+            return base.Insert(dataManager, data, tableName, query, position);
+        }
+        public override object Remove(DataManager dataManager, string keyField, object value, string tableName = null, Query query = null)
+        {
+            return base.Remove(dataManager, keyField, value, tableName, query);
+        }
+        public override object Update(DataManager dataManager, string keyField, object data, string tableName = null, Query query = null, object original = null, IDictionary<string, object> updateProperties = null)
+        {
+            return base.Update(dataManager, keyField, data, tableName, query, original, updateProperties);
+        }
+        public override void BeforeSend(HttpRequestMessage request)
+        {
+            base.BeforeSend(request);
+        }
+        public override object ProcessQuery(DataManagerRequest queries)
+        {
+            return base.ProcessQuery(queries);
+        }
+        public override Task<object> ProcessResponse<T>(object data, DataManagerRequest queries)
+        {
+            return base.ProcessResponse<T>(data, queries);
+        }
+        public override Task<object> ProcessCrudResponse<T>(object data, DataManagerRequest queries)
+        {
+            return base.ProcessCrudResponse<T>(data, queries);
+        }
+    }
+    public void NodeSelected(NodeSelectEventArgs args) { this.selectedId = args.NodeData.Id; }
+    public void NodeClicked(NodeClickEventArgs args) { this.selectedId = args.NodeData.Id; }
+    string selectedId;
+    private void SelectedHandler(MenuEventArgs<MenuItem> args)
+
+    {
+
+        string selectedText;
+        selectedText = args.Item.Text;
+        if (selectedText == "Edit")
+        {
+            this.RenameNodes();
+        }
+        else if (selectedText == "Remove")
+        {
+            this.RemoveNodes();
+        }
+        else if (selectedText == "Add")
+        {
+            // this.AddNodes();
+        }
+
+    }
+
+    void RemoveNodes()
+    {
+        string[] removeNode = new string[] { this.selectedId };
+        this._tree.RemoveNodes(removeNode);
+    }
+
+    async void RenameNodes()
+    {
+        await _tree.BeginEdit(this.selectedId);
+    }
+
+    public void DataBound(DataBoundEventArgs<NodeResult> args)
+    {
+        if (AutoDM != null)
+        {
+#pragma warning disable BL0005
+            AutoDM.DataAdaptor = new CustomWebApiNodeAdaptor(AutoDM);
+#pragma warning restore BL0005
+        }
+    }
+
+}
+
+<style>
+    .control_wrapper {
+        max-width: 500px;
+        margin: auto;
+        border: 1px solid #dddddd;
+        border-radius: 3px;
+    }
+</style>
+
+```
+```csharp
+namespace BlazorApp1.Data
+{
+    public class DataModel
+    {
+        public string Text { get; set; }
+        public string ID { get; set; }
+        public int IDD { get; set; }
+        public string Category { get; set; }
+    }
+    public class NodeResult
+    {
+        public int? ProductID { get; set; }
+        public string ProductName { get; set; }
+        public int? pid { get; set; }
+        public bool haschild { get; set; }
+    }
+}
+```
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
+
+namespace BlazorApp1.Controller
+{
+ 
+    [Route("api/[controller]")]
+    public class NodesController : ControllerBase
+    {
+        List<NodeResult> data = NodeResult.GetAllRecords().ToList();
+
+        [HttpGet]
+        public IEnumerable<NodeResult> Get()
+        {
+            
+            var queryString = Request.Query;
+            if (queryString.Keys.Contains("$filter"))
+            {
+
+                string filter = string.Join("", queryString["$filter"].ToString().Split(' ').Skip(2)); // get filter from querystring
+                // filter the data based on the expand node id.
+                data = data.Where(d => d.pid.ToString() == filter).ToList();
+                return data;
+            }
+            else
+            {
+                // if the parent id is null.
+                data = data.Where(d => d.pid == null).ToList();
+                return data;
+            }
+            return data;
+        }
+
+        // Remove nodes
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+            NodeResult item = data.Where(x => x.ProductID.Equals(id)).FirstOrDefault();
+            data.Remove(item);
+        }
+
+        // Node update
+        [HttpPut]
+        public object Put([FromBody] NodeResult item)
+        {
+            NodeResult _item = data.Where(x => x.ProductID.Equals(item.ProductID)).FirstOrDefault();
+            _item.ProductName = item.ProductName;
+            return _item;
+        }
+
+        public class NodeResult
+        {
+            public NodeResult(int? ProductID, string ProductName, int? pid, bool haschild)
+            {
+                this.ProductID = ProductID;
+                this.ProductName = ProductName;
+                this.pid = pid;
+                this.haschild = haschild;
+            }
+
+            public static List<NodeResult> GetAllRecords()
+            {
+                List<NodeResult> localData = new List<NodeResult>();
+                localData.Add(new NodeResult(1, "MyFolder", null, true));
+                localData.Add(new NodeResult(2, "Child1", 1, false));
+                localData.Add(new NodeResult(3, "Child2", 1, true));
+                localData.Add(new NodeResult(4, "Child3", 1, false));
+                localData.Add(new NodeResult(8, "SubChild1", 3, false));
+                localData.Add(new NodeResult(9, "SubChild2", 3, false));
+                return localData;
+
+            }
+            public int? ProductID { get; set; }
+            public string ProductName { get; set; }
+            public int? pid { get; set; }
+            public bool haschild { get; set; }
+        }
+       
+    } 
+}
+
+```
 ## Entity Framework
 
 The following steps must be followed to consume data from the **Entity Framework** in the TreeView component.

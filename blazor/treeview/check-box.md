@@ -294,3 +294,201 @@ In the following example, the `CheckedNodes` are passed through the button click
     }
 }
 ```
+
+## Hide checkbox for child nodes in Blazor TreeView Component
+
+In the Blazor TreeView component, enable the check box using the ShowCheckBox property, and a check box could be rendered before each node of the tree items. However, some applications need to render the check box in the parent nodes alone. In such cases, remove the check box of the child node by customizing the CSS styles.
+
+In the following example, the `ShowCheckBox` property is enabled and removed the check box of the child nodes by customizing the CSS style.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+<SfTreeView TValue="Country" ShowCheckBox="true" CssClass="CustomTree">
+    <TreeViewFieldsSettings TValue="Country" Id="Id" DataSource="@Countries" Text="Name" ParentID="ParentId" HasChildren="HasChild" Expanded="Expanded" Selected="IsSelected"></TreeViewFieldsSettings>
+</SfTreeView>
+@code{
+    public class Country
+    {
+        public int Id { get; set; }
+        public int? ParentId { get; set; }
+        public string Name { get; set; }
+        public bool HasChild { get; set; }
+        public bool Expanded { get; set; }
+        public bool IsSelected { get; set; }
+    }
+    List<Country> Countries = new List<Country>();
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Countries.Add(new Country
+        {
+            Id = 1,
+            Name = "Australia",
+            HasChild = true,
+            Expanded = true
+        });
+        Countries.Add(new Country
+        {
+            Id = 2,
+            ParentId = 1,
+            Name = "New South Wales",
+            IsSelected = true
+        });
+        Countries.Add(new Country
+        {
+            Id = 3,
+            ParentId = 1,
+            Name = "Victoria",
+            IsSelected = true
+        });
+        Countries.Add(new Country
+        {
+            Id = 4,
+            ParentId = 1,
+            Name = "South Australia"
+        });
+        Countries.Add(new Country
+        {
+            Id = 5,
+            ParentId = 1,
+            Name = "Western Australia"
+        });
+        Countries.Add(new Country
+        {
+            Id = 6,
+            Name = "Brazil",
+            HasChild = true
+        });
+        Countries.Add(new Country
+        {
+            Id = 7,
+            ParentId = 6,
+            Name = "Paraná"
+        });
+        Countries.Add(new Country
+        {
+            Id = 8,
+            ParentId = 6,
+            Name = "Ceará"
+        });
+        Countries.Add(new Country
+        {
+            Id = 9,
+            Name = "China",
+            HasChild = true
+        });
+        Countries.Add(new Country
+        {
+            Id = 10,
+            ParentId = 9,
+            Name = "Guangzhou"
+        });
+        Countries.Add(new Country
+        {
+            Id = 11,
+            ParentId = 9,
+            Name = "Shantou"
+        });
+    }
+}
+<style>
+    .CustomTree .e-list-item.e-level-2 .e-checkbox-wrapper.e-css {
+        display: none
+    }
+</style>
+```
+
+## Single selection with checkbox in Blazor TreeView Component
+
+The single selection on TreeView nodes along with the checkbox can be achieved by unchecking the previously checked nodes using the uncheckAll methods during the nodeChecking event in the Blazor TreeView component.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+<SfTreeView TValue="MusicAlbum" ShowCheckBox="true" AutoCheck="true" @ref="tree">
+    <TreeViewEvents TValue="MusicAlbum" NodeChecking="NodeChecking"></TreeViewEvents>
+    <TreeViewFieldsSettings TValue="MusicAlbum" Id="Id" DataSource="@Albums" Text="Name" ParentID="ParentId" HasChildren="HasChild" Expanded="Expanded" IsChecked="IsChecked"></TreeViewFieldsSettings>
+</SfTreeView>
+@code{
+    SfTreeView<MusicAlbum> tree;
+    public class MusicAlbum
+    {
+        public int Id { get; set; }
+        public int? ParentId { get; set; }
+        public string Name { get; set; }
+        public bool Expanded { get; set; }
+        public bool? IsChecked { get; set; }
+        public bool HasChild { get; set; }
+    }
+    public void NodeChecking(NodeCheckEventArgs args)
+    {
+        if(args.Action=="check" && args.IsInteracted)
+        {
+            tree.UncheckAllAsync();
+        }
+
+    }
+    List<MusicAlbum> Albums = new List<MusicAlbum>();
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Albums.Add(new MusicAlbum
+        {
+            Id = 1,
+            Name = "Discover Music",
+            HasChild = true,
+            Expanded = true
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 2,
+            ParentId = 1,
+            Name = "Hot Singles"
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 3,
+            ParentId = 1,
+            Name = "Rising Artists"
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 4,
+            ParentId = 1,
+            Name = "Live Music"
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 14,
+            HasChild = true,
+            Name = "MP3 Albums",
+            Expanded = true
+        
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 15,
+            ParentId = 14,
+            Name = "Rock"
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 16,
+            Name = "Gospel",
+            ParentId = 14,
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 17,
+            ParentId = 14,
+            Name = "Latin Music"
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 18,
+            ParentId = 14,
+            Name = "Jazz"
+        });
+    }
+}
+```
