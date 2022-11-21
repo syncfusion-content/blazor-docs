@@ -9,7 +9,7 @@ documentation: ug
 
 # Multicolumn in Dropdown List 
 
-Provide two or more columns in the popup by providing the class name `e-multi-column` and the column will be aligned as like grid. The [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property is used to get the output as proper alignment.
+Provide two or more columns in the popup by using the class name `e-multi-column` to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property  and the column will be aligned like grid.
 
 * [itemTemplate](https://blazor.syncfusion.com/documentation/dropdown-list/templates#item-template) – Using `itemTemplate`, add the columns in the popup.
 * [valueTemplate](https://blazor.syncfusion.com/documentation/dropdown-list/templates#value-template) – Using `valueTemplate`, display the value of which columns to be updated.
