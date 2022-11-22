@@ -18,12 +18,12 @@ The DropDownList component uses the `Combobox` role. The following `ARIA attribu
 | **Properties** | **Functionalities** |
 | --- | --- |
 | `aria-haspopup` | Indicates whether the DropDownList input element has a popup list or not. |
-| [aria-expanded] | Indicates whether the popup list has expanded or not. |
-| [aria-selected] | Indicates the selected option. |
-| [aria-readonly] | Indicates the readonly state of the DropDownList element. |
-| [aria-disabled] | Indicates whether the DropDownList component is in a disabled state or not. |
-| [aria-activedescendent] | This attribute holds the ID of the active list item to focus its descendant child element. |
-| [aria-owns] | This attribute contains the ID of the popup list to indicate popup as a child element. |
+| `aria-expanded` | Indicates whether the popup list has expanded or not. |
+| `aria-selected` | Indicates the selected option. |
+| `aria-readonly` | Indicates the readonly state of the DropDownList element. |
+| `aria-disabled` | Indicates whether the DropDownList component is in a disabled state or not. |
+| `aria-activedescendent` | This attribute holds the ID of the active list item to focus its descendant child element. |
+| `aria-owns` | This attribute contains the ID of the popup list to indicate popup as a child element. |
 
 ## Keyboard interaction
 
