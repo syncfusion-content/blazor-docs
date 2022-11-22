@@ -45,6 +45,8 @@ Use the following CSS to customize the text color when the component is disabled
 }
 ```
 
+![Blazor DropDownList with Disabled component's text color](./images/style/blazor_dropdown_disable-text-color.png)
+
 ## Show the custom icon in dropdown icon
 
 Change the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons/#material) by overriding the style `content`.
@@ -80,6 +82,8 @@ Use the following CSS to customize the appearance of container element.
 }
 ```
 
+![Blazor DropDownList container element customization](./images/style/blazor_dropdown_appearance-of-container.png)
+
 ## Customizing the dropdown icon’s color
 
 Use the following CSS to customize the dropdown icon’s color.
@@ -91,6 +95,8 @@ Use the following CSS to customize the dropdown icon’s color.
 }
 ```
 
+![Blazor DropDownList icon color](./images/style/blazor_dropdown_icon-color.png)
+
 ## Customizing the focus color
 
 Use the following CSS to customize the focusing color of input element.
@@ -100,6 +106,8 @@ Use the following CSS to customize the focusing color of input element.
     background: #c000ff;
 }
 ```
+
+![Blazor DropDownList focus color](./images/style/blazor_dropdown_focus-color.png)
 
 ## Customizing the outline theme's focus color
 
@@ -112,6 +120,8 @@ Use the following CSS to customize the focusing color of outline theme.
 }
 ```
 
+![Blazor DropDownList focusing color outline theme](./images/style/blazor_dropdown_focusing-color-of-outline-theme.png)
+
 Use the `e-outline` to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property to achieve the outline theme
 
 {% highlight cshtml %}
@@ -120,7 +130,7 @@ Use the `e-outline` to the [CssClass](https://help.syncfusion.com/cr/blazor/Sync
 
 {% endhighlight %}
 
-![Blazor DropDownList with different font family](./images/style/blazor_dropdown_outline-theme.png)
+![Blazor DropDownList with outline theme](./images/style/blazor_dropdown_outline-theme.png)
 
 
 ## Customizing the background color of focus, hover, and active items
@@ -134,6 +144,8 @@ Use the following CSS to customize the background color of the `focus`, `hover`,
 }
 ```
 
+![Blazor DropDownList with customizing the focus, hover and active item color](./images/style/blazor_dropdown_outline-theme.png)
+
 ## Customizing the appearance of pop-up element
 
 Use the following CSS to customize the appearance of popup element.
@@ -146,6 +158,8 @@ Use the following CSS to customize the appearance of popup element.
     min-height: 29px;
 }
 ```
+
+![Blazor DropDownList with customizing popup color](./images/style/blazor_dropdown_outline-theme.png)
 
 ## Change the HTML attributes
 
