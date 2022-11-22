@@ -9,9 +9,9 @@ documentation: ug
 
 # Import and Export in Blazor RichTextEditor
 
-## Import to Html file 
+## Import to Html file
 
-The Rich Text Editor allows you to load an external HTML file in the editor content which contains the text with styling and images. You can read the HTML file from your path using [StremReader](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamreader?view=net-6.0) class and assign it to the editor with the `@bind-Value` property.
+The Rich Text Editor allows you to load an external HTML file in the editor's content, which contains the text with styling and images. Read the HTML file from your path using the [StremReader](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamreader?view=net-6.0) class and assign it to the editor with the `@bind-Value` property.
 
 {% tabs %}
 {% highlight razor %}
@@ -44,13 +44,13 @@ The Rich Text Editor allows you to load an external HTML file in the editor cont
 {% endhighlight %}
 {% endtabs %}
 
-![Import to HTML file](./images/blazor-import-html.png)
+![Blazor RichTextEditor import to HTML file](./images/blazor-richtexteditor-import-html.png)
 
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/import-html-file-to-blazor-rich-text-editor).
 
 ## Import to RTF file
 
-You can import the RTF file into the editor by using file uploader component, and get the RTF file content from uploader success event. Then, you can able to import the RTF values to the editor.
+Import the RTF file into the editor by using the file uploader component and get the RTF file content from the uploader success event. Then, import the RTF values into the editor.
 
 {% tabs %}
 {% highlight razor %}
@@ -83,13 +83,13 @@ You can import the RTF file into the editor by using file uploader component, an
 {% endhighlight %}
 {% endtabs %}
 
-![Import to RTF file](./images/blazor-import-rtf.png)
+![Blazor RichTextEditor import to RTF file](./images/blazor-richtexteditor-import-rtf.png)
 
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/import-rtf-file-to-blazor-rich-text-editor).
 
-## Import text file to editor 
+## Import text file to editor
 
-The Rich Text Editor allows you to load an external text file in to the editor. You can read the text file from your path using [StremReader](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamreader?view=net-6.0) class and assign it to the editor with the `@bind-Value` property.
+The Rich Text Editor allows you to load an external text file into the editor. Read the text file from your path using the [StremReader](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamreader?view=net-6.0) class and assign it to the editor with the `@bind-Value` property.
 
 {% tabs %}
 {% highlight razor %}
@@ -125,18 +125,18 @@ The Rich Text Editor allows you to load an external text file in to the editor. 
 {% endhighlight %}
 {% endtabs %}
 
-![Import to text file](./images/blazor-import-text.png)
+![Blazor RichTextEditor import to text file](./images/blazor-richtexteditor-import-text.png)
 
 > [View Sample in GitHub](https://github.com/SyncfusionExamples/import-text-file-to-blazor-rich-text-editor).
 
 ## Export to RTF file
 
-You can able to export the RTE content to RTF format by using the [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries. 
+Use the [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries to export the RTE content to the RTF format.
 
-Use the following code to export the RTF file. While cliking on the export button you can call make the RTE content to the RTF file by using **Syncfusion.DocIO** libraries.
+Click **Export**, and use **Syncfusion.DocIO** libraries to convert the RTE content to an RTF file. Use the following code to export the RTF file.
 
 {% tabs %}
-{% highlight cshtml %}
+{% highlight razor %}
 
 @using Syncfusion.Blazor.RichTextEditor;
 @using Syncfusion.Blazor.Inputs;
@@ -174,9 +174,9 @@ Use the following code to export the RTF file. While cliking on the export butto
 
 ## Export to HTML file
 
-You can export the RTE content to the HTML format by using the [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries.
+Use [Syncfusion.DocIO](https://libraries.io/nuget/Syncfusion.DocIO.NET) libraries to export the RTE content to HTML format.
 
-While clicking on the export button it makes call to the Export to HTML service.
+While clicking on the export button, it makes a call to the Export to HTML service.
 
 {% tabs %}
 {% highlight razor %}

@@ -144,25 +144,6 @@ This section explains the list of events of the File Upload component which will
 }
 ```
 
-## OnChunkFailured
-
-`OnChunkFailured` event fires if the chunk file failed to upload.
-
-```cshtml
-@using Syncfusion.Blazor.Inputs
-
-<SfUploader>
-    <UploaderEvents OnChunkFailured="@OnChunkFailuredHandler"></UploaderEvents>
-</SfUploader>
-
-@code {
-    private void OnChunkFailuredHandler(FailureEventArgs args)
-    {
-        // Here, you can customize your code.
-    }
-}
-```
-
 ## OnChunkSuccess
 
 `OnChunkSuccess` event fires when the chunk file is uploaded successfully.

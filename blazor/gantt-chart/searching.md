@@ -128,7 +128,7 @@ notEqual |Checks for the values that are not equal to the specified value.
 
 ## Search by external button
 
-To search the Gantt Chart records from an external button, invoke the `SearchAsync` method.
+To search the Gantt Chart records from an external button, invoke the [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SearchAsync_System_String_) method.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -235,7 +235,7 @@ By default, the Gantt Chart component searches all the columns. You can search s
 
 ## Clear search by external button
 
-You can pass the `empty` string to the `SearchAsync` method to clear the searched Gantt records from the external button.
+You can pass the `empty` string to the [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SearchAsync_System_String_) method to clear the searched Gantt records from the external button.
 
 ```cshtml
 @using Syncfusion.Blazor

@@ -1,0 +1,6 @@
+@using Syncfusion.Blazor.Dropdowns;
+<SfDropDownList TValue="string" TItem="string" Placeholder="Select a game" DataSource="@data" Width="300px"></SfDropDownList>
+
+@code{
+    List<string> data = new List<string>() { "Cricket", "Badminton","Football" };
+}

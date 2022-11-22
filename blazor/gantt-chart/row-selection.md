@@ -107,7 +107,7 @@ You can select a row at the time of loading by setting the index of the row to t
 
 ## Selecting a row dynamically
 
-You can also select a row dynamically using the [SelectRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowAsync_System_Double_System_Nullable_System_Boolean__) method. The following code demonstrates how to select a row dynamically by clicking the custom button.
+You can also select a row dynamically using the [SelectRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SelectRowAsync_System_Double_System_Boolean_) method. The following code demonstrates how to select a row dynamically by clicking the custom button.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -215,7 +215,7 @@ You can select multiple rows by setting the `SelectionSettings.Type` property to
 
 ## Selecting multiple rows dynamically
 
-You can also select rows dynamically using the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowAsync_System_Double_System_Nullable_System_Boolean__) method. The following code demonstrates how to select rows dynamically by clicking the custom button.
+You can also select rows dynamically using the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SelectRowsAsync_System_Double___) method. The following code demonstrates how to select rows dynamically by clicking the custom button.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt

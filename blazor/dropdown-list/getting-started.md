@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-The [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) is a dynamic replacement of HTML select tags. It has a rich appearance and allows users to select a single value that is non-editable from a list of predefined values. It has several out-of-the-box features, such as data binding, filtering, grouping, UI customization, accessibility, and preselected values.
+The [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) is a dynamic replacement of HTML select tags. It has a rich appearance and allows you to select a single value that is non-editable from a list of predefined values. It has several out-of-the-box features such as data binding, filtering, grouping, UI customization, accessibility, and preselected values.
 
 This section briefly explains about how to include [Blazor DropDown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
@@ -355,7 +355,7 @@ By default, the width of the popup list automatically adjusts according to the D
 
 ## Get selected value
 
-You can get the selected value of the DropDownList component in [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event using [ChangeEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Value) property. 
+Get the selected value of the DropDownList component in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event using [ChangeEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Value) property. 
 
 
 {% highlight cshtml %}
@@ -364,7 +364,7 @@ You can get the selected value of the DropDownList component in [ValueChange](ht
 
 {% endhighlight %}
 
-You can get the complete object list of the selected value in [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event using [ChangeEventArgs.ItemData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_ItemData) property.
+Get the complete object list of the selected value in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event using the [ChangeEventArgs.ItemData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_ItemData) property.
 
 
 {% highlight cshtml %}

@@ -1,18 +1,11 @@
 @using Syncfusion.Blazor.DropDowns
-@using Syncfusion.Blazor.Buttons
 
-<div>
-<SfDropDownList TValue="string" TItem="Games" Width="300px" Placeholder="Select a game" DataSource="@LocalData" @bind-Value="ddlValue">
+<SfDropDownList TValue="string" TItem="Games" Width="300px" FilterType="FilterType.EndsWith" AllowFiltering=true Placeholder="Select a game" DataSource="@LocalData">
   <DropDownListFieldSettings Value="ID" Text="Game"></DropDownListFieldSettings>
 </SfDropDownList>
-</div>
-<div>
-<SfButton Content="Click to change the value" OnClick="OnBtnClick"></SfButton>
-</div>
 
-@code {
-    public string ddlValue { get; set; } = "Game10";
-    public class Games
+@code{
+  public class Games
     {  
         public string ID { get; set; }
         public string Game { get; set; }
@@ -27,10 +20,5 @@
     new Games() { ID= "Game7", Game= "Hockey" },
     new Games() { ID= "Game8", Game= "Rugby"},
     new Games() { ID= "Game9", Game= "Snooker" },
-    new Games() { ID= "Game10", Game= "Tennis"},
   };
-    public void OnBtnClick()
-    {
-        ddlValue = "Game4";
-    }
 }

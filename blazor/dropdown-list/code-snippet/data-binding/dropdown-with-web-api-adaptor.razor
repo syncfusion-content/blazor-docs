@@ -1,0 +1,15 @@
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
+
+<SfDropDownList TValue="string" TItem="Order" Placeholder="Select a Country">
+    <SfDataManager Url="api/Default" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
+    <DropDownListFieldSettings Text="ShipCountry" Value="OrderID"></DropDownListFieldSettings>
+</SfDropDownList>
+
+@code{
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string ShipCountry { get; set; }
+    }
+}
