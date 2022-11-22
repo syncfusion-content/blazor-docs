@@ -69,6 +69,8 @@ An annotation can be added to a node or connector by defining the annotation obj
 >* By default, node’s annotation positioned in center point of the shape.
 >* By default, connector’s path annotation positioned in center point of its path.
 
+>**Note:** Do not use underscore(_) for annotation's id.
+
 ## Add Annotations at runtime
 
 You can add Annotation at runtime to the Annotations collection of the node/connector in the diagram component by using the `Add` method.
