@@ -79,3 +79,13 @@ You can add custom value to the ComboBox component. When the typed character(s) 
 
 
 ![Blazor ComboBox with custom value](./images/blazor-combobox-custom-value.png)
+
+## Properties
+
+### AllowCustom
+
+Specifies whether the component allows user defined value which does not exist in data source.
+
+Default value of AllowCustom is `true`.
+
+[Click to refer the code for AllowCustom](https://blazor.syncfusion.com/documentation/combobox/custom-value)

@@ -87,3 +87,19 @@ The ComboBox component filter queries can be customized. You can also use your o
     }
 }
 ```
+
+## Properties
+
+### Autofill
+
+Specifies whether suggest a first matched item in input when searching. No action happens when no matches found.
+
+Default value of Autofill is `false`.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/filtering/autofill-property.razor %}
+
+{% endhighlight %} 
+
+![Blazor ComboBox with Autofill property](./images/filtering/blazor_combobox_with-autofill-property.png)

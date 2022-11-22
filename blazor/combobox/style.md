@@ -135,3 +135,21 @@ Use the following CSS to customize the appearance of popup element.
     min-height: 29px;
 }
 ```
+
+## Properties
+
+## ShowClearButton
+
+Specifies whether to show or hide the clear button.
+
+When the clear button is clicked, `Value`, `Text`, and `Index` properties are reset to null.
+
+Default value of ShowClearButton is `true`.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/properties/ShowClearButton.razor %}
+
+{% endhighlight %} 
+
+![Blazor ComboBox with ShowClearButton property](./images/style/blazor_combobox_show-clear-button.png)
