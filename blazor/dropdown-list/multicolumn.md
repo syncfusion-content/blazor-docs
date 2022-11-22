@@ -11,14 +11,14 @@ documentation: ug
 
 Provide two or more columns in the popup by using the class name `e-multi-column` to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property  and the column will be aligned like grid.
 
-* [itemTemplate](https://blazor.syncfusion.com/documentation/dropdown-list/templates#item-template) – Using `itemTemplate`, add the columns in the popup.
-* [valueTemplate](https://blazor.syncfusion.com/documentation/dropdown-list/templates#value-template) – Using `valueTemplate`, display the value of which columns to be updated.
+* [ItemTemplate](https://blazor.syncfusion.com/documentation/dropdown-list/templates#item-template) – Using `ItemTemplate`, add the columns in the popup.
+* [ValueTemplate](https://blazor.syncfusion.com/documentation/dropdown-list/templates#value-template) – Using `ValueTemplate`, display the value of which columns to be updated.
 
 Display the custom text alignment in each column using a built-in class like in the following code example:
 
-* e-text-center: Displays the text in the center of the column.
-* e-text-right: Displays the text in the right side of the column.
-* e-text-left: Displays the text in the left side of the column.
+* `e-text-center`: Displays the text in the center of the column.
+* `e-text-right`: Displays the text in the right side of the column.
+* `e-text-left`: Displays the text in the left side of the column.
 
 {% highlight cshtml %}
 
