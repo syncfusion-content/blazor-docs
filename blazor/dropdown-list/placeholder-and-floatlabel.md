@@ -80,3 +80,38 @@ Use the following code to customize the focusing color of the float label elemen
 {% endhighlight %}
 
 ![Blazor DropdownList with float label focusing color](./images/placeholder-and-floatlabel/blazor_dropdown_floatlabel-focusing-color.png)
+
+## Properties
+
+### FloatLabelType
+
+Specifies the floating label behavior of the DropDownList that the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Placeholder) text floats above the DropDownList based on the following values. [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FloatLabelType) is applicable only when `Placeholder` is used.`FloatLabelType` is depends on `Placeholder`.
+
+Default value of `FloatLabelType` is `Never`.
+
+Possible values are:
+
+* [Never](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Never) - The label will never float in the input when the placeholder is available.
+* [Always](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Always) - The floating label always floats above the DropDownList.
+* [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Auto) - The floating label floats above the DropDownList after focusing it or when enters the value in it.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/placeholder-and-floatlabel/floatlabel.razor %}
+
+{% endhighlight %}
+
+![Blazor DropdownList with float label](./images/placeholder-and-floatlabel/blazor_dropdown_floatlabel.gif)
+
+### Placeholder
+
+Specifies the text that is shown as a hint or [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Placeholder) until the user focuses or enter a value in DropDownList.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/placeholder-and-floatlabel/placeholder.razor %}
+
+{% endhighlight %}
+
+![Blazor DropdownList with placeholder](./images/placeholder-and-floatlabel/blazor_dropdown_placeholder.png)
+

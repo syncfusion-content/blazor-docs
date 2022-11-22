@@ -27,5 +27,21 @@ Specifies the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% endhighlight %}
 
-![Blazor DropDownList with clear button](./images/localization/blazor_dropdown_enableRtl.png)
+![Blazor DropDownList with EnableRtl](./images/localization/blazor_dropdown_enableRtl.png)
+
+## Properties
+
+### EnableRtl
+
+Enable or disable rendering component in right to left direction.
+
+Default value of [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_EnableRtl) is `false`.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/localization/enableRtl.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with EnableRtl](./images/localization/blazor_dropdown_enableRtl.png)
 

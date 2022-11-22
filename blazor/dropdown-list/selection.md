@@ -138,3 +138,73 @@ The [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.Dro
 {% include_relative code-snippet/selection/blur-event.razor %}
 
 {% endhighlight %}
+
+## Properties
+
+### ID
+
+Specifies the [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ID) of the DropDownList component. we can access the other properties of the component through this `ID`.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/selection/ID-property.razor %}
+
+{% endhighlight %} 
+
+## Methods
+
+### FocusAsync()
+
+Sets the focus to the DropDownList component for interaction.
+
+#### Declarations
+
+> public Task FocusAsync()
+
+### FocusOutAsync()
+
+Remove the focus from the DropDownList component, if the component is in focus state.
+
+#### Declarations
+
+> public Task FocusOutAsync()
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/selection/focus-method.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with dynamic focus in and out](./images/selection/blazor_dropdown_focus-in-out.gif)
+
+### GetDataByValue(TValue)
+
+Gets the data Object that matches the given value.
+
+#### Declarations
+
+> public TItem GetDataByValue(TValue ddlValue)
+
+#### Parameters
+
+* ddlValue - Specifies the DropDownList value.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/selection/getDataByValue-method.razor %}
+
+{% endhighlight %} 
+
+### GetItemsAsync()
+
+Gets all the list items bound on this component.
+
+#### Declarations
+
+> public Task<IEnumerable<TItem>> GetItemsAsync()
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/selection/getItemsAsync-method.razor %}
+
+{% endhighlight %} 
