@@ -102,7 +102,7 @@ You can change the datagrid's alternative rows background color by overriding th
 }
 ```
 
-Please refer to the following example.
+Refer to the following example.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids

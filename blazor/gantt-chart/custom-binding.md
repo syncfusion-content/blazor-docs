@@ -105,26 +105,23 @@ The following sample code demonstrates implementing custom data binding using cu
             int root = -1;
             for (var t = 1; t <= 8; t++)
             {
-                Random ran = new Random();
-                string math = (ran.Next() % 3) == 0 ? "High" : (ran.Next() % 2) == 0 ? "Release Breaker" : "Critical";
                 root++;
                 int rootItem = gantt.Count + root + 1;
-                gantt.Add(new TaskData() { TaskID = rootItem, TaskName = "Parent Task " + rootItem.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = (ran.Next(10, 100)), ParentID = null, Duration = (ran.Next(1, 50)).ToString() });
+                gantt.Add(new TaskData() { TaskID = rootItem, TaskName = "Parent Task " + rootItem.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = (t*t*2), ParentID = null, Duration = ((t+ 10)/2 ).ToString() });
                 int parent = gantt.Count;
                 for (var c = 0; c < 3; c++)
                 {
                     root++;
-                    string val = ((parent + c + 1) % 3 == 0) ? "Low" : "Critical";
                     int parn = parent + c + 1;
                     int iD = gantt.Count + root + 1;
-                    gantt.Add(new TaskData() { TaskID = iD, TaskName = "Child Task " + iD.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = (ran.Next(10, 100)), ParentID = rootItem, Duration = (ran.Next(1, 50)).ToString() });
+                    gantt.Add(new TaskData() { TaskID = iD, TaskName = "Child Task " + iD.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = (t*c), ParentID = rootItem, Duration = ((c+ 20)/2 ).ToString() });
                     if ((((parent + c + 1) % 3) == 0))
                     {
                         int immParent = gantt.Count;
                         for (var s = 0; s <= 1; s++)
                         {
                             root++;
-                            gantt.Add(new TaskData() { TaskID = gantt.Count + root + 1, TaskName = "Sub Task " + (gantt.Count + root + 1).ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = (ran.Next(10, 100)), ParentID = iD, Duration = (ran.Next(1, 50)).ToString()});
+                            gantt.Add(new TaskData() { TaskID = gantt.Count + root + 1, TaskName = "Sub Task " + (gantt.Count + root + 1).ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = (s* c *4), ParentID = iD, Duration = (s+10+c).ToString()});
                         }
                     }
                 }
@@ -221,6 +218,7 @@ The following sample code demonstrates injecting service into Custom Adaptor,
         public int? ParentID { get; set; }
         public TaskData() { }
     }
+    
     public static List<TaskData> GetGantt()
     {
         if (gantt.Count == 0)
@@ -228,26 +226,23 @@ The following sample code demonstrates injecting service into Custom Adaptor,
             int root = -1;
             for (var t = 1; t <= 8; t++)
             {
-                Random ran = new Random();
-                string math = (ran.Next() % 3) == 0 ? "High" : (ran.Next() % 2) == 0 ? "Release Breaker" : "Critical";
                 root++;
                 int rootItem = gantt.Count + root + 1;
-                gantt.Add(new TaskData() { TaskID = rootItem, TaskName = "Parent Task " + rootItem.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = (ran.Next(10, 100)), ParentID = null, Duration = (ran.Next(1, 50)).ToString() });
+                gantt.Add(new TaskData() { TaskID = rootItem, TaskName = "Parent Task " + rootItem.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = (t*t*2), ParentID = null, Duration = ((t+ 10)/2 ).ToString() });
                 int parent = gantt.Count;
                 for (var c = 0; c < 3; c++)
                 {
                     root++;
-                    string val = ((parent + c + 1) % 3 == 0) ? "Low" : "Critical";
                     int parn = parent + c + 1;
                     int iD = gantt.Count + root + 1;
-                    gantt.Add(new TaskData() { TaskID = iD, TaskName = "Child Task " + iD.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = (ran.Next(10, 100)), ParentID = rootItem, Duration = (ran.Next(1, 50)).ToString() });
+                    gantt.Add(new TaskData() { TaskID = iD, TaskName = "Child Task " + iD.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = (t*c), ParentID = rootItem, Duration = ((c+ 20)/2 ).ToString() });
                     if ((((parent + c + 1) % 3) == 0))
                     {
                         int immParent = gantt.Count;
                         for (var s = 0; s <= 1; s++)
                         {
                             root++;
-                            gantt.Add(new TaskData() { TaskID = gantt.Count + root + 1, TaskName = "Sub Task " + (gantt.Count + root + 1).ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = (ran.Next(10, 100)), ParentID = iD, Duration = (ran.Next(1, 50)).ToString()});
+                            gantt.Add(new TaskData() { TaskID = gantt.Count + root + 1, TaskName = "Sub Task " + (gantt.Count + root + 1).ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = (s* c *4), ParentID = iD, Duration = (s+10+c).ToString()});
                         }
                     }
                 }

@@ -150,7 +150,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 {% endhighlight %}
 {% endtabs %}
 
-In the above example code, we have referred the script which is specific to Document Editor component. If you want to use Document Editor along the other Syncfusion Blazor component like Grid, RTE etc. Please refer below topic
+In the above example code, we have referred the script which is specific to Document Editor component. If you want to use Document Editor along the other Syncfusion Blazor component like Grid, RTE etc. Refer below topic,
 
 * [Adding script reference](https://blazor.syncfusion.com/documentation/common/adding-script-references)
 * [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)
@@ -224,6 +224,6 @@ To load an existing document during control initialization, use the following co
 {% endhighlight %}
 {% endtabs %}
 
-> As per the discussion thread [#30064](https://github.com/dotnet/aspnetcore/issues/30064), please null out the reference of streams and other instances when they are no longer required. Using this approach you'll observe the memory go down and become stable.
+> As per the discussion thread [#30064](https://github.com/dotnet/aspnetcore/issues/30064), null out the reference of streams and other instances when they are no longer required. Using this approach you'll observe the memory go down and become stable.
 
 ![Blazor DocumentEditor](../images/blazor-document-editor-component.png)

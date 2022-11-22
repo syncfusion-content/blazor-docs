@@ -11,15 +11,15 @@ documentation: ug
 
 ## Localization
 
-[Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
+The [Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component can be localized. Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
 
 ## Globalization
 
-### Enable RTL mode 
+### Enable RTL mode
 
-Specifies the direction of the Rich Text Editor component using the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableRtl) property. For writing systems will require Arabic, Hebrew, and more. The direction can be switched to right-to-left.
+Specify the direction of the Rich Text Editor component using the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_EnableRtl) property. Writing systems will require Arabic, Hebrew, and more. The direction can be switched to right-to-left.
 
-> `EnableRtl` property will not change, based on current culture.
+> The `EnableRtl` property will not change based on the current culture.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -31,6 +31,6 @@ Specifies the direction of the Rich Text Editor component using the [EnableRtl](
 {% endhighlight %}
 {% endtabs %}
 
-![Right to Left in Blazor RichTextEditor](./images/blazor-richtexteditor-right-to-left.png)
+![Blazor RichTextEditor right to left toolbar](./images/blazor-richtexteditor-right-to-left.png)
 
 > You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.

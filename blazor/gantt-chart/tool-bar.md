@@ -157,6 +157,109 @@ By default, the custom toolbar items are at left position. You can change the po
 
 ![Alt text](images/customToolbar.png)
 
+## Custom toolbar
+
+A custom toolbar can be placed inside SfGantt. The baseline in the Gantt Chart can be hidden by clicking the Checkbox.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Buttons
+<SfGantt ID="Gantt" DataSource="@TaskCollection" Height="450px" Width="100%" RowHeight="38" HighlightWeekends="true" TreeColumnIndex="1"
+         ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd" RenderBaseline="@BaseLine">
+    <SfToolbar ID="Gantt_Gantt_Toolbar">
+        <ToolbarItems>
+            <ToolbarItem Type="ItemType.Input">
+                <Template>
+                    <SfCheckBox Label="Show Baseline" @bind-Checked="isChecked" @onchange="onChange"></SfCheckBox>
+                </Template>
+            </ToolbarItem>
+        </ToolbarItems>
+    </SfToolbar>
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+                     ParentID="ParentId" BaselineStartDate="BaselineStartDate" BaselineEndDate="BaselineEndDate">
+    </GanttTaskFields>
+    <GanttColumns>
+        <GanttColumn Field="TaskId" HeaderText="Task Id "></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Task Name" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date "></GanttColumn>
+        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="BaselineStartDate" HeaderText="BaselineStartDate " Width="200"></GanttColumn>
+        <GanttColumn Field="BaselineEndDate" HeaderText="BaselineEndDate" Width="200"></GanttColumn>
+    </GanttColumns>
+    <GanttLabelSettings LeftLabel="TaskName" TValue="TaskData">
+    </GanttLabelSettings>
+    <GanttSplitterSettings Position="28%"> </GanttSplitterSettings>
+</SfGantt>
+@code {
+    public SfGantt<TaskData> Gantt;
+    public bool isChecked = true;
+    private void onChange(Microsoft.AspNetCore.Components.ChangeEventArgs args)
+    {
+        if (this.isChecked)
+        {
+            this.BaseLine = true;
+        }
+        else
+        {
+            this.BaseLine = false;
+        }
+    }
+    private bool BaseLine = true;
+    private DateTime ProjectStart = new DateTime(2021, 3, 24);
+    private DateTime ProjectEnd = new DateTime(2021, 7, 6);
+    private List<TaskData> TaskCollection { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime BaselineStartDate { get; set; }
+        public DateTime BaselineEndDate { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>() {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", BaselineStartDate= new DateTime(2021, 04, 02), BaselineEndDate= new DateTime(2021, 04, 04), StartDate = new DateTime(2021, 04, 02), EndDate = new DateTime(2021, 04, 06) },
+            new TaskData() { TaskId = 2, TaskName = "Identify site location", StartDate = new DateTime(2021, 04, 02), EndDate = new DateTime(2021, 04, 02), Duration = "0", BaselineStartDate= new DateTime(2021, 04, 02), BaselineEndDate= new DateTime(2021, 04, 02), Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2021, 04, 02), Duration = "5", Progress = 40, BaselineStartDate= new DateTime(2021, 04, 02), BaselineEndDate= new DateTime(2021, 04, 06), ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2021, 04, 08), Duration = "0", EndDate = new DateTime(2021, 04, 08), BaselineStartDate= new DateTime(2021, 04, 08), BaselineEndDate= new DateTime(2021, 04, 08), Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project initiation", StartDate = new DateTime(2021, 04, 02), EndDate = new DateTime(2021, 04, 08) },
+            new TaskData() { TaskId = 6, TaskName = "Identify site location", StartDate = new DateTime(2021, 04, 02), Duration = "2", Progress = 30, ParentId = 5, BaselineStartDate= new DateTime(2021, 04, 02), BaselineEndDate= new DateTime(2021, 04, 02) },
+            new TaskData() { TaskId = 7, TaskName = "Perform soil test", StartDate = new DateTime(2021, 04, 02), Duration = "4", Progress = 40, ParentId = 5, BaselineStartDate= new DateTime(2021, 04, 02), BaselineEndDate= new DateTime(2021, 04, 03) },
+            new TaskData() { TaskId = 8, TaskName = "Soil test approval", StartDate = new DateTime(2021, 04, 02), Duration = "5", Progress = 30, ParentId = 5, BaselineStartDate= new DateTime(2021, 04, 02), BaselineEndDate= new DateTime(2021, 04, 04) },
+            new TaskData() { TaskId = 9, TaskName = "Market opportunity analysis", BaselineStartDate= new DateTime(2021, 04, 02), BaselineEndDate= new DateTime(2021, 04, 04), StartDate = new DateTime(2021, 04, 02), EndDate = new DateTime(2021, 04, 06) },
+            new TaskData() { TaskId = 10, TaskName = "Competitor analysis", StartDate = new DateTime(2021, 04, 02), EndDate = new DateTime(2021, 04, 02), Duration = "0", BaselineStartDate= new DateTime(2021, 04, 02), BaselineEndDate= new DateTime(2021, 04, 02), Progress = 30, ParentId= 9, },
+            new TaskData() { TaskId = 11, TaskName = "Product strength analysis", StartDate = new DateTime(2021, 04, 02), Duration = "5", Progress = 40, BaselineStartDate= new DateTime(2021, 04, 02), BaselineEndDate= new DateTime(2021, 04, 06), ParentId = 9, },
+            new TaskData() { TaskId = 12, TaskName = "Research completed", StartDate = new DateTime(2021, 04, 08), Duration = "0", EndDate = new DateTime(2021, 04, 08), BaselineStartDate= new DateTime(2021, 04, 08), BaselineEndDate= new DateTime(2021, 04, 08), Progress = 30, ParentId = 9, },
+            new TaskData() { TaskId = 13, TaskName = "Product design and development", StartDate = new DateTime(2021, 04, 02), Duration = "5", Progress = 40, BaselineStartDate= new DateTime(2021, 04, 02), BaselineEndDate= new DateTime(2021, 04, 06), ParentId = 9, },
+        };
+        return Tasks;
+    }
+
+}
+<style>
+    .e-toolbar {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-style: solid;
+        border-width: 1px 1px 0;
+    }
+</style>
+```
+![Blazor Gantt Chart with Custom toolbar](images/blazor-gantt-chart-custom-toolbar.gif)
+
+>It is neccessary to include toolbar ID to avoid height alignment issues. Toolbar ID format must be {Gantt_ID}_Gantt_Toolbar.
+
 ## Built-in and custom items in toolbar
 
 The Gantt Chart component has an option to use both built-in and custom toolbar items at the same time.
@@ -225,7 +328,7 @@ In the following example, the `ExpandAll` and `CollapseAll` are built-in toolbar
 
 ## Enable or disable toolbar items
 
-You can enable or disable the toolbar items by using the `EnableItems` method.
+You can enable or disable the toolbar items by using the [EnableItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableItems_System_Collections_Generic_List_System_Int32__System_Boolean_) method.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt

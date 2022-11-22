@@ -12,7 +12,7 @@ documentation: ug
 
 In this topic, you can learn how to retrieve data from RESTful web services, bind data to a Grid component, and perform CRUD operations. Here, data is fetched from the ODataV4 service using [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor) of `SfDataManger`.
 
-It is recommended to choose the suitable adaptor based on the RESTful service which you are using to bind data for the Syncfusion Blazor component. Please refer to the following documentation to know about the available Adaptors of SfDataManager.
+It is recommended to choose the suitable adaptor based on the RESTful service which you are using to bind data for the Syncfusion Blazor component. Refer to the following documentation to know about the available Adaptors of SfDataManager.
  * [Adaptors](https://blazor.syncfusion.com/documentation/data/adaptors/)
 
 ## Prerequisite software
@@ -427,7 +427,7 @@ In previous steps, we have successfully configured the Syncfusion Blazor package
 
 ## Binding data to Blazor DataGrid component using ODataV4Adaptor
 
-To consume data from the OData Controller, you need to add the **SfDataManager** with **ODataV4Adaptor**. Please refer to the following documentation for more details on ODataV4Adaptor.
+To consume data from the OData Controller, you need to add the **SfDataManager** with **ODataV4Adaptor**. Refer to the following documentation for more details on ODataV4Adaptor.
 
 [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor)
 
@@ -568,4 +568,4 @@ public long Delete([FromODataUri] long key)
 
 {% endhighlight %}
 
-> Please find the sample from this [Github](https://github.com/SyncfusionExamples/binding-odata-services-and-perform-crud) location.
+> Find the sample from this [Github](https://github.com/SyncfusionExamples/binding-odata-services-and-perform-crud) location.

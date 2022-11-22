@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Positions in Blazor FloatingActionButton Component | Syncfusion
-description: Checkout and learn here all about Positions in Syncfusion Blazor FloatingActionButton component and much more.
+title: Positions in Blazor Floating Action Button Component | Syncfusion
+description: Checkout and learn here all about Positions in Syncfusion Blazor Floating Action Button component and much more.
 platform: Blazor
-control: FloatingActionButton
+control: Floating Action Button
 documentation: ug
 ---
 
-# Floating Action Button Positions
+# Floating Action Button positions
 
 The floating action button can be positioned anywhere on the [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#Syncfusion_Blazor_Buttons_SfFab_Target) using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#Syncfusion_Blazor_Buttons_SfFab_Position) property. If the `Target` is not defined, then FAB is positioned based on the browser viewport.
 
@@ -29,9 +29,7 @@ Below example demonstrates Bottom Left position of FAB.
 
 @using Syncfusion.Blazor.Buttons
 
-<div id="target" style="height:200px; position:relative; width:300px; border:1px solid;">
-    <SfFab id="fab" Target="#target" IconCss="fab-icons fab-icon-people" Position=FabPosition.BottomLeft></SfFab>
-</div>
+<SfFab id="fab" IconCss="fab-icons fab-icon-people" Position=FabPosition.BottomLeft></SfFab>
 
 <style>
 
@@ -72,17 +70,15 @@ Below example demonstrates different supported positions of FAB.
 
 @using Syncfusion.Blazor.Buttons
 
-<div id="target" style="height:250px; position:relative; width:300px; border:1px solid;">
-    <SfFab Target="#target" Position="FabPosition.TopLeft" IconCss="fab-icons fab-icon-people"></SfFab>
-    <SfFab Target="#target" Position="FabPosition.TopCenter" IconCss="fab-icons fab-icon-people"></SfFab>
-    <SfFab Target="#target" Position="FabPosition.TopRight" IconCss="fab-icons fab-icon-people"></SfFab>
-    <SfFab Target="#target" Position="FabPosition.MiddleLeft" IconCss="fab-icons fab-icon-people"></SfFab>
-    <SfFab Target="#target" Position="FabPosition.MiddleCenter" IconCss="fab-icons fab-icon-people"></SfFab>
-    <SfFab Target="#target" Position="FabPosition.MiddleRight" IconCss="fab-icons fab-icon-people"></SfFab>
-    <SfFab Target="#target" Position="FabPosition.BottomLeft" IconCss="fab-icons fab-icon-people"></SfFab>
-    <SfFab Target="#target" Position="FabPosition.BottomCenter" IconCss="fab-icons fab-icon-people"></SfFab>
-    <SfFab Target="#target" Position="FabPosition.BottomRight" IconCss="fab-icons fab-icon-people"></SfFab>
-</div>
+<SfFab Position="FabPosition.TopLeft" IconCss="fab-icons fab-icon-people"></SfFab>
+<SfFab Position="FabPosition.TopCenter" IconCss="fab-icons fab-icon-people"></SfFab>
+<SfFab Position="FabPosition.TopRight" IconCss="fab-icons fab-icon-people"></SfFab>
+<SfFab Position="FabPosition.MiddleLeft" IconCss="fab-icons fab-icon-people"></SfFab>
+<SfFab Position="FabPosition.MiddleCenter" IconCss="fab-icons fab-icon-people"></SfFab>
+<SfFab Position="FabPosition.MiddleRight" IconCss="fab-icons fab-icon-people"></SfFab>
+<SfFab Position="FabPosition.BottomLeft" IconCss="fab-icons fab-icon-people"></SfFab>
+<SfFab Position="FabPosition.BottomCenter" IconCss="fab-icons fab-icon-people"></SfFab>
+<SfFab Position="FabPosition.BottomRight" IconCss="fab-icons fab-icon-people"></SfFab>
 
 <style>
 
@@ -119,15 +115,13 @@ Below example demonstrates different supported positions of FAB.
 
 ## Custom position
 
-You can define the custom position of the Floating Action Button by override the `top`, `left`, `right`, and `bottom` CSS properities using `CssClass`.
+You can define the custom position of the Floating Action Button by override the `top`, `left`, `right`, and `bottom` CSS properities using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass).
 
 ```cshtml
 
 @using Syncfusion.Blazor.Buttons
 
-<div id="target" style="height:250px; position:relative; width:300px; border:1px solid;">
-    <SfFab Target="#target" CssClass="custom-position" IconCss="e-icons e-edit"></SfFab>
-</div>
+<SfFab CssClass="custom-position" IconCss="e-icons e-edit"></SfFab>
 
 <style>
 

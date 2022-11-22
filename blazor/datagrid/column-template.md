@@ -238,15 +238,6 @@ This can be achieved by initially defining an anchor tag inside the column templ
     </GridColumns>
 </SfGrid>
 
-<style>
-    .image img {
-        height: 55px;
-        width: 55px;
-        border-radius: 50px;
-        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0, 0, 0, 0.2);
-    }
-</style>
-
 @code{
 
     List<EmployeeData> Employees = new List<EmployeeData>
@@ -287,11 +278,11 @@ After that, add new razor page for routing with routing url along with the param
 
 @code {
     [Parameter]
-    private string EmpID { get; set; }
+    public string EmpID { get; set; }
     [Parameter]
-    private string Name { get; set; }
+    public string Name { get; set; }
     [Parameter]
-    private string Title { get; set; }
+    public string Title { get; set; }
 }
 ```
 

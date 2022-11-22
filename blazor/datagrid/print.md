@@ -58,7 +58,7 @@ The following image represents DataGrid with print toolbar item,
 
 ## Page setup
 
-Some of the print options cannot be configured through code. So, you have to customize the layout, paper size, and margin options using the browser page setup dialog. Please refer to the following links to know more about this,
+Some of the print options cannot be configured through code. So, you have to customize the layout, paper size, and margin options using the browser page setup dialog. Refer to the following links to know more about this,
 
 * [Chrome](https://support.google.com/chrome/answer/1069693?hl=en&visit_id=1-636335333734668335-3165046395&rd=1)
 * [Firefox](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox)
