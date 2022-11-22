@@ -176,3 +176,35 @@ You can add the search icon to the AutoComplete component by overriding the cont
 
 
 ![Blazor AutoComplete Search Icon](./images/blazor_searchicon_autocomplete.png)
+
+## Properties
+
+### ShowClearButton
+
+Specifies whether to show or hide the clear button.
+
+When the clear button is clicked, `Value` properties are reset to null.
+
+Default value of ShowClearButton is `true`.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/style/showClearButton-property.razor %}
+
+{% endhighlight %}
+
+![Blazor AutoComplete with ShowClearButton property](./images/style/blazor_autocomplete_show-clear-button.png)
+
+### ShowPopupButton
+
+Allows you to either show or hide the popup button on the component.
+
+Default value of ShowPopupButton is `false`.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/style/showPopupButton-property.razor %}
+
+{% endhighlight %}
+
+![Blazor AutoComplete with ShowPopupButton property](./images/style/blazor_autocomplete_show-popup-button.png)

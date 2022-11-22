@@ -211,3 +211,72 @@ The AutoComplete component filter queries can be customized. You can also use yo
     }
 }
 ```
+
+## Properties
+
+### FilterType
+
+Determines on which filter type, the component needs to be considered on search action.
+
+Default value of FilterType is `Contains`,  all the suggestion items which contain typed characters to listed in the suggestion popup. 
+
+Possible values are:
+
+* `StartsWith`, Checks whether a value begins with the specified value.
+* `EndsWith`, Checks whether a value ends with specified value.
+* `Contains`, Checks whether a value contains with specified value.
+
+[Click to refer the code for FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_FilterType)
+
+### Highlight
+
+When set to 'true', highlight the searched characters on suggested list items.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/filtering/highlight-property.razor %}
+
+{% endhighlight %} 
+
+![Blazor AutoComplete with highlight property](./images/filtering/blazor_autocomplete_highlight-property.png)
+
+### MinLength
+
+Allows you to set the minimum search character length, the search action will perform after typed minimum characters.
+
+Default value of MinLength is `1`.
+
+[Click to refer the code for MinLength](https://blazor.syncfusion.com/documentation/autocomplete/filtering#limit-the-minimum-filter-character)
+
+### SuggestionCount
+
+Supports the specified number of list items on the suggestion popup.
+
+Default value of SuggestionCount is `20`.
+
+[Click to refer the code for SuggestionCount](https://blazor.syncfusion.com/documentation/autocomplete/filtering#filter-item-count)
+
+## Methods
+
+### HighLightSearch(String, Boolean, FilterType, String)
+
+Highlight the searched characters on suggested list items.
+
+#### Declaration
+
+> public string HighLightSearch(string textValue, bool ignoreCase, FilterType filtertype, string highLighText = null)
+
+#### Paramaters
+
+* textValue	- highlight the list item.
+* ignoreCase - performing the search text based on casing.
+* filtertype - Determines on which filter type, the highlight text update on the text.
+* highLighText - Higlighted the char based on hightligh text and this is optional. If not provide the highlightText, it wil get the filter value.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/methods/HighLightSearch.razor %}
+
+{% endhighlight %} 
+
+![Blazor AutoComplete with HighLightSearch method](./images/filtering/blazor_dropdown_highLightSearch-method.png)
