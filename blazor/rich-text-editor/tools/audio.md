@@ -41,7 +41,7 @@ To insert audio from the hosted link or local machine, you should enable the aud
 
 By default, the audio tool opens the audio dialog, allowing you to insert audio from an online source. Inserting the URL will be added to the `src` attribute of the `<source>` tag.
 
-![Blazor RichTextEditor insert audio from web](./images/blazor-richtexteditor-audio-web.png)
+![Blazor RichTextEditor insert audio from web](../images/blazor-richtexteditor-audio-web.png)
 
 ## Upload and insert audio
 
@@ -169,7 +169,7 @@ The audio files can be saved as `Blob` or `Base64` url by using the [RichTextEdi
 
 Once an audio file has been inserted, you can change it using the Rich Text Editor [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Audio) “Replace” option. You can replace the audio file using the web URL or the browse option in the audio dialog.
 
-![Blazor RIchTextEditor replace audio](./images/blazor-richtexteditor-audio-replace.png)
+![Blazor RIchTextEditor replace audio](../images/blazor-richtexteditor-audio-replace.png)
 
 ## Delete audio
 
@@ -177,7 +177,7 @@ To remove audio from the Rich Text Editor content, select audio and click the `R
 
 Once you select the audio from the local machine, the URL for the audio will be generated. You can remove the audio from the service location by clicking the cross icon.
 
-![Blazor RichTextEditor remove audio](./images/blazor-richtexteditor-audio-remove.png)
+![Blazor RichTextEditor remove audio](../images/blazor-richtexteditor-audio-remove.png)
 
 ## Display Position
 
@@ -384,5 +384,5 @@ namespace AudioUpload.Controllers
 
 ## See also
 
-* [How to edit the quick toolbar settings](./toolbar/#Audio-quick-toolbar)
-* [How to use link editing option in the toolbar items](./tools/###-Insert-link)
+* [How to edit the quick toolbar settings](../toolbar#audio-quick-toolbar)
+* [How to use link editing option in the toolbar items](../tools#insert-link)
