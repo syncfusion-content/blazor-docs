@@ -803,7 +803,7 @@ Since data is bound to Grid using DataSource property, CRUD actions will be refl
 }
 ```
 
-> Please find the sample from this [Github](https://github.com/SyncfusionExamples/blazor-server-datagrid-efcore-crud/) location.
+> Find the sample from this [Github](https://github.com/SyncfusionExamples/blazor-server-datagrid-efcore-crud/) location.
 
 ## Cancel CRUD operation by using condition
 
