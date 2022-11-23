@@ -71,7 +71,7 @@ State persistence allows the Gantt chart to retain the current Gantt state in th
 }
 ```
 
-> No data stored in local storage when `EnablePersistance` is disabled.
+> No data is stored in local storage when the `EnablePersistance` is disabled.
 
 ## Handling gantt state manually
 
