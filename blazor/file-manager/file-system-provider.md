@@ -108,7 +108,7 @@ After cloning, just open the project in Visual Studio and restore the NuGet pack
 
 ```csharp
 
- void RegisterAzure(string accountName, string accountKey, string blobName)
+this.operation.RegisterAzure("<--accountName-->", "<--accountKey-->", "<--blobName-->");
 
  ```
 
@@ -116,11 +116,28 @@ Then, set the blob container and the root blob directory by passing the correspo
 
 ```csharp
 
-void setBlobContainer(string blobPath, string filePath)
+public AzureProviderController(IHostingEnvironment hostingEnvironment)
+    {
+        this.operation = new AzureFileProvider();
+        blobPath = "<--blobPath-->";
+        filePath = "<--filePath-->";
+        ...
+        this.operation.SetBlobContainer(blobPath, filePath);            
+    }
 
 ```
 
-> Also, assign the same *blobPath URL* and *filePath URL* in [AzureFileOperations and AzureUpload](https://github.com/SyncfusionExamples/ej2-azure-aspcore-file-provider/blob/master/Controllers/AzureProviderController.cs) methods in the FileManager controller to determine the original path of the Azure blob.
+> Also, **blobPath** is a container path in Azure Blob Storage, and **filePath** is the file location path. For example, create a **files** container in the mentioned Azure blob storage. Inside that container, create a new folder, **Files** which includes all files and folders that need to be viewed in FileManager. Check out the below path for an example.
+
+```csharp
+
+public AzureProviderController(IHostingEnvironment hostingEnvironment)
+    {
+        this.operation = new AzureFileProvider();
+        blobPath = "https://azure_service_account.blob.core.windows.net/files/";
+        filePath = "https://azure_service_account.blob.core.windows.net/files/Files";
+
+``` 
 
 After setting the blob container references, just build and run the project. Now, the project will be hosted in `http://localhost:{port}:{port}` and just mapping the **ajaxSettings** property of the FileManager component to the appropriate controller methods allows to manage the Azure blob storage.
 
