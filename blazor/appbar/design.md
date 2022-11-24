@@ -116,7 +116,7 @@ Media Query is used to adjusting the AppBar for different screen sizes. Resize t
 
 ## Designing AppBar with Menu
 
-AppBar is rendered with a Menu component in its AppBar header area. Menu component's styles are inherited from the AppBar component using the `e-inherit` CSS class.
+AppBar is rendered with a **SfMenu** component. You can inherit styles from the AppBar component using the `e-inherit` CSS class.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -175,7 +175,7 @@ AppBar is rendered with a Menu component in its AppBar header area. Menu compone
 
 ## Designing AppBar with Buttons
 
-The AppBar is rendered with a Button and DropDownButton component in its AppBar header area. Button and DropDownButton components’ styles are inherited from the AppBar component using the `e-inherit` CSS class.
+The AppBar is rendered with a **SfButton** and **SfDropDownButton** component. You can inherit styles from the AppBar component using the `e-inherit` CSS class.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -210,7 +210,7 @@ The AppBar is rendered with a Button and DropDownButton component in its AppBar 
 
 ## Designing AppBar with SideBar
 
-The AppBar is rendered with the SideBar component below the AppBar. Click on the menu icon to expand/collapse the Sidebar. In the following sample, the `IsOpen` property has been used to show or hide the Sidebar on the AppBar button click.
+The AppBar is rendered with the **SfSidebar** component below the AppBar. Click on the menu icon to expand/collapse the Sidebar. In the following sample, the `IsOpen` property has been used to show or hide the Sidebar on the AppBar button click.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
