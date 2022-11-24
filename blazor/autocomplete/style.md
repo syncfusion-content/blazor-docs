@@ -185,7 +185,7 @@ Specifies whether to show or hide the clear button.
 
 When the clear button is clicked, `Value` properties are reset to null.
 
-Default value of ShowClearButton is `true`.
+Default value of [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_ShowClearButton) is `true`.
 
 {% highlight Razor %}
 
@@ -199,7 +199,7 @@ Default value of ShowClearButton is `true`.
 
 Allows you to either show or hide the popup button on the component.
 
-Default value of ShowPopupButton is `false`.
+Default value of [ShowPopupButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_ShowPopupButton) is `false`.
 
 {% highlight Razor %}
 

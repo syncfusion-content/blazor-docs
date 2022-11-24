@@ -218,19 +218,19 @@ The AutoComplete component filter queries can be customized. You can also use yo
 
 Determines on which filter type, the component needs to be considered on search action.
 
-Default value of FilterType is `Contains`,  all the suggestion items which contain typed characters to listed in the suggestion popup. 
+Default value of [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_FilterType) is `Contains`,  all the suggestion items which contain typed characters to listed in the suggestion popup. 
 
 Possible values are:
 
-* `StartsWith`, Checks whether a value begins with the specified value.
-* `EndsWith`, Checks whether a value ends with specified value.
-* `Contains`, Checks whether a value contains with specified value.
+* [StartsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_StartsWith) - Checks whether a value begins with the specified value.
+* [EndsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_EndsWith) - Checks whether a value ends with specified value.
+* [Contains](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_Contains) - Checks whether a value contains with specified value.
 
 [Click to refer the code for FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_FilterType)
 
 ### Highlight
 
-When set to 'true', highlight the searched characters on suggested list items.
+When set to `true`, highlight the searched characters on suggested list items.
 
 {% highlight Razor %}
 
@@ -244,7 +244,7 @@ When set to 'true', highlight the searched characters on suggested list items.
 
 Allows you to set the minimum search character length, the search action will perform after typed minimum characters.
 
-Default value of MinLength is `1`.
+Default value of [MinLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_MinLength) is `1`.
 
 [Click to refer the code for MinLength](https://blazor.syncfusion.com/documentation/autocomplete/filtering#limit-the-minimum-filter-character)
 
@@ -252,7 +252,7 @@ Default value of MinLength is `1`.
 
 Supports the specified number of list items on the suggestion popup.
 
-Default value of SuggestionCount is `20`.
+Default value of [SuggestionCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_SuggestionCount) is `20`.
 
 [Click to refer the code for SuggestionCount](https://blazor.syncfusion.com/documentation/autocomplete/filtering#filter-item-count)
 
