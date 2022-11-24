@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Events in FloatingActionButton Component | Syncfusion
-description: Checkout and learn here all about Native Events in Syncfusion FloatingActionButton component and much more.
+title: Events in Floating Action Button Component | Syncfusion
+description: Checkout and learn here all about Native Events in Syncfusion Floating Action Button component and much more.
 platform: Blazor
-control: FloatingActionButton
+control: Floating Action Button
 documentation: ug
 ---
 
