@@ -45,7 +45,7 @@ Use the following CSS to customize the text color when the component is disabled
 }
 ```
 
-![Blazor DropDownList with Disabled component's text color](./images/style/blazor_dropdown_disable-text-color.png)
+![Blazor DropDownList with Disabled component text color](./images/style/blazor_dropdown_disable-text-color.png)
 
 ## Show the custom icon in dropdown icon
 
