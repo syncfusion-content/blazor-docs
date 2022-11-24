@@ -130,7 +130,7 @@ Programmatically highlight a portion of the text in the editor, like setting the
 Refer the jsintrob method in the `<head>` wwwroot/jsinterop.js of the file.
 
 {% tabs %}
-{% highlight razor tabtitle="~/_jsinterop.js %}
+{% highlight razor tabtitle="~/_jsinterop.js" %}
 
 window.RichTextEditor = {
     setBackground: function () {
@@ -147,7 +147,7 @@ window.RichTextEditor = {
 Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
-{% highlight razor tabtitle="~/-Host.cshtml %}
+{% highlight razor tabtitle="~/-Host.cshtml" %}
 
 <head> 
         … 
@@ -161,7 +161,7 @@ Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
 Now, add the Syncfusion RichTextEditor component in the razor file. The RichTextEditor component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Index.Razor %}
+{% highlight razor tabtitle="~/Index.Razor" %}
 
 @using Syncfusion.Blazor.RichTextEditor
 @using Syncfusion.Blazor.Buttons
