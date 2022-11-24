@@ -68,7 +68,7 @@ The Urladaptor used with the controller and RefreshDataAsync function is denoted
 
 Refreshes the popup list items. The method is useful if the popup list item changed externally.
 
-### Declaration
+#### Declaration
 
 > public Task RefreshDataAsync()
 
