@@ -62,7 +62,7 @@ The following code demonstrates array of string as datasource to the DropDownLis
 
 {% highlight cshtml %}
 
-{% include_relative code-snippet/value-binding/primitive-type-string %}
+{% include_relative code-snippet/value-binding/primitive-type-string.razor %}
 
 {% endhighlight %}
 
@@ -72,7 +72,7 @@ The following code demonstrates array of int as datasource to the DropDownList c
 
 {% highlight cshtml %}
 
-{% include_relative code-snippet/value-binding/primitive-type-int %}
+{% include_relative code-snippet/value-binding/primitive-type-int.razor %}
 
 {% endhighlight %}
 
