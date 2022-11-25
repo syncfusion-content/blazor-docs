@@ -98,4 +98,4 @@ You can set [`BeforeOpenEventArgs.Cancel`](https://help.syncfusion.com/cr/blazor
 
 {% endhighlight %}
 
-![Prevent Popup opening in filtering in Blazor ComboBox](./images/filtering/blazor_dropdown_prevent-popupopen-in%20filtering.png)
+![Prevent Popup opening in filtering in Blazor ComboBox](./images/filtering/blazor_dropdown_prevent-popupopen.png)
