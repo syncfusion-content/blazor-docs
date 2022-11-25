@@ -26,7 +26,7 @@ Display the custom text alignment in each column using a built-in class like in 
 
 {% endhighlight %}
 
-![Blazor DropdownList with cascading](./images/multicolumn/blazor_dropdown_multicolumn.png)
+![Blazor DropdownList with Multicolumn](./images/multicolumn/blazor_dropdown_multicolumn.png)
 
 ## Limitation of multicolumn dropdownlist
 
