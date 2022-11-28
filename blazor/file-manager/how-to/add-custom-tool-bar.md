@@ -11,7 +11,7 @@ documentation: ug
 
 The toolbar items can be customized using the `ToolbarSettings` API and `ToolbarCreated` events.
 
-The following example shows adding a custom item in the toolbar. The new toolbar button is added using `ToolbarSettings`. The `ToolbarCreated` event is used to add an extra properties for the new toolbar button.
+The following example shows adding a custom item in the toolbar. The new toolbar button is added using `ToolbarSettings`. The `ToolbarCreated` event is used to add extra properties for the new toolbar button.
 
 ```cshtml
 
