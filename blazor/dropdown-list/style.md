@@ -45,7 +45,7 @@ Use the following CSS to customize the text color when the component is disabled
 }
 ```
 
-![Blazor DropDownList with Disabled component's text color](./images/style/blazor_dropdown_disable-text-color.png)
+![Blazor DropDownList with Disabled component text color](./images/style/blazor_dropdown_disable-text-color.png)
 
 ## Show the custom icon in dropdown icon
 
@@ -219,7 +219,7 @@ Set the opacity to the selected item using the following selector.
 
 Use the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) property to change the height of the popup.
 
-% highlight cshtml %}
+{% highlight cshtml %}
 
 {% include_relative code-snippet/style/popup-height.razor %}
 
@@ -231,7 +231,7 @@ Use the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 To customize the width of the popup alone, use the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) property. By default, the popup width is set based on the component's width. Use the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Width) to change the width of the component.
 
-% highlight cshtml %}
+{% highlight cshtml %}
 
 {% include_relative code-snippet/style/popup-width.razor %}
 
@@ -245,7 +245,7 @@ Prevent some items in the popup list from selecting. This can be achieved by dis
 
 In the following code, a single list Item is hidden using jsinterop.
 
-% highlight cshtml %}
+{% highlight cshtml %}
 
 {% include_relative code-snippet/style/disable-listitem.razor %}
 

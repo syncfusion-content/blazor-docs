@@ -1,3 +1,5 @@
+@using Syncfusion.Blazor.DropDowns;
+
 <SfDropDownList ID="Assignee" Placeholder="Select Assignee" TItem="MemberModel" TValue="int?" DataSource="@Members" @bind-Value="@selectedStep.Assignee">
 
     <DropDownListFieldSettings Text="Name" Value="Id"></DropDownListFieldSettings>
