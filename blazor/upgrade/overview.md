@@ -1,15 +1,19 @@
 ---
 layout: post
-title: Upgrade Syncfusion Components to Latest Version in Blazor - Syncfusion
-description: Check out the documentation for Upgrade Syncfusion Components to Latest Version in Blazor
+title: Upgrade Syncfusion Blaozr Components to Latest Version - Syncfusion
+description: Check out the documentation for how to upgrade Syncfusion Blazor Components to latest version.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# How to upgrade Syncfusion Blazor Components to the latest version
+# Upgrade Syncfusion Blazor Components to Latest Version
 
-To upgrade Syncfusion Blazor Components to the latest version, you need to ensure the following:
+This article explains how to upgrade Syncfusion Blazor Components to the latest version. 
+
+> Before upgrading check out 
+> [System Requirements](https://blazor.syncfusion.com/documentation/system-requirements) - To learn about which version of Syncfusion Blazor components support the .NET version you are using.
+> [Upgrade Guide](https://help.syncfusion.com/upgrade-guide/blazor-components) - To learn about Breaking Changes, Bug Fixes, Features, Known issues (if any) between your current version and the latest version you are trying to upgrade.
 
 ## Compatible .NET version
 
@@ -53,7 +57,7 @@ The following steps explain how to clean the cache:
 
 In Blazor WebAssembly application, ensure if you have configured **Linker.xml** file in your Syncfusion Blazor application. Missing this configuration may prevent the rendering of Syncfusion Blazor components in the application.
 
-Refer to this [KB article](https://www.syncfusion.com/kb/10761/syncfusion-components-doesnt-render-in-blazor-webassembly-application) for more information on Linker.xml file usage.
+Refer to this [KB article](https://www.syncfusion.com/kb/13439/syncfusion-components-doesnt-render-in-blazor-webassembly-application) for more information on Linker.xml file usage.
 
 > Linker.xml configuration is applicable only for the Blazor WebAssembly application.
 
