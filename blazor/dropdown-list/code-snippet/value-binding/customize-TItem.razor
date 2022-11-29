@@ -1,0 +1,46 @@
+@using Syncfusion.Blazor.DropDowns
+
+<SfDropDownList TValue="string" TItem="TIMS.EFModel.Shared.Action" Placeholder="e.g. Select a country" DataSource="@LocalData">
+    <DropDownListFieldSettings Text="Country.CountryID" Value="Code.ID"></DropDownListFieldSettings>
+</SfDropDownList>
+
+@code {
+
+    public IEnumerable<TIMS.EFModel.Shared.Action> LocalData { get; set; } = new TIMS.EFModel.Shared.Action().GetData();
+
+    public class Code
+    {
+        public string ID { get; set; }
+    }
+
+    public class Country
+    {
+        public string CountryID { get; set; }
+    }
+
+    public class TIMS
+    {
+        public class EFModel
+        {
+            public class Shared
+            {
+                public class Action
+                {
+                    public Country Country { get; set; }
+                    public Code Code { get; set; }
+                    public List<Action> GetData()
+                    {
+                        List<Action> Data = new List<Action>();
+                        Data.Add(new Action() { Country = new Country() { CountryID = "Australia" }, Code = new Code() { ID = "AU" } });
+                        Data.Add(new Action() { Country = new Country() { CountryID = "Bermuda" }, Code = new Code() { ID = "BM" } });
+                        Data.Add(new Action() { Country = new Country() { CountryID = "Canada" }, Code = new Code() { ID = "CA" } });
+                        Data.Add(new Action() { Country = new Country() { CountryID = "Cameroon" }, Code = new Code() { ID = "CM" } });
+                        Data.Add(new Action() { Country = new Country() { CountryID = "Denmark" }, Code = new Code() { ID = "DK" } });
+                        Data.Add(new Action() { Country = new Country() { CountryID = "France" }, Code = new Code() { ID = "FR" } });
+                        return Data;
+                    }
+                }
+            }
+        }
+    }
+}

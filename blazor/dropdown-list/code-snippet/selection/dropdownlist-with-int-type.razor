@@ -1,0 +1,24 @@
+@using Syncfusion.Blazor.DropDowns
+
+<SfDropDownList TValue="int?" TItem="Countries" Placeholder="e.g. Australia" AllowFiltering="true" DataSource="@Country">
+    <DropDownListFieldSettings Text="Name" Value="Code"></DropDownListFieldSettings>
+</SfDropDownList>
+
+@code {
+
+    public class Countries
+    {
+        public string Name { get; set; }
+
+        public int? Code { get; set; }
+    }
+
+    List<Countries> Country = new List<Countries>
+    {
+        new Countries() { Name = "Australia", Code = 1 },
+        new Countries() { Name = "Bermuda", Code = 2 },
+        new Countries() { Name = "Canada", Code = 3 },
+        new Countries() { Name = "Cameroon", Code = 4},
+        new Countries() { Name = "Denmark", Code = 5 },
+    };
+}
