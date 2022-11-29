@@ -9,21 +9,19 @@ documentation: ug
 
 # Navigation URL binding in Blazor TreeView Component
 
-The TreeView component's **NavigateUrl** property is used to navigate from one page to other pages with TreeView node selection.
-
-In the following example, the `NavigateUrl` field is mapped.
+In the Blazor TreeView component, use the **NavigateUrl** property to specify the URL to navigate to when the tree node is selected.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
-<SfTreeView TValue="MailItem" @ref="treeview" >
-    <TreeViewFieldsSettings TValue="MailItem" Id="Id" NavigateUrl="NavigateUrl" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
+<SfTreeView TValue="MailItem" @ref="treeview">
+    <TreeViewFieldsSettings TValue="MailItem" Id="ID" NavigateUrl="NavigateUrl" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
 </SfTreeView>
 
-@code{
+@code {
     SfTreeView<MailItem> treeview;
     public class MailItem
     {
-        public string Id { get; set; }
+        public string ID { get; set; }
         public string ParentId { get; set; }
         public string FolderName { get; set; }
         public bool Expanded { get; set; }
@@ -35,40 +33,43 @@ In the following example, the `NavigateUrl` field is mapped.
     {
         base.OnInitialized();
         MyFolder.Add(new MailItem
-        {
-            Id = "1",
-            FolderName = "Inbox",
-            HasSubFolders = true,
-            Expanded = true,
-            NavigateUrl="/counter"
-        });
+            {
+                ID = "1",
+                FolderName = "Inbox",
+                HasSubFolders = true,
+                Expanded = true,
+                NavigateUrl = "/counter"
+            });
         MyFolder.Add(new MailItem
-        {
-            Id = "2",
-            ParentId = "1",
-            FolderName = "Categories",
-            Expanded = true,
-            HasSubFolders = true,
-            NavigateUrl="/home"
-        });
+            {
+                ID = "2",
+                ParentId = "1",
+                FolderName = "Categories",
+                Expanded = true,
+                HasSubFolders = true,
+                NavigateUrl = "/home"
+            });
         MyFolder.Add(new MailItem
-        {
-            Id = "3",
-            ParentId = "2",
-            FolderName = "Primary"
-        });
+            {
+                ID = "3",
+                ParentId = "2",
+                FolderName = "Primary",
+                NavigateUrl = "/syncfusiondemo"
+            });
         MyFolder.Add(new MailItem
-        {
-            Id = "4",
-            ParentId = "2",
-            FolderName = "Social"
-        });
+            {
+                ID = "4",
+                ParentId = "2",
+                FolderName = "Social",
+                NavigateUrl = "/syncfusiondoc"
+            });
         MyFolder.Add(new MailItem
-        {
-            Id = "5",
-            ParentId = "2",
-            FolderName = "Promotions"
-        });
+            {
+                ID = "5",
+                ParentId = "2",
+                FolderName = "Promotions",
+                NavigateUrl = "/treeview"
+            });
     }
 }
 
@@ -78,19 +79,17 @@ In the following example, the `NavigateUrl` field is mapped.
 
 The TreeView [FullRowNavigable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_FullRowNavigable) property is used to make the entire TreeView node navigable instead of text element in the Blazor TreeView component.
 
-In the following example, the `FullRowNavigable` property is enabled.
-
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 <SfTreeView TValue="MailItem" @ref="treeview" FullRowNavigable="true">
-    <TreeViewFieldsSettings TValue="MailItem" Id="Id" NavigateUrl="NavigateUrl" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
+    <TreeViewFieldsSettings TValue="MailItem" Id="ID" NavigateUrl="NavigateUrl" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
 </SfTreeView>
 
 @code{
     SfTreeView<MailItem> treeview;
     public class MailItem
     {
-        public string Id { get; set; }
+        public string ID { get; set; }
         public string ParentId { get; set; }
         public string FolderName { get; set; }
         public bool Expanded { get; set; }
@@ -103,7 +102,7 @@ In the following example, the `FullRowNavigable` property is enabled.
         base.OnInitialized();
         MyFolder.Add(new MailItem
         {
-            Id = "1",
+            ID = "1",
             FolderName = "Inbox",
             HasSubFolders = true,
             Expanded = true,
@@ -111,7 +110,7 @@ In the following example, the `FullRowNavigable` property is enabled.
         });
         MyFolder.Add(new MailItem
         {
-            Id = "2",
+            ID = "2",
             ParentId = "1",
             FolderName = "Categories",
             Expanded = true,
@@ -120,19 +119,19 @@ In the following example, the `FullRowNavigable` property is enabled.
         });
         MyFolder.Add(new MailItem
         {
-            Id = "3",
+            ID = "3",
             ParentId = "2",
             FolderName = "Primary"
         });
         MyFolder.Add(new MailItem
         {
-            Id = "4",
+            ID = "4",
             ParentId = "2",
             FolderName = "Social"
         });
         MyFolder.Add(new MailItem
         {
-            Id = "5",
+            ID = "5",
             ParentId = "2",
             FolderName = "Promotions"
         });
@@ -150,15 +149,15 @@ In the Blazor TreeView component, when clicking on the TreeView node, you can ge
 <div class="tree">
 <SfTreeView TValue="MailItem" @ref="tree">
     <TreeViewEvents TValue="MailItem" NodeClicked="nodeClicked"></TreeViewEvents>
-    <TreeViewFieldsSettings TValue="MailItem" Id="Id" HtmlAttributes="HtmlAttributes" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
+    <TreeViewFieldsSettings TValue="MailItem" Id="ID" HtmlAttributes="HtmlAttributes" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
 </SfTreeView>
 </div>
 <div class="containers">
     <p>Details of the clicked node</p>
 <table >
         <tr>
-            <th style="width: 50%">Id</th>
-            <td style="width: 50%" align="center"><div>@Id</div></td>
+            <th style="width: 50%">ID</th>
+            <td style="width: 50%" align="center"><div>@ID</div></td>
         </tr>
         <tr>
             <th style="width: 50%;">Text</th>
@@ -166,7 +165,7 @@ In the Blazor TreeView component, when clicking on the TreeView node, you can ge
                 <div>@Text</div>
             </td>
         </tr>
-        <tr><th style="width: 50%;" >Parent Id</th>
+        <tr><th style="width: 50%;" >Parent ID</th>
             <td style="width: 30%" align="center">
                     @if (ParentID == null)
                     {
@@ -184,7 +183,7 @@ In the Blazor TreeView component, when clicking on the TreeView node, you can ge
     SfTreeView<MailItem> tree;
     public class MailItem
     {
-        public string Id { get; set; }
+        public string ID { get; set; }
         public string ParentId { get; set; }
         public string FolderName { get; set; }
         public bool Expanded { get; set; }
@@ -198,14 +197,14 @@ In the Blazor TreeView component, when clicking on the TreeView node, you can ge
         base.OnInitialized();
         MyFolder.Add(new MailItem
             {
-                Id = "1",
+                ID = "1",
                 FolderName = "Inbox",
                 HasSubFolders = true,
                 Expanded = true
             });
         MyFolder.Add(new MailItem
             {
-                Id = "2",
+                ID = "2",
                 ParentId = "1",
                 FolderName = "Categories",
                 Expanded = true,
@@ -213,30 +212,30 @@ In the Blazor TreeView component, when clicking on the TreeView node, you can ge
             });
         MyFolder.Add(new MailItem
             {
-                Id = "3",
+                ID = "3",
                 ParentId = "2",
                 FolderName = "Primary"
             });
         MyFolder.Add(new MailItem
             {
-                Id = "4",
+                ID = "4",
                 ParentId = "2",
                 FolderName = "Social"
             });
         MyFolder.Add(new MailItem
             {
-                Id = "5",
+                ID = "5",
                 ParentId = "2",
                 FolderName = "Promotions"
             });
 
     }
-    public string Id;
+    public string ID;
     public string Text;
     public string ParentID;
     public void nodeClicked(NodeClickEventArgs args)
     {
-        Id = (args.NodeData.Id);
+        ID = (args.NodeData.Id);
         Text = (args.NodeData.Text);
         ParentID = (args.NodeData.ParentID);
     }
@@ -255,22 +254,20 @@ In the Blazor TreeView component, when clicking on the TreeView node, you can ge
 
 ## Tree node as hyperlink in Blazor TreeView Component
 
-The TreeView component's **NavigateUrl** property is used to navigate from one page to other pages with TreeView node selection. Using the CSS styles, you can customize the TreeView node as a hyperlink.
-
-The following code example demonstrates how to customize the tree nodes as a hyperlink.
+The **NavigateUrl** property is used to navigate from one page to other pages on tree node selection. Using the CSS styles, you can customize the TreeView node as a hyperlink.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Navigations
 <SfTreeView TValue="MailItem" @ref="treeview" >
-    <TreeViewFieldsSettings TValue="MailItem" Id="Id" NavigateUrl="NavigateUrl" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
+    <TreeViewFieldsSettings TValue="MailItem" Id="ID" NavigateUrl="NavigateUrl" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
 </SfTreeView>
 
 @code{
     SfTreeView<MailItem> treeview;
     public class MailItem
     {
-        public string Id { get; set; }
+        public string ID { get; set; }
         public string ParentId { get; set; }
         public string FolderName { get; set; }
         public bool Expanded { get; set; }
@@ -283,7 +280,7 @@ The following code example demonstrates how to customize the tree nodes as a hyp
         base.OnInitialized();
         MyFolder.Add(new MailItem
         {
-            Id = "1",
+            ID = "1",
             FolderName = "Inbox",
             HasSubFolders = true,
             Expanded = true,
@@ -291,7 +288,7 @@ The following code example demonstrates how to customize the tree nodes as a hyp
         });
         MyFolder.Add(new MailItem
         {
-            Id = "2",
+            ID = "2",
             ParentId = "1",
             FolderName = "Categories",
             Expanded = true,
@@ -300,21 +297,21 @@ The following code example demonstrates how to customize the tree nodes as a hyp
         });
         MyFolder.Add(new MailItem
         {
-            Id = "3",
+            ID = "3",
             ParentId = "2",
             FolderName = "Primary",
             NavigateUrl = "/"
         });
         MyFolder.Add(new MailItem
         {
-            Id = "4",
+            ID = "4",
             ParentId = "2",
             FolderName = "Social",
             NavigateUrl = "/social"
         });
         MyFolder.Add(new MailItem
         {
-            Id = "5",
+            ID = "5",
             ParentId = "2",
             FolderName = "Promotions",
             NavigateUrl = "/promotions"

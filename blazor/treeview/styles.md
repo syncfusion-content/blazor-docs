@@ -87,7 +87,6 @@ In the Blazor TreeView component, by default, there is no height property, and i
 ```
 
 ```cshtml
-
 @using Syncfusion.Blazor.Navigations
 <div class="tree">
 <SfTreeView TValue="MusicAlbum" ShowCheckBox="true" AutoCheck="true" @ref="tree" >
