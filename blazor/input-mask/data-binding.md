@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in Blazor Input Mask Component
 
-Data binding can be achieved by using the `bind-Value` attribute and it supports string type. If component value has been changed, it will affect the all places where you bind the variable for the **bind-Value** attribute.
+Data binding can be achieved by using the `bind-Value` attribute and it supports string type. If the component value is changed, it will affect all the places where you bind the variable for the **bind-Value** attribute.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -23,9 +23,9 @@ Data binding can be achieved by using the `bind-Value` attribute and it supports
 }
 ```
 
-## Dynamic Value Binding
+## Dynamic value binding
 
-You can bind the value to the MaskedTextBox component dynamically for `bind-Value`  attribute as mentioned in the following code.
+You can bind the value to the MaskedTextBox component dynamically for `bind-Value` attribute as mentioned in the following code.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

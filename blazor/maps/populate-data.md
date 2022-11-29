@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Populate Data in Blazor Maps Component | Syncfusion
-description: Checkout and learn here all about Populate Data in Syncfusion Blazor Maps component and much more details.
+description: Checkout and learn here all about populate data in Syncfusion Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug
@@ -19,7 +19,7 @@ The shape data collection describes geographical shape information that is avail
 
 The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property is used to represent statistical data in the Maps component, and it accepts a collection of values as input. For example, a list of objects as input can be provided to the data source. This data source will be used to color the map, display data labels, and display tooltip, among other things.
 
-The data source is populated with list of objects relative to shape data. In the below example, **PopulationDetails** can be used as data source in Maps.
+The data source is populated with list of objects relative to shape data. In the following example, **PopulationDetails** can be used as data source in Maps.
 
 ```cshtml
 @code{

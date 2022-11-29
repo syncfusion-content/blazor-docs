@@ -21,7 +21,9 @@ The following list of themes are included in the Syncfusion Blazor components li
 |Google’s Material | material.css |
 |Google’s Material-Dark | material-dark.css |
 |Tailwind CSS | tailwind.css |
-|TailwindDark CSS | tailwind-dark.css |
+|Tailwind CSS Dark | tailwind-dark.css |
+|Fluent | fluent.css |
+|Fluent Dark | fluent-dark.css |
 |Microsoft Office Fabric | fabric.css |
 |Microsoft Office Fabric Dark | fabric-dark.css |
 |High Contrast | highcontrast.css |
@@ -105,7 +107,9 @@ Syncfusion Blazor Themes are available in the CDN. Make sure that the version in
 | Google’s Material | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material.css |
 | Google’s Material Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material-dark.css |
 | Tailwind CSS | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind.css |
-| Tailwind Dark CSS | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-dark.css |
+| Tailwind CSS Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-dark.css |
+| Fluent | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent.css |
+| Fluent Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent-dark.css |
 | Microsoft Office Fabric  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric.css |
 | Microsoft Office Fabric Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-dark.css |
 | High Contrast  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/highcontrast.css |

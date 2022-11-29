@@ -11,11 +11,11 @@ documentation: ug
 
 Syncfusion provides the component Code Generator for the Blazor platform, which allows you to quickly add component code to the application at the required place in the razor file. The Syncfusion extension adds the required Syncfusion component to render the code with namespaces, styles, and NuGet references. The Code Generator is a simple wizard that interacts with data models and adds Syncfusion components with the required features to your application.
 
-The steps below will assist you to add the Syncfusion components code in your Blazor application through **Visual Studio 2019 or later**:
+The steps below will assist you to add the Syncfusion components code in your Blazor application through **Visual Studio 2019 or Visual Studio 2022**:
 
 > Before using the Syncfusion Blazor Code Generator, check whether the Syncfusion Blazor Extension is installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, please install the extension by follow the steps from the [download and installation](download-and-installation) help topic.
 
-1. Open your existing Blazor application or create a new Blazor application in the Visual Studio 2019 or later.
+1. Open your existing Blazor application or create a new Blazor application in the Visual Studio 2019 or Visual Studio 2022.
 
 2. To open the Syncfusion Blazor Code Generator Wizard, select one of the options below in the Razor file, and then add Syncfusion components:
 
@@ -23,17 +23,17 @@ The steps below will assist you to add the Syncfusion components code in your Bl
 
     To generate a specific component code, right-click on the editor of the Razor file at the required line and Select the **Syncfusion Blazor Code Generator...**
 
-    ![CodeGeneratorCommand](../images/Code-Generator-Command.PNG)
+    ![CodeGeneratorCommand](images/Code-Generator-Command.PNG)
 
     **Option 2:**
 
     Open the .razor file and place the cursor at the required line then choose **Extension -> Syncfusion -> Essential Studio for Blazor -> Syncfusion Blazor Code Generator…** from the Visual Studio menu.
 
-    ![CodeGeneratorMenu](../images/Code-Generator-Menu.PNG)
+    ![CodeGeneratorMenu](images/Code-Generator-Menu.PNG)
 
 3. The wizard for the Syncfusion Blazor Code Generator will appear. Choose a required control.
 
-    ![CodeGeneratorWizard](../images/Code-Generator-MainWizard.png)
+    ![CodeGeneratorWizard](images/Code-Generator-MainWizard.png)
 
     **Data Binding:** Data operation fields will be visible if the selected component has data. The data will be listed from your application. It interacts with data models and reduces the amount of time spent developing your application. You can choose the required Data Model Class, Data Source, Id, and more from your application.
 
@@ -43,11 +43,11 @@ The steps below will assist you to add the Syncfusion components code in your Bl
 
     Click **Insert**. It generates the selected component render code and inserts it wherever the cursor is positioned.
 
-    ![ComponentRenderCode](../images/Code-Generator-ComponentRenderCode.PNG)
+    ![ComponentRenderCode](images/Code-Generator-ComponentRenderCode.PNG)
 
 4. In the Output window, select the **Syncfusion Blazor Code Generator** from the **“Show output from”** drop-down to see the changes made to your application.
 
-    ![OutputWindow](../images/Code-Generator-OutputWindow.PNG)
+    ![OutputWindow](images/Code-Generator-OutputWindow.PNG)
 
 5. The selected Syncfusion Blazor component code is inserted in selected active razor file and application configured with most recent selected Syncfusion Blazor component NuGet package, styles, namespaces for selected components.
 

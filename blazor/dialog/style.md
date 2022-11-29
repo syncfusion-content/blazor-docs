@@ -7,7 +7,7 @@ control: Dialog
 documentation: ug
 ---
 
-# Style and appearance in Blazor Dialog Component
+# Style and Appearance in Blazor Dialog Component
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

@@ -220,3 +220,7 @@ In the following sample, menu filter is enabled by default and checkbox filter i
 
 The following screenshot represents CheckBox filter
 ![Blazor DataGrid with CheckBox Filter](./images/blazor-datagrid-checkbox-filter.png)
+
+### Limitations of using different filter types in different columns
+
+The different filter types such as Excel, Menu, and Checkbox can be defined in different columns of the same Grid. However, you cannot use these filter types along with filterBar type (default filter type). Because the filterbar type requires UI level changes with other filter types. For all other filter types, icons will be rendered in the column header.

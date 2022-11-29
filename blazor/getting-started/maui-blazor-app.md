@@ -63,7 +63,7 @@ In `MainPage.xaml`, The `BlazorWebView` is added and points to the root of the B
 {% endhighlight %}
 {% endtabs %}
 
-Fore more details refer [Create a .NET MAUI Blazor app](https://docs.microsoft.com/en-us/dotnet/maui/user-interface/controls/blazorwebview#create-a-net-maui-blazor-app) topic. If you already have .NET MAUI app and want to convert use `BlazorWebView`, refer [Add a BlazorWebView to an existing app](https://docs.microsoft.com/en-us/dotnet/maui/user-interface/controls/blazorwebview#add-a-blazorwebview-to-an-existing-app) topic.
+For more details refer [Create a .NET MAUI Blazor app](https://docs.microsoft.com/en-us/dotnet/maui/user-interface/controls/blazorwebview#create-a-net-maui-blazor-app) topic. If you already have .NET MAUI app and want to convert use `BlazorWebView`, refer [Add a BlazorWebView to an existing app](https://docs.microsoft.com/en-us/dotnet/maui/user-interface/controls/blazorwebview#add-a-blazorwebview-to-an-existing-app) topic.
 
 ## Install Syncfusion Blazor Packages in the App
 
@@ -103,7 +103,7 @@ Now, register the Syncfusion Blazor service in the MAUI Blazor App. Here, Syncfu
 {% endhighlight %}
 {% endtabs %}
 
-## Add Style Sheet
+## Add style sheet
 
 Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/appearance/themes) to learn different ways to refer themes in the application, and to have the expected appearance for Syncfusion Blazor components. Here, the theme is referred using [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets).
 
@@ -120,7 +120,7 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 {% endhighlight %}
 {% endtabs %}
 
-## Add Script Reference
+## Add script reference
 
 Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://sfblazor.azurewebsites.net/staging/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` of **wwwroot/index.html** file.
 
@@ -153,7 +153,7 @@ Now add Syncfusion Blazor component in any razor file. Here, the Calendar compon
 {% endtabs %}
 
 In the Visual Studio toolbar, select the **Windows Machine** button to build and run the app.
-Before run the sample, make sure the mode is `Windows Machine`.
+Before running the sample, make sure the mode is `Windows Machine`.
 
 ![Build and run MAUI Blazor App](images\maui\windows-machine-mode.png)
 

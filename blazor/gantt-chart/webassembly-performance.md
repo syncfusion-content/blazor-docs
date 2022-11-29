@@ -65,21 +65,24 @@ In the following example:
         public int Progress { get; set; }
         public int? ParentId { get; set; }
     }
+    
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>() {
-        new TaskData() { TaskId = 1, TaskName = "Product concept", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 08), Duration = "5days"},
-        new TaskData() { TaskId = 2, TaskName = "Defining the product usage", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 08), Duration = "3", Progress = 30, ParentId = 1},
-        new TaskData() { TaskId = 3, TaskName = "Defining the Target audience", EndDate = new DateTime(2019, 04, 04), Progress = 40, ParentId = 1},
-        new TaskData() { TaskId = 4, TaskName = "Prepare product sketch and notes", StartDate = new DateTime(2019, 04, 05), Duration = "2", Progress = 30, ParentId = 1 },
-        new TaskData() { TaskId = 5,TaskName = "Concept approval", StartDate = new DateTime(2019, 04, 08), EndDate = new DateTime(2019, 04, 08), Duration="0" },
-        new TaskData() { TaskId = 6, TaskName = "Market Research", StartDate = new DateTime(2019, 04, 09), EndDate = new DateTime(2019, 04, 18), Duration = "4", Progress = 30 },
-        new TaskData() { TaskId = 7, TaskName = "Demand Analysis", Duration = "4", Progress = 40, ParentId = 6 },
-        new TaskData() { TaskId = 8, TaskName = "Customer Strength", StartDate = new DateTime(2019, 04, 09), EndDate = new DateTime(2019, 04, 12), Duration = "4", Progress = 30, ParentId = 7 },
-        new TaskData() { TaskId = 9,TaskName = "Market Opportunity analysis", StartDate = new DateTime(2019, 04, 09), EndDate = new DateTime(2019, 04, 012), Duration="4", ParentId= 7 }
-    };
+        List<TaskData> Tasks = new List<TaskData>()
+            {
+                new TaskData() { TaskId = 1, TaskName = "Product concept", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 21), Duration = "5days" },
+                new TaskData() { TaskId = 2, TaskName = "Defining the product usage", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 21), Duration = "3", Progress = 30, ParentId = 1 },
+                new TaskData() { TaskId = 3, TaskName = "Defining the Target audience", EndDate = new DateTime(2022, 01, 10), Progress = 40, ParentId = 1 },
+                new TaskData() { TaskId = 4, TaskName = "Prepare product sketch and notes", StartDate = new DateTime(2022, 01, 04), Duration = "2", Progress = 30, ParentId = 1 },
+                new TaskData() { TaskId = 5, TaskName = "Concept approval", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 21), Duration="0" },
+                new TaskData() { TaskId = 6, TaskName = "Market Research", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 21), Duration = "4", Progress = 30 },
+                new TaskData() { TaskId = 7, TaskName = "Demand Analysis", Duration = "4", Progress = 40, ParentId = 6 },
+                new TaskData() { TaskId = 8, TaskName = "Customer Strength", StartDate = new DateTime(2022, 01, 10), EndDate = new DateTime(2022, 01, 21), Duration = "4", Progress = 30, ParentId = 7 },
+                new TaskData() { TaskId = 9, TaskName = "Market Opportunity analysis", StartDate = new DateTime(2022, 01, 10), EndDate = new DateTime(2022, 01, 21), Duration="4", ParentId= 7 }
+            };
         return Tasks;
-    } }
+    }
+}
 ```
 > The [PreventRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_PreventRender_System_Boolean_) method accepts the Boolean argument that accepts true or false to disable or enable rendering respectively.
 This method can be used only after the Gantt component completed the initial rendering. Calling this method during initial rendering will not have any effect.

@@ -39,7 +39,7 @@ This section explains the list of events of the AutoComplete component which wil
 
     private void BlurHandler(Object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -73,7 +73,7 @@ This section explains the list of events of the AutoComplete component which wil
 
     private void ValueChangeHandler(ChangeEventArgs<string, GameFields> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -107,7 +107,7 @@ This section explains the list of events of the AutoComplete component which wil
 
     private void CloseHandler(ClosedEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -140,7 +140,7 @@ This section explains the list of events of the AutoComplete component which wil
 
     private void CreatedHandler(Object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -173,7 +173,7 @@ This section explains the list of events of the AutoComplete component which wil
 
     private void DestroyedHandler(Object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -206,7 +206,7 @@ This section explains the list of events of the AutoComplete component which wil
 
     private void FocusHandler(Object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -239,7 +239,7 @@ This section explains the list of events of the AutoComplete component which wil
 
     private void OnOpenHandler(BeforeOpenEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -273,7 +273,7 @@ This section explains the list of events of the AutoComplete component which wil
 
     private void OnCloseHandler(PopupEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -306,7 +306,7 @@ This section explains the list of events of the AutoComplete component which wil
 
     private void DataBoundHandler(DataBoundEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -341,7 +341,7 @@ This section explains the list of events of the AutoComplete component which wil
 
     private void Filteringhandler(FilteringEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
@@ -380,7 +380,7 @@ This section explains the list of events of the AutoComplete component which wil
 
     private void OnActionBeginhandler(ActionBeginEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -418,7 +418,7 @@ This section explains the list of events of the AutoComplete component which wil
 
     private void OnActionFailurehandler(Exception args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -451,7 +451,7 @@ This section explains the list of events of the AutoComplete component which wil
 
     private void OnValueSelecthandler(SelectEventArgs<GameFields> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -484,7 +484,7 @@ This section explains the list of events of the AutoComplete component which wil
 
     private void Openedhandler(PopupEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 
