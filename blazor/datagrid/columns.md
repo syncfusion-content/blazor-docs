@@ -511,6 +511,91 @@ In the following code sample, you can prevent default filter query generation us
 
 > You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-prevent-query-generation-for-foriegnkey-column).
 
+### Use filter bar template in foreignkey column
+
+You can use the filter bar template in a foreign key column using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) feature of the Grid. The following example demonstrates how to use the filter bar template in a foreign column.
+
+In the following example, the Employee Name is a foreign key column. An `SfDropDownList` component is rendered in the Employee Name column using the `FilterTemplate`.
+
+```cshtml
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+
+<SfGrid @ref="@Grid" DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="315">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridForeignColumn Field=@nameof(Order.CustomerID) HeaderText="Employee Name" ForeignKeyValue="CustomerID" ForeignDataSource="@CustomerDetails" Width="150">
+            <FilterTemplate>
+                <SfDropDownList Placeholder="Customer Name" ID="CustomerID" Value="@((string)(context as PredicateModel).Value)" DataSource="@Dropdown" TValue="string" TItem="Data">
+                    <DropDownListEvents ValueChange="@Change" TItem="Data" TValue="string"></DropDownListEvents>
+                    <DropDownListFieldSettings Value="CustomerID" Text="CustomerID"></DropDownListFieldSettings>
+                </SfDropDownList>
+            </FilterTemplate>
+        </GridForeignColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    SfGrid<Order> Grid;
+    public List<Order> Orders { get; set; }
+    public List<Data> CustomerDetails { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = (new DateTime[] { new DateTime(2010, 5, 1), new DateTime(2010, 5, 2), new DateTime(2010, 5, 3), })[new Random().Next(3)],
+        }).ToList();
+
+        CustomerDetails = Enumerable.Range(1, 75).Select(x => new Data()
+        {       
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+        }).ToList();
+    }
+
+    public class Data
+    {
+        public string CustomerID { get; set; }
+    }
+
+    List<Data> Dropdown = new List<Data>
+    {
+        new Data() { CustomerID= "All" },
+        new Data() { CustomerID= "ANTON" },
+        new Data() { CustomerID= "ANANTR" },
+        new Data() { CustomerID= "ALFKI" },
+        new Data() { CustomerID= "BOLID" },
+        new Data() { CustomerID= "BLONP" },
+    };
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+
+    public void Change(@Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, Data> args)
+    {
+        if (args.Value == "All")
+        {
+            Grid.ClearFiltering();
+        }
+        else
+        {
+            Grid.FilterByColumn("CustomerID", "contains", args.Value);
+        }
+    }
+}
+```
+
 ## Header text
 
 By default, column header title is displayed from column [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) value. To override the default header title, you have to define the **HeaderText** value in the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) property of **GridColumn** directive.
