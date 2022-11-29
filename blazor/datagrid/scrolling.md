@@ -450,7 +450,7 @@ The [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.
 ```csharp
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" Height="364" AllowFreezeLineMoving="true" AllowSorting="true">
+<SfGrid DataSource="@Orders" Height="364" AllowFreezeLineMoving="true" AllowSorting="true" Width="1000">
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" Freeze="FreezeDirection.Left" IsFrozen="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="170"></GridColumn>
