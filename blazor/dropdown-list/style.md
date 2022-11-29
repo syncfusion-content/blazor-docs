@@ -276,7 +276,7 @@ In the following code, a single list Item is hidden using jsinterop.
 
 Specifies the CSS class name that can be appended with the root element of the DropDownList. One or more custom CSS classes can be added to a DropDownList.
 
-Possible values are
+Some of the possible values are
 
 * `e-success`, which denotes the component in success state that is added green color to the dropdownlist's input field.
 * `e-warning`, which denotes the component in warning state that is added orange color to the dropdownlist's input field.
@@ -294,7 +294,7 @@ Possible values are
 
 ### HtmlAttributes  
 
-You can add the additional html attributes such as styles, class, and more to the root element. If you configured both property and equivalent html attributes, then the component considers the property value.
+Allows additional HTML attributes such as title, name, etc., and accepts n number of attributes in a key-value pair format.
 
 {% highlight cshtml %}
 
