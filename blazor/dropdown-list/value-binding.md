@@ -219,3 +219,63 @@ Here, the DropDownList component is rendered with the TValue as a string type in
 
 {% endhighlight razor %}
 {% endtabs %}
+
+## Properties
+
+### Index
+
+Gets or sets the index of the selected item in the component. List Item in the mentioned index will bind to the component.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/value-binding/index-property.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with Index property](./images/value-binding/blazor_dropdown_index-property.png)
+
+### ShowClearButton
+
+Specifies whether to show or hide the clear button.
+
+Default value of [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowClearButton) is `false`.
+
+When the clear button is clicked, `Value`, `Text`, and `Index` properties are reset to null.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/value-binding/show-hide-clear-button.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with clear button](./images/value-binding/blazor_dropdown_show-hide-clear-button.png)
+
+### Value
+
+Gets or sets the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) of the selected item in the component.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/value-binding/value-property.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with value property](./images/value-binding/blazor_dropdown_with-value-property.png)
+
+## Methods
+
+### ClearAsync()
+
+Allows you to clear the selected values from the component.
+
+#### Declarations
+
+> public Task ClearAsync()
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/value-binding/clearAsync-method.razor %}
+
+{% endhighlight %} 
+
+![Blazor DropDownList with clear button](./images/value-binding/blazor_dropdown_with-clearAsync-method.gif)
