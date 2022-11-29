@@ -154,7 +154,7 @@ In the Blazor TreeView component, when clicking on the TreeView node, you can ge
 </SfTreeView>
 </div>
 <div class="containers">
-    <p>Which node was click and list out the details</p>
+    <p>Details of the clicked node</p>
 <table >
         <tr>
             <th style="width: 50%">Id</th>
