@@ -87,3 +87,16 @@ The ComboBox component filter queries can be customized. You can also use your o
     }
 }
 ```
+
+## Custom Filtering with Custom Adaptor
+
+The following sample code demonstrates implementing custom filtering with custom data adaptor, which allows to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the ComboBox component
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+{% include_relative code-snippet/combobox-filter-using-custom-adaptor.razor %}
+
+{% endhighlight %}
+
+​​​​​​​{% endtabs %}

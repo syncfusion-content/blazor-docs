@@ -1,0 +1,78 @@
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Data
+
+<SfMultiSelect @ref="autoObj" TValue="string[]" AllowFiltering="true" TItem="Order" Query="Query">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="@Syncfusion.Blazor.Adaptors.CustomAdaptor"></SfDataManager>
+    <MultiSelectFieldSettings Value="CustomerID"></MultiSelectFieldSettings>
+    <MultiSelectEvents TValue="string[]" TItem="Order" Filtering="OnFilter"></MultiSelectEvents>
+</SfMultiSelect>
+
+@code{
+    SfMultiSelect<string[], Order> autoObj;
+    public static List<Order> Orders { get; set; }
+    public Query Query = new Query();
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(0,10).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID", "Queen Cozinha bistro" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+        }).ToList();
+    }
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
+    }
+
+    // Implementing custom adaptor by extending the DataAdaptor class
+    public class CustomAdaptor : DataAdaptor
+    {
+        // Performs data Read operation
+        public async override Task<object> ReadAsync(DataManagerRequest dm, string key = null)
+        {
+            IEnumerable<Order> DataSource = Orders;
+            if (dm.Search != null && dm.Search.Count > 0)
+            {
+                // Searching
+                DataSource = DataOperations.PerformSearching(DataSource, dm.Search);
+            }
+            if (dm.Sorted != null && dm.Sorted.Count > 0)
+            {
+                // Sorting
+                DataSource = DataOperations.PerformSorting(DataSource, dm.Sorted);
+            }
+            if (dm.Where != null && dm.Where.Count > 0)
+            {
+                // Filtering
+                DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+            }
+            int count = DataSource.Cast<Order>().Count();
+            if (dm.Skip != 0)
+            {
+                //Paging
+                DataSource = DataOperations.PerformSkip(DataSource, dm.Skip);
+            }
+            if (dm.Take != 0)
+            {
+                DataSource = DataOperations.PerformTake(DataSource, dm.Take);
+            }
+            await Task.Delay(100);
+            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
+        }
+    }
+    public async Task OnFilter(FilteringEventArgs args)
+    {
+        args.PreventDefaultAction = true;
+            var Query = new Query().Where(new WhereFilter()
+            {
+                Field = "CustomerID",
+                value = args.Text,
+                Operator = "contains",
+                IgnoreCase = true
+            }).Take(10);
+            await this.autoObj.Filter(this.autoObj.DataSource, Query);
+    }
+}
