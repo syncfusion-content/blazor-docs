@@ -45,7 +45,7 @@ Use the following CSS to customize the text color when the component is disabled
 }
 ```
 
-![Blazor DropDownList with Disabled component's text color](./images/style/blazor_dropdown_disable-text-color.png)
+![Blazor DropDownList with Disabled component text color](./images/style/blazor_dropdown_disable-text-color.png)
 
 ## Show the custom icon in dropdown icon
 
@@ -219,7 +219,7 @@ Set the opacity to the selected item using the following selector.
 
 Use the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) property to change the height of the popup.
 
-% highlight cshtml %}
+{% highlight cshtml %}
 
 {% include_relative code-snippet/style/popup-height.razor %}
 
@@ -231,7 +231,7 @@ Use the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 To customize the width of the popup alone, use the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) property. By default, the popup width is set based on the component's width. Use the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Width) to change the width of the component.
 
-% highlight cshtml %}
+{% highlight cshtml %}
 
 {% include_relative code-snippet/style/popup-width.razor %}
 
@@ -245,7 +245,7 @@ Prevent some items in the popup list from selecting. This can be achieved by dis
 
 In the following code, a single list Item is hidden using jsinterop.
 
-% highlight cshtml %}
+{% highlight cshtml %}
 
 {% include_relative code-snippet/style/disable-listitem.razor %}
 
@@ -270,4 +270,106 @@ In the following code, a single list Item is hidden using jsinterop.
 
 ![Blazor DropDownList with Popup Width](./images/style/blazor_dropdown_disable-listitem.png)
 
+## Properties
 
+### CssClass  
+
+Specifies the CSS class name that can be appended with the root element of the DropDownList. One or more custom CSS classes can be added to a DropDownList.
+
+Some of the possible values are
+
+* `e-success`, which denotes the component in success state that is added green color to the dropdownlist's input field.
+* `e-warning`, which denotes the component in warning state that is added orange color to the dropdownlist's input field.
+* `e-error`, which denotes the component in error state that is added red color to the dropdownlist's input field.
+* `e-outline`, which supports only in material theme.
+* `e-multi-column`, which provides two or more columns in the popup and the column will be aligned like grid.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/style/cssclass-properties.razor %}
+
+{% endhighlight %} 
+
+![Blazor DropDownList with CssClass property](./images/style/blazor_dropdown_cssclass-property.png)
+
+### HtmlAttributes  
+
+Allows additional HTML attributes such as title, name, etc., and accepts n number of attributes in a key-value pair format.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/html-attributes.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with different font family](./images/style/blazor_dropdown_html-attributes.png)
+
+### InputAttributes
+
+You can add the additional input attributes such as disabled, value, and more to the root element.
+
+If you configured both the property and equivalent input attribute, then the component considers the property value.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/properties/InputAttributes.razor %}
+
+{% endhighlight %} 
+
+![Blazor DropDownList with HtmlAttributes property](./images/style/blazor_dropdown_input-attributes-propety.png)
+
+### Readonly
+
+Specifies the boolean value whether the DropDownList allows the user to change the value.
+
+Default value of Readonly is `false`.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/readonly-mode.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with Readonly mode](./images/style/blazor_dropdown_readonly-mode.png)
+
+### TabIndex
+
+Specifies the tab order of the DropDownList component.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/style/tabIndex-property.razor %}
+
+{% endhighlight %}
+
+### ValueExpression
+
+Specifies the expression for defining the value of the bound.
+
+[Click to refer the code for ValueExpression](https://blazor.syncfusion.com/documentation/dropdown-list/how-to/tooltip)
+
+## Methods
+
+### HideSpinnerAsync()
+
+Hides the spinner loader.
+
+#### Declarations
+
+> public Task HideSpinnerAsync()
+
+### ShowSpinnerAsync()
+
+Shows the spinner loader.
+
+#### Declarations
+
+> public Task ShowSpinnerAsync()
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/style/show-or-hide-spinner.razor %}
+
+{% endhighlight %} 
+
+![Show or hide spinner in Blazor DropDownList](./images/style/blazor_dropdown_readonly-mode.png)

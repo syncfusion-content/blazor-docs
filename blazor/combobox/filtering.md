@@ -87,3 +87,29 @@ The ComboBox component filter queries can be customized. You can also use your o
     }
 }
 ```
+
+## Properties
+
+### AllowFiltering   
+
+When [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html) is set to `true`, filtering option is enabled in the component.
+
+The filter action retrieves matched items through the `Filtering` event based on the characters typed in the TextBox.
+
+Default value of `AllowFiltering` is `false`.
+
+[Click to refer the code for AllowFiltering](https://blazor.syncfusion.com/documentation/combobox/filtering)
+
+### Autofill
+
+Specifies whether suggest a first matched item in input when searching. No action happens when no matches found.
+
+Default value of [Autofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_Autofill) is `false`.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/filtering/autofill-property.razor %}
+
+{% endhighlight %} 
+
+![Blazor ComboBox with Autofill property](./images/filtering/blazor_combobox_with-autofill-property.png)
