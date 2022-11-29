@@ -11,7 +11,7 @@ documentation: ug
 
 The custom toolbar items can be added and customized using the `ToolbarSettings` API and `ToolbarCreated` events.
 
-The new toolbar button 'Custom' is added using `ToolbarSettings` property. Also, added prefix icon and tooltip to the newly added toolbar button using `ToolbarCreated` event.
+The new toolbar button 'Custom' is added using the `ToolbarSettings` property. The prefix icon and tooltip are added to the newly added toolbar button using the `ToolbarCreated` event.
 
 ```cshtml
 
