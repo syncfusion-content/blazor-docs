@@ -71,6 +71,8 @@ State persistence allows the Gantt chart to retain the current Gantt state in th
 }
 ```
 
+> No data is stored in local storage when the `EnablePersistance` is disabled.
+
 ## Handling gantt state manually
 
 You can manually handle the Gantt chart’s state by using built-in state persistence methods. You can use [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_GetPersistDataAsync), [SetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_SetPersistDataAsync_System_String_), and `ResetPersistDataAsync` methods of the Gantt chart to save, load, and reset the Gantt chart's persisted state, respectively.
