@@ -16,7 +16,7 @@ Value binding is the process of passing values between a component and its paren
 
 ## Bind value binding
 
-The value binding can be achieved by using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute and it supports `string`, `int`, `enum`, `bool` and `complex types`. If the component value has been changed, it will affect all places where you bind the variable for the `@bind-value` attribute.
+The value binding can be achieved by using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute and it supports `string`, `int`, `enum`, `bool` and `complex types`. If the component value has been changed, it will affect all places where you bind the variable for the `@bind-value` attribute. In order for the binding to work properly, the value assigned to the `@bind-value` attribute should be based on the field mapped to [DropDownListFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value)
 
 * **TValue** - Specifies the type of each list item of the dropdown component.
 
@@ -62,7 +62,7 @@ The following code demonstrates array of string as datasource to the DropDownLis
 
 {% highlight cshtml %}
 
-{% include_relative code-snippet/value-binding/primitive-type-string %}
+{% include_relative code-snippet/value-binding/primitive-type-string.razor %}
 
 {% endhighlight %}
 
@@ -72,7 +72,7 @@ The following code demonstrates array of int as datasource to the DropDownList c
 
 {% highlight cshtml %}
 
-{% include_relative code-snippet/value-binding/primitive-type-int %}
+{% include_relative code-snippet/value-binding/primitive-type-int.razor %}
 
 {% endhighlight %}
 
@@ -82,7 +82,7 @@ The following code demonstrates array of int as datasource to the DropDownList c
 
 Bind the Object data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute of the DropdownList component, this is, You can map the class name to `TValue`. 
 
-In the following example, the `Name` column has been mapped to the [`DropDownListFieldSettings.Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value).
+In the following example, the `Name` column has been mapped to the [DropDownListFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value).
 
 {% highlight cshtml %}
 

@@ -131,7 +131,7 @@ In the following example, the remote request does not fetch the search data unti
 
 {% endhighlight %}
 
-![Blazor DropdownList with Multi Column filtering](./images/filtering/blazor_dropdown_minimum-filter-length.png)
+![Blazor DropdownList with Minimum filter length](./images/filtering/blazor_dropdown_minimum-filter-length.png)
 
 ## Properties
 
@@ -174,3 +174,4 @@ To filter the data from given data source by using query.
 * [fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) - Specifies the fields.
 
 [Click to refer the code for FilterAsync](https://blazor.syncfusion.com/documentation/dropdown-list/filtering)
+
