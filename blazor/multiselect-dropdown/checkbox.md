@@ -261,8 +261,8 @@ Based on the state parameter, entire list item will be selected/deselected.
 
 #### parameter
 
-* TrueSelects entire list items.
-* FalseUn Selects entire list items.
+* True - Selects entire list items.
+* False -Un Selects entire list items.
 
 {% highlight Razor %}
 

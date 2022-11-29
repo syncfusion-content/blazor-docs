@@ -168,7 +168,7 @@ Use the following CSS to customize the color of checkbox.
 
 Specifies the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_CssClass) name that can be appended with the root element of the MultiSelect. One or more custom CSS classes can be added to a MultiSelect.
 
-Possible values are
+Some of the possible values are
 
 * `e-success`, which denotes the component in success state that is added green color to the dropdownlist's input field.
 * `e-warning`, which denotes the component in warning state that is added orange color to the dropdownlist's input field.

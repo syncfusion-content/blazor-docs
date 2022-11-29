@@ -54,11 +54,7 @@ You can arrange the datasource items by grouping them with checkbox mode in Mult
 
 ### EnableGroupCheckBox 
 
-Specifies a boolean value that indicates the whether the grouped list items are allowed to check by checking the group header in checkbox mode.
-
-By default, there is no checkbox provided for group headers.
-
-This property allows you to render checkbox for group headers and to select all the grouped items at once.
+Specifies a Boolean value that enables checkbox in the group header in checkbox mode. This property allows you to render checkbox for group headers and to select all the grouped items at once.
 
 Default value of [EnableGroupCheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_EnableGroupCheckBox) is `false`.
 
