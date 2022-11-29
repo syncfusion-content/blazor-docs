@@ -259,7 +259,6 @@ The TreeView component's **NavigateUrl** property is used to navigate from one p
 
 The following code example demonstrates how to customize the tree nodes as a hyperlink.
 
-
 ```cshtml
 
 @using Syncfusion.Blazor.Navigations

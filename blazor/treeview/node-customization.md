@@ -9,7 +9,7 @@ documentation: ug
 
 # Images in Blazor TreeView Component
 
-The Blazor TreeView component has the built-in option to customize each node's appearance with icons and images by mapping the **ImageUrl** fields.
+The Blazor TreeView component has the built-in option to customize each node's appearance with images by mapping the **ImageUrl** fields.
 
 In the following example, the **ImageUrl** property is used.
 
@@ -170,6 +170,7 @@ The default value of the `AllowTextWrap` property is false.
 In the following example, the `AllowTextWrap` property is enabled.
 
 ```cshtml
+@using Syncfusion.Blazor.Navigations
 <div style="width:500px">
     <SfTreeView TValue="MailItem" @ref="treeview" AllowTextWrap="true">
         <TreeViewFieldsSettings TValue="MailItem" Id="Id" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
@@ -226,7 +227,7 @@ In the following example, the `AllowTextWrap` property is enabled.
 }
 ```
 
-## Enable/Disable nodes on load in Blazor TreeView Component
+## Enable or Disable individual node on load in Blazor TreeView Component
 
 In the Blazor TreeView component, you are able to disable individual nodes on initial rendering by passing the particular node id inside the [DisableNodesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_DisableNodesAsync_System_String___) method in the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_Created) event. You can enable the disabled node by reverting the changes in the `Created` event.
 
@@ -295,18 +296,20 @@ In the Blazor TreeView component, you are able to disable individual nodes on in
 }
 ```
 
-## Enable/Disable nodes dynamically in Blazor TreeView Component
+## Enable or disable individual node programmatically in Blazor TreeView Component
 
 In the Blazor TreeView component, you are able to enable or disable individual nodes dynamically by passing the particular node id inside the [EnableNodeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_EnableNodesAsync_System_String___) and [DisableNodesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_DisableNodesAsync_System_String___) methods with a button click.
 
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Buttons
 <SfTreeView TValue="MailItem" @ref="tree">
     <TreeViewFieldsSettings TValue="MailItem" Id="Id" HtmlAttributes="HtmlAttributes" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
 </SfTreeView>
-<button @onclick="@DisableNode">TreeView DisableNode</button>
-<button @onclick="@EnableNode">TreeView EnableNode</button>
+<SfButton @onclick="DisableNode" CssClass="e-flat" IsPrimary="true">Disable Social node</SfButton>
+<SfButton @onclick="EnableNode" CssClass="e-flat" IsPrimary="true">Enable Social node</SfButton>
+
 @code {
     SfTreeView<MailItem> tree;
     public class MailItem
@@ -367,6 +370,162 @@ In the Blazor TreeView component, you are able to enable or disable individual n
     }
 }
 
+```
+
+## Show or Hide an individual node on load in Blazor TreeView Component
+
+In the Blazor TreeView component, you can show or hide particular TreeView nodes on initial rendering by adding or removing them from the data source. 
+
+The following code example demonstrates how to show or hide a particular TreeView node on initial rendering.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Buttons
+
+<SfTreeView TValue="MailItem">
+    <TreeViewFieldsSettings TValue="MailItem" DataSource="@MyFolder" Id="Id" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
+</SfTreeView>
+
+@code {
+    public string Content = "Hide Social node";
+    List<MailItem> MyFolder = new List<MailItem>();
+    MailItem showHideItem = new MailItem();
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        MyFolder.Add(new MailItem
+            {
+                Id = "1",
+                FolderName = "Root",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                Id = "2",
+                ParentId = "1",
+                FolderName = "Categories",
+                Expanded = true,
+                HasSubFolders = true
+            });
+        MyFolder.Add( new MailItem
+            {
+                Id = "3",
+                ParentId = "2",
+                FolderName = "Primary"
+            });
+        showHideItem=(new MailItem
+            {
+                Id = "4",
+                ParentId = "2",
+                FolderName = "Social"
+            });
+        //To hide the Social node during initial rendering, comment out the below line to remove it from the data source. 
+        MyFolder.Add(showHideItem);
+        MyFolder.Add(new MailItem
+            {
+                Id = "5",
+                ParentId = "2",
+                FolderName = "Promotions"
+            });
+
+    }
+
+    public class MailItem
+    {
+        public string Id { get; set; }
+        public string ParentId { get; set; }
+        public string FolderName { get; set; }
+        public bool Expanded { get; set; }
+        public bool HasSubFolders { get; set; }
+    
+    }
+}
+```
+
+## Show or Hide an individual node Programmatically in Blazor TreeView Component
+
+In the Blazor TreeView component, you can show or hide particular TreeView nodes dynamically on a button click by adding or removing them from the data source. 
+
+The following code example demonstrates how to show or hide a particular TreeView node dynamically.
+
+```cshtml
+<SfTreeView TValue="MailItem">
+    <TreeViewFieldsSettings TValue="MailItem" DataSource="@MyFolder" Id="Id" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
+</SfTreeView>
+
+<SfButton @onclick="onToggleClick" CssClass="e-flat" IsToggle="true" IsPrimary="true" Content="@Content"></SfButton>
+
+@code {
+    public string Content = "Hide Social node";
+    List<MailItem> MyFolder = new List<MailItem>();
+    MailItem showHideItem = new MailItem();
+
+    private void onToggleClick(MouseEventArgs args)
+    {
+        if (Content == "Hide Social node")
+        {
+            this.Content = "Show Social node";
+            MyFolder.Remove(showHideItem);
+        }
+        else
+        {
+            this.Content = "Hide Social node";
+            MyFolder.Insert(3, showHideItem);
+        }
+    }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        MyFolder.Add(new MailItem
+            {
+                Id = "1",
+                FolderName = "Root",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                Id = "2",
+                ParentId = "1",
+                FolderName = "Categories",
+                Expanded = true,
+                HasSubFolders = true
+            });
+        MyFolder.Add( new MailItem
+            {
+                Id = "3",
+                ParentId = "2",
+                FolderName = "Primary"
+            });
+        showHideItem=(new MailItem
+            {
+                Id = "4",
+                ParentId = "2",
+                FolderName = "Social"
+            });
+        MyFolder.Add(showHideItem);
+        MyFolder.Add(new MailItem
+            {
+                Id = "5",
+                ParentId = "2",
+                FolderName = "Promotions"
+            });
+
+    }
+
+    public class MailItem
+    {
+        public string Id { get; set; }
+        public string ParentId { get; set; }
+        public string FolderName { get; set; }
+        public bool Expanded { get; set; }
+        public bool HasSubFolders { get; set; }
+    
+    }
+}
 ```
 
 ## Enable Tooltip in Blazor TreeView Component
