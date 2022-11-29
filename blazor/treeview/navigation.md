@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Navigation in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about navigation in Syncfusion Blazor TreeView component and much more.
+description: Checkout and learn here all about the navigation in Syncfusion Blazor TreeView component and much more.
 platform: Blazor
 control: TreeView
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 The TreeView component's **NavigateUrl** property is used to navigate from one page to other pages with TreeView node selection.
 
-In the following example, the `NavigateUrl` property is enabled.
+In the following example, the `NavigateUrl` field is mapped.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -143,7 +143,7 @@ In the following example, the `FullRowNavigable` property is enabled.
 
 ## Handle processing on node click in Blazor TreeView Component
 
-In the Blazor TreeView component, when clicking on the TreeView node, you can get the TreeView nodes' id, text, and parent id using our NodeClicked event.
+In the Blazor TreeView component, when clicking on the TreeView node, you can get the TreeView nodes' id, text, and parent id using the [NodeClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeClicked) event.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

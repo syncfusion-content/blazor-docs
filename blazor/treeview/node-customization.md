@@ -530,7 +530,7 @@ The following code example demonstrates how to show or hide a particular TreeVie
 
 ## Enable Tooltip in Blazor TreeView Component
 
-TreeView control allows to set tooltip option to tree nodes using the **Tooltip** property. 
+The TreeView control allows to set tooltip option to tree nodes using the **Tooltip** property. 
 
 The following code example demonstrates how to set tooltip for TreeView nodes.
 
@@ -785,7 +785,7 @@ The following code example demonstrates how to customise the tooltip for TreeVie
 
 ## Get all nodes in Blazor TreeView Component
 
-In the Blazor TreeView component, you can get all TreeView node details using our GetTreeData method. The following code example demonstrates how to get the TreeView node's text values by clicking the button.
+In the Blazor TreeView component, you can get all TreeView node details using the [GetTreeData]() method. The following code example demonstrates how to get the TreeView node's text values by clicking the button.
 
 
 ```cshtml
