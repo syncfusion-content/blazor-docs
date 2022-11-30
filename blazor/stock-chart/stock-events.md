@@ -37,33 +37,41 @@ The [Description](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 @using Syncfusion.Blazor.Charts
 @using Newtonsoft.Json
+@using System.IO
+@using System.Runtime.Serialization
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
+@if (DataSource != null)
+{
+    <SfStockChart Title="AAPL Stock Price" SeriesType="@SeriesValue">
+        <StockChartStockEvents>
+            @foreach (StockEventDetails stockEvent in StockEvents)
+            {
+                <StockChartStockEvent Date=@stockEvent.Date Text=@stockEvent.Text Description=@stockEvent.Description Type=@stockEvent.Type Background=@stockEvent.Background ShowOnSeries=@stockEvent.ShowOnSeries>
+                    <StockChartStockEventsBorder Color=@stockEvent.BorderColor></StockChartStockEventsBorder>
+                    <StockChartStockEventsTextStyle Color=@stockEvent.TextColor></StockChartStockEventsTextStyle>
+                </StockChartStockEvent>
+            }
+        </StockChartStockEvents>
+        <StockChartPrimaryXAxis>
+            <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
+            <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
+        </StockChartPrimaryXAxis>
+        <StockChartPrimaryYAxis>
+            <StockChartAxisLineStyle Width="0"></StockChartAxisLineStyle>
+            <StockChartAxisMajorTickLines Width="0"></StockChartAxisMajorTickLines>
+            <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
+        </StockChartPrimaryYAxis>
+        <StockChartSeriesCollection>
+            <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.Spline"></StockChartSeries>
+        </StockChartSeriesCollection>
+        <StockChartChartArea>
+            <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
+        </StockChartChartArea>
+    </SfStockChart>
+}
 
-<SfStockChart Title="AAPL Stock Price" SeriesType="@SeriesValue">
-    <StockChartStockEvents>
-        @foreach (StockEventDetails stockEvent in StockEvents)
-        {
-            <StockChartStockEvent Date=@stockEvent.Date Text=@stockEvent.Text Description=@stockEvent.Description Type=@stockEvent.Type Background=@stockEvent.Background ShowOnSeries=@stockEvent.ShowOnSeries>
-                <StockChartStockEventsBorder Color=@stockEvent.BorderColor></StockChartStockEventsBorder>
-                <StockChartStockEventsTextStyle Color=@stockEvent.TextColor></StockChartStockEventsTextStyle>
-            </StockChartStockEvent>
-        }
-    </StockChartStockEvents>
-    <StockChartPrimaryXAxis>
-        <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
-        <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
-    </StockChartPrimaryXAxis>
-    <StockChartPrimaryYAxis>
-        <StockChartAxisLineStyle Width="0"></StockChartAxisLineStyle>
-        <StockChartAxisMajorTickLines Width="0"></StockChartAxisMajorTickLines>
-        <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
-    </StockChartPrimaryYAxis>
-    <StockChartSeriesCollection>
-        <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.Spline"></StockChartSeries>
-    </StockChartSeriesCollection>
-    <StockChartChartArea>
-        <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
-    </StockChartChartArea>
-</SfStockChart>
+
 @code{
 
     public class ChartData
@@ -97,7 +105,7 @@ The [Description](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
         GetStockEventsDetails();
         await Task.Run(() =>
         {
-            DataSource = JsonConvert.DeserializeObject<ChartData[]>(System.IO.File.ReadAllText("./wwwroot/data/chart-data.json"));
+            DataSource = await Http.GetFromJsonAsync<ChartData[]>(NavigationManager.BaseUri +"./chart-data.json");
         });
     }
 

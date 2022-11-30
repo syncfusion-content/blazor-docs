@@ -27,9 +27,9 @@ Following code example shows the [EnableSelector](https://help.syncfusion.com/cr
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price" EnableSelector="false">
+<SfStockChart Title="AAPL Stock Price" EnableSelector="true">
     <StockChartSeriesCollection>
-        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" Name="google"></StockChartSeries>
+        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="google"></StockChartSeries>
     </StockChartSeriesCollection>
 </SfStockChart>
 
@@ -37,12 +37,12 @@ Following code example shows the [EnableSelector](https://help.syncfusion.com/cr
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date {get; set;}
+        public Double Open {get; set;}
+        public Double Low {get; set;}
+        public Double Close {get; set;}
+        public Double High {get; set;}
+        public Double Volume {get; set;}
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
