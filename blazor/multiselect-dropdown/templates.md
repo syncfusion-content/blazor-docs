@@ -253,3 +253,23 @@ There is also an option to custom design the popup list content when the data fe
 ```
 
 ![Blazor MultiSelect DropDown with Action Template](./images/blazor-multiselect-dropdown-action-template.png)
+
+## Properties
+
+### FooterTemplate
+
+Accepts the template design and assigns it to the footer container of the popup list.
+
+[Click to refer the code for FooterTemplate](https://blazor.syncfusion.com/documentation/multiselect-dropdown/templates#footer-template)
+
+### HeaderTemplate
+
+Accepts the template design and assigns it to the header container of the popup list.
+
+[Click to refer the code for HeaderTemplate](https://blazor.syncfusion.com/documentation/multiselect-dropdown/templates#header-template)
+
+### ValueTemplate
+
+Accepts the template design and assigns it to the selected list item in the input element of the component.
+
+[Click to refer the code for ValueTemplate](https://blazor.syncfusion.com/documentation/multiselect-dropdown/templates#value-template)
