@@ -90,7 +90,7 @@ The ComboBox component filter queries can be customized. You can also use your o
 
 ## Prevent popup opening when filtering
 
-You can set [`BeforeOpenEventArgs.Cancel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.BeforeOpenEventArgs.html#Syncfusion_Blazor_DropDowns_BeforeOpenEventArgs_Cancel) property as true when filtering is done.
+This can be achieved by using [BeforeOpenEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.BeforeOpenEventArgs.html#Syncfusion_Blazor_DropDowns_BeforeOpenEventArgs_Cancel) argument. The `BeforeOpenEventArgs.Cancel` argument is set as `true` when filtering action takes place and `BeforeOpenEventArgs.Cancel` argument set as `false` when there is no filtering action. Filtering action can be identified using Filtering Event.
 
 {% highlight cshtml %}
 
@@ -98,7 +98,7 @@ You can set [`BeforeOpenEventArgs.Cancel`](https://help.syncfusion.com/cr/blazor
 
 {% endhighlight %}
 
-![Prevent Popup opening in filtering in Blazor ComboBox](./images/filtering/blazor_dropdown_prevent-popupopen.png)
+![Prevent Popup opening in filtering in Blazor ComboBox](./images/filtering/)
 
 ## Properties
 

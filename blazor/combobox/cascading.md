@@ -25,7 +25,7 @@ In this sample, if a country is selected from countries DropDownList, the respec
 
 ## Cascading with filtering 
 
-In this sample, if a country is selected from countries DropDownList, the respective StateID, CountryID and Capital are loaded in the below textbox.
+In this sample, if a country is selected from countries ComboBox then the respective StateID, CountryID and Capital are loaded in the below textbox.
 
 {% highlight cshtml %}
 

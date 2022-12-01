@@ -59,7 +59,7 @@ In the following sample, vegetables are grouped by category using the `GroupBy` 
 
 ## Text with firstName and LastName
 
-Text can be concatenated with firstName and LastName which is achieved by defining the new variable and pass the value with the desired format with the help of `get` and `set` method. 
+Text can be concatenated with firstName and LastName which can be achieved by defining the new variable and passing the value with the desired format with the help of `get` and `set` method. 
 
 {% highlight cshtml %}
 

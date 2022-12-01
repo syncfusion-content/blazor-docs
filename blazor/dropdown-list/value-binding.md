@@ -222,7 +222,7 @@ Here, the DropDownList component is rendered with the TValue as a string type in
 
 ## Dynamically changing TItem using Templates
 
-You can render the DropDownList component with [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) and [ValueTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ValueTemplate) with help of RenderFragment.
+Here, the DropDownList component is rendered with the TValue as a string type in the `/Index.razor` file and the DropDownList component with TValue as an int nullable type in the `/Counter.razor` file using [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) and [ValueTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ValueTemplate).
 
 **[Index.razor]**
 

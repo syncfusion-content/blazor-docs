@@ -97,18 +97,6 @@ Trigger the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% endhighlight %}
 
-## Dropdown List with int type
-
-You can use [DropDownListFieldSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListFieldSettings.html) with `TValue` as int type demonstrated in the following code.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/selection/dropdownlist-with-int-type.razor %}
-
-{% endhighlight %}
-
-![Blazor DropDownList with int type](./images/selection/blazor_dropdown_with-int-type.png)
-
 ## Events
 
 ### ValueChange event
