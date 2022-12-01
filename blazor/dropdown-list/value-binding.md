@@ -220,6 +220,102 @@ Here, the DropDownList component is rendered with the TValue as a string type in
 {% endhighlight razor %}
 {% endtabs %}
 
+## Dynamically changing TItem using Templates
+
+You can render the DropDownList component with [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) and [ValueTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ValueTemplate) with help of RenderFragment.
+
+**[Index.razor]**
+
+{% tabs %}
+{% highlight razor %}
+
+<DropDownList TVal="string" TItemss="Games" @bind-DDLValue="@value" customData="@LocalData">
+    <itemTemplate Context="data">
+        <div>@data.Text</div>
+    </itemTemplate>
+    <valueTemplate Context="model">
+        <div>@model.Text - @model.ID</div>
+    </valueTemplate>
+</DropDownList>
+
+@code{
+    public string value { get; set; }
+    public class Games
+    {
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+    List<Games> LocalData = new List<Games> {
+new Games() { ID= "Game1", Text= "American Football" },
+new Games() { ID= "Game2", Text= "Badminton" },
+new Games() { ID= "Game3", Text= "Basketball" },
+new Games() { ID= "Game4", Text= "Cricket" },
+new Games() { ID= "Game5", Text= "Football" },
+new Games() { ID= "Game6", Text= "Golf" },
+new Games() { ID= "Game7", Text= "Hockey" },
+new Games() { ID= "Game8", Text= "Rugby"},
+new Games() { ID= "Game9", Text= "Snooker" },
+new Games() { ID= "Game10", Text= "Tennis"},
+  };
+}
+
+{% endhighlight razor %}
+{% endtabs %}
+
+**[Counter.razor]**
+
+{% tabs %}
+{% highlight razor %}
+@using Syncfusion.Blazor.DropDowns;
+@typeparam TVal;
+@typeparam TItemss;
+
+<SfDropDownList TValue="TVal" TItem="TItemss" @bind-Value="@DDLValue" DataSource="@customData" ItemTemplate="@itemTemplate" ValueTemplate="@valueTemplate">
+    <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
+</SfDropDownList>
+
+@code {
+
+    [Parameter]
+    public List<TItemss> customData { get; set; }
+    [Parameter]
+
+    public TVal DDLValue { get; set; }
+    [Parameter]
+    public EventCallback<TVal> DDLValueChanged { get; set; }
+    [Parameter]
+    public RenderFragment<TItemss> itemTemplate { get; set; }
+    [Parameter]
+    public RenderFragment<TItemss> valueTemplate { get; set; }
+    }
+
+{% endhighlight razor %}
+{% endtabs %}
+
+## Customizing TItem using action keyword
+
+In the following code snippet, action keyword is using in the `TItem` of the dropdown list.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/value-binding/customize-TItem.razor %}
+
+{% endhighlight %}
+
+![Blazor DropdownList with Complex data type of Customizing TItem](./images/values-binding/blazor_dropdown_customize-TItem.png)
+
+## Two way binding
+
+The strongly type support and two-way binding support has been provided for Dropdownlist . Therefore, `@bind` attribute needs to be specified for Value property so that when every value gets changed, changed value will be updated in the bound variable.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/data-binding/two-way-binding.razor %}
+
+{% endhighlight %}
+
+![Blazor DropdownList with Two way binding](./images/value-binding/blazor_dropdown_two-way-binding.png)
+
 ## Properties
 
 ### Index

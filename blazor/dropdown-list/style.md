@@ -201,6 +201,18 @@ The following code demonstrates how to display a tooltip when hovering over the 
 
 ![Blazor DropDownList with tooltip](./images/style/blazor-dropdownlist-tooltip.png)
 
+### Tooltip using HTMLAttribute in dropdown component
+
+To display the tooltip in dropdown component, you need to add the title attribute through HtmlAttributes property, which update the attribute to the root element `input`
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/default-tooltip.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with tooltip](./images/style/blazor_dropdown_default-tooltip.png)
+
 ## Customize selected item opacity
 
 Set the opacity to the selected item using the following selector.
@@ -269,6 +281,64 @@ In the following code, a single list Item is hidden using jsinterop.
 {% endtabs %}
 
 ![Blazor DropDownList with Popup Width](./images/style/blazor_dropdown_disable-listitem.png)
+
+## Adding conditional HTML attribute to list item
+
+You can achieve adding attributes to the li items based on datasource value with the help of JSInterop. In the, Opened event need to call the client side script by passing the required arguments (datasource and id) and add the attributes based on the datasource value obtained from the server.
+
+% highlight cshtml %}
+
+{% include_relative code-snippet/style/add-attribute-listitem.razor %}
+
+{% endhighlight %}
+
+{% tabs %}
+{% highlight razor tabtitle="~/_Layout.cshtml" %}
+
+    <script> 
+        function OnCreated(datasource, id) { 
+            setTimeout(() => { 
+                //Here popup element is uniquely identified with id. 
+                //Classes added via CssClass property will be added to the popup element also. 
+                //You can also uniquely identify the popup element with the help of added class. 
+                console.log(document.getElementById(id + "_popup")); 
+                var listItems = document.getElementById(id + "_popup").querySelectorAll('li'); 
+                for (var i = 0; i < listItems.length; i++) { 
+                    listItems[i].setAttribute(Object.keys(datasource[i])[2], datasource[i].isAvailable) 
+                } 
+            }, 100) 
+ 
+        } 
+    </script>
+
+{% endhighlight %}
+{% endtabs %}
+
+![Adding attribute to listitem in dropdown list](./images/style/blazor_dropdown_add-attribute-listitem.png)
+
+## Displaying dropdown List in Tab
+
+You can achieve this by rendering the dropdown list inside the SfTab
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/dropdown-in-tabview.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with tooltip](./images/style/blazor_dropdown-in-tabview.png)
+
+## Dropdownlist inside Dialog
+
+You can achieve this by rendering dropdownlist inside the SfDialog
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/dropdown-inside-dialog.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with tooltip](./images/style/blazor_dropdown_inside-dialog.gif)
 
 ## Properties
 
