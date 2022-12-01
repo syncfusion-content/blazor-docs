@@ -3,7 +3,7 @@ layout: post
 title: Icons in Blazor Floating Action Button Component | Syncfusion
 description: Checkout and learn here all about Icons in Syncfusion Blazor Floating Action Button component and much more details.
 platform: Blazor
-control: Floating Action Button
+control: FloatingActionButton
 documentation: ug
 ---
 

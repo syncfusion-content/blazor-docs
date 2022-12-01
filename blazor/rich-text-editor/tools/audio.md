@@ -7,7 +7,7 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Insert Audio in Blazor RichTextEditor Component
+# Insert Audio in RichTextEditor
 
 The Rich Text Editor allows inserting audio files from online sources and the local computer where you want to insert the audio in your content. For inserting audio into the Rich Text Editor, the following list of options has been provided in the [RichTextEditorAudioSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorAudioSettings.html).
 
@@ -182,8 +182,6 @@ Once you select the audio from the local machine, the URL for the audio will be 
 ## Display Position
 
 Sets the default display for an audio file when it is inserted in the Rich Text Editor using the [RichTextEditorMediaSettings.layoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_LayoutOption) property. The possible options are `inline` and `break.` It also updates the audio elements’ layout position when updating the display positions.
-
-> The default `layoutOption` property is set to `Inline`.
 
 {% tabs %}
 {% highlight cshtml %}
