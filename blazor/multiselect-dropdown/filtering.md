@@ -125,7 +125,7 @@ Accepts the value to be displayed as a watermark text on the filter bar. [Filter
 
 {% highlight Razor %}
 
-{% include_relative code-snippet/filtering/filterBarPlaceholder-propertyr.razor %}
+{% include_relative code-snippet/filtering/filterBarPlaceholder-property.razor %}
 
 {% endhighlight %} 
 
@@ -133,7 +133,7 @@ Accepts the value to be displayed as a watermark text on the filter bar. [Filter
 
 ## Methods
 
-### FilterAsync(IEnumerable<TItem>, Query, FieldSettingsModel)        --> filtering
+### FilterAsync(IEnumerable<TItem>, Query, FieldSettingsModel)
 
 To filter the data from given data source by using query.
 
