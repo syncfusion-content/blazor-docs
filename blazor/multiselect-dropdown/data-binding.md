@@ -80,7 +80,7 @@ Default value of [MaximumSelectionLength](https://help.syncfusion.com/cr/blazor/
 
 {% highlight Razor %}
 
-{% include_relative code-snippet/properties/MaximumSelectionLength.razor %}
+{% include_relative code-snippet/properties/maximumSelectionLength-property.razor %}
 
 {% endhighlight %}
 
