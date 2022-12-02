@@ -275,7 +275,7 @@ Highlight the searched characters on suggested list items.
 
 {% highlight Razor %}
 
-{% include_relative code-snippet/methods/HighLightSearch.razor %}
+{% include_relative code-snippet/filtering/highLightSearch-method.razor %}
 
 {% endhighlight %} 
 

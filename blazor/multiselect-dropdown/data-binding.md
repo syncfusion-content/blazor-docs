@@ -80,7 +80,7 @@ Default value of [MaximumSelectionLength](https://help.syncfusion.com/cr/blazor/
 
 {% highlight Razor %}
 
-{% include_relative code-snippet/properties/maximumSelectionLength-property.razor %}
+{% include_relative code-snippet/data-binding/maximumSelectionLength-property.razor %}
 
 {% endhighlight %}
 
@@ -92,7 +92,7 @@ Selects the list item which maps the data [Text](https://help.syncfusion.com/cr/
 
 {% highlight Razor %}
 
-{% include_relative code-snippet/properties/Text.razor %}
+{% include_relative code-snippet/data-binding/text-property.razor %}
 
 {% endhighlight %}
 
@@ -130,7 +130,7 @@ Gets the array of data Object that matches the given array of values.
 
 {% highlight Razor %}
 
-{% include_relative code-snippet/data-binding/getDataByValueAsync-method.razor %}
+{% include_relative code-snippet/data-binding/getDataByValue-method.razor %}
 
 {% endhighlight %}
 
