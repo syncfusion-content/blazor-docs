@@ -433,8 +433,6 @@ Remove the focus from the MultiSelect component, if the component is in focus st
 
 {% endhighlight %}
 
-![Blazor MultiSelect DropDown with Focus in and out method](./images/style/blazor_multiselect_focus-in-out-method.gif)
-
 ### HidePopupAsync()
 
 Hides the popup if it is in an open state.
@@ -456,8 +454,6 @@ Opens the popup that displays the list of items.
 {% include_relative code-snippet/style/show-hide-popupAsync-method.razor %}
 
 {% endhighlight %}
-
-![Blazor MultiSelect DropDown with show hide popup method](./images/style/blazor_multiselect_show-hide-popupAsync-method.gif)
 
 ### HideSpinner()
 
