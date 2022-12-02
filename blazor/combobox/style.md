@@ -176,7 +176,7 @@ Default value of [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfus
 
 {% highlight cshtml %}
 
-{% include_relative code-snippet/style/show-clear-button.razor %}
+{% include_relative code-snippet/style/showClearButton-property.razor %}
 
 {% endhighlight %}
 
