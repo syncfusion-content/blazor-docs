@@ -267,7 +267,7 @@ If you configured both the property and equivalent input attribute, then the com
 
 {% highlight Razor %}
 
-{% include_relative code-snippet/properties/inputAttributes-property.razor %}
+{% include_relative code-snippet/style/inputAttributes-property.razor %}
 
 {% endhighlight %}
 
@@ -281,7 +281,7 @@ Default value of [OpenOnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 {% highlight Razor %}
 
-{% include_relative code-snippet/properties/OpenOnClick.razor %}
+{% include_relative code-snippet/style/openOnClick-property.razor %}
 
 {% endhighlight %}
 

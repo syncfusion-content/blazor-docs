@@ -312,7 +312,7 @@ If you configured both the property and equivalent input attribute, then the com
 
 {% highlight Razor %}
 
-{% include_relative code-snippet/properties/InputAttributes.razor %}
+{% include_relative code-snippet/style/inputAttributes-property.razor %}
 
 {% endhighlight %} 
 
@@ -368,7 +368,7 @@ Shows the spinner loader.
 
 {% highlight Razor %}
 
-{% include_relative code-snippet/style/show-or-hide-spinner.razor %}
+{% include_relative code-snippet/style/show-or-hide-spinner-method.razor %}
 
 {% endhighlight %} 
 
