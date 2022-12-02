@@ -7,7 +7,7 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Insert Video in RichTextEditor
+# Insert Video in Blazor RichTextEditor Component
 
 Once a video file has been inserted, replace it using the Rich Text Editor [RichTextEditorQuickToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorQuickToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorQuickToolbarSettings_Audio) `Replace` option. Replace the video file either by using the embedded URL or the web URL and the browse option in the video dialog.
 
@@ -204,6 +204,8 @@ Change the width and height of the [RichTextEditorQuickToolbarSettings](https://
 ## Display Position
 
 Sets the default display for an video when it is inserted in the Rich Text Editor using the [RichTextEditorMediaSettings.layoutOption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_LayoutOption). It has two possible options: `Inline` and `Break`. When updating the display positions, it updates the video elements’ layout position.
+
+> The default `layoutOption` property is set to `Inline`.
 
 {% tabs %}
 {% highlight cshtml %}

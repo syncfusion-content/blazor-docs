@@ -125,7 +125,7 @@ Gantt Chart is a generic component which is strongly bound to a model type. Ther
 @using Syncfusion.Blazor.Gantt
 @using System.Dynamic
 
-<SfGantt DataSource="@GanttDynamicData" Height="500px" Width="1000px" HighlightWeekends="true">
+<SfGantt DataSource="@GanttDynamicData" Height="500px" Width="100%" HighlightWeekends="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" Progress="Progress" Duration="Duration" ParentID="ParentId"></GanttTaskFields>
     <GanttColumns>
         <GanttColumn Field="TaskId" HeaderText="Task ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GanttColumn>
@@ -157,12 +157,15 @@ Gantt Chart is a generic component which is strongly bound to a model type. Ther
         ChildRecordID = 0;
         for (var i = 1; i <= 10; i++)
         {
+            Random ran = new Random();
             DateTime start = new DateTime(2022, 01, 07);
+            int range = (DateTime.Today - start).Days;
+            DateTime startingDate = start.AddDays(ran.Next(range));
             dynamic ParentRecord = new DynamicDictionary();
             ParentRecord.TaskId = ++ParentRecordID;
             ParentRecord.TaskName = "Parent Task " + i;
-            ParentRecord.StartDate = start.AddDays(i*ParentRecordID);
-            ParentRecord.Progress = ((i*i)/(i*2)) + (i*10);
+            ParentRecord.StartDate = startingDate;
+            ParentRecord.Progress = ran.Next(10, 100);
             ParentRecord.Duration = ParentRecordID % 2 == 0 ? (32).ToString() : (76).ToString();
             ParentRecord.ParentId = null;
             Data.Add(ParentRecord);
@@ -175,12 +178,15 @@ Gantt Chart is a generic component which is strongly bound to a model type. Ther
     {
         for (var i = 1; i < 4; i++)
         {
+            Random ran = new Random();
             DateTime start = new DateTime(2022, 01, 07);
+            int range = (DateTime.Today - start).Days;
+            DateTime startingDate = start.AddDays(ran.Next(range));
             dynamic ChildRecord = new DynamicDictionary();
             ChildRecord.TaskId = ++ParentRecordID;
             ChildRecord.TaskName = "Child Task " + ++ChildRecordID;
-            ChildRecord.StartDate = start.AddDays(i*ParentRecordID);
-            ChildRecord.Progress = ((i*i)/(i*2)) + (i*10);
+            ChildRecord.StartDate = startingDate;
+            ChildRecord.Progress = ran.Next(10, 100);
             ChildRecord.Duration = ParentRecordID % 3 == 0 ? (64).ToString() : (98).ToString();
             ChildRecord.ParentId = ParentId;
             Data.Add(ChildRecord);
@@ -217,6 +223,7 @@ Gantt is a generic component which is strongly bound to a model type. There are 
 ExpandoObject can be bound to Gantt by assigning to the `DataSource` property. Gantt can also perform all kind of supported data operations and editing in ExpandoObject.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Gantt
 
 <SfGantt TValue="ExpandoObject" DataSource="@TreeData" @ref="Gantt" Height="450px" Width="700px">
@@ -243,12 +250,15 @@ ExpandoObject can be bound to Gantt by assigning to the `DataSource` property. G
         ChildRecordID = 0;
         for (var i = 1; i <= 60; i++)
         {
+            Random ran = new Random();
             DateTime start = new DateTime(2022, 03, 07);
+            int range = (DateTime.Today - start).Days;
+            DateTime startingDate = start.AddDays(ran.Next(range));
             dynamic ParentRecord = new ExpandoObject();
             ParentRecord.TaskID = ++ParentRecordID;
             ParentRecord.TaskName = "Parent Task " + i;
-            ParentRecord.StartDate = start.AddDays(i*ParentRecordID);
-            ParentRecord.Progress = (i* ParentRecordID)% 5 * i *2;
+            ParentRecord.StartDate = startingDate;
+            ParentRecord.Progress = ran.Next(10, 100);
             ParentRecord.Duration = ParentRecordID % 2 == 0 ? (32).ToString() : (76).ToString();
             ParentRecord.ParentID = null;
             Data.Add(ParentRecord);
@@ -260,12 +270,15 @@ ExpandoObject can be bound to Gantt by assigning to the `DataSource` property. G
     {
         for (var i = 1; i < 4; i++)
         {
+            Random ran = new Random();
             DateTime start = new DateTime(2022, 03, 07);
+            int range = (DateTime.Today - start).Days;
+            DateTime startingDate = start.AddDays(ran.Next(range));
             dynamic ChildRecord = new ExpandoObject();
             ChildRecord.TaskID = ++ParentRecordID;
             ChildRecord.TaskName = "Child Task " + ++ChildRecordID;
-            ChildRecord.StartDate = start.AddDays(i*ParentRecordID);
-            ChildRecord.Progress = (i* ParentRecordID)% 5 * i *2;
+            ChildRecord.StartDate = startingDate;
+            ChildRecord.Progress = ran.Next(10, 100);
             ChildRecord.Duration = ParentRecordID % 3 == 0 ? (64).ToString() : (98).ToString();
             ChildRecord.ParentID = ParentId;
             Data.Add(ChildRecord);
