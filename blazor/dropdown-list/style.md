@@ -203,7 +203,7 @@ The following code demonstrates how to display a tooltip when hovering over the 
 
 ### Tooltip using HTMLAttribute in dropdown component
 
-To display the tooltip in dropdown component, you need to add the title attribute through HtmlAttributes property, which update the attribute to the root element `input`
+To display the tooltip in the dropdown component, add the title attribute through the HtmlAttributes property, which updates the attribute to the root element `input`.
 
 {% highlight cshtml %}
 
@@ -284,7 +284,7 @@ In the following code, a single list Item is hidden using jsinterop.
 
 ## Adding conditional HTML attribute to list item
 
-You can achieve adding attributes to the li items based on datasource value with the help of JSInterop. In the, Opened event need to call the client side script by passing the required arguments (datasource and id) and add the attributes based on the datasource value obtained from the server.
+This is achieved by adding attributes to the li items based on the data source value with the help of the JSInterop. In the opened event, call the client-side script by passing the required arguments (data source and id) and adding the attributes based on the data source value obtained from the server.
 
 % highlight cshtml %}
 
@@ -298,9 +298,9 @@ You can achieve adding attributes to the li items based on datasource value with
     <script> 
         function OnCreated(datasource, id) { 
             setTimeout(() => { 
-                //Here popup element is uniquely identified with id. 
+                //Here, the popup element is uniquely identified with an id 
                 //Classes added via CssClass property will be added to the popup element also. 
-                //You can also uniquely identify the popup element with the help of added class. 
+                //You can also uniquely identify the popup element with the help of the added classes. 
                 console.log(document.getElementById(id + "_popup")); 
                 var listItems = document.getElementById(id + "_popup").querySelectorAll('li'); 
                 for (var i = 0; i < listItems.length; i++) { 
@@ -318,7 +318,7 @@ You can achieve adding attributes to the li items based on datasource value with
 
 ## Displaying dropdown List in Tab
 
-You can achieve this by rendering the dropdown list inside the SfTab
+Achieve this by rendering the dropdown list inside the SfTab.
 
 {% highlight cshtml %}
 
@@ -330,7 +330,7 @@ You can achieve this by rendering the dropdown list inside the SfTab
 
 ## Dropdownlist inside Dialog
 
-You can achieve this by rendering dropdownlist inside the SfDialog
+Achieve this by rendering the dropdownlist inside the SfDialog.
 
 {% highlight cshtml %}
 

@@ -11,7 +11,7 @@ documentation: ug
 
 ## ComboBox inside edit form
 
-EditForm validates all data annotation rules using `DataAnnotationsValidator`. Type or choose the value from the dropdown popup and if the value is valid, then the given input will be ready to submit. Otherwise, an error message will be shown until you choose the valid value. 
+The `EditForm` validates all data annotation rules using the `DataAnnotationsValidator`. Type or choose the value from the ComboBox popup. The given input will be ready to submit if the value is valid. Otherwise, an error message will be shown until you choose the valid value.
 
 {% highlight cshtml %}
 
@@ -23,7 +23,7 @@ EditForm validates all data annotation rules using `DataAnnotationsValidator`. T
 
 ## Form validation using injectable datasource
 
-ComboBox component inside Edit form with required field validation with the injectable datasource is mentioned in the below sample.
+The ComboBox component inside the Edit form with the required field validation and with the injectable datasource is mentioned in the following sample.
 
 {% highlight cshtml %}
 

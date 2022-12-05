@@ -342,7 +342,7 @@ Add the new item in the popup with the help of [AddItemsAsync](https://help.sync
 
 ## Getting datasource of dropdown list
 
-You can get the `datasource` from the component instance. In the below sample rendered with button click in which you will get the data form component instance.
+Get the `datasource` from the component instance. You will get the data from the component instance in the following sample rendered with a button click.
 
 {% highlight cshtml %}
 
