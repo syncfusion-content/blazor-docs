@@ -38,4 +38,4 @@ The following code represents how to check the editing status of the document.
 }
 ```
 
-> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Document%20Editing%20Status/Document%20Editing%20Status).
+> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Document%20editing%20status).

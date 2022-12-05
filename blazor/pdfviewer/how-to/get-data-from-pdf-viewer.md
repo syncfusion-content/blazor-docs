@@ -45,4 +45,4 @@ The following code example shows how to get the loaded/edited document data and 
     }    
 }
 ```
-> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Save%20and%20Load/Retrieve%20loaded%20document).
+> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Get%20the%20PDF%20document%20as%20a%20byte%20array).
