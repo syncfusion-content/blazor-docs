@@ -153,7 +153,7 @@ N> Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/docume
 {% endhighlight %}
 {% endtabs %}
 
-> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/Simple%20Sample%20PDFViewer%20-%20Wasm).
+> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/Client-side%20application).
 
 ## Server side processing
 
@@ -205,4 +205,4 @@ Refer,[How to create PDF Viewer Web Service](https://www.syncfusion.com/kb/11063
 }
 ```
 
-> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/DocumentPath/Load%20desired%20PDF%20using%20WebService%20-Wasm).
+> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20file%20using%20local%20service).
