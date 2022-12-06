@@ -340,6 +340,16 @@ Add the new item in the popup with the help of [AddItemsAsync](https://help.sync
 
 ![Blazor DropdownList with adding new Item](./images/data-binding/blazor_dropdown_add-new-item.png)
 
+## Getting datasource of dropdown list
+
+Get the `datasource` from the component instance. You will get the data from the component instance in the following sample rendered with a button click.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/data-binding/get-datasource.razor %}
+
+{% endhighlight %}
+
 ## Events
 
 ### DataBound event

@@ -35,6 +35,17 @@ Use the following CSS to customize the DatePicker icon element
 }
 ```
 
+## Adding backgroud color to DatePicker container element
+
+Use the following CSS selector to add color to the DatePicker container element.
+
+```css
+/* To specify height and font size */
+.e-input-group input.e-input, .e-input-group.e-control-wrapper input.e-input {
+        background-color: green; 
+}
+```
+
 ## Customizing the Calendar popup of the DatePicker
 
 ### Mobile mode full screen calendar popup in material theme

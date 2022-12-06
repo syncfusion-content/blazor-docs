@@ -220,6 +220,18 @@ Here, the DropDownList component is rendered with the TValue as a string type in
 {% endhighlight razor %}
 {% endtabs %}
 
+## Two way binding
+
+Strong type support and two-way binding support have been provided for the Dropdownlist. Therefore, the `@bind` attribute needs to be specified for the Value property so that when every value gets changed, the changed value will be updated in the bound variable.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/data-binding/two-way-binding.razor %}
+
+{% endhighlight %}
+
+![Blazor DropdownList with Two way binding](./images/value-binding/blazor_dropdown_two-way-binding.png)
+
 ## Properties
 
 ### Index
