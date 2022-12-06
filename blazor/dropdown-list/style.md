@@ -318,7 +318,7 @@ This is achieved by adding attributes to the li items based on the data source v
 
 ## Displaying dropdown List in Tab
 
-Achieve this by rendering the dropdown list inside the SfTab.
+In tab view, a dropdownlist can be presented. This may be accomplished by displaying the dropdown list within the SfTab.
 
 {% highlight cshtml %}
 
@@ -330,7 +330,7 @@ Achieve this by rendering the dropdown list inside the SfTab.
 
 ## Dropdownlist inside Dialog
 
-Achieve this by rendering the dropdownlist inside the SfDialog.
+Within a dialog popup, a dropdownlist can be displayed. This can be accomplished by presenting the dropdownlist within the SfDialog.
 
 {% highlight cshtml %}
 
