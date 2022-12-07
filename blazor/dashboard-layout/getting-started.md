@@ -11,6 +11,10 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Dashboard Layout](https://www.syncfusion.com/blazor-components/blazor-dashboard) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
+To get started quickly with Blazor Dashboard Layout component, you can check the video below.
+
+`youtube:K6i0KU7tbLQ`
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
