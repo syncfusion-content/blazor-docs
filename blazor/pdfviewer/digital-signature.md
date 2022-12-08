@@ -21,5 +21,3 @@ The following code explains how to disable the ShowDigitalSignatureAppearance in
              ShowDigitalSignatureAppearance="false">
 </SfPdfViewer>
 ```
-
-![Digital Signature without appearance](../pdfviewer/images/blazor-pdfviewer-digital-sign-false.png)
