@@ -100,4 +100,40 @@ public string DocumentPath { get; set; } = "wwwroot/data/FormFillingDocument.pdf
 }
 ```
 
+## Export and import FormFields to and from stream
+
+The PDF Viewer control provides the support to export and import the form field data in the following formats using the ‘ImportFormFieldsAsync’,’ ExportFormFieldsAsync’, and ‘FormFieldDataFormat’ API’s.
+
+* JSON
+* FDF
+* XFDF
+* XML
+
+>N The form field data will be exported as stream and that data from the stream will be imported in to the current PDF document.
+
+The following code shows how to export the form field data as stream and import the form fields data from the stream into the current PDF document via button click.
+
+```cshtml
+<SfButton OnClick="@importFormFieldAsStream">Import JSON</SfButton>
+<SfButton OnClick="@exportFormFieldAsStream">Export JSON</SfButton>
+<SfPdfViewerServer @ref=Viewer DocumentPath="@DocumentPath" />
+@code {
+    SfPdfViewerServer Viewer;
+    public string DocumentPath { get; set; } = "wwwroot/data/FormDesigner.pdf";
+    Stream stream;
+    //Event triggers while clicking the Export JSON button.
+    public async void exportFormFieldAsStream()
+    {
+        //Export the form fields data as stream.
+        stream = await Viewer.ExportFormFieldsAsync(FormFieldDataFormat.Json);
+    }
+    //Event triggers while clicking the Import JSON button.
+    public async void importFormFieldAsStream()
+    {
+        //Import the form fields data from the stream into the current PDF document.
+        await Viewer.ImportFormFieldsAsync(stream, FormFieldDataFormat.Json);
+    }
+}
+```
+
 > You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.
