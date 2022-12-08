@@ -28,7 +28,7 @@ container.DocumentEditor.Editor.InsertFormFieldAsync(FormFieldType.DropDown);
 
 ## Get form field names
 
-All the form fields names form current document can be retrieved using `GetFormFieldNamesAsync()`.
+All the form fields names form current document can be retrieved using [`GetFormFieldNamesAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_GetFormFieldNamesAsync).
 
 ```csharp
 Task<List<string>> formFieldsNames = container.DocumentEditor.GetFormFieldNamesAsync();
