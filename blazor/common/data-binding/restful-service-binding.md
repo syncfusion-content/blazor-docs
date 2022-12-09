@@ -384,7 +384,7 @@ Now, in the **Browse** tab, search and install the **Syncfusion.Blazor.Grid** Nu
 
 ![Add Syncfusion package in Blazor](../images/odata-syncfusion-package.png)
 
-> For this demo, Syncfusion.Blazor(**19.1.0.66**) NuGet package is used. A new **Syncfusion.Blazor** NuGet package with new enhancement has been released in our every-week release and main release. So, you can check and update to the latest versions by using this [link](https://www.nuget.org/packages/Syncfusion.Blazor).
+N> For this demo, Syncfusion.Blazor(**19.1.0.66**) NuGet package is used. A new **Syncfusion.Blazor** NuGet package with new enhancement has been released in our every-week release and main release. So, you can check and update to the latest versions by using this [link](https://www.nuget.org/packages/Syncfusion.Blazor).
 
 Open **_Import.razor** file and add the following namespaces which are required to use Syncfusion Blazor components in this application.
 
@@ -439,7 +439,7 @@ To consume data from the OData Controller, you need to add the **SfDataManager**
 
 {% endhighlight %}
 
-> In the above code example, we have used our localhost address from our application. Instead of localhost, you can give the exact URL of your OData service.
+N> In the above code example, we have used our localhost address from our application. Instead of localhost, you can give the exact URL of your OData service.
 
 Grid columns can be defined by using the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. We are going to create columns using the following code.
 
@@ -502,7 +502,7 @@ We have added the DataGrid Editing and Toolbar code with previous Grid model.
 
 {% endhighlight %}
 
-> Normal editing is the default edit mode for the DataGrid component. Set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property of Column as **true** for a particular column, whose value is a unique value for editing purposes.
+N> Normal editing is the default edit mode for the DataGrid component. Set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property of Column as **true** for a particular column, whose value is a unique value for editing purposes.
 
 ### Insert a row
 
@@ -568,4 +568,4 @@ public long Delete([FromODataUri] long key)
 
 {% endhighlight %}
 
-> Find the sample from this [Github](https://github.com/SyncfusionExamples/binding-odata-services-and-perform-crud) location.
+N> Find the sample from this [Github](https://github.com/SyncfusionExamples/binding-odata-services-and-perform-crud) location.
