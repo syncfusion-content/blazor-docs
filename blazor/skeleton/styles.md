@@ -36,7 +36,7 @@ You can customize the style of a Skeleton component by using [CssClass](https://
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Skeleton CssClass](./images/Blazor-skeleton-customize.png)
+![Blazor Skeleton CssClass](./images/Blazor-skeleton-css-customize.png)
 
 ## Visible
 

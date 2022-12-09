@@ -11,7 +11,7 @@ documentation: ug
 
 [Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) component (a.k.a Document Editor) provides built-in support for clipboard operations such as cut, copy, and paste. You can perform the clipboard operations using keyboard shortcuts, touch, and keyboard interactions. Also, the same functionalities can be invoked programmatically.
 
-There is a built-in clipboard (local clipboard) with this Word processor component, which allows the users to perform cut, copy, and paste faster. If you want to use system clipboard instead of local clipboard, turn off the local clipboard by setting the `EnableLocalPaste` to false.
+There is a built-in clipboard (local clipboard) with this Word processor component, which allows the users to perform cut, copy, and paste faster. If you want to use system clipboard instead of local clipboard, turn off the local clipboard by setting the [`EnableLocalPaste`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_EnableLocalPaste) to false.
 
 If you need to copy or paste the contents from other applications, use system clipboard. To copy or paste the contents within the Word processor component, use local clipboard.
 
@@ -19,7 +19,7 @@ Let’s see how to invoke each clipboard operations using code.
 
 ## Copy
 
-You can copy the selected contents using the `Copy` method as shown in the following code example.
+You can copy the selected contents using the [`CopyAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_CopyAsync) method as shown in the following code example.
 
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor
@@ -39,7 +39,7 @@ You can copy the selected contents using the `Copy` method as shown in the follo
 
 ## Cut
 
-You can cut the selected content using the “Cut” method as shown in the following code example.
+You can cut the selected content using the ['Cut'](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_CutAsync) method as shown in the following code example.
 
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor
