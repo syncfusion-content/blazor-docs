@@ -53,7 +53,7 @@ documentation: ug
 
 ![Blazor Scatter Chart](../images/chart-types-images/blazor-scatter-chart.png)
 
-> Refer to our [Blazor Scatter Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/scatter-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Scatter Chart Example](https://blazor.syncfusion.com/demos/chart/scatter?theme=bootstrap4) to know how to plot data with two numeric parameters.
+N> Refer to our [Blazor Scatter Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/scatter-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Scatter Chart Example](https://blazor.syncfusion.com/demos/chart/scatter?theme=bootstrap4) to know how to plot data with two numeric parameters.
 
 ## Series customization
 
@@ -107,7 +107,7 @@ The following properties can be used to customize the [Scatter](https://help.syn
 
 ![Blazor Scatter Chart with Custom Series](../images/chart-types-images/blazor-scatter-chart-custom-series.png)
 
-> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 

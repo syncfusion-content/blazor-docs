@@ -164,7 +164,7 @@ documentation: ug
         </head>
     ```
 
-    > Do not use both Syncfusion.Blazor and individual NuGet packages in the same application. It will throw ambiguous errors while compiling the project.
+    N> Do not use both Syncfusion.Blazor and individual NuGet packages in the same application. It will throw ambiguous errors while compiling the project.
 
 * **An unhandled exception has occurred. See browser dev tools for details**
 
@@ -216,7 +216,7 @@ documentation: ug
     | ------------- | ------------- |
     | `<base href="/myblazorapp/" />`  | `app.UsePathBase("/myblazorapp");`|
 
-    > The trailing slash is must for '_Host.cshtml' base path configuration.
+    N> The trailing slash is must for '_Host.cshtml' base path configuration.
 
     For further details, refer this [MSDN documentation](https://docs.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/?view=aspnetcore-5.0&tabs=visual-studio#app-base-path) for your reference.
 

@@ -56,7 +56,7 @@ documentation: ug
 
 ![Blazor Hilo Chart](../images/financial-types/blazor-hilo-chart.png)
 
-> Refer to our [Blazor Hilo Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/hilo-chart) feature tour page to know about its other groundbreaking feature representations and also explore our [Blazor Hilo Chart Example](https://blazor.syncfusion.com/demos/chart/hilo) to know how to render and configure the Hilo type series.
+N> Refer to our [Blazor Hilo Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/hilo-chart) feature tour page to know about its other groundbreaking feature representations and also explore our [Blazor Hilo Chart Example](https://blazor.syncfusion.com/demos/chart/hilo) to know how to render and configure the Hilo type series.
 
 ## Series customization
 
@@ -108,7 +108,7 @@ The following properties can be used to customize the [Hilo](https://help.syncfu
 
 ![Blazor Hilo Chart with Custom Series](../images/chart-types-images/blazor-hilo-chart-custom-series.png)
 
-> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
