@@ -13,7 +13,7 @@ In this section, the list of events of Stock Chart component is provided which w
 
 The following are the number of events supported for Stock Chart component.
 
-* [Loaded](events/#loaded)
+* [OnLoaded](events/#Onloaded)
 * [OnPointClick](events/#onpointclick)
 * [PointMoved](events/#pointmoved)
 * [RangeChange](events/#rangechange)
@@ -23,7 +23,7 @@ The following are the number of events supported for Stock Chart component.
 * [OnStockChartMouseMove](events/#onstockchartmousemove)
 * [OnStockChartMouseUp](events/#onstockchartmouseup)
 
-## Loaded
+## OnLoaded
 
 [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_Loaded) event triggers after stock chart is rendered.
 
@@ -31,7 +31,7 @@ The following are the number of events supported for Stock Chart component.
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart>
-    <StockChartEvents Loaded="StockChartLoaded"></StockChartEvents>
+    <StockChartEvents OnLoaded="StockChartLoaded"></StockChartEvents>
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Column" XName="Date" YName="Y">
         </StockChartSeries>
@@ -40,15 +40,15 @@ The following are the number of events supported for Stock Chart component.
 
 @code {
 
-    public void StockChartLoaded(IStockChartEventArgs args)
+    public void StockChartLoaded(StockChartEventArgs args)
     {
         // Here you can customize your code
     }
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Y;
+        public DateTime Date {get; set;}
+        public Double Y {get; set;}
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -83,58 +83,15 @@ The following are the number of events supported for Stock Chart component.
 
 @code {
 
-    public void PointClick(IPointEventArgs args)
+    public void PointClick(StockChartPointEventArgs args)
     {
         // Here you can customize your code
     }
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Y;
-    }
-
-    public List<ChartData> StockDetails = new List<ChartData>
-    {
-         new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
-         new ChartData { Date = new DateTime(2012, 04, 09), Y= 10 },
-         new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
-         new ChartData { Date = new DateTime(2012, 04, 23), Y= 80 },
-         new ChartData { Date = new DateTime(2012, 04, 30), Y= 200},
-         new ChartData { Date = new DateTime(2012, 05, 07), Y= 600},
-         new ChartData { Date = new DateTime(2012, 05, 14), Y= 50 },
-         new ChartData { Date = new DateTime(2012, 05, 21), Y= 700},
-         new ChartData { Date = new DateTime(2012, 05, 28), Y= 90 }
-   };
-}
-```
-
-## PointMoved
-
-[PointMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_PointMoved) event triggers when moving mouse over the data point.
-
-```cshtml
-@using Syncfusion.Blazor.Charts
-
-<SfStockChart>
-    <StockChartEvents PointMoved="OnPointMoved"></StockChartEvents>
-    <StockChartSeriesCollection>
-        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Column" XName="Date" YName="Y">
-        </StockChartSeries>
-    </StockChartSeriesCollection>
-</SfStockChart>
-
-@code {
-
-    public void OnPointMoved(IPointEventArgs args)
-    {
-        // Here you can customize your code
-    }
-
-    public class ChartData
-    {
-        public DateTime Date;
-        public Double Y;
+        public DateTime Date {get; set;}
+        public Double Y {get; set;}
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -169,230 +126,15 @@ The following are the number of events supported for Stock Chart component.
 
 @code {
 
-    public void RangeChanged(IRangeChangeEventArgs args)
+    public void RangeChanged(StockChartRangeChangeEventArgs args)
     {
         // Here you can customize your code
     }
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Y;
-    }
-
-    public List<ChartData> StockDetails = new List<ChartData>
-    {
-         new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
-         new ChartData { Date = new DateTime(2012, 04, 09), Y= 10 },
-         new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
-         new ChartData { Date = new DateTime(2012, 04, 23), Y= 80 },
-         new ChartData { Date = new DateTime(2012, 04, 30), Y= 200},
-         new ChartData { Date = new DateTime(2012, 05, 07), Y= 600},
-         new ChartData { Date = new DateTime(2012, 05, 14), Y= 50 },
-         new ChartData { Date = new DateTime(2012, 05, 21), Y= 700},
-         new ChartData { Date = new DateTime(2012, 05, 28), Y= 90 }
-   };
-}
-```
-
-## OnStockChartMouseClick
-
-[OnStockChartMouseClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseClick) event triggers when clicking the stock chart.
-
-```cshtml
-@using Syncfusion.Blazor.Charts
-
-<SfStockChart>
-    <StockChartEvents OnStockChartMouseClick="StockChartMouseClickHandler"></StockChartEvents>
-    <StockChartSeriesCollection>
-        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Column" XName="Date" YName="Y">
-        </StockChartSeries>
-    </StockChartSeriesCollection>
-</SfStockChart>
-
-@code {
-
-    public void StockChartMouseClickHandler(IMouseEventArgs args)
-    {
-        // Here you can customize your code
-    }
-
-    public class ChartData
-    {
-        public DateTime Date;
-        public Double Y;
-    }
-
-    public List<ChartData> StockDetails = new List<ChartData>
-    {
-         new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
-         new ChartData { Date = new DateTime(2012, 04, 09), Y= 10 },
-         new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
-         new ChartData { Date = new DateTime(2012, 04, 23), Y= 80 },
-         new ChartData { Date = new DateTime(2012, 04, 30), Y= 200},
-         new ChartData { Date = new DateTime(2012, 05, 07), Y= 600},
-         new ChartData { Date = new DateTime(2012, 05, 14), Y= 50 },
-         new ChartData { Date = new DateTime(2012, 05, 21), Y= 700},
-         new ChartData { Date = new DateTime(2012, 05, 28), Y= 90 }
-   };
-}
-```
-
-## OnStockChartMouseDown
-
-[OnStockChartMouseDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseDown) event triggers when mouse down over the stock chart.
-
-```cshtml
-@using Syncfusion.Blazor.Charts
-
-<SfStockChart>
-    <StockChartEvents OnStockChartMouseDown="StockChartMouseDownHandler"></StockChartEvents>
-    <StockChartSeriesCollection>
-        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Column" XName="Date" YName="Y">
-        </StockChartSeries>
-    </StockChartSeriesCollection>
-</SfStockChart>
-
-@code {
-
-    public void StockChartMouseDownHandler(IMouseEventArgs args)
-    {
-        // Here you can customize your code
-    }
-
-    public class ChartData
-    {
-        public DateTime Date;
-        public Double Y;
-    }
-
-    public List<ChartData> StockDetails = new List<ChartData>
-    {
-         new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
-         new ChartData { Date = new DateTime(2012, 04, 09), Y= 10 },
-         new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
-         new ChartData { Date = new DateTime(2012, 04, 23), Y= 80 },
-         new ChartData { Date = new DateTime(2012, 04, 30), Y= 200},
-         new ChartData { Date = new DateTime(2012, 05, 07), Y= 600},
-         new ChartData { Date = new DateTime(2012, 05, 14), Y= 50 },
-         new ChartData { Date = new DateTime(2012, 05, 21), Y= 700},
-         new ChartData { Date = new DateTime(2012, 05, 28), Y= 90 }
-   };
-}
-```
-
-## OnStockChartMouseLeave
-
-[OnStockChartMouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseLeave) event triggers when cursor leaves the stock chart.
-
-```cshtml
-@using Syncfusion.Blazor.Charts
-
-<SfStockChart>
-    <StockChartEvents OnStockChartMouseLeave="StockChartMouseLeaveHandler"></StockChartEvents>
-    <StockChartSeriesCollection>
-        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Column" XName="Date" YName="Y">
-        </StockChartSeries>
-    </StockChartSeriesCollection>
-</SfStockChart>
-
-@code {
-
-    public void StockChartMouseLeaveHandler(IMouseEventArgs args)
-    {
-        // Here you can customize your code
-    }
-
-    public class ChartData
-    {
-        public DateTime Date;
-        public Double Y;
-    }
-
-    public List<ChartData> StockDetails = new List<ChartData>
-    {
-         new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
-         new ChartData { Date = new DateTime(2012, 04, 09), Y= 10 },
-         new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
-         new ChartData { Date = new DateTime(2012, 04, 23), Y= 80 },
-         new ChartData { Date = new DateTime(2012, 04, 30), Y= 200},
-         new ChartData { Date = new DateTime(2012, 05, 07), Y= 600},
-         new ChartData { Date = new DateTime(2012, 05, 14), Y= 50 },
-         new ChartData { Date = new DateTime(2012, 05, 21), Y= 700},
-         new ChartData { Date = new DateTime(2012, 05, 28), Y= 90 }
-   };
-}
-```
-
-## OnStockChartMouseMove
-
-[OnStockChartMouseMove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseMove) event triggers when hovering the stock chart.
-
-```cshtml
-@using Syncfusion.Blazor.Charts
-
-<SfStockChart>
-    <StockChartEvents OnStockChartMouseMove="StockChartMouseMoveHandler"></StockChartEvents>
-    <StockChartSeriesCollection>
-        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Column" XName="Date" YName="Y">
-        </StockChartSeries>
-    </StockChartSeriesCollection>
-</SfStockChart>
-
-@code {
-
-    public void StockChartMouseMoveHandler(IMouseEventArgs args)
-    {
-        // Here you can customize your code
-    }
-
-    public class ChartData
-    {
-        public DateTime Date;
-        public Double Y;
-    }
-
-    public List<ChartData> StockDetails = new List<ChartData>
-    {
-         new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
-         new ChartData { Date = new DateTime(2012, 04, 09), Y= 10 },
-         new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
-         new ChartData { Date = new DateTime(2012, 04, 23), Y= 80 },
-         new ChartData { Date = new DateTime(2012, 04, 30), Y= 200},
-         new ChartData { Date = new DateTime(2012, 05, 07), Y= 600},
-         new ChartData { Date = new DateTime(2012, 05, 14), Y= 50 },
-         new ChartData { Date = new DateTime(2012, 05, 21), Y= 700},
-         new ChartData { Date = new DateTime(2012, 05, 28), Y= 90 }
-   };
-}
-```
-
-## OnStockChartMouseUp
-
-[OnStockChartMouseUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseUp) event triggers when mouse is up.
-
-```cshtml
-@using Syncfusion.Blazor.Charts
-
-<SfStockChart>
-    <StockChartEvents OnStockChartMouseUp="StockChartMouseUpHandler"></StockChartEvents>
-    <StockChartSeriesCollection>
-        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Column" XName="Date" YName="Y">
-        </StockChartSeries>
-    </StockChartSeriesCollection>
-</SfStockChart>
-
-@code {
-
-    public void StockChartMouseUpHandler(IMouseEventArgs args)
-    {
-        // Here you can customize your code
-    }
-
-    public class ChartData
-    {
-        public DateTime Date;
-        public Double Y;
+        public DateTime Date {get; set;}
+        public Double Y {get; set;}
     }
 
     public List<ChartData> StockDetails = new List<ChartData>

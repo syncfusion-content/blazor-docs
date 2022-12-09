@@ -37,12 +37,12 @@ properties.
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date {get; set;}
+        public Double Open {get; set;}
+        public Double Low {get; set;}
+        public Double Close {get; set;}
+        public Double High {get; set;}
+        public Double Volume{get; set;}
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
