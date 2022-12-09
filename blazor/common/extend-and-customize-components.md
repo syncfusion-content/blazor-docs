@@ -214,7 +214,7 @@ The following code demonstrates the RenderFragment that renders the `SfGrid` com
 
 You can define the RenderFragment delegate with [RenderTreeBuilder](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder?view=aspnetcore-5.0)'s methods.
 
-> Refer to [Manual RenderTreeBuilder logic](https://docs.microsoft.com/en-us/aspnet/core/blazor/advanced-scenarios?view=aspnetcore-5.0#manual-rendertreebuilder-logic) to know more about RenderTreeBuilder.
+N> Refer to [Manual RenderTreeBuilder logic](https://docs.microsoft.com/en-us/aspnet/core/blazor/advanced-scenarios?view=aspnetcore-5.0#manual-rendertreebuilder-logic) to know more about RenderTreeBuilder.
 
 ```cshtml
 @RenderSfButton()
@@ -363,7 +363,7 @@ You can create a simple Blazor component with the `BuildRenderTree` method and g
     } 
     ```
 
-    > The advantages of a reusable component are:
-    >
-    > 1. Instead of changing values in each component, you can change a property value once and it will be reflected in all the components.
-    > 2. Better code optimization against the repeated code.
+    N> The advantages of a reusable component are:
+    <br/>
+    <br/> 1. Instead of changing values in each component, you can change a property value once and it will be reflected in all the components.
+    <br/> 2. Better code optimization against the repeated code.

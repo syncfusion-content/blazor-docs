@@ -264,7 +264,7 @@ Highlight the searched characters on suggested list items.
 
 #### Declaration
 
-> public string HighLightSearch(string textValue, bool ignoreCase, FilterType filtertype, string highLighText = null)
+N> public string HighLightSearch(string textValue, bool ignoreCase, FilterType filtertype, string highLighText = null)
 
 #### Paramaters
 
