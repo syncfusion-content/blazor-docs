@@ -36,7 +36,6 @@ The [Description](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 @page "/"
 
 @using Syncfusion.Blazor.Charts
-@using Newtonsoft.Json
 @using System.IO
 @using System.Runtime.Serialization
 @inject NavigationManager NavigationManager

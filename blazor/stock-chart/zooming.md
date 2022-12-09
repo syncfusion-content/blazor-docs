@@ -22,7 +22,6 @@ The stock chart can be zoomed in three different ways.
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
-@using Newtonsoft.Json
 @using System.IO
 @using System.Runtime.Serialization
 @inject NavigationManager NavigationManager
@@ -84,7 +83,6 @@ There are three types of modes.
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
-@using Newtonsoft.Json
 @using System.IO
 @using System.Runtime.Serialization
 @inject NavigationManager NavigationManager
@@ -140,7 +138,6 @@ By default, zoom in, zoom out, pan, and reset buttons are available in the toolb
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
-@using Newtonsoft.Json
 @using System.IO
 @using System.Runtime.Serialization
 @inject NavigationManager NavigationManager
@@ -198,7 +195,6 @@ By using the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
-@using Newtonsoft.Json
 @using System.IO
 @using System.Runtime.Serialization
 @inject NavigationManager NavigationManager
@@ -255,7 +251,6 @@ The [EnableScrollbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
-@using Newtonsoft.Json
 @using System.IO
 @using System.Runtime.Serialization
 @inject NavigationManager NavigationManager
@@ -313,7 +308,6 @@ The axis interval will be calculated automatically with respect to the zoomed ra
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
-@using Newtonsoft.Json
 @using System.IO
 @using System.Runtime.Serialization
 @inject NavigationManager NavigationManager
