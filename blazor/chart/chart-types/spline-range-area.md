@@ -11,7 +11,7 @@ documentation: ug
 
 ## Spline Range Area
 
-[Spline Range Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-range-area-chart) shows variation in the data values for a given time. The area between the high and low range is filled. To render a [Spline Range Area Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_SplineRangeArea), set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [SplineRangeArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_SplineRangeArea).
+[Spline Range Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/range-area-chart) shows variation in the data values for a given time. The area between the high and low range is filled. To render a [Spline Range Area Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_SplineRangeArea), set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [SplineRangeArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_SplineRangeArea).
 
 ```cshtml
 
@@ -47,7 +47,7 @@ documentation: ug
 
 ```
 
-> Refer to our [Blazor Spline Range Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-range-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Spline Range Area Chart Example](https://blazor.syncfusion.com/demos/chart/range-area?theme=bootstrap4) to know how to show variations in the data values for a given time.
+> Refer to our [Blazor Spline Range Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/range-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Spline Range Area Chart Example](https://blazor.syncfusion.com/demos/chart/range-area?theme=bootstrap4) to know how to show variations in the data values for a given time.
 
 ## Series customization
 
