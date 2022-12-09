@@ -44,12 +44,12 @@ A linear trendline is a best fit straight line that is used with simpler data se
 
     public class StockChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<StockChartData> StockDetails = new List<StockChartData>
@@ -104,12 +104,12 @@ To render a logarithmic trendline, use trendline [Type](https://help.syncfusion.
 
     public class StockChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<StockChartData> StockDetails = new List<StockChartData>
@@ -164,12 +164,12 @@ To render a exponential trendline, use trendline [Type](https://help.syncfusion.
 
     public class StockChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<StockChartData> StockDetails = new List<StockChartData>
@@ -222,12 +222,12 @@ A polynomial trendline is a curved line that is used when data fluctuates. To re
 
     public class StockChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<StockChartData> StockDetails = new List<StockChartData>
@@ -287,12 +287,12 @@ A moving average trendline smoothen out fluctuations in data to show a pattern o
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -323,7 +323,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
 
 <SfStockChart Title="AAPL Stock Price">
     <StockChartSeriesCollection>
-        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" Name="Google">
+        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Close="Close" Open="Open" Name="Google">
             <StockChartTrendlines>
                 <StockChartTrendline Type="TrendlineTypes.MovingAverage" EnableTooltip="false" Fill="red" Width="2"></StockChartTrendline>
             </StockChartTrendlines>
@@ -334,12 +334,12 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>

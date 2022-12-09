@@ -34,12 +34,12 @@ The rendered stock chart can be printed directly using print button in period se
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date {get; set;}
+        public Double Open {get; set;}
+        public Double Low {get; set;}
+        public Double Close {get; set;}
+        public Double High {get; set;}
+        public Double Volume {get; set;}
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -70,7 +70,7 @@ Empty the value of `ExportType` to disable the Export.
 
 <SfStockChart Title="AAPL Stock Price" ExportType="new List<ExportType>() { }">
     <StockChartSeriesCollection>
-        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" Name="google"></StockChartSeries>
+        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="google"></StockChartSeries>
     </StockChartSeriesCollection>
 </SfStockChart>
 
@@ -78,12 +78,12 @@ Empty the value of `ExportType` to disable the Export.
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date {get; set;}
+        public Double Open {get; set;}
+        public Double Low {get; set;}
+        public Double Close {get; set;}
+        public Double High {get; set;}
+        public Double Volume {get; set;}
     }
 
     public List<ChartData> StockDetails = new List<ChartData>

@@ -29,8 +29,8 @@ A title can be added to the axis using the [Title](https://help.syncfusion.com/c
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Y;
+        public DateTime Date { get; set; }
+        public Double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -75,8 +75,8 @@ The `Width`, `Color` and `Size` of the minor and major tick lines can be cu
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Y;
+        public DateTime Date { get; set;}
+        public Double Y { get; set;}
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -125,8 +125,8 @@ The `Width`, `Color` and `DashArray` of the minor and major grid lines can 
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Y;
+        public DateTime Date { get; set; }
+        public Double Y { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -181,12 +181,12 @@ In addition to primary X and Y axis, n number of axis can be added to the chart.
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -229,12 +229,12 @@ When an axis is inversed, highest value of the axis comes closer to origin and v
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -276,12 +276,12 @@ To place an axis opposite from its original position, set [OpposedPosition](http
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
