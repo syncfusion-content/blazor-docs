@@ -30,7 +30,7 @@ To place the font icon on the Breadcrumb item, set the [IconCss](https://help.sy
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-items.png)
 
-> By default, the icon is positioned to the left side of the item.
+N> By default, the icon is positioned to the left side of the item.
 
 ## Breadcrumb with image
 

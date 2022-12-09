@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains the list of events of the [Blazor Calendar](https://www.syncfusion.com/blazor-components/blazor-calendar) component which will be triggered for appropriate Calendar actions.
 
-> From `v17.2.*` added only the limited number of events for the Calendar component. The event names are different from the previous releases and also removed several events. The following are the event name changes from `v17.1.*` to `v17.2.*`
+N> From `v17.2.*` added only the limited number of events for the Calendar component. The event names are different from the previous releases and also removed several events. The following are the event name changes from `v17.1.*` to `v17.2.*`
 
 Event Name(`v17.1.*`) |Event Name(`v17.2.*`)
 -----|-----
@@ -118,4 +118,4 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 }
 ```
 
-> Calendar will be limited with these events and new events will be added in future based on the user requests. If the event you are looking for is not in the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
+N> Calendar will be limited with these events and new events will be added in future based on the user requests. If the event you are looking for is not in the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
