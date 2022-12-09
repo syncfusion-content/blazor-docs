@@ -42,7 +42,7 @@ By defining the Start and Depth property with the different view, drill-down and
 
 The following example displays the Calendar in `Decade` view, and allows you to select a date in `Month` view.
 
-> Depth view should always be smaller than the Start view. If the `Depth` and `Start` views are the same, then the Calendar view remains unchanged.
+N> Depth view should always be smaller than the Start view. If the `Depth` and `Start` views are the same, then the Calendar view remains unchanged.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
