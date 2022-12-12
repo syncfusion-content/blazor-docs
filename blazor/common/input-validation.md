@@ -44,9 +44,9 @@ The Syncfusion Blazor UI input and editor components can be validated by the sta
     </EditForm>
     ```
 
-    > [DataAnnotationsValidator](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.dataannotationsvalidator?view=aspnetcore-5.0) - Attaches validation support to an `EditContext` using data annotations.
-    >
-    > [ValidationSummary](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.validationsummary?view=aspnetcore-5.0) - Used to display a summarized list of all validation messages.
+    N> [DataAnnotationsValidator](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.dataannotationsvalidator?view=aspnetcore-5.0) - Attaches validation support to an `EditContext` using data annotations.
+    <br/>
+    <br/>[ValidationSummary](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.validationsummary?view=aspnetcore-5.0) - Used to display a summarized list of all validation messages.
 
 3. Add any desired [Syncfusion components](#blazor-form-validation-supported-components) inside the `EditForm` and provide the values through `@bind-` property.
 
@@ -66,7 +66,7 @@ The Syncfusion Blazor UI input and editor components can be validated by the sta
     </EditForm>
     ```
 
-    > Refer to [this table](#blazor-form-validation-supported-components) for the Syncfusion Blazor components which supports the form validation and its `@bind` property details.  
+    N> Refer to [this table](#blazor-form-validation-supported-components) for the Syncfusion Blazor components which supports the form validation and its `@bind` property details.  
 
 4. The `EditForm` validates the input values based on its edit context and displays the validation message on the `ValidationSummary` component when submitting the form.
 
@@ -78,7 +78,7 @@ The Syncfusion Blazor UI input and editor components can be validated by the sta
 
     ![Validation success status in Blazor](images/validation-success.png)
 
-    > Green color border around the textbox indicates validation success state and Red color indicates validation failure state.
+    N> Green color border around the textbox indicates validation success state and Red color indicates validation failure state.
 
 5. You can also use the `ValidationMessage` component to display the validation error message for each input component instead of displaying a validation summary using the `ValidationSummary` component.
 
@@ -284,7 +284,7 @@ The following section provides the details about the Syncfusion Blazor UI compon
 </table>
 <!-- markdownlint-enable MD033 -->
 
-> Make sure to use nullable integer `int?` when you use the `Required` attribute on the `Value` property. The default value for `int` is 0. So, it will pass the validation when you submit the form.
+N> Make sure to use nullable integer `int?` when you use the `Required` attribute on the `Value` property. The default value for `int` is 0. So, it will pass the validation when you submit the form.
 
 ### SfAutoComplete
 
@@ -880,7 +880,7 @@ The RichTextEditor component is used to create blogs, forum posts, notes section
 
 The Slider component allows you to select a value or range of values between specified min and max values. It uses the `@bind-Value` parameter to validate the form model `EditContext`.
 
-> You can create your own [custom validation](#apply-custom-validation-attributes) logic to validate the `Range` type slider.
+N> You can create your own [custom validation](#apply-custom-validation-attributes) logic to validate the `Range` type slider.
 
 ```cshtml
 @using System.ComponentModel.DataAnnotations;
