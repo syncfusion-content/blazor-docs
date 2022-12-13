@@ -45,7 +45,7 @@ You can use the following key shortcuts to access the AutoComplete without inter
 | <kbd>Home</kbd> | Moves the cursor before the first character in input. |
 | <kbd>End</kbd> | Moves the cursor next to the last character in input. |
 
-> In the following sample, disable the AutoComplete component using <kbd>t</kbd> keys.
+N> In the following sample, disable the AutoComplete component using <kbd>t</kbd> keys.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns

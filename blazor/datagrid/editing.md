@@ -11,7 +11,7 @@ documentation: ug
 
 The DataGrid component has options to dynamically insert, delete, and update records.
 
-> [Editing](https://blazor.syncfusion.com/documentation/datagrid/editing) feature requires a primary key column for CRUD operations.
+N> [Editing](https://blazor.syncfusion.com/documentation/datagrid/editing) feature requires a primary key column for CRUD operations.
 
 To know about editing feature in Blazor DataGrid component, you can check on this video.
 
@@ -64,13 +64,13 @@ Deletion of the record is possible by selecting the required row and click on **
 The following screenshot represents Editing with Default Mode.
 ![Editing in Blazor DataGrid](./images/blazor-datagrid-editing.png)
 
-> * Grid uses `Activator.CreateInstance<TValue>()` to generate a new record when an insert operation is invoked, so it must have a parameterless constructors defined for the model class and any referenced complex type classes. To provide custom logic for object creation during editing, you can refer [here](#provide-new-item-or-edited-item-using-events).
-> * If [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) is enabled, then it will be considered as a read-only column when editing and adding a record.
-> * You can disable editing for a particular column by specifying
+N> * Grid uses `Activator.CreateInstance<TValue>()` to generate a new record when an insert operation is invoked, so it must have a parameterless constructors defined for the model class and any referenced complex type classes. To provide custom logic for object creation during editing, you can refer [here](#provide-new-item-or-edited-item-using-events).
+<br/> * If [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) is enabled, then it will be considered as a read-only column when editing and adding a record.
+<br/> * You can disable editing for a particular column by specifying
 [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowEditing) to **false**.
->* You can disable adding for a particular column by specifying
+<br/>* You can disable adding for a particular column by specifying
 [AllowAdding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowAdding) to **false**.
->* You can disable editing of a record on double click by specifying
+<br/>* You can disable editing of a record on double click by specifying
 [EditSettings.AllowEditOnDblClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowEditOnDblClick) to **false**.
 
 ## Toolbar with edit option
@@ -213,7 +213,7 @@ The following sample code demonstrates editing disabled for the **CustomerID** c
 }
 ```
 
-> Similarly [AllowAdding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowAdding) property at the column level helps us to disable the particular column from inserting value to it.
+N> Similarly [AllowAdding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowAdding) property at the column level helps us to disable the particular column from inserting value to it.
 
 The following screenshot represents the editing disabled for the **CustomerID** column in DataGrid,
 ![Disable Editing for Specific Column in Blazor DataGrid](./images/blazor-datagrid-disable-editing.png)
@@ -275,7 +275,7 @@ In the following sample, the rows that have the value for the ShipCountry column
 }
 ```
 
-> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-disable-editing-for-particular-row)
+N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-disable-editing-for-particular-row)
 
 Use the Grid's [OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnCellEdit) event to disable a specific cell when editing in batch mode. 
 
@@ -324,7 +324,7 @@ In the following sample, the cells that have the value for the ShipCountry colum
 }
 ```
 
-> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-disable-editing-for-particular-cell)
+N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-disable-editing-for-particular-cell)
 
 ## Adding a new row at the bottom of the datagrid
 
@@ -371,7 +371,7 @@ The following sample code demonstrates changing the position of the new row that
 The following image represents the new row added at the bottom of the DataGrid,
 ![Adding New Row at Bottom Position of Blazor DataGrid](./images/blazor-datagrid-add-new-row.png)
 
->* In Batch mode, while in edit mode, you can add a new row at bottom using the TAB key when you are on the last cell of the last row.
+N>* In Batch mode, while in edit mode, you can add a new row at bottom using the TAB key when you are on the last cell of the last row.
 
 ## Troubleshoot: Editing works only for first row
 
@@ -494,7 +494,7 @@ You can edit the complex objects using EditTemplate inside the GridColumn compon
 
 For focus and Column Validation to work properly, you have to define the **ID** property EditTemplate components with a value similar to GridColumn Field property value.
 
-> Also, ensure to define **ID** property for the complex column as (`___`) replacing the (`.`) operator in the Field value.
+N> Also, ensure to define **ID** property for the complex column as (`___`) replacing the (`.`) operator in the Field value.
 
 The following sample code demonstrates the CRUD operation for complex objects with EditTemplate.
 
@@ -803,7 +803,7 @@ Since data is bound to Grid using DataSource property, CRUD actions will be refl
 }
 ```
 
-> Find the sample from this [Github](https://github.com/SyncfusionExamples/blazor-server-datagrid-efcore-crud/) location.
+N> Find the sample from this [Github](https://github.com/SyncfusionExamples/blazor-server-datagrid-efcore-crud/) location.
 
 ## Cancel CRUD operation by using condition
 
@@ -1331,7 +1331,7 @@ This is demonstrated in the following sample code:
 
 ```
 
-> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-different-editmode-for-add-edit-action).
+N> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-different-editmode-for-add-edit-action).
 
 ## Update boolean column value with a single click
 
@@ -1385,7 +1385,7 @@ In the following sample, the `SfCheckbox` component is rendered as a template in
 }
 ```
 
-> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-single-click-editing-with-boolean-column)
+N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-single-click-editing-with-boolean-column)
 
 ## How to make a Grid column always editable
 
@@ -1434,7 +1434,7 @@ In the following example, the `SfTextBox` is rendered in the ShipCountry column 
 }
 ```
 
-> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid--always-editable-grid-column)
+N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid--always-editable-grid-column)
 
 ## See also
 
