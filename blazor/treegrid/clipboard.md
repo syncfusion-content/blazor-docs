@@ -385,3 +385,105 @@ namespace TreeGridComponent.Data {
 ### Limitations of Paste Functionality
 
 * Since the string values are not parsed to number and date type, so when the copied string type cells are pasted to number type cells then it will be displayed as **NaN**. For date type cells, when the copied string format cells are pasted to date type cells then it will be displayed as an **empty cell**.
+
+## Clipboard events
+
+To cancel the copy or paste action, [BeforeCopyPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCopyPaste) event can be used. To cancel the paste action on cell pasting, [BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCellPaste) event can be used.
+
+{% tabs %}
+
+{% highlight razor %}
+
+@using Syncfusion.Blazor.TreeGrid;
+@using System.Dynamic
+
+<SfTreeGrid DataSource="@TreeData" @ref="TreeGrid" AllowPaging="true" AllowTextWrap="true" EnableAutoFill="true" AllowSelection="true" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1"  Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <TreeGridPageSettings PageSize="2"></TreeGridPageSettings>
+    <TreeGridEvents BeforeCopyPaste="CopyPaste" BeforeCellPaste="CellPaste" TValue="ExpandoObject"></TreeGridEvents>
+    <TreeGridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple" Mode="Syncfusion.Blazor.Grids.SelectionMode.Cell" CellSelectionMode="Syncfusion.Blazor.Grids.CellSelectionMode.Box"></TreeGridSelectionSettings>
+    <TreeGridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="Syncfusion.Blazor.TreeGrid.EditMode.Batch"></TreeGridEditSettings>
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskID" HeaderText="Task ID" Width="80" IsPrimaryKey="true"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="100"></TreeGridColumn>
+        <TreeGridColumn Field="StartDate" HeaderText="StartDate" Format="d" Width="100"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="80"></TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="80"></TreeGridColumn>
+        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="80"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+@code {
+    SfTreeGrid<ExpandoObject> TreeGrid;
+    public List<ExpandoObject> TreeData { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TreeData = GetData().ToList();
+    }
+
+    public static List<ExpandoObject> Data = new List<ExpandoObject>();
+    public static int ParentRecordID { get; set; }
+    public static int ChildRecordID { get; set; }
+    public static List<ExpandoObject> GetData()
+    {
+        Data.Clear();
+        ParentRecordID = 0;
+        ChildRecordID = 0;
+        for (var i = 1; i <= 60; i++)
+        {
+            Random ran = new Random();
+            DateTime start = new DateTime(1992, 06, 07);
+            int range = (DateTime.Today - start).Days;
+            DateTime startingDate = start.AddDays(ran.Next(range));
+            dynamic ParentRecord = new ExpandoObject();
+            ParentRecord.TaskID = ++ParentRecordID;
+            ParentRecord.TaskName = "Parent Task " + i;
+            ParentRecord.StartDate = startingDate;
+            ParentRecord.Progress = ParentRecordID % 2 == 0 ? "In Progress" : "Open";
+            ParentRecord.Priority = ParentRecordID % 2 == 0 ? "High" : "Low";
+            ParentRecord.Duration = ParentRecordID % 2 == 0 ? 32 : 76;
+            ParentRecord.ParentID = null;
+            Data.Add(ParentRecord);
+            AddChildRecords(ParentRecordID);
+        }
+        return Data;
+    }
+    public static void AddChildRecords(int ParentId)
+    {
+        for (var i = 1; i < 4; i++)
+        {
+            Random ran = new Random();
+            DateTime start = new DateTime(1992, 06, 07);
+            int range = (DateTime.Today - start).Days;
+            DateTime startingDate = start.AddDays(ran.Next(range));
+            dynamic ChildRecord = new ExpandoObject();
+            ChildRecord.TaskID = ++ParentRecordID;
+            ChildRecord.TaskName = "Child Task " + ++ChildRecordID;
+            ChildRecord.StartDate = startingDate;
+            ChildRecord.Progress = ParentRecordID % 3 == 0 ? "Validated" : "Closed";
+            ChildRecord.Priority = ParentRecordID % 3 == 0 ? "Low" : "Critical";
+            ChildRecord.Duration = ParentRecordID % 3 == 0 ? 64 : 98;
+            ChildRecord.ParentID = ParentId;
+            Data.Add(ChildRecord);
+        }
+    }
+
+    public async Task CopyPaste(Syncfusion.Blazor.TreeGrid.BeforeCopyPasteEventArgs args)
+    {
+        if (args.Action == "Copy")
+        {
+            args.Cancel = true;
+        }
+        if (args.Action == "Paste")
+        {
+            // Enter the code here
+        }
+    }
+
+    public async Task CellPaste(Syncfusion.Blazor.TreeGrid.BeforeCellPasteEventArgs<ExpandoObject> args)
+    {
+        args.Cancel = true;
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
