@@ -1,23 +1,16 @@
 ---
 layout: post
-title: Digital Signature appearance in Blazor PDF Viewer | Syncfusion
+title: Digital signature in Blazor PDF Viewer | Syncfusion
 description: Checkout and learn here all about digital signature appearance in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# Digital Signature appearance in Blazor PDF Viewer Component
+# Digital signature 
 
-The PDF Viewer control provides the appearance support for digital signature. If a PDF file that has a digital signature is loaded in the PDF Viewer, the digital signature will show up as an image. Using the 'ShowDigitalSignatureAppearance' API, you may choose whether the digital signature should be seen in the document when loading it into the PDF Viewer or not. By default, it is true.
+## Render digital signature appearance
 
-![Digital Signature appearance](../pdfviewer/images/blazor-pdfviewer-digital-sign.png)
+The PDF Viewer control renders the digital signatures from the existing PDF document. If a PDF document that has a digital signature in it, then the digital signatures are rendered as images.
 
-The following code explains how to disable the ShowDigitalSignatureAppearance in the PDF Viewer.
-
-```cshtml
-<SfPdfViewer @ref="viewer"
-             ID="pdfviewer"
-             ShowDigitalSignatureAppearance="false">
-</SfPdfViewer>
-```
+![Digital signature](../pdfviewer/images/pdfviewer-digitalsignature.png)
