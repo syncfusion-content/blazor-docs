@@ -570,6 +570,7 @@ When [LoadChildOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 When a root node is expanded, its child nodes are rendered and maintained in a collection locally, such that on consecutive expand/collapse actions on root node, the child nodes are loaded locally instead from the remote server.
 
 When the `LoadChildOnDemand` is enabled parent records are rendered in expanded state.
+
 {% tabs %}
 
 {% highlight razor %}
@@ -764,7 +765,6 @@ namespace WebAPI.Controller
             return req;
         }
 
-
         private void AppendChildren(List<TaskData> ChildRecords, TaskData ParentItem, Dictionary<string, List<TaskData>> GroupData)
         {
             var queryString = Request.Query;
@@ -812,7 +812,6 @@ namespace WebAPI.Controller
                 }
             }
         }
-
         public class DataRequest
         {
             public Nullable<int> skip { get; set; }
@@ -824,7 +823,6 @@ namespace WebAPI.Controller
             public DateTime startDate { get; set; }
             public DateTime endDate { get; set; }
         }
-        
     }
     public static class SortingExtend
     {
@@ -832,12 +830,9 @@ namespace WebAPI.Controller
         {
             if (source == null)
                 throw new ArgumentNullException("source");
-
             if (string.IsNullOrEmpty(sortBy))
                 throw new ArgumentNullException("sortBy");
-
             source = (IQueryable<T>)source.OrderBy(sortBy);
-
             return source;
         }
     }
@@ -846,7 +841,8 @@ namespace WebAPI.Controller
 {% endhighlight %}
 
 {% endtabs %}
-> * Filtering and searching server-side data operations are not supported in load on demand.
+
+> * Filtering and searching are not supported in load on demand.
 > * Only Self-Referential type data is supported with remote data binding in Gantt Chart.
 
 ## Remote Data
