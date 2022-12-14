@@ -7,9 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Digital signature 
-
-## Render digital signature appearance
+# Render digital signature appearance
 
 The PDF Viewer control renders the digital signatures from the existing PDF document. If a PDF document that has a digital signature in it, then the digital signatures are rendered as images.
 
