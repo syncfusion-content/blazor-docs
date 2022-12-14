@@ -2520,7 +2520,9 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 ## RowDropping
 
-`RowDropping` event triggers when the row elements are dropping on the target element. You can cancel the dropping action using this event.
+`RowDropping` event triggers when the row elements are being dropped on to the target element.
+
+> The dropping action can be cancelled by setting the `Cancel` argument of the `RowDropping` event to true.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
