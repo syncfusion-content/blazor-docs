@@ -125,7 +125,8 @@ The grid row drag and drop allows you to drag and drop grid rows on the same gri
 The following events are triggered while drag and drop the grid rows.
 
 `RowDragStarting`  - Triggers when starts to drag the grid row.<br/>
-`RowDropped`  -  Triggers when a drag element is dropped on the target element.
+`RowDropped`  -  Triggers when a drag element is dropped on the target element.<br/>
+`RowDropping` - Triggers when the row elements are dropping on the target element.
 
 N> For performing row drag and drop action on the datagrid, any one of the columns should be defined as a primary key using the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property.
 
