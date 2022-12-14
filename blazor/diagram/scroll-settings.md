@@ -98,7 +98,7 @@ To explore about the options , refer [ScrollLimitMode](https://help.syncfusion.c
 
 ## Scrollable Area
 
-Scrolling beyond any particular rectangular area can be restricted by using the scrollableArea property of scroll settings. To restrict scrolling beyond any custom region, set the scrollLimit as “limited”. The following code example illustrates how to customize scrollable area.
+Scrolling beyond any particular rectangular area can be restricted by using the scrollableArea property of scroll settings. To restrict scrolling beyond any custom region, set the [ScrollLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollLimit) as “limited”. The following code example illustrates how to customize scrollable area.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
