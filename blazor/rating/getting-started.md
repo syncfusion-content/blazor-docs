@@ -282,7 +282,7 @@ You can set the rating value by using the `Value` property.
 {% endhighlight %}
 {% endtabs %}
 
-![Rating Value in Blazor Rating Component](images/blazor-rating-value.png)
+![Displaying Rating Value in Blazor Rating Component](images/blazor-rating-value.png)
 
 ## Items count
 
