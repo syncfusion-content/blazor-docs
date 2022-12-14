@@ -96,6 +96,44 @@ To explore about the options , refer [ScrollLimitMode](https://help.syncfusion.c
 |   Diagram   | ![ScrollLimitMode as Diagram](./images/ScrollLimitDiagram.gif)|   
 |   Infinity  | ![ScrollLimitMode as Infinity](./images/ScrollLimitInfinity.gif)|
 
+## Scrollable Area
+
+Scrolling beyond any particular rectangular area can be restricted by using the scrollableArea property of scroll settings. To restrict scrolling beyond any custom region, set the scrollLimit as “limited”. The following code example illustrates how to customize scrollable area.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<SfDiagramComponent Width="50%" Height="300px" Nodes="@nodes">
+    <ScrollSettings  ScrollableArea="@scrollableArea" ScrollLimit="ScrollLimitMode.Limited">
+    </ScrollSettings>
+</SfDiagramComponent>
+@code
+{
+    DiagramRect scrollableArea = new DiagramRect() { X = 0, Y = 0, Width = 500, Height = 500 };
+    DiagramObjectCollection<Node> nodes;
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+            {
+                ID = "node1",
+                // Position of the node.
+                OffsetX = 300,
+                OffsetY = 50,
+                // Size of the node.
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                    StrokeColor = "white"
+                }
+            };
+        // Add node.
+        nodes.Add(node);
+    }
+}
+```
+|![Scrollable Area](images/scrollablearea.gif) | 
 ## CallBack Methods
 
 * CurrentZoomChanged : Specifies the callback to be triggered when the current zoom value changes.
