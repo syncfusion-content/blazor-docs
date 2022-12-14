@@ -2419,11 +2419,11 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Sy
     {
         if (args.Action == "Copy")
         {
-            // Here you can customize your code
+            // Here you can customize your code.
         }
         if (args.Action == "Paste")
         {
-            // Here you can customize your code
+            // Here you can customize your code.
         }
     }
 }
@@ -2508,7 +2508,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Sy
 
     public async Task CellPaste(Syncfusion.Blazor.TreeGrid.BeforeCellPasteEventArgs<ExpandoObject> args)
     {
-        // Here you can customize your code
+        // Here you can customize your code.
     }
 }
 ```
