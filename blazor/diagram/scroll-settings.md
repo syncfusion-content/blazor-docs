@@ -102,18 +102,14 @@ Scrolling beyond any particular rectangular area can be restricted by using the 
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-
 <SfDiagramComponent Width="50%" Height="300px" Nodes="@nodes">
-    @* Sets the ScrollLimit of scroll settings *@
     <ScrollSettings  ScrollableArea="@scrollableArea" ScrollLimit="ScrollLimitMode.Limited">
     </ScrollSettings>
 </SfDiagramComponent>
-
 @code
 {
     DiagramRect scrollableArea = new DiagramRect() { X = 0, Y = 0, Width = 500, Height = 500 };
     DiagramObjectCollection<Node> nodes;
-
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
@@ -138,7 +134,7 @@ Scrolling beyond any particular rectangular area can be restricted by using the 
     }
 }
 ```
-|![Scrollable Area](images/scroll.gif) | 
+|![Scrollable Area](images/scrollablearea.gif) | 
 ## CallBack Methods
 
 * CurrentZoomChanged : Specifies the callback to be triggered when the current zoom value changes.
