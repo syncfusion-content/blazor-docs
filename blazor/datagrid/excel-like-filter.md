@@ -242,6 +242,6 @@ Before opening a filter dialog for each column, the `OnActionBegin` event will b
 ```
 ![Customize the Height and Width of Filter Popup in Blazor DataGrid](./images/blazor-datagrid-customize-filter-popup.gif)
 
-> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-customize-filter-popup-using-css)
+N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-customize-filter-popup-using-css)
 
-> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

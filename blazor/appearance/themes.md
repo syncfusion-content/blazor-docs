@@ -58,7 +58,7 @@ To use static web assets, ensure [UseStaticFiles](https://docs.microsoft.com/en-
 * For **.NET 6** app, open the **~/Program.cs** file and call `UseStaticFiles` method.
 * For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and call `UseStaticFiles` method.
 
-> For **Blazor WASM App**, call `UseStaticFiles` method in **Server project** in the above mentioned file. 
+N> For **Blazor WASM App**, call `UseStaticFiles` method in **Server project** in the above mentioned file. 
 
 ### Refer theme style sheet from static web assets
 
@@ -746,7 +746,7 @@ The following example demonstrates how to change a theme dynamically in Blazor S
 
    ![Change theme dynamically in blazor server app](images/blazor-dynamic-theme-switching.gif) 
     
-   > [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-server-app) 
+   N> [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-server-app) 
 
 ### Change theme dynamically in blazor WebAssembly (WASM) app
 
@@ -846,7 +846,7 @@ The following example demonstrates how to change a theme dynamically in Blazor W
     ```
     ![Change theme dynamically in blazor WASM app](images/blazor-dynamic-theme-switching-wasm.gif) 
     
-    > [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-WASM-app)
+    N> [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-WASM-app)
   
 ## Render Syncfusion Components in offline with Material and Tailwind Themes
 
