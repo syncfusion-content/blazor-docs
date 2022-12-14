@@ -113,7 +113,6 @@ Scrolling beyond any particular rectangular area can be restricted by using the 
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
-        // A node is created and stored in the nodes collection.
         Node node = new Node()
             {
                 ID = "node1",
