@@ -574,78 +574,84 @@ When the `LoadChildOnDemand` is enabled parent records are rendered in expanded 
 
 {% highlight razor %}
 
-@using TreeGridComponent.Data;
-@using Syncfusion.Blazor.TreeGrid;
+@using WebAPI.Data
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Gantt
 
-<SfTreeGrid @ref="grid" TValue="SelfReferenceData" LoadChildOnDemand="true" HasChildMapping="isParent" Height="315" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1" AllowPaging="true">
-    <SfDataManager Url="api/Default" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
-    <TreeGridPageSettings PageSize="2"></TreeGridPageSettings>
-    <TreeGridColumns>
-        <TreeGridColumn Field="TaskID" HeaderText="Task ID" IsPrimaryKey="true" Width="80" TextAlign="TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="145"></TreeGridColumn>
-        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100"></TreeGridColumn>
-        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="100"></TreeGridColumn>
-    </TreeGridColumns>
-</SfTreeGrid>
+<SfGantt TValue="TaskData" Height="450px" Width="1000px" LoadChildOnDemand="false">
+   <SfDataManager Url="api/Default" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
+   <GanttTaskFields Id="ID" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+        Duration="Duration" Dependency="Predecessor" ParentID="ParentId" HasChildMapping="isParent">
+   </GanttTaskFields>
+</SfGantt>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-namespace TreeGridComponent.Data {
-
-public class SelfReferenceData
+namespace WebAPI.Data
+{
+    public class TaskData
     {
-        public static List<SelfReferenceData> tree = new List<SelfReferenceData>();
-        public int? TaskID { get; set; }
+        public static List<TaskData> tree = new List<TaskData>();
+        public int ID { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public String Progress { get; set; }
-        public String Priority { get; set; }
-        public int Duration { get; set; }
-        public int? ParentID { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+        public string Predecessor { get; set; }
         public bool? isParent { get; set; }
-        public SelfReferenceData() { }
-        public static List<SelfReferenceData> GetTree()
+        public TaskData() { }
+        public static List<TaskData> GetTree()
         {
-            tree.Clear();
             if (tree.Count == 0)
             {
-                int root = -1;
-                for (var t = 1; t <= 10; t++)
+                Random rand = new Random();
+                var x = 0;
+                int duration = 0;
+                DateTime startDate = new DateTime(2000, 1, 3, 08, 00, 00);
+                for (var i = 1; i <= 50; i++)
                 {
-                    Random ran = new Random();
-                    string math = (ran.Next() % 3) == 0 ? "High" : (ran.Next() % 2) == 0 ? "Release Breaker" : "Critical";
-                    string progr = (ran.Next() % 3) == 0 ? "Started" : (ran.Next() % 2) == 0 ? "Open" : "In Progress";
-                    root++;
-                    int rootItem = tree.Count + root + 1;
-                    tree.Add(new SelfReferenceData() { TaskID = rootItem, TaskName = "Parent Task " + rootItem.ToString(), StartDate = new DateTime(1992, 06, 07), EndDate = new DateTime(1994, 08, 25), isParent = true, Progress = progr, Priority = math, Duration = ran.Next(1, 50) });
-                    int parent = tree.Count;
-                    for (var c = 0; c < 3; c++)
+                    startDate = startDate.AddDays(i == 1 ? 0 : 7);
+                    DateTime childStartDate = startDate;
+                    TaskData Parent = new TaskData()
                     {
-                        root++;
-                        string val = ((parent + c + 1) % 3 == 0) ? "Low" : "Critical";
-                        int parn = parent + c + 1;
-                        progr = (ran.Next() % 3) == 0 ? "In Progress" : (ran.Next() % 2) == 0 ? "Open" : "Validated";
-                        int iD = tree.Count + root + 1;
-                        tree.Add(new SelfReferenceData() { TaskID = iD, TaskName = "Child Task " + iD.ToString(), StartDate = new DateTime(1992, 06, 07), EndDate = new DateTime(1994, 08, 25), isParent = (((parent + c + 1) % 3) == 0), ParentID = rootItem, Progress = progr, Priority = val, Duration = ran.Next(1, 50) });
-                        if ((((parent + c + 1) % 3) == 0))
+                        ID = ++x,
+                        TaskName = "Task " + x,
+                        StartDate = startDate,
+                        EndDate = startDate.AddDays(26),
+                        Duration = "20",
+                        Progress = rand.Next(100),
+                        Predecessor = null,
+                        isParent = true,
+                        ParentId = null
+                    };
+                    tree.Add(Parent);
+                    for (var j = 1; j <= 4; j++)
+                    {
+                        childStartDate = childStartDate.AddDays(j == 1 ? 0 : duration + 2);
+                        duration = 5;
+                        tree.Add(new TaskData()
                         {
-                            int immParent = tree.Count;
-                            for (var s = 0; s <= 1; s++)
-                            {
-                                root++;
-                                string Prior = (immParent % 2 == 0) ? "Validated" : "Normal";
-                                tree.Add(new SelfReferenceData() { TaskID = tree.Count + root + 1, TaskName = "Sub Task " + (tree.Count + root + 1).ToString(), StartDate = new DateTime(1992, 06, 07), EndDate = new DateTime(1994, 08, 25), isParent = false, ParentID = iD, Progress = (immParent % 2 == 0) ? "On Progress" : "Closed", Priority = Prior, Duration = ran.Next(1, 50) });
-                            }
-                        }
+                            ID = ++x,
+                            TaskName = "Task " + x,
+                            StartDate = childStartDate,
+                            EndDate = childStartDate.AddDays(5),
+                            Duration = duration.ToString(),
+                            Progress = rand.Next(100),
+                            ParentId = Parent.ID,
+                            Predecessor = j > 1 ? (x - 1) + "FS" : "",
+                            isParent = false
+                        });
                     }
                 }
             }
             return tree;
         }
+    }
 }
 
 {% endhighlight %}
@@ -653,16 +659,15 @@ public class SelfReferenceData
 {% highlight c# %}
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Primitives;
-using Syncfusion.Blazor;
-using Syncfusion.Blazor.Data;
 using WebAPI.Data;
+using Syncfusion.Blazor.Data;
+using System.Collections;
 
 namespace WebAPI.Controller
 {
@@ -670,94 +675,117 @@ namespace WebAPI.Controller
     [ApiController]
     public class DefaultController : ControllerBase
     {
-        public static List<SelfReferenceData> FlatData = new List<SelfReferenceData>();
-        // GET: api/Default
+
+        public static List<TaskData> DataList = new List<TaskData>();
+        private static DataRequest req = null;
         [HttpGet]
         public async Task<object> Get(int? code)
         {
-            var queryString = Request.Query;
-            FlatData.Clear();
-            if (SelfReferenceData.tree.Count == 0)
-                SelfReferenceData.GetTree();
-            List<SelfReferenceData> data = SelfReferenceData.tree.ToList();
-            bool isFiltered = false;
-            if (queryString.Keys.Contains("$filter"))
+            DataList.Clear();
+            IQueryCollection queryString = Request.Query;
+            req = QueryGenerator(queryString);
+            if (TaskData.tree.Count == 0)
+                TaskData.GetTree();
+            if (req.filter != "" && !req.filter.Contains("null"))
             {
-                StringValues filter;
-                isFiltered = true;
-                queryString.TryGetValue("$filter", out filter);
-                string[] filterQuery = null;
-                if (filter[0].IndexOf('(') != -1 && filter[0].IndexOf(')') != -1)
+                int fltr = Int32.Parse(req.filter.Split("eq")[1]);
+                IQueryable<TaskData> data1 = TaskData.tree.Where(f => f.ParentId == fltr).AsQueryable();
+                if (queryString.Keys.Contains("$orderby"))
                 {
-                    filterQuery = filter[0].Split('(', ')')[1].Split(" eq ");
+                    string srt;
+                    srt = req.orderby.Replace("desc", "descending");
+                    data1 = SortingExtend.Sort(data1, srt);
                 }
-                else
-                {
-                    filterQuery = filter[0].Split(" eq ");
-                }
-                var field = filterQuery[0];
-                var value = filterQuery[1];
-                if (field == "ParentID" && value == "null")
-                {
-                    data = data.Where(p => p.ParentID == null).ToList();
-                }
+                return new { result = data1.ToList(), items = data1.ToList(), count = data1.Count() };
             }
-            if (queryString.Keys.Contains("$orderby"))
+            List<TaskData> data = TaskData.tree.ToList();
+            if (req.orderby != "")
             {
-                StringValues srt;
-                queryString.TryGetValue("$orderby", out srt);
-                srt = srt.ToString().Replace("desc", "descending");
-                IQueryable<SelfReferenceData> data1 = SortingExtend.Sort(data.AsQueryable(), srt);
+                string srt;
+                srt = req.orderby.Replace("desc", "descending");
+                IQueryable<TaskData> data1 = SortingExtend.Sort(data.AsQueryable(), srt);
                 data = data1.ToList();
             }
-            int count = data.Count;
-            if (queryString.Keys.Contains("$inlinecount"))
+            if (queryString.Keys.Contains("$select"))
             {
-                StringValues Skip;
-                StringValues Take;
-                int skip = (queryString.TryGetValue("$skip", out Skip)) ? Convert.ToInt32(Skip[0]) : 0;
-                int top = (queryString.TryGetValue("$top", out Take)) ? Convert.ToInt32(Take[0]) : data.Count();
-                FlatData = data.Skip(skip).Take(top).ToList();
-                var GroupData = SelfReferenceData.tree.ToList().GroupBy(rec => rec.ParentID)
-                                .Where(g => g.Key != null).ToDictionary(g => g.Key?.ToString(), g => g.ToList());
-                foreach (var Record in FlatData.ToList())
+                data = (from rec in TaskData.tree
+                        select new TaskData
+                        {
+                            ParentId = rec.ParentId
+                        }
+                        ).ToList();
+                return data;
+            }
+            data = data.Where(p => p.ParentId == null).ToList();
+            int count = data.Count;
+            if (req.inlinecount)
+            {
+                if (req.skip == null && req.take == null)
+                    DataList = data;
+                else
+                    DataList = data.Skip((int)req.skip).Take((int)req.take).ToList();
+                if (req.loadchild)
                 {
-                    if (GroupData.ContainsKey(Record.TaskID.ToString()))
+                    var GroupData = TaskData.tree.ToList().GroupBy(rec => rec.ParentId)
+                                .Where(g => g.Key != null).ToDictionary(g => g.Key?.ToString(), g => g.ToList());
+                    foreach (var Record in DataList.ToList())
                     {
-                        var ChildGroup = GroupData[Record.TaskID.ToString()];
-                        if (ChildGroup?.Count > 0)
-                            AppendChildren(ChildGroup, Record, GroupData);   /////   appending the child records for the respective parent records
+                        if (GroupData.ContainsKey(Record.ID.ToString()))
+                        {
+                            var ChildGroup = GroupData[Record.ID.ToString()];
+                            if (ChildGroup?.Count > 0)
+                                AppendChildren(ChildGroup, Record, GroupData);
+                        }
                     }
                 }
-                return new { Items = FlatData, FlatData.Count };
+                if (req.skip == null && req.take == null)
+                    return new { result = DataList, items = DataList, count = count };
+                return new { result = DataList, items = DataList, count = count };
             }
             else
             {
-                return SelfReferenceData.GetTree();
+                return TaskData.GetTree();
             }
         }
+        public DataRequest QueryGenerator(IQueryCollection queryString)
+        {
+            DataRequest req = new DataRequest();
+            StringValues Skip;
+            StringValues Take;
+            StringValues filter;
+            StringValues orderby;
+            StringValues loadchild;
+            req.loadchild = queryString.TryGetValue("loadchildondemand", out loadchild) ? Convert.ToBoolean(loadchild[0]) : false;
+            req.skip = queryString.TryGetValue("$skip", out Skip) ? Convert.ToInt32(Skip[0]) : (Nullable<int>)null;
+            req.take = (queryString.TryGetValue("$top", out Take)) ? Convert.ToInt32(Take[0]) : (Nullable<int>)null;
+            req.filter = queryString.TryGetValue("$filter", out filter) ? filter[0].ToString() : "";
+            req.inlinecount = queryString.Keys.Contains("$inlinecount") ? true : false;
+            req.orderby = queryString.TryGetValue("$orderby", out orderby) ? orderby[0].ToString() : "";
+            return req;
+        }
 
-        private void AppendChildren(List<SelfReferenceData> ChildRecords, SelfReferenceData ParentItem, Dictionary<string, List<SelfReferenceData>> GroupData)
+
+        private void AppendChildren(List<TaskData> ChildRecords, TaskData ParentItem, Dictionary<string, List<TaskData>> GroupData)
         {
             var queryString = Request.Query;
-            string TaskId = ParentItem.TaskID.ToString();
+            string TaskId = ParentItem.ID.ToString();
             if (queryString.Keys.Contains("$orderby"))
             {
                 StringValues srt;
                 queryString.TryGetValue("$orderby", out srt);
                 srt = srt.ToString().Replace("desc", "descending");
-                List<SelfReferenceData> SortedChildRecords = SortingExtend.Sort(ChildRecords.AsQueryable(), srt).ToList();
-                var index = FlatData.IndexOf(ParentItem);
+                List<TaskData> SortedChildRecords = SortingExtend.Sort(ChildRecords.AsQueryable(), srt).ToList();
+                var index = DataList.IndexOf(ParentItem);
                 foreach (var Child in SortedChildRecords)
                 {
-                    string ParentId = Child.ParentID.ToString();
+                    string ParentId = Child.ParentId.ToString();
                     if (TaskId == ParentId)
                     {
-                        if (FlatData.IndexOf(Child) == -1)
-                            ((IList)FlatData).Insert(++index, Child);
-                        if (GroupData.ContainsKey(Child.TaskID.ToString()))
+                        if (DataList.IndexOf(Child) == -1)
+                            ((IList)DataList).Insert(++index, Child);
+                        if (GroupData.ContainsKey(Child.ID.ToString()))
                         {
-                            var DeepChildRecords = GroupData[Child.TaskID.ToString()];
+                            var DeepChildRecords = GroupData[Child.ID.ToString()];
                             if (DeepChildRecords?.Count > 0)
                                 AppendChildren(DeepChildRecords, Child, GroupData);
                         }
@@ -766,17 +794,17 @@ namespace WebAPI.Controller
             }
             else
             {
-                var index = FlatData.IndexOf(ParentItem);
+                var index = DataList.IndexOf(ParentItem);
                 foreach (var Child in ChildRecords)
                 {
-                    string ParentId = Child.ParentID.ToString();
+                    string ParentId = Child.ParentId.ToString();
                     if (TaskId == ParentId)
                     {
-                        if (FlatData.IndexOf(Child) == -1)
-                            ((IList)FlatData).Insert(++index, Child);
-                        if (GroupData.ContainsKey(Child.TaskID.ToString()))
+                        if (DataList.IndexOf(Child) == -1)
+                            ((IList)DataList).Insert(++index, Child);
+                        if (GroupData.ContainsKey(Child.ID.ToString()))
                         {
-                            var DeepChildRecords = GroupData[Child.TaskID.ToString()];
+                            var DeepChildRecords = GroupData[Child.ID.ToString()];
                             if (DeepChildRecords?.Count > 0)
                                 AppendChildren(DeepChildRecords, Child, GroupData);
                         }
@@ -785,20 +813,32 @@ namespace WebAPI.Controller
             }
         }
 
+        public class DataRequest
+        {
+            public Nullable<int> skip { get; set; }
+            public Nullable<int> take { get; set; }
+            public Boolean inlinecount { get; set; }
+            public string filter { get; set; }
+            public string orderby { get; set; }
+            public bool loadchild { get; set; }
+            public DateTime startDate { get; set; }
+            public DateTime endDate { get; set; }
+        }
+        
     }
     public static class SortingExtend
-    {    
-        public static IQueryable<T> Sort<T>(this IQueryable<T> source, string sortBy)    
-        {        
-            if (source == null)            
-                    throw new ArgumentNullException("source");
+    {
+        public static IQueryable<T> Sort<T>(this IQueryable<T> source, string sortBy)
+        {
+            if (source == null)
+                throw new ArgumentNullException("source");
 
-            if (string.IsNullOrEmpty(sortBy))            
-                    throw new ArgumentNullException("sortBy");
+            if (string.IsNullOrEmpty(sortBy))
+                throw new ArgumentNullException("sortBy");
 
-            source = (IQueryable<T>)source.OrderBy(sortBy);
+            source = (IQueryable<T>)source.OrderBy(sortBy);
 
-            return source;    
+            return source;
         }
     }
 }
