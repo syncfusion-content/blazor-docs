@@ -14,10 +14,10 @@ You can display the suggestion list items in a specific order. It has possible t
 The available type of sort orders are:
 
 SortOrder     | Description
------------- | -------------
-  [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SortOrder.html#Syncfusion_Blazor_DropDowns_SortOrder_None)       | The data source is not sorted..
-  [Ascending](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SortOrder.html#Syncfusion_Blazor_DropDowns_SortOrder_Ascending)     | The data source is sorting in ascending order.
-  [Descending](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SortOrder.html#Syncfusion_Blazor_DropDowns_SortOrder_Descending)      | The data source is sorted in descending order.
+------------  | -------------
+  `None`      | The data source is not sorted..
+  `Ascending` | The data source is sorting in ascending order.
+  `Descending`| The data source is sorted in descending order.
 
 {% highlight razor %}
 

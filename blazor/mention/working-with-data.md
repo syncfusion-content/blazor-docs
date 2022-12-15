@@ -9,7 +9,7 @@ documentation: ug
 
 # Working with Data in Mention
 
-The DropDownList loads the data either from the local data sources or remote data services. Using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property,  bind the local data or using the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html), bind the remote data.
+The Mention loads the data either from the local data sources or remote data services. Using the `DataSource` property,  bind the local data or using the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html), bind the remote data.
 
 * **TItem** - Specifies the type of the datasource of the Mention component.
 
@@ -57,7 +57,7 @@ In the following example, the `Code.ID` column and `Country.CountryID` column fr
 
 ## Binding remote data
 
-The Mention supports the retrieval of data from the remote data services with the help of the [DataManager](https://blazor.syncfusion.com/documentation/data/getting-started) control. The [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property is used to fetch data from the database and bind it to the Mention.
+The Mention supports the retrieval of data from the remote data services with the help of the `DataManager` control. The `Query` property is used to fetch data from the database and bind it to the Mention.
 
 ### OData v4 adaptor - Binding OData v4 service
 
