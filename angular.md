@@ -1,6 +1,6 @@
 # Angular Grid Component
 
-The [Angular Data Grid](https://www.syncfusion.com/angular-ui-components/angular-grid?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm) component is used to display and manipulate tabular data with configuration options to control the way the data is presented. It will pull data from a data source, such as array of JSON objects, `OData web services`, or [DataManager](https://ej2.syncfusion.com/angular/documentation/data/data-binding/) binding data fields to columns. It also supports for grouping, filtering, paging, virtualization, and more.
+The [Angular Data Grid](https://www.syncfusion.com/angular-ui-components/angular-grid?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm) component is used to display and manipulate tabular data with configuration options to control the way the data is presented. It will pull data from a data source, such as array of JSON objects, `OData web services`, or [DataManager](https://ej2.syncfusion.com/angular/documentation/data/data-binding/) binding data fields to columns. It also supports grouping, filtering, paging, virtualization, and more.
 
 <p align="center">
   <a href="https://ej2.syncfusion.com/angular/documentation/grid/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm">Getting Started</a> .
