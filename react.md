@@ -1,6 +1,6 @@
 # React Grid Component
 
-The [React Data Grid](https://www.syncfusion.com/react-ui-components/react-grid?utm_source=npm&utm_medium=listing&utm_campaign=react-grid-npm) component is used to display and manipulate tabular data with configuration options to control the way the data is presented and manipulated. It will pull data from a data source, such as array of JSON objects, `OData web services`, or [DataManager](https://ej2.syncfusion.com/react/documentation/data/data-binding/) binding data fields to columns. Also displaying a column header to identify the field with support for grouped records.
+The [React Data Grid](https://www.syncfusion.com/react-ui-components/react-grid?utm_source=npm&utm_medium=listing&utm_campaign=react-grid-npm) component is used to display and manipulate tabular data with configuration options to control the way the data is presented. It will pull data from a data source, such as array of JSON objects, `OData web services`, or [DataManager](https://ej2.syncfusion.com/react/documentation/data/data-binding/) binding data fields to columns. It also supports grouping, filtering, paging, virtualization, and more.
 
 <p align="center">
   <a href="https://ej2.syncfusion.com/react/documentation/grid/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=react-grid-npm">Getting Started</a>.
@@ -21,8 +21,8 @@ Trusted by the world's leading companies
 
 ### Create a React Application
 
-You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup the applications.
-To install **create-react-app** run the following command.
+You can use [`create-react-app`](https://github.com/facebookincubator/create-react-app) to setup applications.
+To install **create-react-app**, run the following command.
 
 ```bash
 npx create-react-app my-app --template typescript
@@ -32,15 +32,15 @@ npm start
 
 ### Adding Syncfusion Grid package
 
-All Syncfusion react packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry. To install react grid package, use the following command.
+All Syncfusion react packages are published in the [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry. To install the react grid package, use the following command.
 
 ```bash
 npm install @syncfusion/ej2-react-grids --save
 ```
 
-### Adding CSS references for Grid
+### Adding CSS references to Grids
 
-Add CSS references needed for Grid in **src/App.css** from **../node_modules/@syncfusion** package folder.
+Add CSS references needed for a Grid in **src/App.css** from  the **../node_modules/@syncfusion** package folder.
 
 ```css
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
@@ -56,7 +56,7 @@ Add CSS references needed for Grid in **src/App.css** from **../node_modules/@sy
 
 ### Add Grid Component
 
-In **src/App.tsx** file, use the following code snippet to render the Syncfusion React Grid control and import **App.css** to apply styles to the grid:
+In the **src/App.tsx** file, use the following code snippet to render the Syncfusion React Grid control and import **App.css** to apply styles to the grid:
 
 ```typescript
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
@@ -84,7 +84,7 @@ export default App;
 
 ## Supported frameworks
 
-Grid component is also offered in following list of frameworks.
+Grid component is also offered in the following list of frameworks.
 
 | [<img src="https://ej2.syncfusion.com/github/images/js.svg" height="50" />](https://www.syncfusion.com/javascript-ui-controls?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[JavaScript](https://www.syncfusion.com/javascript-ui-controls?utm_medium=listing&utm_source=github)&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/angular.svg"  height="50" />](https://www.syncfusion.com/angular-components/?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Angular](https://www.syncfusion.com/angular-components/?utm_medium=listing&utm_source=github)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/vue.svg" height="50" />](https://www.syncfusion.com/vue-ui-components?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Vue](https://www.syncfusion.com/vue-ui-components?utm_medium=listing&utm_source=github)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/netcore.svg" height="50" />](https://www.syncfusion.com/aspnet-core-ui-controls?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;[ASP.NET&nbsp;Core](https://www.syncfusion.com/aspnet-core-ui-controls?utm_medium=listing&utm_source=github)&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/netmvc.svg" height="50" />](https://www.syncfusion.com/aspnet-mvc-ui-controls?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;[ASP.NET&nbsp;MVC](https://www.syncfusion.com/aspnet-mvc-ui-controls?utm_medium=listing&utm_source=github)&nbsp;&nbsp; | 
 | :-----: | :-----: | :-----: | :-----: | :-----: |
