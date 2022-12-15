@@ -21,7 +21,7 @@ The Mention has provided support to load an array of primitive data such as stri
 
 {% highlight razor %}
 
-{% include_relative code-snippet/array-fo-simple-data.razor %}
+{% include_relative code-snippet/array-of-simple-data.razor %}
 
 {% endhighlight %}
 

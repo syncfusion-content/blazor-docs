@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in Blazor Mention Component | Syncfusion
-description: Checkout and learn here all about Filtering in Syncfusion Blazor Mention component and more.
+title: Filtering data in Blazor Mention Component | Syncfusion
+description: Checkout and learn here all about Filtering data in Syncfusion Blazor Mention component and more.   
 platform: Blazor
 control: Mention
 documentation: ug
