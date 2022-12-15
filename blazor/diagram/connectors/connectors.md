@@ -52,7 +52,7 @@ The following code example illustrates how to add a connector through connector 
 
 ![Blazor Diagram Connector](../images/blazor-diagram-connector.png)
 
-> [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each connector should be unique and so it is further used to find the connector at runtime and do any customization.
+N> [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each connector should be unique and so it is further used to find the connector at runtime and do any customization.
 
 ## Add connectors at runtime
 
@@ -288,7 +288,7 @@ The following code example explains how to change the connector properties.
 }
 ```
 
-> BeginUpdate and EndUpdate methods allow you to stop the continuous update of control and resume it finally.
+N> BeginUpdate and EndUpdate methods allow you to stop the continuous update of control and resume it finally.
 
 ## Connections
 

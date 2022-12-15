@@ -19,4 +19,4 @@ You can hide the DataGrid header by applying the following styles to the DataGri
 </style>
 ```
 
-> If you want to hide the header for particular DataGrid, then you can apply the above styles to that DataGrid using the ID (#Grid.e-grid .e-gridheader .e-columnheader) property value.
+N> If you want to hide the header for particular DataGrid, then you can apply the above styles to that DataGrid using the ID (#Grid.e-grid .e-gridheader .e-columnheader) property value.

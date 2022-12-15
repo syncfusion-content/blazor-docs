@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion Blazor code snippet utility for Visual Studio Code includes snippets for inserting a Syncfusion Blazor component with various features into the Blazor Application's Razor code editor.
 
-   > The Syncfusion Blazor code snippet is available from Essential Studio 2021 Volume 1 (`v19.1.0.54`).
+   N> The Syncfusion Blazor code snippet is available from Essential Studio 2021 Volume 1 (`v19.1.0.54`).
 
 ## Add a Syncfusion Blazor component
 
@@ -47,7 +47,7 @@ The Syncfusion Blazor snippet simply inserts the code into the razor file. You m
 
     ![NuGet Package](images/NuGet-Snippet.png)
 
-    > Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for our Syncfusion Blazor components. We highly recommend this new standard for your Blazor production applications.
+    N> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for our Syncfusion Blazor components. We highly recommend this new standard for your Blazor production applications.
 
 2. To render the Syncfusion components in your application, open the **~/_Imports.razor** file and add the required Syncfusion Blazor namespace entries.
 

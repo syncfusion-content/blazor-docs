@@ -190,7 +190,7 @@ The taskbar can be dragged above the given predecessor offset value and it gets 
 ```
 ![Blazor Gantt Chart predecessor validation on taskbar dragging](images/blazor-gantt-chart-predecessor-offset-validation.gif)
 
-> When `PredecessorOffsetValidation` is enabled, the predecessor offset will not be updated on dragging the taskbar. You can update the predecessor offset either by cell edit or dialog edit.
+N> When `PredecessorOffsetValidation` is enabled, the predecessor offset will not be updated on dragging the taskbar. You can update the predecessor offset either by cell edit or dialog edit.
 
 ### Auto-link validation
 
@@ -257,4 +257,4 @@ In the below code example, the connector line which is connected from task id 2 
 
 ![Blazor Gantt Chart disabling predecessor validation on predecessor drawing](images/blazor-gantt-chart-auto-link-validation.png)
 
-> [EnablePredecessorValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnablePredecessorValidation) is used to enable/disable validation based on predecessor values both on load time and on edit actions like cell editing, dialog editing, and on predecessor drawing. Whereas, [EnableAutoLinkValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttActionEventArgs-1.html#Syncfusion_Blazor_Gantt_GanttActionEventArgs_1_EnableAutoLinkValidation) event argument is used to enable/disable validation only on predecessor drawing. 
+N> [EnablePredecessorValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnablePredecessorValidation) is used to enable/disable validation based on predecessor values both on load time and on edit actions like cell editing, dialog editing, and on predecessor drawing. Whereas, [EnableAutoLinkValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttActionEventArgs-1.html#Syncfusion_Blazor_Gantt_GanttActionEventArgs_1_EnableAutoLinkValidation) event argument is used to enable/disable validation only on predecessor drawing. 

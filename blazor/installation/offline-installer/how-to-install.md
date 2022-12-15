@@ -17,7 +17,7 @@ The steps below show how to install the Essential Studio Blazor installer.
 
    ![Web Offline Installer Setup wizard](images/webofflineinstaller-1.png)
 
-   > **Note** <br /> The Installer wizard extracts the syncfusionessentialblazor_(version).exe dialog, which displays the package’s unzip operation.
+   N> The Installer wizard extracts the syncfusionessentialblazor_(version).exe dialog, which displays the package’s unzip operation.
 
 2. To unlock the Syncfusion offline installer, you have two options:
 
@@ -60,7 +60,7 @@ The steps below show how to install the Essential Studio Blazor installer.
 
    ![Web Offline Installer Uninstall Previous Wizard](images/webofflineinstaller-5.png)
 
-   > **Note** <br /> From the 2021 Volume 1 release, Syncfusion has added the option to uninstall previous versions from 18.1 while installing the new version. <br /> <br /> If any version is selected to uninstall, a confirmation screen will appear; if continue is selected, the Progress screen will display the uninstall and install progress, respectively. If none of the versions are chosen to be uninstalled, only the installation progress will be displayed.
+   N> From the 2021 Volume 1 release, Syncfusion has added the option to uninstall previous versions from 18.1 while installing the new version. <br /> <br /> If any version is selected to uninstall, a confirmation screen will appear; if continue is selected, the Progress screen will display the uninstall and install progress, respectively. If none of the versions are chosen to be uninstalled, only the installation progress will be displayed.
 
    **Confirmation Alert:**
 
@@ -74,7 +74,7 @@ The steps below show how to install the Essential Studio Blazor installer.
 
    ![Web Offline Installer Progress Wizard](images/webofflineinstaller-8.png)
 
-   > **Note** <br /> The Completed screen is displayed once the Blazor product is installed. If any version is selected to uninstall, The completed screen will display both install and uninstall status.
+   N> The Completed screen is displayed once the Blazor product is installed. If any version is selected to uninstall, The completed screen will display both install and uninstall status.
 
    ![Web Offline Installer Summary Wizard](images/webofflineinstaller-9.png)
 
@@ -104,13 +104,13 @@ To install through the Command Line in Silent mode, follow the steps below.
 
    **Arguments:** "installer file path\SyncfusionEssentialStudio(product)_(version).exe" /Install silent /UNLOCKKEY:"(product unlock key)" [/   log "{Log file path}"] [/InstallPath:{Location to install}] [/InstallSamples:{true/false}] [/CreateShortcut:{true/false}] [/   CreateStartMenuShortcut:{true/false}]
 
-   > **Note** <br /> [..] – Arguments inside the square brackets are optional.
+   N> [..] – Arguments inside the square brackets are optional.
 
    **Example:** "D:\Temp\syncfusionessentialblazor_x.x.x.x.exe" /Install silent /UNLOCKKEY:"product unlock key" /log    "C:\Temp\EssentialStudio_Product.log" /InstallPath:C:\Syncfusion\x.x.x.x /InstallSamples:true /CreateShortcut:true /   CreateStartMenuShortcut:true
 
 7. Essential Studio for Blazor is installed.
 
-> **Note** <br /> x.x.x.x should be replaced with the Essential Studio version and the Product Unlock Key needs to be replaced with the Unlock Key for that version.
+N> x.x.x.x should be replaced with the Essential Studio version and the Product Unlock Key needs to be replaced with the Unlock Key for that version.
 
 ## Command Line Uninstallation
 
