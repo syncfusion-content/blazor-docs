@@ -73,7 +73,7 @@ The font size of the icon can be changed using the [Size](https://help.syncfusio
 
 ![Icon size customization Blazor Icon Component](./images/icons/icon-size.png)
 
-> The `Size` property is applicable only when defining the icon using `Name` property. Otherwise, use [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_IconCss) property to customize the icon.
+N> The `Size` property is applicable only when defining the icon using `Name` property. Otherwise, use [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_IconCss) property to customize the icon.
 
 ### Tooltip for icons
 

@@ -137,7 +137,7 @@ Follow below steps to change the size mode for an application at runtime.
     
     ![change-size-mode-for-application-at-runtime](images/change-size-mode-for-application-at-runtime.gif)
     
-    > [View sample in GitHub](https://github.com/SyncfusionExamples/size-mode-in-blazor-application)
+    N> [View sample in GitHub](https://github.com/SyncfusionExamples/size-mode-in-blazor-application)
 
 ## Change size mode for a control at runtime
 
@@ -197,7 +197,7 @@ Refer to the following code, in which the `e-bigger` class is added for enabling
 
 ![change-size-mode-for-a-control-at-runtime](images/change-size-mode-for-a-control-at-runtime.gif)
 
-> [View sample in GitHub](https://github.com/SyncfusionExamples/size-mode-in-blazor-application)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/size-mode-in-blazor-application)
 
 
 ## Change font size for all components
