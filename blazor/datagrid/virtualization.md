@@ -531,6 +531,38 @@ N> If <b>rowHeight</b> is given, then the page size is calculated by given row h
 * The height of the datagrid content is calculated using the row height and total number of records in the data source and hence features which changes row height such as text wrapping are not supported. If you want to increase the row height to accommodate the content then you can specify the row height using **RowHeight** property to ensure all the table rows are in same height.
 * Programmatic selection using the **SelectRows** method is not supported in virtual scrolling.
 
+## Browser height limitation in virtual scrolling and solution
+
+You can load millions of records in the Grid by using virtual scrolling, where the grid loads and renders rows on-demand while scrolling vertically. As a result, Grid lightens the browser’s load by minimizing the DOM elements and rendering elements visible in the viewport. The height of the grid is calculated using the Total Records Count * [Row Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property.
+
+The browser has some maximum pixel height limitations for the scroll bar element. The content placed above the maximum height can't be scrolled if the element height is greater than the browser's maximum height limit. The browser height limit affects the virtual scrolling of the grid. When a large number of records are bound to the Grid, it can only display the records until the maximum height limit of the browser. Once the browser's height limit is reached while scrolling, the user won't able to scroll further to view the remaining records.
+
+For example, if the row height is set as 30px and the total record count is 1000000(1 million), then the height of the grid element will be 30,000,000 pixels. In this case, the browser's maximum height limit for a div is about 22,369,600 (The maximum pixel height limitation differs for different browsers). The records above the maximum height limit of the browser can't be scrolled.
+
+This height limitation is not related to the Grid component. It fully depends on the default behavior of the browser. The same issue is reproduced in the normal HTML table too.
+
+The following image illustrates the height limitation issue of a normal HTML table in different browsers (Chrome and Firefox).
+
+![Browser height limitation in HTML table](images/html-table.gif)
+
+Grid component also faced the same issue as mentioned in the below image.
+
+![Grid with browser height limitation](images/grid.gif)
+
+The Grid has an option to overcome this limitation of the browser in the following ways.
+
+### Solution 2: Using RowHeight property
+
+You can reduce the [row height](https://blazor.syncfusion.com/documentation/datagrid/row-height) using the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property of the Grid. It will reduce the overall height to accommodate more rows. But this approach optimizes the limitation, but if the height limit is reached after reducing row height also, you have to opt for the previous solution or use paging.
+
+In the following image, you can see how many records will be scrollable when setting rowHeight to "36px" and "30px".
+
+![Row Height](images/row-height.gif)
+
+### Solution 3: Using paging instead of virtual scrolling
+
+Similar to virtual scrolling, the [paging](https://blazor.syncfusion.com/documentation/datagrid/paging) feature also loads the data in an on-demand concept. Pagination is also compatible with all the other features(Grouping, Editing, etc.) in Grid. So, use the paging feature instead of virtual scrolling to view a large number of records in the Grid without any kind of performance degradation or browser height limitation.
+
 ## See Also
 
 * [Row virtualization with Lazy load grouping in DataGrid](https://blazor.syncfusion.com/documentation/datagrid/grouping/#lazy-load-grouping-with-row-virtualization)
