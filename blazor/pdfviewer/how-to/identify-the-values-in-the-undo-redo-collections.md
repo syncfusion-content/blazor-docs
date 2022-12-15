@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Enable or disable the custom undo redo button | Syncfusion
-description: Learn how to enable or disable the custom undo redo button in Syncfusion Blazor PDF Viewer component and more.
+title: Identify if the Viewer has values in the Undo, Redo stack | Syncfusion
+description: Learn how to identify if the Viewer has values in Undo, Redo stack in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# Enable or disable the custom undo redo button
+# Identify if the PDF Viewer has values in the Undo, Redo collections
 
-The Syncfusion's Blazor PDF Viewer component allows you to enable or disable the custom undo or redo buttons based on the undo redo actions using the `CanUndo` and `CanRedo` APIs of the PDF Viewer.
+The Syncfusion's Blazor PDF Viewer component allows you to identify if the PDF Viewer has values in the Undo, Redo collections using the `CanUndo` and `CanRedo` APIs of the PDF Viewer.
 
-The following code example shows how to enable or disable the custom undo redo button based on the undo redo actions.
+The following code example shows how to achieve this based on the Undo Redo actions.
 
 ```csharp
 
@@ -50,17 +50,17 @@ else
     bool canRedo = true;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
     
-    // Event triggers while clicking the undo button.
+    // Event triggers on Undo button click.
     private async Task undo()
     {
         // API to perform Undo action.
         await viewer.UndoAsync();
     }
 
-    // Event triggers while clicking the redo button.
+    // Event triggers on Redo button click.
     private async Task redo()
     {
-        // API to perform Undo action.
+        // API to perform Redo action.
         await viewer.RedoAsync();
     }
 }
