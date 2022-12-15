@@ -1,6 +1,6 @@
 # JavaScript Grid Control
 
-The [JavaScript Grid](https://www.syncfusion.com/javascript-ui-controls/js-data-grid?utm_source=npm&utm_medium=listing&utm_campaign=javascript-grid-npm) control is used to display and manipulate tabular data with configuration options to control the way the data is presented and manipulated. It will pull data from a data source, such as array of JSON objects, `OData web services`, or [DataManager](https://ej2.syncfusion.com/documentation/data/data-binding/) binding data fields to columns. Also displaying a column header to identify the field with support for grouped records.
+The [JavaScript Grid](https://www.syncfusion.com/javascript-ui-controls/js-data-grid?utm_source=npm&utm_medium=listing&utm_campaign=javascript-grid-npm) control is used to display and manipulate tabular data with configuration options to control the way the data is presented. It will pull data from a data source, such as array of JSON objects, `OData web services`, or [DataManager](https://ej2.syncfusion.com/documentation/data/data-binding/) binding data fields to columns. It also supports grouping, filtering, paging, virtualization, and more.
 
 <p align="center">
   <a href="https://ej2.syncfusion.com/documentation/grid/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=javascript-grid-npm">Getting started</a>
@@ -21,16 +21,16 @@ Trusted by the world's leading companies
   
 ## Setup
 
-To install Grid and its dependent packages, use the following command.
+To install the Grid and its dependent packages, use the following command.
 
 ```sh
 npm install @syncfusion/ej2-grids
 ```
 ### Adding Grid control
 
-Now, you can start adding the Grid control in the application. For getting started, add a `div` element for Grid control in **index.html**. Then refer the **index.js** file, below **EJ2 style** and **EJ2 script** reference into the **index.html** file.
+Now, you can start adding the Grid control in the application. For getting started, add a `div` element for the Grid control in **index.html**. Then, refer the **index.js** file, below **EJ2 style** and **EJ2 script** reference into the **index.html** file.
 
-To render the basic Grid, you can include the HTML code example below in your **index.html** file.
+To render a basic Grid, include the HTML code example below in your **index.html** file.
 
 ```html
 <!DOCTYPE html>
@@ -52,7 +52,7 @@ To render the basic Grid, you can include the HTML code example below in your **
 
 ```
 #### Basic Grid initialization
-you can include the HTML code example below in your **index.js** file.
+Include the HTML code example below in your **index.js** file.
 
 ```
 let data = [
@@ -75,7 +75,7 @@ grid.appendTo('#Grid');
 
 ## Supported frameworks
 
-Grid control is also offered in following list of frameworks.
+Grid control is also offered in the following list of frameworks.
 
 | [<img src="https://ej2.syncfusion.com/github/images/angular.svg" height="50" />](https://www.syncfusion.com/angular-ui-components?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Angular](https://www.syncfusion.com/angular-ui-components?utm_medium=listing&utm_source=github)&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/react.svg"  height="50" />](https://www.syncfusion.com/react-ui-components?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[React](https://www.syncfusion.com/react-ui-components?utm_medium=listing&utm_source=github)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/vue.svg" height="50" />](https://www.syncfusion.com/vue-ui-components?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Vue](https://www.syncfusion.com/vue-ui-components?utm_medium=listing&utm_source=github)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/netcore.svg" height="50" />](https://www.syncfusion.com/aspnet-core-ui-controls?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;[ASP.NET&nbsp;Core](https://www.syncfusion.com/aspnet-core-ui-controls?utm_medium=listing&utm_source=github)&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/netmvc.svg" height="50" />](https://www.syncfusion.com/aspnet-mvc-ui-controls?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;[ASP.NET&nbsp;MVC](https://www.syncfusion.com/aspnet-mvc-ui-controls?utm_medium=listing&utm_source=github)&nbsp;&nbsp; | 
 | :-----: | :-----: | :-----: | :-----: | :-----: |
