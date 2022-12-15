@@ -50,7 +50,7 @@ property.
 
 {% endhighlight %}
 
-![Blazor Mention with display template](./images/blazor-mention-noRecord-template.png)
+![Blazor Mention with no record template](./images/blazor-mention-noRecord-template.png)
 
 ## Spinner template
 
@@ -62,4 +62,8 @@ Display the customized waiting spinner, when data fetching takes time to load in
 
 {% endhighlight %}
 
-![Blazor Mention with display template](./images/blazor-mention-spinner-template.png)
+![Blazor Mention with spinner template](./images/blazor-mention-spinner-template.png)
+
+## See also
+
+* [How to achieve filtering](./filtering)

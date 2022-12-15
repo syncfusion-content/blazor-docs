@@ -1,8 +1,10 @@
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
-<div id="multipleList" placeHolder="Type @@ and tag user"></div>
-<SfMention TItem="EmployeeData" Target="#multipleList" Query="@Query" PopupWidth="250px" SuggestionCount=6>
+<SfMention TItem="EmployeeData" Query="@Query" PopupWidth="250px" SuggestionCount="6">
+        <TargetComponent>
+            <div id="commentsMention" placeHolder="Type @@ and tag user"></div>
+        </TargetComponent>
         <ItemTemplate>
             <span><span class='name'>@((context as EmployeeData).FirstName)</span><span class='country'>@((context as EmployeeData).Country)</span></span>
         </ItemTemplate>
@@ -12,10 +14,8 @@
          </ChildContent>
 </SfMention>
 
-
 <style>
-
-    #multipleList {
+    #commentsMention {
         min-height: 100px;
         border: 1px solid #D7D7D7;
         width: 600px;
@@ -36,13 +36,12 @@
 </style>
 
 @code {
-    
-     public class EmployeeData
+
+    public class EmployeeData
     {
         public string FirstName { get; set; }
         public string Country { get; set; }
     }
     public EmployeeData Data = new EmployeeData();
     public Query Query = new Query();
-
 }
