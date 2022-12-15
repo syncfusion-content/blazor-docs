@@ -107,7 +107,7 @@ The following types are available in dialog fields.
 * Numeric
 * TextArea
 
-> The above types can only be used once in the Custom dialog. The dialog template can be used to render many multiple drop-down lists within a dialog.
+N> The above types can only be used once in the Custom dialog. The dialog template can be used to render many multiple drop-down lists within a dialog.
 
 ```cshtml
 @using Syncfusion.Blazor.Kanban
@@ -521,7 +521,7 @@ Using the [CrudUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 
 The action parameter of `CrudUrl` is used to get the corresponding CRUD action.
 
-> The `CrudUrl` is used to update the bulk data sent to the server-side. Multiple selections and [SortBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanSortSettings.html#Syncfusion_Blazor_Kanban_KanbanSortSettings_SortBy) as [Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SortOrderBy.html#Syncfusion_Blazor_Kanban_SortOrderBy_Index) properties are used for `CrudUrl` properties to update the modified bulk data to the server-side.
+N> The `CrudUrl` is used to update the bulk data sent to the server-side. Multiple selections and [SortBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanSortSettings.html#Syncfusion_Blazor_Kanban_KanbanSortSettings_SortBy) as [Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SortOrderBy.html#Syncfusion_Blazor_Kanban_SortOrderBy_Index) properties are used for `CrudUrl` properties to update the modified bulk data to the server-side.
 
 ```cshtml
 @using Syncfusion.Blazor.Data

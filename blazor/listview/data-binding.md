@@ -25,7 +25,7 @@ ListView provides an option to load the data either from local dataSource or rem
 | SortBy | string | Specifies sorting field, that is used to sort the listview data. |
 | HtmlAttributes | string | Specifies list item html attributes field. |
 
-> When complex data bind to ListView, you should map the ListViewFieldSettings properly. Otherwise, the ListView properties remains as undefined or null.
+N> When complex data bind to ListView, you should map the ListViewFieldSettings properly. Otherwise, the ListView properties remains as undefined or null.
 
 ## Bind to local data
 
@@ -274,7 +274,7 @@ You can perform CRUD operations like Add and Delete by using the `AddItem`, `Rem
 </style>
 ```
 
-> You can find the fully working sample [here](https://github.com/SyncfusionExamples/Blazor-ListView-Entity-Framework).
+N> You can find the fully working sample [here](https://github.com/SyncfusionExamples/Blazor-ListView-Entity-Framework).
 
 The following GIF represents the ListView with Add and Delete the list items.
 ![Blazor ListView with CRUD Operations](./images/blazor-listview-crud-operation.gif)

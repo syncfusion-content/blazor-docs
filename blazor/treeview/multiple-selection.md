@@ -13,7 +13,7 @@ Selection provides an interactive support and highlights the node that is select
 
 In the following example, the `AllowMultiSelection` property is enabled.
 
-> Multi selection is not applicable through touch interactions.
+N> Multi selection is not applicable through touch interactions.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
