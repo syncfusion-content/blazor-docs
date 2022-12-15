@@ -50,22 +50,6 @@ The above command adds below configuration to your Angular app,
 
 This makes it easy to add the Syncfusion Angular Grids module to your project and start using it in your application.
 
-### Adding CSS references for Grid
-
-Add CSS references needed for Grid in **src/styles.css** from **../node_modules/@syncfusion** package folder.
-
-```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-angular-grids/styles/material.css';
-```
-
 ### Add Grid Component
 
 In **src/app/app.component.ts**, use `<ejs-grid>` selector in `template` attribute of  `@Component` directive to render the Syncfusion Angular Grid component.
