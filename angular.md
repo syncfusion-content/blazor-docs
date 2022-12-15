@@ -1,6 +1,6 @@
 # Angular Grid Component
 
-The [Angular Data Grid](https://www.syncfusion.com/angular-ui-components/angular-grid?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm) component is used to display and manipulate tabular data with configuration options to control the way the data is presented. It will pull data from a data source, such as array of JSON objects, `OData web services`, or [DataManager](https://ej2.syncfusion.com/angular/documentation/data/data-binding/) binding data fields to columns. It also supports display of a column header to identify the type of data in the field with grouping.
+The [Angular Data Grid](https://www.syncfusion.com/angular-ui-components/angular-grid?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm) component is used to display and manipulate tabular data with configuration options to control the way the data is presented. It will pull data from a data source, such as array of JSON objects, `OData web services`, or [DataManager](https://ej2.syncfusion.com/angular/documentation/data/data-binding/) binding data fields to columns. It also supports for grouping, filtering, paging, virtualization, and more.
 
 <p align="center">
   <a href="https://ej2.syncfusion.com/angular/documentation/grid/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm">Getting Started</a> .
@@ -42,10 +42,10 @@ All Syncfusion Angular packages are available in [npmjs.com](https://www.npmjs.c
 ng add @syncfusion/ej2-angular-grids
 ```
 
-The above command adds the below configuration to your Angular app.
+The above command does the below configuration to your Angular app.
  
  * Adds `@syncfusion/ej2-angular-grids` package and its peer dependencies to your `package.json` file.
- * Imports the `GridModule` in your application module `app.module.ts`.
+ * Imports the `GridModule` in your application module, `app.module.ts`.
  * Registers the Syncfusion UI default theme (material) in the `angular.json` file.
 
 This makes it easy to add the Syncfusion Angular Grids module to your project and start using it in your application.
@@ -96,28 +96,28 @@ Grid component is also offered in the following list of frameworks.
 
 ## Key features
 
-* [Data sources](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/local-data) - Bind the Grid component with an array of JSON objects or a DataManager.
-* [Async pipe](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/async-pipe) - Bind the Grid component with `RxJS.Observable` using the `async` pipe.
-* [Sorting and grouping](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/grouping) - Supports n levels of sorting and grouping.
-* [Filtering](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/filtering) - Offers filter UIs such as filter bar, menu, excel, and checkbox at each column to filter data.
-* [Paging](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/paging) - Provides the option to easily switch between pages using the pager bar.
-* [Editing](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/normal-edit) - Provides options for create, read, update, and delete operations.
-* Columns - Column definitions are used as the dataSource schema in the Grid. This plays a vital role in rendering column values in the required format.
+* [Data sources](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/local-data): Bind the Grid component with an array of JSON objects or a DataManager.
+* [Async pipe](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/async-pipe): Bind the Grid component with `RxJS.Observable` using the `async` pipe.
+* [Sorting and grouping](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/grouping): Supports n levels of sorting and grouping.
+* [Filtering](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/filtering): Offers filter UIs such as filter bar, menu, excel, and checkbox at each column to filter data.
+* [Paging](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/paging): Provides the option to easily switch between pages using the pager bar.
+* [Editing](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/normal-edit): Provides options for create, read, update, and delete operations.
+* Columns: Column definitions are used as the dataSource schema in the Grid. This plays a vital role in rendering column values in the required format.
   * [Reordering](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/column/reorder) - Drag any column and drop it at any position in the Grid’s column header row, to reposition the column.
-  * [Column chooser](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/column/column-chooser) - The column chooser provides a list of column names paired with check boxes that allow the visibility to be toggled on the fly.
-  * [Resizing](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/column/column-resizing) - Resizing allows changing column width on the fly by simply dragging the right corner of the column header.
-  * [Freeze](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/frozen-rows) - Columns and rows can be frozen to allow scrolling and comparing cell values.
-  * [Cell spanning](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/column/column-spanning) - Span grid cells based on the preferred criteria.
-  * [Foreign data source](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/column/foreign-key) - Show values from external or lookup data sources in a column based on foreign key/value mapping.
-  * [Cell styling](https://ej2.syncfusion.com/angular/documentation/grid/how-to/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#customize-column-styles) - Customize grid cell styles by using CSS or programmatically.
-* [Selection](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/selection) - Select rows or cells in a grid. One or more rows or cells can also be selected by holding Ctrl or Command, or programmatically.
-* [Templates](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/column-template) - Templates can be used to create custom user experiences in the grid.
-* [Aggregation](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/aggregate-default) - Provides the option to easily visualize aggregates for column values.
-* [Context menu](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/context-menu) -The context menu provides a list of actions to be performed in the grid. It appears when a cell, header, or the pager is right-clicked.
-* [Clipboard](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/clipboard) - Copy selected rows and cells from the grid to a Clipboard.
-* [Export](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/default-exporting) - Provides the option to export grid data to Excel, PDF, and CSV formats.
-* [RTL support](https://ej2.syncfusion.com/angular/documentation/grid/global-local/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#right-to-left---rtl) - Provides the right-to-left mode which aligns content in the Grid component from right to left.
-* [Localization](https://ej2.syncfusion.com/angular/documentation/grid/global-local/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#localization) - Provides inherent support to localize the UI.
+  * [Column chooser](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/column/column-chooser): The column chooser provides a list of column names paired with check boxes that allow the visibility to be toggled on the fly.
+  * [Resizing](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/column/column-resizing): Resizing allows changing column width on the fly by simply dragging the right corner of the column header.
+  * [Freeze](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/frozen-rows): Columns and rows can be frozen to allow scrolling and comparing cell values.
+  * [Cell spanning](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/column/column-spanning): Span grid cells based on the preferred criteria.
+  * [Foreign data source](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/column/foreign-key): Show values from external or lookup data sources in a column based on foreign key/value mapping.
+  * [Cell styling](https://ej2.syncfusion.com/angular/documentation/grid/how-to/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#customize-column-styles): Customize grid cell styles by using CSS or programmatically.
+* [Selection](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/selection): Select rows or cells in a grid. One or more rows or cells can also be selected by holding Ctrl or Command, or programmatically.
+* [Templates](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/column-template): Templates can be used to create custom user experiences in the grid.
+* [Aggregation](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/aggregate-default): Provides the option to easily visualize aggregates for column values.
+* [Context menu](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/context-menu): The context menu provides a list of actions to be performed in the grid. It appears when a cell, header, or the pager is right-clicked.
+* [Clipboard](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/clipboard): Copy selected rows and cells from the grid to a Clipboard.
+* [Export](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#/material/grid/default-exporting): Provides the option to export grid data to Excel, PDF, and CSV formats.
+* [RTL support](https://ej2.syncfusion.com/angular/documentation/grid/global-local/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#right-to-left---rtl): Provides the right-to-left mode which aligns content in the Grid component from right to left.
+* [Localization](https://ej2.syncfusion.com/angular/documentation/grid/global-local/?utm_source=npm&utm_medium=listing&utm_campaign=angular-grid-npm#localization): Provides inherent support to localize the UI.
 
 ## Support
 
