@@ -1,0 +1,50 @@
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Data
+
+<SfMention TItem="OrderDetails" Query="@Query" PopupWidth="200px" >
+    <TargetComponent>
+        <div id="commentsMention" placeHolder="Select a customer" ></div>
+    </TargetComponent>
+    <ChildContent>
+        <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain=true></SfDataManager>
+        <MentionFieldSettings Text="CustomerID" Value="CustomerID"></MentionFieldSettings>
+    </ChildContent>
+</SfMention>
+
+<style>
+
+    #commentsMention {
+        min-height: 100px;
+        border: 1px solid #D7D7D7;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 14px;
+        width: 600px;
+    }
+    div#commentsMention[placeholder]:empty:before {
+        content: attr(placeholder);
+        color: #555;
+    }
+
+</style>
+
+@code {
+
+    public Query Query = new Query().Select(new List<string> { "CustomerID", "OrderID" }).Take(6).RequiresCount();
+
+    public class OrderDetails
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public int? EmployeeID { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCity { get; set; }
+        public bool Verified { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public string ShipName { get; set; }
+        public string ShipCountry { get; set; }
+        public DateTime? ShippedDate { get; set; }
+        public string ShipAddress { get; set; }
+    }
+
+}

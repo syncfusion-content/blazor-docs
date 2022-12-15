@@ -1,0 +1,58 @@
+@using Syncfusion.Blazor.DropDowns
+
+<SfMention TItem="Complex" DataSource="@LocalData" >
+    <TargetComponent>
+        <div id="commentsMention" placeHolder="Type @@ and tag user" ></div>
+    </TargetComponent>
+    <ChildContent>
+        <MentionFieldSettings Text="Country.CountryName" Value="Code.ID"></MentionFieldSettings>
+    </ChildContent>
+</SfMention>
+
+<style>
+    #commentsMention {
+        min-height: 100px;
+        border: 1px solid #D7D7D7;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 14px;
+        width: 600px;
+    }
+    div#commentsMention[placeholder]:empty:before {
+        content: attr(placeholder);
+        color: #555;
+    }
+</style>
+
+@code {
+    public IEnumerable<Complex> LocalData { get; set; } = new Complex().GetData();
+
+
+     public class Code
+    {
+        public string ID { get; set; }
+    }
+
+    public class Country
+    {
+        public string CountryName { get; set; }
+    }
+
+    public class Complex
+    {
+        public Country Country { get; set; }
+        public Code Code { get; set; }
+        public List<Complex> GetData()
+        {
+            List<Complex> Data = new List<Complex>();
+            Data.Add(new Complex() { Country = new Country() { CountryName = "Australia" }, Code = new Code() { ID = "AU" } });
+            Data.Add(new Complex() { Country = new Country() { CountryName = "Bermuda" }, Code = new Code() { ID = "BM" } });
+            Data.Add(new Complex() { Country = new Country() { CountryName = "Canada" }, Code = new Code() { ID = "CA" } });
+            Data.Add(new Complex() { Country = new Country() { CountryName = "Cameroon" }, Code = new Code() { ID = "CM" } });
+            Data.Add(new Complex() { Country = new Country() { CountryName = "Denmark" }, Code = new Code() { ID = "DK" } });
+            Data.Add(new Complex() { Country = new Country() { CountryName = "France" }, Code = new Code() { ID = "FR" } });
+            return Data;
+        }
+    }
+
+}
