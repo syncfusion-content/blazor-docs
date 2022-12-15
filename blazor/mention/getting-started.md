@@ -325,7 +325,6 @@ After initialization, populate the Mention with data using the `DataSource` prop
 </style>
 
 @code {
-
     public class UserData
     {
         public string Name { get; set; }
@@ -338,7 +337,6 @@ After initialization, populate the Mention with data using the `DataSource` prop
         new UserData { Name = "William" },
         new UserData { Name = "Joseph" },
     };
-
 }
 
 {% endhighlight %}
