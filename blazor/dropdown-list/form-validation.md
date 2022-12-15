@@ -11,7 +11,7 @@ documentation: ug
 
 ## Dropdown List inside edit form
 
-The `EditForm` validates all data annotation rules using the `DataAnnotationsValidator`. Choose the value from the dropdown popup. The given input will be ready to submit if the value is valid. Otherwise, an error message will be shown until you choose the valid value.
+The `EditForm` validates all data annotation rules using the `DataAnnotationsValidator`. Choose the value from the dropdown popup. The given input will be ready to be submitted if the value is valid. Otherwise, an error message will be shown until you choose the valid value.
 
 {% highlight cshtml %}
 

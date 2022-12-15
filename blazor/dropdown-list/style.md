@@ -203,7 +203,7 @@ The following code demonstrates how to display a tooltip when hovering over the 
 
 ### Tooltip using HTMLAttribute in dropdown component
 
-To display the tooltip in the dropdown component, add the title attribute through the HtmlAttributes property, which updates the attribute to the root element `input`.
+To display the tooltip in the dropdown component, add the `title` attribute through the [HTMLAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_HtmlAttributes)  property. This updates the attribute on the root input element.
 
 {% highlight cshtml %}
 
@@ -284,7 +284,7 @@ In the following code, a single list Item is hidden using jsinterop.
 
 ## Adding conditional HTML attribute to list item
 
-This is achieved by adding attributes to the li items based on the data source value with the help of the JSInterop. In the opened event, call the client-side script by passing the required arguments (data source and id) and adding the attributes based on the data source value obtained from the server.
+This is achieved by adding attributes to the li items based on the data source value with the help of the JSInterop. In the [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Opened) event, call the client-side script by passing the required arguments (data source and id) and adding the attributes based on the data source value obtained from the server.
 
 % highlight cshtml %}
 
