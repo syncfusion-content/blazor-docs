@@ -73,7 +73,7 @@ The following image shows the relationship between the annotation position and o
 
 ![Displaying Annotation based on Offset in Blazor Diagram](../images/blazor-diagram-annotation-basedon-offset.png)
 
-> By default, offset value of the connector annotation is 0.5.
+N> By default, offset value of the connector annotation is 0.5.
 
 ## How to change the alignment of an annotation
 
@@ -123,7 +123,7 @@ The following screenshot shows how the annotation of the connector aligned over 
 
 ![Changing Annotation Alignment in Blazor Diagram](../images/blazor-diagram-change-annotation-alignment.png)
 
-> By default, Alignment value of the connector annotation is `Center`.
+N> By default, Alignment value of the connector annotation is `Center`.
 
 ## How to change the displacement of an annotation
 
@@ -214,7 +214,7 @@ The following code example shows how the connector annotation rotated in its pat
 | True | ![Blazor Diagram Annotation in Vertical Position](../images/blazor-diagram-annotation-in-vertical-position.png) |
 | False | ![Blazor Diagram Annotation in Horizontal Position](../images/blazor-diagram-annotation-in-horizontal-position.png) |
 
-> By default, the SegmentAngle will be disabled.
+N> By default, the SegmentAngle will be disabled.
 
 The `HorizontalAlignment`, `VerticalAlignment` and `Margin` properties were explained in the [NodeAnnotation](./node-annotation).
 

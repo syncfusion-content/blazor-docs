@@ -175,8 +175,8 @@ The following sample code demonstrates implementing custom data binding using cu
 }
 ```
 
-> If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read/ReadAsync return value must be of **DataResult** with properties **Result** whose value is a collection of records and **Count** whose value is the total number of records. If the **DataManagerRequest.RequiresCounts** is **false**, then simply send the collection of records. 
-> <br /> If the Read/ReadAsync method is not overridden in the custom adaptor then it will be handled by the default read handler.
+N> If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read/ReadAsync return value must be of **DataResult** with properties **Result** whose value is a collection of records and **Count** whose value is the total number of records. If the **DataManagerRequest.RequiresCounts** is **false**, then simply send the collection of records. 
+<br/> <br /> If the Read/ReadAsync method is not overridden in the custom adaptor then it will be handled by the default read handler.
 
 ## Inject service into Custom Adaptor
 
@@ -310,7 +310,7 @@ The CRUD operations for the custom bounded data in the Gantt component can be im
 * **Update/UpdateAsync**
 * **BatchUpdate/BatchUpdateAsync**
 
-> While using batch editing in Gantt, use BatchUpdate/BatchUpdateAsync method to handle the corresponding CRUD operation.
+N> While using batch editing in Gantt, use BatchUpdate/BatchUpdateAsync method to handle the corresponding CRUD operation.
 
 The following sample code demonstrates implementing CRUD operations for the custom bounded data,
 
@@ -452,4 +452,4 @@ The following sample code demonstrates implementing CRUD operations for the cust
 }
 ```
 
-> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.
+N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.

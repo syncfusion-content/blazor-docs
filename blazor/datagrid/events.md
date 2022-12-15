@@ -14,7 +14,7 @@ triggered for appropriate datagrid actions.
 
 The events should be provided to the datagrid using **GridEvents** component. When using events of datagrid, **TValue** must be provided in the **GridEvents** component.
 
-> All the events should be provided in a single **GridEvents** component.
+N> All the events should be provided in a single **GridEvents** component.
 
 ## OnActionBegin
 
@@ -2476,7 +2476,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 [RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when row is dropped.
 
-> We are not going to limit datagrid with these events, we will be adding new events in future based on the user requests. If the event, you are looking for is not in the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
+N> We are not going to limit datagrid with these events, we will be adding new events in future based on the user requests. If the event, you are looking for is not in the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2569,4 +2569,4 @@ The [OnBatchCancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grid
 }
 ```
 
-> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

@@ -165,7 +165,7 @@ To filter the data from given data source by using query.
 
 #### Declarations
 
-> protected Task FilteringAction(IEnumerable<TItem> dataSource, Query query, FieldSettingsModel fields)
+N> protected Task FilteringAction(IEnumerable<TItem> dataSource, Query query, FieldSettingsModel fields)
 
 #### Parameters
 

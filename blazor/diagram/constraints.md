@@ -87,15 +87,15 @@ DiagramConstraints DiagramConstraints = DiagramConstraints.Default & ~(DiagramCo
 
 For more information about diagram constraints, refer to the [Diagram constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html).
 
-> By default, the following constraints are enabled in the diagram,
->* ApiUpdate
->* PanX
->* PanY
->* Pan
->* ZoomTextEdit
->* Default
->* None
->* Tooltip
+N> By default, the following constraints are enabled in the diagram,
+<br/>* ApiUpdate
+<br/>* PanX
+<br/>* PanY
+<br/>* Pan
+<br/>* ZoomTextEdit
+<br/>* Default
+<br/>* None
+<br/>* Tooltip
 
 ## Node constraints
 
@@ -193,23 +193,23 @@ node.Constraints = NodeConstraints.Default | NodeConstraints.Tooltip;
 
 For more information about node constraints, refer to the [NodeConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html).
 
->By default, the following constraints are enabled for the node,
->* Shadow
->* PointerEvents
->* AllowDrop
->* ResizeNorthEast
->* ResizeEast
->* ResizeSouthEast
->* ResizeSouth
->* ResizeSouthWest
->* ResizeWest
->* ResizeNorthWest
->* ResizeNorth
->* AspectRatio
->* ReadOnly
->* HideThumbs
->* Inherit
->* Default
+N>By default, the following constraints are enabled for the node,
+<br/>* Shadow
+<br/>* PointerEvents
+<br/>* AllowDrop
+<br/>* ResizeNorthEast
+<br/>* ResizeEast
+<br/>* ResizeSouthEast
+<br/>* ResizeSouth
+<br/>* ResizeSouthWest
+<br/>* ResizeWest
+<br/>* ResizeNorthWest
+<br/>* ResizeNorth
+<br/>* AspectRatio
+<br/>* ReadOnly
+<br/>* HideThumbs
+<br/>* Inherit
+<br/>* Default
 
 ## Connector constraints
 
@@ -297,17 +297,17 @@ connector.Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tool
 
 For more information about connector constraints, refer to the [ConnectorConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html).
 
->By default, the following constraints are enabled for the connector,
->* DragSegmentThumb
->* Interaction
->* AllowDrop
->* Bridging
->* InheritBridging
->* ConnectToNearByNode
->* ConnectToNearByPort
->* ConnectToNearByElement
->* ReadOnly
->* Default
+N>By default, the following constraints are enabled for the connector,
+<br/>* DragSegmentThumb
+<br/>* Interaction
+<br/>* AllowDrop
+<br/>* Bridging
+<br/>* InheritBridging
+<br/>* ConnectToNearByNode
+<br/>* ConnectToNearByPort
+<br/>* ConnectToNearByElement
+<br/>* ReadOnly
+<br/>* Default
 
 ## Port constraints
 
@@ -381,9 +381,9 @@ port.Constraints = PortConstraints.Default | PortConstraints.Draw;
 
 For more information about port constraints, refer to the [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html).
 
-> By default, the following constraints are enabled for the port,
->* Draw
->* Default
+N> By default, the following constraints are enabled for the port,
+<br/>* Draw
+<br/>* Default
 
 ## Annotation constraints
 
@@ -558,7 +558,7 @@ The following code illustrates how to show or hide the tooltip for the drag, res
 ```
 |![ToolTip During hover the node with selectorconstraints](images/blazor-diagram-selectorconstraintsnode.gif) | 
 
-> Element should be in selected state, then only Rotator, UserHandle and Resizer thumbs will be visible.
+N> Element should be in selected state, then only Rotator, UserHandle and Resizer thumbs will be visible.
 
 The following code example shows how to disable the userhandle functionality for the selected item.
 
@@ -569,17 +569,17 @@ selectedItems.Constraints = SelectorConstraints.All &~ SelectorConstraints.UserH
 
 For more information about selector constraints, refer to the [SelectorConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectorConstraints.html).
 
-> By default, the following constraints are enabled for the selected items,
->* ConnectorSourceThumb
->* ConnectorTargetThumb
->* ResizeSouthEast
->* ResizeSouthWest
->* ResizeEast
->* ResizeWest
->* ResizeSouth
->* ResizeNorth
->* All
->* Tooltip
+N> By default, the following constraints are enabled for the selected items,
+<br/>* ConnectorSourceThumb
+<br/>* ConnectorTargetThumb
+<br/>* ResizeSouthEast
+<br/>* ResizeSouthWest
+<br/>* ResizeEast
+<br/>* ResizeWest
+<br/>* ResizeSouth
+<br/>* ResizeNorth
+<br/>* All
+<br/>* Tooltip
 
 ## Snap constraints
 
@@ -643,13 +643,13 @@ snapconstraints = SnapConstraints.ShowHorizontalLines | SnapConstraints.ShowVert
 
 For more information about snap constraints, refer to the [SnapConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapConstraints.html).
 
-> By default, the following constraints are enabled for the snap functionality in the diagram,
->* ShowLines
->* ShowVerticalLines
->* ShowHorizontalLines
->* SnapToHorizontalLines
->* SnapToObject
->* All
+N> By default, the following constraints are enabled for the snap functionality in the diagram,
+<br/>* ShowLines
+<br/>* ShowVerticalLines
+<br/>* ShowHorizontalLines
+<br/>* SnapToHorizontalLines
+<br/>* SnapToObject
+<br/>* All
 
 ## Boundary constraints
 
@@ -700,8 +700,8 @@ The following code shows how to limit the interaction done inside a diagram with
 
 For more information about selector constraints, refer to the [BoundaryConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BoundaryConstraints.html).
 
-> By default, the following boundary constraints are enabled for the snap functionality in the diagram,
->* Diagram
+N> By default, the following boundary constraints are enabled for the snap functionality in the diagram,
+<br/>* Diagram
 
 ## Inherit behaviors
 
