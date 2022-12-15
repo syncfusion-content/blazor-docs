@@ -1,6 +1,6 @@
 # Vue Grid Component
 
-The [Vue Grid](https://www.syncfusion.com/vue-ui-components/vue-grid?utm_source=npm&utm_medium=listing&utm_campaign=vue-grid-npm) component is used to display and manipulate tabular data with configuration options to control the way the data is presented and manipulated. It will pull data from a data source, such as array of JSON objects, `OData web services`, or DataManager binding data fields to columns. Also displaying a column header to identify the field with support for grouped records.
+The [Vue Grid](https://www.syncfusion.com/vue-ui-components/vue-grid?utm_source=npm&utm_medium=listing&utm_campaign=vue-grid-npm) component is used to display and manipulate tabular data with configuration options to control the way the data is presented. It will pull data from a data source, such as array of JSON objects, `OData web services`, or DataManager binding data fields to columns. It also supports grouping, filtering, paging, virtualization, and more.
 
 <p align="center">
   <a href="https://ej2.syncfusion.com/vue/documentation/grid/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-grid-npm">Getting Started</a>.
@@ -19,9 +19,9 @@ Trusted by the world's leading companies
 
 ## Setup
 
-### Create an Vue Application
+### Create a Vue Application
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your Vue 2 applications.To install Vue CLI use the following commands.
+You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your Vue 2 applications. To install Vue CLI, use the following commands.
 
 ```bash
 npm install -g @vue/cli
@@ -33,7 +33,7 @@ Initiating a new project prompts us to choose the type of project to be used for
 
 ### Adding Syncfusion Grid package
 
-All Syncfusion Vue packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry. To install Vue grid package, use the following command.
+All Syncfusion Vue packages are published in the [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry. To install the Vue grid package, use the following command.
 
 ```bash
 npm install @syncfusion/ej2-vue-grids --save
@@ -41,7 +41,7 @@ npm install @syncfusion/ej2-vue-grids --save
 
 ### Registering Grid Component
 
-You can register the Grid component in your application by using the **Vue.use()**. Refer to the code example given below.
+Register the Grid component in your application by using **Vue.use()**. Refer to the code example given below.
 
 ```typescript
 import { GridPlugin } from '@syncfusion/ej2-vue-grids';
@@ -49,11 +49,11 @@ import { GridPlugin } from '@syncfusion/ej2-vue-grids';
 Vue.use(GridPlugin);
 ```
 
-> Registering **GridPlugin** in vue, will register the grid component along with its required child directives globally.
+> Registering **GridPlugin** in vue will register the grid component along with its required child directives, globally.
 
-### Adding CSS references for Grid
+### Adding CSS references to Grid
 
-Add CSS references needed for Grid in **style** section of the **App.vue** file from **../node_modules/@syncfusion** package folder.
+Add CSS references needed for a Grid in **style** section of the **App.vue** file from the **../node_modules/@syncfusion** package folder.
 
 ```html
 <style>
@@ -72,7 +72,7 @@ Add CSS references needed for Grid in **style** section of the **App.vue** file 
 
 ## Add Grid Component
 
-Add the Vue Grid by using **ejs-grid** selector in **template** section of the **App.vue** file.
+Add a Vue Grid by using the **ejs-grid** selector in the **template** section of the **App.vue** file.
 
 ```html
 <template>
@@ -118,11 +118,11 @@ export default {
 @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
 ```
-> Refer the [Getting Started with Vue3](https://ej2.syncfusion.com/vue/documentation/grid/getting-started-vue/) for using Syncfusion Vue components in Vue 3 applications.
+> Refer to the [Getting Started with Vue3](https://ej2.syncfusion.com/vue/documentation/grid/getting-started-vue/) for using Syncfusion Vue components in Vue 3 applications.
 
 ## Supported frameworks
 
-Grid component is also offered in following list of frameworks.
+Grid component is also offered in the following list of frameworks.
 
 | [<img src="https://ej2.syncfusion.com/github/images/js.svg" height="50" />](https://www.syncfusion.com/javascript-ui-controls?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[JavaScript](https://www.syncfusion.com/javascript-ui-controls?utm_medium=listing&utm_source=github)&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/angular.svg"  height="50" />](https://www.syncfusion.com/angular-components/?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Angular](https://www.syncfusion.com/angular-components/?utm_medium=listing&utm_source=github)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/react.svg" height="50" />](https://www.syncfusion.com/react-ui-components?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[React](https://www.syncfusion.com/react-ui-components?utm_medium=listing&utm_source=github)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/netcore.svg" height="50" />](https://www.syncfusion.com/aspnet-core-ui-controls?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;[ASP.NET&nbsp;Core](https://www.syncfusion.com/aspnet-core-ui-controls?utm_medium=listing&utm_source=github)&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/netmvc.svg" height="50" />](https://www.syncfusion.com/aspnet-mvc-ui-controls?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;[ASP.NET&nbsp;MVC](https://www.syncfusion.com/aspnet-mvc-ui-controls?utm_medium=listing&utm_source=github)&nbsp;&nbsp; | 
 | :-----: | :-----: | :-----: | :-----: | :-----: |
