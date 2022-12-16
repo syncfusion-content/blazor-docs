@@ -501,7 +501,7 @@ namespace WebApplication1.Server.Controllers
 
 Now, the Blazor TreeView can be configured using the **‘SfDataManager’** to interact with the created Web API and consume the data appropriately. To interact with web API, use web API adaptor.
 
-> The CRUD operation has been performed in the TreeView component using the context menu.
+N> The CRUD operation has been performed in the TreeView component using the context menu.
 
 ```csharp
 
@@ -622,4 +622,4 @@ Now, the Blazor TreeView can be configured using the **‘SfDataManager’** to 
 
 ```
 
-> The fully working sample can be found [here](https://github.com/SyncfusionExamples/Blazor-treeview-entity-framework).
+N> The fully working sample can be found [here](https://github.com/SyncfusionExamples/Blazor-treeview-entity-framework).

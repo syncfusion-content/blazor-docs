@@ -48,7 +48,7 @@ The following code example explains how to create a simple business process.
 }
 ```
 
-> The default value for the property `Shape` is “Event”.
+N> The default value for the property `Shape` is “Event”.
 
 The list of BPMN shapes are as follows:
 

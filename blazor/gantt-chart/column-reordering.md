@@ -57,7 +57,7 @@ The column reordering can be done by dragging a column header from one index to 
 
 ![Reordering Column in Blazor Gantt Chart](images/blazor-gantt-chart-column-reorder.png)
 
-> You can disable the reordering of a particular column by setting the `GanttColumn.AllowReordering` property to `false`.
+N> You can disable the reordering of a particular column by setting the `GanttColumn.AllowReordering` property to `false`.
 
 #### Reorder single column
 

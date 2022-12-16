@@ -13,7 +13,7 @@ By passing In-place Editor component value to the server, the `PrimaryKey` prope
 
 If the `SaveURL` property value is empty, data passing will handled at local and also the `OnActionSuccess` event will trigger with `null` as argument value.
 
-> The following arguments are passed to the server when the submit actions are performed.
+N> The following arguments are passed to the server when the submit actions are performed.
 
 | Arguments  | Explanations                                              |
 |------------|-----------------------------------------------------------|

@@ -13,7 +13,7 @@ Syncfusion provides the Blazor Template Studio, which allows you to create a Syn
 
 The steps below will assist you to create your **Syncfusion Blazor Application** through **Visual Studio 2019 or Visual Studio 2022**:
 
-> Before use the Syncfusion Blazor Project Template, check whether the Syncfusion Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, install the extension by follow the steps from the [download and installation](download-and-installation) help topic.
+N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusion Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, install the extension by follow the steps from the [download and installation](download-and-installation) help topic.
 
 1. Open Visual Studio 2019 or Visual Studio 2022.
 
@@ -39,7 +39,7 @@ The steps below will assist you to create your **Syncfusion Blazor Application**
 
      ![ProjectWizard](images/TemplateStudio.png)
 
-     > .NET 6.0 is available from v19.4.0.38 and support from Visual Studio 2022.
+     N> .NET 6.0 is available from v19.4.0.38 and support from Visual Studio 2022.
 
      **Project type section**
 
@@ -51,7 +51,7 @@ The steps below will assist you to create your **Syncfusion Blazor Application**
 
      ![ProjectTypeWizard](images/ProjectTypeWizard.png)
 
-     > **Note:** The Progressive Web Application will be enabled if .NET Core version 3.1.200 or higher is installed.
+     N> **Note:** The Progressive Web Application will be enabled if .NET Core version 3.1.200 or higher is installed.
 
 5. Click either **Next** or the **Controls** tab. The Syncfusion Blazor components you can add to the application are listed.
 
@@ -65,13 +65,13 @@ The steps below will assist you to create your **Syncfusion Blazor Application**
 
      **Option 2:** Click ‘x’ button for corresponding control in the control list from **Project Details**. 
 
-     > **Note:** Choose at least one control to enable the Features and Configuration tab.
+     N> **Note:** Choose at least one control to enable the Features and Configuration tab.
 
 6. Click either **Next** or the **Features** tab, and you will see the features listed for the selected controls. You can choose the required features.
 
 7. Click either **Next** or the **Configuration** tab, and the Configuration section will be loaded. You can choose the required (.NET 6.0, .NET 5.0 and .NET Core 3.1), themes, https configuration, localization option, authentication type (None, Individual Accounts, Microsoft Identity Platform, and Windows), and Blazor Web Assembly application types (ASP.NET Core hosted and Progressive Web Application).
 
-     > **Note:** ASP.NET Core hosted and Progressive Web Application options are only visible for the Blazor Web Assembly App application type.
+     N> **Note:** ASP.NET Core hosted and Progressive Web Application options are only visible for the Blazor Web Assembly App application type.
 
      ![Choose required Project Configuration](images/Configuration.png)
 
@@ -291,7 +291,7 @@ You can select a culture language in combo box at top right on the output page t
 
 ![Blazor Template output page](images/Localization.png)
 
-> **Note:** Above culture combo box will be enabled in sample output if localization option is selected in configuration window from Syncfusion Blazor Template Studio wizard.
+N> **Note:** Above culture combo box will be enabled in sample output if localization option is selected in configuration window from Syncfusion Blazor Template Studio wizard.
 
 ## Register and Login Application
 
