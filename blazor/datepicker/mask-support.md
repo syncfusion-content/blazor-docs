@@ -13,7 +13,7 @@ DatePicker has `EnableMask` property that provides the option to enable the buil
 
  > For example, if the mask is set to "MM/dd/yyyy", then users will only be able to enter dates in the format of "month/day/year", with two digits for the month, day, and year. This can be useful for ensuring that users enter dates in a consistent and accurate format, and can help to reduce errors and misunderstandings when working with dates in your application.
 
-The following example demonstrates default and custom format of DatePicker component with mask.
+The following example demonstrates default format of DatePicker component with mask.
 
 {% highlight Razor %}
 
