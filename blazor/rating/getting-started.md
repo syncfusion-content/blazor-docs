@@ -268,6 +268,8 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 * Press F5 to run the application. Then, the Syncfusion Blazor Rating component will be rendered in the default web browser.
 
+![Blazor Rating Component](images/blazor-rating-component.png)
+
 ## Value
 
 You can set the rating value by using the `Value` property.
@@ -280,6 +282,8 @@ You can set the rating value by using the `Value` property.
 {% endhighlight %}
 {% endtabs %}
 
+![Displaying Rating Value in Blazor Rating Component](images/blazor-rating-value.png)
+
 ## Items count
 
 You can specify the number of stars using the `ItemsCount` property.
@@ -291,3 +295,5 @@ You can specify the number of stars using the `ItemsCount` property.
 
 {% endhighlight %}
 {% endtabs %}
+
+![Displaying Blazor Rating items based on Count](images/blazor-rating-itemscount.png)
