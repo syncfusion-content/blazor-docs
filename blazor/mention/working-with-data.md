@@ -25,7 +25,7 @@ The Mention has provided support to load an array of primitive data such as stri
 
 {% endhighlight %}
 
-![Blazor Mention with array of simple data](./images/blazor-mention-simple-data.png)
+![Blazor Mention with array of simple data](./images/blazor-mention-data-binding.png)
 
 ## JSON data
 

@@ -1,6 +1,6 @@
 @using Syncfusion.Blazor.DropDowns
 
-<SfMention TItem="EmailData" DataSource="@data" MentionChar="@MentionChar" ShowMentionChar=true>
+<SfMention TItem="EmailData" DataSource="@data" ShowMentionChar=true>
     <TargetComponent>
         <div id="commentsMention" placeHolder="Type @@ and tag user" ></div>
     </TargetComponent>
@@ -25,8 +25,6 @@
 </style>
 
 @code {
-
-    private char MentionChar { get; set; } = '#';
 
     public class EmailData
     {

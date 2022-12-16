@@ -61,7 +61,7 @@ While filtering, you can customize the number of list items to be displayed in t
 
 {% endhighlight %}
 
-![Blazor Mention with suggestion item count](./images/blazor-mention-allow-space.png)
+![Blazor Mention with suggestion item count](./images/blazor-mention-suggestion-list.png)
 
 ## See also
 
