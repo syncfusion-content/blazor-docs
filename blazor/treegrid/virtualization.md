@@ -299,6 +299,114 @@ To setup the column virtualization, set the [EnableVirtualization](https://help.
 The following GIF represent a Tree Grid with Column virtualization.
 ![Column Virtualization in Blazor TreeGrid](./images/blazor-treegrid-column-virtualization.gif)
 
+## Enable Cell placeholder during Virtualization
+
+Displays placeholder in cells while data is loading in scrolling action. Also, the same set of DOM elements is reused to enhance performance.
+
+To set up the enable cell placeholder during virtualization, define the [EnableVirtualMaskRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableVirtualMaskRow) as true along with the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableVirtualization)/[EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableColumnVirtualization) property.
+
+```csharp
+
+@using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Grids
+<SfTreeGrid Height="300" Width="450" RowHeight="38" EnableVirtualMaskRow="true" DataSource="@TreeGridData" IdMapping="TaskID" TreeColumnIndex="1" ParentIdMapping="ParentID" EnableVirtualization="true" EnableColumnVirtualization="true">
+    <TreeGridPageSettings PageSize="40"></TreeGridPageSettings>
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskID" HeaderText="Jersey No" TextAlign="TextAlign.Left" Width="150"></TreeGridColumn>
+        <TreeGridColumn Field="FIELD1" HeaderText="Name" Width="150"></TreeGridColumn>
+        <TreeGridColumn Field="FIELD2" HeaderText="Year" TextAlign="TextAlign.Left" Width="150"></TreeGridColumn>
+        <TreeGridColumn Field="FIELD3" HeaderText="Stint" TextAlign="TextAlign.Left" Width="150"></TreeGridColumn>
+        <TreeGridColumn Field="FIELD4" HeaderText="TMID" TextAlign="TextAlign.Left" Width="150"></TreeGridColumn>
+        <TreeGridColumn Field="FIELD5" HeaderText="LGID" TextAlign="TextAlign.Left" Width="150"></TreeGridColumn>
+        <TreeGridColumn Field="FIELD6" HeaderText="GP" TextAlign="TextAlign.Left" Width="150"></TreeGridColumn>
+        <TreeGridColumn Field="Field7" HeaderText="GS" TextAlign="TextAlign.Left" Width="150"></TreeGridColumn>
+        <TreeGridColumn Field="Field8" HeaderText="Minutes" TextAlign="TextAlign.Left" Width="150"></TreeGridColumn>
+        <TreeGridColumn Field="Field9" HeaderText="Points" TextAlign="TextAlign.Left" Width="150"></TreeGridColumn>
+        <TreeGridColumn Field="Field10" HeaderText="ORebounds" TextAlign="TextAlign.Left" Width="150"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+@code {
+    private List<VirtualData> TreeGridData { get; set; } = new List<VirtualData>();
+    protected override void OnInitialized()
+    {
+        TreeGridData = VirtualData.GetTreeVirtualData();
+    }
+    public class VirtualData
+    {
+        public int TaskID { get; set; }
+        public string? FIELD1 { get; set; }
+        public int FIELD2 { get; set; }
+        public int FIELD3 { get; set; }
+        public int FIELD4 { get; set; }
+        public int FIELD5 { get; set; }
+        public int FIELD6 { get; set; }
+        public int Field7 { get; set; }
+        public int Field8 { get; set; }
+        public int Field9 { get; set; }
+        public int Field10 { get; set; }
+        public int? ParentID { get; set; }
+        public static List<VirtualData> GetTreeVirtualData()
+        {
+            string[] Names = new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD", "HANAR", "CHOPS", "RICSU", "WELLI", "HILAA", "ERNSH", "CENTC",
+            "OTTIK", "QUEDE", "RATTC", "ERNSH", "FOLKO", "BLONP", "WARTH", "FRANK", "GROSR", "WHITC", "WARTH", "SPLIR", "RATTC", "QUICK", "VINET",
+            "MAGAA", "TORTU", "MORGK", "BERGS", "LEHMS", "BERGS", "ROMEY", "ROMEY", "LILAS", "LEHMS", "QUICK", "QUICK", "RICAR", "REGGC", "BSBEV",
+            "COMMI", "QUEDE", "TRADH", "TORTU", "RATTC", "VINET", "LILAS", "BLONP", "HUNGO", "RICAR", "MAGAA", "WANDK", "SUPRD", "GODOS", "TORTU",
+            "OLDWO", "ROMEY", "LONEP", "ANATR", "HUNGO", "THEBI", "DUMON", "WANDK", "QUICK", "RATTC", "ISLAT", "RATTC", "LONEP", "ISLAT", "TORTU",
+            "WARTH", "ISLAT", "PERIC", "KOENE", "SAVEA", "KOENE", "BOLID", "FOLKO", "FURIB", "SPLIR", "LILAS", "BONAP", "MEREP", "WARTH", "VICTE",
+            "HUNGO", "PRINI", "FRANK", "OLDWO", "MEREP", "BONAP", "SIMOB", "FRANK", "LEHMS", "WHITC", "QUICK", "RATTC", "FAMIA" };
+            List<VirtualData> DataCollection = new List<VirtualData>();
+            Random random = new Random();
+            var RecordID = 0;
+            for (var i = 1; i <= 2000; i++)
+            {
+                var name = random.Next(0, 100);
+                VirtualData Parent = new VirtualData()
+                    {
+                        TaskID = ++RecordID,
+                        FIELD1 = Names[name],
+                        FIELD2 = 1967 + random.Next(0, 10),
+                        FIELD3 = 395 + random.Next(100, 600),
+                        FIELD4 = 87 + random.Next(50, 250),
+                        FIELD5 = 410 + random.Next(100, 600),
+                        FIELD6 = 67 + random.Next(50, 250),
+                        Field7 = (int)Math.Floor(random.NextDouble() * 100),
+                        Field8 = (int)Math.Floor(random.NextDouble() * 10),
+                        Field9 = (int)Math.Floor(random.NextDouble() * 10),
+                        Field10 = (int)Math.Floor(random.NextDouble() * 100),
+                        ParentID = null
+                    };
+                DataCollection.Add(Parent);
+                for (var j = 1; j <= 4; j++)
+                {
+                    var childName = random.Next(0, 100);
+                    DataCollection.Add(new VirtualData()
+                        {
+                            TaskID = ++RecordID,
+                            FIELD1 = Names[childName],
+                            FIELD2 = 1967 + random.Next(0, 10),
+                            FIELD3 = 395 + random.Next(100, 600),
+                            FIELD4 = 87 + random.Next(50, 250),
+                            FIELD5 = 410 + random.Next(100, 600),
+                            FIELD6 = 67 + random.Next(50, 250),
+                            Field7 = (int)Math.Floor(random.NextDouble() * 100),
+                            Field8 = (int)Math.Floor(random.NextDouble() * 10),
+                            Field9 = (int)Math.Floor(random.NextDouble() * 10),
+                            Field10 = (int)Math.Floor(random.NextDouble() * 100),
+                            ParentID = Parent.TaskID
+                        });
+                }
+            }
+            return DataCollection;
+        }
+    }
+}
+```
+
+The following image represents a tree grid with the mask row virtualization.
+![Blazor Tree Grid with Mask Row virtualization](./images/blazor-treegrid-mask-row-virtualization.gif)
+
+> For a better experience, the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSize) property of the [TreeGridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html) class and the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_RowHeight) property should be defined.
+
 ## Limitations for Virtualization
 
 * While using column virtualization, column width should be in the pixel. Percentage values are not accepted.
