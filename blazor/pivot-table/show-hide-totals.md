@@ -181,7 +181,7 @@ Allows to show or hide sub-totals for specific fields in rows and columns using 
 
 ## Show subtotals at top or bottom
 
-Allows to show subtotals at top, bottom or default position in rows and columns using the [SubTotalsPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.GrandTotalsPosition.html) property. To show subtotals at top in rows and columns, set the [SubTotalsPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.GrandTotalsPosition.html) property in [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) to **Top**.
+Allows to show subtotals at top, bottom or default position in rows and columns by using the [SubTotalsPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.GrandTotalsPosition.html) property. To show subtotals at top in rows and columns, set the [SubTotalsPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.GrandTotalsPosition.html) property in [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) to **Top**.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
