@@ -9,6 +9,6 @@ documentation: ug
 
 # Render digital signature appearance
 
-The PDF Viewer control renders the digital signatures from the existing PDF document. If a PDF document that has a digital signature in it, then the digital signatures are rendered as images.
+The PDF Viewer control renders the digital signatures from the existing PDF document. The digital signatures are rendered as images if a PDF document has a digital signature.
 
 ![Digital signature](../pdfviewer/images/pdfviewer-digitalsignature.png)

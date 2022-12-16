@@ -60,18 +60,18 @@ You can also delete the signature in the signature field by using Delete Option 
 
 ## Export and import form fields
 
-The PDF Viewer control provides the support to export and import the form fields data in the following formats using the methods `ImportFormFieldsAsync` and `ExportFormFieldsAsync`.
+The PDF Viewer control supports exporting and importing the form field data in the following formats using the `ImportFormFieldsAsync` and `ExportFormFieldsAsync` methods.
 
 * XML
 * FDF
 * XFDF
 * JSON
 
-> N The form field data will be exported as stream and that data from the stream will be imported into the current PDF document.
+> N The form field data will be exported as stream, and that data from the stream will be imported into the current PDF document.
 
 ### Export and import as XML
 
-The following code shows how to export the form fields as XML data stream and import that data from the stream into the current PDF document via button click.
+The following code shows how to export the form fields as an XML data stream and import that data from the stream into the current PDF document via a button click.
 
 ```cshtml
 <SfButton OnClick="@ExportAsStream">Export XML</SfButton>
@@ -87,14 +87,14 @@ The following code shows how to export the form fields as XML data stream and im
     // Event triggers on Export XML button click.
     public async void ExportAsStream()
     {
-        // Export the form fields data to an XML format stream.
+        // Export the form field data to an XML format stream.
         stream = await Viewer.ExportFormFieldsAsync(FormFieldDataFormat.Xml);
     }
 
     // Event triggers on Import XML button click.
     public async void ImportFromStream()
     {
-        // Import the form fields data from the XML format stream into the current PDF document.
+        // Import the form field data from the XML format stream into the current PDF document.
         await Viewer.ImportFormFieldsAsync(stream, FormFieldDataFormat.Xml);
     }
 }
@@ -103,7 +103,7 @@ The following code shows how to export the form fields as XML data stream and im
 
 ### Export and import as FDF
 
-The following code shows how to export the form fields as FDF data stream and import that data from the stream into the current PDF document via button click.
+The following code shows how to export the form fields as an FDF data stream and import that data from the stream into the current PDF document via a button click.
 
 ```cshtml
 <SfButton OnClick="@ExportAsStream">Export FDF</SfButton>
@@ -119,14 +119,14 @@ The following code shows how to export the form fields as FDF data stream and im
     // Event triggers on Export FDF button click.
     public async void ExportAsStream()
     {
-        // Export the form fields data to an FDF format stream.
+        // Export the form field data to an FDF format stream.
         stream = await Viewer.ExportFormFieldsAsync(FormFieldDataFormat.Fdf);
     }
 
     // Event triggers on Import FDF button click.
     public async void ImportFromStream()
     {
-        // Import the form fields data from the FDF format stream into the current PDF document.
+        // Import the form field data from the FDF format stream into the current PDF document.
         await Viewer.ImportFormFieldsAsync(stream, FormFieldDataFormat.Fdf);
     }
 }
@@ -135,7 +135,7 @@ The following code shows how to export the form fields as FDF data stream and im
 
 ###  Export and import as XFDF
 
-The following code shows how to export the form fields as XFDF data stream and import that data from the stream into the current PDF document via button click.
+The following code shows how to export the form fields as an XFDF data stream and import that data from the stream into the current PDF document via a button click.
 
 ```cshtml
 <SfButton OnClick="@ExportAsStream">Export XFDF</SfButton>
@@ -151,14 +151,14 @@ The following code shows how to export the form fields as XFDF data stream and i
     // Event triggers on Export XFDF button click.
     public async void ExportAsStream()
     {
-        // Export the form fields data to XFDF format stream.
+        // Export the form field data to XFDF format stream.
         stream = await Viewer.ExportFormFieldsAsync(FormFieldDataFormat.Xfdf);
     }
 
     // Event triggers on Import XFDF button click.
     public async void ImportFromStream()
     {
-        // Import the form fields data from the XFDF format stream into the current PDF document.
+        // Import the form field data from the XFDF format stream into the current PDF document.
         await Viewer.ImportFormFieldsAsync(stream, FormFieldDataFormat.Xfdf);
     }
 }
@@ -167,7 +167,7 @@ The following code shows how to export the form fields as XFDF data stream and i
 
 ### Export and import as JSON
 
-The following code shows how to export the form fields as JSON data stream and import that data from the stream into the current PDF document via button click.
+The following code shows how to export the form fields as a JSON data stream and import that data from the stream into the current PDF document via a button click.
 
 ```cshtml
 <SfButton OnClick="@ExportAsStream">Export JSON</SfButton>
@@ -183,14 +183,14 @@ The following code shows how to export the form fields as JSON data stream and i
     // Event triggers on Export JSON button click.
     public async void ExportAsStream()
     {
-        // Export the form fields data to JSON format stream.
+        // Export the form field data to JSON format stream.
         stream = await Viewer.ExportFormFieldsAsync(FormFieldDataFormat.Json);
     }
 
     // Event triggers on Import JSON button click.
     public async void ImportFromStream()
     {
-        // Import the form fields data from the JSON format stream into the current PDF document.
+        // Import the form field data from the JSON format stream into the current PDF document.
         await Viewer.ImportFormFieldsAsync(stream, FormFieldDataFormat.Json);
     }
 }
@@ -239,14 +239,14 @@ The following code shows how to export the form fields as JSON data stream and i
     // Event triggers on Export Data button click.
     public async void OnExportFormFieldsClick(MouseEventArgs args)
     {
-        // Export the form fields data to a dictionary.
+        // Export the form field data to a dictionary.
         dictionary = await Viewer.ExportFormFieldsAsObjectAsync();
     }
 
     // Event triggers on Import Data button click.
     public async void OnImportFormFieldsClick(MouseEventArgs args)
     {
-        // Import the form fields data from the dictionary into the current PDF document.
+        // Import the form field data from the dictionary into the current PDF document.
         await Viewer.ImportFormFieldsAsync(dictionary);
     }
 }
