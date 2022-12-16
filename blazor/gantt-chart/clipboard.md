@@ -248,3 +248,220 @@ Gantt Chart provides support for a set of copy modes with [CopyHierarchyMode](ht
 }
 ```
 
+## Paste
+
+The content of a row/cells can be copied by selecting the rows/cells and pressing <kbd>Ctrl + C</kbd> shortcut key to copy data and paste it by pressing <kbd>Ctrl + V</kbd> shortcut key.
+
+In the below code example, selected rows are copied and pasted by using the [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AddRecordAsync__0_System_Nullable_System_Double__System_Nullable_Syncfusion_Blazor_Gantt_RowPosition__) method and by binding keyboard events `onkeydown` and `onkeyup`.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+<SfGantt @ref=GanttChart DataSource="@TaskCollection" @onkeydown="KeyDown" @onkeyup="KeyUp" Height="450px" Width="1000px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"
+        Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEditSettings AllowAdding="true"> </GanttEditSettings>
+    <GanttEvents RowSelected="RowSelect" RowDeselected="RowDeselect" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code {
+    private SfGantt<TaskData> GanttChart;
+    private List<TaskData> TaskCollection { get; set; }
+    public List<TaskData> CopiedRecords { get; set; } = new List<TaskData>();
+    public double SelectedIndex { get; set; }
+    public void RowDeselect(RowDeselectEventArgs<TaskData> Args)
+    {
+        SelectedIndex = -1;
+    }
+    public void RowSelect(RowSelectEventArgs<TaskData> Args)
+    {
+        SelectedIndex = Args.RowIndex;
+    }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+    private async Task KeyDown(KeyboardEventArgs Args)
+    {
+        if (Args.CtrlKey && Args.Code == "KeyC")
+        {
+            var selectedCount = await GanttChart.GetSelectedRowIndexesAsync();
+            if (selectedCount.Count > 0)
+            {
+                CopiedRecords = await GanttChart.GetSelectedRecordsAsync();
+            }
+        }
+    }
+    private async Task KeyUp(KeyboardEventArgs Args)
+    {
+        if (Args.CtrlKey && Args.Code == "KeyV" && CopiedRecords.Count > 0 && SelectedIndex > -1)
+        {
+            var parentID = TaskCollection[(int)SelectedIndex].ParentId;
+            int id = TaskCollection.Max(a => a.TaskId) + 1;
+            for (var i = 0; i < CopiedRecords.Count; i++)
+            {
+                CopiedRecords[i].TaskId = id + i;
+                CopiedRecords[i].ParentId = parentID;
+                GanttChart.AddRecordAsync(CopiedRecords[i], SelectedIndex, RowPosition.Above);
+            }
+            CopiedRecords = new List<TaskData>();
+        }
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>() {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new
+            DateTime(2022, 04, 21) },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration =
+            "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4",
+            Progress = 40, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0",
+            Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new
+            DateTime(2022, 04, 21) },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06),
+            Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3",
+            Progress = 40, ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0",
+            Progress = 30, ParentId = 5 }
+        };
+        return Tasks;
+    }
+}
+```
+![Copy and paste in Blazor Gantt Chart](./images/copypaste_row.gif)
+
+In the below code example, selected cells are copied and pasted by using the [UpdateRecordByIDAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_UpdateRecordByIDAsync__0_) method and by binding keyboard events `onkeydown` and `onkeyup`.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+<SfGantt @ref=GanttChart DataSource="@TaskCollection" @onkeydown="KeyDown" @onkeyup="KeyUp" Height="450px" Width="1000px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttSelectionSettings Mode="SelectionMode.Cell" Type="SelectionType.Multiple"></GanttSelectionSettings>
+    <GanttEditSettings AllowEditing="true"> </GanttEditSettings>
+    <GanttEvents CellSelected="CellSelected" CellDeselected="CellDeSelected" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code {
+    private SfGantt<TaskData> GanttChart;
+    private List<TaskData> TaskCollection { get; set; }
+    public int SelectedIndex { get; set; }
+    private List<ValueTuple<double, double>> clonedRecordIndex;
+
+    public void CellDeSelected(CellDeselectEventArgs<TaskData> Args)
+    {
+        SelectedIndex = -1;
+    }
+    public async void CellSelected(CellSelectEventArgs<TaskData> Args)
+    {
+        SelectedIndex = Convert.ToInt32(Args.RowIndex);
+    }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+    private async Task KeyDown(KeyboardEventArgs Args)
+    {
+        if (Args.CtrlKey && Args.Code == "KeyC")
+        {
+            clonedRecordIndex = await GanttChart.GetSelectedRowCellIndexesAsync();
+        }
+    }
+    private async Task KeyUp(KeyboardEventArgs Args)
+    {
+        if (Args.CtrlKey && Args.Code == "KeyV" && clonedRecordIndex.Count>0 && SelectedIndex > -1)
+        {
+            var columns = GanttChart.GetColumnsAsync().Result;
+            var currentRecords = GanttChart.GetCurrentViewRecords();
+            IDictionary<double, List<double>> clonedRecords = new Dictionary<double, List<double>>(); ;
+            for (int i = 0; i < clonedRecordIndex.Count; i++)
+            {
+                if (!clonedRecords.ContainsKey(clonedRecordIndex[i].Item1))
+                {
+                    List<double> cellIndex = new List<double>();
+                    cellIndex.Add(clonedRecordIndex[i].Item2);
+                    clonedRecords[clonedRecordIndex[i].Item1] = cellIndex;
+                }
+                else
+                {
+                    List<double> cellIndex = (List<double>)clonedRecords[clonedRecordIndex[i].Item1];
+                    cellIndex.Add(clonedRecordIndex[i].Item2);
+                }
+            }
+            for (int i = 0; i < clonedRecords.Count; i++)
+            {
+                double clonedRecRowIndex = clonedRecords.ElementAt(i).Key;
+                List<double> clonedRecCellIndex = clonedRecords.ElementAt(i).Value;
+                TaskData clonedRec = currentRecords[Convert.ToInt32(clonedRecRowIndex)];
+                if (SelectedIndex + i < currentRecords.Count)
+                {
+                    TaskData updatedRec = currentRecords[SelectedIndex + i];
+                    for (int j = 0; j < clonedRecCellIndex.Count; j++)
+                    {
+                        GanttColumn col = columns[Convert.ToInt32(clonedRecCellIndex[j])];
+                        if (!col.IsPrimaryKey)
+                        {
+                            var clonedValue = clonedRec.GetType().GetProperty(col.Field).GetValue(clonedRec);
+                            updatedRec.GetType().GetProperty(col.Field).SetValue(updatedRec, clonedValue);
+                        }
+                    }
+                    GanttChart.UpdateRecordByIDAsync(updatedRec);
+                }
+            }
+        }
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>() {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new
+            DateTime(2022, 04, 21) },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration =
+            "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4",
+            Progress = 40, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0",
+            Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new
+            DateTime(2022, 04, 21) },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06),
+            Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3",
+            Progress = 40, ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0",
+            Progress = 30, ParentId = 5 }
+        };
+        return Tasks;
+    }
+}
+```
+![Copy and paste in Blazor Gantt Chart](./images/copypaste_cell.gif)
+
