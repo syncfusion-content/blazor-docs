@@ -252,17 +252,19 @@ Gantt Chart provides support for a set of copy modes with [CopyHierarchyMode](ht
 
 The content of a row/cells can be copied by selecting the rows/cells and pressing <kbd>Ctrl + C</kbd> shortcut key to copy data and paste it by pressing <kbd>Ctrl + V</kbd> shortcut key.
 
-In the below code example, selected rows are copied and pasted by using the [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AddRecordAsync__0_System_Nullable_System_Double__System_Nullable_Syncfusion_Blazor_Gantt_RowPosition__) method and by binding keyboard events `onkeydown` and `onkeyup`.
+In the below code example, selected rows are copied by using the [BeforeCopy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_BeforeCopy) event and pasted by using the [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AddRecordAsync__0_System_Nullable_System_Double__System_Nullable_Syncfusion_Blazor_Gantt_RowPosition__) method and by binding keyboard events `onkeyup`.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
-<SfGantt @ref=GanttChart DataSource="@TaskCollection" @onkeydown="KeyDown" @onkeyup="KeyUp" Height="450px" Width="1000px">
+<SfGantt @ref=GanttChart DataSource="@TaskCollection" @onkeyup="KeyUp" Height="350px" Width="750px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"
-        Progress="Progress" ParentID="ParentId">
+        ParentID="ParentId">
     </GanttTaskFields>
+    <GanttSelectionSettings Type="SelectionType.Multiple"></GanttSelectionSettings>
     <GanttEditSettings AllowAdding="true"> </GanttEditSettings>
-    <GanttEvents RowSelected="RowSelect" RowDeselected="RowDeselect" TValue="TaskData"></GanttEvents>
+    <GanttEvents BeforeCopy="BeforeCopyHandler" RowSelected="RowSelect" RowDeselected="RowDeselect" TValue="TaskData">
+    </GanttEvents>
 </SfGantt>
 
 @code {
@@ -274,6 +276,45 @@ In the below code example, selected rows are copied and pasted by using the [Add
     {
         SelectedIndex = -1;
     }
+    private async void BeforeCopyHandler(Syncfusion.Blazor.Gantt.BeforeCopyEventArgs args)
+    {
+        var columns = GanttChart.GetColumnsAsync().Result;
+        var clip = args.ClipboardText;
+        if (clip != "" || clip != null)
+        {
+            var record = clip.Split("\n");
+            int index = 0;
+            foreach (var rec in record)
+            {
+                var colVal = rec.Split("\t");
+                int colIndex = 0;
+                int id = TaskCollection.Max(a => a.TaskId) + 1;
+                TaskData ganttData = new TaskData() { };
+                foreach (var col in columns)
+                {
+                    if (col.Field == GanttChart.TaskFields.Id)
+                    {
+                        ganttData.GetType().GetProperty(col.Field).SetValue(ganttData, id + index);
+                    }
+                    else if (col.Type == ColumnType.Date)
+                    {
+                        ganttData.GetType().GetProperty(col.Field).SetValue(ganttData, Convert.ToDateTime(colVal[colIndex]));
+                    }
+                    else if (col.Type == ColumnType.String)
+                    {
+                        ganttData.GetType().GetProperty(col.Field).SetValue(ganttData, colVal[colIndex]);
+                    }
+                    else if (col.Type == ColumnType.Number)
+                    {
+                        ganttData.GetType().GetProperty(col.Field).SetValue(ganttData, Convert.ToInt32(colVal[colIndex]));
+                    }
+                    colIndex++;
+                }
+                index++;
+                CopiedRecords.Add(ganttData);
+            }
+        }
+    }
     public void RowSelect(RowSelectEventArgs<TaskData> Args)
     {
         SelectedIndex = Args.RowIndex;
@@ -282,26 +323,13 @@ In the below code example, selected rows are copied and pasted by using the [Add
     {
         this.TaskCollection = GetTaskCollection();
     }
-    private async Task KeyDown(KeyboardEventArgs Args)
-    {
-        if (Args.CtrlKey && Args.Code == "KeyC")
-        {
-            var selectedCount = await GanttChart.GetSelectedRowIndexesAsync();
-            if (selectedCount.Count > 0)
-            {
-                CopiedRecords = await GanttChart.GetSelectedRecordsAsync();
-            }
-        }
-    }
     private async Task KeyUp(KeyboardEventArgs Args)
     {
         if (Args.CtrlKey && Args.Code == "KeyV" && CopiedRecords.Count > 0 && SelectedIndex > -1)
         {
             var parentID = TaskCollection[(int)SelectedIndex].ParentId;
-            int id = TaskCollection.Max(a => a.TaskId) + 1;
             for (var i = 0; i < CopiedRecords.Count; i++)
             {
-                CopiedRecords[i].TaskId = id + i;
                 CopiedRecords[i].ParentId = parentID;
                 GanttChart.AddRecordAsync(CopiedRecords[i], SelectedIndex, RowPosition.Above);
             }
