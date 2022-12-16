@@ -11,7 +11,7 @@ documentation: ug
 
 ## Overview
 
-The Mention is a dynamic replacement of HTML select tags. It has a rich appearance and allows you to select a single value that is non-editable from a list of predefined values. It has several out-of-the-box features such as data binding, filtering, grouping, UI customization and accessibility.
+The Mention component is often used in text-based input fields, such as in a messaging or social media application, to allow users to easily tag or mention other users or items in their text. When a user types an `@` symbol followed by a string of characters, the Mention component will display a list of suggestions based on the characters the user has typed. The user can then select one of the suggestions from the list or continue typing to narrow down the options. It has several out-of-the-box features such as data binding, filtering, grouping, UI customization and accessibility.
 
 ## Prerequisites
 
@@ -295,7 +295,7 @@ For Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.html**
 
 ## Binding data source
 
-After initialization, populate the Mention with data using the `DataSource` property.
+After initialization, To populate a Mention with data using the `DataSource` property
 
 {% tabs %}
 {% highlight razor %}
