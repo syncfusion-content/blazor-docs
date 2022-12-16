@@ -301,7 +301,7 @@ The following GIF represent a Tree Grid with Column virtualization.
 
 ## Enable Cell placeholder during Virtualization
 
-This enables the cell placeholder during virtual scrolling and displays a loading placeholder indicator on the cells while loading new data. Also, the same set of DOM elements is reused to enhance performance.
+Displays placeholders in cells while data is loading in scrolling action. Also, the same set of DOM elements is reused to enhance performance.
 
 To set up the enable cell placeholder during virtualization, define the [EnableVirtualMaskRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableVirtualMaskRow) as true along with the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableVirtualization)/[EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableColumnVirtualization) property.
 
