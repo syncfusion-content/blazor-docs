@@ -30,4 +30,3 @@ The following code demonstrates the DatePicker with the custom format (`yyyy-MM-
 
 
 ![Date Format in Blazor DatePicker](./images/blazor-datepicker-date-format.png)
-
