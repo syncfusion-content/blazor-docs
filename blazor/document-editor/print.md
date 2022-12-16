@@ -47,4 +47,4 @@ The following example code illustrates how to improve the print quality in Docum
 }
 ```
 
->Note: By default, printDevicePixelRatio value is 1.
+N> By default, printDevicePixelRatio value is 1.

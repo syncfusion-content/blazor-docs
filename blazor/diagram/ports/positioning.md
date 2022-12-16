@@ -152,7 +152,7 @@ The following code explains how to align ports.
 ![Changing Port Position in Blazor Diagram](../images/blazor-diagram-port-position.png)
 
 
-> By default, the value of the `HorizontalAlignment` and `VerticalAlignment` is `Center`. Alignment is positioned based on the offset value.
+N> By default, the value of the `HorizontalAlignment` and `VerticalAlignment` is `Center`. Alignment is positioned based on the offset value.
 
 ## How to update margin for port
 

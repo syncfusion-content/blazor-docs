@@ -52,7 +52,7 @@ container.DocumentEditor.Editor.InsertTextAsync('\n');
 
 To insert the HTML content, you have to convert the HTML content to SFDT Format and then use [`PasteAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_PasteAsync_System_String_System_Nullable_Syncfusion_Blazor_DocumentEditor_PasteOptions__) API to insert the sfdt at current cursor position.
 
->Note: HTML string should be well formatted HTML. [`DocIO`](https://help.syncfusion.com/file-formats/docio/html) support only well formatted XHTML.  
+N> HTML string should be well formatted HTML. [`DocIO`](https://help.syncfusion.com/file-formats/docio/html) support only well formatted XHTML.  
 
 The following example illustrates how to insert the HTML content at current cursor position.
 
@@ -83,4 +83,4 @@ The following example illustrates how to insert the HTML content at current curs
 
 ```
 
->Note: The above example illustrates inserting HTML content. Similarly, you can insert any rich-text content by converting any of the supported file formats (DOCX, DOC, WordML, HTML, RTF) to SFDT.
+N> The above example illustrates inserting HTML content. Similarly, you can insert any rich-text content by converting any of the supported file formats (DOCX, DOC, WordML, HTML, RTF) to SFDT.

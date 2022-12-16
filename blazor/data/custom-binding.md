@@ -73,7 +73,7 @@ public abstract class DataAdaptor
 
 For implementing the custom data binding alone in the DataGrid component, provide the custom adaptor class and override the **Read** or **ReadAsync** method of the **DataAdaptor** abstract class.
 
-> If the Read/ReadAsync method is not overridden in the custom adaptor then it will be handled by the default read handler.
+N> If the Read/ReadAsync method is not overridden in the custom adaptor then it will be handled by the default read handler.
 
 For implementing the CRUD operations for the custom bounded data, override the following CRUD methods of the **DataAdaptor** abstract class,
 
@@ -82,7 +82,7 @@ For implementing the CRUD operations for the custom bounded data, override the f
 * Update/UpdateAsync
 * BatchUpdate/BatchUpdateAsync
 
-> While using batch editing in datagrid, use BatchUpdate/BatchUpdateAsync method to handle the corresponding CRUD operation
+N> While using batch editing in datagrid, use BatchUpdate/BatchUpdateAsync method to handle the corresponding CRUD operation
 
 The following sample code demonstrates implementing custom adaptor of the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding and editing operations in the DataGrid component,
 
@@ -217,7 +217,7 @@ The following sample code demonstrates implementing custom adaptor of the [SfDat
 }
 ```
 
-> If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read/ReadAsync return value must be of **DataResult** with properties **Result** whose value is a collection of records and **Count** whose value is the total number of records. If the **DataManagerRequest.RequiresCounts** is **false**, then simply send the collection of records.
+N> If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read/ReadAsync return value must be of **DataResult** with properties **Result** whose value is a collection of records and **Count** whose value is the total number of records. If the **DataManagerRequest.RequiresCounts** is **false**, then simply send the collection of records.
 
 The following GIF demonstrates the Grid component with data bound using custom adaptor and the CRUD operations being performed on it,
 ![Custom Binding in Blazor DataManager](./images/blazor-datamanager-custom-binding.gif)

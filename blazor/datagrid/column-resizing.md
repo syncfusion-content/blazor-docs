@@ -49,8 +49,8 @@ Column width can be resized by clicking and dragging the right edge of the colum
 The following GIF represents column resizing, 
 ![Resizing Column in Blazor DataGrid](images/blazor-datagrid-column-resizing.gif)
 
-> You can disable resizing for a particular column by setting the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowResizing) property of **GridColumn** component to false.
-> In RTL mode, you can click and drag the left edge of the header cell to resize the column.
+N> You can disable resizing for a particular column by setting the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowResizing) property of **GridColumn** component to false.
+<br/> In RTL mode, you can click and drag the left edge of the header cell to resize the column.
 
 ## Min and max width
 

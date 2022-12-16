@@ -66,11 +66,11 @@ container.DocumentEditor.Selection.CopyHyperlinkAsync();
 
 To create a basic hyperlink in the document, press `ENTER` / `SPACEBAR` / `SHIFT + ENTER` / `TAB` key after typing the address, for instance [`http://www.google.com`](http://www.google.com). Document Editor automatically converts this address to a hyperlink field. The text can be considered as a valid URL if it starts with any of the following.
 
-> `<http://>`<br>
-> `<https://>`<br>
-> `file:///`<br>
-> `www.`<br>
-> `mail to:`<br>
+N> `<http://>`<br>
+<br/> `<https://>`<br>
+<br/> `file:///`<br>
+<br/> `www.`<br>
+<br/> `mail to:`<br>
 
 Also Document Editor expose API [`InsertHyperlinkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertHyperlinkAsync_System_String_System_String_)to insert hyperlink.
 
