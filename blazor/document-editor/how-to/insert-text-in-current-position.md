@@ -37,9 +37,6 @@ container.DocumentEditor.Editor.InsertTextAsync("Syncfusion");
 }
 ```
 
-Please check below gif which illustrates how to insert text in current cursor position on button click:
-![Insert text in current cursor position in Blazor document editor](../images/insert_text.gif)
-
 ## Insert paragraph in current cursor position
 
 To insert new paragraph at current selection, you can can use [`InsertTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertTextAsync_System_String_) API with parameter as `\r\n` or `\n`.
