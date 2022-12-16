@@ -11,7 +11,7 @@ documentation: ug
 
 ## Show or hide mention character
 
-You can show the mention character as the prefix of the selected item in mention component using `ShowMentionChar` property. The default value of `ShowMentionChar` is `false`.
+You can show the mention character as the prefix of the selected item in the Mention component by using the `ShowMentionChar` property. By default, the `ShowMentionChar` property is set to `false`, which means that the mention character will not be displayed as part of the selected mention item.
 
 {% highlight razor %}
 
@@ -23,7 +23,7 @@ You can show the mention character as the prefix of the selected item in mention
 
 ## Adding the suffix character after selection
 
-You can add the suffix character while selecting an item in the Mention component using `SuffixText` property. You can add space or new line as suffix to the selected item. The default values are empty string.
+The `SuffixText` property in the Mention component allows you to specify a string that should be appended to the end of the selected mention item when it is inserted into the input field. You can use this property to add a space or a new line after the mention, or any other string that you want to include.
 
 {% highlight razor %}
 
@@ -33,7 +33,7 @@ You can add the suffix character while selecting an item in the Mention componen
 
 ## Configure the popup list
 
-You can customize the suggestion list's width and height using the `PopupHeight` and `PopupWidth` properties.
+You can customize the suggestion list's width and height using the `PopupHeight` and `PopupWidth` properties. These properties can accept values in pixels, percentage, or as a number. If a number value is specified, it will be treated as a pixel value.
 
 By default, the popup list width value is set to `auto`. Depending on the mentioned suggestion data list, the width value is automatically adjusted. The popup list height value is set to `250px`.
 
@@ -47,9 +47,7 @@ By default, the popup list width value is set to `auto`. Depending on the mentio
 
 ## Trigger character
 
-You can customize the trigger character by using the `MentionChar` property in the Mention component. The trigger character triggers the suggestion list to display in the target area.
-
-By default, the `MentionChar` is `@`.
+The `MentionChar` property in the Mention component allows you to specify the character that will trigger the suggestion list to display in the target area. By default, the `@` character is used as the trigger character, but you can customize it to any other character by setting the `MentionChar` property.
 
 {% highlight razor %}
 

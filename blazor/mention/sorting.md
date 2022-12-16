@@ -9,7 +9,7 @@ documentation: ug
 
 # Sorting in Mention
 
-You can display the suggestion list items in a specific order. It has possible types of `Ascending` or `Descending` and `None` in the `SortOrder` property.
+You can display the suggestion list items in a specific order. It can be `Ascending` `Descending` or `None` in the `SortOrder` property.
 
 The available type of sort orders are:
 

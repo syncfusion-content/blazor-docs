@@ -17,7 +17,7 @@ The Mention loads the data either from the local data sources or remote data ser
 
 ### Simple data
 
-The Mention has provided support to load an array of primitive data such as strings and numbers. Here, both the value and text fields act the same
+The Mention has provided support to load an array of primitive data such as strings and numbers. Here, both the value and text fields act the same.
 
 {% highlight razor %}
 

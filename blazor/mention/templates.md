@@ -27,7 +27,7 @@ In the following sample, each list item is split into two columns to display rel
 
 ## Display template
 
-You can customize the mentioned value’s display appearance using the `DisplayTemplate` property.
+The `DisplayTemplate` property allows you to specify a template that defines how the mentioned value should be displayed in the mention component. You can customize the appearance of the mentioned value, such as by adding an avatar or displaying additional information about the mentioned value.
 
 In the following sample, the selected value is displayed as a combined text of both FirstName and City in the mention element, which is separated by a hyphen.
 
@@ -41,8 +41,7 @@ In the following sample, the selected value is displayed as a combined text of b
 
 ## No records template
 
-You can show the custom design of the popup list content when no data and matches are found on the search with the help of `NoRecordsTemplate`
-property.
+You can show the custom design of the popup list content when no data or matches are found on the search with the help of the `NoRecordsTemplate` property.
 
 {% highlight razor %}
 
@@ -54,7 +53,7 @@ property.
 
 ## Spinner template
 
-Display the customized waiting spinner, when data fetching takes time to load in the suggestion list by using the `SpinnerTemplate` property.
+To display a customized waiting spinner when data fetching takes time to load in the suggestion list, you can use the `SpinnerTemplate` property.
 
 {% highlight razor %}
 

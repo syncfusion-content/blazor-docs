@@ -13,7 +13,9 @@ The Mention component has built-in support to filter data items. The filter oper
 
 ## Limit the minimum filter character
 
-You can control the minimum length of user input to initiate the search action using the `MinLength` property. This can be useful if you have a very large list of data. The default value is `0`, where the suggestion list opens as soon as the user inputs the mention character.
+You can control the minimum length of user input to initiate the search action using the `MinLength` property. This can be useful if you have a very large list of data. The default value for MinLength is `0`, which means that the suggestion list will open as soon as the user inputs the mention character.
+
+For example, if you set `MinLength` to `3`, the suggestion list will only open when the user has entered at least three characters.
 
 The remote request does not fetch the search data until the search key contains three characters as shown in the following example.
 
@@ -25,7 +27,7 @@ The remote request does not fetch the search data until the search key contains 
 
 ## Change the filter type
 
-While filtering, you can change the filter type to Contains, StartsWith, or EndsWith in the `FilterType` property. The default filter operator is Contains.
+While filtering, you can change the filter type to `Contains`, `StartsWith`, or `EndsWith` by using the `FilterType` property. The default filter operator is `Contains`.
 
 * StartsWith - Filter the items that begin with the specified text value.
 * Contains - Filter the items that contain the specified text value.
@@ -39,7 +41,7 @@ While filtering, you can change the filter type to Contains, StartsWith, or Ends
 
 ## Allow spacing between search
 
-While filtering the data in the data source, you can allow the space in the middle of the mention using the `AllowSpaces` property. If the data source does not match with the mentioned element data, the popup will be hidden on the space key press. The default value of the `AllowSpaces` is `false`.
+The `AllowSpaces` property is used to control whether spaces are allowed in the middle of the mention or not. If `AllowSpaces` is set to `true`, the Mention component will allow spaces in the middle of the mention and the data source will be filtered accordingly. If `AllowSpaces` is set to `false`, the Mention component will not allow spaces in the middle of the mention and the data source will not be filtered on space key press.
 
 > By default, the `AllowSpaces` property is disabled, and the space ends the mention component search.
 
@@ -53,7 +55,7 @@ While filtering the data in the data source, you can allow the space in the midd
 
 ## Customize the suggestion item count
 
-While filtering, you can customize the number of list items to be displayed in the suggestion list using the `SuggestionCount` property.
+While filtering, you can customize the number of list items to be displayed in the suggestion list by using the `SuggestionCount` property. This property can be set to any integer value.
 
 {% highlight razor %}
 
