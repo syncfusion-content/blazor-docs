@@ -1,0 +1,10 @@
+﻿@page "/sa"
+
+@using Syncfusion.Blazor.Calendars
+
+<SfTimePicker TValue="DateTime?" EnableMask="true" Format="hh:mm:ss" Width="200px" StrictMode=true @bind-Value="@Value"></SfTimePicker>
+
+
+@code {
+    public DateTime? Value { get; set; } = new DateTime(2022, 12, 11, 11, 30, 00);
+}
