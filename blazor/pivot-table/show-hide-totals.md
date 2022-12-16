@@ -187,7 +187,7 @@ Allows to show subtotals at top, bottom or default position in rows and columns 
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
-     <PivotViewDataSourceSettings DataSource="@Data" ExpandAll="false" SubTotalsPosition="SubTotalsPosition.Top">
+    <PivotViewDataSourceSettings DataSource="@Data" ExpandAll="false" SubTotalsPosition="SubTotalsPosition.Top">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -229,7 +229,7 @@ To show subtotals at bottom in rows and columns, set the [SubTotalsPosition](htt
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
-     <PivotViewDataSourceSettings DataSource="@Data" ExpandAll="false" SubTotalsPosition="SubTotalsPosition.Bottom">
+    <PivotViewDataSourceSettings DataSource="@Data" ExpandAll="false" SubTotalsPosition="SubTotalsPosition.Bottom">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
