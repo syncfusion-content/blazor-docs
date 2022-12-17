@@ -380,7 +380,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-> To perform paste functionality, it requires the selection `Mode` to be `Cell`, `cellSelectionMode` to be `Box` and also Batch Editing should be enabled.
+N> To perform paste functionality, it requires the selection `Mode` to be `Cell`, `cellSelectionMode` to be `Box` and also Batch Editing should be enabled.
 
 ### Limitations of Paste Functionality
 

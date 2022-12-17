@@ -23,7 +23,7 @@ The TextBox component is defined in the razor page along with the required prope
 
 T> In the above code, the properties and events are added to the razor page, and the definition for the respective properties can be done on the same page using the `@code` block or on a partial class page. 
 
-> It is necessary to bind `Value`, `ValueExpression`, and native `ValueChanged` event for accessing the value changes and triggering validation. To retrieve the validation message from the custom component, it is required to add the `ValidationMessage` tag in the textbox component.
+N> It is necessary to bind `Value`, `ValueExpression`, and native `ValueChanged` event for accessing the value changes and triggering validation. To retrieve the validation message from the custom component, it is required to add the `ValidationMessage` tag in the textbox component.
 
 ## Adding the custom TextBox component in the EditForm
 
