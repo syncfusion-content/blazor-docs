@@ -33,10 +33,8 @@ The following example code illustrates how to process the sfdt in server-side.
 </SfDocumentEditorContainer>
 
 @code {
-
-        SfDocumentEditorContainer container;
-
-        string sfdtString;
+    SfDocumentEditorContainer container;
+    string sfdtString;
 
     protected override void OnInitialized()
     {
@@ -62,7 +60,6 @@ The following example code illustrates how to process the sfdt in server-side.
         //To observe the memory go down, null out the reference of sfdtString variable.
         sfdtString = null;
     }
-
     public async void ExportAsPdf()
     {
         SfDocumentEditor editor = container.DocumentEditor;

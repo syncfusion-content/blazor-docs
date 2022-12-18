@@ -23,7 +23,6 @@ Refer to the following example.
 </SfDocumentEditor>
 
 @code {
-
     SfDocumentEditorContainer container;
 
     // Add event listener for requestNavigate event to customize hyperlink navigation functionality
@@ -41,9 +40,7 @@ Refer to the following example.
             args.IsHandled = true;
         }
     }
-
 }
-
 ```
 
 If the selection is in hyperlink, trigger this event by calling [`NavigateHyperlinkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_NavigateHyperlinkAsync) method of ‘Selection’ instance. Refer to the following example.

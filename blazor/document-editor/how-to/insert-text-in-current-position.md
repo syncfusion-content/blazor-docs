@@ -19,7 +19,20 @@ The following example code illustrates how to add the text in current selection.
 
 ```csharp
 // It will insert the provided text in current selection
-container.DocumentEditor.Editor.InsertTextAsync('Syncfusion');
+container.DocumentEditor.Editor.InsertTextAsync("Syncfusion");
+
+<button @onclick="InsertText">Insert Text</button>
+<SfDocumentEditorContainer @ref="container" EnableToolbar="true"  Height="590px" >
+</SfDocumentEditorContainer>
+@code {
+    SfDocumentEditorContainer container;
+
+    // It will insert the provided text in current selection
+    public void InsertText()
+    {
+        container.DocumentEditor.Editor.InsertTextAsync("Syncfusion");
+    }
+}
 ```
 
 ## Insert paragraph in current cursor position
@@ -51,7 +64,6 @@ The following example illustrates how to insert the HTML content at current curs
 </SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
 
     public async void OnCreated(object args)
@@ -65,7 +77,6 @@ The following example illustrates how to insert the HTML content at current curs
         await container.DocumentEditor.Editor.PasteAsync(sfdtString);
     }
 }
-
 ```
 
 N> The above example illustrates inserting HTML content. Similarly, you can insert any rich-text content by converting any of the supported file formats (DOCX, DOC, WordML, HTML, RTF) to SFDT.
