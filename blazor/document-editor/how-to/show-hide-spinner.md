@@ -83,4 +83,4 @@ Refer to the following example.
 
 ```
 
->Note: In above example, we have used Delay to hide spinner, just for demo purpose.
+N> In above example, we have used Delay to hide spinner, just for demo purpose.

@@ -15,7 +15,7 @@ You can insert page number and navigate to specific page in Blazor Document Edit
 
 You can use [`InsertFieldAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertFieldAsync_System_String_System_String_) API in Editor module to insert the Page number in current position. By default, Page number will insert in Arabic number style.
 
->Note: Currently, Document Editor have options to insert page number at current cursor position.
+N> Currently, Document Editor have options to insert page number at current cursor position.
 
 The following example code illustrates how to insert page number in header.
 

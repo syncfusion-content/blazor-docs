@@ -110,7 +110,7 @@ The above four positions can be aligned with combination of **Near**, **Center**
 </SfMaps>
 ```
 
-> Refer [code block](#legend-mode) to know the property value of `securityCouncilDetails`.
+N> Refer [code block](#legend-mode) to know the property value of `securityCouncilDetails`.
 
 ![Changing Legend Position in Blazor Maps](./images/Legend/blazor-maps-legend-position.png)
 
@@ -315,7 +315,7 @@ Use the [ShowLegend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Map
 </SfMaps>
 ```
 
-> Refer [code block](#legend-for-items-excluded-from-color-mapping) to know the property value of `PopulationDetails`.
+N> Refer [code block](#legend-for-items-excluded-from-color-mapping) to know the property value of `PopulationDetails`.
 
 ![Hiding Legend Item in Blazor Maps](./images/Legend/blazor-maps-hide-legend-item.png)
 

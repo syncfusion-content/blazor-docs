@@ -49,7 +49,7 @@ Gateway is used to control the flow of a process and it is represented as a diam
 }
 ```
 
-> By default, the `Gateway` will be set to **None**.
+N> By default, the `Gateway` will be set to **None**.
 
 There are several types of gateways as follows:
 
