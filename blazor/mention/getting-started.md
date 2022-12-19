@@ -307,6 +307,6 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 ## See also
 
-* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://github.com/syncfusion-content/blazor-docs/getting-started/blazor-webassembly-dotnet-cli)
-* [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](https://github.com/syncfusion-content/blazor-docs/getting-started/blazor-server-side-visual-studio)
-* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://github.com/syncfusion-content/blazor-docs/getting-started/blazor-server-side-dotnet-cli)
+* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+* [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
