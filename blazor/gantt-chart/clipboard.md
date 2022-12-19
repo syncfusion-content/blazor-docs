@@ -7,7 +7,7 @@ control: Gantt Chart
 documentation: ug
 ---
 
-# Clipboard in Blazor Gantt Chart Component
+# Clipboard in Blazor Gantt Chart component
 
 The clipboard provides an option to copy selected rows or cells data into the clipboard.
 
@@ -16,7 +16,6 @@ The following list of keyboard shortcuts is supported in the Gantt Chart to copy
 Interaction keys |Description
 -----|-----
 <kbd>Ctrl + C</kbd> |Copy selected rows or cells data into clipboard.
-<kbd>Ctrl + Shift + H</kbd> |Copy selected rows or cells data with header into clipboard.
 
 ```cshtml
 
