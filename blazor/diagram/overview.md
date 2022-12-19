@@ -1,27 +1,27 @@
 ---
 layout: post
-title: Overview Control in Blazor Diagram Component | Syncfusion
+title: Overview Panel in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Overview Control in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Overview Control in Blazor Diagram Component
+# Overview Panel in Blazor Diagram Component
 
-Overview component allows you to see a preview or an overall view of the entire content of a diagram. This helps you to look at the overall picture of a large diagram and also to navigate, pan, or zoom, on a particular position of the page.
+`SfDiagramOverviewComponent` allows you to see a preview or an overall view of the entire content of a diagram. This helps you to look at the overall picture of a large diagram and also to navigate, pan, or zoom, on a particular position of the page.
 
 ## Usage Scenario
 
 When you work on a very large diagram, you may not know the part you are actually working on, or navigation from one part to another might be difficult. One solution for navigation is to zoom out the entire diagram and find where you are. Then, you can zoom in a particular area you want to. This solution is not suitable when you need some frequent navigation.
 
-Overview component solves these problems by showing a preview, that is, an overall view of the entire diagram. A rectangle indicates viewport of the diagram. Navigation becomes easy by dragging this rectangle.
+`SfDiagramOverviewComponent` solves these problems by showing a preview, that is, an overall view of the entire diagram. A rectangle indicates viewport of the diagram. Navigation becomes easy by dragging this rectangle.
 
 ## Create overview
 
-The `SourceID` property of overview component should be set with the corresponding diagram ID for the overall view.
+The `SourceID` property of `SfDiagramOverviewComponent` should be set with the corresponding diagram ID for the overall view.
 
-The `Width` and `Height` properties of the overview component allow you to define the size of the overview component.
+The `Width` and `Height` properties of the `SfDiagramOverviewComponent` allow you to define the size of the `SfDiagramOverviewComponent`.
 
 The following code illustrates how to create overview.
 
@@ -102,7 +102,7 @@ public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
 
 ## Zoom and Pan
 
-In overview component, the view port of the diagram is highlighted with a red color rectangle. Diagram can be zoomed/panned by interacting with that. You can interact with overview component as follows:
+In `SfDiagramOverviewComponent`, the view port of the diagram is highlighted with a red color rectangle. Diagram can be zoomed/panned by interacting with that. You can interact with `SfDiagramOverviewComponent` as follows:
 
 * Resize the rectangle: Zooms in/out the diagram.
 * Drag the rectangle: Pans the diagram.
@@ -115,7 +115,7 @@ The following image shows how the diagram is zoomed/panned with overview.
 
 ## Overview Constraints
 
-The `Constraints` property of the Overview component allows you to enable or disable the following behaviors.
+The `Constraints` property of the `SfDiagramOverviewComponent` allows you to enable or disable the following behaviors.
 
 * None
 * Zoom
