@@ -124,7 +124,7 @@ contains |Checks whether a value contains the specified value.
 equal |Checks whether a value is equal to the specified value.
 notEqual |Checks for the values that are not equal to the specified value.
 
-> By default, the `GanttSearchSettings.Operator` value is *contains*.
+N> By default, the `GanttSearchSettings.Operator` value is *contains*.
 
 ## Search by external button
 
@@ -181,7 +181,7 @@ To search the Gantt Chart records from an external button, invoke the `SearchAsy
 
 ![Searching in Blazor Gantt Chart](images/blazor-gantt-chart-search.png)
 
-> You should set the `AllowFiltering` property to `true` for searching the content externally.
+N> You should set the `AllowFiltering` property to `true` for searching the content externally.
 
 ## Search specific columns
 
@@ -231,7 +231,7 @@ By default, the Gantt Chart component searches all the columns. You can search s
 }
 ```
 
-> In above sample, you can search only `TaskName` and `Duration` column values.
+N> In above sample, you can search only `TaskName` and `Duration` column values.
 
 ## Clear search by external button
 

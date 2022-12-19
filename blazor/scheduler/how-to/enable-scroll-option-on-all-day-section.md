@@ -11,7 +11,7 @@ documentation: ug
 
 When there are larger number of appointments in all-day row, it is difficult to view all the appointments properly. In that case you can enable scroller option for all-day row by setting true to `EnableAllDayScroll` whereas its default value is false. When setting this property to true, individual scroller for all-day row is enabled when it reaches its maximum height on expanding.
 
-> This property is not applicable for Scheduler with height `auto`.
+N> This property is not applicable for Scheduler with height `auto`.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule

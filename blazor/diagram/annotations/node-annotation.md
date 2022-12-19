@@ -70,8 +70,8 @@ The following code shows the relationship between the shape annotation position 
 | (1,1) | ![Blazor Diagram with Annotation in Right Bottom Position](../images/blazor-diagram-annotation-in-rightbottom-position.png) |
 
 
->* Type of the offset property for node’s shape annotation is [DiagramPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPoint.html).
->* Type of the offset property for connector’s path annotation is double.
+N>* Type of the offset property for node’s shape annotation is [DiagramPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPoint.html).
+<br/>* Type of the offset property for connector’s path annotation is double.
 
 ## How to change the alignment of an annotation
 
@@ -130,9 +130,9 @@ The following code explains how to align annotations.
 }
 ```
 
->* The value of the `HorizontalAlignment` is [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HorizontalAlignment.html#Syncfusion_Blazor_Diagram_HorizontalAlignment_Center) by default.
->* The value of the `VerticalAlignment` is [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.VerticalAlignment.html#Syncfusion_Blazor_Diagram_VerticalAlignment_Center) by default.
->* Alignment positioned based on the offset value.
+N>* The value of the `HorizontalAlignment` is [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HorizontalAlignment.html#Syncfusion_Blazor_Diagram_HorizontalAlignment_Center) by default.
+<br/>* The value of the `VerticalAlignment` is [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.VerticalAlignment.html#Syncfusion_Blazor_Diagram_VerticalAlignment_Center) by default.
+<br/>* Alignment positioned based on the offset value.
 
 ## How to change the margin of an annotation
 

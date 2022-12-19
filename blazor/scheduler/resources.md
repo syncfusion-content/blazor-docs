@@ -157,7 +157,7 @@ Scheduler is a generic component which is strongly bound to a model type. There 
 
 **DynamicObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleResource` tag. Scheduler can also perform all kinds of supported data operations and editing in DynamicObject.
 
-> The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
+N> The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
 
 ```csharp
 @using System.Dynamic
@@ -448,7 +448,7 @@ To get start quickly about multiple resource on scheduler, you can check on this
 The following image shows the appointment rendering on the multiple resource Scheduler.
 ![Multiple Resources in Blazor Scheduler](images/blazor-scheduler-multipleresources.png)
 
-> Setting `AllowMultiple` to `true` in the above code example allows to select multiple resources from the event editor and also creates multiple copies of the same appointment in the Scheduler for each resources while rendering.
+N> Setting `AllowMultiple` to `true` in the above code example allows to select multiple resources from the event editor and also creates multiple copies of the same appointment in the Scheduler for each resources while rendering.
 
 ## Resource grouping
 
@@ -658,7 +658,7 @@ This kind of grouping allows the Scheduler to display all the resources at a sin
 The following image display the Scheduler with single level resource grouping.
 ![Grouping single-level resources in Blazor Scheduler](images/blazor-scheduler-groupingsinglelevelresources.png)
 
-> The `Name` field defined in the **Resources** collection namely `Owners` will be mapped within the `Group` property, in order to enable the grouping option with those resource levels on the Scheduler.
+N> The `Name` field defined in the **Resources** collection namely `Owners` will be mapped within the `Group` property, in order to enable the grouping option with those resource levels on the Scheduler.
 
 ### Grouping multi-level resources
 
@@ -873,13 +873,13 @@ It groups the number of resources under each date and is applicable only on the 
 
 ![Grouping Resources by Date in Blazor Scheduler](images/blazor-scheduler-grouping-resource-by-date.png)
 
-> This kind of grouping by date is not applicable on any of the **timeline views**.
+N> This kind of grouping by date is not applicable on any of the **timeline views**.
 
 ## Working with shared events
 
 Multiple resources can share the same events, thus allowing the CRUD action made on it to reflect on all other shared instances simultaneously. To enable such option, set `AllowGroupEdit` option to `true` within the `Group` property. With this property enabled, a single appointment will be maintained within the appointment collection, even if it is shared by more than one resource – whereas the resource fields of such appointment will be in array which hold the IDs of the multiple resources.
 
-> Any actions such as create, edit or delete held on any one of the shared event instances, will be reflected on all other related instances visible on the UI.
+N> Any actions such as create, edit or delete held on any one of the shared event instances, will be reflected on all other related instances visible on the UI.
 
 **Example:** To edit all the resource events simultaneously,
 
@@ -1049,7 +1049,7 @@ It is possible to customize the resource header cells using built-in template op
 
 ![Customizing Resources Header in Desktop of Blazor Scheduler](images/blazor-scheduler-custom-resource-header.png)
 
-> To customize the resource header in compact mode properly make use of the class `e-device` as in the code example.
+N> To customize the resource header in compact mode properly make use of the class `e-device` as in the code example.
 
 ![Resource Header Template in Compact Mode of Blazor Scheduler](images/blazor-scheduler-header-template.png)
 
@@ -1501,7 +1501,7 @@ By default, the colors defined on the top level resources collection will be app
 ```
 ![Blazor Scheduler tooltip for resource headers](images/blazor-schedule-resourccecolors.png)
 
-> The value of the `ResourceColorField` field should be mapped with the `Name` value given within the `ScheduleResource`.
+N> The value of the `ResourceColorField` field should be mapped with the `Name` value given within the `ScheduleResource`.
 
 ## Setting different working days and hours for resources
 

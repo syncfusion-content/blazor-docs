@@ -22,7 +22,7 @@ To get start quickly on customizing the header rows of timeline views on schedul
 {% youtube
 "youtube:https://www.youtube.com/watch?v=2eYGFgwqK6U"%}
 
-> The `Hour` row is not applicable for Timeline month view.
+N> The `Hour` row is not applicable for Timeline month view.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule

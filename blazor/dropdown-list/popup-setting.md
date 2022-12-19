@@ -207,7 +207,7 @@ Hides the DropDownList popup.
 
 #### Declarations
 
-> public Task HidePopupAsync()
+N> public Task HidePopupAsync()
 
 ### ShowPopupAsync()
 
@@ -215,7 +215,7 @@ Opens the popup that displays the list of items.
 
 #### Declarations
 
-> public Task ShowPopupAsync()
+N> public Task ShowPopupAsync()
 
 {% highlight Razor %}
 

@@ -65,7 +65,7 @@ Customize the label position using the [LabelPosition](https://help.syncfusion.c
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#formatting-labels) to know about the property value of **Cars**.
+N> Refer to the [code block](#formatting-labels) to know about the property value of **Cars**.
 
 ![Blazor TreeMap Label in Custom Position](images/datalabel/blazor-treemap-label-in-custom-position.png)
 

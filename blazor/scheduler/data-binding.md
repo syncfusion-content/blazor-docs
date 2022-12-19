@@ -54,7 +54,7 @@ To bind local data to the Scheduler, you can simply assign a list of datasource 
 }
 ```
 
-> By default, `DataManager` uses `BlazorAdaptor` for binding local data.
+N> By default, `DataManager` uses `BlazorAdaptor` for binding local data.
 
 You can also bind different field names to the default event fields as well as include additional custom fields to the event object collection which can be referred [here](./appointments/#event-fields).
 
@@ -276,7 +276,7 @@ Scheduler is a generic component which is strongly bound to a model type. There 
 
 **DynamicObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleEventSettings` tag. Scheduler can also perform all kinds of supported data operations and editing in DynamicObject.
 
-> The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
+N> The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
 
 ```csharp
 @using System.Dynamic
@@ -620,7 +620,7 @@ Now, the Scheduler can be configured using the `SfDataManager` to interact with 
 }
 ```
 
-> You can find the working sample [here](https://github.com/SyncfusionExamples/blazor-scheduler-crud).
+N> You can find the working sample [here](https://github.com/SyncfusionExamples/blazor-scheduler-crud).
 
 ## Passing additional parameters to the server
 
@@ -646,7 +646,7 @@ The value passed to the additional parameter is shown in the following image.
 
 ![Passing Additional Parameters in Blazor Scheduler](./images/blazor-scheduler-additional-parameters.png)
 
-> The parameters added using the `Query` property will be sent along with the data request sent to the server on every scheduler actions.
+N> The parameters added using the `Query` property will be sent along with the data request sent to the server on every scheduler actions.
 
 ## Scheduler CRUD actions
 
@@ -775,4 +775,4 @@ We have assigned the dataSource that is retrieved from the Google services withi
 
 We have to write our own service to connect retrieve the events from the Google calendar.
 
-> The runnable sample for the above code will be available [here](https://github.com/SyncfusionExamples/google-calendar-synchronization-with-blazor-scheduler).
+N> The runnable sample for the above code will be available [here](https://github.com/SyncfusionExamples/google-calendar-synchronization-with-blazor-scheduler).
