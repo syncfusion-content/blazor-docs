@@ -72,7 +72,7 @@ To copy the data of the selected rows or cells into the clipboard with the help 
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Navigations
 <SfGantt DataSource="@TaskCollection" @ref="GanttObject" Height="450px" Width="1000px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"      Duration="Duration" Progress="Progress" Dependency="Predecessor" ParentID="ParentId">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" ParentID="ParentId">
     </GanttTaskFields>
     <SfToolbar ID="Gantt_Gantt_Toolbar">
         <ToolbarItems>
