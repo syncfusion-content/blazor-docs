@@ -163,7 +163,7 @@ The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Ort
 
 ![Connector with Orthogonal Segment in Blazor Diagram](../images/blazor-diagram-connector-with-orthogonal.png)
 
-> You need to mention the segment type as same as what you mentioned in connector type. There should be no contradiction between connector type and segment type.
+N> You need to mention the segment type as same as what you mentioned in connector type. There should be no contradiction between connector type and segment type.
 
 ## Bezier
 

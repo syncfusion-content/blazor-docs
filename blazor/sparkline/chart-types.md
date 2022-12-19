@@ -55,7 +55,7 @@ The [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Spar
 </SfSparkline>
 ```
 
-> Refer to the [code block](#line) to know about the property value of the **PopulationData**.
+N> Refer to the [code block](#line) to know about the property value of the **PopulationData**.
 
 ![Blazor Sparkline Column Chart](images/SparklineTypes/blazor-column-sparkline.png)
 
@@ -70,7 +70,7 @@ The [Pie](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sparkli
 </SfSparkline>
 ```
 
-> Refer to the [code block](#line) to know about the property value of the **PopulationData**.
+N> Refer to the [code block](#line) to know about the property value of the **PopulationData**.
 
 ![Blazor Sparkline Pie Chart](images/SparklineTypes/blazor-pie-sparkline.png)
 
@@ -98,6 +98,6 @@ The [Area](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sparkl
 </SfSparkline>
 ```
 
-> Refer to the [code block](#line) to know about the property value of the **PopulationData**.
+N> Refer to the [code block](#line) to know about the property value of the **PopulationData**.
 
 ![Blazor Sparkline Area Chart](images/SparklineTypes/blazor-area-sparkline.png)

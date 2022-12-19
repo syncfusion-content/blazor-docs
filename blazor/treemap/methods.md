@@ -56,7 +56,7 @@ The [AllowImageExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.T
 |     orientation      |    Defines the orientation such as **horizontal** and **vertical**.     |
 | allowDownload | Defines the export file to be downloaded or not. |
 
-> Export method returns the **Base64** string, if **allowDownload** argument is set to **false**. To download the file, paste the returned **Base64** string in the browser URL bar and press the enter button.
+N> Export method returns the **Base64** string, if **allowDownload** argument is set to **false**. To download the file, paste the returned **Base64** string in the browser URL bar and press the enter button.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap;

@@ -50,7 +50,7 @@ The following code shows how to customize the appearance of the shape.
 
 ![Node appearance in Blazor Diagram](../images/blazor-diagram-node-appearance.png)
 
-> [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each node should be unique and so it is further used to find the node at runtime and do any customization.
+N> [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each node should be unique and so it is further used to find the node at runtime and do any customization.
 
 ## How to update values in common to all nodes
 
@@ -191,7 +191,7 @@ You can define node style using template in [NodeTemplate](https://help.syncfusi
 }
 ```
 
-> In the above example, node's background color is updated using the click event of the button defined in the template.
+N> In the above example, node's background color is updated using the click event of the button defined in the template.
 
 ![Blazor Diagram with Node Template](../images/blazor-diagram-node-template.gif)
 

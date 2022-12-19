@@ -25,7 +25,7 @@ The following table explains the usage of indicator icons.
 
 * The `NodeDropped` event is triggered when the TreeView node is dropped on the target element successfully.
 
-> In the **OnNodeDragged** event currently there is no option to cancel the event. However the other event arguments could be accessed.
+N> In the **OnNodeDragged** event currently there is no option to cancel the event. However the other event arguments could be accessed.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

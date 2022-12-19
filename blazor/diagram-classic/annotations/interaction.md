@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+N> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
 
 # Interaction in Blazor Diagram Component
 
@@ -270,8 +270,8 @@ The following code explains how to set a dragLimit for connector annotations.
 
 ![Annotation DragLimit](../images/Annotation_DragLimit.gif)
 
->* By default, the drag limit will be disabled for the connector. It can be enabled by setting connector constraints to drag.
->* The drag limit is applicable only for the connector.
+N>* By default, the drag limit will be disabled for the connector. It can be enabled by setting connector constraints to drag.
+<br/>* The drag limit is applicable only for the connector.
 
 ## See also
 

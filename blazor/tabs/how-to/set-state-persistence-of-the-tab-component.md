@@ -11,7 +11,7 @@ documentation: ug
 
 State persistence allows the Tab to retain the current [SelectedItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_SelectedItem) property value in the browser cookies for state maintenance. This action is handled through the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_EnablePersistence) property which is set to false by default. When it is set to true, [SelectedItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_SelectedItem) property value of the Tab component will be retained even after refreshing the page.
 
-> Tab **ID** is essential to set state persistence.
+N> Tab **ID** is essential to set state persistence.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
