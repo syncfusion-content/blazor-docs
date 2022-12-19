@@ -24,7 +24,7 @@ The following code demonstrates the TimePicker with the custom format (`HH:mm:ss
 {% endhighlight %}
 
 
-![Blazor TimePicker with EnableMask](./images/TimePicker.png)
+![Time Format in Blazor TimePicker](./images/TimePicker.png)
 
 
 ## Mask Support in Blazor TimePicker Component

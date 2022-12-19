@@ -23,7 +23,7 @@ The following code demonstrates the DatePicker with the custom format (`yyyy-MM-
 {% endhighlight %}
 
 
-![Blazor DateTimePicker with EnableMask](./images/DateTimePicker.png)
+![Date Time Format in Blazor DateTimePicker](./images/DateTimePicker.png)
 
 ## Mask Support in Blazor DateTimePicker Component
 
