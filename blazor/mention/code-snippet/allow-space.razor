@@ -1,0 +1,43 @@
+@using Syncfusion.Blazor.DropDowns
+
+<SfMention TItem="Employees" DataSource="@data" AllowSpaces=true>
+    <TargetComponent>
+        <div id="commentsMention" placeHolder="Type @@ and tag user" ></div>
+    </TargetComponent>
+    <ChildContent>
+        <MentionFieldSettings Text="Name"></MentionFieldSettings>
+    </ChildContent>
+</SfMention>
+
+<style>
+    #commentsMention {
+        min-height: 100px;
+        border: 1px solid #D7D7D7;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 14px;
+        width: 600px;
+    }
+    div#commentsMention[placeholder]:empty:before {
+        content: attr(placeholder);
+        color: #555;
+    }
+</style>
+
+@code {
+
+    public class Employees
+    {
+        public string Name { get; set; }
+        public string ID { get; set; }
+    }
+
+    public List<Employees> data = new List<Employees>()
+    {
+        new Employees() { Name = "Andrew Fuller", ID = "1" },
+        new Employees() { Name = "Anne Dodsworth", ID = "2" },
+        new Employees() { Name = "Janet Leverling", ID = "3" },
+        new Employees() { Name = "Laura Callahan", ID = "4" },
+        new Employees() { Name = "Margaret Peacock", ID = "5" }
+    };
+}

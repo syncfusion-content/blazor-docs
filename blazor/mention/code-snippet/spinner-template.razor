@@ -1,0 +1,78 @@
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Data
+
+<SfMention TItem="EmployeeData" Query="@Query" PopupWidth="200px" SuggestionCount="6">
+    <TargetComponent>
+        <div id="commentsMention" placeHolder="Type @@ and tag user"></div>
+    </TargetComponent>
+    <ChildContent>
+        <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
+        <MentionFieldSettings Text="FirstName" Value="EmployeeID"></MentionFieldSettings>
+    </ChildContent>
+    <SpinnerTemplate>
+        <div class='spinner_loader'></div>
+    </SpinnerTemplate>
+</SfMention>
+
+<style>
+
+    #commentsMention {
+        min-height: 100px;
+        border: 1px solid #D7D7D7;
+        width: 600px;
+        font-size: 14px;
+        padding: 8px;
+        border-radius: 4px;
+    }
+
+    div#commentsMention[placeholder]:empty:before {
+        content: attr(placeholder);
+        color: #555;
+    }
+
+    .spinner_loader {
+      border: 10px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 10px solid #3498db;
+      width: 5px;
+      height: 5px;
+      position: absolute;
+      top: 6px;
+      left: 85px;
+      -webkit-animation: spin 2s linear infinite; /* Safari */
+      animation: spin 2s linear infinite;
+    }
+     /* Safari */
+  @@-webkit-keyframes spin {
+      0% {
+          -webkit-transform: rotate(0deg);
+      }
+
+      100% {
+          -webkit-transform: rotate(360deg);
+      }
+  }
+
+  @@keyframes spin {
+      0% {
+          transform: rotate(0deg);
+      }
+
+      100% {
+          transform: rotate(360deg);
+      }
+  }
+
+</style>
+
+@code {
+
+    public class EmployeeData
+    {
+        public string FirstName { get; set; }
+        public string Country { get; set; }
+    }
+
+    public EmployeeData Data = new EmployeeData();
+    public Query Query = new Query();
+}
