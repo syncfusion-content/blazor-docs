@@ -425,6 +425,8 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 [RowDropping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_RowDropping) event triggers when the row elements are being dropped on to the target element in Gantt Chart.
 
+> The dropping action can be cancelled by setting the `Cancel` argument of the `RowDropping` event to true.
+
 ```cshtml
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
