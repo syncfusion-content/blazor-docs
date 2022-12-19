@@ -1,11 +1,11 @@
 @using Syncfusion.Blazor.DropDowns
 
-<SfMention TItem="EmailData" DataSource="@data" ShowMentionChar=true>
+<SfMention TItem="UserData" DataSource="@data" ShowMentionChar=true>
     <TargetComponent>
         <div id="commentsMention" placeHolder="Type @@ and tag user" ></div>
     </TargetComponent>
     <ChildContent>
-        <MentionFieldSettings Text="Name"></MentionFieldSettings>
+        <MentionFieldSettings Text="Name" Value="EmailId"></MentionFieldSettings>
     </ChildContent>
 </SfMention>
 
@@ -26,19 +26,19 @@
 
 @code {
 
-    public class EmailData
+    public class UserData
     {
         public string Name { get; set; }
         public string EmailId { get; set; }
     }
 
-    public List<EmailData> data = new List<EmailData>()
+    public List<UserData> data = new List<UserData>()
     {
-        new EmailData { Name = "Selma Rose", EmailId = "selma@gmail.com" },
-        new EmailData { Name = "Maria", EmailId = "maria@gmail.com" },
-        new EmailData { Name = "Russo kay", EmailId = "russo@gmail.com" },
-        new EmailData { Name = "Robert", EmailId = "robert@gmail.com" },
-        new EmailData { Name = "Garth", EmailId = "garth@gmail.com" }
+        new UserData { Name = "Selma Rose", EmailId = "selma@gmail.com" },
+        new UserData { Name = "Maria", EmailId = "maria@gmail.com" },
+        new UserData { Name = "Russo kay", EmailId = "russo@gmail.com" },
+        new UserData { Name = "Robert", EmailId = "robert@gmail.com" },
+        new UserData { Name = "Garth", EmailId = "garth@gmail.com" }
     };
 
 }

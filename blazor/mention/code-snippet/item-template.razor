@@ -3,7 +3,7 @@
 
 <SfMention TItem="EmployeeData" Query="@Query" PopupWidth="250px" SuggestionCount="6">
         <TargetComponent>
-            <div id="commentsMention" placeHolder="Type @@ and tag user"></div>
+            <div id="commentsMention" placeHolder="Type @@ and tag employee"></div>
         </TargetComponent>
         <ItemTemplate>
             <span><span class='name'>@((context as EmployeeData).FirstName)</span><span class='country'>@((context as EmployeeData).Country)</span></span>

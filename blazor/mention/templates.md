@@ -1,15 +1,19 @@
 ---
 layout: post
 title: Templates in Blazor Mention Component | Syncfusion
-description: Checkout and learn here all about Templates in Syncfusion Blazor Mention component and much more.
+description: Checkout and learn here all about templates in Syncfusion Blazor Mention component and much more.
 platform: Blazor
 control: Mention
 documentation: ug
 ---
 
-# Templates in Mention
+# Templates in Blazor Mention Component
 
-The Mention has been provided with several options to customize each suggestion list item, display item, and data loading indication.
+Mention is a templated blazor component, that allow you to customize various part of the UI using template parameters. It allows you to render custom components or content based on your own logic. The Mention has been provided with several options to customize each suggestion list items.
+
+## Template context
+
+The templates used by Mention are of type `RenderFragment` and they will be passed with parameters. You can access the parameters passed to the templates using implicit parameter named `context`. You can also change this implicit parameter name using `Context` attribute.
 
 ## Item template
 

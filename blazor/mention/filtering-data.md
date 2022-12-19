@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Filtering in Blazor Mention Component | Syncfusion
-description: Checkout and learn here all about Filtering in Syncfusion Blazor Mention component and much more details.  
+description: Checkout and learn here all about filtering in Syncfusion Blazor Mention component and much more details.  
 platform: Blazor
 control: Mention
 documentation: ug
 ---
 
-# Filtering data in Mention
+# Filtering data in Blazor Mention Component
 
 The Mention component has built-in support to filter data items. The filter operation starts as soon as you start typing characters in the mention element.
 

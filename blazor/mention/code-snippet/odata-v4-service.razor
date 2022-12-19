@@ -1,14 +1,14 @@
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
-<SfMention TItem="OrderDetails" Query="@Query" PopupWidth="200px" >
+<SfMention TItem="Customer" Query="@Query" PopupWidth="200px" >
     <TargetComponent>
-        <div id="commentsMention" placeHolder="Select a customer" ></div>
+        <div id="commentsMention" placeHolder="Type @@ and tag customer name" ></div>
     </TargetComponent>
-    <ChildContent>
-        <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain=true></SfDataManager>
-        <MentionFieldSettings Text="CustomerID" Value="CustomerID"></MentionFieldSettings>
-    </ChildContent>
+     <ChildContent>
+        <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Customers" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain=true></SfDataManager>
+        <MentionFieldSettings Text="ContactName" Value="CompanyName"></MentionFieldSettings>
+     </ChildContent>
 </SfMention>
 
 <style>
@@ -30,21 +30,12 @@
 
 @code {
 
-    public Query Query = new Query().Select(new List<string> { "CustomerID", "OrderID" }).Take(6).RequiresCount();
-
-    public class OrderDetails
+   public class Customer
     {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public int? EmployeeID { get; set; }
-        public double? Freight { get; set; }
-        public string ShipCity { get; set; }
-        public bool Verified { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public string ShipName { get; set; }
-        public string ShipCountry { get; set; }
-        public DateTime? ShippedDate { get; set; }
-        public string ShipAddress { get; set; }
-    }
+        public string ContactName { get; set; }
 
+        public string CustomerID { get; set; }
+    }
+    public Customer Data = new Customer();
+    public Query Query = new Query().Select(new List<string> {"CompanyName", "ContactName"}).Take(6).RequiresCount();
 }

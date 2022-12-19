@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Sorting in Blazor Mention Component | Syncfusion
-description: Checkout and learn here all about Sorting in Syncfusion Blazor Mention component and much more.
+description: Checkout and learn here all about sorting in Syncfusion Blazor Mention component and much more.
 platform: Blazor
 control: Mention
 documentation: ug
 ---
 
-# Sorting in Mention
+# Sorting in Blazor Mention Component 
 
 You can display the suggestion list items in a specific order. It can be `Ascending` `Descending` or `None` in the `SortOrder` property.
 

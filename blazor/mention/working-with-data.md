@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Data Binding in Blazor Mention Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor Mention component and more.
+description: Checkout and learn here all about data binding in Syncfusion Blazor Mention component and more.
 platform: Blazor
 control: Mention
 documentation: ug
 ---
 
-# Working with Data in Mention
+# Working with Data in Blazor Mention Component
 
 The Mention loads the data either from the local data sources or remote data services. Using the `DataSource` property,  bind the local data or using the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html), bind the remote data.
 

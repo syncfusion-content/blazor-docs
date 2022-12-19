@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Customization in Blazor Mention Component | Syncfusion
-description: Checkout and learn here all about Customization in Syncfusion Blazor Mention component and much more.
+description: Checkout and learn here all about customization in Syncfusion Blazor Mention component and much more.
 platform: Blazor
 control: Mention
 documentation: ug
 ---
 
-# Customization in Mention
+# Customization in Blazor Mention Component
 
 ## Show or hide mention character
 
