@@ -126,12 +126,12 @@ The `Constraints` property of the `SfDiagramOverviewComponent` allows you to ena
 
 | Constraints | Description |
 | -------- | -------- |
-| None | Disables all the interactions in overview component.|
-| Zoom | Enables the zooming interaction in overview component. |
-| Pan | Enables the panning interaction in overview component. |
-| DrawFocus | Enables to zoom or change the viewport area of the diagram by drawing the new rect in the overview component. | 
-| TapFocus | Enables the panning of the diagram viewport to specific focus point by tap on the overview component. |
-| Default | Enables all the interactions in overview component. |
+| None | Disables all the interactions in SfDiagramOverviewComponent.|
+| Zoom | Enables the zooming interaction in SfDiagramOverviewComponent. |
+| Pan | Enables the panning interaction in SfDiagramOverviewComponent. |
+| DrawFocus | Enables to zoom or change the viewport area of the diagram by drawing the new rect in the SfDiagramOverviewComponent. | 
+| TapFocus | Enables the panning of the diagram viewport to specific focus point by tap on the SfDiagramOverviewComponent. |
+| Default | Enables all the interactions in SfDiagramOverviewComponent. |
 
 The following example shows how to disable zoom constraint from the default overview constraints.
 
