@@ -19,7 +19,22 @@ The following example code illustrates how to add the text in current selection.
 
 ```csharp
 // It will insert the provided text in current selection
-container.DocumentEditor.Editor.InsertTextAsync('Syncfusion');
+container.DocumentEditor.Editor.InsertTextAsync("Syncfusion");
+
+<button @onclick="InsertText">Insert Text</button>
+<SfDocumentEditorContainer @ref="container" EnableToolbar="true"  Height="590px" >
+</SfDocumentEditorContainer>
+@code {
+
+    SfDocumentEditorContainer container;
+
+    // It will insert the provided text in current selection
+    public void InsertText()
+    {
+        container.DocumentEditor.Editor.InsertTextAsync("Syncfusion");
+    }
+
+}
 ```
 
 ## Insert paragraph in current cursor position
