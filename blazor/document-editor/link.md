@@ -15,7 +15,9 @@ documentation: ug
 
 [Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) triggers [`OnRequestNavigate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorEvents.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorEvents_OnRequestNavigate) event whenever user clicks Ctrl key or tap a hyperlink within the document. This event provides necessary details about link type, navigation URL, and local URL (if any) as arguments, and allows you to easily customize the hyperlink navigation functionality. 
 
-Refer to the following example.
+### Add the OnRequestNavigate event for DocumentEditor
+
+The following example illustrates how to add OnRequestNavigate event for DocumentEditor.
 
 ```cshtml
 <SfDocumentEditor ID="cont" IsReadOnly="false" EnableEditor="true" EnableSelection="true" @ref="container" Height="590px">

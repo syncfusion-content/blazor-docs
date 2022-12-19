@@ -80,7 +80,7 @@ public class TreeData
 
 ![Paging in Blazor TreeGrid](images/blazor-treegrid-paging.png)
 
-> Better performance can be achieved by using tree grid paging to fetch only a pre-defined number of records from the data source.
+N> Better performance can be achieved by using tree grid paging to fetch only a pre-defined number of records from the data source.
 
 ## Page size mode
 
@@ -89,7 +89,7 @@ Two behaviors are available in Tree Grid paging to display certain number of rec
 * **All** : This is the default mode. The number of records in a page is based on [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridPageSettings~PageSize.html) property.
 * **Root** : The number of root nodes or the 0th level records to be displayed per page is based on [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridPageSettings~PageSize.html) property. With [PageSizeMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridPageSettings~PageSizeMode.html) property as **Root**, only the root level or the 0th level records are considered in records count.
 
-> By default, Blazor Tree Grid works with **PageSizeMode** as *Root* and to behave as *All* mode, **Adaptor** property should be set for Tree Grid **SfDataManager**.
+N> By default, Blazor Tree Grid works with **PageSizeMode** as *Root* and to behave as *All* mode, **Adaptor** property should be set for Tree Grid **SfDataManager**.
 
 {% tabs %}
 
