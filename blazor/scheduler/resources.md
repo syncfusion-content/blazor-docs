@@ -875,6 +875,59 @@ It groups the number of resources under each date and is applicable only on the 
 
 N> This kind of grouping by date is not applicable on any of the **timeline views**.
 
+### Hide Non Working Days
+
+In this demo, there are 2 resources defined namely Alice and Smith under the resource `DataSource`. The Scheduler can be switched to group by date, by setting `true` to the option `ByDate` within the `ScheduleGroup` property.
+
+The different work days for the each resources are provided by using the `WorkDaysField` property and the Scheduler will be displayed the provided dates alone when `HideNonWorkingDays` property set as `true`.
+
+**Example:** To display the Scheduler with Hide Non Working Days,
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Buttons
+    <SfSchedule TValue="ScheduleData.ResourceData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">
+        <ScheduleGroup ByDate="true" HideNonWorkingDays="@HideNonWorkingDays" Resources="@groupData"></ScheduleGroup>
+        <ScheduleResources>
+            <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@OwnersData" Field="TaskId" Title="Assignee" Name="Owners" TextField="Text" IdField="Id" ColorField="Color" WorkDaysField="WorkDays" AllowMultiple="true"></ScheduleResource>
+        </ScheduleResources>
+        <ScheduleViews>
+            <ScheduleView Option="View.Day"></ScheduleView>
+            <ScheduleView Option="View.Week"></ScheduleView>
+            <ScheduleView MaxEventsPerRow="1" Option="View.Month"></ScheduleView>
+            <ScheduleView Option="View.Agenda"></ScheduleView>
+        </ScheduleViews>
+        <ScheduleEventSettings DataSource="@dataSource">
+            <ScheduleField>
+                <FieldSubject Name="Subject" Title="Task"></FieldSubject>
+                <FieldLocation Name="Location" Title="Project Name"></FieldLocation>
+                <FieldDescription Name="Description" Title="Comments"></FieldDescription>
+            </ScheduleField>
+        </ScheduleEventSettings>
+    </SfSchedule>
+@code{
+    private DateTime CurrentDate { get; set; } = new DateTime(DateTime.Today.Year, 1, 12);
+    private List<ScheduleData.ResourceData> dataSource = new ScheduleData().GetResourceData();
+    private bool HideNonWorkingDays { get; set; } = true;
+    private string[] groupData = new string[] { "Owners" };
+    private List<ResourceData> OwnersData { get; set; } = new List<ResourceData> {
+        new ResourceData { Text = "Alice", Id= 1, Color = "#df5286", WorkDays = new int[] { 1, 2, 3, 4} },
+        new ResourceData { Text = "Smith", Id= 2, Color = "#5978ee", WorkDays = new int[] { 2, 3, 5 } }
+    };
+    public class ResourceData
+    {
+        public string Text { get; set; }
+        public int Id { get; set; }
+        public string Color { get; set; }
+        public int[] WorkDays { get; set; }
+    }
+}
+```
+
+![Hide Non Working Days in Blazor Scheduler](images/blazor-scheduler-hide-non-working-days.png)
+
+N> This kind of grouping by date is not applicable on any of the **timeline views**.
+
 ## Working with shared events
 
 Multiple resources can share the same events, thus allowing the CRUD action made on it to reflect on all other shared instances simultaneously. To enable such option, set `AllowGroupEdit` option to `true` within the `Group` property. With this property enabled, a single appointment will be maintained within the appointment collection, even if it is shared by more than one resource – whereas the resource fields of such appointment will be in array which hold the IDs of the multiple resources.
