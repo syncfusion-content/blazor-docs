@@ -266,7 +266,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 {% endhighlight %}
 {% endtabs %}
 
-* Press F5 to run the application. Then, the Syncfusion Blazor Rating component will be rendered in the default web browser.
+* Press <kbd>ctrl</kbd>+<kbd>F5</kbd> or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion Blazor Rating component will be rendered in the default web browser.
 
 ![Blazor Rating Component](images/blazor-rating-component.png)
 

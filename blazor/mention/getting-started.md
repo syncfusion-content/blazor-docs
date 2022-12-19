@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with Blazor Media Query Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Media Query component in Blazor Server App and Blazor WebAssembly App.
+title: Getting Started with Blazor Mention Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Mention component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
-control: Media Query
+control: Mention
 documentation: ug
 ---
 
-# Getting Started with Blazor Media Query Component
+# Getting Started with Blazor Mention Component
 
-This section briefly explains about how to include `Blazor Media Query` component in your Blazor Server App and Blazor WebAssembly App using Visual Studio. 
+This section briefly explains about how to include `Blazor Mention` component in your Blazor Server App and Blazor WebAssembly App using Visual Studio. 
 
 ## Prerequisites
 
@@ -23,11 +23,11 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
 
-## Install Syncfusion Blazor Layouts NuGet in the App
+## Install Syncfusion Blazor DropDowns NuGet in the App
 
 Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). In order to use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages). 
 
-To add Blazor Media Query component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Layouts](https://www.nuget.org/packages/Syncfusion.Blazor.Layouts) and then install it.
+To add Blazor Mention component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns) and then install it.
 
 ## Register Syncfusion Blazor Service
 
@@ -243,263 +243,75 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
-## Add Syncfusion Blazor Media Query component
+## Add Syncfusion Blazor Mention component
 
-* Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Layouts` namespace.
+* Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.DropDowns` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Imports.razor" %}
 
 @using Syncfusion.Blazor
-@using Syncfusion.Blazor.Layouts
+@using Syncfusion.Blazor.DropDowns
 
 {% endhighlight %}
 {% endtabs %}
 
-* Now, add the Syncfusion Blazor Media Query component in razor file. Here, the Media Query component is added in the **~/Pages/Index.razor** page under the `~/Pages` folder.
+* Now, add the Syncfusion Mention component in razor file. Here, the Mention component is added in the **~/Pages/Index.razor** page under the `~/Pages` folder.
 
 {% tabs %}
 {% highlight razor %}
 
-<SfMediaQuery @bind-ActiveBreakPoint="activeBreakpoint"></SfMediaQuery>
-<br />
-@if (activeBreakpoint == "Small")
-{
-    deviceSize = "small-device";
-}
-else if (activeBreakpoint == "Medium")
-{
-    deviceSize = "medium-device";
-}
-else
-{
-    deviceSize = "";
-}
-
-<div class="mediaquery-demo @deviceSize">
-    <div class="header e-skeleton e-skeleton-text">
-        <div class="search-box e-skeleton e-skeleton-text"></div>
-    </div>
-    <div class="banner e-skeleton e-skeleton-text e-shimmer-pulse"></div>
-    <div class="main-container">
-        <ul>
-            <li>
-                <div class="content e-skeleton e-skeleton-text e-shimmer-pulse"></div>
-                <div class="title e-skeleton e-skeleton-text e-shimmer-pulse"></div>
-                <p class="e-skeleton e-skeleton-text e-shimmer-pulse"></p>
-            </li>
-            <li>
-                <div class="content e-skeleton e-skeleton-text e-shimmer-pulse"></div>
-                <div class="title e-skeleton e-skeleton-text e-shimmer-pulse"></div>
-                <p class="e-skeleton e-skeleton-text e-shimmer-pulse"></p>
-            </li>
-        </ul>
-    </div>
-    <div class="footer e-skeleton e-skeleton-text"></div>
-</div>
-
-@code {
-    private string deviceSize { get; set; }
-    private string activeBreakpoint { get; set; }
-}
+<SfMention TItem="PersonData" DataSource="@EmailData">
+    <TargetComponent>
+        <div id="commentsMention" placeHolder="Type @@ and tag user" ></div>
+    </TargetComponent>
+    <ChildContent>
+        <MentionFieldSettings Text="Name"></MentionFieldSettings>
+    </ChildContent>
+</SfMention>
 <style>
-    .mediaquery-demo {
-        height: 715px;
-        margin: 0 10%;
-        border: 2px solid #f3f2f1;
-        border-top-width: 0px;
+    #commentsMention {
+        min-height: 100px;
+        border: 1px solid #D7D7D7;
         border-radius: 4px;
-        overflow: hidden;
+        padding: 8px;
+        font-size: 14px;
+        width: 600px;
     }
 
-    .mediaquery-demo .e-skeleton {
-        display: block;
-    }
-
-    .mediaquery-demo .header {
-        height: 6vh;
-        text-align: center;
-        overflow: visible;
-    }
-
-        .mediaquery-demo .header .search-box {
-            width: 25%;
-            height: 55%;
-            margin-top: 1.5vh;
-            display: inline-block;
-            border-radius: 7px;
-            float: right;
-            margin-right: 3%;
-            background-color: white;
-        }
-
-    .mediaquery-demo .banner {
-        height: 35%;
-        margin: 1% 8%;
-    }
-
-    .mediaquery-demo .main-container {
-        margin: 0 8%;
-        height: 35%;
-    }
-
-    .mediaquery-demo .main-container ul {
-        list-style: none;
-        display: flex;
-        height: 100%;
-        padding: 0;
-        justify-content: space-between;
-        padding-top: 20px;
-    }
-
-        .mediaquery-demo .main-container ul li {
-            width: 49%;
-        }
-
-    .mediaquery-demo .main-container li .content {
-        height: 60%;
-    }
-
-    .mediaquery-demo .main-container li .title,
-    .mediaquery-demo .main-container li p {
-        width: 50%;
-        height: 7%;
-        margin-top: 3%;
-    }
-
-    .mediaquery-demo .main-container li p {
-        width: 80%;
-    }
-
-    .mediaquery-demo .footer {
-        height: 20%;
-        margin: 0% 8%;
-    }
-
-    .mediaquery-demo.medium-device .header .search-box {
-        width: 50%;
-        float: none;
-        margin-right: 0px;
-    }
-
-    .mediaquery-demo.medium-device .banner,
-    .mediaquery-demo.medium-device .main-container,
-    .mediaquery-demo.medium-device .footer {
-        margin: 0px;
-    }
-
-    .mediaquery-demo.medium-device .banner {
-        margin-top: 1%;
-    }
-
-    .mediaquery-demo.medium-device .main-container {
-        height: 42%;
-    }
-
-    .mediaquery-demo.medium-device .main-container ul {
-        flex-direction: column;
-    }
-
-    .mediaquery-demo.medium-device .main-container ul li {
-        height: 50%;
-        display: flex;
-        margin-bottom: 2%;
-        margin-left: 5%;
-        width: 100%;
-    }
-
-    .mediaquery-demo.medium-device .main-container li .content {
-        height: auto;
-        width: 30%;
-    }
-
-    .mediaquery-demo.medium-device .main-container li .title,
-    .mediaquery-demo.medium-device .main-container li p {
-        height: 24%;
-    }
-
-    .mediaquery-demo.medium-device .main-container li .title {
-        margin-left: 5%;
-        width: 25%;
-        margin-top: 0;
-    }
-
-    .mediaquery-demo.medium-device .main-container li p {
-        margin-top: 8%;
-        margin-left: -25%;
-        width: 55%;
-    }
-
-    .mediaquery-demo.small-device .header .search-box {
-        text-align: center;
-        float: none;
-        width: 60%;
-        height: 65%;
-        margin-top: 8vh;
-        background-color: inherit;
-    }
-
-    .mediaquery-demo.small-device .banner,
-    .mediaquery-demo.small-device .main-container,
-    .mediaquery-demo.small-device .footer {
-        margin: 0px;
-        height: 20%;
-    }
-
-    .mediaquery-demo.small-device .banner {
-        margin: 8vh 0 0;
-    }
-
-    .mediaquery-demo.small-device .main-container {
-        height: 48%;
-    }
-
-    .mediaquery-demo.small-device .main-container ul {
-        display: block;
-    }
-
-    .mediaquery-demo.small-device .main-container ul li {
-        height: 50%;
-        display: block;
-        width: 90%;
+    #mention-controls {
         margin: 0 auto;
+        width: 600px;
     }
 
-    .mediaquery-demo.small-device .main-container li .content {
-        height: 40%;
-        width: auto;
+    div#commentsMention[placeholder]:empty:before {
+        content: attr(placeholder);
+        color: #555;
     }
 
-    .mediaquery-demo.small-device .main-container li .title {
-        width: 40%;
-        height: 10%;
-    }
-
-    .mediaquery-demo.small-device .main-container li p {
-        width: auto;
-        height: 10%;
-    }
-
-    .fluent-dark .mediaquery-demo,
-    .fluent-dark .mediaquery-demo .header .search-box,
-    .bootstrap-dark .mediaquery-demo,
-    .bootstrap-dark .mediaquery-demo .header .search-box,
-    .bootstrap5-dark .mediaquery-demo,
-    .bootstrap5-dark .mediaquery-demo .header .search-box,
-    .tailwind-dark .mediaquery-demo,
-    .tailwind-dark .mediaquery-demo .header .search-box,
-    .material-dark .mediaquery-demo,
-    .material-dark .mediaquery-demo .header .search-box,
-    .fabric-dark .mediaquery-demo,
-    .fabric-dark .mediaquery-demo .header .search-box {
-        background-color: inherit;
-        border: 1px solid #a7a7a7;
+    @@media screen and (max-width: 1010px) {
+        #mention-controls, #mention-controls table {
+            width: 100%;
+        }
     }
 </style>
+@code {
+    public class PersonData
+    {
+        public string Name { get; set; }
+        public string EmailId { get; set; }
+        public string EmployeeImage { get; set; }
+    }
+    List<PersonData> EmailData = new List<PersonData> {
+    new PersonData() { Name="Selma Rose", EmployeeImage="7", EmailId="selma@gmail.com" },
+    new PersonData() { Name="Russo Kay", EmployeeImage="8", EmailId="russo@gmail.com" },
+    new PersonData() { Name="Camden Kate", EmployeeImage="9", EmailId="camden@gmail.com" }
+  };
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>ctrl</kbd>+<kbd>F5</kbd> or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion Blazor Media Query component will be rendered in the default web browser.
+* Press <kbd>ctrl</kbd>+<kbd>F5</kbd> or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion Blazor Mention component will be rendered in the default web browser.
 
-![Blazor Media Query Component](images/blazor-media-query.png)
+![Blazor Mention Component](images/blazor-mention.png)
