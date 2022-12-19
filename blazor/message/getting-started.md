@@ -47,7 +47,7 @@ Open the **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
 Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, the Syncfusion Blazor Service is registered by setting the [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
-> From 2022 Vol1 (20.1) version - The default value of the `IgnoreScriptIsolation` is changed to `true,` so you don’t have to explicitly set the `IgnoreScriptIsolation` property to refer scripts externally.
+N> From 2022 Vol1 (20.1) version - The default value of the `IgnoreScriptIsolation` is changed to `true,` so you don’t have to explicitly set the `IgnoreScriptIsolation` property to refer scripts externally.
 
 ### Blazor Server App
 
@@ -145,7 +145,7 @@ Check out the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/
 
 To add a theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/), then install it. The theme style sheet from NuGet can be referred as follows.
 
-> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) single NuGet, you don't have to refer to the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet. Since style sheets are already inside the assets of the `Syncfusion.Blazor` NuGet. 
+N> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) single NuGet, you don't have to refer to the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet. Since style sheets are already inside the assets of the `Syncfusion.Blazor` NuGet. 
 
 ### Blazor Server App
 
@@ -248,7 +248,7 @@ For the Blazor WebAssembly App, Refer script in the `<head>` of the **~/index.ht
 {% endhighlight %}
 {% endtabs %}
 
-> Syncfusion recommends to reference scripts using the [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
+N> Syncfusion recommends to reference scripts using the [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
 ## Add Blazor Message component
 

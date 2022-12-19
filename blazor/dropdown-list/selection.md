@@ -55,7 +55,7 @@ Change the component value programmatically or externally by the component insta
 
 Bind the pre-selected value to the component using the [@bind-Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Index) attribute. It binds the respective value present in the specified index position of the datasource.
 
-> It will be dependent on the [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SortOrder.html) type. It will bind the value to the component with the sorted data if the corresponding property is defined.
+N> It will be dependent on the [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SortOrder.html) type. It will bind the value to the component with the sorted data if the corresponding property is defined.
 
 The following sample shows how to bind the index on the initial rendering.
 
@@ -159,7 +159,7 @@ Sets the focus to the DropDownList component for interaction.
 
 #### Declarations
 
-> public Task FocusAsync()
+N> public Task FocusAsync()
 
 ### FocusOutAsync()
 
@@ -167,7 +167,7 @@ Remove the focus from the DropDownList component, if the component is in focus s
 
 #### Declarations
 
-> public Task FocusOutAsync()
+N> public Task FocusOutAsync()
 
 {% highlight Razor %}
 
@@ -183,7 +183,7 @@ Gets the data Object that matches the given value.
 
 #### Declarations
 
-> public TItem GetDataByValue(TValue ddlValue)
+N> public TItem GetDataByValue(TValue ddlValue)
 
 #### Parameters
 
@@ -201,7 +201,7 @@ Gets all the list items bound on this component.
 
 #### Declarations
 
-> public Task<IEnumerable<TItem>> GetItemsAsync()
+N> public Task<IEnumerable<TItem>> GetItemsAsync()
 
 {% highlight Razor %}
 

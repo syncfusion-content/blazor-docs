@@ -68,4 +68,4 @@ The following code example illustrate how to open a document in read only mode.
 }
 
 ```
->Note: You can use the [`RestrictEditing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_RestrictEditing) in DocumentEditorContainer and [`IsReadOnly`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_IsReadOnly) in DocumentEditor based on your requirement to change component to read only mode.
+N> You can use the [`RestrictEditing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_RestrictEditing) in DocumentEditorContainer and [`IsReadOnly`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_IsReadOnly) in DocumentEditor based on your requirement to change component to read only mode.

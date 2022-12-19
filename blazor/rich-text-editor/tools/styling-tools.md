@@ -208,7 +208,7 @@ The `RichTextEditorFontColor` and `RichTextEditorBackgroundColor` tag has two mo
 
 By default, the content styles of the Rich Text Editor are not returned while retrieving the HTML value from the editor. So, the styles are not applied when using the HTML value outside the editor. To get the styles from the Rich Text Editor’s content for your application, copy and use the following styles directly in your application. The styles listed are used in the UI elements of the Rich Text Editor.
 
-> Make sure to add a CSS class `e-rte-content` to the content container.
+N> Make sure to add a CSS class `e-rte-content` to the content container.
 
 ```css
 
