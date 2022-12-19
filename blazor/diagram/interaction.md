@@ -187,7 +187,7 @@ For more information about dragging, refer [Node Drag](https://blazor.syncfusion
 
 For more information about resizing, refer [Node Resize](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction/#resize)
 
->Note:  While dragging and resizing, the objects are snapped towards the nearest objects to make better alignments. For better alignments, refer to [Snapping](https://blazor.syncfusion.com/documentation/diagram/grid-lines#snapping).
+N> While dragging and resizing, the objects are snapped towards the nearest objects to make better alignments. For better alignments, refer to [Snapping](https://blazor.syncfusion.com/documentation/diagram/grid-lines#snapping).
 
 ## Rotate
 

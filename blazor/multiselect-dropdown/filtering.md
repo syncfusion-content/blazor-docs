@@ -139,7 +139,7 @@ To filter the data from given data source by using query.
 
 #### Declaration
 
-> public Task FilterAsync(IEnumerable<TItem> dataSource, Query query = null, FieldSettingsModel fields = null)
+N> public Task FilterAsync(IEnumerable<TItem> dataSource, Query query = null, FieldSettingsModel fields = null)
 
 #### Parameters
 

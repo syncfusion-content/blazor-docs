@@ -152,7 +152,7 @@ By default, the Scheduler exports recurring events as a single data by exporting
 
 By default, the whole event collection bound to the Scheduler gets exported as an excel file. To export only specific events of Scheduler or some custom event collection, you need to pass those custom data collection as a parameter to the `ExportToExcelAsync` method as shown in this following example, through the `CustomData` option.
 
-> By default, the event data are taken from Scheduler dataSource.
+N> By default, the event data are taken from Scheduler dataSource.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule

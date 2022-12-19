@@ -118,7 +118,7 @@ The min and the max values of the X-axis can be customized using the [MinX](http
 </SfSparkline>
 ```
 
-> Refer to the [code block](#numeric) to know about the property value of the **ExpenditureReport**.
+N> Refer to the [code block](#numeric) to know about the property value of the **ExpenditureReport**.
 
 ![Changing Minimum and Maximum Values of Blazor Sparkline Chart Axis](images/Axis/blazor-sparkline-min-max-value.png)
 
@@ -134,7 +134,7 @@ The horizontal axis line value can be customized by setting the [Value](https://
 </SfSparkline>
 ```
 
-> Refer to the [code block](#numeric) to know about the property value of the **ExpenditureReport**.
+N> Refer to the [code block](#numeric) to know about the property value of the **ExpenditureReport**.
 
 ![Blazor Sparkline Chart with Axis Value](images/Axis/blazor-sparkline-axis-value.png)
 
@@ -142,7 +142,7 @@ The horizontal axis line value can be customized by setting the [Value](https://
 
 The axis line can be enabled by specifying the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html#Syncfusion_Blazor_Charts_SparklineAxisLineSettings_Visible) property to **true** in the [SparklineAxisLineSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html).
 
-> The axis line is not applicable for the [WinLoss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_WinLoss) chart type.
+N> The axis line is not applicable for the [WinLoss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_WinLoss) chart type.
 
 The axis line can be customized using the following properties.
 
@@ -161,6 +161,6 @@ The axis line can be customized using the following properties.
 </SfSparkline>
 ```
 
-> Refer to the [code block](#numeric) to know about the property value of **ExpenditureReport**.
+N> Refer to the [code block](#numeric) to know about the property value of **ExpenditureReport**.
 
 ![Blazor Sparkline Chart with Custom Axis Line](images/Axis/blazor-sparkline-custom-axis-line.png)

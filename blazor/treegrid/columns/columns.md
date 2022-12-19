@@ -11,7 +11,7 @@ documentation: ug
 
 The column definitions are used as the datasource schema in the Tree Grid. This plays a vital role in rendering column values in the required format. The tree grid operations such as sorting, filtering and searching etc. are performed based on the column definitions. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Field.html) property of [TreeGridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumns.html) tag helper is necessary to map the data source values in Tree Grid columns.
 
-> If the column `Field` is not specified in the dataSource, the column values will be empty. <br />[TreeColumnIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~TreeColumnIndex.html) property denotes the column that is used to expand and collapse child rows.
+N> If the column `Field` is not specified in the dataSource, the column values will be empty. <br />[TreeColumnIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~TreeColumnIndex.html) property denotes the column that is used to expand and collapse child rows.
 
 ## Complex data binding
 
@@ -235,7 +235,7 @@ public class Employee
 
 ![Blazor Tree Grid Column with Header Template](../images/blazor-treegrid-column-header-template.png)
 
-> For Templated Tree Grid component, [ModelType](../templates/#template-modeltype) property of Tree Grid should be defined.
+N> For Templated Tree Grid component, [ModelType](../templates/#template-modeltype) property of Tree Grid should be defined.
 
 ## Header text
 
@@ -308,7 +308,7 @@ public class TreeData
 
 ![Blazor Tree Grid Column with Header Text](../images/blazor-treegrid-column-header-text.png)
 
-> If both the `Field` and `HeaderText` are not defined in the column, the column renders with **empty** header text.
+N> If both the `Field` and `HeaderText` are not defined in the column, the column renders with **empty** header text.
 
 ## Format
 
@@ -377,7 +377,7 @@ public class TreeDataFormat
 
 {% endtabs %}
 
-> By default, the number and date values are formatted in **en-US** locale.
+N> By default, the number and date values are formatted in **en-US** locale.
 
 ### Number formatting
 
@@ -543,7 +543,7 @@ public class TreeData
 
 ![Blazor Tree Grid with AutoFit Columns](../images/blazor-treegrid-autofit-column.png)
 
-> All the columns can be autofitted by invoking the **AutoFitColumns** method without column names.
+N> All the columns can be autofitted by invoking the **AutoFitColumns** method without column names.
 
 ## Lock columns
 
@@ -630,7 +630,7 @@ Tree Grid column supports the following types:
 * date
 * datetime
 
-> If the `Type` is not defined, it will be determined from the first record of the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~DataSource.html).
+N> If the `Type` is not defined, it will be determined from the first record of the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~DataSource.html).
 
 ## Checkbox column
 

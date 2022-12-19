@@ -526,7 +526,7 @@ Use the **Validator** property to display a validation message for one of the fi
 
 In the below example, the **TaskName** field is not defined in the tree grid column and the validation message for the **TaskName** is displayed in the dialog template. 
 
-> The validation message for fields that are not defined in the tree grid column will be shown as the validation summary (top of the dialog edit form) in the dialog edit form.
+N> The validation message for fields that are not defined in the tree grid column will be shown as the validation summary (top of the dialog edit form) in the dialog edit form.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;

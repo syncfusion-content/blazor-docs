@@ -13,7 +13,7 @@ By default, the height of the Scheduler rows in Timeline views are static and th
 
 To enable auto row height adjustments on Scheduler Timeline views and Month view, set `true` to the `EnableAutoRowHeight` property whose default value is `false`.
 
-> This auto row height adjustment is applicable only on all the Timeline views as well as on the calendar Month view.
+N> This auto row height adjustment is applicable only on all the Timeline views as well as on the calendar Month view.
 
 Now, let's see how it works on those applicable views with examples.
 
@@ -160,4 +160,4 @@ By default, with the feature `EnableAutoRowHeight`, there will be a space in the
 
 ![Ignoring Whitespace in Blazor Scheduler](images/blazor-scheduler-ignore-whitespace.png)
 
-> The property `IgnoreWhitespace` will be applicable only when `EnableAutoRowHeight` feature is enabled in the Scheduler.
+N> The property `IgnoreWhitespace` will be applicable only when `EnableAutoRowHeight` feature is enabled in the Scheduler.
