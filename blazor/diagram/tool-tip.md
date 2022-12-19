@@ -100,7 +100,7 @@ Tooltips can be attached to 12 static locations around the target. On initializi
 * `RightCenter`
 * `RightBottom`
 
-> By default, the Tooltip is placed at the BottomRight of the target element.
+N> By default, the Tooltip is placed at the BottomRight of the target element.
 
 The following code example sets the tooltip position for the nodes.
 
@@ -507,7 +507,7 @@ The mode on which the Tooltip is to be opened on a page, this is hovering, focus
 * `Click`
 
 
-> By default, the Tooltip open mode is Auto.
+N> By default, the Tooltip open mode is Auto.
 
 The following code example illustrates how to set the open mode to the tooltip for the nodes.
 
