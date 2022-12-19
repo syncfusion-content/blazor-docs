@@ -15,7 +15,7 @@ On Scheduler cells, the menu items can be displayed such as `New Event`, `New Re
 
 The deletion of appointments can be done by using the [DeleteEventAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_DeleteEventAsync__1___0_System_Nullable_Syncfusion_Blazor_Schedule_CurrentAction__) public method. Also, the [SelectedDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_SelectedDate) property can be used to navigate between different dates.
 
-> You can also display custom menu options on Scheduler cells and appointments. Context menu will open on tap-hold in responsive mode.
+N> You can also display custom menu options on Scheduler cells and appointments. Context menu will open on tap-hold in responsive mode.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule

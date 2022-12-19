@@ -63,13 +63,13 @@ The following example depicts how to define a normal event on the Scheduler, wit
 
 Represents an appointment that is created for more than 24 hours, and usually displayed on the all-day row. Also, represents another type of appointment that is created for more than one day but less than 24 hours, and usually displayed appropriately on both the days.
 
-> For example, in week view if an appointment is created for two days say from November 25, 2020 – 11.00 PM to November 26, 2020 - 2.00 AM but less than 24 hours time interval, then the appointment split into two partitions and will be displayed on both the days.
+N> For example, in week view if an appointment is created for two days say from November 25, 2020 – 11.00 PM to November 26, 2020 - 2.00 AM but less than 24 hours time interval, then the appointment split into two partitions and will be displayed on both the days.
 
 ## All-day events
 
 It represents an appointment that is created for an entire day such as holiday events. It is usually displayed separately in an all-day row, a separate row for all-day appointments below the date header section. In Timeline views, the all-day appointments displays in the working space area, and no separate all-day row is present in that view.
 
-> To change normal appointment into all-day event, set `IsAllDay` field to true.
+N> To change normal appointment into all-day event, set `IsAllDay` field to true.
 
 ### Hide all-day row events
 
@@ -85,7 +85,7 @@ The CSS customization can be used to prevent the display of all-day row appointm
 
 It represents an appointment that is created for a certain time interval and occurring repeatedly on a daily, weekly, monthly or yearly basis at the same time interval based on the provided recurrence rule. Usually, the recurring events are indicated by a repeat marker added at the bottom-right position.
 
->Set `RecurrenceRule` property to create recurring events.
+N>Set `RecurrenceRule` property to create recurring events.
 
 ### Creating a recurring event
 
@@ -213,7 +213,7 @@ In this example, a recurring instance that displays on the date 30th January 202
 
 The Scheduler allows the user to edit the following recurrence events by setting true value to [AllowEditFollowingEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_AllowEditFollowingEvents) within the `ScheduleEventSettings` tag. Once the recurrence events are edited/ deleted as following events, then the following recurrence events will be considered as separate series, the changes will not reflect to parent series. In the following code example, if any of the recurrence event is edited or deleted with the following events option, then the edit or delete action is applied to further recurrence events.
 
->To edit/delete following recurrence events into the scheduler, set `AllowEditFollowingEvents` field to **true** in `ScheduleEventSettings`.
+N>To edit/delete following recurrence events into the scheduler, set `AllowEditFollowingEvents` field to **true** in `ScheduleEventSettings`.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -273,7 +273,7 @@ There are four repeat types available namely,
 
  The properties based on which the recurrence appointments are created with its respective time period are depicted in the following table. Also, the valid rule string can be referred from [iCalendar](https://datatracker.ietf.org/doc/html/rfc5545#section-3.3.10) specifications.
 
- > Refer [iCalendar](https://datatracker.ietf.org/doc/html/rfc5545#section-3.3.10) specifications for valid recurrence rule string.
+ N> Refer [iCalendar](https://datatracker.ietf.org/doc/html/rfc5545#section-3.3.10) specifications for valid recurrence rule string.
 
 | Property | Purpose | Example |
 |-------|---------| --------- |
@@ -286,7 +286,7 @@ There are four repeat types available namely,
 | BYMONTH | This property is used to store the index value of the selected Month while creating the yearly appointments. When the yearly appointment is created on June month, the index value of June month 6 will get stored in the BYMONTH field. The appointment is created on every 6th month of a year. | FREQ=YEARLY;BYMONTHDAY=16;BYMONTH=6;INTERVAL=1;COUNT=10|
 | BYSETPOS | This property is used to store the index value of the week. When the monthly appointment is created in second week of a month, the index value of the second week (2) is stored in BYSETPOS. | FREQ=MONTHLY;BYDAY=MO;BYSETPOS=2;COUNT=10|
 
-> The default recurrence related validation has been included for recurrence appointments similar to the one available in Outlook. The validation usually occurs during the recurrence appointment creation, editing, drag and drop or resizing of the recurrence appointments and also if any single occurrence changes.
+N> The default recurrence related validation has been included for recurrence appointments similar to the one available in Outlook. The validation usually occurs during the recurrence appointment creation, editing, drag and drop or resizing of the recurrence appointments and also if any single occurrence changes.
 
 ### Daily Frequency
 
@@ -344,7 +344,7 @@ The built-in validation support has been added by default for recurring appointm
 
 The Scheduler dataSource usually holds the event instances, where each of the instance includes a collection of appropriate [fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleField.html). It is mandatory to map these fields with the equivalent fields of database, when remote data is bound to it. When the local data is bound, then the field names defined within the instances needs to be mapped with the scheduler event fields correctly.
 
-> To create an event on Scheduler, it is enough to define the `StartTime` and `EndTime` fields. In case, if remote data is bound to Scheduler, then `Id` field becomes mandatory to process the CRUD actions on appropriate events.
+N> To create an event on Scheduler, it is enough to define the `StartTime` and `EndTime` fields. In case, if remote data is bound to Scheduler, then `Id` field becomes mandatory to process the CRUD actions on appropriate events.
 
 ### Built-in fields
 
@@ -419,7 +419,7 @@ When the fields of event instances has the default mapping name, it is not manda
 }
 ```
 
-> The mapper field `Id` is of string type and has no additional validation options, whereas all other fields has additional options.
+N> The mapper field `Id` is of string type and has no additional validation options, whereas all other fields has additional options.
 
 ### Event field settings
 
@@ -574,7 +574,7 @@ By default, the scheduler will render the overlapping events based on the start 
 
 Appointments can be rescheduled to any time by dragging and dropping them onto the desired location. To work with drag and drop functionality make sure that [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowDragAndDrop) is set to **true** on Scheduler. In mobile mode, you can drag and drop the events by tap holding an event and dropping them on to the desired location.
 
-> By default, drag and drop action is applicable on all Scheduler views, except Agenda and Month-Agenda view.
+N> By default, drag and drop action is applicable on all Scheduler views, except Agenda and Month-Agenda view.
 
 To get start quickly about drag options available in our Scheduler, you can check on this video:
 
@@ -587,7 +587,7 @@ Multiple appointments can be dragged and dropped by enabling the [AllowMultiDrag
 
 Multiple events can also be dragged from one resource to another resource. In this case, if all the selected events are in the different resources, then all the events should be moved to the single resource that is related to the target event.
 
->Note: Multiple events drag and drop is not supported on mobile devices.
+N> Multiple events drag and drop is not supported on mobile devices.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1366,7 +1366,7 @@ The following code example customizes the appointment.
 }
 ```
 
-> All the built-in fields that are mapped to the appropriate field properties within the `ScheduleEventSettings`, as well as custom mapped fields from the Scheduler dataSource can be accessed within the template code.
+N> All the built-in fields that are mapped to the appropriate field properties within the `ScheduleEventSettings`, as well as custom mapped fields from the Scheduler dataSource can be accessed within the template code.
 
 ### Using EventRendered event
 
@@ -1566,7 +1566,7 @@ Also, the customization of events can be achieved using [CssClass](https://help.
 </style>
 ```
 
-> The events can't be customized using the styles that are `height`, `width`, `top`, `left`, `right`, and `display`.
+N> The events can't be customized using the styles that are `height`, `width`, `top`, `left`, `right`, and `display`.
 
 ## Block Date and Time
 
@@ -1733,7 +1733,7 @@ There are scenarios where you need to restrict the CRUD action on specific appoi
 }
 ```
 
-> By default, the event editor is prevented to open on the read-only events when `IsReadonly` field is set to **true**.
+N> By default, the event editor is prevented to open on the read-only events when `IsReadonly` field is set to **true**.
 
 ## Restricting event creation on specific time slots
 You can restrict the users to create and update more than one appointment on specific time slots. Also, you can disable the CRUD action on those time slots if it is already occupied, which can be achieved using Scheduler’s public method [IsSlotAvailableAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_IsSlotAvailableAsync__0_).
@@ -1876,7 +1876,7 @@ More indicator can be shown if more than one appointment is available in a same 
 }
 ```
 
-> The `EnableIndicator` property will work, only when the `EnableMaxHeight` property value is set to true.
+N> The `EnableIndicator` property will work, only when the `EnableMaxHeight` property value is set to true.
 
 ## Display tooltip for appointments
 
@@ -1974,7 +1974,7 @@ After enabling the default tooltip, it is possible to customize the display of n
 }
 ```
 
-> All the field names that are mapped from the Scheduler dataSource to the appropriate field properties such as subject, description, location, startTime and endTime within the `ScheduleEventSettings` can be accessed within the template.
+N> All the field names that are mapped from the Scheduler dataSource to the appropriate field properties such as subject, description, location, startTime and endTime within the `ScheduleEventSettings` can be accessed within the template.
 
 ## Appointment filtering
 
@@ -2298,7 +2298,7 @@ The entire collection of appointments rendered on the Scheduler can be accessed 
 }
 ```
 
-> You can also get the specific range of appointments by passing the start and end time in the `GetEventsAsync` method. To get the block events, you can make use of the method `GetBlockEventsAsync`.
+N> You can also get the specific range of appointments by passing the start and end time in the `GetEventsAsync` method. To get the block events, you can make use of the method `GetBlockEventsAsync`.
 
 ## Refresh appointments
 
