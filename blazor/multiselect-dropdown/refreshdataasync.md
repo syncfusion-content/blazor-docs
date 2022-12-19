@@ -21,7 +21,7 @@ In the following example, the first render uses 5 data without using the [Query]
 
 ![Blazor MultiSelect with virtualization](./images/blazor-multiselect-refreshdata.gif)
 
->When utilizing the `RefreshDataAsync` method with the filter enabled, you must prevent the component's default actions before calling the URL link and the RefreshDataAsync function in the Filtering Event.
+N>When utilizing the `RefreshDataAsync` method with the filter enabled, you must prevent the component's default actions before calling the URL link and the RefreshDataAsync function in the Filtering Event.
 
 ### Web API adaptor:
 You must use a customized controller in the `WebApiadaptor` to use the `RefreshDataAsync` method.
@@ -70,7 +70,7 @@ Refreshes the popup list items. The method is useful if the popup list item chan
 
 #### Declaration
 
-> public Task RefreshDataAsync()
+N> public Task RefreshDataAsync()
 
 [Click to refer a code for RefreshDataAsync](https://blazor.syncfusion.com/documentation/multiselect-dropdown/refreshdataasync)
 
