@@ -421,9 +421,9 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 ```
 
-## RowDropped
+## RowDropping
 
-[RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_RowDropped) event triggers when row elements are dropped on the Gantt Chart.
+[RowDropping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_RowDropping) event triggers when the row elements are being dropped on to the target element in Gantt Chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -434,7 +434,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
                      Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEditSettings AllowTaskbarEditing="true"></GanttEditSettings>
-    <GanttEvents RowDropped="RowDropped" TValue="TaskData"></GanttEvents>
+    <GanttEvents RowDropping="RowDropping" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code{
@@ -447,7 +447,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         this.TaskCollection = GetTaskCollection();
     }
 
-    public void RowDropped(RowDroppedEventArgs<TaskData> args)
+    public void RowDropping(RowDroppingEventArgs<TaskData> args)
     {
         // Here, you can customize your code.
     }
@@ -481,9 +481,9 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 }
 ```
 
-## RowDropping
+## RowDropped
 
-[RowDropping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_RowDropping) event triggers when the row elements are being dropped on to the target element in Gantt Chart.
+[RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_RowDropped) event triggers when row elements are dropped on the Gantt Chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -494,7 +494,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
                      Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEditSettings AllowTaskbarEditing="true"></GanttEditSettings>
-    <GanttEvents RowDropping="RowDropping" TValue="TaskData"></GanttEvents>
+    <GanttEvents RowDropped="RowDropped" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code{
@@ -507,7 +507,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         this.TaskCollection = GetTaskCollection();
     }
 
-    public void RowDropping(RowDroppingEventArgs<TaskData> args)
+    public void RowDropped(RowDroppedEventArgs<TaskData> args)
     {
         // Here, you can customize your code.
     }
