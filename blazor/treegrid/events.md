@@ -2340,82 +2340,52 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Sy
 
 ## BeforeCopyPaste
 
-[BeforeCopyPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCopyPaste) event will trigger before a cell is copied or pasted.
+[BeforeCopyPaste]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~BeforeCopyPaste.html) event will trigger before a cell is copied or pasted.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
-@using System.Dynamic
 
-<SfTreeGrid DataSource="@TreeData" @ref="TreeGrid" AllowPaging="true" AllowTextWrap="true" EnableAutoFill="true" AllowSelection="true" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1"  Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
-    <TreeGridPageSettings PageSize="2"></TreeGridPageSettings>
-    <TreeGridEvents BeforeCopyPaste="CopyPaste" TValue="ExpandoObject"></TreeGridEvents>
-    <TreeGridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple" Mode="Syncfusion.Blazor.Grids.SelectionMode.Cell" CellSelectionMode="Syncfusion.Blazor.Grids.CellSelectionMode.Box"></TreeGridSelectionSettings>
-    <TreeGridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="Syncfusion.Blazor.TreeGrid.EditMode.Batch"></TreeGridEditSettings>
+<SfTreeGrid @ref="TreeGrid" DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
+    <TreeGridEvents BeforeCopyPaste="CopyPasteHandler" TValue="BusinessObject"></TreeGridEvents>
     <TreeGridColumns>
-        <TreeGridColumn Field="TaskID" HeaderText="Task ID" Width="80" IsPrimaryKey="true"></TreeGridColumn>
-        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="100"></TreeGridColumn>
-        <TreeGridColumn Field="StartDate" HeaderText="StartDate" Format="d" Width="100"></TreeGridColumn>
-        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="80"></TreeGridColumn>
-        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="80"></TreeGridColumn>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="StartDate" HeaderText=" Start Date" Format="yMd" Type="Syncfusion.Blazor.Grids.ColumnType.Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></TreeGridColumn>
         <TreeGridColumn Field="Priority" HeaderText="Priority" Width="80"></TreeGridColumn>
     </TreeGridColumns>
 </SfTreeGrid>
+
+
 @code {
-    SfTreeGrid<ExpandoObject> TreeGrid;
-    public List<ExpandoObject> TreeData { get; set; }
+    public class BusinessObject
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public int Duration { get; set; }
+        public int Progress { get; set; }
+        public string Priority { get; set; }
+        public int? ParentId { get; set; }
+        public Boolean Approved { get; set; }
+    }
+    SfTreeGrid<BusinessObject> TreeGrid;
+
+    public List<BusinessObject> TreeData = new List<BusinessObject>();
+
     protected override void OnInitialized()
     {
-        this.TreeData = GetData().ToList();
+        TreeData.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", Duration = 50000, Progress = 70, ParentId = null, Priority = "High", Approved = true });
+        TreeData.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", Duration = 400000, Progress = 80, ParentId = 1, Priority = "Normal", Approved = false });
+        TreeData.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", Duration = 500000, Progress = 65, ParentId = 1, Priority = "Critical", Approved = true });
+        TreeData.Add(new BusinessObject() { TaskId = 4, TaskName = "Parent Task 2", Duration = 609890, Progress = 77, ParentId = null, Priority = "Low", Approved = false });
+        TreeData.Add(new BusinessObject() { TaskId = 5, TaskName = "Child Task 5", Duration = 9778686, Progress = 25, ParentId = 4, Priority = "Normal", Approved = true });
+        TreeData.Add(new BusinessObject() { TaskId = 6, TaskName = "Child Task 6", Duration = 954359, Progress = 7, ParentId = 5, Priority = "Normal", Approved = false });
+        TreeData.Add(new BusinessObject() { TaskId = 7, TaskName = "Parent Task 3", Duration = 478708, Progress = 45, ParentId = null, Priority = "High", Approved = true });
+        TreeData.Add(new BusinessObject() { TaskId = 8, TaskName = "Child Task 7", Duration = 36786979, Progress = 38, ParentId = 7, Priority = "Critical", Approved = false });
+        TreeData.Add(new BusinessObject() { TaskId = 9, TaskName = "Child Task 8", Duration = 778907897, Progress = 70, ParentId = 7, Priority = "Low", Approved = true });
     }
-
-    public static List<ExpandoObject> Data = new List<ExpandoObject>();
-    public static int ParentRecordID { get; set; }
-    public static int ChildRecordID { get; set; }
-    public static List<ExpandoObject> GetData()
-    {
-        Data.Clear();
-        ParentRecordID = 0;
-        ChildRecordID = 0;
-        for (var i = 1; i <= 60; i++)
-        {
-            Random ran = new Random();
-            DateTime start = new DateTime(1992, 06, 07);
-            int range = (DateTime.Today - start).Days;
-            DateTime startingDate = start.AddDays(ran.Next(range));
-            dynamic ParentRecord = new ExpandoObject();
-            ParentRecord.TaskID = ++ParentRecordID;
-            ParentRecord.TaskName = "Parent Task " + i;
-            ParentRecord.StartDate = startingDate;
-            ParentRecord.Progress = ParentRecordID % 2 == 0 ? "In Progress" : "Open";
-            ParentRecord.Priority = ParentRecordID % 2 == 0 ? "High" : "Low";
-            ParentRecord.Duration = ParentRecordID % 2 == 0 ? 32 : 76;
-            ParentRecord.ParentID = null;
-            Data.Add(ParentRecord);
-            AddChildRecords(ParentRecordID);
-        }
-        return Data;
-    }
-    public static void AddChildRecords(int ParentId)
-    {
-        for (var i = 1; i < 4; i++)
-        {
-            Random ran = new Random();
-            DateTime start = new DateTime(1992, 06, 07);
-            int range = (DateTime.Today - start).Days;
-            DateTime startingDate = start.AddDays(ran.Next(range));
-            dynamic ChildRecord = new ExpandoObject();
-            ChildRecord.TaskID = ++ParentRecordID;
-            ChildRecord.TaskName = "Child Task " + ++ChildRecordID;
-            ChildRecord.StartDate = startingDate;
-            ChildRecord.Progress = ParentRecordID % 3 == 0 ? "Validated" : "Closed";
-            ChildRecord.Priority = ParentRecordID % 3 == 0 ? "Low" : "Critical";
-            ChildRecord.Duration = ParentRecordID % 3 == 0 ? 64 : 98;
-            ChildRecord.ParentID = ParentId;
-            Data.Add(ChildRecord);
-        }
-    }
-
-    public async Task CopyPaste(Syncfusion.Blazor.TreeGrid.BeforeCopyPasteEventArgs args)
+    
+    public async Task CopyPasteHandler(Syncfusion.Blazor.TreeGrid.BeforeCopyPasteEventArgs args)
     {
         if (args.Action == "Copy")
         {
@@ -2431,84 +2401,110 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Sy
 
 ## BeforeCellPaste
 
-[BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCellPaste) event will trigger before a cell is pasted.
+[BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~BeforeCellPaste.html) event will trigger before a cell is pasted.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
-@using System.Dynamic
 
-<SfTreeGrid DataSource="@TreeData" @ref="TreeGrid" AllowPaging="true" AllowTextWrap="true" EnableAutoFill="true" AllowSelection="true" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1"  Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
-    <TreeGridPageSettings PageSize="2"></TreeGridPageSettings>
-    <TreeGridEvents BeforeCellPaste="CellPaste" TValue="ExpandoObject"></TreeGridEvents>
-    <TreeGridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple" Mode="Syncfusion.Blazor.Grids.SelectionMode.Cell" CellSelectionMode="Syncfusion.Blazor.Grids.CellSelectionMode.Box"></TreeGridSelectionSettings>
-    <TreeGridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="Syncfusion.Blazor.TreeGrid.EditMode.Batch"></TreeGridEditSettings>
+<SfTreeGrid @ref="TreeGrid" DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
+    <TreeGridEvents BeforeCellPaste="CellPasteHandler" TValue="BusinessObject"></TreeGridEvents>
     <TreeGridColumns>
-        <TreeGridColumn Field="TaskID" HeaderText="Task ID" Width="80" IsPrimaryKey="true"></TreeGridColumn>
-        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="100"></TreeGridColumn>
-        <TreeGridColumn Field="StartDate" HeaderText="StartDate" Format="d" Width="100"></TreeGridColumn>
-        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="80"></TreeGridColumn>
-        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="80"></TreeGridColumn>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="StartDate" HeaderText=" Start Date" Format="yMd" Type="Syncfusion.Blazor.Grids.ColumnType.Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></TreeGridColumn>
         <TreeGridColumn Field="Priority" HeaderText="Priority" Width="80"></TreeGridColumn>
     </TreeGridColumns>
 </SfTreeGrid>
+
+
 @code {
-    SfTreeGrid<ExpandoObject> TreeGrid;
-    public List<ExpandoObject> TreeData { get; set; }
+    public class BusinessObject
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public int Duration { get; set; }
+        public int Progress { get; set; }
+        public string Priority { get; set; }
+        public int? ParentId { get; set; }
+        public Boolean Approved { get; set; }
+    }
+    SfTreeGrid<BusinessObject> TreeGrid;
+
+    public List<BusinessObject> TreeData = new List<BusinessObject>();
+
     protected override void OnInitialized()
     {
-        this.TreeData = GetData().ToList();
+        TreeData.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", Duration = 50000, Progress = 70, ParentId = null, Priority = "High", Approved = true });
+        TreeData.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", Duration = 400000, Progress = 80, ParentId = 1, Priority = "Normal", Approved = false });
+        TreeData.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", Duration = 500000, Progress = 65, ParentId = 1, Priority = "Critical", Approved = true });
+        TreeData.Add(new BusinessObject() { TaskId = 4, TaskName = "Parent Task 2", Duration = 609890, Progress = 77, ParentId = null, Priority = "Low", Approved = false });
+        TreeData.Add(new BusinessObject() { TaskId = 5, TaskName = "Child Task 5", Duration = 9778686, Progress = 25, ParentId = 4, Priority = "Normal", Approved = true });
+        TreeData.Add(new BusinessObject() { TaskId = 6, TaskName = "Child Task 6", Duration = 954359, Progress = 7, ParentId = 5, Priority = "Normal", Approved = false });
+        TreeData.Add(new BusinessObject() { TaskId = 7, TaskName = "Parent Task 3", Duration = 478708, Progress = 45, ParentId = null, Priority = "High", Approved = true });
+        TreeData.Add(new BusinessObject() { TaskId = 8, TaskName = "Child Task 7", Duration = 36786979, Progress = 38, ParentId = 7, Priority = "Critical", Approved = false });
+        TreeData.Add(new BusinessObject() { TaskId = 9, TaskName = "Child Task 8", Duration = 778907897, Progress = 70, ParentId = 7, Priority = "Low", Approved = true });
     }
-
-    public static List<ExpandoObject> Data = new List<ExpandoObject>();
-    public static int ParentRecordID { get; set; }
-    public static int ChildRecordID { get; set; }
-    public static List<ExpandoObject> GetData()
-    {
-        Data.Clear();
-        ParentRecordID = 0;
-        ChildRecordID = 0;
-        for (var i = 1; i <= 60; i++)
-        {
-            Random ran = new Random();
-            DateTime start = new DateTime(1992, 06, 07);
-            int range = (DateTime.Today - start).Days;
-            DateTime startingDate = start.AddDays(ran.Next(range));
-            dynamic ParentRecord = new ExpandoObject();
-            ParentRecord.TaskID = ++ParentRecordID;
-            ParentRecord.TaskName = "Parent Task " + i;
-            ParentRecord.StartDate = startingDate;
-            ParentRecord.Progress = ParentRecordID % 2 == 0 ? "In Progress" : "Open";
-            ParentRecord.Priority = ParentRecordID % 2 == 0 ? "High" : "Low";
-            ParentRecord.Duration = ParentRecordID % 2 == 0 ? 32 : 76;
-            ParentRecord.ParentID = null;
-            Data.Add(ParentRecord);
-            AddChildRecords(ParentRecordID);
-        }
-        return Data;
-    }
-    public static void AddChildRecords(int ParentId)
-    {
-        for (var i = 1; i < 4; i++)
-        {
-            Random ran = new Random();
-            DateTime start = new DateTime(1992, 06, 07);
-            int range = (DateTime.Today - start).Days;
-            DateTime startingDate = start.AddDays(ran.Next(range));
-            dynamic ChildRecord = new ExpandoObject();
-            ChildRecord.TaskID = ++ParentRecordID;
-            ChildRecord.TaskName = "Child Task " + ++ChildRecordID;
-            ChildRecord.StartDate = startingDate;
-            ChildRecord.Progress = ParentRecordID % 3 == 0 ? "Validated" : "Closed";
-            ChildRecord.Priority = ParentRecordID % 3 == 0 ? "Low" : "Critical";
-            ChildRecord.Duration = ParentRecordID % 3 == 0 ? 64 : 98;
-            ChildRecord.ParentID = ParentId;
-            Data.Add(ChildRecord);
-        }
-    }
-
-    public async Task CellPaste(Syncfusion.Blazor.TreeGrid.BeforeCellPasteEventArgs<ExpandoObject> args)
+    
+    public async Task CellPasteHandler(Syncfusion.Blazor.TreeGrid.BeforeCellPasteEventArgs<BusinessObject> args)
     {
         // Here you can customize your code.
+    }
+}
+```
+
+## RowDropping
+
+[RowDropping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~RowDropping.html) event triggers when the row elements are being dropped on to the target element.
+
+> The dropping action can be cancelled by setting the `Cancel` argument of the `RowDropping` event to true.
+
+```cshtml
+@using Syncfusion.Blazor.Grids;
+@using Syncfusion.Blazor.TreeGrid;
+
+<SfTreeGrid @ref="TreeGrid" DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
+    <TreeGridEvents RowDropping="RowDroppingHandler" TValue="BusinessObject"></TreeGridEvents>
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="StartDate" HeaderText=" Start Date" Format="yMd" Type="Syncfusion.Blazor.Grids.ColumnType.Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></TreeGridColumn>
+        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="80"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+@code {
+    public class BusinessObject
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public int Duration { get; set; }
+        public int Progress { get; set; }
+        public string Priority { get; set; }
+        public int? ParentId { get; set; }
+        public Boolean Approved { get; set; }
+    }
+    SfTreeGrid<BusinessObject> TreeGrid;
+
+    public List<BusinessObject> TreeData = new List<BusinessObject>();
+
+    protected override void OnInitialized()
+    {
+        TreeData.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", Duration = 50000, Progress = 70, ParentId = null, Priority = "High", Approved = true });
+        TreeData.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", Duration = 400000, Progress = 80, ParentId = 1, Priority = "Normal", Approved = false });
+        TreeData.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", Duration = 500000, Progress = 65, ParentId = 1, Priority = "Critical", Approved = true });
+        TreeData.Add(new BusinessObject() { TaskId = 4, TaskName = "Parent Task 2", Duration = 609890, Progress = 77, ParentId = null, Priority = "Low", Approved = false });
+        TreeData.Add(new BusinessObject() { TaskId = 5, TaskName = "Child Task 5", Duration = 9778686, Progress = 25, ParentId = 4, Priority = "Normal", Approved = true });
+        TreeData.Add(new BusinessObject() { TaskId = 6, TaskName = "Child Task 6", Duration = 954359, Progress = 7, ParentId = 5, Priority = "Normal", Approved = false });
+        TreeData.Add(new BusinessObject() { TaskId = 7, TaskName = "Parent Task 3", Duration = 478708, Progress = 45, ParentId = null, Priority = "High", Approved = true });
+        TreeData.Add(new BusinessObject() { TaskId = 8, TaskName = "Child Task 7", Duration = 36786979, Progress = 38, ParentId = 7, Priority = "Critical", Approved = false });
+        TreeData.Add(new BusinessObject() { TaskId = 9, TaskName = "Child Task 8", Duration = 778907897, Progress = 70, ParentId = 7, Priority = "Low", Approved = true });
+    }
+    
+    public void RowDroppingHandler(RowDroppingEventArgs<BusinessObject> args)
+    {
+        // Here, you can customize your code.
     }
 }
 ```
