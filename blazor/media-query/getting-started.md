@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Media Query Component | Syncfusion
+title: Getting started with Blazor Media Query Component | Syncfusion
 description: Checkout and learn about getting started with Blazor Media Query component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Media Query
@@ -23,11 +23,11 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
 
-## Install Syncfusion Blazor Layouts NuGet in the App
+## Install Syncfusion Blazor Core NuGet in the App
 
 Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). In order to use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages). 
 
-To add Blazor Media Query component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Layouts](https://www.nuget.org/packages/Syncfusion.Blazor.Layouts) and then install it.
+To add Blazor Media Query component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor.Core) and then install it.
 
 ## Register Syncfusion Blazor Service
 
@@ -42,6 +42,8 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 {% endtabs %}
 
 Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` to load the scripts externally in the [next steps](#add-script-reference).
+
+> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to `true`. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to true, and this property is obsolete.
 
 ### Blazor Server App
 
@@ -186,17 +188,6 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
 ## Add Syncfusion Blazor Media Query component
-
-* Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Layouts` namespace.
-
-{% tabs %}
-{% highlight razor tabtitle="~/Imports.razor" %}
-
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Layouts
-
-{% endhighlight %}
-{% endtabs %}
 
 * Now, add the Syncfusion Blazor Media Query component in razor file. Here, the Media Query component is added in the **~/Pages/Index.razor** page under the `~/Pages` folder.
 
@@ -421,27 +412,17 @@ else
         width: auto;
         height: 10%;
     }
-
-    .fluent-dark .mediaquery-demo,
-    .fluent-dark .mediaquery-demo .header .search-box,
-    .bootstrap-dark .mediaquery-demo,
-    .bootstrap-dark .mediaquery-demo .header .search-box,
-    .bootstrap5-dark .mediaquery-demo,
-    .bootstrap5-dark .mediaquery-demo .header .search-box,
-    .tailwind-dark .mediaquery-demo,
-    .tailwind-dark .mediaquery-demo .header .search-box,
-    .material-dark .mediaquery-demo,
-    .material-dark .mediaquery-demo .header .search-box,
-    .fabric-dark .mediaquery-demo,
-    .fabric-dark .mediaquery-demo .header .search-box {
-        background-color: inherit;
-        border: 1px solid #a7a7a7;
-    }
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>ctrl</kbd>+<kbd>F5</kbd> or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion Blazor Media Query component will be rendered in the default web browser.
+* Press <kbd>ctrl</kbd>+<kbd>F5</kbd> or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. The Syncfusion Blazor Media Query component will then render the layout based on browser view size, as shown in the large device layout below.
 
 ![Blazor Media Query Component](images/blazor-media-query.png)
+
+## See also
+
+* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://github.com/syncfusion-content/blazor-docs/getting-started/blazor-webassembly-dotnet-cli)
+* [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](https://github.com/syncfusion-content/blazor-docs/getting-started/blazor-server-side-visual-studio)
+* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://github.com/syncfusion-content/blazor-docs/getting-started/blazor-server-side-dotnet-cli)

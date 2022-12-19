@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor Mention Component | Syncfusion
+title: Getting started with Blazor Mention Component | Syncfusion
 description: Checkout and learn about getting started with Blazor Mention component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Mention
@@ -279,20 +279,9 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
         width: 600px;
     }
 
-    #mention-controls {
-        margin: 0 auto;
-        width: 600px;
-    }
-
     div#commentsMention[placeholder]:empty:before {
         content: attr(placeholder);
         color: #555;
-    }
-
-    @@media screen and (max-width: 1010px) {
-        #mention-controls, #mention-controls table {
-            width: 100%;
-        }
     }
 </style>
 @code {
@@ -315,3 +304,9 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 * Press <kbd>ctrl</kbd>+<kbd>F5</kbd> or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion Blazor Mention component will be rendered in the default web browser.
 
 ![Blazor Mention Component](images/blazor-mention.png)
+
+## See also
+
+* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://github.com/syncfusion-content/blazor-docs/getting-started/blazor-webassembly-dotnet-cli)
+* [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](https://github.com/syncfusion-content/blazor-docs/getting-started/blazor-server-side-visual-studio)
+* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://github.com/syncfusion-content/blazor-docs/getting-started/blazor-server-side-dotnet-cli)
