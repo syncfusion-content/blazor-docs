@@ -2508,7 +2508,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Sy
 
 ## RowDropped
 
-[RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~RowDropped.html) event triggers after the row elements are drag and dropped on the tree grid.
+[RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~RowDropped.html) event triggers after the row elements are drag and dropped on the tree grid. 
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
