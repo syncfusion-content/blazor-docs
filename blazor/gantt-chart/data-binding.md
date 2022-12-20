@@ -559,6 +559,294 @@ In the below example, `TaskData` implements `INotifyPropertyChanged` and it rais
 ```
 ![Property changed in Blazor Gantt Chart](images/blazor-gantt-chart-observable-property-changed.PNG)
 
+### Load Child on Demand
+
+To render child records on demand, assign a remote service URL in the instance of **SfDataManager** to the **Url** property. To interact with the remote data source,  provide the endpoint **URL** and also define the [GanttTaskFields.HasChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_HasChildMapping) property of Gantt Chart.
+
+The `GanttTaskFields.HasChildMapping` property maps the field name in the data source, which denotes whether the current record holds any child records. This is useful internally to show expand icon while binding child data on demand.
+
+When [LoadChildOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_LoadChildOnDemand) is disabled, all the root nodes are rendered in a collapsed state at initial load. On expanding the root node, the child nodes will be loaded from the remote server.
+
+When both [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableVirtualization) and `LoadChildOnDemand` is enabled, only the current viewport root nodes are rendered in a collapsed state.
+
+When a root node is expanded, its child nodes are rendered and maintained in a collection locally, such that on consecutive expand/collapse actions on the root node, the child nodes are loaded locally instead of from the remote server.
+
+When the `LoadChildOnDemand` is enabled, parent records are rendered in an expanded state.
+
+{% tabs %}
+
+{% highlight razor %}
+
+@using WebAPI.Data
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Gantt
+
+<SfGantt TValue="TaskData" Height="450px" Width="1000px" LoadChildOnDemand="false">
+   <SfDataManager Url="api/Default" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
+   <GanttTaskFields Id="ID" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+        Duration="Duration" Dependency="Predecessor" ParentID="ParentId" HasChildMapping="isParent">
+   </GanttTaskFields>
+</SfGantt>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+namespace WebAPI.Data
+{
+    public class TaskData
+    {
+        public static List<TaskData> tree = new List<TaskData>();
+        public int ID { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+        public string Predecessor { get; set; }
+        public bool? isParent { get; set; }
+        public TaskData() { }
+        public static List<TaskData> GetTree()
+        {
+            if (tree.Count == 0)
+            {
+                Random rand = new Random();
+                var x = 0;
+                int duration = 0;
+                DateTime startDate = new DateTime(2000, 1, 3, 08, 00, 00);
+                for (var i = 1; i <= 50; i++)
+                {
+                    startDate = startDate.AddDays(i == 1 ? 0 : 7);
+                    DateTime childStartDate = startDate;
+                    TaskData Parent = new TaskData()
+                    {
+                        ID = ++x,
+                        TaskName = "Task " + x,
+                        StartDate = startDate,
+                        EndDate = startDate.AddDays(26),
+                        Duration = "20",
+                        Progress = rand.Next(100),
+                        Predecessor = null,
+                        isParent = true,
+                        ParentId = null
+                    };
+                    tree.Add(Parent);
+                    for (var j = 1; j <= 4; j++)
+                    {
+                        childStartDate = childStartDate.AddDays(j == 1 ? 0 : duration + 2);
+                        duration = 5;
+                        tree.Add(new TaskData()
+                        {
+                            ID = ++x,
+                            TaskName = "Task " + x,
+                            StartDate = childStartDate,
+                            EndDate = childStartDate.AddDays(5),
+                            Duration = duration.ToString(),
+                            Progress = rand.Next(100),
+                            ParentId = Parent.ID,
+                            Predecessor = j > 1 ? (x - 1) + "FS" : "",
+                            isParent = false
+                        });
+                    }
+                }
+            }
+            return tree;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
+using WebAPI.Data;
+using Syncfusion.Blazor.Data;
+using System.Collections;
+
+namespace WebAPI.Controller
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class DefaultController : ControllerBase
+    {
+
+        public static List<TaskData> DataList = new List<TaskData>();
+        private static DataRequest req = null;
+        [HttpGet]
+        public async Task<object> Get(int? code)
+        {
+            DataList.Clear();
+            IQueryCollection queryString = Request.Query;
+            req = QueryGenerator(queryString);
+            if (TaskData.tree.Count == 0)
+                TaskData.GetTree();
+            if (req.filter != "" && !req.filter.Contains("null"))
+            {
+                int fltr = Int32.Parse(req.filter.Split("eq")[1]);
+                IQueryable<TaskData> data1 = TaskData.tree.Where(f => f.ParentId == fltr).AsQueryable();
+                if (queryString.Keys.Contains("$orderby"))
+                {
+                    string srt;
+                    srt = req.orderby.Replace("desc", "descending");
+                    data1 = SortingExtend.Sort(data1, srt);
+                }
+                return new { result = data1.ToList(), items = data1.ToList(), count = data1.Count() };
+            }
+            List<TaskData> data = TaskData.tree.ToList();
+            if (req.orderby != "")
+            {
+                string srt;
+                srt = req.orderby.Replace("desc", "descending");
+                IQueryable<TaskData> data1 = SortingExtend.Sort(data.AsQueryable(), srt);
+                data = data1.ToList();
+            }
+            if (queryString.Keys.Contains("$select"))
+            {
+                data = (from rec in TaskData.tree
+                        select new TaskData
+                        {
+                            ParentId = rec.ParentId
+                        }
+                        ).ToList();
+                return data;
+            }
+            data = data.Where(p => p.ParentId == null).ToList();
+            int count = data.Count;
+            if (req.inlinecount)
+            {
+                if (req.skip == null && req.take == null)
+                    DataList = data;
+                else
+                    DataList = data.Skip((int)req.skip).Take((int)req.take).ToList();
+                if (req.loadchild)
+                {
+                    var GroupData = TaskData.tree.ToList().GroupBy(rec => rec.ParentId)
+                                .Where(g => g.Key != null).ToDictionary(g => g.Key?.ToString(), g => g.ToList());
+                    foreach (var Record in DataList.ToList())
+                    {
+                        if (GroupData.ContainsKey(Record.ID.ToString()))
+                        {
+                            var ChildGroup = GroupData[Record.ID.ToString()];
+                            if (ChildGroup?.Count > 0)
+                                AppendChildren(ChildGroup, Record, GroupData);
+                        }
+                    }
+                }
+                if (req.skip == null && req.take == null)
+                    return new { result = DataList, items = DataList, count = count };
+                return new { result = DataList, items = DataList, count = count };
+            }
+            else
+            {
+                return TaskData.GetTree();
+            }
+        }
+        public DataRequest QueryGenerator(IQueryCollection queryString)
+        {
+            DataRequest req = new DataRequest();
+            StringValues Skip;
+            StringValues Take;
+            StringValues filter;
+            StringValues orderby;
+            StringValues loadchild;
+            req.loadchild = queryString.TryGetValue("loadchildondemand", out loadchild) ? Convert.ToBoolean(loadchild[0]) : false;
+            req.skip = queryString.TryGetValue("$skip", out Skip) ? Convert.ToInt32(Skip[0]) : (Nullable<int>)null;
+            req.take = (queryString.TryGetValue("$top", out Take)) ? Convert.ToInt32(Take[0]) : (Nullable<int>)null;
+            req.filter = queryString.TryGetValue("$filter", out filter) ? filter[0].ToString() : "";
+            req.inlinecount = queryString.Keys.Contains("$inlinecount") ? true : false;
+            req.orderby = queryString.TryGetValue("$orderby", out orderby) ? orderby[0].ToString() : "";
+            return req;
+        }
+
+        private void AppendChildren(List<TaskData> ChildRecords, TaskData ParentItem, Dictionary<string, List<TaskData>> GroupData)
+        {
+            var queryString = Request.Query;
+            string TaskId = ParentItem.ID.ToString();
+            if (queryString.Keys.Contains("$orderby"))
+            {
+                StringValues srt;
+                queryString.TryGetValue("$orderby", out srt);
+                srt = srt.ToString().Replace("desc", "descending");
+                List<TaskData> SortedChildRecords = SortingExtend.Sort(ChildRecords.AsQueryable(), srt).ToList();
+                var index = DataList.IndexOf(ParentItem);
+                foreach (var Child in SortedChildRecords)
+                {
+                    string ParentId = Child.ParentId.ToString();
+                    if (TaskId == ParentId)
+                    {
+                        if (DataList.IndexOf(Child) == -1)
+                            ((IList)DataList).Insert(++index, Child);
+                        if (GroupData.ContainsKey(Child.ID.ToString()))
+                        {
+                            var DeepChildRecords = GroupData[Child.ID.ToString()];
+                            if (DeepChildRecords?.Count > 0)
+                                AppendChildren(DeepChildRecords, Child, GroupData);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                var index = DataList.IndexOf(ParentItem);
+                foreach (var Child in ChildRecords)
+                {
+                    string ParentId = Child.ParentId.ToString();
+                    if (TaskId == ParentId)
+                    {
+                        if (DataList.IndexOf(Child) == -1)
+                            ((IList)DataList).Insert(++index, Child);
+                        if (GroupData.ContainsKey(Child.ID.ToString()))
+                        {
+                            var DeepChildRecords = GroupData[Child.ID.ToString()];
+                            if (DeepChildRecords?.Count > 0)
+                                AppendChildren(DeepChildRecords, Child, GroupData);
+                        }
+                    }
+                }
+            }
+        }
+        public class DataRequest
+        {
+            public Nullable<int> skip { get; set; }
+            public Nullable<int> take { get; set; }
+            public Boolean inlinecount { get; set; }
+            public string filter { get; set; }
+            public string orderby { get; set; }
+            public bool loadchild { get; set; }
+            public DateTime startDate { get; set; }
+            public DateTime endDate { get; set; }
+        }
+    }
+    public static class SortingExtend
+    {
+        public static IQueryable<T> Sort<T>(this IQueryable<T> source, string sortBy)
+        {
+            if (source == null)
+                throw new ArgumentNullException("source");
+            if (string.IsNullOrEmpty(sortBy))
+                throw new ArgumentNullException("sortBy");
+            source = (IQueryable<T>)source.OrderBy(sortBy);
+            return source;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+> * Filtering and searching are not supported in load on demand.
+> * Only Self-Referential type data is supported with remote data binding in Gantt Chart.
+
 ## Remote Data
 
 To bind remote data to Gantt component, assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the `DataSource` property or by using `SfDataManager` component. To interact with remote data source, provide the endpoint **Url**.

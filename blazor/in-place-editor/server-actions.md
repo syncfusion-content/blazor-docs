@@ -9,9 +9,9 @@ documentation: ug
 
 # Server Actions in Blazor In-place Editor Component
 
-By passing In-place Editor component value to the server, the `PrimaryKey` property value must require, otherwise action not performed for remote data.
+When sending the In-place Editor component value to a remote server, the `PrimaryKey` property value is required. Otherwise, the action will not be performed.
 
-If the `SaveURL` property value is empty, data passing will handled at local and also the `OnActionSuccess` event will trigger with `null` as argument value.
+If the `SaveURL` property value is empty, data changes will be handled locally. The `OnActionSuccess` event will trigger with `null` as the argument value.
 
 N> The following arguments are passed to the server when the submit actions are performed.
 

@@ -50,7 +50,7 @@ Periods is an array of objects that allows users to specify the range of [Period
         <StockChartAxisMajorTickLines Color="Transparent" Width="0"></StockChartAxisMajorTickLines>
     </StockChartPrimaryYAxis>
     <StockChartSeriesCollection>
-        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" Name="google"></StockChartSeries>
+        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="google"></StockChartSeries>
     </StockChartSeriesCollection>
 </SfStockChart>
 
@@ -63,12 +63,12 @@ Periods is an array of objects that allows users to specify the range of [Period
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -108,12 +108,12 @@ The [EnablePeriodSelector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>

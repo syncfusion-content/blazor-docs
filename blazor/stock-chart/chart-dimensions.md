@@ -29,12 +29,12 @@ Stock Chart can render to its container size. You can set the size via inline o
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set}
+        public Double Open { get; set}
+        public Double Low { get; set}
+        public Double Close { get; set}
+        public Double High { get; set}
+        public Double Volume { get; set}
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -77,12 +77,12 @@ The size can be set for stock chart directly through [Width](https://help.syncfu
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set}
+        public Double Open { get; set}
+        public Double Low { get; set}
+        public Double Close { get; set}
+        public Double High { get; set}
+        public Double Volume { get; set}
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -121,12 +121,12 @@ By setting value in percentage, stock chart gets its dimension with respect to 
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set}
+        public Double Open { get; set}
+        public Double Low { get; set}
+        public Double Close { get; set}
+        public Double High { get; set}
+        public Double Volume { get; set}
     }
 
     public List<ChartData> StockDetails = new List<ChartData>

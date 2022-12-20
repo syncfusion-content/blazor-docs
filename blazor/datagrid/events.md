@@ -2426,15 +2426,15 @@ N> All the events should be provided in a single **GridEvents** component.
 }
 ```
 
-## OnRowDragStart
+## RowDragStarting
 
-[OnRowDragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when row drag starts.
+`RowDragStarting` event triggers when the row drag starts.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid AllowRowDragAndDrop="true" DataSource="@Orders">
-    <GridEvents OnRowDragStart="RowDragStartHandler" TValue="Order"></GridEvents>
+    <GridEvents RowDragStarting="RowDragStartHandler" TValue="Order"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
@@ -2465,7 +2465,7 @@ N> All the events should be provided in a single **GridEvents** component.
         public double? Freight { get; set; }
     }
 
-    public void RowDragStartHandler(RowDragEventArgs<Order> args)
+    public void RowDragStartHandler(RowDragStartingEventArgs<Order> args)
     {
         // Here, you can customize your code.
     }
@@ -2513,7 +2513,55 @@ N> We are not going to limit datagrid with these events, we will be adding new e
         public double? Freight { get; set; }
     }
 
-    public void RowDropHandler(RowDragEventArgs<Order> args)
+    public void RowDropHandler(RowDroppedEventArgs<Order> args)
+    {
+        // Here, you can customize your code.
+    }
+}
+```
+
+## RowDropping
+
+`RowDropping` event triggers when the row elements are being dropped on to the target element.
+
+> The dropping action can be cancelled by setting the `Cancel` argument of the `RowDropping` event to true.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid AllowRowDragAndDrop="true" DataSource="@Orders">
+    <GridEvents RowDropping="RowDroppingHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+
+    public void RowDroppingHandler(RowDroppingEventArgs<Order> args)
     {
         // Here, you can customize your code.
     }
