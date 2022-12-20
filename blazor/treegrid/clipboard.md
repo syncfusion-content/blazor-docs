@@ -385,3 +385,15 @@ N> To perform paste functionality, it requires the selection `Mode` to be `Cell`
 ### Limitations of Paste Functionality
 
 * Since the string values are not parsed to number and date type, so when the copied string type cells are pasted to number type cells then it will be displayed as **NaN**. For date type cells, when the copied string format cells are pasted to date type cells then it will be displayed as an **empty cell**.
+
+## Clipboard events
+
+Clipboard events are events that are triggered when performing a copy or paste action on the tree grid. 
+
+### Available clipboard events
+
+* [BeforeCopyPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCopyPaste) : Triggered when the cell is copied or pasted.
+
+* [BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCellPaste) : Triggered when the cell is pasted.
+
+> To know more, you can refer the [BeforeCopyPaste](https://blazor.syncfusion.com/documentation/treegrid/events#beforecopypaste) and [BeforeCellPaste](https://blazor.syncfusion.com/documentation/treegrid/events#beforecellpaste) events.
