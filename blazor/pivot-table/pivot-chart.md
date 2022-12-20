@@ -862,6 +862,48 @@ In the following code sample, the pivot chart can be seen as a single chart with
 
 ![Multiple Axis Mode in Blazor PivotChart](images/blazor-pivotchart-multiple-axis-mode.png)
 
+## Show member based chart series
+
+When multiple axes are enabled, the user can create each chart series with a unique color palette based on members by setting the properties [ShowPointColorByMembers]() as `true` and [MultipleAxisMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_MultipleAxisMode) as `Stacked` in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class. As a result, user can easily identify each member enclosed chart series consistently across different measures in the entire chart area.
+
+Furthermore, with a single click over the legend item, you can show or hide specific chart series visibility based on members across different measures in the entire chart area.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView ID="PivotView" TValue="ProductDetails">
+<PivotViewDisplayOption View="View.Chart" Primary="Primary.Chart"></PivotViewDisplayOption>
+    <PivotViewDataSourceSettings DataSource="@pivotData" ExpandAll="false" EnableSorting=true>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+    </PivotViewDataSourceSettings>
+    <PivotChartSettings Title="Sales Analysis" ShowPointColorByMembers="true" EnableMultipleAxis="true" MultipleAxisMode="MultipleAxisMode.Stacked">
+        <PivotChartSeries Type=Syncfusion.Blazor.PivotView.ChartSeriesType.Column></PivotChartSeries>
+    </PivotChartSettings>
+</SfPivotView>
+
+@code{
+    public List<ProductDetails> pivotData { get; set; }
+    protected override void OnInitialized()
+    {
+        this.pivotData = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+}
+```
+
+![Blazor PivotChart with Show member based chart series](images/blazor-pivotChart-show-member-based-chart-series.png)
+
 ## Series Customization
 
 User can customize series of the pivot chart using [PivotChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_ChartSeries) in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class. The changes handled in the property will be reflected commonly in all chart series.
