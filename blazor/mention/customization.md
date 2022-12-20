@@ -35,7 +35,7 @@ The `SuffixText` property in the Mention component allows you to specify a strin
 
 You can customize the suggestion list's width and height using the `PopupHeight` and `PopupWidth` properties. These properties can accept values in pixels, percentage, or as a number. If a number value is specified, it will be treated as a pixel value.
 
-By default, the popup list width value is set to `auto`. Depending on the mentioned suggestion data list, the width value is automatically adjusted. The popup list height value is set to `250px`.
+By default, the popup list width value is set to `auto`. Depending on the mentioned suggestion data list, the width value is automatically adjusted. The popup list height value is set to `300px`.
 
 {% highlight razor %}
 

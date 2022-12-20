@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in Blazor Mention Component | Syncfusion
-description: Checkout and learn here all about filtering in Syncfusion Blazor Mention component and much more details.  
+title: Filtering data in Blazor Mention Component | Syncfusion
+description: Checkout and learn here all about filtering data in Syncfusion Blazor Mention component and much more details.  
 platform: Blazor
 control: Mention
 documentation: ug
@@ -13,7 +13,7 @@ The Mention component has built-in support to filter data items. The filter oper
 
 ## Limit the minimum filter character
 
-You can control the minimum length of user input to initiate the search action using the `MinLength` property. This can be useful if you have a very large list of data. The default value for MinLength is `0`, which means that the suggestion list will open as soon as the user inputs the mention character.
+You can control the minimum length of user input to initiate the search action using the `MinLength` property. This can be useful if you have a very large list of data. The default value for `MinLength` is `0`, which means that the suggestion list will open as soon as the user inputs the mention character.
 
 For example, if you set `MinLength` to `3`, the suggestion list will only open when the user has entered at least three characters.
 
