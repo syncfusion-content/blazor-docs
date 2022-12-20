@@ -13,7 +13,7 @@ Syncfusion provides the Blazor Template Studio, which allows you to create a Syn
 
 The steps below will assist you to create your **Syncfusion Blazor Application** through **Visual Studio 2019 or Visual Studio 2022**:
 
-> Before use the Syncfusion Blazor Project Template, check whether the Syncfusion Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, install the extension by follow the steps from the [download and installation](download-and-installation) help topic.
+N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusion Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, install the extension by follow the steps from the [download and installation](download-and-installation) help topic.
 
 1. Open Visual Studio 2022.
 
