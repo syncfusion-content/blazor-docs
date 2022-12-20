@@ -2452,7 +2452,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Sy
 
 ## RowDropping
 
-[RowDropping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~RowDropping.html) event triggers after the row elements was dropped on to the target element.
+[RowDropping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~RowDropping.html) event triggers when the row elements are being dropped on to the target element.
 
 > The dropping action can be cancelled by setting the `Cancel` argument of the `RowDropping` event to true.
 
@@ -2508,7 +2508,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Sy
 
 ## RowDropped
 
-[RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~RowDropped.html) event triggers when row elements are dropped on the tree grid.
+[RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~RowDropped.html) event triggers after the row elements are drag and dropped on the tree grid.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids;
