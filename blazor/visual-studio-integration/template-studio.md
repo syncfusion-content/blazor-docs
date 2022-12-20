@@ -39,9 +39,9 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
      ![ProjectWizard](images/TemplateStudio.png)
 
-     > .NET 6.0 is available from v19.4.0.38 and support from Visual Studio 2022.
+     N> .NET 6.0 is available from v19.4.0.38 and support from Visual Studio 2022.
 
-     > .NET 7.0 is available from v20.4.0.38 and support from Visual Studio 2022.
+     N> .NET 7.0 is available from v20.4.0.38 and support from Visual Studio 2022.
 
      **Project type section**
 
@@ -53,7 +53,7 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
      ![ProjectTypeWizard](images/ProjectTypeWizard.png)
 
-     > **Note:** The Progressive Web Application will be enabled if .NET 6.0 version or higher is installed.
+     N> **Note:** The Progressive Web Application will be enabled if .NET 6.0 version or higher is installed.
 
 5. Click either **Next** or the **Controls** tab. The Syncfusion Blazor components you can add to the application are listed.
 
@@ -67,13 +67,13 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
      **Option 2:** Click ‘x’ button for corresponding control in the control list from **Project Details**. 
 
-     > **Note:** Choose at least one control to enable the Features and Configuration tab.
+     N> **Note:** Choose at least one control to enable the Features and Configuration tab.
 
 6. Click either **Next** or the **Features** tab, and you will see the features listed for the selected controls. You can choose the required features.
 
 7. Click either **Next** or the **Configuration** tab, and the Configuration section will be loaded. You can choose the required (.NET 7.0 and .NET 6.0), themes, https configuration, localization option, authentication type (None, Individual Accounts, Microsoft Identity Platform, and Windows), and Blazor Web Assembly application types (ASP.NET Core hosted and Progressive Web Application).
 
-     > **Note:** ASP.NET Core hosted and Progressive Web Application options are only visible for the Blazor Web Assembly App application type.
+     N> **Note:** ASP.NET Core hosted and Progressive Web Application options are only visible for the Blazor Web Assembly App application type.
 
      ![Choose required Project Configuration](images/Configuration.png)
 
@@ -293,7 +293,7 @@ You can select a culture language in combo box at top right on the output page t
 
 ![Blazor Template output page](images/Localization.png)
 
-> **Note:** Above culture combo box will be enabled in sample output if localization option is selected in configuration window from Syncfusion Blazor Template Studio wizard.
+N> **Note:** Above culture combo box will be enabled in sample output if localization option is selected in configuration window from Syncfusion Blazor Template Studio wizard.
 
 ## Register and Login Application
 
