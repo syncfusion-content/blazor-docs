@@ -9,7 +9,7 @@ documentation: ug
 
 # Clipboard in Blazor Gantt Chart component
 
-The clipboard provides an option to copy selected rows or cells data into the clipboard.
+The clipboard provides an option to copy selected rows or cell data into the clipboard.
 
 The following list of keyboard shortcuts is supported in the Gantt Chart to copy selected rows or cells data into the clipboard.
 
@@ -134,15 +134,15 @@ To copy the data of the selected rows or cells into the clipboard with the help 
 
 ## Copy Hierarchy Modes
 
-Gantt Chart provides support for a set of copy modes with [CopyHierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.CopyHierarchyType.html) property. The below are the type of filter mode available in the Tree Grid.
+Gantt Chart provides support for a set of copy modes with the [CopyHierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.CopyHierarchyType.html) property. The following are the type of filter modes available in the Gantt Chart.
 
-* **Parent** : This is the default copy hierarchy mode in the Tree Grid. Clipboard value will have the selected records with its parent records, if the selected records does not have any parent record then the selected record will be in clipboard.
+* **Parent**: This is the default copy hierarchy mode in the Gantt Chart. The clipboard value will have the selected records with its parent records, if the selected records do not have any parent record, then the selected record will be in the clipboard.
 
-* **Child** : Clipboard value will have the selected records with its child record. If the selected records do not have any child record then the selected records will be in clipboard.
+* **Child**: Clipboard value will have the selected records with its child record. If the selected records do not have any child record, then the selected records will be in the clipboard.
 
-* **Both** : Clipboard value will have the selected records with its both parent and child record. If the selected records do not have any parent and child record then the selected records alone are copied to the clipboard.
+* **Both**: Clipboard value will have the selected records with both parent and child records. If the selected records do not have any parent and child records, then the selected records alone are copied to the clipboard.
 
-* **None** : Only the selected records will be in the clipboard.
+* **None**: Only the selected records will be in the clipboard.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -249,9 +249,9 @@ Gantt Chart provides support for a set of copy modes with [CopyHierarchyMode](ht
 
 ## Paste
 
-The content of a row/cells can be copied by selecting the rows/cells and pressing <kbd>Ctrl + C</kbd> shortcut key to copy data and paste it by pressing <kbd>Ctrl + V</kbd> shortcut key.
+The content of a row/cells can be copied by selecting the rows/cells and pressing the <kbd>Ctrl + C</kbd> shortcut key to copy data and paste it by pressing <kbd>Ctrl + V</kbd> shortcut key.
 
-In the below code example, selected rows are copied by using the [BeforeCopy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_BeforeCopy) event and pasted by using the [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AddRecordAsync__0_System_Nullable_System_Double__System_Nullable_Syncfusion_Blazor_Gantt_RowPosition__) method and by binding keyboard events `onkeyup`.
+In the following code example, selected rows are copied by using the [BeforeCopy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_BeforeCopy) event and pasted by using the [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AddRecordAsync__0_System_Nullable_System_Double__System_Nullable_Syncfusion_Blazor_Gantt_RowPosition__) method and by binding keyboard events `onkeyup`.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -373,7 +373,7 @@ In the below code example, selected rows are copied by using the [BeforeCopy](ht
 ```
 ![Copy and paste in Blazor Gantt Chart](./images/copypaste_row.gif)
 
-In the below code example, selected cells are copied and pasted by using the [UpdateRecordByIDAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_UpdateRecordByIDAsync__0_) method and by binding keyboard events `onkeydown` and `onkeyup`.
+In the following code example, selected cells are copied and pasted by using the [UpdateRecordByIDAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_UpdateRecordByIDAsync__0_) method and by binding keyboard events `onkeydown` and `onkeyup.`
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
