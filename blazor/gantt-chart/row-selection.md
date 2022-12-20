@@ -54,7 +54,7 @@ The row selection in the Gantt Chart component can be enabled or disabled using 
 }
 ```
 
-> `Row` selection is the default type of Gantt Chart selection mode.
+N> `Row` selection is the default type of Gantt Chart selection mode.
 
 ## Selecting a row on initial load
 

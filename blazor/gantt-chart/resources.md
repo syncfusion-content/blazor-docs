@@ -296,7 +296,7 @@ By using cell editing or dialog editing, you can add/remove the resource for par
 }
 ```
 
-> When the edit mode is set as `Auto`, on performing double-click action on Tree Grid side, the cells will be changed to editable mode, and on performing double-click action on chart side, the edit dialog will appear for editing the task details. By using this support, you can add/remove the resource for particular task using both cell and edit dialog.
+N> When the edit mode is set as `Auto`, on performing double-click action on Tree Grid side, the cells will be changed to editable mode, and on performing double-click action on chart side, the edit dialog will appear for editing the task details. By using this support, you can add/remove the resource for particular task using both cell and edit dialog.
 
 Editing resource with cell edit
 

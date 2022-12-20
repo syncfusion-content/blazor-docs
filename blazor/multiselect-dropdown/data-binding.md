@@ -122,7 +122,7 @@ Gets the array of data Object that matches the given array of values.
 
 #### Declaration
 
-> public Task<List<TItem>> GetDataByValueAsync(TValue dataValue)
+N> public Task<List<TItem>> GetDataByValueAsync(TValue dataValue)
 
 #### Parameters
 
@@ -140,7 +140,7 @@ Gets all the list items bound on this component.
 
 #### Declaration
 
-> public Task<IEnumerable<TItem>> GetItemsAsync()
+N> public Task<IEnumerable<TItem>> GetItemsAsync()
 
 {% highlight Razor %}
 

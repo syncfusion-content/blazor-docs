@@ -252,7 +252,7 @@ The following code sample shows how the different types of overflow property wor
 | Clip| Wrap | ![Blazor Diagram With Text Wrap in TextClipOverflow](../images/blazor-diagram-flowclip-wrap.png) |
 | Clip | WrapWithOverflow | ![Blazor Diagram Text Wrap with Overflow in TextClipOverflow](../images/blazor-diagram-flowclip-wrapwithoverflow.png) |
 
->**Note :** All the customization over the overflow is also applicable to connector’s annotation.
+N>**Note :** All the customization over the overflow is also applicable to connector’s annotation.
 
 ## Customize the appearance of an annotation
 
@@ -509,10 +509,10 @@ You can add any number of annotations to a node or connector. The following code
 
 ![Blazor Diagram with Multiple Annotations](../images/blazor-diagram-multiple-annotations.png)
 
->* Type of the annotation’s property of the node or connector was ObservableCollection.
->* Default value of the annotation will be null.
->* All the same customization can be applicable for the annotations.
->* Text Editing can be stated only the first annotation of the annotation collection when you double click the node or connector.
+N>* Type of the annotation’s property of the node or connector was ObservableCollection.
+<br/>* Default value of the annotation will be null.
+<br/>* All the same customization can be applicable for the annotations.
+<br/>* Text Editing can be stated only the first annotation of the annotation collection when you double click the node or connector.
 
 ## How to update annotation constraints
 
@@ -526,7 +526,7 @@ AnnotationConstraints may have multiple behaviors as follows:
 | None | Disables all behaviors of Annotation. |
 |InheritReadOnly |Enables or disables to inherit the ReadOnly option from the parent object.|
 
-> The default value is [InheritReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_InheritReadOnly) for constraints property of the annotation.
+N> The default value is [InheritReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_InheritReadOnly) for constraints property of the annotation.
 
 Refer to [Constraints](https://blazor.syncfusion.com/documentation/diagram/constraints) to learn about how to enable or disable the annotation constraints.
 

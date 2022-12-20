@@ -116,7 +116,7 @@ public class TreeData
 
 ![Cell Editing in Blazor TreeGrid](../images/blazor-treegrid-cell-editing.png)
 
-> If edit type is not defined in the column, then it will be considered as the **stringedit** type (Textbox component).
+N> If edit type is not defined in the column, then it will be considered as the **stringedit** type (Textbox component).
 
 ## Cell Edit Template
 

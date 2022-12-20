@@ -24,7 +24,7 @@ Tooltips can be attached to 12 static locations around the target. On initializi
 * `RightCenter`
 * `RightBottom`
 
-> By default, Tooltip is placed at the `TopCenter` of the target element.
+N> By default, Tooltip is placed at the `TopCenter` of the target element.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups
@@ -73,7 +73,7 @@ Tooltips can be positioned relative to the mouse pointer. This behavior can be e
 
 ![Blazor Tooltip with Mouse Trail](images/blazor-tooltip-mouse-trail.gif)
 
-> When mouse trailing option is enabled, the tip pointer position gets auto adjusted based on the target, and other position values like start, end, and middle are not applied (to prevent the pointer from moving out of target).
+N> When mouse trailing option is enabled, the tip pointer position gets auto adjusted based on the target, and other position values like start, end, and middle are not applied (to prevent the pointer from moving out of target).
 
 ## Setting offset values
 
@@ -110,7 +110,7 @@ Offset values are set to specify the distance between the target and tooltip ele
 
 ![Blazor Tooltip with Offset Value](images/blazor-tooltip-offset-value.gif)
 
-> By default, collision is handled automatically and therefore when collision is detected the Tooltip fits horizontally and flips vertically.
+N> By default, collision is handled automatically and therefore when collision is detected the Tooltip fits horizontally and flips vertically.
 
 ## Change collision target to viewport when setting Target
 
@@ -132,4 +132,4 @@ You can set the [WindowCollision](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ![Blazor Tooltip with Window Collision](images/blazor-tooltip-window-collision.png)
 
-> [View Sample in GitHub](https://github.com/SyncfusionExamples/Change-collision-target-to-viewport-in-Blazor-Tooltip).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Change-collision-target-to-viewport-in-Blazor-Tooltip).

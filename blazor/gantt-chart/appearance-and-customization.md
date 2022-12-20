@@ -61,7 +61,7 @@ Height of child taskbars and parent taskbars can be customized by using [Taskbar
 
 ![Customizing Taskbar Height in Blazor Gantt Chart](images/blazor-gantt-chart-taskbar-height.png)
 
-> The `TaskbarHeight` property accepts only pixel value.
+N> The `TaskbarHeight` property accepts only pixel value.
 
 ### Taskbar background
 
@@ -363,7 +363,7 @@ The following options are available in the Gantt Chart component for rendering t
 * Both: Both the horizontal and vertical grid lines will be visible on the Tree Grid and chart sides.
 * None: Gridlines will not be visible on Tree Grid and chart sides.
 
-> By default, the `GridLines` property is set to `Horizontal` type.
+N> By default, the `GridLines` property is set to `Horizontal` type.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -568,4 +568,4 @@ The following code example shows how to use this method.
 
 ![Changing Splitter Position in Blazor Gantt Chart](images/blazor-gantt-chart-with-splitter.png)
 
-> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities) to know how to render and configure the gantt.
+N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities) to know how to render and configure the gantt.
