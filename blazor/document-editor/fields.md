@@ -23,7 +23,7 @@ string fieldResult = '«First Name»';
 container.DocumentEditor.Editor.InsertFieldAsync(fieldCode, fieldResult);
 ```
 
->Note: Document editor does not validate/process the field code/field result. it simply inserts the field with specified field information.
+N> Document editor does not validate/process the field code/field result. it simply inserts the field with specified field information.
 
 ## Update fields
 
@@ -53,7 +53,7 @@ You can get field code and field result of the current selected field by using [
 FieldInfo fieldInfo = container.DocumentEditor.Selection.GetFieldInfoAsync();
 ```
 
->Note: For nested fields, this method returns combined field code and result.
+N> For nested fields, this method returns combined field code and result.
 
 ## Set field info
 
@@ -73,7 +73,7 @@ fieldInfo.Result = '«First Name»';
 container.DocumentEditor.Editor.SetFieldInfoAsync(fieldInfo);
 ```
 
->Note: For nested field, entire field gets replaced completely with the specified field information.
+N> For nested field, entire field gets replaced completely with the specified field information.
 
 ## See Also
 

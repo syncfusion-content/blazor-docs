@@ -11,7 +11,7 @@ documentation: ug
 
 The column displays information from a bound data source, and you can edit the values of column to update the task details through Tree Grid. The operations such as sorting, filtering, and searching can be performed based on column definitions. To display a Gantt Chart column, the `Field` property should be mapped from the data source to the column.
 
-> If the column `Field` is not specified in the data source, the column values will be empty.
+N> If the column `Field` is not specified in the data source, the column values will be empty.
 
 The `TreeColumnIndex` property is used to define the expander column in the Gantt Chart component to expand and collapse the child rows.
 
@@ -71,7 +71,7 @@ Using the `GanttColumns` property, you can define the columns in Gantt Chart. If
 
 ## Header template
 
-> Before adding the header template to the Gantt Chart, it is strongly recommended to go through the [template](./templates/#templates) section topic to configure the template.
+N> Before adding the header template to the Gantt Chart, it is strongly recommended to go through the [template](./templates/#templates) section topic to configure the template.
 
 The Header Template has options to display custom element values or content in the header. You can use the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_HeaderTemplate) of the [GanttColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html) component to specify the custom content.
 
@@ -240,7 +240,7 @@ To format the cell values based on a specific culture, use the `GanttColumn.Form
 
 ![Blazor Gantt Chart with Column Formatting](images/blazor-gantt-chart-format-column.png)
 
-> By default, the `number` and `date` values are formatted in `en-US` culture.
+N> By default, the `number` and `date` values are formatted in `en-US` culture.
 
 ### Number formatting
 
@@ -499,7 +499,7 @@ Gantt column supports the following types:
 * Date
 * DateTime
 
-> If the `GanttColumn.Type` is not defined, it will be determined from the first record of the `DataSource`. If the first record of the `DataSource` is null/blank value for a column then it is necessary to define the `GanttColumn.Type` for that column.
+N> If the `GanttColumn.Type` is not defined, it will be determined from the first record of the `DataSource`. If the first record of the `DataSource` is null/blank value for a column then it is necessary to define the `GanttColumn.Type` for that column.
 
 ## Custom columns
 

@@ -78,8 +78,8 @@ namespace TreeGridComponent.Data {
 
 ![Displaying Filter Menu in Blazor Tree Grid](../images/blazor-treegrid-filter-menu.png)
 
-> * [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_AllowFiltering) must be set as true to enable filter menu.
-> * Setting `AllowFiltering` property of [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) as false will prevent filter menu rendering for a particular column.
+N> * [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_AllowFiltering) must be set as true to enable filter menu.
+<br/> * Setting `AllowFiltering` property of [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) as false will prevent filter menu rendering for a particular column.
 
 ## Custom component in filter menu
 

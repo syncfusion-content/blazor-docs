@@ -19,7 +19,7 @@ The ListBox loads the data from local data sources using the [DataSource](https:
 | [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_IconCss) |  `string` | Specifies the iconCss class that needs to be mapped. |
 | [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_HtmlAttributes) |  `string` | Allows additional attributes to configure the elements in various ways to meet the criteria. |
 
-> When binding complex data to the ListBox, fields should be mapped correctly. Otherwise, the selected item remains undefined.
+N> When binding complex data to the ListBox, fields should be mapped correctly. Otherwise, the selected item remains undefined.
 
 ## Local Data
 

@@ -17,7 +17,7 @@ The editor window usually opens on the Scheduler, when a cell or event is double
 
 In mobile devices, the detailed editor window can be opened in edit mode by clicking the edit icon on the popup, that opens on single tapping an event. You can also open it in add mode by single tapping a cell, which will display a `+` indication, clicking on it again will open the editor window.
 
-> You can also prevent the editor window from opening, by rendering Scheduler in a `Readonly` mode or by doing code customization within the `OnPopupOpen` event.
+N> You can also prevent the editor window from opening, by rendering Scheduler in a `Readonly` mode or by doing code customization within the `OnPopupOpen` event.
 
 ### How to change the editor window header title and text of footer buttons
 
@@ -245,7 +245,7 @@ In case, in order to prevent only specific popups on Scheduler, check the condit
 
 It is possible to open the editor window manually for a specific time or certain events by using the `OpenEditorAsync` method which allows the [TValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor__0_Syncfusion_Blazor_Schedule_CurrentAction_) or [CellClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor_Syncfusion_Blazor_Schedule_CellClickEventArgs_Syncfusion_Blazor_Schedule_CurrentAction_System_Nullable_Syncfusion_Blazor_Schedule_RepeatType__) and `CurrentAction` as parameters.
 
-> [Here](https://blazor.syncfusion.com/documentation/scheduler/how-to/open-editor-window-on-single-click/) is the example to open the editor window on a single click.
+N> [Here](https://blazor.syncfusion.com/documentation/scheduler/how-to/open-editor-window-on-single-click/) is the example to open the editor window on a single click.
 
 ## Customizing event editor using template
 
@@ -438,7 +438,7 @@ The resource field can be added within editor template with the following code e
 }
 ```
 
-> EditorTemplate is not applicable when we set `AllowMutiple` as true without enabling `AllowGroupEdit`, so in that case use custom editor window.
+N> EditorTemplate is not applicable when we set `AllowMutiple` as true without enabling `AllowGroupEdit`, so in that case use custom editor window.
 
 ## How to add recurrence options within editor template
 
@@ -685,7 +685,7 @@ By default, these popups are displayed over cells and appointments of Scheduler 
 }
 ```
 
-> The quick popup that opens while single clicking on the cells are not applicable on mobile devices.
+N> The quick popup that opens while single clicking on the cells are not applicable on mobile devices.
 
 ### How to change the watermark text of quick popup subject
 
@@ -1498,7 +1498,7 @@ The quick info popup can be closed in scheduler by using the `CloseQuickInfoPopu
 
 When the number of appointments count that lies on a particular time range * default appointment height exceeds the default height of a cell in month view and all other timeline views, a `+ more` text indicator will be displayed at the bottom of those cells. This indicator denotes that the cell contains few more appointments in it and clicking on that will display a popup displaying all the appointments present on that day.
 
-> To disable this option of showing popup with all hidden appointments, while clicking on the text indicator, you can do code customization within the `OnPopupOpen` event.
+N> To disable this option of showing popup with all hidden appointments, while clicking on the text indicator, you can do code customization within the `OnPopupOpen` event.
 
 The same indicator is displayed on all-day row in calendar views such as day, week and work week views alone, when the number of appointment count present in a cell exceeds three. Clicking on the text indicator here will not open a popup, but will allow the expand/collapse option for viewing the remaining appointments present in the all-day row.
 

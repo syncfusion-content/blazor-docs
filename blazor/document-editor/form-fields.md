@@ -100,4 +100,4 @@ The following example code illustrates how to enforce and stop protection in Doc
 }
 ```
 
->Note: In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly | CommentsOnly`. In stop protection method, parameter denotes the password.
+N> In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly | CommentsOnly`. In stop protection method, parameter denotes the password.

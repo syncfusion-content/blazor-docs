@@ -60,8 +60,8 @@ The following screenshot shows the output of multicolumn sorting in Gantt Chart 
 
 ![MultiColumn Sorting in Blazor Gantt Chart](images/blazor-gantt-chart-multi-column-sorting.png)
 
-> * Gantt Chart columns are sorted in the ascending order. If you click the already sorted column, the sort direction toggles.
-> * To disable sorting for a particular column, set the `GanttColumn.AllowSorting` property to false.
+N> * Gantt Chart columns are sorted in the ascending order. If you click the already sorted column, the sort direction toggles.
+<br/> * To disable sorting for a particular column, set the `GanttColumn.AllowSorting` property to false.
 
 ## Sorting column on Gantt chart initialization
 
@@ -289,7 +289,7 @@ During the sort action, the Gantt Chart component triggers two events. The [OnAc
 }
 ```
 
-> The `args.RequestType` is the current action name. For example, for sorting the `args.RequestType`, value is **Sorting**.
+N> The `args.RequestType` is the current action name. For example, for sorting the `args.RequestType`, value is **Sorting**.
 
 ## Sorting custom columns
 
