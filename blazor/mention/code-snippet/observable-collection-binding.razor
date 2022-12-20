@@ -1,0 +1,53 @@
+@using Syncfusion.Blazor.DropDowns
+@using System.Collections.ObjectModel;
+
+<SfMention TItem="Colors" DataSource="@ColorsData" SuggestionCount="6">
+    <TargetComponent>
+        <div id="commentsMention" placeHolder="Type @@ and tag color" ></div>
+    </TargetComponent>
+    <ChildContent>
+        <MentionFieldSettings Text="Color" Value="Code"></MentionFieldSettings>
+    </ChildContent>
+</SfMention>
+
+<style>
+    #commentsMention {
+        min-height: 100px;
+        border: 1px solid #D7D7D7;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 14px;
+        width: 600px;
+    }
+    div#commentsMention[placeholder]:empty:before {
+        content: attr(placeholder);
+        color: #555;
+    }
+</style>
+
+@code {
+
+    public class Colors
+    {
+        public string Code { get; set; }
+        public string Color { get; set; }
+    }
+    private ObservableCollection<Colors> ColorsData = new ObservableCollection<Colors>() 
+    {
+        new Colors() { Color = "Chocolate", Code = "#75523C" }, 
+        new Colors() { Color = "CadetBlue", Code = "#3B8289" },
+        new Colors() { Color = "DarkOrange", Code = "#FF843D" },
+        new Colors() { Color = "DarkRed", Code = "#CA3832"},
+        new Colors() { Color = "Fuchsia", Code = "#D44FA3" },
+        new Colors() { Color = "HotPink", Code = "#F23F82" },
+        new Colors() { Color = "Indigo", Code = "#2F5D81" },
+        new Colors() { Color = "LimeGreen", Code = "#4CD242" },
+        new Colors() { Color = "OrangeRed", Code = "#FE2A00" },
+        new Colors() { Color = "Tomato", Code = "#FF745C" },
+        new Colors() { Color = "Brown", Code = "#A52A2A" },
+        new Colors() { Color = "Maroon", Code = "#800000" },
+        new Colors() { Color = "Green", Code = "#008000" },
+        new Colors() { Color = "Pink", Code = "#FFC0CB" },
+        new Colors() { Color = "Purple", Code = "#800080" }
+    };
+}

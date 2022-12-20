@@ -17,7 +17,7 @@ The templates used by Mention are of type `RenderFragment` and they will be pass
 
 ## Item template
 
-The content of each list item in the Mention can be customized using the `ItemTemplate` property.
+The content of each list item in the Mention can be customized using the `ItemTemplate` property. You can get the current item in `context` property.
 
 In the following sample, each list item is split into two columns to display relevant data using `ItemTemplate`.
 

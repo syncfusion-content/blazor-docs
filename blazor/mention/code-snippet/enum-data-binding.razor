@@ -1,0 +1,39 @@
+@using Syncfusion.Blazor.DropDowns
+
+<SfMention TItem="string" DataSource="@EnumValues">
+    <TargetComponent>
+        <div id="commentsMention" placeHolder="Type @@ and tag country" ></div>
+    </TargetComponent>
+</SfMention>
+
+<style>
+    #commentsMention {
+        min-height: 100px;
+        border: 1px solid #D7D7D7;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 14px;
+        width: 600px;
+    }
+    div#commentsMention[placeholder]:empty:before {
+        content: attr(placeholder);
+        color: #555;
+    }
+</style>
+
+@code {
+
+    public string[] EnumValues = Enum.GetNames(typeof(Values));
+    public Values ddlVal { get; set; } = Values.Canada;
+
+    public enum Values
+    {
+        Australia,
+        Bermuda,
+        Canada,
+        Denmark,
+        India,
+        US
+
+    }
+}
