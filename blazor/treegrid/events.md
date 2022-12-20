@@ -2339,7 +2339,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Sy
 ```
 ## BeforeCopyPaste
 
-[BeforeCopyPaste]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~BeforeCopyPaste.html) event will trigger before a cell is copied or pasted.
+[BeforeCopyPaste]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~BeforeCopyPaste.html) event will trigger before the cell is copied or pasted in the tree grid cell and you can cancel this entire copy or paste action by using this event.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;
@@ -2399,7 +2399,7 @@ The [DetailDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Sy
 
 ## BeforeCellPaste
 
-[BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~BeforeCellPaste.html) event will trigger before a cell is pasted.
+[BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~BeforeCellPaste.html) event will be trigger before pasting the copied cell value for each cell and you can cancel the pasting action for a particular cell or change the value by using this event.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid;

@@ -388,12 +388,12 @@ N> To perform paste functionality, it requires the selection `Mode` to be `Cell`
 
 ## Clipboard events
 
-Clipboard events are events that are triggered when performing a copy or paste action on the tree grid. 
+Clipboard events are triggered when performing a copy or paste action on the tree grid.
 
 ### Available clipboard events
 
-* [BeforeCopyPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCopyPaste) : Triggered when the cell is copied or pasted.
+* [BeforeCopyPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCopyPaste) : Triggered before the cell is copied or pasted in the tree grid cell and you can cancel the entire copy or paste action by using this event.
 
-* [BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCellPaste) : Triggered when the cell is pasted.
+* [BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCellPaste) : Triggered before pasting the copied cell value for each cell and you can cancel the pasting action for a particular cell or change the value by using this event.
 
 > To know more, you can refer the [BeforeCopyPaste](https://blazor.syncfusion.com/documentation/treegrid/events#beforecopypaste) and [BeforeCellPaste](https://blazor.syncfusion.com/documentation/treegrid/events#beforecellpaste) events.
