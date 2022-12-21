@@ -361,4 +361,8 @@ Additionally, with the built-in option available in the grand totals drop down m
 
 ![Displaying Grand Total Position using Toolbar in Blazor PivotTable](images/blazor-pivottable-show-grand-total-position.png)
 
+Similarly, with the built-in option available in the subtotals drop down menu, the subtotals can be dynamically displayed at the top or bottom of the pivot table’s row and column axes. By default, the column sub-totals are displayed at the bottom and row sub-totals are displayed at the top of their header group in the pivot table.
+
+![Displaying Subtotal Position using Toolbar in Blazor PivotTable](images/blazor-pivottable-subtotal-position.png)
+
 > You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
