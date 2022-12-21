@@ -134,6 +134,107 @@ The [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartD
 
 ![Blazor Chart Label with Text Mapping](images/data-label/blazor-chart-label-with-text-mapping.png)
 
+## Format
+
+Data label for the chart can be formatted using [format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Format) property. You can use the global formatting options, such as 'n', 'p', and 'c'.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
+    
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="ChartSeriesType.Line" >
+            <ChartMarker>
+                <ChartDataLabel Visible="true" Format="N1" />
+            </ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class Data
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+        public string Text { get; set; }
+    }
+
+    public List<Data> WeatherReports = new List<Data>
+    {
+        new Data{ X= "Jan", Y= 3, Text= "January" },
+        new Data{ X= "Feb", Y= 3.5, Text= "February" },
+        new Data{ X= "Mar", Y= 7, Text= "March" },
+        new Data{ X= "Apr", Y= 13.5, Text= "April" }
+    };
+}
+
+```
+
+![Blazor Chart Label with Format](images/data-label/blazor-chart-label-with-format.png)
+
+<!-- markdownlint-disable MD033 -->
+
+<table>
+<tr>
+<td><b>Label Value</b></td>
+<td><b>Label Format property value</b></td>
+<td><b>Result </b></td>
+<td><b>Description </b></td>
+</tr>
+<tr>
+<td>1000</td>
+<td>n1</td>
+<td>1000.0</td>
+<td>The number is rounded to 1 decimal place.</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>n2</td>
+<td>1000.00</td>
+<td>The number is rounded to 2 decimal places.</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>n3</td>
+<td>1000.000</td>
+<td>The number is rounded to 3 decimal places.</td>
+</tr>
+<tr>
+<td>0.01</td>
+<td>p1</td>
+<td>1.0%</td>
+<td>The number is converted to percentage with 1 decimal place.</td>
+</tr>
+<tr>
+<td>0.01</td>
+<td>p2</td>
+<td>1.00%</td>
+<td>The number is converted to percentage with 2 decimal places.</td>
+</tr>
+<tr>
+<td>0.01</td>
+<td>p3</td>
+<td>1.000%</td>
+<td>The number is converted to percentage with 3 decimal places.</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>c1</td>
+<td>$1000.0</td>
+<td>The currency symbol is appended to number and number is rounded to 1 decimal place.</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>c2</td>
+<td>$1000.00</td>
+<td>The currency symbol is appended to number and number is rounded to 2 decimal places.</td>
+</tr>
+</table>
+
 ## Margin
 
 The [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Margin) option can be applied to the data label to create space around the element.
