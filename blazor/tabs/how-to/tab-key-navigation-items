@@ -9,7 +9,7 @@ documentation: ug
 
 # Tab key navigation Tab item in Blazor Tabs Component
 
-The [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_Disabled) property of the Tab item is Gets or sets the tab order of the Tabs items. When positive values assigned, it allows to switch focus to the next/previous taps items with Tab/ShiftTab keys.
+The [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem ) property of the Tab item is Gets or sets the tab order of the Tabs items. When positive values assigned, it allows to switch focus to the next/previous taps items with Tab/ShiftTab keys.
 ```cshtml
 
 @using Syncfusion.Blazor.Navigations
