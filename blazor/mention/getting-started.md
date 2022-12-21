@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with Blazor Rating Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Rating component in Blazor Server App and Blazor WebAssembly App.
+title: Getting Started with Blazor Mention Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Mention component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
-control: Rating
+control: Mention
 documentation: ug
 ---
 
-# Getting Started with Blazor Rating Component
+# Getting Started with Blazor Mention Component
 
-This section briefly explains about how to include `Blazor Rating` component in your Blazor Server App and Blazor WebAssembly App using Visual Studio. 
+This section briefly explains about how to include `Blazor Mention` component in your Blazor Server App and Blazor WebAssembly App using Visual Studio. 
 
 ## Prerequisites
 
@@ -23,11 +23,11 @@ You can create **Blazor Server App** or **Blazor WebAssembly App** using Visual 
 
 * [Create a Project using Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project)
 
-## Install Syncfusion Blazor Inputs NuGet in the App
+## Install Syncfusion Blazor DropDowns NuGet in the App
 
 Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). In order to use Syncfusion Blazor components in the application, add reference to the corresponding NuGet. Refer to [NuGet packages topic](https://blazor.syncfusion.com/documentation/nuget-packages) for available NuGet packages list with component details and [Benefits of using individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages). 
 
-To add Blazor Rating component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Inputs](https://www.nuget.org/packages/Syncfusion.Blazor.Inputs/) and then install it.
+To add Blazor Mention component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns) and then install it.
 
 ## Register Syncfusion Blazor Service
 
@@ -243,57 +243,70 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 > Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
-## Add Syncfusion Blazor Rating component
+## Add Syncfusion Blazor Mention component
 
-* Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.Inputs` namespace.
+* Open **~/_Imports.razor** file or any razor page under the `~/Pages` folder where the component is to be added and import the `Syncfusion.Blazor.DropDowns` namespace.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Imports.razor" %}
 
 @using Syncfusion.Blazor
-@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.DropDowns
 
 {% endhighlight %}
 {% endtabs %}
 
-* Now, add the Syncfusion Rating component in razor file. Here, the Rating component is added in the **~/Pages/Index.razor** page under the `~/Pages` folder.
+* Now, add the Syncfusion Mention component in razor file. Here, the Mention component is added in the **~/Pages/Index.razor** page under the `~/Pages` folder.
 
 {% tabs %}
 {% highlight razor %}
 
-<SfRating></SfRating>
+<SfMention TItem="PersonData" DataSource="@EmailData">
+    <TargetComponent>
+        <div id="commentsMention" placeHolder="Type @@ and tag user" ></div>
+    </TargetComponent>
+    <ChildContent>
+        <MentionFieldSettings Text="Name"></MentionFieldSettings>
+    </ChildContent>
+</SfMention>
+<style>
+    #commentsMention {
+        min-height: 100px;
+        border: 1px solid #D7D7D7;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 14px;
+        width: 600px;
+    }
+
+    div#commentsMention[placeholder]:empty:before {
+        content: attr(placeholder);
+        color: #555;
+    }
+</style>
+@code {
+    public class PersonData
+    {
+        public string Name { get; set; }
+        public string EmailId { get; set; }
+        public string EmployeeImage { get; set; }
+    }
+    List<PersonData> EmailData = new List<PersonData> {
+    new PersonData() { Name="Selma Rose", EmployeeImage="7", EmailId="selma@gmail.com" },
+    new PersonData() { Name="Russo Kay", EmployeeImage="8", EmailId="russo@gmail.com" },
+    new PersonData() { Name="Camden Kate", EmployeeImage="9", EmailId="camden@gmail.com" }
+  };
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>ctrl</kbd>+<kbd>F5</kbd> or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion Blazor Rating component will be rendered in the default web browser.
+* Press <kbd>ctrl</kbd>+<kbd>F5</kbd> or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion Blazor Mention component will be rendered in the default web browser.
 
-![Blazor Rating Component](images/blazor-rating-component.png)
+![Blazor Mention Component](images/blazor-mention.png)
 
-## Value
+## See also
 
-You can set the rating value by using the `Value` property.
-
-{% tabs %}
-{% highlight razor %}
-
-<SfRating Value="3"></SfRating>
-
-{% endhighlight %}
-{% endtabs %}
-
-![Displaying Rating Value in Blazor Rating Component](images/blazor-rating-value.png)
-
-## Items count
-
-You can specify the number of stars using the `ItemsCount` property.
-
-{% tabs %}
-{% highlight razor %}
-
-<SfRating Value="3" ItemsCount="8"></SfRating>
-
-{% endhighlight %}
-{% endtabs %}
-
-![Displaying Blazor Rating items based on Count](images/blazor-rating-itemscount.png)
+* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+* [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
