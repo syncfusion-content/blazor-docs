@@ -43,7 +43,7 @@ The `FilterType` property allows you to specify the type of filter to use when f
 
 The `AllowSpaces` property is used to control whether spaces are allowed in the middle of the mention or not. If `AllowSpaces` is set to `true`, the Mention component will allow spaces in the middle of the mention and the data source will be filtered accordingly. If `AllowSpaces` is set to `false`, the Mention component will not allow spaces in the middle of the mention and the data source will not be filtered on space key press.
 
-> By default, the `AllowSpaces` property is disabled, and the space ends the mention component search.
+> By default, the `AllowSpaces` property is disabled, and the space ends the Mention component search.
 
 {% highlight razor %}
 
