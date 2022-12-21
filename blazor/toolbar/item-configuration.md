@@ -21,11 +21,11 @@ The [Blazor Toolbar](https://www.syncfusion.com/blazor-components/blazor-toolbar
 * ShowAlwaysInPopup
 * ShowTextOn
 * SuffixIcon
+* TabIndex
 * Template
 * Text
 * TooltipText
 * Type
-* TabIndex
 * Visible
 * Width
 
@@ -188,6 +188,11 @@ It defines single/multiple classes separated by space used to specify an icon fo
 ![Blazor Toolbar displays Icon in Suffix Item](./images/blazor-toolbar-icon-in-suffix-item.png)
 
 N>you can refer [here](https://blazor.syncfusion.com/documentation/appearance/icons#icon-integration-in-button-component) to integrate the syncfusion icons in toolbar component.
+
+## TabIndex
+
+The Toolbar supports adding tabindex commands using the  `TabIndex` property.TabIndex property can be given as the `HTML element`.
+Refer [Tab key navigation toolbar items ](https://blazor.syncfusion.com/documentation/toolbar/how-to/tab-key-navigation-toolbar-items/) for snippet and output. 
 
 ## Template
 
@@ -374,46 +379,6 @@ The following code explains how to add `NumericTextBox`, `DropDownList`, `RadioB
 ```
 
 ![Blazor Toolbar Item with Other Components](./images/blazor-toolbar-item-with-other-components.png)
-
-## TabIndex
-
-Gets or sets the tab order of the Toolbar items. When positive values assigned, it allows to switch focus to the next/previous taps items with Tab/ShiftTab keys.
-
-```cshtml
-
-@using Syncfusion.Blazor.Navigations
-
-<SfToolbar Width="600">
-    <ToolbarItems>
-        <ToolbarItem SuffixIcon="e-icons e-cut" Text="Cut" TabIndex=0 ></ToolbarItem>
-        <ToolbarItem SuffixIcon="e-icons e-copy" Text="Copy" TabIndex=0 ></ToolbarItem>
-        <ToolbarItem SuffixIcon="e-icons e-paste" Text="Paste" TabIndex=0></ToolbarItem>
-        <ToolbarItem Type="ItemType.Separator"></ToolbarItem>
-        <ToolbarItem SuffixIcon="e-icons e-bold" Text="Bold" TabIndex=0 ></ToolbarItem>
-        <ToolbarItem SuffixIcon="e-icons e-underline" Text="Underline" TabIndex=0 ></ToolbarItem>
-        <ToolbarItem SuffixIcon="e-icons e-italic" Text="Italic" TabIndex=0 ></ToolbarItem>
-        <ToolbarItem SuffixIcon="e-icons e-paint-bucket" Text="Color-Picker" TabIndex=0 ></ToolbarItem>
-        <ToolbarItem Type="ItemType.Separator"></ToolbarItem>
-        <ToolbarItem SuffixIcon="e-icons e-list-unordered" Text="Bullets" TabIndex=0 ></ToolbarItem>
-        <ToolbarItem SuffixIcon="e-icons e-list-ordered" Text="Numbering" TabIndex=0 ></ToolbarItem>
-        <ToolbarItem Type="ItemType.Separator"></ToolbarItem>
-        <ToolbarItem SuffixIcon="e-icons e-sort-ascending" Text="Sort A - Z" TabIndex=0 ></ToolbarItem>
-        <ToolbarItem SuffixIcon="e-icons e-sort-descending" Text="Sort Z - A" TabIndex=0 ></ToolbarItem>
-        <ToolbarItem Type="ItemType.Separator"></ToolbarItem>
-        <ToolbarItem SuffixIcon="e-icons e-upload-1" Text="Upload" TabIndex=0 ></ToolbarItem>
-        <ToolbarItem SuffixIcon="e-icons e-download" Text="Download" TabIndex=0 ></ToolbarItem>
-        <ToolbarItem Type="ItemType.Separator"></ToolbarItem>
-        <ToolbarItem SuffixIcon="e-icons e-increase-indent" Text="Text Indent" TabIndex=0 ></ToolbarItem>
-        <ToolbarItem SuffixIcon="e-icons e-decrease-indent" Text="Text Outdent" TabIndex=0 ></ToolbarItem>
-        <ToolbarItem Type="ItemType.Separator"></ToolbarItem>
-        <ToolbarItem SuffixIcon="e-icons e-erase" Text="Clear" TabIndex=0 ></ToolbarItem>
-        <ToolbarItem SuffixIcon="e-icons e-refresh" Text="Reload" TabIndex=0 ></ToolbarItem>
-        <ToolbarItem SuffixIcon="e-icons e-export" Text="Export" TabIndex=0 ></ToolbarItem>
-    </ToolbarItems>
-</SfToolbar>
-```
-
-![Blazor Toolbar displays Item TabIndex ](./images/blazor-toolbar-item-tabindex.gif)
 
 ## Visible
 

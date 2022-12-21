@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Next/Previuos Tab item in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about how to Next/Previuos tab item in Syncfusion Blazor Tabs component and more.
+title: Tab key navigation Tab item in Blazor Tabs Component | Syncfusion
+description: Checkout and learn here all about how to Tab key navigation tab item in Syncfusion Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Next/Previous Tab item in Blazor Tabs Component
+# Tab key navigation Tab item in Blazor Tabs Component
 
 The [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_Disabled) property of the Tab item is Gets or sets the tab order of the Tabs items. When positive values assigned, it allows to switch focus to the next/previous taps items with Tab/ShiftTab keys.
 ```cshtml

@@ -875,14 +875,14 @@ It groups the number of resources under each date and is applicable only on the 
 
 N> This kind of grouping by date is not applicable on any of the **timeline views**.
 
-### Hide Non Working Days
+### Different working days with grouping resource by date
 
-In this demo, there are 2 resources defined namely Alice and Smith under the resource `DataSource`. The Scheduler can be switched to group by date, by setting `true` to the option `ByDate` within the `ScheduleGroup` property.
+It groups the number of resources under each date and hides non working days and is applicable only on the calendar views such as Day, Week, Work Week, Month, Agenda and Month-Agenda. To enable such grouping, set `ByDate` option to `true` within the `Group` property.
 
 The different work days for the each resources are provided by using the `WorkDaysField` property and the Scheduler will be displayed the provided dates alone when `HideNonWorkingDays` property set as `true`.
 
-**Example:** To display the Scheduler with Hide Non Working Days,
-
+**Example:** To display the Scheduler with Different working days and resource group by date,
+ 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Buttons
@@ -924,9 +924,9 @@ The different work days for the each resources are provided by using the `WorkDa
 }
 ```
 
-![Hide Non Working Days in Blazor Scheduler](images/blazor-scheduler-hide-non-working-days.png)
+![Different working days with grouping resource by date in Blazor Scheduler](images/blazor-scheduler-hide-non-working-days.png)
 
-N> This kind of grouping by date is not applicable on any of the **timeline views**.
+N> This kind of Different working days with grouping resource by date is not applicable on any of the **timeline views**.
 
 ## Working with shared events
 
