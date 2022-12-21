@@ -1,0 +1,40 @@
+@using Syncfusion.Blazor.DropDowns
+@using System.Dynamic
+
+<SfMention TItem="ExpandoObject" DataSource="@VehicleData" suggestionCount=6>
+    <TargetComponent>
+        <div id="commentsMention" placeHolder="Type @@ and tag vehicle" ></div>
+    </TargetComponent>
+    <ChildContent>
+        <MentionFieldSettings Text="Text" Value="ID"></MentionFieldSettings>
+    </ChildContent>
+</SfMention>
+
+<style>
+    #commentsMention {
+        min-height: 100px;
+        border: 1px solid #D7D7D7;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 14px;
+        width: 600px;
+    }
+    div#commentsMention[placeholder]:empty:before {
+        content: attr(placeholder);
+        color: #555;
+    }
+</style>
+
+@code {
+    public List<ExpandoObject> VehicleData { get; set; } = new List<ExpandoObject>();
+    protected override void OnInitialized()
+    {
+        VehicleData = Enumerable.Range(1, 15).Select((x) =>
+        {
+            dynamic d = new ExpandoObject();
+            d.ID = (1000 + x).ToString();
+            d.Text = (new string[] { "Hennessey Venom", "Bugatti Chiron", "Bugatti Veyron Super Sport", "SSC Ultimate Aero", "Koenigsegg CCR", "McLaren F1", "Aston Martin One- 77", "Jaguar XJ220", "McLaren P1", "Ferrari LaFerrari", "Mahindra Jaguar", "Hyundai Toyota", "Jeep Volkswagen", "Tata Maruti Suzuki", "Audi Mercedes Benz" }[x - 1]);
+            return d;
+        }).Cast<ExpandoObject>().ToList<ExpandoObject>();
+    }
+}

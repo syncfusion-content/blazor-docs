@@ -1,0 +1,44 @@
+@using Syncfusion.Blazor.DropDowns
+
+<SfMention TItem="SportsData" DataSource="@sports" SuffixText="&nbsp;">
+    <TargetComponent>
+        <div id="commentsMention" placeHolder="Type @@ and tag sport" ></div>
+    </TargetComponent>
+    <ChildContent>
+        <MentionFieldSettings Text="Game" Value="ID"></MentionFieldSettings>
+    </ChildContent>
+</SfMention>
+
+<style>
+    #commentsMention {
+        min-height: 100px;
+        border: 1px solid #D7D7D7;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 14px;
+        width: 600px;
+    }
+    div#commentsMention[placeholder]:empty:before {
+        content: attr(placeholder);
+        color: #555;
+    }
+</style>
+
+@code {
+
+    public class SportsData
+    {
+        public string ID { get; set; }
+        public string Game { get; set; }
+    }
+
+    public List<SportsData> sports = new List<SportsData>()
+    {
+        new SportsData { ID = "game1", Game = "Badminton" },
+        new SportsData { ID = "game2", Game = "Football" },
+        new SportsData { ID = "game3", Game = "Tennis" },
+        new SportsData { ID = "game4", Game = "Hockey" },
+        new SportsData { ID = "game5", Game = "Basketball" },
+    };
+
+}
