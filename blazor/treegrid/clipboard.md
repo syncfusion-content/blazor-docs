@@ -384,4 +384,14 @@ N> To perform paste functionality, it requires the selection `Mode` to be `Cell`
 
 ### Limitations of Paste Functionality
 
-* Since the string values are not parsed to number and date type, so when the copied string type cells are pasted to number type cells then it will be displayed as **NaN**. For date type cells, when the copied string format cells are pasted to date type cells then it will be displayed as an **empty cell**.
+* Since the string values are not pasted to number and date type, so when the copied string type cells are pasted to number type cells, then it will be displayed as **NaN**. For date type cells, when the copied string format cells are pasted to date type cells, then it will be displayed as an **empty cell**.
+
+## Clipboard events
+
+Events are triggered when performing a copy or paste action on TreeGrid.
+
+* [BeforeCopyPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCopyPaste) : This event is triggered before the cell is copied or pasted in the tree grid cell, and you can cancel the entire copy or paste action by using this event.
+
+* [BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeCellPaste) : This event is triggered before pasting the copied cell value for each cell, and you can cancel the pasting action for a particular cell or change the value by using this event.
+
+> To know more, you can refer the [BeforeCopyPaste](https://blazor.syncfusion.com/documentation/treegrid/events#beforecopypaste) and [BeforeCellPaste](https://blazor.syncfusion.com/documentation/treegrid/events#beforecellpaste) events.
