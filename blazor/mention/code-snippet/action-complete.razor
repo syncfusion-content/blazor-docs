@@ -1,7 +1,7 @@
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
-<SfMention TItem="Contact" Query="@Query" OnActionComplete="OnActionCompleteHandler">
+<SfMention TItem="Contact" Query="@Query" OnActionComplete="@OnActionCompleteHandler">
     <TargetComponent>
         <div id="commentsMention" placeholder="Type @@ and tag name" ></div>
     </TargetComponent>

@@ -329,7 +329,7 @@ namespace EFDropDown.Controllers
 
 ### OnActionBegin event
 
-The `OnActionBegin` event triggers before fetching data from the remote server.
+The `OnActionBegin` event is triggers whenever the Mention component starts to fetch data from a remote server using the `DataSource` or `DataManager` properties. The event is passed a `ActionEventArgs` object as a parameter, which contains information about the data fetch process.
 
 {% highlight razor %}
 
@@ -339,7 +339,7 @@ The `OnActionBegin` event triggers before fetching data from the remote server.
 
 ### OnActionComplete event
 
-The `OnActionComplete` event triggers after data is fetched successfully from the remote server.
+The `OnActionComplete` event is a built-in event of the Mention component that is triggered after data has been successfully fetched from a remote server. This event can be used to perform additional processing or take other action after the data fetch process has completed. The event is passed a `ActionCompleteEventArgs` object as a parameter, which contains information about the data that was fetched.
 
 {% highlight razor %}
 
@@ -349,7 +349,7 @@ The `OnActionComplete` event triggers after data is fetched successfully from th
 
 ### OnActionFailure event
 
-The `OnActionFailure` event triggers when the data fetch request from the remote server fails.
+The `OnActionFailure` event is a built-in event of Mention component that is triggered when an error occurs while fetching data from a remote server. This event can be used to handle errors that may occur during the data fetch process and take appropriate action, such as displaying an error message or retrying the request.
 
 {% highlight razor %}
 
