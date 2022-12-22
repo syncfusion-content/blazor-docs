@@ -862,17 +862,17 @@ In the following code sample, the pivot chart can be seen as a single chart with
 
 ![Multiple Axis Mode in Blazor PivotChart](images/blazor-pivotchart-multiple-axis-mode.png)
 
-## Show member based chart series
+## Show point color based on members
 
-When multiple axes are enabled, the user can create each chart series with a unique color palette based on members by setting the properties [ShowPointColorByMembers]() as `true` and [MultipleAxisMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_MultipleAxisMode) as `Stacked` in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class. As a result, user can easily identify each member enclosed chart series consistently across different measures in the entire chart area.
+When multiple axes are enabled, you can display the same color for each member in the column axis by setting the [ShowPointColorByMembers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_ShowPointColorByMembers) property to **true** in the [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html). As a result, the end user can easily identify each member across different measures in the entire chart.
 
-Furthermore, with a single click over the legend item, you can show or hide specific chart series visibility based on members across different measures in the entire chart area.
+Furthermore, end user can see or hide specific members across different measures in the entire chart with a single click on the legend item.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView ID="PivotView" TValue="ProductDetails">
-<PivotViewDisplayOption View="View.Chart" Primary="Primary.Chart"></PivotViewDisplayOption>
+    <PivotViewDisplayOption View="View.Chart" Primary="Primary.Chart"></PivotViewDisplayOption>
     <PivotViewDataSourceSettings DataSource="@pivotData" ExpandAll="false" EnableSorting=true>
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
