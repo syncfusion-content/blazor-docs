@@ -746,7 +746,7 @@ By default, the pivot chart will be drawn with the value field (measure) which i
 
 ![Blazor PivotChart with Single Axis](images/blazor-pivotchart-single-axis.png)
 
-## Multi Axis
+## Multiple Axis
 
 User can draw the pivot chart with multiple value fields by setting the property [EnableMultiAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_EnableMultiAxis) in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class as **true**. In the following code sample, the pivot chart will be drawn with both value fields "Sold" and "Amount" available in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html).
 
