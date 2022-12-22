@@ -3,7 +3,7 @@
 
 <SfMention TItem="Contact" Query="@Query" OnActionFailure="OnActionFailureHandler">
     <TargetComponent>
-        <div id="commentsMention" placeHolder="Type @@ and tag name" ></div>
+        <div id="commentsMention" placeholder="Type @@ and tag name" ></div>
     </TargetComponent>
     <ChildContent>
         <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Customers" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain=true></SfDataManager>
