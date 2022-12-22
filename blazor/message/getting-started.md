@@ -56,7 +56,7 @@ N> From 2022 Vol1 (20.1) version - The default value of the `IgnoreScriptIsolati
 * For the **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 10" %}
+{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 10" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -101,7 +101,7 @@ namespace BlazorApplication
 Open the **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
 
 {% tabs %}
-{% highlight C# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 11" %}
+{% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 11" %}
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -154,7 +154,7 @@ N> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusio
 * For .NET 5 and .NET 3.X app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
-{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="3 4 5" %}
+{% highlight cshtml tabtitle=".NET 6 & .NET 7 (~/_Layout.cshtml)" hl_lines="3 4 5" %}
 
 <head>
     ...
@@ -205,7 +205,7 @@ Check out the [Adding Script Reference topic](https://blazor.syncfusion.com/docu
 * For the **.NET 5 and .NET 3.X** app, Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
-{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4 5 6" %}
+{% highlight cshtml tabtitle=".NET 6 & .NET 7 (~/_Layout.cshtml)" hl_lines="4 5 6" %}
 
 <head>
     ....
