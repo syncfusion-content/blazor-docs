@@ -1,13 +1,13 @@
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
-<SfMention TItem="Customer" Query="@Query" PopupWidth="200px" SuggestionCount=6>
+<SfMention TItem="Customer" PopupWidth="200px" SuggestionCount=6>
     <TargetComponent>
         <div id="commentsMention" placeholder="Type @@ and tag customer name" ></div>
     </TargetComponent>
      <ChildContent>
         <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Customers" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain=true></SfDataManager>
-        <MentionFieldSettings Text="ContactName" Value="CompanyName"></MentionFieldSettings>
+        <MentionFieldSettings Text="ContactName" Value="CustomerID"></MentionFieldSettings>
      </ChildContent>
 </SfMention>
 
@@ -36,5 +36,4 @@
 
         public string CustomerID { get; set; }
     }
-    public Query Query = new Query();
 }

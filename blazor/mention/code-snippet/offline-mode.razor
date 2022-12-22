@@ -1,7 +1,7 @@
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
-<SfMention TItem="EmployeeData" Query="@Query" SuggestionCount=6>
+<SfMention TItem="EmployeeData" SuggestionCount=6>
     <TargetComponent>
         <div id="commentsMention" placeholder="Type @@ and tag employee" ></div>
     </TargetComponent>
@@ -28,8 +28,6 @@
 
 
 @code{
-
-    public Query Query = new Query();
 
     public class EmployeeData
     {

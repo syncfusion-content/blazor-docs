@@ -1,7 +1,7 @@
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
-<SfMention TItem="EmployeeData" Query="@Query" PopupWidth="250px" SuggestionCount=6>
+<SfMention TItem="EmployeeData" PopupWidth="250px" SuggestionCount=6>
         <TargetComponent>
             <div id="commentsMention" placeholder="Type @@ and tag employee"></div>
         </TargetComponent>
@@ -42,6 +42,4 @@
         public string FirstName { get; set; }
         public string Country { get; set; }
     }
-    public EmployeeData Data = new EmployeeData();
-    public Query Query = new Query();
 }

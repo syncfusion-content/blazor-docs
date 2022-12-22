@@ -1,17 +1,17 @@
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
-<SfMention TItem="Contact" Query="@Query" OnActionComplete="@OnActionCompleteHandler">
+<SfMention TItem="Contact" OnActionComplete="@OnActionCompleteHandler">
     <TargetComponent>
         <div id="commentsMention" placeholder="Type @@ and tag name" ></div>
     </TargetComponent>
     <ChildContent>
         <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Customers" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain=true></SfDataManager>
-        <MentionFieldSettings Text="ContactName" Value="CompanyName"></MentionFieldSettings>
+        <MentionFieldSettings Text="ContactName" Value="CustomerID"></MentionFieldSettings>
     </ChildContent>
 </SfMention>
 
-<style>s
+<style>
     #commentsMention {
         min-height: 100px;
         border: 1px solid #D7D7D7;
@@ -35,8 +35,6 @@
 
         public string CustomerID { get; set; }
     }
-
-    public Query Query = new Query();
 
     private void OnActionCompleteHandler(ActionCompleteEventArgs args)
     {

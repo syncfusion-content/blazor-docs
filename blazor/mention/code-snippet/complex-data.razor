@@ -1,11 +1,11 @@
 @using Syncfusion.Blazor.DropDowns
 
-<SfMention TItem="CountryGroup" DataSource="@LocalData" >
+<SfMention TItem="CountryGroup" DataSource="@LocalData" PopupWidth="200px" >
     <TargetComponent>
         <div id="commentsMention" placeholder="Type @@ and tag country" ></div>
     </TargetComponent>
     <ChildContent>
-        <MentionFieldSettings Text="Country.CountryName" Value="Code.ID"></MentionFieldSettings>
+        <MentionFieldSettings Text="Country.CountryName" Value="CodeFormat.ID"></MentionFieldSettings>
     </ChildContent>
 </SfMention>
 
@@ -33,24 +33,24 @@
         public string ID { get; set; }
     }
 
-    public class Country
+    public class Countries
     {
         public string CountryName { get; set; }
     }
 
     public class CountryGroup
     {
-        public Country Country { get; set; }
-        public Code Code { get; set; }
+        public Countries Country { get; set; }
+        public Code CodeFormat { get; set; }
         public List<CountryGroup> GetData()
         {
-            List<CountryGroup> Data = new List<Complex>();
-            Data.Add(new CountryGroup() { Country = new Country() { CountryName = "Australia" }, Code = new Code() { ID = "AU" } });
-            Data.Add(new CountryGroup() { Country = new Country() { CountryName = "Bermuda" }, Code = new Code() { ID = "BM" } });
-            Data.Add(new CountryGroup() { Country = new Country() { CountryName = "Canada" }, Code = new Code() { ID = "CA" } });
-            Data.Add(new CountryGroup() { Country = new Country() { CountryName = "Cameroon" }, Code = new Code() { ID = "CM" } });
-            Data.Add(new CountryGroup() { Country = new Country() { CountryName = "Denmark" }, Code = new Code() { ID = "DK" } });
-            Data.Add(new CountryGroup() { Country = new Country() { CountryName = "France" }, Code = new Code() { ID = "FR" } });
+            List<CountryGroup> Data = new List<CountryGroup>();
+            Data.Add(new CountryGroup() { Country = new Countries() { CountryName = "Australia" }, CodeFormat = new Code() { ID = "AU" } });
+            Data.Add(new CountryGroup() { Country = new Countries() { CountryName = "Bermuda" }, CodeFormat = new Code() { ID = "BM" } });
+            Data.Add(new CountryGroup() { Country = new Countries() { CountryName = "Canada" }, CodeFormat = new Code() { ID = "CA" } });
+            Data.Add(new CountryGroup() { Country = new Countries() { CountryName = "Cameroon" }, CodeFormat = new Code() { ID = "CM" } });
+            Data.Add(new CountryGroup() { Country = new Countries() { CountryName = "Denmark" }, CodeFormat = new Code() { ID = "DK" } });
+            Data.Add(new CountryGroup() { Country = new Countries() { CountryName = "France" }, CodeFormat = new Code() { ID = "FR" } });
             return Data;
         }
     }

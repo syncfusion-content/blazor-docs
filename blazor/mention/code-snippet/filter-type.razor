@@ -1,13 +1,13 @@
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
-<SfMention TItem="EmployeeData" Query="@Query" PopupWidth="250px" SuggestionCount=6 FilterType="Syncfusion.Blazor.DropDowns.FilterType.StartsWith">
+<SfMention TItem="EmployeeData" PopupWidth="250px" SuggestionCount=6 FilterType="Syncfusion.Blazor.DropDowns.FilterType.StartsWith">
     <TargetComponent>
         <div id="commentsMention" placeholder="Type @@ and tag employee"></div>
     </TargetComponent>
     <ChildContent>
         <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
-        <MentionFieldSettings Text="FirstName" Value="EmployeeID"></MentionFieldSettings>
+        <MentionFieldSettings Text="FirstName" Value="Country"></MentionFieldSettings>
     </ChildContent>
 </SfMention>
 
@@ -36,6 +36,4 @@
         public string FirstName { get; set; }
         public string Country { get; set; }
     }
-
-    public Query Query = new Query();
 }
