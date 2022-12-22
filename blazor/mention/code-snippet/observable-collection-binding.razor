@@ -1,7 +1,7 @@
 @using Syncfusion.Blazor.DropDowns
 @using System.Collections.ObjectModel;
 
-<SfMention TItem="Colors" DataSource="@ColorsData" SuggestionCount=6>
+<SfMention TItem="Colors" DataSource="@ColorsData">
     <TargetComponent>
         <div id="commentsMention" placeholder="Type @@ and tag color" ></div>
     </TargetComponent>
@@ -39,15 +39,6 @@
         new Colors() { Color = "DarkOrange", Code = "#FF843D" },
         new Colors() { Color = "DarkRed", Code = "#CA3832"},
         new Colors() { Color = "Fuchsia", Code = "#D44FA3" },
-        new Colors() { Color = "HotPink", Code = "#F23F82" },
-        new Colors() { Color = "Indigo", Code = "#2F5D81" },
-        new Colors() { Color = "LimeGreen", Code = "#4CD242" },
-        new Colors() { Color = "OrangeRed", Code = "#FE2A00" },
-        new Colors() { Color = "Tomato", Code = "#FF745C" },
-        new Colors() { Color = "Brown", Code = "#A52A2A" },
-        new Colors() { Color = "Maroon", Code = "#800000" },
-        new Colors() { Color = "Green", Code = "#008000" },
-        new Colors() { Color = "Pink", Code = "#FFC0CB" },
-        new Colors() { Color = "Purple", Code = "#800080" }
+        new Colors() { Color = "HotPink", Code = "#F23F82" }
     };
 }

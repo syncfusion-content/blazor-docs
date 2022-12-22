@@ -25,7 +25,7 @@
 </style>
 
 @code {
-    public IEnumerable<Complex> LocalData { get; set; } = new Complex().GetData();
+    public IEnumerable<CountryGroup> LocalData { get; set; } = new CountryGroup().GetData();
 
 
      public class Code
@@ -38,19 +38,19 @@
         public string CountryName { get; set; }
     }
 
-    public class Complex
+    public class CountryGroup
     {
         public Country Country { get; set; }
         public Code Code { get; set; }
-        public List<Complex> GetData()
+        public List<CountryGroup> GetData()
         {
-            List<Complex> Data = new List<Complex>();
-            Data.Add(new Complex() { Country = new Country() { CountryName = "Australia" }, Code = new Code() { ID = "AU" } });
-            Data.Add(new Complex() { Country = new Country() { CountryName = "Bermuda" }, Code = new Code() { ID = "BM" } });
-            Data.Add(new Complex() { Country = new Country() { CountryName = "Canada" }, Code = new Code() { ID = "CA" } });
-            Data.Add(new Complex() { Country = new Country() { CountryName = "Cameroon" }, Code = new Code() { ID = "CM" } });
-            Data.Add(new Complex() { Country = new Country() { CountryName = "Denmark" }, Code = new Code() { ID = "DK" } });
-            Data.Add(new Complex() { Country = new Country() { CountryName = "France" }, Code = new Code() { ID = "FR" } });
+            List<CountryGroup> Data = new List<Complex>();
+            Data.Add(new CountryGroup() { Country = new Country() { CountryName = "Australia" }, Code = new Code() { ID = "AU" } });
+            Data.Add(new CountryGroup() { Country = new Country() { CountryName = "Bermuda" }, Code = new Code() { ID = "BM" } });
+            Data.Add(new CountryGroup() { Country = new Country() { CountryName = "Canada" }, Code = new Code() { ID = "CA" } });
+            Data.Add(new CountryGroup() { Country = new Country() { CountryName = "Cameroon" }, Code = new Code() { ID = "CM" } });
+            Data.Add(new CountryGroup() { Country = new Country() { CountryName = "Denmark" }, Code = new Code() { ID = "DK" } });
+            Data.Add(new CountryGroup() { Country = new Country() { CountryName = "France" }, Code = new Code() { ID = "FR" } });
             return Data;
         }
     }

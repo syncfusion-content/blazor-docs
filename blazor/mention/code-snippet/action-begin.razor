@@ -35,8 +35,7 @@
 
         public string CustomerID { get; set; }
     }
-
-    public Contact Data = new Contact();
+    
     public Query Query = new Query().Select(new List<string> {"CompanyName", "ContactName"}).Take(6).RequiresCount();
 
     private void OnActionBeginhandler(ActionBeginEventArgs args)
