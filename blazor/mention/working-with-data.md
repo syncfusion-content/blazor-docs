@@ -37,7 +37,7 @@ The `DataSource` property of the Mention component specifies the data that will 
 
 ### Primitive type
 
-Bind the data to the Mention as an array or list of the `string`, `int`, `double` and `bool` type items.
+The Mention allows you to bind data to the component as an array or list of various types, including `string`, `int`, `double` and `bool`. To bind data to the Mention component, you can use the `DataSource` property and specify the data as a `List<T>` or an array of the desired type.
 
 The following code demonstrates array of string values to the Mention component.
 
@@ -61,7 +61,7 @@ The following code demonstrates array of integer values to the Mention component
 
 ### Complex data type
 
-The Mention can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the `Fields` property.
+The Mention component allows you to bind data to the component as an array or list of complex data types, such as objects with multiple properties. To bind complex data to the Mention, you can use the `DataSource` property and specify the data as a `List<T>` or an array of the desired type. You can then use the `MentionFieldSettings` property to specify which properties of the complex data should be used to generate the suggestion list items.
 
 In the following example, the `Code.ID` column and `Country.CountryID` column from complex data have been mapped to the `MentionFieldSettings.Value` and  `MentionFieldSettings.Text` respectively.
 
@@ -75,7 +75,7 @@ In the following example, the `Code.ID` column and `Country.CountryID` column fr
 
 ### Expando object binding
 
-An [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-5.0) is a dynamic object that allows you to add and delete properties and methods at runtime. You can bind the data in an `ExpandoObject` to the Mention component by passing the object as the value for the `DataSource` property.
+The [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-5.0) is a dynamic object type that allows you to add and delete properties and methods at runtime. This can be a useful feature in certain situations, such as when you want to bind data to a component in a flexible and dynamic way. You can bind the data in an `ExpandoObject` to the Mention component by passing the object as the value for the `DataSource` property.
 
 In the following example, the `ExpandoObject` is bound to the collection of vehicles data.
 
@@ -101,9 +101,13 @@ In the following example, the `Observable Data` is bound to a collection of colo
 
 ![Blazor Mention with observable collection binding](./images/blazor-mention-observable-collection-binding.png)
 
-### Dynamic object binding
+### Dynamic object binding 
 
-You can bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-5.0) data to the Mention component. In the following example, the `DynamicObject` is bound to the collection of customer data.
+The [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-5.0) is a dynamic object type that allows you to bind data to a component in a flexible and dynamic way. It is similar to the `ExpandoObject`, but it has some additional features and capabilities.
+
+To bind data stored in a `DynamicObject` to the Mention, you can pass the object as the value for the `DataSource` property. The Mention will then use the data stored in the `DynamicObject` to generate the suggestion list items.
+
+In the following example, the `DynamicObject` is bound to the collection of customer data.
 
 {% highlight razor %}
 
@@ -115,7 +119,7 @@ You can bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/sy
 
 ### Enum data binding
 
-You can bind an enumeration (enum) data to a Mention component. The following code helps you to get a description value from the enumeration data.
+The Mention allows you to bind data from an enumeration (enum) to the component. To bind an enum to the Mention component, you can use the `DataSource` property and specify the enum as the data source. The Mention component will then generate the suggestion list items based on the values of the enum.
 
 {% highlight razor %}
 
@@ -127,9 +131,9 @@ You can bind an enumeration (enum) data to a Mention component. The following co
 
 ## Binding remote data
 
-The Mention loads the data from remote data services through the `DataSource` property. 
+The Mention component allows you to load data from remote data services using the `DataManager` property. The `DataManager` property allows you to fetch data from a remote service and bind it to Mention component.
 
-The Mention supports the retrieval of data from the remote data services with the help of the `DataManager` property is used to fetch data from the database and bind it to the Mention.
+To use the `DataManager` property with the Mention component, you can create an instance of the `DataManager` component and specify the `URL` of the remote data service as the value of the Url property. You can then pass this instance to the `DataManager` property of the Mention component.
 
 * [DataManager.Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) - Defines the service endpoint to fetch data.
 * [DataManager.Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) - Defines the adaptor option. By default, the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) is used for remote binding. The adaptor is responsible for processing responses and requests from or to the service endpoint. 
