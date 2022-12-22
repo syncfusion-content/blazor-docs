@@ -265,7 +265,7 @@ N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/bla
 
 ## Format
 
-Data label for the accumulation chart can be formatted using [format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Format) property. You can use the global formatting options, such as 'n', 'p', and 'c'.
+Data label for the accumulation chart can be formatted using [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Format) property. You can use the global formatting options, such as 'N1', 'P1', and 'C1'.
 
 ```cshtml
 
@@ -288,81 +288,21 @@ Data label for the accumulation chart can be formatted using [format](https://he
     {
         public string XValue { get; set; }
         public double YValue { get; set; }
-        public string Text { get; set; }
     }
 
     public List<ChartData> ChartValues = new List<ChartData>
     {
-        new ChartData { XValue = "Apple", YValue = 26, Text = "1" },
-        new ChartData { XValue = "Redmi", YValue = 19, Text = "1.0" },
-        new ChartData { XValue = "Realme", YValue = 17, Text = "1.2" },
-        new ChartData { XValue = "Oneplus", YValue = 12, Text = "1.3" },
-        new ChartData { XValue = "Samsung", YValue = 15, Text = "hai" },
+        new ChartData { XValue = "Apple", YValue = 26 },
+        new ChartData { XValue = "Redmi", YValue = 19 },
+        new ChartData { XValue = "Realme", YValue = 17 },
+        new ChartData { XValue = "Oneplus", YValue = 12 },
+        new ChartData { XValue = "Samsung", YValue = 15 },
     };
 }
 
 ```
 
 ![Format in Blazor Accumulation Chart](images/data-label/blazor-accumulation-chart-with-data-label-format.png)
-
-<!-- markdownlint-disable MD033 -->
-
-<table>
-<tr>
-<td><b>Label Value</b></td>
-<td><b>Label Format property value</b></td>
-<td><b>Result </b></td>
-<td><b>Description </b></td>
-</tr>
-<tr>
-<td>1000</td>
-<td>n1</td>
-<td>1000.0</td>
-<td>The number is rounded to 1 decimal place.</td>
-</tr>
-<tr>
-<td>1000</td>
-<td>n2</td>
-<td>1000.00</td>
-<td>The number is rounded to 2 decimal places.</td>
-</tr>
-<tr>
-<td>1000</td>
-<td>n3</td>
-<td>1000.000</td>
-<td>The number is rounded to 3 decimal places.</td>
-</tr>
-<tr>
-<td>0.01</td>
-<td>p1</td>
-<td>1.0%</td>
-<td>The number is converted to percentage with 1 decimal place.</td>
-</tr>
-<tr>
-<td>0.01</td>
-<td>p2</td>
-<td>1.00%</td>
-<td>The number is converted to percentage with 2 decimal places.</td>
-</tr>
-<tr>
-<td>0.01</td>
-<td>p3</td>
-<td>1.000%</td>
-<td>The number is converted to percentage with 3 decimal places.</td>
-</tr>
-<tr>
-<td>1000</td>
-<td>c1</td>
-<td>$1000.0</td>
-<td>The currency symbol is appended to number and number is rounded to 1 decimal place.</td>
-</tr>
-<tr>
-<td>1000</td>
-<td>c2</td>
-<td>$1000.00</td>
-<td>The currency symbol is appended to number and number is rounded to 2 decimal places.</td>
-</tr>
-</table>
 
 ## See Also
 
