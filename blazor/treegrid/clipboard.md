@@ -384,7 +384,7 @@ namespace TreeGridComponent.Data {
 
 ### Limitations of Paste Functionality
 
-* Since the string values are not pasted to number and date type, so when the copied string type cells are pasted to number type cells, then it will be displayed as **NaN**. For date type cells, For date type cells, when the copied string format cells are pasted to date type cells, then it will be displayed as an **empty cell**.
+* Since the string values are not pasted to number and date type, so when the copied string type cells are pasted to number type cells, then it will be displayed as **NaN**. For date type cells, when the copied string format cells are pasted to date type cells, then it will be displayed as an **empty cell**.
 
 ## Clipboard events
 
