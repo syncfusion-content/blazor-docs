@@ -11,7 +11,9 @@ documentation: ug
 
 ## ComboBox inside edit form
 
-The `EditForm` validates all data annotation rules using the `DataAnnotationsValidator`. Choose the value from the dropdown popup. The given input will be ready to be submitted if the value is valid. Otherwise, an error message will be shown until you choose the valid value.
+The `EditForm` validates all data annotation rules using the `DataAnnotationsValidator`. If the input is valid, the form will be ready to be submitted. If the input is invalid, an error message will be displayed until a valid value is chosen.
+
+In this following example, the `EditForm` component is used to wrap the ComboBox and the submit button. The `DataAnnotationsValidator` component is used to enable data annotation-based validation, and the `ValidationMessage` component is used to display the validation error message. The `Required` attribute is applied to the Name field to make it a required field.
 
 {% highlight cshtml %}
 
@@ -24,6 +26,8 @@ The `EditForm` validates all data annotation rules using the `DataAnnotationsVal
 ## Form validation using injectable datasource
 
 The ComboBox component inside the Edit form with the required field validation and with the injectable datasource is mentioned in the following sample.
+
+In this following example, the ownservice is injected into the component using the @inject directive. The ownservice. GetDataAsync() method is used to get the list of countries to display in the ComboBox. The EditForm, DataAnnotationsValidator, and ValidationMessage components are used to enable form validation and display the validation error message.
 
 {% highlight cshtml %}
 
