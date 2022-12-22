@@ -29,7 +29,9 @@ The following code demonstrates the TimePicker with the custom format (`HH:mm:ss
 
 ## Mask Support in Blazor TimePicker Component
 
-TimePicker has `EnableMask` property that provides the option to enable the built-in time masking support. This means that the TimePicker will automatically apply a mask to the time input, so that users can only enter times in a specific format. 
+The [EnableMask]() property in the Syncfusion Blazor Timepicker component allows you to enable or disable the masking functionality of the input field. When enabled, the component will display the input field as a masked textbox, with a specific pattern to enter the time value.
+
+You can also customize the mask pattern used by the component by using the [Format]() property.
 
  For example, if the mask is set to "hh:mm", then users will only be able to enter times in the format of "hour:minute", with two digits for the hour and minute.
 
@@ -44,13 +46,11 @@ The following example demonstrates default format of TimePicker component with m
 
 ![Blazor TimePicker with EnableMask](./images/TimePickerMask.gif)
 
-## TimePicker MaskPlaceholder
+## MaskPlaceholder
 
-The TimePicker control has a property called "TimePickerMaskPlaceholder" that allows you to customize the placeholder value for the time mask. By default, this property is set to the full name of the time elements (e.g. "Hour", "Minute", "Second"), but you can change it to any value you like. 
+The [TimePikcerMaskPlaceholder]() class in the Syncfusion Blazor Timepicker component is used to customize the placeholder characters displayed in the input field when the masking functionality is enabled.
 
-For example, you might want to use abbreviated names like "H", "m" and "s" or you might want to use symbols like ":" and "-" to separate the different parts of time.
-
-The following example demonstrates the custom mask placeholder for TimePicker component.
+To use the TimePikcerMaskPlaceholder class, you can define an instance of the class and set its properties, and then pass it to the TimePikcerMaskPlaceholder property of the SfTimePicker component as shown in the following example:
 
 {% highlight Razor %}
 
@@ -60,3 +60,15 @@ The following example demonstrates the custom mask placeholder for TimePicker co
 
 
 ![Blazor TimePicker Mask Support with MaskPlaceholder](./images/TimePickerMaskPlaceholder.gif)
+
+The "TimePickerMaskPlaceholder" class has the following properties:
+
+`Hour`: Gets or sets the placeholder character for the hour portion of the time value.
+
+`Minute`: Gets or sets the placeholder character for the minute portion of the time value.
+
+`Second`: Gets or sets the placeholder character for the second portion of the time value.
+
+By default, the placeholder characters for the hour, minute, and second portions of the time value are set to "Hour", "Minute", and "Second" respectively.
+
+You can also customize the mask pattern used by the component by using the [Format]() property.

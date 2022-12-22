@@ -29,9 +29,11 @@ The following code demonstrates the DatePicker with the custom format (`yyyy-MM-
 
 ## Mask Support in Blazor DatePicker Component
 
-DatePicker has [EnableMask]() property that provides the option to enable the built-in date masking support. This means that the DatePicker will automatically apply a mask to the date input, so that users can only enter dates in a specific [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Format). 
+The [EnableMask]() property in the Syncfusion Blazor Datepicker component allows you to enable or disable the masking functionality of the input field. When enabled, the component will display the input field as a masked textbox, with a specific pattern to enter the date value.
 
-  For example, if the mask is set to "MM/dd/yyyy", then users will only be able to enter dates in the format of "month/day/year", with two digits for the month, day, and year. This can be useful for ensuring that users enter dates in a consistent and accurate format, and can help to reduce errors and misunderstandings when working with dates in your application.
+By default, the "EnableMask" property is set to `false`.
+
+You can also customize the mask pattern used by the component by using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Format) property.
 
 The following example demonstrates default format of DatePicker component with mask.
 
@@ -47,11 +49,9 @@ The following example demonstrates default format of DatePicker component with m
 
 ## MaskPlaceholder
 
-The DatePicker control has a property called [DatePickerMaskPlaceholder]() that allows you to customize the placeholder value for the date mask. By default, this property is set to the full name of the date elements (e.g. "Day", "Month", "Year"), but you can change it to any value you like. 
+The [DatePickerMaskPlaceholder]() class in the Syncfusion Blazor Datepicker component is used to customize the placeholder characters displayed in the input field when the masking functionality is enabled.
 
-For example, you might want to use abbreviated names like "D", "M", and "Y", or you might want to use symbols like "/" and "-" to separate the different parts of the date.
-
-The following example demonstrates the custom mask placeholder for DatePicker component.
+To use the "DatePickerMaskPlaceholder" class, you can define an instance of the class and set its properties, and then pass it to the DatePickerMaskPlaceholder property of the SfDatePicker component as shown in the following example:
 
 {% highlight Razor %}
 
@@ -62,3 +62,16 @@ The following example demonstrates the custom mask placeholder for DatePicker co
 
 
 ![Blazor DatePicker Mask Support with MaskPlaceholder](./images/DatePickerMaskPlaceholder.gif)
+
+
+The "DatePickerMaskPlaceholder" class has the following properties:
+
+`Day` : Gets or sets the placeholder character for the day portion of the date value.
+
+`Month` : Gets or sets the placeholder character for the month portion of the date value.
+
+`Year` : Gets or sets the placeholder character for the year portion of the date value.
+
+By default, the placeholder characters for the day, month, and year portions of the date value are set to "Day", "Month", and "Year" respectively.
+
+You can also customize the mask pattern used by the component by using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Format) property.

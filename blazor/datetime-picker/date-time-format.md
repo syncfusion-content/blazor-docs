@@ -27,9 +27,11 @@ The following code demonstrates the DatePicker with the custom format (`yyyy-MM-
 
 ## Mask Support in Blazor DateTimePicker Component
 
-DateTimePicker has `EnableMask` property that provides the option to enable the built-in date and time masking support. This means that the DateTimePicker will automatically apply a mask to the date and time input, so that users can only enter dates and times in a specific format. 
+The [EnableMask]() property in the Syncfusion Blazor DateTimepicker component allows you to enable or disable the masking functionality of the input field. When enabled, the component will display the input field as a masked textbox, with a specific pattern to enter the date and time values.
 
- > For example, if the mask is set to "MM/dd/yyyy hh:mm", then users will only be able to enter dates and times in the format of "month/day/year hour:minute", with two digits for the month, day, year, hour and minute.
+By default, the "EnableMask" property is set to `false`.
+
+You can also customize the mask pattern used by the component by using the [Format]() property. 
 
 The following example demonstrates default and custom format of DateTimePicker component with mask.
 
@@ -41,13 +43,11 @@ The following example demonstrates default and custom format of DateTimePicker c
 
 ![Blazor DateTimePicker with EnableMask](./images/DateTimePickerMask.gif)
 
-## DateTimePicker MaskPlaceholder
+## MaskPlaceholder
 
-The DateTimePicker control has a property called "DateTimePickerMaskPlaceholder" that allows you to customize the placeholder value for the date time mask. By default, this property is set to the full name of the date and time elements (e.g. "Day", "Month", "Year", "Hour", "Minute", "Second" and "DayOfWeek"), but you can change it to any value you like. 
+The [DateTimePickerMaskPlaceholder]() class in the Syncfusion Blazor DateTimepicker component is used to customize the placeholder characters displayed in the input field when the masking functionality is enabled.
 
-> For example, you might want to use abbreviated names like "D", "M", "Y", "H", "m", "s" and "DDD" or you might want to use symbols like "/" and "-" to separate the different parts of the date and time.
-
-The following example demonstrates the custom mask placeholder for DateTimePicker component.
+To use the "DateTimePickerMaskPlaceholder" class, you can define an instance of the class and set its properties, and then pass it to the DateTimePickerMaskPlaceholder property of the SfDateTimePicker component as shown in the following example:
 
 {% highlight Razor %}
 
@@ -56,3 +56,23 @@ The following example demonstrates the custom mask placeholder for DateTimePicke
 {% endhighlight %}
 
 ![Blazor DateTimePicker Mask Support with MaskPlaceholder](./images/DateTimePickerMaskPlaceholder.gif)
+
+The "DateTimePickerMaskPlaceholder" class has the following properties:
+
+`Day` : Gets or sets the placeholder character for the day portion of the date value.
+
+`Month` : Gets or sets the placeholder character for the month portion of the date value.
+
+`Year` : Gets or sets the placeholder character for the year portion of the date value.
+
+`Hour` : Gets or sets the placeholder character for the hour portion of the time value.
+
+`Minute` : Gets or sets the placeholder character for the minute portion of the time value.
+
+`Second` : Gets or sets the placeholder character for the second portion of the time value.
+
+`WeekOfDay` : Gets or sets the placeholder character for the WeekOfDay portion of the date value.
+
+By default, the placeholder characters for the day, month, and year portions of the date value are set to "Day", "Month", and "Year", respectively. The placeholder characters for the hour, minute, and second portions of the time value are set to "Hour", "Minute", and "Second", respectively.
+
+You can also customize the mask pattern used by the component by using the [Format]() property.
