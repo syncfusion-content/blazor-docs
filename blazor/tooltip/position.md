@@ -132,4 +132,5 @@ You can set the [WindowCollision](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ![Blazor Tooltip with Window Collision](images/blazor-tooltip-window-collision.png)
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Change-collision-target-to-viewport-in-Blazor-Tooltip).
+N> In our Tooltip component, the Tooltip target is taken based on the HTML element's id or class name. When using the `GUID` as the target ID for a tooltip, it is not able to obtain an ID that begins with a digit. <br/>
+[View Sample in GitHub](https://github.com/SyncfusionExamples/Change-collision-target-to-viewport-in-Blazor-Tooltip).
