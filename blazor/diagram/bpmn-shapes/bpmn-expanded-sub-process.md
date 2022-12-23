@@ -56,7 +56,7 @@ The following code example explains how to create a BPMN Expanded Sub-Process.
 
 ![BPMN Expanded Sub-Process](../images/Bpmn-ExpandedSub-Process.png)
 
-# Add BPMN Nodes into BPMN ExpandedSubProcess at runtime
+## Add BPMN Nodes into BPMN ExpandedSubProcess at runtime
 You can add BPMN Nodes into the BPMN ExpandedSubProcess at runtime in two ways.
 
 * Adding the Id of the Bpmn Node to the `Children` property which is a collection of string in BPMN ExpandedSubProcess.
