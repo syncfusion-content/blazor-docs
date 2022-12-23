@@ -15,7 +15,7 @@ The `aria-selected` attribute is used to indicate that an element is currently s
 
 ## ARIA attributes
 
-The Mention component uses the listbox role and oOption role to implement the Mention functionality. The listbox role represents a list of options, and the option role represents a single item in the list. 
+The Mention component uses the listbox role and option role to implement the Mention functionality. The listbox role represents a list of options, and the option role represents a single item in the list. 
 
 It uses the various `ARIA attributes` (Accessible Rich Internet Applications) to denote the state of the component and provide additional information to assistive technologies such as screen readers. These attributes can help users who rely on assistive technologies to understand and interact with the Mention component more easily.
 

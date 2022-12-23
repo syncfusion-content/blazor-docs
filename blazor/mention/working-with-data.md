@@ -11,7 +11,7 @@ documentation: ug
 
 The Mention allows you to bind data either from a local source or a remote data service using the `DataSource` property. If you want to bind data from a local source, you can simply assign an enumerable list of data items to the `DataSource` property. If you want to bind data from a remote data service, you can use the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) component to fetch and bind the data to the `Mention` component.
 
-* **TItem** - Specifies the type of the datasource of the Mention component.
+* **TItem** - Specifies the type of the `DataSource` of the Mention component.
 
 ## Binding local data
 
