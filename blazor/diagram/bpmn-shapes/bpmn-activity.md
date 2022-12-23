@@ -40,7 +40,7 @@ There are two types of activities. They are listed as follows:
             Height = 100,
             // Unique Id of the node.
             ID = "node1",
-            // Sets the type of shape to Bpmn and shape to activity.
+            // Sets the shape to activity.
             Shape = new BpmnActivity() 
             { 
                 ActivityType = BpmnActivityType.Task 
