@@ -27,7 +27,7 @@ In the following example, the remote request does not fetch the search data unti
 
 ## Change the filter type
 
-The `FilterType` property allows you to specify the type of filter to use when filtering data items. The Mention supports three different filter types: `Contains`, `StartsWith`, and `EndsWith`.
+The `FilterType` property allows you to specify the type of filter to use when filtering data items. By default, the `FilterType` property is set to `Contains`, which means that the Mention component will search for items that contain the entered search string as a substring. The FilterType property supports three different filter types: `Contains`, `StartsWith`, and `EndsWith`.
 
 * `StartsWith` - This filter type searches for items that start with the entered characters.
 * `Contains` - This filter type searches for items that contain the entered characters as a substring.
@@ -55,7 +55,7 @@ The `AllowSpaces` property is used to control whether spaces are allowed in the 
 
 ## Customize the suggestion item count
 
-The `SuggestionCount` property allows you to specify the number of list items that should be displayed in the suggestion list. This property can be set to any integer value.
+The `SuggestionCount` property allows you to specify the number of list items that should be displayed in the suggestion list. By default, the `SuggestionCount` property is set to `25`, which means that the Mention component will display up to `25` list items in the suggestion list. The `SuggestionCount` property can be set to any integer value.
 
 {% highlight razor %}
 

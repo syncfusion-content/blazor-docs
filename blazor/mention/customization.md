@@ -13,6 +13,8 @@ documentation: ug
 
 You can show the mention character as the prefix of the selected item in the Mention component by using the `ShowMentionChar` property. By default, the `ShowMentionChar` property is set to `false`, which means that the mention character will not be displayed as part of the selected mention item.
 
+You can set the `ShowMentionChar` property to `true` to display the mention character as the prefix of the selected mention item. This can be useful in cases where you want to clearly differentiate between the selected mention item and the rest of the text in the Mention component.
+
 {% highlight razor %}
 
 {% include_relative code-snippet/show-mention-char.razor %}
