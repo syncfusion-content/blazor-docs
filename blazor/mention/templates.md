@@ -17,9 +17,7 @@ The templates used by the Mention component are of type `RenderFragment`, which 
 
 ## Item template
 
-The `ItemTemplate` property allows you to specify a custom template for each individual suggestion list item in the Mention component. This template can be used to customize the content and appearance of the list items based on your own requirements.
-
-The `ItemTemplate` template is passed a parameter called `context`, which contains information about the current item being rendered. You can use this `context` parameter to access the data for the current item and use it to customize the content and appearance of the list item.
+The `ItemTemplate` property allows you to specify a custom template for each individual suggestion list item in the Mention component. The `ItemTemplate` template is passed a parameter called `context`, which contains information about the current item being rendered. You can use this `context` parameter to access the data for the current item and use it to customize the content and appearance of the list item.
 
 In the following sample, each list item is split into two columns to display relevant data using `ItemTemplate`.
 
@@ -33,9 +31,7 @@ In the following sample, each list item is split into two columns to display rel
 
 ## Display template
 
-The `DisplayTemplate` property allows you to specify a template that defines how the mentioned value should be displayed in the Mention component.
-
-The `DisplayTemplate` template is passed a parameter called `context`, which contains information about the current item being rendered. You can use this `context` parameter to access the data for the current item and use it to customize the appearance of the mentioned value, such as by adding an avatar or displaying additional information about the mentioned value.
+The `DisplayTemplate` property allows you to specify a template that defines how the mentioned value should be displayed in the Mention component. The `DisplayTemplate` template is passed a parameter called `context`, which contains information about the current item being rendered. You can use this `context` parameter to access the data for the current item and use it to customize the appearance of the mentioned value, such as by adding an avatar or displaying additional information about the mentioned value.
 
 In the following sample, the selected value is displayed as a combined text of both `FirstName` and `City` in the Mention element, which is separated by a hyphen.
 

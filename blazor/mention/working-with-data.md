@@ -87,20 +87,6 @@ In the following example, the `ExpandoObject` is bound to the collection of vehi
 
 ![Blazor Mention with expando object binding](./images/blazor-mention-expando-object-binding.png)
 
-### Observable collection binding
-
-you can bind an [ObservableCollection](https://blazor.syncfusion.com/documentation/common/data-binding/data-updates#observable-collection) to the Mention component. An `ObservableCollection` is a type of collection that implements the `INotifyCollectionChanged` interface. This allows the Mention to be notified when the collection is modified, so it can update its own state accordingly.
-
-In the following example, the `Observable Data` is bound to a collection of colors data.
-
-{% highlight razor %}
-
-{% include_relative code-snippet/observable-collection-binding.razor %}
-
-{% endhighlight %}
-
-![Blazor Mention with observable collection binding](./images/blazor-mention-observable-collection-binding.png)
-
 ### Enum data binding
 
 The Mention allows you to bind data from an enumeration (enum) to the component. To bind an enum to the Mention component, you can use the `DataSource` property and specify the enum as the data source. The Mention component will then generate the suggestion list items based on the values of the enum.
