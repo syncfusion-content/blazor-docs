@@ -151,7 +151,7 @@ The following example is for remote data binding and enabled `Offline` mode.
 
 ### OnActionBegin event
 
-The `OnActionBegin` event is triggers whenever the Mention component starts to fetch data from a remote server using the `DataSource` or `DataManager` properties. The event is passed a `ActionEventArgs` object as a parameter, which contains information about the data fetch process.
+The `OnActionBegin` event is triggers whenever the Mention component starts to fetch data from a remote server using the `DataSource` or `DataManager` properties. The event is passed a `ActionBeginEventArgs` object as a parameter, which contains information about the data fetch process.
 
 {% highlight razor %}
 
