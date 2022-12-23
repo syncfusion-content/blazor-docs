@@ -27,7 +27,7 @@ In the following example, the remote request does not fetch the search data unti
 
 ## Change the filter type
 
-The [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_FilterType) property allows you to specify the type of filter to use when filtering data items. By default, the FilterType property is set to `Contains`, which means that the Mention component will search for items that contain the entered search string as a substring. The FilterType property supports below three different filter types.
+The [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_FilterType) property allows you to specify the type of filter to use when filtering data items. By default, the `FilterType` property is set to `Contains`, which means that the Mention component will search for items that contain the entered search string as a substring. The `FilterType` property supports below three different filter types.
 
 * `StartsWith` - This filter type searches for items that start with the entered characters.
 * `Contains` - This filter type searches for items that contain the entered characters as a substring.
