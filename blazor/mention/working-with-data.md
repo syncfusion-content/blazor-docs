@@ -23,9 +23,7 @@ The `DataSource` property of the Mention component specifies the data that will 
 * `Array of object`: This is an array of objects, where each object represents a mentionable item and may contain various properties.
 * `List of primitive type`: This is a list (a type of collection) of simple data types, such as strings or numbers.
 * `List of object`: This is a list of objects, where each object represents a mentionable item and may contain various properties.
-* `Observable Collection`: This is a type of collection that allows UI elements to automatically update when the collection is modified.
 * `ExpandoObject`: This is a type of object that allows new properties to be added dynamically at runtime.
-* `DynamicObject`: This is a type of object that allows properties to be accessed dynamically, rather than through pre-defined methods or properties.
 
 {% highlight razor %}
 
