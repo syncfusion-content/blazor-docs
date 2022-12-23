@@ -17,7 +17,7 @@ The templates used by the Mention component are of type `RenderFragment`, which 
 
 ## Item template
 
-The `ItemTemplate` property allows you to specify a custom template for each individual suggestion list item in the Mention component. This template can be used to customize the content and appearance of the list items based on your own requirements.
+The `ItemTemplate` property allows you to specify a custom template for each individual suggestion list item in the Mention component.
 
 The `ItemTemplate` template is passed a parameter called `context`, which contains information about the current item being rendered. You can use this `context` parameter to access the data for the current item and use it to customize the content and appearance of the list item.
 
