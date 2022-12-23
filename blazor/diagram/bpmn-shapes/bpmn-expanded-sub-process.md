@@ -251,6 +251,7 @@ An ad-hoc ExpandedSubProcess is a group of tasks that are executed in any order 
 }
 ```
 ![IsAdHocActivity CollapsedSub-Process BPMN Shape](../images/Bpmn-ExpandedSub-Process-Adhoc.png)
+
 ### SubProcessType
 
 SubProcessType represents the type of task that is being processed. The `SubProcessType` property of ExpandedSubProcess allows you to define the type of SubProcessType. By default, it is set to **Default**.
