@@ -11,7 +11,7 @@ documentation: ug
 
 ## Size for heat map
 
-You can set the size of heat map directly by using the  `Width` and `Height` properties.
+You can set the size of heat map directly by using the  [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.Size.html#Syncfusion_Blazor_HeatMap_Size_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.Size.html#Syncfusion_Blazor_HeatMap_Size_Height) properties.
 
 ### In pixel
 
