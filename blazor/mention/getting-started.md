@@ -307,7 +307,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 ## Mention target
 
-The Target property of the Mention component can be used to specify the element that the mention element should be appended to, and this can be useful in cases where you want to display the mention element in a specific location on the page.
+The `Target` property of the Mention component can be used to specify the element that the mention element should be appended to, and this can be useful in cases where you want to display the mention element in a specific location on the page.
 
 In the bellow example, the `Target` property of the Mention component is set to the CSS selector `#mentionTarget`, which matches the textarea element with an id of `mentionTarget`. The mention element will be appended to the textarea element as a child element, allowing the user to select or mention a specific entity within the textarea.
 
@@ -350,6 +350,8 @@ In the bellow example, the `Target` property of the Mention component is set to 
 }
 
 {% endhighlight %}
+
+![Blazor Mention target](images/blazor-mention-target.png)
 
 ## See also
 
