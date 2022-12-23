@@ -9,7 +9,7 @@ documentation: ug
 
 # Appearance in Blazor HeatMap Chart Component
 
-## Cell customizations
+## Cell customization
 
 You can customize the cell by using the [CellSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html)
 
@@ -61,7 +61,7 @@ Change the width, color, and radius of the heat map cells by using the [HeatMapC
 
 ### Cell highlighting
 
-Enable or disable the cell highlighting while hover over the heat map cells by using the  [EnableCellHighlighting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_EnableCellHighlighting) property.
+Enable or disable the cell highlighting while hovering over the heat map cells by using the  [EnableCellHighlighting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_EnableCellHighlighting) property.
 
 ```cshtml
 
@@ -105,7 +105,7 @@ Enable or disable the cell highlighting while hover over the heat map cells by u
 
 ### Color gradient mode
 
-You can set the minimum and maximum value colors based on row and column using the [ColorGradientMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.ColorGradientMode.html) property. The types of ColorGradientMode,
+The [ColorGradientMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.ColorGradientMode.html) property can be used to set the minimum and maximum values for colors based on row and column. Three types of color gradient modes are available.
 
 * **Table**: The minimum and maximum value colors calculated for overall data.
 * **Row**: The minimum and maximum value colors calculated for each row of data.
@@ -156,7 +156,7 @@ You can set the minimum and maximum value colors based on row and column using t
 
 ## Margin
 
-Set the margin for the heat map from its container by using the [HeatMapMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapMargin.html) property.
+Set the margin for the heatmap from its container by using the [HeatMapMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapMargin.html) tag.
 
 ```cshtml
 
@@ -201,7 +201,7 @@ Set the margin for the heat map from its container by using the [HeatMapMargin](
 
 ## Title
 
-The title is used to provide a quick information about the data plotted in heat map. The [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapTitleSettings.html#Syncfusion_Blazor_HeatMap_HeatMapTitleSettings_Text) property is used to set the title for heat map. You can also customize text style of a title by using the [HeatMapTitleTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapTitleTextStyle.html) tag.
+The title is used to provide a quick information about the data plotted in heatmap. The [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapTitleSettings.html#Syncfusion_Blazor_HeatMap_HeatMapTitleSettings_Text) property is used to set the title for the heatmap. The text style of the title can be customized by using the [HeatMapTitleTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapTitleTextStyle.html) tag.
 
 ```cshtml
 
@@ -247,7 +247,7 @@ The title is used to provide a quick information about the data plotted in heat 
 
 ## Data label
 
-You can toggle the visibility of data labels by using the [ShowLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_ShowLabel) property. By default, the data label will be visible.
+The visibility of data labels can be toggled using the [ShowLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_ShowLabel) property. By default, the data labels will be visible.
 
 ```cshtml
 
@@ -291,7 +291,7 @@ You can toggle the visibility of data labels by using the [ShowLabel](https://he
 
 ### Text style
 
-You can customize the font family, font size, and color of the data label by using the [HeatMapCellTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellTextStyle.html) tag in the [HeatMapCellSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html) tag.
+The text attributes of the data label such as font-family, font-size, and color can be customized using the [HeatMapCellTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellTextStyle.html) tag.
 
 ```cshtml
 
@@ -338,7 +338,7 @@ You can customize the font family, font size, and color of the data label by usi
 
 ### Format
 
-You can change the format of the data label, such as currency, decimal, percent, etc. by using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_Format) property.
+The format of the data label, such as currency, decimal, percent etc. can be changed using [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_Format) property.
 
 ```cshtml
 
