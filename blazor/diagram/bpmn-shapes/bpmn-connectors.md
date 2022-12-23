@@ -18,13 +18,14 @@ They are classified as follows.
 
 ## Association
 
-The `BPMN Association` flow is used to link flow objects with its corresponding text or artifact. An association is represented as a dotted graphical line with an opened arrow. The types of association are as follows:
+The `BPMN Association` flow is used to link flow objects with its corresponding text or artifact. An association is represented as a dotted graphical line with an opened arrow. 
+To create an Association, the `Flow` property of the `BpmnFlowShape` should be set to **AssociationFlow**. The types of association are as follows:
 
-* Directional
-* BiDirectional
-* Default
+* DirectionalAssociationFlow: Represented as a dotted graphical line with one side arrow.
+* BiDirectionalAssociationFlow: Represented as a dotted graphical line with double side arrow.
+* AssociationFlow: An Association is represented as a dotted graphical line with an opened arrow.
 
-The association property allows you to define the type of association. The following code example explains how to create an association.
+The following code example explains how to create an association.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -46,13 +47,11 @@ The association property allows you to define the type of association. The follo
             ID = "connector1",
             // Start and end point of the connector
             SourcePoint = new Point() { X = 100, Y = 200 },
-            TargetPoint = new Point() { X = 300, Y = 200 },
-            // Sets the type to Bpmn, flow to Association and association to bidirectional.
+            TargetPoint = new Point() { X = 300, Y = 300 },
+            // Sets the type to Bpmn, flow to AssociationFlow.
             Shape = new BpmnFlow()
             {
-                Type = ConnectionShapes.Bpmn,
-                Flow = BpmnFlows.Association,
-                Association = BpmnAssociationFlows.BiDirectional
+                Flow = BpmnFlowType.AssociationFlow,
             }
         };
         connectors.Add(connector);
@@ -64,21 +63,19 @@ The following table shows the visual representation of association flows.
 
 | Association | Image |
 | -------- | -------- |
-| Default | ![Default BPMN FlowShapes](../images/Default1.png) |
-| Directional | ![Directional BPMN FlowShapes](../images/Directional1.png) |
-| BiDirectional | ![BiDirectional BPMN FlowShapes](../images/BiDirectional.png) |
-
-N> The default value for the property `Association` is **Default**.
+| AssociationFlow | ![Default BPMN FlowShapes](../images/Bpmn-AssociationFlow.png) |
+| DirectionalAssociationFlow | ![Directional BPMN FlowShapes](../images/Bpmn-DirectionalAssociatinFlow.png) |
+| BiDirectionalAssociationFlow | ![BiDirectional BPMN FlowShapes](../images/Bpmn-BidirectionalAssociationFlow.png) |
 
 ## Sequence
 
-A `Sequence` flow shows the order that the activities are performed in a BPMN process and is represented by a solid graphical line. The types of sequence are as follows:
+A `Sequence` flow shows the order that the activities are performed in a BPMN process and is represented by a solid graphical line. To create a SequenceFlow, the `Flow` property of the `BpmnFlow` should be set to **SequenceFlow**.The types of sequence are as follows:
 
-* Normal
-* Conditional
-* Default
+* SequenceFlow:Sequence flows represent the typical path between the two flow objects.
+* ConditionalSequenceFlow: Conditional sequence flows are used to control the flow of a process based on the certain conditions.
+* DefaultSequenceFlow:Default sequence flows are represented by an arrow with a tic mark on one end.
 
-The sequence property allows you to define the type of sequence. The following code example explains how to create a sequence flow.
+The following code example explains how to create a sequence flow.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -100,13 +97,11 @@ The sequence property allows you to define the type of sequence. The following c
             ID = "connector1",
             // Start and end point of the connector.
             SourcePoint = new Point() { X = 100, Y = 200 },
-            TargetPoint = new Point() { X = 300, Y = 200 },
-            // Sets the type to Bpmn, flow to Association and association to bidirectional.
+            TargetPoint = new Point() { X = 300, Y = 300 },
+            // Sets the flow to SequenceFlow.
             Shape = new BpmnFlow()
             {
-                Type = ConnectionShapes.Bpmn,
-                Flow = BpmnFlows.Sequence,
-                Sequence = BpmnSequenceFlows.Conditional
+                Flow = BpmnFlowType.SequenceFlow,
             }
         };
         connectors.Add(connector);
@@ -118,21 +113,21 @@ The following table contains various representation of sequence flows.
 
 | Sequence | Image |
 | -------- | -------- |
-| Default | ![Default Sequence BPMN Shape](../images/Default2.png) |
-| Conditional | ![Conditional Sequence BPMN Shape](../images/Conditional.png) |
-| Normal | ![Normal Sequence BPMN Shape](../images/Normal.png) |
+| DefaultSequenceFlow | ![Default Sequence BPMN Shape](../images/Bpmn-DefaultSequentialFlow.png) |
+| ConditionalSequenceFlow | ![Conditional Sequence BPMN Shape](../images/Bpmn-ConditionalSequenceFlow.png) |
+| SequenceFlow | ![Normal Sequence BPMN Shape](../images/Bpmn-SequenceFlow.png) |
 
 N> The default value for the property `Sequence` is **Normal**.
 
 ## Message
 
-A `Message` flow shows the flow of messages between two participants and is represented by dashed line. The types of messages are as follows:
+`Message` flows are the two separately controlled processes communicate and collaborate with one another. An activity or event in one pool can initiate a message to the another pool. Message Flows are depicted as lines with an empty circle showing where the message originates and and empty arrowhead where the message terminates. To create a MessageFlow, the `Flow` property of the `BpmnFlow` should be set to **MessageFlow**. The types of message are as follows:
 
-* InitiatingMessage
-* NonInitiatingMessage
-* Default
+* InitiatingMessageFlow:An activity or event in one pool can initiate a message to another pool.
+* NonInitiatingMessageFlow:An activity or event in one pool can not initiate a message to another pool.
+* MessageFlow:A MessageFlow flow shows the flow of messages between two participants and is represented by line.
 
-The message property allows you to define the type of message. The following code example explains how to define a message flow.
+The following code example explains how to define a message flow.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -154,13 +149,11 @@ The message property allows you to define the type of message. The following cod
             ID = "connector1",
             // Start and end point of the connector.
             SourcePoint = new Point() { X = 100, Y = 200 },
-            TargetPoint = new Point() { X = 300, Y = 200 },
-            // Sets the type to Bpmn, flow to Association and association to bidirectional.
+            TargetPoint = new Point() { X = 300, Y = 300 },
+            // Sets the flow to MessageFlow.
             Shape = new BpmnFlow()
             {
-                Type = ConnectionShapes.Bpmn,
-                Flow = BpmnFlows.Message,
-                Message = BpmnMessageFlows.InitiatingMessage
+                Flow = BpmnFlowType.MessageFlow,
             }
         };
         connectors.Add(connector);
@@ -172,8 +165,8 @@ The following table contains various representation of message flows.
 
 | Message | Image |
 | -------- | -------- |
-| Default | ![Default Message BPMN Shape](../images/Default1.png) |
-| InitiatingMessage | ![InitiatingMessage Message BPMN Shape](../images/IMessage.png) |
-| NonInitiatingMessage | ![NonInitiatingMessage Message BPMN Shape](../images/NIMessage.png) |
+| MessageFlow | ![Default Message BPMN Shape](../images/Bpmn-MessageFlow.png) |
+| InitiatingMessageFlow | ![InitiatingMessage Message BPMN Shape](../images/Bpmn-InitiatingMessageFlow.png) |
+| NonInitiatingMessageFlow | ![NonInitiatingMessage Message BPMN Shape](../images/Bpmn-InitiatingMessageFlow.png) |
 
-N> The default value for the property `Message` is **Default**.
+N> The default value for the property `Flow` is **SequenceFlow**.

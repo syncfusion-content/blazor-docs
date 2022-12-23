@@ -9,7 +9,7 @@ documentation: ug
 
 # Shapes in Blazor Diagram Component
 
-BPMN(Business Process Model and Notation) shapes are used to represent the internal business procedure in a graphical notation and enable you to communicate the procedures in a standard manner. To create a BPMN shape, in the node property shape, type should be set to “Bpmn” and its shape should be set as any one of the built-in shapes.
+BPMN(Business Process Model and Notation) shapes are used to represent the internal business procedure in a graphical notation and enable you to communicate the procedures in a standard manner. To create a BPMN shape, the node property shape, should be set as any one of the built-in shapes.
 
 The following code example explains how to create a simple business process.
 
@@ -37,10 +37,10 @@ The following code example explains how to create a simple business process.
             Height = 100,
             // Unique Id of the node.
             ID = "node1",
-            // Sets type as Bpmn and shape as Event.
-            Shape = new BpmnShape()
+            // Sets shape as BpmnEvent.
+            Shape = new BpmnEvent()
             {
-                Type = NodeShapes.Bpmn,
+                EventType = BpmnEventType.Intermediate,
             }
         };
         nodes.Add(node);
@@ -48,16 +48,18 @@ The following code example explains how to create a simple business process.
 }
 ```
 
-N> The default value for the property `Shape` is “Event”.
-
-The list of BPMN shapes are as follows:
+The list of supported BPMN shapes are as follows:
 
 | Shape | Image |
 | -------- | -------- |
 | Event | ![Event Shape](../images/Event.png) |
 | Gateway | ![Gateway Shape](../images/Gateway.png) |
-| Task | ![Task Shape](../images/Task.png) |
+| Activity | ![Activity Shape](../images/Task.png) |
 | Message | ![Message Shape](../images/Message.png) |
-| DataSource | ![DataSource Shape](../images/Datasource.png) |
+| DataStore | ![DataStore Shape](../images/Datasource.png) |
 | DataObject | ![DataObject Shape](../images/Dataobject.png) |
-| Group | ![Group Shape](../images/Group.png) |
+| Expanded Sub-Process | ![Expanded Sub-Process Shape](../images/Group.png) |
+| TextAnnotation | ![TextAnnotation Shape](../images/Group.png) |
+| Sequence Flow | ![TextAnnotation Shape](../images/Group.png) |
+| Association | ![TextAnnotation Shape](../images/Group.png) |
+| Message Flow | ![TextAnnotation Shape](../images/Group.png) |
