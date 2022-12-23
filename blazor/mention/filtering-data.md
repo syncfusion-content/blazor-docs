@@ -13,11 +13,11 @@ The Mention component has built-in support for filtering data items, which allow
 
 ## Limit the minimum filter character
 
-You can control the minimum length of user input to initiate the search action using the `MinLength` property. This can be useful if you have a very large list of data. The default value for `MinLength` is `0`, which means that the suggestion list will open as soon as the user inputs the mention character.
+The `MinLength` property that allows you to control the minimum length of user input required to initiate the search action. By default, the `MinLength` property is set to `0`, which means that the suggestion list will open as soon as the user inputs the mention character.
 
 For example, if you set `MinLength` to `3`, the suggestion list will only open when the user has entered at least three characters.
 
-The remote request does not fetch the search data until the search key contains three characters as shown in the following example.
+In the following example, the remote request does not fetch the search data until the search key contains three characters.
 
 {% highlight razor %}
 

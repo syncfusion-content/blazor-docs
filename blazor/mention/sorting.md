@@ -9,15 +9,15 @@ documentation: ug
 
 # Sorting in Blazor Mention Component
 
-The `SortOrder` property that allows you to specify the order in which the suggestion list items should be displayed. The `SortOrder` property can be set to one of three values: `Ascending`, `Descending`, or `None`.
+The `SortOrder` property of the Mention component allows you to specify the order in which the suggestion list items should be displayed. By default, the `SortOrder` property is set to `None`, which means that the suggestion list items will be displayed in their original order. The `SortOrder` property can be set to one of three values: `Ascending`, `Descending`, or `None`.
 
 The available type of sort orders are:
 
 SortOrder     | Description
 ------------  | -------------
-  `Ascending` | This value specifies that the suggestion list items should be sorted in ascending order, from lowest to highest.
-  `Descending`| This value specifies that the suggestion list items should be sorted in descending order, from highest to lowest.
-  `None`      | This value specifies that the suggestion list items should not be sorted at all.
+  `Ascending` | The suggestion list items will be sorted in ascending order, from lowest to highest..
+  `Descending`| The suggestion list items will be sorted in descending order, from highest to lowest.
+  `None`      | The suggestion list items will not be sorted at all and will be displayed in their original order.
 
 {% highlight razor %}
 

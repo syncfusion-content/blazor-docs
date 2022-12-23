@@ -1,7 +1,7 @@
 @using Syncfusion.Blazor.DropDowns
 @using System.Dynamic
 
-<SfMention TItem="ExpandoObject" DataSource="@VehicleData" SuggestionCount=6>
+<SfMention TItem="ExpandoObject" DataSource="@VehicleData">
     <TargetComponent>
         <div id="commentsMention" placeholder="Type @@ and tag vehicle" ></div>
     </TargetComponent>
@@ -29,11 +29,11 @@
     public List<ExpandoObject> VehicleData { get; set; } = new List<ExpandoObject>();
     protected override void OnInitialized()
     {
-        VehicleData = Enumerable.Range(1, 15).Select((x) =>
+        VehicleData = Enumerable.Range(1, 6).Select((x) =>
         {
             dynamic d = new ExpandoObject();
             d.ID = (1000 + x).ToString();
-            d.Text = (new string[] { "Hennessey Venom", "Bugatti Chiron", "Bugatti Veyron Super Sport", "SSC Ultimate Aero", "Koenigsegg CCR", "McLaren F1", "Aston Martin One- 77", "Jaguar XJ220", "McLaren P1", "Ferrari LaFerrari", "Mahindra Jaguar", "Hyundai Toyota", "Jeep Volkswagen", "Tata Maruti Suzuki", "Audi Mercedes Benz" }[x - 1]);
+            d.Text = (new string[] { "Hennessey Venom", "Bugatti Chiron", "Bugatti Veyron Super Sport", "SSC Ultimate Aero", "Koenigsegg CCR", "McLaren F1"}[x - 1]);
             return d;
         }).Cast<ExpandoObject>().ToList<ExpandoObject>();
     }

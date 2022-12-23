@@ -37,7 +37,7 @@ The `DataSource` property of the Mention component specifies the data that will 
 
 ### Primitive type
 
-The Mention allows you to bind data to the component as an array or list of various types, including `string`, `int`, `double` and `bool`. To bind data to the Mention component, you can use the `DataSource` property and specify the data as a `List<T>` or an array of the desired type.
+The Mention allows you to bind data to the Mention component as an array or list of various types, including `string`, `int`, `double` and `bool`. To bind data to the Mention component, you can use the `DataSource` property and specify the data as a `List<T>` or an array of the desired type.
 
 The following code demonstrates array of string values to the Mention component.
 
@@ -63,7 +63,7 @@ The following code demonstrates array of integer values to the Mention component
 
 The Mention component allows you to bind data to the component as an array or list of complex data types, such as objects with multiple properties. To bind complex data to the Mention, you can use the `DataSource` property and specify the data as a `List<T>` or an array of the desired type. You can then use the `MentionFieldSettings` property to specify which properties of the complex data should be used to generate the suggestion list items.
 
-In the following example, the `Code.ID` column and `Country.CountryID` column from complex data have been mapped to the `MentionFieldSettings.Value` and  `MentionFieldSettings.Text` respectively.
+In the following example, the `CodeFormat.ID` column and `Country.CountryName` column from complex data have been mapped to the `MentionFieldSettings.Value` and  `MentionFieldSettings.Text` respectively.
 
 {% highlight razor %}
 
@@ -100,22 +100,6 @@ In the following example, the `Observable Data` is bound to a collection of colo
 {% endhighlight %}
 
 ![Blazor Mention with observable collection binding](./images/blazor-mention-observable-collection-binding.png)
-
-### Dynamic object binding 
-
-The [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-5.0) is a dynamic object type that allows you to bind data to a component in a flexible and dynamic way. It is similar to the `ExpandoObject`, but it has some additional features and capabilities.
-
-To bind data stored in a `DynamicObject` to the Mention, you can pass the object as the value for the `DataSource` property. The Mention will then use the data stored in the `DynamicObject` to generate the suggestion list items.
-
-In the following example, the `DynamicObject` is bound to the collection of customer data.
-
-{% highlight razor %}
-
-{% include_relative code-snippet/dynamic-object-binding.razor %}
-
-{% endhighlight %}
-
-![Blazor Mention with dynamic object binding](./images/blazor-mention-dynamic-data-binding.png)
 
 ### Enum data binding
 
@@ -165,38 +149,6 @@ The [Web Api Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#
 
 ![Blazor Mention with web API adaptor](./images/blazor-mention-web-api-adaptor.png)
 
-### Custom adaptor
-
-The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing customize data binding and editing operations in the Mention component.
-
-For implementing custom data binding in the Mention, the `DataAdaptor` class is used. This abstract class acts as a base class for the custom adaptor.
-
-The `DataAdaptor` abstract class has both synchronous and asynchronous method signatures, which can be overridden in the custom adaptor. Following are the method signatures present in this class.
-
-```csharp
-public abstract class DataAdaptor
-{
-    /// <summary>
-    /// Performs data Read operation synchronously.
-    /// </summary>
-    public virtual object Read(DataManagerRequest dataManagerRequest, string key = null)
-
-    /// <summary>
-    /// Performs data Read operation asynchronously.
-    /// </summary>
-    public virtual Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string key = null)
-}
-```
-In custom Adaptor, the data binding operation can be performed in the Mention component by providing the custom adaptor class and overriding the Read or ReadAsync method of the DataAdaptor abstract class.
-
-The following sample code demonstrates implementing custom data binding using custom adaptor.
-
-{% highlight razor %}
-
-{% include_relative code-snippet/custom-adaptor.razor %}
-
-{% endhighlight %}
-
 ### Offline mode
 
 The `Offline` property of `DataManager` allows you to specify whether the data should be loaded from the server or from the local cache. If `Offline` is set to `true`, the `DataManager` will try to load data from the local cache first, and if that is not possible, it will try to load it from the server. This can be useful in situations where you want to minimise the number of requests to the server and improve its performance.
@@ -210,120 +162,6 @@ The following example is for remote data binding and enabled `Offline` mode.
 {% endhighlight %}
 
 ![Blazor Mention with Offline mode](./images/blazor-mention-offline-mode.png)
-
-### Entity framework
-
-Follow these steps to consume data from the [Entity Framework](https://blazor.syncfusion.com/documentation/common/data-binding/bind-entity-framework) in the Mention component.
-
-#### Create DBContext class
-
-The first step is to create a DBContext class called `OrderContext` to connect to a Microsoft SQL Server database.
-
-```csharp
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using EFDropDown.Shared.Models;
-
-namespace EFDropDown.Shared.DataAccess
-{
-    public class OrderContext : DbContext
-    {
-        public virtual DbSet<Shared.Models.Order> Orders { get; set; }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Blazor\DropDownList\EFDropDown\Shared\App_Data\NORTHWND.MDF;Integrated Security=True;Connect Timeout=30");
-            }
-        }
-    }
-}
-```
-
-#### Create data access layer to perform data operation
-
-Now, create a class named `OrderDataAccessLayer`, which act as data access layer for retrieving the records from the database table.
-
-```csharp
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using EFDropDown.Shared.Models;
-
-namespace EFDropDown.Shared.DataAccess
-{
-    public class OrderDataAccessLayer
-    {
-        OrderContext db = new OrderContext();
-
-        //To Get all Orders details
-        public DbSet<Order> GetAllOrders()
-        {
-            try
-            {
-                return db.Orders;
-            }
-            catch
-            {
-                throw;
-            }
-        }
-    }
-}
-```
-
-#### Creating web API controller
-
-A Web API Controller has to be created, which allows the Mention to directly consume data from the Entity framework.
-
-```csharp
-using EFDropDown.Shared.DataAccess;
-using EFDropDown.Shared.Models;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Primitives;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
-using Microsoft.AspNetCore.Http;
-
-namespace EFDropDown.Controllers
-{
-    [Route("api/[controller]")]
-    [ApiController]
-    //TreeGrid
-    public class DefaultController : ControllerBase
-    {
-        OrderDataAccessLayer db = new OrderDataAccessLayer();
-        [HttpGet]
-        public object Get()
-        {
-            IQueryable<Order> data = db.GetAllOrders().AsQueryable();
-            var count = data.Count();
-            var queryString = Request.Query;
-            if (queryString.Keys.Contains("$inlinecount"))
-            {
-                StringValues Skip;
-                StringValues Take;
-                int skip = (queryString.TryGetValue("$skip", out Skip)) ? Convert.ToInt32(Skip[0]) : 0;
-                int top = (queryString.TryGetValue("$top", out Take)) ? Convert.ToInt32(Take[0]) : data.Count();
-                return new { Items = data.Skip(skip).Take(top), Count = count };
-            }
-            else
-            {
-                return data;
-            }
-         }
-    }
-}
-```
 
 ## Events
 
@@ -350,6 +188,8 @@ The `OnActionComplete` event is a built-in event of the Mention component that i
 ### OnActionFailure event
 
 The `OnActionFailure` event is a built-in event of Mention component that is triggered when an error occurs while fetching data from a remote server. This event can be used to handle errors that may occur during the data fetch process and take appropriate action, such as displaying an error message or retrying the request.
+
+In the following example, the `Url` is set to an incorrect value, So the server is unable to fulfil the data fetch request, and it will triggers the `OnActionFailure` event.
 
 {% highlight razor %}
 
