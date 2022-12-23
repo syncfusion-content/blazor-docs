@@ -24,7 +24,7 @@ In the [Blazor HeatMap Chart](https://www.syncfusion.com/blazor-components/blazo
 </SfHeatMap>
 
 @code{
-    int[,] GetDefaultData()
+    public int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
         {
@@ -37,8 +37,8 @@ In the [Blazor HeatMap Chart](https://www.syncfusion.com/blazor-components/blazo
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    public string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    public string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {

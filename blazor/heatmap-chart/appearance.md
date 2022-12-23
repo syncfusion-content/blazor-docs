@@ -33,7 +33,7 @@ Change the width, color, and radius of the heat map cells by using the [HeatMapC
 </SfHeatMap>
 
 @code{
-    int[,] GetDefaultData()
+    public int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
         {
@@ -46,8 +46,8 @@ Change the width, color, and radius of the heat map cells by using the [HeatMapC
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    public string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    public string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {
@@ -77,7 +77,7 @@ Enable or disable the cell highlighting while hovering over the heat map cells b
 </SfHeatMap>
 
 @code{
-    int[,] GetDefaultData()
+    public int[,] GetDefaultData()
         {
             int[,] dataSource = new int[,]
             {
@@ -90,8 +90,8 @@ Enable or disable the cell highlighting while hovering over the heat map cells b
             };
             return dataSource;
         }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    public string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    public string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {
@@ -128,7 +128,7 @@ The [ColorGradientMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 </SfHeatMap>
 
 @code {
-    int[,] GetDefaultData()
+    public int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
         {
@@ -141,8 +141,8 @@ The [ColorGradientMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    public string[] XAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    public string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {
@@ -173,7 +173,7 @@ Set the margin for the heatmap from its container by using the [HeatMapMargin](h
 </SfHeatMap>
 
 @code{
-     int[,] GetDefaultData()
+     public int[,] GetDefaultData()
         {
             int[,] dataSource = new int[,]
             {
@@ -186,8 +186,8 @@ Set the margin for the heatmap from its container by using the [HeatMapMargin](h
             };
             return dataSource;
         }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    public string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    public string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {
@@ -219,7 +219,7 @@ The title is used to provide a quick information about the data plotted in heatm
 </SfHeatMap>
 
 @code{
-    int[,] GetDefaultData()
+    public int[,] GetDefaultData()
         {
             int[,] dataSource = new int[,]
             {
@@ -232,8 +232,8 @@ The title is used to provide a quick information about the data plotted in heatm
             };
             return dataSource;
     }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    public string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    public string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {
@@ -263,7 +263,7 @@ The visibility of data labels can be toggled using the [ShowLabel](https://help.
 </SfHeatMap>
 
 @code{
-    int[,] GetDefaultData()
+    public int[,] GetDefaultData()
         {
             int[,] dataSource = new int[,]
             {
@@ -276,8 +276,8 @@ The visibility of data labels can be toggled using the [ShowLabel](https://help.
             };
             return dataSource;
         }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    public string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    public string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {
@@ -310,7 +310,7 @@ The text attributes of the data label such as font-family, font-size, and color 
 </SfHeatMap>
 
 @code{
-    int[,] GetDefaultData()
+    public int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
         {
@@ -323,8 +323,8 @@ The text attributes of the data label such as font-family, font-size, and color 
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    public string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    public string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {
@@ -354,7 +354,7 @@ The format of the data label, such as currency, decimal, percent etc. can be cha
 </SfHeatMap>
 
 @code{
-    int[,] GetDefaultData()
+    public int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
         {
@@ -367,8 +367,8 @@ The format of the data label, such as currency, decimal, percent etc. can be cha
         };
         return dataSource;
     }
-    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    public string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    public string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {
