@@ -317,7 +317,7 @@ In the bellow example, the `Target` property of the Mention component is set to 
 
 <SfMention TItem="PersonData" Target="#mentionTarget" DataSource="@EmailData">
     <ChildContent>
-        <MentionFieldSettings Text="Name"></MentionFieldSettings>
+        <MentionFieldSettings Text="Name" Value="EmailId"></MentionFieldSettings>
     </ChildContent>
 </SfMention>
 <style>
