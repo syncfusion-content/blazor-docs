@@ -52,14 +52,14 @@ The list of supported BPMN shapes are as follows:
 
 | Shape | Image |
 | -------- | -------- |
-| Event | ![Event Shape](../images/Event.png) |
+| Event | ![Event Shape](../images/Bpmn-Event-Start.png) |
 | Gateway | ![Gateway Shape](../images/Gateway.png) |
 | Activity | ![Activity Shape](../images/Task.png) |
 | Message | ![Message Shape](../images/Message.png) |
 | DataStore | ![DataStore Shape](../images/Datasource.png) |
 | DataObject | ![DataObject Shape](../images/Dataobject.png) |
 | Expanded Sub-Process | ![Expanded Sub-Process Shape](../images/Group.png) |
-| TextAnnotation | ![TextAnnotation Shape](../images/Group.png) |
-| Sequence Flow | ![TextAnnotation Shape](../images/Group.png) |
-| Association | ![TextAnnotation Shape](../images/Group.png) |
-| Message Flow | ![TextAnnotation Shape](../images/Group.png) |
+| TextAnnotation | ![TextAnnotation Shape](../images/Bpmn-TextAnnotation-Auto.png) |
+| Sequence Flow | ![TextAnnotation Shape](../images/Bpmn-SequenceFlow.png) |
+| Association | ![TextAnnotation Shape](../images/Bpmn-AssociationFlow.png) |
+| Message Flow | ![TextAnnotation Shape](../images/Bpmn-MessageFlow.png) |
