@@ -9,7 +9,7 @@ documentation: ug
 
 # Legend in Blazor HeatMap Chart Component
 
-The legend is used to provide the information about the heat map cell. You can enable the legend by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapLegendSettings.html#Syncfusion_Blazor_HeatMap_HeatMapLegendSettings_Visible) property to true.
+The legend is used to provide the information about the heat map cell. You can enable the legend by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapLegendSettings.html#Syncfusion_Blazor_HeatMap_HeatMapLegendSettings_Visible) property to **true**.
 
 ```cshtml
 
