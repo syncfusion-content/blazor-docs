@@ -45,12 +45,12 @@ Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor W
 
 ### Blazor Server App
 
-* For **.NET 6 and .NET 7** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+* For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
 * For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 10" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 10" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -95,7 +95,7 @@ namespace BlazorApplication
 Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 11" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 11" %}
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -142,12 +142,12 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 
 ### Blazor Server App
 
-* For **.NET 6 and .NET 7** app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+* For **.NET 6** app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
 * For **.NET 5 and .NET 3.X** app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
-{% highlight cshtml tabtitle=".NET 6 & .NET 7 (~/_Layout.cshtml)" hl_lines="3 4 5" %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="3 4 5" %}
 
 <head>
     ...
@@ -193,12 +193,12 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 ### Blazor Server App
 
-* For **.NET 6 and .NET 7** app, refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+* For **.NET 6** app, refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
 * For **.NET 5 and .NET 3.X** app, refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
-{% highlight cshtml tabtitle=".NET 6 & .NET 7 (~/_Layout.cshtml)" hl_lines="4 5 6" %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4 5 6" %}
 
 <head>
     ....
@@ -304,6 +304,54 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 * Press <kbd>ctrl</kbd>+<kbd>F5</kbd> or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion Blazor Mention component will be rendered in the default web browser.
 
 ![Blazor Mention Component](images/blazor-mention.png)
+
+## Mention target
+
+The `Target` property of the Mention component allows you to specify an element on the page to which the mention element should be attached. This can be useful when you want to display the mention element in a specific location on the page. For example, you might use the `Target` property to attach the mention element to a specific div element or to a specific input field or to a specific textarea field. To specify the target element, you can pass a CSS selector, a DOM element.
+
+In the bellow example, the `Target` property of the Mention component is set to the CSS selector `#mentionTarget`, which matches the textarea element with an id of `mentionTarget`. The mention element will be appended to the textarea element as a child element, allowing the user to select or mention a specific entity within the textarea.
+
+{% highlight razor %}
+
+<textarea id="mentionTarget" placeHolder="Type @@ and tag user"></textarea>
+
+<SfMention TItem="PersonData" Target="#mentionTarget" DataSource="@EmailData">
+    <ChildContent>
+        <MentionFieldSettings Text="Name"></MentionFieldSettings>
+    </ChildContent>
+</SfMention>
+<style>
+    #mentionTarget {
+        min-height: 100px;
+        border: 1px solid #D7D7D7;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 14px;
+        width: 600px;
+    }
+
+    div#mentionTarget[placeholder]:empty:before {
+        content: attr(placeholder);
+        color: #555;
+    }
+</style>
+@code {
+    public class PersonData
+    {
+        public string Name { get; set; }
+        public string EmailId { get; set; }
+        public string EmployeeImage { get; set; }
+    }
+    List<PersonData> EmailData = new List<PersonData> {
+    new PersonData() { Name="Selma Rose", EmployeeImage="7", EmailId="selma@gmail.com" },
+    new PersonData() { Name="Russo Kay", EmployeeImage="8", EmailId="russo@gmail.com" },
+    new PersonData() { Name="Camden Kate", EmployeeImage="9", EmailId="camden@gmail.com" }
+  };
+}
+
+{% endhighlight %}
+
+![Blazor Mention target](images/blazor-mention-target.png)
 
 ## See also
 
