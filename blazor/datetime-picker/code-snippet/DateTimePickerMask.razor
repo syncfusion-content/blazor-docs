@@ -1,6 +1,8 @@
 ﻿@using Syncfusion.Blazor.Calendars
 
-<SfDateTimePicker TValue="DateTime?" EnableMask="true" @bind-Value="@Value"></SfDateTimePicker>
+<SfDateTimePicker TValue="DateTime?" EnableMask="true" @bind-Value="@Value">
+    <DateTimePickerMaskPlaceholder Day="day" Month="month" Year="year" Hour="hour" Minute="minute" Second="second" DayOfWeek="weekday"></DateTimePickerMaskPlaceholder>
+</SfDateTimePicker>
 
 
 @code {
