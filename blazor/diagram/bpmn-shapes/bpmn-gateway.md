@@ -9,7 +9,7 @@ documentation: ug
 
 # BPMN gateway in Blazor Diagram Component
 
-Gateway is used to control the flow of a process and it is represented as a diamond shape. To create a gateway, the shape property of the node should be set to “Gateway” and the `Gateway` property can be set with any of the appropriate gateways. The following code example explains how to create a BPMN Gateway.
+Gateway is used to control the flow of a process and it is represented as a diamond shape. The `GatewayType` property of the `BpmnGateway` can be set with any of the appropriate gateways. The following code example explains how to create a BPMN Gateway.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -35,21 +35,19 @@ Gateway is used to control the flow of a process and it is represented as a diam
             Height = 100,
             //Unique Id of the node.
             ID = "node1",
-            Shape = new BpmnShape()
+            Shape = new BpmnGateway()
             {
-                //Sets type to Bpmn and shape to Gateway.
-                Type = NodeShapes.Bpmn,
-                Shape = BpmnShapes.Gateway,
-                //Sets type of the gateway to None.
-                Gateway = new BpmnGateway() { Type = BpmnGateways.None }
+                //Sets gateway type to None.
+                GatewayType = BpmnGatewayType.None }
             }
         };
         nodes.Add(node);
     }
 }
 ```
+![GateWay BPMN Shape](../images/bpmn-gataway-none.png)
 
-N> By default, the `Gateway` will be set to **None**.
+N> By default, the `GatewayType` will be set to **None**.
 
 There are several types of gateways as follows:
 
@@ -57,9 +55,9 @@ There are several types of gateways as follows:
 | -------- | -------- |
 | None | ![GateWay BPMN Shape](../images/bpmn-gataway-none.png) |
 | Exclusive | ![Exclusive GateWay BPMN Shape](../images/Exclusive.png) |
-| Parallel | ![Parallel GateWay BPMN Shape](../images/Parallel.png) |
+| Parallel | ![Parallel GateWay BPMN Shape](../images/Bpmn-Gateway-Parallel.png) |
 | Inclusive | ![Inclusive GateWay BPMN Shape](../images/Inclusive.png) |
 | Complex | ![Complex GateWay BPMN Shape](../images/Complex.png) |
 | EventBased | ![EventBased GateWay BPMNShape](../images/EventBased.png) |
 | ExclusiveEventBased | ![Exclusive EventBased GateWay BPMN Shape](../images/EEBased.png) |
-| ParallelEventBased | ![Parallel EventBased GateWay BPMN Shape](../images/PEBased.png) |
+| ParallelEventBased | ![Parallel EventBased GateWay BPMN Shape](../images/Bpmn-Gateway-ParallelEventBased.png) |

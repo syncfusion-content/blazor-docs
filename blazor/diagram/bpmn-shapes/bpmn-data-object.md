@@ -9,7 +9,7 @@ documentation: ug
 
 # BPMN Data Object in Blazor Diagram Component
 
-A data object represents information flowing through the process, such as data placed into the process, data resulting from the process, data that needs to be collected, or data that must be stored. To define a `DataObject`, set the shape to **DataObject** and the type property defines whether data is an input or output. You can create multiple instances of data object with the collection property of data.
+A data object represents information flowing through the process, such as data placed into the process, data resulting from the process, data that needs to be collected, or data that must be stored. To define a `DataObject`, set the Shape as **BpmnDataObject** and the `DataObjectType` property defines whether data is an input or output. You can create multiple instances of data object with the `IsCollectiveData` property of `BpmnDataObject`.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -35,17 +35,11 @@ A data object represents information flowing through the process, such as data p
             Height = 100,
             // Unique Id of the node.
             ID = "node1",
-            // Sets type to Bpmn and shape to DataObject.
-            Shape = new BpmnShape()
+            // Sets shape to DataObject.
+            Shape = new BpmnDataObject()
             {
-                Type = NodeShapes.Bpmn,
-                Shape = BpmnShapes.DataObject,
-                // Sets collection to true when DataObject is not a Single instance.
-                DataObject = new BpmnDataObject()
-                {
-                    Collection = true,
-                    Type = BpmnDataObjects.Input
-                }
+                IsCollectivwData = true,
+                DataObjectType = BpmnDataObjectType.Input
             }
         };
         nodes.Add(node);
@@ -55,8 +49,8 @@ A data object represents information flowing through the process, such as data p
 
 The following table contains various representation of the BPMN data object.
 
-| Boundary | Image |
-| -------- | -------- |
-| Collection Data Object | ![Collection Data BPMN Shape](../images/Dataobject.png) |
-| Data Input | ![Data Input BPMN Shape](../images/DataInput.png) |
-| Data Output | ![Data Output BPMN Shape](../images/DataOutput.png) |
+| DataObjectType | Symbol |IsCollectiveData|
+| -------- | -------- |-------- |
+| None | ![Collection Data BPMN Shape](../images/Bpmn-DataObject-None.png) |![ Data BPMN Shape](../images/Bpmn-DataObject-Collective-None.png) |
+| Data Input | ![Data Input BPMN Shape](../images/Bpmn-DataObject-Input.png) |![Data Input BPMN Shape](../images/Bpmn-DataObject-Collective-Input.png) |
+| Data Output | ![Data Output BPMN Shape](../images/Bpmn-DataObject-Output.png) |![Data Output BPMN Shape](../images/Bpmn-DataObject-Collective-OutPut.png) |
