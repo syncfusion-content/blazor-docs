@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Bubble heat map in Blazor HeatMap Chart Component | Syncfusion
-description: Checkout and learn here all about Bubble heat map in Syncfusion Blazor HeatMap Chart component and more.
+title: Bubble heatmap in Blazor HeatMap Chart Component | Syncfusion
+description: Checkout and learn here all about Bubble heatmap in Syncfusion Blazor HeatMap Chart component and more.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
 ---
 
-# Bubble Heat Map in Blazor HeatMap Chart Component
+# Bubble HeatMap in Blazor HeatMap Chart Component
 
-Data points represent the data source values with `Gradient` or `Fixed` colors in the heat map. You can customize the appearance of these data points by changing the `Color` and `Shape` attributes. The data points can be represented in color fill or bubble shape by defining the `TileType` property. By default, the data points are color filled with `Gradient` or `Fixed` and this depiction of data points is defined as `Rect` in the `TileType` property.
+Data points represent the data source values with `Gradient` or `Fixed` colors in the heatmap. You can customize the appearance of these data points by changing the `Color` and `Shape` attributes. The data points can be represented in color fill or bubble shape by defining the `TileType` property. By default, the data points are color filled with `Gradient` or `Fixed` and this depiction of data points is defined as `Rect` in the `TileType` property.
 
 The cell customizations and color mapping for `Rect` tile type is defined in `Appearance` and `Palette` sections in detail.
 
@@ -17,13 +17,13 @@ The cell customizations and color mapping for `Rect` tile type is defined in `Ap
 
 The data points can be represented in the bubble along with its attributes by setting the [TileType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_TileType) property to **Bubble**.
 
-In bubble heat map, you can display the data points with bubble size, bubble colors, and sector attributes of the bubble.
+In bubble heatmap, you can display the data points with bubble size, bubble colors, and sector attributes of the bubble.
 
 ### Bubble size
 
-In this bubble heat map type, the size factor of the bubble is used to denote the data variations. The radius of the bubble varies according to data values. By default, the bubble with small size denotes the data value with small magnitude and the larger bubble size denotes the data value with larger magnitude. This behavior can be inversed by using the [IsInversedBubbleSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_IsInversedBubbleSize) property.
+In this bubble heatmap type, the size factor of the bubble is used to denote the data variations. The radius of the bubble varies according to data values. By default, the bubble with small size denotes the data value with small magnitude and the larger bubble size denotes the data value with larger magnitude. This behavior can be inversed by using the [IsInversedBubbleSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_IsInversedBubbleSize) property.
 
-To render a bubble heat map with size series, set the [BubbleType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_BubbleType) property to **Size**.
+To render a bubble heatmap with size series, set the [BubbleType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_BubbleType) property to **Size**.
 
 ```cshtml
 
@@ -74,7 +74,7 @@ To render a bubble heat map with size series, set the [BubbleType](https://help.
 
 ### Bubble color
 
-In heat map, defined with this tile type, the data points will be represented with same sized bubbles and the data value variations are represented with the bubble colors.
+In heatmap, defined with this tile type, the data points will be represented with same sized bubbles and the data value variations are represented with the bubble colors.
 
 To represent the data points with variations in bubble colors, set the [BubbleType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_BubbleType) property to **Color**.
 
@@ -126,7 +126,7 @@ To represent the data points with variations in bubble colors, set the [BubbleTy
 
 ### Bubble sector
 
-In this bubble heat map type, the sector of the bubble decides the magnitude of data point. If the sector is large, then the data point value will be high.
+In this bubble heatmap type, the sector of the bubble decides the magnitude of data point. If the sector is large, then the data point value will be high.
 
 To render the data points with bubble sector, set the [BubbleType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_BubbleType) property to **Sector**.
 
