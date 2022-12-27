@@ -875,9 +875,9 @@ It groups the number of resources under each date and is applicable only on the 
 
 N> This kind of grouping by date is not applicable on any of the **timeline views**.
 
-### Different working days with grouping resource by date
+### Displaying only custom work days in Scheduler when grouped by date
 
-It groups the number of resources under each date and hides non working days and is applicable only on the calendar views such as Day, Week, Work Week, Month, Agenda and Month-Agenda. To enable such grouping, set `ByDate` option to `true` within the `Group` property.
+In Scheduler, you can set custom work days for each resource and group the Scheduler by date to display these work days. By default, the Scheduler will show all days when it is grouped by date, even if they are not included in the custom work days for the resources. However, you can use the [`HideNonWorkingDays`]
 
 The different work days for the each resources are provided by using the `WorkDaysField` property and the Scheduler will be displayed the provided dates alone when `HideNonWorkingDays` property set as `true`.
 
@@ -886,6 +886,10 @@ The different work days for the each resources are provided by using the `WorkDa
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Buttons
+    div class="col-lg-12" style="padding-top:15px">
+    <SfCheckBox  @bind-Checked="@HideNonWorkingDays" Label="Hide non working days"></SfCheckBox>
+</div>
+<div class="col-lg-12 control-section">
     <SfSchedule TValue="ScheduleData.ResourceData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">
         <ScheduleGroup ByDate="true" HideNonWorkingDays="@HideNonWorkingDays" Resources="@groupData"></ScheduleGroup>
         <ScheduleResources>
@@ -905,6 +909,7 @@ The different work days for the each resources are provided by using the `WorkDa
             </ScheduleField>
         </ScheduleEventSettings>
     </SfSchedule>
+</div>
 @code{
     private DateTime CurrentDate { get; set; } = new DateTime(DateTime.Today.Year, 1, 12);
     private List<ScheduleData.ResourceData> dataSource = new ScheduleData().GetResourceData();
@@ -924,9 +929,9 @@ The different work days for the each resources are provided by using the `WorkDa
 }
 ```
 
-![Different working days with grouping resource by date in Blazor Scheduler](images/blazor-scheduler-hide-non-working-days.png)
+![Displaying only custom work days in Scheduler when grouped by date in Blazor Scheduler](images/blazor-scheduler-hide-non-working-days.png)
 
-N> This kind of Different working days with grouping resource by date is not applicable on any of the **timeline views**.
+N> This kind of Displaying only custom work days in Scheduler when grouped by date is not applicable on any of the **timeline views**.
 
 ## Working with shared events
 
