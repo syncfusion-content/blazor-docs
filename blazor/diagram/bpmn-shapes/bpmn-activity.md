@@ -40,14 +40,11 @@ There are two types of activities. They are listed as follows:
             Height = 100,
             // Unique Id of the node.
             ID = "node1",
-            // Sets the type of shape to Bpmn and shape to activity.
-            Shape = new BpmnShape()
-            {
-                Type = NodeShapes.Bpmn,
-                Shape = BpmnShapes.Activity,
-                // Sets the activity type to task.
-                Activity = new BpmnActivity() { Activity = BpmnActivities.Task },
-            }
+            // Sets the shape to activity.
+            Shape = new BpmnActivity() 
+            { 
+                ActivityType = BpmnActivityType.Task 
+            },
         };
         nodes.Add(node);
     }
@@ -56,7 +53,7 @@ There are two types of activities. They are listed as follows:
 
 ## BPMN activity task
 
-The `Task` property of the node allows you to define the type of task such as sending, receiving, user-based task, etc. By default, the `Type` property of task is set to **None**. The following code explains how to create different types of BPMN tasks. The events property of tasks allows you to represent these results as an event attached to the task.
+The `TaskType` property of the node allows you to define the type of task such as sending, receiving, user-based task, etc. By default, the `TaskType` property of task is set to **None**. This is shown by a small event symbol in the top of the corner. The following code explains how to create different types of BPMN tasks.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -82,19 +79,13 @@ The `Task` property of the node allows you to define the type of task such as se
             Height = 100,
             // Unique Id of the node.
             ID = "node1",
-            // Sets the type of shape to Bpmn and shape to activity.
-            Shape = new BpmnShape()
-            {
-                Type = NodeShapes.Bpmn,
-                Shape = BpmnShapes.Activity,
-                // Sets the activity type to task.
-                Activity = new BpmnActivity() 
-                { 
-                    Activity = BpmnActivities.Task,
-                    // Sets the type of the task to Send.
-                    Task = new BpmnTask() { Type = BpmnTasks.Send }
-                },
-            }
+            // Sets shape to BpmnActivity.
+            Shape = BpmnActivity() 
+            { 
+                ActivityType = BpmnActivityType.Task,
+                // Sets the type of the task to Send.
+                TaskType = BpmnTaskType.Send
+            },
         };
         nodes.Add(node);
     }   
@@ -114,9 +105,9 @@ The various types of BPMN tasks are tabulated as follows.
 | User | ![User Task BPMN Shape](../images/User.png) |
 | Script | ![Script Task BPMN Shape](../images/Script.png) |
 
-## BPMN activity sub process
+## BPMN activity collapsed sub-process
 
-A `Sub-process` is a group of tasks that is used to hide or reveal details of additional levels using the `Collapsed` property.
+A `Collapsed Sub-process` is a group of tasks that is used to hide or reveal details of additional levels. The following code explains how to create a `Collapsed Sub-Process`.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -142,279 +133,21 @@ A `Sub-process` is a group of tasks that is used to hide or reveal details of ad
             Height = 100,
             // Unique Id of the node.
             ID = "node1",
-            // Sets the type of shape to Bpmn and shape to activity.
-            Shape = new BpmnShape()
+            // Sets the shape to activity.
+            Shape =  BpmnActivity()
             {
-                Type = NodeShapes.Bpmn,
-                Shape = BpmnShapes.Activity,
-                // Sets the activity type to task.
-                Activity = new BpmnActivity()
-                {
-                    // Sets activity to subprocess.
-                    Activity = BpmnActivities.SubProcess,
-                    // Set collapsed of subprocess to true.
-                    SubProcess = new BpmnSubProcess() { Collapsed = true }
-                },
-            }
-        };
-        nodes.Add(node);
-    }
-}
-```
-
-The different types of subprocess are as follows:
-
-    * Event subprocess
-    * Transaction
-
-### Event sub Process
-
-A `SubProcess` is defined as an event SubProcess when it is triggered by an event. An event SubProcess is placed within another subprocess that part of the normal flow of its parent process is not. You can set event to a subprocess with the `Event` and `Trigger` properties of the subprocess. The `Type` property of subprocess allows you to define the type of subprocess whether it should be event subprocess or transaction subprocess.
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-
-@* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
-
-@code
-{
-    // Initialize the node collection with node.
-    DiagramObjectCollection<Node> nodes;
-
-    protected override void OnInitialized()
-    {
-        nodes = new DiagramObjectCollection<Node>();
-        Node node = new Node()
-        {
-            // Position of the node.
-            OffsetX = 100,
-            OffsetY = 100,
-            // Size of the node
-            Width = 100,
-            Height = 100,
-            // Unique id of the node.
-            ID = "node1",
-            Shape = new BpmnShape()
-            {
-                Type = NodeShapes.Bpmn,
-                Shape = BpmnShapes.Activity,
-                // Sets activity to SubProcess.
-                Activity = new BpmnActivity()
-                {
-                    Activity = BpmnActivities.SubProcess,
-                    // Sets the collapsed to true and type to Event.
-                    SubProcess = new BpmnSubProcess()
-                    {
-                        Collapsed = true,
-                        Type = BpmnSubProcessTypes.Event,
-                        // Sets event to Start and trigger to Message.
-                        Events = new List<BpmnSubEvent>()
-                        {
-                            new BpmnSubEvent()
-                            {
-                                Event = BpmnEvents.Start, Trigger = BpmnTriggers.Message
-                            }
-                        }
-                    }
-                }
-            }
-        };
-        nodes.Add(node);
-    }
-}
-```
-
-### Transaction sub process
-
-The `Transaction` is a set of activities that logically belong together that all contained activities must complete their parts of the transaction, otherwise the process is fail.
-
-The execution result of a transaction is one of
-* Successful Completion
-* Unsuccessful Completion (Cancel)
-* Hazard (Exception)
-
-The `Events` property of subprocess allows you to represent these results as an event attached to the subprocess.
-
-* The event object allows you to define the type of event by which the subprocess will be triggered. The name of the event can be defined to identify the event at runtime.
-
-* The event’s offset property is used to set the fraction or ratio (relative to parent) that defines the position of the event shape.
-
-* The trigger property defines the type of the event trigger.
-
-* You can also use define ports and labels to subprocess events by using the event’s ports and labels properties.
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-
-@* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
-
-@code
-{
-    // Initialize the node collection with node.
-    DiagramObjectCollection<Node> nodes;
-
-    protected override void OnInitialized()
-    {
-        nodes = new DiagramObjectCollection<Node>();
-        Node node = new Node()
-        {
-            // Position of the node.
-            OffsetX = 100,
-            OffsetY = 100,
-            // Size of the node.
-            Width = 100,
-            Height = 100,
-            // Unique id of the node.
-            ID = "node1",
-            // Defines the type to BPMN and shape to activity.
-            Shape = new BpmnShape()
-            {
-                Type = NodeShapes.Bpmn,
-                Shape = BpmnShapes.Activity,
-                // Sets the activity to subprocess.
-                Activity = new BpmnActivity()
-                {
-                    Activity = BpmnActivities.SubProcess,
-                    // Sets collapsed to true and type to Transaction.
-                    SubProcess = new BpmnSubProcess()
-                    {
-                        Collapsed = true,
-                        Type = BpmnSubProcessTypes.Transaction,
-                        // Sets offset and visible for cancel and offset for failure.
-                        Transaction = new BpmnTransactionSubProcess()
-                        {
-                            Cancel = new BpmnSubEvent() { Visible = true, Offset = new Point() { X = 0.25, Y = 1 } },
-                            Failure = new BpmnSubEvent() { Offset = new Point() { X = 0.75, Y = 1 } }
-                        }
-                    },
-                }
-            }
-        };
-        nodes.Add(node);
-    }
-}
-```
-
-### Process
-
-The `Processes` is an array collection that defines the children values for BPMN subprocess.
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-
-@* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" />
-
-@code
-{
-    //Initialize the node collection with node.
-    DiagramObjectCollection<Node> nodes;
-    DiagramObjectCollection<Connector> connectors;
-
-    protected override void OnInitialized()
-    {
-        nodes = new DiagramObjectCollection<Node>();
-        Node node1 = new Node()
-        {
-            ID = "Start",
-            Width = 50,
-            Height = 50,
-            Margin = new DiagramThickness() { Left = 10, Top = 50 },
-            Shape = new BpmnShape()
-            {
-                Type = NodeShapes.Bpmn,
-                Shape = BpmnShapes.Event,
-                Events = new BpmnSubEvent() { Event = BpmnEvents.Start }
-            }
-        };
-        Node node2 = new Node()
-        {
-            ID = "End",
-            Width = 50,
-            Height = 50,
-            Margin = new DiagramThickness() { Left = 200, Top = 50 },
-            Shape = new BpmnShape()
-            {
-                Type = NodeShapes.Bpmn,
-                Shape = BpmnShapes.Event,
-                Events = new BpmnSubEvent() { Event = BpmnEvents.End }
-            }
-        };
-        Node node3 = new Node()
-        {
-            ID = "Node1",
-            Width = 50,
-            Height = 50,
-            Margin = new DiagramThickness() { Left = 100, Top = 200 },
-            Shape = new BpmnShape()
-            {
-                Type = NodeShapes.Bpmn,
-                Shape = BpmnShapes.Activity,
-                Activity = new BpmnActivity()
-                {
-                    Activity = BpmnActivities.SubProcess,
-                    SubProcess = new BpmnSubProcess() { Collapsed = false }
-                }
+                // Sets activity type to subprocess.
+                ActivityType = BpmnActivityType.CollapsedSubProcess,
             },
-            Constraints = NodeConstraints.Default | NodeConstraints.AllowDrop
         };
-        Node node4 = new Node()
-        {
-            ID = "ActivityProcessNode",
-            Width = 300,
-            Height = 300,
-            MaxHeight = 400,
-            MaxWidth = 400,
-            MinWidth = 200,
-            MinHeight = 200,
-            OffsetX = 200,
-            OffsetY = 200,
-            Shape = new BpmnShape()
-            {
-                Type = NodeShapes.Bpmn,
-                Shape = BpmnShapes.Activity,
-                Activity = new BpmnActivity()
-                {
-                    Activity = BpmnActivities.SubProcess,
-                    SubProcess = new BpmnSubProcess()
-                    {
-                        Collapsed = false,
-                        Type = BpmnSubProcessTypes.Event,
-                        Processes = new DiagramObjectCollection<string> { "Start", "End", "Node1" }
-                    }
-                }
-            },
-            Constraints = NodeConstraints.Default | NodeConstraints.AllowDrop
-        };
-        nodes.Add(node1);
-        nodes.Add(node2);
-        nodes.Add(node3);
-        nodes.Add(node4);
-
-        connectors = new DiagramObjectCollection<Connector>();
-        Connector connector1 = new Connector()
-        {
-            ID = "Connector1",
-            SourceID = "Start",
-            TargetID = "Node1"
-        };
-        Connector connector2 = new Connector()
-        {
-            ID = "Connector2",
-            SourceID = "Node1",
-            TargetID = "End"
-        };
-        connectors.Add(connector1);
-        connectors.Add(connector2);
+        nodes.Add(node);
     }
 }
 ```
 
 ### Loop
 
-`Loop` is a task that is internally being looped. The loop property of task allows you to define the type of loop. The default value for `Loop` is **None**. You can define the loop property in subprocess BPMN shape as shown in the following code.
+`LoopActivity` is a task that is internally being looped. The `LoopActivity` property of `BpmnActivity` allows you to define the type of loop. The default value for `LoopActivity` is **None**. You can define the LoopActivity property in BPMN Activity as shown in the following code.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -440,22 +173,11 @@ The `Processes` is an array collection that defines the children values for BPMN
             Height = 100,
             // Unique Id of the node.
             ID = "node1",
-            // Defines the type to BPMN and shape to activity.
-            Shape = new BpmnShape()
+            // Defines the shape to activity.
+            Shape = new BpmnActivity()
             {
-                Type = NodeShapes.Bpmn,
-                Shape = BpmnShapes.Activity,
-                // Set the activity to subprocess.
-                Activity = new BpmnActivity()
-                {
-                    Activity = BpmnActivities.SubProcess,
-                    // Sets collapsed to true and loop to standard.
-                    SubProcess = new BpmnSubProcess()
-                    {
-                        Collapsed = true,
-                        Loop = BpmnLoops.Standard,
-                    },
-                }
+                ActivityType = BpmnActivityType.CollapsedSubProcess,
+                LoopActivity = BpmnLoopCharacteristic.Standard,
             }
         };
         nodes.Add(node);
@@ -465,15 +187,16 @@ The `Processes` is an array collection that defines the children values for BPMN
 
 The following table contains various types of BPMN loops.
 
-| Loops | Task | Subprocess |
+| LoopActivity | Task | Subprocess |
 | -------- | -------- | --------|
-| Standard | ![Standard Task BPMN Shape](../images/Standard1.png)  | ![Standard Subprocess BPMN Shape](../images/Standard2.png) |
-| SequenceMultiInstance | ![Sequence MultiInstance Task BPMN Shape](../images/Sequence1.png) |  ![SequenceMultiInstance Subprocess BPMN Shape](../images/Sequence2.png)|
-| ParallelMultiInstance | ![ParallelMultiInstance Task BPMNShape](../images/PMultiInstance1.png) | ![ParallelMultiInstance Subprocess BPMN Shape](../images/PMultiInstance2.png) |
+| None | ![None Task BPMN Shape](../images/Bpmn-Task-Loop-None.png)  | ![None Subprocess BPMN Shape](../images/Bpmn-CollapsedSub-Process-Loop-None.png) |
+| Standard | ![Standard Task BPMN Shape](../images/Bpmn-Task-Loop-Standard.png)  | ![Standard Subprocess BPMN Shape](../images/Bpmn-CollapsedSub-Process-Loop-Standard.png) |
+| SequenceMultiInstance | ![Sequence MultiInstance Task BPMN Shape](../images/Bpmn-Task-Loop-Sequential.png) |  ![SequenceMultiInstance Subprocess BPMN Shape](../images/Bpmn-CollapsedSub-Process-Loop-Sequential.png)|
+| ParallelMultiInstance | ![ParallelMultiInstance Task BPMNShape](../images/Bpmn-Task-Loop-Parallel.png) | ![ParallelMultiInstance Subprocess BPMN Shape](../images/Bpmn-CollapsedSub-Process-Loop-Parallel.png) |
 
 ### Compensation
 
-`Compensation` is triggered when the operation is partially failed and enabled it with the compensation property of the task and the subprocess.
+`IsCompensationActivity` is triggered when the operation is partially failed and enabled it with the    `IsCompensationActivity` property of the Activity.By default the `IsCompensationActivity` is set to false.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -499,60 +222,25 @@ The following table contains various types of BPMN loops.
             Height = 100,
             // Unique id of the node.
             ID = "node1",
-            // Defines the type to BPMN and shape to activity.
-            Shape = new BpmnShape()
+            // Defines the shape to activity.
+            Shape = BpmnActivity()
             {
-                Type = NodeShapes.Bpmn,
-                Shape = BpmnShapes.Activity,
-                // Set the activity to task.
-                Activity = new BpmnActivity()
-                {
-                    Activity = BpmnActivities.Task,
-                    // Set compensation to true.
-                    Task = new BpmnTask()
-                    {
-                        Compensation = true,
-                    },
-                }
-            }
-        };
-        Node node2 = new Node()
-        {
-            // Position of the node.
-            OffsetX = 300,
-            OffsetY = 100,
-            // Size of the node.
-            Width = 100,
-            Height = 100,
-            // Unique id of the node.
-            ID = "node2",
-            // Defines the type to BPMN and shape to activity.
-            Shape = new BpmnShape()
-            {
-                Type = NodeShapes.Bpmn,
-                Shape = BpmnShapes.Activity,
-                // Set the activity to SubProcess
-                Activity = new BpmnActivity()
-                {
-                    Activity = BpmnActivities.SubProcess,
-                    // Sets collapsed and compensation to true.
-                    SubProcess = new BpmnSubProcess()
-                    {
-                        Collapsed = true,
-                        Compensation = true,
-                    },
-                }
+                ActivityType = BpmnActivityType.Task,
+                // Set compensation to true.
+                IsCompensationActivity = true,
             }
         };
         nodes.Add(node1);
-        nodes.Add(node2);
     }
 }
 ```
+ | Task | Subprocess |
+| -------- | -------- |
+ |![IsCompensationActivity Task BPMN Shape](../images/Bpmn-Task-Compensation.png)|![IsCompensationActivity CollapsedSub-Process BPMN Shape](../images/Bpmn-CollapsedSub-Process-Compensation.png)
 
 ### Call
 
-A `Call` activity is a global subprocess that is reused at various points of the business flow and set it with the call property of the task.
+A `Call` activity is a global sub-process that is reused at various points of the business flow and set it with the `IsCallActivity` property of the task.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -578,31 +266,23 @@ A `Call` activity is a global subprocess that is reused at various points of the
             Height = 100,
             // Unique Id of the node.
             ID = "node1",         
-            // Defines the type to BPMN and shape to activity.
-            Shape = new BpmnShape()
+            // Defines the shape to activity.
+            Shape = new BpmnActivity()
             {
-                Type = NodeShapes.Bpmn,
-                Shape = BpmnShapes.Activity,
-                // Sets the activity to task.
-                Activity = new BpmnActivity()
-                {
-                    Activity = BpmnActivities.Task,
-                    // Sets call to true.
-                    Task = new BpmnTask()
-                    {
-                        Call = true,
-                    },
-                }
+                ActivityType = BpmnActivityType.Task,
+                // Sets call to true.
+                IsCallActivity = true,
             }
         };
         nodes.Add(node);
     }
 }
 ```
+![IsAdHocActivity CollapsedSub-Process BPMN Shape](../images/Bpmn-Task-Call.png)
 
 ### Ad-Hoc
 
-An ad-hoc subprocess is a group of tasks that are executed in any order or skipped in order to fulfill the end condition and set it with the `Ad-hoc` property of subprocess.
+An ad-hoc subprocess is a group of tasks that are executed in any order or skipped in order to fulfill the end condition and set it with the `IsAdhocActivity` property of subprocess.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -628,32 +308,24 @@ An ad-hoc subprocess is a group of tasks that are executed in any order or skipp
             Height = 100,
             // Unique id of the node.
             ID = "node1",
-            // Defines the type to BPMN and shape to activity
-            Shape = new BpmnShape()
-            {
-                Type = NodeShapes.Bpmn,
-                Shape = BpmnShapes.Activity,
-                // Sets the activity to subprocess
-                Activity = new BpmnActivity()
-                {
-                    Activity = BpmnActivities.SubProcess,
-                    // Sets collapsed and ad hoc to true.
-                    SubProcess = new BpmnSubProcess()
-                    {
-                        Collapsed = true,
-                        Adhoc = true
-                    },
-                }
+            // Defines shape to activity
+            Shape = new BpmnActivity()
+            { 
+                ActivityType = BpmnActivityType.Subprocess, 
+                IsCompensation = true, 
+                SubProcessType = BpmnSubProcessType.Transaction,
+                IsAdhoc = true
             }
         };
         nodes.Add(node);
     }
 }
 ```
+![IsAdHocActivity CollapsedSub-Process BPMN Shape](../images/Bpmn-CollapsedSub-Process-AdHocpng.png)
 
-### Boundary
+### SubProcessType
 
-Boundary represents the type of task that is being processed. The `Boundary` property of subprocess allows you to define the type of boundary. By default, it is set to **Default**.
+SubProcessType represents the type of task that is being processed. The `SubProcessType` property of subprocess allows you to define the type of SubProcessType. By default, it is set to **Default**.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -679,22 +351,12 @@ Boundary represents the type of task that is being processed. The `Boundary` pro
             Height = 100,
             // Unique Id of the node.
             ID = "node1",
-            // Sets type to Bpmn and shape to Activity.
-            Shape = new BpmnShape()
-            {
-                Type = NodeShapes.Bpmn,
-                Shape = BpmnShapes.Activity,
-                // Sets activity to SubProcess.
-                Activity = new BpmnActivity()
-                {
-                    Activity = BpmnActivities.SubProcess,
-                    // Sets collapsed to true and boundary to Call.
-                    SubProcess = new BpmnSubProcess()
-                    {
-                        Collapsed = true,
-                        Boundary = Syncfusion.Blazor.Diagram.BpmnBoundary.Call
-                    },
-                }
+            // Sets shape to Activity.
+            Shape = new BpmnActivity() 
+            { 
+                ActivityType = BpmnActivityType.Subprocess, 
+                IsCompensation = true, 
+                SubProcessType = BpmnSubProcessType.Transaction,
             }
         };
         nodes.Add(node);
@@ -704,8 +366,9 @@ Boundary represents the type of task that is being processed. The `Boundary` pro
 
 The following table contains various types of BPMN boundaries.
 
-| Boundary | Image |
+| SubProcessType | Image |
 | -------- | -------- |
-| Call | ![Call Boundary BPMN Shape](../images/Call.png) |
-| Event | ![Event Boundary BPMN Shape](../images/Eventtask.png) |
-| Default | ![Default Boundary BPMN Shape](../images/DefaultBoundary.png) |
+| Call | ![Call Boundary BPMN Shape](../images/Bpmn-CollapsedSub-Process-Call.png) |
+| Event | ![Event Boundary BPMN Shape](../images/Bpmn-CollapsedSub-Process-Event.png) |
+| Transaction | ![Default Boundary BPMN Shape](../images/Bpmn-CollapsedSub-Process-Transaction.png) |
+| Default | ![Default Boundary BPMN Shape](../images/Bpmn-CollapsedSub-Process-Default.png) |
