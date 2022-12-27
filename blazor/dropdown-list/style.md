@@ -203,9 +203,9 @@ The following code demonstrates how to display a tooltip when hovering over the 
 
 ### Tooltip using HTMLAttribute in dropdown component
 
-To display the tooltip in the dropdown component, add the `title` attribute through the [HTMLAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_HtmlAttributes)  property. This updates the attribute on the root input element.
+To display the tooltip in the dropdown component not for individual popup items, add the `Title` attribute through the [HTMLAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_HtmlAttributes) property. This updates the attribute on the root input element.
 
-In the following example, the HtmlAttributes property is used to add the title attribute to the root input element of the DropDownList with the value "Title". This will display a tooltip with the text "Title" when the user hovers over the input element.
+In the following example, the `HtmlAttributes` property is used to add the title attribute to the root input element of the DropDownList with the value `Title`. This will display a tooltip with the text `Title` when the user hovers over the input element.
 
 {% highlight cshtml %}
 
@@ -288,7 +288,7 @@ In the following code, a single list Item is hidden using jsinterop.
 
 This is achieved by adding attributes to the li items based on the data source value with the help of the JSInterop. In the [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Opened) event, call the client-side script by passing the required arguments (data source and id) and adding the attributes based on the data source value obtained from the server.
 
-In the following example, the `Opened` event is used to call the `OnCreated` method when the DropDownList is opened. The `OnCreated` method gets the data source from the component instance and calls a JavaScript function using the JavaScript Interop. The JavaScript function receives the data source and the ID of the DropDownList as arguments, and adds the attributes to the li elements based on the data source values.
+In the following example, the `Opened` event is used to call the `AddAttribute` method when the DropDownList is opened. The `AddAttribute` method gets the data source from the component instance and calls a JavaScript function using the JavaScript Interop. The JavaScript function receives the data source and the ID of the DropDownList as arguments, and adds the attributes to the li elements based on the data source values.
 
 % highlight cshtml %}
 
@@ -300,7 +300,7 @@ In the following example, the `Opened` event is used to call the `OnCreated` met
 {% highlight razor tabtitle="~/_Layout.cshtml" %}
 
     <script> 
-        function OnCreated(datasource, id) { 
+        function AddAttribute(datasource, id) { 
             setTimeout(() => { 
                 //Here, the popup element is uniquely identified with an id 
                 //Classes added via CssClass property will be added to the popup element also. 
@@ -322,9 +322,9 @@ In the following example, the `Opened` event is used to call the `OnCreated` met
 
 ## Displaying dropdown List in Tab
 
-In tab view, a dropdownlist can be presented. This may be accomplished by displaying the dropdown list within the SfTab.
+Use the DropDownList component inside a tab view to allow users to select an option from a DropDownList within a tab. This may be accomplished by displaying the dropdown list within the SfTab.
 
-In the folllowing example, the SfTab component is used to display a tab view with three tab items. Each tab item contains a DropDownList component with a different data source. When the user selects a different tab, the corresponding DropDownList is displayed.
+In the following example, the SfTab component is used to display a tab view with three tab items. Each tab item contains a DropDownList component with a different data source. When the user selects a different tab, the corresponding DropDownList is displayed.
 
 {% highlight cshtml %}
 
@@ -336,7 +336,7 @@ In the folllowing example, the SfTab component is used to display a tab view wit
 
 ## Dropdownlist inside Dialog
 
-Within a dialog popup, a dropdownlist can be displayed. This can be accomplished by presenting the dropdownlist within the SfDialog.
+Use the DropDownList inside a dialog component to allow users to select an option from a DropDownList within a dialog box. This can be accomplished by presenting the dropdownlist within the SfDialog.
 
 In the following example, the SfDialog component is used to display a dialog popup with a DropDownList component inside the dialog content. When the user clicks the `Open Dialog` button, the dialog is displayed.
 

@@ -11,7 +11,9 @@ documentation: ug
 
 ## Dropdown List inside edit form
 
-The `EditForm` validates all data annotation rules using the `DataAnnotationsValidator`. Choose the value from the dropdown popup. The given input will be ready to be submitted if the value is valid. Otherwise, an error message will be shown until you choose the valid value.
+The `EditForm` validates all data annotation rules using the `DataAnnotationsValidator`. If the Dropdown List input is valid, the form will be ready to be submit. If the Dropdown List input is invalid, an error message will be displayed until a valid value is chosen.
+
+In this following example, the `EditForm` component is used to wrap the DropDownList and the submit button. The `DataAnnotationsValidator` component is used to enable data annotation-based validation, and the `ValidationMessage` component is used to display the validation error message. The `Required` attribute is applied to the Name field to make it a required field.
 
 {% highlight cshtml %}
 
