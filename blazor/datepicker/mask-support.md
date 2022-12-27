@@ -9,11 +9,9 @@ documentation: ug
 
 # Mask Support in Blazor DatePicker Component
 
-The [EnableMask]() property in the Syncfusion Blazor Datepicker component allows you to enable or disable the masking functionality of the input field. When enabled, the component will display the input field as a masked textbox, with a specific pattern to enter the date value.
+The masking feature allows users to enter a date in the correct format, as specified by the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Format) property. This helps to ensure that the date is entered correctly and can also make it easier for users to understand how to enter the date. The [EnableMask]() property in the DatePicker component allows you to enable or disable the masking functionality. When enabled, the input field will be displayed as masked with a specific date format pattern for entering the date.
 
-By default, the "EnableMask" property is set to `false`.
-
-You can also customize the mask pattern used by the component by using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Format) property.
+By default, the `EnableMask` property is set to `false`.
 
 The following example demonstrates default format of DatePicker component with mask.
 
@@ -29,11 +27,17 @@ The following example demonstrates default format of DatePicker component with m
 
 ## MaskPlaceholder
 
-The [DatePickerMaskPlaceholder]() class in the Syncfusion Blazor Datepicker component is used to customize the maskplaceholders displayed in the input field when the masking functionality is enabled. 
+The [DatePickerMaskPlaceholder]() directive sets the placeholder text for each segment of the date format in a `DatePicker` component. It can be used to provide additional context or instructions to the user about the format that is expected for the input. To use the directive, include it in the component's configuration along with the [EnableMask]() property.
 
-By default, the "DatePickerMaskPlaceholder" class uses the values of the `Day`, `Month`, and `Year` properties from the current culture based resources file as the maskplaceholder characters in the input field when the "DatePickerMaskPlaceholder" class is not explicitly defined.
+The `DatePickerMaskPlaceholder` tag directive has the following properties:
 
-To use the "DatePickerMaskPlaceholder" class, you can define an instance of the class and set its properties, and then pass it to the DatePickerMaskPlaceholder property of the SfDatePicker component as shown in the following example:
+* [Day]() : Specifies the placeholder text for the day (`dd`) segment of the date value.
+
+* [Month]() : Specifies the placeholder text for the month (`MM`) segment of the date value.
+
+* [Year]() : Specifies the placeholder text for the year (`yy`) segment of the date value.
+
+By default, the format placeholder text for each segment of the date format in the `DatePicker` component is taken from the current culture based resources file. This means that if you do not specify your own custom placeholder text using the `DatePickerMaskPlaceholder` directive and its properties, the component will use the default placeholder text from the resources file.
 
 {% highlight Razor %}
 
@@ -41,19 +45,6 @@ To use the "DatePickerMaskPlaceholder" class, you can define an instance of the 
 
 {% endhighlight %}
 
-
-
 ![Blazor DatePicker Mask Support with MaskPlaceholder](./images/DatePickerMaskPlaceholder.gif)
 
-
-The "DatePickerMaskPlaceholder" class has the following properties:
-
-`Day` : Specifies the placeholder character for the day (`dd`) segment of the date value.
-
-`Month` : Specifies the placeholder character for the month (`MM`) segment of the date value.
-
-`Year` : Specifies the placeholder character for the year (`yy`) segment of the date value.
-
-When the DatePikerMaskPlaceholder class is defined, the contents for the "day", "month", and "year" segments are customized by the user. If any segment is missed by the user, it will be taken from the current culture-based resource contents by default.
-
-You can also customize the mask pattern used by the component by using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Format) property.
+> If you do not specify custom placeholder text for any segment of the date format, the component will use the default placeholder text from the current culture based resources file for not specified segments.

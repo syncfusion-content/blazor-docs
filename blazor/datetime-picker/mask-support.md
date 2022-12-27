@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Mask Support in Blazor DateTimePicker Component
 
-The [EnableMask]() property in the Syncfusion Blazor DateTimepicker component allows you to enable or disable the masking functionality of the input field. When enabled, the component will display the input field as a masked textbox, with a specific pattern to enter the date and time values.
+The masking feature allows users to enter a date and time in the correct format, as specified by the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Format) property. This helps to ensure that the date and time is entered correctly and can also make it easier for users to understand how to enter the date and time. The [EnableMask]() property in the DateTimePicker component allows you to enable or disable the masking functionality. When enabled, the input field will be displayed as masked with a specific datetime format pattern for entering the date and time.
 
 By default, the "EnableMask" property is set to `false`.
 
@@ -26,11 +26,25 @@ The following example demonstrates default and custom format of DateTimePicker c
 
 ## MaskPlaceholder
 
-The [DateTimePickerMaskPlaceholder]() class in the Syncfusion Blazor DateTimepicker component is used to customize the placeholder characters displayed in the input field when the masking functionality is enabled.
+The [DateTimePickerMaskPlaceholder]() directive sets the placeholder text for each segment of the date and time format in a `DateTimePicker` component. It can be used to provide additional context or instructions to the user about the format that is expected for the input. To use the directive, include it in the component's configuration along with the [EnableMask]() property.
 
-By default, the "DateTimePickerMaskPlaceholder" class uses the values of the `Day`, `Month`, `Year`, `Hour`, `Minute`, `Second`, and `DayOfWeek` properties from the current culture based resources content as the maskplaceholder characters in the input field when the "DateTimePickerMaskPlaceholder" class is not explicitly defined.
+The `DateTimePickerMaskPlaceholder` tag directive has the following properties:
 
-To use the "DateTimePickerMaskPlaceholder" class, you can define an instance of the class and set its properties, and then pass it to the DateTimePickerMaskPlaceholder property of the SfDateTimePicker component as shown in the following example:
+* [Day]() : Specifies the placeholder text for the day (`dd`) segment of the date value.
+
+* [Month]() : Specifies the placeholder text for the month (`MM`) segment of the date value.
+
+* [Year]() : Specifies the placeholder text for the year (`yy`) segment of the date value.
+
+* [Hour]() : Specifies the placeholder text for the hour (`hh`) segment of the time value.
+
+* [Minute]() : Specifies the placeholder text for the minute (`mm`) segment of the time value.
+
+* [Second](): Specifies the placeholder text for the second (`ss`) segment of the time value.
+
+* [DayOfWeek]() : Specifies the placeholder text for the day of the week (`dddd`) segment of the date value.
+
+By default, the format placeholder text for each segment of the date and time format in the `DateTimePicker` component is taken from the current culture based resources file. This means that if you do not specify your own custom placeholder text using the `DateTimePickerMaskPlaceholder` directive and its properties, the component will use the default placeholder text from the resources file.
 
 {% highlight Razor %}
 
@@ -40,22 +54,4 @@ To use the "DateTimePickerMaskPlaceholder" class, you can define an instance of 
 
 ![Blazor DateTimePicker Mask Support with MaskPlaceholder](./images/DateTimePickerMaskPlaceholder.gif)
 
-The "DateTimePickerMaskPlaceholder" class has the following properties:
-
-`Day` : Specifies the placeholder character for the day (`dd`) segment of the date value.
-
-`Month` : Specifies the placeholder character for the month (`MM`) segment of the date value.
-
-`Year` : Specifies the placeholder character for the year (`yy`) segment of the date value.
-
-`Hour` : Specifies the placeholder character for the hour (`hh`) segment of the time value.
-
-`Minute` : Specifies the placeholder character for the minute (`mm`) segment of the time value.
-
-`Second` : Specifies the placeholder character for the second (`ss`) segment of the time value.
-
-`DayOfWeek` : Specifies the placeholder character for the dayofweek (`ddd`) segment of the date value.
-
-When the DateTimePikerMaskPlaceholder class is defined, the contents for the "day", "month", "year", "hour", "minute", "second", and "dayofweek" segments are customized by the user. If any segment is missed by the user, it will be taken from the current culture-based resource contents by default.
-
-You can also customize the mask pattern used by the component by using the [Format]() property.
+> If you do not specify custom placeholder text for any segment of the date and time format, the component will use the default placeholder text from the current culture based resources file for not specified segments.
