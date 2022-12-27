@@ -35,4 +35,4 @@ In this example, the ComboBox displays a list of countries, and the textboxes di
 
 {% endhighlight %}
 
-![Cascading with other form field in Blazor ComboBox](./images/cascading//blazor_combobox_cascading-with-other-form-field.png)
+![Cascading with other form field in Blazor ComboBox](./images/cascading/blazor_combobox_cascading-with-other-form-field.png)
