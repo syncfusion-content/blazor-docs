@@ -111,7 +111,7 @@ The [ColorGradientMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 * **Row**: The minimum and maximum value colors calculated for each row of data.
 * **Column**: The minimum and maximum value colors calculated for each column of data.
 
-> The default value of `ColorGradientMode` is Table.
+> The default value of `ColorGradientMode` is **Table**.
 
 ```cshtml
 
