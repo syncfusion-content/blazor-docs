@@ -15,7 +15,7 @@ The toast can be expired based on the `Timeout` property. The toast can live til
 
 * The `ExtendedTimeOut` property determines how long the toast should be displayed after a user hovers over it.
 
-> The process can be terminated by using the `ShowCloseButton` property for destroying the toast at any time.
+N> The process can be terminated by using the `ShowCloseButton` property for destroying the toast at any time.
 
 ```cshtml
 

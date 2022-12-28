@@ -92,7 +92,7 @@ Event Marker Tooltip
 
 ![Blazor Gantt Chart displays Event Marker Tooltip](images/blazor-gantt-chart-event-marker-tooltip.png)
 
-> The default value of the `GanttTooltipSettings.ShowTooltip` property is true.
+N> The default value of the `GanttTooltipSettings.ShowTooltip` property is true.
 
 ## Timeline cells tooltip
 
@@ -210,8 +210,7 @@ The following are three types of `ClipMode`:
 * `Ellipsis`: Displays ellipsis when content of the cell overflows its area.
 * `EllipsisWithTooltip`: Displays ellipsis when content of the cell overflows its area; it displays the tooltip content when hover over ellipsis.
 
-> NOTE
-> By default, all the column's `ClipMode` property is defined as `EllipsisWithTooltip`.
+N> By default, all the column's `ClipMode` property is defined as `EllipsisWithTooltip`.
 
 ## Editing tooltip
 

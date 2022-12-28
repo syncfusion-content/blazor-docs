@@ -266,7 +266,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 {% endhighlight %}
 {% endtabs %}
 
-* Press F5 to run the application. Then, the Syncfusion Blazor Rating component will be rendered in the default web browser.
+* Press <kbd>ctrl</kbd>+<kbd>F5</kbd> or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion Blazor Rating component will be rendered in the default web browser.
 
 ![Blazor Rating Component](images/blazor-rating-component.png)
 
@@ -277,7 +277,7 @@ You can set the rating value by using the `Value` property.
 {% tabs %}
 {% highlight razor %}
 
-<SfRating Value=3></SfRating>
+<SfRating Value="3"></SfRating>
 
 {% endhighlight %}
 {% endtabs %}
@@ -291,7 +291,7 @@ You can specify the number of stars using the `ItemsCount` property.
 {% tabs %}
 {% highlight razor %}
 
-<SfRating Value=3 ItemsCount=8></SfRating>
+<SfRating Value="3" ItemsCount="8"></SfRating>
 
 {% endhighlight %}
 {% endtabs %}

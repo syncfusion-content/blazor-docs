@@ -196,7 +196,7 @@ In-order to bind remote JSON data, mention the endpoint [Url](https://help.syncf
 
 For CSV data binding, the `type` property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html) needs to be set as `CSV` mandatorily.
 
-> The CSV format is considered to be the most compact format compared to JSON since it is half the size of JSON. This helps to reduce the bandwidth while transferring to the browser.
+N> The CSV format is considered to be the most compact format compared to JSON since it is half the size of JSON. This helps to reduce the bandwidth while transferring to the browser.
 
 ### Binding CSV data via local
 
@@ -375,7 +375,7 @@ In-order to bind the remote CSV data, mention the endpoint [Url](https://help.sy
 
 To interact with remote data source, provide the endpoint [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) within [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) class along with appropriate [Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors/). By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) uses [ODataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Adaptors.html) for remote data-binding.
 
-> When using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) for data binding then the TValue must be provided explicitly in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class.
+N> When using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) for data binding then the TValue must be provided explicitly in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class.
 
 ### Binding with OData services
 
@@ -631,7 +631,7 @@ One can define field information like alias name (caption), data type, aggregati
 
 The main purpose of these mapping options is to configure each field that is not a part of the initial pivot report. Even if any field that is a part of this mapping is defined here, the value set in the initial report will have the highest preceding.
 
-> This option is applicable only for relational data source.
+N> This option is applicable only for relational data source.
 
  ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -1088,4 +1088,4 @@ The event [OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pivot
 
 ![Loading Event in Blazor PivotTable](images/blazor-pivottable-load-event.png)
 
-> You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
+N> You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.

@@ -24,7 +24,7 @@ By default, Scheduler considers the week days from Monday to Friday as `WorkDays
 
 The Work week and Timeline Work week views displays exactly the defined working days on Scheduler layout, whereas other views displays all the days and simply differentiates the non-working days on UI with inactive cell color.
 
-> The working or business hours depiction on Scheduler are usually valid only on these specified working days.
+N> The working or business hours depiction on Scheduler are usually valid only on these specified working days.
 
 The following example code depicts how to set the Scheduler to display Monday, Wednesday and Friday as working days of a week.
 
@@ -98,7 +98,7 @@ Here, the working days are defined as [1, 3, 4, 5] on Scheduler and therefore th
 
 It is possible to show the week number count of a week in the header bar of the Scheduler by setting true to the `ShowWeekNumber` property. By default, its default value is `false`. In Month view, the week numbers are displayed as a first column.
 
-> The `ShowWeekNumber` property is not applicable on Timeline views, as it has the equivalent [HeaderRows](./header-rows/#display-week-numbers-in-timeline-views) property to handle such requirement with additional customization.
+N> The `ShowWeekNumber` property is not applicable on Timeline views, as it has the equivalent [HeaderRows](./header-rows/#display-week-numbers-in-timeline-views) property to handle such requirement with additional customization.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -238,7 +238,7 @@ The following code example displays the Scheduler starting from the time range 7
 
 By default, Scheduler defaults to `Sunday` as its first day of a week. To change the Scheduler's start day of a week with different day, set the `FirstDayOfWeek` property with the values ranging from 0 to 6.
 
-> Here, Sunday is always denoted as 0, Monday as 1 and so on.
+N> Here, Sunday is always denoted as 0, Monday as 1 and so on.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule

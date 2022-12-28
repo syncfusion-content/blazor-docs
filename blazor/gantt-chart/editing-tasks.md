@@ -67,7 +67,7 @@ The following code example shows you how to enable the cell editing in Gantt Cha
 }
 ```
 
-> When the edit mode is set to `Auto`, double-clicking on the Tree Grid side changes the cells to editable mode. Double-clicking on the chart side opens the edit dialog for editing the task details.
+N> When the edit mode is set to `Auto`, double-clicking on the Tree Grid side changes the cells to editable mode. Double-clicking on the chart side opens the edit dialog for editing the task details.
 
 double click action on Tree Grid side
 
@@ -443,7 +443,7 @@ Updating with Dialog
 
 Tasks' value can be dynamically updated by using the [UpdateRecordByIDAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_UpdateRecordByIDAsync__0_) method. You can call this method on any custom action. The following code example shows how to use this method to update a task.
 
-> Using the `UpdateRecordByIDAsync` method, you cannot update the task ID value.
+N> Using the `UpdateRecordByIDAsync` method, you cannot update the task ID value.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt

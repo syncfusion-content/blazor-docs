@@ -175,7 +175,7 @@ Specify [`BackgroundImage`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 </style>
 ```
 
-> To view the hosted images, you need to enable Directory Browsing option in IIS which creates web.config file inside the hosted folder. Adding below code snippet in the web.config file resolves the CORS issue.
+N> To view the hosted images, you need to enable Directory Browsing option in IIS which creates web.config file inside the hosted folder. Adding below code snippet in the web.config file resolves the CORS issue.
 
 ```cshtml
 <?xml version="1.0" encoding="UTF-8"?>

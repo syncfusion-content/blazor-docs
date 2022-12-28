@@ -147,4 +147,4 @@ By setting value in percentage, stock chart gets its dimension with respect to 
 
 ![Changing Blazor Stock Chart Size in Percentage](images/size/blazor-stock-chart-size-in-percentage.png)
 
-> When you do not specify the size, it takes `450px` as the height and window size as its width.
+N> When you do not specify the size, it takes `450px` as the height and window size as its width.

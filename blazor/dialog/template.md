@@ -23,7 +23,7 @@ The Dialog header content can be provided through the `Header` property, and it 
 
 The Dialog footer can be enabled by adding built-in `DialogButton` or providing any HTML string through the `FooterTemplate`.
 
-> The `DialogButton` and `FooterTemplate` properties can't be used at the same time.
+N> The `DialogButton` and `FooterTemplate` properties can't be used at the same time.
 
 The following example demonstrates the usage of header and footer template in the Dialog.
 

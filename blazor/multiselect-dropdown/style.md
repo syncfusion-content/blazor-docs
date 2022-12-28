@@ -401,7 +401,7 @@ Allows you to clear the selected values from the MultiSelect component.
 
 #### Declaration
 
-> public Task ClearAsync()
+N> public Task ClearAsync()
 
 {% highlight Razor %}
 
@@ -417,7 +417,7 @@ Sets the focus to the MultiSelect component for interaction.
 
 #### Declaration
 
-> public Task FocusAsync()
+N> public Task FocusAsync()
 
 ### FocusOutAsync()
 
@@ -425,7 +425,7 @@ Remove the focus from the MultiSelect component, if the component is in focus st
 
 #### Declaration
 
-> public Task FocusOutAsync()
+N> public Task FocusOutAsync()
 
 {% highlight Razor %}
 
@@ -439,7 +439,7 @@ Hides the popup if it is in an open state.
 
 #### Declaration
 
-> public Task HidePopupAsync()
+N> public Task HidePopupAsync()
 
 ### ShowPopupAsync()
 
@@ -447,7 +447,7 @@ Opens the popup that displays the list of items.
 
 #### Declaration
 
-> public Task ShowPopupAsync()
+N> public Task ShowPopupAsync()
 
 {% highlight Razor %}
 
@@ -461,7 +461,7 @@ Hides the spinner loader.
 
 #### Declaration
 
-> public Task HideSpinner()
+N> public Task HideSpinner()
 
 ### ShowSpinner()
 
@@ -469,7 +469,7 @@ Shows the spinner loader.
 
 #### Declaration
 
-> public Task ShowSpinner()
+N> public Task ShowSpinner()
 
 {% highlight Razor %}
 
