@@ -69,11 +69,14 @@ N>* [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotat
 <br/>* By default, node’s annotation positioned in center point of the shape.
 <br/>* By default, connector’s path annotation positioned in center point of its path.
 
+>**Note:** Do not use underscore(_) for annotation's id.
+
+
 ## Add Annotations at runtime
 
-You can add Annotation at runtime to the Annotations collection of the node/connector in the diagram component by using the `Add` method.
+You can add Annotation at runtime to the Annotations collection of the node/connector in the diagram component by using the `Add`  method.
 
-The following code explains how to add an annotation to a node at runtime by using `Add` method.
+The following code explains how to add an annotation to a node at runtime by using `Add`  method.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
