@@ -13,6 +13,30 @@ The `TabIndex`(https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigatio
 
 To use the `TabIndex`(https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) property, you need to set it for each Toolbar item that you want to enable tab key navigation. The `TabIndex` property should be set to a positive integer value. A value of 0 or a negative value will disable tab key navigation for the item.
 
+For example, to enable tab key navigation for two Toolbar items, you can use the following code:
+
+```csharp
+<SfToolbar Width="600">
+    <ToolbarItems>
+        <ToolbarItem SuffixIcon="e-icons e-cut" Text="Cut" TabIndex=1 ></ToolbarItem>
+        <ToolbarItem SuffixIcon="e-icons e-copy" Text="Copy" TabIndex=2 ></ToolbarItem>
+    </ToolbarItems>
+</SfToolbar>
+```
+
+With the above code, the user can switch between the two Toolbar items using the Tab and Shift+Tab keys, in addition to using the arrow keys. The items will be navigated in the order specified by the `TabIndex`(https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) values.
+
+If you set the  `TabIndex`(https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) value to 0 for all Toolbar items, tab key navigation will be based on the element order rather than the `TabIndex`(https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) values. For example:
+
+```csharp
+<SfToolbar Width="600">
+    <ToolbarItems>
+        <ToolbarItem SuffixIcon="e-icons e-cut" Text="Cut" TabIndex=0 ></ToolbarItem>
+        <ToolbarItem SuffixIcon="e-icons e-copy" Text="Copy" TabIndex=0 ></ToolbarItem>
+    </ToolbarItems>
+</SfToolbar>
+```
+
 ```csharp
 
 @using Syncfusion.Blazor.Navigations

@@ -875,64 +875,6 @@ It groups the number of resources under each date and is applicable only on the 
 
 N> This kind of grouping by date is not applicable on any of the **timeline views**.
 
-### Displaying only custom work days in Scheduler when grouped by date
-
-In Scheduler, you can set custom work days for each resource and group the Scheduler by date to display these work days. By default, the Scheduler will show all days when it is grouped by date, even if they are not included in the custom work days for the resources. However, you can use the [`HideNonWorkingDays`] property to only display the custom work days in the Scheduler.
-
-To use the [`HideNonWorkingDays`] property, you need to include it in the configuration options for your Scheduler component. Set the value of [HideNonWorkingDays`] to `true` to enable this feature.
-
-**Example:** To display the Scheduler with resources grouped by date for custom working days,
- 
-```cshtml
-@using Syncfusion.Blazor.Schedule
-@using Syncfusion.Blazor.Buttons
-    div class="col-lg-12" style="padding-top:15px">
-    <SfCheckBox  @bind-Checked="@HideNonWorkingDays" Label="Hide non working days"></SfCheckBox>
-</div>
-<div class="col-lg-12 control-section">
-    <SfSchedule TValue="ScheduleData.ResourceData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">
-        <ScheduleGroup ByDate="true" HideNonWorkingDays="@HideNonWorkingDays" Resources="@groupData"></ScheduleGroup>
-        <ScheduleResources>
-            <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@OwnersData" Field="TaskId" Title="Assignee" Name="Owners" TextField="Text" IdField="Id" ColorField="Color" WorkDaysField="WorkDays" AllowMultiple="true"></ScheduleResource>
-        </ScheduleResources>
-        <ScheduleViews>
-            <ScheduleView Option="View.Day"></ScheduleView>
-            <ScheduleView Option="View.Week"></ScheduleView>
-            <ScheduleView MaxEventsPerRow="1" Option="View.Month"></ScheduleView>
-            <ScheduleView Option="View.Agenda"></ScheduleView>
-        </ScheduleViews>
-        <ScheduleEventSettings DataSource="@dataSource">
-            <ScheduleField>
-                <FieldSubject Name="Subject" Title="Task"></FieldSubject>
-                <FieldLocation Name="Location" Title="Project Name"></FieldLocation>
-                <FieldDescription Name="Description" Title="Comments"></FieldDescription>
-            </ScheduleField>
-        </ScheduleEventSettings>
-    </SfSchedule>
-</div>
-@code{
-    private DateTime CurrentDate { get; set; } = new DateTime(DateTime.Today.Year, 1, 12);
-    private List<ScheduleData.ResourceData> dataSource = new ScheduleData().GetResourceData();
-    private bool HideNonWorkingDays { get; set; } = true;
-    private string[] groupData = new string[] { "Owners" };
-    private List<ResourceData> OwnersData { get; set; } = new List<ResourceData> {
-        new ResourceData { Text = "Alice", Id= 1, Color = "#df5286", WorkDays = new int[] { 1, 2, 3, 4} },
-        new ResourceData { Text = "Smith", Id= 2, Color = "#5978ee", WorkDays = new int[] { 2, 3, 5 } }
-    };
-    public class ResourceData
-    {
-        public string Text { get; set; }
-        public int Id { get; set; }
-        public string Color { get; set; }
-        public int[] WorkDays { get; set; }
-    }
-}
-```
-
-![Displaying only custom work days in Scheduler when grouped by date in Blazor Scheduler](images/blazor-scheduler-hide-non-working-days.png)
-
-N> This kind of Displaying only custom work days in Scheduler when grouped by date is not applicable on any of the **timeline views**.
-
 ## Working with shared events
 
 Multiple resources can share the same events, thus allowing the CRUD action made on it to reflect on all other shared instances simultaneously. To enable such option, set `AllowGroupEdit` option to `true` within the `Group` property. With this property enabled, a single appointment will be maintained within the appointment collection, even if it is shared by more than one resource – whereas the resource fields of such appointment will be in array which hold the IDs of the multiple resources.
@@ -1685,6 +1627,46 @@ Working hours indicates the work hour duration of a day, which is highlighted vi
 In this example, a resource named `Will Smith` is depicted with working hours ranging from 7.00 AM to 1.00 PM and is visually illustrated with active colors, whereas the other two resources have different working hours set.
 
 ![Resources with Different Workhours in Blazor Scheduler](images/blazor-schedule-differentworkhour.png)
+
+### Displaying only custom work days in Scheduler when grouped by date
+
+In Scheduler, you can set custom work days for each resource and group the Scheduler by date to display these work days. By default, the Scheduler will show all days when it is grouped by date, even if they are not included in the custom work days for the resources. However, you can use the `HideNonWorkingDays`(https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) property to only display the custom work days in the Scheduler.
+
+To use the `HideNonWorkingDays` property, you need to include it in the configuration options for your Scheduler component. Set the value of `HideNonWorkingDays` to `true` to enable this feature.
+
+**Example:** To display the Scheduler with resources grouped by date for custom working days,
+ 
+```cshtml
+@using Syncfusion.Blazor.Schedule
+    <SfSchedule TValue="ScheduleData.ResourceData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate" >
+        <ScheduleGroup ByDate="true" HideNonWorkingDays="@HideNonWorkingDays" Resources="@groupData"></ScheduleGroup>
+        <ScheduleResources>
+            <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@OwnersData" Field="TaskId" Title="Assignee" Name="Owners" TextField="Text" IdField="Id" ColorField="Color" WorkDaysField="WorkDays" AllowMultiple="true"></ScheduleResource>
+        </ScheduleResources>
+        <ScheduleEventSettings DataSource="@dataSource"></ScheduleEventSettings>
+    </SfSchedule>
+@code{
+    private DateTime CurrentDate { get; set; } = new DateTime(DateTime.Today.Year, 1, 9);
+    private List<ScheduleData.ResourceData> dataSource = new ScheduleData().GetResourceData();
+    private bool HideNonWorkingDays { get; set; } = true;
+    private string[] groupData = new string[] { "Owners" };
+    private List<ResourceData> OwnersData { get; set; } = new List<ResourceData> {
+        new ResourceData { Text = "Alice", Id= 1, Color = "#df5286", WorkDays = new int[] { 1, 2, 3, 4} },
+        new ResourceData { Text = "Smith", Id= 2, Color = "#5978ee", WorkDays = new int[] { 2, 3, 5 } }
+    };
+    public class ResourceData
+    {
+        public string Text { get; set; }
+        public int Id { get; set; }
+        public string Color { get; set; }
+        public int[] WorkDays { get; set; }
+    }
+}
+```
+
+![Displaying only custom work days in Scheduler when grouped by date in Blazor Scheduler](images/blazor-scheduler-hide-non-working-days.png)
+
+N>  The `HideNonWorkingDays`(https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) property only applies when the Scheduler is grouped by date. If the Scheduler is grouped by another field, such as by ID, the `HideNonWorkingDays`(https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) property will not have any effect..
 
 ## Compact view in mobile
 
