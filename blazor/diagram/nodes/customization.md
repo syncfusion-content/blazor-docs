@@ -50,7 +50,7 @@ The following code shows how to customize the appearance of the shape.
 
 ![Node appearance in Blazor Diagram](../images/blazor-diagram-node-appearance.png)
 
-N> [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each node should be unique and so it is further used to find the node at runtime and do any customization.
+> [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each node should be unique and so it is further used to find the node at runtime and do any customization.
 
 ## How to update values in common to all nodes
 
@@ -191,7 +191,7 @@ You can define node style using template in [NodeTemplate](https://help.syncfusi
 }
 ```
 
-N> In the above example, node's background color is updated using the click event of the button defined in the template.
+> In the above example, node's background color is updated using the click event of the button defined in the template.
 
 ![Blazor Diagram with Node Template](../images/blazor-diagram-node-template.gif)
 
@@ -554,8 +554,53 @@ The following code shows how to set the AdditionalInfo value.
     }
 }
 ```
-
 **Note:** You can set any type of value for the AdditionalInfo property.
+
+## How to set ZIndex property for node
+
+* The node's [ZIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ZIndex) property specifies the stack order of the node. A node with a greater stack order is always in front of a node with a lower stack order. By default, the value is -1.
+
+
+The following code illustrates how to render nodes based on the stack order.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using System.Collections.ObjectModel
+
+<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
+
+@code
+{
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes;
+
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        // A node is created and stored in nodes array.
+        Node node = new Node()
+        {
+            ID = "node",
+            // Position of the node.
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            ZIndex = 2,
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            },
+            // Pivot of the node.
+            Pivot = new DiagramPoint() { X = 0, Y = 0 }
+        };
+        nodes.Add(node);
+    }
+}
+```
+
 
 ## See also
 

@@ -478,7 +478,7 @@ To create the fixed user handles, define and add them to the collection of nodes
 
 * The [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_CornerRadius) allows to create fixed user handles with rounded corners. The radius of the rounded corner is set with the `CornerRadius` property.
 
-N> The [PathData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_PathData) needs to be provided to render fixed user handle.
+> The [PathData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_PathData) needs to be provided to render fixed user handle.
 
 ### Change the size of the fixed user handle
 
@@ -540,7 +540,7 @@ The following code explains how to customize the appearance of the fixed user ha
 }
 ```
 
-N> The fixed user handle id need to be unique.
+> The fixed user handle id need to be unique.
 
 ## Customizing the node fixed user handle
 
@@ -649,7 +649,7 @@ The following table shows all the possible alignments visually shows the fixed u
 | y = 10 | Before |![Displaying Fixed User Handle Before Blazor Diagram Node](images/blazor-diagram-user-handle-in-before-node.png)|
 | y = 10 | After |![Displaying Fixed User Handle Before Blazor Diagram Node](images/blazor-diagram-user-handle-in-after-node.png)|
 
-N> Displacement will not be done if the alignment is set to center.
+> Displacement will not be done if the alignment is set to center.
 
 The following code explains how to customize the connector fixed user handle.
 
@@ -704,6 +704,7 @@ The Diagram control provides the following event for the fixed user handle.
 | Event Name | Event Type | Description |
 | -------- | -------- | -------- |
 | [FixedUserHandleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_FixedUserHandleClick) | [FixedUserHandleClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandleClickEventArgs.html) | Triggered when the mouse pointer is over the user handle and mouse button is up. |
+
 
 ```csharp
 @using Syncfusion.Blazor.Diagram

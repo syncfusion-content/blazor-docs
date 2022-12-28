@@ -65,15 +65,18 @@ An annotation can be added to a node or connector by defining the annotation obj
 
 ![Blazor Diagram Node with Annotation](../images/blazor-diagram-node-with-annotation.png)
 
-N>* [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_ID) for each annotation should be unique and so it is further used to find the annotation at runtime and do any customization.
-<br/>* By default, node’s annotation positioned in center point of the shape.
-<br/>* By default, connector’s path annotation positioned in center point of its path.
+>* [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_ID) for each annotation should be unique and so it is further used to find the annotation at runtime and do any customization.
+>* By default, node’s annotation positioned in center point of the shape.
+>* By default, connector’s path annotation positioned in center point of its path.
+
+>**Note:** Do not use underscore(_) for annotation's id.
+
 
 ## Add Annotations at runtime
 
-You can add Annotation at runtime to the Annotations collection of the node/connector in the diagram component by using the `Add` method.
+You can add Annotation at runtime to the Annotations collection of the node/connector in the diagram component by using the `Add`  method.
 
-The following code explains how to add an annotation to a node at runtime by using `Add` method.
+The following code explains how to add an annotation to a node at runtime by using `Add`  method.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -184,8 +187,8 @@ Also, a collection of annotations can be removed from the node by using the `Rem
     }
 ```
 
-N>* You can delete multiple annotations from node to pass the collection of annotation objects as argument.
-<br/>* The `Add`, `Remove`, and `RemoveAt` methods are applicable for connectors too.
+>* You can delete multiple annotations from node to pass the collection of annotation objects as argument.
+>* The `Add`, `Remove`, and `RemoveAt` methods are applicable for connectors too.
 
 ## Update annotations at runtime
 

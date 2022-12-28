@@ -148,7 +148,7 @@ The following code illustrates how to add Base64 image into the image node.
 
 ![Base64 Image Node in Blazor Diagram](images/blazor-diagram-base64-image-node.png)
 
-N> Deploy your HTML file in the web application and export the diagram (image node) or else the image node will not be exported in the Chrome and Firefox due to security issues.
+> Deploy your HTML file in the web application and export the diagram (image node) or else the image node will not be exported in the Chrome and Firefox due to security issues.
 
 ### Stretch and align the image
 
@@ -297,7 +297,7 @@ Html elements can be embedded in the diagram through [HTML](https://help.syncfus
 
 ![HTML Node Template in Blazor Diagram](images/blazor-diagram-html-node-template.png)
 
-N> HTML node cannot be exported to image format, like JPEG, PNG and BMP. It is by design, while exporting the diagram is drawn in a canvas. Further, this canvas is exported into image formats. Currently, drawing in a canvas equivalent from all possible HTML is not feasible. Hence, this limitation. Also , HTML node always appears as topmost layer ( whose index is the higher index, even though it is defined at the last).
+> HTML node cannot be exported to image format, like JPEG, PNG and BMP. It is by design, while exporting the diagram is drawn in a canvas. Further, this canvas is exported into image formats. Currently, drawing in a canvas equivalent from all possible HTML is not feasible. Hence, this limitation. Also , HTML node always appears as topmost layer ( whose index is the higher index, even though it is defined at the last).
 
 ## Node with basic shapes
 
@@ -342,9 +342,9 @@ The following code example illustrates how to create a basic shape.
 }
 ```
 
-N> By default, the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shape.html) property of the node is set as **Basic**. Default property for Shape is Rectangle.
-<br/> When the `Shape` is not set for a basic shape, it is considered as a **Rectangle**.
-<br/> The `CornerRadius` property is applicable only for basic shape.
+> By default, the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shape.html) property of the node is set as **Basic**. Default property for Shape is Rectangle.
+> When the `Shape` is not set for a basic shape, it is considered as a **Rectangle**.
+> The `CornerRadius` property is applicable only for basic shape.
 
 The list of basic shapes are as follows.
 
@@ -489,4 +489,4 @@ Diagram provides support to embed SVG element into a node. The Shape property of
 
 ![SVG Node in Blazor Diagram](images/blazor-diagram-svg-node.png)
 
-N> Like HTML node, the SVG node also cannot be exported to image format. Fill color of SVG node can be overridden by the inline style or fill of the SVG element specified in the template.
+> Like HTML node, the SVG node also cannot be exported to image format. Fill color of SVG node can be overridden by the inline style or fill of the SVG element specified in the template.

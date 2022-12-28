@@ -52,7 +52,9 @@ The following code example illustrates how to add a connector through connector 
 
 ![Blazor Diagram Connector](../images/blazor-diagram-connector.png)
 
-N> [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each connector should be unique and so it is further used to find the connector at runtime and do any customization.
+> [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each connector should be unique and so it is further used to find the connector at runtime and do any customization.
+
+>**Note:** Do not use underscore(_) for connector's id.
 
 ## Add connectors at runtime
 
@@ -93,6 +95,59 @@ You can add a connector at runtime by adding connector to the connectors collect
         };
         //Add the connector at the run time.
         connectors.Add(NewConnector);
+    }
+}
+```
+## Add connector with annotations at runtime
+
+You can add connector with annotation at runtime in the diagram component by using the [AddDiagramElements](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElements_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method.
+
+The following code explains how to add an connector with annotation  at runtime by using `AddDiagramElements` method.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<input type="button" value="Add Connector" @onclick="@AddConnector">
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors"></SfDiagramComponent>
+
+@code
+{
+
+    //Defines diagram's connector collection.
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
+    DiagramObjectCollection<NodeBase> NodeCollection = new DiagramObjectCollection<NodeBase>();
+
+    protected override void OnInitialized()
+    {
+        Connector Connector = new Connector()
+        { 
+            ID = "connector1",
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
+            Type = ConnectorSegmentType.Straight
+        };
+        connectors.Add(Connector);
+    }
+
+    public void AddConnector()
+    {
+        Connector NewConnector = new Connector()
+        { 
+            ID = "connector2",
+            SourcePoint = new DiagramPoint() { X = 300, Y = 300 },
+            TargetPoint = new DiagramPoint() { X = 400, Y = 400 },
+            Type = ConnectorSegmentType.Straight,
+             Annotations=new DiagramObjectCollection<PathAnnotation>()
+            {
+                new PathAnnotation()
+                {
+                    Content="NewAnnotation"
+                }
+            },
+        };
+        NodeCollection.Add(NewConnector);
+       await Diagram.AddDiagramElements(NodeCollection);
     }
 }
 ```
@@ -288,7 +343,7 @@ The following code example explains how to change the connector properties.
 }
 ```
 
-N> BeginUpdate and EndUpdate methods allow you to stop the continuous update of control and resume it finally.
+> BeginUpdate and EndUpdate methods allow you to stop the continuous update of control and resume it finally.
 
 ## Connections
 
