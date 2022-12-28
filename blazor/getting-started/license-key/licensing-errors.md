@@ -19,7 +19,7 @@ The following error message will be shown if a Syncfusion license key has not be
 
 **Error message:** This application was built using a trial version of Syncfusion Essential Studio. You should include the valid license key to remove the license validation message permanently.
 
-![License key not registered](licensing-images/licensing-error-6.png)
+![License key not registered](images/licensing-error-6.png)
 
 **Solution:**
 
@@ -45,7 +45,7 @@ If the application is registered with an invalid key, another version of license
 
 **Error Message:** The included Syncfusion license key is invalid.
 
-![License key not registered](licensing-images/licensing-error-7.png)
+![License key not registered](images/licensing-error-7.png)
 
 **Solution:**
 
