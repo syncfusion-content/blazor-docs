@@ -134,6 +134,48 @@ The [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartD
 
 ![Blazor Chart Label with Text Mapping](images/data-label/blazor-chart-label-with-text-mapping.png)
 
+## Format
+
+Data label for the chart can be formatted using [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Format) property. You can use the global formatting options, such as 'N1', 'P1', and 'C1'.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
+    
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="ChartSeriesType.Line" >
+            <ChartMarker>
+                <ChartDataLabel Visible="true" Format="N1" />
+            </ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class Data
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+        public string Text { get; set; }
+    }
+
+    public List<Data> WeatherReports = new List<Data>
+    {
+        new Data{ X= "Jan", Y= 3, Text= "January" },
+        new Data{ X= "Feb", Y= 3.5, Text= "February" },
+        new Data{ X= "Mar", Y= 7, Text= "March" },
+        new Data{ X= "Apr", Y= 13.5, Text= "April" }
+    };
+}
+
+```
+
+![Blazor Chart Label with Format](images/data-label/blazor-chart-label-with-format.png)
+
 ## Margin
 
 The [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Margin) option can be applied to the data label to create space around the element.
