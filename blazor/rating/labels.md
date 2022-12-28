@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Labels in Blazor Rating Component | Syncfusion
-description: Checkout and learn here all about Labels in Syncfusion Blazor Rating component and much more.
+description: Checkout and learn here all about Labels with Syncfusion Blazor Rating component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Rating
 documentation: ug

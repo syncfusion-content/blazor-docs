@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Rating Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Rating component and much more.
+description: Checkout and learn here all about Events with Syncfusion Blazor Rating component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Rating
 documentation: ug

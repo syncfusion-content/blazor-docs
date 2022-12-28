@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Blazor Rating Component | Syncfusion
-description: Checkout and learn here all about Tooltip in Syncfusion Blazor Rating component and much more.
+description: Checkout and learn here all about Tooltip with Syncfusion Blazor Rating component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Rating
 documentation: ug
@@ -43,7 +43,7 @@ Below example demonstrates the tooltip template of Rating.
 
 ## Tooltip Customization
 
-The Rating Tooltip can be customized by using the CssClass property, which accepts custom CSS class names that defines the specific user-defined styles and themes to be applied on the Tooltip element.
+The Rating Tooltip can be customized by using the CssClass property, which accepts custom CSS class names that defines the specific user-defined styles and themes to be applied on the Tooltip element. For more details regarding tooltip customization, refer to [Tooltip Customization](https://blazor.syncfusion.com/documentation/tooltip/style) this link.
 
 Below example demonstrates the tooltip template of Rating.
 
