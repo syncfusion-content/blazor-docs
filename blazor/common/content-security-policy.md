@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Content Security Policy
+title: Content Security Policy (CSP) - Syncfusion
 description: Learn here about that how to resolve the content security policy issue in the Syncfusion Blazor Components.
 platform: Blazor
 component: Common
@@ -15,7 +15,7 @@ When using blazor components with a strict [Content-Security-Policy (CSP)](https
 
 * For the built in themes and styles, we have use the `inline styles` and `Roboto’s external font` in our components, both of which are probhibited in strict CSP. To enable them `style-src ‘self’ unsafe-inline` must be included in the meta tag.
 
-* To enable web sockets to the content security policy you need to add the web socket protocol `wss:` to the `connect-src` directive.
+* To enable `web sockets` to the content security policy you need to add the web socket protocol `wss:` to the `connect-src` directive.
 
 * The `new()` and the `eval()` are blocked, which evaluates the Dynamic code evaluation while only the template is applied to the Syncfusion components. You must utilize the `script-src ‘self’ unsafe-eval` in the meta tag for enabling.
 
