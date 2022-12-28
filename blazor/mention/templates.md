@@ -69,4 +69,4 @@ The [SpinnerTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 ## See also
 
-* [How to achieve filtering](./filtering)
+* [How to achieve filtering](./filtering-data)
