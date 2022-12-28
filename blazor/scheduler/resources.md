@@ -1638,6 +1638,7 @@ To use the `HideNonWorkingDays` property, you need to include it in the configur
  
 ```cshtml
 @using Syncfusion.Blazor.Schedule
+
     <SfSchedule TValue="ScheduleData.ResourceData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate" >
         <ScheduleGroup ByDate="true" HideNonWorkingDays="@HideNonWorkingDays" Resources="@groupData"></ScheduleGroup>
         <ScheduleResources>
