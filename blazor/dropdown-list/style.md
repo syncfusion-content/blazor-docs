@@ -205,7 +205,7 @@ The following code demonstrates how to display a tooltip when hovering over the 
 
 To display the tooltip in the dropdown component not for individual popup items, add the `Title` attribute through the [HTMLAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_HtmlAttributes) property. This updates the attribute on the root input element.
 
-In the following example, the `HtmlAttributes` property is used to add the title attribute to the root input element of the DropDownList with the value `Title`. This will display a tooltip with the text `Title` when the user hovers over the input element.
+In the following example, the `HtmlAttributes` property is used to add the title attribute to the root input element of the DropDownList with the value `DropDownList Component`. This will display a tooltip with the text `DropDownList Component` when the user hovers over the input element.
 
 {% highlight cshtml %}
 
