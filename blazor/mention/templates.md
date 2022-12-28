@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Templates in Blazor Mention Component | Syncfusion
-description: Checkout and learn here all about templates in Syncfusion Blazor Mention component and much more.
+description: Checkout and learn here all about templates in Syncfusion Blazor Mention component and much more details.
 platform: Blazor
 control: Mention
 documentation: ug
@@ -69,4 +69,4 @@ The [SpinnerTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 ## See also
 
-* [How to achieve filtering](./filtering)
+* [How to achieve filtering](./filtering-data)
