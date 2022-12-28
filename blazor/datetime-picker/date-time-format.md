@@ -8,8 +8,6 @@ documentation: ug
 ---
 #  DateTime Format in Blazor DateTimePicker Component
 
-Date time format is a way of representing the date and time value in different string formats in `DateTimePicker` control.
-
 The date and time format can be used to specify how the date and time value is displayed or entered in a `DateTimePicker` control
 
 By default, the DateTimePicker's format is based on the culture. You can also set the own [Custom Format](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings) or [Standard Format](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings) by using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_Format) property.
