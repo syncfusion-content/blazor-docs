@@ -20,9 +20,15 @@ To use Syncfusion blazor components with strict CSP mode, the following directiv
 * `connect-src 'self' https: wss:` - This directive enables web sockets.
 * `script-src 'self' unsafe-eval` - This directive allows for the use of the `new()` and `eval()` functions.
 
-It is important to note that the `unsafe-eval` directive is required for the Blazor WebAssembly Mono runtime and is also mandatory for any project using Syncfusion templates. If your application does not include any Syncfusion templates, the `unsafe-eval` directive can be removed from the CSP meta tag for server-side applications.
+To enable the Blazor WebAssembly Mono runtime,`unsafe-eval` directive is mandatory for the Blazor WebAssembly project.
 
-The resulting meta tag should be included in the <head> tag of your webpage, and should be registered in the `wwwroot/index.html` file in a client web app, and in the `~/Pages/_Host.cshtml` file in a server application.
+setTimeout() is used for animations and eval() function is used for the diagram(classic) component. Hence, `unsafe-eval` is necessary for those components.
+
+In Case, syncfusion CDN is referred in our application. you must also add the cdn link reference in scripts and stylesheet directive.
+
+The resulting meta tag should be included in the <head> tag of your webpage, and should be registered in the `wwwroot/index.html` file in a Blazor WebAssembly application, and in the `~/Pages/_Host.cshtml` file in a Blazor Server application.
+
+        N> If you do not use our CDN services, you may remove their domains from our styles and script directives. If your application does not include any animation related syncfusion component, the `unsafe-eval` directive is not needed for CSP meta tag.
 
 ```html
 <meta http-equiv="Content-Security-Policy"
@@ -31,8 +37,8 @@ The resulting meta tag should be included in the <head> tag of your webpage, and
         connect-src 'self' https: wss:;
         img-src data: https:;
         object-src 'none';
-        script-src 'self' 'unsafe-eval';
-        style-src 'self' 'unsafe-inline';
+        script-src 'self' 'unsafe-eval' https://cdn.syncfusion.com/blazor/;
+        style-src 'self' 'unsafe-inline' https://cdn.syncfusion.com/blazor/;
         font-src 'self' data:;
         upgrade-insecure-requests;">
 ```
