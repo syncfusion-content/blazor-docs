@@ -1,21 +1,19 @@
 ---
 layout: post
 title: Content Security Policy (CSP) - Syncfusion
-description: Learn here about that how to resolve the content security policy issue in the Syncfusion Blazor Components.
+description: Learn here about that how use Syncfusion Blazor Components with strict Content Security Policy (CSP).
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Content Security Policy
+# Syncfusion Blazor Components with Strict Content Security Policy (CSP)
 
 Content Security Policy (CSP) is a security feature implemented by web browsers that helps to protect against attacks such as cross-site scripting (XSS) and data injection. It does this by limiting the sources from which certain types of content can be loaded on a webpage.
 
-When using blazor components with CSP enabled in strict mode, some browser features may be disabled by default. This is because these features may potentially be exploited by attackers. In order to use Syncfusion blazor components with CSP in strict mode, certain directives must be included in the CSP meta tag. These directives allow for the use of certain features that are necessary for Syncfusion blazor components to function properly.
+When using Syncfusion blazor components with strict Content Security Policy (CSP), some browser features are disabled by default. This is because these features may potentially be exploited by attackers. In order to use Syncfusion blazor components with strict CSP mode, certain directives must be included in the CSP meta tag. These directives allow to use certain features that are necessary for Syncfusion blazor components to function properly.
 
-## Enabling CSP with Syncfusion Blazor Components
-
-To use Syncfusion blazor components with CSP in strict mode, the following directives must be included in the CSP meta tag:
+To use Syncfusion blazor components with strict CSP mode, the following directives must be included in the CSP meta tag:
 
 * `font-src data:` - This directive allows for the use of `base64` encoded font icons.
 * `style-src 'self' unsafe-inline` - This directive allows for the use of inline styles and external fonts.
