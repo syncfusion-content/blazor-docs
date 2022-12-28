@@ -302,3 +302,17 @@ In the following sample, when the data fetch request fails, the ComboBox display
 
 
 ![Blazor ComboBox with Action Failure Template](./images/blazor-combobox-action-failure-template.png)
+
+## Combine two fields without Templates
+
+To display multiple fields in the combobox without using templates, which is achieved by defining a new variable and passing the value with the desired format with the help of the `get` and `set` methods.
+
+In this following example, the FullName variable is defined with the `get` and `set` methods. The get method returns the concatenation of the FirstName and LastName variables, with a space in between. This allows you to display the full name in the user interface and update the FirstName and LastName variables when the user changes the full name.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/templates/text-with-first-and-last-name.razor %}
+
+{% endhighlight %}
+
+![Text with firstName and lastName](./images/templates/blazor_combobox_firstname-lastname.png)

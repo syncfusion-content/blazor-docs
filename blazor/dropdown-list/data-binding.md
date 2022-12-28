@@ -340,6 +340,18 @@ Add the new item in the popup with the help of [AddItemsAsync](https://help.sync
 
 ![Blazor DropdownList with adding new Item](./images/data-binding/blazor_dropdown_add-new-item.png)
 
+## Getting datasource of dropdown list
+
+To get the `datasource` from the Syncfusion Blazor DropDownList component instance, you can use the DataSource property of the component. Here's an example of how you can get the data source when a button is clicked.
+
+In the following example, the DropDownList component is rendered with a list of object as the data source. When the button is clicked, method is called and the data source is obtained using the DataSource property of the DropDownList instance.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/data-binding/get-datasource.razor %}
+
+{% endhighlight %}
+
 ## Events
 
 ### DataBound event
