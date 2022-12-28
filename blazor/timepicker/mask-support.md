@@ -11,10 +11,6 @@ documentation: ug
 
 The masking feature allows users to enter a time in the correct format, as specified by the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_Format) property. This helps to ensure that the time is entered correctly and can also make it easier for users to understand how to enter the time. The [EnableMask]() property in the TimePicker component allows you to enable or disable the masking functionality. When enabled, the input field will be displayed as masked with a specific time format pattern for entering the time.
 
-You can also customize the mask pattern used by the component by using the `Format` property.
-
-The following example demonstrates default format of TimePicker component with mask.
-
 {% highlight Razor %}
 
 {% include_relative code-snippet/TimePickerMask.razor %}
@@ -26,7 +22,7 @@ The following example demonstrates default format of TimePicker component with m
 
 ## MaskPlaceholder
 
-The [TimePickerMaskPlaceholder]() directive sets the placeholder text for each segment of the time format in a `TimePicker` component. It can be used to provide additional context or instructions to the user about the format that is expected for the input. To use the directive, include it in the component's configuration along with the [EnableMask]() property.
+The [TimePickerMaskPlaceholder]() directive allows you to set custom placeholder text for each segment of the time format in a `TimePicker` component. This can be used to provide additional context or instructions to the user about the expected format for the input. To use the directive, include it in the component's configuration along with the [EnableMask]() property.
 
 The `TimePickerMaskPlaceholder` class has the following properties:
 
@@ -35,6 +31,8 @@ The `TimePickerMaskPlaceholder` class has the following properties:
 * [Minute]() : Specifies the placeholder character for the minute (`mm`) segment of the time value.
 
 * [Second]() : Specifies the placeholder character for the second (`ss`) segment of the time value.
+
+The `TimePicker` component uses placeholder text from the current culture's resources file for each segment of the time format by default. If you want to use custom placeholder text instead, you can specify it using the `TimePickerMaskPlaceholder` directive and its properties.
 
 {% highlight Razor %}
 
