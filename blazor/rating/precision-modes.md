@@ -19,7 +19,9 @@ The precision types of Rating are as follows:
 * Exact
 
 ## Full Precision
-In Full Precision, the rating value is increased in whole number increments. For example, if the current rating is 3, the next possible ratings are 4, 5, and so on. Below example demonstrates Full precision of Rating.
+In Full Precision, the rating value is increased in whole number increments. For example, if the current rating is 3, the next possible ratings are 4, 5, and so on. 
+
+Below example demonstrates the Full precision of Rating.
 
 ```cshtml
 
@@ -33,7 +35,9 @@ In Full Precision, the rating value is increased in whole number increments. For
 
 ## Half Precision
 
-In Half Precision, the rating value is increased in increments of 0.5 (half). For example, if the current rating is 3.5, the next possible ratings are 4, 4.5, 5, and so on. Below example demonstrates Half precision of Rating.
+In Half Precision, the rating value is increased in increments of 0.5 (half). For example, if the current rating is 3.5, the next possible ratings are 4, 4.5, 5, and so on. 
+
+Below example demonstrates the Half precision of Rating.
 
 ```cshtml
 
@@ -47,7 +51,9 @@ In Half Precision, the rating value is increased in increments of 0.5 (half). Fo
 
 ## Quarter Precision
 
-In Quarter Precision, the rating value is increased in increments of 0.25 (quarter). For example, if the current rating is 3.75, the next possible ratings are 4, 4.25, 4.5, and so on. Below example demonstrates Quarter precision of Rating.
+In Quarter Precision, the rating value is increased in increments of 0.25 (quarter). For example, if the current rating is 3.75, the next possible ratings are 4, 4.25, 4.5, and so on. 
+
+Below example demonstrates the Quarter precision of Rating.
 
 ```cshtml
 
@@ -61,7 +67,9 @@ In Quarter Precision, the rating value is increased in increments of 0.25 (quart
 
 ## Exact Precision
 
-In Exact Precision, the rating value is increased in increments of 0.1. For example, if the current rating is 3.9, the next possible ratings are 4, 4.1, 4.2, and so on. Below example demonstrates Exact precision of Rating.
+In Exact Precision, the rating value is increased in increments of 0.1. For example, if the current rating is 3.9, the next possible ratings are 4, 4.1, 4.2, and so on. 
+
+Below example demonstrates the Exact precision of Rating.
 
 ```cshtml
 

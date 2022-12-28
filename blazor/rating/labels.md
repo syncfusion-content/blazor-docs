@@ -11,7 +11,7 @@ documentation: ug
 
 The Labels of the Rating which used to display the current value of a rating. Using the [ShowLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ShowLabel) property.
 
-Below example demonstrates Label of Rating.
+Below example demonstrates Default Label of Rating.
 
 ```cshtml
 
@@ -39,14 +39,37 @@ Below example demonstrates different supported label positions of Rating.
 
 @using Syncfusion.Blazor.Inputs
 
-<div>Right Label Position</div>
-<SfRating ShowLabel=true LabelPosition="LabelPosition.Right"></SfRating>
-<div>Top Label Position</div>
-<SfRating ShowLabel=true LabelPosition="LabelPosition.Top"></SfRating>
-<div>Bottom Label Position</div>
-<SfRating ShowLabel=true LabelPosition="LabelPosition.Bottom"></SfRating>
-<div>Left Label Position</div>
-<SfRating ShowLabel=true LabelPosition="LabelPosition.Left"></SfRating>
+<div class="rating-control">
+    <div class="rating-content">
+        <label>Top Label Position</label><br/>
+        <SfRating ShowLabel=true LabelPosition="LabelPosition.Top"></SfRating>
+    </div>
+    <div class="rating-content">
+        <label>Bottom Label Position</label><br />
+        <SfRating ShowLabel=true LabelPosition="LabelPosition.Bottom"></SfRating>
+    </div>
+    <div class="rating-content">
+        <label>Left Label Position</label><br />
+        <SfRating ShowLabel=true LabelPosition="LabelPosition.Left"></SfRating>
+    </div>
+    <div class="rating-content">
+        <label>Right Label Position</label><br />
+        <SfRating ShowLabel=true LabelPosition="LabelPosition.Right"></SfRating>
+    </div>
+</div>
+
+<style>
+    .rating-control {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 10px;
+    }
+
+    .rating-control > div {
+        text-align: center;
+        padding: 10px 0;
+    }
+</style>
 
 ```
 

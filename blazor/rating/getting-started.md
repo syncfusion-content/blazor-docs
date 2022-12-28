@@ -272,7 +272,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 
 ## Value
 
-You can set the rating value by using the `Value` property.
+You can set the rating value by using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Value) property.
 
 {% tabs %}
 {% highlight razor %}
@@ -283,17 +283,3 @@ You can set the rating value by using the `Value` property.
 {% endtabs %}
 
 ![Displaying Rating Value in Blazor Rating Component](images/blazor-rating-value.png)
-
-## Items count
-
-You can specify the number of stars using the `ItemsCount` property.
-
-{% tabs %}
-{% highlight razor %}
-
-<SfRating Value="3" ItemsCount="8"></SfRating>
-
-{% endhighlight %}
-{% endtabs %}
-
-![Displaying Blazor Rating items based on Count](images/blazor-rating-itemscount.png)

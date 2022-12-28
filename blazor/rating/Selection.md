@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in Blazor Rating Component
 
-All the items till the current value is selected.
+All the items before the selected item should be in selected state in a rating component.
 
 Below example demonstrates Selection of Rating.
 
@@ -17,14 +17,14 @@ Below example demonstrates Selection of Rating.
 
 @using Syncfusion.Blazor.Inputs
 
-<SfRating ShowLabel=true></SfRating>
+<SfRating Value="3"></SfRating>
 
 ```
 
-![Blazor Rating Component with Selction](./images/blazor-rating-label.png)
+![Blazor Rating Component with Selction](./images/blazor-rating-selection.png)
 
 ## Selected Value
-You can place the label on the top, left, up, and down side of the Rating by setting [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_LabelPosition) property. The default value is `Right`.
+You can get the current updated rating item value selected by the user by setting [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Value) property.
 
 Below example demonstrates the selected value of Rating.
 
@@ -32,11 +32,16 @@ Below example demonstrates the selected value of Rating.
 
 @using Syncfusion.Blazor.Inputs
 
-<SfRating ShowLabel=true LabelPosition="LabelPosition.Right"></SfRating>
+<SfRating @bind-Value=value></SfRating>
+<br/>
+Value Is : @value
+@code{
+    double value= 3;    
+}
 
 ```
 
-![Blazor Rating Component with Selected Value](./images/blazor-rating-label.png)
+![Blazor Rating Component with Selected Value](./images/blazor-rating-selected-value.png)
 
 ## Min Value
 

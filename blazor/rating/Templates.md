@@ -82,7 +82,45 @@ Below example demonstrates the Full Template of Rating.
     <FullTemplate>
         <span class='custom-font sf-icon-star'></span>
     </FullTemplate>
+    <EmptyTemplate>
+        <span class='custom-font sf-icon-star'></span>
+    </EmptyTemplate>
 </SfRating>
+
+<style>
+
+    .e-rating-container .custom-font {
+        background: linear-gradient(to right, rgb(255,215,0) var(--rating-value), transparent var(--rating-value));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px rgb(255,215,0);
+    }
+
+    @@font-face {
+        font-family: 'RatingIcon';
+        src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAAKAIAAAwAgT1MvMj1tSfIAAAEoAAAAVmNtYXDnEOdVAAABiAAAADZnbHlm9cEZjAAAAcgAAAA4aGVhZCK0htcAAADQAAAANmhoZWEIUQQDAAAArAAAACRobXR4CAAAAAAAAYAAAAAIbG9jYQAcAAAAAAHAAAAABm1heHABDQAWAAABCAAAACBuYW1lOGHbkgAAAgAAAAJJcG9zdHSFYngAAARMAAAALgABAAAEAAAAAFwEAAAAAAAD9AABAAAAAAAAAAAAAAAAAAAAAgABAAAAAQAAru5xRl8PPPUACwQAAAAAAN/RIPMAAAAA39Eg8wAAAAAD9AP0AAAACAACAAAAAAAAAAEAAAACAAoAAQAAAAAAAgAAAAoACgAAAP8AAAAAAAAAAQQAAZAABQAAAokCzAAAAI8CiQLMAAAB6wAyAQgAAAIABQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUGZFZABA5wDnAAQAAAAAXAQAAAAAAAABAAAAAAAABAAAAAQAAAAAAAACAAAAAwAAABQAAwABAAAAFAAEACIAAAAEAAQAAQAA5wD//wAA5wD//wAAAAEABAAAAAEAAAAAAAAAHAAAAAEAAAAAA/QD9AAJAAABBRMDJQUDEyUDAWb+pvo7ATUBNTv6/qaaAqs1/wD+lqurAWoBADUBSQAAAAASAN4AAQAAAAAAAAABAAAAAQAAAAAAAQAKAAEAAQAAAAAAAgAHAAsAAQAAAAAAAwAKABIAAQAAAAAABAAKABwAAQAAAAAABQALACYAAQAAAAAABgAKADEAAQAAAAAACgAsADsAAQAAAAAACwASAGcAAwABBAkAAAACAHkAAwABBAkAAQAUAHsAAwABBAkAAgAOAI8AAwABBAkAAwAUAJ0AAwABBAkABAAUALEAAwABBAkABQAWAMUAAwABBAkABgAUANsAAwABBAkACgBYAO8AAwABBAkACwAkAUcgUmF0aW5nSWNvblJlZ3VsYXJSYXRpbmdJY29uUmF0aW5nSWNvblZlcnNpb24gMS4wUmF0aW5nSWNvbkZvbnQgZ2VuZXJhdGVkIHVzaW5nIFN5bmNmdXNpb24gTWV0cm8gU3R1ZGlvd3d3LnN5bmNmdXNpb24uY29tACAAUgBhAHQAaQBuAGcASQBjAG8AbgBSAGUAZwB1AGwAYQByAFIAYQB0AGkAbgBnAEkAYwBvAG4AUgBhAHQAaQBuAGcASQBjAG8AbgBWAGUAcgBzAGkAbwBuACAAMQAuADAAUgBhAHQAaQBuAGcASQBjAG8AbgBGAG8AbgB0ACAAZwBlAG4AZQByAGEAdABlAGQAIAB1AHMAaQBuAGcAIABTAHkAbgBjAGYAdQBzAGkAbwBuACAATQBlAHQAcgBvACAAUwB0AHUAZABpAG8AdwB3AHcALgBzAHkAbgBjAGYAdQBzAGkAbwBuAC4AYwBvAG0AAAAAAgAAAAAAAAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAQIBAwAEc3RhcgAAAAA=) format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    [class^="sf-icon-"], [class*=" sf-icon-"] {
+        font-family: 'RatingIcon' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .sf-icon-star:before {
+        content: "\e700";
+    }
+
+</style>
 
 ```
 
@@ -135,7 +173,7 @@ Below example demonstrates the Emoji Icon of Rating.
 
 ![Blazor Rating Component with Emoji Icon](./images/blazor-rating-emoji-icon.png)
 
-## Emoji Icon
+## SVG Icon
 
 You can also use SVG icon as a rating item.
 
@@ -197,3 +235,26 @@ Below example demonstrates the SVG Icon of Rating.
 ```
 
 ![Blazor Rating Component with Emoji Icon](./images/blazor-rating-svg-icon.png)
+
+## PNG Image
+
+You can also use PNG image as a rating item.
+
+Below example demonstrates the PNG image of Rating.
+
+```cshtml
+
+@using Syncfusion.Blazor.Inputs
+
+<SfRating>
+    <FullTemplate>        
+        <img src="images/FillStar.png" width="25" height="25" />
+    </FullTemplate>
+    <EmptyTemplate>
+        <img src="images/EmptyStar.png" width="25" height="25" />
+    </EmptyTemplate>
+</SfRating>
+
+```
+
+![Blazor Rating Component with Emoji Icon](./images/blazor-rating-png.png)

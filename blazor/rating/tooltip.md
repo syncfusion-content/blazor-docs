@@ -55,16 +55,16 @@ Below example demonstrates the tooltip template of Rating.
 
 <style>
     .customtooltip .e-tooltip-wrap.e-popup {
-        background-color: #9897ea;
-        border: 2px solid #7381ea;
+        background-color: #2682cb;
+        border: 2px solid #5074cd;
     }
 
     .customtooltip .e-tooltip-wrap .e-arrow-tip-inner.e-tip-bottom {
-        color: #9897ea;
+        color: #2682cb;
     }
 
     .customtooltip .e-tooltip-wrap .e-arrow-tip-outer.e-tip-bottom {
-        border-top: #9897ea;
+        border-top: #2682cb;
     }
 </style>
 
