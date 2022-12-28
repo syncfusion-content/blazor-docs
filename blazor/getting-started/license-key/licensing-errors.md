@@ -35,7 +35,7 @@ The following error message will be shown if a Syncfusion license key has not be
 
 4. If you **do not already have a Syncfusion account**, you can create one [here](https://www.syncfusion.com/account/register) and [purchase a license](https://www.syncfusion.com/sales/products) or start your 30-day free trial. Then you can **generate the trial license key for a specific version and platform** from [this page](https://www.syncfusion.com/account/manage-trials/start-trials).
 
-5. Also, you can generate the license key from claim license key page by clicking the "Claim your FREE account" click from the licensing warning message. Refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate#Claim-License-Key) for more details.
+5. Also, you can generate the license key from claim license key page by clicking the **"Claim your FREE account"** click from the licensing warning message. Refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate#Claim-License-Key) for more details.
 
 * In your application, register the generated license key. Refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application) for information on registering the license key.
 
@@ -61,7 +61,7 @@ If the application is registered with an invalid key, another version of license
 
 4. If you **do not already have a Syncfusion account**, you can create one here and [purchase a license](https://www.syncfusion.com/sales/products) or [start your 30-day free trial](https://www.syncfusion.com/account/manage-trials/start-trials). Then you can **generate the trial license key for a specific version and product** from [this page](https://www.syncfusion.com/account/manage-trials/downloads).
 
-5. Also, you can generate the license key from claim license key page by clicking the "Claim your FREE account" click from the licensing warning message. Refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate#Claim-License-Key) for more details.
+5. Also, you can generate the license key from claim license key page by clicking the **"Claim your FREE account"** click from the licensing warning message. Refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-generate#Claim-License-Key) for more details.
 
 * In your application, register the generated license key. Refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application) for information on registering the license key.
 
