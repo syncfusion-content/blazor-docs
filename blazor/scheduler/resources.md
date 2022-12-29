@@ -1714,7 +1714,7 @@ To use the `HideNonWorkingDays` property, you need to include it in the configur
 
 ![Hide non-working days when grouped by date in Blazor Scheduler](images/blazor-scheduler-hide-non-working-days.png)
 
-N>  The [HideNonWorkingDays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) property only applies.
+N>  The [HideNonWorkingDays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) property only applies,
 when the Scheduler is grouped by [ByDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_ByDate)
 
 ## Compact view in mobile
