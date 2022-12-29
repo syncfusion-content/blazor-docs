@@ -9,11 +9,9 @@ documentation: ug
 
 # DateOnly Support in Blazor DatePicker Component
 
-The [DateOnly](https://devblogs.microsoft.com/dotnet/date-time-and-time-zone-enhancements-in-net-6/) type is a new feature of the System.DateTime structure in .NET 6 that allows you to store a date value without the time component. This can be useful in cases where you only need to store or work with a date value, without the need to store or consider the time component.
+The [DateOnly](https://learn.microsoft.com/en-us/dotnet/api/system.dateonly?view=net-7.0) type is a new type in .NET 6 that is intended to represent only a date without time. You can use the `DateOnly` type with the Blazor DatePicker component by defining the type param as `DateOnly`.
 
-In the Syncfusion Blazor DatePicker component, you can use the `DateOnly` type in version `20.4.38` or later, when using the `.NET 7.0` framework. This can help you to display or select a date value in the DatePicker, without having to worry about the time component.
-
-The following example demonstrates the DatePicker component with DateOnly type.
+The Blazor DatePicker component only supports the `DateOnly` type in .NET 7 and above, even though it was introduced in .NET 6 itself due to..
 
 {% highlight Razor %}
 
