@@ -191,7 +191,7 @@ N>you can refer [here](https://blazor.syncfusion.com/documentation/appearance/ic
 
 ## TabIndex
 
-The Toolbar supports adding tabindex commands using the  `TabIndex` property.TabIndex property can be given as the `HTML element`.
+The Toolbar supports adding TabIndex commands using the  `TabIndex` property.TabIndex property can be given as the `HTML element`.
 Refer [Tab key navigation toolbar items ](https://blazor.syncfusion.com/documentation/toolbar/how-to/tab-key-navigation-toolbar-items/) for snippet and output. 
 
 ## Template
