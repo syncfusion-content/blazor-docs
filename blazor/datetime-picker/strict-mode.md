@@ -57,4 +57,4 @@ If you are entering the out-of-range or invalid datetime value, then the model v
 
 ![Blazor DateTimePicker without StrictMode](./images/blazor-datetimepicker-without-strictmode.png)
 
-N> If the value of `Min` or `Max` properties changed through code behind, you have to update the `Value` property to set within the range.
+> If the value of `Min` or `Max` properties changed through code behind, you have to update the `Value` property to set within the range.

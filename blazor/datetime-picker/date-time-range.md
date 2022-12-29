@@ -47,4 +47,4 @@ When the Min and Max properties are configured and the selected datetime value i
 
 ![Blazor DateTimePicker displays Selected Date and Time](./images/blazor-datetimepicker-date-time-selection.png)
 
-N> If the value of `Min` or `Max` properties changed through code behind, you have to update the `Value` property to set within the range.
+> If the value of `Min` or `Max` properties changed through code behind, you have to update the `Value` property to set within the range.

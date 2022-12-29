@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains the list of events of the DatePicker component which will be triggered for appropriate DatePicker actions.
 
-N> From `v17.2.*` added only the limited number of events for the DatePicker component. The event names are different from the previous releases and also removed several events. The following are the event name changes from `v17.1.*` to `v17.2.*`
+> From `v17.2.*` added only the limited number of events for the DatePicker component. The event names are different from the previous releases and also removed several events. The following are the event name changes from `v17.1.*` to `v17.2.*`
 
 Event Name(`v17.1.*`) |Event Name(`v17.2.*`)
 -----|-----
@@ -191,4 +191,4 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 }
 ```
 
-N> Datepicker will be limited with these events and new events will be added in future based on the user requests. If the event you are looking for is not in the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
+> Datepicker will be limited with these events and new events will be added in future based on the user requests. If the event you are looking for is not in the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).

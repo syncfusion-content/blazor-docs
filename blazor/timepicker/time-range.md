@@ -44,4 +44,4 @@ When the `Min` and `Max` properties are configured and the selected time value i
 
 ![Blazor TimePicker Value without Time Range](./images/blazor-timepicker-value-without-range.png)
 
-N> If the value of `Min` or `Max` property is changed through code behind, you have to update the `Value` property to set within the range.
+> If the value of `Min` or `Max` property is changed through code behind, you have to update the `Value` property to set within the range.
