@@ -426,9 +426,6 @@ A Web API Controller must be created, which allows the Heatmap to directly consu
             {
                 IQueryable<Order> data = db.GetAllOrders().AsQueryable();
                 var count = data.Count();
-                var queryString = Request.Query;
-                IQueryable<Order> data = db.GetAllOrders().AsQueryable();
-                var count = data.Count();
                 return new { Items = data.Take(10), Count = count };
             }
         }
