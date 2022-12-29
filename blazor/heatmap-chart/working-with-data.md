@@ -427,18 +427,9 @@ A Web API Controller must be created, which allows the Heatmap to directly consu
                 IQueryable<Order> data = db.GetAllOrders().AsQueryable();
                 var count = data.Count();
                 var queryString = Request.Query;
-                if (queryString.Keys.Contains("$inlinecount"))
-                {
-                    StringValues Skip;
-                    StringValues Take;
-                    int skip = (queryString.TryGetValue("$skip", out Skip)) ? Convert.ToInt32(Skip[0]) : 0;
-                    int top = (queryString.TryGetValue("$top", out Take)) ? Convert.ToInt32(Take[0]) : data.Count();
-                    return new { Items = data.Skip(skip).Take(top), Count = count };
-                }
-                else
-                {
-                    return data;
-                }
+                IQueryable<Order> data = db.GetAllOrders().AsQueryable();
+                var count = data.Count();
+                return new { Items = data.Take(10), Count = count };
             }
         }
     }
@@ -494,6 +485,7 @@ For instance, bind the data directly from the **OrderDataAccessLayer** class and
 ```csharp
 
 @inject OrderDataAccessLayer OrderData
+
 @using EFHeatMap.Data
 @using Syncfusion.Blazor.HeatMap
 
@@ -510,18 +502,157 @@ For instance, bind the data directly from the **OrderDataAccessLayer** class and
 </SfHeatMap>
 
 @code{
-    public string[] XLabels = new string[] { "HANAR", "CHOPS", "RICSU", "WELLI", "HILAA" };
-    public string[] YLabels = new string[] { "10253", "10254", "10255", "10256", "10257" };
+    public string[] XLabels = new string[] { "HANAR", "CHOPS", "RICSU", "WELLI", "HILAA", "ERNSH", "CENTC", "OTTIK", "QUEDE", "RATTC" };
+    public string[] YLabels = new string[] { "10253", "10254", "10255", "10256", "10257", "10258", "10259", "10260", "10261", "10262" };
    
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {
-        HeatMapData = OrderData.GetAllOrders();
+        HeatMapData = OrderData.GetAllOrders().Take(10);
     }
 }
 ```
 
 ![Blazor HeatMap Chart with Entity Framework](images/data/blazor-heatmap-chart-entity-framework.png)
+
+## Fetching data from JSON file
+
+To retrieve data from a JSON file, you can create a Blazor WebAssembly App or a Blazor Server App. The data from the JSON file is then read, convert it to a C# object, and assign it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SfHeatMap-1.html#Syncfusion_Blazor_HeatMap_SfHeatMap_1_DataSource) property.
+
+### Fetching data from JSON file using Blazor WebAssembly App
+
+The **Http.GetFromJsonAsync** is used in the **OnInitializedAsync** lifecycle method to load JSON file data. As this will be executed asynchronously, check whether **HeatMapData** is available, render the Heatmap component, or display the loading statement.
+
+```cshtml
+@using Syncfusion.Blazor.HeatMap
+@inject HttpClient Http;
+
+@if (HeatMapData == null)
+{
+     <p><em>Loading HeatMap component...</em></p>
+}
+else
+{
+    <SfHeatMap DataSource="@HeatMapData">
+        <HeatMapTitleSettings Text="Most Visited Destinations by International Tourist Arrivals">
+            <HeatMapTitleTextStyle Size="15px" FontWeight="500" FontStyle="Normal" FontFamily="Segoe UI"></HeatMapTitleTextStyle>
+        </HeatMapTitleSettings>
+        <HeatMapDataSourceSettings IsJsonData="true" AdaptorType="AdaptorType.Cell" XDataMapping="RowId" YDataMapping="ColumnId" ValueMapping="Value"></HeatMapDataSourceSettings>
+        <HeatMapXAxis Labels="@XLabels"></HeatMapXAxis>
+        <HeatMapYAxis Labels="@YLabels"></HeatMapYAxis>
+        <HeatMapPaletteSettings>
+            <HeatMapPalettes>
+                <HeatMapPalette Color="#DCD57E"></HeatMapPalette>
+                <HeatMapPalette Color="#A6DC7E"></HeatMapPalette>
+                <HeatMapPalette Color="#7EDCA2"></HeatMapPalette>
+                <HeatMapPalette Color="#6EB5D0"></HeatMapPalette>
+            </HeatMapPalettes>
+        </HeatMapPaletteSettings>
+        <HeatMapCellSettings ShowLabel="true" Format="{value} M">
+            <HeatMapCellBorder Width="1" Radius="4" Color="White"></HeatMapCellBorder>
+        </HeatMapCellSettings>
+    </SfHeatMap>
+}
+
+@code {
+    public string[] XLabels = new string[] { "Austria", "China", "France", "Germany", "Italy", "Mexico", "Spain", "Thailand", "UK", "USA" };
+    public string[] YLabels = new string[] { "2010", "2011", "2012", "2013", "2014", "2015", "2016" };
+    public class SampleData
+    {
+        public string RowId { get; set; }
+        public string ColumnId { get; set; }
+        public string Value { get; set; }
+    }
+    public SampleData[]? HeatMapData;
+    protected override async Task OnInitializedAsync()
+    {
+        HeatMapData = await Http.GetFromJsonAsync<SampleData[]?>("HeatMapData.json");
+    }
+}
+```
+
+Here, the `PopulationDensity.json` file contains following data.
+
+```json
+[
+{ "RowId": "France", "ColumnId": "2010", "Value": "77.6" },
+{ "RowId": "France", "ColumnId": "2011", "Value": "79.4" },
+{ "RowId": "France", "ColumnId": "2012", "Value": "80.8" },
+{ "RowId": "France", "ColumnId": "2013", "Value": "86.6" },
+{ "RowId": "France", "ColumnId": "2014", "Value": "83.7" },
+{ "RowId": "France", "ColumnId": "2015", "Value": "84.5" },
+{ "RowId": "France", "ColumnId": "2016", "Value": "82.6" },
+{ "RowId": "USA", "ColumnId": "2010", "Value": "60.6" },
+//..
+//..
+]
+```
+
+![Blazor Heatmap with JSON Data Source using WASM App](images/data/blazor-heatmap-wasm-json-data.png)
+
+### Fetching data from JSON file using  Blazor Server App
+
+The **Http.GetAsync** is used in the **OnInitializedAsync** lifecycle method to get the JSON file data and read the JSON file as a string. Then, the GeoJSON data in the string can be converted as a deserialized object list and set in the **DataSource** property of the Heatmap component. As this will be executed asynchronously, check whether **HeatMapData** is available, render the Heatmap component, or display the loading statement.
+
+
+```cshtml
+@using Syncfusion.Blazor.HeatMap
+@inject HttpClient Http;
+@using System.Net.Http.Json
+@using System.Text.Json;
+@using Newtonsoft.Json;
+@inject NavigationManager NavigationManager
+
+@if (HeatMapData == null)
+{
+    <p><em>Loading HeatMap component...</em></p>
+}
+else
+{
+    <SfHeatMap DataSource="@HeatMapData">
+        <HeatMapTitleSettings Text="Most Visited Destinations by International Tourist Arrivals">
+            <HeatMapTitleTextStyle Size="15px" FontWeight="500" FontStyle="Normal" FontFamily="Segoe UI"></HeatMapTitleTextStyle>
+        </HeatMapTitleSettings>
+        <HeatMapDataSourceSettings IsJsonData="true" AdaptorType="AdaptorType.Cell" XDataMapping="RowId" YDataMapping="ColumnId" ValueMapping="Value"></HeatMapDataSourceSettings>
+        <HeatMapXAxis Labels="@XLabels"></HeatMapXAxis>
+        <HeatMapYAxis Labels="@YLabels"></HeatMapYAxis>
+        <HeatMapPaletteSettings>
+            <HeatMapPalettes>
+                <HeatMapPalette Color="#DCD57E"></HeatMapPalette>
+                <HeatMapPalette Color="#A6DC7E"></HeatMapPalette>
+                <HeatMapPalette Color="#7EDCA2"></HeatMapPalette>
+                <HeatMapPalette Color="#6EB5D0"></HeatMapPalette>
+            </HeatMapPalettes>
+        </HeatMapPaletteSettings>
+        <HeatMapCellSettings ShowLabel="true" Format="{value} M">
+            <HeatMapCellBorder Width="1" Radius="4" Color="White"></HeatMapCellBorder>
+        </HeatMapCellSettings>
+    </SfHeatMap>
+}
+
+@code {
+    public string[] XLabels = new string[] { "Austria", "China", "France", "Germany", "Italy", "Mexico", "Spain", "Thailand", "UK", "USA" };
+    public string[] YLabels = new string[] { "2010", "2011", "2012", "2013", "2014", "2015", "2016" };
+    public class SampleData
+    {
+        public string RowId { get; set; }
+        public string ColumnId { get; set; }
+        public string Value { get; set; }
+    }
+    public SampleData[]? HeatMapData;
+    public string result;
+    protected override async Task OnInitializedAsync()
+    {
+        string path = NavigationManager.BaseUri + "HeatMapData.json";
+        HttpClient httpClient = new HttpClient();
+        HttpResponseMessage response = await Http.GetAsync(path);
+        result = response.Content.ReadAsStringAsync().Result;
+        HeatMapData = JsonConvert.DeserializeObject<SampleData[]?>(result);
+    }
+}
+```
+
+![Blazor Heatmap with JSON Data Source using Blazor Server App](images/data/blazor-heatmap-server-json-data.png)
 
 ## Empty points
 
