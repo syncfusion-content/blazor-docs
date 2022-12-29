@@ -14,7 +14,7 @@ This section briefly explains about how to include Blazor Skeleton component in 
 To get start quickly with Skeleton Component using Blazor, you can check on this video:
 
 {% youtube
-"youtube:https://www.youtube.com/watch?v=Zd6gzsjunYM&list=PLDzXQPWT8wEDGN8evydx9L-KpuW1ZxDy1&index=4"%}
+"youtube:https://www.youtube.com/watch?v=Zd6gzsjunYM"%}
 
 ## Prerequisites
 
