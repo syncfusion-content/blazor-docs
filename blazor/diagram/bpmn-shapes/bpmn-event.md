@@ -87,7 +87,7 @@ Event triggers are notated as icons inside the circle and they represent the spe
             Shape = new BpmnEvent()
             {
                 // Set the event type to NonInterruptingIntermediate and set the trigger as message.
-                EventType = BpmnEventType.NonInterruptingIntermediate,
+                EventType = BpmnEventType.Start,
                 Trigger = BpmnEventTrigger.Message
             }
         };
