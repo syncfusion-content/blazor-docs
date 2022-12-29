@@ -38,7 +38,7 @@ A data object represents information flowing through the process, such as data p
             // Sets shape to DataObject.
             Shape = new BpmnDataObject()
             {
-                IsCollectivwData = true,
+                IsCollectiveData = true,
                 DataObjectType = BpmnDataObjectType.None
             }
         };
