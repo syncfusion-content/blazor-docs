@@ -9,9 +9,9 @@ documentation: ug
 
 # TimeOnly Support in Blazor TimePicker Component
 
-The [TimeOnly](https://learn.microsoft.com/en-us/dotnet/api/system.timeonly?view=net-7.0) type is a new type in .NET 6 that is intended to represent only a time without a date. You can use the `TimeOnly` type with the Blazor TimePicker component by defining the type param as `TimeOnly`.
+The [TimeOnly](https://learn.microsoft.com/en-us/dotnet/api/system.timeonly?view=net-7.0) type is a new struct in .NET 6 that allows you to represent a time without a date component. To use it with the Blazor TimePicker component, set the type parameter to `TimeOnly`.
 
-The Blazor TimePicker component only supports the `TimeOnly` type in .NET 7 and above, even though it was introduced in .NET 6 itself due to...
+> Despite being introduced in .NET 6, the Blazor TimePicker component only supports the `TimeOnly` type in versions of .NET 7 and higher.
 
 {% highlight Razor %}
 
