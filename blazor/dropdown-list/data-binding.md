@@ -356,7 +356,7 @@ In the following example, the DropDownList component is rendered with a list of 
 
 ### Getting datasource using variable
 
-To get the `datasource` for the Syncfusion Blazor DropDownList using variable, you can define a varibale in your component to hold the datasource, and then use this variable to access the datasource.
+To get the `datasource` for the Syncfusion Blazor DropDownList using variable, you can define a variable in your component to hold the datasource, and then use this variable to access the datasource.
 
 In this following example, the `GetDataSource` method is called when the button is clicked. This method gets the data source for the DropDownList using the `Country` variable that holds the list of country for the DropDownList.
 
