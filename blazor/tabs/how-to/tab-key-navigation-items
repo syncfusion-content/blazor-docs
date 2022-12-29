@@ -7,7 +7,7 @@ control: Tabs
 documentation: ug
 ---
 
-# Tab key navigation Tab item in Blazor Tabs Component
+# Enabling Tab key navigation Tab item in Blazor Tabs Component
 
 The [TabIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_TabIndex ) property of a Tab item is used to enable tab key navigation for that particular item. When a positive value is assigned to the [TabIndex] property, it allows the user to switch focus to the next or previous tab item using the Tab or Shift+Tab keys. By default, the user can only switch between tab items using the arrow keys.
 
