@@ -204,7 +204,7 @@ The following example is for remote data binding and enabled offline mode.
 
 ![Blazor DropdownList with Offline mode](./images/data-binding/blazor_dropdown_offline-mode.png)
 
-### Entity framework
+### Entity Framework
 
 Follow these steps to consume data from the [Entity Framework](https://blazor.syncfusion.com/documentation/common/data-binding/bind-entity-framework) in the DropDownList component.
 
