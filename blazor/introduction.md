@@ -42,7 +42,7 @@ vertical-align: top;
 font-size: 14px !important;
 text-decoration: none!important;
 text-align: left!important;
-padding: 2px 0px;
+padding: 1px 0px;
 }
 .controlcategory-topics
 {
@@ -58,7 +58,7 @@ font-weight: 500!important;
 border:0 !important;
 text-align: left!important;
 line-height: 20px;
-padding-top: 50px;
+padding-top: 20px;
 }
 
 </style>
