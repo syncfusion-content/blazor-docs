@@ -11,7 +11,8 @@ documentation: ug
 
 An ExpandedSubProcess is used to frame a part of the diagram, shows that elements included in it are logically belong together and does not have any other semantics other than organizing elements. It is represented by a rounded rectangle.
 
-To create a ExpandedSubProcess, you have to define the Shape property of the Node as `BpmnExpandedSubProcess` and enable allow drop property of the node.
+## Create BPMN ExpandedSubProcess
+To create a ExpandedSubProcess, you have to define the Shape property of the Node as [BpmnExpandedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html) and enable allow drop property of the node.
 
 The following code example explains how to create a BPMN Expanded Sub-Process.
 
@@ -29,42 +30,24 @@ The following code example explains how to create a BPMN Expanded Sub-Process.
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
-        Node node = new Node()
-        {
-            // Position of the node.
-            OffsetX = 100,
-            OffsetY = 100,
-            // Size of the node.
-            Width = 100,
-            Height = 100,
-            // Unique Id of the node.
-            ID = "node1",
-            // Sets shape to BpmnExpandedSubProcess.
-            Shape = new BpmnExpandedSubProcess() 
-            { 
-                IsCall = true,
-                IsCompensation = true, 
-                Loop = BpmnLoopCharacteristic.Standard,
-                IsAdhoc = true,
-                SubProcessType = BpmnSubProcessTypes.Transaction
-            }
-        };
-        nodes.Add(node);
+        Node node1 = new Node()
+            {
+                ID = "node1",
+                Width = 300,
+                OffsetX = 500,
+                OffsetY = 300,
+                Height = 300,
+                Constraints = NodeConstraints.Default | NodeConstraints.AllowDrop,
+                Shape = new BpmnExpandedSubProcess()
+            };
+        nodes.Add(node1);
     }
 }
 ```
+![BPMN Expanded Sub-Process](../images/Bpmn-ExpandedSubProcess.png)
 
-![BPMN Expanded Sub-Process](../images/Bpmn-ExpandedSub-Process.png)
-
-## Add BPMN Nodes into BPMN ExpandedSubProcess at runtime
-You can add BPMN Nodes into the BPMN ExpandedSubProcess at runtime in two ways.
-
-* Adding the Id of the Bpmn Node to the `Children` property which is a collection of string in BPMN ExpandedSubProcess.
-* Drag and drop the BPMN Nodes to the BPMN ExpandedSubProcess.
-While resizing or dragging the child element, if the child element bounds with in the ExpandedSubProcess bounds, the ExpandedSubProcess size will be updated along with that.
-
-The following image shows how to add BPMNNode into the BPMN ExpandedSubProcess at runtime.
-![BPMN Expanded Sub-Process](../images/Bpmn-ExpandedSubProcess.gif)
+## Add BPMN Nodes into BPMN ExpandedSubProcess
+To add a BpmnNode into [BpmnExpandedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html), you have to define the BpmnNodeViewModel object and add that to the [Children](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_Children) collection of the [BpmnExpandedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html).
 
 The following code example explains how to Add Bpmn Node to a BPMN Expanded Sub-Process using Children property.
 
@@ -82,49 +65,50 @@ The following code example explains how to Add Bpmn Node to a BPMN Expanded Sub-
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
-        Node node1 = new Node()
-        {
-            // Position of the node.
-            OffsetX = 200,
-            OffsetY = 300,
-            // Size of the node.
-            Width = 30,
-            Height = 30,
-            // Unique Id of the node.
-            ID = "node1",
-            Constraints = NodeConstraints.Default | NodeConstraints.AllowDrop,
-            // Sets shape to Event.
-            Shape = new BpmnEvent()
+         Node node1 = new Node()
             {
-                // Set the event type as End.
-                EventType = BpmnEventType.End,
-            }
-        };
+                ID = "node1",
+                OffsetX = 300,
+                OffsetY = 300,
+                Width = 70,
+                Height = 70,
+                Shape = new BpmnActivity() { ActivityType = BpmnActivityType.Task }
+            };
         nodes.Add(node1);
         Node node2 = new Node()
-        {
-             // Position of the node.
-            OffsetX = 500,
-            OffsetY = 500,
-            // Size of the node.
-            Width = 300,
-            Height = 300,
-            // Unique Id of the node.
-            ID = "node1",
-            Constraints = NodeConstraints.Default | NodeConstraints.AllowDrop,
-            Shape = new BpmnExpandedSubProcess()
             {
-                SubProcessType = BpmnSubProcessType.Call,
-                Children = new DiagramObjectCollection<string> (){"node1"}
-            }
-        };
+                ID = "node2",
+                Width = 300,
+                OffsetX = 500,
+                OffsetY = 300,
+                Height = 300,
+                Constraints = NodeConstraints.Default | NodeConstraints.AllowDrop,
+                Shape = new BpmnExpandedSubProcess()
+                {
+                    Children = new DiagramObjectCollection<string>() { "node1" }
+                }
+            };
         nodes.Add(node2);
     }
 }
 ```
+![ExpandedSubProcess BPMN Shape](../images/Bpmn-ExpandedSubProcess-WithChildren.png)
+
+
+## Add BPMN Nodes into BPMN ExpandedSubProcess at runtime
+
+* Drag and drop the BPMN Nodes to the BPMN ExpandedSubProcess.
+
+While resizing or dragging the child element, if the child element bounds with in the ExpandedSubProcess bounds, the ExpandedSubProcess size will be updated along with that.
+
+The following image shows how to add BPMNNode into the BPMN ExpandedSubProcess at runtime.
+
+![BPMN Expanded Sub-Process](../images/Bpmn-ExpandedSubProcess.gif)
+
+
 ### Loop
 
-`LoopActivity` is a task that is internally being looped. The `LoopActivity` property of `BpmnExpandedSubProcess` allows you to define the type of loop. The default value for `LoopActivity` is **None**. You can define the LoopActivity property in Bpmn ExpandedSubProcess as shown in the following code.
+[Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_Loop) is a task that is internally being looped. The [Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_Loop) property of [BpmnExpandedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html) allows you to define the type of loop. The default value for [Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_Loop) is [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnLoopCharacteristic.html#Syncfusion_Blazor_Diagram_BpmnLoopCharacteristic_None). You can define the Loop property in Bpmn ExpandedSubProcess as shown in the following code.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -160,19 +144,21 @@ The following code example explains how to Add Bpmn Node to a BPMN Expanded Sub-
     }
 }
 ```
+![Standard ExpandedSubProcess BPMN Shape](../images/Bpmn-Task-Loop-Standard.png)  
 
 The following table contains various types of BPMN loops.
 
-| LoopActivity | Image |
-| -------- | -------- | 
-| None | ![None Task BPMN Shape](../images/Bpmn-Task-Loop-None.png)  | 
-| Standard | ![Standard Task BPMN Shape](../images/Bpmn-Task-Loop-Standard.png)  
-| SequenceMultiInstance | ![Sequence MultiInstance Task BPMN Shape](../images/Bpmn-Task-Loop-Sequential.png) |
-| ParallelMultiInstance | ![ParallelMultiInstance Task BPMNShape](../images/Bpmn-Task-Loop-Parallel.png) |
+
+| LoopActivity | Task | Description|
+| -------- | -------- | --------|
+| None | ![None Task BPMN Shape](../images/Bpmn-Task-Loop-None.png) | None of the shape shows in the sub-process.|
+| Standard | ![Standard Task BPMN Shape](../images/Bpmn-Task-Loop-Standard.png) |Loop marker indicates that the sub-process repeats itself in the sequence.|
+| SequenceMultiInstance | ![Sequence MultiInstance Task BPMN Shape](../images/Bpmn-Task-Loop-Sequential.png) | Multi-Instance marker indicates that the sub-process can run with other identical sub-processes simultaneously. The three horizontal lines indicate the sequential execution.|
+| ParallelMultiInstance | ![ParallelMultiInstance Task BPMNShape](../images/Bpmn-Task-Loop-Parallel.png) | Multi-Instance marker indicates that the sub-process can run with other identical sub-processes simultaneously. The three vertical lines indicate that the instances will be executed in parallel.|
 
 ### Compensation
 
-`IsCompensationActivity` is triggered when the operation is partially failed and enabled it with the    `IsCompensationActivity` property of the ExpandedSubProcess.By default the `IsCompensationActivity` is set to false.
+[IsCompensation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_IsCompensation) is triggered when the operation is partially failed and enabled it with the [IsCompensation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_IsCompensation) property of the [BpmnExpandedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html).By default the [IsCompensation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_IsCompensation) is set to false.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -202,7 +188,6 @@ The following table contains various types of BPMN loops.
             Shape = new BpmnExpandedSubProcess()
             {
                 IsCompensation = true,
-                Loop = BpmnLoopCharacteristic.Standard,
             }
         };
         nodes.Add(node1);
@@ -210,11 +195,11 @@ The following table contains various types of BPMN loops.
 }
 ```
 
- ![IsCompensationActivity Task BPMN Shape](../images/Bpmn-Task-Compensation.png)
+ ![IsCompensationActivity ExpandedSub-Process BPMN Shape](../images/Bpmn-Task-Compensation.png)
  
 ### Ad-Hoc
 
-An ad-hoc ExpandedSubProcess is a group of tasks that are executed in any order or skipped in order to fulfill the end condition and set it with the `IsAdhocActivity` property of Expanded subprocess.
+An ad-hoc ExpandedSubProcess is a group of tasks that are executed in any order or skipped in order to fulfill the end condition and set it with the [IsAdhoc](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_IsAdhoc) property of [BpmnExpandedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -250,11 +235,11 @@ An ad-hoc ExpandedSubProcess is a group of tasks that are executed in any order 
     }
 }
 ```
-![IsAdHocActivity CollapsedSub-Process BPMN Shape](../images/Bpmn-ExpandedSub-Process-Adhoc.png)
+![IsAdHocActivity ExpandedSub-Process BPMN Shape](../images/Bpmn-ExpandedSub-Process-Adhoc.png)
 
 ### SubProcessType
 
-SubProcessType represents the type of task that is being processed. The `SubProcessType` property of ExpandedSubProcess allows you to define the type of SubProcessType. By default, it is set to **Default**.
+SubProcessType represents the type of task that is being processed. The [SubProcessType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_SubProcessType) property of [BpmnExpandedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html) allows you to define the type of SubProcessType. By default, it is set to **Default**.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -283,21 +268,21 @@ SubProcessType represents the type of task that is being processed. The `SubProc
             // Sets shape to Bpmn ExpandedSubProcess.
             Shape = new BpmnExpandedSubProcess()
             {
-                SubProcessType = BpmnSubProcessType.Call
+                SubProcessType = BpmnSubProcessType.Event
             }
         };
         nodes.Add(node);
     }
 }
 ```
+![Event Boundary BPMN Shape](../images/Bpmn-CollapsedSub-Process-Event.png)
 
 The following table contains various types of BPMN SubProcess.
 
-| SubProcessType | Image |
-| -------- | -------- |
-| Default | ![Default Boundary BPMN Shape](../images/Bpmn-ExpandedSub-Process-None.png) |
-| Call | ![Call Boundary BPMN Shape](../images/Bpmn-ExpandedSub-Process-Call.png) |
-| Event | ![Event Boundary BPMN Shape](../images/Bpmn-ExpandedSub-Process-Event.png) |
-| Transaction | ![Default Boundary BPMN Shape](../images/Bpmn-ExpandedSub-Process-Transaction.png) |
-
+| SubProcessType | Image | Description|
+| -------- | -------- | -------- |
+| Call | ![Call Boundary BPMN Shape](../images/Bpmn-CollapsedSub-Process-Call.png) |It is a global sub-process that is reused at various points in the business flow.|
+| Event | ![Event Boundary BPMN Shape](../images/Bpmn-CollapsedSub-Process-Event.png) |The event sub-process is a sub-process that is triggered by an event. An event sub-process can be added at the process level or at any sub-process level.|
+| Transaction | ![Default Boundary BPMN Shape](../images/Bpmn-CollapsedSub-Process-Transaction.png) |It is a specialized sub-process that involves payment.|
+| Default | ![Default Boundary BPMN Shape](../images/Bpmn-CollapsedSub-Process-Default.png) |The task that is performed in a business process. It is represented by a rounded rectangle.|
 

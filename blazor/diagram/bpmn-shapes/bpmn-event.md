@@ -9,13 +9,13 @@ documentation: ug
 
 # BPMN event in Blazor Diagram Component
 
-An `Event` is a common BPMN process model element that represents something that happens during a business process and is notated with a circle. The type of events are as follows:
+An [Event](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnEvent.html) is a common BPMN process model element that represents something that happens during a business process and is notated with a circle. The type of events are as follows:
 
 * Start - Indicates the beginning of the process and every business process start with an event.
 * Intermediate - Indicates the middle of the process.
 * End - Indicates the beginning of the process and every business process end with an event.
 
-The **EventType** property of the node allows you to define the type of the event. The default value of the event is **Start**. The following code example explains how to create a BPMN event.
+The [EventType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnEvent.html#Syncfusion_Blazor_Diagram_BpmnEvent_EventType) property of the node allows you to define the type of the event. The default value of the event is **Start**. The following code example explains how to create a BPMN event.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -52,10 +52,11 @@ The **EventType** property of the node allows you to define the type of the even
     }
 }
 ```
+![None Trigger End event  event  BPMNShape](../images/Bpmn-Event-End.png)
 
 ## BPMN event trigger
 
-Event triggers are notated as icons inside the circle and they represent the specific details of the process. The Trigger property of the node allows you to set the type of trigger and by default, it is set to None. The following code example explains how to create a BPMN trigger.
+Event triggers are notated as icons inside the circle and they represent the specific details of the process. The [Trigger](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnEvent.html#Syncfusion_Blazor_Diagram_BpmnEvent_Trigger) property of the node allows you to set the type of trigger and by default, it is set to None. The following code example explains how to create a BPMN trigger.
 
 ```cshtml
 
@@ -94,6 +95,7 @@ Event triggers are notated as icons inside the circle and they represent the spe
     }
 }
 ```
+![Message Trigger Start Event BPMN Shape](../images/Bpmn-Event-Message-Start.png)
 
 The following table illustrates the type of event triggers.
 

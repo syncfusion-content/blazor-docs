@@ -11,13 +11,19 @@ documentation: ug
 
 * A BPMN object can be associated with a text annotation that does not affect the flow but gives details about objects within a flow. 
 
+* A TextAnnotation points at or references the another BPMN shape, which we call the [TextAnnotationTarget](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTextAnnotation.html#Syncfusion_Blazor_Diagram_BpmnTextAnnotation_TextAnnotationTarget) of the TextAnnotation. When a target shape is moved, copied, or deleted, any TextAnnotations attached to the shape will be moved, copied, or deleted too. Thus, the TextAnnotations stay with their target shapes though you can reposition the TextAnnotation to any offset from its target. The [TextAnnotationTarget](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTextAnnotation.html#Syncfusion_Blazor_Diagram_BpmnTextAnnotation_TextAnnotationTarget) property of the [BpmnTextAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTextAnnotation.html) is used to connect an annotation element to the Bpmn Node.
+
 * The annotation element can be switched from a BPMN node to another BPMN node simply by dragging the source end of the annotation connector into the other BPMN node.
 
-* A TextAnnotation points at or references the another BPMN shape, which we call the `TextAnnotationTarget` of the TextAnnotation. When a target shape is moved, copied, or deleted, any TextAnnotations attached to the shape will be moved, copied, or deleted too. Thus, the TextAnnotations stay with their target shapes though you can reposition the TextAnnotation to any offset from its target. The `TextAnnotationTarget` property of the `BpmnTextAnnotation` is used to connect an annotation element to the Bpmn Node.
+* By default, the TextAnnotation shape has a connection.
 
-* The `TextAnnotationDirection` property is used to set the shape direction of the text annotation.
+* The [TextAnnotationDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTextAnnotation.html#Syncfusion_Blazor_Diagram_BpmnTextAnnotation_TextAnnotationDirection) property is used to set the shape direction of the text annotation.
 
-* By default, the `TextAnnotationDirection` is set to a **Auto**.
+* By default, the [TextAnnotationDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTextAnnotation.html#Syncfusion_Blazor_Diagram_BpmnTextAnnotation_TextAnnotationDirection) is set to a [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Left).
+
+* To set the size for text annotation, use the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Height) properties of the Node.
+
+* The [OffsetX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OffsetX) and [OffsetY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OffsetY) property is used to set the distance between the BPMN node and the TextAnnotation.
 
 * The TextAnnotation element can be moved (if their have connected with any BPMN Node) while dragging the BPMN node.
 
@@ -49,6 +55,13 @@ documentation: ug
             Shape = new BpmnTextAnnotation() 
             { 
                 TextAnnotationTarget = TextAnnotationTarget.Auto,
+            },
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation()
+                {
+                    Content = "Text",
+                },
             }
         };
         nodes.Add(node);
@@ -79,8 +92,8 @@ The following code example represents how to create a TextAnnotation and make a 
             OffsetX = 500,
             OffsetY = 500,
             // Size of the node.
-            Width = 200,
-            Height = 200,
+            Width = 100,
+            Height = 100,
             // Unique Id of the node.
             ID = "node1",
             // Sets the type of shape to Bpmn and shape to activity.
@@ -93,8 +106,8 @@ The following code example represents how to create a TextAnnotation and make a 
         Node node2 = new Node()
         {
             // Position of the node.
-            OffsetX = 600,
-            OffsetY = 100,
+            OffsetX = 650,
+            OffsetY = 350,
             // Size of the node.
             Width = 100,
             Height = 100,
@@ -103,8 +116,15 @@ The following code example represents how to create a TextAnnotation and make a 
             // Sets type as Bpmn and shape as DataObject
             Shape = new BpmnTextAnnotation() 
             { 
-                TextAnnotationDirection = TextAnnotationDirection.Auto,
+                TextAnnotationDirection = TextAnnotationDirection.Bottom,
                   TextAnnotationTarget = "node1"
+            },
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation()
+                {
+                    Content = "Text",
+                },
             }
         };
         nodes.Add(node2);
