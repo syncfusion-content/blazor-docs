@@ -146,7 +146,7 @@ Each cell in an array cell binding data contain information about the row index,
 
 ### Empty points
 
-The data points that use the **null** or empty string as value are considered as empty points. Empty data points are ignored and not displayed in the heatmap, and these points are rendered with default palette. You can customize the empty data point color value using the [EmptyPointColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapPaletteSettings.html#Syncfusion_Blazor_HeatMap_HeatMapPaletteSettings_EmptyPointColor) property.
+The data points that use the **null** value are considered as empty points. Empty data points are ignored and not displayed in the heatmap, and these points are rendered with default palette. You can customize the empty data point color value using the [EmptyPointColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapPaletteSettings.html#Syncfusion_Blazor_HeatMap_HeatMapPaletteSettings_EmptyPointColor) property.
 
 ```cshtml
 
