@@ -1628,7 +1628,7 @@ In this example, a resource named `Will Smith` is depicted with working hours ra
 
 ![Resources with Different Workhours in Blazor Scheduler](images/blazor-schedule-differentworkhour.png)
 
-### Displaying only custom work days in Scheduler when grouped by date
+### Hide non-working days when grouped by date
 
 In Scheduler, you can set custom work days for each resource and group the Scheduler by date to display these work days. By default, the Scheduler will show all days when it is grouped by date, even if they are not included in the custom work days for the resources. However, you can use the `HideNonWorkingDays`(https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) property to only display the custom work days in the Scheduler.
 
@@ -1639,7 +1639,7 @@ To use the `HideNonWorkingDays` property, you need to include it in the configur
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 
-    <SfSchedule TValue="ScheduleData.ResourceData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate" >
+    <SfSchedule TValue="ResourceData" Width="100%" Height="650px" SelectedDate="currentDate">
         <ScheduleGroup ByDate="true" HideNonWorkingDays="@HideNonWorkingDays" Resources="@groupData"></ScheduleGroup>
         <ScheduleResources>
             <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@OwnersData" Field="TaskId" Title="Assignee" Name="Owners" TextField="Text" IdField="Id" ColorField="Color" WorkDaysField="WorkDays" AllowMultiple="true"></ScheduleResource>
@@ -1647,13 +1647,45 @@ To use the `HideNonWorkingDays` property, you need to include it in the configur
         <ScheduleEventSettings DataSource="@dataSource"></ScheduleEventSettings>
     </SfSchedule>
 @code{
-    private DateTime CurrentDate { get; set; } = new DateTime(DateTime.Today.Year, 1, 9);
-    private List<ScheduleData.ResourceData> dataSource = new ScheduleData().GetResourceData();
     private bool HideNonWorkingDays { get; set; } = true;
+    private DateTime currentDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 5);
     private string[] groupData = new string[] { "Owners" };
     private List<ResourceData> OwnersData { get; set; } = new List<ResourceData> {
         new ResourceData { Text = "Alice", Id= 1, Color = "#df5286", WorkDays = new int[] { 1, 2, 3, 4} },
         new ResourceData { Text = "Smith", Id= 2, Color = "#5978ee", WorkDays = new int[] { 2, 3, 5 } }
+    };
+    private List<ResourceData> dataSource = new List<ResourceData>()
+    {
+        new ResourceData
+        {
+            Id = 1,
+            Subject = "Workflow Analysis",
+            StartTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 6, 9, 30, 0),
+            EndTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 6, 12, 0, 0),
+            IsAllDay = false,
+            ProjectId = 1,
+            TaskId = 2
+        },
+        new ResourceData
+        {
+            Id = 2,
+            Subject = "Requirement planning",
+            StartTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 5, 12, 30, 0),
+            EndTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 5, 14, 45, 0),
+            IsAllDay = false,
+            ProjectId = 1,
+            TaskId = 1
+        },
+        new ResourceData
+        {
+            Id = 1,
+            Subject = "Quality Analysis",
+            StartTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 6, 10, 0, 0),
+            EndTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 6, 12, 30, 0),
+            IsAllDay = false,
+            ProjectId = 1,
+            TaskId = 1
+        }
     };
     public class ResourceData
     {
@@ -1661,13 +1693,20 @@ To use the `HideNonWorkingDays` property, you need to include it in the configur
         public int Id { get; set; }
         public string Color { get; set; }
         public int[] WorkDays { get; set; }
+        public string Subject { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public Nullable<bool> IsAllDay { get; set; }
+        public int ProjectId { get; set; }
+        public int TaskId { get; set; }
     }
 }
 ```
 
-![Displaying only custom work days in Scheduler when grouped by date in Blazor Scheduler](images/blazor-scheduler-hide-non-working-days.png)
+![Hide non-working days when grouped by date in Blazor Scheduler](images/blazor-scheduler-hide-non-working-days.png)
 
-N>  The `HideNonWorkingDays`(https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) property only applies when the Scheduler is grouped by date. If the Scheduler is grouped by another field, such as by ID, the `HideNonWorkingDays`(https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) property will not have any effect..
+N>  The `HideNonWorkingDays`(https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) property only applies when the Scheduler is grouped by `ByDate`.
+(https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_ByDate)
 
 ## Compact view in mobile
 

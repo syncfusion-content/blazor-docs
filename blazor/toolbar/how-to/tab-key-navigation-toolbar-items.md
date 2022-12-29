@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tab key navigation Toolbar item in Blazor Toolbar Component | Syncfusion
+title: Tab key navigation in Blazor Toolbar Component | Syncfusion
 description: Checkout and learn here all about how to Tab key navigation toolbar item in Syncfusion Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
-# Tab key navigation Toolbar item in Blazor Toolbar Component
+# Tab key navigation in Blazor Toolbar Component
 
 The `TabIndex`(https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_TabIndex) property of a Toolbar item is used to enable tab key navigation for the item. By default, the user can switch between items using the arrow keys, but the `TabIndex` property allows you to switch between items using the Tab and Shift+Tab keys as well.
 
