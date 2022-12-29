@@ -54,6 +54,7 @@ To create a node, define the [Node](https://help.syncfusion.com/cr/blazor/Syncfu
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Nodes/ActionsofNodes)
 
 ![Adding Node from Node Collection in Blazor Diagram](../images/blazor-diagram-add-node-from-collection.png)
 
@@ -105,6 +106,7 @@ You can add a Node at runtime by adding it to the nodes collection of the Diagra
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Nodes/ActionsofNodes)
 
 ## Add node from palette
 
@@ -177,6 +179,7 @@ The following code shows how to remove a node at runtime.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Nodes/ActionsofNodes)
 
 A node can be removed from the diagram by using the native `RemoveAt` method. Refer to the following example that shows how to remove the node at runtime.
 
@@ -235,6 +238,7 @@ The following code example explains how to change the node properties.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Nodes/ActionsofNodes)
 
 N> [BeginUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BeginUpdate) and [EndUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EndUpdate) methods allow you to stop the continuous update of control and resume it finally.
 

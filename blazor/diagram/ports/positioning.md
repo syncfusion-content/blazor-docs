@@ -64,6 +64,7 @@ The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Poi
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Ports/Positioning)
 
 ![Blazor Diagram with Port based on Offset](../images/blazor-diagram-port-offset.png)
 
@@ -148,6 +149,7 @@ The following code explains how to align ports.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Ports/Positioning)
 
 ![Changing Port Position in Blazor Diagram](../images/blazor-diagram-port-position.png)
 
@@ -204,6 +206,7 @@ N> By default, the value of the `HorizontalAlignment` and `VerticalAlignment` is
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Ports/Positioning)
 
 ![Blazor Diagram Port with Margin](../images/blazor-diagram-port-margin.png)
 

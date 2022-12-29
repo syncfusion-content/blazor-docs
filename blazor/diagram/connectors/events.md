@@ -81,6 +81,7 @@ The following code example explains how to get the selection change event in the
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Events)
 
 ## Position change
 
@@ -151,6 +152,7 @@ The following code example explains how to get the selection change event in the
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Events)
 
 ## Connection change
 
@@ -229,6 +231,7 @@ The following code example explains how to get the selection change event in the
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Events)
 
 ## See also
 
