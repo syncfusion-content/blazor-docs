@@ -70,6 +70,7 @@ To draw a [shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/DrawingTools)
 
 ![Node Tool in Blazor Diagram](images/blazor-diagram-node-tool.gif)
 
@@ -130,6 +131,7 @@ To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/DrawingTools)
 
 ![Connector Tool in Blazor Diagram](images/blazor-diagram-connector-tool.gif)
 
@@ -190,6 +192,7 @@ Diagram allows you to create a text Node as soon as you click on the Diagram pag
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/DrawingTools)
 
 ![Text Tool in Blazor Diagram](./images/blazor-diagram-Text-drawingtool.gif)
 
@@ -257,6 +260,7 @@ The following code illustrates how to draw a polygon shape.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/DrawingTools)
 
 ## Tool selection
 
@@ -314,3 +318,5 @@ The following code illustrates how to enable multiple interaction controllers,
     public DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 }
 ```
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/DrawingTools)

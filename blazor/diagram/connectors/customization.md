@@ -66,6 +66,7 @@ Diagram allows you to customize the connector appearances. The following topics 
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Customization)
 
 ### Decorator appearance
 
@@ -134,6 +135,7 @@ The following code example illustrates how to customize the appearance of the de
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Customization)
 
 ![Blazor Diagram Connector with Decorator](../images/blazor-diagram-decorator.png)
 
@@ -209,6 +211,7 @@ Padding is used to leave the space between the Connector's end point and the obj
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Customization)
 
 ![Blazor Diagram Connector with Padding](../images/blazor-diagram-connector-padding.png)
 
@@ -297,6 +300,7 @@ Line bridging creates a bridge for lines to smartly cross over the other lines, 
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Customization)
 
 The [BridgeSpace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_BridgeSpace) property of connectors can be used to define the width for line bridging. By default, the BridgeSpace value is 10px.
 
@@ -357,6 +361,7 @@ Corner radius allows to create connectors with rounded corners. The radius of th
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Customization)
 
 ![Blazor Diagram Connector with Corner Radius](../images/blazor-diagram-connector-with-corner-radious.png)
 
@@ -419,6 +424,7 @@ The following code example illustrates how to customize the segment appearance.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Customization)
 
 ### Decorator appearance
 
@@ -487,6 +493,7 @@ The following code example illustrates how to customize the appearance of the de
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Customization)
 
 ![Blazor Diagram Connector with Decorator](../images/blazor-diagram-decorator.png)
 
@@ -546,6 +553,7 @@ The following code illustrates how to disable selection.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Customization)
 
 ## Custom properties
 
@@ -601,6 +609,7 @@ The following code illustrates how to disable selection.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Customization)
 
 ## See also
 

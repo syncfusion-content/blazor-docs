@@ -96,7 +96,7 @@ A node group can be added to the diagram model through [Nodes](https://help.sync
     }
 }
 ```
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Group)
 ![Grouping in Blazor Diagram](images/blazor-diagram-grouping.png)
 
 The following code illustrates how to ungroup at runtime.
@@ -164,7 +164,7 @@ The following code illustrates how to ungroup at runtime.
     }
 }
 ```
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Group)
 ## Add NodeGroup at runtime
 
 A node group can be added at runtime by using Nodes collection of diagram.
@@ -228,7 +228,7 @@ The following code illustrates how a node group is added at runtime.
     }
 }
 ```
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Group)
 * Also, you can add the child to the node group through [AddChild](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddChild_Syncfusion_Blazor_Diagram_NodeGroup_Syncfusion_Blazor_Diagram_NodeBase_) method. The following code illustrates how to add child to the existing node group through AddChild method.
 
 ```cshtml
@@ -313,7 +313,7 @@ The following code illustrates how a node group is added at runtime.
     }
 }
 ```
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Group)
 ## Update position at runtime
 
 You can change the position of the node group similar to node. For more information about node positioning, refer to [Positioning](https://blazor.syncfusion.com/documentation/diagram/nodes/positioning).
@@ -378,7 +378,7 @@ You can change the position of the node group similar to node. For more informat
     }
 }
 ```
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Group)
 ## Change the appearance of the node group
 
 You can change the appearance of the node group similar to node. For more information about node appearance, refer to [Appearance](https://blazor.syncfusion.com/documentation/diagram/nodes/customization).

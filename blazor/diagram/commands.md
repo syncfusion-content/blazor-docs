@@ -82,7 +82,7 @@ The following code example illustrates how to align all the selected objects to 
     }      
 }
 ```
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
 ### How to align the selected objects to the right
 
 The following code example illustrates how to align all the selected objects at the right side of the selection boundary.
@@ -141,7 +141,7 @@ The following code example illustrates how to align all the selected objects at 
     }     
 }
 ```
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
 ### How to align the selected objects to the top
 
 The following code example illustrates how to align all the selected objects at the top of the selection boundary.
@@ -200,7 +200,7 @@ The following code example illustrates how to align all the selected objects at 
     }       
 }
 ```
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
 ### How to align the selected objects to the bottom
 
 The following code example illustrates how to align all the selected objects at the bottom of the selection boundary.
@@ -259,7 +259,7 @@ The following code example illustrates how to align all the selected objects at 
     }     
 }
 ```
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
 ### How to align the selected objects to the middle
 
 The following code example illustrates how to align all the selected objects at the middle of the selection boundary.
@@ -318,7 +318,7 @@ The following code example illustrates how to align all the selected objects at 
     }         
 }
 ```
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
 ### How to align the selected objects to the center
 
 The following code example illustrates how to align all the selected objects at the center of the selection boundary.
@@ -377,6 +377,7 @@ The following code example illustrates how to align all the selected objects at 
     }        
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
 ## Distribute
 
 The [SetDistribute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetDistribute_Syncfusion_Blazor_Diagram_DistributeOptions_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) commands enable to place the selected objects on the page at equal intervals from each other. The selected objects are equally spaced within the selection boundary.
@@ -497,7 +498,7 @@ The following code example illustrates how to execute the space commands.
     }
 }
 ```
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
 ## Sizing Commands
 
 Sizing [SetSameSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetSameSize_Syncfusion_Blazor_Diagram_SizingMode_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) commands are used to resize all selected object based on width, height, and size of the reference object (FirstSelectedItem).
@@ -582,7 +583,7 @@ The following code example illustrates how to execute the size commands.
     }
 }
 ```
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
 ## Clipboard commands
 
 Clipboard commands are used to cut, copy, or paste the selected elements.
@@ -656,7 +657,7 @@ The following code illustrates how to execute the clipboard commands.
     }
 }
 ```
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
 ## Grouping commands
 
 **Grouping commands** are used to group/ungroup the selected elements on the diagram. To group the elements, select the elements using select all command and group the selected elements using group command.
@@ -728,7 +729,7 @@ The following code illustrates how to execute the grouping commands.
     }
 }
 ```
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
 ## Z-Order commands
 
 Z – Order commands are used to control the stacking order (Z-Order) of the diagram elements such as nodes, connectors, and groups. Also, you can arrange the selected objects on the diagram page with its Z-order values by using Bring to front, Bring forward, Send to back, and Send backward features.
