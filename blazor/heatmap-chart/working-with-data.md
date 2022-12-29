@@ -11,7 +11,9 @@ documentation: ug
 
 Heatmap visualizes the JSON data and two-dimensional array data. Using the data adaptor support, data can be bound to the heatmap.
 
-## Data adaptor
+## Local Data
+
+### Data adaptor
 
 Heatmap supports the following types of data binding with the adaptor support.
 
@@ -19,7 +21,7 @@ Heatmap supports the following types of data binding with the adaptor support.
      * Table Binding
      * Cell Binding
 
-### Array - Table binding
+#### Array - Table binding
 
 Each inner array of an array table binding data contains data points for an X-axis data label, which is a collection of one dimensional array objects.
 This is the default data binding type for heatmap. You can also directly bind the array object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SfHeatMap-1.html#Syncfusion_Blazor_HeatMap_SfHeatMap_1_DataSource) property.
@@ -72,7 +74,7 @@ This is the default data binding type for heatmap. You can also directly bind th
 
 ![Data Table Binding in Blazor HeatMap Chart](images/data/blazor-heatmap-chart-data-binding.png)
 
-### Array - Cell binding
+#### Array - Cell binding
 
 Each cell in an array cell binding data contain information about the row index, column index, and data value, which is a collection of array object. To bind the data to the heatmap, you can use the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SfHeatMap-1.html#Syncfusion_Blazor_HeatMap_SfHeatMap_1_DataSource) property and set the [AdaptorType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapDataSourceSettings.html#Syncfusion_Blazor_HeatMap_HeatMapDataSourceSettings_AdaptorType) property to **Cell** in the [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapDataSourceSettings.html#properties)
 
@@ -142,7 +144,7 @@ Each cell in an array cell binding data contain information about the row index,
 
 ![Data Cell Binding in Blazor HeatMap Chart](images/data/blazor-heatmap-chart-data-cell-binding.png)
 
-## Empty points
+### Empty points
 
 The data points that use the **null** or empty string as value are considered as empty points. Empty data points are ignored and not displayed in the heatmap, and these points are rendered with default palette. You can customize the empty data point color value using the [EmptyPointColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapPaletteSettings.html#Syncfusion_Blazor_HeatMap_HeatMapPaletteSettings_EmptyPointColor) property.
 
@@ -155,6 +157,10 @@ The data points that use the **null** or empty string as value are considered as
     </HeatMapTitleSettings>
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
     <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
+    <HeatMapPaletteSettings EmptyPointColor="black">
+        <HeatMapPalettes>
+        </HeatMapPalettes>
+    </HeatMapPaletteSettings>
 </SfHeatMap>
 
 @code{
