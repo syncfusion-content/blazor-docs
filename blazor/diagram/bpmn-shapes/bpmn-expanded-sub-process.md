@@ -49,7 +49,7 @@ The following code example explains how to create a BPMN Expanded Sub-Process.
 ## Add BPMN Nodes into BPMN ExpandedSubProcess
 To add a BpmnNode into [BpmnExpandedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html), you have to define the BpmnNodeViewModel object and add that to the [Children](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html#Syncfusion_Blazor_Diagram_BpmnExpandedSubProcess_Children) collection of the [BpmnExpandedSubProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnExpandedSubProcess.html).
 
-The following code example explains how to Add Bpmn Node to a BPMN Expanded Sub-Process using Children property.
+The following code example explains how to Add BPMN Node to a BPMN Expanded Sub-Process using Children property.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
