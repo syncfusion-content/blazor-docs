@@ -137,10 +137,10 @@ A [Collapsed Sub-Process](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
             // Unique Id of the node.
             ID = "node1",
             // Sets the shape to activity.
-            Shape =  BpmnActivity()
+            Shape = new BpmnActivity()
             {
-                // Sets activity type to subprocess.
-                ActivityType = BpmnActivityType.CollapsedSubProcess,
+                // Sets activity type to CollapsedSubProcess.
+                ActivityType = BpmnActivityType.CollapsedSubProcess
             },
         };
         nodes.Add(node);
@@ -219,7 +219,7 @@ The following table contains various types of BPMN loops.
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
-        Node node1 = new Node()
+        Node node = new Node()
         {
             // Position of the node.
             OffsetX = 100,
@@ -227,10 +227,10 @@ The following table contains various types of BPMN loops.
             // Size of the node.
             Width = 100,
             Height = 100,
-            // Unique id of the node.
+            // Unique Id of the node.
             ID = "node1",
             // Defines the shape to activity.
-            Shape = BpmnActivity()
+            Shape = new BpmnActivity()
             {
                 ActivityType = BpmnActivityType.Task,
                 // Set compensation to true.

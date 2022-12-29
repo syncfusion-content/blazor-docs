@@ -52,9 +52,9 @@ documentation: ug
             // Unique Id of the node.
             ID = "node1",
             // Sets type as Bpmn and shape as DataObject
-            Shape = new BpmnTextAnnotation() 
-            { 
-                TextAnnotationTarget = TextAnnotationTarget.Auto,
+            Shape = new BpmnTextAnnotation()
+            {
+                TextAnnotationDirection = TextAnnotationDirection.Auto,
             },
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
@@ -106,7 +106,7 @@ The following code example represents how to create a TextAnnotation and make a 
         Node node2 = new Node()
         {
             // Position of the node.
-            OffsetX = 650,
+            OffsetX = 600,
             OffsetY = 350,
             // Size of the node.
             Width = 100,
@@ -114,10 +114,10 @@ The following code example represents how to create a TextAnnotation and make a 
             // Unique Id of the node.
             ID = "node2",
             // Sets type as Bpmn and shape as DataObject
-            Shape = new BpmnTextAnnotation() 
-            { 
+            Shape = new BpmnTextAnnotation()
+            {
                 TextAnnotationDirection = TextAnnotationDirection.Bottom,
-                  TextAnnotationTarget = "node1"
+                TextAnnotationTarget = "node1"
             },
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {

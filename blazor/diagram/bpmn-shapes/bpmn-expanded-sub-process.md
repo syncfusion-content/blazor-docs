@@ -30,17 +30,20 @@ The following code example explains how to create a BPMN Expanded Sub-Process.
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
-        Node node1 = new Node()
-            {
-                ID = "node1",
-                Width = 300,
-                OffsetX = 500,
-                OffsetY = 300,
-                Height = 300,
-                Constraints = NodeConstraints.Default | NodeConstraints.AllowDrop,
-                Shape = new BpmnExpandedSubProcess()
-            };
-        nodes.Add(node1);
+        Node node = new Node()
+        {
+            // Position of the node.
+            OffsetX = 500,
+            OffsetY = 350,
+            // Size of the node.
+            Width = 300,
+            Height = 300,
+            // Unique Id of the node.
+            ID = "node1",
+            // Sets the shape to activity.
+            Shape = new BpmnExpandedSubProcess()
+        };
+        nodes.Add(node);
     }
 }
 ```
@@ -65,7 +68,7 @@ The following code example explains how to Add BPMN Node to a BPMN Expanded Sub-
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
-         Node node1 = new Node()
+        Node node1 = new Node()
             {
                 ID = "node1",
                 OffsetX = 300,
@@ -174,7 +177,7 @@ The following table contains various types of BPMN loops.
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
-        Node node1 = new Node()
+        Node node = new Node()
         {
             // Position of the node.
             OffsetX = 100,

@@ -46,8 +46,8 @@ The following code example explains how to create an association.
             // Unique Id of the connector.
             ID = "connector1",
             // Start and end point of the connector
-            SourcePoint = new Point() { X = 100, Y = 200 },
-            TargetPoint = new Point() { X = 300, Y = 300 },
+            SourcePoint = new DiagramPoint () { X = 100, Y = 200 },
+            TargetPoint = new DiagramPoint () { X = 300, Y = 300 },
             // Sets the type to Bpmn, flow to AssociationFlow.
             Shape = new BpmnFlow()
             {
@@ -97,8 +97,8 @@ The following code example explains how to create a sequence flow.
             // Unique Id of the connector.
             ID = "connector1",
             // Start and end point of the connector.
-            SourcePoint = new Point() { X = 100, Y = 200 },
-            TargetPoint = new Point() { X = 300, Y = 300 },
+            SourcePoint = new DiagramPoint() { X = 100, Y = 200 },
+            TargetPoint = new DiagramPoint() { X = 300, Y = 300 },
             // Sets the flow to SequenceFlow.
             Shape = new BpmnFlow()
             {
@@ -150,8 +150,8 @@ The following code example explains how to define a message flow.
             // Unique Id of the connector.
             ID = "connector1",
             // Start and end point of the connector.
-            SourcePoint = new Point() { X = 100, Y = 200 },
-            TargetPoint = new Point() { X = 300, Y = 300 },
+            SourcePoint = new DiagramPoint() { X = 100, Y = 200 },
+            TargetPoint = new DiagramPoint() { X = 300, Y = 300 },
             // Sets the flow to MessageFlow.
             Shape = new BpmnFlow()
             {
