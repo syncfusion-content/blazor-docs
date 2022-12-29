@@ -15,13 +15,13 @@ documentation: ug
 
 When you work on a very large diagram, you may not know the part you are actually working on, or navigation from one part to another might be difficult. One solution for navigation is to zoom out the entire diagram and find where you are. Then, you can zoom in a particular area you want to. This solution is not suitable when you need some frequent navigation.
 
-[SfDiagramOverviewComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html) solves these problems by showing a preview, that is, an overall view of the entire diagram. A rectangle indicates viewport of the diagram. Navigation becomes easy by dragging this rectangle.
+SfDiagramOverviewComponent solves these problems by showing a preview, that is, an overall view of the entire diagram. A rectangle indicates viewport of the diagram. Navigation becomes easy by dragging this rectangle.
 
 ## Create overview
 
-The [SourceID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html#Syncfusion_Blazor_Diagram_Overview_SfDiagramOverviewComponent_SourceID) property of [SfDiagramOverviewComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html) should be set with the corresponding diagram ID for the overall view.
+The [SourceID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html#Syncfusion_Blazor_Diagram_Overview_SfDiagramOverviewComponent_SourceID) property of SfDiagramOverviewComponent should be set with the corresponding diagram [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ID) for the overall view.
 
-The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html#Syncfusion_Blazor_Diagram_Overview_SfDiagramOverviewComponent_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html#Syncfusion_Blazor_Diagram_Overview_SfDiagramOverviewComponent_Height) properties of the [SfDiagramOverviewComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html) allow you to define the size of the SfDiagramOverviewComponent.
+The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html#Syncfusion_Blazor_Diagram_Overview_SfDiagramOverviewComponent_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html#Syncfusion_Blazor_Diagram_Overview_SfDiagramOverviewComponent_Height) properties of the SfDiagramOverviewComponent allow you to define the size of the overview panel.
 
 The following code illustrates how to create overview.
 
@@ -30,13 +30,13 @@ The following code illustrates how to create overview.
 @using Syncfusion.Blazor.Diagram.Overview
 @using System.Collections.ObjectModel
 
-<SfDiagramComponent @ref="@Diagram" ID="diagram" Width="100%" Height="500px" InteractionController="DiagramInteractions.ZoomPan" ConnectorCreating="@ConnectorCreating" NodeCreating="@NodeCreating">
+<SfDiagramComponent @ref="@Diagram" ID="element" Width="100%" Height="500px" InteractionController="DiagramInteractions.ZoomPan" ConnectorCreating="@ConnectorCreating" NodeCreating="@NodeCreating">
     <DataSourceSettings ID="Name" ParentID="Category" DataSource="DataSource"></DataSourceSettings>
     <Layout Type="LayoutType.HierarchicalTree" HorizontalSpacing="30" Orientation="LayoutOrientation.TopToBottom" VerticalSpacing="30" HorizontalAlignment="HorizontalAlignment.Auto" VerticalAlignment="VerticalAlignment.Auto" GetLayoutInfo="GetLayoutInfo">
         <LayoutMargin Top="50" Bottom="50" Right="50" Left="50"></LayoutMargin>
     </Layout>            
 </SfDiagramComponent>
-<SfDiagramOverviewComponent Height="150px" SourceID="diagram"></SfDiagramOverviewComponent>
+<SfDiagramOverviewComponent Height="150px" SourceID="element"></SfDiagramOverviewComponent>
 @code {
 SfDiagramComponent Diagram;
 private void ConnectorCreating(IDiagramObject connector)
@@ -102,7 +102,7 @@ public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
 
 ## Zoom and Pan
 
-In [SfDiagramOverviewComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html), the view port of the diagram is highlighted with a red color rectangle. Diagram can be zoomed/panned by interacting with that. You can interact with [SfDiagramOverviewComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html) as follows:
+In SfDiagramOverviewComponent, the view port of the diagram is highlighted with a red color rectangle. Diagram can be zoomed/panned by interacting with that rectangle. You can interact with SfDiagramOverviewComponent as follows:
 
 * Resize the rectangle: Zooms in/out the diagram.
 * Drag the rectangle: Pans the diagram.
@@ -115,7 +115,7 @@ The following image shows how the diagram is zoomed/panned with overview.
 
 ## Overview Constraints
 
-The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html#Syncfusion_Blazor_Diagram_Overview_SfDiagramOverviewComponent_Constraints) property of the [SfDiagramOverviewComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html) allows you to enable or disable the following behaviors.
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html#Syncfusion_Blazor_Diagram_Overview_SfDiagramOverviewComponent_Constraints) property of the SfDiagramOverviewComponent allows you to enable or disable the following functionalities.
 
 * None
 * Zoom
@@ -126,12 +126,12 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 
 | Constraints | Description |
 | -------- | -------- |
-| None | Disables all the interactions in SfDiagramOverviewComponent.|
-| Zoom | Enables the zooming interaction in SfDiagramOverviewComponent. |
-| Pan | Enables the panning interaction in SfDiagramOverviewComponent. |
-| DrawFocus | Enables to zoom or change the viewport area of the diagram by drawing the new rect in the SfDiagramOverviewComponent. | 
-| TapFocus | Enables the panning of the diagram viewport to specific focus point by tap on the SfDiagramOverviewComponent. |
-| Default | Enables all the interactions in SfDiagramOverviewComponent. |
+| None | Disables all the interactions in overview component.|
+| Zoom | Enables the zooming interaction in overview component. |
+| Pan | Enables the panning interaction in overview component. |
+| DrawFocus | Enables to zoom or change the viewport area of the diagram by drawing the new rect in the overview component. | 
+| TapFocus | Enables the panning of the diagram viewport to specific focus point by tap on the overview component. |
+| Default | Enables all the interactions in overview component. |
 
 The following example shows how to disable zoom constraint from the default overview constraints.
 
@@ -140,9 +140,9 @@ The following example shows how to disable zoom constraint from the default over
 @using Syncfusion.Blazor.Diagram.Overview
 @using System.Collections.ObjectModel
 
-<SfDiagramComponent @ref="diagram" Height="600px" Width="90%" ID="diagram" @bind-Nodes="nodes" @bind-Connectors="connectors">
+<SfDiagramComponent @ref="diagram" Height="600px" Width="90%" ID="element" @bind-Nodes="nodes" @bind-Connectors="connectors">
 </SfDiagramComponent>
-<SfDiagramOverviewComponent Height="150px" SourceID="diagram" Constraints="DiagramOverviewConstraints.Default &~ DiagramOverviewConstraints.Zoom"></SfDiagramOverviewComponent>
+<SfDiagramOverviewComponent Height="150px" SourceID="element" Constraints="DiagramOverviewConstraints.Default &~ DiagramOverviewConstraints.Zoom"></SfDiagramOverviewComponent>
 @code {
     SfDiagramComponent diagram; DiagramObjectCollection<Node> nodes; DiagramObjectCollection<Connector> connectors;
     protected override void OnInitialized()
