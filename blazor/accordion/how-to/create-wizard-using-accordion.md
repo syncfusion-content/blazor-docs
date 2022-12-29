@@ -225,4 +225,4 @@ The following demo is designed for simple payment module that enable or disable 
 
 
 
-![Blazor Accordion Component Wizard](../images/accordion-wizard.png)
+![Blazor Accordion Component Wizard](../images/blazor-accordion-wizard.png)
