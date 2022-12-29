@@ -72,7 +72,6 @@ The [TaskType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.B
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
-        Node node = new Node()
         {
             // Position of the node.
             OffsetX = 100,
@@ -82,9 +81,9 @@ The [TaskType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.B
             Height = 100,
             // Unique Id of the node.
             ID = "node1",
-            // Sets shape to BpmnActivity.
-            Shape = BpmnActivity() 
-            { 
+            // Sets the shape to activity.
+            Shape = new BpmnActivity()
+            {
                 ActivityType = BpmnActivityType.Task,
                 // Sets the type of the task to Send.
                 TaskType = BpmnTaskType.Send
