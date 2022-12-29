@@ -11,7 +11,7 @@ documentation: ug
 
 The [DateOnly](https://learn.microsoft.com/en-us/dotnet/api/system.dateonly?view=net-7.0) type is a new type in .NET 6 that allows you to represent a date without a time component. To use it with the Blazor Calendar component, set the type parameter to `DateOnly`.
 
-> Despite being introduced in .NET 6, the Blazor Calendar component only supports the `DateOnly` type in versions of .NET 7 and higher.
+> Blazor Calendar Component supports `DateOnly` type in .NET 7 and above version only, even though it introduced in .NET 6 itself due to serialization problem.
 
 {% highlight Razor %}
 
