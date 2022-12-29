@@ -11,6 +11,11 @@ documentation: ug
 
 This section briefly explains about how to include Blazor Skeleton component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
+To get start quickly with Skeleton Component using Blazor, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=Zd6gzsjunYM&list=PLDzXQPWT8wEDGN8evydx9L-KpuW1ZxDy1&index=4"%}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
