@@ -485,9 +485,9 @@ namespace BlazorApplication
 }
 ```
 
-### Configure heatmap component
+### Configure Heatmap component
 
-Configure the HeatMap to bind data using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SfHeatMap-1.html#Syncfusion_Blazor_HeatMap_SfHeatMap_1_DataSource) property.
+Configure the Heatmap to bind data using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SfHeatMap-1.html#Syncfusion_Blazor_HeatMap_SfHeatMap_1_DataSource) property.
 
 For instance, bind the data directly from the **OrderDataAccessLayer** class and assign to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.SfHeatMap-1.html#Syncfusion_Blazor_HeatMap_SfHeatMap_1_DataSource) property.
 
