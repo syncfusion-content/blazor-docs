@@ -35,28 +35,7 @@ Below example demonstrates the tooltip template of Rating.
 
 <SfRating Value=3 ShowTooltip=true>
     <TooltipTemplate>
-        @{
-            if (context == 1)
-            {
-                <span>Angry</span>
-            }
-            else if (context == 2)
-            {
-                <span>Sad</span>
-            }
-            else if (context == 3)
-            {
-                <span>Neutral</span>
-            }
-            else if (context == 4)
-            {
-                <span>Good</span>
-            }
-            else
-            {
-                <span>Happy</span>
-            }
-        }
+        <b>@((context == 1)?"Angry":(context == 2)?"Sad":(context == 3)?"Neutral":(context == 4)?"Good":"Happy")</b>
     </TooltipTemplate>
 </SfRating>
 
@@ -79,18 +58,32 @@ Below example demonstrates the tooltip customization of Rating.
 <SfRating CssClass="customtooltip" ShowTooltip=true></SfRating>
 
 <style>
+
+    /*To change the radius of the tooltip corners.*/
+    .customtooltip .e-tooltip-wrap {
+        border-radius: 3px;
+    }
+
+    /*To change the size of the tooltip content.*/
+    .customtooltip .e-tooltip-wrap .e-tip-content {
+        font-size:14px;
+    }
+
+    /*To change the border color and width for tooltip.*/
     .customtooltip .e-tooltip-wrap.e-popup {
-        background-color: #2682cb;
-        border: 2px solid #5074cd;
+        border: 2px solid #969393;
     }
 
+    /*To change the color for arrow of the tooltip.*/
     .customtooltip .e-tooltip-wrap .e-arrow-tip-inner.e-tip-bottom {
-        color: #2682cb;
+        border: 12px solid #9693
     }
 
+    /*To change the top border color for arrow of the tooltip.*/
     .customtooltip .e-tooltip-wrap .e-arrow-tip-outer.e-tip-bottom {
-        border-top: #2682cb;
+        border-top: 12.5px solid #969393;
     }
+
 </style>
 
 ```

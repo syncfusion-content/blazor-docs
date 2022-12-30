@@ -25,7 +25,7 @@ Below example demonstrates ItemsCount of Rating.
 
 ```
 
-![Blazor Rating Component with ItemsCount](images/blazor-rating-itemscount.png)
+![Blazor Rating Component with ItemsCount](images/blazor-rating-items-count.png)
 
 ## Disabled
 
@@ -45,7 +45,7 @@ Below example demonstrates Disabled of Rating.
 
 ## Visible
 
-By using the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Visible) property. You can customize the visibility of the Rating. If the value of Visible is true, then the rating component is in a visible state.
+By using the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Visible) property, You can customize the visibility of the Rating. If the value of Visible is true, then the rating component is in a visible state.
 
 Below example demonstrates Visible of Rating.
 
@@ -86,9 +86,13 @@ Below example demonstrates CssClass of Rating.
 <SfRating Value="3" CssClass="custom-font"></SfRating>
 
 <style>
-    .e-rating-container.custom-font .e-list-item .e-rating-item-container .e-rating-icon {
-        -webkit-text-stroke: 2px #ea8d57;
-        background: linear-gradient(to right, #FFAD29 var(--rating-value), #eed3a6 var(--rating-value));
+
+    .e-rating-container.custom-font .e-rating-item-list:hover .e-rating-item-container .e-rating-icon,
+    .e-rating-container.custom-font .e-rating-item-container .e-rating-icon {
+        /*To change rating symbol border color*/
+        -webkit-text-stroke: 2px #FFA012;
+        /*To change rated symbol fill color and un-rated symbol fill color*/
+        background: linear-gradient(to right, #FFE814 var(--rating-value), #d8d7d4 var(--rating-value));
         background-clip: text;
         -webkit-background-clip: text;
     }
@@ -103,20 +107,21 @@ Below example demonstrates CssClass of Rating.
 
 By using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_CssClass) property, You can customize your rating icon for your rating item. 
 
-Below example demonstrates the Change Icon Using Css Class of Rating.
+Below example demonstrates the Change Icon Using CssClass of Rating.
 
 ```cshtml
 
 <SfRating Value="3" CssClass="custom-icon"></SfRating>
 
 <style>
+
     .custom-icon .e-icons.e-star-filled:before {
-        content: "\e700";
+        content: "\e702";
     }
 
     @@font-face {
         font-family: 'custom-icon';
-        src: url(data:application/x-font-ttf;charset=utf-8;base64,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) format('truetype');
+        src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAAKAIAAAwAgT1MvMj1vSfQAAAEoAAAAVmNtYXDnEudXAAABiAAAADZnbHlmVIZrowAAAcgAAAEYaGVhZCK6KOUAAADQAAAANmhoZWEIUAQDAAAArAAAACRobXR4CAAAAAAAAYAAAAAIbG9jYQCMAAAAAAHAAAAABm1heHABDQCJAAABCAAAACBuYW1lv3dY+QAAAuAAAAJVcG9zdN12YnkAAAU4AAAALwABAAAEAAAAAFwEAAAAAAAD8wABAAAAAAAAAAAAAAAAAAAAAgABAAAAAQAAEGWKhV8PPPUACwQAAAAAAN/UcgcAAAAA39RyBwAAAAAD8wPaAAAACAACAAAAAAAAAAEAAAACAH0AAQAAAAAAAgAAAAoACgAAAP8AAAAAAAAAAQQAAZAABQAAAokCzAAAAI8CiQLMAAAB6wAyAQgAAAIABQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUGZFZABA5wLnAgQAAAAAXAQAAAAAAAABAAAAAAAABAAAAAQAAAAAAAACAAAAAwAAABQAAwABAAAAFAAEACIAAAAEAAQAAQAA5wL//wAA5wL//wAAAAEABAAAAAEAAAAAAAAAjAAAAAEAAAAAA/MD2gB8AAATDxYVHw8/DjUvHiMPDC8PDwaoDAwMCwoKCgkICAgHBgYFBQQEAwICAQEBAQIDAwQFBQsVIyE5UmWI7FM5IR0WDQgFBAMDAgEBAQECAgMEBAUFBgYHCAgICQoKCgsMDAwMDAwNDAwNDBkYGBgXFRUUEhEICAYHCQsLDA0ODg8QEBARERESEQ4ODg4ODg0DwgYHBwgICQkKCgoLCwwLDA0MDQwNDQ4NDQ4NDQ4NDQ0NFSIwK0Rfbo/9XkUrJyMWFA0NDQ4NDQ4NDQ0ODA0NDA0LDAwLCgsKCgkICQgHBwYFBQQDAwIBAQIFBgkLDg8REwoKCwwRDw8NDQsLCggIBgUEAwIBAQECAgQEBQAAABIA3gABAAAAAAAAAAEAAAABAAAAAAABAAsAAQABAAAAAAACAAcADAABAAAAAAADAAsAEwABAAAAAAAEAAsAHgABAAAAAAAFAAsAKQABAAAAAAAGAAsANAABAAAAAAAKACwAPwABAAAAAAALABIAawADAAEECQAAAAIAfQADAAEECQABABYAfwADAAEECQACAA4AlQADAAEECQADABYAowADAAEECQAEABYAuQADAAEECQAFABYAzwADAAEECQAGABYA5QADAAEECQAKAFgA+wADAAEECQALACQBUyBjdXN0b20taWNvblJlZ3VsYXJjdXN0b20taWNvbmN1c3RvbS1pY29uVmVyc2lvbiAxLjBjdXN0b20taWNvbkZvbnQgZ2VuZXJhdGVkIHVzaW5nIFN5bmNmdXNpb24gTWV0cm8gU3R1ZGlvd3d3LnN5bmNmdXNpb24uY29tACAAYwB1AHMAdABvAG0ALQBpAGMAbwBuAFIAZQBnAHUAbABhAHIAYwB1AHMAdABvAG0ALQBpAGMAbwBuAGMAdQBzAHQAbwBtAC0AaQBjAG8AbgBWAGUAcgBzAGkAbwBuACAAMQAuADAAYwB1AHMAdABvAG0ALQBpAGMAbwBuAEYAbwBuAHQAIABnAGUAbgBlAHIAYQB0AGUAZAAgAHUAcwBpAG4AZwAgAFMAeQBuAGMAZgB1AHMAaQBvAG4AIABNAGUAdAByAG8AIABTAHQAdQBkAGkAbwB3AHcAdwAuAHMAeQBuAGMAZgB1AHMAaQBvAG4ALgBjAG8AbQAAAAACAAAAAAAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBAgEDAAVoZWFydAAAAA==) format('truetype');
         font-weight: normal;
         font-style: normal;
     }
@@ -132,6 +137,7 @@ Below example demonstrates the Change Icon Using Css Class of Rating.
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
+
 </style>
 
 ```

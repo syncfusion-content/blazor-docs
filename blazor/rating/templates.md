@@ -17,7 +17,7 @@ The Template types of Rating are as follows:
 * Full Template
 
 ## EmptyTemplate
-You can access information about the un-rated item by setting [EmptyTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_EmptyTemplate) property. 
+You can access information about the un-rated item by setting [EmptyTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_EmptyTemplate) tag directive. 
 
 Below example demonstrates the Empty Template of Rating.
 
@@ -70,7 +70,7 @@ Below example demonstrates the Empty Template of Rating.
 
 ## FullTemplate
 
-You can access information about the rated item by setting [FullTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_FullTemplate) property.
+You can access information about the rated item by using the [FullTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_FullTemplate) tag directive.
 
 Below example demonstrates the Full Template of Rating.
 
@@ -187,7 +187,7 @@ Below example demonstrates the SVG Icon of Rating.
 
 @using Syncfusion.Blazor.Inputs
 
-<SfRating EnableAnimation=false>
+<SfRating Value="3" EnableAnimation=false>
     <EmptyTemplate>
         <svg width="35" height="25" class="e-rating-svg-icon">
             <rect width="35" height="25" fill="transparent" style="stroke-width:2;stroke:rgb(173,181,189)" />
@@ -207,6 +207,11 @@ Below example demonstrates the SVG Icon of Rating.
 </SfRating>
 
 <style>
+
+    .e-rating-container .e-rating-item-container {
+        padding: 0px;
+    }
+
     .e-rating-svg-icon #grad0 .start {
         stop-color: #FF0000;
     }
@@ -234,6 +239,7 @@ Below example demonstrates the SVG Icon of Rating.
     .e-rating-svg-icon #grad4 .end {
         stop-color: #4eaa01;
     }
+
 </style>
 
 ```
@@ -251,13 +257,18 @@ Below example demonstrates the PNG image of Rating.
 @using Syncfusion.Blazor.Inputs
 
 <SfRating>
-    <FullTemplate>        
-        <img src="images/FillStar.png" width="25" height="25" />
+    <FullTemplate>
+        <img src=@fullTemplateImage widht="25" height="25" />
     </FullTemplate>
     <EmptyTemplate>
-        <img src="images/EmptyStar.png" width="25" height="25" />
+        <img src=@emptyTemplateImage widht="25" height="25" />
     </EmptyTemplate>
 </SfRating>
+
+@code {
+    private string fullTemplateImage = "";//Provide the URL for the image here.
+    private string emptyTemplateImage = "";//Provide the URL for the image here.
+}
 
 ```
 

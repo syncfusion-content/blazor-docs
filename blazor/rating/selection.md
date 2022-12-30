@@ -61,7 +61,7 @@ Below example demonstrates the Min Value of Rating.
 
 ## Single selection
 
-You can select only a single rating item by setting [EnableSingleSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_EnableSingleSelection) property. Only the selected item will be in the selected state, and all other items will be un-selected.
+You can select only a single rating item by using the [EnableSingleSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_EnableSingleSelection) property. Only the selected item will be in the selected state, and all other items will be un-selected.
 
 Below example demonstrates the Single Selection of Rating.
 
@@ -77,7 +77,7 @@ Below example demonstrates the Single Selection of Rating.
 
 ## Show or hide reset button
 
-You can reset the rating value to its default by setting [AllowReset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_AllowReset) property. Value is true then the reset button will be visible to reset the rating value to its default. The default value is `false`.
+You can reset the rating value to its default by using the [AllowReset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_AllowReset) property. Value is true then the reset button will be visible to reset the rating value to its default. The default value is `false`.
 
 Below example demonstrates the Show Or Hide Reset Button of Rating.
 

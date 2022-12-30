@@ -24,7 +24,7 @@ The below example demonstrates enabling label in Rating.
 ![Blazor Rating Component with Label](./images/blazor-rating-label.png)
 
 ## LabelPosition
-You can place the label on the top, left, up, and down side of the Rating by setting [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_LabelPosition) property.
+You can place the label on the top, left, up, and down side of the Rating by using the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_LabelPosition) property.
 
 The label position values of Rating are as follows:
 
@@ -55,7 +55,7 @@ Below example demonstrates different supported label positions of Rating.
 
 ## LabelTemplate
 
-The Rating supports to customize the content of the label by setting [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_LabelTemplate) tag directive.
+The Rating supports to customize the content of the label by using [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_LabelTemplate) tag directive.
 
 Below example demonstrates the label template of Rating.
 

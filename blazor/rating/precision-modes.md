@@ -9,7 +9,7 @@ documentation: ug
 
 # Precision Modes in Blazor Rating Component
 
-The Precision type of the Rating which used to component the granularity of the rating, allowing users to provide ratings with varying levels of precision using the [Precision](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Precision) property.
+You can provide ratings with varying levels of precision using the [Precision](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Precision) property.
 
 The precision types of Rating are as follows:
 
