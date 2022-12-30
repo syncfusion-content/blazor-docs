@@ -15,7 +15,9 @@ documentation: ug
 
 [Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) triggers [`OnRequestNavigate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorEvents.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorEvents_OnRequestNavigate) event whenever user clicks Ctrl key or tap a hyperlink within the document. This event provides necessary details about link type, navigation URL, and local URL (if any) as arguments, and allows you to easily customize the hyperlink navigation functionality. 
 
-Refer to the following example.
+### Add the OnRequestNavigate event for DocumentEditor
+
+The following example illustrates how to add OnRequestNavigate event for DocumentEditor.
 
 ```cshtml
 <SfDocumentEditor ID="cont" IsReadOnly="false" EnableEditor="true" EnableSelection="true" @ref="container" Height="590px">
@@ -62,13 +64,13 @@ container.DocumentEditor.Selection.CopyHyperlinkAsync();
 
 ## Add hyperlink
 
-To create a basic hyperlink in the document, press `ENTER` / `SPACEBAR` / `SHIFT + ENTER` / `TAB` key after typing the address, for instance `http://www.google.com`. Document Editor automatically converts this address to a hyperlink field. The text can be considered as a valid URL if it starts with any of the following.
+To create a basic hyperlink in the document, press `ENTER` / `SPACEBAR` / `SHIFT + ENTER` / `TAB` key after typing the address, for instance [`http://www.google.com`](http://www.google.com). Document Editor automatically converts this address to a hyperlink field. The text can be considered as a valid URL if it starts with any of the following.
 
-> `<http://>`<br>
-> `<https://>`<br>
-> `file:///`<br>
-> `www.`<br>
-> `mail to:`<br>
+N> `<http://>`<br>
+<br/> `<https://>`<br>
+<br/> `file:///`<br>
+<br/> `www.`<br>
+<br/> `mail to:`<br>
 
 Also Document Editor expose API [`InsertHyperlinkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertHyperlinkAsync_System_String_System_String_)to insert hyperlink.
 

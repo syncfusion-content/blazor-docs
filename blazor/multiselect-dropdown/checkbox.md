@@ -195,6 +195,83 @@ Using [EnableSelectionOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 ![Changing Selection Order in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-change-selection-order.png)
 
+## Properties
+
+### Mode
+
+Configures visibility mode for component interaction.
+
+Default value of [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Mode) is `Default`.
+
+Possible values are:
+
+* `Box` - selected items will be visualized in chip.
+* `Delimiter` - selected items will be visualized in text content.
+* `Default` - on focus in component will act in box mode. on blur component will act in delimiter mode.
+* `CheckBox` - The ‘checkbox’ will be visualized in list item.
+
+[Click to refer the code for Mode](https://blazor.syncfusion.com/documentation/multiselect-dropdown/checkbox)
+
+### SelectAllText
+
+Specifies the selectAllText to be displayed on the component.
+
+Default value of [SelectAllText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_SelectAllText) is `Select All`
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/checkbox/selectAllText-property.razor %}
+
+{% endhighlight %}
+
+![Blazor MultiSelect DropDown with SelectAllText property](./images/checkbox/blazor_multiselect_selectAllText-property.png)
+
+
+### ShowSelectAll
+
+Allows you to either show or hide the selectAll option on the component.
+
+Default value of [ShowSelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_ShowSelectAll) is `false`.
+
+[Click to refer the code ShowSelectAll](https://blazor.syncfusion.com/documentation/multiselect-dropdown/checkbox#select-all)
+
+### UnSelectAllText
+
+Specifies the UnSelectAllText to be displayed on the component.
+
+Default value for [UnSelectAllText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_UnSelectAllText) is `UnSelect All`
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/checkbox/selectAllText-property.razor %}
+
+{% endhighlight %}
+
+![Blazor MultiSelect DropDown with UnSelectAllText property](./images/checkbox/blazor_multiselect_unselectAllText-property.png)
+
+## Methods
+
+### SelectAllAsync(Boolean)
+
+Based on the state parameter, entire list item will be selected/deselected.
+
+#### Declaration
+
+N> public Task SelectAllAsync(bool state)
+
+#### parameter
+
+* True - Selects entire list items.
+* False -Un Selects entire list items.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/checkbox/selectAllAsync-method.razor %}
+
+{% endhighlight %}
+
+![Blazor MultiSelect DropDown with SelectAllAsync method](./images/checkbox/blazor_multiselect_selectAllAsync-method.gif)
+
 ## See Also
 
 * [Blazor MultiSelect DropDown with selection stacked vertically in CheckBox](https://www.syncfusion.com/forums/172062/how-to-stack-selected-items-vertically-in-a-multiselct-dropdown)

@@ -137,7 +137,7 @@ public class TreeData
 
 ![Blazor TreeGrid with Dialog Template](../images/blazor-treegrid-dialog-template.png)
 
-> The template form editors should have **name** attribute.
+N> The template form editors should have **name** attribute.
 
 ### Disable components in dialog template
 

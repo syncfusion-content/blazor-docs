@@ -32,7 +32,7 @@ When [Prompt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEd
 2. `Clean`: To clear all the style formats with copied content.
 3. `Plain Text`: To paste the copied content as plain text without any formatting or style (including the removal of all tags).
 
-> When the `Prompt` value is set to true, the API properties [PlainText](#paste-as-plain-text) and [KeepFormat](#keep-format) will not be considered for processing when pasting the content.
+N> When the `Prompt` value is set to true, the API properties [PlainText](#paste-as-plain-text) and [KeepFormat](#keep-format) will not be considered for processing when pasting the content.
 
 {% tabs %}
 {% highlight razor %}
@@ -48,7 +48,7 @@ When [Prompt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEd
 
 When [PlainText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorPasteCleanupSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorPasteCleanupSettings_PlainText) is set to true, the copied content will be converted to plain text by removing all the HTML tags and styles applied to it, and only the plain text is pasted in the editor.
 
-> When `PlainText` value is set true, the API property [Prompt](#prompt-dialog) should be set to false, and [KeepFormat](#keep-format) will not be considered for processing when pasting the content.
+N> When `PlainText` value is set true, the API property [Prompt](#prompt-dialog) should be set to false, and [KeepFormat](#keep-format) will not be considered for processing when pasting the content.
 
 {% tabs %}
 {% highlight razor %}
@@ -66,7 +66,7 @@ When [KeepFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTe
 
 When `KeepFormat` is set to false, the style in the copied content will be removed without considering the allowed styles in the `AllowedStyleProperties` when pasting the content in the editor.
 
-> When the `KeepFormat` value is set to true, the API properties [Prompt](#prompt-dialog) and [PlainText](#paste-as-plain-text) should be set to false.
+N> When the `KeepFormat` value is set to true, the API properties [Prompt](#prompt-dialog) and [PlainText](#paste-as-plain-text) should be set to false.
 
 {% tabs %}
 {% highlight razor %}
@@ -246,4 +246,4 @@ You can get the pasted text as HTML text using the [AfterPasteCleanup](https://h
 {% endtabs %}
 
 
-> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
+N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.

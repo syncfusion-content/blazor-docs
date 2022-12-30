@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in Blazor DropDown List Component | Syncfusion
-description: Checkout and learn here all about Selection feature in Syncfusion Blazor DropDownList component and more.
+description: Checkout and learn here all about the Selection feature in Syncfusion Blazor DropDownList component and more.
 platform: Blazor
 control: DropDown List
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Get selected value
 
-You can get the selected value of the DropDownList component in [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event using [`ChangeEventArgs.Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Value) property.
+Get the selected value of the DropDownList component in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event using the [ChangeEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Value) property.
 
 {% highlight cshtml %}
 
@@ -19,7 +19,7 @@ You can get the selected value of the DropDownList component in [`ValueChange`](
 
 {% endhighlight %}
 
-You can get the complete object list of the selected value in [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event using [`ChangeEventArgs.ItemData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_ItemData) property.
+Get the complete object list of the selected value in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event using the [ChangeEventArgs.ItemData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_ItemData) property.
 
 {% highlight cshtml %}
 
@@ -29,7 +29,7 @@ You can get the complete object list of the selected value in [`ValueChange`](ht
 
 ## Preselected value on OnInitializedAsync
 
-You can bind pre-selected value to the DropDownList component using [`@bind-Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute. Assign the value property inside [`OnInitializedAsync`](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-6.0#component-initialization-oninitializedasync) lifecycle. The below sample demonstrates how to bind the value on initial rendering of the component.
+Bind the pre-selected value to the DropDownList component using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute. Assign the value property inside the [OnInitializedAsync](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-6.0#component-initialization-oninitializedasync) lifecycle. The following sample shows how to bind the value on the initial rendering of the component.
 
 {% highlight cshtml %}
 
@@ -41,7 +41,7 @@ You can bind pre-selected value to the DropDownList component using [`@bind-Valu
 
 ## Programmatically change the selected value
 
-You can change the component value programmatically or externally by the component instance using [`@ref`](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ref) attribute of the component. The below sample demonstrates how to change the value of the component using click event of the button component.
+Change the component value programmatically or externally by the component instance using the [@ref](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-7.0#ref) attribute of the component. The following sample shows how to change the value of the component using click event of the button component.
 
 {% highlight cshtml %}
 
@@ -53,10 +53,11 @@ You can change the component value programmatically or externally by the compone
 
 ## Preselect value with index
 
-You can bind pre-selected value to the component also using [`@bind-Index`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Index) attribute. It binds the respective value present in the binded index.
+Bind the pre-selected value to the component using the [@bind-Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Index) attribute. It binds the respective value present in the specified index position of the datasource.
 
-> It will dependent on [`SortOrder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SortOrder.html) type. It will bind the value to the component with sorted data if the corresponding property is defined.
-The below sample demonstrates how to bind the index on initial rendering.
+N> It will be dependent on the [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SortOrder.html) type. It will bind the value to the component with the sorted data if the corresponding property is defined.
+
+The following sample shows how to bind the index on the initial rendering.
 
 {% highlight cshtml %}
 
@@ -64,13 +65,11 @@ The below sample demonstrates how to bind the index on initial rendering.
 
 {% endhighlight %}
 
-The output will be as follows,
-
 ![Blazor DropDownList with bind-index](./images/selection/blazor_dropdown_preselect-value-index.png)
 
 ## Get selected item by value
 
-You can get all the datasource items belongs to the value selected in the component using [`GetDataByValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_GetDataByValue__0_) method. 
+Get the entire object belonging to the value selected in the component using the [GetDataByValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_GetDataByValue__0_) method.
 
 {% highlight cshtml %}
 
@@ -80,7 +79,7 @@ You can get all the datasource items belongs to the value selected in the compon
 
 ## Focus the next component on selection
 
-You can focus the component programmatically using [`FocusAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusAsync) public method. It will set focus instantly to the DropDownList component when invoking it. 
+Focus the component programmatically using the [FocusAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusAsync) public method. It will set focus instantly to the DropDownList component when invoking it. 
 
 {% highlight cshtml %}
 
@@ -90,7 +89,7 @@ You can focus the component programmatically using [`FocusAsync`](https://help.s
 
 ## Programmatically trigger onChange event
 
-You can trigger the [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event manually by using the instance (taken from @ref property) of the [`DropDownListEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html). In the below example, invoked the [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event inside Created event handle. As per the below code it will trigger once the component is created/rendered in the page.
+Trigger the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event manually by using the instance (taken from @ref attribute) of the [DropDownListEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html). In the following example, the `ValueChange` event is invoked inside the `Created` event handler. As per the following code, it will trigger once the component is created or rendered on the page.
 
 {% highlight cshtml %}
 
@@ -102,7 +101,7 @@ You can trigger the [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ### ValueChange event
 
-The [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event is triggered when the value of the DropDownList component get changed or modified. Also it will return the necessary arguments including the current and previously selected/changed value.
+The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event is triggered when the value of the DropDownList component get changed or modified. Also, it will return the necessary arguments including the current and previously selected or changed value.
 
 {% highlight cshtml %}
 
@@ -112,7 +111,7 @@ The [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Drop
 
 ### OnValueSelect event
 
-The [`OnValueSelect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnValueSelect) event is triggered when the user selects any value in the DropDownList component. You can get the necessary arguments including [`ChangeEventArgs.ItemData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_ItemData). Also you can prevent the selection of items by setting the [`ChangeEventArgs.Cancel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Cancel) property as `true` provided by the event arguments. 
+The [OnValueSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnValueSelect) event is triggered when you select any value in the DropDownList component. Get the necessary arguments including the [ChangeEventArgs.ItemData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_ItemData). Also,  prevent the selection of items by setting the [ChangeEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Cancel) property as `true` provided by the event arguments. 
 
 {% highlight cshtml %}
 
@@ -122,7 +121,7 @@ The [`OnValueSelect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 ### Focus event
 
-The [`Focus`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Focus) event will trigger when the component gets focused. 
+The [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Focus) event will trigger when the component gets focused. 
 
 {% highlight cshtml %}
 
@@ -132,10 +131,80 @@ The [`Focus`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.
 
 ### Blur event
 
-The [`Blur`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Blur) event will trigger when focus moves out from the component. 
+The [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Blur) event will trigger when focus moves out from the component. 
 
 {% highlight cshtml %}
 
 {% include_relative code-snippet/selection/blur-event.razor %}
 
 {% endhighlight %}
+
+## Properties
+
+### ID
+
+Specifies the [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ID) of the DropDownList component. we can access the other properties of the component through this `ID`.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/selection/ID-property.razor %}
+
+{% endhighlight %} 
+
+## Methods
+
+### FocusAsync()
+
+Sets the focus to the DropDownList component for interaction.
+
+#### Declarations
+
+N> public Task FocusAsync()
+
+### FocusOutAsync()
+
+Remove the focus from the DropDownList component, if the component is in focus state.
+
+#### Declarations
+
+N> public Task FocusOutAsync()
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/selection/focus-method.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with dynamic focus in and out](./images/selection/blazor_dropdown_focus-in-out.gif)
+
+### GetDataByValue(TValue)
+
+Gets the data Object that matches the given value.
+
+#### Declarations
+
+N> public TItem GetDataByValue(TValue ddlValue)
+
+#### Parameters
+
+* ddlValue - Specifies the DropDownList value.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/selection/getDataByValue-method.razor %}
+
+{% endhighlight %} 
+
+### GetItemsAsync()
+
+Gets all the list items bound on this component.
+
+#### Declarations
+
+N> public Task<IEnumerable<TItem>> GetItemsAsync()
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/selection/getItemsAsync-method.razor %}
+
+{% endhighlight %} 

@@ -71,7 +71,7 @@ To know more about this event, refer [here](./tool-bar/#beforeexport).
 
 The event [BeginDrillThrough](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_BeginDrillThrough) is triggered when the value cell is clicked in the Pivot Table while editing. To use this event, user need to enable editing option with the help of [PivotViewCellEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html) class. It has following parameters - [CellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.BeginDrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_BeginDrillThroughEventArgs_CellInfo) and [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.BeginDrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_BeginDrillThroughEventArgs_Type). This event allows user to view the [CellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.BeginDrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_BeginDrillThroughEventArgs_CellInfo) which contains [ColumnHeaders](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_ColumnHeaders), [CurrentCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_CurrentCell), [CurrentTarget](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_CurrentTarget), [RawData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_RawData), [RowHeaders](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_RowHeaders) and [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_DrillThroughEventArgs_Value).
 
-> In this event, the parameter [GridObj](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.BeginDrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_BeginDrillThroughEventArgs_GridObj) is returned as **null** due to its size.
+N> In this event, the parameter [GridObj](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.BeginDrillThroughEventArgs.html#Syncfusion_Blazor_PivotView_BeginDrillThroughEventArgs_GridObj) is returned as **null** due to its size.
 
 ```cshtml
 
@@ -337,7 +337,7 @@ The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotVie
 
 The event [Drill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_Drill) is triggered whenever a member is expanded or collapsed in the Pivot Table. It has following parameters - [DrillInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillArgs-1.html#Syncfusion_Blazor_PivotView_DrillArgs_1_DrillInfo) and [PivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillArgs-1.html#Syncfusion_Blazor_PivotView_DrillArgs_1__ctor). For instance using this event, user can alter delimiter and drill action for the respective item.
 
-> In this event, the parameter [PivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillArgs-1.html#Syncfusion_Blazor_PivotView_DrillArgs_1__ctor) is returned as **null** due to its size.
+N> In this event, the parameter [PivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DrillArgs-1.html#Syncfusion_Blazor_PivotView_DrillArgs_1__ctor) is returned as **null** due to its size.
 
 ```cshtml
 
@@ -686,4 +686,4 @@ The event [ToolbarRendered](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ```
 
-> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
+N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.

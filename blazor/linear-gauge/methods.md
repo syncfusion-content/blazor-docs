@@ -57,7 +57,7 @@ To change the annotation content dynamically, use the [SetAnnotationValue](https
 |     content          |    Specifies the text for the annotation to be updated.        |
 |     axisValue        |    Specifies the value of the axis where the annotation is to be placed.|
 
-> This method will not be applicable for the [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAnnotation_ContentTemplate) class in [LinearGaugeAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html).
+N> This method will not be applicable for the [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAnnotation_ContentTemplate) class in [LinearGaugeAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html).
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge

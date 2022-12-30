@@ -53,7 +53,7 @@ The column chooser has options to show or hide columns dynamically. It can be en
 }
 ```
 
-> You can hide the column names in column chooser by defining the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowInColumnChooser) property as false.
+N> You can hide the column names in column chooser by defining the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowInColumnChooser) property as false.
 
 The following GIF represents the column chooser functionality in DataGrid
 ![Show or Hide Columns in Blazor DataGrid](./images/blazor-datagrid-show-or-hide-column.gif)
@@ -192,8 +192,8 @@ Using the column chooser template, you can customize the column chooser dialog u
 
 ```
 
-> * You can build reusable custom component based on your customization need as like above code example.
-> * In the above example, Syncfusion [ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) component is used as custom component in the content template to show/hide columns.
+N> * You can build reusable custom component based on your customization need as like above code example.
+<br/> * In the above example, Syncfusion [ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) component is used as custom component in the content template to show/hide columns.
 
 ```csharp
 @using Syncfusion.Blazor.Lists;
@@ -290,7 +290,7 @@ Using the column chooser template, you can customize the column chooser dialog u
 }
 ```
 
-> * The model class used in the above example is enclosed in the Model.cs file.
+N> * The model class used in the above example is enclosed in the Model.cs file.
 
 ```csharp
 using System;
@@ -403,7 +403,7 @@ You can customize the height and width of the column chooser dialog by using the
     } 
 </style> 
 ```
-> Here, **!important** attribute is used to apply custom styles since the column chooser dialog position will be calculated dynamically based on content.
+N> Here, **!important** attribute is used to apply custom styles since the column chooser dialog position will be calculated dynamically based on content.
 
 This can be demonstrated in the following sample:
 

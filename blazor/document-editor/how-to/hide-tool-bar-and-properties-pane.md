@@ -15,7 +15,7 @@ documentation: ug
 
 ## Hide the properties pane
 
-By default, Document editor container has built-in properties pane which contains options for formatting text, table, image and header and footer. You can use [`ShowPropertiesPane`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_ShowPropertiesPane) API in `DocumentEditorContainer` to hide the properties pane.
+By default, Document editor container has built-in properties pane which contains options for formatting text, table, image and header and footer. You can use [`ShowPropertiesPane`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_ShowPropertiesPane) API in [`DocumentEditorContainer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html) to hide the properties pane.
 
 The following example code illustrates how to hide the properties pane.
 
@@ -27,11 +27,11 @@ The following example code illustrates how to hide the properties pane.
 </SfDocumentEditorContainer>
 ```
 
->Note: Positioning and customizing the properties pane in Document editor container is not possible. Instead, you can hide the exiting properties pane and create your own pane using public API's.
+N> Positioning and customizing the properties pane in Document editor container is not possible. Instead, you can hide the exiting properties pane and create your own pane using public API's.
 
 ## Hide the toolbar
 
-You can use [`EnableToolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_EnableToolbar) API in `DocumentEditorContainer` to hide the existing toolbar.
+You can use [`EnableToolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_EnableToolbar) API in [`DocumentEditorContainer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html) to hide the existing toolbar.
 
 The following example code illustrates how to hide the existing toolbar.
 

@@ -53,8 +53,8 @@ You can filter the records with different operators.
 The following screenshot represents Menu filter
 ![Blazor DataGrid with Menu Filter](./images/blazor-datagrid-menu-filter.png)
 
-> * [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) must be set as true to enable filter menu.
-> * Setting [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowFiltering) property of **GridColumn** as false will prevent
+N> * [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) must be set as true to enable filter menu.
+<br/> * Setting [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowFiltering) property of **GridColumn** as false will prevent
 
 ## Custom component in filter menu
 
@@ -327,7 +327,7 @@ In the following sample, the `SfDateRangePicker` component is rendered in the fi
 }
 ```
 
-> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-filtering-using-date-range-picker)
+N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-filtering-using-date-range-picker)
 
 ## Filter by multiple keywords using filter menu
 
@@ -424,4 +424,4 @@ In the following sample, the MultiSelect component is rendered in the filter men
 }
 ```
 
-> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-filter-by-multiple-keywords-using-filter-menu)
+N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-filter-by-multiple-keywords-using-filter-menu)

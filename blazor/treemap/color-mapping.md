@@ -101,7 +101,7 @@ Desaturation color mapping is used to apply colors to the items based on the [Mi
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#range-color-mapping) to know about the property value of the **Fruits**.
+N> Refer to the [code block](#range-color-mapping) to know about the property value of the **Fruits**.
 
 ![Blazor TreeMap with Desaturation Color Mapping](images/Colormapping/blazor-treemap-desaturation-color-mapping.png)
 
@@ -122,7 +122,7 @@ Multiple colors are used to provide gradient effect to the TreeMap items based o
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#range-color-mapping) to know about the property value of **Fruits**.
+N> Refer to the [code block](#range-color-mapping) to know about the property value of **Fruits**.
 
 ![Multiple Color Mapping in Blazor TreeMap with Desaturation](images/Colormapping/blazor-treemap-desaturation-with-multiple-color.png)
 
@@ -138,7 +138,7 @@ Multiple colors are used to provide gradient effect to the TreeMap items based o
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#equal-color-mapping) to know about the property value of **Cars**.
+N> Refer to the [code block](#equal-color-mapping) to know about the property value of **Cars**.
 
 ![Blazor TreeMap with Palette Color Mapping](images/Colormapping/blazor-treemap-palette-color-mapping.png)
 
@@ -160,7 +160,7 @@ Get the excluded ranges from data source using the color mapping and apply the s
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#range-color-mapping) to know about the property value of the **Fruits**.
+N> Refer to the [code block](#range-color-mapping) to know about the property value of the **Fruits**.
 
 ![Blazor TreeMap with Color Mapping for Excluded Items](images/Colormapping/blazor-treemap-color-for-exclude-item.png)
 

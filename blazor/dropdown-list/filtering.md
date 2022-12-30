@@ -7,103 +7,171 @@ control: DropDown List
 documentation: ug
 ---
 
-# Filtering in Blazor DropDown List Component
+# Filtering in Dropdown List
 
 The DropDownList has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is enabled. The filter operation starts as soon as you start typing characters in the search box.
 
-```cshtml
-@using Syncfusion.Blazor.DropDowns
+## Local data
 
-<SfDropDownList TValue="string" TItem="Country" Placeholder="Select a country" AllowFiltering="true" DataSource="@Countries">
-    <DropDownListFieldSettings Text="Name" Value="Code"></DropDownListFieldSettings>
-</SfDropDownList>
+The following code demonstrates the filtering functionality with local data in the DropDownList component.
 
-@code{
-    public class Country
-    {
-        public string Name { get; set; }
-        public string Code { get; set; }
-    }
-    
-    private List<Country> Countries = new List<Country>
-    {
-        new Country() { Name = "Australia", Code = "AU" },
-        new Country() { Name = "Bermuda", Code = "BM" },
-        new Country() { Name = "Canada", Code = "CA" },
-        new Country() { Name = "Cameroon", Code = "CM" },
-        new Country() { Name = "Denmark", Code = "DK" },
-        new Country() { Name = "France", Code = "FR" },
-        new Country() { Name = "Finland", Code = "FI" },
-        new Country() { Name = "Germany", Code = "DE" },
-        new Country() { Name = "Greenland", Code = "GL" },
-        new Country() { Name = "Hong Kong", Code = "HK" },
-        new Country() { Name = "India", Code = "IN" },
-        new Country() { Name = "Italy", Code = "IT" },
-        new Country() { Name = "Japan", Code = "JP" },
-        new Country() { Name = "Mexico", Code = "MX" },
-        new Country() { Name = "Norway", Code = "NO" },
-        new Country() { Name = "Poland", Code = "PL" },
-        new Country() { Name = "Switzerland", Code = "CH" },
-        new Country() { Name = "United Kingdom", Code = "GB" },
-        new Country() { Name = "United States", Code = "US" },
-    };
-}
-```
+{% highlight cshtml %}
 
+{% include_relative code-snippet/filtering/local-data.razor %}
 
+{% endhighlight %}
 
-![Filtering in Blazor DropDownList](./images/blazor-dropdownlist-filtering.png)
+![Blazor DropdownList with local data filtering](./images/filtering/blazor_dropdown_local-data.png)
 
-## Custom Filtering
+## Remote data
 
-The DropDownList component filter queries can be customized. You can also use your own filter libraries to filter data like Fuzzy search.
+For Remote data, each key press, filter action request is made at the server end.
 
-```cshtml
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
+The below code demonstrates the filtering functionality with [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) in the DropDownList component with help of [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
 
-<SfDropDownList TValue="string" @ref="ddlObj" TItem="Country" Placeholder="e.g. Australia" DataSource="@Countries" AllowFiltering="true">
-    <DropDownListFieldSettings Text="Name" Value="Code"></DropDownListFieldSettings>
-    <DropDownListEvents TValue="string" TItem="Country" Filtering="OnFilter"></DropDownListEvents>
-</SfDropDownList>
+{% highlight cshtml %}
 
+{% include_relative code-snippet/filtering/remote-data.razor %}
 
-@code {
+{% endhighlight %}
 
-    SfDropDownList<string, Country> ddlObj { get; set; }
+![Blazor DropdownList with Remote Data filtering](./images/filtering/blazor_dropdown_remote-data.png)
 
-    public class Country
-    {
-        public string Name { get; set; }
+## Filter type
 
-        public string Code { get; set; }
-    }
+You can use [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_FilterType) property to specify on which filter type needed to be considered on the search action of the component. The available `FilterType` and its supported data types are:
 
-    List<Country> Countries = new List<Country>
-    {
-        new Country() { Name = "Australia", Code = "AU" },
-        new Country() { Name = "Bermuda", Code = "BM" },
-        new Country() { Name = "Canada", Code = "CA" },
-        new Country() { Name = "Cameroon", Code = "CM" },
-        new Country() { Name = "Denmark", Code = "DK" }
-    };
+FilterType     | Description
+------------ | -------------
+  [StartsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_StartsWith)       | Checks whether a value begins with the specified value.
+  [EndsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_EndsWith)     | Checks whether a value ends with specified value.
+  [Contains](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_Contains)      | Checks whether a value contained with specified value.
 
-    List<Country> CountriesFiltered = new List<Country>
-    {
-        new Country() { Name = "France", Code = "FR" },
-        new Country() { Name = "Finland", Code = "FI" },
-        new Country() { Name = "Germany", Code = "DE" },
-        new Country() { Name = "Greenland", Code = "GL" }
-    };
+In the following example, `EndsWith` filter type has been mapped to the `FilterType` property.
 
-    private async Task OnFilter(FilteringEventArgs args)
-    {
-        args.PreventDefaultAction = true;
-        var query = new Query().Where(new WhereFilter() { Field = "Name", Operator = "contains", value = args.Text, IgnoreCase = true });
+{% highlight cshtml %}
 
-        query = !string.IsNullOrEmpty(args.Text) ? query : new Query();
+{% include_relative code-snippet/filtering/filter-type.razor %}
 
-        await ddlObj.FilterAsync(CountriesFiltered, query);
-    }
-}
-```
+{% endhighlight %}
+
+![Blazor DropdownList with Filter Type](./images/filtering/blazor_dropdown_filter-type.png)
+
+## Case sensitive filtering
+
+The Data items can be filtered with or without case sensitivity using the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). This can be done by passing the fourth optional parameter [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_IgnoreCase) of the [Where clause](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html#Syncfusion_Blazor_Data_Query_Where_Syncfusion_Blazor_Data_WhereFilter_).
+
+The following example shows how to perform case-sensitive filter.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/filtering/case-sentitive.razor %}
+
+{% endhighlight %}
+
+## Filter textbox placeholder 
+
+You can use [FilterBarPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FilterBarPlaceholder) to accept the value to be displayed as a watermark text on the filter bar TextBox.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/filtering/filter-textbox-placeholder.razor %}
+
+{% endhighlight %}
+
+![Blazor DropdownList with Filter Textbox Placeholder](./images/filtering/blazor_dropdown_filter-textbox-placeholder.png)
+
+## Custom filtering
+
+DropDownList component filter queries can be customized using [Filter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Filtering) event. You can also filter the text in multiple columns in the data source.
+
+In the below sample demonstration, filter the data using its `FirstName` or `LastName` field. Hence in the Filtering event, [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Condition) is used with `or` condition for filtering both the fields. 
+
+For instance , the data source item consists of `FirstName` as `Nancy` and `LastName` as `Davalio`. But you can filter the data by typing the `N` or `D` character and it will showcase the `Nancy`(FirstName field) in the popup.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/filtering/case-sentitive.razor %}
+
+{% endhighlight %}
+
+![Blazor DropdownList with custom filtering](./images/filtering/blazor_dropdown_custom-filtering.png)
+
+## Multi column filtering 
+
+In the built-in Syncfusion Blazor theme files, support for multi column can be enabled by adding `e-multi-column` class in the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_CssClass) property.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/filtering/multi-column.razor %}
+
+{% endhighlight %}
+
+![Blazor DropdownList with Multi Column filtering](./images/filtering/blazor_dropdown_multi-column.png)
+
+You can achieve multiple column(field) filtering by passing the List of [predicates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_predicates) to the [And](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_And_Syncfusion_Blazor_Data_WhereFilter_) or [Or](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Or_Syncfusion_Blazor_Data_WhereFilter_) methods of [WhereFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter__ctor).
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/filtering/multi-column-filtering.razor %}
+
+{% endhighlight %}
+
+![Blazor DropdownList with Multi Column filtering](./images/filtering/blazor_dropdown_multi-colum-filtering.gif)
+
+## Minimum filter length
+
+When filtering the list items, you can set the limit for character count to raise a remote request and fetch filtered data on the DropDownList. This can be done by manual validation by using the [Filtering event arguments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilteringEventArgs.html#Syncfusion_Blazor_DropDowns_FilteringEventArgs_Text) within the [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Filtering) event handler.
+
+In the following example, the remote request does not fetch the search data until the search key contains three characters.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/filtering/minimum-filter-length.razor %}
+
+{% endhighlight %}
+
+![Blazor DropdownList with Minimum filter length](./images/filtering/blazor_dropdown_minimum-filter-length.png)
+
+## Properties
+
+### AllowFiltering   
+
+When [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is set to `true`, show the filter bar (search box) of the component.
+
+The filter action retrieves matched items through the `Filtering` event based on the characters typed in the search TextBox.
+
+Default value of AllowFiltering is `false`.
+
+[Click to refer the code for AllowFiltering](https://blazor.syncfusion.com/documentation/dropdown-list/filtering)
+
+### FilterBarPlaceholder
+
+Accepts the value to be displayed as a watermark text on the filter bar. [FilterBarPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FilterBarPlaceholder) is applicable when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is used as true. `FilterBarPlaceholder` is depends on `AllowFiltering` property.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/filtering/filterBarPlaceholder-property.razor %}
+
+{% endhighlight %} 
+
+![Blazor DropDownList with FilterBarPlaceholder property](./images/filtering/blazor_dropdown_filterBarPlaceholder-property.png)
+
+## Methods
+
+### FilterAsync(IEnumerable<TItem>, Query, FieldSettingsModel)
+
+To filter the data from given data source by using query.
+
+#### Declarations
+
+N> protected Task FilteringAction(IEnumerable<TItem> dataSource, Query query, FieldSettingsModel fields)
+
+#### Parameters
+
+* [dataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) - Specifies the data source.
+* [query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query)	- Specifies the query.
+* [fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) - Specifies the fields.
+
+[Click to refer the code for FilterAsync](https://blazor.syncfusion.com/documentation/dropdown-list/filtering)
+

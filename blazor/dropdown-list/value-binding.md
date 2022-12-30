@@ -9,14 +9,16 @@ documentation: ug
 
 # Value Binding in Dropdown List
 
-The value binding as the process of passing values between a component and its parent. There are two methods for binding values, as shown below.
+Value binding is the process of passing values between a component and its parent. There are two methods for binding values.These are.
 
     * bind-Value Binding 
     * bind-Index Binding
 
 ## Bind value binding
 
-The value binding can be achieved by using [`@bind-Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute and it supports string, int, Enum, bool and complex types. If component value has been changed, it will affect all places where you bind the variable for the [`@bind-value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute.
+The value binding can be achieved by using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute and it supports `string`, `int`, `enum`, `bool` and `complex types`. If the component value has been changed, it will affect all places where you bind the variable for the `@bind-value` attribute. In order for the binding to work properly, the value assigned to the `@bind-value` attribute should be based on the field mapped to [DropDownListFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value)
+
+* **TValue** - Specifies the type of each list item of the dropdown component.
 
 {% highlight cshtml %}
 
@@ -28,7 +30,7 @@ The value binding can be achieved by using [`@bind-Value`](https://help.syncfusi
 
 ## Index value binding
 
-The Index value binding can be achieved by using [`@bind-Index`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Index) attribute and it supports int and int nullable types. By using this attribute you can bind the values respective to its index.
+The Index value binding is achieved by using the [@bind-Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Index) attribute and it supports int and int nullable types. By using this attribute, bind the values respective to its index.
 
 {% highlight cshtml %}
 
@@ -38,11 +40,11 @@ The Index value binding can be achieved by using [`@bind-Index`](https://help.sy
 
 ![Blazor DropDownList with Index Value](./images/value-binding/blazor_dropdown_index-value.png)
 
-## Text and Value
+## Text and value
 
-The DropdownList [`DropDownListFieldSettings.Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value) and [`DropDownListFieldSettings.Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Text) properties point to the corresponding names of the model. The [`DropDownListFieldSettings.Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value) mapped to the component maintains the unique value of the item in the data source, and the [`DropDownListFieldSettings.Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Text) is mapped to display the text in the popup list items for the respective text value.
+The DropdownList [DropDownListFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value) and [DropDownListFieldSettings.Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Text) properties point to the corresponding names of the model. The `DropDownListFieldSettings.Value` mapped to the component maintains the unique value of the item in the data source, and the `DropDownListFieldSettings.Text` is mapped to display the text in the popup list items for the respective text value.
 
-The following code demonstrates, Value and Text field of the DropDownList component For instance, the selected item is `Badminton` (Text Field i.e., Game) but the value field holds `Game2` (Value Field i.e., ID).
+The following code demonstrates the Value and Text field of the DropDownList component. For instance, the selected item is `Badminton` (Text Field, this is Game) but the value field holds `Game2` (Value Field, this is ID).
 
 {% highlight cshtml %}
 
@@ -54,13 +56,13 @@ The following code demonstrates, Value and Text field of the DropDownList compon
 
 ## Primitive type binding
 
-The DropDownList has support to load array of primitive data such as strings and numbers.
+The DropDownList has support to load array of primitive data such as strings and numbers. Bind the value of primitive data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute of the DropDownList 
 
 The following code demonstrates array of string as datasource to the DropDownList component.
 
 {% highlight cshtml %}
 
-{% include_relative code-snippet/value-binding/primitive-type-string %}
+{% include_relative code-snippet/value-binding/primitive-type-string.razor %}
 
 {% endhighlight %}
 
@@ -70,7 +72,7 @@ The following code demonstrates array of int as datasource to the DropDownList c
 
 {% highlight cshtml %}
 
-{% include_relative code-snippet/value-binding/primitive-type-int %}
+{% include_relative code-snippet/value-binding/primitive-type-int.razor %}
 
 {% endhighlight %}
 
@@ -78,9 +80,9 @@ The following code demonstrates array of int as datasource to the DropDownList c
 
 ## Object binding
 
-object data binding refers a memory location where object data is stored.
+Bind the Object data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute of the DropdownList component, this is, You can map the class name to `TValue`. 
 
-In the following example, `Game` column has been mapped to the [`DropDownListFieldSettings.Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value).
+In the following example, the `Name` column has been mapped to the [DropDownListFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value).
 
 {% highlight cshtml %}
 
@@ -92,7 +94,7 @@ In the following example, `Game` column has been mapped to the [`DropDownListFie
 
 ## Enum binding
 
-You can bind enum data to DropDownList component. The following code helps you get a string value from the enumeration data.
+Bind the enum data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute of DropDownList component. The following code helps you to get a string value from the enumeration data.
 
 {% highlight cshtml %}
 
@@ -104,11 +106,11 @@ You can bind enum data to DropDownList component. The following code helps you g
 
 ## Show or hide clear button
 
-You can use [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowClearButton) property to specify whether to show or hide the clear button. When the clear button is clicked, `Value`, `Text`, and `Index` properties are reset to null.
+Use the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowClearButton) property to specify whether to show or hide the clear button. When the clear button is clicked, the `Value`, `Text`, and `Index` properties are reset to null.
 
-> If the TValue is non nullable type, then while using clear button, it will set the default value of the data type and TValue is set as nullable type while using clear button it will set to null value(eg: If TValue is int while clearing 0 is set to the component and if TValue is int? while clearing null is set to the component)
+N> If the TValue is a non nullable type, then while using the clear button, it will set the default value of the data type, and if TValue is set as a nullable type, then while using the clear button it will set to a null value(for example If the TValue is int, then while clearing 0 will set to the component and if TValue is int?, then while clearing null will set to the component)
 
-The below sample demonstrates `string` is used as `TValue`. So, if we clear the value using clear button, it will set to null as it's the default value of the respective type.
+The following sample demonstrates the `string` used as `TValue`. So, if you clear the value using the clear button, it will be set to null as it's the default value of the respective type.
 
 {% highlight cshtml %}
 
@@ -120,11 +122,11 @@ The below sample demonstrates `string` is used as `TValue`. So, if we clear the 
 
 ## Dynamically change TItem
 
-You can change the `TItem` property dynamically which defines the datasource type of the DropDownList component with help of `@typeparam` directive. The below sample demonstration explains how  to change  the TItem dynamically with different type of datasource.
+The `TItem` property can be changed dynamically by defining the datasource type of the DropDownList component with the help of the `@typeparam` directive. The following sample demonstration explains how to change  the TItem dynamically with different type of datasource.
 
 ### Creating generic dropdownList component
 
-First, you need to create a `DropDownList.razor` file in the `/Pages` folder as a parent component. Also add a Parameter property for a List as `<TItem>` and `TValue`.
+First, create a `DropDownList.razor` file as a parent component in the `/Pages` folder. Also, add a Parameter property for a List as `<TItem>` and `TValue`.
 
 {% tabs %}
 {% highlight razor %}
@@ -151,9 +153,9 @@ First, you need to create a `DropDownList.razor` file in the `/Pages` folder as 
 
 ### Usage of generic component with different type
 
-Then you can render the Generic DropDownList component with required TValue and TItem in the respective razor components. 
+Then, render the Generic DropDownList component with the required `TValue` and `TItem` in the respective razor components. 
 
-Here, we have rendered the DropDownList component with TValue as string type in the `/Index.razor` file and DropDownList component with TValue as int? type in the `/Counter.razor` file.
+Here, the DropDownList component is rendered with the TValue as a string type in the `/Index.razor` file and the DropDownList component with TValue as an int nullable type in the `/Counter.razor` file.
 
 **[Index.razor]**
 
@@ -217,3 +219,63 @@ Here, we have rendered the DropDownList component with TValue as string type in 
 
 {% endhighlight razor %}
 {% endtabs %}
+
+## Properties
+
+### Index
+
+Gets or sets the index of the selected item in the component. List Item in the mentioned index will bind to the component.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/value-binding/index-property.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with Index property](./images/value-binding/blazor_dropdown_index-property.png)
+
+### ShowClearButton
+
+Specifies whether to show or hide the clear button.
+
+Default value of [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowClearButton) is `false`.
+
+When the clear button is clicked, `Value`, `Text`, and `Index` properties are reset to null.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/value-binding/show-hide-clear-button.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with clear button](./images/value-binding/blazor_dropdown_show-hide-clear-button.png)
+
+### Value
+
+Gets or sets the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) of the selected item in the component.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/value-binding/value-property.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with value property](./images/value-binding/blazor_dropdown_with-value-property.png)
+
+## Methods
+
+### ClearAsync()
+
+Allows you to clear the selected values from the component.
+
+#### Declarations
+
+N> public Task ClearAsync()
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/value-binding/clearAsync-method.razor %}
+
+{% endhighlight %} 
+
+![Blazor DropDownList with clear button](./images/value-binding/blazor_dropdown_with-clearAsync-method.gif)

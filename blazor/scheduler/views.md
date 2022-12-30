@@ -13,7 +13,7 @@ The Scheduler includes wide variety of view modes with unique configuration opti
 
 To navigate between different views and dates, the navigation options are available at the Scheduler header bar. The active view option is usually highlighted by default. The date range of the active view will also be displayed at the left corner of the header bar, clicking on which will open a calendar popup for the ease of desired date selection.
 
-> By default, Scheduler displays the calendar views such as day, week, work week, month and agenda.
+N> By default, Scheduler displays the calendar views such as day, week, work week, month and agenda.
 
 ## Setting specific view on scheduler
 
@@ -153,7 +153,7 @@ Usually a day view displays a single day with all its related appointments. It i
 }
 ```
 
-> All the above defined properties can be accessed within Day view except `AllowVirtualScrolling` and `HeaderRows`.
+N> All the above defined properties can be accessed within Day view except `AllowVirtualScrolling` and `HeaderRows`.
 
 ### Week view
 
@@ -186,7 +186,7 @@ The Week view displays a count of 7 days (from Sunday to Saturday) with all its 
 }
 ```
 
-> All the above defined properties in the table can be accessed within Week and Work week views except `AllowVirtualScrolling` and `HeaderRows`.
+N> All the above defined properties in the table can be accessed within Week and Work week views except `AllowVirtualScrolling` and `HeaderRows`.
 
 ### Work Week view
 
@@ -220,7 +220,7 @@ The following code example depicts how to change the start and end hours only on
 }
 ```
 
-> The Week, Work week and Day views can display the all-day row appointments in a separate all-day row with an expand or collapse option to view it.
+N> The Week, Work week and Day views can display the all-day row appointments in a separate all-day row with an expand or collapse option to view it.
 
 ### Month view
 
@@ -353,7 +353,7 @@ Similar to the vertical day, week and work week views, the respective view shows
 }
 ```
 
-> Clicking on the dates in the date header bar of Timeline day, Timeline week and Timeline work week will allow to navigate to the Agenda view.
+N> Clicking on the dates in the date header bar of Timeline day, Timeline week and Timeline work week will allow to navigate to the Agenda view.
 
 ### Timeline Month view
 
@@ -385,7 +385,7 @@ A Timeline Month view displays the current month days along with its appointment
 }
 ```
 
-> Clicking on the dates in the date header bar of Timeline month allows to navigate to the Timeline day view.
+N> Clicking on the dates in the date header bar of Timeline month allows to navigate to the Timeline day view.
 
 ### Timeline Year view
 
@@ -537,4 +537,4 @@ You can provide the alternative display name for such customized views on the Sc
 }
 ```
 
-> The view intervals can be extended on all the Scheduler view modes except Agenda and Month-Agenda views.
+N> The view intervals can be extended on all the Scheduler view modes except Agenda and Month-Agenda views.

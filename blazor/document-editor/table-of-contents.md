@@ -15,7 +15,7 @@ The table of contents in a document is same as the list of chapters at the begin
 
 [Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) exposes an API to insert table of contents at cursor position programmatically. You can specify the settings for table of contents explicitly. Otherwise, the default settings will be applied.
 
-`TableOfContentsSettings` contain the following properties:
+[`TableOfContentsSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.TableOfContentsSettings.html) contain the following properties:
 * **startLevel**: Specifies the start level for constructing table of contents.
 * **endLevel**: Specifies the end level for constructing table of contents.
 * **includeHyperlink**: Specifies whether the link for headings is included.
@@ -82,6 +82,6 @@ documentEditor.Editor.InsertTableOfContentsAsync(tableOfContentsSettings);
 
 ```
 
-> Same method is used for inserting, updating, and editing table of contents. This will work based on the current element at cursor position and the optional settings parameter. If table of contents is present at cursor position, the update operation will be done based on the optional settings parameter. Otherwise, the insert operation will be done.
+N> Same method is used for inserting, updating, and editing table of contents. This will work based on the current element at cursor position and the optional settings parameter. If table of contents is present at cursor position, the update operation will be done based on the optional settings parameter. Otherwise, the insert operation will be done.
 
 You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.
