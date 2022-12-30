@@ -7,9 +7,9 @@ control: DropDown List
 documentation: ug
 ---
 
-# How to disable the dropdownlist popup items based on selection
+# How to disable the Dropdown List popup items based on selection
 
-The following example demonstrates how to disable the dropdownlist popup items based on the selection in the dropdownlist component. This can be achieved by adding the e-disabled class to the selected list.
+The following example demonstrates how to disable the Dropdown List popup items based on the selection in the Dropdown List component. This can be achieved by adding the e-disabled class to the selected list.
 
 ```cshtml
 
@@ -60,7 +60,7 @@ The following example demonstrates how to disable the dropdownlist popup items b
 
 ```
 
-Add the following JavaScript methods inside the script tag of `wwwroot/index.html` (Blazor WebAssembly App) or `Pages/_Layout.cshtml` (Blazor Server App) to disable the dropdownlist popup items based on selection.
+Add the following JavaScript methods inside the script tag of `wwwroot/index.html` (Blazor WebAssembly App) or `Pages/_Layout.cshtml` (Blazor Server App) to disable the Dropdown List popup items based on selection.
 
 ```cshtml
 
