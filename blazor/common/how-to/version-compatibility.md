@@ -19,7 +19,7 @@ The following table represents the supported .NET and .NET Core versions by diff
 | [.NET Core 3.1.3](https://devblogs.microsoft.com/dotnet/blazor-webassembly-3-2-0-release-candidate-now-available/) | 18.1.0.52 to 20.3.0.61 |
 | [.NET Core 3.1.2](https://devblogs.microsoft.com/dotnet/net-core-february-2020/) | 18.1.0.42 to 20.3.0.61 |
 | [.NET Core 3.1.1](https://devblogs.microsoft.com/dotnet/net-core-january-2020/) | 17.4.0.46 to 20.3.0.61 |
-| [.NET Core 3.1](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-net-core-3-1/) | 17.4.0.39to 20.3.0.61 |
+| [.NET Core 3.1](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-net-core-3-1/) | 17.4.0.39 to 20.3.0.61 |
 
 ## Syncfusion Version Information
 
