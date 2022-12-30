@@ -13,70 +13,26 @@ The Precision type of the Rating which used to component the granularity of the 
 
 The precision types of Rating are as follows:
 
-* Full
-* Half
-* Quarter
-* Exact
+* Full : The rating value is increased in whole number increments. For example, if the current rating is 3, the next possible ratings are 4, 5, and so on.
+* Half : The rating value is increased in increments of 0.5 (half). For example, if the current rating is 3.5, the next possible ratings are 4, 4.5, 5, and so on.
+* Quarter : The rating value is increased in increments of 0.25 (quarter). For example, if the current rating is 3.75, the next possible ratings are 4, 4.25, 4.5, and so on. 
+* Exact : The rating value is increased in increments of 0.1. For example, if the current rating is 3.9, the next possible ratings are 4, 4.1, 4.2, and so on. 
 
-## Full Precision
-In Full Precision, the rating value is increased in whole number increments. For example, if the current rating is 3, the next possible ratings are 4, 5, and so on. 
-
-Below example demonstrates the Full precision of Rating.
+Below example demonstrates different supported precision types of Rating. 
 
 ```cshtml
 
 @using Syncfusion.Blazor.Inputs
 
-<SfRating Precision="PrecisionType.Full"></SfRating>
+<label>Full Precision</label><br/>
+<SfRating Value="3" Precision="PrecisionType.Full"></SfRating><br/>
+<label>Half Precision</label><br/>
+<SfRating Value="2.5" Precision="PrecisionType.Half"></SfRating><br/>
+<label>Quarter Precision</label><br/>
+<SfRating Value="3.75" Precision="PrecisionType.Quarter"></SfRating><br/>
+<label>Exact Precision</label><br/>
+<SfRating Value="2.3" Precision="PrecisionType.Exact"></SfRating>
 
 ```
 
-![Blazor Rating Component with Full Precision](./images/blazor-rating-full-precision.png)
-
-## Half Precision
-
-In Half Precision, the rating value is increased in increments of 0.5 (half). For example, if the current rating is 3.5, the next possible ratings are 4, 4.5, 5, and so on. 
-
-Below example demonstrates the Half precision of Rating.
-
-```cshtml
-
-@using Syncfusion.Blazor.Inputs
-
-<SfRating Precision="PrecisionType.Half"></SfRating>
-
-```
-
-![Blazor Rating Component with Half Precision](./images/blazor-rating-half-precision.png)
-
-## Quarter Precision
-
-In Quarter Precision, the rating value is increased in increments of 0.25 (quarter). For example, if the current rating is 3.75, the next possible ratings are 4, 4.25, 4.5, and so on. 
-
-Below example demonstrates the Quarter precision of Rating.
-
-```cshtml
-
-@using Syncfusion.Blazor.Inputs
-
-<SfRating Precision="PrecisionType.Quarter"></SfRating>
-
-```
-
-![Blazor Rating Component with Quarter Precision](./images/blazor-rating-quarter-precision.png)
-
-## Exact Precision
-
-In Exact Precision, the rating value is increased in increments of 0.1. For example, if the current rating is 3.9, the next possible ratings are 4, 4.1, 4.2, and so on. 
-
-Below example demonstrates the Exact precision of Rating.
-
-```cshtml
-
-@using Syncfusion.Blazor.Inputs
-
-<SfRating Precision="PrecisionType.Exact"></SfRating>
-
-```
-
-![Blazor Rating Component with Exact Precision](./images/blazor-rating-exact-precision.png)
+![Blazor Rating Component with different Precision Types](./images/blazor-rating-precision-types.png)

@@ -16,7 +16,7 @@ The Template types of Rating are as follows:
 * Empty Template
 * Full Template
 
-## Empty Template
+## EmptyTemplate
 You can access information about the un-rated item by setting [EmptyTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_EmptyTemplate) property. 
 
 Below example demonstrates the Empty Template of Rating.
@@ -66,9 +66,9 @@ Below example demonstrates the Empty Template of Rating.
 
 ```
 
-![Blazor Rating Component with Empty Template](./images/blazor-rating-empty-template.png)
+![Blazor Rating Component with EmptyTemplate](./images/blazor-rating-empty-template.png)
 
-## Full Template
+## FullTemplate
 
 You can access information about the rated item by setting [FullTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_FullTemplate) property.
 
@@ -80,10 +80,10 @@ Below example demonstrates the Full Template of Rating.
 
 <SfRating>
     <FullTemplate>
-        <span class='custom-font sf-icon-star'></span>
+        <span class='custom-font sf-icon-fill-star'></span>
     </FullTemplate>
     <EmptyTemplate>
-        <span class='custom-font sf-icon-star'></span>
+        <span class='custom-font sf-icon-empty-star'></span>
     </EmptyTemplate>
 </SfRating>
 
@@ -98,14 +98,14 @@ Below example demonstrates the Full Template of Rating.
     }
 
     @@font-face {
-        font-family: 'RatingIcon';
-        src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAAKAIAAAwAgT1MvMj1tSfIAAAEoAAAAVmNtYXDnEOdVAAABiAAAADZnbHlm9cEZjAAAAcgAAAA4aGVhZCK0htcAAADQAAAANmhoZWEIUQQDAAAArAAAACRobXR4CAAAAAAAAYAAAAAIbG9jYQAcAAAAAAHAAAAABm1heHABDQAWAAABCAAAACBuYW1lOGHbkgAAAgAAAAJJcG9zdHSFYngAAARMAAAALgABAAAEAAAAAFwEAAAAAAAD9AABAAAAAAAAAAAAAAAAAAAAAgABAAAAAQAAru5xRl8PPPUACwQAAAAAAN/RIPMAAAAA39Eg8wAAAAAD9AP0AAAACAACAAAAAAAAAAEAAAACAAoAAQAAAAAAAgAAAAoACgAAAP8AAAAAAAAAAQQAAZAABQAAAokCzAAAAI8CiQLMAAAB6wAyAQgAAAIABQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUGZFZABA5wDnAAQAAAAAXAQAAAAAAAABAAAAAAAABAAAAAQAAAAAAAACAAAAAwAAABQAAwABAAAAFAAEACIAAAAEAAQAAQAA5wD//wAA5wD//wAAAAEABAAAAAEAAAAAAAAAHAAAAAEAAAAAA/QD9AAJAAABBRMDJQUDEyUDAWb+pvo7ATUBNTv6/qaaAqs1/wD+lqurAWoBADUBSQAAAAASAN4AAQAAAAAAAAABAAAAAQAAAAAAAQAKAAEAAQAAAAAAAgAHAAsAAQAAAAAAAwAKABIAAQAAAAAABAAKABwAAQAAAAAABQALACYAAQAAAAAABgAKADEAAQAAAAAACgAsADsAAQAAAAAACwASAGcAAwABBAkAAAACAHkAAwABBAkAAQAUAHsAAwABBAkAAgAOAI8AAwABBAkAAwAUAJ0AAwABBAkABAAUALEAAwABBAkABQAWAMUAAwABBAkABgAUANsAAwABBAkACgBYAO8AAwABBAkACwAkAUcgUmF0aW5nSWNvblJlZ3VsYXJSYXRpbmdJY29uUmF0aW5nSWNvblZlcnNpb24gMS4wUmF0aW5nSWNvbkZvbnQgZ2VuZXJhdGVkIHVzaW5nIFN5bmNmdXNpb24gTWV0cm8gU3R1ZGlvd3d3LnN5bmNmdXNpb24uY29tACAAUgBhAHQAaQBuAGcASQBjAG8AbgBSAGUAZwB1AGwAYQByAFIAYQB0AGkAbgBnAEkAYwBvAG4AUgBhAHQAaQBuAGcASQBjAG8AbgBWAGUAcgBzAGkAbwBuACAAMQAuADAAUgBhAHQAaQBuAGcASQBjAG8AbgBGAG8AbgB0ACAAZwBlAG4AZQByAGEAdABlAGQAIAB1AHMAaQBuAGcAIABTAHkAbgBjAGYAdQBzAGkAbwBuACAATQBlAHQAcgBvACAAUwB0AHUAZABpAG8AdwB3AHcALgBzAHkAbgBjAGYAdQBzAGkAbwBuAC4AYwBvAG0AAAAAAgAAAAAAAAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAQIBAwAEc3RhcgAAAAA=) format('truetype');
+        font-family: 'rating-template';
+        src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAAKAIAAAwAgT1MvMj1tSfMAAAEoAAAAVmNtYXDnEOdaAAABjAAAADhnbHlm+icDjQAAAcwAAAE0aGVhZCK49ucAAADQAAAANmhoZWEIUQQEAAAArAAAACRobXR4DAAAAAAAAYAAAAAMbG9jYQAcAJoAAAHEAAAACG1heHABDwBkAAABCAAAACBuYW1lmYExxgAAAwAAAAKFcG9zdCH169QAAAWIAAAAQAABAAAEAAAAAFwEAAAAAAAD9AABAAAAAAAAAAAAAAAAAAAAAwABAAAAAQAAgPX4jF8PPPUACwQAAAAAAN/TWPsAAAAA39NY+wAAAAAD9AP0AAAACAACAAAAAAAAAAEAAAADAFgAAgAAAAAAAgAAAAoACgAAAP8AAAAAAAAAAQQAAZAABQAAAokCzAAAAI8CiQLMAAAB6wAyAQgAAAIABQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUGZFZABA5wDnAQQAAAAAXAQAAAAAAAABAAAAAAAABAAAAAQAAAAEAAAAAAAAAgAAAAMAAAAUAAMAAQAAABQABAAkAAAABAAEAAEAAOcB//8AAOcA//8AAAABAAQAAAABAAIAAAAAABwAmgABAAAAAAP0A/QACQAAAQUTAyUFAxMlAwFn/qX6OwE1ATU7+v6lmQKsNf7//pasrAFqAQE1AUgAAAIAAAAAA/QD5AAdAFcAAAEfBAUPAxUTLwEjDwETNS8DJT8EJwMFDwQVHwIDBx8EMzclBRczPwU1Az8CNS8DJQMvBisBDwUCYAICBgMHASCwBAMCGuoHCAjpGgIDBLEBHgcGBgJiHXb+uQgHBgQBAgTUHgECBAUHCAkIAQ4BDgcJBAQEBwQDHdMEAgMFBgf+tHYDAgMEBAQEBQUEBAQEAwICnwMDBgIDNbAGBgYE/uCBAgKBAR0HBgYGsDQCBAYD3Fr+9jwDBAcHBQgIB9T+twUIBwcEAwKVlQIBAgIFBwgJAUnUBwgJCAcFBD0BCgQDBAICAgEBAgICBAMAAAAAEgDeAAEAAAAAAAAAAQAAAAEAAAAAAAEADwABAAEAAAAAAAIABwAQAAEAAAAAAAMADwAXAAEAAAAAAAQADwAmAAEAAAAAAAUACwA1AAEAAAAAAAYADwBAAAEAAAAAAAoALABPAAEAAAAAAAsAEgB7AAMAAQQJAAAAAgCNAAMAAQQJAAEAHgCPAAMAAQQJAAIADgCtAAMAAQQJAAMAHgC7AAMAAQQJAAQAHgDZAAMAAQQJAAUAFgD3AAMAAQQJAAYAHgENAAMAAQQJAAoAWAErAAMAAQQJAAsAJAGDIHJhdGluZy10ZW1wbGF0ZVJlZ3VsYXJyYXRpbmctdGVtcGxhdGVyYXRpbmctdGVtcGxhdGVWZXJzaW9uIDEuMHJhdGluZy10ZW1wbGF0ZUZvbnQgZ2VuZXJhdGVkIHVzaW5nIFN5bmNmdXNpb24gTWV0cm8gU3R1ZGlvd3d3LnN5bmNmdXNpb24uY29tACAAcgBhAHQAaQBuAGcALQB0AGUAbQBwAGwAYQB0AGUAUgBlAGcAdQBsAGEAcgByAGEAdABpAG4AZwAtAHQAZQBtAHAAbABhAHQAZQByAGEAdABpAG4AZwAtAHQAZQBtAHAAbABhAHQAZQBWAGUAcgBzAGkAbwBuACAAMQAuADAAcgBhAHQAaQBuAGcALQB0AGUAbQBwAGwAYQB0AGUARgBvAG4AdAAgAGcAZQBuAGUAcgBhAHQAZQBkACAAdQBzAGkAbgBnACAAUwB5AG4AYwBmAHUAcwBpAG8AbgAgAE0AZQB0AHIAbwAgAFMAdAB1AGQAaQBvAHcAdwB3AC4AcwB5AG4AYwBmAHUAcwBpAG8AbgAuAGMAbwBtAAAAAAIAAAAAAAAACgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwECAQMBBAAJZmlsbC1zdGFyCmVtcHR5LXN0YXIAAA==) format('truetype');
         font-weight: normal;
         font-style: normal;
     }
 
     [class^="sf-icon-"], [class*=" sf-icon-"] {
-        font-family: 'RatingIcon' !important;
+        font-family: 'rating-template' !important;
         speak: none;
         font-style: normal;
         font-weight: normal;
@@ -116,17 +116,21 @@ Below example demonstrates the Full Template of Rating.
         -moz-osx-font-smoothing: grayscale;
     }
 
-    .sf-icon-star:before {
+    .sf-icon-fill-star:before {
         content: "\e700";
+    }
+
+    .sf-icon-empty-star:before {
+        content: "\e701";
     }
 
 </style>
 
 ```
 
-![Blazor Rating Component with Full Template](./images/blazor-rating-full-template.png)
+![Blazor Rating Component with FullTemplate](./images/blazor-rating-full-template.png)
 
-## Emoji Icon
+## Emoji icon
 
 You can also use Emoji icon as a rating item.
 
@@ -136,29 +140,29 @@ Below example demonstrates the Emoji Icon of Rating.
 
 @using Syncfusion.Blazor.Inputs
 
-<SfRating EnableSingleSelection=true EnableAnimation=false>
+<SfRating Value=4 EnableSingleSelection=true EnableAnimation=false>
     <EmptyTemplate>
         @{
-            @if (context.Index == 0)
-                {
+            if (context.Index == 0)
+            {
                 <span class='angry emoji'>😡</span>
-                }
+            }
             else if (context.Index == 1)
-                {
+            {
                 <span class='disagree emoji'>🙁</span>
-                }
+            }
             else if (context.Index == 2)
-                {
+            {
                 <span class='neutral emoji'>😐</span>
-                }
+            }
             else if (context.Index == 3)
-                {
+            {
                 <span class='agree emoji'>🙂</span>
-                }
+            }
             else
-                {
+            {
                 <span class='happy emoji'>😀</span>
-                }
+            }
         }
     </EmptyTemplate>
 </SfRating>
@@ -173,7 +177,7 @@ Below example demonstrates the Emoji Icon of Rating.
 
 ![Blazor Rating Component with Emoji Icon](./images/blazor-rating-emoji-icon.png)
 
-## SVG Icon
+## SVG icon
 
 You can also use SVG icon as a rating item.
 
@@ -234,9 +238,9 @@ Below example demonstrates the SVG Icon of Rating.
 
 ```
 
-![Blazor Rating Component with Emoji Icon](./images/blazor-rating-svg-icon.png)
+![Blazor Rating Component with SVG Icon](./images/blazor-rating-svg-icon.png)
 
-## PNG Image
+## PNG image
 
 You can also use PNG image as a rating item.
 
@@ -257,4 +261,4 @@ Below example demonstrates the PNG image of Rating.
 
 ```
 
-![Blazor Rating Component with Emoji Icon](./images/blazor-rating-png.png)
+![Blazor Rating Component with PNG Icon](./images/blazor-rating-png.png)
