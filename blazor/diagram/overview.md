@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview Panel in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Overview Control in Syncfusion Blazor Diagram component and much more.
+description: Check out and learn here all about Overview Control in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -9,21 +9,21 @@ documentation: ug
 
 # Overview Panel in Blazor Diagram Component
 
-[SfDiagramOverviewComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html) allows you to see a preview or an overall view of the entire content of a diagram. This helps you to look at the overall picture of a large diagram and also to navigate, pan, or zoom, on a particular position of the page.
+[SfDiagramOverviewComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html) allows you to see a preview or an overall view of the entire content of a diagram. This helps you to look at the overall picture of a large diagram and to navigate, pan, or zoom on a particular position of the page.
 
 ## Usage Scenario
 
-When you work on a very large diagram, you may not know the part you are actually working on, or navigation from one part to another might be difficult. One solution for navigation is to zoom out the entire diagram and find where you are. Then, you can zoom in a particular area you want to. This solution is not suitable when you need some frequent navigation.
+When you work on a very large diagram, you may not know the part you are actually working on, or navigation from one part to another might be difficult. One solution for navigation is to zoom out the entire diagram and find where you are. Then, you can zoom in on a particular area you want. This solution is not suitable when you need some frequent navigation.
 
-SfDiagramOverviewComponent solves these problems by showing a preview, that is, an overall view of the entire diagram. A rectangle indicates viewport of the diagram. Navigation becomes easy by dragging this rectangle.
+SfDiagramOverviewComponent solves these problems by showing a preview, that is, an overall view of the entire diagram. A rectangle indicates the viewport of the diagram. Navigation becomes easy by dragging this rectangle.
 
-## Create overview
+## Create an overview
 
-The [SourceID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html#Syncfusion_Blazor_Diagram_Overview_SfDiagramOverviewComponent_SourceID) property of SfDiagramOverviewComponent should be set with the corresponding diagram [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ID) for the overall view.
+The [SourceID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html#Syncfusion_Blazor_Diagram_Overview_SfDiagramOverviewComponent_SourceID) property of the SfDiagramOverviewComponent should be set with the corresponding diagram [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ID) for the overall view.
 
 The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html#Syncfusion_Blazor_Diagram_Overview_SfDiagramOverviewComponent_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html#Syncfusion_Blazor_Diagram_Overview_SfDiagramOverviewComponent_Height) properties of the SfDiagramOverviewComponent allow you to define the size of the overview panel.
 
-The following code illustrates how to create overview.
+The following code illustrates how to create an overview.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -102,14 +102,14 @@ public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
 
 ## Zoom and Pan
 
-In SfDiagramOverviewComponent, the view port of the diagram is highlighted with a red color rectangle. Diagram can be zoomed/panned by interacting with that rectangle. You can interact with SfDiagramOverviewComponent as follows:
+In the SfDiagramOverviewComponent, the view port of the diagram is highlighted with a red color rectangle. Diagram can be zoomed/panned by interacting with that rectangle. You can interact with SfDiagramOverviewComponent as follows:
 
 * Resize the rectangle: Zooms in/out the diagram.
 * Drag the rectangle: Pans the diagram.
 * Click at a position: Navigates to the clicked region.
 * Choose a particular region by clicking and dragging: Navigates to the specified region.
 
-The following image shows how the diagram is zoomed/panned with overview.
+The following image shows how the diagram is zoomed/panned with an overview.
 
 ![Overview Interaction](images/Overview.gif)
 
@@ -126,14 +126,14 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 
 | Constraints | Description |
 | -------- | -------- |
-| None | Disables all the interactions in overview component.|
-| Zoom | Enables the zooming interaction in overview component. |
-| Pan | Enables the panning interaction in overview component. |
+| None | Disables all the interactions in the overview component.|
+| Zoom | Enables the zooming interaction in the overview component. |
+| Pan | Enables the panning interaction in the overview component. |
 | DrawFocus | Enables to zoom or change the viewport area of the diagram by drawing the new rect in the overview component. | 
-| TapFocus | Enables the panning of the diagram viewport to specific focus point by tap on the overview component. |
-| Default | Enables all the interactions in overview component. |
+| TapFocus | Enables the panning of the diagram viewport to a specific focus point by tapping on the overview component. |
+| Default | Enables all the interactions in the overview component. |
 
-The following example shows how to disable zoom constraint from the default overview constraints.
+The following example shows how to disable the zoom constraint from the default overview constraints.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
