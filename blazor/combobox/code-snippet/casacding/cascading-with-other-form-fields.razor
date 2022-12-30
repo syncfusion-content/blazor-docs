@@ -1,29 +1,26 @@
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Inputs
-@using System.ComponentModel.DataAnnotations;
 
-<EditForm Model="@Model">
-    <div class="form-group">
-        <SfComboBox TValue="int" TItem="State" @bind-Value="@StateValue" Placeholder="Select a state" AllowCustom="false" PopupHeight="auto" DataSource="@States" AllowFiltering="true">
-            <ComboBoxEvents TValue="int" TItem="State" ValueChange="ChangeState"></ComboBoxEvents>
-            <ComboBoxFieldSettings Text="StateName" Value="StateId"></ComboBoxFieldSettings>
-        </SfComboBox>
-    </div>
-    <div class="form-group">
-        Country ID:
-        <SfTextBox @bind-Value="@CountryID"></SfTextBox>
-    </div>
-    <div class="form-group">
-        State ID:
-        <SfTextBox @bind-Value="@StateID"></SfTextBox>
-    </div>
-    <div class="form-group">
-        Capital:
-        <SfTextBox @bind-Value="@Capital"></SfTextBox>
-    </div>
+<div class="cascading">
+    <SfComboBox TValue="int" TItem="State" @bind-Value="@StateValue" Placeholder="Select a state" AllowCustom="false" PopupHeight="auto" DataSource="@States" AllowFiltering="true">
+        <ComboBoxEvents TValue="int" TItem="State" ValueChange="ChangeState"></ComboBoxEvents>
+        <ComboBoxFieldSettings Text="StateName" Value="StateId"></ComboBoxFieldSettings>
+    </SfComboBox>
+</div>
+<div class="cascading">
+    Country ID:
+    <SfTextBox @bind-Value="@CountryID"></SfTextBox>
+</div>
+<div class="cascading">
+    State ID:
+    <SfTextBox @bind-Value="@StateID"></SfTextBox>
+</div>
+<div class="cascading">
+    Capital:
+    <SfTextBox @bind-Value="@Capital"></SfTextBox>
+</div>
 
-</EditForm>
 <style>
     .control-wrapper {
         margin: 0 auto;
@@ -39,7 +36,6 @@
     public string Capital { get; set; }
     public string CountryID { get; set; }
     public string StateID { get; set; }
-    public State Model = new State();
     public void ChangeState(Syncfusion.Blazor.DropDowns.ChangeEventArgs<int, State> args)
     {
         this.Capital = this.States.Where(state => state.StateId == args.Value).First().Capital;
@@ -50,11 +46,9 @@
     {
         public string StateName { get; set; }
         public string CountryId { get; set; }
-        [Key]
         public int StateId { get; set; }
         public string Capital { get; set; }
     }
-
 
     public List<State> States = new List<State>() {
         new State() { StateName= "New York", CountryId= "1", StateId= 101, Capital="Albany" },

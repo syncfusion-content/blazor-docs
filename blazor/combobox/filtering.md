@@ -90,9 +90,11 @@ The ComboBox component filter queries can be customized. You can also use your o
 
 ## Prevent popup opening when filtering
 
-This is achieved by using the [BeforeOpenEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.BeforeOpenEventArgs.html#Syncfusion_Blazor_DropDowns_BeforeOpenEventArgs_Cancel) argument. The `BeforeOpenEventArgs.Cancel` argument is set as `true` when the filtering action takes place and as `false` when there is no filtering action. The Filtering Event can be used to identify when the filtering action is taking place.
+To prevent the ComboBox dropdown from opening when filtering is applied, you can use the [BeforeOpenEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.BeforeOpenEventArgs.html#Syncfusion_Blazor_DropDowns_BeforeOpenEventArgs_Cancel) argument in the [BeforeOpenEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.BeforeOpenEventArgs.html). The `BeforeOpenEventArgs.Cancel` argument is a boolean value that can be set to `true` to cancel the dropdown opening, or `false` to allow the dropdown to open.
 
 In the following example, the isTyped flag is used to track whether the filtering action is taking place. The `OnFiltering` method sets the flag to true when the filtering action starts, and the `OnBeforeOpen` method cancels the dropdown opening if the flag is set to true. Finally, the `OnBeforeOpen` method resets the flag to false to prepare for the next filtering action.
+
+> This will prevent the ComboBox dropdown from opening when filtering is applied, while still allowing the user to filter the items using the input field in the ComboBox.
 
 {% highlight cshtml %}
 
