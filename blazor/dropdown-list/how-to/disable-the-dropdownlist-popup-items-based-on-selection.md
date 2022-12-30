@@ -1,33 +1,38 @@
 ---
 layout: post
-title: Disable the Dropdown List Popup items based on selection | Syncfusion
-description: Learn how to disable the Dropdown List popup items based on the selection in the Syncfusion Blazor DropDown List component.
+title: Disable the DropDown List Popup items based on selection | Syncfusion
+description: Learn how to disable the DropDown List popup items based on the selection in the Syncfusion Blazor DropDown List component.
 platform: Blazor
 control: DropDown List
 documentation: ug
 ---
 
-# How to disable the Dropdown List popup items based on selection
+# How to disable the DropDown List popup items based on selection
 
-The following example demonstrates how to disable the Dropdown List popup items based on the selection in the Dropdown List component. This can be achieved by adding the e-disabled class to the selected list.
+The following example demonstrates how to disable the DropDown List popup items based on the selection in the DropDown List component. This can be achieved by adding the e-disabled class to the selected list.
 
 ```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.DropDowns
-<SfDropDownList @ref="dropObj" ID="DDL" TValue="string" @bind-Value="@DropVal" TItem="Countries" ShowClearButton="false" Placeholder="e.g. Australia" DataSource="@Country">
+
+<SfDropDownList @ref="DropObj" ID="DDL" TValue="string" ShowClearButton="false" @bind-Value="@DropValue" TItem="Countries" Placeholder="e.g. Australia" DataSource="@Country">
     <DropDownListFieldSettings Text="Name" Value="Code"></DropDownListFieldSettings>
     <DropDownListEvents TValue="string" TItem="Countries" Opened="OnOpen"></DropDownListEvents>
 </SfDropDownList>
-@code { 
-    public string DropVal { get; set; } = "BM";
-    SfDropDownList<string, Countries> dropObj;
+
+@code {
+    public string DropValue { get; set; } = "BM";
+    SfDropDownList<string, Countries> DropObj;
     [Inject]
     protected IJSRuntime JsRuntime { get; set; }
+
     public class Countries
     {
         public string Name { get; set; }
+
         public string Code { get; set; }
     }
+
     List<Countries> Country = new List<Countries>
 {
         new Countries() { Name = "Australia", Code = "AU" },
@@ -52,25 +57,27 @@ The following example demonstrates how to disable the Dropdown List popup items 
     };
     public async Task OnOpen(PopupEventArgs args)
     {
-        await JsRuntime.InvokeVoidAsync("onChange", "DDL", this.dropObj.Value);
+        await JsRuntime.InvokeVoidAsync("onChange", "DDL", this.DropObj.Value);
     }
 }
 ```
 
-Add the following JavaScript methods inside the script tag of `wwwroot/index.html` (Blazor WebAssembly App) or `Pages/_Layout.cshtml` (Blazor Server App) to disable the Dropdown List popup items based on selection.
+Add the following JavaScript methods inside the script tag of `wwwroot/index.html` (Blazor WebAssembly App) or `Pages/_Layout.cshtml` (Blazor Server App) to disable the DropDown List popup items based on selection.
 
 ```cshtml
 <script>
-window.onChange = (id, DDLvalue) => {
+window.onChange = (id, ddlValue) => {
     setTimeout(function (e) {
-        let lis = document.getElementsByClassName("e-list-item");
-        for (let li of lis) {
-            let value = li.getAttribute("data-value");
-            if (DDLvalue && DDLvalue.includes(value)) {
-                li.classList.add("e-disabled");
+        var ddlObj = document.getElementById(id);
+        let lists = ddlObj.blazor__instance.popupObj.element.getElementsByTagName("li");
+        for (let list of lists) {
+            let value = list.getAttribute("data-value");
+            if (ddlValue && ddlValue.includes(value)) {
+                list.style.pointerEvents = "none";
+                list.classList.add("e-disabled");
             }
         }
-    }, 50)
+    },50)
 }
 </script>
 ```
