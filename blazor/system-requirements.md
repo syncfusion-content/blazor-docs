@@ -23,7 +23,7 @@ Blazor applications can be developed using one of the following IDEs. You can al
 
 One of the the following .NET SDK is required to develop and run the Blazor application.
 
-* [.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
+* [.NET 7.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
 * [.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 * [.NET 5.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/5.0) 
 * [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
