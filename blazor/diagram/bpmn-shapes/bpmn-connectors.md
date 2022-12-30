@@ -68,7 +68,7 @@ The following table shows the visual representation of association flows.
 | Directional | ![Directional BPMN FlowShapes](../images/Directional1.png) |
 | BiDirectional | ![BiDirectional BPMN FlowShapes](../images/BiDirectional.png) |
 
->Note : The default value for the property `Association` is **Default**.
+N> The default value for the property `Association` is **Default**.
 
 ## Sequence
 
@@ -122,7 +122,7 @@ The following table contains various representation of sequence flows.
 | Conditional | ![Conditional Sequence BPMN Shape](../images/Conditional.png) |
 | Normal | ![Normal Sequence BPMN Shape](../images/Normal.png) |
 
-> The default value for the property `Sequence` is **Normal**.
+N> The default value for the property `Sequence` is **Normal**.
 
 ## Message
 
@@ -176,4 +176,4 @@ The following table contains various representation of message flows.
 | InitiatingMessage | ![InitiatingMessage Message BPMN Shape](../images/IMessage.png) |
 | NonInitiatingMessage | ![NonInitiatingMessage Message BPMN Shape](../images/NIMessage.png) |
 
-> The default value for the property `Message` is **Default**.
+N> The default value for the property `Message` is **Default**.

@@ -87,7 +87,7 @@ Using [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
 ![Changing Label Position in Blazor Chart](images/data-label/blazor-chart-label-position.png)
 
-> The position `Outer` is applicable only for column and bar series.
+N> The position `Outer` is applicable only for column and bar series.
 
 ## Template
 
@@ -133,6 +133,48 @@ The [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartD
 ```
 
 ![Blazor Chart Label with Text Mapping](images/data-label/blazor-chart-label-with-text-mapping.png)
+
+## Format
+
+Data label for the chart can be formatted using [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Format) property. You can use the global formatting options, such as 'N1', 'P1', and 'C1'.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
+    
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="ChartSeriesType.Line" >
+            <ChartMarker>
+                <ChartDataLabel Visible="true" Format="N1" />
+            </ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class Data
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+        public string Text { get; set; }
+    }
+
+    public List<Data> WeatherReports = new List<Data>
+    {
+        new Data{ X= "Jan", Y= 3, Text= "January" },
+        new Data{ X= "Feb", Y= 3.5, Text= "February" },
+        new Data{ X= "Mar", Y= 7, Text= "March" },
+        new Data{ X= "Apr", Y= 13.5, Text= "April" }
+    };
+}
+
+```
+
+![Blazor Chart Label with Format](images/data-label/blazor-chart-label-with-format.png)
 
 ## Margin
 
@@ -221,7 +263,7 @@ Data label can be customized using [Fill](https://help.syncfusion.com/cr/blazor/
 
 ![Blazor Chart with Custom Label](images/data-label/blazor-chart-custom-label.png)
 
-> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 

@@ -312,7 +312,7 @@ If you configured both the property and equivalent input attribute, then the com
 
 {% highlight Razor %}
 
-{% include_relative code-snippet/properties/InputAttributes.razor %}
+{% include_relative code-snippet/style/inputAttributes-property.razor %}
 
 {% endhighlight %} 
 
@@ -356,7 +356,7 @@ Hides the spinner loader.
 
 #### Declarations
 
-> public Task HideSpinnerAsync()
+N> public Task HideSpinnerAsync()
 
 ### ShowSpinnerAsync()
 
@@ -364,11 +364,11 @@ Shows the spinner loader.
 
 #### Declarations
 
-> public Task ShowSpinnerAsync()
+N> public Task ShowSpinnerAsync()
 
 {% highlight Razor %}
 
-{% include_relative code-snippet/style/show-or-hide-spinner.razor %}
+{% include_relative code-snippet/style/show-or-hide-spinner-method.razor %}
 
 {% endhighlight %} 
 

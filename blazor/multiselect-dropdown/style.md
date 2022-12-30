@@ -267,7 +267,7 @@ If you configured both the property and equivalent input attribute, then the com
 
 {% highlight Razor %}
 
-{% include_relative code-snippet/properties/inputAttributes-property.razor %}
+{% include_relative code-snippet/style/inputAttributes-property.razor %}
 
 {% endhighlight %}
 
@@ -281,7 +281,7 @@ Default value of [OpenOnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 {% highlight Razor %}
 
-{% include_relative code-snippet/properties/OpenOnClick.razor %}
+{% include_relative code-snippet/style/openOnClick-property.razor %}
 
 {% endhighlight %}
 
@@ -401,7 +401,7 @@ Allows you to clear the selected values from the MultiSelect component.
 
 #### Declaration
 
-> public Task ClearAsync()
+N> public Task ClearAsync()
 
 {% highlight Razor %}
 
@@ -417,7 +417,7 @@ Sets the focus to the MultiSelect component for interaction.
 
 #### Declaration
 
-> public Task FocusAsync()
+N> public Task FocusAsync()
 
 ### FocusOutAsync()
 
@@ -425,7 +425,7 @@ Remove the focus from the MultiSelect component, if the component is in focus st
 
 #### Declaration
 
-> public Task FocusOutAsync()
+N> public Task FocusOutAsync()
 
 {% highlight Razor %}
 
@@ -433,15 +433,13 @@ Remove the focus from the MultiSelect component, if the component is in focus st
 
 {% endhighlight %}
 
-![Blazor MultiSelect DropDown with Focus in and out method](./images/style/blazor_multiselect_focus-in-out-method.gif)
-
 ### HidePopupAsync()
 
 Hides the popup if it is in an open state.
 
 #### Declaration
 
-> public Task HidePopupAsync()
+N> public Task HidePopupAsync()
 
 ### ShowPopupAsync()
 
@@ -449,7 +447,7 @@ Opens the popup that displays the list of items.
 
 #### Declaration
 
-> public Task ShowPopupAsync()
+N> public Task ShowPopupAsync()
 
 {% highlight Razor %}
 
@@ -457,15 +455,13 @@ Opens the popup that displays the list of items.
 
 {% endhighlight %}
 
-![Blazor MultiSelect DropDown with show hide popup method](./images/style/blazor_multiselect_show-hide-popupAsync-method.gif)
-
 ### HideSpinner()
 
 Hides the spinner loader.
 
 #### Declaration
 
-> public Task HideSpinner()
+N> public Task HideSpinner()
 
 ### ShowSpinner()
 
@@ -473,7 +469,7 @@ Shows the spinner loader.
 
 #### Declaration
 
-> public Task ShowSpinner()
+N> public Task ShowSpinner()
 
 {% highlight Razor %}
 

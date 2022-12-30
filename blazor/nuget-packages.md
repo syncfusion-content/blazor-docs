@@ -176,7 +176,9 @@ Syncfusion.Blazor.Buttons.dll
 <li>SfButton</li>
 <li>SfCheckBox</li>
 <li>SfChip</li>
+<li>SfFab</li>
 <li>SfRadioButton</li>
+<li>SfSpeedDial</li>
 <li>SfSwitch</li>
 <li>SfIcon</li>
 </ul>
@@ -496,6 +498,7 @@ Syncfusion.Blazor.DropDowns.dll
 <li>SfDropDownList</li>
 <li>SfListBox</li>
 <li>SfMultiSelect</li>
+<li>SfMention</li>
 </ul>
 </td>
 <td>
@@ -766,6 +769,7 @@ Syncfusion.Blazor.Inputs.dll
 <li>SfColorPicker</li>
 <li>SfMaskedTextBox</li>
 <li>SfNumericTextBox</li>
+<li>SfRating</li>
 <li>SfSlider</li>
 <li>SfTextBox</li>
 <li>SfUploader</li>
@@ -857,6 +861,7 @@ Syncfusion.Blazor.Layouts.dll
 <td>
 <ul>
 <li>SfDashboardLayout</li>
+<li>SfMediaQuery</li>
 <li>SfSplitter</li>
 </ul>
 </td>
@@ -1014,6 +1019,7 @@ Syncfusion.Blazor.Navigations.dll
 <td>
 <ul>
 <li>SfAccordion</li>
+<li>SfAppBar</li>
 <li>SfBreadcrumb</li>
 <li>SfContextMenu</li>
 <li>SfMenu</li>
@@ -1063,7 +1069,11 @@ The notification component Toast is used to notify status or summary information
 Syncfusion.Blazor.Notifications.dll
 </td>
 <td>
-SfToast
+<ul>
+<li>SfToast</li>
+<li>SfSkeleton</li>
+<li>SfMessage</li>
+</ul>
 </td>
 <td>
 <ul>
@@ -1158,9 +1168,9 @@ SfPdfViewerServer
 </tr>
 </table>
 
-> For developing Linux or Mac (OSX) operating system, use the following corresponding libraries:
->* For Linux, use [Syncfusion.Blazor.PdfViewerServer.Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux)
->* For Mac (OSX), use [Syncfusion.Blazor.PdfViewerServer.OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX)
+N> For developing Linux or Mac (OSX) operating system, use the following corresponding libraries:
+<br/>* For Linux, use [Syncfusion.Blazor.PdfViewerServer.Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux)
+<br/>* For Mac (OSX), use [Syncfusion.Blazor.PdfViewerServer.OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX)
 
 ### Syncfusion.Blazor.PivotTable
 

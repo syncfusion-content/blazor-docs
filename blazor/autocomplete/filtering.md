@@ -264,7 +264,7 @@ Highlight the searched characters on suggested list items.
 
 #### Declaration
 
-> public string HighLightSearch(string textValue, bool ignoreCase, FilterType filtertype, string highLighText = null)
+N> public string HighLightSearch(string textValue, bool ignoreCase, FilterType filtertype, string highLighText = null)
 
 #### Paramaters
 
@@ -275,7 +275,7 @@ Highlight the searched characters on suggested list items.
 
 {% highlight Razor %}
 
-{% include_relative code-snippet/methods/HighLightSearch.razor %}
+{% include_relative code-snippet/filtering/highLightSearch-method.razor %}
 
 {% endhighlight %} 
 

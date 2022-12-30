@@ -90,7 +90,7 @@ The Scheduler with view options within the header bar popup will be rendered as 
 
 ![Displaying Header Bar Popup in Blazor Scheduler](images/blazor-scheduler-header-bar-popup.png)
 
-> Refer [here](./resources/#adaptive-ui-in-desktop) to know more about adaptive UI in resources scheduler.
+N> Refer [here](./resources/#adaptive-ui-in-desktop) to know more about adaptive UI in resources scheduler.
 
 ## Date header customization
 

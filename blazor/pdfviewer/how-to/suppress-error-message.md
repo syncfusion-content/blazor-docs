@@ -27,4 +27,4 @@ The following code example shows how to suppress the error dialog.
  
 Find the sample, [How to suppress the error dialog in the Blazor PDF Viewer](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorWebAsssembly1506143488)
 
-> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain the core features of the PDF Viewer.
+N> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain the core features of the PDF Viewer.

@@ -15,7 +15,7 @@ The **Kanban** columns represents each stage of the process. The column definiti
 
 Kanban columns are categorized by mapping the **key** from the datasource using the `KeyField` property. The corresponding **value** in the datasource is mapped inside the columns `KeyField`. Based on this categorization, Kanban columns are split on this board.
 
-> The `KeyField` property is mandatory to render the columns in the Kanban board.
+N> The `KeyField` property is mandatory to render the columns in the Kanban board.
 
 ```cshtml
 
@@ -325,7 +325,7 @@ To get start quickly with Blazor Kanban component using Templates, you can check
 
 Kanban allows to expand or collapse its columns using `AllowToggle` in `KanbanColumn`. When the property is enabled, it will render the expand or collapse icon to the column header.
 
-> By default, collapsed column width is set to `50px`.
+N> By default, collapsed column width is set to `50px`.
 
 ```cshtml
 
@@ -391,7 +391,7 @@ Kanban allows to expand or collapse its columns using `AllowToggle` in `KanbanCo
 
 By default, all columns are on expanded state when loading the Kanban board initially. But, you can render the columns with collapsed state using the `IsExpanded` property.
 
-> The `IsExpanded` property only works when enabling the `AllowToggle` property on particular column.
+N> The `IsExpanded` property only works when enabling the `AllowToggle` property on particular column.
 
 In the following example, the Backlog column is collapsed on initialization of Kanban board.
 
