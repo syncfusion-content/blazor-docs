@@ -27,7 +27,6 @@ The following example code illustrates how to insert page number in header.
 </SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
 
     public async void OnCreated(object args)
@@ -40,7 +39,6 @@ The following example code illustrates how to insert page number in header.
         container.DocumentEditor.Editor.InsertFieldAsync("PAGE \\* MERGEFORMAT", "1");
     }
 }
-
 ```
 
 ## Get page count
@@ -57,7 +55,6 @@ The following example code illustrates how to get the number of pages in Documen
 </SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
 
     public async void OnCreated(object args)
@@ -84,7 +81,6 @@ The following example code illustrates how to move selection to specific page.
 </SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
 
     public async void OnCreated(object args)

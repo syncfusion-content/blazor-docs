@@ -39,7 +39,6 @@ The following example code illustrates how to hide the existing toolbar.
 @using Syncfusion.Blazor.DocumentEditor
 
 <SfDocumentEditorContainer @ref="container" EnableToolbar=false ShowPropertiesPane="false">
-    
 </SfDocumentEditorContainer>
 ```
 
