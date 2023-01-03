@@ -11,11 +11,9 @@ documentation: ug
 
 You can also customize the appearance of rating control.
 
-## ItemsCount
+## Items count
 
 You can specify the number of rating items using the [ItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ItemsCount) property.
-
-Below example demonstrates ItemsCount of Rating.
 
 ```cshtml
 
@@ -25,13 +23,13 @@ Below example demonstrates ItemsCount of Rating.
 
 ```
 
+In this example, the rating component will display `8` rating items. The `Value` property specifies the number of rating items that should be filled, so in this case `3` of the `8` rating items will be filled.
+
 ![Blazor Rating Component with ItemsCount](images/blazor-rating-items-count.png)
 
 ## Disabled
 
-You can disabled the rating component by using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Disabled) property. The user will not be able to interact with it.
-
-Below example demonstrates Disabled of Rating.
+You can disable the Syncfusion Blazor Rating component by using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Disabled) property. When the `Disabled` property is set to `true`, the rating component will be disabled and the user will not be able to interact with it and a disabled rating component may have a different visual appearance than an enabled one.
 
 ```cshtml
 
@@ -45,9 +43,7 @@ Below example demonstrates Disabled of Rating.
 
 ## Visible
 
-By using the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Visible) property, You can customize the visibility of the Rating. If the value of Visible is true, then the rating component is in a visible state.
-
-Below example demonstrates Visible of Rating.
+You can use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Visible) property of the Blazor Rating component to control the visibility of the component. When the `Visible` property is set to `true`, the rating component will be visible on the page. When it is set to `false`, the component will be hidden.
 
 ```cshtml
 
@@ -59,11 +55,9 @@ Below example demonstrates Visible of Rating.
 
 ![Blazor Rating Component with Visible](images/blazor-rating-full-precision.png)
 
-## ReadOnly
+## Read only
 
-By using the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ReadOnly) property, The user will not be able to interact with the rating item and change the rating value. 
-
-Below example demonstrates ReadOnly of Rating.
+You can use the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ReadOnly) property of the Blazor Rating component to make the component non-interactive and prevent the user from changing the rating value.
 
 ```cshtml
 
@@ -79,7 +73,9 @@ Below example demonstrates ReadOnly of Rating.
 
 You can customize the appearance of the rating component, such as by changing its colors, fonts, sizes, or other visual aspects by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_CssClass) property. 
 
-Below example demonstrates CssClass of Rating.
+### Changing rating symbol border color
+
+You can change the rating item border color in Blazor Rating component, you can use the `CssClass` property and set the `text-stroke` CSS property of `.e-rating-icon` to your desired border color.
 
 ```cshtml
 
@@ -90,7 +86,34 @@ Below example demonstrates CssClass of Rating.
     .e-rating-container.custom-font .e-rating-item-list:hover .e-rating-item-container .e-rating-icon,
     .e-rating-container.custom-font .e-rating-item-container .e-rating-icon {
         /*To change rating symbol border color*/
-        -webkit-text-stroke: 2px #FFA012;
+        -webkit-text-stroke: 2px #FFA012;        
+    }
+
+</style>
+
+```
+
+![Blazor Rating Component with rating symbol border color](images/blazor-rating-border-color.png)
+
+### Change rated symbol fill color 
+
+You can customize the rated fill color of the icons in the Rating control by using the `CssClass` property and setting the **first** color stop of the `linear-gradient` to define the rated fill color using the `background` CSS property of `.e-rating-icon`.
+
+
+### Change un-rated symbol fill color
+
+You can customize the un-rated fill color of the icons in the Rating control by using the `CssClass` property and setting the **second** color stop of the `linear-gradient` to define the rated fill color using the `background` CSS property of `.e-rating-icon`.
+
+Here is an example of how you can use above method to customize the rated and unrated fill color of the icons in the Rating control:
+
+```cshtml
+
+<SfRating Value="3" CssClass="custom-font"></SfRating>
+
+<style>
+
+    .e-rating-container.custom-font .e-rating-item-list:hover .e-rating-item-container .e-rating-icon,
+    .e-rating-container.custom-font .e-rating-item-container .e-rating-icon {
         /*To change rated symbol fill color and un-rated symbol fill color*/
         background: linear-gradient(to right, #FFE814 var(--rating-value), #d8d7d4 var(--rating-value));
         background-clip: text;
@@ -101,13 +124,13 @@ Below example demonstrates CssClass of Rating.
 
 ```
 
-![Blazor Rating Component with CssClass](images/blazor-rating-css-class.png)
+This will customize the rated and un-rated fill color of the icons in the Rating control to the specified colors.
+
+![Blazor Rating Component with custom fill color for icons](images/blazor-rating-fill-color.png)
 
 ## Change icon using CssClass
 
-By using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_CssClass) property, You can customize your rating icon for your rating item. 
-
-Below example demonstrates the Change Icon Using CssClass of Rating.
+You can change the rating item icon in Blazor Rating component, you can use the `CssClass` property and set the `content` CSS property of `.e-icons.e-star-filled:before` to your desired font icon.
 
 ```cshtml
 
