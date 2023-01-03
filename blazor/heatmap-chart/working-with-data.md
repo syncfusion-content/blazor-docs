@@ -81,6 +81,8 @@ Each cell in an array cell binding data contain information about the row index,
 
 ```cshtml
 
+@using Syncfusion.Blazor.HeatMap
+
 <SfHeatMap DataSource="@HeatMapData">
     <HeatMapTitleSettings Text="Percentage of Individuals Using Internet by Country">
         <HeatMapTitleTextStyle Size="15px" FontWeight="500" FontStyle="Normal" FontFamily="Segoe UI"></HeatMapTitleTextStyle>
