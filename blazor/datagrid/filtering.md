@@ -179,7 +179,11 @@ In the following sample, the `SfDropDownList` component is rendered in the [Filt
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.Type) HeaderText="Type" Type="ColumnType.String" Width="130">
             <FilterTemplate>
-                <SfDropDownList Placeholder="Type" ID="Type" Value="@((string)(context as PredicateModel).Value)" DataSource="@FilterDropData" TValue="string" TItem="Data">
+                 @{
+                    var enumValue = (context as PredicateModel).Value;
+                    var filterValue = enumValue == null ? string.Empty : enumValue.ToString();
+                }
+                <SfDropDownList Placeholder="Type" ID="Type" Value="@filterValue" DataSource="@FilterDropData" TValue="string" TItem="Data">
                     <DropDownListEvents TItem="Data" ValueChange="Change" TValue="string"></DropDownListEvents>
                     <DropDownListFieldSettings Value="Type" Text="Type"></DropDownListFieldSettings>
                 </SfDropDownList>
