@@ -155,6 +155,8 @@ Usually a day view displays a single day with all its related appointments. It i
 
 N> All the above defined properties can be accessed within Day view except `AllowVirtualScrolling` and `HeaderRows`.
 
+![Displaying Day View in Blazor Scheduler](images\blazor-scheduler-views-day.jpg)
+
 ### Week view
 
 The Week view displays a count of 7 days (from Sunday to Saturday) with all its related appointments. The first day of the week can be changed using the `FirstDayOfWeek` which accepts the integer (Sunday=0, Monday=1, Tuesday=2 and so on) value. You can navigate to a particular date in day view from the week view by clicking on the appropriate dates on the date header bar.
@@ -187,6 +189,8 @@ The Week view displays a count of 7 days (from Sunday to Saturday) with all its 
 ```
 
 N> All the above defined properties in the table can be accessed within Week and Work week views except `AllowVirtualScrolling` and `HeaderRows`.
+
+![Displaying Week View in Blazor Scheduler](images\blazor-scheduler-views-week.jpg)
 
 ### Work Week view
 
@@ -222,6 +226,8 @@ The following code example depicts how to change the start and end hours only on
 
 N> The Week, Work week and Day views can display the all-day row appointments in a separate all-day row with an expand or collapse option to view it.
 
+![Displaying Work week View in Blazor Scheduler](images\blazor-scheduler-views-workweek.jpg)
+
 ### Month view
 
 A Month view displays the entire days of a particular month and all its related appointments. You can navigate to a particular date in the day view by clicking on the appropriate date text on the month cells.
@@ -256,6 +262,8 @@ By default, in month view, you can view single appointment on each day cell. If 
 }
 ```
 
+![Displaying Month View in Blazor Scheduler](images\blazor-scheduler-views-month.jpg)
+
 ### Agenda view
 
 The Agenda view lists out the appointments in a grid-like view for the next 7 days by default from the current date. The count of the days can be changed using the API `AgendaDaysCount`. It allows virtual scrolling of dates by enabling the `AllowVirtualScrolling` property. Also, you can enable or disable the display of days on Scheduler that has no appointments by setting true or false to the `HideEmptyAgendaDays` property.
@@ -286,6 +294,8 @@ The following code example depicts how to display events of four days in Agenda 
     }
 }
 ```
+
+![Displaying Agenda View in Blazor Scheduler](images\blazor-scheduler-views-agenda.jpg)
 
 ### Month Agenda view
 
@@ -319,6 +329,8 @@ The following code example shows how to hide the weekend days on `MonthAgenda` v
     }
 }
 ```
+
+![Displaying Month agenda View in Blazor Scheduler](images\blazor-scheduler-views-monthagenda.jpg)
 
 ### Timeline views – Day, Week, Work Week
 
@@ -355,6 +367,8 @@ Similar to the vertical day, week and work week views, the respective view shows
 
 N> Clicking on the dates in the date header bar of Timeline day, Timeline week and Timeline work week will allow to navigate to the Agenda view.
 
+![Displaying Timeline Week View in Blazor Scheduler](images\blazor-scheduler-views-timelineweek.jpg)
+
 ### Timeline Month view
 
 A Timeline Month view displays the current month days along with its appointments.
@@ -387,6 +401,8 @@ A Timeline Month view displays the current month days along with its appointment
 
 N> Clicking on the dates in the date header bar of Timeline month allows to navigate to the Timeline day view.
 
+![Displaying Timeline Month View in Blazor Scheduler](images\blazor-scheduler-views-timelinemonth.jpg)
+
 ### Timeline Year view
 
 A Timeline Year view displays the complete year along with its appointments.
@@ -404,12 +420,12 @@ By default, the timeline year view orientation is set to Horizontal view. In thi
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 3, 10);
+    DateTime CurrentDate = new DateTime(2023, 3, 10);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 4, 0, 0, 0) , EndTime = new DateTime(2020, 3, 5, 0, 0, 0) },
-        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2020, 5, 1, 9, 30, 0) , EndTime = new DateTime(2020, 5, 1, 12, 0, 0) },
-        new AppointmentData { Id = 3, Subject = "Seminar", StartTime = new DateTime(2020, 1, 2, 9, 30, 0) , EndTime = new DateTime(2020, 1, 2, 12, 0, 0) }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 3, 4, 0, 0, 0) , EndTime = new DateTime(2023, 3, 5, 0, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2023, 5, 1, 9, 30, 0) , EndTime = new DateTime(2023, 5, 1, 12, 0, 0) },
+        new AppointmentData { Id = 3, Subject = "Seminar", StartTime = new DateTime(2023, 1, 2, 9, 30, 0) , EndTime = new DateTime(2023, 1, 2, 12, 0, 0) }
     };
     public class AppointmentData
     {
@@ -426,6 +442,8 @@ By default, the timeline year view orientation is set to Horizontal view. In thi
     }
 }
 ```
+
+![Displaying Timeline Year View in Blazor Scheduler](images\blazor-scheduler-views-timelineyear.jpg)
 
 #### Setting the first month of timeline year
 
@@ -442,11 +460,11 @@ By default, months in timeline year view displayed from January to December. Use
     </ScheduleViews>
 </SfSchedule>
 @code{
-    DateTime CurrentDate = new DateTime(2021, 4, 3);
+    DateTime CurrentDate = new DateTime(2023, 4, 3);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-    new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2021, 5, 13, 10, 0, 0) , EndTime = new DateTime(2021, 5, 13, 12, 0, 0) },
-    new AppointmentData { Id = 2, Subject = "Germany", StartTime = new DateTime(2021, 5, 15, 10, 0, 0) , EndTime = new DateTime(2021, 5, 15, 12, 0, 0) }
+    new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2023, 5, 13, 10, 0, 0) , EndTime = new DateTime(2023, 5, 13, 12, 0, 0) },
+    new AppointmentData { Id = 2, Subject = "Germany", StartTime = new DateTime(2023, 5, 15, 10, 0, 0) , EndTime = new DateTime(2023, 5, 15, 12, 0, 0) }
     };
     public class AppointmentData
     {
@@ -463,6 +481,8 @@ By default, months in timeline year view displayed from January to December. Use
     }
 }
 ```
+
+![Displaying Timeline Year with First Month in Blazor Scheduler](images\blazor-scheduler-views-timelineyear-firstmonth.jpg)
 
 ### Year view
 
@@ -482,9 +502,9 @@ The Year view shows a year calendar, where clicking on a particular day will dis
     DateTime CurrentDate = new DateTime(2020, 3, 10);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 4, 0, 0, 0) , EndTime = new DateTime(2020, 3, 5, 0, 0, 0) },
-        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2020, 5, 1, 9, 30, 0) , EndTime = new DateTime(2020, 5, 1, 12, 0, 0) },
-        new AppointmentData { Id = 3, Subject = "Seminar", StartTime = new DateTime(2020, 1, 2, 9, 30, 0) , EndTime = new DateTime(2020, 1, 2, 12, 0, 0) }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 3, 4, 0, 0, 0) , EndTime = new DateTime(2023, 3, 5, 0, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2023, 5, 1, 9, 30, 0) , EndTime = new DateTime(2023, 5, 1, 12, 0, 0) },
+        new AppointmentData { Id = 3, Subject = "Seminar", StartTime = new DateTime(2023, 1, 2, 9, 30, 0) , EndTime = new DateTime(2023, 1, 2, 12, 0, 0) }
     };
     public class AppointmentData
     {
@@ -502,7 +522,7 @@ The Year view shows a year calendar, where clicking on a particular day will dis
 }
 ```
 
-![Displaying Year View in Blazor Scheduler](images/blazor-scheduler-year-view.png)
+![Displaying Year View in Blazor Scheduler](images/blazor-scheduler-views-year.png)
 
 ## Extending view intervals
 
@@ -538,3 +558,5 @@ You can provide the alternative display name for such customized views on the Sc
 ```
 
 N> The view intervals can be extended on all the Scheduler view modes except Agenda and Month-Agenda views.
+
+![Displaying Extending Intervals in Blazor Scheduler](images/blazor-scheduler-views-extendingintervals.png)
