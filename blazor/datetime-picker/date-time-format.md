@@ -16,7 +16,7 @@ By default, the DateTimePicker's format is based on the culture. You can also se
 
 {% highlight Razor %}
 
-{% include_relative code-snippet/DateTimePicker.razor %}
+{% include_relative code-snippet/DateTimePicke.razor %}
 
 {% endhighlight %}
 

@@ -68,7 +68,6 @@ An annotation can be added to a node or connector by defining the annotation obj
 N>* [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_ID) for each annotation should be unique and so it is further used to find the annotation at runtime and do any customization.
 <br/>* By default, node’s annotation positioned in center point of the shape.
 <br/>* By default, connector’s path annotation positioned in center point of its path.
->**Note:** Do not use underscore(_) for annotation's id.
 
 ## Add Annotations at runtime
 
