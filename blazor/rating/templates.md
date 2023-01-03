@@ -187,7 +187,7 @@ Below example demonstrates the SVG Icon of Rating.
 
 @using Syncfusion.Blazor.Inputs
 
-<SfRating Value="3" EnableAnimation=false>
+<SfRating Value="4" EnableAnimation=false>
     <EmptyTemplate>
         <svg width="35" height="25" class="e-rating-svg-icon">
             <rect width="35" height="25" fill="transparent" style="stroke-width:2;stroke:rgb(173,181,189)" />

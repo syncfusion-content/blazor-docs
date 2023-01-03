@@ -33,7 +33,7 @@ Below example demonstrates the tooltip template of Rating.
 
 @using Syncfusion.Blazor.Inputs
 
-<SfRating Value=3 ShowTooltip=true>
+<SfRating Value=4 ShowTooltip=true>
     <TooltipTemplate>
         <b>@((context == 1)?"Angry":(context == 2)?"Sad":(context == 3)?"Neutral":(context == 4)?"Good":"Happy")</b>
     </TooltipTemplate>
