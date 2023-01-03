@@ -9,7 +9,7 @@ documentation: ug
 
 # Cascading in ComboBox
 
-A cascading ComboBox allows you to select an item from a list of options, and the options in the second ComboBox are filtered based on the selection made in the first ComboBox. This allows you to create a hierarchy ofcomboBox options, where the options in the child ComboBox are dependent on the selection made in the parent ComboBox.
+A cascading ComboBox allows you to select an item from a list of options, and the options in the second ComboBox are filtered based on the selection made in the first ComboBox. This allows you to create a hierarchy of comboBox options, where the options in the child ComboBox are dependent on the selection made in the parent ComboBox.
 
 In the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event handler of the first ComboBox, you can load the data for the second ComboBox based on the selected value of the first ComboBox. This process can be repeated between the second and third ComboBoxes to create a cascading effect.
 
