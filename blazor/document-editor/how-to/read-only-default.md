@@ -20,16 +20,12 @@ The following code example illustrate how to open a document in read only mode.
 @using System.Net
 @using System.Text.Json
 
-
-
-    <SfDocumentEditorContainer @ref="container" EnableToolbar=true Height="590px">
-        <DocumentEditorContainerEvents Created="OnLoad" DocumentChanged="OnDocumentChanged"></DocumentEditorContainerEvents>
-    </SfDocumentEditorContainer>
-
+<SfDocumentEditorContainer @ref="container" EnableToolbar=true Height="590px">
+    <DocumentEditorContainerEvents Created="OnLoad" DocumentChanged="OnDocumentChanged"></DocumentEditorContainerEvents>
+</SfDocumentEditorContainer>
 
 @code {
     SfDocumentEditorContainer container;
-
     string sfdtString;
 
     protected override void OnInitialized()
@@ -52,9 +48,7 @@ The following code example illustrate how to open a document in read only mode.
     public void OnLoad(object args)
     {
         SfDocumentEditor editor = container.DocumentEditor;
-
         editor.OpenAsync(sfdtString);
-
         //To observe the memory go down, null out the reference of sfdtString variable.
         sfdtString = null;
 
@@ -64,8 +58,6 @@ The following code example illustrate how to open a document in read only mode.
         //Enable read only mode inside `documentChange` event.
         container.RestrictEditing = true;
     }
-
 }
-
 ```
 N> You can use the [`RestrictEditing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_RestrictEditing) in DocumentEditorContainer and [`IsReadOnly`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_IsReadOnly) in DocumentEditor based on your requirement to change component to read only mode.

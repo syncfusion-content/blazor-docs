@@ -26,9 +26,7 @@ If you have your Word document file in the web, you can open it in [Blazor Word 
 </SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
-
     string sfdtString;
 
     protected override void OnInitialized()
@@ -77,9 +75,7 @@ You can open the Word documents from Cloud storage. The following code example s
 </SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
-
     string sfdtString;
 
     protected override void OnInitialized()
@@ -131,9 +127,7 @@ You can open the Word documents from Azure File Storage using the following code
 </SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
-
     string sfdtString;
 
     protected override void OnInitialized()
@@ -201,7 +195,6 @@ The following code example shows how to open the Word document file in viewer fr
 </SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
 
     public void OnLoad(object args)
@@ -234,7 +227,6 @@ The following code example shows how to open the Word document file in viewer fr
         json = null;
     }
 }
-
 ```
 
 N> The **System.Data.SqlClient** package must be installed in your application to use the previous code example. You need to modify the connectionString and query variable in the previous code example as per the connection string of your database.
@@ -256,7 +248,6 @@ There is an UI option in built-in toolbar to open the Word documents from local 
 <SfDocumentEditorContainer @ref="container" EnableToolbar=false></SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
 
     public void OnSuccess(UploadingEventArgs action)
@@ -280,7 +271,6 @@ There is an UI option in built-in toolbar to open the Word documents from local 
         action.Cancel = true;
     }
 }
-
 ```
 
 ## Opening a document on control initialization
@@ -297,7 +287,6 @@ The Word document can be opened on control initialization, in this sample, the d
 </SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
 
     public void OnLoad(object args)

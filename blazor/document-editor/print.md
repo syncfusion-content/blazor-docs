@@ -20,7 +20,6 @@ Refer to the following example for print.
 <SfDocumentEditorContainer @ref="container" EnableToolbar=true></SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
     protected void OnPrint(object args)
     {
@@ -40,10 +39,8 @@ The following example code illustrates how to improve the print quality in Docum
 </SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
     DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel() { PrintDevicePixelRatio = 2 };
-
 }
 ```
 
