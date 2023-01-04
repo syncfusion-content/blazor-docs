@@ -1,7 +1,7 @@
 ---
 layout: post
 title: BPMN Connectors in Blazor Diagram Component | Syncfusion
-description: Learn here all about BPMN Connectors such as association, sequence in Syncfusion Blazor Diagram component and more.
+description: Learn here all about BPMN Connectors such as association, sequence, message in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -70,11 +70,11 @@ The following table shows the visual representation of association flows.
 
 ## Sequence
 
-A `Sequence` flow shows the order that the activities are performed in a BPMN process and is represented by a solid graphical line. To create a SequenceFlow, [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html#Syncfusion_Blazor_Diagram_BpmnFlow_Flow) property of the [BpmnFlowShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html)  should be set to [SequenceFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_SequenceFlow). The types of sequence are as follows:
+A `Sequence` flow shows the order that the activities are performed in a BPMN process and is represented by a solid graphical line. To create a SequenceFlow, [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html#Syncfusion_Blazor_Diagram_BpmnFlow_Flow) property of the [BpmnFlowShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html) should be set to [SequenceFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_SequenceFlow). The types of sequence are as follows:
 
-* SequenceFlow:Sequence flows represent the typical path between the two flow objects.
+* SequenceFlow: Sequence flows represent the typical path between the two flow objects.
 * ConditionalSequenceFlow: Conditional sequence flows are used to control the flow of a process based on the certain conditions.
-* DefaultSequenceFlow:Default sequence flows are represented by an arrow with a tic mark on one end.
+* DefaultSequenceFlow: Default sequence flows are represented by an arrow with a tic mark on one end.
 
 The following code example explains how to create a sequence flow.
 
@@ -119,15 +119,15 @@ The following table contains various representation of sequence flows.
 | ConditionalSequenceFlow | ![Conditional Sequence BPMN Shape](../images/Bpmn-ConditionalSequenceFlow.png) |
 | SequenceFlow | ![Normal Sequence BPMN Shape](../images/Bpmn-SequenceFlow.png) |
 
-N> The default value for the property `Sequence` is **Normal**.
+N> The default value for the property `Sequence` is **Normal.**
 
 ## Message
 
-`Message` flows are the two separately controlled processes communicate and collaborate with one another. An activity or event in one pool can initiate a message to the another pool. Message Flows are depicted as lines with an empty circle showing where the message originates and and empty arrowhead where the message terminates. To create a MessageFlow, the  [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html#Syncfusion_Blazor_Diagram_BpmnFlow_Flow) property of the [BpmnFlowShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html)  should be set to [MessageFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_MessageFlow). The types of message are as follows:
+`Message` flows are the two separately controlled processes communicate and collaborate with one another. An activity or event in one pool can initiate a message to the another pool. Message Flows are depicted as lines with an empty circle indicating where the message originates and an empty arrowhead where the message terminates. To create a MessageFlow, the [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html#Syncfusion_Blazor_Diagram_BpmnFlow_Flow) property of the [BpmnFlowShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html) should be set to [MessageFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_MessageFlow). The types of message are as follows:
 
-* InitiatingMessageFlow:An activity or event in one pool can initiate a message to another pool.
-* NonInitiatingMessageFlow:An activity or event in one pool can not initiate a message to another pool.
-* MessageFlow:A MessageFlow flow shows the flow of messages between two participants and is represented by line.
+* InitiatingMessageFlow: An activity or event in one pool can initiate a message to another pool.
+* NonInitiatingMessageFlow: An activity or event in one pool cannot initiate a message to another pool.
+* MessageFlow: A MessageFlow flow shows the flow of messages between two participants and is represented by line.
 
 The following code example explains how to define a message flow.
 
@@ -172,4 +172,4 @@ The following table contains various representation of message flows.
 | InitiatingMessageFlow | ![InitiatingMessage Message BPMN Shape](../images/Bpmn-NonInitiatingMessageFlow.png) |
 | NonInitiatingMessageFlow | ![NonInitiatingMessage Message BPMN Shape](../images/Bpmn-InitiatingMessageFlow.png) |
 
-N> The default value for the property `Flow` is **SequenceFlow**.
+N> The default value for the property `Flow` is **SequenceFlow.**

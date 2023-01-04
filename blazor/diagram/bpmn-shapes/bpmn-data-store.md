@@ -1,6 +1,6 @@
 ---
 layout: post
-title: BPMN Datasource in Blazor Diagram Component | Syncfusion
+title: BPMN Data Source in Blazor Diagram Component | Syncfusion
 description: Learn here all about how to create the BPMN DataStore in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
@@ -9,7 +9,7 @@ documentation: ug
 
 # BPMN DataStore in Blazor Diagram Component
 
-DataStore is used to store or access data associated with a business process. To create a dataStore, the node property [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shape.html) should be set as [BpmnDataStore](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnDataStore.html). The following code example explains how to create a datasource.
+DataStore is used to store or access data associated with a business process. To create a dataStore, the node property [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shape.html) should be set as [BpmnDataStore](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnDataStore.html). The following code example explains how to create a data source.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
