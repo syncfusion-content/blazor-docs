@@ -18,7 +18,8 @@ The template types of rating are as follows:
 
 ## Empty template
 
-You can customize the appearance of the **un-rated** rating items by using the [EmptyTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_EmptyTemplate) tag directive. You can use the `EmptyTemplate` tag directive to specify a custom layout for the unrated rating items, which can include any content you want.
+You can customize the appearance of the **unrated** rating items by using the [EmptyTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_EmptyTemplate) tag directive. You can use the `EmptyTemplate` tag directive to specify a custom layout for the unrated rating items, which can include any content you want. 
+If the `FullTemplate` is not defined, then the `EmptyTemplate` will be used as the default for both `rated` and `unrated` items. You can use custom styles to differentiate between the rated and unrated states of the items.
 
 ```cshtml
 
