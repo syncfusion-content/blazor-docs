@@ -27,7 +27,7 @@ To achieve better performance in the Scheduler when loading a large number of re
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 4, 1);
+    DateTime CurrentDate = new DateTime(2023, 4, 1);
     static EventData data = new EventData();
     public static List<ResourceData> ResourceDatasource = GenerateResourceData();
     public static List<EventData> AppointmentData = GenerateStaticEvents();
@@ -54,7 +54,7 @@ To achieve better performance in the Scheduler when loading a large number of re
 
     public static List<EventData> GenerateStaticEvents()
     {
-        DateTime date = new DateTime(2020, 4, 1);
+        DateTime date = new DateTime(2023, 4, 1);
         List<EventData> data = new List<EventData>(3600);
         var id = 1;
         for (var i = 0; i < 300; i++)
@@ -106,6 +106,8 @@ To achieve better performance in the Scheduler when loading a large number of re
     }
 }
 ```
+
+![Displaying Virtual Scrolling in Blazor Scheduler](images\blazor-scheduler-virtualscrolling.gif)
 
 ## Virtual scrolling with templates
 
