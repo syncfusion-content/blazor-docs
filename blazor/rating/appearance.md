@@ -9,7 +9,7 @@ documentation: ug
 
 # Appearance in Blazor Rating Component
 
-You can also customize the appearance of rating control.
+You can also customize the appearance of rating component.
 
 ## Items count
 
@@ -43,7 +43,7 @@ You can disable the Syncfusion Blazor Rating component by using the [Disabled](h
 
 ## Visible
 
-You can use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Visible) property of the Blazor Rating component to control the visibility of the component. When the `Visible` property is set to `true`, the rating component will be visible on the page. When it is set to `false`, the component will be hidden.
+You can use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Visible) property of the Blazor Rating component to component the visibility of the component. When the `Visible` property is set to `true`, the rating component will be visible on the page. When it is set to `false`, the component will be hidden.
 
 ```cshtml
 
@@ -75,7 +75,7 @@ You can customize the appearance of the rating component, such as by changing it
 
 ### Changing rating symbol border color
 
-You can change the rating item border color in Blazor Rating component, you can use the `CssClass` property and set the `text-stroke` CSS property of `.e-rating-icon` to your desired border color.
+You can change the rating icon border color in Blazor Rating component, you can use the `CssClass` property and set the `text-stroke` CSS property of `.e-rating-icon` to your desired border color.
 
 ```cshtml
 
@@ -95,16 +95,11 @@ You can change the rating item border color in Blazor Rating component, you can 
 
 ![Blazor Rating Component with rating symbol border color](images/blazor-rating-border-color.png)
 
-### Change rated symbol fill color 
+### Changing rated / un-rated symbol fill color 
 
-You can customize the rated fill color of the icons in the Rating control by using the `CssClass` property and setting the **first** color stop of the `linear-gradient` to define the rated fill color using the `background` CSS property of `.e-rating-icon`.
+You can use `CssClass` property to customize the rated / un-rated fill color of the icons, by set the **first** color stop of the `linear-gradient` to define the rated fill color, and the **second** color stop to define the un-rated fill color using the `background` CSS property of `.e-rating-icon`. 
 
-
-### Change un-rated symbol fill color
-
-You can customize the un-rated fill color of the icons in the Rating control by using the `CssClass` property and setting the **second** color stop of the `linear-gradient` to define the rated fill color using the `background` CSS property of `.e-rating-icon`.
-
-Here is an example of how you can use above method to customize the rated and unrated fill color of the icons in the Rating control:
+Here is an example of how you can use above method to customize the rated and unrated fill color of the icons in the Rating component:
 
 ```cshtml
 
@@ -115,7 +110,7 @@ Here is an example of how you can use above method to customize the rated and un
     .e-rating-container.custom-font .e-rating-item-list:hover .e-rating-item-container .e-rating-icon,
     .e-rating-container.custom-font .e-rating-item-container .e-rating-icon {
         /*To change rated symbol fill color and un-rated symbol fill color*/
-        background: linear-gradient(to right, #FFE814 var(--rating-value), #d8d7d4 var(--rating-value));
+        background: linear-gradient(to right, #ffe814 var(--rating-value), #d8d7d4 var(--rating-value));
         background-clip: text;
         -webkit-background-clip: text;
     }
@@ -124,11 +119,11 @@ Here is an example of how you can use above method to customize the rated and un
 
 ```
 
-This will customize the rated and un-rated fill color of the icons in the Rating control to the specified colors.
+This will customize the rated fill color to #ffe814 and un-rated fill color to #d8d7d4.
 
 ![Blazor Rating Component with custom fill color for icons](images/blazor-rating-fill-color.png)
 
-## Change icon using CssClass
+## Changing icon using CssClass
 
 You can change the rating item icon in Blazor Rating component, you can use the `CssClass` property and set the `content` CSS property of `.e-icons.e-star-filled:before` to your desired font icon.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Labels in Blazor Rating Component
 
-You can use the [ShowLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ShowLabel) property to display a label that shows the current value of the rating. When the `ShowLabel` property is set to `true`, a label will be displayed that shows the current value of the rating.
+You can use the [ShowLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ShowLabel) property to display a label that shows the current value of the rating. When the `ShowLabel` property is set to `true`, a label will be displayed.
 
 ```cshtml
 
@@ -23,7 +23,7 @@ You can use the [ShowLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ## Label position
 
-The Rating control allows you to place the label on the top, bottom, left, or right side of the rating using the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_LabelPosition) property. 
+The Rating component allows you to place the label on the top, bottom, left, or right side of the rating using the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_LabelPosition) property. 
 
 The following label positions are supported:
 

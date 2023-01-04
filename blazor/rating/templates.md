@@ -18,8 +18,8 @@ The template types of rating are as follows:
 
 ## Empty template
 
-You can customize the appearance of the **unrated** rating items by using the [EmptyTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_EmptyTemplate) tag directive. You can use the `EmptyTemplate` tag directive to specify a custom layout for the unrated rating items, which can include any content you want. 
-If the `FullTemplate` is not defined, then the `EmptyTemplate` will be used as the default for both `rated` and `unrated` items. You can use custom styles to differentiate between the rated and unrated states of the items.
+To customize the appearance of **unrated** items in the Syncfusion Blazor rating component, you can use the [EmptyTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_EmptyTemplate) tag directive. This directive allows you to specify a custom layout for the unrated items, which can include any content you desire.
+If the `FullTemplate` is not defined, the `EmptyTemplate` will be used as the default for both `rated` and `unrated` items. You can apply custom styles to differentiate between the rated and unrated states of the items.
 
 ```cshtml
 
@@ -70,7 +70,7 @@ If the `FullTemplate` is not defined, then the `EmptyTemplate` will be used as t
 
 ## Full template
 
-You can customize the appearance of the **rated** rating items by using the [FullTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_FullTemplate) tag directive. You can use the `FullTemplate` tag directive to specify a custom layout for the rated rating items, which can include any content you want.
+To customize the appearance of **rated** items in the Syncfusion Blazor rating component, you can use the [FullTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_FullTemplate) tag directive. This directive allows you to specify a custom layout for the rated items, which can include any content you desire.
 
 ```cshtml
 
@@ -130,7 +130,7 @@ You can customize the appearance of the **rated** rating items by using the [Ful
 
 ## Emoji icon
 
-You can also use Emoji icon as a rating items by using the `EmptyTemplate` tag directive. Which can be any Emoji icons you want.
+You can use emojis of your choice as rating symbol by specifying them as template content within the `EmptyTemplate` tag directive.
 
 ```cshtml
 
@@ -175,7 +175,7 @@ You can also use Emoji icon as a rating items by using the `EmptyTemplate` tag d
 
 ## SVG icon
 
-You can also use SVG icon as a rating items by using the `EmptyTemplate` and `FullTemplate` tag directives. Which can be any SVG icons you want.
+You can use SVG icons of your choice as rating symbol by specifying them as template content within the `EmptyTemplate` and `FullTemplate` tag directives.
 
 ```cshtml
 
@@ -242,7 +242,7 @@ You can also use SVG icon as a rating items by using the `EmptyTemplate` and `Fu
 
 ## PNG image
 
-You can also use PNG image as a rating items by using the `EmptyTemplate` and `FullTemplate` tag directives. Which can be any PNG icons you want.
+You can use PNG images of your choice as rating symbol by specifying them as template content within the `EmptyTemplate` and `FullTemplate` tag directives.
 
 ```cshtml
 

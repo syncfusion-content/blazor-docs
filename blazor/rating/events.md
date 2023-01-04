@@ -9,11 +9,11 @@ documentation: ug
 
 # Events in Rating Component
 
-This section describes the rating events that will be triggered when appropriate actions are performed. The following events are available in the rating Component.
+This section describes the rating events that will be triggered when appropriate actions are performed. The following events are available in the rating component.
 
 ## Created
 
-The rating Component triggers the `Created` event when the rendering of the rating component is complete. This event can be used to perform custom actions after the rating has been fully rendered.
+The rating component triggers the `Created` event when the rendering of the rating component is completed.
 
 ```cshtml
 
@@ -32,7 +32,7 @@ The rating Component triggers the `Created` event when the rendering of the rati
 
 ## ValueChanged
 
-The rating Component triggers the [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ValueChanged) event when the value of the rating is changed. This event can be used to perform custom actions when the value of the rating is changed.
+The rating component triggers the [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ValueChanged) event when the value of the rating is changed.
 
 ```cshtml
 
@@ -51,7 +51,7 @@ The rating Component triggers the [ValueChanged](https://help.syncfusion.com/cr/
 
 ## OnItemHover
 
-The rating Component triggers the `OnItemHover` event when the rating item is hovered. This event can be used to perform custom actions when the rating item is hovered.
+The rating component triggers the `OnItemHover` event when the rating item is hovered.
 
 ```cshtml
 

@@ -25,7 +25,7 @@ The rating component is interactive with below keyboard shortcuts.
 
 ## ARIA attributes
 
-The following ARIA attributes are used in rating Component based on its state.
+The following ARIA attributes are used in rating component based on its state.
 
 | Properties | Functionality |
 | ------------ | ----------------------- |
