@@ -11,15 +11,15 @@ documentation: ug
 
 The Blazor Rating component allows you to customize the appearance of the rating items using templates. You can use templates to specify a custom layout for the rating items, which can include any content you want. This allows you to create a more customized and interactive rating experience for the user.
 
-The template types of rating are as follows:
+The rating component supports below templates for item customization.
 
-* Empty template
-* Full template
+* [EmptyTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_EmptyTemplate)
+* [FullTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_FullTemplate)
 
 ## Empty (unrated) symbol template
 
-To customize the appearance of **unrated** items, you can use the [EmptyTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_EmptyTemplate) tag directive. It allows you to specify the desired custom content for the unrated items.
-The `RatingItemContext` is passed as a `context` to the template, allowing it to access information about the un-rated item, such as its Value and Index.
+To customize the appearance of **unrated** items, you can use the `EmptyTemplate` tag directive. It allows you to specify the desired custom content for the unrated items.
+The [RatingItemContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.RatingItemContext.html) is passed as a `context` to the template, allowing it to access information about the un-rated item, such as its Value and Index.
 If the `FullTemplate` is not defined, the `EmptyTemplate` will be used as the default for both `rated` and `unrated` items. You can apply custom styles to differentiate between the rated and unrated states of the items.
 
 ```cshtml
@@ -71,8 +71,8 @@ If the `FullTemplate` is not defined, the `EmptyTemplate` will be used as the de
 
 ## Full (rated) symbol template
 
-To customize the appearance of **rated** items in the Syncfusion Blazor rating component, you can use the [FullTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_FullTemplate) tag directive. This directive allows you to specify a custom layout for the rated items, which can include any content you desire.
-The `RatingItemContext` is passed as a `context` to the template, allowing it to access information about the rated item, such as its Value and Index.
+To customize the appearance of **rated** items in the Syncfusion Blazor rating component, you can use the `FullTemplate` tag directive. This directive allows you to specify a custom layout for the rated items, which can include any content you desire.
+The [RatingItemContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.RatingItemContext.html) is passed as a `context` to the template, allowing it to access information about the rated item, such as its Value and Index.
 
 ```cshtml
 

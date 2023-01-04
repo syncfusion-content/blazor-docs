@@ -97,7 +97,7 @@ You can change the rating icon border color in Blazor Rating component, you can 
 
 ### Changing rated / un-rated symbol fill color 
 
-You can customize the fill colors of rated and un-rated icons in the Rating control using the `CssClass` property and the `linear-gradient` color-stop in the `background` CSS property of `.e-rating-icon`. The **first** colo-stop defines the rated fill color and the **second** defines the un-rated fill color.
+You can customize the fill colors of rated and un-rated icons in the Rating control using the `CssClass` property and the `linear-gradient` color-stops in the `background` CSS property of `.e-rating-icon`. The **first** color-stop defines the rated fill color and the **second** defines the un-rated fill color.
 
 Here is an example of how you can use above method to customize the rated and unrated fill color of the icons in the Rating component:
 
@@ -134,8 +134,8 @@ You can change the space between the rating items in Blazor Rating component, by
 <style>
 
     .e-rating-container.custom-font .e-rating-item-container {
-        /*To change the size between rating items*/
-        padding:7px;
+        /*To change size between items*/
+        margin:0px 7px;
     }   
 
 </style>

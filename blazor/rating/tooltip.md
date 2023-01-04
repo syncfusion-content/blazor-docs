@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in Blazor Rating Component
 
-The Blazor rating component supports the addition of tooltips to show additional information in rating items by setting the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ShowTooltip) property to true. If enabled, the tooltip appears when the user hovers over a rating item.
+The Blazor rating component supports tooltip to show additional information in rating items by setting the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ShowTooltip) property. If enabled, the tooltip appears when the user hovers over a rating item.
 
 ```cshtml
 
