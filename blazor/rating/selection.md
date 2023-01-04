@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection in Blazor Rating Component
 
-All the items up to and including the selected item are considered to be in the selected state. This allows you to provide a visual indication of the current rating value to the user.
+The Blazor rating component allows users to select a rating value by clicking on one of the rating items. By default, all items up to and including the selected icon will be in the rated state, providing a visual indication of the current rating value.
 
 ```cshtml
 

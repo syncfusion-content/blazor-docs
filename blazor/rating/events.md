@@ -13,7 +13,7 @@ This section describes the rating events that will be triggered when appropriate
 
 ## Created
 
-The rating component triggers the `Created` event when the rendering of the rating component is completed.
+The rating component triggers the[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Created) event when the rendering of the rating component is completed.
 
 ```cshtml
 
@@ -32,7 +32,7 @@ The rating component triggers the `Created` event when the rendering of the rati
 
 ## ValueChanged
 
-The rating component triggers the [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ValueChanged) event when the value of the rating is changed.
+The rating component triggers the [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ValueChanged) event when the value of the rating is changed. The new value is passed as the event argument.
 
 ```cshtml
 
@@ -41,7 +41,7 @@ The rating component triggers the [ValueChanged](https://help.syncfusion.com/cr/
 <SfRating ValueChanged="ValueChanged"></SfRating>
 
 @code{
-    public void ValueChanged()
+    public void ValueChanged(double args)
     {
         // Here, you can customize your code.
     }
@@ -51,7 +51,7 @@ The rating component triggers the [ValueChanged](https://help.syncfusion.com/cr/
 
 ## OnItemHover
 
-The rating component triggers the `OnItemHover` event when the rating item is hovered.
+The rating component triggers the [OnItemHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_OnItemHover) event when the rating item is hovered. The `RatingHoverEventArgs` passed as an event argument provides the details of the hovered item.
 
 ```cshtml
 
@@ -60,7 +60,7 @@ The rating component triggers the `OnItemHover` event when the rating item is ho
 <SfRating OnItemHover="OnItemHovered"></SfRating>
 
 @code{
-    public void OnItemHovered()
+    public void OnItemHovered(RatingHoverEventArgs args)
     {
         // Here, you can customize your code.
     }

@@ -97,7 +97,7 @@ You can change the rating icon border color in Blazor Rating component, you can 
 
 ### Changing rated / un-rated symbol fill color 
 
-You can use `CssClass` property to customize the rated / un-rated fill color of the icons, by set the **first** color stop of the `linear-gradient` to define the rated fill color, and the **second** color stop to define the un-rated fill color using the `background` CSS property of `.e-rating-icon`. 
+You can customize the fill colors of rated and un-rated icons in the Rating control using the `CssClass` property and the `linear-gradient` color-stop in the `background` CSS property of `.e-rating-icon`. The **first** colo-stop defines the rated fill color and the **second** defines the un-rated fill color.
 
 Here is an example of how you can use above method to customize the rated and unrated fill color of the icons in the Rating component:
 
@@ -122,6 +122,27 @@ Here is an example of how you can use above method to customize the rated and un
 This will customize the rated fill color to #ffe814 and un-rated fill color to #d8d7d4.
 
 ![Blazor Rating Component with custom fill color for icons](images/blazor-rating-fill-color.png)
+
+### Changing the item spacing
+
+You can change the space between the rating items in Blazor Rating component, by using the `CssClass` property and setting the `padding` CSS property of `.e-rating-item-container` to your desired size. 
+
+```cshtml
+
+<SfRating Value="3" CssClass="custom-font"></SfRating>
+
+<style>
+
+    .e-rating-container.custom-font .e-rating-item-container {
+        /*To change the size between rating items*/
+        padding:7px;
+    }   
+
+</style>
+
+```
+
+![Blazor Rating Component with custom space between rating items](images/blazor-rating-custom-space.png)
 
 ## Changing icon using CssClass
 

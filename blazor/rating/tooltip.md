@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in Blazor Rating Component
 
-The Blazor Rating component supports tooltips to provide additional information about the rating by using the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ShowTooltip) property. When the `ShowTooltip` property is set to `true`, a tooltip will be displayed when the user hovers over a rating item. The tooltip can contain any information you want to provide about the rating, such as the rating value or a description of the rating.
+The Blazor rating component supports the addition of tooltips to show additional information in rating items by setting the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ShowTooltip) property to true. If enabled, the tooltip appears when the user hovers over a rating item.
 
 ```cshtml
 
@@ -23,7 +23,7 @@ The Blazor Rating component supports tooltips to provide additional information 
 
 ## Tooltip template
 
-You can use the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_TooltipTemplate) tag directive to specify a custom template for the `Tooltip` of the rating. You can provide more expressive or detailed information about the rating in the tooltip.
+You can use the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_TooltipTemplate) tag directive to specify a custom template for the `Tooltip` of the rating. The current value of the rating will be passed as the `context` when building the content of the tooltip. This allows you to include dynamic information about the rating in the template.
 
 ```cshtml
 
@@ -41,7 +41,7 @@ You can use the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ## Tooltip customization
 
-You can customize the appearance of the tooltips using the `CssClass` property of the Blazor Rating component to specify custom CSS class names that define user-defined styles and themes to be applied to the tooltip element.
+You can customize the appearance of the tooltips using the `CssClass` property of the Blazor Rating component and by defining the custom styles for tooltip elements like the below example.
 
 N> You can find more information about customizing the appearance of the tooltip in the [Tooltip Customization](https://blazor.syncfusion.com/documentation/tooltip/style) documentation.
 

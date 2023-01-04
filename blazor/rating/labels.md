@@ -37,13 +37,16 @@ The following label positions are supported:
 @using Syncfusion.Blazor.Inputs
 
 <label>Left Label Position</label><br/>
-<SfRating Value=3 ShowLabel=true LabelPosition="LabelPosition.Left"></SfRating><br/>
+<SfRating Value=3 ShowLabel=true LabelPosition="LabelPosition.Left"></SfRating>
+
 <label>Right Label Position</label><br />
-<SfRating Value=3 ShowLabel=true></SfRating><br/>
+<SfRating Value=3 ShowLabel=true></SfRating>
+
 <label>Top Label Position </label><br />
-<SfRating Value=3 ShowLabel=true LabelPosition="LabelPosition.Top"></SfRating><br/>
+<SfRating Value=3 ShowLabel=true LabelPosition="LabelPosition.Top"></SfRating>
+
 <label>Bottom Label Position</label><br />
-<SfRating Value=3 ShowLabel=true LabelPosition="LabelPosition.Bottom"></SfRating><br/>
+<SfRating Value=3 ShowLabel=true LabelPosition="LabelPosition.Bottom"></SfRating>
 
 ```
 

@@ -7,27 +7,30 @@ control: Rating
 documentation: ug
 ---
 
-# Precision modes in Blazor Rating Component
+# Precision Modes in Blazor Rating Component
 
 You can use the [Precision](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Precision) property of the Blazor Rating component to provide ratings with varying levels of precision.
 
 The precision types of Rating are as follows:
 
-* Full : The rating value is increased in whole number increments.
-* Half : The rating value is increased in increments of 0.5 (half). 
-* Quarter : The rating value is increased in increments of 0.25 (quarter). 
-* Exact : The rating value is increased in increments of 0.1. 
+* Full : The rating is increased in whole number increments. For example, if the current rating is 3, the next possible ratings are 4, 5, and so on.
+* Half : The rating is increased in increments of 0.5 (half). For example, if the current rating is 3.5, the next possible ratings are 4, 4.5, 5, and so on. 
+* Quarter : The rating is increased in increments of 0.25 (quarter). For example, if the current rating is 3.75, the next possible ratings are 4, 4.25, 4.5, and so on. 
+* Exact : The rating is increased in increments of 0.1. For example, if the current rating is 3.9, the next possible ratings are 4, 4.1, 4.2, and so on.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Inputs
 
 <label>Full Precision</label><br/>
-<SfRating Value="3" Precision="PrecisionType.Full"></SfRating><br/>
+<SfRating Value="3" Precision="PrecisionType.Full"></SfRating>
+
 <label>Half Precision</label><br/>
-<SfRating Value="2.5" Precision="PrecisionType.Half"></SfRating><br/>
+<SfRating Value="2.5" Precision="PrecisionType.Half"></SfRating>
+
 <label>Quarter Precision</label><br/>
-<SfRating Value="3.75" Precision="PrecisionType.Quarter"></SfRating><br/>
+<SfRating Value="3.75" Precision="PrecisionType.Quarter"></SfRating>
+
 <label>Exact Precision</label><br/>
 <SfRating Value="2.3" Precision="PrecisionType.Exact"></SfRating>
 
