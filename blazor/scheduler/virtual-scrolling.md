@@ -145,7 +145,7 @@ In Blazor Scheduler, templates can be applied when [`AllowVirtualScrolling`](htt
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 4, 1);
+    DateTime CurrentDate = new DateTime(2023, 4, 1);
     static EventData data = new EventData();
     public static List<ResourceData> ResourceDatasource = GenerateResourceData();
     public static List<EventData> AppointmentData = GenerateStaticEvents();
@@ -175,7 +175,7 @@ In Blazor Scheduler, templates can be applied when [`AllowVirtualScrolling`](htt
     }
     public static List<EventData> GenerateStaticEvents()
     {
-        DateTime date = new DateTime(2020, 4, 1);
+        DateTime date = new DateTime(2023, 4, 1);
         List<EventData> data = new List<EventData>(3600);
         var id = 1;
         for (var i = 0; i < 300; i++)
