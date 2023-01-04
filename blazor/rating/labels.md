@@ -23,7 +23,9 @@ You can use the [ShowLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ## Label position
 
-The Rating control allows you to place the label on the top, bottom, left, or right side of the rating using the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_LabelPosition) property. The following label positions are supported:
+The Rating control allows you to place the label on the top, bottom, left, or right side of the rating using the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_LabelPosition) property. 
+
+The following label positions are supported:
 
 * Top: The label is placed on the top of the rating.
 * Bottom: The label is placed on the bottom of the rating.
@@ -50,7 +52,7 @@ The Rating control allows you to place the label on the top, bottom, left, or ri
 
 ## Label template
 
-You can use the [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_LabelTemplate) tag directive to set a template content for the `Label`. The current value of rating passed as `context` to build the content.
+You can use the [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_LabelTemplate) tag directive to specify a custom template for the `Label` of the rating. The current value of the rating will be passed as the `context` when building the content of the label. This allows you to include dynamic information about the rating in the template.
 
 ```cshtml
 

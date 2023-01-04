@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Rating Component | Syncfusion
-description: Checkout and learn here all about accessibility and keyboard interaction with Syncfusion Blazor Rating component in Blazor Server App and Blazor WebAssembly App.
+description: Checkout and learn here all about accessibility and keyboard interaction in Syncfusion Rating component and much more.
 platform: Blazor
 control: Rating
 documentation: ug

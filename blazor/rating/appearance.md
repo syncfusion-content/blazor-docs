@@ -86,7 +86,7 @@ You can change the rating item border color in Blazor Rating component, you can 
     .e-rating-container.custom-font .e-rating-item-list:hover .e-rating-item-container .e-rating-icon,
     .e-rating-container.custom-font .e-rating-item-container .e-rating-icon {
         /*To change rating symbol border color*/
-        -webkit-text-stroke: 2px #FFA012;        
+        -webkit-text-stroke: 2px #ae9e9d;        
     }
 
 </style>
