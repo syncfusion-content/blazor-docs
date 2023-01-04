@@ -570,7 +570,7 @@ else
 }
 ```
 
-Here, the `PopulationDensity.json` file contains following data.
+Here, the `HeatMapData.json` file contains following data.
 
 ```json
 [
