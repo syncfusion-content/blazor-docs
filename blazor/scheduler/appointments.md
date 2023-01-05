@@ -106,10 +106,10 @@ The following example depicts how to create a recurring event on Scheduler with 
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 9);
+    DateTime CurrentDate = new DateTime(2023, 1, 9);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 6, 9, 30, 0) , EndTime = new DateTime(2020, 1, 6, 11, 0, 0),
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 1, 9, 9, 30, 0) , EndTime = new DateTime(2023, 1, 9, 11, 0, 0),
         RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5" }
     };
     public class AppointmentData
@@ -125,6 +125,8 @@ The following example depicts how to create a recurring event on Scheduler with 
     }
 }
 ```
+
+![Recurring Events in Blazor Scheduler](images/blazor-scheduler-appointments-recurringevents.png)
 
 ### Adding exceptions
 
@@ -147,11 +149,12 @@ For example, 7th January 2020 can be represented as 20200107. Also, the time par
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 6);
+    DateTime CurrentDate = new DateTime(2023, 1, 23);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 6, 9, 30, 0) , EndTime = new DateTime(2020, 1, 6, 11, 0, 0),
-        RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5", RecurrenceException = "20200107T040000Z,20200109T040000Z" }
+        new AppointmentData { Id = 1, Subject = "Scrum Meeting", StartTime = new DateTime(2023, 1, 23, 9, 30, 0) , EndTime = new DateTime(2023, 1, 23, 11, 0, 0),
+        RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5", RecurrenceException = "20230125T040000Z" },
+        new AppointmentData { Id = 2, Subject = "Scrum Meeting Rescheduled", StartTime = new DateTime(2023, 1, 25, 10, 30, 0) , EndTime = new DateTime(2023, 1, 25, 12, 0, 0), RecurrenceID = 1 }
     };
     public class AppointmentData
     {
@@ -166,6 +169,8 @@ For example, 7th January 2020 can be represented as 20200107. Also, the time par
     }
 }
 ```
+
+![Recurrence Exception in Blazor Scheduler](images/blazor-scheduler-appointments-recurrenceException.png)
 
 ### Editing an occurrence from a series
 
@@ -188,12 +193,12 @@ In this example, a recurring instance that displays on the date 30th January 202
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2023, 1, 23);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Scrum Meeting", StartTime = new DateTime(2020, 1, 28, 9, 30, 0) , EndTime = new DateTime(2020, 1, 28, 11, 0, 0),
-        RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5", RecurrenceException = "20200130T040000Z" },
-        new AppointmentData { Id = 2, Subject = "Scrum Meeting Rescheduled", StartTime = new DateTime(2020, 1, 30, 10, 30, 0) , EndTime = new DateTime(2020, 1, 30, 12, 0, 0), RecurrenceID = 1 }
+        new AppointmentData { Id = 1, Subject = "Scrum Meeting", StartTime = new DateTime(2023, 1, 23, 9, 30, 0) , EndTime = new DateTime(2023, 1, 23, 11, 0, 0),
+        RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5", RecurrenceException = "20230125T040000Z" },
+        new AppointmentData { Id = 2, Subject = "Scrum Meeting Rescheduled", StartTime = new DateTime(2023, 1, 25, 10, 30, 0) , EndTime = new DateTime(2023, 1, 25, 12, 0, 0), RecurrenceID = 1 }
     };
     public class AppointmentData
     {
@@ -208,6 +213,8 @@ In this example, a recurring instance that displays on the date 30th January 202
     }
 }
 ```
+
+![Editing an occurrence in Blazor Scheduler](images/blazor-scheduler-appointments-editOccurrence.png)
 
 ### Edit/Delete following recurrence events
 
@@ -230,10 +237,10 @@ N>To edit/delete following recurrence events into the scheduler, set `AllowEditF
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 3, 10);
+    DateTime CurrentDate = new DateTime(2023, 3, 6);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 9, 9, 30, 0) , EndTime = new DateTime(2020, 3, 9, 11, 0, 0), RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5" }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 3, 6, 9, 30, 0) , EndTime = new DateTime(2023, 3, 6, 11, 0, 0), RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5" }
     };
     public class AppointmentData
     {
@@ -398,10 +405,10 @@ When the fields of event instances has the default mapping name, it is not manda
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 10);
+    DateTime CurrentDate = new DateTime(2023, 1, 10);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { TravelId = 1, TravelSummary = "Paris", DepartureTime = new DateTime(2020, 1, 10, 10, 0, 0) , ArrivalTime = new DateTime(2020, 1, 10, 12, 30, 0),
+        new AppointmentData { TravelId = 1, TravelSummary = "Paris", DepartureTime = new DateTime(2023, 1, 10, 10, 0, 0) , ArrivalTime = new DateTime(2023, 1, 10, 12, 30, 0),
         Source = "London", Comments = "Summer vacation planned for outstation.", Origin= "Asia/Yekaterinburg", Destination= "Asia/Yekaterinburg" }
     };
     public class AppointmentData
@@ -418,6 +425,8 @@ When the fields of event instances has the default mapping name, it is not manda
     }
 }
 ```
+
+![Binding Different Field Names in Blazor Scheduler](images/blazor-scheduler-appointments-eventFields.png)
 
 N> The mapper field `Id` is of string type and has no additional validation options, whereas all other fields has additional options.
 
@@ -543,9 +552,9 @@ By default, the scheduler will render the overlapping events based on the start 
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 2, 14);
+    DateTime CurrentDate = new DateTime(2023, 2, 13);
     View SelectedView = View.Week;
-    DataSource = new List<AppointmentSortData>
+    List<AppointmentSortData> DataSource = new List<AppointmentSortData>
     {
         new AppointmentSortData { Id = 1, Subject = "Rank A", RankId="A", StartTime = new DateTime(2020, 2, 13, 10, 0, 0) , EndTime = new DateTime(2020, 2, 13, 12, 0, 0) },
         new AppointmentSortData { Id = 2, Subject = "Rank B", RankId="B", StartTime = new DateTime(2020, 2, 13, 7, 0, 0) , EndTime = new DateTime(2020, 2, 13, 15, 0, 0) },
@@ -1344,10 +1353,10 @@ The following code example customizes the appointment.
     </ScheduleViews>
 </SfSchedule>
 @code {
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2023, 1, 31);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0) }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 1, 31, 9, 30, 0) , EndTime = new DateTime(2023, 1, 31, 11, 0, 0) }
     };
 
     public class AppointmentData
@@ -1365,6 +1374,8 @@ The following code example customizes the appointment.
     }
 }
 ```
+
+![Event Template in Blazor Scheduler](images/blazor-scheduler-appointments-template.png)
 
 N> All the built-in fields that are mapped to the appropriate field properties within the `ScheduleEventSettings`, as well as custom mapped fields from the Scheduler dataSource can be accessed within the template code.
 
@@ -1387,7 +1398,7 @@ In the following code example, the custom class has been added to events using [
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 @code {
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2023, 1, 31);
     public List<string> CustomClass = new List<string>()  { "custom-class" } ;
     public void OnEventRendered(EventRenderedArgs<AppointmentData> args)
     {
@@ -1395,7 +1406,7 @@ In the following code example, the custom class has been added to events using [
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData{ Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0) }
+        new AppointmentData{ Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 1, 31, 9, 30, 0) , EndTime = new DateTime(2023, 1, 31, 11, 0, 0) }
     };
 
     public class AppointmentData
@@ -1421,6 +1432,8 @@ In the following code example, the custom class has been added to events using [
 </style>
 ```
 
+![Using EventRendered event in Blazor Scheduler](images/blazor-scheduler-appointments-eventRendered.png)
+
 Also, we can customize the events by adding or modifying its element attribute using [Attributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.EventRenderedArgs-1.html#Syncfusion_Blazor_Schedule_EventRenderedArgs_1_Attributes). In the following code example, event attributes have been modified through the `Attributes` to apply color to the events.
 
 ```cshtml
@@ -1436,7 +1449,7 @@ Also, we can customize the events by adding or modifying its element attribute u
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 @code {
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2023, 1, 31);
     public List<string> CustomClass = new List<string>() { "custom-class" };
     public void OnEventRendered(EventRenderedArgs<AppointmentData> args)
     {
@@ -1446,7 +1459,7 @@ Also, we can customize the events by adding or modifying its element attribute u
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData{ Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0) }
+        new AppointmentData{ Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 1, 31, 9, 30, 0) , EndTime = new DateTime(2023, 1, 31, 11, 0, 0) }
     };
 
     public class AppointmentData
@@ -1465,6 +1478,8 @@ Also, we can customize the events by adding or modifying its element attribute u
 }
 ```
 
+![Attributes to apply color in Blazor Scheduler](images/blazor-scheduler-appointments-eventRendered-attribute.png)
+
 ### Using CssClass
 
 The customization of events can also be achieved using the built-in field [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CssClass) in which you can pass the class name to be applied to specific appointments. In the following example, the background of appointments has been changed.
@@ -1482,11 +1497,11 @@ The customization of events can also be achieved using the built-in field [CssCl
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 @code {
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2023, 1, 23);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData{ Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), CssClass = "progress" },
-        new AppointmentData{ Id = 2, Subject = "Meeting-postponed", StartTime = new DateTime(2020, 1, 28, 9, 30, 0) , EndTime = new DateTime(2020, 1, 28, 11, 0, 0), CssClass = "delayed" }
+        new AppointmentData{ Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 1, 27, 9, 30, 0) , EndTime = new DateTime(2023, 1, 27, 11, 0, 0), CssClass = "progress" },
+        new AppointmentData{ Id = 2, Subject = "Meeting-postponed", StartTime = new DateTime(2023, 1, 23, 9, 30, 0) , EndTime = new DateTime(2023, 1, 23, 11, 0, 0), CssClass = "delayed" }
     };
 
     public class AppointmentData
@@ -1519,6 +1534,8 @@ The customization of events can also be achieved using the built-in field [CssCl
 </style>
 ```
 
+![Using CssClass in Blazor Scheduler](images/blazor-scheduler-appointments-cssClass.png)
+
 Also, the customization of events can be achieved using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CssClass) property of the Scheduler. In the following example, the background of appointments has been changed using the CssClass.
 
 ```cshtml
@@ -1536,10 +1553,10 @@ Also, the customization of events can be achieved using [CssClass](https://help.
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2023, 1, 31);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0) }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 1, 31, 9, 30, 0) , EndTime = new DateTime(2023, 1, 31, 11, 0, 0) }
     };
 
     public class AppointmentData
@@ -1566,6 +1583,8 @@ Also, the customization of events can be achieved using [CssClass](https://help.
 </style>
 ```
 
+![Using CssClass Property in Blazor Scheduler](images/blazor-scheduler-appointments-cssClass-property.png)
+
 N> The events can't be customized using the styles that are `height`, `width`, `top`, `left`, `right`, and `display`.
 
 ## Block Date and Time
@@ -1587,10 +1606,10 @@ It is possible to block a set of dates or a particular time ranges on the Schedu
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2023, 1, 31);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0),
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 1, 31, 9, 30, 0) , EndTime = new DateTime(2023, 1, 31, 11, 0, 0),
         IsBlock = true }
     };
     public class AppointmentData
@@ -1610,6 +1629,8 @@ It is possible to block a set of dates or a particular time ranges on the Schedu
 }
 ```
 
+![Block Date and Time in Blazor Scheduler](images/blazor-scheduler-appointments-blockDateandTime.png)
+
 Block events can also be defined to repeat on several days as shown in the following code example.
 
 ```cshtml
@@ -1627,10 +1648,10 @@ Block events can also be defined to repeat on several days as shown in the follo
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2023, 1, 31);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0),
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 1, 31, 9, 30, 0) , EndTime = new DateTime(2023, 1, 31, 11, 0, 0),
         IsBlock = true, RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5" }
     };
     public class AppointmentData
@@ -1649,6 +1670,8 @@ Block events can also be defined to repeat on several days as shown in the follo
     }
 }
 ```
+
+![Block Date and Time for multiple days in Blazor Scheduler](images/blazor-scheduler-appointments-blockDateandTime-multipleDays.png)
 
 ## Readonly
 
@@ -1669,10 +1692,10 @@ An interaction with the appointments of Scheduler can be enabled/disabled using 
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2023, 1, 31);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0) }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 1, 31, 9, 30, 0) , EndTime = new DateTime(2023, 1, 31, 11, 0, 0) }
     };
     public class AppointmentData
     {
@@ -1689,6 +1712,8 @@ An interaction with the appointments of Scheduler can be enabled/disabled using 
     }
 }
 ```
+
+![Readonly Events in Blazor Scheduler](images/blazor-scheduler-appointments-readOnly.png)
 
 ## Make specific events readonly
 
@@ -1806,7 +1831,7 @@ In the following code example, the appointments beyond current date of the sched
 </SfSchedule>
 
 @code{
-    public DateTime SelectedDate = new DateTime(2020,1,10);
+    public DateTime SelectedDate = new DateTime(2023, 1, 10);
     public List<string> CustomClass = new List<string>() { "e-past-app" };
     public void OnEventRendered(EventRenderedArgs<AppointmentData> args)
     {
@@ -1817,8 +1842,8 @@ In the following code example, the appointments beyond current date of the sched
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 10, 9, 30, 0) , EndTime = new DateTime(2020, 1, 10, 11, 0, 0) },
-        new AppointmentData { Id = 1, Subject = "Conference", StartTime = new DateTime(2020, 1, 9, 11, 30, 0) , EndTime = new DateTime(2020, 1, 9, 13, 0, 0) }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 1, 10, 9, 30, 0) , EndTime = new DateTime(2023, 1, 10, 11, 0, 0) },
+        new AppointmentData { Id = 1, Subject = "Conference", StartTime = new DateTime(2023, 1, 9, 11, 30, 0) , EndTime = new DateTime(2023, 1, 9, 13, 0, 0) }
     };
     public class AppointmentData
     {
@@ -1835,6 +1860,8 @@ In the following code example, the appointments beyond current date of the sched
 </style>
 ```
 
+![Differentiate the past time events in Blazor Scheduler](images/blazor-scheduler-appointments-pastTimeEvents.png)
+
 ## Appointments occupying entire cell
 
 The Scheduler allows the event to occupy the full height of the cell without its header part by setting `true` for [EnableMaxHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_EnableMaxHeight) Property.
@@ -1844,7 +1871,7 @@ More indicator can be shown if more than one appointment is available in a same 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 11))" CurrentView="View.Month">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" SelectedDate="@(new DateTime(2023, 3, 8))" CurrentView="View.Month">
     <ScheduleViews>
         <ScheduleView Option="View.Week"></ScheduleView>
         <ScheduleView Option="View.Month"></ScheduleView>
@@ -1857,8 +1884,8 @@ More indicator can be shown if more than one appointment is available in a same 
 @code{
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 11, 9, 30, 0) , EndTime = new DateTime(2020, 3, 11, 11, 0, 0) },
-        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2020, 3, 11, 9, 30, 0) , EndTime = new DateTime(2020, 3, 11, 11, 0, 0) }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 3, 8, 9, 30, 0) , EndTime = new DateTime(2023, 3, 8, 11, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2023, 3, 8, 9, 30, 0) , EndTime = new DateTime(2023, 3, 8, 11, 0, 0) }
     };
     public class AppointmentData
     {
@@ -1875,6 +1902,8 @@ More indicator can be shown if more than one appointment is available in a same 
     }
 }
 ```
+
+![Appointments occupying entire cell in Blazor Scheduler](images/blazor-scheduler-appointments-occupyingEntireCell.png)
 
 N> The `EnableIndicator` property will work, only when the `EnableMaxHeight` property value is set to true.
 
@@ -1901,12 +1930,12 @@ The tooltip can be displayed for appointments by setting `true` to the [EnableTo
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 10);
+    DateTime CurrentDate = new DateTime(2023, 1, 10);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2020, 1, 8, 10, 0, 0) , EndTime = new DateTime(2020, 1, 8, 12, 0, 0),
+        new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2023, 1, 8, 10, 0, 0) , EndTime = new DateTime(2023, 1, 8, 12, 0, 0),
         IsReadonly = true },
-        new AppointmentData { Id = 2, Subject = "Germany", StartTime = new DateTime(2020, 1, 10, 10, 0, 0) , EndTime = new DateTime(2020, 1, 10, 12, 0, 0) }
+        new AppointmentData { Id = 2, Subject = "Germany", StartTime = new DateTime(2023, 1, 10, 10, 0, 0) , EndTime = new DateTime(2023, 1, 10, 12, 0, 0) }
     };
     public class AppointmentData
     {
@@ -1924,6 +1953,8 @@ The tooltip can be displayed for appointments by setting `true` to the [EnableTo
     }
 }
 ```
+
+![Tooltip in Blazor Scheduler](images/blazor-scheduler-appointments-tooltip.png)
 
 ### Customizing event tooltip using template
 
@@ -1974,6 +2005,8 @@ After enabling the default tooltip, it is possible to customize the display of n
 }
 ```
 
+![Tooltip in Blazor Scheduler](images/blazor-scheduler-appointments-customizeTooltip.png)
+
 N> All the field names that are mapped from the Scheduler dataSource to the appropriate field properties such as subject, description, location, startTime and endTime within the `ScheduleEventSettings` can be accessed within the template.
 
 ## Appointment filtering
@@ -2004,7 +2037,7 @@ The appointments can be filtered by passing the predicate value to [Query](https
 </SfSchedule>
 
 @code{
-    public DateTime CurrentDate { get; set; } = new DateTime(2020, 6, 5);
+    public DateTime CurrentDate { get; set; } = new DateTime(2023, 6, 1);
     public bool MargretChecked { get; set; } = true;
     public bool RobertChecked { get; set; } = true;
     public bool LauraChecked { get; set; } = true;
@@ -2021,80 +2054,80 @@ The appointments can be filtered by passing the predicate value to [Query](https
         new AppointmentData {
             Id = 1,
             Subject = "Burning Man",
-            StartTime = new DateTime(2020, 5, 29, 15, 0, 0),
-            EndTime = new DateTime(2020, 5, 29, 17, 0, 0),
+            StartTime = new DateTime(2023, 5, 29, 15, 0, 0),
+            EndTime = new DateTime(2023, 5, 29, 17, 0, 0),
             OwnerId = 1},
         new AppointmentData{
             Id = 2,
             Subject = "Marketing Forum",
-            StartTime = new DateTime(2020, 5, 31, 10, 0, 0),
-            EndTime = new DateTime(2020, 5, 31, 11, 30, 0),
+            StartTime = new DateTime(2023, 5, 31, 10, 0, 0),
+            EndTime = new DateTime(2023, 5, 31, 11, 30, 0),
             OwnerId = 2},
         new AppointmentData{
             Id = 3,
             Subject = "Business Factory",
-            StartTime = new DateTime(2020, 5, 31, 13, 30, 0),
-            EndTime = new DateTime(2020, 5, 31, 15, 0, 0),
+            StartTime = new DateTime(2023, 5, 31, 13, 30, 0),
+            EndTime = new DateTime(2023, 5, 31, 15, 0, 0),
             OwnerId = 3},
         new AppointmentData{
             Id = 4,
             Subject = "Burning Man",
-            StartTime = new DateTime(2020, 6, 1, 11, 30, 0),
-            EndTime = new DateTime(2020, 6, 1, 13, 0, 0),
+            StartTime = new DateTime(2023, 6, 1, 11, 30, 0),
+            EndTime = new DateTime(2023, 6, 1, 13, 0, 0),
             OwnerId = 1},
         new AppointmentData{
             Id = 5,
             Subject = "Funnel Hacking",
-            StartTime = new DateTime(2020, 6, 2, 9, 30, 0),
-            EndTime = new DateTime(2020, 6, 2, 11, 0, 0),
+            StartTime = new DateTime(2023, 6, 2, 9, 30, 0),
+            EndTime = new DateTime(2023, 6, 2, 11, 0, 0),
             OwnerId = 3},
         new AppointmentData{
             Id = 6,
             Subject = "The human gathering",
-            StartTime = new DateTime(2020, 6, 2, 13, 0, 0),
-            EndTime = new DateTime(2020, 6, 2, 14, 30, 0),
+            StartTime = new DateTime(2023, 6, 2, 13, 0, 0),
+            EndTime = new DateTime(2023, 6, 2, 14, 30, 0),
             OwnerId = 2},
         new AppointmentData{
             Id = 7,
             Subject = "Techweek",
-            StartTime = new DateTime(2020, 6, 3, 11, 0, 0),
-            EndTime = new DateTime(2020, 6, 3, 12, 30, 0),
+            StartTime = new DateTime(2023, 6, 3, 11, 0, 0),
+            EndTime = new DateTime(2023, 6, 3, 12, 30, 0),
             OwnerId = 2},
         new AppointmentData{
             Id = 8,
             Subject = "Grow Conference",
-            StartTime = new DateTime(2020, 6, 4, 10, 0, 0),
-            EndTime = new DateTime(2020, 6, 4, 11, 30, 0),
+            StartTime = new DateTime(2023, 6, 4, 10, 0, 0),
+            EndTime = new DateTime(2023, 6, 4, 11, 30, 0),
             OwnerId = 1},
         new AppointmentData{
             Id = 9,
             Subject = "Data Science Conference",
-            StartTime = new DateTime(2020, 6, 4, 13, 30, 0),
-            EndTime = new DateTime(2020, 6, 4, 15, 0, 0),
+            StartTime = new DateTime(2023, 6, 4, 13, 30, 0),
+            EndTime = new DateTime(2023, 6, 4, 15, 0, 0),
             OwnerId = 1},
         new AppointmentData{
             Id = 10,
             Subject = "Blogcademy",
-            StartTime = new DateTime(2020, 6, 5, 12, 0, 0),
-            EndTime = new DateTime(2020, 6, 5, 13, 30, 0),
+            StartTime = new DateTime(2023, 6, 5, 12, 0, 0),
+            EndTime = new DateTime(2023, 6, 5, 13, 30, 0),
             OwnerId = 3},
         new AppointmentData{
             Id = 11,
             Subject = "World Domination Summit",
-            StartTime = new DateTime(2020, 6, 6, 9, 30, 0),
-            EndTime = new DateTime(2020, 6, 6, 11, 0, 0),
+            StartTime = new DateTime(2023, 6, 6, 9, 30, 0),
+            EndTime = new DateTime(2023, 6, 6, 11, 0, 0),
             OwnerId = 2},
         new AppointmentData{
             Id = 12,
             Subject = "Content Marketing",
-            StartTime = new DateTime(2020, 6, 6, 13, 0, 0),
-            EndTime = new DateTime(2020, 6, 6, 14, 30, 0),
+            StartTime = new DateTime(2023, 6, 6, 13, 0, 0),
+            EndTime = new DateTime(2023, 6, 6, 14, 30, 0),
             OwnerId = 1},
         new AppointmentData{
             Id = 13,
             Subject = "Mobile World Conference",
-            StartTime = new DateTime(2020, 6, 12, 18, 0, 0),
-            EndTime = new DateTime(2020, 6, 12, 20, 0, 0),
+            StartTime = new DateTime(2023, 6, 12, 18, 0, 0),
+            EndTime = new DateTime(2023, 6, 12, 20, 0, 0),
             OwnerId = 1}
     };
 
@@ -2185,6 +2218,8 @@ The appointments can be filtered by passing the predicate value to [Query](https
     }
 </style>
 ```
+
+![Appointment Filtering in Blazor Scheduler](images/blazor-scheduler-appointments-filtering.png)
 
 ## Appointment selection
 
