@@ -57,7 +57,6 @@ The following example code illustrates how to enforce and stop protection in Doc
 <SfDocumentEditorContainer @ref="container" EnableToolbar=true></SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
     protected void protectDocument(object args)
     {

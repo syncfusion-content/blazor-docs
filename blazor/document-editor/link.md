@@ -25,7 +25,6 @@ The following example illustrates how to add OnRequestNavigate event for Documen
 </SfDocumentEditor>
 
 @code {
-
     SfDocumentEditorContainer container;
 
     // Add event listener for requestNavigate event to customize hyperlink navigation functionality
@@ -43,9 +42,7 @@ The following example illustrates how to add OnRequestNavigate event for Documen
             args.IsHandled = true;
         }
     }
-
 }
-
 ```
 
 If the selection is in hyperlink, trigger this event by calling [`NavigateHyperlinkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_NavigateHyperlinkAsync) method of ‘Selection’ instance. Refer to the following example.
