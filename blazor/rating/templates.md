@@ -19,14 +19,14 @@ The rating component supports below templates for item customization.
 ## Empty (unrated) symbol template
 
 To customize the appearance of **unrated** items, you can use the `EmptyTemplate` tag directive. It allows you to specify the desired custom content for the unrated items.
-The [RatingItemContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.RatingItemContext.html) is passed as a `context` to the template, allowing it to access information about the un-rated item, such as its Value and Index.
-If the `FullTemplate` is not defined, the `EmptyTemplate` will be used as the default for both `rated` and `unrated` items. You can apply custom styles to differentiate between the rated and unrated states of the items.
+The [RatingItemContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.RatingItemContext.html) is passed as a `context` to the template, allowing it to access information about the un-rated item, such as its `Value` and `Index`.
+If the `FullTemplate` is not defined, the `EmptyTemplate` will be used as the default for both rated and unrated items. You can apply custom styles to differentiate between the rated and unrated states of the items.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Inputs
 
-<SfRating>
+<SfRating Value="3">
     <EmptyTemplate>
         <span class='custom-font sf-rating-heart'></span>
     </EmptyTemplate>
@@ -34,10 +34,14 @@ If the `FullTemplate` is not defined, the `EmptyTemplate` will be used as the de
 
 <style>
     .e-rating-container .custom-font {
+        /* To add the background color for the font icon. */
         background: linear-gradient(to right, rgb(254,87,133,255) var(--rating-value), transparent var(--rating-value));
+        /* To clip the background to the icon (text) alone. */
         background-clip: text;
         -webkit-background-clip: text;
+        /* To make the background color visible instead of font color. */
         -webkit-text-fill-color: transparent;
+        /* To provide a border for font icon. */
         -webkit-text-stroke: 1px rgb(254,87,133,255);
     }
 
@@ -69,16 +73,18 @@ If the `FullTemplate` is not defined, the `EmptyTemplate` will be used as the de
 
 ![Blazor Rating Component with EmptyTemplate](./images/blazor-rating-empty-template.png)
 
+N> The current value of the rating item available in the template context (`RatingItemContext`)  as `Value` and in the rating item element as CSS Variable (`--rating-value`) can be used to support precision in templates.
+
 ## Full (rated) symbol template
 
 To customize the appearance of **rated** items in the Syncfusion Blazor rating component, you can use the `FullTemplate` tag directive. This directive allows you to specify a custom layout for the rated items, which can include any content you desire.
-The [RatingItemContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.RatingItemContext.html) is passed as a `context` to the template, allowing it to access information about the rated item, such as its Value and Index.
+The [RatingItemContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.RatingItemContext.html) is passed as a `context` to the template, allowing it to access information about the rated item, such as its `Value` and `Index`.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Inputs
 
-<SfRating>
+<SfRating Value="3">
     <FullTemplate>
         <span class='custom-font sf-icon-fill-star'></span>
     </FullTemplate>
@@ -90,11 +96,8 @@ The [RatingItemContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 <style>
 
     .e-rating-container .custom-font {
-        background: linear-gradient(to right, rgb(255,215,0) var(--rating-value), transparent var(--rating-value));
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -webkit-text-stroke: 1px rgb(255,215,0);
+        /* To change the icon font color. */
+        color: rgb(255,215,0);
     }
 
     @@font-face {
@@ -166,6 +169,7 @@ You can use emojis of your choice as rating symbol by specifying them as templat
 </SfRating>
 
 <style>
+    /* To change the color of an unselected rating item. */
     .e-rating-item-container:not(.e-rating-selected) .emoji {
         filter: grayscale(1);
     }
@@ -203,11 +207,12 @@ You can use SVG icons of your choice as rating symbol by specifying them as temp
 </SfRating>
 
 <style>
-
+    /* To change the size between items */
     .e-rating-container .e-rating-item-container {
         padding: 0px;
     }
 
+    /* To set the gradient color */
     .e-rating-svg-icon #grad0 .start {
         stop-color: #FF0000;
     }

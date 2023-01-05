@@ -85,7 +85,7 @@ You can change the rating icon border color in Blazor Rating component, you can 
 
     .e-rating-container.custom-font .e-rating-item-list:hover .e-rating-item-container .e-rating-icon,
     .e-rating-container.custom-font .e-rating-item-container .e-rating-icon {
-        /*To change rating symbol border color*/
+        /* To change rating symbol border color */
         -webkit-text-stroke: 2px #ae9e9d;        
     }
 
@@ -109,7 +109,7 @@ Here is an example of how you can use above method to customize the rated and un
 
     .e-rating-container.custom-font .e-rating-item-list:hover .e-rating-item-container .e-rating-icon,
     .e-rating-container.custom-font .e-rating-item-container .e-rating-icon {
-        /*To change rated symbol fill color and un-rated symbol fill color*/
+        /* To change rated symbol fill color and un-rated symbol fill color */
         background: linear-gradient(to right, #ffe814 var(--rating-value), #d8d7d4 var(--rating-value));
         background-clip: text;
         -webkit-background-clip: text;
@@ -119,13 +119,13 @@ Here is an example of how you can use above method to customize the rated and un
 
 ```
 
-This will customize the rated fill color to #ffe814 and un-rated fill color to #d8d7d4.
+This will customize the rated fill color to #ffe814 and un-rated fill color to #d8d7d4. `--rating-value` in the linear-gradient provides the current value of the rating item.
 
 ![Blazor Rating Component with custom fill color for icons](images/blazor-rating-fill-color.png)
 
 ### Changing the item spacing
 
-You can change the space between the rating items in Blazor Rating component, by using the `CssClass` property and setting the `padding` CSS property of `.e-rating-item-container` to your desired size. 
+You can change the space between the rating items in Blazor Rating component, by using the `CssClass` property and setting the `marging` / `padding` CSS property of `.e-rating-item-container` to your desired size. 
 
 ```cshtml
 
@@ -134,7 +134,7 @@ You can change the space between the rating items in Blazor Rating component, by
 <style>
 
     .e-rating-container.custom-font .e-rating-item-container {
-        /*To change size between items*/
+        /* To change the size between items */
         margin:0px 7px;
     }   
 
