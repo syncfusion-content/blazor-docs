@@ -27,14 +27,13 @@ The following code shows how to add custom option in context menu.
 </SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
 
     public void OnCreated(object args)
     {
         SfDocumentEditor documentEditor = container.DocumentEditor;
         List<Syncfusion.Blazor.DocumentEditor.MenuItemModel> contentMenuItem = new List<Syncfusion.Blazor.DocumentEditor.MenuItemModel>
-    {
+        {
            new Syncfusion.Blazor.DocumentEditor.MenuItemModel { Text="Search In Google", Id= "search_in_google", IconCss="e-icons e-de-ctnr-find" }
         };
         documentEditor.ContextMenu.AddCustomMenu(contentMenuItem, true, false);
@@ -66,19 +65,17 @@ The following code shows how to hide default context menu and add custom option 
 </SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
 
     public void OnCreated(object args)
     {
         SfDocumentEditor documentEditor = container.DocumentEditor;
         List<Syncfusion.Blazor.DocumentEditor.MenuItemModel> contentMenuItem = new List<Syncfusion.Blazor.DocumentEditor.MenuItemModel>
-    {
+        {
            new Syncfusion.Blazor.DocumentEditor.MenuItemModel { Text="Search In Google", Id= "search_in_google", IconCss="e-icons e-de-ctnr-find" }
         };
         documentEditor.ContextMenu.AddCustomMenu(contentMenuItem, false, false);
     }
-
 }
 ```
 
