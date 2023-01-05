@@ -210,6 +210,135 @@ To render the root level nodes, specify the ParentID as null or no need to speci
 
 ![Blazor TreeView with Self-Referential Data](./images/blazor-treeview-hierarchical-data.png)
 
+### ExpandoObject binding
+
+The Blazor TreeView is a generic component that is strongly bound to a specific model type, but in cases where the model type is unknown at compile time, the TreeView can be bound to a list of ExpandoObjects using the `DataSource` property. This allows the TreeView to perform all supported data operations.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+@using System.Dynamic
+<SfTreeView TValue="ExpandoObject">
+    <TreeViewFieldsSettings TValue="ExpandoObject" Id="ID" DataSource="@TreeData" Text="Name" ParentID="ParentID" HasChildren="ChildRecordID" Expanded="Expanded"></TreeViewFieldsSettings>
+</SfTreeView>
+
+@code {
+    SfTreeView<ExpandoObject> TreeGrid;
+    public List<ExpandoObject> TreeData { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TreeData = GetData().ToList();
+    }
+    public static List<ExpandoObject> Data = new List<ExpandoObject>();
+    public static int ParentRecordID { get; set; }
+    public static int ChildRecordID { get; set; }
+    public static List<ExpandoObject> GetData()
+    {
+        Data.Clear();
+        ParentRecordID = 0;
+        ChildRecordID = 0;
+        for (var i = 1; i <= 3; i++)
+        {
+            dynamic ParentRecord = new ExpandoObject();
+            ParentRecord.ID = ++ParentRecordID;
+            ParentRecord.Name = "Parent " + i;
+            ParentRecord.ParentID = null;
+            ParentRecord.Expanded = true;
+            Data.Add(ParentRecord);
+            AddChildRecords(ParentRecordID);
+        }
+        return Data;
+    }
+    public static void AddChildRecords(int ParentId)
+    {
+        for (var i = 1; i < 3; i++)
+        {
+            dynamic ChildRecord = new ExpandoObject();
+            ChildRecord.ID = ++ParentRecordID;
+            ChildRecord.Name = "Child item" + ++ChildRecordID;
+            ChildRecord.ParentID = ParentId;
+            Data.Add(ChildRecord);
+        }
+    }
+}
+
+```
+
+### DynamicObject binding
+
+The Blazor TreeView is a generic component that is strongly bound to a specific model type, but in cases where the model type is unknown at compile time, the data can be bound to the TreeView as a list of DynamicObjects. The TreeView can also perform all supported data operations on DynamicObjects when they are assigned to the DataSource property.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+@using System.Dynamic
+<SfTreeView TValue="DynamicDictionary" AllowEditing="true">
+    <TreeViewFieldsSettings TValue="DynamicDictionary" Id="ID" DataSource="@TreeData" Text="Name" ParentID="ParentID" HasChildren="ChildRecordID" Expanded="Expanded"></TreeViewFieldsSettings>
+</SfTreeView>
+
+@code {
+    SfTreeView<DynamicDictionary> TreeView;
+    public List<DynamicDictionary> TreeData { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TreeData = GetData().ToList();
+    }
+    public static List<DynamicDictionary> Data = new List<DynamicDictionary>();
+    public static int ParentRecordID { get; set; }
+    public static int ChildRecordID { get; set; }
+
+    public static List<DynamicDictionary> GetData()
+    {
+        Data.Clear();
+        ParentRecordID = 0;
+        ChildRecordID = 0;
+        for (var i = 1; i <= 3; i++)
+        {
+            dynamic ParentRecord = new DynamicDictionary();
+            ParentRecord.ID = ++ParentRecordID;
+            ParentRecord.Name = "Parent " + i;
+            ParentRecord.ParentID = null;
+            ParentRecord.Expanded = true;
+            Data.Add(ParentRecord);
+            AddChildRecords(ParentRecordID);
+        }
+        return Data;
+    }
+    public static void AddChildRecords(int ParentId)
+    {
+        for (var i = 1; i < 3; i++)
+        {
+            dynamic ChildRecord = new DynamicDictionary();
+            ChildRecord.ID = ++ParentRecordID;
+            ChildRecord.Name = "Child Item " + ++ChildRecordID;
+            ChildRecord.ParentID = ParentId;
+            Data.Add(ChildRecord);
+        }
+    }
+
+    public class DynamicDictionary : DynamicObject
+    {
+        Dictionary<string, object> dictionary = new Dictionary<string, object>();
+
+        public override bool TryGetMember(GetMemberBinder binder, out object result)
+        {
+            string name = binder.Name;
+            return dictionary.TryGetValue(name, out result);
+        }
+        public override bool TrySetMember(SetMemberBinder binder, object value)
+        {
+            dictionary[binder.Name] = value;
+            return true;
+        }
+
+        public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
+        {
+            return this.dictionary?.Keys;
+        }
+
+    }
+}
+
+```
+
 ## Remote data
 
 Blazor TreeView can also be populated from a remote data service with the help of `DataManager` component and `Query` property. It supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors. A service data can be assigned as an instance of `DataManager` to the `DataSource` property. To interact with remote data source, provide the endpoint `url`.
@@ -231,6 +360,40 @@ Adaptor is responsible for processing response and request from/to the service e
 * `WebApiAdaptor`: Used to interact with Web API created under OData standards.
 
 * `WebMethodAdaptor`: Used to interact with web methods.
+
+### Binding with OData services
+
+In the following example, `ODataAdaptor` is  used to fetch data from remote services. The **EmployeeID**, **FirstName**, and **EmployeeID** columns from Employees table have been mapped to **Id**, **Text**, and **HasChildren** fields respectively for first level nodes.
+
+The **OrderID**, **EmployeeID**, and **ShipName** columns from orders table have been mapped to **Id**, **ParentID**, and **Text** fields respectively for second level nodes.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Data
+<SfTreeView TValue="TreeData" >
+    <TreeViewFieldsSettings TValue="TreeData" Query="@Query" Id="EmployeeID" Text="FirstName" HasChildren="EmployeeID">
+        <SfDataManager Url="http://services.odata.org/Northwind/Northwind.svc" Adaptor="@Syncfusion.Blazor.Adaptors.ODataAdaptor" CrossDomain="true"></SfDataManager>
+        <TreeViewFieldChild TValue="TreeData" Query="@SubQuery" Id="OrderID" Text="ShipName" ParentID="EmployeeID">
+            <SfDataManager Url="http://services.odata.org/Northwind/Northwind.svc" Adaptor="@Syncfusion.Blazor.Adaptors.ODataAdaptor" CrossDomain="true"></SfDataManager>
+        </TreeViewFieldChild>
+    </TreeViewFieldsSettings>
+</SfTreeView>
+
+@code {
+    public Query Query = new Query().From("Employees").Select(new List<string> { "EmployeeID", "FirstName" }).Take(3).RequiresCount();
+    public Query SubQuery = new Query().From("Orders").Select(new List<string> { "OrderID", "EmployeeID", "ShipName" }).Take(2).RequiresCount();
+    public class TreeData
+    {
+        public int? EmployeeID { get; set; }
+        public int OrderID { get; set; }
+        public string ShipName { get; set; }
+        public string FirstName { get; set; }
+    }
+}
+
+```
+
+### Binding with OData V4 services
 
 In the following example, `ODataV4Adaptor` is  used to fetch data from remote services. The **EmployeeID**, **FirstName**, and **EmployeeID** columns from Employees table have been mapped to **Id**, **Text**, and **HasChildren** fields respectively for first level nodes.
 
