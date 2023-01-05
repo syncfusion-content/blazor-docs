@@ -123,7 +123,7 @@ This will customize the rated fill color to `#ffe814` and un-rated fill color to
 
 ### Changing the item spacing
 
-You can change the space between the rating items in Blazor Rating component, by using the `CssClass` property and setting the `marging` / `padding` CSS property of `.e-rating-item-container` to your desired size. 
+You can change the space between the rating items in Blazor Rating component, by using the `CssClass` property and setting the `margin` / `padding` CSS property of `.e-rating-item-container` to your desired size. 
 
 ```cshtml
 
