@@ -141,4 +141,3 @@ The Blazor Gantt chart default scheduling is [auto-scheduling](https://blazor.sy
 }
 ```
 
-
