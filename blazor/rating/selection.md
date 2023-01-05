@@ -9,7 +9,8 @@ documentation: ug
 
 # Selection in Blazor Rating Component
 
-The Blazor rating component allows users to select a rating value by clicking on one of the rating items. By default, all items up to and including the selected icon will be in the rated state, providing a visual indication of the current rating value.
+The Blazor Rating component allows users to rate something using a visual scale, and the selection state can be changed by the user clicking or tapping on the stars in the rating scale or through code. The Rating component has a minimum value and a reset button, and provides customization options for the selected rating value and selection behavior.
+
 
 ```cshtml
 
@@ -23,7 +24,7 @@ The Blazor rating component allows users to select a rating value by clicking on
 
 ## Selected value
 
-You can use the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Value) property of the Blazor Rating component to determine the currently selected rating value. This property returns the current value of the rating, which can be used to determine which items are currently selected.
+You can use the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Value) property of the Blazor Rating component to determine the currently selected rating value and update it using two-way binding or by setting the value programmatically. The current rating value can also be used to identify the selected items.
 
 ```cshtml
 

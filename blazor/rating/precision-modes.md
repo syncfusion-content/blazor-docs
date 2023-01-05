@@ -13,10 +13,10 @@ You can use the [Precision](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 The precision types of Rating are as follows:
 
-* Full : The rating is increased in whole number increments. For example, if the current rating is 3, the next possible ratings are 4, 5, and so on.
-* Half : The rating is increased in increments of 0.5 (half). For example, if the current rating is 3.5, the next possible ratings are 4, 4.5, 5, and so on. 
-* Quarter : The rating is increased in increments of 0.25 (quarter). For example, if the current rating is 3.75, the next possible ratings are 4, 4.25, 4.5, and so on. 
-* Exact : The rating is increased in increments of 0.1. For example, if the current rating is 3.9, the next possible ratings are 4, 4.1, 4.2, and so on.
+* Full: The rating is increased in whole number increments. For example, if the current rating is 2, the next possible ratings are 3, 4, and so on.
+* Half: The rating is increased in increments of 0.5 (half). For example, if the current rating is 2.5, the next possible ratings are 3, 3.5, 4, and so on. 
+* Quarter: The rating is increased in increments of 0.25 (quarter). For example, if the current rating is 3.75, the next possible ratings are 4, 4.25, 4.5, and so on. 
+* Exact: The rating is increased in increments of 0.1. For example, if the current rating is 3.9, the next possible ratings are 4, 4.1, 4.2, and so on.
 
 ```cshtml
 
