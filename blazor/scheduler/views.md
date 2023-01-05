@@ -162,7 +162,7 @@ Usually a day view displays a single day with all its related appointments. It i
 
 N> All the above defined properties can be accessed within Day view except `AllowVirtualScrolling` and `HeaderRows`.
 
-![Displaying Day View in Blazor Scheduler](images\blazor-scheduler-views-day.png)
+![Displaying Day View in Blazor Scheduler](images/blazor-scheduler-views-day.png)
 
 ### Week view
 
@@ -204,7 +204,7 @@ The Week view displays a count of 7 days (from Sunday to Saturday) with all its 
 
 N> All the above defined properties in the table can be accessed within Week and Work week views except `AllowVirtualScrolling` and `HeaderRows`.
 
-![Displaying Week View in Blazor Scheduler](images\blazor-scheduler-views-week.png)
+![Displaying Week View in Blazor Scheduler](images/blazor-scheduler-views-week.png)
 
 ### Work Week view
 
@@ -247,7 +247,7 @@ The following code example depicts how to change the start and end hours only on
 
 N> The Week, Work week and Day views can display the all-day row appointments in a separate all-day row with an expand or collapse option to view it.
 
-![Displaying Work week View in Blazor Scheduler](images\blazor-scheduler-views-workweek.png)
+![Displaying Work week View in Blazor Scheduler](images/blazor-scheduler-views-workweek.png)
 
 ### Month view
 
@@ -291,7 +291,7 @@ By default, in month view, you can view single appointment on each day cell. If 
 }
 ```
 
-![Displaying Month View in Blazor Scheduler](images\blazor-scheduler-views-month.png)
+![Displaying Month View in Blazor Scheduler](images/blazor-scheduler-views-month.png)
 
 ### Agenda view
 
@@ -331,7 +331,7 @@ The following code example depicts how to display events of four days in Agenda 
 }
 ```
 
-![Displaying Agenda View in Blazor Scheduler](images\blazor-scheduler-views-agenda.png)
+![Displaying Agenda View in Blazor Scheduler](images/blazor-scheduler-views-agenda.png)
 
 ### Month Agenda view
 
@@ -374,7 +374,7 @@ The following code example shows how to hide the weekend days on `MonthAgenda` v
 }
 ```
 
-![Displaying Month agenda View in Blazor Scheduler](images\blazor-scheduler-views-monthagenda.png)
+![Displaying Month agenda View in Blazor Scheduler](images/blazor-scheduler-views-monthagenda.png)
 
 ### Timeline views – Day, Week, Work Week
 
@@ -418,7 +418,7 @@ Similar to the vertical day, week and work week views, the respective view shows
 
 N> Clicking on the dates in the date header bar of Timeline day, Timeline week and Timeline work week will allow to navigate to the Agenda view.
 
-![Displaying Timeline Week View in Blazor Scheduler](images\blazor-scheduler-views-timelineweek.png)
+![Displaying Timeline Week View in Blazor Scheduler](images/blazor-scheduler-views-timelineweek.png)
 
 ### Timeline Month view
 
@@ -460,7 +460,7 @@ A Timeline Month view displays the current month days along with its appointment
 
 N> Clicking on the dates in the date header bar of Timeline month allows to navigate to the Timeline day view.
 
-![Displaying Timeline Month View in Blazor Scheduler](images\blazor-scheduler-views-timelinemonth.png)
+![Displaying Timeline Month View in Blazor Scheduler](images/blazor-scheduler-views-timelinemonth.png)
 
 ### Timeline Year view
 
@@ -502,7 +502,7 @@ By default, the timeline year view orientation is set to Horizontal view. In thi
 }
 ```
 
-![Displaying Timeline Year View in Blazor Scheduler](images\blazor-scheduler-views-timelineyear.png)
+![Displaying Timeline Year View in Blazor Scheduler](images/blazor-scheduler-views-timelineyear.png)
 
 #### Setting the first month of timeline year
 
@@ -541,7 +541,7 @@ By default, months in timeline year view displayed from January to December. Use
 }
 ```
 
-![Displaying Timeline Year with First Month in Blazor Scheduler](images\blazor-scheduler-views-timelineyear-firstmonth.png)
+![Displaying Timeline Year with First Month in Blazor Scheduler](images/blazor-scheduler-views-timelineyear-firstmonth.png)
 
 ### Year view
 
