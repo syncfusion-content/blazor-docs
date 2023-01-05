@@ -95,11 +95,9 @@ You can change the rating icon border color in Blazor Rating component, you can 
 
 ![Blazor Rating Component with rating symbol border color](images/blazor-rating-border-color.png)
 
-### Changing rated / un-rated symbol fill color 
+### Changing rated/un-rated symbol fill color 
 
-You can customize the fill colors of rated and un-rated icons in the Rating control using the `CssClass` property and the `linear-gradient` color-stops in the `background` CSS property of `.e-rating-icon`. The **first** color-stop defines the rated fill color and the **second** defines the un-rated fill color.
-
-Here is an example of how you can use above method to customize the rated and unrated fill color of the icons in the Rating component:
+You can customize the fill colors of rated and un-rated icons in the Rating component using the `CssClass` property and the `linear-gradient` color-stops in the `background` CSS property of `.e-rating-icon`. The **first** color-stop defines the rated fill color and the **second** defines the un-rated fill color.
 
 ```cshtml
 
@@ -119,7 +117,7 @@ Here is an example of how you can use above method to customize the rated and un
 
 ```
 
-This will customize the rated fill color to #ffe814 and un-rated fill color to #d8d7d4.
+This will customize the rated fill color to `#ffe814` and un-rated fill color to `#d8d7d4`.
 
 ![Blazor Rating Component with custom fill color for icons](images/blazor-rating-fill-color.png)
 

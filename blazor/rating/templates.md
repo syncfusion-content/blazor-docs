@@ -20,6 +20,7 @@ The rating component supports below templates for item customization.
 
 To customize the appearance of **unrated** items, you can use the `EmptyTemplate` tag directive. It allows you to specify the desired custom content for the unrated items.
 The [RatingItemContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.RatingItemContext.html) is passed as a `context` to the template, allowing it to access information about the un-rated item, such as its Value and Index.
+
 If the `FullTemplate` is not defined, the `EmptyTemplate` will be used as the default for both `rated` and `unrated` items. You can apply custom styles to differentiate between the rated and unrated states of the items.
 
 ```cshtml

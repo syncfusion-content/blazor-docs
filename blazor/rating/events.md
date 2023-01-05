@@ -13,7 +13,7 @@ This section describes the rating events that will be triggered when appropriate
 
 ## Created
 
-The rating component triggers the[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Created) event when the rendering of the rating component is completed.
+The rating component triggers the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Created) event when the rendering of the rating component is completed.
 
 ```cshtml
 
