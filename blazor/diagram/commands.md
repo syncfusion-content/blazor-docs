@@ -1339,6 +1339,8 @@ protected override void OnInitialized()
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
+
 ### BringIntoCenter
 
 The [BringIntoCenter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BringIntoCenter_Syncfusion_Blazor_Diagram_DiagramRect_) command brings a specified rectangular region into the center of the viewport of the diagram.
@@ -1371,6 +1373,8 @@ protected override void OnInitialized()
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
+
 ### FitToPage command in Blazor Diagram
 
 The FitToPage diagram is used to bring the entire diagram into view. The [FitOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitOptions.html) parameter is used to customize the FitToPage command behavior. If the parameter is null, the entire diagram is fit into the view. 
@@ -1505,6 +1509,8 @@ The following code illustrates how to execute the FitToPage command.
         }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
+
 ### FitToPage Parameter
 
 The [FitOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitOptions.html) parameter is used to customize the FitToPage command behavior.
