@@ -11,12 +11,12 @@ documentation: ug
 
 The Scheduler can be customized on various aspects as well as it inherits almost all the calendar-specific features such as options,
 
-* To set custom time range display on Scheduler
-* To set different working hours
-* To set different working days
-* To set different first day of week
-* To show/hide weekend days
-* To show the week number
+- To set custom time range display on Scheduler
+- To set different working hours
+- To set different working days
+- To set different first day of week
+- To show/hide weekend days
+- To show the week number
 
 ## Set working days
 
@@ -58,6 +58,8 @@ The following example code depicts how to set the Scheduler to display Monday, W
 }
 ```
 
+![Set Working Days in Blazor Scheduler](images/blazor-scheduler-workdays-setworkdays.png)
+
 ## Hiding weekend days
 
 The `ShowWeekend` property is used to either show or hide the weekend days of a week and it is not applicable on Work week view (as non-working days are usually not displayed on work week view). By default, it is set to `true`. The days which are not a part of the working days collection of a Scheduler are usually considered as non-working or weekend days.
@@ -94,6 +96,8 @@ Here, the working days are defined as [1, 3, 4, 5] on Scheduler and therefore th
 }
 ```
 
+![Hiding Weekend Days in Blazor Scheduler](images/blazor-scheduler-workdays-hideweekend.png)
+
 ## Show week numbers
 
 It is possible to show the week number count of a week in the header bar of the Scheduler by setting true to the `ShowWeekNumber` property. By default, its default value is `false`. In Month view, the week numbers are displayed as a first column.
@@ -127,6 +131,8 @@ N> The `ShowWeekNumber` property is not applicable on Timeline views, as it has 
 }
 ```
 
+![Week Numbers in Blazor Scheduler](images/blazor-scheduler-workdays-weeknumber.png)
+
 ### Different options in showing week numbers
 
 By default, week numbers are shown in the Scheduler based on the first day of the year. However, the week numbers can be determined based on the following criteria by setting the `WeekRule` property with `CalendarWeekRule` enumeration.
@@ -150,7 +156,7 @@ For more details refer to [this link](https://docs.microsoft.com/en-us/dotnet/ap
     </ScheduleViews>
 </SfSchedule>
 @code{
-    DateTime CurrentDate = new DateTime(2020, 12, 28);
+    DateTime CurrentDate = new DateTime(2023, 2, 28);
     public class AppointmentData
     {
         public int Id { get; set; }
@@ -167,13 +173,15 @@ For more details refer to [this link](https://docs.microsoft.com/en-us/dotnet/ap
 }
 ```
 
+![Options in Showing Week Numbers in Blazor Scheduler](images/blazor-scheduler-workdays-weeknumber-diffrentoption.png)
+
 ## Set working hours
 
 Working hours indicates the work hour limit within the Scheduler, which is visually highlighted with an active color on work cells. The working hours can be set on Scheduler using the `ScheduleWorkhours` which includes the following sub-options,
 
-* `Highlight` – enables/disables the highlighting of work hours.
-* `Start` - sets the start time of the working/business hour of a day.
-* `End` - sets the end time limit of the working/business hour of a day.
+- `Highlight` – enables/disables the highlighting of work hours.
+- `Start` - sets the start time of the working/business hour of a day.
+- `End` - sets the end time limit of the working/business hour of a day.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -201,6 +209,8 @@ Working hours indicates the work hour limit within the Scheduler, which is visua
     }
 }
 ```
+
+![Set Working Hours in Blazor Scheduler](images/blazor-scheduler-workdays-setworkhours.png)
 
 ## Scheduler displaying custom hours
 
@@ -234,6 +244,8 @@ The following code example displays the Scheduler starting from the time range 7
 }
 ```
 
+![Displaying Custom Hours in Blazor Scheduler](images/blazor-scheduler-workdays-displayhours.png)
+
 ## Setting start day of the week
 
 By default, Scheduler defaults to `Sunday` as its first day of a week. To change the Scheduler's start day of a week with different day, set the `FirstDayOfWeek` property with the values ranging from 0 to 6.
@@ -266,6 +278,8 @@ N> Here, Sunday is always denoted as 0, Monday as 1 and so on.
     }
 }
 ```
+
+![Start Day of Week in Blazor Scheduler](images/blazor-scheduler-workdays-firstdayofweek.png)
 
 ## Scroll to specific time and date
 
@@ -322,6 +336,6 @@ You can manually scroll to a specific time on Scheduler by making use of the `Sc
 
 ## See Also
 
-* [To display the current time indicator](./timescale/#highlighting-current-date-and-time)
-* [To set different working hours for each resources](./resources/#set-different-work-hours)
-* [To set different working days for each resources](./resources/#set-different-work-days)
+- [To display the current time indicator](./timescale/#highlighting-current-date-and-time)
+- [To set different working hours for each resources](./resources/#set-different-work-hours)
+- [To set different working days for each resources](./resources/#set-different-work-days)

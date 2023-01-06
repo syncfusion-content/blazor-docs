@@ -27,7 +27,7 @@ To achieve better performance in the Scheduler when loading a large number of re
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 4, 1);
+    DateTime CurrentDate = new DateTime(2023, 4, 1);
     static EventData data = new EventData();
     public static List<ResourceData> ResourceDatasource = GenerateResourceData();
     public static List<EventData> AppointmentData = GenerateStaticEvents();
@@ -54,7 +54,7 @@ To achieve better performance in the Scheduler when loading a large number of re
 
     public static List<EventData> GenerateStaticEvents()
     {
-        DateTime date = new DateTime(2020, 4, 1);
+        DateTime date = new DateTime(2023, 4, 1);
         List<EventData> data = new List<EventData>(3600);
         var id = 1;
         for (var i = 0; i < 300; i++)
@@ -107,6 +107,8 @@ To achieve better performance in the Scheduler when loading a large number of re
 }
 ```
 
+![Displaying Virtual Scrolling in Blazor Scheduler](images/blazor-scheduler-virtualscrolling.gif)
+
 ## Virtual scrolling with templates
 
 In Blazor Scheduler, templates can be applied when [`AllowVirtualScrolling`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_AllowVirtualScrolling) property is enabled. In the following code, templates were applied to resources and appointments.
@@ -143,7 +145,7 @@ In Blazor Scheduler, templates can be applied when [`AllowVirtualScrolling`](htt
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 4, 1);
+    DateTime CurrentDate = new DateTime(2023, 4, 1);
     static EventData data = new EventData();
     public static List<ResourceData> ResourceDatasource = GenerateResourceData();
     public static List<EventData> AppointmentData = GenerateStaticEvents();
@@ -173,7 +175,7 @@ In Blazor Scheduler, templates can be applied when [`AllowVirtualScrolling`](htt
     }
     public static List<EventData> GenerateStaticEvents()
     {
-        DateTime date = new DateTime(2020, 4, 1);
+        DateTime date = new DateTime(2023, 4, 1);
         List<EventData> data = new List<EventData>(3600);
         var id = 1;
         for (var i = 0; i < 300; i++)
@@ -227,6 +229,8 @@ In Blazor Scheduler, templates can be applied when [`AllowVirtualScrolling`](htt
     }
 }
 ```
+
+![Displaying Virtual Scrolling with Template in Blazor Scheduler](images/blazor-scheduler-virtualscrollingWithTemplate.gif)
 
 N>  For now, the virtual loading of resources and events is not supported in `Month Agenda`, `Year` and `TimelineYear` (Horizontal Orientation) views.
 By default Virtual scrolling displays only 30 resources. You can increase or decrease the number of resources by using [VirtualResourceCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_VirtualResourceCount) property.

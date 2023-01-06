@@ -29,7 +29,7 @@ By default, the header bar holds the date and view navigation options, through w
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2023, 1, 31);
     public class AppointmentData
     {
         public int Id { get; set; }
@@ -45,6 +45,8 @@ By default, the header bar holds the date and view navigation options, through w
     }
 }
 ```
+
+![Hide Header Bar in Blazor Scheduler](images/blazor-scheduler-headercustomization-default.png)
 
 ## How to display the view options within the header bar popup
 
@@ -65,10 +67,10 @@ By default, the header bar holds the view navigation options, through which the 
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2021, 6, 30);
+    DateTime CurrentDate = new DateTime(2023, 6, 30);
      List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2021, 6, 30, 9, 30, 0) , EndTime = new DateTime(2021, 6, 30, 12, 0, 0) }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 6, 30, 9, 30, 0) , EndTime = new DateTime(2023, 6, 30, 12, 0, 0) }
     };
     public class AppointmentData
     {
@@ -140,7 +142,7 @@ The Scheduler UI that displays the date text on all views are considered as the 
 </SfSchedule>
 
 @code {
-    DateTime CurrentDate = new DateTime(2020, 1, 10);
+    DateTime CurrentDate = new DateTime(2023, 1, 10);
     public static string getDateHeaderText(DateTime date)
     {
         return date.ToString("dd ddd", CultureInfo.CurrentCulture);
@@ -186,6 +188,8 @@ The Scheduler UI that displays the date text on all views are considered as the 
     }
 </style>
 ```
+
+![Date Header Customization in Blazor Scheduler](images/blazor-scheduler-headercustomization-dateheader.png)
 
 ### Customization using OnRenderCell event
 
@@ -273,7 +277,7 @@ The day header cells and month header cells can be customized in the TimelineYea
 
 
 @code{
-    private DateTime CurrentDate = new DateTime(2020, 3, 10);
+    private DateTime CurrentDate = new DateTime(2023, 3, 10);
     public static string getDayHeaderText(DateTime date)
     {
         return date.ToString("dddd", CultureInfo.InvariantCulture);
@@ -284,9 +288,9 @@ The day header cells and month header cells can be customized in the TimelineYea
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
 {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 4, 0, 0, 0) , EndTime = new DateTime(2020, 3, 5, 0, 0, 0) },
-        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2020, 5, 1, 9, 30, 0) , EndTime = new DateTime(2020, 5, 1, 12, 0, 0) },
-        new AppointmentData { Id = 3, Subject = "Seminar", StartTime = new DateTime(2020, 1, 2, 9, 30, 0) , EndTime = new DateTime(2020, 1, 2, 12, 0, 0) }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 3, 4, 0, 0, 0) , EndTime = new DateTime(2023, 3, 5, 0, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2023, 5, 1, 9, 30, 0) , EndTime = new DateTime(2023, 5, 1, 12, 0, 0) },
+        new AppointmentData { Id = 3, Subject = "Seminar", StartTime = new DateTime(2023, 1, 2, 9, 30, 0) , EndTime = new DateTime(2023, 1, 2, 12, 0, 0) }
     };
     public class AppointmentData
     {
@@ -303,6 +307,8 @@ The day header cells and month header cells can be customized in the TimelineYea
     }
 }
 ```
+
+![Timeline Year Header Customization in Blazor Scheduler](images/blazor-scheduler-headercustomization-timelineyear.png)
 
 ## Customizing header indent cells
 
@@ -380,7 +386,7 @@ It is possible to customize the header indent cells using the `HeaderIndentTempl
     </style>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2023, 1, 31);
     public string[] Resources { get; set; } = { "Rooms", "Owners" };
     public List<ResourceData> RoomData { get; set; } = new List<ResourceData>
     {
@@ -395,7 +401,7 @@ It is possible to customize the header indent cells using the `HeaderIndentTempl
     };
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), OwnerId = 1, RoomId = 1 }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 1, 31, 9, 30, 0) , EndTime = new DateTime(2023, 1, 31, 11, 0, 0), OwnerId = 1, RoomId = 1 }
     };
     public class AppointmentData
     {
@@ -423,3 +429,5 @@ It is possible to customize the header indent cells using the `HeaderIndentTempl
     }
 }
 ```
+
+![Customizing Header Indent Cell in Blazor Scheduler](images/blazor-scheduler-headercustomization-headerindentcell.png)
