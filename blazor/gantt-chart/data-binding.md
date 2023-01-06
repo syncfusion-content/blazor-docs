@@ -628,7 +628,7 @@ When the `LoadChildOnDemand` is enabled, parent records are rendered in an expan
 
 {% endhighlight %}
 
-{% highlight C# tabtitle="TaskData.cs" %}
+{% highlight c# tabtitle="TaskData.cs" %}
 
 namespace WebAPI.Data
 {
@@ -705,7 +705,7 @@ namespace WebAPI.Data
 
 {% endhighlight %}
 
-{% highlight C# tabtitle="DefaultController.cs" %}
+{% highlight c# tabtitle="DefaultController.cs" %}
 
 using System;
 using System.Collections.Generic;
