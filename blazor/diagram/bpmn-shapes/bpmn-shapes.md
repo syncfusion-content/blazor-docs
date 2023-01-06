@@ -9,7 +9,7 @@ documentation: ug
 
 # Shapes in Blazor Diagram Component
 
-BPMN(Business Process Model and Notation) shapes are used to represent the internal business procedure in a graphical notation and enable you to communicate the procedures in a standard manner. To create a BPMN shape, in the node property shape, type should be set to “Bpmn” and its shape should be set as any one of the built-in shapes.
+BPMN (Business Process Model and Notation) shapes are used to represent the internal business procedure in a graphical notation and enable you to communicate the procedures in a standard manner. To create a BPMN shape, the node property [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shape.html) should be set as any one of the built-in shapes.
 
 The following code example explains how to create a simple business process.
 
@@ -37,27 +37,36 @@ The following code example explains how to create a simple business process.
             Height = 100,
             // Unique Id of the node.
             ID = "node1",
-            // Sets type as Bpmn and shape as Event.
-            Shape = new BpmnShape()
-            {
-                Type = NodeShapes.Bpmn,
-            }
+            // Sets the shape to activity.
+            Shape = new BpmnActivity() 
+            { 
+                ActivityType = BpmnActivityType.Task 
+            },
         };
         nodes.Add(node);
     }
 }
 ```
+![Activity Shape](../images/Task.png) 
 
-N> The default value for the property `Shape` is “Event”.
+The list of supported BPMN shapes are as follows:
 
-The list of BPMN shapes are as follows:
-
-| Shape | Image |
-| -------- | -------- |
-| Event | ![Event Shape](../images/Event.png) |
-| Gateway | ![Gateway Shape](../images/Gateway.png) |
-| Task | ![Task Shape](../images/Task.png) |
-| Message | ![Message Shape](../images/Message.png) |
-| DataSource | ![DataSource Shape](../images/Datasource.png) |
-| DataObject | ![DataObject Shape](../images/Dataobject.png) |
-| Group | ![Group Shape](../images/Group.png) |
+| Shape | Image | Description|
+| -------- | -------- | -------- |
+| Event | ![Event Shape](../images/Bpmn-Event-Start.png) |Event shape represents something happens during a business process.|
+| Gateway | ![Gateway Shape](../images/Gateway.png) |Gateway is used to control the flow of a process.|
+| Activity | ![Activity Shape](../images/Task.png) |Activities describe the kind of work being done in a particular process instance.|
+| Message | ![Message Shape](../images/Message.png) |The message is just the content of the communication.|
+| DataStore | ![DataStore Shape](../images/Datasource.png) |DataStore is used to store or access data associated with a business process.|
+| DataObject | ![DataObject Shape](../images/Dataobject.png) |A DataObject represents information flowing using the process, such as data placed into the process, data resulting from the process, data that needs to be collected, or data that must be stored.|
+| TextAnnotation | ![TextAnnotation Shape](../images/Bpmn-TextAnnotation-Auto.png) |A TextAnnotation points at or references another BPMN shape, which we call as the TextAnnotationTarget of the TextAnnotation.|
+| Expanded Sub-Process | ![Expanded Sub-Process Shape](../images/Group.png) |Organize tasks or processes that have significance in the overall process.|
+| Sequence Flow | ![Sequence Flow  Shape](../images/Bpmn-SequenceFlow.png) |Sequence flows represent the typical path between two flow objects.|
+| DefaultSequenceFlow | ![Default Sequence BPMN Shape](../images/Bpmn-DefaultSequentialFlow.png) |Default sequence flows are represented by an arrow with a tic mark on the one end.|
+| ConditionalSequenceFlow | ![Conditional Sequence BPMN Shape](../images/Bpmn-ConditionalSequenceFlow.png) |Conditional sequence flows are used to control the flow of a process based on the certain conditions.|
+| Association | ![Association Shape](../images/Bpmn-AssociationFlow.png) |An association is represented as a dotted graphical line with an opened arrow.|
+| DirectionalAssociationFlow | ![Directional BPMN FlowShapes](../images/Bpmn-DirectionalAssociatinFlow.png) |DirectionalAssociation is represented as a dotted graphical line with one side arrow.|
+| BiDirectionalAssociationFlow | ![BiDirectional BPMN FlowShapes](../images/Bpmn-BidirectionalAssociationFlow.png) |BiDirectionalAssociation is represented as a dotted graphical line with the double side arrow.|
+| Message Flow | ![Message Flow Shape](../images/Bpmn-MessageFlow.png) |A MessageFlow flow shows the flow of messages between two participants and is represented by line.|
+| InitiatingMessageFlow | ![InitiatingMessage Message BPMN Shape](../images/Bpmn-NonInitiatingMessageFlow.png) |An activity or event in one pool can initiate a message to another pool.|
+| NonInitiatingMessageFlow | ![NonInitiatingMessage Message BPMN Shape](../images/Bpmn-InitiatingMessageFlow.png) |An activity or event in one pool cannot initiate a message to another pool.|

@@ -410,12 +410,12 @@ To get start quickly about multiple resource on scheduler, you can check on this
     </ScheduleViews>
 </SfSchedule>
 @code{
-    DateTime CurrentDate = new DateTime(2022, 6, 1);
+    DateTime CurrentDate = new DateTime(2023, 6, 1);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 1, 9, 30, 0) , EndTime = new DateTime(2022, 6, 1, 11, 0, 0), OwnerId = 1 },
-        new AppointmentData { Id = 2, Subject = "Swimming", StartTime = new DateTime(2022, 6, 1, 9, 30, 0) , EndTime = new DateTime(2022, 6, 1, 11, 0, 0), OwnerId = 2 },
-        new AppointmentData { Id = 3, Subject = "Movie", StartTime = new DateTime(2022, 6, 2, 10, 0, 0) , EndTime = new DateTime(2022, 6, 2, 12, 0, 0), OwnerId = 3 }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 6, 1, 9, 30, 0) , EndTime = new DateTime(2023, 6, 1, 11, 0, 0), OwnerId = 1 },
+        new AppointmentData { Id = 2, Subject = "Swimming", StartTime = new DateTime(2023, 6, 1, 9, 30, 0) , EndTime = new DateTime(2023, 6, 1, 11, 0, 0), OwnerId = 2 },
+        new AppointmentData { Id = 3, Subject = "Movie", StartTime = new DateTime(2023, 6, 2, 10, 0, 0) , EndTime = new DateTime(2023, 6, 2, 12, 0, 0), OwnerId = 3 }
     };
     public List<ResourceData> OwnersData { get; set; } = new List<ResourceData>
     {
@@ -484,7 +484,7 @@ The following code example displays how the multiple resources are grouped and i
     </ScheduleViews>
 </SfSchedule>
 @code{
-    DateTime CurrentDate = new DateTime(2022, 6, 1);
+    DateTime CurrentDate = new DateTime(2023, 6, 1);
     public string[] Resources { get; set; } = { "Rooms", "Owners" };
     public List<ResourceData> RoomData { get; set; } = new List<ResourceData>
     {
@@ -499,7 +499,7 @@ The following code example displays how the multiple resources are grouped and i
     };
     List<AppointmentData> DataSource = new List<AppointmentData>
      {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 1, 9, 30, 0) , EndTime = new DateTime(2022, 6, 1, 11, 0, 0), OwnerId = 1, RoomId = 1 }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 6, 1, 9, 30, 0) , EndTime = new DateTime(2023, 6, 1, 11, 0, 0), OwnerId = 1, RoomId = 1 }
     };
     public class AppointmentData
     {
@@ -528,6 +528,8 @@ The following code example displays how the multiple resources are grouped and i
 }
 ```
 
+![Vertical Resource View in Blazor Scheduler](images/blazor-scheduler-resources-verticalview.png)
+
 ### Timeline resource view
 
 The following code example depicts how to group the multiple resources on Timeline Scheduler views and its relevant events are displayed accordingly under those resources.
@@ -549,7 +551,7 @@ The following code example depicts how to group the multiple resources on Timeli
     </ScheduleViews>
 </SfSchedule>
 @code{
-    DateTime CurrentDate = new DateTime(2022, 6, 1);
+    DateTime CurrentDate = new DateTime(2023, 6, 1);
     public string[] Resources { get; set; } = { "Rooms", "Owners" };
     public List<ResourceData> RoomData { get; set; } = new List<ResourceData>
     {
@@ -564,7 +566,7 @@ The following code example depicts how to group the multiple resources on Timeli
     };
     List<AppointmentData> DataSource = new List<AppointmentData>
      {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 1, 9, 30, 0) , EndTime = new DateTime(2022, 6, 1, 11, 0, 0), OwnerId = 1, RoomId = 1 }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 6, 1, 9, 30, 0) , EndTime = new DateTime(2023, 6, 1, 11, 0, 0), OwnerId = 1, RoomId = 1 }
     };
     public class AppointmentData
     {
@@ -619,13 +621,13 @@ This kind of grouping allows the Scheduler to display all the resources at a sin
     </ScheduleViews>
 </SfSchedule>
 @code{
-    DateTime CurrentDate = new DateTime(2022, 6, 1);
+    DateTime CurrentDate = new DateTime(2023, 6, 1);
     public string[] Resources { get; set; } = { "Owners" };
     List<AppointmentData> DataSource = new List<AppointmentData>
      {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 2, 9, 30, 0) , EndTime = new DateTime(2022, 6, 2, 11, 0, 0), OwnerId = 1 },
-        new AppointmentData { Id = 2, Subject = "Swimming", StartTime = new DateTime(2022, 6, 3, 10, 30, 0) , EndTime = new DateTime(2022, 6, 3, 12, 30, 0), OwnerId = 2 },
-        new AppointmentData { Id = 3, Subject = "Movie", StartTime = new DateTime(2022, 6, 4, 10, 0, 0) , EndTime = new DateTime(2022,6 , 4, 12, 0, 0), OwnerId = 3 }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 6, 1, 9, 30, 0) , EndTime = new DateTime(2023, 6, 1, 11, 0, 0), OwnerId = 1 },
+        new AppointmentData { Id = 2, Subject = "Swimming", StartTime = new DateTime(2023, 6, 2, 10, 30, 0) , EndTime = new DateTime(2023, 6, 2, 12, 30, 0), OwnerId = 2 },
+        new AppointmentData { Id = 3, Subject = "Movie", StartTime = new DateTime(2023, 6, 3, 10, 0, 0) , EndTime = new DateTime(2023,6 , 3, 12, 0, 0), OwnerId = 3 }
     };
     public List<ResourceData> OwnersData { get; set; } = new List<ResourceData>
     {
@@ -685,7 +687,7 @@ It is possible to group the resources of Scheduler in multiple levels, by mappin
     </ScheduleViews>
 </SfSchedule>
 @code{
-    DateTime CurrentDate = new DateTime(2022, 6, 1);
+    DateTime CurrentDate = new DateTime(2023, 6, 1);
     public string[] Resources { get; set; } = { "Hotels", "Rooms", "Owners" };
     public List<ResourceData> HotelData { get; set; } = new List<ResourceData>
     {
@@ -705,7 +707,7 @@ It is possible to group the resources of Scheduler in multiple levels, by mappin
     };
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 2, 9, 30, 0) , EndTime = new DateTime(2022, 6, 2, 11, 0, 0),
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 6, 2, 9, 30, 0) , EndTime = new DateTime(2023, 6, 2, 11, 0, 0),
          OwnerId = 1, RoomId = 1, HotelId = 1 }
     };
     public class AppointmentData
@@ -765,7 +767,7 @@ In multi-level grouping, Scheduler usually groups the resources on the child lev
     </ScheduleViews>
 </SfSchedule>
 @code{
-    DateTime CurrentDate = new DateTime(2022, 6, 1);
+    DateTime CurrentDate = new DateTime(2023, 6, 1);
     public string[] Resources { get; set; } = { "Rooms", "Owners" };
     public List<ResourceData> RoomData { get; set; } = new List<ResourceData>
     {
@@ -779,7 +781,7 @@ In multi-level grouping, Scheduler usually groups the resources on the child lev
     };
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 2, 9, 30, 0) , EndTime = new DateTime(2022, 6, 2, 11, 0, 0), OwnerId = 1, RoomId = 1 }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 6, 2, 9, 30, 0) , EndTime = new DateTime(2023, 6, 2, 11, 0, 0), OwnerId = 1, RoomId = 1 }
     };
     public class AppointmentData
     {
@@ -836,7 +838,7 @@ It groups the number of resources under each date and is applicable only on the 
     </ScheduleViews>
 </SfSchedule>
 @code{
-    private DateTime CurrentDate = new DateTime(2022, 6, 1);
+    private DateTime CurrentDate = new DateTime(2023, 6, 1);
     public string[] Resources { get; set; } = { "Owners" };
     public List<ResourceData> OwnersData { get; set; } = new List<ResourceData>
 {
@@ -846,7 +848,7 @@ It groups the number of resources under each date and is applicable only on the 
     };
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 2, 9, 30, 0) , EndTime = new DateTime(2022, 6, 2, 11, 0, 0), OwnerId = 1 }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 6, 2, 9, 30, 0) , EndTime = new DateTime(2023, 6, 2, 11, 0, 0), OwnerId = 1 }
     };
     public class AppointmentData
     {
@@ -902,11 +904,11 @@ N> Any actions such as create, edit or delete held on any one of the shared even
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2022, 6, 1);
+    DateTime CurrentDate = new DateTime(2023, 6, 1);
     public string[] Resources { get; set; } = { "Conferences" };
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 2, 9, 30, 0) , EndTime = new DateTime(2022, 6, 2, 11, 0, 0),
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 6, 2, 9, 30, 0) , EndTime = new DateTime(2023, 6, 2, 11, 0, 0),
         ConferenceId = new int[] { 1, 2, 3 } }
     };
     public List<ResourceData> ConferenceData { get; set; } = new List<ResourceData>
@@ -976,7 +978,7 @@ It is possible to customize the resource header cells using built-in template op
     </ScheduleViews>
 </SfSchedule>
 @code{
-    DateTime CurrentDate = new DateTime(2022, 6, 1);
+    DateTime CurrentDate = new DateTime(2023, 6, 1);
     public string[] Resources { get; set; } = { "Doctors" };
     public List<ResourceData> DoctorsData { get; set; } = new List<ResourceData>
     {
@@ -1088,7 +1090,7 @@ It is possible to customize the resource headers to display with multiple column
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2022, 6, 1);
+    DateTime CurrentDate = new DateTime(2023, 6, 1);
     private View CurrentView = View.TimelineWeek;
     public string[] GroupData { get; set; } = { "Owner" };
 
@@ -1114,7 +1116,7 @@ It is possible to customize the resource headers to display with multiple column
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
 {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 16, 9, 30, 0) , EndTime = new DateTime(2022, 6, 16, 11, 0, 0),
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 6, 16, 9, 30, 0) , EndTime = new DateTime(2023, 6, 16, 11, 0, 0),
         OwnerId = 1 }
 
     };
@@ -1294,7 +1296,7 @@ It is possible to expand and collapse the resource field. By default, resource f
     </ScheduleViews>
 </SfSchedule>
 @code{
-    private DateTime CurrentDate = new DateTime(2022, 6, 1);
+    private DateTime CurrentDate = new DateTime(2023, 6, 1);
     public string[] Resources { get; set; } = { "Rooms", "Owners" };
     public List<ResourceData> RoomData { get; set; } = new List<ResourceData>
     {
@@ -1309,7 +1311,7 @@ It is possible to expand and collapse the resource field. By default, resource f
     };
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 2, 9, 30, 0) , EndTime = new DateTime(2022, 6, 2, 11, 0, 0), OwnerId = 1, RoomId = 1 }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 6, 2, 9, 30, 0) , EndTime = new DateTime(2023, 6, 2, 11, 0, 0), OwnerId = 1, RoomId = 1 }
     };
     public class AppointmentData
     {
@@ -1375,11 +1377,11 @@ It is possible to display tooltip over the resource headers showing the resource
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2022, 6, 1);
+    DateTime CurrentDate = new DateTime(2023, 6, 1);
     public string[] Resources { get; set; } = { "Conferences" };
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-       new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 16, 9, 30, 0) , EndTime = new DateTime(2022, 6, 16, 11, 0, 0),
+       new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 6, 16, 9, 30, 0) , EndTime = new DateTime(2023, 6, 16, 11, 0, 0),
        ConferenceId = 1 }
     };
     public List<ResourceData> ConferenceData { get; set; } = new List<ResourceData>
@@ -1445,7 +1447,7 @@ By default, the colors defined on the top level resources collection will be app
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2022, 6, 1);
+    DateTime CurrentDate = new DateTime(2023, 6, 1);
     public string ResourceColor { get; set; } = "Rooms";
     public string[] Resources { get; set; } = { "Hotels", "Rooms", "Owners" };
     public List<ResourceData> HotelData { get; set; } = new List<ResourceData>
@@ -1466,7 +1468,7 @@ By default, the colors defined on the top level resources collection will be app
     };
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-            new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 16, 9, 30, 0) , EndTime = new DateTime(2022, 6, 16, 11, 0, 0),
+            new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 6, 16, 9, 30, 0) , EndTime = new DateTime(2023, 6, 16, 11, 0, 0),
             OwnerId = 1, RoomId = 1, HotelId = 1 }
     };
     public class AppointmentData
@@ -1530,7 +1532,7 @@ Different working days can be set for the resources of Scheduler using the `Work
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2022, 6, 1);
+    DateTime CurrentDate = new DateTime(2023, 6, 1);
     View CurrentView = View.WorkWeek;
     public string[] Resources { get; set; } = { "Doctors" };
     public List<ResourceData> DoctorsData { get; set; } = new List<ResourceData>
@@ -1591,7 +1593,7 @@ Working hours indicates the work hour duration of a day, which is highlighted vi
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2022, 6, 1);
+    DateTime CurrentDate = new DateTime(2023, 6, 1);
     public string[] Resources { get; set; } = { "Doctors" };
     public List<ResourceData> DoctorsData { get; set; } = new List<ResourceData>
     {
@@ -1665,10 +1667,10 @@ Some of the default changes made for compact Scheduler to render in desktop devi
 
 @code{
     private View CurrentView = View.Month;
-    public DateTime CurrentDate = new DateTime(2022, 6, 1);
+    public DateTime CurrentDate = new DateTime(2023, 6, 1);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-         new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 6, 16, 9, 30, 0) , EndTime = new DateTime(2022, 6, 16, 11, 0, 0), ProjectId = 1, TaskId = 1 }
+         new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 6, 16, 9, 30, 0) , EndTime = new DateTime(2023, 6, 16, 11, 0, 0), ProjectId = 1, TaskId = 1 }
     };
     private string[] GroupData = new string[] { "Projects", "Categories" };
     private List<ResourceData> ProjectData { get; set; } = new List<ResourceData> {
