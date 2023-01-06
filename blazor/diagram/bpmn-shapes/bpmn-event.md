@@ -52,6 +52,8 @@ The [EventType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/BpmnEditor/BpmnEvent)
+
 ![None Trigger End event event BPMNShape](../images/Bpmn-Event-End.png)
 
 ## BPMN event trigger
@@ -95,6 +97,8 @@ Event triggers are notated as icons inside the circle and they represent the spe
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/BpmnEditor/BpmnEvent)
+
 ![Message Trigger Start Event BPMN Shape](../images/Bpmn-Event-Message-Start.png)
 
 The following table illustrates the type of event triggers.
