@@ -1387,7 +1387,7 @@ In the following code example, the custom class has been added to events using [
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 @code {
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2023, 1, 31);
     public List<string> CustomClass = new List<string>()  { "custom-class" } ;
     public void OnEventRendered(EventRenderedArgs<AppointmentData> args)
     {
@@ -1395,7 +1395,7 @@ In the following code example, the custom class has been added to events using [
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData{ Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0) }
+        new AppointmentData{ Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 1, 31, 9, 30, 0) , EndTime = new DateTime(2023, 1, 31, 11, 0, 0) }
     };
 
     public class AppointmentData
@@ -1421,6 +1421,8 @@ In the following code example, the custom class has been added to events using [
 </style>
 ```
 
+![Using EventRendered Event in Blazor Scheduler](images/blazor-scheduler-appointments-eventrendered.png)
+
 Also, we can customize the events by adding or modifying its element attribute using [Attributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.EventRenderedArgs-1.html#Syncfusion_Blazor_Schedule_EventRenderedArgs_1_Attributes). In the following code example, event attributes have been modified through the `Attributes` to apply color to the events.
 
 ```cshtml
@@ -1436,7 +1438,7 @@ Also, we can customize the events by adding or modifying its element attribute u
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 @code {
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2023, 1, 31);
     public List<string> CustomClass = new List<string>() { "custom-class" };
     public void OnEventRendered(EventRenderedArgs<AppointmentData> args)
     {
@@ -1446,7 +1448,7 @@ Also, we can customize the events by adding or modifying its element attribute u
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData{ Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0) }
+        new AppointmentData{ Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 1, 31, 9, 30, 0) , EndTime = new DateTime(2023, 1, 31, 11, 0, 0) }
     };
 
     public class AppointmentData
@@ -1465,6 +1467,8 @@ Also, we can customize the events by adding or modifying its element attribute u
 }
 ```
 
+![Using EventRendered Attribute in Blazor Scheduler](images/blazor-scheduler-appointments-eventrendered-attributes.png)
+
 ### Using CssClass
 
 The customization of events can also be achieved using the built-in field [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CssClass) in which you can pass the class name to be applied to specific appointments. In the following example, the background of appointments has been changed.
@@ -1482,11 +1486,11 @@ The customization of events can also be achieved using the built-in field [CssCl
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 @code {
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2023, 1, 31);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData{ Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), CssClass = "progress" },
-        new AppointmentData{ Id = 2, Subject = "Meeting-postponed", StartTime = new DateTime(2020, 1, 28, 9, 30, 0) , EndTime = new DateTime(2020, 1, 28, 11, 0, 0), CssClass = "delayed" }
+        new AppointmentData{ Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 1, 31, 9, 30, 0) , EndTime = new DateTime(2023, 1, 31, 11, 0, 0), CssClass = "progress" },
+        new AppointmentData{ Id = 2, Subject = "Meeting-postponed", StartTime = new DateTime(2023, 1, 28, 9, 30, 0) , EndTime = new DateTime(2023, 1, 28, 11, 0, 0), CssClass = "delayed" }
     };
 
     public class AppointmentData
@@ -1518,6 +1522,8 @@ The customization of events can also be achieved using the built-in field [CssCl
     }
 </style>
 ```
+
+![Using CssClass in Blazor Scheduler](images/blazor-scheduler-appointments-cssclass.png)
 
 Also, the customization of events can be achieved using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CssClass) property of the Scheduler. In the following example, the background of appointments has been changed using the CssClass.
 
@@ -1566,6 +1572,8 @@ Also, the customization of events can be achieved using [CssClass](https://help.
 </style>
 ```
 
+![Using CssClass Property in Blazor Scheduler](images/blazor-scheduler-appointments-cssclass-property.png)
+
 N> The events can't be customized using the styles that are `height`, `width`, `top`, `left`, `right`, and `display`.
 
 ## Block Date and Time
@@ -1587,10 +1595,10 @@ It is possible to block a set of dates or a particular time ranges on the Schedu
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2023, 1, 31);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0),
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 1, 31, 9, 30, 0) , EndTime = new DateTime(2023, 1, 31, 11, 0, 0),
         IsBlock = true }
     };
     public class AppointmentData
@@ -1609,6 +1617,8 @@ It is possible to block a set of dates or a particular time ranges on the Schedu
     }
 }
 ```
+
+![Block Date and Time in Blazor Scheduler](images/blazor-scheduler-appointments-blockdays.png)
 
 Block events can also be defined to repeat on several days as shown in the following code example.
 
@@ -1649,6 +1659,8 @@ Block events can also be defined to repeat on several days as shown in the follo
     }
 }
 ```
+
+![Block Several Date and Time in Blazor Scheduler](images/blazor-scheduler-appointments-blockdays-multiple.png)
 
 ## Readonly
 
@@ -1829,7 +1841,7 @@ In the following code example, the appointments beyond current date of the sched
     }
 }
 <style>
-    .e-schedule .e-vertical-view .e-day-wrapper .e-appointment.e-past-app, .e-schedule .e-month-view .e-appointment.e-past-app{
+    .e-schedule .e-vertical-view .e-day-wrapper .e-appointment.e-past-app, .e-schedule .e-month-view .e-appointment.e-past-app {
         background-color: chocolate;
     }
 </style>
