@@ -568,7 +568,7 @@ By default, the scheduler will render the overlapping events based on the start 
     }
 }
 ```
-![Blazor Scheduler with Overlapping Events](images/blazor-scheduler-overlapping-events.png)
+![Blazor Scheduler with Overlapping Events](images/blazor-scheduler-overlapping-events.PNG)
 
 ## Drag and drop appointments
 
