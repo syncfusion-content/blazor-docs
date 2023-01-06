@@ -53,7 +53,10 @@ This package contains the base component, common classes, common functionalities
 Syncfusion.Blazor.Core.dll
 </td>
 <td>
-SfBaseComponent
+<ul>
+<li>SfBaseComponent</li>
+<li>SfMediaQuery</li>
+</ul>
 </td>
 <td>
 <ul>
@@ -861,7 +864,6 @@ Syncfusion.Blazor.Layouts.dll
 <td>
 <ul>
 <li>SfDashboardLayout</li>
-<li>SfMediaQuery</li>
 <li>SfSplitter</li>
 </ul>
 </td>
