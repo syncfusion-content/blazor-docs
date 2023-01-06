@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Tabs Component
 
-In this section, the list of events of the Tabs component have been provided which will be
+In this section, the list of events of the Tabs component has been provided which will be
 triggered for appropriate Tabs actions.
 
 The events should be provided to the Tabs using **TabEvents** tag.
