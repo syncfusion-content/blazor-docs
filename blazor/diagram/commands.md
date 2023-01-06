@@ -792,6 +792,8 @@ The following code illustrates how to execute the BringToFront command.
     } 
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands/Z-OrderCommands)
+
 
 ### SendToBack
 
@@ -851,6 +853,7 @@ The following code illustrates how to execute the SendToBack command.
     } 
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands/Z-OrderCommands)
 
 ### BringForward
 
@@ -910,6 +913,7 @@ The following code illustrates how to execute the BringForward command.
     } 
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands/Z-OrderCommands)
 
 ### SendBackward
 
@@ -969,6 +973,8 @@ The following code illustrates how to execute the SendBackward command.
     } 
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands/Z-OrderCommands)
+
 The following gif illustrates how to perfrom z-order commands.
 
 ![Z-order Commands](./images/Z-Order-Commands.gif)
@@ -1017,6 +1023,7 @@ The following code illustrates how to zoom-in/zoom out the diagram.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands/ZoomingCommands/ZoomingCommands)
 
 ## Nudge command
 
@@ -1049,6 +1056,7 @@ The following code illustrates how to execute nudge command.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands/NudgeCommand/NudgeCommand)
 
 ## Nudge by using arrow keys
 
@@ -1086,6 +1094,8 @@ The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDia
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands/NudgeCommand/NudgeCommand)
+
 
 ## Command manager
 
@@ -1201,6 +1211,8 @@ The following code example shows how to define a custom command.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands/CustomCommands/CustomCommands)
+
 
 ### Modify the existing command
 
@@ -1293,6 +1305,8 @@ The following code example shows how to disable a command and how to modify the 
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands/ModifyExistingCommands/ModifyExistingCommands)
+
 ### BringIntoView
 
 The [BringIntoView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BringIntoView_Syncfusion_Blazor_Diagram_DiagramRect_) command brings a specified rectangular region into the viewport of the diagram.
