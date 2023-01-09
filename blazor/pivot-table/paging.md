@@ -417,5 +417,3 @@ The [Template]() property allows to change the appearance of the pager UI by dis
 ```
 
 ![Pager UI customized by Template property in Blazor PivotTable](images/blazor-pivottable-pagerTemplate.png)
-
-N> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
