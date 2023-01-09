@@ -11,13 +11,9 @@ documentation: ug
 
 The Mention is a templated blazor component, that allow you to customize various part of the UI using template parameters. It allows you to render custom components or content based on your own logic. The Mention has been provided with several options to customize each suggestion list items.
 
-## Template context
-
-The templates used by the Mention component are of type `RenderFragment`, which is a special type of delegate that represents a block of Razor code that can be rendered as part of a component's user interface. The templates used by the Mention component are passed parameters that can be accessed using an implicit parameter named `context`.
-
 ## Item template
 
-The [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property allows you to specify a custom template for each individual suggestion list item in the Mention component. The `ItemTemplate` template is passed a parameter called `context`, which contains information about the current item being rendered. You can use this `context` parameter to access the data for the current item and use it to customize the content and appearance of the list item.
+The [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property allows you to specify a custom template for each individual suggestion list item in the Mention component. The `ItemTemplate` template is passed a parameter called `context`, which contains information about the current selected item object being rendered. You can use this `context` parameter to access the data for the current selected item and use it to customize the content and appearance of the list item.
 
 In the following sample, each list item is split into two columns to display relevant data using `ItemTemplate`.
 
@@ -31,7 +27,7 @@ In the following sample, each list item is split into two columns to display rel
 
 ## Display template
 
-The [DisplayTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_DisplayTemplate) property allows you to specify a template that defines how the mentioned value should be displayed in the Mention component. The `DisplayTemplate` template is passed a parameter called `context`, which contains information about the current item being rendered. You can use this `context` parameter to access the data for the current item and use it to customize the appearance of the mentioned value, such as by adding an avatar or displaying additional information about the mentioned value.
+The [DisplayTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_DisplayTemplate) property allows you to specify a template that defines how the mentioned value should be displayed in the Mention component. The `DisplayTemplate` template is passed a parameter called `context`, which contains information about the current selected item object being rendered. You can use this `context` parameter to access the data for the current selected item and use it to customize the appearance of the mentioned value, such as by adding an avatar or displaying additional information about the mentioned value.
 
 In the following sample, the selected value is displayed as a combined text of both `FirstName` and `Country` in the Mention element, which is separated by a hyphen.
 
