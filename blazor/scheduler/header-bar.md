@@ -46,7 +46,7 @@ By default, the header bar holds the date and view navigation options, through w
 }
 ```
 
-![Hide Header Bar in Blazor Scheduler](images/blazor-scheduler-headercustomization-default.png)
+![Hide Header Bar in Blazor Scheduler](images/blazor-scheduler-hide-header-bar.png)
 
 ## How to display the view options within the header bar popup
 
@@ -189,7 +189,7 @@ The Scheduler UI that displays the date text on all views are considered as the 
 </style>
 ```
 
-![Date Header Customization in Blazor Scheduler](images/blazor-scheduler-headercustomization-dateheader.png)
+![Date Header Customization in Blazor Scheduler](images/blazor-scheduler-customize-dateheader.png)
 
 ### Customization using OnRenderCell event
 
@@ -307,8 +307,6 @@ The day header cells and month header cells can be customized in the TimelineYea
     }
 }
 ```
-
-![Timeline Year Header Customization in Blazor Scheduler](images/blazor-scheduler-headercustomization-timelineyear.png)
 
 ## Customizing header indent cells
 
@@ -429,5 +427,3 @@ It is possible to customize the header indent cells using the `HeaderIndentTempl
     }
 }
 ```
-
-![Customizing Header Indent Cell in Blazor Scheduler](images/blazor-scheduler-headercustomization-headerindentcell.png)

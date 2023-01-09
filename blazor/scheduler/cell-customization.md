@@ -297,8 +297,6 @@ The cells can also be customized by using `OnRenderCell` event. In the `OnRender
 }
 ```
 
-![OnRenderCell Event in Blazor Scheduler](images/blazor-scheduler-celldimension-onrendercell.png)
-
 ## Customizing the minimum and maximum date values
 
 Providing the `MinDate` and `MaxDate` property with some date values, allows the Scheduler to set the minimum and maximum date range. The Scheduler date that lies beyond this minimum and maximum date range will be in a disabled state so that the date navigation will be blocked beyond the specified date range.
@@ -327,8 +325,6 @@ Providing the `MinDate` and `MaxDate` property with some date values, allows the
     }
 }
 ```
-
-![Minimum and Maximum Dates in Blazor Scheduler](images/blazor-scheduler-celldimension-minmaxdate.png)
 
 ## How to disable multiple cell and row selection in Schedule
 

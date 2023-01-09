@@ -1421,8 +1421,6 @@ In the following code example, the custom class has been added to events using [
 </style>
 ```
 
-![Using EventRendered Event in Blazor Scheduler](images/blazor-scheduler-cutomize-event-witheventrendered1.png)
-
 Also, we can customize the events by adding or modifying its element attribute using [Attributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.EventRenderedArgs-1.html#Syncfusion_Blazor_Schedule_EventRenderedArgs_1_Attributes). In the following code example, event attributes have been modified through the `Attributes` to apply color to the events.
 
 ```cshtml
@@ -1466,8 +1464,6 @@ Also, we can customize the events by adding or modifying its element attribute u
     }
 }
 ```
-
-![Using EventRendered Attribute in Blazor Scheduler](images/blazor-scheduler-cutomize-event-witheventrendered2.png)
 
 ### Using CssClass
 
@@ -1523,8 +1519,6 @@ The customization of events can also be achieved using the built-in field [CssCl
 </style>
 ```
 
-![Using CssClass in Blazor Scheduler](images/blazor-scheduler-customize-events-withcssclass.png)
-
 Also, the customization of events can be achieved using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CssClass) property of the Scheduler. In the following example, the background of appointments has been changed using the CssClass.
 
 ```cshtml
@@ -1571,8 +1565,6 @@ Also, the customization of events can be achieved using [CssClass](https://help.
     }
 </style>
 ```
-
-![Using CssClass Property in Blazor Scheduler](images/blazor-scheduler-customize-events-withcssclass-property.png)
 
 N> The events can't be customized using the styles that are `height`, `width`, `top`, `left`, `right`, and `display`.
 
@@ -1846,8 +1838,6 @@ In the following code example, the appointments beyond current date of the sched
     }
 </style>
 ```
-
-![Differentiate Past Time Events in Blazor Scheduler](images/blazor-scheduler-appointments-pasttimeevent.png)
 
 ## Appointments occupying entire cell
 
