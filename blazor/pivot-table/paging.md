@@ -26,7 +26,7 @@ You can also change the position, visibility, compact view, and template of the 
 @using Syncfusion.Blazor.PivotView
 @using Syncfusion.Blazor.Data
 
-    <SfPivotView TValue="PivotProductDetails" Height="350" Width="100%" EnablePaging=true>
+    <SfPivotView TValue="PivotProductDetails" Height="500" Width="100%" EnablePaging=true>
         <PivotViewPageSettings CurrentColumnPage="1" CurrentRowPage="1" ColumnPageSize="5" RowPageSize="10"></PivotViewPageSettings>
         <PivotViewPagerSettings Position=PagerPosition.Bottom EnableCompactView=false ShowColumnPager=true ShowRowPager=true ColumnPageSizes="@(new List<int>{5, 10, 20, 50, 100})" RowPageSizes="@(new List<int>{10, 50, 100, 200})" IsInversed=false ShowColumnPageSize=true ShowRowPageSize=true></PivotViewPagerSettings>
         <PivotViewDataSourceSettings TValue="PivotProductDetails" ExpandAll=true>
@@ -61,7 +61,7 @@ You can also change the position, visibility, compact view, and template of the 
 
 ```
 
-![Normal mode of Pager UI](images/Paging_UI.png)
+![Normal mode of Pager UI](images/blazor-pivottable-paging-UI.png)
 
 ### Show pager UI at top or bottom
 
@@ -73,7 +73,7 @@ N> By default, the pager UI appears at the bottom of the pivot table.
 @using Syncfusion.Blazor.PivotView
 @using Syncfusion.Blazor.Data
 
-<SfPivotView TValue="PivotProductDetails" Height="350" Width="100%" EnablePaging=true>
+<SfPivotView TValue="PivotProductDetails" Height="500" Width="100%" EnablePaging=true>
     <PivotViewPageSettings CurrentColumnPage="1" CurrentRowPage="1" ColumnPageSize="5" RowPageSize="10"></PivotViewPageSettings>
     <PivotViewPagerSettings Position=PagerPosition.Top></PivotViewPagerSettings>
     <PivotViewDataSourceSettings TValue="PivotProductDetails" ExpandAll=true>
@@ -108,7 +108,7 @@ N> By default, the pager UI appears at the bottom of the pivot table.
 
 ```
 
-![Pager UI at Top position](images/PagerPosition.png)
+![Pager UI at Top position](images/blazor-pivottable-pagerposition.png)
 
 ### Inverse pager
 
@@ -120,7 +120,7 @@ N> By default, the row pager is displayed on the left side of the pager UI, whil
 @using Syncfusion.Blazor.PivotView
 @using Syncfusion.Blazor.Data
 
-<SfPivotView TValue="PivotProductDetails" Height="350" Width="100%" EnablePaging=true>
+<SfPivotView TValue="PivotProductDetails" Height="500" Width="100%" EnablePaging=true>
     <PivotViewPageSettings CurrentColumnPage="1" CurrentRowPage="1" ColumnPageSize="5" RowPageSize="10"></PivotViewPageSettings>
     <PivotViewPagerSettings IsInversed=true></PivotViewPagerSettings>
     <PivotViewDataSourceSettings TValue="PivotProductDetails" ExpandAll=true>
@@ -155,7 +155,7 @@ N> By default, the row pager is displayed on the left side of the pager UI, whil
 
 ```
 
-![Inverse pager UI](images/PagerInverse.png)
+![Inverse pager UI](images/blazor-pivottable-pagerInverse.png)
 
 ### Compact view
 
@@ -165,7 +165,7 @@ By hiding all except the previous and next navigation buttons, the pager UI can 
 @using Syncfusion.Blazor.PivotView
 @using Syncfusion.Blazor.Data
 
-<SfPivotView TValue="PivotProductDetails" Height="350" Width="100%" EnablePaging=true>
+<SfPivotView TValue="PivotProductDetails" Height="500" Width="100%" EnablePaging=true>
     <PivotViewPageSettings CurrentColumnPage="1" CurrentRowPage="1" ColumnPageSize="5" RowPageSize="10"></PivotViewPageSettings>
     <PivotViewPagerSettings EnableCompactView=true></PivotViewPagerSettings>
     <PivotViewDataSourceSettings TValue="PivotProductDetails" ExpandAll=true>
@@ -200,7 +200,7 @@ By hiding all except the previous and next navigation buttons, the pager UI can 
 
 ```
 
-![Compact view of pager UI](images/PagerCompactView.png)
+![Compact view of pager UI](images/blazor-pivottable-pagercompactView.png)
 
 ### Show or hide paging option
 
@@ -212,7 +212,7 @@ In the following example, row pager has been disabled by setting the [ShowRowPag
 @using Syncfusion.Blazor.PivotView
 @using Syncfusion.Blazor.Data
 
-<SfPivotView TValue="PivotProductDetails" Height="350" Width="100%" EnablePaging=true>
+<SfPivotView TValue="PivotProductDetails" Height="500" Width="100%" EnablePaging=true>
     <PivotViewPageSettings CurrentColumnPage="1" CurrentRowPage="1" ColumnPageSize="5" RowPageSize="10"></PivotViewPageSettings>
     <PivotViewPagerSettings ShowRowPager=false></PivotViewPagerSettings>
     <PivotViewDataSourceSettings TValue="PivotProductDetails" ExpandAll=true>
@@ -247,7 +247,7 @@ In the following example, row pager has been disabled by setting the [ShowRowPag
 
 ```
 
-![Hided Row paging option](images/PagerHide.png)
+![Hided Row paging option](images/blazor-pivottable-pagerHide.png)
 
 ### Show or hide page size
 
@@ -257,7 +257,7 @@ By using the [ShowRowPageSize]() and [ShowColumnPageSize]() properties in [Pivot
 @using Syncfusion.Blazor.PivotView
 @using Syncfusion.Blazor.Data
 
-<SfPivotView TValue="PivotProductDetails" Height="350" Width="100%" EnablePaging=true>
+<SfPivotView TValue="PivotProductDetails" Height="500" Width="100%" EnablePaging=true>
     <PivotViewPageSettings CurrentColumnPage="1" CurrentRowPage="1" ColumnPageSize="5" RowPageSize="10"></PivotViewPageSettings>
     <PivotViewPagerSettings ShowColumnPageSize=false ShowRowPageSize=false></PivotViewPagerSettings>
     <PivotViewDataSourceSettings TValue="PivotProductDetails" ExpandAll=true>
@@ -292,7 +292,7 @@ By using the [ShowRowPageSize]() and [ShowColumnPageSize]() properties in [Pivot
 
 ```
 
-![Hided Row and Column Page sizes](images/PagerSizeHide.png)
+![Hided Row and Column Page sizes](images/blazor-pivottable-pagerSizeHide.png)
 
 ### Customize page size
 
@@ -306,7 +306,7 @@ In the following example, the "Rows per page" dropdown is set with user-defined 
 @using Syncfusion.Blazor.PivotView
 @using Syncfusion.Blazor.Data
 
-<SfPivotView TValue="PivotProductDetails" Height="350" Width="100%" EnablePaging=true>
+<SfPivotView TValue="PivotProductDetails" Height="500" Width="100%" EnablePaging=true>
     <PivotViewPageSettings CurrentColumnPage="1" CurrentRowPage="1" ColumnPageSize="5" RowPageSize="10"></PivotViewPageSettings>
     <PivotViewPagerSettings ColumnPageSizes="@(new List<int>{5, 10, 15, 20, 30})" RowPageSizes="@(new List<int>{10, 20, 30, 40, 50})"></PivotViewPagerSettings>
     <PivotViewDataSourceSettings TValue="PivotProductDetails" ExpandAll=true>
@@ -341,7 +341,7 @@ In the following example, the "Rows per page" dropdown is set with user-defined 
 
 ```
 
-![Customizing page size](images/PagerSize.png)
+![Customizing page size](images/blazor-pivottable-pagerSize.png)
 
 ### Template
 
@@ -350,10 +350,22 @@ The [Template]() property allows to change the appearance of the pager UI by dis
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 @using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Navigations
 
-<SfPivotView TValue="PivotProductDetails" Height="350" Width="100%" EnablePaging=true>
-    <PivotViewPageSettings CurrentColumnPage="1" CurrentRowPage="1" ColumnPageSize="5" RowPageSize="10"></PivotViewPageSettings>
-    <PivotViewPagerSettings ColumnPageSizes="@(new List<int>{5, 10, 15, 20, 30})" RowPageSizes="@(new List<int>{10, 20, 30, 40, 50})"></PivotViewPagerSettings>
+<SfPivotView TValue="PivotProductDetails" @ref="Parent" Height="500" Width="100%" EnablePaging=true>
+    <PivotViewPageSettings CurrentColumnPage="@currentColumnPage" CurrentRowPage="@currentRowPage" ColumnPageSize="5" RowPageSize="10"></PivotViewPageSettings>
+    <PivotViewPagerSettings>
+        <Template>
+            <div style="display: grid">
+            <div class="pager-label">Row Pager: </div>
+                <SfPager PageSize="@((int)Parent.PageSettings.RowPageSize)" ItemClick="@RowPageClick" TotalItemsCount="88" CurrentPage="@((int)currentRowPage)" NumericItemsCount="5">
+                </SfPager>
+            <div class="pager-label">Column Pager: </div>
+                <SfPager PageSize="@((int)Parent.PageSettings.ColumnPageSize)" ItemClick="@ColumnPageClick" TotalItemsCount="18" CurrentPage="@((int)currentColumnPage)" NumericItemsCount="5">
+                </SfPager>
+            </div>
+        </Template>
+    </PivotViewPagerSettings>
     <PivotViewDataSourceSettings TValue="PivotProductDetails" ExpandAll=true>
         <SfDataManager Url="https://bi.syncfusion.com/northwindservice/api/orders" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
         <PivotViewColumns>
@@ -373,7 +385,16 @@ The [Template]() property allows to change the appearance of the pager UI by dis
     </PivotViewDataSourceSettings>
     <PivotViewGridSettings ColumnWidth="120"></PivotViewGridSettings>
 </SfPivotView>
+<style>
+    .pager-label {
+        color: #9e9e9e;
+        margin-right: 10px;
+    }
+</style>
 @code {
+    private SfPivotView<PivotProductDetails> Parent;
+    private double currentRowPage = 1;
+    private double currentColumnPage = 1;
     public class PivotProductDetails
     {
         public int Quantity { get; set; }
@@ -382,6 +403,17 @@ The [Template]() property allows to change the appearance of the pager UI by dis
         public string ShipCountry { get; set; }
         public string ShipCity { get; set; }
     }
+    public void RowPageClick(PagerItemClickEventArgs args)
+    {
+        currentRowPage = args.CurrentPage;
+
+    }
+    public void ColumnPageClick(PagerItemClickEventArgs args)
+    {
+        currentColumnPage = args.CurrentPage;
+    }
 }
 
 ```
+
+![Pager UI customized by Template property](images/blazor-pivottable-pagerTemplate.png)
