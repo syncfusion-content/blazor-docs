@@ -1421,7 +1421,7 @@ In the following code example, the custom class has been added to events using [
 </style>
 ```
 
-![Using EventRendered Event in Blazor Scheduler](images/blazor-scheduler-appointments-eventrendered.png)
+![Using EventRendered Event in Blazor Scheduler](images/blazor-scheduler-cutomize-event-witheventrendered1.png)
 
 Also, we can customize the events by adding or modifying its element attribute using [Attributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.EventRenderedArgs-1.html#Syncfusion_Blazor_Schedule_EventRenderedArgs_1_Attributes). In the following code example, event attributes have been modified through the `Attributes` to apply color to the events.
 
@@ -1467,7 +1467,7 @@ Also, we can customize the events by adding or modifying its element attribute u
 }
 ```
 
-![Using EventRendered Attribute in Blazor Scheduler](images/blazor-scheduler-appointments-eventrendered-attributes.png)
+![Using EventRendered Attribute in Blazor Scheduler](images/blazor-scheduler-cutomize-event-witheventrendered2.png)
 
 ### Using CssClass
 
@@ -1523,7 +1523,7 @@ The customization of events can also be achieved using the built-in field [CssCl
 </style>
 ```
 
-![Using CssClass in Blazor Scheduler](images/blazor-scheduler-appointments-cssclass.png)
+![Using CssClass in Blazor Scheduler](images/blazor-scheduler-customize-events-withcssclass.png)
 
 Also, the customization of events can be achieved using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CssClass) property of the Scheduler. In the following example, the background of appointments has been changed using the CssClass.
 
@@ -1572,7 +1572,7 @@ Also, the customization of events can be achieved using [CssClass](https://help.
 </style>
 ```
 
-![Using CssClass Property in Blazor Scheduler](images/blazor-scheduler-appointments-cssclass-property.png)
+![Using CssClass Property in Blazor Scheduler](images/blazor-scheduler-customize-events-withcssclass-property.png)
 
 N> The events can't be customized using the styles that are `height`, `width`, `top`, `left`, `right`, and `display`.
 
@@ -1618,7 +1618,7 @@ It is possible to block a set of dates or a particular time ranges on the Schedu
 }
 ```
 
-![Block Date and Time in Blazor Scheduler](images/blazor-scheduler-appointments-blockdays.png)
+![Block Date and Time in Blazor Scheduler](images/blazor-scheduler-block-events.png)
 
 Block events can also be defined to repeat on several days as shown in the following code example.
 
@@ -1660,7 +1660,7 @@ Block events can also be defined to repeat on several days as shown in the follo
 }
 ```
 
-![Block Several Date and Time in Blazor Scheduler](images/blazor-scheduler-appointments-blockdays-multiple.png)
+![Block Several Date and Time in Blazor Scheduler](images/blazor-scheduler-multiple-block-events.png)
 
 ## Readonly
 

@@ -438,7 +438,7 @@ The resource field can be added within editor template with the following code e
 }
 ```
 
-![Add Resource Options within Editor Template in Blazor Scheduler](images/blazor-scheduler-editorwindow-resourceoption.png)
+![Add Resource Options within Editor Template in Blazor Scheduler](images/blazor-scheduler-customwindow-withresource.png)
 
 N> EditorTemplate is not applicable when we set `AllowMutiple` as true without enabling `AllowGroupEdit`, so in that case use custom editor window.
 
@@ -540,7 +540,7 @@ N> EditorTemplate is not applicable when we set `AllowMutiple` as true without e
 }
 ```
 
-![Add Recurrence Options within Editor Template in Blazor Scheduler](images/blazor-scheduler-editorwindow-recurrenceoption.png)
+![Add Recurrence Options within Editor Template in Blazor Scheduler](images/blazor-scheduler-customwindow-withrecurrence.png)
 
 ## Apply validations on editor template fields
 
@@ -648,7 +648,7 @@ In the following code example, validation has been added to the `EventType` fiel
 }
 ```
 
-![Editor Template with Validation in Blazor Scheduler](images/blazor-scheduler-editorwindow-validation.png)
+![Editor Template with Validation in Blazor Scheduler](images/blazor-scheduler-customwindow-withvalidation.png)
 
 ## Quick popups
 
@@ -1549,7 +1549,7 @@ The same indicator is displayed on all-day row in calendar views such as day, we
 }
 ```
 
-![More Event Popup in Blazor Scheduler](images/blazor-scheduler-editorwindow-moreevent.png)
+![More Event Popup in Blazor Scheduler](images/blazor-scheduler-moreevent-popup.png)
 
 ### How to prevent the display of popup when clicking on the more text indicator
 
