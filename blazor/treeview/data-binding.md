@@ -427,6 +427,457 @@ The **OrderID**, **EmployeeID**, and **ShipName** columns from orders table have
 
 ![Blazor TreeView with Remote Data](./images/blazor-treeview-remote-data.png)
 
+### Web API Adaptor
+
+The Blazor TreeView component retrieves data from the server as needed, such as when expanding a parent node to fetch its child nodes, using the DataManager component.
+
+In the following example, `WebApiAdaptor` is  used to fetch data from server side.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Data
+<div class="col-lg-12 control-section">
+    <div class="control_wrapper">
+        <SfTreeView TValue="NodeResult">
+            <TreeViewFieldsSettings TValue="NodeResult"
+                                    Id="ProductID"
+                                    Text="ProductName"
+                                    ParentID="pid"
+                                    HasChildren="haschild"
+                                    Query="TreeViewQuery">
+                <SfDataManager Url="api/Nodes" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
+            </TreeViewFieldsSettings>
+        </SfTreeView>
+    </div>
+</div>
+
+@code
+{
+    public Query TreeViewQuery = new Query();
+    public class NodeResult
+    {
+        public int? ProductID { get; set; }
+        public string? ProductName { get; set; }
+        public int? pid { get; set; }
+        public bool haschild { get; set; }
+    }
+}
+
+<style>
+    .control_wrapper {
+        max-width: 500px;
+        margin: auto;
+        border: 1px solid #dddddd;
+        border-radius: 3px;
+    }
+</style>
+
+```
+
+```csharp
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
+
+namespace BlazorTreeView.Controller
+{
+    [Route("api/[controller]")]
+    public class NodesController : ControllerBase
+    {      
+        [HttpGet]
+        public IEnumerable<NodeResult> Get()
+        {
+           
+            List<NodeResult> localData = new List<NodeResult>();
+            localData.Add(new NodeResult(1, "Parent", null, true));
+            localData.Add(new NodeResult(2, "Child1" , 1, false));
+            localData.Add(new NodeResult(3, "Child2" , 1, true));
+            localData.Add(new NodeResult(4, "Child3" , 1, false));
+            localData.Add(new NodeResult(8, "SubChild1" , 3, false));
+            localData.Add(new NodeResult(9, "SubChild2" , 3, false));
+            var data = localData.ToList();
+            var queryString = Request.Query;
+            if (queryString.Keys.Contains("$filter"))
+            {
+
+                string filter = string.Join("", queryString["$filter"].ToString().Split(' ').Skip(2)); // get filter from querystring
+                // filter the data based on the expand node id.
+                data = data.Where(d => d.pid.ToString() == filter).ToList();
+                return data;
+            }
+            else
+            {
+                // if the parent id is null.
+                data = data.Where(d => d.pid == null).ToList();
+                return data;
+            }
+             return data;
+        }
+        public class NodeResult
+        {
+            public NodeResult(int? ProductID, string ProductName, int? pid, bool haschild)
+            {
+                this.ProductID = ProductID;
+                this.ProductName = ProductName;
+                this.pid = pid;
+                this.haschild = haschild;
+            }
+            public int? ProductID { get; set; }
+            public string ProductName { get; set; }
+            public int? pid { get; set; }
+            public bool haschild { get; set; } 
+        }
+       
+    }
+}
+
+```
+
+### Sending additional parameters to the server
+
+To add custom parameters to the data request in the Blazor TreeView component, use the addParams method of the Query class and assign the Query object with additional parameters to the TreeView's **Query** property, as demonstrated in the following sample code.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Data
+<div class="control_wrapper">
+    <SfTreeView TValue="MailItem" @ref="treeview" >
+        <TreeViewFieldsSettings TValue="MailItem" Query="Query" Id="ID" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
+    </SfTreeView>
+</div>
+@code {
+    SfTreeView<MailItem> treeview;
+    public string ParamValue = "true";
+    public Query Query { get; set; }
+    public class MailItem
+    {
+        public string ID { get; set; }
+        public string ParentId { get; set; }
+        public string FolderName { get; set; }
+        public bool Expanded { get; set; }
+        public bool HasSubFolders { get; set; }
+    }
+    List<MailItem> MyFolder = new List<MailItem>();
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Query = new Query().AddParams("TreeView", ParamValue);
+        MyFolder.Add(new MailItem
+            {
+                ID = "1",
+                FolderName = "Inbox",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "2",
+                ParentId = "1",
+                FolderName = "Categories",
+                Expanded = true,
+                HasSubFolders = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "3",
+                ParentId = "2",
+                FolderName = "Primary"
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "4",
+                ParentId = "2",
+                FolderName = "Social"
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "5",
+                ParentId = "2",
+                FolderName = "Promotions"
+            });
+    }
+}
+<style>
+    .control_wrapper {
+        max-width: 500px;
+        margin: auto;
+        border: 1px solid #dddddd;
+        border-radius: 3px;
+    }
+</style>
+
+```
+## Observable collection
+
+The Blazor TreeView component's ObservableCollection provides notifications of changes made to the collection, such as when items are added, removed, or updated. It implements INotifyCollectionChanged to notify of dynamic changes to the collection, and INotifyPropertyChanged to notify of changes to property values on the client side.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+@using System.Collections.ObjectModel
+@using BlazorTreeView.Data
+
+<div class="control_wrapper">
+    <SfTreeView @ref="TreeView" TValue="ObservableDatas">
+        <TreeViewFieldsSettings DataSource="@ObservableData" Id="@nameof(ObservableDatas.Id)" Child="@nameof(ObservableDatas.Children)" Text="@nameof(ObservableDatas.Name)" HasChildren="@nameof(ObservableDatas.HasChild)" Expanded="@nameof(ObservableDatas.Expanded)"></TreeViewFieldsSettings>
+        <TreeViewEvents TValue="ObservableDatas" NodeClicked="TreeNodeClick"></TreeViewEvents>
+    </SfTreeView>
+</div>
+@if (SelectedUnderlyingData != null)
+{
+    <ObservableDatasView Value="@SelectedUnderlyingData" OnNodeAddion="NodeAdded"/>
+}
+
+@code{
+
+    public ObservableCollection<ObservableDatas> ObservableData { get; set; }
+
+    private int UniqueId { get; set; } = 10;
+    public string SelectedNode { get; set; }
+    public ObservableDatas SelectedUnderlyingData { get; set; }
+    public SfTreeView<ObservableDatas> TreeView;
+
+    protected override void OnInitialized()
+    {
+        ObservableData = ObservableDatas.GetRecords();
+    }
+
+    public void TreeNodeClick(NodeClickEventArgs args)
+    {
+        SelectedNode = args.NodeData.Id;
+        foreach (var data in ObservableData)
+        {
+            if (SelectedUnderlyingData?.Id == SelectedNode)
+            {
+                break;
+            }
+            SelectedUnderlyingData = RecurseFindData(data, SelectedNode);
+        }
+    }
+
+    public void NodeAdded(ObservableDatas node)
+    {
+        StateHasChanged();
+    }
+
+    private ObservableDatas RecurseFindData(ObservableDatas fromData, string dataId)
+    {
+        if (fromData.Id == dataId)
+        {
+            return fromData;
+        }
+        foreach (var child in fromData.Children)
+        {
+            var result = RecurseFindData(child, dataId);
+            if (result != null)
+            {
+                return result;
+            }
+        }
+        return null;
+    }
+
+    private ObservableDatas RecurseFindParent(ObservableDatas potential, string childId)
+    {
+        foreach (var child in potential.Children)
+        {
+            if (child.Id == childId)
+            {
+                return potential;
+            }
+            else
+            {
+                var result = RecurseFindParent(child, childId);
+                if (result != null)
+                    return result;
+            }
+        }
+        return null;
+    }
+}
+
+<style>
+.control_wrapper {
+    max-width: 500px;
+    margin: auto;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    max-height: 470px;
+    overflow: auto;
+}
+</style>
+```
+```cshtml
+@using BlazorTreeView.Data
+@using Syncfusion.Blazor.Inputs 
+@using Syncfusion.Blazor.Buttons
+
+<div class="col-lg-4 property-section property-custom">
+    <div class="property-panel-section">
+        <div id="observable" class="property-panel-content">
+            <div class="buttonEle">
+                <label>Node name:</label> <SfTextBox @bind-Value=@Value.Name />
+                <SfButton @onclick="AddNode">Add Child</SfButton>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    [Parameter]
+    public ObservableDatas Value { get; set; }
+
+    [Parameter]
+    public EventCallback<ObservableDatas> OnNodeAddion { get; set; }
+
+    private int UniqueId = 0;
+
+    public async Task AddNode()
+    {
+        var newId = $"{Value.Id}-{UniqueId++}";
+        Value.Children.Add(new ObservableDatas {
+            Id = newId,
+            Name = $"New node {newId}"
+        });
+
+        await OnNodeAddion.InvokeAsync(Value);
+    }
+}
+<style>
+    .buttonEle {
+        margin-left: 75px;
+        margin-top: 10px;
+    }
+</style>
+```
+```csharp
+
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+
+namespace BlazorTreeView.Data
+{
+    public class ObservableDatas : INotifyPropertyChanged
+    {
+        public List<ObservableDatas> Children { get; set; } = new List<ObservableDatas>();
+        public string Id { get; set; }
+
+        private string _name { get; set; }
+        public string Name
+        {
+            get => _name;
+            set
+            {
+                _name = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        public bool HasChild { get; set; }
+
+        private bool _expanded = false;
+
+        public bool Expanded
+        {
+            get => _expanded;
+            set
+            {
+                _expanded = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        public static ObservableCollection<ObservableDatas> GetRecords()
+        {
+            List<ObservableDatas> ListDataSource = new List<ObservableDatas>();
+            List<ObservableDatas> Folder1 = new List<ObservableDatas>();
+            ListDataSource.Add(new ObservableDatas
+            {
+                Id = "01",
+                Name = "Inbox",
+                Children = Folder1
+            });
+
+            List<ObservableDatas> Folder2 = new List<ObservableDatas>();
+
+            Folder1.Add(new ObservableDatas
+            {
+                Id = "01-01",
+                Name = "Categories",
+                Children = Folder2
+            });
+            Folder2.Add(new ObservableDatas
+            {
+                Id = "01-02",
+                Name = "Primary"
+            });
+            Folder2.Add(new ObservableDatas
+            {
+                Id = "01-03",
+                Name = "Social"
+            });
+            Folder2.Add(new ObservableDatas
+            {
+                Id = "01-04",
+                Name = "Promotions"
+            });
+
+            List<ObservableDatas> Folder3 = new List<ObservableDatas>();
+
+            ListDataSource.Add(new ObservableDatas
+            {
+                Id = "02",
+                Name = "Others",
+                Expanded = true,
+                Children = Folder3
+            });
+            List<ObservableDatas> Folder4 = new List<ObservableDatas>();
+            Folder3.Add(new ObservableDatas
+            {
+                Id = "02-01",
+                Name = "Sent Items",
+                Expanded = true,
+                Children = Folder4
+            });
+            
+            Folder4.Add(new ObservableDatas
+            {
+                Id = "02-02",
+                Name = "Delete Items"
+            });
+            Folder3.Add(new ObservableDatas
+            {
+                Id = "02-03",
+                Name = "Drafts"
+            });
+            Folder3.Add(new ObservableDatas
+            {
+                Id = "02-04",
+                Name = "Archive"
+            });
+            return new ObservableCollection<ObservableDatas>(ListDataSource);
+        }
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            var handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+}
+
+```
+
 ## Entity Framework
 
 The following steps must be followed to consume data from the **Entity Framework** in the TreeView component.
@@ -786,3 +1237,575 @@ N> The CRUD operation has been performed in the TreeView component using the con
 ```
 
 N> The fully working sample can be found [here](https://github.com/SyncfusionExamples/Blazor-treeview-entity-framework).
+
+## Load on demand
+
+The Blazor TreeView has **load on demand** ( lazy loading  ) enabled by default, which reduces the amount of data transmitted over the network when dealing with large amounts of data. It initially loads the first level nodes and, when a parent node is expanded, loads the child nodes based on the **ParentID/Child** member. The [LoadOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_LoadOnDemand) property can be disabled to render all tree nodes at the start, and the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_DataBound) event can be used to perform actions after the TreeView's data source has been populated.
+
+### Fetch data from web api on demand
+
+The Blazor TreeView component retrieves data from the server as needed, such as when expanding a parent node to fetch its child nodes, using the DataManager component.
+
+By default the [LoadOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_LoadOnDemand) property is enabled.
+
+In the following example, the `WebApiAdaptor` is used to fetch data from the server side when the load on demand feature is used.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Data
+<div class="col-lg-12 control-section">
+    <div class="control_wrapper">
+        <SfTreeView TValue="NodeResult">
+            <TreeViewFieldsSettings TValue="NodeResult"
+                                    Id="ProductID"
+                                    Text="ProductName"
+                                    ParentID="pid"
+                                    HasChildren="haschild"
+                                    Query="TreeViewQuery">
+                <SfDataManager Url="api/Nodes" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
+            </TreeViewFieldsSettings>
+        </SfTreeView>
+    </div>
+</div>
+
+@code
+{
+    public Query TreeViewQuery = new Query();
+    public class NodeResult
+    {
+        public int? ProductID { get; set; }
+        public string? ProductName { get; set; }
+        public int? pid { get; set; }
+        public bool haschild { get; set; }
+    }
+}
+
+<style>
+    .control_wrapper {
+        max-width: 500px;
+        margin: auto;
+        border: 1px solid #dddddd;
+        border-radius: 3px;
+    }
+</style>
+
+```
+
+```csharp
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
+
+namespace BlazorTreeView.Controller
+{
+    [Route("api/[controller]")]
+    public class NodesController : ControllerBase
+    {      
+        [HttpGet]
+        public IEnumerable<NodeResult> Get()
+        {
+           
+            List<NodeResult> localData = new List<NodeResult>();
+            localData.Add(new NodeResult(1, "Parent", null, true));
+            localData.Add(new NodeResult(2, "Child1" , 1, false));
+            localData.Add(new NodeResult(3, "Child2" , 1, true));
+            localData.Add(new NodeResult(4, "Child3" , 1, false));
+            localData.Add(new NodeResult(8, "SubChild1" , 3, false));
+            localData.Add(new NodeResult(9, "SubChild2" , 3, false));
+            var data = localData.ToList();
+            var queryString = Request.Query;
+            if (queryString.Keys.Contains("$filter"))
+            {
+
+                string filter = string.Join("", queryString["$filter"].ToString().Split(' ').Skip(2)); // get filter from querystring
+                // filter the data based on the expand node id.
+                data = data.Where(d => d.pid.ToString() == filter).ToList();
+                return data;
+            }
+            else
+            {
+                // if the parent id is null.
+                data = data.Where(d => d.pid == null).ToList();
+                return data;
+            }
+             return data;
+        }
+        public class NodeResult
+        {
+            public NodeResult(int? ProductID, string ProductName, int? pid, bool haschild)
+            {
+                this.ProductID = ProductID;
+                this.ProductName = ProductName;
+                this.pid = pid;
+                this.haschild = haschild;
+            }
+            public int? ProductID { get; set; }
+            public string ProductName { get; set; }
+            public int? pid { get; set; }
+            public bool haschild { get; set; } 
+        }
+       
+    }
+}
+
+```
+
+### Disable load on demand
+
+By default, the [LoadOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_LoadOnDemand) property is enabled in the Blazor TreeView component, but when it is set to false, all the tree nodes are rendered at the initial rendering.
+
+In the following example, the [LoadOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_LoadOnDemand) property is disabled.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Data
+<div class="col-lg-12 control-section">
+    <div class="control_wrapper">
+        <SfTreeView TValue="NodeResult" LoadOnDemand="false">
+            <TreeViewFieldsSettings TValue="NodeResult"
+                                    Id="ProductID"
+                                    Text="ProductName"
+                                    ParentID="pid"
+                                    HasChildren="haschild"
+                                    Query="TreeViewQuery">
+                <SfDataManager Url="api/Nodes" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
+            </TreeViewFieldsSettings>
+        </SfTreeView>
+    </div>
+</div>
+
+@code
+{
+    public Query TreeViewQuery = new Query();
+    public class NodeResult
+    {
+        public int? ProductID { get; set; }
+        public string? ProductName { get; set; }
+        public int? pid { get; set; }
+        public bool haschild { get; set; }
+    }
+}
+
+<style>
+    .control_wrapper {
+        max-width: 500px;
+        margin: auto;
+        border: 1px solid #dddddd;
+        border-radius: 3px;
+    }
+</style>
+
+```
+
+```csharp
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
+
+namespace BlazorTreeView.Controller
+{
+    [Route("api/[controller]")]
+    public class NodesController : ControllerBase
+    {      
+        [HttpGet]
+        public IEnumerable<NodeResult> Get()
+        {
+           
+            List<NodeResult> localData = new List<NodeResult>();
+            localData.Add(new NodeResult(1, "Parent", null, true));
+            localData.Add(new NodeResult(2, "Child1" , 1, false));
+            localData.Add(new NodeResult(3, "Child2" , 1, true));
+            localData.Add(new NodeResult(4, "Child3" , 1, false));
+            localData.Add(new NodeResult(8, "SubChild1" , 3, false));
+            localData.Add(new NodeResult(9, "SubChild2" , 3, false));
+            var data = localData.ToList();
+            var queryString = Request.Query;
+            if (queryString.Keys.Contains("$filter"))
+            {
+
+                string filter = string.Join("", queryString["$filter"].ToString().Split(' ').Skip(2)); // get filter from querystring
+                // filter the data based on the expand node id.
+                data = data.Where(d => d.pid.ToString() == filter).ToList();
+                return data;
+            }
+            else
+            {
+                // if the parent id is null.
+                data = data.Where(d => d.pid == null).ToList();
+                return data;
+            }
+             return data;
+        }
+        public class NodeResult
+        {
+            public NodeResult(int? ProductID, string ProductName, int? pid, bool haschild)
+            {
+                this.ProductID = ProductID;
+                this.ProductName = ProductName;
+                this.pid = pid;
+                this.haschild = haschild;
+            }
+            public int? ProductID { get; set; }
+            public string ProductName { get; set; }
+            public int? pid { get; set; }
+            public bool haschild { get; set; } 
+        }
+       
+    }
+}
+
+```
+
+### Render more nodes with more levels
+
+By default, the TreeView component includes performance optimization features. Additionally, the LoadOnDemand feature can be used to enhance performance and reduce the amount of data transmitted when working with large amounts of data.
+
+In this example, a tree node is being rendered with 25 levels of child nodes.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+<SfTreeView TValue="MailItem">
+    <TreeViewFieldsSettings TValue="MailItem" Id="ID" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
+</SfTreeView>
+
+@code {
+    public class MailItem
+    {
+        public string ID { get; set; }
+        public string ParentId { get; set; }
+        public string FolderName { get; set; }
+        public bool Expanded { get; set; }
+        public bool HasSubFolders { get; set; }
+    }
+    List<MailItem> MyFolder = new List<MailItem>();
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        MyFolder.Add(new MailItem
+            {
+                ID = "1",
+                FolderName = "Parent",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "2",
+                ParentId = "1",
+                FolderName = "Child 1",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "3",
+                ParentId = "2",
+                FolderName = "Child 2",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "4",
+                ParentId = "3",
+                FolderName = "Child 3",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "5",
+                ParentId = "4",
+                FolderName = "Child 4",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "6",
+                ParentId = "5",
+                FolderName = "Child 5",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "7",
+                ParentId = "6",
+                FolderName = "Child 6",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "8",
+                ParentId = "7",
+                FolderName = "Child 7",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "9",
+                ParentId = "8",
+                FolderName = "Child 8",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "10",
+                ParentId = "9",
+                FolderName = "Child 9",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "11",
+                ParentId = "10",
+                FolderName = "Child 10",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "12",
+                ParentId = "11",
+                FolderName = "Child 11",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "13",
+                ParentId = "12",
+                FolderName = "Child 12",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "14",
+                ParentId = "13",
+                FolderName = "Child 13",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "15",
+                ParentId = "14",
+                FolderName = "Child 14",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "16",
+                ParentId = "15",
+                FolderName = "Child 15",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "17",
+                ParentId = "16",
+                FolderName = "Child 16",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "18",
+                ParentId = "17",
+                FolderName = "Child 17",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "19",
+                ParentId = "18",
+                FolderName = "Child 18",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "20",
+                ParentId = "19",
+                FolderName = "Child 19",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "21",
+                ParentId = "20",
+                FolderName = "Child 20",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "22",
+                ParentId = "21",
+                FolderName = "Child 21",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "23",
+                ParentId = "22",
+                FolderName = "Child 22",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "24",
+                ParentId = "23",
+                FolderName = "Child 23",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "25",
+                ParentId = "24",
+                FolderName = "Child 24",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                ID = "26",
+                ParentId = "25",
+                FolderName = "Child 25",
+            });
+    }
+}
+```
+
+## Render nodes with GUID
+
+The Blazor TreeView component allows you to render tree nodes with a **GUID**. The Id field in the TreeView component is a string data type, so the GUID must be passed as a string.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+<SfTreeView TValue="DriveData" SelectedNodes="@SelectedNodes">
+    <TreeViewFieldsSettings TValue="DriveData" Id="NodeId" Text="NodeText" Child="Children" DataSource="@Drive" Expanded="Expanded"></TreeViewFieldsSettings>
+</SfTreeView>
+
+@code {
+    public string[] SelectedNodes = new string[] { "9245fe4a-d402-451c-b9ed-9c1a04247482" };
+    public class DriveData
+    {
+        public Guid NodeId { get; set; }
+        public string NodeText { get; set; }
+        public bool Expanded { get; set; }
+        public bool Selected { get; set; }
+        public List<DriveData> Children;
+    }
+
+    object Child;
+    List<DriveData> Drive = new List<DriveData>();
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        List<DriveData> Folder1 = new List<DriveData>();
+
+        Drive.Add(new DriveData
+            {
+                NodeId = new Guid("9245fe4a-d402-451c-b9ed-9c1a04247482"),
+                NodeText = "Local Disk (C:)",
+                Children = Folder1,
+            });
+
+        List<DriveData> File1 = new List<DriveData>();
+
+        Folder1.Add(new DriveData
+            {
+                NodeId = new Guid("9245fe4a-d402-451c-b9ed-9c1a04247483"),
+                NodeText = "Program Files",
+                Children = File1
+            });
+        File1.Add(new DriveData
+            {
+                NodeId = new Guid("9245fe4a-d402-451c-b9ed-9c1a04247484"),
+                NodeText = "Windows NT"
+            });
+
+        List<DriveData> File2 = new List<DriveData>();
+
+        Folder1.Add(new DriveData
+            {
+                NodeId = new Guid("9245fe4a-d402-451c-b9ed-9c1a04247485"),
+                NodeText = "Users",
+                Expanded = true,
+                Children = File2
+            });
+        File2.Add(new DriveData
+            {
+                NodeId = new Guid("9245fe4a-d402-451c-b9ed-9c1a04247486"),
+                NodeText = "Smith"
+            });
+
+        List<DriveData> File3 = new List<DriveData>();
+
+        Folder1.Add(new DriveData
+            {
+                NodeId = new Guid("9245fe4a-d402-451c-b9ed-9c1a04247487"),
+                NodeText = "Windows",
+                Children = File3
+            });
+        File3.Add(new DriveData
+            {
+                NodeId = new Guid("9245fe4a-d402-451c-b9ed-9c1a04247488"),
+                NodeText = "Boot"
+            });
+
+        List<DriveData> Folder2 = new List<DriveData>();
+
+        Drive.Add(new DriveData
+            {
+                NodeId = new Guid("9245fe4a-d402-451c-b9ed-9c1a04247489"),
+                NodeText = "Local Disk (D:)",
+                Children = Folder2,
+                Expanded = true,
+            });
+
+        List<DriveData> File4 = new List<DriveData>();
+
+        Folder2.Add(new DriveData
+            {
+                NodeId = new Guid("9245fe4a-d402-451c-b9ed-9c1a04247490"),
+                NodeText = "Personals"
+            });
+        Folder2.Add(new DriveData
+            {
+                NodeId = new Guid("9245fe4a-d402-451c-b9ed-9c1a04247491"),
+                NodeText = "Projects"
+            });
+        Folder2.Add(new DriveData
+            {
+                NodeId = new Guid("9245fe4a-d402-451c-b9ed-9c1a04247492"),
+                NodeText = "Office"
+            });
+    }
+}
+
+```
