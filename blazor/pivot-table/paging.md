@@ -61,11 +61,11 @@ You can also change the position, visibility, compact view, and template of the 
 
 ```
 
-![Normal mode of Pager UI](images/blazor-pivottable-paging-UI.png)
+![Normal mode of Pager UI in Blazor PivotTable](images/blazor-pivottable-paging-UI.png)
 
 ### Show pager UI at top or bottom
 
-You can display the pager UI at top or bottom of the pivot table by using the [Position]() property. To show the pager UI at top of the pivot table, set the [Position]() property in [PivotViewPagerSettings]() to [PagerPosition.Bottom]().
+You can display the pager UI at top or bottom of the pivot table by using the [Position]() property. To show the pager UI at top of the pivot table, set the [Position]() property in [PivotViewPagerSettings]() to [PagerPosition.Top]().
 
 N> By default, the pager UI appears at the bottom of the pivot table.
 
@@ -108,7 +108,7 @@ N> By default, the pager UI appears at the bottom of the pivot table.
 
 ```
 
-![Pager UI at Top position](images/blazor-pivottable-pagerposition.png)
+![Pager UI at Top position in Blazor PivotTable](images/blazor-pivottable-pagerposition.png)
 
 ### Inverse pager
 
@@ -155,7 +155,7 @@ N> By default, the row pager is displayed on the left side of the pager UI, whil
 
 ```
 
-![Inverse pager UI](images/blazor-pivottable-pagerInverse.png)
+![Inverse pager UI in Blazor PivotTable](images/blazor-pivottable-pagerInverse.png)
 
 ### Compact view
 
@@ -200,7 +200,7 @@ By hiding all except the previous and next navigation buttons, the pager UI can 
 
 ```
 
-![Compact view of pager UI](images/blazor-pivottable-pagercompactView.png)
+![Compact view of pager UI in Blazor PivotTable](images/blazor-pivottable-pagercompactView.png)
 
 ### Show or hide paging option
 
@@ -247,7 +247,7 @@ In the following example, row pager has been disabled by setting the [ShowRowPag
 
 ```
 
-![Hided Row paging option](images/blazor-pivottable-pagerHide.png)
+![Hided Row paging option in Blazor PivotTable Pager UI](images/blazor-pivottable-pagerHide.png)
 
 ### Show or hide page size
 
@@ -292,7 +292,7 @@ By using the [ShowRowPageSize]() and [ShowColumnPageSize]() properties in [Pivot
 
 ```
 
-![Hided Row and Column Page sizes](images/blazor-pivottable-pagerSizeHide.png)
+![Hided Row and Column Page sizes in Blazor PivotTable Pager UI](images/blazor-pivottable-pagerSizeHide.png)
 
 ### Customize page size
 
@@ -341,7 +341,7 @@ In the following example, the "Rows per page" dropdown is set with user-defined 
 
 ```
 
-![Customizing page size](images/blazor-pivottable-pagerSize.png)
+![Customizing page size in Blazor PivotTable Pager UI](images/blazor-pivottable-pagerSize.png)
 
 ### Template
 
@@ -357,12 +357,12 @@ The [Template]() property allows to change the appearance of the pager UI by dis
     <PivotViewPagerSettings>
         <Template>
             <div style="display: grid">
-            <div class="pager-label">Row Pager: </div>
-                <SfPager PageSize="@((int)Parent.PageSettings.RowPageSize)" ItemClick="@RowPageClick" TotalItemsCount="88" CurrentPage="@((int)currentRowPage)" NumericItemsCount="5">
+                <div class="pager-label">Row Pager: </div>
+                <SfPager PageSize="@((int)Parent.PageSettings.RowPageSize)" ItemClick="@RowPageClick" TotalItemsCount="@((int)context["rowCount"])" CurrentPage="@((int)currentRowPage)" NumericItemsCount="5">
                 </SfPager>
-            <div class="pager-label">Column Pager: </div>
-                <SfPager PageSize="@((int)Parent.PageSettings.ColumnPageSize)" ItemClick="@ColumnPageClick" TotalItemsCount="18" CurrentPage="@((int)currentColumnPage)" NumericItemsCount="5">
-                </SfPager>
+                <div class="pager-label">Column Pager: </div>
+                 <SfPager PageSize="@((int)Parent.PageSettings.ColumnPageSize)" ItemClick="@ColumnPageClick" TotalItemsCount="@((int)context["columnCount"])" CurrentPage="@((int)currentColumnPage)" NumericItemsCount="5">
+                 </SfPager>
             </div>
         </Template>
     </PivotViewPagerSettings>
@@ -416,4 +416,4 @@ The [Template]() property allows to change the appearance of the pager UI by dis
 
 ```
 
-![Pager UI customized by Template property](images/blazor-pivottable-pagerTemplate.png)
+![Pager UI customized by Template property in Blazor PivotTable](images/blazor-pivottable-pagerTemplate.png)
