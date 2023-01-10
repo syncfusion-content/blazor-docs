@@ -130,13 +130,20 @@ Usually a day view displays a single day with all its related appointments. It i
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="CurrentDate">
     <ScheduleViews>
         <ScheduleView Option="View.Day" Interval="3"></ScheduleView>
     </ScheduleViews>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2023, 3, 10);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 3, 10, 10, 0, 0) , EndTime = new DateTime(2023, 3, 10, 12, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2023, 3, 11, 9, 30, 0) , EndTime = new DateTime(2023, 3, 11, 12, 0, 0) }
+    };
     public class AppointmentData
     {
         public int Id { get; set; }
@@ -155,6 +162,8 @@ Usually a day view displays a single day with all its related appointments. It i
 
 N> All the above defined properties can be accessed within Day view except `AllowVirtualScrolling` and `HeaderRows`.
 
+![Displaying Day View in Blazor Scheduler](images/blazor-scheduler-views-day.png)
+
 ### Week view
 
 The Week view displays a count of 7 days (from Sunday to Saturday) with all its related appointments. The first day of the week can be changed using the `FirstDayOfWeek` which accepts the integer (Sunday=0, Monday=1, Tuesday=2 and so on) value. You can navigate to a particular date in day view from the week view by clicking on the appropriate dates on the date header bar.
@@ -162,14 +171,21 @@ The Week view displays a count of 7 days (from Sunday to Saturday) with all its 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="CurrentDate">
     <ScheduleViews>
         <ScheduleView Option="View.Day"></ScheduleView>
         <ScheduleView Option="View.Week" Interval="3" DisplayName="3 Weeks"></ScheduleView>
     </ScheduleViews>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>  
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2023, 1, 19);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 1, 19, 10, 0, 0) , EndTime = new DateTime(2023, 1, 19, 12, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2023, 1, 21, 9, 30, 0) , EndTime = new DateTime(2023, 1, 21, 12, 0, 0) }
+    };
     public class AppointmentData
     {
         public int Id { get; set; }
@@ -188,6 +204,8 @@ The Week view displays a count of 7 days (from Sunday to Saturday) with all its 
 
 N> All the above defined properties in the table can be accessed within Week and Work week views except `AllowVirtualScrolling` and `HeaderRows`.
 
+![Displaying Week View in Blazor Scheduler](images/blazor-scheduler-views-week.png)
+
 ### Work Week view
 
 The Work week view displays only the working days of a week (count of 5 days) and its associated appointments. It is possible to customize the working days on the work week view by using the `WorkDays` property which accepts an array of integer values (such as Sunday=0, Monday=1, Tuesday=2 and so on). By default, it displays from Monday to Friday (5 days). You can also navigate to a particular date in the day view from the work week view by clicking on the appropriate dates in the date header bar.
@@ -197,13 +215,20 @@ The following code example depicts how to change the start and end hours only on
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="CurrentDate">
     <ScheduleViews>
         <ScheduleView Option="View.WorkWeek" StartHour="08:00" EndHour="13:00"></ScheduleView>
     </ScheduleViews>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2023, 1, 17);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 1, 17, 10, 0, 0) , EndTime = new DateTime(2023, 1, 17, 12, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2023, 1, 19, 9, 30, 0) , EndTime = new DateTime(2023, 1, 19, 12, 0, 0) }
+    };
     public class AppointmentData
     {
         public int Id { get; set; }
@@ -222,6 +247,8 @@ The following code example depicts how to change the start and end hours only on
 
 N> The Week, Work week and Day views can display the all-day row appointments in a separate all-day row with an expand or collapse option to view it.
 
+![Displaying Work week View in Blazor Scheduler](images/blazor-scheduler-views-workweek.png)
+
 ### Month view
 
 A Month view displays the entire days of a particular month and all its related appointments. You can navigate to a particular date in the day view by clicking on the appropriate date text on the month cells.
@@ -233,13 +260,21 @@ By default, in month view, you can view single appointment on each day cell. If 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="CurrentDate">
     <ScheduleViews>
         <ScheduleView Option="View.Month" MaxEventsPerRow="2" WorkDays="@WorkingDays"></ScheduleView>
     </ScheduleViews>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 @code{
     public int[] WorkingDays { get; set; } = { 1, 3, 5 };
+    DateTime CurrentDate = new DateTime(2023, 2, 1);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 2, 13, 10, 0, 0) , EndTime = new DateTime(2023, 2, 13, 12, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2023, 2, 17, 9, 30, 0) , EndTime = new DateTime(2023, 2, 17, 12, 0, 0) },
+        new AppointmentData { Id = 3, Subject = "Seminar", StartTime = new DateTime(2023, 2, 22, 14, 30, 0) , EndTime = new DateTime(2023, 2, 22, 18, 0, 0) }
+    };
     public class AppointmentData
     {
         public int Id { get; set; }
@@ -255,6 +290,8 @@ By default, in month view, you can view single appointment on each day cell. If 
     }
 }
 ```
+
+![Displaying Month View in Blazor Scheduler](images/blazor-scheduler-views-month.png)
 
 ### Agenda view
 
@@ -265,12 +302,19 @@ The following code example depicts how to display events of four days in Agenda 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px" AgendaDaysCount="4">
+<SfSchedule TValue="AppointmentData" Height="550px" AgendaDaysCount="4" @bind-SelectedDate="CurrentDate">
     <ScheduleViews>
         <ScheduleView Option="View.Agenda"></ScheduleView>
     </ScheduleViews>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 @code{
+    DateTime CurrentDate = new DateTime(2023, 2, 13);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 2, 13, 10, 0, 0) , EndTime = new DateTime(2023, 2, 13, 12, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2023, 2, 15, 9, 30, 0) , EndTime = new DateTime(2023, 2, 15, 12, 0, 0) }
+    };
     public class AppointmentData
     {
         public int Id { get; set; }
@@ -286,6 +330,8 @@ The following code example depicts how to display events of four days in Agenda 
     }
 }
 ```
+
+![Displaying Agenda View in Blazor Scheduler](images/blazor-scheduler-views-agenda.png)
 
 ### Month Agenda view
 
@@ -296,14 +342,22 @@ The following code example shows how to hide the weekend days on `MonthAgenda` v
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="CurrentDate">
     <ScheduleViews>
         <ScheduleView Option="View.MonthAgenda" ShowWeekend="false" WorkDays="@WorkingDays"></ScheduleView>
     </ScheduleViews>
+     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
     public int[] WorkingDays { get; set; } = { 0, 3, 6 };
+    DateTime CurrentDate = new DateTime(2023, 2, 12);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 2, 12, 10, 0, 0) , EndTime = new DateTime(2023, 2, 12, 12, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2023, 2, 12, 9, 30, 0) , EndTime = new DateTime(2023, 2, 12, 12, 0, 0) },
+        new AppointmentData { Id = 3, Subject = "Seminar", StartTime = new DateTime(2023, 2, 22, 14, 30, 0) , EndTime = new DateTime(2023, 2, 22, 18, 0, 0) }
+    };
     public class AppointmentData
     {
         public int Id { get; set; }
@@ -320,6 +374,8 @@ The following code example shows how to hide the weekend days on `MonthAgenda` v
 }
 ```
 
+![Displaying Month agenda View in Blazor Scheduler](images/blazor-scheduler-views-monthagenda.png)
+
 ### Timeline views – Day, Week, Work Week
 
 Similar to the vertical day, week and work week views, the respective view shows all its appointments where the time slots are displayed horizontally. By default, the cell height adjusts as per the height set to Scheduler and you can view single appointment on each cell. If you have more than one appointment, the `+ more` text indicator will be available on the bottom of that cell, clicking on which allows you to view the hidden appointments of a day. You can decide how many appointments can render on a cell based on your Scheduler and work cell height using `MaxEventsPerRow` property within `ScheduleView` whereas its default value is `1`.
@@ -327,16 +383,23 @@ Similar to the vertical day, week and work week views, the respective view shows
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="CurrentDate">
     <ScheduleViews>
         <ScheduleView Option="View.TimelineDay" StartHour="08:00" EndHour="12:00" ShowWeekend="false" MaxEventsPerRow="10"></ScheduleView>
         <ScheduleView Option="View.TimelineWeek" IsSelected="true" MaxEventsPerRow="10"></ScheduleView>
         <ScheduleView Option="View.TimelineWorkWeek" StartHour="13:00" EndHour="20:00" WorkDays="@WorkingDays" MaxEventsPerRow="10"></ScheduleView>
         <ScheduleView Option="View.Agenda"></ScheduleView>
     </ScheduleViews>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 @code{
     public int[] WorkingDays { get; set; } = { 1, 3, 6 };
+    DateTime CurrentDate = new DateTime(2023, 2, 13);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 2, 13, 14, 0, 0) , EndTime = new DateTime(2023, 2, 13, 16, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2023, 2, 15, 13, 30, 0) , EndTime = new DateTime(2023, 2, 15, 18, 0, 0) }
+    };
     public class AppointmentData
     {
         public int Id { get; set; }
@@ -355,6 +418,8 @@ Similar to the vertical day, week and work week views, the respective view shows
 
 N> Clicking on the dates in the date header bar of Timeline day, Timeline week and Timeline work week will allow to navigate to the Agenda view.
 
+![Displaying Timeline Week View in Blazor Scheduler](images/blazor-scheduler-views-timelineweek.png)
+
 ### Timeline Month view
 
 A Timeline Month view displays the current month days along with its appointments.
@@ -362,13 +427,21 @@ A Timeline Month view displays the current month days along with its appointment
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px">
+<SfSchedule TValue="AppointmentData" Height="550px"@bind-SelectedDate="CurrentDate">
     <ScheduleViews>
         <ScheduleView Option="View.TimelineDay" StartHour="08:00" EndHour="12:00" MaxEventsPerRow="10"></ScheduleView>
         <ScheduleView Option="View.TimelineMonth" IsSelected="true" ShowWeekend="false" MaxEventsPerRow="10"></ScheduleView>
     </ScheduleViews>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 @code{
+    DateTime CurrentDate = new DateTime(2023, 2, 1);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 2, 10, 10, 0, 0) , EndTime = new DateTime(2023, 2, 10, 12, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2023, 2, 10, 9, 30, 0) , EndTime = new DateTime(2023, 2, 10, 12, 0, 0) },
+        new AppointmentData { Id = 3, Subject = "Seminar", StartTime = new DateTime(2023, 2, 22, 14, 30, 0) , EndTime = new DateTime(2023, 2, 22, 18, 0, 0) }
+    };
     public class AppointmentData
     {
         public int Id { get; set; }
@@ -387,6 +460,8 @@ A Timeline Month view displays the current month days along with its appointment
 
 N> Clicking on the dates in the date header bar of Timeline month allows to navigate to the Timeline day view.
 
+![Displaying Timeline Month View in Blazor Scheduler](images/blazor-scheduler-views-timelinemonth.png)
+
 ### Timeline Year view
 
 A Timeline Year view displays the complete year along with its appointments.
@@ -404,12 +479,12 @@ By default, the timeline year view orientation is set to Horizontal view. In thi
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 3, 10);
+    DateTime CurrentDate = new DateTime(2023, 3, 10);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 4, 0, 0, 0) , EndTime = new DateTime(2020, 3, 5, 0, 0, 0) },
-        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2020, 5, 1, 9, 30, 0) , EndTime = new DateTime(2020, 5, 1, 12, 0, 0) },
-        new AppointmentData { Id = 3, Subject = "Seminar", StartTime = new DateTime(2020, 1, 2, 9, 30, 0) , EndTime = new DateTime(2020, 1, 2, 12, 0, 0) }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 3, 4, 0, 0, 0) , EndTime = new DateTime(2023, 3, 5, 0, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2023, 5, 1, 9, 30, 0) , EndTime = new DateTime(2023, 5, 1, 12, 0, 0) },
+        new AppointmentData { Id = 3, Subject = "Seminar", StartTime = new DateTime(2023, 1, 2, 9, 30, 0) , EndTime = new DateTime(2023, 1, 2, 12, 0, 0) }
     };
     public class AppointmentData
     {
@@ -426,6 +501,8 @@ By default, the timeline year view orientation is set to Horizontal view. In thi
     }
 }
 ```
+
+![Displaying Timeline Year View in Blazor Scheduler](images/blazor-scheduler-views-timelineyear.png)
 
 #### Setting the first month of timeline year
 
@@ -442,11 +519,11 @@ By default, months in timeline year view displayed from January to December. Use
     </ScheduleViews>
 </SfSchedule>
 @code{
-    DateTime CurrentDate = new DateTime(2021, 4, 3);
+    DateTime CurrentDate = new DateTime(2023, 4, 13);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-    new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2021, 5, 13, 10, 0, 0) , EndTime = new DateTime(2021, 5, 13, 12, 0, 0) },
-    new AppointmentData { Id = 2, Subject = "Germany", StartTime = new DateTime(2021, 5, 15, 10, 0, 0) , EndTime = new DateTime(2021, 5, 15, 12, 0, 0) }
+    new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2023, 5, 3, 10, 0, 0) , EndTime = new DateTime(2023, 5, 3, 12, 0, 0) },
+    new AppointmentData { Id = 2, Subject = "Germany", StartTime = new DateTime(2023, 5, 5, 10, 0, 0) , EndTime = new DateTime(2023, 5, 5, 12, 0, 0) }
     };
     public class AppointmentData
     {
@@ -464,6 +541,8 @@ By default, months in timeline year view displayed from January to December. Use
 }
 ```
 
+![Displaying Timeline Year with First Month in Blazor Scheduler](images/blazor-scheduler-views-timelineyear-firstmonth.png)
+
 ### Year view
 
 The Year view shows a year calendar, where clicking on a particular day will display the appointments present on that date below the calendar. The day with appointments are differentiated with a circular dot below the date of the calendar.
@@ -479,12 +558,12 @@ The Year view shows a year calendar, where clicking on a particular day will dis
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 3, 10);
+    DateTime CurrentDate = new DateTime(2023, 3, 10);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 4, 0, 0, 0) , EndTime = new DateTime(2020, 3, 5, 0, 0, 0) },
-        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2020, 5, 1, 9, 30, 0) , EndTime = new DateTime(2020, 5, 1, 12, 0, 0) },
-        new AppointmentData { Id = 3, Subject = "Seminar", StartTime = new DateTime(2020, 1, 2, 9, 30, 0) , EndTime = new DateTime(2020, 1, 2, 12, 0, 0) }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 3, 4, 0, 0, 0) , EndTime = new DateTime(2023, 3, 5, 0, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2023, 5, 1, 9, 30, 0) , EndTime = new DateTime(2023, 5, 1, 12, 0, 0) },
+        new AppointmentData { Id = 3, Subject = "Seminar", StartTime = new DateTime(2023, 1, 2, 9, 30, 0) , EndTime = new DateTime(2023, 1, 2, 12, 0, 0) }
     };
     public class AppointmentData
     {
@@ -513,14 +592,21 @@ You can provide the alternative display name for such customized views on the Sc
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="550px">
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleViews>
         <ScheduleView Option="View.Day" Interval="4" DisplayName="4 Days"></ScheduleView>
         <ScheduleView Option="View.Week" IsSelected="true" Interval="3" DisplayName="3 Weeks"></ScheduleView>
     </ScheduleViews>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
 </SfSchedule>
 
 @code{
+    DateTime CurrentDate = new DateTime(2023, 2, 13);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 2, 13, 10, 0, 0) , EndTime = new DateTime(2023, 2, 13, 12, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2023, 2, 15, 9, 30, 0) , EndTime = new DateTime(2023, 2, 15, 11, 0, 0) }
+    };
     public class AppointmentData
     {
         public int Id { get; set; }
@@ -536,5 +622,7 @@ You can provide the alternative display name for such customized views on the Sc
     }
 }
 ```
+
+![Displaying Extending Intervals in Blazor Scheduler](images/blazor-scheduler-views-extendingintervals.png)
 
 N> The view intervals can be extended on all the Scheduler view modes except Agenda and Month-Agenda views.

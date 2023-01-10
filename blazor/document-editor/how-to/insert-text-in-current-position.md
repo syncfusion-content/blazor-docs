@@ -25,7 +25,6 @@ container.DocumentEditor.Editor.InsertTextAsync("Syncfusion");
 <SfDocumentEditorContainer @ref="container" EnableToolbar="true"  Height="590px" >
 </SfDocumentEditorContainer>
 @code {
-
     SfDocumentEditorContainer container;
 
     // It will insert the provided text in current selection
@@ -33,7 +32,6 @@ container.DocumentEditor.Editor.InsertTextAsync("Syncfusion");
     {
         container.DocumentEditor.Editor.InsertTextAsync("Syncfusion");
     }
-
 }
 ```
 
@@ -66,7 +64,6 @@ The following example illustrates how to insert the HTML content at current curs
 </SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
 
     public async void OnCreated(object args)
@@ -80,7 +77,6 @@ The following example illustrates how to insert the HTML content at current curs
         await container.DocumentEditor.Editor.PasteAsync(sfdtString);
     }
 }
-
 ```
 
 N> The above example illustrates inserting HTML content. Similarly, you can insert any rich-text content by converting any of the supported file formats (DOCX, DOC, WordML, HTML, RTF) to SFDT.

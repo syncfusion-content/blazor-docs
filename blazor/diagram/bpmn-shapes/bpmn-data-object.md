@@ -9,7 +9,7 @@ documentation: ug
 
 # BPMN Data Object in Blazor Diagram Component
 
-A data object represents information flowing through the process, such as data placed into the process, data resulting from the process, data that needs to be collected, or data that must be stored. To define a `DataObject`, set the shape to **DataObject** and the type property defines whether data is an input or output. You can create multiple instances of data object with the collection property of data.
+A data object represents information flowing through the process, such as data placed into the process, data resulting from the process, data that needs to be collected, or data that must be stored. To define a [BpmnDataObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnDataObject.html), the node property [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shape.html) should be set as [BpmnDataObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnDataObject.html), and the [DataObjectType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnDataObject.html#Syncfusion_Blazor_Diagram_BpmnDataObject_DataObjectType) property defines whether data is an input or output. You can indicate the collection of data object by setting the [IsCollectiveData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnDataObject.html#Syncfusion_Blazor_Diagram_BpmnDataObject_IsCollectiveData) property of [BpmnDataObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnDataObject.html) as **True.**
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -35,28 +35,23 @@ A data object represents information flowing through the process, such as data p
             Height = 100,
             // Unique Id of the node.
             ID = "node1",
-            // Sets type to Bpmn and shape to DataObject.
-            Shape = new BpmnShape()
+            // Sets shape to DataObject.
+            Shape = new BpmnDataObject()
             {
-                Type = NodeShapes.Bpmn,
-                Shape = BpmnShapes.DataObject,
-                // Sets collection to true when DataObject is not a Single instance.
-                DataObject = new BpmnDataObject()
-                {
-                    Collection = true,
-                    Type = BpmnDataObjects.Input
-                }
+                IsCollectiveData = true,
+                DataObjectType = BpmnDataObjectType.None
             }
         };
         nodes.Add(node);
     }
 }
 ```
+![ Data BPMN Shape](../images/Bpmn-DataObject-Collective-None.png)
 
 The following table contains various representation of the BPMN data object.
 
-| Boundary | Image |
-| -------- | -------- |
-| Collection Data Object | ![Collection Data BPMN Shape](../images/Dataobject.png) |
-| Data Input | ![Data Input BPMN Shape](../images/DataInput.png) |
-| Data Output | ![Data Output BPMN Shape](../images/DataOutput.png) |
+| DataObjectType | Symbol |IsCollectiveData| Description|
+| -------- | -------- |-------- | -------- |
+| None | ![Collection Data BPMN Shape](../images/Bpmn-DataObject-None.png) |![ Data BPMN Shape](../images/Bpmn-DataObject-Collective-None.png) |None of the business processes with the signified information collected within a DataObject|
+| Data Input | ![Data Input BPMN Shape](../images/Bpmn-DataObject-Input.png) |![Data Input BPMN Shape](../images/Bpmn-DataObject-Collective-Input.png) |Represents the data requirements on which the tasks in the business process depend on with the signified information collected within a DataObject|
+| Data Output | ![Data Output BPMN Shape](../images/Bpmn-DataObject-Output.png) |![Data Output BPMN Shape](../images/Bpmn-DataObject-Collective-OutPut.png) |Demonstrates information produced as the result of a business process with the signified information collected within a DataObject|

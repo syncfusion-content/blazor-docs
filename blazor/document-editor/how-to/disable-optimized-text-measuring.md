@@ -21,12 +21,10 @@ The following example code illustrates how to disable optimized text measuring i
 
 @using Syncfusion.Blazor.DocumentEditor;
 
-<SfDocumentEditorContainer @ref="container" EnableToolbar=true DocumentEditorSettings="settings">
-   
+<SfDocumentEditorContainer @ref="container" EnableToolbar=true DocumentEditorSettings="settings"> 
 </SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
     // Disable optimized text measuring improvement
     DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel() { EnableOptimizedTextMeasuring = true };
@@ -40,11 +38,9 @@ The following example code illustrates how to disable optimized text measuring i
 ```csharp
 
 @page "/"
-
 @using Syncfusion.Blazor.DocumentEditor;
 
 <SfDocumentEditor IsReadOnly="false" DocumentEditorSettings="settings">
-   
 </SfDocumentEditor>
 
 @code {
