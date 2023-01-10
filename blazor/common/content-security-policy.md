@@ -22,13 +22,11 @@ To use Syncfusion blazor components with strict CSP mode, the following directiv
 
 To enable the Blazor WebAssembly Mono runtime,`unsafe-eval` directive is mandatory for the Blazor WebAssembly project.
 
-setTimeout() is used for animations and eval() function is used for the diagram(classic) component. Hence, `unsafe-eval` is necessary for those components.
-
-In Case, syncfusion CDN is referred in our application. you must also add the cdn link reference in scripts and stylesheet directive.
+In our syncfusion component, setTimeout() function is used for animations functionality. so that, `unsafe-eval` is necessary for those components.
 
 The resulting meta tag should be included in the <head> tag of your webpage, and should be registered in the `wwwroot/index.html` file in a Blazor WebAssembly application, and in the `~/Pages/_Host.cshtml` file in a Blazor Server application.
 
-        N> If you do not use our CDN services, you may remove their domains from our styles and script directives. If your application does not include any animation related syncfusion component, the `unsafe-eval` directive is not needed for CSP meta tag.
+        N> If your application does not include any animation related syncfusion component, the `unsafe-eval` directive is not needed for CSP meta tag.
 
 ```html
 <meta http-equiv="Content-Security-Policy"
