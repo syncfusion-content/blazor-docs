@@ -464,7 +464,7 @@ This can be demonstrated in the following sample:
 
 ## Change default search operator of the column chooser
 
-The default operator for the column chooser search is **StartsWith** but you can modify it by using the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Operator.html) property of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) class.
+The default operator for the column chooser search is **StartsWith**. It is possible to change the default operator using the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Operator.html) property of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) class.
 
 This is demonstrated in the following sample.
 
