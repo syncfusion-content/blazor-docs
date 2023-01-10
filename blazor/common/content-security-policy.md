@@ -24,9 +24,9 @@ To enable the Blazor WebAssembly Mono runtime,`unsafe-eval` directive is mandato
 
 In our syncfusion component, setTimeout() function is used for animations functionality. so that, `unsafe-eval` is necessary for those components.
 
-The resulting meta tag should be included in the <head> tag of your webpage, and should be registered in the `wwwroot/index.html` file in a Blazor WebAssembly application, and in the `~/Pages/_Host.cshtml` file in a Blazor Server application.
-
         N> If your application does not include any animation related syncfusion component, the `unsafe-eval` directive is not needed for CSP meta tag.
+
+The resulting meta tag should be included in the <head> tag of your webpage, and should be registered in the `wwwroot/index.html` file in a Blazor WebAssembly application, and in the `~/Pages/_Host.cshtml` file in a Blazor Server application.
 
 ```html
 <meta http-equiv="Content-Security-Policy"
@@ -35,8 +35,8 @@ The resulting meta tag should be included in the <head> tag of your webpage, and
         connect-src 'self' https: wss:;
         img-src data: https:;
         object-src 'none';
-        script-src 'self' 'unsafe-eval' https://cdn.syncfusion.com/blazor/;
-        style-src 'self' 'unsafe-inline' https://cdn.syncfusion.com/blazor/;
+        script-src 'self' 'unsafe-eval';
+        style-src 'self' 'unsafe-inline';
         font-src 'self' data:;
         upgrade-insecure-requests;">
 ```
