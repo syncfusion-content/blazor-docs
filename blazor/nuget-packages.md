@@ -53,7 +53,10 @@ This package contains the base component, common classes, common functionalities
 Syncfusion.Blazor.Core.dll
 </td>
 <td>
-SfBaseComponent
+<ul>
+<li>SfBaseComponent</li>
+<li>SfMediaQuery</li>
+</ul>
 </td>
 <td>
 <ul>
@@ -861,7 +864,6 @@ Syncfusion.Blazor.Layouts.dll
 <td>
 <ul>
 <li>SfDashboardLayout</li>
-<li>SfMediaQuery</li>
 <li>SfSplitter</li>
 </ul>
 </td>
@@ -1169,8 +1171,8 @@ SfPdfViewerServer
 </table>
 
 N> For developing Linux or Mac (OSX) operating system, use the following corresponding libraries:
-<br/>* For Linux, use [Syncfusion.Blazor.PdfViewerServer.Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux)
-<br/>* For Mac (OSX), use [Syncfusion.Blazor.PdfViewerServer.OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX)
+<br/> * For Linux, use [Syncfusion.Blazor.PdfViewerServer.Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux)
+<br/> * For Mac (OSX), use [Syncfusion.Blazor.PdfViewerServer.OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX)
 
 ### Syncfusion.Blazor.PivotTable
 
