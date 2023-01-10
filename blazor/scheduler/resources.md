@@ -1631,6 +1631,7 @@ In this example, a resource named `Will Smith` is depicted with working hours ra
 ![Resources with Different Workhours in Blazor Scheduler](images/blazor-schedule-differentworkhour.png)
 
 ### Hide non-working days when grouped by date
+
 In Scheduler, you can set custom work days for each resource and group the Scheduler by date to display these work days. By default, the Scheduler will show all days when it is grouped by date, even if they are not included in the custom work days for the resources. However, you can use the [HideNonWorkingDays](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleGroup.html#Syncfusion_Blazor_Schedule_ScheduleGroup_HideNonWorkingDays) property to only display the custom work days in the Scheduler.
 To use the `HideNonWorkingDays` property, you need to include it in the configuration options for your Scheduler component. Set the value of `HideNonWorkingDays` to `true` to enable this feature.
 **Example:** To display the Scheduler with resources grouped by date for custom working days,
