@@ -45,7 +45,6 @@ The Syncfusion Blazor UI input and editor components can be validated by the sta
     ```
 
     N> [DataAnnotationsValidator](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.dataannotationsvalidator?view=aspnetcore-5.0) - Attaches validation support to an `EditContext` using data annotations.
-    <br/>
     <br/>[ValidationSummary](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.forms.validationsummary?view=aspnetcore-5.0) - Used to display a summarized list of all validation messages.
 
 3. Add any desired [Syncfusion components](#blazor-form-validation-supported-components) inside the `EditForm` and provide the values through `@bind-` property.
