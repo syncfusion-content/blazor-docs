@@ -595,7 +595,7 @@ The following code example depicts how to group the multiple resources on Timeli
 }
 ```
 The following image shows the multiple resources rendering on the Timeline view Scheduler.
-![Timeline Resource view in Blazor Scheduler](images/blazor-scheduler-timelineresourceview.png)
+![Timeline Resource view in Blazor Scheduler](images/blazor-scheduler-resource-timeline.png)
 
 ### Grouping single-level resources
 
@@ -658,7 +658,7 @@ This kind of grouping allows the Scheduler to display all the resources at a sin
 }
 ```
 The following image display the Scheduler with single level resource grouping.
-![Grouping single-level resources in Blazor Scheduler](images/blazor-scheduler-groupingsinglelevelresources.png)
+![Grouping single-level resources in Blazor Scheduler](images/blazor-scheduler-singlelevel.png)
 
 N> The `Name` field defined in the **Resources** collection namely `Owners` will be mapped within the `Group` property, in order to enable the grouping option with those resource levels on the Scheduler.
 
@@ -741,7 +741,7 @@ It is possible to group the resources of Scheduler in multiple levels, by mappin
 }
 ```
 The following image displays the resources of Scheduler in multi levels.
-![Grouping multi-level resources in Blazor Scheduler](images/blazor-scheduler-groupingmultiplelevelresources.png)
+![Grouping multi-level resources in Blazor Scheduler](images/blazor-scheduler-multiplelevel.png)
 
 ### One-to-One grouping
 
@@ -873,7 +873,7 @@ It groups the number of resources under each date and is applicable only on the 
 }
 ```
 
-![Grouping Resources by Date in Blazor Scheduler](images/blazor-scheduler-grouping-resource-by-date.png)
+![Grouping Resources by Date in Blazor Scheduler](images/blazor-scheduler-resource-by-date.png)
 
 N> This kind of grouping by date is not applicable on any of the **timeline views**.
 
@@ -939,7 +939,7 @@ N> Any actions such as create, edit or delete held on any one of the shared even
     }
 }
 ```
-![Grouping Resources as shared events](images/blazor-scheduler-sharedevents.png)
+![Grouping Resources as shared events in Blazor Scheduler](images/blazor-scheduler-sharedevents.png)
 
 ## Simple resource header customization
 
@@ -1340,7 +1340,7 @@ It is possible to expand and collapse the resource field. By default, resource f
     }
 }
 ```
-![Blazor Scheduler expand and collapse resources](images/blazor-schedule-expandandcollapse.png)
+![Blazor Scheduler expand and collapse resources](images/blazor-schedule-expand-collapse.png)
 
 ## Displaying tooltip for resource headers
 
@@ -1501,7 +1501,7 @@ By default, the colors defined on the top level resources collection will be app
     }
 }
 ```
-![Blazor Scheduler tooltip for resource headers](images/blazor-schedule-resourccecolors.png)
+![Blazor Scheduler tooltip for resource headers](images/blazor-schedule-resource-color.png)
 
 N> The value of the `ResourceColorField` field should be mapped with the `Name` value given within the `ScheduleResource`.
 
@@ -1628,7 +1628,7 @@ Working hours indicates the work hour duration of a day, which is highlighted vi
 
 In this example, a resource named `Will Smith` is depicted with working hours ranging from 7.00 AM to 1.00 PM and is visually illustrated with active colors, whereas the other two resources have different working hours set.
 
-![Resources with Different Workhours in Blazor Scheduler](images/blazor-schedule-differentworkhour.png)
+![Resources with Different Workhours in Blazor Scheduler](images/blazor-schedule-different-workhour.png)
 
 ### Hide non-working days when grouped by date
 
