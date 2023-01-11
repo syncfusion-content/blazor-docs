@@ -568,7 +568,7 @@ By default, the scheduler will render the overlapping events based on the start 
     }
 }
 ```
-![Blazor Scheduler with Overlapping Events](images/blazor-scheduler-overlapping-events.PNG)
+![Blazor Scheduler with Overlapping Events](images/blazor-scheduler-overlapping-events.png)
 
 ## Drag and drop appointments
 
@@ -1880,7 +1880,7 @@ More indicator can be shown if more than one appointment is available in a same 
 }
 ```
 
-![Differentiate Past Time Events in Blazor Scheduler](images/blazor-scheduler-appointments-occupyentirecell.png)
+![Differentiate Past Time Events in Blazor Scheduler](images/blazor-scheduler-appointments-entirecell.png)
 
 N> The `EnableIndicator` property will work, only when the `EnableMaxHeight` property value is set to true.
 
@@ -1982,7 +1982,7 @@ After enabling the default tooltip, it is possible to customize the display of n
 }
 ```
 
-![Tooltip in Blazor Scheduler](images/blazor-scheduler-appointments-tooltiptemplate.png)
+![Tooltip in Blazor Scheduler](images/blazor-scheduler-appointments-tooltip-template.png)
 
 N> All the field names that are mapped from the Scheduler dataSource to the appropriate field properties such as subject, description, location, startTime and endTime within the `ScheduleEventSettings` can be accessed within the template.
 

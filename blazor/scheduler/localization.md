@@ -44,7 +44,7 @@ Scheduler can be used with all valid date formats and by default it follows the 
 }
 ```
 
-![Date Format in Blazor Scheduler](images/blazor-scheduler-globalization-dateformat.png)
+![Date Format in Blazor Scheduler](images/blazor-scheduler-dateformat.png)
 
 ## Time mode
 
@@ -80,7 +80,7 @@ The time mode of the Scheduler can be either 12 or 24 hours format which is comp
 }
 ```
 
-![Time Format in Blazor Scheduler](images/blazor-scheduler-globalization-timeformat.png)
+![Time Format in Blazor Scheduler](images/blazor-scheduler-timeformat.png)
 
 ## Displaying Scheduler in RTL mode
 
@@ -116,7 +116,7 @@ The Scheduler layout and its behavior can be changed as per the common RTL (Righ
 }
 ```
 
-![RTL Mode in Blazor Scheduler](images/blazor-scheduler-globalization-rtlmode.png)
+![RTL Mode in Blazor Scheduler](images/blazor-scheduler-rtl.png)
 
 ## See Also
 

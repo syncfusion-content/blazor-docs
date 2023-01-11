@@ -230,7 +230,5 @@ In Blazor Scheduler, templates can be applied when [`AllowVirtualScrolling`](htt
 }
 ```
 
-![Displaying Virtual Scrolling with Template in Blazor Scheduler](images/blazor-scheduler-virtualscrollingWithTemplate.gif)
-
 N>  For now, the virtual loading of resources and events is not supported in `Month Agenda`, `Year` and `TimelineYear` (Horizontal Orientation) views.
 By default Virtual scrolling displays only 30 resources. You can increase or decrease the number of resources by using [VirtualResourceCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleView.html#Syncfusion_Blazor_Schedule_ScheduleView_VirtualResourceCount) property.

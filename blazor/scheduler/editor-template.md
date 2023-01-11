@@ -23,7 +23,7 @@ N> You can also prevent the editor window from opening, by rendering Scheduler i
 
 You can change the header title and the text of buttons displayed at the footer of the editor window by changing the appropriate localized word collection in the resx file of your culture file available in the following directory `Project root folder > Resources > SfResources-en-US.resx` like the below image.
 
-![Customizing Local Words in resx file of Blazor Scheduler](images/blazor-scheduler-custom-word-in-resx-file.png)
+![Customizing Local Words in resx file of Blazor Scheduler](images/blazor-scheduler-custom-word-in-resx.png)
 
 The editor window opening for creating new event will be displayed as in the following image after changing the localized words.
 

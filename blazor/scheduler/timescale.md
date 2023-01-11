@@ -48,7 +48,7 @@ The `Interval` and `SlotCount` properties can be used together on the Scheduler 
 }
 ```
 
-![Time Slot Duration in Blazor Scheduler](images/blazor-scheduler-timescale-timeslot.png)
+![Time Slot Duration in Blazor Scheduler](images/blazor-scheduler-timeslot.png)
 
 ## Customizing time cells using template
 
@@ -102,7 +102,7 @@ The template option is available to allow customization of time slots which are 
 }
 ```
 
-![Customizing Time Cells in Blazor Scheduler](images/blazor-scheduler-timescale-customtimecell.png)
+![Customizing Time Cells in Blazor Scheduler](images/blazor-scheduler-custom-timecell.png)
 
 ## Hide the timescale
 
@@ -136,7 +136,7 @@ The grid lines which indicates the exact time duration can be enabled or disable
 }
 ```
 
-![Hide Time Scale in Blazor Scheduler](images/blazor-scheduler-timescale-hidetimecell.png)
+![Hide Time Scale in Blazor Scheduler](images/blazor-scheduler-hide-timecell.png)
 
 ## Highlighting current date and time
 
@@ -169,4 +169,4 @@ By default, Scheduler indicates current date with a highlighted date header on a
 }
 ```
 
-![Highlight urrent Time in Blazor Scheduler](images/blazor-scheduler-timescale-highlight.png)
+![Highlight current Time in Blazor Scheduler](images/blazor-scheduler-highlight.png)
