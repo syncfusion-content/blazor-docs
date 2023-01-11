@@ -35,7 +35,7 @@ These directives should be included in the <head> tag of the application's webpa
         upgrade-insecure-requests;">
 ```
 
-> If the application does not use Syncfusion CDN services, the CDN domain references should be removed from the CSP meta tag. Additionally, if the application does not include any animation-enabled Syncfusion components, the unsafe-eval directive is not needed in the CSP meta tag.
+> If the application does not use Syncfusion CDN services, the CDN domain references should be removed from the CSP meta tag. Additionally, if the application does not include any animation-enabled Syncfusion components, the `unsafe-eval` directive is not needed in the CSP meta tag.
 
 ## See also
 
