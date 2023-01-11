@@ -57,7 +57,7 @@ N> The `Hour` row is not applicable for Timeline month view.
 }
 ```
 
-![Timeline Header Rows in Blazor Scheduler](images/blazor-scheduler-timelineheaderrows-default.png)
+![Timeline Header Rows in Blazor Scheduler](images/blazor-scheduler-headerrow-default.png)
 
 ## Display year and month rows in timeline views
 
@@ -92,7 +92,7 @@ To display the timeline Scheduler simply with year and month names alone, define
 }
 ```
 
-![Display year and month rows in timeline views](images/blazor-scheduler-timelineheaderrows-monthandyear.png)
+![Display Year and Month rows in Blazor Scheduler timeline views](images/blazor-scheduler-headerrow-month-year.png)
 
 ## Display week numbers in timeline views
 
@@ -129,7 +129,7 @@ The week number can be displayed in a separate header row of the timeline Schedu
 }
 ```
 
-![Display week numbers in timeline views](images/blazor-scheduler-timelineheaderrows-weeknumber.png)
+![Display Week numbers in Blazor Scheduler timeline views](images/blazor-scheduler-headerrow-weeknumber.png)
 
 ## Timeline view displaying dates of a complete year
 
@@ -164,7 +164,7 @@ It is possible to display a complete year in a timeline view by setting `Interva
 }
 ```
 
-![Display dates of a complete year in timeline views](images/blazor-scheduler-timelineheaderrows-dates.png)
+![Display dates of a complete year in Blazor Scheduler timeline views](images/blazor-scheduler-headerrow-dates.png)
 
 ## Customizing the header rows using template
 
@@ -226,4 +226,4 @@ The text of the header rows can be customized and display any images or format t
 }
 ```
 
-![Display customize header rows using template](images/blazor-scheduler-timelineheaderrows-customizeheaderrow.png)
+![Display customize header rows using template in  Blazor Scheduler](images/blazor-scheduler-headerrow-custom-header.png)
