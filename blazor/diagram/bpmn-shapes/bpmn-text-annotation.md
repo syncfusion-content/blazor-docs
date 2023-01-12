@@ -68,6 +68,8 @@ documentation: ug
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/BpmnEditor/BpmnTextAnnotation)
+
 ![Auto BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png)
 
 The following code example represents how to create a TextAnnotation and connect the Activity and TextAnnotation shape.
@@ -132,6 +134,8 @@ The following code example represents how to create a TextAnnotation and connect
 }
 
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/BpmnEditor/BpmnTextAnnotation)
+
 ![Auto BPMN Shape](../images/bpmn-text-annotation_WithTarget.png) 
 
 ## How to connect the TextAnnotation to BPMNNode
