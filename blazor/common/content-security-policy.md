@@ -21,11 +21,40 @@ To use Syncfusion blazor components with strict CSP mode, the following directiv
 * `script-src 'self' unsafe-eval` - This directive allows for the use of the `new()` and `eval()` functions. Used in animation enabled Syncfusion components.
 
 These directives should be included in the `<head>` tag of the application's webpage, typically in the 
- * **wwwroot/index.html** file for a Blazor WebAssembly application.
- * **~/Pages/_Host.cshtml** file for a Blazor Server application.
+* For **Blazor WebAssembly application**, refer style sheet inside the `<head>` of **wwwroot/index.html** file.
+* For **Blazor Server application**, refer style sheet inside the `<head>` of 
+    * **~/Pages/_Host.cshtml** file for .NET 3 and .NET 5.
+    * **~/Pages/_Layout.cshtml** for .NET 6 and above.
 
-```html
-<meta http-equiv="Content-Security-Policy"
+{% tabs %}
+{% highlight html tabtitle="HTML" hl_lines="9 10" %}
+
+<head>
+    ...
+    <meta http-equiv="Content-Security-Policy"
+        content="base-uri 'self';
+        default-src 'self';
+        connect-src 'self' https: wss:;
+        img-src data: https:;
+        object-src 'none';
+        script-src 'self' 'unsafe-eval';
+        style-src 'self' 'unsafe-inline';
+        font-src 'self' data:;
+        upgrade-insecure-requests;">
+    ...
+</head>
+```
+{% endhighlight %}
+{% endtabs %}
+
+if you are referencing script and style references from CDN, then add CDN domain reference in CSP meta tag.
+
+{% tabs %}
+{% highlight html tabtitle="HTML" hl_lines="9 10" %}
+
+<head>
+    ...
+    <meta http-equiv="Content-Security-Policy"
         content="base-uri 'self';
         default-src 'self';
         connect-src 'self' https: wss:;
@@ -35,9 +64,12 @@ These directives should be included in the `<head>` tag of the application's web
         style-src 'self' 'unsafe-inline' https://cdn.syncfusion.com/blazor/;
         font-src 'self' data:;
         upgrade-insecure-requests;">
-```
+    ...
+</head>
 
-> If the application does not use Syncfusion CDN services, the CDN domain references should be removed from the CSP meta tag. Additionally, if the application does not include any animation-enabled Syncfusion components, the `unsafe-eval` directive is not needed in the CSP meta tag.
+{% endhighlight %}
+{% endtabs %}
+
 
 ## See also
 
