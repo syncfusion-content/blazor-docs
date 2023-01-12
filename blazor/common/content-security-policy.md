@@ -89,7 +89,7 @@ These directives should be included in the `<head>` tag of the application's web
 if you are referencing script and style references from CDN, then add CDN domain reference in CSP meta tag.
 
 {% tabs %}
-{% highlight html tabtitle="Blazor WebAssembly (HTML)" hl_lines="9 10" %}
+{% highlight html tabtitle="Blazor WebAssembly (~/index.html)" hl_lines="9 10" %}
 
 <head>
     ...
