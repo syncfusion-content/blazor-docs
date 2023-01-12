@@ -62,4 +62,4 @@ N> Use the `Syncfusion.EJ2.PdfViewer.AspNet.Core.Linux` package in your applicat
 
 N> Only in web-assembly can we set the reference path. We can't set the reference path in server-side application because of service dependencies that are not available.
 
-To set the reference path in web assembly [refer to this link for more details](https://ej2.syncfusion.com/aspnetmvc/documentation/pdfviewer/how-to/resolve-pdfium-issue)
+To set the reference path in web-assembly [refer to this link for more details](https://ej2.syncfusion.com/aspnetmvc/documentation/pdfviewer/how-to/resolve-pdfium-issue)
