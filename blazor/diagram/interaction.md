@@ -60,7 +60,7 @@ An element can be selected by clicking that element. During single click, all pr
     }
 }
 ```
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Interaction)
 ## Selecting a group
 
 When a child element of any group is clicked, its contained group is selected instead of the child element. With consecutive clicks on the selected element, selection is changed from top to bottom in the hierarchy of parent group to its children.
@@ -134,7 +134,7 @@ The [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
     }
 }
 ```
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Interaction)
 For more information about dragging, refer [Node Drag](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction/#drag)
 
 ## Resize
@@ -184,6 +184,7 @@ For more information about dragging, refer [Node Drag](https://blazor.syncfusion
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Interaction)
 
 For more information about resizing, refer [Node Resize](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction/#resize)
 
@@ -237,6 +238,7 @@ N> While dragging and resizing, the objects are snapped towards the nearest obje
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Interaction)
 
 For more information about resizing, refer [Node Rotate](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction/#rotate)
 
@@ -330,7 +332,7 @@ For more information, refer [End Point Dragging](https://blazor.syncfusion.com/d
     }
 }
 ```
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Interaction)
 ## Straight segment editing
 
 * End point of each straight segment is represented by a thumb that enables to edit the segment.
@@ -411,6 +413,7 @@ For more information about straight segment editing, refer [Straight Segment Edi
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Interaction)
 
 For more information about orthogonal segment editing, refer [Orthogonal Segment Editing](https://blazor.syncfusion.com/documentation/diagram/connectors/interactions/#orthogonal-segment-editing).
 
@@ -482,6 +485,7 @@ The diagram component notifies the mouse button clicked. For example, whenever t
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Interaction)
 
 ## Appearance of the user handle
 
@@ -503,8 +507,6 @@ The following table illustrates those commands with the associated key values.
 | Shortcut Key | Command | Description|
 |--------------|---------|------------|
 | Ctrl + A | [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectAll) | Select all nodes/connectors in the diagram.|
-| Ctrl + Plus | [ZoomIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Zoom_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) | Zoom in the diagram.|
-| Ctrl + Minus | [ZoomOut](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Zoom_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) | Zoom out the diagram.|
 | Ctrl + C | [Copy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Copy) | Copy the diagram selected elements.|
 | Ctrl + V | [Paste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Paste) | Pastes the copied elements.|
 | Ctrl + X | [Cut](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Cut) | Cuts the selected elements.|

@@ -15,14 +15,11 @@ Diagram allows you to set size for annotations by using the Height and Width pro
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-
 <SfDiagramComponent Height="600px" Connectors="@connectors" />
-
 @code
 {
     // Defines diagram's connector collection.
     DiagramObjectCollection<Connector> connectors;
-
     protected override void OnInitialized()
     {
         connectors = new DiagramObjectCollection<Connector>();
@@ -47,6 +44,7 @@ Diagram allows you to set size for annotations by using the Height and Width pro
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Annotations/Appearance)
 
 ![Changing Annotation Size in Blazor Diagram](../images/blazor-diagram-annotation-size.png)
 
@@ -92,6 +90,7 @@ Diagram provides support to add a [Hyperlink](https://help.syncfusion.com/cr/bla
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Annotations/Appearance)
 
 ![Annotation with Hyperlink in Blazor Diagram](../images/blazor-diagram-annotation-with-hyperlink.png)
 
@@ -136,6 +135,7 @@ Diagram provides support to add a [Hyperlink](https://help.syncfusion.com/cr/bla
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Annotations/Appearance)
 
 ![HyperLink with Content in Blazor Diagram](../images/blazor-diagram-hyperlink-content.png)
 
@@ -182,6 +182,7 @@ The [TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Annotations/Appearance)
 
 | TextWrapping | Description | Image |
 | -------- | -------- | -------- |
@@ -239,6 +240,7 @@ The following code sample shows how the different types of overflow property wor
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Annotations/Appearance)
 
 | TextOverflow | Wrapping | Image |
 | -------- | -------- | -------- |
@@ -310,6 +312,7 @@ The Fill, Border, and Opacity appearances of the text can also be customized wit
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Annotations/Appearance)
 
 ![Blazor Diagram Label with Custom Annotation](../images/blazor-diagram-label-with-custom-annotation.png)
 
@@ -375,6 +378,7 @@ You can change the font style of the annotations with the font specific properti
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Annotations/Appearance)
 
 ## Change the editing mode
 
@@ -426,6 +430,7 @@ Diagram allows to create read-only annotations. You have to set the read-only pr
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Annotations/Appearance)
 
 ## Create multiple annotations
 
@@ -506,6 +511,7 @@ You can add any number of annotations to a node or connector. The following code
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Annotations/Appearance)
 
 ![Blazor Diagram with Multiple Annotations](../images/blazor-diagram-multiple-annotations.png)
 

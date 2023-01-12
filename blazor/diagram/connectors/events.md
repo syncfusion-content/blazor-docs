@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Diagram Component
 
-## Selection change event
+## Selection change
 
 * While selecting the diagram elements, the following events can be used to do the customization.
 * When selecting/unselecting the diagram elements, the following events will be triggered to do customization on those events.
@@ -81,8 +81,9 @@ The following code example explains how to get the selection change event in the
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Events)
 
-## Position change event
+## Position change
 
 * While dragging the diagram elements, the following events can be used to do the customization.
 
@@ -90,7 +91,6 @@ The following code example explains how to get the selection change event in the
 |------------|-----------|------------------------|
 |[PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging)|[PositionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangingEventArgs.html)|Triggers while dragging the elements in the diagram.|
 |[PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged)|[PositionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangedEventArgs.html)|Triggers when the node's/connector's position is changed.|
-
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -152,8 +152,9 @@ The following code example explains how to get the selection change event in the
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Events)
 
-## Connection change event
+## Connection change
 
 * While changing the connection of the connector, the following events can be used to do the customization.
 
@@ -230,203 +231,7 @@ The following code example explains how to get the selection change event in the
     }
 }
 ```
-## Source point change event
-* While changing the source point  of the connector, the following events can be used to do the customization.
-
-|Event Name|Arguments|Description|
-|------------|-----------|------------------------|
-|[SourcePointChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SourcePointChanging)|[EndPointChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.EndPointChangingEventArgs.html)|Triggers while dragging the connector’s source end in the diagram.|
-|[SourcePointChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SourcePointChanged)|[EndPointChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.EndPointChangedEventArgs.html)|Triggers when the connector’s source point is changed.|
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-
-<SfDiagramComponent @ref="Diagram" Width="1000px" SourcePointChanging="@OnSourcePointChanging" SourcePointChanged="@OnSourcePointChanged" Height="500px" Connectors="@connectors" Nodes="@nodes">
-</SfDiagramComponent>
-
-@code
-{
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-
-    protected override void OnInitialized()
-    {
-        Connector Connector = new Connector()
-        {
-            ID = "connector1",
-            SourcePoint = new DiagramPoint()
-            {
-                X = 200,
-                Y = 200
-            },
-            TargetPoint = new DiagramPoint()
-            {
-                X = 300,
-                Y = 400,
-            }
-        };
-        connectors.Add(Connector);
-    }
-
-    //Notify the source point changing event before the source point change.
-    private void OnSourcePointChanging(EndPointChangingEventArgs args)
-    {
-        //Set true to cancel the source point change.
-        args.Cancel = true;
-    }
-
-    // Notify the source point changed event after the source point has changed.
-    private void OnSourcePointChanged(EndPointChangedEventArgs args)
-    {
-        //Action to be performed.
-    }
-}
-```
-## Target point change event
-* While changing the target point of the connector, the following events can be used to do the customization.
-
-|Event Name|Arguments|Description|
-|------------|-----------|------------------------|
-|[TargetPointChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_TargetPointChanging)|[EndPointChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.EndPointChangingEventArgs.html)|Triggers while dragging the connector’s target end in the diagram.|
-|[TargetPointChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_TargetPointChanged)|[EndPointChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.EndPointChangedEventArgs.html)|Triggers when the connector’s target point is changed|
-
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-
-<SfDiagramComponent @ref="Diagram" Width="1000px" TargetChanging="@OnTargetChanging" TargetPointChanged="@OnTargetPointChanged" Height="500px" Connectors="@connectors" Nodes="@nodes">
-</SfDiagramComponent>
-
-@code
-{
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-
-    protected override void OnInitialized()
-    {
-        Connector Connector = new Connector()
-        {
-            ID = "connector1",
-            SourcePoint = new DiagramPoint()
-            {
-                X = 200,
-                Y = 200
-            },
-            TargetPoint = new DiagramPoint()
-            {
-                X = 300,
-                Y = 400,
-            }
-        };
-        connectors.Add(Connector);
-    }
-
-    //  Notify the target point changing event before the target point is change.
-    private void OnTargetChanging(EndPointChangingEventArgs args)
-    {
-        //Set true to cancel the target point change
-        args.Cancel = true;
-    }
-
-    // Notify the target point changed event after the target point has changed.
-    private void OnTargetChanged(EndPointChangedEventArgs args)
-    {
-        //Action to be performed.
-    }
-}
-```
-
-## ConnectorCreating event
-
-* The [ConnectorCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectorCreating)helps to define default properties of the connector. The connector creation is triggered when the diagram is initialized. In the Connector creating event, you can customize the connector properties. 
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-
-<SfDiagramComponent Height="600px" 
-                    Connectors="@connectors" 
-                    ConnectorCreating="OnConnectorCreating" />
-
-@code
-{
-    // Define the connector collection.
-    DiagramObjectCollection<Connector> connectors;
-
-    protected override void OnInitialized()
-    {
-        connectors = new DiagramObjectCollection<Connector>();
-        //A connector is created and stored in the connectors collection.
-        Connector Connector = new Connector()
-        {
-            ID = "connector1",
-            SourcePoint = new DiagramPoint()
-            {
-                X = 200,
-                Y = 200
-            },
-            TargetPoint = new DiagramPoint()
-            {
-                X = 300,
-                Y = 400,
-            }
-        };
-        connectors.Add(Connector);
-    }
-
-    public void OnConnectorCreating(IDiagramObject args)
-    { 
-        Connector connector = obj as Connector;
-        connector.Style.Fill = "black";
-        connector.Style.StrokeColor = "black";
-        connector.Style.Opacity = 1;
-        connector.TargetDecorator.Style.Fill = "black";
-        connector.TargetDecorator.Style.StrokeColor = "black";
-    }
-```
-## Segment collection change event
-
-* The [SegmentCollectionChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SegmentCollectionChange)  triggers when the connector’s segment collection is updated. To explore about arguments, refer to the [SegmentCollectionChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentCollectionChangeEventArgs.html).
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-
-<SfDiagramComponent Height="600px" 
-                    Connectors="@connectors" 
-                    SegmentCollectionChange="SegmentCollectionChange" />
-
-@code
-{
-    // Define the connector collection.
-    DiagramObjectCollection<Connector> connectors;
-
-    protected override void OnInitialized()
-    {
-        connectors = new DiagramObjectCollection<Connector>();
-        //A connector is created and stored in the connectors collection.
-        Connector Connector = new Connector()
-        {
-            ID = "connector1",
-            SourcePoint = new DiagramPoint()
-            {
-                X = 200,
-                Y = 200
-            },
-            TargetPoint = new DiagramPoint()
-            {
-                X = 300,
-                Y = 400,
-            }
-        };
-        connectors.Add(Connector);
-    }
-
-    public void SegmentCollectionChange(SegmentCollectionChangeEventArgs args)
-    { 
-       
-    }
-```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Events)
 
 ## See also
 

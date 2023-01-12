@@ -62,13 +62,13 @@ An annotation can be added to a node or connector by defining the annotation obj
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Annotations)
 
 ![Blazor Diagram Node with Annotation](../images/blazor-diagram-node-with-annotation.png)
 
 N>* [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_ID) for each annotation should be unique and so it is further used to find the annotation at runtime and do any customization.
 <br/>* By default, node’s annotation positioned in center point of the shape.
 <br/>* By default, connector’s path annotation positioned in center point of its path.
->**Note:** Do not use underscore(_) for annotation's id.
 
 ## Add Annotations at runtime
 
@@ -113,6 +113,7 @@ The following code explains how to add an annotation to a node at runtime by usi
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Annotations)
 
 Also, the annotations can be added at runtime by using the [AddAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramObjectCollection-1.html#Syncfusion_Blazor_Diagram_DiagramObjectCollection_1_AddAsync__0_) method. The `await` operator suspends evaluation of the enclosing async method until the asynchronous operation represented by its operand completes.
 
@@ -126,6 +127,7 @@ public async void AddLabel()
     await(diagram.Nodes[0].Annotations as DiagramObjectCollection<ShapeAnnotation>).AddAsync(annotation);
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Annotations)
 
 ![Adding Annotation in Blazor Diagram](../images/blazor-diagram-add-annotation.png)
 
@@ -173,6 +175,7 @@ A collection of annotations can be removed from the node by using the `RemoveAt`
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Annotations)
 
 Also, a collection of annotations can be removed from the node by using the `Remove` method.
 
@@ -234,6 +237,7 @@ The following code sample shows how the annotation of the node changed at runtim
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Annotations)
 
 ## See also
 

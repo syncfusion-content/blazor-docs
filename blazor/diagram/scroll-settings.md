@@ -36,7 +36,7 @@ In the following example, the vertical scroll bar is scrolled down by 50px and t
     </ScrollSettings>
 </SfDiagramComponent>
 ```
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/ScrollSettings)
 ## Update scroll status
 
 You can programmatically change the scroll offsets at runtime by using the external button click. The following code illustrates how to change the scroll offsets at runtime.
@@ -63,44 +63,7 @@ You can programmatically change the scroll offsets at runtime by using the exter
     }
 }
 ```
-
-## ScrollChanged Event
-
-The Diagram control provides the following event for the scroll settings.
-
-| Event Name | Event Type | Description |
-| -------- | -------- | -------- |
-| [ScrollChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ScrollChanged) | [ScrollChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollChangedEventArgs.html) | Triggered when the scrollbar is updated |
-
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-
-<input type="button" @onclick="updateScrollValues"/>
-<SfDiagramComponent Height="600px" ScrollChanged="ScrollChanged">
-    @* Sets the ScrollSettings for the diagram *@
-    <ScrollSettings HorizontalOffset="@horizontalOffset" VerticalOffset="@verticalOffset">
-    </ScrollSettings>
-</SfDiagramComponent>
-
-@code{
-    public double horizontalOffset { get; set; } = 100;
-    public double verticalOffset { get; set; } = 100;
-
-    public void updateScrollValues()
-    {
-        //Update the scroll settings.
-        verticalOffset = 400;
-        horizontalOffset = 200;
-    }
-    private void ScrollChanged(ScrollChangedEventArgs args)
-    {
-
-    }
-
-}
-```
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/ScrollSettings)
 ## Scroll limit
 
 The scroll limit allows you to define the scrollable region of the Diagram while scrolling the page with the mouse. The [ScrollLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollLimit) property of scroll settings helps to limit the scrolling area. It includes the following options:
@@ -126,6 +89,8 @@ The following code example illustrates how to specify the scroll limit.
 }
 
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/ScrollSettings)
+
 To explore about the options , refer [ScrollLimitMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollLimitMode.html).
 
 | ScrollLimit | Output |

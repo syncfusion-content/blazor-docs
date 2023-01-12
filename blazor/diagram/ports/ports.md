@@ -67,7 +67,7 @@ To add a connection port, define the port object and add it to node’s ports co
     }
 }
 ```
->**Note:** Do not use underscore(_) for port's id.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Ports)
 
 ![Creating Port in Blazor Diagram](../images/blazor-diagram-create-port.png)
 
@@ -120,6 +120,7 @@ If **ID** is not set, then default **ID** is automatically set.
 }
 
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Ports)
 
 Also, the port can be added at runtime by using the `AddAsync` method. The `await` operator suspends evaluation of the enclosing async method until the asynchronous operation represented by its operand completes.
 
@@ -138,6 +139,7 @@ public async void AddPorts()
     await ((nodes[0].Ports) as DiagramObjectCollection<PointPort>).AddAsync(port);
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Ports)
 
 ![Adding Port in Blazor Diagram](../images/blazor-diagram-add-port.png)
 
@@ -215,6 +217,7 @@ The port’s [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Ports)
 
 ![Adding Multiple Ports in Blazor Diagram](../images/blazor-diagram-add-multiple-ports.png)
 
@@ -276,6 +279,7 @@ A collection of ports can be removed from the node by using the native `RemoveAt
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Ports)
 
 ## Update ports at runtime
 
@@ -334,6 +338,7 @@ protected override void OnInitialized()
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Ports)
 
 ## See also
 
