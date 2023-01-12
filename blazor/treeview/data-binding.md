@@ -210,7 +210,7 @@ To render the root level nodes, specify the ParentID as null or no need to speci
 
 ![Blazor TreeView with Self-Referential Data](./images/blazor-treeview-hierarchical-data.png)
 
-### ExpandoObject binding
+### ExpandoObject binding 
 
 The Blazor TreeView is a generic component that is strongly bound to a specific model type, but in cases where the model type is unknown at compile time, the TreeView can be bound to a list of ExpandoObjects using the `DataSource` property. This allows the TreeView to perform all supported data operations.
 
