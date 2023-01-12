@@ -523,7 +523,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Custom properties
 
-The [AdditionalInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_AdditionalInfo) property of the node allows you to mastertain additional information to the node.
+The [AdditionalInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_AdditionalInfo) property of the node allows you to maintain additional information to the node.
 
 The following code shows how to set the AdditionalInfo value.
 

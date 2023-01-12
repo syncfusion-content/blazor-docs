@@ -359,7 +359,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ### Orthogonal segment editing
 
 * Orthogonal thumbs allow you to adjust the length of adjacent segments by clicking and dragging it.
-* When necessary, some segments are added or removed automatically, when dragging the segment. This is to mastertain proper routing of orthogonality between segments.
+* When necessary, some segments are added or removed automatically, when dragging the segment. This is to maintain proper routing of orthogonality between segments.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

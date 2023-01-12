@@ -975,7 +975,7 @@ The following code illustrates how to execute the SendBackward command.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/Z-OrderCommands)
 
-The following gif illustrates how to perfrom z-order commands.
+The following gif illustrates how to perform z-order commands.
 
 ![Z-order Commands](./images/Z-Order-Commands.gif)
 
