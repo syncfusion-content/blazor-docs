@@ -107,6 +107,8 @@ The following code example illustrates how to create an icon of various shapes i
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse)
+
 ![Displaying DiagramIcon in Blazor Diagram](../images/blazor-diagram-ExpandCollapse.gif)
 
 The following code example illustrates how to create an icon of various shapes in a Layout.
@@ -241,6 +243,8 @@ The following code example illustrates how to create an icon of various shapes i
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse)
+
 ![Displaying DiagramIcon in Blazor Diagram layout](../images/blazor-diagram-ExpandCollapse-Layout.gif)
 
 ## Customization
@@ -336,6 +340,8 @@ The following code explains how to Initialize the Icon with Path shape.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse)
+
 ![Displaying DiagramIcon in Blazor Diagram](../images/blazor-diagram-ExpandCollapse-Shape.png)
 
 ### Appearance 
@@ -438,6 +444,8 @@ The following code explains how to change the appearance of the Icon using [Fill
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse)
+
 ![Displaying DiagramIcon in Blazor Diagram layout](../images/blazor-diagram-DiagramIcon1.png)
 
 The following code explains how to change the appearance of the Icon using [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_CornerRadius) Property.
@@ -532,6 +540,8 @@ The following code explains how to change the appearance of the Icon using [Corn
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse)
+
 ![Displaying DiagramIcon in Blazor Diagram layout](../images/blazor-diagram-ExpandCollapse-Shape-CornerRadius.png)
 
 ### Position and Alignment

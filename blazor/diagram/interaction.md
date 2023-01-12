@@ -60,7 +60,7 @@ An element can be selected by clicking that element. During single click, all pr
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Interaction)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction)
 ## Selecting a group
 
 When a child element of any group is clicked, its contained group is selected instead of the child element. With consecutive clicks on the selected element, selection is changed from top to bottom in the hierarchy of parent group to its children.
@@ -71,7 +71,7 @@ Multiple elements can be selected with the following ways:
 
 * Ctrl+Click
 
-During single click, any existing item in the selection list is cleared, and only the recently clicked item remains in the selection list. To avoid clearing the previously selected item, Ctrl key must be on hold when clicking.
+During single click, any existing item in the selection list is cleared, and only the recently clicked item remasters in the selection list. To avoid clearing the previously selected item, Ctrl key must be on hold when clicking.
 
 * Selection rectangle/rubber band selection
 
@@ -134,7 +134,7 @@ The [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Interaction)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction)
 For more information about dragging, refer [Node Drag](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction/#drag)
 
 ## Resize
@@ -184,7 +184,7 @@ For more information about dragging, refer [Node Drag](https://blazor.syncfusion
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Interaction)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction)
 
 For more information about resizing, refer [Node Resize](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction/#resize)
 
@@ -238,7 +238,7 @@ N> While dragging and resizing, the objects are snapped towards the nearest obje
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Interaction)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction)
 
 For more information about resizing, refer [Node Rotate](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction/#rotate)
 
@@ -332,7 +332,7 @@ For more information, refer [End Point Dragging](https://blazor.syncfusion.com/d
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Interaction)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction)
 ## Straight segment editing
 
 * End point of each straight segment is represented by a thumb that enables to edit the segment.
@@ -344,7 +344,7 @@ For more information about straight segment editing, refer [Straight Segment Edi
 ## Orthogonal segment editing
 
 * Orthogonal thumbs allow you to adjust the length of adjacent segments by clicking and dragging it.
-* When necessary, some segments are added or removed automatically, when dragging the segment. This is to maintain proper routing of orthogonality between segments.
+* When necessary, some segments are added or removed automatically, when dragging the segment. This is to mastertain proper routing of orthogonality between segments.
 * When editing the segment collection of connector, the following event gets triggered.
 
 | Events | EventArgs | Description |
@@ -413,7 +413,7 @@ For more information about straight segment editing, refer [Straight Segment Edi
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Interaction)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction)
 
 For more information about orthogonal segment editing, refer [Orthogonal Segment Editing](https://blazor.syncfusion.com/documentation/diagram/connectors/interactions/#orthogonal-segment-editing).
 
@@ -485,7 +485,7 @@ The diagram component notifies the mouse button clicked. For example, whenever t
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Interaction)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction)
 
 ## Appearance of the user handle
 
@@ -493,7 +493,7 @@ The appearance of the user handle can be customized by using the [Size](https://
 
 ## Zoom pan the diagram
 
-* When a large diagram is loaded, only certain portion of the diagram is visible. The remaining portions are clipped.       Clipped portions can be explored by scrolling the scrollbars or panning the diagram.
+* When a large diagram is loaded, only certain portion of the diagram is visible. The remastering portions are clipped.       Clipped portions can be explored by scrolling the scrollbars or panning the diagram.
 * Diagram can be zoomed in or out by using Ctrl + mouse wheel.
 
 ![Zoom Pan in Blazor Diagram](images/blazor-diagram-zoom-pan.gif)

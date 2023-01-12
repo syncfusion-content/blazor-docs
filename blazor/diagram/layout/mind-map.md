@@ -71,7 +71,7 @@ A mind map is a diagram that displays the nodes as a spider diagram organizes in
     };
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Layout)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
 
 ![Blazor Mind Map Diagram](../images/blazor-mind-map-diagram.png)
 
@@ -154,7 +154,7 @@ You can also decide the branch for mind map using [GetBranch](https://help.syncf
     };
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Layout)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
 
 ![Blazor Mind Map Diagram with Branches](../images/blazor-mind-map-diagram-with-branches.png)
 

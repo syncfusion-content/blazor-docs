@@ -211,7 +211,7 @@ The following code example shows how to flip the node.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Flip)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Flip)
 
 | FlipDirection | DiagramFlipMode | Output|
 | -------- | -------- | -------- |
@@ -432,7 +432,7 @@ The following code example shows how to flip the group.
 |Horizontal|None|![HorizontalDirection with NoneMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-none.png)|
 
 For more information about node interaction, refer to [Node Interaction](./nodes/interaction).
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Flip)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Flip)
 
 ## How to flip the connector
 

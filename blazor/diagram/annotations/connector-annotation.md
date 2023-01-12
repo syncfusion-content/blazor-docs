@@ -68,7 +68,7 @@ The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Pat
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Annotations/AnnotationOfConnector)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AnnotationOfConnector)
 
 The following image shows the relationship between the annotation position and offset (fraction values).
 
@@ -119,7 +119,7 @@ The connector’s annotation can be aligned over its segment path using the [Ali
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Annotations/AnnotationOfConnector)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AnnotationOfConnector)
 
 The following screenshot shows how the annotation of the connector aligned over its path.
 
@@ -169,7 +169,7 @@ The [Displacement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Annotations/AnnotationOfConnector)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AnnotationOfConnector)
 
 ## How to update the segment angle of an annotation
 
@@ -211,7 +211,7 @@ The following code example shows how the connector annotation rotated in its pat
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Annotations/AnnotationOfConnector)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AnnotationOfConnector)
 
 | SegmentAngle | Output |
 |---|---|

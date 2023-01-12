@@ -82,7 +82,7 @@ The following code example illustrates how to align all the selected objects to 
     }      
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
 ### How to align the selected objects to the right
 
 The following code example illustrates how to align all the selected objects at the right side of the selection boundary.
@@ -141,7 +141,7 @@ The following code example illustrates how to align all the selected objects at 
     }     
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
 ### How to align the selected objects to the top
 
 The following code example illustrates how to align all the selected objects at the top of the selection boundary.
@@ -200,7 +200,7 @@ The following code example illustrates how to align all the selected objects at 
     }       
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
 ### How to align the selected objects to the bottom
 
 The following code example illustrates how to align all the selected objects at the bottom of the selection boundary.
@@ -259,7 +259,7 @@ The following code example illustrates how to align all the selected objects at 
     }     
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
 ### How to align the selected objects to the middle
 
 The following code example illustrates how to align all the selected objects at the middle of the selection boundary.
@@ -318,7 +318,7 @@ The following code example illustrates how to align all the selected objects at 
     }         
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
 ### How to align the selected objects to the center
 
 The following code example illustrates how to align all the selected objects at the center of the selection boundary.
@@ -377,7 +377,7 @@ The following code example illustrates how to align all the selected objects at 
     }        
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
 ## Distribute
 
 The [SetDistribute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetDistribute_Syncfusion_Blazor_Diagram_DistributeOptions_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) commands enable to place the selected objects on the page at equal intervals from each other. The selected objects are equally spaced within the selection boundary.
@@ -498,7 +498,7 @@ The following code example illustrates how to execute the space commands.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
 ## Sizing Commands
 
 Sizing [SetSameSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetSameSize_Syncfusion_Blazor_Diagram_SizingMode_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) commands are used to resize all selected object based on width, height, and size of the reference object (FirstSelectedItem).
@@ -583,7 +583,7 @@ The following code example illustrates how to execute the size commands.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
 ## Clipboard commands
 
 Clipboard commands are used to cut, copy, or paste the selected elements.
@@ -657,7 +657,7 @@ The following code illustrates how to execute the clipboard commands.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
 ## Grouping commands
 
 **Grouping commands** are used to group/ungroup the selected elements on the diagram. To group the elements, select the elements using select all command and group the selected elements using group command.
@@ -729,7 +729,7 @@ The following code illustrates how to execute the grouping commands.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
 ## Z-Order commands
 
 Z – Order commands are used to control the stacking order (Z-Order) of the diagram elements such as nodes, connectors, and groups. Also, you can arrange the selected objects on the diagram page with its Z-order values by using Bring to front, Bring forward, Send to back, and Send backward features.
@@ -792,7 +792,7 @@ The following code illustrates how to execute the BringToFront command.
     } 
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands/Z-OrderCommands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/Z-OrderCommands)
 
 
 ### SendToBack
@@ -853,7 +853,7 @@ The following code illustrates how to execute the SendToBack command.
     } 
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands/Z-OrderCommands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/Z-OrderCommands)
 
 ### BringForward
 
@@ -913,7 +913,7 @@ The following code illustrates how to execute the BringForward command.
     } 
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands/Z-OrderCommands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/Z-OrderCommands)
 
 ### SendBackward
 
@@ -973,7 +973,7 @@ The following code illustrates how to execute the SendBackward command.
     } 
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands/Z-OrderCommands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/Z-OrderCommands)
 
 The following gif illustrates how to perfrom z-order commands.
 
@@ -1023,7 +1023,7 @@ The following code illustrates how to zoom-in/zoom out the diagram.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands/ZoomingCommands/ZoomingCommands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/ZoomingCommands/ZoomingCommands)
 
 ## Nudge command
 
@@ -1056,7 +1056,7 @@ The following code illustrates how to execute nudge command.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands/NudgeCommand/NudgeCommand)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/NudgeCommand/NudgeCommand)
 
 ## Nudge by using arrow keys
 
@@ -1094,7 +1094,7 @@ The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDia
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands/NudgeCommand/NudgeCommand)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/NudgeCommand/NudgeCommand)
 
 
 ## Command manager
@@ -1211,7 +1211,7 @@ The following code example shows how to define a custom command.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands/CustomCommands/CustomCommands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/CustomCommands/CustomCommands)
 
 
 ### Modify the existing command
@@ -1305,7 +1305,7 @@ The following code example shows how to disable a command and how to modify the 
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands/ModifyExistingCommands/ModifyExistingCommands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/ModifyExistingCommands/ModifyExistingCommands)
 
 ### BringIntoView
 
@@ -1339,7 +1339,7 @@ protected override void OnInitialized()
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
 
 ### BringIntoCenter
 
@@ -1373,7 +1373,7 @@ protected override void OnInitialized()
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
 
 ### FitToPage command in Blazor Diagram
 
@@ -1509,7 +1509,7 @@ The following code illustrates how to execute the FitToPage command.
         }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
 
 ### FitToPage Parameter
 

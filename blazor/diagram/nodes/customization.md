@@ -47,7 +47,7 @@ The following code shows how to customize the appearance of the shape.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Nodes/Appearance)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
 ![Node appearance in Blazor Diagram](../images/blazor-diagram-node-appearance.png)
 
@@ -111,7 +111,7 @@ The following code shows how to customize the appearance of the shape.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Nodes/Appearance)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
 ## How to update template for the nodes
 
@@ -192,7 +192,7 @@ You can define node style using template in [NodeTemplate](https://help.syncfusi
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Nodes/Appearance)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
 N> In the above example, node's background color is updated using the click event of the button defined in the template.
 
@@ -309,7 +309,7 @@ The [SetNodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Nodes/Appearance)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
 ![Blazor Diagram with SetNodeTemplate](../images/blazor-diagram-set-node-template.png)
 
@@ -349,7 +349,7 @@ Diagram provides support to add [Shadow](https://help.syncfusion.com/cr/blazor/S
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Nodes/Appearance)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
 ![Blazor Diagram Node with shadow](../images/blazor-diagram-node-shadow.png)
 
@@ -397,7 +397,7 @@ The [Angle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shad
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Nodes/Appearance)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
 ![Blazor Diagram Node with Custom Shadow](../images/blazor-diagram-node-custom-shadow.png)
 
@@ -459,7 +459,7 @@ There are two types of gradients as follows:
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Nodes/Appearance)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
 ![Blazor Diagram Node with LinearGradient](../images/blazor-diagram-node-linear-gradient.png)
 
@@ -517,13 +517,13 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Nodes/Appearance)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
 ![Blazor Diagram Node with RadialGradient](../images/blazor-diagram-node-radial-gradient.png)
 
 ## Custom properties
 
-The [AdditionalInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_AdditionalInfo) property of the node allows you to maintain additional information to the node.
+The [AdditionalInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_AdditionalInfo) property of the node allows you to mastertain additional information to the node.
 
 The following code shows how to set the AdditionalInfo value.
 
@@ -562,7 +562,7 @@ The following code shows how to set the AdditionalInfo value.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Nodes/Appearance)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
 **Note:** You can set any type of value for the AdditionalInfo property.
 

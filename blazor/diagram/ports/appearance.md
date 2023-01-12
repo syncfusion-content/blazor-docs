@@ -69,7 +69,7 @@ The following code explains how to change the appearance of the port.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Ports/Appearance)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Appearance)
 
 ![Changing Port Appearance in Blazor Diagram](../images/blazor-diagram-port-appearance.png)
 
@@ -142,7 +142,7 @@ We have provided some basic built-in [PortShapes](https://help.syncfusion.com/cr
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Ports/Appearance)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Appearance)
 
 ![Blazor Diagram Port with Custom Shape](../images/blazor-diagram-port-custom-shape.png)
 
@@ -161,7 +161,7 @@ The PortConstraints may have multiple behaviors like listed below:
 
 ## Custom properties
 
-The [AdditionalInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_AdditionalInfo) property of the port allows you to maintain additional information to the port.
+The [AdditionalInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_AdditionalInfo) property of the port allows you to mastertain additional information to the port.
 
 ## See also
 

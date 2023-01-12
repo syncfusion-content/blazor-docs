@@ -51,7 +51,7 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Gridlines)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines)
 
 ![GridLines in Blazor Diagram](images/blazor-diagram-gridlines.png)
 
@@ -81,7 +81,7 @@ The following code example illustrates how to customize the appearance of gridli
     </SnapSettings>
 </SfDiagramComponent>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Gridlines)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines)
 
 
 ## How to create dot grid patterns
@@ -110,7 +110,7 @@ The appearance of the grid lines can be changed into dots by using the [GridType
 }
 
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Gridlines)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines)
 
 
 ![Dot Grid in Blazor Diagram](images/blazor-diagram-dot-grid.png)
@@ -143,7 +143,7 @@ The following code example illustrates how to customize the thickness of lines a
     };
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Gridlines)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines)
 
 
 ![Blazor Diagram with Custom Thickness of GridLines](images/blazor-diagram-custom-gridlines-thickness.png)
@@ -183,7 +183,7 @@ Snapping to gridlines can be enabled/disabled with the [SnapConstraints](https:/
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Gridlines)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines)
 
 
 ![Snapping to GridLines in Blazor Diagram](images/blazor-diagram-snap-to-gridlines.gif)
@@ -230,7 +230,7 @@ By default, the objects are snapped towards the nearest gridline. The gridline o
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Gridlines)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines)
 
 
 ### Snap to objects
@@ -280,7 +280,7 @@ The snap to object provides visual cues to assist with aligning and spacing diag
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Gridlines)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines)
 
 
 ![GuideLines in Blazor Diagram](images/blazor-diagram-guidelines.gif)

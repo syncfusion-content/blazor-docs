@@ -54,7 +54,7 @@ The following code example illustrates how to customize the tooltip for nodes.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Tooltip)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip)
 |![ToolTip During hover the node](images/blazor-diagram-nodetooltip.png) | 
 
 The following code example illustrates how to customize the tooltip for connectors.
@@ -82,7 +82,7 @@ The following code example illustrates how to customize the tooltip for connecto
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Tooltip)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip)
 |![ToolTip During hover the node](images/blazor-diagram-connectortooltip.png) | 
 
 ## How to set tooltip position for nodes/connectors
@@ -142,7 +142,7 @@ The following code example sets the tooltip position for the nodes.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Tooltip)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip)
 
 The following code example sets the tooltip position for the connectors.
 
@@ -175,11 +175,11 @@ The following code example sets the tooltip position for the connectors.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Tooltip)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip)
 
 ## How to set tooltip content for nodes/connectors
 
-A text or a piece of information assigned to the Tooltip’s [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) property will be displayed as the main content of the Tooltip for nodes or connectors.
+A text or a piece of information assigned to the Tooltip’s [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) property will be displayed as the master content of the Tooltip for nodes or connectors.
 
 The following code example sets the tooltip content for the nodes.
 
@@ -219,7 +219,7 @@ The following code example sets the tooltip content for the nodes.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Tooltip)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip)
 
 The following code example sets the tooltip content for the connectors.
 
@@ -252,7 +252,7 @@ The following code example sets the tooltip content for the connectors.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Tooltip)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip)
 
 ## How to shows/hides the tip pointer for tooltip
 
@@ -296,7 +296,7 @@ The following code example is used to set tooltip tip pointer for nodes.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Tooltip)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip)
 
 The following code example is used to set tooltip tip pointer for connectors.
 
@@ -329,7 +329,7 @@ The following code example is used to set tooltip tip pointer for connectors.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Tooltip)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip)
 
 ## Tooltip template content
 
@@ -378,7 +378,7 @@ The following code example illustrates how to add the formatted template content
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Tooltip)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip)
 
 The following code example illustrates how to add the formatted template content to the tooltip for the connectors.
 
@@ -416,7 +416,7 @@ The following code example illustrates how to add the formatted template content
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Tooltip)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip)
 
 ## Tooltip animation
 
@@ -468,7 +468,7 @@ The following code example illustrates how to set the animation to the tooltip f
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Tooltip)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip)
 
 The following code example illustrates how to set the animation to the tooltip for the connectors.
 
@@ -509,7 +509,7 @@ The following code example illustrates how to set the animation to the tooltip f
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Tooltip)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip)
 
 ## Tooltip Open Mode
 
@@ -614,7 +614,7 @@ The following code example illustrates how to set the open mode to the tooltip f
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Tooltip)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip)
 
 |![ToolTip During hover the node with open mode](images/blazor-diagram-openmodenodetooltip.gif) | 
 
@@ -681,5 +681,5 @@ The following code example illustrates how to set the open mode to the tooltip f
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Tooltip)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip)
 

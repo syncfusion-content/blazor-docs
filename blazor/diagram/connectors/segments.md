@@ -55,7 +55,7 @@ To create a straight line, specify the [Type](https://help.syncfusion.com/cr/bla
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Segments)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments)
 
 ![Connector with Straight Segment in Blazor Diagram](../images/blazor-diagram-connector-with-straight-segment.png)
 
@@ -103,7 +103,7 @@ Orthogonal segments are used to create segments that are perpendicular to each o
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Segments)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments)
 
 The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.OrthogonalSegment.html#Syncfusion_Blazor_Diagram_OrthogonalSegment_Length) and [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.OrthogonalSegment.html#Syncfusion_Blazor_Diagram_OrthogonalSegment_Direction) properties allow to define the flow and length of segment. The following code example illustrates how to create customized orthogonal segments.
 
@@ -162,7 +162,7 @@ The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Ort
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Segments)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments)
 
 ![Connector with Orthogonal Segment in Blazor Diagram](../images/blazor-diagram-connector-with-orthogonal.png)
 
@@ -212,7 +212,7 @@ Bezier segments are used to create curve segments and the curves are configurabl
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Segments)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments)
 
 ![Connector with Bezier Segment in Blazor Diagram](../images/blazor-diagram-connector-with-bezier.png)
 
@@ -254,7 +254,7 @@ Connector Connector1 = new Connector()
             }
         };
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Segments)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments)
 
 ## How to create multiple segments
 
@@ -305,7 +305,7 @@ Multiple segments can be defined one after another. To create a connector with m
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Segments)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments)
 
 ![Blazor Diagram with Multiple Segment](../images/blazor-diagram-multiple-segment.png)
 
@@ -352,14 +352,14 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Segments)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments)
 
 ![Editing Straight Segment in Blazor Diagram](../images/blazor-diagram-edit-straight-segment.gif)
 
 ### Orthogonal segment editing
 
 * Orthogonal thumbs allow you to adjust the length of adjacent segments by clicking and dragging it.
-* When necessary, some segments are added or removed automatically, when dragging the segment. This is to maintain proper routing of orthogonality between segments.
+* When necessary, some segments are added or removed automatically, when dragging the segment. This is to mastertain proper routing of orthogonality between segments.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -387,7 +387,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Segments)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments)
 
 ![Editing Orthogonal Segment in Blazor Diagram](../images/blazor-diagram-edit-orthogonal-segment.gif)
 

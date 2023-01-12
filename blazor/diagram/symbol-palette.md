@@ -24,7 +24,7 @@ The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Symb
                           SymbolHeight="80" SymbolWidth="80">
 </SfSymbolPaletteComponent>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/SymbolPalette)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette)
 
 
 ### Add node to palette
@@ -149,7 +149,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 }
 
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/SymbolPalette)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette)
 
 
 ![Adding Node to Symbol Palette in Blazor Diagram](images/blazor-diagram-add-node-to-palette.png)
@@ -219,7 +219,7 @@ The following code example illustrates how to add connector to a palette.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/SymbolPalette)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette)
 
 
 ![Adding Connector to Symbol Palette in Blazor Diagram](images/blazor-diagram-add-connector-to-palette.png)
@@ -308,7 +308,7 @@ The following code example illustrates how to add nodegroup to a palette.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/SymbolPalette)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette)
 
 
 ![Adding NodeGroup to Symbol Palette in Blazor Diagram](images/blazor-diagram-add-node-group-to-palette.png)
@@ -465,7 +465,7 @@ Palettes = new DiagramObjectCollection<Palette>()
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/SymbolPalette)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette)
 
 ![Adding Palette to SymbolPalette in Blazor Diagram](images/blazor-diagram-add-palette-to-symbol-palette.png)
 
@@ -621,7 +621,7 @@ To initialize drag and drop, you must add the diagram to the [Targets](https://h
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/SymbolPalette)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette)
 
 ![Drag and Drop in Blazor Diagram](images/blazor-diagram-drag-and-drop.gif)
 
@@ -639,7 +639,7 @@ The following code illustrates how to change the Title and IsExpanded properties
 SymbolPalette.Palettes[0].Title = "NewTitle";
 SymbolPalette.Palettes[0].IsExpanded = false;
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/SymbolPalette)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette)
 
 
 ## Add/Remove symbols to palette at runtime
@@ -673,7 +673,7 @@ SymbolPalette.Palettes[0].Symbols.Add(decision);
 ```csharp
 SymbolPalette.RemovePaletteItem("Flow Shapes", "Decision");
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/SymbolPalette)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette)
 
 
 ## Add/Remove palettes at runtime
@@ -720,7 +720,7 @@ SymbolPalette.Palettes.Add(NewPalette);
 ```csharp
  SymbolPalette.RemovePalettes("Basic Shapes");
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/SymbolPalette)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette)
 
 
 ## Customize the size of symbols
@@ -812,7 +812,7 @@ The following code example illustrates how to change the size of a symbol and ho
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/SymbolPalette)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette)
 
 
 The [SymbolMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SymbolMargin) property is used to create the space around the elements, outside of any defined borders.
@@ -900,7 +900,7 @@ The following code example illustrates how to change the preview size of a palet
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/SymbolPalette)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette)
 
 
 ![SymbolPreview in Blazor Diagram](images/blazor-diagram-symbol-preview.gif)
@@ -917,7 +917,7 @@ The [Expanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
 
 The [PaletteExpandMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_PaletteExpandMode) property of `SfSymbolPaletteComponent` specifies the option to expand single or multiple palettes at a time.
  
-* If the ExpandMode is Multiple when clicking on the collapsed icon, the clicked palette will get expanded and at the same time, the other palettes will be maintained in their previous state.
+* If the ExpandMode is Multiple when clicking on the collapsed icon, the clicked palette will get expanded and at the same time, the other palettes will be mastertained in their previous state.
 * If the ExpandMode is Single when clicking on the collapsed icon, the clicked palette will get expanded and the rest of all the palettes will get collapsed.
 
 ```cshtml
@@ -1113,7 +1113,7 @@ The diagram provides support to add symbol description below each symbol of a pa
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/SymbolPalette)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette)
 
 ![Symbol with Description in Blazor Diagram](images/blazor-diagram-symbol-description.png)
 
@@ -1142,7 +1142,7 @@ The [RefreshSymbols](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
     }   
 }
 ```  
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/SymbolPalette)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette)
 
 ## Palette interaction
 

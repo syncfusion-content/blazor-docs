@@ -78,7 +78,7 @@ The user handle can be enabled for the selected nodes/connectors by setting a [S
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/UserHandle)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle)
 
 ![Blazor Diagram Node with User Handle](images/blazor-diagram-with-user-handle.png)
 
@@ -189,7 +189,7 @@ The following code explains how to customize the appearance of the user handle.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/UserHandle)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle)
 
 ![Customizing Appearance of Userhandle in Blazor Diagram](images/blazor-diagram-custom-user-handle-appearance.png)
 
@@ -420,7 +420,7 @@ The following code example shows how to change the VisibleTarget in the userhand
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/UserHandle)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle)
 
 ![VisibleTarget](Images/blazor-diagram-user-handle-visible-target.gif)
 
@@ -471,7 +471,7 @@ To create the fixed user handles, define and add them to the collection of nodes
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/UserHandle)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle)
 
 ## Customizing the fixed user handle
 
@@ -544,7 +544,7 @@ The following code explains how to customize the appearance of the fixed user ha
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/UserHandle)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle)
 
 N> The fixed user handle id need to be unique.
 
@@ -621,7 +621,7 @@ The following code explains how to customize the node fixed user handle.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/UserHandle)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle)
 
 ## Customizing the connector fixed user handle
 
@@ -703,7 +703,7 @@ The following code explains how to customize the connector fixed user handle.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/UserHandle)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle)
 
 ## FixedUserHandle event
 
@@ -766,4 +766,4 @@ The Diagram control provides the following event for the fixed user handle.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/UserHandle)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle)
