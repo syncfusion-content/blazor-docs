@@ -11,7 +11,7 @@ documentation: ug
 
 Content Security Policy (CSP) is a security feature implemented by web browsers that helps to protect against attacks such as cross-site scripting (XSS) and data injection. It does this by limiting the sources from which certain types of content can be loaded on a webpage.
 
-When using Syncfusion blazor components with strict Content Security Policy (CSP), some browser features are disabled by default. In order to use Syncfusion blazor components with strict CSP mode, certain directives must be included in the CSP meta tag. These directives allow to use certain features that are necessary for Syncfusion blazor components to function properly.
+When enabling strict Content Security Policy (CSP), some browser features are disabled by default. In order to use Syncfusion blazor components with strict CSP mode, certain directives must be included in the CSP meta tag. These directives allow to use certain features that are necessary for Syncfusion blazor components to function properly.
 
 To use Syncfusion blazor components with strict CSP mode, the following directives must be included in the CSP meta tag:
 
@@ -20,7 +20,9 @@ To use Syncfusion blazor components with strict CSP mode, the following directiv
 * `connect-src 'self' https: wss:` - This directive enables web sockets.
 * `script-src 'self' unsafe-eval` - This directive allows for the use of the `new()` and `eval()` functions. Used in animation enabled Syncfusion components.
 
-These directives should be included in the <head> tag of the application's webpage, typically in the `wwwroot/index.html` file for a Blazor WebAssembly application or in the `~/Pages/_Host.cshtml` file for a Blazor Server application.
+These directives should be included in the `<head>` tag of the application's webpage, typically in the 
+ * **wwwroot/index.html** file for a Blazor WebAssembly application.
+ * **~/Pages/_Host.cshtml** file for a Blazor Server application.
 
 ```html
 <meta http-equiv="Content-Security-Policy"
