@@ -58,7 +58,7 @@ N> You can also display custom menu options on Scheduler cells and appointments.
 </SfContextMenu>
 
 @code{
-    private DateTime SelectedDate { get; set; } = new DateTime(2020, 1, 8);
+    private DateTime SelectedDate { get; set; } = new DateTime(2023, 1, 8);
     private bool isCell;
     private bool isEvent;
     private bool isRecurrence;
@@ -82,8 +82,8 @@ N> You can also display custom menu options on Scheduler cells and appointments.
     }
     public List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Workflow Analysis", StartTime = new DateTime(2020, 1, 8, 10, 30, 0) , EndTime = new DateTime(2020, 1, 8, 12, 30, 0) , IsAllDay = false, TaskId = 1},
-        new AppointmentData { Id = 2, Subject = "Requirement planning", StartTime = new DateTime(2020, 1, 8, 9, 30, 0) , EndTime = new DateTime(2020, 1, 8, 12, 30, 0) , IsAllDay = false, TaskId = 2},
+        new AppointmentData { Id = 1, Subject = "Workflow Analysis", StartTime = new DateTime(2023, 1, 8, 10, 30, 0) , EndTime = new DateTime(2023, 1, 8, 12, 30, 0) , IsAllDay = false, TaskId = 1},
+        new AppointmentData { Id = 2, Subject = "Requirement planning", StartTime = new DateTime(2023, 1, 8, 9, 30, 0) , EndTime = new DateTime(2023, 1, 8, 12, 30, 0) , IsAllDay = false, TaskId = 2},
     };
 
     public async Task OnOpen(BeforeOpenCloseMenuEventArgs<MenuItem> args)
@@ -196,3 +196,5 @@ N> You can also display custom menu options on Scheduler cells and appointments.
 }
 
 ```
+
+![Context Menu in Blazor Scheduler](images/blazor-scheduler-contextmenu.png)

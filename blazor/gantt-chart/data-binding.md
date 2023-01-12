@@ -559,6 +559,43 @@ In the below example, `TaskData` implements `INotifyPropertyChanged` and it rais
 ```
 ![Property changed in Blazor Gantt Chart](images/blazor-gantt-chart-observable-property-changed.PNG)
 
+## Remote Data
+
+To bind remote data to Gantt component, assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the `DataSource` property or by using `SfDataManager` component. To interact with remote data source, provide the endpoint **Url**.
+
+ N> When using [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding,  the **TValue** must be provided explicitly in the Gantt component.
+<br/> By default, [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **ODataAdaptor** for remote data-binding.
+
+### Web API
+
+You can use **WebApiAdaptor** to bind datagrid with Web API created using **OData** endpoint.
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Data
+<SfGantt TValue="GanttRemoteData" Height="450px">
+    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/GanttData" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" Child="SubTasks">
+    </GanttTaskFields>
+</SfGantt>
+
+@code{
+    public class GanttRemoteData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public int Duration { get; set; }
+        public int Progress { get; set; }
+        public string Predecessor { get; set; }
+        public List<GanttRemoteData>SubTasks { get; set; }
+    }
+}
+```
+
+![Data Binding in Blazor Gantt Chart](images/blazor-gantt-chart-data-binding.png)
+
 ### Load Child on Demand
 
 To render child records on demand, assign a remote service URL in the instance of **SfDataManager** to the **Url** property. To interact with the remote data source,  provide the endpoint **URL** and also define the [GanttTaskFields.HasChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_HasChildMapping) property of Gantt Chart.
@@ -567,7 +604,7 @@ The `GanttTaskFields.HasChildMapping` property maps the field name in the data s
 
 When [LoadChildOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_LoadChildOnDemand) is disabled, all the root nodes are rendered in a collapsed state at initial load. On expanding the root node, the child nodes will be loaded from the remote server.
 
-When both [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableVirtualization) and `LoadChildOnDemand` is enabled, only the current viewport root nodes are rendered in a collapsed state.
+When [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableVirtualization) is enabled and `LoadChildOnDemand` is disabled, only the current viewport root nodes are rendered in a collapsed state.
 
 When a root node is expanded, its child nodes are rendered and maintained in a collection locally, such that on consecutive expand/collapse actions on the root node, the child nodes are loaded locally instead of from the remote server.
 
@@ -591,21 +628,30 @@ When the `LoadChildOnDemand` is enabled, parent records are rendered in an expan
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight c# tabtitle="TaskData.cs" %}
 
 namespace WebAPI.Data
 {
     public class TaskData
     {
         public static List<TaskData> tree = new List<TaskData>();
+        [JsonPropertyName("ID")]
         public int ID { get; set; }
+        [JsonPropertyName("TaskName")]
         public string TaskName { get; set; }
+        [JsonPropertyName("StartDate")]
         public DateTime StartDate { get; set; }
+        [JsonPropertyName("EndDate")]
         public DateTime EndDate { get; set; }
+        [JsonPropertyName("Duration")]
         public string Duration { get; set; }
+        [JsonPropertyName("Progress")]
         public int Progress { get; set; }
+        [JsonPropertyName("ParentId")]
         public int? ParentId { get; set; }
+        [JsonPropertyName("Predecessor")]
         public string Predecessor { get; set; }
+        [JsonPropertyName("isParent")]
         public bool? isParent { get; set; }
         public TaskData() { }
         public static List<TaskData> GetTree()
@@ -659,7 +705,7 @@ namespace WebAPI.Data
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight c# tabtitle="DefaultController.cs" %}
 
 using System;
 using System.Collections.Generic;
@@ -846,43 +892,9 @@ namespace WebAPI.Controller
 
 > * Filtering and searching are not supported in load on demand.
 > * Only Self-Referential type data is supported with remote data binding in Gantt Chart.
+> * Load-on-demand supports only the validated data source.
 
-## Remote Data
-
-To bind remote data to Gantt component, assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the `DataSource` property or by using `SfDataManager` component. To interact with remote data source, provide the endpoint **Url**.
-
- N> When using [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding,  the **TValue** must be provided explicitly in the Gantt component.
-<br/> By default, [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **ODataAdaptor** for remote data-binding.
-
-### Web API
-
-You can use **WebApiAdaptor** to bind datagrid with Web API created using **OData** endpoint.
-
-```cshtml
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Gantt
-@using Syncfusion.Blazor.Data
-<SfGantt TValue="GanttRemoteData" Height="450px">
-    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/GanttData" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" Child="SubTasks">
-    </GanttTaskFields>
-</SfGantt>
-
-@code{
-    public class GanttRemoteData
-    {
-        public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public DateTime StartDate { get; set; }
-        public int Duration { get; set; }
-        public int Progress { get; set; }
-        public string Predecessor { get; set; }
-        public List<GanttRemoteData>SubTasks { get; set; }
-    }
-}
-```
-
-![Data Binding in Blazor Gantt Chart](images/blazor-gantt-chart-data-binding.png)
+N>You can find the sample for load on demand [here](https://github.com/SyncfusionExamples/Lazy-Loading-in-Blazor-Gantt-Chart).
 
 ### Sending additional parameters to the server
 
