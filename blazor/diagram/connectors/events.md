@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Diagram Component
 
-## Selection change
+## Selection change event
 
 * While selecting the diagram elements, the following events can be used to do the customization.
 * When selecting/unselecting the diagram elements, the following events will be triggered to do customization on those events.
@@ -83,7 +83,7 @@ The following code example explains how to get the selection change event in the
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Events)
 
-## Position change
+## Position change event
 
 * While dragging the diagram elements, the following events can be used to do the customization.
 
@@ -154,7 +154,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/Connectors/Events)
 
-## Connection change
+## Connection change event
 
 * While changing the connection of the connector, the following events can be used to do the customization.
 
