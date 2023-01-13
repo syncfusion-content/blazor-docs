@@ -47,6 +47,8 @@ The following code example explains how to create a BPMN Expanded Sub-Process.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/BpmnEditor/BpmnExpandedSubProcess)
+
 ![BPMN Expanded Sub-Process](../images/Bpmn-ExpandedSubProcess.png)
 
 ## Add BPMN Nodes into BPMN ExpandedSubProcess
@@ -95,6 +97,9 @@ The following code example explains how to add BPMN node to a BPMN Expanded Sub-
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/BpmnEditor/BpmnExpandedSubProcess)
+
+
 ![ExpandedSubProcess BPMN Shape](../images/Bpmn-ExpandedSubProcess-WithChildren.png)
 
 
@@ -147,6 +152,8 @@ The following image shows how to add BPMNNode into the BPMN ExpandedSubProcess a
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/BpmnEditor/BpmnExpandedSubProcess)
+
 ![Standard ExpandedSubProcess BPMN Shape](../images/Bpmn-Task-Loop-Standard.png)  
 
 The following table contains various types of BPMN loops.
@@ -197,6 +204,8 @@ The following table contains various types of BPMN loops.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/BpmnEditor/BpmnExpandedSubProcess)
+
 
  ![IsCompensationActivity ExpandedSub-Process BPMN Shape](../images/Bpmn-Task-Compensation.png)
  
@@ -238,6 +247,9 @@ An ad-hoc ExpandedSubProcess is a group of tasks that are executed in any order 
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/BpmnEditor/BpmnExpandedSubProcess)
+
+
 ![IsAdHocActivity ExpandedSub-Process BPMN Shape](../images/Bpmn-ExpandedSub-Process-Adhoc.png)
 
 ### SubProcessType
@@ -278,6 +290,8 @@ SubProcessType represents the type of task that is being processed. The [SubProc
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/BpmnEditor/BpmnExpandedSubProcess)
+
 ![Event Boundary BPMN Shape](../images/Bpmn-CollapsedSub-Process-Event.png)
 
 The following table contains various types of BPMN SubProcess.
