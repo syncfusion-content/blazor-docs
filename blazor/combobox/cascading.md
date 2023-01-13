@@ -27,7 +27,7 @@ In the following example, when a country is selected in the first ComboBox, the 
 
 To populate other form fields (such as textboxes) based on the value selected in the ComboBox, you can use the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event of the ComboBox. In the `ValueChange` event handler, you can retrieve the relevant data from your data source and use it to populate the other form fields.
 
-In the following example, the ComboBox displays a list of countries, and the textboxes display the state ID, country ID, and capital of the selected country. When the user selects a different country in the ComboBox, the `ChangeState` event handler is triggered, and the data for the selected country is retrieved from the data source
+In the following example, the ComboBox displays a list of countries, and the textboxes display the state ID, country ID, and capital of the selected country. When the user selects a different country in the ComboBox, the `ValueChange` event handler is triggered, and the data for the selected country is retrieved from the data source
 
 {% highlight cshtml %}
 
