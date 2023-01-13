@@ -48,6 +48,7 @@ To create a node, define the Node object and add it to the nodes collection of t
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods)
 
 ## Add nodes through AddDiagramElements
 
@@ -148,6 +149,7 @@ To create a node, define the Node object and add it to the nodes collection of t
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods)
 
 ### Clear
 
@@ -212,6 +214,7 @@ To create a node, define the Node object and add it to the nodes collection of t
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods)
 
 ![Diagram Clear](images/Clear.gif)
 
@@ -311,4 +314,6 @@ To create a node, define the Node object and add it to the nodes collection of t
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods)
+
 ![Diagram Reset](images/ResetZoom-Method.gif)
