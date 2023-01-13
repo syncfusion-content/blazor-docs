@@ -255,7 +255,7 @@ You can use PNG images of your choice as rating symbol by specifying them as tem
 
 @using Syncfusion.Blazor.Inputs
 
-<SfRating>
+<SfRating Value="3">
     <FullTemplate>
         <img src=@fullTemplateImage widht="25" height="25" />
     </FullTemplate>
