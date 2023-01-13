@@ -148,7 +148,7 @@ public class BugDataAccessLayer
 Now, register `BugDataAccessLayer` as scoped service in the `Startup.cs` file in .NET 5 and .NET 3.X application, in `Program.cs` file in .NET 6 application as follows.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
@@ -198,7 +198,7 @@ Open `_Import.razor` file and add the following namespaces which are required to
 Open `Startup.cs` file in .NET 5 and .NET 3.X applications, `Program.cs` file in .NET 6 application and register the Syncfusion service in the `ConfigureServices` method as follows.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
@@ -286,7 +286,7 @@ public class BugDataAdaptor: DataAdaptor
 Now, Open the `Startup.cs` file in .NET 5 and .NET 3.X application, in `Program.cs` file in .NET 6 application and register the `BugDataAdaptor` class in the `ConfigureServices` method as follows.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
