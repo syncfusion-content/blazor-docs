@@ -11,7 +11,7 @@ documentation: ug
 
 Heatmap consists of two axes namely, `X-axis` and `Y-axis` that displays the row headers and column headers to plot the data points respectively. You can customize both the axes by specifying the properties like type, format, and other customising options in the axis of the heatmap.
 
-## Types
+## Axis types
 
 There are three different axis types available in the heatmap, which defines the data type of the axis labels. You can define the axis type by using the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_ValueType) property in the heatmap.
 
