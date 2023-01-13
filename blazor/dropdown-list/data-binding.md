@@ -344,9 +344,9 @@ Add the new item in the popup with the help of [AddItemsAsync](https://help.sync
 
 ### Getting datasource using instance
 
-To get the `datasource` from the Syncfusion Blazor DropDownList component instance, you can use the DataSource property of the component. Here's an example of how you can get the data source when a button is clicked.
+To get the datasource from the Syncfusion Blazor DropDownList component instance by using the `DataSource` property of the component. Here's an example of how you can get the data source when a button is clicked.
 
-In the following example, the DropDownList component is rendered with a list of object as the data source. When the button is clicked, method is called and the data source is obtained using the DataSource property of the DropDownList instance.
+In the following example, the DropDownList component is rendered with a list of objects as the data source. When the button is clicked, `GetDataSource` method is called and the data source is obtained using the `DataSource` property of the DropDownList instance.
 
 {% highlight cshtml %}
 
@@ -356,9 +356,9 @@ In the following example, the DropDownList component is rendered with a list of 
 
 ### Getting datasource using variable
 
-To get the `datasource` for the Syncfusion Blazor DropDownList using variable, you can define a variable in your component to hold the datasource, and then use this variable to access the datasource.
+To get the datasource for the Syncfusion Blazor DropDownList using a variable, you can define a variable in your component to hold the datasource, and then use this variable to access the datasource.
 
-In this following example, the `GetDataSource` method is called when the button is clicked. This method gets the data source for the DropDownList using the `Country` variable that holds the list of country for the DropDownList.
+In this following example, the `GetDataSource` method is called when the button is clicked. This method retrieves the data source for the DropDownList using the Countries variable, which holds the list of countries for the DropDownList.
 
 {% highlight cshtml %}
 
