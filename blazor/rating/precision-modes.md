@@ -23,13 +23,13 @@ The precision types of Rating are as follows:
 @using Syncfusion.Blazor.Inputs
 
 <label>Full Precision</label><br/>
-<SfRating Value="3" Precision="PrecisionType.Full"></SfRating>
+<SfRating Value="3" Precision="PrecisionType.Full"></SfRating><br/>
 
 <label>Half Precision</label><br/>
-<SfRating Value="2.5" Precision="PrecisionType.Half"></SfRating>
+<SfRating Value="2.5" Precision="PrecisionType.Half"></SfRating><br/>
 
 <label>Quarter Precision</label><br/>
-<SfRating Value="3.75" Precision="PrecisionType.Quarter"></SfRating>
+<SfRating Value="3.75" Precision="PrecisionType.Quarter"></SfRating><br/>
 
 <label>Exact Precision</label><br/>
 <SfRating Value="2.3" Precision="PrecisionType.Exact"></SfRating>

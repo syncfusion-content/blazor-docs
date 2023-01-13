@@ -37,6 +37,7 @@ By default, Diagram’s page size is decided based on the position of its diagra
     public PageOrientation orientation = PageOrientation.Landscape;
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings)
 
 |Orientation|Output|
 |-------|-------|
@@ -84,6 +85,8 @@ Based on the diagramming element position, the size of the page dynamically incr
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings)
+
 ![Multiple Page](./images/MultiplePage.png)
 
 ## How to change the page appearance
@@ -136,6 +139,8 @@ The appearance of the pages can be customized using the following properties of 
     public PageOrientation orientation = PageOrientation.Landscape;
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings)
+
 ![PageBackground Color](./images/PageBackground.png)
 
 ### How to customize the appearance of the page break
@@ -167,11 +172,13 @@ Refer to the following code example on how to change the stroke, stroke-dasharra
     </PageSettings>
 </SfDiagramComponent>
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings)
+
 ![Pagebreak Color](./images/Pagebreak.png)
 
 ## How to change the margin around the pages
 
-The area between the main content of a page and the page edges can be changed by using the PageMargin property. The default values for the margin are set to 25 on all sides.
+The area between the master content of a page and the page edges can be changed by using the PageMargin property. The default values for the margin are set to 25 on all sides.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -187,6 +194,7 @@ The area between the main content of a page and the page edges can be changed by
     </PageSettings>
 </SfDiagramComponent>
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings)
 
 ## Boundary constraints
 
@@ -254,6 +262,7 @@ The following code example illustrates how to define boundary constraints with r
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings)
 
 ## Responsive with parent container
 
@@ -286,3 +295,4 @@ The following code example illustrates how to set width and height in percentage
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings)

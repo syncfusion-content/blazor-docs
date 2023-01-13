@@ -63,7 +63,7 @@ You can use the [EnableSingleSelection](https://help.syncfusion.com/cr/blazor/Sy
 
 @using Syncfusion.Blazor.Inputs
 
-<SfRating EnableSingleSelection=true></SfRating>
+<SfRating Value="3" EnableSingleSelection=true></SfRating>
 
 ```
 
@@ -77,7 +77,7 @@ You can reset the rating value to its default by using the [AllowReset](https://
 
 @using Syncfusion.Blazor.Inputs
 
-<SfRating AllowReset=true></SfRating>
+<SfRating Value="3" AllowReset=true></SfRating>
 
 ```
 
