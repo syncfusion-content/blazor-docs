@@ -35,21 +35,41 @@ Specify the boolean value to the [Enabled](https://help.syncfusion.com/cr/blazor
 
 ![Blazor DropDownList with Disabled ](./images/style/blazor_dropdown_disabled-state.png)
 
+## CssClass  
+
+Specifies the CSS class name that can be appended with the root element of the DropDownList. One or more custom CSS classes can be added to a DropDownList.
+
+Some of the possible values are
+
+* `e-success`, which denotes the component in success state that is added green color to the dropdownlist's input field.
+* `e-warning`, which denotes the component in warning state that is added orange color to the dropdownlist's input field.
+* `e-error`, which denotes the component in error state that is added red color to the dropdownlist's input field.
+* `e-outline`, which supports only in material theme.
+* `e-multi-column`, which provides two or more columns in the popup and the column will be aligned like grid.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/style/cssclass-properties.razor %}
+
+{% endhighlight %} 
+
+![Blazor DropDownList with CssClass property](./images/style/blazor_dropdown_cssclass-property.png)
+
 ## Customizing the disabled component’s text color
 
-Use the following CSS to customize the text color when the component is disabled.
+You can customize the disabled component’s text color by using the following CSS selector. This selector targets the input element when it is in a disabled state and sets the desired color to the `-webkit-text-fill-color` property.
 
-```css
-.e-input-group.e-control-wrapper .e-input[disabled] {
-    -webkit-text-fill-color: #0d9133;
-}
-```
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/disable-text-color.razor %}
+
+{% endhighlight %}
 
 ![Blazor DropDownList with Disabled component text color](./images/style/blazor_dropdown_disable-text-color.png)
 
 ## Show the custom icon in dropdown icon
 
-Change the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons/#material) by overriding the style `content`.
+You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons/#material) using the following CSS selector. This selector targets the icon element that is displayed within the dropdown list component and set the desired icon to the `content` property.
 
 {% highlight cshtml %}
 
@@ -59,7 +79,7 @@ Change the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/i
 
 ![Blazor DropDownList with dropdown icon](./images/style/blazor_dropdown_dropdown-icon.png)
 
-Change the dropdown icon for the particular component using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property and add style to the custom class which is mapped to `CssClass`.
+You can customize the dropdown icon for the particular component using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property and add style to the custom class which is mapped to `CssClass`.
 
 {% highlight cshtml %}
 
@@ -71,58 +91,53 @@ Change the dropdown icon for the particular component using the [CssClass](https
 
 ## Customizing the appearance of container element
 
-Use the following CSS to customize the appearance of container element.
+You can customize the appearance of the container element within the dropdown list component using the following CSS selector. This selector targets the parent element of the input and allows you to apply any desired styles to the component.
 
-```css
-.e-ddl.e-input-group.e-control-wrapper .e-input {
-    font-size: 20px;
-    font-family: emoji;
-    color: #ab3243;
-    background: #32a5ab;
-}
-```
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/customizing-appearance.razor %}
+
+{% endhighlight %}
 
 ![Blazor DropDownList container element customization](./images/style/blazor_dropdown_appearance-of-container.png)
 
 ## Customizing the dropdown icon’s color
 
-Use the following CSS to customize the dropdown icon’s color.
+You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons/#material) using the following CSS selector. This selector targets the icon element that is displayed within the dropdown list component and you can  set the desired color to the `color` property.
 
-```css
-.e-ddl .e-input-group-icon.e-ddl-icon.e-icons, .e-ddl .e-input-group-icon.e-ddl-icon.e-icons:hover {
-    color: #bb233d;
-    font-size: 13px;
-}
-```
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/dropdown-icon-color.razor %}
+
+{% endhighlight %}
 
 ![Blazor DropDownList icon color](./images/style/blazor_dropdown_icon-color.png)
 
 ## Customizing the focus color
 
-Use the following CSS to customize the focusing color of input element.
+You can customize the component color while focusing using the following CSS selector. This selector targets the input element when it is focused and you can set the desired color to the `background` property.
 
-```css
-.e-ddl.e-input-group.e-control-wrapper.e-input-focus::before, .e-ddl.e-input-group.e-control-wrapper.e-input-focus::after {
-    background: #c000ff;
-}
-```
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/focus-color.razor %}
+
+{% endhighlight %}
 
 ![Blazor DropDownList focus color](./images/style/blazor_dropdown_focus-color.png)
 
 ## Customizing the outline theme's focus color
 
-Use the following CSS to customize the focusing color of outline theme.
+You can customize the color of the dropdown list component when it is in a focused state and rendered with an outline theme, by using the `e-outline` class in the CSS selector. This selector targets the input element when it is focused, and allows you to set the desired color to the color property.
 
-```css
-.e-outline.e-input-group.e-input-focus:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),.e-outline.e-input-group.e-input-focus.e-control-wrapper:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),.e-outline.e-input-group.e-input-focus:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled),.e-outline.e-input-group.e-control-wrapper.e-input-focus:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled) {
-    border-color: #b1bd15;
-    box-shadow: inset 1px 1px #b1bd15, inset -1px 0 #b1bd15, inset 0 -1px #b1bd15;
-}
-```
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/outline-focus-color.razor %}
+
+{% endhighlight %}
 
 ![Blazor DropDownList focusing color outline theme](./images/style/blazor_dropdown_focusing-color-of-outline-theme.png)
 
-Use the `e-outline` to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property to achieve the outline theme
+Use the `e-outline` to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property to achieve the outline theme.
 
 {% highlight cshtml %}
 
@@ -132,38 +147,33 @@ Use the `e-outline` to the [CssClass](https://help.syncfusion.com/cr/blazor/Sync
 
 ![Blazor DropDownList with outline theme](./images/style/blazor_dropdown_outline-theme.png)
 
-
 ## Customizing the background color of focus, hover, and active items
 
-Use the following CSS to customize the background color of the `focus`, `hover`, and `active` items.
+You can customize the background color and text color of the list items within the dropdown list component when they are in a focused, active, or hovered state using the following CSS selectors. This selector targets the list item element when it is focused, active, and hovered, and allows you to set the desired background color to the `background-color` property and desired text color to the `color` property.
 
-```css
-.e-dropdownbase .e-list-item.e-item-focus, .e-dropdownbase .e-list-item.e-active, .e-dropdownbase .e-list-item.e-active.e-hover, .e-dropdownbase .e-list-item.e-hover {
-    background-color: #1f9c99;
-    color: #2319b8;
-}
-```
+{% highlight cshtml %}
 
-![Blazor DropDownList with customizing the focus, hover and active item color](./images/style/blazor_dropdown_outline-theme.png)
+{% include_relative code-snippet/style/background-color.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with customizing the focus, hover and active item color](./images/style/blazor_dropdown_focus-hover-activeitem-color.png)
 
 ## Customizing the appearance of pop-up element
 
-Use the following CSS to customize the appearance of popup element.
+You can customize the appearance of the popup element within the dropdown list component by using the following CSS selector. This selector targets the list item element when it is focused and allows you to apply any desired styles to the component.
 
-```css
-.e-dropdownbase .e-list-item, .e-dropdownbase .e-list-item.e-item-focus {
-    background-color: #29c2b8;
-    color: #207cd9;
-    font-family: emoji;
-    min-height: 29px;
-}
-```
+{% highlight cshtml %}
 
-![Blazor DropDownList with customizing popup color](./images/style/blazor_dropdown_outline-theme.png)
+{% include_relative code-snippet/style/appearance-popup.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with customizing popup color](./images/style/blazor_dropdown_popup-color.png)
 
 ## Change the HTML attributes
 
-Add the additional html attributes such as styles, class, and more to the root element using the [HTMLAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_HtmlAttributes) property.
+Add the additional html attributes such as styles, class, and more to the root element using the [HTMLAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_HtmlAttributes) property and accepts n number of attributes in a key-value pair format..
 
 {% highlight cshtml %}
 
@@ -172,6 +182,21 @@ Add the additional html attributes such as styles, class, and more to the root e
 {% endhighlight %}
 
 ![Blazor DropDownList with different font family](./images/style/blazor_dropdown_html-attributes.png)
+
+## Change the InputAttributes
+
+You can add the additional input attributes such as disabled, value, and more to the root element.
+
+If you configured both the property and equivalent input attribute, then the component considers the property value.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/style/inputAttributes-property.razor %}
+
+{% endhighlight %} 
+
+![Blazor DropDownList with HtmlAttributes property](./images/style/blazor_dropdown_input-attributes-propety.png)
+
 
 ## Set the various font family for dropdown list elements
 
@@ -229,7 +254,7 @@ Use the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 ### Width of dropdownlist
 
-To customize the width of the popup alone, use the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) property. By default, the popup width is set based on the component's width. Use the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Width) to change the width of the component.
+To customize the width of the popup alone, use the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) property. By default, the popup width is set based on the component's width. Use the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Width) to change the width of the component.You can also set the Width in pixel values. Default value of `Width` is `100%`.
 
 {% highlight cshtml %}
 
@@ -269,107 +294,3 @@ In the following code, a single list Item is hidden using jsinterop.
 {% endtabs %}
 
 ![Blazor DropDownList with Popup Width](./images/style/blazor_dropdown_disable-listitem.png)
-
-## Properties
-
-### CssClass  
-
-Specifies the CSS class name that can be appended with the root element of the DropDownList. One or more custom CSS classes can be added to a DropDownList.
-
-Some of the possible values are
-
-* `e-success`, which denotes the component in success state that is added green color to the dropdownlist's input field.
-* `e-warning`, which denotes the component in warning state that is added orange color to the dropdownlist's input field.
-* `e-error`, which denotes the component in error state that is added red color to the dropdownlist's input field.
-* `e-outline`, which supports only in material theme.
-* `e-multi-column`, which provides two or more columns in the popup and the column will be aligned like grid.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/style/cssclass-properties.razor %}
-
-{% endhighlight %} 
-
-![Blazor DropDownList with CssClass property](./images/style/blazor_dropdown_cssclass-property.png)
-
-### HtmlAttributes  
-
-Allows additional HTML attributes such as title, name, etc., and accepts n number of attributes in a key-value pair format.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/style/html-attributes.razor %}
-
-{% endhighlight %}
-
-![Blazor DropDownList with different font family](./images/style/blazor_dropdown_html-attributes.png)
-
-### InputAttributes
-
-You can add the additional input attributes such as disabled, value, and more to the root element.
-
-If you configured both the property and equivalent input attribute, then the component considers the property value.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/style/inputAttributes-property.razor %}
-
-{% endhighlight %} 
-
-![Blazor DropDownList with HtmlAttributes property](./images/style/blazor_dropdown_input-attributes-propety.png)
-
-### Readonly
-
-Specifies the boolean value whether the DropDownList allows the user to change the value.
-
-Default value of Readonly is `false`.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/style/readonly-mode.razor %}
-
-{% endhighlight %}
-
-![Blazor DropDownList with Readonly mode](./images/style/blazor_dropdown_readonly-mode.png)
-
-### TabIndex
-
-Specifies the tab order of the DropDownList component.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/style/tabIndex-property.razor %}
-
-{% endhighlight %}
-
-### ValueExpression
-
-Specifies the expression for defining the value of the bound.
-
-[Click to refer the code for ValueExpression](https://blazor.syncfusion.com/documentation/dropdown-list/how-to/tooltip)
-
-## Methods
-
-### HideSpinnerAsync()
-
-Hides the spinner loader.
-
-#### Declarations
-
-N> public Task HideSpinnerAsync()
-
-### ShowSpinnerAsync()
-
-Shows the spinner loader.
-
-#### Declarations
-
-N> public Task ShowSpinnerAsync()
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/style/show-or-hide-spinner-method.razor %}
-
-{% endhighlight %} 
-
-![Show or hide spinner in Blazor DropDownList](./images/style/blazor_dropdown_readonly-mode.png)

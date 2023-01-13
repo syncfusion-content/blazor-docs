@@ -73,6 +73,8 @@ The following example shows how to perform case-sensitive filter.
 
 You can use [FilterBarPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FilterBarPlaceholder) to accept the value to be displayed as a watermark text on the filter bar TextBox.
 
+ `FilterBarPlaceholder` is applicable only when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is used as true. 
+
 {% highlight cshtml %}
 
 {% include_relative code-snippet/filtering/filter-textbox-placeholder.razor %}
@@ -132,46 +134,3 @@ In the following example, the remote request does not fetch the search data unti
 {% endhighlight %}
 
 ![Blazor DropdownList with Minimum filter length](./images/filtering/blazor_dropdown_minimum-filter-length.png)
-
-## Properties
-
-### AllowFiltering   
-
-When [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is set to `true`, show the filter bar (search box) of the component.
-
-The filter action retrieves matched items through the `Filtering` event based on the characters typed in the search TextBox.
-
-Default value of AllowFiltering is `false`.
-
-[Click to refer the code for AllowFiltering](https://blazor.syncfusion.com/documentation/dropdown-list/filtering)
-
-### FilterBarPlaceholder
-
-Accepts the value to be displayed as a watermark text on the filter bar. [FilterBarPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FilterBarPlaceholder) is applicable when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is used as true. `FilterBarPlaceholder` is depends on `AllowFiltering` property.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/filtering/filterBarPlaceholder-property.razor %}
-
-{% endhighlight %} 
-
-![Blazor DropDownList with FilterBarPlaceholder property](./images/filtering/blazor_dropdown_filterBarPlaceholder-property.png)
-
-## Methods
-
-### FilterAsync(IEnumerable<TItem>, Query, FieldSettingsModel)
-
-To filter the data from given data source by using query.
-
-#### Declarations
-
-N> protected Task FilteringAction(IEnumerable<TItem> dataSource, Query query, FieldSettingsModel fields)
-
-#### Parameters
-
-* [dataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) - Specifies the data source.
-* [query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query)	- Specifies the query.
-* [fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) - Specifies the fields.
-
-[Click to refer the code for FilterAsync](https://blazor.syncfusion.com/documentation/dropdown-list/filtering)
-

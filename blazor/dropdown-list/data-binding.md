@@ -340,8 +340,6 @@ Add the new item in the popup with the help of [AddItemsAsync](https://help.sync
 
 ![Blazor DropdownList with adding new Item](./images/data-binding/blazor_dropdown_add-new-item.png)
 
-## Events
-
 ### DataBound event
 
 The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_DataBound) event triggers when the data source is populated in the popup list.

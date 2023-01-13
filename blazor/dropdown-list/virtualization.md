@@ -46,19 +46,7 @@ In the following code, the remote data bound to the DropDownList component, but 
 
 ![Blazor DropDownList with virtualization of remote data](./images/virtualization/blazor_dropdown_virtualization-remote-data.gif)
 
-## Limitation of virtualization
-
-* Virtualization is not supported in the grouping feature.
-
-## Properties
-
-### EnableVirtualization   
-
-The Virtual Scrolling feature is used to display a large amount of data that you require without buffering the entire load of a huge database records in the DropDowns, that is, when scrolling, the datamanager request is sent to fetch some amount of data from the server dynamically. To achieve this scenario with DropDowns, set the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_EnableVirtualization) to `true`.
-
-[Click to refer the code for EnableVirtualization](https://blazor.syncfusion.com/documentation/dropdown-list/virtualization)
-
-### ItemsCount     
+## ItemsCount     
 
 The data can be fetched in popup based on [ItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ItemsCount), when enabled the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_EnableVirtualization). ItemsCount is applicable only when `EnableVirtualization` is used as true. ItemsCount is depends on `EnableVirtualization`
 
@@ -69,3 +57,7 @@ Default value of `ItemsCount` is `5`.
 {% include_relative code-snippet/virtualization/item-count.razor %}
 
 {% endhighlight %}
+
+## Limitation of virtualization
+
+* Virtualization is not supported in the grouping feature.
