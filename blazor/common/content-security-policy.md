@@ -44,7 +44,7 @@ These directives should be included in the `<head>` tag of the application's web
 
 
 * For **Blazor Server application**, inside the `<head>` of 
-    * **~/Pages/_Host.cshtml** file for .NET 3, .NET 5 and .NET 7.
+    * **~/Pages/_Host.cshtml** file for .NET Core 3.X, .NET 5 and .NET 7.
     * **~/Pages/_Layout.cshtml** for .NET 6.
 
     {% tabs %}
@@ -66,7 +66,7 @@ These directives should be included in the `<head>` tag of the application's web
     </head>
 
     {% endhighlight %}
-    {% highlight cshtml tabtitle=".NET 7, .NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="9 10" %}
+    {% highlight cshtml tabtitle=".NET 7, .NET 5 and .NET Core 3.X (~/_Host.cshtml)" hl_lines="9 10" %}
 
     <head>
         ...
