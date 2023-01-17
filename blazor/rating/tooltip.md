@@ -15,7 +15,7 @@ The Blazor rating component supports tooltip to show additional information in r
 
 @using Syncfusion.Blazor.Inputs
 
-<SfRating ShowTooltip=true></SfRating>
+<SfRating Value="3" ShowTooltip=true></SfRating>
 
 ```
 
@@ -49,7 +49,7 @@ N> You can find more information about customizing the appearance of the tooltip
 
 @using Syncfusion.Blazor.Inputs
 
-<SfRating CssClass="customtooltip" ShowTooltip=true></SfRating>
+<SfRating Value="3" CssClass="customtooltip" ShowTooltip=true></SfRating>
 
 <style>
 
