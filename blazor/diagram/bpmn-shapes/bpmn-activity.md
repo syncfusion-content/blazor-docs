@@ -52,6 +52,8 @@ You can specify the any one of the above activity type using the [ActivityType](
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/BpmnEditor/BpmnActivity)
+
  ![Send Task BPMN Shape](../images/Task.png) 
 
 ## BPMN activity task
@@ -93,6 +95,9 @@ The [TaskType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.B
     }   
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/BpmnEditor/BpmnActivity)
+
+
  ![Send Task BPMN Shape](../images/Send.png) 
 
 The various types of BPMN tasks are tabulated as follows.
@@ -147,6 +152,9 @@ A [Collapsed Sub-Process](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/BpmnEditor/BpmnActivity)
+
+
  ![Collapsed Subprocess BPMN Shape](../images/Bpmn-CollapsedSub-Process-Loop-None.png)
 
 ### Loop
@@ -190,6 +198,9 @@ You can define the `Loop` property in BPMN Activity, as shown in the following c
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/BpmnEditor/BpmnActivity)
+
+
  ![Standard Task BPMN Shape](../images/Bpmn-Task-Loop-Standard.png) 
 
 The following table contains various types of BPMN loops.
@@ -241,6 +252,9 @@ The following table contains various types of BPMN loops.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/BpmnEditor/BpmnActivity)
+
+
  ![IsCompensationActivity Task BPMN Shape](../images/Bpmn-Task-Compensation.png)
 
 ### Call
@@ -286,6 +300,9 @@ N>* By default, the [IsCall](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/BpmnEditor/BpmnActivity)
+
+
 ![IsAdHocActivity CollapsedSub-Process BPMN Shape](../images/Bpmn-Task-Call.png)
 
 ### Ad-Hoc
@@ -330,6 +347,9 @@ N>* By default, the [IsAdhoc](https://help.syncfusion.com/cr/blazor/Syncfusion.B
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/BpmnEditor/BpmnActivity)
+
+
 ![IsAdHocActivity CollapsedSub-Process BPMN Shape](../images/Bpmn-CollapsedSub-Process-AdHocpng.png)
 
 ### SubProcessType
@@ -371,6 +391,8 @@ SubProcessType represents the type of task that is being processed. The [SubProc
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/BpmnEditor/BpmnActivity)
+
  ![Event Boundary BPMN Shape](../images/Bpmn-CollapsedSub-Process-Event.png)
 
 The following table contains various types of BPMN boundaries.

@@ -70,6 +70,7 @@ To draw a [shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools)
 
 ![Node Tool in Blazor Diagram](images/blazor-diagram-node-tool.gif)
 
@@ -130,6 +131,7 @@ To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools)
 
 ![Connector Tool in Blazor Diagram](images/blazor-diagram-connector-tool.gif)
 
@@ -190,6 +192,7 @@ Diagram allows you to create a text Node as soon as you click on the Diagram pag
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools)
 
 ![Text Tool in Blazor Diagram](./images/blazor-diagram-Text-drawingtool.gif)
 
@@ -257,6 +260,8 @@ The following code illustrates how to draw a polygon shape.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools)
+
 ## Drawing polyline connector
 
 The diagram allows you to create the [Polyline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Polyline) segments with straight lines and angled vertices at the control points by clicking and moving the mouse at runtime on the diagram page.
@@ -265,19 +270,16 @@ The following code illustrates how to draw a polyline connector.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-
 <input Type="button" value="Polyline" @onclick="Polyline" />
 <SfDiagramComponent @ref="diagram" Nodes="@nodes" Height="600px">
     <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
-
 @code
 {
     //Reference to the diagram.
     SfDiagramComponent diagram;
     //Define the diagram's nodes collection.
     public DiagramObjectCollection<Node> nodes;
-
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
@@ -303,7 +305,6 @@ The following code illustrates how to draw a polyline connector.
         };
         nodes.Add(node);
     }
-
     private void Polyline()
     {
         //Draw an object once and activate the draw once.
@@ -317,6 +318,7 @@ The following code illustrates how to draw a polyline connector.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools)
 
 ## Tool selection
 
@@ -374,3 +376,5 @@ The following code illustrates how to enable multiple interaction controllers,
     public DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 }
 ```
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools)

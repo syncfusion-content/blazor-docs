@@ -29,7 +29,7 @@ N> This property is not applicable for Scheduler with height `auto`.
 @code{
     SfSchedule<ScheduleData.RoomData> ScheduleObj;
     private View CurrentView = View.Week;
-    public DateTime CurrentDate = new DateTime(2021, 6, 29);
+    public DateTime CurrentDate = new DateTime(2023, 6, 29);
     public List<AppointmentData> generateObject()
     {
         List<AppointmentData> appData = new List<AppointmentData>(25);
@@ -39,8 +39,8 @@ N> This property is not applicable for Scheduler with height `auto`.
             {
                 Id = a + 1,
                 Subject = "Testing",
-                StartTime = new DateTime(2021, 6, 29, 0, 0, 0),
-                EndTime = new DateTime(2021, 6, 30, 0, 0, 0),
+                StartTime = new DateTime(2023, 6, 29, 0, 0, 0),
+                EndTime = new DateTime(2023, 6, 30, 0, 0, 0),
                 IsAllDay = true
             });
         }
