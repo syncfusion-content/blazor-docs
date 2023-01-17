@@ -73,3 +73,4 @@ The following code example illustrates how to print the region occupied by the d
      }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Print/PrintSample/PrintSample)
