@@ -17,10 +17,10 @@ The following list of attributes are added in the Tab.
 | **Roles and Attributes** | **Functionalities** |
 | --- | --- |
 | tablist | This is set to role attribute in the Tab element that describes actual role of the element.|
+| tab | It indicates an interactive element inside a tablist that, when activated, displays its associated tabpanel.|
 | tabpanel | This is set to role attribute for the Tab content that describes the role for viewing the active content.|
 | presentation       | This is set to role attribute for nested elements in the Tab.  |
 | aria-orientation    | It indicates the Tab header orientation. Default value of this attribute is horizontal. |
-| aria-activedescendant    | It indicates the current active child of the Tab component. |
 | aria-haspopup       | It indicates the popup mode in the Tab. The default value of this attribute is false. If popup mode is enabled, the attribute value is set to true. |
 | aria-disabled       | It indicates the disabled state of the Tab. |
 | aria-selected       | It indicates the selection state for Tab items. Active Tab is set to true for this attribute. |
@@ -34,6 +34,7 @@ By default, keyboard navigation is enabled. This component implements keyboard n
 
 | Key           | Description                                                                         |
 |---------------|-------------------------------------------------------------------------------------|
+| <kbd>Tab/Shift+Tab</kbd>    |  When positive values assigned, it allows to switch focus to the next/previous taps items. |
 | <kbd>Left</kbd>    | Moves focus to the previous Tab. If focus is on the first Tab, the focus will not move to any Tab. |
 | <kbd>Right</kbd>   | Moves focus to the next Tab. If focus is on the last Tab element, the focus will not move to any Tab. |
 | <kbd>Enter</kbd> or <kbd> Space</kbd>  | Selects the Tab if it is not selected. Opens the popup dropdown icon if it is focused. Select the Tab item as active when popup item is focused. |

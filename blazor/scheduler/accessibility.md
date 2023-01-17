@@ -19,17 +19,18 @@ The following ARIA attributes are used in the Scheduler:
 
 | Property | Functionalities |
 |-------|---------|
-| role | It  gives assistive technologies about how to handle each element in a widget. |
+| role="main" | This attribute added to the Scheduler element describes the actual role of the element and denote it as a main and unique content. |
+| role="button" | This attribute is assigned to the appointments of Scheduler, to denote it as a clickable element. |
 | aria-disabled | It indicates the disabled state of the Scheduler. |
 | aria-selected | It indicates the currently selected cell of the Scheduler. |
 | aria-live | It indicates a string value that labels the Scheduler element. |
-| aria-label | It indicates the disabled state of the Scheduler and its items. |
+| aria-label | This attribute is assigned to the Scheduler parent element and its default value is Scheduler's current date. On every time, the date is navigated, this attribute is updated with appropriate current date values. It is also assigned to other scheduler UI elements such as previous and next date navigation buttons depicting its purpose, div element displaying date range in the header bar and appointment elements. |
 | aria-labelledby | It indicates editor dialog title to the user through assistive technologies. |
 | aria-describedby | It indicates editor dialog content description to the user through assistive technologies. |
 
 ## Keyboard navigation
 
-All the Scheduler actions can be controlled via keyboard keys and is availed by using `AllowKeyboardInteraction` property which is set to true by default. The applicable key combinations and its relative functionalities are listed below.
+All the Scheduler actions can be controlled via keyboard keys and is availed by using `AllowKeyboardInteraction` property which is set to `true` by default. The applicable key combinations and its relative functionalities are listed below.
 
 Interaction Keys |Description
 -----|-----
