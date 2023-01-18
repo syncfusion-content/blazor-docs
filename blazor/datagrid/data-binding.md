@@ -1360,16 +1360,13 @@ In the following sample, the data from the DataTable can be retrieved and covert
         {
             System.Dynamic.ExpandoObject e = new System.Dynamic.ExpandoObject();
             foreach (DataColumn col in input.Columns){
-                if (col.ColumnName.Equals("DateTimeValues"))
+                if (col.DataType == typeof(DateTime))
                 {
-                    if (row["DateTimeValues"] is DBNull)
-                        e.TryAdd(col.ColumnName, null);
-                    else
-                        e.TryAdd(col.ColumnName, row.ItemArray[col.Ordinal]); 
+                    e.TryAdd(col.ColumnName, row[col]);
                 }
                 else
                 {
-                    e.TryAdd(col.ColumnName, row.ItemArray[col.Ordinal]);   
+                    e.TryAdd(col.ColumnName, row[col]);   
                 }
             }
             list.Add(e);
