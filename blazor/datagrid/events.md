@@ -2862,7 +2862,7 @@ The [BeforeAutoFillCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 The [BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeCellPaste) event is triggered before pasting the copied cell value for each cell.
 
-> The pasting action for a particular cell can be cancelled by setting the `Cancel` argument of the `BeforeCellPaste` event to true.
+> The pasting action for a particular cell can be prevented by setting the `Cancel` argument of the `BeforeCellPaste` event to true.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2910,7 +2910,7 @@ The [BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gr
 
 The [BeforeCopyPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeCopyPaste) event is triggered before pasting the copied cell value for each cell.
 
-The entire copy or paste action can be cancelled by setting the `Cancel` argument of the `BeforeCopyPaste` event to true.
+> The entire copy or paste action can be prevented by setting the `Cancel` argument of the `BeforeCopyPaste` event to true.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
