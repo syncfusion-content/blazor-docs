@@ -2810,7 +2810,7 @@ The [BeforeAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gri
 
 ## BeforeAutoFillCell
 
-The [BeforeAutoFillCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeAutoFillCell) event is triggered for each cell before autofilling the value.
+The [BeforeAutoFillCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeAutoFillCell) event is triggered for each cell before auto filling the value.
 
 > The autofit action for a particular cell can be cancelled by setting the Cancel argument of the BeforeAutoFillCell event to true. Also, if the `BeforeAutoFill` event is not canceled, this event occurs after it. 
 
