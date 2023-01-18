@@ -434,7 +434,7 @@ Hides the spinner loader.
 
 #### Declarations
 
-> public Task HideSpinnerAsync()
+N> public Task HideSpinnerAsync()
 
 ### ShowSpinnerAsync()
 
@@ -442,7 +442,7 @@ Shows the spinner loader.
 
 #### Declarations
 
-> public Task ShowSpinnerAsync()
+N> public Task ShowSpinnerAsync()
 
 {% highlight Razor %}
 
