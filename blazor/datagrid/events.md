@@ -2621,6 +2621,8 @@ The [OnBatchCancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grid
 
 The [FreezeLineMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FreezeLineMoving) event is triggered when freeze line is moving.
 
+> The freeze line can be enabled by setting the `AllowFreezeLineMoving` property to true.
+
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
@@ -2688,6 +2690,8 @@ The [FreezeLineMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 ## FreezeLineMoved
 
 The [FreezeLineMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FreezeLineMoved) event is triggered after moved the freeze line.
+
+> The freeze line can be enabled by setting the `AllowFreezeLineMoving` property to true.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2806,7 +2810,7 @@ The [BeforeAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gri
 
 ## BeforeAutoFillCell
 
-The [BeforeAutoFillCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeAutoFillCell) event is triggered before the autofill action sets the value for each cell.
+The [BeforeAutoFillCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeAutoFillCell) event is triggered for each cell before autofilling the value.
 
 > The autofit action for a particular cell can be cancelled by setting the Cancel argument of the BeforeAutoFillCell event to true. Also, if the `BeforeAutoFill` event is not canceled, this event occurs after it. 
 
