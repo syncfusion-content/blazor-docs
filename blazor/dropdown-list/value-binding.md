@@ -282,7 +282,7 @@ Allows you to clear the selected values from the component.
 
 #### Declarations
 
-> public Task ClearAsync()
+N> public Task ClearAsync()
 
 {% highlight Razor %}
 
