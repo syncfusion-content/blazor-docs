@@ -9,13 +9,19 @@ documentation: ug
 
 # Form Validation in ComboBox
 
+This demonstrates the creation of a form that includes a dropdown list, allowing the user to select an option from a list of items. The form also includes validation, which verifies that all required fields are filled out before the form can be submitted.
+
 ## ComboBox inside edit form
 
-The ComboBox can be used inside an `EditForm` to create a form with a list for selecting an option. The `EditForm` validates all data annotation rules using the `DataAnnotationsValidator`. 
+The ComboBox component can be used inside an EditForm to create a form that includes a list for selecting an option. The `EditForm` component validates all data annotation rules using the `DataAnnotationsValidator` component.
 
-If the ComboBox input is valid, the form will be ready to be submit. If the ComboBox input is invalid, an error message will be displayed until a valid value is chosen.
+When the ComboBox input is valid, the form is ready to be submitted. If the input is invalid, an error message will be displayed until a valid value is chosen.
 
-In this following example, the `EditForm` component is used to wrap the ComboBox and the submit button. The `DataAnnotationsValidator` component is used to enable data annotation-based validation, and the `ValidationMessage` component is used to display the validation error message. The `Required` attribute is applied to the Name field to make it a required field.
+* The EditForm component wraps the entire form, has the Model attribute set to the model variable of type Countries, and triggers the handleSubmit() method when the form is submitted.
+* The DataAnnotationsValidator component enables validation based on the Data Annotations attributes applied on the model properties.
+* The ValidationSummary component displays a summary of all validation errors on the form.
+* The ValidationMessage component displays a validation error message for the Name property of the model variable.
+* The submit button submits the form and triggers the handleSubmit() method when clicked.
 
 {% highlight cshtml %}
 

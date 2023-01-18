@@ -322,7 +322,7 @@ In the following example, the `Opened` event is used to call the `AddAttribute` 
 
 ## Displaying dropdown List in Tab
 
-Use the DropDownList component inside a tab view to allow users to select an option from a DropDownList within a tab. This may be accomplished by displaying the dropdown list within the SfTab.
+The DropDownList component can be used within a tab view to enable users to select an option from a list. This can be achieved by placing the DropDownList within the SfTab component. Each tab includes a DropDownList that allows the user to choose from a list of options.
 
 In the following example, the SfTab component is used to display a tab view with three tab items. Each tab item contains a DropDownList component with a different data source. When the user selects a different tab, the corresponding DropDownList is displayed.
 
@@ -336,7 +336,7 @@ In the following example, the SfTab component is used to display a tab view with
 
 ## Dropdownlist inside Dialog
 
-Use the DropDownList inside a dialog component to allow users to select an option from a DropDownList within a dialog box. This can be accomplished by presenting the dropdownlist within the SfDialog.
+A modal dialog box that contains a dropdown list can be created to allow users to select an option from the list. This can be achieved by placing the dropdown list within an SfDialog component. The dialog box is opened when the user clicks the "Open Modal Dialog" button, and the dropdown list is present inside the dialog box. The dialog box is closed when the user clicks outside of the dialog box.
 
 In the following example, the SfDialog component is used to display a dialog popup with a DropDownList component inside the dialog content. When the user clicks the `Open Dialog` button, the dialog is displayed.
 
@@ -434,7 +434,7 @@ Hides the spinner loader.
 
 #### Declarations
 
-> public Task HideSpinnerAsync()
+N> public Task HideSpinnerAsync()
 
 ### ShowSpinnerAsync()
 
@@ -442,7 +442,7 @@ Shows the spinner loader.
 
 #### Declarations
 
-> public Task ShowSpinnerAsync()
+N> public Task ShowSpinnerAsync()
 
 {% highlight Razor %}
 
