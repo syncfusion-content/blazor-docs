@@ -305,9 +305,11 @@ In the following sample, when the data fetch request fails, the ComboBox display
 
 ## Combine two fields without Templates
 
-To display multiple fields in the combobox without using templates, which is achieved by defining a new variable and passing the value with the desired format with the help of the `get` and `set` methods.
+To display multiple fields in the combobox without using templates, which is achieved by defining a new variable and passing the value with the desired format with the help of the `get` and `set` methods. 
 
-In this following example, the FirstName variable is defined with the `get` and `set` methods. The `get` method returns the concatenation of the FirstName and LastName variables, with a space in between. This allows you to display the full name in the user interface and update the FirstName and LastName variables when the user changes the full name.
+In the `GameFields` class, the `Name` property is defined with the `get` and `set` methods. 
+* The `get` method is used to retrieve the value of the Name property. In this example, it concatenates the FirstName and LastName variables, with a space in between and returns the full name as a string.
+* The `set` method is used to update the value of the Name property. In this example, it is not being used, as the value of the Name property is determined by the get method based on the FirstName and LastName properties.
 
 {% highlight cshtml %}
 
