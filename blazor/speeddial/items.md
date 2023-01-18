@@ -129,3 +129,50 @@ Below example demonstrates the Speed Dial items with applied Zoom effect.
 ## Template
 
 The Speed Dial supports to customize the action items and entire pop-up container by setting [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemTemplate) and [PopupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_PopupTemplate) tag directive. For more details about templates, check out the link [here](https://blazor.syncfusion.com/documentation/speeddial/getting-started).
+
+## HTML attribute support in speeddial items
+
+You can add HTML attribute support for the Blazor Speed Dial action items by using [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_HtmlAttributes) property. Additional attributes can be added by including them as `inline` attributes or by using the `@attributes` directive.
+
+Below example demonstrates the Speed Dial items with inline attributes.
+
+```cshtml
+
+@using Syncfusion.Blazor.Buttons
+
+<SfSpeedDial Content="Edit"> 
+    <SpeedDialItems>
+        <SpeedDialItem Text="Cut" IconCss="e-icons e-cut" style="color:red;"></SpeedDialItem>
+        <SpeedDialItem IconCss="e-icons e-copy"></SpeedDialItem>
+        <SpeedDialItem Text="Paste"></SpeedDialItem>
+    </SpeedDialItems>
+</SfSpeedDial> 
+
+```
+
+![Blazor Speed Dial with inline attribute](./images/Blazor-SpeedDial-Inline-Attribute.png)
+
+Below example demonstrates the Speed Dial items with `@attributes` directive.
+
+```cshtml
+
+@using Syncfusion.Blazor.Buttons
+
+<SfSpeedDial Content="Edit"> 
+    <SpeedDialItems>
+        <SpeedDialItem Text="Cut" IconCss="e-icons e-cut" HtmlAttributes=@attributes></SpeedDialItem>
+        <SpeedDialItem IconCss="e-icons e-copy"></SpeedDialItem>
+        <SpeedDialItem Text="Paste"></SpeedDialItem>
+    </SpeedDialItems>
+</SfSpeedDial> 
+
+@code {
+    private Dictionary<string, object> attributes = new Dictionary<string, object>()
+    {
+        { "style", "color: blue;"}
+    };
+}
+
+```
+
+![Blazor Speed Dial with @attributes directive](./images/Blazor-SpeedDial-@Attribute-Directive.png)
