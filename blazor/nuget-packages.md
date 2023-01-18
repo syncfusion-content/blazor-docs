@@ -36,7 +36,7 @@ This package contains the base component, common classes, common functionalities
 <b>NuGet package name</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Friendly name</b>
 </td>
 <td>
 <b>Components</b>
@@ -50,11 +50,12 @@ This package contains the base component, common classes, common functionalities
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/">Syncfusion.Blazor.Core</a>
 </td>
 <td>
-Syncfusion.Blazor.Core.dll
+<ul>
+<li>MediaQuery</li>
+</ul>
 </td>
 <td>
 <ul>
-<li>SfBaseComponent</li>
 <li>SfMediaQuery</li>
 </ul>
 </td>
