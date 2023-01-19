@@ -92,9 +92,9 @@ The following properties and classes are available in the [MapsDataLabelSettings
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
             @* To add data labels *@
-            <MapsDataLabelSettings Visible="true" LabelPath="name" Fill="red" Opacity="0.9">
+            <MapsDataLabelSettings SmartLabelMode="SmartLabelMode.Trim" IntersectionAction="IntersectAction.Hide" Visible="true" LabelPath="name" Fill="transparent" Opacity="0.9">
                 <MapsLayerDataLabelBorder Color="green" Width="2"></MapsLayerDataLabelBorder>
-                <MapsLayerDataLabelTextStyle Color="blue" Size="12px" FontStyle="Sans-serif" FontWeight="normal">
+                <MapsLayerDataLabelTextStyle Size="17px" FontStyle="Sans-serif" FontWeight="normal">
                 </MapsLayerDataLabelTextStyle>
             </MapsDataLabelSettings>
             <MapsShapeSettings Autofill="true"></MapsShapeSettings>
@@ -166,17 +166,42 @@ N>The customization properties of data label, [SmartLabelMode](https://help.sync
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
-            @* To trim intersect labels *@
-            <MapsDataLabelSettings Visible="true">
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="MarkerData"
+                   DataSource="MarkerDataSource" ShapeDataPath="@ShapeDataPath" ShapePropertyPath="@ShapePropertyPath">
+            <MapsDataLabelSettings Visible="true" LabelPath="Name">
                 <LabelTemplate>
-                    @{ <p>Label</p> }
+                    @{
+                        var Data = context as MarkerData;
+                        <div><img src="https://ej2.syncfusion.com/demos/src/maps/images/weather-clear.png" style="width:22px;height:22px"></div>
+                        <div>@Data.Name</div>
+                    }
                 </LabelTemplate>
             </MapsDataLabelSettings>
             <MapsShapeSettings Autofill="true"></MapsShapeSettings>
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
+
+@code {
+    public class MarkerData
+    {
+        public string Name { get; set; }
+        public double Population { get; set; }
+    };
+    public List<MarkerData> MarkerDataSource = new List<MarkerData> {
+        new MarkerData {
+            Name= "Iowa", Population= 29863010 
+        },
+        new MarkerData {
+            Name= "Utah", Population= 1263010
+        },
+        new MarkerData {
+            Name= "Texas", Population= 963010
+        }
+    };
+    public string[] ShapePropertyPath = { "name" };
+    public string ShapeDataPath = "Name";
+}
 ```
 
 ![Blazor Maps with Data Label Template](./images/DataLabel/blazor-maps-data-label-template.PNG)
