@@ -93,7 +93,7 @@ It is not recommended to have a connection string with sensitive information in 
 Now, the **DbContext** must be configured using connection string and registered as scoped service using the **AddDbContext** method in **Startup.cs** in .NET 5 and .NET 3.X application and in **Program.cs** file in .NET 6 application.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
 
 builder.Services.AddDbContext<LibraryContext>(option =>
                 option.UseSqlServer(builder.Configuration.GetConnectionString("LibraryDatabase")));
@@ -229,7 +229,7 @@ namespace LibraryManagement.Models
 Now, you need to register the **LibraryService** and **ILibraryService** as services in the **startup.cs** file for .NET 5 and .NET 3.X applications and in **Program.cs** file for .NET6 applications. Register the Scoped Services like below.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
 
 builder.Services.AddScoped<ILibraryService, LibraryService>();
 builder.Services.AddDbContext<LibraryContext>(option =>
@@ -291,7 +291,7 @@ Open **_Import.razor** file and add the following namespaces which are required 
 Open **Startup.cs** file in .NET 5 and .NET 3.X applications, **Program.cs** file in .NET 6 application and register the Syncfusion service in the **ConfigureServices** method as follows.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();

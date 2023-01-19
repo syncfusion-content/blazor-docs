@@ -67,7 +67,6 @@ To add a connection port, define the port object and add it to node’s ports co
     }
 }
 ```
->**Note:** Do not use underscore(_) for port's id.
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)
 
 ![Creating Port in Blazor Diagram](../images/blazor-diagram-create-port.png)

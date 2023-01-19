@@ -566,52 +566,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 **Note:** You can set any type of value for the AdditionalInfo property.
 
-## How to set ZIndex property for node
-
-* The node's [ZIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ZIndex) property specifies the stack order of the node. A node with a greater stack order is always in front of a node with a lower stack order. By default, the value is -1.
-
-
-The following code illustrates how to render nodes based on the stack order.
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-@using System.Collections.ObjectModel
-
-<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
-
-@code
-{
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes;
-
-    protected override void OnInitialized()
-    {
-        nodes = new DiagramObjectCollection<Node>();
-        // A node is created and stored in nodes array.
-        Node node = new Node()
-        {
-            ID = "node",
-            // Position of the node.
-            OffsetX = 250,
-            OffsetY = 250,
-            // Size of the node.
-            Width = 100,
-            Height = 100,
-            ZIndex = 2,
-            Style = new ShapeStyle() 
-            { 
-                Fill = "#6495ED", 
-                StrokeColor = "white" 
-            },
-            // Pivot of the node.
-            Pivot = new DiagramPoint() { X = 0, Y = 0 }
-        };
-        nodes.Add(node);
-    }
-}
-```
-
-
 ## See also
 
 * [How to get events when they interact with the node](./events)

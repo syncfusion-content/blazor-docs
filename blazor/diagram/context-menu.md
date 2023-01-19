@@ -25,6 +25,7 @@ The [Show](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Conte
     </ContextMenuSettings>
 </SfDiagramComponent>
 ```
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu)
 ![Default Context Menu](images/ContextMenuDefault.gif)
 
@@ -37,6 +38,7 @@ The following code shows how to disable the default context menu items.
     </ContextMenuSettings>
 </SfDiagramComponent>
 ```
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu)
 ## Custom context menu
 
@@ -147,6 +149,7 @@ The following code example shows how to add custom context menu items along with
     }
 }
 ```
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu)
 ### Custom context menu alone
 
@@ -162,6 +165,7 @@ The following code example shows how to show custom context menu items alone.
     </ContextMenuSettings>
 </SfDiagramComponent>
 ```
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu)
 ![Custom Context Menu](images/ContextMenuCustomMenuOnly.gif)
 
@@ -215,6 +219,7 @@ Diagram provides template support for context menu. The context menu items can b
     }
 </style>
 ```
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu)
 ![Context Menu Template](images/ContextMenuTemplate.gif)
 
@@ -224,7 +229,6 @@ The Diagram control provides event support for the context menu that triggers wh
 
 ### ContextMenuOpening
 
-The Diagram control triggers the event [ContextMenuOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContextMenuSettings.html#Syncfusion_Blazor_Diagram_ContextMenuSettings_ContextMenuOpening)  when performing right click on the diagram or the diagram elements such as Node, Connector and Groups. To explore about arguments, refer to the [DiagramMenuOpeningEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramMenuOpeningEventArgs.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
