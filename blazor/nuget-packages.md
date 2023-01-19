@@ -420,9 +420,6 @@ The Blazor DataVizCommon is the base package for the svg elements used in the vi
 <b>NuGet package</b>
 </td>
 <td>
-<b>Components friendly name</b>
-</td>
-<td>
 <b>Components name</b>
 </td>
 <td>
@@ -432,9 +429,6 @@ The Blazor DataVizCommon is the base package for the svg elements used in the vi
 <tr>
 <td>
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.DataVizCommon/">Syncfusion.Blazor.DataVizCommon</a>
-</td>
-<td>
-DataVizCommon
 </td>
 <td>
 -
@@ -1070,6 +1064,7 @@ A package of Blazor navigation components such as Accordion, ContextMenu, Tabs, 
 <li>Tabs</li>
 <li>Toolbar</li>
 <li>TreeView</li>
+<li>Pager</li>
 </ul>
 </td>
 <td>
@@ -1083,6 +1078,7 @@ A package of Blazor navigation components such as Accordion, ContextMenu, Tabs, 
 <li>SfTab</li>
 <li>SfToolbar</li>
 <li>SfTreeView</li>
+<li>SfPager</li>
 </ul>
 </td>
 <td>
@@ -1762,18 +1758,12 @@ This package contains the Syncfusion Blazor UI components theme files.
 <b>Friendly name</b>
 </td>
 <td>
-<b>Themes</b>
-</td>
-<td>
 <b>Dependencies</b>
 </td>
 </tr>
 <tr>
 <td>
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Themes/">Syncfusion.Blazor.Themes</a>
-</td>
-<td>
-Themes
 </td>
 <td>
 <ul>
