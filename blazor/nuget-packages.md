@@ -33,13 +33,13 @@ This package contains the base component, common classes, common functionalities
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -50,11 +50,10 @@ This package contains the base component, common classes, common functionalities
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/">Syncfusion.Blazor.Core</a>
 </td>
 <td>
-Syncfusion.Blazor.Core.dll
+MediaQuery
 </td>
 <td>
 <ul>
-<li>SfBaseComponent</li>
 <li>SfMediaQuery</li>
 </ul>
 </td>
@@ -77,13 +76,13 @@ The Blazor BarcodeGenerator supports the most common 1D and 2D barcode, and comp
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -94,7 +93,11 @@ The Blazor BarcodeGenerator supports the most common 1D and 2D barcode, and comp
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.BarcodeGenerator/">Syncfusion.Blazor.BarcodeGenerator</a>
 </td>
 <td>
-Syncfusion.Blazor.BarcodeGenerator.dll
+<ul>
+<li>Barcode Generator</li>
+<li>Data Matrix Generator</li>
+<li>QR Code Generator</li>
+</ul>
 </td>
 <td>
 <ul>
@@ -116,13 +119,13 @@ The Blazor Bullet Chart is used to visually compare measures, similar to the com
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -133,7 +136,7 @@ The Blazor Bullet Chart is used to visually compare measures, similar to the com
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.BulletChart/">Syncfusion.Blazor.BulletChart</a>
 </td>
 <td>
-Syncfusion.Blazor.BulletChart.dll
+Bullet Chart
 </td>
 <td>
 SfBulletChart
@@ -155,13 +158,13 @@ The Blazor buttons package contains UI components such as Button, Checkbox, Radi
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -172,7 +175,16 @@ The Blazor buttons package contains UI components such as Button, Checkbox, Radi
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Buttons/">Syncfusion.Blazor.Buttons</a>
 </td>
 <td>
-Syncfusion.Blazor.Buttons.dll
+<ul>
+<li>Button</li>
+<li>CheckBox</li>
+<li>Chip</li>
+<li>Floating Action Button</li>
+<li>RadioButton</li>
+<li>Speed Dial</li>
+<li>Toggle Switch Button</li>
+<li>Icon</li>
+</ul>
 </td>
 <td>
 <ul>
@@ -199,13 +211,13 @@ The Calendars package contains date and time components such as Calendar, DatePi
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -216,7 +228,13 @@ The Calendars package contains date and time components such as Calendar, DatePi
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/">Syncfusion.Blazor.Calendars</a>
 </td>
 <td>
-Syncfusion.Blazor.Calendars.dll
+<ul>
+<li>Calendar</li>
+<li>DatePicker</li>
+<li>DateRangePicker</li>
+<li>DateTime Picker</li>
+<li>TimePicker</li>
+</ul>
 </td>
 <td>
 <ul>
@@ -245,13 +263,13 @@ A Blazor Card is a small layout that shows a defined content in an organized str
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -262,7 +280,7 @@ A Blazor Card is a small layout that shows a defined content in an organized str
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Cards/">Syncfusion.Blazor.Cards</a>
 </td>
 <td>
-Syncfusion.Blazor.Cards.dll
+Card
 </td>
 <td>
 SfCard
@@ -280,13 +298,13 @@ The Blazor Chart is a well-crafted charting component to visualize data. It cont
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -297,7 +315,10 @@ The Blazor Chart is a well-crafted charting component to visualize data. It cont
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Charts/">Syncfusion.Blazor.Charts</a>
 </td>
 <td>
-Syncfusion.Blazor.Charts.dll
+<ul>
+<li>Charts</li>
+<li>Accumulation Chart</li>
+</ul>
 </td>
 <td>
 <ul>
@@ -323,13 +344,13 @@ The Blazor Circular Gauge is used for visualizing numeric values on a circular s
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -340,7 +361,7 @@ The Blazor Circular Gauge is used for visualizing numeric values on a circular s
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.CircularGauge/">Syncfusion.Blazor.CircularGauge</a>
 </td>
 <td>
-Syncfusion.Blazor.CircularGauge.dll
+Circular Gauge
 </td>
 <td>
 SfCircularGauge
@@ -361,13 +382,13 @@ The SfDataManager is a data management package to perform data operations such a
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -378,7 +399,7 @@ The SfDataManager is a data management package to perform data operations such a
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Data/">Syncfusion.Blazor.Data</a>
 </td>
 <td>
-Syncfusion.Blazor.Data.dll
+DataManager
 </td>
 <td>
 SfDataManager
@@ -396,13 +417,13 @@ The Blazor DataVizCommon is the base package for the svg elements used in the vi
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -413,7 +434,7 @@ The Blazor DataVizCommon is the base package for the svg elements used in the vi
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.DataVizCommon/">Syncfusion.Blazor.DataVizCommon</a>
 </td>
 <td>
-Syncfusion.Blazor.DataVizCommon.dll
+DataVizCommon
 </td>
 <td>
 -
@@ -431,13 +452,13 @@ The Blazor Diagram is used for visualization, design, and editing of interactive
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -448,7 +469,11 @@ The Blazor Diagram is used for visualization, design, and editing of interactive
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Diagrams/">Syncfusion.Blazor.Diagrams</a>
 </td>
 <td>
-Syncfusion.Blazor.Diagrams.dll
+<ul>
+<li>Diagram</li>
+<li>Overview Panel</li>
+<li>Symbol Palette</li>
+</ul>
 </td>
 <td>
 <ul>
@@ -475,13 +500,13 @@ A package of Blazor Dropdown contains a collection of Dropdown components such a
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -492,7 +517,14 @@ A package of Blazor Dropdown contains a collection of Dropdown components such a
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/">Syncfusion.Blazor.DropDowns</a>
 </td>
 <td>
-Syncfusion.Blazor.DropDowns.dll
+<ul>
+<li>AutoComplete</li>
+<li>ComboBox</li>
+<li>DropDown List</li>
+<li>ListBox</li>
+<li>MultiSelect DropDown</li>
+<li>Mention</li>
+</ul>
 </td>
 <td>
 <ul>
@@ -523,13 +555,13 @@ Blazor File Manager is a graphical user interface component used to manage the f
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -540,7 +572,7 @@ Blazor File Manager is a graphical user interface component used to manage the f
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.FileManager/">Syncfusion.Blazor.FileManager</a>
 </td>
 <td>
-Syncfusion.Blazor.FileManager.dll
+FileManager
 </td>
 <td>
 SfFileManager
@@ -570,13 +602,13 @@ The Blazor Gantt is designed to visualize and edit the project schedule, and tra
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Component friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -587,7 +619,7 @@ The Blazor Gantt is designed to visualize and edit the project schedule, and tra
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Gantt/">Syncfusion.Blazor.Gantt</a>
 </td>
 <td>
-Syncfusion.Blazor.Gantt.dll
+Gantt Chart
 </td>
 <td>
 SfGantt
@@ -621,13 +653,13 @@ Blazor DataGrid component is used to display and manipulate the tabular data wit
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -638,7 +670,7 @@ Blazor DataGrid component is used to display and manipulate the tabular data wit
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Grid/">Syncfusion.Blazor.Grid</a>
 </td>
 <td>
-Syncfusion.Blazor.Grids.dll
+DataGrid
 </td>
 <td>
 SfGrid
@@ -668,13 +700,13 @@ Blazor HeatMap Chart is used to visualize two-dimensional data in which the valu
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -685,7 +717,7 @@ Blazor HeatMap Chart is used to visualize two-dimensional data in which the valu
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.HeatMap/">Syncfusion.Blazor.HeatMap</a>
 </td>
 <td>
-Syncfusion.Blazor.HeatMap.dll
+HeatMap Chart
 </td>
 <td>
 SfHeatMap
@@ -706,13 +738,13 @@ The Blazor In-place Editor component is most useful for editing a value dynamica
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -723,7 +755,7 @@ The Blazor In-place Editor component is most useful for editing a value dynamica
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.InPlaceEditor/">Syncfusion.Blazor.InPlaceEditor</a>
 </td>
 <td>
-Syncfusion.Blazor.InPlaceEditor.dll
+In-place Editor
 </td>
 <td>
 SfInPlaceEditor
@@ -748,13 +780,13 @@ A package of Blazor input components comes with a collection of form components.
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -765,7 +797,16 @@ A package of Blazor input components comes with a collection of form components.
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs/">Syncfusion.Blazor.Inputs</a>
 </td>
 <td>
-Syncfusion.Blazor.Inputs.dll
+<ul>
+<li>Color Picker</li>
+<li>Input Mask</li>
+<li>Numeric TextBox</li>
+<li>Rating</li>
+<li>Range Slider</li>
+<li>TextBox</li>
+<li>File Upload</li>
+<li>Signature</li>
+</ul>
 </td>
 <td>
 <ul>
@@ -798,13 +839,13 @@ The Blazor Kanban board visually depicts work at various stages of a process usi
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -815,7 +856,7 @@ The Blazor Kanban board visually depicts work at various stages of a process usi
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Kanban/">Syncfusion.Blazor.Kanban</a>
 </td>
 <td>
-Syncfusion.Blazor.Kanban.dll
+Kanban
 </td>
 <td>
 SfKanban
@@ -842,13 +883,13 @@ The layout package contains Splitter and Dashboard Layout components. The Blazor
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -859,7 +900,10 @@ The layout package contains Splitter and Dashboard Layout components. The Blazor
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Layouts/">Syncfusion.Blazor.Layouts</a>
 </td>
 <td>
-Syncfusion.Blazor.Layouts.dll
+<ul>
+<li>Dashboard Layout</li>
+<li>Splitter</li>
+</ul>
 </td>
 <td>
 <ul>
@@ -883,13 +927,13 @@ The Blazor Linear Gauge is used for visualizing numeric values in a linear scale
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -900,7 +944,7 @@ The Blazor Linear Gauge is used for visualizing numeric values in a linear scale
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.LinearGauge/">Syncfusion.Blazor.LinearGauge</a>
 </td>
 <td>
-Syncfusion.Blazor.LinearGauge.dll
+Linear Gauge
 </td>
 <td>
 SfLinearGauge
@@ -921,13 +965,13 @@ Blazor ListView component allows to select an item or multiple items from a list
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -938,7 +982,7 @@ Blazor ListView component allows to select an item or multiple items from a list
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Lists/">Syncfusion.Blazor.Lists</a>
 </td>
 <td>
-Syncfusion.Blazor.Lists.dll
+ListView
 </td>
 <td>
 SfListView
@@ -960,13 +1004,13 @@ The Blazor Maps component is used for rendering maps from GeoJSON data or other 
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -977,7 +1021,7 @@ The Blazor Maps component is used for rendering maps from GeoJSON data or other 
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Maps/">Syncfusion.Blazor.Maps</a>
 </td>
 <td>
-Syncfusion.Blazor.Maps.dll
+Maps
 </td>
 <td>
 SfMaps
@@ -999,13 +1043,13 @@ A package of Blazor navigation components such as Accordion, ContextMenu, Tabs, 
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -1016,7 +1060,17 @@ A package of Blazor navigation components such as Accordion, ContextMenu, Tabs, 
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/">Syncfusion.Blazor.Navigations</a>
 </td>
 <td>
-Syncfusion.Blazor.Navigations.dll
+<ul>
+<li>Accordion</li>
+<li>AppBar</li>
+<li>Breadcrumb</li>
+<li>ContextMenu</li>
+<li>Menu Bar</li>
+<li>Sidebar</li>
+<li>Tabs</li>
+<li>Toolbar</li>
+<li>TreeView</li>
+</ul>
 </td>
 <td>
 <ul>
@@ -1051,13 +1105,13 @@ The notification component Toast is used to notify status or summary information
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -1068,7 +1122,11 @@ The notification component Toast is used to notify status or summary information
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Notifications/">Syncfusion.Blazor.Notifications</a>
 </td>
 <td>
-Syncfusion.Blazor.Notifications.dll
+<ul>
+<li>Toast</li>
+<li>Skeleton</li>
+<li>Message</li>
+</ul>
 </td>
 <td>
 <ul>
@@ -1095,13 +1153,13 @@ The Blazor PDF Viewer supports viewing and reviewing PDF files in web applicatio
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -1112,7 +1170,7 @@ The Blazor PDF Viewer supports viewing and reviewing PDF files in web applicatio
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewer/">Syncfusion.Blazor.PdfViewer</a>
 </td>
 <td>
-Syncfusion.Blazor.PdfViewer.dll
+PDF Viewer
 </td>
 <td>
 SfPdfViewer
@@ -1140,13 +1198,13 @@ SfPdfViewer
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -1157,7 +1215,7 @@ SfPdfViewer
 Syncfusion.Blazor.PdfViewerServer.Windows
 </td>
 <td>
-Syncfusion.Blazor.PdfViewerServer.dll
+PDF Viewer Server
 </td>
 <td>
 SfPdfViewerServer
@@ -1181,13 +1239,13 @@ The Blazor Pivot Table is a powerful control used to organize and summarize busi
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -1198,7 +1256,7 @@ The Blazor Pivot Table is a powerful control used to organize and summarize busi
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.PivotTable/">Syncfusion.Blazor.PivotTable</a>
 </td>
 <td>
-Syncfusion.Blazor.PivotTable.dll
+Pivot Table
 </td>
 <td>
 <ul>
@@ -1233,13 +1291,13 @@ A package of Blazor popup components Dialog and Tooltip are used to display info
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -1250,7 +1308,10 @@ A package of Blazor popup components Dialog and Tooltip are used to display info
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Popups/">Syncfusion.Blazor.Popups</a>
 </td>
 <td>
-Syncfusion.Blazor.Popups.dll
+<ul>
+<li>Dialog</li>
+<li>Tooltip</li>
+</ul>
 </td>
 <td>
 <ul>
@@ -1274,13 +1335,13 @@ The Progress Bar control can be used to visualize the changing status of an exte
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -1291,7 +1352,7 @@ The Progress Bar control can be used to visualize the changing status of an exte
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.ProgressBar/">Syncfusion.Blazor.ProgressBar</a>
 </td>
 <td>
-Syncfusion.Blazor.ProgressBar.dll
+ProgressBar
 </td>
 <td>
 SfProgressBar
@@ -1312,13 +1373,13 @@ The Blazor QueryBuilder package contains the QueryBuilder component that allows 
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -1329,7 +1390,7 @@ The Blazor QueryBuilder package contains the QueryBuilder component that allows 
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.QueryBuilder/">Syncfusion.Blazor.QueryBuilder</a>
 </td>
 <td>
-Syncfusion.Blazor.QueryBuilder.dll
+QueryBuilder
 </td>
 <td>
 SfQueryBuilder
@@ -1356,13 +1417,13 @@ The Blazor Range Navigator is an interface for selecting a small range from a la
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -1373,7 +1434,7 @@ The Blazor Range Navigator is an interface for selecting a small range from a la
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.RangeNavigator/">Syncfusion.Blazor.RangeNavigator</a>
 </td>
 <td>
-Syncfusion.Blazor.RangeNavigator.dll
+Range Selector
 </td>
 <td>
 SfRangeNavigator
@@ -1399,13 +1460,13 @@ The Rich Text Editor component is the HTML and markdown editor that provides the
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -1416,7 +1477,7 @@ The Rich Text Editor component is the HTML and markdown editor that provides the
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor/">Syncfusion.Blazor.RichTextEditor</a>
 </td>
 <td>
-Syncfusion.Blazor.RichTextEditor.dll
+RichTextEditor
 </td>
 <td>
 SfRichTextEditor
@@ -1441,13 +1502,13 @@ The Blazor Scheduler component is an event calendar that facilitates users with 
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -1458,7 +1519,10 @@ The Blazor Scheduler component is an event calendar that facilitates users with 
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Schedule/">Syncfusion.Blazor.Schedule</a>
 </td>
 <td>
-Syncfusion.Blazor.Schedule.dll
+<ul>
+<li>Scheduler</li>
+<li>Recurrence Editor</li>
+</ul>
 </td>
 <td>
 <ul>
@@ -1490,13 +1554,13 @@ The Blazor Smith Chart is a control for showing the parameters of transmission l
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -1507,7 +1571,7 @@ The Blazor Smith Chart is a control for showing the parameters of transmission l
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.SmithChart/">Syncfusion.Blazor.SmithChart</a>
 </td>
 <td>
-Syncfusion.Blazor.SmithChart.dll
+Smith Chart
 </td>
 <td>
 SfSmithChart
@@ -1528,13 +1592,13 @@ The Blazor Sparkline Charts is a replacement for normal charts to display trends
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -1545,7 +1609,7 @@ The Blazor Sparkline Charts is a replacement for normal charts to display trends
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Sparkline/">Syncfusion.Blazor.Sparkline</a>
 </td>
 <td>
-Syncfusion.Blazor.Sparkline.dll
+Sparkline
 </td>
 <td>
 SfSparkline
@@ -1566,13 +1630,13 @@ The Blazor Spinner is a loading indicator that denotes long-running tasks with n
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -1583,7 +1647,7 @@ The Blazor Spinner is a loading indicator that denotes long-running tasks with n
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Spinner/">Syncfusion.Blazor.Spinner</a>
 </td>
 <td>
-Syncfusion.Blazor.Spinner.dll
+Spinner
 </td>
 <td>
 SfSpinner
@@ -1601,13 +1665,13 @@ The Blazor SplitButtons package contains UI components such as DropDownButton, S
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -1618,7 +1682,12 @@ The Blazor SplitButtons package contains UI components such as DropDownButton, S
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.SplitButtons/">Syncfusion.Blazor.SplitButtons</a>
 </td>
 <td>
-Syncfusion.Blazor.SplitButtons.dll
+<ul>
+<li>ButtonGroup</li>
+<li>DropDownButton</li>
+<li>ProgressButton</li>
+<li>SplitButton</li>
+</ul>
 </td>
 <td>
 <ul>
@@ -1646,13 +1715,13 @@ The Blazor Stock Chart is an easy-to-use financial charting package to track and
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -1663,7 +1732,7 @@ The Blazor Stock Chart is an easy-to-use financial charting package to track and
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.StockChart/">Syncfusion.Blazor.StockChart</a>
 </td>
 <td>
-Syncfusion.Blazor.StockChart.dll
+Stock Chart
 </td>
 <td>
 SfStockChart
@@ -1687,10 +1756,10 @@ This package contains the Syncfusion Blazor UI components theme files.
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Friendly name</b>
 </td>
 <td>
 <b>Themes</b>
@@ -1704,7 +1773,7 @@ This package contains the Syncfusion Blazor UI components theme files.
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Themes/">Syncfusion.Blazor.Themes</a>
 </td>
 <td>
-Syncfusion.Blazor.Themes.dll
+Themes
 </td>
 <td>
 <ul>
@@ -1731,13 +1800,13 @@ Blazor Tree Grid is a feature-rich control used to visualize self-referential an
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -1748,7 +1817,7 @@ Blazor Tree Grid is a feature-rich control used to visualize self-referential an
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.TreeGrid/">Syncfusion.Blazor.TreeGrid</a>
 </td>
 <td>
-Syncfusion.Blazor.TreeGrid.dll
+TreeGrid
 </td>
 <td>
 SfTreeGrid
@@ -1773,13 +1842,13 @@ Blazor TreeMap is a feature-rich component used to visualize both hierarchical a
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -1790,7 +1859,7 @@ Blazor TreeMap is a feature-rich component used to visualize both hierarchical a
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.TreeMap/">Syncfusion.Blazor.TreeMap</a>
 </td>
 <td>
-Syncfusion.Blazor.TreeMap.dll
+TreeMap
 </td>
 <td>
 SfTreeMap
@@ -1812,13 +1881,13 @@ The Blazor Word Processor (Document Editor) is a component with editing capabili
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Assembly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
@@ -1829,7 +1898,7 @@ The Blazor Word Processor (Document Editor) is a component with editing capabili
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor/">Syncfusion.Blazor.WordProcessor</a>
 </td>
 <td>
-Syncfusion.Blazor.DocumentEditor.dll
+Word Processor
 </td>
 <td>
 <ul>
