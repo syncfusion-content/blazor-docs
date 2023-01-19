@@ -33,13 +33,13 @@ This package contains the base component, common classes, common functionalities
 <table>
 <tr>
 <td>
-<b>NuGet package name</b>
+<b>NuGet package</b>
 </td>
 <td>
-<b>Friendly name</b>
+<b>Components friendly name</b>
 </td>
 <td>
-<b>Components</b>
+<b>Components name</b>
 </td>
 <td>
 <b>Dependencies</b>
