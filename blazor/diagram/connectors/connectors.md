@@ -49,6 +49,7 @@ The following code example illustrates how to add a connector through connector 
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
 
 ![Blazor Diagram Connector](../images/blazor-diagram-connector.png)
 
@@ -175,6 +176,7 @@ Connectors can be predefined and added to the symbol palette. You can drop those
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
 
 ![Connector from Palette in Blazor Diagram](../images/blazor-diagram-connector-from-palette.gif)
 
@@ -232,6 +234,7 @@ The following code shows how to remove a connector at runtime.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
 
 A connector can be removed from the diagram by using the native `RemoveAt` method. Refer to the following example that shows how to remove the connector at runtime.
 
@@ -287,6 +290,7 @@ The following code example explains how to change the connector properties.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
 
 N> BeginUpdate and EndUpdate methods allow you to stop the continuous update of control and resume it finally.
 
@@ -364,6 +368,7 @@ The following code example illustrates how to connect two nodes.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
 
 ![Displaying Connection between Nodes in Blazor Diagram](../images/blazor-diagram-node-to-node-connection.png)
 
@@ -467,6 +472,7 @@ The following code example illustrates how to create port to port connections.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
 
 ![Connection between Ports in Blazor Diagram](../images/blazor-diagram-port-to-port-connection.png)
 

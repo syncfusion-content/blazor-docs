@@ -75,7 +75,7 @@ The following code example explains how to get the selection change event in the
     }
 }
 ```
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events)
 ## Position change event
 
 * While dragging the node or connector through interaction, the following events can be used to do the customization.
@@ -136,6 +136,7 @@ The following code example explains how to get the selection change event in the
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events)
 
 ## Size change event
 
@@ -196,6 +197,7 @@ The following code example explains how to get the selection change event in the
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events)
 
 ## Rotate change event
 

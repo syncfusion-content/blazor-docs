@@ -36,7 +36,7 @@ In the following example, the vertical scroll bar is scrolled down by 50px and t
     </ScrollSettings>
 </SfDiagramComponent>
 ```
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings)
 ## Update scroll status
 
 You can programmatically change the scroll offsets at runtime by using the external button click. The following code illustrates how to change the scroll offsets at runtime.
@@ -63,6 +63,7 @@ You can programmatically change the scroll offsets at runtime by using the exter
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings)
 
 ## Scroll limit
 
@@ -89,6 +90,8 @@ The following code example illustrates how to specify the scroll limit.
 }
 
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings)
+
 To explore about the options , refer [ScrollLimitMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollLimitMode.html).
 
 | ScrollLimit | Output |

@@ -69,7 +69,7 @@ An organizational chart is a diagram that displays the structure of an organizat
             new Node() { ID = "node16",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Support" } } },
             new Node() { ID = "node17",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Quality Assurance" } } },
             new Node() { ID = "node18",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Customer Interaction" } } },
-            new Node() { ID = "node19",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Support and Maintenance" } } },
+            new Node() { ID = "node19",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Support and mastertenance" } } },
             new Node() { ID = "node20",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Task Coordination" } } }
         };        
         connectors = new DiagramObjectCollection<Connector>()
@@ -97,6 +97,7 @@ An organizational chart is a diagram that displays the structure of an organizat
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
 
 ![Blazor Organization Chart Diagram](../images/blazor-organization-chart.png)
 
@@ -216,6 +217,7 @@ The following code example illustrates how to set the vertical right arrangement
     };
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
 
 ![Blazor Organization Diagram ChildNode in Vertical Right](../images/blazor-diagram-childnode-at-vertical-right.png)
 
@@ -259,6 +261,7 @@ The following code illustrates how to arrange the nodes in a BottomToTop orienta
     LayoutOrientation orientation = LayoutOrientation.TopToBottom;
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
 
 ### Fixed node
 
