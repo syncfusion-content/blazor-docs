@@ -69,7 +69,7 @@ An organizational chart is a diagram that displays the structure of an organizat
             new Node() { ID = "node16",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Support" } } },
             new Node() { ID = "node17",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Quality Assurance" } } },
             new Node() { ID = "node18",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Customer Interaction" } } },
-            new Node() { ID = "node19",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Support and mastertenance" } } },
+            new Node() { ID = "node19",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Support and Maintenance" } } },
             new Node() { ID = "node20",Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Task Coordination" } } }
         };        
         connectors = new DiagramObjectCollection<Connector>()
@@ -281,6 +281,85 @@ Layout provides support to arrange the nodes with reference to the position of a
     int VerticalSpacing = 50;
 }
 
+```
+
+## Assistant
+
+[Assistants](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TreeInfo.html#Syncfusion_Blazor_Diagram_TreeInfo_Assistants) are child items that have a different relationship with the parent node. They are laid out in a dedicated part of the tree. A node can be specified as an assistant of its parent by adding it to the assistants property of the argument `Assistants`.
+
+In the [Root](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Root)property, define the node set to be the parent of the assistant node. In the `Assistant` property, define the node set to be assistant for the parent node. Both properties should be defined in the "LayoutInfo" property.
+
+The following code example illustrates how to add assistants to the layout.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using System.Collections.ObjectModel
+
+ <SfDiagramComponent @ref="diagram" Width="900px" Height="800px" NodeCreating="NodeCreating" ConnectorCreating="ConnectorCreating">
+        <DataSourceSettings DataSource="DataSource" ID="Id" ParentID="Manager"></DataSourceSettings>
+            <Layout @bind-Type="type" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-FixedNode="@FixedNode" @bind-Orientation="@oreintation" @bind-VerticalSpacing="@VerticalSpacing" @bind-HorizontalAlignment="@horizontalAlignment" @bind-VerticalAlignment="@verticalAlignment" GetLayoutInfo="GetLayoutInfo">
+                <LayoutMargin @bind-Top="@top" @bind-Bottom="@bottom" @bind-Right="@right" @bind-Left="@left"></LayoutMargin>               
+            </Layout>
+            <SnapSettings></SnapSettings>
+    </SfDiagramComponent>
+
+@code {
+    SfDiagramComponent diagram;
+    double top = 50;
+    double bottom = 50;
+    double right = 50;
+    double left = 50;
+    LayoutType type = LayoutType.OrganizationalChart;
+    LayoutOrientation oreintation = LayoutOrientation.BottomToTop;
+    HorizontalAlignment horizontalAlignment = HorizontalAlignment.Auto;
+    VerticalAlignment verticalAlignment = VerticalAlignment.Auto;
+    int HorizontalSpacing = 30;
+    int VerticalSpacing = 30;
+    private string pattern;
+    Orientation subTreeOrientation = Orientation .Vertical;
+    SubTreeAlignmentType subTreeAlignment= SubTreeAlignmentType.Left;
+    private string FixedNode = null;
+
+    public class HierarchicalDetails
+    {
+        public string Id { get; set; }
+        public string Role { get; set; }
+        public string Manager { get; set; }
+        public string ChartType { get; set; }
+        public string Color { get; set; }
+    }
+    private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
+    {
+          Node node = obj as Node;
+           if ((node.Data as HierarchicalDetails).Role == "General Manager")
+            {
+                options.Assistants.Add(options.Children[0]);
+                options.Children.RemoveAt(0);
+            }
+    }
+    public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
+    {
+        new HierarchicalDetails()   { Id= "parent", Role= "Board", Color= "#71AF17" },
+        new HierarchicalDetails()   { Id= "1", Role= "General Manager", Manager= "parent", ChartType= "right", Color= "#71AF17" },
+        new HierarchicalDetails()   { Id= "11", Role= "Assistant Manager", Manager= "1", Color= "#71AF17" },
+        new HierarchicalDetails()   { Id= "2", Role= "Human Resource Manager", Manager= "1", ChartType= "right", Color= "#1859B7" },
+        new HierarchicalDetails()   { Id= "3", Role= "Trainers", Manager= "2", Color= "#2E95D8" },
+        new HierarchicalDetails()   { Id= "4", Role= "Recruiting Team", Manager= "2", Color= "#2E95D8" },
+        new HierarchicalDetails()   { Id= "5", Role= "Finance Asst. Manager", Manager= "2", Color= "#2E95D8" },
+        new HierarchicalDetails()   { Id= "6", Role= "Design Manager", Manager= "1",ChartType= "right", Color= "#1859B7" },
+        new HierarchicalDetails()   { Id= "7", Role= "Design Supervisor", Manager= "6", Color= "#2E95D8" },
+        new HierarchicalDetails()   { Id= "8", Role= "Development Supervisor", Manager= "6", Color= "#2E95D8" },
+        new HierarchicalDetails()   { Id= "9", Role= "Drafting Supervisor", Manager= "6", Color= "#2E95D8" },
+        new HierarchicalDetails()   { Id= "10", Role= "Operation Manager", Manager= "1", ChartType= "right", Color= "#1859B7" },
+        new HierarchicalDetails()   { Id= "11", Role= "Statistic Department", Manager= "10", Color= "#2E95D8" },
+        new HierarchicalDetails()   { Id= "12", Role= "Logistic Department", Manager= "10", Color= "#2E95D8" },
+        new HierarchicalDetails()   { Id= "16", Role= "Marketing Manager", Manager= "1", ChartType= "right", Color= "#1859B7" },
+        new HierarchicalDetails()   { Id= "17", Role= "Oversea sales Manager", Manager= "16", Color= "#2E95D8" },
+        new HierarchicalDetails()   { Id= "18", Role= "Petroleum Manager", Manager= "16", Color= "#2E95D8" },
+        new HierarchicalDetails()   { Id= "20", Role= "Service Dept. Manager", Manager= "16", Color= "#2E95D8" },
+        new HierarchicalDetails()   { Id= "21", Role= "Quality Department", Manager= "16", Color= "#2E95D8" }
+    };
+}
 ```
 
 ## How to refresh the layout

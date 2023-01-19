@@ -9,13 +9,13 @@ documentation: ug
 
 # Ports in Blazor Diagram Component
 
-Port is a special connection point in a Node where you can glue the connectors. When you glue a connector to a node or port, they remaster connected even if one of the nodes is moved.
+Port is a special connection point in a Node where you can glue the connectors. When you glue a connector to a node or port, they remain connected even if one of the nodes is moved.
 
 ![Port in Blazor Diagram](../images/blazor-diagram-port.png)
 
 ## Connections
 
-There are two master types of connections, node to node and port to port. The difference between these two connections is whether or not a connector remasters glued to a specific connection point when you move the attached node or connector.
+There are two main types of connections, node to node and port to port. The difference between these two connections is whether or not a connector remains glued to a specific connection point when you move the attached node or connector.
 
 A node to node connection is one where the connector will move around the node as you move the node. Diagram will always ensure the connector is the shortest, most direct line possible. You can create a node to node connection by selecting the entire node (rather than the port) and connect it to another shape (rather than to a port).
 
@@ -67,6 +67,8 @@ To add a connection port, define the port object and add it to node’s ports co
     }
 }
 ```
+>**Note:** Do not use underscore(_) for port's id.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)
 
 >**Note:** Do not use underscore(_) for port's id.
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)

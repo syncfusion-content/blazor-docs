@@ -71,7 +71,7 @@ Multiple elements can be selected with the following ways:
 
 * Ctrl+Click
 
-During single click, any existing item in the selection list is cleared, and only the recently clicked item remasters in the selection list. To avoid clearing the previously selected item, Ctrl key must be on hold when clicking.
+During single click, any existing item in the selection list is cleared, and only the recently clicked item remains in the selection list. To avoid clearing the previously selected item, Ctrl key must be on hold when clicking.
 
 * Selection rectangle/rubber band selection
 
@@ -344,7 +344,7 @@ For more information about straight segment editing, refer [Straight Segment Edi
 ## Orthogonal segment editing
 
 * Orthogonal thumbs allow you to adjust the length of adjacent segments by clicking and dragging it.
-* When necessary, some segments are added or removed automatically, when dragging the segment. This is to mastertain proper routing of orthogonality between segments.
+* When necessary, some segments are added or removed automatically, when dragging the segment. This is to maintain proper routing of orthogonality between segments.
 * When editing the segment collection of connector, the following event gets triggered.
 
 | Events | EventArgs | Description |
@@ -493,7 +493,7 @@ The appearance of the user handle can be customized by using the [Size](https://
 
 ## Zoom pan the diagram
 
-* When a large diagram is loaded, only certain portion of the diagram is visible. The remastering portions are clipped.       Clipped portions can be explored by scrolling the scrollbars or panning the diagram.
+* When a large diagram is loaded, only certain portion of the diagram is visible. The remaining portions are clipped.       Clipped portions can be explored by scrolling the scrollbars or panning the diagram.
 * Diagram can be zoomed in or out by using Ctrl + mouse wheel.
 
 ![Zoom Pan in Blazor Diagram](images/blazor-diagram-zoom-pan.gif)
@@ -507,6 +507,8 @@ The following table illustrates those commands with the associated key values.
 | Shortcut Key | Command | Description|
 |--------------|---------|------------|
 | Ctrl + A | [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectAll) | Select all nodes/connectors in the diagram.|
+| Ctrl + Plus | [ZoomIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Zoom_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) | Zoom in the diagram.|
+| Ctrl + Minus | [ZoomOut](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Zoom_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) | Zoom out the diagram.|
 | Ctrl + C | [Copy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Copy) | Copy the diagram selected elements.|
 | Ctrl + V | [Paste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Paste) | Pastes the copied elements.|
 | Ctrl + X | [Cut](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Cut) | Cuts the selected elements.|

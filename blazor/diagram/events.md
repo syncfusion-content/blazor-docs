@@ -11,7 +11,7 @@ documentation: ug
 
 ## Created Event
 
-The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Created) event is triggered when the Diagram component is rendered.
+The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Created) event is triggered when the Diagram component is rendered. You can perform any action in the created event such as selecting any object in the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

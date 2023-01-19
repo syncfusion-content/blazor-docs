@@ -161,7 +161,7 @@ The PortConstraints may have multiple behaviors like listed below:
 
 ## Custom properties
 
-The [AdditionalInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_AdditionalInfo) property of the port allows you to mastertain additional information to the port.
+The [AdditionalInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_AdditionalInfo) property of the port allows you to maintain additional information to the port.
 
 ## See also
 
