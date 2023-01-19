@@ -30,7 +30,7 @@ Keyboard navigation is enabled, by default. Possible keys are:
 
 | Key | Description |
 |-------- | ------|
-| <kbd>Tab/Shift+Tab</kbd>    |  When focus moves into the toolbar items , places focus on Next/Previous the active ttoolbar element . |
+| <kbd>Tab/Shift+Tab</kbd>    |  When focus moves into the toolbar items , places focus on Next/Previous the active toolbar element . |
 | <kbd>Left</kbd>    | Focuses the previous element. |
 | <kbd>Right</kbd>   | Focuses the next element. |
 | <kbd>Enter</kbd> | When focused on a ToolBar command, clicking the key triggers the click of Toolbar element. When popup drop-down icon is focused, the popup opens. |
