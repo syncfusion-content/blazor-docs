@@ -81,6 +81,69 @@ N> The column template feature is used to render the customized element value in
 The following screenshot represents the column Template.
 ![Blazor DataGrid with Column template](./images/blazor-datagrid-column-template.png)
 
+## Render other components in a column
+
+It is possible to render the other components in a column using the column template feature of the Grid.
+
+In the following sample, the `SfDropDownList` component is rendered in the First Name column using the column template.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+
+<SfGrid  DataSource="@Employees">
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Right" HeaderText="Employee ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name">
+            <Template>
+                <SfDropDownList TValue="string" Placeholder="Andrew" TItem="EmployeeNames" Width="300px"  DataSource="@EmployeeDetails">
+                    <DropDownListFieldSettings Value="Name"></DropDownListFieldSettings>
+                </SfDropDownList>
+            </Template>
+        </GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Format="C2"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.HireDate) HeaderText="Hire Date" Format="d" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<EmployeeData> Employees { get; set; }
+    public List<EmployeeNames> EmployeeDetails { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Employees = Enumerable.Range(1, 5).Select(x => new EmployeeData()
+        {
+            EmployeeID = x,
+            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
+                                    "Inside Sales Coordinator" })[new Random().Next(4)],
+            HireDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+
+        EmployeeDetails = Enumerable.Range(1, 5).Select(x => new EmployeeNames()
+        {
+            Id = x,
+            Name = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)]
+        }).ToList();
+    }
+
+    public class EmployeeData
+    {
+        public int? EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public string Title { get; set; }
+        public DateTime? HireDate { get; set; }
+    }
+
+    public class EmployeeNames
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
+}
+```
+
 ## Using conditions inside template
 
 Template elements can be rendered based on required conditions inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component.
