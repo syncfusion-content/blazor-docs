@@ -6,9 +6,9 @@ platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
-# Customize existing toolbar in Blazor DocumentEditor Component
+# Customize existing toolbar in Blazor Document Editor Component
 
-## How to customize existing toolbar in DocumentEditorContainer
+## How to customize existing toolbar in Document Editor Container
 
 [`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) component (a.k.a Document Editor) component allows you to customize(add, show, hide, enable, and disable) existing items in a toolbar.
 
@@ -24,6 +24,20 @@ documentation: ug
     SfDocumentEditorContainer container;
     string[] Items = new string[4] { "New", "Undo", "Redo", "Comments"};
 }
+```
+
+### How to add a new custom toolbar item in Document Editor Container
+
+ The following code example illustrates how to add a new custom toolbar item in Document editor container.
+
+```csharp
+<SfDocumentEditorContainer @ref="container" EnableToolbar=true ToolbarItems="@Items"> 
+</SfDocumentEditorContainer> 
+ 
+@code { 
+    SfDocumentEditorContainer container; 
+    List<Object> Items = new List<Object> { new CustomToolbarItemModel() { Id = "save", Text = "Save" }, "New", "Undo", "Redo", "Comments", "Image", "Table", "Hyperlink", "Bookmark", "TableOfContents", "Header", "Footer", "PageSetup", "PageNumber", "Break", "Find", "LocalClipboard", "RestrictEditing" }; 
+} 
 ```
 
 N> Default value of `ToolbarItems` are `['New', 'Open', 'Separator', 'Undo', 'Redo', 'Separator', 'Image', 'Table', 'Hyperlink', 'Bookmark', 'TableOfContents', 'Separator', 'Header', 'Footer', 'PageSetup', 'PageNumber', 'Break', 'InsertFootnote', 'InsertEndnote', 'Separator', 'Find', 'Separator', 'Comments', 'TrackChanges', 'Separator', 'LocalClipboard', 'RestrictEditing', 'Separator', 'FormFields', 'UpdateFields']`.
