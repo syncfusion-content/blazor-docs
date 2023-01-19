@@ -611,6 +611,7 @@ The following code illustrates how to render nodes based on the stack order.
 }
 ```
 
+**Note:** You can set any type of value for the AdditionalInfo property.
 
 ## See also
 

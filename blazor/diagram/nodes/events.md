@@ -258,6 +258,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events)
 ## NodeCreating event
 

@@ -609,6 +609,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization)
 ## How to set ZIndex property for connector
 

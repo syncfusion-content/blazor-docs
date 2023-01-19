@@ -69,7 +69,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 Register the `ISyncfusionStringLocalizer` implementation to localize the Syncfusion Blazor components based on resources files added in application.
 
 * For **Blazor Server App**, register the Syncfusion Blazor Service as follows,
-    * For **.NET 6 and .NET 7** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+    * For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
     * For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 * For **Blazor WebAssembly App**, register the Syncfusion Blazor Service in the client web app of **~/Program.cs** file.
 
@@ -93,12 +93,12 @@ If you don't want to change culture dynamically, you can set it statically by fo
 
 ### Blazor Server App
 
-* For **.NET 6 and .NET 7** app, specify the static culture in **~/Program.cs** file.
+* For **.NET 6** app, specify the static culture in **~/Program.cs** file.
 * For **.NET 5 and .NET 3.X** app, specify the static culture in **~/Startup.cs** file.
 
 {% tabs %}
 
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3" %}
 
 ...
 var app = builder.Build();
@@ -194,7 +194,7 @@ Set the app's supported cultures. Also, ensure the app is configured to process 
 
 {% tabs %}
 
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="7 11 13 14 15 16 17 20 31" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="7 11 13 14 15 16 17 20 31" %}
 
 var builder = WebApplication.CreateBuilder(args);
 
