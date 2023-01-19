@@ -96,11 +96,11 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 
 N> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) single NuGet, you don't have to refer [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet. Since style sheets already inside the assets of `Syncfusion.Blazor` NuGet. 
 
-* **~/Pages/_Host.cshtml** file for **.NET 5 and .NET 3.X**.
+* **~/Pages/_Host.cshtml** file for **.NET 3.X, .NET 5 and .NET 7**.
 * **~/Pages/_Layout.cshtml** for **.NET 6**.
 
 {% tabs %}
-{% highlight cshtml tabtitle=".NET 6 & .NET 7 (~/_Layout.cshtml)" hl_lines="3 4 5" %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="3 4 5" %}
 
 <head>
     ...
@@ -110,7 +110,7 @@ N> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusio
 </head>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="3 4 5" %}
+{% highlight cshtml tabtitle=".NET 3.X, .NET 5 and .NET 6 (~/_Host.cshtml)" hl_lines="3 4 5" %}
 
 <head>
     ...
