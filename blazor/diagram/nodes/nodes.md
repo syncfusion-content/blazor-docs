@@ -54,8 +54,12 @@ To create a node, define the [Node](https://help.syncfusion.com/cr/blazor/Syncfu
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ActionsofNodes)
 
 ![Adding Node from Node Collection in Blazor Diagram](../images/blazor-diagram-add-node-from-collection.png)
+
+
+>**Note:** Do not use underscore(_) for node's id.
 
 ## Add nodes at runtime
 
@@ -105,6 +109,25 @@ You can add a Node at runtime by adding it to the nodes collection of the Diagra
     }
 }
 ```
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ActionsofNodes)
+## Add node with annotations at runtime
+
+You can add node with annotation at runtime in the diagram component by using the [AddDiagramElements](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElements_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method.
+
+The following code explains how to add an node with annotation  at runtime by using `AddDiagramElements` method.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<input value="AddLabel" type="button" @onclick="@AddLabel" name="AddLabel" />
+<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes">
+</SfDiagramComponent>
+
+@code
+{
+    // Reference to diagram.
+    SfDiagramComponent diagram;
 
 ## Add node from palette
 
@@ -177,6 +200,7 @@ The following code shows how to remove a node at runtime.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ActionsofNodes)
 
 A node can be removed from the diagram by using the native `RemoveAt` method. Refer to the following example that shows how to remove the node at runtime.
 
@@ -235,6 +259,7 @@ The following code example explains how to change the node properties.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ActionsofNodes)
 
 N> [BeginUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BeginUpdate) and [EndUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EndUpdate) methods allow you to stop the continuous update of control and resume it finally.
 

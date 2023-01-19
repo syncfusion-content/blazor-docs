@@ -9,13 +9,13 @@ documentation: ug
 
 # Ports in Blazor Diagram Component
 
-Port is a special connection point in a Node where you can glue the connectors. When you glue a connector to a node or port, they remain connected even if one of the nodes is moved.
+Port is a special connection point in a Node where you can glue the connectors. When you glue a connector to a node or port, they remaster connected even if one of the nodes is moved.
 
 ![Port in Blazor Diagram](../images/blazor-diagram-port.png)
 
 ## Connections
 
-There are two main types of connections, node to node and port to port. The difference between these two connections is whether or not a connector remains glued to a specific connection point when you move the attached node or connector.
+There are two master types of connections, node to node and port to port. The difference between these two connections is whether or not a connector remasters glued to a specific connection point when you move the attached node or connector.
 
 A node to node connection is one where the connector will move around the node as you move the node. Diagram will always ensure the connector is the shortest, most direct line possible. You can create a node to node connection by selecting the entire node (rather than the port) and connect it to another shape (rather than to a port).
 
@@ -68,6 +68,10 @@ To add a connection port, define the port object and add it to node’s ports co
 }
 ```
 
+>**Note:** Do not use underscore(_) for port's id.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)
+
+
 ![Creating Port in Blazor Diagram](../images/blazor-diagram-create-port.png)
 
 ## Add ports at runtime
@@ -119,6 +123,7 @@ If **ID** is not set, then default **ID** is automatically set.
 }
 
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)
 
 Also, the port can be added at runtime by using the `AddAsync` method. The `await` operator suspends evaluation of the enclosing async method until the asynchronous operation represented by its operand completes.
 
@@ -137,6 +142,7 @@ public async void AddPorts()
     await ((nodes[0].Ports) as DiagramObjectCollection<PointPort>).AddAsync(port);
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)
 
 ![Adding Port in Blazor Diagram](../images/blazor-diagram-add-port.png)
 
@@ -214,6 +220,7 @@ The port’s [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)
 
 ![Adding Multiple Ports in Blazor Diagram](../images/blazor-diagram-add-multiple-ports.png)
 
@@ -275,6 +282,7 @@ A collection of ports can be removed from the node by using the native `RemoveAt
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)
 
 ## Update ports at runtime
 
@@ -333,6 +341,7 @@ protected override void OnInitialized()
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)
 
 ## See also
 
