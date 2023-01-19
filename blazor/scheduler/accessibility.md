@@ -19,19 +19,13 @@ The following ARIA attributes are used in the Scheduler:
 
 | Property | Functionalities |
 |-------|---------|
-| role="main" | This attribute added to the Scheduler element describes the actual role of the element and denote it as a main and unique content. |
-| role="button" | This attribute is assigned to the appointments of Scheduler, to denote it as a clickable element. |
-| role="grid" | This role is added to the scheduler in content table element and describes the table that contains collection of rows. |
-| aria-disabled | It indicates the disabled state of the Scheduler. |
-| aria-selected | It indicates the currently selected cell of the Scheduler. |
-| aria-live | It indicates a string value that labels the Scheduler element. |
-| aria-label | This attribute is assigned to the Scheduler parent element and its default value is Scheduler's current date. On every time, the date is navigated, this attribute is updated with appropriate current date values. It is also assigned to other scheduler UI elements such as previous and next date navigation buttons depicting its purpose, div element displaying date range in the header bar and appointment elements. |
-| aria-readonly | This attribute is assigned to the appointments of Scheduler and defaults to `false`, which indicates that the appointments are editable by default. When it's value changes to `true`, it denotes that the appointments are in a not editable state. |
-| aria-grabbed | This attribute is assigned to the appointments of Scheduler and defaults to `true`, which indicates that the appointments are allowed to move over the Scheduler. When it's value changes to `false`, it indicates that the drag and drop of appointments are not allowed. |
-| aria-atomic | This attribute is assigned to the date range element displayed on the Scheduler header bar, to indicate that when date change takes place, the entire live region (Scheduler) should be updated to the user. It is set to `true`. |
-| aria-live="assertive" | This attribute is assigned to the date range element displayed on the Scheduler header bar, to indicate that it updates the date values frequently on every time the user navigates back and forth between the dates. The value `assertive` means that the newly modified date changes has a high priority, and your screen reader *should* notify you immediately regarding this.
+| role="main" |  Attribute added to the Scheduler element describes the actual role of the element and denote it as a main and unique content. |
+| role="button" | Attribute is assigned to the appointments of Scheduler, to denote it as a clickable element. |
+| aria-label | Attribute is set to the Scheduler parent element and its default value is Scheduler's current date. On every time, the date is navigated, this attribute is updated with appropriate current date values. It is also assigned to other scheduler UI elements such as previous and next date navigation buttons depicting its purpose, div element displaying date range in the header bar and appointment elements. |
 | aria-labelledby | It indicates editor dialog title to the user through assistive technologies. |
 | aria-describedby | It indicates editor dialog content description to the user through assistive technologies. |
+| aria-disabled | It indicates the disabled state of the Scheduler. |
+| aria-selected | It indicates the currently selected cell of the Scheduler. |
 
 ## Keyboard navigation
 
