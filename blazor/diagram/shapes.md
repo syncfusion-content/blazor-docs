@@ -155,7 +155,7 @@ N> Deploy your HTML file in the web application and export the diagram (image no
 
 ### Stretch and align the image
 
-Stretch and align the image content anywhere but within the node boundary. The [Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ImageShape.html#Syncfusion_Blazor_Diagram_ImageShape_Scale) property of the node allows you to stretch the image as you desire. (either to mastertain proportion or to stretch). By default, the Scale property of the node is set as [Meet](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramScale.html#Syncfusion_Blazor_Diagram_DiagramScale_Meet). The following code illustrates how to scale or stretch the content of the image node.
+Stretch and align the image content anywhere but within the node boundary. The [Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ImageShape.html#Syncfusion_Blazor_Diagram_ImageShape_Scale) property of the node allows you to stretch the image as you desire. (either to maintain proportion or to stretch). By default, the Scale property of the node is set as [Meet](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramScale.html#Syncfusion_Blazor_Diagram_DiagramScale_Meet). The following code illustrates how to scale or stretch the content of the image node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

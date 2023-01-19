@@ -178,7 +178,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to change the margin around the pages
 
-The area between the master content of a page and the page edges can be changed by using the PageMargin property. The default values for the margin are set to 25 on all sides.
+The area between the maintain content of a page and the page edges can be changed by using the PageMargin property. The default values for the margin are set to 25 on all sides.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
