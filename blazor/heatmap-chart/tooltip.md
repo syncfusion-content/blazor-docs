@@ -13,7 +13,7 @@ Tooltip is used to provide the details of the heatmap cell, and this can be disp
 
 ## Default tooltip
 
-You can enable the tooltip by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapTooltipSettings.html#Syncfusion_Blazor_HeatMap_HeatMapTooltipSettings_Enable) property to **true** inside the [HeatMapTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapTooltipSettings.html) tag.
+You can enable the tooltip by setting the `Enable` property to true inside the `HeatMapTooltipSettings` tag.
 
 ```cshtml
 

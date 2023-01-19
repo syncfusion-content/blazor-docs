@@ -46,7 +46,7 @@ The following label positions are supported:
 <SfRating Value=3 ShowLabel=true LabelPosition="LabelPosition.Top"></SfRating><br/>
 
 <label>Bottom Label Position</label><br />
-<SfRating Value=3 ShowLabel=true LabelPosition="LabelPosition.Bottom"></SfRating>
+<SfRating Value=3 ShowLabel=true LabelPosition="LabelPosition.Bottom"></SfRating><br/>
 
 ```
 

@@ -21,7 +21,7 @@ If you are using CDN for style sheet references then you have to add style sheet
 * **~/Pages/_Layout.cshtml** for **.NET 6**.
 
 {% tabs %}
-{% highlight cshtml tabtitle=".NET 6 & .NET 7 (~/_Layout.cshtml)" %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
 
 <head>
     ...
