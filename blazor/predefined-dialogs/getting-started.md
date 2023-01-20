@@ -117,7 +117,7 @@ await builder.Build().RunAsync();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="1 2 11 12" %}
+{% highlight c# tabtitle=".NET 5 & .NET 3.X (~/Program.cs)" hl_lines="1 2 11 12" %}
 
 using Syncfusion.Blazor
 using Syncfusion.Blazor.Popups
