@@ -130,7 +130,7 @@ Below example demonstrates the Speed Dial items with applied Zoom effect.
 
 The Speed Dial supports to customize the action items and entire pop-up container by setting [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemTemplate) and [PopupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_PopupTemplate) tag directive. For more details about templates, check out the link [here](https://blazor.syncfusion.com/documentation/speeddial/getting-started).
 
-## HTML attribute support in speeddial items
+## HTML attribute
 
 The Blazor Speed Dial items support adding custom HTML attributes with [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_HtmlAttributes) property to customize the items. You can add them as inline attributes or use the `@attributes` directive.
 
