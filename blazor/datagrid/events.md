@@ -2619,7 +2619,7 @@ The [OnBatchCancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grid
 
 ## FreezeLineMoving
 
-The [FreezeLineMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FreezeLineMoving) event is triggered when freeze line is moving.
+The [FreezeLineMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FreezeLineMoving) event is triggered when the freeze line is moving.
 
 > The freeze line can be enabled by setting the `AllowFreezeLineMoving` property to true.
 
@@ -2682,14 +2682,14 @@ The [FreezeLineMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
         public void FreezeLineMovingHandler(FreezeLineMovingEventArgs args)
         {
-            // Here, you can get the error details in the args.
+            // Here, you will get the error details in the args.
         }
 }
 ```
 
 ## FreezeLineMoved
 
-The [FreezeLineMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FreezeLineMoved) event is triggered after moved the freeze line.
+The [FreezeLineMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FreezeLineMoved) event is triggered after moving the freeze line.
 
 > The freeze line can be enabled by setting the `AllowFreezeLineMoving` property to true.
 
@@ -2753,7 +2753,7 @@ The [FreezeLineMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gr
 
         public void FreezeLineMovedHandler(FreezeLineMovedEventArgs args)
         {
-            // Here, you can get the error details in the args.
+            // Here, you will get the error details in the args.
         }
 }
 ```
@@ -2762,7 +2762,7 @@ The [FreezeLineMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gr
 
 The [BeforeAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeAutoFill) event will be triggered before the autofill action is performed.
 
-> By setting the `Cancel` argument of the `BeforeAutoFill` event to true, the entire cells that are being automatically filled in the cell can be prevented.
+> By setting the `Cancel` argument of the `BeforeAutoFill` event to true, the entire cells being automatically filled in the cell can be prevented.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2803,16 +2803,16 @@ The [BeforeAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gri
 
     public async Task BeforeAutoFillAction(BeforeAutoFillEventArgs args)
     {
-        // Here, you can get the error details in the args.
+        // Here, you will get the error details in the args.
     }
 }
 ```
 
 ## BeforeAutoFillCell
 
-The [BeforeAutoFillCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeAutoFillCell) event is triggered for each cell before auto filling the value.
+The [BeforeAutoFillCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeAutoFillCell) event is triggered for each cell before auto-filling the value.
 
-> The autofit action for a particular cell can be cancelled by setting the Cancel argument of the BeforeAutoFillCell event to true. Also, if the `BeforeAutoFill` event is not canceled, this event occurs after it. 
+> The autofit action for a particular cell can be cancelled by setting the Cancel argument of the BeforeAutoFillCell event to true. Also, if the `BeforeAutoFill` event is not cancelled, this event occurs after it.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2853,7 +2853,7 @@ The [BeforeAutoFillCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
     public async Task BeforeAutoFillCellAction(BeforeAutoFillCellEventArgs<Order> args)
     {
-        // Here, you can get the error details in the args.
+        // Here, you will get the error details in the args.
     }
 }
 ```
@@ -2948,7 +2948,7 @@ The [BeforeCopyPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gr
     }
     public async Task Copy(BeforeCopyPasteEventArgs args)
     {
-        // Here, you can get the error details in the args.
+        // Here, you will get the error details in the args.
     }
 }
 ```
