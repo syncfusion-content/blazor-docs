@@ -147,7 +147,7 @@ In the following sample, columns are built dynamically using the `ExpandoObject`
 
 You can achieve complex data binding in the DataGrid by using the dot(.) operator in the column.field. In the following examples, **Name.FirstName** and **Name.LastName** are complex data.
 
-> You can also use the `nameof` for complex columns instead of assigning static text for the `Field` property.
+> You can also use the **name of** for complex columns instead of assigning static text for the `Field` property.
 > ```cshtml
 > <GridColumn Field="@(nameof(EmployeeData.EmployeeName) + "." + nameof(EmployeeName.FirstName))" HeaderText="First Name" Width="150"></GridColumn>
 > ```
