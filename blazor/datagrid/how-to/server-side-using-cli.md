@@ -148,7 +148,7 @@ Then, the theme style sheet from NuGet can be referred inside the `<head>` as fo
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 3.X, .NET 5 and .NET 7 (~/_Host.cshtml)" %}
+{% highlight cshtml tabtitle=".NET 3.X, .NET 5 & .NET 7 (~/_Host.cshtml)" %}
 
 <head>
     ....
@@ -176,7 +176,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 3.X, .NET 5 and .NET 7 (~/_Host.cshtml)" hl_lines="4" %}
+{% highlight cshtml tabtitle=".NET 3.X, .NET 5 & .NET 7 (~/_Host.cshtml)" hl_lines="4" %}
 
 <head>
     ....

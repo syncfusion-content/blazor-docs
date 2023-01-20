@@ -33,7 +33,7 @@ If you are using CDN for style sheet references then you have to add style sheet
 </head>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle=".NET 3.X, .NET 5 and .NET 7 (~/_Host.cshtml)" %}
+{% highlight cshtml tabtitle=".NET 3.X, .NET 5 & .NET 7 (~/_Host.cshtml)" %}
 
 <head>
     ...

@@ -71,7 +71,7 @@ The following font style links are referred in the page.
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 3.X, .NET 5 and .NET 7 (~/_Host.cshtml)" %}
+{% highlight cshtml tabtitle=".NET 3.X, .NET 5 & .NET 7 (~/_Host.cshtml)" %}
 
 <head>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto">
