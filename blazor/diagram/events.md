@@ -45,6 +45,7 @@ The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Sf
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events/CreatedEvent)
 ## Click Event
 
 The [Click](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Click) event is triggered when a node, connector, or a diagram is clicked. To explore about arguments, refer to the [ClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ClickEventArgs.html)

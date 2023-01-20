@@ -623,6 +623,6 @@ You can provide the alternative display name for such customized views on the Sc
 }
 ```
 
-![Displaying Extending Intervals in Blazor Scheduler](images/blazor-scheduler-views-extendingintervals.png)
+![Displaying Extending Intervals in Blazor Scheduler](images/blazor-scheduler-views-interval.png)
 
 N> The view intervals can be extended on all the Scheduler view modes except Agenda and Month-Agenda views.
