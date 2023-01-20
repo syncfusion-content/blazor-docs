@@ -166,7 +166,7 @@ You can add the `SCSS theme` for Blazor applications through NPM package and com
 
     ![Web Compiler Option](images/Web_Compiler_Option.png)
 
-* The `compilerconfig.json` file is created by defualt. Then, provide the location of the compiled CSS file and include a path in `compilerconfig.json` as shown in the following code snippet.
+* The `compilerconfig.json` file is created by default. Then, provide the location of the compiled CSS file and include a path in `compilerconfig.json` as shown in the following code snippet.
 
     ```json
     [
@@ -447,7 +447,7 @@ Below table lists the importing theme path for the individual components.
     </tr>
     <tr>
         <td>Signature</td>
-        <td>@import 'blazor-themes/SCSS-Themes/inputs/ignature/{{THEME}}.scss'</td>
+        <td>@import 'blazor-themes/SCSS-Themes/inputs/signature/{{THEME}}.scss'</td>
     </tr>
     <tr>
         <td>Skeleton</td>
@@ -479,7 +479,7 @@ Below table lists the importing theme path for the individual components.
     </tr>
     <tr>
         <td>TextBox</td>
-        <td>@import 'blazor-themes/SCSS-Themes/inputs/texbox/{{THEME}}.scss'</td>
+        <td>@import 'blazor-themes/SCSS-Themes/inputs/textbox/{{THEME}}.scss'</td>
     </tr>
     <tr>
         <td>TimePicker</td>
@@ -850,14 +850,14 @@ The following example demonstrates how to change a theme dynamically in Blazor W
   
 ## Render Syncfusion Components in offline with Material and Tailwind Themes
 
-Material and Tailwind Themes uses online roboto font. If your app is designed to work in a local network without internet connection, follow the below steps to use offline fonts to work in offlince scenarios.
+Material and Tailwind Themes uses online roboto font. If your app is designed to work in a local network without internet connection, follow the below steps to use offline fonts to work in offline scenarios.
    
 1. Download the minified styles for the required components from [CRG](https://blazor.syncfusion.com/crg/) site. Learn more about CRG in [help documentation](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
 2. Unzip the file and it contains the styles of the selected components and an `import.json` file, which stores the current settings.
    ![Select styles folder](images/crg-styles.png)
 3. The styles folder of material and tailwind theme contains css files and a **customized** folder. The CSS files under **customized** folder doesn't contain the online google font dependencies.
    ![Open customized folder](images/customized-folder-crg.png)
-4. Open the **customized** folder which contains CSS files without online dependecies of google fonts.
+4. Open the **customized** folder which contains CSS files without online dependencies of google fonts.
    ![Customized CSS](images/custom-css-crg.png)
 5. Copy the files under the **customized** folder to Blazor application `~/wwwroot` folder.
 6. Now, manually add the custom styles in the Blazor App to render the components without any issues on the machines that contains no internet access.
