@@ -2762,7 +2762,7 @@ The [FreezeLineMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gr
 
 The [BeforeAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeAutoFill) event will be triggered before the autofill action is performed.
 
-> By setting the `Cancel` argument of the `BeforeAutoFill` event to true, the entire cells that are being automatically filled in the cell can be cancelled. 
+> By setting the `Cancel` argument of the `BeforeAutoFill` event to true, the entire cells that are being automatically filled in the cell can be prevented.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
