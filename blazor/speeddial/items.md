@@ -132,7 +132,7 @@ The Speed Dial supports to customize the action items and entire pop-up containe
 
 ## HTML attribute support in speeddial items
 
-You can add HTML attributes for the Blazor Speed Dial action items by using [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_HtmlAttributes) property. You can also add them as inline attributes or by using the `@attributes` directive.
+The Blazor Speed Dial items support adding custom HTML attributes with [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItem.html#Syncfusion_Blazor_Buttons_SpeedDialItem_HtmlAttributes) property to customize the items. You can add them as inline attributes or use the `@attributes` directive.
 
 Below example demonstrates the Speed Dial items with HTML attributes.
 
@@ -143,8 +143,8 @@ Below example demonstrates the Speed Dial items with HTML attributes.
 <SfSpeedDial Content="Edit"> 
     <SpeedDialItems>
         <SpeedDialItem Text="Cut" IconCss="e-icons e-cut" style="color:red;"></SpeedDialItem>
-        <SpeedDialItem IconCss="e-icons e-copy"></SpeedDialItem>
-        <SpeedDialItem Text="Paste"></SpeedDialItem>
+        <SpeedDialItem Text="Copy" IconCss="e-icons e-copy"></SpeedDialItem>
+        <SpeedDialItem Text="Paste" IconCss="e-icons e-paste"></SpeedDialItem>
     </SpeedDialItems>
 </SfSpeedDial> 
 
