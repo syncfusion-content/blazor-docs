@@ -36,7 +36,7 @@ Syncfusion Blazor themes can be used in your Blazor application by referencing t
 
 * For **Blazor WebAssembly application**, refer style sheet inside the `<head>` of **wwwroot/index.html** file.
 * For **Blazor Server application**, refer style sheet inside the `<head>` of 
-    * **~/Pages/_Host.cshtml** file for .NET 3 and .NET 5.
+    * **~/Pages/_Host.cshtml** file for .NET 3, .NET 5 and .NET 7.
     * **~/Pages/_Layout.cshtml** for .NET 6.
 
 Using the below approaches the themes can be referenced in the Blazor application,
@@ -66,7 +66,7 @@ Syncfusion Blazor themes are available as static web assets in the [Syncfusion.B
 
 * For **Blazor WebAssembly application**, refer style sheet inside the `<head>` element of **wwwroot/index.html** file.
 * For **Blazor Server application**, refer style sheet inside the `<head>` element of 
-    * **~/Pages/_Host.cshtml** file for .NET 3 and .NET 5.
+    * **~/Pages/_Host.cshtml** file for .NET 3, .NET 5 and .NET 7.
     * **~/Pages/_Layout.cshtml** for .NET 6.
 
 When using individual NuGet packages in your application, add [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet Package and reference style sheet as below,
@@ -530,10 +530,10 @@ The following example demonstrates how to change a theme dynamically in Blazor S
 1.Below step shows how to reference style sheet in the way to change at dynamically.
 
 * For **.NET6 Blazor Server Application**, In the **_Layout.cshtml** the theme is changed dynamically using `id` in `setTheme` method.
-* For **.NET5 & 3.1 Blazor Server Application**, In **_Host.cshtml**, the theme is changed based on query string. 
+* For **.NET 3.1, .NET 5 and .NET 7 Blazor Server Application**, In **_Host.cshtml**, the theme is changed based on query string. 
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/_Layout.cshtml)" %}
+{% highlight c# tabtitle=".NET 6 (~/_Layout.cshtml)" %}
 
 <head>
 ... 
@@ -551,7 +551,7 @@ The following example demonstrates how to change a theme dynamically in Blazor S
 ...
 
 {% endhighlight %}
-{% highlight c# tabtitle=".NET 5 & 3.1 (~/_Host.cshtml)" %}
+{% highlight c# tabtitle=".NET 3.1, .NET 5 & .NET 7 (~/_Host.cshtml)" %}
 
 @page "/"
 @namespace BlazorThemeSwitcher.Pages
@@ -864,7 +864,7 @@ Material and Tailwind Themes uses online roboto font. If your app is designed to
     * For **Blazor WASM App**, reference custom interop script in `~/wwwroot/index.html` file. 
     * For **Blazor Server App**, reference custom interop script in 
         * `~/Pages/_Layout.cshtml` file for `.NET 6` project
-        * `~/Pages/_Host.cshtml` file for `.NET 5 and .NET Core 3.X` project.
+        * `~/Pages/_Host.cshtml` file for `.NET Core 3.X, .NET 5 and .NET 7` project.
 
     ```html
     <head>

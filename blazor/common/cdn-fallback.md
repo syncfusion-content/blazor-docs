@@ -17,11 +17,11 @@ CDN links can be down by connection issues or some other problems. This will cau
 
 If you are using CDN for style sheet references then you have to add style sheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) by using the [link tag helper](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/link-tag-helper). Syncfusion theme provides the `e-control` class. You can check the style from provided class by using link tag helper property. 
 
-* **~/Pages/_Host.cshtml** file for **.NET 5 and .NET 3.X**.
+* **~/Pages/_Host.cshtml** file for **.NET 3.X, .NET 5 and .NET 7**.
 * **~/Pages/_Layout.cshtml** for **.NET 6**.
 
 {% tabs %}
-{% highlight cshtml tabtitle=".NET 6 & .NET 7 (~/_Layout.cshtml)" %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
 
 <head>
     ...
@@ -33,7 +33,7 @@ If you are using CDN for style sheet references then you have to add style sheet
 </head>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" %}
+{% highlight cshtml tabtitle=".NET 3.X, .NET 5 and .NET 7 (~/_Host.cshtml)" %}
 
 <head>
     ...

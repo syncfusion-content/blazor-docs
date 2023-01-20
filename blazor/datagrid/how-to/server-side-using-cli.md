@@ -136,10 +136,10 @@ dotnet restore
 Then, the theme style sheet from NuGet can be referred inside the `<head>` as follows,
 
 * **~/Pages/_Layout.cshtml** file for **.NET 6**.
-* **~/Pages/_Host.cshtml** file for **.NET 5 and .NET 3.X**.
+* **~/Pages/_Host.cshtml** file for **.NET 3.X, .NET 5 and .NET 7**.
 
 {% tabs %}
-{% highlight cshtml tabtitle=".NET 6 & .NET 7 (~/_Layout.cshtml)" %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
 
 <head>
     ....
@@ -148,7 +148,7 @@ Then, the theme style sheet from NuGet can be referred inside the `<head>` as fo
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" %}
+{% highlight cshtml tabtitle=".NET 3.X, .NET 5 and .NET 7 (~/_Host.cshtml)" %}
 
 <head>
     ....
@@ -163,10 +163,10 @@ Then, the theme style sheet from NuGet can be referred inside the `<head>` as fo
 Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://sfblazor.azurewebsites.net/staging/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows,
 
 * **~/Pages/_Layout.cshtml** for **.NET 6**.
-* **~/Pages/_Host.cshtml** file for **.NET 5 and .NET 3.X**.
+* **~/Pages/_Host.cshtml** file for **.NET 3.X, .NET 5 and .NET 7**.
 
 {% tabs %}
-{% highlight cshtml tabtitle=".NET 6 & .NET 7 (~/_Layout.cshtml)" hl_lines="4" %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4" %}
 
 <head>
     ....
@@ -176,7 +176,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="4" %}
+{% highlight cshtml tabtitle=".NET 3.X, .NET 5 and .NET 7 (~/_Host.cshtml)" hl_lines="4" %}
 
 <head>
     ....
