@@ -228,7 +228,7 @@ dotnet run
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Calendar Component](images/browser-output.png)
+![Blazor Calendar Component](images/core-hosted/browser-output.png)
 
 N> You need to include a valid license key (either paid or trial key) within your applications. Refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) for more information.
 
