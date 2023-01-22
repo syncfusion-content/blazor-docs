@@ -123,7 +123,7 @@ namespace WebApplication1
 {
     public class Program
     {
-        public static async Task master(string[] args)
+        public static async Task Main(string[] args)
         {
             ....
             builder.Services.AddSyncfusionBlazor();
