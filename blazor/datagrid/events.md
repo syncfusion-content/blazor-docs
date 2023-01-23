@@ -2682,7 +2682,7 @@ The [FreezeLineMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
         public void FreezeLineMovingHandler(FreezeLineMovingEventArgs args)
         {
-            // Here, you will get the error details in the args.
+            // Here, you can customize your code.
         }
 }
 ```
@@ -2753,7 +2753,7 @@ The [FreezeLineMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gr
 
         public void FreezeLineMovedHandler(FreezeLineMovedEventArgs args)
         {
-            // Here, you will get the error details in the args.
+            // Here, you can customize your code.
         }
 }
 ```
@@ -2803,7 +2803,7 @@ The [BeforeAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gri
 
     public async Task BeforeAutoFillAction(BeforeAutoFillEventArgs args)
     {
-        // Here, you will get the error details in the args.
+        // Here, you can customize your code.
     }
 }
 ```
@@ -2812,7 +2812,7 @@ The [BeforeAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gri
 
 The [BeforeAutoFillCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeAutoFillCell) event is triggered for each cell before auto-filling the value.
 
-> The autofit action for a particular cell can be cancelled by setting the Cancel argument of the BeforeAutoFillCell event to true. Also, if the `BeforeAutoFill` event is not cancelled, this event occurs after it.
+> The autofit action for a particular cell can be prevented by setting the Cancel argument of the BeforeAutoFillCell event to true. Also, if the `BeforeAutoFill` event is not prevented, this event occurs after it.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2853,7 +2853,7 @@ The [BeforeAutoFillCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
     public async Task BeforeAutoFillCellAction(BeforeAutoFillCellEventArgs<Order> args)
     {
-        // Here, you will get the error details in the args.
+        // Here, you can customize your code.
     }
 }
 ```
@@ -2900,7 +2900,7 @@ The [BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gr
     }
     public async Task Paste(BeforeCellPasteEventArgs<Order> args)
     {
-        // Here, you can get the error details in the args.
+        // Here, you can customize your code.
     }
 }
 
@@ -2948,7 +2948,459 @@ The [BeforeCopyPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gr
     }
     public async Task Copy(BeforeCopyPasteEventArgs args)
     {
-        // Here, you will get the error details in the args.
+        // Here, you can customize your code.
+    }
+}
+```
+
+## DetailsExpanding
+
+The [DetailsExpanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsExpanding) event is triggered when detail template row is clicked to expand.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Employees">
+    <GridEvents DetailsExpanding="DetailsExpand" TValue="EmployeeData"></GridEvents>
+    <GridTemplates>
+        <DetailTemplate>
+            @{
+                var employee = (context as EmployeeData);
+                <table class="detailtable" width="100%">
+                    <colgroup>
+                        <col width="35%">
+                        <col width="35%">
+                        <col width="30%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td rowspan="4" style="text-align: center;">
+                                <img class="photo" src="@($" scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Employee ID: </span> @employee.FirstName
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Hire Date: </span> @employee.HireDate.Value.ToShortDateString()
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="font-weight: 500;">Last Name: </span> @employee.LastName
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">City: </span> @employee.City
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="font-weight: 500;">Title: </span> @employee.Title
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Country: </span> @employee.Country
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            }
+        </DetailTemplate>
+    </GridTemplates>
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="110"> </GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Country) HeaderText="Country" Width="110"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<style type="text/css" class="cssStyles">
+    .detailtable td {
+        font-size: 13px;
+        padding: 4px;
+        max-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .photo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0,0,0,0.2);
+    }
+</style>
+
+@code{
+    public List<EmployeeData> Employees { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
+        {
+            EmployeeID = x,
+            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+            LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
+            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
+                                    "Inside Sales Coordinator" })[new Random().Next(4)],
+            HireDate = DateTime.Now.AddDays(-x),
+            City = (new string[] { "Seattle", "Tacoma", "Redmond", "Kirkland", "London" })[new Random().Next(5)],
+            Country = (new string[] { "USA", "UK" })[new Random().Next(2)],
+        }).ToList();
+    }
+    public void DetailsExpand(DetailsExpandingEventArgs<EmployeeData> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class EmployeeData
+    {
+        public int? EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Title { get; set; }
+        public DateTime? HireDate { get; set; }
+        public string City { get; set; }
+        public string Country { get; set; }
+    }
+}
+```
+
+## DetailsExpanded
+
+The [DetailsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsExpanded) event is triggered after the detail template row is expanded.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Employees">
+    <GridEvents DetailsExpanded="DetailsExpanded" TValue="EmployeeData"></GridEvents>
+    <GridTemplates>
+        <DetailTemplate>
+            @{
+                var employee = (context as EmployeeData);
+                <table class="detailtable" width="100%">
+                    <colgroup>
+                        <col width="35%">
+                        <col width="35%">
+                        <col width="30%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td rowspan="4" style="text-align: center;">
+                                <img class="photo" src="@($" scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Employee ID: </span> @employee.FirstName
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Hire Date: </span> @employee.HireDate.Value.ToShortDateString()
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="font-weight: 500;">Last Name: </span> @employee.LastName
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">City: </span> @employee.City
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="font-weight: 500;">Title: </span> @employee.Title
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Country: </span> @employee.Country
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            }
+        </DetailTemplate>
+    </GridTemplates>
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="110"> </GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Country) HeaderText="Country" Width="110"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<style type="text/css" class="cssStyles">
+    .detailtable td {
+        font-size: 13px;
+        padding: 4px;
+        max-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .photo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0,0,0,0.2);
+    }
+</style>
+
+@code{
+    public List<EmployeeData> Employees { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
+        {
+            EmployeeID = x,
+            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+            LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
+            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
+                                    "Inside Sales Coordinator" })[new Random().Next(4)],
+            HireDate = DateTime.Now.AddDays(-x),
+            City = (new string[] { "Seattle", "Tacoma", "Redmond", "Kirkland", "London" })[new Random().Next(5)],
+            Country = (new string[] { "USA", "UK" })[new Random().Next(2)],
+        }).ToList();
+    }
+    public void DetailsExpanded(DetailsExpandedEventArgs<EmployeeData> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class EmployeeData
+    {
+        public int? EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Title { get; set; }
+        public DateTime? HireDate { get; set; }
+        public string City { get; set; }
+        public string Country { get; set; }
+    }
+}
+```
+
+## DetailsCollapsing
+
+The [DetailsCollapsing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsCollapsing) event is triggered when detail template row is clicked to collapse.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Employees">
+    <GridEvents DetailsCollapsing="DetailsCollapsing" TValue="EmployeeData"></GridEvents>
+    <GridTemplates>
+        <DetailTemplate>
+            @{
+                var employee = (context as EmployeeData);
+                <table class="detailtable" width="100%">
+                    <colgroup>
+                        <col width="35%">
+                        <col width="35%">
+                        <col width="30%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td rowspan="4" style="text-align: center;">
+                                <img class="photo" src="@($" scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Employee ID: </span> @employee.FirstName
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Hire Date: </span> @employee.HireDate.Value.ToShortDateString()
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="font-weight: 500;">Last Name: </span> @employee.LastName
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">City: </span> @employee.City
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="font-weight: 500;">Title: </span> @employee.Title
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Country: </span> @employee.Country
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            }
+        </DetailTemplate>
+    </GridTemplates>
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="110"> </GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Country) HeaderText="Country" Width="110"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<style type="text/css" class="cssStyles">
+    .detailtable td {
+        font-size: 13px;
+        padding: 4px;
+        max-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .photo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0,0,0,0.2);
+    }
+</style>
+
+@code{
+    public List<EmployeeData> Employees { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
+        {
+            EmployeeID = x,
+            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+            LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
+            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
+                                    "Inside Sales Coordinator" })[new Random().Next(4)],
+            HireDate = DateTime.Now.AddDays(-x),
+            City = (new string[] { "Seattle", "Tacoma", "Redmond", "Kirkland", "London" })[new Random().Next(5)],
+            Country = (new string[] { "USA", "UK" })[new Random().Next(2)],
+        }).ToList();
+    }
+    public void DetailsCollapsing(DetailsCollapsingEventArgs<EmployeeData> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class EmployeeData
+    {
+        public int? EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Title { get; set; }
+        public DateTime? HireDate { get; set; }
+        public string City { get; set; }
+        public string Country { get; set; }
+    }
+}
+```
+
+## DetailsCollpased
+
+The [DetailsCollpased](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsCollapsed) event is triggered after detail template after row is collapsed.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Employees">
+    <GridEvents DetailsCollapsed="DetailsCollapsed" TValue="EmployeeData"></GridEvents>
+    <GridTemplates>
+        <DetailTemplate>
+            @{
+                var employee = (context as EmployeeData);
+                <table class="detailtable" width="100%">
+                    <colgroup>
+                        <col width="35%">
+                        <col width="35%">
+                        <col width="30%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td rowspan="4" style="text-align: center;">
+                                <img class="photo" src="@($" scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Employee ID: </span> @employee.FirstName
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Hire Date: </span> @employee.HireDate.Value.ToShortDateString()
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="font-weight: 500;">Last Name: </span> @employee.LastName
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">City: </span> @employee.City
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="font-weight: 500;">Title: </span> @employee.Title
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Country: </span> @employee.Country
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            }
+        </DetailTemplate>
+    </GridTemplates>
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="110"> </GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Country) HeaderText="Country" Width="110"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<style type="text/css" class="cssStyles">
+    .detailtable td {
+        font-size: 13px;
+        padding: 4px;
+        max-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .photo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0,0,0,0.2);
+    }
+</style>
+
+@code{
+    public List<EmployeeData> Employees { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
+        {
+            EmployeeID = x,
+            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+            LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
+            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
+                                    "Inside Sales Coordinator" })[new Random().Next(4)],
+            HireDate = DateTime.Now.AddDays(-x),
+            City = (new string[] { "Seattle", "Tacoma", "Redmond", "Kirkland", "London" })[new Random().Next(5)],
+            Country = (new string[] { "USA", "UK" })[new Random().Next(2)],
+        }).ToList();
+    }
+    public void DetailsCollapsed(DetailsCollapsedEventArgs<EmployeeData> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public class EmployeeData
+    {
+        public int? EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Title { get; set; }
+        public DateTime? HireDate { get; set; }
+        public string City { get; set; }
+        public string Country { get; set; }
     }
 }
 ```
