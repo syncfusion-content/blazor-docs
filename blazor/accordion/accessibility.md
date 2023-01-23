@@ -20,7 +20,7 @@ The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accor
 | aria-controls        | Attribute is set to the header and it points to the corresponding Accordion content.  |
 | aria-expanded        | Attribute is set to the Accordion header elements to indicates the expand state of the Accordion Item. Default value of this attribute is `false`. If an item is expanded, the attribute value changes to ‘true’. |
 | aria-hidden          | Attribute is set to the Accordion panel elements to indicates the content visible state of the Accordion Item. Default value of this attribute is `true`. If an item content is visible, the attribute value changes to `false`. |
-| aria-disabled        |  Attribute is set to the Accordion header element to indicates the disabled state of the Accordion and its items.  |
+| aria-disabled        | It indicates the disabled state of the Accordion and its items.  |
 
 ## Keyboard interaction
 

@@ -19,7 +19,7 @@ The Toolbar element is assigned the role of `toolbar`.
 | --- | --- |
 | role="toolbar" | Attribute is set to the ToolBar element describes the actual role of the element. |
 | aria-orientation |  Attribute is set to the ToolBar element to indicates the ToolBar orientation. Default value is `horizontal`. |
-| aria-label | Attribute is set to toolbar items element  to the that describes the purpose of the set of toolbar. |
+| aria-label | Attribute is set to ToolBar element describes the purpose of the set of toolbar. |
 | aria-expanded | Attribute is set to the ToolBar Popup  element to indicates the expanded state of the popup.|
 | aria-haspopup | Attribute is set to the popup element to indicates the popup mode of the Toolbar. Default value is false. When popup mode is enabled, attribute value has to be changed to `true`. |
 | aria-disabled | Attribute set to the ToolBar element to indicates the disabled state of the ToolBar. |
@@ -30,7 +30,6 @@ Keyboard navigation is enabled, by default. Possible keys are:
 
 | Key | Description |
 |-------- | ------|
-| <kbd>Tab/Shift+Tab</kbd>    |  When focus moves into the toolbar items , places focus on Next/Previous the active toolbar element . |
 | <kbd>Left</kbd>    | Focuses the previous element. |
 | <kbd>Right</kbd>   | Focuses the next element. |
 | <kbd>Enter</kbd> | When focused on a ToolBar command, clicking the key triggers the click of Toolbar element. When popup drop-down icon is focused, the popup opens. |

@@ -24,8 +24,7 @@ The following ARIA attributes are used in the Scheduler:
 | aria-label | Attribute is set to the Scheduler parent element and its default value is Scheduler's current date. On every time, the date is navigated, this attribute is updated with appropriate current date values. It is also assigned to other scheduler UI elements such as previous and next date navigation buttons depicting its purpose, div element displaying date range in the header bar and appointment elements. |
 | aria-labelledby | It indicates editor dialog title to the user through assistive technologies. |
 | aria-describedby | It indicates editor dialog content description to the user through assistive technologies. |
-| aria-disabled | It indicates the disabled state of the Scheduler. |
-| aria-selected | It indicates the currently selected cell of the Scheduler. |
+| aria-disabled | Attribute is set to the appointment element to indicates the disabled state of the Scheduler. |
 
 ## Keyboard navigation
 

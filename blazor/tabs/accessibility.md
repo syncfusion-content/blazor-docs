@@ -19,7 +19,6 @@ The following list of attributes are added in the Tab.
 | tablist | Attribute is set to  the Tab header element  that describes actual role of the element.|
 | tab | Attribute is set to the Tab items element to  indicates an interactive element inside a tablist that, when activated, displays its associated tabpanel.|
 | tabpanel | This is set to role attribute for the Tab content that describes the role for viewing the active content.|
-| presentation       | Attribute is set to role attribute for nested elements in the Tab.  |
 | aria-orientation    | Attribute is set to the Tab header element indicates the Tab header orientation. Default value of this attribute is horizontal. |
 | aria-selected       | Attribute set to the Tab items to indicates the selection state for Tab items. Active Tab is set to true for this attribute. |
 | aria-labelledby       | Attribute is set to the Tab content element to indicates the associated Tab header for the content. |
@@ -33,7 +32,6 @@ By default, keyboard navigation is enabled. This component implements keyboard n
 
 | Key           | Description                                                                         |
 |---------------|-------------------------------------------------------------------------------------|
-| <kbd>Tab/Shift+Tab</kbd>    |  When focus moves into the tab list, places focus on the next/previous active tab element . |
 | <kbd>Left</kbd>    | Moves focus to the previous Tab. If focus is on the first Tab, the focus will not move to any Tab. |
 | <kbd>Right</kbd>   | Moves focus to the next Tab. If focus is on the last Tab element, the focus will not move to any Tab. |
 | <kbd>Enter</kbd> or <kbd> Space</kbd>  | Selects the Tab if it is not selected. Opens the popup dropdown icon if it is focused. Select the Tab item as active when popup item is focused. |
