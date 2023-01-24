@@ -35,6 +35,18 @@ Use the following CSS to customize the DatePicker icon element
 }
 ```
 
+## Adding background color to DatePicker container element
+
+You can customize the background color of the container element for the DatePicker by targeting its CSS class, `input.e-input`, and setting the desired color to the `background-color` property.
+
+% highlight cshtml %}
+
+{% include_relative code-snippet/background-color.razor %}
+
+{% endhighlight %}
+
+![DatePicker with background color](./images/blazor-datepicker-background_color.png)
+
 ## Customizing the Calendar popup of the DatePicker
 
 ### Mobile mode full screen calendar popup in material theme
