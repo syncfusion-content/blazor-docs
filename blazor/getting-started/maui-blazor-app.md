@@ -194,6 +194,17 @@ In the below code images are added under `images` folder in `wwwroot` folder.
     If you get error dialog like "There were deployment errors", Enable developer mode. For more details refer [Enable your device for development](https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development).
 
    ![Enable developer mode in system settings](images/maui/enable-developer-mode.png)
+   
+* How to solve "Attempting to JIT compile method while running in aot-only mode" console error while deploying an MAUI Blazor App on an iOS device?
+     
+    If you get this deployment issue on an iOS device, add the respective Syncfusion Blazor assembly to the MtouchExtraArgs tag for the iOS Release configuration in the project file as below,
+
+ ```csproj
+    <PropertyGroup Condition="$(TargetFramework.Contains('-ios')) And $(Configuration.Contains('Release')) ">
+                <UseInterpreter>true</UseInterpreter>
+                <MtouchExtraArgs>--linkskip=Syncfusion.Blazor.Inputs</MtouchExtraArgs>
+    </PropertyGroup>
+ ```
 
 ## See also
 
