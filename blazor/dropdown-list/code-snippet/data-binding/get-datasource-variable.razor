@@ -1,0 +1,32 @@
+
+<SfDropDownList TValue="string" Placeholder="e.g. Australia" TItem="Countries" @bind-Value="@DropVal" DataSource="@Country">
+    <DropDownListFieldSettings Value="Name"></DropDownListFieldSettings>
+</SfDropDownList>
+
+<button class="e-btn apply-limit" @onclick="@GetDataSource">Get the datasource</button>
+
+
+@code {
+
+    public string DropVal;
+
+    public class Countries
+    {
+        public string Name { get; set; }
+
+        public string Code { get; set; }
+    }
+
+    List<Countries> Country = new List<Countries>
+     {
+        new Countries() { Name = "Australia", Code = "AU" },
+        new Countries() { Name = "Bermuda", Code = "BM" },
+        new Countries() { Name = "Canada", Code = "CA" },
+        new Countries() { Name = "Cameroon", Code = "CM" },
+    };
+
+    public void GetDataSource(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        var data = Country;
+    }
+}
