@@ -111,8 +111,6 @@ You can achieve this by binding the `resize` event in window and update the heig
 
 ![Popup height based on available space in Blazor DropdownList](./images/popup-setting/blazor_dropdown_popup_resize.gif)
 
-## Events
-
 ### OnOpen event
 
 The [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnOpen) event triggers when the popup is opened. If you cancel this event, the popup remains closed.
@@ -152,75 +150,3 @@ The [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.D
 {% include_relative code-snippet/popup-setting/closed-event.razor %}
 
 {% endhighlight %}
-
-## Properties
-
-### PopupHeight
-
-Specifies the height of the popup list.
-
-Default value of [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) is `300px`.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/popup-setting/popup-height.razor %}
-
-{% endhighlight %}
-
-![PopupHeight in Blazor DropdownList](./images/popup-setting/blazor_dropdown_popup-height.png)
-
-### PopupWidth
-
-Specifies the Width of the popup list. By default, the popup Width sets based on the Width of the component.
-
-Default value of [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) is `100%`
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/popup-setting/popup-width.razor %}
-
-{% endhighlight %}
-
-![PopupWidth in Blazor DropdownList](./images/popup-setting/blazor_dropdown_popup-width.png)
-
-### Width
-
-Specifies the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Width) of the component. By default, the component Width sets based on the Width of its parent container.
-
-You can also set the Width in pixel values.
-
-Default value of Width is `100%`
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/popup-setting/width-property.razor %}
-
-{% endhighlight %}
-
-![Width in Blazor DropdownList](./images/popup-setting/blazor_dropdown_with-width-property.png)
-
-## Methods
-
-### HidePopupAsync()
-
-Hides the DropDownList popup.
-
-#### Declarations
-
-N> public Task HidePopupAsync()
-
-### ShowPopupAsync()
-
-Opens the popup that displays the list of items.
-
-#### Declarations
-
-N> public Task ShowPopupAsync()
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/popup-setting/show-or-hide-popup.razor %}
-
-{% endhighlight %} 
-
-![Show or Hide Popup in Blazor DropdownList](./images/popup-setting/blazor_dropdown_show-or-hide-popup.gif)

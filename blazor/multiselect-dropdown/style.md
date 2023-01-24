@@ -162,9 +162,7 @@ Use the following CSS to customize the color of checkbox.
 }
 ```
 
-## Properties
-
-### CssClass
+## CssClass
 
 Specifies the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_CssClass) name that can be appended with the root element of the MultiSelect. One or more custom CSS classes can be added to a MultiSelect.
 
@@ -183,35 +181,19 @@ Some of the possible values are
 
 ![Blazor MultiSelect DropDown with CssClass property](./images/style/blazor_multiselect_cssClass-property.png)
 
-### DelimiterChar
+## Placeholder
 
-Sets the delimiter character for `default` and `delimiter` visibility modes. [DelimiterChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_DelimiterChar) is applicable only in default and delimiter mode.
-
-Default value of `DelimiterChar` is `,`.
+Specifies the text that is shown as a hint or [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Placeholder) until the user focuses or enter a value in MultiSelect.
 
 {% highlight Razor %}
 
-{% include_relative code-snippet/style/delimiterChar-property.razor %}
+{% include_relative code-snippet/style/placeholder-property.razor %}
 
-{% endhighlight %} 
+{% endhighlight %}
 
-![Blazor MultiSelect DropDown with DelimiterChar property](./images/style/blazor_multiselect_delimiterChar-property.png)
+![Blazor MultiSelect DropDown with Placeholder property](./images/style/blazor_multiselect_placeholder-property.png)
 
-### EnableCloseOnSelect
-
-Based on the property, when item get select popup visibility state will changed.
-
-Default value of [EnableCloseOnSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_EnableCloseOnSelect) is `true`.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/style/enableCloseOnSelect-property.razor %}
-
-{% endhighlight %} 
-
-![Blazor MultiSelect DropDown with EnableCloseOnSelect property](./images/style/blazor_multiselect_enableCloseOnSelect-property.png)
-
-### FloatLabelType
+## FloatLabelType
 
 Specifies the floating label behavior of the MultiSelect that the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Placeholder) text floats above the MultiSelect based on the following values. [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_FloatLabelType) is applicable only when `Placeholder` is used.`FloatLabelType` is depends on `Placeholder`.
 
@@ -229,23 +211,7 @@ Possible values are:
 
 ![Blazor MultiSelect DropDown with FloatLabelType property](./images/style/blazor_multiselect_floatLabelType-property.gif)
 
-### HideSelectedItem
-
-Hides the selected item from the list item.
-
-Default value of [HideSelectedItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_HideSelectedItem) is `true`.
-
-In the following code, `HideSelectedItem` is set as `false`.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/style/hideSelectedItem-property.razor %}
-
-{% endhighlight %}
-
-![Blazor MultiSelect DropDown with HideSelectedItem property](./images/style/blazor_multiselect_hideSelectedItem-property.png)
-
-### HtmlAttributes
+## HtmlAttributes
 
 You can add the additional input attributes such as disabled, value, and more to the root element.
 
@@ -259,7 +225,7 @@ If you configured both the property and equivalent input attribute, then the com
 
 ![Blazor MultiSelect DropDown with HtmlAttributes property](./images/style/blazor_multiselect_htmlAttributes-property.png)
 
-### InputAttributes
+## InputAttributes
 
 You can add the additional input attributes such as disabled, value, and more to the root element.
 
@@ -273,47 +239,7 @@ If you configured both the property and equivalent input attribute, then the com
 
 ![Blazor MultiSelect DropDown with InputAttributes property](./images/style/blazor_multiselect_inputAttributes-property.png)
 
-### OpenOnClick
-
-Whether to automatically open the popup when the control is clicked.
-
-Default value of [OpenOnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_OpenOnClick) is `true`.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/style/openOnClick-property.razor %}
-
-{% endhighlight %}
-
-![Blazor MultiSelect DropDown with OpenOnClick property](./images/style/blazor_multiselect_openOnClick-property.png)
-
-### Placeholder
-
-Specifies the text that is shown as a hint or [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Placeholder) until the user focuses or enter a value in MultiSelect.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/style/placeholder-property.razor %}
-
-{% endhighlight %}
-
-![Blazor MultiSelect DropDown with Placeholder property](./images/style/blazor_multiselect_placeholder-property.png)
-
-### PopupHeight
-
-Gets or sets the height of the popup list. By default, it renders based on its list item.
-
-Default value of [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_PopupHeight) is `300px`.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/style/popupHeight-property.razor %}
-
-{% endhighlight %}
-
-![Blazor MultiSelect DropDown with PopupHeight property](./images/style/blazor_multiselect_popupHeight-property.png)
-
-### PopupWidth
+## Change the PopupWidth
 
 Gets or sets the width of the popup list and percentage values has calculated based on input width.
 
@@ -327,59 +253,21 @@ Default value of [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 ![Blazor MultiSelect DropDown with PopupWidth property](./images/style/blazor_multiselect_popupWidth-property.png)
 
-### Readonly
- 
-Specifies the boolean value whether the MultiSelect allows the user to change the value.
+## Change the PopupHeight
 
-Default value of [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Readonly) is `false`.
+Gets or sets the height of the popup list. By default, it renders based on its list item.
 
-{% highlight Razor %}
-
-{% include_relative code-snippet/style/readonly-property.razor %}
-
-{% endhighlight %}
-
-![Blazor MultiSelect DropDown with Readonly property](./images/style/blazor_multiselect_readonly-property.png)
-
-### ShowClearButton
-
-Enables close icon with the each selected item.
-
-Default value of [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_ShowClearButton) is `true`.
+Default value of [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_PopupHeight) is `300px`.
 
 {% highlight Razor %}
 
-{% include_relative code-snippet/style/showClearButton-property.razor %}
+{% include_relative code-snippet/style/popupHeight-property.razor %}
 
 {% endhighlight %}
 
-![Blazor MultiSelect DropDown with ShowClearButton property](./images/style/blazor_multiselect_showClearButton-property.png)
+![Blazor MultiSelect DropDown with PopupHeight property](./images/style/blazor_multiselect_popupHeight-property.png)
 
-### ShowDropDownIcon
-
-Allows you to either show or hide the DropDown button on the component.
-
-Default value of [ShowDropDownIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_ShowDropDownIcon) is `false`.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/style/showDropDownIcon-property.razor %}
-
-{% endhighlight %}
-
-![Blazor MultiSelect DropDown with ShowDropDownIcon property](./images/style/blazor_multiselect_showDropdownIcon-property.png)
-
-### TabIndex
-
-Specifies the tab order of the DropDownList component.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/style/tabIndex-property.razor %}
-
-{% endhighlight %}
-
-### Width
+## Change the Width
 
 Gets or sets the width of the component. By default, it sizes based on its parent. container dimension.
 
@@ -393,91 +281,17 @@ Default value of [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ![Blazor MultiSelect DropDown with Width property](./images/style/blazor_multiselect_width-property.png)
 
-## Methods 
+## Read-only Mode
+ 
+Specifies the boolean value whether the MultiSelect allows the user to change the value.
 
-### ClearAsync()
-
-Allows you to clear the selected values from the MultiSelect component.
-
-#### Declaration
-
-N> public Task ClearAsync()
+Default value of [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Readonly) is `false`.
 
 {% highlight Razor %}
 
-{% include_relative code-snippet/style/clearAsync-method.razor %}
+{% include_relative code-snippet/style/readonly-property.razor %}
 
 {% endhighlight %}
 
-![Blazor MultiSelect DropDown with ClearAsync method](./images/style/blazor_multiselect_clearAsync-method.gif)
-
-### FocusAsync()
-
-Sets the focus to the MultiSelect component for interaction.
-
-#### Declaration
-
-N> public Task FocusAsync()
-
-### FocusOutAsync()
-
-Remove the focus from the MultiSelect component, if the component is in focus state.
-
-#### Declaration
-
-N> public Task FocusOutAsync()
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/style/focus-in-out-method.razor %}
-
-{% endhighlight %}
-
-### HidePopupAsync()
-
-Hides the popup if it is in an open state.
-
-#### Declaration
-
-N> public Task HidePopupAsync()
-
-### ShowPopupAsync()
-
-Opens the popup that displays the list of items.
-
-#### Declaration
-
-N> public Task ShowPopupAsync()
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/style/show-hide-popupAsync-method.razor %}
-
-{% endhighlight %}
-
-### HideSpinner()
-
-Hides the spinner loader.
-
-#### Declaration
-
-N> public Task HideSpinner()
-
-### ShowSpinner()
-
-Shows the spinner loader.
-
-#### Declaration
-
-N> public Task ShowSpinner()
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/style/show-hide-spinnerAsync-method.razor %}
-
-{% endhighlight %}
-
-![Blazor MultiSelect DropDown with show hide spinner method](./images/style/blazor_multiselect_show-hide-spinnerAsync-method.gif)
-
-
+![Blazor MultiSelect DropDown with Readonly property](./images/style/blazor_multiselect_readonly-property.png)
 
