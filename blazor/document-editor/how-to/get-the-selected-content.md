@@ -27,14 +27,13 @@ The following example code illustrates how to add search in google option in con
 </SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
 
     public void OnCreated(object args)
     {
         SfDocumentEditor documentEditor = container.DocumentEditor;
         List<Syncfusion.Blazor.DocumentEditor.MenuItemModel> contentMenuItem = new List<Syncfusion.Blazor.DocumentEditor.MenuItemModel>
-    {
+        {
            new Syncfusion.Blazor.DocumentEditor.MenuItemModel { Text="Search In Google", Id= "search_in_google", IconCss="e-icons e-de-ctnr-find" }
         };
         documentEditor.ContextMenu.AddCustomMenu(contentMenuItem, true, false);
@@ -73,9 +72,7 @@ The following example code illustrates how to get the content of a bookmark and 
 </SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
-
     string sfdtString;
 
     public async void OnLoad(object args)
@@ -94,7 +91,6 @@ The following example code illustrates how to get the content of a bookmark and 
         await container.DocumentEditor.Editor.PasteAsync(selectedContent);
     }
 }
-
 ```
 
 You can add the following custom options using this API,

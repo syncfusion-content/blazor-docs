@@ -257,7 +257,7 @@ Based on the state parameter, entire list item will be selected/deselected.
 
 #### Declaration
 
-> public Task SelectAllAsync(bool state)
+N> public Task SelectAllAsync(bool state)
 
 #### parameter
 

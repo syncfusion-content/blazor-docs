@@ -177,4 +177,4 @@ namespace WebApplication1.Server.Controllers
 }
 ```
 
->You can find the fully working sample [here](https://github.com/ej2gridsamples/Blazor/blob/master/EntityFramework.zip).
+N>You can find the fully working sample [here](https://github.com/ej2gridsamples/Blazor/blob/master/EntityFramework.zip).

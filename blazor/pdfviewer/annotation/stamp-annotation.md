@@ -45,7 +45,7 @@ In the pan mode, if the stamp annotation mode is entered, the PDF Viewer control
 
 * The file explorer dialog will appear, choose the image and then add the image in the PDF page.
 
->The JPG and JPEG image format are only supported in custom stamp annotations.
+N>The JPG and JPEG image format are only supported in custom stamp annotations.
 
 ## Setting default properties during control initialization
 
@@ -150,6 +150,6 @@ The following code illustrates how to add the image as a stamp annotation in the
     }
 </style>
 ```
-> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Stamp/Add%20a%20custom%20stamp).
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Stamp/Add%20a%20custom%20stamp).
 
-> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.
+N> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.

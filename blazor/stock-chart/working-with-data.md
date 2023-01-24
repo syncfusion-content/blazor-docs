@@ -37,12 +37,12 @@ properties.
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date {get; set;}
+        public Double Open {get; set;}
+        public Double Low {get; set;}
+        public Double Close {get; set;}
+        public Double High {get; set;}
+        public Double Volume{get; set;}
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -63,7 +63,7 @@ properties.
 
 ![Binding Local Data in Blazor Stock Chart](images/common/blazor-stock-chart-bind-local-data.png)
 
-> By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
+N> By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
 
 ### ExpandoObject binding
 

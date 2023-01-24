@@ -62,4 +62,4 @@ namespace BlazorApplication
 {% endtabs %}
 
 
-> [GlobalOptions.Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_Animation) property controls script level animations only and it is not applicable for direct CSS level animations (Animation defined from CSSs classes/properties).
+N> [GlobalOptions.Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_Animation) property controls script level animations only and it is not applicable for direct CSS level animations (Animation defined from CSSs classes/properties).

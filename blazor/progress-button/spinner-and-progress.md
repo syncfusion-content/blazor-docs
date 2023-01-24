@@ -109,7 +109,7 @@ The progress can be visualized at the specified interval by changing the [Step](
 ```
 ![Changing Step of Blazor ProgressButton](./images/blazor-progressbutton-step.png)
 
-> The class `e-hide-spinner` hides the spinner in the Progress Button, For more information, see [hide spinner](./how-to/hide-spinner) section.
+N> The class `e-hide-spinner` hides the spinner in the Progress Button, For more information, see [hide spinner](./how-to/hide-spinner) section.
 
 ### Change Progress state dynamically
 

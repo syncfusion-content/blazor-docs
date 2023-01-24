@@ -78,6 +78,7 @@ The user handle can be enabled for the selected nodes/connectors by setting a [S
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle)
 
 ![Blazor Diagram Node with User Handle](images/blazor-diagram-with-user-handle.png)
 
@@ -188,6 +189,7 @@ The following code explains how to customize the appearance of the user handle.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle)
 
 ![Customizing Appearance of Userhandle in Blazor Diagram](images/blazor-diagram-custom-user-handle-appearance.png)
 
@@ -418,6 +420,8 @@ The following code example shows how to change the VisibleTarget in the userhand
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle)
+
 ![VisibleTarget](Images/blazor-diagram-user-handle-visible-target.gif)
 
 ## Fixed user handles
@@ -467,6 +471,7 @@ To create the fixed user handles, define and add them to the collection of nodes
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle)
 
 ## Customizing the fixed user handle
 
@@ -478,7 +483,7 @@ To create the fixed user handles, define and add them to the collection of nodes
 
 * The [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_CornerRadius) allows to create fixed user handles with rounded corners. The radius of the rounded corner is set with the `CornerRadius` property.
 
-> The [PathData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_PathData) needs to be provided to render fixed user handle.
+N> The [PathData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_PathData) needs to be provided to render fixed user handle.
 
 ### Change the size of the fixed user handle
 
@@ -539,8 +544,9 @@ The following code explains how to customize the appearance of the fixed user ha
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle)
 
-> The fixed user handle id need to be unique.
+N> The fixed user handle id need to be unique.
 
 ## Customizing the node fixed user handle
 
@@ -615,6 +621,7 @@ The following code explains how to customize the node fixed user handle.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle)
 
 ## Customizing the connector fixed user handle
 
@@ -649,7 +656,7 @@ The following table shows all the possible alignments visually shows the fixed u
 | y = 10 | Before |![Displaying Fixed User Handle Before Blazor Diagram Node](images/blazor-diagram-user-handle-in-before-node.png)|
 | y = 10 | After |![Displaying Fixed User Handle Before Blazor Diagram Node](images/blazor-diagram-user-handle-in-after-node.png)|
 
-> Displacement will not be done if the alignment is set to center.
+N> Displacement will not be done if the alignment is set to center.
 
 The following code explains how to customize the connector fixed user handle.
 
@@ -696,6 +703,7 @@ The following code explains how to customize the connector fixed user handle.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle)
 
 ## FixedUserHandle event
 
@@ -758,3 +766,4 @@ The Diagram control provides the following event for the fixed user handle.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle)

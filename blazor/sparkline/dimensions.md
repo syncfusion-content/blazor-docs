@@ -64,7 +64,7 @@ The Sparkline Chart can be sized in pixels.
 </SfSparkline>
 ```
 
-> Refer to the [code block](#size-for-the-container) to know about the property value of the `populationData`.
+N> Refer to the [code block](#size-for-the-container) to know about the property value of the `populationData`.
 
 ![Changing Blazor Sparkline Chart Size in Pixel](./images/SparklineDimension/blazor-sparkline-chart-size-in-pixel.png)
 
@@ -86,6 +86,6 @@ By setting values in percentage, the Sparkline Chart gets their dimension with r
 </div>
 ```
 
-> Refer to the [code block](#size-for-the-container) to know about the property value of the `populationData`.
+N> Refer to the [code block](#size-for-the-container) to know about the property value of the `populationData`.
 
 ![Changing Blazor Sparkline Chart Size in Percentage](./images/SparklineDimension/blazor-sparkline-chart-size-in-percentage.png)

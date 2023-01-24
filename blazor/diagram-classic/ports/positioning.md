@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+N> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
 
 # Positioning in Blazor Diagram Component
 
@@ -81,7 +81,7 @@ The following code shows the relationship between the shape port position and pa
 | (1,1) | ![Left](../images/offset9.png) |
 
 
-> Type of the offset property for node’s shape port is NodePortOffset.
+N> Type of the offset property for node’s shape port is NodePortOffset.
 
 ## Horizontal and vertical alignment
 
@@ -149,9 +149,9 @@ The following code explains how to align ports.
 }
 ```
 
->* The value of the `HorizontalAlignment` is `Center` by default.
->* The value of the `VerticalAlignment` is `Center` by default.
->* Alignment positioned based on the offset value.
+N>* The value of the `HorizontalAlignment` is `Center` by default.
+<br/>* The value of the `VerticalAlignment` is `Center` by default.
+<br/>* Alignment positioned based on the offset value.
 
 ## Margin
 

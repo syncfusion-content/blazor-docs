@@ -22,7 +22,7 @@ To get start quickly on customizing the header rows of timeline views on schedul
 {% youtube
 "youtube:https://www.youtube.com/watch?v=2eYGFgwqK6U"%}
 
-> The `Hour` row is not applicable for Timeline month view.
+N> The `Hour` row is not applicable for Timeline month view.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -57,6 +57,8 @@ To get start quickly on customizing the header rows of timeline views on schedul
 }
 ```
 
+![Timeline Header Rows in Blazor Scheduler](images/blazor-scheduler-headerrow-default.png)
+
 ## Display year and month rows in timeline views
 
 To display the timeline Scheduler simply with year and month names alone, define the option `Year` and `Month` within the `ScheduleHeaderRow` property.
@@ -89,6 +91,8 @@ To display the timeline Scheduler simply with year and month names alone, define
     }
 }
 ```
+
+![Display Year and Month rows in Blazor Scheduler timeline views](images/blazor-scheduler-headerrow-month-year.png)
 
 ## Display week numbers in timeline views
 
@@ -125,6 +129,8 @@ The week number can be displayed in a separate header row of the timeline Schedu
 }
 ```
 
+![Display Week numbers in Blazor Scheduler timeline views](images/blazor-scheduler-headerrow-weeknumber.png)
+
 ## Timeline view displaying dates of a complete year
 
 It is possible to display a complete year in a timeline view by setting `Interval` value as 12 and defining **TimelineMonth** view option within the `ScheduleView` tag helper.
@@ -157,6 +163,8 @@ It is possible to display a complete year in a timeline view by setting `Interva
     }
 }
 ```
+
+![Display dates of a complete year in Blazor Scheduler timeline views](images/blazor-scheduler-headerrow-dates.png)
 
 ## Customizing the header rows using template
 
@@ -217,3 +225,5 @@ The text of the header rows can be customized and display any images or format t
     }
 }
 ```
+
+![Display customize header rows using template in  Blazor Scheduler](images/blazor-scheduler-headerrow-custom-header.png)

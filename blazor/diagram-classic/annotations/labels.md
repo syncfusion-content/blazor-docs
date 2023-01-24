@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+N> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
 
 # Actions of annotation in Blazor Diagram Component
 
@@ -78,9 +78,9 @@ An annotation can be added to a node or connector by defining the annotation obj
 ![Annotation](../images/Annotation.png)
 
 
->* [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramNodeAnnotation_Id) for each annotation should be unique and so it is further used to find the annotation at runtime and do any customization.
->* By default, node’s annotation positioned in center point of the shape.
->* By default, connector’s path annotation positioned center point of its path.
+N>* [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramNodeAnnotation_Id) for each annotation should be unique and so it is further used to find the annotation at runtime and do any customization.
+<br/>* By default, node’s annotation positioned in center point of the shape.
+<br/>* By default, connector’s path annotation positioned center point of its path.
 
 ## Add annotations at runtime
 
@@ -146,7 +146,7 @@ public void AddLabel()
 
 ![Annotation](../images/Annotation_Add.png)
 
-> You cannot reset the annotation collection directly to add or update the annotation collection.
+N> You cannot reset the annotation collection directly to add or update the annotation collection.
 
 ## Remove annotations
 
@@ -219,9 +219,9 @@ public void RemoveLabel()
 }
 ```
 
->* You can delete multiple annotations from node to pass the collection of annotation objects as argument.
->* Both the AddLabels and RemoveLabels API’s are applicable to nodes and connectors.
->* The `Add`, `Remove`, and `RemoveAt` methods are applicable for connectors too.
+N>* You can delete multiple annotations from node to pass the collection of annotation objects as argument.
+<br/>* Both the AddLabels and RemoveLabels API’s are applicable to nodes and connectors.
+<br/>* The `Add`, `Remove`, and `RemoveAt` methods are applicable for connectors too.
 
 ## Update annotations at runtime
 

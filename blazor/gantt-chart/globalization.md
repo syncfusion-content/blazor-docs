@@ -169,7 +169,7 @@ namespace BlazorApplication
 }
 ```
 
-> Add [UseRequestLocalization()](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#localization-middleware) middle-ware in Configure method in **Startup.cs** file to get browser Culture Information.
+N> Add [UseRequestLocalization()](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#localization-middleware) middle-ware in Configure method in **Startup.cs** file to get browser Culture Information.
 
 * Then, write a **class** by inheriting **ISyncfusionStringLocalizer** interface and override the Manager property to get the resource file details from the application end.
 
@@ -197,7 +197,7 @@ namespace BlazorServer
 }
 ```
 
-> BlazorServer denotes the ApplicationNameSpace of your project.
+N> BlazorServer denotes the ApplicationNameSpace of your project.
 
 * Finally, specify the culture for Gantt using `Locale` property.
 
@@ -315,7 +315,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 }
 ```
 
-> ClientApplication denotes the ApplicationNameSpace of your project.
+N> ClientApplication denotes the ApplicationNameSpace of your project.
 
 * Now, Specify the culture for Gantt using `Locale` property.
 
@@ -387,7 +387,7 @@ RTL provides an option to switch the text direction and layout of the Gantt comp
 @using Syncfusion.Blazor.Gantt
 <SfGantt ID="GanttContainer" @ref="Gantt" EnableRtl="true" DataSource="@TaskCollection" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId"></GanttTaskFields>
-    <GanttEditSettings AllowEditing="true" AllowAdding="true" AllowTaskbarEditing="true"></GanttEditSettings>
+    <GanttEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" AllowTaskbarEditing="true"></GanttEditSettings>
 </SfGantt>
 
 @code{
@@ -428,6 +428,8 @@ RTL provides an option to switch the text direction and layout of the Gantt comp
 }
 ```
 
-> Gantt chart doesn't have RTL support when predecessors enabled.
+N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the gantt.
 
-> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the gantt.
+## See also
+
+* [How to enable RTL based on syncfusion blazor service](https://blazor.syncfusion.com/documentation/common/right-to-left#enable-rtl-for-all-components)

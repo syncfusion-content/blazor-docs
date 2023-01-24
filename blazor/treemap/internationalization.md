@@ -49,6 +49,6 @@ In the following code example, tooltip and Data Label is globalized to currency 
 }
 ```
 
-> Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
+N> Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
 
 ![Localization in Blazor TreeMap](images/Internationalization/blazor-treemap-localization.png)

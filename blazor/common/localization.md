@@ -15,19 +15,19 @@ Localization is the process of translating the application resources into differ
 
 The following two steps can be used to localize Syncfusion Blazor components based on culture. You can find the example codes in the below repository,
 
-> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-localization)
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-localization)
 
 ### Adding culture based resx files
 
 Syncfusion components can be localized using the Resource `.resx` files. You can find the default and culture based localization files in the following GitHub repository.
 
-> You can get default and culture based resource files from [GitHub](https://github.com/syncfusion/blazor-locale).
+N> You can get default and culture based resource files from [GitHub](https://github.com/syncfusion/blazor-locale).
 
 Copy default resx file (`SfResources.resx`) and the other required resx files based on the culture to be localized and add it into **Resources** folder. 
 
 ![Adding Resource Files in Blazor](images/localization-resource.png)
 
-> Update the localization files whenever you upgrade the Syncfusion NuGet packages in the application to avoid the issues occur due to localization strings.
+N> Update the localization files whenever you upgrade the Syncfusion NuGet packages in the application to avoid the issues occur due to localization strings.
 
 After adding the resource file in the application, double click default resx (`SfResources.resx`) file and open **Resource Editor**. In the Resource Editor, change **Access Modifier** option as **Public** to generate `designer.cs` file.
 
@@ -316,7 +316,7 @@ Set the current culture in a cookie immediately after opening <body> tag of `Pag
 }
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (_Host.cshtml)" hl_lines="6 7 8 9 10 11" %}
+{% highlight c# tabtitle=".NET 3.X, .NET 5 and .NET 7 (_Host.cshtml)" hl_lines="6 7 8 9 10 11" %}
 @using Microsoft.AspNetCore.Http
 @using Microsoft.AspNetCore.Localization
 @using System.Globalization
@@ -639,7 +639,7 @@ Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the c
 
 ![Dynamically set the culture in Blazor](images/blazor-localization-dynamic-change.png)
 
-> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-localization)
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-localization)
 
 ## Localization using database in Blazor
 

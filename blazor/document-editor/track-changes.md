@@ -57,7 +57,6 @@ The following example code illustrates how to enforce and stop protection in Doc
 <SfDocumentEditorContainer @ref="container" EnableToolbar=true></SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
     protected void protectDocument(object args)
     {
@@ -73,4 +72,4 @@ Tracked changes only protection can be enabled in UI by using [Restrict Editing 
 
 ![Enable track changes only protection](images/tracked-changes.png)
 
->Note: In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly |RevisionsOnly`. In stop protection method, parameter denotes the password.
+N> In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly |RevisionsOnly`. In stop protection method, parameter denotes the password.
