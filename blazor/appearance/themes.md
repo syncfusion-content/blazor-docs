@@ -210,10 +210,6 @@ Below table lists the importing theme path for the individual components.
         <td>@import 'blazor-themes/SCSS-Themes/navigations/accordion/{{THEME}}.scss'</td>
     </tr>
     <tr>
-        <td>Accumulation Chart</td>
-        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
         <td>AppBar</td>
         <td>@import 'blazor-themes/SCSS-Themes/navigations/appbar/{{THEME}}.scss'</td>
     </tr>
@@ -238,10 +234,6 @@ Below table lists the importing theme path for the individual components.
         <td>@import 'blazor-themes/SCSS-Themes/navigations/breadcrumb/{{THEME}}.scss'</td>
     </tr>
     <tr>
-        <td>Bullet Chart</td>
-        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
         <td>Button</td>
         <td>@import 'blazor-themes/SCSS-Themes/buttons/button/{{THEME}}.scss'</td>
     </tr>
@@ -262,20 +254,12 @@ Below table lists the importing theme path for the individual components.
         <td>@import 'blazor-themes/SCSS-Themes/navigations/carousel/{{THEME}}.scss'</td>
     </tr>
     <tr>
-        <td>Charts</td>
-        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
         <td>CheckBox</td>
         <td>@import 'blazor-themes/SCSS-Themes/buttons/check-box/{{THEME}}.scss'</td>
     </tr>
     <tr>
         <td>Chip</td>
         <td>@import 'blazor-themes/SCSS-Themes/buttons/chips/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
-        <td>Circular Gauge</td>
-        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
     </tr>
     <tr>
         <td>Color Picker</td>
@@ -350,10 +334,6 @@ Below table lists the importing theme path for the individual components.
         <td>@import 'blazor-themes/SCSS-Themes/gantt/gantt/{{THEME}}.scss'</td>
     </tr>
     <tr>
-        <td>HeatMap Chart</td>
-        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
         <td>In-place Editor</td>
         <td>@import 'blazor-themes/SCSS-Themes/inplace-editor/inplace-editor/{{THEME}}.scss'</td>
     </tr>
@@ -366,20 +346,12 @@ Below table lists the importing theme path for the individual components.
         <td>@import 'blazor-themes/SCSS-Themes/kanban/kanban/{{THEME}}.scss'</td>
     </tr>
     <tr>
-        <td>Linear Gauge</td>
-        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
         <td>ListBox</td>
         <td>@import 'blazor-themes/SCSS-Themes/dropdowns/list-box/{{THEME}}.scss'</td>
     </tr>
     <tr>
         <td>ListView</td>
         <td>@import 'blazor-themes/SCSS-Themes/lists/list-view/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
-        <td>Maps</td>
-        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
     </tr>
     <tr>
         <td>Menu Bar</td>
@@ -410,10 +382,6 @@ Below table lists the importing theme path for the individual components.
         <td>@import 'blazor-themes/SCSS-Themes/pivotview/pivotview/{{THEME}}.scss'</td>
     </tr>
     <tr>
-        <td>ProgressBar</td>
-        <td>@import 'blazor-themes/SCSS-Themes/splitbuttons/progress-button/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
         <td>ProgressButton</td>
         <td>@import 'blazor-themes/SCSS-Themes/splitbuttons/progress-button/{{THEME}}.scss'</td>
     </tr>
@@ -424,10 +392,6 @@ Below table lists the importing theme path for the individual components.
     <tr>
         <td>RadioButton</td>
         <td>@import 'blazor-themes/SCSS-Themes/buttons/radio-button/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
-        <td>Range Selector</td>
-        <td>@import 'blazor-themes/SCSS-Themes/inputs/slider/{{THEME}}.scss'</td>
     </tr>
     <tr>
         <td>Range Slider</td>
@@ -454,24 +418,12 @@ Below table lists the importing theme path for the individual components.
         <td>@import 'blazor-themes/SCSS-Themes/notification/skeleton/{{THEME}}.scss'</td>
     </tr>
     <tr>
-        <td>Smith Chart</td>
-        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
-        <td>Sparkline</td>
-        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
         <td>Speed Dial</td>
         <td>@import 'blazor-themes/SCSS-Themes/buttons/speed-dial/{{THEME}}.scss'</td>
     </tr>
     <tr>
         <td>Spinner</td>
         <td>@import 'blazor-themes/SCSS-Themes/popups/spinner/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
-        <td>Stock Chart</td>
-        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
     </tr>
     <tr>
         <td>Tabs</td>
@@ -504,10 +456,6 @@ Below table lists the importing theme path for the individual components.
     <tr>
         <td>TreeGrid</td>
         <td>@import 'blazor-themes/SCSS-Themes/treegrid/treegrid/{{THEME}}.scss'</td>
-    </tr>
-    <tr>
-        <td>TreeMap</td>
-        <td>@import 'blazor-themes/SCSS-Themes/{{THEME}}.scss'</td>
     </tr>
     <tr>
         <td>TreeView</td>
