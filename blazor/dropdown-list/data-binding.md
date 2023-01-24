@@ -344,7 +344,7 @@ Add the new item in the popup with the help of [AddItemsAsync](https://help.sync
 
 ### Getting datasource using instance
 
-To obtain the data source from a Syncfusion Blazor DropDownList component instance, you can use the `DataSource` property of the component. An example of how this can be done is when a button is clicked. In the example below, the DropDownList component is rendered with a list of objects as its data source. When the button is clicked, the `GetDataSource` method is called, which retrieves the data source by accessing the DataSource property of the DropDownList instance.
+To retrieve the data source from a Syncfusion Blazor DropDownList component, you can access the `DataSource` property of the component instance. An example of how this can be done is by binding the component to a list of objects as its data source and then, in the button click event, calling the `GetDataSource` method which in turn retrieves the data source by accessing the DataSource property of the DropDownList instance.
 
 {% highlight cshtml %}
 
