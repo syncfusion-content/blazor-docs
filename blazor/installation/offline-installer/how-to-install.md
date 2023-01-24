@@ -110,7 +110,7 @@ To install through the Command Line in Silent mode, follow the steps below.
 
 7. Essential Studio for Blazor is installed.
 
-N> x.x.x.x should be replaced with the Essential Studio version and the Product Unlock Key needs to be replaced with the Unlock Key for that version.
+   N> x.x.x.x should be replaced with the Essential Studio version and the Product Unlock Key needs to be replaced with the Unlock Key for that version.
 
 ## Command Line Uninstallation
 
