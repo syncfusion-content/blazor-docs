@@ -1,0 +1,35 @@
+@using Syncfusion.Blazor.DropDowns 
+
+<SfComboBox TValue="string" TItem="GameFields" PopupHeight="230px" Placeholder="Select a game" DataSource="@Games">
+    <ComboBoxFieldSettings Text="Name" Value="ID"></ComboBoxFieldSettings>
+</SfComboBox>
+
+@code {
+    public class GameFields
+    {
+        public string ID { get; set; }
+        public string FirstName  { get; set; }
+        public string LastName  { get; set; }
+
+
+        public string _Name;
+        public string  Name
+        {
+            get
+            {
+                _Name = $"{FirstName} {LastName}";
+                return _Name;
+            }
+            set
+            {
+                _Name = value;
+            }
+        }
+    }
+    private List<GameFields> Games = new List<GameFields>() {
+        new GameFields(){ ID= "Game1", LastName= "Olsen", FirstName="Hans" },
+        new GameFields(){ ID= "Game2", LastName= "Fuller", FirstName="Andrew" },
+        new GameFields(){ ID= "Game3", LastName= "Bond", FirstName="James" },
+     };
+
+} 
