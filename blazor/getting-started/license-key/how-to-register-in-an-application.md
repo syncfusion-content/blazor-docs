@@ -30,6 +30,22 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY
 
 {% tabs %}
 
+{% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="2 3" %}
+
+var app = builder.Build();
+//Register Syncfusion license
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+
+{% endhighlight %}
+
 {% highlight c# tabtitle=".NET 3.X & .NET 5 (~/Startup.cs)" hl_lines="4 5" %}
 
 // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,22 +79,6 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
 {% endhighlight %}
 
-{% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="2 3" %}
-
-var app = builder.Build();
-//Register Syncfusion license
-Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
-
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
-
-{% endhighlight %}
-
 {% endtabs %}
 
 ## Blazor WebAssembly App
@@ -87,40 +87,15 @@ Open **~/Program.cs** file and register the Syncfusion Blazor license key in the
 
 {% tabs %}
 
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 4" %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="3 4" %}
 
 public static async Task Main(string[] args)
 {
     // Register Syncfusion license
     Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
 
-    var builder = WebAssemblyHostBuilder.CreateDefault(args);
-    builder.RootComponents.Add<App>("#app");
-
-    await builder.Build().RunAsync();
-}
-
-{% endhighlight %}
-
-{% highlight c# tabtitle=".NET 3.X & .NET 5 (~/Program.cs)" hl_lines="7 8" %}
-
-namespace WebApplication
-{
-    public class Program
-    {
-        public static async Task Main(string[] args)
-        {
-            // Register Syncfusion license
-    Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
-
-            var builder = WebAssemblyHostBuilder.CreateDefault(args);
-            builder.RootComponents.Add<App>("#app");
-
-            builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-
-            await builder.Build().RunAsync();
-        }
-    }
+    ....
+    ....
 }
 
 {% endhighlight %}
