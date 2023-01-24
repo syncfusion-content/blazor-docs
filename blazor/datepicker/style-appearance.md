@@ -37,7 +37,7 @@ Use the following CSS to customize the DatePicker icon element
 
 ## Adding background color to DatePicker container element
 
-You can customize the background color of the DatePicker container element by setting the desired color value to the `background-color` property.
+You can customize the background color of the container element for the DatePicker by targeting its class, `input.e-input`, and setting the desired color to the `background-color` property.
 
 % highlight cshtml %}
 
