@@ -195,9 +195,9 @@ In the below code images are added under `images` folder in `wwwroot` folder.
 
    ![Enable developer mode in system settings](images/maui/enable-developer-mode.png)
    
-* How to solve "Attempting to JIT compile method while running in aot-only mode" console error while deploying an MAUI Blazor App on an iOS device?
+* How to solve "Attempting to JIT compile method '...' while running in aot-only mode" console error while deploying an MAUI Blazor App on an iOS device?
      
-    If you get this deployment issue on an iOS device, add the respective Syncfusion Blazor assembly to the MtouchExtraArgs tag for the iOS Release configuration in the project file as below,
+    [iOS apps built using .NET MAUI are fully ahead-of-time (AOT) compiled from C# into native ARM assembly code](https://learn.microsoft.com/en-us/answers/questions/849167/is-runtime-needed-to-be-installed-on-android-or-io). If you get this deployment issue on an iOS device, add the respective Syncfusion Blazor assembly to the MtouchExtraArgs tag for the iOS Release configuration in the project file as below,
 
  ```csproj
     <PropertyGroup Condition="$(TargetFramework.Contains('-ios')) And $(Configuration.Contains('Release')) ">
