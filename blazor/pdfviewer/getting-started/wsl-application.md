@@ -1,35 +1,39 @@
 ---
 layout: post
-title: Getting Started with PDF Viewer in Blazor WSL (Windows Subsystem for Linux) mode | Syncfusion
+title: Getting Started with PDF Viewer in Blazor WSL mode | Syncfusion
 description: Learn how to getting started with PDF Viewer control in Blazor WSL (Windows Subsystem for Linux) mode. 
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# Getting Started with Blazor PDF Viewer Component in WSL (Windows Subsystem for Linux) mode
+# Getting Started with Blazor PDF Viewer Component in WSL mode
 
 To run the Syncfusion Blazor PDF Viewer in WSL (Windows Subsystem for Linux) mode, you will need to take the following steps:
 
 **Step 1:** Enable the Windows Subsystem for Linux.
 
+![Create-new-blazor-wsl-app](GettingStarted_images/enable-wsl-mode.png)
+
 To enable the Windows Subsystem for Linux (WSL) on Windows, follow these steps:
 
-Open the Start menu and search for `Control Panel`.Click on `Programs`now click on `Turn Windows features on or off`scroll down and check the box next to `Windows Subsystem for Linux`. Click `OK` and restart your machine
+Open the Start menu and search for `Control Panel`.Click on `Programs` now click on `Turn Windows features on or off`scroll down and check the box next to `Windows Subsystem for Linux`. Click `OK` and restart your machine
 
-After your computer restarts, you will be able to install a Linux distribution from the Microsoft Store, such as Ubuntu, and run Linux commands directly in Windows.
+After your computer restarts, you will be able to install a Linux distribution from the Microsoft Store, such as ubuntu, and run Linux commands directly in Windows.
 
-**Step 2:** Install the `Ubuntu`
+**Step 2:** Install the `ubuntu`
 
-Ubuntu can be installed on a Windows 10 machine through the Microsoft Store. Here are the steps to do so:
+![Create-new-blazor-wsl-app](GettingStarted_images/ubuntu-install.png)
 
-Open the Microsoft Store on your Windows 10 machine, Search for `Ubuntu` in the store. Select `Ubuntu` from the search results and click `Get` to begin the installation.
+ubuntu can be installed on a Windows 10 machine through the Microsoft Store. Here are the steps to do so:
 
-Once the installation is complete, open the Windows Terminal application. In the terminal, type `ubuntu` and press enter. This will launch the Ubuntu terminal inside of Windows.
+Open the Microsoft Store on your Windows 10 machine, Search for `ubuntu` in the store. Select `ubuntu` from the search results and click `Get` to begin the installation.
 
-And create a new user with a username and password on Ubuntu
+Once the installation is complete, open the Windows Terminal application. In the terminal, type `ubuntu` and press enter. This will launch the `ubuntu terminal inside of Windows.
 
-**Step 3:** Install the dotnet framework for running the WSL in the project use the following code one by one to install the net6.0 dotnet sdk.
+And create a new user with a username and password on ubuntu
+
+**Step 3:** Install the dotnet framework for running the WSL (Windows Subsystem for Linux) in the project use the following code one by one to install the net6.0 dotnet sdk.
 
 ```
     wget https://packages.microsoft.com/config/ubuntu/22.10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
@@ -44,7 +48,8 @@ And create a new user with a username and password on Ubuntu
 ```
 
 Check the comment dotnet –info and it should come like below
-![](.png)
+
+![Create-new-blazor-wsl-app](dotnet-info.png)
 
 If the above result is not shown, Please run the comments below or follow the steps in the link below to uninstall and reinstall dotnet. 
 ```
@@ -66,17 +71,16 @@ If the above result is not shown, Please run the comments below or follow the st
 N> Facing any issue while running in WSL mode use the following instruction to resolve the issue.
 
 Sample does not load the PDF file and throws an exception like below in console window. 
-![](.png)
 
-Use the following codes to install the dependance need for our Blazor PDF Viewer run to fix the issue.
+Use the following codes to install the dependence need for our Blazor PDF Viewer run to fix the issue.
 
-Open the Ubuntu comment window and type the following comments.
+Open the ubuntu comment window and type the following comments.
 
 ```
     sudo cp -u /lib/x86_64-linux-gnu/libdl.so.2 /lib/x86_64-linux-gnu/libdl.so
 ```
-In Blazor PDF Viewer uses libdl.so. It’s a different name in different WSL Linux versions. Need to check its presence in the \\wsl.localhost\Ubuntu\usr\lib\x86_64-linux-gnu location like below.
-![](.png)
+In Blazor PDF Viewer uses libdl.so. It’s a different name in different WSL Linux versions. Need to check its presence in the 
+\wsl.localhost\Ubuntu\usr\lib\x86_64-linux-gnu location like below.
 
 If it’s in different name like libdl.so.4 then change the comment like below.
 
@@ -84,7 +88,7 @@ If it’s in different name like libdl.so.4 then change the comment like below.
 sudo cp -u /lib/x86_64-linux-gnu/libdl.so.4 /lib/x86_64-linux-gnu/libdl.so
 ```
 
-Then run the following comment one by one in the Ubuntu command window to install all necessary Blazor PDF Viewer dependencies for a run in Linux.
+Then run the following comment one by one in the ubuntu command window to install all necessary Blazor PDF Viewer dependencies for a run in Linux.
 
 ```
 
