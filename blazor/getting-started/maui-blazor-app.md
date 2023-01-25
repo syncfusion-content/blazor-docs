@@ -183,28 +183,39 @@ In the below code images are added under `images` folder in `wwwroot` folder.
 
 ## Troubleshooting
 
-* How to solve "The project doesn't know how to run the profile Windows Machine" while running MAUI Blazor App?
+### How to solve deployment errors in Windows?
+
+If you get error dialog like "There were deployment errors", Enable developer mode. For more details refer [Enable your device for development](https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development).
+
+![Enable developer mode in system settings](images/maui/enable-developer-mode.png)
+  
+<hr/> 
+
+### How to solve deployment errors in iOS?
+
+In iOS code is statically compiled ahead of time, so, configure Syncfusion Blazor assemblies in `MtouchExtraArgs` tag for the iOS Release configuration in the project when deploy on a read device. 
+
+Below are possible errors if `MtouchExtraArgs` tag is not cofigured,
+1. The won't load on read device with error "An unhandled error has occured" after you compile in Release mode with Visual Studio and deploy to real device.
+2. AOT related failures like `[Attempting to JIT compile method while running in aot-only mode](https://github.com/xamarin/xamarin-macios/issues/12416)`
+
+ ```
+<PropertyGroup Condition="$(TargetFramework.Contains('-ios')) And $(Configuration.Contains('Release')) ">
+  <UseInterpreter>true</UseInterpreter>
+  <MtouchExtraArgs>--linkskip=Syncfusion.Blazor.Themes --linkskip=Syncfusion.Blazor.Inputs</MtouchExtraArgs>
+</PropertyGroup>
+ ```
+ 
+Reference:
+* [Could not AOT the assembly of my App](https://learn.microsoft.com/en-us/answers/questions/396055/could-not-aot-the-assembly-of-my-app)
+
+<hr/>
+
+### How to solve "The project doesn't know how to run the profile Windows Machine" while running MAUI Blazor App?
 
     * This issue has been fixed in most recent release of Visual Studio. For more details refer [here](https://developercommunity.visualstudio.com/t/the-project-doesnt-know-how-to-run-the-profile-win/1530395)
     
     * You can also fix this error by installing [Single-project MSIX Packaging Tools](https://marketplace.visualstudio.com/items?itemName=ProjectReunion.MicrosoftSingleProjectMSIXPackagingToolsDev17).
-
-* How to solve deployment errors?
-
-    If you get error dialog like "There were deployment errors", Enable developer mode. For more details refer [Enable your device for development](https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development).
-
-   ![Enable developer mode in system settings](images/maui/enable-developer-mode.png)
-   
-* How to solve "Attempting to JIT compile method '...' while running in aot-only mode" console error while deploying an MAUI Blazor App on an iOS device?
-     
-    [iOS apps built using .NET MAUI are fully ahead-of-time (AOT) compiled from C# into native ARM assembly code](https://learn.microsoft.com/en-us/answers/questions/849167/is-runtime-needed-to-be-installed-on-android-or-io). If you get this deployment issue on an iOS device, add the respective Syncfusion Blazor assembly to the MtouchExtraArgs tag for the iOS Release configuration in the project file as below,
-
- ```csproj
-    <PropertyGroup Condition="$(TargetFramework.Contains('-ios')) And $(Configuration.Contains('Release')) ">
-                <UseInterpreter>true</UseInterpreter>
-                <MtouchExtraArgs>--linkskip=Syncfusion.Blazor.Inputs</MtouchExtraArgs>
-    </PropertyGroup>
- ```
 
 ## See also
 
