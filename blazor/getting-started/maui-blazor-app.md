@@ -195,8 +195,8 @@ If you get error dialog like "There were deployment errors", Enable developer mo
 
 In iOS code is statically compiled ahead of time, so, configure Syncfusion Blazor assemblies in `MtouchExtraArgs` tag for the iOS Release configuration in the project when deploy on a read device. 
 
-Below are possible errors if `MtouchExtraArgs` tag is not cofigured,
-1. The won't load on read device with error "An unhandled error has occured" after you compile in Release mode with Visual Studio and deploy to real device.
+Below are possible errors if `MtouchExtraArgs` tag is not configured,
+1. The won't load on read device with error "An unhandled error has occurred" after you compile in Release mode with Visual Studio and deploy to real device.
 2. AOT related failures like `[Attempting to JIT compile method while running in aot-only mode](https://github.com/xamarin/xamarin-macios/issues/12416)`
 
  ```
