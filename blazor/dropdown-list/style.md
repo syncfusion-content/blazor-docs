@@ -201,6 +201,20 @@ The following code demonstrates how to display a tooltip when hovering over the 
 
 ![Blazor DropDownList with tooltip](./images/style/blazor-dropdownlist-tooltip.png)
 
+### Tooltip using HTMLAttribute in dropdown component
+
+To display the tooltip in the dropdown component not for individual popup items, add the `Title` attribute through the [HTMLAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_HtmlAttributes) property. This updates the attribute on the root input element.
+
+In the following example, the `HtmlAttributes` property is used to add the title attribute to the root input element of the DropDownList with the value `DropDownList Component`. This will display a tooltip with the text `DropDownList Component` when the user hovers over the input element.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/default-tooltip.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with tooltip](./images/style/blazor_dropdown_default-tooltip.png)
+
 ## Customize selected item opacity
 
 Set the opacity to the selected item using the following selector.
@@ -269,6 +283,70 @@ In the following code, a single list Item is hidden using jsinterop.
 {% endtabs %}
 
 ![Blazor DropDownList with Popup Width](./images/style/blazor_dropdown_disable-listitem.png)
+
+## Adding conditional HTML attribute to list item
+
+This is achieved by adding attributes to the li items based on the data source value with the help of the JSInterop. In the [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Opened) event, call the client-side script by passing the required arguments (data source and id) and adding the attributes based on the data source value obtained from the server.
+
+In the following example, the `Opened` event is used to call the `AddAttribute` method when the DropDownList is opened. The `AddAttribute` method gets the data source from the component instance and calls a JavaScript function using the JavaScript Interop. The JavaScript function receives the data source and the ID of the DropDownList as arguments, and adds the attributes to the li elements based on the data source values.
+
+% highlight cshtml %}
+
+{% include_relative code-snippet/style/add-attribute-listitem.razor %}
+
+{% endhighlight %}
+
+{% tabs %}
+{% highlight razor tabtitle="~/_Layout.cshtml" %}
+
+    <script> 
+        function AddAttribute(datasource, id) { 
+            setTimeout(() => { 
+                //Here, the popup element is uniquely identified with an id 
+                //Classes added via CssClass property will be added to the popup element also. 
+                //You can also uniquely identify the popup element with the help of the added classes. 
+                console.log(document.getElementById(id + "_popup")); 
+                var listItems = document.getElementById(id + "_popup").querySelectorAll('li'); 
+                for (var i = 0; i < listItems.length; i++) { 
+                    listItems[i].setAttribute(Object.keys(datasource[i])[2], datasource[i].isAvailable) 
+                } 
+            }, 100) 
+ 
+        } 
+    </script>
+
+{% endhighlight %}
+{% endtabs %}
+
+![Adding attribute to listitem in dropdown list](./images/style/blazor_dropdown_add-attribute-listitem.png)
+
+## Displaying dropdown List in Tab
+
+The DropDownList component can be used within a tab view to enable users to select an option from a list. This can be achieved by placing the DropDownList within the SfTab component. Each tab includes a DropDownList that allows the user to choose from a list of options.
+
+In the following example, the SfTab component is used to display a tab view with three tab items. Each tab item contains a DropDownList component with a different data source. When the user selects a different tab, the corresponding DropDownList is displayed.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/dropdown-in-tabview.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with tooltip](./images/style/blazor_dropdown-in-tabview.png)
+
+## Dropdownlist inside Dialog
+
+A modal dialog box that contains a dropdown list can be created to allow users to select an option from the list. This can be achieved by placing the dropdown list within an SfDialog component. The dialog box is opened when the user clicks the "Open Modal Dialog" button, and the dropdown list is present inside the dialog box. The dialog box is closed when the user clicks outside of the dialog box.
+
+In the following example, the SfDialog component is used to display a dialog popup with a DropDownList component inside the dialog content. When the user clicks the `Open Dialog` button, the dialog is displayed.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/dropdown-inside-dialog.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with tooltip](./images/style/blazor_dropdown_inside-dialog.gif)
 
 ## Properties
 
