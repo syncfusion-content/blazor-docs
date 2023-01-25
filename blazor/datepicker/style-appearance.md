@@ -39,11 +39,13 @@ Use the following CSS to customize the DatePicker icon element
 
 You can customize the background color of the container element for the DatePicker by targeting its CSS class, `input.e-input`, and setting the desired color to the `background-color` property.
 
-% highlight cshtml %}
+{% tabs %}
+{% highlight razor %}
 
 {% include_relative code-snippet/background-color.razor %}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![DatePicker with background color](./images/blazor-datepicker-background_color.png)
 
@@ -53,11 +55,13 @@ You can customize the background color of the container element for the DatePick
 
 We can render the full screen calendar popup in mobile device(s) by adding `e-popup-expand` class to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerModel.html#Syncfusion_Blazor_Calendars_DatePickerModel_CssClass) property of DatePicker component, Which supports both landscape and portrait orientations.
 
-{% highlight cshtml tabtitle="Index.razor" %}
+{% tabs %}
+{% highlight razor %}
 
 {% include_relative code-snippet/full-screen-popup.razor %}
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Landscape Mode](./images/blazor-datepicker-fullscreen-mode-landscape.gif)
 
