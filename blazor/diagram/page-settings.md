@@ -296,3 +296,32 @@ The following code example illustrates how to set width and height in percentage
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings)
+
+## CallBack Methods
+
+* BackgroundChanged : Specifies the callback to trigger when the Background value changes.
+* BoundaryConstraintsChanged : Specifies the callback to trigger when the BoundaryConstraints value changes.
+* HeightChanged : Specifies the callback to trigger when the height value changes.
+* MarginChanged : Specifies the callback to trigger when the Margin value changes.
+* MultiplePageChanged :Specifies the callback to trigger when the MultiplePage value changes.
+* OrientationChanged : Specifies the callback to trigger when the Orientation value changes.
+* ShowPageBreaksChanged : Specifies the callback to trigger when the ShowPageBreaks value changes.
+* WidthChanged : Specifies the callback to trigger when the width value changes.
+
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px">
+    @* Sets the ScrollLimit of scroll settings *@
+     <PageSettings BackgroundChanged="OnBackgroundChanged"></PageSettings>
+</SfDiagramComponent>
+
+@code
+{
+    private void OnBackgroundChanged()
+    {
+        // Enter your code
+    }
+}
+```

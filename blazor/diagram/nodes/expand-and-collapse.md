@@ -568,3 +568,105 @@ The following table shows the relationship between the Icon position and Icon Of
 | (1,0) | ![Blazor Diagram Port in Right Top Offset Values](../images/blazor-diagram-DiagramIcon-in-righttop-offset-values.png) |
 | (1,0.5) | ![Blazor Diagram Port in Right Center Offset Values](../images/blazor-diagram-DiagramIcon-in-rightcenter-offset-values.png) |
 | (1,1) | ![Blazor Diagram Port in Right Bottom Offset Values](../images/blazor-diagram-DiagramIcon-in-rightbottom-offset-values.png) |
+
+
+### How to find node is in expanded or not 
+
+[IsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_IsExpanded) is used to defines whether the node is expanded or not. The following example demonstrate node's isexpanded property. The default value of IsExpanded property is true.
+
+```csharp
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" />
+
+@code
+{
+     DiagramObjectCollection<Node> nodes= new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> connectors= new DiagramObjectCollection<Connector>();
+
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 300,
+             IsExpanded = false,
+            Style = new ShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation()
+                {
+                    Content="Node1"
+                }
+            },
+            ExpandIcon = new DiagramExpandIcon()
+            {
+                Shape = DiagramExpandIcons.Minus,
+                Height = 20,
+                Width = 20,
+                Fill = "Gray",
+                BorderColor = "Blue", 
+                BorderWidth = 3,
+            },
+            CollapseIcon = new DiagramCollapseIcon()
+            {
+                Shape = DiagramCollapseIcons.Plus,
+                Height = 20,
+                Width = 20,
+                Fill = "Gray",
+                BorderColor = "Blue", 
+                BorderWidth = 3,
+            },
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 500,
+            Style = new ShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
+             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation()
+                {
+                    Content="Node2"
+                }
+            },
+            ExpandIcon = new DiagramExpandIcon()
+            {
+                Shape = DiagramExpandIcons.Minus,
+                Height = 20,
+                Width = 20,
+            },
+            CollapseIcon = new DiagramCollapseIcon()
+            {
+                Shape = DiagramCollapseIcons.Plus,
+                Height = 20,
+                Width = 20,
+            },
+        };
+        nodes.Add(node2);
+        Connector connector1 = new Connector()
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetID = "node2",
+        };
+        connectors.Add(connector1);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse)

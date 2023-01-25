@@ -68,6 +68,7 @@ To add a connection port, define the port object and add it to node’s ports co
 }
 ```
 >**Note:** Do not use underscore(_) for port's id.
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)
 
 ![Creating Port in Blazor Diagram](../images/blazor-diagram-create-port.png)
@@ -340,6 +341,110 @@ protected override void OnInitialized()
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)
+
+
+## How to get Inedges and OutEdges of Ports
+
+[InEdges](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_InEdges) is used to get the incoming connectors of the port that are connected to the port. [OutEdges](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_OutEdges) is used to get the outgoing connectors of the port that are connected to the port.
+
+The following code example how to get inedges and outedges of port.
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<input type="button" value="GetInEdges" @onclick="@GetInEdges">
+<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" />
+
+@code
+{
+     DiagramObjectCollection<Node> nodes= new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> connectors= new DiagramObjectCollection<Connector>();
+
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 300,
+             // Initialize port collection.
+            Ports = new DiagramObjectCollection<PointPort>()
+            {
+                new PointPort()
+                {
+                    ID = "port1",
+                    Offset = new DiagramPoint() { X = 0, Y = 0.5 },
+                    Visibility = PortVisibility.Visible,
+                    //Set the style for the port.
+                    Style= new ShapeStyle()
+                    { 
+                        Fill = "red",
+                        StrokeColor = "black", 
+                        StrokeWidth = 2
+                    },
+                    Width = 12, 
+                    Height = 12,
+                    // Sets the shape of the port as Circle .
+                    Shape = PortShapes.Circle
+                }
+            },
+            
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 500,
+             // Initialize port collection.
+            Ports = new DiagramObjectCollection<PointPort>()
+            {
+                new PointPort()
+                {
+                    ID = "port1",
+                    Offset = new DiagramPoint() { X = 0, Y = 0.5 },
+                    Visibility = PortVisibility.Visible,
+                    //Set the style for the port.
+                    Style= new ShapeStyle()
+                    { 
+                        Fill = "red",
+                        StrokeColor = "black", 
+                        StrokeWidth = 2
+                    },
+                    Width = 12, 
+                    Height = 12,
+                    // Sets the shape of the port as Circle .
+                    Shape = PortShapes.Circle
+                }
+            },
+        };
+        nodes.Add(node2);
+        Connector connector1 = new Connector()
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            SourcePortID="port1",
+            TargetPortID="port1",
+            TargetID = "node2",
+        };
+        connectors.Add(connector1);
+    }
+    private void GetInEdges()
+    {
+        List<Connector> Inedges= new List<Connector>();
+        foreach (string inedge in diagram.Nodes[1].Ports[0].InEdges)
+        {
+            Inedges.Add(inedge);
+        }
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)
+
+
 
 ## See also
 

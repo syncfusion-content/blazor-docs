@@ -687,6 +687,105 @@ The following code illustrates how to set the HitPadding for the connector.
 }
 ```
 
+## How to set SourcePadding and TargetPadding for connector
+
+* The [SourcePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourcePadding) property of connector defines space between the source point and the source node of the connector.
+
+* The [TargetPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetPadding) property of connector defines space between the end point and the target node of the connector.
+
+The following code example illustrates how to leave space between the connection end points and source and target nodes.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" />
+
+@code
+{
+     DiagramObjectCollection<Node> nodes= new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> connectors= new DiagramObjectCollection<Connector>();
+
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 300,
+            
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 500,
+        };
+        nodes.Add(node2);
+        Connector connector1 = new Connector()
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetID = "node2",
+            TargetPadding = 10,
+             SourcePadding = 10,
+        };
+        connectors.Add(connector1);
+    }
+}
+```
+## How to set ConnectionPadding for connector
+
+* The [ConnectionPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_ConnectionPadding) property of connector defines connection padding value of the connector.
+
+The following code example illustrates how to set connection padding value for connector.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" />
+
+@code
+{
+     DiagramObjectCollection<Node> nodes= new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> connectors= new DiagramObjectCollection<Connector>();
+
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 300,
+            
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 500,
+        };
+        nodes.Add(node2);
+        Connector connector1 = new Connector()
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetID = "node2",
+           ConnectionPadding = 50,
+        };
+        connectors.Add(connector1);
+    }
+}
+```
 ## See also
 
 * [How to interact with the connector](./interactions)

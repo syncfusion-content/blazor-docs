@@ -94,7 +94,7 @@ The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
                     Width="100%"
                     Height="700px"
                     Nodes="nodes"
-                    PropertyChanged="OnPropertyChanged>
+                    PropertyChanged="OnPropertyChanged"
 </SfDiagramComponent>
 
 @code{
@@ -136,7 +136,7 @@ The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
                     Width="100%"
                     Height="700px"
                     Nodes="nodes"
-                    CollectionChanged="OnCollectionChanged>
+                    CollectionChanged="OnCollectionChanged">
 </SfDiagramComponent>
 
 @code{
@@ -349,6 +349,7 @@ The [KeyUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Diagram.SymbolPalette
 @using System.Collections.ObjectModel
 
 <SfDiagramComponent @ref="@Diagram"
@@ -357,7 +358,7 @@ The [KeyUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
                     Nodes="nodes"
                     DragStart="DragStart">
 </SfDiagramComponent>
-<SfSymbolPaletteComponent Height="600px" Palettes="@Palettes" SymbolDragPreviewSize="@SymbolPreview" SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
+<SfSymbolPaletteComponent Height="600px" Palettes="@Palettes"  SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
 </SfSymbolPaletteComponent >
 @code{
     SfDiagramComponent Diagram;
@@ -372,16 +373,11 @@ The [KeyUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
           }
     protected override void OnInitialized()
     {
-             SymbolPreview = new DiagramSize();
-             SymbolPreview.Width = 80;
-             SymbolPreview.Height = 80;
-             symbolSizeWidth = 50;
-             symbolSizeHeight = 50;
              TNodes = new DiagramObjectCollection<NodeBase>();
              Node TNode2 = new Node()
              { 
                  ID = "node1", 
-                 Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = FlowShapeType.Decision } 
+                 Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.Decision } 
              };
             TNodes.Add(TNode2);
             Palettes = new DiagramObjectCollection<Palette>()
@@ -404,6 +400,7 @@ The [KeyUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Diagram.SymbolPalette
 @using System.Collections.ObjectModel
 
 <SfDiagramComponent @ref="@Diagram"
@@ -412,7 +409,7 @@ The [KeyUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
                     Nodes="nodes"
                     Dragging="Dragging">
 </SfDiagramComponent>
-<SfSymbolPaletteComponent Height="600px" Palettes="@Palettes" SymbolDragPreviewSize="@SymbolPreview" SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
+<SfSymbolPaletteComponent Height="600px" Palettes="@Palettes"  SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
 </SfSymbolPaletteComponent >
 @code{
     SfDiagramComponent Diagram;
@@ -427,16 +424,11 @@ The [KeyUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
           }
     protected override void OnInitialized()
     {
-             SymbolPreview = new DiagramSize();
-             SymbolPreview.Width = 80;
-             SymbolPreview.Height = 80;
-             symbolSizeWidth = 50;
-             symbolSizeHeight = 50;
              TNodes = new DiagramObjectCollection<NodeBase>();
              Node TNode2 = new Node()
              { 
                  ID = "node1", 
-                 Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = FlowShapeType.Decision } 
+                 Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.Decision } 
              };
             TNodes.Add(TNode2);
             Palettes = new DiagramObjectCollection<Palette>()
@@ -464,7 +456,7 @@ The [KeyUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
                     Width="100%"
                     Height="700px"
                     Nodes="nodes"
-                    Dragging="DragLeave">
+                    DragLeave="OnDragLeave">
 </SfDiagramComponent>
 <SfSymbolPaletteComponent Height="600px" Palettes="@Palettes" SymbolDragPreviewSize="@SymbolPreview" SymbolHeight="40" GetSymbolInfo="GetSymbolInfo" SymbolWidth="40" >
 </SfSymbolPaletteComponent >

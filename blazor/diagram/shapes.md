@@ -500,3 +500,4 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ![SVG Node in Blazor Diagram](images/blazor-diagram-svg-node.png)
 
 N> Like HTML node, the SVG node also cannot be exported to image format. Fill color of SVG node can be overridden by the inline style or fill of the SVG element specified in the template.
+

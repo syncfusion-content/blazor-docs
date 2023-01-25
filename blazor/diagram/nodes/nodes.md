@@ -59,6 +59,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ![Adding Node from Node Collection in Blazor Diagram](../images/blazor-diagram-add-node-from-collection.png)
 
 >**Note:** Do not use underscore(_) for node's id.
+
 ## Add nodes at runtime
 
 You can add a Node at runtime by adding it to the nodes collection of the Diagram component. The following code explains how to add a node at runtime.
