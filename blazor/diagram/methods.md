@@ -438,7 +438,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
-### How to get pagebounds of the diagram
+### How to get page bounds of the diagram
   The [GetPageBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetPageBounds_System_Nullable_System_Double__System_Nullable_System_Double__) is used to get the bounds of the page. You can get page width and page height values etc.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -1075,7 +1075,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
  You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods)
 
  ### How to Zoom and Pan the diagram
- [Zoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Zoom_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) allows to user to zoomin and zoomout the diagram. [Pan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Pan_System_Double_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) is used to pan the diagram to the horizontal and vertical offset.
+ [Zoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Zoom_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) allows to user to zoom in and zoom out the diagram. [Pan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Pan_System_Double_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) is used to pan the diagram to the horizontal and vertical offset.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

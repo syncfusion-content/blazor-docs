@@ -702,7 +702,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * The node's [CanAutoLayout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_CanAutoLayout) value indicates whether the node should be automatically positioned or not. Applicable if the layout option is enabled.
 
 
-The following code illustrates how to set the canautolayout property for the node.
+The following code illustrates how to set the can auto layout property for the node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -837,7 +837,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * The node's [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Data) returns the record of the data source as data. Each record on the data source represents a node in an automatic layout.
 
 
-The following code illustrates how to get datasourcesettings details.
+The following code illustrates how to get data source settings details.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

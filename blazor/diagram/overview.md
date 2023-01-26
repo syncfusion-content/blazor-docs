@@ -24,7 +24,7 @@ documentation: ug
 * Commands: Frequently used commands like delete, connect, and duplicate can be shown as buttons near a selector. This makes it easy for users to quickly perform those operations instead of searching for the correct buttons in a toolbox.
 * Keyboard Shortcuts: Allows you to trigger the diagramming features using keyboard shortcuts.
 * Clipboard Operations: Ability to cut, copy, and paste or duplicate selected Diagram elements within and across diagrams.
-* Automatic Layouts: Built-in automatic nodes arrangement support for organization chart layout, mindmap layout, hierarchical tree layout, and complexhierarchical layout.
+* Automatic Layouts: Built-in automatic nodes arrangement support for organization chart layout, mind map layout, hierarchical tree layout, and complex hierarchical layout.
 * Serialization: Save the Blazor diagram state in JSON format and load it back later for further editing using the serializer.
 * Symbol palette: Includes a gallery of stencils, reusable symbols, and nodes that can be dragged onto the surface of a Blazor diagram.
 * Overview control: Displays a small preview of the full diagram page, which allows you to improve the navigation.

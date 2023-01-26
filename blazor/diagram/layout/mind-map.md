@@ -158,7 +158,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Mind Map Diagram with Branches](../images/blazor-mind-map-diagram-with-branches.png)
 
-Also, you can render a minimap layout without using Datasource. The following code demonstrates how to render a mindmap layout without using DataSource.
+Also, you can render a mind map layout without using Datasource. The following code demonstrates how to render a mind map layout without using DataSource.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
