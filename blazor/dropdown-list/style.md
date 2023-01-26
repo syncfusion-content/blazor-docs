@@ -259,17 +259,16 @@ Prevent some items in the popup list from selecting. This can be achieved by dis
 
 In the following code, a single list Item is hidden using jsinterop.
 
-{% highlight cshtml %}
+{% tabs %}
+{% highlight razor %}
 
 {% include_relative code-snippet/style/disable-listitem.razor %}
 
 {% endhighlight %}
+{% highlight cshtml tabtitle="~/_Layout.cshtml" %}
 
-{% tabs %}
-{% highlight razor tabtitle="~/_Layout.cshtml" %}
-
- <script>
-        window.disable = function (id) { 
+<script>
+    window.disable = function (id) { 
     setTimeout(function (e) { 
         var liCollections = document.querySelectorAll('.e-popup.e-custom-class .e-list-item') 
         if (liCollections && liCollections.length > 0) 
@@ -290,33 +289,33 @@ This is achieved by adding attributes to the li items based on the data source v
 
 In the following example, the `Opened` event is used to call the `AddAttribute` method when the DropDownList is opened. The `AddAttribute` method gets the data source from the component instance and calls a JavaScript function using the JavaScript Interop. The JavaScript function receives the data source and the ID of the DropDownList as arguments, and adds the attributes to the li elements based on the data source values.
 
-% highlight cshtml %}
+{% tabs %}
+{% highlight razor %}
 
 {% include_relative code-snippet/style/add-attribute-listitem.razor %}
 
 {% endhighlight %}
+{% highlight cshtml tabtitle="~/_Layout.cshtml" %}
 
-{% tabs %}
-{% highlight razor tabtitle="~/_Layout.cshtml" %}
+<script> 
+    function AddAttribute(datasource, id) { 
+        setTimeout(() => { 
+            //Here, the popup element is uniquely identified with an id 
+            //Classes added via CssClass property will be added to the popup element also. 
+            //You can also uniquely identify the popup element with the help of the added classes. 
+            console.log(document.getElementById(id + "_popup")); 
+            var listItems = document.getElementById(id + "_popup").querySelectorAll('li'); 
+            for (var i = 0; i < listItems.length; i++) { 
+                listItems[i].setAttribute(Object.keys(datasource[i])[2], datasource[i].isAvailable) 
+            } 
+        }, 100) 
 
-    <script> 
-        function AddAttribute(datasource, id) { 
-            setTimeout(() => { 
-                //Here, the popup element is uniquely identified with an id 
-                //Classes added via CssClass property will be added to the popup element also. 
-                //You can also uniquely identify the popup element with the help of the added classes. 
-                console.log(document.getElementById(id + "_popup")); 
-                var listItems = document.getElementById(id + "_popup").querySelectorAll('li'); 
-                for (var i = 0; i < listItems.length; i++) { 
-                    listItems[i].setAttribute(Object.keys(datasource[i])[2], datasource[i].isAvailable) 
-                } 
-            }, 100) 
- 
-        } 
-    </script>
+    } 
+</script>
 
 {% endhighlight %}
 {% endtabs %}
+
 
 ![Adding attribute to listitem in dropdown list](./images/style/blazor_dropdown_add-attribute-listitem.png)
 
