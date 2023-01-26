@@ -352,10 +352,11 @@ The following code example how to get inedges and outedges of port.
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="GetInEdges" @onclick="@GetInEdges">
-<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" />
+<SfDiagramComponent @ref="diagram" Height="600px" Nodes="@nodes" Connectors="@connectors" />
 
 @code
 {
+    SfDiagramComponent diagram;
      DiagramObjectCollection<Node> nodes= new DiagramObjectCollection<Node>();
     DiagramObjectCollection<Connector> connectors= new DiagramObjectCollection<Connector>();
 

@@ -690,13 +690,6 @@ The following code illustrates how to set the background color for the node.
             Width = 100,
             Height = 100,
              BackgroundColor = "red",
-            Style = new ShapeStyle() 
-            { 
-                Fill = "#6495ED", 
-                StrokeColor = "white" 
-            },
-            // Pivot of the node.
-            Pivot = new DiagramPoint() { X = 0, Y = 0 }
         };
         nodes.Add(node);
     }
@@ -790,10 +783,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="GetInEdges" @onclick="@GetInEdges">
-<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" />
+<SfDiagramComponent @ref="diagram" Height="600px" Nodes="@nodes" Connectors="@connectors" />
 
 @code
 {
+    SfDiagramComponent diagram;
      DiagramObjectCollection<Node> nodes= new DiagramObjectCollection<Node>();
     DiagramObjectCollection<Connector> connectors= new DiagramObjectCollection<Connector>();
 
@@ -828,7 +822,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
     private void GetInEdges()
     {
-        List<Connector> Inedges= new List<Connector>();
+        List<string> Inedges= new List<string>();
         foreach (string inedge in diagram.Nodes[1].InEdges)
         {
             Inedges.Add(inedge);

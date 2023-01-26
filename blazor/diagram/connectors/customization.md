@@ -640,9 +640,9 @@ The following code illustrates how to render connector based on the stack order.
             SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
             TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
             // Type of the connector segments.
-            Type = ConnectorSegmentType.Straight
+            Type = ConnectorSegmentType.Straight,
             //Define the ZIndex property.
-            ZIndex = -2;
+            ZIndex = -2,
         };
         connectors.Add(Connector);
     }
