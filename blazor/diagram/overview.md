@@ -12,7 +12,7 @@ documentation: ug
 
  ![SfDiagramComponent Overview](../images/flowchart.png)
 
-# Key features of SfDiagram are as follows:
+## Key features of SfDiagram are as follows:
 
 * Flowchart: The Blazor Diagram component provides all the standard flowchart shapes as ready-made objects, making it is easy to add them to a diagram surface in a single call.
 * Built-in Shapes: Provided built-in shapes such as basic and flow shapes.
