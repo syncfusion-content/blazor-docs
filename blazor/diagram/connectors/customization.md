@@ -689,11 +689,11 @@ The following code illustrates how to set the HitPadding for the connector.
 
 ## How to set SourcePadding and TargetPadding for connector
 
-* The [SourcePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourcePadding) property of connector defines space between the source point and the source node of the connector.
+* The [SourcePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourcePadding) property of the connector defines space between the source point and the source node of the connector.
 
-* The [TargetPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetPadding) property of connector defines space between the end point and the target node of the connector.
+* The [TargetPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetPadding) property of the connector defines space between the endpoint and the target node of the connector.
 
-The following code example illustrates how to leave space between the connection end points and source and target nodes.
+The following code example illustrates how to leave space between the connection endpoints and source and target nodes.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -740,9 +740,9 @@ The following code example illustrates how to leave space between the connection
 ```
 ## How to set ConnectionPadding for connector
 
-* The [ConnectionPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_ConnectionPadding) property of connector defines connection padding value of the connector.
+* The [ConnectionPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_ConnectionPadding) property of the connector defines the connection padding value of the connector.
 
-The following code example illustrates how to set connection padding value for connector.
+The following code example illustrates how to set the connection padding value for the connector.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

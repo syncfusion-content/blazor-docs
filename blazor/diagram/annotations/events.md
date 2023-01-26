@@ -11,7 +11,7 @@ documentation: ug
 
 ## Text Change event
 
-* While editing the node's or connector's annotation, The following event can be used to do the customization.
+* While editing the node's or connector's annotation, the following event can be used to do the customization.
 * When the node's or connector's annotation is changed in the diagram, this event is getting triggered. 
 
 |Event Name|Arguments|Description|
@@ -19,7 +19,7 @@ documentation: ug
 |[TextChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_TextChanged)|[TextChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextChangeEventArgs.html)|Triggers when the node’s/connector's label is changed in the diagram.|
 |[TextChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_TargetPointChanging)|[TextChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextChangeEventArgs.html)|An event that is raised when the node and connector's label is changing in the diagram.|
 
-The following code example shows how to register and get the notification from the TextChanged and TextChanging event.
+The following code example shows how to register and get notifications from the TextChanged and TextChanging events.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -30,7 +30,7 @@ The following code example shows how to register and get the notification from t
 {
     // Defines diagram's nodes collection.
     DiagramObjectCollection<Node> nodes;
-   // Triggered when the node and connector's label is changing in the diagram
+  // Triggered when the node and connector's labels change in the diagram.
     private void OnLabelTextChanging(TextChangeEventArgs args)
    {
       args.Cancel = true;

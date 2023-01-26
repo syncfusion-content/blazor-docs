@@ -499,7 +499,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 }
 ```
 ### How to select all object in the diagram
-  The [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectAll) is used select all objectets in the diagram.
+  The [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectAll) is used to select all objects in the diagram.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
@@ -559,7 +559,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 
 ### How to Scale the selected object
-  The [Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Scale_Syncfusion_Blazor_Diagram_IDiagramObject_System_Double_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) is used scales the given objects by the given ratio.
+  The [Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Scale_Syncfusion_Blazor_Diagram_IDiagramObject_System_Double_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) is used to scale the given objects by the given ratio.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
@@ -621,7 +621,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods)
 
 ### How to get custom cursor
- The [GetCustomCursor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetCustomCursor) is used to create their own cursor. You can customize the cursor style as you want.
+ The [GetCustomCursor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetCustomCursor) is used to create their cursor. You can customize the cursor style as you want.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
     <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors" GetCustomCursor="@cursor">    
@@ -682,10 +682,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
      }
  }
  ```
- You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods)
 
 ### BeginUpdate and EndUpdate
- [Beginupdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BeginUpdate) prevents visual updates to the diagram until the EndUpdate() method is called. [Endupdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EndUpdate) means that the diagram is unlocked following a call to the BeginUpdate(Boolean) method, resulting in an immediate visual update
+ [Beginupdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BeginUpdate) prevents visual updates to the diagram until the EndUpdate() method is called. [Endupdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EndUpdate) means that the diagram is unlocked following a call to the BeginUpdate(Boolean) method, resulting in an immediate visual update.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -811,7 +811,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods)
 
 ### How to clone the diagram
- [Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Clone) is helps to clone the diagram.
+ [Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Clone) helps to clone the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -873,7 +873,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods)
 
 ### How to get Custom Tool
- The [GetCustomTool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetCustomTool) allows user to customize the tool.
+ The [GetCustomTool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetCustomTool) allows the user to customize the tool.
+
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
@@ -887,11 +888,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     //Intialize diagram's nodes collection
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     NodeGroup groupNode = new NodeGroup();
-    //Intialize diagram's nodes collection
+    //Intialize diagram's connectors collection
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    //Intialize diagram's selectionsettings
+    //Initialize diagram's selectionsettings.
     DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
-    //Intialize diagram's userhandle
+   //Initialize the diagram's userhandle.
     DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
     public string cursor(DiagramElementAction action, bool active, string handle)
     {
@@ -1221,7 +1222,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to get parent of object
 
-* The [GetParent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramObject.html#Syncfusion_Blazor_Diagram_DiagramObject_GetParent) is used to gets the parent of an object when the method is invoked.
+* The [GetParent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramObject.html#Syncfusion_Blazor_Diagram_DiagramObject_GetParent) is used to get the parent of an object when the method is invoked.
 
 The following code illustrates how to set background color for node.
 

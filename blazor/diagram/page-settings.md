@@ -321,7 +321,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 {
     private void OnBackgroundChanged()
     {
-        // Enter your code
+       // Enter your code.
     }
 }
 ```

@@ -660,10 +660,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to set Background color for node
 
-* The node's [BackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_BackgroundColor) property is used to set background color for node. By default, it is transparent.
+* The node's [BackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_BackgroundColor) property is used to set the background color for node. By default, it is transparent.
 
 
-The following code illustrates how to set background color for node.
+The following code illustrates how to set the background color for the node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -706,10 +706,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to check  node is automatically positioned or not
 
-* The node's [CanAutoLayout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_CanAutoLayout)  value indicates whether the node should be automatically positioned or not. Applicable, if layout option is enabled.
+* The node's [CanAutoLayout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_CanAutoLayout) value indicates whether the node should be automatically positioned or not. Applicable if the layout option is enabled.
 
 
-The following code illustrates how to set canautolayout property for node.
+The following code illustrates how to set the canautolayout property for the node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -840,7 +840,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to get data source settings details
 
-* The node's [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Data) Returns the record of the data source as data. Each record on the data source represents a node in an automatic layout.
+* The node's [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Data) returns the record of the data source as data. Each record on the data source represents a node in an automatic layout.
 
 
 The following code illustrates how to get datasourcesettings details.

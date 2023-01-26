@@ -87,7 +87,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ![Blazor Hierarchical Diagram](../images/blazor-hierarchical-diagram.png)
 
 
-You can create hierarchical layout with DataSource. The following code demonstrates how to render Hierarchical layout with using DataSource.
+You can create a hierarchical layout with DataSource. The following code demonstrates how to render a Hierarchical layout using DataSource.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram

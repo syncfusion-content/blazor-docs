@@ -385,7 +385,7 @@ The following code example how to get inedges and outedges of port.
                     },
                     Width = 12, 
                     Height = 12,
-                    // Sets the shape of the port as Circle .
+                  // Sets the shape of the port as a Circle.
                     Shape = PortShapes.Circle
                 }
             },
