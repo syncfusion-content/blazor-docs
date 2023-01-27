@@ -290,7 +290,7 @@ This is achieved by adding attributes to the li items based on the data source v
 
 In the following example, the `Opened` event is used to call the `AddAttribute` method when the DropDownList is opened. The `AddAttribute` method gets the data source from the component instance and calls a JavaScript function using the JavaScript Interop. The JavaScript function receives the data source and the ID of the DropDownList as arguments, and adds the attributes to the li elements based on the data source values.
 
-% highlight cshtml %}
+{% highlight cshtml %}
 
 {% include_relative code-snippet/style/add-attribute-listitem.razor %}
 
