@@ -92,7 +92,7 @@ If it’s in different name like libdl.so.4 then change the comment like below.
 sudo cp -u /lib/x86_64-linux-gnu/libdl.so.4 /lib/x86_64-linux-gnu/libdl.so
 ```
 
-Then, in the Ubuntu command window, run the following commands one by one to instal all necessary Blazor PDF Viewer dependencies for a Linux run. 
+Then, in the Ubuntu command window, run the following commands one by one to install all necessary Blazor PDF Viewer dependencies for a Linux run. 
 
 ```
     sudo apt-get install libfontconfig1
