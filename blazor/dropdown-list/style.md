@@ -177,7 +177,7 @@ Add the additional html attributes such as styles, class, and more to the root e
 
 The font-family of the dropdown list can be changed by overriding using the following selector. The overridden can be applied to specific component by adding a class name through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property.
 
-In the following sample, the font family of the Dropdownlist, ListItem text in dropdownlist and filterInput text are changed.
+In the following sample, the font family of the Dropdown list, ListItem text in dropdown list and filterInput text are changed.
 
 {% highlight cshtml %}
 
@@ -229,7 +229,7 @@ Set the opacity to the selected item using the following selector.
 
 ## Customizing the height
 
-### Height of dropdownlist
+### Height of dropdown list
 
 Use the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) property to change the height of the popup.
 
@@ -241,7 +241,7 @@ Use the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 ![Blazor DropDownList with Popup height](./images/style/blazor_dropdown_height.png)
 
-### Width of dropdownlist
+### Width of dropdown list
 
 To customize the width of the popup alone, use the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) property. By default, the popup width is set based on the component's width. Use the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Width) to change the width of the component.
 
@@ -253,11 +253,11 @@ To customize the width of the popup alone, use the [PopupWidth](https://help.syn
 
 ![Blazor DropDownList with Popup Width](./images/style/blazor_dropdown_width-popup-width.png)
 
-## Disable specfic items in dropdown list
+## Disable specific items in dropdown list
 
-Prevent some items in the popup list from selecting. This can be achieved by disabling the item for a specific dropdownlist component by adding the custom class for the popup element using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property.
+Prevent some items in the popup list from selecting. This can be achieved by disabling the item for a specific dropdown list component by adding the custom class for the popup element using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property.
 
-In the following code, a single list Item is hidden using jsinterop.
+In the following code, a single list Item is hidden using js interop.
 
 {% highlight cshtml %}
 
@@ -334,7 +334,7 @@ In the following example, the SfTab component is used to display a tab view with
 
 ![Blazor DropDownList with tooltip](./images/style/blazor_dropdown-in-tabview.png)
 
-## Dropdownlist inside Dialog
+## Dropdown list inside Dialog
 
 A modal dialog box that contains a dropdown list can be created to allow users to select an option from the list. This can be achieved by placing the dropdown list within an SfDialog component. The dialog box is opened when the user clicks the "Open Modal Dialog" button, and the dropdown list is present inside the dialog box. The dialog box is closed when the user clicks outside of the dialog box.
 
@@ -356,9 +356,9 @@ Specifies the CSS class name that can be appended with the root element of the D
 
 Some of the possible values are
 
-* `e-success`, which denotes the component in success state that is added green color to the dropdownlist's input field.
-* `e-warning`, which denotes the component in warning state that is added orange color to the dropdownlist's input field.
-* `e-error`, which denotes the component in error state that is added red color to the dropdownlist's input field.
+* `e-success`, which denotes the component in success state that is added green color to the dropdown list's input field.
+* `e-warning`, which denotes the component in warning state that is added orange color to the dropdown list's input field.
+* `e-error`, which denotes the component in error state that is added red color to the dropdown list's input field.
 * `e-outline`, which supports only in material theme.
 * `e-multi-column`, which provides two or more columns in the popup and the column will be aligned like grid.
 
