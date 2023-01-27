@@ -283,29 +283,6 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 ![Blazor Floating Action Button Component](./images/blazor-fab-component.png)
 
-## Event Click In Floating Action Button
-
-The floating action button control triggers the [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_OnClick) event when you click on the floating action button. You can use this event to perform the required action.
-
-{% tabs %}
-{% highlight razor %}
-
-<div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
-    <SfFab Target="#target" IconCss="e-icons e-plus" OnClick="EventClick"></SfFab>
-</div>
-
-@code{
-    public void EventClick()
-    {
-        // Here, you can call your desired action.
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor Floating Action Button Component](./images/blazor-fab-event-click-sample.png)
-
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FloatingActionButton).
 
 N> You can also explore our [Blazor Floating Action Button example](https://blazor.syncfusion.com/demos/fab/overview) that shows how to render and configure the button.
