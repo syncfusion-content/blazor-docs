@@ -11,13 +11,13 @@ documentation: ug
 
 To run the Syncfusion Blazor PDF Viewer in WSL (Windows Subsystem for Linux) mode, you will need to take the following steps:
 
-**Step 1:** Enable the Windows Subsystem for Linux.
+**Step 1:** Enable the Windows Subsystem for Linux and the Virtual Machine Platform.
 
 ![Create-new-blazor-wsl-app](GettingStarted_images/1.png)
 
-To enable the Windows Subsystem for Linux (WSL) on Windows, follow these steps:
+To enable the Windows Subsystem for Linux (WSL) and the Virtual Machine Platform on Windows, follow these steps:
 
-Open the Start menu and search for `Control Panel`. Click on `Programs`, then click on `Turn Windows features on or off`. Scroll down and check the box next to `Windows Subsystem for Linux`. Click `OK` and restart your machine.
+Open the Start menu and search for `Control Panel`. Click on `Programs`, then click on `Turn Windows features on or off`. Scroll down and check the box next to `Windows Subsystem for Linux` and `Virtual Machine Platform`. Click `OK` and restart your machine.
 
 After your computer restarts, you will be able to install a Linux distribution from the Microsoft Store, such as Ubuntu, and run Linux commands directly in Windows.
 
@@ -25,11 +25,11 @@ After your computer restarts, you will be able to install a Linux distribution f
 
 ![Create-new-blazor-wsl-app](GettingStarted_images/2.png)
 
-Ubuntu can be installed on a Windows 10 machine through the Microsoft Store. Here are the steps to do so:
+Ubuntu can be installed on a Windows machine through the Microsoft Store. Here are the steps to do so:
 
-Open the Microsoft Store on your Windows 10 machine, Search for `Ubuntu` in the store. Select `Ubuntu` from the search results and click `Get` to begin the installation.
+Open the Start menu and search for `Control Panel`. Click on `Programs`, then click on `Turn Windows features on or off`. Scroll down and check the boxes next to `Windows Subsystem for Linux` and `Virtual Machine Platform`. Click `OK` and restart your machine.
 
-Once the installation is complete, open the Windows Terminal application. In the terminal, type `Ubuntu` and press enter. This will launch the Ubuntu terminal inside of Windows.
+Once the installation is complete, open the Windows search. In the terminal, type `Ubuntu` and press enter. This will launch the Ubuntu terminal inside of Windows.
 
 On Ubuntu, create a new user with a username and password. 
 
@@ -70,7 +70,8 @@ If the above result is not shown, Please run the comments below or follow the st
 
 N> Facing any issue while running in WSL (Windows Subsystem for Linux) mode use the following instruction to resolve the issue.
 
-Sample does not load the PDF file and throws an exception like below in console window. 
+If the sample does not load the PDF file and throws an exception like below in the console window,
+
 ![Create-new-blazor-wsl-app](GettingStarted_images/4.png)
 
 Use the following codes to install the dependence need for our Blazor PDF Viewer run to fix the issue.
