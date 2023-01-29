@@ -87,6 +87,18 @@ Focus the component programmatically using the [FocusAsync](https://help.syncfus
 
 {% endhighlight %}
 
+## Programmatically focus in and focus out the component
+
+In order to trigger the `FocusAsync()` and `FocusOutAsync()` methods using the instance of the dropdownlist, you can use buttons. You can bind the click event of the button to the `FocusAsync()` and `FocusOutAsync()` methods. When the button is clicked, it triggers the corresponding method on the dropdownlist.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/selection/focus-method.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with dynamic focus in and out](./images/selection/blazor_dropdown_focus-in-out.gif)
+
 ## Programmatically trigger onChange event
 
 Trigger the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event manually by using the instance (taken from @ref attribute) of the [DropDownListEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html). In the following example, the `ValueChange` event is invoked inside the `Created` event handler. As per the following code, it will trigger once the component is created or rendered on the page.
@@ -97,97 +109,9 @@ Trigger the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% endhighlight %}
 
-## Events
+## Get Data by value
 
-### ValueChange event
-
-The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event is triggered when the value of the DropDownList component get changed or modified. Also, it will return the necessary arguments including the current and previously selected or changed value.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/selection/valuechange-event.razor %}
-
-{% endhighlight %}
-
-### OnValueSelect event
-
-The [OnValueSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnValueSelect) event is triggered when you select any value in the DropDownList component. Get the necessary arguments including the [ChangeEventArgs.ItemData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_ItemData). Also,  prevent the selection of items by setting the [ChangeEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Cancel) property as `true` provided by the event arguments. 
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/selection/valueselect-event.razor %}
-
-{% endhighlight %}
-
-### Focus event
-
-The [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Focus) event will trigger when the component gets focused. 
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/selection/focus-event.razor %}
-
-{% endhighlight %}
-
-### Blur event
-
-The [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Blur) event will trigger when focus moves out from the component. 
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/selection/blur-event.razor %}
-
-{% endhighlight %}
-
-## Properties
-
-### ID
-
-Specifies the [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ID) of the DropDownList component. we can access the other properties of the component through this `ID`.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/selection/ID-property.razor %}
-
-{% endhighlight %} 
-
-## Methods
-
-### FocusAsync()
-
-Sets the focus to the DropDownList component for interaction.
-
-#### Declarations
-
-N> public Task FocusAsync()
-
-### FocusOutAsync()
-
-Remove the focus from the DropDownList component, if the component is in focus state.
-
-#### Declarations
-
-N> public Task FocusOutAsync()
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/selection/focus-method.razor %}
-
-{% endhighlight %}
-
-![Blazor DropDownList with dynamic focus in and out](./images/selection/blazor_dropdown_focus-in-out.gif)
-
-### GetDataByValue(TValue)
-
-Gets the data Object that matches the given value.
-
-#### Declarations
-
-N> public TItem GetDataByValue(TValue ddlValue)
-
-#### Parameters
-
-* ddlValue - Specifies the DropDownList value.
+You can retrieve the selected value from the dropdown list by using the `GetDataByValue(TValue)` method through an instance of the dropdown list. You can bind the click event of a button to the `GetDataByValue(TValue)` method of the dropdown list instance. When the button is clicked, it will trigger the `GetDataByValue(TValue)` method on the dropdown list and return the selected value.
 
 {% highlight Razor %}
 
@@ -195,13 +119,9 @@ N> public TItem GetDataByValue(TValue ddlValue)
 
 {% endhighlight %} 
 
-### GetItemsAsync()
+## Get List Item
 
-Gets all the list items bound on this component.
-
-#### Declarations
-
-N> public Task<IEnumerable<TItem>> GetItemsAsync()
+You can retrieve the list items from the dropdown list by using the `GetItemsAsync()` method through an instance of the dropdown list. You can bind the click event of a button to the `GetItemsAsync()` method of the dropdown list instance. When the button is clicked, it will trigger the `GetItemsAsync()` method on the dropdown list and return the list items
 
 {% highlight Razor %}
 

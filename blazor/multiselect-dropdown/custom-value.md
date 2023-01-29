@@ -83,13 +83,3 @@ The following sample demonstrates configuration of custom value in `CustomValueS
     }
 }
 ```
-
-## Properties
-
-### AllowCustomValue
-
-Allows user to add a Custom value the value which is not present in the suggestion list.
-
-Default value of [AllowCustomValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_AllowCustomValue) is `false`
-
-[Click to refer the code for AllowCustomValue](https://blazor.syncfusion.com/documentation/multiselect-dropdown/custom-value)

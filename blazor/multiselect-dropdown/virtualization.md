@@ -43,14 +43,6 @@ In the following code 150 items bound to the component, but only 6 items will lo
 
 ![Blazor MultiSelect with virtualization](./images/blazor-multiselect-dropdown-virtualization.gif)
 
-## Properties
-
-### EnableVirtualization
-
-The Virtual Scrolling feature is used to display a large amount of data that you require without buffering the entire load of a huge database records in the DropDowns, that is, when scrolling, the datamanager request is sent to fetch some amount of data from the server dynamically. To achieve this scenario with DropDowns, set the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_EnableVirtualization) to `true`.
-
-[Click to refer the code for EnableVirtualization](https://blazor.syncfusion.com/documentation/multiselect-dropdown/virtualization)
-
 ### ItemsCount
 
 The data can be fetched in popup based on [ItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_ItemsCount), when enabled the [EnableVirtualization](https://blazor.syncfusion.com/documentation/multiselect-dropdown/virtualization). `ItemsCount` is applicable only when `EnableVirtualization` is used as true. `ItemsCount` is depends on `EnableVirtualization`.

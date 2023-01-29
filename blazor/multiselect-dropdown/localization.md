@@ -5,19 +5,21 @@ description: Checkout and learn here all about localization in Syncfusion Blazor
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
----
+--- 
 
-# Localization in Blazor MultiSelect Dropdown Component
+# Globalization and Localization in Blazor MultiSelect Dropdown Component
+
+## Localization
 
 [Blazor MultiSelect Dropdown](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
 
-## Properties
+## Globalization
 
-### EnableRtl
+### Enable RTL mode
 
-Enable or disable rendering component in right to left direction.
+The direction can be switched to right to left when specfies the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_EnableRtl) as `true`. Writing systems like Arabic, Hebrew, and more will require `EnableRtl` property.
 
-Default value of [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_EnableRtl) is `false`.
+Specifies the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_EnableRtl) as a boolean value that indictes to enable or disable rendering component in the right to left direction. Writing systems will require Arabic, Hebrew, and more. The direction can be switched to right-to-left.
 
 {% highlight Razor %}
 

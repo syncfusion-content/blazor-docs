@@ -80,7 +80,7 @@ The following code demonstrates array of int as datasource to the DropDownList c
 
 ## Object binding
 
-Bind the Object data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute of the DropdownList component, this is, You can map the class name to `TValue`. 
+Bind the Object data to the [@bind-Value](https://help.syncfusio njn.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute of the DropdownList component, this is, You can map the class name to `TValue`. 
 
 In the following example, the `Name` column has been mapped to the [DropDownListFieldSettings.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value).
 
@@ -232,57 +232,9 @@ Two-way is having a bi-directional data flow, i.e., passing the value from the p
 
 ![Blazor DropdownList with Two way binding](./images/value-binding/blazor_dropdown_two-way-binding.png)
 
-## Properties
+## Programmatically clearing value
 
-### Index
-
-Gets or sets the index of the selected item in the component. List Item in the mentioned index will bind to the component.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/value-binding/index-property.razor %}
-
-{% endhighlight %}
-
-![Blazor DropDownList with Index property](./images/value-binding/blazor_dropdown_index-property.png)
-
-### ShowClearButton
-
-Specifies whether to show or hide the clear button.
-
-Default value of [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ShowClearButton) is `false`.
-
-When the clear button is clicked, `Value`, `Text`, and `Index` properties are reset to null.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/value-binding/show-hide-clear-button.razor %}
-
-{% endhighlight %}
-
-![Blazor DropDownList with clear button](./images/value-binding/blazor_dropdown_show-hide-clear-button.png)
-
-### Value
-
-Gets or sets the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) of the selected item in the component.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/value-binding/value-property.razor %}
-
-{% endhighlight %}
-
-![Blazor DropDownList with value property](./images/value-binding/blazor_dropdown_with-value-property.png)
-
-## Methods
-
-### ClearAsync()
-
-Allows you to clear the selected values from the component.
-
-#### Declarations
-
-N> public Task ClearAsync()
+You can clear the value programmatically by accessing the `ClearAsync()` method through an instance of the dropdown list. You can bind the click event of a button to the `ClearAsync()` method. When the button is clicked, it will trigger the `ClearAsync()` method on the dropdown list, clearing its value.
 
 {% highlight Razor %}
 

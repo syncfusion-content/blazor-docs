@@ -25,6 +25,16 @@ The DropDownList loads the data from local data sources through the [DataSource]
 
 ![Blazor DropdownList with local data binding](./images/data-binding/blazor_dropdown_local-binding.png)
 
+### DataBound Event
+
+The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_DataBound) event triggers when the data source is populated in the popup list.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/data-binding/data-bound.razor %}
+
+{% endhighlight %}
+
 ### Primitive type
 
 Bind the data to the DropDownList as an array or list of the `string`, `int`, `double` and `bool` type items.
@@ -132,6 +142,36 @@ The DropDownList supports the retrieval of data from the remote data services wi
 * [DataManager.Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) - Defines the service endpoint to fetch data.
 * [DataManager.Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) - Defines the adaptor option. By default, the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) is used for remote binding. The adaptor is responsible for processing responses and requests from or to the service endpoint. 
 * [Syncfusion.Blazor.Data](https://www.nuget.org/packages/Syncfusion.Blazor.Data/) package provides some predefined adaptors that are designed to interact with particular service endpoints.
+
+### OnActionBegin event
+
+The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnActionBegin) event triggers before fetching data from the remote server.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/data-binding/action-begin.razor %}
+
+{% endhighlight %}
+
+### OnActionComplete event
+
+The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnActionComplete) event triggers after data is fetched successfully from the remote server.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/data-binding/action-complete.razor %}
+
+{% endhighlight %}
+
+### OnActionFailure event
+
+The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnActionFailure) event triggers when the data fetch request from the remote server fails.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/data-binding/action-failure.razor %}
+
+{% endhighlight %}
 
 ### OData v4 services
 
@@ -364,42 +404,3 @@ To obtain the data source for a Syncfusion Blazor DropDownList using a variable,
 
 ## Events
 
-### DataBound event
-
-The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_DataBound) event triggers when the data source is populated in the popup list.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/data-binding/data-bound.razor %}
-
-{% endhighlight %}
-
-### OnActionBegin event
-
-The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnActionBegin) event triggers before fetching data from the remote server.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/data-binding/action-begin.razor %}
-
-{% endhighlight %}
-
-### OnActionComplete event
-
-The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnActionComplete) event triggers after data is fetched successfully from the remote server.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/data-binding/action-complete.razor %}
-
-{% endhighlight %}
-
-### OnActionFailure event
-
-The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnActionFailure) event triggers when the data fetch request from the remote server fails.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/data-binding/action-failure.razor %}
-
-{% endhighlight %}

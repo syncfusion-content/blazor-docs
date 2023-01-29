@@ -58,6 +58,7 @@ The following examples shows data filtering is done with the `StartsWith` type
 ## Filter item count
 
 You can specify the filter suggestion item count using the [SuggestionCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_SuggestionCount) property of AutoComplete.
+Default value of `SuggestionCount` is `20`.
 
 Refer to the following example to restrict the suggestion list item counts as 3.
 
@@ -95,7 +96,7 @@ Refer to the following example to restrict the suggestion list item counts as 3.
 
 ## Limit the minimum filter character
 
-You can set the limit for the character count to filter the data on the AutoComplete. This can be done by setting the [MinLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_MinLength) property to AutoComplete.
+You can set the limit for the character count to filter the data on the AutoComplete. This can be done by setting the [MinLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_MinLength) property to AutoComplete. Default value of `MinLength` is `1`.
 
 In the following example, the remote request doesn't fetch the search data until the search key contains three characters.
 
@@ -212,25 +213,11 @@ The AutoComplete component filter queries can be customized. You can also use yo
 }
 ```
 
-## Properties
+## Highlighting Search character
 
-### FilterType
+### Highlighting Search character using property
 
-Determines which filter type, the component needs to be considered during search action.
-
-Default value of [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_FilterType) is `Contains`, all the suggestion items which contain typed characters are listed in the suggestion popup.
-
-Possible values are:
-
-* [StartsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_StartsWith) - Checks whether the value begins with the specified value.
-* [EndsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_EndsWith) - Checks whether the value ends with specified value.
-* [Contains](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_Contains) - Checks whether the value contains with specified value.
-
-[Click to refer the code for FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_FilterType)
-
-### Highlight
-
-When set to `true`, highlight the searched characters on suggested list items.
+You can highlight the search text in the suggested list items of the autocomplete component by using the `Highlight` property. When set to true, it will highlight the characters that match the search query in the list items.
 
 {% highlight Razor %}
 
@@ -240,38 +227,14 @@ When set to `true`, highlight the searched characters on suggested list items.
 
 ![Blazor AutoComplete with highlight property](./images/filtering/blazor_autocomplete_highlight-property.png)
 
-### MinLength
+### Highlighting Search character using method
 
-Allows you to set the minimum search character length, the search action will perform after typed minimum characters.
+You can highlight the search text in the suggested list items of the autocomplete component by using the `HighLightSearch` method. It accepts several arguments, including `textValue`, `ignoreCase`, `filtertype` and `highLighText`. When called, it will highlight the characters that match the search query in the list items."
 
-Default value of [MinLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_MinLength) is `1`.
-
-[Click to refer the code for MinLength](https://blazor.syncfusion.com/documentation/autocomplete/filtering#limit-the-minimum-filter-character)
-
-### SuggestionCount
-
-Supports the specified number of list items on the suggestion popup.
-
-Default value of [SuggestionCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_SuggestionCount) is `20`.
-
-[Click to refer the code for SuggestionCount](https://blazor.syncfusion.com/documentation/autocomplete/filtering#filter-item-count)
-
-## Methods
-
-### HighLightSearch(String, Boolean, FilterType, String)
-
-Highlight the searched characters on suggested list items.
-
-#### Declaration
-
-N> public string HighLightSearch(string textValue, bool ignoreCase, FilterType filtertype, string highLighText = null)
-
-#### Paramaters
-
-* textValue	- highlight the list item.
-* ignoreCase - performing the search text based on casing.
-* filtertype - Determines on which filter type, the highlight text update on the text.
-* highLighText - Higlighted the char based on hightligh text and this is optional. If not provide the highlightText, it wil get the filter value.
+* `textValue` - The text to be highlighted in the list item.
+* `ignoreCase` - A boolean value which when set to true performs the search text based on casing.
+* `filterType` - Determines on which filter type the highlight text is updated on the text.
+* `highlightText` - The text to be highlighted. This is an optional argument. If not provided, it will use the filter value as the highlight text."
 
 {% highlight Razor %}
 
