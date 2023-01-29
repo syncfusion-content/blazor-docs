@@ -203,7 +203,7 @@ If you configured both the property and equivalent input attribute, then the com
 
 You can customize the font-family for the component by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property and add the desired `font-family` to the custom class that is mapped to the CssClass.
 
-In the following sample, the font family of the Dropdownlist, ListItem text in dropdownlist and filterInput text are changed.
+In the following sample, the font family of the DropDownList, ListItem text in DropDownList and filterInput text are changed.
 
 {% highlight cshtml %}
 
@@ -255,7 +255,7 @@ In the following code , the CSS style that targets the `.e-list-item` class with
 
 ## Customizing the height
 
-### Height of dropdownlist
+### Height of DropDownList
 
 Use the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) property to change the height of the popup.
 
@@ -267,7 +267,7 @@ Use the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 ![Blazor DropDownList with Popup height](./images/style/blazor_dropdown_height.png)
 
-### Width of dropdownlist
+### Width of DropDownList
 
 To customize the width of the popup alone, use the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) property. By default, the popup width is set based on the component's width. Use the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Width) to change the width of the component. You can also set the Width in pixel values. Default value of `Width` is `100%`.
 
@@ -279,23 +279,22 @@ To customize the width of the popup alone, use the [PopupWidth](https://help.syn
 
 ![Blazor DropDownList with Popup Width](./images/style/blazor_dropdown_width-popup-width.png)
 
-## Disable specfic items in dropdown list
+## Disable specific items in DropDownList
 
-Prevent some items in the popup list from selecting. This can be achieved by disabling the item for a specific dropdownlist component by adding the custom class for the popup element using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property.
+Prevent some items in the popup list from selecting. This can be achieved by disabling the item for a specific dropdown list component by adding the custom class for the popup element using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_CssClass) property.
 
-In the following code, a single list Item is hidden using jsinterop.
+In the following code, a single list Item is hidden using js interop.
 
-{% highlight cshtml %}
+{% tabs %}
+{% highlight razor %}
 
 {% include_relative code-snippet/style/disable-listitem.razor %}
 
 {% endhighlight %}
+{% highlight cshtml tabtitle="~/_Layout.cshtml" %}
 
-{% tabs %}
-{% highlight razor tabtitle="~/_Layout.cshtml" %}
-
- <script>
-        window.disable = function (id) { 
+<script>
+    window.disable = function (id) { 
     setTimeout(function (e) { 
         var liCollections = document.querySelectorAll('.e-popup.e-custom-class .e-list-item') 
         if (liCollections && liCollections.length > 0) 
@@ -316,37 +315,38 @@ This is achieved by adding attributes to the li items based on the data source v
 
 In the following example, the `Opened` event is used to call the `AddAttribute` method when the DropDownList is opened. The `AddAttribute` method gets the data source from the component instance and calls a JavaScript function using the JavaScript Interop. The JavaScript function receives the data source and the ID of the DropDownList as arguments, and adds the attributes to the li elements based on the data source values.
 
-{% highlight cshtml %}
+
+{% tabs %}
+{% highlight razor %}
 
 {% include_relative code-snippet/style/add-attribute-listitem.razor %}
 
 {% endhighlight %}
+{% highlight cshtml tabtitle="~/_Layout.cshtml" %}
 
-{% tabs %}
-{% highlight razor tabtitle="~/_Layout.cshtml" %}
+<script> 
+    function AddAttribute(datasource, id) { 
+        setTimeout(() => { 
+            //Here, the popup element is uniquely identified with an id 
+            //Classes added via CssClass property will be added to the popup element also. 
+            //You can also uniquely identify the popup element with the help of the added classes. 
+            console.log(document.getElementById(id + "_popup")); 
+            var listItems = document.getElementById(id + "_popup").querySelectorAll('li'); 
+            for (var i = 0; i < listItems.length; i++) { 
+                listItems[i].setAttribute(Object.keys(datasource[i])[2], datasource[i].isAvailable) 
+            } 
+        }, 100) 
 
-    <script> 
-        function AddAttribute(datasource, id) { 
-            setTimeout(() => { 
-                //Here, the popup element is uniquely identified with an id 
-                //Classes added via CssClass property will be added to the popup element also. 
-                //You can also uniquely identify the popup element with the help of the added classes. 
-                console.log(document.getElementById(id + "_popup")); 
-                var listItems = document.getElementById(id + "_popup").querySelectorAll('li'); 
-                for (var i = 0; i < listItems.length; i++) { 
-                    listItems[i].setAttribute(Object.keys(datasource[i])[2], datasource[i].isAvailable) 
-                } 
-            }, 100) 
- 
-        } 
-    </script>
+    } 
+</script>
 
 {% endhighlight %}
 {% endtabs %}
 
+
 ![Adding attribute to listitem in dropdown list](./images/style/blazor_dropdown_add-attribute-listitem.png)
 
-## Displaying dropdown List in Tab
+## Displaying DropDownList in Tab
 
 The DropDownList component can be used within a tab view to enable users to select an option from a list. This can be achieved by placing the DropDownList within the SfTab component. Each tab includes a DropDownList that allows the user to choose from a list of options.
 
@@ -360,7 +360,7 @@ In the following example, the SfTab component is used to display a tab view with
 
 ![Blazor DropDownList with tooltip](./images/style/blazor_dropdown-in-tabview.png)
 
-## Dropdownlist inside Dialog
+## DropDownList inside Dialog
 
 A modal dialog box that contains a dropdown list can be created to allow users to select an option from the list. This can be achieved by placing the dropdown list within an SfDialog component. The dialog box is opened when the user clicks the "Open Modal Dialog" button, and the dropdown list is present inside the dialog box. The dialog box is closed when the user clicks outside of the dialog box.
 
@@ -376,7 +376,103 @@ In the following example, the SfDialog component is used to display a dialog pop
 
 ## Programmatically show and hide spinner
 
+<<<<<<< HEAD
 In order to trigger the `HideSpinnerAsync()` and `ShowSpinnerAsync()` methods of the dropdown list, you can use buttons. The code provided binds the click event of the button to the corresponding method on the dropdown list instance. When the button is clicked, it will trigger the `HideSpinnerAsync()` and `ShowSpinnerAsync()` methods on the dropdown list, respectively.
+=======
+### CssClass  
+
+Specifies the CSS class name that can be appended with the root element of the DropDownList. One or more custom CSS classes can be added to a DropDownList.
+
+Some of the possible values are
+
+* `e-success`, which denotes the component in success state that is added green color to the DropDownList's input field.
+* `e-warning`, which denotes the component in warning state that is added orange color to the DropDownList's input field.
+* `e-error`, which denotes the component in error state that is added red color to the DropDownList's input field.
+* `e-outline`, which supports only in material theme.
+* `e-multi-column`, which provides two or more columns in the popup and the column will be aligned like grid.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/style/cssclass-properties.razor %}
+
+{% endhighlight %} 
+
+![Blazor DropDownList with CssClass property](./images/style/blazor_dropdown_cssclass-property.png)
+
+### HtmlAttributes  
+
+Allows additional HTML attributes such as title, name, etc., and accepts n number of attributes in a key-value pair format.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/html-attributes.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with different font family](./images/style/blazor_dropdown_html-attributes.png)
+
+### InputAttributes
+
+You can add the additional input attributes such as disabled, value, and more to the root element.
+
+If you configured both the property and equivalent input attribute, then the component considers the property value.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/style/inputAttributes-property.razor %}
+
+{% endhighlight %} 
+
+![Blazor DropDownList with HtmlAttributes property](./images/style/blazor_dropdown_input-attributes-propety.png)
+
+### Readonly
+
+Specifies the boolean value whether the DropDownList allows the user to change the value.
+
+Default value of Readonly is `false`.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/readonly-mode.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with Readonly mode](./images/style/blazor_dropdown_readonly-mode.png)
+
+### TabIndex
+
+Specifies the tab order of the DropDownList component.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/style/tabIndex-property.razor %}
+
+{% endhighlight %}
+
+### ValueExpression
+
+Specifies the expression for defining the value of the bound.
+
+[Click to refer the code for ValueExpression](https://blazor.syncfusion.com/documentation/dropdown-list/how-to/tooltip)
+
+## Methods
+
+### HideSpinnerAsync()
+
+Hides the spinner loader.
+
+#### Declarations
+
+N> public Task HideSpinnerAsync()
+
+### ShowSpinnerAsync()
+
+Shows the spinner loader.
+
+#### Declarations
+
+N> public Task ShowSpinnerAsync()
+>>>>>>> 6ca43f73733722a81171f152870abbecad4c5e0c
 
 {% highlight Razor %}
 
