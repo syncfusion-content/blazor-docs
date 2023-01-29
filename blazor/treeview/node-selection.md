@@ -1118,9 +1118,128 @@ In the following example, the `FullRowSelect` property is disabled.
 
 ```
 
+## Get path of selected node
+
+In the Blazor TreeView component, we can get the parent node details when selecting child nodes by passing the selected nodes IDs and parent nodes IDs in the TreeView [GetNode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_GetNode_System_String_) method in the [NodeSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeSelected) event. 
+
+In the provided code snippet, we have shown how to display the selected child nodes parent ID and Text.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+@for (int i = 0; i < ParentIdArray.Length; i++)
+{
+    <p> @(i+1) Parent Id : @ParentIdArray[i] &nbsp;&nbsp;&nbsp; Parent Text : @ParentTextArray[i]</p>
+}
+<SfTreeView TValue="MusicAlbum" AllowMultiSelection="true" @ref="tree" @bind-SelectedNodes="SelectedNodes">
+    <TreeViewEvents TValue="MusicAlbum" NodeSelected="NodeSelected"></TreeViewEvents>
+    <TreeViewFieldsSettings TValue="MusicAlbum" Id="Id" DataSource="@Albums" Text="Name" ParentID="ParentId" HasChildren="HasChild" Expanded="Expanded" IsChecked="IsChecked"></TreeViewFieldsSettings>
+</SfTreeView>
+
+@code {
+    SfTreeView<MusicAlbum>? tree;
+    public string[] SelectedNodes = new string[] {};
+    public string[] ParentIdArray = new string[] {};
+    public string[] ParentTextArray = new string[] {};
+
+    public void NodeSelected(NodeSelectEventArgs args)
+    {
+
+        List<string> IdList = new List<string>();
+        List<string> TextList = new List<string>();
+        var TreeViewIds = tree.GetNode(args.NodeData.Id).ParentID;
+        var TreeViewTexts = tree.GetNode(args.NodeData.ParentID).Text;
+        while (TreeViewIds != null)
+        {
+            IdList.Add(TreeViewIds);
+            TextList.Add(TreeViewTexts);
+            TreeViewIds = tree.GetNode(TreeViewIds).ParentID;
+            TreeViewTexts = tree.GetNode(TreeViewIds).Text;
+        }
+        ParentIdArray = IdList.ToArray();
+        ParentTextArray = TextList.ToArray();
+
+    }
+    public class MusicAlbum
+    {
+        public int? Id { get; set; }
+        public int? ParentId { get; set; }
+        public string? Name { get; set; }
+        public bool Expanded { get; set; }
+        public bool? IsChecked { get; set; }
+        public bool HasChild { get; set; }
+    }
+    List<MusicAlbum> Albums = new List<MusicAlbum>();
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Albums.Add(new MusicAlbum
+            {
+                Id = 1,
+                Name = "Discover Music",
+                HasChild = true,
+                Expanded = true
+            });
+        Albums.Add(new MusicAlbum
+            {
+                Id = 2,
+                ParentId = 1,
+                Name = "Hot Singles",
+                HasChild = true,
+                Expanded = true
+            });
+        Albums.Add(new MusicAlbum
+            {
+                Id = 3,
+                ParentId = 2,
+                Name = "Rising Artists"
+            });
+        Albums.Add(new MusicAlbum
+            {
+                Id = 4,
+                ParentId = 1,
+                Name = "Live Music"
+            });
+        Albums.Add(new MusicAlbum
+            {
+                Id = 14,
+                HasChild = true,
+                Name = "MP3 Albums",
+                Expanded = true
+
+            });
+        Albums.Add(new MusicAlbum
+            {
+                Id = 15,
+                ParentId = 14,
+                Name = "Rock"
+            });
+        Albums.Add(new MusicAlbum
+            {
+                Id = 16,
+                Name = "Gospel",
+                ParentId = 14,
+            });
+        Albums.Add(new MusicAlbum
+            {
+                Id = 17,
+                ParentId = 14,
+                Name = "Latin Music"
+            });
+        Albums.Add(new MusicAlbum
+            {
+                Id = 18,
+                ParentId = 14,
+                Name = "Jazz"
+            });
+    }
+}
+
+```
+
 ## Cancel the node selection
 
-The Blazor TreeView component offers the ability to cancel the selection action by setting the [args.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.NodeSelectEventArgs.html#Syncfusion_Blazor_Navigations_NodeSelectEventArgs_Cancel) value as false within the [NodeSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeSelecting) event. This will prevent the select action from occurring within the TreeView component.
+The Blazor TreeView component offers the ability to cancel the selection action by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.NodeSelectEventArgs.html#Syncfusion_Blazor_Navigations_NodeSelectEventArgs_Cancel) argument value as true within the [NodeSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeSelecting) event. This will prevent the select action from occurring within the TreeView component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
