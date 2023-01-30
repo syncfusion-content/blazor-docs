@@ -1992,7 +1992,7 @@ The default value of `AllowEditing` property is false.
 
 In the Blazor TreeView component, it is possible to cancel the edit action by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.NodeEditEventArgs.html#Syncfusion_Blazor_Navigations_NodeEditEventArgs_Cancel) argument to 'true' in the [NodeEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeEditing) event. 
 
-An example of this can be seen in the provided code snippet, where the node editing is cancelled for all the TreeView nodes.
+An example of this can be seen in the provided code snippet, where the node editing is canceled for all the TreeView nodes.
 
 
 

@@ -709,7 +709,7 @@ In the following example, the expanded nodes are collapsed while the **Gospel** 
 
 The Blazor TreeView component offers the ability to cancel the expand action by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.NodeExpandEventArgs.html#Syncfusion_Blazor_Navigations_NodeExpandEventArgs_Cancel) argument value as true within the [NodeExpanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeExpanding) event. This will prevent the expand action from occurring within the TreeView component.
 
-In the following example, the expand action for the **Discover Music** node is cancelled.
+In the following example, the expand action for the **Discover Music** node is canceled.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

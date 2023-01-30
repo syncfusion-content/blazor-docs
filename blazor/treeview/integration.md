@@ -249,7 +249,7 @@ This is demonstrated in an example where the TreeView operations are manipulated
 
 ## Badge
 
-The Blazor TreeView component can integrate with the Badge component and allows for customizing the node structure using the NodeTemplate tag, which allows for creating a tree node with any custom structure, such as a webmail folder with a name and unread message count using the Badge component.
+The Blazor TreeView component can integrate with the Badge component and allows for customizing the node structure using the NodeTemplate tag, which allows for creating a tree node with any custom structure, such as a web mail folder with a name and unread message count using the Badge component.
 
 The TreeView component can be integrated with the badge component as shown in the following example.
 
