@@ -26,7 +26,7 @@ N> When binding complex data to the MultiSelect, fields should be mapped correct
 
 Local data can be represented in two ways as described below.
 
-### 1. Array of object
+### Array of object
 
 The MultiSelect can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
 
@@ -75,7 +75,7 @@ In the following example, `Name` column from complex data have been mapped to th
 
 ![Binding Blazor MultiSelect DropDown Items](./images/blazor-multiselect-dropdown-binding-items.png)
 
-### 2. Array of complex object
+### Array of complex object
 
 The MultiSelect can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
 
