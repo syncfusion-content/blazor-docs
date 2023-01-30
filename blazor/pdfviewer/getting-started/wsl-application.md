@@ -23,7 +23,7 @@ After your computer restarts, you will be able to install a Linux distribution f
 
 **Step 2:** Install the `Ubuntu`
 
-![Create-new-blazor-wsl-app](GettingStarted_images/install-ubuntu.png)
+![Create-new-blazor-wsl-app](GettingStarted_images/ubuntu-install.png)
 
 Ubuntu can be installed on a Windows machine through the Microsoft Store. Here are the steps to do so:
 
