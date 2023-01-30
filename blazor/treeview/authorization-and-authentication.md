@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Authorization and Authentication in Blazor TreeView Component | Syncfusion
+title: Authorization,Authentication in Blazor TreeView Component | Syncfusion
 description: Checkout and learn here all about Authorization and Authentication in Syncfusion Blazor TreeView component and much more details.
 platform: Blazor
 control: TreeView

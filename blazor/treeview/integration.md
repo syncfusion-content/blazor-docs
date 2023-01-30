@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Integration in Blazor TreeView Component | Syncfusion
@@ -8,7 +7,7 @@ control: TreeView
 documentation: ug
 ---
 
-# Context Menu
+# Context Menu in Blazor TreeView Component
 
 In the Blazor TreeView component, it is possible to integrate a context menu component, allowing for TreeView operations such as adding, removing, and renaming nodes. 
 
