@@ -9,21 +9,18 @@ documentation: ug
 
 # Accessibility in Blazor Accordion Component
 
-The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component has been designed keeping in mind the [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/) specifications, by applying the prompt WAI-ARIA roles, states and properties along with the keyboard support. Thus, making it usable for people who use assistive WAI-ARIA Accessibility supports that is achieved through the attributes like `aria-multiselectable`, `aria-disabled`, `aria-expanded`, `aria-selected` and `aria-hidden`. It helps to provides information about the elements in a document for assistive technology. The component implements the keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/) and tested in major screen readers.
+The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component has been designed keeping in mind the [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/) specifications, by applying the prompt WAI-ARIA roles, states and properties along with the keyboard support. Thus, making it usable for people who use assistive WAI-ARIA Accessibility supports that is achieved through the attributes like `aria-labelledby`, It helps to provides information about the elements in a document for assistive technology. The component implements the keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/) and tested in major screen readers.
 
 ## ARIA attributes
 
 | Property             | Functionality |
 |----------------------|---------------|
-| role                 | **Presentation:** It indicates that the element is used to control presentation. This attribute is added to the Accordion element describing the actual role of the element. <br> **Heading:** It identifies the element as a heading that serves as an Accordion header. This attribute is added to all the Accordion header elements describing the actual role of the element.  |
-| aria-multiselectable | It indicates the expand mode in the Accordion. Default value of this attribute is true. If expand mode value is changed as ‘single’, the attribute value changes to `false`.  |
-| aria-disabled        | It indicates the disabled state of the Accordion and its items.  |
-| aria-expanded        | It indicates the expand state of the Accordion Item. Default value of this attribute is `false`. If an item is expanded, the attribute value changes to ‘true’. |
-| aria-selected        | It indicates the Selection state of the Accordion Item. Default value of this attribute is `false`. If an item is expanded, the attribute value changes to ‘true’.  |
-| aria-hidden          | It indicates the content visible state of the Accordion Item. Default value of this attribute is `true`. If an item content is visible, the attribute value changes to `false`. |
+| role                 | **Button:** Attribute is set to the Accordion header elements to indicate that the element can be used to toggle the visibility of the associated content section, describing the actual role of the element.<br> **Region:** Attribute is set to the Accordion panel elements to create a landmark region that contains the currently expanded accordion panel, describing the actual role of the element.  |
 | aria-labelledby      | Attribute is set to content (panel) and it points to the corresponding Accordion header.|
 | aria-controls        | Attribute is set to the header and it points to the corresponding Accordion content.  |
-| aria-level           | It defines the hierarchical level of an Accordion element with its inner level. |
+| aria-expanded        | Attribute is set to the Accordion header elements to indicates the expand state of the Accordion Item. Default value of this attribute is `false`. If an item is expanded, the attribute value changes to ‘true’. |
+| aria-hidden          | Attribute is set to the Accordion panel elements to indicates the content visible state of the Accordion Item. Default value of this attribute is `true`. If an item content is visible, the attribute value changes to `false`. |
+| aria-disabled        | It indicates the disabled state of the Accordion and its items.  |
 
 ## Keyboard interaction
 
