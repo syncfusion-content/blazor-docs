@@ -53,7 +53,7 @@ The Bullet Chart supports the right-to-left rendering that can be enabled by set
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#orientation) to know about the property value of **BulletChartData**.
+N> Refer to the [code block](#orientation) to know about the property value of **BulletChartData**.
 
 ![Right to Left Flow Direction in Blazor Bullet Chart](images/blazor-bullet-chart-right-to-left-direction.png)
 
@@ -74,7 +74,7 @@ The actual and the target bar supports the linear animation via the [BulletChart
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#orientation) to know about the property value of **BulletChartData**.
+N> Refer to the [code block](#orientation) to know about the property value of **BulletChartData**.
 
 ## Theme
 
@@ -93,7 +93,7 @@ The Bullet Chart supports different type of themes via the [Theme](https://help.
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#orientation) to know about the property value of **BulletChartData**.
+N> Refer to the [code block](#orientation) to know about the property value of **BulletChartData**.
 
 ![Applying Theme to Blazor Bullet Chart](images/blazor-bullet-chart-theme.png)
 
@@ -114,6 +114,6 @@ The Bullet Chart border color can be enabled by setting the [Color](https://help
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#orientation) to know about the property value of **BulletChartData**.
+N> Refer to the [code block](#orientation) to know about the property value of **BulletChartData**.
 
 ![Blazor Bullet Chart with Border](images/blazor-bullet-chart-with-border.png)

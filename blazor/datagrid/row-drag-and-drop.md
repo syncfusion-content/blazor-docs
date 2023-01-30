@@ -69,8 +69,8 @@ The grid row drag and drop allows you to drag and drop grid rows to another grid
 
 ![Row Drag and Drop in Blazor DataGrid](./images/blazor-datagrid-row-drag-and-drop.gif)
 
-> * Selection feature must be enabled for row drag and drop.
-> * Multiple rows can be selected by clicking and dragging inside the grid. For multiple row selection, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property must be set to multiple.
+N> * Selection feature must be enabled for row drag and drop.
+<br/> * Multiple rows can be selected by clicking and dragging inside the grid. For multiple row selection, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property must be set to multiple.
 
 ## Drag and drop within Grid
 
@@ -124,10 +124,11 @@ The grid row drag and drop allows you to drag and drop grid rows on the same gri
 
 The following events are triggered while drag and drop the grid rows.
 
-[OnRowDragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRowDragStart) - Triggers when starts to drag the grid row.<br/>
-[RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDropped) -  Triggers when a drag element is dropped on the target element.
+`RowDragStarting`  - Triggers when starts to drag the grid row.<br/>
+`RowDropped`  -  Triggers when a drag element is dropped on the target element.<br/>
+`RowDropping` - Triggers when the dragged elements are being dropped on the target element.
 
-> For performing row drag and drop action on the datagrid, any one of the columns should be defined as a primary key using the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property.
+N> For performing row drag and drop action on the datagrid, any one of the columns should be defined as a primary key using the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property.
 
 ## Limitations
 

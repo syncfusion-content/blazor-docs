@@ -39,4 +39,4 @@ In the following sample, the color value is set as `four` digit hex code, the la
 
 ![Changing Blazor ColorPicker value](./images/blazor-colorpicker-value.png)
 
-> The [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Value) property supports hex code with or without `#` prefix.
+N> The [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Value) property supports hex code with or without `#` prefix.

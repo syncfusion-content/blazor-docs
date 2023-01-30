@@ -180,7 +180,7 @@ The following table illustrates the HTML attributes and their equivalent Syncfus
 </table>
 <!-- markdownlint-enable MD033 -->
 
-> If you specify both HTML attribute and Syncfusion API in the component, then the Syncfusion API will get higher priority and will be applied to the DOM element.
+N> If you specify both HTML attribute and Syncfusion API in the component, then the Syncfusion API will get higher priority and will be applied to the DOM element.
 
 ```cshtml
 <SfTextBox ID="textbox" name="first-name" title="First name." minlength="15" Autocomplete="AutoComplete.Off"></SfTextBox>

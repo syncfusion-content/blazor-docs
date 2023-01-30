@@ -72,7 +72,7 @@ The following code snippet explains the mapping of duration unit data source fie
 
 ![Blazor Gantt Chart with Duration Unit](images/blazor-gantt-chart-duration-units.png)
 
-> The default value of the `DurationUnit` property is `day`.
+N> The default value of the `DurationUnit` property is `day`.
 
 ## Defining duration unit along with duration field
 
@@ -124,6 +124,6 @@ Duration units for the tasks can also be defined along with the duration values.
 
 ![Blazor Gantt Chart with Duration Units](images/blazor-gantt-chart-duration-unit.png)
 
-> The edit type of the duration column in Gantt Chart is string, to support editing the duration field along with duration units.
+N> The edit type of the duration column in Gantt Chart is string, to support editing the duration field along with duration units.
 
-> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities) to know how to render and configure the Gantt.
+N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities) to know how to render and configure the Gantt.

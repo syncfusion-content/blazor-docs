@@ -31,7 +31,7 @@ If you have your PDF files in the web, you can open it in the viewer using URL.
     }
 }
 ```
-> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/DocumentPath/Load%20PDF%20from%20Url%20-%20Server)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20PDF%20file%20from%20URL)
 
 ## Opening a PDF from Cloud
 
@@ -67,7 +67,7 @@ The following code example shows how to open and load the PDF file stored in Azu
 }
 ```
 
-> **Note**: The **Azure.Storage.Blobs** NuGet package must be installed in your application to use the previous code example.
+N> The **Azure.Storage.Blobs** NuGet package must be installed in your application to use the previous code example.
 
 ```cshtml
 @using Azure.Storage.Files.Shares
@@ -98,7 +98,7 @@ The following code example shows how to open and load the PDF file stored in Azu
 }
 ```
 
-> **Note**: The **Azure.Storage.Files.Shares** NuGet package must be installed in your application to use the previous code example.
+N> The **Azure.Storage.Files.Shares** NuGet package must be installed in your application to use the previous code example.
 
 ## Opening a PDF from database
 
@@ -129,7 +129,7 @@ The following code example shows how to open the PDF file in viewer from SQL Ser
 }
 ```
 
-> **Note**: The **System.Data.SqlClient** package must be installed in your application to use the previous code example. You need to modify the connectionString variable in the previous code example as per the connection string of your database.
+N> The **System.Data.SqlClient** package must be installed in your application to use the previous code example. You need to modify the connectionString variable in the previous code example as per the connection string of your database.
 
 ## Opening a PDF from file system
 
@@ -169,7 +169,7 @@ The following code snippet explains how the PDF file can be loaded in PDF Viewer
     public string DocumentPath { get; set; } = "data:application/pdf;base64," + base64String;
 }
 ```
-> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/DocumentPath/Load%20PDF%20from%20Base64%20-%20Server)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20file%20from%20base%2064%20string)
 
 ## Opening a PDF from stream
 
@@ -196,6 +196,6 @@ You can load a PDF file from stream in PDF Viewer by converting the stream into 
 }
 ```
 
-> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/DocumentPath/Load%20PDF%20from%20Stream%20-%20Wasm)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20file%20from%20memory%20stream)
 
-> **Note**: You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.
+N> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.

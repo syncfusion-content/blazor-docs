@@ -43,7 +43,7 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 
 Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
-> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to `true`. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to true, and this property is obsolete.
+N> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to `true`. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to true, and this property is obsolete.
 
 ### Blazor Server App
 
@@ -115,7 +115,7 @@ await builder.Build().RunAsync();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
+{% highlight c# tabtitle=".NET 5 & .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
 
 using Syncfusion.Blazor;
 
@@ -141,13 +141,13 @@ Checkout the [Blazor Themes topic](https://blazor.syncfusion.com/documentation/a
 
 To add theme to the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and then install it. Then, the theme style sheet from NuGet can be referred as follows,
 
-> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) single NuGet, you don't have to refer [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet. Since style sheets already inside the assets of `Syncfusion.Blazor` NuGet. 
+N> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) single NuGet, you don't have to refer [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet. Since style sheets already inside the assets of `Syncfusion.Blazor` NuGet. 
 
 ### Blazor Server App
 
 * For .NET 6 app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
-* For .NET 5 and .NET 3.X app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For .NET 3.X, .NET 5 and .NET 7 app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
 {% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="3 4 5" %}
@@ -161,7 +161,7 @@ To add theme to the app, open the NuGet package manager in Visual Studio (*Tools
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="3 4 5" %}
+{% highlight cshtml tabtitle=".NET 3.X, .NET 5 & .NET 7 (~/_Host.cshtml)" hl_lines="3 4 5" %}
 
 <head>
     ...
@@ -198,7 +198,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 * For **.NET 6** app, refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
-* For **.NET 5 and .NET 3.X** app, refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For **.NET 3.X, .NET 5 and .NET 7** app, refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
 {% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4 5 6" %}
@@ -213,7 +213,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="4 5 6" %}
+{% highlight cshtml tabtitle=".NET 3.X, .NET 5 & .NET 7 (~/_Host.cshtml)" hl_lines="4 5 6" %}
 
 <head>
     ....
@@ -244,7 +244,7 @@ For Blazor WebAssembly App, refer script in the `<head>` of the **~/index.html**
 {% endhighlight %}
 {% endtabs %}
 
-> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
+N> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by [disabling JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) for better loading performance of the Blazor application.
 
 ## Add Blazor Maps component
 
@@ -293,7 +293,7 @@ You can use the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ![Blazor Maps with GeoJSON Layer](./images/blazor-map.png)
 
-> The "world-map.json" file contains the World map GeoJSON data.
+N> The "world-map.json" file contains the World map GeoJSON data.
 
 ## Bind data source
 
@@ -331,11 +331,11 @@ The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.Ma
 {% endhighlight %}
 {% endtabs %}
 
-> The United Nations Security Council data is referred from [source](https://en.wikipedia.org/wiki/List_of_members_of_the_United_Nations_Security_Council).
+N> The United Nations Security Council data is referred from [source](https://en.wikipedia.org/wiki/List_of_members_of_the_United_Nations_Security_Council).
 
 You should also specify the field names in the shape data and data source to the [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapePropertyPath) and [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeDataPath) properties, respectively. These are used to identify the appropriate shapes and match the specific data source values to them.
 
-> Please [refer to the section](populate-data#data-binding) for more information on data binding.
+N> Please [refer to the section](populate-data#data-binding) for more information on data binding.
 
 {% tabs %}
 {% highlight razor %}
@@ -354,7 +354,7 @@ You should also specify the field names in the shape data and data source to the
 {% endhighlight %}
 {% endtabs %}
 
-> For example, consider field names specified in [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapePropertyPath) and [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeDataPath) have the same value: **"United States"**. So corresponding color, data label and tooltip related settings will be applied to the **United States** shape.
+N> For example, consider field names specified in [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapePropertyPath) and [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeDataPath) have the same value: **"United States"**. So corresponding color, data label and tooltip related settings will be applied to the **United States** shape.
 
 ## Apply color mapping
 
@@ -385,7 +385,7 @@ The color mapping supports customization of shape colors based on the underlying
 
 ![Blazor Maps with Color Mapping](./images/blazor-map-color-mapping.png)
 
-> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
+N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
 ## Adding data labels
 
@@ -415,7 +415,7 @@ Label provides information to users about the shapes, and you can enable label t
 {% endhighlight %}
 {% endtabs %}
 
-> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
+N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
 ![Blazor Maps with Label](./images/blazor-map-label.png)
 
@@ -448,7 +448,7 @@ Title can be added to the Maps to provide quick information to the users about t
 {% endhighlight %}
 {% endtabs %}
 
-> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
+N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
 ![Blazor Maps with Title](./images/blazor-map-title.png)
 
@@ -482,7 +482,7 @@ The legend items are used to denote color mapping categories, and you can show l
 {% endhighlight %}
 {% endtabs %}
 
-> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
+N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
 ![Blazor Maps with Legend](./images/blazor-map-legend.png)
 
@@ -517,11 +517,11 @@ The tooltip can be used when you cannot display information using the data label
 {% endhighlight %}
 {% endtabs %}
 
-> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
+N> Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
 ![Blazor Maps with Tooltip](./images/blazor-map-tooltip.png)
 
-> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Maps).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Maps).
 
 ## See also
 

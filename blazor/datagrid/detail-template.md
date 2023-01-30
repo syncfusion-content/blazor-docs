@@ -9,7 +9,7 @@ documentation: ug
 
 # Detail Template in Blazor DataGrid Component
 
-> Before adding detail template to the datagrid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
+N> Before adding detail template to the datagrid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
 
 To know about **Detail Template** in Blazor DataGrid Component, you can check this video.
 
@@ -327,8 +327,8 @@ By default, detail rows render in collapsed state. You can expand a detail row b
 }
 ```
 
-> * You can expand all the rows by using `ExpandAll` method.
-> * If you want to expand all the rows at initial DataGrid rendering, then use `ExpandAll` method in [dataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event of the DataGrid.
+N> * You can expand all the rows by using `ExpandAll` method.
+<br/> * If you want to expand all the rows at initial DataGrid rendering, then use `ExpandAll` method in [dataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event of the DataGrid.
 
 ## How to access the child component in the detail template
 
@@ -424,7 +424,7 @@ In the following sample, you can get the instance of that particular child gr
 
 ```
 
-> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-set-instance-for-child-component)
+N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-set-instance-for-child-component)
 
 ## Customize detail template icon
 

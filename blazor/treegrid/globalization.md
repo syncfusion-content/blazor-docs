@@ -2378,8 +2378,8 @@ public class TreeData
 
 ![Internationalization in Blazor TreeGrid](images/blazor-treegrid-internationalization.png)
 
-> * In the above sample, **Duration** column is formatted by **NumberFormatOptions**.
-> * By default, **locale** value is **en-US**. In order to change the **en-US** culture to a different culture, set the **SetCulture** method accordingly.
+N> * In the above sample, **Duration** column is formatted by **NumberFormatOptions**.
+<br/> * By default, **locale** value is **en-US**. In order to change the **en-US** culture to a different culture, set the **SetCulture** method accordingly.
 
 ## Right to left (RTL)
 

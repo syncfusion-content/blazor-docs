@@ -82,7 +82,8 @@ After running the above command, **OrdersDetailsContext.cs** and **Orders.cs** f
 
 You can see that OrdersDetailsContext.cs file contains the connection string details in the **OnConfiguring** method.
 
-{% highlight c# hl_lines="25" %}
+{% tabs %}
+{% highlight c# tabtitle="OrdersDetailsContext.cs" hl_lines="25" %}
 
 using System;
 using System.Collections.Generic;
@@ -117,10 +118,12 @@ namespace WebAPICRUDServerApp.Data
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 It is not recommended to have a connection string with sensitive information in the OrdersDetailsContext.cs file, so the connection string is moved to the **appsettings.json** file.
 
-{% highlight json %}
+{% tabs %}
+{% highlight json tabtitle="appsettings.json" %}
 
 {
   "Logging": {
@@ -136,6 +139,7 @@ It is not recommended to have a connection string with sensitive information in 
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Now, the DbContext must be configured using connection string and registered as scoped service using the AddDbContext method in **Startup.cs** for .NET 5 and .NET 3.X application and in **Program.cs** file in .NET 6 application.
 
@@ -183,6 +187,7 @@ To create a Web API controller, right-click the **Controller** folder in the Ser
 
 Now, replace the Web API controller with the following code which contains code to handle CRUD operations in the Orders table.
 
+{% tabs %}
 {% highlight c# tabtitle="OrdersController.cs" %}
 
 using Microsoft.AspNetCore.Mvc;
@@ -238,8 +243,10 @@ namespace WebAPICRUDServerApp
 }
 
 {% endhighlight %}
+{% endtabs %}
 
-For .NET 5 and .NET 3.X applications open **Startup.cs** file and add **MapDefaultControllerRoute** in **Configure** method as follows.
+* For **.NET 6 and .NET 7** applications open **Program.cs** file and add **MapDefaultControllerRoute** in **Configure** method as follows.
+* For **.NET 5 and .NET 3.X** applications open **Startup.cs** file and add **MapDefaultControllerRoute** in **Configure** method as follows.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
@@ -281,11 +288,12 @@ Now, in the **Browse** tab, search and install the Syncfusion.Blazor.Grid NuGet 
 
 ![Add Syncfusion package in Blazor](../images/odata-syncfusion-package.png)
 
-> For this demo, Syncfusion.Blazor(**19.1.0.66**) NuGet package is used. A new **Syncfusion.Blazor** NuGet package with new enhancement has been released in our every-week release and main release. So, you can check and update to the latest versions by using this [link](https://www.nuget.org/packages/Syncfusion.Blazor).
+N> For this demo, Syncfusion.Blazor(**19.1.0.66**) NuGet package is used. A new **Syncfusion.Blazor** NuGet package with new enhancement has been released in our every-week release and main release. So, you can check and update to the latest versions by using this [link](https://www.nuget.org/packages/Syncfusion.Blazor).
 
 Open **_Import.razor** file and add the following namespaces which are required to use Syncfusion Blazor components in this application.
 
-{% highlight razor %}
+{% tabs %}
+{% highlight razor tabtitle="_Import.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -293,8 +301,9 @@ Open **_Import.razor** file and add the following namespaces which are required 
 @using WebAPICRUDServerApp.Data
 
 {% endhighlight %}
+{% endtabs %}
 
-Open **Startup.cs** file in .NET 5 and .NET 3.X applications, **Program.cs** file in .NET 6 application and register the Syncfusion service in the **ConfigureServices** method as follows.
+Open **Startup.cs** file in **.NET 3.X and .NET 5** applications, **Program.cs** file in **.NET 6 and .NET 7** application and register the Syncfusion service in the **ConfigureServices** method as follows.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
@@ -329,23 +338,39 @@ Themes provide life to components. Syncfusion Blazor has different themes. They 
 * Bootstrap
 * High Contrast
 
-In this demo application, the **Bootstrap4** theme will be used. To add the theme, open **Pages/_Host.cshtml** file and add the following CSS reference code.
+In this demo application, the **Bootstrap4** theme will be used. 
 
-{% highlight cshtml  %}
+* For **.NET 6** app, add theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+
+* For **.NET 3.X, .NET 5 and .NET 7** app, add theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
+
+{% tabs %}
+
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
 
 <link href="_content/Syncfusion.Blazor.Themes/fabric.css" rel="stylesheet" />
 
 {% endhighlight %}
 
+{% highlight cshtml tabtitle=".NET 3.X, .NET 5 and .NET 7 (~/_Host.cshtml)" %}
+
+<link href="_content/Syncfusion.Blazor.Themes/fabric.css" rel="stylesheet" />
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Add Syncfusion Blazor DataGrid component to an application
 
 In previous steps, we have successfully configured the Syncfusion Blazor package in the application. Now, we can add the grid component to the **Index.razor** page.
 
-{% highlight c# %}
+{% tabs %}
+{% highlight razor %}
 
 <SfGrid TValue="Orders"></SfGrid>
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Binding data to Blazor DataGrid component using WebApiAdaptor
 
@@ -353,6 +378,7 @@ To consume data from the WebApi Controller, we need to add the **SfDataManager**
 
 [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#web-api-adaptor)
 
+{% tabs %}
 {% highlight razor %}
 
 <SfGrid TValue="Orders">
@@ -360,9 +386,11 @@ To consume data from the WebApi Controller, we need to add the **SfDataManager**
 </SfGrid>
 
 {% endhighlight %}
+{% endtabs %}
 
 Grid columns can be defined by using the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. We are going to create columns using the following code.
 
+{% tabs %}
 {% highlight razor %}
 
 <SfGrid TValue="Orders">
@@ -376,9 +404,11 @@ Grid columns can be defined by using the [GridColumn](https://help.syncfusion.co
 </SfGrid>
 
 {% endhighlight %}
+{% endtabs %}
 
 When you run the application, the `Get()` method will be called in your API controller.
 
+{% tabs %}
 {% highlight c# %}
 
 using System.Collections.Generic;
@@ -408,6 +438,7 @@ namespace WebAPICRUDServerApp
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 The response object from the Web API should contain the properties, `Items` and `Count`, whose values are a collection of entities and the total count of the entities, respectively.
 
@@ -427,6 +458,7 @@ You can enable editing in the grid component using the [GridEditSettings](https:
 Here, we are using **Inline** edit mode and used Toolbar property to show toolbar items for editing.
 We have added the DataGrid Editing and Toolbar code with previous Grid model.
 
+{% tabs %}
 {% highlight razor %}
 
 <SfGrid TValue="Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
@@ -441,8 +473,9 @@ We have added the DataGrid Editing and Toolbar code with previous Grid model.
 </SfGrid>
 
 {% endhighlight %}
+{% endtabs %}
 
-> Normal editing is the default edit mode for the DataGrid component. Set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property of Column as **true** for a particular column, whose value is a unique value for editing purposes.
+N> Normal editing is the default edit mode for the DataGrid component. Set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property of Column as **true** for a particular column, whose value is a unique value for editing purposes.
 
 ### Insert a row
 
@@ -452,9 +485,9 @@ To insert a new row, click the **Add** toolbar button. The new record edit form 
 
 Clicking the **Update** toolbar button will insert the record in the Orders table by calling the following **POST** method of the Web API.
 
-{% highlight c# %}
+{% tabs %}
+{% highlight c# tabtitle="OrdersController.cs" %}
 
-[HttpPost]
 public void Post([FromBody] Orders book)
 {
     _context.Orders.Add(book);
@@ -462,6 +495,7 @@ public void Post([FromBody] Orders book)
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ![Insert Operation in Blazor](../images/odata-add-two.png)
 
@@ -473,9 +507,9 @@ To edit a row, select any row and click the **Edit** toolbar button. The edit fo
 
 Clicking the **Update** toolbar button will update the record in the Orders table by calling the following **PUT** method of the Web API.
 
-{% highlight c# %}
+{% tabs %}
+{% highlight c# tabtitle="OrdersController.cs" %}
 
-[HttpPut]
 public void Put(long id, [FromBody] Orders book)
 {
     Orders _book = _context.Orders.Where(x => x.OrderId.Equals(book.OrderId)).FirstOrDefault();
@@ -486,7 +520,7 @@ public void Put(long id, [FromBody] Orders book)
 }
 
 {% endhighlight %}
-
+{% endtabs %}
 
 ![Update Operation in Blazor](../images/odata-update-two.png)
 
@@ -494,9 +528,9 @@ public void Put(long id, [FromBody] Orders book)
 
 To delete a row, select any row and click the **Delete** toolbar button. Deleting operation will send a **DELETE** request to the Web API with the selected record`s primary key value to remove the corresponding record from the Orders table.
 
-{% highlight c# %}
+{% tabs %}
+{% highlight c# tabtitle="OrdersController.cs" %}
 
-[HttpDelete("{id}")]
 public void Delete(long id)
 {
     Orders _book = _context.Orders.Where(x => x.OrderId.Equals(id)).FirstOrDefault();
@@ -505,5 +539,6 @@ public void Delete(long id)
 }
 
 {% endhighlight %}
+{% endtabs %}
 
-> Find the sample from this [Github](https://github.com/SyncfusionExamples/binding-webapi-services-and-perform-crud) location.
+N> Find the sample from this [Github](https://github.com/SyncfusionExamples/binding-webapi-services-and-perform-crud) location.

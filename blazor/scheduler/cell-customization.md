@@ -65,6 +65,8 @@ The height and width of the Scheduler cells can be customized either to increase
 }
 ```
 
+![Cell Dimensions in Vertical Views in Blazor Scheduler](images/blazor-scheduler-celldimension-verticalviews.png)
+
 ## Setting cell dimensions in Timeline Views
 
 The height and width of the Scheduler cells can be customized either to increase or reduce its size through the `CssClass` property, which overrides the default CSS applied on cells of timeline views.
@@ -106,6 +108,8 @@ The height and width of the Scheduler cells can be customized either to increase
     }
 }
 ```
+
+![Cell Dimensions in Timeline Views in Blazor Scheduler](images/blazor-scheduler-celldimension-timelineviews.png)
 
 ## Customizing cells using CellTemplate
 
@@ -178,7 +182,7 @@ The `CellTemplate` is used to customize the cell background with specific images
 </style>
 
 @code {
-    DateTime CurrentDate = new DateTime(2020, 1, 15);
+    DateTime CurrentDate = new DateTime(2023, 1, 15);
     public class AppointmentData
     {
         public int Id { get; set; }
@@ -194,6 +198,9 @@ The `CellTemplate` is used to customize the cell background with specific images
     }
 }
 ```
+
+![Using CellTemplate in Blazor Scheduler](images/blazor-scheduler-celldimension-celltemplate.png)
+
 ## Customizing cell header in month view
 
 The month header of each date cell in the month view can be customized using the [CellHeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTemplates.html#Syncfusion_Blazor_Schedule_ScheduleTemplates_CellHeaderTemplate)
@@ -213,10 +220,10 @@ The month header of each date cell in the month view can be customized using the
     </ScheduleViews>
 </SfSchedule>
 @code {
-    private DateTime CurrentDate = new DateTime(2022, 1, 6);
+    private DateTime CurrentDate = new DateTime(2023, 1, 6);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2022, 1, 6, 9, 30, 0) , EndTime = new DateTime(2022, 1, 6, 11, 0, 0),
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 1, 6, 9, 30, 0) , EndTime = new DateTime(2023, 1, 6, 11, 0, 0),
         RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5" }
     };   
     public class AppointmentData
@@ -232,6 +239,8 @@ The month header of each date cell in the month view can be customized using the
     }
 }
 ```
+
+![Customizing Cell Header in Blazor Scheduler](images/blazor-scheduler-celldimension-cellheader.png)
 
 ## Customizing cells using OnRenderCell event
 
@@ -258,7 +267,7 @@ The cells can also be customized by using `OnRenderCell` event. In the `OnRender
 </style>
 
 @code{
-    private DateTime CurrentDate = new DateTime(2020, 3, 10);
+    private DateTime CurrentDate = new DateTime(2023, 3, 10);
     public string[] CustomClass = { "custom-class" };
     public void OnRenderCell(RenderCellEventArgs args)
     {
@@ -270,7 +279,7 @@ The cells can also be customized by using `OnRenderCell` event. In the `OnRender
     }
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 10, 9, 30, 0) , EndTime = new DateTime(2020, 3, 10, 12, 0, 0) }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 3, 10, 9, 30, 0) , EndTime = new DateTime(2023, 3, 10, 12, 0, 0) }
     };
     public class AppointmentData
     {
@@ -296,7 +305,7 @@ Providing the `MinDate` and `MaxDate` property with some date values, allows the
 @using Syncfusion.Blazor.Schedule
 
 <p>Setting date</p>
-<SfSchedule TValue="AppointmentData" Height="650px" MinDate="new DateTime(2019, 1, 1)" MaxDate="new DateTime(2030, 12, 31)" @bind-SelectedDate="@CurrentDate">
+<SfSchedule TValue="AppointmentData" Height="650px" MinDate="new DateTime(2023, 1, 2)" MaxDate="new DateTime(2023, 1, 30)" @bind-SelectedDate="@CurrentDate">
     <ScheduleViews>
         <ScheduleView Option="View.Day"></ScheduleView>
         <ScheduleView Option="View.Week"></ScheduleView>
@@ -306,7 +315,7 @@ Providing the `MinDate` and `MaxDate` property with some date values, allows the
     </ScheduleViews>
 </SfSchedule>
 @code{
-    private DateTime CurrentDate = new DateTime(2020, 1, 10);
+    private DateTime CurrentDate = new DateTime(2023, 1, 10);
     public class AppointmentData
     {
         public int Id { get; set; }
@@ -316,8 +325,9 @@ Providing the `MinDate` and `MaxDate` property with some date values, allows the
     }
 }
 ```
+
 ## How to disable multiple cell and row selection in Schedule
 
 By default, the [AllowMultiCellSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowMultiCellSelection) and [AllowMultiRowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowMultiRowSelection) properties of the Schedule are set to true that allows user to select multiple cells and rows. If you want disable the multiple cell/row selection, you can disable the `AllowMultiCellSelection` and `AllowMultiRowSelection` properties.
 
-> By default, the `MinDate` property value is set to new DateTime(1900, 1, 1) and `MaxDate` property value is set to new DateTime(2099, 12, 31). The user can also set the customized `MinDate` and `MaxDate` property values.
+N> By default, the `MinDate` property value is set to new DateTime(1900, 1, 1) and `MaxDate` property value is set to new DateTime(2099, 12, 31). The user can also set the customized `MinDate` and `MaxDate` property values.
