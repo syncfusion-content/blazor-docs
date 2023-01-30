@@ -226,7 +226,7 @@ Two-way is having a bi-directional data flow, i.e., passing the value from the p
 
 {% highlight cshtml %}
 
-{% include_relative code-snippet/data-binding/two-way-binding.razor %}
+{% include_relative code-snippet/value-binding/two-way-binding.razor %}
 
 {% endhighlight %}
 
