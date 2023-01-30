@@ -220,6 +220,18 @@ Here, the DropDownList component is rendered with the TValue as a string type in
 {% endhighlight razor %}
 {% endtabs %}
 
+## Two way binding
+
+Two-way is having a bi-directional data flow, i.e., passing the value from the property to the UI and then from the view (UI) to the property as well. The synchronization of data flow between model and view is achieved using the bind attribute in Blazor. To enable two-way binding for the Syncfusion Blazor DropDownList component, you can use the @bind-Value directive to bind the value of the DropDownList
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/value-binding/two-way-binding.razor %}
+
+{% endhighlight %}
+
+![Blazor DropdownList with Two way binding](./images/value-binding/blazor_dropdown_two-way-binding.png)
+
 ## Properties
 
 ### Index

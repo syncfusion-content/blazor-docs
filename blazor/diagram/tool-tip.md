@@ -179,7 +179,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to set tooltip content for nodes/connectors
 
-A text or a piece of information assigned to the Tooltip’s [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) property will be displayed as the master content of the Tooltip for nodes or connectors.
+A text or a piece of information assigned to the Tooltip’s [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) property will be displayed as the main content of the Tooltip for nodes or connectors.
 
 The following code example sets the tooltip content for the nodes.
 
