@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CheckBox in Blazor TreeView Component | Syncfusion
+title: Expand/Collapse Actions in Blazor TreeView Component | Syncfusion
 description: Checkout and learn here all about Expand/Collapse Actions in Syncfusion Blazor TreeView component and much more details.
 platform: Blazor
 control: TreeView

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CheckBox in Blazor TreeView Component | Syncfusion
+title: Sorting in Blazor TreeView Component | Syncfusion
 description: Checkout and learn here all about Sorting in Syncfusion Blazor TreeView component and much more details.
 platform: Blazor
 control: TreeView

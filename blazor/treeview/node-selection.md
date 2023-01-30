@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CheckBox in Blazor TreeView Component | Syncfusion
+title: Node Selection in Blazor TreeView Component | Syncfusion
 description: Checkout and learn here all about Node Selection in Syncfusion Blazor TreeView component and much more details.
 platform: Blazor
 control: TreeView

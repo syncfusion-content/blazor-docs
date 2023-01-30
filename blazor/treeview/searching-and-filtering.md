@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CheckBox in Blazor TreeView Component | Syncfusion
+title: Searching and Filtering in Blazor TreeView Component | Syncfusion
 description: Checkout and learn here all about Searching and Filtering in Syncfusion Blazor TreeView component and much more details.
 platform: Blazor
 control: TreeView
