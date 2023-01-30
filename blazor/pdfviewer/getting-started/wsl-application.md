@@ -13,7 +13,7 @@ To run the Syncfusion Blazor PDF Viewer in WSL (Windows Subsystem for Linux) mod
 
 **Step 1:** Enable the Windows Subsystem for Linux and the Virtual Machine Platform.
 
-![Create-new-blazor-wsl-app](GettingStarted_images/1.png)
+![Create-new-blazor-wsl-app](GettingStarted_images/turn-features.png)
 
 To enable the Windows Subsystem for Linux (WSL) and the Virtual Machine Platform on Windows, follow these steps:
 
@@ -23,7 +23,7 @@ After your computer restarts, you will be able to install a Linux distribution f
 
 **Step 2:** Install the `Ubuntu`
 
-![Create-new-blazor-wsl-app](GettingStarted_images/2.png)
+![Create-new-blazor-wsl-app](GettingStarted_images/install-ubuntu.png)
 
 Ubuntu can be installed on a Windows machine through the Microsoft Store. Here are the steps to do so:
 
@@ -32,6 +32,8 @@ Open the Start menu and search for `Control Panel`. Click on `Programs`, then cl
 Once the installation is complete, open the Windows search. In the terminal, type `Ubuntu` and press enter. This will launch the Ubuntu terminal inside of Windows.
 
 On Ubuntu, create a new user with a username and password. 
+
+![Create-new-blazor-wsl-app](GettingStarted_images/username-password.png)
 
 **Step 3:** Install the dotnet framework for running the WSL (Windows Subsystem for Linux) in the project by running the following code one by one. 
 
@@ -49,7 +51,7 @@ On Ubuntu, create a new user with a username and password. 
 
 Check the comment dotnet --info and it should come like below
 
-![Create-new-blazor-wsl-app](GettingStarted_images/3.png)
+![Create-new-blazor-wsl-app](GettingStarted_images/dotnet-info.png)
 
 If the above result is not shown, Please run the comments below or follow the steps in the link below to uninstall and reinstall dotnet. 
 ```
@@ -70,9 +72,9 @@ If the above result is not shown, Please run the comments below or follow the st
 
 N> Facing any issue while running in WSL (Windows Subsystem for Linux) mode use the following instruction to resolve the issue.
 
-If the sample does not load the PDF file and throws an exception like below in the console window,
+If the sample does not load the PDF file and throws an exception
 
-![Create-new-blazor-wsl-app](GettingStarted_images/4.png)
+![Create-new-blazor-wsl-app](GettingStarted_images/exception.png)
 
 Use the following codes to install the dependence need for our Blazor PDF Viewer run to fix the issue.
 
@@ -84,7 +86,7 @@ Open the Ubuntu comment window and type the following comments.
 Blazor PDF Viewer uses libdl.so. It has a different name in different WSL Linux versions. need to check its presence in the
 \wsl.localhost\Ubuntu\usr\lib\x86_64-linux-gnu location like below.
 
-![Create-new-blazor-wsl-app](GettingStarted_images/5.png)
+![Create-new-blazor-wsl-app](GettingStarted_images/libdl.png)
 
 If it’s in different name like libdl.so.4 then change the comment like below.
 
@@ -104,4 +106,4 @@ Then, in the Ubuntu command window, run the following commands one by one to ins
 
 Close the project, reopen it, and run it in WSL mode. It will run properly.
 
-![Create-new-blazor-wsl-app](GettingStarted_images/6.png)
+![Create-new-blazor-wsl-app](GettingStarted_images/final.png)
