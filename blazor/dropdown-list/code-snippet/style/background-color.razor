@@ -1,18 +1,16 @@
 @using Syncfusion.Blazor.DropDowns;
 
-<SfDropDownList  TValue="string" TItem="Games" Placeholder="Select a game" DataSource="@LocalData" Value="@Value" >
+<SfDropDownList TValue="string" TItem="Games" Placeholder="Select a game" DataSource="@LocalData">
   <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
 </SfDropDownList>
 
-
 @code {
-    public class Games
-    {  
-        public string ID { get; set; }
-        public string Text { get; set; }
-    }
-
-    List<Games> LocalData = new List<Games> {
+  public class Games
+  {  
+    public string ID { get; set; }
+    public string Text { get; set; }
+  }
+  List<Games> LocalData = new List<Games> {
     new Games() { ID= "Game1", Text= "American Football" },
     new Games() { ID= "Game2", Text= "Badminton" },
     new Games() { ID= "Game3", Text= "Basketball" },
@@ -23,8 +21,12 @@
     new Games() { ID= "Game8", Text= "Rugby"},
     new Games() { ID= "Game9", Text= "Snooker" },
     new Games() { ID= "Game10", Text= "Tennis"},
-    };
-
-    public string Value { get; set; } = "Game6";
-
+  };
 }
+
+<style>
+.e-dropdownbase .e-list-item.e-item-focus, .e-dropdownbase .e-list-item.e-active, .e-dropdownbase .e-list-item.e-active.e-hover, .e-dropdownbase .e-list-item.e-hover {
+    background-color: #1f9c99;
+    color: #2319b8;
+}
+</style>

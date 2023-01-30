@@ -11,6 +11,18 @@ documentation: ug
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
+## Read-only mode
+
+Specify the boolean value to the [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Readonly) whether the DropDownList allows the user to change the value or not.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/readonly-mode.razor %}
+
+{% endhighlight %}
+
+![Blazor DropDownList with Readonly mode](./images/style/blazor_combobox_readonly-mode.png)
+
 ## Customizing the appearance of container element
 
 Use the following CSS to customize the appearance of container element.
@@ -135,21 +147,3 @@ Use the following CSS to customize the appearance of popup element.
     min-height: 29px;
 }
 ```
-
-## Properties
-
-### ShowClearButton
-
-Specifies whether to show or hide the clear button.
-
-When the clear button is clicked, `Value`, `Text`, and `Index` properties are reset to null.
-
-Default value of [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_ShowClearButton) is `true`.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/style/showClearButton-property.razor %}
-
-{% endhighlight %} 
-
-![Blazor ComboBox with ShowClearButton property](./images/style/blazor_combobox_show-clear-button.png)
