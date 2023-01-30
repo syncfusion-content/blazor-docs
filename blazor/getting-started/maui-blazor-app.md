@@ -183,17 +183,39 @@ In the below code images are added under `images` folder in `wwwroot` folder.
 
 ## Troubleshooting
 
-* How to solve "The project doesn't know how to run the profile Windows Machine" while running MAUI Blazor App?
+### How to solve deployment errors in Windows?
 
-    * This issue has been fixed in most recent release of Visual Studio. For more details refer [here](https://developercommunity.visualstudio.com/t/the-project-doesnt-know-how-to-run-the-profile-win/1530395)
-    
-    * You can also fix this error by installing [Single-project MSIX Packaging Tools](https://marketplace.visualstudio.com/items?itemName=ProjectReunion.MicrosoftSingleProjectMSIXPackagingToolsDev17).
+If you get error dialog like "There were deployment errors", Enable developer mode. For more details refer [Enable your device for development](https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development).
 
-* How to solve deployment errors?
+![Enable developer mode in system settings](images/maui/enable-developer-mode.png)
 
-    If you get error dialog like "There were deployment errors", Enable developer mode. For more details refer [Enable your device for development](https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development).
+<hr/> 
 
-   ![Enable developer mode in system settings](images/maui/enable-developer-mode.png)
+### How to solve deployment errors in iOS?
+
+In iOS code is statically compiled ahead of time, so, configure Syncfusion Blazor assemblies in `MtouchExtraArgs` tag for the iOS Release configuration in the project when deploy on a real device. 
+
+Below are possible errors if `MtouchExtraArgs` tag is not configured,
+1. App won't load on real device with error "An unhandled error has occurred" after you compile in Release mode with Visual Studio and deploy to real device.
+2. AOT related failures like [`Attempting to JIT compile method while running in aot-only mode`](https://github.com/xamarin/xamarin-macios/issues/12416)
+
+ ```
+<PropertyGroup Condition="$(TargetFramework.Contains('-ios')) And $(Configuration.Contains('Release')) ">
+  <UseInterpreter>true</UseInterpreter>
+  <MtouchExtraArgs>--linkskip=Syncfusion.Blazor.Themes --linkskip=Syncfusion.Blazor.Inputs</MtouchExtraArgs>
+</PropertyGroup>
+ ```
+
+Reference:
+* [Could not AOT the assembly of my App](https://learn.microsoft.com/en-us/answers/questions/396055/could-not-aot-the-assembly-of-my-app)
+
+<hr/>
+
+### How to solve "The project doesn't know how to run the profile Windows Machine" while running MAUI Blazor App?
+
+* This issue has been fixed in most recent release of Visual Studio. For more details refer [here](https://developercommunity.visualstudio.com/t/the-project-doesnt-know-how-to-run-the-profile-win/1530395).
+
+* You can also fix this error by installing [Single-project MSIX Packaging Tools](https://marketplace.visualstudio.com/items?itemName=ProjectReunion.MicrosoftSingleProjectMSIXPackagingToolsDev17).
 
 ## See also
 
