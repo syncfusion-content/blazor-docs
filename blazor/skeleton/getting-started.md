@@ -284,7 +284,13 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 ## Initialize as CSS component
 
-You can customize the style of a Skeleton component by using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_CssClass). The appearance of Blazor Skeleton can be customized by changing the wave color, background color, width, and height.
+The Blazor Skeleton component can be initialized as a CSS component by utilizing predefined class names, and then you can apply CSS styles to control the width and height of the skeleton shape.
+
+| Class | Description |
+| -------- | -------- |
+| e-skeleton | Defines the Skeleton class. |
+| e-skeleton-text |  Defines the Skeleton shape as text. |
+| e-shimmer-pulse |  Defines the animation as pulse effect. |
 
 {% tabs %}
 {% highlight razor %}

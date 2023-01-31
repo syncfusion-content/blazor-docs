@@ -281,72 +281,13 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
         </SpeedDialItems>
     </SfSpeedDial>
 </div>
+
 {% endhighlight %}
 {% endtabs %}
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor SpeedDial` component will be rendered in the default web browser.
 
 ![Blazor SpeedDial Component](./images/blazor-speeddial-component.png)
-
-## Linear and radial display modes
-
-You can use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Mode) property to either display the menu in linear order like a list or like a radial menu in radial (circular) direction.
-
-{% tabs %}
-{% highlight razor %}
-
-<div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
-    <SfSpeedDial Target="#target" Position="FabPosition.BottomLeft" Mode="SpeedDialMode.Radial" OpenIconCss="e-icons e-edit">
-        <SpeedDialItems>
-            <SpeedDialItem IconCss="e-icons e-cut"/>
-            <SpeedDialItem IconCss="e-icons e-copy"/>
-            <SpeedDialItem IconCss="e-icons e-paste"/>
-        </SpeedDialItems>
-    </SfSpeedDial>
-    <SfSpeedDial Target="#target" Position="FabPosition.BottomRight" Mode="SpeedDialMode.Linear" OpenIconCss="e-icons e-edit">
-        <SpeedDialItems>
-            <SpeedDialItem IconCss="e-icons e-cut" Text="Cut"/>
-            <SpeedDialItem IconCss="e-icons e-copy" Text="Copy"/>
-            <SpeedDialItem IconCss="e-icons e-paste" Text="Paste"/>
-        </SpeedDialItems>
-    </SfSpeedDial>
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor SpeedDial Component](./images/blazor-speeddial-linear-sample.png)
-![Blazor SpeedDial Component](./images/blazor-speeddial-mode-radial-sample.png)
-
-
-## Item clicked event
-
-The speed dial control triggers the [`ItemClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_ItemClicked) event with [`SpeedDialItemEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SpeedDialItemEventArgs.html) argument when an action item is clicked.
-You can use this event to perform the required action.
-
-{% tabs %}
-{% highlight razor %}
-
-<div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
-    <SfSpeedDial Target="#target" OpenIconCss="e-icons e-edit" ItemClicked="ItemEventClick">
-        <SpeedDialItems>
-            <SpeedDialItem IconCss="e-icons e-cut" Text="Cut"/>
-            <SpeedDialItem IconCss="e-icons e-copy" Text="Copy"/>
-            <SpeedDialItem IconCss="e-icons e-paste" Text="Paste"/>
-        </SpeedDialItems>        
-    </SfSpeedDial>
-</div>
-
-@code{
-    public void ItemEventClick(SpeedDialItemEventArgs args)
-    {
-        // Here, you can call your desired action.        
-    }
-}
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor SpeedDial Component](./images/blazor-speeddial-event-sample.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/SpeedDial).
 
