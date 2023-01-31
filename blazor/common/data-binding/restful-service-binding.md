@@ -143,7 +143,7 @@ It is not recommended to have a connection string with sensitive information in 
 Now, the DbContext must be configured using connection string and registered as scoped service using the AddDbContext method in **Startup.cs**.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
 
 builder.Services.AddDbContext<OrdersDetailsContext>(option =>
                 option.UseSqlServer(builder.Configuration.GetConnectionString("OrdersDetailsDatabase")));
@@ -282,7 +282,7 @@ Add the following line in the **launchSettings.json** file.
 Open **Startup.cs** file in .NET 5 and .NET 3.X applications, **Program.cs** file in .NET 6 application and configure by referring to the following codes.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 6 (~/Program.cs)" %}
 
 var builder = WebApplication.CreateBuilder(args);
 
