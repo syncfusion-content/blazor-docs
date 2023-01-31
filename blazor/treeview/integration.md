@@ -1039,3 +1039,95 @@ In the following example, the **NavigateUrl** field is mapped to move from one p
 </style>
 
 ```
+
+## Blazor Error Boundary
+
+The Blazor Error Boundary component is a tool for handling and recovering from runtime errors in Blazor applications, similar to the try-catch concept in traditional programming. The Error Boundary component envelops a piece of the Blazor component tree, capturing any exceptions that occur within that tree. When an error is detected, the Error Boundary component can opt to display a substitute user interface instead of the problematic component tree, maintaining the application's stability and avoiding the display of a "white screen of death".
+
+In the sample provided, the code snippet for the [Error Boundary component](https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/handle-errors?view=aspnetcore-7.0) with Blazor TreeView is shown.
+
+```cshtml 
+// MainLayout razor page
+
+<ErrorBoundary @ref="errorBoundary">
+    <ChildContent>
+        @Body
+    </ChildContent>
+    <ErrorContent Context="Exception">
+        <div class="alert alert-primary">
+            <h3>@Exception.GetType();</h3>
+            <h3>@Exception.Message;</h3>
+            <button class="btn btn-info" @onclick="()=> errorBoundary.Recover()"> Clear </button>
+        </div>
+    </ErrorContent>
+</ErrorBoundary>
+
+@code {
+    private ErrorBoundary? errorBoundary;
+
+    protected override void OnInitialized()
+    {
+        errorBoundary = new ErrorBoundary();
+    }
+}
+
+// Index razor page
+
+@using Syncfusion.Blazor.Navigations
+
+<SfTreeView TValue="MailItem">
+    <TreeViewFieldsSettings TValue="MailItem" Id="Id" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
+</SfTreeView>
+@code {
+
+    public class MailItem
+    {
+        public string Id { get; set; }
+        public string ParentId { get; set; }
+        public string FolderName { get; set; }
+        public bool Expanded { get; set; }
+        public bool HasSubFolders { get; set; }
+    }
+    List<MailItem> MyFolder = new List<MailItem>();
+    List<MailItem> MyFolder1 = new List<MailItem>();
+    protected override void OnInitialized()
+    {
+        //throw new ArgumentException();
+        base.OnInitialized();
+        MyFolder.Add(new MailItem
+            {
+                Id = "1",
+                FolderName = "Inbox",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                Id = "2",
+                ParentId = "1",
+                FolderName = "Categories",
+                Expanded = true,
+                HasSubFolders = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                Id = "3",
+                ParentId = "2",
+                FolderName = "Primary"
+            });
+        MyFolder.Add(new MailItem
+            {
+                Id = "4",
+                ParentId = "2",
+                FolderName = "Social"
+            });
+        MyFolder.Add(new MailItem
+            {
+                Id = "5",
+                ParentId = "2",
+                FolderName = "Promotions"
+            });
+    }
+}
+
+```
