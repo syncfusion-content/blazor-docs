@@ -48,7 +48,7 @@ Refer to the following steps to download the custom resources in CRG:
     * For **Blazor WASM App**, reference custom interop script in `~/wwwroot/index.html` file. 
     * For **Blazor Server App**, reference custom interop script in 
         * `~/Pages/_Layout.cshtml` file for `.NET 6` project
-        * `~/Pages/_Host.cshtml` file for `.NET 5 and .NET Core 3.X` project.
+        * `~/Pages/_Host.cshtml` file for `.NET 3.X, .NET 5 and .NET 7` project.
 
     ```html
     <head>
