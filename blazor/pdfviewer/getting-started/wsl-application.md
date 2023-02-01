@@ -17,7 +17,7 @@ To run the Syncfusion Blazor PDF Viewer in WSL (Windows Subsystem for Linux) mod
 
 To enable the Windows Subsystem for Linux (WSL) and the Virtual Machine Platform on Windows, follow these steps:
 
-Open the Start menu and search for `Control Panel`. Click on `Programs`, then click on `Turn Windows features on or off`. Scroll down and check the box next to `Windows Subsystem for Linux` and `Virtual Machine Platform`. Click `OK` and restart your machine.
+Open the Start menu and search for `Control Panel`. Click on `Programs`, then click on `Turn Windows features on or off`. Scroll down and select the boxes next to `Windows Subsystem for Linux` and `Virtual Machine Platform`. Finally, Click `OK` and restart your machine.
 
 After your computer restarts, you will be able to install a Linux distribution from the Microsoft Store, such as Ubuntu, and run Linux commands directly in Windows.
 
