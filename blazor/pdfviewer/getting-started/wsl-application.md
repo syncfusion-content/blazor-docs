@@ -25,13 +25,13 @@ After restarting your computer, you can install a Linux distribution like Ubuntu
 
 ![Create-new-blazor-wsl-app](GettingStarted_images/ubuntu-install.png)
 
-Ubuntu can be installed on a Windows machine through the Microsoft Store. Here are the steps to do so:
+Ubuntu can be installed on a Windows machine by the Microsoft Store, follow these steps:
 
 Open the Start menu and search for `Control Panel`. Click on `Programs`, then click on `Turn Windows features on or off`. Scroll down and check the boxes next to `Windows Subsystem for Linux` and `Virtual Machine Platform`. Click `OK` and restart your machine.
 
-Once the installation is complete, open the Windows search. In the terminal, type `Ubuntu` and press enter. This will launch the Ubuntu terminal inside of Windows.
+Once the installation is completed, open the Windows search. In the terminal, type `Ubuntu` and press Enter. This will launch the Ubuntu terminal within Windows.
 
-On Ubuntu, create a new user with a username and password. 
+On Ubuntu, create a new user with a username and password.
 
 ![Create-new-blazor-wsl-app](GettingStarted_images/username-password.png)
 
