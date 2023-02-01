@@ -163,7 +163,7 @@ The Maps component provides an option to handle the labels when a label intersec
 
 Any HTML elements can be added as a template in the data labels by using the [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelTemplate) property of `DataLabelSettings` in the Maps component.
 
-N>The properties of data label such as, `SmartLabelMode` , `IntersectionAction`, `Border`, `Fill`, `Opacity` and `TextStyle` properties are not applicable to `LabelTemplate` property. The styles can be applied to the label template using the CSS styles of the HTML element.
+N>The properties of data label such as, `SmartLabelMode` , `IntersectionAction`, `Fill` and `Opacity` and classes such as `MapsLayerDataLabelBorder` and `MapsLayerDataLabelTextStyle` are not applicable to `LabelTemplate` property. The styles can be applied to the label template using the CSS styles of the HTML element.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
