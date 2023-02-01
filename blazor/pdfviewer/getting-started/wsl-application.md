@@ -49,11 +49,12 @@ On Ubuntu, create a new user with a username and password.
 
 ```
 
-Check the comment dotnet --info and it should come like below
+Check the comment dotnet --info and it should come as follows.
 
 ![Create-new-blazor-wsl-app](GettingStarted_images/dotnet-info.png)
 
-If the above result is not shown, Please run the comments below or follow the steps in the link below to uninstall and reinstall dotnet. 
+If the above result is not shown, please run the comments below 
+
 ```
     sudo apt remove dotnet*
     sudo apt remove aspnetcore*
@@ -66,35 +67,33 @@ If the above result is not shown, Please run the comments below or follow the st
     sudo apt-get install -y dotnet-sdk-6.0
     dotnet
     dotnet --info
-
 ```
 **Step 4:** Run the sample in WSL (Windows Subsystem for Linux) mode and it will run our Blazor PDF Viewer.
 
-N> Facing any issue while running in WSL (Windows Subsystem for Linux) mode use the following instruction to resolve the issue.
+N> If you encounter any issues while running in WSL (Windows Subsystem for Linux) mode, use the following instructions to resolve them.
 
-If the sample does not load the PDF file and throws an exception
+If the sample does not load the PDF file and throws an exception.
 
 ![Create-new-blazor-wsl-app](GettingStarted_images/exception.png)
 
-Use the following codes to install the dependence need for our Blazor PDF Viewer run to fix the issue.
+To resolve the issue, use the following codes to install the dependencies required for our Blazor PDF Viewer to run.
 
 Open the Ubuntu comment window and type the following comments.
 
 ```
     sudo cp -u /lib/x86_64-linux-gnu/libdl.so.2 /lib/x86_64-linux-gnu/libdl.so
 ```
-Blazor PDF Viewer uses libdl.so. It has a different name in different WSL Linux versions. need to check its presence in the
-\wsl.localhost\Ubuntu\usr\lib\x86_64-linux-gnu location like below.
+Blazor PDF Viewer uses libdl.so. It has a different name in different WSL Linux versions. To ensure its presence, check the following \wsl.localhost\Ubuntu\usr\lib\x86_64-linux-gnu location.
 
 ![Create-new-blazor-wsl-app](GettingStarted_images/libdl.png)
 
-If it’s in different name like libdl.so.4 then change the comment like below.
+If it is in a different name like libdl.so.4, then change the comment as follows.
 
 ```
 sudo cp -u /lib/x86_64-linux-gnu/libdl.so.4 /lib/x86_64-linux-gnu/libdl.so
 ```
 
-Then, in the Ubuntu command window, run the following commands one by one to install all necessary Blazor PDF Viewer dependencies for a Linux run. 
+Then, in the Ubuntu command window, run the following commands one by one to install all necessary Blazor PDF Viewer dependencies for a Linux run.
 
 ```
     sudo apt-get install libfontconfig1
