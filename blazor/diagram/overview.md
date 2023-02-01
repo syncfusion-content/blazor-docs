@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Localization in the Blazor Diagram Component | Syncfusion
-description: Checkout and learn  all about Localization in the Syncfusion Blazor Diagram component and much more.
+title: Overview in the Blazor Diagram Component | Syncfusion
+description: Checkout and learn  all about OverView in the Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -30,3 +30,7 @@ documentation: ug
 * Overview control: Displays a small preview of the full diagram page, which allows you to improve the navigation.
 * Localization: Localizes every static text in the control to any supported language.
 * DrawingTool: Draw all kinds of built-in nodes and connect them with connectors interactively by just clicking and dragging on the drawing area.
+* Printing: Print diagrams from the browser. Users can also customize the page size, orientation, and page margin, and fit a diagram to a single page.
+* Exporting: You can export a diagram to different image files such as PNG, JPEG, and SVG.
+* Tooltip: Use tooltips to provide additional information about a node.
+* Context menu: Easily map frequently used commands to the context menu.
