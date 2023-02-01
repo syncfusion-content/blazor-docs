@@ -82,7 +82,7 @@ In the following example, the value of `LabelPath` property is set from the fiel
 
 The following properties and classes are available in the `MapsDataLabelSettings` to customize the data label of the Maps component.
 
-* [MapsLayerDataLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerDataLabelBorder.html) - To customize the color and width for the border of the data labels in Maps.
+* [MapsLayerDataLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerDataLabelBorder.html) - To customize the color, width and opacity for the border of the data labels in Maps.
 * [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_Fill) - To apply the color of the data labels in Maps.
 * [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_Opacity) - To customize the transparency of the data labels in Maps.
 * [MapsLayerDataLabelTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerDataLabelTextStyle.html) - To customize the text style of the data labels in Maps.
@@ -99,6 +99,8 @@ The following properties and classes are available in the `MapsDataLabelSettings
                 <MapsLayerDataLabelTextStyle Size="17px" FontStyle="Sans-serif" FontWeight="normal">
                 </MapsLayerDataLabelTextStyle>
             </MapsDataLabelSettings>
+            <MapsLayerTooltipSettings Visible="true" ValuePath="name">
+            </MapsLayerTooltipSettings>
             <MapsShapeSettings Autofill="true"></MapsShapeSettings>
         </MapsLayer>
     </MapsLayers>
