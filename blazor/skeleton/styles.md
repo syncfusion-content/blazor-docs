@@ -37,15 +37,3 @@ You can customize the style of a Skeleton component by using [CssClass](https://
 {% endtabs %}
 
 ![Blazor Skeleton CssClass](./images/Blazor-skeleton-css-customize.png)
-
-## Visible
-
-You can use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Visible) property which defines the visible state of Skeleton.
-
-{% tabs %}
-{% highlight razor %}
-
-<SfSkeleton Shape=SkeletonType.Circle Width="60px" Visible=false></SfSkeleton>
-
-{% endhighlight %}
-{% endtabs %}

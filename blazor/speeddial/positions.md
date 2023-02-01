@@ -65,7 +65,7 @@ The built-in position values of SpeedDial are as follows:
 
 ```
 
-![Blazor SpeedDial Position](./images/Blazor-SpeedDial-Position.png)
+![Blazor SpeedDial component with position](./images/Blazor-SpeedDial-Position.png)
 
 ## Custom Positioning
 
@@ -104,6 +104,6 @@ You can define the custom position of the SpeedDial by override the `top`, `left
 
 ```
 
-![Blazor FAB Component with Custom position](./images/CustomPosition.png)
+![Blazor SpeedDial component with custom position](./images/CustomPosition.png)
 
 N> You can use the [RefreshPositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_RefreshPositionAsync) method when the `Target`position is changed or resized.

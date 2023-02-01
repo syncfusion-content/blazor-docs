@@ -309,7 +309,7 @@ The Blazor Skeleton component can be initialized as a CSS component by utilizing
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Skeleton CssClass](./images/Blazor-skeleton-css-customize.png)
+![Blazor Skeleton Css component](./images/blazor-skeleton-css-component.png)
 
 ## Visible
 
@@ -347,7 +347,7 @@ The [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notificati
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Skeleton Component](./images/blazor-skeleton-shape-sample.png)
+![Blazor Skeleton component with different shapes](./images/blazor-skeleton-shape-sample.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Skeleton).
 

@@ -1,22 +1,23 @@
 ---
 layout: post
-title: Styles in Blazor Floating Action Button Component | Syncfusion
-description: Checkout and learn here all about Styles in Syncfusion Blazor Floating Action Button component and much more.
+title: Appearance in Blazor FAB Component | Syncfusion
+description: Checkout and learn here all about Appearance in Syncfusion Blazor Floating Action Button component and much more.
 platform: Blazor
 control: Floating Action Button
 documentation: ug
 ---
 
-# Styles in Blazor Floating Action Button Component
+# Appearance in Blazor Floating Action Button Component
 
-This section explains the different styles of Floating Action Button.
+You can also customize the appearance of Floating Action Button component.
 
-## FAB styles
+## Built-in styles
 
 The Blazor Floating Action Button supports the following predefined styles that can be defined using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property. You can customize by replacing the `CssClass` property with the below defined class.
 
 | Class | Description |
 | -------- | -------- |
+| e-primary | Used to represent a primary action. |
 | e-success | Used to represent a positive action. |
 | e-outline |  Used to represent an appearance of button with outline. |
 | e-info |  Used to represent an informative action. |
@@ -31,7 +32,7 @@ The Blazor Floating Action Button supports the following predefined styles that 
 
 ```
 
-![Blazor FAB Component with Styles](./images/Style.png)
+![Blazor FAB Component with built-in styles](./images/Style.png)
 
 N> Predefined Floating Action Button styles provide only the visual indication. So, Floating Action Button [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_Content) property should define the Floating Action Button style for the users of assistive technologies such as screen readers.
 
@@ -47,7 +48,9 @@ To modify the Floating Action Button appearance, you need to override the defaul
 |.e-fab.e-btn:active|To customize the FAB on active.|
 |.e-fab.e-btn-icon|To customize the style of FAB icon.|
 
-## Show text on hover
+![Blazor FAB Component with style customization](images/blazor-rating-disabled.png)
+
+## Customizing the FAB content.
 
 By using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass), you can customize the Floating Action Button to show text on hover with applied transition effect.
 
@@ -80,5 +83,4 @@ By using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Butt
 
 ```
 
-![Blazor FAB Component with Hover](./images/onhover.png)
-
+![Blazor FAB Component with customizing the content](./images/onhover.png)

@@ -9,67 +9,33 @@ documentation: ug
 
 # Shapes in Blazor Skeleton Component
 
-The Skeleton component support various built-in shape variants to design layout of the page. You can use the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Shape) property to create a preview of any layout.
+The Skeleton component supports various built-in shape variants to design the layout of the page. You can use the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Shape) property to display the skeleton in various shapes, such as circle, square, rectangle, and text and create a preview of any layout.
 
 The Skeleton component supports the following content shapes:
 
-## Circle skeleton shape
-
 {% tabs %}
 {% highlight razor %}
 
-@using Syncfusion.Blazor.Notifications
-
-<SfSkeleton Shape=SkeletonType.Circle Width="48px"></SfSkeleton>
+<div style="width: 200px">
+    <SfSkeleton Shape=SkeletonType.Circle Width="48px" CssClass="custom-css"></SfSkeleton>
+    <SfSkeleton Shape="SkeletonType.Square" Width="48px"></SfSkeleton>
+    <br/><br/>
+    <SfSkeleton Shape="SkeletonType.Text" Height="15px"></SfSkeleton>
+    <br/><br/>
+    <SfSkeleton Shape="SkeletonType.Rectangle" Height="50px" Width="100%" ></SfSkeleton>
+</div>
+<style>
+    .custom-css {
+        margin-right: 30px;
+    }
+</style>
 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Skeleton Circle Shape](./images/Blazor-skeleton-circle-shape.png)
+![Blazor Skeleton component with different shapes](./images/blazor-skeleton-shape-sample.png)
 
-## Square skeleton shape
-
-{% tabs %}
-{% highlight razor %}
-
-@using Syncfusion.Blazor.Notifications
-
-<SfSkeleton Shape=SkeletonType.Square Width="48px"></SfSkeleton>
-
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor Skeleton Square Shape](./images/Blazor-skeleton-square.png)
-
-## Rectangle skeleton shape
-
-{% tabs %}
-{% highlight razor %}
-
-@using Syncfusion.Blazor.Notifications
-
-<SfSkeleton Shape=SkeletonType.Rectangle Height="50px"></SfSkeleton>
-
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor Skeleton Rectangle Shape](./images/Blazor-skeleton-rectangle-shape.png)
-
-## Text skeleton shape
-
-{% tabs %}
-{% highlight razor %}
-
-@using Syncfusion.Blazor.Notifications
-
-<SfSkeleton Shape=SkeletonType.Text Height="15px"></SfSkeleton>
-
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor Skeleton Text Shape](./images/Blazor-skeleton-text-shape.png)
-
-Below example demonstrates the above functionalities of a Skeleton component.
+Below example demonstrates the use case example of a Skeleton component.
 
 {% tabs %}
 {% highlight razor %}
@@ -123,4 +89,4 @@ Below example demonstrates the above functionalities of a Skeleton component.
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Skeleton Shapes](./images/Blazor-skeleton-shape.png)
+![Blazor Skeleton component with different shapes](./images/Blazor-skeleton-shape.png)

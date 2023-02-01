@@ -25,7 +25,7 @@ The [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfF
 
 ```
 
-![Blazor FAB Component with Target](./images/blazor-fab-component.png)
+![Blazor FAB component with target](./images/blazor-fab-component.png)
 
 ## Built-in positions
 
@@ -82,7 +82,7 @@ Below example demonstrates Bottom Left position of FAB.
 
 ```
 
-![Blazor FAB Component with Bottom Left Position](./images/BottomLeftPosition.png)
+![Blazor FAB component with bottom left position](./images/BottomLeftPosition.png)
 
 Below example demonstrates different supported positions of FAB.
 
@@ -131,7 +131,7 @@ Below example demonstrates different supported positions of FAB.
 
 ```
 
-![Blazor FAB Component with different positions](./images/FabPositions.png)
+![Blazor FAB component with different positions](./images/FabPositions.png)
 
 ## Custom Positioning
 
@@ -156,6 +156,6 @@ You can define the custom position of the Floating Action Button by override the
 
 ```
 
-![Blazor FAB Component with Custom position](./images/CustomPosition.png)
+![Blazor FAB component with custom position](./images/CustomPosition.png)
 
 N> You can use the [RefreshPositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#Syncfusion_Blazor_Buttons_SfFab_RefreshPositionAsync) method when the `Target`position is changed or resized.
