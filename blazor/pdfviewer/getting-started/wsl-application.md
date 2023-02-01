@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor PDF Viewer Component in WSL mode
 
-To run the Syncfusion Blazor PDF Viewer in WSL (Windows Subsystem for Linux) mode, you will need to take the following steps:
+To run the Syncfusion Blazor PDF Viewer in WSL (Windows Subsystem for Linux) mode, follow these steps:
 
 **Step 1:** Enable the Windows Subsystem for Linux and the Virtual Machine Platform.
 
