@@ -20,7 +20,7 @@ You can refer the Syncfusion Blazor scripts through the CDN resources.
 N> From 2022 Vol1 (20.1) version, JavaScript isolation is marked as obsolete and disabled by default to refer scripts externally. Refer [Disable JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) topic to disable for earlier versions to refer scripts externally.
 
 * For **Blazor WASM App**, reference scripts in `~/wwwroot/index.html` file. 
-* For **Blazor Server App**, reference scripts in `~/Pages/_Layout.cshtml` file for `.NET 6` project and in `~/Pages/_Host.cshtml` file for `.NET 5 and .NET Core 3.X` project.
+* For **Blazor Server App**, reference scripts in `~/Pages/_Layout.cshtml` file for `.NET 6` project and in `~/Pages/_Host.cshtml` file for `.NET Core 3.X, .NET 5 and .NET 7` project.
 
 Syncfusion Blazor components are available in CDN for each version. Make sure that the version in the URLs matches the version of the Syncfusion Blazor Package you are using.
 
@@ -219,7 +219,7 @@ await builder.Build().RunAsync();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="10" %}
+{% highlight c# tabtitle=".NET 5 & .NET 3.X (~/Program.cs)" hl_lines="10" %}
 
 using Syncfusion.Blazor;
 
@@ -314,7 +314,7 @@ await builder.Build().RunAsync();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="10" %}
+{% highlight c# tabtitle=".NET 5 & .NET 3.X (~/Program.cs)" hl_lines="10" %}
 
 using Syncfusion.Blazor;
 
