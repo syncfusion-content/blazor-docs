@@ -298,9 +298,9 @@ The following screenshot represents a DataGrid with customized group caption,
 
 ## Group column programmatically
 
-The Grid's [GroupColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupColumnAsync_System_String_) and [UngroupColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UngroupColumnAsync_System_String_) methods can be used to group and ungroup columns programmatically.
+The columns in a Grid can be dynamically grouped and ungrouped using the [GroupColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupColumnAsync_System_String_) and [UngroupColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UngroupColumnAsync_System_String_) methods.
 
-In the following sample, the Customer Name column has been grouped or ungrouped using the `GroupColumnAsync` and `UngroupColumnAsync` methods.
+As demonstrated in the following sample, the Customer Name column is grouped and ungrouped dynamically through the Group Column and UnGroup Columns buttons utilizing by these methods.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
