@@ -834,7 +834,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to get data source settings details
 
-* The node's [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Data) returns the record of the data source as data. Each record on the data source represents a node in an automatic layout.
+* The node's [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Data) property returns the record of the data source as data. Each record on the data source represents a node in an automatic layout.
 
 
 The following code illustrates how to get data source settings details.

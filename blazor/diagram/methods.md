@@ -815,7 +815,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<input type="button" value="UnSelect" @onclick="UnSelect" />
+<input type="button" value="Clone" @onclick="Clone" />
     <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors" >    
         <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
     </SfDiagramComponent>
@@ -863,11 +863,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
     }
   
-   public void UnSelect()
+   public void Clone()
    {
-     diagram.UnSelect(diagram.SelectionSettings.Nodes[0] as IDiagramObject);
-
-    }
+    diagram.Clone();
+   }
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods)
