@@ -9,25 +9,21 @@ documentation: ug
 
 # Tooltip in Blazor Rating Component
 
-The Blazor Rating component supports tooltips to provide more information about the rating by using the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ShowTooltip) property.
-
-Below example demonstrates Tooltip of Rating.
+The Blazor rating component supports tooltip to show additional information in rating items by setting the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ShowTooltip) property. If enabled, the tooltip appears when the user hovers over a rating item.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Inputs
 
-<SfRating ShowTooltip=true></SfRating>
+<SfRating Value="3" ShowTooltip=true></SfRating>
 
 ```
 
 ![Blazor Rating Component with Tooltip](./images/blazor-rating-tooltip.png)
 
-## TooltipTemplate
+## Tooltip template
 
-The Rating tooltips can be customized using the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_TooltipTemplate) tag directive to provide more expressive content rather than the item’s numerical values.
-
-Below example demonstrates the tooltip template of Rating.
+You can use the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_TooltipTemplate) tag directive to specify a custom template for the `Tooltip` of the rating. The current value of the rating will be passed as the `context` when building the content of the tooltip. This allows you to include dynamic information about the rating in the template.
 
 ```cshtml
 
@@ -45,41 +41,39 @@ Below example demonstrates the tooltip template of Rating.
 
 ## Tooltip customization
 
-The Rating Tooltip can be customized by using the CssClass property, which accepts custom CSS class names that defines the specific user-defined styles and themes to be applied on the Tooltip element.
+You can customize the appearance of the tooltips using the `CssClass` property of the Blazor Rating component and by defining the custom styles for tooltip elements like the below example.
 
-N> You can also explore more about [Tooltip Customization](https://blazor.syncfusion.com/documentation/tooltip/style) that shows how to customize styles and appearance of tooltip.
-
-Below example demonstrates the tooltip customization of Rating.
+N> You can find more information about customizing the appearance of the tooltip in the [Tooltip Customization](https://blazor.syncfusion.com/documentation/tooltip/style) documentation.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Inputs
 
-<SfRating CssClass="customtooltip" ShowTooltip=true></SfRating>
+<SfRating Value="3" CssClass="customtooltip" ShowTooltip=true></SfRating>
 
 <style>
 
-    /*To change the radius of the tooltip corners.*/
+    /* To change the radius of the tooltip corners. */
     .customtooltip .e-tooltip-wrap {
         border-radius: 3px;
     }
 
-    /*To change the size of the tooltip content.*/
+    /* To change the size of the tooltip content. */
     .customtooltip .e-tooltip-wrap .e-tip-content {
         font-size:14px;
     }
 
-    /*To change the border color and width for tooltip.*/
+    /* To change the border color and width for tooltip. */
     .customtooltip .e-tooltip-wrap.e-popup {
         border: 2px solid #969393;
     }
 
-    /*To change the color for arrow of the tooltip.*/
+    /* To change the color for arrow of the tooltip. */
     .customtooltip .e-tooltip-wrap .e-arrow-tip-inner.e-tip-bottom {
         border: 12px solid #9693
     }
 
-    /*To change the top border color for arrow of the tooltip.*/
+    /* To change the top border color for arrow of the tooltip. */
     .customtooltip .e-tooltip-wrap .e-arrow-tip-outer.e-tip-bottom {
         border-top: 12.5px solid #969393;
     }

@@ -9,13 +9,11 @@ documentation: ug
 
 # Events in Rating Component
 
-This section explains the available events in Rating Component.
+This section describes the rating events that will be triggered when appropriate actions are performed. The following events are available in the rating component.
 
 ## Created
 
-Event triggers after the creation of Rating.
-
-Below example shows Created event of the Rating.
+The rating component triggers the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_Created) event when the rendering of the rating component is completed.
 
 ```cshtml
 
@@ -34,9 +32,7 @@ Below example shows Created event of the Rating.
 
 ## ValueChanged
 
-The [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ValueChanged) event triggers when the rating item value is changed. 
-
-Below example shows ValueChanged event of the Rating.
+The rating component triggers the [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_ValueChanged) event when the value of the rating is changed. The changed value is passed as the event argument.
 
 ```cshtml
 
@@ -45,7 +41,7 @@ Below example shows ValueChanged event of the Rating.
 <SfRating ValueChanged="ValueChanged"></SfRating>
 
 @code{
-    public void ValueChanged()
+    public void ValueChanged(double args)
     {
         // Here, you can customize your code.
     }
@@ -55,9 +51,7 @@ Below example shows ValueChanged event of the Rating.
 
 ## OnItemHover
 
-Event triggers when the rating item is hovered. 
-
-Below example shows OnItemHover event of the Rating.
+The rating component triggers the [OnItemHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_OnItemHover) event when the rating item is hovered. The [RatingHoverEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.RatingHoverEventArgs.html) passed as an event argument provides the details of the hovered item.
 
 ```cshtml
 
@@ -66,11 +60,10 @@ Below example shows OnItemHover event of the Rating.
 <SfRating OnItemHover="OnItemHovered"></SfRating>
 
 @code{
-    public void OnItemHovered()
+    public void OnItemHovered(RatingHoverEventArgs args)
     {
         // Here, you can customize your code.
     }
 }
 
 ```
-

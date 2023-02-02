@@ -9,23 +9,24 @@ documentation: ug
 
 # Templates in Blazor Rating Component
 
-The Blazor Rating component supports to customize the appearance of the rating item by using Templates.
+The Blazor Rating component allows you to customize the appearance of the rating items using templates. You can use templates to specify a custom layout for the rating items, which can include any content you want. This allows you to create a more customized and interactive rating experience for the user.
 
-The Template types of Rating are as follows:
+The rating component supports below templates for item customization.
 
-* Empty Template
-* Full Template
+* [EmptyTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_EmptyTemplate)
+* [FullTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_FullTemplate)
 
-## EmptyTemplate
-You can access information about the un-rated item by setting [EmptyTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_EmptyTemplate) tag directive. 
+## Empty (unrated) symbol template
 
-Below example demonstrates the Empty Template of Rating.
+To customize the appearance of **unrated** items, you can use the `EmptyTemplate` tag directive. It allows you to specify the desired custom content for the unrated items.
+The [RatingItemContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.RatingItemContext.html) is passed as a `context` to the template, allowing it to access information about the un-rated item, such as its `Value` and `Index`.
+If the `FullTemplate` is not defined, the `EmptyTemplate` will be used as the default for both rated and unrated items. You can apply custom styles to differentiate between the rated and unrated states of the items.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Inputs
 
-<SfRating>
+<SfRating Value="3">
     <EmptyTemplate>
         <span class='custom-font sf-rating-heart'></span>
     </EmptyTemplate>
@@ -33,10 +34,14 @@ Below example demonstrates the Empty Template of Rating.
 
 <style>
     .e-rating-container .custom-font {
+        /* To add the background color for the font icon. */
         background: linear-gradient(to right, rgb(254,87,133,255) var(--rating-value), transparent var(--rating-value));
+        /* To clip the background to the icon (text) alone. */
         background-clip: text;
         -webkit-background-clip: text;
+        /* To make the background color visible instead of font color. */
         -webkit-text-fill-color: transparent;
+        /* To provide a border for font icon. */
         -webkit-text-stroke: 1px rgb(254,87,133,255);
     }
 
@@ -68,17 +73,18 @@ Below example demonstrates the Empty Template of Rating.
 
 ![Blazor Rating Component with EmptyTemplate](./images/blazor-rating-empty-template.png)
 
-## FullTemplate
+N> The current value of the rating item available in the template context (`RatingItemContext`)  as `Value` and in the rating item element as CSS Variable (`--rating-value`) can be used to support precision in templates.
 
-You can access information about the rated item by using the [FullTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfRating.html#Syncfusion_Blazor_Inputs_SfRating_FullTemplate) tag directive.
+## Full (rated) symbol template
 
-Below example demonstrates the Full Template of Rating.
+To customize the appearance of **rated** items in the Syncfusion Blazor rating component, you can use the `FullTemplate` tag directive. This directive allows you to specify a custom layout for the rated items, which can include any content you desire.
+The [RatingItemContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.RatingItemContext.html) is passed as a `context` to the template, allowing it to access information about the rated item, such as its `Value` and `Index`.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Inputs
 
-<SfRating>
+<SfRating Value="3">
     <FullTemplate>
         <span class='custom-font sf-icon-fill-star'></span>
     </FullTemplate>
@@ -90,11 +96,8 @@ Below example demonstrates the Full Template of Rating.
 <style>
 
     .e-rating-container .custom-font {
-        background: linear-gradient(to right, rgb(255,215,0) var(--rating-value), transparent var(--rating-value));
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -webkit-text-stroke: 1px rgb(255,215,0);
+        /* To change the icon font color. */
+        color: rgb(255,215,0);
     }
 
     @@font-face {
@@ -130,11 +133,9 @@ Below example demonstrates the Full Template of Rating.
 
 ![Blazor Rating Component with FullTemplate](./images/blazor-rating-full-template.png)
 
-## Emoji icon
+## Using Emoji icon as rating symbol
 
-You can also use Emoji icon as a rating item.
-
-Below example demonstrates the Emoji Icon of Rating.
+You can use emojis of your choice as rating symbol by specifying them as template content within the `EmptyTemplate` tag directive.
 
 ```cshtml
 
@@ -168,6 +169,7 @@ Below example demonstrates the Emoji Icon of Rating.
 </SfRating>
 
 <style>
+    /* To change the color of an unselected rating item. */
     .e-rating-item-container:not(.e-rating-selected) .emoji {
         filter: grayscale(1);
     }
@@ -177,11 +179,9 @@ Below example demonstrates the Emoji Icon of Rating.
 
 ![Blazor Rating Component with Emoji Icon](./images/blazor-rating-emoji-icon.png)
 
-## SVG icon
+## Using SVG icon as rating symbol
 
-You can also use SVG icon as a rating item.
-
-Below example demonstrates the SVG Icon of Rating.
+You can use SVG icons of your choice as rating symbol by specifying them as template content within the `EmptyTemplate` and `FullTemplate` tag directives.
 
 ```cshtml
 
@@ -207,11 +207,12 @@ Below example demonstrates the SVG Icon of Rating.
 </SfRating>
 
 <style>
-
+    /* To change the size between items */
     .e-rating-container .e-rating-item-container {
         padding: 0px;
     }
 
+    /* To set the gradient color */
     .e-rating-svg-icon #grad0 .start {
         stop-color: #FF0000;
     }
@@ -246,17 +247,15 @@ Below example demonstrates the SVG Icon of Rating.
 
 ![Blazor Rating Component with SVG Icon](./images/blazor-rating-svg-icon.png)
 
-## PNG image
+## Using PNG image as rating symbol
 
-You can also use PNG image as a rating item.
-
-Below example demonstrates the PNG image of Rating.
+You can use PNG images of your choice as rating symbol by specifying them as template content within the `EmptyTemplate` and `FullTemplate` tag directives.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Inputs
 
-<SfRating>
+<SfRating Value="3">
     <FullTemplate>
         <img src=@fullTemplateImage widht="25" height="25" />
     </FullTemplate>
