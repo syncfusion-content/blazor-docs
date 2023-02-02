@@ -87,16 +87,6 @@ Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
 
 ![Column Validation in Blazor TreeGrid](../images/blazor-treegrid-column-validation.png)
 
-## Data annotation
-
-Data Annotation validation attributes are used to validate the fields in the tree grid. The validation attributes that are supported in the tree grid are listed below.
-
-| Attribute Name | Functionality |
-|-------|---------|
-| Validations are, <br><br>1. RequiredAttribute<br>2. StringLengthAttribute<br>3. RangeAttribute<br>4. RegularExpressionAttribute<br>5. MinLengthAttribute<br>6. MaxLengthAttribute<br>7. EmailAddressAttribute<br>8. CompareAttribute<br>9. DataTypeAttribute<br>10.  DataType. Custom<br>11. DataType. Date<br>12. DataType. DateTime<br>13. DataType. EmailAddress<br>14. DataType. ImageUrl<br>15. DataType. Url | The data annotation validation attributes are used as `validation rules` in the tree grid CRUD operations |
-
-More information on the data annotation can be found in this [documentation](https://blazor.syncfusion.com/documentation/datagrid/data-annotation) section.
-
 ## Custom validation
 
 Custom validation allows the users to customize the validations manually according to the user's criteria.
