@@ -9,7 +9,7 @@ documentation: ug
 
 # Load Microsoft Office files in Blazor PDF Viewer Component
 
-The PDF Viewer library allows you to load microsoft office files such as powerpoint, excel, word and image using the `GetImageStream()` method of controller.
+The PDF Viewer library allows you to load Microsoft office files such as powerpoint, excel, word and image using the `GetImageStream()` method of controller.
 
 The following steps are used to load the office files in the PDF Viewer.
 
@@ -164,7 +164,7 @@ The following steps are used to load the office files in the PDF Viewer.
 }
 ```
 
-Add the following code in the controller.cs file in the web service project to load the microsoft office files.
+Add the following code in the controller.cs file in the web service project to load the Microsoft office files.
 
 ```c#
 //Post action for loading the Office products
