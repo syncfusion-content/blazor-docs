@@ -13,7 +13,15 @@ You can customize skeleton component in the below ways.
 
 ## CssClass
 
-You can customize the style of a Skeleton component by using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_CssClass). The appearance of Blazor Skeleton can be customized by changing the wave color, background color, width, and height.
+You can customize the style of a Skeleton component by using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_CssClass). The appearance of Blazor Skeleton can be customized by changing the wave color, background color, width, and height. Please find the list of CSS classes and its corresponding section in Floating Action Button component. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/).
+
+| CSS Class | Purpose of Class |
+|-----|----- |
+|.e-skeleton.e-shimmer-wave|To customize the shimmer wave effect.|
+|.e-skeleton.e-skeleton-circle|To customize the skeleton circle shape.|
+|.e-skeleton.e-skeleton-square|To customize the skeleton square shape.|
+|.e-skeleton.e-skeleton-text|To customize the skeleton text shape.|
+|.e-skeleton.e-skeleton-rectangle|To customize the skeleton rectangle shape.|
 
 {% tabs %}
 {% highlight razor %}

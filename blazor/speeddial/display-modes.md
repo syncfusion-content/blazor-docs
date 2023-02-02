@@ -13,7 +13,7 @@ The action items in Blazor Speed Dial can be displayed in `Linear` and `Radial` 
 
 ## Open trigger
 
-By default action items displayed only when clicking the speed dial button. You can use [OpensOnHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_OpensOnHover) property to open actions items on hover itself.
+By default, action items are displayed only when clicking the speed dial button. You can use the [OpensOnHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_OpensOnHover) property to change the trigger that opens the action items to be on hover instead.
 
 {% tabs %}
 {% highlight razor %}

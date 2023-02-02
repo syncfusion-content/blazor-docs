@@ -48,8 +48,6 @@ To modify the Floating Action Button appearance, you need to override the defaul
 |.e-fab.e-btn:active|To customize the FAB on active.|
 |.e-fab.e-btn-icon|To customize the style of FAB icon.|
 
-![Blazor FAB Component with style customization](images/blazor-rating-disabled.png)
-
 ## Customizing the FAB content.
 
 By using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass), you can customize the Floating Action Button to show text on hover with applied transition effect.

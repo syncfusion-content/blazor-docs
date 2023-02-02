@@ -93,17 +93,17 @@ You can define the custom position of the SpeedDial by override the `top`, `left
     }
 
     .e-speeddial-popup.e-speeddial-right.e-speeddial-linear {
-        right: 905px;   
+        left: 315px;   
     }
 
     .e-speeddial-popup.e-speeddial-bottom.e-speeddial-linear {
-        bottom: 450px;
+        top: 50px;
     }
 
 </style>
 
 ```
 
-![Blazor SpeedDial component with custom position](./images/CustomPosition.png)
+![Blazor SpeedDial component with custom position](./images/Blazor-SpeedDial-Custom-Position.png)
 
 N> You can use the [RefreshPositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_RefreshPositionAsync) method when the `Target`position is changed or resized.
