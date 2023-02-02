@@ -106,3 +106,5 @@ In heatmap, you can customize the tooltip using the [TooltipRendering](https://h
 }
 
 ```
+
+![Blazor HeatMap Chart Tooltip Customization](images/blazor-heatmap-chart-tooltip-customization.png)
