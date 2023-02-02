@@ -9,9 +9,9 @@ documentation: ug
 
 # Load Microsoft Office files in Blazor PDF Viewer Component
 
-The PDF Viewer library allows you to load Microsoft office files such as powerpoint, excel, word and image using the `GetImageStream()` method of controller.
+The PDF Viewer library allows you to load Microsoft office files such as powerpoint, excel, word and image using the success event of uploader.
 
-The following steps are used to load the office files in the PDF Viewer.
+In the below code, word document is converted in to pdf document and return that pdf document into base64 string which then loaded in to the PDF Viewer. Similarly, loaded the powerpoint, excel and image in to the PDF Viewer.
 
 ```cshtml
 
@@ -132,118 +132,13 @@ The following steps are used to load the office files in the PDF Viewer.
 
     public void loadPDFdocument(byte[] bytes)
     {
+        // Converts the pdf document into base64 string.
         string base64String = Convert.ToBase64String(bytes);
+        // Load the base64 string in the PDF Viewer.
         viewerInstance.LoadAsync("data:application/pdf;base64," + base64String, null);
     }
 
-    public static WFormatType GetWFormatType(string format)
-    {
-        if (string.IsNullOrEmpty(format))
-            throw new NotSupportedException("EJ2 DocumentEditor does not support this file format.");
-        switch (format.ToLower())
-        {
-            case "dotx":
-                return WFormatType.Dotx;
-            case "docx":
-                return WFormatType.Docx;
-            case "docm":
-                return WFormatType.Docm;
-            case "dotm":
-                return WFormatType.Dotm;
-            case "dot":
-                return WFormatType.Dot;
-            case "doc":
-                return WFormatType.Doc;
-            case "rtf":
-                return WFormatType.Rtf;
-            default:
-                throw new NotSupportedException("EJ2 DocumentEditor does not support this file format.");
-        }
-    }
-
 }
-```
-
-Add the following code in the controller.cs file in the web service project to load the Microsoft office files.
-
-```c#
-//Post action for loading the Office products
-public IActionResult GetImageStream([FromBody] Dictionary<string, string> jsonObject)
-{
-    if (jsonObject.ContainsKey("data"))
-    {
-        string base64 = jsonObject["data"];
-        //string fileName = args.FileData[0].Name;
-        string type = jsonObject["type"];
-        string data = base64.Split(',')[1];
-        byte[] bytes = Convert.FromBase64String(data);
-        var outputStream = new MemoryStream();
-        Syncfusion.Pdf.PdfDocument pdfDocument = new Syncfusion.Pdf.PdfDocument();
-        using (Stream stream = new MemoryStream(bytes))
-        {
-            switch (type)
-            {
-                case "docx":
-                case "dot":
-                case "doc":
-                case "dotx":
-                case "docm":
-                case "dotm":
-                case "rtf":
-                    Syncfusion.DocIO.DLS.WordDocument doc = new Syncfusion.DocIO.DLS.WordDocument(stream, GetWFormatType(type));
-                    //Initialization of DocIORenderer for Word to PDF conversion
-                    DocIORenderer render = new DocIORenderer();
-                    //Converts Word document into PDF document
-                    pdfDocument = render.ConvertToPDF(doc);
-                    doc.Close();
-                    break;
-                case "pptx":
-                case "pptm":
-                case "potx":
-                case "potm":
-                    //Loads or open an PowerPoint Presentation
-                    IPresentation pptxDoc = Presentation.Open(stream);
-                    pdfDocument = PresentationToPdfConverter.Convert(pptxDoc);
-                    pptxDoc.Close();
-                    break;
-                case "xlsx":
-                case "xls":
-                    ExcelEngine excelEngine = new ExcelEngine();
-                    //Loads or open an existing workbook through Open method of IWorkbooks
-                    IWorkbook workbook = excelEngine.Excel.Workbooks.Open(stream);
-                    //Initialize XlsIO renderer.
-                    XlsIORenderer renderer = new XlsIORenderer();
-                    //Convert Excel document into PDF document
-                    pdfDocument = renderer.ConvertToPDF(workbook);
-                    workbook.Close();
-                    break;
-                case "jpeg":
-                case "jpg":
-                case "png":
-                case "bmp":
-                    //Add a page to the document
-                    PdfPage page = pdfDocument.Pages.Add();
-                    //Create PDF graphics for the page
-                    PdfGraphics graphics = page.Graphics;
-                    PdfBitmap image = new PdfBitmap(stream);
-                    //Draw the image
-                    graphics.DrawImage(image, 0, 0);
-                    break;
-            }
-
-        }
-        pdfDocument.Save(outputStream); 
-        outputStream.Position = 0;
-        byte[] byteArray= outputStream.ToArray();
-        pdfDocument.Close();
-        outputStream.Close();
-
-        string base64String = Convert.ToBase64String(byteArray); 
-        return Content("data:application/pdf;base64," + base64String);     
-    }
-    return Content("data:application/pdf;base64," + "");
-}
-        
 ```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Load%20PDF%2C%20Excel%2C%20PPT%20file%20types).
