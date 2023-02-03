@@ -149,7 +149,7 @@ The Blazor TreeView's [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ## DataSourceChanged
 
-The [DataSourceChanged] event in the Blazor TreeView is triggered whenever there is a change in the data source, such as through drag and drop, node editing, adding or removing a node in the TreeView.
+The [DataSourceChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_DataSourceChanged) event in the Blazor TreeView is triggered whenever there is a change in the data source, such as through drag and drop, node editing, adding or removing a node in the TreeView.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -1088,7 +1088,7 @@ The Blazor TreeView component [NodeSelecting](https://help.syncfusion.com/cr/bla
 
 ## OnActionFailure
 
-The Blazor TreeView component's [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnActionFailure) event is triggered when any TreeView action fails to produce the desired outcome. By utilizing this event, one can obtain information about the error and its root cause. In the sample below, we have provided an incorrect URL, resulting in the `OnActionFailure` event being thrown.
+The Blazor TreeView component's [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnActionFailure) event is triggered when any TreeView action fails to produce the desired outcome. By utilizing this event, one can obtain information about the error and its root cause. In the sample provided, an incorrect URL has been given, causing the `OnActionFailure` event to be thrown.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -1414,6 +1414,8 @@ The [OnNodeDragStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Nav
 ## OnNodeRender
 
 The [OnNodeRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeRender) event of the Blazor TreeView component triggers before the TreeView node is appended to the TreeView element.
+
+N> The OnNodeRender event, which is triggered frequently, may cause performance issues.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

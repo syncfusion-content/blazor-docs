@@ -19,7 +19,7 @@ The Blazor TreeView component allows to check more than one node in TreeView wit
 
 By default, the checkbox state of parent and child nodes are dependent on each other. For independent checked state, achieve it using the [AutoCheck](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AutoCheck) property.
 
-We can also check a specific node by setting the **IsChecked** field to true for the corresponding node in the data source, which specifies the field for the checked state of the TreeView node.
+You can check a specific node by setting the **IsChecked** field to true for the corresponding node in the data source, which specifies the field for the checked state of the TreeView node.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -107,8 +107,6 @@ We can also check a specific node by setting the **IsChecked** field to true for
 
 The Blazor TreeView component enables the ability to check specific nodes upon initial rendering through the use of the [CheckedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CheckedNodes) property. This property allows for the checkbox selection of nodes by passing in an array collection of node IDs as strings.
 
-In the following example, the `CheckedNodes` property is used.
-
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 
@@ -195,7 +193,7 @@ In the following example, the `CheckedNodes` property is used.
 
 ## Check and uncheck all nodes
 
-The Blazor TreeView component offers the ability to check all unchecked nodes within the component by utilizing the [CheckAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CheckAllAsync_System_String___) method. Additionally, specific nodes can be selected by passing in an array of unchecked nodes. The [UnCheckAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_UncheckAllAsync_System_String___) method also exists to uncheck all previously checked nodes within the component, and specific nodes can be deselected by passing in an array of checked nodes. 
+The Blazor TreeView component offers the ability to check all unchecked nodes within the component by utilizing the [CheckAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CheckAllAsync_System_String___) method. Additionally, specific nodes can be selected by passing in an array of unchecked nodes. The [UncheckAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_UncheckAllAsync_System_String___) method also exists to uncheck all previously checked nodes within the component, and specific nodes can be deselected by passing in an array of checked nodes. 
 
 The example demonstrates the usage of these methods within the context of a button click event.
 

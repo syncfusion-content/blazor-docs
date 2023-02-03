@@ -9,11 +9,81 @@ documentation: ug
 
 # Authorization and Authentication in Blazor TreeView Component
 
-**Authentication** verifies the identity of a user or system using credentials such as a username and password, biometric data, or security tokens. 
+**Authentication** is the process of verifying the identity of a user or system. This is typically done by requiring a username and password, but can also include other forms of verification such as biometric data or security tokens.
 
-**Authorization** determines a user's access to resources or actions based on their verified identity and set rules or policies.
+**Authorization**, on the other hand, is the process of determining whether a user or system has access to a particular resource or action. Once a user's identity has been authenticated, the system can then determine whether they are authorized to perform a specific action or access a specific resource. This is often done by comparing the user's credentials or permissions against a set of rules or policies.
 
-The Blazor TreeView component provides a sample implementation of Authorization and Authentication. This ensures that only authorized users can access the resources and information within the TreeView, providing better security and privacy for the system. The below blob also includes steps to create a Blazor Server app with Authentication, ensuring easy setup and configuration.
+The Blazor TreeView component provides a [sample](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Authentication1642627335.zip) implementation of Authorization and Authentication. This ensures that only authorized users can access the resources and information within the TreeView, providing better security and privacy for the system. The below blog also includes steps to create a [Blazor Server App with Authentication](https://www.syncfusion.com/blogs/post/easy-steps-create-a-blazor-server-app-with-authentication.aspx), ensuring easy setup and configuration.
 
-[Blazor Server App with Authentication](https://www.syncfusion.com/blogs/post/easy-steps-create-a-blazor-server-app-with-authentication.aspx)
+For authorized users, the Blazor TreeView component will be shown, and for non-authorized users, a message to either log in or register will be displayed as specified in the NotAuthorized tag.
 
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<AuthorizeView>
+    <Authorized>
+        <a href="Identity/Account/Manage">Hello, @context.User.Identity?.Name!</a>
+
+        <SfTreeView TValue="MailItem">
+            <TreeViewFieldsSettings TValue="MailItem" Id="Id" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
+        </SfTreeView>
+        <form method="post" action="Identity/Account/LogOut">
+            <button type="submit" class="nav-link btn btn-link">Log out</button>
+        </form>
+        @code {
+        public class MailItem
+        {
+            public string Id { get; set; }
+            public string ParentId { get; set; }
+            public string FolderName { get; set; }
+            public bool Expanded { get; set; }
+            public bool HasSubFolders { get; set; }
+        }
+        List<MailItem> MyFolder = new List<MailItem>();
+        protected override void OnInitialized()
+        {
+            base.OnInitialized();
+            MyFolder.Add(new MailItem
+            {
+                Id = "1",
+                FolderName = "Inbox",
+                HasSubFolders = true,
+                Expanded = true
+            });
+            MyFolder.Add(new MailItem
+            {
+                Id = "2",
+                ParentId = "1",
+                FolderName = "Categories",
+                Expanded = true,
+                HasSubFolders = true
+            });
+            MyFolder.Add(new MailItem
+            {
+                Id = "3",
+                ParentId = "2",
+                FolderName = "Primary"
+            });
+            MyFolder.Add(new MailItem
+            {
+                Id = "4",
+                ParentId = "2",
+                FolderName = "Social"
+            });
+            MyFolder.Add(new MailItem
+            {
+                Id = "5",
+                ParentId = "2",
+                FolderName = "Promotions"
+            });
+        }
+        }
+    </Authorized>
+    <NotAuthorized>
+        <p>Please log in or Register to view the TreeView component.</p>
+        <a href="Identity/Account/Register">Register</a>
+        <a href="Identity/Account/Login">Log in</a>
+    </NotAuthorized>
+</AuthorizeView>
+
+```

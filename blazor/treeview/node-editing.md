@@ -363,11 +363,9 @@ The example provided demonstrates how to use the `ItemSelected` event of the con
 
 ```
 
-### Add or remove node Programmatically
+### Add or remove node programmatically
 
 The Blazor TreeView component allows for the dynamic addition or removal of specific nodes by manipulating the data source.This can be achieved by using appropriate methods to update the data source.
-
-An example is provided that demonstrates how to add or remove a node dynamically using a button click.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -567,8 +565,6 @@ An example is provided that demonstrates how to add or remove a node dynamically
 ### Add or remove node Programmatically with template
 
 The Blazor TreeView component with template support also allows for the dynamic addition or removal of specific nodes by manipulating the data source. This can be achieved by using appropriate methods to update the data source.
-
-An example is provided that demonstrates how to add or remove a node dynamically using a button click.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -810,37 +806,36 @@ An example is provided that demonstrates how to add or remove a node dynamically
 
 ### Add node through popup
 
-In the Blazor TreeView component, it is possible to add a new tree node using a custom popup window. This can be done by using appropriate methods to add new items to the data source in the popup. 
-
-An example is provided to demonstrate how to add a node through the popup window in the TreeView component.
+In the Blazor TreeView component, it is possible to add a new tree node using a Dialog popup window. This can be done by using appropriate methods to add new items to the data source in the popup. 
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Popups
 
-<SfButton OnClick="OpenPopup"> Open Popup</SfButton>
-@{
-    var showDisplay = isVisible ? "d-block" : "d-none";
-}
-<div class="toast-container p-3 @showDisplay" data-bs-delay="4000" data-bs-autohide="true">
-    <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-body">
-            <input type="text" placeholder="Enter new node name" @bind="newNodeName" />
-            <SfButton OnClick="AddNodeInPopup"> Add</SfButton>
-            <button class="btn-close" type="button" aria-label="Close" @onclick="ClosePopup"></button>
-        </div>
-    </div>
-</div>
-<div id="treeview">
-    <SfTreeView TValue="EmployeeData" @ref="tree" AllowEditing="true" AllowDragAndDrop="true" @bind-SelectedNodes="@selectedNodes" @bind-ExpandedNodes="expandedNodes">
-        <TreeViewFieldsSettings Id="Id" ParentID="Pid" DataSource="@ListData" Text="Name" HasChildren="HasChild"></TreeViewFieldsSettings>
-        <TreeViewEvents TValue="EmployeeData" NodeSelected="OnSelect" NodeClicked="nodeClicked"></TreeViewEvents>
-    </SfTreeView>
-</div>
-
+<SfButton @onclick="@OpenDialog">Open Dialog Popup</SfButton>
+<SfDialog Width="300px" CssClass="dialog" ShowCloseIcon="true" IsModal="true" @bind-Visible="@IsVisible">
+        <DialogTemplates>
+            <Header> Dialog </Header>
+            <Content>
+                <input type="text" placeholder="Enter new node name" @bind="newNodeName" />
+                <SfButton OnClick="AddNodeInPopup"> Add</SfButton>
+            </Content>
+        </DialogTemplates>
+</SfDialog>
+<SfTreeView TValue="EmployeeData" @ref="tree" AllowEditing="true" AllowDragAndDrop="true" @bind-SelectedNodes="@selectedNodes">
+    <TreeViewFieldsSettings Id="Id" ParentID="Pid" DataSource="@ListData" Text="Name" HasChildren="HasChild"></TreeViewFieldsSettings>
+    <TreeViewEvents TValue="EmployeeData" NodeSelected="OnSelect" NodeClicked="nodeClicked"></TreeViewEvents>
+</SfTreeView>
 
 @code
 {
+    private bool IsVisible { get; set; } = false;
+
+    private void OpenDialog()
+    {
+        this.IsVisible = true;
+    }
     public string newNodeName;
     async Task AddNodeInPopup()
     {
@@ -855,29 +850,11 @@ An example is provided to demonstrate how to add a node through the popup window
             });
         this.index = this.index + 1;
     }
-    private void OpenPopup()
-    {
-        this.Show();
-    }
-    [Parameter]
-    public bool isVisible { get; set; }
-
-    public void Show()
-    {
-        isVisible = true;
-        StateHasChanged();
-    }
-
-    private void ClosePopup()
-    {
-        isVisible = false;
-        StateHasChanged();
-    }
     // Reference for treeview
     SfTreeView<EmployeeData>? tree;
     string selectedId;
     public string[] selectedNodes = Array.Empty<string>();
-    public string[] expandedNodes = new string[] {  };
+    public string[] expandedNodes = new string[] { };
     int index = 100;
 
     public class EmployeeData
@@ -1031,8 +1008,6 @@ An example is provided to demonstrate how to add a node through the popup window
 ### Edit a node programmatically
 
 The Blazor TreeView component enables dynamic editing of specific nodes. This can be accomplished by passing the selected node's id to the [BeginEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_BeginEditAsync_System_String_) method of the TreeView component. 
-
-An example is provided to demonstrate how to edit a node dynamically using a button click.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -1212,8 +1187,6 @@ An example is provided to demonstrate how to edit a node dynamically using a but
 ### Edit a node with template
 
 The Blazor TreeView component with template enables dynamic editing of specific nodes. This can be accomplished by passing the selected node's id to the [BeginEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_BeginEditAsync_System_String_) method of the TreeView component. 
-
-An example is provided to demonstrate how to edit a template tree node dynamically using a button click.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -1506,11 +1479,11 @@ The Blazor TreeView component can be set to read-only mode by disabling certain 
 
 ```
 
-## Node editing deny for a particular node
+## Restrict Node Editing for Specific Node
 
 In the Blazor TreeView component, it is possible to prevent editing of a specific node by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.NodeEditEventArgs.html#Syncfusion_Blazor_Navigations_NodeEditEventArgs_Cancel) argument to 'true' in the [NodeEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeEditing) event. 
 
-An example of this can be seen in the provided code snippet, where the node editing is prevented for the "Johnson" TreeView node.
+An example of this can be seen in the provided code snippet, where the node editing is prevented for the **Johnson** TreeView node.
 
 ```cshtml 
 @using Syncfusion.Blazor.Navigations
@@ -1993,8 +1966,6 @@ The default value of `AllowEditing` property is false.
 In the Blazor TreeView component, it is possible to cancel the edit action by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.NodeEditEventArgs.html#Syncfusion_Blazor_Navigations_NodeEditEventArgs_Cancel) argument to 'true' in the [NodeEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeEditing) event. 
 
 An example of this can be seen in the provided code snippet, where the node editing is canceled for all the TreeView nodes.
-
-
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

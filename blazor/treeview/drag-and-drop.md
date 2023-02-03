@@ -119,8 +119,6 @@ N> In the **OnNodeDragged** event currently there is no option to cancel the eve
 
 To drag and drop more than one node, enable the `AllowMultiSelection` property along with the `AllowDragAndDrop` property. To perform multi-selection, press and hold **CTRL** key and click the desired nodes. To select range of nodes, press and hold the **SHIFT** key and click the nodes.
 
-In the following sample,  the `AllowMultiSelection` property is enabled along with the `AllowDragAndDrop` property.
-
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 <SfTreeView TValue="TeamDetails" AllowDragAndDrop="true" AllowMultiSelection="true">
@@ -215,9 +213,7 @@ In the following sample,  the `AllowMultiSelection` property is enabled along wi
 
 ## Drag and drop within a TreeView
 
-The Blazor TreeView component has built-in support for drag and drop functionalit. The [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowDragAndDrop) property determines whether the TreeView allows for the drag and drop reordering of nodes. 
-
-In the following example, the `AllowDragAndDrop` property is enabled in the TreeView component.
+The Blazor TreeView component has built-in support for drag and drop functionality. The [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowDragAndDrop) property determines whether the TreeView allows for the drag and drop reordering of nodes. 
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -282,8 +278,6 @@ In the following example, the `AllowDragAndDrop` property is enabled in the Tree
 ## Drag and drop between TreeViews
 
 The Blazor TreeView component has built-in support for drag and drop functionality, allowing for nodes to be dragged and dropped on other nodes within the same or different trees using the [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowDragAndDrop) property. 
-
-In the example provided, drag and drop is demonstrated using different TreeView components.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

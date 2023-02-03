@@ -248,9 +248,7 @@ This is demonstrated in an example where the TreeView operations are manipulated
 
 ## Badge
 
-The Blazor TreeView component can integrate with the Badge component and allows for customizing the node structure using the NodeTemplate tag, which allows for creating a tree node with any custom structure, such as a web mail folder with a name and unread message count using the Badge component.
-
-The TreeView component can be integrated with the badge component as shown in the following example.
+The Blazor TreeView component can integrate with the Badge component and allows for customizing the node structure using the `NodeTemplate` tag, which allows for creating a tree node with any custom structure, such as a web mail folder with a name and unread message count using the Badge component.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
@@ -610,8 +608,6 @@ The Blazor TreeView component has the built-in option to customize each node's a
 
 The Blazor TreeView component's **NavigateUrl** field is used to navigate from one page to other pages with TreeView node selection. 
 
-In the following example, the **NavigateUrl** field is mapped to move from one page to another page inside the Blazor Sidebar component.
-
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Inputs
@@ -722,11 +718,6 @@ In the following example, the **NavigateUrl** field is mapped to move from one p
         margin: 3px;
     }
 
-    .tailwind .sidebar-treeview .e-treeview .e-icon-collapsible,
-    .tailwind-dark .sidebar-treeview .e-treeview .e-icon-expandable {
-        margin: 7px;
-    }
-
     .e-bigger .sidebar-treeview .e-treeview .e-icon-collapsible,
     .e-bigger .sidebar-treeview .e-treeview .e-icon-expandable {
         margin: 8px;
@@ -751,16 +742,6 @@ In the following example, the **NavigateUrl** field is mapped to move from one p
             margin: 0;
         }
 
-    .material-dark .sidebar-treeview .main-menu .main-menu-header, .highcontrast .sidebar-treeview .main-menu .main-menu-header,
-    .fabric-dark .sidebar-treeview .main-menu .main-menu-header, .bootstrap-dark .sidebar-treeview .main-menu .main-menu-header,
-    .tailwind-dark .sidebar-treeview .main-menu .main-menu-header {
-        color: white;
-    }
-
-    .material-dark .sidebar-treeview .main-treeview .icon {
-        color: white;
-    }
-
     #main-text .sidebar-heading {
         font-size: 16px;
     }
@@ -773,45 +754,6 @@ In the following example, the **NavigateUrl** field is mapped to move from one p
         padding: 20px 18px;
         height: 8em;
     }
-
-    .material .sidebar-treeview .table-content {
-        padding: 20px 14px;
-    }
-
-    .bootstrap4 .sidebar-treeview .table-content,
-    .highcontrast.e-bigger .sidebar-treeview .table-content,
-    .fabric.e-bigger .sidebar-treeview .table-content,
-    .fabric-dark.e-bigger .sidebar-treeview .table-content {
-        padding: 20px 22px;
-    }
-
-    .bootstrap .sidebar-treeview .table-content,
-    .bootstrap-dark .sidebar-treeview .table-content {
-        padding: 20px 12px;
-    }
-
-    .highcontrast .sidebar-treeview .table-content {
-        padding: 20px 18px;
-    }
-
-    .fabric .sidebar-treeview .table-content,
-    .fabric-dark .sidebar-treeview .table-content {
-        padding: 20px 16px;
-    }
-
-    .bootstrap.e-bigger .sidebar-treeview .table-content,
-    .bootstrap-dark.e-bigger .sidebar-treeview .table-content {
-        padding: 20px;
-    }
-
-    .bootstrap4.e-bigger .sidebar-treeview .table-content {
-        padding: 20px 30px;
-    }
-
-    .material.e-bigger .sidebar-treeview .table-content {
-        padding: 20px 18px;
-    }
-
     .e-bigger .sidebar-treeview .table-content {
         padding: 20px 27px;
     }
@@ -879,47 +821,6 @@ In the following example, the **NavigateUrl** field is mapped to move from one p
         padding-left: 18px;
     }
 
-    .material .sidebar-treeview .e-treeview .e-text-content {
-        padding-left: 14px;
-    }
-
-    .bootstrap4 .sidebar-treeview .e-treeview .e-text-content {
-        padding-left: 22px;
-    }
-
-    .bootstrap .sidebar-treeview .e-treeview .e-text-content,
-    .bootstrap-dark .sidebar-treeview .e-treeview .e-text-content {
-        padding-left: 12px;
-    }
-
-    .fabric .sidebar-treeview .e-treeview .e-text-content,
-    .fabric-dark .sidebar-treeview .e-treeview .e-text-content {
-        padding-left: 16px
-    }
-
-    .bootstrap.e-bigger .sidebar-treeview .e-treeview .e-text-content,
-    .bootstrap-dark.e-bigger .sidebar-treeview .e-treeview .e-text-content,
-    .bootstrap.e-bigger .sidebar-treeview .e-treeview .e-list-icon + .e-list-text,
-    .bootstrap-dark.e-bigger .sidebar-treeview .e-treeview .e-list-icon + .e-list-text {
-        padding-left: 20px;
-    }
-
-    .bootstrap4.e-bigger .sidebar-treeview .e-treeview .e-text-content {
-        padding-left: 30px;
-    }
-
-    .tailwind-dark.e-bigger .sidebar-treeview .e-treeview .e-text-content,
-    .tailwind.e-bigger .sidebar-treeview .e-treeview .e-text-content,
-    .bootstrap5.e-bigger .sidebar-treeview .e-treeview .e-text-content,
-    .bootstrap5-dark.e-bigger .sidebar-treeview .e-treeview .e-text-content {
-        padding-left: 26px;
-    }
-
-    .material.e-bigger .sidebar-treeview .e-treeview .e-text-content,
-    .highcontrast .sidebar-treeview .e-treeview .e-text-content {
-        padding-left: 18px;
-    }
-
     .e-bigger .sidebar-treeview .e-treeview .e-text-content {
         padding-left: 22px;
     }
@@ -935,55 +836,7 @@ In the following example, the **NavigateUrl** field is mapped to move from one p
     .sidebar-treeview .main-treeview .icon-docs::before {
         content: '\e802';
     }
-
-    .sidebar-treeview .main-treeview .icon-th::before {
-        content: '\e803';
-    }
-
-    .sidebar-treeview .main-treeview .icon-code::before {
-        content: '\e804';
-    }
-
-    .sidebar-treeview .main-treeview .icon-chrome::before {
-        content: '\e807';
-    }
-
-    .sidebar-treeview .main-treeview .icon-up-hand::before {
-        content: '\e810';
-    }
-
-    .sidebar-treeview .main-treeview .icon-bookmark-empty::before {
-        content: '\e811';
-    }
-
-    .sidebar-treeview .main-treeview .icon-help-circled::before {
-        content: '\e813';
-    }
-
-    .sidebar-treeview .main-treeview .icon-doc-text::before {
-        content: '\e812';
-    }
-
-    .sidebar-treeview .main-treeview .icon-circle-thin::before {
-        content: '\e808';
-    }
     /* Specific styles for Toolbar component */
-    .tailwind-dark #wrapper .e-toolbar {
-        border-bottom: 1px solid #4b5563;
-    }
-
-    .material #wrapper .e-toolbar {
-        border-bottom: 1px solid rgba(0,0,0,0.12);
-    }
-
-    .tailwind #wrapper .e-toolbar {
-        border-bottom: 1px solid #e5e7eb;
-    }
-
-    .bootstrap5-dark #wrapper .e-toolbar {
-        border-bottom: 1px solid #444c54;
-    }
-
     .bootstrap5 #wrapper .e-toolbar {
         border-bottom: 1px solid #d2d6de;
     }
@@ -991,50 +844,8 @@ In the following example, the **NavigateUrl** field is mapped to move from one p
     #wrapper .main-content {
         height: 380px;
     }
-    /* Specific styles for Overall wrapper element*/
-    .material .sidebar-treeview {
-        border-right: 1px solid rgba(0,0,0,0.12) !important;
-    }
-
-    .fabric .sidebar-treeview {
-        border-right: 1px solid #eaeaea !important;
-    }
-
-    .tailwind .sidebar-treeview {
-        border-right: 1px solid #d7d7d7 !important;
-    }
-
-    .bootstrap5-dark .sidebar-treeview {
-        border-right: 1px solid #444c54 !important;
-    }
-
     .bootstrap5 .sidebar-treeview {
         border-right: 1px solid #dee2e6 !important;
-    }
-
-    .material-dark .sidebar-treeview {
-        border-right: 1px solid #616161 !important;
-    }
-
-    .fabric-dark .sidebar-treeview {
-        border-right: 1px menu #414040 !important;
-    }
-
-    .tailwind-dark .sidebar-treeview {
-        border-right: 1px solid #4b5563 !important;
-    }
-
-    .bootstrap5 .e-folder-name, .bootstrap5-dark .e-folder-name {
-        margin-top: -2px;
-    }
-
-    .bootstrap4 .e-folder-name,
-    .bootstrap .e-folder-name, .bootstrap-dark .e-folder-name {
-        margin-top: 3px;
-    }
-
-    .material .e-folder-name, .material-dark .e-folder-name {
-        margin-top: 1px;
     }
 </style>
 

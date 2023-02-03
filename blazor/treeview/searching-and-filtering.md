@@ -279,9 +279,6 @@ The Blazor TreeView component allows for searching and filtering of TreeView nod
     .e-treeview .e-list-icon.docx {
         background-position: -10px -20px
     }
-    .sf-license-warning{
-        display:none;
-    }
 </style>
 
 ```
