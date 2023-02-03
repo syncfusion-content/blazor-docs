@@ -83,7 +83,7 @@ In the below code, word document is converted in to pdf document and return that
                 case "dotm":
                 case "rtf":
                     Syncfusion.DocIO.DLS.WordDocument doc = new Syncfusion.DocIO.DLS.WordDocument(stream, GetWFormatType(type));
-                    //Instantiation of DocIORenderer for Word to PDF conversion
+                    //Initialization of DocIORenderer for Word to PDF conversion
                     DocIORenderer render = new DocIORenderer();
                     //Converts Word document into PDF document
                     pdfDocument = render.ConvertToPDF(doc);
@@ -113,12 +113,12 @@ In the below code, word document is converted in to pdf document and return that
                 case "jpg":
                 case "png":
                 case "bmp":
-                    //Add a page to the document
+                    //Add a page to the document.
                     PdfPage page = pdfDocument.Pages.Add();
-                    //Create PDF graphics for the page
+                    //Create PDF graphics for the page.
                     PdfGraphics graphics = page.Graphics;
                     PdfBitmap image = new PdfBitmap(stream);
-                    //Draw the image
+                    //Draw the image.
                     graphics.DrawImage(image, 0, 0);
                     break;
             }
@@ -132,7 +132,7 @@ In the below code, word document is converted in to pdf document and return that
 
     public void loadPDFdocument(byte[] bytes)
     {
-        // Converts the pdf document into base64 string.
+        // Convert a PDF document into a base64 string.
         string base64String = Convert.ToBase64String(bytes);
         // Load the base64 string in the PDF Viewer.
         viewerInstance.LoadAsync("data:application/pdf;base64," + base64String, null);
