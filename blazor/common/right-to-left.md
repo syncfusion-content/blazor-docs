@@ -17,74 +17,86 @@ You can enable right to left (RTL) for all Syncfusion components used in the app
 
 ### Blazor Server App
 
-* If you're using `.NET 6` Blazor Server App, set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
+* For `.NET 6 or .NET 7` Blazor Server App, set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
+* For `.NET 5 or .NET Core 3.1 ` Blazor Server App, set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property as `true` using `AddSyncfusionBlazor` service method in `~/Startup.cs` file.
 
-    ```c#
-    using Microsoft.AspNetCore.Components;
-    using Microsoft.AspNetCore.Components.Web;
-    using Syncfusion.Blazor;
+{% tabs %}
 
-    var builder = WebApplication.CreateBuilder(args);
+{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
 
-    builder.Services.AddRazorPages();
-    builder.Services.AddServerSideBlazor();
-    ....
-    builder.Services.AddSyncfusionBlazor(options => { options.EnableRtl = true; });
-    var app = builder.Build();
-    ....
-    ```
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
+using Syncfusion.Blazor;
 
-* If you're using `.NET 5 or .NET Core 3.1 ` Blazor Server App, set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property as `true` using `AddSyncfusionBlazor` service method in `~/Startup.cs` file.
+var builder = WebApplication.CreateBuilder(args);
 
-    ```c#
-    using Syncfusion.Blazor;
-    namespace WebApplication1
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+....
+builder.Services.AddSyncfusionBlazor(options => { options.EnableRtl = true; });
+var app = builder.Build();
+....
+
+{% endhighlight %}
+
+{% highlight c# tabtitle=".NET 3.X & .NET 5 (~/Startup.cs)" %}
+
+using Syncfusion.Blazor;
+namespace WebApplication1
+{
+    public class Startup
     {
-        public class Startup
+        public void ConfigureServices(IServiceCollection services)
         {
-            public void ConfigureServices(IServiceCollection services)
-            {
-                ....
-                services.AddSyncfusionBlazor(options => { options.EnableRtl = true; });
-            }
+            ....
+            services.AddSyncfusionBlazor(options => { options.EnableRtl = true; });
         }
     }
-    ```
+}
+
+{% endhighlight %}
+
+{% endtabs %}
     
 ### Blazor WebAssembly App
 
 If you're using Blazor WebAssembly App, set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
-    
-* For .NET 6 Blazor WebAssembly App
 
-    ```c#
-    using Microsoft.AspNetCore.Components;
-    using Microsoft.AspNetCore.Components.Web;
-    using Syncfusion.Blazor;
+{% tabs %}
 
-    var builder = WebApplication.CreateBuilder(args);
+{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
 
-    builder.Services.AddRazorPages();
-    builder.Services.AddServerSideBlazor();
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
+using Syncfusion.Blazor;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+....
+builder.Services.AddSyncfusionBlazor(options => { options.EnableRtl = true; });
+var app = builder.Build();
+....
+
+{% endhighlight %}
+
+{% highlight c# tabtitle=".NET 5 & .NET 3.X (~/Program.cs)" %}
+
+using Syncfusion.Blazor;
+....
+public static async Task Main(string[] args)
+{
+    var builder = WebAssemblyHostBuilder.CreateDefault(args)    ;
     ....
+
     builder.Services.AddSyncfusionBlazor(options => { options.EnableRtl = true; });
-    var app = builder.Build();
-    ....
-    ```
-    
-* For .NET 5 or .NET Core 3.1 Blazor WebAssembly App
-    ```c#
-    using Syncfusion.Blazor;
-    ....
-    public static async Task Main(string[] args)
-    {
-        var builder = WebAssemblyHostBuilder.CreateDefault(args)    ;
-        ....
+    await builder.Build().RunAsync();
+}
 
-        builder.Services.AddSyncfusionBlazor(options => { options.EnableRtl = true; });
-        await builder.Build().RunAsync();
-    }
-    ```
+{% endhighlight %}
+
+{% endtabs %}
 
 The above configuration enables the Right-To-Left (RTL) support globally for all the Syncfusion Blazor components. For illustration, the Syncfusion Blazor DataGrid component is displayed with Right-To-Left (RTL).
 
