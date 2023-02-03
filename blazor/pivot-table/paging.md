@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Paging in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn here all about Paging in Syncfusion Blazor Pivot Table component and more.
+description: Checkout and learn here all about Paging in Syncfusion Blazor Pivot Table component and more | Syncfusion.
 platform: Blazor
 control: Pivot Table
 documentation: ug
