@@ -9,7 +9,7 @@ documentation: ug
 
 # Paging in Blazor Pivot Table Component
 
-Paging allows you to load large amounts of data that can be divided and displayed page by page in the pivot table. It can be enabled by setting the [EnablePaging]() property to **true**. It can be configured at code-behind by using the [PivotViewPageSettings]() property, during initial rendering of the component. The properties required are:
+Paging allows you to load large amounts of data that can be divided and displayed page by page in the pivot table. It can be enabled by setting the [EnablePaging]() property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. It can be configured at code-behind by using the [PivotViewPageSettings]() property, during initial rendering of the component. The properties required are:
 
 * [CurrentRowPage](): Allows user to set the current row page number to be displayed in the pivot table.
 * [CurrentColumnPage](): Allows user to set the current column page number to be displayed in the pivot table.
@@ -358,11 +358,11 @@ The [Template]() property allows to change the appearance of the pager UI by dis
         <Template>
             <div style="display: grid">
                 <div class="pager-label">Row Pager: </div>
-                <SfPager PageSize="@((int)Parent.PageSettings.RowPageSize)" ItemClick="@RowPageClick" TotalItemsCount="@((int)context["rowCount"])" CurrentPage="@((int)currentRowPage)" NumericItemsCount="5">
+                <SfPager PageSize="@Parent.PageSettings.RowPageSize" ItemClick="@RowPageClick" TotalItemsCount="@context["rowCount"]" CurrentPage="@currentRowPage" NumericItemsCount="5">
                 </SfPager>
                 <div class="pager-label">Column Pager: </div>
-                 <SfPager PageSize="@((int)Parent.PageSettings.ColumnPageSize)" ItemClick="@ColumnPageClick" TotalItemsCount="@((int)context["columnCount"])" CurrentPage="@((int)currentColumnPage)" NumericItemsCount="5">
-                 </SfPager>
+                <SfPager PageSize="@Parent.PageSettings.ColumnPageSize" ItemClick="@ColumnPageClick" TotalItemsCount="@context["columnCount"]" CurrentPage="@currentColumnPage" NumericItemsCount="5">
+                </SfPager>
             </div>
         </Template>
     </PivotViewPagerSettings>
@@ -393,8 +393,8 @@ The [Template]() property allows to change the appearance of the pager UI by dis
 </style>
 @code {
     private SfPivotView<PivotProductDetails> Parent;
-    private double currentRowPage = 1;
-    private double currentColumnPage = 1;
+    private int currentRowPage = 1;
+    private int currentColumnPage = 1;
     public class PivotProductDetails
     {
         public int Quantity { get; set; }
@@ -406,7 +406,6 @@ The [Template]() property allows to change the appearance of the pager UI by dis
     public void RowPageClick(PagerItemClickEventArgs args)
     {
         currentRowPage = args.CurrentPage;
-
     }
     public void ColumnPageClick(PagerItemClickEventArgs args)
     {
