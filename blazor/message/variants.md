@@ -9,7 +9,7 @@ documentation: ug
 
 # Variants in Blazor Message
 
-The Message has predefined appearance variants for different visual representations. The variants of the message can be changed based on the `Variant` property.
+The Message has predefined appearance variants for different visual representations. The variants of the message can be changed based on the [`Variant`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfMessage.html#Syncfusion_Blazor_Notifications_SfMessage_Variant) property.
 
 The available variants are **Text**, **Outlined** and **Filled**. The default variant type for messages is **Text**.
 * **Text** - The severity is differentiated using a text color and a light background color.
