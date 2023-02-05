@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Prevent the PDF from scrolling and remove the vertical scrollbar | Syncfusion
+title: Prevent the PDF from scrolling | Syncfusion
 description: Learn here all about how to prevent the PDF from scrolling and remove the vertical scrollbar in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
