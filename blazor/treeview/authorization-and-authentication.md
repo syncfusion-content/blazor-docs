@@ -13,9 +13,9 @@ documentation: ug
 
 **Authorization**, on the other hand, is the process of determining whether a user or system has access to a particular resource or action. Once a user's identity has been authenticated, the system can then determine whether they are authorized to perform a specific action or access a specific resource. This is often done by comparing the user's credentials or permissions against a set of rules or policies.
 
-The Blazor TreeView component provides a [sample](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Authentication1642627335.zip) implementation of Authorization and Authentication. This ensures that only authorized users can access the resources and information within the TreeView, providing better security and privacy for the system. The below blog also includes steps to create a [Blazor Server App with Authentication](https://www.syncfusion.com/blogs/post/easy-steps-create-a-blazor-server-app-with-authentication.aspx), ensuring easy setup and configuration.
+Provides a sample of Authorization and Authentication that explains how authorized users can access the TreeView. The below blog also includes steps to create a [Blazor Server App with Authentication](https://www.syncfusion.com/blogs/post/easy-steps-create-a-blazor-server-app-with-authentication.aspx), ensuring easy setup and configuration.
 
-For authorized users, the Blazor TreeView component will be shown, and for non-authorized users, a message to either log in or register will be displayed as specified in the NotAuthorized tag.
+The Blazor TreeView component will be shown for authorized users, and a message to either log in or register will be displayed as specified in the not authorized users.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
