@@ -15,7 +15,7 @@ N> All the events should be provided in a single **TreeViewEvents** component.
 
 ## Created 
 
-The event [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_Created) of the Blazor TreeView component triggers once the TreeView has been successfully created.
+The Blazor TreeView component's [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_Created) event is triggered once the TreeView has been successfully created
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -417,7 +417,7 @@ The Blazor TreeView [NodeChecking](https://help.syncfusion.com/cr/blazor/Syncfus
 
 ## NodeClicked 
 
-The [NodeClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeClicked) event of the Blazor TreeView component is triggered when a TreeView node is successfully clicked.
+The Blazor TreeView component's [NodeClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeClicked) event is triggered when a TreeView node is successfully clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -484,7 +484,7 @@ The [NodeClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Naviga
 
 ## NodeCollapsed 
 
-The [NodeCollapsed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeCollapsed) event in the Blazor TreeView component is triggered when a node collapses successfully.
+The Blazor TreeView component's [NodeCollapsed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeCollapsed) event is triggered when a node collapses successfully.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

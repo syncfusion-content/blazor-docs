@@ -9,7 +9,7 @@ documentation: ug
 
 # Context Menu in Blazor TreeView Component
 
-In the Blazor TreeView component, it is possible to integrate a context menu component, allowing for TreeView operations such as adding, removing, and renaming nodes. 
+The Blazor TreeView component allows integration of a context menu to perform operations such as adding, removing, and renaming nodes. 
 
 This is demonstrated in an example where the TreeView operations are manipulated in the `ItemSelected` event of the context menu.
 
@@ -606,7 +606,9 @@ The Blazor TreeView component has the built-in option to customize each node's a
 
 ## Navigation within Sidebar
 
-The Blazor TreeView component's **NavigateUrl** field is used to navigate from one page to other pages with TreeView node selection. 
+The Blazor TreeView component's **NavigateUrl** field is used to navigate from one page to other pages using TreeView node selection. 
+
+In this example, TreeView's `NavigateUrl` is mapped to move one page to another page inside the Sidebar component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

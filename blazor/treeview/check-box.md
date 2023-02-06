@@ -103,7 +103,7 @@ You can check a specific node by setting the **IsChecked** field to true for the
 
 ## Check nodes through API
 
-The Blazor TreeView component enables the ability to check specific nodes upon initial rendering through the use of the [CheckedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CheckedNodes) property. This property allows for the checkbox selection of nodes by passing in an array collection of node IDs as strings.
+The Blazor TreeView component enables the ability to check specific nodes upon initial rendering or dynamically through the two-way binding provided by the [CheckedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CheckedNodes) property. This property allows for the checkbox selection of nodes by passing in an array collection of node IDs as strings.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

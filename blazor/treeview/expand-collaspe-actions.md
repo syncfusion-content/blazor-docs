@@ -94,7 +94,7 @@ The Blazor TreeView component allows for specific nodes to be expanded upon init
 
 ## Expand nodes through API
 
-The Blazor TreeView component allows the expansion of specific nodes during initialization through two-way binding capabilities provided by the [ExpandedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ExpandedNodes) property. This property allows for the expansion of particular parent nodes by passing in an array collection of the corresponding node IDs as strings. 
+The Blazor TreeView component allows the expansion of specific nodes during initialization or dynamically through two-way binding capabilities provided by the [ExpandedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ExpandedNodes) property. This property allows for the expansion of particular parent nodes by passing in an array collection of the corresponding node IDs as strings. 
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -179,7 +179,7 @@ The Blazor TreeView component allows the expansion of specific nodes during init
 
 ## Get expanded nodes
 
-The Blazor TreeView component allows the expansion of specific nodes during initialization through two-way binding capabilities provided by the [ExpandedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ExpandedNodes) property. Additionally, the component offers the [GetTreeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_GetTreeData_System_String_) method, which allows for retrieval of the updated data source of the TreeView. By passing the ExpandedNodes of specific TreeView nodes as arguments to this method, the updated data source of only those nodes will be returned. If no arguments are passed, the entire updated data source of the TreeView will be returned.
+The Blazor TreeView component allows the expansion of specific nodes during initialization or dynamically through two-way binding capabilities provided by the [ExpandedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ExpandedNodes) property. Additionally, the component offers the [GetTreeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_GetTreeData_System_String_) method, which allows for retrieval of the updated data source of the TreeView. By passing the ExpandedNodes of specific TreeView nodes as arguments to this method, the updated data source of only those nodes will be returned. If no arguments are passed, the entire updated data source of the TreeView will be returned.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -331,7 +331,7 @@ The Blazor TreeView component allows the expansion of specific nodes during init
 
 ## Expand or collapse a node programmatically
 
-The [ExpandAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ExpandAllAsync_System_String___) method is used to expand all the collapsed TreeView nodes in the Blazor TreeView component. Also, you can expand the specific nodes by passing the array of collapsed nodes.Also you can change through [ExpandedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ExpandedNodes) API or Expanded field dynamically.
+The [ExpandAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ExpandAllAsync_System_String___) method is used to expand all the collapsed TreeView nodes in the Blazor TreeView component. Also, you can expand the specific nodes by passing the array of collapsed nodes. Also you can change through [ExpandedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ExpandedNodes) API or Expanded field dynamically.
 
 The [CollapseAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CollapseAllAsync_System_String___) method is used to collapse all the expanded TreeView nodes in the Blazor TreeView component.Also, collapse the specific nodes by passing the array of expanded nodes.
 
