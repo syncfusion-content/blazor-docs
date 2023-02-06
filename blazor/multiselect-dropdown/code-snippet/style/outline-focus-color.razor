@@ -1,16 +1,16 @@
 @using Syncfusion.Blazor.DropDowns;
 
-<SfDropDownList TValue="string" TItem="Games" Placeholder="Select a game" DataSource="@LocalData" CssClass="e-outline">
-  <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
-</SfDropDownList>
+<SfMultiSelect TValue="string[]" TItem="Games" Placeholder="Favorite Sports" DataSource="@LocalData" Width="300px" CssClass="e-outline">
+    <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
+</SfMultiSelect>
 
 @code {
-  public class Games
-  {  
-    public string ID { get; set; }
-    public string Text { get; set; }
-  }
-  List<Games> LocalData = new List<Games> {
+    public class Games
+    {
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+    List<Games> LocalData = new List<Games> {
     new Games() { ID= "Game1", Text= "American Football" },
     new Games() { ID= "Game2", Text= "Badminton" },
     new Games() { ID= "Game3", Text= "Basketball" },
@@ -21,7 +21,7 @@
     new Games() { ID= "Game8", Text= "Rugby"},
     new Games() { ID= "Game9", Text= "Snooker" },
     new Games() { ID= "Game10", Text= "Tennis"},
-  };
+    };
 }
 
 <style>

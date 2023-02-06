@@ -13,128 +13,135 @@ The following content provides the exact CSS structure that can be used to modif
 
 ## Customizing the appearance of container element
 
-Use the following CSS to customize the appearance of container element.
+You can customize the appearance of the container element within the autocomplete component by targeting its CSS class `.e-input`, which indicates the parent element of the input, and allows you to apply any desired styles to the component.
 
-```css
-.e-ddl.e-input-group.e-control-wrapper .e-input {
-    font-size: 20px;
-    font-family: emoji;
-    color: #ab3243;
-    background: #32a5ab;
-}
-```
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/customizing-appearance.razor %}
+
+{% endhighlight %}
+
+![Blazor AutoComplete container element customization](./images/style/blazor_autocomplete_appearance-of-container.png)
 
 ## Customizing the dropdown icon’s color
 
-Use the following CSS to customize the dropdown icon’s color.
+You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons/#material) by targeting its CSS class `.e-ddl-icon.e-icons`, which indicates the icon element displayed within the autocomplete component, and setting the desired color to the `color` property.
 
-```css
-.e-ddl .e-input-group-icon.e-ddl-icon.e-icons, .e-ddl .e-input-group-icon.e-ddl-icon.e-icons:hover {
-    color: #bb233d;
-    font-size: 13px;
-}
-```
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/dropdown-icon-color.razor %}
+
+{% endhighlight %}
+
+![Blazor AutoComplete icon color](./images/style/blazor_autocomplete_icon-color.png)
 
 ## Customizing the focus color
 
-Use the following CSS to customize the focusing color of input element.
+You can customize the component color when it is focused by targeting its CSS class `.e-input-focus::after`, which indicates the input element when it is focused, and set the desired color to the `background` property.
 
-```css
-.e-ddl.e-input-group.e-control-wrapper.e-input-focus::before, .e-ddl.e-input-group.e-control-wrapper.e-input-focus::after {
-    background: #c000ff;
-}
-```
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/focus-color.razor %}
+
+{% endhighlight %}
+
+![Blazor AutoComplete focus color](./images/style/blazor_autocomplete_focus-color.png)
 
 ## Customizing the outline theme's focus color
 
-Use the following CSS to customize the focusing color of outline theme.
+You can customize the color of the autocomplete component when it is in a focused state and rendered with an outline theme,  by targeting its CSS class `e-outline` which indicates the input element when it is focused, and allows you to set the desired color to the `color` property.
 
-```css
-.e-outline.e-input-group.e-input-focus:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),.e-outline.e-input-group.e-input-focus.e-control-wrapper:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),.e-outline.e-input-group.e-input-focus:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled),.e-outline.e-input-group.e-control-wrapper.e-input-focus:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled) {
-    border-color: #b1bd15;
-    box-shadow: inset 1px 1px #b1bd15, inset -1px 0 #b1bd15, inset 0 -1px #b1bd15;
-}
-```
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/outline-focus-color.razor %}
+
+{% endhighlight %}
+
+![Blazor AutoComplete focusing color outline theme](./images/style/blazor_autocomplete_outline-focus-color.png)
 
 ## Customizing the disabled component’s text color
 
-Use the following CSS to customize the text color when the component is disabled.
+You can customize the text color of a disabled component by targeting its CSS class `.e-input[disabled]`, which indicates the input element in a disabled state, and set the desired color to the `-webkit-text-fill-color` property.
 
-```css
-.e-input-group.e-control-wrapper .e-input[disabled] {
-    -webkit-text-fill-color: #0d9133;
-}
-```
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/disable-text-color.razor %}
+
+{% endhighlight %}
+
+![Blazor AutoComplete with Disabled component text color](./images/style/blazor_autocomplete_disabled-text-color.png)
 
 ## Customizing the float label element's focusing color
 
-Use the following CSS to customize the focusing color of float label element.
+You can change the text color of the floating label when it is focused by targeting its CSS classes `.e-input-focus` and `.e-float-text.e-label-top`. These classes indicate the floating label text while it is focused and set the desired color using the `color` property.
 
-```css
-.e-float-input.e-input-group:not(.e-float-icon-left) .e-float-line::before,.e-float-input.e-control-wrapper.e-input-group:not(.e-float-icon-left) .e-float-line::before,.e-float-input.e-input-group:not(.e-float-icon-left) .e-float-line::after,.e-float-input.e-control-wrapper.e-input-group:not(.e-float-icon-left) .e-float-line::after {
-    background-color: #2319b8;
-}
+{% highlight cshtml %}
 
-.e-ddl.e-lib.e-input-group.e-control-wrapper.e-control-container.e-float-input.e-input-focus .e-float-text.e-label-top {
-    color: #2319b8;
-}
-```
+{% include_relative code-snippet/style/floatlabel-focusing-color.razor %}
+
+{% endhighlight %}
+
+![Blazor AutoComplete with float label focusing color](./images/style/blazor_autocomplete_floatlabel-focus-color.png)
 
 ## Customizing the color of the placeholder text
 
-Use the following CSS to customize the text color of placeholder.
+You can change the color of the placeholder by targeting its CSS class `input.e-input::placeholder`, which indicates the placeholder text, and set the desired color using the `color` property.
 
-```css
-.e-ddl.e-input-group input.e-input::placeholder {
-    color: red;
-}
-```
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/placeholder-with-color.razor %}
+
+{% endhighlight %}
+
+![Blazor AutoComplete with color placeholder](./images/style/blazor_autocomplete_placeholder-color.png)
 
 ## Customizing the placeholder to add mandatory indicator(*)
 
-Use the following CSS to add the mandatory indicator * to the float label element.
+The mandatory indicator `*` can be applied to the placeholder by targeting its CSS class `.e-float-text::after` using the `content` style.
 
-```css
-.e-input-group.e-control-wrapper.e-control-container.e-float-input .e-float-text::after {
-    content: "*";
-    color: red;
-}
-```
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/placeholder-with-mandatory.razor %}
+
+{% endhighlight %}
+
+![Blazor AutoComplete with mandatory indicator placeholder](./images/style/blazor_autocomplete_placeholder-with-mandatory.png)
 
 ## Customizing the text selection color
 
-Use the following CSS to customize the selection color of text and background.
+The appearance of a selected item within a autocomplete component can be customized by targeting the CSS class `input.e-input::selection` and set the desired background color and text color. This customization will only be applied when the item is selected manually. To achieve this, use the `background-color` and `color` properties of the CSS class `input.e-input::selection`.
 
-```css
-.e-ddl.e-input-group input.e-input::selection {
-    color: red;
-    background: yellow;
-}
-```
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/text-selection-color.razor %}
+
+{% endhighlight %}
+
+![Blazor ComboBox with customizing the focus, hover and active item color](./images/style/blazor_autocomplete_text-selection-color.png)
 
 ## Customizing the background color of focus, hover, and active items
 
-Use the following CSS to customize the background color of focus, hover and active item's.
+You can customize the background color and text color of list items within the autocomplete component when they are in a focused, active, or hovered state by targeting the CSS classes `.e-list-item.e-item-focus`, `.e-list-item.e-active`, and `.e-list-item.e-hover`, and set the desired color to the background-color and color properties.
 
-```css
-.e-dropdownbase .e-list-item.e-item-focus, .e-dropdownbase .e-list-item.e-active, .e-dropdownbase .e-list-item.e-active.e-hover, .e-dropdownbase .e-list-item.e-hover {
-    background-color: #1f9c99;
-    color: #2319b8;
-}
-```
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/background-color.razor %}
+
+{% endhighlight %}
+
+![Blazor AutoComplete with customizing the focus, hover and active item color](./images/style/blazor_autocomplete_background-color.png)
 
 ## Customizing the appearance of pop-up element
 
-Use the following CSS to customize the appearance of popup element.
+You can customize the appearance of the popup element within the autocomplete component by targeting the CSS class `.e-list-item.e-item-focus`, which indicates the list item element when it is focused, and and allows you to apply any desired styles to the component.
 
-```css
-.e-dropdownbase .e-list-item, .e-dropdownbase .e-list-item.e-item-focus {
-    background-color: #29c2b8;
-    color: #207cd9;
-    font-family: emoji;
-    min-height: 29px;
-}
-```
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/appearance-popup.razor %}
+
+{% endhighlight %}
+
+![Blazor AutoComplete with customizing popup color](./images/style/blazor_autocomplete_appearance-of-popup.png)
 
 ## Adding search icon in the Blazor AutoComplete component.
 

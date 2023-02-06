@@ -91,8 +91,7 @@ You can customize the dropdown icon for the particular component using the [CssC
 
 ## Customizing the appearance of container element
 
-You can customize the appearance of the container element within the dropdown list component by targeting its CSS class 
-`.e-input`, which indicates the parent element of the input, and allows you to apply any desired styles to the component.
+You can customize the appearance of the container element within the dropdown list component by targeting its CSS class `.e-input`, which indicates the parent element of the input, and allows you to apply any desired styles to the component.
 
 {% highlight cshtml %}
 
@@ -104,7 +103,7 @@ You can customize the appearance of the container element within the dropdown li
 
 ## Customizing the dropdown icon’s color
 
-You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons/#material) by targeting its CSS class `.e-ddl-icon.e-icons`, which indicates the icon element displayed within the dropdown list component, and setting the desired color to the color property.
+You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons/#material) by targeting its CSS class `.e-ddl-icon.e-icons`, which indicates the icon element displayed within the dropdown list component, and setting the desired color to the `color` property.
 
 {% highlight cshtml %}
 

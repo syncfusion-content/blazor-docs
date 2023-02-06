@@ -23,7 +23,7 @@ Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 ## Color of the placeholder text
 
-Use the following code to customize the text color of the `Placeholder`.
+You can change the color of the placeholder by targeting its CSS class `input.e-input::placeholder`, which indicates the placeholder text, and set the desired color using the `color` property.
 
 {% highlight cshtml %}
 
@@ -35,9 +35,7 @@ Use the following code to customize the text color of the `Placeholder`.
 
 ## Add mandatory indicator using placeholder
 
-The mandatory indicator `*​` can be applied to the placeholder using the content style in the CSS level.
-
-Use the following code to add the mandatory indicator * to the float label element.
+The mandatory indicator `*` can be applied to the placeholder by targeting its CSS class `.e-float-text::after` using the `content` style.
 
 {% highlight cshtml %}
 
@@ -71,7 +69,7 @@ The `FloatLabelType` as  `Auto` is demonstrated in the following code sample.
 
 ## Customizing the float label element’s focusing color
 
-Use the following code to customize the focusing color of the float label element.
+You can change the text color of the floating label when it is focused by targeting its CSS classes `.e-input-focus` and `.e-float-text.e-label-top`. These classes indicate the floating label text while it is focused state and set the desired color using the `color` property.
 
 {% highlight cshtml %}
 

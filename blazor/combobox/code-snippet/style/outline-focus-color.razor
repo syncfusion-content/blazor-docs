@@ -1,8 +1,8 @@
 @using Syncfusion.Blazor.DropDowns;
 
-<SfDropDownList TValue="string" TItem="Games" Placeholder="Select a game" DataSource="@LocalData" CssClass="e-outline">
-  <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
-</SfDropDownList>
+<SfComboBox TValue="string" TItem="Games" Placeholder="Select a game" DataSource="@LocalData" Width="300px" CssClass="e-outline">
+    <ComboBoxFieldSettings Value="ID" Text="Text"></ComboBoxFieldSettings>
+</SfComboBox>
 
 @code {
   public class Games
