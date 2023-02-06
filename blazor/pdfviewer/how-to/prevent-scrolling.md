@@ -21,4 +21,4 @@ By setting the overflow property to hidden, the PDF viewer component will be dis
 </style>
 ```
 
-[View Sample in GitHub]()
+[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/BLAZ-28848-preventScroll/Common/Prevent%20the%20PDF%20from%20scrolling)
