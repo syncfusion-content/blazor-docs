@@ -87,3 +87,5 @@ The Blazor TreeView component will be shown for authorized users, and a message 
 </AuthorizeView>
 
 ```
+
+N> The fully working sample can be found [here](https://github.com/SyncfusionExamples/Blazor-TreeView-Authentication-Authorization).
