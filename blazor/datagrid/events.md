@@ -2619,9 +2619,9 @@ The [OnBatchCancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grid
 
 ## FreezeLineMoving
 
-The [FreezeLineMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FreezeLineMoving) event is triggered when the freeze line is moving.
+The [FreezeLineMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FreezeLineMoving) event is triggered when the freeze line is moving to divide the grid into frozen and non-frozen sections.
 
-> The freeze line can be enabled by setting the `AllowFreezeLineMoving` property to true.
+> To enable drag and drop of the freeze line, the `FreezeLineMoving` property must be set to true.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2689,9 +2689,9 @@ The [FreezeLineMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 ## FreezeLineMoved
 
-The [FreezeLineMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FreezeLineMoved) event is triggered after moving the freeze line.
+The [FreezeLineMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FreezeLineMoved) event is triggered after the freeze line is moved. 
 
-> The freeze line can be enabled by setting the `AllowFreezeLineMoving` property to true.
+> To enable drag and drop of the freeze line, the `FreezeLineMoving` property must be set to true.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2760,9 +2760,9 @@ The [FreezeLineMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gr
 
 ## BeforeAutoFill
 
-The [BeforeAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeAutoFill) event will be triggered before the autofill action is performed.
+The [BeforeAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeAutoFill) event is triggered before the autofill action is performed in the grid.
 
-> By setting the `Cancel` argument of the `BeforeAutoFill` event to true, the entire cells being automatically filled in the cell can be prevented.
+> The `BeforeAutoFill` event prevents a cell from being automatically filled by setting the `Cancel` argument to true.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2810,9 +2810,9 @@ The [BeforeAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gri
 
 ## BeforeAutoFillCell
 
-The [BeforeAutoFillCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeAutoFillCell) event is triggered for each cell before auto-filling the value.
+The [BeforeAutoFillCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeAutoFillCell)  event is triggered prior to the auto-fill process for each cell in the grid.
 
-> The autofit action for a particular cell can be prevented by setting the Cancel argument of the BeforeAutoFillCell event to true. Also, if the `BeforeAutoFill` event is not prevented, this event occurs after it.
+> The auto-fill action for a cell can be prevented by setting the `Cancel` argument of the `BeforeAutoFillCell` event to true. Also, if the `BeforeAutoFill` event is not prevented, this event occurs after it.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2860,9 +2860,9 @@ The [BeforeAutoFillCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## BeforeCellPaste
 
-The [BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeCellPaste) event is triggered before pasting the copied cell value for each cell.
+The [BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeCellPaste) event is triggered before pasting the copied cell value in the current cell.
 
-> The pasting action for a particular cell can be prevented by setting the `Cancel` argument of the `BeforeCellPaste` event to true.
+> The `BeforeCellPaste` event prevents a paste action for a particular cell by setting the `Cancel` argument to true.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2908,9 +2908,9 @@ The [BeforeCellPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gr
 
 ## BeforeCopyPaste
 
-The [BeforeCopyPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeCopyPaste) event is triggered before pasting the copied cell value for each cell.
+The [BeforeCopyPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_BeforeCopyPaste) event is triggered prior to any copy or paste actions being executed within the grid cells.
 
-> The entire copy or paste action can be prevented by setting the `Cancel` argument of the `BeforeCopyPaste` event to true.
+> The `BeforeCopyPaste` event prevents any copy or paste actions performed within the grid cells by setting the `Cancel` argument to true.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2955,7 +2955,7 @@ The [BeforeCopyPaste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gr
 
 ## DetailsExpanding
 
-The [DetailsExpanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsExpanding) event is triggered when detail template row is clicked to expand.
+The [DetailsExpanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsExpanding) event is triggered when a detail template row is clicked to expand. 
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3068,7 +3068,7 @@ The [DetailsExpanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 ## DetailsExpanded
 
-The [DetailsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsExpanded) event is triggered after the detail template row is expanded.
+The [DetailsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsExpanded) event is triggered after a detail template row has been expanded
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3181,7 +3181,7 @@ The [DetailsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gr
 
 ## DetailsCollapsing
 
-The [DetailsCollapsing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsCollapsing) event is triggered when detail template row is clicked to collapse.
+The [DetailsCollapsing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsCollapsing) event is triggered when a detail template row is clicked to collapse.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -3292,9 +3292,9 @@ The [DetailsCollapsing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 ```
 
-## DetailsCollpased
+## DetailsCollapsed
 
-The [DetailsCollpased](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsCollapsed) event is triggered after detail template after row is collapsed.
+The [DetailsCollapsed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DetailsCollapsed) event is triggered after a detail template row is collapsed.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
