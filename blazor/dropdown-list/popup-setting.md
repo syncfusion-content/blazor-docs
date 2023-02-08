@@ -79,39 +79,7 @@ Prevent the popup open and close in the event argument like [BeforeOpenEventArgs
 
 ![Blazor DropdownList with Preventing opening and closing](./images/popup-setting/blazor_dropdown_preventing-opening-closing.png)
 
-## Popup height based on available space
-
-You can achieve this by binding the `resize` event in window and update the height of the popup based on the window height.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/popup-setting/popup-resize.razor %}
-
-{% endhighlight %}
-
-{% tabs %}
-{% highlight razor tabtitle="Layout.razor" %}
-
-<script>
-    window.addEventListener("resize", function (e) {
-        var wrapper = document.getElementById("dropdown").parentElement;
-        var popupEle = document.getElementById("dropdown_popup");
-        var topVal = wrapper.getBoundingClientRect().top;
-        window.innerHeight - topVal;
-        if (popupEle) {
-            popupEle.style.maxHeight = (window.innerHeight - topVal-50) + "px";
-            popupEle.style.height = (window.innerHeight - topVal-50) + "px";
-            
-        }
-    })
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-![Popup height based on available space in Blazor DropdownList](./images/popup-setting/blazor_dropdown_popup_resize.gif)
-
-## Events
+The following events are used to trigger when opening and closing popup.
 
 ### OnOpen event
 
@@ -153,69 +121,41 @@ The [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.D
 
 {% endhighlight %}
 
-## Properties
+## Popup height based on available space
 
-### PopupHeight
-
-Specifies the height of the popup list.
-
-Default value of [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) is `300px`.
+You can achieve this by binding the `resize` event in window and update the height of the popup based on the window height.
 
 {% highlight Razor %}
 
-{% include_relative code-snippet/popup-setting/popup-height.razor %}
+{% include_relative code-snippet/popup-setting/popup-resize.razor %}
 
 {% endhighlight %}
 
-![PopupHeight in Blazor DropdownList](./images/popup-setting/blazor_dropdown_popup-height.png)
+{% tabs %}
+{% highlight razor tabtitle="Layout.razor" %}
 
-### PopupWidth
-
-Specifies the Width of the popup list. By default, the popup Width sets based on the Width of the component.
-
-Default value of [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) is `100%`
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/popup-setting/popup-width.razor %}
-
-{% endhighlight %}
-
-![PopupWidth in Blazor DropdownList](./images/popup-setting/blazor_dropdown_popup-width.png)
-
-### Width
-
-Specifies the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Width) of the component. By default, the component Width sets based on the Width of its parent container.
-
-You can also set the Width in pixel values.
-
-Default value of Width is `100%`
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/popup-setting/width-property.razor %}
+<script>
+    window.addEventListener("resize", function (e) {
+        var wrapper = document.getElementById("dropdown").parentElement;
+        var popupEle = document.getElementById("dropdown_popup");
+        var topVal = wrapper.getBoundingClientRect().top;
+        window.innerHeight - topVal;
+        if (popupEle) {
+            popupEle.style.maxHeight = (window.innerHeight - topVal-50) + "px";
+            popupEle.style.height = (window.innerHeight - topVal-50) + "px";
+            
+        }
+    })
+</script>
 
 {% endhighlight %}
+{% endtabs %}
 
-![Width in Blazor DropdownList](./images/popup-setting/blazor_dropdown_with-width-property.png)
+![Popup height based on available space in Blazor DropdownList](./images/popup-setting/blazor_dropdown_popup_resize.gif)
 
-## Methods
+## Programmatically opening and closing popup
 
-### HidePopupAsync()
-
-Hides the DropDownList popup.
-
-#### Declarations
-
-N> public Task HidePopupAsync()
-
-### ShowPopupAsync()
-
-Opens the popup that displays the list of items.
-
-#### Declarations
-
-N> public Task ShowPopupAsync()
+You can programmatically open and close the popup by accessing the `ShowPopupAsync()` and `HidePopupAsync()` methods through an instance of the dropdown list. Bind the click event of a button to these methods. When the button is clicked, it will trigger the respective method and open or close the popup.
 
 {% highlight Razor %}
 
@@ -224,3 +164,5 @@ N> public Task ShowPopupAsync()
 {% endhighlight %} 
 
 ![Show or Hide Popup in Blazor DropdownList](./images/popup-setting/blazor_dropdown_show-or-hide-popup.gif)
+
+
