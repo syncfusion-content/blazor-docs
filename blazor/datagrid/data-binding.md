@@ -1300,6 +1300,82 @@ N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagri
 
 N> ASP.NET Core (Blazor) Web API with batch handling is not yet supported by ASP.NET Core v3+. Hence, it is not feasible for us to support batch mode CRUD operations until ASP.NET Core provides the support for the batch handler. Refer [here](https://github.com/dotnet/aspnetcore/issues/14722) for more details.
 
+## How to bind data from DataTable
+
+DataTable represents a table with relational data and has an in-built schema to work easily with data column and data row objects.
+
+It is possible to bind the data from the DataTable to the Grid component. This can be achieved in the following way:
+
+In the following sample, the data from the DataTable can be retrieved and coverted as an ExpandoObject list. This list can be assigned to the `DataSource` property of the Grid, and the columns are built dynamically using the ExpandoObject.
+
+```csharp
+@using Syncfusion.Blazor.Grids
+@using System.Dynamic
+@using System.Data
+
+<SfGrid ID="Grid" DataSource="CustomerList">
+    <GridColumns>
+        @{
+            foreach (var val in Columns)
+            {
+                if (val.Contains("Date"))
+                {
+                   <GridColumn Field="@val" Type="ColumnType.DateTime" ></GridColumn>
+                }
+                else
+                {
+                    <GridColumn Field="@val" ></GridColumn>
+                }
+            }
+        }
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<ExpandoObject> CustomerList;
+    string[] Columns;
+    public DataTable dataTable = new DataTable();
+
+    protected override void OnInitialized()
+    {
+        dataTable.Columns.Add("OrderID", typeof(int));
+        dataTable.Columns.Add("CustomerID",typeof(string));
+        dataTable.Columns.Add("ShipCountry",typeof(string));
+        dataTable.Columns.Add("OrderDate ",typeof(DateTime));
+        dataTable.Rows.Add(1001,"ALFKI", "USA", DateTime.Now);
+        dataTable.Rows.Add(1002,"ANANTR","UK", DateTime.Now);
+        dataTable.Rows.Add(1003,"ANTON", "Belgium", DateTime.Now);
+        dataTable.Rows.Add(1004,"BLONP", "Canada", DateTime.Now);
+        dataTable.Rows.Add(1005,"BOLID", "USA", DateTime.Now);
+        CustomerList = GenerateListFromTable(dataTable);
+    }
+    
+    public List<ExpandoObject> GenerateListFromTable(DataTable input)
+    {
+        var list = new List<ExpandoObject>();
+        Columns = input.Columns.Cast<DataColumn>()
+                             .Select(x => x.ColumnName)
+                             .ToArray();
+        foreach (DataRow row in input.Rows)
+        {
+            System.Dynamic.ExpandoObject e = new System.Dynamic.ExpandoObject();
+            foreach (DataColumn col in input.Columns){
+                if (col.DataType == typeof(DateTime))
+                {
+                    e.TryAdd(col.ColumnName, row[col]);
+                }
+                else
+                {
+                    e.TryAdd(col.ColumnName, row[col]);   
+                }
+            }
+            list.Add(e);
+        }
+        return list;
+    }
+}
+```
+
 ## See also
 
 * [A Full-Stack Web App Using Blazor WebAssembly and GraphQL: Part 1](https://www.syncfusion.com/blogs/post/a-full-stack-web-app-using-blazor-webassembly-and-graphql-part-1.aspx)
