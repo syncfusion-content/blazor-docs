@@ -55,7 +55,7 @@ N> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` 
 The **DialogService** must be registered as scoped service using the **SfDialogService** method for getting the predefined dialogs instance at any page.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="1 2 7 8" %}
+{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="1 2 7 8" %}
 
 using Syncfusion.Blazor
 using Syncfusion.Blazor.Popups
@@ -102,7 +102,7 @@ namespace BlazorApplication
 Open the **~/Program.cs** file and register the Syncfusion Blazor Service and Sycnfusion Blazor Dialog Service in the client web app.
 
 {% tabs %}
-{% highlight C# tabtitle=".NET 6 (~/Program.cs)" hl_lines="1 2 7 8" %}
+{% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="1 2 7 8" %}
 
 using Syncfusion.Blazor
 using Syncfusion.Blazor.Popups
