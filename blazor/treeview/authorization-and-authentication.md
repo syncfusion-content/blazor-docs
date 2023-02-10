@@ -15,7 +15,7 @@ documentation: ug
 
 Provides a sample of Authorization and Authentication that explains how authorized users can access the TreeView. The below blog also includes steps to create a [Blazor Server App with Authentication](https://www.syncfusion.com/blogs/post/easy-steps-create-a-blazor-server-app-with-authentication.aspx), ensuring easy setup and configuration.
 
-The Blazor TreeView component will be shown for authorized users, and a message to either log in or register will be displayed as specified in the not authorized users.
+In the below example, the Blazor Server App is equipped with authentication, which ensures that only authorized users can access the TreeView.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
