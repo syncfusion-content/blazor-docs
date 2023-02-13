@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in Blazor SpeedDial Component | Syncfusion
+title: Appearance of Blazor SpeedDial Component | Syncfusion
 description: Checkout and learn here all about appearance and how to use them in Syncfusion SpeedDial component and much more.
 platform: Blazor
 control: SpeedDial
 documentation: ug
 ---
 
-# Appearance in Blazor SpeedDial Component
+# Appearance of Blazor SpeedDial Component
 
 This section briefly explains about Appearance of Speed dial.
 
@@ -35,7 +35,7 @@ You can enable or disable the Speed Dial Component using [Disabled](https://help
 
 ## Visibility
 
-You can set the Speed Dial Component to visible/hidden state using [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Visible) property.
+You can use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Visible) property to show or hide the SpeedDial component.
 
 {% tabs %}
 {% highlight razor %}
@@ -55,7 +55,7 @@ You can set the Speed Dial Component to visible/hidden state using [Visible](htt
 
 ## Modal
 
-You can use the [IsModal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_IsModal) property to set the Speed Dial as modal which adds an overlay to prevent the background interaction.
+You can use the [IsModal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_IsModal) property to open the Speed Dial items as modal which adds an overlay to prevent the background interaction.
 
 {% tabs %}
 {% highlight razor %}

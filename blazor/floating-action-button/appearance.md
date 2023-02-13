@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in Blazor FAB Component | Syncfusion
+title: Appearance of Blazor FAB Component | Syncfusion
 description: Checkout and learn here all about Appearance in Syncfusion Blazor Floating Action Button component and much more.
 platform: Blazor
 control: Floating Action Button
 documentation: ug
 ---
 
-# Appearance in Blazor Floating Action Button Component
+# Appearance of Blazor Floating Action Button Component
 
 You can also customize the appearance of Floating Action Button component.
 

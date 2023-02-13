@@ -13,7 +13,7 @@ This section explains the different positions of SpeedDial.
 
 ## Target
 
-The [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Target) property in the Blazor SpeedDial component allows you to specify the element to which the SpeedDial should be attached by defining a CSS selector.
+The [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Target) property defines the selector for the element in which the speed dial will be positioned. If the Target is not defined, then Speed Dial is positioned based on the browser viewport.
 
 {% tabs %}
 {% highlight razor %}
@@ -37,7 +37,7 @@ The [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfS
 
 ## Built-in positions
 
-The SpeedDial Component can be positioned anywhere on the `Target` using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Position) property. If the `Target` is not defined, then SpeedDial is positioned based on the browser viewport.
+The SpeedDial Component can be positioned in the pre-defined positions using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_Position) property.
 
 The built-in position values of SpeedDial are as follows:
 
@@ -69,7 +69,7 @@ The built-in position values of SpeedDial are as follows:
 
 ## Custom Positioning
 
-You can define the custom position of the SpeedDial by override the `top`, `left`, `right`, and `bottom` CSS properties using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_CssClass).
+You can define the custom position for the SpeedDial by overriding the `top`, `left`, `right`, and `bottom` CSS properties using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_CssClass).
 
 ```cshtml
 
@@ -106,4 +106,4 @@ You can define the custom position of the SpeedDial by override the `top`, `left
 
 ![Blazor SpeedDial component with custom position](./images/Blazor-SpeedDial-Custom-Position.png)
 
-N> You can use the [RefreshPositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_RefreshPositionAsync) method when the `Target`position is changed or resized.
+N> You can use the [RefreshPositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_RefreshPositionAsync) method when the `Target` position is resized.

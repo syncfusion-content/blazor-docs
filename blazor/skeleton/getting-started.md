@@ -284,13 +284,13 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 ## Initialize as CSS component
 
-The Blazor Skeleton component can be initialized as a CSS component by utilizing predefined class names, and then you can apply CSS styles to control the width and height of the skeleton shape.
+The Blazor Skeleton component can be initialized trough CSS by utilizing predefined class names representing the shape, animation effect of the skeleton.
 
 | Class | Description |
 | -------- | -------- |
-| e-skeleton | Defines the Skeleton class. |
-| e-skeleton-text |  Defines the Skeleton shape as text. |
-| e-shimmer-pulse |  Defines the animation as pulse effect. |
+| e-skeleton | Base class to add the Skeleton to the element. |
+| e-skeleton-`shapeName` |  Defines the Skeleton shape where `shapeName` defines the name of the shape  |
+| e-shimmer-`animation` |  Defines the type of Skeleton `animation` effect where animation defines the name of the animation effect | |
 
 {% tabs %}
 {% highlight razor %}
@@ -301,7 +301,7 @@ The Blazor Skeleton component can be initialized as a CSS component by utilizing
 
 <style>
     .content {
-        width:50%;
+        width:200px;
         height:20px;
     }
 </style>
@@ -313,7 +313,7 @@ The Blazor Skeleton component can be initialized as a CSS component by utilizing
 
 ## Visible
 
-You can use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Visible) property which defines the visible state of Skeleton.
+The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Visible) property can be used to show or hide the Skeleton.
 
 {% tabs %}
 {% highlight razor %}
@@ -322,32 +322,6 @@ You can use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% endhighlight %}
 {% endtabs %}
-
-## Skeleton Shapes
-
-The [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Notifications.SfSkeleton.html#Syncfusion_Blazor_Notifications_SfSkeleton_Shape) property can be used to display skeleton in different shapes like circle, square, rectangle and text.
-
-{% tabs %}
-{% highlight razor %}
-
-<div style="width: 200px">
-    <SfSkeleton Shape=SkeletonType.Circle Width="48px" CssClass="custom-css"></SfSkeleton>
-    <SfSkeleton Shape="SkeletonType.Square" Width="48px"></SfSkeleton>
-    <br/><br/>
-    <SfSkeleton Shape="SkeletonType.Text" Height="15px"></SfSkeleton>
-    <br/><br/>
-    <SfSkeleton Shape="SkeletonType.Rectangle" Height="50px" Width="100%" ></SfSkeleton>
-</div>
-<style>
-    .custom-css {
-        margin-right: 30px;
-    }
-</style>
-
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor Skeleton component with different shapes](./images/blazor-skeleton-shape-sample.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Skeleton).
 

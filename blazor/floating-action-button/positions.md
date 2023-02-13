@@ -7,7 +7,7 @@ control: Floating Action Button
 documentation: ug
 ---
 
-# Positioning in Blazor Floating Action Button Component
+# Positioning of Blazor Floating Action Button Component
 
 This section explains the different positions of Floating Action Button.
 
@@ -158,4 +158,4 @@ You can define the custom position of the Floating Action Button by override the
 
 ![Blazor FAB component with custom position](./images/CustomPosition.png)
 
-N> You can use the [RefreshPositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#Syncfusion_Blazor_Buttons_SfFab_RefreshPositionAsync) method when the `Target`position is changed or resized.
+N> You can use the [RefreshPositionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfFab.html#Syncfusion_Blazor_Buttons_SfFab_RefreshPositionAsync) method to refresh the position of FAB when the `Target` is resized.
