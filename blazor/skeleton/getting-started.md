@@ -284,13 +284,13 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 ## Initialize as CSS component
 
-The Blazor Skeleton component can be initialized trough CSS by utilizing predefined class names representing the shape, animation effect of the skeleton.
+The Blazor Skeleton component can be initialized through CSS by utilizing predefined class names representing the shape, animation effect of the skeleton.
 
 | Class | Description |
 | -------- | -------- |
 | e-skeleton | Base class to add the Skeleton to the element. |
 | e-skeleton-`shapeName` |  Defines the Skeleton shape where `shapeName` defines the name of the shape  |
-| e-shimmer-`animation` |  Defines the type of Skeleton `animation` effect where animation defines the name of the animation effect | |
+| e-shimmer-`animation` |  Defines the type of Skeleton `animation` effect where animation defines the name of the animation effect |
 
 {% tabs %}
 {% highlight razor %}
