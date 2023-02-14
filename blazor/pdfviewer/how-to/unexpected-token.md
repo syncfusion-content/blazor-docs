@@ -60,6 +60,4 @@ Download the [Pdfium.dll](https://www.syncfusion.com/downloads/support/directtra
 
 N> Use the `Syncfusion.EJ2.PdfViewer.AspNet.Core.Linux package` in your application for the Linux environment. Also, ensure whether the library dependencies of lib pdfium. So they are installed properly. If not, execute the following command to install the RUN apt-get update&& apt-get install -y --allow-unauthenticated \ libc6-dev \ libgdiplus \ libx11-dev \ curl \ vim \ supervisor \ pro cps
 
-N> The ReferencePath can only be specified in WebAssembly applications; it cannot be set in server applications because there is no need for service URL dependencies in server applications.
-
-For more details about setting the ReferencePath [refer to this link](https://ej2.syncfusion.com/aspnetmvc/documentation/pdfviewer/how-to/resolve-pdfium-issue).
+N> The ReferencePath can only be specified in WebAssembly applications; it cannot be set in server applications because there is no need for service URL dependencies in server applications.For more details about setting the ReferencePath [refer to this link](https://ej2.syncfusion.com/aspnetmvc/documentation/pdfviewer/how-to/resolve-pdfium-issue).
