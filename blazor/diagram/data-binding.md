@@ -317,7 +317,7 @@ The following code example illustrates how to bind ExpandoObject data with the d
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding)
 
-##  How to bind DynamicoObject data with diagram
+##  How to bind DynamicObject data with diagram
 
 Diagram is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile time. In such circumstances data can be bound to the Diagram as a list of **DynamicObject**.
 Diagram can also perform all kind of supported Layout operations in DynamicObject such as,

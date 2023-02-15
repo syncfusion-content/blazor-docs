@@ -426,7 +426,7 @@ The following code example illustrates how to customize the segment appearance.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization)
 
-## How to enable/disable the connector behaviour
+## How to enable/disable the connector behavior
 
 * The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html) property of connector allows to enable/disable certain features of connectors.
 
