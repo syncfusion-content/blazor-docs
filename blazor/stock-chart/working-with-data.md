@@ -531,4 +531,4 @@ On the other hand, to configure the chart using Web API, provide the appropriate
 
 ## See Also
 
-* [Series Types](./series-types/)
+* [Series Types](./series-types)
