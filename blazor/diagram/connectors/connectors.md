@@ -242,7 +242,7 @@ Connectors can be interactively drawn by clicking and dragging on the diagram su
 
 ![Drawing Connector in Blazor Diagram](../images/blazor-diagram-draw-connector.gif)
 
-## Remove connectors at runtime
+## How to remove connectors at runtime
 
 A connector can be removed from the diagram at runtime by using the `Remove` method.
 

@@ -26,7 +26,7 @@ You can specify the any one of the above activity type using the [ActivityType](
 
 @code
 {
-    // Initialize the node collection with node.
+    // Initialize the diagram's nodes collection.
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()

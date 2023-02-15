@@ -247,7 +247,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Displaying DiagramIcon in Blazor Diagram layout](../images/blazor-diagram-ExpandCollapse-Layout.gif)
 
-## Customization
+## How to customize the expand and collapse icon
 Diagram allows you to customize the Expand and collapse Icon of the Node. To explore Expand and Collapse icon properties, refer to [DiagramExpandIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExpandIcon.html) and [DiagramCollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramCollapseIcon.html).
 
 ### Size
@@ -344,7 +344,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Displaying DiagramIcon in Blazor Diagram](../images/blazor-diagram-ExpandCollapse-Shape.png)
 
-### Appearance 
+### How to customize the appearance of expand and collapse icon 
 
 The appearance of the Icon can be customized by changing its [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_Fill), [BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_BorderColor), [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_BorderWidth), and [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_CornerRadius) properties.
 
@@ -544,7 +544,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Displaying DiagramIcon in Blazor Diagram layout](../images/blazor-diagram-ExpandCollapse-Shape-CornerRadius.png)
 
-### Position and Alignment
+### How to position and align the expand and collapse icon
 
 Diagram allows you to customize the position and alignment of the Icon efficiently. An Icon can be aligned in respect to the node boundaries. The following properties are used to position the Icon. 
 

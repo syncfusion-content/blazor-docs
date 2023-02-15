@@ -15,6 +15,9 @@ documentation: ug
 ## Key features of SfDiagram are as follows:
 
 * Flowchart: The Blazor Diagram component provides all the standard flowchart shapes as ready-made objects, making it is easy to add them to a diagram surface in a single call.
+* Ports: Connect connectors to specific locations on a node using various types of ports or connecting points.
+* Nodes: Visualize any graphical object using nodes that can be arranged and manipulated on a Blazor diagram page at the same time.
+* Connectors: A connector represents a connection between two nodes.
 * Built-in Shapes: Provided built-in shapes such as basic and flow shapes.
 * Interaction: Diagram elements can be selected, rotated, resized, and moved.
 * Z-Order: Diagram elements overlapping can be controlled by changing their Z-Order value.
@@ -34,3 +37,10 @@ documentation: ug
 * Exporting: You can export a diagram to different image files such as PNG, JPEG, and SVG.
 * Tooltip: Use tooltips to provide additional information about a node.
 * Context menu: Easily map frequently used commands to the context menu.
+* Gridlines: Gridlines provide guidance when trying to align objects.
+* Data binding: Create and position nodes and connectors in Blazor diagrams based on data from data sources. Furthermore, data in any format can be easily converted, mapped, and consumed in the Blazor diagram by simply changing a few properties without writing any code. Loading data from a list or an IEnumerable collection is also supported by the Blazor Diagram library.
+* Spacing Commands: Spacing commands allow you to place selected objects on the diagram at equal intervals.
+* Sizing Commands: Use sizing commands to proportionally size selected nodes in relation to the first selected object.
+* Alignment Commands: All nodes or connectors in the selection list can be aligned horizontally to the left, right, or centre, or vertically to the top, bottom, or middle.
+* UserHandle: The user handles are customizable handles that can be used to perform custom and default clipboard actions.
+* Group: The NodeGroup element is used to group together multiple nodes and connectors into a single element. It serves as a container for its children (nodes, nodegroups, and connectors). Every modification to the node group has an impact on the children. Individual child elements can be edited.

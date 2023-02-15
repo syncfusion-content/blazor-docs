@@ -13,7 +13,7 @@ Port is a special connection point in a Node where you can glue the connectors. 
 
 ![Port in Blazor Diagram](../images/blazor-diagram-port.png)
 
-## Connections
+## How to create connections node to node and port to port
 
 There are two main types of connections, node to node and port to port. The difference between these two connections is whether or not a connector remains glued to a specific connection point when you move the attached node or connector.
 
@@ -25,7 +25,7 @@ Ports act as the connection points of the node and allows creating connections w
 
 ![Connection between Ports in Blazor Diagram](../images/blazor-diagram-port-connection.gif)
 
-## Create ports
+## How to create ports
 
 To add a connection port, define the port object and add it to node’s ports collection. The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PointPort.html#Syncfusion_Blazor_Diagram_PointPort_Offset) property of the port accepts an object of fractions and is used to determine the position of ports. The following code explains how to add ports when initializing the node.
 
@@ -73,7 +73,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Creating Port in Blazor Diagram](../images/blazor-diagram-create-port.png)
 
-## Add ports at runtime
+## How to add ports at runtime
 
 You can add ports at runtime to the nodes collection in the Diagram component by using the `Add` method.
 
@@ -145,7 +145,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Adding Port in Blazor Diagram](../images/blazor-diagram-add-port.png)
 
-## Add multiple ports at runtime
+## How to add multiple ports at runtime
 
 Add multiple ports at runtime by using the method `Add` in the port collection. The following code explains how to add two or more ports to node at runtime.
 
@@ -223,7 +223,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Adding Multiple Ports in Blazor Diagram](../images/blazor-diagram-add-multiple-ports.png)
 
-## Remove ports at runtime
+## How to add remove port at runtime
 
 A collection of ports can be removed from the node by using the native `RemoveAt` method. Refer to the following example that shows how to remove ports at runtime.
 
@@ -283,7 +283,7 @@ A collection of ports can be removed from the node by using the native `RemoveAt
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)
 
-## Update ports at runtime
+## How to add update port at runtime
 
 You can change any port properties at runtime.
 

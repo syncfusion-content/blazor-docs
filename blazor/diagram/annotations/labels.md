@@ -132,7 +132,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Adding Annotation in Blazor Diagram](../images/blazor-diagram-add-annotation.png)
 
-## How to remove annotations
+## How to remove annotations at runtime
 
 A collection of annotations can be removed from the node by using the `RemoveAt` method. The following code explains how to remove an annotation from a node.
 

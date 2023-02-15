@@ -13,7 +13,7 @@ documentation: ug
 
 Drawing tool allows you to draw any kind of [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) or [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html) during runtime by clicking and dragging on the diagram page.
 
-## Drawing shapes through the drawing tool
+## How to Draw Shapes Using a Drawing Tool
 
 To draw a [shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shape.html), you have to activate the drawing tool by using the [InteractionController](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_InteractionController) property and you need to set the shape by using the [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject) property. The following code example illustrates how to draw a rectangle at runtime.
 
@@ -74,7 +74,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Node Tool in Blazor Diagram](images/blazor-diagram-node-tool.gif)
 
-## Drawing connectors through the drawing tool
+## How to Draw Connector Using a Drawing Tool
 
 To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html), you have to activate the drawing tool by using the [InteractionController](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_InteractionController) property and you need to set the connector by using the [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject) property. The following code example illustrates how to draw a [StraightSegment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.StraightSegment.html).
 
@@ -135,7 +135,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Connector Tool in Blazor Diagram](images/blazor-diagram-connector-tool.gif)
 
-## Drawing Text Node through the drawing tool
+## How to Draw Text Node Using a Drawing Tool
 
 Diagram allows you to create a text Node as soon as you click on the Diagram page. The following code illustrates how to draw a text.
 
@@ -196,7 +196,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Text Tool in Blazor Diagram](./images/blazor-diagram-Text-drawingtool.gif)
 
-## Drawing polygon shape
+## How to Draw Polygon Using a Drawing Tool
 
 Diagram allows to create the [Polygon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBasicShapes.html#Syncfusion_Blazor_Diagram_NodeBasicShapes_Polygon) shape by clicking and moving the mouse at runtime on the diagram page.
 
@@ -262,7 +262,7 @@ The following code illustrates how to draw a polygon shape.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DrawingTools)
 
-## Drawing polyline connector
+## How to Draw Polyline Using a Drawing Tool
 
 The diagram allows you to create the [Polyline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Polyline) segments with straight lines and angled vertices at the control points by clicking and moving the mouse at runtime on the diagram page.
 

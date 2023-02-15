@@ -13,7 +13,7 @@ documentation: ug
 
 ## Create NodeGroup
 
-## Add NodeGroup when initializing diagram
+## How to add NodeGroup while initialize the diagram
 
 A node group can be added to the diagram model through [Nodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) collection. To define an object as node group, add the child objects to the [Children](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeGroup.html#Syncfusion_Blazor_Diagram_NodeGroup_Children) collection of the node group. The following code illustrates how to create a node group.
 
@@ -165,7 +165,8 @@ The following code illustrates how to ungroup at runtime.
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group)
-## Add NodeGroup at runtime
+
+## How to add NodeGroup at runtime
 
 A node group can be added at runtime by using Nodes collection of diagram.
 
@@ -314,7 +315,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group)
-## Update position at runtime
+
+## How to update NodeGroup's position at runtime
 
 You can change the position of the node group similar to node. For more information about node positioning, refer to [Positioning](https://blazor.syncfusion.com/documentation/diagram/nodes/positioning).
 
@@ -379,7 +381,8 @@ You can change the position of the node group similar to node. For more informat
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group)
-## Change the appearance of the node group
+
+## How to change appearance of the node group
 
 You can change the appearance of the node group similar to node. For more information about node appearance, refer to [Appearance](https://blazor.syncfusion.com/documentation/diagram/nodes/customization).
 
