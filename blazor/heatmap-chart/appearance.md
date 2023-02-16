@@ -9,13 +9,13 @@ documentation: ug
 
 # Appearance in Blazor HeatMap Chart Component
 
-## Cell customization
+## Cell customizations
 
-You can customize the cell by using the [CellSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html)
+You can customize the cell by using the `CellSettings`
 
 ### Border
 
-Change the width, color, and radius of the heat map cells by using the [HeatMapCellBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellBorder.html) tag.
+Change the width, color, and radius of the heat map cells by using the `HeatMapCellBorder` tag.
 
 ```cshtml
 
@@ -33,7 +33,7 @@ Change the width, color, and radius of the heat map cells by using the [HeatMapC
 </SfHeatMap>
 
 @code{
-    public int[,] GetDefaultData()
+    int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
         {
@@ -46,8 +46,8 @@ Change the width, color, and radius of the heat map cells by using the [HeatMapC
         };
         return dataSource;
     }
-    public string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    public string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {
@@ -61,7 +61,7 @@ Change the width, color, and radius of the heat map cells by using the [HeatMapC
 
 ### Cell highlighting
 
-Enable or disable the cell highlighting while hovering over the heat map cells by using the  [EnableCellHighlighting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_EnableCellHighlighting) property.
+Enable or disable the cell highlighting while hover over the heat map cells by using the  `EnableCellHighlighting` property.
 
 ```cshtml
 
@@ -77,7 +77,7 @@ Enable or disable the cell highlighting while hovering over the heat map cells b
 </SfHeatMap>
 
 @code{
-    public int[,] GetDefaultData()
+    int[,] GetDefaultData()
         {
             int[,] dataSource = new int[,]
             {
@@ -90,8 +90,8 @@ Enable or disable the cell highlighting while hovering over the heat map cells b
             };
             return dataSource;
         }
-    public string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    public string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {
@@ -103,60 +103,9 @@ Enable or disable the cell highlighting while hovering over the heat map cells b
 
 ![Enabling Cell Highlighting Color in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-cell-highlight-color.png)
 
-### Color gradient mode
-
-The [ColorGradientMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.ColorGradientMode.html) property can be used to set the minimum and maximum values for colors based on row and column. Three types of color gradient modes are available.
-
-* **Table**: The minimum and maximum value colors calculated for overall data.
-* **Row**: The minimum and maximum value colors calculated for each row of data.
-* **Column**: The minimum and maximum value colors calculated for each column of data.
-
-> The default value of `ColorGradientMode` is **Table**.
-
-```cshtml
-
-@using Syncfusion.Blazor.HeatMap
-
-<SfHeatMap DataSource="@HeatMapData">
-    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
-    </HeatMapTitleSettings>
-    <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
-    <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
-    <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect"></HeatMapCellSettings>
-    <HeatMapPaletteSettings ColorGradientMode="ColorGradientMode.Column">
-    </HeatMapPaletteSettings>
-</SfHeatMap>
-
-@code {
-    public int[,] GetDefaultData()
-    {
-        int[,] dataSource = new int[,]
-        {
-            {73, 39, 26, 39, 94, 0},
-            {93, 58, 53, 38, 26, 68},
-            {99, 28, 22, 4, 66, 90},
-            {14, 26, 97, 69, 69, 3},
-            {7, 46, 47, 47, 88, 6},
-            {41, 55, 73, 23, 3, 79}
-        };
-        return dataSource;
-    }
-    public string[] XAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    public string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-    public object HeatMapData { get; set; }
-    protected override void OnInitialized()
-    {
-        HeatMapData = GetDefaultData();
-    }
-}
-
-```
-
-![Enabling ColorGradientMode in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-color-gradient-mode.png)
-
 ## Margin
 
-Set the margin for the heatmap from its container by using the [HeatMapMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapMargin.html) tag.
+Set the margin for the heat map from its container by using the `HeatMapMargin` property.
 
 ```cshtml
 
@@ -173,7 +122,7 @@ Set the margin for the heatmap from its container by using the [HeatMapMargin](h
 </SfHeatMap>
 
 @code{
-     public int[,] GetDefaultData()
+     int[,] GetDefaultData()
         {
             int[,] dataSource = new int[,]
             {
@@ -186,8 +135,8 @@ Set the margin for the heatmap from its container by using the [HeatMapMargin](h
             };
             return dataSource;
         }
-    public string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    public string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {
@@ -201,7 +150,7 @@ Set the margin for the heatmap from its container by using the [HeatMapMargin](h
 
 ## Title
 
-The title is used to provide a quick information about the data plotted in heatmap. The [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapTitleSettings.html#Syncfusion_Blazor_HeatMap_HeatMapTitleSettings_Text) property is used to set the title for the heatmap. The text style of the title can be customized by using the [HeatMapTitleTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapTitleTextStyle.html) tag.
+The title is used to provide a quick information about the data plotted in heat map. The `Text` property is used to set the title for heat map. You can also customize text style of a title by using the `HeatMapTitleTextStyle` tag.
 
 ```cshtml
 
@@ -219,7 +168,7 @@ The title is used to provide a quick information about the data plotted in heatm
 </SfHeatMap>
 
 @code{
-    public int[,] GetDefaultData()
+    int[,] GetDefaultData()
         {
             int[,] dataSource = new int[,]
             {
@@ -232,8 +181,8 @@ The title is used to provide a quick information about the data plotted in heatm
             };
             return dataSource;
     }
-    public string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    public string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {
@@ -247,7 +196,7 @@ The title is used to provide a quick information about the data plotted in heatm
 
 ## Data label
 
-The visibility of data labels can be toggled using the [ShowLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_ShowLabel) property. By default, the data labels will be visible.
+You can toggle the visibility of data labels by using the `ShowLabel` property. By default, the data label will be visible.
 
 ```cshtml
 
@@ -263,7 +212,7 @@ The visibility of data labels can be toggled using the [ShowLabel](https://help.
 </SfHeatMap>
 
 @code{
-    public int[,] GetDefaultData()
+    int[,] GetDefaultData()
         {
             int[,] dataSource = new int[,]
             {
@@ -276,8 +225,8 @@ The visibility of data labels can be toggled using the [ShowLabel](https://help.
             };
             return dataSource;
         }
-    public string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    public string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {
@@ -291,7 +240,7 @@ The visibility of data labels can be toggled using the [ShowLabel](https://help.
 
 ### Text style
 
-The text attributes of the data label such as font-family, font-size, and color can be customized using the [HeatMapCellTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellTextStyle.html) tag.
+You can customize the font family, font size, and color of the data label by using the `HeatMapCellTextStyle` tag in the `HeatMapCellSettings` tag.
 
 ```cshtml
 
@@ -310,7 +259,7 @@ The text attributes of the data label such as font-family, font-size, and color 
 </SfHeatMap>
 
 @code{
-    public int[,] GetDefaultData()
+    int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
         {
@@ -323,8 +272,8 @@ The text attributes of the data label such as font-family, font-size, and color 
         };
         return dataSource;
     }
-    public string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    public string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {
@@ -338,7 +287,7 @@ The text attributes of the data label such as font-family, font-size, and color 
 
 ### Format
 
-The format of the data label, such as currency, decimal, percent etc. can be changed using [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_Format) property.
+You can change the format of the data label, such as currency, decimal, percent, etc. by using the `Format` property.
 
 ```cshtml
 
@@ -354,7 +303,7 @@ The format of the data label, such as currency, decimal, percent etc. can be cha
 </SfHeatMap>
 
 @code{
-    public int[,] GetDefaultData()
+    int[,] GetDefaultData()
     {
         int[,] dataSource = new int[,]
         {
@@ -367,8 +316,8 @@ The format of the data label, such as currency, decimal, percent etc. can be cha
         };
         return dataSource;
     }
-    public string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    public string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     public object HeatMapData { get; set; }
     protected override void OnInitialized()
     {

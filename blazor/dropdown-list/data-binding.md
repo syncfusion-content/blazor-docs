@@ -147,7 +147,7 @@ The [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors
 
 ### Web API adaptor
 
-The [Web Api Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) is used to interact with Web API created under OData standards. The `WebApiAdaptor` is extended from the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor). Hence to use the `WebApiAdaptor`, the endpoint should understand the OData formatted queries sent along with the request. 
+The [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) is used to interact with Web API created under OData standards. The `WebApiAdaptor` is extended from the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor). Hence to use the `WebApiAdaptor`, the endpoint should understand the OData formatted queries sent along with the request. 
 
 {% highlight cshtml %}
 
@@ -192,7 +192,7 @@ The following sample code demonstrates implementing custom data binding using cu
 
 ### Offline mode
 
-To avoid post back for every action, set the DropDownList to load all data on initialization and make the actions process on the client-side. To enable this behaviour, use the `Offline` property of `DataManager`.
+To avoid post back for every action, set the DropDownList to load all data on initialization and make the actions process on the client-side. To enable this behavior, use the `Offline` property of `DataManager`.
 
 The following example is for remote data binding and enabled offline mode.
 
@@ -204,7 +204,7 @@ The following example is for remote data binding and enabled offline mode.
 
 ![Blazor DropdownList with Offline mode](./images/data-binding/blazor_dropdown_offline-mode.png)
 
-### Entity framework
+### Entity Framework
 
 Follow these steps to consume data from the [Entity Framework](https://blazor.syncfusion.com/documentation/common/data-binding/bind-entity-framework) in the DropDownList component.
 
@@ -273,7 +273,7 @@ namespace EFDropDown.Shared.DataAccess
 
 #### Creating web API controller
 
- A Web API Controller has to be created, which allows the DropDownList to directly consume data from the Entity framework.
+ A Web API Controller has to be created, which allows the DropDownList to directly consume data from the Entity Framework.
 
 ```csharp
 using EFDropDown.Shared.DataAccess;
@@ -339,6 +339,28 @@ Add the new item in the popup with the help of [AddItemsAsync](https://help.sync
 {% endhighlight %}
 
 ![Blazor DropdownList with adding new Item](./images/data-binding/blazor_dropdown_add-new-item.png)
+
+## Getting datasource of dropdown list
+
+### Getting datasource using instance
+
+To retrieve the data source from a Syncfusion Blazor DropDownList component, you can access the `DataSource` property of the component instance. An example of how this can be done is by binding the component to a list of objects as its data source and then, in the button click event, calling the `GetDataSource` method which in turn retrieves the data source by accessing the DataSource property of the DropDownList instance.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/data-binding/get-datasource.razor %}
+
+{% endhighlight %}
+
+### Getting datasource using variable
+
+To obtain the data source for a Syncfusion Blazor DropDownList using a variable, you can define a variable in your component to hold the data source, and then use this variable to access the data source. In this example, the `GetDataSource` method is triggered when the button is clicked. This method retrieves the data source for the DropDownList by accessing the Countries variable, which holds the list of countries for the DropDownList.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/data-binding/get-datasource-variable.razor %}
+
+{% endhighlight %}
 
 ## Events
 

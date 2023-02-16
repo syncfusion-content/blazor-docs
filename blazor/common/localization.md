@@ -93,7 +93,7 @@ If you don't want to change culture dynamically, you can set it statically by fo
 
 ### Blazor Server App
 
-* For **.NET 6 and .NET 7** app, specify the static culture in **~/Program.cs** file.
+* For **.NET 6** app, specify the static culture in **~/Program.cs** file.
 * For **.NET 5 and .NET 3.X** app, specify the static culture in **~/Startup.cs** file.
 
 {% tabs %}
@@ -316,7 +316,7 @@ Set the current culture in a cookie immediately after opening <body> tag of `Pag
 }
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (_Host.cshtml)" hl_lines="6 7 8 9 10 11" %}
+{% highlight c# tabtitle=".NET 3.X, .NET 5 and .NET 7 (_Host.cshtml)" hl_lines="6 7 8 9 10 11" %}
 @using Microsoft.AspNetCore.Http
 @using Microsoft.AspNetCore.Localization
 @using System.Globalization

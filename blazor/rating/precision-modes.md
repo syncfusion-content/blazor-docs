@@ -32,7 +32,7 @@ The precision types of Rating are as follows:
 <SfRating Value="3.75" Precision="PrecisionType.Quarter"></SfRating><br/>
 
 <label>Exact Precision</label><br/>
-<SfRating Value="2.3" Precision="PrecisionType.Exact"></SfRating>
+<SfRating Value="2.3" Precision="PrecisionType.Exact"></SfRating><br/>
 
 ```
 

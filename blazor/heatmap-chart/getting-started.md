@@ -41,9 +41,9 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as **true** to load the scripts externally in the [next steps](#add-script-reference).
+Now, register the Syncfusion Blazor Service in the Blazor Server App or Blazor WebAssembly App. Here, Syncfusion Blazor Service is registered by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as true to load the scripts externally in the [next steps](#add-script-reference).
 
-N> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to **true**. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to **true**, and this property is obsolete.
+N> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to `true`. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to true, and this property is obsolete.
 
 ### Blazor Server App
 
@@ -115,7 +115,7 @@ await builder.Build().RunAsync();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
+{% highlight c# tabtitle=".NET 5 & .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
 
 using Syncfusion.Blazor;
 
@@ -145,12 +145,12 @@ N> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusio
 
 ### Blazor Server App
 
-* For .NET 6 and .NET 7 app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+* For .NET 6 app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
-* For .NET 5 and .NET 3.X app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For .NET 3.X, .NET 5 and .NET 7 app, add the Syncfusion bootstrap5 theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
-{% highlight cshtml tabtitle=".NET 6 & .NET 7 (~/_Layout.cshtml)" hl_lines="3 4 5" %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="3 4 5" %}
 
 <head>
     ...
@@ -162,7 +162,7 @@ N> If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusio
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="3 4 5" %}
+{% highlight cshtml tabtitle=".NET 3.X, .NET 5 & .NET 7 (~/_Host.cshtml)" hl_lines="3 4 5" %}
 
 <head>
     ...
@@ -199,12 +199,12 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 ### Blazor Server App
 
-* For **.NET 6 and .NET 7** app, Refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
+* For **.NET 6** app, Refer script in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
-* For **.NET 5 and .NET 3.X** app, Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For **.NET 3.X, .NET 5 and .NET 7** app, Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
-{% highlight cshtml tabtitle=".NET 6 & .NET 7 (~/_Layout.cshtml)" hl_lines="4 5 6" %}
+{% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4 5 6" %}
 
 <head>
     ....
@@ -216,7 +216,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="4 5 6" %}
+{% highlight cshtml tabtitle=".NET 3.X, .NET 5 & .NET 7 (~/_Host.cshtml)" hl_lines="4 5 6" %}
 
 <head>
     ....
