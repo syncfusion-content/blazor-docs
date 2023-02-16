@@ -499,4 +499,46 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![SVG Node in Blazor Diagram](images/blazor-diagram-svg-node.png)
 
-N> Like HTML node, the SVG node also cannot be exported to image format. Fill color of SVG node can be overridden by the inline style or fill of the SVG element specified in the template.
+N> Like the HTML node, the SVG node cannot be exported to image format. The fill color of the SVG node can be overridden by the inline style or fill of the SVG element specified in the template.
+
+The basic shapes are listed below:
+
+| Shape Category | Shape Name | Output Shape |
+| -------- | -------- | -------- |
+| Basic Shape | Rectangle | ![Rectangle Shape](../images/Rectangle.png) |
+| | Ellipse | ![Ellipse shape](../images/Ellipse.png) |
+|  | Triangle | ![Triangle shape](../images/Triangle.png) |
+|  |Plus| ![Plus shape](../images/Plus.png) |
+| | Star | ![Star shape](../images/Star.png) |
+|  | Pentagon | ![Pentagon Shape](../images/Pentagon.png) |
+|  | Heptagon | ![Heptagon shape](../images/Heptagon.png) |
+| | Octagon | ![Octagon Shape](../images/Octagon.png) |
+|  | Trapezoid | ![Trapezoid shape](../images/Trapezoid.png) |
+| | Decagon | ![Decagon shape](../images/Decagon.png) |
+|  | RightTriangle | ![RightTriangle shape](../images/RightTriangle.png) |
+|  |Parallelogram| ![Plus shape](../images/Parallelogram.png) |
+
+
+The flow shapes are listed below:
+
+| Shape Category | Shape Name | Output Shape |
+| -------- | -------- | -------- |
+| Flow Shape | Terminator | ![Terminator Shape](../images/Terminator.png) |
+| | Ellipse | ![Ellipse shape](../images/Ellipse.png) |
+|  | Process | ![Triangle shape](../images/Triangle.png) |
+|  |Decision| ![Decision shape](../images/Decision.png) |
+| | PreDefined Process| ![Predefined Process shape](../images/Predefined.png) |
+|  | Direct Data | ![DirectData Shape](../images/DirectData.png) |
+|  | Sequential Data | ![SequentialData shape](../images/SequentialData.png) |
+| | Sort | ![Sort Shape](../images/Sort.png) |
+|  | MultiDocument | ![MultiDocument shape](../images/MultiDocument.png) |
+| | Summing Junction | ![Summing shape](../images/Summing.png) |
+|  | Or | ![Or shape](../images/Or.png) |
+|  |InternalStorage| ![InternalStorage shape](../images/InternalStorage.png) |
+|  |Manual Operation | ![ManualOperation Shape](../images/ManualOperation.png) |
+|  | Merge | ![Merge shape](../images/Merge.png) |
+| | Off-Page Reference | ![Off-Page reference Shape](../images/Offpage.png) |
+|  | Sequential Access Storage | ![SequentialAccessStorage shape](../images/SequentialAccessStorage.png) |
+| | Data| ![Data shape](../images/Data.png) |
+|  | Card | ![Card shape](../images/Card.png) |
+|  |Preparation| ![Preparation shape](../images/Preparation.png) |

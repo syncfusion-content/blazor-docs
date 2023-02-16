@@ -29,7 +29,9 @@ Complex hierarchical tree layout arranges nodes in a tree-like structure, where 
 {
     int left = 40;
     int top = 50;
+    //Initialize the diagram's nodes collection
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    //Initialize the diagram's connectors collection//Initiali
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     int HorizontalSpacing = 40;
     int VerticalSpacing = 40;
@@ -81,7 +83,8 @@ Complex hierarchical tree layout arranges nodes in a tree-like structure, where 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
 
 ![Blazor Complex Hierarchical Diagram](../images/blazor-diagram-complex.png)
-### Line Distribution
+
+### How to enable/disable line distribution
 
 Line distribution is used to arrange the connectors without overlapping in automatic layout. In some cases, the automatic layout connectors connecting to the nodes will be overlapped with one another. So user can decide whether the segment of each connector from a single parent node should be a same point or a different point. The [SamePoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_SamePoint) property of layout is used to enable or disable the line distribution in layout. By default the value is true.
 
@@ -158,7 +161,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Complex Hierarchical Diagram](../images/blazor-diagram-samepoint.png)
 
-### Linear Arrangement
+### How to enable/disable linear arrangement
 
 Linear arrangement  is used to arrange the child nodes in linear manner in the layout, that is the parent node is placed in the center, corresponding to its children. When line distribution is enabled, the linear arrangement is also activated by default. The [LinearArrangement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_LinearArrangement) property of layout is used to enable or disable the linear arrangement in the layout. By default, the value is false.
 The following code illustrates how to arrange the nodes in non linear manner.

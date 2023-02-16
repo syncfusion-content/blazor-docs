@@ -13,7 +13,7 @@ Port is a special connection point in a Node where you can glue the connectors. 
 
 ![Port in Blazor Diagram](../images/blazor-diagram-port.png)
 
-## Connections
+## How to create connections node to node and port to port
 
 There are two main types of connections, node to node and port to port. The difference between these two connections is whether or not a connector remains glued to a specific connection point when you move the attached node or connector.
 
@@ -25,7 +25,7 @@ Ports act as the connection points of the node and allows creating connections w
 
 ![Connection between Ports in Blazor Diagram](../images/blazor-diagram-port-connection.gif)
 
-## Create ports
+## How to create ports
 
 To add a connection port, define the port object and add it to node’s ports collection. The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PointPort.html#Syncfusion_Blazor_Diagram_PointPort_Offset) property of the port accepts an object of fractions and is used to determine the position of ports. The following code explains how to add ports when initializing the node.
 
@@ -68,6 +68,7 @@ To add a connection port, define the port object and add it to node’s ports co
 }
 ```
 >**Note:** Do not use underscore(_) for port's id.
+
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)
 
 >**Note:** Do not use underscore(_) for port's id.
@@ -76,7 +77,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Creating Port in Blazor Diagram](../images/blazor-diagram-create-port.png)
 
-## Add ports at runtime
+## How to add ports at runtime
 
 You can add ports at runtime to the nodes collection in the Diagram component by using the `Add` method.
 
@@ -148,7 +149,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Adding Port in Blazor Diagram](../images/blazor-diagram-add-port.png)
 
-## Add multiple ports at runtime
+## How to add multiple ports at runtime
 
 Add multiple ports at runtime by using the method `Add` in the port collection. The following code explains how to add two or more ports to node at runtime.
 
@@ -226,7 +227,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Adding Multiple Ports in Blazor Diagram](../images/blazor-diagram-add-multiple-ports.png)
 
-## Remove ports at runtime
+## How to add remove port at runtime
 
 A collection of ports can be removed from the node by using the native `RemoveAt` method. Refer to the following example that shows how to remove ports at runtime.
 
@@ -286,7 +287,7 @@ A collection of ports can be removed from the node by using the native `RemoveAt
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)
 
-## Update ports at runtime
+## How to add update port at runtime
 
 You can change any port properties at runtime.
 
@@ -344,6 +345,111 @@ protected override void OnInitialized()
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)
+
+
+## How to get Inedges and OutEdges of Ports
+
+[InEdges](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_InEdges) is used to get the incoming connectors of the port that are connected to the port. [OutEdges](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_OutEdges) is used to get the outgoing connectors of the port that are connected to the port.
+
+The following code example how to get inedges and outedges of port.
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<input type="button" value="GetInEdges" @onclick="@GetInEdges">
+<SfDiagramComponent @ref="diagram" Height="600px" Nodes="@nodes" Connectors="@connectors" />
+
+@code
+{
+    SfDiagramComponent diagram;
+     DiagramObjectCollection<Node> nodes= new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> connectors= new DiagramObjectCollection<Connector>();
+
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 300,
+             // Initialize port collection.
+            Ports = new DiagramObjectCollection<PointPort>()
+            {
+                new PointPort()
+                {
+                    ID = "port1",
+                    Offset = new DiagramPoint() { X = 0, Y = 0.5 },
+                    Visibility = PortVisibility.Visible,
+                    //Set the style for the port.
+                    Style= new ShapeStyle()
+                    { 
+                        Fill = "red",
+                        StrokeColor = "black", 
+                        StrokeWidth = 2
+                    },
+                    Width = 12, 
+                    Height = 12,
+                  // Sets the shape of the port as a Circle.
+                    Shape = PortShapes.Circle
+                }
+            },
+            
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 500,
+             // Initialize port collection.
+            Ports = new DiagramObjectCollection<PointPort>()
+            {
+                new PointPort()
+                {
+                    ID = "port1",
+                    Offset = new DiagramPoint() { X = 0, Y = 0.5 },
+                    Visibility = PortVisibility.Visible,
+                    //Set the style for the port.
+                    Style= new ShapeStyle()
+                    { 
+                        Fill = "red",
+                        StrokeColor = "black", 
+                        StrokeWidth = 2
+                    },
+                    Width = 12, 
+                    Height = 12,
+                    // Sets the shape of the port as Circle .
+                    Shape = PortShapes.Circle
+                }
+            },
+        };
+        nodes.Add(node2);
+        Connector connector1 = new Connector()
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            SourcePortID="port1",
+            TargetPortID="port1",
+            TargetID = "node2",
+        };
+        connectors.Add(connector1);
+    }
+    private void GetInEdges()
+    {
+        List<Connector> Inedges= new List<Connector>();
+        foreach (string inedge in diagram.Nodes[1].Ports[0].InEdges)
+        {
+            Inedges.Add(inedge);
+        }
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports)
+
+
 
 ## See also
 
