@@ -167,6 +167,8 @@ N> Column's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grid
 
 N> The collapsed/expanded state will persist only for local dataSource while scrolling.
 
+N> When trying to AutoFit the columns in the Grid with column virtualization, AutoFit/AutoFitAll width is applied only for the columns in the viewport.
+
 ## Enable Cell placeholder during Virtualization
 
 This enable cell placeholder during virtualization feature much of a muchness of row virtualization and column virtualization feature and the difference is loading placeholder indicator was shown on the cells while loading the new data. Also same set of DOM elements is reused to improve performance.
