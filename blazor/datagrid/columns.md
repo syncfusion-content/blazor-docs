@@ -50,9 +50,9 @@ The [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Colu
 
 ### Set column options to auto generated columns
 
-You can set column options such as Format, Width to the auto generated columns by DataBound event of the grid.
+It is possible to set the column options for auto generated columns by using the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event of the grid.
 
-In the below example, date Type and Format are set for the OrderDate column in DataBound event of the Grid.
+In the following sample, `Type` and `Fomat` for the OrderDate column have been changed in the `DataBound` event of the Grid.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -86,8 +86,8 @@ In the below example, date Type and Format are set for the OrderDate column in D
 
     public void DataBoundHandler()
     {
-         for (var i = 0; i < Grid.Columns.Count; i++) {
-            if(Grid.Columns[i].Field == "OrderDate"){
+        for (var i = 0; i < Grid.Columns.Count; i++) {
+            if(Grid.Columns[i].Field == "OrderDate") {
                 Grid.Columns[i].Type= ColumnType.Date;
             }
             if (Grid.Columns[i].Type == ColumnType.Date) {
