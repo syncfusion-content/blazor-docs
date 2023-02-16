@@ -1887,4 +1887,4 @@ Some of the default changes made for compact Scheduler to render in desktop devi
 
 ## See Also
 
-[How to expand or collapse a resource programmatically](./how-to#expand-collapse-resource-programmatically)
+[How to expand or collapse a resource programmatically](./how-to/blazor-web-assembly-scheduler)
