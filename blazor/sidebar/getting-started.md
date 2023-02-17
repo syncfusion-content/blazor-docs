@@ -598,9 +598,9 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 1. Simply customizable and responsive design.
 2. Different sliding types provides the user to adjust the main content by pushing, overlaying or sliding the content.
-3. Includes [docking](https://blazor.syncfusion.com/documentation/sidebar/docking-sidebar/) support.
+3. Includes [docking](https://blazor.syncfusion.com/documentation/sidebar/docking-sidebar) support.
 4. Provided with touch friendly gestures for easy interaction in mobile devices.
-5. Flexible option to initialize the sidebar to any HTML element as [target](https://blazor.syncfusion.com/documentation/sidebar/custom-context/) other than the body element.
+5. Flexible option to initialize the sidebar to any HTML element as [target](https://blazor.syncfusion.com/documentation/sidebar/custom-context) other than the body element.
 
 ## See Also
 
