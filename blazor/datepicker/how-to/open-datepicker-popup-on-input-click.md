@@ -22,7 +22,7 @@ The following example demonstrates how to open the DatePicker popup when the inp
 
 @code{
     SfDatePicker<DateTime?> DateObj;
-    public async Task FocusHandler(Syncfusion.Blazor.Calendars.FocusEventArgs args)    {
+    public async void FocusHandler(Syncfusion.Blazor.Calendars.FocusEventArgs args)    {
         await this.DateObj.ShowPopupAsync();
     }
 }
