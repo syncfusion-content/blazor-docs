@@ -50,7 +50,7 @@ The [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Colu
 
 ### Set column options to auto generated columns
 
-It is possible to set the column options for auto generated columns by using the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event of the grid.
+Column Options like (column type, etc) can be assigned specifically to auto generated columns using the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event of the grid.
 
 In the following sample, `Type` and `Fomat` is set to the OrderDate column using the `DataBound` event of the Grid.
 
