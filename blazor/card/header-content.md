@@ -80,8 +80,8 @@ Card content is designed to display an image tag within it. You can wrap an imag
     <CardContent>
         <div>
             The fastest 135mm telephoto lens in its class. Two UD-glass elements correct secondary spectrum for outstanding sharpness and color.
-        </div>
-        <img src="https://ej2.syncfusion.com/demos/src/card/images/Camera.png" alt="Canon 135mm" height="200px" width="100%" />
+        </div><br>
+        <img src="https://ej2.syncfusion.com/demos/src/card/images/Camera.png" alt="Canon 135mm" height="300px" width="100%" />
     </CardContent>
 </SfCard>
 
