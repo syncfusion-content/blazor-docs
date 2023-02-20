@@ -75,7 +75,7 @@ Card content is designed to display an image tag within it. You can wrap an imag
 
 ```cshtml
 @using Syncfusion.Blazor.Cards
-<SfCard ID="card">
+<SfCard ID="Card">
     <CardHeader Title="Canon 135mm"/>
     <CardContent>
         <div>
@@ -86,9 +86,11 @@ Card content is designed to display an image tag within it. You can wrap an imag
 </SfCard>
 
 <style>
-    #card {
+    #Card {
         width: 300px;
     }
 </style>
 
 ```
+
+![Blazor Card Component Content with Image](images/Blazor-Card-Component-Content-with-Image.png)
