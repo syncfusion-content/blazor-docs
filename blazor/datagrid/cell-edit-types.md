@@ -110,6 +110,7 @@ The following sample code demonstrates the customization applied to TextBox comp
 | ShowClearButton | Specifies whether to show or hide the clear icon. |
 | ShowSpinButton | Specifies whether the up and down spin buttons should be displayed in NumericTextBox. |
 | ValidateDecimalOnType | Specifies whether the decimals length should be restricted during typing. |
+| Step | Specifies the incremental or decremental step size for the NumericTextBox. |
 
 The following sample code demonstrates the customization applied to NumericTextBox component set for the DataGrid columns,
 

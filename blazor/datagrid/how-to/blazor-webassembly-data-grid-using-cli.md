@@ -93,7 +93,7 @@ Now, Open **~/Program.cs** file and register the Syncfusion Blazor Service in th
 N> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to `true`. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to true, and this property is obsolete.
 
 {% tabs %}
-{% highlight razor tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 11" %}
+{% highlight razor tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 11" %}
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -111,7 +111,7 @@ await builder.Build().RunAsync();
 
 {% endhighlight %}
 
-{% highlight razor tabtitle=".NET 5 and .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
+{% highlight razor tabtitle=".NET 5 & .NET 3.X (~/Program.cs)" hl_lines="1 10" %}
 
 using Syncfusion.Blazor;
 

@@ -73,12 +73,12 @@ Now, register the Syncfusion Blazor Service in the Blazor Server App. Here, Sync
 
 N> From 2022 Vol-1 (20.1) version, the default value of `IgnoreScriptIsolation` is changed to `true`. It is not necessary to set the `IgnoreScriptIsolation` property to refer scripts externally, since the default value has already been changed to true, and this property is obsolete.
 
-* For **.NET 6** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+* For **.NET 6 and .NET 7** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
 * For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 10" %}
+{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 10" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -136,7 +136,7 @@ dotnet restore
 Then, the theme style sheet from NuGet can be referred inside the `<head>` as follows,
 
 * **~/Pages/_Layout.cshtml** file for **.NET 6**.
-* **~/Pages/_Host.cshtml** file for **.NET 5 and .NET 3.X**.
+* **~/Pages/_Host.cshtml** file for **.NET 3.X, .NET 5 and .NET 7**.
 
 {% tabs %}
 {% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
@@ -148,7 +148,7 @@ Then, the theme style sheet from NuGet can be referred inside the `<head>` as fo
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" %}
+{% highlight cshtml tabtitle=".NET 3.X, .NET 5 & .NET 7 (~/_Host.cshtml)" %}
 
 <head>
     ....
@@ -163,7 +163,7 @@ Then, the theme style sheet from NuGet can be referred inside the `<head>` as fo
 Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documentation/common/adding-script-references) to learn different ways to add script reference in Blazor Application. In this getting started walk-through, the required scripts are referred using [Static Web Assets](https://sfblazor.azurewebsites.net/staging/documentation/common/adding-script-references#static-web-assets) externally inside the `<head>` as follows,
 
 * **~/Pages/_Layout.cshtml** for **.NET 6**.
-* **~/Pages/_Host.cshtml** file for **.NET 5 and .NET 3.X**.
+* **~/Pages/_Host.cshtml** file for **.NET 3.X, .NET 5 and .NET 7**.
 
 {% tabs %}
 {% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" hl_lines="4" %}
@@ -176,7 +176,7 @@ Checkout [Adding Script Reference topic](https://blazor.syncfusion.com/documenta
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" hl_lines="4" %}
+{% highlight cshtml tabtitle=".NET 3.X, .NET 5 & .NET 7 (~/_Host.cshtml)" hl_lines="4" %}
 
 <head>
     ....

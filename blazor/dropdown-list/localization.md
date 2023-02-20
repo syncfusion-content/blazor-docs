@@ -17,25 +17,9 @@ The [Blazor DropDownList](https://www.syncfusion.com/blazor-components/blazor-dr
 
 ### Enable RTL mode
 
-The direction can be switched to right to left when specfies the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_EnableRtl) as `true`. Writing systems like Arabic, Hebrew, and more will require `EnableRtl` property.
+The direction can be switched to right to left when specifies the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_EnableRtl) as `true`. Writing systems like Arabic, Hebrew, and more will require `EnableRtl` property.
 
-Specifies the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_EnableRtl) as a boolean value that indictes to enable or disable rendering component in the right to left direction. Writing systems will require Arabic, Hebrew, and more. The direction can be switched to right-to-left.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/localization/enableRtl.razor %}
-
-{% endhighlight %}
-
-![Blazor DropDownList with EnableRtl](./images/localization/blazor_dropdown_enableRtl.png)
-
-## Properties
-
-### EnableRtl
-
-Enable or disable rendering component in right to left direction.
-
-Default value of [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_EnableRtl) is `false`.
+Specifies the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_EnableRtl) as a boolean value that indicates to enable or disable rendering component in the right to left direction. Writing systems will require Arabic, Hebrew, and more. The direction can be switched to right-to-left.
 
 {% highlight cshtml %}
 
@@ -44,4 +28,5 @@ Default value of [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 {% endhighlight %}
 
 ![Blazor DropDownList with EnableRtl](./images/localization/blazor_dropdown_enableRtl.png)
+
 
