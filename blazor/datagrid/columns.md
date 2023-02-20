@@ -50,9 +50,9 @@ The [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Colu
 
 ### Set isPrimaryKey for auto generated columns when editing is enabled
 
-By default, the primary key can be defined explicitly in the GridColumn declaration. However, if no column declaration is provided when initializing the datagrid, columns will be automatically generated. In this case, the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_IsPrimaryKey) property will be set for the auto generated columns using the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event of the Grid.
+By default, the primary key can be defined explicitly in the GridColumn declaration. However, if no column declaration is provided when initializing the datagrid, columns will be automatically generated. In this case, the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_IsPrimaryKey) property can be defined for specfic auto generated column using the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event of the Grid.
 
-This is demonstrated in the following sample:
+The `IsPrimaryKey` property is defined for the OrderID column in the following sample:
 
 ```cshtml
 
