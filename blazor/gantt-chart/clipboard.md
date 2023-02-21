@@ -492,20 +492,20 @@ In the following code example, selected cells are copied and pasted by using the
 ```
 ![Copy and paste in Blazor Gantt Chart](./images/copypaste_cell.gif)
 
-## Custom autofill functionality in Gantt Chart
+## Autofill functionality in Gantt Chart
 
-This Gantt chart sample has been modified to include a custom autofill feature. When the user presses the Alt key while dragging a multiple cell selection, the values of all selected cells are automatically updated.
-
-To achieve this functionality, the following properties have been set in the [GanttSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html):
+The following properties have been configured in the [GanttSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html) to enable the autofill functionality:
 
 - [AllowDragSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html#Syncfusion_Blazor_Gantt_GanttSelectionSettings_AllowDragSelection): `true`
 - [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html#Syncfusion_Blazor_Gantt_GanttSelectionSettings_Mode): [Cell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SelectionMode.html#Syncfusion_Blazor_Grids_SelectionMode_Cell)
 - [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html#Syncfusion_Blazor_Gantt_GanttSelectionSettings_Type): [Multiple](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SelectionType.html#Syncfusion_Blazor_Grids_SelectionType_Multiple)
 - [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html#Syncfusion_Blazor_Gantt_GanttSelectionSettings_CellSelectionMode): [Box](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.CellSelectionMode.html#Syncfusion_Blazor_Grids_CellSelectionMode_Box)
 
-These settings allow the user to select multiple cells by dragging the mouse. The selected cells are then captured in the [CellSelectedEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_CellSelected) and their values are obtained based on the cell index. In the `KeyUp` event, if the user presses the Alt key while making a multiple cell selection, the values of all rows are updated using the [UpdateRecordByID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_UpdateRecordByIDAsync__0_) method.
+By setting these settings, user can select multiple cells in the Gantt chart by dragging the mouse. The value of first selected cell is captured in the [CellSelectedEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_CellSelected) based on the cell index.
 
-This customization provides a quick and easy way for users to update multiple cells in the Gantt chart, improving overall efficiency.
+If the user presses the `Alt` key during a multiple cell selection and then releases it, the [UpdateRecordByID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_UpdateRecordByIDAsync__0_) method is called in the `KeyUp` event. This automatically updates the values of all rows with the value of the first selected cell. This means that the value of the first selected cell in each row is copied to all other cells in that row that were selected.
+
+With this customization, users can easily and quickly update multiple cells in the Gantt chart, improving overall efficiency.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
