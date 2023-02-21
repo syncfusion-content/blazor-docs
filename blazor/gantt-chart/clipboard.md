@@ -505,7 +505,7 @@ The following properties have been configured in the [GanttSelectionSettings](ht
 
 By setting these settings, user can select multiple cells in the Gantt chart by dragging the mouse.
 
-The native keyup event can be bound to the Gantt chart and customized for key actions. In the example provided, the Alt key was utilized. For more information, please refer [here](https://blazor.syncfusion.com/documentation/gantt-chart/how-to/bind-native-events).
+Then the native keyup event is bound to the Gantt chart in order to customize the keydown actions in the gantt chart. In the example provided, the Alt key is captured to fill the data while drag selection. For more information, please refer [here](https://blazor.syncfusion.com/documentation/gantt-chart/how-to/bind-native-events).
 
 The value of first selected cell is captured in the [CellSelectedEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_CellSelected) based on the cell index.
 
