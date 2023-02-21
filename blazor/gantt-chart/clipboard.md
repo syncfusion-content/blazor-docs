@@ -492,3 +492,113 @@ In the following code example, selected cells are copied and pasted by using the
 ```
 ![Copy and paste in Blazor Gantt Chart](./images/copypaste_cell.gif)
 
+## Autofill functionality in Gantt Chart
+
+To achieve the autofill functionality in the Gantt chart, the drag selection feature must be enabled, and the keyup event must be bound.
+
+The following properties have been configured in the [GanttSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html) to enable the drag selection feature:
+
+- [AllowDragSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html#Syncfusion_Blazor_Gantt_GanttSelectionSettings_AllowDragSelection): `true`
+- [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html#Syncfusion_Blazor_Gantt_GanttSelectionSettings_Mode): [Cell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SelectionMode.html#Syncfusion_Blazor_Grids_SelectionMode_Cell)
+- [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html#Syncfusion_Blazor_Gantt_GanttSelectionSettings_Type): [Multiple](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SelectionType.html#Syncfusion_Blazor_Grids_SelectionType_Multiple)
+- [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html#Syncfusion_Blazor_Gantt_GanttSelectionSettings_CellSelectionMode): [Box](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.CellSelectionMode.html#Syncfusion_Blazor_Grids_CellSelectionMode_Box)
+
+By setting these settings, the user can select multiple cells in the Gantt chart by dragging the mouse.
+
+Then the native keyup event is bound to the Gantt chart in order to customize the keydown actions in the gantt chart. In the example provided, the Alt key is captured to fill the data while dragging the selection. For more information, please refer to this [page](https://blazor.syncfusion.com/documentation/gantt-chart/how-to/bind-native-events).
+
+The value of first selected cell is captured in the [CellSelectedEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_CellSelected) based on the cell index.
+
+When the `Alt` key is pressed and released during a multiple cell selection, the [UpdateRecordByID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_UpdateRecordByIDAsync__0_) method is called in the Keyup event. This method updates the values of all selected rows with the value of the first selected cell, effectively copying the value of the first selected cell to all other cells in those rows that were selected. 
+
+With this customization, users can easily and quickly update multiple cells in the Gantt chart, improving overall efficiency.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+
+<SfGantt @ref=GanttChart DataSource="@TaskCollection" @onkeyup="KeyUp" Height="450px" Width="1000px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttSelectionSettings Mode="SelectionMode.Cell" Type="SelectionType.Multiple" AllowDragSelection="true" CellSelectionMode="CellSelectionMode.Box"></GanttSelectionSettings>
+    <GanttEditSettings AllowEditing="true"> </GanttEditSettings>
+    <GanttEvents CellSelected="CellSelectedHandler"  CellDeselected="CellDeSelectedHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code {
+    private SfGantt<TaskData> GanttChart;
+
+    private List<TaskData> TaskCollection { get; set; }
+
+    private object Value { get; set; }
+
+    private string ColumnField { get; set; }
+
+    private void CellSelectedHandler(CellSelectEventArgs<TaskData> args)
+    {
+        if (Value == null)
+        {
+            ColumnField = GanttChart.GetColumnsAsync().Result[Convert.ToInt32(args.CellIndex)].Field;
+            Value = args.Data.GetType().GetProperty(ColumnField).GetValue(args.Data);
+        }
+    }
+
+    private void CellDeSelectedHandler()
+    {
+        Value = null;
+    }
+
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    private async Task KeyUp(KeyboardEventArgs args)
+    {
+        if (args.Code == "AltLeft" || args.Code == "AltRight")
+        {
+            var data = GanttChart.GetSelectedRowCellIndexesAsync();
+            List<TaskData> AutofillData = new List<TaskData>();
+            for (var i = 0; i < data.Result.Count; i++)
+            {
+                TaskData currentRecord = GanttChart.GetCurrentViewRecords().ElementAt(Convert.ToInt32(data.Result[i].Item1));
+                AutofillData.Add(currentRecord);
+            }
+            for (var j = 0; j < AutofillData.Count; j++)
+            {
+                AutofillData[j].GetType().GetProperty(ColumnField).SetValue(AutofillData[j], Value);
+                await GanttChart.UpdateRecordByIDAsync(AutofillData[j]);
+            }
+        }
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30,  ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30,  ParentId = 5 },
+        };
+        return Tasks;
+    }
+}
+
+```
+![Custom AutoFIll in Blazor Gantt Chart](./images/blazor-gantt-chart-autofill.gif)
