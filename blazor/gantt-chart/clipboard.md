@@ -503,9 +503,9 @@ The following properties have been configured in the [GanttSelectionSettings](ht
 - [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html#Syncfusion_Blazor_Gantt_GanttSelectionSettings_Type): [Multiple](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SelectionType.html#Syncfusion_Blazor_Grids_SelectionType_Multiple)
 - [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSelectionSettings.html#Syncfusion_Blazor_Gantt_GanttSelectionSettings_CellSelectionMode): [Box](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.CellSelectionMode.html#Syncfusion_Blazor_Grids_CellSelectionMode_Box)
 
-By setting these settings, user can select multiple cells in the Gantt chart by dragging the mouse.
+By setting these settings, the user can select multiple cells in the Gantt chart by dragging the mouse.
 
-Then the native keyup event is bound to the Gantt chart in order to customize the keydown actions in the gantt chart. In the example provided, the Alt key is captured to fill the data while drag selection. For more information, please refer [here](https://blazor.syncfusion.com/documentation/gantt-chart/how-to/bind-native-events).
+Then the native keyup event is bound to the Gantt chart in order to customize the keydown actions in the gantt chart. In the example provided, the Alt key is captured to fill the data while dragging the selection. For more information, please refer to this [page](https://blazor.syncfusion.com/documentation/gantt-chart/how-to/bind-native-events).
 
 The value of first selected cell is captured in the [CellSelectedEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_CellSelected) based on the cell index.
 
