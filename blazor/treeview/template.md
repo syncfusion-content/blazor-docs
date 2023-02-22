@@ -160,3 +160,196 @@ In the following sample, employee information such as employee photo, name, and 
 ```
 
 ![Blazor TreeView with Template](./images/blazor-treeview-template.png)
+
+## Apply template to Header
+
+The Blazor TreeView component provides the ability to customize the appearance of its nodes through the use of the `NodeTemplate` property. This property is nested within the `TreeViewTemplates` tag, which defines the custom structure for the TreeView. However, in this section this template is only applied to parent nodes.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<div class="control-section">
+    <div class="control_wrapper">
+        @*Initialize the TreeView component*@
+        <SfTreeView TValue="TreeData">
+            <TreeViewFieldsSettings Id="Id" Text="Name" ParentID="Pid" HasChildren="HasChild" Selected="Selected" Expanded="Expanded" DataSource="@LocalData"></TreeViewFieldsSettings>
+            <TreeViewTemplates TValue="TreeData">
+                <NodeTemplate>
+                    <div>
+                        <div class="treeviewdiv">
+                            <div class="nodetext">
+                                <span class="treeName">@((context as TreeData).Name)</span>
+                            </div>
+                            @{
+                                @if (((context as TreeData).HasChild))
+                                {
+                                    <div class="nodebadge">
+                                        <span class="treeCount e-badge e-badge-primary">@((context as TreeData).Count)</span>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+                </NodeTemplate>
+            </TreeViewTemplates>
+        </SfTreeView>
+    </div>
+</div>
+@code {
+    // Specifies the DataSource value for TreeView component.
+    List<TreeData> LocalData = new List<TreeData>();
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        LocalData.Add(new TreeData
+            {
+                Id = "1",
+                Name = "Favorites",
+                HasChild = true,
+                Count = 14
+            });
+        LocalData.Add(new TreeData
+            {
+                Id = "2",
+                Pid = "1",
+                Name = "Sales Reports",
+            });
+        LocalData.Add(new TreeData
+            {
+                Id = "3",
+                Pid = "1",
+                Name = "Sent Items"
+            });
+        LocalData.Add(new TreeData
+            {
+                Id = "4",
+                Pid = "1",
+                Name = "Marketing Reports",
+            });
+        LocalData.Add(new TreeData
+            {
+                Id = "5",
+                HasChild = true,
+                Name = "My Folder",
+                Expanded = true,
+                Count = 10
+            });
+        LocalData.Add(new TreeData
+            {
+                Id = "6",
+                Pid = "5",
+                Name = "Inbox",
+                Selected = true,
+            });
+        LocalData.Add(new TreeData
+            {
+                Id = "7",
+                Pid = "5",
+                Name = "Drafts",
+            });
+        LocalData.Add(new TreeData
+            {
+                Id = "8",
+                Pid = "5",
+                Name = "Deleted Items"
+            });
+        LocalData.Add(new TreeData
+            {
+                Id = "9",
+                Pid = "5",
+                Name = "Sent Items"
+            });
+        LocalData.Add(new TreeData
+            {
+                Id = "10",
+                Pid = "5",
+                Name = "Sales Reports",
+            });
+        LocalData.Add(new TreeData
+            {
+                Id = "11",
+                Pid = "5",
+                Name = "Marketing Reports",
+            });
+        LocalData.Add(new TreeData
+            {
+                Id = "12",
+                Pid = "5",
+                Name = "Outbox"
+            });
+    }
+    class TreeData
+    {
+        public string Id { get; set; }
+        public string Pid { get; set; }
+        public string Name { get; set; }
+        public bool HasChild { get; set; }
+        public bool Expanded { get; set; }
+        public int Count { get; set; }
+        public bool Selected { get; set; }
+    }
+}
+<style>
+    /* Sample specific styles */
+    .control_wrapper {
+        max-width: 320px;
+        margin: auto;
+        border: 1px solid #dddddd;
+        border-radius: 3px;
+        max-height: 420px;
+        overflow: auto;
+    }
+    /* Specifies the styles for custom generated elements in the TreeView component */
+    .e-treeview .e-list-text {
+        width: 99%;
+    }
+
+    .treeCount.e-badge {
+        padding: 0.4em;
+        vertical-align: text-bottom;
+    }
+
+    .material .treeCount.e-badge {
+        vertical-align: middle;
+    }
+
+    .bootstrap5.e-bigger .treeCount.e-badge,
+    .tailwind.e-bigger .treeCount.e-badge,
+    .tailwind-dark.e-bigger .treeCount.e-badge,
+    .bootstrap5-dark.e-bigger .treeCount.e-badge {
+        line-height: 10px;
+    }
+
+    .bootstrap4 .treeviewdiv .treeCount.e-badge,
+    .bootstrap5 .treeviewdiv .treeCount.e-badge,
+    .bootstrap .treeviewdiv .treeCount.e-badge,
+    .bootstrap-dark .treeviewdiv .treeCount.e-badge,
+    .highcontrast .treeviewdiv .treeCount.e-badge,
+    .bootstrap5-dark .treeviewdiv .treeCount.e-badge {
+        background-color: #008800;
+    }
+
+    .highcontrast .treeviewdiv .treeCount.e-badge {
+        color: white;
+    }
+
+    .nodetext {
+        float: left;
+    }
+
+    .e-rtl .nodetext {
+        float: right;
+    }
+
+    .nodebadge {
+        float: right;
+        margin-right: 5px
+    }
+
+    .e-rtl .nodebadge {
+        float: left;
+        margin-left: 5px
+    }
+</style>
+
+```
