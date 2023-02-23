@@ -1,0 +1,920 @@
+---
+layout: post
+title: Migration from SfDiagram(classic) to SfDiagramComponent in Blazor Diagram Component | Syncfusion
+description: Learn here all about how to migrate the SfDiagram to SfDiagramComponent in Syncfusion Blazor Diagram component and more.
+platform: Blazor
+control: Diagram Component
+documentation: ug
+---
+
+# Migration from SfDiagram(classic) to SfDiagramComponent control
+
+This article describes the API migration process of SfDiagramComponent from SfDiagram(classic).
+
+## PageSettings
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Defines the page settings of diagram | **Property:** *DiagramPageSettings* <br><br> `<SfDiagram>` <br>&nbsp; `<DiagramPageSettings></DiagramPageSettings>`<br>`</SfDiagram>` | **Property:** *Background* <br><br> `<SfDiagramComponent>`<br>&nbsp; `<PageSettings></PageSettings>`<br>`</SfDiagramComponent>`  |
+
+### Background
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Defines the background properties  of diagram |  **Property:** *DiagramBackground* <br><br> `<SfDiagram>` <br>&nbsp; `<DiagramPageSettings>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<DiagramBackground />` <br>&nbsp; ` </DiagramPageSettings>` <br>`</SfDiagram>` | **Property:** *BackgroundStyle* <br><br> `<SfDiagramComponent>`<br>&nbsp; `<PageSettings>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<BackgroundStyle />` <br>&nbsp; `</PageSettings>` <br>`</SfDiagramComponent>`  |
+| Defines the background color of diagram elements | **Property:** *Color* <br><br> `<SfDiagram>` <br>&nbsp; `<DiagramPageSettings>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<DiagramBackground Color="lightblue" />` <br>&nbsp; ` </DiagramPageSettings>` <br>`</SfDiagram>` | **Property:** *Background* <br><br> `<SfDiagramComponent>`<br>&nbsp; `<PageSettings>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<BackgroundStyle Background="LightGreen" />` <br>&nbsp; `</PageSettings>` <br>`</SfDiagramComponent>`  |
+|Sets the source path of the background image| **Property:** *Source*<br><br> `<SfDiagram>` <br>&nbsp; `<DiagramPageSettings>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<DiagramBackground Source="Syncfusion.png" />` <br>&nbsp; ` </DiagramPageSettings>` <br>`</SfDiagram>` | **Property:** *ImageSource* <br><br> `<SfDiagramComponent>`<br>&nbsp; `<PageSettings>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<BackgroundStyle ImageSource="Syncfusion.png"  />` <br>&nbsp; `</PageSettings>` <br>`</SfDiagramComponent>`|
+|Defines how to align the background image over the diagram area| **Property:** *Align*<br><br> `<SfDiagram>` <br>&nbsp; `<DiagramPageSettings>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<DiagramBackground Source="Syncfusion.png" Align="Syncfusion.Blazor.Diagrams.ImageAlignment.XMaxYMid"/>` <br>&nbsp; ` </DiagramPageSettings>` <br>`</SfDiagram>` | **Property:** *ImageAlign* <br><br> `<SfDiagramComponent>`<br>&nbsp; `<PageSettings>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<BackgroundStyle ImageSource="Syncfusion.png" ImageAlign="Syncfusion.Blazor.Diagram.ImageAlignment.XMaxYMid"  />` <br>&nbsp; `</PageSettings>` <br>`</SfDiagramComponent>`|
+|Defines how the background image should be scaled/stretched| **Property:** *Scale*<br><br> `<SfDiagram>` <br>&nbsp; `<DiagramPageSettings>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<DiagramBackground Source="Syncfusion.png" Scale="Scale.Meet" />` <br>&nbsp; ` </DiagramPageSettings>` <br>`</SfDiagram>` | **Property:** *ImageScale* <br><br> `<SfDiagramComponent>`<br>&nbsp; `<PageSettings>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<BackgroundStyle ImageSource="Syncfusion.png" ImageScale="DiagramScale.Meet" />` <br>&nbsp; `</PageSettings>` <br>`</SfDiagramComponent>`|
+
+### FitOptions
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| To specify the diagram content can fit in the diagram area in initial rendering | **Property:** *DiagramFitOptions*<br><br> `<SfDiagram>` <br>&nbsp; `<DiagramPageSettings>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<DiagramFitOptions CanFit="true" Mode="FitModes.Width"></DiagramFitOptions>` <br>&nbsp; ` </DiagramPageSettings>` <br>`</SfDiagram>` | Not Applicable |
+
+### Margin in Page settings
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| To specify the diagram content can fit in the diagram area in initial rendering | **Property:** *PageSettingsMargin*<br><br> `<SfDiagram>` <br>&nbsp; `<DiagramPageSettings>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<PageSettingsMargin Left="10" Bottom="10" Right="10" Top="10"></PageSettingsMargin>` <br>&nbsp; ` </DiagramPageSettings>` <br>`</SfDiagram>` | **Property:** *PageMargin* <br><br> `<SfDiagramComponent>`<br>&nbsp; `<PageSettings>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<PageMargin Left="10" Bottom="10" Right="10" Top="10"></PageMargin>` <br>&nbsp; `</PageSettings>` <br>`</SfDiagramComponent>`|
+
+## Scroll Settings
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Defines the scroll settings of diagram | **Property:** *DiagramScrollSettings* <br><br> `<SfDiagram>` <br>&nbsp; `<DiagramScrollSettings></DiagramScrollSettings>`<br>`</SfDiagram>` | **Property:** *ScrollSettings* <br><br> `<SfDiagramComponent>`<br>&nbsp; `<ScrollSettings></ScrollSettings>`<br>`</SfDiagramComponent>` |
+
+### ScrollLimit
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Set the limit of the scrollable range of diagram | **Property:** *ScrollLimit* <br><br> `<SfDiagram>` <br>&nbsp; `<DiagramScrollSettings ScrollLimit="ScrollLimit.Diagram"></DiagramScrollSettings>`<br>`</SfDiagram>` | **Property:** *ScrollLimit* <br><br> `<SfDiagramComponent>`<br>&nbsp; `<ScrollSettings></ScrollSettings ScrollLimit="ScrollLimitMode.Diagram">`<br>`</SfDiagramComponent>`  |
+
+### Auto Scroll related
+
+## Snap Settings
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Defines the snap settings of diagram | **Property:** *DiagramSnapSettings* <br><br> `<SfDiagram>` <br>&nbsp; `<DiagramSnapSettings></DiagramSnapSettings>`<br>`</SfDiagram>` | **Property:** *SnapSettings* <br><br> `<SfDiagramComponent>`<br>&nbsp; `<SnapSettings></SnapSettings>`<br>`</SfDiagramComponent>` |
+
+### Snap Object distance
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Defines the minimum distance between selected object and the nearest object | **Property:** *SnapObjectDistance* <br><br> `<SfDiagram>` <br>&nbsp; `<DiagramSnapSettings SnapObjectDistance="10"></DiagramSnapSettings>`<br>`</SfDiagram>` | **Property:** *SnapDistance* <br><br> `<SfDiagramComponent>`<br>&nbsp; `<SnapSettings SnapDistance="10"></SnapSettings>`<br>`</SfDiagramComponent>` |
+
+### Gridlines
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Defines the horizontal gridlines of the diagram | **Property:** *HorizontalGridlines* <br><br> `<SfDiagram>` <br>&nbsp; `<DiagramSnapSettings>`<br>&nbsp;&nbsp;&nbsp;&nbsp; `<HorizontalGridlines/>` <br>&nbsp;`</DiagramSnapSettings>`<br>`</SfDiagram>` | **Property:** *HorizontalGridLines* <br><br> `<SfDiagramComponent>`<br>&nbsp; `<SnapSettings>`<br>&nbsp;&nbsp;&nbsp;&nbsp; `<HorizontalGridLines/>`<br>&nbsp;`</SnapSettings>`<br>`</SfDiagramComponent>` |
+| Defines the vertical gridlines of the diagram | **Property:** *VerticalGridlines* <br><br> `<SfDiagram>` <br>&nbsp; `<DiagramSnapSettings>`<br>&nbsp;&nbsp;&nbsp;&nbsp; `<VerticalGridlines/>` <br>&nbsp;`</DiagramSnapSettings>`<br>`</SfDiagram>` | **Property:** *VerticalGridLines* <br><br> `<SfDiagramComponent>`<br>&nbsp; `<SnapSettings>`<br>&nbsp;&nbsp;&nbsp;&nbsp; `<VerticalGridLines/>`<br>&nbsp;`</SnapSettings>`<br>`</SfDiagramComponent>` |
+
+## Context Menu
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Defines the context menu of the diagram | **Property:** *DiagramContextMenuSettings* <br><br> `<SfDiagram>` <br>&nbsp; `<DiagramContextMenuSettings Show="true" \>`<br>`</SfDiagram>` | **Property:** *ContextMenuSettings* <br><br> `<SfDiagramComponent>`<br>&nbsp; `<ContextMenuSettings Show="true" \>`<br>`</SfDiagramComponent>` |
+
+### Items
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Defines the custom context menu items in the diagram | **Property:** *DiagramContextMenuSettings* <br><br> `<SfDiagram>` <br>&nbsp; ` <DiagramContextMenuSettings Show="true" Items="@contextMenuItemModels" />`<br>`</SfDiagram>`<br><br> `@code` <br>`{`<br>&nbsp;&nbsp;`List<ContextMenuItemModel> contextMenuItemModels = new List<ContextMenuItemModel>()`<br>&nbsp;&nbsp;&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;&nbsp;` new ContextMenuItemModel()` <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Text ="color", Id="color", Target =".e-elementcontent",`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Items = new List<ContextMenuItemModel>()`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`new ContextMenuItemModel(){  Text ="Red", Id="Red" },`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`new ContextMenuItemModel(){  Text ="Yellow", Id="Yellow", }` <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `}`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}` <br>&nbsp;&nbsp;&nbsp;&nbsp;`};`<br>`}` | **Property:** *ContextMenuSettings* <br><br> `<SfDiagramComponent>`<br>&nbsp; `<ContextMenuSettings Show="true" Items="@Items"/>`<br>`</SfDiagramComponent>`<br><br> `@code` <br>`{`<br>&nbsp;&nbsp;`List<ContextMenuItem> Items = new List<ContextMenuItem>()`<br>&nbsp;&nbsp;&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;&nbsp;` new ContextMenuItem()` <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Text ="color", ID="color"`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Items = new List<ContextMenuItem>()`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`new ContextMenuItem(){  Text ="Red", ID="Red" },`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`new ContextMenuItem(){  Text ="Yellow", ID="Yellow", }` <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `}`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}` <br>&nbsp;&nbsp;&nbsp;&nbsp;`};`<br>`}` |
+
+### Events
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| While right click on the the diagram |  **Property:** *OnContextMenuOpen* <br><br> `<SfDiagram>` <br>&nbsp; `<DiagramEvents OnContextMenuOpen="@OnContextMenuOpen"></DiagramEvents>` <br>&nbsp; ` <DiagramContextMenuSettings Show="true" />`<br>`</SfDiagram>`<br><br> `@code` <br>`{`<br>&nbsp;&nbsp;`public void OnContextMenuOpen(DiagramBeforeMenuOpenEventArgs arg)`<br>&nbsp;&nbsp;`{`<br>&nbsp;&nbsp; `}`<br>`}` | **Property:** *ContextMenuOpening * <br><br> `<SfDiagramComponent>`<br>&nbsp; `<ContextMenuSettings Show="true" ContextMenuOpening="@ContextMenuOpening"/>`<br>`</SfDiagramComponent>`<br><br> `@code` <br>`{`<br>&nbsp;&nbsp;`public void ContextMenuOpening(DiagramMenuOpeningEventArgs arg)`<br>&nbsp;&nbsp;`{`<br>&nbsp;&nbsp; `}`<br>`}` |
+| When the context menu item is clicked | **Property:** *ContextMenuItemClicked* <br><br> `<SfDiagram>` <br>&nbsp; `<DiagramEvents ContextMenuItemClicked="@ContextMenuItemClicked"></DiagramEvents>` <br>&nbsp; ` <DiagramContextMenuSettings Show="true" />`<br>`</SfDiagram>`<br><br> `@code` <br>`{`<br>&nbsp;&nbsp;`public void ContextMenuItemClicked(DiagramMenuEventArgs arg)`<br>&nbsp;&nbsp;`{`<br>&nbsp;&nbsp; `}`<br>`}` | **Property:** *ContextMenuItemClicked* <br><br> `<SfDiagramComponent>`<br>&nbsp; `<ContextMenuSettings Show="true" ContextMenuItemClicked="@ContextMenuItemClicked"/>`<br>`</SfDiagramComponent>`<br><br> `@code` <br>`{`<br>&nbsp;&nbsp;`public void ContextMenuItemClicked(DiagramMenuClickEventArgs arg)`<br>&nbsp;&nbsp;`{`<br>&nbsp;&nbsp; `}`<br>`}` |
+
+## Bridging
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Defines the direction of the bridging for the connector |  **Property:** *BridgeDirection* <br><br> `<SfDiagram BridgeDirection="BridgeDirection.Top"/>` | **Property:** *BridgeDirection * <br><br> `<SfDiagramComponentBridgeDirection="Direction.Top" />` |
+
+## Background Color
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Defines the background color of the diagram |  **Property:** *BackgroundColor* <br><br> `<SfDiagram BackgroundColor="red" />` |  **Property:** *Background* <br><br> `<SfDiagramComponent>`<br>&nbsp; `<PageSettings>`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<BackgroundStyle Background="LightGreen" />` <br>&nbsp; `</PageSettings>` <br>`</SfDiagramComponent>` |
+
+## AddInfo for diagram
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Defines the background color of the diagram |  **Property:** *AddInfo* <br><br> `<SfDiagram AddInfo="" />` |  Not Applicable |
+
+## Annotation template
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Defines the template support for annotation of the diagram |  **Property:** *AnnotationTemplate* <br><br> |  Not Applicable |
+
+## Mode
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Defines the rendering mode of the diagram |  **Property:** *Mode* <br><br> `<SfDiagram Mode="RenderingMode.Canvas" />`|  Not Applicable |
+
+## Tool
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Defines the precedence of the interactive tool |  **Property:** *Tool* <br><br> `<SfDiagram Tool="DiagramTools.ZoomPan" />`|  **Property:** *InteractionController* <br><br> `<SfDiagramComponent InteractionController="DiagramInteractions.ZoomPan" /> `|
+| ZoomPan - allows users to pan the diagram. |   **Property:** *Tool* <br><br> `<SfDiagram Tool="DiagramTools.ZoomPan" />`|  **Property:** *InteractionController* <br><br> `<SfDiagramComponent InteractionController="DiagramInteractions.ZoomPan" /> `|
+| MultipleSelect - allows users to select multiple nodes and connectors. It won't allow selecting a single node/connector |  **Property:** *Tool* <br><br> `<SfDiagram Tool="DiagramTools.MultipleSelect" />`|  **Property:** *InteractionController* <br><br> `<SfDiagramComponent InteractionController="DiagramInteractions.MultipleSelect" /> `|
+| SingleSelect - allows users to select one node or connector at a time.|  **Property:** *Tool* <br><br> `<SfDiagram Tool="DiagramTools.SingleSelect" />`|  **Property:** *InteractionController* <br><br> `<SfDiagramComponent InteractionController="DiagramInteractions.SingleSelect" /> `|
+| DrawOnce - users to draw the drawing objects at once |  **Property:** *Tool* <br><br> `<SfDiagram Tool="DiagramTools.DrawOnce" />`|  **Property:** *InteractionController* <br><br> `<SfDiagramComponent InteractionController="DiagramInteractions.DrawOnce" /> `|
+| ContinuousDraw - users to draw the drawing objects continuously |  **Property:** *Tool* <br><br> `<SfDiagram Tool="DiagramTools.ContinuousDraw" />`|  **Property:** *InteractionController* <br><br> `<SfDiagramComponent InteractionController="DiagramInteractions.ContinuousDraw" /> `|
+| None - disables the selection, zooming, and interaction behavior of the diagram |  **Property:** *Tool* <br><br> `<SfDiagram Tool="DiagramTools.None" />`|  **Property:** *InteractionController* <br><br> `<SfDiagramComponent InteractionController="DiagramInteractions.None" /> `|
+| Default - allow the users to select individual and multiple objects  |  **Property:** *Tool* <br><br> `<SfDiagram Tool="DiagramTools.Default" />`|  **Property:** *InteractionController* <br><br> `<SfDiagramComponent InteractionController="DiagramInteractions.Default" /> `|
+
+
+
+
+## Locale
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Override the global culture and localization value of the diagram component |  **Property:** *Tool* <br><br> `<SfDiagram Locale="en-US" />`|  Not Applicable |
+
+## Enable Persistence
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Enable or disable persisting component's state between page reloads |  **Property:** *EnablePersistence* <br><br> `<SfDiagram EnablePersistence="true" > />`|  Not Applicable |
+
+## EnableRtl
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Enable or disable rendering the component in right to left direction |  **Property:** *EnableRtl* <br><br> `<SfDiagram EnableRtl="false" > />`|  Not Applicable |
+
+## ModelType
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Defines the type of the property |  **Property:** *ModelType* <br><br> `<SfDiagram ModelType="" />`|  Not Applicable |
+
+## Layers
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Provides a way to change the properties of all shapes that have been assigned to that layer |  **Property:** *ModelType* <br><br> `<SfDiagram Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection" Layers="@Layers" />`|  Not Applicable |
+
+## SerializationSettings
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Enables or disables the serialization of the default values |  **Property:** *PreventDefaults* <br><br> `<SfDiagram><DiagramSerializationSettings PreventDefaults="false" /></SfDiagram>`|  Not Applicable |
+
+## Command Manager
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Defines the custom commands in the command manager |  **Property:** *DiagramCommands* <br><br> `<SfDiagram>`<br>&nbsp;`<DiagramCommandManager>`<br>&nbsp;&nbsp;`<DiagramCommands>`<br>&nbsp;&nbsp;&nbsp;`<DiagramCommand Name="customGroup">`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<DiagramKeyGesture Key="Keys.G" KeyModifiers="KeyModifiers.Control" />`<br>&nbsp;&nbsp;&nbsp;`</DiagramCommand>` <br>&nbsp;&nbsp;`</DiagramCommands>` <br>&nbsp;`</DiagramCommandManager>`<br>`</SfDiagram>`| **Property:** *Commands* <br><br>`<SfDiagramComponent>`<br>&nbsp;`<CommandManager Commands="commands"/>`<br>`</SfDiagramComponent>`<br><br>`@code`<br>`{`<br>&nbsp;`DiagramObjectCollection<KeyboardCommand> commands;`<br>&nbsp;`protected override void OnInitialized()`<br>&nbsp;&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;&nbsp;`commands = new DiagramObjectCollection<KeyboardCommand>()`<br>&nbsp;&nbsp;&nbsp;&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KeyboardCommand command = new KeyboardCommand()`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Name = "customGroup",`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Gesture = new KeyGesture() { Key = DiagramKeys.G, Modifiers = ModifierKeys.Control }`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`};`<br>&nbsp;&nbsp;&nbsp;&nbsp;`};`<br>&nbsp;&nbsp;&nbsp;`}` |
+| Triggers when the command executed | **Event:** *OnCommandExecuted* <br><br> `<SfDiagram @ref="@Diagram">`<br>&nbsp;`<DiagramEvents OnCommandExecuted="@CommandExecute"></DiagramEvents>`<br>&nbsp;`<DiagramCommandManager>`<br>&nbsp;&nbsp;`<DiagramCommands>`<br>&nbsp;&nbsp;&nbsp;`<DiagramCommand Name="customGroup">`<br>&nbsp;&nbsp;&nbsp;&nbsp;`<DiagramKeyGesture Key="Keys.G" KeyModifiers="KeyModifiers.Control" />`<br>&nbsp;&nbsp;&nbsp;`</DiagramCommand>`<br>&nbsp;&nbsp;`</DiagramCommands>` <br>&nbsp;`</DiagramCommandManager>`<br>`</SfDiagram>`<br><br>`@code`<br>`{`<br>&nbsp;`SfDiagram Diagram;`<br>&nbsp;`public async Task CommandExecute(ICommandExecuteEventArgs args)`<br>&nbsp;&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;`if (args.Gesture.KeyModifiers == KeyModifiers.Control && args.Gesture.Key == Keys.G)`<br>&nbsp;&nbsp;&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;&nbsp;`await Diagram.Group();`<br>&nbsp;&nbsp;&nbsp;`}`<br>&nbsp;&nbsp;`}`<br>&nbsp;`}`| **Event:** *Execute* <br><br>`<SfDiagramComponent @ref="@Diagram">`<br>&nbsp;`<CommandManager Commands="commands" Execute="@ExecuteCommand"/>`<br>`</SfDiagramComponent>`<br><br>`@code`<br>`{`<br>&nbsp;`SfDiagramComponent Diagram;`<br>&nbsp;`DiagramObjectCollection<KeyboardCommand> commands;`<br>&nbsp;`protected override void OnInitialized()`<br>&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;&nbsp;`commands = new DiagramObjectCollection<KeyboardCommand>()`<br>&nbsp;&nbsp;&nbsp;&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KeyboardCommand command = new KeyboardCommand()`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Name = "customGroup",`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Gesture = new KeyGesture() { Key = DiagramKeys.G, Modifiers = ModifierKeys.Control }`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`};`<br>&nbsp;&nbsp;&nbsp;&nbsp;`};`<br>&nbsp;`}`<br>&nbsp;`public void ExecuteCommand(CommandKeyArgs obj)`<br>&nbsp;`{`<br>&nbsp;&nbsp;`if(obj.Name =="customGroup")`<br>&nbsp;&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;`Diagram.Group();`<br>&nbsp;&nbsp;`}`<br>&nbsp;`}`<br>`}` |
+| Determines whether this command can execute in its current state | Not Applicable| **Event:** *CanExecute* <br><br>`<SfDiagramComponent @ref="@Diagram">`<br>&nbsp;`<CommandManager Commands="commands" CanExecute="@CanExecute" Execute="@ExecuteCommand"/>`<br>`</SfDiagramComponent>`<br><br>`@code`<br>`{`<br>&nbsp;`SfDiagramComponent Diagram;`<br>&nbsp;`DiagramObjectCollection<KeyboardCommand> commands;`<br>&nbsp;`protected override void OnInitialized()`<br>&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;&nbsp;`commands = new DiagramObjectCollection<KeyboardCommand>()`<br>&nbsp;&nbsp;&nbsp;&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KeyboardCommand command = new KeyboardCommand()`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Name = "customGroup",`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Gesture = new KeyGesture() { Key = DiagramKeys.G, Modifiers = ModifierKeys.Control }`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`};`<br>&nbsp;&nbsp;&nbsp;&nbsp;`};`<br>&nbsp;`}`<br>&nbsp;`public void CanExecute(CommandKeyArgs args)`<br>&nbsp;`{`<br>&nbsp;&nbsp;`args.CanExecute = true;`<br>&nbsp;`}`<br>&nbsp;`public void ExecuteCommand(CommandKeyArgs obj)`<br>&nbsp;`{`<br>&nbsp;&nbsp;`if(obj.Name =="customGroup")`<br>&nbsp;&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;`Diagram.Group();`<br>&nbsp;&nbsp;`}`<br>&nbsp;`}`<br>`}` |
+
+## Node Defaults
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Default values for all the Nodes can be set using the method | **Property:** *NodeDefaults* <br><br> `<SfDiagram NodeDefaults="@NodeDefaults"></SfDiagram>`<br>`@code`<br>`{`<br>&nbsp;`DiagramNode NodeDefaults = new DiagramNode`<br>&nbsp;`{`<br>&nbsp;&nbsp;`Width = 70,`<br>&nbsp;&nbsp;`Height = 70,`<br>&nbsp;&nbsp;`Shape = new DiagramShape() { BasicShape = BasicShapes.Ellipse, CornerRadius = 10, Type = Syncfusion.Blazor.Diagrams.Shapes.Basic }`,<br>&nbsp;&nbsp;`Style = new NodeShapeStyle() { StrokeColor = "transparent" },`<br>&nbsp;&nbsp;`Annotations = new ObservableCollection<DiagramNodeAnnotation>()`<br>&nbsp;&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;`new DiagramNodeAnnotation() {`<br>&nbsp;&nbsp;&nbsp;&nbsp;`Style = new AnnotationStyle() { Color = "white"}`<br>&nbsp;&nbsp;&nbsp;`}`<br>&nbsp;&nbsp;`}`<br>&nbsp;`};`<br>`}`| **Event:** *NodeCreating* <br><br> `<SfDiagramComponent NodeCreating="@NodeCreating"></SfDiagramComponent>`<br>`@code`<br>`{`<br>&nbsp;`public void NodeCreating(IDiagramObject obj)`<br>&nbsp;`{`<br>&nbsp;&nbsp;`if (obj is Node)`<br>&nbsp;&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;`Node node = obj as Node;`<br>&nbsp;&nbsp;&nbsp;`node.Width = 70;`<br>&nbsp;&nbsp;&nbsp;`node.Height = 70;`<br>&nbsp;&nbsp;&nbsp;`node.Shape = new BasicShape() { Shape = NodeBasicShapes.Rectangle CornerRadius = 10, Type = shapes.Basic };`<br>&nbsp;&nbsp;&nbsp;`node.Style = new ShapeStyle() { StrokeColor = "transparent" };`<br>&nbsp;&nbsp;&nbsp;`node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()`<br>&nbsp;&nbsp;&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;&nbsp;`new ShapeAnnotation() {`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Style = new TextStyle(){ Color = "white"}`<br>&nbsp;&nbsp;&nbsp;&nbsp;`}`<br>&nbsp;&nbsp;&nbsp;`};`<br>&nbsp;&nbsp;`}`<br>&nbsp;`}`<br>`}` |
+
+## Connector Defaults
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Default values for all the connector can be set using the method | **Property:** *ConnectorDefaults* <br><br> `<SfDiagram ConnectorDefaults="@ConnectorDefaults"></SfDiagram>`<br>`@code`<br>`{`<br>&nbsp;`DiagramConnector ConnectorDefaults = new DiagramConnector()`<br>&nbsp;`{`<br>&nbsp;&nbsp;`Type = DiagramSegments.Orthogonal,`<br>&nbsp;&nbsp;`Style = new ConnectorShapeStyle() { StrokeWidth = 2, StrokeColor = "#797979" }`<br>&nbsp;`};`<br>`}`| **Event:** *ConnectorCreating* <br><br> `<SfDiagramComponent ConnectorCreating="@OnConnectorCreating"></SfDiagramComponent>`<br>`@code`<br>`{`<br>&nbsp;`public void OnConnectorCreating(IDiagramObject obj)`<br>&nbsp;`{`<br>&nbsp;&nbsp;`if (obj is Connector)`<br>&nbsp;&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;`Connector connector = obj as Connector;`<br>&nbsp;&nbsp;&nbsp;`connector.Type = ConnectorSegmentType.Orthogonal;`<br>&nbsp;&nbsp;&nbsp;`connector.Style = new ShapeStyle() { StrokeColor = "#797979", StrokeWidth = 2 };`<br>&nbsp;&nbsp;`}`<br>&nbsp;`}`<br>`}` |
+
+## Ruler Settings
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+|Ruler provides a horizontal and vertical guide for measuring in the Diagram | **Property:** *DiagramRulerSettings* <br><br> `<SfDiagram Width="600px" Height="600px">`<br>&nbsp;`<DiagramRulerSettings ShowRulers="true" />`<br>`</SfDiagram>` | Not Applicable |
+
+## Diagram Constraints
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| ApiUpdate - Enables or disables the update through public API diagram |  **Property:** *Constraints* <br><br> `<SfDiagram Constraints="Syncfusion.Blazor.Diagrams.DiagramConstraints.ApiUpdate" />` | **Property:** *Constraints* <br><br> `<SfDiagramComponent Constraints="Syncfusion.Blazor.Diagram.DiagramConstraints.ApiUpdate" />` |
+| Bridging - Enables or disables the Bridging support for the connector in the diagram |  **Property:** *Constraints* <br><br> `<SfDiagram Constraints="Syncfusion.Blazor.Diagrams.DiagramConstraints.Bridging" />` | **Property:** *Constraints* <br><br> `<SfDiagramComponent Constraints="Syncfusion.Blazor.Diagram.DiagramConstraints.Bridging" />` |
+| LineRouting - Enables or disables the line routing for the diagram |  **Property:** *Constraints* <br><br> `<SfDiagram Constraints="Syncfusion.Blazor.Diagrams.DiagramConstraints.LineRouting" />` | Not Applicable |
+| PageEditable - PageEditable enables or disables the page editing support for the diagram |  **Property:** *Constraints* <br><br> `<SfDiagram Constraints="Syncfusion.Blazor.Diagrams.DiagramConstraints.PageEditable" />` | **Property:** *Constraints* <br><br> `<SfDiagramComponent Constraints="Syncfusion.Blazor.Diagram.DiagramConstraints.PageEditable" />` |
+| UserInteraction - Enables or disables the user interaction for the diagram |  **Property:** *Constraints* <br><br> `<SfDiagram Constraints="Syncfusion.Blazor.Diagrams.DiagramConstraints.UserInteraction" />` | **Property:** *Constraints* <br><br> `<SfDiagramComponent Constraints="Syncfusion.Blazor.Diagram.DiagramConstraints.UserInteraction" />` |
+| Virtualization - Enables or disables the Virtualization support for  the diagram |  **Property:** *Constraints* <br><br> `<SfDiagram Constraints="Syncfusion.Blazor.Diagrams.DiagramConstraints.Virtualization" />` | Not Applicable |
+| Zoom - Enables or disables the Zoom support for the diagram |  **Property:** *Constraints* <br><br> `<SfDiagram Constraints="Syncfusion.Blazor.Diagrams.DiagramConstraints.Zoom" />` | **Property:** *Constraints* <br><br> `<SfDiagramComponent Constraints="Syncfusion.Blazor.Diagram.DiagramConstraints.Zoom" />` |
+| ZoomTextEdit - Enables or disables zooming the text box while editing the text |  **Property:** *Constraints* <br><br> `<SfDiagram Constraints="Syncfusion.Blazor.Diagrams.DiagramConstraints.ZoomTextEdit" />` | **Property:** *Constraints* <br><br> `<SfDiagramComponent Constraints="Syncfusion.Blazor.Diagram.DiagramConstraints.ZoomTextEdit" />` |
+| PanX - Enables or disables the Panning X coordinate support for the diagram |  **Property:** *Constraints* <br><br> `<SfDiagram Constraints="Syncfusion.Blazor.Diagrams.DiagramConstraints.PanX" />` | **Property:** *Constraints* <br><br> `<SfDiagramComponent Constraints="Syncfusion.Blazor.Diagram.DiagramConstraints.PanX" />` |
+| PanY - Enables or disables the Panning Y coordinate support for the diagram |  **Property:** *Constraints* <br><br> `<SfDiagram Constraints="Syncfusion.Blazor.Diagrams.DiagramConstraints.PanY" />` | **Property:** *Constraints* <br><br> `<SfDiagramComponent Constraints="Syncfusion.Blazor.Diagram.DiagramConstraints.PanY" />` |
+| Pan - Enables or disables the panning both X and Y coordinates support for the diagram |  **Property:** *Constraints* <br><br> `<SfDiagram Constraints="Syncfusion.Blazor.Diagrams.DiagramConstraints.Pan" />` | **Property:** *Constraints* <br><br> `<SfDiagramComponent Constraints="Syncfusion.Blazor.Diagram.DiagramConstraints.Pan" />` |
+| None - Disables all the diagram functionalities except rendering |  **Property:** *Constraints* <br><br> `<SfDiagram Constraints="Syncfusion.Blazor.Diagrams.DiagramConstraints.None" />` | **Property:** *Constraints* <br><br> `<SfDiagramComponent Constraints="Syncfusion.Blazor.Diagram.DiagramConstraints.None" />` |
+| Default - Enables all default constraints to the diagram |  **Property:** *Constraints* <br><br> `<SfDiagram Constraints="Syncfusion.Blazor.Diagrams.DiagramConstraints.Default" />` | **Property:** *Constraints* <br><br> `<SfDiagramComponent Constraints="Syncfusion.Blazor.Diagram.DiagramConstraints.Default" />` |
+| Tooltip - Enables or disables the Tooltip option for the diagram |  **Property:** *Constraints* <br><br> `<SfDiagram Constraints="Syncfusion.Blazor.Diagrams.DiagramConstraints.Tooltip" />` | **Property:** *Constraints* <br><br> `<SfDiagramComponent Constraints="Syncfusion.Blazor.Diagram.DiagramConstraints.Tooltip" />` |
+| UndoRedo - Enables or disables the Undo/Redo option for the diagram |  **Property:** *Constraints* <br><br> `<SfDiagram Constraints="Syncfusion.Blazor.Diagrams.DiagramConstraints.UndoRedo" />` | **Property:** *Constraints* <br><br> `<SfDiagramComponent Constraints="Syncfusion.Blazor.Diagram.DiagramConstraints.UndoRedo" />` |
+
+## Drawing Object
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Defines a shape or connector to be drawn in the diagram | **Property:** *DrawingObject* <br><br>`<SfDiagram DrawingObject="@DrawingObject" />`<br>`@code`<br>`{`<br>&nbsp;`public object DrawingObject = new DiagramNode() { Shape = new DiagramShape() { Type = DiagramShapes.Basic, BasicShape = BasicShapes.Rectangle } };`<br>`}`| **Property:** *DrawingObject* <br><br> `<SfDiagramComponent DrawingObject="@drawingObject" />`<br>`@code{`<br>&nbsp;`IDiagramObject drawingObject { get; set; }`<br>&nbsp;`protected override void OnInitialized()`<br>&nbsp;`{`<br>&nbsp;&nbsp;`Node node = new Node()`<br>&nbsp;&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;`Shape = new BasicShape() { Type = shapes.Basic, Shape = NodeBasicShapes.Rectangle }`<br>&nbsp;&nbsp;`};`<br>&nbsp;&nbsp;`drawingObject = node;`<br>&nbsp;`}`<br>`}`|
+
+## Node
+
+| Behavior | API in SfDiagram | API in SfDiagramComponent |
+| -------- | -------- | -------- |
+| Defines a shape or connector to be drawn in the diagram | **Property:** *Nodes* <br><br>`<SfDiagram Nodes="@NodeCollection" />`
+<br>`@code`
+<br>`{`
+    <br>&nbsp;`public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`DiagramNode node1 = new DiagramNode()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Id = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Annotations = new ObservableCollection<DiagramNodeAnnotation>()`
+            <br>&nbsp;&nbsp;&nbsp;`{`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`new DiagramNodeAnnotation()`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`{`
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Content = "SDLC",`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`}`
+            <br>&nbsp;&nbsp;&nbsp;`}`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`| **Property:** *Nodes* <br><br>`<SfDiagramComponent Nodes="@NodeCollection" />`<br>`@code`
+<br>`{`
+    <br>&nbsp;`public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`Node node1 = new Node()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`ID = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Annotations = new DiagramObjectCollection<ShapeAnnotation>()`
+            <br>&nbsp;&nbsp;&nbsp;`{`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`new ShapeAnnotation()`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`{`
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Content="SDLC",`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`}`
+            <br>&nbsp;&nbsp;&nbsp;`}`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`|
+| Sets the Basic shapes of the Node | **Property:** *Nodes* <br><br>`<SfDiagram Nodes="@NodeCollection" />`
+<br>`@code`
+<br>`{`
+    <br>&nbsp;`public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`DiagramNode node1 = new DiagramNode()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Id = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape=new DiagramShape(){Type=Shapes.Basic,BasicShape=BasicShapes.Ellipse}`
+            <br>&nbsp;&nbsp;&nbsp;`Annotations = new ObservableCollection<DiagramNodeAnnotation>()`
+            <br>&nbsp;&nbsp;&nbsp;`{`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`new DiagramNodeAnnotation()`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`{`
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Content = "SDLC",`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`}`
+            <br>&nbsp;&nbsp;&nbsp;`}`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`| **Property:** *Nodes* <br><br>`<SfDiagramComponent Nodes="@NodeCollection" />`<br>`@code`
+<br>`{`
+    <br>&nbsp;`public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`Node node1 = new Node()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`ID = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Ellipse },`
+            <br>&nbsp;&nbsp;&nbsp;`Annotations = new DiagramObjectCollection<ShapeAnnotation>()`
+            <br>&nbsp;&nbsp;&nbsp;`{`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`new ShapeAnnotation()`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`{`
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Content="SDLC",`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`}`
+            <br>&nbsp;&nbsp;&nbsp;`}`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`|
+| Set the CornerRadius property to specify the radius of rounded rectangle. | **Property:** *Nodes* <br><br>`<SfDiagram Nodes="@NodeCollection" />`
+<br>`@code`
+<br>`{`
+    <br>&nbsp;`public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`DiagramNode node1 = new DiagramNode()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Id = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape=new DiagramShape(){Type=Shapes.Basic,BasicShape=BasicShapes.Rectangle, CornerRadius = 10 }`
+            <br>&nbsp;&nbsp;&nbsp;`Annotations = new ObservableCollection<DiagramNodeAnnotation>()`
+            <br>&nbsp;&nbsp;&nbsp;`{`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`new DiagramNodeAnnotation()`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`{`
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Content = "SDLC",`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`}`
+            <br>&nbsp;&nbsp;&nbsp;`}`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`| **Property:** *Nodes* <br><br>`<SfDiagramComponent Nodes="@NodeCollection" />`<br>`@code`
+<br>`{`
+    <br>&nbsp;`public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`Node node1 = new Node()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`ID = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle, CornerRadius = 10 },`
+            <br>&nbsp;&nbsp;&nbsp;`Annotations = new DiagramObjectCollection<ShapeAnnotation>()`
+            <br>&nbsp;&nbsp;&nbsp;`{`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`new ShapeAnnotation()`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`{`
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Content="SDLC",`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`}`
+            <br>&nbsp;&nbsp;&nbsp;`}`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`|
+| Sets the Flow shapes of the Node | **Property:** *Nodes* <br><br>`<SfDiagram Nodes="@NodeCollection" />`
+<br>`@code`
+<br>`{`
+    <br>&nbsp;`public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`DiagramNode node1 = new DiagramNode()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Id = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape=new DiagramShape(){Type=Shapes.Flow,FlowShapes.DirectData }`
+            <br>&nbsp;&nbsp;&nbsp;`Annotations = new ObservableCollection<DiagramNodeAnnotation>()`
+            <br>&nbsp;&nbsp;&nbsp;`{`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`new DiagramNodeAnnotation()`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`{`
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Content = "SDLC",`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`}`
+            <br>&nbsp;&nbsp;&nbsp;`}`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`| **Property:** *Nodes* <br><br>`<SfDiagramComponent Nodes="@NodeCollection" />`<br>`@code`
+<br>`{`
+    <br>&nbsp;`public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`Node node1 = new Node()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`ID = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape = new FlowShape() { Type = NodeShapes.Flow, Shape = NodeFlowShapes.DirectData },`
+            <br>&nbsp;&nbsp;&nbsp;`Annotations = new DiagramObjectCollection<ShapeAnnotation>()`
+            <br>&nbsp;&nbsp;&nbsp;`{`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`new ShapeAnnotation()`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`{`
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Content="SDLC",`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`}`
+            <br>&nbsp;&nbsp;&nbsp;`}`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`|
+| Sets the Image shapes of the Node | **Property:** *Nodes* <br><br>`<SfDiagram Nodes="@NodeCollection" />`
+<br>`@code`
+<br>`{`
+    <br>&nbsp;`public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`DiagramNode node1 = new DiagramNode()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Id = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape=new DiagramShape(){ Type=Shapes.Image,Source="/diagram/images/syncfusion.png"}`
+            <br>&nbsp;&nbsp;&nbsp;`Annotations = new ObservableCollection<DiagramNodeAnnotation>()`
+            <br>&nbsp;&nbsp;&nbsp;`{`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`new DiagramNodeAnnotation()`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`{`
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Content = "SDLC",`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`}`
+            <br>&nbsp;&nbsp;&nbsp;`}`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`| **Property:** *Nodes* <br><br>`<SfDiagramComponent Nodes="@NodeCollection" />`<br>`@code`
+<br>`{`
+    <br>&nbsp;`public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`Node node1 = new Node()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`ID = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape = new ImageShape() { Type = NodeShapes.Image, Source = "/diagram/images/syncfusion.png" },`
+            <br>&nbsp;&nbsp;&nbsp;`Annotations = new DiagramObjectCollection<ShapeAnnotation>()`
+            <br>&nbsp;&nbsp;&nbsp;`{`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`new ShapeAnnotation()`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`{`
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Content="SDLC",`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`}`
+            <br>&nbsp;&nbsp;&nbsp;`}`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`|
+| Sets the stretch the image of the node | **Property:** *Nodes* <br><br>`<SfDiagram Nodes="@NodeCollection" />`
+<br>`@code`
+<br>`{`
+    <br>&nbsp;`public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`DiagramNode node1 = new DiagramNode()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Id = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape=new DiagramShape(){ Type=Shapes.Image,Source="/diagram/images/syncfusion.png", Scale=Stretch.Meet }`
+            <br>&nbsp;&nbsp;&nbsp;`Annotations = new ObservableCollection<DiagramNodeAnnotation>()`
+            <br>&nbsp;&nbsp;&nbsp;`{`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`new DiagramNodeAnnotation()`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`{`
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Content = "SDLC",`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`}`
+            <br>&nbsp;&nbsp;&nbsp;`}`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`| **Property:** *Nodes* <br><br>`<SfDiagramComponent Nodes="@NodeCollection" />`<br>`@code`
+<br>`{`
+    <br>&nbsp;`public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`Node node1 = new Node()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`ID = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape = new ImageShape() { Type = NodeShapes.Image, Source = "/diagram/images/syncfusion.png", Scale = DiagramScale.Meet, },`
+            <br>&nbsp;&nbsp;&nbsp;`Annotations = new DiagramObjectCollection<ShapeAnnotation>()`
+            <br>&nbsp;&nbsp;&nbsp;`{`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`new ShapeAnnotation()`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`{`
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Content="SDLC",`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`}`
+            <br>&nbsp;&nbsp;&nbsp;`}`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`|
+| Align the image based on the x and y values in the node boundary | **Property:** *Nodes[i].Shape.Align* <br><br>`<SfDiagram Nodes="@NodeCollection" />`
+<br>`@code`
+<br>`{`
+    <br>&nbsp;`public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`DiagramNode node1 = new DiagramNode()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Id = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape=new DiagramShape(){ Type=Shapes.Image,Source="/diagram/images/syncfusion.png", Align = ImageAlignment.XMinYMin }`
+            <br>&nbsp;&nbsp;&nbsp;`Annotations = new ObservableCollection<DiagramNodeAnnotation>()`
+            <br>&nbsp;&nbsp;&nbsp;`{`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`new DiagramNodeAnnotation()`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`{`
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Content = "SDLC",`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`}`
+            <br>&nbsp;&nbsp;&nbsp;`}`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`| **Property:** *Nodes* <br><br>`<SfDiagramComponent Nodes="@NodeCollection" />`<br>`@code`
+<br>`{`
+    <br>&nbsp;`public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`Node node1 = new Node()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`ID = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape = new ImageShape() { Type = NodeShapes.Image, Source = "/diagram/images/syncfusion.png", ImageAlign = ImageAlignment.XMinYMax },`
+            <br>&nbsp;&nbsp;&nbsp;`Annotations = new DiagramObjectCollection<ShapeAnnotation>()`
+            <br>&nbsp;&nbsp;&nbsp;`{`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`new ShapeAnnotation()`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`{`
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Content="SDLC",`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`}`
+            <br>&nbsp;&nbsp;&nbsp;`}`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`|
+| Sets the Text shapes of the Node | **Property:** *Nodes* <br><br>`<SfDiagram Nodes="@NodeCollection" />`
+<br>`@code`
+<br>`{`
+    <br>&nbsp;`public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`DiagramNode node1 = new DiagramNode()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Id = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape=new DiagramShape(){Type=Shapes.Text,Content="Text Node"}`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`| **Property:** *Nodes* <br><br>`<SfDiagramComponent Nodes="@NodeCollection" />`<br>`@code`
+<br>`{`
+    <br>&nbsp;`public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`Node node1 = new Node()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`ID = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape = new TextShape() { Content = "Text Node" }`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`|
+| Sets the HTMl shapes of the Node | **Property:** *Nodes* <br><br>`@using Syncfusion.Blazor.Inputs`<br><br>`<SfDiagram Nodes="@NodeCollection">`
+<br>&nbsp;<DiagramTemplates>
+        <br>&nbsp;&nbsp;<NodeTemplate>
+            <br>&nbsp;&nbsp;&nbsp;@{
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;<SfTextBox Placeholder="My text"></SfTextBox>
+            <br>&nbsp;&nbsp;&nbsp;}
+        <br>&nbsp;&nbsp;</NodeTemplate>
+    <br>&nbsp;</DiagramTemplates>
+<br>`</SfDiagram>`
+<br>`@code`
+<br>`{`
+    <br>&nbsp;`public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`DiagramNode node1 = new DiagramNode()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Id = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape=new DiagramShape() {  Type=Shapes.HTML }`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`| **Property:** *Nodes* <br><br>`@using Syncfusion.Blazor.Inputs`<br><br>`<SfDiagramComponent Nodes="@NodeCollection">`
+<br>&nbsp;`<DiagramTemplates>`
+        <br>&nbsp;&nbsp;`<NodeTemplate>`
+            <br>&nbsp;&nbsp;&nbsp;`@{`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`<SfTextBox Placeholder="My text"></SfTextBox>`
+            <br>&nbsp;&nbsp;&nbsp;`}`
+        <br>&nbsp;&nbsp;`</NodeTemplate>`
+    <br>&nbsp;`</DiagramTemplates>`
+<br>`</SfDiagramComponent>`
+        <br>`@code`
+<br>`{`
+    <br>&nbsp;`public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`Node node1 = new Node()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`ID = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape = new Shape() { Type = NodeShapes.HTML }
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`|
+| Sets the SVG shapes of the Node | Not Applicable| **Property:** *Nodes* <br><br>`@using Syncfusion.Blazor.Inputs`<br><br>`<SfDiagramComponent Nodes="@NodeCollection">`
+<br>&nbsp;`<DiagramTemplates>`
+        <br>&nbsp;&nbsp;`<NodeTemplate>`
+            <br>&nbsp;&nbsp;&nbsp;`@{`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`if ((context as Node).Shape.Type == NodeShapes.SVG)`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`{`
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">`
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<g fill="white" stroke="green" stroke-width="5">`
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<circle cx="40" cy="40" r="25" />`
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<circle cx="60" cy="60" r="25" />`
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`</g>`
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`</svg>`
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;`}`
+            <br>&nbsp;&nbsp;&nbsp;`}`
+        <br>&nbsp;&nbsp;`</NodeTemplate>`
+    <br>&nbsp;`</DiagramTemplates>`
+<br>`</SfDiagramComponent>`
+        <br>`@code`
+<br>`{`
+    <br>&nbsp;`public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`Node node1 = new Node()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`ID = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape = new Shape() { Type = NodeShapes.SVG  }
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`|
+| Sets the BPMN shapes of the Node | **Property:** *Nodes* <br><br>`<SfDiagram Nodes="@NodeCollection" />`
+<br>`@code`
+<br>`{`
+    <br>&nbsp;`public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`DiagramNode node1 = new DiagramNode()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Id = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape=new DiagramShape(){Type = Shapes.Bpmn}`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`| **Property:** *Nodes* <br><br>`<SfDiagramComponent Nodes="@NodeCollection" />`<br>`@code`
+<br>`{`
+    <br>&nbsp;`public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`Node node1 = new Node()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`ID = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape = new BpmnActivity() { ActivityType = BpmnActivityType.Task }`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`|
+| Set the Bpmn events | **Property:** *Nodes* <br><br>`<SfDiagram Nodes="@NodeCollection" />`
+<br>`@code`
+<br>`{`
+    <br>&nbsp;`public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`DiagramNode node1 = new DiagramNode()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Id = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape=new DiagramShape(){Type = Shapes.Bpmn, BpmnShape = BpmnShapes.Event, Event = new DiagramBpmnEvent() { Event = BpmnEvents.Start }}`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`| **Property:** *EventType* <br><br>`<SfDiagramComponent Nodes="@NodeCollection" />`<br>`@code`
+<br>`{`
+    <br>&nbsp;`public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`Node node1 = new Node()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`ID = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape = new BpmnEvent() { EventType = BpmnEventType.Start }`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`|
+| Set the Bpmn events trigger | **Property:** *Trigger* <br><br>`<SfDiagram Nodes="@NodeCollection" />`
+<br>`@code`
+<br>`{`
+    <br>&nbsp;`public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`DiagramNode node1 = new DiagramNode()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Id = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape=new DiagramShape()
+            <br>&nbsp;&nbsp;&nbsp;`{`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`Type = Shapes.Bpmn, BpmnShape = BpmnShapes.Event,` 
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`Event = new DiagramBpmnEvent()` 
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`{` 
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Event = BpmnEvents.NonInterruptingIntermediate,`
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Trigger = BpmnTriggers.Message`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`}`
+            <br>&nbsp;&nbsp;&nbsp;`}`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`| **Property:** *Trigger* <br><br>`<SfDiagramComponent Nodes="@NodeCollection" />`<br>`@code`
+<br>`{`
+    <br>&nbsp;`public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`Node node1 = new Node()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`ID = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape = new BpmnEvent()`
+            <br>&nbsp;&nbsp;&nbsp;`{`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`EventType = BpmnEventType.Start,`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`Trigger = BpmnEventTrigger.Message`
+            <br>&nbsp;&nbsp;&nbsp;`}`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`|
+| Set the Bpmn Gateway | **Property:** *Gateway* <br><br>`<SfDiagram Nodes="@NodeCollection" />`
+<br>`@code`
+<br>`{`
+    <br>&nbsp;`public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`DiagramNode node1 = new DiagramNode()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Id = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape=new DiagramShape()
+            <br>&nbsp;&nbsp;&nbsp;`{`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`Type = Shapes.Bpmn, BpmnShape = BpmnShapes.Gateway,
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`Gateway = new DiagramBpmnGateway()` 
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`{` 
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Type = BpmnGateways.None`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`}`
+            <br>&nbsp;&nbsp;&nbsp;`}`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`| **Property:** *GateWay* <br><br>`<SfDiagramComponent Nodes="@NodeCollection" />`<br>`@code`
+<br>`{`
+    <br>&nbsp;`public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`Node node1 = new Node()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`ID = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape = new BpmnGateway()`
+            <br>&nbsp;&nbsp;&nbsp;`{`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`GatewayType = BpmnGatewayType.None`
+            <br>&nbsp;&nbsp;&nbsp;`}`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`|
+| Set the Bpmn DataObject shape | **Property:** *DataObject * <br><br>`<SfDiagram Nodes="@NodeCollection" />`
+<br>`@code`
+<br>`{`
+    <br>&nbsp;`public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`DiagramNode node1 = new DiagramNode()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Id = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape=new DiagramShape()
+            <br>&nbsp;&nbsp;&nbsp;`{`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`Type = Shapes.Bpmn, BpmnShape = BpmnShapes.DataObject,
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`DataObject = new DiagramBpmnDataObject()` 
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`{` 
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Collection = true,`
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Type = BpmnDataObjects.Input`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`}`
+            <br>&nbsp;&nbsp;&nbsp;`}`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`| **Property:** *GateWay* <br><br>`<SfDiagramComponent Nodes="@NodeCollection" />`<br>`@code`
+<br>`{`
+    <br>&nbsp;`public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`Node node1 = new Node()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`ID = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape = new BpmnDataObject()`
+            <br>&nbsp;&nbsp;&nbsp;`{`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`IsCollectiveData = true,`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`DataObjectType = BpmnDataObjectType.None,`
+            <br>&nbsp;&nbsp;&nbsp;`}`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`|
+| Set the Bpmn DataSource shape | **Property:** *DataSource * <br><br>`<SfDiagram Nodes="@NodeCollection" />`
+<br>`@code`
+<br>`{`
+    <br>&nbsp;`public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`DiagramNode node1 = new DiagramNode()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Id = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape=new DiagramShape()
+            <br>&nbsp;&nbsp;&nbsp;`{`
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;`Type = Shapes.Bpmn, BpmnShape = BpmnShapes.DataSource
+            <br>&nbsp;&nbsp;&nbsp;`}`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`| **Property:** *BpmnDataStore* <br><br>`<SfDiagramComponent Nodes="@NodeCollection" />`<br>`@code`
+<br>`{`
+    <br>&nbsp;`public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();`
+    <br>&nbsp;`protected override void OnInitialized()`
+    <br>&nbsp;`{`
+        <br>&nbsp;&nbsp;`Node node1 = new Node()`
+        <br>&nbsp;&nbsp;`{`
+            <br>&nbsp;&nbsp;&nbsp;`Height = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`Width = 100,`
+            <br>&nbsp;&nbsp;&nbsp;`ID = "sdlc",`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetX = 300,`
+            <br>&nbsp;&nbsp;&nbsp;`OffsetY = 288,`
+            <br>&nbsp;&nbsp;&nbsp;`Shape = new BpmnDataStore()`
+        <br>&nbsp;&nbsp;`};`
+        <br>&nbsp;&nbsp;`NodeCollection.Add(node1);`
+    <br>&nbsp;`}`
+<br>`}`|
