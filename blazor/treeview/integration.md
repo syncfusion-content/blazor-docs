@@ -7,7 +7,11 @@ control: TreeView
 documentation: ug
 ---
 
-# Context Menu in Blazor TreeView Component
+# Integration in Blazor TreeView Component
+
+A Context Menu, Badge, Sidebar, Error boundary components, and Icon library can all be integrated into the Blazor TreeView component.
+
+## Context Menu in Blazor TreeView Component
 
 The Blazor TreeView component allows integration of a context menu to perform operations such as adding, removing, and renaming nodes. 
 

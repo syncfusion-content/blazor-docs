@@ -126,6 +126,8 @@ When editing is completed by focus out or by pressing the **Enter** key, the mod
 
 ## CRUD operations
 
+The Blazor TreeView component offers dynamic options for adding, removing, and renaming nodes.
+
 ### CRUD operation using list
 
 The Blazor TreeView component allows for the integration of a context menu to perform CRUD operations, such as adding, removing, and renaming nodes, on the TreeView. 

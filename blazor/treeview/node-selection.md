@@ -7,7 +7,15 @@ control: TreeView
 documentation: ug
 ---
 
-# Select nodes through data binding
+# Node Selection in Blazor TreeView Component
+
+You can select a node in the Blazor TreeView component by clicking on the corresponding nodes. In the TreeView component, the **Selected** field or [SelectedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_SelectedNodes) property is used to perform node selection.
+
+If you use the **Selected** field, you can map it directly in the data source.
+
+In the TreeView component, the [SelectedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_SelectedNodes) property provides two-way binding.
+
+## Select nodes through data binding
 
 The Blazor TreeView component enables the selection of specific nodes during initialization by utilizing the **Selected** field, where setting it to true for a node in the data source will select the corresponding node in the user interface. 
 

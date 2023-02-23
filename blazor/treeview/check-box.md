@@ -7,15 +7,104 @@ control: TreeView
 documentation: ug
 ---
 
-# Check nodes through data binding
+# CheckBox in Blazor TreeView component
 
 The Blazor TreeView component allows to check more than one node in TreeView by enabling the [ShowCheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ShowCheckBox) property. When this property is enabled, checkbox appears before each TreeView node text.
+
+
+## AutoCheck in Blazor TreeView component.
+
+By default, the checkbox state of parent and child nodes are dependent on each other. For independent checked state, achieve it using the [AutoCheck](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AutoCheck) property.
 
 * If not all child nodes are checked, the parent node will display as partially checked (intermediate state).
 * If all child nodes are checked, the parent node will display as fully checked.
 * When a parent node is checked, its child nodes will also display as checked.
 
-By default, the checkbox state of parent and child nodes are dependent on each other. For independent checked state, achieve it using the [AutoCheck](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AutoCheck) property.
+{% highlight cshtml hl_lines="2" %}
+```cshtml
+@using Syncfusion.Blazor.Navigations
+<SfTreeView TValue="MusicAlbum" ShowCheckBox="true" AutoCheck="true">
+    <TreeViewFieldsSettings TValue="MusicAlbum" Id="Id" DataSource="@Albums" Text="Name" ParentID="ParentId" HasChildren="HasChild" Expanded="Expanded" IsChecked="IsChecked"></TreeViewFieldsSettings>
+</SfTreeView>
+
+@code{
+    public class MusicAlbum
+    {
+        public int Id { get; set; }
+        public int? ParentId { get; set; }
+        public string Name { get; set; }
+        public bool Expanded { get; set; }
+        public bool? IsChecked { get; set; }
+        public bool HasChild { get; set; }
+    }
+    List<MusicAlbum> Albums = new List<MusicAlbum>();
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Albums.Add(new MusicAlbum
+        {
+            Id = 1,
+            Name = "Discover Music",
+            HasChild = true,
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 2,
+            ParentId = 1,
+            Name = "Hot Singles"
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 3,
+            ParentId = 1,
+            Name = "Rising Artists"
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 4,
+            ParentId = 1,
+            Name = "Live Music"
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 14,
+            HasChild = true,
+            Name = "MP3 Albums",
+            Expanded = true,
+            IsChecked = true
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 15,
+            ParentId = 14,
+            Name = "Rock"
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 16,
+            Name = "Gospel",
+            ParentId = 14,
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 17,
+            ParentId = 14,
+            Name = "Latin Music"
+        });
+        Albums.Add(new MusicAlbum
+        {
+            Id = 18,
+            ParentId = 14,
+            Name = "Jazz"
+        });
+    }
+}
+```
+{% endhighlight %}
+
+![Blazor TreeView with CheckBox](./images/blazor-treeview-checkbox.png)
+
+## Check nodes through data binding
 
 You can check a specific node by setting the **IsChecked** field to true for the corresponding node in the data source, which specifies the field for the checked state of the TreeView node.
 
@@ -98,8 +187,6 @@ You can check a specific node by setting the **IsChecked** field to true for the
     }
 }
 ```
-
-![Blazor TreeView with CheckBox](./images/blazor-treeview-checkbox.png)
 
 ## Check nodes through API
 
@@ -189,7 +276,7 @@ The Blazor TreeView component enables the ability to check specific nodes upon i
 }
 ```
 
-## Check and uncheck all nodes
+## Check and Uncheck all nodes
 
 The Blazor TreeView component offers the ability to check all unchecked nodes within the component by utilizing the [CheckAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CheckAllAsync_System_String___) method. Additionally, specific nodes can be selected by passing in an array of unchecked nodes. The [UncheckAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_UncheckAllAsync_System_String___) method also exists to uncheck all previously checked nodes within the component, and specific nodes can be deselected by passing in an array of checked nodes. 
 
@@ -446,7 +533,7 @@ The Blazor TreeView component provides the capability to pre-select specific nod
 
 ```
 
-## Single selection with checkbox
+## Single selection with CheckBox
 
 The Blazor TreeView component allows for single selection of nodes with checkboxes by utilizing the [UncheckAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_UncheckAllAsync_System_String___) method during the [NodeChecking](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeChecking) event to uncheck previously checked nodes.
 
@@ -543,7 +630,7 @@ The Blazor TreeView component allows for single selection of nodes with checkbox
 
 ```
 
-## Hide checkbox for parent nodes
+## Hide CheckBox for parent nodes
 
 The Blazor TreeView component allows for the rendering of checkboxes before each node by enabling the [ShowCheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ShowCheckBox) property. However, if the application requires checkboxes to only be rendered for child nodes, the checkbox for the parent node can be removed by customizing the CSS.
 
