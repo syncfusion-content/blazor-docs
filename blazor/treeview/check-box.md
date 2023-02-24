@@ -200,7 +200,7 @@ The example demonstrates the usage of these methods within the context of a butt
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="CheckAll">TreeView CheckAll</SfButton>
-<SfButton OnClick="UnCheckAll">TreeView UnCheckAll</SfButton>
+<SfButton OnClick="UncheckAll">TreeView UncheckAll</SfButton>
 <SfTreeView TValue="MusicAlbum" @ref="treeview" ShowCheckBox="true" AutoCheck="true">
     <TreeViewFieldsSettings TValue="MusicAlbum" Id="Id" DataSource="@Albums" Text="Name" ParentID="ParentId" HasChildren="HasChild" Expanded="Expanded" IsChecked="IsChecked"></TreeViewFieldsSettings>
 </SfTreeView>
@@ -283,7 +283,7 @@ The example demonstrates the usage of these methods within the context of a butt
         // To check the particular node in the TreeView
         // this.treeview.CheckAllAsync(new string[]{"1"});
     }
-    public void UnCheckAll()
+    public void UncheckAll()
     {
         // To uncheck all the nodes in the TreeView
         this.treeview.UncheckAllAsync();
