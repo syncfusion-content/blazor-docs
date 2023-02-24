@@ -13,7 +13,7 @@ The Blazor Media Query breakpoints are used to create responsive, adaptable layo
 
 ## Built-in breakpoints
 
-You can customize the appearance of the applications based on screen size and device orientation by using the built-in breakpoints. The [ActiveBreakpoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfMediaQuery.html#Syncfusion_Blazor_SfMediaQuery_ActiveBreakpoint) gives the breakpoint that is currently matching the media query.
+You can customize the appearance of the applications based on screen size by using the built-in breakpoints. The [ActiveBreakpoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfMediaQuery.html#Syncfusion_Blazor_SfMediaQuery_ActiveBreakpoint) gives the breakpoint that is currently matching the media query.
 
 The built-in breakpoint values of Media Query component are as follows:
 
@@ -23,7 +23,7 @@ The built-in breakpoint values of Media Query component are as follows:
 
 ### Modifying built-in breakpoints
 
-You can modify the query for built-in breakpoints by using the [MediaQuery](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MediaBreakpoint.html#Syncfusion_Blazor_MediaBreakpoint_MediaQuery) property of the [MediaBreakpoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MediaBreakpoint.html) class to customize the appearance of the web application depending on your needs.
+You can modify the query for built-in breakpoints by using the [MediaQuery](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MediaBreakpoint.html#Syncfusion_Blazor_MediaBreakpoint_MediaQuery) property of the [MediaBreakpoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MediaBreakpoint.html) in `SfMediaQuery` to customize the appearance of the web application depending on your needs.
 
 ```cshtml
 
@@ -50,7 +50,7 @@ You can modify the query for built-in breakpoints by using the [MediaQuery](http
 
 ## Custom media breakpoints
 
-The Blazor Media Query component allows you to define custom media breakpoints by using the [Breakpoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MediaBreakpoint.html#Syncfusion_Blazor_MediaBreakpoint_Breakpoint) and `MediaQuery` properties of the `MediaBreakpoint` class to customize the appearance of the web application depending on your unique needs.
+The Blazor Media Query component allows you to define custom media breakpoints by using the [MediaBreakpoints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfMediaQuery.html#Syncfusion_Blazor_SfMediaQuery_MediaBreakpoints) property of the Media Query to customize the appearance of the web application depending on your unique needs.
 
 ```cshtml
 
