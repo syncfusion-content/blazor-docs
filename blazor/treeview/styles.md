@@ -89,12 +89,11 @@ In the Blazor TreeView component, by default, there is no height property, and i
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 <div class="tree">
-<SfTreeView TValue="MusicAlbum" ShowCheckBox="true" AutoCheck="true" @ref="tree" >
+<SfTreeView TValue="MusicAlbum" ShowCheckBox="true" AutoCheck="true">
     <TreeViewFieldsSettings TValue="MusicAlbum" Id="Id" DataSource="@Albums" Text="Name" ParentID="ParentId" HasChildren="HasChild" Expanded="Expanded" IsChecked="IsChecked"></TreeViewFieldsSettings>
 </SfTreeView>
 </div>
 @code{
-    SfTreeView<MusicAlbum> tree;
     public class MusicAlbum
     {
         public int Id { get; set; }
@@ -103,14 +102,6 @@ In the Blazor TreeView component, by default, there is no height property, and i
         public bool Expanded { get; set; }
         public bool? IsChecked { get; set; }
         public bool HasChild { get; set; }
-    }
-    public void NodeChecking(NodeCheckEventArgs args)
-    {
-        if(args.Action=="check" && args.IsInteracted)
-        {
-            tree.UncheckAllAsync();
-        }
-
     }
     List<MusicAlbum> Albums = new List<MusicAlbum>();
     protected override void OnInitialized()
@@ -222,4 +213,77 @@ In the Blazor TreeView component, by default, there is no height property, and i
         border-radius:50% !important;
    }
 </style>
+```
+
+## Customizing the TreeView using HtmlAttributes
+
+The [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_HtmlAttributes) property in the Blazor TreeView component allows for easy mapping and application of HTML attributes to the TreeView component.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<SfTreeView TValue="MailItem" HtmlAttributes="@HtmlAttribute">
+    <TreeViewFieldsSettings TValue="MailItem" Id="Id" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
+</SfTreeView>
+
+@code {
+    // Specify the value of TreeView component HTMLAttribute property.
+    Dictionary<string, object> HtmlAttribute = new Dictionary<string, object>()
+    {
+        { "class", "treeview" }
+    };
+    public class MailItem
+    {
+        public string Id { get; set; }
+        public string ParentId { get; set; }
+        public string FolderName { get; set; }
+        public bool Expanded { get; set; }
+        public bool HasSubFolders { get; set; }
+    }
+    List<MailItem> MyFolder = new List<MailItem>();
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        MyFolder.Add(new MailItem
+            {
+                Id = "1",
+                FolderName = "Inbox",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                Id = "2",
+                ParentId = "1",
+                FolderName = "Categories",
+                Expanded = true,
+                HasSubFolders = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                Id = "3",
+                ParentId = "2",
+                FolderName = "Primary"
+            });
+        MyFolder.Add(new MailItem
+            {
+                Id = "4",
+                ParentId = "2",
+                FolderName = "Social"
+            });
+        MyFolder.Add(new MailItem
+            {
+                Id = "5",
+                ParentId = "2",
+                FolderName = "Promotions"
+            });
+    }
+}
+<style>
+    .treeview {
+        border: 1px solid black;
+        height: 250px;
+    }
+</style>
+
 ```

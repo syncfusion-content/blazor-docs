@@ -109,26 +109,6 @@ In the following sample, when the data fetch request fails, the DropDownList dis
 
 ![Blazor DropDownList with Action Failure Template](./images/template/blazor-dropdownlist-action-failure-template.png)
 
-## Properties
-
-### FooterTemplate  
-
-The DropDownList has options to show a footer element at the bottom of the list items in the popup list. Here, you can place any custom element as a footer element using the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FooterTemplate) property.
-
-[Click to refer the code for footer templates](https://blazor.syncfusion.com/documentation/dropdown-list/templates#footer-template)
-
-### HeaderTemplate
-
-The header element is shown statically at the top of the popup list items within DropDownList, and any custom element can be placed as a header element using the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_HeaderTemplate) property.
-
-[Click to refer the code for header templates](https://blazor.syncfusion.com/documentation/dropdown-list/templates#header-template)
-
-## ValueTemplate
-
-The currently selected value that is displayed by default on the DropDownList input element can be customized using the [ValueTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ValueTemplate) property.
-
-[Click to refer the code for value templates](https://blazor.syncfusion.com/documentation/dropdown-list/templates#value-template)
-
 ## See Also
 
 * [Select a value in Blazor DropDownList during bUnit test](https://www.syncfusion.com/forums/172141/how-can-i-select-a-value-in-an-sfdropdown-during-a-bunit-test)
