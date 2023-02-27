@@ -288,15 +288,6 @@ In the following example, Listview is grouped based on the category. The categor
     .e-listview.e-control {
         width: 400px;
     }
-
-    #List .e-list-group-item {
-        height: 56px;
-        line-height: 56px;
-    }
-
-    #List .count {
-        float: right;
-    }
 </style>
 
 ```
