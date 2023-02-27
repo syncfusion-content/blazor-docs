@@ -249,7 +249,7 @@ In the following example, Listview is grouped based on the category. The categor
         </Template>
         <GroupTemplate>
             <div>
-                <span class="category">Type: @context.Text</span>
+                <span>Type: @context.Text</span>
             </div>
         </GroupTemplate>
     </ListViewTemplates>
