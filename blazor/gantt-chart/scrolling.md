@@ -600,7 +600,4 @@ You can change the color of the default frozen line in the Gantt Chart by custom
 
 - The `IsFrozen` property cannot be changed dynamically. Once the column is frozen, it remains frozen until the chart is reloaded.
 
-- The Gantt Chart does not support Right-to-Left (RTL) mode when using frozen columns
-
-
-
+- The Gantt Chart does not support Right-to-Left (RTL) mode when using frozen columns.
