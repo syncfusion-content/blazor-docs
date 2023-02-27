@@ -7,7 +7,11 @@ control: TreeView
 documentation: ug
 ---
 
-# Context Menu in Blazor TreeView Component
+# Integration in Blazor TreeView Component
+
+A Context Menu, Badge, Sidebar, Error boundary components, and Icon library can all be integrated into the Blazor TreeView component.
+
+## Context Menu in Blazor TreeView Component
 
 The Blazor TreeView component allows integration of a context menu to perform operations such as adding, removing, and renaming nodes. 
 
@@ -246,6 +250,8 @@ This is demonstrated in an example where the TreeView operations are manipulated
 
 ```
 
+![Context Menu in Blazor TreeView Component](./images/blazor-treeview-node-with-context-menu.png)
+
 ## Badge
 
 The Blazor TreeView component can integrate with the Badge component and allows for customizing the node structure using the `NodeTemplate` tag, which allows for creating a tree node with any custom structure, such as a web mail folder with a name and unread message count using the Badge component.
@@ -443,6 +449,8 @@ The Blazor TreeView component can integrate with the Badge component and allows 
 
 ```
 
+![Badge integration in Blazor TreeView](./images/blazor-treeview-badge-integration.png)
+
 ## Icons Library
 
 The Blazor TreeView component has the built-in option to customize each node's appearance with Icons by mapping the **IconCss** fields.
@@ -603,6 +611,8 @@ The Blazor TreeView component has the built-in option to customize each node's a
 </style>
 
 ```
+
+![Icons integration in Blazor TreeView](./images/blazor-treeview-Icon-integration.png)
 
 ## Navigation within Sidebar
 
@@ -852,6 +862,8 @@ In this example, TreeView's `NavigateUrl` is mapped to move one page to another 
 </style>
 
 ```
+
+![Navigation within Sidebar](./images/blazor-treeview-navigation-within-sidebar.png)
 
 ## Blazor Error Boundary
 
