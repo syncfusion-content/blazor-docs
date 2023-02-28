@@ -282,3 +282,5 @@ The Blazor TreeView component allows for searching and filtering of TreeView nod
 </style>
 
 ```
+
+![Searching and Filtering in Blazor TreeView Component](./images/blazor-treeview-searching-and-filtering.png)
