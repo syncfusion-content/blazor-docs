@@ -48,6 +48,50 @@ The [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Colu
 }
 ```
 
+### Set isPrimaryKey for auto generated columns when editing is enabled
+
+By default, the primary key can be defined explicitly in the GridColumn declaration. However, if no column declaration is provided when initializing the datagrid, columns will be automatically generated. In this case, the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_IsPrimaryKey) property can be defined for specfic auto generated column using the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event of the Grid.
+
+The `IsPrimaryKey` property is defined for the OrderID column in the following sample:
+
+```cshtml
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid  @ref="Grid" DataSource="@Orders" Height="315" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })">
+       <GridEvents DataBound="DataBoundHandler" TValue="Order"></GridEvents>
+     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+    private SfGrid<Order> Grid;
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+
+    public void DataBoundHandler()
+    {
+       Grid.Columns[0].IsPrimaryKey = true;
+    }
+}
+```
+
 ## Dynamic column building
 
 It is possible to dynamically build and customize each of the DataGrid column using the type of the model.
