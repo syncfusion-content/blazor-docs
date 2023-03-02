@@ -7,7 +7,15 @@ control: TreeView
 documentation: ug
 ---
 
-# Expand nodes through data binding
+# Expand/Collapse Actions in Blazor TreeView Component
+
+By clicking on the respective arrow icons, you can expand or collapse the parent TreeView nodes in the Blazor TreeView component. The **Expanded** field or [ExpandedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ExpandedNodes) property can be used to perform expand action in the TreeView component.
+
+If you use the **Expanded** field, you can map it directly in the data source.
+
+In the TreeView component, the [ExpandedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ExpandedNodes) property provides two-way binding.
+
+## Expand nodes through data binding
 
 The Blazor TreeView component allows for specific nodes to be expanded upon initialization by using the **Expanded** field. Setting the Expanded field to true for a parent node in the data source will expand that particular parent node in the user interface. 
 
@@ -91,6 +99,8 @@ The Blazor TreeView component allows for specific nodes to be expanded upon init
 }
 
 ```
+
+![Expand nodes through data binding](./images/blazor-treeview-get-checked-nodes.png)
 
 ## Expand nodes through API
 
@@ -328,6 +338,7 @@ The Blazor TreeView component allows the expansion of specific nodes during init
         }
 </style>
 ```
+![Get expanded nodes](./images/blazor-treeview-get-expanded-nodes.png)
 
 ## Expand or collapse a node programmatically
 
