@@ -357,6 +357,7 @@ In the demo, the value of [FrozenColumns](https://help.syncfusion.com/cr/blazor/
     }
 }
 ```
+![Blazor Gantt Chart with Frozen Column](./images/blazor_Gantt_chart_frozen_columns.gif)
 
 ### Freeze particular column
 
@@ -414,6 +415,8 @@ In this demo, the columns with the field names `TaskID` and `TaskName` are froze
     }
 }
 ```
+
+![Blazor Gantt Chart with Frozen Columns](./images/blazor_Gantt_chart_particular_column_frozen.gif)
 
 ### Freeze direction
 
@@ -476,6 +479,7 @@ In this demo, the `TaskId` column is frozen on the left, while the `TaskName` co
     }
 }
 ```
+![Freeze direction in Blazor Gantt chart](./images/blazor_Gantt_chart_freeze_direction.gif)
 
 ### Add or remove frozen columns by dragging the column separator
 
@@ -531,6 +535,8 @@ You can add or remove frozen columns in the Gantt Chart by dragging and dropping
     }
 }
 ```
+
+![Moving Freeze line in Blazor Gantt chart ](./images/blazor_Gantt_chart_freeze_line_moving.gif)
 
 > If no columns are specified as frozen, the frozen column separator will be displayed at the left and right ends of the Gantt Chart. You can dynamically change the frozen columns by dragging the column separator to the desired position.
 
@@ -594,6 +600,8 @@ You can change the color of the default frozen line in the Gantt Chart by custom
     }
 }
 ```
+![Changing freeze line color inBlazor Gantt Chart](./images/blazor_Gantt_chart_freeze_line_color.gif)
+
 ### Limitations
 
 - The `Freeze` and `FrozenColumns` properties cannot be used together as they are incompatible.
