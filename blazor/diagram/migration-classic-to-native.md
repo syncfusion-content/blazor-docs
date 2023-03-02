@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migration from SfDiagram(classic) to SfDiagramComponent in Blazor Diagram Component | Syncfusion
+title: Migration from SfDiagram(classic) in Blazor SfDiagramComponent | Syncfusion
 description: Learn here all about how to migrate the SfDiagram to SfDiagramComponent in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
