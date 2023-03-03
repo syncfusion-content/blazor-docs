@@ -9,7 +9,12 @@ documentation: ug
 
 # Getting Started with Blazor Mention Component
 
-This section briefly explains about how to include `Blazor Mention` component in your Blazor Server App and Blazor WebAssembly App using Visual Studio. 
+This section briefly explains about how to include `Blazor Mention` component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+
+To get started quickly with Blazor Mention, check on the following video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=5Jdi2AfZKC8"%}
 
 ## Prerequisites
 
