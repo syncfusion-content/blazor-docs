@@ -52,7 +52,7 @@ When data contains numeric values in both the lower order of magnitude (eg: 10<s
 
 ## Range
 
-The axis range will be calculated automatically based on the provided data; however, the axis range can also be customized using [Minimum](https://help.syncfusion.com/cr/blazor#Syncfusion_Blazor_Charts_ChartCommonAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/blazor#Syncfusion_Blazor_Charts_ChartCommonAxis_Maximum/Syncfusion.Blazor.html) and [Interval](https://help.syncfusion.com/cr/blazor#Syncfusion_Blazor_Charts_ChartCommonAxis_Interval) properties.
+The axis range will be calculated automatically based on the provided data; however, the axis range can also be customized using [Minimum](https://help.syncfusion.com/cr/blazor#Syncfusion_Blazor_Charts_ChartCommonAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/blazor#Syncfusion_Blazor_Charts_ChartCommonAxis_Maximum/Syncfusion.Blazor.html) and [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Interval) properties.
 
 ```cshtml
 
@@ -93,7 +93,7 @@ The axis range will be calculated automatically based on the provided data; howe
 
 ## Logarithmic base
 
-Logarithmic base can be customized using the [LogBase](https://help.syncfusion.com/cr/blazor#Syncfusion_Blazor_Charts_ChartCommonAxis_LogBase/Syncfusion.Blazor.html) property of the axis. When the LogBase is 5, the axis values are 5<sup>-2</sup>, 5<sup>-1</sup>, 5<sup>0</sup>, 5<sup>1</sup>, 5<sup>2</sup> and so on.
+Logarithmic base can be customized using the [LogBase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LogBase) property of the axis. When the LogBase is 5, the axis values are 5<sup>-2</sup>, 5<sup>-1</sup>, 5<sup>0</sup>, 5<sup>1</sup>, 5<sup>2</sup> and so on.
 
 ```cshtml
 
@@ -175,7 +175,7 @@ The interval can be customized using the [Interval](https://help.syncfusion.com/
 
 ## Label format
 
-Using the [LabelFormat](https://help.syncfusion.com/cr/blazor#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelFormat) property on an axis, it is possible to format the logarithmic labels to all globalize formats.
+Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelFormat) property on an axis, it is possible to format the logarithmic labels to all globalize formats.
 
 ```cshtml
 
