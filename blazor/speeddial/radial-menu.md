@@ -20,7 +20,7 @@ You can open the action items in either clockwise or anticlockwise by setting [D
 @using Syncfusion.Blazor.Buttons
 
 <SfSpeedDial Mode="SpeedDialMode.Radial" OpenIconCss="e-icons e-edit">
-    <SpeedDialRadialSettings Direction="RadialDirection.AntiClockwise"/>
+    <SpeedDialRadialSettings Direction="RadialDirection.AntiClockwise" OffSet="80px"/>
     <SpeedDialItems>
         <SpeedDialItem IconCss="e-icons e-cut"/>
         <SpeedDialItem IconCss="e-icons e-copy"/>
@@ -46,7 +46,7 @@ The SpeedDial angle starts with `0` degree in the right side and increases in th
 @using Syncfusion.Blazor.Buttons
 
 <SfSpeedDial Position="FabPosition.MiddleCenter" Mode="SpeedDialMode.Radial" OpenIconCss="e-icons e-edit">
-    <SpeedDialRadialSettings Direction="RadialDirection.AntiClockwise" StartAngle="180" EndAngle="360"/>
+    <SpeedDialRadialSettings Direction="RadialDirection.AntiClockwise" StartAngle="180" EndAngle="360" OffSet="70px"/>
     <SpeedDialItems>
         <SpeedDialItem IconCss="e-icons e-cut"/>
         <SpeedDialItem IconCss="e-icons e-copy"/>
