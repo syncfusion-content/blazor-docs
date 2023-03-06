@@ -311,9 +311,9 @@ RowIndex : <input @bind-value = "@RowIndex" />
 
 ## Frozen Columns
 
-Frozen columns provide an option to make certain columns visible on the left side of the Gantt Chart while scrolling. 
+The frozen columns feature in the Syncfusion Blazor Gantt Chart provides the ability to fix certain columns on the left-hand side of the grid in gantt chart while the user scrolls horizontally. This feature improves the readability and allows for easier navigation.
 
-In the demo, the value of [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_FrozenColumns) is set to 2. Therefore, the left two columns remain fixed and do not move while the user scrolls horizontally.
+To enable frozen columns, use the [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_FrozenColumns) property of the Gantt component. In the example code provided, the FrozenColumns value is set to 2, which means that the first two columns of the grid will remain fixed while the user scrolls horizontally.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -357,13 +357,13 @@ In the demo, the value of [FrozenColumns](https://help.syncfusion.com/cr/blazor/
     }
 }
 ```
-![Blazor Gantt Chart with Frozen Column](./images/blazor_Gantt_chart_frozen_columns.gif)
+![Blazor Gantt Chart with Frozen Column](./images/blazor-Gantt-chart-frozen-columns.gif)
 
 ### Freeze particular column
 
-To freeze a specific column in the Gantt Chart, you can use the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_IsFrozen) property of the Gantt Column component.
+To freeze a specific column in the Gantt Chart, you can use the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_IsFrozen) property of the [GanttColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html) component.
 
-In this demo, the columns with the field names `TaskID` and `TaskName` are frozen by setting the IsFrozen property of the corresponding Gantt Columns to true.
+In the following code snippet, the columns with the field names `TaskID` and `TaskName` are frozen by setting the IsFrozen property of the corresponding GanttColumn to true:
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -416,18 +416,17 @@ In this demo, the columns with the field names `TaskID` and `TaskName` are froze
 }
 ```
 
-![Blazor Gantt Chart with Frozen Columns](./images/blazor_Gantt_chart_particular_column_frozen.gif)
+![Blazor Gantt Chart with Frozen Columns](./images/blazor-Gantt-chart-particular-column-frozen.gif)
 
 ### Freeze direction
 
-You can freeze Gantt columns on the left or right side by using the [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Freeze) property, while the remaining columns remain movable. The Gantt chart will automatically adjust the column positions based on the Freeze value. Additionally, the `IsFrozen` property should be set to true for the frozen columns.
+The [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Freeze) property in the `GanttColumn` allows you to freeze the column either the left or right side of the grid while the remaining columns remain movable. The `IsFrozen` property should be set to true for the frozen columns.
 
-There are two types of Freeze directions:
+The [FreezeDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FreezeDirection.html) property has two values: [FreezeDirection.Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FreezeDirection.html#Syncfusion_Blazor_Grids_FreezeDirection_Left) allows you to freeze columns on the left side, while [FreezeDirection.Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FreezeDirection.html#Syncfusion_Blazor_Grids_FreezeDirection_Right) allows you to freeze columns on the right side.
 
-[FreezeDirection.Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FreezeDirection.html#Syncfusion_Blazor_Grids_FreezeDirection_Left): Allows you to freeze columns on the left side.
-[FreezeDirection.Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FreezeDirection.html#Syncfusion_Blazor_Grids_FreezeDirection_Right): Allows you to freeze columns on the right side.
+To use `FreezeDirection` in the Blazor Gantt chart, you need to set `IsFrozen` property of GanttColumn in addition to the `Freeze` property. In the below code sample , the `TaskId` column is frozen on the left side of the grid, while the `TaskName` column is frozen on the right side.
 
-In this demo, the `TaskId` column is frozen on the left, while the `TaskName` column is frozen on the right side of the content table.
+The following is the sample code for using `FreezeDirection` in the Blazor Gantt chart:
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -479,11 +478,13 @@ In this demo, the `TaskId` column is frozen on the left, while the `TaskName` co
     }
 }
 ```
-![Freeze direction in Blazor Gantt chart](./images/blazor_Gantt_chart_freeze_direction.gif)
+![Freeze direction in Blazor Gantt chart](./images/blazor-Gantt-chart-freeze-direction.gif)
 
 ### Add or remove frozen columns by dragging the column separator
 
-You can add or remove frozen columns in the Gantt Chart by dragging and dropping the column separator. To enable this feature, set the [AllowFreezeLineMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFreezeLineMoving) property to true.
+The Gantt Chart allows users to add or remove frozen columns by dragging and dropping the column separator. The column separator is a draggable line that separates the frozen columns from the non-frozen columns in the Gantt Chart. It is displayed as a vertical line between the columns.
+
+To enable this feature, you need to set the [AllowFreezeLineMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowFreezeLineMoving) property to true. If no columns are specified as frozen, the frozen column separator will be displayed at the left and right ends of the grid in Gantt Chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -536,13 +537,11 @@ You can add or remove frozen columns in the Gantt Chart by dragging and dropping
 }
 ```
 
-![Moving Freeze line in Blazor Gantt chart ](./images/blazor_Gantt_chart_freeze_line_moving.gif)
-
-> If no columns are specified as frozen, the frozen column separator will be displayed at the left and right ends of the Gantt Chart. You can dynamically change the frozen columns by dragging the column separator to the desired position.
+![Moving Freeze line in Blazor Gantt chart ](./images/blazor-Gantt-chart-freeze-line-moving.gif)
 
 ### Change default frozen line color
 
-You can change the color of the default frozen line in the Gantt Chart by customizing the CSS styles. The following demo provides an example of how to change the default frozen line color to blue. You can modify this code to change the color to a different one of your choice.
+The following code example shows how to change the color of the default frozen line in the Gantt Chart by customizing the CSS styles. The following demo provides an example of how to change the default frozen line color to blue.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -600,11 +599,11 @@ You can change the color of the default frozen line in the Gantt Chart by custom
     }
 }
 ```
-![Changing freeze line color inBlazor Gantt Chart](./images/blazor_Gantt_chart_freeze_line_color.gif)
+![Changing freeze line color inBlazor Gantt Chart](./images/blazor-Gantt-chart-freeze-line-color.gif)
 
 ### Limitations
 
-- The `Freeze` and `FrozenColumns` properties cannot be used together as they are incompatible.
+- The [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Freeze) and [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_FrozenColumns) properties cannot be used together as they are incompatible.
 
 - The `IsFrozen` property cannot be changed dynamically. Once the column is frozen, it remains frozen until the chart is reloaded.
 
