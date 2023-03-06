@@ -160,8 +160,50 @@ The [Property Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
     }
 }
 ```
+## OnAutoScrollChange Event
+The OnAutoScrollChange event is triggered when changes are detected to the scroll position, extent, or viewport size as a result of auto scrolling for diagram elements. To explore the arguments, refer to the AutoScrollChangeEventArgs class.
 
+```cshtml
+<SfDiagramComponent Height="600px" Width="600px" Nodes="@nodes" OnAutoScrollChange="AutoScrollChange">
+    @* Sets the ScrollSettings for the diagram *@
+    <ScrollSettings EnableAutoScroll=true AutoScrollPadding="@autoScrollBorder">
+    </ScrollSettings>
+</SfDiagramComponent>
 
+@code
+{
+    DiagramObjectCollection<Node> nodes;
+    DiagramMargin autoScrollBorder = new DiagramMargin() { Left = 30, Right = 30, Top = 30, Bottom = 30 };
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        // A node is created and stored in the nodes collection.
+        Node node = new Node()
+            {
+                ID = "node1",
+                // Position of the node.
+                OffsetX = 250,
+                OffsetY = 250,
+                // Size of the node.
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                    StrokeColor = "white"
+                }
+            };
+        // Add node.
+        nodes.Add(node);
+    }
+    private void AutoScrollChange(AutoScrollChangeEventArgs args)
+    {
+        args.Cancel = false;
+        args.Delay = new TimeSpan(0,0,0,1,0);
+    }
+}
+```
+|![Speed Limit control in autoScroll support for node](images/SpeedLimitControl.gif) | 
 ## MouseEnter Event
 
 The [MouseEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_MouseEnter)  event is triggered when the mouse enters a node or connector. To explore about arguments, refer to the [DiagramElementMouseEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramElementMouseEventArgs.html)
