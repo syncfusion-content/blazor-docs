@@ -232,6 +232,7 @@ In the following sample, selected records will be gotten from the `GetSelectedRe
         public double? Freight { get; set; }
     }
 }
+```
 
 ### Add custom text in header/footer
 

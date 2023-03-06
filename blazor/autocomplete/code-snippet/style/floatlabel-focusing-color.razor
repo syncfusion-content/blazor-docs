@@ -1,0 +1,33 @@
+@using Syncfusion.Blazor.DropDowns;
+@using Syncfusion.Blazor.Inputs;
+
+<SfAutoComplete TValue="string" TItem="Country" Placeholder="e.g. Australia" DataSource="@LocalData" Width="300px" FloatLabelType="FloatLabelType.Auto">
+    <AutoCompleteFieldSettings Value="Name" />
+</SfAutoComplete>
+
+@code {
+
+    public class Country
+    {
+        public string Name { get; set; }
+        public string Code { get; set; }
+    }
+
+    List<Country> LocalData = new List<Country> {
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" }
+    };
+}
+
+<style>
+.e-float-input.e-input-group:not(.e-float-icon-left) .e-float-line::before,.e-float-input.e-control-wrapper.e-input-group:not(.e-float-icon-left) .e-float-line::before,.e-float-input.e-input-group:not(.e-float-icon-left) .e-float-line::after,.e-float-input.e-control-wrapper.e-input-group:not(.e-float-icon-left) .e-float-line::after {
+    background-color: #2319b8;
+}
+
+.e-ddl.e-lib.e-input-group.e-control-wrapper.e-control-container.e-float-input.e-input-focus .e-float-text.e-label-top {
+    color: #2319b8;
+}
+</style>

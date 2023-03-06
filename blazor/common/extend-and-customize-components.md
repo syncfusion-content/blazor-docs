@@ -364,6 +364,5 @@ You can create a simple Blazor component with the `BuildRenderTree` method and g
     ```
 
     N> The advantages of a reusable component are:
-    <br/>
     <br/> 1. Instead of changing values in each component, you can change a property value once and it will be reflected in all the components.
     <br/> 2. Better code optimization against the repeated code.
