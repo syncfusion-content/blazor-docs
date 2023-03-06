@@ -122,21 +122,89 @@ The following code example shows how to customize the critical path taskbar in t
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
-<SfGantt DataSource="@TaskCollection" EnableCriticalPath Toolbar="@(new List<string>() { "Add", "Cancel", "Delete", "Edit","CriticalPath" })" Height="450px" Width="900px">
+<SfGantt DataSource="@TaskCollection" EnableCriticalPath="true" Toolbar="@(new List<string>() { "Add", "Cancel", "Delete", "Edit","CriticalPath" })" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
                      Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true">
     </GanttEditSettings>
+    <GanttTemplates TValue="TaskData">
+        <TaskbarTemplate>
+            @{
+                TasksProgressWdith.TryGetValue((context as TaskData).TaskId, out ProgressWidth);
+            }
+            @if (CriticalTasks.TryGetValue((context as TaskData).TaskId, out IsCritical) && IsCritical)
+            {
+                <div class="e-gantt-child-taskbar-inner-div e-gantt-child-taskbar e-critical" style="height:22px">
+                    <div class="child-critical-progressbar-inner-div e-gantt-child-progressbar" style="@CriticalPorgressStyle()">
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="e-gantt-child-taskbar-inner-div e-gantt-child-taskbar" style="height:22px">
+                    <div class="e-gantt-child-normal-progressbar-inner-div e-gantt-child-progressbar" style="@NormalPorgressStyle()">
+                    </div>
+                </div>
+            }
+        </TaskbarTemplate>
+        <ParentTaskbarTemplate>
+            @{
+                TasksProgressWdith.TryGetValue((context as TaskData).TaskId, out ProgressWidth);
+            }
+            <div class="e-gantt-parent-taskbar-inner-div e-gantt-parent-taskbar" style="height:22px">
+                <div class="e-gantt-parent-local-progressbar-inner-div e-gantt-parent-progressbar" style="@PorgressStyle()">
+
+                </div>
+            </div>
+        </ParentTaskbarTemplate>
+    </GanttTemplates>
+    <GanttEvents QueryChartRowInfo="QueryChartRowInfo" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
-@code{
+@code {
     private List<TaskData> TaskCollection { get; set; }
+    private bool IsCritical;
+    private double ProgressWidth;
+    private IDictionary<int, bool> CriticalTasks = new Dictionary<int, bool>();
+    private IDictionary<int, double> TasksProgressWdith = new Dictionary<int, double>();
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
     }
 
+    public void QueryChartRowInfo(QueryChartRowInfoEventArgs<TaskData> args)
+    {
+        CriticalTasks.Add(args.Data.TaskId, args.GanttTaskModel.IsCritical);
+        TasksProgressWdith.Add(args.Data.TaskId, args.GanttTaskModel.ProgressWidth);
+    }
+    private string PorgressStyle()
+    {
+        string width = "solid;";
+        string style = "border-style:" + width +
+                    "width:" + ProgressWidth + "px;height:100%;" +
+                    "border-top-left-radius:0px;" +
+                    "border-bottom-left-radius:0px;";
+        return style;
+    }
+    private string CriticalPorgressStyle()
+    {
+        string width = "solid;";
+        string style = "border-style:" + width +
+                    "width:" + ProgressWidth + "px;height:100%;" +
+                    "border-top-left-radius:0px;" +
+                    "border-bottom-left-radius:0px;";
+        return style;
+    }
+    private string NormalPorgressStyle()
+    {
+        string width = "solid;";
+        string style = "border-style:" + width +
+                    "width:" + ProgressWidth + "px;height:100%;" +
+                    "border-top-left-radius:0px;" +
+                    "border-bottom-left-radius:0px;";
+        return style;
+    }
     public class TaskData
     {
         public int TaskId { get; set; }
@@ -146,6 +214,7 @@ The following code example shows how to customize the critical path taskbar in t
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
+        
     }
 
     private static List<TaskData> GetTaskCollection()
@@ -164,6 +233,28 @@ The following code example shows how to customize the critical path taskbar in t
         return Tasks;
     }
 }
+<style>
+    .e-critical {
+        background-color: #06DFF9 !Important;
+        border: 1px solid #f3d8da !Important;
+        outline: 1px solid #06DFF9 !Important;
+    }
+
+    .e-gantt-parent-local-progressbar-inner-div {
+        background-color: #d2d0ce;
+        border: 0px;
+    }
+
+    .child-critical-progressbar-inner-div {
+        background-color: #87CEEB;
+        border: 0px;
+    }
+
+    .e-gantt-child-normal-progressbar-inner-div {
+        background-color: #0d6efd;
+        border: 0px;
+    }
+</style>
 ```
 ## Limitation for critical path
 
