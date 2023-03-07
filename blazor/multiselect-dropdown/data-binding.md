@@ -44,15 +44,9 @@ Data binding can be achieved by using the `bind-Value` attribute and its support
 }
 ```
 
-## Properties
+## Customizing the Change Event
 
-### EnableChangeOnBlur
-
-By default, the MultiSelect component fires the Change event while focus out the component.
-
-If you want to fires the Change event on every value selection and remove, then disable the [EnabledChangeOnBlur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_EnableChangeOnBlur) property.
-
-Default value of `EnableChangeOnBlur` is `true`.
+MultiSelect component by default fires the `Change event` when the component loses focus. However, if you want the Change event to be fired every time a value is selected or removed, you can disable the [EnabledChangeOnBlur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_EnableChangeOnBlur) property. This will make the Change event to be fired on every value selection and removal instead of just when the component loses focus. Default value of `EnableChangeOnBlur` is `true`.
 
 {% highlight Razor %}
 
@@ -60,73 +54,9 @@ Default value of `EnableChangeOnBlur` is `true`.
 
 {% endhighlight %} 
 
-### ID
+## Get Data by value
 
-Specifies the [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_ID) of the MultiSelect component.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/data-binding/id-property.razor %}
-
-{% endhighlight %}
-
-### MaximumSelectionLength
-
-Sets limitation to the value selection.
-
-Based on the limitation, list selection will be prevented
-
-Default value of [MaximumSelectionLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_MaximumSelectionLength) is `1000`.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/data-binding/maximumSelectionLength-property.razor %}
-
-{% endhighlight %}
-
-![Blazor MultiSelect DropDown with MaximumSelectionLength property](./images/data-binding/blazor_multiselect_maximumSelectionLength-property.png)
-
-### Text
-
-Selects the list item which maps the data [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Text) field in the component.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/data-binding/text-property.razor %}
-
-{% endhighlight %}
-
-![Blazor MultiSelect DropDown with Text property](./images/data-binding/blazor_multiselect_text-property.png)
-
-### Value
-
-Selects the list item which maps the data [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Value) field in the component.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/data-binding/value-property.razor %}
-
-{% endhighlight %}
-
-![Blazor MultiSelect DropDown with Value property](./images/data-binding/blazor_multiselect_value-property.png)
- 
-### ValueExpression
-
-Specifies the expression for defining the value of the bound.
-
-[Click to refer the code for ValueExpression](https://blazor.syncfusion.com/documentation/multiselect-dropdown/how-to/tooltip)
-
-### GetDataByValueAsync(TValue)
-
-Gets the array of data Object that matches the given array of values.
-
-#### Declaration
-
-> public Task<List<TItem>> GetDataByValueAsync(TValue dataValue)
-
-#### Parameters
-
-* dataValue	- Specifies the value(s).
+You can retrieve the selected value from the dropdown list by using the `GetDataByValue(TValue)` method through an instance of the dropdown list. You can bind the click event of a button to the `GetDataByValue(TValue)` method of the dropdown list instance. When the button is clicked, it will trigger the `GetDataByValue(TValue)` method on the dropdown list and return the selected value.
 
 {% highlight Razor %}
 
@@ -134,19 +64,13 @@ Gets the array of data Object that matches the given array of values.
 
 {% endhighlight %}
 
-### GetItemsAsync()
+## Get List Item
 
-Gets all the list items bound on this component.
-
-#### Declaration
-
-> public Task<IEnumerable<TItem>> GetItemsAsync()
+You can retrieve the list items from the dropdown list by using the `GetItemsAsync()` method through an instance of the dropdown list. You can bind the click event of a button to the `GetItemsAsync()` method of the dropdown list instance. When the button is clicked, it will trigger the `GetItemsAsync()` method on the dropdown list and return the list items
 
 {% highlight Razor %}
 
 {% include_relative code-snippet/data-binding/getItemsAsync-method.razor %}
 
-{% endhighlight %}
-
-
+{% endhighlight %} 
 

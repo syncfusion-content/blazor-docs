@@ -85,7 +85,7 @@ public class TreeData
 
 The editing can be disabled for a particular column, by specifying [TreeGridColumn.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~AllowEditing.html) to **false**.
 
-> To perform the editing operation in the Blazor Tree Grid, it is recommended to mention the respective model class type (List<TreeData.BusinessObject>), in the Tree Grid's dataSource property value.
+N> To perform the editing operation in the Blazor Tree Grid, it is recommended to mention the respective model class type (List<TreeData.BusinessObject>), in the Tree Grid's dataSource property value.
 
 ```csharp
 
@@ -453,7 +453,7 @@ public class TreeData
 
 ![Displaying Delete Confirmation Dialog in Blazor TreeGrid](../images/blazor-treegrid-delete-confirmation.png)
 
-> The **ShowDeleteConfirmDialog** supports all type of edit modes.
+N> The **ShowDeleteConfirmDialog** supports all type of edit modes.
 
 ## Troubleshoot: Editing works only for first row
 

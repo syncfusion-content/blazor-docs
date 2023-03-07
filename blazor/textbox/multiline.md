@@ -15,7 +15,7 @@ This feature allows the textbox to accept one or more lines of text like address
 
 The default textbox can be converted into the multiline textbox by setting the [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Multiline) API value as true or pass HTML5 textarea as element to the textbox.
 
-> The multiline text box allows to resize it in vertical direction alone.
+N> The multiline text box allows to resize it in vertical direction alone.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+N> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
 
 # Constraints in Blazor Diagram Component
 
@@ -87,13 +87,13 @@ Diagram.Constraints = DiagramConstraints.Default | DiagramConstraints.Virtualiza
 
 For more information about diagram constraints, refer to the [DiagramConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConstraints.html).
 
-> By default, the following constraints are enabled in the diagram,
->* UndoRedo
->* UserInteraction
->* ApiUpdate
->* PageEditable
->* Zoom
->* Pan
+N> By default, the following constraints are enabled in the diagram,
+<br/>* UndoRedo
+<br/>* UserInteraction
+<br/>* ApiUpdate
+<br/>* PageEditable
+<br/>* Zoom
+<br/>* Pan
 
 The diagram constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](#bitwise-operations) in the diagram.
 
@@ -184,18 +184,18 @@ node.Constraints = NodeConstraints.Default | NodeConstraints.Tooltip;
 
 For more information about node constraints, refer to the [NodeConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeConstraints.html).
 
->**Note** : By default, the following constraints are enabled for the node,
->* Select
->* Drag
->* Resize
->* Rotate
->* Delete
->* InConnect
->* OutConnect
->* Expandable
->* InheritTooltip
+N> By default, the following constraints are enabled for the node,
+<br/>* Select
+<br/>* Drag
+<br/>* Resize
+<br/>* Rotate
+<br/>* Delete
+<br/>* InConnect
+<br/>* OutConnect
+<br/>* Expandable
+<br/>* InheritTooltip
 
-> The node constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](#bitwise-operations).
+N> The node constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](#bitwise-operations).
 
 ## Connector constraints
 
@@ -271,17 +271,17 @@ connector.Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tool
 
 For more information about connector constraints, refer to the [ConnectorConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.ConnectorConstraints.html).
 
->By default, the following constraints are enabled for the connector,
->* Select
->* Drag
->* DragSourceEnd
->* DragTargetEnd
->* Delete
->* BridgeObstacle
->* InheritBridging
->* PointerEvents
->* InheritTooltip
->* InheritLineRouting
+N>By default, the following constraints are enabled for the connector,
+<br/>* Select
+<br/>* Drag
+<br/>* DragSourceEnd
+<br/>* DragTargetEnd
+<br/>* Delete
+<br/>* BridgeObstacle
+<br/>* InheritBridging
+<br/>* PointerEvents
+<br/>* InheritTooltip
+<br/>* InheritLineRouting
 
 **Note** : The connector constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](#bitwise-operations).
 
@@ -354,9 +354,9 @@ port.Constraints = PortConstraints.InConnect;
 
 For more information about port constraints, refer to the [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortConstraints.html).
 
-> By default, the following constraints are enabled for the port,
->* InConnect
->* OutConnect
+N> By default, the following constraints are enabled for the port,
+<br/>* InConnect
+<br/>* OutConnect
 
 **Note** : The port constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](#bitwise-operations).
 
@@ -428,7 +428,7 @@ annotation.Constraints = AnnotationConstraints.Select | AnnotationConstraints.Dr
 
 For more details about annotation constraints, refer to the [AnnotationConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AnnotationConstraints.html).
 
-> The annotation constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](#bitwise-operations).
+N> The annotation constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](#bitwise-operations).
 
 ## Selector constraints
 
@@ -499,11 +499,11 @@ selectedItems.Constraints = SelectorConstraints.All | SelectorConstraints.UserHa
 
 For more information about selector constraints, refer to the [SelectorConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SelectorConstraints.html).
 
-> By default, the following constraints are enabled for the selected items,
->* ResizeAll
->* UserHandle
->* Rotate
->* ToolTip
+N> By default, the following constraints are enabled for the selected items,
+<br/>* ResizeAll
+<br/>* UserHandle
+<br/>* Rotate
+<br/>* ToolTip
 
 **Note** : The port constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](#bitwise-operations).
 
@@ -562,9 +562,9 @@ The following code shows how to show only horizontal gridlines.
 
 For more information about snap constraints, refer to the [SnapConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SnapConstraints.html).
 
-> By default, the following constraints are enabled for the snap functionality in the diagram,
->* ShowLines
->* SnapToLines
+N> By default, the following constraints are enabled for the snap functionality in the diagram,
+<br/>* ShowLines
+<br/>* SnapToLines
 
 **Note** : The snap constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](#bitwise-operations).
 
@@ -617,8 +617,8 @@ The following code shows how to limit the interaction done inside a diagram with
 
 For more information about selector constraints, refer to the [BoundaryConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.BoundaryConstraints.html).
 
-> By default, the following boundary constraints are enabled for the snap functionality in the diagram,
->* Diagram
+N> By default, the following boundary constraints are enabled for the snap functionality in the diagram,
+<br/>* Diagram
 
 **Note** : The boundary constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](#bitwise-operations).
 

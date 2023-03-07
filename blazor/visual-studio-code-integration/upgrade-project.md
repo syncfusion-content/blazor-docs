@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion Blazor Migration is an add-in for Visual Studio Code allows you to migrate an existing Syncfusion Blazor Web Application from one Essential Studio version to another.
 
-   > The Syncfusion Blazor Web Application Project Migration utility is available from `v17.4.0.39`.
+   N> The Syncfusion Blazor Web Application Project Migration utility is available from `v17.4.0.39`.
 
 The steps below assist you to migrating existing Syncfusion Blazor Web Application.
 
@@ -21,7 +21,7 @@ The steps below assist you to migrating existing Syncfusion Blazor Web Applicati
 
     ![Migration add-in](images/Migration.PNG)
 
-    >  If you have a Syncfusion Blazor reference in your application, the Migration option will be enabled.
+    N>  If you have a Syncfusion Blazor reference in your application, the Migration option will be enabled.
 
 3. **Select Blazor Version** (which published in `nuget.org`) from the palette appears.
 

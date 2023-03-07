@@ -42,7 +42,7 @@ The steps below show how to install the Essential Studio Blazor Mac installer.
 
    ![License Agreements Confirmation](images/Mac_installer_3.PNG)
 
-   > **Note** <br /> The Unlock key is not required to install the Essential Studio Blazor Mac installer.
+   N> The Unlock key is not required to install the Essential Studio Blazor Mac installer.
 
 4. The Destination select wizard will appear. You can choose which disc to install the Syncfusion Essential Studio for Blazor installer on here.
 

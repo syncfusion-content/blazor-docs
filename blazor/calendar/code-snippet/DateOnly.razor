@@ -1,0 +1,10 @@
+﻿@using Syncfusion.Blazor.Calendars
+
+<p>Date : @Value</p>
+    
+<SfCalendar TValue="DateOnly" @bind-Value="@Value"></SfCalendar>
+
+@code
+{
+    public DateOnly Value { get; set; } = new DateOnly(2022, 11, 12);
+}

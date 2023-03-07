@@ -27,7 +27,7 @@ The following example code illustrates how to hide the properties pane.
 </SfDocumentEditorContainer>
 ```
 
->Note: Positioning and customizing the properties pane in Document editor container is not possible. Instead, you can hide the exiting properties pane and create your own pane using public API's.
+N> Positioning and customizing the properties pane in Document editor container is not possible. Instead, you can hide the exiting properties pane and create your own pane using public API's.
 
 ## Hide the toolbar
 
@@ -39,7 +39,6 @@ The following example code illustrates how to hide the existing toolbar.
 @using Syncfusion.Blazor.DocumentEditor
 
 <SfDocumentEditorContainer @ref="container" EnableToolbar=false ShowPropertiesPane="false">
-    
 </SfDocumentEditorContainer>
 ```
 
