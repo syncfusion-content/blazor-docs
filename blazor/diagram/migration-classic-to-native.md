@@ -19,9 +19,16 @@ This article describes the API migration process of SfDiagramComponent from SfDi
 
 ## Namespace changes
 
-| Namespace for SfDiagram | Namespace for SfDiagramComponent |
-| -------- | -------- |
-| Syncfusion.Blazor.Diagrams | Syncfusion.Blazor.Diagram |
+| Control | Namespace for SfDiagram | Namespace for SfDiagramComponent |
+| -------- | -------- | -------- |
+| Diagram | Syncfusion.Blazor.Diagrams | Syncfusion.Blazor.Diagram |
+| SymbolPalette | Syncfusion.Blazor.Diagrams | Syncfusion.Blazor.Diagram.SymbolPalette |
+| Overview | Syncfusion.Blazor.Diagrams | Syncfusion.Blazor.Diagram.Overview |
+
+## Advantages
+
+A `SfDiagramComponent` blazor component which provides better performance than the `SfDiagram` blazor control in Blazor WebAssembly Application.
+* The user who interacts with the diagram elements programmatically for their business logic/requirements – They prefer C# level code to the same, whereas our EJ2 Diagram is purely written in TypeScript. In Blazor, we need to sync each the interaction changes done at the client browser to the C# code through JSInterop calls. In turn, leads to a huge performance lack. We went for a separate native blazor diagram component to avoid this performance block.
 
 ## Property Changes
 
@@ -569,7 +576,3 @@ This article describes the API migration process of SfDiagramComponent from SfDi
 | Triggers while dragging the connector’s source end in the diagram | Not supported |  **Event** *SourcePointChanging* <br>`<SfDiagramComponent SourcePointChanging="@SourcePointChanging"/>`<br>`@code`<br>`{`<br>&nbsp;`private void SourcePointChanging(EndPointChangingEventArgs args)`<br>&nbsp;`{}`<br>`}` |
 | Triggers when the connector’s target point is changed | Not supported |  **Event** *TargetPointChanged* <br>`<SfDiagramComponent TargetPointChanged="@TargetPointChanged"/>`<br>`@code`<br>`{`<br>&nbsp;`private void TargetPointChanged(EndPointChangedEventArgs args)`<br>&nbsp;`{}`<br>`}` |
 | Triggers while dragging the connector’s target end in the diagram | Not supported |  **Event** *TargetPointChanging* <br>`<SfDiagramComponent TargetPointChanging="@TargetPointChanging"/>`<br>`@code`<br>`{`<br>&nbsp;`private void TargetPointChanging(EndPointChangingEventArgs args)`<br>&nbsp;`{}`<br>`}` |
-
-## Advantages
-
-A `SfDiagramComponent` blazor component which provides better performance than the `SfDiagram` blazor control in Blazor WebAssembly Application.
