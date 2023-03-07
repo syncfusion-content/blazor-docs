@@ -64,7 +64,7 @@ The following code example shows how to display the critical path in the Gantt c
 
 ## Critical Path Settings
  
-The Gantt Chart component's critical path settings are used to set the default slack value and validate it. The [GanttCriticalPathSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttCriticalPathSettings.html#properties) properties can be used to initialise critical path settings. How to add slack value to the Gantt Chart component is demonstrated in the following code example.
+The Gantt Chart component's critical path settings are used to set the default slack value and validate it. The [GanttCriticalPathSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttCriticalPathSettings.html#properties) properties can be used to initializes critical path settings. How to add slack value to the Gantt Chart component is demonstrated in the following code example.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
