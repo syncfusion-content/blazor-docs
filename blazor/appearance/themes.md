@@ -481,27 +481,27 @@ LibMan offers the following advantages,
 
 1.Right-click the project folder where the files should be added. Select **Add** -> **Client-Side Library**. Then Add Client-Side Library dialog appears like below.
 
-<img width="600" alt="Client side library dialog" src="https://user-images.githubusercontent.com/103921986/223001793-67285489-a316-4f03-b514-2502969de5ed.png">
+![Client side library dialog](images/theme-client-side.png)
 
 2.Select the **unpkg** in the provider dropdown to get the Syncfusion control themes.
 
-<img width="600" alt="Select unpkg provider" src="https://user-images.githubusercontent.com/103921986/223001895-c64ccdb3-ff8e-4b72-9dd0-e5aa579b18fc.png">
+![Select unpkg provider](images/client-library-unpkg.png)
 
 3.you can refer the combined control styles by using `@syncfusion/blazor-themes@{{ site.ej2version }}` in the library textbox.
 
-<img width="600" alt="Specify Syncfusion library" src="https://user-images.githubusercontent.com/103921986/223001937-254ae470-b6b4-4161-824c-a735a77a33bf.png">
+![Specify Syncfusion library](images/library-unpkg.png)
 
 4.you can able to choose specific files or include all library files like below.
 
 For example, Choose specific files and the bootstrap5 theme is selected in the dialog.
 
-<img width="600" alt="Choose themes" src="https://user-images.githubusercontent.com/103921986/223001966-48d6e934-26b0-440d-af19-c5696f0e0deb.png">
+![Choose themes](images/library-unpkg-theme.png)
 
 5.By using the target location textbox, you can specify the location of where files will be stored in the application.
 
 For example, Modified the default location `wwwroot/lib/syncfusion/blazor-themes/` to  `wwwroot/themes/syncfusion/blazor-themes/`.
 
-<img width="600" alt="Modified the target location" src="https://user-images.githubusercontent.com/103921986/223002015-2897c654-24a7-4d24-985d-82ffc6b48eef.png">
+![Modified the target location](images/client-side-target-unpkg.png)
 
 6.Click the install button then `libman.json` file is added to the root application with the following content.
 
