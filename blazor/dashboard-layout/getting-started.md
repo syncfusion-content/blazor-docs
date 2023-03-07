@@ -493,6 +493,10 @@ These complex data (components) are placed as the panel content by assigning the
 
 ![Blazor DashboardLayout displays Chart Component Content](images/blazor-dashboard-layout-with-chart-component.png)
 
+To get started quickly with designing a Blazor Dashboard Layout with UI Components, you can check the video below.
+
+`youtube:KOetW4f6_v4`
+
 By default, the dashboard layout control is rendered with auto adjustable and [responsive](https://blazor.syncfusion.com/documentation/dashboard-layout/responsive-adaptive/) according to the parent dimensions.
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DashboardLayout).
