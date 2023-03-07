@@ -134,19 +134,19 @@ LibMan offers the following advantages,
 
 ![Select unpkg provider](images/client-library-unpkg.png)
 
-3.you can refer the combined control styles by using `@syncfusion/blazor-themes@{{ site.ej2version }}` in the library textbox.
+3.You can refer the combined component styles by using `@syncfusion/blazor-themes@{{ site.ej2version }}` in the library textbox.
 
 ![Specify Syncfusion library](images/library-unpkg.png)
 
-4.you can able to choose specific files or include all library files like below.
+4.You can choose to select specific files or include all library files, as shown below.
 
-For example, Choose specific files and the bootstrap5 theme is selected in the dialog.
+For example, select specific files and choose the Bootstrap 5 theme in the dialog.
 
 ![Choose themes](images/library-unpkg-theme.png)
 
 5.By using the target location textbox, you can specify the location of where files will be stored in the application.
 
-For example, Modified the default location `wwwroot/lib/syncfusion/blazor-themes/` to  `wwwroot/themes/syncfusion/blazor-themes/`.
+For example, the default location `wwwroot/lib/syncfusion/blazor-themes/` has been modified to `wwwroot/themes/syncfusion/blazor-themes/`.
 
 ![Modified the target location](images/client-side-target-unpkg.png)
 
@@ -172,7 +172,7 @@ For example, Modified the default location `wwwroot/lib/syncfusion/blazor-themes
 {% endhighlight %}
 {% endtabs %}
 
-N> If you use individual control styles, you should install their dependent controls styles.
+N> If you use individual component styles, you should install the styles of their dependent components as well. Refer to [this](https://blazor.syncfusion.com/documentation/nuget-packages#available-nuget-packages) to find the dependent components.
 
 7.You can add the `SCSS theme` for Blazor applications through LibMan and compile it by using the [Web Compiler 2022+](https://marketplace.visualstudio.com/items?itemName=Failwyn.WebCompiler64) by following steps.
 
