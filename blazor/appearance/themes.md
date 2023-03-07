@@ -114,6 +114,110 @@ Syncfusion Blazor Themes are available in the CDN. Make sure that the version in
 | Microsoft Office Fabric Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-dark.css |
 | High Contrast  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/highcontrast.css |
 
+## LibMan
+
+Library Manager ([LibMan](https://learn.microsoft.com/en-us/aspnet/core/client-side/libman/libman-vs?view=aspnetcore-7.0)) is a client-side library acquisition tool that is simple to use. LibMan is a program that downloads popular libraries and frameworks from a file system or a content delivery network (CDN).
+
+LibMan offers the following advantages,
+
+1. Only the library files you need are downloaded.
+2. Additional tooling, such as Node.js, npm, and WebPack, isn't necessary to acquire a subset of files in a library.
+3. Files can be placed in a specific location without resorting to build tasks or manual file copying.
+
+### Client-Side Library dialog
+
+1.Right-click the project folder where the files should be added. Select **Add** -> **Client-Side Library**. Then Add Client-Side Library dialog appears like below.
+
+![Client side library dialog](images/theme-client-side.png)
+
+2.Select the **unpkg** in the provider dropdown to get the Syncfusion control themes.
+
+![Select unpkg provider](images/client-library-unpkg.png)
+
+3.you can refer the combined control styles by using `@syncfusion/blazor-themes@{{ site.ej2version }}` in the library textbox.
+
+![Specify Syncfusion library](images/library-unpkg.png)
+
+4.you can able to choose specific files or include all library files like below.
+
+For example, Choose specific files and the bootstrap5 theme is selected in the dialog.
+
+![Choose themes](images/library-unpkg-theme.png)
+
+5.By using the target location textbox, you can specify the location of where files will be stored in the application.
+
+For example, Modified the default location `wwwroot/lib/syncfusion/blazor-themes/` to  `wwwroot/themes/syncfusion/blazor-themes/`.
+
+![Modified the target location](images/client-side-target-unpkg.png)
+
+6.Click the install button then `libman.json` file is added to the root application with the following content.
+
+{% tabs %}
+{% highlight cshtml tabtitle="libman.json" %}
+
+{
+  "version": "1.0",
+  "defaultProvider": "unpkg",
+  "libraries": [
+    {
+      "library": "@syncfusion/blazor-themes@{{ site.ej2version }}",
+      "destination": "wwwroot/themes/syncfusion/blazor-themes/",
+      "files": [
+        "SCSS-Themes/bootstrap5.scss"
+      ]
+    }
+  ]
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> If you use individual control styles, you should install their dependent controls styles.
+
+7.You can add the `SCSS theme` for Blazor applications through LibMan and compile it by using the [Web Compiler 2022+](https://marketplace.visualstudio.com/items?itemName=Failwyn.WebCompiler64) by following steps.
+
+* Open Visual Studio 2022 and click the Extensions in the toolbar.
+
+    ![VS Extension](images/VS_Extension.png)
+
+* Search the `Web Compiler 2022+` in search box and download the extension.
+
+    ![Web Compiler 2022+](images/Web_Compiler.png)
+
+* Right-click the `SCSS` file and click the Web Compiler to compile the file.
+
+![Themes-libman-compile](images/themes-libman-compile.png) 
+
+* The `compilerconfig.json` file is created by default as shown in the following code snippet.
+
+{% tabs %}
+{% highlight c# tabtitle="compilerconfig.json" %}
+
+[
+  {
+    "outputFile": "wwwroot/themes/syncfusion/blazor-themes/SCSS-Themes/bootstrap5.css",
+    "inputFile": "wwwroot/themes/syncfusion/blazor-themes/SCSS-Themes/bootstrap5.scss"
+  }
+]
+
+* The `SCSS` file has been compiled to the `CSS` file. Then, add the compiled CSS file to the `<head>` element of the Host page.
+
+{% tabs %}
+{% highlight c# tabtitle="~/_Layout.cshtml" %}
+
+<head>
+    ...
+    <!-- Syncfusion Blazor components' styles -->
+    <link href="~/themes/syncfusion/blazor-themes/scss-themes/bootstrap5.css" rel="stylesheet" />
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
+
+8.Run the application and see the bootstrap5 themes downloaded from LibMan were applied.
+
 ## NPM package reference
 
 The [Blazor Themes NPM package](https://www.npmjs.com/package/@syncfusion/blazor-themes) contains `SCSS` files for all themes supported by Syncfusion Blazor components. These SCSS files customize theme variables using a web compiler. The package includes component wise SCSS files and overall components SCSS files.
@@ -466,81 +570,6 @@ Below table lists the importing theme path for the individual components.
         <td>@import 'blazor-themes/SCSS-Themes/diagrams/diagram/{{THEME}}.scss'</td>
     </tr>
 </table>
-
-## LibMan
-
-Library Manager ([LibMan](https://learn.microsoft.com/en-us/aspnet/core/client-side/libman/libman-vs?view=aspnetcore-7.0)) is a client-side library acquisition tool that is simple to use. LibMan is a program that downloads popular libraries and frameworks from a file system or a content delivery network (CDN).
-
-LibMan offers the following advantages,
-
-1. Only the library files you need are downloaded.
-2. Additional tooling, such as Node.js, npm, and WebPack, isn't necessary to acquire a subset of files in a library.
-3. Files can be placed in a specific location without resorting to build tasks or manual file copying.
-
-### Client-Side Library dialog
-
-1.Right-click the project folder where the files should be added. Select **Add** -> **Client-Side Library**. Then Add Client-Side Library dialog appears like below.
-
-![Client side library dialog](images/theme-client-side.png)
-
-2.Select the **unpkg** in the provider dropdown to get the Syncfusion control themes.
-
-![Select unpkg provider](images/client-library-unpkg.png)
-
-3.you can refer the combined control styles by using `@syncfusion/blazor-themes@{{ site.ej2version }}` in the library textbox.
-
-![Specify Syncfusion library](images/library-unpkg.png)
-
-4.you can able to choose specific files or include all library files like below.
-
-For example, Choose specific files and the bootstrap5 theme is selected in the dialog.
-
-![Choose themes](images/library-unpkg-theme.png)
-
-5.By using the target location textbox, you can specify the location of where files will be stored in the application.
-
-For example, Modified the default location `wwwroot/lib/syncfusion/blazor-themes/` to  `wwwroot/themes/syncfusion/blazor-themes/`.
-
-![Modified the target location](images/client-side-target-unpkg.png)
-
-6.Click the install button then `libman.json` file is added to the root application with the following content.
-
-{% tabs %}
-{% highlight cshtml tabtitle="libman.json" %}
-
-{
-  "version": "1.0",
-  "defaultProvider": "unpkg",
-  "libraries": [
-    {
-      "library": "@syncfusion/blazor-themes@{{ site.ej2version }}",
-      "destination": "wwwroot/themes/syncfusion/blazor-themes/",
-      "files": [
-        "SCSS-Themes/bootstrap5.scss"
-      ]
-    }
-  ]
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-N> If you use individual control styles, you should install their dependent controls styles.
-
-7.you can refer to the theme sheet which was downloaded from the client-side library in the `<head>` element of the **~/Pages/_Host.cshtml** file.
-
-{% tabs %}
-{% highlight cshtml tabtitle="~/_Host.cshtml" %}
-
-<head>
-  ...
-  <link href="~/themes/syncfusion/blazor-themes/SCSS-Themes/bootstrap5.scss" rel="stylesheet" />
-</head>
-
-{% endhighlight %}
-{% endtabs %}
-
-8.Run the application and see the bootstrap5 themes downloaded from LibMan were applied.
 
 ## Change theme dynamically
 
