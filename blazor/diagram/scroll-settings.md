@@ -150,6 +150,8 @@ The autoscroll behavior in your diagram can be enabled or disabled by using the 
 |![AutoScroll support for node](images/AutoScrollNode.gif) | 
 ## AutoScroll Padding
 The AutoScrollPadding is used to specify the maximum distance between the object and the diagram's edge that will trigger auto-scrolling. When auto-scrolling is enabled, the diagram viewport will automatically scroll in the direction of the mouse movement when the user drags a node to the edge of the viewport. The padding to start the auto-scrolling at the edge can be controlled by setting the AutoScrollPadding property.
+
+N> The default value will be 20 pixels.
 The following code example illustrates how to set autoscroll padding.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
