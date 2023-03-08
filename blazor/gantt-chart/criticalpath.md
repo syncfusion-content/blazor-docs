@@ -64,7 +64,6 @@ The following code example shows how to display the critical path in the Gantt c
 
 ## Critical Path Settings in Gantt Chart Component
 
-Change the Critical Path Settings in Gantt Chart Component
 The critical path settings in the Gantt Chart component determine the default slack value and validate it. You can use the [GanttCriticalPathSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttCriticalPathSettings.html#properties) properties to initialize the critical path settings. Here is an example of how to add slack value to the Gantt Chart component.
 
 Slack is a measure of how many days a task can be delayed without affecting the project's completion. By default, tasks with zero or negative slack values are critical, while tasks with positive slack values are non-critical. If a task's end date is the same as the project's end date, the slack value is 0, and the task is considered critical.
@@ -123,7 +122,7 @@ By adjusting the slackValue, you can control which tasks are critical and ensure
 
 ## Customize taskbar in critical path
 
-The taskbar in critical path can be customized by using [QueryChartRowInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_QueryChartRowInfo) event and `isCritical` property of row [GanttTaskModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.QueryChartRowInfoEventArgs-1.html#Syncfusion_Blazor_Gantt_QueryChartRowInfoEventArgs_1_GanttTaskModel) in the event argument.
+The taskbar in critical path can be customized by using [QueryChartRowInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_QueryChartRowInfo) event. The [GanttTaskModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.QueryChartRowInfoEventArgs-1.html#Syncfusion_Blazor_Gantt_QueryChartRowInfoEventArgs_1_GanttTaskModel) in the event argument is used to retrieve taskbar information.
 
 The following code example shows how to customize the critical path taskbar in the Gantt control:
 
@@ -150,7 +149,7 @@ The following code example shows how to customize the critical path taskbar in t
     {
         if(args.GanttTaskModel.IsCritical && !args.GanttTaskModel.HasChildRecords)
         {
-            args.Row.AddClass(new string[] { "critical" });
+            args.Row.AddClass(new string[] { "taskbar-critical progress-critical" });
         }
     }
     
@@ -183,13 +182,13 @@ The following code example shows how to customize the critical path taskbar in t
     }
 }
 <style>
-    .critical .e-gantt-child-taskbar {
+    .taskbar-critical .e-gantt-child-taskbar {
         background-color: #06DFF9 !Important;
+        outline: 1px solid #06DFF9 !Important;
+    }
+    .progress-critical .e-gantt-child-progressbar {
+        background-color: #049cae !Important;
     }
 </style>
 ```
 ![Customize taskbar](images/blazor-gantt-chart-critical-path-customize-taskbar.png)
-
-## Limitation for critical path
-
-* Critical path feature only supports Project view, not applicable for Resource view which is more like a behavior and not limitation. 
