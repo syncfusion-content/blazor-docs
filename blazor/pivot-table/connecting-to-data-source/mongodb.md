@@ -81,11 +81,11 @@ When you run the application, the resultant pivot table will look like this.
 
 **1.** Open Visual Studio and create an ASP.NET Core Web App project type, naming it **MyWebService**. To create an ASP.NET Core Web application, follow the document [link](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022).
 
-![Create ASP.NET Core Web App project](../images/mysql-azure-asp-core-web-app-create.png)
+![Create ASP.NET Core Web App project](../images/azure-asp-core-web-service-create.png)
 
 **2.** To connect a MongoDB using the MongoDB driver in our application, we need to install the [MongoDB.Driver](https://www.nuget.org/packages/MongoDB.Driver) NuGet package. To do so, open the NuGet package manager of the project solution, search for the package **MongoDB.Driver** and install it.
 
-![Add the NuGet package "MongoDB.Driver" to the project](../images/mongodb-nuget-package-install.png)
+![Add the NuGet package "MongoDB.Driver" to the project](../images/mongodb-nuget-package-install-in-web-service-app.png)
 
 **3.** Create a Web API controller (aka, PivotController.cs) file under **Controllers** folder that helps to establish data communication with the Pivot Table.
 
