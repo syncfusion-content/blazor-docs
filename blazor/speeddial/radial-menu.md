@@ -45,8 +45,8 @@ The SpeedDial angle starts with `0` degree in the right side and increases in th
 
 @using Syncfusion.Blazor.Buttons
 
-<SfSpeedDial Position="FabPosition.MiddleCenter" Mode="SpeedDialMode.Radial" OpenIconCss="e-icons e-edit">
-    <SpeedDialRadialSettings Direction="RadialDirection.AntiClockwise" StartAngle="180" EndAngle="360" OffSet="70px"/>
+<SfSpeedDial Position="FabPosition.MiddleRight" Mode="SpeedDialMode.Radial" OpenIconCss="e-icons e-edit">
+    <SpeedDialRadialSettings Direction="RadialDirection.AntiClockwise" StartAngle="100" EndAngle="260" OffSet="70px"/>
     <SpeedDialItems>
         <SpeedDialItem IconCss="e-icons e-cut"/>
         <SpeedDialItem IconCss="e-icons e-copy"/>
