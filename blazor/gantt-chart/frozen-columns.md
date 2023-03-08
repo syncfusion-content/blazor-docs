@@ -7,7 +7,7 @@ control: Gantt Chart
 documentation: ug
 ---
 
-# Frozen Columns
+# Frozen columns in Blazor Gantt Component
 
 The frozen columns feature in the Syncfusion Blazor Gantt Chart provides the ability to fix certain columns on the left-hand side of the grid in gantt chart while the user scrolls horizontally. This feature improves the readability and allows for easier navigation.
 
