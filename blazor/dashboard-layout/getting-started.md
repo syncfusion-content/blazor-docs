@@ -13,7 +13,8 @@ This section briefly explains about how to include [Blazor Dashboard Layout](htt
 
 To get started quickly with Blazor Dashboard Layout component, you can check the video below.
 
-`youtube:K6i0KU7tbLQ`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=K6i0KU7tbLQ" %}
 
 ## Prerequisites
 
@@ -495,7 +496,8 @@ These complex data (components) are placed as the panel content by assigning the
 
 To get started quickly with designing a Blazor Dashboard Layout with UI Components, you can check the video below.
 
-`youtube:KOetW4f6_v4`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=KOetW4f6_v4" %}
 
 By default, the dashboard layout control is rendered with auto adjustable and [responsive](https://blazor.syncfusion.com/documentation/dashboard-layout/responsive-adaptive/) according to the parent dimensions.
 
