@@ -218,6 +218,8 @@ N> If you use individual component styles, you should install the styles of thei
 
 8.Run the application and see the bootstrap5 themes downloaded from LibMan were applied.
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-libman)
+
 ## NPM package reference
 
 The [Blazor Themes NPM package](https://www.npmjs.com/package/@syncfusion/blazor-themes) contains `SCSS` files for all themes supported by Syncfusion Blazor components. These SCSS files customize theme variables using a web compiler. The package includes component wise SCSS files and overall components SCSS files.
