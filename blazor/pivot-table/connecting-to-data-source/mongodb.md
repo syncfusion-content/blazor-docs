@@ -77,8 +77,6 @@ When you run the application, the resultant pivot table will look like this.
 
 ![Blazor Pivot Table bound with MongoDB data within a Razor Component](../images/blazor-pivottable-mongodb-databinding.png)
 
-> Explore our Blazor Pivot Table sample to bind data from a MongoDB in [this](https://github.com/SyncfusionExamples/how-to-bind-MongoDB-database-to-pivot-table/tree/master/Blazor) GitHub repository.
-
 ## Create a Web API service to fetch data from a MongoDB
 
 **1.** Open Visual Studio and create an ASP.NET Core Web App project type, naming it **MyWebService**. To create an ASP.NET Core Web application, follow the document [link](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022).
@@ -227,4 +225,4 @@ When you run the application, the resultant pivot table will look like this.
 
 ![Blazor Pivot Table bound with MongoDB data](../images/blazor-pivottable-mongodb-databinding.png)
 
-> Explore our Blazor Pivot Table sample and ASP.NET Core Web Application to bind data from a MongoDB in [this](https://github.com/SyncfusionExamples/how-to-bind-MongoDB-database-to-pivot-table/tree/master/Blazor) GitHub repository.
+> Explore our Blazor Pivot Table sample to bind data from a MongoDB in [this](https://github.com/SyncfusionExamples/how-to-bind-MongoDB-database-to-pivot-table/tree/master/Blazor) GitHub repository.
