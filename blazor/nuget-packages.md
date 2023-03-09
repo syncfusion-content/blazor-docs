@@ -1517,7 +1517,7 @@ The Blazor Scheduler component is an event calendar that facilitates users with 
 <td>
 <ul>
 <li><a href="https://blazor.syncfusion.com/documentation/scheduler">Scheduler</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/scheduler/editor-template#how-to-add-recurrence-options-within-editor-template">Recurrence Editor</a></li>
+<li>Recurrence Editor</li>
 </ul>
 </td>
 <td>
