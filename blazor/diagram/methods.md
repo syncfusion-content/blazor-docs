@@ -317,3 +317,117 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods)
 
 ![Diagram Reset](images/ResetZoom-Method.gif)
+
+### Delete
+Delete method is used to delete the selected diagram elements such as nodes, connectors and groups. Also delete the collections of diagram elements passed in the parameter. 
+
+| Parameter | Type | Description |
+| -------- | -------- |--------- |
+|DiagramElements   | NodeBase| Defines the collection of diagram elements that has to be deleted from the diagram.|
+
+ The following code example shows how to delete the diagram elements from the diagram.
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<style>
+    #diagram-space {
+        float: left;
+    }
+
+    #properties {
+        float: right;
+    }
+</style>
+
+<div id="diagram-space">
+    <SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors">
+    </SfDiagramComponent>
+</div>
+
+<div id="properties">
+           <input type="button" value="Delete" @onclick="Delete" />
+           <input type="button" value="DeleteArg" @onclick="DeletewithArgument" />
+</div>
+
+@code {
+    public SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    DiagramObjectCollection<NodeBase> DiagramElements = new DiagramObjectCollection<NodeBase>();
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+            {
+                ID = "node1",
+                OffsetX = 300,
+                OffsetY = 100,
+                Height = 50,
+                Width = 100,
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                    StrokeColor = "white"
+                }
+            };
+        nodes.Add(node1);
+        Node node2 = new Node()
+            {
+                ID = "node2",
+                OffsetX = 300,
+                OffsetY = 200,
+                Height = 50,
+                Width = 100,
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                    StrokeColor = "white"
+                }
+            };
+        nodes.Add(node2);
+        Node node3 = new Node()
+            {
+                ID = "node3",
+                OffsetX = 300,
+                OffsetY = 300,
+                Height = 50,
+                Width = 100,
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                    StrokeColor = "white"
+                }
+            };
+        nodes.Add(node3);
+        Connector connector1 = new Connector()
+            {
+                ID = "connector1",
+                SourceID = "node1",
+                TargetID = "node2",
+                Type = ConnectorSegmentType.Straight,
+            };
+        connectors.Add(connector1);
+        Connector connector2 = new Connector()
+            {
+                ID = "connector2",
+                SourceID = "node2",
+                TargetID = "node3",
+                Type = ConnectorSegmentType.Straight,
+            };
+        connectors.Add(connector2);
+        NodeGroup groupNode = new NodeGroup();
+        groupNode.Children = new string[] { "node2", "node3" };
+        nodes.Add(groupNode);   
+    }
+    public void Delete()
+    {
+        diagram.Delete();
+    }
+    private void DeletewithArgument()
+    {
+        DiagramElements.Add(diagram.Nodes[0]);
+        DiagramElements.Add(diagram.Nodes[1]);
+        diagram.Delete(DiagramElements);
+    }
+}
+```
+    
