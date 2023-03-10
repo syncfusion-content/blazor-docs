@@ -7,18 +7,23 @@ control: TreeView
 documentation: ug
 ---
 
-# Navigation URL binding in Blazor TreeView Component
+# Navigation in Blazor TreeView Component
+
+Using the **NavigateUrl** of the Blazor TreeView component, you can navigate from one page to another based on the node selection and link provided in the corresponding nodes.
+
+To perform navigation in the TreeView component, use and map the **NavigateUrl** field in the data source.
+
+## Navigation URL binding in Blazor TreeView Component
 
 In the Blazor TreeView component, use the **NavigateUrl** property to specify the URL to navigate to when the tree node is selected.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
-<SfTreeView TValue="MailItem" @ref="treeview">
+<SfTreeView TValue="MailItem">
     <TreeViewFieldsSettings TValue="MailItem" Id="ID" NavigateUrl="NavigateUrl" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
 </SfTreeView>
 
 @code {
-    SfTreeView<MailItem> treeview;
     public class MailItem
     {
         public string ID { get; set; }
@@ -81,12 +86,11 @@ The TreeView [FullRowNavigable](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
-<SfTreeView TValue="MailItem" @ref="treeview" FullRowNavigable="true">
+<SfTreeView TValue="MailItem" FullRowNavigable="true">
     <TreeViewFieldsSettings TValue="MailItem" Id="ID" NavigateUrl="NavigateUrl" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
 </SfTreeView>
 
 @code{
-    SfTreeView<MailItem> treeview;
     public class MailItem
     {
         public string ID { get; set; }
@@ -259,12 +263,11 @@ The **NavigateUrl** property is used to navigate from one page to other pages on
 ```cshtml
 
 @using Syncfusion.Blazor.Navigations
-<SfTreeView TValue="MailItem" @ref="treeview" >
+<SfTreeView TValue="MailItem">
     <TreeViewFieldsSettings TValue="MailItem" Id="ID" NavigateUrl="NavigateUrl" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
 </SfTreeView>
 
 @code{
-    SfTreeView<MailItem> treeview;
     public class MailItem
     {
         public string ID { get; set; }
