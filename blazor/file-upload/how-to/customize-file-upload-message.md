@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize the default file upload message in the Blazor File Upload Component | Syncfusion
+title: Customize the default file upload message in Blazor | Syncfusion
 description: Learn how to customize the default file upload message in the Syncfusion Blazor File Upload component.
 platform: Blazor
 control: File Upload
