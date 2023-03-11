@@ -297,6 +297,7 @@ You can use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 <div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
     <SfSpeedDial Target="#target" Position="FabPosition.BottomLeft" Mode="SpeedDialMode.Radial" OpenIconCss="e-icons e-edit">
+        <SpeedDialRadialSettings OffSet="80px"/>
         <SpeedDialItems>
             <SpeedDialItem IconCss="e-icons e-cut"/>
             <SpeedDialItem IconCss="e-icons e-copy"/>
