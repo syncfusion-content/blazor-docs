@@ -55,7 +55,6 @@ To enable frozen columns, use the [FrozenColumns](https://help.syncfusion.com/cr
     }
 }
 ```
-![Blazor Gantt Chart with Frozen Column](./images/blazor-Gantt-chart-frozen-columns.gif)
 
 ## Freeze particular column
 
@@ -113,8 +112,7 @@ In the following code snippet, the columns with the field names `TaskID` and `Ta
     }
 }
 ```
-
-![Blazor Gantt Chart with Frozen Columns](./images/blazor-Gantt-chart-particular-column-frozen.gif)
+![Blazor Gantt Chart with Frozen Column](./images/blazor-Gantt-chart-frozen-columns.gif)
 
 ## Freeze direction
 
@@ -297,12 +295,10 @@ The following code example shows how to change the color of the default frozen l
     }
 }
 ```
-![Changing freeze line color inBlazor Gantt Chart](./images/blazor-Gantt-chart-freeze-line-color.gif)
+![Changing freeze line color inBlazor Gantt Chart](./images/blazor-Gantt-chart-freezeline-color.png)
 
 ## Limitations
 
 - The [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Freeze) and [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_FrozenColumns) properties cannot be used together as they are incompatible.
-
-- The `IsFrozen` property cannot be changed dynamically. Once the column is frozen, it remains frozen until the chart is reloaded.
 
 - The Gantt Chart does not support Right-to-Left (RTL) mode when using frozen columns.
