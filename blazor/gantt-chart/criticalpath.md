@@ -64,7 +64,7 @@ The following code example shows how to display the critical path in the Gantt c
 
 ## Critical Path Settings in Gantt Chart Component
 
-The critical path settings in the Gantt Chart component determine the default slack value and validate it. You can use the [GanttCriticalPathSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttCriticalPathSettings.html#properties) properties to initialize the critical path settings. Here is an example of how to add slack value to the Gantt Chart component.
+The critical path settings in the Gantt Chart component determine the default slack value and validate it. Here is an example of how to add slack value to the Gantt Chart component.
 
 Slack is a measure of how many days a task can be delayed without affecting the project's completion. By default, tasks with zero or negative slack values are critical, while tasks with positive slack values are non-critical. If a task's end date is the same as the project's end date, the slack value is 0, and the task is considered critical.
 
