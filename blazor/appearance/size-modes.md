@@ -200,17 +200,18 @@ Refer to the following code, in which the `e-bigger` class is added for enabling
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/size-mode-in-blazor-application)
 
 
-## Change font size for all components
+## Change font size and font-family for all components
 
-You can change the font-size for all the components by overriding the CSS for `e-control` class as follows. 
+You can change the font-size and font-family for all the components by overriding the CSS for `e-control` class as follows. 
 
 ```css
 <style>
-    .e-control, .e-control [class^='e-'], .e-control [class*=' e-'] {
+   .e-control, [class^="e-"] *:not([class*="e-icon"]) {
 
-    font-size:1rem;
+         font-size: 1rem !important;
 
-    }
+         font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif !important;
+}
 </style>
 ```
 
