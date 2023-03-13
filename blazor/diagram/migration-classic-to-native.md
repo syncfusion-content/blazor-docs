@@ -13,7 +13,7 @@ This article describes the API migration process of the SfDiagramComponent from 
 
 ## NuGet packages
 
-| Packages targeting .NET Framework for SfDiagram | Packages targeting .NET Framework for SfDiagramComponent |
+| Package for SfDiagram | Package for SfDiagramComponent |
 | -------- | -------- |
 | [Syncfusion.Blazor.Diagrams](https://www.nuget.org/packages/Syncfusion.Blazor.Diagrams/#%22%22) | [Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram/#%22%22) |
 
@@ -30,7 +30,7 @@ This article describes the API migration process of the SfDiagramComponent from 
 A `SfDiagramComponent` blazor component performs better than the `SfDiagram` blazor control in the Blazor WebAssembly Application.
 * The user who interacts with the diagram elements programmatically for their business logic or requirements – They prefer C# level code to the same, whereas Syncfusion EJ2 Diagram is purely written in TypeScript. In Blazor, sync each interaction done changes at the client browser to the C# code through the JSInterop calls. In turn, this leads to a huge performance lack. You used a separate native blazor diagram component to avoid this performance block.
 
-## Property Changes
+## Feature wise API difference between SfDiagram(classic) and SfDiagramComponent
 
 ### Node
 
