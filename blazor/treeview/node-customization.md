@@ -7,7 +7,13 @@ control: TreeView
 documentation: ug
 ---
 
-# Images in Blazor TreeView Component
+# Node customization in Blazor TreeView Component
+
+The TreeView nodes in the Blazor TreeView component can be customized based on your needs.
+
+In TreeView component, you can customize the appearance of each node with images by mapping the **ImageUrl** field, enable or disable wrapping the text using the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowTextWrap) property, enable or disable the nodes on initial load or dynamically, show or hide the nodes on initial load or dynamically, and enable or customize the tooltip for tree nodes, and more.
+
+## Images in Blazor TreeView Component
 
 The Blazor TreeView component has the built-in option to customize each node's appearance with images by mapping the **ImageUrl** fields.
 
