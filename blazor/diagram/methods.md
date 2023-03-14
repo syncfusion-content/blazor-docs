@@ -317,3 +317,60 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods)
 
 ![Diagram Reset](images/ResetZoom-Method.gif)
+
+### Paste
+Paste method is used to paste the diagram elements such as nodes, connectors and groups. Also we can pass the diagram elements as argument to the paste method.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<input type="button" value="paste" @onclick="PasteWithArgument" />
+
+@* Initialize Diagram *@
+
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" Connectors="@connectors">
+</SfDiagramComponent>
+
+@code
+{
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
+    DiagramObjectCollection<NodeBase> nodeBase = new DiagramObjectCollection<NodeBase>();
+
+    private void PasteWithArgument()
+    {
+        Node Node = new Node()
+        {
+            ID = "nodeStart",
+            OffsetX = 400,
+            OffsetY = 300,
+            Width = 145,
+            Height = 60,
+            Style = new ShapeStyle(){ Fill = "#357BD2", StrokeColor = "White"},
+            // Set the shape of the node
+            Shape = new FlowShape(){ Type = NodeShapes.Flow, Shape = NodeFlowShapes.PreDefinedProcess }
+        };
+
+        Connector connector = new Connector()
+        {
+            ID = "connector1",
+            // Set the source and target point of the connector.
+            SourcePoint = new DiagramPoint() { X = 100, Y = 200 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 300 },
+            // Type of the connector segments.
+            Type = ConnectorSegmentType.Straight
+        };
+
+        Node clonedNode = Node.Clone() as Node;
+        nodeBase.Add(clonedNode);
+
+        Connector clonedConnector = connector.Clone() as Connector;
+        nodeBase.Add(clonedConnector);
+
+        diagram.Paste(nodeBase);
+    }
+}
+```
