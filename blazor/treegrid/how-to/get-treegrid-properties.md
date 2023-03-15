@@ -7,7 +7,7 @@ control: Tree Grid
 documentation: ug
 ---
 
-# Get properties value of a record in Blazor TreeGrid Component
+# Get row model values of a record in Blazor TreeGrid Component
 
 The values associated with treegrid properties of a record can be obtained by using the [GetRowModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetRowModel) method of the Tree Grid component.
 
