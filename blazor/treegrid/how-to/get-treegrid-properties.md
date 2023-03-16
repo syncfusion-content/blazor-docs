@@ -9,7 +9,7 @@ documentation: ug
 
 # Get row model details of the record in Blazor Tree Grid Component
 
-The values associated with tree grid properties which includes the index, level, uniqueID, parent records, child records, expanded status, checkboxState, parentUniqueID of a record can be obtained by using the [GetRowModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetRowModel) method of the Tree Grid component.
+The values associated with row model details which includes the index, level, uniqueID, parent records, child records, expanded status, checkboxState, parentUniqueID of a record can be obtained by using the [GetRowModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetRowModel) method of the Tree Grid component.
 
 This is demonstrated in the below sample code where the [GetRowModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetRowModel) method is called on button click which returns the value of the row model details of the passed record.
 
