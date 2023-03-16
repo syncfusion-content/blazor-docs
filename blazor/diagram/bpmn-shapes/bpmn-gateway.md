@@ -45,7 +45,7 @@ A Gateway is used to control the flow of a process and it is represented in diam
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/main/UG-Samples/BpmnEditor/BpmnGateway/BpmnGateway)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnGateway/BpmnGateway)
 
 
 ![GateWay BPMN Shape](../images/bpmn-gataway-none.png)
