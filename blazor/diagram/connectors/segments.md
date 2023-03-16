@@ -11,7 +11,7 @@ documentation: ug
 
 The path of the connector is defined with a collection of segments. There are three types of segments.
 
-## Straight
+## How to create straight segment
 
 To create a straight line, specify the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Type) of the segment as [Straight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Straight) and add a straight segment to [Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Segments) collection and need to specify Type for the connector. The following code example illustrates how to create a default straight segment.
 
@@ -59,7 +59,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Connector with Straight Segment in Blazor Diagram](../images/blazor-diagram-connector-with-straight-segment.png)
 
-## Orthogonal
+## How to create orthogonal segment
 
 Orthogonal segments are used to create segments that are perpendicular to each other. Set the segment Type as [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal) to create a default orthogonal segment and need to specify Type. The following code example illustrates how to create a default orthogonal segment.
 
@@ -168,7 +168,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> You need to mention the segment type as same as what you mentioned in connector type. There should be no contradiction between connector type and segment type.
 
-## Bezier
+## How to create bezier segment
 
 Bezier segments are used to create curve segments and the curves are configurable either with the control points or with vectors. To create a bezier segment, the Type of the segment is set as [Bezier](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Bezier) and need to specify type for the connector. The following code example illustrates how to create a default bezier segment.
 
@@ -327,7 +327,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 @code
 {
+    //Reference the diagram.
     SfDiagramComponent Diagram;
+    //Initialize the diagram's nodes collection
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
@@ -369,7 +371,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 @code
 {
+    //Reference the diagram
     SfDiagramComponent Diagram;
+    //Initialize the diagram's node collection.
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()

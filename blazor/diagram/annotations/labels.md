@@ -11,7 +11,7 @@ documentation: ug
 
 The [Annotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html) is a block of text that can be displayed over a node or connector and it is used to textually represent an object with a string that can be edited at run time. Multiple annotations can be added to a node or connector.
 
-## Create annotations
+## How to create annotation
 
 An annotation can be added to a node or connector by defining the annotation object and adding that to the annotation collection of the node or connector. The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Content) property of annotation defines the text to be displayed. The following code explains how to create an annotation.
 
@@ -71,7 +71,7 @@ N>* [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotat
 <br/>* By default, connector’s path annotation positioned in center point of its path.
 >**Note:** Do not use underscore(_) for annotation's id.
 
-## Add Annotations at runtime
+## How to add annotation at runtime
 
 You can add Annotation at runtime to the Annotations collection of the node/connector in the diagram component by using the `Add` method.
 
@@ -132,7 +132,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Adding Annotation in Blazor Diagram](../images/blazor-diagram-add-annotation.png)
 
-## Remove annotations
+## How to remove annotations at runtime
 
 A collection of annotations can be removed from the node by using the `RemoveAt` method. The following code explains how to remove an annotation from a node.
 
@@ -192,7 +192,7 @@ Also, a collection of annotations can be removed from the node by using the `Rem
 N>* You can delete multiple annotations from node to pass the collection of annotation objects as argument.
 <br/>* The `Add`, `Remove`, and `RemoveAt` methods are applicable for connectors too.
 
-## Update annotations at runtime
+## How to update annotation at runtime
 
 You can get the annotation directly from the node’s annotations collection property and you can change any annotation properties at runtime.
 

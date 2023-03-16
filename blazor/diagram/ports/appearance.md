@@ -9,7 +9,7 @@ documentation: ug
 
 # Port appearance and positioning
 
-## Change the appearance of the port
+## How to change the appearance of the port
 
 * The shape of a port can be changed by using the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Shape) property. To explore the different types of port shapes, refer to Port Shapes. If you need to render a custom shape, then you can set shape to path and define path using the path data property.
 
@@ -73,7 +73,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Changing Port Appearance in Blazor Diagram](../images/blazor-diagram-port-appearance.png)
 
-## Change the visibility of the port
+## How to change the visibility of the port
 
 The [Visibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Visibility) of the ports depends upon the properties of Connect, Hidden, Hover, and Visible. By default, [PortVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortVisibility.html) is set to Hidden.
 
@@ -93,7 +93,7 @@ We have provided some basic built-in [PortShapes](https://help.syncfusion.com/cr
 * Square
 * X
 
-### Custom shape
+### How to customize the port's shape
 
  Custom shape support has been provided for port. You can able to add the custom path data instead of build-in shapes. Find the code example that explains how to change the custom shape for port.
 
@@ -159,7 +159,7 @@ The PortConstraints may have multiple behaviors like listed below:
 | InConnect |Enables or disables connecting to the incoming Connector.  |
 | OutConnect | Enables or disables connecting the outgoing Connector. |
 
-## Custom properties
+## How to add additional information for port
 
 The [AdditionalInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_AdditionalInfo) property of the port allows you to maintain additional information to the port.
 

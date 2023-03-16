@@ -437,10 +437,9 @@ The [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowS
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes)
 
 The list of flow shapes are as follows.
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes)
 
 ![FlowShape Node in Blazor Diagram](images/blazor-diagram-flow-shapes-node.png)
 
@@ -499,4 +498,5 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![SVG Node in Blazor Diagram](images/blazor-diagram-svg-node.png)
 
-N> Like HTML node, the SVG node also cannot be exported to image format. Fill color of SVG node can be overridden by the inline style or fill of the SVG element specified in the template.
+N> Like the HTML node, the SVG node cannot be exported to image format. The fill color of the SVG node can be overridden by the inline style or fill of the SVG element specified in the template.
+
