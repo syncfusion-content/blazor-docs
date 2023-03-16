@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get the values of the TreeGrid properties associated with a record such as index, level, child records, parent records, uniqueID, parentUniqueID, hasChildRecords, CheckboxState, isExpanded.| Syncfusion
+title: Get the values of the TreeGrid properties associated with a record.| Syncfusion
 description: Learn here all about how to get the value of a record's treegrid properties in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid
