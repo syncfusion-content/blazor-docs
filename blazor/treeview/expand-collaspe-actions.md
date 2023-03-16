@@ -100,7 +100,7 @@ The Blazor TreeView component allows for specific nodes to be expanded upon init
 
 ```
 
-![Expand nodes through data binding](./images/blazor-treeview-get-checked-nodes.png)
+![Expand nodes through data binding](./images/blazor-treeview-expand-nodes-through-data-binding.png)
 
 ## Expand nodes through API
 
