@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Get the values of the TreeGrid properties associated with a record.| Syncfusion
-description: Learn here all about how to get the value of a record's treegrid properties in Syncfusion Blazor TreeGrid component and more.
+title: Get the values of the Tree Grid properties associated with a record.| Syncfusion
+description: Learn here all about how to get the value of a record's tree grid properties in Syncfusion Blazor Tree Grid component and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Get row model values of a record in Blazor TreeGrid Component
+# Get row model values of a record in Blazor Tree Grid Component
 
-The values associated with treegrid properties of a record can be obtained by using the [GetRowModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetRowModel) method of the Tree Grid component.
+The values associated with tree grid properties of a record can be obtained by using the [GetRowModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetRowModel) method of the Tree Grid component.
 
-This is demonstrated in the below sample code where the [GetRowModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetRowModel) method is called on button click which returns the value of the treegrid properties for the record.
+This is demonstrated in the below sample code where the [GetRowModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_GetRowModel) method is called on button click which returns the value of the tree grid properties for the record.
 
 {% tabs %}
 
