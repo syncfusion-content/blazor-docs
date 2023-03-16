@@ -157,6 +157,83 @@ Any HTML elements can be displayed within the tooltip by using the [Template](ht
 
 ![Blazor StepLine Chart with Tooltip Template](images/tooltip/blazor-step-chart-tooltip-template.png)
 
+## Shared Tooltip template
+
+Any HTML elements can be displayed within the tooltip by using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Template) property of the [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html). You can use the **data.X** and **data.Y** as place holders in the HTML element to display x and y values of the corresponding data point. To show the tooltip for more than one series, enable the [Shared](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Shared) property in [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html)
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartArea><ChartAreaBorder Width="0"></ChartAreaBorder></ChartArea>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime" LabelFormat="yyyy" IntervalType="IntervalType.Years" EdgeLabelPlacement="EdgeLabelPlacement.Shift">
+        <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
+    </ChartPrimaryXAxis>
+    <ChartPrimaryYAxis LabelFormat="{value}%" RangePadding="ChartRangePadding.None" Minimum="0" Maximum="100" Interval="20">
+        <ChartAxisLineStyle Width="0"></ChartAxisLineStyle>
+        <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
+    </ChartPrimaryYAxis>
+    <ChartTooltipSettings Enable="true" Shared="true">
+        <Template>
+            @{
+                var data = context as List<ChartTooltipInfo>;
+                <div>
+                    <table style="width:100%;  border: 1px solid black;" class="table-borderless">
+                        <tr>
+                            <th colspan="2" bgcolor="#00FFFF">@data[0].X</th>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#00FFFF">Germany</td>
+                            <td bgcolor="#00FFFF">@data[0].Y</td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#00FFFF">England</td>
+                            <td bgcolor="#00FFFF">@data[1].Y</td>
+                        </tr>
+                    </table>
+                </div>
+            }
+        </Template>
+    </ChartTooltipSettings>
+    <ChartCrosshairSettings Enable="true" LineType="LineType.Vertical"></ChartCrosshairSettings>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@ChartData" Name="Germany" XName="Period" Width="2"
+                     Opacity="1" YName="ENG_InflationRate" Type="ChartSeriesType.Line">
+            <ChartMarker Visible="true" Width="10" Height="10">
+            </ChartMarker>
+        </ChartSeries>
+        <ChartSeries DataSource="@ChartData" Name="England" XName="Period" Width="2"
+                     Opacity="1" YName="GER_InflationRate" Type="ChartSeriesType.Line">
+            <ChartMarker Visible="true" Width="10" Height="10">
+            </ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public List<LineChartData> ChartData = new List<LineChartData>
+    {
+        new LineChartData { Period = new DateTime(2005, 01, 01), ENG_InflationRate = 21, GER_InflationRate = 28 },
+        new LineChartData { Period = new DateTime(2006, 01, 01), ENG_InflationRate = 24, GER_InflationRate = 44 },
+        new LineChartData { Period = new DateTime(2007, 01, 01), ENG_InflationRate = 36, GER_InflationRate = 48 },
+        new LineChartData { Period = new DateTime(2008, 01, 01), ENG_InflationRate = 38, GER_InflationRate = 50 },
+        new LineChartData { Period = new DateTime(2009, 01, 01), ENG_InflationRate = 54, GER_InflationRate = 66 },
+        new LineChartData { Period = new DateTime(2010, 01, 01), ENG_InflationRate = 57, GER_InflationRate = 78 },
+        new LineChartData { Period = new DateTime(2011, 01, 01), ENG_InflationRate = 70, GER_InflationRate = 84 }
+    };
+    public class LineChartData
+    {
+        public DateTime Period { get; set; }
+        public double ENG_InflationRate { get; set; }
+        public double GER_InflationRate { get; set; }
+    }
+}
+
+```
+
+![Blazor StepLine Chart with Tooltip Template](images/tooltip/blazor-shared-tooltip-template.PNG)
+
 ## Tooltip customization
 
 The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Fill) and [Border](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Border) properties are used to customize the background color and the border of the tooltip respectively. The [ChartTooltipTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipTextStyle.html) is used to customize the tooltip text. The [HighlightColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_HighlightColor) property is used to customize the point color while hovering for tooltip.
