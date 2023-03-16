@@ -94,7 +94,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Annotation with Hyperlink in Blazor Diagram](../images/blazor-diagram-annotation-with-hyperlink.png)
 
-### How to update Hyperlink with content
+### How to update hyperlink with content
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -316,7 +316,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Diagram Label with Custom Annotation](../images/blazor-diagram-label-with-custom-annotation.png)
 
-## How to Update the annotation style at runtime
+## How to update the annotation style at runtime
 
 You can change the font style of the annotations with the font specific properties ([FontSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_FontSize), [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_FontFamily), and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_Color)). The following code explains how to update the font style of the annotation.
 
@@ -380,7 +380,7 @@ You can change the font style of the annotations with the font specific properti
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance)
 
-## How to Change the editing mode
+## How to change the editing mode
 
 Diagram provides support to edit an annotation at runtime, either programmatically or interactively. By default, the annotation is in view mode. However, it can be brought into edit mode in two ways.
 

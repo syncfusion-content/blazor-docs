@@ -9,7 +9,7 @@ documentation: ug
 
 # Customization in Blazor Diagram Component
 
-## How to add Decorator for connector
+## How to add decorator for connector
 
 Diagram allows you to customize the connector appearances. The following topics shows how to customize several properties of the connectors.
 
@@ -68,7 +68,7 @@ Diagram allows you to customize the connector appearances. The following topics 
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization)
 
-### How to customize the Decorator appearance
+### How to customize the decorator appearance
 
 * The source decorator’s [StrokeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeColor), [StrokeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeWidth), and [StrokeDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeDashArray) properties are used to customize the color, width, and appearance of the decorator.
 
@@ -139,7 +139,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Diagram Connector with Decorator](../images/blazor-diagram-decorator.png)
 
-## How to set Padding for connector
+## How to set padding for connector
 
 Padding is used to leave the space between the Connector's end point and the object to where it is connected.
 
@@ -373,7 +373,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 * Default values for all the [Connectors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html) can be set by using the [ConnectorCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectorCreating) event callback method. For example, if all connectors have the same type or property then such properties can be moved into ConnectorCreating.
 
-### How to customize the Segment appearance
+### How to customize the segment appearance
 
 The following code example illustrates how to customize the segment appearance.
 

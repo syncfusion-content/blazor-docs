@@ -143,7 +143,7 @@ To explore about the options , refer [ScrollLimitMode](https://help.syncfusion.c
 * VerticalOffsetChanged : Specifies the callback to be triggered when the vertical offset changes.
 * MaxZoomChanged : Specifies the callback to trigger when the maximum zoom changes.
 * MinZoomChanged : Specifies the callback to trigger when the minimum zoom changes.
-* ScrollableAreaChanged : Specifies the callback to trigger when the Scrollable Area changes.
+* ScrollableAreaChanged : Specifies the callback to trigger when the scrollable area changes.
 * ScrollLimitChanged : Specifies the callback to trigger when the scroll limit changes.
 
 

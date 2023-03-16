@@ -31,7 +31,7 @@ Complex hierarchical tree layout arranges nodes in a tree-like structure, where 
     int top = 50;
     //Initialize the diagram's nodes collection
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    //Initialize the diagram's connectors collection//Initiali
+    //Initialize the diagram's connectors collection
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     int HorizontalSpacing = 40;
     int VerticalSpacing = 40;

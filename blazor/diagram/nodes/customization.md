@@ -612,7 +612,7 @@ The following code illustrates how to render nodes based on the stack order.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
-## How to set Pivot property for node
+## How to set pivot property for node
 
 *  Node rotation angle will be based on [Pivot](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Pivot) values which range from 0 to 1 like offset values. By default, the Pivot values are set to X= 0.5 and Y=0.5.
 
@@ -658,7 +658,7 @@ The following code illustrates how to render nodes based on the stack order.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
-## How to set Background color for node
+## How to set background color for node
 
 * The node's [BackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_BackgroundColor) property is used to set the background color for node. By default, it is transparent.
 
@@ -775,7 +775,7 @@ The following code illustrates how to set the can auto layout property for the n
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
-### How to get Inedges and OutEdges of node
+### How to get InEdges and OutEdges of node
 
 [InEdges](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_InEdges) is used to get the incoming connectors of the node. [OutEdges](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OutEdges) is used to get the outgoing connectors of the node.
 
