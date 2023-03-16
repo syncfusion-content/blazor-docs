@@ -76,6 +76,7 @@ The following code example explains how to get the selection change event in the
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events)
+
 ## Position change event
 
 * While dragging the node or connector through interaction, the following events can be used to do the customization.
@@ -259,6 +260,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events)
+
 ## NodeCreating event
 
 * The [NodeCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_NodeCreating)  helps you to define the default properties of the node. The node creation is triggered when the diagram is initialized. In the node creating event, you can customize the node properties.
@@ -297,13 +299,14 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
         nodes.Add(node);
     }
 
-    public void OnNodeCreating(IDiagramObject args)
+    public void OnNodeCreating(IDiagramObject obj)
     { 
         Node node = obj as Node;
         node.Style.Fill = "#357BD2";
         node.Style.StrokeColor = "White";
         node.Style.Opacity = 1;
     }
+}
 ```
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events)

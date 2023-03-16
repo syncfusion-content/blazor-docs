@@ -9,7 +9,7 @@ documentation: ug
 
 # Customization in Blazor Diagram Component
 
-## Decorator
+## How to add decorator for connector
 
 Diagram allows you to customize the connector appearances. The following topics shows how to customize several properties of the connectors.
 
@@ -68,7 +68,7 @@ Diagram allows you to customize the connector appearances. The following topics 
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization)
 
-### Decorator appearance
+### How to customize the decorator appearance
 
 * The source decorator’s [StrokeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeColor), [StrokeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeWidth), and [StrokeDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeDashArray) properties are used to customize the color, width, and appearance of the decorator.
 
@@ -139,7 +139,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Diagram Connector with Decorator](../images/blazor-diagram-decorator.png)
 
-## Padding
+## How to set padding for connector
 
 Padding is used to leave the space between the Connector's end point and the object to where it is connected.
 
@@ -215,7 +215,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Diagram Connector with Padding](../images/blazor-diagram-connector-padding.png)
 
-## Bridging
+## How to enable bridging
 
 Line bridging creates a bridge for lines to smartly cross over the other lines, at points of intersection. By default, [BridgeDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BridgeDirection) is set to [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Top). Depending upon the direction given bridging direction appears. Bridging can be enabled/disabled either with the [Connector.Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html) or [Diagram.Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html). The following code example illustrates how to enable line bridging.
 
@@ -308,7 +308,7 @@ Limitation: [BezierSegment](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ![Blazor Diagram Connector with Line Bridge](../images/blazor-diagram-connector-with-bridging.png)
 
-## Corner radius
+## How to update corner radius for connector
 
 Corner radius allows to create connectors with rounded corners. The radius of the rounded corner is set with the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_CornerRadius) property.
 
@@ -365,7 +365,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Diagram Connector with Corner Radius](../images/blazor-diagram-connector-with-corner-radious.png)
 
-## Appearance
+## How to customize the connector appearance
 
 * The connector’s [StrokeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeWidth), [StrokeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeColor), [StrokeDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeDashArray), and [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_Opacity) properties are used to customize the appearance of the connector segments.
 
@@ -373,7 +373,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 * Default values for all the [Connectors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html) can be set by using the [ConnectorCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectorCreating) event callback method. For example, if all connectors have the same type or property then such properties can be moved into ConnectorCreating.
 
-### Segment appearance
+### How to customize the segment appearance
 
 The following code example illustrates how to customize the segment appearance.
 
@@ -426,78 +426,7 @@ The following code example illustrates how to customize the segment appearance.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization)
 
-### Decorator appearance
-
-* The source decorator’s [StrokeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeColor), [StrokeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeWidth) and [StrokeDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeDashArray) properties are used to customize the color, width, and appearance of the decorator.
-
-* To set the border stroke color, stroke width, and stroke dash array for the target decorator, use StrokeColor, StrokeWidth, and StrokeDashArray.
-
-* To set the size for source and target decorator, use [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Height) properties.
-
-The following code example illustrates how to customize the appearance of the decorator.
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
-</SfDiagramComponent>
-
-@code
-{
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-
-    protected override void OnInitialized()
-    {
-        Connector Connector = new Connector()
-        {
-            ID = "connector1",
-            Style = new ShapeStyle()
-            {
-                Fill = "#6495ED",
-                StrokeColor = "#6495ED",
-                StrokeWidth = 1
-            },
-            SourcePoint = new DiagramPoint()
-            {
-                X = 100,
-                Y = 100
-            },
-            TargetPoint = new DiagramPoint()
-            {
-                X = 200,
-                Y = 200
-            },
-            Type = ConnectorSegmentType.Orthogonal,
-            SourceDecorator = new DecoratorSettings()
-            {
-                Shape = DecoratorShape.Arrow,
-                Height = 15,
-                Width = 15,
-                Style = new ShapeStyle()
-                { StrokeColor = "blue", Fill = "yellow", StrokeWidth = 3 }
-            },
-            TargetDecorator = new DecoratorSettings()
-            {
-                Shape = DecoratorShape.Arrow,
-                Height = 15,
-                Width = 15,
-                Style = new ShapeStyle()
-                {
-                    StrokeColor = "red",
-                    Fill = "yellow",
-                    StrokeWidth = 3
-                }
-            }
-        };
-        connectors.Add(Connector);
-    }
-}
-```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization)
-
-![Blazor Diagram Connector with Decorator](../images/blazor-diagram-decorator.png)
-
-## Constraints
+## How to enable/disable the connector behavior
 
 * The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html) property of connector allows to enable/disable certain features of connectors.
 
@@ -555,7 +484,7 @@ The following code illustrates how to disable selection.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization)
 
-## Custom properties
+## How to add additional information for connector
 
 * The [AdditionalInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_AdditionalInfo) property of connector allows you to maintain additional information to the connectors.
 
@@ -610,6 +539,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization)
+
 ## How to set ZIndex property for connector
 
 * The connector's  [ZIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ZIndex) property specifies the stack order of the connector. A connector with a greater stack order is always in front of a connector with a lower stack order. By default, the value is -1.
@@ -640,9 +570,9 @@ The following code illustrates how to render connector based on the stack order.
             SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
             TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
             // Type of the connector segments.
-            Type = ConnectorSegmentType.Straight
+            Type = ConnectorSegmentType.Straight,
             //Define the ZIndex property.
-            ZIndex = -2;
+            ZIndex = -2,
         };
         connectors.Add(Connector);
     }
@@ -687,84 +617,105 @@ The following code illustrates how to set the HitPadding for the connector.
 }
 ```
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization)
-## How to set ZIndex property for connector
+## How to set SourcePadding and TargetPadding for connector
 
-* The connector's  [ZIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ZIndex) property specifies the stack order of the connector. A connector with a greater stack order is always in front of a connector with a lower stack order. By default, the value is -1.
+* The [SourcePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourcePadding) property of the connector defines space between the source point and the source node of the connector.
 
+* The [TargetPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetPadding) property of the connector defines space between the endpoint and the target node of the connector.
 
-The following code illustrates how to render connector based on the stack order.
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-@using System.Collections.ObjectModel
-
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
-    <SnapSettings Constraints="@snapConstraints"></SnapSettings>
-</SfDiagramComponent>
-
-@code
-{
-    SnapConstraints snapConstraints = SnapConstraints.None;
-    //Define the diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-
-    protected override void OnInitialized()
-    {
-        Connector Connector = new Connector()
-        {
-            ID = "connector1",
-            // Set the source and target point of the connector.
-            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
-            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
-            // Type of the connector segments.
-            Type = ConnectorSegmentType.Straight
-            //Define the ZIndex property.
-            ZIndex = -2;
-        };
-        connectors.Add(Connector);
-    }
-}
-```
-## How to set HitPadding for connector
-
-*The [HitPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_HitPadding) refers to the space around the connector's edges. To make it easy to select, selecting when the mouse comes near its vicinity area should be possible. The HitPadding property allows you to customize the vicinity area while selecting. The default value is 10px. Within the hit padding region, the connector can be selected and deselected.
-
-
-The following code illustrates how to set the HitPadding for the connector.
+The following code example illustrates how to leave space between the connection endpoints and source and target nodes.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using System.Collections.ObjectModel
 
-<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
-    <SnapSettings Constraints="@snapConstraints"></SnapSettings>
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" />
 
 @code
 {
-    SnapConstraints snapConstraints = SnapConstraints.None;
-    //Define the diagram's connector collection.
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+     DiagramObjectCollection<Node> nodes= new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> connectors= new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
-        Connector Connector = new Connector()
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 300,
+            
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 500,
+        };
+        nodes.Add(node2);
+        Connector connector1 = new Connector()
         {
             ID = "connector1",
-            // Set the source and target point of the connector.
-            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
-            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
-            // Type of the connector segments.
-            Type = ConnectorSegmentType.Straight
-            //Define the HitPadding property.
-            HitPadding = 20,
+            SourceID = "node1",
+            TargetID = "node2",
+            TargetPadding = 10,
+             SourcePadding = 10,
         };
-        connectors.Add(Connector);
+        connectors.Add(connector1);
     }
 }
 ```
+## How to set ConnectionPadding for connector
 
+* The [ConnectionPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_ConnectionPadding) property of the connector defines the connection padding value of the connector.
+
+The following code example illustrates how to set the connection padding value for the connector.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" />
+
+@code
+{
+     DiagramObjectCollection<Node> nodes= new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> connectors= new DiagramObjectCollection<Connector>();
+
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 300,
+            
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 500,
+        };
+        nodes.Add(node2);
+        Connector connector1 = new Connector()
+        {
+            ID = "connector1",
+            SourceID = "node1",
+            TargetID = "node2",
+           ConnectionPadding = 50,
+        };
+        connectors.Add(connector1);
+    }
+}
+```
 ## See also
 
 * [How to interact with the connector](./interactions)

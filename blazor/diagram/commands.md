@@ -1307,7 +1307,7 @@ The following code example shows how to disable a command and how to modify the 
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/ModifyExistingCommands/ModifyExistingCommands)
 
-### BringIntoView
+### How to bring the specific element into the viewport of the diagram
 
 The [BringIntoView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BringIntoView_Syncfusion_Blazor_Diagram_DiagramRect_) command brings a specified rectangular region into the viewport of the diagram.
 
@@ -1341,7 +1341,7 @@ protected override void OnInitialized()
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
 
-### BringIntoCenter
+### How to bring the specific element into the center of the viewport of the diagram
 
 The [BringIntoCenter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BringIntoCenter_Syncfusion_Blazor_Diagram_DiagramRect_) command brings a specified rectangular region into the center of the viewport of the diagram.
 
