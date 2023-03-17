@@ -101,7 +101,92 @@ The Diagram control provides the following event for the scroll settings.
 
 }
 ```
+## AutoScroll 
+The auto-scroll feature automatically scrolls the diagram whenever the node is moved beyond its boundaries. Auto-scroll is enabled during node dragging and  node resizing, and multiple-selection operations.
 
+The diagram event OnAutoScrollChange gets triggered when the autoscroll (scrollbars) is changed, and you can do your own customization in this event. 
+
+The auto-scrolling region is limited by the [ScrollLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollLimit) property of the [ScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html) class.
+
+The autoscroll behavior in your diagram can be enabled or disabled by using the EnableAutoScroll property of the diagram. The following code example illustrates how to enabled/disabled the autoscroll support for node.
+
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<SfDiagramComponent Height="400px" Width="400px" Nodes="@nodes">
+    @* Sets the ScrollSettings for the diagram *@
+    <ScrollSettings EnableAutoScroll=true @bind-ScrollLimit="@scrollLimit" >
+    </ScrollSettings>
+</SfDiagramComponent>
+@code
+{
+    ScrollLimitMode scrollLimit { get; set; } = ScrollLimitMode.Infinity;
+    DiagramObjectCollection<Node> nodes;
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        // A node is created and stored in the nodes collection.
+        Node node = new Node()
+            {
+                ID = "node1",
+                // Position of the node.
+                OffsetX = 250,
+                OffsetY = 250,
+                // Size of the node.
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                    StrokeColor = "white"
+                }
+            };
+        // Add node.
+        nodes.Add(node);
+    }
+}
+```
+|![AutoScroll support for node](images/Autoscroll.gif) | 
+## AutoScroll Padding
+The AutoScrollPadding is used to specify the maximum distance between the object and the diagram's edge that will trigger auto-scrolling. When auto-scrolling is enabled, the diagram viewport will automatically scroll in the direction of the mouse movement when the user drags a node to the edge of the viewport. The padding to start the auto-scrolling at the edge can be controlled by setting the AutoScrollPadding property.
+
+N> The default value will be 20 pixels.
+The following code example illustrates how to set autoscroll padding.
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<SfDiagramComponent Height="600px" Width="600px" Nodes="@nodes">
+    @* Sets the ScrollSettings for the diagram *@
+    <ScrollSettings EnableAutoScroll=true AutoScrollPadding="@autoScrollBorder">
+    </ScrollSettings>
+</SfDiagramComponent>
+@code
+{
+    DiagramObjectCollection<Node> nodes;
+    DiagramMargin autoScrollBorder = new DiagramMargin() { Left = 30, Right = 30, Top = 30, Bottom = 30 };
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        // A node is created and stored in the nodes collection.
+        Node node = new Node()
+            {
+                ID = "node1",
+                // Position of the node.
+                OffsetX = 250,
+                OffsetY = 250,
+                // Size of the node.
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                    StrokeColor = "white"
+                }
+            };
+        // Add node.
+        nodes.Add(node);
+    }
+}
+```
 ## Scroll limit
 
 The scroll limit allows you to define the scrollable region of the Diagram while scrolling the page with the mouse. The [ScrollLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollLimit) property of scroll settings helps to limit the scrolling area. It includes the following options:
@@ -135,6 +220,43 @@ To explore about the options , refer [ScrollLimitMode](https://help.syncfusion.c
 |-------------|--------|
 |   Diagram   | ![ScrollLimitMode as Diagram](./images/ScrollLimitDiagram.gif)|   
 |   Infinity  | ![ScrollLimitMode as Infinity](./images/ScrollLimitInfinity.gif)|
+
+## Scrollable Area
+Scrolling beyond any particular rectangular area can be restricted by using the [ScrollableArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollableArea) property of scroll settings. To restrict scrolling beyond any custom region, set the [ScrollLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollLimit) as “limited.” The following code example illustrates how to customize the scrollable area.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<SfDiagramComponent Width="50%" Height="300px" Nodes="@nodes">
+    <ScrollSettings  ScrollableArea="@scrollableArea" ScrollLimit="ScrollLimitMode.Limited">
+    </ScrollSettings>
+</SfDiagramComponent>
+@code
+{
+    DiagramRect scrollableArea = new DiagramRect() { X = 0, Y = 0, Width = 500, Height = 500 };
+    DiagramObjectCollection<Node> nodes;
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+            {
+                ID = "node1",
+                // Position of the node.
+                OffsetX = 300,
+                OffsetY = 50,
+                // Size of the node.
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                    StrokeColor = "white"
+                }
+            };
+        // Add node.
+        nodes.Add(node);
+    }
+}
+```
 
 ## CallBack Methods
 

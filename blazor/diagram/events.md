@@ -559,3 +559,48 @@ The [KeyUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
     }
 }
 ```
+## OnAutoScrollChange Event
+The OnAutoScrollChange event is triggered when changes are detected to the scroll position, extent, or viewport size as a result of auto scrolling for diagram elements. To explore the arguments, refer to the AutoScrollChangeEventArgs class.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<SfDiagramComponent Height="400px" Width="400px" Nodes="@nodes" OnAutoScrollChange="AutoScrollChange">
+    @* Sets the ScrollSettings for the diagram *@
+    <ScrollSettings EnableAutoScroll=true AutoScrollPadding="@autoScrollBorder" @bind-ScrollLimit="@ScrollLimit">
+    </ScrollSettings>
+</SfDiagramComponent>
+@code
+{
+     ScrollLimitMode ScrollLimit { get; set; } = ScrollLimitMode.Infinity;
+    DiagramObjectCollection<Node> nodes;
+    DiagramMargin autoScrollBorder = new DiagramMargin() { Left = 30, Right = 30, Top = 30, Bottom = 30 };
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        // A node is created and stored in the nodes collection.
+        Node node = new Node()
+            {
+                ID = "node1",
+                // Position of the node.
+                OffsetX = 250,
+                OffsetY = 250,
+                // Size of the node.
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                    StrokeColor = "white"
+                }
+            };
+        // Add node.
+        nodes.Add(node);
+    }
+    private void AutoScrollChange(AutoScrollChangeEventArgs args)
+    {
+        args.Cancel = false;
+        args.Delay = new TimeSpan(0,0,0,1,0);
+    }
+}
+```
+|![Speed Limit control in autoScroll support for node](images/SpeedLimit.gif) | 
