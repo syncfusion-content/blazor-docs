@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview Panel in Blazor Diagram Component | Syncfusion
+title: Overview in Blazor Diagram Component | Syncfusion
 description: Check out and learn here all about Overview Control in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Overview Panel in Blazor Diagram Component
+# Overview in Blazor Diagram Component
 
 [SfDiagramOverviewComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html) allows you to see a preview or an overall view of the entire content of a diagram. This helps you to look at the overall picture of a large diagram and to navigate, pan, or zoom on a particular position of the page.
 
