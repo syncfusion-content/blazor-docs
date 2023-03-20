@@ -29,7 +29,9 @@ The following code example explains how to get the selection change event in the
 
 @code
 {
+    //Reference the diagram.
     SfDiagramComponent Diagram;
+    //Initialize the diagram's connector collection
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
@@ -100,7 +102,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 @code
 {
+    //Reference the diagram.
     SfDiagramComponent Diagram;
+    //Initialize the diagram's connectors collection
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
@@ -171,8 +175,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 @code
 {
+    //Reference the diagram.
     SfDiagramComponent Diagram;
+    //Initialize the diagram's connectors collection
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+      //Initialize the diagram's nodes collection
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
@@ -232,6 +239,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events)
+
 ## Source point change event
 * While changing the source point  of the connector, the following events can be used to do the customization.
 
@@ -248,8 +256,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 @code
 {
+    //Reference the diagram.
     SfDiagramComponent Diagram;
+    //Initialize the diagram's connectors collection
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    //Initialize the diagram's nodes collection
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
@@ -285,6 +296,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events)
+
 ## Target point change event
 * While changing the target point of the connector, the following events can be used to do the customization.
 
@@ -302,8 +315,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 @code
 {
+    //Reference the diagram.
     SfDiagramComponent Diagram;
+    //Initialize the diagram's connectors collection
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    //Initialize the diagram's nodes collection
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
@@ -339,6 +355,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events)
 
 ## ConnectorCreating event
 
@@ -387,6 +404,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
         connector.TargetDecorator.Style.StrokeColor = "black";
     }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events)
+
 ## Segment collection change event
 
 * The [SegmentCollectionChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SegmentCollectionChange)  triggers when the connector’s segment collection is updated. To explore about arguments, refer to the [SegmentCollectionChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentCollectionChangeEventArgs.html).
@@ -428,7 +447,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     { 
        
     }
+}
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events)
+
 
 ## See also
 

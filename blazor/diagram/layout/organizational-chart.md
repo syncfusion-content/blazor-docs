@@ -9,7 +9,13 @@ documentation: ug
 
 # Organizational Chart in Blazor Diagram Component
 
-An organizational chart is a diagram that displays the structure of an organization and relationships. To create an organizational chart, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) of layout should be set as an [OrganizationalChart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_OrganizationalChart). The following code example illustrates how to create an organizational chart.
+An organizational chart is a diagram that displays the structure of an organization and relationships. To create an organizational chart, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) of layout should be set as an [OrganizationalChart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_OrganizationalChart).
+
+To create and position the Organizational Chart Using Blazor Diagram, you can check the video below.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=cjMCTTJssCE&t=22s" %}
+
+ The following code example illustrates how to create an organizational chart.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -263,7 +269,7 @@ The following code illustrates how to arrange the nodes in a BottomToTop orienta
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
 
-### Fixed node
+### How to set fixed node
 
 Layout provides support to arrange the nodes with reference to the position of a fixed node and set it to the [FixedNode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_FixedNode) of the layout property. This is helpful when you try to expand/collapse a node. It might be expected that the position of the double-clicked node should not be changed.
 
@@ -361,6 +367,7 @@ The following code example illustrates how to add assistants to the layout.
     };
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
 
 ## How to refresh the layout
 
