@@ -116,3 +116,69 @@ The progress bar supports right-to-left (RTL) rendering, which can be enabled by
 ```
 
 ![Right to Left in Blazor ProgressBar](images/blazor-progressbar-right-to-left.png)
+
+## Secondary Progress Thickness
+
+The secondary progress thickness can be customized by using SecondaryProgressThichness.
+
+```cshtml
+@using Syncfusion.Blazor.ProgressBar
+
+<SfProgressBar  Type="ProgressType.Linear" Value="80" Minimum="0" Maximum="100" SecondaryProgress="50" SecondaryProgressThickness="30" >
+</SfProgressBar>
+
+<SfProgressBar  Type="ProgressType.Circular" Value="80" Minimum="0" Maximum="100" SecondaryProgress="40" SecondaryProgressThickness="20">
+</SfProgressBar>
+```
+
+![Secondary Progress thickness](images/blazor-progressbar-secondaryprogressbar-thickness.png)
+
+## Secondary Progress Color
+
+
+```cshtml
+@using Syncfusion.Blazor.ProgressBar
+
+<SfProgressBar  Type="ProgressType.Linear" ProgressColor="#cc0202" Value="50" ProgressThickness="10" TrackThickness="10" Minimum="0" Maximum="100" SecondaryProgress="60"  SecondaryProgressThickness="10" SecondaryProgressColor="#faa7a7" >
+</SfProgressBar>
+
+<SfProgressBar  Type=" ProgressType.Circular"  ProgressColor="#cc0202" Value="50" ProgressThickness="10" TrackThickness="10" Minimum="0" Maximum="100" SecondaryProgress="60" SecondaryProgressThickness="10" SecondaryProgressColor= "#faa7a7" >
+</SfProgressBar>
+```
+
+![Secondary Progress thickness](images/blazor-progressbar-secondaryprogressbar-color.png)
+
+## Progress Bar Visibility 
+
+Progress Bar visibility can be changed by using the API Visible.
+
+```cshtml
+@using Syncfusion.Blazor.ProgressBar
+ <SfProgressBar Type="ProgressType.Linear" Value="100" Height="60" Minimum="0" Maximum="100" Visible="@visible">
+    <ProgressBarAnimation  Enable="true"></ProgressBarAnimation>
+    <ProgressBarEvents AnimationComplete="@AnimationHandler"></ProgressBarEvents>
+</SfProgressBar>
+<div>
+    <p align="center" style="color:#2e2ef1; font-size: larger ">
+        @uploadStatus
+    </p>
+</div>
+    
+@code{
+    private string uploadStatus { get; set; } = null;
+    private bool visible { get; set; } = true;
+    public void AnimationHandler(ProgressValueEventArgs args)
+    { 
+        if (args.Value == 100)
+        {
+            visible = false;
+            uploadStatus = "UPLOAD SUCCESS...";
+        }
+    }
+}
+```
+
+![ProgressBar Visibility](images/progress_bar_visibility.gif)
+
+
+
