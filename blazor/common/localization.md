@@ -93,7 +93,7 @@ If you don't want to change culture dynamically, you can set it statically by fo
 
 ### Blazor Server App
 
-* For **.NET 6 and .NET 7** app, specify the static culture in **~/Program.cs** file.
+* For **.NET 6** app, specify the static culture in **~/Program.cs** file.
 * For **.NET 5 and .NET 3.X** app, specify the static culture in **~/Startup.cs** file.
 
 {% tabs %}
