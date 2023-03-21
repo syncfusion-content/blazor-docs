@@ -13,6 +13,11 @@ The [SymbolPalette](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
 
 ## Create symbol palette
 
+To create Symbol Palette easily and to add nodes and connectors in it, you can check the video below.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=wgpZ55P4KHE" %}
+
+
 The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Height) properties of the symbol palette allows to define the size of the symbol palette.
 
 ```csharp
