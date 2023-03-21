@@ -33,7 +33,7 @@ The Bing Maps can be rendered by setting the [UrlTemplate](https://help.syncfusi
 }
 ```
 
-> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
+N> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
 ![Blazor Bing Maps](../images/MapProviders/blazor-bing-maps.png)
 
@@ -68,7 +68,7 @@ The above types can also be rendered in the Maps component by specifying their U
 }
 ```
 
-> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
+N> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
 ![Blazor Bing Maps with CanvasLight](../images/MapProviders/blazor-bing-maps-with-canvas.png)
 
@@ -101,7 +101,7 @@ Bing Maps layer can be zoomed and panned. Zooming helps to get a closer look at 
 }
 ```
 
-> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
+N> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
 ![Blazor Bing Maps with Zooming](../images/MapProviders/blazor-bing-maps-zooming.png)
 
@@ -151,7 +151,7 @@ Markers can be added to the layers of Bing Maps by setting the corresponding loc
 }
 ```
 
-> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
+N> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
 ![Blazor Bing Maps with Markers and Navigation Line](../images/MapProviders/blazor-bing-maps-marker-and-line.png)
 
@@ -182,7 +182,7 @@ Any GeoJSON shape can be rendered as a sublayer on top of the Bing Maps layer fo
 }
 ```
 
-> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
+N> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
 ![Blazor Bing Maps with Sublayer](../images/blazor-bing-map-sublayer.PNG)
 

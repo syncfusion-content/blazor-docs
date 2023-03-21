@@ -26,7 +26,7 @@ The built-in aggregates are,
 * TrueCount
 * FalseCount
 
-> * Multiple types for a column are supported only when one of the aggregate templates is used.
+N> * Multiple types for a column are supported only when one of the aggregate templates is used.
 
 ## Footer aggregate
 
@@ -104,7 +104,7 @@ To access the aggregate values inside the **FooterTemplate**, you can use the im
 The following image represents the FooterTemplate with aggregates
 ![Blazor DataGrid displays Footer with Aggregates](./images/blazor-datagrid-footer-aggregate.png)
 
-> The aggregate values must be accessed inside the template using their corresponding [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) name.
+N> The aggregate values must be accessed inside the template using their corresponding [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) name.
 
 ## How to format aggregate value
 
@@ -264,7 +264,7 @@ To access the aggregate values inside the **GroupFooterTemplate** and **GroupCap
 The following image represents the Group and Caption template with aggregates.
 ![Blazor DataGrid displays Caption with Aggregates](./images/blazor-datagrid-caption-aggregate.png)
 
-> The aggregate values must be accessed inside the template using their corresponding [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) name.
+N> The aggregate values must be accessed inside the template using their corresponding [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) name.
 
 ## Custom aggregate
 
@@ -330,13 +330,13 @@ To use Custom aggregate, specify the **AggregateType** as **Custom** in **GridAg
 }
 ```
 
-> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+N> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
 ## Reactive aggregate
 
 When using batch editing, the aggregate values will be refreshed on every cell save. The footer, group footer, and group caption aggregate values will be refreshed.
 
-> Adding a new record to the grouped DataGrid will not refresh the group summary and group caption aggregate’s value.
+N> Adding a new record to the grouped DataGrid will not refresh the group summary and group caption aggregate’s value.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids

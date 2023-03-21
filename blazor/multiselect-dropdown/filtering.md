@@ -9,7 +9,7 @@ documentation: ug
 
 # Filtering in Blazor MultiSelect Dropdown Component
 
-The MultiSelect has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_AllowFiltering) is enabled. The filter operation starts as soon as you start typing characters in the MultiSelect input.
+The MultiSelect has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_AllowFiltering) is enabled. The filter operation starts as soon as you start typing characters in the MultiSelect input. If searching character does not match, `NoRecordsTemplate` property value will be shown.
 
 ```cshtml
 
@@ -106,3 +106,17 @@ The MultiSelect component filter queries can be customized. You can also use you
     }
 }
 ```
+
+## FilterBarPlaceholder
+
+Accepts the value to be displayed as a watermark text on the filter bar. [FilterBarPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_FilterBarPlaceholder) is applicable when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_AllowFiltering) is set as `true` in the checkbox mode. `FilterBarPlaceholder` is depends on `AllowFiltering` in checkbox mode.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/filtering/filterBarPlaceholder-property.razor %}
+
+{% endhighlight %} 
+
+![Blazor MultiSelect DropDown with FilterBarPlaceholder property](./images/filtering/blazor_multiselect_filterBarPlaceholder-property.png)
+
+

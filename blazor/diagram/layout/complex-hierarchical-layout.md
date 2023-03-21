@@ -78,6 +78,8 @@ Complex hierarchical tree layout arranges nodes in a tree-like structure, where 
 }
 
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
+
 ![Blazor Complex Hierarchical Diagram](../images/blazor-diagram-complex.png)
 ### Line Distribution
 
@@ -136,22 +138,20 @@ The following code example illustrates how to create a complex hierarchical tree
         new ComplexHierarchical() { Id= "node13", ReportingPerson=new List<string>() {"node12" }},
         new ComplexHierarchical() { Id= "node14", ReportingPerson=new List<string>() {"node12"}},
         new ComplexHierarchical() { Id= "node15", ReportingPerson=new List<string>() {"node12" }},
-        new ComplexHierarchical() { Id= "node116", ReportingPerson=new List<string>() {"node22","node12" }},
-        new ComplexHierarchical() { Id= "node16", ReportingPerson=new List<string>() {} },
-        new ComplexHierarchical() { Id= "node18", ReportingPerson=new List<string>() { }},
+        new ComplexHierarchical() { Id= "node116", ReportingPerson=new List<string>() {"node22","node12" }},     
         new ComplexHierarchical() { Id= "node21"},
         new ComplexHierarchical() { Id= "node22", ReportingPerson=new List<string>() {"node114" }},
         new ComplexHierarchical() { Id= "node23", ReportingPerson=new List<string>() {"node22" }},
         new ComplexHierarchical() { Id= "node24", ReportingPerson=new List<string>() {"node22"}},
-        new ComplexHierarchical() { Id= "node25", ReportingPerson=new List<string>() {"node22"} },
-        new ComplexHierarchical() { Id= "node26", ReportingPerson=new List<string>() {}},
-        new ComplexHierarchical() { Id= "node28", ReportingPerson=new List<string>() {} },
-         new ComplexHierarchical() { Id= "node31"},
+        new ComplexHierarchical() { Id= "node25", ReportingPerson=new List<string>() {"node22"} },    
+        new ComplexHierarchical() { Id= "node31"},
         new ComplexHierarchical() { Id= "node114", ReportingPerson=new List<string>() {"node11","node21","node31" }}
     };
 }
 
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
+
 ![Blazor Complex Hierarchical Diagram](../images/blazor-diagram-samepoint.png)
 
 ### Linear Arrangement
@@ -206,21 +206,19 @@ The following code illustrates how to arrange the nodes in non linear manner.
         new ComplexHierarchical() { Id= "node13", ReportingPerson=new List<string>() {"node12" }},
         new ComplexHierarchical() { Id= "node14", ReportingPerson=new List<string>() {"node12"}},
         new ComplexHierarchical() { Id= "node15", ReportingPerson=new List<string>() {"node12" }},
-        new ComplexHierarchical() { Id= "node116", ReportingPerson=new List<string>() {"node22","node12" }},
-        new ComplexHierarchical() { Id= "node16", ReportingPerson=new List<string>() {} },
-        new ComplexHierarchical() { Id= "node18", ReportingPerson=new List<string>() { }},
+        new ComplexHierarchical() { Id= "node116", ReportingPerson=new List<string>() {"node22","node12" }},       
         new ComplexHierarchical() { Id= "node21"},
         new ComplexHierarchical() { Id= "node22", ReportingPerson=new List<string>() {"node114" }},
         new ComplexHierarchical() { Id= "node23", ReportingPerson=new List<string>() {"node22" }},
         new ComplexHierarchical() { Id= "node24", ReportingPerson=new List<string>() {"node22"}},
-        new ComplexHierarchical() { Id= "node25", ReportingPerson=new List<string>() {"node22"} },
-        new ComplexHierarchical() { Id= "node26", ReportingPerson=new List<string>() {}},
-        new ComplexHierarchical() { Id= "node28", ReportingPerson=new List<string>() {} },
-         new ComplexHierarchical() { Id= "node31"},
+        new ComplexHierarchical() { Id= "node25", ReportingPerson=new List<string>() {"node22"} },      
+        new ComplexHierarchical() { Id= "node31"},
         new ComplexHierarchical() { Id= "node114", ReportingPerson=new List<string>() {"node11","node21","node31" }}
     };
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
+
 ![Blazor Complex Hierarchical Diagram](../images/blazor-diagram-non-linear.png)
 
 The following code illustrates how to arrange the nodes in  linear manner.
@@ -273,19 +271,17 @@ The following code illustrates how to arrange the nodes in  linear manner.
         new ComplexHierarchical() { Id= "node13", ReportingPerson=new List<string>() {"node12" }},
         new ComplexHierarchical() { Id= "node14", ReportingPerson=new List<string>() {"node12"}},
         new ComplexHierarchical() { Id= "node15", ReportingPerson=new List<string>() {"node12" }},
-        new ComplexHierarchical() { Id= "node116", ReportingPerson=new List<string>() {"node22","node12" }},
-        new ComplexHierarchical() { Id= "node16", ReportingPerson=new List<string>() {} },
-        new ComplexHierarchical() { Id= "node18", ReportingPerson=new List<string>() { }},
+        new ComplexHierarchical() { Id= "node116", ReportingPerson=new List<string>() {"node22","node12" }},   
         new ComplexHierarchical() { Id= "node21"},
         new ComplexHierarchical() { Id= "node22", ReportingPerson=new List<string>() {"node114" }},
         new ComplexHierarchical() { Id= "node23", ReportingPerson=new List<string>() {"node22" }},
         new ComplexHierarchical() { Id= "node24", ReportingPerson=new List<string>() {"node22"}},
-        new ComplexHierarchical() { Id= "node25", ReportingPerson=new List<string>() {"node22"} },
-        new ComplexHierarchical() { Id= "node26", ReportingPerson=new List<string>() {}},
-        new ComplexHierarchical() { Id= "node28", ReportingPerson=new List<string>() {} },
-         new ComplexHierarchical() { Id= "node31"},
+        new ComplexHierarchical() { Id= "node25", ReportingPerson=new List<string>() {"node22"} },       
+        new ComplexHierarchical() { Id= "node31"},
         new ComplexHierarchical() { Id= "node114", ReportingPerson=new List<string>() {"node11","node21","node31" }}
     };
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
+
 ![Blazor Complex Hierarchical Diagram](../images/blazor-diagram-lineararrangement.png)

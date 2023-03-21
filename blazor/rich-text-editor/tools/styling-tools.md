@@ -59,7 +59,7 @@ The following font style links are referred in the page.
 
 * For **.NET 6** app, refer style in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
-* For **.NET 5 and .NET 3.X** app, refer style in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For **.NET 3.X, .NET 5 and .NET 7** app, refer style in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
 {% highlight cshtml tabtitle=".NET 6 (~/_Layout.cshtml)" %}
@@ -71,7 +71,7 @@ The following font style links are referred in the page.
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 5 and .NET 3.X (~/_Host.cshtml)" %}
+{% highlight cshtml tabtitle=".NET 3.X, .NET 5 & .NET 7 (~/_Host.cshtml)" %}
 
 <head>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto">
@@ -208,7 +208,7 @@ The `RichTextEditorFontColor` and `RichTextEditorBackgroundColor` tag has two mo
 
 By default, the content styles of the Rich Text Editor are not returned while retrieving the HTML value from the editor. So, the styles are not applied when using the HTML value outside the editor. To get the styles from the Rich Text Editor’s content for your application, copy and use the following styles directly in your application. The styles listed are used in the UI elements of the Rich Text Editor.
 
-> Make sure to add a CSS class `e-rte-content` to the content container.
+N> Make sure to add a CSS class `e-rte-content` to the content container.
 
 ```css
 

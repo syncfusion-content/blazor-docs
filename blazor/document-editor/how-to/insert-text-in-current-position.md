@@ -19,7 +19,20 @@ The following example code illustrates how to add the text in current selection.
 
 ```csharp
 // It will insert the provided text in current selection
-container.DocumentEditor.Editor.InsertTextAsync('Syncfusion');
+container.DocumentEditor.Editor.InsertTextAsync("Syncfusion");
+
+<button @onclick="InsertText">Insert Text</button>
+<SfDocumentEditorContainer @ref="container" EnableToolbar="true"  Height="590px" >
+</SfDocumentEditorContainer>
+@code {
+    SfDocumentEditorContainer container;
+
+    // It will insert the provided text in current selection
+    public void InsertText()
+    {
+        container.DocumentEditor.Editor.InsertTextAsync("Syncfusion");
+    }
+}
 ```
 
 ## Insert paragraph in current cursor position
@@ -37,7 +50,7 @@ container.DocumentEditor.Editor.InsertTextAsync('\n');
 
 To insert the HTML content, you have to convert the HTML content to SFDT Format and then use [`PasteAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_PasteAsync_System_String_System_Nullable_Syncfusion_Blazor_DocumentEditor_PasteOptions__) API to insert the sfdt at current cursor position.
 
->Note: HTML string should be well formatted HTML. [`DocIO`](https://help.syncfusion.com/file-formats/docio/html) support only well formatted XHTML.  
+N> HTML string should be well formatted HTML. [`DocIO`](https://help.syncfusion.com/file-formats/docio/html) support only well formatted XHTML.  
 
 The following example illustrates how to insert the HTML content at current cursor position.
 
@@ -51,7 +64,6 @@ The following example illustrates how to insert the HTML content at current curs
 </SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
 
     public async void OnCreated(object args)
@@ -65,7 +77,6 @@ The following example illustrates how to insert the HTML content at current curs
         await container.DocumentEditor.Editor.PasteAsync(sfdtString);
     }
 }
-
 ```
 
->Note: The above example illustrates inserting HTML content. Similarly, you can insert any rich-text content by converting any of the supported file formats (DOCX, DOC, WordML, HTML, RTF) to SFDT.
+N> The above example illustrates inserting HTML content. Similarly, you can insert any rich-text content by converting any of the supported file formats (DOCX, DOC, WordML, HTML, RTF) to SFDT.

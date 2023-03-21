@@ -274,7 +274,7 @@ Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "Exp
 }
 ```
 
->You can find the sample for server-side application using entity framework [here](https://github.com/SyncfusionExamples/Blazor-Gantt-Chart-with-Entity-framework).
+N>You can find the sample for server-side application using entity framework [here](https://github.com/SyncfusionExamples/Blazor-Gantt-Chart-with-Entity-framework).
 
 ## Entity framework in client-side application
 

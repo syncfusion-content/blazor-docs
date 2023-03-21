@@ -1,0 +1,14 @@
+﻿@using Syncfusion.Blazor.Calendars
+
+<p>Start Date : @Value</p>
+
+<p>End Date : @Value1</p>
+    
+<SfDateRangePicker TValue="DateOnly" @bind-StartDate="@Value" @bind-EndDate="@Value1" Width="230px"></SfDateRangePicker>
+
+@code
+{
+    public DateOnly Value { get; set; } = new DateOnly(2022, 11, 12);
+
+    public DateOnly Value1 { get; set; } = new DateOnly(2022, 11, 20);
+}

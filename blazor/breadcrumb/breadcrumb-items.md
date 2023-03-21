@@ -46,7 +46,7 @@ The Breadcrumb items can be generated based on the current URL of the page when 
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-current-url.png)
 
-> This output screenshot shows the [Bind to Location](https://blazor.syncfusion.com/demos/breadcrumb/bind-to-location) sample.
+N> This output screenshot shows the [Bind to Location](https://blazor.syncfusion.com/demos/breadcrumb/bind-to-location) sample.
 
 ## Absolute URL
 
