@@ -448,7 +448,7 @@ The following example shows how to display the tooltip template for various data
 
 ```
 
-![Displaying tooltip template for JSON table binding data in Blazor HeatMap Chart](images/tooltip/blazor-heatmap-chart-json-table-data-bubble-sizeandcolor.png)
+![Displaying tooltip template for JSON table binding data in Blazor HeatMap Chart](images/tooltip/blazor-heatmap-chart-json-table-data-tooltip-template.png)
 
 ##### Cell
 
