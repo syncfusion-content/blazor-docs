@@ -91,6 +91,7 @@ Open **~/Program.cs** file and register the Syncfusion Blazor license key in the
 
 //Register Syncfusion license 
 Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
 ....
@@ -104,6 +105,7 @@ public static async Task Main(string[] args)
 {
     //Register Syncfusion license 
     Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+    
     var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
     ....
