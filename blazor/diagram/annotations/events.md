@@ -54,6 +54,7 @@ The following code example shows how to register and get the notification from t
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Events/TextChangedEvent)
 
 ## See also
 

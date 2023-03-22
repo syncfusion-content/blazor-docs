@@ -13,7 +13,7 @@ documentation: ug
 
 ## Enable or disable history
 
-Inject the `EditorHistory` module in your application to provide history preservation functionality for `DocumentEditor`. Refer to the following code example.
+Inject the [`EditorHistory`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorHistoryModule.html) module in your application to provide history preservation functionality for [`DocumentEditor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html). Refer to the following code example.
 
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor

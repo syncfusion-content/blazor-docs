@@ -25,7 +25,7 @@ GridPageSettings |
 
 State persistence allows the Grid to retain the current grid state in the browser local storage for state maintenance. This action is handled through the `EnablePersistence` property which is set to false by default. When it is set to true, some properties of the Grid will be retained even after refreshing the page.
 
-> The state will be persisted based on **ID** property. So, it is recommended to explicitly set the **ID** property for Grid.
+N> The state will be persisted based on **ID** property. So, it is recommended to explicitly set the **ID** property for Grid.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -114,4 +114,4 @@ You can handle the grid's state manually by using in-built state persistence met
 }
 ```
 
-> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

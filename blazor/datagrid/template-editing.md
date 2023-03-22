@@ -11,11 +11,11 @@ documentation: ug
 
 ## Inline template
 
-> Before adding an Inline template to the DataGrid, it is recommended to go through the [Template](./templates/#templates) section topic to configure the template.
+N> Before adding an Inline template to the DataGrid, it is recommended to go through the [Template](./templates/#templates) section topic to configure the template.
 
 The Inline template editing provides an option to customize the default behavior of Inline editing. Using the Inline template, you can render your editors by defining the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component's [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property as **Normal** and wrapping the HTML elements inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
 
-> Custom components inside the Inline Template must be specified with two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
+N> Custom components inside the Inline Template must be specified with two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
 
 In some cases, you would need to add new field editors in the Inline editing which are not present in the column model. In that case, the Inline template editing will help you to customize the default editing.
 
@@ -128,11 +128,11 @@ The following sample code demonstrates DataGrid enabled with Inline template edi
 </style>
 ```
 
-> In the above sample code, the textbox rendered for **OrderID** column inside the Inline editing template is disabled using its `Enabled` property to prevent editing of the primary key column.
+N> In the above sample code, the textbox rendered for **OrderID** column inside the Inline editing template is disabled using its `Enabled` property to prevent editing of the primary key column.
 
 ## Dialog template
 
-> Before adding dialog template to the datagrid, it is recommended to go through the [Template](./templates/#templates) section topic to configure the template.
+N> Before adding dialog template to the datagrid, it is recommended to go through the [Template](./templates/#templates) section topic to configure the template.
 
 To know about customizing the  **Dialog Template** in Blazor DataGrid Component, you can check this video.
 
@@ -141,7 +141,7 @@ To know about customizing the  **Dialog Template** in Blazor DataGrid Component,
 
 The dialog template editing provides an option to customize the default behavior of dialog editing. Using the dialog template, you can render your editors by defining the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component's [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property as **Dialog** and wrapping the HTML elements inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
 
-> Custom components inside the Dialog Template must be specified with two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
+N> Custom components inside the Dialog Template must be specified with two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
 
 In some cases, you would need to add new field editors in the dialog which are not present in the column model. In that case, the dialog template will help you to customize the default edit dialog.
 
@@ -255,7 +255,7 @@ The following sample code demonstrates DataGrid enabled with dialog template edi
 </style>
 ```
 
-> In the above sample code, the textbox rendered for **OrderID** column inside the dialog template is disabled using its `Enabled` property to prevent editing of the primary key column.
+N> In the above sample code, the textbox rendered for **OrderID** column inside the dialog template is disabled using its `Enabled` property to prevent editing of the primary key column.
 
 The following image represents the dialog template that is displayed on double-clicking a DataGrid cell,
 ![Blazor DataGrid with Dialog Edit Template](./images/blazor-datagrid-dialog-edit-template.png)
@@ -521,7 +521,7 @@ You can edit the complex objects in the [GridColumn](https://help.syncfusion.com
 
 In the following sample, **SfNumericTextBox** is rendered in the dialog template and changes can be updated in the `GridColumn` using the two-way(**@bind-Value**) binding.
 
-> Also, ensure to define **ID** property for the complex column as (`___`) replacing the (`.`) operator in the Field value.
+N> Also, ensure to define **ID** property for the complex column as (`___`) replacing the (`.`) operator in the Field value.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -765,7 +765,7 @@ In the following sample, the add and edit operations of dialog editing are perfo
 }
 ```
 
-> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-crud-dialog-fileuploader)
+N> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-crud-dialog-fileuploader)
 
 ## See Also
 

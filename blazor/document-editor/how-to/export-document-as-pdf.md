@@ -16,7 +16,7 @@ With the help of [`Syncfusion DocIO`](https://help.syncfusion.com/file-formats/d
 The following way illustrates how to convert the document as PDF:
 
 * Using [`SaveAsBlobAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_SaveAsBlobAsync_System_Nullable_Syncfusion_Blazor_DocumentEditor_FormatType__) API, convert the document as Base64String, then convert to stream and send it to Syncfusion DocIO.
-* Finally, convert the stream to PDF using `Syncfusion.DocIORenderer.Net.Core` library.
+* Finally, convert the stream to PDF using [`Syncfusion.DocIORenderer.Net.Core`](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) library.
 
 The following example code illustrates how to process the sfdt in server-side.
 
@@ -33,9 +33,7 @@ The following example code illustrates how to process the sfdt in server-side.
 </SfDocumentEditorContainer>
 
 @code {
-
         SfDocumentEditorContainer container;
-
         string sfdtString;
 
     protected override void OnInitialized()
@@ -62,7 +60,6 @@ The following example code illustrates how to process the sfdt in server-side.
         //To observe the memory go down, null out the reference of sfdtString variable.
         sfdtString = null;
     }
-
     public async void ExportAsPdf()
     {
         SfDocumentEditor editor = container.DocumentEditor;

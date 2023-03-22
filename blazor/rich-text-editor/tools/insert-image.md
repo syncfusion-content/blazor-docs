@@ -27,7 +27,7 @@ The image has been loaded from the local machine and it will be saved in the giv
 <img src="blob:http://blazor.syncfusion.com/3ab56a6e-ec0d-490f-85a5-f0aeb0ad8879" >
 
 ```
-> If you want to insert many tiny images in the editor and don't want a specific physical location for saving images, opt to save the format as `Base64`.
+N> If you want to insert many tiny images in the editor and don't want a specific physical location for saving images, opt to save the format as `Base64`.
 
 ### Restrict image upload based on size
 
@@ -59,13 +59,13 @@ In the following code, the image size has been validated before uploading and it
 {% endhighlight %}
 {% endtabs %}
 
-> You can't restrict while uploading an image as a hyperlink in the insert image dialog. When inserting images using the link, the editor does not allow you to limit the image size. You could not identify the image file size when the image was provided as a link.
+N> You can't restrict while uploading an image as a hyperlink in the insert image dialog. When inserting images using the link, the editor does not allow you to limit the image size. You could not identify the image file size when the image was provided as a link.
 
 ### Server side action
 
 The selected image can be uploaded to the required destination using the controller action below. Map this method name into [RichTextEditorImageSettings.SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_SaveUrl) and provide required destination path through [RichTextEditorImageSettings.Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Path) property.
 
-> [Vie sample in Github.](https://github.com/SyncfusionExamples/blazor-richtexteditor-image-upload).
+N> [Vie sample in Github.](https://github.com/SyncfusionExamples/blazor-richtexteditor-image-upload).
 
 {% tabs %}
 {% highlight razor %}
@@ -280,7 +280,7 @@ When you click the `Image Caption` button, the image is wrapped in an image elem
 
 Sets the default display for an image when it is inserted in the Rich Text Editor using the [RichTextEditorImageSettings.Display](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_Display) property.
 
-> It has two possible options: `Inline` and `Break`.
+N> It has two possible options: `Inline` and `Break`.
 
 {% tabs %}
 {% highlight razor %}
@@ -314,7 +314,7 @@ The Rich Text Editor has built-in image inserting support. The resize points wil
 
 By using the `RichTextEditorImageSettings` property, the server handler can be specified to upload and rename the selected image. Then, the `OnImageUploadSuccess` event could be bound, to receive the modified file name from the server and update it in the Rich Text Editor's insert image dialog.
  
-> [View sample in Github.](https://github.com/SyncfusionExamples/blazor-richtexteditor-rename-image)
+N> [View sample in Github.](https://github.com/SyncfusionExamples/blazor-richtexteditor-rename-image)
 
 {% tabs %}
 {% highlight razor %}

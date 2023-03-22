@@ -75,7 +75,7 @@ The following code example shows how to export the TreeMap in [PNG](https://help
 }
 ```
 
-> Refer to the [code block](#print) to know about the property value of the **GrowthReport**.
+N> Refer to the [code block](#print) to know about the property value of the **GrowthReport**.
 
 ### PDF Export
 
@@ -99,4 +99,4 @@ The following code example shows how to export the TreeMap in [PNG](https://help
 }
 ```
 
-> Refer to the [code block](#print) to know about the property value of the **GrowthReport**.
+N> Refer to the [code block](#print) to know about the property value of the **GrowthReport**.

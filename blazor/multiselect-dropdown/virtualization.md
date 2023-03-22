@@ -42,3 +42,16 @@ In the following code 150 items bound to the component, but only 6 items will lo
 ```
 
 ![Blazor MultiSelect with virtualization](./images/blazor-multiselect-dropdown-virtualization.gif)
+
+## ItemsCount
+
+The data can be fetched in popup based on [ItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_ItemsCount), when enabled the [EnableVirtualization](https://blazor.syncfusion.com/documentation/multiselect-dropdown/virtualization). `ItemsCount` is applicable only when `EnableVirtualization` is used as true. `ItemsCount` is depends on `EnableVirtualization`.
+
+Default value of `ItemsCount` is `5`.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/virtualization/itemsCount-property.razor %}
+
+{% endhighlight %}
+

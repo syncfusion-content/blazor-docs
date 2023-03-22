@@ -92,11 +92,11 @@ Event Marker Tooltip
 
 ![Blazor Gantt Chart displays Event Marker Tooltip](images/blazor-gantt-chart-event-marker-tooltip.png)
 
-> The default value of the `GanttTooltipSettings.ShowTooltip` property is true.
+N> The default value of the `GanttTooltipSettings.ShowTooltip` property is true.
 
 ## Timeline cells tooltip
 
-In the Gantt Chart component, you can enable or disable the mouse hover tooltip of timeline cells using the [GanttTooltipSettings.ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTooltipSettings-1.html#Syncfusion_Blazor_Gantt_GanttTooltipSettings_1_ShowTooltip) property. The default value of this property is true. The following code example shows how to enable the timeline cells tooltip in Gantt Chart.
+In the Gantt Chart component, you can enable or disable the mouse hover tooltip of timeline cells using the [GanttTimelineSettings.ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTimelineSettings.html#Syncfusion_Blazor_Gantt_GanttTimelineSettings_ShowTooltip) property. The default value of this property is true. The following code example shows how to enable the timeline cells tooltip in Gantt Chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -210,8 +210,7 @@ The following are three types of `ClipMode`:
 * `Ellipsis`: Displays ellipsis when content of the cell overflows its area.
 * `EllipsisWithTooltip`: Displays ellipsis when content of the cell overflows its area; it displays the tooltip content when hover over ellipsis.
 
-> NOTE
-> By default, all the column's `ClipMode` property is defined as `EllipsisWithTooltip`.
+N> By default, all the column's `ClipMode` property is defined as `EllipsisWithTooltip`.
 
 ## Editing tooltip
 

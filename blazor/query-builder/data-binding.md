@@ -14,7 +14,7 @@ The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-q
 * List Binding
 * Remote data
 
-> When using DataSource as `IEnumerable<T>` component type, (TValue) will be inferred from its value. While using SfDataManager for data binding then the TValue must be provided explicitly in the query builder component.
+N> When using DataSource as `IEnumerable<T>` component type, (TValue) will be inferred from its value. While using SfDataManager for data binding then the TValue must be provided explicitly in the query builder component.
 
 ## List Binding
 
@@ -251,4 +251,4 @@ Complex Data Binding allows you to create subfield for columns. To implement com
 
 ![Complex Data Binding in Blazor QueryBuilder](./images/blazor-query-builder-complex-db.png)
 
-> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.
+N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.

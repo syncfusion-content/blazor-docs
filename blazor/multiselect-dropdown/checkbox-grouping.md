@@ -49,3 +49,4 @@ You can arrange the datasource items by grouping them with checkbox mode in Mult
 ```
 
 ![Blazor MultiSelect DropDown with Checkbox Grouping](./images/blazor-multiselect-dropdown-checkbox-grouping.png)
+

@@ -249,7 +249,7 @@ In the following example, Listview is grouped based on the category. The categor
         </Template>
         <GroupTemplate>
             <div>
-                <span class="category">Type: @context.Text</span>
+                <span>Type: @context.Text</span>
             </div>
         </GroupTemplate>
     </ListViewTemplates>
@@ -287,15 +287,6 @@ In the following example, Listview is grouped based on the category. The categor
 <style>
     .e-listview.e-control {
         width: 400px;
-    }
-
-    #List .e-list-group-item {
-        height: 56px;
-        line-height: 56px;
-    }
-
-    #List .count {
-        float: right;
     }
 </style>
 
