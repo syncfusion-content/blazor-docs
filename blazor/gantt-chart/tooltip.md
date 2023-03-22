@@ -529,7 +529,7 @@ A manual taskbar tooltip can be customized using the [GanttTooltipSettings.Manua
 
 ### Indicator tooltip
 
-A indicator tooltip can be customized using the [GanttTooltipSettings.IndicatorTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTooltipSettings-1.html#Syncfusion_Blazor_Gantt_GanttTooltipSettings_1_IndicatorTemplate) property. The following code example shows how to customize the indicator tooltip in Gantt Chart.
+Customizing the indicator tooltip in a Gantt Chart using [GanttTooltipSettings.IndicatorTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTooltipSettings-1.html#Syncfusion_Blazor_Gantt_GanttTooltipSettings_1_IndicatorTemplate) allows you to display additional information and elements in a more visually appealing and informative way. By combining data bindings and CSS styles, you can create custom templates that suit your specific needs and use cases. The following code example shows how to customize the indicator tooltip in Gantt Chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -601,7 +601,7 @@ A indicator tooltip can be customized using the [GanttTooltipSettings.IndicatorT
 
 ### Timeline cell tooltip
 
-A timeline cell tooltip can be customized using the [GanttTooltipSettings.TimelineCellTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTooltipSettings-1.html#Syncfusion_Blazor_Gantt_GanttTooltipSettings_1_TimelineCellTemplate) property. The following code example shows how to customize the timeline cell tooltip in Gantt Chart.
+Customizing the timeline cell tooltip in a Gantt Chart using [GanttTooltipSettings.TimelineCellTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTooltipSettings-1.html#Syncfusion_Blazor_Gantt_GanttTooltipSettings_1_TimelineCellTemplate) allows you to display additional information and elements in a more visually appealing and informative way. By combining data bindings and CSS styles, you can create custom templates that suit your specific needs and use cases. The following code example shows how to customize the timeline cell tooltip in Gantt Chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
