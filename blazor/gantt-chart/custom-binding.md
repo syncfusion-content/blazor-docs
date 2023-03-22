@@ -78,7 +78,7 @@ The following sample code demonstrates implementing custom data binding using cu
 @using Syncfusion.Blazor.Data;
 @using Syncfusion.Blazor;
 
-<SfGantt TValue="TaskData" Height="450px" Width="1000px">
+<SfGantt TValue="TaskData" Height="450px" Width="1000px" LoadChildOnDemand="true">
      <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Progress="Progress" Duration="Duration"  ParentID="ParentID">
     </GanttTaskFields>
@@ -153,7 +153,11 @@ The following sample code demonstrates implementing custom data binding using cu
             if (dm.Where != null && dm.Where.Count > 0)
             {
                 // Filtering
-                DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+                if (dm.Where[0].Field != null && dm.Where[0].Field == "ParentID"){}
+                else
+                {
+                    DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+                }
             }
             int count = DataSource.Cast<TaskData>().Count();
             if (dm.Skip != 0)
@@ -201,7 +205,7 @@ The following sample code demonstrates injecting service into Custom Adaptor,
 @using Syncfusion.Blazor.Data;
 @using Syncfusion.Blazor;
 
-<SfGantt TValue="TaskData" Height="450px" Width="1000px">
+<SfGantt TValue="TaskData" Height="450px" Width="1000px" LoadChildOnDemand="true">
      <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Progress="Progress" Duration="Duration"  ParentID="ParentID">
     </GanttTaskFields>
@@ -279,7 +283,11 @@ The following sample code demonstrates injecting service into Custom Adaptor,
             if (dm.Where != null && dm.Where.Count > 0)
             {
                 // Filtering
-                DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+                if (dm.Where[0].Field != null && dm.Where[0].Field == "ParentID"){}
+                else
+                {
+                    DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+                }
             }
             int count = DataSource.Cast<TaskData>().Count();
             if (dm.Skip != 0)
@@ -319,7 +327,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
 @using Syncfusion.Blazor.Data;
 @using Syncfusion.Blazor;
 
-<SfGantt TValue="TaskData" Height="450px" Width="1000px" AllowFiltering="true" AllowSorting="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
+<SfGantt TValue="TaskData" Height="450px" Width="1000px" LoadChildOnDemand="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
      <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Progress="Progress" Duration="Duration"  ParentID="ParentID">
     </GanttTaskFields>
@@ -400,7 +408,11 @@ The following sample code demonstrates implementing CRUD operations for the cust
             if (dm.Where != null && dm.Where.Count > 0)
             {
                 // Filtering
-                DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+                if (dm.Where[0].Field != null && dm.Where[0].Field == "ParentID"){}
+                else
+                {
+                    DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+                }
             }
             int count = DataSource.Cast<TaskData>().Count();
             if (dm.Skip != 0)
@@ -423,33 +435,29 @@ The following sample code demonstrates implementing CRUD operations for the cust
         // Performs Remove operation.
         public override object Remove(DataManager dm, object value, string keyField, string key)
         {
-            foreach (var record in value as List<TaskData>)
-            {
-                GanttData.Remove(GanttData.Where(or => or.TaskID == record.TaskID).FirstOrDefault());
-            }
+            GanttData.Remove(GanttData.Where(or => or.TaskID == int.Parse(value.ToString())).FirstOrDefault());
             return value;
         }
 
         // Performs Update operation.
         public override object Update(DataManager dm, object value, string keyField, string key)
         {
-            foreach(var record in value as List<TaskData>)
+            var data = GanttData.Where(or => or.TaskID == (value as TaskData).TaskID).FirstOrDefault();
+            if (data != null)
             {
-                var data = GanttData.Where(or => or.TaskID == record.TaskID).FirstOrDefault();
-                if (data != null)
-                {
-                    data.TaskID = record.TaskID;
-                    data.TaskName = record.TaskName;
-                    data.StartDate = record.StartDate;
-                    data.EndDate = record.EndDate;
-                    data.Duration = record.Duration;
-                    data.Progress = record.Progress;
-                }
+                data.TaskID = (value as TaskData).TaskID;
+                data.TaskName = (value as TaskData).TaskName;
+                data.StartDate = (value as TaskData).StartDate;
+                data.EndDate = (value as TaskData).EndDate;
+                data.Duration = (value as TaskData).Duration;
+                data.Progress = (value as TaskData).Progress;
             }
             return value;
         }
     }
 }
 ```
+
+N>You can find the sample for custom adaptor [here](https://github.com/SyncfusionExamples/Gantt-Chart-Custom-Adaptor-sample-using-Blazor-server-application).
 
 N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.
