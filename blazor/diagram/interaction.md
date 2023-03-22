@@ -61,6 +61,7 @@ An element can be selected by clicking that element. During single click, all pr
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction)
+
 ## Selecting a group
 
 When a child element of any group is clicked, its contained group is selected instead of the child element. With consecutive clicks on the selected element, selection is changed from top to bottom in the hierarchy of parent group to its children.
@@ -333,6 +334,7 @@ For more information, refer [End Point Dragging](https://blazor.syncfusion.com/d
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction)
+
 ## Straight segment editing
 
 * End point of each straight segment is represented by a thumb that enables to edit the segment.
