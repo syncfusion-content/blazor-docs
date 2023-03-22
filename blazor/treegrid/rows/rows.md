@@ -51,9 +51,10 @@ This is demonstrated in the below sample code where the [GetRowModel](https://he
 
     public async Task TreeProps()
     {
-        var level = await this.TreeGrid.GetRowModel(this.TreeGrid.GetCurrentViewRecords().ToList()[0]).Level;
-        var expanded = await this.TreeGrid.GetRowModel(this.TreeGrid.GetCurrentViewRecords().ToList()[0]).IsExpanded;
-        var childRecords = await this.TreeGrid.GetRowModel(this.TreeGrid.GetCurrentViewRecords().ToList()[0]).HasChildRecords;
+        var treeProps = await this.TreeGrid.GetRowModel(this.TreeGrid.GetCurrentViewRecords().ToList()[0]);
+        var level = treeProps.Level;
+        var expanded = treeProps.IsExpanded;
+        var childRecords = treeProps.HasChildRecords;
     }
 }
 
