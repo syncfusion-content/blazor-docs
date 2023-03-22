@@ -70,6 +70,8 @@ The sort order can be specified by using the property **Direction** .
 
 ### Sorting By Custom Value
 
+Data sorting can also be done based on custom value (user defined) that is provided by user by binding the field name in the property **PropertyName**.
+
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
