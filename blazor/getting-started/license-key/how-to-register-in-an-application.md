@@ -92,13 +92,9 @@ Open **~/Program.cs** file and register the Syncfusion Blazor license key in the
 //Register Syncfusion license 
 Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.RootComponents.Add<App>("#app");
-builder.RootComponents.Add<HeadOutlet>("head::after");
 
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-
-builder.Services.AddSyncfusionBlazor();
-await builder.Build().RunAsync();
+....
+....
 
 {% endhighlight %}
 
@@ -109,12 +105,9 @@ public static async Task Main(string[] args)
     //Register Syncfusion license 
     Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
     var builder = WebAssemblyHostBuilder.CreateDefault(args);
-    builder.RootComponents.Add<App>("#app");
 
-    builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-
-    builder.Services.AddSyncfusionBlazor();
-    await builder.Build().RunAsync();
+    ....
+    ....
 }
 
 {% endhighlight %}
