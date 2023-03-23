@@ -87,12 +87,26 @@ Open **~/Program.cs** file and register the Syncfusion Blazor license key in the
 
 {% tabs %}
 
-{% highlight c# tabtitle="~/Program.cs" hl_lines="3 4" %}
+{% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="1 2" %}
+
+//Register Syncfusion license 
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+
+....
+....
+
+{% endhighlight %}
+
+{% highlight c# tabtitle=".NET 3.X & .NET 5 (~/Program.cs)" hl_lines="3 4" %}
 
 public static async Task Main(string[] args)
 {
-    // Register Syncfusion license
+    //Register Syncfusion license 
     Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+    
+    var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
     ....
     ....
