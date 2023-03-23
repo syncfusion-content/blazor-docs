@@ -363,9 +363,9 @@ Axis label increment in the heat map is used to display the axis labels with reg
 
 ## Multilevel labels
 
-Multilevel labels are used to categorize a group of axis labels as a specific category, displayed using a label. You can add many levels of such labels by adding multiple `HeatMapMultiLevelLabel` tags.
+Multilevel labels are used to categorize a group of axis labels into a single category, which is then displayed with a label. You can add many levels of such labels by adding multiple `HeatMapMultiLevelLabel` tags.
 
-The categories for a single level of multilevel labels can be set using multiple `HeatMapAxisMultiLevelCategories` tags. The starting index and ending index of the category can be set using `Start` and `End` properties in the `HeatMapAxisMultiLevelCategories` tag. The label for the single category can be set using the `Text` property.
+The categories for a single level of multilevel labels can be set using multiple `HeatMapAxisMultiLevelCategories` tags. The starting index and ending index (index represents the index of the HeatMap cell) of the category can be set using `Start` and `End` properties in the `HeatMapAxisMultiLevelCategories` tag. The label for the single category can be set using the `Text` property.
 
 The multi level labels can be customized by using the following properties and classes.
 * `Overflow` - The `Overflow` property of the HeatMapMultiLevelLabel class is used to trim or wrap the multilevel labels when the label overflows the intended space.
