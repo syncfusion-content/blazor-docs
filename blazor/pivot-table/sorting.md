@@ -11,6 +11,11 @@ documentation: ug
 
 # Sorting in Blazor Pivot Table Component
 
+To know about **Sorting** in Blazor Pivot Table component, you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=r6__Vaz4FDg"%}
+
 ## Member Sorting
 
 Allows to order field members in rows and columns either in ascending or descending order. By default, field members in rows and columns are in ascending order.

@@ -500,6 +500,11 @@ User can use [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/ad
 
 The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) supports **ExpandoObject** data source when the model type is unknown. This can be set in [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class. Moreover, the data source supports all the available features in the component.
 
+To know about **ExpandoObject** data binding in Blazor Pivot Table component, you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=TjIkvbIbk28"%}
+
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 @using System.Dynamic
@@ -546,6 +551,11 @@ The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-piv
 ### DynamicObject
 
 The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) supports **DynamicObject** data source when the model type is unknown. This can be set in [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class. Moreover, the data source supports all the available features in the component.
+
+To know about **DynamicObject** data binding in Blazor Pivot Table component, you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=TjIkvbIbk28"%}
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView

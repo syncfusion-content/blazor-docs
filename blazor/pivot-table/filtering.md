@@ -19,6 +19,11 @@ The following are the three different types of filtering:
 * Label filtering
 * Value filtering
 
+To know about **Filtering** in Blazor Pivot Table component, you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=r6__Vaz4FDg"%}
+
 N> When all the above filtering options are disabled via code-behind, then the filter icon would be disabled in the field list or grouping bar UI.
 
 ## Member filtering
