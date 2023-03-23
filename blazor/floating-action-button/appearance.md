@@ -9,7 +9,7 @@ documentation: ug
 
 # Appearance of Blazor Floating Action Button Component
 
-You can also customize the appearance of Floating Action Button component.
+This section explains the customization of Floating Action Button component appearence.
 
 ## Built-in styles
 
