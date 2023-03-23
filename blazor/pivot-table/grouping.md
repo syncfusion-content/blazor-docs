@@ -11,11 +11,6 @@ documentation: ug
 
 Grouping is the most-useful feature in pivot table and the component automatically groups date, time, number and string. For example, the date type can be formatted and displayed based on year, quarter, month, and more. Likewise, the number type can be grouped range-wise, such as 1-5, 6-10, etc. These group fields will act as individual fields and allows users to drag them between different axes such as columns, rows, values, and filters and create pivot table at runtime.
 
-To know about **Grouping** in Blazor Pivot Table component, you can check on this video.
-
-{% youtube
-"youtube:https://www.youtube.com/watch?v=t-LDymoVUzA"%}
-
 N> This feature is applicable only for relational data source.
 
 The grouping can be enabled by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewModel-1.html#Syncfusion_Blazor_PivotView_PivotViewModel_1_AllowGrouping) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. To perform the grouping action via UI, right click on the pivot table's row or column header. Select "**Group**", a dialog will appear which must be filled with the appropriate options to group the data. To ungroup, right click on the pivot table's row or column header, select "**Ungroup**".
@@ -25,6 +20,11 @@ The following are the three different types of grouping:
 * Number Grouping
 * Date Grouping
 * Custom Grouping
+
+To have a quick glance on how to group row and column field items in the Blazor Pivot Table, watch this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=t-LDymoVUzA"%}
 
 N> Similar to Excel, only one type of grouping can be applied for a field.
 

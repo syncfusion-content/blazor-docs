@@ -13,7 +13,7 @@ N> This feature is applicable only for relational data source.
 
 Cell edit allows to add, delete, or update the raw items of any value cell from the pivot table. The raw items can be viewed in a data grid inside a new window on double-clicking the appropriate value cell. In the data grid, CRUD operations can be performed by double-clicking the cells or using toolbar options. Once user finishes editing raw items, aggregation will be performed for the updated values in pivot table component immediately. This support can be enabled by setting the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html#Syncfusion_Blazor_PivotView_PivotViewCellEditSettings_AllowEditing) property in [PivotViewCellEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html) class to **true**.
 
-To know about **Editing** in Blazor Pivot Table component, you can check on this video.
+To learn about how to work with **Editing** options in the Blazor Pivot Table, you can check on this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=bnOn_L6dPY4"%}

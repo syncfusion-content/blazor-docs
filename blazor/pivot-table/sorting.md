@@ -11,7 +11,7 @@ documentation: ug
 
 # Sorting in Blazor Pivot Table Component
 
-To know about **Sorting** in Blazor Pivot Table component, you can check on this video.
+To have a quick glance on how to sort data in the Blazor Pivot Table, watch this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=r6__Vaz4FDg"%}
