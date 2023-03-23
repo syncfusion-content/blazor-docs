@@ -9,7 +9,7 @@ documentation: ug
 
 # Breakpoints in Blazor Media Query Component
 
-The Blazor Media Query breakpoints are used to create responsive, adaptable layouts for your web applications by referring to specific points in a device's screen size where the layout and styling of a web page or application may need to be adjusted to ensure the best possible user experience. 
+The Blazor Media Query breakpoints are used to create responsive and adaptive layouts for your web applications by referring to specific points in a device's screen size where the layout and styling of the web application need to be adjusted to ensure the best possible user experience. 
 
 ## Built-in breakpoints
 
@@ -23,7 +23,7 @@ The built-in breakpoint values of Media Query component are as follows:
 
 ### Modifying built-in breakpoints
 
-You can modify the query for built-in breakpoints by using the [MediaQuery](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MediaBreakpoint.html#Syncfusion_Blazor_MediaBreakpoint_MediaQuery) property of the [MediaBreakpoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MediaBreakpoint.html) in `SfMediaQuery` to customize the appearance of the web application depending on your needs.
+You can modify the query for built-in breakpoints by using the [MediaQuery](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MediaBreakpoint.html#Syncfusion_Blazor_MediaBreakpoint_MediaQuery) property of the [MediaBreakpoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MediaBreakpoint.html) in `SfMediaQuery`.
 
 ```cshtml
 
