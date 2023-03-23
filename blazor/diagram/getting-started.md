@@ -271,7 +271,16 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor Diagram` component will be rendered in the default web browser.
 
-## Adding Nodes and Connectors
+## Basic Diagram elements
+* Node: Visualize any graphical object using nodes, which can be arranged and manipulated at the same time on a Blazor diagram page.
+* Connector: Represents the relationship between two nodes. Three types of connectors provided as follows:
+ 1) Orthogonal
+ 2) Bezier
+ 3) Straight
+* Port: Acts as the connection points of node or connector and allows you to create connections with only specific points.
+* Annotation: Additional information can be shown by adding text or labels on nodes and connectors.
+
+## How to create flowchart diagram
 
 Let us create and add a [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) with specific position, size, label, and shape. Connect two or more nodes by using a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html).
 
@@ -405,6 +414,87 @@ Let us create and add a [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.
 ![Blazor Diagram Component](images/blazor-diagram-component.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent).
+
+## How to create organizational chart
+
+A built-in automatic layout algorithm is specifically designed for organizational charts to arrange parent and child node positions automatically.
+
+{% tabs %}
+{% highlight razor %}
+
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
+    <DataSourceSettings ID="Id" ParentID="Team" DataSource="@DataSource"></DataSourceSettings>
+    <SnapSettings>
+        <HorizontalGridLines LineColor="white" LineDashArray="2,2">
+        </HorizontalGridLines>
+        <VerticalGridLines LineColor="white" LineDashArray="2,2">
+        </VerticalGridLines>
+    </SnapSettings>
+    <Layout Type="LayoutType.OrganizationalChart" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing" GetLayoutInfo="GetLayoutInfo">
+    </Layout>
+</SfDiagramComponent>
+
+@code
+{
+    //Initializing layout.
+    int HorizontalSpacing = 40;
+    int VerticalSpacing = 50;
+
+    //To configure every subtree of the organizational chart.
+    private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
+    {
+        options.AlignmentType = SubTreeAlignmentType.Right;
+        options.Orientation = Orientation.Vertical;
+        return options;
+    }
+
+    //Creates node with some default values.
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+        Node node = obj as Node;
+        node.Height = 50;
+        node.Width = 150;
+        node.Style = new ShapeStyle() { Fill = "#6495ED", StrokeWidth = 1, StrokeColor = "Black" };
+    }
+
+    //Creates connectors with some default values.
+    private void OnConnectorCreating(IDiagramObject connector)
+    {
+        Connector connectors = connector as Connector;
+        connectors.Type = ConnectorSegmentType.Orthogonal;
+        connectors.Style = new TextStyle() { StrokeColor = "#6495ED", StrokeWidth = 1 };
+        connectors.TargetDecorator = new DecoratorSettings
+        {
+            Shape = DecoratorShape.None,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED", }
+        };
+    }
+
+    public class OrgChartDataModel
+    {
+        public string Id { get; set; }
+        public string Team { get; set; }
+        public string Role { get; set; }
+    }
+    public object DataSource = new List<object>()
+    {
+        new OrgChartDataModel() { Id= "1", Role= "General Manager" },
+        new OrgChartDataModel() { Id= "2", Role= "Human Resource Manager", Team= "1" },
+        new OrgChartDataModel() { Id= "3", Role= "Design Manager", Team= "1" },
+        new OrgChartDataModel() { Id= "4", Role= "Operation Manager", Team= "1" },
+        new OrgChartDataModel() { Id= "5", Role= "Marketing Manager", Team= "1" }
+    };
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
+
+![Blazor Organization Diagram ChildNode in Vertical Right](images/blazor-diagram-childnode-at-vertical-right.png)
 
 ## See Also
 
