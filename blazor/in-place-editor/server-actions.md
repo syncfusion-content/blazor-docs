@@ -59,11 +59,11 @@ In the following sample, the `OnActionSuccess` event will trigger once the value
         <td class="sample-td">
             <SfInPlaceEditor Type="Syncfusion.Blazor.InPlaceEditor.InputType.MultiSelect" @bind-Value="@MultiSelectValue" SubmitOnEnter="true" Name="Skill" SaveUrl="https://ej2services.syncfusion.com/production/web-services/api/Editor/UpdateData" PrimaryKey="FrameWork" Adaptor="Adaptors.UrlAdaptor" TValue="string[]">
                 <EditorComponent>
-                    <SfMultiSelect Placeholder="Select skill" Mode="VisualMode.Box" @bind-Value="@MultiSelectValue" DataSource="@DataSource">
+                    <SfMultiSelect TValue="string[]" TItem="Program" Placeholder="Select skill" Mode="VisualMode.Box" @bind-Value="@MultiSelectValue" DataSource="@Games">
                         <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
                     </SfMultiSelect>
                 </EditorComponent>
-                <InPlaceEditorEvents OnActionSuccess="OnSuccess" TValue="string"></InPlaceEditorEvents>
+                <InPlaceEditorEvents OnActionSuccess="@OnSuccess" TValue="string[]"></InPlaceEditorEvents>
             </SfInPlaceEditor>
         </td>
     </tr>
@@ -87,9 +87,7 @@ In the following sample, the `OnActionSuccess` event will trigger once the value
 </style>
 
 @code {
-    public string[] MultiSelectValue = new string[] { "JavaScript", "jQuery" };
-
-    public string[] DataSource = new string[] { "Android", "JavaScript", "jQuery", "TypeScript", "Angular", "React", "Vue", "Ionic" };
+    public string[] MultiSelectValue = new string[] { "Js", "Jq" };
 
     public class Program
     {
@@ -97,7 +95,7 @@ In the following sample, the `OnActionSuccess` event will trigger once the value
         public string Text { get; set; }
     }
     private List<Program> Games = new List<Program>()
-{
+    {
         new Program(){ ID= "Ad", Text= "Android" },
         new Program(){ ID= "Js", Text= "JavaScript" },
         new Program(){ ID= "Jq", Text= "jQuery" },
@@ -108,7 +106,7 @@ In the following sample, the `OnActionSuccess` event will trigger once the value
         new Program(){ ID= "Io", Text= "Ionic"}
     };
 
-    public void OnSuccess(ActionEventArgs<string> args)
+    public void OnSuccess(ActionEventArgs<string[]> args)
     {
         Console.WriteLine("Event is triggered");
     }
