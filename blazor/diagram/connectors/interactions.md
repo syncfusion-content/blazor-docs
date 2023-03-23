@@ -11,7 +11,7 @@ documentation: ug
 
 Connectors can be selected, dragged, and routed over the diagram page.
 
-## Select
+## How to select and unselect the connector
 
 A connector can be selected at runtime by using the [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Select_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagram_IDiagramObject__System_Nullable_System_Boolean__) method and clear the selection in the diagram using the [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection). The following code explains how to select and clear selection in the diagram.
 
@@ -89,7 +89,7 @@ And also the selection can be enabled during the interaction.
 
 ![Selection in Blazor Diagram Connector](../images/blazor-diagram-connector-selection.gif)
 
-## Drag
+## How to drag a connector
 
 A connector can be dragged at runtime by using the [Drag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Drag_Syncfusion_Blazor_Diagram_IDiagramObject_System_Double_System_Double_) method. The following code explains how to drag the connector by using the drag method.
 
@@ -217,7 +217,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Dragging Connector End Point in Blazor Diagram](../images/blazor-diagram-drag-connector-end-point.gif)
 
-## Connector Flip
+## How to flip the connector
 
 The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) is performed to give the mirrored image of the original element.
 
@@ -230,3 +230,4 @@ For more information about the connector flip, refer to [Connector Flip](../flip
 * [How to change the segments](./segments)
 
 * [How to get the connector events](./events)
+ 

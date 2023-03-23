@@ -126,6 +126,8 @@ When editing is completed by focus out or by pressing the **Enter** key, the mod
 
 ## CRUD operations
 
+The Blazor TreeView component provides dynamic options for adding, removing, and renaming nodes.
+
 ### CRUD operation using list
 
 The Blazor TreeView component allows for the integration of a context menu to perform CRUD operations, such as adding, removing, and renaming nodes, on the TreeView. 
@@ -362,6 +364,8 @@ The example provided demonstrates how to use the `ItemSelected` event of the con
 }
 
 ```
+
+![CRUD operation using list in Blazor TreeView](./images/blazor-treeview-node-with-context-menu.png)
 
 ### Add or remove node programmatically
 
@@ -1689,7 +1693,7 @@ An example of this can be seen in the provided code snippet, where the node edit
 
 ## Get index of editing node
 
-In the Blazor TreeView component, we can obtain the index value of the editing node by using the NodeEditing event. To access the TreeView data, we can use the [GetTreeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_GetTreeData_System_String_) method and store it in a variable. Then, we can use a for loop to check if the id of the current data item matches the id of the node being edited. If it does, it is the index of the edited node.
+In the Blazor TreeView component, you can obtain the index value of the editing node by using the [NodeEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeEditing) event. To access the TreeView data, you can use the [GetTreeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_GetTreeData_System_String_) method and store it in a variable. Then, you can use a for loop to check if the id of the current data item matches the id of the node being edited. If it does, it is the index of the edited node.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -1899,7 +1903,7 @@ In the Blazor TreeView component, we can obtain the index value of the editing n
 
 ## Prevent node editing on node double-click
 
-In the Blazor TreeView component, we have the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowEditing) property, which enables editing a node's text by either double-clicking on the TreeView node or pressing the F2 key. When the `AllowEditing` property is set to true, the TreeView allows for editing a node by either double-clicking on the node or navigating to the node and pressing the F2 key. However, when the property is set to false, the TreeView only allows for reading the node's text.
+In the Blazor TreeView component, you have the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowEditing) property, which enables editing a node's text by either double-clicking on the TreeView node or pressing the F2 key. When the `AllowEditing` property is set to true, the TreeView allows for editing a node by either double-clicking on the node or navigating to the node and pressing the F2 key. However, when the property is set to false, the TreeView only allows for reading the node's text.
 
 The default value of `AllowEditing` property is false.
 

@@ -277,6 +277,8 @@ The default value of `AllowDragAndDrop` property is false.
 
 ```
 
+![Drag and drop within a TreeView](./images/blazor-treeview-drag-and-drop-within-treeview.png)
+
 ## Drag and drop between TreeViews
 
 The Blazor TreeView component has built-in support for drag and drop functionality, allowing for nodes to be dragged and dropped on other nodes within the same or different trees using the [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowDragAndDrop) property. 
@@ -535,6 +537,8 @@ The Blazor TreeView component has built-in support for drag and drop functionali
 </style>
 
 ```
+
+![Drag and drop between TreeViews](./images/blazor-treeview-drag-and-drop-between-treeviews.png)
 
 ## Restrict drag and drop to individual node
 

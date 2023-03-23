@@ -353,3 +353,5 @@ The Blazor TreeView component provides the ability to customize the appearance o
 </style>
 
 ```
+
+![Blazor TreeView with Header Template](./images/blazor-treeview-template-header.png)

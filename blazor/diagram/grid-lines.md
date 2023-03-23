@@ -11,7 +11,7 @@ documentation: ug
 
 Gridlines are the pattern of lines drawn behind the diagram elements. It provides a visual guidance while dragging or arranging the objects on the diagram surface. The [SnapSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html) property is used to customize the gridlines and control the snapping behavior in the diagram.
 
-## Customize the Gridlines visibility
+## How to customize the gridlines visibility
 
 The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_Constraints) property of SnapSettings class allows to control the visibility of the gridlines.
 
@@ -188,7 +188,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Snapping to GridLines in Blazor Diagram](images/blazor-diagram-snap-to-gridlines.gif)
 
-### Customization of snap intervals
+### How to customize the snap intervals
 
 By default, the objects are snapped towards the nearest gridline. The gridline or position towards where the diagram object snaps can be customized by using [SnapIntervals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramGridLines.html#Syncfusion_Blazor_Diagram_DiagramGridLines_SnapIntervals) property of the HorizontalGridLines and VerticalGridLines.
 

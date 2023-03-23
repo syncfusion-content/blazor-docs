@@ -7,7 +7,13 @@ control: TreeView
 documentation: ug
 ---
 
-# Navigation URL binding in Blazor TreeView Component
+# Navigation in Blazor TreeView Component
+
+Using the **NavigateUrl** of the Blazor TreeView component, you can navigate from one page to another based on the node selection and link provided in the corresponding nodes.
+
+To perform navigation in the TreeView component, use and map the **NavigateUrl** field in the data source.
+
+## Navigation URL binding in Blazor TreeView Component
 
 In the Blazor TreeView component, use the **NavigateUrl** property to specify the URL to navigate to when the tree node is selected.
 

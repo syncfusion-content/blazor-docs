@@ -11,6 +11,10 @@ documentation: ug
 
 The Mention is a templated blazor component, that allow you to customize various part of the UI using template parameters. It allows you to render custom components or content based on your own logic. The Mention has been provided with several options to customize each suggestion list items.
 
+To get started quickly with templates in Blazor Mention Component, you can check the video below.
+
+{% youtube "https://www.youtube.com/watch?v=POqb-VVKCOA" %}
+
 ## Template context
 
 The templates used by the Mention component are of type `RenderFragment`, which is a special type of delegate that represents a block of Razor code that can be rendered as part of a component's user interface. The templates used by the Mention component are passed parameters that can be accessed using an implicit parameter named `context`.
