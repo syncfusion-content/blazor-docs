@@ -19,7 +19,7 @@ This section briefly explains about how to include [Blazor Pivot Table](https://
 To get start quickly with Blazor Pivot Table component, you can check out this video.
 
 {% youtube
-"youtube:https://www.youtube.com/watch?v=1roaubxylGc"%}
+"youtube:https://www.youtube.com/watch?v=SUTN0oyVwPo&t=109s"%}
 
 ## Prerequisites
 
