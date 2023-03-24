@@ -104,11 +104,11 @@ The Diagram control provides the following event for the scroll settings.
 ## AutoScroll 
 The auto-scroll feature automatically scrolls the diagram whenever the node is moved beyond its boundaries. Auto-scroll is enabled during node dragging and  node resizing, and multiple-selection operations.
 
-The diagram event OnAutoScrollChange gets triggered when the autoscroll (scrollbars) is changed, and you can do your own customization in this event. 
+The diagram event [OnAutoScrollChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_OnAutoScrollChange) gets triggered when the autoscroll (scrollbars) is changed, and you can do your own customization in this event. 
 
 The auto-scrolling region is limited by the [ScrollLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollLimit) property of the [ScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html) class.
 
-The autoscroll behavior in your diagram can be enabled or disabled by using the EnableAutoScroll property of the diagram. The following code example illustrates how to enabled/disabled the autoscroll support for node.
+The autoscroll behavior in your diagram can be enabled or disabled by using the [EnableAutoScroll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_EnableAutoScroll) property of the diagram. The following code example illustrates how to enabled/disabled the autoscroll support for node.
 
 
 ```cshtml
@@ -148,7 +148,7 @@ The autoscroll behavior in your diagram can be enabled or disabled by using the 
 ```
 |![AutoScroll support for node](images/Autoscroll.gif) | 
 ## AutoScroll Padding
-The AutoScrollPadding is used to specify the maximum distance between the object and the diagram's edge that will trigger auto-scrolling. When auto-scrolling is enabled, the diagram viewport will automatically scroll in the direction of the mouse movement when the user drags a node to the edge of the viewport. The padding to start the auto-scrolling at the edge can be controlled by setting the AutoScrollPadding property.
+The [AutoScrollPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_AutoScrollPadding) is used to specify the maximum distance between the object and the diagram's edge that will trigger auto-scrolling. When auto-scrolling is enabled, the diagram viewport will automatically scroll in the direction of the mouse movement when the user drags a node to the edge of the viewport. The padding to start the auto-scrolling at the edge can be controlled by setting the AutoScrollPadding property.
 
 N> The default value will be 20 pixels.
 The following code example illustrates how to set autoscroll padding.

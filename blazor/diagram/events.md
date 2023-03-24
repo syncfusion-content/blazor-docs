@@ -560,7 +560,7 @@ The [KeyUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
 }
 ```
 ## OnAutoScrollChange Event
-The OnAutoScrollChange event is triggered when changes are detected to the scroll position, extent, or viewport size as a result of auto scrolling for diagram elements. To explore the arguments, refer to the AutoScrollChangeEventArgs class.
+The [OnAutoScrollChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_OnAutoScrollChange) event is triggered when changes are detected to the scroll position, extent, or viewport size as a result of auto scrolling for diagram elements. To explore the arguments, refer to the [AutoScrollChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AutoScrollChangeEventArgs.html) class.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
