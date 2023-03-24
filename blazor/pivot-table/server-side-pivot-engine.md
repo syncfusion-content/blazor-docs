@@ -7,13 +7,13 @@ control: Pivot Table
 documentation: ug
 ---
 
-> In general, the Blazor Pivot Table is created using the built-in engine for given data source. This is an optional feature that allows you to create the Pivot Table with a server-side pivot engine and external data binding. And this option is applicable only for relational data source.
+> In general, the pivot table is created using the built-in engine for given data source. This is an optional feature that allows you to create the pivot table with a server-side pivot engine and external data binding. And this option is applicable only for relational data source.
 
 # Getting Started with Syncfusion Server-side Pivot Engine
 
-This section briefs the Syncfusion assembly [`Syncfusion.EJ2.Pivot`](https://www.nuget.org/packages/Syncfusion.EJ2.Pivot/), which is used in a server-side application to perform all Pivot calculations such as aggregation, filtering, sorting, grouping, and so on, and only the information to be displayed in the Blazor Pivot Table's viewport is passed to the client-side (browser) via web service (Web API) rather than the entire data source. It reduces network traffic and improves the rendering performance of the Blazor Pivot Table, especially when dealing with large amounts of data. It also works best with virtual scrolling enabled and supports all the Blazor Pivot Table's existing features.
+This section briefs the Syncfusion assembly [`Syncfusion.EJ2.Pivot`](https://www.nuget.org/packages/Syncfusion.EJ2.Pivot/), which is used in a server-side application to perform all pivot calculations such as aggregation, filtering, sorting, grouping, and so on, and only the information to be displayed in the pivot table's viewport is passed to the client-side (browser) via web service (Web API) rather than the entire data source. It reduces network traffic and improves the rendering performance of the pivot table, especially when dealing with large amounts of data. It also works best with virtual scrolling enabled and supports all the pivot table's existing features.
 
-## Quick steps to render the Pivot Table by using the server-side Pivot Engine
+## Quick steps to render the Blazor Pivot Table by using the server-side Pivot Engine
 
 ### Download and installing Server-side Pivot Engine
 
@@ -21,60 +21,77 @@ This section briefs the Syncfusion assembly [`Syncfusion.EJ2.Pivot`](https://www
 
 **2.** The **PivotController** (Server-side) application that is downloaded includes the following files.
 
-* **PivotController.cs** file under **Controllers** folder – This helps to do data communication with Pivot Table.
+* **PivotController.cs** file under **Controllers** folder – This helps to do data communication with pivot table.
 * **DataSource.cs** file under **DataSource** folder – This file has model classes to define the structure of the data sources.
 * The sample data source files **sales.csv** and **sales-analysis.json** under **DataSource** folder.
 
 **3.** Open the **PivotController** application in Visual Studio where the Syncfusion library [`Syncfusion.EJ2.Pivot`](https://www.nuget.org/packages/Syncfusion.EJ2.Pivot/) will be downloaded automatically from the nuget.org site.
 
-![Solution Explorer](./images/solution-explorer.png)
+![Solution Explorer](./images/pivotcontroller-solution-explorer.png)
 
-### Connecting Pivot Table to Server-side Pivot Engine
+### Connecting Blazor Pivot Table to Server-side Pivot Engine
 
 **1.** Run the **PivotController** (Server-side) application which will be hosted in IIS shortly.
 
-**2.** Then in the Pivot Table sample, set the [`mode`](https://ej2.syncfusion.com/documentation/api/pivotview/dataSourceSettingsModel/#mode) property under [`dataSourceSettings`](https://ej2.syncfusion.com/documentation/api/pivotview/dataSourceSettings/) as **Server** and map the URL of the hosted Server-side application in [`URL`](https://ej2.syncfusion.com/javascript/documentation/api/pivotview/dataSourceSettings/#url) property of `dataSourceSettings`.
+**2.** Then in the pivot table sample, set the [EnableServerSideAggregation]() property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html) to **true** and map the URL of the hosted Server-side application in [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property of `PivotViewDataSourceSettings`.
 
-```typescript
-import { PivotView } from '@syncfusion/ej2-pivotview';
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-let pivotObj: PivotView = new PivotView({
-    dataSourceSettings: {
-        url: 'http://localhost:61379/api/pivot/post',
-        mode: 'Server',
-        //Other codes here...
+<SfPivotView TValue="PivotViewData" Height="300">
+    <PivotViewDataSourceSettings TValue="PivotViewData" Url="http://localhost:61379/api/pivot/post" EnableServerSideAggregation="true">
+        //Bind report here...
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code{
+    public class PivotViewData
+    {
+        public string ProductID { get; set; }
+        public string Country { get; set; }
+        public string Product { get; set; }
+        public double Sold { get; set; }
+        public double Price { get; set; }
+        public string Year { get; set; }
     }
-});
-pivotTableObj.appendTo('#PivotTable');
+}
 
 ```
 
 **3.** Frame and set the report based on the data source available in the **PivotController** application.
 
-```typescript
-import { PivotView } from '@syncfusion/ej2-pivotview';
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-let pivotObj: PivotView = new PivotView({
-    dataSourceSettings: {
-        url: 'http://localhost:61379/api/pivot/post',
-        mode: 'Server',
-        rows: [{
-            name: 'ProductID', caption: 'Product ID'
-        }],
-        formatSettings: [{
-            name: 'Price', format: 'C'
-        }],
-        columns: [{
-            name: 'Year', caption: 'Production Year'
-        }],
-        values: [
-            { name: 'Sold', caption: 'Units Sold' },
-            { name: 'Price', caption: 'Sold Amount' }
-        ],
+<SfPivotView TValue="PivotViewData" Height="300">
+    <PivotViewDataSourceSettings TValue="PivotViewData" Url="http://localhost:61379/api/pivot/post" EnableServerSideAggregation="true">
+        <PivotViewRows>
+            <PivotViewRow Name="ProductID"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year" Caption="Production Year"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewValues>
+            <PivotViewValue Name="Price" Caption="Sold Amount"></PivotViewValue>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Price" Format="C0"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code{
+    public class PivotViewData
+    {
+        public string ProductID { get; set; }
+        public string Country { get; set; }
+        public string Product { get; set; }
+        public double Sold { get; set; }
+        public double Price { get; set; }
+        public string Year { get; set; }
     }
-    //Other codes here...
-});
-pivotTableObj.appendTo('#PivotTable');
+}
 
 ```
 
@@ -86,7 +103,7 @@ pivotTableObj.appendTo('#PivotTable');
 
 ### Supportive Data Sources
 
-The server-side Pivot Engine supports the following data sources,
+The server-side pivot engine supports the following data sources,
 * Collection
 * JSON
 * CSV
@@ -95,7 +112,7 @@ The server-side Pivot Engine supports the following data sources,
 
 #### Collection
 
-The collection data sources such as List, IEnumerable, and so on are supported. This can be bound using the **GetData** controller method. Also, in the Pivot Table sample, set the [`type`](https://ej2.syncfusion.com/documentation/api/pivotview/fieldOptionsModel/#type) property under [`dataSourceSettings`](https://ej2.syncfusion.com/documentation/api/pivotview/dataSourceSettings/) to **JSON**, which is also the default enumeration value.
+The collection data sources such as List, IEnumerable, and so on are supported. This can be bound using the **GetData** method of the **PivotController.cs**.
 
 In the server-side application **(PivotController)**, a collection type data source is framed in the **DataSource.cs** file as shown in the following.
 
@@ -158,30 +175,40 @@ public async Task<object> GetData(FetchData param)
 
 ```
 
-Finally set the appropriate report to the Pivot Table sample based on the above data source.
+Finally set the appropriate report to the pivot table sample based on the above data source.
 
-```typescript
-let pivotObj: PivotView = new PivotView({
-    dataSourceSettings: {
-        url: 'http://localhost:61379/api/pivot/post',
-        mode: 'Server',
-        type: 'JSON',
-        rows: [{
-            name: 'ProductID', caption: 'Product ID'
-        }],
-        formatSettings: [{
-            name: 'Price', format: 'C'
-        }],
-        columns: [{
-            name: 'Year', caption: 'Production Year'
-        }],
-        values: [
-            { name: 'Sold', caption: 'Units Sold' },
-            { name: 'Price', caption: 'Sold Amount' }
-        ],
+```cshtml
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="PivotViewData" Height="300">
+    <PivotViewDataSourceSettings TValue="PivotViewData" Url="http://localhost:61379/api/pivot/post" EnableServerSideAggregation="true">
+        <PivotViewRows>
+            <PivotViewRow Name="ProductID"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year" Caption="Production Year"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewValues>
+            <PivotViewValue Name="Price" Caption="Sold Amount"></PivotViewValue>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Price" Format="C0"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code{
+    public class PivotViewData
+    {
+        public string ProductID { get; set; }
+        public string Country { get; set; }
+        public string Product { get; set; }
+        public double Sold { get; set; }
+        public double Price { get; set; }
+        public string Year { get; set; }
     }
-    //Other codes here...
-});
+}
 
 ```
 
@@ -189,7 +216,7 @@ let pivotObj: PivotView = new PivotView({
 
 #### JSON
 
-The JSON data from a local *.json file type can be connected to the Pivot Table. Here, the file can be read by the **StreamReader** option, which will give the result in the string format. The resultant string needs to be converted to collect data that can be bound to the Server-side pivot engine.
+The JSON data from a local json file type can be connected to the pivot table. Here, the file can be read by the **StreamReader** option, which will give the result in the string format. The resultant string needs to be converted to collection data that can be bound to the Server-side pivot engine.
 
 In the Server-side application, **sales-analysis.json** file is available under **DataSource** folder and its model type is defined in **DataSource.cs** file.
 
@@ -242,28 +269,37 @@ public async Task<object> GetData(FetchData param)
 
 Finally set the appropriate report to the Pivot Table sample based on the above data source.
 
-```typescript
-let pivotObj: PivotView = new PivotView({
-    dataSourceSettings: {
-        url: 'http://localhost:61379/api/pivot/post',
-        mode: 'Server',
-        type: 'JSON',
-        rows: [{
-            name: 'EneSource', caption: 'Energy Source'
-        }],
-        formatSettings: [{
-            name: 'ProCost', format: 'C'
-        }],
-        columns: [{
-            name: 'EnerType', caption: 'Energy Type'
-        }],
-        values: [
-            { name: 'PowUnits', caption: 'Units Sold' },
-            { name: 'ProCost', caption: 'Sold Amount' }
-        ],
-    },
-    //Other codes here...
-});
+```cshtml
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="PivotJSONData" Height="300">
+    <PivotViewDataSourceSettings TValue="PivotJSONData" Url="http://localhost:61379/api/pivot/post" EnableServerSideAggregation="true">
+        <PivotViewRows>
+            <PivotViewRow Name="EneSource" Caption="Energy Source"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewColumns>
+            <PivotViewColumn Name="EnerType" Caption="Energy Type"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewValues>
+            <PivotViewValue Name="ProCost" Caption="Sold Amount"></PivotViewValue>
+            <PivotViewValue Name="PowUnits" Caption="Units Sold"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="ProCost" Format="C0"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code{
+    public class PivotJSONData
+    {
+        public string Date { get; set; }
+        public string Sector { get; set; }
+        public string EnerType { get; set; }
+        public string EneSource { get; set; }
+        public int PowUnits { get; set; }
+        public int ProCost { get; set; }
+    }
 
 ```
 
