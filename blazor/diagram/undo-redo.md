@@ -78,6 +78,53 @@ The [HistoryChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Undo-Redo)
 
+## Stack Limit
+
+The StackLimit property of history manager is used to restrict the number of history entries that can be stored on the history list to limit undo and redo action.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+@* Initialize Diagram *@
+
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
+<DiagramHistoryManager StackLimit="@stackLimit"></DiagramHistoryManager>
+</SfDiagramComponent>
+
+@code
+{
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+    int stackLimit = 3;
+
+    protected override void OnInitialized()
+    {
+        Node diagramNode = new Node()
+        {
+            ID = "node1",
+            OffsetX = 300,
+            OffsetY = 140,
+            Width = 145,
+            Height = 60,
+            Style = new ShapeStyle()
+            {
+                Fill = "#357BD2",
+                StrokeColor = "White"
+            },
+            Shape = new FlowShape()
+            {
+                Type = NodeShapes.Flow,
+                Shape = NodeFlowShapes.Terminator
+            }
+        };
+        nodes.Add(diagramNode);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Undo-Redo)
+
+
 ## How to track custom entry
 
 [Diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) provides options to track the changes that are made to custom properties. The following example illustrates how to track such custom property changes.
