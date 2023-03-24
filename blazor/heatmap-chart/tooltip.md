@@ -159,9 +159,13 @@ In the following example, the data bound to the HeatMap such as corresponding x 
 
 The following example shows how to display the tooltip template for various data bindings in the HeatMap.
 
-#### Array binding 
+#### Array binding
+
+The data is represented using array binding, and the tooltip is displayed by setting the TValue type to dictionary and obtaining the corresponding x and y axes labels and cell values.
 
 ##### Table
+
+The following example illustrates to display the tooltip template data by using array table binding.
 
 ```cshtml
 
@@ -264,6 +268,8 @@ The following example shows how to display the tooltip template for various data
 
 ##### Cell
 
+The following example illustrates to display the tooltip template data by using array cell binding.
+
 ```cshtml
 
 @using Syncfusion.Blazor.HeatMap;
@@ -364,7 +370,12 @@ The following example shows how to display the tooltip template for various data
 
 #### JSON binding
 
+Similar to JSON, you can frame an object in C# and the data is represented using JSON binding and the tooltip template values are displayed by setting the TValue type to object and obtaining the corresponding x and y axes labels and cell values by binding the field name from the data source.
+
+
 ##### Table
+
+The following example illustrates to display the tooltip template data by using JSON table binding.
 
 ```cshtml
 
@@ -451,6 +462,8 @@ The following example shows how to display the tooltip template for various data
 ![Displaying tooltip template for JSON table binding data in Blazor HeatMap Chart](images/tooltip/blazor-heatmap-chart-json-table-data-tooltip-template.png)
 
 ##### Cell
+
+The following example illustrates to display the tooltip template data by using JSON cell binding.
 
 ```cshtml
 

@@ -363,18 +363,18 @@ Axis label increment in the heat map is used to display the axis labels with reg
 
 ## Multilevel labels
 
-Multilevel labels are used to categorize a group of axis labels as a specific category, displayed using a label. You can add many levels of such labels by adding multiple `HeatMapMultiLevelLabel` tags.
+Multilevel labels are used to categorize a group of axis labels as a specific category, displayed using a label. You can add many levels of such labels by adding multiple [HeatMapMultiLevelLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapMultiLevelLabels.html) tags.
 
-The categories for a single level of multilevel labels can be set using multiple `HeatMapAxisMultiLevelCategories` tags. The starting index and ending index of the category can be set using `Start` and `End` properties in the `HeatMapAxisMultiLevelCategories` tag. The label for the single category can be set using the `Text` property.
+The categories for a single level of multilevel labels can be set using multiple [HeatMapAxisMultiLevelCategories](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapAxisMultiLevelCategories.html) tags. The starting index and ending index of the category can be set using [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapAxisMultiLevelCategories.html#Syncfusion_Blazor_HeatMap_HeatMapAxisMultiLevelCategories_Start) and [End](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapAxisMultiLevelCategories.html#Syncfusion_Blazor_HeatMap_HeatMapAxisMultiLevelCategories_End) properties in the [HeatMapAxisMultiLevelCategories](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapAxisMultiLevelCategories.html) tag. The label for the single category can be set using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapAxisMultiLevelCategories.html#Syncfusion_Blazor_HeatMap_HeatMapAxisMultiLevelCategories_Text) property.
 
 The multi level labels can be customized by using the following properties and classes.
-* `Overflow` - The `Overflow` property of the HeatMapMultiLevelLabel class is used to trim or wrap the multilevel labels when the label overflows the intended space.
+* [Overflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapMultiLevelLabel.html#Syncfusion_Blazor_HeatMap_HeatMapMultiLevelLabel_Overflow) - It is used to trim or wrap the multilevel labels when the label overflows the intended space.
 >This property is only for X-axis.
-* `Alignment` - The `Alignment` property of the HeatMapMultiLevelLabel class is used to place and align the multilevel labels.
-* `MaximumTextWidth` - 'MaximumTextWidth' property of the HeatMapAxisMultiLevelCategories class is used to set the maximum width of the text. When the text length exceeds the maximum text width, the overflow action will be performed.
-* `HeatMapAxisMultiLevelLabelsTextStyle` - This class is used to customize the font style of the multilevel labels.
-* `HeatMapXAxisMultiLevelLabelBorder` - This class is used to customize the border of the multilevel labels displayed in the X-axis.
-* `HeatMapYAxisMultiLevelLabelBorder` - This class is used to customize the border of the multilevel labels displayed in the Y-axis.
+* [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapMultiLevelLabel.html#Syncfusion_Blazor_HeatMap_HeatMapMultiLevelLabel_Alignment) - It is used to place and align the multilevel labels.
+* [MaximumTextWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapAxisMultiLevelCategories.html#Syncfusion_Blazor_HeatMap_HeatMapAxisMultiLevelCategories_MaximumTextWidth) - It is used to set the maximum width of the text. When the text length exceeds the maximum text width, the overflow action will be performed.
+* [HeatMapAxisMultiLevelLabelsTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapAxisMultiLevelLabelsTextStyle.html) - It is used to customize the font style of the multilevel labels.
+* [HeatMapXAxisMultiLevelLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapXAxisMultiLevelLabelBorder.html) - It is used to customize the border of the multilevel labels displayed in the X-axis.
+* [HeatMapYAxisMultiLevelLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapYAxisMultiLevelLabelBorder.html) - It is used to customize the border of the multilevel labels displayed in the Y-axis.
 
 ```cshtml
 
