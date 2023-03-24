@@ -661,8 +661,6 @@ The following code illustrates how to execute the clipboard commands.
     {
         DiagramObjectCollection<NodeBase> nodeBase = new DiagramObjectCollection<NodeBase>();
         Node clonedNode = diagram.Nodes[0].Clone() as Node;
-        clonedNode.OffsetX += 10;
-        clonedNode.OffsetY += 10;
         nodeBase.Add(clonedNode);
 
         //pastes an object as a parameter.
