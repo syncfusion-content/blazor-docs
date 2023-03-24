@@ -185,7 +185,7 @@ The following example illustrates the different data binding with size and color
 
 #### Array binding 
 
-The data is represented using array binding with the bubble type is **SizeAndColor** and the tile type is **Bubble** in the [HeatMapCellSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html).
+The data is represented using array binding, which displays the tile type for the cell as **Bubble** and the bubble type with **SizeAndColor**.
 
 ##### Table
 
@@ -334,7 +334,7 @@ The following example illustrates the data with array cell binding.
 
 #### JSON binding
 
-Similar to JSON, you can frame an object in C# and the data is represented using JSON binding with the bubble type is **SizeAndColor** and the tile type is **Bubble** in the [HeatMapCellSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html).
+Similar to JSON, you can frame an object in C# and the data is represented using JSON binding, which displays the tile type for the cell as **Bubble** and the bubble type with **SizeAndColor**.
 
 ##### Table
 
