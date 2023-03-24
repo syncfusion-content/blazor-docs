@@ -21,6 +21,11 @@ The following are the three different types of grouping:
 * Date Grouping
 * Custom Grouping
 
+To have a quick glance on how to group row and column field items in the Blazor Pivot Table, watch this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=t-LDymoVUzA"%}
+
 N> Similar to Excel, only one type of grouping can be applied for a field.
 
 ```cshtml
