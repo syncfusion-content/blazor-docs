@@ -60,110 +60,13 @@ You can enable the tooltip by setting the `Enable` property to true inside the `
 
 Any custom HTML element can be rendered as a tooltip of the HeatMap using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapTooltipSettings.html#Syncfusion_Blazor_HeatMap_HeatMapTooltipSettings_Template) property of the [HeatMapTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapTooltipSettings.html).
 
-In the following example, the data bound to the HeatMap such as corresponding x and y axes labels and cell value are displayed in the tooltip template.
+The following examples show how to display the tooltip template for various data bindings in the HeatMap.
 
-```cshtml
+### Array binding 
 
-<SfHeatMap DataSource="@DataSource">
-    <HeatMapXAxis Labels="@XLabels"
-                  LabelIntersectAction="Syncfusion.Blazor.HeatMap.LabelIntersectAction.None">
-    </HeatMapXAxis>
-    <HeatMapYAxis Labels="@YLabels"></HeatMapYAxis>
-    <HeatMapPaletteSettings>
-        <HeatMapPalettes>
-            <HeatMapPalette Value="0" Color="#C2E7EC"></HeatMapPalette>
-            <HeatMapPalette Value="0.6" Color="#AEDFE6"></HeatMapPalette>
-            <HeatMapPalette Value="0.75" Color="#9AD7E0"></HeatMapPalette>
-            <HeatMapPalette Value="1" Color="#86CFDA"></HeatMapPalette>
-            <HeatMapPalette Value="1.5" Color="#72C7D4"></HeatMapPalette>
-            <HeatMapPalette Value="2" Color="#5EBFCE"></HeatMapPalette>
-            <HeatMapPalette Value="2.5" Color="#4AB7C8"></HeatMapPalette>
-            <HeatMapPalette Value="3" Color="#36AFC2"></HeatMapPalette>
-            <HeatMapPalette Value="3.5" Color="#309DAE"></HeatMapPalette>
-            <HeatMapPalette Value="5" Color="#2B8C9B"></HeatMapPalette>
-            <HeatMapPalette Value="5.5" Color="#257A87"></HeatMapPalette>
-            <HeatMapPalette Value="6" Color="#206974"></HeatMapPalette>
-            <HeatMapPalette Value="8" Color="#1B5761"></HeatMapPalette>
-            <HeatMapPalette Value="9" Color="#15464D"></HeatMapPalette>
-            <HeatMapPalette Value="9.5" Color="#000000"></HeatMapPalette>
-        </HeatMapPalettes>
-    </HeatMapPaletteSettings>
-    <HeatMapCellSettings Format="{value}M">
-        <HeatMapCellBorder Width="0" Color="#98BABF"></HeatMapCellBorder>
-    </HeatMapCellSettings>
-    <HeatMapTooltipSettings Fill="#265259">
-        <Template>
-            @{
-                var TooltipTemplate = (context as Dictionary<string, string>);
-                <div class="displayTemplate">
-                    <span class="label">Year : @TooltipTemplate["YLabel"] <br/> Name : @TooltipTemplate["XLabel"] <br> CellValue : @TooltipTemplate["Value"] </span>
-                </div>
-            }
-        </Template>
-    </HeatMapTooltipSettings>
-    <HeatMapLegendSettings Visible="false">
-    </HeatMapLegendSettings>
-</SfHeatMap>
+When an array of numbers is specified as the `DataSource`, you can get the data for the tooltip as a **Dictionary<string, string>** type. The X-axis label, Y-axis label, and cell value can be retrieved from the dictionary using the keys **XLabel**, **YLabel**, and **Value** respectively.
 
-<style>
-    .displayTemplate {
-        border-radius: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-bottom: 6px;
-        padding-top: 6px;
-        background: black;
-        border: 1px #919191;
-    }
-
-    .label {
-        margin-left: 6px;
-        padding-left: 4px;
-        padding-bottom: 10px;
-        color: white;
-        font-size: 12px;
-    }
-</style>
-
-@code{
-    public string[] XLabels = new string[] { "Canada", "China", "Egypt", "Mexico", "Norway", "Russia", "UK", "USA" };
-    public string[] YLabels = new string[] { "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010" };
-    double[,] DataSource;
-
-     protected override void OnInitialized()
-    {
-        DataSource = GetTooltipData();
-    }
-
-    public static double[,] GetTooltipData()
-    {
-        double[,] dataSource = new double[,]
-        {
-                {0.72, 0.71, 0.71, 0.67, 0.72, 0.53, 0.53, 0.56, 0.58, 0.56},
-                {2.28, 2.29, 2.09, 1.84, 1.64, 1.49, 1.49, 1.39, 1.32, 1.23},
-                {2.02, 2.17, 2.30, 2.39, 2.36, 2.52, 2.62, 2.57, 2.57, 2.74},
-                {3.21, 3.26, 3.45, 3.47, 3.42, 3.34, 3.14, 2.83, 2.64, 2.61},
-                {3.22, 3.13, 3.04, 2.95, 2.69, 2.49, 2.27, 2.18, 2.06, 1.87},
-                {3.30, 3.39, 3.40, 3.48, 3.60, 3.67, 3.73, 3.79, 3.79, 4.07},
-                {5.80, 5.74, 5.64, 5.44, 5.18, 5.08, 5.07, 5.00, 5.35, 5.47},
-                {6.91, 7.40, 8.13, 8.80, 9.04, 9.24, 9.43, 9.35, 9.49, 9.69}
-        };
-        return dataSource;
-    }
-}
-
-```
-
-![Blazor HeatMap Chart displays Tooltip Template](images/tooltip/blazor-heatmap-chart-tooltip-template.png)
-
-
-The following example shows how to display the tooltip template for various data bindings in the HeatMap.
-
-#### Array binding
-
-The data is represented using array binding, and the tooltip is displayed by setting the TValue type to dictionary and obtaining the corresponding x and y axes labels and cell values.
-
-##### Table
+#### Table
 
 The following example illustrates to display the tooltip template data by using array table binding.
 
@@ -264,9 +167,9 @@ The following example illustrates to display the tooltip template data by using 
 
 ```
 
-![Displaying tooltip template for array table binding data in Blazor HeatMap Chart](images/tooltip/blazor-heatmap-chart-table-data-tooltip-template.png)
+![Tooltip template for array table binding data in Blazor HeatMap Chart](images/tooltip/blazor-heatmap-chart-table-data-tooltip-template.png)
 
-##### Cell
+#### Cell
 
 The following example illustrates to display the tooltip template data by using array cell binding.
 
@@ -366,12 +269,11 @@ The following example illustrates to display the tooltip template data by using 
 
 ```
 
-![Displaying tooltip template for array cell binding data in Blazor HeatMap Chart](images/tooltip/blazor-heatmap-chart-cell-data-tooltip-template.png)
+![Tooltip template for array cell binding data in Blazor HeatMap Chart](images/tooltip/blazor-heatmap-chart-cell-data-tooltip-template.png)
 
-#### JSON binding
+### JSON binding
 
-Similar to JSON, you can frame an object in C# and the data is represented using JSON binding and the tooltip template values are displayed by setting the TValue type to object and obtaining the corresponding x and y axes labels and cell values by binding the field name from the data source.
-
+When a list of JSON objects are specified as `DataSource`, the data for the tooltip can be obtained as the same JSON object.
 
 ##### Table
 
@@ -459,7 +361,7 @@ The following example illustrates to display the tooltip template data by using 
 
 ```
 
-![Displaying tooltip template for JSON table binding data in Blazor HeatMap Chart](images/tooltip/blazor-heatmap-chart-json-table-data-tooltip-template.png)
+![Tooltip template for JSON binding with Table adaptor in Blazor HeatMap Chart](images/tooltip/blazor-heatmap-chart-json-table-data-tooltip-template.png)
 
 ##### Cell
 
@@ -606,4 +508,4 @@ The following example illustrates to display the tooltip template data by using 
 
 ```
 
-![Displaying tooltip template for JSON cell binding data in Blazor HeatMap Chart](images/tooltip/blazor-heatmap-chart-json-cell-data-tooltip-template.png)
+![Tooltip template for JSON binding with Cell adaptor in Blazor HeatMap Chart](images/tooltip/blazor-heatmap-chart-json-cell-data-tooltip-template.png)
