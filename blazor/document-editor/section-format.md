@@ -57,11 +57,11 @@ You can define the number of columns, column width, and space between columns fo
 The following code example illustrates how to define the two columns layout for the pages in a section.
 
 ```csharp
-var column = new SelectionColumnFormat(container.documentEditor.selection);
+var column = new SelectionColumnFormat(documentEditor.selection);
 column.width = 216;
 column.space = 36;
-container.documentEditor.selection.sectionFormat.columns = [column, column];
-container.documentEditor.selection.sectionFormat.lineBetweenColumns = true;
+documentEditor.selection.sectionFormat.columns = [column, column];
+documentEditor.selection.sectionFormat.lineBetweenColumns = true;
 ```
 
 ## Breaks
@@ -71,7 +71,7 @@ You can insert Column break
 The following code indicate that the text following the column break will begin in the next column
 
 ```csharp
-container.documentEditor.editor.insertColumnBreak();
+documentEditor.Editor.InsertColumnBreakAsync();
 ```
 
 You can insert next page section break to start the new section on the next page
@@ -79,7 +79,7 @@ You can insert next page section break to start the new section on the next page
 The following code example illustrates how to insert a next page section break
 
 ```csharp
-container.documentEditor.editor.insertSectionBreak(SectionBreakType.NewPage);
+documentEditor.Editor.InsertSectionBreakAsync(SectionBreakType.NewPage);
 ```
 
 You can insert continuous section break to start the new section on the same page
@@ -87,7 +87,7 @@ You can insert continuous section break to start the new section on the same pag
 The following code example illustrates how to insert a continuous section break
 
 ```csharp
-container.documentEditor.editor.insertSectionBreak(SectionBreakType.Continuous);
+documentEditor.Editor.InsertSectionBreakAsync(SectionBreakType.Continuous);
 ```
 
 You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.
