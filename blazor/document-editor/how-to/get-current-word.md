@@ -25,7 +25,6 @@ The following example code illustrates how to select and get the current word as
 </SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
 
     public async void OnCreated(object args)
@@ -56,7 +55,6 @@ The following example code illustrates how to select and get the current paragra
 </SfDocumentEditorContainer>
 
 @code {
-
     SfDocumentEditorContainer container;
 
     public async void OnCreated(object args)

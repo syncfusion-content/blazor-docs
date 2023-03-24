@@ -13,7 +13,7 @@ Document Editor has preservation support for all types of fields in an existing 
 
 ## Adding Fields
 
-You can add a field to the document by using `InsertFieldAsync` method in `EditorModule`.
+You can add a field to the document by using [`InsertFieldAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertFieldAsync_System_String_System_String_) method in [`EditorModule`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html).
 
 The following example code illustrates how to insert merge field programmatically by providing the field code and field result.
 
@@ -23,7 +23,7 @@ string fieldResult = '«First Name»';
 container.DocumentEditor.Editor.InsertFieldAsync(fieldCode, fieldResult);
 ```
 
->Note: Document editor does not validate/process the field code/field result. it simply inserts the field with specified field information.
+N> Document editor does not validate/process the field code/field result. it simply inserts the field with specified field information.
 
 ## Update fields
 
@@ -46,18 +46,18 @@ The following type of fields are automatically updated in Document Editor.
 
 ## Get field info
 
-You can get field code and field result of the current selected field by using `GetFieldInfoAsync` method in the `SelectionModule`.
+You can get field code and field result of the current selected field by using [`GetFieldInfoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetFieldInfoAsync) method in the [`SelectionModule`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html).
 
 ```csharp
 //Gets the field information of the selected field.
 FieldInfo fieldInfo = container.DocumentEditor.Selection.GetFieldInfoAsync();
 ```
 
->Note: For nested fields, this method returns combined field code and result.
+N> For nested fields, this method returns combined field code and result.
 
 ## Set field info
 
-You can modify the field code and field result of the current selected field by using `SetFieldInfoAsync` method in the `EditorModule`.
+You can modify the field code and field result of the current selected field by using [`SetFieldInfoAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_SetFieldInfoAsync_Syncfusion_Blazor_DocumentEditor_FieldInfo_) method in the [`EditorModule`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html).
 
 ```csharp
 //Gets the field information for the selected field.
@@ -73,7 +73,7 @@ fieldInfo.Result = '«First Name»';
 container.DocumentEditor.Editor.SetFieldInfoAsync(fieldInfo);
 ```
 
->Note: For nested field, entire field gets replaced completely with the specified field information.
+N> For nested field, entire field gets replaced completely with the specified field information.
 
 ## See Also
 

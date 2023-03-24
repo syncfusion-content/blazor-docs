@@ -44,7 +44,7 @@ The Blazor ButtonGroup has the following predefined styles that can be defined u
 
 ![Blazor ButtonGroup with different Style](./images/blazor-buttongroup-style.png)
 
-> Predefined ButtonGroup styles provide only the visual indication. So, ButtonGroup content should define the ButtonGroup style for the users of assistive technologies such as screen readers.
+N> Predefined ButtonGroup styles provide only the visual indication. So, ButtonGroup content should define the ButtonGroup style for the users of assistive technologies such as screen readers.
 
 ## ButtonGroup types
 

@@ -29,7 +29,7 @@ Ensure our CSS files have been properly configured in your application.
     <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
 ```
 
-> For production purpose and minimal requirement, Syncfusion provides an option to generate scripts and styles of selective control by using the Custom Resource Generator (CRG) web tool. Refer to this [link](https://crg.syncfusion.com/) for more details on CRG.
+N> For production purpose and minimal requirement, Syncfusion provides an option to generate scripts and styles of selective control by using the Custom Resource Generator (CRG) web tool. Refer to this [link](https://crg.syncfusion.com/) for more details on CRG.
 
 ## Breaking changes
 

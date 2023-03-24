@@ -114,7 +114,7 @@ In this sample, "Product Categories" is added in column, "Customer Geography" in
 
 Formatting defines a way in which values should be displayed in pivot table. For example, format **"C0"** denotes the values should be displayed in currency pattern without decimal points. To do so, define the [PivotViewFormatSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html) with its [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Name) and [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format) properties. In this sample, the [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Name) property is set as "[Measures].[Internet Sales Amount]", a measure from the value axis and its [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format) is set as "C0". Likewise, it can be formatted for the other measures as well.
 
-> Only measures from [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) axis, which is in the form of numeric data values are applicable for formatting.
+N> Only measures from [PivotViewValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) axis, which is in the form of numeric data values are applicable for formatting.
 
 
 ```cshtml
@@ -332,7 +332,7 @@ You need to set [IsCalculatedField](https://help.syncfusion.com/cr/blazor/Syncfu
 
 Also calculated fields can be added at run time through the built-in dialog. The dialog can be enabled by setting the [AllowCalculatedField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowCalculatedField) property to **true** as follows. You will see a button enabled in the Field List UI automatically to invoke the calculated field dialog and perform necessary operation.
 
-> Calculated measure can be added only in value axis.
+N> Calculated measure can be added only in value axis.
 
 ```cshtml
 
@@ -697,7 +697,7 @@ Users can configure basic authentication information to access the OLAP cube usi
 * [UserName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.AuthenticationModel.html#Syncfusion_Blazor_PivotView_AuthenticationModel_UserName): It allows the user to set a username that recognizes the basic authentication of the IIS.
 * [Password](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.AuthenticationModel.html#Syncfusion_Blazor_PivotView_AuthenticationModel_Password): It allows to set the appropriate password.
 
-> If the user does not configure the authentication, a default popup will appear in the browser to get the authentication information.
+N> If the user does not configure the authentication, a default popup will appear in the browser to get the authentication information.
 
 ```cshtml
 
@@ -818,4 +818,4 @@ The two types of calculated fields are as follows:
 | ![First level icon in JavaScript pivot table control](images/FirstLevel.png)<br>![Second level icon in JavaScript pivot table control](images/SecondLevel.png)<br>![Third level icon in JavaScript pivot table control](images/ThirdLevel.png)| Levels (in order)| Level Element| True|
 | ![NamedSet icon in JavaScript pivot client control](images/NamedSet.png)| Named Set| Named Set| True|
 
-> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
+N> You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.

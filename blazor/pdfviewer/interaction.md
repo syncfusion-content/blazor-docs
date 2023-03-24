@@ -18,7 +18,7 @@ The built-in toolbar of PDF Viewer contains the following two interaction option
 
 In this mode, the text selection can be performed in the PDF document loaded in the PDF Viewer. It allows users to select and copy text from the PDF files. This is helpful for copying and sharing text content.
 
-> The panning and scrolling of the pages by touch cannot be performed in this mode.
+N> The panning and scrolling of the pages by touch cannot be performed in this mode.
 
 You can enable or disable text selection by setting the `EnableTextSelection` property.
 
@@ -82,6 +82,6 @@ The following code illustrates how to disable the annotation interaction.
 }
 ```
 
-> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Lock%20Annotation).
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/FAQs/Lock%20annotations).
 
-> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.
+N> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explain core features of PDF Viewer.

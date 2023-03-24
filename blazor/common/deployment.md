@@ -33,7 +33,7 @@ Refer to [Host and deploy ASP.NET Core Blazor](https://docs.microsoft.com/en-us/
 
 * Then, click `Save` and `Publish`.
 
-    > Refer [here](https://docs.microsoft.com/en-us/visualstudio/deployment/quickstart-deploy-to-azure?view=vs-2019) for publishing the application to Azure App Service using Visual Studio.  
+    N> Refer [here](https://docs.microsoft.com/en-us/visualstudio/deployment/quickstart-deploy-to-azure?view=vs-2019) for publishing the application to Azure App Service using Visual Studio.  
 
 ## Publish Blazor Application with CLI
 
@@ -69,7 +69,7 @@ dotnet publish -c Release -o <output directory>
 {% endhighlight %}
 {% endtabs %}
 
-> If the output directory is not specified, it defaults to `./bin/[configuration]/[framework]/publish/` for a **framework-dependent deployment** and `./bin/[configuration]/[framework]/[runtime]/publish/` for a **self-contained deployment**.
+N> If the output directory is not specified, it defaults to `./bin/[configuration]/[framework]/publish/` for a **framework-dependent deployment** and `./bin/[configuration]/[framework]/[runtime]/publish/` for a **self-contained deployment**.
 
 If the path is relative, the output directory generated is relative to the project file location, not to the current working directory. Now, the published folder can be hosted in IIS or Azure app service.
 

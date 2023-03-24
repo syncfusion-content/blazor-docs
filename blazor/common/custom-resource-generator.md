@@ -31,24 +31,23 @@ After selecting the required component resources, download the custom interop sc
 
 Refer to the following steps to download the custom resources in CRG:
 
-1. Click the **DOWNLOAD** button at the bottom of the page. Select the **Minified** option to generate the minified file output for production.
+1. Once components are selected, select the **Minified** option to generate the minified file output for production. Then Click the **DOWNLOAD** button.
 ![Download option in Blazor](images/download-option.png)
-2. Change the file name as needed, and then click **GENERATE** button in the pop-up.
+2. Change the file name as needed. After that, enter an valid email address and then click **GENERATE** button in the pop-up.
 ![Export popup for generation custom resources](images/export-popup.png)
-3. Now, the bundling process for the selected components will be started, and the output will be downloaded as a zip file.
-![Blazor Bundle custom resources](images/bundling-custom-resources.png)
+3. Now, the export request has been initiated for the selected component(s). You will receive an email with a download link within a minute( Depending on the selected component counts and bundle type minified or unminified ).
+![Blazor Bundle custom resources](images/mail-with-download-link.png)
 4. The final output contains the custom interop script and styles for the selected components and an **import.json** file, which stores the current settings.
 ![Final output of customized resources in Blazor](images/customized-resources.png)
 
 ## How to use custom resources in the Blazor application
 
 1. Copy and paste the downloaded custom resources in the Blazor application `~/wwwroot` folder.
-2. Set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) as `true` while adding Syncfusion blazor service using `AddSyncfusionBlazor()` to refer the custom resources. Fore more details and code example refer [Disable JavaScript isolation](https://blazor.syncfusion.com/documentation/common/adding-script-references#disable-javascript-isolation) topic.
-3. Now, manually add the custom interop script and styles in the Blazor App.
+2. Now, manually add the custom interop script and styles in the Blazor App.
     * For **Blazor WASM App**, reference custom interop script in `~/wwwroot/index.html` file. 
     * For **Blazor Server App**, reference custom interop script in 
         * `~/Pages/_Layout.cshtml` file for `.NET 6` project
-        * `~/Pages/_Host.cshtml` file for `.NET 5 and .NET Core 3.X` project.
+        * `~/Pages/_Host.cshtml` file for `.NET 3.X, .NET 5 and .NET 7` project.
 
     ```html
     <head>
@@ -58,7 +57,7 @@ Refer to the following steps to download the custom resources in CRG:
         <script src="syncfusion-blazor.min.js" type="text/javascript"></script>
     </head>
     ```
-4. Run the application and it will load the resources with application required components.
+3. Run the application and it will load the resources with application required components.
 
 ## Import previously generated settings into CRG
 

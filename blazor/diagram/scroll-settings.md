@@ -36,7 +36,7 @@ In the following example, the vertical scroll bar is scrolled down by 50px and t
     </ScrollSettings>
 </SfDiagramComponent>
 ```
-
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings)
 ## Update scroll status
 
 You can programmatically change the scroll offsets at runtime by using the external button click. The following code illustrates how to change the scroll offsets at runtime.
@@ -61,6 +61,44 @@ You can programmatically change the scroll offsets at runtime by using the exter
         verticalOffset = 400;
         horizontalOffset = 200;
     }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings)
+
+## ScrollChanged Event
+
+The Diagram control provides the following event for the scroll settings.
+
+| Event Name | Event Type | Description |
+| -------- | -------- | -------- |
+| [ScrollChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ScrollChanged) | [ScrollChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollChangedEventArgs.html) | Triggered when the scrollbar is updated |
+
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<input type="button" @onclick="updateScrollValues"/>
+<SfDiagramComponent Height="600px" ScrollChanged="ScrollChanged">
+    @* Sets the ScrollSettings for the diagram *@
+    <ScrollSettings HorizontalOffset="@horizontalOffset" VerticalOffset="@verticalOffset">
+    </ScrollSettings>
+</SfDiagramComponent>
+
+@code{
+    public double horizontalOffset { get; set; } = 100;
+    public double verticalOffset { get; set; } = 100;
+
+    public void updateScrollValues()
+    {
+        //Update the scroll settings.
+        verticalOffset = 400;
+        horizontalOffset = 200;
+    }
+    private void ScrollChanged(ScrollChangedEventArgs args)
+    {
+
+    }
+
 }
 ```
 
@@ -89,6 +127,8 @@ The following code example illustrates how to specify the scroll limit.
 }
 
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings)
+
 To explore about the options , refer [ScrollLimitMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollLimitMode.html).
 
 | ScrollLimit | Output |
@@ -101,6 +141,11 @@ To explore about the options , refer [ScrollLimitMode](https://help.syncfusion.c
 * CurrentZoomChanged : Specifies the callback to be triggered when the current zoom value changes.
 * HorizontalOffsetChanged : Specifies the callback to be triggered when the horizontal offset changes.
 * VerticalOffsetChanged : Specifies the callback to be triggered when the vertical offset changes.
+* MaxZoomChanged : Specifies the callback to trigger when the maximum zoom changes.
+* MinZoomChanged : Specifies the callback to trigger when the minimum zoom changes.
+* ScrollableAreaChanged : Specifies the callback to trigger when the scrollable area changes.
+* ScrollLimitChanged : Specifies the callback to trigger when the scroll limit changes.
+
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -117,3 +162,4 @@ To explore about the options , refer [ScrollLimitMode](https://help.syncfusion.c
         // Enter your code
     }
 }
+```

@@ -61,6 +61,7 @@ The following code illustrates how to create a text node.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes)
 
 ![Text Node in Blazor Diagram](images/blazor-diagram-TextNode.png)
 
@@ -103,6 +104,7 @@ The following code illustrates how an image node is created.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes)
 
 ![Image Node in Blazor Diagram](images/blazor-diagram-image-node.png)
 
@@ -145,10 +147,11 @@ The following code illustrates how to add Base64 image into the image node.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes)
 
 ![Base64 Image Node in Blazor Diagram](images/blazor-diagram-base64-image-node.png)
 
-> Deploy your HTML file in the web application and export the diagram (image node) or else the image node will not be exported in the Chrome and Firefox due to security issues.
+N> Deploy your HTML file in the web application and export the diagram (image node) or else the image node will not be exported in the Chrome and Firefox due to security issues.
 
 ### Stretch and align the image
 
@@ -190,6 +193,7 @@ Stretch and align the image content anywhere but within the node boundary. The [
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes)
 
 * [ImageAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ImageShape.html#Syncfusion_Blazor_Diagram_ImageShape_ImageAlign) property of the shape helps to align the image based on the x and y values in the node boundary. The following table illustrates the various image alignments in the node boundary.
 
@@ -294,10 +298,11 @@ Html elements can be embedded in the diagram through [HTML](https://help.syncfus
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes)
 
 ![HTML Node Template in Blazor Diagram](images/blazor-diagram-html-node-template.png)
 
-> HTML node cannot be exported to image format, like JPEG, PNG and BMP. It is by design, while exporting the diagram is drawn in a canvas. Further, this canvas is exported into image formats. Currently, drawing in a canvas equivalent from all possible HTML is not feasible. Hence, this limitation. Also , HTML node always appears as topmost layer ( whose index is the higher index, even though it is defined at the last).
+N> HTML node cannot be exported to image format, like JPEG, PNG and BMP. It is by design, while exporting the diagram is drawn in a canvas. Further, this canvas is exported into image formats. Currently, drawing in a canvas equivalent from all possible HTML is not feasible. Hence, this limitation. Also , HTML node always appears as topmost layer ( whose index is the higher index, even though it is defined at the last).
 
 ## Node with basic shapes
 
@@ -341,10 +346,11 @@ The following code example illustrates how to create a basic shape.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes)
 
-> By default, the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shape.html) property of the node is set as **Basic**. Default property for Shape is Rectangle.
-> When the `Shape` is not set for a basic shape, it is considered as a **Rectangle**.
-> The `CornerRadius` property is applicable only for basic shape.
+N> By default, the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shape.html) property of the node is set as **Basic**. Default property for Shape is Rectangle.
+<br/> When the `Shape` is not set for a basic shape, it is considered as a **Rectangle**.
+<br/> The `CornerRadius` property is applicable only for basic shape.
 
 The list of basic shapes are as follows.
 
@@ -390,6 +396,7 @@ To create a path node, specify the shape as **Path**. The [Data](https://help.sy
     };
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes)
 
 ![Path Shape Node in Blazor Diagram](images/blazor-diagram-path-shape-node.png)
 
@@ -430,6 +437,7 @@ The [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowS
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes)
 
 The list of flow shapes are as follows.
 
@@ -486,7 +494,9 @@ Diagram provides support to embed SVG element into a node. The Shape property of
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes)
 
 ![SVG Node in Blazor Diagram](images/blazor-diagram-svg-node.png)
 
-> Like HTML node, the SVG node also cannot be exported to image format. Fill color of SVG node can be overridden by the inline style or fill of the SVG element specified in the template.
+N> Like the HTML node, the SVG node cannot be exported to image format. The fill color of the SVG node can be overridden by the inline style or fill of the SVG element specified in the template.
+

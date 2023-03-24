@@ -9,9 +9,14 @@ documentation: ug
 
 # Editing in Blazor Pivot Table Component
 
-> This feature is applicable only for relational data source.
+N> This feature is applicable only for relational data source.
 
 Cell edit allows to add, delete, or update the raw items of any value cell from the pivot table. The raw items can be viewed in a data grid inside a new window on double-clicking the appropriate value cell. In the data grid, CRUD operations can be performed by double-clicking the cells or using toolbar options. Once user finishes editing raw items, aggregation will be performed for the updated values in pivot table component immediately. This support can be enabled by setting the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html#Syncfusion_Blazor_PivotView_PivotViewCellEditSettings_AllowEditing) property in [PivotViewCellEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html) class to **true**.
+
+To learn about how to work with **Editing** options in the Blazor Pivot Table, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=bnOn_L6dPY4"%}
 
 The CRUD operations available in the data grid toolbar and command column are:
 
@@ -34,7 +39,7 @@ The following are the supported edit types in the data grid:
 
 In normal edit mode, when user starts editing, the state of the currently selected row alone will be completely changed to edit state. User can change the cell values and save it to the data source by clicking "Update" toolbar button. To enable the normal edit, set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html#Syncfusion_Blazor_PivotView_PivotViewCellEditSettings_Mode) property in [PivotViewCellEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCellEditSettings.html) class to [EditMode.Normal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EditMode.html).
 
-> The normal edit mode [EditMode.Normal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EditMode.html) is set as the default mode for editing.
+N> The normal edit mode [EditMode.Normal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EditMode.html) is set as the default mode for editing.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -470,4 +475,4 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 }
 ```
 
-> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
+N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
