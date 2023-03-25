@@ -185,11 +185,11 @@ The following example illustrates the different data binding with size and color
 
 #### Array binding 
 
-The data is represented using array binding, which displays the tile type for the cell as **Bubble** and the bubble type with **SizeAndColor**.
+When an array of numbers is specified as the `DataSource`, the bubble HeatMap can be rendered with different sizes and colors depending on the data.
 
 ##### Table
 
-The following example illustrates the data with array table binding.
+The following example illustrates how to render a bubble HeatMap with varied sizes and colors using array table binding.
 
 ```cshtml
 
@@ -258,11 +258,11 @@ The following example illustrates the data with array table binding.
 
 ```
 
-![Bubble HeatMap with SizeAndColor type rendered with array data binding and Table adaptor type](images/bubble/blazor-heatmap-chart-table-data-bubble-sizeandcolor.png)
+![Bubble HeatMap with size and color type render with array data binding and table adaptor type](images/bubble/blazor-heatmap-chart-table-data-bubble-sizeandcolor.png)
 
 ##### Cell
 
-The following example illustrates the data with array cell binding.
+The following example illustrates how to render a bubble HeatMap with varied sizes and colors using array cell binding.
 
 ```cshtml
 
@@ -330,15 +330,15 @@ The following example illustrates the data with array cell binding.
 
 ```
 
-![Bubble HeatMap with SizeAndColor type rendered with array data binding and Cell adaptor type](images/bubble/blazor-heatmap-chart-cell-data-bubble-sizeandcolor.png)
+![Bubble HeatMap with size and color type render with array data binding and Cell adaptor type](images/bubble/blazor-heatmap-chart-cell-data-bubble-sizeandcolor.png)
 
 #### JSON binding
 
-Similar to JSON, you can frame an object in C# and the data is represented using JSON binding, which displays the tile type for the cell as **Bubble** and the bubble type with **SizeAndColor**.
+When a list of JSON objects are specified as `DataSource`, the bubble HeatMap can be rendered with different sizes and colors depending on the data.
 
 ##### Table
 
-The following example illustrates the data with JSON table binding.
+The following example illustrates how to render a bubble HeatMap with varied sizes and colors using JSON table binding.
 
 ```cshtml
 
@@ -392,11 +392,11 @@ The following example illustrates the data with JSON table binding.
 
 ```
 
-![Bubble HeatMap with SizeAndColor type rendered with JSON data binding and Table adaptor type](images/bubble/blazor-heatmap-chart-json-table-data-bubble-sizeandcolor.png)
+![Bubble HeatMap with size and color type render with JSON data binding and table adaptor type](images/bubble/blazor-heatmap-chart-json-table-data-bubble-sizeandcolor.png)
 
 ##### Cell
 
-The following example illustrates the data with JSON cell binding.
+The following example illustrates how to render a bubble HeatMap with varied sizes and colors using JSON cell binding.
 
 ```cshtml
 
@@ -509,7 +509,7 @@ The following example illustrates the data with JSON cell binding.
 
 ```
 
-![Bubble HeatMap with SizeAndColor type rendered with JSON data binding and Cell adaptor type](images/bubble/blazor-heatmap-chart-json-cell-data-bubble-sizeandcolor.png)
+![Bubble HeatMap with size and color type render with JSON data binding and cell adaptor type](images/bubble/blazor-heatmap-chart-json-cell-data-bubble-sizeandcolor.png)
 
 
 ## Bubble size and color attributes
@@ -621,4 +621,4 @@ When the bubble HeatMap is rendered with **SizeAndColor** by using the [BubbleTy
 
 ```
 
-![Bubble HeatMap with SizeAndColor type and bubble attributes](images/bubble/blazor-heatmap-chart-bubble-size-and-color-cell.png)
+![Bubble HeatMap with size and color type and bubble attributes](images/bubble/blazor-heatmap-chart-bubble-size-and-color-cell.png)

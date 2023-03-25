@@ -209,11 +209,14 @@ The [MapsZoomToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 <SfMaps>
     <MapsZoomSettings Enable="true">
-        <MapsZoomToolbarSettings BackgroundColor="black" BorderColor="red" BorderOpacity="1" BorderWidth="3" Orientation="Orientation.Horizontal"
-                                 HorizontalAlignment="Alignment.Far" VerticalAlignment="Alignment.Near"></MapsZoomToolbarSettings>
+        <MapsZoomToolbarSettings BackgroundColor="pink" BorderColor="green" BorderOpacity="1" BorderWidth="3" Orientation="Orientation.Vertical" VerticalAlignment="Alignment.Near">
+            <MapsZoomToolbarButton ToolbarItems="new List<ToolbarItem>() { ToolbarItem.Zoom,
+                                       ToolbarItem.ZoomIn, ToolbarItem.ZoomOut, ToolbarItem.Pan, ToolbarItem.Reset }"></MapsZoomToolbarButton>
+        </MapsZoomToolbarSettings>
     </MapsZoomSettings>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
+            <MapsShapeSettings Fill="#C1DFF5"></MapsShapeSettings>
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -242,14 +245,15 @@ The [MapsZoomToolbarButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 <SfMaps>
     <MapsZoomSettings Enable="true">
-        <MapsZoomToolbarSettings>
-            <MapsZoomToolbarButton BorderColor="yellow" BorderOpacity="1" BorderWidth="3" Color="yellow" Fill="green" HighlightColor="red" Opacity="1"
-                                   Padding="5" Radius="30" SelectionColor="red" ToolbarItems="new List<ToolbarItem>() { ToolbarItem.Zoom,
+         <MapsZoomToolbarSettings>
+            <MapsZoomToolbarButton BorderColor="green" BorderOpacity="1" BorderWidth="2" Color="red" Fill="pink" HighlightColor="#5ed59a" SelectionColor="#d55e5e" Opacity="0.6"
+                                   Padding="10" Radius="35"  ToolbarItems="new List<ToolbarItem>() { ToolbarItem.Zoom,
                                        ToolbarItem.ZoomIn, ToolbarItem.ZoomOut, ToolbarItem.Pan, ToolbarItem.Reset }"></MapsZoomToolbarButton>
         </MapsZoomToolbarSettings>
     </MapsZoomSettings>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
+        <MapsShapeSettings Fill="#C1DFF5"></MapsShapeSettings>
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -276,17 +280,18 @@ The [MapsZoomToolbarTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncf
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
-<SfMaps>
+<SfMaps Width="700px" Height="500px">
     <MapsZoomSettings Enable="true">
-        <MapsZoomToolbarSettings>
+         <MapsZoomToolbarSettings>
             <MapsZoomToolbarButton ToolbarItems="new List<ToolbarItem>() { ToolbarItem.Zoom,
-                              ToolbarItem.ZoomIn, ToolbarItem.ZoomOut, ToolbarItem.Pan, ToolbarItem.Reset }"></MapsZoomToolbarButton>
-            <MapsZoomToolbarTooltipSettings Visible="true" BorderColor="red" BorderOpacity="1" BorderWidth="3" Fill="black" FontColor="red" FontFamily="Segoe UI"
-                                            FontOpacity="1" FontSize="12px" FontStyle="normal" FontWeight="normal"></MapsZoomToolbarTooltipSettings>
+                                       ToolbarItem.ZoomIn, ToolbarItem.ZoomOut, ToolbarItem.Pan, ToolbarItem.Reset }"></MapsZoomToolbarButton>
+            <MapsZoomToolbarTooltipSettings Visible="true" BorderColor="green" BorderOpacity="1" BorderWidth="2" Fill="violet" FontColor="black" FontFamily="Times New Roman"
+                                            FontOpacity="1" FontSize="22px" FontStyle="normal" FontWeight="200"></MapsZoomToolbarTooltipSettings>
         </MapsZoomToolbarSettings>
     </MapsZoomSettings>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
+        <MapsShapeSettings Fill="#C1DFF5"></MapsShapeSettings>
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
