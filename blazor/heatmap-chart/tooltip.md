@@ -68,7 +68,7 @@ When an array of numbers is specified as the `DataSource`, you can get the data 
 
 #### Table
 
-The following example illustrates to display the tooltip template data by using array table binding.
+The following example illustrates how to display the tooltip template data for array table binding.
 
 ```cshtml
 
@@ -171,7 +171,7 @@ The following example illustrates to display the tooltip template data by using 
 
 #### Cell
 
-The following example illustrates to display the tooltip template data by using array cell binding.
+The following example illustrates how to display the tooltip template data for array cell binding.
 
 ```cshtml
 
@@ -277,7 +277,7 @@ When a list of JSON objects are specified as `DataSource`, the data for the tool
 
 ##### Table
 
-The following example illustrates to display the tooltip template data by using JSON table binding.
+The following example illustrates how to display the tooltip template data for JSON table binding.
 
 ```cshtml
 
@@ -365,7 +365,7 @@ The following example illustrates to display the tooltip template data by using 
 
 ##### Cell
 
-The following example illustrates to display the tooltip template data by using JSON cell binding.
+The following example illustrates how to display the tooltip template data for JSON cell binding.
 
 ```cshtml
 
