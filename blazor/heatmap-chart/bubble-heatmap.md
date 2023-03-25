@@ -514,7 +514,7 @@ The following example illustrates the data with JSON cell binding.
 
 ## Bubble size and color attributes
 
-When the bubble HeatMap is rendered with **SizeAndColor** bubble type, the bubbles for the cells have varying sizes and colors. The size and color of the cells in the bubble HeatMap can be rendered based on the data from the `DataSource` using the `Size` and `Color` properties in the `HeatMapBubbleDataMapping` tag.
+When the bubble HeatMap is rendered with **SizeAndColor** by using the [BubbleType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_BubbleType) property, the bubbles for the cells have varying sizes and colors. The size and color of the cells in the bubble HeatMap can be rendered based on the data from the `DataSource` using the [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapBubbleDataMapping.html#Syncfusion_Blazor_HeatMap_HeatMapBubbleDataMapping_Size) and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapBubbleDataMapping.html#Syncfusion_Blazor_HeatMap_HeatMapBubbleDataMapping_Color) properties in the [HeatMapBubbleDataMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapBubbleDataMapping.html) tag.
 
 >The `HeatMapBubbleDataMapping` class supports only for the JSON data binding with **Cell** adaptor type.
 
