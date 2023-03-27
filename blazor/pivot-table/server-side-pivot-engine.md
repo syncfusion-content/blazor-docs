@@ -9,7 +9,7 @@ documentation: ug
 
 > In general, the pivot table is created using the built-in engine for given data source. This is an optional feature that allows you to create the pivot table with a server-side pivot engine and external data binding. And this option is applicable only for relational data source.
 
-# Getting Started with Syncfusion Server-side Pivot Engine
+# Getting Started with Syncfusion Blazor Server-side Pivot Engine
 
 This section briefs the Syncfusion assembly [`Syncfusion.EJ2.Pivot`](https://www.nuget.org/packages/Syncfusion.EJ2.Pivot/), which is used in a server-side application to perform all pivot calculations such as aggregation, filtering, sorting, grouping, and so on, and only the information to be displayed in the pivot table's viewport is passed to the client-side (browser) via web service (Web API) rather than the entire data source. It reduces network traffic and improves the rendering performance of the pivot table, especially when dealing with large amounts of data. It also works best with virtual scrolling enabled and supports all the pivot table's existing features.
 
@@ -17,7 +17,7 @@ This section briefs the Syncfusion assembly [`Syncfusion.EJ2.Pivot`](https://www
 
 ### Download and installing Server-side Pivot Engine
 
-**1.** Download the ASP.NET Core-based stand-alone Blazor Pivot Table [`application`](https://github.com/SyncfusionExamples/server-side-pivot-engine-for-pivot-table) from the GitHub repository.
+**1.** Download the ASP.NET Core-based stand-alone Blazor Pivot Table [`application`]() from the GitHub repository.
 
 **2.** The **PivotController** (Server-side) application that is downloaded includes the following files.
 
@@ -27,7 +27,7 @@ This section briefs the Syncfusion assembly [`Syncfusion.EJ2.Pivot`](https://www
 
 **3.** Open the **PivotController** application in Visual Studio where the Syncfusion library [`Syncfusion.EJ2.Pivot`](https://www.nuget.org/packages/Syncfusion.EJ2.Pivot/) will be downloaded automatically from the nuget.org site.
 
-![Solution Explorer](./images/pivotcontroller-solution-explorer.png)
+![Solution Explorer](./images/blazor-pivotcontroller-solution-explorer.png)
 
 ### Connecting Blazor Pivot Table to Server-side Pivot Engine
 
@@ -45,15 +45,7 @@ This section briefs the Syncfusion assembly [`Syncfusion.EJ2.Pivot`](https://www
 </SfPivotView>
 
 @code{
-    public class PivotViewData
-    {
-        public string ProductID { get; set; }
-        public string Country { get; set; }
-        public string Product { get; set; }
-        public double Sold { get; set; }
-        public double Price { get; set; }
-        public string Year { get; set; }
-    }
+    //other codes here...
 }
 
 ```
@@ -97,7 +89,7 @@ This section briefs the Syncfusion assembly [`Syncfusion.EJ2.Pivot`](https://www
 
 **4.** Run the sample to get the following result.
 
-![Pivot Table demo using server-side pivot engine](./images/server-side-demo.png)
+![Pivot Table demo using server-side pivot engine](./images/blazor-server-side-demo.png)
 
 ## Available configurations in Server-side application
 
@@ -212,11 +204,11 @@ Finally set the appropriate report to the pivot table sample based on the above 
 
 ```
 
-![Server-Side Pivot Engine using collection](./images/server-side-with-collection-data.png)
+![Server-Side Pivot Engine using collection](./images/blazor-server-side-with-collection-data.png)
 
 #### JSON
 
-The JSON data from a local json file type can be connected to the pivot table. Here, the file can be read by the **StreamReader** option, which will give the result in the string format. The resultant string needs to be converted to collection data that can be bound to the Server-side pivot engine.
+The JSON data from a local *.json file type can be connected to the pivot table. Here, the file can be read by the **StreamReader** option, which will give the result in the string format. The resultant string needs to be converted to collection data that can be bound to the Server-side pivot engine.
 
 In the Server-side application, **sales-analysis.json** file is available under **DataSource** folder and its model type is defined in **DataSource.cs** file.
 
@@ -267,7 +259,7 @@ public async Task<object> GetData(FetchData param)
 
 ```
 
-Finally set the appropriate report to the Pivot Table sample based on the above data source.
+Finally set the appropriate report to the pivot table sample based on the above data source.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -300,10 +292,11 @@ Finally set the appropriate report to the Pivot Table sample based on the above 
         public int PowUnits { get; set; }
         public int ProCost { get; set; }
     }
+}
 
 ```
 
-![Server-Side Pivot Engine with JSON data](./images/server-side-with-json-data.png)
+![Server-Side Pivot Engine with JSON data](./images/blazor-server-side-with-json-data.png)
 
 JSON data from any remote server, like a local JSON file, can also be supported. It accepts both directly downloadable files (*.json) and web service URLs. To bind this, the URL of the *.json file of a remote server has to be mapped under the **GetData** method. The rest of the configurations are the same as described above.
 
@@ -327,7 +320,7 @@ public async Task<object> GetData(FetchData param)
 
 #### CSV
 
-The CSV data from a local *.csv file type can be connected to the Pivot Table. Here, the file can be read by the **StreamReader** option, which will give the result in the string format. The resultant string needs to be converted to collect data that can be bound to the server-side pivot engine. Also, in the Pivot Table sample, set the [`type`](https://ej2.syncfusion.com/documentation/api/pivotview/fieldOptionsModel/#type) property under [`dataSourceSettings`](https://ej2.syncfusion.com/documentation/api/pivotview/dataSourceSettings/) as **CSV**.
+The CSV data from a local *.csv file type can be connected to the pivot table. Here, the file can be read by the **StreamReader** option, which will give the result in the string format. The resultant string needs to be converted to collection data that can be bound to the server-side pivot engine.
 
 In the server application, the **sales.csv** file is available under the **DataSource** folder, and its model type is defined in the **DataSource.cs** file.
 
@@ -395,34 +388,52 @@ public async Task<object> GetData(FetchData param)
 
 ```
 
-Finally set the appropriate report to the Pivot Table sample based on the above data source.
+Finally set the appropriate report to the pivot table sample based on the above data source.
 
-```typescript
-let pivotObj: PivotView = new PivotView({
-    dataSourceSettings: {
-        url: 'http://localhost:61379/api/pivot/post',
-        mode: 'Server',
-        type: 'CSV',
-        rows: [{
-            name: 'ItemType', caption: 'Item Type'
-        }],
-        formatSettings: [{
-            name: 'UnitPrice', format: 'C'
-        }],
-        columns: [{
-            name: 'Region'
-        }],
-        values: [
-            { name: 'UnitsSold', caption: 'Units Sold' },
-            { name: 'UnitPrice', caption: 'Sold Amount' }
-        ],
-    },
-    //Other codes here...
-});
+```cshtml
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="PivotCSVData" Height="300">
+    <PivotViewDataSourceSettings TValue="PivotCSVData" Url="http://localhost:61379/api/pivot/post" EnableServerSideAggregation="true">
+        <PivotViewRows>
+            <PivotViewRow Name="ItemType" Caption="Item Type"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Region" Caption="Region"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewValues>
+            <PivotViewValue Name="UnitPrice" Caption="Sold Amount"></PivotViewValue>
+            <PivotViewValue Name="UnitsSold" Caption="Units Sold"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="UnitPrice" Format="C0"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code {
+    public class PivotCSVData
+    {
+        public string Region { get; set; }
+        public string Country { get; set; }
+        public string ItemType { get; set; }
+        public string SalesChannel { get; set; }
+        public string OrderPriority { get; set; }
+        public string OrderDate { get; set; }
+        public int OrderID { get; set; }
+        public string ShipDate { get; set; }
+        public int UnitsSold { get; set; }
+        public double UnitPrice { get; set; }
+        public double UnitCost { get; set; }
+        public double TotalRevenue { get; set; }
+        public double TotalCost { get; set; }
+        public double TotalProfit { get; set; }
+    }
+}
 
 ```
 
-![Server-Side Pivot Engine using CSV data](./images/server-side-with-csv-data.png)
+![Server-Side Pivot Engine using CSV data](./images/blazor-server-side-with-csv-data.png)
 
 CSV data from any remote server, like a local CSV file, can also be supported. It accepts both directly downloadable files (*.csv) and web service URLs. To bind this, the URL of the *.csv file of a remote server has to be mapped under **GetData** method. The rest of the configurations are the same as described above.
 
@@ -500,33 +511,44 @@ public async Task<object> GetData(FetchData param)
 
 ```
 
-Finally set the appropriate report to the Pivot Table sample based on the above data source.
+Finally set the appropriate report to the pivot table sample based on the above data source.
 
-```typescript
-let pivotObj: PivotView = new PivotView({
-    dataSourceSettings: {
-        url: 'http://localhost:61379/api/pivot/post',
-        mode: 'Server',
-        rows: [{
-            name: 'ProductID', caption: 'Product ID'
-        }],
-        formatSettings: [{
-            name: 'Price', format: 'C'
-        }],
-        columns: [{
-            name: 'Year', caption: 'Production Year'
-        }],
-        values: [
-            { name: 'Sold', caption: 'Units Sold' },
-            { name: 'Price', caption: 'Sold Amount' }
-        ],
+```cshtml
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="PivotViewData" Height="300">
+    <PivotViewDataSourceSettings TValue="PivotViewData" Url="http://localhost:61379/api/pivot/post" EnableServerSideAggregation="true">
+        <PivotViewRows>
+            <PivotViewRow Name="ProductID"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year" Caption="Production Year"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewValues>
+            <PivotViewValue Name="Price" Caption="Sold Amount"></PivotViewValue>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Price" Format="C0"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code{
+    public class PivotViewData
+    {
+        public string ProductID { get; set; }
+        public string Country { get; set; }
+        public string Product { get; set; }
+        public double Sold { get; set; }
+        public double Price { get; set; }
+        public string Year { get; set; }
     }
-    //Other codes here...
-});
+}
 
 ```
 
-![Server-Side Pivot Engine using DataTable](./images/server-side-with-data-table.png)
+![Server-Side Pivot Engine using DataTable](./images/blazor-server-side-with-data-table.png)
 
 #### Dynamic
 
@@ -560,10 +582,10 @@ public class PivotExpandoData
 
 ```
 
-To bind the data source, set its class **PivotExpandoData** to **TValue** of the **PivotEngine** class.
+To bind the data source, set its model type as **ExpandoObject** to **TValue** of the **PivotEngine** class.
 
 ```csharp
-private PivotEngine<DataSource.PivotExpandoData> PivotEngine = new PivotEngine<DataSource.PivotExpandoData>();
+private PivotEngine<ExpandoObject> PivotEngine = new PivotEngine<ExpandoObject>();
 
 ```
 
@@ -585,29 +607,33 @@ public async Task<object> GetData(FetchData param)
 
 ```
 
-Finally set the appropriate report to the Pivot Table sample based on the above data source.
+Finally set the appropriate report to the pivot table sample based on the above data source.
 
-```typescript
-let pivotObj: PivotView = new PivotView({
-    dataSourceSettings: {
-        url: 'http://localhost:61379/api/pivot/post',
-        mode: 'Server',
-        rows: [{
-            name: 'CustomerID', caption: 'Customer ID'
-        }],
-        columns: [{
-            name: 'ShipCountry', caption: 'Ship Country'
-        }],
-        values: [
-            { name: 'Freight', caption: 'Units Sold' }
-        ]
-    }
-    //Others codes here...
-});
+```cshtml
+@using Syncfusion.Blazor.PivotView
+@using System.Dynamic
+
+<SfPivotView TValue="ExpandoObject" Height="300">
+    <PivotViewDataSourceSettings TValue="ExpandoObject" Url="http://localhost:61379/api/pivot/post" EnableServerSideAggregation="true">
+        <PivotViewRows>
+            <PivotViewRow Name="CustomerID" Caption="Customer ID"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewColumns>
+            <PivotViewColumn Name="ShipCountry" Caption="Ship Country"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewValues>
+            <PivotViewValue Name="Freight" Caption="Units Sold"></PivotViewValue>
+        </PivotViewValues>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code {
+    //other codes here...
+}
 
 ```
 
-![Server-Side Pivot Engine using ExpandoObject](./images/server-side-with-expandoobject.png)
+![Server-Side Pivot Engine using ExpandoObject](./images/blazor-server-side-with-expandoobject.png)
 
 ##### Dynamic Objects
 
@@ -681,29 +707,33 @@ public async Task<object> GetData(FetchData param)
 
 ```
 
-Finally set the appropriate report to the Pivot Table sample based on the above data source.
+Finally set the appropriate report to the pivot table sample based on the above data source.
 
-```typescript
-let pivotObj: PivotView = new PivotView({
-    dataSourceSettings: {
-        url: 'http://localhost:61379/api/pivot/post',
-        mode: 'Server',
-        rows: [{
-            name: 'CustomerID', caption: 'Customer ID'
-        }],
-        columns: [{
-            name: 'ShipCountry', caption: 'Ship Country'
-        }],
-        values: [
-            { name: 'Freight', caption: 'Units Sold' }
-        ]
-    }
-    //Other codes here...
-});
+```cshtml
+@using Syncfusion.Blazor.PivotView
+@using System.Dynamic
+
+<SfPivotView TValue="DynamicObject" Height="300">
+    <PivotViewDataSourceSettings TValue="DynamicObject" Url="http://localhost:61379/api/pivot/post" EnableServerSideAggregation="true">
+        <PivotViewRows>
+            <PivotViewRow Name="CustomerID" Caption="Customer ID"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewColumns>
+            <PivotViewColumn Name="ShipCountry" Caption="Ship Country"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewValues>
+            <PivotViewValue Name="Freight" Caption="Units Sold"></PivotViewValue>
+        </PivotViewValues>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+@code {
+    //other codes here...
+}
 
 ```
 
-![Server-Side Pivot Engine using Dynamic Objects](./images/server-side-with-dynamic-object.png)
+![Server-Side Pivot Engine using Dynamic Objects](./images/blazor-server-side-with-dynamic-object.png)
 
 ### Controller Configuration
 
@@ -730,7 +760,7 @@ public async Task<EngineProperties> GetEngine(FetchData param)
 
 ```
 
-The engine properties are stored in RAM as a cache with a unique ID (GUID) that is transferred from the client-side source code. The GUID is generated at random and will be changed if the page containing the Pivot Table is refreshed or opened in a new tab/window. As a result, each GUID's memory cache contains unique information, and the component operates independently.
+The engine properties are stored in RAM as a cache with a unique ID (GUID) that is transferred from the client-side source code. The GUID is generated at random and will be changed if the page containing the pivot table is refreshed or opened in a new tab/window. As a result, each GUID's memory cache contains unique information, and the component operates independently.
 
 Meanwhile, the memory cache is set to expire after 60 minutes from RAM to free its memory. If the component is still running, the data will be generated and stored for another 60 minutes.
 
@@ -741,4 +771,4 @@ Meanwhile, the memory cache is set to expire after 60 minutes from RAM to free i
 * **GetData:** Allows to store data source in RAM as a cache which fires on initial rendering or when the memory cache is expired.
 * **GetMembers:** Allows to get the members of a field. This fires when the member editor is opened to do a filtering operation.
 * **GetRawData:** Allows to get raw data of an aggregated value cell. This fires when the drill-through or editing dialog is opened.
-* **GetPivotValues:** Allows to update the stored engine properties in-memory cache and returns the aggregated values to browser to render the Pivot Table. Here, the return value can be modified. The Pivot Table will be rendered browser-based on this.
+* **GetPivotValues:** Allows to update the stored engine properties in-memory cache and returns the aggregated values to browser to render the pivot table. Here, the return value can be modified. The pivot pable will be rendered in the browser based on this.
