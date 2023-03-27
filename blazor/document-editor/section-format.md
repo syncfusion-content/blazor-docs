@@ -56,7 +56,7 @@ You can define the number of columns, column width, and space between columns fo
 
 The following code example illustrates how to define the two columns layout for the pages in a section.
 
-```csharp
+```javaScript
 var column = new SelectionColumnFormat(documentEditor.selection);
 column.width = 216;
 column.space = 36;
