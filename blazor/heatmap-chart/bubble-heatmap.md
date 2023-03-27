@@ -520,7 +520,7 @@ The size and color of the bubbles in the **SizeAndColor** bubble heatmap can be 
 
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap DataSource="@HeatMapData" Width="700px" Height="500px">
+<SfHeatMap DataSource="@HeatMapData">
                 <HeatMapEvents TooltipRendering="@TooltipRendering"></HeatMapEvents>
                 <HeatMapXAxis Labels="@XLabels"></HeatMapXAxis>
                 <HeatMapYAxis Labels="@YLabels"></HeatMapYAxis>
