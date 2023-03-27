@@ -9,7 +9,7 @@ documentation: ug
 
 # Placeholder and Float Label in Dropdown List
 
-## Placeholder in the blazor dropdownlist component
+## Placeholder
 
 Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Placeholder) property to display a small description of the expected value in the input. In the following sample demonstration, set the `Select a game` as the `Placeholder` property value, which will set the respective value to the `Placeholder` attribute of the input element in the DOM.
 
@@ -23,7 +23,7 @@ Use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dr
 
 ## Color of the placeholder text
 
-Use the following code to customize the text color of the `Placeholder`.
+You can change the color of the placeholder by targeting its CSS class `input.e-input::placeholder`, which indicates the placeholder text, and set the desired color using the `color` property.
 
 {% highlight cshtml %}
 
@@ -35,9 +35,7 @@ Use the following code to customize the text color of the `Placeholder`.
 
 ## Add mandatory indicator using placeholder
 
-The mandatory indicator `*​` can be applied to the placeholder using the content style in the CSS level.
-
-Use the following code to add the mandatory indicator * to the float label element.
+The mandatory indicator `*` can be applied to the placeholder by targeting its CSS class `.e-float-text::after` using the `content` style.
 
 {% highlight cshtml %}
 
@@ -47,9 +45,9 @@ Use the following code to add the mandatory indicator * to the float label eleme
 
 ![Blazor DropdownList with mandatory indicator placeholder](./images/placeholder-and-floatlabel/blazor_dropdown_placeholder-with-mandatory.png)
 
-## FloatLabel in the blazor dropdownlist component
+## FloatLabel
 
-Use the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FloatLabelType) property to specify the floating label behavior of the DropDownList that the `Placeholder` text floats above the TextBox based on the following values.
+Use the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FloatLabelType) property to specify the floating label behavior of the DropDownList that the `Placeholder` text floats above the TextBox based on the following values. `FloatLabelType` is applicable only when `Placeholder` is used. `FloatLabelType` is depends on `Placeholder`. Default value of `FloatLabelType` is `Never`.
 
 The floating label supports the types of actions as follow.
 
@@ -71,7 +69,7 @@ The `FloatLabelType` as  `Auto` is demonstrated in the following code sample.
 
 ## Customizing the float label element’s focusing color
 
-Use the following code to customize the focusing color of the float label element.
+You can change the text color of the floating label when it is focused by targeting its CSS classes `.e-input-focus` and `.e-float-text.e-label-top`. These classes indicate the floating label text while it is focused state and set the desired color using the `color` property.
 
 {% highlight cshtml %}
 
@@ -80,3 +78,6 @@ Use the following code to customize the focusing color of the float label elemen
 {% endhighlight %}
 
 ![Blazor DropdownList with float label focusing color](./images/placeholder-and-floatlabel/blazor_dropdown_floatlabel-focusing-color.png)
+
+
+

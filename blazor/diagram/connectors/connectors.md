@@ -15,7 +15,7 @@ Connectors are objects used to create link between two points, nodes or ports to
 
 Connector can be created by defining the source and target point of the connector. The path to be drawn can be defined with a collection of segments.
 
-## Add connectors through connectors collection
+## How to add connectors through connectors collection
 
 The [SourcePoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourcePoint) and [TargetPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetPoint) properties of connector allow you to define the endpoints of a connector.
 
@@ -49,12 +49,14 @@ The following code example illustrates how to add a connector through connector 
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
 
 ![Blazor Diagram Connector](../images/blazor-diagram-connector.png)
 
-> [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each connector should be unique and so it is further used to find the connector at runtime and do any customization.
+N> [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each connector should be unique and so it is further used to find the connector at runtime and do any customization.
+>**Note:** Do not use underscore(_) for connector's id.
 
-## Add connectors at runtime
+## How to add connectors at runtime
 
 You can add a connector at runtime by adding connector to the connectors collection in the Diagram component. The following code explains how to add connectors at runtime.
 
@@ -96,8 +98,63 @@ You can add a connector at runtime by adding connector to the connectors collect
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
 
-## Connectors from the palette
+## How to add connector with annotations at runtime
+
+You can add connector with annotation at runtime in the diagram component by using the [AddDiagramElements](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElements_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method.
+
+The following code explains how to add an connector with annotation  at runtime by using `AddDiagramElements` method.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<input type="button" value="Add Connector" @onclick="@AddConnector">
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors"></SfDiagramComponent>
+
+@code
+{
+
+    //Defines diagram's connector collection.
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
+    DiagramObjectCollection<NodeBase> NodeCollection = new DiagramObjectCollection<NodeBase>();
+
+    protected override void OnInitialized()
+    {
+        Connector Connector = new Connector()
+        { 
+            ID = "connector1",
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
+            Type = ConnectorSegmentType.Straight
+        };
+        connectors.Add(Connector);
+    }
+
+    public void AddConnector()
+    {
+        Connector NewConnector = new Connector()
+        { 
+            ID = "connector2",
+            SourcePoint = new DiagramPoint() { X = 300, Y = 300 },
+            TargetPoint = new DiagramPoint() { X = 400, Y = 400 },
+            Type = ConnectorSegmentType.Straight,
+             Annotations=new DiagramObjectCollection<PathAnnotation>()
+            {
+                new PathAnnotation()
+                {
+                    Content="NewAnnotation"
+                }
+            },
+        };
+        NodeCollection.Add(NewConnector);
+       await Diagram.AddDiagramElements(NodeCollection);
+    }
+}
+```
+
+## How to add connector in Palette
 
 Connectors can be predefined and added to the symbol palette. You can drop those connectors into the diagram when required.
 
@@ -175,16 +232,17 @@ Connectors can be predefined and added to the symbol palette. You can drop those
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
 
 ![Connector from Palette in Blazor Diagram](../images/blazor-diagram-connector-from-palette.gif)
 
-## Draw connectors using drawing object
+## How to draw connectors using drawing object
 
 Connectors can be interactively drawn by clicking and dragging on the diagram surface by using [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject).
 
 ![Drawing Connector in Blazor Diagram](../images/blazor-diagram-draw-connector.gif)
 
-## Remove connectors at runtime
+## How to remove connectors at runtime
 
 A connector can be removed from the diagram at runtime by using the `Remove` method.
 
@@ -232,6 +290,7 @@ The following code shows how to remove a connector at runtime.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
 
 A connector can be removed from the diagram by using the native `RemoveAt` method. Refer to the following example that shows how to remove the connector at runtime.
 
@@ -242,7 +301,7 @@ public void RemoveConnector()
 }
 ```
 
-## Update connectors at runtime
+## How to update connectors at runtime
 
 You can change any connector's properties at runtime.
 
@@ -287,8 +346,9 @@ The following code example explains how to change the connector properties.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
 
-> BeginUpdate and EndUpdate methods allow you to stop the continuous update of control and resume it finally.
+N> BeginUpdate and EndUpdate methods allow you to stop the continuous update of control and resume it finally.
 
 ## Connections
 
@@ -364,6 +424,7 @@ The following code example illustrates how to connect two nodes.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
 
 ![Displaying Connection between Nodes in Blazor Diagram](../images/blazor-diagram-node-to-node-connection.png)
 
@@ -467,6 +528,7 @@ The following code example illustrates how to create port to port connections.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
 
 ![Connection between Ports in Blazor Diagram](../images/blazor-diagram-port-to-port-connection.png)
 

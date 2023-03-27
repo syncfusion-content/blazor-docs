@@ -31,8 +31,8 @@ The available default edit types are,
 
 You can customize the behavior of the editor component through the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component.
 
-> We have limited the properties of editor components that can be customized using [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) in Grid default editor components. Find the list of properties that can be customized the below topics.
-> If you want to customize other properties, refer to our [EditTemplate](https://blazor.syncfusion.com/documentation/datagrid/editing/#cell-edit-template) documentation to render the custom components in EditForm along with your customization.
+N> We have limited the properties of editor components that can be customized using [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) in Grid default editor components. Find the list of properties that can be customized the below topics.
+<br/> If you want to customize other properties, refer to our [EditTemplate](https://blazor.syncfusion.com/documentation/datagrid/editing/#cell-edit-template) documentation to render the custom components in EditForm along with your customization.
 
 ### DefaultEdit
 
@@ -110,6 +110,7 @@ The following sample code demonstrates the customization applied to TextBox comp
 | ShowClearButton | Specifies whether to show or hide the clear icon. |
 | ShowSpinButton | Specifies whether the up and down spin buttons should be displayed in NumericTextBox. |
 | ValidateDecimalOnType | Specifies whether the decimals length should be restricted during typing. |
+| Step | Specifies the incremental or decremental step size for the NumericTextBox. |
 
 The following sample code demonstrates the customization applied to NumericTextBox component set for the DataGrid columns,
 
@@ -181,7 +182,7 @@ The following sample code demonstrates the customization applied to NumericTextB
 | ActionFailureTemplate | Accepts the template and assigns it to the popup list content of the component when the data fetch request from the remote server fails |
 | DataSource | Accepts the list items either through local or remote service and binds it to the component. It can be an array of JSON Objects or an instance of `DataManager`. |
 
-> `IEnumerable<TItem>` is the type of [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_DataSource) property in [DropDownListModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html), so you should not bind `string[]` or `List<string>` type to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_DataSource) property.
+N> `IEnumerable<TItem>` is the type of [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_DataSource) property in [DropDownListModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html), so you should not bind `string[]` or `List<string>` type to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_DataSource) property.
 
 The following sample code demonstrates the customization applied to DropDownList component set for the DataGrid columns,
 
@@ -359,15 +360,15 @@ The following sample code demonstrates the customization applied to DatePicker c
 }
 ```
 
-> Similar way customization can be applied to default DateTimePicker Component using same `DateEditCellParams`
+N> Similar way customization can be applied to default DateTimePicker Component using same `DateEditCellParams`
 
 ## Custom editors using template/Cell edit template
 
-> Before adding edit template to the datagrid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
+N> Before adding edit template to the datagrid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
 
 The cell edit template is used to add a custom component for a particular column. You can use the **EditTemplate** of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component to add the custom component. You can access the parameters passed to the templates using implicit parameter named **context**.
 
-> Custom components inside the EditTemplate must be specified with two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
+N> Custom components inside the EditTemplate must be specified with two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
 
 ### Using AutoComplete in EditTemplate
 
@@ -1050,7 +1051,7 @@ function editKeyDown(id) {
 }
 ```
 
-> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-prevent-enter-key-functionality-in-multiline-textbox)
+N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-prevent-enter-key-functionality-in-multiline-textbox)
 
 ## See also
 

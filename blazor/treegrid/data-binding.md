@@ -132,10 +132,10 @@ The following code example shows how to bind the hierarchical list data into the
 
 ```
 
-> * ExpandCollapse State maintenance is not supported for Hierarchy Data.
-> * Batch Editing is not supported for Hierarchy Data.
-> * `PageSizeMode` --> `All` is not supported for Hierarchy Data.
-> * Row Drag and Drop feature is not supported for Hierarchy Data.
+N> * ExpandCollapse State maintenance is not supported for Hierarchy Data.
+<br/> * Batch Editing is not supported for Hierarchy Data.
+<br/> * `PageSizeMode` --> `All` is not supported for Hierarchy Data.
+<br/> * Row Drag and Drop feature is not supported for Hierarchy Data.
 
 ### DynamicObject binding
 
@@ -143,7 +143,7 @@ Tree Grid is a generic component which is strongly bound to a model type. There 
 
 **DynamicObject** can be bound to tree grid by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) property. Tree Grid can also perform all kind of supported data operations and editing in DynamicObject.
 
-> The [GetDynamicMemberNames](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to render and perform data operations, editing etc., while using DynamicObject.
+N> The [GetDynamicMemberNames](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to render and perform data operations, editing etc., while using DynamicObject.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid
@@ -320,7 +320,7 @@ ExpandoObject can be bound to Tree grid by assigning to the [DataSource](https:/
 
 ```
 
-> Herewith the list of reserved properties and the purpose used in TreeGrid are provided. It is recommended to avoid these reserved properties for Internal purpose(To get rid of conflicts).
+N> Herewith the list of reserved properties and the purpose used in TreeGrid are provided. It is recommended to avoid these reserved properties for Internal purpose(To get rid of conflicts).
 
 Reserved keywords | Purpose
 -----|-----
@@ -391,10 +391,10 @@ Similarly, if the user navigates to a new page, the root nodes of that specific 
 
 ```
 
-> * By default, **SfDataManager** uses **ODataAdaptor** for remote data-binding.
-> * Based on the RESTful web services, set the corresponding adaptor to SfDataManager. Refer [here](https://ej2.syncfusion.com/documentation/data/adaptors/?no-cache=1) for more details.
-> * Filtering and searching server-side data operations are not supported in load on demand.
-> * Only Self-Referential type data is supported with remote data binding in tree grid
+N> * By default, **SfDataManager** uses **ODataAdaptor** for remote data-binding.
+<br/> * Based on the RESTful web services, set the corresponding adaptor to SfDataManager. Refer [here](https://ej2.syncfusion.com/documentation/data/adaptors/?no-cache=1) for more details.
+<br/> * Filtering and searching server-side data operations are not supported in load on demand.
+<br/> * Only Self-Referential type data is supported with remote data binding in tree grid
 
 ### Offline mode
 
@@ -897,4 +897,4 @@ Now, the Tree Grid can be configured using the **'SfDataManager'** to interact w
 
 To perform Tree Grid CRUD operation using Entity Framework. You can refer [here](./edit/#entity-framework).
 
-> You can find the fully working sample [here](https://github.com/SyncfusionExamples/Blazor-TreeGrid-With-EntityFramework).
+N> You can find the fully working sample [here](https://github.com/SyncfusionExamples/Blazor-TreeGrid-With-EntityFramework).

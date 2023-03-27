@@ -79,39 +79,7 @@ Prevent the popup open and close in the event argument like [BeforeOpenEventArgs
 
 ![Blazor DropdownList with Preventing opening and closing](./images/popup-setting/blazor_dropdown_preventing-opening-closing.png)
 
-## Popup height based on available space
-
-You can achieve this by binding the `resize` event in window and update the height of the popup based on the window height.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/popup-setting/popup-resize.razor %}
-
-{% endhighlight %}
-
-{% tabs %}
-{% highlight razor tabtitle="Layout.razor" %}
-
-<script>
-    window.addEventListener("resize", function (e) {
-        var wrapper = document.getElementById("dropdown").parentElement;
-        var popupEle = document.getElementById("dropdown_popup");
-        var topVal = wrapper.getBoundingClientRect().top;
-        window.innerHeight - topVal;
-        if (popupEle) {
-            popupEle.style.maxHeight = (window.innerHeight - topVal-50) + "px";
-            popupEle.style.height = (window.innerHeight - topVal-50) + "px";
-            
-        }
-    })
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-![Popup height based on available space in Blazor DropdownList](./images/popup-setting/blazor_dropdown_popup_resize.gif)
-
-## Events
+The following events are used to trigger when opening and closing popup.
 
 ### OnOpen event
 
@@ -152,3 +120,49 @@ The [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.D
 {% include_relative code-snippet/popup-setting/closed-event.razor %}
 
 {% endhighlight %}
+
+## Popup height based on available space
+
+You can achieve this by binding the `resize` event in window and update the height of the popup based on the window height.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/popup-setting/popup-resize.razor %}
+
+{% endhighlight %}
+
+{% tabs %}
+{% highlight razor tabtitle="Layout.razor" %}
+
+<script>
+    window.addEventListener("resize", function (e) {
+        var wrapper = document.getElementById("dropdown").parentElement;
+        var popupEle = document.getElementById("dropdown_popup");
+        var topVal = wrapper.getBoundingClientRect().top;
+        window.innerHeight - topVal;
+        if (popupEle) {
+            popupEle.style.maxHeight = (window.innerHeight - topVal-50) + "px";
+            popupEle.style.height = (window.innerHeight - topVal-50) + "px";
+            
+        }
+    })
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+![Popup height based on available space in Blazor DropdownList](./images/popup-setting/blazor_dropdown_popup_resize.gif)
+
+## Programmatically opening and closing popup
+
+You can programmatically open and close the popup by accessing the `ShowPopupAsync()` and `HidePopupAsync()` methods through an instance of the dropdown list. Bind the click event of a button to these methods. When the button is clicked, it will trigger the respective method and open or close the popup.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/popup-setting/show-or-hide-popup.razor %}
+
+{% endhighlight %} 
+
+![Show or Hide Popup in Blazor DropdownList](./images/popup-setting/blazor_dropdown_show-or-hide-popup.gif)
+
+

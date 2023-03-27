@@ -17,7 +17,7 @@ The steps below show how to install Essential Studio Blazor Web Installer.
 
    ![Web Installer Setup](images/webinstaller-1.png)
 
-   > **Note** <br /> The installer wizard extracts the syncfusionessentialblazorwebinstaller_{version}.exe dialog, which displays the package’s unzip operation.
+   N> The installer wizard extracts the syncfusionessentialblazorwebinstaller_{version}.exe dialog, which displays the package’s unzip operation.
 
 2. The Syncfusion Blazor Web Installer’s ***welcome wizard*** will be displayed. Click the Next button.
 
@@ -35,7 +35,7 @@ The steps below show how to install Essential Studio Blazor Web Installer.
 
    ![Web Installer Installed Tab](images/webinstaller-4.png)
 
-   > **IMPORTANT** <br /> If the required software for the selected product isn’t already installed, the **Additional Software Required** alert will appear. You can, however, continue the installation and install the necessary software later.
+   I> If the required software for the selected product isn’t already installed, the **Additional Software Required** alert will appear. You can, however, continue the installation and install the necessary software later.
 
    ***Required Software***
 
@@ -45,7 +45,7 @@ The steps below show how to install Essential Studio Blazor Web Installer.
 
    ![Web Installer Uninstall Previous Wizard](images/webinstaller-6.png)
 
-   > **Note** <br /> From the 2021 Volume 1 release, Syncfusion has provided option to uninstall the previous versions from 18.1 while installing the new version.
+   N> From the 2021 Volume 1 release, Syncfusion has provided option to uninstall the previous versions from 18.1 while installing the new version.
 
 5. Pop up screen will be displayed to get the confirmation to uninstall selected previous versions.
 
@@ -55,7 +55,7 @@ The steps below show how to install Essential Studio Blazor Web Installer.
 
    ![Web Installer Product install/uninstall list](images/webinstaller-8.png)
 
-   > **Note** <br /> By clicking the **Download Size and Installation** Size links, you can determine the approximate size of the download and installation
+   N> By clicking the **Download Size and Installation** Size links, you can determine the approximate size of the download and installation
 
 7. The ***Configuration Wizard*** will appear. You can change the Download, Install, and Demos locations from here. You can also change the Additional settings on a product-by-product basis. Click Next to install with the default settings.
 
@@ -77,7 +77,7 @@ The steps below show how to install Essential Studio Blazor Web Installer.
 
    ![Web Installer Login Wizard](images/webinstaller-10.png)
 
-   > **IMPORTANT** <br /> The products you have chosen will be installed based on your Syncfusion License (Trial or Licensed).
+   I> The products you have chosen will be installed based on your Syncfusion License (Trial or Licensed).
 
 10. The download and installation/uninstallation progress will be displayed as shown below.
    ![Web Installer Installation Wizard](images/webinstaller-11.png)
@@ -113,7 +113,7 @@ You can uninstall all the installed products by selecting the **Syncfusion Essen
 
 ![Control Panel Uninstallation entries](images/webinstaller-uninstall-1.png)
 
-> **Note** <br /> If the **Syncfusion Essential Studio for Blazor {version}** entry is selected from the Windows control panel, the Syncfusion Essential Studio Blazor alone will be removed and the below default MSI uninstallation window will be displayed.
+N> If the **Syncfusion Essential Studio for Blazor {version}** entry is selected from the Windows control panel, the Syncfusion Essential Studio Blazor alone will be removed and the below default MSI uninstallation window will be displayed.
 
 1. The Syncfusion Blazor Web Installer’s ***welcome wizard*** will be displayed. Click the Next button
 
@@ -143,7 +143,7 @@ You can uninstall all the installed products by selecting the **Syncfusion Essen
 
    ![Web Installer Product Install/Uninstall Wizard](images/webinstaller-uninstall-5.png)
 
-   > **Note** <br /> By clicking the **Download Size and Installation** Size links, you can determine the approximate size of the download and installation.
+   N> By clicking the **Download Size and Installation** Size links, you can determine the approximate size of the download and installation.
 
 6. The ***Configuration Wizard*** will appear. You can change the Download, Install, and Demos locations from here. You can also change the Additional settings on a product-by-product basis. Click Next to install with the default settings.
 
@@ -155,7 +155,7 @@ You can uninstall all the installed products by selecting the **Syncfusion Essen
 
    ![Web Installer Login Wizard](images/webinstaller-10.png)
 
-   > **IMPORTANT** <br /> The products you have chosen will be installed based on your Syncfusion License (Trial or Licensed).
+   I> The products you have chosen will be installed based on your Syncfusion License (Trial or Licensed).
 
 9. The download, installation, and uninstallation progresses will be shown.
 

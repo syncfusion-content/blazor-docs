@@ -11,7 +11,7 @@ documentation: ug
 
 The PDF export allows Pivot Table data to be exported as PDF document. To enable PDF export in the pivot table, set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowPdfExport) in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) as **true**. Once the API is set, the user needs to call the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_PdfExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method for exporting, on external button click.
 
-> The pivot table component can be exported to PDF format using options available in the toolbar. For more details [refer](./tool-bar) here.
+N> The pivot table component can be exported to PDF format using options available in the toolbar. For more details [refer](./tool-bar) here.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -59,7 +59,7 @@ The PDF export allows Pivot Table data to be exported as PDF document. To enable
 
 The PDF export provides an option to change colors for headers, caption and records in the pivot table before exporting. In-order to apply colors, define **theme** settings in **pdfExportProperties** object and pass it as a parameter to the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_PdfExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method.
 
-> By default, material theme will be applied to the pivot table during PDF exporting.
+N> By default, material theme will be applied to the pivot table during PDF exporting.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -362,7 +362,7 @@ The event [PdfQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 ### PdfHeaderQueryCellInfo
 
-> The row header cell can be obtained by using the `PdfQueryCellInfo` event. It can be identified using `AxisSet.Axis == "row"` and for reference, see the code snippet in the previous topic.
+N> The row header cell can be obtained by using the `PdfQueryCellInfo` event. It can be identified using `AxisSet.Axis == "row"` and for reference, see the code snippet in the previous topic.
 
 The event [PdfHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_PdfHeaderQueryCellInfo) triggers on framing each column header cell during PDF export. It allows the user to customize the cell value, style, etc. of the current cell. It has the following parameters:
 
@@ -450,4 +450,4 @@ The event [PdfHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfus
 
 ![Customizing the Blazor Pivot Table cell values and styles while exporting](images/blazor-pivottable-pdfexportevents.png)
 
-> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
+N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.

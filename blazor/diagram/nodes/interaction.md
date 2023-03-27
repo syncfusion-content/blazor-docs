@@ -65,6 +65,7 @@ A node can be selected at runtime by using the [Select](https://help.syncfusion.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction)
 
 And also the selection enable during the interaction.
 
@@ -119,6 +120,7 @@ A node can be dragged at runtime by using the [Drag](https://help.syncfusion.com
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction)
 
 Also, drag the node during the interaction.
 
@@ -173,6 +175,7 @@ A node can be resized at runtime by using the [Scale](https://help.syncfusion.co
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction)
 
 Also, you can resize the node during interaction.
 
@@ -228,6 +231,7 @@ A node can be rotated at runtime by using the [Rotate](https://help.syncfusion.c
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction)
 
 Also, rotate the node during the interaction.
 
@@ -238,7 +242,7 @@ Also, rotate the node during the interaction.
 
 ![Displaying Node Rotation in Blazor Diagram](../images/blazor-diagram-node-rotation.gif)
 
-## Node Flip
+## How to flip the node
 
 The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) is performed to give the mirrored image of the original element.
 

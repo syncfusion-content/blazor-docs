@@ -78,7 +78,7 @@ The following sample code demonstrates implementing custom data binding using cu
 @using Syncfusion.Blazor.Data;
 @using Syncfusion.Blazor;
 
-<SfGantt TValue="TaskData" Height="450px" Width="1000px">
+<SfGantt TValue="TaskData" Height="450px" Width="1000px" LoadChildOnDemand="true">
      <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Progress="Progress" Duration="Duration"  ParentID="ParentID">
     </GanttTaskFields>
@@ -105,23 +105,26 @@ The following sample code demonstrates implementing custom data binding using cu
             int root = -1;
             for (var t = 1; t <= 8; t++)
             {
+                Random ran = new Random();
+                string math = (ran.Next() % 3) == 0 ? "High" : (ran.Next() % 2) == 0 ? "Release Breaker" : "Critical";
                 root++;
                 int rootItem = gantt.Count + root + 1;
-                gantt.Add(new TaskData() { TaskID = rootItem, TaskName = "Parent Task " + rootItem.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = (t*t*2), ParentID = null, Duration = ((t+ 10)/2 ).ToString() });
+                gantt.Add(new TaskData() { TaskID = rootItem, TaskName = "Parent Task " + rootItem.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = (ran.Next(10, 100)), ParentID = null, Duration = (ran.Next(1, 50)).ToString() });
                 int parent = gantt.Count;
                 for (var c = 0; c < 3; c++)
                 {
                     root++;
+                    string val = ((parent + c + 1) % 3 == 0) ? "Low" : "Critical";
                     int parn = parent + c + 1;
                     int iD = gantt.Count + root + 1;
-                    gantt.Add(new TaskData() { TaskID = iD, TaskName = "Child Task " + iD.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = (t*c), ParentID = rootItem, Duration = ((c+ 20)/2 ).ToString() });
+                    gantt.Add(new TaskData() { TaskID = iD, TaskName = "Child Task " + iD.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = (ran.Next(10, 100)), ParentID = rootItem, Duration = (ran.Next(1, 50)).ToString() });
                     if ((((parent + c + 1) % 3) == 0))
                     {
                         int immParent = gantt.Count;
                         for (var s = 0; s <= 1; s++)
                         {
                             root++;
-                            gantt.Add(new TaskData() { TaskID = gantt.Count + root + 1, TaskName = "Sub Task " + (gantt.Count + root + 1).ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = (s* c *4), ParentID = iD, Duration = (s+10+c).ToString()});
+                            gantt.Add(new TaskData() { TaskID = gantt.Count + root + 1, TaskName = "Sub Task " + (gantt.Count + root + 1).ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = (ran.Next(10, 100)), ParentID = iD, Duration = (ran.Next(1, 50)).ToString()});
                         }
                     }
                 }
@@ -150,7 +153,11 @@ The following sample code demonstrates implementing custom data binding using cu
             if (dm.Where != null && dm.Where.Count > 0)
             {
                 // Filtering
-                DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+                if (dm.Where[0].Field != null && dm.Where[0].Field == "ParentID"){}
+                else
+                {
+                    DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+                }
             }
             int count = DataSource.Cast<TaskData>().Count();
             if (dm.Skip != 0)
@@ -172,8 +179,8 @@ The following sample code demonstrates implementing custom data binding using cu
 }
 ```
 
-> If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read/ReadAsync return value must be of **DataResult** with properties **Result** whose value is a collection of records and **Count** whose value is the total number of records. If the **DataManagerRequest.RequiresCounts** is **false**, then simply send the collection of records. 
-> <br /> If the Read/ReadAsync method is not overridden in the custom adaptor then it will be handled by the default read handler.
+N> If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read/ReadAsync return value must be of **DataResult** with properties **Result** whose value is a collection of records and **Count** whose value is the total number of records. If the **DataManagerRequest.RequiresCounts** is **false**, then simply send the collection of records. 
+<br/> <br /> If the Read/ReadAsync method is not overridden in the custom adaptor then it will be handled by the default read handler.
 
 ## Inject service into Custom Adaptor
 
@@ -198,7 +205,7 @@ The following sample code demonstrates injecting service into Custom Adaptor,
 @using Syncfusion.Blazor.Data;
 @using Syncfusion.Blazor;
 
-<SfGantt TValue="TaskData" Height="450px" Width="1000px">
+<SfGantt TValue="TaskData" Height="450px" Width="1000px" LoadChildOnDemand="true">
      <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Progress="Progress" Duration="Duration"  ParentID="ParentID">
     </GanttTaskFields>
@@ -218,7 +225,6 @@ The following sample code demonstrates injecting service into Custom Adaptor,
         public int? ParentID { get; set; }
         public TaskData() { }
     }
-    
     public static List<TaskData> GetGantt()
     {
         if (gantt.Count == 0)
@@ -226,23 +232,26 @@ The following sample code demonstrates injecting service into Custom Adaptor,
             int root = -1;
             for (var t = 1; t <= 8; t++)
             {
+                Random ran = new Random();
+                string math = (ran.Next() % 3) == 0 ? "High" : (ran.Next() % 2) == 0 ? "Release Breaker" : "Critical";
                 root++;
                 int rootItem = gantt.Count + root + 1;
-                gantt.Add(new TaskData() { TaskID = rootItem, TaskName = "Parent Task " + rootItem.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = (t*t*2), ParentID = null, Duration = ((t+ 10)/2 ).ToString() });
+                gantt.Add(new TaskData() { TaskID = rootItem, TaskName = "Parent Task " + rootItem.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = (ran.Next(10, 100)), ParentID = null, Duration = (ran.Next(1, 50)).ToString() });
                 int parent = gantt.Count;
                 for (var c = 0; c < 3; c++)
                 {
                     root++;
+                    string val = ((parent + c + 1) % 3 == 0) ? "Low" : "Critical";
                     int parn = parent + c + 1;
                     int iD = gantt.Count + root + 1;
-                    gantt.Add(new TaskData() { TaskID = iD, TaskName = "Child Task " + iD.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = (t*c), ParentID = rootItem, Duration = ((c+ 20)/2 ).ToString() });
+                    gantt.Add(new TaskData() { TaskID = iD, TaskName = "Child Task " + iD.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = (ran.Next(10, 100)), ParentID = rootItem, Duration = (ran.Next(1, 50)).ToString() });
                     if ((((parent + c + 1) % 3) == 0))
                     {
                         int immParent = gantt.Count;
                         for (var s = 0; s <= 1; s++)
                         {
                             root++;
-                            gantt.Add(new TaskData() { TaskID = gantt.Count + root + 1, TaskName = "Sub Task " + (gantt.Count + root + 1).ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = (s* c *4), ParentID = iD, Duration = (s+10+c).ToString()});
+                            gantt.Add(new TaskData() { TaskID = gantt.Count + root + 1, TaskName = "Sub Task " + (gantt.Count + root + 1).ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = (ran.Next(10, 100)), ParentID = iD, Duration = (ran.Next(1, 50)).ToString()});
                         }
                     }
                 }
@@ -274,7 +283,11 @@ The following sample code demonstrates injecting service into Custom Adaptor,
             if (dm.Where != null && dm.Where.Count > 0)
             {
                 // Filtering
-                DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+                if (dm.Where[0].Field != null && dm.Where[0].Field == "ParentID"){}
+                else
+                {
+                    DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+                }
             }
             int count = DataSource.Cast<TaskData>().Count();
             if (dm.Skip != 0)
@@ -305,7 +318,7 @@ The CRUD operations for the custom bounded data in the Gantt component can be im
 * **Update/UpdateAsync**
 * **BatchUpdate/BatchUpdateAsync**
 
-> While using batch editing in Gantt, use BatchUpdate/BatchUpdateAsync method to handle the corresponding CRUD operation.
+N> While using batch editing in Gantt, use BatchUpdate/BatchUpdateAsync method to handle the corresponding CRUD operation.
 
 The following sample code demonstrates implementing CRUD operations for the custom bounded data,
 
@@ -314,7 +327,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
 @using Syncfusion.Blazor.Data;
 @using Syncfusion.Blazor;
 
-<SfGantt TValue="TaskData" Height="450px" Width="1000px" AllowFiltering="true" AllowSorting="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
+<SfGantt TValue="TaskData" Height="450px" Width="1000px" LoadChildOnDemand="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
      <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Progress="Progress" Duration="Duration"  ParentID="ParentID">
     </GanttTaskFields>
@@ -395,7 +408,11 @@ The following sample code demonstrates implementing CRUD operations for the cust
             if (dm.Where != null && dm.Where.Count > 0)
             {
                 // Filtering
-                DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+                if (dm.Where[0].Field != null && dm.Where[0].Field == "ParentID"){}
+                else
+                {
+                    DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+                }
             }
             int count = DataSource.Cast<TaskData>().Count();
             if (dm.Skip != 0)
@@ -418,28 +435,22 @@ The following sample code demonstrates implementing CRUD operations for the cust
         // Performs Remove operation.
         public override object Remove(DataManager dm, object value, string keyField, string key)
         {
-            foreach (var record in value as List<TaskData>)
-            {
-                GanttData.Remove(GanttData.Where(or => or.TaskID == record.TaskID).FirstOrDefault());
-            }
+            GanttData.Remove(GanttData.Where(or => or.TaskID == int.Parse(value.ToString())).FirstOrDefault());
             return value;
         }
 
         // Performs Update operation.
         public override object Update(DataManager dm, object value, string keyField, string key)
         {
-            foreach(var record in value as List<TaskData>)
+            var data = GanttData.Where(or => or.TaskID == (value as TaskData).TaskID).FirstOrDefault();
+            if (data != null)
             {
-                var data = GanttData.Where(or => or.TaskID == record.TaskID).FirstOrDefault();
-                if (data != null)
-                {
-                    data.TaskID = record.TaskID;
-                    data.TaskName = record.TaskName;
-                    data.StartDate = record.StartDate;
-                    data.EndDate = record.EndDate;
-                    data.Duration = record.Duration;
-                    data.Progress = record.Progress;
-                }
+                data.TaskID = (value as TaskData).TaskID;
+                data.TaskName = (value as TaskData).TaskName;
+                data.StartDate = (value as TaskData).StartDate;
+                data.EndDate = (value as TaskData).EndDate;
+                data.Duration = (value as TaskData).Duration;
+                data.Progress = (value as TaskData).Progress;
             }
             return value;
         }
@@ -447,4 +458,6 @@ The following sample code demonstrates implementing CRUD operations for the cust
 }
 ```
 
-> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.
+N>You can find the sample for custom adaptor [here](https://github.com/SyncfusionExamples/Gantt-Chart-Custom-Adaptor-sample-using-Blazor-server-application).
+
+N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.
