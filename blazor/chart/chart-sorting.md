@@ -9,7 +9,7 @@ documentation: ug
 
 # Sorting in Blazor Charts Component
 
-Sorting enables you to sort data in the **Ascending** or **Descending** order.
+Sorting enables you to sort data in the **Ascending** or **Descending** order. To sort the chart based on the X-axis value, set 'X' to the 'PropertyName' property.
 
 ## Enable sorting
 
@@ -62,15 +62,12 @@ The chart can be Sorted in Three different ways.
 
 ### Sort Order
 
-By default, the sorting order will be as Ascending -> Descending.
-The sort order can be specified by using the property **Direction** .
-1. Direction="ListSortDirection.Ascending
-2. Direction="ListSortDirection.Descending.
+By default, the sorting order will be as Ascending -> Descending. The sort direction can be changed from Ascending to Descending by setting the 'Descending' to the 'Direction' property in the 'chartSorting'.
 
 
 ### Sorting By Custom Value
 
-Data sorting can also be done based on custom value (user defined) that is provided by user by binding the field name in the property **PropertyName**.
+Data sorting can also be sorted based on any field  in the data source assigned by passing the field name to the 'PropertyName' property in the 'ChartSorting'.
 
 ```cshtml
 
