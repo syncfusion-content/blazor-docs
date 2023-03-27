@@ -11,12 +11,6 @@ documentation: ug
 
 Sorting enables you to sort data in the **Ascending** or **Descending** order. To sort the chart based on the Y-axis value, set 'Y' to the [PropertyName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html#Syncfusion_Blazor_Charts_ChartSorting_PropertyName) property.
 
-The chart can be Sorted in Three different ways.
-
-* Sort By X axis - Data points are sorted based on X axis.
-* Sort By Y axis - Data points are Sorted based on Y axis.
-* Sort By Custom - Data points are sorted based on the user-specified custom value.
-
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
