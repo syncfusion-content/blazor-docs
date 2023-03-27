@@ -15,7 +15,7 @@ Connectors are objects used to create link between two points, nodes or ports to
 
 Connector can be created by defining the source and target point of the connector. The path to be drawn can be defined with a collection of segments.
 
-To create and customize the Connectors easily in the Blazor Diagram Component, refer to the below video link.
+To create and customize the connectors easily in the Blazor Diagram component, refer to the below video link.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=EH4c8QVQoHo" %}
 
