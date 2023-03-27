@@ -218,7 +218,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Diagram Clear](images/Clear.gif)
 
-### Delete
+### How to delete the diagram elements
 The [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Delete_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method is used for deleting the diagram elements. It deletes the diagram elements such as nodes, connectors, and groups. When this method is called without any parameter or with a null parameter, the selected diagram elements are deleted. Otherwise, the collections of diagram elements passed in the parameter will be deleted. The following code example shows how to delete the diagram elements from the diagram.
 
 ```cshtml
