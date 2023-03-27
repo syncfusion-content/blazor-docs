@@ -592,7 +592,7 @@ Clipboard commands are used to cut, copy, or paste the selected elements.
 
 * Copies the selected elements from the diagram to the diagram’s clipboard using [Copy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Copy) command.
 
-* Pastes the diagram’s clipboard data (nodes/connectors) into the diagram also when the collection of the diagram elements is passed, the passed items will be pasted in the diagram. Otherwise, the cloned copy of elements from the internal clipboard is pasted using [Paste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Paste_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) command.
+* Pastes the diagram’s clipboard data (nodes/connectors) into the diagram. Also, when the collection of the diagram elements is passed, the passed items will be pasted into the diagram. Otherwise, the cloned copy of elements from the internal clipboard is pasted using the [Paste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Paste_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) command.
 
 The following code illustrates how to execute the clipboard commands.
 

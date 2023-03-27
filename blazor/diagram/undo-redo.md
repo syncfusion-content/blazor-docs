@@ -80,7 +80,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Stack Limit
 
-The [StackLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html#Syncfusion_Blazor_Diagram_DiagramHistoryManager_StackLimit) property of history manager is used to restrict the number of history entries that can be stored on the history list to limit undo and redo action.
+The [StackLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html#Syncfusion_Blazor_Diagram_DiagramHistoryManager_StackLimit) property of the history manager is used to restrict the number of history entries that can be stored on the history list to limit undo and redo action.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -122,7 +122,7 @@ The [StackLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Undo-Redo)
+Download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Undo-Redo)
 
 
 ## How to track custom entry
