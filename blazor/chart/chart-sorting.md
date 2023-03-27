@@ -9,13 +9,7 @@ documentation: ug
 
 # Sorting in Blazor Charts Component
 
-Sorting enables you to sort data in the **Ascending** or **Descending** order. To sort the chart based on the Y-axis value, set 'Y' to the [PropertyName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html#Syncfusion_Blazor_Charts_ChartSorting_PropertyName) property.
-
-The chart can be Sorted in Three different ways.
-
-* Sort By X axis - Data points are sorted based on X axis.
-* Sort By Y axis - Data points are Sorted based on Y axis.
-* Sort By Custom - Data points are sorted based on the user-specified custom value.
+Sorting enables you to sort data in the **Ascending** or **Descending** order. To sort the chart based on the Y-axis value, set 'Y' to the [PropertyName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html#Syncfusion_Blazor_Charts_ChartSorting_PropertyName) property. 
 
 ```cshtml
 
@@ -102,7 +96,7 @@ By default, the sorting order will be as Ascending -> Descending. The sort direc
 
 ### Sorting By Custom Value
 
-Data sorting can also be sorted based on any field  in the data source assigned by passing the field name to the 'PropertyName' property in the 'ChartSorting'.
+Data sorting can also be sorted based on any field  in the data source assigned by passing the field name to the [PropertyName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html#Syncfusion_Blazor_Charts_ChartSorting_PropertyName) property in the 'ChartSorting'.
 
 ```cshtml
 
