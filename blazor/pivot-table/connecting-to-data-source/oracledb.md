@@ -109,7 +109,7 @@ When you run the application, the resultant pivot table will look like this.
 
 **3.** Create a Web API controller (aka, PivotController.cs) file under **Controllers** folder that helps to establish data communication with the Pivot Table.
 
-**4.** In the Web API controller (aka, PivotController), **OracleClient** helps to connect the Oracle database. Next, using **OracleCommand** and **OracleDataAdapter** you can process the desired query string and retrieve data from the Oracle database. The **Fill** method of the **OracleDataAdapter** is used to populate the retrieved data into a **DataTable** as shown in the following code snippet.
+**4.** In the Web API controller (aka, PivotController), **OracleConnection** helps to connect the Oracle database. Next, using **OracleCommand** and **OracleDataAdapter** you can process the desired query string and retrieve data from the Oracle database. The **Fill** method of the **OracleDataAdapter** is used to populate the retrieved data into a **DataTable** as shown in the following code snippet.
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
