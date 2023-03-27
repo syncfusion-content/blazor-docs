@@ -27,7 +27,7 @@ Divide a progress bar into multiple segments by using the [SegmentCount](https:/
 
 ## Thickness
 
-You can customize the thickness of the track using the [TrackThickness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_TrackThickness) progress using the [ProgressThickness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_ProgressThickness) and secondary progress using the [SecondaryProgressThickness] to render the progress bar with different appearances. 
+You can customize the thickness of the track using the [TrackThickness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_TrackThickness) progress using the [ProgressThickness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_ProgressThickness) and secondary progress using the 'SecondaryProgressThickness' to render the progress bar with different appearances. 
 
 ```cshtml
  @using Syncfusion.Blazor.ProgressBar
@@ -80,7 +80,7 @@ The inner radius of the progress bar can be customized using the [InnerRadius](h
 
 ## Progress Color and Track Color
 
-We can customize the color of the progress, secondary progress, and track color using [ProgressColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_ProgressColor), [SecondaryProgressColor] and [TrackColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_TrackColor) properties. 
+We can customize the color of the progress, secondary progress, and track color using [ProgressColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_ProgressColor), 'SecondaryProgressColor' and [TrackColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_TrackColor) properties. 
 
 ```cshtml
 @using Syncfusion.Blazor.ProgressBar
