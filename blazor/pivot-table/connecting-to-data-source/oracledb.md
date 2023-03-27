@@ -4,11 +4,11 @@ component: "Pivot Table"
 description: "Learn how to bind data from a Oracle database in the Syncfusion Blazor Pivot Table and more."
 ---
 
-# OracleDB Data Binding
+# Oracle Data Binding
 
 This section describes how to use [Oracle ManagedDataAccess Core](https://www.nuget.org/packages/Oracle.ManagedDataAccess.Core) to retrieve data from a Oracle database and bind it to the Blazor Pivot Table.
 
-## Connecting a OracleDB to a Syncfusion Blazor Pivot Table
+## Connecting a Oracle database to a Syncfusion Blazor Pivot Table
 
 **1.** Create a simple Blazor Pivot Table by following the **"Getting Started"** documentation [link](../getting-started).
 
@@ -95,9 +95,9 @@ When you run the application, the resultant pivot table will look like this.
 
 ![Blazor Pivot Table bound with OracleDB data](../images/blazor-pivottable-oracledb-databinding.png)
 
-## Connecting a OracleDB to a Syncfusion Blazor Pivot Table via Web API service
+## Connecting a Oracle database to a Syncfusion Blazor Pivot Table via Web API service
 
-### Create a Web API service to fetch OracleDB data
+### Create a Web API service to fetch Oracle data
 
 **1.** Open Visual Studio and create an ASP.NET Core Web App project type, naming it **MyWebService**. To create an ASP.NET Core Web application, follow the documentation [link](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022).
 
@@ -183,7 +183,7 @@ namespace MyWebService.Controllers
 
 ![Hosted Web API URL](../images/oracledb-data.png)
 
-### Connecting the Pivot Table to a OracleDB using the Web API service
+### Connecting the Pivot Table to a Oracle database using the Web API service
 
 **1.** Create a simple Blazor Pivot Table by following the **"Getting Started"** documentation [link](../getting-started).
 
