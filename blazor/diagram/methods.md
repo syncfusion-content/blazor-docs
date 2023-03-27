@@ -218,6 +218,98 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Diagram Clear](images/Clear.gif)
 
+### How to delete the diagram elements
+The [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Delete_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method is used for deleting the diagram elements. It deletes the diagram elements such as nodes, connectors, and groups. When this method is called without any parameter or with a null parameter, the selected diagram elements are deleted. Otherwise, the collections of diagram elements passed in the parameter will be deleted. The following code example shows how to delete the diagram elements from the diagram.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<input type="button" value="Delete" @onclick="Delete" />
+<input type="button" value="DeleteArg" @onclick="DeletewithArgument" />
+<SfDiagramComponent @ref="diagram" Width="600px" Height="600px" Nodes="nodes" Connectors="connectors">
+</SfDiagramComponent>
+@code {
+    public SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    DiagramObjectCollection<NodeBase> DiagramElements = new DiagramObjectCollection<NodeBase>();
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+            {
+                ID = "node1",
+                OffsetX = 300,
+                OffsetY = 100,
+                Height = 50,
+                Width = 100,
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                    StrokeColor = "white"
+                }
+            };
+        nodes.Add(node1);
+        Node node2 = new Node()
+            {
+                ID = "node2",
+                OffsetX = 300,
+                OffsetY = 200,
+                Height = 50,
+                Width = 100,
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                    StrokeColor = "white"
+                }
+            };
+        nodes.Add(node2);
+        Node node3 = new Node()
+            {
+                ID = "node3",
+                OffsetX = 300,
+                OffsetY = 300,
+                Height = 50,
+                Width = 100,
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                    StrokeColor = "white"
+                }
+            };
+        nodes.Add(node3);
+        Connector connector1 = new Connector()
+            {
+                ID = "connector1",
+                SourceID = "node1",
+                TargetID = "node2",
+                Type = ConnectorSegmentType.Straight,
+            };
+        connectors.Add(connector1);
+        Connector connector2 = new Connector()
+            {
+                ID = "connector2",
+                SourceID = "node2",
+                TargetID = "node3",
+                Type = ConnectorSegmentType.Straight,
+            };
+        connectors.Add(connector2);
+        NodeGroup groupNode = new NodeGroup();
+        groupNode.Children = new string[] { "node2", "node3" };
+        nodes.Add(groupNode);   
+    }
+    public void Delete()
+    {
+        diagram.Delete();
+    }
+    private void DeletewithArgument()
+    {
+        DiagramElements.Add(diagram.Nodes[0]);
+        DiagramElements.Add(diagram.Nodes[1]);
+        diagram.Delete(DiagramElements);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/Delete)
+
 ### ResetZoom
   The [ResetZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ResetZoom) method is used to reset the current zoom value of the diagram page to 100% when the diagram is either in a zoomed in or zoomed out state. The following code example shows how to reset the current zoom value of the diagram page.
 
