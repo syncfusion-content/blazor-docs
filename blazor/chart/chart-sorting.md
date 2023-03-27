@@ -9,9 +9,7 @@ documentation: ug
 
 # Sorting in Blazor Charts Component
 
-Sorting enables you to sort data in the **Ascending** or **Descending** order. To sort the chart based on the X-axis value, set 'X' to the 'PropertyName' property.
-
-## Enable sorting
+Sorting enables you to sort data in the **Ascending** or **Descending** order. To sort the chart based on the Y-axis value, set 'Y' to the [PropertyName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html#Syncfusion_Blazor_Charts_ChartSorting_PropertyName) property.
 
 The chart can be Sorted in Three different ways.
 
@@ -25,7 +23,7 @@ The chart can be Sorted in Three different ways.
 @using Syncfusion.Blazor.Data
 
 <SfChart Title="Sales History of Product X">
-    <ChartSorting PropertyName="X" Direction="ListSortDirection.Ascending"></ChartSorting>
+    <ChartSorting PropertyName="Y" Direction="ListSortDirection.Ascending"></ChartSorting>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
@@ -56,11 +54,11 @@ The chart can be Sorted in Three different ways.
 
 ```
 
-![Sorting by X axis](images/sorting/x-axis-sorting-categoryAxis.png)
+![Sorting by Y axis](images/sorting/sorting-yaxis-ascending.png)
 
 ### Sort Order
 
-By default, the sorting order will be as Ascending -> Descending. The sort direction can be changed from Descending to Ascending by setting the 'Descending' to the 'Direction' property in the 'chartSorting'.
+By default, the sorting order will be as Ascending -> Descending. The sort direction can be changed from Descending to Ascending by setting the 'Descending' to the [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html#Syncfusion_Blazor_Charts_ChartSorting_Direction) property in the 'chartSorting'.
 
 ```cshtml
 
@@ -68,7 +66,7 @@ By default, the sorting order will be as Ascending -> Descending. The sort direc
 @using Syncfusion.Blazor.Data
 
 <SfChart Title="Sales History of Product X">
-    <ChartSorting PropertyName="X" Direction="ListSortDirection.Descending"></ChartSorting>
+    <ChartSorting PropertyName="Y" Direction="ListSortDirection.Descending"></ChartSorting>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
@@ -99,7 +97,7 @@ By default, the sorting order will be as Ascending -> Descending. The sort direc
 
 ```
 
-![Sort by Descending order based on X axis](images/sorting/sort-order.png)
+![Sort by Descending order based on Y axis](images/sorting/sorting-yaxis-descending.png)
 
 
 ### Sorting By Custom Value
