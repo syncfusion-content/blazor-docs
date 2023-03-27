@@ -166,7 +166,7 @@ The following code illustrates how to ungroup at runtime.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group)
 ### How to clone the group of node at runtime
-The following code explains how to clone the group of node at runtime using  [Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Clone) method.
+[Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Clone) is a virtual method of the node that is used to create a copy of a diagram object. After cloning, we need to set the ID for cloned nodes.The following code demonstrates how to clone the group of node during runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

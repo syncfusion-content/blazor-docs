@@ -104,7 +104,7 @@ You can add a connector at runtime by adding connector to the connectors collect
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
 ### How to clone the connector at runtime
-The following code explains how to clone the connector at runtime using  [Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Clone) method.
+[Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Clone) is a virtual method of the connector that is used to create a copy of a diagram object. After cloning, we need to set the ID for cloned connectors. The following code demonstrates how to clone the connector during runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
