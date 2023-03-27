@@ -96,7 +96,7 @@ By default, the sorting order will be as Ascending -> Descending. The sort direc
 
 ### Sorting By Custom Value
 
-Data sorting can also be sorted based on any field  in the data source assigned by passing the field name to the [PropertyName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html#Syncfusion_Blazor_Charts_ChartSorting_PropertyName) property in the 'ChartSorting'.
+Data sorting can also be sorted based on any field  in the data source assigned by passing the field name to the [PropertyName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html#Syncfusion_Blazor_Charts_ChartSorting_PropertyName) property in the [chartSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html).
 
 ```cshtml
 
