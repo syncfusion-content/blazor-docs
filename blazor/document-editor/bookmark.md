@@ -61,3 +61,19 @@ container.DocumentEditor.Selection.GetBookmarksAsync(false);
 ```
 
 N> Parameter denotes is include hidden bookmarks. If false, ignore hidden bookmark.
+
+## Show or Hide bookmark
+
+You can show or hide the show square brackets around bookmarked items in Document editor component.
+
+The following example code illustrates how to show or hide square brackets around bookmarked items.
+
+```csharp
+<SfDocumentEditorContainer @ref="container" Height="590px" DocumentEditorSettings="settings">
+</SfDocumentEditorContainer>
+
+@code {
+    SfDocumentEditorContainer container;
+    DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel() { showBookmarks = true };
+}
+```
