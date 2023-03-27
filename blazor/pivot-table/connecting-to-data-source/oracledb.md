@@ -1,24 +1,24 @@
 ---
-title: "OracleDB Data Binding in Blazor Pivot Table Component | Syncfusion"
+title: "Oracle database Data Binding in Blazor Pivot Table Component | Syncfusion"
 component: "Pivot Table"
-description: "Learn how to bind data from a OracleDB in the Syncfusion Blazor Pivot Table and more."
+description: "Learn how to bind data from a Oracle database in the Syncfusion Blazor Pivot Table and more."
 ---
 
 # OracleDB Data Binding
 
-This section describes how to use [Oracle ManagedDataAccess Core](https://www.nuget.org/packages/Oracle.ManagedDataAccess.Core) to retrieve data from a OracleDB and bind it to the Blazor Pivot Table.
+This section describes how to use [Oracle ManagedDataAccess Core](https://www.nuget.org/packages/Oracle.ManagedDataAccess.Core) to retrieve data from a Oracle database and bind it to the Blazor Pivot Table.
 
 ## Connecting a OracleDB to a Syncfusion Blazor Pivot Table
 
 **1.** Create a simple Blazor Pivot Table by following the **"Getting Started"** documentation [link](../getting-started).
 
-**2.** To connect a OracleDB using the Oracle ManagedDataAccess Core in our application, we need to install the [Oracle.ManagedDataAccess.Core](https://www.nuget.org/packages/Oracle.ManagedDataAccess.Core) NuGet package. To do so, open the NuGet package manager of the project solution, search for the package **Oracle.ManagedDataAccess.Core** and install it.
+**2.** To connect a Oracle Server using the Oracle ManagedDataAccess Core in our application, we need to install the [Oracle.ManagedDataAccess.Core](https://www.nuget.org/packages/Oracle.ManagedDataAccess.Core) NuGet package. To do so, open the NuGet package manager of the project solution, search for the package **Oracle.ManagedDataAccess.Core** and install it.
 
 ![Add the NuGet package "Oracle.ManagedDataAccess.Core" to the project](../images/oracledb-nuget-package-install.png)
 
-**3.** Next, in the **Index.razor** page, under the **OnInitialized** method, connect to OracleDB. You can get the specified database by using the **OracleConnection**. Following that, the **OracleCommand** is used to retrieve the desired collection from the database. Then populate the data collection from the **OracleCommand** into a list using the **Read** method of **OracleDataReader**.
+**3.** Next, in the **Index.razor** page, under the **OnInitialized** method, connect to Oracle database. You can get the specified database by using the **OracleConnection**. Following that, the **OracleCommand** is used to retrieve the desired collection from the database. Then populate the data collection from the **OracleCommand** into a list using the **Read** method of **OracleDataReader**.
 
-**4.** Finally, bind the list to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html?&_ga=2.187712492.558891908.1675655056-779654442.1675225237#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html?_ga=2.112723776.558891908.1675655056-779654442.1675225237) and configure the report to use the OracleDB data.
+**4.** Finally, bind the list to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html?&_ga=2.187712492.558891908.1675655056-779654442.1675225237#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property in the [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html?_ga=2.112723776.558891908.1675655056-779654442.1675225237) and configure the report to use the Oracle database data.
 
 ```cshtml
 @using System.Data
@@ -103,7 +103,7 @@ When you run the application, the resultant pivot table will look like this.
 
 ![Create ASP.NET Core Web App project](../images/azure-asp-core-web-service-create.png)
 
-**2.** To connect a OracleDB using the **Oracle ManagedDataAccess Core** in our application, we need to install the [Oracle.ManagedDataAccess.Core](https://www.nuget.org/packages/Oracle.ManagedDataAccess.Core) NuGet package. To do so, open the NuGet package manager of the project solution, search for the package **Oracle.ManagedDataAccess.Core** and install it.
+**2.** To connect a Oracle database using the **Oracle ManagedDataAccess Core** in our application, we need to install the [Oracle.ManagedDataAccess.Core](https://www.nuget.org/packages/Oracle.ManagedDataAccess.Core) NuGet package. To do so, open the NuGet package manager of the project solution, search for the package **Oracle.ManagedDataAccess.Core** and install it.
 
 ![Add the NuGet package "Oracle.ManagedDataAccess.Core" to the project](../images/oracledb-nuget-package-install-in-web-service-app.png)
 
@@ -140,7 +140,7 @@ namespace MyWebService.Controllers
 }
 ```
 
-**5.** In the **Get()** method of the **PivotController.cs** file, the **FetchOracleDbResult** method is used to retrieve the OracleDB data as a DataTable, which is then serialized into JSON string using **JsonConvert.SerializeObject()**.
+**5.** In the **Get()** method of the **PivotController.cs** file, the **FetchOracleDbResult** method is used to retrieve the Oracle data as a DataTable, which is then serialized into JSON string using **JsonConvert.SerializeObject()**.
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
@@ -179,7 +179,7 @@ namespace MyWebService.Controllers
 
 **6.** Run the application and it will be hosted within the URL `https://localhost:44346`.
 
-**7.** Finally, the retrieved data from OracleDB which is in the form of JSON can be found in the Web API controller available in the URL link `https://localhost:44346/Pivot`, as shown in the browser page below.
+**7.** Finally, the retrieved data from Oracle database which is in the form of JSON can be found in the Web API controller available in the URL link `https://localhost:44346/Pivot`, as shown in the browser page below.
 
 ![Hosted Web API URL](../images/oracledb-data.png)
 
@@ -187,7 +187,7 @@ namespace MyWebService.Controllers
 
 **1.** Create a simple Blazor Pivot Table by following the **"Getting Started"** documentation [link](../getting-started).
 
-**2.** Map the hosted Web API's URL link `https://localhost:44346/Pivot` to the Pivot Table in **Index.razor** by using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html?&_ga=2.200411303.844585580.1677740066-2135459383.1677740066#Syncfusion_Blazor_DataManager_Url) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html?_ga=2.200411303.844585580.1677740066-2135459383.1677740066). This [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property aids in the de-serialization of OracleDB data into instances of your model data class (aka, TValue="EmployeeDetails") while bound to the pivot table.
+**2.** Map the hosted Web API's URL link `https://localhost:44346/Pivot` to the Pivot Table in **Index.razor** by using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html?&_ga=2.200411303.844585580.1677740066-2135459383.1677740066#Syncfusion_Blazor_DataManager_Url) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html?_ga=2.200411303.844585580.1677740066-2135459383.1677740066). This [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Url) property aids in the de-serialization of Oracle database data into instances of your model data class (aka, TValue="EmployeeDetails") while bound to the pivot table.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
@@ -232,4 +232,4 @@ When you run the application, the resultant pivot table will look like this.
 
 ![Blazor Pivot Table bound with OracleDB data](../images/blazor-pivottable-oracledb-databinding.png)
 
-> In [this](https://github.com/SyncfusionExamples/how-to-bind-Oracle-database-to-pivot-table/tree/master/Blazor) GitHub repository, you can find our Blazor Pivot Table sample for binding data from a OracleDB using the Web API service.
+> In [this](https://github.com/SyncfusionExamples/how-to-bind-Oracle-database-to-pivot-table/tree/master/Blazor) GitHub repository, you can find our Blazor Pivot Table sample for binding data from a Oracle database using the Web API service.
