@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sortong in Blazor Charts Component | Syncfusion
+title: Sorting in Blazor Charts Component | Syncfusion
 description: Checkout and learn here all about Sorting functionality in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
