@@ -51,8 +51,7 @@ Sorting enables you to sort data in the **Ascending** or **Descending** order. T
 ![Sorting by Y axis](images/sorting/sorting-yaxis-ascending.png)
 
 ### Sort Order
-
-By default, the sorting order will be as Ascending -> Descending. The sort direction can be changed from Descending to Ascending by setting the 'Descending' to the [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html#Syncfusion_Blazor_Charts_ChartSorting_Direction) property in  [ChartSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html).
+By default, the sorting order will be Ascending -> Descending. The sort direction can be changed from Descending to Ascending by setting the [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html#Syncfusion_Blazor_Charts_ChartSorting_Direction) property as  ‘Descending’ in the [ChartSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSorting.html).
 
 ```cshtml
 
