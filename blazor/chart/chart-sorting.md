@@ -135,7 +135,7 @@ Data can also be sorted based on any field in the data source by passing the fie
 
 ```
 
-![Sorting by Custom Value](images/sorting/custom-sorting-categoryAxis.png)
+![Sorting by Custom Value](images/sorting/custom-sorting.png)
 
 ## See Also
 
