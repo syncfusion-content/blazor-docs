@@ -182,7 +182,7 @@ When you run the application, the resultant pivot table will look like this.
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="OrderDetails" Width="1000" Height="300" ShowFieldList="true">
-    <PivotViewDataSourceSettings TValue="ProductDetails" Url="https://localhost:7146/Pivot" ExpandAll=false EnableSorting=true>
+    <PivotViewDataSourceSettings TValue="OrderDetails" Url="https://localhost:7146/Pivot" ExpandAll=false EnableSorting=true>
          <PivotViewColumns>
             <PivotViewColumn Name="ShipName"></PivotViewColumn>
         </PivotViewColumns>
