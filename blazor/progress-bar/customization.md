@@ -49,7 +49,7 @@ You can customize the thickness of the track using the [TrackThickness](https://
 </SfProgressBar>
 ```
 
-![Secondary Progress Thickness](images/blazor-progressbar-secondaryprogressbar-thickness.png)
+![Blazor Secondary ProgressBar with Thickness](images/blazor-progressbar-secondaryprogressbar-thickness.png)
 
 ## Radius
 
@@ -103,7 +103,7 @@ We can customize the color of the progress, secondary progress, and track using 
 </SfProgressBar>
 ```
 
-![Secondary Progress Color](images/blazor-progressbar-secondaryprogressbar-color.png)
+![Customizing Blazor Secondary ProgressBar Color](images/blazor-progressbar-secondaryprogressbar-color.png)
 
 ## Range Colors
 
@@ -172,4 +172,4 @@ The progress bar visibility can be changed by using the [Visible](https://help.s
 }
 ```
 
-![ProgressBar Visibility](images/progress-bar-visibility.gif)
+![Blazor ProgressBar Visibility](images/progress-bar-visibility.gif)
