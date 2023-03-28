@@ -103,7 +103,7 @@ We can customize the color of the progress, secondary progress, and track using 
 </SfProgressBar>
 ```
 
-![Secondary Progress color](images/blazor-progressbar-secondaryprogressbar-color.png)
+![Secondary Progress Color](images/blazor-progressbar-secondaryprogressbar-color.png)
 
 ## Range Colors
 
