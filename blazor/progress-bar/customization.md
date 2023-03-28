@@ -173,7 +173,7 @@ The progress bar visibility can be changed by using the [Visible](https://help.s
 }
 ```
 
-![ProgressBar Visibility](images/progress-bar-visibility.gif)
+![Blazor ProgressBar Visibility](images/progress-bar-visibility.gif)
 
 
 
