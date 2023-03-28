@@ -145,7 +145,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
-![Clonning Node](../images/CloneConnecotor.gif)
+![Clonning Node](../images/CloneConnector.gif)
 ## How to add connector with annotations at runtime
 
 You can add connector with annotation at runtime in the diagram component by using the [AddDiagramElements](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElements_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method.
