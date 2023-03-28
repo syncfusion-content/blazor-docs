@@ -27,7 +27,7 @@ Divide a progress bar into multiple segments by using the [SegmentCount](https:/
 
 ## Thickness
 
-You can customize the thickness of the track using the [TrackThickness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_TrackThickness) progress using the [ProgressThickness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_ProgressThickness) and [SecondaryProgressThickness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_SecondaryProgressThickness) using the 'SecondaryProgressThickness' to render the progress bar with different appearances. 
+You can customize the thickness of the track using the [TrackThickness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_TrackThickness), progress using the [ProgressThickness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_ProgressThickness) and secondary progress using the [SecondaryProgressThickness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_SecondaryProgressThickness) to render the progress bar with different appearances.  
 
 ```cshtml
  @using Syncfusion.Blazor.ProgressBar
@@ -49,7 +49,7 @@ You can customize the thickness of the track using the [TrackThickness](https://
 </SfProgressBar>
 ```
 
-![Secondary Progress thickness](images/blazor-progressbar-secondaryprogressbar-thickness.png)
+![Secondary Progress Thickness](images/blazor-progressbar-secondaryprogressbar-thickness.png)
 
 ## Radius
 
@@ -80,7 +80,7 @@ The inner radius of the progress bar can be customized using the [InnerRadius](h
 
 ## Progress Color and Track Color
 
-We can customize the color of the progress, secondary progress, and track color using [ProgressColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_ProgressColor), [SecondaryProgressColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_SecondaryProgressColor) and [TrackColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_TrackColor) properties. 
+We can customize the color of the progress, secondary progress, and track using [ProgressColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_ProgressColor), [SecondaryProgressColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_SecondaryProgressColor) and [TrackColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_TrackColor) properties. 
 
 ```cshtml
 @using Syncfusion.Blazor.ProgressBar
@@ -142,9 +142,9 @@ The progress bar supports right-to-left (RTL) rendering, which can be enabled by
 
 ![Right to Left in Blazor ProgressBar](images/blazor-progressbar-right-to-left.png)
 
-## Progress Bar Visibility 
+## ProgressBar Visibility 
 
-Progress Bar visibility can be changed by using the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_Visible) property.
+The progress bar visibility can be changed by using the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_Visible) property.
 
 ```cshtml
 @using Syncfusion.Blazor.ProgressBar
