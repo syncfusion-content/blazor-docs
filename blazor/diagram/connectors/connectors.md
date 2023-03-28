@@ -103,7 +103,49 @@ You can add a connector at runtime by adding connector to the connectors collect
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
+### How to clone the connector at runtime
+[Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Clone) is a virtual method of the connector that is used to create a copy of a diagram object. After cloning, we need to set the ID for cloned connectors. The following code demonstrates how to clone the connector during runtime.
 
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using System.Collections.ObjectModel
+@inject IJSRuntime js
+<input type="button" id="add" value="Clone Connector" @onclick="@CloneConnector" />
+<SfDiagramComponent @ref="diagram" Width="50%" Height="500px" @bind-Connectors="@Connectors"></SfDiagramComponent>
+
+@functions
+{
+
+    SfDiagramComponent diagram;
+    public DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
+    protected override void OnInitialized()
+    {
+        Connector connector1 = new Connector() { ID = "connector1", SourcePoint = new DiagramPoint() { X = 100, Y = 10 }, TargetPoint = new DiagramPoint() { X = 200, Y = 100 }, Type = ConnectorSegmentType.Straight };
+        Connectors.Add(connector1);
+    }
+    public async Task CloneConnector()
+    {
+        Connector connector = Connectors[0].Clone() as Connector;
+        connector.ID = RandomId();
+        connector.SourcePoint = new DiagramPoint { X = 100, Y = 100 };
+        connector.TargetPoint = new DiagramPoint { X = 200, Y = 100 };
+        await diagram.AddDiagramElements(new DiagramObjectCollection<NodeBase>() { connector });
+
+    }
+    internal string RandomId()
+    {
+        Random random = new Random();
+        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+#pragma warning disable CA5394 // Do not use insecure randomness
+        return new string(Enumerable.Repeat(chars, 5)
+          .Select(s => s[random.Next(s.Length)]).ToArray());
+#pragma warning restore CA5394 // Do not use insecure randomness
+    }
+
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
+![Clonning Node](../images/CloneConnector.gif)
 ## How to add connector with annotations at runtime
 
 You can add connector with annotation at runtime in the diagram component by using the [AddDiagramElements](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElements_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method.
