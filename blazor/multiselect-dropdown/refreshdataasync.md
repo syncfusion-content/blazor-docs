@@ -62,15 +62,4 @@ The Urladaptor used with the controller and RefreshDataAsync function is denoted
 {% endhighlight %}
 ​​​​​​​{% endtabs %}
 
-## Methods
-
-### RefreshDataAsync()
-
-Refreshes the popup list items. The method is useful if the popup list item changed externally.
-
-#### Declaration
-
-N> public Task RefreshDataAsync()
-
-[Click to refer a code for RefreshDataAsync](https://blazor.syncfusion.com/documentation/multiselect-dropdown/refreshdataasync)
 

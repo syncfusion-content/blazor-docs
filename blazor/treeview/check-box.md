@@ -12,7 +12,7 @@ documentation: ug
 The Blazor TreeView component allows to check more than one node in TreeView by enabling the [ShowCheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ShowCheckBox) property. When this property is enabled, checkbox appears before each TreeView node text.
 
 
-## AutoCheck in Blazor TreeView Component.
+## AutoCheck in Blazor TreeView Component
 
 By default, the checkbox state of parent and child nodes are dependent on each other. For independent checked state, achieve it using the [AutoCheck](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AutoCheck) property.
 
